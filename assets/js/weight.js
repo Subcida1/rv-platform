@@ -37,7 +37,6 @@
  var cargoTrailer = num('w-cargo-trailer');
  var passengers = num('w-passengers');
  var cargoTruck = num('w-cargo-truck');
- var tongueIn = num('w-tongue'); // actual tongue/pin if known
  var type = $( 'w-type').value; // 'tt' or 'fw'
  var axles = Math.max(1, parseInt($('w-axles').value, 10) || 1);
 
@@ -46,7 +45,9 @@
  var loaded = rigUVW + water + propaneLb + cargoTrailer;
 
  /* tongue: measured value wins; else est. 12% TT / 20% FW */
- var tongue = tongueIn > 0 ? tongueIn : Math.round(loaded * (type === 'fw' ? 0.20 : 0.12));
+ var tonguePct = type === 'fw' ? 0.20 : 0.12;
+ var tongueRange = type === 'fw' ? [0.15, 0.25] : [0.10, 0.15];
+ var tongue = Math.round(loaded * tonguePct);
 
  var payloadUsed = tongue + passengers + cargoTruck;
  var payloadRemain = Math.max(0, payloadCap - payloadUsed);
@@ -89,9 +90,8 @@
  : 'Inside the trailer gross weight rating.'));
  }
 
- var tNote = (tongueIn > 0 ? 'Measured hitch/pin weight.' : 'Estimated ' + (type === 'fw' ? '20% pin' : '12% tongue') + ', measure at a scale, then refine.') +
- ((type === 'fw' ? loaded * 0.15 : loaded * 0.10) <= tongue && tongue <= (type === 'fw' ? loaded * 0.25 : loaded * 0.15)
- ? ' In the healthy range.' : '');
+ var lowT = Math.round(loaded * tongueRange[0]), highT = Math.round(loaded * tongueRange[1]);
+ var tNote = 'Estimated ' + Math.round(tonguePct * 100) + '% of loaded weight. Real rigs run ' + fmt(lowT) + ' to ' + fmt(highT) + ' lb. A certified scale settles it.';
  rows.push(verdictRow('ok', 'Hitch / pin load', fmt(tongue) + ' lb', tNote));
 
  rows.push(verdictRow('ok', 'Axle estimate (informational)',
@@ -117,7 +117,7 @@
 
  /* live recompute on any change */
  var ids = ['w-tow-rating','w-payload','w-curb','w-gvwr','w-uvw','w-h2o-f','w-h2o-g','w-h2o-b',
- 'w-propane','w-cargo-trailer','w-passengers','w-cargo-truck','w-tongue','w-type','w-axles'];
+ 'w-propane','w-cargo-trailer','w-passengers','w-cargo-truck','w-type','w-axles'];
  ids.forEach(function (id) {
  var el = $(id);
  if (el) el.addEventListener('input', update);
