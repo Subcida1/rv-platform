@@ -31,10 +31,14 @@
       <div class="wc-layout">
         <div class="wc-form">
           <div class="panel" style="padding:24px">
-            <h3 style="font-size:15px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--text-3)">Your truck</h3>
+            <h3 style="font-size:15px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--text-3)">Your tow vehicle</h3>
             <div class="form-row">
               <div class="field"><label for="w-tow-rating">Max towing rating (lb)</label><input id="w-tow-rating" type="number" min="0" step="100" inputmode="numeric" placeholder="e.g. 9200"><span class="hint">From the owner's manual towing table.</span></div>
               <div class="field"><label for="w-payload">Payload capacity (lb)</label><input id="w-payload" type="number" min="0" step="50" inputmode="numeric" placeholder="door jamb sticker"><span class="hint">Yellow sticker inside the driver's door.</span></div>
+            </div>
+            <div class="form-row">
+              <div class="field"><label for="w-curb">Tow vehicle curb weight (lb)</label><input id="w-curb" type="number" min="0" step="50" inputmode="numeric" placeholder="empty, full tank"><span class="hint">Empty weight, full fuel, printed in the owner's manual or on the door sticker.</span></div>
+              <div class="field"><label for="w-truck-gvwr">Tow vehicle GVWR (lb)</label><input id="w-truck-gvwr" type="number" min="0" step="100" inputmode="numeric" placeholder="max allowed weight"><span class="hint">Gross vehicle weight rating from the door sticker. Used to check the truck itself is not overloaded.</span></div>
             </div>
           </div>
           <div class="panel" style="padding:24px">
@@ -56,7 +60,7 @@
             </div>
             <div class="form-row">
               <div class="field"><label for="w-uvw">Dry weight (lb)</label><input id="w-uvw" type="number" min="0" step="50" inputmode="numeric" placeholder="UVW from the sticker"><span class="hint">Unloaded vehicle weight, printed on the trailer sticker.</span></div>
-              <div class="field"><label for="w-gvwr">GVWR (lb, optional)</label><input id="w-gvwr" type="number" min="0" step="100" inputmode="numeric" placeholder="max loaded weight"><span class="hint">Optional, used to flag an overloaded trailer.</span></div>
+              <div class="field"><label for="w-gvwr">Trailer GVWR (lb)</label><input id="w-gvwr" type="number" min="0" step="100" inputmode="numeric" placeholder="max loaded weight"><span class="hint">Gross vehicle weight rating, the max the trailer may weigh when loaded. Printed on the trailer sticker.</span></div>
             </div>
             <p style="font-size:12.5px;font-weight:700;color:var(--text-2);margin-bottom:0">Tongue or pin weight is estimated for you automatically, travel trailers run 10 to 15% of loaded weight, fifth wheels 20 to 25%. A certified scale gives the exact number.</p>
           </div>
@@ -68,7 +72,7 @@
               <div class="field"><label for="w-cargo-trailer">In the trailer: cargo (lb)</label><input id="w-cargo-trailer" type="number" min="0" step="25" inputmode="numeric" placeholder="e.g. 500"><span class="hint">Everything that rides inside the trailer beyond its dry weight.</span></div>
             </div>
             <div class="form-row">
-              <div class="field"><label for="w-h2o-f">Fresh water in tanks (gal)</label><input id="w-h2o-f" type="number" min="0" step="1" inputmode="numeric" placeholder="0"><span class="hint">Water weighs 8.34 lb per gallon. Gray and black tanks ride empty.</span></div>
+              <div class="field"><label for="w-h2o-f">Fresh water in the RV's fresh tank (gal)</label><input id="w-h2o-f" type="number" min="0" step="1" inputmode="numeric" placeholder="0"><span class="hint">Count the RV's fresh water tank, not bottles. A typical 40 to 60 gallon tank holds 334 to 500 lb of water.</span></div>
               <div class="field"><label for="w-propane">Propane (gal)</label><input id="w-propane" type="number" min="0" step="1" inputmode="numeric" placeholder="20 for a standard 30-gal tank"><span class="hint">Propane weighs about 4.24 lb per gallon.</span></div>
             </div>
           </div>

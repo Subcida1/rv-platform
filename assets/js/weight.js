@@ -29,7 +29,8 @@
  /* ---- inputs ---- */
  var towRating = num('w-tow-rating'); // vehicle max towing (GCWR)
  var payloadCap = num('w-payload'); // door-jamb payload capacity
- var rigGVWR = num('w-gvwr'); // trailer GVWR
+ var curb = num('w-curb'); // tow vehicle curb weight (empty)
+ var rigGVWR = num('w-gvwr'); // trailer GVWR, required
  var rigUVW = num('w-uvw'); // trailer dry weight
  var h2oF = num('w-h2o-f'); // fresh water only
  var propane = num('w-propane');
@@ -51,8 +52,7 @@
  var payloadRemain = Math.max(0, payloadCap - payloadUsed);
 
  var towPct = towRating > 0 ? (loaded / towRating) * 100 : 0;
- var gvwrOver = rigGVWR > 0 && loaded > rigGVWR;
-
+ 
  /* axle estimate (informational) */
  var axleLoad = Math.max(0, loaded - tongue);
  var perAxle = axles > 0 ? axleLoad / axles : 0;
@@ -80,14 +80,35 @@
  }
 
  if (rigGVWR > 0) {
- var gcls = gvwrOver ? 'bad' : (loaded > rigGVWR * 0.9 ? 'warn' : 'ok');
- rows.push(verdictRow(gcls, 'Trailer GVWR',
- fmt(loaded) + ' / ' + fmt(rigGVWR) + ' lb',
- gvwrOver ? 'Trailer is OVER its GVWR, you are overloaded.'
- : loaded > rigGVWR * 0.9 ? 'Within GVWR but over 90%, water + gear are heavy.'
- : 'Inside the trailer gross weight rating.'));
+   var rigPayloadAvail = rigGVWR - rigUVW;
+   if (loaded > rigGVWR) {
+     rows.push(verdictRow('bad', 'Trailer payload',
+       fmt(loaded) + ' over GVWR by ' + fmt(loaded - rigGVWR) + ' lb',
+       'The trailer is OVER its GVWR. Move cargo out or leave gear home.'));
+   } else if (loaded > rigGVWR * 0.9) {
+     rows.push(verdictRow('warn', 'Trailer payload',
+       fmt(loaded) + ' / ' + fmt(rigGVWR) + ' lb',
+       'Over 90% of GVWR. Water and gear are heavy, check your load.'));
+   } else {
+     rows.push(verdictRow('ok', 'Trailer payload',
+       fmt(rigPayloadAvail) + ' lb room left under GVWR',
+       'The trailer stays inside its gross weight rating.'));
+   }
  }
+ var gvwrOver = loaded > rigGVWR;
 
+ /* truck gross weight check: curb + tongue + people (needs curb + trucks GVWR if given) */
+ var truckGVWR = num('w-truck-gvwr');
+ var truckGross = curb + tongue + passengers;
+ if (curb > 0 && truckGVWR > 0 && truckGross > 0) {
+   var tgPct = (truckGross / truckGVWR) * 100;
+   var tgCls = tgPct <= 90 ? 'ok' : (tgPct <= 100 ? 'warn' : 'bad');
+   rows.push(verdictRow(tgCls, 'Truck gross weight',
+     fmt(truckGross) + ' / ' + fmt(truckGVWR) + ' lb',
+     tgPct <= 90 ? 'The tow vehicle stays under its GVWR.'
+     : tgPct <= 100 ? 'At the truck GVWR edge, check passengers and bed gear.'
+     : 'OVER truck GVWR. The truck itself is overloaded.'));
+ }
  var lowT = Math.round(loaded * tongueRange[0]), highT = Math.round(loaded * tongueRange[1]);
  var tNote = 'Estimated ' + Math.round(tonguePct * 100) + '% of loaded weight. Real rigs run ' + fmt(lowT) + ' to ' + fmt(highT) + ' lb. A certified scale settles it.';
  rows.push(verdictRow('ok', 'Hitch / pin load', fmt(tongue) + ' lb', tNote));
@@ -114,7 +135,7 @@
  }
 
  /* live recompute on any change */
- var ids = ['w-tow-rating','w-payload','w-gvwr','w-uvw','w-h2o-f','w-propane','w-cargo-trailer','w-passengers','w-type','w-axles'];
+ var ids = ['w-tow-rating','w-payload','w-curb','w-truck-gvwr','w-gvwr','w-uvw','w-h2o-f','w-propane','w-cargo-trailer','w-passengers','w-type','w-axles'];
  ids.forEach(function (id) {
  var el = $(id);
  if (el) el.addEventListener('input', update);
