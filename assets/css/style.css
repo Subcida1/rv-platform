@@ -86,7 +86,7 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
 .logo-mark{width:38px;height:38px;border-radius:12px;background:var(--grad);display:grid;place-items:center;box-shadow:0 8px 20px -8px rgba(244,63,94,.6)}
 .logo-mark svg{width:22px;height:22px}
 .logo-name{font-size:21px;font-weight:800;letter-spacing:-.02em}
-.logo-name span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.logo-name span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;padding:0 1px}
 .nav-links{display:flex;gap:4px;align-items:center}
 .nav-link{padding:10px 13px;font-size:14.5px;font-weight:500;color:var(--text-2);border-radius:10px;transition:.16s}
 .nav-link:hover{color:var(--text);background:var(--bg-2)}
@@ -114,7 +114,7 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
 .hero-inner{position:relative;z-index:2;padding:92px 0 30px;text-align:center}
 .kicker{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#a3292b;border:1px solid #f3d4d9;background:#fff7f8;padding:7px 16px;border-radius:999px}
 .hero h1{margin:26px auto 0;max-width:880px;font-size:clamp(40px,6.4vw,76px);font-weight:800;letter-spacing:-.035em;line-height:1.04}
-.hero h1 .grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero h1 .grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;padding:0 1px}
 .hero .sub{margin:22px auto 0;max-width:640px;font-size:clamp(16px,2vw,19px);color:var(--text-2)}
 .search{max-width:720px;margin:36px auto 0;position:relative}
 .search-bar{display:flex;align-items:center;gap:12px;background:var(--surface);border:1px solid var(--border-2);border-radius:999px;padding:8px 8px 8px 22px;box-shadow:var(--shadow);transition:.18s}
@@ -354,7 +354,7 @@ footer a:hover{color:#fff}
 .foot-grid{display:grid;grid-template-columns:1.7fr 1fr 1fr 1fr 1fr;gap:40px}
 .foot-brand p{margin-top:16px;color:#8fa0b5;font-size:14px;max-width:300px}
 .foot-brand .logo-name{color:#fff}
-.foot-brand .logo-name span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.foot-brand .logo-name span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;padding:0 1px}
 .newsletter{margin-top:22px;display:flex;gap:8px;max-width:360px}
 .newsletter input{flex:1;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:11px 16px;color:#fff;font-size:14px;outline:none}
 .newsletter input::placeholder{color:#8fa0b5}
@@ -919,8 +919,8 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 .big-card .num{color:var(--text)}
 .grad-text,.eyebrow{color:var(--text-2)}
 
-.hero h1 .grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-.logo-name span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero h1 .grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;padding:0 1px}
+.logo-name span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;padding:0 1px}
 .deck-panel-head .dot{background:var(--c-emerald);box-shadow:0 0 0 4px rgba(16,185,129,.15)}
 
 
