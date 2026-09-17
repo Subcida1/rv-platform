@@ -29,18 +29,16 @@
  /* ---- inputs ---- */
  var towRating = num('w-tow-rating'); // vehicle max towing (GCWR)
  var payloadCap = num('w-payload'); // door-jamb payload capacity
- var curb = num('w-curb'); // optional vehicle curb weight
  var rigGVWR = num('w-gvwr'); // trailer GVWR
  var rigUVW = num('w-uvw'); // trailer dry weight
- var h2oF = num('w-h2o-f'), h2oG = num('w-h2o-g'), h2oB = num('w-h2o-b');
+ var h2oF = num('w-h2o-f'); // fresh water only
  var propane = num('w-propane');
  var cargoTrailer = num('w-cargo-trailer');
  var passengers = num('w-passengers');
- var cargoTruck = num('w-cargo-truck');
  var type = $( 'w-type').value; // 'tt' or 'fw'
  var axles = Math.max(1, parseInt($('w-axles').value, 10) || 1);
 
- var water = (h2oF + h2oG + h2oB) * WATER_LB;
+ var water = h2oF * WATER_LB;
  var propaneLb = propane * PROPANE_LB;
  var loaded = rigUVW + water + propaneLb + cargoTrailer;
 
@@ -49,7 +47,7 @@
  var tongueRange = type === 'fw' ? [0.15, 0.25] : [0.10, 0.15];
  var tongue = Math.round(loaded * tonguePct);
 
- var payloadUsed = tongue + passengers + cargoTruck;
+ var payloadUsed = tongue + passengers;
  var payloadRemain = Math.max(0, payloadCap - payloadUsed);
 
  var towPct = towRating > 0 ? (loaded / towRating) * 100 : 0;
@@ -109,15 +107,14 @@
  rows.join('') +
  (payloadCap > 0 && payloadRemain > 0
  ? '<div class="w-remain">Payload remaining in truck: <b>' + fmt(payloadRemain) + ' lb</b></div>' : '') +
- (curb > 0 ? '<div class="w-remain muted">Combined on road ≈ ' + fmt(curb + loaded) + ' lb (curb + loaded trailer).</div>' : '') +
+
  '<div class="w-disclaimer">Informational estimates. Always confirm at a certified scale before towing.</div>';
  }
  host.innerHTML = html;
  }
 
  /* live recompute on any change */
- var ids = ['w-tow-rating','w-payload','w-curb','w-gvwr','w-uvw','w-h2o-f','w-h2o-g','w-h2o-b',
- 'w-propane','w-cargo-trailer','w-passengers','w-cargo-truck','w-type','w-axles'];
+ var ids = ['w-tow-rating','w-payload','w-gvwr','w-uvw','w-h2o-f','w-propane','w-cargo-trailer','w-passengers','w-type','w-axles'];
  ids.forEach(function (id) {
  var el = $(id);
  if (el) el.addEventListener('input', update);
