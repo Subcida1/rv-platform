@@ -876,12 +876,12 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
    button = the one vivid moment.
    ============================================================ */
 .g-theme-mist{
-  --b1:#5b9ed6; --b2:#7db0e0; --b3:#a3c6ec;
-  --grad:linear-gradient(135deg,#4a8fc8 0%,#7db0e0 50%,#a3c6ec 100%);
-  --grad-2:linear-gradient(120deg,#3f83c0 0%,#669fd6 45%,#8fb8e6 100%);
-  --grad-soft:linear-gradient(135deg,rgba(91,158,214,.12),rgba(125,176,224,.12) 50%,rgba(163,198,236,.12));
-  --grad-soft-2:linear-gradient(135deg,rgba(74,143,200,.10),rgba(102,159,214,.10) 50%,rgba(143,184,230,.10));
-  --glow:rgba(91,158,214,.32);
+  --b1:#3d7fc2; --b2:#568fd3; --b3:#5b96d8;
+  --grad:linear-gradient(135deg,#3d7fc2 0%,#568fd3 50%,#5b96d8 100%);
+  --grad-2:linear-gradient(120deg,#3d7fc2 0%,#568fd3 45%,#5b96d8 100%);
+  --grad-soft:linear-gradient(135deg,rgba(61,127,194,.12),rgba(86,143,211,.12) 50%,rgba(91,150,216,.12));
+  --grad-soft-2:linear-gradient(135deg,rgba(61,127,194,.10),rgba(86,143,211,.10) 50%,rgba(91,150,216,.10));
+  --glow:rgba(61,127,194,.32);
   --btn-grad:linear-gradient(135deg,#1e6fc4 0%,#2f7fd6 50%,#3f8fe8 100%);
 }
 /* CTA buttons stay bright (the one vivid brand moment per Ty), everything else is mist */
