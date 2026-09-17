@@ -34,7 +34,9 @@
       logoHTML() +
       '<div class="nav-links">' +
       '<a class="nav-link" href="index.html">Home</a>' +
-      '<div class="nav-group"><a class="nav-link" href="tools/weight-calculator.html">Weight Calculator</a></div>' +
+      '<div class="nav-group"><a class="nav-link" href="tools/index.html">Tools</a>' +
+      '<div class="drop"><a href="tools/weight-calculator.html">Weight Calculator<span class="sm">Live — free</span></a>' +
+      '<a href="tools/index.html">More tools<span class="sm">Campgrounds, stops, GPS — building</span></a></div></div>' +
       '<div class="nav-group"><a class="nav-link" href="guides/index.html">Guides</a>' +
       '<div class="drop"><a href="guides/winterize-plumbing.html">Winterize Your Plumbing<span class="sm">Tanks, lines, antifreeze, bypass</span></a>' +
       '<a href="guides/battery-winter-storage.html">Battery Care in Cold<span class="sm">Lead-acid vs lithium rules</span></a>' +
@@ -48,7 +50,8 @@
       '<button class="burger" aria-label="Menu" onclick="RV.toggleMenu()"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h12M4 10h12M4 14h12"/></svg></button></div>' +
       '</div>' +
       '<div class="mobile-menu"><a href="index.html">Home</a>' +
-      '<a href="tools/weight-calculator.html">Weight Calculator</a>' +
+      '<a href="tools/index.html">Tools</a>' +
+      '<a href="tools/weight-calculator.html">— Weight Calculator</a>' +
       '<a href="guides/index.html">Guides</a>' +
       '<a href="guides/winterize-plumbing.html">— Winterize plumbing</a>' +
       '<a href="guides/battery-winter-storage.html">— Battery cold storage</a>' +
@@ -56,6 +59,7 @@
       '<a href="guides/roof-snow-load.html">— Roof snow load</a>' +
       '<a href="directory/index.html">Directory</a>' +
       '<a href="directory/index.html#claim">Claim your business</a>' +
+      '<a href="about.html">About</a>' +
       '<a href="contact.html">Contact</a>' +
       '</div></nav>';
   }
@@ -69,7 +73,7 @@
       '<div class="foot-col"><h5>Tools</h5><a href="tools/weight-calculator.html">Weight calculator</a><a href="tools/weight-calculator.html#why">Why it matters</a><a href="tools/weight-calculator.html#embed">Embed on your site</a></div>' +
       '<div class="foot-col"><h5>Guides</h5><a href="guides/winterize-plumbing.html">Winterize plumbing</a><a href="guides/battery-winter-storage.html">Battery cold storage</a><a href="guides/tires-winter.html">Tires through winter</a><a href="guides/roof-snow-load.html">Roof snow load</a></div>' +
       '<div class="foot-col"><h5>Directory</h5><a href="directory/index.html">Find a service</a><a href="directory/index.html#claim">Claim your business</a><a href="directory/index.html#seed">How listings get built</a></div>' +
-      '<div class="foot-col"><h5>Company</h5><a href="contact.html">Contact</a><a href="contact.html">About (working title)</a><a href="tools/weight-calculator.html">Our free tool</a></div>' +
+      '<div class="foot-col"><h5>Company</h5><a href="about.html">About</a><a href="contact.html">Contact</a><a href="tools/index.html">All tools</a></div>' +
       '</div></div>' +
       '<div class="wrap foot-bottom"><span>© 2026 ' + esc(BRAND.name) + '. Built for the open road.</span>' +
       '<span class="legal"><a href="index.html">Home</a><a href="directory/index.html">Directory</a><a href="guides/index.html">Guides</a></span></div></div>';
