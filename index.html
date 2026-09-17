@@ -38,7 +38,7 @@
  <div class="hstat"><div class="num" data-count="63">0%</div><div class="lbl">of towed RVs exceed ratings*</div></div>
  <div class="hstat"><div class="num" data-count="1">0</div><div class="lbl">free tool live today</div></div>
  <div class="hstat"><div class="num" data-count="4">0</div><div class="lbl">winter guides, live and free</div></div>
- <div class="hstat"><div class="num" data-count="0">0</div><div class="lbl">dollars to use it</div></div>
+ <div class="hstat"><div class="num" data-count="0">$0</div><div class="lbl">dollars to use it</div></div>
  </div>
  <p style="font-size:12px;color:var(--text-3);margin-top:8px">*RV Safety &amp; Education Foundation estimate, the reason this tool exists.</p>
  </div>
@@ -178,13 +178,13 @@
  var t = parseInt(el.getAttribute('data-count'), 10);
  if (el.dataset.done) return;
  el.dataset.done = '1';
- if (!('IntersectionObserver' in window)) { el.textContent = t + (el.textContent.indexOf('%') >= 0 ? '%' : ''); return; }
+ if (!('IntersectionObserver' in window)) { el.textContent = (el.textContent.indexOf('$') >= 0 ? '$' : '') + t + (el.textContent.indexOf('%') >= 0 ? '%' : ''); return; }
  var io = new IntersectionObserver(function (es) {
  es.forEach(function (en) {
  if (!en.isIntersecting) return;
  var s = el.textContent.indexOf('%') >= 0;
  var d = 0;
- var tick = setInterval(function () { d += Math.max(1, Math.round(t / 30)); if (d >= t) { d = t; clearInterval(tick); } el.textContent = d + (s ? '%' : ''); }, 24);
+ var tick = setInterval(function () { d += Math.max(1, Math.round(t / 30)); if (d >= t) { d = t; clearInterval(tick); } el.textContent = (s ? '$' : '') + d + (s ? '%' : ''); }, 24);
  io.disconnect();
  });
  }, { threshold: 0.4 });

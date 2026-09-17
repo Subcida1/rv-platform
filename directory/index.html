@@ -1,99 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <script src="../assets/js/base.js"></script>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="canonical" href="https://yourdomain.com/directory/index.html">
- <title>RV Service Directory . Mobile Techs &amp; Service Centers (Oregon First)</title>
- <meta name="description" content="Find RV service and mobile techs. Seeded from the RVTI certified-technician map, Oregon first, then the country. Businesses claim and control their own free listings.">
- <link rel="stylesheet" href="assets/css/style.css">
+  <script src="../assets/js/base.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="canonical" href="https://yourdomain.com/directory/index.html">
+  <title>RV Service Directory. Find Mobile Techs &amp; Service Centers</title>
+  <meta name="description" content="Find RV service and mobile techs. Search mobile technicians and service centers, check certifications, and get contact info fast. Oregon listings live first.">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
- <div id="site-nav"></div>
+  <div id="site-nav"></div>
 
- <div class="wrap" style="padding:54px 0 18px">
- <div class="sec-eyebrow">Directory</div>
- <h1 style="font-size:clamp(30px,4.4vw,48px);font-weight:800;letter-spacing:-.03em;line-height:1.08;margin-top:12px">RV service, without the gamble</h1>
- <p style="color:var(--text-2);font-size:16.5px;margin-top:12px;max-width:680px">Mobile techs and service centers, seeded from the RVTI certified-technician map. Factual listings first, name, city, phone, website, then businesses <b>claim their listing</b> and control what it says. Oregon goes live first, then the country.</p>
- </div>
+  <div class="wrap" style="padding:54px 0 18px">
+    <div class="sec-eyebrow">Directory</div>
+    <h1 style="font-size:clamp(30px,4.4vw,48px);font-weight:800;letter-spacing:-.03em;line-height:1.08;margin-top:12px">Find RV service, fast.</h1>
+    <p style="color:var(--text-2);font-size:16.5px;margin-top:12px;max-width:680px">Mobile technicians and service centers, searchable by area. Certification status up front, contact info one click away.</p>
+  </div>
 
- <div class="sec" style="padding:30px 0 60px">
- <div class="wrap">
- <div class="callout"><b>Seeding in progress . Oregon is first.</b> The directory is being built from public certification data, and listings arrive as they're verified. No invented businesses: when a listing appears here, it came from a public registry or the business itself. <a href="#seed" style="color:inherit;text-decoration:underline">How listings get built →</a></div>
+  <div class="sec" style="padding:30px 0 60px">
+    <div class="wrap">
+      <form class="search" style="max-width:720px;margin:0 auto 16px" onsubmit="return false">
+        <div class="search-bar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="8" r="6"/><path d="M21 8a6 6 0 0 1-6 6"/><path d="M5 3.5h11v3h-3v6h-4"/></svg>
+          <input id="d-search" type="search" placeholder="City, ZIP, or business name" aria-label="Search RV service listing">
+          <button class="btn btn-primary" type="button" onclick="RV.dirSearch()">Search</button>
+        </div>
+      </form>
+      <div class="chips" style="justify-content:center;margin-bottom:20px">
+        <span class="chip" data-f="mobile" onclick="RV.dirFilter(this)">🔧 Mobile techs</span>
+        <span class="chip" data-f="center" onclick="RV.dirFilter(this)">🏢 Service centers</span>
+        <span class="chip" data-f="cert" onclick="RV.dirFilter(this)">✅ Certified</span>
+        <span class="chip" data-f="soon" onclick="RV.dirFilter(this)">Oregon</span>
+      </div>
 
- <div class="layout" style="margin-top:14px">
- <aside class="filters">
- <h4>Search</h4>
- <div class="filter-row" style="padding:0">
- <input id="d-search" type="search" placeholder="City, name, ZIP" style="width:100%" aria-label="Search listings">
- </div>
- <h4>Service type</h4>
- <div class="filter-row"><input type="checkbox" id="d-mobile" checked><label for="d-mobile">Mobile techs</label></div>
- <div class="filter-row"><input type="checkbox" id="d-center" checked><label for="d-center">Service centers</label></div>
- <div class="filter-row"><input type="checkbox" id="d-cert" checked><label for="d-cert">RVTI-certified only</label></div>
- <h4>State</h4>
- <div class="filter-row"><input type="checkbox" id="d-or" checked><label for="d-or">Oregon</label></div>
- <p style="font-size:12.5px;color:var(--text-3);margin-top:8px">Filters stay live, listings get added as they're seeded.</p>
- </aside>
- <div>
- <div class="results-top">
- <div class="results-count"><b id="d-count">, </b> <span>listings live (Oregon seeding)</span></div>
- </div>
- <div class="card" style="padding:34px;text-align:center">
- <div style="font-size:44px;margin-bottom:10px">🗺️</div>
- <h3 style="font-size:20px;font-weight:800">Oregon listings are being seeded right now</h3>
- <p style="color:var(--text-2);font-size:15px;margin-top:10px;max-width:520px;margin-left:auto;margin-right:auto">The first listings will be certified mobile techs and service centers pulled from public registration data, text-first cards, no scraped photos, and a claim button that hands control to the business itself.</p>
- </div>
- </div>
- </div>
+      <div class="results-top">
+        <div class="results-count"><b id="d-count">0</b> listings near you</div>
+      </div>
 
- <div class="card" id="claim" style="padding:30px;margin-top:22px">
- <div class="flex between gap" style="flex-wrap:wrap">
- <div style="flex:1">
- <h3 style="font-size:22px;font-weight:800">Is this your business?</h3>
- <p style="color:var(--text-2);font-size:15px;margin-top:8px">Claim the listing. Free, no middleman, no commission, you verify, you control the info, you upload your own photos. This form parks your claim; activation follows when Oregon goes live.</p>
- </div>
- <form id="claim-form" style="max-width:340px;display:flex;flex-direction:column;gap:9px">
- <input type="text" placeholder="Business name" aria-label="Business name" required>
- <input type="text" placeholder="City, ST" aria-label="City" required>
- <input type="tel" placeholder="Phone" aria-label="Phone">
- <input type="url" placeholder="Website (optional)" aria-label="Website">
- <button class="btn btn-primary btn-block" type="submit">Claim my listing</button>
- <p style="font-size:12px;color:var(--text-3)">No spam, no paywall. Claiming is how a listing gets accurate.</p>
- </form>
- </div>
- </div>
+      <div class="card" style="padding:36px;text-align:center">
+        <div style="font-size:46px;margin-bottom:10px">🛠️</div>
+        <h3 style="font-size:21px;font-weight:800">Oregon listings arriving now</h3>
+        <p style="color:var(--text-2);font-size:15px;margin-top:10px;max-width:520px;margin-left:auto;margin-right:auto">The first listings are being added this season. Claim yours below so your business is first in line, or check back and search your area.</p>
+      </div>
 
- <div class="card" id="seed" style="padding:30px;margin-top:14px">
- <h3 style="font-size:20px;font-weight:800">How listings get built</h3>
- <p style="color:var(--text-2);font-size:15px;line-height:1.7;margin-top:10px">
- <b>1.</b> Public registries first, the RVTI "Find a Certified Technician" map lists businesses that employ RVTI-certified techs, with the facts a directory needs: name, address, website, phone. Facts aren't copyrightable; a directory built on facts is honest.<br>
- <b>2.</b> Text-first cards, no scraped photos, no copied descriptions. Clean, factual, and fast.<br>
- <b>3.</b> The business claims the listing, verifies, uploads its own imagery, corrects its hours. What you see after claim is what the business chose.<br>
- <b>4.</b> Growth by density . Oregon first, then state by state, so every region we enter is genuinely covered instead of dotted with ghosts.
- </p>
- </div>
- </div>
- </div>
+      <div class="card" id="claim" style="padding:28px;margin-top:18px;background:var(--surface)">
+        <div class="flex between gap" style="flex-wrap:wrap">
+          <div style="flex:1.1;min-width:280px">
+            <h3 style="font-size:20px;font-weight:800">Run an RV service business?</h3>
+            <p style="color:var(--text-2);font-size:15px;margin-top:8px;line-height:1.65">Get your listing live, free. You control the info, your hours, your photos. No middleman, no commission, no cost.</p>
+          </div>
+          <form id="claim-form" style="max-width:340px;display:flex;flex-direction:column;gap:9px">
+            <input type="text" placeholder="Business name" aria-label="Business name" required>
+            <input type="text" placeholder="City, ST" aria-label="City" required>
+            <input type="tel" placeholder="Phone" aria-label="Phone">
+            <input type="url" placeholder="Website (optional)" aria-label="Website">
+            <button class="btn btn-primary btn-block" type="submit">Claim my listing</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 
- <div id="site-footer"></div>
- <script src="assets/js/config.js"></script>
- <script src="assets/js/site.js"></script>
- <script>
- (function () {
- var count = document.getElementById('d-count');
- if (count) count.textContent = '0';
- var form = document.getElementById('claim-form');
- if (form) form.addEventListener('submit', function (e) {
- e.preventDefault();
- var out = document.createElement('div');
- out.style.cssText = 'position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#0f7a45;color:#fff;border-radius:999px;padding:12px 22px;font-size:14.5px;font-weight:700;z-index:999;box-shadow:0 14px 30px -12px rgba(16,24,40,.35)';
- out.textContent = 'Claim received, we\'ll reach out when Oregon goes live.';
- document.body.appendChild(out);
- form.reset();
- setTimeout(function () { out.remove(); }, 4200);
- });
- })();
- </script>
+  <div id="site-footer"></div>
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/site.js"></script>
+  <script>
+    (function () {
+      var count = document.getElementById('d-count');
+      var form = document.getElementById('claim-form');
+      if (form) form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var out = document.createElement('div');
+        out.style.cssText = 'position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#0f7a45;color:#fff;border-radius:999px;padding:12px 22px;font-size:14.5px;font-weight:700;z-index:999;box-shadow:0 14px 30px -12px rgba(16,24,40,.35)';
+        out.textContent = 'Claim received. We\'ll be in touch.';
+        document.body.appendChild(out);
+        form.reset();
+        setTimeout(function () { out.remove(); }, 4200);
+      });
+      window.RV.dirSearch = function () {
+        var q = (document.getElementById('d-search').value || '').trim().toLowerCase();
+        var area = document.getElementById('d-count');
+        if (area) {
+          if (q.length >= 2) area.textContent = '0';
+          else area.textContent = '0';
+        }
+        var empty = document.querySelector('.card h3');
+        if (empty && q.length >= 2) {
+          empty.textContent = 'Nothing listed in "' + q + '" yet';
+        } else if (empty) {
+          empty.textContent = 'Oregon listings arriving now';
+        }
+      };
+      window.RV.dirFilter = function (el) { el.classList.toggle('on'); };
+    })();
+  </script>
 </body>
 </html>
