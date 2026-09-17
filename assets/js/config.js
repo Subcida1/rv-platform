@@ -31,6 +31,7 @@ window.RV_CONFIG = {
  guideRoof: 'guides/roof-snow-load.html',
  directory: 'directory/index.html',
  about: 'about.html',
- contact: 'contact.html'
+ contact: 'contact.html',
+ signin: 'signin.html'
  }
 };

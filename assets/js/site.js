@@ -60,7 +60,7 @@
  '<div class="drop"><a href="' + R(rt.directory) + '">Find a service<span class="sm">Mobile techs & centers . Oregon seeding</span></a>' +
  '<a href="' + R(rt.directory) + '#claim">Claim your business<span class="sm">Free listing, you control it</span></a></div></div>' +
  '</div>' +
- '<div class="nav-actions"><a class="btn btn-primary btn-sm" href="' + R(rt.calculator) + '">Free Tool</a>' +
+ '<div class="nav-actions"><a class="btn btn-outline btn-sm" href="' + R(rt.signin) + '">Sign in</a><a class="btn btn-primary btn-sm" href="' + R(rt.calculator) + '">Free Tool</a>' +
  '<button class="burger" aria-label="Menu" onclick="RV.toggleMenu()"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h12M4 10h12M4 14h12"/></svg></button></div>' +
  '</div>' +
  '<div class="mobile-menu"><a href="' + R(rt.home) + '">Home</a>' +
@@ -74,6 +74,7 @@
  '<a href="' + R(rt.directory) + '">Directory</a>' +
  '<a href="' + R(rt.directory) + '#claim">Claim your business</a>' +
  '<a href="' + R(rt.about) + '">About</a>' +
+      '<a href="' + R(rt.signin) + '">Sign in</a>' +
  '<a href="' + R(rt.contact) + '">Contact</a>' +
  '</div></nav>';
  }

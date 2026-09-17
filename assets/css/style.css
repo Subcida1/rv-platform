@@ -733,3 +733,42 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 .deck-card::before{content:"";position:absolute;left:-14px;top:50%;width:10px;height:2px;background:var(--cl-dash);transform:translateY(-50%)}
 .deck-card:first-child::before{content:"";width:0;height:0}
 .deck-card{position:relative}
+
+/* ============================================================
+   Revision 2: quiet animations + mobile-first (2026-09-16)
+   Hover lift reduced; motion should whisper, not bounce.
+   Mobile is the primary surface: big targets, no hover-only
+   behavior, buttery scroll, buttons thumb-sized.
+   ============================================================ */
+.cat-card:hover,.card:hover,.big-card:hover{transform:translateY(-1px);border-color:var(--border-2);box-shadow:var(--shadow-sm)}
+.deck-card:hover{transform:none;border-color:var(--border-2);box-shadow:var(--shadow-sm)}
+.btn:hover{transform:none}
+.save-heart:hover{transform:none}
+/* buttons thumb-friendly minimum */
+.btn{padding:13px 22px;min-height:44px}
+.btn-sm{padding:10px 16px;min-height:40px}
+.chip{padding:9px 16px;min-height:40px}
+/* mobile-first: order matters, this section runs after the older media blocks */
+@media(max-width:720px){
+  .hero h1{font-size:clamp(30px,8vw,44px)}
+  .hero .sub{font-size:15.5px}
+  .search-bar{flex-wrap:wrap;padding:8px 8px 14px}
+  .search-bar input{min-height:40px}
+  .search-bar .btn{width:100%;height:46px}
+  .hero-cta .btn{width:100%}
+  .hero-stats{grid-template-columns:1fr 1fr}
+  .hstat{padding:18px 10px}
+  .chips{justify-content:flex-start;overflow-x:auto;-webkit-overflow-scrolling:touch;gap:8px;flex-wrap:nowrap}
+  .cat-grid,.guide-grid{grid-template-columns:1fr}
+  .deck-card{padding:14px 12px}
+  .wc-out{min-height:auto}
+}
+@media(max-width:420px){
+  .center{text-align:left}
+  .hero-stats{grid-template-columns:1fr 1fr 1fr}
+  .hstat .num{font-size:22px}
+}
+/* never show interactive affordance on hover for touch: simplify link underline on mobile */
+@media(hover:none),(pointer:coarse){
+  .card:hover,.cat-card:hover,.deck-card:hover{transform:none}
+}
