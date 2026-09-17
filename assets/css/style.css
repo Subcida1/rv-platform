@@ -772,3 +772,39 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 @media(hover:none),(pointer:coarse){
   .card:hover,.cat-card:hover,.deck-card:hover{transform:none}
 }
+
+/* ============================================================
+   Revision 3: tool-card pattern + verified badge 2026-09-16
+   Each tool lives in its own card so tools stack 1, 2, 3, N
+   with clear separation. Verified badge replaces internal
+   review detail (public-facing trust, no backstage info).
+   ============================================================ */
+.tool-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
+.tool-card + .tool-card{margin-top:18px}
+.tool-head{padding:22px 26px 0}
+.tool-head .flex{justify-content:space-between;flex-wrap:wrap;gap:12px}
+.tool-body{display:grid;grid-template-columns:1.15fr 1fr;gap:28px;align-items:center;padding:10px 26px 26px}
+@media(max-width:1024px){.tool-body{grid-template-columns:1fr}}
+.tool-copy{display:flex;flex-direction:column;gap:16px}
+.tool-btns{display:flex;flex-wrap:wrap;gap:11px}
+.tool-viz{background:var(--bg-3);border:1px solid var(--border);border-radius:var(--radius-sm);padding:22px}
+.tool-viz .viz-total{font-size:clamp(30px,4vw,44px);font-weight:800;letter-spacing:-.02em;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;display:block;margin-bottom:14px}
+.tool-viz .viz-total small{font-size:12.5px;color:var(--text-3);font-weight:500}
+.tool-viz .viz-row{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:13px 16px;border-radius:11px;font-size:15.5px;margin-bottom:10px}
+.tool-viz .viz-row span{color:var(--text-2);font-weight:600}
+.tool-viz .viz-row b{font-weight:800;text-align:right;white-space:nowrap}
+.tool-viz .viz-row.ok{background:#f3faf5;border:1px solid #cfe9d8}
+.tool-viz .viz-row.ok b{color:#0f7a45}
+.tool-viz .viz-row.warn{background:#fdf6ec;border:1px solid #f3dcae}
+.tool-viz .viz-row.warn b{color:#b45309}
+.verified{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:#0f7a45;background:#eef8f2;border:1px solid #cfe9d8;border-radius:999px;padding:6px 13px}
+.verified::before{content:"\2713";display:grid;place-items:center;width:19px;height:19px;border-radius:50%;background:#0f7a45;color:#fff;font-size:11px;font-weight:900}
+/* quieter primary hover (the old pink glow bubble) */
+.btn-primary:hover{box-shadow:0 6px 14px -8px rgba(244,63,94,.35);transform:none}
+.tool-strip{display:flex;flex-wrap:wrap;gap:9px;margin-top:16px}
+.tool-strip .tchip{font-size:13px;font-weight:700;color:var(--text-2);background:var(--bg-2);border:1px solid var(--border);padding:7px 13px;border-radius:999px;display:inline-flex;align-items:center;gap:7px}
+.tool-strip .tchip b{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+/* pipeline cards: 4-col when wide */
+.tool-pipe{grid-template-columns:repeat(4,1fr)}
+@media(max-width:1024px){.tool-pipe{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:720px){.tool-pipe{grid-template-columns:1fr}}

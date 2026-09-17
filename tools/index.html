@@ -1,83 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <script src="../assets/js/base.js"></script>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="canonical" href="https://yourdomain.com/tools/index.html">
- <title>Free RV Tools . Weight Calculator Live, More Building Now</title>
- <meta name="description" content="Free RV tools: the weight and distribution calculator is live. Campground finder, dump and water stops, and RV-aware GPS are in active development, free when they ship, like everything here.">
- <link rel="stylesheet" href="assets/css/style.css">
+  <script src="../assets/js/base.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="canonical" href="https://yourdomain.com/tools/index.html">
+  <title>Free RV Tools. Weight Calculator Live, More Building Now</title>
+  <meta name="description" content="Free RV tools: the weight and distribution calculator is live. Campground finder, dump and water stops, and RV-aware GPS are in active development, free when they ship, like everything here.">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Free RV Tools","description":"Free RV tools: weight calculator live, more in development.","url":"https://yourdomain.com/tools/index.html"}</script>
 <body>
- <div id="site-nav"></div>
+  <div id="site-nav"></div>
 
- <div class="wrap" style="padding:54px 0 18px">
- <div class="sec-eyebrow">Tools</div>
- <h1 style="font-size:clamp(30px,4.4vw,48px);font-weight:800;letter-spacing:-.03em;line-height:1.08;margin-top:12px">Free tools, shipped one at a time.</h1>
- <p style="color:var(--text-2);font-size:16.5px;margin-top:12px;max-width:680px">Every tool is free, no signup, no paywall. Each one gets built properly and measured, the tools people actually use decide what ships next.</p>
- </div>
+  <div class="wrap" style="padding:54px 0 18px">
+    <div class="sec-eyebrow">Tools</div>
+    <h1 style="font-size:clamp(30px,4.4vw,48px);font-weight:800;letter-spacing:-.03em;line-height:1.08;margin-top:12px">Free tools, shipped one at a time.</h1>
+    <p style="color:var(--text-2);font-size:16.5px;margin-top:12px;max-width:680px">Every tool is free, no signup, no paywall. Each one gets built properly and measured, the tools people actually use decide what ships next.</p>
+    <div class="tool-strip">
+      <span class="tchip">▶ <b>1</b> live now</span>
+      <span class="tchip">🛠 <b>4</b> building</span>
+      <span class="tchip">🆓 <b>$0</b> forever</span>
+    </div>
+  </div>
 
- <div class="sec" style="padding:30px 0 60px">
- <div class="wrap">
- <div class="sec-head" style="margin-bottom:26px">
- <div class="sec-eyebrow">Live now</div>
- <h2 style="font-size:clamp(24px,3vw,34px)">Weight &amp; Distribution Calculator</h2>
- </div>
- <div class="flex between gap" style="flex-wrap:wrap;align-items:flex-start">
- <div style="flex:1;min-width:280px">
- <p style="color:var(--text-2);font-size:15px;line-height:1.7">Towing capacity vs the 80% rule, door-jamb payload, tongue or pin load, trailer GVWR, per-axle estimates. Type once, everything recomputes, the answer to "can my truck actually tow this?" in three fields.</p>
- <div class="flex gap" style="margin-top:14px">
- <a class="btn btn-primary" href="tools/weight-calculator.html">Open the calculator</a>
- <a class="btn btn-secondary" href="tools/weight-calculator.html#embed">Embed it on your site</a>
- </div>
- <p class="reviewed">Math reviewed: Sep 16, 2026, water 8.34 lb/gal, propane 4.24 lb/gal, 80% rule.</p>
- </div>
- <div class="card" style="max-width:360px;padding:20px">
- <div class="deck-sim">
- <div class="deck-sim-row ok"><span>Loaded trailer</span><b>6,393 lb</b></div>
- <div class="deck-sim-row ok"><span>Towing capacity</span><b>69%, inside 80% rule</b></div>
- <div class="deck-sim-row warn"><span>Truck payload</span><b>84%, at the edge</b></div>
- </div>
- <p style="font-size:12.5px;color:var(--text-3);margin-top:8px">Example output, yours is computed from your inputs, live.</p>
- </div>
- </div>
- </div>
- </div>
+  <div class="sec" style="padding:30px 0 60px">
+    <div class="wrap">
+      <div class="tool-card">
+        <div class="tool-head">
+          <div class="flex between gap">
+            <h2 style="font-size:clamp(24px,3vw,34px);font-weight:800;letter-spacing:-.02em">Weight &amp; Distribution Calculator</h2>
+            <span class="verified">Verified math</span>
+          </div>
+        </div>
+        <div class="tool-body">
+          <div class="tool-copy">
+            <p style="color:var(--text-2);font-size:15px;line-height:1.7">Towing capacity vs the 80% rule, door-jamb payload, tongue or pin load, trailer GVWR, per-axle estimates. Type once, everything recomputes, the answer to "can my truck actually tow this?" in three fields.</p>
+            <div class="tool-btns">
+              <a class="btn btn-primary" href="tools/weight-calculator.html">Open the calculator</a>
+              <a class="btn btn-secondary" href="tools/weight-calculator.html#embed">Embed it on your site</a>
+            </div>
+            <p style="font-size:12.5px;color:var(--text-3);line-height:1.6">Estimates only. Always confirm your real load at a certified scale.</p>
+          </div>
+          <div class="tool-viz">
+            <div class="viz-total">6,393 lb<small>loaded trailer</small></div>
+            <div class="viz-row ok"><span>Towing capacity</span><b>69%, inside 80% rule</b></div>
+            <div class="viz-row warn"><span>Truck payload</span><b>84%, at the edge</b></div>
+            <div class="viz-row ok"><span>Hitch load (est.)</span><b>767 lb</b></div>
+            <p style="font-size:12px;color:var(--text-3);margin-top:10px">Example output. Yours is computed from your inputs, live.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
- <div class="sec sec-alt">
- <div class="wrap">
- <div class="sec-head center">
- <div class="sec-eyebrow">Building now</div>
- <h2>Next tools in the pipeline.</h2>
- <p>All free when they land. What ships next comes from what people actually search for . I'd rather build the tool that gets used than the one that sounded fun on a whiteboard. No guessing, no vanity builds.</p>
- </div>
- <div class="cat-grid" style="grid-template-columns:repeat(3,1fr)">
- <div class="cat-card">
- <div class="cat-ic">🗺️</div>
- <h3>Campground Finder</h3>
- <p>Find sites that fit your rig, length, hookups, pet rules, and the honest reviews that help you choose.</p>
- <div class="meta">In development</div>
- </div>
- <div class="cat-card">
- <div class="cat-ic">🚰</div>
- <h3>Dump &amp; Water Stops</h3>
- <p>Fresh water, sewer dump, potable fill, located free, seeded from public data, kept current by RVers.</p>
- <div class="meta">In development</div>
- </div>
- <div class="cat-card">
- <div class="cat-ic">🧭</div>
- <h3>RV-Aware GPS</h3>
- <p>Navigation that thinks like a rig: low bridges, tight turnarounds, height and weight limits, the trucker tools, free for RVers.</p>
- <div class="meta">In development</div>
- </div>
- </div>
- <p style="color:var(--text-3);font-size:13px;text-align:center;margin-top:18px">Floor planner is in the works with our build partner, it joins the pipeline when it's ready.</p>
- </div>
- </div>
+  <div class="sec sec-alt">
+    <div class="wrap">
+      <div class="sec-head center">
+        <div class="sec-eyebrow">Building now</div>
+        <h2>Next tools in the pipeline.</h2>
+        <p>All free when they land. What ships next comes from what people actually search for. I'd rather build the tool that gets used than the one that sounded fun on a whiteboard. No guessing, no vanity builds.</p>
+      </div>
+      <div class="cat-grid tool-pipe">
+        <div class="cat-card">
+          <div class="cat-ic">🗺️</div>
+          <h3>Campground Finder</h3>
+          <p>Find sites that fit your rig, length, hookups, pet rules, and the honest reviews that help you choose.</p>
+          <div class="meta">In development</div>
+        </div>
+        <div class="cat-card">
+          <div class="cat-ic">🚰</div>
+          <h3>Dump &amp; Water Stops</h3>
+          <p>Fresh water, sewer dump, potable fill, located free, seeded from public data, kept current by RVers.</p>
+          <div class="meta">In development</div>
+        </div>
+        <div class="cat-card">
+          <div class="cat-ic">🧭</div>
+          <h3>RV-Aware GPS</h3>
+          <p>Navigation that thinks like a rig: low bridges, tight turnarounds, height and weight limits, the trucker tools, free for RVers.</p>
+          <div class="meta">In development</div>
+        </div>
+        <div class="cat-card">
+          <div class="cat-ic">📐</div>
+          <h3>Floor Planner</h3>
+          <p>Design and rearrange your rig's layout before you build. Move walls, find the fit, plan the load.</p>
+          <div class="meta">In development</div>
+        </div>
+      </div>
+    </div>
+  </div>
 
- <div id="site-footer"></div>
- <script src="assets/js/config.js"></script>
- <script src="assets/js/site.js"></script>
+  <div id="site-footer"></div>
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/site.js"></script>
 </body>
 </html>
