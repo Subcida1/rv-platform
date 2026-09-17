@@ -128,3 +128,37 @@
   window.RVWeight = { update: update };
   update();
 })();
+/* ---------- scale locator ---------- */
+(function () {
+  var SC = window.RV_SCALES;
+  if (!SC) return;
+  var host = document.getElementById('scale-list');
+  if (!host) return;
+  function card(src) {
+    var out = '<div class="deck-card"><div class="deck-ic">⚖️</div>' +
+      '<div class="deck-body"><b>' + esc(src.name) + '</b><span>' + esc(src.desc) + '</span>' +
+      (src.type ? '<span>' + esc(src.type) + '</span>' : '') + '</div>' +
+      '<div class="deck-go">' + (src.url || src.map || src.data ? 'Visit \u2192' : '') + '</div></div>';
+    return out;
+  }
+  function linkCard(src) {
+    var href = src.url || src.map || src.data || null;
+    var inner = '<div class="deck-card"><div class="deck-ic">\u2696\uFE0F</div>' +
+      '<div class="deck-body"><b>' + esc(src.name) + '</b><span>' + esc(src.type || '') + '</span></div>' +
+      '<div class="deck-go">Link \u2192</div></div>';
+    return href ? '<a href="' + esc(href) + '" target="_blank" rel="noopener">' + inner + '</a>' : '<div class="deck-card">' + inner + '</div>';
+  }
+  var html = '';
+  SC.sources.forEach(function (src) {
+    if (src.perState) {
+      html += '<div class="deck-card"><div class="deck-ic">\U0001F3E2</div>' +
+        '<div class="deck-body"><b>State DOT weigh stations</b><span>Public, free when open \u2014 certified inspection scales</span><span>Hours vary by state; search "[state] DOT weigh station" for current status</span></div></div>';
+    } else {
+      html += card(src);
+    }
+  });
+  host.innerHTML = html;
+  host.insertAdjacentHTML('beforeend',
+    '<div class="v-row" style="margin-top:6px"><div class="v-dot" style="background:var(--c-sky)"></div>' +
+    '<div class="v-txt"><b>How to use a truck scale for an RV</b><span>Follow the scale\u2019s arrows onto the pad, keep the rig fully hitched unless directed otherwise, and ask for the axle printout \u2014 it lists each axle group you can compare to your ratings.</span></div></div>');
+})();

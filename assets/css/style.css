@@ -681,3 +681,12 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 .deck-sim-row.warn{background:#fdf6ec;border:1px solid #f3dcae;color:#b45309}
 .deck-sim-row.warn b{color:#b45309}
 .deck-sim-note{font-size:12.5px;color:var(--text-3);margin-top:10px}
+
+/* scale locator cards */
+.scale-card{display:flex;gap:14px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);padding:14px 16px;transition:.15s}
+.scale-card:hover{border-color:var(--border-2);box-shadow:var(--shadow-sm)}
+.scale-card .rc-ic{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;font-size:19px;flex:none;background:var(--grad-soft)}
+.scale-card .rc-body{flex:1}
+.scale-card .rc-body b{font-size:15px;font-weight:800;display:block}
+.scale-card .rc-body span{font-size:13px;color:var(--text-2);display:block;line-height:1.5}
+.scale-card a{color:var(--c-sky);font-weight:700;text-decoration:underline}
