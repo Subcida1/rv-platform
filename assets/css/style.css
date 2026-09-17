@@ -1,6 +1,6 @@
 /* ============================================================
-   RVVerse — Design System (Light Theme)
-   Big-brand standardized UI · Sunset gradient identity
+   RVVerse Design System (Light Theme)
+   Big-brand standardized UI, sunset gradient identity
    ============================================================ */
 :root{
   --bg:#ffffff;
@@ -396,7 +396,7 @@ footer a:hover{color:#fff}
 }
 
 /* ============================================================
-   RVVerse — Design System v2 (Light, gradient-forward, big-brand)
+   RVVerse Design System v2 (Light, gradient-forward, big-brand)
    Fleshes out every page; the 5 core pages use this deeply.
    ============================================================ */
 
@@ -569,7 +569,7 @@ details.faq{background:var(--surface);border:1px solid var(--border);border-radi
 details.faq[open]{border-color:var(--border-2);box-shadow:var(--shadow-sm)}
 details.faq summary{cursor:pointer;font-weight:700;font-size:15.5px;padding:16px 0;list-style:none;position:relative;color:var(--text)}
 details.faq summary::after{content:"+";position:absolute;right:0;color:var(--text-3);font-size:20px;font-weight:500}
-details.faq[open] summary::after{content:"–"}
+details.faq[open] summary::after{content:"-"}
 details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-bottom:18px}
 .callout{background:var(--grad-soft-2);border:1px solid #f3d4d9;border-radius:var(--radius-sm);padding:18px 22px;margin-top:20px;color:var(--text);font-size:14.5px;line-height:1.65}
 

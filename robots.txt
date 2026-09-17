@@ -1,4 +1,4 @@
-# RV Everything — robots.txt
+# RV Everything robots.txt
 # Replace yourdomain.com with the real domain when the name locks (one search-replace across the site).
 User-agent: *
 Allow: /

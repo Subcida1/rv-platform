@@ -152,7 +152,7 @@
  SC.sources.forEach(function (src) {
  if (src.perState) {
  html += '<div class="deck-card"><div class="deck-ic">\U0001F3E2</div>' +
- '<div class="deck-body"><b>State DOT weigh stations</b><span>Public, free when open \u2014 certified inspection scales</span><span>Hours vary by state; search "[state] DOT weigh station" for current status</span></div></div>';
+ '<div class="deck-body"><b>State DOT weigh stations</b><span>Public, free when open, certified inspection scales</span><span>Hours vary by state; search "[state] DOT weigh station" for current status</span></div></div>';
  } else {
  html += card(src);
  }
@@ -160,5 +160,5 @@
  host.innerHTML = html;
  host.insertAdjacentHTML('beforeend',
  '<div class="v-row" style="margin-top:6px"><div class="v-dot" style="background:var(--c-sky)"></div>' +
- '<div class="v-txt"><b>How to use a truck scale for an RV</b><span>Follow the scale\u2019s arrows onto the pad, keep the rig fully hitched unless directed otherwise, and ask for the axle printout \u2014 it lists each axle group you can compare to your ratings.</span></div></div>');
+ '<div class="v-txt"><b>How to use a truck scale for an RV</b><span>Follow the scale\u2019s arrows onto the pad, keep the rig fully hitched unless directed otherwise, and ask for the axle printout, it lists each axle group you can compare to your ratings.</span></div></div>');
 })();
