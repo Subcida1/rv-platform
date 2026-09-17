@@ -690,3 +690,46 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 .scale-card .rc-body b{font-size:15px;font-weight:800;display:block}
 .scale-card .rc-body span{font-size:13px;color:var(--text-2);display:block;line-height:1.5}
 .scale-card a{color:var(--c-sky);font-weight:700;text-decoration:underline}
+
+/* ============================================================
+   IDENTITY v2 "Open Road" (Revision 1 of 4) 2026-09-16
+   Moves off generic AI-site furniture toward RV-native
+   highway-signage language: centerlines, mile markers,
+   route shields. Keeps the clean light + sunset gradient.
+   ============================================================ */
+:root{
+  --route:#8b5cf6;
+  --route-2:#f43f5e;
+  --asphalt:#1e293b;
+  --sign:#0f172a;
+  --sign-text:#ffffff;
+  --sign-accent:#f59e0b;
+  --cl-yellow:#e8b100;
+  --cl-white:#ffffff;
+  --cl-dash:#d0d5dd;
+}
+/* mile marker eyebrow: replaces the generic uppercase label */
+.sec-eyebrow.mile{display:inline-flex;align-items:center;gap:9px;background:var(--sign);color:#fff;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:none;padding:5px 13px;border-radius:6px;border:1px solid #cbd5e1;box-shadow:0 1px 0 rgba(255,255,255,.35) inset}
+.sec-eyebrow.mile::before{content:"MP";display:inline-grid;place-items:center;width:26px;height:20px;background:var(--cl-yellow);color:var(--sign);font-weight:800;border-radius:4px;font-size:10.5px}
+.sec-eyebrow.mile .mile-num{color:var(--cl-yellow);font-weight:800}
+/* centerline divider: two-tone dashed highway line */
+.centerline{height:14px;margin:0 auto;max-width:240px;background:linear-gradient(90deg,var(--cl-yellow) 22px,var(--asphalt) 22px 44px);background-size:88px 14px;border-radius:999px;opacity:.9;position:relative}
+.centerline::after{content:"";position:absolute;left:44px;top:0;width:0;height:14px}
+.centerline.long{max-width:480px}
+/* route shield chip (state-highway style) */
+.route{display:inline-flex;align-items:center;gap:7px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:11.5px;font-weight:800;color:var(--sign);background:#fff;border:1.5px solid var(--sign);border-radius:50%;width:26px;height:26px;place-items:center}
+.route-mini{display:inline-flex;align-items:center;gap:7px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:10.5px;font-weight:800;color:var(--sign);border:1.5px solid var(--sign);border-radius:6px;padding:2px 7px}
+/* hero gets a centerline underline */
+.hero .centerline{margin-top:30px}
+/* CTA buttons get the route-shield arrow treatment */
+.btn .route-arrow{width:0;height:0;border-top:7px solid transparent;border-bottom:7px solid transparent;border-left:10px solid currentColor;margin-left:10px;display:inline-block}
+/* kicker: small-town signpost */
+.kicker.signpost{position:relative;padding-left:34px}
+.kicker.signpost::before{content:"";position:absolute;left:0;top:-6px;width:24px;height:34px;background:var(--sign);border-radius:2px;border:1px solid #cbd5e1}
+.kicker.signpost::after{content:"\25CF";position:absolute;left:8px;top:8px;color:var(--cl-yellow);font-size:12px}
+/* stat/card accent: exit-sign numbers */
+.hstat .num.exit-sign{font-family:ui-monospace,Menlo,Consolas,monospace}
+/* deck: route-line connector */
+.deck-card::before{content:"";position:absolute;left:-14px;top:50%;width:10px;height:2px;background:var(--cl-dash);transform:translateY(-50%)}
+.deck-card:first-child::before{content:"";width:0;height:0}
+.deck-card{position:relative}
