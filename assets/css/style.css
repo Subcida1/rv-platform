@@ -876,13 +876,13 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
    button = the one vivid moment.
    ============================================================ */
 .g-theme-mist{
-  --b1:#cfdff7; --b2:#ddd0f2; --b3:#f8d9b0;
-  --grad:linear-gradient(135deg,#6a97cb 0%,#8f77cc 50%,#d97a55 100%);
-  --grad-2:linear-gradient(120deg,#5f8fd4 0%,#8a6fc8 45%,#cf7249 100%);
-  --grad-soft:linear-gradient(135deg,rgba(106,151,203,.12),rgba(143,119,204,.12) 50%,rgba(217,122,85,.12));
-  --grad-soft-2:linear-gradient(135deg,rgba(95,143,212,.10),rgba(138,111,200,.10) 50%,rgba(207,114,73,.10));
-  --glow:rgba(127,180,233,.32);
-  --btn-grad:linear-gradient(135deg,#3d84eb 0%,#6d3fd3 50%,#e8505e 100%);
+  --b1:#5b9ed6; --b2:#7db0e0; --b3:#a3c6ec;
+  --grad:linear-gradient(135deg,#4a8fc8 0%,#7db0e0 50%,#a3c6ec 100%);
+  --grad-2:linear-gradient(120deg,#3f83c0 0%,#669fd6 45%,#8fb8e6 100%);
+  --grad-soft:linear-gradient(135deg,rgba(91,158,214,.12),rgba(125,176,224,.12) 50%,rgba(163,198,236,.12));
+  --grad-soft-2:linear-gradient(135deg,rgba(74,143,200,.10),rgba(102,159,214,.10) 50%,rgba(143,184,230,.10));
+  --glow:rgba(91,158,214,.32);
+  --btn-grad:linear-gradient(135deg,#1e6fc4 0%,#2f7fd6 50%,#3f8fe8 100%);
 }
 /* CTA buttons stay bright (the one vivid brand moment per Ty), everything else is mist */
 .btn-primary{background:var(--btn-grad, var(--grad));color:#fff;box-shadow:0 12px 26px -12px var(--glow, rgba(244,63,94,.6))}
@@ -943,7 +943,7 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
   background:linear-gradient(var(--surface),var(--surface)) padding-box, var(--grad) border-box;
   color:var(--text);
   box-shadow:0 10px 22px -12px var(--glow, rgba(127,180,233,.32))}
-.btn-gb:hover{transform:translateY(-1px);box-shadow:0 14px 28px -14px var(--glow, rgba(127,180,233,.5))}
+.btn-gb:hover{transform:none;box-shadow:0 14px 28px -14px var(--glow, rgba(127,180,233,.5))}
 .btn-gb:active{transform:translateY(1px)}
 .btn-gb.btn-sm{padding:10px 16px;font-size:13px}
 .btn-gb.btn-lg{padding:16px 30px;font-size:15.5px}
@@ -959,6 +959,6 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
    The primary CTA mirrors "Everything RV" (pale gradient fill
    + dark text). Everything else = .btn-gb gradient border.
    ============================================================ */
-.btn-primary{background:var(--grad);color:var(--text);border:1px solid var(--border-2);box-shadow:0 8px 18px -12px var(--glow, rgba(127,180,233,.28))}
-.btn-primary:hover{background:var(--grad-2);color:var(--text);box-shadow:0 12px 24px -14px var(--glow, rgba(127,180,233,.4));transform:none}
+.btn-primary{background:var(--btn-grad, var(--grad));color:#fff;border:none;box-shadow:0 8px 18px -12px var(--glow, rgba(127,180,233,.35))}
+.btn-primary:hover{background:var(--btn-grad, var(--grad));color:#fff;box-shadow:0 12px 24px -14px var(--glow, rgba(127,180,233,.5));transform:none}
 .btn-primary:disabled,.btn-primary.disabled{opacity:.55;cursor:not-allowed;background:var(--bg-3);color:var(--text-3);box-shadow:none}
