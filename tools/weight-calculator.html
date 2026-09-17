@@ -33,12 +33,12 @@
           <div class="panel" style="padding:24px">
             <h3 style="font-size:15px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--text-3)">Your tow vehicle</h3>
             <div class="form-row">
-              <div class="field"><label for="w-tow-rating">Max towing rating (lb)</label><input id="w-tow-rating" type="number" min="0" step="100" inputmode="numeric" placeholder="e.g. 9200"><span class="hint">From the owner's manual towing table.</span></div>
-              <div class="field"><label for="w-payload">Payload capacity (lb)</label><input id="w-payload" type="number" min="0" step="50" inputmode="numeric" placeholder="door jamb sticker"><span class="hint">Yellow sticker inside the driver's door.</span></div>
+              <div class="field"><label for="w-tow-rating">Max towing rating (lb)</label><input id="w-tow-rating" type="number" min="0" step="100" inputmode="numeric" placeholder="9200"><span class="hint">Find it: owner's manual towing table, or the maker's online towing guide. Not usually on a door sticker.</span></div>
+              <div class="field"><label for="w-payload">Payload capacity (lb)</label><input id="w-payload" type="number" min="0" step="50" inputmode="numeric" placeholder="1500"><span class="hint">Find it: yellow and white sticker inside the driver's door, "occupants and cargo should never exceed".</span></div>
             </div>
             <div class="form-row">
-              <div class="field"><label for="w-curb">Tow vehicle curb weight (lb)</label><input id="w-curb" type="number" min="0" step="50" inputmode="numeric" placeholder="empty, full tank"><span class="hint">Empty weight, full fuel, printed in the owner's manual or on the door sticker.</span></div>
-              <div class="field"><label for="w-truck-gvwr">Tow vehicle GVWR (lb)</label><input id="w-truck-gvwr" type="number" min="0" step="100" inputmode="numeric" placeholder="max allowed weight"><span class="hint">Gross vehicle weight rating from the door sticker. Used to check the truck itself is not overloaded.</span></div>
+              <div class="field"><label for="w-curb">Tow vehicle curb weight (lb)</label><input id="w-curb" type="number" min="0" step="50" inputmode="numeric" placeholder="5600"><span class="hint">Find it: owner's manual specs, or the maker's online spec sheet. Empty with a full tank of fuel.</span></div>
+              <div class="field"><label for="w-truck-gvwr">Tow vehicle GVWR (lb)</label><input id="w-truck-gvwr" type="number" min="0" step="100" inputmode="numeric" placeholder="7500"><span class="hint">Find it: sticker inside the driver's door, labeled GVWR. The max the truck may weigh loaded.</span></div>
             </div>
           </div>
           <div class="panel" style="padding:24px">
@@ -59,8 +59,8 @@
               </div>
             </div>
             <div class="form-row">
-              <div class="field"><label for="w-uvw">Dry weight (lb)</label><input id="w-uvw" type="number" min="0" step="50" inputmode="numeric" placeholder="UVW from the sticker"><span class="hint">Unloaded vehicle weight, printed on the trailer sticker.</span></div>
-              <div class="field"><label for="w-gvwr">Trailer GVWR (lb)</label><input id="w-gvwr" type="number" min="0" step="100" inputmode="numeric" placeholder="max loaded weight"><span class="hint">Gross vehicle weight rating, the max the trailer may weigh when loaded. Printed on the trailer sticker.</span></div>
+              <div class="field"><label for="w-uvw">Dry weight (lb)</label><input id="w-uvw" type="number" min="0" step="50" inputmode="numeric" placeholder="5600"><span class="hint">Find it: sticker on the trailer, front left or inside a cabinet. Also called unloaded vehicle weight, UVW.</span></div>
+              <div class="field"><label for="w-gvwr">Trailer GVWR (lb)</label><input id="w-gvwr" type="number" min="0" step="100" inputmode="numeric" placeholder="7000"><span class="hint">Find it: same trailer sticker, labeled GVWR. The max weight the trailer may carry when fully loaded.</span></div>
             </div>
             <p style="font-size:12.5px;font-weight:700;color:var(--text-2);margin-bottom:0">Tongue or pin weight is estimated for you automatically, travel trailers run 10 to 15% of loaded weight, fifth wheels 20 to 25%. A certified scale gives the exact number.</p>
           </div>
@@ -68,13 +68,25 @@
             <h3 style="font-size:15px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--text-3)">What you add</h3>
             <p style="font-size:13px;color:var(--text-2);margin-bottom:12px">Two places to put extra weight, one count per place. People and gear ride in the truck, cargo rides in the trailer.</p>
             <div class="form-row">
-              <div class="field"><label for="w-passengers">In the truck: people and gear (lb)</label><input id="w-passengers" type="number" min="0" step="10" inputmode="numeric" placeholder="e.g. 400"><span class="hint">Everyone riding, plus cargo in the cab and bed.</span></div>
-              <div class="field"><label for="w-cargo-trailer">In the trailer: cargo (lb)</label><input id="w-cargo-trailer" type="number" min="0" step="25" inputmode="numeric" placeholder="e.g. 500"><span class="hint">Everything that rides inside the trailer beyond its dry weight.</span></div>
+              <div class="field"><label for="w-passengers">In the truck: people and gear (lb)</label><input id="w-passengers" type="number" min="0" step="10" inputmode="numeric" placeholder="400"><span class="hint">Rough estimate is fine. Two adults run about 350 lb, add everything in the cab and bed.</span></div>
+              <div class="field"><label for="w-cargo-trailer">In the trailer: cargo (lb)</label><input id="w-cargo-trailer" type="number" min="0" step="25" inputmode="numeric" placeholder="500"><span class="hint">Everything that rides inside the trailer beyond its dry weight. Water and propane are counted separately by us.</span></div>
             </div>
             <div class="form-row">
-              <div class="field"><label for="w-h2o-f">Fresh water in the RV's fresh tank (gal)</label><input id="w-h2o-f" type="number" min="0" step="1" inputmode="numeric" placeholder="0"><span class="hint">Count the RV's fresh water tank, not bottles. A typical 40 to 60 gallon tank holds 334 to 500 lb of water.</span></div>
-              <div class="field"><label for="w-propane">Propane (gal)</label><input id="w-propane" type="number" min="0" step="1" inputmode="numeric" placeholder="20 for a standard 30-gal tank"><span class="hint">Propane weighs about 4.24 lb per gallon.</span></div>
+              <div class="field"><label for="w-h2o-f">Fresh water in the RV's fresh tank (gal)</label><input id="w-h2o-f" type="number" min="0" step="1" inputmode="numeric" placeholder="40"><span class="hint">A typical RV fresh water tank holds 40 to 60 gallons, 334 to 500 pounds of water. Find the size on the spec sheet or tank sticker.</span></div>
+              <div class="field"><label for="w-propane">Propane tanks</label>
+                <select id="w-propane">
+                  <option value="0">None, or not sure</option>
+                  <option value="4.7">One 20 lb tank (about 4.7 gal)</option>
+                  <option value="7" selected>One 30 lb tank (about 7 gal)</option>
+                  <option value="9.4">One 40 lb tank (about 9.4 gal)</option>
+                  <option value="9.4b">Two 20 lb tanks (about 9.4 gal)</option>
+                  <option value="14">Two 30 lb tanks (about 14 gal)</option>
+                  <option value="18.8">Two 40 lb tanks (about 18.8 gal)</option>
+                </select>
+                <span class="hint">Tanks are labeled by pounds of propane, not gallons. 20 lb = 4.7 gal, 30 lb = 7 gal, 40 lb = 9.4 gal. Check the collar of the tank for the number.</span>
+              </div>
             </div>
+            <div class="w-live" id="w-live">Pick your trailer type to see the estimated tongue weight here.</div>
           </div>
         </div>
         <div class="wc-out" id="w-results">

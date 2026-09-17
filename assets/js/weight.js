@@ -22,6 +22,13 @@
  }
  function esc(s) { return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
 
+ function propaneVal() {
+   var el = $('w-propane');
+   var v = el ? el.value : '0';
+   if (v === '9.4b') return 9.4; // two 20 lb tanks
+   var n = parseFloat(v);
+   return isNaN(n) || n < 0 ? 0 : n;
+ }
  function update() {
  var host = $('w-results');
  if (!host) return;
@@ -33,7 +40,7 @@
  var rigGVWR = num('w-gvwr'); // trailer GVWR, required
  var rigUVW = num('w-uvw'); // trailer dry weight
  var h2oF = num('w-h2o-f'); // fresh water only
- var propane = num('w-propane');
+ var propane = propaneVal();
  var cargoTrailer = num('w-cargo-trailer');
  var passengers = num('w-passengers');
  var type = $( 'w-type').value; // 'tt' or 'fw'
@@ -47,6 +54,14 @@
  var tonguePct = type === 'fw' ? 0.20 : 0.12;
  var tongueRange = type === 'fw' ? [0.15, 0.25] : [0.10, 0.15];
  var tongue = Math.round(loaded * tonguePct);
+   var live = $('w-live');
+   if (live) {
+     if (loaded > 0) {
+       live.textContent = 'Estimated ' + (type === 'fw' ? 'pin' : 'tongue') + ' weight: ' + fmt(tongue) + ' lb, about ' + Math.round(tonguePct * 100) + '% of loaded weight. Estimate only, a certified scale gives the truth.';
+     } else {
+       live.textContent = 'Add a trailer dry weight to see the estimated tongue weight.';
+     }
+   }
 
  var payloadUsed = tongue + passengers;
  var payloadRemain = Math.max(0, payloadCap - payloadUsed);
