@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="canonical" href="https://yourdomain.com/tools/weight-calculator.html">
+  <title>RV Weight &amp; Towing Calculator — Payload, Tongue, Axles, 80% Rule</title>
+  <meta name="description" content="Free RV weight calculator: loaded weight, towing capacity vs the 80% rule, truck payload, tongue/pin load, trailer GVWR, and per-axle estimates. Instant, no signup.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"RV Weight & Distribution Calculator","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","url":"https://yourdomain.com/tools/weight-calculator.html","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free RV weight calculator: loaded weight, towing capacity vs the 80% rule, truck payload, tongue or pin load, trailer GVWR, and per-axle estimates."}</script>
+<body>
+  <div id="site-nav"></div>
+
+  <div class="wrap" style="padding:54px 0 18px">
+    <div class="sec-eyebrow">Free tool</div>
+    <h1 style="font-size:clamp(30px,4.4vw,48px);font-weight:800;letter-spacing:-.03em;line-height:1.08;margin-top:12px">Weight &amp; Distribution Calculator</h1>
+    <p style="color:var(--text-2);font-size:16.5px;margin-top:12px;max-width:680px">One tool, every weight question: <b>Can your truck tow it?</b> — loaded trailer weight vs the 80% rule, door-jamb payload, tongue or pin load, trailer GVWR, and a per-axle estimate. Everything recomputes as you type.</p>
+    <p class="reviewed">Math reviewed: Sep 16, 2026 — water 8.34 lb/gal · propane 4.24 lb/gal · 80% rule. Informational; certified scale always wins.</p>
+  </div>
+
+  <div class="sec" style="padding:30px 0 56px">
+    <div class="wrap">
+      <div class="wc-layout">
+        <div class="wc-form">
+          <div class="panel" style="padding:24px">
+            <h3 style="font-size:15px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--text-3)">Tow vehicle</h3>
+            <div class="form-row">
+              <div class="field"><label for="w-tow-rating">Max towing rating (lb)</label><input id="w-tow-rating" type="number" min="0" step="100" inputmode="numeric" placeholder="e.g. 9200"></div>
+              <div class="field"><label for="w-payload">Payload capacity (lb)</label><input id="w-payload" type="number" min="0" step="50" inputmode="numeric" placeholder="door-jamb sticker"></div>
+            </div>
+            <div class="form-row">
+              <div class="field"><label for="w-curb">Vehicle curb weight (lb, optional)</label><input id="w-curb" type="number" min="0" step="100" inputmode="numeric" placeholder="empty truck"></div>
+              <div class="field"><label for="w-passengers">Passengers + gear in truck (lb)</label><input id="w-passengers" type="number" min="0" step="10" inputmode="numeric" placeholder="people + cargo"></div>
+            </div>
+          </div>
+          <div class="panel" style="padding:24px">
+            <h3 style="font-size:15px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--text-3)">Trailer</h3>
+            <div class="form-row">
+              <div class="field"><label for="w-type">Trailer type</label>
+                <select id="w-type">
+                  <option value="tt">Travel trailer</option>
+                  <option value="fw">Fifth wheel</option>
+                </select>
+              </div>
+              <div class="field"><label for="w-axles">Axles</label>
+                <select id="w-axles">
+                  <option value="1">1</option>
+                  <option value="2" selected>2</option>
+                  <option value="3">3</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="field"><label for="w-uvw">Dry weight — UVW (lb)</label><input id="w-uvw" type="number" min="0" step="50" inputmode="numeric" placeholder="from the sticker"></div>
+              <div class="field"><label for="w-gvwr">GVWR (lb, optional)</label><input id="w-gvwr" type="number" min="0" step="100" inputmode="numeric" placeholder="max loaded"></div>
+            </div>
+            <div class="field"><label for="w-tongue">Tongue / pin weight (lb, if measured)</label><input id="w-tongue" type="number" min="0" step="20" inputmode="numeric" placeholder="blank = estimated"></div>
+          </div>
+          <div class="panel" style="padding:24px">
+            <h3 style="font-size:15px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--text-3)">Water · propane · cargo</h3>
+            <div class="form-row">
+              <div class="field"><label for="w-h2o-f">Fresh water (gal)</label><input id="w-h2o-f" type="number" min="0" step="1" inputmode="numeric" placeholder="0"></div>
+              <div class="field"><label for="w-h2o-g">Gray water (gal)</label><input id="w-h2o-g" type="number" min="0" step="1" inputmode="numeric" placeholder="0"></div>
+            </div>
+            <div class="form-row">
+              <div class="field"><label for="w-h2o-b">Black water (gal)</label><input id="w-h2o-b" type="number" min="0" step="1" inputmode="numeric" placeholder="0"></div>
+              <div class="field"><label for="w-propane">Propane (gal)</label><input id="w-propane" type="number" min="0" step="1" inputmode="numeric" placeholder="std 30-gal tank ≈ 20"></div>
+            </div>
+            <div class="form-row">
+              <div class="field"><label for="w-cargo-trailer">Cargo in trailer (lb)</label><input id="w-cargo-trailer" type="number" min="0" step="25" inputmode="numeric" placeholder="gear, bikes, tools"></div>
+              <div class="field"><label for="w-cargo-truck">Cargo in truck (lb)</label><input id="w-cargo-truck" type="number" min="0" step="25" inputmode="numeric" placeholder="bed + cab cargo"></div>
+            </div>
+            <p style="font-size:12.5px;color:var(--text-3)">Water = 8.34 lb/gal · Propane = 4.24 lb/gal. Weights are estimates — spec stickers onboard the units win.</p>
+          </div>
+        </div>
+        <div class="wc-out" id="w-results">
+          <div class="w-idle">Enter your numbers on the left — verdicts appear here instantly.<br><span>Everything recomputes as you type. No button.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec sec-alt" id="why">
+    <div class="wrap">
+      <div class="sec-head center">
+        <div class="sec-eyebrow">Why this matters</div>
+        <h2>Most towing math is a guess wearing numbers.</h2>
+        <p>Dry weight is what the trailer weighed leaving the factory — before water, propane, bikes, camp chairs, and whatever your family loads in. The RV Safety &amp; Education Foundation estimates roughly <b>63% of towed RVs exceed their ratings</b> on the road. This calculator does the loaded math, against the 80% rule that keeps the margin real.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec" id="embed">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-eyebrow">For forum &amp; channel owners</div>
+        <h2>Embed this calculator. Free, always.</h2>
+        <p>Your readers get real answers; you get a tool that keeps them on your page. Drop one line into any post:</p>
+      </div>
+      <div class="card" style="padding:18px 22px;background:var(--bg-3)">
+        <code style="font-size:13.5px;word-break:break-all">&lt;iframe src="https://rime.io/tools/weight-calculator.html" style="width:100%;height:1200px;border:0;border-radius:14px" loading="lazy"&gt;&lt;/iframe&gt;</code>
+        <p style="font-size:12.5px;color:var(--text-3);margin-top:8px">Works on every forum and channel host. No scripts, no tracking, no signup wall.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec sec-alt">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-eyebrow">FAQ</div>
+        <h2>The questions everyone asks</h2>
+      </div>
+      <details class="faq"><summary>What's the 80% rule?</summary><p>Max towing ratings are measured on ideal roads — flat, no wind, sea level. Real driving has hills, passes, gust fronts, and panic stops. The 80% rule keeps loaded weight at or under 80% of rated capacity so the margin survives reality.</p></details>
+      <details class="faq"><summary>Tongue weight — why does it matter?</summary><p>Tongue (travel trailer) or pin (fifth wheel) weight transfers into your truck and counts against its payload. Too light and the trailer wanders; too heavy and you exceed your payload. About 10–15% of loaded weight for travel trailers, 20–25% for fifth wheels.</p></details>
+      <details class="faq"><summary>Dry weight vs loaded?</summary><p>UVW (dry) is the factory-empty weight. Loaded adds water (8.34 lb/gal), propane (4.24 lb/gal), and everything you carry. A "lightweight" trailer gains hundreds of pounds before it ever sees a hitch ball.</p></details>
+      <details class="faq"><summary>Is this a guarantee?</summary><p>No — nothing here replaces a certified scale and your owner's manuals. This is informational math to catch the obvious mismatch before you buy, pack, or tow. Weigh loaded at a CAT scale whenever the load changes.</p></details>
+    </div>
+  </div>
+
+  <div id="site-footer"></div>
+  <script src="../assets/js/site.js"></script>
+  <script src="../assets/js/weight.js"></script>
+</body>
+</html>

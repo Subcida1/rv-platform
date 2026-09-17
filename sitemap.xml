@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- RV Everything — sitemap. Replace yourdomain.com when the domain locks. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://yourdomain.com/index.html</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://yourdomain.com/tools/weight-calculator.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://yourdomain.com/guides/index.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://yourdomain.com/guides/winterize-plumbing.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yourdomain.com/guides/battery-winter-storage.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yourdomain.com/guides/tires-winter.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yourdomain.com/guides/roof-snow-load.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yourdomain.com/directory/index.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+</urlset>

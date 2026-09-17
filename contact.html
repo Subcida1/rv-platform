@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Talk to the Person Behind This Site</title>
+  <meta name="description" content="Contact the person behind this free RV tool and guide site. No support labyrinth — a real person, easy to reach, the way a good site should be.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="canonical" href="https://yourdomain.com/contact.html">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ContactPage","name":"Contact — Talk to the Person Behind This Site","description":"Contact the person behind this free RV tool and guide site.","url":"https://yourdomain.com/contact.html"}</script>
+</head>
+<body>
+  <div id="site-nav"></div>
+
+  <div class="wrap" style="max-width:680px;padding:54px 0 20px">
+    <div class="sec-eyebrow">Contact</div>
+    <h1 style="font-size:clamp(28px,3.6vw,42px);font-weight:800;letter-spacing:-.03em;line-height:1.1;margin-top:20px">A real person reads this inbox.</h1>
+    <p style="color:var(--text-2);font-size:16px;margin-top:12px">Built by someone who lives in an RV — not a marketing team. Found a wrong number in the calculator? Site idea? Just want to say the winter guide saved your pipes? Say it.</p>
+  </div>
+
+  <div class="sec" style="padding:28px 0 60px">
+    <div class="wrap" style="max-width:680px">
+      <div class="card" style="padding:26px" id="contact-card">
+        <h3 style="font-size:18px;font-weight:800">Email</h3>
+        <p style="color:var(--text-2);font-size:14.5px;margin-top:8px" id="contact-msg">Loading contact address…</p>
+        <div class="flex gap" style="flex-wrap:wrap;margin-top:12px">
+          <a class="btn btn-primary" href="directory/index.html#claim" style="flex:none">I run an RV business — claim my listing</a>
+        </div>
+        <p style="color:var(--text-3);font-size:12.5px;margin-top:12px">The directory is the fastest path if you're a business; the inbox above is for everything else.</p>
+      </div>
+
+      <div class="card" style="padding:26px;margin-top:14px">
+        <h3 style="font-size:18px;font-weight:800">The honest-facts corner</h3>
+        <p style="color:var(--text-2);font-size:14.5px;line-height:1.7;margin-top:8px">
+        This site is a working title, pre-launch build. The calculators are informational math — always confirm weight at a certified scale. If something reads wrong, that's exactly the email to send: we fix facts before they go live, not after.<br><br>
+        Contact details, postal address, and business hours arrive with the real name and domain — this page switches from "coming" to "live" the week the company launches.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div id="site-footer"></div>
+  <script src="assets/js/site.js"></script>
+  <script>
+    (function () {
+      var email = window.RV ? window.RV.contactEmail : '';
+      var msg = document.getElementById('contact-msg');
+      var card = document.getElementById('contact-card');
+      if (email) {
+        msg.innerHTML = 'Replies fast, no bot: <a href="mailto:' + email + '" style="color:inherit;text-decoration:underline">' + email + '</a>';
+      } else {
+        msg.innerHTML = 'Email address goes live with the domain — it arrives with the real name, and this page stops saying "coming." For now, the fastest way to reach the builder is through the links on this page.';
+      }
+    })();
+  </script>
+</body>
+</html>
