@@ -835,11 +835,11 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 .fld{display:flex;flex-direction:column;gap:7px}
 .fld label{font-size:12.5px;font-weight:700;color:var(--text-2);letter-spacing:.01em}
 .fld .req{color:var(--c-rose);margin-left:2px}
-.fld input,.fld select,.fld textarea{width:100%;border:1px solid var(--border-2);border-radius:11px;padding:13px 15px;font-size:15px;color:var(--text);background:var(--surface);outline:none;transition:border-color .15s,box-shadow .15s;height:48px;box-sizing:border-box}
+.fld input,.fld select,.fld textarea{width:100%;border:1px solid var(--border-2);border-radius:11px;padding:13px 15px;font-size:15px;color:var(--text);background:var(--bg-2);outline:none;transition:border-color .15s,box-shadow .15s,background .15s;height:48px;box-sizing:border-box;box-shadow:0 1px 2px rgba(16,24,40,.04) inset}
 .fld input::placeholder{color:var(--text-3);opacity:1}
 .fld textarea{min-height:110px;resize:vertical}
 .fld .hint{font-size:12px;color:var(--text-3);line-height:1.5}
-.fld input:focus,.fld select:focus,.fld textarea:focus{border-color:#f0a3b5;box-shadow:0 0 0 3px rgba(244,63,94,.14)}
+.fld input:focus,.fld select:focus,.fld textarea:focus{background:var(--surface);border-color:#c7bdf5;box-shadow:0 0 0 3px rgba(126,107,253,.16),0 2px 4px rgba(16,24,40,.06)}
 .fld input.error{border-color:var(--c-rose);box-shadow:0 0 0 1px rgba(244,63,94,.5)}
 .fld .err{font-size:12px;color:var(--c-rose);font-weight:600}
 .fld input[type=tel]{font-variant-numeric:tabular-nums}
@@ -852,3 +852,17 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 .form-card .form-sub{font-size:13.5px;color:var(--text-2);margin-top:4px}
 .form-card .btn{margin-top:6px}
 .fld.has-err input{border-color:var(--c-rose);box-shadow:0 0 0 1px rgba(244,63,94,.4)}
+
+/* ============================================================
+   GRADIENT ROUND 2 (2026-09-16) - Ty's eye + popular gradients
+   skyline = light blue + pale orange (Ty direction, lead)
+   blurple = Stripe's signature (most-imitated tech gradient)
+   lagoon  = cyan -> indigo (top pairing)
+   sunset-pop = Instagram purple/pink/orange
+   peaches = pink -> peach (top pairing, softer)
+   ============================================================ */
+.g-theme-skyline{--b1:#60a5fa;--b2:#fda4af;--b3:#fdba74;--grad:linear-gradient(135deg,#60a5fa 0%,#fda4af 50%,#fdba74 100%);--grad-2:linear-gradient(120deg,#60a5fa 0%,#fda4af 45%,#fdba74 100%);--grad-soft:linear-gradient(135deg,rgba(96,165,250,.12),rgba(253,164,175,.12) 50%,rgba(253,186,116,.12));--grad-soft-2:linear-gradient(135deg,rgba(96,165,250,.10),rgba(253,164,175,.10) 50%,rgba(253,186,116,.10));--glow:rgba(125,175,220,.5)}
+.g-theme-blurple{--b1:#635bff;--b2:#7e6bfd;--b3:#a99dfe;--grad:linear-gradient(135deg,#635bff 0%,#7e6bfd 50%,#a99dfe 100%);--grad-2:linear-gradient(120deg,#635bff 0%,#7e6bfd 45%,#a99dfe 100%);--grad-soft:linear-gradient(135deg,rgba(99,91,255,.12),rgba(126,107,253,.12) 50%,rgba(169,157,254,.12));--grad-soft-2:linear-gradient(135deg,rgba(99,91,255,.10),rgba(126,107,253,.10) 50%,rgba(169,157,254,.10));--glow:rgba(99,91,255,.5)}
+.g-theme-lagoon{--b1:#22d3ee;--b2:#6366f1;--b3:#8b5cf6;--grad:linear-gradient(135deg,#22d3ee 0%,#6366f1 50%,#8b5cf6 100%);--grad-2:linear-gradient(120deg,#22d3ee 0%,#6366f1 45%,#8b5cf6 100%);--grad-soft:linear-gradient(135deg,rgba(34,211,238,.12),rgba(99,102,241,.12) 50%,rgba(139,92,246,.12));--grad-soft-2:linear-gradient(135deg,rgba(34,211,238,.10),rgba(99,102,241,.10) 50%,rgba(139,92,246,.10));--glow:rgba(99,102,241,.5)}
+.g-theme-sunset-pop{--b1:#833ab4;--b2:#fd1d1d;--b3:#fcb045;--grad:linear-gradient(135deg,#833ab4 0%,#fd1d1d 50%,#fcb045 100%);--grad-2:linear-gradient(120deg,#833ab4 0%,#fd1d1d 45%,#fcb045 100%);--grad-soft:linear-gradient(135deg,rgba(131,58,180,.12),rgba(253,29,29,.12) 50%,rgba(252,176,69,.12));--grad-soft-2:linear-gradient(135deg,rgba(131,58,180,.10),rgba(253,29,29,.10) 50%,rgba(252,176,69,.10));--glow:rgba(220,60,90,.5)}
+.g-theme-peaches{--b1:#f43f5e;--b2:#ff9e6e;--b3:#ffd0a0;--grad:linear-gradient(135deg,#f43f5e 0%,#ff9e6e 50%,#ffd0a0 100%);--grad-2:linear-gradient(120deg,#f43f5e 0%,#ff9e6e 45%,#ffd0a0 100%);--grad-soft:linear-gradient(135deg,rgba(244,63,94,.12),rgba(255,158,110,.12) 50%,rgba(255,208,160,.12));--grad-soft-2:linear-gradient(135deg,rgba(244,63,94,.10),rgba(255,158,110,.10) 50%,rgba(255,208,160,.10));--glow:rgba(244,100,90,.5)}

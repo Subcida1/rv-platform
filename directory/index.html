@@ -8,7 +8,7 @@
   <meta name="description" content="Find RV service and mobile techs. Search mobile technicians and service centers, check certifications, and get contact info fast. Oregon listings live first.">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body class="g-theme-dusk">
+<body class="g-theme-sunset-pop">
   <div id="site-nav"></div>
 
   <div class="wrap" style="padding:54px 0 18px">
@@ -43,20 +43,42 @@
         <p style="color:var(--text-2);font-size:15px;margin-top:10px;max-width:520px;margin-left:auto;margin-right:auto">The first listings are being added this season. Claim yours below so your business is first in line, or check back and search your area.</p>
       </div>
 
-      <div class="card" id="claim" style="padding:28px;margin-top:18px;background:var(--surface)">
-        <div class="flex between gap" style="flex-wrap:wrap">
-          <div style="flex:1.1;min-width:280px">
-            <h3 style="font-size:20px;font-weight:800">Run an RV service business?</h3>
-            <p style="color:var(--text-2);font-size:15px;margin-top:8px;line-height:1.65">Get your listing live, free. You control the info, your hours, your photos. No middleman, no commission, no cost.</p>
+      <div class="form-card" id="claim" style="margin-top:18px">
+        <div class="flex" style="justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap">
+          <div>
+            <h3>Claim your listing</h3>
+            <p class="form-sub">Free, permanent, yours to control. No middleman, no commission.</p>
           </div>
-          <form id="claim-form" style="max-width:340px;display:flex;flex-direction:column;gap:9px">
-            <input type="text" placeholder="Business name" aria-label="Business name" required>
-            <input type="text" placeholder="City, ST" aria-label="City" required>
-            <input type="tel" placeholder="Phone" aria-label="Phone">
-            <input type="url" placeholder="Website (optional)" aria-label="Website">
-            <button class="btn btn-primary btn-block" type="submit">Claim my listing</button>
-          </form>
+          <span class="verified">Free forever</span>
         </div>
+        <form id="claim-form" class="form-stack" style="margin-top:16px" novalidate>
+          <div class="fld">
+            <label for="cl-name">Business name<span class="req">*</span></label>
+            <input id="cl-name" type="text" placeholder="e.g. Cascade Mobile RV Repair" autocomplete="organization" required>
+            <span class="err" id="cl-name-err"></span>
+          </div>
+          <div class="form-row-2">
+            <div class="fld">
+              <label for="cl-city">City<span class="req">*</span></label>
+              <input id="cl-city" type="text" placeholder="e.g. Eugene" autocomplete="address-level2" required>
+              <span class="err" id="cl-city-err"></span>
+            </div>
+            <div class="fld">
+              <label for="cl-st">State</label>
+              <input id="cl-st" type="text" placeholder="OR" maxlength="2" style="text-transform:uppercase">
+            </div>
+          </div>
+          <div class="fld">
+            <label for="cl-phone">Phone</label>
+            <input id="cl-phone" type="tel" placeholder="(541) 555-0123" autocomplete="tel">
+          </div>
+          <div class="fld">
+            <label for="cl-site">Website</label>
+            <input id="cl-site" type="url" placeholder="https://your-site.com" autocomplete="url">
+            <span class="hint">Optional. A working link helps more nearby RVers find you.</span>
+          </div>
+          <button class="btn btn-primary btn-block" type="submit" style="margin-top:4px">Claim my listing</button>
+        </form>
       </div>
     </div>
   </div>
