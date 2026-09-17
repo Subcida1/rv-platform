@@ -178,13 +178,14 @@
  var t = parseInt(el.getAttribute('data-count'), 10);
  if (el.dataset.done) return;
  el.dataset.done = '1';
- if (!('IntersectionObserver' in window)) { el.textContent = (el.textContent.indexOf('$') >= 0 ? '$' : '') + t + (el.textContent.indexOf('%') >= 0 ? '%' : ''); return; }
+ if (!('IntersectionObserver' in window)) { var p = el.textContent.indexOf('%') >= 0, d2 = el.textContent.indexOf('$') >= 0; el.textContent = (d2 ? '$' : '') + t + (p ? '%' : ''); return; }
  var io = new IntersectionObserver(function (es) {
  es.forEach(function (en) {
  if (!en.isIntersecting) return;
- var s = el.textContent.indexOf('%') >= 0;
+ var p = el.textContent.indexOf('%') >= 0;
+ var dg = el.textContent.indexOf('$') >= 0;
  var d = 0;
- var tick = setInterval(function () { d += Math.max(1, Math.round(t / 30)); if (d >= t) { d = t; clearInterval(tick); } el.textContent = (s ? '$' : '') + d + (s ? '%' : ''); }, 24);
+ var tick = setInterval(function () { d += Math.max(1, Math.round(t / 30)); if (d >= t) { d = t; clearInterval(tick); } el.textContent = (dg ? '$' : '') + d + (p ? '%' : ''); }, 24);
  io.disconnect();
  });
  }, { threshold: 0.4 });

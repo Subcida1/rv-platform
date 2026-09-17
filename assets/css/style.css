@@ -808,3 +808,47 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 .tool-pipe{grid-template-columns:repeat(4,1fr)}
 @media(max-width:1024px){.tool-pipe{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:720px){.tool-pipe{grid-template-columns:1fr}}
+
+/* ============================================================
+   GRADIENT THEMES (2026-09-16, Ty-picking pass)
+   Alternative brand gradients, one per page so the eye can
+   compare. Each sets the full gradient family (solid, text
+   clip, soft wash, glow). Winner gets promoted to :root.
+   Themes: ember(rose-amber), horizon(sky-teal), dusk(violet-blue),
+   coast(teal-sky), warm(amber-coral).
+   ============================================================ */
+.g-theme-ember{--b1:#f43f5e;--b2:#f97316;--b3:#f59e0b;--grad:linear-gradient(135deg,#f43f5e 0%,#f97316 50%,#f59e0b 100%);--grad-2:linear-gradient(120deg,#f43f5e 0%,#f97316 45%,#f59e0b 100%);--grad-soft:linear-gradient(135deg,rgba(244,63,94,.12),rgba(249,115,22,.12) 50%,rgba(245,158,11,.12));--grad-soft-2:linear-gradient(135deg,rgba(244,63,94,.10),rgba(249,115,22,.10) 50%,rgba(245,158,11,.10));--glow:rgba(247,114,40,.55)}
+.g-theme-horizon{--b1:#0ea5e9;--b2:#22d3ee;--b3:#10b981;--grad:linear-gradient(135deg,#0ea5e9 0%,#22d3ee 50%,#10b981 100%);--grad-2:linear-gradient(120deg,#0ea5e9 0%,#22d3ee 45%,#10b981 100%);--grad-soft:linear-gradient(135deg,rgba(14,165,233,.12),rgba(34,211,238,.12) 50%,rgba(16,185,129,.12));--grad-soft-2:linear-gradient(135deg,rgba(14,165,233,.10),rgba(34,211,238,.10) 50%,rgba(16,185,129,.10));--glow:rgba(22,166,150,.55)}
+.g-theme-dusk{--b1:#6366f1;--b2:#8b5cf6;--b3:#c026d3;--grad:linear-gradient(135deg,#6366f1 0%,#8b5cf6 50%,#c026d3 100%);--grad-2:linear-gradient(120deg,#6366f1 0%,#8b5cf6 45%,#c026d3 100%);--grad-soft:linear-gradient(135deg,rgba(99,102,241,.12),rgba(139,92,246,.12) 50%,rgba(192,38,211,.12));--grad-soft-2:linear-gradient(135deg,rgba(99,102,241,.10),rgba(139,92,246,.10) 50%,rgba(192,38,211,.10));--glow:rgba(139,92,246,.55)}
+.g-theme-coast{--b1:#14b8a6;--b2:#0ea5e9;--b3:#6366f1;--grad:linear-gradient(135deg,#14b8a6 0%,#0ea5e9 50%,#6366f1 100%);--grad-2:linear-gradient(120deg,#14b8a6 0%,#0ea5e9 45%,#6366f1 100%);--grad-soft:linear-gradient(135deg,rgba(20,184,166,.12),rgba(14,165,233,.12) 50%,rgba(99,102,241,.12));--grad-soft-2:linear-gradient(135deg,rgba(20,184,166,.10),rgba(14,165,233,.10) 50%,rgba(99,102,241,.10));--glow:rgba(52,160,180,.55)}
+.g-theme-warm{--b1:#f59e0b;--b2:#f97316;--b3:#f43f5e;--grad:linear-gradient(135deg,#f59e0b 0%,#f97316 50%,#f43f5e 100%);--grad-2:linear-gradient(120deg,#f59e0b 0%,#f97316 45%,#f43f5e 100%);--grad-soft:linear-gradient(135deg,rgba(245,158,11,.12),rgba(249,115,22,.12) 50%,rgba(244,63,94,.12));--grad-soft-2:linear-gradient(135deg,rgba(245,158,11,.10),rgba(249,115,22,.10) 50%,rgba(244,63,94,.10));--glow:rgba(247,114,40,.55)}
+/* glow uses theme variable for button shadows */
+.btn-primary{box-shadow:0 12px 26px -12px var(--glow, rgba(244,63,94,.6))}
+.btn-primary:hover{box-shadow:0 6px 14px -8px var(--glow, rgba(244,63,94,.35))}
+.logo-mark{box-shadow:0 8px 20px -8px var(--glow, rgba(244,63,94,.6))}
+
+/* ============================================================
+   FORM SYSTEM v2 (2026-09-16) - big-brand grade forms
+   Labels float, focus ring in theme accent, helper microcopy,
+   browser-consistent heights, validation affordances.
+   ============================================================ */
+.fld{display:flex;flex-direction:column;gap:7px}
+.fld label{font-size:12.5px;font-weight:700;color:var(--text-2);letter-spacing:.01em}
+.fld .req{color:var(--c-rose);margin-left:2px}
+.fld input,.fld select,.fld textarea{width:100%;border:1px solid var(--border-2);border-radius:11px;padding:13px 15px;font-size:15px;color:var(--text);background:var(--surface);outline:none;transition:border-color .15s,box-shadow .15s;height:48px;box-sizing:border-box}
+.fld input::placeholder{color:var(--text-3);opacity:1}
+.fld textarea{min-height:110px;resize:vertical}
+.fld .hint{font-size:12px;color:var(--text-3);line-height:1.5}
+.fld input:focus,.fld select:focus,.fld textarea:focus{border-color:#f0a3b5;box-shadow:0 0 0 3px rgba(244,63,94,.14)}
+.fld input.error{border-color:var(--c-rose);box-shadow:0 0 0 1px rgba(244,63,94,.5)}
+.fld .err{font-size:12px;color:var(--c-rose);font-weight:600}
+.fld input[type=tel]{font-variant-numeric:tabular-nums}
+.fld input:disabled{background:var(--bg-3);color:var(--text-3);cursor:not-allowed}
+.form-stack{display:flex;flex-direction:column;gap:14px;max-width:100%}
+.form-row-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:720px){.form-row-2{grid-template-columns:1fr}}
+.form-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow-sm)}
+.form-card h3{font-size:19px;font-weight:800;letter-spacing:-.01em}
+.form-card .form-sub{font-size:13.5px;color:var(--text-2);margin-top:4px}
+.form-card .btn{margin-top:6px}
+.fld.has-err input{border-color:var(--c-rose);box-shadow:0 0 0 1px rgba(244,63,94,.4)}

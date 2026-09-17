@@ -9,7 +9,7 @@
   <script src="assets/js/base.js"></script>
 </head>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Sign in","description":"Sign in placeholder. Accounts coming.","url":"https://yourdomain.com/signin.html"}</script>
-<body>
+<body class="g-theme-coast">
   <div id="site-nav"></div>
 
   <div class="wrap" style="padding:54px 0 20px">
@@ -20,15 +20,23 @@
 
   <div class="sec" style="padding:28px 0 60px">
     <div class="wrap" style="max-width:520px">
-      <div class="auth-wrap" style="margin-top:10px">
-        <div class="tabs-auth">
+      <div class="form-card" style="margin-top:10px;border:none;box-shadow:none">
+        <div class="tabs-auth" style="margin-bottom:18px">
           <button class="on" disabled style="cursor:default">Sign in</button>
           <button disabled style="cursor:default">Create account</button>
         </div>
-        <div class="field" style="margin-bottom:12px"><label>Email</label><input type="email" placeholder="you@example.com" disabled style="cursor:not-allowed;opacity:.6"></div>
-        <div class="field" style="margin-bottom:12px"><label>Password</label><input type="password" placeholder="Coming soon" disabled style="cursor:not-allowed;opacity:.6"></div>
-        <button class="btn btn-primary btn-block disabled">Sign in (coming soon)</button>
-        <p style="color:var(--text-3);font-size:12.5px;margin-top:14px">No tracking, no social-login pressure, no address book. Just a place to keep your stuff. <a href="contact.html" style="color:inherit;text-decoration:underline">Tell us what you want accounts to hold</a> and it gets built first.</p>
+        <form class="form-stack" novalidate>
+          <div class="fld">
+            <label for="si-email">Email</label>
+            <input id="si-email" type="email" placeholder="you@example.com" disabled style="cursor:not-allowed">
+          </div>
+          <div class="fld">
+            <label for="si-pass">Password</label>
+            <input id="si-pass" type="password" placeholder="Coming soon" disabled style="cursor:not-allowed">
+          </div>
+          <button class="btn btn-primary btn-block" type="button" disabled style="cursor:not-allowed;opacity:.55">Sign in (coming soon)</button>
+        </form>
+        <p style="color:var(--text-3);font-size:12.5px;margin-top:16px">No tracking, no social-login pressure, no address book. Just a place to keep your stuff. <a href="contact.html" style="color:inherit;text-decoration:underline">Tell us what you want accounts to hold</a> and it gets built first.</p>
       </div>
     </div>
   </div>
