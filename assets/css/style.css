@@ -12,7 +12,7 @@
   --border-2:#d8dde6;
   --text:#0f172a;
   --text-2:#55627a;
-  --text-3:#8a94a6;
+  --text-3:#67748e;
 
   /* brand sunset gradient */
   --b1:#f97316; --b2:#f43f5e; --b3:#8b5cf6;
@@ -128,7 +128,7 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
 .chip:hover{color:#a3292b;border-color:#f0a3b5}
 .hero-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:60px}
 .hstat{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:24px 12px;box-shadow:var(--shadow-sm)}
-.hstat .num{font-size:clamp(24px,3vw,34px);font-weight:800;letter-spacing:-.02em;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hstat .num{font-size:clamp(24px,3vw,34px);font-weight:800;letter-spacing:-.02em;color:var(--text)}
 .hstat .lbl{font-size:13px;color:var(--text-2);margin-top:2px}
 
 /* ================= SECTIONS ================= */
@@ -136,7 +136,7 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
 .sec-alt{background:var(--bg-2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
 .sec-head{max-width:720px;margin-bottom:44px}
 .sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
-.sec-eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sec-eyebrow{font-size:12.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--text-2)}
 .sec-head h2{margin-top:12px;font-size:clamp(28px,4vw,42px);font-weight:800;letter-spacing:-.03em;line-height:1.08}
 .sec-head p{margin-top:12px;color:var(--text-2);font-size:16.5px}
 .sec-row{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:40px}
@@ -145,7 +145,7 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
 .cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .cat-card{position:relative;overflow:hidden;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:26px 24px 22px;transition:.18s}
 .cat-card:hover{transform:translateY(-4px);border-color:var(--border-2);box-shadow:var(--shadow)}
-.cat-ic{width:48px;height:48px;border-radius:13px;display:grid;place-items:center;margin-bottom:18px;font-size:23px;background:var(--grad-soft)}
+.cat-ic{width:48px;height:48px;border-radius:13px;display:grid;place-items:center;margin-bottom:18px;font-size:23px;background:var(--bg-3)}
 .cat-card h3{font-size:17.5px;font-weight:700;letter-spacing:-.01em}
 .cat-card p{margin-top:6px;font-size:14px;color:var(--text-2)}
 .cat-card .meta{margin-top:15px;font-size:13px;font-weight:700;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
@@ -211,7 +211,7 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
 .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .svc{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:28px 26px;transition:.18s}
 .svc:hover{box-shadow:var(--shadow);border-color:var(--border-2)}
-.svc .ic{width:46px;height:46px;border-radius:13px;display:grid;place-items:center;margin-bottom:16px;font-size:22px;background:var(--grad-soft)}
+.svc .ic{width:46px;height:46px;border-radius:13px;display:grid;place-items:center;margin-bottom:16px;font-size:22px;background:var(--bg-3)}
 .svc h3{font-size:18px;font-weight:700}
 .svc p{margin-top:7px;font-size:14px;color:var(--text-2)}
 .svc ul{margin-top:16px;list-style:none;display:flex;flex-direction:column;gap:9px}
@@ -222,7 +222,7 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
 .tools-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center}
 .tool-list{display:flex;flex-direction:column;gap:22px;margin-top:34px}
 .tool{display:flex;gap:18px;align-items:flex-start}
-.tool .ic{width:46px;height:46px;flex:none;border-radius:13px;display:grid;place-items:center;font-size:22px;background:var(--grad-soft)}
+.tool .ic{width:46px;height:46px;flex:none;border-radius:13px;display:grid;place-items:center;font-size:22px;background:var(--bg-3)}
 .tool h4{font-size:16.5px;font-weight:700}
 .tool p{margin-top:4px;font-size:14px;color:var(--text-2)}
 .route-card{position:relative;border-radius:var(--radius);overflow:hidden;background:linear-gradient(160deg,#eef2ff,#fdf2f8 55%,#fff7ed);border:1px solid var(--border);padding:26px;min-height:420px}
@@ -877,10 +877,10 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
    ============================================================ */
 .g-theme-mist{
   --b1:#cfdff7; --b2:#ddd0f2; --b3:#f8d9b0;
-  --grad:linear-gradient(135deg,#7fb4e9 0%,#b193e2 50%,#ed9f6c 100%);
-  --grad-2:linear-gradient(120deg,#5f9ae0 0%,#9a7fd8 45%,#e0835a 100%);
-  --grad-soft:linear-gradient(135deg,rgba(127,180,233,.12),rgba(177,147,226,.12) 50%,rgba(237,159,108,.12));
-  --grad-soft-2:linear-gradient(135deg,rgba(95,154,224,.10),rgba(154,127,216,.10) 50%,rgba(224,131,90,.10));
+  --grad:linear-gradient(135deg,#6a97cb 0%,#8f77cc 50%,#d97a55 100%);
+  --grad-2:linear-gradient(120deg,#5f8fd4 0%,#8a6fc8 45%,#cf7249 100%);
+  --grad-soft:linear-gradient(135deg,rgba(106,151,203,.12),rgba(143,119,204,.12) 50%,rgba(217,122,85,.12));
+  --grad-soft-2:linear-gradient(135deg,rgba(95,143,212,.10),rgba(138,111,200,.10) 50%,rgba(207,114,73,.10));
   --glow:rgba(127,180,233,.32);
   --btn-grad:linear-gradient(135deg,#3d84eb 0%,#6d3fd3 50%,#e8505e 100%);
 }
@@ -889,3 +889,45 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 .btn-primary:hover{box-shadow:0 6px 14px -8px var(--glow, rgba(244,63,94,.35));transform:none}
 /* logo keeps brand vibrancy: the one vivid moment alongside CTA */
 .logo-mark{background:var(--btn-grad, var(--grad));box-shadow:0 8px 20px -8px var(--glow, rgba(244,63,94,.6))}
+
+/* ---- selective gradient + contrast enforcement (2026-09-17) ----
+   Gradient ONLY where it leads people: CTA buttons, hero accent,
+   logo, card meta arrows. Stats/eyebrows/icons are solid ink so
+   the eye rests. All small text meets WCAG AA (>=4.5:1). */
+.hstat .num{color:var(--text)}
+.sec-eyebrow{color:var(--text-2)}
+.cat-ic{background:var(--bg-3)}
+.tool .ic{background:var(--bg-3)}
+.deck-card .deck-ic{background:var(--bg-3)}
+.deck-card.live .deck-ic{background:var(--bg-3)}
+.svc .ic{background:var(--bg-3)}
+/* footer: headers near-black, links readable */
+.foot-col h5{font-size:12.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--text)}
+.foot-col a{color:var(--text-2)}
+.foot-col a:hover{color:var(--text)}
+.foot-bottom{color:var(--text-2)}
+.legal a{color:var(--text-2)}
+.legal a:hover{color:var(--text)}
+/* deck-go meta arrows: keep gradient ONLY as leading affordance, on a solid base */
+.deck-go{font-size:12.5px;font-weight:800;color:var(--text-2)}
+/* hero grid + background: keep pleasant but tone the color patches down */
+.hero-bg{background:radial-gradient(900px 480px at 82% -8%,rgba(139,92,246,.10),transparent 60%),radial-gradient(800px 460px at 12% 8%,rgba(249,115,22,.09),transparent 58%),radial-gradient(700px 420px at 50% 120%,rgba(244,63,94,.08),transparent 60%),linear-gradient(180deg,#fdfbfa 0%,#ffffff 40%)}
+/* card action links: readable over gradient, gradient stays for the arrow accent only */
+.cta{color:var(--text-2)}
+.cat-card .meta{color:var(--text-2)}
+.guide-card .cta{color:var(--text-2)}
+.big-card .num{color:var(--text)}
+.grad-text,.eyebrow{color:var(--text-2)}
+
+.hero h1 .grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.logo-name span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.deck-panel-head .dot{background:var(--c-emerald);box-shadow:0 0 0 4px rgba(16,185,129,.15)}
+
+
+/* ===== FINAL selective-gradient enforcement (2026-09-17) =====
+   Vivid gradient is reserved for: CTA button, hero H1 span, logo.
+   All stat numbers, totals, section labels, and card meta are
+   solid ink/text-2 for WCAG AA and rest. */
+.cat-card .meta,.guide-card .cta,.cta,.deck-go,.grad-text,.eyebrow{color:var(--text-2);background:none;-webkit-background-clip:initial;background-clip:initial}
+.com-card .stat,.big-card .num,.calc .out,.grand,.w-total b,.tool-viz .viz-total,.tool-strip .tchip b,.rate-total .n{color:var(--text);background:none;-webkit-background-clip:initial;background-clip:initial}
+.quote .grad{color:var(--text-2);background:none;-webkit-background-clip:initial;background-clip:initial}
