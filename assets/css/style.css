@@ -866,3 +866,26 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 .g-theme-lagoon{--b1:#22d3ee;--b2:#6366f1;--b3:#8b5cf6;--grad:linear-gradient(135deg,#22d3ee 0%,#6366f1 50%,#8b5cf6 100%);--grad-2:linear-gradient(120deg,#22d3ee 0%,#6366f1 45%,#8b5cf6 100%);--grad-soft:linear-gradient(135deg,rgba(34,211,238,.12),rgba(99,102,241,.12) 50%,rgba(139,92,246,.12));--grad-soft-2:linear-gradient(135deg,rgba(34,211,238,.10),rgba(99,102,241,.10) 50%,rgba(139,92,246,.10));--glow:rgba(99,102,241,.5)}
 .g-theme-sunset-pop{--b1:#833ab4;--b2:#fd1d1d;--b3:#fcb045;--grad:linear-gradient(135deg,#833ab4 0%,#fd1d1d 50%,#fcb045 100%);--grad-2:linear-gradient(120deg,#833ab4 0%,#fd1d1d 45%,#fcb045 100%);--grad-soft:linear-gradient(135deg,rgba(131,58,180,.12),rgba(253,29,29,.12) 50%,rgba(252,176,69,.12));--grad-soft-2:linear-gradient(135deg,rgba(131,58,180,.10),rgba(253,29,29,.10) 50%,rgba(252,176,69,.10));--glow:rgba(220,60,90,.5)}
 .g-theme-peaches{--b1:#f43f5e;--b2:#ff9e6e;--b3:#ffd0a0;--grad:linear-gradient(135deg,#f43f5e 0%,#ff9e6e 50%,#ffd0a0 100%);--grad-2:linear-gradient(120deg,#f43f5e 0%,#ff9e6e 45%,#ffd0a0 100%);--grad-soft:linear-gradient(135deg,rgba(244,63,94,.12),rgba(255,158,110,.12) 50%,rgba(255,208,160,.12));--grad-soft-2:linear-gradient(135deg,rgba(244,63,94,.10),rgba(255,158,110,.10) 50%,rgba(255,208,160,.10));--glow:rgba(244,100,90,.5)}
+
+/* ============================================================
+   GRADIENT FINAL: "mist" (2026-09-17) - subtle pastel system
+   Ty: Google/Gemini colors but really, really subtle. One
+   harmonized trio site-wide. The ONLY bright element is the
+   CTA button (which he explicitly kept): --btn-grad.
+   soft wash = pastel tints, text = muted mid-pastel,
+   button = the one vivid moment.
+   ============================================================ */
+.g-theme-mist{
+  --b1:#cfdff7; --b2:#ddd0f2; --b3:#f8d9b0;
+  --grad:linear-gradient(135deg,#7fb4e9 0%,#b193e2 50%,#ed9f6c 100%);
+  --grad-2:linear-gradient(120deg,#5f9ae0 0%,#9a7fd8 45%,#e0835a 100%);
+  --grad-soft:linear-gradient(135deg,rgba(127,180,233,.12),rgba(177,147,226,.12) 50%,rgba(237,159,108,.12));
+  --grad-soft-2:linear-gradient(135deg,rgba(95,154,224,.10),rgba(154,127,216,.10) 50%,rgba(224,131,90,.10));
+  --glow:rgba(127,180,233,.32);
+  --btn-grad:linear-gradient(135deg,#3d84eb 0%,#6d3fd3 50%,#e8505e 100%);
+}
+/* CTA buttons stay bright (the one vivid brand moment per Ty), everything else is mist */
+.btn-primary{background:var(--btn-grad, var(--grad));color:#fff;box-shadow:0 12px 26px -12px var(--glow, rgba(244,63,94,.6))}
+.btn-primary:hover{box-shadow:0 6px 14px -8px var(--glow, rgba(244,63,94,.35));transform:none}
+/* logo keeps brand vibrancy: the one vivid moment alongside CTA */
+.logo-mark{background:var(--btn-grad, var(--grad));box-shadow:0 8px 20px -8px var(--glow, rgba(244,63,94,.6))}
