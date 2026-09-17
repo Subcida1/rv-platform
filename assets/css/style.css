@@ -931,3 +931,34 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 .cat-card .meta,.guide-card .cta,.cta,.deck-go,.grad-text,.eyebrow{color:var(--text-2);background:none;-webkit-background-clip:initial;background-clip:initial}
 .com-card .stat,.big-card .num,.calc .out,.grand,.w-total b,.tool-viz .viz-total,.tool-strip .tchip b,.rate-total .n{color:var(--text);background:none;-webkit-background-clip:initial;background-clip:initial}
 .quote .grad{color:var(--text-2);background:none;-webkit-background-clip:initial;background-clip:initial}
+
+/* ============================================================
+   GRADIENT AS BORDER, NOT FILL (2026-09-17)
+   Most CTAs: pale opaque body, gradient border. The gradient
+   FILL survives on ONE button: the hero primary CTA (the hand
+   on the shoulder). Border via background-clip trick.
+   ============================================================ */
+.btn-gb{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:12px 22px;border-radius:999px;font-weight:600;font-size:14.5px;line-height:1;transition:transform .15s,box-shadow .18s,background .18s,color .18s,border-color .18s;white-space:nowrap;text-align:center;
+  border:2px solid transparent;
+  background:linear-gradient(var(--surface),var(--surface)) padding-box, var(--grad) border-box;
+  color:var(--text);
+  box-shadow:0 10px 22px -12px var(--glow, rgba(127,180,233,.32))}
+.btn-gb:hover{transform:translateY(-1px);box-shadow:0 14px 28px -14px var(--glow, rgba(127,180,233,.5))}
+.btn-gb:active{transform:translateY(1px)}
+.btn-gb.btn-sm{padding:10px 16px;font-size:13px}
+.btn-gb.btn-lg{padding:16px 30px;font-size:15.5px}
+.btn-gb.btn-block{width:100%}
+.btn-gb .route-arrow{width:0;height:0;border-top:7px solid transparent;border-bottom:7px solid transparent;border-left:10px solid currentColor;margin-left:10px;display:inline-block}
+.btn-grad-bg{background:var(--btn-grad, var(--grad));color:#fff}
+/* reduce the glow so borders read subtle */
+.btn-primary{box-shadow:0 8px 18px -12px var(--glow, rgba(244,63,94,.45))}
+.btn-primary:hover{box-shadow:0 12px 26px -14px var(--glow, rgba(244,63,94,.55));transform:none}
+
+/* ============================================================
+   BUTTON TONALITY (2026-09-17): pale fill like the title
+   The primary CTA mirrors "Everything RV" (pale gradient fill
+   + dark text). Everything else = .btn-gb gradient border.
+   ============================================================ */
+.btn-primary{background:var(--grad);color:var(--text);border:1px solid var(--border-2);box-shadow:0 8px 18px -12px var(--glow, rgba(127,180,233,.28))}
+.btn-primary:hover{background:var(--grad-2);color:var(--text);box-shadow:0 12px 24px -14px var(--glow, rgba(127,180,233,.4));transform:none}
+.btn-primary:disabled,.btn-primary.disabled{opacity:.55;cursor:not-allowed;background:var(--bg-3);color:var(--text-3);box-shadow:none}

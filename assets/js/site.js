@@ -155,6 +155,7 @@
  searchRoute: searchRoute
  };
  injectShell();
+ maybeEmbedCredit();
  initReveal();
  initSearch();
 })();
