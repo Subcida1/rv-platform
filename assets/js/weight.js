@@ -46,7 +46,9 @@
  var type = $( 'w-type').value; // 'tt' or 'fw'
  var axles = Math.max(1, parseInt($('w-axles').value, 10) || 1);
 
- var water = h2oF * WATER_LB;
+ var grayGal = ($('w-gray-full') && $('w-gray-full').checked) ? Math.max(0, num('w-gray-gal')) : 0;
+ var blackGal = ($('w-black-full') && $('w-black-full').checked) ? Math.max(0, num('w-black-gal')) : 0;
+ var water = (h2oF + grayGal + blackGal) * WATER_LB;
  var propaneLb = propane * PROPANE_LB;
  var loaded = rigUVW + water + propaneLb + cargoTrailer;
 
@@ -171,7 +173,7 @@
  }
 
  /* live recompute on any change */
- var ids = ['w-tow-rating','w-payload','w-curb','w-truck-gvwr','w-gvwr','w-uvw','w-h2o-f','w-propane','w-cargo-trailer','w-passengers','w-type','w-axles'];
+ var ids = ['w-tow-rating','w-payload','w-curb','w-truck-gvwr','w-gvwr','w-uvw','w-h2o-f','w-propane','w-cargo-trailer','w-passengers','w-type','w-axles','w-gray-full','w-black-full','w-gray-gal','w-black-gal'];
  ids.forEach(function (id) {
  var el = $(id);
  if (el) el.addEventListener('input', update);

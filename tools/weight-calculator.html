@@ -68,10 +68,10 @@
             <p style="font-size:12.5px;font-weight:700;color:var(--text-2);margin-bottom:0">Tongue or pin weight is estimated for you automatically, travel trailers run 10 to 15% of loaded weight, fifth wheels 20 to 25%. A certified scale gives the exact number.</p>
           </div>
           <div class="panel" style="padding:24px">
-            <h3 style="font-size:15px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--text-3)">What you add</h3>
+            <h3 style="font-size:15px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--text-3)">Your cargo</h3>
             <p style="font-size:13px;color:var(--text-2);margin-bottom:12px">Anything extra you pack goes in one of two places: the truck or the trailer. Add each once.</p>
             <div class="form-row">
-              <div class="field"><label for="w-passengers">People and gear in the truck (lb)<span class="req">*</span></label><input id="w-passengers" type="number" min="0" step="10" inputmode="numeric" placeholder="400"><span class="hint">Rough estimate is fine. Two adults run about 350 lb, add everything in the cab and bed.</span></div>
+              <div class="field"><label for="w-passengers">People and gear in the truck, driver included (lb)<span class="req">*</span></label><input id="w-passengers" type="number" min="0" step="10" inputmode="numeric" placeholder="600"><span class="hint">Count everyone who rides, including you, plus everything in the cab and bed. If you leave out the cooler and the dog, the answer will say SAFE when it should not.</span></div>
               <div class="field"><label for="w-cargo-trailer">In the trailer: cargo (lb)</label><input id="w-cargo-trailer" type="number" min="0" step="25" inputmode="numeric" placeholder="500"><span class="hint">Everything that rides inside the trailer beyond its dry weight. Water and propane are counted separately by us.</span></div>
             </div>
             <div class="form-row">
@@ -87,6 +87,27 @@
                   <option value="18.8">Two 40 lb tanks (about 18.8 gal)</option>
                 </select>
                 <span class="hint">Tanks are labeled by pounds of propane, not gallons. 20 lb = 4.7 gal, 30 lb = 7 gal, 40 lb = 9.4 gal. Check the collar of the tank for the number.</span>
+              </div>
+            </div>
+            <div class="waste-row">
+              <span class="waste-label">Gray and black tanks (pick either if you will tow them heavy, like to a dump station)</span>
+              <div class="waste-grid">
+                <label class="waste-box"><input type="checkbox" id="w-gray-full"> <span class="waste-name">Gray tank full</span>
+                  <select id="w-gray-gal" aria-label="Gray tank size in gallons">
+                    <option value="20">20 gal (about 167 lb)</option>
+                    <option value="30" selected>30 gal (about 250 lb)</option>
+                    <option value="40">40 gal (about 334 lb)</option>
+                    <option value="50">50 gal (about 417 lb)</option>
+                  </select>
+                </label>
+                <label class="waste-box"><input type="checkbox" id="w-black-full"> <span class="waste-name">Black tank full</span>
+                  <select id="w-black-gal" aria-label="Black tank size in gallons">
+                    <option value="20">20 gal (about 167 lb)</option>
+                    <option value="30" selected>30 gal (about 250 lb)</option>
+                    <option value="40">40 gal (about 334 lb)</option>
+                    <option value="50">50 gal (about 417 lb)</option>
+                  </select>
+                </label>
               </div>
             </div>
             <div class="w-live" id="w-live">Pick your trailer type to see the estimated tongue weight here.</div>
