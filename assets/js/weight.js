@@ -138,11 +138,17 @@
  html = '<div class="w-idle">Enter your numbers on the left, verdicts appear here instantly.<br>' +
  '<span>Everything recomputes as you type. No button.</span></div>';
  } else {
- html = '<div class="w-total"><span>Loaded trailer</span><b>' + fmt(loaded) + ' lb</b>' +
+ var hasBad = rows.some(function (r) { return r.indexOf('v-row bad') >= 0; });
+ var hasWarn = rows.some(function (r) { return r.indexOf('v-row warn') >= 0; });
+ var ov = hasBad ? ['bad', 'NOT SAFE', 'Something is overloaded. Fix it before you tow.'] :
+ hasWarn ? ['warn', 'CAREFUL', 'You are close to a limit. Read the yellow items below.'] :
+ ['ok', 'SAFE', 'Everything checks out. Keep the load this light or lighter.'];
+ html = '<div class="w-overall ' + ov[0] + '"><span>Can your truck tow it?</span><b>' + ov[1] + '</b><small>' + ov[2] + '</small></div>' +
+ '<div class="w-total"><span>Loaded trailer</span><b>' + fmt(loaded) + ' lb</b>' +
  '<small>' + fmt(water) + ' lb water, ' + fmt(propaneLb) + ' lb propane, ' + fmt(cargoTrailer) + ' lb cargo</small></div>' +
  rows.join('') +
  (payloadCap > 0 && payloadRemain > 0
- ? '<div class="w-remain">Payload remaining in truck: <b>' + fmt(payloadRemain) + ' lb</b></div>' : '') +
+ ? '<div class="w-remain">Weight to spare in the truck: <b>' + fmt(payloadRemain) + ' lb</b></div>' : '') +
 
  '<div class="w-disclaimer">Informational estimates. Always confirm at a certified scale before towing.</div>';
  }
