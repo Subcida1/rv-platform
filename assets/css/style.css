@@ -959,3 +959,16 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 .field input, .field select{border:1px solid var(--border-2);border-radius:11px;padding:12px 14px;font-size:15px;background:var(--bg-2);outline:none;width:100%;transition:border-color .15s,box-shadow .15s;color:var(--text)}
 .field input:focus, .field select:focus{background:var(--surface);border-color:#c7bdf5;box-shadow:0 0 0 3px rgba(126,107,253,.16)}
 .field select{cursor:pointer}
+
+/* lookup helper cards + strong disclaimer */
+.lookup-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:1024px){.lookup-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:720px){.lookup-grid{grid-template-columns:1fr}}
+.lookup-card{padding:20px;display:flex;flex-direction:column;gap:8px}
+.lookup-card:hover{transform:translateY(-2px);border-color:var(--border-2);box-shadow:var(--shadow)}
+.lookup-ic{font-size:26px}
+.lookup-card b{font-size:15.5px;font-weight:800;color:var(--text)}
+.lookup-card span{font-size:13px;color:var(--text-2);line-height:1.6;flex:1}
+.lookup-card::after{content:"Open official source";font-size:12px;font-weight:800;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.disclaimer-big{margin-top:16px;padding:15px 18px;background:var(--bg-2);border:1px solid var(--border);border-left:4px solid var(--cl-yellow);border-radius:var(--radius-sm);font-size:14px;color:var(--text-2);line-height:1.7}
+.disclaimer-big b{color:var(--text)}
