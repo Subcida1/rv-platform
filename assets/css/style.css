@@ -989,3 +989,15 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 .scale-map-head b{font-size:15px;font-weight:800;flex:1}
 .scale-map-head a{font-size:13px;font-weight:800;color:var(--c-sky);text-decoration:underline}
 .scale-map iframe{display:block}
+
+/* CAT Scale how-to step cards */
+.howto{margin-top:34px}
+.howto .sec-head{margin-bottom:26px}
+.howto-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:1024px){.howto-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:720px){.howto-grid{grid-template-columns:1fr}}
+.howto-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px 18px 16px;position:relative;display:flex;flex-direction:column;gap:6px}
+.howto-card:hover{border-color:var(--border-2);box-shadow:var(--shadow-sm)}
+.howto-num{width:30px;height:30px;border-radius:50%;background:var(--grad);color:#fff;display:grid;place-items:center;font-weight:800;font-size:14px;margin-bottom:4px}
+.howto-card b{font-size:15px;font-weight:800}
+.howto-card p{font-size:13.5px;color:var(--text-2);line-height:1.65;margin:0}
