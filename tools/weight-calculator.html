@@ -32,11 +32,12 @@
     <div class="wrap">
       <div class="wc-layout">
         <div class="wc-form">
+          <p style="font-size:12.5px;color:var(--text-3);margin-bottom:10px">Fields with <span class="req">*</span> are needed for the answer. The others sharpen it.</p>
           <div class="panel" style="padding:24px">
             <h3 style="font-size:15px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--text-3)">Your tow vehicle</h3>
             <div class="form-row">
-              <div class="field"><label for="w-tow-rating">How much can your truck pull? Max towing rating (lb)</label><input id="w-tow-rating" type="number" min="0" step="100" inputmode="numeric" placeholder="9200"><span class="hint">Find it: owner's manual towing table, or the maker's online towing guide. Not usually on a door sticker.</span></div>
-              <div class="field"><label for="w-payload">How much can go in the truck? Payload capacity (lb)</label><input id="w-payload" type="number" min="0" step="50" inputmode="numeric" placeholder="1500"><span class="hint">Find it: yellow and white sticker inside the driver's door, "occupants and cargo should never exceed".</span></div>
+              <div class="field"><label for="w-tow-rating">How much can your truck pull? Max towing rating (lb)<span class="req">*</span></label><input id="w-tow-rating" type="number" min="0" step="100" inputmode="numeric" placeholder="9200"><span class="hint">Find it: owner's manual towing table, or the maker's online towing guide. Not usually on a door sticker.</span></div>
+              <div class="field"><label for="w-payload">How much can go in the truck? Payload capacity (lb)<span class="req">*</span></label><input id="w-payload" type="number" min="0" step="50" inputmode="numeric" placeholder="1500"><span class="hint">Find it: yellow and white sticker inside the driver's door, "occupants and cargo should never exceed".</span></div>
             </div>
             <div class="form-row">
               <div class="field"><label for="w-curb">How much does the empty truck weigh? Curb weight (lb)</label><input id="w-curb" type="number" min="0" step="50" inputmode="numeric" placeholder="5600"><span class="hint">Find it: owner's manual specs, or the maker's online spec sheet. Empty with a full tank of fuel.</span></div>
@@ -61,7 +62,7 @@
               </div>
             </div>
             <div class="form-row">
-              <div class="field"><label for="w-uvw">How much does the empty trailer weigh? Dry weight (lb)</label><input id="w-uvw" type="number" min="0" step="50" inputmode="numeric" placeholder="5600"><span class="hint">Find it: sticker on the trailer, front left or inside a cabinet. Also called unloaded vehicle weight, UVW.</span></div>
+              <div class="field"><label for="w-uvw">How much does the empty trailer weigh? Dry weight (lb)<span class="req">*</span></label><input id="w-uvw" type="number" min="0" step="50" inputmode="numeric" placeholder="5600"><span class="hint">Find it: sticker on the trailer, front left or inside a cabinet. Also called unloaded vehicle weight, UVW.</span></div>
               <div class="field"><label for="w-gvwr">Max the loaded trailer can weigh? GVWR (lb)</label><input id="w-gvwr" type="number" min="0" step="100" inputmode="numeric" placeholder="7000"><span class="hint">Find it: same trailer sticker, labeled GVWR. The max weight the trailer may carry when fully loaded.</span></div>
             </div>
             <p style="font-size:12.5px;font-weight:700;color:var(--text-2);margin-bottom:0">Tongue or pin weight is estimated for you automatically, travel trailers run 10 to 15% of loaded weight, fifth wheels 20 to 25%. A certified scale gives the exact number.</p>
@@ -70,7 +71,7 @@
             <h3 style="font-size:15px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--text-3)">What you add</h3>
             <p style="font-size:13px;color:var(--text-2);margin-bottom:12px">Two places to put extra weight, one count per place. People and gear ride in the truck, cargo rides in the trailer.</p>
             <div class="form-row">
-              <div class="field"><label for="w-passengers">In the truck: people and gear (lb)</label><input id="w-passengers" type="number" min="0" step="10" inputmode="numeric" placeholder="400"><span class="hint">Rough estimate is fine. Two adults run about 350 lb, add everything in the cab and bed.</span></div>
+              <div class="field"><label for="w-passengers">People and gear in the truck (lb)<span class="req">*</span></label><input id="w-passengers" type="number" min="0" step="10" inputmode="numeric" placeholder="400"><span class="hint">Rough estimate is fine. Two adults run about 350 lb, add everything in the cab and bed.</span></div>
               <div class="field"><label for="w-cargo-trailer">In the trailer: cargo (lb)</label><input id="w-cargo-trailer" type="number" min="0" step="25" inputmode="numeric" placeholder="500"><span class="hint">Everything that rides inside the trailer beyond its dry weight. Water and propane are counted separately by us.</span></div>
             </div>
             <div class="form-row">

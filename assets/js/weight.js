@@ -112,6 +112,21 @@
  }
  var gvwrOver = loaded > rigGVWR;
 
+ /* required core inputs: no verdict until these exist, or the answer lies */
+ var missing = [];
+ if (towRating <= 0) missing.push('how much your truck can pull (top left)');
+ if (payloadCap <= 0) missing.push('how much can go in the truck (top left)');
+ if (rigUVW <= 0) missing.push('how much the empty trailer weighs (middle)');
+ if (passengers <= 0 && missing.length === 0) missing.push('people and gear in the truck (bottom)');
+
+ if (missing.length > 0) {
+   host.innerHTML = '<div class="w-idle w-needmore">' +
+     '<div class="w-need-ic">\u26A0\uFE0F</div>' +
+     '<b>Not enough information yet.</b>' +
+     '<span>Add ' + (missing.length === 1 ? missing[0] : 'all of these') + ' to get your answer.</span></div>';
+   return;
+ }
+
  /* truck gross weight check: curb + tongue + people (needs curb + trucks GVWR if given) */
  var truckGVWR = num('w-truck-gvwr');
  var truckGross = curb + tongue + passengers;

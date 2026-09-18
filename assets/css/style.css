@@ -976,3 +976,9 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 .field input, .field select{min-height:50px;font-size:16px}
 .field label{font-size:14.5px;font-weight:700;color:var(--text)}
 @media(max-width:720px){.field label{font-size:15px}}
+/* "need more info" state and required marker */
+.w-needmore{min-height:380px}
+.w-need-ic{font-size:38px;margin-bottom:10px}
+.w-needmore b{display:block;font-size:19px;font-weight:800;color:var(--text);margin-bottom:8px}
+.w-needmore span{color:var(--text-2);font-size:14.5px;line-height:1.6;max-width:330px}
+.field .req{color:#e11d48;margin-left:3px;font-weight:800}
