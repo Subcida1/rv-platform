@@ -197,25 +197,17 @@
  '<div class="deck-go">' + (href ? 'Visit \u2192' : '') + '</div></div>';
  return href ? '<a href="' + esc(href) + '" target="_blank" rel="noopener">' + inner + '</a>' : '<div class="deck-card">' + inner + '</div>';
  }
- function linkCard(src) {
- var href = src.url || src.map || src.data || null;
- var inner = '<div class="deck-card"><div class="deck-ic">\u2696\uFE0F</div>' +
- '<div class="deck-body"><b>' + esc(src.name) + '</b><span>' + esc(src.type || '') + '</span></div>' +
- '<div class="deck-go">Link \u2192</div></div>';
- return href ? '<a href="' + esc(href) + '" target="_blank" rel="noopener">' + inner + '</a>' : '<div class="deck-card">' + inner + '</div>';
- }
  var html = '';
- SC.sources.forEach(function (src) {
- if (src.perState) {
- html += '<div class="deck-card"><div class="deck-ic">\U0001F3E2</div>' +
- '<div class="deck-body"><b>State DOT weigh stations</b><span>Public, free when open, certified inspection scales</span>' +
- '<span>State departments of transportation list their stations. Quick links: ' +
- Object.keys(SC.stateHints || {}).map(function (k) {
- return '<a href="' + esc(SC.stateHints[k].dot) + '" target="_blank" rel="noopener" style="color:var(--c-sky);text-decoration:underline">' + esc(SC.stateHints[k].label) + '</a>';
- }).join(', ') + '</span></div></div>';
- } else {
- html += card(src);
+ /* embedded CAT Scale map first, per Ty: CAT is the main resource */
+ var main = SC.main;
+ if (main && main.map) {
+   html += '<div class="scale-map">' +
+     '<div class="scale-map-head"><span class="verified">Certified</span><b>' + esc(main.name) + ' map</b>' +
+     '<a href="' + esc(main.url) + '" target="_blank" rel="noopener">Open full locator \u2192</a></div>' +
+     '<iframe src="' + esc(main.map) + '" style="width:100%;height:420px;border:0;border-radius:12px" loading="lazy" title="CAT Scale certified truck scale locator map"></iframe></div>';
  }
+ SC.sources.forEach(function (src) {
+   html += card(src);
  });
  host.innerHTML = html;
  host.insertAdjacentHTML('beforeend',
