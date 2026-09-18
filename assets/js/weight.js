@@ -202,9 +202,9 @@
  var main = SC.main;
  if (main && main.map) {
    html += '<div class="scale-map">' +
-     '<div class="scale-map-head"><span class="verified">Certified</span><b>' + esc(main.name) + ' map</b>' +
+     '<div class="scale-map-head"><span class="verified">Certified</span><b>CAT Scale locations near you</b>' +
      '<a href="' + esc(main.url) + '" target="_blank" rel="noopener">Open full locator \u2192</a></div>' +
-     '<iframe src="' + esc(main.map) + '" style="width:100%;height:420px;border:0;border-radius:12px" loading="lazy" title="CAT Scale certified truck scale locator map"></iframe></div>';
+     '<iframe src="https://maps.google.com/maps?q=CAT+Scale&t=&z=4&ie=UTF8&iwloc=&output=embed" style="width:100%;height:420px;border:0;border-radius:12px" loading="lazy" title="Map of CAT Scale certified truck scale locations" allowfullscreen></iframe></div>';
  }
  SC.sources.forEach(function (src) {
    html += card(src);
