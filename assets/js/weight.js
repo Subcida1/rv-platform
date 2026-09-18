@@ -185,15 +185,17 @@
 /* ---------- scale locator ---------- */
 (function () {
  var SC = window.RV_SCALES;
+ var esc = function (x) { return String(x == null ? '' : x).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); };
  if (!SC) return;
  var host = document.getElementById('scale-list');
  if (!host) return;
  function card(src) {
- var out = '<div class="deck-card"><div class="deck-ic">⚖️</div>' +
+ var href = src.url || src.map || src.data || null;
+ var inner = '<div class="deck-card"><div class="deck-ic">⚖️</div>' +
  '<div class="deck-body"><b>' + esc(src.name) + '</b><span>' + esc(src.desc) + '</span>' +
  (src.type ? '<span>' + esc(src.type) + '</span>' : '') + '</div>' +
- '<div class="deck-go">' + (src.url || src.map || src.data ? 'Visit \u2192' : '') + '</div></div>';
- return out;
+ '<div class="deck-go">' + (href ? 'Visit \u2192' : '') + '</div></div>';
+ return href ? '<a href="' + esc(href) + '" target="_blank" rel="noopener">' + inner + '</a>' : '<div class="deck-card">' + inner + '</div>';
  }
  function linkCard(src) {
  var href = src.url || src.map || src.data || null;
@@ -206,7 +208,11 @@
  SC.sources.forEach(function (src) {
  if (src.perState) {
  html += '<div class="deck-card"><div class="deck-ic">\U0001F3E2</div>' +
- '<div class="deck-body"><b>State DOT weigh stations</b><span>Public, free when open, certified inspection scales</span><span>Hours vary by state; search "[state] DOT weigh station" for current status</span></div></div>';
+ '<div class="deck-body"><b>State DOT weigh stations</b><span>Public, free when open, certified inspection scales</span>' +
+ '<span>State departments of transportation list their stations. Quick links: ' +
+ Object.keys(SC.stateHints || {}).map(function (k) {
+ return '<a href="' + esc(SC.stateHints[k].dot) + '" target="_blank" rel="noopener" style="color:var(--c-sky);text-decoration:underline">' + esc(SC.stateHints[k].label) + '</a>';
+ }).join(', ') + '</span></div></div>';
  } else {
  html += card(src);
  }
