@@ -123,7 +123,7 @@
    host.innerHTML = '<div class="w-idle w-needmore">' +
      '<div class="w-need-ic">\u26A0\uFE0F</div>' +
      '<b>Not enough information yet.</b>' +
-     '<span>Add ' + (missing.length === 1 ? missing[0] : 'all of these') + ' to get your answer.</span></div>';
+     '<span>Fill in more of the fields above and your answer will appear.</span></div>';
    return;
  }
 
