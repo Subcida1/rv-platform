@@ -1010,3 +1010,17 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 .waste-box:hover{border-color:var(--border-2)}
 .waste-box input{width:17px;height:17px;accent-color:var(--c-sky);cursor:pointer}
 .waste-box select{border:1px solid var(--border-2);border-radius:8px;padding:6px 8px;font-size:12.5px;background:var(--bg-2);color:var(--text);cursor:pointer}
+
+/* ============================================================
+   Content lists (added for the battery guide polish pass)
+   Proper list markup, not nbsp+bullet hacks.
+   ============================================================ */
+.ticks{list-style:none;margin:10px 0 4px;padding:0;display:flex;flex-direction:column;gap:12px}
+.ticks li{position:relative;padding-left:22px;color:var(--text-2);font-size:14.5px;line-height:1.65}
+.ticks li::before{content:"";position:absolute;left:2px;top:7px;width:7px;height:7px;border-radius:50%;background:linear-gradient(135deg,#1e6fc4,#3f8fe8)}
+.ticks li a{color:var(--c-sky);text-decoration:underline}
+.ticks li b{color:var(--text)}
+.checks{list-style:none;margin:10px 0 4px;padding:0;display:flex;flex-direction:column;gap:12px}
+.checks li{position:relative;padding-left:26px;color:var(--text-2);font-size:14.5px;line-height:1.65}
+.checks li::before{content:"\2713";position:absolute;left:0;top:0;width:18px;height:18px;border-radius:5px;background:linear-gradient(135deg,#1e6fc4,#3f8fe8);color:#fff;font-size:12px;font-weight:800;display:grid;place-items:center}
+@media(max-width:720px){.ticks li,.checks li{font-size:14px}}
