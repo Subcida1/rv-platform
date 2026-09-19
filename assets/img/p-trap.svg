@@ -1,19 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" role="img" aria-label="Diagram of a sink P-trap filled with antifreeze">
-  <rect width="640" height="300" fill="#f7f8fb" rx="14"/>
-  <!-- sink -->
-  <rect x="180" y="30" width="280" height="40" rx="10" fill="#e5e7eb" stroke="#9ca3af" stroke-width="2"/>
-  <text x="320" y="56" text-anchor="middle" font-size="14" font-weight="700" fill="#374151">Sink</text>
-  <!-- drain stub -->
-  <rect x="300" y="70" width="40" height="30" fill="#c7d2fe" stroke="#6366f1" stroke-width="2"/>
-  <text x="320" y="90" text-anchor="middle" font-size="10" fill="#3730a3">drain</text>
-  <!-- P trap -->
-  <path d="M 320 100 L 320 150 C 320 170 300 170 280 170 L 240 170 C 220 170 220 190 240 190 L 280 190" fill="none" stroke="#8b5cf6" stroke-width="8" stroke-linejoin="round"/>
-  <text x="188" y="180" font-size="12" font-weight="700" fill="#8b5cf6">P-trap, the curved pipe that holds water</text>
-  <!-- antifreeze fill inside -->
-  <path d="M 312 100 L 312 152 C 312 162 302 162 292 162 L 288 162" fill="none" stroke="#ec4899" stroke-width="5" stroke-linejoin="round" opacity="0.85"/>
-  <text x="60" y="235" font-size="13" font-weight="700" fill="#ec4899">Pink antifreeze fills the trap so the</text>
-  <text x="60" y="253" font-size="13" font-weight="700" fill="#ec4899">water cannot freeze and crack the pipe</text>
-  <!-- wall pipe -->
-  <line x1="240" y1="190" x2="170" y2="190" stroke="#9ca3af" stroke-width="6"/>
-  <text x="150" y="180" font-size="11" fill="#6b7280">to wall drain</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" role="img" aria-label="Diagram of a sink P-trap filled with pink antifreeze">
+  <rect width="720" height="360" fill="#f7f8fb" rx="14"/>
+  <text x="360" y="30" text-anchor="middle" font-size="15" font-weight="800" fill="#111827">Sink P-trap: protected with antifreeze</text>
+  <!-- Sink bowl -->
+  <rect x="250" y="50" width="220" height="46" rx="12" fill="#e5e7eb" stroke="#9ca3af" stroke-width="2.5"/>
+  <text x="360" y="78" text-anchor="middle" font-size="14" font-weight="700" fill="#374151">Sink</text>
+  <!-- Sink drain opening -->
+  <rect x="345" y="96" width="30" height="18" fill="#c7d2fe" stroke="#6366f1" stroke-width="2"/>
+  <!-- Tailpiece straight down -->
+  <rect x="352" y="114" width="16" height="70" fill="none" stroke="#9ca3af" stroke-width="7"/>
+  <!-- U-bend: down, curve at bottom, up -->
+  <path d="M 360 184 C 360 250 270 250 270 200" fill="none" stroke="#8b5cf6" stroke-width="12" stroke-linecap="round"/>
+  <!-- Trap arm horizontal to wall drain -->
+  <line x1="270" y1="200" x2="120" y2="200" stroke="#8b5cf6" stroke-width="12" stroke-linecap="round"/>
+  <!-- Wall -->
+  <line x1="105" y1="150" x2="105" y2="260" stroke="#6b7280" stroke-width="5"/>
+  <text x="96" y="275" text-anchor="middle" font-size="11" fill="#6b7280">wall</text>
+  <!-- Antifreeze fill inside the U-bend: solid pink region -->
+  <path d="M 352 184 L 368 184 C 368 240 322 250 280 250 C 252 250 252 226 270 212 L 268 196 C 250 212 242 236 270 240 C 318 246 360 238 360 190 Z" fill="#ec4899" opacity="0.9"/>
+  <!-- Pink surface line in the tailpiece -->
+  <line x1="352" y1="150" x2="368" y2="150" stroke="#ec4899" stroke-width="4"/>
+  <!-- Labels -->
+  <text x="382" y="140" font-size="12" font-weight="800" fill="#374151">tailpiece</text>
+  <text x="300" y="290" font-size="13" font-weight="800" fill="#8b5cf6">U-bend holds water (or antifreeze)</text>
+  <text x="140" y="220" font-size="13" font-weight="800" fill="#8b5cf6">trap arm to wall drain</text>
+  <text x="360" y="330" text-anchor="middle" font-size="12.5" font-weight="700" fill="#ec4899">Pour about a cup of pink antifreeze down the drain so the trapped water cannot freeze and crack the pipe.</text>
 </svg>
