@@ -14,8 +14,8 @@
  <div class="wrap" style="max-width:820px;padding:54px 0 20px">
  <a href="index.html" class="btn btn-ghost" style="font-size:13.5px">← All guides</a>
  <div class="sec-eyebrow">Guide . Winter</div>
-    <h1 style="font-size:clamp(28px,3.6vw,42px);font-weight:800;letter-spacing:-.03em;line-height:1.1;margin-top:20px">RV battery winter storage: The chemistry and the electrical side</h1>
- <p style="color:var(--text-2);font-size:16px;margin-top:12px">A dead battery bank in spring is almost never old age. It is a storage error from four months earlier: the wrong charge level for the chemistry, a parasitic load left running, or a sunny day charging a frozen lithium cell. Each has a specific fix, and all of them together take about twenty minutes in the fall.</p>
+    <h1 style="font-size:clamp(28px,3.6vw,42px);font-weight:800;letter-spacing:-.03em;line-height:1.1;margin-top:20px">RV battery winter storage: Lead-acid and lithium rules</h1>
+ <p style="color:var(--text-2);font-size:16px;margin-top:12px">A dead battery bank in spring is almost never old age. It is a storage error from four months earlier: the wrong charge level for the chemistry, a parasitic load left running, or a sunny day charging a frozen lithium cell. Each has a specific fix, and all of them together take about twenty minutes in the fall. This guide walks through the rules by battery type, then covers the electrical side, solar, and the parasitic drains that quietly empty the bank.</p>
  <p class="reviewed">Last reviewed: Sep 18, 2026, against battery chemistry data and current RV electrical guidance. We update these guides when real-world data changes.</p>
  </div>
 
@@ -23,67 +23,77 @@
  <div class="wrap" style="max-width:820px">
  <div class="callout" style="margin-bottom:24px"><b>The short version:</b> lead-acid and lithium store at opposite charge levels, lead-acid at 100 percent and lithium near 50 percent. Both must be disconnected from the rig's loads, and lithium must never be charged below freezing. Solar left connected is a hidden hazard on a cold winter day, because a controller will try to charge a frozen battery. The pages below give you the exact numbers for your chemistry.</div>
 
- <h2 style="font-size:22px;font-weight:800;margin-bottom:14px">Chemistry cheat sheet: The storage level by battery type</h2>
+ <h2 style="font-size:22px;font-weight:800;margin-bottom:14px">How to store RV batteries for winter, by chemistry</h2>
  <div class="card" style="padding:22px;margin-bottom:14px">
- <h3 style="font-size:17px;font-weight:800">Flooded lead-acid: Charge to 100%, then disconnect</h3>
+ <h3 style="font-size:17px;font-weight:800">Flooded lead-acid batteries: Charge to 100%, then disconnect</h3>
  <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px">For lead-acid, your state of charge is your freeze protection. The electrolyte freezing point depends on how charged the battery is, and the difference is enormous. According to the Battery Council International's freeze table, a fully charged lead-acid cell (specific gravity about 1.28) does not freeze until roughly <b>-90°F</b>. At a 40 percent charge it freezes near <b>+16°F</b>, and a deeply discharged battery can freeze at about <b>+19°F</b>, barely above freezing itself. This is why a battery that survives a Colorado winter can die in a warm garage: it was stored half-empty, and the half-empty electrolyte froze from the inside out.</p>
- <p style="color:var(--text-2);font-size:14.5px;line-height:1.9;margin-top:8px"></p>
-<ul class="ticks">
- <li><b>Fill cells with distilled water first</b>, then charge. Add water after charging, not before, because the acid expands as the battery charges, and a full cell before charging can overflow.</li>
- <li><b>Charge to 100 percent.</b> A partially charged lead-acid battery will sulfate, forming hard crystals on the plates that permanently reduce capacity.</li>
- <li><b>Disconnect the negative terminal.</b> This is the entire game, as covered in the parasitic drain section below.</li>
- <li><b>Clean the terminals</b> and coat them lightly with dielectric grease or petroleum jelly to keep corrosion out of the connection.</li>
- <li><b>Re-check every 4 to 6 weeks.</b> Lead-acid self-discharges at roughly 5 to 15 percent per month. If the resting voltage drops below 12.4 volts, charge it again, then re-check. (While the battery is out, it is the perfect moment to <a href="tools/weight-calculator.html">verify your RV weight limits</a> against what you actually carry.)</li>
-</ul>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>Fill cells with distilled water first</b>, then charge. Add water after charging, not before, because the acid expands as the battery charges, and a full cell before charging can overflow.</p>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>Charge fully before storage.</b> A partially charged lead-acid battery will sulfate, forming hard crystals on the plates that permanently reduce capacity. Charge to 100 percent, then disconnect the negative terminal so no parasitic load can drain it.</p>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>Check voltage every 4 to 6 weeks.</b> Lead-acid self-discharges at roughly 5 to 15 percent per month. If the resting voltage drops below 12.4 volts, charge it again, then re-check. Clean the terminals before storage and coat them lightly with dielectric grease or petroleum jelly to keep corrosion out. (While the battery is out, it is the perfect moment to <a href="tools/weight-calculator.html">verify your RV weight limits</a> against what you actually carry.)</p>
  </div>
  <div class="card" style="padding:22px;margin-bottom:14px">
- <h3 style="font-size:17px;font-weight:800">LiFePO4 (lithium): Store near 50%, never charge below freezing</h3>
+ <h3 style="font-size:17px;font-weight:800">LiFePO4 lithium batteries: Store near 50%, never charge below freezing</h3>
  <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px">Lithium plays by the opposite rules, and getting them wrong is expensive because the damage is permanent and cumulative. Charging a lithium cell below about 32°F causes <b>lithium plating</b>: the lithium ions cannot absorb into the anode quickly enough, so they deposit as solid metal on its surface instead. Each cold charge steals capacity that never returns, and repeated plating can eventually form internal structures that compromise the cell. This is not a gentle caution, it is a hard electrical rule, and it is why a lithium bank with no low-temperature cutoff must not be connected to solar or a charger during a cold winter.</p>
- <p style="color:var(--text-2);font-size:14.5px;line-height:1.9;margin-top:8px"></p>
-<ul class="ticks">
- <li><b>Store near 50 percent, in the 40 to 60 percent band</b> if your BMS or vendor manual lists a specific figure. Storing lithium at 100 percent for months causes slightly faster degradation than storing at 50 percent, and storing near zero risks the BMS entering a protection mode that is annoying to exit in spring.</li>
- <li><b>Disconnect loads.</b> Lithium self-discharges at only 2 to 3 percent per month and holds for months, but a detector, monitor, or inverter standby still drains it, and a battery that sits under a slow draw eventually drops into the danger zone.</li>
- <li><b>Never charge below freezing.</b> If the bank stays where it can freeze, physically disconnect the solar panels, the charger, and shore power. If your BMS has a low-temperature charge cutoff, confirm it is actually enabled rather than assuming it is.</li>
- <li><b>Do not leave a lithium pack on a trickle or float charger.</b> That advice belongs to lead-acid. Lithium does not need a maintenance charge in storage, and a float charger left on the pack is the wrong tool.</li>
-</ul>
- <figure style="margin:10px 0 12px">
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>Store near 50 percent, in the 40 to 60 percent band</b> if your BMS or vendor manual lists a specific figure. Storing lithium at 100 percent for months causes slightly faster degradation than storing at 50 percent, and storing near zero risks the BMS entering a protection mode that is annoying to exit in spring.</p>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>Disconnect the loads, and do not leave a trickle charger on the pack.</b> Lithium self-discharges at only 2 to 3 percent per month and holds for months, but a detector, monitor, or inverter standby still drains it. The maintenance-charge advice that keeps lead-acid alive is wrong for lithium: a float charger left on a lithium pack all winter is the wrong tool.</p>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>Never charge below freezing.</b> If the bank stays where it can freeze, physically disconnect the solar panels, the charger, and shore power. If your BMS has a low-temperature charge cutoff, confirm it is actually enabled rather than assuming it is.</p>
+ <figure style="margin:12px 0 6px">
  <img src="assets/img/battery-smart-charger.jpg" alt="A 12 volt battery connected to a smart charger and maintainer" loading="lazy" style="width:100%;max-width:520px;border-radius:var(--radius);border:1px solid var(--border)">
  <figcaption style="font-size:12px;color:var(--text-3);margin-top:6px">A 12 volt deep-cycle battery connected to a smart maintainer, the setup this guide describes for lead-acid batteries in winter storage. Image credit: flickr.com/photos/68139883@N00, <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener">CC BY 2.0</a>.</figcaption>
  </figure>
  </div>
  <div class="card" style="padding:22px;margin-bottom:14px">
- <h3 style="font-size:17px;font-weight:800">AGM and gel (sealed lead-acid): Same as flooded, minus the water</h3>
+ <h3 style="font-size:17px;font-weight:800">AGM and gel batteries: The lead-acid rules, minus the watering</h3>
  <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px">Sealed lead-acid batteries follow the flooded rules: full charge, disconnect, re-check every 4 to 6 weeks, keep a smart maintainer on them if they sit connected. They never need watering, and they tolerate cold the same way, with the same freeze protection from a full charge.</p>
  </div>
-
- <h2 style="font-size:22px;font-weight:800;margin-bottom:14px">The electrical side: Where the drain really comes from</h2>
+<h2 style="font-size:22px;font-weight:800;margin-bottom:14px">RV battery parasitic drain: What quietly empties the bank</h2>
  <div class="card" style="padding:22px;margin-bottom:14px">
  <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px">Disconnect the battery, and you assume the drain stops. It does not always. Many RVs keep some circuits live even when the coach disconnect is off, and the list of quiet consumers is longer than most owners realize. Recognizing them is the difference between a battery that greets spring at 80 percent and one that greets it at zero.</p>
- <p style="color:var(--text-2);font-size:14.5px;line-height:1.9;margin-top:8px"></p>
-<ul class="ticks">
- <li><b>Propane and CO detectors</b> draw continuously by design. They are safety equipment and usually stay wired directly to the battery.</li>
- <li><b>Stereo memory, clocks, and control boards</b> draw a trickle each, small alone, real in aggregate over a season.</li>
- <li><b>The inverter in standby</b> is often the biggest surprise. A pure sine inverter left on with nothing plugged into it can pull more than many of the small loads combined. Turn the inverter fully off, not just the appliance that was plugged into it.</li>
- <li><b>The solar charge controller</b> draws a little simply by being on, and a covered panel does not cancel what the controller consumes. This is why a rig with covered panels can still lose charge in a cloudy week.</li>
- <li><b>Battery monitors, tank monitors, and communication modules</b> each add a small ongoing draw.</li>
-</ul>
- <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:10px"><b>The reliable test:</b> with the disconnect off, measure the current at the battery with a multimeter in series. A normal low standby draw reads in the tens of milliamps. If it reads in the hundreds of milliamps, something is pulling real current, and you should find it before storage, not after.</p>
  </div>
-
- <h2 style="font-size:22px;font-weight:800;margin-bottom:14px">Solar and the charge controller: The hidden winter hazard</h2>
  <div class="card" style="padding:22px;margin-bottom:14px">
- <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px">The box between your solar panels and your battery, the component that turns raw panel voltage into a safe charging current, is the <b>solar charge controller</b>. Understanding what it does explains why solar is a hazard in winter storage.</p>
- <p style="color:var(--text-2);font-size:14.5px;line-height:1.9;margin-top:8px"></p>
-<ul class="ticks">
- <li><b>Its job:</b> panels put out much more voltage than a battery wants, more than enough to damage it. The controller regulates the charge into the battery and stops when the battery is full.</li>
- <li><b>Two kinds.</b> A PWM (pulse width modulation) controller is a smart switch that drags the panel voltage down to battery voltage. An MPPT (maximum power point tracking) controller converts excess panel voltage into extra charging current, harvesting roughly 15 to 30 percent more power, with the biggest gains in cold weather when panels put out higher voltage.</li>
- <li><b>Why winter storage is the trap:</b> a sunny winter day is exactly when the problem appears. The panels sit in clear sun, the charge controller wakes up and starts charging, and the battery is still below freezing from the night before. If the battery is lead-acid, that is a maintenance charge, harmless. If it is lithium, that single cold charge does permanent damage, and a whole season of sunny days repeats it. This is why lithium guidance is emphatic: disconnect the panels, or disable the charge path, or confirm the BMS low-temperature cutoff is active.</li>
- <li><b>The order that protects the controller:</b> connect the battery before connecting the panels to the controller, and disconnect the panels before the battery. The controller needs to see battery voltage to configure itself, and some units are damaged by panel-first hookup.</li>
-</ul>
- <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:10px"><b>Maintainer note:</b> if the rig sits plugged in, check the converter or charger's chemistry setting. Many factory converters only know lead-acid charge profiles, and leaving a lithium bank on an incompatible converter all winter stresses the BMS. The safe pattern for lithium is: partial charge, disconnect, no maintainer.</p>
+ <h3 style="font-size:17px;font-weight:800">Safety detectors and memory drains</h3>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px">Propane and CO detectors draw continuously by design, and they usually stay wired directly to the battery because they are safety equipment. Stereo memory, clocks, and appliance control boards draw a trickle each. Small alone, and real in aggregate over a four-month season.</p>
  </div>
-
- <h2 style="font-size:22px;font-weight:800;margin-bottom:14px">The storage checklist</h2>
+ <div class="card" style="padding:22px;margin-bottom:14px">
+ <h3 style="font-size:17px;font-weight:800">Inverter standby: The biggest hidden drain</h3>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px">A pure sine inverter left on with nothing plugged into it can pull more than many of the small loads combined. This is often the surprise that explains a battery much flatter than the detectors and clocks would suggest. Turn the inverter fully off, not just the appliance that was plugged into it.</p>
+ </div>
+ <div class="card" style="padding:22px;margin-bottom:14px">
+ <h3 style="font-size:17px;font-weight:800">Charge controllers and monitors in standby</h3>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px">The solar charge controller draws a little simply by being on, and a covered panel does not cancel what the controller consumes, which is why an RV with covered panels can still lose charge over a cloudy week. Battery monitors, tank monitors, and communication modules each add a small ongoing draw of their own.</p>
+ </div>
+ <div class="card" style="padding:22px;margin-bottom:14px">
+ <h3 style="font-size:17px;font-weight:800">How to test for an unexpected draw</h3>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px">With the disconnect off, measure the current at the battery with a multimeter wired in series. A normal low standby draw reads in the tens of milliamps. If it reads in the hundreds of milliamps, something is pulling real current, and you should find it before storage, not after. If the drain is unexpected, unsafe, or excessive, fix it. If it is simply normal, isolate the loads that do not need to stay powered for the season.</p>
+ </div>
+<h2 style="font-size:22px;font-weight:800;margin-bottom:14px">Solar panels and charge controllers in winter</h2>
+ <div class="card" style="padding:22px;margin-bottom:14px">
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px">The box between your solar panels and your battery, the component that turns raw panel voltage into a safe charging current, is the <b>solar charge controller</b>. It is the piece of the system that decides whether winter storage helps your battery or hurts it, and the next few sections cover what it does, which kind to have, and why a sunny winter day is the one moment it can do real damage.</p>
+ </div>
+ <div class="card" style="padding:22px;margin-bottom:14px">
+ <h3 style="font-size:17px;font-weight:800">What a solar charge controller does</h3>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px">A solar panel in full sun puts out far more voltage than a battery can accept, up to 18 to 22 volts from a panel labeled 12 volt. Feeding that straight into a battery would overcharge and damage it. The charge controller sits between them, regulates how much current reaches the battery, and stops charging entirely once the battery is full. It is the battery's traffic light, and every RV solar system needs one.</p>
+ </div>
+ <div class="card" style="padding:22px;margin-bottom:14px">
+ <h3 style="font-size:17px;font-weight:800">MPPT vs PWM: Which charge controller is best for winter?</h3>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px">Two kinds of controllers exist, and the difference matters most in cold weather.</p>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>PWM (pulse width modulation)</b> is a smart switch. It drags the panel voltage down to match the battery voltage, which wastes whatever the panel produces above that level. It is simple and cheap, and it works fine in warm climates with closely matched panels, but in cold weather it gives up meaningful harvest.</p>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>MPPT (maximum power point tracking)</b> is a converter with a brain. It lets the panel run at its most efficient voltage, then converts the excess into extra charging current. That captures roughly 15 to 30 percent more power than PWM from the same panels, with the largest gains in winter, because cold panels produce higher voltage and MPPT is the only type that can use it. For an RV that sees winter at all, MPPT is the right choice.</p>
+ </div>
+ <div class="card" style="padding:22px;margin-bottom:14px">
+ <h3 style="font-size:17px;font-weight:800">The winter hazard: A sunny day can charge a frozen lithium battery</h3>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px">This is the trap that catches owners who leave solar connected for winter. The sun comes out on a cold morning, the panels light up, and the charge controller wakes up and starts charging. The battery is still below freezing from the night before. If the bank is lead-acid, that charging is a harmless maintenance top-up. If it is lithium, that single cold charge does permanent damage through lithium plating, and a whole season of sunny winter days repeats it, stealing capacity that never returns.</p>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px">The rule for a lithium bank in a freezing climate: disconnect the solar panels, disable the charge path, or confirm the BMS low-temperature charge cutoff is actually enabled rather than assuming it is. For lead-acid, solar through a working controller behaves like a smart maintainer, but only if the controller is rated for the chemistry and the battery stays above freezing overnight, which is why many owners disconnect anyway.</p>
+ </div>
+ <div class="card" style="padding:22px;margin-bottom:14px">
+ <h3 style="font-size:17px;font-weight:800">The safe shutdown order for solar in storage</h3>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px">The controller needs the battery connected to configure itself, and some units are damaged by connecting panels first. The correct order: connect the battery before the panels, and when shutting down for storage, disconnect the panels before the battery. Use a breaker or disconnect on the panel side so you can kill the PV input for service, and fuse both the panel and battery legs.</p>
+ </div>
+ <div class="card" style="padding:22px;margin-bottom:14px">
+ <h3 style="font-size:17px;font-weight:800">The converter and charger chemistry check</h3>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px">If the rig sits plugged into shore power, check what the converter or charger is programmed for. Many factory converters only know lead-acid charge profiles, and leaving a lithium bank on an incompatible converter all winter stresses the battery management system. The safe pattern for lithium is partial charge, disconnect, no maintainer. For lead-acid, a smart maintainer rated for the chemistry is the tool, and a dumb charger left on the bank is not.</p>
+ </div>
+<h2 style="font-size:22px;font-weight:800;margin-bottom:14px">The storage checklist</h2>
  <div class="card" style="padding:22px">
  <p style="color:var(--text-2);font-size:14.5px;line-height:1.9;margin-top:6px"></p>
 <ul class="checks">
@@ -99,7 +109,7 @@
  </div>
 
  <div class="card" style="padding:22px;margin-bottom:26px;background:var(--grad-soft)">
- <h3 style="font-size:16px;font-weight:800">The rule that saves most people</h3>
+ <h3 style="font-size:16px;font-weight:800">The rule that saves most batteries</h3>
  <p style="color:var(--text-2);font-size:14.5px;margin-top:6px">It is almost never the cold that kills the battery. It is one of three storage errors: a parasitic drain leaving lead-acid half-full in January, a float charger on a lithium pack, or a sunny day charging a frozen lithium cell. Match the charge level to the chemistry, disconnect the loads, and control the charging path. That covers every failure this guide describes.</p>
  </div>
 
