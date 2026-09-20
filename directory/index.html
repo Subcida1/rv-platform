@@ -4,46 +4,170 @@
   <script src="../assets/js/base.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="canonical" href="https://yourdomain.com/directory/index.html">
-  <title>RV Repair Directory. Find Mobile Techs &amp; RV Service Centers</title>
-  <meta name="description" content="Find RV repair and service near you. Search mobile RV technicians and RV service centers, check certifications, and get contact info fast.">
+  <title>RV Repair Directory. Mobile RV Technicians and Service Centers</title>
+  <meta name="description" content="Find RV repair and service in Oregon. Search mobile RV technicians and RV service centers by city, check certifications, and get phone numbers and websites fast. Free listings for RV techs.">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body class="g-theme-mist">
   <div id="site-nav"></div>
 
   <div class="wrap" style="padding:54px 0 18px">
-    <div class="sec-eyebrow">Directory</div>
-    <h1 style="font-size:clamp(30px,4.4vw,48px);font-weight:800;letter-spacing:-.03em;line-height:1.08;margin-top:12px">Find RV service, fast.</h1>
-    <p style="color:var(--text-2);font-size:16.5px;margin-top:12px;max-width:680px">Mobile technicians and service centers, searchable by area. Certification status up front, contact info one click away.</p>
+    <div class="sec-eyebrow">Directory . Oregon</div>
+    <h1 style="font-size:clamp(30px,4.4vw,48px);font-weight:800;letter-spacing:-.03em;line-height:1.08;margin-top:12px">RV repair directory: Mobile technicians and service centers</h1>
+    <p style="color:var(--text-2);font-size:16.5px;margin-top:12px;max-width:680px">Find RV repair and service near you. Mobile technicians and RV service centers, searchable by city or name, with certification status up front and contact info one click away. Oregon first, because that is where we started.</p>
+    <div class="guide-stats">
+      <span><b data-d-count>6</b> listings</span>
+      <span><b>Oregon</b> first</span>
+      <span><b>Free</b> listings forever</span>
+      <span><b>Unclaimed</b> until you claim</span>
+    </div>
   </div>
 
-  <div class="sec" style="padding:30px 0 60px">
+  <div class="sec" style="padding:26px 0 60px">
     <div class="wrap">
-      <form class="search" style="max-width:720px;margin:0 auto 16px" onsubmit="return false">
+      <form class="search" style="max-width:720px;margin:0 auto 16px" onsubmit="return RV.dirSearch(this)">
         <div class="search-bar">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="8" r="6"/><path d="M21 8a6 6 0 0 1-6 6"/><path d="M5 3.5h11v3h-3v6h-4"/></svg>
-          <input id="d-search" type="search" placeholder="City, ZIP, or business name" aria-label="Search RV service listing">
-          <button class="btn btn-gb" type="button" onclick="RV.dirSearch()">Search</button>
+          <input id="d-search" type="search" placeholder="City, ZIP, or business name" aria-label="Search RV service listings">
+          <button class="btn btn-gb" type="submit">Search</button>
         </div>
       </form>
-      <div class="chips" style="justify-content:center;margin-bottom:20px">
-        <span class="chip" data-f="mobile" onclick="RV.dirFilter(this)">🔧 Mobile techs</span>
+      <div class="chips" style="justify-content:center;margin-bottom:22px">
+        <span class="chip" data-f="mobile" onclick="RV.dirFilter(this)">🔧 Mobile technicians</span>
         <span class="chip" data-f="center" onclick="RV.dirFilter(this)">🏢 Service centers</span>
         <span class="chip" data-f="cert" onclick="RV.dirFilter(this)">✅ Certified</span>
-        <span class="chip" data-f="soon" onclick="RV.dirFilter(this)">Oregon</span>
+        <span class="chip" data-f="or" onclick="RV.dirFilter(this)">Oregon</span>
       </div>
 
       <div class="results-top">
-        <div class="results-count"><b id="d-count">0</b> listings near you</div>
+        <div class="results-count"><b id="d-count">6</b> listings</div>
+        <div class="results-sort">Sorted by: nearest to Oregon's I-5 corridor</div>
       </div>
 
-      <div class="card" style="padding:36px;text-align:center">
-        <div style="font-size:46px;margin-bottom:10px">🛠️</div>
-        <h3 style="font-size:21px;font-weight:800">Oregon listings arriving now</h3>
-        <p style="color:var(--text-2);font-size:15px;margin-top:10px;max-width:520px;margin-left:auto;margin-right:auto">The first listings are being added this season. Claim yours below so your business is first in line, or check back and search your area.</p>
+      <div class="listing-grid" id="listing-grid">
+
+        <a class="card listing-card" href="https://www.oakparkrvmobileservice.com/" target="_blank" rel="noopener" data-type="mobile" data-cert="0" data-state="OR" data-text="oak park rv mobile service salem oregon mobile technician repair">
+          <div class="listing-top">
+            <div class="listing-ic">🔧</div>
+            <div>
+              <div class="listing-name">Oak Park RV Mobile Service</div>
+              <div class="listing-loc">Salem, OR</div>
+            </div>
+          </div>
+          <p class="listing-desc">Licensed, locally owned, and family-operated mobile RV repair with 45 years of service experience. They come to your campsite, home, or storage facility. Repairs electrical, plumbing, water heaters, furnaces, A/C, refrigerators, slide-outs, awnings, generators, and roof leaks.</p>
+          <div class="listing-tags"><span>Mobile technician</span><span>Family owned</span><span>45 years</span></div>
+          <div class="listing-foot">
+            <span class="listing-phone">503-581-5407</span>
+            <span class="listing-go">Visit site →</span>
+          </div>
+        </a>
+
+        <a class="card listing-card" href="https://www.peaceofmindrvrepair.com/" target="_blank" rel="noopener" data-type="mobile" data-cert="1" data-state="OR" data-text="peace of mind mobile rv repair eugene oregon lane county certified technician">
+          <div class="listing-top">
+            <div class="listing-ic">🔧</div>
+            <div>
+              <div class="listing-name">Peace of Mind Mobile RV Repair</div>
+              <div class="listing-loc">Eugene, OR (Lane County)</div>
+            </div>
+          </div>
+          <p class="listing-desc">Family-owned mobile and in-shop RV service in the greater Eugene area, with certified technicians (Level 2 and Level 3). They handle manufacturer warranty, extended warranty, and insurance work, and offer on-site appointments at your home, storage facility, or campground.</p>
+          <div class="listing-tags"><span>Mobile + in-shop</span><span>Certified techs</span><span>Warranty work</span></div>
+          <div class="listing-foot">
+            <span class="listing-phone">541-543-3781</span>
+            <span class="listing-go">Visit site →</span>
+          </div>
+        </a>
+
+        <a class="card listing-card" href="https://www.suttonrv.com/rv-service" target="_blank" rel="noopener" data-type="center" data-cert="1" data-state="OR" data-text="sutton rv service eugene oregon rvia certified service center warranty">
+          <div class="listing-top">
+            <div class="listing-ic">🏢</div>
+            <div>
+              <div class="listing-name">Sutton RV Service</div>
+              <div class="listing-loc">Eugene, OR</div>
+            </div>
+          </div>
+          <p class="listing-desc">Full indoor service department with RVIA-certified, factory-trained technicians. Works on motorhomes, fifth wheels, travel trailers, and toy haulers: roofs, appliances, slide-outs, awnings, electrical, propane, plumbing, and structural repairs. Authorized for Airstream, Dutchmen, Forest River, and Adventurer warranty work.</p>
+          <div class="listing-tags"><span>Service center</span><span>RVIA certified</span><span>Warranty work</span></div>
+          <div class="listing-foot">
+            <span class="listing-phone">458-234-8188</span>
+            <span class="listing-go">Visit site →</span>
+          </div>
+        </a>
+
+        <a class="card listing-card" href="https://www.curtistrailers.com/rv-service" target="_blank" rel="noopener" data-type="center" data-cert="1" data-state="OR" data-text="curtis trailers portland beaverton oregon rvia rvda certified service center 66 bays">
+          <div class="listing-top">
+            <div class="listing-ic">🏢</div>
+            <div>
+              <div class="listing-name">Curtis Trailers</div>
+              <div class="listing-loc">Portland and Beaverton, OR</div>
+            </div>
+          </div>
+          <p class="listing-desc">Two Oregon locations with 66 service bays and RVIA/RVDA certified technicians. They service every RV regardless of where it was purchased, and take on warranty and recall work, roof leaks, slide-outs, scheduled maintenance, and winterization.</p>
+          <div class="listing-tags"><span>Service center</span><span>RVIA/RVDA certified</span><span>Two locations</span></div>
+          <div class="listing-foot">
+            <span class="listing-phone">971-245-2554 (PDX) . 503-985-8411 (Beaverton)</span>
+            <span class="listing-go">Visit site →</span>
+          </div>
+        </a>
+
+        <a class="card listing-card" href="https://aaarvtech.com/" target="_blank" rel="noopener" data-type="mobile" data-cert="1" data-state="OR" data-text="aaa rv tech portland oregon mobile advanced certified technician inspection">
+          <div class="listing-top">
+            <div class="listing-ic">🔧</div>
+            <div>
+              <div class="listing-name">AAA RV Tech</div>
+              <div class="listing-loc">Portland, OR</div>
+            </div>
+          </div>
+          <p class="listing-desc">Mobile RV repair and inspection serving the Portland area, run by an Advanced Certified RV Technician. Comes to your campsite, driveway, or off-grid spot. Repairs appliances, plumbing, solar, and roofs, with no towing and no dealership wait.</p>
+          <div class="listing-tags"><span>Mobile technician</span><span>Advanced certified</span><span>Inspections</span></div>
+          <div class="listing-foot">
+            <span class="listing-phone">305-354-6748</span>
+            <span class="listing-go">Visit site →</span>
+          </div>
+        </a>
+
+        <a class="card listing-card" href="https://www.timsrv.com/" target="_blank" rel="noopener" data-type="mobile" data-cert="1" data-state="OR" data-text="tims mobile rv repair vancouver columbia county oregon master certified lp gas">
+          <div class="listing-top">
+            <div class="listing-ic">🔧</div>
+            <div>
+              <div class="listing-name">Tim's Mobile RV Repair</div>
+              <div class="listing-loc">Columbia County, OR and SW Washington</div>
+            </div>
+          </div>
+          <p class="listing-desc">Small family-owned mobile RV repair serving Columbia County, Oregon and southwest Washington. Tim is a Master Certified RV Technician (RVDA and RVIA) and a licensed LP gas technician. Specializes in appliance repair, LP systems, water systems, awnings, and 120 and 12 volt electrical.</p>
+          <div class="listing-tags"><span>Mobile technician</span><span>Master certified</span><span>LP gas licensed</span></div>
+          <div class="listing-foot">
+            <span class="listing-phone">503-223-5255</span>
+            <span class="listing-go">Visit site →</span>
+          </div>
+        </a>
+
       </div>
 
-      <div class="form-card" id="claim" style="margin-top:18px">
+      <div class="card" id="d-empty" style="padding:30px;text-align:center;display:none">
+        <div style="font-size:38px;margin-bottom:8px">🔍</div>
+        <h3 style="font-size:19px;font-weight:800">Nothing listed there yet</h3>
+        <p style="color:var(--text-2);font-size:14.5px;margin-top:8px;max-width:520px;margin-left:auto;margin-right:auto">We are seeding Oregon first. Try a nearby city, or claim your business below and be listed for free.</p>
+      </div>
+
+      <div class="sec-head center" id="seed" style="margin-top:48px">
+        <div class="sec-eyebrow">How listings get built</div>
+        <h2 style="font-size:22px;font-weight:800">Real businesses only, never made up</h2>
+        <p style="color:var(--text-2);max-width:680px;margin:8px auto 0">Every listing in this directory is a real business, added from what the business itself publishes on its own website. We do not invent phone numbers, addresses, or certifications. If a detail is not published by the business, it is not in the listing. A listing marked unclaimed goes to the business the moment they claim it, and they control it from then on.</p>
+      </div>
+
+      <h2 style="font-size:22px;font-weight:800;margin-top:44px">What to look for in an RV technician</h2>
+      <div class="card" style="padding:24px;margin-top:14px">
+        <ul class="ticks">
+          <li><b>Certification.</b> RVIA and RVDA certifications (Registered Technician through Master Certified) mean the tech has passed industry training and exams. Ask what level they hold.</li>
+          <li><b>Mobile or shop.</b> A mobile technician comes to your rig, which saves towing and lets them see the problem where it lives. A service center has the bays and parts for bigger jobs.</li>
+          <li><b>Warranty capability.</b> If your rig is under manufacturer or extended warranty, confirm the shop can do warranty work before you book, or you may pay out of pocket for something covered.</li>
+          <li><b>LP gas license.</b> Propane system repairs and safety inspections require a licensed LP gas technician in most states. If you smell propane, this is the credential that matters.</li>
+          <li><b>Specialties.</b> Some techs specialize in appliances, solar, generators, or structural work. A good match matters more than a long list.</li>
+        </ul>
+      </div>
+
+      <div class="form-card" id="claim" style="margin-top:34px">
         <div class="flex" style="justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap">
           <div>
             <h3>Claim your listing</h3>
@@ -80,6 +204,15 @@
           <button class="btn btn-gb btn-block" type="submit" style="margin-top:4px">Claim my listing</button>
         </form>
       </div>
+
+      <h2 style="font-size:22px;font-weight:800;margin-top:44px">RV repair directory FAQ</h2>
+      <div style="margin-top:14px">
+        <details class="faq"><summary>Is it free to be listed?</summary><p>Yes. Listings are free and permanent, and the business controls its own listing after claiming it. There is no commission and no middleman between you and the customer.</p></details>
+        <details class="faq"><summary>Where is the directory available now?</summary><p>Oregon first, along the I-5 corridor from Portland through Salem and Eugene, because that is where we started and where our first listings are. More states get added as businesses claim their listings.</p></details>
+        <details class="faq"><summary>How do you decide who gets listed?</summary><p>A business is listed when it is real and publishes its own contact information. We add nothing we cannot verify from the business itself. Certification badges only appear when the business states the certification.</p></details>
+        <details class="faq"><summary>I found an error in a listing. How do I fix it?</summary><p>Claim the listing and you can correct anything in it, or contact us and we will fix it. We would rather remove a detail than publish one that is wrong.</p></details>
+      </div>
+
     </div>
   </div>
 
@@ -88,7 +221,43 @@
   <script src="assets/js/site.js"></script>
   <script>
     (function () {
-      var count = document.getElementById('d-count');
+      var cards = Array.prototype.slice.call(document.querySelectorAll('.listing-card'));
+      var empty = document.getElementById('d-empty');
+      var countEl = document.getElementById('d-count');
+      var active = { type: null, cert: false, state: null, q: '' };
+
+      function apply() {
+        var shown = 0;
+        cards.forEach(function (c) {
+          var ok = true;
+          if (active.type && c.getAttribute('data-type') !== active.type) ok = false;
+          if (active.cert && c.getAttribute('data-cert') !== '1') ok = false;
+          if (active.state && c.getAttribute('data-state') !== active.state) ok = false;
+          if (active.q && (c.getAttribute('data-text') || '').indexOf(active.q) < 0) ok = false;
+          c.style.display = ok ? '' : 'none';
+          if (ok) shown++;
+        });
+        if (countEl) countEl.textContent = shown;
+        if (empty) empty.style.display = shown ? 'none' : 'block';
+      }
+
+      window.RV.dirFilter = function (el) {
+        el.classList.toggle('on');
+        var f = el.getAttribute('data-f');
+        if (f === 'mobile' || f === 'center') active.type = el.classList.contains('on') ? f : null;
+        else if (f === 'cert') active.cert = el.classList.contains('on');
+        else if (f === 'or') active.state = el.classList.contains('on') ? 'OR' : null;
+        apply();
+      };
+      window.RV.dirSearch = function () {
+        var v = (document.getElementById('d-search').value || '').trim().toLowerCase();
+        active.q = v.length >= 2 ? v : '';
+        apply();
+        return false;
+      };
+      var si = document.getElementById('d-search');
+      if (si) si.addEventListener('input', window.RV.dirSearch);
+
       var form = document.getElementById('claim-form');
       function setErr(id, msg) {
         var el = document.getElementById(id);
@@ -109,24 +278,9 @@
         if (name.length < 2) { setErr('cl-name-err', 'Add the business name'); ok = false; } else { setErr('cl-name-err', ''); }
         if (city.length < 2) { setErr('cl-city-err', 'Add the city'); ok = false; } else { setErr('cl-city-err', ''); }
         if (!ok) return;
-        toast('Listing request received. We\u2019ll be in touch.');
+        toast('Listing request received. We will be in touch.');
         form.reset();
       });
-      window.RV.dirSearch = function () {
-        var q = (document.getElementById('d-search').value || '').trim().toLowerCase();
-        var area = document.getElementById('d-count');
-        if (area) {
-          if (q.length >= 2) area.textContent = '0';
-          else area.textContent = '0';
-        }
-        var empty = document.querySelector('.card h3');
-        if (empty && q.length >= 2) {
-          empty.textContent = 'Nothing listed in "' + q + '" yet';
-        } else if (empty) {
-          empty.textContent = 'Oregon listings arriving now';
-        }
-      };
-      window.RV.dirFilter = function (el) { el.classList.toggle('on'); };
     })();
   </script>
 </body>
