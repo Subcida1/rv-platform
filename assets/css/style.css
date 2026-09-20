@@ -1041,3 +1041,28 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 .guide-meta{font-size:13px;color:var(--text-3);line-height:1.55;flex:1}
 .guide-go{font-size:13.5px;font-weight:800;color:var(--c-sky);margin-top:4px}
 .guide-card:hover .guide-go{color:var(--c-sky);text-decoration:underline}
+
+/* ============================================================
+   Guides index: category hub (2026-09-19)
+   Matches competitor hub pattern: category headers, filter
+   tabs, stat strip, featured calculator band.
+   ============================================================ */
+.guide-stats{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.guide-stats span{font-size:12.5px;color:var(--text-3);background:var(--bg-2);border:1px solid var(--border);border-radius:999px;padding:6px 14px}
+.guide-stats b{color:var(--text)}
+.guide-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px}
+.guide-tab{border:1px solid var(--border-2);background:var(--surface);color:var(--text-2);border-radius:999px;padding:9px 18px;font-size:13.5px;font-weight:700;cursor:pointer;transition:all .15s ease}
+.guide-tab:hover{border-color:var(--c-sky);color:var(--c-sky)}
+.guide-tab.active{background:var(--grad);color:#fff;border-color:transparent}
+.guide-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;align-items:stretch}
+.guide-grid[data-cat="winter"]{grid-template-columns:repeat(4,1fr)}
+@media(max-width:1100px){.guide-grid[data-cat="winter"]{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.guide-grid{grid-template-columns:1fr !important}}
+.guide-card{display:flex;flex-direction:column;gap:14px;padding:22px;height:100%;transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}
+.guide-card:hover{transform:translateY(-3px);border-color:var(--border-2);box-shadow:var(--shadow)}
+.guide-ic{width:52px;height:52px;border-radius:14px;background:var(--grad-soft);border:1px solid var(--border);display:grid;place-items:center;font-size:26px;flex-shrink:0}
+.guide-body{display:flex;flex-direction:column;gap:8px;flex:1}
+.guide-title{font-size:16.5px;font-weight:800;letter-spacing:-.01em;line-height:1.3;color:var(--text)}
+.guide-meta{font-size:13px;color:var(--text-3);line-height:1.55;flex:1}
+.guide-go{font-size:13.5px;font-weight:800;color:var(--c-sky);margin-top:4px}
+.guide-card:hover .guide-go{text-decoration:underline}
