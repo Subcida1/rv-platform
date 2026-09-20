@@ -281,16 +281,24 @@
       var call = x.p
         ? '<a class="btn btn-gb btn-sm listing-call" href="tel:' + esc(telHref(x.p)) + '">' + PHONE_ICON + esc(x.p) + '</a>'
         : '<span class="listing-call none">Phone on their site</span>';
+      // A couple of these businesses have lost their website (one domain is
+      // parked, one was replaced by an unrelated template). Render the name as
+      // plain text and drop the link rather than send someone to dead air.
+      var name = x.u
+        ? '<a href="' + esc(x.u) + '" target="_blank" rel="noopener">' + esc(x.n) + '</a>'
+        : esc(x.n);
+      var site = x.u
+        ? '<a class="listing-go" href="' + esc(x.u) + '" target="_blank" rel="noopener">Visit site &rarr;</a>'
+        : '';
       return '<div class="card listing-card">' +
         '<div class="listing-top"><div class="listing-ic">' + (x.t === 'mobile' ? '&#128295;' : '&#127970;') + '</div>' +
-        '<div class="listing-head"><div class="listing-name"><a href="' + esc(x.u) + '" target="_blank" rel="noopener">' + esc(x.n) + '</a></div>' +
+        '<div class="listing-head"><div class="listing-name">' + name + '</div>' +
         '<div class="listing-loc">' + esc(x.c) + '</div></div>' +
         badge + '</div>' +
         emerg +
         '<p class="listing-desc">' + esc(x.d) + '</p>' +
         '<div class="listing-tags">' + tags + '</div>' +
-        '<div class="listing-foot">' + call +
-        '<a class="listing-go" href="' + esc(x.u) + '" target="_blank" rel="noopener">Visit site &rarr;</a></div></div>';
+        '<div class="listing-foot">' + call + site + '</div></div>';
     }
 
     function render(resetLimit) {

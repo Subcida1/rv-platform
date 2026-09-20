@@ -4,7 +4,9 @@
    coordinates at runtime from coords-or.js), areas towns the business states it
    covers, radius a service radius the business states in miles, region the
    business's own wording when it names only a region.
-   Coverage fields are copied from what each business publishes. Nothing invented. */
+   Coverage fields are copied from what each business publishes. Nothing invented.
+   Two records carry no u on purpose: their sites are gone (one parked, one replaced
+   by an unrelated template), but the business and phone number are verified. */
 window.RV_LISTINGS_OR = [
  {
   "n": "Oak Park RV Mobile Service",
@@ -199,8 +201,8 @@ window.RV_LISTINGS_OR = [
   "p": "503-877-3407",
   "u": "https://freedomrvmobile.com/",
   "t": "mobile",
-  "e": false,
-  "d": "Mobile RV service and inspection based in Corvallis, serving Albany, Lebanon, Salem, Eugene, Newport, and within about 50 miles. Certified RV technician, licensed and insured, works on warranty parts.",
+  "e": true,
+  "d": "Mobile RV service and inspection based in Corvallis, serving Albany, Lebanon, Salem, Eugene, Newport, and within about 50 miles. Takes emergency and after-hours calls at a higher rate. Certified RV technician, licensed and insured, works on warranty parts.",
   "g": [
    "Certified",
    "50-mile radius",
@@ -257,8 +259,8 @@ window.RV_LISTINGS_OR = [
   "p": "360-703-5663",
   "u": "https://ogrvs.com/",
   "t": "mobile",
-  "e": false,
-  "d": "Family-owned mobile and in-shop RV service across the Portland metro and SW Washington. Electrical and power systems, appliances, slide-outs, roof repairs, plumbing, and seasonal preparation.",
+  "e": true,
+  "d": "Family-owned mobile and in-shop RV service across the Portland metro and SW Washington, including emergency repairs. Electrical and power systems, appliances, slide-outs, roof repairs, plumbing, and seasonal preparation.",
   "g": [
    "Mobile + in-shop",
    "Certified techs",
@@ -277,8 +279,8 @@ window.RV_LISTINGS_OR = [
   "p": "541-404-1179",
   "u": "https://kingsmobilervserv.univer.se/",
   "t": "mobile",
-  "e": true,
-  "d": "Family-owned, 30-plus years of experience. Emergency mobile RV repair and inspection on the Oregon coast. Comprehensive inspections of electrical, plumbing, appliances, and roof, plus roof repair and replacement.",
+  "e": false,
+  "d": "Family-owned mobile RV repair with 30-plus years of experience on the Oregon coast, from Port Orford to Florence. Comprehensive inspections covering electrical, plumbing, appliances, and roof, plus roof repair and replacement.",
   "g": [
    "Emergency service",
    "30-plus years",
@@ -295,7 +297,6 @@ window.RV_LISTINGS_OR = [
   "n": "Bandon Mobile RV Repair",
   "c": "Bandon and south coast",
   "p": "541-551-9889",
-  "u": "https://bandonmobilervrepair.com/",
   "t": "mobile",
   "e": true,
   "d": "Emergency mobile RV repair for Bandon, Coquille, Langlois, and Port Orford. Over 10 years in minor RV repairs: electrical, mechanical, heating and cooling. Flat emergency response rate.",
@@ -380,7 +381,6 @@ window.RV_LISTINGS_OR = [
   "n": "Mobile Mechanic Service Co.",
   "c": "Roseburg",
   "p": "541-672-4376",
-  "u": "http://www.mobilemechanicserviceco.com",
   "t": "mobile",
   "e": true,
   "d": "On-site vehicle and machinery repair in Roseburg, specializing in emergency roadside assistance. RV repair alongside diesel, engine, electrical, heating, and cooling service. ASE-certified technicians.",
@@ -398,7 +398,7 @@ window.RV_LISTINGS_OR = [
   "u": "https://cumminsautodiesel.com/",
   "t": "mobile",
   "e": true,
-  "d": "Mobile roadside repair and fleet maintenance for diesel RVs, motorhomes, and coaches, from I-5 to the coast. 24/7 dispatch for highway and roadside breakdowns on Class A, B, and C chassis.",
+  "d": "Mobile roadside repair and fleet maintenance for diesel RVs, motorhomes, and coaches, from I-5 to the coast. Emergency mobile dispatch to highways for roadside breakdowns on Class A, B, and C chassis.",
   "g": [
    "24/7 dispatch",
    "Roadside",
@@ -484,8 +484,8 @@ window.RV_LISTINGS_OR = [
   "p": "541-981-2871",
   "u": "https://pnwautowork.com/rv-repair/",
   "t": "center",
-  "e": false,
-  "d": "RV repair shop serving Albany, Salem, Corvallis, and Jefferson. Mercedes Sprinter service, Onan generator repair, drivetrain and chassis work, HVAC and water heater repair, and leveling system diagnosis.",
+  "e": true,
+  "d": "RV repair shop serving Albany, Salem, Corvallis, and Jefferson, with a separate emergency line for breakdowns. Mercedes Sprinter service, Onan generator repair, drivetrain and chassis work, HVAC and water heater repair, and leveling system diagnosis.",
   "g": [
    "Sprinter service",
    "Generators",
@@ -545,7 +545,7 @@ window.RV_LISTINGS_OR = [
   "p": "541-997-8287",
   "u": "https://florencerv.com/",
   "t": "center",
-  "e": false,
+  "e": true,
   "d": "Central Oregon coast RV and automotive repair with three large RV-capable service bays and modern diagnostic equipment. ASE-certified technicians, plus mobile diagnostics when warranted and 24/7 roadside.",
   "g": [
    "3 RV bays",

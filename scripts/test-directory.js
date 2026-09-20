@@ -153,8 +153,22 @@ check('every card either has a call button or says where the number is',
 check('call buttons are present', withPhone.length > 0, withPhone.length + ' of ' + cards().length);
 check('call buttons are real tel: links', withPhone.length > 0 && withPhone.every(c => /href="tel:\+?[0-9]+"/.test(c)),
   (withPhone[0] && (withPhone[0].match(/href="tel:[^"]*"/) || [])[0]) || '');
-check('the business name links to its own site', cards().every(c => /listing-name"><a href="https?:\/\//.test(c)));
+check('businesses with a site link to it, and ones without do not',
+  cards().every(c => /listing-name"><a href="https?:\/\//.test(c) || /listing-name">[^<]/.test(c)));
 check('cards are not wrapped in a single link', gridHtml().trim().indexOf('<a ') !== 0);
+
+console.log('\n10. Listings whose website is gone');
+['Bandon Mobile RV Repair', 'Mobile Mechanic Service Co.'].forEach(n => {
+  search(n.replace("'", ' ').split(' ').slice(0, 2).join(' '));
+  const i = names().indexOf(n);
+  check('found by search: ' + n, i > -1, names().slice(0, 4).join(' | '));
+  if (i > -1) {
+    const c = cards()[i];
+    check('  still offers a way to call', /href="tel:/.test(c), (c.match(/href="tel:[^"]*"/) || [])[0]);
+    check('  no link to a dead site', !/listing-go/.test(c) && !/listing-name"><a/.test(c));
+  }
+});
+search('');
 
 console.log('\n' + passes + ' passed, ' + fails + ' failed');
 process.exit(fails ? 1 : 0);
