@@ -9,7 +9,7 @@
    by an unrelated template), but the business and phone number are verified.
 
    TWO KINDS OF EMERGENCY, deliberately not merged:
-     r = roadside. The vehicle is the problem and the rig may not move. Verified that
+     r = roadside. The vehicle is the problem and the RV may not move. Verified that
          the business comes to you or dispatches AND handles chassis, engine,
          drivetrain, brakes, or towing.
      e = emergency mobile repair. Something inside the coach failed: furnace, water,

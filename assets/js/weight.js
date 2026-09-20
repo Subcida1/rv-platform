@@ -142,7 +142,7 @@
      : 'OVER truck GVWR. The truck itself is overloaded.'));
  }
  var lowT = Math.round(loaded * tongueRange[0]), highT = Math.round(loaded * tongueRange[1]);
- var tNote = 'Estimated ' + Math.round(tonguePct * 100) + '% of loaded weight. Real rigs run ' + fmt(lowT) + ' to ' + fmt(highT) + ' lb. A certified scale settles it.';
+ var tNote = 'Estimated ' + Math.round(tonguePct * 100) + '% of loaded weight. Real RVs run ' + fmt(lowT) + ' to ' + fmt(highT) + ' lb. A certified scale settles it.';
  rows.push(verdictRow('ok', 'Hitch / pin load', fmt(tongue) + ' lb', tNote));
 
  rows.push(verdictRow('ok', 'Axle estimate (informational)',
