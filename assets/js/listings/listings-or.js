@@ -6,7 +6,15 @@
    business's own wording when it names only a region.
    Coverage fields are copied from what each business publishes. Nothing invented.
    Two records carry no u on purpose: their sites are gone (one parked, one replaced
-   by an unrelated template), but the business and phone number are verified. */
+   by an unrelated template), but the business and phone number are verified.
+
+   TWO KINDS OF EMERGENCY, deliberately not merged:
+     r = roadside. The vehicle is the problem and the rig may not move. Verified that
+         the business comes to you or dispatches AND handles chassis, engine,
+         drivetrain, brakes, or towing.
+     e = emergency mobile repair. Something inside the coach failed: furnace, water,
+         fridge, slide. They come to your site. Not roadside.
+   A record never carries both. */
 window.RV_LISTINGS_OR = [
  {
   "n": "Oak Park RV Mobile Service",
@@ -259,8 +267,7 @@ window.RV_LISTINGS_OR = [
   "p": "360-703-5663",
   "u": "https://ogrvs.com/",
   "t": "mobile",
-  "e": true,
-  "d": "Family-owned mobile and in-shop RV service across the Portland metro and SW Washington, including emergency repairs. Electrical and power systems, appliances, slide-outs, roof repairs, plumbing, and seasonal preparation.",
+  "d": "Family-owned mobile and in-shop RV service across the Portland metro and SW Washington. Mechanical breakdowns, engine and brake issues, plus electrical, appliances, slide-outs, plumbing, and roof repairs.",
   "g": [
    "Mobile + in-shop",
    "Certified techs",
@@ -271,7 +278,8 @@ window.RV_LISTINGS_OR = [
    "Portland",
    "Longview"
   ],
-  "region": "Portland metro and SW Washington"
+  "region": "Portland metro and SW Washington",
+  "r": true
  },
  {
   "n": "Kings Mobile RV Service",
@@ -382,14 +390,14 @@ window.RV_LISTINGS_OR = [
   "c": "Roseburg",
   "p": "541-672-4376",
   "t": "mobile",
-  "e": true,
   "d": "On-site vehicle and machinery repair in Roseburg, specializing in emergency roadside assistance. RV repair alongside diesel, engine, electrical, heating, and cooling service. ASE-certified technicians.",
   "g": [
    "Emergency roadside",
    "ASE certified",
    "Diesel and RV"
   ],
-  "base": "Roseburg"
+  "base": "Roseburg",
+  "r": true
  },
  {
   "n": "Cummins Automotive and Diesel",
@@ -397,8 +405,7 @@ window.RV_LISTINGS_OR = [
   "p": "971-832-0739",
   "u": "https://cumminsautodiesel.com/",
   "t": "mobile",
-  "e": true,
-  "d": "Mobile roadside repair and fleet maintenance for diesel RVs, motorhomes, and coaches, from I-5 to the coast. Emergency mobile dispatch to highways for roadside breakdowns on Class A, B, and C chassis.",
+  "d": "Emergency mobile dispatch to highways for roadside repair of diesel RVs and motorhomes, with chassis work from engine to transmission and drivetrain to wheel hubs, in Oregon and Washington.",
   "g": [
    "24/7 dispatch",
    "Roadside",
@@ -415,7 +422,8 @@ window.RV_LISTINGS_OR = [
    "Oregon City"
   ],
   "radius": 144,
-  "region": "Oregon and Washington"
+  "region": "Oregon and Washington",
+  "r": true
  },
  {
   "n": "Sutton RV Service",
@@ -484,15 +492,15 @@ window.RV_LISTINGS_OR = [
   "p": "541-981-2871",
   "u": "https://pnwautowork.com/rv-repair/",
   "t": "center",
-  "e": true,
-  "d": "RV repair shop serving Albany, Salem, Corvallis, and Jefferson, with a separate emergency line for breakdowns. Mercedes Sprinter service, Onan generator repair, drivetrain and chassis work, HVAC and water heater repair, and leveling system diagnosis.",
+  "d": "Auto and RV repair in Albany that also runs a mobile service, bringing repairs to your location. Drivetrain and chassis services, brakes, steering, and suspension, Sprinter service, and Onan generator repair. Separate emergency line for breakdowns.",
   "g": [
    "Sprinter service",
    "Generators",
    "Chassis work"
   ],
   "base": "Albany",
-  "region": "Albany, Salem, Corvallis, and Jefferson"
+  "region": "Albany, Salem, Corvallis, and Jefferson",
+  "r": true
  },
  {
   "n": "Jackson RV",
@@ -545,14 +553,14 @@ window.RV_LISTINGS_OR = [
   "p": "541-997-8287",
   "u": "https://florencerv.com/",
   "t": "center",
-  "e": true,
-  "d": "Central Oregon coast RV and automotive repair with three large RV-capable service bays and modern diagnostic equipment. ASE-certified technicians, plus mobile diagnostics when warranted and 24/7 roadside.",
+  "d": "RV and automotive repair on the central Oregon coast with mobile repair service and towing. Towing and emergency roadside assistance available 24/7/365. ASE-certified technicians with three RV-capable bays.",
   "g": [
    "3 RV bays",
    "ASE certified",
    "24/7 roadside"
   ],
-  "base": "Florence"
+  "base": "Florence",
+  "r": true
  },
  {
   "n": "Porter's RV",

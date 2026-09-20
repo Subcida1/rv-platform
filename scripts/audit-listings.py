@@ -85,7 +85,7 @@ def audit(row):
         ev.append(s)
     return {"name": name, "url": row["u"], "code": code, "effective": eff,
             "text_len": len(text), "parked": parked, "evidence": ev[:5],
-            "tag": bool(row.get("e"))}
+            "tag": bool(row.get("e") or row.get("r")), "roadside": bool(row.get("r"))}
 
 
 with ThreadPoolExecutor(max_workers=4) as ex:
@@ -111,7 +111,8 @@ if not dead:
 print("  (%d of %d need a look)" % (len(dead), len(results)))
 
 print("\n" + "=" * 100)
-print("EMERGENCY TAG vs SITE EVIDENCE")
+print("EMERGENCY / ROADSIDE TAG vs SITE EVIDENCE")
+print("  roadside = rig may not move; emergency = something inside failed")
 print("=" * 100)
 tagged_no_ev = [r for r in results if r.get("tag") and not r.get("evidence")]
 untagged_ev = [r for r in results if not r.get("tag") and r.get("evidence")]
@@ -119,7 +120,7 @@ tagged_ev = [r for r in results if r.get("tag") and r.get("evidence")]
 
 print("\n-- TAGGED, and the site shows emergency language (%d) --" % len(tagged_ev))
 for r in tagged_ev:
-    print("\n  %s" % r["name"])
+    print("\n  %s%s" % (r["name"], "   [roadside]" if r.get("roadside") else "   [emergency]"))
     for e in r["evidence"][:3]:
         print("     %s" % e[:185])
 

@@ -19,7 +19,8 @@
       <span><b id="stat-total">35</b> listings</span>
       <span><b id="stat-mobile">23</b> mobile techs</span>
       <span><b id="stat-center">12</b> service centers</span>
-      <span><b id="stat-emerg">7</b> emergency</span>
+      <span><b id="stat-road">5</b> roadside</span>
+      <span><b id="stat-emerg">5</b> emergency</span>
     </div>
   </div>
 
@@ -29,11 +30,18 @@
       <div class="finder">
         <h2 class="finder-h">What do you need?</h2>
         <div class="finder-routes" role="group" aria-label="What do you need?">
+          <button class="finder-route" type="button" data-r="roadside" aria-pressed="false">
+            <span class="finder-ic">&#128738;</span>
+            <span class="finder-txt">
+              <span class="finder-t">My rig will not move</span>
+              <span class="finder-s">Roadside, chassis, and towing help</span>
+            </span>
+          </button>
           <button class="finder-route" type="button" data-r="mobile" aria-pressed="false">
             <span class="finder-ic">&#128295;</span>
             <span class="finder-txt">
               <span class="finder-t">Someone come to me</span>
-              <span class="finder-s">A mobile tech comes to you</span>
+              <span class="finder-s">A mobile tech comes to your site</span>
             </span>
           </button>
           <button class="finder-route" type="button" data-r="center" aria-pressed="false">
@@ -41,13 +49,6 @@
             <span class="finder-txt">
               <span class="finder-t">I can drive it in</span>
               <span class="finder-s">A shop with bays, lifts, and parts</span>
-            </span>
-          </button>
-          <button class="finder-route" type="button" data-r="emerg" aria-pressed="false">
-            <span class="finder-ic">&#128680;</span>
-            <span class="finder-txt">
-              <span class="finder-t">I am stuck right now</span>
-              <span class="finder-s">Roadside and emergency dispatch</span>
             </span>
           </button>
         </div>
@@ -148,7 +149,8 @@
       <h2 style="font-size:22px;font-weight:800;margin-top:44px">RV repair directory FAQ</h2>
       <div style="margin-top:14px">
         <details class="faq"><summary>What is the difference between a mobile technician and a service center?</summary><p>A mobile technician drives to your rig and repairs it where it sits, which is what you need if the RV cannot be moved or you do not want to wait for a shop bay. A service center is a shop you drive to, with the bays, lifts, and parts for bigger jobs like collision repair, roof replacement, and structural work.</p></details>
-        <details class="faq"><summary>Who do I call if I am broken down on the highway?</summary><p>Choose "I am stuck right now" above. Those businesses state that they do roadside, mobile dispatch, or emergency service. For a diesel chassis breakdown, a dedicated roadside diesel service is often the fastest option.</p></details>
+        <details class="faq"><summary>What counts as an emergency here?</summary><p>Two different things, and they are not the same call. Roadside means the vehicle is the problem and the rig may not move, so those businesses work on chassis, engine, drivetrain, brakes, or arrange towing. Emergency mobile repair means something inside the coach has failed, like a furnace, water heater, or refrigerator, and a technician comes to your site. The first is for being stranded. The second is for a rig that is parked but unlivable.</p></details>
+        <details class="faq"><summary>Who do I call if my rig will not move?</summary><p>Choose "My rig will not move" above. Every business there comes to you or dispatches, and works on the vehicle itself rather than only what is inside it. If you need a tow specifically, say so on the call, since not all of them run a tow truck. For a diesel chassis breakdown, a dedicated roadside diesel service is often the fastest option.</p></details>
         <details class="faq"><summary>How are the results sorted?</summary><p>By how close they are to you, and by whether they say they cover your area. A mobile technician who names your town or county comes ahead of one who is simply based nearby, because the one who covers your town is the one who will actually come. If a business names no town and no area, it still appears, marked with the region it serves.</p></details>
         <details class="faq"><summary>Is it free to be listed?</summary><p>Yes. Listings are free and permanent, and the business controls its own listing after claiming it. There is no commission and no middleman between you and the customer.</p></details>
         <details class="faq"><summary>How do you decide who gets listed?</summary><p>A business is listed when it is real and publishes its own contact information. We add nothing we cannot verify from the business itself. Certification tags only appear when the business states the certification.</p></details>
@@ -231,9 +233,9 @@
     }
     function passes(r) {
       var x = r.x;
+      if (state.route === 'roadside' && !x.r) return false;
       if (state.route === 'mobile' && x.t !== 'mobile') return false;
       if (state.route === 'center' && x.t !== 'center') return false;
-      if (state.route === 'emerg' && !x.e) return false;
       if (state.q) {
         var hay = [x.n, x.c, (x.g || []).join(' '), x.region || '', (x.areas || []).join(' ')].join(' ').toLowerCase();
         if (hay.indexOf(state.q) < 0) return false;
@@ -276,7 +278,9 @@
       if (r.serves) badge = '<span class="listing-dist serves">Serves your area</span>';
       else if (r.d != null) badge = '<span class="listing-dist">' + (r.d < 3 ? 'In your town' : 'about ' + Math.round(r.d) + ' mi') + '</span>';
       else if (x.region) badge = '<span class="listing-dist region">' + esc(x.region) + '</span>';
-      var emerg = x.e ? '<span class="listing-emerg">Emergency / roadside</span>' : '';
+      var emerg = x.r
+        ? '<span class="listing-emerg roadside">Roadside / stuck</span>'
+        : (x.e ? '<span class="listing-emerg">Emergency mobile repair</span>' : '');
       // Someone broken down wants to call, so the phone leads and the site follows.
       var call = x.p
         ? '<a class="btn btn-gb btn-sm listing-call" href="tel:' + esc(telHref(x.p)) + '">' + PHONE_ICON + esc(x.p) + '</a>'
@@ -448,6 +452,7 @@
     $('stat-total').textContent = DATA.length;
     $('stat-mobile').textContent = DATA.filter(function (x) { return x.t === 'mobile'; }).length;
     $('stat-center').textContent = DATA.filter(function (x) { return x.t === 'center'; }).length;
+    $('stat-road').textContent = DATA.filter(function (x) { return x.r; }).length;
     $('stat-emerg').textContent = DATA.filter(function (x) { return x.e; }).length;
     render(true);
   })();

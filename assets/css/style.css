@@ -1090,8 +1090,11 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 .results-sort{font-size:12.5px;color:var(--text-3)}
 .results-top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:14px}
 
-/* Emergency / roadside badge on directory listings */
-.listing-emerg{display:inline-block;font-size:11.5px;font-weight:800;color:#b42338;background:#fdeeee;border:1px solid #f2b8be;border-radius:999px;padding:4px 10px;align-self:flex-start}
+/* Emergency / roadside badge on directory listings.
+   Two kinds, two colors. Roadside (the rig may not move) is the more urgent
+   and stays red. Emergency mobile repair (something inside failed) is amber. */
+.listing-emerg{display:inline-block;font-size:11.5px;font-weight:800;color:#8a5a00;background:#fff6e5;border:1px solid #f0d9a8;border-radius:999px;padding:4px 10px;align-self:flex-start}
+.listing-emerg.roadside{color:#b42338;background:#fdeeee;border-color:#f2b8be}
 
 /* ============================================================
    DIRECTORY FINDER (2026-09-20)

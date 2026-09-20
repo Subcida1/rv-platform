@@ -28,7 +28,7 @@ function El(id) {
   };
 }
 const els = {};
-const routes = ['mobile', 'center', 'emerg'].map(r => { const e = El('route-' + r); e._attrs = { 'data-r': r }; return e; });
+const routes = ['roadside', 'mobile', 'center'].map(r => { const e = El('route-' + r); e._attrs = { 'data-r': r }; return e; });
 const document = {
   getElementById: id => (els[id] = els[id] || El(id)),
   querySelectorAll: sel => (sel === '.finder-route' ? routes : []),
@@ -118,9 +118,12 @@ clickRoute('center');
 check('centers only', cards().length > 0 && !/listing-ic">&#128295;/.test(gridHtml()), 'cards=' + cards().length);
 clickRoute('mobile');
 check('mobile techs only', !/listing-ic">&#127970;/.test(gridHtml()));
-clickRoute('emerg');
-check('emergency only', (gridHtml().match(/Emergency \/ roadside/g) || []).length === cards().length, cards().length + ' cards');
-clickRoute('emerg');
+clickRoute('roadside');
+check('the roadside route shows only roadside-capable businesses',
+  cards().length > 0 && cards().every(c => /listing-emerg roadside/.test(c)), cards().length + ' cards');
+check('roadside cards are labelled roadside',
+  (gridHtml().match(/Roadside \/ stuck/g) || []).length === cards().length);
+clickRoute('roadside');
 check('clicking the active route clears it', count() === '6', count());
 
 console.log('\n7. ZIP input and search');
@@ -169,6 +172,21 @@ console.log('\n10. Listings whose website is gone');
   }
 });
 search('');
+
+console.log('\n11. Roadside and emergency are different things');
+const ROWS = sandbox.window.RV_LISTINGS_OR || [];
+const road = ROWS.filter(x => x.r), emerg = ROWS.filter(x => x.e);
+check('some of each exist', road.length > 0 && emerg.length > 0, road.length + ' roadside, ' + emerg.length + ' emergency');
+check('no listing claims both', ROWS.every(x => !(x.r && x.e)));
+check('every roadside listing works on the vehicle itself, not just the coach',
+  road.every(x => /chassis|engine|drivetrain|brakes|towing|roadside/i.test(x.d)),
+  road.map(x => x.n).join(' | '));
+check('every roadside listing comes to you or dispatches',
+  road.every(x => /mobile|dispatch|comes? to|on-site/i.test(x.d)),
+  road.map(x => x.n).join(' | '));
+check('emergency listings are mobile-repair type, not roadside',
+  emerg.every(x => /furnace|water|fridge|refrigerator|appliance|electrical|plumbing|emergency/i.test(x.d)),
+  emerg.map(x => x.n).join(' | '));
 
 console.log('\n' + passes + ' passed, ' + fails + ' failed');
 process.exit(fails ? 1 : 0);
