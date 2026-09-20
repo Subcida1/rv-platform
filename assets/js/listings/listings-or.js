@@ -1,4 +1,11 @@
-window.RV_DIRECTORY = [
+/* Oregon listings. One file per state so a page loads only its region.
+   Fields: n name, c display area, p phone, u url, t mobile|center, e emergency,
+   d description, g tags, base the town the business works from (resolved to
+   coordinates at runtime from coords-or.js), areas towns the business states it
+   covers, radius a service radius the business states in miles, region the
+   business's own wording when it names only a region.
+   Coverage fields are copied from what each business publishes. Nothing invented. */
+window.RV_LISTINGS_OR = [
  {
   "n": "Oak Park RV Mobile Service",
   "c": "Salem",
@@ -11,7 +18,8 @@ window.RV_DIRECTORY = [
    "45 years",
    "Family owned",
    "Roadside"
-  ]
+  ],
+  "base": "Salem"
  },
  {
   "n": "Peace of Mind Mobile RV Repair",
@@ -25,7 +33,9 @@ window.RV_DIRECTORY = [
    "Certified techs",
    "Warranty work",
    "Mobile + in-shop"
-  ]
+  ],
+  "base": "Eugene",
+  "region": "Lane County"
  },
  {
   "n": "AAA RV Tech",
@@ -39,7 +49,8 @@ window.RV_DIRECTORY = [
    "Advanced certified",
    "Inspections",
    "No towing"
-  ]
+  ],
+  "base": "Portland"
  },
  {
   "n": "Tim's Mobile RV Repair",
@@ -53,7 +64,9 @@ window.RV_DIRECTORY = [
    "Master certified",
    "LP gas licensed",
    "Since 2000"
-  ]
+  ],
+  "base": "Vancouver",
+  "region": "Clark and Cowlitz County WA, Columbia County OR"
  },
  {
   "n": "Happy Mobile RV Repair",
@@ -67,7 +80,14 @@ window.RV_DIRECTORY = [
    "Mobile only",
    "Appliance specialty",
    "No shop wait"
-  ]
+  ],
+  "base": null,
+  "areas": [
+   "Bend",
+   "Medford",
+   "Grants Pass"
+  ],
+  "region": "Southern and central Oregon"
  },
  {
   "n": "JBK RV Mobile Repair",
@@ -81,7 +101,9 @@ window.RV_DIRECTORY = [
    "Veteran owned",
    "Certified",
    "Appointment only"
-  ]
+  ],
+  "base": "Grants Pass",
+  "region": "Grants Pass and surrounding areas"
  },
  {
   "n": "Fixin Trips Mobile RV Service",
@@ -95,7 +117,15 @@ window.RV_DIRECTORY = [
    "NRVTA certified",
    "7 days a week",
    "Insured"
-  ]
+  ],
+  "base": "Bend",
+  "areas": [
+   "Redmond",
+   "Sisters",
+   "Prineville",
+   "La Pine"
+  ],
+  "region": "Central Oregon"
  },
  {
   "n": "Bald Bros RV Repair",
@@ -109,6 +139,10 @@ window.RV_DIRECTORY = [
    "Appliance specialty",
    "Winterization",
    "Mobile only"
+  ],
+  "base": "Bend",
+  "areas": [
+   "Redmond"
   ]
  },
  {
@@ -123,7 +157,9 @@ window.RV_DIRECTORY = [
    "Since 2004",
    "Licensed and insured",
    "Family owned"
-  ]
+  ],
+  "base": "La Pine",
+  "region": "Central Oregon"
  },
  {
   "n": "At Your Door Mobile RV Repair",
@@ -137,7 +173,9 @@ window.RV_DIRECTORY = [
    "Inspections",
    "Bend area",
    "No towing"
-  ]
+  ],
+  "base": "Bend",
+  "region": "Bend area, April through September"
  },
  {
   "n": "NRV Services",
@@ -151,7 +189,9 @@ window.RV_DIRECTORY = [
    "NRVIA inspections",
    "Solar service",
    "Generators"
-  ]
+  ],
+  "base": "Bend",
+  "region": "Bend and surrounding areas"
  },
  {
   "n": "Freedom RV Services",
@@ -165,7 +205,16 @@ window.RV_DIRECTORY = [
    "Certified",
    "50-mile radius",
    "Warranty parts"
-  ]
+  ],
+  "base": "Corvallis",
+  "areas": [
+   "Albany",
+   "Lebanon",
+   "Salem",
+   "Eugene",
+   "Newport"
+  ],
+  "radius": 50
  },
  {
   "n": "Cannon's RV Repair",
@@ -179,7 +228,9 @@ window.RV_DIRECTORY = [
    "Since 1997",
    "Family owned",
    "2 generations"
-  ]
+  ],
+  "base": "Vancouver",
+  "region": "Clark County WA and Multnomah County OR"
  },
  {
   "n": "Crazy Creek RV Repair",
@@ -193,7 +244,12 @@ window.RV_DIRECTORY = [
    "RVTAA certified",
    "24/7 emergency",
    "Single-call fixes"
-  ]
+  ],
+  "base": "Prineville",
+  "areas": [
+   "Bend"
+  ],
+  "region": "Central Oregon"
  },
  {
   "n": "OGRVS (Off-Grid RV Services)",
@@ -207,7 +263,13 @@ window.RV_DIRECTORY = [
    "Mobile + in-shop",
    "Certified techs",
    "Roof and slide work"
-  ]
+  ],
+  "base": "Gresham",
+  "areas": [
+   "Portland",
+   "Longview"
+  ],
+  "region": "Portland metro and SW Washington"
  },
  {
   "n": "Kings Mobile RV Service",
@@ -221,7 +283,13 @@ window.RV_DIRECTORY = [
    "Emergency service",
    "30-plus years",
    "Family owned"
-  ]
+  ],
+  "base": null,
+  "areas": [
+   "Port Orford",
+   "Florence"
+  ],
+  "region": "Oregon Coast, Port Orford to Florence"
  },
  {
   "n": "Bandon Mobile RV Repair",
@@ -235,6 +303,12 @@ window.RV_DIRECTORY = [
    "Emergency service",
    "Evenings and weekends",
    "Flat emergency rate"
+  ],
+  "base": "Bandon",
+  "areas": [
+   "Coquille",
+   "Langlois",
+   "Port Orford"
   ]
  },
  {
@@ -249,6 +323,11 @@ window.RV_DIRECTORY = [
    "Master certified",
    "Solar specialist",
    "Appointment only"
+  ],
+  "base": "Newport",
+  "areas": [
+   "Yachats",
+   "Lincoln City"
   ]
  },
  {
@@ -263,7 +342,8 @@ window.RV_DIRECTORY = [
    "Emergency repairs",
    "Detailing",
    "Est. 2023"
-  ]
+  ],
+  "base": "Salem"
  },
  {
   "n": "Family RV Mobile Repairs",
@@ -277,7 +357,8 @@ window.RV_DIRECTORY = [
    "Mobile service",
    "LP system",
    "Winterization"
-  ]
+  ],
+  "base": "Salem"
  },
  {
   "n": "RV Masters of Oregon",
@@ -291,7 +372,9 @@ window.RV_DIRECTORY = [
    "40-plus years",
    "Mobile + shop",
    "Braking systems"
-  ]
+  ],
+  "base": "Reedsport",
+  "region": "Southern Oregon coast"
  },
  {
   "n": "Mobile Mechanic Service Co.",
@@ -305,7 +388,8 @@ window.RV_DIRECTORY = [
    "Emergency roadside",
    "ASE certified",
    "Diesel and RV"
-  ]
+  ],
+  "base": "Roseburg"
  },
  {
   "n": "Cummins Automotive and Diesel",
@@ -319,7 +403,19 @@ window.RV_DIRECTORY = [
    "24/7 dispatch",
    "Roadside",
    "Diesel chassis"
-  ]
+  ],
+  "base": "Sherwood",
+  "areas": [
+   "Tualatin",
+   "Tigard",
+   "Newberg",
+   "McMinnville",
+   "Wilsonville",
+   "Molalla",
+   "Oregon City"
+  ],
+  "radius": 144,
+  "region": "Oregon and Washington"
  },
  {
   "n": "Sutton RV Service",
@@ -333,7 +429,8 @@ window.RV_DIRECTORY = [
    "RVIA certified",
    "Indoor bays",
    "Warranty work"
-  ]
+  ],
+  "base": "Eugene"
  },
  {
   "n": "Curtis Trailers",
@@ -347,7 +444,8 @@ window.RV_DIRECTORY = [
    "66 bays",
    "RVIA/RVDA certified",
    "Two locations"
-  ]
+  ],
+  "base": "Portland"
  },
  {
   "n": "Stavros Auto Services",
@@ -361,7 +459,9 @@ window.RV_DIRECTORY = [
    "Collision and paint",
    "50-foot booth",
    "35-plus years"
-  ]
+  ],
+  "base": "Albany",
+  "region": "Albany, Corvallis, Jefferson, and Lebanon"
  },
  {
   "n": "Southside RV Repair and Shelter Factory",
@@ -375,7 +475,8 @@ window.RV_DIRECTORY = [
    "Bumper to bumper",
    "Parts on site",
    "Roof work"
-  ]
+  ],
+  "base": "Corvallis"
  },
  {
   "n": "PNW Autowork",
@@ -389,7 +490,9 @@ window.RV_DIRECTORY = [
    "Sprinter service",
    "Generators",
    "Chassis work"
-  ]
+  ],
+  "base": "Albany",
+  "region": "Albany, Salem, Corvallis, and Jefferson"
  },
  {
   "n": "Jackson RV",
@@ -403,7 +506,8 @@ window.RV_DIRECTORY = [
    "8 bays",
    "Collision repair",
    "Big parts inventory"
-  ]
+  ],
+  "base": "Medford"
  },
  {
   "n": "Straight Line RV and Boat",
@@ -417,7 +521,8 @@ window.RV_DIRECTORY = [
    "Body and collision",
    "Fiberglass",
    "Insurance help"
-  ]
+  ],
+  "base": "Springfield"
  },
  {
   "n": "Oregon RV Appliance Repair",
@@ -431,7 +536,8 @@ window.RV_DIRECTORY = [
    "Since 1989",
    "Appliance specialty",
    "Shop only"
-  ]
+  ],
+  "base": "Tangent"
  },
  {
   "n": "Florence RV and Automotive Specialists",
@@ -445,7 +551,8 @@ window.RV_DIRECTORY = [
    "3 RV bays",
    "ASE certified",
    "24/7 roadside"
-  ]
+  ],
+  "base": "Florence"
  },
  {
   "n": "Porter's RV",
@@ -459,7 +566,8 @@ window.RV_DIRECTORY = [
    "RVTI certified",
    "Coast",
    "Full service"
-  ]
+  ],
+  "base": "Coos Bay"
  },
  {
   "n": "Tony's RV Repair",
@@ -473,7 +581,8 @@ window.RV_DIRECTORY = [
    "5 bays",
    "Collision repair",
    "30-plus years"
-  ]
+  ],
+  "base": "Coos Bay"
  },
  {
   "n": "Pro RV Repair",
@@ -487,6 +596,7 @@ window.RV_DIRECTORY = [
    "Full service",
    "Fabrication",
    "54-point inspection"
-  ]
+  ],
+  "base": "Vancouver"
  }
 ];

@@ -25,36 +25,63 @@
 
   <div class="sec" style="padding:26px 0 60px">
     <div class="wrap">
-      <form class="search" style="max-width:720px;margin:0 auto 16px" onsubmit="return RV.dirSearch()">
-        <div class="search-bar">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="8" r="6"/><path d="M21 8a6 6 0 0 1-6 6"/><path d="M5 3.5h11v3h-3v6h-4"/></svg>
-          <input id="d-search" type="search" placeholder="City, ZIP, or business name" aria-label="Search RV service listings">
-          <button class="btn btn-gb" type="submit">Search</button>
+
+      <div class="finder">
+        <h2 class="finder-h">What do you need?</h2>
+        <div class="routes" role="group" aria-label="What do you need?">
+          <button class="route" type="button" data-r="mobile" aria-pressed="false">
+            <span class="route-ic">&#128295;</span>
+            <span class="route-t">Someone come to me</span>
+            <span class="route-s">A mobile technician drives to your campsite, driveway, or the shoulder. The right call when the rig cannot move, or when you would rather not wait in a shop queue.</span>
+          </button>
+          <button class="route" type="button" data-r="center" aria-pressed="false">
+            <span class="route-ic">&#127970;</span>
+            <span class="route-t">I can drive it in</span>
+            <span class="route-s">A shop with bays, lifts, and parts. Faster for collision repair, roof replacement, structural work, and full diagnostics.</span>
+          </button>
+          <button class="route" type="button" data-r="emerg" aria-pressed="false">
+            <span class="route-ic">&#128680;</span>
+            <span class="route-t">I am stuck right now</span>
+            <span class="route-s">Emergency and roadside dispatch, on the highway or wherever you are parked. Call first, they will tell you if they can reach you tonight.</span>
+          </button>
         </div>
-      </form>
-      <div class="chips" style="justify-content:center;margin-bottom:24px">
-        <span class="chip" data-f="mobile" onclick="RV.dirFilter(this)">🔧 Mobile, comes to you</span>
-        <span class="chip" data-f="center" onclick="RV.dirFilter(this)">🏢 Service centers</span>
-        <span class="chip" data-f="emerg" onclick="RV.dirFilter(this)">🚨 Emergency / roadside</span>
+
+        <div class="loc-block">
+          <label class="loc-label" for="loc">Where are you?</label>
+          <div class="loc-row">
+            <input id="loc" type="text" inputmode="text" autocomplete="off" placeholder="Your city or ZIP (Salem, or 97301)" aria-label="Your city or ZIP code">
+            <button class="btn btn-gb" type="button" id="loc-use">&#128205; Use my location</button>
+            <button class="btn btn-primary" type="button" id="loc-go">Find help</button>
+          </div>
+          <div class="loc-note" id="loc-note">A city or ZIP is enough. We use it to sort by how close they are, nothing else.</div>
+        </div>
       </div>
 
-      <div class="results-top">
-        <div class="results-count"><b id="d-count">35</b> listings</div>
-        <div class="results-sort">Oregon first, added from each business's own site</div>
-      </div>
+      <div id="d-results">
+        <div class="results-top">
+          <div class="results-count"><b id="d-count">35</b> listings</div>
+          <div class="results-sort" id="d-sort">Every listing added from the business's own website</div>
+        </div>
 
-      <h2 id="h-mobile" style="font-size:22px;font-weight:800;margin:20px 0 6px">Mobile RV technicians near you</h2>
-      <p style="color:var(--text-2);font-size:14px;margin-bottom:16px">A mobile tech comes to your campsite, driveway, or the shoulder. The right call when the rig cannot move, or when you want it fixed where it sits instead of waiting in a shop queue.</p>
-      <div class="listing-grid" id="grid-mobile"></div>
+        <div class="refine">
+          <div class="search-bar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4.3-4.3"/></svg>
+            <input id="d-search" type="search" placeholder="Search by name, town, or what is broken" aria-label="Search RV service listings">
+            <button class="btn btn-ghost btn-sm" type="button" id="d-clear" style="display:none">Clear</button>
+          </div>
+        </div>
 
-      <h2 id="h-center" style="font-size:22px;font-weight:800;margin:38px 0 6px">RV service centers in Oregon</h2>
-      <p style="color:var(--text-2);font-size:14px;margin-bottom:16px">Shops with bays, lifts, and parts for the big jobs: collision, roof replacement, structural work, and full diagnostics. You drive the rig in and may wait for an appointment.</p>
-      <div class="listing-grid" id="grid-center"></div>
+        <div class="listing-grid" id="d-grid"></div>
 
-      <div class="card" id="d-empty" style="padding:30px;text-align:center;display:none">
-        <div style="font-size:38px;margin-bottom:8px">🔍</div>
-        <h3 style="font-size:19px;font-weight:800">Nothing matches that yet</h3>
-        <p style="color:var(--text-2);font-size:14.5px;margin-top:8px;max-width:520px;margin-left:auto;margin-right:auto">We are seeding Oregon first. Try a nearby city, or claim your business below and be listed for free.</p>
+        <div class="more-wrap" id="d-more-wrap" style="display:none">
+          <button class="btn btn-gb" type="button" id="d-more">Show more</button>
+        </div>
+
+        <div class="card" id="d-empty" style="padding:30px;text-align:center;display:none">
+          <div style="font-size:38px;margin-bottom:8px">&#128269;</div>
+          <h3 style="font-size:19px;font-weight:800">Nothing matches that yet</h3>
+          <p style="color:var(--text-2);font-size:14.5px;margin-top:8px;max-width:520px;margin-left:auto;margin-right:auto" id="d-empty-msg">Try another city or ZIP, or drop the search words. We are seeding Oregon first, and every listing here is a real business.</p>
+        </div>
       </div>
 
       <div class="sec-head center" id="seed" style="margin-top:48px">
@@ -115,7 +142,8 @@
       <h2 style="font-size:22px;font-weight:800;margin-top:44px">RV repair directory FAQ</h2>
       <div style="margin-top:14px">
         <details class="faq"><summary>What is the difference between a mobile technician and a service center?</summary><p>A mobile technician drives to your rig and repairs it where it sits, which is what you need if the RV cannot be moved or you do not want to wait for a shop bay. A service center is a shop you drive to, with the bays, lifts, and parts for bigger jobs like collision repair, roof replacement, and structural work.</p></details>
-        <details class="faq"><summary>Who do I call if I am broken down on the highway?</summary><p>Use the Emergency and roadside filter above. Those businesses state that they do roadside, mobile dispatch, or emergency service. For a diesel chassis breakdown, a dedicated roadside diesel service is often the fastest option.</p></details>
+        <details class="faq"><summary>Who do I call if I am broken down on the highway?</summary><p>Choose "I am stuck right now" above. Those businesses state that they do roadside, mobile dispatch, or emergency service. For a diesel chassis breakdown, a dedicated roadside diesel service is often the fastest option.</p></details>
+        <details class="faq"><summary>How are the results sorted?</summary><p>By how close they are to you, and by whether they say they cover your area. A mobile technician who names your town or county comes ahead of one who is simply based nearby, because the one who covers your town is the one who will actually come. If a business names no town and no area, it still appears, marked with the region it serves.</p></details>
         <details class="faq"><summary>Is it free to be listed?</summary><p>Yes. Listings are free and permanent, and the business controls its own listing after claiming it. There is no commission and no middleman between you and the customer.</p></details>
         <details class="faq"><summary>How do you decide who gets listed?</summary><p>A business is listed when it is real and publishes its own contact information. We add nothing we cannot verify from the business itself. Certification tags only appear when the business states the certification.</p></details>
         <details class="faq"><summary>I found an error in a listing. How do I fix it?</summary><p>Claim the listing and correct anything in it, or contact us and we will fix it. We would rather remove a detail than publish one that is wrong.</p></details>
@@ -126,100 +154,279 @@
 
   <div id="site-footer"></div>
   <script src="assets/js/config.js"></script>
-  <script src="assets/js/listings.js"></script>
+  <script src="assets/js/coords-or.js"></script>
+  <script src="assets/js/listings/listings-or.js"></script>
   <script src="assets/js/site.js"></script>
   <script>
   (function () {
-    var data = window.RV_DIRECTORY || [];
-    var state = { type: null, emerg: false, q: '' };
+    'use strict';
+
+    var DATA = window.RV_LISTINGS_OR || [];
+    var CO = window.RV_COORDS || { city: {}, zip: {}, outZip: {} };
+    var STEPS = [25, 50, 100, 200, null];
+    var PAGE = 12;
+
+    var state = { route: null, q: '', user: null, step: 0, limit: PAGE };
+    var $ = function (id) { return document.getElementById(id); };
 
     function esc(s) {
-      return String(s == null ? '' : s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+      return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
     }
-    function card(x) {
-      var tags = (x.g || []).map(function (t) { return '<span>' + esc(t) + '</span>'; }).join('');
+    function title(s) {
+      return String(s).replace(/\b[a-z]/g, function (c) { return c.toUpperCase(); });
+    }
+    // Straight-line miles between two [lat, lng] points.
+    function miles(a, b) {
+      var rad = Math.PI / 180, R = 3958.8;
+      var dLat = (b[0] - a[0]) * rad, dLng = (b[1] - a[1]) * rad;
+      var s1 = Math.sin(dLat / 2), s2 = Math.sin(dLng / 2);
+      var h = s1 * s1 + Math.cos(a[0] * rad) * Math.cos(b[0] * rad) * s2 * s2;
+      return 2 * R * Math.asin(Math.min(1, Math.sqrt(h)));
+    }
+    function nearestTown(ll) {
+      var best = null, bd = Infinity;
+      for (var k in CO.city) {
+        if (!CO.city.hasOwnProperty(k)) continue;
+        var d = miles(ll, CO.city[k]);
+        if (d < bd) { bd = d; best = k; }
+      }
+      return best;
+    }
+    function locate(raw) {
+      var q = String(raw || '').trim().toLowerCase()
+        .replace(/[.,]/g, ' ')
+        .replace(/\s+(or|oregon|wa|washington|ca|california|id|idaho|nv|nevada)$/, '')
+        .replace(/\s+/g, ' ').trim();
+      if (!q) return null;
+      if (/^\d{5}$/.test(q)) {
+        var z = CO.zip[q] || CO.outZip[q];
+        if (!z) return null;
+        var tz = nearestTown(z);
+        return { ll: z, label: q, town: tz || '', near: tz ? title(tz) : '' };
+      }
+      if (CO.city[q]) return { ll: CO.city[q], label: title(q), town: q };
+      var keys = Object.keys(CO.city);
+      var hits = keys.filter(function (k) { return k.indexOf(q) === 0; });
+      if (!hits.length) hits = keys.filter(function (k) { return k.indexOf(q) >= 0; });
+      if (!hits.length) return null;
+      hits.sort(function (a, b) { return a.length - b.length || (a < b ? -1 : 1); });
+      return { ll: CO.city[hits[0]], label: title(hits[0]), town: hits[0] };
+    }
+
+    function rowFor(x, i) {
+      var base = x.base ? CO.city[String(x.base).toLowerCase()] : null;
+      var d = (base && state.user) ? miles(state.user.ll, base) : null;
+      var serves = false;
+      if (state.user && x.areas && x.areas.length) {
+        serves = x.areas.some(function (a) { return String(a).toLowerCase() === state.user.town; });
+      }
+      if (!serves && d != null && x.radius && d <= x.radius) serves = true;
+      return { x: x, i: i, base: base, d: d, serves: serves };
+    }
+    function passes(r) {
+      var x = r.x;
+      if (state.route === 'mobile' && x.t !== 'mobile') return false;
+      if (state.route === 'center' && x.t !== 'center') return false;
+      if (state.route === 'emerg' && !x.e) return false;
+      if (state.q) {
+        var hay = [x.n, x.c, (x.g || []).join(' '), x.region || '', (x.areas || []).join(' ')].join(' ').toLowerCase();
+        if (hay.indexOf(state.q) < 0) return false;
+      }
+      return true;
+    }
+    function compare(a, b) {
+      if (!state.user) {
+        var ab = a.base ? 0 : 1, bb = b.base ? 0 : 1;
+        return ab - bb || a.i - b.i;
+      }
+      var as = a.serves ? 0 : (a.d != null ? 1 : 2);
+      var bs = b.serves ? 0 : (b.d != null ? 1 : 2);
+      if (as !== bs) return as - bs;
+      // Among businesses that all claim your area, the one we can place on the
+      // map closest to you comes first, and one with no stated base goes last.
+      if (as === 0) {
+        var ad = a.d == null ? Infinity : a.d;
+        var bd = b.d == null ? Infinity : b.d;
+        return ad - bd || a.i - b.i;
+      }
+      if (as === 1) return a.d - b.d;
+      return a.i - b.i;
+    }
+    function inRadius(r, step) {
+      var R = STEPS[step];
+      if (R == null) return true;
+      if (r.serves) return true;
+      if (r.d == null) return false;
+      return r.d <= R;
+    }
+
+    function card(r) {
+      var x = r.x, tags = (x.g || []).map(function (t) { return '<span>' + esc(t) + '</span>'; }).join('');
+      var badge = '';
+      if (r.serves) badge = '<span class="listing-dist serves">Serves your area</span>';
+      else if (r.d != null) badge = '<span class="listing-dist">' + (r.d < 3 ? 'In your town' : 'about ' + Math.round(r.d) + ' mi') + '</span>';
+      else if (x.region) badge = '<span class="listing-dist region">' + esc(x.region) + '</span>';
       var emerg = x.e ? '<span class="listing-emerg">Emergency / roadside</span>' : '';
       var phone = x.p ? '<span class="listing-phone">' + esc(x.p) + '</span>' : '<span class="listing-phone">See website</span>';
-      return '<a class="card listing-card" href="' + esc(x.u) + '" target="_blank" rel="noopener"' +
-        ' data-type="' + esc(x.t) + '" data-emerg="' + (x.e ? '1' : '0') + '"' +
-        ' data-text="' + esc((x.n + ' ' + x.c + ' ' + (x.g || []).join(' ')).toLowerCase()) + '">' +
+      return '<a class="card listing-card" href="' + esc(x.u) + '" target="_blank" rel="noopener">' +
         '<div class="listing-top"><div class="listing-ic">' + (x.t === 'mobile' ? '&#128295;' : '&#127970;') + '</div>' +
-        '<div><div class="listing-name">' + esc(x.n) + '</div><div class="listing-loc">' + esc(x.c) + '</div></div></div>' +
+        '<div class="listing-head"><div class="listing-name">' + esc(x.n) + '</div><div class="listing-loc">' + esc(x.c) + '</div></div>' +
+        badge + '</div>' +
         emerg +
         '<p class="listing-desc">' + esc(x.d) + '</p>' +
         '<div class="listing-tags">' + tags + '</div>' +
         '<div class="listing-foot">' + phone + '<span class="listing-go">Visit site &rarr;</span></div></a>';
     }
-    function render() {
-      var q = state.q;
-      var shownMobile = 0, shownCenter = 0;
-      function pass(x) {
-        if (state.type && x.t !== state.type) return false;
-        if (state.emerg && !x.e) return false;
-        if (q && (x.n + ' ' + x.c + ' ' + (x.g || []).join(' ')).toLowerCase().indexOf(q) < 0) return false;
-        return true;
-      }
-      var mHtml = '', cHtml = '';
-      data.forEach(function (x) { if (pass(x)) { if (x.t === 'mobile') { mHtml += card(x); shownMobile++; } else { cHtml += card(x); shownCenter++; } } });
-      document.getElementById('grid-mobile').innerHTML = mHtml;
-      document.getElementById('grid-center').innerHTML = cHtml;
-      var total = shownMobile + shownCenter;
-      document.getElementById('d-count').textContent = total;
-      document.getElementById('h-mobile').style.display = (total && state.type !== 'center') || (!state.type && !q && !state.emerg) ? '' : (shownMobile ? '' : 'none');
-      document.getElementById('grid-mobile').style.display = shownMobile ? '' : 'none';
-      document.getElementById('h-center').style.display = shownCenter ? '' : 'none';
-      document.getElementById('grid-center').style.display = shownCenter ? '' : 'none';
-      document.getElementById('d-empty').style.display = total ? 'none' : 'block';
-    }
-    window.RV.dirFilter = function (el) {
-      el.classList.toggle('on');
-      var f = el.getAttribute('data-f');
-      if (f === 'mobile' || f === 'center') {
-        var on = el.classList.contains('on');
-        document.querySelectorAll('.chip[data-f="mobile"], .chip[data-f="center"]').forEach(function (c) { if (c !== el) c.classList.remove('on'); });
-        state.type = on ? f : null;
-      } else if (f === 'emerg') {
-        state.emerg = el.classList.contains('on');
-      }
-      render();
-    };
-    window.RV.dirSearch = function () {
-      var v = (document.getElementById('d-search').value || '').trim().toLowerCase();
-      state.q = v.length >= 2 ? v : '';
-      render();
-      return false;
-    };
-    var si = document.getElementById('d-search');
-    if (si) si.addEventListener('input', window.RV.dirSearch);
 
-    var form = document.getElementById('claim-form');
-    function setErr(id, msg) { var el = document.getElementById(id); if (el) { el.textContent = msg; var f = el.closest && el.closest('.fld'); if (f) f.classList.toggle('has-err', !!msg); } }
+    function render(resetLimit) {
+      if (resetLimit) state.limit = PAGE;
+      var all = DATA.map(rowFor).filter(passes).sort(compare);
+
+      // Widen until the first screen is worth looking at, never narrow.
+      while (state.step < STEPS.length - 1 && all.filter(function (r) { return inRadius(r, state.step); }).length < PAGE) {
+        state.step++;
+      }
+      var within = all.filter(function (r) { return inRadius(r, state.step); });
+      var shown = within.slice(0, state.limit);
+
+      $('d-grid').innerHTML = shown.map(card).join('');
+      $('d-empty').style.display = all.length ? 'none' : 'block';
+      $('d-empty-msg').textContent = DATA.length
+        ? 'Try another city or ZIP, or drop the search words. We are seeding Oregon first, and every listing here is a real business.'
+        : 'Listings are loading. If this stays empty, reload the page.';
+
+      $('d-count').textContent = shown.length;
+      $('d-more-wrap').style.display = within.length > shown.length ? 'block' : 'none';
+
+      var note, where = '';
+      if (state.user) {
+        where = STEPS[state.step] == null
+          ? ' anywhere in Oregon'
+          : ' within ' + STEPS[state.step] + ' mi of ' + state.user.label;
+      }
+      note = (within.length > shown.length)
+        ? 'Showing ' + shown.length + ' of ' + within.length + ' listings' + where
+        : within.length + (within.length === 1 ? ' listing' : ' listings') + where;
+      $('d-sort').textContent = note;
+
+      var active = state.route || state.q;
+      $('d-clear').style.display = active ? '' : 'none';
+      return shown.length;
+    }
+
+    /* ---------- route buttons ---------- */
+    Array.prototype.forEach.call(document.querySelectorAll('.route'), function (btn) {
+      btn.addEventListener('click', function () {
+        var r = btn.getAttribute('data-r');
+        state.route = (state.route === r) ? null : r;
+        Array.prototype.forEach.call(document.querySelectorAll('.route'), function (b) {
+          var on = b.getAttribute('data-r') === state.route;
+          b.classList.toggle('on', on);
+          b.setAttribute('aria-pressed', on ? 'true' : 'false');
+        });
+        state.step = 0;
+        render(true);
+        var top = $('d-results');
+        if (top && top.scrollIntoView) top.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+
+    /* ---------- location ---------- */
+    function note(msg, bad) {
+      var el = $('loc-note');
+      el.textContent = msg;
+      el.style.color = bad ? '#b42338' : '';
+    }
+    function applyUser(u) {
+      state.user = u;
+      state.step = 0;
+      render(true);
+    }
+    function fromInput() {
+      var raw = $('loc').value;
+      if (!raw.trim()) { applyUser(null); note('A city or ZIP is enough. We use it to sort by how close they are, nothing else.'); return; }
+      var u = locate(raw);
+      if (!u) {
+        note('We could not place "' + raw.trim() + '". Try a town name, a 5-digit ZIP, or the button to use your location.', true);
+        return;
+      }
+      applyUser(u);
+      note('Sorted for ' + u.label + (u.near ? ' (near ' + u.near + ')' : '') + '. Change the town or ZIP any time.');
+    }
+    $('loc-go').addEventListener('click', fromInput);
+    $('loc').addEventListener('keydown', function (e) { if (e.key === 'Enter') { e.preventDefault(); fromInput(); } });
+    $('loc').addEventListener('change', fromInput);
+
+    $('loc-use').addEventListener('click', function () {
+      if (!navigator.geolocation) { note('This browser cannot share a location. Type a town or ZIP instead.', true); return; }
+      note('Asking your device for a location...');
+      navigator.geolocation.getCurrentPosition(function (pos) {
+        var ll = [pos.coords.latitude, pos.coords.longitude];
+        var t = nearestTown(ll);
+        applyUser({ ll: ll, label: t ? ('near ' + title(t)) : 'your location', town: t || '' });
+        note('Sorted for ' + (t ? title(t) : 'your location') + '. Nothing is stored or sent.');
+        var top = $('d-results');
+        if (top && top.scrollIntoView) top.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, function () {
+        note('We could not get a location. Type a town or ZIP instead.', true);
+      }, { timeout: 10000, maximumAge: 600000 });
+    });
+
+    /* ---------- search + paging ---------- */
+    var si = $('d-search');
+    si.addEventListener('input', function () {
+      var v = (si.value || '').trim().toLowerCase();
+      state.q = v.length >= 2 ? v : '';
+      state.step = 0;
+      render(true);
+    });
+    $('d-more').addEventListener('click', function () {
+      var within = DATA.map(rowFor).filter(passes).sort(compare)
+        .filter(function (r) { return inRadius(r, state.step); });
+      state.limit += PAGE;
+      // Nothing left inside this radius: open it up rather than stub the button.
+      if (within.length < state.limit && state.step < STEPS.length - 1) state.step++;
+      render(false);
+    });
+    $('d-clear').addEventListener('click', function () {
+      state.route = null; state.q = ''; si.value = '';
+      Array.prototype.forEach.call(document.querySelectorAll('.route'), function (b) {
+        b.classList.remove('on'); b.setAttribute('aria-pressed', 'false');
+      });
+      state.step = 0;
+      render(true);
+    });
+
+    /* ---------- claim form ---------- */
+    var form = $('claim-form');
+    function setErr(id, msg) {
+      var el = $(id);
+      if (el) { el.textContent = msg; var f = el.closest && el.closest('.fld'); if (f) f.classList.toggle('has-err', !!msg); }
+    }
     function toast(msg) {
       var out = document.createElement('div');
       out.style.cssText = 'position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#0f7a45;color:#fff;border-radius:999px;padding:12px 22px;font-size:14.5px;font-weight:700;z-index:999;box-shadow:0 14px 30px -12px rgba(16,24,40,.35)';
-      out.textContent = msg; document.body.appendChild(out);
+      out.textContent = msg;
+      document.body.appendChild(out);
       setTimeout(function () { out.remove(); }, 4200);
     }
     if (form) form.addEventListener('submit', function (e) {
       e.preventDefault();
       var nameEl = form.querySelector('#cl-name'), cityEl = form.querySelector('#cl-city');
-      var name = nameEl.value.trim(), city = cityEl.value.trim(), ok = true;
-      if (name.length < 2) { setErr('cl-name-err', 'Add the business name'); ok = false; } else setErr('cl-name-err', '');
-      if (city.length < 2) { setErr('cl-city-err', 'Add the city'); ok = false; } else setErr('cl-city-err', '');
+      var n = nameEl.value.trim(), c = cityEl.value.trim(), ok = true;
+      if (n.length < 2) { setErr('cl-name-err', 'Add the business name'); ok = false; } else setErr('cl-name-err', '');
+      if (c.length < 2) { setErr('cl-city-err', 'Add the city'); ok = false; } else setErr('cl-city-err', '');
       if (!ok) return;
       toast('Listing request received. We will be in touch.');
       form.reset();
     });
 
-    var mob = data.filter(function (x) { return x.t === 'mobile'; }).length;
-    var cen = data.filter(function (x) { return x.t === 'center'; }).length;
-    var em = data.filter(function (x) { return x.e; }).length;
-    document.getElementById('stat-total').textContent = data.length;
-    document.getElementById('stat-mobile').textContent = mob;
-    document.getElementById('stat-center').textContent = cen;
-    document.getElementById('stat-emerg').textContent = em;
-    document.getElementById('d-count').textContent = data.length;
-    render();
+    /* ---------- stats + first paint ---------- */
+    $('stat-total').textContent = DATA.length;
+    $('stat-mobile').textContent = DATA.filter(function (x) { return x.t === 'mobile'; }).length;
+    $('stat-center').textContent = DATA.filter(function (x) { return x.t === 'center'; }).length;
+    $('stat-emerg').textContent = DATA.filter(function (x) { return x.e; }).length;
+    render(true);
   })();
   </script>
 </body>
