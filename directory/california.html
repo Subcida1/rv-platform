@@ -91,14 +91,14 @@
         <div class="card" id="d-empty" style="padding:30px;text-align:center;display:none">
           <div style="font-size:38px;margin-bottom:8px">&#128269;</div>
           <h3 style="font-size:19px;font-weight:800">Nothing matches that yet</h3>
-          <p style="color:var(--text-2);font-size:14.5px;margin-top:8px;max-width:520px;margin-left:auto;margin-right:auto" id="d-empty-msg">Try another city or ZIP, or drop the search words. We are seeding Northern California along the Oregon line first, and every listing here is a real business.</p>
+          <p style="color:var(--text-2);font-size:14.5px;margin-top:8px;max-width:520px;margin-left:auto;margin-right:auto" id="d-empty-msg">Try another city or ZIP, or drop the search words.</p>
         </div>
       </div>
 
       <div class="sec-head center" id="seed" style="margin-top:48px">
         <div class="sec-eyebrow">How listings get built</div>
         <h2 style="font-size:22px;font-weight:800">Real businesses only, never made up</h2>
-        <p style="color:var(--text-2);max-width:680px;margin:8px auto 0">Every listing here is a real business, added from what the business itself publishes on its own website. We do not invent phone numbers, addresses, or certifications. If a business states a certification, it is tagged; if not, it carries no badge. A listing marked unclaimed goes to the business the moment they claim it, and they control it from then on.</p>
+        <p style="color:var(--text-2);max-width:680px;margin:8px auto 0">A certification badge only appears when the business states it on its own site. Listings are free and permanent, and a business can claim its listing to take control of it.</p>
       </div>
 
       <h2 style="font-size:22px;font-weight:800;margin-top:44px">What to look for in an RV technician</h2>
@@ -345,7 +345,7 @@
       $('d-grid').innerHTML = shown.map(card).join('');
       $('d-empty').style.display = all.length ? 'none' : 'block';
       $('d-empty-msg').textContent = DATA.length
-        ? 'Try another city or ZIP, or drop the search words. We are seeding Oregon first, and every listing here is a real business.'
+        ? 'Try another city or ZIP, or drop the search words.'
         : 'Listings are loading. If this stays empty, reload the page.';
 
       $('d-count').textContent = shown.length;
