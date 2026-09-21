@@ -4,9 +4,20 @@
    coordinates at runtime from coords-or.js), areas towns the business states it
    covers, radius a service radius the business states in miles, region the
    business's own wording when it names only a region,
-   spec a scope label for businesses that only do part of the job (glass only,
-   roofs only, shop only). A specialist is useful in a sparse region, but only
-   if the listing says so up front. Never let narrow scope look general.
+   spec a scope/category label for businesses that only do part of the job
+   (glass only, roofs only). A specialist belongs in its own category, never
+   mixed in with general RV repair.
+
+   INCLUSION RULE (Ty, 2026-09-21): the business must be RV-SPECIFIC.
+   'we need rv repair services, not collisions and body shops thats a whole
+   different market. having a few that are rv specific is okay, but we should
+   not add them if they are not rv specific.'
+   So: a general auto body shop, general mechanic, commercial diesel truck
+   shop, appliance shop, or auto glass chain that happens to take RV work is
+   NOT listed, however competent. Collision and body work is a different
+   market; an RV-specific one (Straight Line RV and Boat) is kept because it
+   is RV-specific, and that is the exception, not the rule. Be choosy.
+
    EVERY listing must carry a phone. scripts/verify.py fails the build if one
    is missing, or if a listing lacks a name, area, description, or valid type.
    Coverage fields are copied from what each business publishes. Nothing invented.
@@ -391,46 +402,6 @@ window.RV_LISTINGS_OR = [
   "region": "Southern Oregon coast"
  },
  {
-  "n": "Mobile Mechanic Service Co.",
-  "c": "Roseburg",
-  "p": "541-672-4376",
-  "t": "mobile",
-  "d": "On-site vehicle and machinery repair in Roseburg, specializing in emergency roadside assistance. RV repair alongside diesel, engine, electrical, heating, and cooling service. ASE-certified technicians.",
-  "g": [
-   "Emergency roadside",
-   "ASE certified",
-   "Diesel and RV"
-  ],
-  "base": "Roseburg",
-  "r": true
- },
- {
-  "n": "Cummins Automotive and Diesel",
-  "c": "Oregon and SW Washington",
-  "p": "971-832-0739",
-  "u": "https://cumminsautodiesel.com/",
-  "t": "mobile",
-  "d": "Emergency mobile dispatch to highways for roadside repair of diesel RVs and motorhomes, with chassis work from engine to transmission and drivetrain to wheel hubs, in Oregon and Washington.",
-  "g": [
-   "24/7 dispatch",
-   "Roadside",
-   "Diesel chassis"
-  ],
-  "base": "Sherwood",
-  "areas": [
-   "Tualatin",
-   "Tigard",
-   "Newberg",
-   "McMinnville",
-   "Wilsonville",
-   "Molalla",
-   "Oregon City"
-  ],
-  "radius": 144,
-  "region": "Oregon and Washington",
-  "r": true
- },
- {
   "n": "Sutton RV Service",
   "c": "Eugene",
   "p": "458-234-8188",
@@ -461,23 +432,6 @@ window.RV_LISTINGS_OR = [
   "base": "Portland"
  },
  {
-  "n": "Stavros Auto Services",
-  "c": "Albany",
-  "p": "541-926-7248",
-  "u": "https://www.stavrosautoservices.com/rv_repair/",
-  "t": "center",
-  "e": false,
-  "d": "RV collision and paint work through the Stavros group of shops in Albany. Fiberglass repair and custom paint schemes are a specialty, and they take motor homes, fifth wheels, and trailers, plus glass replacement and repair. Serves Albany, Corvallis, Jefferson, and Lebanon.",
-  "g": [
-   "Collision and paint",
-   "Fiberglass",
-   "Willamette Valley"
-  ],
-  "base": "Albany",
-  "region": "Albany, Corvallis, Jefferson, and Lebanon",
-  "spec": "Collision and paint only"
- },
- {
   "n": "Southside RV Repair and Shelter Factory",
   "c": "Corvallis",
   "p": "541-754-9390",
@@ -491,22 +445,6 @@ window.RV_LISTINGS_OR = [
    "Roof work"
   ],
   "base": "Corvallis"
- },
- {
-  "n": "PNW Autowork",
-  "c": "Albany",
-  "p": "541-981-2871",
-  "u": "https://pnwautowork.com/rv-repair/",
-  "t": "center",
-  "d": "Auto and RV repair in Albany that also runs a mobile service, bringing repairs to your location. Drivetrain and chassis services, brakes, steering, and suspension, Sprinter service, and Onan generator repair. Separate emergency line for breakdowns.",
-  "g": [
-   "Sprinter service",
-   "Generators",
-   "Chassis work"
-  ],
-  "base": "Albany",
-  "region": "Albany, Salem, Corvallis, and Jefferson",
-  "r": true
  },
  {
   "n": "Jackson RV",
@@ -538,22 +476,6 @@ window.RV_LISTINGS_OR = [
   ],
   "base": "Springfield",
   "spec": "Body and collision only"
- },
- {
-  "n": "Oregon RV Appliance Repair",
-  "c": "Tangent",
-  "p": "541-928-7245",
-  "u": "https://oregonrv.com/",
-  "t": "center",
-  "e": false,
-  "d": "Family-owned since 1989 with over 60 years combined RV repair experience. Nearly any RV appliance, electrical, propane, plumbing, windows, and minor structural repair. Shop only, no mobile service.",
-  "g": [
-   "Since 1989",
-   "Appliance specialty",
-   "Shop only"
-  ],
-  "base": "Tangent",
-  "spec": "Appliances, shop only"
  },
  {
   "n": "Florence RV and Automotive Specialists",

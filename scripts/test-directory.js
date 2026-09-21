@@ -162,7 +162,10 @@ check('businesses with a site link to it, and ones without do not',
 check('cards are not wrapped in a single link', gridHtml().trim().indexOf('<a ') !== 0);
 
 console.log('\n10. Listings whose website is gone');
-['Bandon Mobile RV Repair', 'Mobile Mechanic Service Co.'].forEach(n => {
+// Listings whose website is gone on purpose: no site link, but a phone.
+const NOSITE = (sandbox.window.RV_LISTINGS_OR || []).filter(x => !x.u).map(x => x.n);
+check('at least one listing is intentionally site-less', NOSITE.length > 0, NOSITE.join(', '));
+NOSITE.forEach(n => {
   search(n.replace("'", ' ').split(' ').slice(0, 2).join(' '));
   const i = names().indexOf(n);
   check('found by search: ' + n, i > -1, names().slice(0, 4).join(' | '));
