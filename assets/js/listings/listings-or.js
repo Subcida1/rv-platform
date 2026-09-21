@@ -902,5 +902,50 @@ window.RV_LISTINGS_OR = [
    "Myrtle Creek"
   ],
   "region": "Douglas County"
+ },
+ {
+  "n": "Bish's RV of Junction City",
+  "c": "Junction City, serving the Willamette Valley",
+  "p": "541-998-4285",
+  "u": "https://www.bishs.com/junction-city-oregon/rv-service",
+  "t": "center",
+  "e": false,
+  "d": "Large RV service center in Junction City. More than 50 RV repair technicians and 56 service bays, with a separate RV body shop and an extensive parts department. Technicians work toward RVIA Master Certifications and the chassis technicians are ASE certified. Authorized warranty repair for major brands, and they service RVs whether or not they were bought there. Same-day appointments when a trip is in jeopardy.",
+  "g": [
+   "56 bays",
+   "50+ technicians",
+   "Authorized warranty work"
+  ],
+  "base": "Junction City",
+  "areas": [
+   "Eugene",
+   "Springfield",
+   "Corvallis",
+   "Albany",
+   "Cottage Grove"
+  ],
+  "region": "Willamette Valley"
+ },
+ {
+  "n": "Albany RV",
+  "c": "Albany, serving the Willamette Valley",
+  "p": "541-917-7395",
+  "u": "https://www.albany-rv.com/mobile-service",
+  "t": "both",
+  "e": false,
+  "d": "Locally owned RV dealer and service center in Albany. Certified technicians handle service and repair in the shop, and they run a mobile service that comes to you. Parts, service, and finance departments on site. They say they serve RVers across the Willamette Valley, including Albany, Corvallis, Salem, Lebanon, and Eugene.",
+  "g": [
+   "Shop + mobile",
+   "Locally owned",
+   "Willamette Valley"
+  ],
+  "base": "Albany",
+  "areas": [
+   "Corvallis",
+   "Salem",
+   "Lebanon",
+   "Eugene"
+  ],
+  "region": "Willamette Valley"
  }
 ];
