@@ -4,9 +4,9 @@
    radius a stated service radius in miles, region its own wording when it names a region,
    spec a scope label stating the LIMITATION ("shop only, no mobile", "glass only").
    t = both means it comes to you AND takes drop-offs, so it appears in either route.
-   INCLUSION: the business must be RV-SPECIFIC. General auto body, general mechanic,
-   diesel truck shop or auto glass chain is NOT listed. Every listing carries a
-   findable phone; scripts/verify.py fails the build without one.
+   INCLUSION: the business must be RV-SPECIFIC and must have built its own findable
+   presence (own site plus a phone on that site). Not our job to reconstruct a listing
+   from registries or aggregators for a business that has not done that itself.
    Nothing invented: coverage and claims are copied from each business's own site. */
 window.RV_LISTINGS_OR = [
  {
@@ -816,5 +816,45 @@ window.RV_LISTINGS_OR = [
    "Springfield"
   ],
   "region": "Willamette Valley"
+ },
+ {
+  "n": "Cool Water RV",
+  "c": "Klamath Falls",
+  "p": "541-850-7337",
+  "u": "https://www.coolwaterrvllc.com/",
+  "t": "center",
+  "e": false,
+  "d": "RV repair and service shop in Klamath Falls. Routine maintenance and diagnostics, roof repair and rebuilds, master certified diesel service, solar and electrical upgrades, insurance and warranty claims, and custom modifications. Winterizing and de-winterizing, plumbing and leak diagnostics, and water heater and furnace service.",
+  "g": [
+   "Diesel service",
+   "Roof rebuilds",
+   "Klamath Falls"
+  ],
+  "base": "Klamath Falls",
+  "areas": [
+   "Klamath County",
+   "Lakeview",
+   "Chiloquin"
+  ],
+  "region": "Klamath Basin"
+ },
+ {
+  "n": "AAA RV Parts & Repair",
+  "c": "Klamath Falls",
+  "p": "541-205-3634",
+  "u": "https://rvklamath.com/",
+  "t": "center",
+  "e": false,
+  "d": "Family-owned RV parts and service center in Klamath Falls. A full line of RV repair parts, plus RV covers, air conditioners, and propane tanks. Accepts all insurance and extended warranties, and takes special orders with a quote for price and availability.",
+  "g": [
+   "Parts and service",
+   "Family owned",
+   "Insurance accepted"
+  ],
+  "base": "Klamath Falls",
+  "areas": [
+   "Klamath County"
+  ],
+  "region": "Klamath Basin"
  }
 ];
