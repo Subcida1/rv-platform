@@ -9,7 +9,7 @@
    by an unrelated template), but the business and phone number are verified.
 
    TWO KINDS OF EMERGENCY, deliberately not merged:
-     r = roadside. The vehicle is the problem and the RV may not move. Verified that
+     r = roadside. The vehicle is the problem and the rig may not move. Verified that
          the business comes to you or dispatches AND handles chassis, engine,
          drivetrain, brakes, or towing.
      e = emergency mobile repair. Something inside the coach failed: furnace, water,
@@ -462,11 +462,11 @@ window.RV_LISTINGS_OR = [
   "u": "https://www.stavrosautoservices.com/rv_repair/",
   "t": "center",
   "e": false,
-  "d": "RV repair, fiberglass, and collision work for motorhomes, fifth wheels, and trailers. Has a 50-foot booth built for RV repair and painting, serving Albany, Corvallis, Jefferson, and Lebanon for over 35 years.",
+  "d": "RV collision and paint work through the Stavros group of shops in Albany. Fiberglass repair and custom paint schemes are a specialty, and they take motor homes, fifth wheels, and trailers, plus glass replacement and repair. Serves Albany, Corvallis, Jefferson, and Lebanon.",
   "g": [
    "Collision and paint",
-   "50-foot booth",
-   "35-plus years"
+   "Fiberglass",
+   "Willamette Valley"
   ],
   "base": "Albany",
   "region": "Albany, Corvallis, Jefferson, and Lebanon"
