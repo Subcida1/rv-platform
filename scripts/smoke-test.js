@@ -133,6 +133,45 @@ if (sb.window.RV && typeof sb.window.RV.searchRoute === 'function') {
   }
 }
 
+// 3b. the site-wide search dropdown: index, scoring, punctuation, flood cap.
+//     People type "gibs" for "Gib's" and "rv repair" without a hyphen, so both
+//     sides are normalised; and a business must never flood the editorial hits.
+{
+  const sctx = context();
+  let threw = null;
+  try {
+    runIn(sctx, 'assets/js/search-index.js');
+    runIn(sctx, 'assets/js/search.js');
+  } catch (e) { threw = e.message; }
+  if (threw) { console.log('  FAIL search scripts threw: ' + threw); failed++; }
+  const S = sctx.window.RVSearch;
+  const IDX = sctx.window.RV_SEARCH || [];
+  if (!S || typeof S.search !== 'function') { console.log('  FAIL RVSearch.search missing / index empty'); failed++; }
+  else {
+    console.log('  ok   search index built (' + IDX.length + ' entries)');
+    const CASES = [
+      ['towing', 1], ['weight calculator', 1], ['winterize', 1], ['fridge', 1],
+      ['battery', 1], ['roof snow', 1], ['water heater', 1], ['tire', 1],
+      ['oregon', 1], ['washington', 1], ['california', 1], ['find a tech', 1],
+      ['bend', 2], ['klamath falls', 2], ['coos bay', 2], ['gibs', 1],
+      ['aaa rv tech', 1], ['zzzz', 0]
+    ];
+    let bad = 0;
+    for (const [q, min] of CASES) {
+      const r = S.search(q);
+      if (r.length < min) { console.log('  FAIL search ' + JSON.stringify(q) + ' -> ' + r.length + ' hits, wanted ' + min); bad++; }
+    }
+    if (!bad) console.log('  ok   ' + CASES.length + ' queries return the right results');
+    else failed += bad;
+    const biz = S.search('rv repair', 10).filter(x => x.c === 'Business').length;
+    if (biz <= 2) console.log('  ok   businesses capped in results (' + biz + ')');
+    else { console.log('  FAIL businesses flooded results: ' + biz); failed++; }
+    const every = IDX.every(x => x.t && x.u && fs.existsSync(path.join(ROOT, x.u)));
+    if (every) console.log('  ok   every index entry points at a real page');
+    else { console.log('  FAIL an index entry points at a missing page'); failed++; }
+  }
+}
+
 // 4. each page's own inline script must execute too
 const PAGES = [
   ['index.html', ['assets/js/config.js', 'assets/js/site.js']],
