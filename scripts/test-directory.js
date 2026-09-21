@@ -70,7 +70,8 @@ function search(v) { els['d-search'].value = v; els['d-search'].fire('input'); }
 
 console.log('\n1. First page stays small');
 check('shows 6, not a wall of listings', count() === '6' && cards().length === 6, 'count=' + count() + ' cards=' + cards().length);
-check('reports the size of the set', /Showing 6 of 35 listings/.test(sortNote()), sortNote());
+const TOTAL = (sandbox.window.RV_LISTINGS_OR || []).length;
+check('reports the size of the set', new RegExp('Showing 6 of ' + TOTAL + ' listings').test(sortNote()), sortNote());
 check('offers more', hasMore());
 
 console.log('\n2. Distance ranking, and what we cannot place drops below what we can');

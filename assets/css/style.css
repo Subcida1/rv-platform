@@ -1095,6 +1095,9 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
    and stays red. Emergency mobile repair (something inside failed) is amber. */
 .listing-emerg{display:inline-block;font-size:11.5px;font-weight:800;color:#8a5a00;background:#fff6e5;border:1px solid #f0d9a8;border-radius:999px;padding:4px 10px;align-self:flex-start}
 .listing-emerg.roadside{color:#b42338;background:#fdeeee;border-color:#f2b8be}
+/* Scope label: says plainly when a business only does part of the job. */
+.listing-flags{display:flex;gap:6px;flex-wrap:wrap}
+.listing-spec{display:inline-block;font-size:11.5px;font-weight:700;color:var(--text-2);background:var(--bg-2);border:1px solid var(--border);border-radius:999px;padding:4px 10px}
 
 /* ============================================================
    DIRECTORY FINDER (2026-09-20)

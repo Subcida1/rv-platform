@@ -3,10 +3,12 @@
    d description, g tags, base the town the business works from (resolved to
    coordinates at runtime from coords-or.js), areas towns the business states it
    covers, radius a service radius the business states in miles, region the
-   business's own wording when it names only a region.
-   EVERY listing must carry a phone. A directory whose job is to put a phone
-   number in front of a stranded RVer does not ship without one, and
-   scripts/verify.py fails the build if one is missing.
+   business's own wording when it names only a region,
+   spec a scope label for businesses that only do part of the job (glass only,
+   roofs only, shop only). A specialist is useful in a sparse region, but only
+   if the listing says so up front. Never let narrow scope look general.
+   EVERY listing must carry a phone. scripts/verify.py fails the build if one
+   is missing, or if a listing lacks a name, area, description, or valid type.
    Coverage fields are copied from what each business publishes. Nothing invented.
    Two records carry no u on purpose: their sites are gone (one parked, one replaced
    by an unrelated template), but the business and phone number are verified.
@@ -472,7 +474,8 @@ window.RV_LISTINGS_OR = [
    "Willamette Valley"
   ],
   "base": "Albany",
-  "region": "Albany, Corvallis, Jefferson, and Lebanon"
+  "region": "Albany, Corvallis, Jefferson, and Lebanon",
+  "spec": "Collision and paint only"
  },
  {
   "n": "Southside RV Repair and Shelter Factory",
@@ -533,7 +536,8 @@ window.RV_LISTINGS_OR = [
    "Fiberglass",
    "Insurance help"
   ],
-  "base": "Springfield"
+  "base": "Springfield",
+  "spec": "Body and collision only"
  },
  {
   "n": "Oregon RV Appliance Repair",
@@ -548,7 +552,8 @@ window.RV_LISTINGS_OR = [
    "Appliance specialty",
    "Shop only"
   ],
-  "base": "Tangent"
+  "base": "Tangent",
+  "spec": "Appliances, shop only"
  },
  {
   "n": "Florence RV and Automotive Specialists",
@@ -609,5 +614,65 @@ window.RV_LISTINGS_OR = [
    "54-point inspection"
   ],
   "base": "Vancouver"
+ },
+ {
+  "n": "Mobile RV Services of Central Oregon",
+  "c": "Bend, Redmond, Sisters, Prineville",
+  "p": "541-550-3531",
+  "u": "https://www.mobilervrepairco.com/",
+  "t": "mobile",
+  "e": false,
+  "d": "Owner-operated mobile RV repair serving Bend, Redmond, Sisters, Prineville, Crooked River Ranch, La Pine, and Sunriver. Batteries, seals, tanks, air conditioners, and appliances, plus electrical, plumbing, furnace, and leveling service and preventive maintenance. RVTAA-certified technician who comes to you.",
+  "g": [
+   "RVTAA certified",
+   "Mobile only",
+   "Owner operated"
+  ],
+  "base": "Bend",
+  "areas": [
+   "Redmond",
+   "Sisters",
+   "Prineville",
+   "La Pine"
+  ],
+  "region": "Central Oregon"
+ },
+ {
+  "n": "Rusted Hitch RV Roofing",
+  "c": "Bend and statewide",
+  "p": "541-526-5986",
+  "u": "https://rustedhitchrvrepair.com/",
+  "t": "mobile",
+  "e": false,
+  "d": "Mobile RV roof repair and water damage restoration, based in Bend and traveling across Oregon, Idaho, and parts of Washington. Roofing and restoration only, and they state plainly that they do not offer electrical, plumbing, or decal removal work.",
+  "g": [
+   "Roofs only",
+   "Mobile only",
+   "Since 2015"
+  ],
+  "base": "Bend",
+  "region": "Oregon, Idaho, and parts of Washington",
+  "spec": "RV roofs only"
+ },
+ {
+  "n": "Cascade Auto Glass",
+  "c": "Hood River and the Columbia River Gorge",
+  "p": "800-320-5358",
+  "u": "https://cascadeautoglass.com/rv-windshield-replacement-in-hood-river/",
+  "t": "mobile",
+  "e": false,
+  "d": "Mobile RV windshield replacement across the Columbia River Gorge: Hood River, Cascade Locks, Mosier, The Dalles, and the Washington side towns of White Salmon and Bingen. Windshields and auto glass only, not general RV repair.",
+  "g": [
+   "Glass only",
+   "Mobile service"
+  ],
+  "base": "Hood River",
+  "areas": [
+   "Cascade Locks",
+   "Mosier",
+   "The Dalles"
+  ],
+  "region": "Columbia River Gorge",
+  "spec": "Windshield and glass only"
  }
 ];
