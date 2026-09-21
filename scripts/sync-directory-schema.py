@@ -14,7 +14,18 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-PAGE = ROOT / "directory" / "oregon.html"
+PAGES = [
+    # page, state name, "about" phrase, and the label used in the crumb
+    ("directory/oregon.html", "Oregon",
+     "Directory of RV repair in Oregon: mobile technicians who come to you, RV service centers, "
+     "and emergency roadside providers.", "RV repair in Oregon"),
+    ("directory/washington.html", "Washington",
+     "Directory of RV repair in Washington: mobile technicians who come to you, RV service centers, "
+     "and emergency roadside providers.", "RV repair in Washington"),
+    ("directory/california.html", "California",
+     "Directory of RV repair in Northern California: mobile technicians who come to you, RV service "
+     "centers, and roadside providers.", "RV repair in Northern California"),
+]
 START = "<!-- SCHEMA:PROVIDERS-START -->"
 END = "<!-- SCHEMA:PROVIDERS-END -->"
 SITE = "https://yourdomain.com"
@@ -26,15 +37,17 @@ def area_of(row):
     return re.split(r",| serving ", c)[0].strip() or None
 
 
-def listings():
-    rows = []
-    for lf in sorted((ROOT / "assets" / "js" / "listings").glob("listings-*.js")):
-        rows += json.loads(re.search(r"=\s*(\[.*\])\s*;", lf.read_text(encoding="utf-8"), re.S).group(1))
-    return rows
+FILE_FOR = {"oregon": "or", "washington": "wa", "california": "ca"}
 
 
-def main():
-    rows = listings()
+def listings(page):
+    """Only the page's own state file: Oregon's page shows Oregon businesses."""
+    slug = Path(page).stem
+    lf = ROOT / "assets" / "js" / "listings" / ("listings-%s.js" % FILE_FOR[slug])
+    return json.loads(re.search(r"=\s*(\[.*\])\s*;", lf.read_text(encoding="utf-8"), re.S).group(1))
+
+
+def build(page, state, desc, about, rows):
     elements = []
     for i, r in enumerate(rows, 1):
         biz = {"@type": "AutoRepair", "name": r["n"]}
@@ -52,12 +65,11 @@ def main():
     page_schema = {
         "@context": "https://schema.org",
         "@type": "CollectionPage",
-        "name": "RV Repair in Oregon: Mobile Technicians and Service Centers",
-        "description": ("Directory of RV repair in Oregon: mobile technicians who come to you, "
-                        "RV service centers, and emergency roadside providers."),
-        "url": SITE + "/directory/oregon.html",
+        "name": "RV Repair in %s" % state,
+        "description": desc,
+        "url": SITE + "/" + page,
         "isPartOf": {"@type": "WebSite", "name": "RV Everything", "url": SITE + "/"},
-        "about": {"@type": "Thing", "name": "RV repair in Oregon"},
+        "about": {"@type": "Thing", "name": about},
         "mainEntity": {"@type": "ItemList", "numberOfItems": len(elements), "itemListElement": elements},
     }
     crumb = {
@@ -66,19 +78,26 @@ def main():
         "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "RV Everything", "item": SITE + "/"},
             {"@type": "ListItem", "position": 2, "name": "RV Repair Directory", "item": SITE + "/directory/"},
-            {"@type": "ListItem", "position": 3, "name": "Oregon", "item": SITE + "/directory/oregon.html"},
+            {"@type": "ListItem", "position": 3, "name": state, "item": SITE + "/" + page},
         ],
     }
     block = "\n".join('<script type="application/ld+json">%s</script>' %
                       json.dumps(b, separators=(",", ":")) for b in (page_schema, crumb))
 
-    html = PAGE.read_text(encoding="utf-8")
+    path = ROOT / page
+    html = path.read_text(encoding="utf-8")
     if START not in html or END not in html:
-        raise SystemExit("markers missing from %s" % PAGE.name)
+        raise SystemExit("markers missing from %s" % path.name)
     new = re.sub(re.escape(START) + r".*?" + re.escape(END),
                  START + "\n" + block + "\n" + END, html, flags=re.S)
-    PAGE.write_text(new, encoding="utf-8")
-    print("  %s: ItemList with %d businesses + BreadcrumbList" % (PAGE.name, len(elements)))
+    path.write_text(new, encoding="utf-8")
+    print("  %-28s ItemList %d businesses + BreadcrumbList" % (path.name, len(elements)))
+
+
+def main():
+    for page, state, desc, about in PAGES:
+        rows = listings(page)
+        build(page, state, desc, about, rows)
 
 
 if __name__ == "__main__":

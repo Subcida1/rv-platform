@@ -31,6 +31,8 @@ window.RV_CONFIG = {
  guideRoof: 'guides/roof-snow-load.html',
  directory: 'directory/index.html',
  directoryOregon: 'directory/oregon.html',
+ directoryWashington: 'directory/washington.html',
+ directoryCalifornia: 'directory/california.html',
  about: 'about.html',
  contact: 'contact.html',
  signin: 'signin.html'

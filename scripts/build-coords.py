@@ -24,13 +24,16 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "assets" / "js" / "coords-or.js"
-LISTINGS = ROOT / "assets" / "js" / "listings" / "listings-or.js"
+LISTINGS = ROOT / "assets" / "js" / "listings"   # --check reads every state file
 
 # Out-of-state places worth resolving: a band along the Oregon line, so a
 # border-town user (Klamath CA, Vancouver WA) still gets answers. Degrees.
 BELT = {
     "WA": lambda lat, lng: lat <= 46.7,
-    "CA": lambda lat, lng: lat >= 41.4 and lng <= -121.0,
+    # The northern California corridor reaches further south than the border
+    # itself: Redding (40.58) and Red Bluff (40.18) serve Siskiyou County, so
+    # the belt has to include them or their listings cannot be ranked.
+    "CA": lambda lat, lng: lat >= 39.8 and lng <= -119.0,
     "ID": lambda lat, lng: lng >= -117.7,
     "NV": lambda lat, lng: lng >= -117.7 and lat >= 41.4,
 }

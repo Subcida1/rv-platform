@@ -58,22 +58,6 @@ window.RV_LISTINGS_OR = [
   "base": "Portland"
  },
  {
-  "n": "Tim's Mobile RV Repair",
-  "c": "Columbia County, OR and SW Washington",
-  "p": "503-223-5255",
-  "u": "https://www.timsrv.com/",
-  "t": "mobile",
-  "e": false,
-  "d": "Small family-owned mobile RV repair. Tim is a Master Certified RV Technician (RVDA and RVIA) and a licensed LP gas technician. Appliance repair, LP systems, water systems, awnings, 120 and 12 volt electrical.",
-  "g": [
-   "Master certified",
-   "LP gas licensed",
-   "Since 2000"
-  ],
-  "base": "Vancouver",
-  "region": "Clark and Cowlitz County WA, Columbia County OR"
- },
- {
   "n": "Happy Mobile RV Repair",
   "c": "Bend, Medford, Grants Pass",
   "p": "541-244-8699",
@@ -222,22 +206,6 @@ window.RV_LISTINGS_OR = [
   "radius": 50
  },
  {
-  "n": "Cannon's RV Repair",
-  "c": "Vancouver WA and Multnomah County OR",
-  "p": "360-851-9636",
-  "u": "https://cannonsrvrepair.com/",
-  "t": "mobile",
-  "e": false,
-  "d": "Family-owned mobile RV repair run by two generations of technicians since 1997. Roof leaks, electrical troubleshooting, appliance maintenance, and preventative care across the Portland metro.",
-  "g": [
-   "Since 1997",
-   "Family owned",
-   "2 generations"
-  ],
-  "base": "Vancouver",
-  "region": "Clark County WA and Multnomah County OR"
- },
- {
   "n": "Crazy Creek RV Repair",
   "c": "Prineville and Bend",
   "p": "541-408-3930",
@@ -255,26 +223,6 @@ window.RV_LISTINGS_OR = [
    "Bend"
   ],
   "region": "Central Oregon"
- },
- {
-  "n": "OGRVS (Off-Grid RV Services)",
-  "c": "Gresham, Portland, Longview",
-  "p": "360-703-5663",
-  "u": "https://ogrvs.com/",
-  "t": "mobile",
-  "d": "Family-owned mobile and in-shop RV service across the Portland metro and SW Washington. Mechanical breakdowns, engine and brake issues, plus electrical, appliances, slide-outs, plumbing, and roof repairs.",
-  "g": [
-   "Mobile + in-shop",
-   "Certified techs",
-   "Roof and slide work"
-  ],
-  "base": "Gresham",
-  "areas": [
-   "Portland",
-   "Longview"
-  ],
-  "region": "Portland metro and SW Washington",
-  "r": true
  },
  {
   "n": "Kings Mobile RV Service",
@@ -500,21 +448,6 @@ window.RV_LISTINGS_OR = [
    "30-plus years"
   ],
   "base": "Coos Bay"
- },
- {
-  "n": "Pro RV Repair",
-  "c": "Vancouver WA and Portland",
-  "p": "360-993-4295",
-  "u": "https://pro-world.com/",
-  "t": "center",
-  "e": false,
-  "d": "Full-service RV and trailer repair facility with OEM parts. RV roof repair and replacement, body work, collision repair, custom hitches, fabrication, and a 54-point inspection. Serves Portland and SW Washington.",
-  "g": [
-   "Full service",
-   "Fabrication",
-   "54-point inspection"
-  ],
-  "base": "Vancouver"
  },
  {
   "n": "Mobile RV Services of Central Oregon",
