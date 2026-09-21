@@ -114,11 +114,14 @@ console.log('\n5. Tier order holds everywhere (serves, then distance, then regio
 });
 
 console.log('\n6. Route buttons');
+// A "both" business comes to you AND takes drop-offs, so it is legitimately in
+// either route. Check the rendered names against the data rather than the icon.
+const recOf = n => (sandbox.window.RV_LISTINGS_OR || []).find(x => x.n === n) || {};
 typeLocation('Portland');
 clickRoute('center');
-check('centers only', cards().length > 0 && !/listing-ic">&#128295;/.test(gridHtml()), 'cards=' + cards().length);
+check('centers only', cards().length > 0 && names().every(n => recOf(n).t !== 'mobile'), 'cards=' + cards().length);
 clickRoute('mobile');
-check('mobile techs only', !/listing-ic">&#127970;/.test(gridHtml()));
+check('mobile techs only', names().every(n => recOf(n).t !== 'center'));
 clickRoute('roadside');
 check('the roadside route shows only roadside-capable businesses',
   cards().length > 0 && cards().every(c => /listing-emerg roadside/.test(c)), cards().length + ' cards');

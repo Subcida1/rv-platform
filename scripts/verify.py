@@ -124,8 +124,8 @@ for lf in listing_files:
             bad.append("%s: no city/area" % name)
         if not (row.get("d") or "").strip():
             bad.append("%s: no description" % name)
-        if row.get("t") not in ("mobile", "center"):
-            bad.append("%s: type must be mobile or center" % name)
+        if row.get("t") not in ("mobile", "center", "both"):
+            bad.append("%s: type must be mobile, center or both" % name)
         if row.get("r") and row.get("e"):
             bad.append("%s: claims both roadside and emergency" % name)
     print("  %-40s %d listings" % (str(lf.relative_to(ROOT)), len(rows)))

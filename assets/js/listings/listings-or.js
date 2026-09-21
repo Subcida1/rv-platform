@@ -1,32 +1,13 @@
 /* Oregon listings. One file per state so a page loads only its region.
-   Fields: n name, c display area, p phone, u url, t mobile|center, e emergency,
-   d description, g tags, base the town the business works from (resolved to
-   coordinates at runtime from coords-or.js), areas towns the business states it
-   covers, radius a service radius the business states in miles, region the
-   business's own wording when it names only a region,
-   spec a scope label. It must state the LIMITATION a visitor needs to know
-   ('shop only, no mobile', 'windshield and glass only', 'RV roofs only'),
-   never re-categorise an RV business into something smaller than it is.
-
-   INCLUSION RULE (Ty, 2026-09-21): the business must be RV-SPECIFIC, i.e. RV
-   is what it is, not a line it happens to take. 'we need rv repair services,
-   not collisions and body shops thats a whole different market. having a few
-   that are rv specific is okay, but we should not add them if they are not rv
-   specific.' A general auto body shop, general mechanic, commercial diesel
-   truck shop, or auto glass chain is NOT listed, however competent.
-
-   EVERY listing must carry a phone. It must be findable. scripts/verify.py
-   fails the build if one is missing, or if a listing lacks a name, area,
-   description or valid type. Coverage fields are copied from what each
-   business publishes. Nothing invented.
-
-   TWO KINDS OF EMERGENCY, deliberately not merged:
-     r = roadside. The vehicle is the problem and the rig may not move. The
-         business states it dispatches or comes to you AND handles chassis,
-         engine, drivetrain, brakes or towing.
-     e = emergency mobile repair. Something inside the coach failed: furnace,
-         water, fridge, slide. They come to your site. Not roadside.
-   A record never carries both. */
+   Fields: n name, c display area, p phone, u url, t mobile|center|both, e emergency,
+   d description, g tags, base the town the business works from, areas towns it states,
+   radius a stated service radius in miles, region its own wording when it names a region,
+   spec a scope label stating the LIMITATION ("shop only, no mobile", "glass only").
+   t = both means it comes to you AND takes drop-offs, so it appears in either route.
+   INCLUSION: the business must be RV-SPECIFIC. General auto body, general mechanic,
+   diesel truck shop or auto glass chain is NOT listed. Every listing carries a
+   findable phone; scripts/verify.py fails the build without one.
+   Nothing invented: coverage and claims are copied from each business's own site. */
 window.RV_LISTINGS_OR = [
  {
   "n": "Oak Park RV Mobile Service",
@@ -660,5 +641,84 @@ window.RV_LISTINGS_OR = [
    "Washington County"
   ],
   "region": "Willamette Valley"
+ },
+ {
+  "n": "Skyline RV Mobile Repair",
+  "c": "Newport and the Oregon coast",
+  "p": "541-292-2291",
+  "u": "https://skylinervmobilerepair.com/",
+  "t": "mobile",
+  "e": false,
+  "d": "Mobile RV repair out of Newport, covering Lincoln County and the Oregon coast. General RV repairs, electrical and battery systems, plumbing and water systems, appliance repair, and preventive maintenance. They come to you at a campground, at home, or on the road. Ask for Mark.",
+  "g": [
+   "Mobile only",
+   "Coastal",
+   "Newport"
+  ],
+  "base": "Newport",
+  "areas": [
+   "Lincoln City",
+   "Depoe Bay",
+   "Waldport",
+   "Yachats",
+   "Florence"
+  ],
+  "region": "Oregon coast"
+ },
+ {
+  "n": "Great NW RV Mobile Repair",
+  "c": "Tigard, serving all of Oregon",
+  "p": "503-308-1249",
+  "u": "https://www.greatnwrv.com/",
+  "t": "mobile",
+  "e": false,
+  "d": "Fully mobile RV repair and maintenance based in Tigard, serving all of Oregon, southwest Washington, and most of the Pacific Northwest. They come to your camp, home, or storage, and say they can solve about 75% of problems the same day. Licensed, insured, and RVTI certified.",
+  "g": [
+   "RVTI certified",
+   "Statewide",
+   "Mobile only"
+  ],
+  "base": "Tigard",
+  "region": "Oregon"
+ },
+ {
+  "n": "Tillamook RV Repair & Sales",
+  "c": "Tillamook and the north coast",
+  "p": "503-842-7702",
+  "u": "https://tillamookrvrepairandsales.com/",
+  "t": "both",
+  "e": false,
+  "d": "Family-owned RV repair shop on Highway 101 in Tillamook, working on everything from leaks to roof replacement, with a showroom for parts and accessories. They also offer mobile service, so they will come to you as well as take drop-offs.",
+  "g": [
+   "Family owned",
+   "Shop + mobile",
+   "Parts showroom"
+  ],
+  "base": "Tillamook",
+  "areas": [
+   "Rockaway Beach",
+   "Garibaldi",
+   "Manzanita",
+   "Wheeler",
+   "Nehalem",
+   "Oceanside"
+  ],
+  "region": "Oregon coast"
+ },
+ {
+  "n": "Page's Mobile RV Service",
+  "c": "La Grande, from Nampa Idaho",
+  "p": "208-989-8552",
+  "u": "https://www.pagesmobilerv.com/",
+  "t": "mobile",
+  "e": false,
+  "d": "Mobile RV repair and service covering the La Grande area of Oregon as well as the Treasure Valley. Air conditioner service, electrical, furnace repair, general repair, hot water heaters, plumbing, propane systems, and refrigeration. Based in Nampa, Idaho, and travels to you. Leave a message to schedule.",
+  "g": [
+   "Serves La Grande",
+   "Mobile only",
+   "Idaho based"
+  ],
+  "base": "La Grande",
+  "region": "Eastern Oregon"
  }
 ];

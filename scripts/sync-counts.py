@@ -19,8 +19,9 @@ total = mob = cen = road = emer = 0
 for lf in sorted((ROOT / "assets" / "js" / "listings").glob("listings-*.js")):
     rows = json.loads(re.search(r"=\s*(\[.*\])\s*;", lf.read_text(encoding="utf-8"), re.S).group(1))
     total += len(rows)
-    mob += sum(1 for r in rows if r.get("t") == "mobile")
-    cen += sum(1 for r in rows if r.get("t") == "center")
+    # A "both" business comes to you AND takes drop-offs, so it counts in each.
+    mob += sum(1 for r in rows if r.get("t") != "center")
+    cen += sum(1 for r in rows if r.get("t") != "mobile")
     road += sum(1 for r in rows if r.get("r"))
     emer += sum(1 for r in rows if r.get("e"))
 
