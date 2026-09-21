@@ -19,7 +19,8 @@
   <url><loc>https://yourdomain.com/guides/roof-snow-load.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
   <!-- Directory -->
-  <url><loc>https://yourdomain.com/directory/index.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://yourdomain.com/directory/index.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://yourdomain.com/directory/oregon.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 
   <url><loc>https://yourdomain.com/about.html</loc><changefreq>monthly</changefreq><priority>0.4</priority></url>
   <url><loc>https://yourdomain.com/contact.html</loc><changefreq>monthly</changefreq><priority>0.4</priority></url>

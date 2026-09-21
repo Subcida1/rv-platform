@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Sync the directory page's static stat placeholders to the listings data.
+"""Sync the Oregon directory page's static stat placeholders to the listings data.
 
 The stats strip and result count are rewritten by JavaScript at runtime, but the
 static values in the HTML are what a no-JS visitor or a crawler sees first, and
@@ -13,7 +13,7 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-PAGE = ROOT / "directory" / "index.html"
+PAGE = ROOT / "directory" / "oregon.html"
 
 total = mob = cen = road = emer = 0
 for lf in sorted((ROOT / "assets" / "js" / "listings").glob("listings-*.js")):

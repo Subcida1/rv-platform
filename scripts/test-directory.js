@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-/* Functional test for directory/index.html.
+/* Functional test for directory/oregon.html.
    Loads the page's real inline script against a DOM stub and drives it with
    real Oregon towns, then asserts what the directory actually promises:
    a business that names your town outranks one that is merely based nearby,
@@ -11,7 +11,7 @@ const path = require('path');
 const vm = require('vm');
 
 const ROOT = path.resolve(__dirname, '..');
-const html = fs.readFileSync(path.join(ROOT, 'directory/index.html'), 'utf8');
+const html = fs.readFileSync(path.join(ROOT, 'directory/oregon.html'), 'utf8');
 const blocks = [...html.matchAll(/<script(?![^>]*\bsrc=)[^>]*>([\s\S]*?)<\/script>/g)].map(m => m[1]);
 const code = blocks.find(b => b.includes('RV_LISTINGS_OR'));
 if (!code) { console.error('FAIL: could not find the page script'); process.exit(1); }
@@ -39,7 +39,7 @@ const document = {
 };
 const sandbox = {
   window: {}, document, navigator: {}, console, setTimeout: () => {}, clearTimeout: () => {},
-  location: { pathname: '/directory/index.html' },
+  location: { pathname: '/directory/oregon.html' },
 };
 sandbox.window.location = sandbox.location;
 vm.createContext(sandbox);

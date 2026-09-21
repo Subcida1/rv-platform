@@ -30,6 +30,7 @@ window.RV_CONFIG = {
  guideTires: 'guides/tires-winter.html',
  guideRoof: 'guides/roof-snow-load.html',
  directory: 'directory/index.html',
+ directoryOregon: 'directory/oregon.html',
  about: 'about.html',
  contact: 'contact.html',
  signin: 'signin.html'
