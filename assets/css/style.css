@@ -1,5 +1,5 @@
 /* ============================================================
-   Origin RV Design System (Light Theme)
+   OriginRV Design System (Light Theme)
    Big-brand standardized UI, sunset gradient identity
    ============================================================ */
 :root{
@@ -403,7 +403,7 @@ footer a:hover{color:#fff}
 }
 
 /* ============================================================
-   Origin RV Design System v2 (Light, gradient-forward, big-brand)
+   OriginRV Design System v2 (Light, gradient-forward, big-brand)
    Fleshes out every page; the 5 core pages use this deeply.
    ============================================================ */
 
@@ -624,7 +624,7 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 }
 
 /* ============================================================
-   Weight calculator (Origin RV, added 2026-09-16)
+   Weight calculator (OriginRV, added 2026-09-16)
    ============================================================ */
 .wc-layout{display:grid;grid-template-columns:1.35fr 1fr;gap:30px;align-items:start}
 @media(max-width:1024px){.wc-layout{grid-template-columns:1fr}}

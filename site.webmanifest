@@ -1,6 +1,6 @@
 {
-  "name": "Origin RV",
-  "short_name": "Origin RV",
+  "name": "OriginRV",
+  "short_name": "OriginRV",
   "description": "Free RV tools, plain-English guides, and an RV repair directory.",
   "start_url": "/",
   "display": "standalone",

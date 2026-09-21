@@ -1,5 +1,5 @@
 /* ============================================================
- Origin RV, base.js (load FIRST in <head>, depth-relative)
+ OriginRV, base.js (load FIRST in <head>, depth-relative)
  Computes the site root from its OWN script URL and injects
  <base href> so every link on the page resolves at any depth:
  live: https://originrv.com/

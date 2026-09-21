@@ -35,7 +35,8 @@ def strip_bodies(txt):
 PUBLISHED = ("*.html", "*.js", "*.css", "*.xml", "*.txt", "*.webmanifest", "*.json")
 BANNED = ((r"\brigs?\b", "rig (they are RVs)"),
           (r"rvverse", "retired brand: RVVerse"),
-          (r"rv everything", "retired brand: RV Everything"))
+          (r"rv everything", "retired brand: RV Everything"),
+          (r"origin\s+rv\b", "brand renders OriginRV, no space in the middle"))
 
 
 def published_files(include_python=False):

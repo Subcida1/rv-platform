@@ -20,13 +20,13 @@ ICON_BLOCK = """<link rel="icon" type="image/svg+xml" href="assets/img/brand/fav
 {ind}<link rel="manifest" href="site.webmanifest">
 {ind}<meta name="theme-color" content="#f43f5e">"""
 
-OG_ANCHOR = '<meta property="og:site_name" content="Origin RV">'
+OG_ANCHOR = '<meta property="og:site_name" content="OriginRV">'
 OG_BLOCK = """<meta property="og:image" content="{c}/assets/img/brand/og-default.png">
 {ind}<meta property="og:image:width" content="1200">
 {ind}<meta property="og:image:height" content="630">
-{ind}<meta property="og:image:alt" content="Origin RV">
+{ind}<meta property="og:image:alt" content="OriginRV">
 {ind}<meta name="twitter:image" content="{c}/assets/img/brand/og-default.png">
-{ind}<meta name="twitter:image:alt" content="Origin RV">"""
+{ind}<meta name="twitter:image:alt" content="OriginRV">"""
 
 pages = sorted(p for p in ROOT.rglob("*.html") if ".git" not in p.parts)
 patched, skipped = [], []

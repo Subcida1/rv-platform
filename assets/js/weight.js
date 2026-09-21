@@ -1,5 +1,5 @@
 /* ============================================================
- Origin RV . Weight & Distribution Calculator
+ OriginRV . Weight & Distribution Calculator
  ONE tool: tow vehicle + trailer + cargo, every weight question
  (GVWR, payload, tongue/pin, axles, 80% rule)
  Manual entry, instant recompute, color-coded verdicts.

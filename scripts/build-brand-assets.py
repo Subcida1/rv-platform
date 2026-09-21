@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the Origin RV brand asset set: favicon, app icons, and the social card.
+"""Build the OriginRV brand asset set: favicon, app icons, and the social card.
 
 Everything visual that carries the brand is generated here from ONE geometry
 definition, so the SVG favicon and the PNG icons cannot drift apart. Change a
@@ -134,7 +134,7 @@ def favicon_svg(tile=64, radius_ratio=0.23, fill=0.62, stroke=GLYPH_STROKE):
     w = stroke * s
     return (
         '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %(t)d %(t)d" role="img" '
-        'aria-label="Origin RV">\n'
+        'aria-label="OriginRV">\n'
         '  <defs>\n'
         '    <linearGradient id="orv" x1="0" y1="0" x2="1" y2="1">\n'
         '      <stop offset="0" stop-color="#f97316"/>\n'
@@ -175,7 +175,7 @@ def og_card(path, w=1200, h=630):
     card.alpha_composite(tile, (88, 92))
 
     draw = ImageDraw.Draw(card)
-    draw.text((88, 250), "Origin RV", font=ImageFont.truetype(FONT_BLACK, 92),
+    draw.text((88, 250), "OriginRV", font=ImageFont.truetype(FONT_BLACK, 92),
               fill=INK, anchor="la")
     draw.text((88, 372), "Every mile of the RV life, one toolkit.",
               font=ImageFont.truetype(FONT_REGULAR, 38), fill=INK_2, anchor="la")
@@ -244,8 +244,8 @@ def main():
 
     (ROOT / "site.webmanifest").write_text(
         '{\n'
-        '  "name": "Origin RV",\n'
-        '  "short_name": "Origin RV",\n'
+        '  "name": "OriginRV",\n'
+        '  "short_name": "OriginRV",\n'
         '  "description": "Free RV tools, plain-English guides, and an RV repair directory.",\n'
         '  "start_url": "/",\n'
         '  "display": "standalone",\n'
