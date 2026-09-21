@@ -166,6 +166,16 @@ if (sb.window.RV && typeof sb.window.RV.searchRoute === 'function') {
     const biz = S.search('rv repair', 10).filter(x => x.c === 'Business').length;
     if (biz <= 2) console.log('  ok   businesses capped in results (' + biz + ')');
     else { console.log('  FAIL businesses flooded results: ' + biz); failed++; }
+    // every category needs an explicit display label, or the naive pluraliser
+    // produces "Directorys" (seen in a live screenshot)
+    const src = fs.readFileSync(path.join(ROOT, 'assets/js/search.js'), 'utf8');
+    const labels = (src.match(/var LABEL = \{([^}]*)\}/) || [,''])[1];
+    const cats = [...new Set(IDX.map(x => x.c))];
+    const unlabelled = cats.filter(c => labels.indexOf(c + ':') < 0);
+    if (!unlabelled.length) console.log('  ok   every category has a display label (' + cats.join(', ') + ')');
+    else { console.log('  FAIL unlabelled categories: ' + unlabelled.join(', ')); failed++; }
+    if (/Directorys|Pages?s\+|Guides?s\+/.test(src)) { console.log('  FAIL naive pluraliser still present'); failed++; }
+
     const every = IDX.every(x => x.t && x.u && fs.existsSync(path.join(ROOT, x.u)));
     if (every) console.log('  ok   every index entry points at a real page');
     else { console.log('  FAIL an index entry points at a missing page'); failed++; }

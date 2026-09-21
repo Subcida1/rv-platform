@@ -75,6 +75,8 @@
     return out;
   }
 
+  var LABEL = { Tool: 'Tools', Guide: 'Guides', Directory: 'Directories', Page: 'Pages', Business: 'Businesses' };
+
   function highlight(text, q) {
     if (!q) return esc(text);
     // match on the normalised forms, then map back to the original offsets
@@ -130,7 +132,7 @@
       for (var i = 0; i < list.length; i++) {
         var it = list[i];
         if (it.c !== lastCat) {
-          html += '<div class="srch-cat">' + esc(it.c === 'Business' ? 'Businesses' : it.c + 's') + '</div>';
+          html += '<div class="srch-cat">' + esc(LABEL[it.c] || it.c) + '</div>';
           lastCat = it.c;
         }
         html += '<a class="srch-opt" role="option" id="srch-opt-' + i + '" href="' + esc(it.u) + '"' +
