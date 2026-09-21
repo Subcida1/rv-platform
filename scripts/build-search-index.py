@@ -23,7 +23,7 @@ def title_desc(p):
     d = re.search(r'<meta name="description" content="(.*?)">', raw, re.S)
     # drop the trailing brand segment from titles
     title = html.unescape(t.group(1)).strip() if t else p.stem
-    title = re.sub(r"\s*[|\u00b7]\s*RV Everything\s*$", "", title)
+    title = re.sub(r"\s*[|\u00b7]\s*Origin RV\s*$", "", title)
     return title, (html.unescape(d.group(1)).strip() if d else "")
 
 
@@ -101,8 +101,8 @@ def businesses():
 def pages():
     out = []
     for name, label, keys in [
-        ("index.html", "RV Everything home", "home start free rv tools"),
-        ("about.html", "About RV Everything", "about who contact rv everything"),
+        ("index.html", "Origin RV home", "home start free rv tools"),
+        ("about.html", "About Origin RV", "about who contact rv everything"),
         ("contact.html", "Contact", "contact email question feedback"),
         ("signin.html", "Sign in", "sign in account login"),
         ("guides/index.html", "All RV guides", "all guides index list"),

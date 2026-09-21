@@ -28,7 +28,7 @@ PAGES = [
 ]
 START = "<!-- SCHEMA:PROVIDERS-START -->"
 END = "<!-- SCHEMA:PROVIDERS-END -->"
-SITE = "https://yourdomain.com"
+SITE = "https://originrv.com"
 
 
 def area_of(row):
@@ -68,7 +68,7 @@ def build(page, state, desc, about, rows):
         "name": "RV Repair in %s" % state,
         "description": desc,
         "url": SITE + "/" + page,
-        "isPartOf": {"@type": "WebSite", "name": "RV Everything", "url": SITE + "/"},
+        "isPartOf": {"@type": "WebSite", "name": "Origin RV", "url": SITE + "/"},
         "about": {"@type": "Thing", "name": about},
         "mainEntity": {"@type": "ItemList", "numberOfItems": len(elements), "itemListElement": elements},
     }
@@ -76,7 +76,7 @@ def build(page, state, desc, about, rows):
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": "RV Everything", "item": SITE + "/"},
+            {"@type": "ListItem", "position": 1, "name": "Origin RV", "item": SITE + "/"},
             {"@type": "ListItem", "position": 2, "name": "RV Repair Directory", "item": SITE + "/directory/"},
             {"@type": "ListItem", "position": 3, "name": state, "item": SITE + "/" + page},
         ],

@@ -1,6 +1,5 @@
-# RV Everything robots.txt
-# Replace yourdomain.com with the real domain when the name locks (one search-replace across the site).
+# Origin RV robots.txt
 User-agent: *
 Allow: /
 
-Sitemap: https://yourdomain.com/sitemap.xml
+Sitemap: https://originrv.com/sitemap.xml

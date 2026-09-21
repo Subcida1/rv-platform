@@ -1,5 +1,5 @@
 /* ============================================================
- RV Everything, site search.
+ Origin RV, site search.
  A live dropdown over the whole site: guides, tools, directory
  pages and every listed business, from window.RV_SEARCH (built by
  scripts/build-search-index.py).

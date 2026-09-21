@@ -1,5 +1,5 @@
 /* ============================================================
- RV Everything, shell (working title)
+ Origin RV, shell
  Static shell, nav/footer injection, home search routing
  Everything replaceable lives in assets/js/config.js (brand,
  contact, domain, routes). This file only consumes it.
