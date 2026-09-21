@@ -66,7 +66,7 @@ def directories():
         out.append({
             "t": names.get(p.stem, t), "u": "directory/%s" % p.name, "c": "Directory",
             "k": ("rv repair directory businesses find a tech near me " + p.stem).lower(),
-            "d": "Verified RV repair businesses. %s" % (d[:120] if d else ""),
+            "d": (d[:120] if d else ""),
         })
     return out
 
@@ -102,7 +102,7 @@ def pages():
     out = []
     for name, label, keys in [
         ("index.html", "Origin RV home", "home start free rv tools"),
-        ("about.html", "About Origin RV", "about who contact rv everything"),
+        ("about.html", "About Origin RV", "about who contact origin rv"),
         ("contact.html", "Contact", "contact email question feedback"),
         ("signin.html", "Sign in", "sign in account login"),
         ("guides/index.html", "All RV guides", "all guides index list"),

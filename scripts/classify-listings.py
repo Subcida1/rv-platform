@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
-"""Classify each listing: can it help when the rig cannot move, or only when
+"""Classify each listing: can it help when the RV cannot move, or only when
 something inside it has failed?
 
-Roadside and automotive work means the vehicle itself is the problem: the rig
+Roadside and automotive work means the vehicle itself is the problem: the RV
 is on the shoulder, the chassis, engine, brakes, drivetrain, or towing. That is
 what someone clicking "I am stuck right now" actually needs.
 
 Habitation work is inside the coach: appliances, plumbing, furnace, water
 heater, roof, slide-outs. Urgent, mobile, often the same day, but not roadside,
-and the rig can usually wait for a booked visit.
+and the RV can usually wait for a booked visit.
 
 Read-only. Prints the matched wording so a human can judge each one.
 

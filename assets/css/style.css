@@ -1,5 +1,5 @@
 /* ============================================================
-   RVVerse Design System (Light Theme)
+   Origin RV Design System (Light Theme)
    Big-brand standardized UI, sunset gradient identity
    ============================================================ */
 :root{
@@ -177,11 +177,9 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
 .price small{font-size:12px;color:var(--text-3);font-weight:500}
 .cta{font-size:13.5px;font-weight:700;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;display:inline-flex;align-items:center;gap:5px}
 
-/* rig / camp grids */
-.rig-grid,.camp-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.rig-card .card-media{height:170px}
+/* camp grids */
+.camp-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
 .camp-card .card-media{height:150px}
-.rig-card .card-media svg{width:120px}
 .camp-card .card-media svg{width:112px}
 
 /* parts */
@@ -378,7 +376,7 @@ footer a:hover{color:#fff}
 
 /* ================= RESPONSIVE ================= */
 @media(max-width:1024px){
-  .cat-grid,.rig-grid,.camp-grid,.part-grid{grid-template-columns:repeat(2,1fr)}
+  .cat-grid,.camp-grid,.part-grid{grid-template-columns:repeat(2,1fr)}
   .tech-grid,.deal-grid,.guide-grid,.service-grid{grid-template-columns:repeat(2,1fr)}
   .tools-grid{grid-template-columns:1fr;gap:36px}
   .com-grid{grid-template-columns:1fr}
@@ -393,19 +391,19 @@ footer a:hover{color:#fff}
 @media(max-width:720px){
   .nav-links,.util-r span{display:none}
   .burger{display:block}
-  .hero-stats,.cat-grid,.rig-grid,.camp-grid,.part-grid{grid-template-columns:repeat(2,1fr)}
+  .hero-stats,.cat-grid,.camp-grid,.part-grid{grid-template-columns:repeat(2,1fr)}
   .tech-grid,.deal-grid,.guide-grid,.service-grid{grid-template-columns:1fr}
   .foot-grid{grid-template-columns:1fr 1fr}
   .sec{padding:64px 0}
   .util-l span{display:none}
 }
 @media(max-width:520px){
-  .hero-stats,.cat-grid,.rig-grid,.camp-grid,.part-grid{grid-template-columns:1fr}
+  .hero-stats,.cat-grid,.camp-grid,.part-grid{grid-template-columns:1fr}
   .hero .wrap{padding:0 18px}
 }
 
 /* ============================================================
-   RVVerse Design System v2 (Light, gradient-forward, big-brand)
+   Origin RV Design System v2 (Light, gradient-forward, big-brand)
    Fleshes out every page; the 5 core pages use this deeply.
    ============================================================ */
 
@@ -475,8 +473,7 @@ footer a:hover{color:#fff}
 .save-heart{position:absolute;top:12px;right:12px;z-index:3;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.94);border:1px solid var(--border);display:grid;place-items:center;font-size:16px;cursor:pointer;transition:.15s;box-shadow:var(--shadow-sm)}
 .save-heart:hover{transform:scale(1.08)}
 .save-heart.saved{color:var(--c-rose)}
-.rig-grid,.camp-grid,.part-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.rig-card .card-media{height:172px}
+.camp-grid,.part-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
 .camp-card .card-media{height:152px}
 .camp-card .card-media svg{width:118px}
 
@@ -612,7 +609,7 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .6s cubic-bezier(.22,.61,.36,1),transform .6s cubic-bezier(.22,.61,.36,1)}
 .reveal.in{opacity:1;transform:none}
 @media(max-width:1024px){
-  .cat-grid,.rig-grid,.camp-grid,.part-grid{grid-template-columns:repeat(2,1fr)}
+  .cat-grid,.camp-grid,.part-grid{grid-template-columns:repeat(2,1fr)}
   .layout{grid-template-columns:1fr}.filters{position:static;max-height:none}
   .detail,.gps-sim{grid-template-columns:1fr}
   .sidebar{position:static}
@@ -621,13 +618,13 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
   .big-card{padding:22px 14px}
 }
 @media(max-width:720px){
-  .cat-grid,.rig-grid,.camp-grid,.part-grid{grid-template-columns:repeat(2,1fr)}
+  .cat-grid,.camp-grid,.part-grid{grid-template-columns:repeat(2,1fr)}
   .authority .big-row,.trip-nums{grid-template-columns:1fr}
   .phone{margin:20px auto}
 }
 
 /* ============================================================
-   Weight calculator (RV Everything, added 2026-09-16)
+   Weight calculator (Origin RV, added 2026-09-16)
    ============================================================ */
 .wc-layout{display:grid;grid-template-columns:1.35fr 1fr;gap:30px;align-items:start}
 @media(max-width:1024px){.wc-layout{grid-template-columns:1fr}}
@@ -1100,7 +1097,7 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 .results-top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:14px}
 
 /* Emergency / roadside badge on directory listings.
-   Two kinds, two colors. Roadside (the rig may not move) is the more urgent
+   Two kinds, two colors. Roadside (the RV may not move) is the more urgent
    and stays red. Emergency mobile repair (something inside failed) is amber. */
 .listing-emerg{display:inline-block;font-size:11.5px;font-weight:800;color:#8a5a00;background:#fff6e5;border:1px solid #f0d9a8;border-radius:999px;padding:4px 10px;align-self:flex-start}
 .listing-emerg.roadside{color:#b42338;background:#fdeeee;border-color:#f2b8be}

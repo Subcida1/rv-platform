@@ -2,8 +2,7 @@
  Origin RV, base.js (load FIRST in <head>, depth-relative)
  Computes the site root from its OWN script URL and injects
  <base href> so every link on the page resolves at any depth:
- today: https://subcida1.github.io/rv-platform/
- after: https://originrv.com/
+ live: https://originrv.com/
  All internal links are written base-relative (no ../), which
  makes the site depth-independent and domain-swap-proof.
  ============================================================ */

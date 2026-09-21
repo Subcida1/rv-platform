@@ -112,7 +112,7 @@ print("  (%d of %d need a look)" % (len(dead), len(results)))
 
 print("\n" + "=" * 100)
 print("EMERGENCY / ROADSIDE TAG vs SITE EVIDENCE")
-print("  roadside = rig may not move; emergency = something inside failed")
+print("  roadside = RV may not move; emergency = something inside failed")
 print("=" * 100)
 tagged_no_ev = [r for r in results if r.get("tag") and not r.get("evidence")]
 untagged_ev = [r for r in results if not r.get("tag") and r.get("evidence")]

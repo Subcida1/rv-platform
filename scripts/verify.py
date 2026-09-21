@@ -32,11 +32,22 @@ def strip_bodies(txt):
     return re.sub(r"<style\b[^>]*>.*?</style>", "", txt, flags=re.S | re.I)
 
 
+PUBLISHED = ("*.html", "*.js", "*.css", "*.xml", "*.txt", "*.webmanifest", "*.json")
+BANNED = ((r"\brigs?\b", "rig (they are RVs)"),
+          (r"rvverse", "retired brand: RVVerse"),
+          (r"rv everything", "retired brand: RV Everything"))
+
+
+def published_files(include_python=False):
+    out = []
+    for pat in PUBLISHED + (("*.py",) if include_python else ()):
+        out += [p for p in ROOT.rglob(pat) if ".git" not in p.parts]
+    return sorted(set(out))
+
+
 print("=== dash rule (no em dash, en dash, middot in anything we publish) ===")
 bad = []
-for p in sorted(list(ROOT.rglob("*.html")) + list(ROOT.rglob("*.js")) + list(ROOT.rglob("*.css"))):
-    if ".git" in p.parts:
-        continue
+for p in published_files():
     txt = p.read_text(encoding="utf-8", errors="replace")
     for ch, name in (("\u2014", "em dash"), ("\u2013", "en dash"), ("\u00b7", "middot")):
         i = txt.find(ch)
@@ -45,6 +56,21 @@ for p in sorted(list(ROOT.rglob("*.html")) + list(ROOT.rglob("*.js")) + list(ROO
 print("  clean" if not bad else "\n".join("  " + b for b in bad))
 if bad:
     fails.append("dash rule")
+
+print("\n=== banned words (hard rules: RVs not rigs, no retired brand names) ===")
+bad = []
+for p in published_files(include_python=True):
+    if p == Path(__file__).resolve():  # this checker names the banned words itself
+        continue
+    txt = p.read_text(encoding="utf-8", errors="replace")
+    for pat, label in BANNED:
+        m = re.search(pat, txt, re.I)
+        if m:
+            bad.append("%s:%d %s -> %r" % (p.relative_to(ROOT), txt[:m.start()].count("\n") + 1,
+                                            label, m.group(0)))
+print("  clean" if not bad else "\n".join("  " + b for b in bad))
+if bad:
+    fails.append("banned words")
 
 print("\n=== tag balance ===")
 bad = []

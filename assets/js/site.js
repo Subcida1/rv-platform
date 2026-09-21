@@ -84,11 +84,10 @@
  return '<div class="foot-top"><div class="wrap"><div class="foot-grid">' +
  '<div class="foot-brand">' + logoHTML() +
  '<p>' + esc(CFG.brand.tag) + '</p>' +
- (CFG.brand.temp ? '<p class="muted" style="font-size:12px">Working title, name in progress.</p>' : '') +
  '</div>' +
  '<div class="foot-col"><h5>Tools</h5><a href="' + R(rt.calculator) + '">Weight calculator</a><a href="' + R(rt.calculator) + '#why">Why it matters</a><a href="' + R(rt.calculator) + '#embed">Embed on your site</a></div>' +
  '<div class="foot-col"><h5>Guides</h5><a href="' + R(rt.guideWinterize) + '">Winterize plumbing</a><a href="' + R(rt.guideBattery) + '">Battery cold storage</a><a href="' + R(rt.guideTires) + '">Tires through winter</a><a href="' + R(rt.guideRoof) + '">Roof snow load</a></div>' +
- '<div class="foot-col"><h5>Directory</h5><a href="' + R(rt.directory) + '">Find a service</a><a href="' + R(rt.directory) + '#claim">Claim your business</a><a href="' + R(rt.directory) + '#seed">How listings get built</a></div>' +
+ '<div class="foot-col"><h5>Directory</h5><a href="' + R(rt.directory) + '">Find a service</a><a href="' + R(rt.directory) + '#claim">Claim your business</a><a href="' + R(rt.directory) + '#seed">What a listing carries</a></div>' +
  '<div class="foot-col"><h5>Company</h5><a href="' + R(rt.about) + '">About</a><a href="' + R(rt.contact) + '">Contact</a><a href="' + R(rt.tools) + '">All tools</a></div>' +
  '</div></div>' +
  '<div class="wrap foot-bottom"><span>© 2026 ' + esc(CFG.brand.legal) + '. Built for the open road.</span>' +
