@@ -86,7 +86,9 @@ check('nearest stated base wins', first() === 'JBK RV Mobile Repair', 'first=' +
 check('next nearest follows', names()[1] === 'Jackson RV', 'second=' + names()[1]);
 check('every card carries a distance badge', badges().every(b => b === 'distance'), JSON.stringify(badges()));
 // Businesses with no stated base only surface once the radius is wide open.
-for (let i = 0; i < 6; i++) els['d-more'].fire('click');
+// Click until nothing more is offered rather than a fixed count, so this does
+// not quietly stop reaching the end as the directory grows.
+for (let i = 0; i < 60 && hasMore(); i++) els['d-more'].fire('click');
 const shown2 = names(), b2 = badges();
 check('widening reaches the businesses with no stated base',
   shown2.includes('Kings Mobile RV Service') && shown2.includes('Happy Mobile RV Repair'), shown2.length + ' cards');
@@ -96,10 +98,19 @@ check('they sit below everything we can place on the map',
 
 console.log('\n3. A town a mobile tech names beats a tech that is merely nearby');
 typeLocation('Port Orford');
-check('claimants come first', cards().slice(0, 2).every(c => badgeOf(c) === 'serves'), JSON.stringify(badges()));
-check('both claimants of Port Orford are there',
-  /Kings Mobile/.test(cards()[0] + cards()[1]) && /Bandon Mobile/.test(cards()[0] + cards()[1]), names().slice(0, 2).join(' | '));
-check('distance ranked listings follow', badgeOf(cards()[2]) === 'distance', names()[2]);
+// The group that reaches Port Orford, however many businesses end up in it.
+const claimGroup = (function () {
+  const bs = badges(), out = [];
+  for (let i = 0; i < bs.length; i++) {
+    if (bs[i] === 'serves' || bs[i] === 'home') out.push(names()[i]); else break;
+  }
+  return out;
+})();
+check('claimants lead the list', claimGroup.length >= 2, JSON.stringify(badges()));
+check('both claimants of Port Orford are in that group',
+  claimGroup.indexOf('Kings Mobile RV Service') > -1 && claimGroup.indexOf('Bandon Mobile RV Repair') > -1,
+  claimGroup.join(' | '));
+check('distance ranked listings follow', badgeOf(cards()[claimGroup.length]) === 'distance', names()[claimGroup.length]);
 
 console.log('\n4. A business in your town versus one that only names it from away');
 typeLocation('Bend');
@@ -160,7 +171,7 @@ check('ZIP appears in the sort note', /of 97301/.test(sortNote()), sortNote());
 check('ZIP is explained in words', /near Salem/.test(els['loc-note'].textContent), els['loc-note'].textContent);
 typeLocation('97465');
 check('a ZIP inside a claimed town still matches the claim',
-  cards().slice(0, 2).every(c => badgeOf(c) === 'serves'), JSON.stringify(badges()));
+  cards().slice(0, 2).every(c => ['serves', 'home'].indexOf(badgeOf(c)) > -1), JSON.stringify(badges()));
 typeLocation('Bandon');
 check('a listing based where you are reads as in town',
   first() === 'Bandon Mobile RV Repair' && /In your town/.test(cards()[0]), names()[0] + ' / ' + badgeOf(cards()[0]));

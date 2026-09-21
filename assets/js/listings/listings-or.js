@@ -766,5 +766,55 @@ window.RV_LISTINGS_OR = [
    "Bandon"
   ],
   "region": "Oregon coast"
+ },
+ {
+  "n": "Brothers RV",
+  "c": "Central Point, serving Southern Oregon",
+  "p": "541-500-1768",
+  "u": "https://brothersrvrepair.com/",
+  "t": "both",
+  "e": false,
+  "d": "Family-owned RV coach and living-quarters repair in Central Point, serving Jackson, Josephine, Klamath, Siskiyou, and Curry counties. Roof replacement, refrigerator and slide-out repair, maintenance and winterizing, insurance claim and warranty work, and RV storage. They repair the systems that make an RV feel like home, and state plainly: never engines, chassis, or suspension. About 30 years of combined experience, family-owned since 2020. Mobile when the job allows.",
+  "g": [
+   "Family owned",
+   "Roof and slide-outs",
+   "Coach systems only"
+  ],
+  "base": "Central Point",
+  "areas": [
+   "Medford",
+   "White City",
+   "Eagle Point",
+   "Ashland",
+   "Jackson County",
+   "Josephine County",
+   "Klamath County",
+   "Siskiyou County",
+   "Curry County"
+  ],
+  "region": "Southern Oregon",
+  "spec": "Coach systems only"
+ },
+ {
+  "n": "JC RV Repair",
+  "c": "Junction City, Lane and Linn counties",
+  "p": "541-554-0354",
+  "u": "http://jcrvrepair.com/",
+  "t": "mobile",
+  "e": false,
+  "d": "Mobile RV repair serving Junction City, Harrisburg, Veneta, Eugene, Springfield, and all of Lane and Linn counties since 1996. On-site service only. Campers, trailers, and low-lying motorhomes. Cook tops, ovens, and refrigerators, water heater and air conditioner rebuilds or replacement, 12-volt and 120-volt electrical, outlets, converters, and inverters.",
+  "g": [
+   "Since 1996",
+   "Mobile only",
+   "Lane and Linn"
+  ],
+  "base": "Junction City",
+  "areas": [
+   "Harrisburg",
+   "Veneta",
+   "Eugene",
+   "Springfield"
+  ],
+  "region": "Willamette Valley"
  }
 ];
