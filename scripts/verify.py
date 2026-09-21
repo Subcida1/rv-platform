@@ -106,6 +106,36 @@ for p in sorted(x for x in ROOT.rglob("*.js") if ".git" not in x.parts):
         print("        " + r.stderr.decode()[:200])
         fails.append("js " + p.name)
 
+print("\n=== listing data integrity ===")
+# A directory whose whole job is putting a phone number in front of a stranded
+# RVer does not ship without one. Ty caught a listing rendering "Phone on their
+# site" instead. Never again: missing phone is a build failure.
+listing_files = sorted((ROOT / "assets" / "js" / "listings").glob("listings-*.js"))
+bad = []
+for lf in listing_files:
+    rows = json.loads(re.search(r"=\s*(\[.*\])\s*;", lf.read_text(encoding="utf-8"), re.S).group(1))
+    for row in rows:
+        name = row.get("n", "(unnamed)")
+        if not (row.get("p") or "").strip():
+            bad.append("%s: no phone number" % name)
+        if not (row.get("n") or "").strip():
+            bad.append("a listing has no name")
+        if not (row.get("c") or "").strip():
+            bad.append("%s: no city/area" % name)
+        if not (row.get("d") or "").strip():
+            bad.append("%s: no description" % name)
+        if row.get("t") not in ("mobile", "center"):
+            bad.append("%s: type must be mobile or center" % name)
+        if row.get("r") and row.get("e"):
+            bad.append("%s: claims both roadside and emergency" % name)
+    print("  %-40s %d listings" % (str(lf.relative_to(ROOT)), len(rows)))
+for b in bad:
+    print("  FAIL " + b)
+if bad:
+    fails.append("listing integrity")
+else:
+    print("  every listing carries a name, area, phone, description and a valid type")
+
 if "--links" in sys.argv:
     print("\n=== external listing links (live HTTP) ===")
     src = ROOT / "assets/js/listings/listings-or.js"

@@ -4,6 +4,9 @@
    coordinates at runtime from coords-or.js), areas towns the business states it
    covers, radius a service radius the business states in miles, region the
    business's own wording when it names only a region.
+   EVERY listing must carry a phone. A directory whose job is to put a phone
+   number in front of a stranded RVer does not ship without one, and
+   scripts/verify.py fails the build if one is missing.
    Coverage fields are copied from what each business publishes. Nothing invented.
    Two records carry no u on purpose: their sites are gone (one parked, one replaced
    by an unrelated template), but the business and phone number are verified.
@@ -118,7 +121,7 @@ window.RV_LISTINGS_OR = [
  {
   "n": "Fixin Trips Mobile RV Service",
   "c": "Bend and Central Oregon",
-  "p": "",
+  "p": "541-699-8799",
   "u": "https://www.fixintrips.com/",
   "t": "mobile",
   "e": false,
@@ -474,7 +477,7 @@ window.RV_LISTINGS_OR = [
  {
   "n": "Southside RV Repair and Shelter Factory",
   "c": "Corvallis",
-  "p": "",
+  "p": "541-754-9390",
   "u": "https://www.southsiderv.com/auto-repair",
   "t": "center",
   "e": false,
@@ -505,7 +508,7 @@ window.RV_LISTINGS_OR = [
  {
   "n": "Jackson RV",
   "c": "Medford",
-  "p": "",
+  "p": "541-773-6307",
   "u": "http://jacksonrv.com/",
   "t": "center",
   "e": false,
