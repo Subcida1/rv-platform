@@ -121,18 +121,33 @@
  }
 
  /* ---------- home search routing ---------- */
+ /* Ordered on purpose: a question about DOING something (tow it, find a tech)
+    beats a question about reading about it, and a specific guide beats the
+    index. Each row is [route, keywords]; first match wins. */
  function searchRoute(q) {
  var rt = CFG.routes;
  q = (q || '').trim().toLowerCase();
  if (!q) return R(rt.guides);
- var toolWords = ['weight', 'tow', 'towing', 'pin', 'hitch', 'gvwr', 'cargo', 'payload', 'tongue', 'axle', 'scale'];
- var dirWords = ['tech', 'technician', 'repair', 'service', 'directory', 'shop', 'mechanic', 'near me'];
- if (toolWords.some(function (w) { return q.indexOf(w) >= 0; })) return R(rt.calculator);
- if (dirWords.some(function (w) { return q.indexOf(w) >= 0; })) return R(rt.directory);
- if (q.indexOf('plumb') >= 0) return R(rt.guideWinterize);
- if (q.indexOf('batt') >= 0) return R(rt.guideBattery);
- if (q.indexOf('tire') >= 0 || q.indexOf('tread') >= 0) return R(rt.guideTires);
- if (q.indexOf('roof') >= 0 || q.indexOf('snow') >= 0) return R(rt.guideRoof);
+ var TABLE = [
+ [rt.calculator, ['weight', 'tow', 'towing', 'towed', 'payload', 'tongue', 'pin weight',
+ 'hitch', 'gvwr', 'gcwr', 'cargo', 'axle', 'scale', 'overload']],
+ [rt.directoryOregon, ['tech', 'technician', 'mechanic', 'mobile repair', 'repair shop']],
+ [rt.directory, ['directory', 'near me', 'find a service', 'service center', 'service', 'repair']],
+ [rt.guideWinterize, ['winterize', 'winterizing', 'antifreeze', 'plumb', 'pipe', 'ptrap',
+ 'p-trap', 'drain', 'bypass']],
+ [rt.guideBattery, ['battery', 'batteries', 'lithium', 'lead acid', 'lifepo4', 'parasitic', 'charging']],
+ [rt.guideTires, ['flat spot', 'tire pressure', 'tire', 'tires', 'tread', 'covers']],
+ [rt.guideRoof, ['roof', 'snow', 'ice dam', 'leak', 'seal']],
+ [rt.guideFridge, ['fridge', 'refrigerator', 'not cooling', 'cooling', 'ammonia']],
+ [rt.guideHeater, ['water heater', 'hot water', 'heater', 'eco reset']],
+ [rt.guideTow, ['how much can i tow', 'towing capacity']]
+ ];
+ for (var i = 0; i < TABLE.length; i++) {
+ var words = TABLE[i][1];
+ for (var j = 0; j < words.length; j++) {
+ if (q.indexOf(words[j]) >= 0) return R(TABLE[i][0]);
+ }
+ }
  return R(rt.guides);
  }
 
@@ -155,7 +170,6 @@
  searchRoute: searchRoute
  };
  injectShell();
- maybeEmbedCredit();
  initReveal();
  initSearch();
 })();

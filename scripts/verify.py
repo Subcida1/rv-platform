@@ -106,6 +106,19 @@ for p in sorted(x for x in ROOT.rglob("*.js") if ".git" not in x.parts):
         print("        " + r.stderr.decode()[:200])
         fails.append("js " + p.name)
 
+print("\n=== runtime smoke test ===")
+# node --check only catches syntax. This EXECUTES each page's scripts against a
+# DOM stub, because a clean-syntax file can still throw at load and silently
+# kill everything after it. That is exactly what happened: site.js called an
+# undefined function, the throw killed initSearch(), and the home page search
+# form had no submit handler while every check still passed.
+r = subprocess.run(["node", "scripts/smoke-test.js"], capture_output=True, text=True, cwd=str(ROOT))
+for line in r.stdout.splitlines():
+    if line.strip():
+        print("  " + line.strip())
+if r.returncode != 0:
+    fails.append("runtime smoke test")
+
 print("\n=== listing data integrity ===")
 # A directory whose whole job is putting a phone number in front of a stranded
 # RVer does not ship without one. Ty caught a listing rendering "Phone on their
