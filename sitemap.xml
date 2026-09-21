@@ -1,13 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- RV Everything sitemap. Replace yourdomain.com when the domain locks. -->
+<!-- Sitemap. Replace yourdomain.com when the domain locks (one search-replace). -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://yourdomain.com/index.html</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+
+  <!-- The wedge: the weight calculator leads everything -->
   <url><loc>https://yourdomain.com/tools/weight-calculator.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://yourdomain.com/tools/index.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Guides hub and every guide -->
   <url><loc>https://yourdomain.com/guides/index.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://yourdomain.com/guides/rv-towing-capacity.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://yourdomain.com/guides/rv-tire-replacement.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yourdomain.com/guides/rv-water-heater-not-heating.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yourdomain.com/guides/rv-refrigerator-not-cooling.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://yourdomain.com/guides/winterize-plumbing.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://yourdomain.com/guides/battery-winter-storage.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://yourdomain.com/guides/tires-winter.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://yourdomain.com/guides/roof-snow-load.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Directory -->
   <url><loc>https://yourdomain.com/directory/index.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://yourdomain.com/signin.html</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
+
+  <url><loc>https://yourdomain.com/about.html</loc><changefreq>monthly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://yourdomain.com/contact.html</loc><changefreq>monthly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://yourdomain.com/signin.html</loc><changefreq>monthly</changefreq><priority>0.2</priority></url>
 </urlset>
