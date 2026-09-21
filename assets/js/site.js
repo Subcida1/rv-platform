@@ -161,12 +161,36 @@
  });
  }
 
+ /* ---------- claim form ----------
+   There is no backend and no form service, so the visitor's own mail client
+   carries the message. Returns false when no address is published, so the page
+   can say plainly that nothing was sent instead of faking a success. */
+ function claimMailto(form) {
+ var to = (CFG.contact && CFG.contact.email) || '';
+ if (!to) return false;
+ function v(id) { var el = form.querySelector('#' + id); return el ? el.value.trim() : ''; }
+ var st = v('cl-st');
+ var body = [
+ 'Business: ' + v('cl-name'),
+ 'City: ' + v('cl-city') + (st ? ', ' + st.toUpperCase() : ''),
+ 'Phone: ' + v('cl-phone'),
+ 'Website: ' + v('cl-site'),
+ '',
+ 'Sent from the claim form at originrv.com'
+ ].join('\n');
+ window.location.href = 'mailto:' + to +
+ '?subject=' + encodeURIComponent('Listing claim: ' + v('cl-name')) +
+ '&body=' + encodeURIComponent(body);
+ return true;
+ }
+
  /* ---------- init ---------- */
  window.RV = {
  brand: CFG.brand,
  contactEmail: CFG.contact ? CFG.contact.email : '',
  toggleMenu: toggleMenu,
- searchRoute: searchRoute
+ searchRoute: searchRoute,
+ claimMailto: claimMailto
  };
  injectShell();
  initReveal();

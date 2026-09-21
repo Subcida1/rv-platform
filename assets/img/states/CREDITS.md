@@ -12,10 +12,10 @@ Recorded anyway, because the source should be traceable.
 
 ## washington
 
-- File: [Mount Rainier - HCP - October 17, 2022 - 002.jpg](https://commons.wikimedia.org/wiki/File:Mount_Rainier_-_HCP_-_October_17%2C_2022_-_002.jpg)
-- Author: Vulturesong
+- File: [Mount Rainier on 21 June 2024.jpg](https://commons.wikimedia.org/wiki/File:Mount_Rainier_on_21_June_2024.jpg)
+- Author: Shawn Miller, Library of Congress
 - Licence: CC0 1.0 (public domain dedication) <https://creativecommons.org/publicdomain/zero/1.0/>
-- Tile alt text: Mount Rainier above a meadow, Mount Rainier National Park, Washington
+- Tile alt text: Mount Rainier above subalpine meadow, Mount Rainier National Park, Washington
 
 ## california
 

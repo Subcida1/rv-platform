@@ -73,7 +73,30 @@ try {
   failed++;
 }
 
-// 2. the shell must expose what pages depend on
+// 2c. the claim form must produce a real mailto to the published address,
+//     carrying the fields. There is no backend, so this handoff IS the delivery.
+if (sb.window.RV && typeof sb.window.RV.claimMailto === 'function') {
+  const fields = { 'cl-name': 'Cascade Mobile RV Repair', 'cl-city': 'Bend', 'cl-st': 'or',
+                   'cl-phone': '541-555-0123', 'cl-site': 'https://cascade.example' };
+  const fakeForm = { querySelector: sel => ({ value: fields[sel.replace('#', '')] || '' }) };
+  const before = String(sb.location.href);
+  let handled = false;
+  try { handled = sb.window.RV.claimMailto(fakeForm); } catch (e) { console.log('  FAIL claimMailto threw: ' + e.message); failed++; }
+  const href = String(sb.location.href);
+  const okAddr = href.startsWith('mailto:contact@originrv.com?');
+  const okBody = href.includes(encodeURIComponent('Business: Cascade Mobile RV Repair')) &&
+                 href.includes(encodeURIComponent('City: Bend, OR')) &&
+                 href.includes(encodeURIComponent('Phone: 541-555-0123')) &&
+                 href.includes(encodeURIComponent('Website: https://cascade.example'));
+  if (handled && okAddr && okBody) console.log('  ok   claim form builds a mailto carrying every field');
+  else {
+    console.log('  FAIL claim form mailto: handled=' + handled + ' addr=' + okAddr + ' body=' + okBody);
+    console.log('         ' + href.slice(0, 160));
+    failed++;
+  }
+} else { console.log('  FAIL RV.claimMailto is not exposed'); failed++; }
+
+// 2d. the shell must expose what pages depend on
 if (sb.window.RV) {
   for (const fn of ['toggleMenu', 'searchRoute']) {
     if (typeof sb.window.RV[fn] === 'function') console.log('  ok   RV.' + fn + ' exposed');

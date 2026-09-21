@@ -8,10 +8,10 @@ window.RV_CONFIG = {
  name: 'OriginRV',
  legal: 'OriginRV', // footer copyright
  tag: 'Every mile of the RV life, one toolkit.',
- mark: '<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17H3v-4l2-4h8l2 4h6v4h-2"/><rect x="6.5" y="9" width="6" height="4" rx="1"/><circle cx="7.5" cy="17.5" r="1.6" fill="#fff" stroke="none"/><circle cx="16.5" cy="17.5" r="1.6" fill="#fff" stroke="none"/></svg>'
+ mark: '<svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><polygon points="4 1.6 5.7 6.8 5 6.8 6.6 11.4 5.8 11.4 7.6 16 5.2 16 5.2 19.4 2.8 19.4 2.8 16 0.4 16 2.2 11.4 1.4 11.4 3 6.8 2.3 6.8"/><path fill-rule="evenodd" d="M8.2 16L8.2 13.6L9 13.2L11.6 10.4L8.6 10.4L8.9 8.2L23.6 8.2L23.6 16.6L9.6 16.6ZM13.6 10H16.4A0.4 0.4 0 0 1 16.8 10.4V12.2A0.4 0.4 0 0 1 16.4 12.6H13.6A0.4 0.4 0 0 1 13.2 12.2V10.4A0.4 0.4 0 0 1 13.6 10ZM18.4 10H20.8A0.4 0.4 0 0 1 21.2 10.4V12.2A0.4 0.4 0 0 1 20.8 12.6H18.4A0.4 0.4 0 0 1 18 12.2V10.4A0.4 0.4 0 0 1 18.4 10Z"/><circle cx="11.6" cy="18" r="1.4"/><circle cx="20.4" cy="18" r="1.4"/></svg>'
  },
  contact: {
- email: '', // set 'contact@originrv.com' once Cloudflare Email Routing forwards it
+ email: 'contact@originrv.com', // Cloudflare Email Routing forwards this to Ty's inbox
  routesTo: 'contact.html' // where the navbar "Contact" link goes
  },
  domain: {

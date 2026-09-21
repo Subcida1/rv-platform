@@ -22,6 +22,7 @@ Run: python3 scripts/build-brand-assets.py
 from pathlib import Path
 
 import io
+import re
 import struct
 
 import numpy as np
@@ -37,13 +38,40 @@ INK_2 = (85, 98, 122)       # --text-2
 INK_3 = (103, 116, 142)     # --text-3
 WHITE = (255, 255, 255)
 
-# The trailer glyph, in the same 24-unit space as CFG.brand.mark in config.js
-GLYPH_PATH = [(5, 17), (3, 17), (3, 13), (5, 9), (13, 9), (15, 13), (21, 13), (21, 17), (19, 17)]
-GLYPH_WINDOW = (6.5, 9.0, 12.5, 13.0)
-GLYPH_WHEELS = [(7.5, 17.5, 1.6), (16.5, 17.5, 1.6)]
-GLYPH_STROKE = 2.2
-# Glyph bounding box in 24-unit space, stroke included
-GB = (3 - GLYPH_STROKE / 2, 9 - GLYPH_STROKE / 2, 21 + GLYPH_STROKE / 2, 19.1)
+# The OriginRV mark, in a 24-unit space, drawn as filled silhouettes: a pine
+# tree beside a Class C motorhome. Ty, 2026-09-21: "make our logo a RV and a
+# tree or something not a car", then "make the RV longer, trace the shape of a
+# real RV like a class C".
+#
+# The Class C profile, front to back: van nose and bumper, windshield slanting
+# back and up, the cabover bunk overhanging forward above the windshield, a long
+# flat roof, and two wheels under a body that sits low between them. The cabover
+# overhang is what makes it read as a motorhome rather than a bus or a van.
+TREE = [(4.0, 1.6),
+        (5.7, 6.8), (5.0, 6.8),
+        (6.6, 11.4), (5.8, 11.4),
+        (7.6, 16.0),
+        (5.2, 16.0), (5.2, 19.4), (2.8, 19.4), (2.8, 16.0),
+        (0.4, 16.0),
+        (2.2, 11.4), (1.4, 11.4),
+        (3.0, 6.8), (2.3, 6.8)]
+RV = [(8.2, 16.0),    # front bumper, lower front corner
+      (8.2, 13.6),    # van nose
+      (9.0, 13.2),    # cowl, where the windshield starts
+      (11.6, 10.4),   # windshield, slanting back and up
+      (8.6, 10.4),    # forward along the underside of the cabover bunk
+      (8.9, 8.2),     # cabover front face
+      (23.6, 8.2),    # long roof, back to the rear
+      (23.6, 16.6),   # back wall
+      (9.6, 16.6)]    # body floor, forward to the nose
+RV_WINDOWS = [(13.2, 10.0, 16.8, 12.6, 0.4),   # side window
+              (18.0, 10.0, 21.2, 12.6, 0.4)]   # rear side window
+RV_WHEELS = [(11.6, 18.0, 1.4), (20.4, 18.0, 1.4)]
+# Glyph bounding box in 24-unit space
+GB = (min([p[0] for p in TREE] + [p[0] for p in RV] + [w[0] - w[2] for w in RV_WHEELS]),
+      min([p[1] for p in TREE] + [p[1] for p in RV] + [w[1] - w[2] for w in RV_WHEELS]),
+      max([p[0] for p in RV] + [w[0] + w[2] for w in RV_WHEELS]),
+      max([p[1] for p in TREE] + [w[1] + w[2] for w in RV_WHEELS]))
 
 SS = 4  # supersample factor for every raster we draw
 FONT_BLACK = "/usr/share/fonts/truetype/lato/Lato-Black.ttf"
@@ -75,14 +103,15 @@ def glyph_scale(size, fill=0.62):
     return (size * fill) / (GB[2] - GB[0])
 
 
-def draw_glyph(draw, size, fill=0.62, color=WHITE, detail=True):
-    """Draw the trailer glyph centred on a size x size canvas.
+def draw_glyph(mask, size, fill=0.62, detail=True):
+    """Draw the mark into an L-mode mask: 255 where the ink goes, 0 where it is cut out.
 
-    detail=False is the optical size for tabs: at 16px the real stroke lands
-    under 1.1px and the window outline is 3x2px, both of which disappear into a
-    grey smudge. Small sizes get a clamped stroke, a slightly larger glyph, and
-    no window.
+    Everything is a filled silhouette rather than a stroke, which is what keeps
+    this readable at 16px: the previous stroked trailer collapsed into a grey
+    smudge at tab size. The window is a genuine cutout, so the brand gradient
+    shows through it exactly as the SVG does.
     """
+    draw = ImageDraw.Draw(mask)
     s = glyph_scale(size, fill)
     gw, gh = (GB[2] - GB[0]) * s, (GB[3] - GB[1]) * s
     ox, oy = (size - gw) / 2 - GB[0] * s, (size - gh) / 2 - GB[1] * s
@@ -90,29 +119,25 @@ def draw_glyph(draw, size, fill=0.62, color=WHITE, detail=True):
     def P(x, y):
         return (ox + x * s, oy + y * s)
 
-    w = round(GLYPH_STROKE * s) if detail else max(round(GLYPH_STROKE * s), round(size / 10))
-    w = max(w, 1)
-    draw.line([P(*p) for p in GLYPH_PATH], fill=color, width=w, joint="curve")
-    for p in (GLYPH_PATH[0], GLYPH_PATH[-1]):  # round off the two open ends
-        cx, cy = P(*p)
-        r = w / 2
-        draw.ellipse((cx - r, cy - r, cx + r, cy + r), fill=color)
+    draw.polygon([P(x, y) for x, y in TREE], fill=255)
+    draw.polygon([P(x, y) for x, y in RV], fill=255)
     if detail:
-        x0, y0, x1, y1 = GLYPH_WINDOW
-        draw.rounded_rectangle((P(x0, y0)[0], P(x0, y0)[1], P(x1, y1)[0], P(x1, y1)[1]),
-                               radius=int(1.0 * s), outline=color, width=w)
-    for cx, cy, r in GLYPH_WHEELS:
+        for wx0, wy0, wx1, wy1, wr in RV_WINDOWS:
+            draw.rounded_rectangle((P(wx0, wy0)[0], P(wx0, wy0)[1], P(wx1, wy1)[0], P(wx1, wy1)[1]),
+                                   radius=wr * s, fill=0)
+    for cx, cy, r in RV_WHEELS:
         px, py = P(cx, cy)
-        rr = max(r * s, size / 18) if not detail else r * s
-        draw.ellipse((px - rr, py - rr, px + rr, py + rr), fill=color)
+        rr = r * s
+        draw.ellipse((px - rr, py - rr, px + rr, py + rr), fill=255)
+    return mask
 
 
 def mark(size, radius_ratio=0.23, fill=0.62, detail=True):
-    """The brand tile: gradient rounded square with the white trailer glyph."""
+    """The brand tile: gradient rounded square with the white mark punched over it."""
     big = size * SS
-    img = diagonal_gradient(big, big, STOPS)
-    img = img.convert("RGBA")
-    draw_glyph(ImageDraw.Draw(img), big, fill if detail else 0.74, detail=detail)
+    img = diagonal_gradient(big, big, STOPS).convert("RGBA")
+    img.paste((255, 255, 255), mask=draw_glyph(Image.new("L", (big, big), 0), big,
+                                               fill if detail else 0.74, detail))
     mask = Image.new("L", (size, size), 0)
     ImageDraw.Draw(mask).rounded_rectangle((0, 0, size - 1, size - 1),
                                            radius=int(size * radius_ratio), fill=255)
@@ -120,38 +145,44 @@ def mark(size, radius_ratio=0.23, fill=0.62, detail=True):
     return img.resize((size, size), Image.LANCZOS)
 
 
-def favicon_svg(tile=64, radius_ratio=0.23, fill=0.62, stroke=GLYPH_STROKE):
+def favicon_svg(tile=64, radius_ratio=0.23, fill=0.7):
     """The same tile as hand-written SVG, geometry derived from the constants above."""
     s = (tile * fill) / (GB[2] - GB[0])
     gw, gh = (GB[2] - GB[0]) * s, (GB[3] - GB[1]) * s
     ox, oy = (tile - gw) / 2 - GB[0] * s, (tile - gh) / 2 - GB[1] * s
-    pts = " ".join("%.2f,%.2f" % (ox + x * s, oy + y * s) for x, y in GLYPH_PATH)
-    wx0, wy0 = ox + GLYPH_WINDOW[0] * s, oy + GLYPH_WINDOW[1] * s
-    wx1, wy1 = ox + GLYPH_WINDOW[2] * s, oy + GLYPH_WINDOW[3] * s
-    wheels = "".join(
-        '<circle cx="%.2f" cy="%.2f" r="%.2f" fill="#fff"/>'
-        % (ox + cx * s, oy + cy * s, r * s) for cx, cy, r in GLYPH_WHEELS)
-    w = stroke * s
+
+    def pts(poly):
+        return " ".join("%.2f,%.2f" % (ox + x * s, oy + y * s) for x, y in poly)
+
+    windows = "".join(
+        '<rect x="%.2f" y="%.2f" width="%.2f" height="%.2f" rx="%.2f" fill="url(#orv)"/>'
+        % (ox + x0 * s, oy + y0 * s, (x1 - x0) * s, (y1 - y0) * s, wr * s)
+        for x0, y0, x1, y1, wr in RV_WINDOWS)
+    wheels = "".join('<circle cx="%.2f" cy="%.2f" r="%.2f"/>' % (ox + cx * s, oy + cy * s, r * s)
+                     for cx, cy, r in RV_WHEELS)
     return (
         '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %(t)d %(t)d" role="img" '
         'aria-label="OriginRV">\n'
         '  <defs>\n'
-        '    <linearGradient id="orv" x1="0" y1="0" x2="1" y2="1">\n'
+        '    <linearGradient id="orv" gradientUnits="userSpaceOnUse" x1="0" y1="0" '
+        'x2="%(t)d" y2="%(t)d">\n'
         '      <stop offset="0" stop-color="#f97316"/>\n'
         '      <stop offset=".5" stop-color="#f43f5e"/>\n'
         '      <stop offset="1" stop-color="#8b5cf6"/>\n'
         '    </linearGradient>\n'
         '  </defs>\n'
         '  <rect width="%(t)d" height="%(t)d" rx="%(r)d" fill="url(#orv)"/>\n'
-        '  <g fill="none" stroke="#fff" stroke-width="%(w).2f" stroke-linecap="round" '
-        'stroke-linejoin="round">\n'
-        '    <polyline points="%(pts)s"/>\n'
-        '    <rect x="%(wx0).2f" y="%(wy0).2f" width="%(ww).2f" height="%(wh).2f" rx="%(wr).2f"/>\n'
+        '  <g fill="#fff">\n'
+        '    <polygon points="%(tree)s"/>\n'
+        '    <polygon points="%(rv)s"/>\n'
+        # windows are filled with the tile gradient, which is what a knockout
+        # into the gradient looks like, keeping the PNGs and the SVG identical
+        '    %(windows)s\n'
+        '    %(wheels)s\n'
         '  </g>\n'
-        '  %(wheels)s\n'
         '</svg>\n'
-    ) % dict(t=tile, r=round(tile * radius_ratio), w=w, pts=pts,
-             wx0=wx0, wy0=wy0, ww=wx1 - wx0, wh=wy1 - wy0, wr=1.0 * s, wheels=wheels)
+    ) % dict(t=tile, r=round(tile * radius_ratio), tree=pts(TREE), rv=pts(RV),
+             windows=windows, wheels=wheels)
 
 
 def og_card(path, w=1200, h=630):
@@ -213,11 +244,56 @@ def ico_bytes(frames):
     return struct.pack("<HHH", 0, 1, n) + entries + blobs
 
 
+def inline_mark():
+    """The nav/footer mark as inline SVG, same geometry as the icons.
+
+    config.js holds this so the shell can drop it into every page. It is generated
+    here rather than hand-written, because a hand-kept copy is exactly how the
+    icon and the logo drift apart. The windows are cut out of the same path with
+    fill-rule evenodd, which lets the CSS gradient behind the mark show through.
+    """
+    def rr(box):
+        x0, y0, x1, y1, radius = box
+        return ("M%g %gH%gA%g %g 0 0 1 %g %gV%gA%g %g 0 0 1 %g %gH%g"
+                "A%g %g 0 0 1 %g %gV%gA%g %g 0 0 1 %g %gZ" % (
+                    x0 + radius, y0, x1 - radius,
+                    radius, radius, x1, y0 + radius,
+                    y1 - radius,
+                    radius, radius, x1 - radius, y1,
+                    x0 + radius,
+                    radius, radius, x0, y1 - radius,
+                    y0 + radius,
+                    radius, radius, x0 + radius, y0))
+
+    rv_path = "M" + "L".join("%g %g" % (x, y) for x, y in RV) + "Z"
+    windows = "".join(rr(w) for w in RV_WINDOWS)
+    wheels = "".join('<circle cx="%g" cy="%g" r="%g"/>' % w for w in RV_WHEELS)
+    return ('<svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true">'
+            '<polygon points="%s"/>'
+            '<path fill-rule="evenodd" d="%s%s"/>'
+            '%s</svg>'
+            % (" ".join("%g %g" % (x, y) for x, y in TREE), rv_path, windows, wheels))
+
+
+def write_inline_mark(path):
+    """Keep CFG.brand.mark in step with the icons."""
+    text = path.read_text(encoding="utf-8")
+    new = " mark: '%s'\n" % inline_mark()
+    updated, n = re.subn(r"^ mark: '.*?'\n", new, text, count=1, flags=re.M)
+    if n != 1:
+        raise SystemExit("could not find the mark line in %s" % path)
+    if updated != text:
+        path.write_text(updated, encoding="utf-8")
+
+
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
 
     (OUT / "favicon.svg").write_text(favicon_svg(), encoding="utf-8")
     print("  wrote  assets/img/brand/favicon.svg")
+
+    write_inline_mark(ROOT / "assets" / "js" / "config.js")
+    print("  synced the inline mark into assets/js/config.js")
 
     for size, name in ((16, "favicon-16.png"), (32, "favicon-32.png"),
                        (180, "apple-touch-icon.png"), (192, "icon-192.png"),
@@ -226,8 +302,10 @@ def main():
         print("  wrote  assets/img/brand/%s (%dx%d)" % (name, size, size))
 
     # full bleed square for Android adaptive icons, glyph inside the safe zone
-    maskable = diagonal_gradient(512 * SS, 512 * SS, STOPS).convert("RGBA")
-    draw_glyph(ImageDraw.Draw(maskable), 512 * SS, fill=0.5)
+    big = 512 * SS
+    maskable = diagonal_gradient(big, big, STOPS).convert("RGBA")
+    maskable.paste((255, 255, 255),
+                   mask=draw_glyph(Image.new("L", (big, big), 0), big, fill=0.5))
     maskable.resize((512, 512), Image.LANCZOS).save(OUT / "icon-maskable-512.png", "PNG", optimize=True)
     print("  wrote  assets/img/brand/icon-maskable-512.png")
 

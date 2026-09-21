@@ -176,9 +176,9 @@
         <details class="faq"><summary>What counts as an emergency here?</summary><p>Two different things, and they are not the same call. Roadside means the vehicle is the problem and the RV may not move, so those businesses work on chassis, engine, drivetrain, brakes, or arrange towing. Emergency mobile repair means something inside the coach has failed, like a furnace, water heater, or refrigerator, and a technician comes to your site. The first is for being stranded. The second is for an RV that is parked but unlivable.</p></details>
         <details class="faq"><summary>Who do I call if my RV will not move?</summary><p>Choose "my RV will not move" above. Every business there comes to you or dispatches, and works on the vehicle itself rather than only what is inside it. If you need a tow specifically, say so on the call, since not all of them run a tow truck. For a diesel chassis breakdown, a dedicated roadside diesel service is often the fastest option.</p></details>
         <details class="faq"><summary>How are the results sorted?</summary><p>By whether they reach your area, then by how close they are to you. A business that works out of your own town, or that names your town or county as somewhere it covers, comes ahead of one that is simply based nearby, because those are the ones that will actually reach you. If a business names no town and no area, it still appears, marked with the region it serves.</p></details>
-        <details class="faq"><summary>Is it free to be listed?</summary><p>Yes. Listings are free and permanent, and the business controls its own listing after claiming it. There is no commission and no middleman between you and the customer.</p></details>
-        <details class="faq"><summary>How do you decide who gets listed?</summary><p>A business is listed when it is real and publishes its own contact information. We add nothing we cannot verify from the business itself. Certification tags only appear when the business states the certification.</p></details>
-        <details class="faq"><summary>I found an error in a listing. How do I fix it?</summary><p>Claim the listing and correct anything in it, or contact us and we will fix it. We would rather remove a detail than publish one that is wrong.</p></details>
+        <details class="faq"><summary>Is it free to be listed?</summary><p>Yes. Listings are free, there is no commission, and no middleman between you and the customer. Claim yours and corrections come straight to us.</p></details>
+        <details class="faq"><summary>How do you decide who gets listed?</summary><p>A business is listed when it is real and publishes its own contact information. Certification tags only appear when the business states the certification.</p></details>
+        <details class="faq"><summary>I found an error in a listing. How do I fix it?</summary><p>Claim the listing and tell us what to correct, or contact us and we will fix it. We would rather remove a detail than publish one that is wrong.</p></details>
       </div>
 
     </div>
@@ -490,8 +490,12 @@
       if (n.length < 2) { setErr('cl-name-err', 'Add the business name'); ok = false; } else setErr('cl-name-err', '');
       if (c.length < 2) { setErr('cl-city-err', 'Add the city'); ok = false; } else setErr('cl-city-err', '');
       if (!ok) return;
-      toast('Listing request received. We will be in touch.');
-      form.reset();
+      if (RV.claimMailto(form)) {
+        toast('Your email app is opening with the details filled in. Send it and the request reaches us.');
+        form.reset();
+      } else {
+        toast('No address is published yet, so nothing was sent.');
+      }
     });
 
     /* ---------- stats + first paint ---------- */
