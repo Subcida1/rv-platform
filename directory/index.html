@@ -16,9 +16,9 @@
     <h1 style="font-size:clamp(30px,4.4vw,48px);font-weight:800;letter-spacing:-.03em;line-height:1.08;margin-top:12px">RV repair directory: Mobile technicians and service centers</h1>
     <p style="color:var(--text-2);font-size:16.5px;margin-top:12px;max-width:700px">There are really two kinds of RV repair, and the difference is whether you can move your RV. If you cannot, you need a mobile technician who comes to you. If you can drive it, a service center has the bays and parts for bigger jobs. Both are here, along with emergency roadside help for breakdowns on the highway.</p>
     <div class="guide-stats">
-      <span><b id="stat-total">40</b> listings</span>
-      <span><b id="stat-mobile">30</b> mobile techs</span>
-      <span><b id="stat-center">11</b> service centers</span>
+      <span><b id="stat-total">42</b> listings</span>
+      <span><b id="stat-mobile">31</b> mobile techs</span>
+      <span><b id="stat-center">13</b> service centers</span>
       <span><b id="stat-road">3</b> roadside</span>
       <span><b id="stat-emerg">5</b> emergency</span>
     </div>
@@ -66,7 +66,7 @@
 
       <div id="d-results">
         <div class="results-top">
-          <div class="results-count"><b id="d-count">40</b> listings</div>
+          <div class="results-count"><b id="d-count">42</b> listings</div>
           <div class="results-sort" id="d-sort">Every listing added from the business's own website</div>
         </div>
 
@@ -151,7 +151,7 @@
         <details class="faq"><summary>What is the difference between a mobile technician and a service center?</summary><p>A mobile technician drives to your RV and repairs it where it sits, which is what you need if the RV cannot be moved or you do not want to wait for a shop bay. A service center is a shop you drive to, with the bays, lifts, and parts for bigger jobs like collision repair, roof replacement, and structural work.</p></details>
         <details class="faq"><summary>What counts as an emergency here?</summary><p>Two different things, and they are not the same call. Roadside means the vehicle is the problem and the RV may not move, so those businesses work on chassis, engine, drivetrain, brakes, or arrange towing. Emergency mobile repair means something inside the coach has failed, like a furnace, water heater, or refrigerator, and a technician comes to your site. The first is for being stranded. The second is for an RV that is parked but unlivable.</p></details>
         <details class="faq"><summary>Who do I call if my RV will not move?</summary><p>Choose "my RV will not move" above. Every business there comes to you or dispatches, and works on the vehicle itself rather than only what is inside it. If you need a tow specifically, say so on the call, since not all of them run a tow truck. For a diesel chassis breakdown, a dedicated roadside diesel service is often the fastest option.</p></details>
-        <details class="faq"><summary>How are the results sorted?</summary><p>By how close they are to you, and by whether they say they cover your area. A mobile technician who names your town or county comes ahead of one who is simply based nearby, because the one who covers your town is the one who will actually come. If a business names no town and no area, it still appears, marked with the region it serves.</p></details>
+        <details class="faq"><summary>How are the results sorted?</summary><p>By whether they reach your area, then by how close they are to you. A business that works out of your own town, or that names your town or county as somewhere it covers, comes ahead of one that is simply based nearby, because those are the ones that will actually reach you. If a business names no town and no area, it still appears, marked with the region it serves.</p></details>
         <details class="faq"><summary>Is it free to be listed?</summary><p>Yes. Listings are free and permanent, and the business controls its own listing after claiming it. There is no commission and no middleman between you and the customer.</p></details>
         <details class="faq"><summary>How do you decide who gets listed?</summary><p>A business is listed when it is real and publishes its own contact information. We add nothing we cannot verify from the business itself. Certification tags only appear when the business states the certification.</p></details>
         <details class="faq"><summary>I found an error in a listing. How do I fix it?</summary><p>Claim the listing and correct anything in it, or contact us and we will fix it. We would rather remove a detail than publish one that is wrong.</p></details>
@@ -229,6 +229,11 @@
         serves = x.areas.some(function (a) { return String(a).toLowerCase() === state.user.town; });
       }
       if (!serves && d != null && x.radius && d <= x.radius) serves = true;
+      // Being based in your own town is the strongest claim there is: a mobile
+      // tech is minutes away, and a shop is a short drive. Without this, a
+      // business that merely NAMES your town from 30 miles off ranked above one
+      // already here, which is backwards.
+      if (!serves && d != null && d < 3) serves = true;
       return { x: x, i: i, base: base, d: d, serves: serves };
     }
     function passes(r) {
@@ -244,13 +249,23 @@
       }
       return true;
     }
+    // Being based in your own town is the strongest match there is: a mobile
+    // tech is minutes away, and a shop is a short drive. A business that only
+    // NAMES your town as an area it covers has to travel to reach you, so it
+    // ranks alongside rather than above one that is already here. Distance
+    // breaks the tie, so the business in your town still comes first.
+    function rankTier(r) {
+      if (r.d != null && r.d < 3) return 0;
+      if (r.serves) return 0;
+      if (r.d != null) return 1;
+      return 2;
+    }
     function compare(a, b) {
       if (!state.user) {
         var ab = a.base ? 0 : 1, bb = b.base ? 0 : 1;
         return ab - bb || a.i - b.i;
       }
-      var as = a.serves ? 0 : (a.d != null ? 1 : 2);
-      var bs = b.serves ? 0 : (b.d != null ? 1 : 2);
+      var as = rankTier(a), bs = rankTier(b);
       if (as !== bs) return as - bs;
       // Among businesses that all claim your area, the one we can place on the
       // map closest to you comes first, and one with no stated base goes last.
@@ -277,8 +292,9 @@
     function card(r) {
       var x = r.x, tags = (x.g || []).map(function (t) { return '<span>' + esc(t) + '</span>'; }).join('');
       var badge = '';
-      if (r.serves) badge = '<span class="listing-dist serves">Serves your area</span>';
-      else if (r.d != null) badge = '<span class="listing-dist">' + (r.d < 3 ? 'In your town' : 'about ' + Math.round(r.d) + ' mi') + '</span>';
+      if (r.d != null && r.d < 3) badge = '<span class="listing-dist">In your town</span>';
+      else if (r.serves) badge = '<span class="listing-dist serves">Serves your area</span>';
+      else if (r.d != null) badge = '<span class="listing-dist">about ' + Math.round(r.d) + ' mi</span>';
       else if (x.region) badge = '<span class="listing-dist region">' + esc(x.region) + '</span>';
       var emerg = x.r
         ? '<span class="listing-emerg roadside">Roadside / stuck</span>'

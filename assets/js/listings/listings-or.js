@@ -720,5 +720,51 @@ window.RV_LISTINGS_OR = [
   ],
   "base": "La Grande",
   "region": "Eastern Oregon"
+ },
+ {
+  "n": "Rocking R Campers",
+  "c": "Ontario and Eastern Oregon",
+  "p": "541-889-7800",
+  "u": "https://www.rockingrcampersllc.com/",
+  "t": "center",
+  "e": false,
+  "d": "Family-owned RV service and parts shop in Ontario, serving Eastern Oregon, the Treasure Valley, and western Idaho for more than 50 years. Travel trailers, fifth wheels, campers, motorhomes, utility trailers, and towing equipment. Roof inspections, repair and resealing, water, plumbing and sewer work, electrical, appliances, suspension and axle repair, slide-out and leveling system repair, hitch installation, and warranty or insurance work.",
+  "g": [
+   "50+ years",
+   "Family owned",
+   "Parts and service"
+  ],
+  "base": "Ontario",
+  "areas": [
+   "Vale",
+   "Nyssa",
+   "Baker City",
+   "Payette",
+   "Weiser"
+  ],
+  "region": "Eastern Oregon"
+ },
+ {
+  "n": "Gib's RV Superstore",
+  "c": "Coos Bay and North Bend",
+  "p": "541-888-3424",
+  "u": "https://www.gibsrvsuperstore.com/rv-service-mobile",
+  "t": "both",
+  "e": false,
+  "d": "Certified RVTI technicians in Coos Bay with a stocked service van who come to you in Coos Bay and North Bend, plus a full service department if you can bring the RV in. They say they have the largest parts inventory on the Oregon Coast. Electrical and plumbing, water heaters, furnaces and A/C, refrigeration and appliances, leak detection and sealant repair. Serving the south coast since 1948.",
+  "g": [
+   "Since 1948",
+   "RVTI certified",
+   "Shop + mobile"
+  ],
+  "base": "Coos Bay",
+  "areas": [
+   "North Bend",
+   "Charleston",
+   "Lakeside",
+   "Reedsport",
+   "Bandon"
+  ],
+  "region": "Oregon coast"
  }
 ];

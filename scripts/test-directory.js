@@ -58,7 +58,12 @@ const cardMark = '<div class="card listing-card"';
 const cards = () => gridHtml().split(cardMark).slice(1);
 const names = () => cards().map(c => (c.match(/listing-name">(?:<a[^>]*>)?([^<]+)</) || [])[1]);
 const first = () => names()[0];
-const badgeOf = c => /Serves your area/.test(c) ? 'serves' : (/In your town|about \d+ mi/.test(c) ? 'distance' : 'region');
+// 'serves' = names your town/county as an area it covers
+// 'home'   = works out of your town (also counts as reaching you)
+// 'distance' = only placed on the map, makes no claim on your area
+const badgeOf = c => /Serves your area/.test(c) ? 'serves'
+  : (/In your town/.test(c) ? 'home'
+    : (/about \d+ mi/.test(c) ? 'distance' : 'region'));
 const badges = () => cards().map(badgeOf);
 const sortNote = () => els['d-sort'].textContent;
 const count = () => String(els['d-count'].textContent);
@@ -96,21 +101,40 @@ check('both claimants of Port Orford are there',
   /Kings Mobile/.test(cards()[0] + cards()[1]) && /Bandon Mobile/.test(cards()[0] + cards()[1]), names().slice(0, 2).join(' | '));
 check('distance ranked listings follow', badgeOf(cards()[2]) === 'distance', names()[2]);
 
-console.log('\n4. A business that names your town versus one only based there');
+console.log('\n4. A business in your town versus one that only names it from away');
 typeLocation('Bend');
-check('the claimant wins', first() === 'Crazy Creek RV Repair' && badgeOf(cards()[0]) === 'serves', 'first=' + first());
+check('the list opens with a business that reaches Bend',
+  ['serves', 'home'].indexOf(badgeOf(cards()[0])) > -1,
+  'first=' + first() + ' / ' + badgeOf(cards()[0]));
 check('a shop in your own town says In your town',
   ['Fixin Trips Mobile RV Service', 'At Your Door Mobile RV Repair', 'NRV Services'].some(n => {
     const i = names().indexOf(n); return i > -1 && /In your town/.test(cards()[i]);
   }), names().slice(0, 6).join(' | '));
+// The exact bug this fixed: for a Bandon user, Gib's RV Superstore (based in
+// Coos Bay, names Bandon as a covered area) sorted ABOVE Bandon Mobile RV
+// Repair, which is physically in Bandon. Naming a town from 25 miles away must
+// never outrank working out of it.
+typeLocation('Bandon');
+const bd = names();
+check('the shop in Bandon outranks one that only names Bandon from Coos Bay',
+  bd.indexOf('Bandon Mobile RV Repair') > -1 && bd.indexOf("Gib's RV Superstore") > -1 &&
+  bd.indexOf('Bandon Mobile RV Repair') < bd.indexOf("Gib's RV Superstore"),
+  bd.slice(0, 4).join(' | '));
+check('a business in your town outranks one that is only nearby',
+  (function () {
+    const b = badges(), fd = b.indexOf('distance'), fh = b.indexOf('home');
+    return fd === -1 || fh === -1 || fh < fd;
+  })(), JSON.stringify(badges()));
 
-console.log('\n5. Tier order holds everywhere (serves, then distance, then region)');
+console.log('\n5. Tier order holds everywhere (reaches you, then distance, then region)');
 ['Bend', 'Salem', 'Portland', 'Klamath', 'Coos Bay', 'Eugene'].forEach(t => {
   typeLocation(t);
   const b = badges();
-  const cut = b.findIndex(x => x !== 'serves');
-  check('every served-area match precedes the rest: ' + t,
-    cut === -1 || b.slice(cut).every(x => x !== 'serves'), JSON.stringify(b));
+  // Both badges mean "this business reaches your area".
+  const reaches = x => x === 'serves' || x === 'home';
+  const cut = b.findIndex(x => !reaches(x));
+  check('every business that reaches your area precedes the rest: ' + t,
+    cut === -1 || b.slice(cut).every(x => !reaches(x)), JSON.stringify(b));
 });
 
 console.log('\n6. Route buttons');
