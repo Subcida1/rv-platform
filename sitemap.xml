@@ -10,6 +10,7 @@
   <!-- Guides hub and every guide -->
   <url><loc>https://originrv.com/guides/index.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://originrv.com/guides/rv-furnace-not-working.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://originrv.com/guides/rv-tank-sensors-reading-wrong.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://originrv.com/guides/rv-towing-capacity.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://originrv.com/guides/rv-tire-replacement.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://originrv.com/guides/rv-water-heater-not-heating.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
