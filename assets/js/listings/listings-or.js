@@ -8,28 +8,24 @@
    ('shop only, no mobile', 'windshield and glass only', 'RV roofs only'),
    never re-categorise an RV business into something smaller than it is.
 
-   INCLUSION RULE (Ty, 2026-09-21): the business must be RV-SPECIFIC.
-   'we need rv repair services, not collisions and body shops thats a whole
-   different market. having a few that are rv specific is okay, but we should
-   not add them if they are not rv specific.'
-   So: a general auto body shop, general mechanic, commercial diesel truck
-   shop, or auto glass chain that happens to take RV work is NOT listed,
-   however competent. Collision and body work is a different market; an
-   RV-specific one (Straight Line RV and Boat) is kept because it IS
-   RV-specific, and that is the exception, not the rule. Be choosy.
+   INCLUSION RULE (Ty, 2026-09-21): the business must be RV-SPECIFIC, i.e. RV
+   is what it is, not a line it happens to take. 'we need rv repair services,
+   not collisions and body shops thats a whole different market. having a few
+   that are rv specific is okay, but we should not add them if they are not rv
+   specific.' A general auto body shop, general mechanic, commercial diesel
+   truck shop, or auto glass chain is NOT listed, however competent.
 
-   EVERY listing must carry a phone. scripts/verify.py fails the build if one
-   is missing, or if a listing lacks a name, area, description, or valid type.
-   Coverage fields are copied from what each business publishes. Nothing invented.
-   Two records carry no u on purpose: their sites are gone (one parked, one replaced
-   by an unrelated template), but the business and phone number are verified.
+   EVERY listing must carry a phone. It must be findable. scripts/verify.py
+   fails the build if one is missing, or if a listing lacks a name, area,
+   description or valid type. Coverage fields are copied from what each
+   business publishes. Nothing invented.
 
    TWO KINDS OF EMERGENCY, deliberately not merged:
-     r = roadside. The vehicle is the problem and the rig may not move. Verified that
-         the business comes to you or dispatches AND handles chassis, engine,
-         drivetrain, brakes, or towing.
-     e = emergency mobile repair. Something inside the coach failed: furnace, water,
-         fridge, slide. They come to your site. Not roadside.
+     r = roadside. The vehicle is the problem and the rig may not move. The
+         business states it dispatches or comes to you AND handles chassis,
+         engine, drivetrain, brakes or towing.
+     e = emergency mobile repair. Something inside the coach failed: furnace,
+         water, fridge, slide. They come to your site. Not roadside.
    A record never carries both. */
 window.RV_LISTINGS_OR = [
  {
@@ -612,5 +608,57 @@ window.RV_LISTINGS_OR = [
   ],
   "base": "Tangent",
   "spec": "Shop only, no mobile"
+ },
+ {
+  "n": "Precision RV & Boat Mechanical Service",
+  "c": "Medford and the Rogue Valley",
+  "p": "541-661-1911",
+  "u": "https://www.graveyardgaragecustoms.com/",
+  "t": "mobile",
+  "e": false,
+  "d": "24/7 mobile mechanical RV service out of Medford, covering the Rogue Valley and the I-5 corridor: Ashland, Grants Pass, Central Point, Eagle Point, White City, Jacksonville, Talent, Phoenix, Gold Hill, Shady Cove, and Prospect. Emergency roadside mechanical help, engine diagnostics and drivability, cooling systems and radiators, belts and hoses, brakes, suspension and steering, and tires. Mechanical systems only: they state they do not do plumbing, toilets, appliances, roof work, or slide-outs. Owned and operated by Gregory D. Atkins, 25+ years.",
+  "g": [
+   "24/7",
+   "Roadside mechanical",
+   "25+ years"
+  ],
+  "base": "Medford",
+  "areas": [
+   "Ashland",
+   "Grants Pass",
+   "Central Point",
+   "Eagle Point",
+   "White City",
+   "Jacksonville",
+   "Talent",
+   "Phoenix",
+   "Gold Hill",
+   "Shady Cove",
+   "Prospect"
+  ],
+  "region": "Southern Oregon",
+  "r": true,
+  "spec": "Mechanical systems only"
+ },
+ {
+  "n": "Ken's RV Service",
+  "c": "Mulino, serving Clackamas, Marion and Washington counties",
+  "p": "503-880-5343",
+  "u": "https://kensrvservice.com/",
+  "t": "mobile",
+  "e": false,
+  "d": "Mobile RV repair out of Mulino, serving Clackamas, Marion, and Washington counties. Class A, B, and C motorhomes and travel trailers, including trailer wheel bearings and brakes, RV chassis service, water systems, appliance repair and replacement, heating and cooling, Aqua Hot, AC and DC electrical, generators, awnings, roof care, satellite installation, and winterizing. RVTI certified.",
+  "g": [
+   "RVTI certified",
+   "Chassis service",
+   "Mobile"
+  ],
+  "base": "Mulino",
+  "areas": [
+   "Clackamas County",
+   "Marion County",
+   "Washington County"
+  ],
+  "region": "Willamette Valley"
  }
 ];
