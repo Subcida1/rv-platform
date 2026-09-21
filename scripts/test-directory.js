@@ -56,7 +56,10 @@ function check(label, ok, detail) {
 const gridHtml = () => els['d-grid'].innerHTML;
 const cardMark = '<div class="card listing-card"';
 const cards = () => gridHtml().split(cardMark).slice(1);
-const names = () => cards().map(c => (c.match(/listing-name">(?:<a[^>]*>)?([^<]+)</) || [])[1]);
+const unesc = s => String(s || '')
+  .replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>')
+  .replace(/&quot;/g, '"').replace(/&#39;|&apos;/g, "'");
+const names = () => cards().map(c => unesc((c.match(/listing-name">(?:<a[^>]*>)?([^<]+)</) || [])[1]));
 const first = () => names()[0];
 // 'serves' = names your town/county as an area it covers
 // 'home'   = works out of your town (also counts as reaching you)
@@ -86,9 +89,12 @@ check('nearest stated base wins', first() === 'JBK RV Mobile Repair', 'first=' +
 check('next nearest follows', names()[1] === 'Jackson RV', 'second=' + names()[1]);
 check('every card carries a distance badge', badges().every(b => b === 'distance'), JSON.stringify(badges()));
 // Businesses with no stated base only surface once the radius is wide open.
-// Click until nothing more is offered rather than a fixed count, so this does
-// not quietly stop reaching the end as the directory grows.
-for (let i = 0; i < 60 && hasMore(); i++) els['d-more'].fire('click');
+// Click until the visible count stops growing: relying on hasMore() alone
+// stopped early once the directory passed a few pages.
+for (let i = 0, prev = -1; i < 60 && cards().length !== prev; i++) {
+  prev = cards().length;
+  els['d-more'].fire('click');
+}
 const shown2 = names(), b2 = badges();
 check('widening reaches the businesses with no stated base',
   shown2.includes('Kings Mobile RV Service') && shown2.includes('Happy Mobile RV Repair'), shown2.length + ' cards');

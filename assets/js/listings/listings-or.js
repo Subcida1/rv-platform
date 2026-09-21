@@ -7,6 +7,8 @@
    INCLUSION: the business must be RV-SPECIFIC and must have built its own findable
    presence (own site plus a phone on that site). Not our job to reconstruct a listing
    from registries or aggregators for a business that has not done that itself.
+   No u on a record: the site is gone, parked, or throws a security warning. The
+   business and phone are still verified, so it lists without a link.
    Nothing invented: coverage and claims are copied from each business's own site. */
 window.RV_LISTINGS_OR = [
  {
@@ -856,5 +858,49 @@ window.RV_LISTINGS_OR = [
    "Klamath County"
   ],
   "region": "Klamath Basin"
+ },
+ {
+  "n": "Atlas Mobile RV",
+  "c": "Hermiston and the PNW",
+  "p": "877-842-8527",
+  "u": "https://atlasmobilerv.com/",
+  "t": "mobile",
+  "e": false,
+  "d": "Mobile RV repair, service, upgrades, and inspections across the Pacific Northwest, coming to your home, campground, or storage. Electrical, plumbing, HVAC, and slide-outs, plus solar and battery upgrades and pre-purchase, roof, and extended-warranty inspections. They say you do not need to be present for the work. Serves Hermiston, Irrigon, Stanfield, and Umatilla among many other towns.",
+  "g": [
+   "Mobile only",
+   "80+ years",
+   "Serves Umatilla County"
+  ],
+  "base": "Hermiston",
+  "areas": [
+   "Irrigon",
+   "Stanfield",
+   "Umatilla",
+   "Boardman"
+  ],
+  "region": "Eastern Oregon"
+ },
+ {
+  "n": "R&B RV Service and Supply",
+  "c": "Sutherlin, Douglas County",
+  "p": "541-802-1001",
+  "t": "both",
+  "e": false,
+  "d": "Family-run RV shop in Sutherlin serving all makes, models, and brands. Parts and accessories, collision and accident work, preventive maintenance, and winterizing. They also offer mobile service if it is easier for them to come to you than for you to bring the RV in.",
+  "g": [
+   "Family run",
+   "Douglas County",
+   "Collision work"
+  ],
+  "base": "Sutherlin",
+  "areas": [
+   "Roseburg",
+   "Winston",
+   "Dillard",
+   "Oakland",
+   "Myrtle Creek"
+  ],
+  "region": "Douglas County"
  }
 ];
