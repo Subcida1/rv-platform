@@ -4,19 +4,19 @@
    coordinates at runtime from coords-or.js), areas towns the business states it
    covers, radius a service radius the business states in miles, region the
    business's own wording when it names only a region,
-   spec a scope/category label for businesses that only do part of the job
-   (glass only, roofs only). A specialist belongs in its own category, never
-   mixed in with general RV repair.
+   spec a scope label. It must state the LIMITATION a visitor needs to know
+   ('shop only, no mobile', 'windshield and glass only', 'RV roofs only'),
+   never re-categorise an RV business into something smaller than it is.
 
    INCLUSION RULE (Ty, 2026-09-21): the business must be RV-SPECIFIC.
    'we need rv repair services, not collisions and body shops thats a whole
    different market. having a few that are rv specific is okay, but we should
    not add them if they are not rv specific.'
    So: a general auto body shop, general mechanic, commercial diesel truck
-   shop, appliance shop, or auto glass chain that happens to take RV work is
-   NOT listed, however competent. Collision and body work is a different
-   market; an RV-specific one (Straight Line RV and Boat) is kept because it
-   is RV-specific, and that is the exception, not the rule. Be choosy.
+   shop, or auto glass chain that happens to take RV work is NOT listed,
+   however competent. Collision and body work is a different market; an
+   RV-specific one (Straight Line RV and Boat) is kept because it IS
+   RV-specific, and that is the exception, not the rule. Be choosy.
 
    EVERY listing must carry a phone. scripts/verify.py fails the build if one
    is missing, or if a listing lacks a name, area, description, or valid type.
@@ -596,5 +596,21 @@ window.RV_LISTINGS_OR = [
   ],
   "region": "Columbia River Gorge",
   "spec": "Windshield and glass only"
+ },
+ {
+  "n": "Oregon RV Appliance Repair",
+  "c": "Tangent",
+  "p": "541-928-7245",
+  "u": "https://oregonrv.com/",
+  "t": "center",
+  "e": false,
+  "d": "Family-owned RV repair shop in Tangent serving motorhomes, fifth wheels, travel trailers, and campers. They work on RV appliances (furnace, refrigerator, stove, water heater, water pump), electrical, propane, and plumbing systems, plus windows, doors, roof vents, and minor structural repair. Shop only: they state they are unable to provide mobile service.",
+  "g": [
+   "Since 1989",
+   "Appliance and systems",
+   "Shop only"
+  ],
+  "base": "Tangent",
+  "spec": "Shop only, no mobile"
  }
 ];
