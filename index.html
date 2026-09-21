@@ -56,10 +56,10 @@
  <a class="btn btn-secondary btn-lg" href="guides/index.html">Read the winter guides</a>
  </div>
  <div class="hero-stats">
- <div class="hstat"><div class="num" data-count="50">0%+</div><div class="lbl">of RVs exceed a weight rating*</div></div>
- <div class="hstat"><div class="num" data-count="58">0</div><div class="lbl">repair businesses listed</div></div>
- <div class="hstat"><div class="num" data-count="9">0</div><div class="lbl">free guides, live now</div></div>
- <div class="hstat"><div class="num" data-count="0">$0</div><div class="lbl">and no signup, ever</div></div>
+ <div class="hstat"><div class="num" data-count="50">0%<span class="plus">+</span></div><div class="lbl">Of RVs exceed a weight rating*</div></div>
+ <div class="hstat"><div class="num" data-count="58">0</div><div class="lbl">Repair businesses listed</div></div>
+ <div class="hstat"><div class="num" data-count="9">0</div><div class="lbl">Free guides, live now</div></div>
+ <div class="hstat"><div class="num" data-count="0">$0</div><div class="lbl">No signup, ever</div></div>
  </div>
  <p style="font-size:12px;color:var(--text-3);margin-top:8px">*RV Safety &amp; Education Foundation: <a href="https://rvsafety.com/about-info/who-is-rvsef" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">over half the RVs they weigh exceed at least one safety rating</a>. That is the reason this site exists.</p>
  </div>
@@ -241,22 +241,27 @@
  <script>
  (function () {
  var els = document.querySelectorAll('.hstat .num');
+ /* the counter owns only the number's text node, so a stat can carry styled
+    markup beside it (the small "+" on the 50%) without being wiped */
+ function setNum(el, text) {
+ if (el.firstChild && el.firstChild.nodeType === 3) el.firstChild.nodeValue = text;
+ else el.textContent = text;
+ }
  function animate(el) {
  var t = parseInt(el.getAttribute('data-count'), 10);
         var from = parseInt(el.getAttribute('data-from') || '0', 10);
         var desc = from > t;
  if (el.dataset.done) return;
  el.dataset.done = '1';
- if (!('IntersectionObserver' in window)) { var p = el.textContent.indexOf('%') >= 0, d2 = el.textContent.indexOf('$') >= 0, pl = el.textContent.indexOf('+') >= 0; el.textContent = (d2 ? '$' : '') + (desc ? from : t) + (p ? '%' : '') + (pl ? '+' : ''); return; }
+ if (!('IntersectionObserver' in window)) { var p = el.textContent.indexOf('%') >= 0, d2 = el.textContent.indexOf('$') >= 0; setNum(el, (d2 ? '$' : '') + (desc ? from : t) + (p ? '%' : '')); return; }
  var io = new IntersectionObserver(function (es) {
  es.forEach(function (en) {
  if (!en.isIntersecting) return;
  var p = el.textContent.indexOf('%') >= 0;
  var dg = el.textContent.indexOf('$') >= 0;
- var pl = el.textContent.indexOf('+') >= 0;
  var start = desc ? from : 0;
  var d = start;
- var tick = setInterval(function () { if (desc) { d -= Math.max(1, Math.round((from - t) / 30)); if (d <= t) { d = t; clearInterval(tick); } } else { d += Math.max(1, Math.round(t / 30)); if (d >= t) { d = t; clearInterval(tick); } } el.textContent = (dg ? '$' : '') + d + (p ? '%' : '') + (pl ? '+' : ''); }, 24);
+ var tick = setInterval(function () { if (desc) { d -= Math.max(1, Math.round((from - t) / 30)); if (d <= t) { d = t; clearInterval(tick); } } else { d += Math.max(1, Math.round(t / 30)); if (d >= t) { d = t; clearInterval(tick); } } setNum(el, (dg ? '$' : '') + d + (p ? '%' : '')); }, 24);
  io.disconnect();
  });
  }, { threshold: 0.4 });
