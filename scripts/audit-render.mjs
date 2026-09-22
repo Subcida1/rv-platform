@@ -40,19 +40,18 @@ const PORT = Number(argOf('--port', 9340));
 const BASE = argOf('--base', 'http://127.0.0.1:8130/');
 const OUT = argOf('--out', '/tmp/render-audit.json');
 
-function pageList() {
-  if (BASE.includes('originrv.com') || fs.existsSync('sitemap.xml')) {
-    const xml = BASE.includes('originrv.com')
-      ? null
-      : fs.readFileSync('sitemap.xml', 'utf8');
-    if (xml) {
-      const locs = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
-      return locs.map((u) => u.replace(/^https?:\/\/[^/]+\//, '') || 'index.html');
-    }
-  }
-  return ['index.html'];
+async function pageList() {
+  // Prefer the sitemap, fetched from the site being audited, so a remote run
+  // covers every page rather than just the homepage.
+  const remote = /^https?:\/\//.test(BASE) && !/127\.0\.0\.1|localhost/.test(BASE);
+  const xml = remote
+    ? await (await fetch(BASE + 'sitemap.xml')).text()
+    : (fs.existsSync('sitemap.xml') ? fs.readFileSync('sitemap.xml', 'utf8') : null);
+  if (!xml) return ['index.html'];
+  return [...new Set([...xml.matchAll(/<loc>([^<]+)<\/loc>/g)]
+    .map((m) => m[1].replace(/^https?:\/\/[^/]+\//, '') || 'index.html'))].sort();
 }
-const pages = [...new Set(pageList())].sort();
+const pages = await pageList();
 
 const list = await (await fetch(`http://127.0.0.1:${PORT}/json/list`)).json();
 const target = list.find((t) => t.type === 'page');
@@ -63,6 +62,7 @@ await new Promise((r) => (ws.onopen = r));
 let id = 0;
 const pending = new Map();
 let sink = [];
+const inflight = new Map();
 ws.onmessage = (ev) => {
   const m = JSON.parse(ev.data);
   if (m.id && pending.has(m.id)) {
@@ -74,8 +74,10 @@ ws.onmessage = (ev) => {
   if (m.method === 'Runtime.consoleAPICalled' && ['error', 'warning'].includes(m.params.type))
     sink.push(m.params.type.toUpperCase() + ' ' +
       m.params.args.map((a) => a.value ?? a.description ?? a.type).join(' ').slice(0, 150));
+  if (m.method === 'Network.requestWillBeSent')
+    inflight.set(m.params.requestId, m.params.request.url.slice(0, 100));
   if (m.method === 'Network.loadingFailed')
-    sink.push('REQFAIL ' + (m.params.errorText || ''));
+    sink.push('REQFAIL ' + (m.params.errorText || '') + ' ' + (inflight.get(m.params.requestId) || '?'));
   if (m.method === 'Network.responseReceived' && m.params.response.status >= 400)
     sink.push('HTTP' + m.params.response.status + ' ' + m.params.response.url.slice(0, 110));
 };
