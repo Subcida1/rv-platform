@@ -231,3 +231,59 @@ def check_brands(rows, errors):
         if len(r["note"]) > 160:
             errors.append("%s: note is %d chars, keep it under 160"
                           % (where, len(r["note"])))
+        if r.get("status") and r["status"] not in STATUS:
+            errors.append("%s: bad status %r" % (where, r["status"]))
+        if r.get("status") == "fail":
+            errors.append("%s: the link failed its check, so this row must not ship"
+                          % where)
+
+
+# Recalls, service bulletins and the rest of the official safety record. A
+# different shape from a document row: the SOURCE is the thing (an agency lookup
+# or a maker's own recall page), what matters is how a visitor is keyed into it,
+# and the page is a lookup guide rather than a list of files.
+RECALL_REQUIRED = ["source", "section", "what", "url", "keyed_by", "gate", "checked"]
+
+
+def check_recalls(rows, errors):
+    for i, r in enumerate(rows):
+        where = "recalls[%d] %s" % (i, r.get("source", "?"))
+
+        missing = [f for f in RECALL_REQUIRED if f not in r]
+        if missing:
+            errors.append("%s: missing %s" % (where, ", ".join(missing)))
+            continue
+
+        if r["gate"] not in GATES:
+            errors.append("%s: bad gate %r" % (where, r["gate"]))
+        if not r["url"].startswith("https://"):
+            errors.append("%s: url must be https (%r)" % (where, r["url"]))
+        low = r["url"].lower()
+        for bad in BANNED:
+            if bad in low:
+                errors.append("%s: banned host %s" % (where, bad))
+        if PLACEHOLDER.search(r["url"]):
+            errors.append("%s: url is a pattern, not an address (%s)"
+                          % (where, r["url"]))
+        if len(r["what"]) < 20:
+            errors.append("%s: what is too thin to be useful" % where)
+        if r.get("status") and r["status"] not in STATUS:
+            errors.append("%s: bad status %r" % (where, r["status"]))
+        if r.get("status") == "fail":
+            errors.append("%s: the link failed its check, so this row must not ship"
+                          % where)
+
+
+# Counts of manufacturer communications per make, in a stated window. This is the
+# recalls page's hook, so the numbers are data rather than prose. Every one was
+# counted from the federal file itself, and one number the research reported
+# (Lance, 192) does not appear in that file at all.
+def check_bulletins(rows, errors):
+    for i, r in enumerate(rows):
+        where = "bulletins[%d] %s" % (i, r.get("make", "?"))
+        for field in ("make", "count", "window"):
+            if field not in r:
+                errors.append("%s: missing %s" % (where, field))
+        if not isinstance(r.get("count"), int) or r.get("count", 0) <= 0:
+            errors.append("%s: count must be a positive integer (%r)"
+                          % (where, r.get("count")))

@@ -82,8 +82,15 @@ socket.getaddrinfo = _ipv4_first
 CHALLENGE = re.compile(
     r"just a moment|checking your browser|cf-browser-verification|"
     r"enable javascript and cookies to continue|attention required|"
+    r"enable javascript to run this app|you need to enable javascript|"
     r"ddos protection by|verify you are human|cf-challenge|"
     r"access denied.*cloudflare|incapsula|imperva", re.I)
+
+# Statuses that mean the server declined to serve US, which is not evidence that
+# the link is dead: 429 and 423 are throttling and locking, and a 5xx is a
+# server-side failure. Calling those FAIL condemned rows like Alliance RV (429)
+# and Taxa (423) that a person may well reach from a different address.
+REFUSED = {423, 425, 429, 503, 502, 504, 500, 507, 508}
 
 STATUS = {"PASS": 0, "WARN": 0, "FAIL": 0}
 
@@ -143,10 +150,35 @@ def ground(out, text, brand):
                               "%s text" % out["kind"].split()[0])
 
 
+def targets(doc):
+    """Every link in the manifest, in one shape.
+
+    The component rows were the only thing this ever audited, which left the 44
+    brand archives and the whole safety record unchecked. Each target carries
+    `group` so a verdict can be written back to the right list.
+    """
+    out = []
+    for r in doc.get("components", []):
+        out.append({"name": r["brand"], "title": r["title"], "group": r["system"],
+                    "url": r["url"], "note": r.get("note", ""),
+                    "check": r.get("check")})
+    for r in doc.get("brands", []):
+        if not r.get("url"):
+            continue        # publishes nothing online: there is nothing to check
+        out.append({"name": r["brand"], "title": "%s manual archive" % r["brand"],
+                    "group": "brand-archive", "url": r["url"],
+                    "note": r.get("note", ""), "check": r.get("check")})
+    for r in doc.get("recalls", []):
+        out.append({"name": r["source"], "title": r["source"], "group": "safety-record",
+                    "url": r["url"], "note": r.get("note", ""),
+                    "check": r.get("check")})
+    return out
+
+
 def _audit(row):
     url = row["url"]
-    out = {"name": row["brand"], "title": row["title"], "url": url,
-           "system": row["system"], "status": "PASS", "reasons": [],
+    out = {"name": row["name"], "title": row["title"], "url": url,
+           "system": row["group"], "status": "PASS", "reasons": [],
            "evidence": "", "kind": "", "final": url, "code": "",
            "note": row.get("note", "")}
     try:
@@ -195,6 +227,10 @@ def _audit(row):
             out["reasons"].append("bot protection answered HTTP %s. UNVERIFIED: "
                                   "the host is up, a browser may see the page"
                                   % e.code)
+        elif e.code in REFUSED:
+            out["status"] = "WARN"
+            out["reasons"].append("the host answered HTTP %s. UNVERIFIED: a refusal to "
+                                  "serve us is not evidence the link is dead" % e.code)
         else:
             out["status"] = "FAIL"
             out["reasons"].append("HTTP %s" % e.code)
@@ -225,9 +261,20 @@ def _audit(row):
             out["reasons"].append("parked or taken-over domain")
             return out
         if len(text) < MIN_TEXT:
-            out["status"] = "FAIL"
-            out["reasons"].append("only %d chars of text, not a real library page"
-                                  % len(text))
+            # Thin text is not the same as a thin page. Dutchmen serves 2.38 MB of
+            # markup with 185 readable characters, and Forest River's kit is a shell
+            # that says "you need to enable JavaScript". Both render in a browser, so
+            # both are UNVERIFIED here rather than condemned. A stub that is small in
+            # BOTH senses is the one that fails.
+            if len(raw) > 100000:
+                out["status"] = "WARN"
+                out["reasons"].append("%.0f KB of markup with only %d chars of readable "
+                                      "text, so it renders in the browser. UNVERIFIED here"
+                                      % (len(raw) / 1024.0, len(text)))
+            else:
+                out["status"] = "FAIL"
+                out["reasons"].append("only %d chars of text from %d bytes, not a real "
+                                      "page" % (len(text), len(raw)))
             return out
         if not R.DOC_WORDS.search(text):
             # A human judgement, not a machine one. The vocabulary is missing on
@@ -241,7 +288,7 @@ def _audit(row):
                                   % len(text))
             return out
 
-    ground(out, text, row["brand"])
+    ground(out, text, row["name"])
     return out
 
 
@@ -279,15 +326,25 @@ def stamp(results):
     verdict = {(r["name"], r["url"], r["system"]): r["status"] for r in results}
     words = {"PASS": "verified", "WARN": "unverified", "FAIL": "fail"}
     n = 0
-    for row in doc.get("components", []):
-        key = (row.get("brand"), row.get("url"), row.get("system"))
-        if key in verdict:
-            row["status"] = words[verdict[key]]
-            n += 1
+    for key, name_field, group_field in (
+            ("components", "brand", "system"),
+            ("brands", "brand", "brand-archive"),
+            ("recalls", "source", "safety-record")):
+        for row in doc.get(key, []):
+            group = row.get(group_field) if group_field == "system" else group_field
+            k = (row.get(name_field), row.get("url"), group)
+            if k in verdict:
+                row["status"] = words[verdict[k]]
+                n += 1
     order = ["brand", "host", "system", "kind", "doc_types", "title", "url", "key",
              "covers", "rev", "gate", "link_stability", "check", "status", "note",
              "checked"]
     doc["components"] = [{k: r[k] for k in order if k in r} for r in doc["components"]]
+    for key, order in (("brands", ["brand", "url", "structure", "years", "gate", "note",
+                                   "check", "status"]),
+                       ("recalls", ["source", "section", "what", "url", "keyed_by", "gate",
+                                    "note", "check", "status", "checked"])):
+        doc[key] = [{k: r[k] for k in order if k in r} for r in doc.get(key, [])]
     MANIFEST.write_text(json.dumps(doc, indent=2, ensure_ascii=False) + "\n",
                         encoding="utf-8")
     counts = {}
@@ -308,8 +365,12 @@ def main():
     errors = []
     components, _ = R.clean_dashes(doc.get("components", []))
     brands, _ = R.clean_dashes(doc.get("brands", []))
+    recalls, _ = R.clean_dashes(doc.get("recalls", []))
+    bulletins, _ = R.clean_dashes(doc.get("bulletins", []))
     R.check_components(components, errors)
     R.check_brands(brands, errors)
+    R.check_recalls(recalls, errors)
+    R.check_bulletins(bulletins, errors)
 
     print("=" * 96)
     print("OFFLINE: schema, banned hosts, storable-URL rule")
@@ -320,16 +381,20 @@ def main():
         if len(errors) > 40:
             print("  ... and %d more" % (len(errors) - 40))
     else:
-        print("  %d component rows and %d brand rows valid"
-              % (len(components), len(brands)))
+        print("  %d component rows, %d brand rows, %d safety-record rows valid"
+              % (len(components), len(brands), len(recalls)))
 
-    rows = components
-    if "--system" in sys.argv:
-        want = sys.argv[sys.argv.index("--system") + 1]
-        rows = [r for r in rows if r["system"] == want]
+    rows = targets(doc)
+    for flag, key in (("--which", "group"), ("--system", "group")):
+        if flag in sys.argv:
+            want = sys.argv[sys.argv.index(flag) + 1]
+            rows = [r for r in rows if r[key] == want]
     if "--only" in sys.argv:
         sub = sys.argv[sys.argv.index("--only") + 1].lower()
-        rows = [r for r in rows if sub in r["brand"].lower()]
+        rows = [r for r in rows if sub in r["name"].lower()]
+    if "--group" in sys.argv:
+        want = sys.argv[sys.argv.index("--group") + 1]
+        rows = [r for r in rows if r["group"] == want]
     if "--limit" in sys.argv:
         rows = rows[:int(sys.argv[sys.argv.index("--limit") + 1])]
 

@@ -1253,8 +1253,23 @@ figure:has(svg[role="img"]){overflow-x:auto;overflow-y:hidden}
    re-composites it every frame (~19ms measured); the vertical fade is
    baked into the canvas instead.
    ============================================================ */
+/* The old two-colour radial wash and the grid are retired on the home hero:
+   the map and the car replace them. Scoped with .hero-map-on so the other
+   pages keep the hero they have. */
+.hero-map-on > .hero-bg,
+.hero-map-on > .hero-grid{display:none}
+
 .hero-map,.hero-trace{position:absolute;top:0;left:0;width:100%;height:100%;
   pointer-events:none;z-index:0}
-.hero-map{opacity:.2}
+.hero-map{opacity:1}
 .hero-trace{opacity:1}
+/* opacity 1 here on purpose: the 20% peak is baked into the fade curve
+   in hero-map.js. Setting it here too multiplies to 4% and the map
+   all but vanishes. */
 .hero .wrap{position:relative;z-index:2}
+
+/* Recalls page: a two-column count of filings. Small, factual, no decoration. */
+.man-table{width:100%;max-width:520px;border-collapse:collapse;margin:6px 0 14px;font-size:14px}
+.man-table th{text-align:left;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--text-3);padding:8px 10px;border-bottom:1px solid var(--border-2)}
+.man-table td{padding:8px 10px;border-bottom:1px solid var(--border);color:var(--text-2)}
+.man-table td:last-child{text-align:right;font-weight:700;color:var(--text)}

@@ -44,6 +44,7 @@ window.RV_CONFIG = {
     scripts/build-manuals-pages.py from _data/manuals.json. */
  manuals: 'manuals/index.html',
  manualsBrands: 'manuals/brands.html',
+ manualsRecalls: 'manuals/recalls.html',
  manualsPower: 'manuals/power-and-electrical.html',
  manualsPlumbing: 'manuals/water-and-plumbing.html',
  manualsClimate: 'manuals/heating-and-cooling.html',

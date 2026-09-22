@@ -331,6 +331,20 @@ def hub(rows, oem_count):
 
   <div class="sec" style="padding:0 0 60px">
     <div class="wrap">
+      <h2 class="man-h2">Recalls and service bulletins</h2>
+      <a class="card" style="display:block;padding:26px;max-width:860px"
+         href="manuals/recalls.html">
+        <div class="guide-title">Has my unit been recalled</div>
+        <div class="guide-meta" style="margin-top:8px">Where to check a unit by VIN, the
+        makers who publish their own recall notices, and the federal file of manufacturer
+        communications, where the RV makers have filed two thousand of them.</div>
+        <div class="guide-go" style="margin-top:12px">Open &#8594;</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="sec" style="padding:0 0 60px">
+    <div class="wrap">
       <div class="card man-about">
         <div class="man-about-h">What each row tells you</div>
         <p>Every row links the maker's own page or document. It also states what
@@ -446,6 +460,9 @@ def brand_row(r):
     if r["url"]:
         foot = ('<a class="man-go" href="%s" target="_blank" rel="noopener">Open the %s '
                 'archive &#8594;</a>' % (esc(r["url"]), esc(r["brand"])))
+        if r.get("status") != "verified":
+            foot += ('<span class="man-note">we could not check this link '
+                     'automatically</span>')
     else:
         foot = '<span class="man-note">no manual published online</span>'
     needle = " ".join([r["brand"], r["years"], r["note"], shape]).lower()
@@ -517,6 +534,125 @@ def brands_page(rows):
 """ % (len(rows), len(rows), "\n".join(blocks))
 
     return (head(BRANDS_TITLE, desc, "%s/manuals/brands.html" % SITE, [collection, crumb])
+            + body + foot("assets/js/manuals/filter.js"))
+
+
+RECALL_TITLE = "RV Recalls and Service Bulletins"
+RECALL_DESC = ("RV recalls and service bulletins: how to check whether your unit has a "
+               "campaign against it, and where the manufacturer bulletins are kept")
+
+RECALL_SECTIONS = [
+    ("check", "Check your own unit",
+     "Start with the federal lookup. It takes a VIN, or a year, a make and a model, and "
+     "returns the recalls, complaints and investigations filed against that unit. Two "
+     "makers run their own lookup as well."),
+    ("notices", "Recalls you can read in full",
+     "The campaign number is the thread through a recall: the federal report, the maker's "
+     "own notice and any repair instruction all carry it."),
+    ("bulletins", "Service bulletins",
+     "A recall is a safety defect. A service bulletin is the maker telling its dealers how "
+     "to deal with something, and the federal government collects them alongside the "
+     "recalls. Almost nobody in the RV world links them."),
+    ("appliances", "Appliances and components",
+     "The fridge, the water heater, the generator and the portable heater are consumer "
+     "products before they are RV parts, so they are recalled through a different agency."),
+    ("canada", "Canada",
+     "Canadian recalls run as their own campaigns, with their own numbers."),
+]
+
+
+def recall_row(r):
+    badge = ('<span class="man-note">link checked %s</span>' % esc(r["checked"])
+             if r.get("status") == "verified"
+             else '<span class="man-note">we could not check this link automatically</span>')
+    return """        <li class="man-row" data-search="%s">
+          <div class="man-row-top">
+            <a class="man-doc" href="%s" target="_blank" rel="noopener">%s</a>
+            <span class="man-types"><span class="badge badge-tint">keyed by %s</span></span>
+          </div>
+          <div class="man-row-meta"><span>%s</span></div>
+          <div class="man-row-foot">%s</div>
+        </li>
+""" % (esc(" ".join([r["source"], r["what"], r["keyed_by"]]).lower()),
+       esc(r["url"]), esc(r["source"]), esc(r["keyed_by"]), esc(r["what"]), badge)
+
+
+def recalls_page(rows, bulletins, source_note):
+    desc = meta_desc(RECALL_DESC)
+    window = bulletins[0]["window"] if bulletins else ""
+    total = sum(b["count"] for b in bulletins)
+
+    blocks = []
+    for key, heading, blurb in RECALL_SECTIONS:
+        group = [r for r in rows if r.get("section") == key]
+        if not group:
+            continue
+        blocks.append("""
+      <h2 class="man-h2">%s</h2>
+      <p class="man-status">%s</p>
+      <ul class="man-list">
+%s
+      </ul>""" % (esc(heading), esc(blurb), "\n".join(recall_row(r) for r in group)))
+
+    table = "\n".join(
+        "          <tr><td>%s</td><td>%s</td></tr>" % (esc(b["make"]), format(b["count"], ","))
+        for b in bulletins)
+
+    count_note = ("""      <h2 class="man-h2">Manufacturer communications in the federal
+      file<span class="man-count">top %d makes</span></h2>
+      <p class="man-status">Counted from the file below, for %s. It holds 769,391 records in
+      total, most of them cars, and RV manufacturers account for 2,063 of them. These are the
+      makes with the most filed, %s between them.</p>
+      <table class="man-table">
+        <thead><tr><th>Make</th><th>Filed</th></tr></thead>
+        <tbody>
+%s
+        </tbody>
+      </table>
+      <p class="man-status">%s</p>""" % (len(bulletins), esc(window), format(total, ","),
+                                         table, esc(source_note)))
+
+    crumb = breadcrumbs([("OriginRV", SITE + "/"), ("RV Manuals", SITE + "/manuals/"),
+                         (RECALL_TITLE, SITE + "/manuals/recalls.html")])
+    collection = {
+        "@context": "https://schema.org", "@type": "CollectionPage",
+        "name": RECALL_TITLE, "url": SITE + "/manuals/recalls.html", "description": desc,
+        "isPartOf": site_schema(),
+        "mainEntity": {"@type": "ItemList", "numberOfItems": len(rows),
+                       "itemListElement": [
+                           {"@type": "ListItem", "position": i, "name": r["source"],
+                            "url": r["url"]}
+                           for i, r in enumerate(rows, 1)]}}
+
+    body = """
+  <div class="wrap" style="padding:54px 0 14px">
+    <div class="man-crumb"><a href="manuals/index.html">RV Manuals</a></div>
+    <h1 class="dir-title man-title">RV RECALLS AND SERVICE BULLETINS</h1>
+    <p class="man-lede">How to find out whether your RV, or something fitted to it, has been
+    recalled, and where the manufacturer service bulletins are kept.</p>
+  </div>
+
+  <div class="sec" style="padding:10px 0 60px">
+    <div class="wrap">
+%s
+
+%s
+
+      <div class="card man-about">
+        <div class="man-about-h">Why the bulletin file is worth knowing about</div>
+        <p>The federal system that holds recalls also holds every manufacturer
+        communication, which is where a maker explains a problem to its dealers before it
+        becomes a recall, or when it never does. The RV makers file them in the thousands,
+        and nothing on the consumer side indexes them by make and model.</p>
+        <p>Reading one takes two steps: find the document id in the file, then open the
+        bulletin itself at a link built from that id. The ids are not guessable, so start
+        from the file rather than from a pattern.</p>
+      </div>
+    </div>
+  </div>
+""" % ("\n".join(blocks), count_note)
+
+    return (head(RECALL_TITLE, desc, SITE + "/manuals/recalls.html", [collection, crumb])
             + body + foot("assets/js/manuals/filter.js"))
 
 
@@ -654,6 +790,9 @@ def main():
         pages[OUTDIR / ("%s.html" % slug)] = system_page(
             slug, title, meta_desc(desc), by_system.get(slug, []))
     pages[OUTDIR / "brands.html"] = brands_page(brands)
+    pages[OUTDIR / "recalls.html"] = recalls_page(doc.get("recalls", []),
+                                                  doc.get("bulletins", []),
+                                                  doc.get("bulletin_source", ""))
 
     # Rule #11 covers everything we ship, generated pages included.
     for path, text in pages.items():
@@ -687,8 +826,9 @@ def main():
     print("=" * 84)
     print("  %-30s %6s %9s %9s" % ("page", "rows", "KB", "desc len"))
     order = ([OUTDIR / "index.html"] + [OUTDIR / ("%s.html" % s) for s, _ in R.SYSTEMS]
-             + [OUTDIR / "brands.html"])
-    counts = {OUTDIR / "index.html": len(components), OUTDIR / "brands.html": len(brands)}
+             + [OUTDIR / "brands.html", OUTDIR / "recalls.html"])
+    counts = {OUTDIR / "index.html": len(components), OUTDIR / "brands.html": len(brands),
+              OUTDIR / "recalls.html": len(doc.get("recalls", []))}
     for path in order:
         text = pages[path]
         m = re.search(r'<meta name="description" content="(.*?)">', text)

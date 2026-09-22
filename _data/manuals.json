@@ -172,7 +172,7 @@
       "covers": "DC distribution, breakers, switches and ACRs, with cutout templates and drawings",
       "gate": "none",
       "link_stability": "library_page_only",
-      "status": "verified",
+      "status": "unverified",
       "note": "Cloudflare answers every automated client with Attention Required, including real Chrome, so this link cannot be verified from here; the host is up",
       "checked": "2026-09-21"
     },
@@ -1905,7 +1905,7 @@
       "covers": "F-53, F-59, E-350/450 and F-600 Body Builder Layout Books and BEMMs",
       "gate": "none",
       "link_stability": "library_page_only",
-      "status": "verified",
+      "status": "unverified",
       "checked": "2026-09-21"
     },
     {
@@ -2021,7 +2021,7 @@
       "covers": "B6.7, ISB, ISL and ISC diesel engines, owner's manuals and wiring diagrams",
       "gate": "free-account",
       "link_stability": "library_page_only",
-      "status": "verified",
+      "status": "unverified",
       "note": "Cloudflare challenge answers automated checks; the library's own PDFs return 200 application/pdf, so the source is live",
       "checked": "2026-09-21"
     },
@@ -2052,7 +2052,8 @@
       "structure": "per-year-and-model",
       "years": "1981 to 2027",
       "gate": "none",
-      "note": "one page per model year, then per model; year pages also key on the 7th VIN character"
+      "note": "one page per model year, then per model; year pages also key on the 7th VIN character",
+      "status": "verified"
     },
     {
       "brand": "Itasca",
@@ -2060,7 +2061,8 @@
       "structure": "per-year-and-model",
       "years": "pre-2016",
       "gate": "none",
-      "note": "discontinued brand, co-published with Winnebago in the same per-year archive"
+      "note": "discontinued brand, co-published with Winnebago in the same per-year archive",
+      "status": "unverified"
     },
     {
       "brand": "Thor Motor Coach",
@@ -2068,7 +2070,8 @@
       "structure": "per-year-and-model",
       "years": "2010 and newer",
       "gate": "vin-or-login",
-      "note": "open per-make archive plus a VIN-gated Owners Resource portal for 2010+ units"
+      "note": "open per-make archive plus a VIN-gated Owners Resource portal for 2010+ units",
+      "status": "verified"
     },
     {
       "brand": "Tiffin Motorhomes",
@@ -2076,7 +2079,8 @@
       "structure": "per-year-and-model",
       "years": "1973 to 2026",
       "gate": "none",
-      "note": "distinct document per model line per year, some years add a separate chassis manual"
+      "note": "distinct document per model line per year, some years add a separate chassis manual",
+      "status": "verified"
     },
     {
       "brand": "Newmar",
@@ -2084,7 +2088,8 @@
       "structure": "per-year-and-model",
       "years": "rolling",
       "gate": "free-account",
-      "note": "Newgle knowledgebase needs a free account; NewPar serves static PDFs"
+      "note": "Newgle knowledgebase needs a free account; NewPar serves static PDFs",
+      "status": "verified"
     },
     {
       "brand": "Forest River RV",
@@ -2092,7 +2097,8 @@
       "structure": "per-year-and-model",
       "years": "2015 and newer",
       "gate": "none",
-      "note": "interactive Owner's Kit shared across Forest River divisions, PDF download inside"
+      "note": "interactive Owner's Kit shared across Forest River divisions, PDF download inside",
+      "status": "unverified"
     },
     {
       "brand": "Dynamax",
@@ -2100,7 +2106,8 @@
       "structure": "per-year-and-model",
       "years": "2015 and newer",
       "gate": "none",
-      "note": "owner manual for a unit 2015 or newer, served by the Forest River kit"
+      "note": "owner manual for a unit 2015 or newer, served by the Forest River kit",
+      "status": "verified"
     },
     {
       "brand": "Jayco",
@@ -2108,7 +2115,8 @@
       "structure": "per-year-brand-wide",
       "years": "current model years (2027 shown)",
       "gate": "none",
-      "note": "one document per category per year, not per model line"
+      "note": "one document per category per year, not per model line",
+      "status": "verified"
     },
     {
       "brand": "Entegra Coach",
@@ -2116,7 +2124,8 @@
       "structure": "per-year-and-model",
       "years": "2022 to 2026",
       "gate": "none",
-      "note": "listing page links nothing; official PDFs live on the data.entegracoach.com CDN"
+      "note": "listing page links nothing; official PDFs live on the data.entegracoach.com CDN",
+      "status": "verified"
     },
     {
       "brand": "Coachmen",
@@ -2124,7 +2133,8 @@
       "structure": "per-year-and-model",
       "years": "2015 and newer",
       "gate": "none",
-      "note": "Forest River division on the same interactive kit, older units get numbered PDFs"
+      "note": "Forest River division on the same interactive kit, older units get numbered PDFs",
+      "status": "unverified"
     },
     {
       "brand": "Fleetwood",
@@ -2132,7 +2142,8 @@
       "structure": "per-year-and-model",
       "years": "1974 to 2025",
       "gate": "none",
-      "note": "select year and make, REV RV Group brand"
+      "note": "select year and make, REV RV Group brand",
+      "status": "verified"
     },
     {
       "brand": "Holiday Rambler",
@@ -2140,7 +2151,8 @@
       "structure": "per-year-and-model",
       "years": "1983 to 2025",
       "gate": "none",
-      "note": "per-year PDF archive for Holiday Rambler motor coaches"
+      "note": "per-year PDF archive for Holiday Rambler motor coaches",
+      "status": "verified"
     },
     {
       "brand": "Monaco Coach",
@@ -2148,7 +2160,8 @@
       "structure": "per-year-and-model",
       "years": "not stated",
       "gate": "none",
-      "note": "select brand or search by model year to browse the archive"
+      "note": "select brand or search by model year to browse the archive",
+      "status": "verified"
     },
     {
       "brand": "Gulf Stream Coach",
@@ -2156,7 +2169,8 @@
       "structure": "generic-multi-year",
       "years": "1998 to 2017",
       "gate": "none",
-      "note": "two generic current manuals plus a 2017 and earlier motorhome archive"
+      "note": "two generic current manuals plus a 2017 and earlier motorhome archive",
+      "status": "verified"
     },
     {
       "brand": "Nexus RV",
@@ -2172,7 +2186,8 @@
       "structure": "per-year-and-model",
       "years": "2001 to 2026",
       "gate": "none",
-      "note": "all-models manuals for 2025 and 2026, per-model for older years"
+      "note": "all-models manuals for 2025 and 2026, per-model for older years",
+      "status": "verified"
     },
     {
       "brand": "Leisure Travel Vans",
@@ -2180,7 +2195,8 @@
       "structure": "per-year-and-model",
       "years": "current and past models",
       "gate": "none",
-      "note": "select model and year; past Triple E manuals sit on the separate Triple E site"
+      "note": "select model and year; past Triple E manuals sit on the separate Triple E site",
+      "status": "verified"
     },
     {
       "brand": "Pleasure-Way",
@@ -2188,7 +2204,8 @@
       "structure": "per-year-and-model",
       "years": "1990 to 2026",
       "gate": "none",
-      "note": "deep archive reaching back to a 1990 to 1993 manual"
+      "note": "deep archive reaching back to a 1990 to 1993 manual",
+      "status": "verified"
     },
     {
       "brand": "Roadtrek",
@@ -2196,7 +2213,8 @@
       "structure": "per-year-and-model",
       "years": "2016 to 2025 and older",
       "gate": "none",
-      "note": "per-model PDFs in English and French; legacy deep links return 404, use the portal"
+      "note": "per-model PDFs in English and French; legacy deep links return 404, use the portal",
+      "status": "verified"
     },
     {
       "brand": "Midwest Automotive Designs",
@@ -2212,7 +2230,8 @@
       "structure": "per-year-and-model",
       "years": "2019 to 2024",
       "gate": "none",
-      "note": "MODE user guides archived by year; GXV guides on a separate page"
+      "note": "MODE user guides archived by year; GXV guides on a separate page",
+      "status": "verified"
     },
     {
       "brand": "Airstream",
@@ -2220,7 +2239,8 @@
       "structure": "per-year-and-model",
       "years": "1990s to 2024",
       "gate": "none",
-      "note": "searchable catalog of owner's manuals and parts books per model year"
+      "note": "searchable catalog of owner's manuals and parts books per model year",
+      "status": "verified"
     },
     {
       "brand": "Forest River towables",
@@ -2228,7 +2248,8 @@
       "structure": "per-year-and-model",
       "years": "2015 and newer",
       "gate": "none",
-      "note": "shared interactive kit, division Forest River RV or Palomino; manuals back to 2015"
+      "note": "shared interactive kit, division Forest River RV or Palomino; manuals back to 2015",
+      "status": "unverified"
     },
     {
       "brand": "Prime Time",
@@ -2236,7 +2257,8 @@
       "structure": "per-year-and-model",
       "years": "2015 and newer",
       "gate": "none",
-      "note": "Forest River division, manuals through the interactive kit plus component PDFs"
+      "note": "Forest River division, manuals through the interactive kit plus component PDFs",
+      "status": "unverified"
     },
     {
       "brand": "East to West",
@@ -2244,7 +2266,8 @@
       "structure": "per-year-and-model",
       "years": "2015 and newer",
       "gate": "none",
-      "note": "owner's manual for a unit 2015 or newer, served by the Forest River kit"
+      "note": "owner's manual for a unit 2015 or newer, served by the Forest River kit",
+      "status": "verified"
     },
     {
       "brand": "Keystone RV",
@@ -2252,7 +2275,8 @@
       "structure": "per-year-and-model",
       "years": "2002 to 2027",
       "gate": "none",
-      "note": "per-year PDFs, embeds Dutchmen and CrossRoads/Redwood documents"
+      "note": "per-year PDFs, embeds Dutchmen and CrossRoads/Redwood documents",
+      "status": "verified"
     },
     {
       "brand": "Grand Design RV",
@@ -2260,7 +2284,8 @@
       "structure": "revision-dated",
       "years": "2013 to 2026",
       "gate": "none",
-      "note": "manuals are per model line and revised by date, not labelled by model year"
+      "note": "manuals are per model line and revised by date, not labelled by model year",
+      "status": "verified"
     },
     {
       "brand": "Heartland RV",
@@ -2268,7 +2293,8 @@
       "structure": "generic-multi-year",
       "years": "2025 to 2027",
       "gate": "none",
-      "note": "page labels one general owner's manual as for 2025 or before"
+      "note": "page labels one general owner's manual as for 2025 or before",
+      "status": "verified"
     },
     {
       "brand": "Dutchmen",
@@ -2276,7 +2302,8 @@
       "structure": "generic-multi-year",
       "years": "2018 archive plus 2025 and 2026",
       "gate": "none",
-      "note": "Keystone division; current manual is the shared Keystone/Dutchmen document"
+      "note": "Keystone division; current manual is the shared Keystone/Dutchmen document",
+      "status": "unverified"
     },
     {
       "brand": "Alliance RV",
@@ -2284,7 +2311,8 @@
       "structure": "generic-multi-year",
       "years": "current models",
       "gate": "none",
-      "note": "one owner's manual per model line, not per model year"
+      "note": "one owner's manual per model line, not per model year",
+      "status": "unverified"
     },
     {
       "brand": "Brinkley RV",
@@ -2292,7 +2320,8 @@
       "structure": "serial-or-build-range",
       "years": "2023 to 2026",
       "gate": "none",
-      "note": "manuals keyed to unit-number build ranges such as Units #154-7832"
+      "note": "manuals keyed to unit-number build ranges such as Units #154-7832",
+      "status": "verified"
     },
     {
       "brand": "KZ RV",
@@ -2300,7 +2329,8 @@
       "structure": "per-year-and-model",
       "years": "2013 to 2026",
       "gate": "none",
-      "note": "recent years consolidated, older years split by model line"
+      "note": "recent years consolidated, older years split by model line",
+      "status": "verified"
     },
     {
       "brand": "Cruiser RV",
@@ -2308,7 +2338,8 @@
       "structure": "generic-multi-year",
       "years": "all model years",
       "gate": "none",
-      "note": "one manual applies to all model families, revised April 2025"
+      "note": "one manual applies to all model families, revised April 2025",
+      "status": "verified"
     },
     {
       "brand": "Highland Ridge",
@@ -2316,7 +2347,8 @@
       "structure": "per-year-brand-wide",
       "years": "current (2027) plus past years",
       "gate": "none",
-      "note": "shared Jayco family towable manual plus brochures"
+      "note": "shared Jayco family towable manual plus brochures",
+      "status": "unverified"
     },
     {
       "brand": "Lance Camper",
@@ -2324,7 +2356,8 @@
       "structure": "per-year-and-model",
       "years": "2000 to 2026",
       "gate": "none",
-      "note": "owners manuals and brochures archive, truck camper and travel trailer"
+      "note": "owners manuals and brochures archive, truck camper and travel trailer",
+      "status": "verified"
     },
     {
       "brand": "nuCamp RV",
@@ -2332,7 +2365,8 @@
       "structure": "per-year-and-model",
       "years": "2017 to 2026",
       "gate": "none",
-      "note": "per-model PDFs including pre-2021 bundles"
+      "note": "per-model PDFs including pre-2021 bundles",
+      "status": "verified"
     },
     {
       "brand": "Casita Travel Trailers",
@@ -2340,7 +2374,8 @@
       "structure": "generic-multi-year",
       "years": "all model years",
       "gate": "none",
-      "note": "one Casita owner's manual covers the line, the rest of the page is component manuals"
+      "note": "one Casita owner's manual covers the line, the rest of the page is component manuals",
+      "status": "verified"
     },
     {
       "brand": "Scamp",
@@ -2348,7 +2383,8 @@
       "structure": "generic-multi-year",
       "years": "2022 to 2025",
       "gate": "none",
-      "note": "lineup-wide manual, explicitly not tied to a model year or floorplan"
+      "note": "lineup-wide manual, explicitly not tied to a model year or floorplan",
+      "status": "verified"
     },
     {
       "brand": "Oliver Travel Trailers",
@@ -2356,7 +2392,8 @@
       "structure": "per-year-and-model",
       "years": "2015 to 2026",
       "gate": "none",
-      "note": "Oliver University table of year and model manuals with view links"
+      "note": "Oliver University table of year and model manuals with view links",
+      "status": "verified"
     },
     {
       "brand": "Escape Trailer",
@@ -2380,7 +2417,8 @@
       "structure": "per-year-and-model",
       "years": "2017 to 2022",
       "gate": "none",
-      "note": "per-model PDFs for Woolly Bear, Mantis, Cricket and TigerMoth plus quick start guides"
+      "note": "per-model PDFs for Woolly Bear, Mantis, Cricket and TigerMoth plus quick start guides",
+      "status": "unverified"
     },
     {
       "brand": "inTech RV",
@@ -2388,7 +2426,8 @@
       "structure": "generic-multi-year",
       "years": "current (generic)",
       "gate": "none",
-      "note": "one owner's manual covers the trailer lines, plus a filterable manual search"
+      "note": "one owner's manual covers the trailer lines, plus a filterable manual search",
+      "status": "verified"
     },
     {
       "brand": "Ember RV",
@@ -2396,7 +2435,198 @@
       "structure": "generic-multi-year",
       "years": "2023 and newer",
       "gate": "none",
-      "note": "resources page links nothing; official PDFs live on the data.emberrv.com CDN"
+      "note": "resources page links nothing; official PDFs live on the data.emberrv.com CDN",
+      "status": "verified"
     }
-  ]
+  ],
+  "recalls": [
+    {
+      "source": "NHTSA recall lookup",
+      "section": "check",
+      "what": "Search recalls for a specific unit. Enter a VIN, or browse by year, make and model, and see the complaints and investigations filed against it. Free, no account.",
+      "url": "https://www.nhtsa.gov/recalls",
+      "keyed_by": "VIN, or year and make and model",
+      "gate": "none",
+      "status": "verified",
+      "checked": "2026-09-21"
+    },
+    {
+      "source": "NHTSA manufacturer communications, 2025 to 2026",
+      "section": "bulletins",
+      "what": "Every manufacturer communication filed in the window, including the RV makers, as one federal file. 2,063 of its 769,391 records are from RV manufacturers.",
+      "url": "https://static.nhtsa.gov/odi/ffdd/tsbs/TSBS_RECEIVED_2025-2026.zip",
+      "keyed_by": "make, model, model year and component",
+      "gate": "none",
+      "status": "unverified",
+      "checked": "2026-09-21"
+    },
+    {
+      "source": "NHTSA manufacturer communications, field layout",
+      "section": "bulletins",
+      "what": "What each column in the file above means, so a bulletin can be matched to a make and a model year before it is read.",
+      "url": "https://static.nhtsa.gov/odi/ffdd/tsbs/TSBS.txt",
+      "keyed_by": "field layout",
+      "gate": "none",
+      "status": "verified",
+      "checked": "2026-09-21"
+    },
+    {
+      "source": "Grand Design service bulletin, slide water intrusion",
+      "section": "bulletins",
+      "what": "One bulletin out of that file, as an example of what the record holds: the slide may not fully retract at the bottom on 25FW Lineage models built between 6 May 2024 and 25 July 2025.",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2025/MC-11020898-0001.pdf",
+      "keyed_by": "document id",
+      "gate": "none",
+      "status": "verified",
+      "checked": "2026-09-21"
+    },
+    {
+      "source": "Forest River recall report, campaign 24V047",
+      "section": "notices",
+      "what": "The federal report for a furnace that could overheat and crack its burn chamber, covering certain 2023 and 2024 Prism Class C motorhomes.",
+      "url": "https://static.nhtsa.gov/odi/rcl/2024/RCLRPT-24V047-9731.PDF",
+      "keyed_by": "campaign number",
+      "gate": "none",
+      "status": "verified",
+      "checked": "2026-09-21"
+    },
+    {
+      "source": "Grand Design recall letter, campaign 26V-446",
+      "section": "notices",
+      "what": "The letter Grand Design mailed to owners, published one per campaign: a MaxxAir roof ventilation fan whose control board can overheat.",
+      "url": "https://www.granddesignrv.com/content/dam/grand-design-rv/en/master-files/customer-service/owner-support/recalls/recall-letters/nhtsa/63%20-%20NHTSA%2026v-446%20-%20Retail%20Letter.pdf.coredownload.pdf",
+      "keyed_by": "campaign number",
+      "gate": "none",
+      "status": "verified",
+      "checked": "2026-09-21"
+    },
+    {
+      "source": "Grand Design owner recalls",
+      "section": "check",
+      "what": "The maker's own recall hub. Grand Design is the one brand observed publishing a letter per campaign, in both the US and Canadian versions.",
+      "url": "https://www.granddesignrv.com/owners/recalls",
+      "keyed_by": "campaign",
+      "gate": "none",
+      "status": "verified",
+      "checked": "2026-09-21"
+    },
+    {
+      "source": "Forest River VIN recall search",
+      "section": "check",
+      "what": "The maker's own recall lookup by VIN.",
+      "url": "https://forestriverinc.com/recall-search",
+      "keyed_by": "17-digit VIN",
+      "gate": "none",
+      "status": "unverified",
+      "checked": "2026-09-21"
+    },
+    {
+      "source": "US Consumer Product Safety Commission",
+      "section": "appliances",
+      "what": "Recalls for the appliances that go into an RV. A fridge, a water heater, a generator and a portable heater are consumer products first, and CPSC covers them separately from the vehicle.",
+      "url": "https://www.cpsc.gov/Recalls",
+      "keyed_by": "product",
+      "gate": "none",
+      "status": "verified",
+      "checked": "2026-09-21"
+    },
+    {
+      "source": "Transport Canada vehicle recalls",
+      "section": "canada",
+      "what": "The Canadian recall database by make, model and year. Worth a look if the unit was built for or sold into Canada, where the campaign number is different.",
+      "url": "https://wwwapps.tc.gc.ca/Saf-Sec-Sur/7/VRDB-BDRV/search-recherche/menu.aspx",
+      "keyed_by": "make, model and year",
+      "gate": "none",
+      "status": "unverified",
+      "checked": "2026-09-21"
+    },
+    {
+      "source": "Transport Canada recalls programme",
+      "section": "canada",
+      "what": "The programme page that leads into that database and sets out what it covers.",
+      "url": "https://tc.canada.ca/en/road-transportation/defects-recalls-vehicles-tires-child-car-seats",
+      "keyed_by": "n/a",
+      "gate": "none",
+      "status": "verified",
+      "checked": "2026-09-21"
+    }
+  ],
+  "bulletins": [
+    {
+      "make": "Forest River",
+      "count": 409,
+      "window": "2025 to 2026"
+    },
+    {
+      "make": "Tiffin",
+      "count": 281,
+      "window": "2025 to 2026"
+    },
+    {
+      "make": "Forest River Bus",
+      "count": 261,
+      "window": "2025 to 2026"
+    },
+    {
+      "make": "Brinkley RV",
+      "count": 157,
+      "window": "2025 to 2026"
+    },
+    {
+      "make": "Newmar",
+      "count": 152,
+      "window": "2025 to 2026"
+    },
+    {
+      "make": "Coachmen",
+      "count": 148,
+      "window": "2025 to 2026"
+    },
+    {
+      "make": "Keystone",
+      "count": 117,
+      "window": "2025 to 2026"
+    },
+    {
+      "make": "Winnebago",
+      "count": 116,
+      "window": "2025 to 2026"
+    },
+    {
+      "make": "Jayco",
+      "count": 101,
+      "window": "2025 to 2026"
+    },
+    {
+      "make": "Grand Design",
+      "count": 78,
+      "window": "2025 to 2026"
+    },
+    {
+      "make": "Thor Motor Coach",
+      "count": 73,
+      "window": "2025 to 2026"
+    },
+    {
+      "make": "Holiday Rambler",
+      "count": 50,
+      "window": "2025 to 2026"
+    },
+    {
+      "make": "East to West",
+      "count": 47,
+      "window": "2025 to 2026"
+    },
+    {
+      "make": "Dynamax",
+      "count": 25,
+      "window": "2025 to 2026"
+    },
+    {
+      "make": "KZ RV",
+      "count": 17,
+      "window": "2025 to 2026"
+    }
+  ],
+  "bulletin_source": "Counted from TSBS_RECEIVED_2025-2026.zip at static.nhtsa.gov on 2026-09-21, by make, from the 769,391 records in the file."
 }
