@@ -172,6 +172,60 @@ print("  clean" if not bad else "\n".join("  " + b for b in bad))
 if bad:
     fails.append("homepage figures")
 
+print("\n=== guide counts claimed on the homepage match the guides that exist ===")
+# Two failures live in one place here. The homepage claimed "Seven troubleshooting
+# guides" while the site had eleven, and six of the seventeen guides were reachable
+# from nowhere on the homepage. Both are claims about the corpus, so both are
+# checked against the corpus: every guide must be linked, and a spelled-out count
+# must equal the cards in the grid it introduces. The hero stat (data-count) is
+# covered by the homepage-figures check above; scripts/sync-counts.py owns it.
+WORDS = {"one": 1, "two": 2, "three": 3, "four": 4, "five": 5, "six": 6, "seven": 7,
+         "eight": 8, "nine": 9, "ten": 10, "eleven": 11, "twelve": 12,
+         "thirteen": 13, "fourteen": 14, "fifteen": 15, "sixteen": 16, "seventeen": 17}
+
+idx_html = (ROOT / "index.html").read_text(encoding="utf-8")
+bad = []
+
+linked = set(re.findall(r'href="guides/([a-z0-9-]+)\.html"', idx_html))
+every_guide = {f.stem for f in (ROOT / "guides").glob("*.html") if f.name != "index.html"}
+missing = sorted(every_guide - linked)
+if missing:
+    bad.append("index.html links %d of %d guides, missing: %s"
+               % (len(linked & every_guide), len(every_guide), ", ".join(missing)))
+
+# text nodes only, with their offsets kept, so a count inside a meta description
+# or an alt attribute cannot be mistaken for a claim a reader sees
+spans = [m.end() for m in re.finditer(r"<[^>]+>", idx_html)]
+text_bits = []
+prev = 0
+for s in re.finditer(r"<[^>]+>", idx_html):
+    if s.start() > prev:
+        text_bits.append((prev, idx_html[prev:s.start()]))
+    prev = s.end()
+
+grids = [(m.start(), None) for m in re.finditer(r'<div class="guide-grid">', idx_html)]
+for i, (pos, _) in enumerate(grids):
+    end = grids[i + 1][0] if i + 1 < len(grids) else len(idx_html)
+    grids[i] = (pos, len(re.findall(r'class="card guide-card"', idx_html[pos:end])))
+
+claim_re = re.compile(r"\b(" + "|".join(WORDS) + r")\b(?:\s+[a-z]+){0,2}\s+guides?\b", re.I)
+for start, text in text_bits:
+    for m in claim_re.finditer(text):
+        n = WORDS[m.group(1).lower()]
+        after = [(p, c) for p, c in grids if p > start + m.end()]
+        if not after:
+            bad.append("index.html says %r with no guide grid under it to check against"
+                       % text[m.start() - 40:m.end() + 20].strip())
+            continue
+        cards = after[0][1]
+        if n != cards:
+            bad.append("index.html says %r but the grid under it holds %d cards"
+                       % (m.group(0), cards))
+print("  %d guides, all linked from the homepage; %d grids, every count matched"
+      % (len(every_guide), len(grids)) if not bad else "\n".join("  " + b for b in bad))
+if bad:
+    fails.append("guide counts")
+
 print("\n=== FAQ schema matches the visible FAQ word for word ===")
 # Google requires FAQPage markup to match the text a reader can see. Scripts now edit page
 # text in bulk (normalize-house-style.py hyphenates "12 volt" across the whole file, including
