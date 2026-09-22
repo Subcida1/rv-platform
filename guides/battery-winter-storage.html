@@ -44,7 +44,7 @@
 
  <div class="sec prose">
  <div class="wrap narrow">
- <div class="callout"><b>The short version:</b> lead-acid and lithium store at opposite charge levels, lead-acid at 100 percent and lithium near 50 percent. Both must be disconnected from the RV's loads, and lithium must never be charged below freezing. Solar left connected is a hidden hazard on a cold winter day, because a controller will try to charge a frozen battery. The pages below give you the exact numbers for your chemistry.</div>
+ <div class="callout"><b>The short version:</b> lead-acid and lithium store at opposite charge levels, lead-acid at 100 percent and lithium at partial charge. Both must be disconnected from the RV's loads, and lithium must never be charged below freezing. Solar left connected is a hidden hazard on a cold winter day, because a controller will try to charge a frozen battery. The pages below give you the exact numbers for your chemistry.</div>
 
  <h2>How to store RV batteries for winter, by chemistry</h2>
  <div class="card">
@@ -55,7 +55,7 @@
  <p><b>Check voltage every 4 to 6 weeks.</b> Lead-acid self-discharges at roughly 3 to 10 percent per month at room temperature, flooded batteries at the high end and sealed types lower. If the resting voltage drops below 12.4 volts, charge it again, then re-check. Clean the terminals before storage and coat them lightly with dielectric grease or petroleum jelly to keep corrosion out. (While the battery is out, it is the perfect moment to <a href="tools/weight-calculator.html">verify your RV weight limits</a> against what you actually carry.)</p>
  </div>
  <div class="card">
- <h3>LiFePO4 lithium batteries: Store near 50%, never charge below freezing</h3>
+ <h3>LiFePO4 lithium batteries: Store at partial charge, never charge below freezing</h3>
  <p>Lithium plays by the opposite rules, and getting them wrong is expensive because the damage is permanent and cumulative. Charging a lithium cell below about 32°F causes <b>lithium plating</b>: the lithium ions cannot absorb into the anode quickly enough, so they deposit as solid metal on its surface instead. Each cold charge steals capacity that never returns, and repeated plating can eventually form internal structures that compromise the cell. This is not a gentle caution, it is a hard electrical rule, and it is why a lithium bank with no low-temperature cutoff must not be connected to solar or a charger during a cold winter.</p>
  <p><b>Store near 50 percent, in the 40 to 60 percent band</b> if your BMS or vendor manual lists a specific figure. Storing lithium at 100 percent for months causes slightly faster degradation than storing at 50 percent, and storing near zero risks the BMS entering a protection mode that is annoying to exit in spring.</p>
  <p><b>Disconnect the loads, and do not leave a trickle charger on the pack.</b> Lithium self-discharges at only 2 to 3 percent per month and holds for months, but a detector, monitor, or inverter standby still drains it. The maintenance-charge advice that keeps lead-acid alive is wrong for lithium: a float charger left on a lithium pack all winter is the wrong tool.</p>
@@ -101,7 +101,7 @@
  <h3>MPPT vs PWM: Which charge controller is best for winter?</h3>
  <p>Two kinds of controllers exist, and the difference matters most in cold weather.</p>
  <p><b>PWM (pulse width modulation)</b> is a smart switch. It drags the panel voltage down to match the battery voltage, which wastes whatever the panel produces above that level. It is simple and cheap, and it works fine in warm climates with closely matched panels, but in cold weather it gives up meaningful harvest.</p>
- <p><b>MPPT (maximum power point tracking)</b> is a converter with a brain. It lets the panel run at its most efficient voltage, then converts the excess into extra charging current. That captures roughly 15 to 30 percent more power than PWM from the same panels, with the largest gains in winter, because cold panels produce higher voltage and MPPT is the only type that can use it. For an RV that sees winter at all, MPPT is the right choice.</p>
+ <p><b>MPPT (maximum power point tracking)</b> is a converter with a brain. It lets the panel run at its most efficient voltage, then converts the excess into extra charging current. That captures more power than PWM from the same panels, with the largest gains in winter, because cold panels produce higher voltage and MPPT is the only type that can use it. For an RV that sees winter at all, MPPT is the right choice.</p>
  </div>
  <div class="card">
  <h3>The winter hazard: A sunny day can charge a frozen lithium battery</h3>
@@ -120,7 +120,7 @@
  <div class="card">
  <p></p>
 <ul class="checks">
- <li>Charge to the target for your chemistry: lead-acid to 100%, lithium to 40-60%.</li>
+ <li>Charge to the target for your chemistry: lead-acid to 100%, lithium to 40 to 60 percent unless the battery's own manual says otherwise.</li>
  <li>Top off flooded lead-acid cells with distilled water before the final charge.</li>
  <li>Turn the inverter fully off, not just the appliances.</li>
  <li>Disconnect solar panels from the controller, and shore power from the converter.</li>
@@ -156,7 +156,8 @@
  <li><a href="https://battlebornbatteries.com/blogs/articles/faq-how-to-winterize-your-batteries" target="_blank" rel="noopener">Battle Born, winterizing and storing LiFePO4 batteries</a></li>
  <li><a href="https://www.victronenergy.com/upload/documents/Lithium_Battery_Smart/15958-Manual_Lithium_Smart_Battery-pdf-en.pdf" target="_blank" rel="noopener">Victron Energy, Lithium Smart battery manual (PDF)</a></li>
  <li><a href="https://www.eastpennmanufacturing.com/wp-content/uploads/8A-8G-IO-Manual-1833.pdf" target="_blank" rel="noopener">East Penn / Deka, 8A and 8G installation and operation manual (PDF)</a></li>
- </ul>
+  <li><a href="https://batterycouncil.org/" target="_blank" rel="noopener">Battery Council International (the freeze table this page quotes is reproduced in the Trojan white paper above)</a></li>
+</ul>
  </div>
 </div>
  </div>

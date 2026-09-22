@@ -91,6 +91,39 @@ BRANDS = [
 VOID_RE = re.compile(r"<(script|style)\b.*?</\1>", re.S | re.I)
 TAG_RE = re.compile(r"<[^>]+>")
 
+# A claim resting on UNNAMED authority. Every one of these shapes turned up on the site in one
+# session: "confirmed by weather services and snow engineering references", "the lasting rule
+# from tire engineers", "the RV industry standard", "one published labor rate we found". A
+# named source belongs in the Sources list; an unnamed one is decoration that reads as backing.
+AUTHORITY = [
+    (r"\b(?:the|a|an)\s+(?:RV\s+)?industry\s+standard\b", "appeals to an unnamed industry standard"),
+    (r"\bper\s+the\s+(?:RV\s+)?(?:industry\s+)?standard\b", "appeals to an unnamed standard"),
+    (r"\b(?:tire|RV|service)\s+engineers\b", "appeals to unnamed engineers"),
+    (r"\bengineers\s+(?:say|recommend|agree|settle)\b", "appeals to unnamed engineers"),
+    (r"\bexperts\s+(?:say|recommend|agree)\b", "appeals to unnamed experts"),
+    (r"\b(?:weather services|snow engineering references|industry references)\b",
+     "appeals to unnamed references"),
+    (r"\bmanufacturers?\s+(?:rarely|typically|generally)\b",
+     "generalises about what manufacturers do without a source"),
+    # Two patterns were DROPPED after measuring their false-positive rate at 8 of 9 hits:
+    #   "confirmed|verified|endorsed by"  -> "confirmed by measuring at both converters" is a
+    #      method, and "not endorsed by any manufacturer we could find" is a disclosure of
+    #      absence, which is the opposite of an authority appeal.
+    #   "published (rate|pricing|figures|data)" -> "Suburban's own published figures" names its
+    #      source, and "no manufacturer published pricing" is again a disclosure.
+    # A rule that fires on honest disclosures is a rule that gets ignored, which costs more than
+    # it saves. The five patterns above have each caught a real one on this site.
+]
+
+# A figure with a unit, so repeated figures can be surfaced and their hedges compared. Three of
+# this session's misses were this shape: a fix applied to one instance while a sibling -- same
+# wording or a different spelling -- kept the old claim. The checker cannot judge whether a hedge
+# is right; it can make sure nobody forgets to look at every instance.
+FIGURE_RE = re.compile(
+    r"\b\d[\d,]*(?:\.\d+)?(?:\s*(?:to|or|-)\s*\d[\d,]*(?:\.\d+)?)?\s*"
+    r"(?:pounds per square foot|psf|pounds per cubic foot|psi|percent|per cent|"
+    r"degrees|volts|amps|watts|inches|feet|foot|years|mph)\b", re.I)
+
 
 def text_of(html):
     return TAG_RE.sub(" ", VOID_RE.sub(" ", html))
@@ -137,6 +170,9 @@ def check_page(path):
     html = path.read_text(encoding="utf-8", errors="replace")
     rel = path.relative_to(ROOT).as_posix()
     findings = []
+    # Extracted once, here, because three rules now need it. Defining it inside the coverage
+    # block instead is what made the new figure rule crash on every manuals page.
+    body_txt = text_of(body_only(html))
 
     # 1,2,3 headings. Both rules are binary, and were decided 2026-09-21 after a site-wide
     # tally overturned the pilot's "statement headings take a period" reading, which needed a
@@ -179,11 +215,48 @@ def check_page(path):
     # the same thing twice.
     if not rel.startswith("manuals/"):
         labels = " | ".join(source_labels(html))
-        body_txt = text_of(body_only(html))
         for brand in BRANDS:
             n = len(re.findall(r"\b" + re.escape(brand) + r"\b", body_txt))
             if n and brand.lower() not in labels.lower():
                 findings.append(("coverage", "named in body, absent from Sources (%d mentions)" % n, brand))
+
+    # 7  authority appeals: a claim that rests on someone unnamed.
+    if not rel.startswith("manuals/"):
+        for pat, label in AUTHORITY:
+            for m in re.finditer(pat, body_txt, re.I):
+                findings.append(("authority", label,
+                                 re.sub(r"\s+", " ", body_txt[max(0, m.start() - 55):m.end() + 55]).strip()))
+
+    # 8  an ORPHAN SOURCE: an entry in the Sources list whose maker is never named in the body.
+    # Rule 6 checks one direction (named in the body, missing from Sources). This is the other,
+    # and it matters just as much: a citation with no claim pointing at it reads as coverage that
+    # does not exist. It is how the Michelin entry sat in a Sources list on 2026-09-22.
+    #
+    # The maker is DERIVED from the entry's own leading proper noun rather than looked up in
+    # BRANDS, because the makers cited are not a fixed list -- the first version of this rule
+    # could not see Michelin at all, which was the exact case that prompted it.
+    if not rel.startswith("manuals/"):
+        for lab in source_labels(html):
+            m = re.match(r"\s*([A-Z][A-Za-z0-9&'.\-]{3,})", lab)
+            if not m:
+                continue
+            maker = m.group(1).strip().rstrip(".,")
+            if not re.search(r"\b" + re.escape(maker) + r"\b", body_txt, re.I):
+                findings.append(("source-not-named",
+                                 "REVIEW: in Sources, this maker is never named in the body",
+                                 "%s  [%s]" % (maker, lab[:70])))
+
+    # 9  a figure that appears more than once. Reported, not judged: the point is that every
+    # instance gets looked at together, because a fix applied to one of three is how a page ends
+    # up disagreeing with itself.
+    counts = {}
+    for m in FIGURE_RE.finditer(body_txt):
+        key = re.sub(r"\s+", " ", m.group(0).lower().strip())
+        counts.setdefault(key, []).append(m.start())
+    for key, spots in counts.items():
+        if len(spots) >= 3:
+            findings.append(("figure-repeated", "REVIEW: %dx on this page, check every instance reads the same way"
+                             % len(spots), key))
 
     return rel, findings
 
@@ -216,6 +289,10 @@ def main():
         print("  %-10s %d" % (k, totals[k]))
     if not hits:
         print("  clean")
+    print("\nREVIEW items are prompts to look, not defects. A reference entry need not be named "
+          "in the body, and a figure repeated on a page is usually innocent. They exist because "
+          "three of this session's errors were one fixed instance of a pattern sitting beside an "
+          "unfixed sibling: read every instance together before trusting either.")
     print("\nNote: coverage only checks that a NAME appears in Sources, never that the source"
           "\nactually supports the claim. Reading the document is the only thing that settles it.")
     if "--strict" in args and hits:
