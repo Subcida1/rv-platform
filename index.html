@@ -58,7 +58,7 @@
  <a class="btn btn-secondary btn-lg" href="guides/index.html">Read the winter guides</a>
  </div>
  <div class="hero-stats">
- <div class="hstat"><div class="num" data-count="50">0%<span class="plus">+</span></div><div class="lbl">Of RVs exceed a weight rating*</div></div>
+ <div class="hstat"><div class="num" data-count="50">0%</div><div class="lbl">Or more of RVs exceed a weight rating*</div></div>
  <div class="hstat"><div class="num" data-count="58">0</div><div class="lbl">Repair businesses listed</div></div>
  <div class="hstat"><div class="num" data-count="17">0</div><div class="lbl">Free guides, live now</div></div>
  <div class="hstat"><div class="num" data-count="0">$0</div><div class="lbl">No signup, ever</div></div>
@@ -252,12 +252,7 @@
  <script>
  (function () {
  var els = document.querySelectorAll('.hstat .num');
- /* the counter owns only the number's text node, so a stat can carry styled
-    markup beside it (the small "+" on the 50%) without being wiped */
- function setNum(el, text) {
- if (el.firstChild && el.firstChild.nodeType === 3) el.firstChild.nodeValue = text;
- else el.textContent = text;
- }
+ function setNum(el, text) { el.textContent = text; }
  function animate(el) {
  var t = parseInt(el.getAttribute('data-count'), 10);
         var from = parseInt(el.getAttribute('data-from') || '0', 10);
