@@ -502,6 +502,35 @@ else:
 
 
 
+
+print("\n=== the palette is defined in exactly one place ===")
+# The point of the token layer is that a colour lives in one file location, so a
+# rebrand is one edit. That is only true if nothing else re-states a palette value,
+# and this file had 102 colour literals before the layer existed. Anything that
+# needs a colour names a token.
+css_src = (ROOT / "assets" / "css" / "style.css").read_text(encoding="utf-8")
+token_start = css_src.index(":root{")
+token_end = css_src.index("\n}\n", css_src.index("/* ---- LEGACY ALIASES.")) + 3
+token_block, rest = css_src[:token_end], css_src[token_end:]
+PALETTE = ["#3d7fc2", "#568fd3", "#5b96d8", "#1e6fc4", "#2f7fd6", "#3f8fe8",
+           "#eef5fc", "#e9f1fa", "#f3f9ff", "#dce8f4", "#c9dcee",
+           "#eaf1fa", "#cfe0f2", "#2a6aad", "#0f172a", "#55627a", "#67748e",
+           "#f43f5e", "#b42338", "#fdeeee", "#f2b8be", "#0ea5e9", "#6366f1",
+           "#1e293b", "#d0d5dd", "#ffffff", "#fff\b"]
+leaked = []
+for lit in PALETTE:
+    for m in re.finditer(lit, rest, re.I):
+        line = rest[:m.start()].count("\n") + 1
+        head = rest[rest.rfind("{", 0, m.start()):m.start()]
+        leaked.append("style.css:%d uses %s outside the token layer, in %s"
+                      % (line, lit, head.split("}")[-1].strip()[:44]))
+if leaked:
+    for l in leaked[:10]:
+        print("  " + l)
+    fails.append("palette in one place")
+else:
+    print("  %d palette values, none restated outside the token layer" % len(PALETTE))
+
 print("\n=== the tinted surfaces are blue tinted, visibly ===")
 # #f7f8fa is cool by three points, which reads as cream against a pure white card. A
 # tint has to be measurable to be a tint, so every neutral surface token must be at

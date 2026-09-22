@@ -2,52 +2,151 @@
    OriginRV Design System (Light Theme)
    Big-brand standardized UI, sunset gradient identity
    ============================================================ */
+/* ============================================================================
+   TOKENS: the only place the site's look is defined.
+
+   Change a value here and every page follows. Nothing below this block should
+   contain a colour, a radius or a shadow of its own; that is what verify.py
+   checks, and it is why the palette could drift for months with nobody noticing
+   (there were 102 colour literals in this file before this block existed).
+
+   To rebrand: change --brand, --brand-2, --brand-3, and the three --brand-deep
+   stops the CTA and the logo use. Everything else follows, including the tints.
+   To change the mood: change the surfaces (--bg-2, --bg-3, --border) and the
+   text ramp. To add a second theme: copy this block into a class and put that
+   class on <body> instead of g-theme-mist.
+
+   THE LEGACY ALIASES at the bottom of this block exist because the rest of the
+   file still says var(--b1), var(--grad) and so on. They point at the canonical
+   tokens above, so changing a canonical value changes them too. Prefer the new
+   names in anything new, and retire an alias when nothing uses it.
+   ============================================================================ */
 :root{
+  /* ---- BRAND: one blue, in three weights plus a deeper gradient for CTAs ---- */
+  --brand:#3d7fc2;
+  --brand-2:#568fd3;
+  --brand-3:#5b96d8;
+  --brand-deep:#1e6fc4;
+  --brand-deep-2:#2f7fd6;
+  --brand-deep-3:#3f8fe8;
+  --brand-grad:linear-gradient(135deg,#3d7fc2 0%,#568fd3 50%,#5b96d8 100%);
+  --brand-grad-2:linear-gradient(120deg,#3d7fc2 0%,#568fd3 45%,#5b96d8 100%);
+  --cta-grad:linear-gradient(135deg,#1e6fc4 0%,#2f7fd6 50%,#3f8fe8 100%);
+  --glow:rgba(61,127,194,.32);
+
+  /* soft brand surfaces: tinted cards, icon buttons, hover washes */
+  --grad-soft:linear-gradient(135deg,rgba(61,127,194,.12),rgba(86,143,211,.12) 50%,rgba(91,150,216,.12));
+  --grad-soft-2:linear-gradient(135deg,rgba(61,127,194,.10),rgba(86,143,211,.10) 50%,rgba(91,150,216,.10));
+
+  /* the tint family: every informational chip, badge, banner and quiet panel.
+     At least ten points bluer than red, or it reads as cream next to a white
+     card. verify.py checks that. */
+  --tint-bg:#eaf1fa;
+  --tint-edge:#cfe0f2;
+  --tint-ink:#2a6aad;
+
+  /* ---- SURFACES: white, and blue-tinted when something needs to sit apart ---- */
   --bg:#ffffff;
-  /* The tinted surfaces are blue ON PURPOSE, and measurably so. They were #f7f8fa and
-     #f1f3f6: cool by three points, which is no blue at all, so against a pure white
-     card they read as cream and the whole site looked slightly gold (Ty, 2026-09-22:
-     "the text input boxes in the calculator is yellow ... the loaded weight, 80% rule,
-     payload check etc is yellow"). A tint has to be visible to be a tint, so each of
-     these is now at least ten points bluer than it is red. verify.py checks that. */
   --bg-2:#eef5fc;
   --bg-3:#e9f1fa;
   --surface:#ffffff;
   --surface-2:#f3f9ff;
   --border:#dce8f4;
   --border-2:#c9dcee;
-  /* The tinted-surface family. Amber and cream used to carry these, which read gold
-     against the pure white cards (Ty, 2026-09-22: "its kind of goldish against my pure
-     white elements"). The site is one blue now, and every one of these still says what
-     it means in words, so nothing loses its meaning. Red for an actual failure stays. */
-  --tint-bg:#eaf1fa; --tint-edge:#cfe0f2; --tint-ink:#2a6aad;
+
+  /* ---- TEXT: a three-step ink ramp, plus white for use on the brand ---- */
   --text:#0f172a;
   --text-2:#55627a;
   --text-3:#67748e;
+  --text-inv:#ffffff;
 
-  /* brand sunset gradient */
-  --b1:#f97316; --b2:#f43f5e; --b3:#8b5cf6;
-  --grad:linear-gradient(135deg,#f97316 0%,#f43f5e 50%,#8b5cf6 100%);
-  --grad-soft:linear-gradient(135deg,rgba(249,115,22,.12),rgba(244,63,94,.12) 50%,rgba(139,92,246,.12));
+  /* ---- STATUS: red means a real failure and nothing else. ---- */
+  --danger:#b42338;        /* the ink and edge of a failed verdict */
+  --danger-bg:#fdeeee;
+  --danger-edge:#f2b8be;
+  --danger-soft:#f43f5e;   /* the rose still used for error borders and dots */
 
-  /* category accents */
-  /* --c-violet, --c-teal, --c-orange and --c-emerald were referenced by nothing
-     once the green and amber families became blue. Only these three are used. */
-  --c-sky:#0ea5e9;   /* links and CTAs */
-  --c-indigo:#6366f1;
-  --c-rose:#f43f5e; --c-amber:#f59e0b;
+  /* ---- ACCENTS: links and one highlight. Nothing else earns a colour. ---- */
+  --sky:#0ea5e9;
+  --indigo:#6366f1;
 
-  --radius:16px; --radius-sm:10px; --radius-lg:24px;
+  /* ---- SHAPE ---- */
+  --radius:16px;
+  --radius-sm:10px;
+  --radius-lg:24px;
+  --radius-pill:999px;
+
+  /* ---- ELEVATION ---- */
   --shadow-sm:0 1px 2px rgba(16,24,40,.05);
   --shadow:0 2px 4px rgba(16,24,40,.05),0 14px 34px -16px rgba(16,24,40,.16);
   --shadow-lg:0 10px 24px -10px rgba(16,24,40,.16),0 28px 70px -28px rgba(16,24,40,.26);
+
+  /* ---- MOTION ---- */
+  --t-fast:.15s;
+  --t-base:.18s;
+
+  /* ---- LAYOUT ---- */
   --maxw:1200px;
-  /* hero map: map ink is the deep end of the brand blue (a mid blue
-     reads far fainter on white than the near-black it replaced); the
-     fades are baked into the canvas, see the hero map block below */
-  --ink:#1e6fc4; --ocean:#5b96d8;
-  --map-fade:100%; --route-fade:100%;
+  --gutter:24px;
+
+  /* ---- TYPE: family, and the intended scale ----
+     The scale is defined so new work has somewhere to land. The rest of this file
+     still sets most sizes literally (46 distinct values at the last count), and
+     collapsing those onto the scale is a design change that moves pixels, so it is
+     a deliberate pass rather than a mechanical one. */
   --font:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --display:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --mono:ui-monospace,Menlo,Consolas,monospace;
+  --fs-xs:12px;
+  --fs-sm:13px;
+  --fs-md:14.5px;
+  --fs-lg:16px;
+  --fs-xl:19px;
+  --fs-2xl:22px;
+  --fs-3xl:clamp(28px,3.6vw,42px);
+  --lh-tight:1.15;
+  --lh-body:1.65;
+  --lh-loose:1.8;
+
+  /* ---- SPACE: a 4px scale, for the same reason as the type scale above ---- */
+  --space-1:4px;
+  --space-2:8px;
+  --space-3:12px;
+  --space-4:16px;
+  --space-5:24px;
+  --space-6:32px;
+  --space-7:48px;
+  --space-8:64px;
+
+  /* ---- identity of the highway layer (mile markers, centreline, signage) ---- */
+  --asphalt:#1e293b;
+  --sign:#0f172a;
+  --sign-text:#ffffff;
+  --mark:#3d7fc2;
+  --dash:#d0d5dd;
+
+  /* ---- the hero map paints in the deep end of the brand blue; a mid blue reads
+     far fainter on white than the near-black it replaced. The fades are baked into
+     the canvas, see the hero map block below. ---- */
+  --ink:#1e6fc4;
+  --ocean:#5b96d8;
+  --map-fade:100%;
+  --route-fade:100%;
+
+  /* ---- LEGACY ALIASES. Prefer the canonical names above in anything new. ---- */
+  --b1:var(--brand);
+  --b2:var(--brand-2);
+  --b3:var(--brand-3);
+  --grad:var(--brand-grad);
+  --grad-2:var(--brand-grad-2);
+  --btn-grad:var(--cta-grad);
+  --c-sky:var(--sky);
+  --c-indigo:var(--indigo);
+  --c-rose:var(--danger-soft);
+  --c-amber:#f59e0b;
+  --cl-mark:var(--mark);
+  --cl-white:#ffffff;
+  --cl-dash:var(--dash);
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -70,7 +169,7 @@ input,select,textarea{font-family:inherit}
 /* ================= BUTTONS ================= */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:12px 22px;border-radius:999px;font-weight:600;font-size:14.5px;line-height:1;border:1px solid transparent;transition:transform .15s,box-shadow .18s,background .18s,color .18s,border-color .18s;white-space:nowrap;text-align:center}
 .btn:active{transform:translateY(1px)}
-.btn-primary{background:var(--grad);color:#fff;box-shadow:0 12px 26px -12px rgba(244,63,94,.6)}
+.btn-primary{background:var(--grad);color:var(--text-inv);box-shadow:0 12px 26px -12px rgba(244,63,94,.6)}
 .btn-primary:hover{transform:translateY(-1px);box-shadow:0 16px 32px -12px rgba(244,63,94,.72)}
 .btn-secondary{background:var(--surface);border-color:var(--border-2);color:var(--text)}
 .btn-secondary:hover{border-color:#c3cad6;background:var(--surface-2)}
@@ -86,7 +185,7 @@ input,select,textarea{font-family:inherit}
 .icon-btn:hover{border-color:var(--text-3);color:var(--text)}
 .icon-btn svg{width:20px;height:20px}
 .badge{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:4px 10px;border-radius:999px}
-.badge-grad{background:var(--grad);color:#fff}
+.badge-grad{background:var(--grad);color:var(--text-inv)}
 .badge-soft{background:var(--grad-soft);color:var(--b1)}
 .badge-tint{background:var(--bg-3);color:var(--text-2)}
 .badge-green{background:var(--tint-bg);color:var(--tint-ink)}
@@ -148,7 +247,7 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
 .drop a:hover{background:var(--grad-soft);color:var(--text)}
 .drop a .sm{display:block;font-size:12px;color:var(--text-3);font-weight:400}
 .nav-actions{display:flex;align-items:center;gap:8px}
-.cart-badge{position:absolute;top:-4px;right:-4px;min-width:18px;height:18px;padding:0 4px;border-radius:999px;background:var(--grad);color:#fff;font-size:11px;font-weight:800;display:grid;place-items:center}
+.cart-badge{position:absolute;top:-4px;right:-4px;min-width:18px;height:18px;padding:0 4px;border-radius:999px;background:var(--grad);color:var(--text-inv);font-size:11px;font-weight:800;display:grid;place-items:center}
 .burger{display:none;background:none;border:1px solid var(--border-2);border-radius:10px;padding:8px 10px}
 .burger svg{width:20px;height:20px;stroke:var(--text)}
 .mobile-menu{display:none;flex-direction:column;padding:10px 20px 18px;border-top:1px solid var(--border);background:var(--surface)}
@@ -158,7 +257,7 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
 
 /* ================= HERO (HOME) ================= */
 .hero{position:relative;overflow:hidden;background:var(--bg)}
-.hero-bg{position:absolute;inset:0;background:radial-gradient(900px 480px at 82% -8%,rgba(139,92,246,.16),transparent 60%),radial-gradient(800px 460px at 12% 8%,rgba(249,115,22,.14),transparent 58%),radial-gradient(700px 420px at 50% 120%,rgba(244,63,94,.12),transparent 60%),linear-gradient(180deg,#fdfbfa 0%,#ffffff 40%)}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(900px 480px at 82% -8%,rgba(139,92,246,.16),transparent 60%),radial-gradient(800px 460px at 12% 8%,rgba(249,115,22,.14),transparent 58%),radial-gradient(700px 420px at 50% 120%,rgba(244,63,94,.12),transparent 60%),linear-gradient(180deg,#fdfbfa 0%,var(--surface) 40%)}
 .hero-grid{position:absolute;inset:0;opacity:.5;background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(ellipse 70% 60% at 50% 0%,#000 20%,transparent 75%)}
 .hero-inner{position:relative;z-index:2;padding:92px 0 30px;text-align:center}
 .kicker{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#4338ca;border:1px solid #e0e7ff;background:#eef2ff;padding:7px 16px;border-radius:999px}
@@ -214,7 +313,7 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
 .card-media{position:relative;display:grid;place-items:center;overflow:hidden}
 .card-media svg{position:relative;z-index:1}
 .card-tag{position:absolute;top:12px;left:12px;z-index:2;font-size:11px;font-weight:700;letter-spacing:.03em;background:rgba(255,255,255,.9);border:1px solid var(--border);color:var(--text-2);padding:4px 10px;border-radius:999px;backdrop-filter:blur(4px)}
-.card-tag.hot{background:var(--grad);color:#fff;border:none}
+.card-tag.hot{background:var(--grad);color:var(--text-inv);border:none}
 .card-body{padding:18px 18px 20px}
 .card-title{font-size:16px;font-weight:700;letter-spacing:-.01em;line-height:1.25}
 .card-meta{margin-top:4px;font-size:13px;color:var(--text-3)}
@@ -239,7 +338,7 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
 
 /* tech cards */
 .tech-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.tech-avatar{width:52px;height:52px;border-radius:50%;background:var(--grad);color:#fff;display:grid;place-items:center;font-weight:800;font-size:17px}
+.tech-avatar{width:52px;height:52px;border-radius:50%;background:var(--grad);color:var(--text-inv);display:grid;place-items:center;font-weight:800;font-size:17px}
 .spec-chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}
 .spec-chip{font-size:12px;font-weight:600;color:var(--text-2);background:var(--bg-2);border:1px solid var(--border);padding:4px 10px;border-radius:999px}
 
@@ -256,7 +355,7 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
 .thread-list{display:flex;flex-direction:column;gap:12px}
 .thread-card{display:flex;gap:16px;align-items:center;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px 20px;transition:.16s}
 .thread-card:hover{border-color:var(--border-2);box-shadow:var(--shadow-sm)}
-.thread-ava{width:44px;height:44px;border-radius:50%;flex:none;display:grid;place-items:center;font-weight:800;color:#fff}
+.thread-ava{width:44px;height:44px;border-radius:50%;flex:none;display:grid;place-items:center;font-weight:800;color:var(--text-inv)}
 .thread-main{flex:1;min-width:0}
 .thread-main h3{font-size:15.5px;font-weight:700}
 .thread-main .tm{font-size:13px;color:var(--text-3);margin-top:2px}
@@ -296,7 +395,7 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
 .quote{font-size:clamp(22px,3vw,30px);font-weight:700;letter-spacing:-.02em;line-height:1.3}
 .quote .grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 .quote-by{margin-top:18px;display:flex;align-items:center;gap:13px}
-.quote-by .avatar{width:46px;height:46px;border-radius:50%;background:var(--grad);color:#fff;display:grid;place-items:center;font-weight:800}
+.quote-by .avatar{width:46px;height:46px;border-radius:50%;background:var(--grad);color:var(--text-inv);display:grid;place-items:center;font-weight:800}
 .quote-by .who{font-size:14.5px;font-weight:700}
 .quote-by .where{font-size:13px;color:var(--text-3)}
 .com-list{display:flex;flex-direction:column;gap:14px}
@@ -388,7 +487,7 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
 .modal-close{background:none;border:none;font-size:24px;color:var(--text-3);line-height:1}
 .modal-close:hover{color:var(--text)}
 #toasts{position:fixed;bottom:22px;right:22px;z-index:500;display:flex;flex-direction:column;gap:10px}
-.toast{background:var(--text);color:#fff;padding:13px 18px;border-radius:12px;font-size:14px;font-weight:500;box-shadow:var(--shadow-lg);display:flex;gap:10px;align-items:center;animation:slideIn .25s ease}
+.toast{background:var(--text);color:var(--text-inv);padding:13px 18px;border-radius:12px;font-size:14px;font-weight:500;box-shadow:var(--shadow-lg);display:flex;gap:10px;align-items:center;animation:slideIn .25s ease}
 .toast.ok::before{content:"✓";color:#4ade80;font-weight:800}
 @keyframes slideIn{from{transform:translateY(12px);opacity:0}to{transform:none;opacity:1}}
 
@@ -406,14 +505,14 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
 /* ================= FOOTER ================= */
 footer{background:#0e1420;color:#cdd5e0;margin-top:0}
 footer a{color:#8fa0b5}
-footer a:hover{color:#fff}
+footer a:hover{color:var(--text-inv)}
 .foot-top{padding:72px 0 20px}
 .foot-grid{display:grid;grid-template-columns:1.7fr 1fr 1fr 1fr 1fr 1fr;gap:40px}
 .foot-brand p{margin-top:16px;color:#8fa0b5;font-size:14px;max-width:300px}
-.foot-brand .logo-name{color:#fff}
+.foot-brand .logo-name{color:var(--text-inv)}
 .foot-brand .logo-name span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;padding:0 1px}
 .newsletter{margin-top:22px;display:flex;gap:8px;max-width:360px}
-.newsletter input{flex:1;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:11px 16px;color:#fff;font-size:14px;outline:none}
+.newsletter input{flex:1;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:11px 16px;color:var(--text-inv);font-size:14px;outline:none}
 .newsletter input::placeholder{color:#8fa0b5}
 .foot-col h5{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#e7ecf3;margin-bottom:16px}
 .foot-col a{display:block;font-size:14px;padding:5px 0}
@@ -458,11 +557,6 @@ footer a:hover{color:#fff}
    ============================================================ */
 
 /* ---------- typography & motion ---------- */
-:root{
-  --display:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  --grad-2:linear-gradient(120deg,#f97316 0%,#f43f5e 45%,#8b5cf6 100%);
-  --grad-soft-2:linear-gradient(135deg,rgba(249,115,22,.10),rgba(244,63,94,.10) 50%,rgba(139,92,246,.10));
-}
 .grad-text{background:var(--grad-2);-webkit-background-clip:text;background-clip:text;color:transparent}
 .eyebrow{font-size:12.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;background:var(--grad-2);-webkit-background-clip:text;background-clip:text;color:transparent}
 .h2{font-size:clamp(28px,4vw,44px);font-weight:800;letter-spacing:-.03em;line-height:1.05}
@@ -472,8 +566,8 @@ footer a:hover{color:#fff}
 
 /* ---------- section bands ---------- */
 .sec{position:relative}
-.band-tint{background:linear-gradient(180deg,#fff,var(--bg-2))}
-.band-tint-2{background:linear-gradient(180deg,var(--bg-2),#fff)}
+.band-tint{background:linear-gradient(180deg,var(--surface),var(--bg-2))}
+.band-tint-2{background:linear-gradient(180deg,var(--bg-2),var(--surface))}
 .sec-head{max-width:760px;margin-bottom:46px}
 .sec-head.center{margin:0 auto 46px;text-align:center}
 
@@ -509,7 +603,7 @@ footer a:hover{color:#fff}
 .card-media{position:relative;display:grid;place-items:center;overflow:hidden}
 .card-media svg{position:relative;z-index:1;filter:drop-shadow(0 18px 24px rgba(16,24,40,.18))}
 .card-tag{position:absolute;top:12px;left:12px;z-index:2;font-size:11px;font-weight:800;letter-spacing:.03em;background:rgba(255,255,255,.92);border:1px solid var(--border);color:var(--text-2);padding:5px 11px;border-radius:999px;backdrop-filter:blur(6px)}
-.card-tag.hot{background:var(--grad-2);color:#fff;border:none}
+.card-tag.hot{background:var(--grad-2);color:var(--text-inv);border:none}
 .card-title{font-size:16px;font-weight:800;letter-spacing:-.01em;line-height:1.25}
 .card-meta{margin-top:4px;font-size:13px;color:var(--text-3)}
 .card-foot{display:flex;align-items:center;justify-content:space-between;margin-top:16px}
@@ -519,7 +613,7 @@ footer a:hover{color:#fff}
 .rating{display:flex;align-items:center;gap:6px;margin-top:9px;font-size:13px;color:var(--text-2)}
 .rating .stars{color:var(--c-amber);letter-spacing:.6px}
 .rating .val{font-weight:800;color:var(--text)}
-.rating .pill{background:var(--grad-2);color:#fff;font-weight:800;padding:2px 7px;border-radius:7px;font-size:12px}
+.rating .pill{background:var(--grad-2);color:var(--text-inv);font-weight:800;padding:2px 7px;border-radius:7px;font-size:12px}
 .save-heart{position:absolute;top:12px;right:12px;z-index:3;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.94);border:1px solid var(--border);display:grid;place-items:center;font-size:16px;cursor:pointer;transition:.15s;box-shadow:var(--shadow-sm)}
 .save-heart:hover{transform:scale(1.08)}
 .save-heart.saved{color:var(--c-rose)}
@@ -571,7 +665,7 @@ footer a:hover{color:#fff}
 /* tabs */
 .tabs{display:flex;gap:4px;background:var(--bg-3);border-radius:12px;padding:5px;margin-bottom:24px;overflow:auto}
 .tabs button{flex:1;border:none;background:transparent;padding:11px 14px;border-radius:9px;font-weight:700;font-size:14px;color:var(--text-2);cursor:pointer;white-space:nowrap}
-.tabs button.on{background:#fff;color:var(--text);box-shadow:var(--shadow-sm)}
+.tabs button.on{background:var(--surface);color:var(--text);box-shadow:var(--shadow-sm)}
 
 /* payment calc */
 .calc{background:var(--bg-2);border-radius:var(--radius-sm);padding:18px}
@@ -585,14 +679,14 @@ footer a:hover{color:#fff}
 /* reviews */
 .review{display:flex;gap:16px;padding:18px 0;border-bottom:1px solid var(--border)}
 .review:last-child{border-bottom:none}
-.review .ava{width:46px;height:46px;border-radius:50%;flex:none;display:grid;place-items:center;font-weight:800;color:#fff}
+.review .ava{width:46px;height:46px;border-radius:50%;flex:none;display:grid;place-items:center;font-weight:800;color:var(--text-inv)}
 .review .who{font-weight:800;font-size:14.5px}
 .review .when{font-size:12.5px;color:var(--text-3)}
 .review .body{margin-top:6px;color:var(--text-2);font-size:14.5px;line-height:1.6}
 
 /* seller */
 .seller{display:flex;gap:14px;align-items:center}
-.seller .sav{width:48px;height:48px;border-radius:50%;background:var(--grad-2);color:#fff;display:grid;place-items:center;font-weight:800;font-size:17px}
+.seller .sav{width:48px;height:48px;border-radius:50%;background:var(--grad-2);color:var(--text-inv);display:grid;place-items:center;font-weight:800;font-size:17px}
 
 /* ---------- campground / booking ---------- */
 .amenity-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
@@ -630,22 +724,22 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 .callout{background:var(--grad-soft-2);border:1px solid var(--tint-edge);border-radius:var(--radius-sm);padding:18px 22px;margin-top:20px;color:var(--text);font-size:14.5px;line-height:1.65}
 
 /* ---------- app / phone ---------- */
-.phone{width:236px;height:476px;border-radius:36px;background:#fff;border:1px solid var(--border-2);box-shadow:0 40px 90px -30px rgba(15,23,42,.4);padding:14px;position:relative;margin:0 auto}
+.phone{width:236px;height:476px;border-radius:36px;background:var(--surface);border:1px solid var(--border-2);box-shadow:0 40px 90px -30px rgba(15,23,42,.4);padding:14px;position:relative;margin:0 auto}
 .phone::before{content:"";position:absolute;top:9px;left:50%;transform:translateX(-50%);width:82px;height:5px;border-radius:5px;background:var(--border-2)}
 .phone-screen{border-radius:24px;height:100%;overflow:hidden;background:linear-gradient(170deg,#fdf2f8,#eff6ff 55%,#fff7ed);padding:28px 16px;display:flex;flex-direction:column;gap:11px}
 .phone-top{display:flex;align-items:center;justify-content:space-between;font-size:11px;color:var(--text-2);font-weight:700}
 .phone-top .dot{width:8px;height:8px;border-radius:50%;background:var(--b1);box-shadow:0 0 0 4px var(--glow)}
-.phone-route{border-radius:14px;background:#fff;border:1px solid var(--border);padding:13px;box-shadow:var(--shadow-sm)}
+.phone-route{border-radius:14px;background:var(--surface);border:1px solid var(--border);padding:13px;box-shadow:var(--shadow-sm)}
 .phone-route .l{font-size:10px;color:var(--text-3);text-transform:uppercase;letter-spacing:.08em;font-weight:700}
 .phone-route .b{font-size:15px;font-weight:800;margin-top:2px}
 .phone-route .s{font-size:11px;color:var(--text-2)}
-.phone-card{border-radius:14px;background:#fff;border:1px solid var(--border);padding:12px;display:flex;gap:11px;align-items:center;box-shadow:var(--shadow-sm)}
+.phone-card{border-radius:14px;background:var(--surface);border:1px solid var(--border);padding:12px;display:flex;gap:11px;align-items:center;box-shadow:var(--shadow-sm)}
 .phone-card .mini{width:40px;height:40px;border-radius:11px;background:var(--grad-2);display:grid;place-items:center;font-size:19px;flex:none}
 .phone-card .t{font-size:12.5px;font-weight:800}
 .phone-card .s{font-size:10.5px;color:var(--text-2)}
 .phone-bar{height:6px;border-radius:6px;background:var(--bg-3);overflow:hidden}
 .phone-bar i{display:block;height:100%;width:72%;border-radius:6px;background:var(--grad-2)}
-.dog-grid{background:linear-gradient(135deg,#0f172a,#1e293b);border-radius:var(--radius-lg);padding:8px}
+.dog-grid{background:linear-gradient(135deg,var(--text),var(--asphalt));border-radius:var(--radius-lg);padding:8px}
 .dog-inner{background:rgba(255,255,255,.05);border-radius:calc(var(--radius-lg) - 6px);padding:48px 44px;display:grid;grid-template-columns:1.2fr 1fr;gap:44px;align-items:center;color:#e2e8f0}
 
 /* ---------- misc used pages ---------- */
@@ -719,7 +813,7 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 .deck-card:hover{transform:translateY(-2px);border-color:var(--border-2);box-shadow:var(--shadow-sm)}
 .deck-card .deck-ic{width:40px;height:40px;border-radius:11px;display:grid;place-items:center;font-size:19px;flex:none;background:var(--grad-soft)}
 .deck-card.live .deck-ic{background:var(--grad)}
-.deck-card.live .deck-ic{color:#fff}
+.deck-card.live .deck-ic{color:var(--text-inv)}
 .deck-body{flex:1;display:flex;flex-direction:column}
 .deck-body b{font-size:15px;font-weight:800}
 .deck-body span{font-size:12.5px;color:var(--text-3);margin-top:2px}
@@ -753,18 +847,8 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
    highway-signage language: centerlines, mile markers,
    route shields. Keeps the clean light + sunset gradient.
    ============================================================ */
-:root{
-  /* --route and --route-2 (violet and rose) and --sign-accent (amber) lived here
-     and were referenced by nothing at all. Removed with the retired palette. */
-  --asphalt:#1e293b;
-  --sign:#0f172a;
-  --sign-text:#ffffff;
-  --cl-mark:#3d7fc2;
-  --cl-white:#ffffff;
-  --cl-dash:#d0d5dd;
-}
 /* mile marker eyebrow: replaces the generic uppercase label */
-.sec-eyebrow.mile{display:inline-flex;align-items:center;gap:9px;background:var(--sign);color:#fff;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:none;padding:5px 13px;border-radius:6px;border:1px solid #cbd5e1;box-shadow:0 1px 0 rgba(255,255,255,.35) inset}
+.sec-eyebrow.mile{display:inline-flex;align-items:center;gap:9px;background:var(--sign);color:var(--text-inv);font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:none;padding:5px 13px;border-radius:6px;border:1px solid #cbd5e1;box-shadow:0 1px 0 rgba(255,255,255,.35) inset}
 .sec-eyebrow.mile::before{content:"MP";display:inline-grid;place-items:center;width:26px;height:20px;background:var(--cl-mark);color:var(--sign);font-weight:800;border-radius:4px;font-size:10.5px}
 .sec-eyebrow.mile .mile-num{color:var(--cl-mark);font-weight:800}
 /* centerline divider: two-tone dashed highway line */
@@ -772,7 +856,7 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 .centerline::after{content:"";position:absolute;left:44px;top:0;width:0;height:14px}
 .centerline.long{max-width:480px}
 /* route shield chip (state-highway style) */
-.route{display:inline-flex;align-items:center;gap:7px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:11.5px;font-weight:800;color:var(--sign);background:#fff;border:1.5px solid var(--sign);border-radius:50%;width:26px;height:26px;place-items:center}
+.route{display:inline-flex;align-items:center;gap:7px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:11.5px;font-weight:800;color:var(--sign);background:var(--surface);border:1.5px solid var(--sign);border-radius:50%;width:26px;height:26px;place-items:center}
 .route-mini{display:inline-flex;align-items:center;gap:7px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:10.5px;font-weight:800;color:var(--sign);border:1.5px solid var(--sign);border-radius:6px;padding:2px 7px}
 /* hero gets a centerline underline */
 .hero .centerline{margin-top:30px}
@@ -853,7 +937,7 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 .tool-viz .viz-row.warn{background:var(--tint-bg);border:1px solid var(--tint-edge)}
 .tool-viz .viz-row.warn b{color:var(--tint-ink)}
 .verified{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:var(--tint-ink);background:var(--tint-bg);border:1px solid var(--tint-edge);border-radius:999px;padding:6px 13px}
-.verified::before{content:"\2713";display:grid;place-items:center;width:19px;height:19px;border-radius:50%;background:var(--b1);color:#fff;font-size:11px;font-weight:900}
+.verified::before{content:"\2713";display:grid;place-items:center;width:19px;height:19px;border-radius:50%;background:var(--b1);color:var(--text-inv);font-size:11px;font-weight:900}
 /* quieter primary hover (the old pink glow bubble) */
 .btn-primary:hover{box-shadow:0 6px 14px -8px rgba(244,63,94,.35);transform:none}
 .tool-strip{display:flex;flex-wrap:wrap;gap:9px;margin-top:16px}
@@ -873,9 +957,9 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
    coast(teal-sky), warm(amber-coral).
    ============================================================ */
 /* glow uses theme variable for button shadows */
-.btn-primary{box-shadow:0 12px 26px -12px var(--glow, rgba(244,63,94,.6))}
-.btn-primary:hover{box-shadow:0 6px 14px -8px var(--glow, rgba(244,63,94,.35))}
-.logo-mark{box-shadow:0 8px 20px -8px var(--glow, rgba(244,63,94,.6))}
+.btn-primary{box-shadow:0 12px 26px -12px var(--glow)}
+.btn-primary:hover{box-shadow:0 6px 14px -8px var(--glow)}
+.logo-mark{box-shadow:0 8px 20px -8px var(--glow)}
 
 /* ============================================================
    FORM SYSTEM v2 (2026-09-16) - big-brand grade forms
@@ -920,20 +1004,18 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
    soft wash = pastel tints, text = muted mid-pastel,
    button = the one vivid moment.
    ============================================================ */
+/* The brand used to be overridden here, on a body class, 900 lines from the neutral
+   tokens it belonged with. It is in the token layer now, so this class has nothing
+   left to override. It stays on <body> on every page as the hook for a second
+   theme: put the overrides inside it. Keep the rule, even empty, or the orphan
+   class check in verify.py will report the class as undefined. */
 .g-theme-mist{
-  --b1:#3d7fc2; --b2:#568fd3; --b3:#5b96d8;
-  --grad:linear-gradient(135deg,#3d7fc2 0%,#568fd3 50%,#5b96d8 100%);
-  --grad-2:linear-gradient(120deg,#3d7fc2 0%,#568fd3 45%,#5b96d8 100%);
-  --grad-soft:linear-gradient(135deg,rgba(61,127,194,.12),rgba(86,143,211,.12) 50%,rgba(91,150,216,.12));
-  --grad-soft-2:linear-gradient(135deg,rgba(61,127,194,.10),rgba(86,143,211,.10) 50%,rgba(91,150,216,.10));
-  --glow:rgba(61,127,194,.32);
-  --btn-grad:linear-gradient(135deg,#1e6fc4 0%,#2f7fd6 50%,#3f8fe8 100%);
 }
 /* CTA buttons stay bright (the one vivid brand moment per Ty), everything else is mist */
-.btn-primary{background:var(--btn-grad, var(--grad));color:#fff;box-shadow:0 12px 26px -12px var(--glow, rgba(244,63,94,.6))}
-.btn-primary:hover{box-shadow:0 6px 14px -8px var(--glow, rgba(244,63,94,.35));transform:none}
+.btn-primary{background:var(--btn-grad, var(--grad));color:var(--text-inv);box-shadow:0 12px 26px -12px var(--glow)}
+.btn-primary:hover{box-shadow:0 6px 14px -8px var(--glow);transform:none}
 /* logo keeps brand vibrancy: the one vivid moment alongside CTA */
-.logo-mark{background:var(--btn-grad, var(--grad));box-shadow:0 8px 20px -8px var(--glow, rgba(244,63,94,.6))}
+.logo-mark{background:var(--btn-grad, var(--grad));box-shadow:0 8px 20px -8px var(--glow)}
 
 /* ---- selective gradient + contrast enforcement (2026-09-17) ----
    Gradient ONLY where it leads people: CTA buttons, hero accent,
@@ -956,7 +1038,7 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 /* deck-go meta arrows: keep gradient ONLY as leading affordance, on a solid base */
 .deck-go{font-size:12.5px;font-weight:800;color:var(--text-2)}
 /* hero grid + background: keep pleasant but tone the color patches down */
-.hero-bg{background:radial-gradient(900px 480px at 82% -8%,rgba(139,92,246,.10),transparent 60%),radial-gradient(800px 460px at 12% 8%,rgba(249,115,22,.09),transparent 58%),radial-gradient(700px 420px at 50% 120%,rgba(244,63,94,.08),transparent 60%),linear-gradient(180deg,#fdfbfa 0%,#ffffff 40%)}
+.hero-bg{background:radial-gradient(900px 480px at 82% -8%,rgba(139,92,246,.10),transparent 60%),radial-gradient(800px 460px at 12% 8%,rgba(249,115,22,.09),transparent 58%),radial-gradient(700px 420px at 50% 120%,rgba(244,63,94,.08),transparent 60%),linear-gradient(180deg,#fdfbfa 0%,var(--surface) 40%)}
 /* card action links: readable over gradient, gradient stays for the arrow accent only */
 .cta{color:var(--text-2)}
 .cat-card .meta{color:var(--text-2)}
@@ -994,18 +1076,18 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 .btn-gb.btn-lg{padding:16px 30px;font-size:15.5px}
 .btn-gb.btn-block{width:100%}
 .btn-gb .route-arrow{width:0;height:0;border-top:7px solid transparent;border-bottom:7px solid transparent;border-left:10px solid currentColor;margin-left:10px;display:inline-block}
-.btn-grad-bg{background:var(--btn-grad, var(--grad));color:#fff}
+.btn-grad-bg{background:var(--btn-grad, var(--grad));color:var(--text-inv)}
 /* reduce the glow so borders read subtle */
-.btn-primary{box-shadow:0 8px 18px -12px var(--glow, rgba(244,63,94,.45))}
-.btn-primary:hover{box-shadow:0 12px 26px -14px var(--glow, rgba(244,63,94,.55));transform:none}
+.btn-primary{box-shadow:0 8px 18px -12px var(--glow)}
+.btn-primary:hover{box-shadow:0 12px 26px -14px var(--glow);transform:none}
 
 /* ============================================================
    BUTTON TONALITY (2026-09-17): pale fill like the title
    The primary CTA mirrors "Everything RV" (pale gradient fill
    + dark text). Everything else = .btn-gb gradient border.
    ============================================================ */
-.btn-primary{background:var(--btn-grad, var(--grad));color:#fff;border:none;box-shadow:0 8px 18px -12px var(--glow, rgba(127,180,233,.35))}
-.btn-primary:hover{background:var(--btn-grad, var(--grad));color:#fff;box-shadow:0 12px 24px -14px var(--glow, rgba(127,180,233,.5));transform:none}
+.btn-primary{background:var(--btn-grad, var(--grad));color:var(--text-inv);border:none;box-shadow:0 8px 18px -12px var(--glow, rgba(127,180,233,.35))}
+.btn-primary:hover{background:var(--btn-grad, var(--grad));color:var(--text-inv);box-shadow:0 12px 24px -14px var(--glow, rgba(127,180,233,.5));transform:none}
 .btn-primary:disabled,.btn-primary.disabled{opacity:.55;cursor:not-allowed;background:var(--bg-3);color:var(--text-3);box-shadow:none}
 
 /* live readout under the loads panel */
@@ -1027,7 +1109,7 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 .w-overall small{font-size:13.5px;line-height:1.5;opacity:.9}
 .w-overall.ok{background:var(--surface);border-color:var(--border);color:var(--text)}
 .w-overall.warn{background:var(--tint-bg);border-color:var(--tint-edge);color:var(--tint-ink)}
-.w-overall.bad{background:#fdeeee;border-color:#f2b8be;color:#b42338}
+.w-overall.bad{background:var(--danger-bg);border-color:var(--danger-edge);color:var(--danger)}
 .field input, .field select{min-height:50px;font-size:16px}
 .field label{font-size:14.5px;font-weight:700;color:var(--text)}
 @media(max-width:720px){.field label{font-size:15px}}
@@ -1053,7 +1135,7 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 @media(max-width:720px){.howto-grid{grid-template-columns:1fr}}
 .howto-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px 18px 16px;position:relative;display:flex;flex-direction:column;gap:6px}
 .howto-card:hover{border-color:var(--border-2);box-shadow:var(--shadow-sm)}
-.howto-num{width:30px;height:30px;border-radius:50%;background:var(--grad);color:#fff;display:grid;place-items:center;font-weight:800;font-size:14px;margin-bottom:4px}
+.howto-num{width:30px;height:30px;border-radius:50%;background:var(--grad);color:var(--text-inv);display:grid;place-items:center;font-weight:800;font-size:14px;margin-bottom:4px}
 .howto-card b{font-size:15px;font-weight:800}
 .howto-card p{font-size:13.5px;color:var(--text-2);line-height:1.65;margin:0}
 
@@ -1072,12 +1154,12 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
    ============================================================ */
 .ticks{list-style:none;margin:10px 0 4px;padding:0;display:flex;flex-direction:column;gap:12px}
 .ticks li{position:relative;padding-left:22px;color:var(--text-2);font-size:14.5px;line-height:1.65}
-.ticks li::before{content:"";position:absolute;left:2px;top:7px;width:7px;height:7px;border-radius:50%;background:linear-gradient(135deg,#1e6fc4,#3f8fe8)}
+.ticks li::before{content:"";position:absolute;left:2px;top:7px;width:7px;height:7px;border-radius:50%;background:linear-gradient(135deg,var(--brand-deep),var(--brand-deep-3))}
 .ticks li a{color:var(--c-sky);text-decoration:underline}
 .ticks li b{color:var(--text)}
 .checks{list-style:none;margin:10px 0 4px;padding:0;display:flex;flex-direction:column;gap:12px}
 .checks li{position:relative;padding-left:26px;color:var(--text-2);font-size:14.5px;line-height:1.65}
-.checks li::before{content:"\2713";position:absolute;left:0;top:0;width:18px;height:18px;border-radius:5px;background:linear-gradient(135deg,#1e6fc4,#3f8fe8);color:#fff;font-size:12px;font-weight:800;display:grid;place-items:center}
+.checks li::before{content:"\2713";position:absolute;left:0;top:0;width:18px;height:18px;border-radius:5px;background:linear-gradient(135deg,var(--brand-deep),var(--brand-deep-3));color:var(--text-inv);font-size:12px;font-weight:800;display:grid;place-items:center}
 @media(max-width:720px){.ticks li,.checks li{font-size:14px}}
 
 /* ============================================================
@@ -1280,7 +1362,7 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 .guide-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px}
 .guide-tab{border:1px solid var(--border-2);background:var(--surface);color:var(--text-2);border-radius:999px;padding:9px 18px;font-size:13.5px;font-weight:700;cursor:pointer;transition:all .15s ease}
 .guide-tab:hover{border-color:var(--c-sky);color:var(--c-sky)}
-.guide-tab.active{background:var(--grad);color:#fff;border-color:transparent}
+.guide-tab.active{background:var(--grad);color:var(--text-inv);border-color:transparent}
 /* The grid is defined once, above, in "Guides index cards". It used to be
    redefined here at 2 columns, plus a data-cat="winter" override back to 4, which
    is why the homepage and the guides index disagreed about how many guides fit in
@@ -1353,9 +1435,9 @@ figure:has(svg[role="img"]){overflow-x:auto;overflow-y:hidden}
 .finder-routes{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
 .finder-route{display:grid;grid-template-columns:auto 1fr;align-items:center;gap:12px;text-align:left;cursor:pointer;background:var(--bg-2);border:2px solid var(--border);border-radius:var(--radius);padding:13px 15px;font-family:inherit;transition:border-color .16s,background .16s,box-shadow .16s}
 .finder-route:hover{border-color:var(--border-2);background:var(--surface)}
-.finder-route.on{border-color:var(--b1, #3d7fc2);background:#eaf3fd;box-shadow:0 10px 24px -16px var(--glow, rgba(61,127,194,.32))}
+.finder-route.on{border-color:var(--b1, var(--brand));background:#eaf3fd;box-shadow:0 10px 24px -16px var(--glow, rgba(61,127,194,.32))}
 .finder-ic{width:38px;height:38px;border-radius:50%;background:var(--surface);border:1px solid var(--border-2);display:grid;place-items:center;font-size:19px;line-height:1}
-.finder-route.on .finder-ic{background:#fff;border-color:#bcd8f2}
+.finder-route.on .finder-ic{background:var(--surface);border-color:#bcd8f2}
 .finder-txt{display:block;min-width:0}
 .finder-t{display:block;font-size:14.5px;font-weight:800;color:var(--text);letter-spacing:-.01em}
 .finder-s{display:block;font-size:12.5px;color:var(--text-2);line-height:1.35;margin-top:2px}
@@ -1363,7 +1445,7 @@ figure:has(svg[role="img"]){overflow-x:auto;overflow-y:hidden}
 .loc-label{display:block;font-size:13.5px;font-weight:800;color:var(--text);margin-bottom:9px}
 .loc-row{display:flex;gap:10px;flex-wrap:wrap}
 .loc-row input{flex:1;min-width:220px;background:var(--surface);border:1px solid var(--border-2);border-radius:999px;padding:12px 20px;font-size:15px;font-family:inherit;color:var(--text);outline:none;transition:.16s}
-.loc-row input:focus{border-color:var(--b1, #3d7fc2);box-shadow:0 0 0 4px rgba(61,127,194,.12)}
+.loc-row input:focus{border-color:var(--b1, var(--brand));box-shadow:0 0 0 4px rgba(61,127,194,.12)}
 .loc-note{margin-top:10px;font-size:12.5px;color:var(--text-3)}
 .refine{display:flex;justify-content:center;margin-bottom:18px}
 .refine .search-bar{max-width:640px;width:100%;margin:0}
@@ -1374,7 +1456,7 @@ figure:has(svg[role="img"]){overflow-x:auto;overflow-y:hidden}
 .listing-name a:hover{text-decoration:underline}
 /* Distance or coverage badge. "Serves your area" is the one that matters. */
 .listing-dist{font-size:12px;font-weight:700;color:var(--text-2);background:var(--bg-2);border:1px solid var(--border);border-radius:999px;padding:5px 11px;white-space:nowrap;flex:none;align-self:flex-start}
-.listing-dist.serves{color:#1e6fc4;background:#eaf3fd;border-color:#bcd8f2}
+.listing-dist.serves{color:var(--brand-deep);background:#eaf3fd;border-color:#bcd8f2}
 .listing-dist.region{color:var(--text-3);font-style:italic;font-weight:600;white-space:normal;text-align:right;max-width:44%;line-height:1.35;background:none;border:none;padding:0}
 /* Call is the action that matters for someone broken down, so it leads. */
 .listing-call{gap:7px;padding:10px 16px;font-size:13.5px;font-weight:800;text-decoration:none}
@@ -1428,7 +1510,7 @@ figure:has(svg[role="img"]){overflow-x:auto;overflow-y:hidden}
 .man-search input{width:100%;max-width:660px;font:inherit;font-size:15.5px;padding:14px 18px;border:1px solid var(--border-2);border-radius:14px;background:var(--surface);color:var(--text)}
 .man-search input:focus{outline:none;border-color:var(--b1);box-shadow:0 0 0 3px var(--glow)}
 .man-facets{display:flex;flex-wrap:wrap;gap:9px;margin-top:14px}
-.man-facets .chip.on{background:var(--grad);color:#fff;border-color:transparent}
+.man-facets .chip.on{background:var(--grad);color:var(--text-inv);border-color:transparent}
 .man-status{margin-top:16px;font-size:13.5px;color:var(--text-3);max-width:720px}
 
 .man-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:12px;margin-top:14px}
