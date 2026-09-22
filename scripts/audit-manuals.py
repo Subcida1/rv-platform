@@ -34,6 +34,7 @@ import html
 import os
 import re
 import shutil
+import socket
 import subprocess
 import sys
 import tempfile
@@ -51,10 +52,28 @@ MANIFEST = ROOT / "_data/manuals.json"
 
 UA = ("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/140.0 Safari/537.36")
-TIMEOUT = 30
+TIMEOUT = 20
 MAX_BYTES = 12 * 1024 * 1024     # a service manual runs a few MB; past this we skip
 READ_BUDGET = 45                  # seconds of wall clock allowed for one body
 MIN_TEXT = 300                    # a real library page carries more than this
+
+# Prefer IPv4 when a host offers both, and this is measured, not superstition.
+# A full run stalled at 100 of 119 with eight worker threads all sitting in
+# SYN-SENT on IPv6 sockets to Cloudflare and CloudFront: the handshake was sent
+# and never answered. Because socket.create_connection tries every resolved
+# address with the full timeout in turn, one row can burn minutes that way.
+# Browsers paper over this with Happy Eyeballs; urllib does not. Falling back to
+# whatever resolves keeps IPv6-only hosts working.
+_real_getaddrinfo = socket.getaddrinfo
+
+
+def _ipv4_first(host, port, family=0, type=0, proto=0, flags=0):
+    answers = _real_getaddrinfo(host, port, family, type, proto, flags)
+    v4 = [a for a in answers if a[0] == socket.AF_INET]
+    return v4 or answers
+
+
+socket.getaddrinfo = _ipv4_first
 
 # Bot protection. This is NOT a failure: it means we could not look, so the row
 # is UNVERIFIED and needs a human eye. Treating a challenge as a dead link would
