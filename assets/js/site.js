@@ -196,24 +196,22 @@
 
  function claimSubmit(form) {
  var cfg = CFG.contact || {};
- var key = cfg.formKey || '';
- if (!key || typeof fetch !== 'function') {
+ var endpoint = cfg.formEndpoint || '';
+ if (!endpoint || typeof fetch !== 'function') {
  return Promise.resolve(claimMailto(form) ? 'mailto' : 'none');
  }
  var f = claimFields(form);
  var hp = form.querySelector('[name="botcheck"]');
  var payload = {
- access_key: key,
- subject: 'Listing claim: ' + f.business,
- from_name: 'OriginRV claim form',
- botcheck: hp && hp.checked ? 'true' : '',
  Business: f.business,
  City: f.city,
  Phone: f.phone,
- Website: f.website
+ Website: f.website,
+ botcheck: hp && hp.checked ? 'true' : ''
  };
+ if (cfg.formKey) payload.access_key = cfg.formKey; // only providers that need one
  function fallback() { return claimMailto(form) ? 'mailto' : 'none'; }
- return fetch(cfg.formEndpoint || 'https://api.web3forms.com/submit', {
+ return fetch(endpoint, {
  method: 'POST',
  headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
  body: JSON.stringify(payload)

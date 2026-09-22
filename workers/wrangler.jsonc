@@ -1,0 +1,19 @@
+{
+  // OriginRV claim form endpoint. Deploy from this directory:
+  //   npx wrangler login     (one time, opens a browser)
+  //   npx wrangler deploy
+  //
+  // The send_email binding is what gives the Worker permission to send. The
+  // destination_address restriction means this Worker can ONLY mail that one
+  // address, so the deployed URL cannot be turned into a spam relay.
+  // Sending to a verified destination in your own account is free on all plans.
+  "name": "originrv-claim",
+  "main": "claim-form.js",
+  "compatibility_date": "2026-09-21",
+  "send_email": [
+    {
+      "name": "EMAIL",
+      "destination_address": "contact@originrv.com"
+    }
+  ]
+}

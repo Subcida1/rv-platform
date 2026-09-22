@@ -12,8 +12,10 @@ window.RV_CONFIG = {
  },
  contact: {
  email: 'contact@originrv.com', // Cloudflare Email Routing forwards this to Ty's inbox
- formKey: '', // Web3Forms access key: with this set, the claim form posts instead of relying on the visitor's mail client
- formEndpoint: 'https://api.web3forms.com/submit', // swap here to move off Web3Forms
+ // Claim form endpoint: a Cloudflare Worker (workers/claim-form.js) that emails
+ // the submission to the address above. Leave empty to fall back to a mailto.
+ formEndpoint: 'https://originrv-claim.ty-g-brandes.workers.dev',
+ formKey: '', // only for providers that require an access key; the Worker does not
  routesTo: 'contact.html' // where the navbar "Contact" link goes
  },
  domain: {

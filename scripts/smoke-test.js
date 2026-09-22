@@ -101,10 +101,10 @@ if (sb.window.RV && typeof sb.window.RV.claimMailto === 'function') {
   }
 } else { console.log('  FAIL RV.claimMailto is not exposed'); failed++; }
 
-// 2d. with a form key configured, a claim must POST to the endpoint instead of
+// 2d. with a form endpoint configured, a claim must POST there instead of
 //     depending on the visitor's mail client. A separate sandbox, because the
-//     key has to be in place before site.js reads the config. Async, so it is
-//     collected and awaited before the summary below.
+//     endpoint has to be in place before site.js reads the config. Async, so it
+//     is collected and awaited before the summary below.
 const pending = [];
 {
   const fields = { 'cl-name': 'Cascade Mobile RV Repair', 'cl-city': 'Bend', 'cl-st': 'or',
@@ -116,16 +116,16 @@ const pending = [];
   };
   const sb2 = context();
   runIn(sb2, 'assets/js/config.js');
-  sb2.window.RV_CONFIG.contact.formKey = 'test-access-key';
+  sb2.window.RV_CONFIG.contact.formEndpoint = 'https://claim.example/submit';
   runIn(sb2, 'assets/js/site.js');
   pending.push(sb2.window.RV.claimSubmit(postForm).then(how => {
     const call = sb2.__fetchCalls[0];
     const body = call ? JSON.parse(call.opts.body) : {};
-    const ok = how === 'sent' && call && call.url === 'https://api.web3forms.com/submit' &&
-               call.opts.method === 'POST' && body.access_key === 'test-access-key' &&
-               body.Business === 'Cascade Mobile RV Repair' && body.City === 'Bend, OR' &&
-               body.Phone === '541-555-0123' && body.Website === 'https://cascade.example';
-    if (ok) console.log('  ok   a configured form key POSTs the claim to the endpoint');
+    const ok = how === 'sent' && call && call.url === 'https://claim.example/submit' &&
+               call.opts.method === 'POST' && body.Business === 'Cascade Mobile RV Repair' &&
+               body.City === 'Bend, OR' && body.Phone === '541-555-0123' &&
+               body.Website === 'https://cascade.example' && !('access_key' in body);
+    if (ok) console.log('  ok   a configured form endpoint POSTs the claim to it');
     else {
       console.log('  FAIL claim POST: how=' + how + ' url=' + (call && call.url) +
                    ' body=' + JSON.stringify(body).slice(0, 120));
