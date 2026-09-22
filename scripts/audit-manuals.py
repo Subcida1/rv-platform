@@ -57,6 +57,12 @@ TIMEOUT = 20
 MAX_BYTES = 12 * 1024 * 1024     # a service manual runs a few MB; past this we skip
 READ_BUDGET = 45                  # seconds of wall clock allowed for one body
 MIN_TEXT = 300                    # a real library page carries more than this
+# A JavaScript app's shell is legitimately terse. The Forest River kit renders
+# ~263 characters that name the model and offer the manual download, which is
+# exactly what the row claims -- so the browser path gets its own floor rather
+# than being judged by a number chosen for script-fetched library pages. The
+# floor still exists so a 20-character error page cannot pass.
+MIN_TEXT_RENDERED = 120
 
 # Prefer IPv4 when a host offers both, and this is measured, not superstition.
 # A full run stalled at 100 of 119 with eight worker threads all sitting in
@@ -191,6 +197,128 @@ def targets(doc):
     return out
 
 
+def verdict_from_text(out, text, raw_len, brand, rendered=False, min_text=None):
+    """Judge a page. THE html verdict lives here and nowhere else.
+
+    Both callers use it: the script fetch in _audit(), and audit_rendered() for a
+    link a real browser loaded (scripts/fetch-rendered.mjs). So "verified" cannot
+    come to mean one thing for a link reached with curl and another thing for the
+    same link reached with Chrome.
+
+    `rendered` changes exactly one judgement, and it is the one a length threshold
+    cannot make: see the thin-text branch below.
+    """
+    floor = MIN_TEXT if min_text is None else min_text
+    if CHALLENGE.search(text[:3000]):
+        out["status"] = "WARN"
+        out["reasons"].append("bot protection interstitial at HTTP %s. "
+                              "UNVERIFIED" % out["code"])
+        return
+    if R.PARKED.search(text[:5000]):
+        out["status"] = "FAIL"
+        out["reasons"].append("parked or taken-over domain")
+        return
+    if len(text) < floor:
+        if rendered:
+            # A browser EXECUTED this page, which is the case the thin-text rule
+            # was never able to judge: the rule exists because a JavaScript shell
+            # and a dead stub look identical to a script. Here we ran it. Little
+            # text therefore means a thin page, not a dead one -- UNVERIFIED, for
+            # a human, never a FAIL, and never a PASS on this little evidence.
+            out["status"] = "WARN"
+            out["reasons"].append("a real browser rendered only %d chars of text from "
+                                  "%.0f KB of markup, under the %d-char floor for a "
+                                  "rendered page. UNVERIFIED, check by eye"
+                                  % (len(text), raw_len / 1024.0, floor))
+            return
+        # Thin text is not the same as a thin page. Dutchmen serves 2.38 MB of
+        # markup with 185 readable characters, and Forest River's kit is a shell
+        # that says "you need to enable JavaScript". Both render in a browser, so
+        # both are UNVERIFIED here rather than condemned. A stub that is small in
+        # BOTH senses is the one that fails.
+        if raw_len > 100000:
+            out["status"] = "WARN"
+            out["reasons"].append("%.0f KB of markup with only %d chars of readable "
+                                  "text, so it renders in the browser. UNVERIFIED here"
+                                  % (raw_len / 1024.0, len(text)))
+        else:
+            out["status"] = "FAIL"
+            out["reasons"].append("only %d chars of text from %d bytes, not a real "
+                                  "page" % (len(text), raw_len))
+        return
+    if not R.DOC_WORDS.search(text):
+        # A human judgement, not a machine one. The vocabulary is missing on
+        # Michelin's load-and-inflation tables, on support hubs that are a
+        # product finder rather than a document list, and on tire product pages
+        # that carry the load table as HTML. All of those are real destinations,
+        # so this reports UNVERIFIED and lets a person decide.
+        out["status"] = "WARN"
+        out["reasons"].append("UNVERIFIED: nothing here obviously offers a "
+                              "manual or a download (%d chars of text)" % len(text))
+        return
+    ground(out, text, brand)
+
+
+def load_rendered(path):
+    """Observations from scripts/fetch-rendered.mjs, keyed by URL."""
+    out = {}
+    with open(path, encoding="utf-8") as fh:
+        for line in fh:
+            line = line.strip()
+            if not line:
+                continue
+            obs = json.loads(line)
+            out.setdefault(obs["url"], obs)
+    return out
+
+
+def audit_rendered(row, obs):
+    """The verdict for a link a browser actually loaded.
+
+    What differs from _audit() is only where the text came from: a browser that
+    ran the page's JavaScript and waited for it to stop changing. The judgement
+    is verdict_from_text, the same function the script path calls.
+
+    A 404 in a real browser is a 404: the strongest client we have asked, so it
+    is not excused the way a script's refusal is. A 403 or a challenge page is
+    still UNVERIFIED, because being refused is not being absent.
+    """
+    out = {"name": row["name"], "title": row["title"], "url": row["url"],
+           "system": row["group"], "status": "PASS", "reasons": [],
+           "evidence": "", "kind": "", "final": obs.get("final_url") or row["url"],
+           "code": str(obs.get("code") or ""), "note": row.get("note", "")}
+
+    if obs.get("error"):
+        out["status"] = "WARN"
+        out["reasons"].append("the browser could not load it: %s"
+                              % str(obs["error"])[:130])
+        return out
+
+    text = obs.get("text") or ""
+    code = str(obs.get("code") or "")
+
+    if code.startswith("4") or code.startswith("5"):
+        if code in ("403", "423", "429") or CHALLENGE.search(text[:3000]):
+            out["status"] = "WARN"
+            out["reasons"].append("the host refused a real browser too (HTTP %s). "
+                                  "UNVERIFIED" % code)
+        else:
+            out["status"] = "FAIL"
+            out["reasons"].append("HTTP %s in a real browser" % code)
+        return out
+
+    if not text.strip():
+        out["status"] = "WARN"
+        out["reasons"].append("a real browser rendered %d bytes of markup and no "
+                              "readable text. UNVERIFIED" % int(obs.get("bytes") or 0))
+        return out
+
+    out["kind"] = "html %d chars (rendered in Chrome)" % len(text)
+    verdict_from_text(out, text, int(obs.get("bytes") or 0) or len(text),
+                      row["name"], rendered=True, min_text=MIN_TEXT_RENDERED)
+    return out
+
+
 def _audit(row):
     url = row["url"]
     out = {"name": row["name"], "title": row["title"], "url": url,
@@ -267,42 +395,8 @@ def _audit(row):
     else:
         text = html_text(raw.decode("utf-8", "replace"))
         out["kind"] = "html %d chars" % len(text)
-        if CHALLENGE.search(text[:3000]):
-            out["status"] = "WARN"
-            out["reasons"].append("bot protection interstitial at HTTP %s. "
-                                  "UNVERIFIED" % out["code"])
-            return out
-        if R.PARKED.search(text[:5000]):
-            out["status"] = "FAIL"
-            out["reasons"].append("parked or taken-over domain")
-            return out
-        if len(text) < MIN_TEXT:
-            # Thin text is not the same as a thin page. Dutchmen serves 2.38 MB of
-            # markup with 185 readable characters, and Forest River's kit is a shell
-            # that says "you need to enable JavaScript". Both render in a browser, so
-            # both are UNVERIFIED here rather than condemned. A stub that is small in
-            # BOTH senses is the one that fails.
-            if len(raw) > 100000:
-                out["status"] = "WARN"
-                out["reasons"].append("%.0f KB of markup with only %d chars of readable "
-                                      "text, so it renders in the browser. UNVERIFIED here"
-                                      % (len(raw) / 1024.0, len(text)))
-            else:
-                out["status"] = "FAIL"
-                out["reasons"].append("only %d chars of text from %d bytes, not a real "
-                                      "page" % (len(text), len(raw)))
-            return out
-        if not R.DOC_WORDS.search(text):
-            # A human judgement, not a machine one. The vocabulary is missing on
-            # Michelin's load-and-inflation tables, on support hubs that are a
-            # product finder rather than a document list, and on tire product
-            # pages that carry the load table as HTML. All of those are real
-            # destinations, so this reports UNVERIFIED and lets a person decide.
-            out["status"] = "WARN"
-            out["reasons"].append("UNVERIFIED: nothing here obviously offers a "
-                                  "manual or a download (%d chars of text)"
-                                  % len(text))
-            return out
+        verdict_from_text(out, text, len(raw), row["name"])
+        return out
 
     ground(out, text, row["name"])
     return out
@@ -425,20 +519,36 @@ def main():
     if "--limit" in sys.argv:
         rows = rows[:int(sys.argv[sys.argv.index("--limit") + 1])]
 
+    # A browser pass. --rendered takes observations captured by
+    # scripts/fetch-rendered.mjs and judges them with the same rules the script
+    # path uses; only the links we actually rendered are considered, so a URL with
+    # no observation keeps whatever verdict it already had rather than silently
+    # being dropped from the audit.
+    rendered = {}
+    if "--rendered" in sys.argv:
+        path = sys.argv[sys.argv.index("--rendered") + 1]
+        rendered = load_rendered(path)
+        rows = [r for r in rows if r["url"] in rendered]
+
     if "--live" not in sys.argv:
         print("\n  (run with --live to check every link and ground each row)")
         raise SystemExit(1 if errors else 0)
 
     print("\n" + "=" * 96)
-    print("LIVE: %d links" % len(rows))
+    print("LIVE: %d links%s" % (len(rows),
+                                " (from a real browser)" if rendered else ""))
     print("=" * 96)
     # 8 at a time, and progress goes to stderr as rows land. The corpus is
     # mostly other people's servers: a few are slow, one or two hang until the
     # timeout, and a run that prints nothing until the end is a run you cannot
     # tell apart from a hung one.
     results = []
+    # Threads are for the NETWORK path. A rendered observation is already in
+    # hand, so re-fetching it would throw away the browser's answer -- which is
+    # the entire reason this pass exists.
     with ThreadPoolExecutor(max_workers=8) as ex:
-        futures = [ex.submit(audit, r) for r in rows]
+        futures = [ex.submit(audit_rendered, r, rendered[r["url"]])
+                   if r["url"] in rendered else ex.submit(audit, r) for r in rows]
         for done, f in enumerate(as_completed(futures), 1):
             results.append(f.result())
             if done % 20 == 0 or done == len(futures):

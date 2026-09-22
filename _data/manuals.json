@@ -247,7 +247,7 @@
       "covers": "RV QG, QD, Marquis and MicroQuiet gensets, keyed by spec letter such as spec P",
       "gate": "none",
       "link_stability": "library_page_only",
-      "status": "unverified",
+      "status": "verified",
       "note": "Cloudflare challenge answers automated checks; the library's own PDFs return 200 application/pdf, so the source is live",
       "checked": "2026-09-21"
     },
@@ -1083,7 +1083,7 @@
       "gate": "none",
       "link_stability": "library_page_only",
       "check": "browser",
-      "status": "unverified",
+      "status": "verified",
       "note": "server omits its TLS intermediate certificate, so every strict client refuses it while browsers load it fine; loaded in Chrome 2026-09-21, 105 KB, twenty mentions of manuals",
       "checked": "2026-09-21"
     },
@@ -1271,7 +1271,7 @@
       "covers": "portable air conditioners and their batteries",
       "gate": "none",
       "link_stability": "library_page_only",
-      "status": "unverified",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -1885,7 +1885,7 @@
       "covers": "bike racks such as Sport Rider 2 (2009-2015) and Sport Rider SE2 (2016-2018)",
       "gate": "none",
       "link_stability": "library_page_only",
-      "status": "unverified",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -2303,7 +2303,7 @@
       "years": "2018 archive plus 2025 and 2026",
       "gate": "none",
       "note": "Keystone division; current manual is the shared Keystone/Dutchmen document",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Alliance RV",
@@ -2312,7 +2312,7 @@
       "years": "current models",
       "gate": "none",
       "note": "one owner's manual per model line, not per model year",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Brinkley RV",
@@ -2876,7 +2876,7 @@
       "evidence": "\"Avenue Fifth Wheel\", \"Avenue All Access Fifth Wheel\", \"Avenue Travel Trailer\" (/owners-guide)",
       "check": "both",
       "source": "round4-towable-major.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Alliance RV",
@@ -2895,7 +2895,7 @@
       "evidence": "\"Benchmark Destination (opens in new tab)\" (/owners-guide)",
       "check": "both",
       "source": "round4-towable-major.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Alliance RV",
@@ -2914,7 +2914,7 @@
       "evidence": "\"Delta Travel Trailer (opens in new tab)\" (/owners-guide)",
       "check": "both",
       "source": "round4-towable-major.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Alliance RV",
@@ -2933,7 +2933,7 @@
       "evidence": "\"Paradigm Fifth Wheel (opens in new tab)\" (/owners-guide)",
       "check": "both",
       "source": "round4-towable-major.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Alliance RV",
@@ -2953,7 +2953,7 @@
       "evidence": "\"Valor Fifth Wheel (opens in new tab)\" and \"Valor Travel Trailer (opens in new tab)\"",
       "check": "both",
       "source": "round4-towable-major.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Bigfoot RV",
@@ -3514,7 +3514,7 @@
       "check": "both",
       "source": "round4-fr-platform.md",
       "note": "Forest River corporate shop, linked from Coachmen pages",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Coachmen",
@@ -3534,7 +3534,7 @@
       "check": "both",
       "source": "round4-fr-platform.md",
       "note": "Forest River corporate shop, linked from Coachmen pages",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Coachmen",
@@ -3554,7 +3554,7 @@
       "check": "both",
       "source": "round4-fr-platform.md",
       "note": "Forest River corporate shop, linked from Coachmen pages",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Coachmen",
@@ -3574,7 +3574,7 @@
       "check": "both",
       "source": "round4-fr-platform.md",
       "note": "Forest River corporate shop, linked from Coachmen pages",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Coachmen",
@@ -3594,7 +3594,7 @@
       "check": "both",
       "source": "round4-fr-platform.md",
       "note": "Forest River corporate shop, linked from Coachmen pages",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Coachmen",
@@ -3614,7 +3614,7 @@
       "check": "both",
       "source": "round4-fr-platform.md",
       "note": "Forest River corporate shop, linked from Coachmen pages",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Coachmen",
@@ -3634,7 +3634,7 @@
       "check": "both",
       "source": "round4-fr-platform.md",
       "note": "Forest River corporate shop, linked from Coachmen pages",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Coachmen",
@@ -3654,7 +3654,7 @@
       "check": "both",
       "source": "round4-fr-platform.md",
       "note": "Forest River corporate shop, linked from Coachmen pages",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Coachmen",
@@ -3674,7 +3674,7 @@
       "check": "both",
       "source": "round4-fr-platform.md",
       "note": "Forest River corporate shop, linked from Coachmen pages",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Coachmen",
@@ -3694,7 +3694,7 @@
       "check": "both",
       "source": "round4-fr-platform.md",
       "note": "Forest River corporate shop, linked from Coachmen pages",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Coachmen",
@@ -3714,7 +3714,7 @@
       "check": "both",
       "source": "round4-fr-platform.md",
       "note": "Forest River corporate shop, linked from Coachmen pages",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Coachmen",
@@ -3734,7 +3734,7 @@
       "check": "both",
       "source": "round4-fr-platform.md",
       "note": "Forest River corporate shop, linked from Coachmen pages",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Coachmen",
@@ -3774,7 +3774,7 @@
       "check": "both",
       "source": "round4-fr-platform.md",
       "note": "Forest River corporate shop, linked from Coachmen pages",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Coachmen",
@@ -3794,7 +3794,7 @@
       "check": "both",
       "source": "round4-fr-platform.md",
       "note": "Forest River corporate shop, linked from Coachmen pages",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Coachmen",
@@ -3814,7 +3814,7 @@
       "check": "both",
       "source": "round4-fr-platform.md",
       "note": "Forest River corporate shop, linked from Coachmen pages",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Coachmen",
@@ -3834,7 +3834,7 @@
       "check": "both",
       "source": "round4-fr-platform.md",
       "note": "Forest River corporate shop, linked from Coachmen pages",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Coachmen",
@@ -3854,7 +3854,7 @@
       "check": "both",
       "source": "round4-fr-platform.md",
       "note": "Forest River corporate shop, linked from Coachmen pages",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Coachmen",
@@ -3874,7 +3874,7 @@
       "check": "both",
       "source": "round4-fr-platform.md",
       "note": "Forest River corporate shop, linked from Coachmen pages",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Coachmen",
@@ -3894,7 +3894,7 @@
       "check": "both",
       "source": "round4-fr-platform.md",
       "note": "Forest River corporate shop, linked from Coachmen pages",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Coachmen",
@@ -3914,7 +3914,7 @@
       "check": "both",
       "source": "round4-fr-platform.md",
       "note": "Forest River corporate shop, linked from Coachmen pages",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Coachmen",
@@ -3934,7 +3934,7 @@
       "check": "both",
       "source": "round4-fr-platform.md",
       "note": "Forest River corporate shop, linked from Coachmen pages",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Coachmen",
@@ -3954,7 +3954,7 @@
       "check": "both",
       "source": "round4-fr-platform.md",
       "note": "Forest River corporate shop, linked from Coachmen pages",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Coachmen",
@@ -3974,7 +3974,7 @@
       "check": "both",
       "source": "round4-fr-platform.md",
       "note": "Forest River corporate shop, linked from Coachmen pages",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Coachmen",
@@ -3994,7 +3994,7 @@
       "check": "both",
       "source": "round4-fr-platform.md",
       "note": "Forest River corporate shop, linked from Coachmen pages",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Cruiser RV",
@@ -4184,7 +4184,7 @@
       "evidence": "title \"Aspen Trail / Dutchmen\" (/models/aspen-trail)",
       "check": "http",
       "source": "round4-towable-major.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Dutchmen",
@@ -4203,7 +4203,7 @@
       "evidence": "title \"Aspen Trail Destination / Dutchmen\"",
       "check": "http",
       "source": "round4-towable-major.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Dutchmen",
@@ -4222,7 +4222,7 @@
       "evidence": "title \"Aspen Trail LE / Dutchmen\"",
       "check": "http",
       "source": "round4-towable-major.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Dutchmen",
@@ -4241,7 +4241,7 @@
       "evidence": "title \"Aspen Trail Loft / Dutchmen\"; page body \"Aspen Trail Loft FLOORPLANS\"",
       "check": "http",
       "source": "round4-towable-major.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Dutchmen",
@@ -4260,7 +4260,7 @@
       "evidence": "title \"Aspen Trail Mini / Dutchmen\"",
       "check": "http",
       "source": "round4-towable-major.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Dutchmen",
@@ -4279,7 +4279,7 @@
       "evidence": "title \"Astoria Fifth Wheel / Dutchmen\"",
       "check": "http",
       "source": "round4-towable-major.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Dutchmen",
@@ -4298,7 +4298,7 @@
       "evidence": "title \"Astoria Travel Trailer / Dutchmen\"",
       "check": "http",
       "source": "round4-towable-major.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Dutchmen",
@@ -4317,7 +4317,7 @@
       "evidence": "title \"Colorado Travel Trailer / Dutchmen\"; body \"Colorado Travel Trailer FLOORPLANS\"",
       "check": "http",
       "source": "round4-towable-major.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Dutchmen",
@@ -4336,7 +4336,7 @@
       "evidence": "title \"Denali Fifth Wheel / Dutchmen\"",
       "check": "http",
       "source": "round4-towable-major.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Dutchmen",
@@ -4355,7 +4355,7 @@
       "evidence": "title \"Kodiak / Dutchmen\"; body \"Kodiak FLOORPLANS\"",
       "check": "http",
       "source": "round4-towable-major.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Dutchmen",
@@ -4374,7 +4374,7 @@
       "evidence": "link label \"2025 Kodiak Cub Floorplan Flyer 10-7-24\" on /brochures",
       "check": "http",
       "source": "round4-towable-major.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Dutchmen",
@@ -4393,7 +4393,7 @@
       "evidence": "title \"Kodiak Ultimate / Dutchmen\"",
       "check": "http",
       "source": "round4-towable-major.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Dutchmen",
@@ -4412,7 +4412,7 @@
       "evidence": "title \"Voltage / Dutchmen\"; body \"Voltage FLOORPLANS\"",
       "check": "http",
       "source": "round4-towable-major.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Dutchmen",
@@ -4431,7 +4431,7 @@
       "evidence": "title \"Voltage Triton / Dutchmen\"",
       "check": "http",
       "source": "round4-towable-major.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Dutchmen",
@@ -4450,7 +4450,7 @@
       "evidence": "title \"Voltage V-Series / Dutchmen\"",
       "check": "http",
       "source": "round4-towable-major.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Dynamax",
@@ -4470,7 +4470,7 @@
       "check": "both",
       "source": "round4-fr-platform.md",
       "note": "linked verbatim from dynamaxcorp.com/owners",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Dynamax",
@@ -4490,7 +4490,7 @@
       "check": "both",
       "source": "round4-fr-platform.md",
       "note": "linked verbatim from dynamaxcorp.com/owners",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Dynamax",
@@ -4510,7 +4510,7 @@
       "check": "both",
       "source": "round4-fr-platform.md",
       "note": "linked verbatim from dynamaxcorp.com/owners",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Dynamax",
@@ -4530,7 +4530,7 @@
       "check": "both",
       "source": "round4-fr-platform.md",
       "note": "linked verbatim from dynamaxcorp.com/owners",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Dynamax",
@@ -4550,7 +4550,7 @@
       "check": "both",
       "source": "round4-fr-platform.md",
       "note": "linked verbatim from dynamaxcorp.com/owners",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Dynamax",
@@ -4570,7 +4570,7 @@
       "check": "both",
       "source": "round4-fr-platform.md",
       "note": "linked verbatim from dynamaxcorp.com/owners",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Dynamax",
@@ -4590,7 +4590,7 @@
       "check": "both",
       "source": "round4-fr-platform.md",
       "note": "linked verbatim from dynamaxcorp.com/owners",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Dynamax",
@@ -4610,7 +4610,7 @@
       "check": "both",
       "source": "round4-fr-platform.md",
       "note": "linked verbatim from dynamaxcorp.com/owners",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Dynamax",
@@ -4630,7 +4630,7 @@
       "check": "both",
       "source": "round4-fr-platform.md",
       "note": "linked verbatim from dynamaxcorp.com/owners",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Dynamax",
@@ -4650,7 +4650,7 @@
       "check": "both",
       "source": "round4-fr-platform.md",
       "note": "linked verbatim from dynamaxcorp.com/owners",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Dynamax",
@@ -4670,7 +4670,7 @@
       "check": "both",
       "source": "round4-fr-platform.md",
       "note": "linked verbatim from dynamaxcorp.com/owners",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Dynamax",
@@ -4690,7 +4690,7 @@
       "check": "both",
       "source": "round4-fr-platform.md",
       "note": "linked verbatim from dynamaxcorp.com/owners",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Dynamax",
@@ -4710,7 +4710,7 @@
       "check": "both",
       "source": "round4-fr-platform.md",
       "note": "linked verbatim from dynamaxcorp.com/owners",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "East to West",
@@ -4730,7 +4730,7 @@
       "check": "both",
       "source": "round4-fr-platform.md",
       "note": "easttowestrv.com/owners has no accessories page; footer links to shopforestriver.com",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "East to West",
@@ -4750,7 +4750,7 @@
       "check": "both",
       "source": "round4-fr-platform.md",
       "note": "easttowestrv.com/owners has no accessories page; footer links to shopforestriver.com",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "East to West",
@@ -4770,7 +4770,7 @@
       "check": "both",
       "source": "round4-fr-platform.md",
       "note": "easttowestrv.com/owners has no accessories page; footer links to shopforestriver.com",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "East to West",
@@ -4790,7 +4790,7 @@
       "check": "both",
       "source": "round4-fr-platform.md",
       "note": "easttowestrv.com/owners has no accessories page; footer links to shopforestriver.com",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "East to West",
@@ -4810,7 +4810,7 @@
       "check": "both",
       "source": "round4-fr-platform.md",
       "note": "easttowestrv.com/owners has no accessories page; footer links to shopforestriver.com",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "East to West",
@@ -4830,7 +4830,7 @@
       "check": "both",
       "source": "round4-fr-platform.md",
       "note": "easttowestrv.com/owners has no accessories page; footer links to shopforestriver.com",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "East to West",
@@ -4850,7 +4850,7 @@
       "check": "both",
       "source": "round4-fr-platform.md",
       "note": "easttowestrv.com/owners has no accessories page; footer links to shopforestriver.com",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "East to West",
@@ -4870,7 +4870,7 @@
       "check": "both",
       "source": "round4-fr-platform.md",
       "note": "easttowestrv.com/owners has no accessories page; footer links to shopforestriver.com",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "East to West",
@@ -4890,7 +4890,7 @@
       "check": "both",
       "source": "round4-fr-platform.md",
       "note": "easttowestrv.com/owners has no accessories page; footer links to shopforestriver.com",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "East to West",
@@ -4910,7 +4910,7 @@
       "check": "both",
       "source": "round4-fr-platform.md",
       "note": "easttowestrv.com/owners has no accessories page; footer links to shopforestriver.com",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "East to West",
@@ -4930,7 +4930,7 @@
       "check": "both",
       "source": "round4-fr-platform.md",
       "note": "easttowestrv.com/owners has no accessories page; footer links to shopforestriver.com",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "East to West",
@@ -4950,7 +4950,7 @@
       "check": "both",
       "source": "round4-fr-platform.md",
       "note": "easttowestrv.com/owners has no accessories page; footer links to shopforestriver.com",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "East to West",
@@ -4970,7 +4970,7 @@
       "check": "both",
       "source": "round4-fr-platform.md",
       "note": "easttowestrv.com/owners has no accessories page; footer links to shopforestriver.com",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Ember RV",
@@ -6072,7 +6072,7 @@
       "evidence": "`\"make\":\"Forest River\",\"model\":\"Berkshire\",\"year\":\"2022\"`",
       "check": "both",
       "source": "round4-fr-platform.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Forest River RV",
@@ -6091,7 +6091,7 @@
       "evidence": "`\"make\":\"Forest River\",\"model\":\"Berkshire XL\",\"year\":\"2019\"`",
       "check": "both",
       "source": "round4-fr-platform.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Forest River RV",
@@ -6110,7 +6110,7 @@
       "evidence": "`\"make\":\"Forest River\",\"model\":\"Berkshire XLT\",\"year\":\"2019\"`",
       "check": "both",
       "source": "round4-fr-platform.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Forest River RV",
@@ -6129,7 +6129,7 @@
       "evidence": "`\"make\":\"Forest River\",\"model\":\"Charleston\",\"year\":\"2025\"`",
       "check": "both",
       "source": "round4-fr-platform.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Forest River RV",
@@ -6148,7 +6148,7 @@
       "evidence": "`\"make\":\"Forest River\",\"model\":\"Class A Diesel Motorhome\",\"year\":\"2017\"`",
       "check": "both",
       "source": "round4-fr-platform.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Forest River RV",
@@ -6167,7 +6167,7 @@
       "evidence": "`\"make\":\"Forest River\",\"model\":\"Class A Gas Motorhome\",\"year\":\"2017\"`",
       "check": "both",
       "source": "round4-fr-platform.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Forest River RV",
@@ -6186,7 +6186,7 @@
       "evidence": "`\"make\":\"Forest River\",\"model\":\"Class C Motorhome\",\"year\":\"2015\"`",
       "check": "both",
       "source": "round4-fr-platform.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Forest River RV",
@@ -6205,7 +6205,7 @@
       "evidence": "`\"make\":\"Forest River\",\"model\":\"Forester\",\"year\":\"2024\"`",
       "check": "both",
       "source": "round4-fr-platform.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Forest River RV",
@@ -6224,7 +6224,7 @@
       "evidence": "`\"make\":\"Forest River\",\"model\":\"Forester LE\",\"year\":\"2019\"`",
       "check": "both",
       "source": "round4-fr-platform.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Forest River RV",
@@ -6243,7 +6243,7 @@
       "evidence": "`\"make\":\"Forest River\",\"model\":\"Forester MBS\",\"year\":\"2018\"`",
       "check": "both",
       "source": "round4-fr-platform.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Forest River RV",
@@ -6262,7 +6262,7 @@
       "evidence": "`\"make\":\"Forest River\",\"model\":\"Forester Transit Series\",\"year\":\"2019\"`",
       "check": "both",
       "source": "round4-fr-platform.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Forest River RV",
@@ -6281,7 +6281,7 @@
       "evidence": "`\"make\":\"Forest River\",\"model\":\"FR3\",\"year\":\"2026\"`",
       "check": "both",
       "source": "round4-fr-platform.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Forest River RV",
@@ -6300,7 +6300,7 @@
       "evidence": "`\"make\":\"Forest River\",\"model\":\"Georgetown\",\"year\":\"2027\"`",
       "check": "both",
       "source": "round4-fr-platform.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Forest River RV",
@@ -6319,7 +6319,7 @@
       "evidence": "`\"make\":\"Forest River\",\"model\":\"Georgetown 3 Series GT3\",\"year\":\"2018\"`",
       "check": "both",
       "source": "round4-fr-platform.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Forest River RV",
@@ -6338,7 +6338,7 @@
       "evidence": "`\"make\":\"Forest River\",\"model\":\"Georgetown 5 Series GT5\",\"year\":\"2018\"`",
       "check": "both",
       "source": "round4-fr-platform.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Forest River RV",
@@ -6357,7 +6357,7 @@
       "evidence": "`\"make\":\"Forest River\",\"model\":\"Georgetown GT7\",\"year\":\"2020\"`",
       "check": "both",
       "source": "round4-fr-platform.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Forest River RV",
@@ -6376,7 +6376,7 @@
       "evidence": "`\"make\":\"Forest River\",\"model\":\"Georgetown XL\",\"year\":\"2019\"`",
       "check": "both",
       "source": "round4-fr-platform.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Forest River RV",
@@ -6395,7 +6395,7 @@
       "evidence": "`\"make\":\"Forest River\",\"model\":\"Legacy SR 340\",\"year\":\"2019\"`",
       "check": "both",
       "source": "round4-fr-platform.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Forest River RV",
@@ -6414,7 +6414,7 @@
       "evidence": "`\"make\":\"Forest River\",\"model\":\"Solera\",\"year\":\"2026\"`",
       "check": "both",
       "source": "round4-fr-platform.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Forest River RV",
@@ -6433,7 +6433,7 @@
       "evidence": "`\"make\":\"Forest River\",\"model\":\"Sunseeker\",\"year\":\"2024\"`",
       "check": "both",
       "source": "round4-fr-platform.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Forest River RV",
@@ -6452,7 +6452,7 @@
       "evidence": "`\"make\":\"Forest River\",\"model\":\"Sunseeker LE\",\"year\":\"2018\"`",
       "check": "both",
       "source": "round4-fr-platform.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Forest River RV",
@@ -6471,7 +6471,7 @@
       "evidence": "`\"make\":\"Forest River\",\"model\":\"Sunseeker MBS\",\"year\":\"2019\"`",
       "check": "both",
       "source": "round4-fr-platform.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Forest River RV",
@@ -6490,7 +6490,7 @@
       "evidence": "`\"make\":\"Forest River\",\"model\":\"Sunseeker Transit Series\",\"year\":\"2019\"`",
       "check": "both",
       "source": "round4-fr-platform.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Forest River towables",
@@ -6509,7 +6509,7 @@
       "evidence": "`\"make\":\"Forest River\",\"model\":\"Alpha Wolf\",\"year\":\"2021\"`",
       "check": "both",
       "source": "round4-fr-platform.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Forest River towables",
@@ -6528,7 +6528,7 @@
       "evidence": "`\"make\":\"Forest River\",\"model\":\"Arctic Wolf\",\"year\":\"2023\"`",
       "check": "both",
       "source": "round4-fr-platform.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Forest River towables",
@@ -6547,7 +6547,7 @@
       "evidence": "`\"make\":\"Forest River\",\"model\":\"Backpack\",\"year\":\"2027\"`",
       "check": "both",
       "source": "round4-fr-platform.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Forest River towables",
@@ -6566,7 +6566,7 @@
       "evidence": "`\"make\":\"Forest River\",\"model\":\"Cedar Creek\",\"year\":\"2021\"`",
       "check": "both",
       "source": "round4-fr-platform.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Forest River towables",
@@ -6585,7 +6585,7 @@
       "evidence": "`\"make\":\"Forest River\",\"model\":\"Cherokee Grey Wolf\",\"year\":\"2022\"`",
       "check": "both",
       "source": "round4-fr-platform.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Forest River towables",
@@ -6604,7 +6604,7 @@
       "evidence": "`\"make\":\"Forest River\",\"model\":\"Cherokee Wolf Pack\",\"year\":\"2021\"`",
       "check": "both",
       "source": "round4-fr-platform.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Forest River towables",
@@ -6623,7 +6623,7 @@
       "evidence": "`\"make\":\"Forest River\",\"model\":\"Cherokee Wolf Pup\",\"year\":\"2021\"`",
       "check": "both",
       "source": "round4-fr-platform.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Forest River towables",
@@ -6642,7 +6642,7 @@
       "evidence": "`\"make\":\"Forest River\",\"model\":\"Flagstaff\",\"year\":\"2023\"`",
       "check": "both",
       "source": "round4-fr-platform.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Forest River towables",
@@ -6661,7 +6661,7 @@
       "evidence": "`\"make\":\"Forest River\",\"model\":\"Flagstaff E-Pro\",\"year\":\"2025\"`",
       "check": "both",
       "source": "round4-fr-platform.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Forest River towables",
@@ -6680,7 +6680,7 @@
       "evidence": "`\"make\":\"Forest River\",\"model\":\"Flagstaff Shamrock\",\"year\":\"2022\"`",
       "check": "both",
       "source": "round4-fr-platform.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Forest River towables",
@@ -6699,7 +6699,7 @@
       "evidence": "`\"make\":\"Forest River\",\"model\":\"No Boundaries\",\"year\":\"2024\"`",
       "check": "both",
       "source": "round4-fr-platform.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Forest River towables",
@@ -6718,7 +6718,7 @@
       "evidence": "`\"make\":\"Forest River\",\"model\":\"Riverstone\",\"year\":\"2018\"`",
       "check": "both",
       "source": "round4-fr-platform.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Forest River towables",
@@ -6737,7 +6737,7 @@
       "evidence": "`\"make\":\"Forest River\",\"model\":\"Rockwood\",\"year\":\"2023\"`",
       "check": "both",
       "source": "round4-fr-platform.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Forest River towables",
@@ -6756,7 +6756,7 @@
       "evidence": "`\"make\":\"Forest River\",\"model\":\"Rockwood Geo Pro\",\"year\":\"2025\"`",
       "check": "both",
       "source": "round4-fr-platform.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Forest River towables",
@@ -6775,7 +6775,7 @@
       "evidence": "`\"make\":\"Forest River\",\"model\":\"Rockwood Roo\",\"year\":\"2022\"`",
       "check": "both",
       "source": "round4-fr-platform.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Forest River towables",
@@ -6794,7 +6794,7 @@
       "evidence": "`\"make\":\"Forest River\",\"model\":\"Salem\",\"year\":\"2020\"`",
       "check": "both",
       "source": "round4-fr-platform.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Forest River towables",
@@ -6813,7 +6813,7 @@
       "evidence": "`\"make\":\"Forest River\",\"model\":\"Salem FSX\",\"year\":\"2019\"`",
       "check": "both",
       "source": "round4-fr-platform.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Forest River towables",
@@ -6832,7 +6832,7 @@
       "evidence": "`\"make\":\"Forest River\",\"model\":\"Salem Villa\",\"year\":\"2020\"`",
       "check": "both",
       "source": "round4-fr-platform.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Forest River towables",
@@ -6851,7 +6851,7 @@
       "evidence": "`\"make\":\"Forest River\",\"model\":\"Sandstorm\",\"year\":\"2018\"`",
       "check": "both",
       "source": "round4-fr-platform.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Forest River towables",
@@ -6870,7 +6870,7 @@
       "evidence": "`\"make\":\"Forest River\",\"model\":\"Shockwave\",\"year\":\"2018\"`",
       "check": "both",
       "source": "round4-fr-platform.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Forest River towables",
@@ -6889,7 +6889,7 @@
       "evidence": "`\"make\":\"Forest River\",\"model\":\"Surveyor\",\"year\":\"2022\"`",
       "check": "both",
       "source": "round4-fr-platform.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Forest River towables",
@@ -6908,7 +6908,7 @@
       "evidence": "`\"make\":\"Forest River\",\"model\":\"Vibe\",\"year\":\"2025\"`",
       "check": "both",
       "source": "round4-fr-platform.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Forest River towables",
@@ -6927,7 +6927,7 @@
       "evidence": "`\"make\":\"Forest River\",\"model\":\"Wildwood\",\"year\":\"2020\"`",
       "check": "both",
       "source": "round4-fr-platform.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Forest River towables",
@@ -6946,7 +6946,7 @@
       "evidence": "`\"make\":\"Forest River\",\"model\":\"Wildwood FSX\",\"year\":\"2019\"`",
       "check": "both",
       "source": "round4-fr-platform.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Forest River towables",
@@ -6965,7 +6965,7 @@
       "evidence": "`\"make\":\"Forest River\",\"model\":\"Wildwood Lodge\",\"year\":\"2020\"`",
       "check": "both",
       "source": "round4-fr-platform.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Grand Design RV",
@@ -12619,7 +12619,7 @@
       "evidence": "`\"make\":\"Prime Time Manufacturing\",\"model\":\"Avenger\",\"year\":\"2018\"`",
       "check": "both",
       "source": "round4-fr-platform.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Prime Time",
@@ -12638,7 +12638,7 @@
       "evidence": "`\"make\":\"Prime Time Manufacturing\",\"model\":\"Crusader\",\"year\":\"2018\"`",
       "check": "both",
       "source": "round4-fr-platform.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Prime Time",
@@ -12657,7 +12657,7 @@
       "evidence": "`\"make\":\"Prime Time Manufacturing\",\"model\":\"Fifth Wheel\",\"year\":\"2015\"`",
       "check": "both",
       "source": "round4-fr-platform.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Prime Time",
@@ -12676,7 +12676,7 @@
       "evidence": "`\"make\":\"Prime Time Manufacturing\",\"model\":\"Fury\",\"year\":\"2019\"`",
       "check": "both",
       "source": "round4-fr-platform.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Prime Time",
@@ -12695,7 +12695,7 @@
       "evidence": "`\"make\":\"Prime Time Manufacturing\",\"model\":\"Lacrosse\",\"year\":\"2018\"`",
       "check": "both",
       "source": "round4-fr-platform.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Prime Time",
@@ -12714,7 +12714,7 @@
       "evidence": "`\"make\":\"Prime Time Manufacturing\",\"model\":\"Navi\",\"year\":\"2019\"`",
       "check": "both",
       "source": "round4-fr-platform.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Prime Time",
@@ -12733,7 +12733,7 @@
       "evidence": "`\"make\":\"Prime Time Manufacturing\",\"model\":\"PTX\",\"year\":\"2020\"`",
       "check": "both",
       "source": "round4-fr-platform.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Prime Time",
@@ -12752,7 +12752,7 @@
       "evidence": "`\"make\":\"Prime Time Manufacturing\",\"model\":\"Sanibel\",\"year\":\"2018\"`",
       "check": "both",
       "source": "round4-fr-platform.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Prime Time",
@@ -12771,7 +12771,7 @@
       "evidence": "`\"make\":\"Prime Time Manufacturing\",\"model\":\"Toy Hauler\",\"year\":\"2017\"`",
       "check": "both",
       "source": "round4-fr-platform.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Prime Time",
@@ -12790,7 +12790,7 @@
       "evidence": "`\"make\":\"Prime Time Manufacturing\",\"model\":\"Tracer\",\"year\":\"2018\"`",
       "check": "both",
       "source": "round4-fr-platform.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Prime Time",
@@ -12809,7 +12809,7 @@
       "evidence": "`\"make\":\"Prime Time Manufacturing\",\"model\":\"Travel Trailer\",\"year\":\"2015\"`",
       "check": "both",
       "source": "round4-fr-platform.md",
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "brand": "Roadtrek",
