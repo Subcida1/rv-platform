@@ -312,7 +312,8 @@ let lastFrame=0;
 let nWalk=0, nDetour=0, nJoin=0, nNoRoad=0;   // how the path was built, for tuning
 let dirty=true;                    // only repaint when the route actually changed
 let holdSince=0;                   // how long the car has been stuck off-network
-let driveDir=0;                    // committed drive direction along the current road
+let driveDir=0;
+let driveDirAt=0;                  // when the car last reversed direction                    // committed drive direction along the current road
 let hopDist=0;                     // distance driven since the last road change
 // planner failure counters -- these say which path is eating the car's time
 let fNoDest=0, fNoRoute=0, fNoBuild=0, fOk=0, fFallback=0;
@@ -417,6 +418,9 @@ function distToVertex(line, v, x, y){
    442. That is what makes it possible to route over real roads instead of
    drawing a straight line across the map. */
 const JUNCTION_PX = 6;
+// minimum time between reversals, so a failing planner cannot make the car
+// shuttle up and down one road
+const REVERSE_MS = 12000;
 const lineAdj = [];
 (function buildRoadGraph(){
   const cell = JUNCTION_PX;
@@ -492,6 +496,7 @@ function nearestVertexOn(line, x, y){
    when the cursor is over a road the car cannot reach -- it stays on its
    own road rather than teleporting to the cursor. */
 function driveOn(ax, ay){
+  const now = performance.now();
   const l = lines[curLine];
   if(!l) return false;
   const n = l.length / 2;
@@ -505,10 +510,14 @@ function driveOn(ax, ay){
     driveDir = dEnd <= dBeg ? 1 : -1;
   }
   if(curSi <= 0 || curSi >= n - 1){
-    // Sitting at the end: turn around and drive back. Returning without
-    // emitting here is what left the car dead still whenever planning found
-    // nothing -- a stall is worse than a bit of retracing.
+    // Sitting at the end of this road: turn around and drive back. BUT only
+    // once every REVERSE_MS. Reversing freely here is what produced the run
+    // of back-and-forth turns -- the car shuttled up and down a short road
+    // while planning kept failing. Holding briefly is the lesser evil, and
+    // planning now almost always succeeds within a frame or two.
+    if(now - driveDirAt < REVERSE_MS) return false;
     driveDir = curSi <= 0 ? 1 : -1;
+    driveDirAt = now;
   }
   const goal = driveDir > 0 ? n - 1 : 0;
   if(goal === curSi) return false;
@@ -596,7 +605,12 @@ function randomFarDestination(){
       const x = l[v*2], y = l[v*2 + 1];
       if(!inUSA(x, y)) continue;
       if(pass === 0 && (lineUsedAt[li] || 0) > now - state.noBackMs) continue;
-      if(tip){
+      // Pass 1 drops the distance window as well as the fresh-ground rule, so
+      // the last resort is "any road at all". Without this the picker can fail
+      // repeatedly, and every failure hands the car to driveOn, which turns
+      // around at the end of its road -- that is the 3-7 reversals before it
+      // snaps out of it.
+      if(tip && pass === 0){
         const d = Math.hypot(x - tip.x, y - tip.y);
         if(d < 120 || d > 900) continue;
       }
@@ -880,6 +894,9 @@ hero.addEventListener('pointermove', e => {
 window.addEventListener('resize', () => { resize(); kick(); });
 
 resize();
+// Start the loop immediately. It was only started by the pointermove
+// handler, so the car sat motionless until the visitor moved the mouse.
+kick();
 
 
 })();
