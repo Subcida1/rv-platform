@@ -1,0 +1,26 @@
+{
+  "note": "The guide catalogue. Every stated guide count on the site derives from this file, so adding a guide means adding its slug to a group here and running scripts/sync-counts.py. verify.py checks both directions: every page in guides/ must be listed here, and every slug here must have a page. Group keys are the ones the copy names: 'winter' is the winter-season set the homepage shows as a grid, 'fix' is the second homepage grid (fault-finding plus the two numbers guides).",
+  "groups": {
+    "winter": [
+      "winterize-plumbing",
+      "battery-winter-storage",
+      "tires-winter",
+      "roof-snow-load"
+    ],
+    "fix": [
+      "rv-12-volt-problems",
+      "rv-furnace-not-working",
+      "rv-tank-sensors-reading-wrong",
+      "rv-towing-capacity",
+      "rv-tire-replacement",
+      "rv-water-heater-not-heating",
+      "rv-refrigerator-not-cooling",
+      "rv-converter-not-charging",
+      "rv-fuse-keeps-blowing",
+      "rv-generator-not-charging",
+      "rv-lights-not-working",
+      "rv-outlets-not-working",
+      "rv-solar-not-charging"
+    ]
+  }
+}

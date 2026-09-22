@@ -16,6 +16,70 @@ drifted, because a script only ever sees its own copy:
 One definition each, imported by both scripts. verify.py checks the rendered
 result in every page rather than trusting either script to have applied it.
 """
+import json
+import re
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+
+# ---------------------------------------------------------------------------
+# Counts stated in site copy
+# ---------------------------------------------------------------------------
+# A number typed into a sentence is invisible to every check that reads
+# attributes, and the site proved it: the homepage said "8 live" in one element
+# and "17 Free guides, live now" in another, on the same page. So every stated
+# count lives in one derivation below and reaches the page through a marker,
+# <span data-claim="KEY">value</span>, which sync-counts.py rewrites and
+# verify.py re-derives and checks.
+#
+# Adding a guide is: put it in _data/guides.json, add its card, run
+# scripts/sync-counts.py. The words and the digits in every page follow.
+
+WORD = {0: "zero", 1: "one", 2: "two", 3: "three", 4: "four", 5: "five",
+        6: "six", 7: "seven", 8: "eight", 9: "nine", 10: "ten", 11: "eleven",
+        12: "twelve", 13: "thirteen", 14: "fourteen", 15: "fifteen",
+        16: "sixteen", 17: "seventeen", 18: "eighteen", 19: "nineteen",
+        20: "twenty"}
+
+
+def guides():
+    """The guide catalogue from _data/guides.json: group -> [slugs]."""
+    data = json.loads((ROOT / "_data" / "guides.json").read_text(encoding="utf-8"))
+    return data["groups"]
+
+
+def claim_values():
+    """Every count the site states, as the exact string to put on the page.
+
+    Keys are what the copy calls the number, so a marker reads like the sentence
+    around it. `-word` is capitalised for sentence starts, `-word-lc` for the
+    middle of one.
+    """
+    g = guides()
+    total = sum(len(v) for v in g.values())
+    out = {"guides-total": str(total)}
+
+    for key, slugs in sorted(g.items()):
+        n = len(slugs)
+        out["guides-%s" % key] = str(n)
+        out["guides-%s-word" % key] = WORD[n].capitalize()
+        out["guides-%s-word-lc" % key] = WORD[n]
+
+    # Tools: one entry per page that is not the index, and the pipeline cards
+    # counted from the page itself, since the claim is "N building" and the cards
+    # are what a reader counts.
+    out["tools-live"] = str(len([p for p in (ROOT / "tools").glob("*.html")
+                                 if p.name != "index.html"]))
+    tools_index = (ROOT / "tools" / "index.html").read_text(encoding="utf-8")
+    out["tools-building"] = str(len(re.findall(r'class="cat-card"', tools_index)))
+    return out
+
+
+# The marker the two scripts agree on. Captures the tag name so the close tag has
+# to match, and refuses to touch anything with markup inside it: a claim is one
+# text run, and if that stops being true the scripts should fail loudly rather
+# than silently rewrite half a sentence.
+CLAIM_RE = re.compile(r'<(\w+)([^>]*\sdata-claim="([a-z0-9-]+)"[^>]*)>([^<]*)</\1>')
 # Address-bar tint for mobile browsers, and the installed-PWA theme colour.
 # This is --b1 of the mist theme that every page sets on <body>
 # (assets/css/style.css .g-theme-mist). Never the sunset :root values: that

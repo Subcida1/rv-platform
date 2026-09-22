@@ -1,20 +1,27 @@
 #!/usr/bin/env python3
-"""Sync directory stat placeholders to the listing data.
+"""Sync every count stated in site copy to its real source.
 
-Two places show counts, and both drift every time a listing is added or removed:
+Three families, one derivation each:
 
   directory/<state>.html   the stats strip (rewritten by JS at runtime, but the
                            static values are what a no-JS visitor or crawler sees)
   directory/index.html     the state tiles, which carry a listing/mobile/center
                            line each
+  any page                 any <tag data-claim="KEY">value</tag> marker, which
+                           covers guide counts in prose and the tools figures
 
 Each state reads ONLY its own state's listing file, so the counts stay per-state.
+Guide counts come from _data/guides.json via scripts/site_constants.py.
 
 Run: python3 scripts/sync-counts.py
 """
 import json
 import re
+import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import site_constants as C  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 PAGES = {"oregon": "or", "washington": "wa", "california": "ca"}
@@ -64,7 +71,7 @@ def sync_home(by_suffix):
     count and the directory size. Derive both rather than trusting a typed number."""
     page = ROOT / "index.html"
     html = page.read_text(encoding="utf-8")
-    guides = len([f for f in (ROOT / "guides").glob("*.html") if f.name != "index.html"])
+    guides = int(C.claim_values()["guides-total"])
     businesses = sum(c["total"] for c in by_suffix.values())
     for label, value in (("Free guides, live now", guides),
                          ("Repair businesses listed", businesses)):
@@ -78,8 +85,61 @@ def sync_home(by_suffix):
     print("  %-18s guides=%d businesses=%d" % (page.name, guides, businesses))
 
 
+def sync_claims():
+    """Rewrite every count stated in copy, on every page, from one derivation.
+
+    This is the part Ty asked for after finding "8 live" in one element and "17
+    Free guides, live now" in another, on the same page: one number, two values,
+    because both were typed by hand. A count now reaches a page as
+    <span data-claim="guides-total">17</span>, and everything here comes from
+    scripts/site_constants.py, which reads _data/guides.json and the files on
+    disk.
+
+    Unknown keys and markers with markup inside them raise, so a typo is a loud
+    failure rather than a number that quietly stops updating.
+    """
+    want = C.claim_values()
+    touched, seen, bad = 0, {}, []
+    for page in sorted(p for p in ROOT.rglob("*.html") if ".git" not in p.parts):
+        rel = page.relative_to(ROOT)
+        html = before = page.read_text(encoding="utf-8")
+        n_markers = len(re.findall(r'\sdata-claim="', html))
+        hits = [0]
+
+        def repl(m):
+            tag, attrs, key, inner = m.groups()
+            hits[0] += 1
+            if key not in want:
+                bad.append("unknown claim %r in %s" % (key, rel))
+                return m.group(0)
+            seen[key] = seen.get(key, 0) + 1
+            return "<%s%s>%s</%s>" % (tag, attrs, want[key], tag)
+
+        html = C.CLAIM_RE.sub(repl, html)
+
+        # Counting markers before and rewrites after is the only honest way to
+        # know every one was reached. A marker with markup inside it, or a typo
+        # in the attribute, silently stops updating otherwise.
+        if hits[0] != n_markers:
+            bad.append("%s has %d data-claim marker(s) and only %d matched the "
+                       "pattern; a claim must be one run of text with no markup "
+                       "inside it" % (rel, n_markers, hits[0]))
+        if bad:
+            raise SystemExit("FAIL\n  " + "\n  ".join(sorted(set(bad))))
+        if html != before:
+            page.write_text(html, encoding="utf-8")
+            touched += 1
+
+    unused = sorted(set(want) - set(seen))
+    print("  claims: %d page(s) rewritten, %d marker(s) matched, %d key(s) used"
+          % (touched, sum(seen.values()), len(seen)))
+    if unused:
+        print("    derivable but not marked anywhere: %s" % ", ".join(unused))
+
+
 data = {suffix: counts(suffix) for suffix in PAGES.values()}
 for _slug, _suffix in PAGES.items():
     sync(_slug, _suffix, data[_suffix])
 sync_index(data)
 sync_home(data)
+sync_claims()

@@ -172,13 +172,14 @@ print("  clean" if not bad else "\n".join("  " + b for b in bad))
 if bad:
     fails.append("homepage figures")
 
-print("\n=== guide counts claimed on the homepage match the guides that exist ===")
-# Two failures live in one place here. The homepage claimed "Seven troubleshooting
-# guides" while the site had eleven, and six of the seventeen guides were reachable
-# from nowhere on the homepage. Both are claims about the corpus, so both are
-# checked against the corpus: every guide must be linked, and a spelled-out count
-# must equal the cards in the grid it introduces. The hero stat (data-count) is
-# covered by the homepage-figures check above; scripts/sync-counts.py owns it.
+print("\n=== every stated count matches the data it comes from ===")
+# Four failures have lived here now, all the same shape: a number typed by hand
+# into copy. "Seven troubleshooting guides" over eleven, six guides linked from
+# nowhere on the homepage, and then "8 live" in a deck card next to "17 Free
+# guides, live now" on the SAME page. So this checks three things:
+#   1. the marker system covers the pages (a marker that stopped matching fails)
+#   2. every guide on disk is registered in _data/guides.json, both directions
+#   3. any spelled-out count still sitting in prose matches the grid below it
 WORDS = {"one": 1, "two": 2, "three": 3, "four": 4, "five": 5, "six": 6, "seven": 7,
          "eight": 8, "nine": 9, "ten": 10, "eleven": 11, "twelve": 12,
          "thirteen": 13, "fourteen": 14, "fifteen": 15, "sixteen": 16, "seventeen": 17}
@@ -186,16 +187,45 @@ WORDS = {"one": 1, "two": 2, "three": 3, "four": 4, "five": 5, "six": 6, "seven"
 idx_html = (ROOT / "index.html").read_text(encoding="utf-8")
 bad = []
 
+# 1. markers must say what the data says
+want = C.claim_values()
+markers_ok = 0
+for page in pages:
+    rel = page.relative_to(ROOT)
+    html = page.read_text(encoding="utf-8")
+    n_markers = len(re.findall(r'\sdata-claim="', html))
+    for m in C.CLAIM_RE.finditer(html):
+        key, inner = m.group(3), m.group(4).strip()
+        if key not in want:
+            bad.append("%s: unknown claim %r" % (rel, key))
+        elif inner != want[key]:
+            bad.append("%s: claim %r reads %r, data says %r (run scripts/sync-counts.py)"
+                       % (rel, key, inner, want[key]))
+    matched = len(C.CLAIM_RE.findall(html))
+    if matched != n_markers:
+        bad.append("%s: %d data-claim markers, only %d match the pattern"
+                   % (rel, n_markers, matched))
+    markers_ok += matched
+
+# 2. the catalogue and the guides directory describe the same set
+catalogue = {slug for slugs in C.guides().values() for slug in slugs}
+on_disk = {f.stem for f in (ROOT / "guides").glob("*.html") if f.name != "index.html"}
+if catalogue != on_disk:
+    if on_disk - catalogue:
+        bad.append("_data/guides.json is missing: %s" % ", ".join(sorted(on_disk - catalogue)))
+    if catalogue - on_disk:
+        bad.append("_data/guides.json lists pages that do not exist: %s"
+                   % ", ".join(sorted(catalogue - on_disk)))
+
+# 3. every guide reachable from the homepage
 linked = set(re.findall(r'href="guides/([a-z0-9-]+)\.html"', idx_html))
-every_guide = {f.stem for f in (ROOT / "guides").glob("*.html") if f.name != "index.html"}
-missing = sorted(every_guide - linked)
+missing = sorted(on_disk - linked)
 if missing:
     bad.append("index.html links %d of %d guides, missing: %s"
-               % (len(linked & every_guide), len(every_guide), ", ".join(missing)))
+               % (len(linked & on_disk), len(on_disk), ", ".join(missing)))
 
-# text nodes only, with their offsets kept, so a count inside a meta description
-# or an alt attribute cannot be mistaken for a claim a reader sees
-spans = [m.end() for m in re.finditer(r"<[^>]+>", idx_html)]
+# 4. a spelled-out count left in prose still has to match the grid below it, so
+#    a hand-typed number that never gets a marker is still caught
 text_bits = []
 prev = 0
 for s in re.finditer(r"<[^>]+>", idx_html):
@@ -221,10 +251,29 @@ for start, text in text_bits:
         if n != cards:
             bad.append("index.html says %r but the grid under it holds %d cards"
                        % (m.group(0), cards))
-print("  %d guides, all linked from the homepage; %d grids, every count matched"
-      % (len(every_guide), len(grids)) if not bad else "\n".join("  " + b for b in bad))
+
+# 5. the nav dropdown states a brand count and a year range in site.js, the one
+#    count that cannot take a marker because it is built in JS from the config
+#    object. Check that literal against the manifest instead.
+nav = (ROOT / "assets" / "js" / "site.js").read_text(encoding="utf-8")
+nav_m = re.search(r'Owner manuals by brand<span class="sm">(\d+) makers, (\d+) to (\d+)</span>', nav)
+brand_rows = json.loads((ROOT / "_data" / "manuals.json").read_text(encoding="utf-8"))["brands"]
+brand_years = [int(y) for r in brand_rows
+               for y in re.findall(r"\b(19\d\d|20\d\d)\b", str(r.get("years", "")))]
+nav_truth = (len(brand_rows), min(brand_years), max(brand_years))
+if not nav_m:
+    bad.append("site.js: could not find the brand dropdown line to check")
+elif tuple(int(g) for g in nav_m.groups()) != nav_truth:
+    bad.append("site.js says '%d makers, %d to %d', the manifest holds '%d makers, %d to %d'"
+               % (tuple(int(g) for g in nav_m.groups()) + nav_truth))
 if bad:
-    fails.append("guide counts")
+    for b in bad[:14]:
+        print("  " + b)
+    fails.append("count claims")
+else:
+    print("  %d guides in the catalogue, all linked from the homepage" % len(on_disk))
+    print("  %d data-claim markers match the data on all %d pages; "
+          "%d grid count(s) matched to the cards under them" % (markers_ok, len(pages), len(grids)))
 
 print("\n=== FAQ schema matches the visible FAQ word for word ===")
 # Google requires FAQPage markup to match the text a reader can see. Scripts now edit page
