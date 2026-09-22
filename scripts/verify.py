@@ -420,10 +420,36 @@ stale = [h for h in C.SUNSET if h in tile]
 if stale:
     bad_theme.append("favicon.svg still carries %s" % ", ".join("#" + h for h in stale))
 
+# The retired sunset palette is allowed in exactly one place: the :root block at
+# the top of style.css, where it is a set of dead defaults that every page
+# overrides by putting class="g-theme-mist" on its body. Anywhere else it is a
+# leak, and tonight's sweep found the last of them in plain sight: every form
+# focus ring, the hero chips' hover and on state, the directory filter
+# checkboxes, and a violet focus ring in the identity block. Removing :root
+# blocks before scanning is what makes this rule checkable rather than a list of
+# exceptions.
+css = (ROOT / "assets" / "css" / "style.css").read_text(encoding="utf-8")
+css_outside_root = re.sub(r":root\{[^}]*\}", "", css, flags=re.S)
+RETIRED = C.SUNSET + ("e11d48", "c2405a", "f0a3b5", "a3292b", "c7bdf5")
+leaks = []
+for h in RETIRED:
+    for m in re.finditer("#" + h, css_outside_root, re.I):
+        leaks.append("style.css:%d #%s" % (css_outside_root[:m.start()].count("\n") + 1, h))
+if leaks:
+    bad_theme.extend(leaks[:8])
+
+# A page without the mist class renders the whole site in the retired sunset
+# gradient, because that is what :root still holds. Cheaper to check than to
+# notice.
+no_mist = [str(p.relative_to(ROOT)) for p in pages
+           if 'class="g-theme-mist"' not in p.read_text(encoding="utf-8")]
+if no_mist:
+    bad_theme.append("no g-theme-mist body class on: %s" % ", ".join(no_mist[:8]))
+
 if bad_theme:
     for b in bad_theme[:12]:
         print("  " + b)
-    print("  %d of %d pages wrong" % (len(bad_theme), len(pages)))
+    print("  %d problem(s) found" % len(bad_theme))
     fails.append("brand theme-color")
 else:
     print("  all %d pages, site.webmanifest and favicon.svg carry %s" % (len(pages), C.THEME_COLOR))
