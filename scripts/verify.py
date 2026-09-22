@@ -480,6 +480,55 @@ if r.returncode != 0:
 else:
     print("  " + (r.stdout.strip() or "shell matches the generator"))
 
+
+print("\n=== every class used in a page has a rule, or a js- prefix ===")
+# A class with no rule is either a typo, a leftover, or a script hook. The js- prefix
+# marks the third case, so this check needs no exception list. It has already caught
+# one real bug: a utility used in markup that was never defined in the stylesheet.
+css = (ROOT / "assets" / "css" / "style.css").read_text(encoding="utf-8")
+defined = set(re.findall(r"\.([a-zA-Z][\w-]*)", css))
+orphans = {}
+for page in pages:
+    for m in re.finditer(r'class="([^"]*)"', page.read_text(encoding="utf-8")):
+        for c in m.group(1).split():
+            if c not in defined and not c.startswith("js-"):
+                orphans.setdefault(c, str(page.relative_to(ROOT)))
+if orphans:
+    for c, page in sorted(orphans.items()):
+        print("  .%s used in %s but has no rule (add one, delete it, or prefix it js-)" % (c, page))
+    fails.append("orphan classes")
+else:
+    print("  every class has a rule, or is a js- hook (%d defined)" % len(defined))
+
+
+print("\n=== every inline script parses as JavaScript ===")
+# A regex that edits a page can quietly mangle a string inside an inline script, which
+# no other check here would see: the tag balance is fine and the page still loads, it
+# just throws. That happened on contact.html while converting its inline styles.
+import tempfile
+bad_js, checked = [], 0
+for page in pages:
+    html = page.read_text(encoding="utf-8")
+    for m in re.finditer(r"<script([^>]*)>(.*?)</script>", html, re.S):
+        attrs, body = m.group(1), m.group(2)
+        if "src=" in attrs or "ld+json" in attrs or not body.strip():
+            continue
+        checked += 1
+        with tempfile.NamedTemporaryFile("w", suffix=".js", delete=False) as fh:
+            fh.write(body)
+            tmp = fh.name
+        r = subprocess.run(["node", "--check", tmp], capture_output=True, text=True)
+        Path(tmp).unlink()
+        if r.returncode:
+            bad_js.append("%s: %s" % (page.relative_to(ROOT),
+                                      r.stderr.strip().split("\n")[0][:80]))
+if bad_js:
+    for b in bad_js:
+        print("  " + b)
+    fails.append("inline scripts")
+else:
+    print("  %d inline block(s), all parse" % checked)
+
 print("\n=== <base href=\"/\"> is present, first in head, and not injected by script ===")
 # Two failures this prevents, both real and both silent. A relative stylesheet
 # URL is resolved by Chrome's preload scanner BEFORE any script runs, so while

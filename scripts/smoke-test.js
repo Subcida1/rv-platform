@@ -41,7 +41,7 @@ function context() {
       createElement: stubEl,
       getElementById: id => byId[id] || (byId[id] = stubEl('div')),
       querySelector: () => null,
-      querySelectorAll: sel => (sel === 'form.search-go' ? [SEARCH_FORM] : []),
+      querySelectorAll: sel => (sel === 'form.js-search-form' ? [SEARCH_FORM] : []),
       addEventListener() {},
     },
     location: { pathname: '/index.html', href: '', origin: 'https://example.com' },

@@ -282,7 +282,7 @@ def hub(rows, oem_count):
                 for i, (slug, title) in enumerate(R.SYSTEMS, 1)]}}
 
     body = """
-  <div class="wrap" style="padding:54px 0 14px">
+  <div class="wrap page-intro">
     <div class="sec-eyebrow">Manuals</div>
     <h1 class="dir-title man-title">RV MANUALS</h1>
     <p class="man-lede">Owner's manuals, service manuals, parts lists and wiring diagrams
@@ -290,7 +290,7 @@ def hub(rows, oem_count):
     document.</p>
   </div>
 
-  <div class="sec" style="padding:10px 0 0">
+  <div class="sec pad-10-0">
     <div class="wrap">
       <div class="man-search">
         <input id="man-q" type="search" autocomplete="off" aria-label="Search every manual"
@@ -313,7 +313,7 @@ def hub(rows, oem_count):
     </div>
   </div>
 
-  <div class="sec" style="padding:26px 0 60px">
+  <div class="sec pad-26">
     <div class="wrap">
       <h2 class="man-h2">Browse by system</h2>
       <div class="guide-grid man-grid">
@@ -322,35 +322,35 @@ def hub(rows, oem_count):
     </div>
   </div>
 
-  <div class="sec" style="padding:0 0 60px">
+  <div class="sec pb-60">
     <div class="wrap">
       <h2 class="man-h2">By brand</h2>
-      <a class="card" style="display:block;padding:26px;max-width:860px"
+      <a class="card promo"
          href="manuals/brands.html">
         <div class="guide-title">RV owner's manuals, brand by brand</div>
-        <div class="guide-meta" style="margin-top:8px">%d manufacturers, from 1973 to 2027.
+        <div class="guide-meta sp-8">%d manufacturers, from 1973 to 2027.
         Where each one publishes its own manual, how far back it goes, and whether it is one
         document covering every year or one per model year.</div>
-        <div class="guide-go" style="margin-top:12px">Open &#8594;</div>
+        <div class="guide-go sp-12">Open &#8594;</div>
       </a>
     </div>
   </div>
 
-  <div class="sec" style="padding:0 0 60px">
+  <div class="sec pb-60">
     <div class="wrap">
       <h2 class="man-h2">Recalls and service bulletins</h2>
-      <a class="card" style="display:block;padding:26px;max-width:860px"
+      <a class="card promo"
          href="manuals/recalls.html">
         <div class="guide-title">Has my unit been recalled</div>
-        <div class="guide-meta" style="margin-top:8px">Where to check a unit by VIN, the
+        <div class="guide-meta sp-8">Where to check a unit by VIN, the
         makers who publish their own recall notices, and the federal file of manufacturer
         communications, where the RV makers have filed two thousand of them.</div>
-        <div class="guide-go" style="margin-top:12px">Open &#8594;</div>
+        <div class="guide-go sp-12">Open &#8594;</div>
       </a>
     </div>
   </div>
 
-  <div class="sec" style="padding:0 0 60px">
+  <div class="sec pb-60">
     <div class="wrap">
       <div class="card man-about">
         <div class="man-about-h">What each row tells you</div>
@@ -401,14 +401,14 @@ def system_page(slug, title, desc, rows):
                          (title, "%s/manuals/%s.html" % (SITE, slug))])
 
     body = """
-  <div class="wrap" style="padding:54px 0 14px">
+  <div class="wrap page-intro">
     <div class="man-crumb"><a href="manuals/index.html">RV Manuals</a></div>
     <h1 class="dir-title man-title">%s MANUALS</h1>
     <p class="man-lede">%s. %d documents and libraries from %d makers, each linked at the
     source.</p>
   </div>
 
-  <div class="sec" style="padding:10px 0 60px">
+  <div class="sec pad-10-60">
     <div class="wrap">
       <div class="man-search">
         <input id="man-q" type="search" autocomplete="off" aria-label="Search this page"
@@ -521,14 +521,14 @@ def brands_page(rows):
                          (BRANDS_TITLE, SITE + "/manuals/brands.html")])
 
     body = """
-  <div class="wrap" style="padding:54px 0 14px">
+  <div class="wrap page-intro">
     <div class="man-crumb"><a href="manuals/index.html">RV Manuals</a></div>
     <h1 class="dir-title man-title">RV MANUALS BY BRAND</h1>
     <p class="man-lede">Where each RV manufacturer publishes its own owner's manual, how
     far back the archive reaches, and how the documents are organised. %d brands.</p>
   </div>
 
-  <div class="sec" style="padding:10px 0 60px">
+  <div class="sec pad-10-60">
     <div class="wrap">
       <div class="man-search">
         <input id="man-q" type="search" autocomplete="off" aria-label="Search brands"
@@ -632,14 +632,14 @@ def recalls_page(rows, bulletins, source_note):
                            for i, r in enumerate(rows, 1)]}}
 
     body = """
-  <div class="wrap" style="padding:54px 0 14px">
+  <div class="wrap page-intro">
     <div class="man-crumb"><a href="manuals/index.html">RV Manuals</a></div>
     <h1 class="dir-title man-title">RV RECALLS AND SERVICE BULLETINS</h1>
     <p class="man-lede">How to find out whether your RV, or something fitted to it, has been
     recalled, and where the manufacturer service bulletins are kept.</p>
   </div>
 
-  <div class="sec" style="padding:10px 0 60px">
+  <div class="sec pad-10-60">
     <div class="wrap">
 %s
 

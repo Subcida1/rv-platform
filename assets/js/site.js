@@ -177,7 +177,7 @@
  }
 
  function initSearch() {
- var forms = $$('form.search-go');
+ var forms = $$('form.js-search-form');
  forms.forEach(function (f) {
  f.addEventListener('submit', function (e) {
  e.preventDefault();

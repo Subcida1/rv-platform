@@ -100,7 +100,7 @@
   }
 
   function init() {
-    var form = document.querySelector('form.search-go');
+    var form = document.querySelector('form.js-search-form');
     if (!form || !INDEX.length) return;
     var input = form.querySelector('input');
     if (!input) return;

@@ -126,7 +126,10 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
 .nav-group{position:relative}
 .nav-group .caret{display:inline-block;margin-left:4px;font-size:9px;color:var(--text-3);transition:transform .16s}
 .nav-group:hover .caret,.nav-group.open .caret{transform:rotate(180deg)}
-.drop{position:absolute;top:calc(100% + 10px);left:50%;transform:translateX(-50%) translateY(6px);min-width:230px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow-lg);padding:8px;opacity:0;pointer-events:none;transition:.18s}
+/* No shadow on the dropdown. Ty, 2026-09-22: "its the shading around the dropdown".
+   The panel separates from the page with its border instead, which is the flat look the
+   rest of the site uses. */
+.drop{position:absolute;top:calc(100% + 10px);left:50%;transform:translateX(-50%) translateY(6px);min-width:230px;background:var(--surface);border:1px solid var(--border-2);border-radius:var(--radius);padding:8px;opacity:0;pointer-events:none;transition:.18s}
 .nav-group:hover .drop,.nav-group.open .drop{opacity:1;pointer-events:auto;transform:translateX(-50%) translateY(0)}
 .drop a{display:block;padding:10px 14px;border-radius:9px;font-size:14px;color:var(--text-2);font-weight:500}
 .drop a:hover{background:var(--grad-soft);color:var(--text)}
@@ -1110,7 +1113,8 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
    The paragraph variants were normalised to the dominant one (line-height 1.65,
    margin-top 8px). Everything else reproduces what the pages asked for exactly.
    ============================================================ */
-.page-intro{max-width:820px;padding:54px 0 20px}
+/* padding only: the width is per page (.w-820, .w-720, .w-680) */
+.page-intro{padding:54px 0 20px}
 .page-intro.narrow{max-width:720px}
 /* :not(.dir-title) because .dir-title IS this site's page-title treatment (48px,
    uppercase, used on every directory and manuals page) and a type selector would
@@ -1161,6 +1165,10 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 .sp-48{margin-top:48px}
 .prose .center-block{max-width:680px;margin-left:auto;margin-right:auto}
 .prose h3.lg{font-size:19px}
+/* A card heading inside .prose: the prose base is (0,1,1), so these need the ancestor
+   to reach (0,2,0). Only two exist, in the about and contact cards. */
+.prose .card-h{font-size:18px;font-weight:800}
+.prose .card-h-sm{font-size:16px;font-weight:800}
 /* The directory body wears .prose, but what is inside it is business cards, not
    prose: a listing description and the finder heading carry their own spacing and
    must not inherit the prose paragraph and heading rhythm. Measured, not guessed:
@@ -1173,6 +1181,65 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 /* The directory script reveals these by clearing the inline display, so the hidden
    state has to STAY inline: .hidden is display:none!important and would beat it, and
    a plain class would come back the moment the script cleared the inline value. */
+
+/* ============================================================
+   Layout and text utilities (2026-09-22)
+   Added to finish the inline-style sweep on the root, tools and manuals pages, whose
+   remaining styles were one-off layout values rather than type-scale drift.
+   Every name here was checked against the rest of this file BEFORE being added: two
+   I tried earlier were already taken (.page-head is a component, .deck is the
+   homepage deck section) and both cost a round of debugging to find.
+   Sizes are named for their role where a role exists (card-h, form-legend, footnote)
+   and by value where the value IS the meaning (sp-14, w-680).
+   ============================================================ */
+.link{color:inherit;text-decoration:underline}
+.card-h{font-size:18px;font-weight:800}
+.card-h-sm{font-size:16px;font-weight:800}
+.h-lg{font-size:21px;font-weight:800}
+.h-sec-sm{font-size:clamp(24px,3vw,34px);font-weight:800;letter-spacing:-.02em}
+.note-sm{font-size:12.5px;color:var(--text-3)}
+.footnote{font-size:12px;color:var(--text-3);margin-top:8px}
+.form-legend{font-size:15px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--text-3)}
+.block-center{max-width:820px;margin-left:auto;margin-right:auto}
+.w-820{max-width:820px}
+.w-720{max-width:720px}
+.w-680{max-width:680px}
+.w-520{max-width:520px}
+.w-480{max-width:480px}
+.pad-box{padding:30px}
+.panel-24{padding:24px}
+.pad-52-64{padding:52px 0 64px}
+.pad-10-60{padding:10px 0 60px}
+.flex-wrap{flex-wrap:wrap}
+.flex-none{flex:none}
+.sp-10{margin-top:10px}
+.sp-56{margin-top:56px}
+.ml-10{margin-left:10px}
+.is-disabled{cursor:not-allowed}
+.is-inert{cursor:default}
+.is-dim{opacity:.55}
+.body-15{color:var(--text-2);font-size:15px;line-height:1.7}
+.note-13{color:var(--text-2);font-size:13px}
+.note-sm.strong{font-weight:700;color:var(--text-2)}
+.mb-10{margin-bottom:10px}
+.mb-12{margin-bottom:12px}
+.mb-18{margin-bottom:18px}
+.form-bare{border:none;box-shadow:none}
+.mx-auto{margin-left:auto;margin-right:auto}
+.card-note{color:var(--text-2);margin-top:10px}
+.small-13{font-size:13px}
+.sp-18{margin-top:18px}
+.w-760{max-width:760px}
+.code-box{padding:18px 22px;background:var(--bg-3)}
+.code-note{font-size:13.5px;word-break:break-all}
+.pad-10-0{padding:10px 0 0}
+.pb-60{padding:0 0 60px}
+.card.promo{display:block;padding:26px;max-width:860px}
+.sp-8{margin-top:8px}
+
+
+
+
 /* The guides hub is a page of cards, not prose. It shares the header treatment
    and nothing else, so the .prose rules cannot reach the guide cards through
    a descendant .card match. It had exactly these inline styles and no more. */
