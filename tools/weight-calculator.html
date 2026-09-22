@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script src="../assets/js/base.js"></script>
+ <base href="/"> <!-- must stay first: every other URL on the page resolves against it -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="canonical" href="https://originrv.com/tools/weight-calculator.html">
   <title>RV Towing Calculator: Can Your Truck Tow It?</title>
@@ -54,7 +54,7 @@
         <div class="wc-form">
           <p style="font-size:12.5px;color:var(--text-3);margin-bottom:10px">Fields marked with a star are required. The rest are optional, but the more you fill in, the more accurate the answer.</p>
           <div class="panel" style="padding:24px">
-            <h3 style="font-size:15px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--text-3)">Your tow vehicle</h3>
+            <h2 style="font-size:15px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--text-3)">Your tow vehicle</h2>
             <div class="form-row">
               <div class="field"><label for="w-tow-rating">How much can your truck pull? Max towing rating (lb)<span class="req">*</span></label><input id="w-tow-rating" type="number" min="0" step="100" inputmode="numeric" placeholder="9200"><span class="hint">Find it: owner's manual towing table, or the maker's online towing guide. Not usually on a door sticker.</span></div>
               <div class="field"><label for="w-payload">How much can go in the truck? Payload capacity (lb)<span class="req">*</span></label><input id="w-payload" type="number" min="0" step="50" inputmode="numeric" placeholder="1500"><span class="hint">Find it: yellow and white sticker inside the driver's door, "occupants and cargo should never exceed".</span></div>
@@ -65,7 +65,7 @@
             </div>
           </div>
           <div class="panel" style="padding:24px">
-            <h3 style="font-size:15px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--text-3)">Your trailer</h3>
+            <h2 style="font-size:15px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--text-3)">Your trailer</h2>
             <div class="form-row">
               <div class="field"><label for="w-type">Trailer type</label>
                 <select id="w-type">
@@ -88,7 +88,7 @@
             <p style="font-size:12.5px;font-weight:700;color:var(--text-2);margin-bottom:0">Tongue or pin weight is estimated for you automatically, travel trailers run 10 to 15% of loaded weight, fifth wheels 20 to 25%. A certified scale gives the exact number.</p>
           </div>
           <div class="panel" style="padding:24px">
-            <h3 style="font-size:15px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--text-3)">Your cargo</h3>
+            <h2 style="font-size:15px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--text-3)">Your cargo</h2>
             <p style="font-size:13px;color:var(--text-2);margin-bottom:12px">Anything extra you pack goes in one of two places: the truck or the trailer. Add each once.</p>
             <div class="form-row">
               <div class="field"><label for="w-passengers">People and gear in the truck, driver included (lb)<span class="req">*</span></label><input id="w-passengers" type="number" min="0" step="10" inputmode="numeric" placeholder="600"><span class="hint">Count everyone who rides, including you, plus everything in the cab and bed. If you leave out the cooler and the dog, the answer will say SAFE when it should not.</span></div>

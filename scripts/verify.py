@@ -7,9 +7,14 @@ Run: python3 scripts/verify.py            # offline checks
 Two gotchas this encodes, both learned the hard way:
   * Inline script bodies build markup by string concatenation, so they contain
     href=" fragments and stray tags. Strip them BEFORE scanning.
-  * Internal links are site-root relative on purpose: assets/js/base.js injects
-    a <base href> computed from its own script URL, so a subpage writing
-    assets/css/style.css resolves to the site root, not to its own directory.
+  * Internal links are site-root relative on purpose, written with no leading
+    slash and no ../, so they stay depth-independent. That ONLY works because
+    every page carries <base href="/"> as the first element in <head>. It used to
+    be injected at runtime by assets/js/base.js, which meant the stylesheet path
+    also depended on JavaScript: the preload scanner fetched it before the base
+    existed (a 404 on every non-root page), and with JavaScript off all 35
+    subpages rendered unstyled. The tag is static now and base.js is deleted.
+    Do not move it below anything that carries a URL.
 """
 import json
 import re
@@ -460,6 +465,35 @@ if bad_beacon:
     fails.append("analytics beacon")
 else:
     print("  analytics beacon on all %d pages" % len(pages))
+
+print("\n=== <base href=\"/\"> is present, first in head, and not injected by script ===")
+# Two failures this prevents, both real and both silent. A relative stylesheet
+# URL is resolved by Chrome's preload scanner BEFORE any script runs, so while
+# base.js injected the tag, every non-root page fetched its CSS and scripts from
+# its own directory first: 404s on 35 pages, on every load, with the correct
+# request following. And because the base came from JavaScript, disabling
+# JavaScript left all 35 subpages completely unstyled. A static base tag fixes
+# both, so it has to stay first and stay static.
+bad_base = []
+for p in pages:
+    rel = p.relative_to(ROOT)
+    html = p.read_text(encoding="utf-8")
+    m = re.search(r"<head>(.*?)</head>", html, re.S | re.I)
+    if not m:
+        bad_base.append("%s: no <head>" % rel)
+        continue
+    inner = m.group(1).strip()
+    if not inner.startswith('<base href="/"'):
+        first = inner.split("\n")[0][:60]
+        bad_base.append("%s: head starts with %r" % (rel, first))
+    if "base.js" in html:
+        bad_base.append("%s: still loads assets/js/base.js" % rel)
+if bad_base:
+    for b in bad_base[:10]:
+        print("  " + b)
+    fails.append("static base tag")
+else:
+    print("  all %d pages, first in head, no base.js anywhere" % len(pages))
 
 if "--links" in sys.argv:
     print("\n=== external listing links (live HTTP) ===")

@@ -93,7 +93,10 @@ def main():
     page = (ROOT / "directory/index.html").read_text(encoding="utf-8")
     httpd, port = serve()
     time.sleep(0.6)
-    page = page.replace('src="../assets/js/base.js"', 'src="http://localhost:%d/assets/js/base.js"' % port)
+    # Every page now carries a static <base href="/">, so the probe's assets would
+    # resolve against the real origin. Point the base at the local server instead.
+    # (This used to rewrite a base.js script src, which is gone.)
+    page = re.sub(r'<base href="[^"]*"', '<base href="http://localhost:%d/"' % port, page, count=1)
     page = page.replace("</body>", PROBE + "</body>")
     # Has to live under the served root so its asset paths resolve. Removed below.
     probe_path = ROOT / "_layout-probe.html"

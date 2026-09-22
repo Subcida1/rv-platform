@@ -85,6 +85,28 @@ input,select,textarea{font-family:inherit}
 .util-l,.util-r{display:flex;gap:22px;align-items:center}
 .util a:hover{color:var(--text)}
 .util .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--c-emerald);margin-right:6px}
+/* Tap targets. Inline links in this strip and in the footer legal row are 20-21px
+   tall, under the 24px minimum WCAG 2.2 sets and well under the 44px Apple
+   recommends, and they are the same on every page of the site. Adding padding to
+   the links would move the layout, so the hit area is grown with a pseudo-element
+   instead: nothing shifts, and the pointer target becomes 34-37px. Found by the
+   2026-09-22 render audit, mobile viewport. */
+.util a,.foot-bottom .legal a{position:relative}
+.util a::after,.foot-bottom .legal a::after{content:"";position:absolute;inset:-8px -5px}
+/* The same for the standalone links that are only as tall as their text: the
+   state eyebrow's breadcrumb, a listing's business name, its Visit site link, and
+   the manuals breadcrumb. These are navigation, not words inside a sentence, so
+   the target-size rule applies to them. Prose links are deliberately left alone:
+   WCAG exempts an inline link in a sentence, and a bigger hit area there would
+   overlap the line beside it and cause the mis-taps it is meant to prevent.
+   Nearest other target measured 57px away on the listing cards and 216px between
+   manuals rows, so the expanded areas cannot collide. */
+.sec-eyebrow a,.listing-name a,.listing-go,.man-crumb a,.man-doc,.man-go,.scale-map-head a{position:relative}
+.sec-eyebrow a::after,.listing-name a::after,.listing-go::after,.man-crumb a::after,.man-go::after,.scale-map-head a::after{content:"";position:absolute;inset:-9px -6px}
+/* .man-doc rows get a taller hit area than the rest because they are the main
+   interaction on a manuals page and there is room: the next document link is
+   216px away, measured, so nothing can be mis-tapped. */
+.man-doc::after{content:"";position:absolute;inset:-12px -8px}
 nav.main{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
 nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:66px}
 .logo{display:flex;align-items:center;gap:11px}
