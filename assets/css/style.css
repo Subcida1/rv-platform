@@ -204,8 +204,9 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
 
 /* guides */
 .guide-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.guide-thumb{position:relative;height:130px;display:grid;place-items:center;font-size:46px}
-.guide-card .card-body{padding-top:16px}
+/* .guide-thumb is gone: it was a 130px-tall empty block holding a 46px emoji,
+   which is the "floating emoji in a void" the guides index already dropped. The
+   last user was the homepage, which now uses .guide-ic like everything else. */
 
 /* threads */
 .thread-list{display:flex;flex-direction:column;gap:12px}
@@ -1046,7 +1047,15 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 @media(max-width:640px){.guide-grid{grid-template-columns:1fr}}
 .guide-card{display:flex;flex-direction:column;gap:14px;padding:22px;height:100%;transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}
 .guide-card:hover{transform:translateY(-3px);border-color:var(--border-2);box-shadow:var(--shadow)}
-.guide-ic{width:52px;height:52px;border-radius:14px;background:var(--grad-soft);border:1px solid var(--border);display:grid;place-items:center;font-size:26px;flex-shrink:0}
+/* The emoji sits in a BUTTON, not a tile. A tile is a frame that promises a
+   picture, and there is no picture: that is why the empty square read as a broken
+   image. So it is shaped like every other control in this design system, a pill,
+   at 44px because that is a real touch target, with a defined edge and a border
+   that lights up in the brand blue when the card is hovered. Ty, 2026-09-21:
+   "Tiles make sense for pictures not emojis." No gradient fill here: icons stay
+   solid so the eye rests, the gradient is for CTAs. */
+.guide-ic{width:44px;height:44px;border-radius:50%;background:var(--grad-soft);border:1px solid var(--border-2);display:grid;place-items:center;font-size:21px;flex-shrink:0;transition:border-color .18s ease}
+.guide-card:hover .guide-ic{border-color:var(--b1)}
 .guide-body{display:flex;flex-direction:column;gap:8px;flex:1}
 .guide-title{font-size:16.5px;font-weight:800;letter-spacing:-.01em;line-height:1.3;color:var(--text)}
 .guide-meta{font-size:13px;color:var(--text-3);line-height:1.55;flex:1}
@@ -1080,14 +1089,10 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
    floor, so this changes nothing there. Measured 2026-09-21. */
 figure>svg[role="img"]{min-width:720px}
 figure:has(svg[role="img"]){overflow-x:auto;overflow-y:hidden}
-.guide-card{display:flex;flex-direction:column;gap:14px;padding:22px;height:100%;transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}
-.guide-card:hover{transform:translateY(-3px);border-color:var(--border-2);box-shadow:var(--shadow)}
-.guide-ic{width:52px;height:52px;border-radius:14px;background:var(--grad-soft);border:1px solid var(--border);display:grid;place-items:center;font-size:26px;flex-shrink:0}
-.guide-body{display:flex;flex-direction:column;gap:8px;flex:1}
-.guide-title{font-size:16.5px;font-weight:800;letter-spacing:-.01em;line-height:1.3;color:var(--text)}
-.guide-meta{font-size:13px;color:var(--text-3);line-height:1.55;flex:1}
-.guide-go{font-size:13.5px;font-weight:800;color:var(--c-sky);margin-top:4px}
-.guide-card:hover .guide-go{text-decoration:underline}
+/* The guide card component is defined once, above, in the "Guides index cards"
+   section. It used to be written out twice, here and there, and the two copies
+   had to be kept in step by hand. One definition, used by both the homepage and
+   the guides index. */
 
 /* ============================================================
    Directory listing cards (2026-09-19)
