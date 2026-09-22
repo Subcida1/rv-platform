@@ -466,6 +466,20 @@ if bad_beacon:
 else:
     print("  analytics beacon on all %d pages" % len(pages))
 
+print("\n=== the nav and footer are in the HTML, not built by JavaScript ===")
+# They were injected by site.js at runtime, so a visitor without JavaScript got a
+# page with no navigation, and so did any crawler that does not execute scripts.
+# scripts/build-shell.mjs now renders them at build time, running the real
+# site.js in a small fake DOM so the two cannot drift. This runs its --check.
+r = subprocess.run(["node", str(ROOT / "scripts/build-shell.mjs"), "--check"],
+                   capture_output=True, text=True, cwd=str(ROOT))
+if r.returncode != 0:
+    for line in (r.stdout or r.stderr).rstrip().split("\n")[:10]:
+        print("  " + line)
+    fails.append("static shell")
+else:
+    print("  " + (r.stdout.strip() or "shell matches the generator"))
+
 print("\n=== <base href=\"/\"> is present, first in head, and not injected by script ===")
 # Two failures this prevents, both real and both silent. A relative stylesheet
 # URL is resolved by Chrome's preload scanner BEFORE any script runs, so while

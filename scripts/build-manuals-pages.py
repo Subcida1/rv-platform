@@ -175,7 +175,7 @@ def head(title, desc, canonical, schemas):
 {ld}
 </head>
 <body class="g-theme-mist">
-  <div id="site-nav"></div>
+  <div id="site-nav"><!-- nav:start --><!-- nav:end --></div>
 """.format(canonical=canonical, title=esc(title), desc=esc(desc), site=SITE, ld=ld,
            theme=C.THEME_COLOR)
 
@@ -188,7 +188,7 @@ def foot(script):
     sync-head-brand.py puts it. Generating it here is what keeps a rebuild from
     quietly dropping it: verify.py compares these pages to this script's output.
     """
-    return """  <div id="site-footer"></div>
+    return """  <div id="site-footer"><!-- footer:start --><!-- footer:end --></div>
   <script src="assets/js/config.js"></script>
   <script src="assets/js/site.js"></script>
 %s%s</body>
@@ -813,8 +813,17 @@ def main():
         expect = dict(pages)
         expect[js / "hub.js"] = HUB_JS
         expect[js / "filter.js"] = FILTER_JS
+        # The page skeleton and the nav/footer have different owners: this script
+        # writes up to the markers, scripts/build-shell.mjs writes between them.
+        # Compare the parts this script owns, or every page reports as drifted the
+        # moment the shell is injected.
+        def skeleton(text):
+            return re.sub(r"(<!-- (?:nav|footer):start -->).*?(<!-- (?:nav|footer):end -->)",
+                          r"\1\2", text, flags=re.S)
+
         drift = [p.name for p, t in expect.items()
-                 if not p.exists() or p.read_text(encoding="utf-8") != t]
+                 if not p.exists()
+                 or skeleton(p.read_text(encoding="utf-8")) != skeleton(t)]
         print("manuals pages: %d generated, %d differ from disk" % (len(expect), len(drift)))
         if drift:
             print("  differs: " + ", ".join(drift))

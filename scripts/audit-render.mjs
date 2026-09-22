@@ -186,10 +186,11 @@ for (const rel of pages) {
 fs.writeFileSync(OUT, JSON.stringify(report, null, 1));
 
 let bad = 0, proseOnly = 0;
-const BENIGN = /^log: REQFAIL net::ERR_FAILED$/;   // Cloudflare's RUM POST. It only
-// fails when the page is served from 127.0.0.1; on originrv.com the same request
-// returns 204, checked 2026-09-22. Not site code, so it does not count as a fault,
-// which is why the summary below says so explicitly instead of just going quiet.
+// Cloudflare's RUM POST. It only fails when the page is served from 127.0.0.1; on
+// originrv.com the same request returns 204, checked 2026-09-22. Not site code, so
+// it does not count as a fault, which is why the summary says so explicitly
+// instead of just going quiet.
+const BENIGN = /^log: REQFAIL net::ERR_FAILED https:\/\/cloudflareinsights\.com\//;
 for (const r of report) {
   const p = r.probe || {};
   const probs = [];

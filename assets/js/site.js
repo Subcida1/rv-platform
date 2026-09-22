@@ -119,8 +119,12 @@
  /* ---------- shell injection ---------- */
  function injectShell() {
  var navSlot = $('#site-nav'), footSlot = $('#site-footer');
- if (navSlot) navSlot.innerHTML = navHTML();
- if (footSlot) footSlot.innerHTML = footerHTML();
+ /* The shell is rendered INTO the HTML at build time by scripts/build-shell.mjs,
+    which runs this same file, so the nav and footer are present for a visitor
+    without JavaScript and for a crawler that does not execute scripts. Inject
+    only when a page arrived without it (an old template, a scratch page). */
+ if (navSlot && !navSlot.children.length) navSlot.innerHTML = navHTML();
+ if (footSlot && !footSlot.children.length) footSlot.innerHTML = footerHTML();
  }
 
  /* ---------- mobile menu ---------- */
