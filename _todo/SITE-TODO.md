@@ -81,17 +81,38 @@ and the message arrives in the inbox.
 
 ---
 
-## 3. Git history still contains a personal address and account id
+## 3. Personal data removed from git history — DONE, one optional follow-up
 
-Commit `c899957` added a personal email to `workers/` and committed Wrangler's
-local cache, which carried the Cloudflare **account id** and the same address as
-the account name. Both are gone from the working tree and the cache is now
-gitignored, but they remain fetchable from earlier commits because the repository
-is public.
+A personal email and a Cloudflare account id were once committed here. Both were
+purged from the whole history on 2026-09-21 with `git-filter-repo`, force-pushed,
+and the resulting file tree was **byte-identical** to the one before it, so no
+site content changed. Zero commits on `main` now contain either string.
 
-Rewriting published history is disruptive and is a call for Ty to make. The
-practical exposure is scraping for spam rather than anything more serious, so
-doing nothing is a defensible choice.
+**Deliberately not naming the old commit hashes here**, because a hash in this
+file would be a working link straight back to the removed data.
+
+**What is genuinely still reachable.** GitHub's own documentation is explicit
+that rewriting history and force-pushing does not finish the job: the old commits
+stay fetchable *by their SHA* through GitHub's cached views, and the only way to
+expunge those is to ask GitHub Support. That is untested here and may well be
+declined, because Support's stated policy is to assist only where the risk cannot
+be mitigated by rotating the exposed value, and an email address is not a
+credential.
+
+**The exposure is bounded and low.** Zero forks and zero pull requests, so
+nothing else carries a copy. The address is only reachable by someone who already
+knows an old hash, which nothing public now discloses. Practical risk is spam
+rather than anything worse.
+
+**If it is ever revisited:** contact GitHub Support through their portal with the
+repository name and the fact that cached views are involved. Expect a judgement
+call rather than an automatic yes.
+
+**And the lesson, which matters more than the cleanup.** The leak happened because
+Wrangler's local cache directory was never gitignored. `workers/.wrangler/`,
+`.wrangler/` and `.dev.vars` are now covered. Any future tool with a local cache
+in this repository needs the same treatment on the day it is introduced, not
+after.
 
 ---
 
