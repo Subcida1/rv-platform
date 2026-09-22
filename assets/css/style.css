@@ -4,12 +4,18 @@
    ============================================================ */
 :root{
   --bg:#ffffff;
-  --bg-2:#f7f8fa;
-  --bg-3:#f1f3f6;
+  /* The tinted surfaces are blue ON PURPOSE, and measurably so. They were #f7f8fa and
+     #f1f3f6: cool by three points, which is no blue at all, so against a pure white
+     card they read as cream and the whole site looked slightly gold (Ty, 2026-09-22:
+     "the text input boxes in the calculator is yellow ... the loaded weight, 80% rule,
+     payload check etc is yellow"). A tint has to be visible to be a tint, so each of
+     these is now at least ten points bluer than it is red. verify.py checks that. */
+  --bg-2:#eef5fc;
+  --bg-3:#e9f1fa;
   --surface:#ffffff;
-  --surface-2:#fafbfc;
-  --border:#e7eaf0;
-  --border-2:#d8dde6;
+  --surface-2:#f3f9ff;
+  --border:#dce8f4;
+  --border-2:#c9dcee;
   /* The tinted-surface family. Amber and cream used to carry these, which read gold
      against the pure white cards (Ty, 2026-09-22: "its kind of goldish against my pure
      white elements"). The site is one blue now, and every one of these still says what

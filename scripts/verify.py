@@ -501,6 +501,33 @@ else:
     print("  every class has a rule, or is a js- hook (%d defined)" % len(defined))
 
 
+
+print("\n=== the tinted surfaces are blue tinted, visibly ===")
+# #f7f8fa is cool by three points, which reads as cream against a pure white card. A
+# tint has to be measurable to be a tint, so every neutral surface token must be at
+# least ten points bluer than it is red. This is the check I should have written
+# before hunting a "gold" colour with a detector that required red > blue.
+css_txt = (ROOT / "assets" / "css" / "style.css").read_text(encoding="utf-8")
+root_block = re.search(r":root\{(.*?)\n\}", css_txt, re.S)
+token_bad = []
+if not root_block:
+    token_bad.append("could not find the :root block")
+else:
+    for name in ("--bg-2", "--bg-3", "--surface-2", "--border", "--border-2"):
+        m = re.search(r"%s:\s*(#[0-9a-fA-F]{6})" % re.escape(name), root_block.group(1))
+        if not m:
+            token_bad.append("%s missing" % name); continue
+        hexv = m.group(1)
+        r, g, b = int(hexv[1:3], 16), int(hexv[3:5], 16), int(hexv[5:7], 16)
+        if b - r < 10:
+            token_bad.append("%s %s is only %d bluer than red (needs 10)" % (name, hexv, b - r))
+if token_bad:
+    for t in token_bad:
+        print("  " + t)
+    fails.append("tint tokens")
+else:
+    print("  all five neutral tokens are at least 10 points bluer than red")
+
 print("\n=== every inline script parses as JavaScript ===")
 # A regex that edits a page can quietly mangle a string inside an inline script, which
 # no other check here would see: the tag balance is fine and the page still loads, it
