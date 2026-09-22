@@ -233,7 +233,7 @@ def row_html(r):
        types, esc(r["brand"]), host, esc(r["key"]), esc(r["covers"]), "".join(bits))
 
 
-def hub(rows):
+def hub(rows, oem_count):
     n_brands = len({r["brand"] for r in rows})
     desc = meta_desc("RV owner's manuals, service manuals, parts lists and wiring diagrams "
                      "from the makers themselves. %d documents across %d makers, linked at "
@@ -305,6 +305,20 @@ def hub(rows):
 
   <div class="sec" style="padding:0 0 60px">
     <div class="wrap">
+      <h2 class="man-h2">By brand</h2>
+      <a class="card" style="display:block;padding:26px;max-width:860px"
+         href="manuals/brands.html">
+        <div class="guide-title">RV owner's manuals, brand by brand</div>
+        <div class="guide-meta" style="margin-top:8px">%d manufacturers, from 1973 to 2027.
+        Where each one publishes its own manual, how far back it goes, and whether it is one
+        document covering every year or one per model year.</div>
+        <div class="guide-go" style="margin-top:12px">Open &#8594;</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="sec" style="padding:0 0 60px">
+    <div class="wrap">
       <div class="card man-about">
         <div class="man-about-h">What each row tells you</div>
         <p>Every row links the manufacturer's own copy of the document. It also states what
@@ -317,7 +331,7 @@ def hub(rows):
       </div>
     </div>
   </div>
-""" % (len(rows), n_brands, "\n".join(tiles))
+""" % (len(rows), n_brands, "\n".join(tiles), oem_count)
 
     return (head(HUB_TITLE, desc, SITE + "/manuals/",
                  [collection, breadcrumbs([("OriginRV", SITE + "/"),
@@ -378,6 +392,112 @@ def system_page(slug, title, desc, rows):
        "\n".join(row_html(r) for r in rows), related)
 
     return (head(title, desc, "%s/manuals/%s.html" % (SITE, slug), [collection, crumb])
+            + body + foot("assets/js/manuals/filter.js"))
+
+
+BRANDS_TITLE = "RV Owner's Manuals by Brand"
+BRANDS_DESC = ("RV owner's manuals by brand: where 44 manufacturers publish their own "
+               "manual, how far back each archive reaches, and whether it is one document "
+               "over all years")
+
+# Plain words for how a maker organises its manuals, and the three sections they sort
+# into. This is the answer to "how do you avoid listing a document twenty times" made
+# visible on the page, rather than a rule buried in a build script.
+SHAPE = {
+    "per-year-and-model": "a document per model per year",
+    "per-year-brand-wide": "one document per year, whole line",
+    "revision-dated": "per model line, revised by date",
+    "serial-or-build-range": "keyed to your unit's build range",
+    "generic-multi-year": "one manual over all years",
+    "none": "nothing published online",
+}
+SECTIONS = [
+    ("Dated archives", "A manual exists for a specific year, so pick your year first.",
+     ["per-year-and-model", "per-year-brand-wide", "revision-dated", "serial-or-build-range"]),
+    ("One manual over all years", "One document covers the whole line, whatever year it is.",
+     ["generic-multi-year"]),
+    ("No manual published online", "We looked and there is nothing to link to.", ["none"]),
+]
+
+
+def brand_row(r):
+    shape = SHAPE.get(r["structure"], r["structure"])
+    years = "" if r["years"] in ("none", "not stated") else r["years"]
+    meta = ['<span>%s</span>' % esc(r["note"])]
+    if years:
+        meta.insert(0, '<span class="man-brand">%s</span>' % esc(years))
+    if r["gate"] == "vin-or-login":
+        meta.append('<span class="badge badge-orange">VIN or account needed</span>')
+    elif r["gate"] == "free-account":
+        meta.append('<span class="badge badge-orange">free account needed</span>')
+    if r["url"]:
+        foot = ('<a class="man-go" href="%s" target="_blank" rel="noopener">Open the %s '
+                'archive &#8594;</a>' % (esc(r["url"]), esc(r["brand"])))
+    else:
+        foot = '<span class="man-note">no manual published online</span>'
+    needle = " ".join([r["brand"], r["years"], r["note"], shape]).lower()
+    return """      <li class="man-row" data-search="%s">
+        <div class="man-row-top">
+          <span class="man-doc">%s</span>
+          <span class="man-types"><span class="badge badge-tint">%s</span></span>
+        </div>
+        <div class="man-row-meta">%s</div>
+        <div class="man-row-foot">%s</div>
+      </li>
+""" % (esc(needle), esc(r["brand"]), esc(shape), "".join(meta), foot)
+
+
+def brands_page(rows):
+    desc = meta_desc(BRANDS_DESC)
+    dated = [r for r in rows if r["structure"] in SECTIONS[0][2]]
+    generic = [r for r in rows if r["structure"] in SECTIONS[1][2]]
+    none = [r for r in rows if r["structure"] in SECTIONS[2][2]]
+
+    blocks = []
+    for (heading, blurb, keys), group in zip(SECTIONS, [dated, generic, none]):
+        rows_html = "\n".join(brand_row(r) for r in sorted(
+            group, key=lambda r: r["brand"].lower()))
+        blocks.append("""
+      <h2 class="man-h2">%s<span class="man-count">%d brands</span></h2>
+      <p class="man-status">%s</p>
+      <ul class="man-list">
+%s
+      </ul>""" % (esc(heading), len(group), esc(blurb), rows_html))
+
+    collection = {
+        "@context": "https://schema.org", "@type": "CollectionPage",
+        "name": BRANDS_TITLE, "url": SITE + "/manuals/brands.html", "description": desc,
+        "isPartOf": site_schema(),
+        "mainEntity": {
+            "@type": "ItemList", "numberOfItems": len(rows),
+            "itemListElement": [
+                {"@type": "ListItem", "position": i, "name": r["brand"], "url": r["url"]}
+                for i, r in enumerate(sorted(rows, key=lambda r: r["brand"].lower()), 1)
+                if r["url"]]}}
+    crumb = breadcrumbs([("OriginRV", SITE + "/"), ("RV Manuals", SITE + "/manuals/"),
+                         (BRANDS_TITLE, SITE + "/manuals/brands.html")])
+
+    body = """
+  <div class="wrap" style="padding:54px 0 14px">
+    <div class="man-crumb"><a href="manuals/index.html">RV Manuals</a></div>
+    <h1 class="dir-title man-title">RV MANUALS BY BRAND</h1>
+    <p class="man-lede">Where each RV manufacturer publishes its own owner's manual, how
+    far back the archive reaches, and how the documents are organised. %d brands.</p>
+  </div>
+
+  <div class="sec" style="padding:10px 0 60px">
+    <div class="wrap">
+      <div class="man-search">
+        <input id="man-q" type="search" autocomplete="off" aria-label="Search brands"
+               placeholder="Search a brand: Winnebago, Jayco, Airstream, Casita">
+      </div>
+      <div id="man-status" class="man-status">%d brands shown</div>
+%s
+    </div>
+  </div>
+""" % (len(rows), len(rows), "\n".join(blocks))
+
+    return (head(BRANDS_TITLE, desc, "%s/manuals/brands.html" % SITE, [collection, crumb])
             + body + foot("assets/js/manuals/filter.js"))
 
 
@@ -500,6 +620,7 @@ def main():
         print("FAIL  %s: %s" % (MANIFEST.relative_to(ROOT), error))
         raise SystemExit(1)
     components, _ = R.clean_dashes(doc.get("components", []))
+    brands, _ = R.clean_dashes(doc.get("brands", []))
 
     by_system = {}
     for r in components:
@@ -507,11 +628,12 @@ def main():
     for slug in by_system:
         by_system[slug].sort(key=lambda r: (r["brand"].lower(), r["title"].lower()))
 
-    pages = {OUTDIR / "index.html": hub(components)}
+    pages = {OUTDIR / "index.html": hub(components, len(brands))}
     for slug, _ in R.SYSTEMS:
         title, desc = TITLE[slug]
         pages[OUTDIR / ("%s.html" % slug)] = system_page(
             slug, title, meta_desc(desc), by_system.get(slug, []))
+    pages[OUTDIR / "brands.html"] = brands_page(brands)
 
     # Rule #11 covers everything we ship, generated pages included.
     for path, text in pages.items():
@@ -540,13 +662,16 @@ def main():
     print("MANUALS PAGES")
     print("=" * 84)
     print("  %-30s %6s %9s %9s" % ("page", "rows", "KB", "desc len"))
-    for path in [OUTDIR / "index.html"] + [OUTDIR / ("%s.html" % s) for s, _ in R.SYSTEMS]:
+    order = ([OUTDIR / "index.html"] + [OUTDIR / ("%s.html" % s) for s, _ in R.SYSTEMS]
+             + [OUTDIR / "brands.html"])
+    counts = {OUTDIR / "index.html": len(components), OUTDIR / "brands.html": len(brands)}
+    for path in order:
         text = pages[path]
         m = re.search(r'<meta name="description" content="(.*?)">', text)
-        n = len(components) if path.stem == "index" else len(by_system.get(path.stem, []))
+        n = counts.get(path, len(by_system.get(path.stem, [])))
         print("  %-30s %6d %9.1f %9d"
               % (path.name, n, len(text.encode("utf-8")) / 1024.0, len(m.group(1))))
-    print("  %-30s %6d %9.1f" % ("TOTAL", len(components),
+    print("  %-30s %6d %9.1f" % ("TOTAL", len(components) + len(brands),
                                  sum(len(t.encode("utf-8")) for t in pages.values()) / 1024.0))
 
 

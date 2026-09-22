@@ -63,6 +63,7 @@
  '<div class="drop"><a href="' + R(rt.manualsPower) + '">Electrical<span class="sm">Converters, inverters, solar, generators</span></a>' +
  '<a href="' + R(rt.manualsTowing) + '">Towing and running gear<span class="sm">Hitches, axles, brakes, tires</span></a>' +
  '<a href="' + R(rt.manualsKitchen) + '">Kitchen and appliances<span class="sm">Fridges, ranges, microwaves</span></a>' +
+ '<a href="' + R(rt.manualsBrands) + '">Owner manuals by brand<span class="sm">44 makers, 1973 to 2027</span></a>' +
  '<a href="' + R(rt.manuals) + '">All manuals<span class="sm">Every system, linked at the maker</span></a></div></div>' +
  '</div>' +
  '<div class="nav-actions"><a class="btn btn-outline btn-sm" href="' + R(rt.signin) + '">Sign in</a><a class="btn btn-primary btn-sm" href="' + R(rt.calculator) + '">Free Tool</a>' +
@@ -81,6 +82,7 @@
  '<a href="' + R(rt.manuals) + '">Manuals</a>' +
  '<a href="' + R(rt.manualsPower) + '">. Electrical manuals</a>' +
  '<a href="' + R(rt.manualsTowing) + '">. Towing manuals</a>' +
+ '<a href="' + R(rt.manualsBrands) + '">. Owner manuals by brand</a>' +
  '<a href="' + R(rt.about) + '">About</a>' +
       '<a href="' + R(rt.signin) + '">Sign in</a>' +
  '<a href="' + R(rt.contact) + '">Contact</a>' +
@@ -96,7 +98,7 @@
  '<div class="foot-col"><h5>Tools</h5><a href="' + R(rt.calculator) + '">Weight calculator</a><a href="' + R(rt.calculator) + '#why">Why it matters</a><a href="' + R(rt.calculator) + '#embed">Embed on your site</a></div>' +
  '<div class="foot-col"><h5>Guides</h5><a href="' + R(rt.guideWinterize) + '">Winterize plumbing</a><a href="' + R(rt.guideBattery) + '">Battery cold storage</a><a href="' + R(rt.guideTires) + '">Tires through winter</a><a href="' + R(rt.guideRoof) + '">Roof snow load</a></div>' +
  '<div class="foot-col"><h5>Directory</h5><a href="' + R(rt.directory) + '">Find a service</a><a href="' + R(rt.directory) + '#claim">Claim your business</a><a href="' + R(rt.directory) + '#seed">What a listing carries</a></div>' +
- '<div class="foot-col"><h5>Manuals</h5><a href="' + R(rt.manuals) + '">All RV manuals</a><a href="' + R(rt.manualsPower) + '">Electrical manuals</a><a href="' + R(rt.manualsTowing) + '">Towing manuals</a><a href="' + R(rt.manualsKitchen) + '">Appliance manuals</a></div>' +
+ '<div class="foot-col"><h5>Manuals</h5><a href="' + R(rt.manuals) + '">All RV manuals</a><a href="' + R(rt.manualsBrands) + '">Owner manuals by brand</a><a href="' + R(rt.manualsPower) + '">Electrical manuals</a><a href="' + R(rt.manualsTowing) + '">Towing manuals</a><a href="' + R(rt.manualsKitchen) + '">Appliance manuals</a></div>' +
  '<div class="foot-col"><h5>Company</h5><a href="' + R(rt.about) + '">About</a><a href="' + R(rt.contact) + '">Contact</a><a href="' + R(rt.tools) + '">All tools</a></div>' +
  '</div></div>' +
  '<div class="wrap foot-bottom"><span>© 2026 ' + esc(CFG.brand.legal) + '. Built for the open road.</span>' +
