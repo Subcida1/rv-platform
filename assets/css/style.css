@@ -31,8 +31,10 @@
   --grad-soft:linear-gradient(135deg,rgba(249,115,22,.12),rgba(244,63,94,.12) 50%,rgba(139,92,246,.12));
 
   /* category accents */
-  --c-violet:#8b5cf6; --c-sky:#0ea5e9; --c-teal:#14b8a6;
-  --c-orange:#f97316; --c-emerald:#10b981; --c-indigo:#6366f1;
+  /* --c-violet, --c-teal, --c-orange and --c-emerald were referenced by nothing
+     once the green and amber families became blue. Only these three are used. */
+  --c-sky:#0ea5e9;   /* links and CTAs */
+  --c-indigo:#6366f1;
   --c-rose:#f43f5e; --c-amber:#f59e0b;
 
   --radius:16px; --radius-sm:10px; --radius-lg:24px;
@@ -87,7 +89,7 @@ input,select,textarea{font-family:inherit}
 .badge-grad{background:var(--grad);color:#fff}
 .badge-soft{background:var(--grad-soft);color:var(--b1)}
 .badge-tint{background:var(--bg-3);color:var(--text-2)}
-.badge-green{background:#e7f8ef;color:#0f7a45}
+.badge-green{background:var(--tint-bg);color:var(--tint-ink)}
 .badge-note{background:var(--tint-bg);color:var(--tint-ink)}
 
 /* ================= NAV ================= */
@@ -95,7 +97,7 @@ input,select,textarea{font-family:inherit}
 .util .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:7px;padding-bottom:7px}
 .util-l,.util-r{display:flex;gap:22px;align-items:center}
 .util a:hover{color:var(--text)}
-.util .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--c-emerald);margin-right:6px}
+.util .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--b1);margin-right:6px}
 /* Tap targets. Inline links in this strip and in the footer legal row are 20-21px
    tall, under the 24px minimum WCAG 2.2 sets and well under the 44px Apple
    recommends, and they are the same on every page of the site. Adding padding to
@@ -599,7 +601,7 @@ footer a:hover{color:#fff}
 .rate-line{display:flex;justify-content:space-between;font-size:14.5px;color:var(--text-2);padding:9px 0}
 .rate-total{border-top:1px solid var(--border);margin-top:6px;padding-top:14px;display:flex;justify-content:space-between;align-items:center}
 .rate-total .n{font-size:22px;font-weight:800;background:var(--grad-2);-webkit-background-clip:text;background-clip:text;color:transparent}
-.fit-ok{display:flex;align-items:center;gap:8px;font-size:13.5px;color:var(--c-emerald);font-weight:700}
+.fit-ok{display:flex;align-items:center;gap:8px;font-size:13.5px;color:var(--b1);font-weight:700}
 
 /* ---------- trip tools ---------- */
 .tool-sec{padding:64px 0;border-top:1px solid var(--border)}
@@ -632,7 +634,7 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 .phone::before{content:"";position:absolute;top:9px;left:50%;transform:translateX(-50%);width:82px;height:5px;border-radius:5px;background:var(--border-2)}
 .phone-screen{border-radius:24px;height:100%;overflow:hidden;background:linear-gradient(170deg,#fdf2f8,#eff6ff 55%,#fff7ed);padding:28px 16px;display:flex;flex-direction:column;gap:11px}
 .phone-top{display:flex;align-items:center;justify-content:space-between;font-size:11px;color:var(--text-2);font-weight:700}
-.phone-top .dot{width:8px;height:8px;border-radius:50%;background:var(--c-emerald);box-shadow:0 0 0 4px rgba(16,185,129,.15)}
+.phone-top .dot{width:8px;height:8px;border-radius:50%;background:var(--b1);box-shadow:0 0 0 4px var(--glow)}
 .phone-route{border-radius:14px;background:#fff;border:1px solid var(--border);padding:13px;box-shadow:var(--shadow-sm)}
 .phone-route .l{font-size:10px;color:var(--text-3);text-transform:uppercase;letter-spacing:.08em;font-weight:700}
 .phone-route .b{font-size:15px;font-weight:800;margin-top:2px}
@@ -688,10 +690,10 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 .w-total small{display:block;color:var(--text-3);font-size:12.5px;margin-top:4px}
 .v-row{display:flex;align-items:center;gap:12px;border:1px solid var(--border);border-radius:var(--radius-sm);padding:13px 14px;margin-bottom:9px;background:var(--surface)}
 .v-row .v-dot{width:10px;height:10px;border-radius:50%;flex:none}
-.v-row.ok .v-dot{background:var(--c-emerald)}
+.v-row.ok .v-dot{background:var(--b1)}
 .v-row.warn .v-dot{background:var(--b1)}
 .v-row.bad .v-dot{background:var(--c-rose)}
-.v-row.ok{border-color:#cfe9d8;background:#f3faf5}
+.v-row.ok{border-color:var(--border);background:var(--surface)}
 .v-row.warn{border-color:var(--tint-edge);background:var(--tint-bg)}
 .v-row.bad{border-color:#f6bcc2;background:#fdf0f2}
 .v-txt{flex:1;display:flex;flex-direction:column}
@@ -705,7 +707,7 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 
 /* ---------- review dates (doctrine: show freshness) ---------- */
 .reviewed{font-size:12.5px;color:var(--text-3);margin-top:14px;border-bottom:1px solid var(--border);padding-bottom:10px}
-.reviewed::before{content:"\2713 ";color:var(--c-emerald);font-weight:800}
+.reviewed::before{content:"\2713 ";color:var(--b1);font-weight:800}
 
 /* ---------- hero CTA + everything deck (2026-09-16) ---------- */
 .hero-cta{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:20px}
@@ -725,13 +727,13 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 .deck-card .badge{font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:.04em}
 .deck-panel{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)}
 .deck-panel-head{display:flex;align-items:center;gap:8px;font-size:12.5px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--text-2)}
-.deck-panel-head .dot{width:8px;height:8px;border-radius:50%;background:var(--c-emerald);box-shadow:0 0 0 4px rgba(16,185,129,.15)}
+.deck-panel-head .dot{width:8px;height:8px;border-radius:50%;background:var(--b1);box-shadow:0 0 0 4px var(--glow)}
 .deck-sim{background:var(--bg-3);border:1px solid var(--border);border-radius:var(--radius-sm);padding:16px;margin-top:16px}
 .deck-sim-row{display:flex;justify-content:space-between;gap:14px;padding:9px 12px;border-radius:9px;font-size:13.5px;margin-bottom:8px}
 .deck-sim-row span{color:var(--text-2)}
 .deck-sim-row b{font-weight:800;text-align:right;white-space:nowrap}
-.deck-sim-row.ok{background:#f3faf5;border:1px solid #cfe9d8;color:#0f7a45}
-.deck-sim-row.ok b{color:#0f7a45}
+.deck-sim-row.ok{background:var(--surface);border:1px solid var(--border);color:var(--text-2)}
+.deck-sim-row.ok b{color:var(--text)}
 .deck-sim-row.warn{background:var(--tint-bg);border:1px solid var(--tint-edge);color:var(--tint-ink)}
 .deck-sim-row.warn b{color:var(--tint-ink)}
 .deck-sim-note{font-size:12.5px;color:var(--text-3);margin-top:10px}
@@ -846,12 +848,12 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 .tool-viz .viz-row{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:13px 16px;border-radius:11px;font-size:15.5px;margin-bottom:10px}
 .tool-viz .viz-row span{color:var(--text-2);font-weight:600}
 .tool-viz .viz-row b{font-weight:800;text-align:right;white-space:nowrap}
-.tool-viz .viz-row.ok{background:#f3faf5;border:1px solid #cfe9d8}
-.tool-viz .viz-row.ok b{color:#0f7a45}
+.tool-viz .viz-row.ok{background:var(--surface);border:1px solid var(--border)}
+.tool-viz .viz-row.ok b{color:var(--text)}
 .tool-viz .viz-row.warn{background:var(--tint-bg);border:1px solid var(--tint-edge)}
 .tool-viz .viz-row.warn b{color:var(--tint-ink)}
-.verified{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:#0f7a45;background:#eef8f2;border:1px solid #cfe9d8;border-radius:999px;padding:6px 13px}
-.verified::before{content:"\2713";display:grid;place-items:center;width:19px;height:19px;border-radius:50%;background:#0f7a45;color:#fff;font-size:11px;font-weight:900}
+.verified{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:var(--tint-ink);background:var(--tint-bg);border:1px solid var(--tint-edge);border-radius:999px;padding:6px 13px}
+.verified::before{content:"\2713";display:grid;place-items:center;width:19px;height:19px;border-radius:50%;background:var(--b1);color:#fff;font-size:11px;font-weight:900}
 /* quieter primary hover (the old pink glow bubble) */
 .btn-primary:hover{box-shadow:0 6px 14px -8px rgba(244,63,94,.35);transform:none}
 .tool-strip{display:flex;flex-wrap:wrap;gap:9px;margin-top:16px}
@@ -882,7 +884,7 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
    ============================================================ */
 .fld{display:flex;flex-direction:column;gap:7px}
 .fld label{font-size:12.5px;font-weight:700;color:var(--text-2);letter-spacing:.01em}
-.fld .req{color:var(--c-rose);margin-left:2px}
+.fld .req{color:var(--b1);margin-left:2px}
 .fld input,.fld select,.fld textarea{width:100%;border:1px solid var(--border-2);border-radius:11px;padding:13px 15px;font-size:15px;color:var(--text);background:var(--bg-2);outline:none;transition:border-color .15s,box-shadow .15s,background .15s;height:48px;box-sizing:border-box;box-shadow:0 1px 2px rgba(16,24,40,.04) inset}
 .fld input::placeholder{color:var(--text-3);opacity:1}
 .fld textarea{min-height:110px;resize:vertical}
@@ -964,7 +966,7 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 
 .hero h1 .grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;padding:0 1px}
 .logo-name span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;padding:0 1px}
-.deck-panel-head .dot{background:var(--c-emerald);box-shadow:0 0 0 4px rgba(16,185,129,.15)}
+.deck-panel-head .dot{background:var(--b1);box-shadow:0 0 0 4px var(--glow)}
 
 
 /* ===== FINAL selective-gradient enforcement (2026-09-17) =====
@@ -1023,7 +1025,7 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 .w-overall span{font-size:12.5px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;opacity:.8}
 .w-overall b{font-size:30px;font-weight:800;letter-spacing:-.02em}
 .w-overall small{font-size:13.5px;line-height:1.5;opacity:.9}
-.w-overall.ok{background:#ecfbf1;border-color:#bfe8cd;color:#0f7a45}
+.w-overall.ok{background:var(--surface);border-color:var(--border);color:var(--text)}
 .w-overall.warn{background:var(--tint-bg);border-color:var(--tint-edge);color:var(--tint-ink)}
 .w-overall.bad{background:#fdeeee;border-color:#f2b8be;color:#b42338}
 .field input, .field select{min-height:50px;font-size:16px}
