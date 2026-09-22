@@ -15,5 +15,23 @@
       "name": "EMAIL",
       "destination_address": "contact@originrv.com"
     }
+  ],
+  // Two limits, both needed. The per-IP one is the real cap on abuse; the
+  // "global" one (a constant key) is a safety net that caps total volume per
+  // Cloudflare location, so a distributed script cannot flood the inbox even
+  // though it can dodge a per-IP counter. Counters are per-location and
+  // eventually consistent, which is fine here: this is a spam brake, not
+  // accounting. A real visitor submits once.
+  "ratelimits": [
+    {
+      "name": "CLAIM_PER_IP",
+      "namespace_id": "1001",
+      "simple": { "limit": 5, "period": 60 }
+    },
+    {
+      "name": "CLAIM_GLOBAL",
+      "namespace_id": "1002",
+      "simple": { "limit": 30, "period": 60 }
+    }
   ]
 }

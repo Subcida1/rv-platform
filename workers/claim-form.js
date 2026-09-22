@@ -68,6 +68,19 @@ export default {
     // Honeypot: a person never fills this, so accept silently and send nothing.
     if (data.botcheck) return json({ success: true }, 200, allowed);
 
+    // Two rate limits before any work is done. The per-IP one caps a script;
+    // the constant-key one caps total volume per Cloudflare location, which is
+    // the backstop if an attacker spreads across addresses. Limits live in
+    // wrangler.jsonc.
+    const ip = request.headers.get('CF-Connecting-IP') || 'unknown';
+    const [perIp, global] = await Promise.all([
+      env.CLAIM_PER_IP.limit({ key: ip }),
+      env.CLAIM_GLOBAL.limit({ key: 'claim-form' }),
+    ]);
+    if (!perIp.success || !global.success) {
+      return json({ success: false, error: 'Too many requests' }, 429, allowed);
+    }
+
     const clean = (v) => String(v == null ? '' : v).replace(/\s+/g, ' ').trim().slice(0, MAX_FIELD);
     const business = clean(data.Business);
     const city = clean(data.City);
