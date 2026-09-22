@@ -250,6 +250,16 @@ const PAGES = [
   ['directory/index.html', ['assets/js/config.js', 'assets/js/site.js']],
   ['directory/oregon.html', ['assets/js/config.js', 'assets/js/site.js', 'assets/js/coords-or.js', 'assets/js/listings/listings-or.js']],
 ];
+// The manuals pages are generated from a fixed eight-system taxonomy, so glob
+// them rather than listing nine lines that will go stale. This is exactly the
+// gap that let a page ship with no navigation at all: the list was hand-kept,
+// so a new directory was simply never executed.
+for (const f of fs.readdirSync(path.join(ROOT, 'manuals'))) {
+  if (!f.endsWith('.html')) continue;
+  const extra = f === 'index.html' ? 'assets/js/manuals/hub.js'
+                                   : 'assets/js/manuals/filter.js';
+  PAGES.push(['manuals/' + f, ['assets/js/config.js', 'assets/js/site.js', extra]]);
+}
 for (const [page, scripts] of PAGES) {
   const ctx = context();
   let threw = null;

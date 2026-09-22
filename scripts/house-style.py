@@ -157,13 +157,18 @@ def check_page(path):
             ctx = re.sub(r"\s+", " ", prose[max(0, m.start() - 40):m.end() + 40]).strip()
             findings.append(("contrast", why, ctx))
 
-    # 6  coverage: a named maker with no source entry
-    labels = " | ".join(source_labels(html))
-    body_txt = text_of(body_only(html))
-    for brand in BRANDS:
-        n = len(re.findall(r"\b" + re.escape(brand) + r"\b", body_txt))
-        if n and brand.lower() not in labels.lower():
-            findings.append(("coverage", "named in body, absent from Sources (%d mentions)" % n, brand))
+    # 6  coverage: a named maker with no source entry.
+    # The manuals pages are exempt, and not because the rule is inconvenient. There a
+    # maker is named only as a ROW, and that row links the maker's own library, so the
+    # page IS the source list. Demanding a separate Sources block on it would ask for
+    # the same thing twice.
+    if not rel.startswith("manuals/"):
+        labels = " | ".join(source_labels(html))
+        body_txt = text_of(body_only(html))
+        for brand in BRANDS:
+            n = len(re.findall(r"\b" + re.escape(brand) + r"\b", body_txt))
+            if n and brand.lower() not in labels.lower():
+                findings.append(("coverage", "named in body, absent from Sources (%d mentions)" % n, brand))
 
     return rel, findings
 

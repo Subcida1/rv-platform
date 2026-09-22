@@ -63,19 +63,23 @@
       if (s > 0) hits.push({ s: s, item: INDEX[i] });
     }
     hits.sort(function (a, b) { return b.s - a.s || a.item.t.length - b.item.t.length; });
-    // at most two businesses, so a business never floods the editorial results
-    var out = [], biz = 0;
+    // A cap per directory-ish category, so neither a business nor a manual ever
+    // floods the editorial results. A symptom query should reach a guide; a model
+    // number should reach the manual.
+    var CAPS = { Business: 2, Manual: 2 }, used = {};
+    var out = [];
     for (var j = 0; j < hits.length && out.length < (limit || MAX); j++) {
-      if (hits[j].item.c === 'Business') {
-        if (biz >= 2) continue;
-        biz++;
+      var cat = hits[j].item.c;
+      if (CAPS[cat]) {
+        if ((used[cat] || 0) >= CAPS[cat]) continue;
+        used[cat] = (used[cat] || 0) + 1;
       }
       out.push(hits[j].item);
     }
     return out;
   }
 
-  var LABEL = { Tool: 'Tools', Guide: 'Guides', Directory: 'Directories', Page: 'Pages', Business: 'Businesses' };
+  var LABEL = { Tool: 'Tools', Guide: 'Guides', Directory: 'Directories', Manual: 'Manuals', Page: 'Pages', Business: 'Businesses' };
 
   function highlight(text, q) {
     if (!q) return esc(text);

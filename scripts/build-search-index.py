@@ -113,13 +113,27 @@ def pages():
             continue
         t, d = title_desc(p)
         out.append({"t": label, "u": name, "c": "Page", "k": keys, "d": d[:150]})
+    # The manuals section gets its own category so the dropdown can cap it and it
+    # can never crowd out a guide for a symptom query. Only the nine section pages
+    # are indexed here: the 119 documents are searched on the manuals hub itself,
+    # because shipping the whole corpus site-wide is 53 KB for a visitor who never
+    # opens a manual.
+    for p in sorted((ROOT / "manuals").glob("*.html")):
+        t, d = title_desc(p)
+        out.append({
+            "t": ("RV Manuals" if p.stem == "index" else t),
+            "u": "manuals/%s" % p.name, "c": "Manual",
+            "k": ("rv manual manuals owners owner service repair parts wiring diagram "
+                  "pdf " + p.stem.replace("-", " ")).lower(),
+            "d": d[:150],
+        })
     return out
 
 
 def main():
     items = pages() + tools() + directories() + guides() + businesses()
     # stable order within a category, businesses after editorial content
-    order = {"Tool": 0, "Guide": 1, "Directory": 2, "Page": 3, "Business": 4}
+    order = {"Tool": 0, "Guide": 1, "Directory": 2, "Manual": 3, "Page": 4, "Business": 5}
     items.sort(key=lambda x: (order.get(x["c"], 9), x["t"].lower()))
     body = json.dumps(items, separators=(",", ":"), ensure_ascii=False)
     OUT.write_text(
