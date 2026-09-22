@@ -82,7 +82,7 @@ function resize(){
 }
 
 /* ============================================================
-   Map — drawn once per resize. One stroke call per layer.
+   Map - drawn once per resize. One stroke call per layer.
    ============================================================ */
 function ink(){ return getComputedStyle(root).getPropertyValue('--ink').trim() || '#0f172a'; }
 
@@ -122,7 +122,7 @@ function fadePx(varName){
 // how much to ERASE at each stop == 1 minus the visible alpha we want.
 // Measured hero layout: kicker 13%, h1 22%, sub 34%, search 47%, CTA button
 // 70-79%, stats 84%. The ramp completes at ~78% -- level with the CTA button.
-const MAP_ERASE   = [[0,.80],[.30,.84],[.55,.90],[.70,.96],[.78,1],[1,1]];
+const MAP_ERASE   = [[0,.80],[.30,.83],[.55,.87],[.72,.92],[.88,.97],[1,1]];
 const ROUTE_ERASE = MAP_ERASE;
 
 function applyFade(ctx, endPx, stops){
@@ -138,7 +138,7 @@ function applyFade(ctx, endPx, stops){
 
 let seaPat = null;
 
-/* Cartographic water hatch — a repeating x, drawn once into a tile and
+/* Cartographic water hatch - a repeating x, drawn once into a tile and
    reused as a canvas pattern. Tile is in artboard px, so it stays the same
    visual size at any zoom or DPR. */
 function makeSeaPattern(colour){
@@ -181,7 +181,7 @@ function drawMap(){
     addRings(M.land);
 
     mapCtx.fillStyle = sea;
-    mapCtx.globalAlpha = .075;
+    mapCtx.globalAlpha = .045;
     mapCtx.fill('evenodd');
 
     if(state.show.seaX){
@@ -217,7 +217,7 @@ function drawMap(){
 }
 
 /* ============================================================
-   Road index — the polylines, plus a flat segment list for
+   Road index - the polylines, plus a flat segment list for
    nearest-point snapping. Each segment records which line it came
    from and where in it, so the trace can walk the REAL road
    geometry between two snapped points instead of cutting corners.
@@ -295,7 +295,7 @@ function nearestSeg(px,py,maxR){
 }
 
 /* ============================================================
-   Trace — a GPS route being driven.
+   Trace - a GPS route being driven.
    A pointer sample extends the road-accurate path IMMEDIATELY, but the
    drawn head only travels along it at `state.speed` px/s. So the route
    follows the cursor in real time, yet visibly draws itself across the
