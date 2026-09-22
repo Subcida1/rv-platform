@@ -198,3 +198,74 @@ to a path on the domain (for example `/api/claim`) so the workers.dev URL stops
 appearing in the page source.
 
 ---
+
+## 8. Manuals directory (2026-09-21, Cloud session)
+
+**Slice 1 is in: the data model and the verification layer. There is no page yet.**
+
+The plan lives in the agent's memory at `reference/projects/originrv-manuals.md`; the raw
+research is in `/home/user/Documents/research/manuals/`. Read those before touching this.
+
+### What exists
+
+| File | Job |
+|---|---|
+| `_data/manuals.json` | the source of truth. 119 component rows across 101 brands, plus 44 RV brand rows. Not published (underscore prefix, so Jekyll skips it). |
+| `scripts/manuals_rules.py` | the schema and the hard rules, in one place so the two scripts below cannot disagree |
+| `scripts/build-manuals.py` | validates, strips the banned dash family, writes the shards |
+| `scripts/audit-manuals.py` | the live verification (see below) |
+| `scripts/test-manuals.py` | 21 assertions that prove the rules reject what they should |
+| `assets/js/manuals/<system>.js` | eight generated shards, 57.7 KB total. Do not hand-edit. |
+
+### The command set
+
+```
+python3 scripts/test-manuals.py                    rule assertions
+python3 scripts/build-manuals.py                   rebuild the shards
+python3 scripts/build-manuals.py --check           validate only, no writes
+python3 scripts/verify.py                          the full gate, runs --check for you
+python3 scripts/audit-manuals.py --live            check every link over the network
+python3 scripts/audit-manuals.py --live --only Dometic    one brand
+```
+
+The live audit takes several minutes and hammers other people's servers, so it is not part
+of `verify.py`. Run it before a push that touches the manifest.
+
+### The rules, and do not weaken them
+
+- **Links only, never a mirror.** Every `url` is the maker's own copy.
+- **A row claims `stable_part_keyed` only when the URL carries no revision letter, no date
+  and no dated upload folder.** Those links die silently when the maker republishes. The
+  check is `UNSTORABLE` in `manuals_rules.py`.
+- **Aggregators, courtesy rehosts and retailers are banned** (`BANNED`), because ManualsLib
+  itself states it has no relationship with any manufacturer.
+- **`UNVERIFIED` is never a pass.** The audit reports PASS, or it reports why it could not
+  tell. A `check: "browser"` row means a person looked in a real browser, and the validator
+  forces such a row to carry a note, so the claim is never a bare assertion.
+- **A false FAIL is its own dishonesty.** Two heuristics in the audit were wrong on first
+  run and were loosened: the parked pattern matched "coming soon" in ordinary product copy,
+  and the usefulness check missed a page named "service documents". If the audit starts
+  failing rows that look fine, check the pattern before the row.
+
+### What is next
+
+Slices 2 to 7: the hub and one system page, then the other seven system pages, then the
+component brand pages, then the single OEM page carrying all 44 brand rows, then the
+site-wide search wiring and the nav entry, then a fresh-context review.
+
+**Search integration has a number attached.** Capped at one row per brand, the site-wide
+search head set is 101 rows at 45.2 KB. The full corpus must never ship in the search
+bundle; the manuals pages load their own shard.
+
+### Known open items
+
+- **Blue Sea Systems and Yakima cannot be verified from this machine by any route.**
+  Cloudflare answers `Attention Required` to a script and to headless Chrome; Zendesk
+  returns 403 to a script and zero bytes to Chrome. Their rows carry a note saying so.
+- **Cummins is partially resolved.** The index page serves a Cloudflare challenge to
+  everything automated, but the library's own PDFs return 200, so the source is demonstrably
+  live. Do not "fix" it by deleting the row.
+- **The corpus is library level.** 110 rows are library or index pages and 9 are specific
+  documents. Deliberate for v1, since a library URL is the stable target.
+
+---

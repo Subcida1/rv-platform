@@ -261,6 +261,22 @@ else:
     print("  all %d pages have a description between 140 and 160 chars"
           % len([1 for q in ROOT.rglob("*.html") if ".git" not in q.parts]))
 
+print("\n=== manuals manifest (schema, banned hosts, storable-URL rule) ===")
+r = subprocess.run([sys.executable, str(ROOT / "scripts/build-manuals.py"), "--check"],
+                   capture_output=True, text=True)
+if r.returncode != 0:
+    for line in (r.stdout or r.stderr).rstrip().split("\n")[:12]:
+        print("  " + line)
+    fails.append("manuals manifest")
+else:
+    m = re.search(r"(\d+) component rows, (\d+) brand rows, (\d+) unique component brands",
+                  r.stdout)
+    if m:
+        print("  %s rows valid, %s unique brands, every link on the maker's own host"
+              % (m.group(1), m.group(3)))
+    else:
+        print("  manifest valid")
+
 if "--links" in sys.argv:
     print("\n=== external listing links (live HTTP) ===")
     src = ROOT / "assets/js/listings/listings-or.js"
