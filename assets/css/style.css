@@ -1059,9 +1059,14 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 @media(max-width:720px){.ticks li,.checks li{font-size:14px}}
 
 /* ============================================================
-   Guides index cards (clean pass 2026-09-19)
-   Kills the floating-emoji-in-a-void look: icon in a grounded
-   tile, body below, equal heights, 2x4 grid.
+   Guides index cards (clean pass 2026-09-19, densified 2026-09-22)
+   The icon sits in a button, the body below it, equal heights.
+   FOUR across at desktop, not two: at two across the card was 568px wide holding
+   about 250px of content, and Ty read the leftover half as unused space.
+   "Basically i feel the tiles are leaving too much 'whitespace' being used. We
+   should just make the content fit the container better." Four across gives a
+   288px card and the content fills it.
+   ONE definition for the whole site. There were two, and two media rules each.
    ============================================================ */
 .guide-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;align-items:stretch}
 @media(max-width:1100px){.guide-grid{grid-template-columns:repeat(2,1fr)}}
@@ -1098,15 +1103,18 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 .guide-tab{border:1px solid var(--border-2);background:var(--surface);color:var(--text-2);border-radius:999px;padding:9px 18px;font-size:13.5px;font-weight:700;cursor:pointer;transition:all .15s ease}
 .guide-tab:hover{border-color:var(--c-sky);color:var(--c-sky)}
 .guide-tab.active{background:var(--grad);color:#fff;border-color:transparent}
-.guide-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;align-items:stretch}
-.guide-grid[data-cat="winter"]{grid-template-columns:repeat(4,1fr)}
-@media(max-width:1100px){.guide-grid[data-cat="winter"]{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:640px){.guide-grid{grid-template-columns:1fr !important}}
-/* A lone final card in a 2-column grid reads as broken. The grids are 2-col above
-   640px and 1-col below, so an odd card count always leaves the last one alone at
-   an odd position. Centre it at one card's width so it looks deliberate.
-   Measured 2026-09-21: home troubleshooting 7 cards, guides index 17 cards. */
-@media(min-width:641px){.guide-grid>:last-child:nth-child(odd){grid-column:1/-1;justify-self:center;width:100%;max-width:calc(50% - 8px)}}
+/* The grid is defined once, above, in "Guides index cards". It used to be
+   redefined here at 2 columns, plus a data-cat="winter" override back to 4, which
+   is why the homepage and the guides index disagreed about how many guides fit in
+   a row. One definition now, and every grid on every page uses it. */
+/* A lone final card in a grid reads as broken, and an odd count always leaves one.
+   Centre it at ONE column's width so it looks deliberate: a quarter of the row at
+   desktop where the grid is four across, a half between 641 and 1100px where it is
+   two across. The gap is 16px, so four across leaves 25% - 12px and two leaves
+   50% - 8px. (Before the densify pass this was one rule at 50% for a two-column
+   grid, which is why a 13th card looked lost.) */
+@media(min-width:1101px){.guide-grid>:last-child:nth-child(odd){grid-column:1/-1;justify-self:center;width:100%;max-width:calc(25% - 12px)}}
+@media(min-width:641px) and (max-width:1100px){.guide-grid>:last-child:nth-child(odd){grid-column:1/-1;justify-self:center;width:100%;max-width:calc(50% - 8px)}}
 /* Diagrams: inline SVG scales its text with the viewBox, so at phone widths the
    labels shrank to about 6.5px and became unreadable. Give the figure a floor and
    let it scroll sideways instead. At desktop the figure is already wider than the
