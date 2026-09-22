@@ -45,6 +45,28 @@ rather than a script:
 
 Do those two as a pass of their own, with a screenshot before and after.
 
+## After any asset edit
+
+```bash
+python3 scripts/stamp_assets.py
+```
+
+Every page links `assets/css/style.css?v=<hash>`, and the same for the scripts. GitHub
+Pages serves assets with `cache-control: max-age=600`, so without the hash a change is
+live on the server but invisible in the browser for ten minutes. That is not theory: it
+is why a colour fix looked like it had not landed four times in one night.
+
+`verify.py` fails when a stamp no longer matches the file it points at, so this cannot
+be forgotten quietly. The manuals generator stamps its own output, so its `--check`
+compares like with like.
+
+**Build order for anything that touches assets or the shell:**
+
+```
+edit  ->  python3 scripts/build-manuals-pages.py  ->  node scripts/build-shell.mjs
+      ->  python3 scripts/stamp_assets.py        ->  python3 scripts/verify.py
+```
+
 ## The two tools that keep this honest
 
 ```bash

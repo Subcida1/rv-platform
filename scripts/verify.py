@@ -557,6 +557,20 @@ if token_bad:
 else:
     print("  all five neutral tokens are at least 10 points bluer than red")
 
+
+print("\n=== every asset reference carries a current content hash ===")
+# GitHub Pages serves assets with max-age=600, so without this a fix is live on the
+# server but invisible in the browser for ten minutes. That cost four rounds in one
+# night of thinking a change had not landed.
+_stamp = subprocess.run([sys.executable, str(ROOT / "scripts" / "stamp_assets.py"), "--check"],
+                        capture_output=True, text=True)
+if _stamp.returncode:
+    print("  " + _stamp.stdout.strip())
+    print("  fix: python3 scripts/stamp_assets.py")
+    fails.append("asset stamps")
+else:
+    print("  " + _stamp.stdout.strip())
+
 print("\n=== every inline script parses as JavaScript ===")
 # A regex that edits a page can quietly mangle a string inside an inline script, which
 # no other check here would see: the tag balance is fine and the page still loads, it

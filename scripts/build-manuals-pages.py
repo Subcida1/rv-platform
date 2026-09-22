@@ -777,6 +777,10 @@ FILTER_JS = r"""/* Filter one system page's rows. The rows are already in the HT
 """
 
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from stamp_assets import stamp_html  # noqa: E402  (path set above)
+
+
 def main():
     doc, error = R.load(MANIFEST)
     if error:
@@ -802,6 +806,9 @@ def main():
                                                   doc.get("bulletin_source", ""))
 
     # Rule #11 covers everything we ship, generated pages included.
+    # stamp before anything compares or writes: the asset hash belongs to the page,
+    # and verify.py fails the build when a stamp is stale
+    pages = {path: stamp_html(text) for path, text in pages.items()}
     for path, text in pages.items():
         for ch, name in (("\u2014", "em dash"), ("\u2013", "en dash"),
                          ("\u00b7", "middot")):
