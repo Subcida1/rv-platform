@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <script src="../assets/js/base.js"></script>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="canonical" href="https://originrv.com/guides/rv-outlets-not-working.html">
+ <title>RV Outlets Not Working: GFCI and Shore Power</title>
+ <meta name="description" content="RV outlets not working? One dead GFCI can kill a whole string of outlets. Work the 120 volt chain and the exact reasons a GFCI refuses to reset.">
+ <link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" type="image/svg+xml" href="assets/img/brand/favicon.svg">
+ <link rel="icon" type="image/png" sizes="32x32" href="assets/img/brand/favicon-32.png">
+ <link rel="icon" type="image/png" sizes="16x16" href="assets/img/brand/favicon-16.png">
+ <link rel="apple-touch-icon" sizes="180x180" href="assets/img/brand/apple-touch-icon.png">
+ <link rel="manifest" href="site.webmanifest">
+ <meta name="theme-color" content="#f43f5e">
+<meta property="og:type" content="article">
+<meta property="og:title" content="RV Outlets Not Working: GFCI and Shore Power">
+<meta property="og:description" content="RV outlets not working? One dead GFCI can kill a whole string of outlets. Work the 120 volt chain and the exact reasons a GFCI refuses to reset.">
+<meta property="og:url" content="https://originrv.com/guides/rv-outlets-not-working.html">
+<meta property="og:site_name" content="OriginRV">
+<meta property="og:image" content="https://originrv.com/assets/img/brand/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="OriginRV">
+<meta name="twitter:image" content="https://originrv.com/assets/img/brand/og-default.png">
+<meta name="twitter:image:alt" content="OriginRV">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="RV Outlets Not Working: GFCI and Shore Power">
+<meta name="twitter:description" content="RV outlets not working? One dead GFCI can kill a whole string of outlets. Work the 120 volt chain and the exact reasons a GFCI refuses to reset.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"RV Outlets Not Working: GFCI and Shore Power","description":"How to diagnose dead 120 volt outlets in an RV. The chain from the pedestal through the main breaker to a daisy chained outlet circuit, the exact manufacturer conditions that stop a GFCI resetting, why one dead GFCI kills the outlets downstream of it, and hot skin safety.","datePublished":"2026-09-21","dateModified":"2026-09-21","publisher":{"@type":"Organization","name":"OriginRV"},"url":"https://originrv.com/guides/rv-outlets-not-working.html"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why are some of my RV outlets dead and others fine?","acceptedAnswer":{"@type":"Answer","text":"Because the outlets on a branch circuit are wired in a chain rather than individually, and a ground fault outlet protects the ones after it. If the first outlet in that chain has tripped, everything downstream of it is dead while outlets on a different branch carry on working. Find the GFCI outlet on that circuit and reset it before assuming anything is broken."}},{"@type":"Question","name":"Why won't my RV GFCI outlet reset?","acceptedAnswer":{"@type":"Answer","text":"The manufacturer lists three reasons a GFCI will refuse to reset, and they are worth taking in order. There is no power reaching it. It has been miswired with the line and load leads reversed. Or it has failed its own internal test, which means it may no longer be able to protect you. If it still will not reset after you have confirmed it has power and is wired correctly, the maker's instruction is to replace it."}},{"@type":"Question","name":"The pedestal breaker looks fine. Can it still be tripped?","acceptedAnswer":{"@type":"Answer","text":"Yes, and this catches people out. A tripped breaker often does not look tripped, so you cannot tell by looking. Push it firmly to the off position and then firmly back on. If it will not stay on, you have a real fault on that circuit, and resetting it repeatedly is not the answer."}},{"type":"Question","name":"Some outlets work on battery and some don't. Why?","acceptedAnswer":{"@type":"Answer","text":"Because an inverter only feeds a subset of the outlets, not all of them. An inverter has its own transfer switch that moves those outlets between shore power and inverter power automatically. So outlets that work on shore power but not on the inverter are simply not on the inverter circuit. It is a design choice, not a fault."}},{"type":"Question","name":"I can feel a tingle when I touch the RV. What should I do?","acceptedAnswer":{"@type":"Answer","text":"Stop and treat it as a serious fault. A shock or tingle from the vehicle body is usually called hot skin, and it means something is putting voltage onto the chassis. Unplug from shore power first. Do not keep using the RV while it is doing this. The causes include a fault in the shore outlet, a missing or broken ground, or reverse polarity at the pedestal, and it needs to be found properly rather than lived with."}},{"@type":"Question","name":"How do I test an RV outlet properly?","acceptedAnswer":{"@type":"Answer","text":"A plug in outlet tester is the quickest tool and it will tell you about missing grounds, reversed wiring and open neutrals by which lights illuminate. A multimeter tells you the voltage but not the wiring arrangement, so for outlets the tester is genuinely the better instrument. Test the outlet you know works first so you can see what a good result looks like on your own tester."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"RV Guides","item":"https://originrv.com/guides/"},{"@type":"ListItem","position":2,"name":"RV Outlets Not Working","item":"https://originrv.com/guides/rv-outlets-not-working.html"}]}</script>
+</head>
+<body class="g-theme-mist">
+ <div id="site-nav"></div>
+
+ <div class="wrap" style="max-width:820px;padding:54px 0 20px">
+ <a href="index.html" class="btn btn-ghost" style="font-size:13.5px">← All guides</a>
+ <div class="sec-eyebrow">Guide . Troubleshooting</div>
+    <h1 style="font-size:clamp(28px,3.6vw,42px);font-weight:800;letter-spacing:-.03em;line-height:1.1;margin-top:20px">RV outlets not working: the 120 volt side</h1>
+ <p style="color:var(--text-2);font-size:16px;margin-top:12px">This is a different system from the rest of this cluster. RV outlets run on 120 volts from the shore pedestal rather than 12 volts from the battery, and that changes both how they fail and how you should treat them. The good news is that the most common cause has a reset button and costs nothing to fix, and one manufacturer publishes an exact list of why that button will sometimes refuse.</p>
+ <p class="reviewed">Last reviewed: Sep 21, 2026, against current Leviton, Xantrex and Eaton documentation. We update these guides when real-world data changes.</p>
+ </div>
+
+ <div class="sec" style="padding:28px 0 60px">
+ <div class="wrap" style="max-width:820px">
+ <div class="callout" style="margin-bottom:24px"><b>Safety first, because this is not the 12 volt side.</b> 120 volts can kill you. Do not open a panel or work inside an outlet with the shore cord connected. If you feel any tingle from the vehicle body, unplug immediately and treat it as a serious fault rather than something to live with. Everything below that involves opening anything assumes the power is off.</div>
+
+ <div class="callout" style="margin-bottom:24px"><b>The short version:</b> outlet circuits are daisy chained, and a ground fault outlet at the head of the chain protects every outlet after it. So one tripped GFCI can kill a whole string of outlets while the others carry on working. Find it and reset it before you test anything. If it will not reset, the manufacturer lists exactly three reasons why, and after those it is a replacement.</div>
+
+ <figure style="margin:0 0 26px">
+ <svg viewBox="0 0 880 320" width="100%" role="img" aria-label="The 120 volt outlet chain in an RV, running from the shore pedestal through the main breaker and a branch breaker to a GFCI outlet that protects the outlets downstream of it" style="max-width:100%;height:auto;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface-2)">
+ <title>How RV outlets are chained, and why one GFCI matters so much</title>
+ <desc>Power arrives at the pedestal, passes the main breaker, then a branch breaker feeds a chain of outlets. The first outlet on the chain is a ground fault outlet, and everything after it is protected by it. If that one trips, all the outlets downstream go dead at once while outlets on other branches keep working.</desc>
+
+ <rect x="20" y="92" width="128" height="56" rx="8" fill="#ffffff" stroke="#0f172a" stroke-width="2.5"/>
+ <text x="84" y="116" font-family="Inter,sans-serif" font-size="12.5" font-weight="700" fill="#0f172a" text-anchor="middle">Pedestal</text>
+ <text x="84" y="134" font-family="Inter,sans-serif" font-size="11" fill="#67748e" text-anchor="middle">30 or 50 amp</text>
+
+ <line x1="152" y1="120" x2="184" y2="120" stroke="#64748b" stroke-width="2.5" marker-end="url(#o1)"/>
+
+ <rect x="188" y="92" width="130" height="56" rx="8" fill="#fefce8" stroke="#ca8a04" stroke-width="2.5"/>
+ <text x="253" y="116" font-family="Inter,sans-serif" font-size="12.5" font-weight="700" fill="#a16207" text-anchor="middle">Main breaker</text>
+ <text x="253" y="134" font-family="Inter,sans-serif" font-size="11" fill="#ca8a04" text-anchor="middle">push off, then on</text>
+
+ <line x1="322" y1="120" x2="354" y2="120" stroke="#64748b" stroke-width="2.5" marker-end="url(#o1)"/>
+
+ <rect x="358" y="92" width="140" height="56" rx="8" fill="#fefce8" stroke="#ca8a04" stroke-width="2.5"/>
+ <text x="428" y="116" font-family="Inter,sans-serif" font-size="12.5" font-weight="700" fill="#a16207" text-anchor="middle">Branch breaker</text>
+ <text x="428" y="134" font-family="Inter,sans-serif" font-size="11" fill="#ca8a04" text-anchor="middle">one per circuit</text>
+
+ <line x1="502" y1="120" x2="534" y2="120" stroke="#64748b" stroke-width="2.5" marker-end="url(#o1)"/>
+
+ <rect x="538" y="86" width="150" height="68" rx="8" fill="#eef2ff" stroke="#6366f1" stroke-width="2.5"/>
+ <text x="613" y="110" font-family="Inter,sans-serif" font-size="12.5" font-weight="800" fill="#4338ca" text-anchor="middle">GFCI OUTLET</text>
+ <text x="613" y="128" font-family="Inter,sans-serif" font-size="11" fill="#6366f1" text-anchor="middle">first in the chain</text>
+ <text x="613" y="144" font-family="Inter,sans-serif" font-size="11" font-weight="700" fill="#16a34a" text-anchor="middle">protects the rest</text>
+
+ <line x1="692" y1="120" x2="724" y2="120" stroke="#64748b" stroke-width="2.5" marker-end="url(#o1)"/>
+
+ <rect x="728" y="98" width="72" height="44" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+ <text x="764" y="126" font-family="Inter,sans-serif" font-size="11.5" font-weight="700" fill="#67748e" text-anchor="middle">then...</text>
+
+ <rect x="728" y="164" width="72" height="44" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+ <text x="764" y="192" font-family="Inter,sans-serif" font-size="11.5" font-weight="700" fill="#67748e" text-anchor="middle">then...</text>
+
+ <path d="M764 142 L764 164" stroke="#94a3b8" stroke-width="2" stroke-dasharray="4 3"/>
+ <path d="M692 120 C710 120 716 186 728 186" fill="none" stroke="#94a3b8" stroke-width="2" stroke-dasharray="4 3"/>
+
+ <text x="34" y="252" font-family="Inter,sans-serif" font-size="12.5" font-weight="700" fill="#0f172a">Dead outlets downstream of the one that tripped.</text>
+ <text x="34" y="274" font-family="Inter,sans-serif" font-size="12.5" fill="#67748e">Outlets on a different branch are unaffected, which is the clue that sends people the wrong way.</text>
+ <text x="34" y="296" font-family="Inter,sans-serif" font-size="12.5" font-weight="700" fill="#4338ca">So find the GFCI and press reset before testing anything.</text>
+ <defs><marker id="o1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker></defs>
+ </svg>
+ <figcaption style="font-size:12px;color:var(--text-3);margin-top:6px">Outlets are not wired individually. The chain is why one tripped outlet can mimic a major fault. Original diagram, OriginRV.</figcaption>
+ </figure>
+
+ <h2 style="font-size:22px;font-weight:800;margin-bottom:14px">Start here: which outlets, and on what?</h2>
+ <div class="card" style="padding:22px;margin-bottom:14px">
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>Every outlet in the whole RV is dead.</b> Look upstream: the pedestal, the shore cord, the main breaker on the panel. If you have a 50 amp RV, remember it has two 120 volt legs, and one leg being dead takes out roughly half the coach while the other half works normally, which looks like a partial fault but is really a supply fault.</p>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>A string of outlets dead, others fine.</b> Almost always a tripped GFCI upstream of them. This is the case worth checking first because it costs nothing.</p>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>One outlet dead, neighbours fine.</b> That specific outlet, its connections, or the fact that it is simply not on the circuit you think it is.</p>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>Outlets work on shore power but not on the inverter.</b> Usually not a fault. An inverter feeds a subset of outlets rather than all of them.</p>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>Outlets dead but all the 12 volt things work.</b> Confirms the fault is the 120 volt side, and the two systems are separate except at the converter.</p>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>Any shock or tingle from the bodywork.</b> Stop here and read the hot skin section. That is a different class of problem.</p>
+ </div>
+
+ <h2 style="font-size:22px;font-weight:800;margin-bottom:14px">Working the chain</h2>
+ <div class="card" style="padding:22px;margin-bottom:14px">
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>The pedestal.</b> Before anything inside the RV, confirm the pedestal itself is supplying power. At a campground that is often a tripped breaker at the post, and it is somebody else's problem.</p>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>The main breaker, which is where a lot of people fool themselves.</b> A tripped breaker frequently does not look tripped, and you cannot tell by looking at it. To reset one you have to push it firmly to off and then firmly back on, not just flick it. If it will not stay on, stop, because there is a real fault on that circuit and repeatedly resetting it is not a fix.</p>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>The branch breakers,</b> one per circuit, typically 15 or 20 amps. Same reset action. A dead branch kills everything on it, and the outlets in an RV are chained rather than run individually, so a fault in one outlet taking out the ones after it is normal behaviour rather than a mystery.</p>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>The GFCI, which is the one to find early.</b> RVs put a ground fault outlet at the head of a chain, normally near a sink or in a wet location, and it protects every outlet downstream of it. When it trips, the whole downstream string goes dead at once. The practical consequence is that the outlet you are testing may be perfectly healthy and simply not receiving any power. Find the GFCI on that circuit first.</p>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>The inverter, if you have one.</b> An inverter has its own transfer switch that moves its designated outlets between shore power and inverter power automatically. So some outlets work on battery and some never will, and that is by design. Manufacturers also document a failsafe behaviour worth knowing: on at least one product line, the AC output stays live if AC input is available even when the operating switch is set to off. Do not assume an outlet is dead just because you switched the inverter off.</p>
+ </div>
+
+ <h2 style="font-size:22px;font-weight:800;margin-bottom:14px">Why a GFCI will not reset</h2>
+ <div class="card" style="padding:22px;margin-bottom:14px">
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px">This is the most useful manufacturer documentation in this whole guide, because a GFCI that will not reset is a specific diagnostic rather than a vague problem. The maker's own literature describes a lockout feature that will prevent reset in three situations, and here they are in their own terms.</p>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>One, there is no power reaching the outlet.</b> A GFCI cannot reset without power, so a dead upstream breaker presents as a failed GFCI. Check the supply before condemning the device.</p>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>Two, the line and load leads are reversed.</b> Wiring the incoming supply to the outgoing terminals is a common mistake after replacement, and the device locks out rather than functioning incorrectly. The manufacturer's LED diagnostic chart names reversed line and load leads as a specific reading.</p>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>Three, it has failed its own internal test,</b> meaning it may no longer be able to protect you in a ground fault. This is the one that matters for safety, because a GFCI that has failed this way still looks fine.</p>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>What the manufacturer says to do about it.</b> Their instruction is direct: if the red indication continues, or the GFCI will not reset, replace it. Elsewhere they put it as: if the status indicator does not turn green when the reset button is pressed and released, or the GFCI cannot be reset, it must be replaced. That is a manufacturer telling you not to keep trying.</p>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>One cause you will read about that we could not source.</b> Moisture is widely given as a reason a GFCI will not reset, and it is almost certainly true, but we could not find it named in any GFCI manufacturer's documentation. It appears only in forums and owner reports. Treat it as likely and test it by drying the outlet, but know that it is field knowledge rather than manufacturer wording.</p>
+ </div>
+
+ <h2 style="font-size:22px;font-weight:800;margin-bottom:14px">Testing an outlet properly</h2>
+ <div class="card" style="padding:22px;margin-bottom:14px">
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>Use a plug in outlet tester, not just a multimeter.</b> A multimeter tells you whether voltage is present. A tester tells you how the outlet is wired: whether the ground is connected, whether hot and neutral are reversed, whether the neutral is open. Those are exactly the faults that cause dead outlets and they are invisible to a voltage reading.</p>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>Test a known good outlet first.</b> Every tester has its own pattern of lights and the charts assume a particular model. Plug it into an outlet you know works so you can see what a good result looks like on your tester before you try to interpret a bad one.</p>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>Press the test button on the GFCI and listen.</b> A working GFCI clicks off when you press test, and clicks back on when you press reset. If test does nothing, that is another sign the device is not functioning.</p>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>And a note on what you are actually looking for.</b> In an RV the most common genuine problems behind dead outlets are a tripped GFCI, a tripped pedestal breaker, a loose connection at an outlet where the wiring is push-in rather than screwed down, and corrosion at outlets in damp locations. A fault inside the wall is much rarer than any of those.</p>
+ </div>
+
+ <h2 style="font-size:22px;font-weight:800;margin-bottom:14px">Hot skin: the one to take seriously</h2>
+ <div class="card" style="padding:22px;margin-bottom:14px">
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px">If you feel a tingle or a shock when you touch the vehicle body, or when you touch a metal part of it while standing on wet ground, that is a condition commonly called hot skin. It means voltage is present on the chassis that should not be there, and it is a genuine electrocution risk rather than a curiosity.</p>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>What to do.</b> Unplug from shore power immediately. Do not continue using the RV while it is doing this, and do not treat it as something to tolerate. It should be found and fixed before the RV is used on hookups again.</p>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>Why it happens.</b> The usual causes are a fault in the pedestal supply itself, reverse polarity at the pedestal, or a missing or broken ground connection somewhere in the path. Note that this is the 120 volt grounding and bonding system, which is a completely different thing from the 12 volt chassis return discussed elsewhere in this cluster. They share the word ground and nothing else.</p>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>One thing that is genuinely a test,</b> for anyone who wants to check an RV or a pedestal before trusting it: the trade checks bonding continuity and expects a low impedance rather than simply continuity. A cheap multimeter cannot meaningfully assess this, which is why hot skin problems are best handed to someone with the right instrument. Getting someone qualified to look at it is the correct call.</p>
+ </div>
+
+ <h2 style="font-size:22px;font-weight:800;margin-bottom:14px">What it costs</h2>
+ <div class="card" style="padding:22px;margin-bottom:14px">
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>A GFCI is one of the cheapest parts on the whole RV,</b> running roughly $17 to $34 depending on the model and whether it is weather resistant, which you want for an outdoor location. If the manufacturer's instruction is to replace it, that is not an expensive decision.</p>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>Professional diagnosis</b> runs around $95 to $185 as a standalone fee, with labour at roughly $125 to $195 an hour. Given that a tripped breaker or a reset GFCI accounts for a good share of dead outlet complaints, checking those two yourself first is the highest-value few minutes in this guide.</p>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>Where it gets expensive.</b> A hot skin fault or a damaged run inside a wall is a different scale of job, and neither is something to price up from a guide. If the safety tests point at either, the next call is to a qualified electrician rather than to a parts supplier.</p>
+ </div>
+
+ <h2 style="font-size:22px;font-weight:800;margin-bottom:14px">The rest of this cluster</h2>
+ <div class="card" style="padding:22px;margin-bottom:14px">
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px">Remember this is the 120 volt system, so the <a href="guides/rv-12-volt-problems.html">12 volt diagnostic guide</a> covers a different half of the RV. If your lights rather than your outlets are out, that is <a href="guides/rv-lights-not-working.html">lights not working</a>. And if the fault is that the batteries are not charging rather than outlets being dead, see <a href="guides/rv-converter-not-charging.html">converter not charging</a>.</p>
+ </div>
+
+ <div class="flex between gap" style="flex-wrap:wrap;margin-bottom:34px">
+ <a class="btn btn-gb" href="guides/rv-lights-not-working.html">Related: Lights not working</a>
+ <a class="btn btn-secondary" href="guides/rv-solar-not-charging.html">Next: Solar not charging →</a>
+ </div>
+
+ <details class="faq"><summary>Why are some of my RV outlets dead and others fine?</summary><p>Because the outlets on a branch circuit are wired in a chain rather than individually, and a ground fault outlet protects the ones after it. If the first outlet in that chain has tripped, everything downstream of it is dead while outlets on a different branch carry on working. Find the GFCI outlet on that circuit and reset it before assuming anything is broken.</p></details>
+ <details class="faq"><summary>Why won't my RV GFCI outlet reset?</summary><p>The manufacturer lists three reasons a GFCI will refuse to reset, and they are worth taking in order. There is no power reaching it. It has been miswired with the line and load leads reversed. Or it has failed its own internal test, which means it may no longer be able to protect you. If it still will not reset after you have confirmed it has power and is wired correctly, the maker's instruction is to replace it.</p></details>
+ <details class="faq"><summary>The pedestal breaker looks fine. Can it still be tripped?</summary><p>Yes, and this catches people out. A tripped breaker often does not look tripped, so you cannot tell by looking. Push it firmly to the off position and then firmly back on. If it will not stay on, you have a real fault on that circuit, and resetting it repeatedly is not the answer.</p></details>
+ <details class="faq"><summary>Some outlets work on battery and some don't. Why?</summary><p>Because an inverter only feeds a subset of the outlets, not all of them. An inverter has its own transfer switch that moves those outlets between shore power and inverter power automatically. So outlets that work on shore power but not on the inverter are simply not on the inverter circuit. It is a design choice, not a fault.</p></details>
+ <details class="faq"><summary>I can feel a tingle when I touch the RV. What should I do?</summary><p>Stop and treat it as a serious fault. A shock or tingle from the vehicle body is usually called hot skin, and it means something is putting voltage onto the chassis. Unplug from shore power first. Do not keep using the RV while it is doing this. The causes include a fault in the shore outlet, a missing or broken ground, or reverse polarity at the pedestal, and it needs to be found properly rather than lived with.</p></details>
+ <details class="faq"><summary>How do I test an RV outlet properly?</summary><p>A plug in outlet tester is the quickest tool and it will tell you about missing grounds, reversed wiring and open neutrals by which lights illuminate. A multimeter tells you the voltage but not the wiring arrangement, so for outlets the tester is genuinely the better instrument. Test the outlet you know works first so you can see what a good result looks like on your own tester.</p></details>
+ </div>
+ </div>
+
+ <div id="site-footer"></div>
+ <script src="assets/js/config.js"></script>
+ <script src="assets/js/site.js"></script>
+</body>
+</html>

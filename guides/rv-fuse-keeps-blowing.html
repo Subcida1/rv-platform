@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <script src="../assets/js/base.js"></script>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="canonical" href="https://originrv.com/guides/rv-fuse-keeps-blowing.html">
+ <title>RV Fuse Keeps Blowing: How to Trace the Fault</title>
+ <meta name="description" content="RV fuse keeps blowing? Stop replacing it. Four documented methods to trace a 12 volt short, including the test light trick that finds it without blowing fuses.">
+ <link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" type="image/svg+xml" href="assets/img/brand/favicon.svg">
+ <link rel="icon" type="image/png" sizes="32x32" href="assets/img/brand/favicon-32.png">
+ <link rel="icon" type="image/png" sizes="16x16" href="assets/img/brand/favicon-16.png">
+ <link rel="apple-touch-icon" sizes="180x180" href="assets/img/brand/apple-touch-icon.png">
+ <link rel="manifest" href="site.webmanifest">
+ <meta name="theme-color" content="#f43f5e">
+<meta property="og:type" content="article">
+<meta property="og:title" content="RV Fuse Keeps Blowing: How to Trace the Fault">
+<meta property="og:description" content="RV fuse keeps blowing? Stop replacing it. Four documented methods to trace a 12 volt short, including the test light trick that finds it without blowing fuses.">
+<meta property="og:url" content="https://originrv.com/guides/rv-fuse-keeps-blowing.html">
+<meta property="og:site_name" content="OriginRV">
+<meta property="og:image" content="https://originrv.com/assets/img/brand/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="OriginRV">
+<meta name="twitter:image" content="https://originrv.com/assets/img/brand/og-default.png">
+<meta name="twitter:image:alt" content="OriginRV">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="RV Fuse Keeps Blowing: How to Trace the Fault">
+<meta name="twitter:description" content="RV fuse keeps blowing? Stop replacing it. Four documented methods to trace a 12 volt short, including the test light trick that finds it without blowing fuses.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"RV Fuse Keeps Blowing: How to Trace the Fault","description":"How to find a 12 volt short in an RV instead of replacing fuses. Four documented tracing methods including the voltage drop across a fuse and the test light in the fuse holder, how to tell a short from an overload from an old fuse, where shorts actually happen, and how to catch an intermittent fault.","datePublished":"2026-09-21","dateModified":"2026-09-21","publisher":{"@type":"Organization","name":"OriginRV"},"url":"https://originrv.com/guides/rv-fuse-keeps-blowing.html"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why does my RV fuse blow as soon as I replace it?","acceptedAnswer":{"@type":"Answer","text":"That is a dead short on that circuit, and the fuse is doing its job. The tell is the speed: a fuse that fails the instant you fit it has a direct path to ground that does not depend on any load being switched on. A fuse that lasts a few minutes before failing is an overload rather than a short, and a fuse that fails below its rating with no load change is often an old fuse in a dirty or loose holder. The three have different causes and the speed of failure is how you separate them."}},{"@type":"Question","name":"What is the test light trick for finding a short?","acceptedAnswer":{"@type":"Answer","text":"You pull the blown fuse and bridge its holder with an incandescent 12 volt test light, so the bulb becomes the current limiter and stops you blowing more fuses. With the loads switched off, the bulb glows dim if there is no short and goes fully bright if there is one. Then you wiggle, flex and thump the wiring while watching the bulb, because any change in brightness is you touching the fault. The bulb also caps the fault current at under about one amp, so nothing burns."}},{"@type":"Question","name":"How do I measure voltage drop across a fuse?","acceptedAnswer":{"@type":"Answer","text":"Put your meter on the millivolt DC range and touch the probes to the two small test tabs on top of the fuse. Do not pull the fuse, and do not disturb the circuit. Any positive reading means current is flowing, and a higher reading means more of it. You then convert the millivolts to milliamps using a chart for that fuse size. It is the only method that leaves the circuit completely intact, which makes it the right one for hunting a fault that only appears under load."}},{"type":"Question","name":"Can I just fit a bigger fuse to stop it blowing?","acceptedAnswer":{"type":"Answer","text":"No, and every manufacturer says so explicitly. Winnebago's wording is that fuses and circuit breakers must be replaced only with the same size and amperage rating, and never with a higher rated one. The fuse is sized to protect the wire, not the device. A bigger fuse means the wire becomes the weakest link, and a wire that fails heats up inside a wall where you cannot see it."}},{"@type":"Question","name":"Where do 12 volt shorts usually happen in an RV?","acceptedAnswer":{"@type":"Answer","text":"The most commonly reported places are where a wire bundle passes over a sharp sheet metal edge without a grommet, inside a slide-out where the harness flexes every time the slide moves, and at any point where water has reached a fixture or a junction. Rodent damage is also common and often overlooked. Only the slide-out harness is documented by a manufacturer, so the rest comes from technician and owner experience rather than a published failure list."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"RV Guides","item":"https://originrv.com/guides/"},{"@type":"ListItem","position":2,"name":"RV Fuse Keeps Blowing","item":"https://originrv.com/guides/rv-fuse-keeps-blowing.html"}]}</script>
+</head>
+<body class="g-theme-mist">
+ <div id="site-nav"></div>
+
+ <div class="wrap" style="max-width:820px;padding:54px 0 20px">
+ <a href="index.html" class="btn btn-ghost" style="font-size:13.5px">← All guides</a>
+ <div class="sec-eyebrow">Guide . Troubleshooting</div>
+    <h1 style="font-size:clamp(28px,3.6vw,42px);font-weight:800;letter-spacing:-.03em;line-height:1.1;margin-top:20px">RV fuse keeps blowing: how to trace it</h1>
+ <p style="color:var(--text-2);font-size:16px;margin-top:12px">A fuse that keeps blowing is not a fuse problem. Something on that circuit is drawing far more current than it should, and the fuse is the only part of the system doing its job correctly. Replacing it repeatedly is not diagnosis. The good news is that tracing a short is a learned skill with real methods, and one of those methods lets you hunt the fault with the circuit live and without burning through a box of fuses.</p>
+ <p class="reviewed">Last reviewed: Sep 21, 2026. We update these guides when real-world data changes.</p>
+ </div>
+
+ <div class="sec" style="padding:28px 0 60px">
+ <div class="wrap" style="max-width:820px">
+ <div class="callout" style="margin-bottom:24px"><b>The short version:</b> pull the blown fuse, bridge its holder with an incandescent test light instead of another fuse, and the bulb becomes a current limiter so you cannot blow anything else. Switch the loads off: dim means the circuit is fine and the fault needs a load to appear, bright means the short is there right now. Then flex and wiggle the wiring while watching the bulb, because any flicker in brightness is you touching the fault. That one method finds most shorts.</div>
+
+ <figure style="margin:0 0 26px">
+ <svg viewBox="0 0 880 320" width="100%" role="img" aria-label="A test light bridged into a fuse holder acting as a current limiter, with a dim bulb meaning no short and a bright bulb meaning a short is present" style="max-width:100%;height:auto;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface-2)">
+ <title>The test light method for finding a short</title>
+ <desc>Instead of fitting another fuse, an incandescent test light is bridged across the fuse holder. The bulb limits fault current so nothing burns. With the loads off, a dim bulb means the circuit has no short. A bright bulb means a short is present right now. Flexing the harness while watching the bulb locates it.</desc>
+
+ <text x="40" y="34" font-family="Inter,sans-serif" font-size="13.5" font-weight="800" fill="#0f172a">Put a test light where the fuse was</text>
+
+ <circle cx="80" cy="120" r="30" fill="#ffffff" stroke="#6366f1" stroke-width="2.5"/>
+ <text x="80" y="126" font-family="Inter,sans-serif" font-size="15" font-weight="800" fill="#4338ca" text-anchor="middle">12V</text>
+
+ <line x1="112" y1="120" x2="196" y2="120" stroke="#64748b" stroke-width="3"/>
+
+ <rect x="200" y="88" width="118" height="64" rx="8" fill="#fff1f2" stroke="#f43f5e" stroke-width="2.5" stroke-dasharray="4 3"/>
+ <text x="259" y="112" font-family="Inter,sans-serif" font-size="11.5" font-weight="800" fill="#e11d48" text-anchor="middle">FUSE HOLDER</text>
+ <text x="259" y="130" font-family="Inter,sans-serif" font-size="11" fill="#e11d48" text-anchor="middle">fuse removed</text>
+
+ <circle cx="259" cy="188" r="26" fill="#fef9c3" stroke="#0f172a" stroke-width="2.5"/>
+ <path d="M246 188 a13 13 0 0 1 26 0" fill="none" stroke="#0f172a" stroke-width="2"/>
+ <line x1="259" y1="88" x2="259" y2="162" stroke="#0f172a" stroke-width="2"/>
+ <line x1="259" y1="214" x2="259" y2="240" stroke="#0f172a" stroke-width="2"/>
+ <text x="259" y="272" font-family="Inter,sans-serif" font-size="11.5" font-weight="700" fill="#0f172a" text-anchor="middle">test light,</text>
+ <text x="259" y="287" font-family="Inter,sans-serif" font-size="11.5" font-weight="700" fill="#0f172a" text-anchor="middle">not a fuse</text>
+
+ <line x1="318" y1="120" x2="404" y2="120" stroke="#64748b" stroke-width="3"/>
+
+ <rect x="408" y="88" width="150" height="64" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+ <text x="483" y="114" font-family="Inter,sans-serif" font-size="12" font-weight="700" fill="#0f172a" text-anchor="middle">The circuit</text>
+ <text x="483" y="132" font-family="Inter,sans-serif" font-size="11" fill="#67748e" text-anchor="middle">and its loads</text>
+
+ <line x1="562" y1="120" x2="648" y2="120" stroke="#64748b" stroke-width="3"/>
+ <line x1="652" y1="120" x2="652" y2="150" stroke="#64748b" stroke-width="2"/>
+ <path d="M636 150 h32 M641 158 h22 M646 166 h12" stroke="#64748b" stroke-width="2.5" stroke-linecap="round"/>
+
+ <!-- two outcomes -->
+ <rect x="700" y="52" width="162" height="62" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+ <text x="781" y="76" font-family="Inter,sans-serif" font-size="12.5" font-weight="800" fill="#15803d" text-anchor="middle">Dim bulb</text>
+ <text x="781" y="94" font-family="Inter,sans-serif" font-size="11" fill="#15803d" text-anchor="middle">no short right now</text>
+
+ <rect x="700" y="132" width="162" height="62" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+ <text x="781" y="156" font-family="Inter,sans-serif" font-size="12.5" font-weight="800" fill="#b91c1c" text-anchor="middle">Bright bulb</text>
+ <text x="781" y="174" font-family="Inter,sans-serif" font-size="11" fill="#b91c1c" text-anchor="middle">short is present</text>
+
+ <text x="40" y="300" font-family="Inter,sans-serif" font-size="12" fill="#67748e">The bulb caps fault current at under about one amp, so nothing burns while you hunt.</text>
+ </svg>
+ <figcaption style="font-size:12px;color:var(--text-3);margin-top:6px">The method that saves the most time and the most fuses. Use an old-fashioned incandescent test light, not an LED one, because it needs to draw real current to work as a limiter. Original diagram, OriginRV.</figcaption>
+ </figure>
+
+ <h2 style="font-size:22px;font-weight:800;margin-bottom:14px">First, tell the three failures apart</h2>
+ <div class="card" style="padding:22px;margin-bottom:14px">
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px">"The fuse blew" covers three different problems, and knowing which one you have saves a lot of pointless searching.</p>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>A short.</b> The fuse fails the instant you fit it, with the element vaporised or blackened. A short is a direct path to ground that does not need anything switched on. This is the one worth tracing, and the rest of this guide is about it.</p>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>An overload.</b> The fuse lasts seconds to minutes before failing, and the load is near the fuse rating. The distinction in the protection industry is a useful one: a fuse maker's own guidance is that overcurrents below about 600 percent of rated current are termed an overload, while a short circuit is above that. An overload means too much legitimate load on the circuit, not a fault in the wire.</p>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>An old fuse in a bad holder.</b> This is the one people miss, and it will make you chase a fault that does not exist. Fuse manufacturers document it: a conductor that is too small generates heat, that heat is seen by the fuse, and the fuse opens before it should. Dirty or loose connections do the same, and the manufacturers describe these as the root cause of many so-called nuisance openings. The signs are a fuse that fails below its rating, and a holder or clip that is discoloured, loose or scored. A fuse is also only expected to last indefinitely if it runs at no more than about 75 percent of its rating, so a circuit designed right up to the limit will eat fuses for years without any fault at all.</p>
+ </div>
+
+ <h2 style="font-size:22px;font-weight:800;margin-bottom:14px">Four ways to find the fault</h2>
+ <div class="card" style="padding:22px;margin-bottom:14px">
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px">An honest note before you read these. We went looking for a manufacturer procedure for tracing a short and could not find one. Converter and panel makers document the indication and tell you to check that circuit, but none of them publishes a method. These four methods come from a manufacturer technical service bulletin, from a named trade expert, and from the trade press. They are sound and used professionally, and we are not going to pretend a converter maker wrote them.</p>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:14px"><b>One: isolate by pulling loads.</b> The slowest method and the easiest to trust. With the fuse replaced by a test light, or simply by working downstream, disconnect loads one at a time and re-test after each. The technique appears in a manufacturer service bulletin in almost exactly these words: disconnect the components from the circuit one by one, and if the values are now within the normal range, the component causing the excess draw has been identified. If the fault disappears when you disconnect a load, the fault is at or downstream of that point. If it persists with everything disconnected, the fault is in the wire run itself.</p>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>Two: measure current with a clamp meter.</b> A DC clamp lets you read current without breaking the circuit, which is a real advantage. Two things matter here. The clamp has to be rated for DC as well as AC, which means a Hall-effect type; many inexpensive clamps only do AC and will read nothing useful on a 12 volt circuit. And you must clamp a single conductor, because clamping the whole cable clamps both directions and the fields cancel to zero. You can also put a meter in series, but be aware of the limitation: that usually caps you at the meter's own fuse rating, typically ten amps.</p>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>Three: measure voltage drop across the fuse.</b> The least invasive method and the least known. Set the meter to millivolts DC and touch the probes to the two small test tabs on top of the fuse, without pulling it and without disturbing anything. Any positive reading means current is flowing, and a larger reading means more current. You then convert millivolts to milliamps with a chart for that fuse size. This is the right method when the fault only appears under load, because it leaves the circuit exactly as it was.</p>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>Four: the test light in the fuse holder.</b> The method in the diagram, and usually the fastest. Pull the blown fuse and bridge its holder with an incandescent 12 volt test light so the bulb becomes the current limiter. In the trade expert's own description, the bulb limits the fault current to less than one ampere, and the light will generally go from dim with no short circuit to fully bright with a short circuit. Because the bulb caps the current, you can now hunt the fault with the circuit live and without blowing anything. Turn loads off and on to see whether the fault needs a load to appear, then flex, twist and thump the wiring while watching the bulb. Any change in brightness is you touching the fault.</p>
+ </div>
+
+ <h2 style="font-size:22px;font-weight:800;margin-bottom:14px">Where shorts actually happen</h2>
+ <div class="card" style="padding:22px;margin-bottom:14px">
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px">No manufacturer publishes a ranked list of short locations, so this ordering comes from technician and owner experience. What *is* manufacturer documented is named where it applies.</p>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>Wire chafing on a sharp sheet metal edge.</b> The most commonly reported cause, and almost always a missing or perished grommet where a bundle passes through a frame member or bulkhead. Owners report whole bundles of circuits shorting this way. When you have a mystery fault on wires that share a route, this is the first place to look, and it is often visible once you are under the RV with a torch.</p>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>A pinched or chafed harness in a slide-out.</b> This one is manufacturer documented. Lippert's own slide-out troubleshooting material lists defective wiring and instructs harness inspection and replacement. If the fuse blows only when the slide moves, this is your answer, and the harness test is to check each conductor to ground at the controller and motor ends.</p>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>Water reaching a fixture or junction.</b> Fuse makers note in general terms that shorts occur through loose wires, insulation breakdown, or contact with water. The RV-specific examples are field reports: a junction box under a slide holding standing water, with the circuit reading well below 12 volts and every light on it flickering. If the fault appears in rain, this is it.</p>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>Rodent damage.</b> Chewed insulation, often on a harness in a place you would not think to look. Field reports describe whole systems going dead this way, and insurers now sell pest cover for exactly this reason. Look for droppings and nesting material as well as the damage itself.</p>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>A failed appliance or device.</b> An internal fault in something on that circuit, which is why the isolate-by-pulling-loads method works so well.</p>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>A screw or nail driven through a cable.</b> Named by the trade expert as a cause of a direct short, and it happens whenever someone fits something to a wall without knowing what is behind it. Worth asking whether anyone has recently mounted anything.</p>
+ </div>
+
+ <h2 style="font-size:22px;font-weight:800;margin-bottom:14px">One circuit, or the whole system?</h2>
+ <div class="card" style="padding:22px;margin-bottom:14px">
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px">These are different faults and need different approaches.</p>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>A short on one branch circuit.</b> One circuit is dead and its fuse blows, often instantly, while everything else in the RV works normally. Many panels light a small red LED next to the blown fuse, which is genuinely useful. Work that one circuit using the test light method, and you are looking at a localised fault in that wire run or its loads.</p>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>A dead short on the main feed.</b> Everything 12 volt is dead at once, while the 120 volt side still works on shore power. Here you are not looking at a branch fuse at all. The candidates are the main breaker or fuse on the positive battery cable, the battery disconnect, and the frame ground. Work along the battery-to-panel path measuring voltage at each point: around 12 volts on both sides of a component means it is passing, and voltage on one side only means you have found the open point.</p>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>A note on main-feed breakers.</b> Many RVs use a resettable or auto-resetting breaker on the battery feed rather than a fuse, often mounted somewhere awkward near the A-frame or in a battery compartment. Owners consistently report finding them by accident. Before assuming a complex fault, find that breaker and confirm it is set.</p>
+ </div>
+
+ <h2 style="font-size:22px;font-weight:800;margin-bottom:14px">Intermittent shorts, which are the worst kind</h2>
+ <div class="card" style="padding:22px;margin-bottom:14px">
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px">A fault that only appears sometimes is genuinely harder, but the method is the same with one addition: you have to reproduce the trigger.</p>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>Set up the test light first,</b> so the circuit is live and the bulb is your indicator. Then work through the triggers in order.</p>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>If it happens when a slide or jack moves,</b> operate it while watching the bulb, and flex the harness by hand along its length. The fault is in something that moves, which narrows it enormously.</p>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>If it happens in rain or after washing,</b> you are looking for corrosion at a fixture, junction box or outlet. Inspect for staining and standing water rather than testing electrically first.</p>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>If it happens when towing or over bumps,</b> suspect frame pass-throughs, axle wiring grommets, and anywhere the battery cables pass through metal. Wiggle testing with the bulb lit is the tool.</p>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>The general technique</b> a named trade expert describes as divide and conquer is to find the twist, thump or wiggle that changes the brightness, then keep halving the section of harness you are working on until you reach the fault. It sounds crude. It works.</p>
+ </div>
+
+ <h2 style="font-size:22px;font-weight:800;margin-bottom:14px">Resettable breakers, and why they hide faults</h2>
+ <div class="card" style="padding:22px;margin-bottom:14px">
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px">RVs use fuses on branch circuits and resettable breakers on the heavier things: the main battery feed, inverter feeds, slide and jack circuits, awning circuits. A fuse maker's own guidance notes that breakers reset after tripping, which is convenient, and also adds the caution that frequent tripping might indicate a deeper electrical issue needing professional attention.</p>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>The masking problem.</b> An auto-resetting breaker re-energises the fault repeatedly. Every time it resets, current flows into whatever is shorted, until the breaker trips again. Owners describe it exactly that way: the automatic breakers keep trying to reset themselves and in doing so keep sending power to the fault, over and over. A fuse blows once and forces you to find the cause. An auto-resetting breaker can do it hundreds of times, and the damage accumulates somewhere you cannot see.</p>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>What to do about it.</b> If a resettable breaker on a slide or jack circuit keeps tripping, treat that as a fault to find rather than a button to press. And if a circuit uses an auto-resetting type and something on it fails intermittently for no obvious reason, that breaker is a suspect rather than a cure.</p>
+ </div>
+
+ <h2 style="font-size:22px;font-weight:800;margin-bottom:14px">When to stop</h2>
+ <div class="card" style="padding:22px;margin-bottom:14px">
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px">The manufacturer wording here is worth reading rather than paraphrasing, because it sets a clear line.</p>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px">Winnebago states that fuses and circuit breakers must be replaced with those of the same size and amperage rating only, and that a higher rated fuse or breaker must never be used. The same manuals give the stop condition: if a fuse is not the cause of the problem, the wiring system should be checked immediately by an authorised service centre. Tiffin's manuals use the same never-use-a-higher-rated-fuse wording. Progressive Dynamics adds, in a fire and shock warning, that fuses should be replaced only with the same type and rating.</p>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>The practical stop list.</b> A fuse that blows instantly on every replacement. A fuse that has blown repeatedly on the same circuit after you have tested the obvious loads. Evidence of heat or discolouration at the panel. Any sign of water at a live fixture or outlet. Rodent damage to a harness, because the damage is usually more extensive than the visible bite. Voltage on only one side of the main feed. And anything on the 120 volt side, which is a different discipline and a different risk.</p>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>Why the same-rating rule matters.</b> The fuse protects the wire, not the device on the end of it. Fitting a larger fuse means the wire becomes the weakest link, and a wire that fails does so by heating up inside a wall cavity where you cannot see or smell it until it is serious. That is the whole reason the manufacturers repeat this in every manual.</p>
+ </div>
+
+ <h2 style="font-size:22px;font-weight:800;margin-bottom:14px">What it costs</h2>
+ <div class="card" style="padding:22px;margin-bottom:14px">
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px">Costs here depend almost entirely on access rather than parts, because the parts are trivial and the labour is not.</p>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>Diagnosis</b> runs around $95 to $185 as a standalone fee, typically thirty to sixty minutes, with shop and mobile labour at roughly $125 to $195 an hour and most established technicians in the $135 to $165 band. Mobile calls often add a trip fee of $75 to $150.</p>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>Repairing a short</b> is quoted broadly from $200 to $1,200 depending on how buried it is. A stubborn intermittent fault can consume one to three hours of diagnostic time on its own before any repair starts, which is why finding the trigger yourself and describing it precisely saves real money.</p>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>Rewiring a damaged run</b> is quoted at roughly $300 to $650 per location, and a coach-wide electrical problem higher still.</p>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>Rodent-chewed harnesses</b> are the expensive end, quoted from about $800 up to several thousand depending on how much of the loom has to be replaced. Worth knowing before you decide to explore that yourself.</p>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>An honest caveat on all of it.</b> Every figure above comes from commercial service company estimate pages. We could not find an independent or industry-wide cost survey for RV electrical work, so treat these as ballpark ranges rather than benchmarks.</p>
+ </div>
+
+ <h2 style="font-size:22px;font-weight:800;margin-bottom:14px">The rest of this cluster</h2>
+ <div class="card" style="padding:22px;margin-bottom:14px">
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px">The <a href="guides/rv-12-volt-problems.html">12 volt diagnostic guide</a> has the system layout and the voltage-drop method this page builds on. If nothing is blowing and something simply is not working, that guide is the better starting point. If the symptom is that something will not run rather than a fuse failing, see <a href="guides/rv-lights-not-working.html">lights not working</a>.</p>
+ </div>
+
+ <div class="flex between gap" style="flex-wrap:wrap;margin-bottom:34px">
+ <a class="btn btn-gb" href="guides/rv-12-volt-problems.html">Start here: 12 volt basics</a>
+ <a class="btn btn-secondary" href="guides/rv-lights-not-working.html">Next: Lights not working →</a>
+ </div>
+
+ <details class="faq"><summary>Why does my RV fuse blow as soon as I replace it?</summary><p>That is a dead short on that circuit, and the fuse is doing its job. The tell is the speed: a fuse that fails the instant you fit it has a direct path to ground that does not depend on any load being switched on. A fuse that lasts a few minutes before failing is an overload rather than a short, and a fuse that fails below its rating with no load change is often an old fuse in a dirty or loose holder. The three have different causes and the speed of failure is how you separate them.</p></details>
+ <details class="faq"><summary>What is the test light trick for finding a short?</summary><p>You pull the blown fuse and bridge its holder with an incandescent 12 volt test light, so the bulb becomes the current limiter and stops you blowing more fuses. With the loads switched off, the bulb glows dim if there is no short and goes fully bright if there is one. Then you wiggle, flex and thump the wiring while watching the bulb, because any change in brightness is you touching the fault. The bulb also caps the fault current at under about one amp, so nothing burns.</p></details>
+ <details class="faq"><summary>How do I measure voltage drop across a fuse?</summary><p>Put your meter on the millivolt DC range and touch the probes to the two small test tabs on top of the fuse. Do not pull the fuse, and do not disturb the circuit. Any positive reading means current is flowing, and a higher reading means more of it. You then convert the millivolts to milliamps using a chart for that fuse size. It is the only method that leaves the circuit completely intact, which makes it the right one for hunting a fault that only appears under load.</p></details>
+ <details class="faq"><summary>Can I just fit a bigger fuse to stop it blowing?</summary><p>No, and every manufacturer says so explicitly. Winnebago's wording is that fuses and circuit breakers must be replaced only with the same size and amperage rating, and never with a higher rated one. The fuse is sized to protect the wire, not the device. A bigger fuse means the wire becomes the weakest link, and a wire that fails heats up inside a wall where you cannot see it.</p></details>
+ <details class="faq"><summary>Where do 12 volt shorts usually happen in an RV?</summary><p>The most commonly reported places are where a wire bundle passes over a sharp sheet metal edge without a grommet, inside a slide-out where the harness flexes every time the slide moves, and at any point where water has reached a fixture or a junction. Rodent damage is also common and often overlooked. Only the slide-out harness is documented by a manufacturer, so the rest comes from technician and owner experience rather than a published failure list.</p></details>
+ </div>
+ </div>
+
+ <div id="site-footer"></div>
+ <script src="assets/js/config.js"></script>
+ <script src="assets/js/site.js"></script>
+</body>
+</html>
