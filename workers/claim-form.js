@@ -29,7 +29,6 @@
        they are delivered, so check Email Service logs, not that summary.
    ============================================================ */
 
-const DESTINATION = 'contact@originrv.com';
 const SENDER = 'contact@originrv.com';
 const ALLOWED_ORIGINS = ['https://originrv.com', 'https://www.originrv.com'];
 const MAX_FIELD = 300;
@@ -92,6 +91,17 @@ export default {
       return json({ success: false, error: 'Missing fields' }, 400, allowed);
     }
 
+    // The destination is a Worker secret rather than a constant, so a personal
+    // address never sits in this public repository. Set it once with:
+    //   npx wrangler secret put DESTINATION
+    // It must be a VERIFIED destination address on the account. A routing
+    // address like contact@originrv.com is not one, and sends to it fail with
+    // E_RECIPIENT_NOT_ALLOWED (tested 2026-09-21).
+    const to = (env.DESTINATION || '').trim();
+    if (!to) {
+      return json({ success: false, error: 'Destination not configured' }, 500, allowed);
+    }
+
     const text = [
       'Business: ' + business,
       'City: ' + city,
@@ -104,7 +114,7 @@ export default {
 
     try {
       const sent = await env.EMAIL.send({
-        to: DESTINATION,
+        to,
         from: { email: SENDER, name: 'OriginRV claim form' },
         subject: 'Listing claim: ' + business,
         text,

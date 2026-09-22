@@ -3,24 +3,23 @@
   //   npx wrangler login     (one time, opens a browser)
   //   npx wrangler deploy
   //
-  // The send_email binding is what gives the Worker permission to send. The
-  // destination_address restriction means this Worker can ONLY mail that one
-  // address, so the deployed URL cannot be turned into a spam relay.
+  // The send_email binding is what gives the Worker permission to send. With no
+  // destination_address restriction it may send only to VERIFIED destination
+  // addresses on the account, which is exactly one inbox, so the deployed URL
+  // still cannot be turned into a relay. Which inbox lives in a Worker secret
+  // (npx wrangler secret put DESTINATION) rather than here, because this
+  // repository is public.
   //
-  // NOTE: this must be an address Cloudflare will deliver to. contact@originrv.com
-  // is routed through Cloudflare Email Routing (the domain's MX records point at
-  // route1/2/3.mx.cloudflare.net) and forwards to the real inbox, which keeps a
-  // personal address out of this PUBLIC repository. If the claim form stops
-  // arriving, the first thing to check is that a contact@ routing rule still
-  // exists in Email Routing.
+  // Do NOT set destination_address to a routing address such as
+  // contact@originrv.com. Routing addresses are not verified destinations and
+  // the send fails with E_RECIPIENT_NOT_ALLOWED. Tested on 2026-09-21, not
+  // assumed: a throwaway Worker with that destination returned exactly that
+  // error.
   "name": "originrv-claim",
   "main": "claim-form.js",
   "compatibility_date": "2026-09-21",
   "send_email": [
-    {
-      "name": "EMAIL",
-      "destination_address": "contact@originrv.com"
-    }
+    { "name": "EMAIL" }
   ],
   // Two limits, both needed. The per-IP one is the real cap on abuse; the
   // "global" one (a constant key) is a safety net that caps total volume per

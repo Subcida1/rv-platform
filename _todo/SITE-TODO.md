@@ -4,7 +4,7 @@ Open items for originrv.com, newest concerns first. This file lives in `_todo/`
 so GitHub Pages does not publish it, because the repository is public and this is
 a working document rather than site content.
 
-Last updated 2026-09-21.
+Last updated 2026-09-21. Section 7 added by the Cloud session; section 2 resolved.
 
 ---
 
@@ -56,21 +56,28 @@ trailer exteriors. A wrong-but-plausible photo is worse than no photo.
 
 ---
 
-## 2. Claim form needs a live test
+## 2. Claim form destination — RESOLVED 2026-09-21
 
-The Worker destination was changed from a personal Gmail to
-`contact@originrv.com`. Cloudflare's docs describe `destination_address` as
-needing a *verified destination*, while their own example uses an address on the
-sender's own domain. It could not be tested from here.
+**The domain address does not work. Tested, not assumed.** A throwaway Worker was
+deployed with `destination_address: contact@originrv.com` and a real submit
+returned `E_RECIPIENT_NOT_ALLOWED`. A routing address forwards mail *inbound*; it
+is not a verified destination, and the binding only sends to verified
+destinations. Had that config been deployed to production the form would have
+silently fallen back to the mailto handoff and no claim would ever have arrived.
 
-**When the Worker is next deployed, submit the claim form once and confirm the
-mail arrives.** If it does not:
+The fix, now deployed and confirmed delivering:
 
-1. Check that a `contact@` routing rule still exists in Cloudflare Email Routing.
-2. If it does, the address may need adding to the account as a destination.
-3. Last resort, point `destination_address` back at a real inbox, but keep it out
-   of this repository by configuring the binding in the Cloudflare dashboard
-   instead of in `wrangler.jsonc`.
+- `send_email` binding has **no `destination_address`** at all. Per the docs that
+  means it may send only to verified destination addresses on the account, which
+  is exactly one inbox, so the URL still cannot relay mail.
+- The address itself lives in a **Worker secret** (`npx wrangler secret put
+  DESTINATION`) and the code reads `env.DESTINATION`. That keeps it out of this
+  public repository, which a hardcoded constant could not.
+- If the secret is ever unset the Worker answers `Destination not configured`
+  rather than pretending to succeed.
+
+Live check: `POST` to the Worker returns `{"success":true,"id":"...@originrv.com"}`
+and the message arrives in the inbox.
 
 ---
 
@@ -128,4 +135,45 @@ Build order from the keyword research, next first:
   if it is not already set.
 - **Search Console sitemap status.** Worth a look once Google has had a few days
   to crawl. A "Couldn't fetch" after the first day or two would be worth
-  investigating rather than waiting out.
+  investigating rather than waiting out. Submitted 2026-09-21; all 29 URLs were
+  confirmed returning 200 beforehand.
+
+---
+
+## 7. Infrastructure and hardening (2026-09-21, Cloud session)
+
+**Hosting: staying on GitHub Pages for now, deliberately.** Ty's call while the
+site is being built. It costs nothing in SEO terms: Google ranks the domain, not
+the host, and a later move that keeps the domain and URL paths identical is close
+to invisible. The one way to damage rankings is the ordering mistake, so if the
+move ever happens it is: **stand up the new host and verify it first, then make
+the repository private.** Doing it the other way round takes the site down.
+
+**Security headers and HSTS cannot be fixed while we are here.** The DNS records
+are not proxied through Cloudflare (responses come from GitHub), so Cloudflare
+never sees the traffic and cannot add headers. Proxying GitHub Pages is possible
+but risks breaking GitHub's certificate renewal, since it cannot complete the
+challenge through a proxy. Defer both to the hosting move, where they are native.
+
+**DMARC is still missing**, and it is a pure DNS record, so it is safe to add
+today with no proxying. SPF and DKIM are already in place.
+
+**Rate limiting is done.** Two Cloudflare Rate Limiting bindings on the Worker:
+5/minute per IP and 30/minute on a constant key as a volume backstop. Measured
+behaviour is a brake rather than a wall: Cloudflare documents this API as
+permissive and eventually consistent with per-counter caches, so a tight burst
+can partially slip through. The honeypot and the send restriction are the other
+two layers.
+
+**Audit of the whole setup, from outside** (the CLI token lacks DNS and settings
+read scopes, so external checks were the honest route and they test what the
+world actually sees). Confirmed good: HTTP 301s to HTTPS, www 301s to apex, TLS
+1.0/1.1 refused, TLS 1.2/1.3 working, SPF and DKIM present, robots and sitemap
+200, unknown paths 404, Email Routing with verified destination plus contact@
+rule and catch-all both enabled.
+
+**If the site is ever moved to Cloudflare Pages**, the Worker endpoint should move
+to a path on the domain (for example `/api/claim`) so the workers.dev URL stops
+appearing in the page source.
+
+---
