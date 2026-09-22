@@ -288,9 +288,6 @@ smoke test sees it.**
 - **Cummins is partially resolved.** The index page serves a Cloudflare challenge to
   everything automated, but the library's own PDFs return 200, so the source is demonstrably
   live. Do not "fix" it by deleting the row.
-- **The corpus is library level.** 110 rows are library or index pages and 9 are specific
-  documents. Deliberate for v1, since a library URL is the stable target.
-
 ---
 
 ## 9. Counts stated in copy: one source, one command (DONE 2026-09-21)
@@ -335,3 +332,65 @@ cards are counted from the page rather than from a list of planned tools, so the
 claim follows the cards rather than the plan. If a tool gets its own page, the
 live count picks it up automatically.
 
+---
+
+## 10. The shell is in the HTML, and how to change it (2026-09-22)
+
+The nav and footer used to be built by `assets/js/site.js` at runtime, which meant
+a visitor with JavaScript off got a page with no navigation at all. They are now
+rendered into the HTML at build time, the way a normal site does it.
+
+**Do not hand-edit the nav or footer in a page.** Edit `assets/js/site.js` (the
+markup) or `assets/js/config.js` (the routes and brand), then run:
+
+```
+node scripts/build-shell.mjs
+```
+
+That renders the shell into all 39 pages. It does not duplicate the markup: it
+runs the real site.js in a small fake DOM and takes what its own shell injector
+writes, so the HTML and the runtime version cannot drift.
+
+The owned regions are marked in each page, and the generator rewrites between the
+markers:
+
+```html
+<div id="site-nav"><!-- nav:start --><!-- nav:end --></div>
+<div id="site-footer"><!-- footer:start --><!-- footer:end --></div>
+```
+
+`site.js` still injects when a slot arrives empty, so a page without the shell
+still works.
+
+**Build order after regenerating the manuals:**
+
+```
+python3 scripts/build-manuals-pages.py    # skeleton, leaves the shell empty
+node scripts/build-shell.mjs              # fills it
+```
+
+`verify.py` runs both checks, so getting the order wrong fails the gate rather
+than shipping an empty nav.
+
+---
+
+## 11. Inline styles on the guide pages (open, 2026-09-22)
+
+The 17 guide pages carry **60 to 152 `style=` attributes each**. Every heading,
+paragraph and note sets its own font size and colour inline:
+
+```html
+<p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px">
+```
+
+Two costs. Each guide re-invents the type scale, so sizes drift between pages
+(14.5px here, 16.5px there), which is where the small visual inconsistencies come
+from. And a change to the design system has to be typed into 39 files by hand, so
+it will never be consistent.
+
+The fix is a handful of prose classes in `style.css` (`.prose p`, `.note`,
+`.callout`, `.warn`) and then stripping the inline styles. Not hard, but it wants
+a pass per page and a visual check on each, so it is a project rather than a
+sweep. Worth doing before more guides land.
+
+---
