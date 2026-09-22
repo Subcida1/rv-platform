@@ -169,6 +169,47 @@ print("  clean" if not bad else "\n".join("  " + b for b in bad))
 if bad:
     fails.append("homepage figures")
 
+print("\n=== FAQ schema matches the visible FAQ word for word ===")
+# Google requires FAQPage markup to match the text a reader can see. Scripts now edit page
+# text in bulk (normalize-house-style.py hyphenates "12 volt" across the whole file, including
+# the JSON-LD), so a schema/text divergence is a real risk and a cheap thing to catch here.
+# Tags are stripped from the visible copy first: the visible answer carries an <a href> where
+# the schema carries plain text, which is correct and expected.
+tag_re = re.compile(r"<[^>]+>")
+
+
+def plain(s):
+    return re.sub(r"\s+", " ", tag_re.sub("", s)).strip()
+
+
+bad = []
+faq_count = 0
+for p in pages:
+    txt = p.read_text(encoding="utf-8")
+    blocks = re.findall(r'<script[^>]*type="application/ld\+json"[^>]*>(.*?)</script>', txt, re.S)
+    faq = None
+    for b in blocks:
+        try:
+            d = json.loads(b)
+        except Exception:
+            continue
+        for node in (d if isinstance(d, list) else [d]):
+            if isinstance(node, dict) and node.get("@type") == "FAQPage":
+                faq = node
+    if not faq:
+        continue
+    visible = {plain(q): plain(a) for q, a in
+               re.findall(r'<details class="faq"><summary>(.*?)</summary><p>(.*?)</p></details>', txt, re.S)}
+    for e in faq.get("mainEntity", []):
+        faq_count += 1
+        q, a = plain(e["name"]), plain(e["acceptedAnswer"]["text"])
+        if visible.get(q) != a:
+            bad.append("%s: %s" % (p.relative_to(ROOT), q[:60]))
+print("  %d FAQ entries checked" % faq_count)
+print("  all match" if not bad else "\n".join("  " + b for b in bad))
+if bad:
+    fails.append("faq schema parity")
+
 print("\n=== listing data integrity ===")
 
 # A directory whose whole job is putting a phone number in front of a stranded

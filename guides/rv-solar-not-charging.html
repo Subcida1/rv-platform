@@ -37,9 +37,9 @@
  <div class="wrap" style="max-width:820px;padding:54px 0 20px">
  <a href="index.html" class="btn btn-ghost" style="font-size:13.5px">← All guides</a>
  <div class="sec-eyebrow">Guide . Troubleshooting</div>
-    <h1 style="font-size:clamp(28px,3.6vw,42px);font-weight:800;letter-spacing:-.03em;line-height:1.1;margin-top:20px">RV solar not charging: panel or controller</h1>
+    <h1 style="font-size:clamp(28px,3.6vw,42px);font-weight:800;letter-spacing:-.03em;line-height:1.1;margin-top:20px">RV solar not charging: Panel or controller</h1>
  <p style="color:var(--text-2);font-size:16px;margin-top:12px">Solar is the easiest system on the RV to diagnose, because it is only three things in a row and you can measure each one separately. Panel, controller, battery. Find which link is not passing power along and you are done. What makes it feel harder than it is, is that one of the most common answers is that nothing is broken at all.</p>
- <p class="reviewed">Last reviewed: Sep 21, 2026, against current Victron, Renogy, Go Power and Zamp documentation. We update these guides when real-world data changes.</p>
+ <p class="reviewed">Last reviewed: Sep 21, 2026, against current Victron, Renogy, Go Power and Zamp documentation.</p>
  </div>
 
  <div class="sec" style="padding:28px 0 60px">
@@ -98,9 +98,9 @@
  <h2 style="font-size:22px;font-weight:800;margin-bottom:14px">Check these two things before you test anything</h2>
  <div class="card" style="padding:22px;margin-bottom:14px">
  <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px">Both of these produce the complaint "solar has stopped charging", and neither is a fault. Ruling them out first saves you an afternoon.</p>
- <h3 style="font-size:17px;font-weight:800">One: the battery is full.</h3>
+ <h3 style="font-size:17px;font-weight:800">One: The battery is full</h3>
  <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px">This is stated plainly in controller manufacturer documentation, and it is the single most common false alarm. Once the battery is full, the controller will stop or significantly reduce its charge current. Their own wording is that this behaviour is normal and is not a fault. If your controller shows little or nothing in the afternoon after working all morning, that is the system doing its job. Check the battery's actual state rather than the controller display.</p>
- <h3 style="font-size:17px;font-weight:800">Two: the controller is set for the wrong battery chemistry.</h3>
+ <h3 style="font-size:17px;font-weight:800">Two: The controller is set for the wrong battery chemistry</h3>
  <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px">Controller makers ship with a default profile. Zamp's own manual states plainly that the default setting is AGM, and carries the warning that an incorrect battery type setting may damage your battery. If you have fitted lithium and left the controller on the lead-acid profile, the bank will be chronically undercharged and it will look exactly like a failing panel. This is a setting, not a fault, and it is worth checking before you test anything electrical.</p>
  <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>Related, and it trips people up:</b> lithium batteries generally will not accept charge in the cold, commonly below about five degrees Celsius. A battery that stops charging on a cold morning and starts again later is not a fault, it is a protection feature. Controllers handle it differently, and some will show an error rather than simply going quiet.</p>
  </div>
@@ -109,13 +109,13 @@
  <div class="card" style="padding:22px;margin-bottom:14px">
  <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px">This is unusually good, because a major controller manufacturer publishes a ranked list of why solar stops charging rather than leaving you to guess. In their own terms, the causes are: the battery is fully charged; reversed panel polarity; panel voltage too high; reversed battery polarity; the controller being disconnected from the battery through a cable, fuse or breaker problem; incorrect charger configuration such as a low charge voltage or current setting; the charger being externally controlled by a system such as an energy management feature; and the temperature compensation feature misbehaving or being misconfigured with a battery that is too hot.</p>
  <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>Translated into the order worth checking on your own RV:</b></p>
- <h3 style="font-size:17px;font-weight:800">The battery is already full.</h3>
+ <h3 style="font-size:17px;font-weight:800">The battery is already full</h3>
  <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px">First, because it is free and it is the most common answer.</p>
- <h3 style="font-size:17px;font-weight:800">The controller setting is wrong.</h3>
+ <h3 style="font-size:17px;font-weight:800">The controller setting is wrong</h3>
  <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px">Second, because it is also free and it will quietly undercharge your bank for months if you leave it.</p>
- <h3 style="font-size:17px;font-weight:800">A fuse or breaker in the solar circuit.</h3>
+ <h3 style="font-size:17px;font-weight:800">A fuse or breaker in the solar circuit</h3>
  <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px">Documented by more than one maker. Controllers are often fitted with a fuse between the controller and the battery, and it is easy not to know it exists. Check it before concluding the controller is dead.</p>
- <h3 style="font-size:17px;font-weight:800">Shading.</h3>
+ <h3 style="font-size:17px;font-weight:800">Shading</h3>
  <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px">A manufacturer states it directly: even a small shadow on part of a panel can greatly reduce its power. A new aerial, a roof vent, a tree that grew, or even a cable draped across a panel can do it. If output dropped suddenly without any work being done, look up before you look at the wiring.</p>
  <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>Wiring faults,</b> which the manufacturer names as loose wires, loose connections, and badly crimped connectors. Solar connectors that were crimped by hand rather than with the right tool are a known weak point.</p>
  <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>Reversed polarity,</b> panel side or battery side. Worth checking specifically if someone has recently worked on the system, because it is a common result of reconnecting things.</p>
@@ -124,13 +124,13 @@
  <h2 style="font-size:22px;font-weight:800;margin-bottom:14px">Testing it in three measurements</h2>
  <div class="card" style="padding:22px;margin-bottom:14px">
  <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px">Solar is easy to test because there are only three points, and the manufacturers publish expected values for each.</p>
- <h3 style="font-size:17px;font-weight:800">Measurement one: the panel.</h3>
+ <h3 style="font-size:17px;font-weight:800">Measurement one: The panel</h3>
  <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px">With the panel isolated from the controller, measure its open circuit voltage and its short circuit current in good sun at midday, and compare against the figures on its label. The manufacturer's guidance is that if readings are much lower than stated, the panel may be faulty. Do this following your own controller's recommended procedure rather than improvising, because the order you disconnect things matters on some units.</p>
- <h3 style="font-size:17px;font-weight:800">Measurement two: the input to the controller.</h3>
+ <h3 style="font-size:17px;font-weight:800">Measurement two: The input to the controller</h3>
  <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px">You should see the array's operating voltage there. One maker gives a practical range of roughly 16 to 23 volts depending on the panel rating and sun conditions, with panel current between about 2 and 9 amps. Another gives a simpler rule that the panel voltage needs to be about 5 volts above battery voltage before charging will even commence, which is worth knowing because on a cloudy day that condition may simply not be met.</p>
- <h3 style="font-size:17px;font-weight:800">Measurement three: the controller's output at the battery terminals.</h3>
+ <h3 style="font-size:17px;font-weight:800">Measurement three: The controller's output at the battery terminals</h3>
  <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px">This is the decisive one. Measure the voltage at the controller's battery terminals, then measure it at the battery bank itself. Any real difference between the two readings is volts being lost in the wire between them rather than in either device, and that difference is the fault you are looking for.</p>
- <h3 style="font-size:17px;font-weight:800">What the combination tells you.</h3>
+ <h3 style="font-size:17px;font-weight:800">What the combination tells you</h3>
  <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px">Panel output present and controller input present, but nothing coming out of the controller, means the controller is the fault. Panel output missing means the panel or its wiring is the fault. Everything present at the controller but a lower voltage at the battery means the wire between them, and the fix is often a thicker or shorter cable rather than a new part.</p>
  <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>And a number worth carrying:</b> Victron's wiring guidance states that an excessive voltage drop of more than 2.5 percent is unacceptable anywhere in the system. That is a power-systems figure rather than a solar-specific one, but it applies directly. On long solar runs, voltage drop is the quiet killer, and it shows up as a system that works but never performs to its rating.</p>
  </div>
@@ -145,9 +145,9 @@
  <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px">There are two types of charge controller and they behave differently enough that it affects what you should expect to see.</p>
  <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>MPPT</b> actively hunts for the array's maximum power point, which means it can harvest meaningfully more energy, particularly when the panel voltage is well above the battery voltage or in cooler conditions. In the manufacturer's words, it essentially decouples the array and battery voltages.</p>
  <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>PWM</b> is simpler and cheaper and effectively connects the panel closer to the battery, so some of the array's capability is simply not used. The manufacturer's own assessment is that a PWM controller is a good low cost solution for small systems only.</p>
- <h3 style="font-size:17px;font-weight:800">How this matters when something is wrong.</h3>
+ <h3 style="font-size:17px;font-weight:800">How this matters when something is wrong</h3>
  <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px">If you have upgraded your panels but kept a PWM controller, you may have a system that is working correctly and still underperforming, which looks like a fault. Equally, if you have added panels in series to raise voltage without checking the controller's maximum input, you can exceed its rating. Panel voltage too high appears in the manufacturer's own list of reasons charging stops, so it is worth checking the rating against what your array actually produces.</p>
- <h3 style="font-size:17px;font-weight:800">Two chemistry points that matter here.</h3>
+ <h3 style="font-size:17px;font-weight:800">Two chemistry points that matter here</h3>
  <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px">The manufacturer states that sealed and lithium batteries do not require equalisation and should not undergo it, and that temperature compensation is typically only applicable to lead-acid, so it should be disabled for lithium. If those two are set wrongly on a lithium bank, you are running a charge profile the battery was never meant to see.</p>
  </div>
 
@@ -161,20 +161,20 @@
 
  <h2 style="font-size:22px;font-weight:800;margin-bottom:14px">What it costs</h2>
  <div class="card" style="padding:22px;margin-bottom:14px">
- <h3 style="font-size:17px;font-weight:800">Solar parts are cheap relative to most RV equipment.</h3>
+ <h3 style="font-size:17px;font-weight:800">Solar parts are cheap relative to most RV equipment</h3>
  <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px">A 100 watt panel kit with a 20 amp MPPT controller sells for around $140, and a well regarded standalone MPPT controller such as a Victron 100/30 runs roughly $132 to $135. Individual panels are cheaper still. That matters because it means replacing a controller is often a better use of an afternoon than chasing a marginal fault in one.</p>
  <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>Professional diagnosis</b> runs around $95 to $185 as a standalone fee, with labour around $125 to $195 an hour. On a system whose main components cost about the same as two hours of labour, it is usually worth doing the three measurements yourself first.</p>
- <h3 style="font-size:17px;font-weight:800">One caution worth passing on.</h3>
+ <h3 style="font-size:17px;font-weight:800">One caution worth passing on</h3>
  <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px">A converter manufacturer warns that counterfeit versions of their units circulate on the large marketplaces. The same risk applies to solar controllers, which are widely copied. Buying from a reputable seller rather than the cheapest listing is worth more here than in most categories.</p>
  </div>
 
  <h2 style="font-size:22px;font-weight:800;margin-bottom:14px">The rest of this cluster</h2>
  <div class="card" style="padding:22px;margin-bottom:14px">
- <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px">Solar sits alongside the converter rather than replacing it, so if your batteries are not charging on shore power that is <a href="guides/rv-converter-not-charging.html">converter not charging</a>. For the whole 12 volt system and the voltage-drop method, start at the <a href="guides/rv-12-volt-problems.html">12 volt diagnostic guide</a>.</p>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px">Solar sits alongside the converter rather than replacing it, so if your batteries are not charging on shore power that is <a href="guides/rv-converter-not-charging.html">converter not charging</a>. For the whole 12-volt system and the voltage-drop method, start at the <a href="guides/rv-12-volt-problems.html">12-volt diagnostic guide</a>.</p>
  </div>
 
  <div class="flex between gap" style="flex-wrap:wrap;margin-bottom:34px">
- <a class="btn btn-gb" href="guides/rv-12-volt-problems.html">Start here: 12 volt basics</a>
+ <a class="btn btn-gb" href="guides/rv-12-volt-problems.html">Start here: 12-volt basics</a>
  <a class="btn btn-secondary" href="guides/rv-converter-not-charging.html">Related: Converter not charging →</a>
  </div>
 
