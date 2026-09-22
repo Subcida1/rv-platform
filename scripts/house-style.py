@@ -55,6 +55,29 @@ DILIGENCE = [
     (r"\bthis is a site by someone who\b", "self-praise"),
 ]
 
+# Claude's finding on the main pages (2026-09-21), which I had missed: the site's signature move
+# is "X, not Y" — define yourself well by defining an unnamed other badly. It runs across four
+# pages and its probable origin is about.html's H1 ("Built from the driver's seat, not a
+# conference room"). Once it lands in a headline it gets reached for again lower down.
+# Greppable, so it belongs here rather than in a model's judgement.
+CONTRAST = [
+    # A bare "X, not Y" is far too broad: it flagged 63 lines site-wide, almost all of them
+    # legitimate factual distinctions ("a mobile technician, not a shop", "two power sources,
+    # not one", "the real culprit behind spring leaks, not the snow itself"). The device only
+    # counts when Y is a PERSON OR GROUP being belittled rather than a technical alternative,
+    # so the pattern now requires that. Same lesson as the diagram collision check: a check
+    # that cries wolf is worse than no check, because it gets ignored.
+    (r",\s*not\s+(?:someone|anyone)\b", "contrast-praise: belittles an unnamed person"),
+    (r"\bnot someone who\b", "contrast-praise: belittles an unnamed person"),
+    (r",\s*not\s+(?:a|an)\s+(?:marketing team|conference room|content farm|scraper|algorithm|robot|bot|machine)\b",
+     "contrast-praise: belittles an unnamed group"),
+    (r"\bthan the one that sounded\b", "contrast-praise"),
+    (r"\bno (?:guessing|vanity)\b", "contrast-praise"),
+    (r"\bwe would rather\b[^.]{0,60}\bthan\b", "contrast-praise: our virtue by comparison"),
+    (r"\bwhen it is real\b", "trust adjective"),
+    (r"\bare real and\b", "trust adjective"),
+]
+
 # Manufacturers and agencies whose claims must be traceable. Extend as pages are added.
 BRANDS = [
     "Suburban", "Atwood", "Truma", "Furrion", "Dometic", "Norcold", "Coleman", "Camco",
@@ -127,6 +150,12 @@ def check_page(path):
         for m in re.finditer(pat, prose, re.I):
             ctx = re.sub(r"\s+", " ", prose[max(0, m.start() - 40):m.end() + 40]).strip()
             findings.append(("diligence", why, ctx))
+
+    # 5b  contrast-praise and trust adjectives
+    for pat, why in CONTRAST:
+        for m in re.finditer(pat, prose, re.I):
+            ctx = re.sub(r"\s+", " ", prose[max(0, m.start() - 40):m.end() + 40]).strip()
+            findings.append(("contrast", why, ctx))
 
     # 6  coverage: a named maker with no source entry
     labels = " | ".join(source_labels(html))
