@@ -110,6 +110,11 @@ def main():
     print("\n  kind      %s" % dict(Counter(r["kind"] for r in components)))
     print("  gate      %s" % dict(Counter(r["gate"] for r in components)))
     print("  stability %s" % dict(Counter(r["link_stability"] for r in components)))
+    st = Counter(r.get("status", "never checked") for r in components)
+    print("  status    %s" % dict(st))
+    if st.get("never checked"):
+        print("            %d rows have not been through a live audit yet"
+              % st["never checked"])
 
     if dashes:
         print("\n  rule #11: %d banned dash characters replaced" % dashes)

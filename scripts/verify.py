@@ -272,10 +272,20 @@ else:
     m = re.search(r"(\d+) component rows, (\d+) brand rows, (\d+) unique component brands",
                   r.stdout)
     if m:
-        print("  %s rows valid, %s unique brands, every link on the maker's own host"
+        print("  %s rows valid, %s unique brands, no banned host in any row"
               % (m.group(1), m.group(3)))
     else:
         print("  manifest valid")
+
+print("\n=== manuals pages and shards match the manifest ===")
+r = subprocess.run([sys.executable, str(ROOT / "scripts/build-manuals-pages.py"),
+                    "--check"], capture_output=True, text=True)
+if r.returncode != 0:
+    for line in (r.stdout or r.stderr).rstrip().split("\n")[:12]:
+        print("  " + line)
+    fails.append("manuals pages")
+else:
+    print("  " + (r.stdout.strip().split("\n")[0] if r.stdout.strip() else "in sync"))
 
 if "--links" in sys.argv:
     print("\n=== external listing links (live HTTP) ===")

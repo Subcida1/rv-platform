@@ -31,6 +31,7 @@ Run: python3 scripts/audit-manuals.py                 offline checks only
      python3 scripts/audit-manuals.py --live --only Dometic
 """
 import html
+import json
 import os
 import re
 import shutil
@@ -261,6 +262,43 @@ def audit(row):
     return out
 
 
+def stamp(results):
+    """Write each audited row's verdict back into the manifest.
+
+    The pages print a "link checked" line ONLY for a row marked verified, so this
+    is what turns the audit from a report into data. Without it the badge was
+    decorative: a row that timed out still claimed its link had been checked.
+
+    Keyed on (brand, url, system) rather than (brand, url) because one shared
+    library URL legitimately appears once per system.
+    """
+    doc, error = R.load(MANIFEST)
+    if error:
+        print("\nFAIL  cannot stamp: %s" % error)
+        return 1
+    verdict = {(r["name"], r["url"], r["system"]): r["status"] for r in results}
+    words = {"PASS": "verified", "WARN": "unverified", "FAIL": "fail"}
+    n = 0
+    for row in doc.get("components", []):
+        key = (row.get("brand"), row.get("url"), row.get("system"))
+        if key in verdict:
+            row["status"] = words[verdict[key]]
+            n += 1
+    order = ["brand", "host", "system", "kind", "doc_types", "title", "url", "key",
+             "covers", "rev", "gate", "link_stability", "check", "status", "note",
+             "checked"]
+    doc["components"] = [{k: r[k] for k in order if k in r} for r in doc["components"]]
+    MANIFEST.write_text(json.dumps(doc, indent=2, ensure_ascii=False) + "\n",
+                        encoding="utf-8")
+    counts = {}
+    for r in doc["components"]:
+        counts[r.get("status", "never checked")] = \
+            counts.get(r.get("status", "never checked"), 0) + 1
+    print("\n  stamped %d rows into %s: %s"
+          % (n, MANIFEST.relative_to(ROOT), counts))
+    return 0
+
+
 def main():
     doc, error = R.load(MANIFEST)
     if error:
@@ -347,6 +385,10 @@ def main():
     print("  warn means UNVERIFIED, never a pass: the link answered but we could")
     print("  not read it (bot protection) or could not find the brand in the text")
     print("  (a JS-rendered page or a scanned PDF). Check those in a browser.")
+
+    if "--stamp" in sys.argv:
+        stamp(results)
+
     raise SystemExit(1 if (errors or STATUS["FAIL"]) else 0)
 
 

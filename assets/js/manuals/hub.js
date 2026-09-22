@@ -54,13 +54,14 @@
       var hits = rows.filter(function (r) {
         if (type && r.doc_types.indexOf(type) < 0) return false;
         if (!q) return true;
-        return [r.brand, r.host, r.title, r.key, r.covers].join(' ').toLowerCase()
+        return [r.brand, r.host, r.title, r.key, r.covers,
+                r.doc_types.join(' ').replace(/-/g, ' ')].join(' ').toLowerCase()
           .indexOf(q) >= 0;
       });
       status.textContent = hits.length
         ? hits.length + ' match' + (hits.length === 1 ? '' : 'es') +
           (q ? ' for "' + q + '"' : '')
-        : 'Nothing matches that. Try a maker name, or the model number off the label.';
+        : 'Nothing matches that. Try a maker name like Dometic, or open a system below.';
       ul.innerHTML = hits.slice(0, 60).map(rowHTML).join('');
       ul.hidden = false;
     });

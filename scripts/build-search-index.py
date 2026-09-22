@@ -113,18 +113,35 @@ def pages():
             continue
         t, d = title_desc(p)
         out.append({"t": label, "u": name, "c": "Page", "k": keys, "d": d[:150]})
-    # The manuals section gets its own category so the dropdown can cap it and it
-    # can never crowd out a guide for a symptom query. Only the nine section pages
-    # are indexed here: the 119 documents are searched on the manuals hub itself,
-    # because shipping the whole corpus site-wide is 53 KB for a visitor who never
-    # opens a manual.
+    # Brand names, derived from the manifest rather than hand-kept. Without this
+    # "airstream" and "winnebago" returned NOTHING, from a page built entirely
+    # around 44 manufacturers, because only the page title was indexed.
+    try:
+        mf = json.loads((ROOT / "_data" / "manuals.json").read_text(encoding="utf-8"))
+    except Exception:
+        mf = {}
+    per_system, every = {}, set()
+    for r in mf.get("components", []):
+        per_system.setdefault(r["system"], set()).update(
+            {r["brand"], r.get("host", "")})
+        every.add(r["brand"])
+    for b in mf.get("brands", []):
+        every.add(b["brand"])
+    oem_names = sorted({b["brand"] for b in mf.get("brands", [])})
     for p in sorted((ROOT / "manuals").glob("*.html")):
         t, d = title_desc(p)
+        if p.stem == "index":
+            extra = sorted(every)
+        elif p.stem == "brands":
+            extra = oem_names
+        else:
+            extra = sorted(per_system.get(p.stem, set()))
         out.append({
             "t": ("RV Manuals" if p.stem == "index" else t),
             "u": "manuals/%s" % p.name, "c": "Manual",
-            "k": ("rv manual manuals owners owner service repair parts wiring diagram "
-                  "pdf " + p.stem.replace("-", " ")).lower(),
+            "k": (" ".join(["rv manual manuals owners owner service repair parts wiring",
+                            "diagram pdf", p.stem.replace("-", " ")]
+                           + [x for x in extra if x])).lower(),
             "d": d[:150],
         })
     return out

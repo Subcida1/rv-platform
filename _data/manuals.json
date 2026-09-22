@@ -18,6 +18,7 @@
       "covers": "Inteli-Power converters, power centers and inverters, current and discontinued",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -38,6 +39,7 @@
       "covers": "converters, power centers and main board assemblies down to sub-assembly level",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -57,6 +59,7 @@
       "covers": "inverter/chargers Freedom X, XC and SW, charger and remote panel manuals",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -73,6 +76,7 @@
       "covers": "MS, ME, MM and MMS inverter chargers and PT-100 MPPT controllers",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -91,6 +95,7 @@
       "covers": "solar kits, inverters and converters; the old gpelectric.com support URL is retired",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "unverified",
       "note": "the Product Assistant wizard is Go Power's real document home; gpelectric.com/support only 301s to a contact page",
       "checked": "2026-09-21"
     },
@@ -110,6 +115,7 @@
       "covers": "solar panels, LiFePO4 batteries, inverters and chargers",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -129,6 +135,7 @@
       "covers": "inverters, MPPT controllers, batteries and monitoring, global not RV specific",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -146,6 +153,7 @@
       "covers": "LiFePO4 batteries BB10012, BBGC2, BB5024, BB1275 plus accessory documentation",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -164,6 +172,7 @@
       "covers": "DC distribution, breakers, switches and ACRs, with cutout templates and drawings",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "note": "Cloudflare answers every automated client with Attention Required, including real Chrome, so this link cannot be verified from here; the host is up",
       "checked": "2026-09-21"
     },
@@ -182,6 +191,7 @@
       "covers": "inverters and chargers with product manuals, quick start guides and specifications",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -198,6 +208,7 @@
       "covers": "RV solar charge controllers and fault code documents; merging into Go Power",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -216,6 +227,7 @@
       "covers": "panels, controllers, inverters and batteries with manuals and certifications",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -235,6 +247,7 @@
       "covers": "RV QG, QD, Marquis and MicroQuiet gensets, keyed by spec letter such as spec P",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "note": "Cloudflare challenge answers automated checks; the library's own PDFs return 200 application/pdf, so the source is live",
       "checked": "2026-09-21"
     },
@@ -252,6 +265,7 @@
       "covers": "portable generators, choose a series then a model",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -269,6 +283,7 @@
       "covers": "generators, manuals and parts diagrams by exact model number",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -287,6 +302,7 @@
       "covers": "generators with unit manuals, parts listings and wiring diagrams",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -306,6 +322,7 @@
       "covers": "generators with owner manuals, spec sheets, service manuals and bulletins",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -322,6 +339,7 @@
       "covers": "generators and tools, manuals collected by product type",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -339,6 +357,7 @@
       "covers": "generators, lookup by serial number, model number or SKU, not by year",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -355,6 +374,7 @@
       "covers": "portable power stations, solar panels and accessories",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -373,6 +393,7 @@
       "covers": "power stations AC500, AC300, AC200L, EP800 and B500A with datasheets",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -390,6 +411,7 @@
       "covers": "DELTA and RIVER power stations, solar and smart home panel manuals",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -406,6 +428,7 @@
       "covers": "Yeti, Nomad, Venture and Lighthouse product guides and articles",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -424,6 +447,7 @@
       "covers": "Vision S and Vision S+ camera systems, user and troubleshooting manuals",
       "gate": "none",
       "link_stability": "re_resolve",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -443,6 +467,7 @@
       "covers": "backup camera systems, instruction manuals with wiring diagrams",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -459,6 +484,7 @@
       "covers": "rear view camera systems and monitors such as MC7108 and M7108",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -476,6 +502,7 @@
       "covers": "Voyager cameras, Jensen TV and audio, iN-Command and tire pressure monitoring",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -494,6 +521,7 @@
       "covers": "antennas, satellite and connectivity, installation and operation manuals",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "unverified",
       "checked": "2026-09-21"
     },
     {
@@ -510,6 +538,7 @@
       "covers": "Tailgater 1, 2, 3, 4 and Pro portable satellite antennas",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -528,6 +557,7 @@
       "covers": "TracVision RV1, UHD7 and TracNet H30, current and retired products",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -544,6 +574,7 @@
       "covers": "RV radio and electronics manuals for new and discontinued products",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -562,6 +593,7 @@
       "covers": "cellular signal boosters with user manual, quick install guide and data sheet",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -580,6 +612,7 @@
       "covers": "Travel 3.0 RV Max and 4K Plus boosters with manuals and install videos",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -597,6 +630,7 @@
       "covers": "Cel-Fi boosters, manuals and firmware in the partner portal",
       "gate": "free-account",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -616,6 +650,7 @@
       "rev": "B",
       "gate": "none",
       "link_stability": "re_resolve",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -632,6 +667,7 @@
       "covers": "TM22053 A1A, TM22051 TM-77, TM22062 A1AS, TM22056 TM-88C and TM22057 i10",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -648,6 +684,7 @@
       "covers": "tire pressure monitoring systems and battery manuals",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -665,6 +702,7 @@
       "covers": "RV tire load and inflation tables plus the RV Tire Guide reference materials",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -681,6 +719,7 @@
       "covers": "M8008 ST trailer tire load limits at various cold inflation pressures",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "note": "the ST load and inflation table is published as an HTML table on this product page, so the destination is right even though the page never says the word manual",
       "checked": "2026-09-21"
     },
@@ -698,6 +737,7 @@
       "covers": "S637T ST235/80R16 and ST235/85R16 load and pressure columns",
       "gate": "none",
       "link_stability": "re_resolve",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -714,6 +754,7 @@
       "covers": "Radial Trail HD trailer tires with rated load and PSI per SKU",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -730,6 +771,7 @@
       "covers": "RST, Trailer King II and Ultra ST with single max load at PSI",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "unverified",
       "note": "the load and inflation table is published as an HTML table on the product line page",
       "checked": "2026-09-21"
     },
@@ -748,6 +790,7 @@
       "covers": "special trailer tire warranty guide with the load inflation pressure tables appendix",
       "gate": "none",
       "link_stability": "re_resolve",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -765,6 +808,7 @@
       "covers": "installation steps and torque specs for CURT part 13386; every part number sits at the same path, so a sheet is found by part number",
       "gate": "none",
       "link_stability": "stable_part_keyed",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -782,6 +826,7 @@
       "covers": "tow bars, baseplates and adapters with combined owner and install instructions",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -799,6 +844,7 @@
       "rev": "REV. K",
       "gate": "none",
       "link_stability": "stable_part_keyed",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -815,6 +861,7 @@
       "covers": "Prodigy P2 electronic brake control, document number N90885",
       "gate": "none",
       "link_stability": "stable_part_keyed",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -832,6 +879,7 @@
       "covers": "tow bars, baseplates and dollies, with date and revision as separate columns",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -848,6 +896,7 @@
       "covers": "self-aligning tow bar operator manual, document-keyed with no revision in the URL",
       "gate": "none",
       "link_stability": "stable_part_keyed",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -864,6 +913,7 @@
       "covers": "LoadLifter 5000 and helper spring kits for motorhome rear and front applications",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -881,6 +931,7 @@
       "covers": "CRE3000, I.S. 2.0, AllTrek 4000, StepAbove and storage products",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -897,6 +948,7 @@
       "covers": "Exact-Slide stabilizers, wheel chocks and sales literature",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -913,6 +965,7 @@
       "covers": "Ultimate Connection, weight distribution and Ranch Hitch Adapter",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -930,6 +983,7 @@
       "covers": "Hensley Arrow, Ultimate Arrow and Cub anti-sway trailer hitches",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -947,6 +1001,7 @@
       "covers": "e2 Trunnion, Round Bar and 4.5K hitch installation and use instructions",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -964,6 +1019,7 @@
       "covers": "ProPride 3P hitch installation and operation instructions, vendor-hosted CDN asset",
       "gate": "none",
       "link_stability": "re_resolve",
+      "status": "unverified",
       "note": "an 18.3 MB PDF, over the audit's 12 MB download cap, so its text is never read",
       "checked": "2026-09-21"
     },
@@ -985,10 +1041,11 @@
       "covers": "trailer axles, brakes, hubs, Torflex and Airflex, light through heavy duty",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
-      "brand": "Lippert / LCI",
+      "brand": "Lippert",
       "host": "Lippert",
       "system": "towing-and-running-gear",
       "kind": "library",
@@ -998,12 +1055,14 @@
         "parts-and-breakdown",
         "bulletin-and-recall"
       ],
-      "title": "Lippert support documentation",
+      "title": "Lippert document centre: leveling, Power Gear and Bigfoot",
       "url": "https://support.lci1.com/documentation/",
       "key": "product category",
-      "covers": "slide-outs, leveling, Power Gear, Bigfoot, steps, axles, brakes and chassis",
+      "covers": "one document centre where leveling is a category alongside Power Gear and Bigfoot",
       "gate": "none",
       "link_stability": "re_resolve",
+      "status": "verified",
+      "note": "merged from 3 rows that all pointed here under brand-specific titles; the page lists categories rather than deep links",
       "checked": "2026-09-21"
     },
     {
@@ -1024,6 +1083,7 @@
       "gate": "none",
       "link_stability": "library_page_only",
       "check": "browser",
+      "status": "unverified",
       "note": "server omits its TLS intermediate certificate, so every strict client refuses it while browsers load it fine; loaded in Chrome 2026-09-21, 105 KB, twenty mentions of manuals",
       "checked": "2026-09-21"
     },
@@ -1042,42 +1102,7 @@
       "covers": "EQ Smart-Level, Level-Lite and RV Stabi-Lizer, each manual tailored to one product",
       "gate": "none",
       "link_stability": "library_page_only",
-      "checked": "2026-09-21"
-    },
-    {
-      "brand": "Bigfoot",
-      "host": "Lippert",
-      "system": "towing-and-running-gear",
-      "kind": "library",
-      "doc_types": [
-        "owner-and-operating",
-        "installation",
-        "parts-and-breakdown"
-      ],
-      "title": "Bigfoot leveling system documentation",
-      "url": "https://support.lci1.com/documentation/",
-      "key": "product family",
-      "covers": "Bigfoot hydraulic leveling systems, now supported through the Lippert library",
-      "gate": "none",
-      "link_stability": "re_resolve",
-      "checked": "2026-09-21"
-    },
-    {
-      "brand": "Power Gear",
-      "host": "Lippert",
-      "system": "towing-and-running-gear",
-      "kind": "library",
-      "doc_types": [
-        "owner-and-operating",
-        "installation",
-        "parts-and-breakdown"
-      ],
-      "title": "Power Gear legacy leveling and slide-out documentation",
-      "url": "https://support.lci1.com/documentation/",
-      "key": "product family",
-      "covers": "legacy Power Gear leveling and slide-out systems and parts diagrams",
-      "gate": "none",
-      "link_stability": "re_resolve",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -1094,6 +1119,7 @@
       "covers": "tote-alongs, power jacks such as the VIP 3500, slidewinders and auto drains",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -1114,6 +1140,7 @@
       "covers": "Mach roof A/Cs, heat pumps, thermostats and plenums by series number",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -1132,10 +1159,11 @@
       "covers": "Brisk, Penguin and Blizzard roof air conditioners and heat pumps",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
-      "brand": "Furrion",
+      "brand": "Lippert",
       "host": "Lippert",
       "system": "heating-and-cooling",
       "kind": "library",
@@ -1143,14 +1171,17 @@
         "owner-and-operating",
         "installation",
         "service-and-repair",
-        "spec-sheet"
+        "spec-sheet",
+        "parts-and-breakdown"
       ],
-      "title": "Furrion air conditioning documentation",
+      "title": "Lippert document centre: Furrion and Atwood heating and cooling",
       "url": "https://support.lci1.com/documentation/",
-      "key": "product family",
-      "covers": "Chill roof air conditioners and the Chill Cube",
+      "key": "product category",
+      "covers": "one document centre where Furrion AC and water heaters and legacy Atwood are categories",
       "gate": "none",
       "link_stability": "re_resolve",
+      "status": "verified",
+      "note": "merged from 2 rows that all pointed here under brand-specific titles; the page lists categories rather than deep links",
       "checked": "2026-09-21"
     },
     {
@@ -1169,6 +1200,7 @@
       "covers": "Combi, VarioHeat, Trumatic S and Ultraheat heaters and Alde systems",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -1187,25 +1219,7 @@
       "covers": "NT, SF and FA series gas furnaces with ducting guidance and parts lists",
       "gate": "none",
       "link_stability": "library_page_only",
-      "checked": "2026-09-21"
-    },
-    {
-      "brand": "Atwood",
-      "host": "Lippert",
-      "system": "heating-and-cooling",
-      "kind": "library",
-      "doc_types": [
-        "owner-and-operating",
-        "installation",
-        "service-and-repair",
-        "parts-and-breakdown"
-      ],
-      "title": "Formerly Atwood Products documentation",
-      "url": "https://support.lci1.com/documentation/",
-      "key": "product family",
-      "covers": "legacy Hydro Flame furnaces, filed under Formerly Atwood Products",
-      "gate": "none",
-      "link_stability": "re_resolve",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -1222,6 +1236,7 @@
       "covers": "aftermarket RV air conditioners such as RP-AC3501-D and RP-AC3400",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -1239,6 +1254,7 @@
       "covers": "caravan air-conditioner with exploded diagram, parts list and circuit diagram",
       "gate": "none",
       "link_stability": "stable_part_keyed",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -1255,6 +1271,7 @@
       "covers": "portable air conditioners and their batteries",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -1273,42 +1290,29 @@
       "covers": "tank and tankless water heaters including IW60, IW60RL, ST-42 and ST-60",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
-      "brand": "Atwood",
+      "brand": "Lippert",
       "host": "Lippert",
       "system": "water-and-plumbing",
       "kind": "library",
       "doc_types": [
         "owner-and-operating",
         "installation",
-        "parts-and-breakdown"
+        "parts-and-breakdown",
+        "service-and-repair",
+        "spec-sheet"
       ],
-      "title": "Formerly Atwood water heater and furnace documentation",
+      "title": "Lippert document centre: Girard, Atwood and Furrion heaters",
       "url": "https://support.lci1.com/documentation/",
-      "key": "product family",
-      "covers": "legacy Atwood water heaters and furnaces, plus a second home on Dometic",
+      "key": "product category",
+      "covers": "one document centre where Furrion AC and water heaters, Girard and legacy Atwood are categories",
       "gate": "none",
       "link_stability": "re_resolve",
-      "checked": "2026-09-21"
-    },
-    {
-      "brand": "Girard",
-      "host": "Lippert",
-      "system": "water-and-plumbing",
-      "kind": "library",
-      "doc_types": [
-        "owner-and-operating",
-        "installation",
-        "service-and-repair"
-      ],
-      "title": "Girard tankless water heater documentation",
-      "url": "https://support.lci1.com/documentation/",
-      "key": "product family",
-      "covers": "Girard tankless water heaters and awnings, a first-level Lippert category",
-      "gate": "none",
-      "link_stability": "re_resolve",
+      "status": "verified",
+      "note": "merged from 3 rows that all pointed here under brand-specific titles; the page lists categories rather than deep links",
       "checked": "2026-09-21"
     },
     {
@@ -1327,23 +1331,7 @@
       "covers": "AquaGo tankless water heater; install instructions are bundled with each manual",
       "gate": "none",
       "link_stability": "library_page_only",
-      "checked": "2026-09-21"
-    },
-    {
-      "brand": "Furrion",
-      "host": "Lippert",
-      "system": "water-and-plumbing",
-      "kind": "library",
-      "doc_types": [
-        "owner-and-operating",
-        "spec-sheet"
-      ],
-      "title": "Furrion tankless water heater documentation",
-      "url": "https://support.lci1.com/documentation/",
-      "key": "product family",
-      "covers": "Furrion tankless water heaters, instruction and specification sheets",
-      "gate": "none",
-      "link_stability": "re_resolve",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -1362,6 +1350,7 @@
       "covers": "electric tankless water heaters including legacy Series Four and AccuMix",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -1382,6 +1371,7 @@
       "covers": "hydronic heating and on-demand hot water, one row per model with all five doc classes",
       "gate": "none",
       "link_stability": "re_resolve",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -1400,6 +1390,7 @@
       "covers": "fresh water pumps, faucets and Phoenix Faucet manuals alongside technical info",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -1417,6 +1408,7 @@
       "covers": "RV water filtration products, manuals and tutorials",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -1435,6 +1427,7 @@
       "covers": "Aqua-Magic toilets, cassettes and Titan totes, plus the Norcold manuals",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "unverified",
       "note": "support is a branching product wizard by design, not a browsable library",
       "checked": "2026-09-21"
     },
@@ -1453,6 +1446,7 @@
       "covers": "RV toilets and holding tank products under the SeaLand name",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -1470,6 +1464,7 @@
       "covers": "waste valves, sewer hoses, E-Valve and Flush King instructions",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -1487,6 +1482,7 @@
       "covers": "composting toilets, mounting guide, fan and agitator replacement guides",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -1503,10 +1499,11 @@
       "covers": "Thetford service document index; page title confirmed, contents rendered by script",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
-      "brand": "Lippert / LCI",
+      "brand": "Lippert",
       "host": "Lippert",
       "system": "sanitation-and-tanks",
       "kind": "library",
@@ -1515,12 +1512,14 @@
         "owner-and-operating",
         "parts-and-breakdown"
       ],
-      "title": "Lippert sewer and fresh water documentation",
+      "title": "Lippert document centre: sewer and fresh water",
       "url": "https://support.lci1.com/documentation/",
       "key": "product category",
-      "covers": "Lippert Waste Master and the Sewer and Fresh Water category",
+      "covers": "one document centre where sewer and fresh water are separate categories",
       "gate": "none",
       "link_stability": "re_resolve",
+      "status": "verified",
+      "note": "merged from 1 rows that all pointed here under brand-specific titles; the page lists categories rather than deep links",
       "checked": "2026-09-21"
     },
     {
@@ -1538,6 +1537,7 @@
       "covers": "off-grid DC and propane fridges with manuals and spec sheets in English and French",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -1556,6 +1556,7 @@
       "covers": "absorption and compressor fridges, kitchen appliances and ventilation",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -1572,6 +1573,7 @@
       "covers": "gas-absorption and 12V compressor fridges, no browsable index, wizard only",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "note": "the maker's support entry is a product-finder wizard rather than a document list; the manual PDFs themselves live under thetford.com/app/uploads/",
       "checked": "2026-09-21"
     },
@@ -1590,44 +1592,30 @@
       "rev": "Rev. E",
       "gate": "none",
       "link_stability": "re_resolve",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
-      "brand": "Everchill",
+      "brand": "Lippert",
       "host": "Lippert",
       "system": "kitchen-and-appliances",
       "kind": "library",
       "doc_types": [
         "owner-and-operating",
         "installation",
-        "bulletin-and-recall"
-      ],
-      "title": "Everchill refrigerator documentation",
-      "url": "https://support.lci1.com/documentation/",
-      "key": "product family",
-      "covers": "12V compressor fridges, including the shared 12V refrigerator hard reset procedure",
-      "gate": "none",
-      "link_stability": "re_resolve",
-      "note": "Lippert's document centre loads its category list client side; Everchill is one of its categories, which is why the brand name is not in the served HTML",
-      "checked": "2026-09-21"
-    },
-    {
-      "brand": "Furrion",
-      "host": "Lippert",
-      "system": "kitchen-and-appliances",
-      "kind": "library",
-      "doc_types": [
-        "owner-and-operating",
+        "bulletin-and-recall",
         "service-and-repair",
         "parts-and-breakdown",
         "spec-sheet"
       ],
-      "title": "Furrion cooking and appliance documentation",
+      "title": "Lippert document centre: Furrion appliances",
       "url": "https://support.lci1.com/documentation/",
-      "key": "product family and doc code ccd-######",
-      "covers": "12V fridges, ranges, cooktops, microwaves and TVs with versioned doc codes",
+      "key": "product category",
+      "covers": "one document centre where Furrion appliances are a category",
       "gate": "none",
       "link_stability": "re_resolve",
+      "status": "verified",
+      "note": "merged from 2 rows that all pointed here under brand-specific titles; the page lists categories rather than deep links",
       "checked": "2026-09-21"
     },
     {
@@ -1646,6 +1634,7 @@
       "covers": "17 and 21 inch RV gas ranges with instruction, quick reference and service docs",
       "gate": "none",
       "link_stability": "re_resolve",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -1663,6 +1652,7 @@
       "covers": "ranges, slide-in cooktops, griddles and induction cooktops",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -1680,6 +1670,7 @@
       "covers": "combo washer/dryers and stackables, with full technician training guides",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -1696,6 +1687,7 @@
       "covers": "refrigerators, ranges, water heater and washer/dryer manuals",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -1712,6 +1704,7 @@
       "covers": "griddles such as models 1650, 1814, 1832 and 1859",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -1729,6 +1722,7 @@
       "covers": "grills, owner's manuals and exploded-view parts by serial number",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -1745,6 +1739,7 @@
       "covers": "grills, smokers, stoves, ovens, fire pits and cast iron",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -1762,26 +1757,7 @@
       "covers": "pellet grills, owner's manual and assembly guide in many languages",
       "gate": "none",
       "link_stability": "library_page_only",
-      "checked": "2026-09-21"
-    },
-    {
-      "brand": "Carefree of Colorado",
-      "host": "Carefree of Colorado",
-      "system": "exterior-and-body",
-      "kind": "library",
-      "doc_types": [
-        "parts-and-breakdown",
-        "spec-sheet",
-        "installation",
-        "owner-and-operating",
-        "service-and-repair"
-      ],
-      "title": "Carefree product library",
-      "url": "https://www.carefreeofcolorado.com/product-library/",
-      "key": "product model name plus document type",
-      "covers": "patio, window and slideout awnings with illustrated parts lists and data sheets",
-      "gate": "none",
-      "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -1799,43 +1775,28 @@
       "covers": "awnings and toppers, including legacy awning brands",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
-      "brand": "Girard",
+      "brand": "Lippert",
       "host": "Lippert",
       "system": "exterior-and-body",
       "kind": "library",
       "doc_types": [
         "owner-and-operating",
         "installation",
-        "service-and-repair"
-      ],
-      "title": "Girard awning documentation",
-      "url": "https://support.lci1.com/documentation/",
-      "key": "product family",
-      "covers": "Girard RV awnings, a first-level category in the Lippert index",
-      "gate": "none",
-      "link_stability": "re_resolve",
-      "checked": "2026-09-21"
-    },
-    {
-      "brand": "Solera",
-      "host": "Lippert",
-      "system": "exterior-and-body",
-      "kind": "library",
-      "doc_types": [
-        "installation",
-        "owner-and-operating",
+        "service-and-repair",
         "parts-and-breakdown"
       ],
-      "title": "Solera awning documentation",
+      "title": "Lippert document centre: awnings and slide-outs",
       "url": "https://support.lci1.com/documentation/",
-      "key": "product family",
-      "covers": "Solera awnings and slide toppers, a Lippert brand with no separate library",
+      "key": "product category",
+      "covers": "one document centre where awnings and slide-outs are separate categories, alongside Furrion, Girard, Power Gear and Bigfoot",
       "gate": "none",
       "link_stability": "re_resolve",
-      "note": "Lippert's document centre loads its category list client side; Solera is one of its categories, which is why the brand name is not in the served HTML",
+      "status": "verified",
+      "note": "merged from 3 rows that all pointed here under brand-specific titles; the page lists categories rather than deep links",
       "checked": "2026-09-21"
     },
     {
@@ -1854,6 +1815,7 @@
       "covers": "patio and window awnings including Century and Tropic Room by hardware era",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -1871,24 +1833,7 @@
       "covers": "RV motorized and manual awnings plus cassette and luxury awnings",
       "gate": "none",
       "link_stability": "library_page_only",
-      "checked": "2026-09-21"
-    },
-    {
-      "brand": "Lippert / LCI",
-      "host": "Lippert",
-      "system": "exterior-and-body",
-      "kind": "library",
-      "doc_types": [
-        "installation",
-        "owner-and-operating",
-        "parts-and-breakdown"
-      ],
-      "title": "Lippert slide-out documentation",
-      "url": "https://support.lci1.com/documentation/",
-      "key": "product category",
-      "covers": "slide-outs and toppers, filed under the Slide-Outs category",
-      "gate": "none",
-      "link_stability": "re_resolve",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -1905,6 +1850,7 @@
       "covers": "racks and carriers, spare-parts diagrams including archived products",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "unverified",
       "note": "Zendesk returns 403 to a script and zero bytes to headless Chrome, so this link cannot be verified from here; the host is up",
       "checked": "2026-09-21"
     },
@@ -1922,6 +1868,7 @@
       "covers": "racks and carriers, spare parts and instructions",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -1938,6 +1885,7 @@
       "covers": "bike racks such as Sport Rider 2 (2009-2015) and Sport Rider SE2 (2016-2018)",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -1957,6 +1905,7 @@
       "covers": "F-53, F-59, E-350/450 and F-600 Body Builder Layout Books and BEMMs",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -1976,6 +1925,7 @@
       "covers": "Express, 4500/5500 and Silverado chassis cab manuals with electrical schematics",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "unverified",
       "note": "the body builder manual index is rendered client side, so no brand text reaches a script",
       "checked": "2026-09-21"
     },
@@ -1995,6 +1945,7 @@
       "covers": "RV operator's manual, chassis maintenance manual, towing guide and warranty sheets",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -2012,6 +1963,7 @@
       "covers": "one operation and maintenance manual covering the K1, K2, K3 and K4 series",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -2030,6 +1982,7 @@
       "covers": "Body and Equipment Guidelines keyed by chassis generation, plus technical bulletins",
       "gate": "none",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -2048,6 +2001,7 @@
       "covers": "NPR, NPR-HD, NQR, NRR and FTR body builder guides, service literature is paid",
       "gate": "paid",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     },
     {
@@ -2067,6 +2021,7 @@
       "covers": "B6.7, ISB, ISL and ISC diesel engines, owner's manuals and wiring diagrams",
       "gate": "free-account",
       "link_stability": "library_page_only",
+      "status": "verified",
       "note": "Cloudflare challenge answers automated checks; the library's own PDFs return 200 application/pdf, so the source is live",
       "checked": "2026-09-21"
     },
@@ -2086,6 +2041,7 @@
       "covers": "1000, 2000, 2400, 3000 and 4000 Series transmissions, operator through service",
       "gate": "paid",
       "link_stability": "library_page_only",
+      "status": "verified",
       "checked": "2026-09-21"
     }
   ],

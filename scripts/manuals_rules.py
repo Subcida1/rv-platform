@@ -92,6 +92,13 @@ DOC_WORDS = re.compile(
 # enforced below, so the claim is never just an assertion.
 CHECKS = ["http", "browser"]
 
+# Whether the link was actually verified. Written by `audit-manuals.py --stamp`,
+# never by hand. A row with no status has never been checked, which is why the
+# pages print no "link checked" line for it: that badge is a claim, and an
+# unchecked row has not earned it. A row with status "fail" is a hard error, so
+# a failing link cannot be generated onto a page at all.
+STATUS = ["verified", "unverified", "fail"]
+
 # Discovery only, never linked: aggregators, courtesy rehosts of copyrighted
 # PDFs, and retailers. ManualsLib states outright that it has no relationship
 # with any manufacturer, and iFixit (the largest manual site) links out to the
@@ -164,6 +171,14 @@ def check_components(rows, errors):
         if r.get("check") == "browser" and not r.get("note"):
             errors.append("%s: check=browser needs a note saying what was seen "
                           "in the browser, and when" % where)
+        if r.get("status") and r["status"] not in STATUS:
+            errors.append("%s: bad status %r" % (where, r["status"]))
+        if r.get("status") == "fail":
+            errors.append("%s: the link failed its check, so this row must not ship "
+                          "(fix the URL or delete the row)" % where)
+        if len(r.get("note", "")) > 200:
+            errors.append("%s: note is %d chars, keep it under 200"
+                          % (where, len(r["note"])))
         if not isinstance(r["doc_types"], list) or not r["doc_types"]:
             errors.append("%s: doc_types must be a non-empty list" % where)
         else:

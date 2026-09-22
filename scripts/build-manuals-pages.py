@@ -6,7 +6,7 @@ into the HTML at build time rather than assembled in the browser, so a crawler
 reads the same thing a visitor does. The shards in assets/js/manuals/ are for
 searching the corpus, not for drawing these pages.
 
-Nine pages come out of this one script: the hub and one per system. Regenerating
+Ten pages come out of this one script: the hub, one per system, and the brand page. Regenerating
 after a manifest change keeps the counts, the rows and the structured data in
 step, the way sync-counts.py keeps the directory's numbers honest.
 
@@ -68,11 +68,11 @@ TITLE = {
                             "Suburban, Atwood, Truma, Coleman-Mach, Dometic and Furrion"),
     "kitchen-and-appliances": ("RV Refrigerator and Appliance Manuals",
                                "RV refrigerator and appliance manuals from the makers: "
-                               "Dometic, Norcold, Everchill, Furrion, Greystone and "
-                               "Suburban"),
+                               "Dometic, Norcold, Suburban, Greystone, RecPro, Splendide "
+                               "and Lippert"),
     "exterior-and-body": ("RV Awning and Slide-Out Manuals",
                           "RV awning and slide-out manuals from the makers: Lippert, "
-                          "Carefree of Colorado, Zip Dee, Girard, HWH and Dometic"),
+                          "Zip Dee, Dometic, Aleko, Thule and Yakima"),
     "towing-and-running-gear": ("RV Hitch, Axle and Tire Manuals",
                                 "RV hitch, axle and tire manuals from the makers: CURT, "
                                 "Reese, Blue Ox, Roadmaster, Dexter, Tekonsha and the tire "
@@ -212,9 +212,19 @@ def row_html(r):
         bits.append('<span class="badge badge-orange">%s</span>' % esc(gate))
     if r.get("rev"):
         bits.append('<span class="man-note">revision %s</span>' % esc(r["rev"]))
-    bits.append('<span class="man-note">link checked %s</span>' % esc(r["checked"]))
-    if r.get("note"):
-        bits.append('<span class="man-note">%s</span>' % esc(r["note"]))
+    # The badge is a claim, so it follows the audit's verdict rather than the
+    # calendar. A row whose link failed its check cannot reach here at all
+    # (`status: fail` is a validation error), and an unchecked or unreachable one
+    # says so rather than borrowing a passing row's wording.
+    #
+    # `note` is deliberately NOT rendered. Those notes are tooling explanations
+    # written for whoever maintains this corpus, and one of them, "an 18.3 MB PDF,
+    # over the audit's 12 MB download cap, so its text is never read", was shipping
+    # as visitor-facing copy.
+    if r.get("status") == "verified":
+        bits.append('<span class="man-note">link checked %s</span>' % esc(r["checked"]))
+    else:
+        bits.append('<span class="man-note">we could not check this link automatically</span>')
     needle = " ".join([r["brand"], r["host"], r["title"], r["key"], r["covers"],
                        " ".join(r["doc_types"])]).lower()
     return """      <li class="man-row" data-types="%s" data-search="%s">
@@ -236,7 +246,7 @@ def row_html(r):
 def hub(rows, oem_count):
     n_brands = len({r["brand"] for r in rows})
     desc = meta_desc("RV owner's manuals, service manuals, parts lists and wiring diagrams "
-                     "from the makers themselves. %d documents across %d makers, linked at "
+                     "from the makers themselves. %d sources across %d makers, linked at "
                      "the source" % (len(rows), n_brands))
     counts = Counter(r["system"] for r in rows)
 
@@ -269,15 +279,15 @@ def hub(rows, oem_count):
     <div class="sec-eyebrow">Manuals</div>
     <h1 class="dir-title man-title">RV MANUALS</h1>
     <p class="man-lede">Owner's manuals, service manuals, parts lists and wiring diagrams
-    for the systems and accessories in your RV. Every row links the manufacturer's own
-    copy of the document.</p>
+    for the systems and accessories in your RV. Every row links the maker's own page or
+    document.</p>
   </div>
 
   <div class="sec" style="padding:10px 0 0">
     <div class="wrap">
       <div class="man-search">
         <input id="man-q" type="search" autocomplete="off" aria-label="Search every manual"
-               placeholder="Search a maker, a model number or a part: Dometic, RM2652, WF-8955, awning">
+               placeholder="Search a maker or a system: Dometic, Norcold, awning, converter">
         <div class="man-facets">
           <button class="chip on" data-type="">Everything</button>
           <button class="chip" data-type="owner-and-operating">Owner's</button>
@@ -285,6 +295,8 @@ def hub(rows, oem_count):
           <button class="chip" data-type="parts-and-breakdown">Parts</button>
           <button class="chip" data-type="installation">Installation</button>
           <button class="chip" data-type="wiring-diagram">Wiring</button>
+          <button class="chip" data-type="spec-sheet">Spec sheets</button>
+          <button class="chip" data-type="bulletin-and-recall">Bulletins</button>
         </div>
       </div>
       <div id="man-status" class="man-status">%d documents and libraries across %d makers.
@@ -321,7 +333,7 @@ def hub(rows, oem_count):
     <div class="wrap">
       <div class="card man-about">
         <div class="man-about-h">What each row tells you</div>
-        <p>Every row links the manufacturer's own copy of the document. It also states what
+        <p>Every row links the maker's own page or document. It also states what
         the document is keyed to, which models or years it covers, and the date the link was
         last checked.</p>
         <p>Some libraries ask for a free account, and a few chassis and engine publications
@@ -412,7 +424,8 @@ SHAPE = {
     "none": "nothing published online",
 }
 SECTIONS = [
-    ("Dated archives", "A manual exists for a specific year, so pick your year first.",
+    ("Dated archives", "The maker keeps a dated archive, so pick your year, revision or "
+                       "unit build range first.",
      ["per-year-and-model", "per-year-brand-wide", "revision-dated", "serial-or-build-range"]),
     ("One manual over all years", "One document covers the whole line, whatever year it is.",
      ["generic-multi-year"]),
@@ -469,11 +482,17 @@ def brands_page(rows):
         "name": BRANDS_TITLE, "url": SITE + "/manuals/brands.html", "description": desc,
         "isPartOf": site_schema(),
         "mainEntity": {
-            "@type": "ItemList", "numberOfItems": len(rows),
+            "@type": "ItemList",
+            # positions must run 1..N over the elements actually listed, so the rows
+            # without a URL are filtered BEFORE the enumeration. Enumerating first
+            # and filtering after produced 44 items over 40 elements with gaps at
+            # 3, 14, 30 and 33.
+            "numberOfItems": len([r for r in rows if r["url"]]),
             "itemListElement": [
                 {"@type": "ListItem", "position": i, "name": r["brand"], "url": r["url"]}
-                for i, r in enumerate(sorted(rows, key=lambda r: r["brand"].lower()), 1)
-                if r["url"]]}}
+                for i, r in enumerate([r for r in
+                                       sorted(rows, key=lambda r: r["brand"].lower())
+                                       if r["url"]], 1)]}}
     crumb = breadcrumbs([("OriginRV", SITE + "/"), ("RV Manuals", SITE + "/manuals/"),
                          (BRANDS_TITLE, SITE + "/manuals/brands.html")])
 
@@ -557,13 +576,14 @@ HUB_JS = r"""/* Manuals hub. Search the whole corpus, and filter it by document 
       var hits = rows.filter(function (r) {
         if (type && r.doc_types.indexOf(type) < 0) return false;
         if (!q) return true;
-        return [r.brand, r.host, r.title, r.key, r.covers].join(' ').toLowerCase()
+        return [r.brand, r.host, r.title, r.key, r.covers,
+                r.doc_types.join(' ').replace(/-/g, ' ')].join(' ').toLowerCase()
           .indexOf(q) >= 0;
       });
       status.textContent = hits.length
         ? hits.length + ' match' + (hits.length === 1 ? '' : 'es') +
           (q ? ' for "' + q + '"' : '')
-        : 'Nothing matches that. Try a maker name, or the model number off the label.';
+        : 'Nothing matches that. Try a maker name like Dometic, or open a system below.';
       ul.innerHTML = hits.slice(0, 60).map(rowHTML).join('');
       ul.hidden = false;
     });
@@ -643,9 +663,13 @@ def main():
                 raise SystemExit("FAIL  %s contains an %s" % (path.name, name))
 
     if "--check" in sys.argv:
-        drift = [p.name for p, t in pages.items()
+        js = ROOT / "assets/js/manuals"
+        expect = dict(pages)
+        expect[js / "hub.js"] = HUB_JS
+        expect[js / "filter.js"] = FILTER_JS
+        drift = [p.name for p, t in expect.items()
                  if not p.exists() or p.read_text(encoding="utf-8") != t]
-        print("manuals pages: %d generated, %d differ from disk" % (len(pages), len(drift)))
+        print("manuals pages: %d generated, %d differ from disk" % (len(expect), len(drift)))
         if drift:
             print("  differs: " + ", ".join(drift))
         raise SystemExit(1 if drift else 0)
