@@ -52,34 +52,34 @@
  <desc>The converter produces correct voltage. Between it and the battery sit the reverse polarity fuses, the battery branch fuse on the DC board, an inline fuse in the battery positive lead, and the battery disconnect switch. Any one of these being open stops charging while the converter still tests fine.</desc>
 
  <rect x="20" y="112" width="146" height="66" rx="8" fill="#eef2ff" stroke="#6366f1" stroke-width="2.5"/>
- <text x="93" y="139" font-family="Inter,sans-serif" font-size="13" font-weight="700" fill="#4338ca" text-anchor="middle">Converter</text>
- <text x="93" y="157" font-family="Inter,sans-serif" font-size="11.5" fill="#6366f1" text-anchor="middle">reads 13.6 V</text>
- <text x="93" y="172" font-family="Inter,sans-serif" font-size="11.5" font-weight="700" fill="#16a34a" text-anchor="middle">this part is fine</text>
+ <text x="93" y="139" font-family="Inter,sans-serif" font-size="16.2" font-weight="700" fill="#4338ca" text-anchor="middle">Converter</text>
+ <text x="93" y="157" font-family="Inter,sans-serif" font-size="14.4" fill="#6366f1" text-anchor="middle">reads 13.6 V</text>
+ <text x="93" y="172" font-family="Inter,sans-serif" font-size="14.4" font-weight="700" fill="#16a34a" text-anchor="middle">this part is fine</text>
 
  <line x1="166" y1="145" x2="806" y2="145" stroke="#94a3b8" stroke-width="3"/>
 
  <rect x="806" y="112" width="60" height="66" rx="8" fill="#ffffff" stroke="#0f172a" stroke-width="2.5"/>
- <text x="836" y="139" font-family="Inter,sans-serif" font-size="12" font-weight="700" fill="#0f172a" text-anchor="middle">Batt</text>
- <text x="836" y="158" font-family="Inter,sans-serif" font-size="11" fill="#67748e" text-anchor="middle">still</text>
- <text x="836" y="172" font-family="Inter,sans-serif" font-size="11" fill="#67748e" text-anchor="middle">flat</text>
+ <text x="836" y="139" font-family="Inter,sans-serif" font-size="15" font-weight="700" fill="#0f172a" text-anchor="middle">Batt</text>
+ <text x="836" y="158" font-family="Inter,sans-serif" font-size="13.8" fill="#67748e" text-anchor="middle">still</text>
+ <text x="836" y="172" font-family="Inter,sans-serif" font-size="13.8" fill="#67748e" text-anchor="middle">flat</text>
 
  <g fill="#f43f5e">
  <circle cx="238" cy="145" r="11"/><circle cx="378" cy="145" r="11"/><circle cx="518" cy="145" r="11"/><circle cx="658" cy="145" r="11"/>
  </g>
- <g font-family="Inter,sans-serif" font-size="12" font-weight="800" fill="#ffffff" text-anchor="middle">
+ <g font-family="Inter,sans-serif" font-size="15" font-weight="800" fill="#ffffff" text-anchor="middle">
  <text x="238" y="150">1</text><text x="378" y="150">2</text><text x="518" y="150">3</text><text x="658" y="150">4</text>
  </g>
 
- <g font-family="Inter,sans-serif" font-size="11.5" font-weight="700" fill="#e11d48" text-anchor="middle">
+ <g font-family="Inter,sans-serif" font-size="14.4" font-weight="700" fill="#e11d48" text-anchor="middle">
  <text x="238" y="100">Reverse</text><text x="238" y="115">polarity fuse</text>
  <text x="378" y="100">Board</text><text x="378" y="115">fuse</text>
  <text x="518" y="100">Inline fuse</text>
  <text x="658" y="100">Disconnect</text>
  </g>
 
- <text x="446" y="212" font-family="Inter,sans-serif" font-size="12.5" font-weight="700" fill="#0f172a" text-anchor="middle">Any one of these open means the converter is fine and the battery cannot charge.</text>
- <text x="446" y="234" font-family="Inter,sans-serif" font-size="12.5" fill="#67748e" text-anchor="middle">That is why measuring at the converter alone proves nothing.</text>
- <text x="446" y="262" font-family="Inter,sans-serif" font-size="12.5" font-weight="700" fill="#4338ca" text-anchor="middle">So measure at both ends and compare.</text>
+ <text x="446" y="212" font-family="Inter,sans-serif" font-size="15.6" font-weight="700" fill="#0f172a" text-anchor="middle">Any one of these open means the converter is fine and the battery cannot charge.</text>
+ <text x="446" y="234" font-family="Inter,sans-serif" font-size="15.6" fill="#67748e" text-anchor="middle">That is why measuring at the converter alone proves nothing.</text>
+ <text x="446" y="262" font-family="Inter,sans-serif" font-size="15.6" font-weight="700" fill="#4338ca" text-anchor="middle">So measure at both ends and compare.</text>
  </svg>
  <figcaption style="font-size:12px;color:var(--text-3);margin-top:6px">The converter is only the first link. Four documented break points sit between it and the battery, and every one of them leaves the converter testing perfectly. Original diagram, OriginRV.</figcaption>
  </figure>
@@ -120,7 +120,7 @@
  <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px">Unusually, both major converter manufacturers publish pass tests rather than leaving you to guess. Here they are, in their own figures.</p>
  <h3 style="font-size:17px;font-weight:800">The method is the same for all of them.</h3>
  <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px">Disconnect the battery cables at the battery, put your meter across the converter output, and read with no load connected.</p>
- <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>WFCO, 8900 and 9900 series:</b> if the voltage reads 13.6 volts DC plus or minus a fifth with no load, the converter is functioning properly. On the 9800 series the window is wider, 13.6 to 14.4. On the lithium-capable 8900LiS, the lead-acid switch position should read 13.6 plus or minus a fifth, and the lithium position 13.6 to 14.6.</p>
+ <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>WFCO, 8900 and 9900 series:</b> if the voltage reads 13.6 volts DC plus or minus a fifth with no load, the converter is functioning properly. On the 8700-AD series the window is wider, 13.6 to 14.4. On the lithium-capable 8900LiS, the lead-acid switch position should read 13.6 plus or minus a fifth, and the lithium position 13.6 to 14.6.</p>
  <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px"><b>Progressive Dynamics, current guidance:</b> loosen the screw and disconnect the negative battery wire, then read. The voltage should be 13.6 volts, or 14.6 for lithium models, plus or minus three tenths. If it is in that range, the converter is good. Their older PD4000 documents give normal as 13.6, boost as 14.4, and storage as 13.2, all plus or minus three tenths. The 9100 and 9200 series manuals describe the unit as working properly if the voltage is above 13 volts on 12 volt models.</p>
  <h3 style="font-size:17px;font-weight:800">What the failure looks like.</h3>
  <p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px">Zero volts with AC present is a converter fault. Progressive Dynamics says to check the reverse battery protection fuses at that point, and if they are good, to move on to the AC input voltage. Their listed causes for no output are AC power not connected, blown external fuses usually through reverse polarity, a short circuit, a thermal shutdown, or an over-voltage shutdown which happens above 132 volts input. For low rather than absent output they list an excessive load, an AC input outside 105 to 130 volts, or a battery with a bad cell.</p>

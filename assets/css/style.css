@@ -1070,6 +1070,12 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
    an odd position. Centre it at one card's width so it looks deliberate.
    Measured 2026-09-21: home troubleshooting 7 cards, guides index 17 cards. */
 @media(min-width:641px){.guide-grid>:last-child:nth-child(odd){grid-column:1/-1;justify-self:center;width:100%;max-width:calc(50% - 8px)}}
+/* Diagrams: inline SVG scales its text with the viewBox, so at phone widths the
+   labels shrank to about 6.5px and became unreadable. Give the figure a floor and
+   let it scroll sideways instead. At desktop the figure is already wider than the
+   floor, so this changes nothing there. Measured 2026-09-21. */
+figure>svg[role="img"]{min-width:720px}
+figure:has(svg[role="img"]){overflow-x:auto;overflow-y:hidden}
 .guide-card{display:flex;flex-direction:column;gap:14px;padding:22px;height:100%;transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}
 .guide-card:hover{transform:translateY(-3px);border-color:var(--border-2);box-shadow:var(--shadow)}
 .guide-ic{width:52px;height:52px;border-radius:14px;background:var(--grad-soft);border:1px solid var(--border);display:grid;place-items:center;font-size:26px;flex-shrink:0}
