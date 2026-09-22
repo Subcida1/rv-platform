@@ -250,7 +250,7 @@ def row_html(r):
        types, esc(r["brand"]), host, esc(r["key"]), esc(r["covers"]), "".join(bits))
 
 
-def hub(rows, oem_count):
+def hub(rows, oem_count, model_count=0):
     n_brands = len({r["brand"] for r in rows})
     desc = meta_desc("RV owner's manuals, service manuals, parts lists and wiring diagrams "
                      "from the makers themselves. %d sources across %d makers, linked at "
@@ -294,7 +294,7 @@ def hub(rows, oem_count):
     <div class="wrap">
       <div class="man-search">
         <input id="man-q" type="search" autocomplete="off" aria-label="Search every manual"
-               placeholder="Search a maker or a system: Dometic, Norcold, awning, converter">
+               placeholder="Search a maker, a model line or a part: Jayco, Jay Flight, Dometic">
         <div class="man-facets">
           <button class="chip on" data-type="">Everything</button>
           <button class="chip" data-type="owner-and-operating">Owner's</button>
@@ -306,9 +306,9 @@ def hub(rows, oem_count):
           <button class="chip" data-type="bulletin-and-recall">Bulletins</button>
         </div>
       </div>
-      <div id="man-status" class="man-status">%d documents and libraries across %d makers.
-        Start typing, or open a system below. Nothing loads until you type, so this page
-        stays light.</div>
+      <div id="man-status" class="man-status">%d documents and libraries across %d makers,
+        and %d model lines. Start typing, or open a system below. Nothing loads until you
+        type, so this page stays light.</div>
       <ul id="man-results" class="man-list" hidden></ul>
     </div>
   </div>
@@ -364,7 +364,7 @@ def hub(rows, oem_count):
       </div>
     </div>
   </div>
-""" % (len(rows), n_brands, "\n".join(tiles), oem_count)
+""" % (len(rows), n_brands, model_count, "\n".join(tiles), oem_count)
 
     return (head(HUB_TITLE, desc, SITE + "/manuals/",
                  [collection, breadcrumbs([("OriginRV", SITE + "/"),
@@ -454,7 +454,46 @@ SECTIONS = [
 ]
 
 
-def brand_row(r):
+def model_list(models):
+    """The model lines of one maker, each one linked to what it actually has.
+
+    A model line is the thing an owner knows: "I have a Jay Flight". Until
+    2026-09-22 the brand page could tell them who publishes Jayco manuals but
+    not whether their model was in there at all.
+
+    Every link is conditional on the data, because the honest answer differs by
+    maker: some publish a per-model file, some one class-level document for the
+    whole division, and a few publish nothing you can reach (Q9).
+    """
+    items = []
+    for m in sorted(models, key=lambda x: x["model"].lower()):
+        segs = ", ".join(s.replace("-", " ") for s in m["segments"])
+        meta_html = " &middot; ".join(esc(x) for x in (segs, m["years"])
+                                      if x and x not in ("none", "not stated"))
+        bits = []
+        if m["url"]:
+            bits.append('<a href="%s" target="_blank" rel="noopener">manual</a>'
+                        % esc(m["url"]))
+        if m["parts_url"]:
+            bits.append('<a href="%s" target="_blank" rel="noopener">parts</a>'
+                        % esc(m["parts_url"]))
+        if m["accessories_url"]:
+            bits.append('<a href="%s" target="_blank" rel="noopener">accessories</a>'
+                        % esc(m["accessories_url"]))
+        if not bits:
+            bits.append('<span class="man-note">no document published online</span>')
+        elif m.get("status") != "verified":
+            bits.append('<span class="man-note">link not machine-checked</span>')
+        items.append('            <li class="man-model"><span class="mm-name">%s</span>'
+                     '<span class="mm-meta">%s</span>'
+                     '<span class="mm-links">%s</span></li>'
+                     % (esc(m["model"]), meta_html, " ".join(bits)))
+    return ('\n        <details class="man-models"><summary>%d model lines</summary>'
+            '\n          <ul class="man-model-list">\n%s\n          </ul>'
+            '\n        </details>' % (len(models), "\n".join(items)))
+
+
+def brand_row(r, models=()):
     shape = SHAPE.get(r["structure"], r["structure"])
     years = "" if r["years"] in ("none", "not stated") else r["years"]
     meta = ['<span>%s</span>' % esc(r["note"])]
@@ -472,19 +511,30 @@ def brand_row(r):
                      'automatically</span>')
     else:
         foot = '<span class="man-note">no manual published online</span>'
-    needle = " ".join([r["brand"], r["years"], r["note"], shape]).lower()
+
+    body = model_list(models) if models else ""
+    # The filter matches on this string, so it has to carry the model names and
+    # the segments, not just the maker. Both spellings are included: the data
+    # says "class-b" and a person types "class b".
+    needle = " ".join([r["brand"], r["years"], r["note"], shape]
+                      + [m["model"] for m in models]
+                      + [s for m in models for s in m["segments"]]).lower()
+    if "-" in needle:
+        needle += " " + needle.replace("-", " ")
     return """      <li class="man-row" data-search="%s">
         <div class="man-row-top">
           <span class="man-doc">%s</span>
           <span class="man-types"><span class="badge badge-tint">%s</span></span>
         </div>
         <div class="man-row-meta">%s</div>
-        <div class="man-row-foot">%s</div>
+        <div class="man-row-foot">%s</div>%s
       </li>
-""" % (esc(needle), esc(r["brand"]), esc(shape), "".join(meta), foot)
+""" % (esc(needle), esc(r["brand"]), esc(shape), "".join(meta), foot, body)
 
 
-def brands_page(rows):
+def brands_page(rows, models_by_brand=None):
+    models_by_brand = models_by_brand or {}
+    model_total = sum(len(v) for v in models_by_brand.values())
     desc = meta_desc(BRANDS_DESC)
     dated = [r for r in rows if r["structure"] in SECTIONS[0][2]]
     generic = [r for r in rows if r["structure"] in SECTIONS[1][2]]
@@ -492,7 +542,8 @@ def brands_page(rows):
 
     blocks = []
     for (heading, blurb, keys), group in zip(SECTIONS, [dated, generic, none]):
-        rows_html = "\n".join(brand_row(r) for r in sorted(
+        rows_html = "\n".join(brand_row(r, models_by_brand.get(r["brand"], []))
+                              for r in sorted(
             group, key=lambda r: r["brand"].lower()))
         blocks.append("""
       <h2 class="man-h2">%s<span class="man-count">%d brands</span></h2>
@@ -525,20 +576,23 @@ def brands_page(rows):
     <div class="man-crumb"><a href="manuals/index.html">RV Manuals</a></div>
     <h1 class="dir-title man-title">RV MANUALS BY BRAND</h1>
     <p class="man-lede">Where each RV manufacturer publishes its own owner's manual, how
-    far back the archive reaches, and how the documents are organised. %d brands.</p>
+    far back the archive reaches, and how the documents are organised. %d brands and %d
+    model lines, each linked to the maker's own manual, parts list and accessory
+    catalogue where it publishes one.</p>
   </div>
 
   <div class="sec pad-10-60">
     <div class="wrap">
       <div class="man-search">
-        <input id="man-q" type="search" autocomplete="off" aria-label="Search brands"
-               placeholder="Search a brand: Winnebago, Jayco, Airstream, Casita">
+        <input id="man-q" type="search" autocomplete="off"
+               aria-label="Search brands and model lines"
+               placeholder="Search a brand or a model line: Jay Flight, Reflection, Winnebago">
       </div>
-      <div id="man-status" class="man-status">%d brands shown</div>
+      <div id="man-status" class="man-status">%d brands and %d model lines shown</div>
 %s
     </div>
   </div>
-""" % (len(rows), len(rows), "\n".join(blocks))
+""" % (len(rows), model_total, len(rows), model_total, "\n".join(blocks))
 
     return (head(BRANDS_TITLE, desc, "%s/manuals/brands.html" % SITE, [collection, crumb])
             + body + foot("assets/js/manuals/filter.js"))
@@ -788,6 +842,14 @@ def main():
         raise SystemExit(1)
     components, _ = R.clean_dashes(doc.get("components", []))
     brands, _ = R.clean_dashes(doc.get("brands", []))
+    models, _ = R.clean_dashes(doc.get("models", []))
+
+    # One pass so each brand row can carry its own maker's model lines, and a
+    # maker with none (Taxa, whose storefront answers 423) simply carries none
+    # rather than a fabricated list.
+    models_by_brand = {}
+    for m in models:
+        models_by_brand.setdefault(m["brand"], []).append(m)
 
     by_system = {}
     for r in components:
@@ -795,12 +857,12 @@ def main():
     for slug in by_system:
         by_system[slug].sort(key=lambda r: (r["brand"].lower(), r["title"].lower()))
 
-    pages = {OUTDIR / "index.html": hub(components, len(brands))}
+    pages = {OUTDIR / "index.html": hub(components, len(brands), len(models))}
     for slug, _ in R.SYSTEMS:
         title, desc = TITLE[slug]
         pages[OUTDIR / ("%s.html" % slug)] = system_page(
             slug, title, meta_desc(desc), by_system.get(slug, []))
-    pages[OUTDIR / "brands.html"] = brands_page(brands)
+    pages[OUTDIR / "brands.html"] = brands_page(brands, models_by_brand)
     pages[OUTDIR / "recalls.html"] = recalls_page(doc.get("recalls", []),
                                                   doc.get("bulletins", []),
                                                   doc.get("bulletin_source", ""))

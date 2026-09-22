@@ -172,6 +172,22 @@ def targets(doc):
         out.append({"name": r["source"], "title": r["source"], "group": "safety-record",
                     "url": r["url"], "note": r.get("note", ""),
                     "check": r.get("check")})
+    # The model axis. De-duplicated on purpose: most model lines of one maker
+    # share a single archive URL (Jayco publishes one document per CATEGORY per
+    # year, not per model), and auditing the same URL twenty-five times would
+    # spend twenty-five fetches to learn one fact. The stamp is keyed the same
+    # way, so every model row sharing a URL gets the same honest verdict.
+    seen = {(t["name"], t["url"], t["group"]) for t in out}
+    for r in doc.get("models", []):
+        if not r.get("url"):
+            continue        # publishes nothing online: there is nothing to check
+        k = (r["brand"], r["url"], "model-line")
+        if k in seen:
+            continue
+        seen.add(k)
+        out.append({"name": r["brand"], "title": "%s %s" % (r["brand"], r["model"]),
+                    "group": "model-line", "url": r["url"],
+                    "note": r.get("note", ""), "check": r.get("check")})
     return out
 
 
@@ -329,6 +345,7 @@ def stamp(results):
     for key, name_field, group_field in (
             ("components", "brand", "system"),
             ("brands", "brand", "brand-archive"),
+            ("models", "brand", "model-line"),
             ("recalls", "source", "safety-record")):
         for row in doc.get(key, []):
             group = row.get(group_field) if group_field == "system" else group_field
@@ -340,8 +357,16 @@ def stamp(results):
              "covers", "rev", "gate", "link_stability", "check", "status", "note",
              "checked"]
     doc["components"] = [{k: r[k] for k in order if k in r} for r in doc["components"]]
+    # Every field a model row can carry must appear in this list. This list is
+    # not cosmetic: the comprehension below rebuilds each row from it, so a field
+    # missing here is DELETED on the next stamp -- which is how the recalls page
+    # lost its `section` field and rendered zero rows while building cleanly.
     for key, order in (("brands", ["brand", "url", "structure", "years", "gate", "note",
                                    "check", "status"]),
+                       ("models", ["brand", "model", "segments", "years", "url",
+                                   "link_stability", "parts_url", "parts_serves",
+                                   "accessories_url", "other_docs", "gate", "evidence",
+                                   "check", "source", "note", "status", "checked"]),
                        ("recalls", ["source", "section", "what", "url", "keyed_by", "gate",
                                     "note", "check", "status", "checked"])):
         doc[key] = [{k: r[k] for k in order if k in r} for r in doc.get(key, [])]
@@ -365,10 +390,12 @@ def main():
     errors = []
     components, _ = R.clean_dashes(doc.get("components", []))
     brands, _ = R.clean_dashes(doc.get("brands", []))
+    models, _ = R.clean_dashes(doc.get("models", []))
     recalls, _ = R.clean_dashes(doc.get("recalls", []))
     bulletins, _ = R.clean_dashes(doc.get("bulletins", []))
     R.check_components(components, errors)
     R.check_brands(brands, errors)
+    R.check_models(models, errors)
     R.check_recalls(recalls, errors)
     R.check_bulletins(bulletins, errors)
 

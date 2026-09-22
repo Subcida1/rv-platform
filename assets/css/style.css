@@ -1526,6 +1526,24 @@ figure:has(svg[role="img"]){overflow-x:auto;overflow-y:hidden}
 .man-row-foot{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;margin-top:12px}
 .man-note{font-size:12.5px;color:var(--text-3)}
 .man-go{font-size:13px;font-weight:800;color:var(--b1)}
+
+/* Model lines inside a brand row. These are deliberately NOT .man-row:
+   filter.js selects every .man-row on the page and counts them for its
+   "N of 44 shown" line, so a nested row wearing that class would corrupt the
+   count it is reported by. */
+.man-models{margin-top:14px;border-top:1px solid var(--border);padding-top:12px}
+.man-models>summary{font-size:13px;font-weight:800;color:var(--b1);cursor:pointer;list-style:none}
+.man-models>summary::-webkit-details-marker{display:none}
+.man-models>summary::before{content:"+ ";font-weight:800}
+.man-models[open]>summary::before{content:"\2013 "}
+.man-model-list{list-style:none;margin-top:8px}
+.man-model{display:flex;flex-wrap:wrap;gap:3px 14px;align-items:baseline;padding:7px 0;border-top:1px solid var(--border);font-size:13.5px}
+.man-model:first-child{border-top:0}
+.mm-name{font-weight:700;color:var(--text);min-width:158px}
+.mm-meta{color:var(--text-3);font-size:12.5px}
+.mm-links{display:flex;gap:12px;margin-left:auto;flex-wrap:wrap}
+.mm-links a{color:var(--b1);font-weight:800;font-size:12.5px}
+.mm-links .man-note{font-weight:500}
 .man-about{padding:26px;margin-top:24px}
 .man-about-h{font-size:15.5px;font-weight:800;margin-bottom:12px}
 .man-about p{font-size:14.5px;color:var(--text-2);margin-bottom:12px;max-width:860px}

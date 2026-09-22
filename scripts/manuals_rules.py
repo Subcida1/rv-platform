@@ -38,6 +38,20 @@ COMPONENT_REQUIRED = ["brand", "host", "system", "kind", "doc_types", "title",
                       "url", "key", "covers", "gate", "link_stability", "checked"]
 BRAND_REQUIRED = ["brand", "url", "structure", "years", "gate", "note"]
 
+# The model axis. A component row answers "which library holds the fridge
+# manual" and a brand row answers "who publishes manuals". Neither answers
+# "Jay Flight", which is what an owner actually types into the search box --
+# measured on 2026-09-22: every one of the 44 makes returned zero hits from
+# the manuals hub search, because the hub corpus was built from components
+# only. A model row is the join: this maker, this model line, these years,
+# this manual, plus the maker's own parts and accessory channels where they
+# exist. One row per model line, never per model year (Q1).
+SEGMENTS = ["class-a", "class-b", "class-b-plus", "class-c", "super-c",
+            "travel-trailer", "fifth-wheel", "toy-hauler", "destination",
+            "truck-camper", "overland"]
+MODEL_REQUIRED = ["brand", "model", "segments", "years", "url", "link_stability",
+                  "gate", "evidence", "check"]
+
 # A URL carrying a revision letter, a date, or a dated upload folder is not
 # storable: the maker replaces the file and our link dies with no warning.
 # Dometic is the worst case (part number, revision, date and sharded folders
@@ -90,7 +104,10 @@ DOC_WORDS = re.compile(
 # it in a real Chrome and confirmed what is there, which is the only option for
 # a host that refuses every automated client. A browser row must carry a note,
 # enforced below, so the claim is never just an assertion.
-CHECKS = ["http", "browser"]
+# How a link was observed. "both" exists because neither method is authoritative
+# on its own: wfcotech.com/support/product-downloads/ answers 403 to real Chrome
+# and 200 to curl.
+CHECKS = ["http", "browser", "both"]
 
 # Whether the link was actually verified. Written by `audit-manuals.py --stamp`,
 # never by hand. A row with no status has never been checked, which is why the
@@ -231,6 +248,82 @@ def check_brands(rows, errors):
         if len(r["note"]) > 160:
             errors.append("%s: note is %d chars, keep it under 160"
                           % (where, len(r["note"])))
+        if r.get("status") and r["status"] not in STATUS:
+            errors.append("%s: bad status %r" % (where, r["status"]))
+        if r.get("status") == "fail":
+            errors.append("%s: the link failed its check, so this row must not ship"
+                          % where)
+
+
+def check_models(rows, errors):
+    for i, r in enumerate(rows):
+        where = "models[%d] %s / %s" % (i, r.get("brand", "?"), r.get("model", "?"))
+
+        missing = [f for f in MODEL_REQUIRED if f not in r]
+        if missing:
+            errors.append("%s: missing %s" % (where, ", ".join(missing)))
+            continue
+
+        segs = r["segments"]
+        if not isinstance(segs, list):
+            errors.append("%s: segments must be a list (got %r)" % (where, segs))
+            continue
+        for s in segs:
+            if s not in SEGMENTS:
+                errors.append("%s: bad segment %r" % (where, s))
+        if len(segs) != len(set(segs)):
+            errors.append("%s: duplicate segments %r" % (where, segs))
+        # An empty list is legal but must be explained. Three discontinued
+        # Leisure Travel Vans and Coach House lines are filed this way because
+        # the maker's own page does not state a segment for them.
+        if not segs and not r.get("note"):
+            errors.append("%s: no segment and no note saying why" % where)
+        if r["gate"] not in BRAND_GATES:
+            errors.append("%s: bad gate %r" % (where, r["gate"]))
+        if r["check"] not in CHECKS:
+            errors.append("%s: bad check %r" % (where, r["check"]))
+
+        # link_stability describes what KIND of thing we stored. A row with no
+        # URL -- a maker that publishes nothing, or one whose model lines share a
+        # single class-level document -- has nothing to store, so it carries
+        # null rather than a value that would imply a link exists.
+        if r["url"] and r["link_stability"] not in STABILITY:
+            errors.append("%s: bad link_stability %r" % (where, r["link_stability"]))
+        if not r["url"] and r["link_stability"] is not None:
+            errors.append("%s: no url, so link_stability must be null (got %r)"
+                          % (where, r["link_stability"]))
+
+        # THE GROUNDING GATE. A model row exists only because somebody read the
+        # maker's own page and saw the model named on it. That quote is what lets
+        # the next person check the claim instead of trusting it, so a row
+        # without one is an assertion rather than a record and does not ship.
+        if not (r["evidence"] or "").strip():
+            errors.append("%s: no evidence quote, so the row is ungrounded" % where)
+
+        # A row may legally carry no manual URL: several makers publish one
+        # class-level document and no per-model file, and a maker that publishes
+        # nothing still gets a model row stating the gap (Q9). `evidence` is what
+        # carries the claim in that case.
+        for field in ("url", "parts_url", "accessories_url"):
+            v = r.get(field)
+            if not v:
+                continue
+            if not v.startswith("https://"):
+                errors.append("%s: %s must be https (%r)" % (where, field, v))
+            low = v.lower()
+            for bad in BANNED:
+                if bad in low:
+                    errors.append("%s: banned host %s in %s" % (where, bad, field))
+            if PLACEHOLDER.search(v):
+                errors.append("%s: %s is a pattern, not an address (%s)"
+                              % (where, field, v))
+
+        if r["url"] and r["link_stability"] == "stable_part_keyed" \
+                and UNSTORABLE.search(r["url"]):
+            errors.append("%s: claims stable_part_keyed but the URL carries a "
+                          "revision or date token, so it will rot (%s)"
+                          % (where, r["url"]))
+
         if r.get("status") and r["status"] not in STATUS:
             errors.append("%s: bad status %r" % (where, r["status"]))
         if r.get("status") == "fail":
