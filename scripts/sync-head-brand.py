@@ -12,6 +12,12 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 CANON = "https://originrv.com"
 
+# Cloudflare Web Analytics. The token is public by design: it is visible in the
+# HTML of every page and only permits submitting pageviews to this account.
+# Empty means no beacon is emitted. The site is not proxied through Cloudflare,
+# so there is no automatic injection and this snippet is the only route.
+BEACON_TOKEN = ""
+
 ICON_ANCHOR = '<link rel="stylesheet" href="assets/css/style.css">'
 ICON_BLOCK = """<link rel="icon" type="image/svg+xml" href="assets/img/brand/favicon.svg">
 {ind}<link rel="icon" type="image/png" sizes="32x32" href="assets/img/brand/favicon-32.png">
@@ -30,6 +36,12 @@ OG_BLOCK = """<meta property="og:image" content="{c}/assets/img/brand/og-default
 
 pages = sorted(p for p in ROOT.rglob("*.html") if ".git" not in p.parts)
 patched, skipped = [], []
+
+# The beacon goes last in the body, which is where Cloudflare's own setup
+# instructions put it, rather than in the head with everything else.
+BODY_ANCHOR = "</body>"
+BEACON = ('<script defer src="https://static.cloudflareinsights.com/beacon.min.js" '
+          'data-cf-beacon=\'{"token": "%s"}\'></script>\n')
 
 for page in pages:
     rel = page.relative_to(ROOT)
@@ -53,6 +65,11 @@ for page in pages:
         indent = html[line_start + 1:html.index(OG_ANCHOR)]
         html = html.replace(
             OG_ANCHOR, OG_ANCHOR + "\n" + OG_BLOCK.format(c=CANON, ind=indent), 1)
+
+    if BEACON_TOKEN and "cloudflareinsights" not in html:
+        if BODY_ANCHOR not in html:
+            raise SystemExit("no </body> in %s" % rel)
+        html = html.replace(BODY_ANCHOR, BEACON % BEACON_TOKEN + BODY_ANCHOR, 1)
 
     if html == before:
         skipped.append(rel)
