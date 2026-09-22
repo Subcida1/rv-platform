@@ -42,7 +42,7 @@
     "sources": []
   },
   "guides/battery-winter-storage.html": {
-    "hash": "e3bdc0bd8ed547d7",
+    "hash": "be9bd7d9f3a04d47",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -56,42 +56,47 @@
     "sources": []
   },
   "guides/roof-snow-load.html": {
-    "hash": "8009ca0de37a064b",
-    "status": "unverified",
-    "verified_by": null,
-    "verified_at": null,
-    "sources": []
+    "hash": "b6db4fc767e69efc",
+    "status": "verified",
+    "verified_by": "Claude Desktop (review + confirm rounds)",
+    "verified_at": "2026-09-22",
+    "sources": [
+      "inbox/VERIFY-REQUEST-20260922-1345-roof-snow-load.md",
+      "inbox/CONFIRM-REQUEST-20260922-1405-roof-snow-load.md",
+      "outbox/verify-reply-20260922-roof-snow-load.md",
+      "outbox/confirm-reply-20260922-1405-roof-snow-load.md"
+    ]
   },
   "guides/rv-12-volt-problems.html": {
-    "hash": "2763f8f55a0371c8",
+    "hash": "6d0711cceb3ed5b4",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "guides/rv-converter-not-charging.html": {
-    "hash": "9abbc179282ec70f",
+    "hash": "305462e8942b672a",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "guides/rv-furnace-not-working.html": {
-    "hash": "6879858152b66aeb",
+    "hash": "378ca286d5235d84",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "guides/rv-fuse-keeps-blowing.html": {
-    "hash": "a305a68a9f4c0a41",
+    "hash": "4f558537e48aa544",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "guides/rv-generator-not-charging.html": {
-    "hash": "3ff21e7c891ea61c",
+    "hash": "86bd8aa31e59c009",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -105,35 +110,35 @@
     "sources": []
   },
   "guides/rv-outlets-not-working.html": {
-    "hash": "676bdcdd0311dba5",
+    "hash": "d128f817b8c2cd3d",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "guides/rv-refrigerator-not-cooling.html": {
-    "hash": "203d49df90516f7c",
+    "hash": "22ba24ef1d6e20b7",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "guides/rv-solar-not-charging.html": {
-    "hash": "52753affaf715fa6",
+    "hash": "7f3719b89a290507",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "guides/rv-tank-sensors-reading-wrong.html": {
-    "hash": "656fe5c7fda1d2b9",
+    "hash": "20b4624362c67bf9",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "guides/rv-tire-replacement.html": {
-    "hash": "0cc5863f9f449ced",
+    "hash": "461fcef7f04500af",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -147,21 +152,21 @@
     "sources": []
   },
   "guides/rv-water-heater-not-heating.html": {
-    "hash": "61142f5150e11541",
+    "hash": "602b124d31b3c13d",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "guides/tires-winter.html": {
-    "hash": "30057a49354778bc",
+    "hash": "f2ad0cde3438fca4",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "guides/winterize-plumbing.html": {
-    "hash": "5abe56c74fb07e59",
+    "hash": "91f658867ef3c303",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -175,7 +180,7 @@
     "sources": []
   },
   "manuals/brands.html": {
-    "hash": "6f8e23e69ad9573c",
+    "hash": "9a52d8d984118c32",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -210,7 +215,7 @@
     "sources": []
   },
   "manuals/kitchen-and-appliances.html": {
-    "hash": "2f933686d23886e5",
+    "hash": "a105fc1c0f02f3d5",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -259,7 +264,7 @@
     "sources": []
   },
   "tools/index.html": {
-    "hash": "231aa60e0f1c7e12",
+    "hash": "e8996519cdb3a39e",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
