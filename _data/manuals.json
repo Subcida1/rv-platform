@@ -2053,7 +2053,9 @@
       "years": "1981 to 2027",
       "gate": "none",
       "note": "one page per model year, then per model; year pages also key on the 7th VIN character",
-      "status": "verified"
+      "status": "verified",
+      "warranty_kind": "in-owner-manual",
+      "warranty_note": "New Vehicle Limited Warranty is printed in each model year's Operator Manual"
     },
     {
       "brand": "Itasca",
@@ -2071,7 +2073,12 @@
       "years": "2010 and newer",
       "gate": "vin-or-login",
       "note": "open per-make archive plus a VIN-gated Owners Resource portal for 2010+ units",
-      "status": "verified"
+      "status": "verified",
+      "warranty_kind": "page",
+      "warranty_url": "https://www.thormotorcoach.com/owners/owners-manuals",
+      "warranty_stability": "library_page_only",
+      "warranty_note": "Warranty Guides by year and class on this page; the PDF links we tested all answer 404",
+      "warranty_status": "verified"
     },
     {
       "brand": "Tiffin Motorhomes",
@@ -2080,7 +2087,9 @@
       "years": "1973 to 2026",
       "gate": "none",
       "note": "distinct document per model line per year, some years add a separate chassis manual",
-      "status": "verified"
+      "status": "verified",
+      "warranty_kind": "in-owner-manual",
+      "warranty_note": "Limited Warranty is bound into each model's Owner's Manual"
     },
     {
       "brand": "Newmar",
@@ -2089,7 +2098,12 @@
       "years": "rolling",
       "gate": "free-account",
       "note": "Newgle knowledgebase needs a free account; NewPar serves static PDFs",
-      "status": "verified"
+      "status": "verified",
+      "warranty_kind": "page",
+      "warranty_url": "https://www.newmarcorp.com/owners/warranty-information",
+      "warranty_stability": "library_page_only",
+      "warranty_note": "describes the 1-year unlimited-mile and 5-year structural warranties; full terms are deferred to the dealership",
+      "warranty_status": "verified"
     },
     {
       "brand": "Forest River RV",
@@ -2098,7 +2112,12 @@
       "years": "2015 and newer",
       "gate": "none",
       "note": "interactive Owner's Kit shared across Forest River divisions, PDF download inside",
-      "status": "unverified"
+      "status": "unverified",
+      "warranty_kind": "page",
+      "warranty_url": "https://forestriverinc.com/warranty-information",
+      "warranty_stability": "library_page_only",
+      "warranty_note": "Limited Warranties by product class and purchase-date window (Towable, Motorized, Tent Camper, Truck Camper); the page refuses scripted checks",
+      "warranty_status": "unverified"
     },
     {
       "brand": "Dynamax",
@@ -2116,7 +2135,12 @@
       "years": "current model years (2027 shown)",
       "gate": "none",
       "note": "one document per category per year, not per model line",
-      "status": "verified"
+      "status": "verified",
+      "warranty_kind": "document",
+      "warranty_url": "https://www.jayco.com/uploads/rvs/manuals/660-2027-Jayco-Warranty-Guide---Web.pdf",
+      "warranty_stability": "re_resolve",
+      "warranty_note": "2027 Jayco Towable Limited Warranty; the guide is year-versioned, so this is the current one",
+      "warranty_status": "verified"
     },
     {
       "brand": "Entegra Coach",
@@ -2134,7 +2158,9 @@
       "years": "2015 and newer",
       "gate": "none",
       "note": "Forest River division on the same interactive kit, older units get numbered PDFs",
-      "status": "unverified"
+      "status": "unverified",
+      "warranty_kind": "in-owner-manual",
+      "warranty_note": "Coachmen Limited Warranty is bound into the owner's manual"
     },
     {
       "brand": "Fleetwood",
@@ -2240,7 +2266,9 @@
       "years": "1990s to 2024",
       "gate": "none",
       "note": "searchable catalog of owner's manuals and parts books per model year",
-      "status": "verified"
+      "status": "verified",
+      "warranty_kind": "in-owner-manual",
+      "warranty_note": "Limited Warranty Policy is bound into each model's manual"
     },
     {
       "brand": "Forest River towables",
@@ -2249,7 +2277,12 @@
       "years": "2015 and newer",
       "gate": "none",
       "note": "shared interactive kit, division Forest River RV or Palomino; manuals back to 2015",
-      "status": "unverified"
+      "status": "unverified",
+      "warranty_kind": "document",
+      "warranty_url": "https://forestriverinc.com/downloads/FOREST-RIVER-LIMITED-TOWABLE-WARRANTY-ON-OR-AFTER-7-1-23.pdf",
+      "warranty_stability": "re_resolve",
+      "warranty_note": "Limited Towable Warranty for units bought on or after 1 July 2023; earlier purchase-date windows are on the warranty page",
+      "warranty_status": "verified"
     },
     {
       "brand": "Prime Time",
@@ -2276,7 +2309,12 @@
       "years": "2002 to 2027",
       "gate": "none",
       "note": "per-year PDFs, embeds Dutchmen and CrossRoads/Redwood documents",
-      "status": "verified"
+      "status": "verified",
+      "warranty_kind": "document",
+      "warranty_url": "https://krakoa.keystonerv.com/sites/default/files/2026-08/2026_Keystone_Warranty_Guide-Effective_6.1.2025.pdf",
+      "warranty_stability": "re_resolve",
+      "warranty_note": "2026 Keystone Warranty Guide, effective 1 June 2025; year-versioned, older guides are on the manuals hub",
+      "warranty_status": "verified"
     },
     {
       "brand": "Grand Design RV",
@@ -2285,7 +2323,12 @@
       "years": "2013 to 2026",
       "gate": "none",
       "note": "manuals are per model line and revised by date, not labelled by model year",
-      "status": "verified"
+      "status": "verified",
+      "warranty_kind": "page",
+      "warranty_url": "https://www.granddesignrv.com/owners/resources/owners-manuals",
+      "warranty_stability": "library_page_only",
+      "warranty_note": "1-year Base, 3-year Structural and 5-year Frame warranties, each its own document, plus a Warranty and Service Guide",
+      "warranty_status": "verified"
     },
     {
       "brand": "Heartland RV",
@@ -2312,7 +2355,9 @@
       "years": "current models",
       "gate": "none",
       "note": "one owner's manual per model line, not per model year",
-      "status": "verified"
+      "status": "verified",
+      "warranty_kind": "in-owner-manual",
+      "warranty_note": "warranty terms are inside the owner's guide"
     },
     {
       "brand": "Brinkley RV",
@@ -2321,7 +2366,9 @@
       "years": "2023 to 2026",
       "gate": "none",
       "note": "manuals keyed to unit-number build ranges such as Units #154-7832",
-      "status": "verified"
+      "status": "verified",
+      "warranty_kind": "in-owner-manual",
+      "warranty_note": "supplied as a separate Warranty Guide with the unit; not published at its own public URL"
     },
     {
       "brand": "KZ RV",
@@ -2357,7 +2404,9 @@
       "years": "2000 to 2026",
       "gate": "none",
       "note": "owners manuals and brochures archive, truck camper and travel trailer",
-      "status": "verified"
+      "status": "verified",
+      "warranty_kind": "in-owner-manual",
+      "warranty_note": "Limited Warranty is inside each owner's manual"
     },
     {
       "brand": "nuCamp RV",
@@ -2366,7 +2415,12 @@
       "years": "2017 to 2026",
       "gate": "none",
       "note": "per-model PDFs including pre-2021 bundles",
-      "status": "verified"
+      "status": "verified",
+      "warranty_kind": "page",
+      "warranty_url": "https://nucamprv.com/documents/",
+      "warranty_stability": "library_page_only",
+      "warranty_note": "the 1-year Limited and 3-year Structural warranty in one PDF, on this documents page",
+      "warranty_status": "verified"
     },
     {
       "brand": "Casita Travel Trailers",

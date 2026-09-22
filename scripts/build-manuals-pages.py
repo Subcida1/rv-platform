@@ -493,6 +493,38 @@ def model_list(models):
             '\n        </details>' % (len(models), "\n".join(items)))
 
 
+WARRANTY_LABEL = {
+    "document": "Warranty guide",
+    "page": "Warranty information",
+    "in-owner-manual": "Warranty: printed in the owner's manual",
+    "not-published": "Warranty: nothing published online",
+}
+
+
+def warranty_html(r):
+    """The warranty line on a brand row, in whichever shape the maker uses.
+
+    Four honest cases, and only two of them are links. Where there is no link the
+    row says where the warranty actually lives rather than going quiet, because a
+    blank space next to 14 filled-in rows reads as "this maker has no warranty".
+    """
+    kind = r.get("warranty_kind")
+    if not kind:
+        return ""
+    note = r.get("warranty_note", "")
+    if kind in ("document", "page"):
+        link = ('<a class="man-go" href="%s" target="_blank" rel="noopener">%s '
+                '&#8594;</a>' % (esc(r["warranty_url"]), WARRANTY_LABEL[kind]))
+        if r.get("warranty_status") != "verified":
+            link += ('<span class="man-note">we could not check this link '
+                     'automatically</span>')
+        tail = '<span class="man-note">%s</span>' % esc(note) if note else ""
+        return '        <div class="man-warranty">%s%s</div>\n' % (link, tail)
+    return ('        <div class="man-warranty"><span class="man-note">%s%s</span></div>\n'
+            % (esc(WARRANTY_LABEL[kind]),
+               (" &#183; " + esc(note)) if note else ""))
+
+
 def brand_row(r, models=()):
     shape = SHAPE.get(r["structure"], r["structure"])
     years = "" if r["years"] in ("none", "not stated") else r["years"]
@@ -513,10 +545,14 @@ def brand_row(r, models=()):
         foot = '<span class="man-note">no manual published online</span>'
 
     body = model_list(models) if models else ""
+    warranty = warranty_html(r)
     # The filter matches on this string, so it has to carry the model names and
     # the segments, not just the maker. Both spellings are included: the data
-    # says "class-b" and a person types "class b".
-    needle = " ".join([r["brand"], r["years"], r["note"], shape]
+    # says "class-b" and a person types "class b". The word "warranty" is here so
+    # a visitor searching for it finds the brands that publish one.
+    needle = " ".join([r["brand"], r["years"], r["note"], shape,
+                       "warranty" if r.get("warranty_kind") else "",
+                       r.get("warranty_note", "")]
                       + [m["model"] for m in models]
                       + [s for m in models for s in m["segments"]]).lower()
     if "-" in needle:
@@ -527,9 +563,9 @@ def brand_row(r, models=()):
           <span class="man-types"><span class="badge badge-tint">%s</span></span>
         </div>
         <div class="man-row-meta">%s</div>
-        <div class="man-row-foot">%s</div>%s
-      </li>
-""" % (esc(needle), esc(r["brand"]), esc(shape), "".join(meta), foot, body)
+        <div class="man-row-foot">%s</div>
+%s%s      </li>
+""" % (esc(needle), esc(r["brand"]), esc(shape), "".join(meta), foot, warranty, body)
 
 
 def brands_page(rows, models_by_brand=None):
@@ -577,8 +613,8 @@ def brands_page(rows, models_by_brand=None):
     <h1 class="dir-title man-title">RV MANUALS BY BRAND</h1>
     <p class="man-lede">Where each RV manufacturer publishes its own owner's manual, how
     far back the archive reaches, and how the documents are organised. %d brands and %d
-    model lines, each linked to the maker's own manual, parts list and accessory
-    catalogue where it publishes one.</p>
+    model lines, each linked to the maker's own manual, parts list, accessory
+    catalogue and warranty where it publishes one.</p>
   </div>
 
   <div class="sec pad-10-60">

@@ -34,6 +34,17 @@ STRUCTURES = ["per-year-and-model", "per-year-brand-wide", "generic-multi-year",
               "revision-dated", "serial-or-build-range", "none"]
 BRAND_GATES = ["none", "free-account", "vin-or-login"]
 
+# Warranty, on the brand axis (research round 3, verified live 2026-09-22). Four
+# honest shapes, because the makers genuinely differ:
+#   document         a standalone warranty PDF the maker publishes
+#   page             the maker describes the warranty; there is no single document
+#   in-owner-manual  the warranty text is bound inside the model's owner's manual
+#   not-published    nothing reachable
+# Only the first two carry a URL, and where there is no URL the note has to say
+# where the warranty actually lives -- otherwise the field is silence pretending
+# to be an answer.
+WARRANTY_KINDS = ["document", "page", "in-owner-manual", "not-published"]
+
 COMPONENT_REQUIRED = ["brand", "host", "system", "kind", "doc_types", "title",
                       "url", "key", "covers", "gate", "link_stability", "checked"]
 BRAND_REQUIRED = ["brand", "url", "structure", "years", "gate", "note"]
@@ -253,6 +264,54 @@ def check_brands(rows, errors):
         if r.get("status") == "fail":
             errors.append("%s: the link failed its check, so this row must not ship"
                           % where)
+
+        # ---- warranty, optional on every brand ------------------------------
+        # Optional because not every maker publishes one, and silence is not a
+        # claim. Where it IS present the same rules apply as everywhere else:
+        # link only, no banned host, no constructed address, and a stability claim
+        # the URL cannot support is an error.
+        kind = r.get("warranty_kind")
+        if not kind:
+            continue
+        if kind not in WARRANTY_KINDS:
+            errors.append("%s: bad warranty_kind %r" % (where, kind))
+        wurl = r.get("warranty_url")
+        if kind in ("document", "page"):
+            if not wurl:
+                errors.append("%s: warranty_kind %s but no warranty_url"
+                              % (where, kind))
+        else:
+            if wurl:
+                errors.append("%s: warranty_kind %s must not carry a warranty_url"
+                              % (where, kind))
+            if not r.get("warranty_note"):
+                errors.append("%s: warranty_kind %s needs a note saying where the "
+                              "warranty actually lives" % (where, kind))
+        if wurl:
+            if not wurl.startswith("https://"):
+                errors.append("%s: warranty_url must be https (%r)" % (where, wurl))
+            wlow = wurl.lower()
+            for bad in BANNED:
+                if bad in wlow:
+                    errors.append("%s: banned host %s in warranty_url" % (where, bad))
+            if PLACEHOLDER.search(wurl):
+                errors.append("%s: warranty_url is a pattern, not an address (%s)"
+                              % (where, wurl))
+            wstab = r.get("warranty_stability")
+            if wstab not in STABILITY:
+                errors.append("%s: bad warranty_stability %r" % (where, wstab))
+            if wstab == "stable_part_keyed" and UNSTORABLE.search(wurl):
+                errors.append("%s: warranty claims stable_part_keyed but the URL "
+                              "carries a revision or date token (%s)" % (where, wurl))
+            if r.get("warranty_status") and r["warranty_status"] not in STATUS:
+                errors.append("%s: bad warranty_status %r"
+                              % (where, r["warranty_status"]))
+            if r.get("warranty_status") == "fail":
+                errors.append("%s: the warranty link failed its check, so it must "
+                              "not ship" % where)
+        if r.get("warranty_note") and len(r["warranty_note"]) > 210:
+            errors.append("%s: warranty_note is %d chars, keep it under 210"
+                          % (where, len(r["warranty_note"])))
 
 
 def check_models(rows, errors):

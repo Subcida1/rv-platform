@@ -178,6 +178,16 @@ def targets(doc):
         out.append({"name": r["source"], "title": r["source"], "group": "safety-record",
                     "url": r["url"], "note": r.get("note", ""),
                     "check": r.get("check")})
+    # Warranty, which rides on the BRAND rows and is therefore a second link under
+    # the same name. Its own group, so it gets its own verdict field: one status
+    # field for two links would let the archive's result silently overwrite the
+    # warranty's.
+    for r in doc.get("brands", []):
+        if not r.get("warranty_url"):
+            continue
+        out.append({"name": r["brand"], "title": "%s warranty" % r["brand"],
+                    "group": "brand-warranty", "url": r["warranty_url"],
+                    "note": r.get("warranty_note", ""), "check": r.get("check")})
     # The model axis. De-duplicated on purpose: most model lines of one maker
     # share a single archive URL (Jayco publishes one document per CATEGORY per
     # year, not per model), and auditing the same URL twenty-five times would
@@ -447,6 +457,14 @@ def stamp(results):
             if k in verdict:
                 row["status"] = words[verdict[k]]
                 n += 1
+    # A brand row carries TWO links -- its archive and its warranty -- audited
+    # separately, so they need separate verdict fields. One `status` for both
+    # would let whichever ran last overwrite the other's result.
+    for row in doc.get("brands", []):
+        k = (row.get("brand"), row.get("warranty_url"), "brand-warranty")
+        if k in verdict:
+            row["warranty_status"] = words[verdict[k]]
+            n += 1
     order = ["brand", "host", "system", "kind", "doc_types", "title", "url", "key",
              "covers", "rev", "gate", "link_stability", "check", "status", "note",
              "checked"]
@@ -456,7 +474,9 @@ def stamp(results):
     # missing here is DELETED on the next stamp -- which is how the recalls page
     # lost its `section` field and rendered zero rows while building cleanly.
     for key, order in (("brands", ["brand", "url", "structure", "years", "gate", "note",
-                                   "check", "status"]),
+                                   "check", "status", "warranty_kind", "warranty_url",
+                                   "warranty_stability", "warranty_note",
+                                   "warranty_status", "warranty_checked"]),
                        ("models", ["brand", "model", "segments", "years", "url",
                                    "link_stability", "parts_url", "parts_serves",
                                    "accessories_url", "other_docs", "gate", "evidence",
