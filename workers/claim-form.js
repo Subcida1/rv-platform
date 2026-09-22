@@ -12,7 +12,11 @@
      2. Name it originrv-claim, paste this file, Deploy
      3. Worker -> Settings -> Bindings -> Add -> Send Email
           Variable name: EMAIL
-          Destination:   contact@originrv.com   (must be a verified destination)
+          Destination:   contact@originrv.com
+     (This repository is public, so the destination is the domain's own address
+      rather than a personal inbox. Cloudflare Email Routing forwards
+      contact@originrv.com on to the real inbox. If claims stop arriving, check
+      that the contact@ routing rule still exists in Email Routing first.)
      4. Copy the worker URL (https://originrv-claim.<subdomain>.workers.dev)
         into assets/js/config.js as contact.formEndpoint
 

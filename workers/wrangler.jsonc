@@ -6,7 +6,13 @@
   // The send_email binding is what gives the Worker permission to send. The
   // destination_address restriction means this Worker can ONLY mail that one
   // address, so the deployed URL cannot be turned into a spam relay.
-  // Sending to a verified destination in your own account is free on all plans.
+  //
+  // NOTE: this must be an address Cloudflare will deliver to. contact@originrv.com
+  // is routed through Cloudflare Email Routing (the domain's MX records point at
+  // route1/2/3.mx.cloudflare.net) and forwards to the real inbox, which keeps a
+  // personal address out of this PUBLIC repository. If the claim form stops
+  // arriving, the first thing to check is that a contact@ routing rule still
+  // exists in Email Routing.
   "name": "originrv-claim",
   "main": "claim-form.js",
   "compatibility_date": "2026-09-21",
