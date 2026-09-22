@@ -250,16 +250,30 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
 .cart-badge{position:absolute;top:-4px;right:-4px;min-width:18px;height:18px;padding:0 4px;border-radius:999px;background:var(--grad);color:var(--text-inv);font-size:11px;font-weight:800;display:grid;place-items:center}
 .burger{display:none;background:none;border:1px solid var(--border-2);border-radius:10px;padding:8px 10px}
 .burger svg{width:20px;height:20px;stroke:var(--text)}
-.mobile-menu{display:none;flex-direction:column;padding:10px 20px 18px;border-top:1px solid var(--border);background:var(--surface)}
-.mobile-menu a{padding:12px 6px;font-size:15px;font-weight:500;color:var(--text-2);border-bottom:1px solid var(--border)}
-.mobile-menu a:last-child{border-bottom:none}
+/* The mobile menu: grouped, not a flat list. A heading links to its section index
+   and its children sit indented under it. Padding is 24px to match the .wrap
+   gutter of the logo directly above it; at 20px the menu sat 4px off the column
+   the rest of the page lines up on. Every row is at least 44px tall (14px above
+   and below a 16px line), which is the Apple target size and what the footer
+   could not offer while its links were 32px. */
+.mobile-menu{display:none;flex-direction:column;padding:6px 24px 20px;border-top:1px solid var(--border);background:var(--surface)}
+.mm-top,.mm-head{display:block;padding:14px 0;font-size:16px;font-weight:700;color:var(--text);border-bottom:1px solid var(--border)}
+.mm-group{border-bottom:1px solid var(--border)}
+.mm-group .mm-head{border-bottom:none}
+.mm-sub{display:block;padding:13px 0 13px 18px;font-size:14.5px;font-weight:500;color:var(--text-2);border-top:1px solid var(--border)}
+.mm-top:last-child{border-bottom:none}
 .mobile-menu a:hover{color:var(--text)}
 
 /* ================= HERO (HOME) ================= */
 .hero{position:relative;overflow:hidden;background:var(--bg)}
 .hero-bg{position:absolute;inset:0;background:radial-gradient(900px 480px at 82% -8%,rgba(61,127,194,.16),transparent 60%),radial-gradient(800px 460px at 12% 8%,rgba(86,143,211,.14),transparent 58%),radial-gradient(700px 420px at 50% 120%,rgba(91,150,216,.12),transparent 60%),linear-gradient(180deg,#fdfbfa 0%,var(--surface) 40%)}
 .hero-grid{position:absolute;inset:0;opacity:.5;background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(ellipse 70% 60% at 50% 0%,#000 20%,transparent 75%)}
-.hero-inner{position:relative;z-index:2;padding:92px 0 30px;text-align:center}
+/* Vertical padding only: this is <div class="wrap hero-inner">, and the shorthand
+   zeroed the gutter. Below 520px a separate rule used to patch it back to 18px,
+   which left the hero on a different margin from every other section (measured at
+   360/393/430: hero 18px, everything else 24px). That patch is gone; the hero now
+   takes the same 24px gutter as the rest of the page. */
+.hero-inner{position:relative;z-index:2;padding-top:92px;padding-bottom:30px;text-align:center}
 .kicker{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--tint-ink);border:1px solid var(--tint-edge);background:var(--surface);padding:7px 16px;border-radius:999px}
 .hero h1{margin:26px auto 0;max-width:880px;font-size:clamp(40px,6.4vw,76px);font-weight:800;letter-spacing:-.035em;line-height:1.04}
 .hero h1 .grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;padding:0 1px}
@@ -516,7 +530,12 @@ footer a:hover{color:var(--text-inv)}
 .newsletter input::placeholder{color:#8fa0b5}
 .foot-col h5{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#e7ecf3;margin-bottom:16px}
 .foot-col a{display:block;font-size:14px;padding:5px 0}
-.foot-bottom{margin-top:48px;padding:24px 0;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:#8fa0b5;font-size:13px}
+/* padding-top/bottom, never the `24px 0` shorthand. This element is
+   <div class="wrap foot-bottom">, and `.wrap` owns the page gutter: a shorthand
+   sets the horizontal sides to 0 and the row lands flush against the screen edge,
+   which is what it did on all 39 pages until 2026-09-22. Same trap as
+   .page-intro and .hero-inner. verify.py now fails the build on it. */
+.foot-bottom{margin-top:48px;padding-top:24px;padding-bottom:24px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:#8fa0b5;font-size:13px}
 .foot-bottom .legal{display:flex;gap:22px}
 
 /* ================= REVEAL ================= */
@@ -525,30 +544,29 @@ footer a:hover{color:var(--text-inv)}
 
 /* ================= RESPONSIVE ================= */
 @media(max-width:1024px){
-  .cat-grid,.camp-grid,.part-grid{grid-template-columns:repeat(2,1fr)}
-  .tech-grid,.deal-grid,.guide-grid,.service-grid{grid-template-columns:repeat(2,1fr)}
-  .tools-grid{grid-template-columns:1fr;gap:36px}
-  .com-grid{grid-template-columns:1fr}
-  .foot-grid{grid-template-columns:1fr 1fr 1fr}
-  .detail,.cart-layout{grid-template-columns:1fr}
+  .cat-grid,.camp-grid,.part-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .tech-grid,.deal-grid,.guide-grid,.service-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .tools-grid{grid-template-columns:minmax(0,1fr);gap:36px}
+  .com-grid{grid-template-columns:minmax(0,1fr)}
+  .foot-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1fr)}
+  .detail,.cart-layout{grid-template-columns:minmax(0,1fr)}
   .gallery-main{min-height:300px}
-  .layout{grid-template-columns:1fr}
+  .layout{grid-template-columns:minmax(0,1fr)}
   .filters{position:static}
-  .acct-grid{grid-template-columns:1fr}
+  .acct-grid{grid-template-columns:minmax(0,1fr)}
   .acct-nav{position:static;flex-direction:row;flex-wrap:wrap}
 }
 @media(max-width:720px){
   .nav-links,.util-r span{display:none}
   .burger{display:block}
-  .hero-stats,.cat-grid,.camp-grid,.part-grid{grid-template-columns:repeat(2,1fr)}
-  .tech-grid,.deal-grid,.guide-grid,.service-grid{grid-template-columns:1fr}
-  .foot-grid{grid-template-columns:1fr 1fr}
+  .hero-stats,.cat-grid,.camp-grid,.part-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .tech-grid,.deal-grid,.guide-grid,.service-grid{grid-template-columns:minmax(0,1fr)}
+  .foot-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
   .sec{padding:64px 0}
   .util-l span{display:none}
 }
 @media(max-width:520px){
-  .hero-stats,.cat-grid,.camp-grid,.part-grid{grid-template-columns:1fr}
-  .hero .wrap{padding:0 18px}
+  .hero-stats,.cat-grid,.camp-grid,.part-grid{grid-template-columns:minmax(0,1fr)}
 }
 
 /* ============================================================
@@ -753,17 +771,17 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .6s cubic-bezier(.22,.61,.36,1),transform .6s cubic-bezier(.22,.61,.36,1)}
 .reveal.in{opacity:1;transform:none}
 @media(max-width:1024px){
-  .cat-grid,.camp-grid,.part-grid{grid-template-columns:repeat(2,1fr)}
-  .layout{grid-template-columns:1fr}.filters{position:static;max-height:none}
-  .detail,.gps-sim{grid-template-columns:1fr}
+  .cat-grid,.camp-grid,.part-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .layout{grid-template-columns:minmax(0,1fr)}.filters{position:static;max-height:none}
+  .detail,.gps-sim{grid-template-columns:minmax(0,1fr)}
   .sidebar{position:static}
-  .dog-inner{grid-template-columns:1fr;text-align:center}
-  .authority .big-row,.trip-nums{grid-template-columns:repeat(2,1fr)}
+  .dog-inner{grid-template-columns:minmax(0,1fr);text-align:center}
+  .authority .big-row,.trip-nums{grid-template-columns:repeat(2,minmax(0,1fr))}
   .big-card{padding:22px 14px}
 }
 @media(max-width:720px){
-  .cat-grid,.camp-grid,.part-grid{grid-template-columns:repeat(2,1fr)}
-  .authority .big-row,.trip-nums{grid-template-columns:1fr}
+  .cat-grid,.camp-grid,.part-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .authority .big-row,.trip-nums{grid-template-columns:minmax(0,1fr)}
   .phone{margin:20px auto}
 }
 
@@ -771,7 +789,7 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
    Weight calculator (OriginRV, added 2026-09-16)
    ============================================================ */
 .wc-layout{display:grid;grid-template-columns:1.35fr 1fr;gap:30px;align-items:start}
-@media(max-width:1024px){.wc-layout{grid-template-columns:1fr}}
+@media(max-width:1024px){.wc-layout{grid-template-columns:minmax(0,1fr)}}
 .wc-form{display:flex;flex-direction:column;gap:16px}
 .wc-form .panel .field{margin-bottom:12px}
 .wc-form .panel .form-row .field{margin-bottom:12px}
@@ -807,7 +825,7 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 .hero-cta{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:20px}
 .hero-cta .btn-lg{padding:15px 26px}
 .deck{display:grid;grid-template-columns:1.35fr 1fr;gap:26px;align-items:stretch}
-@media(max-width:1024px){.deck{grid-template-columns:1fr}}
+@media(max-width:1024px){.deck{grid-template-columns:minmax(0,1fr)}}
 .deck-pillars{display:flex;flex-direction:column;gap:11px}
 .deck-card{display:flex;align-items:center;gap:12px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);padding:13px 15px;transition:.15s}
 .deck-card:hover{transform:translateY(-2px);border-color:var(--border-2);box-shadow:var(--shadow-sm)}
@@ -895,17 +913,23 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
   .search-bar input{min-height:40px}
   .search-bar .btn{width:100%;height:46px}
   .hero-cta .btn{width:100%}
-  .hero-stats{grid-template-columns:1fr 1fr}
+  .hero-stats{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
   .hstat{padding:18px 10px}
   .chips{justify-content:flex-start;overflow-x:auto;-webkit-overflow-scrolling:touch;gap:8px;flex-wrap:nowrap}
-  .cat-grid,.guide-grid{grid-template-columns:1fr}
+  .cat-grid,.guide-grid{grid-template-columns:minmax(0,1fr)}
   .deck-card{padding:14px 12px}
   .wc-out{min-height:auto}
 }
 @media(max-width:420px){
   .center{text-align:left}
-  .hero-stats{grid-template-columns:1fr 1fr 1fr}
+  /* Two across, not three. This said 1fr 1fr 1fr, which put THREE columns on a
+     360px screen: 99px cards holding labels like "Or more of RVs exceed a weight
+     rating*", wrapping six lines deep. The 1fr 1fr at 720px above was already
+     right and this rule was making the narrowest screens the most cramped, which
+     is backwards. Measured 2026-09-22 before the fix: hstat w=99 at 360px. */
+  .hero-stats{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
   .hstat .num{font-size:22px}
+  .hstat{padding:16px 12px}
 }
 /* never show interactive affordance on hover for touch: simplify link underline on mobile */
 @media(hover:none),(pointer:coarse){
@@ -923,7 +947,7 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 .tool-head{padding:22px 26px 0}
 .tool-head .flex{justify-content:space-between;flex-wrap:wrap;gap:12px}
 .tool-body{display:grid;grid-template-columns:1.15fr 1fr;gap:28px;align-items:center;padding:10px 26px 26px}
-@media(max-width:1024px){.tool-body{grid-template-columns:1fr}}
+@media(max-width:1024px){.tool-body{grid-template-columns:minmax(0,1fr)}}
 .tool-copy{display:flex;flex-direction:column;gap:16px}
 .tool-btns{display:flex;flex-wrap:wrap;gap:11px}
 .tool-viz{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);padding:22px}
@@ -945,8 +969,8 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 .tool-strip .tchip b{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 /* pipeline cards: 4-col when wide */
 .tool-pipe{grid-template-columns:repeat(4,1fr)}
-@media(max-width:1024px){.tool-pipe{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:720px){.tool-pipe{grid-template-columns:1fr}}
+@media(max-width:1024px){.tool-pipe{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:720px){.tool-pipe{grid-template-columns:minmax(0,1fr)}}
 
 /* ============================================================
    GRADIENT THEMES (2026-09-16, Ty-picking pass)
@@ -980,7 +1004,7 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 .fld input:disabled{background:var(--surface);color:var(--text-3);cursor:not-allowed}
 .form-stack{display:flex;flex-direction:column;gap:14px;max-width:100%}
 .form-row-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-@media(max-width:720px){.form-row-2{grid-template-columns:1fr}}
+@media(max-width:720px){.form-row-2{grid-template-columns:minmax(0,1fr)}}
 .form-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow-sm)}
 .form-card h3{font-size:19px;font-weight:800;letter-spacing:-.01em}
 .form-card .form-sub{font-size:13.5px;color:var(--text-2);margin-top:4px}
@@ -1131,8 +1155,8 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 .howto{margin-top:34px}
 .howto .sec-head{margin-bottom:26px}
 .howto-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-@media(max-width:1024px){.howto-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:720px){.howto-grid{grid-template-columns:1fr}}
+@media(max-width:1024px){.howto-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:720px){.howto-grid{grid-template-columns:minmax(0,1fr)}}
 .howto-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px 18px 16px;position:relative;display:flex;flex-direction:column;gap:6px}
 .howto-card:hover{border-color:var(--border-2);box-shadow:var(--shadow-sm)}
 .howto-num{width:30px;height:30px;border-radius:50%;background:var(--grad);color:var(--text-inv);display:grid;place-items:center;font-weight:800;font-size:14px;margin-bottom:4px}
@@ -1173,8 +1197,8 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
    ONE definition for the whole site. There were two, and two media rules each.
    ============================================================ */
 .guide-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;align-items:stretch}
-@media(max-width:1100px){.guide-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:640px){.guide-grid{grid-template-columns:1fr}}
+@media(max-width:1100px){.guide-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:640px){.guide-grid{grid-template-columns:minmax(0,1fr)}}
 .guide-card{display:flex;flex-direction:column;gap:14px;padding:22px;height:100%;transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}
 .guide-card:hover{transform:translateY(-3px);border-color:var(--border-2);box-shadow:var(--shadow)}
 /* The emoji sits in a BUTTON, not a tile. A tile is a frame that promises a
@@ -1209,7 +1233,11 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
    margin-top 8px). Everything else reproduces what the pages asked for exactly.
    ============================================================ */
 /* padding only: the width is per page (.w-820, .w-720, .w-680) */
-.page-intro{padding:54px 0 20px}
+/* Vertical rhythm only. This class rides on <div class="wrap page-intro"> across
+   38 pages, so a `padding:54px 0 20px` shorthand was zeroing the gutter and
+   putting every page's eyebrow, H1 and lede flush against the phone screen edge.
+   Named sides are the fix; the shorthand is the bug. */
+.page-intro{padding-top:54px;padding-bottom:20px}
 .page-intro.narrow{max-width:720px}
 /* :not(.dir-title) because .dir-title IS this site's page-title treatment (48px,
    uppercase, used on every directory and manuals page) and a type selector would
@@ -1392,7 +1420,7 @@ figure:has(svg[role="img"]){overflow-x:auto;overflow-y:hidden}
    phone, and an outward link. Grid collapses cleanly.
    ============================================================ */
 .listing-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-@media(max-width:820px){.listing-grid{grid-template-columns:1fr}}
+@media(max-width:820px){.listing-grid{grid-template-columns:minmax(0,1fr)}}
 .listing-card{display:flex;flex-direction:column;gap:12px;padding:22px;text-decoration:none;transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}
 .listing-card:hover{transform:translateY(-3px);border-color:var(--border-2);box-shadow:var(--shadow)}
 .listing-top{display:flex;align-items:center;gap:12px}
@@ -1463,7 +1491,7 @@ figure:has(svg[role="img"]){overflow-x:auto;overflow-y:hidden}
 .listing-call svg{flex:none}
 .listing-call.none{font-size:13px;font-weight:700;color:var(--text-3)}
 .more-wrap{display:flex;justify-content:center;margin-top:22px}
-@media(max-width:820px){.finder-routes{grid-template-columns:1fr}.finder{padding:18px}.listing-dist.region{max-width:56%}}
+@media(max-width:820px){.finder-routes{grid-template-columns:minmax(0,1fr)}.finder{padding:18px}.listing-dist.region{max-width:56%}}
 
 /* ============================================================
    Directory: all-caps page title + state tiles (photo header,
@@ -1472,7 +1500,7 @@ figure:has(svg[role="img"]){overflow-x:auto;overflow-y:hidden}
 .dir-title{font-size:clamp(30px,4.4vw,48px);font-weight:800;letter-spacing:.005em;line-height:1.06;text-transform:uppercase;margin-top:12px}
 .dir-title-sub{display:block;font-size:.44em;font-weight:700;letter-spacing:-.012em;line-height:1.35;text-transform:none;color:var(--text-2);margin-top:12px}
 .state-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:stretch}
-@media(max-width:980px){.state-grid{grid-template-columns:1fr}}
+@media(max-width:980px){.state-grid{grid-template-columns:minmax(0,1fr)}}
 .state-card{display:flex;flex-direction:column;padding:0;height:100%}
 .state-photo{position:relative;aspect-ratio:16/10;overflow:hidden;background:var(--surface);border:1px solid var(--border)}
 .state-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s cubic-bezier(.2,.7,.2,1)}
@@ -1564,7 +1592,7 @@ figure:has(svg[role="img"]){overflow-x:auto;overflow-y:hidden}
 .man-links a{font-size:14px;font-weight:700;color:var(--b1)}
 
 @media(max-width:820px){
-  .man-grid{grid-template-columns:1fr}
+  .man-grid{grid-template-columns:minmax(0,1fr)}
   .man-search input{font-size:15px}
   .man-row{padding:15px}
   .man-about{padding:20px}
@@ -1598,3 +1626,92 @@ figure:has(svg[role="img"]){overflow-x:auto;overflow-y:hidden}
 .man-table th{text-align:left;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--text-3);padding:8px 10px;border-bottom:1px solid var(--border-2)}
 .man-table td{padding:8px 10px;border-bottom:1px solid var(--border);color:var(--text-2)}
 .man-table td:last-child{text-align:right;font-weight:700;color:var(--text)}
+
+/* ============================================================
+   MOBILE PASS (2026-09-22)
+
+   One block, at the end of the file, on purpose. Twelve media blocks had
+   accumulated through this file over a week and the winner was decided by
+   source order, which is how `.hero-stats` ended up with four different column
+   counts and gave the NARROWEST screens the MOST columns. Anything mobile-only
+   that is not a correction to a rule above belongs here, so the next person has
+   one place to look instead of twelve.
+
+   What lives here is the stuff a measurement said was wrong, not a taste pass:
+   3,400 tap targets between 32 and 43px, and footer link rows at 32px.
+   ============================================================ */
+@media(max-width:720px){
+  /* ---- touch targets. 44px is the Apple number and the one this site should
+     hold itself to; WCAG 2.2's floor is 24px and the site already passed that,
+     which is why the render audit stayed quiet about 32px rows. ---- */
+  .foot-col a{padding:12px 0}
+  .foot-bottom .legal a{padding:11px 0}
+  .foot-bottom .legal{gap:26px}
+  .btn-sm{min-height:44px}
+  .chip{min-height:44px}
+  .listing-go,.listing-foot .btn{min-height:44px}
+  .loc-row input,.man-search input,.listing-search input{min-height:44px}
+  .qty button{width:44px;height:44px;font-size:19px}
+  .qty{padding:2px 6px}
+  .qty .n{min-width:26px;font-size:16px}
+  /* The util strip sits above the nav and the breadcrumbs sit above a heading,
+     so the hit area is grown outwards rather than by making the strip taller.
+     At the -8px the desktop rule uses these measured 42px and 37px; -14px brings
+     each to 45px or more. Measured clearances on this site: 57px to the nearest
+     other target on a listing card, 216px between manuals rows, so the grown
+     areas cannot collide. */
+  .util a::after,.foot-bottom .legal a::after,.man-crumb a::after,
+  .sec-eyebrow a::after,.scale-map-head a::after{inset:-14px -10px}
+  .listing-name a::after,.listing-go::after{inset:-14px -8px}
+  /* the breadcrumb's line box is the shortest of the group, so it needs one more
+     pixel than the rest to clear 44px (measured 43px at -14px). */
+  .man-crumb a::after{inset:-15px -10px}
+  /* The signin placeholder's tab strip. Nothing links to that page (the door is
+     shut while CFG.showSignin is false), but it is on disk and it renders, so it
+     is held to the same target size as everything else rather than left as a
+     permanent warning in the mobile audit. */
+  .tabs-auth button{min-height:44px}
+  .logo{padding:3px 0}
+  .burger{padding:11px 12px}
+
+  /* ---- footer: the brand block gets its own row instead of sharing a column
+     with a link list, then the five lists pair up underneath it. ---- */
+  .foot-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:26px 20px}
+  .foot-brand{grid-column:1/-1}
+  .foot-brand p{max-width:none}
+  .foot-col h5{margin-bottom:8px}
+
+  /* ---- 11.5px is under the size the rest of the site reads at on a phone ---- */
+  .badge,.listing-emerg,.listing-spec,.listing-tags span,.man-note,.mm-meta{font-size:12.5px}
+
+  /* ---- model rows: a 158px floor on the name forced a wide empty gap between
+     the name and its meta before the row could wrap. ---- */
+  .mm-name{min-width:0}
+  .man-model{gap:2px 10px}
+
+  /* ---- a nowrap label wider than its container does not wrap, it overflows,
+     and inside a .card (which is overflow:hidden) it is visibly sliced. The
+     towing guide's "Open the towing weight calculator" button measured 284px
+     inside a 268px card at 360px, so the last few characters were cut off. On a
+     phone a button label wraps instead of escaping. ---- */
+  .btn{white-space:normal}
+  .tool-viz .viz-row{flex-wrap:wrap}
+  .tool-viz .viz-row b{white-space:normal}
+  /* The hero CTA carries a label and a qualifier side by side. On a phone the
+     pair does not fit, and letting both wrap independently rendered
+     "Check your RV's   - 30 seconds," above "weight   free". Stacked, it reads
+     the way it was written. */
+  .hero-cta .btn{flex-direction:column;gap:3px}
+
+  /* flex:none is flex-shrink:0, so this button held its full content width and
+     overflowed the contact card by 41px at 360px, where .card's overflow:hidden
+     sliced the end off the label. It is now allowed to shrink and wrap; it still
+     takes its natural width when there is room for it. It is the only .flex-none
+     on the site, so the blast radius of this rule is one button. */
+  .flex-none{flex:0 1 auto;min-width:0}
+
+  /* ---- the search field's own inset was 8px, tight against a 46px button ---- */
+  .search-bar{padding:10px 10px 12px}
+  .search-bar .btn{height:48px}
+  .search-bar input{min-height:44px;font-size:16px}
+}

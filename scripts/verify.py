@@ -678,6 +678,67 @@ if bad_base:
 else:
     print("  all %d pages, first in head, no base.js anywhere" % len(pages))
 
+print("\n=== no class zeroes the gutter of a .wrap it is used on ===")
+# `.wrap` owns the page gutter (padding:0 24px). A class that sets padding as a
+# SHORTHAND with both horizontal sides at 0 silently deletes that gutter when it
+# lands on a .wrap element, and the content goes flush against the screen edge.
+# Three of them did exactly that, and between them they put text against the
+# edge of the viewport in 231 of 741 measured mobile renders across 39 pages:
+#
+#   .page-intro  padding:54px 0 20px    on 38 pages, so every page's eyebrow,
+#                                        H1 and lede sat at x=0
+#   .foot-bottom padding:24px 0         on 39 pages, the copyright row
+#   .hero-inner  padding:92px 0 30px    the hero, which a 520px media query then
+#                                        patched back to 18px while every other
+#                                        section kept 24px
+#
+# The fix in each case was to name the sides (padding-top / padding-bottom).
+# This checks the CLASS rather than the three instances, so the next vertical
+# rhythm helper written as `padding:64px 0` fails here instead of on a phone.
+_wrap_pages = {}
+for _p in pages:
+    for _m in re.finditer(r'class="([^"]*)"', _p.read_text(encoding="utf-8")):
+        _cls = _m.group(1).split()
+        if "wrap" in _cls:
+            for _c in _cls:
+                if _c != "wrap":
+                    _wrap_pages.setdefault(_c, 0)
+                    _wrap_pages[_c] += 1
+
+_css = re.sub(r"/\*.*?\*/", "", css, flags=re.S)   # a commented rule is not a rule
+_gutter_bad = []
+for _m in re.finditer(r"([^{}]+)\{([^{}]*)\}", _css):
+    _sel, _body = _m.group(1).strip(), _m.group(2)
+    _pm = re.search(r"(?<![\w-])padding\s*:\s*([^;]+)", _body)
+    if not _pm:
+        continue
+    _v = [x for x in _pm.group(1).split() if x]
+    if len(_v) == 1:
+        _t = _v * 4
+    elif len(_v) == 2:
+        _t = [_v[0], _v[1], _v[0], _v[1]]
+    elif len(_v) == 3:
+        _t = [_v[0], _v[1], _v[2], _v[1]]
+    elif len(_v) >= 4:
+        _t = _v[:4]
+    else:
+        continue
+    _zero = ("0", "0px", "0.0")
+    if not (_t[1].strip() in _zero and _t[3].strip() in _zero):
+        continue
+    for _s in _sel.split(","):
+        _cm = re.fullmatch(r"\.([A-Za-z0-9_-]+)", _s.strip())
+        if _cm and _cm.group(1) in _wrap_pages:
+            _gutter_bad.append("style.css: .%s{padding:%s} also rides on .wrap in %d page(s)"
+                               % (_cm.group(1), _pm.group(1).strip(), _wrap_pages[_cm.group(1)]))
+if _gutter_bad:
+    for _g in sorted(set(_gutter_bad)):
+        print("  " + _g)
+    print("  name the sides: padding-top / padding-bottom, not `padding: N 0`")
+    fails.append("gutter clobbered")
+else:
+    print("  no class on a .wrap zeroes its horizontal padding")
+
 if "--links" in sys.argv:
     print("\n=== external listing links (live HTTP) ===")
     src = ROOT / "assets/js/listings/listings-or.js"

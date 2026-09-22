@@ -79,25 +79,32 @@
  '<div class="nav-actions">' + signinLink('btn btn-outline btn-sm') + '<a class="btn btn-primary btn-sm" href="' + R(rt.calculator) + '">Free Tool</a>' +
  '<button class="burger" aria-label="Menu" onclick="RV.toggleMenu()"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h12M4 10h12M4 14h12"/></svg></button></div>' +
  '</div>' +
- '<div class="mobile-menu"><a href="' + R(rt.home) + '">Home</a>' +
- '<a href="' + R(rt.tools) + '">Tools</a>' +
- '<a href="' + R(rt.calculator) + '">. Weight Calculator</a>' +
- '<a href="' + R(rt.guides) + '">Guides</a>' +
- '<a href="' + R(rt.guideWinterize) + '">. Winterize plumbing</a>' +
- '<a href="' + R(rt.guideBattery) + '">. Battery cold storage</a>' +
- '<a href="' + R(rt.guideTires) + '">. Tires through winter</a>' +
- '<a href="' + R(rt.guideRoof) + '">. Roof snow load</a>' +
- '<a href="' + R(rt.directory) + '">Directory</a>' +
- '<a href="' + R(rt.directory) + '#claim">Claim your business</a>' +
- '<a href="' + R(rt.manuals) + '">Manuals</a>' +
- '<a href="' + R(rt.manualsPower) + '">. Electrical manuals</a>' +
- '<a href="' + R(rt.manualsTowing) + '">. Towing manuals</a>' +
- '<a href="' + R(rt.manualsBrands) + '">. Owner manuals by brand</a>' +
- '<a href="' + R(rt.manualsRecalls) + '">. Recall lookup</a>' +
- '<a href="' + R(rt.about) + '">About</a>' +
-      signinLink('') +
- '<a href="' + R(rt.contact) + '">Contact</a>' +
+ '<div class="mobile-menu"><a class="mm-top" href="' + R(rt.home) + '">Home</a>' +
+ mmGroup('Tools', rt.tools, [['Weight calculator', rt.calculator]]) +
+ mmGroup('Guides', rt.guides, [['Winterize plumbing', rt.guideWinterize],
+   ['Battery cold storage', rt.guideBattery], ['Tires through winter', rt.guideTires],
+   ['Roof snow load', rt.guideRoof]]) +
+ mmGroup('Directory', rt.directory, [['Find a service', rt.directoryOregon],
+   ['Claim your business', rt.directoryOregon + '#claim']]) +
+ mmGroup('Manuals', rt.manuals, [['Electrical', rt.manualsPower],
+   ['Towing and running gear', rt.manualsTowing], ['Owner manuals by brand', rt.manualsBrands],
+   ['Recalls and bulletins', rt.manualsRecalls]]) +
+ '<a class="mm-top" href="' + R(rt.about) + '">About</a>' +
+      signinLink('mm-top') +
+ '<a class="mm-top" href="' + R(rt.contact) + '">Contact</a>' +
  '</div></nav>';
+ }
+
+ /* One block of the mobile menu: a heading that goes to the section index, then
+    its children indented under it. This replaces a flat run of nineteen links in
+    which the children were marked with a literal ". " in front of the label, so
+    "Guides" and ". Tires through winter" rendered identically and nothing said
+    which page belonged to which section. */
+ function mmGroup(title, href, items) {
+ return '<div class="mm-group"><a class="mm-head" href="' + R(href) + '">' + esc(title) + '</a>' +
+ items.map(function (it) {
+ return '<a class="mm-sub" href="' + R(it[1]) + '">' + esc(it[0]) + '</a>';
+ }).join('') + '</div>';
  }
 
  function footerHTML() {
