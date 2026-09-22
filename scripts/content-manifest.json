@@ -56,16 +56,11 @@
     "sources": []
   },
   "guides/roof-snow-load.html": {
-    "hash": "b6db4fc767e69efc",
-    "status": "verified",
-    "verified_by": "Claude Desktop (review + confirm rounds)",
-    "verified_at": "2026-09-22",
-    "sources": [
-      "inbox/VERIFY-REQUEST-20260922-1345-roof-snow-load.md",
-      "inbox/CONFIRM-REQUEST-20260922-1405-roof-snow-load.md",
-      "outbox/verify-reply-20260922-roof-snow-load.md",
-      "outbox/confirm-reply-20260922-1405-roof-snow-load.md"
-    ]
+    "hash": "ee66e3389173cd2f",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
   },
   "guides/rv-12-volt-problems.html": {
     "hash": "6d0711cceb3ed5b4",
