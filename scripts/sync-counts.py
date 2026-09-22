@@ -59,7 +59,27 @@ def sync_index(by_suffix):
     print("  %-18s tiles updated for %s" % (page.name, ", ".join(sorted(by_suffix))))
 
 
+def sync_home(by_suffix):
+    """The homepage stat strip carries two figures that drift silently: the guide
+    count and the directory size. Derive both rather than trusting a typed number."""
+    page = ROOT / "index.html"
+    html = page.read_text(encoding="utf-8")
+    guides = len([f for f in (ROOT / "guides").glob("*.html") if f.name != "index.html"])
+    businesses = sum(c["total"] for c in by_suffix.values())
+    for label, value in (("Free guides, live now", guides),
+                         ("Repair businesses listed", businesses)):
+        new_html, replaced = re.subn(
+            r'(data-count=")\d+(">0</div><div class="lbl">%s</div>)' % re.escape(label),
+            r"\g<1>%d\g<2>" % value, html, count=1)
+        if replaced != 1:
+            raise SystemExit("could not find the %r stat on index.html" % label)
+        html = new_html
+    page.write_text(html, encoding="utf-8")
+    print("  %-18s guides=%d businesses=%d" % (page.name, guides, businesses))
+
+
 data = {suffix: counts(suffix) for suffix in PAGES.values()}
 for _slug, _suffix in PAGES.items():
     sync(_slug, _suffix, data[_suffix])
 sync_index(data)
+sync_home(data)

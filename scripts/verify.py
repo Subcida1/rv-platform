@@ -146,7 +146,31 @@ for line in r.stdout.splitlines():
 if r.returncode != 0:
     fails.append("runtime smoke test")
 
+print("\n=== homepage figures match reality ===")
+bad = []
+idx = (ROOT / "index.html").read_text(encoding="utf-8")
+guide_files = [f for f in (ROOT / "guides").glob("*.html") if f.name != "index.html"]
+businesses = 0
+for suffix in ("or", "wa", "ca"):
+    rows = json.loads(re.search(
+        r"=\s*(\[.*\])\s*;",
+        (ROOT / "assets" / "js" / "listings" / ("listings-%s.js" % suffix)).read_text(encoding="utf-8"),
+        re.S).group(1))
+    businesses += len(rows)
+for label, actual in (("Free guides, live now", len(guide_files)),
+                      ("Repair businesses listed", businesses)):
+    m = re.search(r'data-count="(\d+)">0</div><div class="lbl">%s</div>' % re.escape(label), idx)
+    if not m:
+        bad.append("no stat on index.html for %r" % label)
+    elif int(m.group(1)) != actual:
+        bad.append("index.html says %s %s, reality is %d (run scripts/sync-counts.py)"
+                   % (m.group(1), label, actual))
+print("  clean" if not bad else "\n".join("  " + b for b in bad))
+if bad:
+    fails.append("homepage figures")
+
 print("\n=== listing data integrity ===")
+
 # A directory whose whole job is putting a phone number in front of a stranded
 # RVer does not ship without one. Ty caught a listing rendering "Phone on their
 # site" instead. Never again: missing phone is a build failure.
