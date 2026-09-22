@@ -27,7 +27,12 @@
  }
  var BASE = computeBase();
 
- function R(path) { return BASE + (path || ''); }
+/* An empty route means the site root, and it must resolve to "/" from anywhere.
+   BASE + '' would give the CURRENT directory instead, so on /guides/ a Home link
+   built at runtime would point back at /guides/. The shell is baked into the HTML
+   at build time, where BASE is always "/", so that never reached a visitor, but it
+   is one line to make it right rather than to leave a trap. */
+ function R(path) { return path ? BASE + path : '/'; }
 
  function $(s) { return document.querySelector(s); }
  function $$(s) { return Array.prototype.slice.call(document.querySelectorAll(s)); }
@@ -66,7 +71,7 @@
  '<a href="' + R(rt.guideTires) + '">Tires Through Winter<span class="sm">Pressure, flat spots, covers</span></a>' +
  '<a href="' + R(rt.guideRoof) + '">Roof Under Snow Load<span class="sm">Seals, ice, weight</span></a></div></div>' +
  '<div class="nav-group"><a class="nav-link" href="' + R(rt.directory) + '">Directory</a>' +
- '<div class="drop"><a href="' + R(rt.directoryOregon) + '">Find a service<span class="sm">Mobile techs & centers . Oregon seeding</span></a>' +
+ '<div class="drop"><a href="' + R(rt.directoryOregon) + '">Find a service<span class="sm">Mobile techs and repair centers in Oregon</span></a>' +
  '<a href="' + R(rt.directoryOregon) + '#claim">Claim your business<span class="sm">Free listing, you control it</span></a></div></div>' +
  '<div class="nav-group"><a class="nav-link" href="' + R(rt.manuals) + '">Manuals</a>' +
  '<div class="drop"><a href="' + R(rt.manualsPower) + '">Electrical<span class="sm">Converters, inverters, solar, generators</span></a>' +
@@ -120,7 +125,7 @@
  '<div class="foot-col"><h5>Company</h5><a href="' + R(rt.about) + '">About</a><a href="' + R(rt.contact) + '">Contact</a><a href="' + R(rt.tools) + '">All tools</a></div>' +
  '</div></div>' +
  '<div class="wrap foot-bottom"><span>© 2026 ' + esc(CFG.brand.legal) + '. Built for the open road.</span>' +
- '<span class="foot-credit">Photographs appear under the licences credited beside each one, resized for display.</span>' +
+ '<span class="foot-credit">Third-party photographs appear under the licences credited beside each one, resized for display.</span>' +
  '<span class="legal"><a href="' + R(rt.home) + '">Home</a><a href="' + R(rt.directory) + '">Directory</a><a href="' + R(rt.guides) + '">Guides</a></span></div></div>';
  }
 

@@ -219,6 +219,14 @@ input,select,textarea{font-family:inherit}
    interaction on a manuals page and there is room: the next document link is
    216px away, measured, so nothing can be mis-tapped. */
 .man-doc::after{content:"";position:absolute;inset:-12px -8px}
+/* `nav.main` is position:sticky, and it did not stick on any page. A sticky box
+   can only travel inside its parent, and #site-nav wraps the nav and nothing
+   else, so it had zero room to move and behaved as static. Measured before the
+   fix: navTop -5280 at pageY 5315. display:contents removes that wrapper's box
+   without touching the DOM, so the nav's containing block becomes <body> and it
+   sticks for the whole page. Nothing else targets #site-nav, so there is no box
+   left behind that needed its styles. */
+#site-nav{display:contents}
 nav.main{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
 nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:66px}
 .logo{display:flex;align-items:center;gap:11px}
@@ -256,7 +264,11 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
    the rest of the page lines up on. Every row is at least 44px tall (14px above
    and below a 16px line), which is the Apple target size and what the footer
    could not offer while its links were 32px. */
-.mobile-menu{display:none;flex-direction:column;padding:6px 24px 20px;border-top:1px solid var(--border);background:var(--surface)}
+.mobile-menu{display:none;flex-direction:column;padding:6px 24px 20px;border-top:1px solid var(--border);background:var(--surface);max-height:calc(100dvh - 66px);overflow-y:auto;overscroll-behavior:contain}
+/* The max-height above is not decoration: now that `nav.main` actually sticks,
+   a menu taller than the viewport would pin with its bottom below the fold and
+   the last items could not be scrolled to. The menu scrolls itself instead.
+   100dvh, not 100vh, so a phone's collapsing URL bar does not clip it. */
 .mm-top,.mm-head{display:block;padding:14px 0;font-size:16px;font-weight:700;color:var(--text);border-bottom:1px solid var(--border)}
 .mm-group{border-bottom:1px solid var(--border)}
 .mm-group .mm-head{border-bottom:none}
@@ -297,7 +309,7 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
 .chips{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:18px}
 .chip{font-size:13px;font-weight:500;color:var(--text-2);border:1px solid var(--border-2);border-radius:999px;padding:7px 15px;background:var(--surface);transition:.16s;cursor:pointer}
 .chip:hover{color:var(--b1);border-color:var(--b2)}
-.hero-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:60px}
+.hero-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:60px}
 .hstat{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:24px 12px;box-shadow:var(--shadow-sm)}
 .hstat .num{font-size:clamp(24px,3vw,34px);font-weight:800;letter-spacing:-.02em;color:var(--text)}
 .hstat .lbl{font-size:13px;color:var(--text-2);margin-top:2px}
@@ -559,14 +571,14 @@ footer a:hover{color:var(--text-inv)}
 @media(max-width:720px){
   .nav-links,.util-r span{display:none}
   .burger{display:block}
-  .hero-stats,.cat-grid,.camp-grid,.part-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .cat-grid,.camp-grid,.part-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .tech-grid,.deal-grid,.guide-grid,.service-grid{grid-template-columns:minmax(0,1fr)}
   .foot-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
   .sec{padding:64px 0}
   .util-l span{display:none}
 }
 @media(max-width:520px){
-  .hero-stats,.cat-grid,.camp-grid,.part-grid{grid-template-columns:minmax(0,1fr)}
+  .cat-grid,.camp-grid,.part-grid{grid-template-columns:minmax(0,1fr)}
 }
 
 /* ============================================================
@@ -827,6 +839,13 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 .deck{display:grid;grid-template-columns:1.35fr 1fr;gap:26px;align-items:stretch}
 @media(max-width:1024px){.deck{grid-template-columns:minmax(0,1fr)}}
 .deck-pillars{display:flex;flex-direction:column;gap:11px}
+/* The panel on the right is taller than four stacked cards, so with stretch on
+   the grid the card column ended about 58px short and the two bottom edges did
+   not line up. flex-grow distributes that slack across the four cards instead, so
+   both columns start and end on the same line. basis auto, not 0: the cards grow
+   from their own content height rather than being sized by leftover space alone,
+   which would let them clip if the panel ever got shorter than the text needs. */
+.deck-pillars .deck-card{flex:1 1 auto}
 .deck-card{display:flex;align-items:center;gap:12px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);padding:13px 15px;transition:.15s}
 .deck-card:hover{transform:translateY(-2px);border-color:var(--border-2);box-shadow:var(--shadow-sm)}
 .deck-card .deck-ic{width:40px;height:40px;border-radius:11px;display:grid;place-items:center;font-size:19px;flex:none;background:var(--grad-soft)}
@@ -839,16 +858,39 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 .deck-card .badge{font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:.04em}
 .deck-panel{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)}
 .deck-panel-head{display:flex;align-items:center;gap:8px;font-size:12.5px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--text-2)}
-.deck-panel-head .dot{width:8px;height:8px;border-radius:50%;background:var(--b1);box-shadow:0 0 0 4px var(--glow)}
+.deck-panel-head .dot{width:8px;height:8px;border-radius:50%;background:var(--b1);box-shadow:0 0 0 4px var(--glow);position:relative}
+/* A radar ring, not a blinking dot. Ty, 2026-09-22: "the blue dot next to the live
+   right now weight verdicts should be animated to show it flashing, pull the user
+   in". A hard on/off blink reads as an error state; a slow expanding ring that
+   fades out reads as "something is happening", which is the intent, and it is the
+   same idiom every live indicator uses. 2.4s, never faster: a fast pulse in the
+   corner of the eye is a distraction, a slow one is an invitation. */
+.deck-panel-head .dot::after{content:"";position:absolute;inset:0;border-radius:50%;background:var(--b1);
+  animation:dot-ring 2.4s cubic-bezier(.22,.61,.36,1) infinite}
+@keyframes dot-ring{
+  0%{transform:scale(1);opacity:.5}
+  70%{transform:scale(3.6);opacity:0}
+  100%{transform:scale(3.6);opacity:0}
+}
+/* The readouts cross-fade while the numbers are swapped in JS. Heights are fixed
+   by the row padding and line-height, so nothing below moves during the swap. */
+.deck-sim{transition:opacity .22s ease,transform .22s ease}
+.deck-sim.swapping{opacity:0;transform:translateY(-5px)}
+/* tabular-nums so the value column does not jitter sideways as digits change. */
+.deck-sim-row b{font-variant-numeric:tabular-nums}
 .deck-sim{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);padding:16px;margin-top:16px}
 .deck-sim-row{display:flex;justify-content:space-between;gap:14px;padding:9px 12px;border-radius:9px;font-size:13.5px;margin-bottom:8px}
 .deck-sim-row span{color:var(--text-2)}
-.deck-sim-row b{font-weight:800;text-align:right;white-space:nowrap}
+.deck-sim-row b{font-weight:800;text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
 .deck-sim-row.ok{background:var(--surface);border:1px solid var(--border);color:var(--text-2)}
 .deck-sim-row.ok b{color:var(--text)}
 .deck-sim-row.warn{background:var(--tint-bg);border:1px solid var(--tint-edge);color:var(--tint-ink)}
 .deck-sim-row.warn b{color:var(--tint-ink)}
-.deck-sim-note{font-size:12.5px;color:var(--text-3);margin-top:10px}
+/* Sits under the button, not above it, and centred. Ty, 2026-09-22: "It should
+   probably be below the button not above it, and it needs to be spaced out and
+   centered." Above the button it read as a caption for the rows; below, it
+   closes the panel and the whole block centres on one axis. */
+.deck-sim-note{font-size:12.5px;color:var(--text-3);margin-top:14px;text-align:center}
 
 /* scale locator cards */
 .scale-card{display:flex;gap:14px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);padding:14px 16px;transition:.15s}
@@ -913,7 +955,13 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
   .search-bar input{min-height:40px}
   .search-bar .btn{width:100%;height:46px}
   .hero-cta .btn{width:100%}
-  .hero-stats{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  /* ONE definition for the stat strip, and this is it. There used to be four
+     (here, 520px, 720px and 420px), so source order decided the winner and the
+     narrowest screens ended up with the most columns. Three stats now: three
+     across while there is room for them, one full-width row each below 720px,
+     because at phone width three columns is 110px per card and the labels wrap
+     four lines deep. */
+  .hero-stats{grid-template-columns:minmax(0,1fr)}
   .hstat{padding:18px 10px}
   .chips{justify-content:flex-start;overflow-x:auto;-webkit-overflow-scrolling:touch;gap:8px;flex-wrap:nowrap}
   .cat-grid,.guide-grid{grid-template-columns:minmax(0,1fr)}
@@ -922,12 +970,8 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 }
 @media(max-width:420px){
   .center{text-align:left}
-  /* Two across, not three. This said 1fr 1fr 1fr, which put THREE columns on a
-     360px screen: 99px cards holding labels like "Or more of RVs exceed a weight
-     rating*", wrapping six lines deep. The 1fr 1fr at 720px above was already
-     right and this rule was making the narrowest screens the most cramped, which
-     is backwards. Measured 2026-09-22 before the fix: hstat w=99 at 360px. */
-  .hero-stats{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  /* The stat strip is no longer restated here: it is single-column from 720px
+     down, which is set once at the 720px block above. */
   .hstat .num{font-size:22px}
   .hstat{padding:16px 12px}
 }
@@ -1275,6 +1319,11 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 .prose figure svg[role="img"]{max-width:100%;height:auto;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface)}
 .prose figure img{width:100%;max-width:480px;border-radius:var(--radius);border:1px solid var(--border)}
 .prose figure img.wide{max-width:520px}
+/* The About page photograph is the site owner's own trailer, not licensed stock,
+   so it carries no credit line and is the page's single image. It fills the
+   column instead of sitting at the 480px cap the guide photographs use, and takes
+   the small shadow so a dark photograph does not sit flat against a light page. */
+.prose figure.about-shot img{max-width:100%;box-shadow:var(--shadow-sm)}
 
 /* Page-body helpers. The margin helpers are named by size rather than by number so
    they cannot be confused with the .mt-1..4 scale above, and they are scoped to
@@ -1626,6 +1675,121 @@ figure:has(svg[role="img"]){overflow-x:auto;overflow-y:hidden}
 .man-table th{text-align:left;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--text-3);padding:8px 10px;border-bottom:1px solid var(--border-2)}
 .man-table td{padding:8px 10px;border-bottom:1px solid var(--border);color:var(--text-2)}
 .man-table td:last-child{text-align:right;font-weight:700;color:var(--text)}
+
+/* ============================================================
+   SNOW BUTTON (2026-09-22)
+
+   Ty: "I want the 'read winter guides' button to have a snow animation on hover,
+   its a main selling point for the turn of season". Two layers, no JavaScript:
+
+     1. a single sheen sweep across the face on hover. This is the thing that
+        makes it read as considered rather than novelty; it is the material
+        idiom every large site uses, and it fires once rather than looping.
+     2. slow falling snow BEHIND the label, masked top and bottom so flakes fade
+        in and out instead of popping against the border.
+
+   Two background layers at different tile sizes, moved different distances in
+   the same time, so the bigger flakes fall faster and the field has depth. Each
+   layer travels exactly one tile height, which is what makes the loop seamless
+   rather than a visible reset.
+
+   z-index:-1 on ::before with isolation:isolate on the button is deliberate: a
+   positioned pseudo-element paints ABOVE the element's own text, so a positive
+   index would put the snow in front of the label. Negative paints after the
+   background and before the text, which is where snow belongs, and isolation
+   stops it escaping behind the page.
+
+   Scoped to (hover:hover) and (pointer:fine) so a touch device never starts a
+   loop it cannot stop, and switched off entirely under prefers-reduced-motion.
+   ============================================================ */
+/* The transition lives on the BASE state, and that is what gives the return trip
+   its own timing. CSS uses the transition declared on the state being moved TO,
+   so a slow one here plus a quick one inside the media block below means the
+   button turns blue briskly and then takes its time coming back. Ty, 2026-09-22:
+   "at which point the button slowly transitions back to its normal state". */
+.btn-snow{position:relative;overflow:hidden;isolation:isolate;
+  transition:background .95s ease,color .95s ease,border-color .95s ease,box-shadow .95s ease,transform .2s ease}
+.btn-snow::before,
+.btn-snow::after{content:"";position:absolute;pointer-events:none;opacity:0}
+.btn-snow::before{
+  inset:0;z-index:-1;
+  /* White flakes, back the way they started. They were switched to brand blue
+     only because the face was near-white and white on white was invisible; on the
+     blue face below, white is the readable choice and the blue-tinted ones are
+     gone. A few carry a pale ice tint so the field is not uniform. */
+  background-image:
+    radial-gradient(2.6px 2.6px at 14px 16px,rgba(255,255,255,.95),transparent 62%),
+    radial-gradient(2.2px 2.2px at 48px 8px,rgba(255,255,255,.80),transparent 62%),
+    radial-gradient(3px 3px at 32px 60px,rgba(255,255,255,.92),transparent 62%),
+    radial-gradient(2px 2px at 66px 42px,rgba(255,255,255,.72),transparent 62%),
+    radial-gradient(2.8px 2.8px at 8px 80px,rgba(255,255,255,.88),transparent 62%),
+    radial-gradient(2.4px 2.4px at 58px 88px,rgba(255,255,255,.82),transparent 62%),
+    radial-gradient(2px 2px at 24px 38px,rgba(255,255,255,.62),transparent 60%),
+    radial-gradient(2.2px 2.2px at 44px 70px,rgba(255,255,255,.70),transparent 60%),
+    radial-gradient(3.4px 3.4px at 26px 34px,rgba(214,232,255,.85),transparent 66%),
+    radial-gradient(4px 4px at 100px 104px,rgba(214,232,255,.70),transparent 66%),
+    radial-gradient(3px 3px at 72px 148px,rgba(255,255,255,.78),transparent 66%),
+    radial-gradient(3.6px 3.6px at 124px 44px,rgba(255,255,255,.90),transparent 66%);
+  background-size:74px 96px,74px 96px,74px 96px,74px 96px,74px 96px,74px 96px,
+                  74px 96px,74px 96px,132px 168px,132px 168px,132px 168px,132px 168px;
+  background-repeat:repeat;
+  /* Snow enters from the TOP EDGE and fades out at the bottom. The first version
+     faded in at the top as well, so flakes materialised in the middle of the
+     button instead of falling into it. Ty, 2026-09-22: "make it start to snow
+     from the top and continue snowing until the mouse is removed". Opaque at
+     pixel 0, so the frame is snowing from its very top edge.
+     The opacity transition is what makes the snow fade OUT over the same slow
+     return trip when the pointer leaves, rather than blinking off. */
+  -webkit-mask-image:linear-gradient(180deg,#000 0,#000 58%,transparent 100%);
+  mask-image:linear-gradient(180deg,#000 0,#000 58%,transparent 100%);
+  animation:snow-fall 5s linear infinite;
+  animation-play-state:paused;
+  transition:opacity .95s ease;
+}
+.btn-snow::after{
+  top:0;bottom:0;left:-50%;width:42%;z-index:2;
+  background:linear-gradient(100deg,transparent 0,rgba(255,255,255,.9) 50%,transparent 100%);
+  transform:skewX(-16deg);
+}
+@media(hover:hover) and (pointer:fine){
+  /* Ty, 2026-09-22: "you should fade the button bluer". It now goes to
+     --brand-deep, a solid mid blue, with white text. That pair measures 5.09:1,
+     so it clears AA. The paler wash this started as reached only 4.19:1 against
+     white text and would have failed; going bluer is what made white text legal.
+     The inset highlight is a glassy top rim, not a gradient stop, so the whole
+     face stays one contrast-safe tone instead of drifting lighter at one end. */
+  .btn-snow:hover{background:var(--brand-deep);border-color:var(--brand-deep);color:var(--text-inv);
+    box-shadow:0 12px 26px -14px var(--glow),inset 0 1px 0 rgba(255,255,255,.22);
+    transition:background .32s ease,color .32s ease,border-color .32s ease,box-shadow .32s ease}
+  .btn-snow:hover::before{opacity:1;animation-play-state:running;transition:opacity .25s ease}
+  /* animation-fill-mode:forwards, and no opacity declared here. The first version
+     set opacity:1 alongside the animation, so when the 0.9s sweep ended the layer
+     fell back to that value and the white band stayed in the DOM at opacity 1
+     forever (measured at 1120ms: afterOpacity 1). It is clipped by overflow, so it
+     never showed, but a finished animation that leaves a painted layer behind is
+     the kind of thing that bites later. The keyframes own the opacity now, and
+     forwards holds the closing 0. */
+  .btn-snow:hover::after{animation:snow-sheen .9s ease-out;animation-fill-mode:forwards}
+}
+@keyframes snow-fall{
+  from{background-position:0 0,0 0,0 0,0 0,0 0,0 0,0 0,0 0,0 0,0 0,0 0,0 0}
+  to{background-position:0 96px,0 96px,0 96px,0 96px,0 96px,0 96px,
+                        0 96px,0 96px,0 168px,0 168px,0 168px,0 168px}
+}
+@keyframes snow-sheen{
+  from{transform:translate3d(0,0,0) skewX(-16deg);opacity:0}
+  35%{opacity:1}
+  to{transform:translate3d(340%,0,0) skewX(-16deg);opacity:0}
+}
+@media(prefers-reduced-motion:reduce){
+  .btn-snow::before,.btn-snow::after{animation:none;opacity:0}
+  .btn-snow:hover{background:var(--brand-deep);border-color:var(--brand-deep);color:var(--text-inv)}
+  /* The ring and the readout cross-fade are both purely decorative, so they go.
+     The JS also stops cycling under this query, so the panel holds the first
+     readout instead of swapping behind a motionless label. */
+  .deck-panel-head .dot::after{animation:none;opacity:0}
+  .deck-sim{transition:none}
+}
 
 /* ============================================================
    MOBILE PASS (2026-09-22)

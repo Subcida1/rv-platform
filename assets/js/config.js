@@ -28,9 +28,13 @@ window.RV_CONFIG = {
     skip in scripts/build-search-index.py with it. Shipping the page is fine,
     promoting a door that does not open is not. */
  showSignin: false,
- /* All routes in one place, add a page here and the nav/footer follow */
+ /* All routes in one place, add a page here and the nav/footer follow.
+    home is EMPTY on purpose: the homepage is the site root, so its links render
+    as "/" rather than "/index.html". Ty, 2026-09-22: "whenever we go to the home
+    page were just at the home page not using the index.html thing." R('') is
+    handled in site.js. */
  routes: {
- home: 'index.html',
+ home: '',
  tools: 'tools/index.html',
  calculator: 'tools/weight-calculator.html',
  guides: 'guides/index.html',

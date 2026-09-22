@@ -4,48 +4,132 @@ Open items for originrv.com, newest concerns first. This file lives in `_todo/`
 so GitHub Pages does not publish it, because the repository is public and this is
 a working document rather than site content.
 
-Last updated 2026-09-21. Section 7 added by the Cloud session; section 2 resolved.
+Last updated 2026-09-22. Section 1 rewritten after the free-source photo sweep.
 
 ---
 
 ## 1. Photographs still needed
 
-Six of the nine newer guides have an original diagram but no photograph. That is
-not an oversight: Wikimedia Commons has **no freely-licensed photographs** of
-these subjects. Searches for motorhome, caravan and camper return exteriors and
-landscapes only, and the component-level images simply do not exist there.
+**Updated 2026-09-22, after a full sweep of Wikimedia Commons and Openverse.**
+Two photographs were added; five guides still have none, and all five need
+shooting rather than searching. The evidence for that is in "Why the free
+sources cannot fill these" below.
 
 Wanted, in rough priority order:
 
 | Guide | The shot we want | Status |
 |---|---|---|
 | `rv-outlets-not-working` | A GFCI outlet with test and reset buttons | **Image exists, download blocked** — see below |
-| `rv-12-volt-problems` | A 12V DC fuse panel, distribution board, or battery bank | Not found anywhere free |
 | `rv-lights-not-working` | An RV interior ceiling light, or a 12V LED fixture | Not found |
 | `rv-tank-sensors-reading-wrong` | A holding tank, tank monitor panel, or dump station | Not found |
 | `rv-converter-not-charging` | A converter/charger unit, or a battery on charge | Not found |
 | `rv-furnace-not-working` | An RV furnace, or the exterior furnace vent | Not found |
 
+Added 2026-09-22, both fetched by `scripts/fetch-guide-photos.py`:
+
+| Guide | Photograph | Licence | Credit |
+|---|---|---|---|
+| `rv-towing-capacity` | A weight distributing hitch head | CC BY 2.0 | Tony Webster, Wikimedia Commons |
+| `rv-12-volt-problems` | ATO blade fuses in a fuse block | CC BY-SA 4.0 | project Kei, Wikimedia Commons |
+
+The 12-volt one is a **vehicle** fuse block, not an RV panel. The caption says so
+plainly and gives the fuse colour code, which is the same in an RV. An original
+photo of the real panel will always beat it, so it belongs on the shooting list
+above in spirit even though it now has an image.
+
+One more, added the same day, and **licensed from nobody**. The About page now
+carries the site owner's own photograph of his own 33-foot travel trailer at
+night. It is the only original photograph on the site: it needs no credit line and
+no licence, and it belongs on About precisely because that page claims the site
+was built from inside an RV. `scripts/build-about-photo.py` crops it from the
+original at `~/Downloads/RV-Night.jpg` — 926x1235 portrait, of which the top half
+was tree canopy and sky, so it is cropped 4:3 from y=470, which keeps a band of
+stars above and ground below with the tree framing the trailer. The re-save drops
+EXIF, so no location data travels with it.
+
+Two things not to "fix" here: **do not add a credit line to that photograph**, and
+do not change the footer wording. The footer reads "Third-party photographs appear
+under the licences credited beside each one", which is exactly true, and it says
+*third-party* because this one is not.
+
 **Options, cheapest first:**
 
-1. **Shoot them.** A phone photo of the furnace vent, the tank monitor, the fuse
-   panel and the outlet in any RV would beat anything stock. Original photos also
-   need no credit line and cannot be found on a competitor's page.
+1. **Shoot them.** A phone photo of the furnace vent, the tank monitor, the
+   converter and the outlet in any RV would beat anything stock. Original photos
+   also need no credit line and cannot be found on a competitor's page. This is
+   now the only route for all five.
 2. **Retry the GFCI.** `File:NEMA 5-20RA GFCI Tamper Resistant Receptacle.jpg` on
    Commons, CC BY-SA 3.0 by Wtshymanski, is exactly right for the outlets guide.
    Every download attempt returned 429 rate-limit errors, from the command line
    and from a real browser session. Worth one more try on a different day.
-3. **Flickr Creative Commons search** for RV specific interior and compartment
-   shots. Not yet tried thoroughly.
+3. **Openverse, with a registered token.** The best untried source. Anonymous API
+   calls work intermittently and then return a Cloudflare challenge, so a free
+   token is needed before it can be swept properly. It aggregates Flickr Creative
+   Commons, which is where RV interiors would most plausibly live.
 
-Deliberately **rejected** so they do not get added later by mistake: a domestic
-rooftop solar array, a Slovakian household distribution board, and generic travel
-trailer exteriors. A wrong-but-plausible photo is worse than no photo.
+### Why the free sources cannot fill these
+
+The claim in the previous version of this file was that Commons has no such
+photographs. It is true, and it can now be stated with evidence rather than as a
+failed search: **`Category:Caravan interiors` holds 0 files, `Category:Motorhome
+interiors` 0 files, `Category:Campers` 0 files.** Commons has no interior
+photographs of RVs at all.
+
+Abundance, where it exists, is a trap. A dump-station search returns 39 results
+and not one is usable: it is one photographer's series of wet concrete slabs, a
+European service bollard with non-English signage, and a site entrance. Topically
+correct, visually worthless, and mostly not American.
+
+Deliberately **rejected** so they do not get added later by mistake:
+
+- a domestic rooftop solar array, and a Slovakian household distribution board
+  (both recorded here previously, both still wrong);
+- generic travel trailer exteriors;
+- 230V European DIN-rail consumer units, which are the wrong voltage entirely;
+- 1947 to 1960 Australian caravan interiors — wrong era, wrong continent, and not
+  one shows a ceiling light, which is the shot the guide actually needs;
+- vintage ceramic fuse boxes, and industrial stationary battery banks;
+- the whole Elgaard dump-station series, for the reason above.
+
+A wrong-but-plausible photo is worse than no photo.
+
+### Source notes for the next person
+
+- **Commons `gsrnamespace=6` is not an image filter.** It is the File namespace,
+  which also holds PDFs, DjVu and TIFF scans. A first sweep reported "20 hits" per
+  query that were all scanned books. Ask for `iiprop=...|mime` and reject anything
+  that is not `image/*`, or add `filetype:bitmap` to the search term.
+- **The RV material that does exist hides in the category tree, not in search.**
+  `Category:Recreational vehicles in the United States` holds 163 files and
+  `Category:RV parks in the United States` holds 50. Both are campground and
+  exterior views: useless for the component guides, genuinely good for a directory
+  page if one ever wants imagery.
+- **The five existing Commons photo credits were checked against the source files
+  and every one is accurate.** Recovered files: `DOT tire code.jpg` (Chrismeraz),
+  `Broke Fuse.jpg` (A7N8X), `Ice dam slate roof.jpg` (Dmcroof), `SUOER SOLAR
+  CHARGE CONTROLLER.jpg` (Ranjithkumar Murugesan), and a TaurusEmerald inverter
+  generator. Two Flickr photographs and one from geograph could not be traced back
+  without an API key, though their captions are structurally correct.
+
+### Still open: nothing enforces the credits
+
+`verify.py` has no licence or credit check. The guide photographs carry correct
+credits and the footer carries the modification note, but a photograph added
+without either would ship unchallenged. A small gate would close it: every
+`<figure>` holding an `<img>` under `assets/img/` must have a figcaption naming an
+author and linking a licence, and no CC BY-NC or CC BY-ND may appear on a
+commercial site.
 
 ### Download mechanics, learned the hard way
 
 - `upload.wikimedia.org` **requires a `Referer: https://commons.wikimedia.org/`
-  header**, or it returns a 2 KB HTML error page with an HTTP 200.
+  header**, or it returns an HTML error page with an HTTP 200.
+- **Validate a download as an image, never by byte count.** A failed fetch can
+  return a 42 KB HTML page, which passes any size check. Opening it with PIL
+  refuses it and says so.
+- **Titles must be exact, including a Flickr numeric suffix.** A near-miss title
+  returns no `imageinfo`, and `Special:FilePath` then serves HTML:
+  `...Trailer Tow Hitch (27189607617).jpg` is not the same file as `....jpg`.
 - It rate-limits aggressively. Use
   `commons.wikimedia.org/wiki/Special:FilePath/<urlencoded title>?width=900`
   with 8 to 12 seconds between files.
