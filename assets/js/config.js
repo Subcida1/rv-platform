@@ -12,6 +12,8 @@ window.RV_CONFIG = {
  },
  contact: {
  email: 'contact@originrv.com', // Cloudflare Email Routing forwards this to Ty's inbox
+ formKey: '', // Web3Forms access key: with this set, the claim form posts instead of relying on the visitor's mail client
+ formEndpoint: 'https://api.web3forms.com/submit', // swap here to move off Web3Forms
  routesTo: 'contact.html' // where the navbar "Contact" link goes
  },
  domain: {

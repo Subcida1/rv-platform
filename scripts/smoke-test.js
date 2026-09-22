@@ -51,6 +51,11 @@ function context() {
   sandbox.window = sandbox;
   sandbox.globalThis = sandbox;
   sandbox.__form = SEARCH_FORM;
+  sandbox.__fetchCalls = [];
+  sandbox.fetch = (url, opts) => {
+    sandbox.__fetchCalls.push({ url, opts });
+    return Promise.resolve({ json: () => Promise.resolve({ success: true }) });
+  };
   vm.createContext(sandbox);
   return sandbox;
 }
@@ -96,7 +101,40 @@ if (sb.window.RV && typeof sb.window.RV.claimMailto === 'function') {
   }
 } else { console.log('  FAIL RV.claimMailto is not exposed'); failed++; }
 
-// 2d. the shell must expose what pages depend on
+// 2d. with a form key configured, a claim must POST to the endpoint instead of
+//     depending on the visitor's mail client. A separate sandbox, because the
+//     key has to be in place before site.js reads the config. Async, so it is
+//     collected and awaited before the summary below.
+const pending = [];
+{
+  const fields = { 'cl-name': 'Cascade Mobile RV Repair', 'cl-city': 'Bend', 'cl-st': 'or',
+                   'cl-phone': '541-555-0123', 'cl-site': 'https://cascade.example' };
+  const postForm = {
+    querySelector: sel => sel.startsWith('#')
+      ? { value: fields[sel.replace('#', '')] || '' }
+      : (sel === '[name="botcheck"]' ? { checked: false } : null),
+  };
+  const sb2 = context();
+  runIn(sb2, 'assets/js/config.js');
+  sb2.window.RV_CONFIG.contact.formKey = 'test-access-key';
+  runIn(sb2, 'assets/js/site.js');
+  pending.push(sb2.window.RV.claimSubmit(postForm).then(how => {
+    const call = sb2.__fetchCalls[0];
+    const body = call ? JSON.parse(call.opts.body) : {};
+    const ok = how === 'sent' && call && call.url === 'https://api.web3forms.com/submit' &&
+               call.opts.method === 'POST' && body.access_key === 'test-access-key' &&
+               body.Business === 'Cascade Mobile RV Repair' && body.City === 'Bend, OR' &&
+               body.Phone === '541-555-0123' && body.Website === 'https://cascade.example';
+    if (ok) console.log('  ok   a configured form key POSTs the claim to the endpoint');
+    else {
+      console.log('  FAIL claim POST: how=' + how + ' url=' + (call && call.url) +
+                   ' body=' + JSON.stringify(body).slice(0, 120));
+      failed++;
+    }
+  }).catch(e => { console.log('  FAIL claimSubmit threw: ' + e.message); failed++; }));
+}
+
+// 2e. the shell must expose what pages depend on
 if (sb.window.RV) {
   for (const fn of ['toggleMenu', 'searchRoute']) {
     if (typeof sb.window.RV[fn] === 'function') console.log('  ok   RV.' + fn + ' exposed');
@@ -226,5 +264,7 @@ for (const [page, scripts] of PAGES) {
   else console.log('  ok   ' + page + ' scripts execute');
 }
 
-console.log('\n  ' + (failed === 0 ? 'smoke test passed' : failed + ' smoke failures'));
-process.exit(failed === 0 ? 0 : 1);
+Promise.all(pending).then(() => {
+  console.log('\n  ' + (failed === 0 ? 'smoke test passed' : failed + ' smoke failures'));
+  process.exit(failed === 0 ? 0 : 1);
+});

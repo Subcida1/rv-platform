@@ -162,26 +162,64 @@
  }
 
  /* ---------- claim form ----------
-   There is no backend and no form service, so the visitor's own mail client
-   carries the message. Returns false when no address is published, so the page
-   can say plainly that nothing was sent instead of faking a success. */
+   Two ways to deliver a claim, in order of preference:
+
+   1. POST to the form endpoint (Web3Forms by default). This works for every
+      visitor, including the many who have no mail client configured.
+   2. A mailto handoff, which needs the visitor's own mail client.
+
+   It never claims success it did not achieve: if neither path is available the
+   page says plainly that nothing was sent. Returns a promise for
+   'sent' | 'mailto' | 'none'. */
+ function claimFields(form) {
+ function v(id) { var el = form.querySelector('#' + id); return el ? el.value.trim() : ''; }
+ var st = v('cl-st');
+ return {
+ business: v('cl-name'),
+ city: v('cl-city') + (st ? ', ' + st.toUpperCase() : ''),
+ phone: v('cl-phone'),
+ website: v('cl-site')
+ };
+ }
+
  function claimMailto(form) {
  var to = (CFG.contact && CFG.contact.email) || '';
  if (!to) return false;
- function v(id) { var el = form.querySelector('#' + id); return el ? el.value.trim() : ''; }
- var st = v('cl-st');
- var body = [
- 'Business: ' + v('cl-name'),
- 'City: ' + v('cl-city') + (st ? ', ' + st.toUpperCase() : ''),
- 'Phone: ' + v('cl-phone'),
- 'Website: ' + v('cl-site'),
- '',
- 'Sent from the claim form at originrv.com'
- ].join('\n');
+ var f = claimFields(form);
+ var body = ['Business: ' + f.business, 'City: ' + f.city, 'Phone: ' + f.phone,
+ 'Website: ' + f.website, '', 'Sent from the claim form at originrv.com'].join('\n');
  window.location.href = 'mailto:' + to +
- '?subject=' + encodeURIComponent('Listing claim: ' + v('cl-name')) +
+ '?subject=' + encodeURIComponent('Listing claim: ' + f.business) +
  '&body=' + encodeURIComponent(body);
  return true;
+ }
+
+ function claimSubmit(form) {
+ var cfg = CFG.contact || {};
+ var key = cfg.formKey || '';
+ if (!key || typeof fetch !== 'function') {
+ return Promise.resolve(claimMailto(form) ? 'mailto' : 'none');
+ }
+ var f = claimFields(form);
+ var hp = form.querySelector('[name="botcheck"]');
+ var payload = {
+ access_key: key,
+ subject: 'Listing claim: ' + f.business,
+ from_name: 'OriginRV claim form',
+ botcheck: hp && hp.checked ? 'true' : '',
+ Business: f.business,
+ City: f.city,
+ Phone: f.phone,
+ Website: f.website
+ };
+ function fallback() { return claimMailto(form) ? 'mailto' : 'none'; }
+ return fetch(cfg.formEndpoint || 'https://api.web3forms.com/submit', {
+ method: 'POST',
+ headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+ body: JSON.stringify(payload)
+ }).then(function (r) { return r.json(); })
+ .then(function (j) { return j && j.success ? 'sent' : fallback(); })
+ .catch(fallback);
  }
 
  /* ---------- init ---------- */
@@ -190,7 +228,8 @@
  contactEmail: CFG.contact ? CFG.contact.email : '',
  toggleMenu: toggleMenu,
  searchRoute: searchRoute,
- claimMailto: claimMailto
+ claimMailto: claimMailto,
+ claimSubmit: claimSubmit
  };
  injectShell();
  initReveal();
