@@ -22,6 +22,12 @@ window.RV_CONFIG = {
  canonical: 'https://originrv.com', // live domain (also in sitemap.xml, robots.txt, and per-page canonicals)
  live: 'https://originrv.com' // github.io redirects here now that the CNAME is set
  },
+ /* signin.html is a placeholder: the form is disabled and there is no account
+    system behind it yet, so the nav, the mobile menu and the search index all
+    leave it out. Turn this on the day accounts actually work, and remove the
+    skip in scripts/build-search-index.py with it. Shipping the page is fine,
+    promoting a door that does not open is not. */
+ showSignin: false,
  /* All routes in one place, add a page here and the nav/footer follow */
  routes: {
  home: 'index.html',

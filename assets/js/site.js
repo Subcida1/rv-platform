@@ -38,6 +38,15 @@
  '<span class="logo-name"><span>' + esc(CFG.brand.name) + '</span></span></a>';
  }
 
+ function signinLink(cls) {
+ /* signin.html is a disabled placeholder with no account system behind it, so
+    the link is withheld until CFG.showSignin says otherwise. The nav and the
+    mobile menu both call this, so the two cannot disagree about whether the
+    door exists. */
+ if (!CFG.showSignin) return '';
+ return '<a' + (cls ? ' class="' + cls + '"' : '') + ' href="' + R(CFG.routes.signin) + '">Sign in</a>';
+ }
+
  function navHTML() {
  var rt = CFG.routes;
  return '<div class="util"><div class="wrap">' +
@@ -67,7 +76,7 @@
  '<a href="' + R(rt.manualsRecalls) + '">Recalls and bulletins<span class="sm">Check a unit, and the federal bulletin file</span></a>' +
  '<a href="' + R(rt.manuals) + '">All manuals<span class="sm">Every system, linked at the maker</span></a></div></div>' +
  '</div>' +
- '<div class="nav-actions"><a class="btn btn-outline btn-sm" href="' + R(rt.signin) + '">Sign in</a><a class="btn btn-primary btn-sm" href="' + R(rt.calculator) + '">Free Tool</a>' +
+ '<div class="nav-actions">' + signinLink('btn btn-outline btn-sm') + '<a class="btn btn-primary btn-sm" href="' + R(rt.calculator) + '">Free Tool</a>' +
  '<button class="burger" aria-label="Menu" onclick="RV.toggleMenu()"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h12M4 10h12M4 14h12"/></svg></button></div>' +
  '</div>' +
  '<div class="mobile-menu"><a href="' + R(rt.home) + '">Home</a>' +
@@ -86,7 +95,7 @@
  '<a href="' + R(rt.manualsBrands) + '">. Owner manuals by brand</a>' +
  '<a href="' + R(rt.manualsRecalls) + '">. Recall lookup</a>' +
  '<a href="' + R(rt.about) + '">About</a>' +
-      '<a href="' + R(rt.signin) + '">Sign in</a>' +
+      signinLink('') +
  '<a href="' + R(rt.contact) + '">Contact</a>' +
  '</div></nav>';
  }

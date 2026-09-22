@@ -104,7 +104,8 @@ def pages():
         ("index.html", "OriginRV home", "home start free rv tools"),
         ("about.html", "About OriginRV", "about who contact originrv"),
         ("contact.html", "Contact", "contact email question feedback"),
-        ("signin.html", "Sign in", "sign in account login"),
+        # signin.html is skipped on purpose: it is a disabled placeholder and
+        # CFG.showSignin keeps it out of the nav too. Add it back with the flag.
         ("guides/index.html", "All RV guides", "all guides index list"),
         ("tools/index.html", "All RV tools", "all tools index list"),
     ]:
