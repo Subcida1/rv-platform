@@ -1,0 +1,275 @@
+{
+  "about.html": {
+    "hash": "ccfc3840489c34f8",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
+  },
+  "contact.html": {
+    "hash": "1d654e22cdbc5310",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
+  },
+  "directory/california.html": {
+    "hash": "2b80789161e486e9",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
+  },
+  "directory/index.html": {
+    "hash": "94bdbdb75b7e3559",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
+  },
+  "directory/oregon.html": {
+    "hash": "85a30e6a9a1e031f",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
+  },
+  "directory/washington.html": {
+    "hash": "faca6f1157d24a48",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
+  },
+  "guides/battery-winter-storage.html": {
+    "hash": "e3bdc0bd8ed547d7",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
+  },
+  "guides/index.html": {
+    "hash": "4cfe45f2ba3475fe",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
+  },
+  "guides/roof-snow-load.html": {
+    "hash": "8009ca0de37a064b",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
+  },
+  "guides/rv-12-volt-problems.html": {
+    "hash": "2763f8f55a0371c8",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
+  },
+  "guides/rv-converter-not-charging.html": {
+    "hash": "9abbc179282ec70f",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
+  },
+  "guides/rv-furnace-not-working.html": {
+    "hash": "6879858152b66aeb",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
+  },
+  "guides/rv-fuse-keeps-blowing.html": {
+    "hash": "a305a68a9f4c0a41",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
+  },
+  "guides/rv-generator-not-charging.html": {
+    "hash": "3ff21e7c891ea61c",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
+  },
+  "guides/rv-lights-not-working.html": {
+    "hash": "d4f653327e76bdb7",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
+  },
+  "guides/rv-outlets-not-working.html": {
+    "hash": "676bdcdd0311dba5",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
+  },
+  "guides/rv-refrigerator-not-cooling.html": {
+    "hash": "203d49df90516f7c",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
+  },
+  "guides/rv-solar-not-charging.html": {
+    "hash": "52753affaf715fa6",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
+  },
+  "guides/rv-tank-sensors-reading-wrong.html": {
+    "hash": "656fe5c7fda1d2b9",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
+  },
+  "guides/rv-tire-replacement.html": {
+    "hash": "0cc5863f9f449ced",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
+  },
+  "guides/rv-towing-capacity.html": {
+    "hash": "0010df373c2a5e48",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
+  },
+  "guides/rv-water-heater-not-heating.html": {
+    "hash": "61142f5150e11541",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
+  },
+  "guides/tires-winter.html": {
+    "hash": "30057a49354778bc",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
+  },
+  "guides/winterize-plumbing.html": {
+    "hash": "5abe56c74fb07e59",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
+  },
+  "index.html": {
+    "hash": "013934fff985146d",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
+  },
+  "manuals/brands.html": {
+    "hash": "6f8e23e69ad9573c",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
+  },
+  "manuals/chassis-and-drivetrain.html": {
+    "hash": "481341e3cd7b1ce6",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
+  },
+  "manuals/exterior-and-body.html": {
+    "hash": "07d51fcfef9afc44",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
+  },
+  "manuals/heating-and-cooling.html": {
+    "hash": "c984806adddc200f",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
+  },
+  "manuals/index.html": {
+    "hash": "dbd831b1a6356a63",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
+  },
+  "manuals/kitchen-and-appliances.html": {
+    "hash": "2f933686d23886e5",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
+  },
+  "manuals/power-and-electrical.html": {
+    "hash": "9805bf4786d6f566",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
+  },
+  "manuals/recalls.html": {
+    "hash": "00a35b6f31caa439",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
+  },
+  "manuals/sanitation-and-tanks.html": {
+    "hash": "13146a68ffea2b71",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
+  },
+  "manuals/towing-and-running-gear.html": {
+    "hash": "ea60e80bfe7abb32",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
+  },
+  "manuals/water-and-plumbing.html": {
+    "hash": "3bd7dce537f8773d",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
+  },
+  "signin.html": {
+    "hash": "3e0132fc1b97b389",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
+  },
+  "tools/index.html": {
+    "hash": "231aa60e0f1c7e12",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
+  },
+  "tools/weight-calculator.html": {
+    "hash": "b2b5bd9f01e39cf9",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
+  }
+}

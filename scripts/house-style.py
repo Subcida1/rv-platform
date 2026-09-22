@@ -115,7 +115,22 @@ def headings(html):
 
 
 def source_labels(html):
-    return [TAG_RE.sub("", x).strip() for x in re.findall(r"<li><a[^>]*>(.*?)</a>", html, re.S)]
+    """The text of every entry in the Sources list -- link or plain text.
+
+    It used to match only `<li><a ...>`, which made a legitimate entry invisible:
+    five documents have no public maker copy (Airxcel supplies technician
+    literature to approved service centres only; Goodyear has withdrawn its RV
+    tire guide), and those entries now state that in plain text. Matching anchors
+    only re-raised the exact findings those entries answer.
+
+    Scoped to the Sources list itself, so a bulleted list in the body cannot
+    masquerade as a source entry and silence a real finding.
+    """
+    m = re.search(r">\s*Sources\s*<.*?<ul>(.*?)</ul>", html, re.S | re.I)
+    if not m:
+        return []
+    return [re.sub(r"\s+", " ", TAG_RE.sub("", x)).strip()
+            for x in re.findall(r"<li>(.*?)</li>", m.group(1), re.S)]
 
 
 def check_page(path):

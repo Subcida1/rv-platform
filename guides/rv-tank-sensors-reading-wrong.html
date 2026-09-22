@@ -39,7 +39,7 @@
  <div class="sec-eyebrow">Guide . Troubleshooting</div>
     <h1>RV tank sensors reading wrong: The troubleshooting guide</h1>
  <p class="lede">Almost every RV has the same complaint: the panel says the black tank is full when you dumped it yesterday, or the gray tank shows a third when it is empty. This is not usually a broken sensor. Most of the time it is residue inside the tank completing a circuit the sensor was never meant to complete, and the single most useful thing you can learn is why that happens. Understand the mechanism and the whole problem stops being mysterious.</p>
- <p class="reviewed">Last reviewed: Sep 21, 2026, against current Valterra, Thetford, KIB and Garnet service guidance.</p>
+ <p class="reviewed">Last reviewed: Sep 21, 2026, against current Valterra, Thetford and Garnet service guidance.</p>
  </div>
 
  <div class="sec prose">
@@ -141,9 +141,9 @@
  <h3>Test one: The dry and wet test</h3>
  <p>This is the one to run first, and it is free. Dump the tank completely and let it dry out properly. Then check the panel. If it still reads full on a tank you know is dry, cleaning cannot be your answer, because there is no residue left to carry any current. That result points at a wiring fault or a failed board. The other half of the test is the reverse: if the panel reads empty when dry but shows levels again as soon as you add liquid, the probes are fouled, and cleaning is the right first move.</p>
  <h3>Test two: Swap two tanks at the panel</h3>
- <p>KIB's diagnostic guide gives the procedure directly. If the fresh tank reads correctly and the gray tank does not, swap those two wires at the panel. If the fault follows the wire, the problem is in that tank's wiring or its pigtail, not the display. If the fault stays on the same tank position regardless of which wire is in it, the panel board itself is the problem. This single swap tells you which side of the connector to work on.</p>
+ <p>This test needs no tools. If the fresh tank reads correctly and the gray tank does not, swap those two wires at the panel. If the fault follows the wire, the problem is in that tank's wiring or its pigtail, not the display. If the fault stays on the same tank position regardless of which wire is in it, the panel board itself is the problem. This single swap tells you which side of the connector to work on.</p>
  <h3>What to measure</h3>
- <p>KIB publishes resistance values for its pigtail harness: red to orange reads essentially zero ohms, red to green reads about 68,000 ohms, and red to yellow about 188,000 ohms. The probe maker's own website documents a different check on the probes themselves, noting that with the tank empty a probe should read infinity and that a submerged probe reads somewhere between roughly 10,000 and 100,000 ohms depending on the water, and adds that this must be done with an analog meter rather than a digital one.</p>
+ <p>KIB no longer publishes its tank-monitor documentation online, so the figures below are reported rather than linked. The values it gives for its pigtail harness: red to orange reads essentially zero ohms, red to green reads about 68,000 ohms, and red to yellow about 188,000 ohms. The probe maker's own website documents a different check on the probes themselves, noting that with the tank empty a probe should read infinity and that a submerged probe reads somewhere between roughly 10,000 and 100,000 ohms depending on the water, and adds that this must be done with an analog meter rather than a digital one.</p>
  <h3>The warning from KIB</h3>
  <p>Do not short fresh water tank probes with jumper wires to test them. Use water, or a 43,000 ohm resistor. Jumping the probes is a good way to damage the board you are trying to diagnose.</p>
  </div>
@@ -152,9 +152,9 @@
  <div class="card">
  <p>Worth separating from the folk remedies, because these are the companies that make the products and they publish their own instructions.</p>
  <h3>A manufacturer sensor cleaner, used as directed</h3>
- <p>Thetford sells a Level Gauge Cleaner specifically for this, and its instructions are specific: half the bottle into a 40 gallon black tank through the toilet, half into the gray tank through a drain, flush with running water and fill the tank, mix by driving, let it sit 24 hours, drive again to loosen deposits, then dump and rinse. It should not go in the fresh water tank. It is worth being clear about what a cleaner can and cannot do: it dissolves organic residue, and it cannot help with mineral scale or with an electrical fault. Cleaning the right problem is what works. If you do one thing from this section, do this, because it is the only remedy here that comes with real instructions from the company that makes it.</p>
+ <p>Thetford sells a Level Gauge Cleaner specifically for this, and its instructions are specific: half the bottle into a 40 gallon black tank through the toilet, half into the gray tank through a drain, flush with running water and fill the tank, mix by driving, let it sit 24 hours, drive again to loosen deposits, then dump and rinse. It should not go in the fresh water tank. It is worth being clear about what a cleaner can and cannot do: it dissolves organic residue, and it cannot help with mineral scale or with an electrical fault. Cleaning the right problem is what works. If you do one thing from this section, do this, because it is the most direct fix available.</p>
  <h3>Mechanical cleaning with a tank wand</h3>
- <p>Camco's Swivel Stik instructions are straightforward: leave the dump valve open, insert the rinser through the toilet, open the faucet to full flow, and work it around slowly to reach all sides of the tank. The rotary action dislodges deposits that a passive chemical would take much longer to shift, and it cleans the tank walls, which is where residue does its damage.</p>
+ <p>A tank wand is used like this: leave the dump valve open, insert the rinser through the toilet, open the faucet to full flow, and work it around slowly to reach all sides of the tank. The rotary action dislodges deposits that a passive chemical would take much longer to shift, and it cleans the tank walls, which is where residue does its damage.</p>
  <h3>What the sensor manufacturer says</h3>
  <p>Garnet, which makes the external SeeLevel sensors, publishes advice for tanks that are already fouled. It dismisses some chemicals outright as too slow to start the breakdown, and recommends an RV liquid treatment left in the tank with roughly 30 percent fresh water, ideally driving for two or three days. Then the part worth reading twice: the waste did not build up on the tank wall in one day, so it may not dissolve in one treatment. Expecting one bottle to fix years of buildup is the most common reason people conclude nothing works.</p>
  <h3>Professional hydro-cleaning, when the above fails</h3>
@@ -260,7 +260,8 @@
   <li><a href="https://www.garnetinstruments.com/wp-content/uploads/2025/11/SeeLeveL-709-Series-Manual-v2.0.pdf" target="_blank" rel="noopener">Garnet Instruments, SeeLevel 709 series manual (PDF)</a></li>
   <li><a href="https://valterra.com/product/horst-miracle-probes-black-water-tanks-bulk/" target="_blank" rel="noopener">Valterra, Horst Miracle Probes product literature</a></li>
   <li><a href="https://www.thetford.com/us/thetford-support/level-gauge-cleaner/" target="_blank" rel="noopener">Thetford, Level Gauge Cleaner</a></li>
- </ul>
+   <li><a href="https://lci-support-doc.s3.amazonaws.com/manuals/electronics/Intelli/ccd-0001437.pdf" target="_blank" rel="noopener">Lippert, Intelli-view tank monitor installation manual (PDF)</a></li>
+</ul>
  </div>
  </div>
  </div>
