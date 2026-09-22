@@ -169,8 +169,8 @@ input,select,textarea{font-family:inherit}
 /* ================= BUTTONS ================= */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:12px 22px;border-radius:999px;font-weight:600;font-size:14.5px;line-height:1;border:1px solid transparent;transition:transform .15s,box-shadow .18s,background .18s,color .18s,border-color .18s;white-space:nowrap;text-align:center}
 .btn:active{transform:translateY(1px)}
-.btn-primary{background:var(--grad);color:var(--text-inv);box-shadow:0 12px 26px -12px rgba(244,63,94,.6)}
-.btn-primary:hover{transform:translateY(-1px);box-shadow:0 16px 32px -12px rgba(244,63,94,.72)}
+.btn-primary{background:var(--grad);color:var(--text-inv);box-shadow:0 12px 26px -12px var(--glow)}
+.btn-primary:hover{transform:translateY(-1px);box-shadow:0 16px 32px -12px var(--glow)}
 .btn-secondary{background:var(--surface);border-color:var(--border-2);color:var(--text)}
 .btn-secondary:hover{border-color:#c3cad6;background:var(--surface-2)}
 .btn-ghost{background:transparent;border-color:transparent;color:var(--text-2)}
@@ -257,10 +257,10 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
 
 /* ================= HERO (HOME) ================= */
 .hero{position:relative;overflow:hidden;background:var(--bg)}
-.hero-bg{position:absolute;inset:0;background:radial-gradient(900px 480px at 82% -8%,rgba(139,92,246,.16),transparent 60%),radial-gradient(800px 460px at 12% 8%,rgba(249,115,22,.14),transparent 58%),radial-gradient(700px 420px at 50% 120%,rgba(244,63,94,.12),transparent 60%),linear-gradient(180deg,#fdfbfa 0%,var(--surface) 40%)}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(900px 480px at 82% -8%,rgba(61,127,194,.16),transparent 60%),radial-gradient(800px 460px at 12% 8%,rgba(86,143,211,.14),transparent 58%),radial-gradient(700px 420px at 50% 120%,rgba(91,150,216,.12),transparent 60%),linear-gradient(180deg,#fdfbfa 0%,var(--surface) 40%)}
 .hero-grid{position:absolute;inset:0;opacity:.5;background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(ellipse 70% 60% at 50% 0%,#000 20%,transparent 75%)}
 .hero-inner{position:relative;z-index:2;padding:92px 0 30px;text-align:center}
-.kicker{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#4338ca;border:1px solid #e0e7ff;background:#eef2ff;padding:7px 16px;border-radius:999px}
+.kicker{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--tint-ink);border:1px solid var(--tint-edge);background:var(--tint-bg);padding:7px 16px;border-radius:999px}
 .hero h1{margin:26px auto 0;max-width:880px;font-size:clamp(40px,6.4vw,76px);font-weight:800;letter-spacing:-.035em;line-height:1.04}
 .hero h1 .grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;padding:0 1px}
 .hero .sub{margin:22px auto 0;max-width:640px;font-size:clamp(16px,2vw,19px);color:var(--text-2)}
@@ -381,7 +381,7 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
 .tool .ic{width:46px;height:46px;flex:none;border-radius:50%;display:grid;place-items:center;font-size:22px;background:var(--bg-3)}
 .tool h4{font-size:16.5px;font-weight:700}
 .tool p{margin-top:4px;font-size:14px;color:var(--text-2)}
-.route-card{position:relative;border-radius:var(--radius);overflow:hidden;background:linear-gradient(160deg,#eef2ff,#fdf2f8 55%,#fff7ed);border:1px solid var(--border);padding:26px;min-height:420px}
+.route-card{position:relative;border-radius:var(--radius);overflow:hidden;background:linear-gradient(160deg,var(--tint-bg),#fdf2f8 55%,#fff7ed);border:1px solid var(--border);padding:26px;min-height:420px}
 .route-card svg{width:100%;height:auto}
 
 /* ================= PRESS ================= */
@@ -573,9 +573,9 @@ footer a:hover{color:var(--text-inv)}
 
 /* ---------- decorative hero blobs ---------- */
 .blob{position:absolute;border-radius:50%;filter:blur(70px);z-index:0;pointer-events:none}
-.blob.orange{background:rgba(249,115,22,.22)}
-.blob.rose{background:rgba(244,63,94,.18)}
-.blob.violet{background:rgba(139,92,246,.18)}
+.blob.orange{background:rgba(61,127,194,.22)}
+.blob.rose{background:rgba(86,143,211,.18)}
+.blob.violet{background:rgba(91,150,216,.18)}
 .blob.teal{background:rgba(20,184,166,.16)}
 
 /* ---------- stat cards / authority ---------- */
@@ -939,7 +939,7 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 .verified{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:var(--tint-ink);background:var(--tint-bg);border:1px solid var(--tint-edge);border-radius:999px;padding:6px 13px}
 .verified::before{content:"\2713";display:grid;place-items:center;width:19px;height:19px;border-radius:50%;background:var(--b1);color:var(--text-inv);font-size:11px;font-weight:900}
 /* quieter primary hover (the old pink glow bubble) */
-.btn-primary:hover{box-shadow:0 6px 14px -8px rgba(244,63,94,.35);transform:none}
+.btn-primary:hover{box-shadow:0 6px 14px -8px var(--glow);transform:none}
 .tool-strip{display:flex;flex-wrap:wrap;gap:9px;margin-top:16px}
 .tool-strip .tchip{font-size:13px;font-weight:700;color:var(--text-2);background:var(--bg-2);border:1px solid var(--border);padding:7px 13px;border-radius:999px;display:inline-flex;align-items:center;gap:7px}
 .tool-strip .tchip b{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
@@ -1038,7 +1038,7 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 /* deck-go meta arrows: keep gradient ONLY as leading affordance, on a solid base */
 .deck-go{font-size:12.5px;font-weight:800;color:var(--text-2)}
 /* hero grid + background: keep pleasant but tone the color patches down */
-.hero-bg{background:radial-gradient(900px 480px at 82% -8%,rgba(139,92,246,.10),transparent 60%),radial-gradient(800px 460px at 12% 8%,rgba(249,115,22,.09),transparent 58%),radial-gradient(700px 420px at 50% 120%,rgba(244,63,94,.08),transparent 60%),linear-gradient(180deg,#fdfbfa 0%,var(--surface) 40%)}
+.hero-bg{background:radial-gradient(900px 480px at 82% -8%,rgba(61,127,194,.10),transparent 60%),radial-gradient(800px 460px at 12% 8%,rgba(86,143,211,.09),transparent 58%),radial-gradient(700px 420px at 50% 120%,rgba(91,150,216,.08),transparent 60%),linear-gradient(180deg,#fdfbfa 0%,var(--surface) 40%)}
 /* card action links: readable over gradient, gradient stays for the arrow accent only */
 .cta{color:var(--text-2)}
 .cat-card .meta{color:var(--text-2)}

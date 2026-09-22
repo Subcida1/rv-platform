@@ -66,6 +66,13 @@ const PROBE = `(function(){
     if (s.visibility === 'hidden' || s.display === 'none') continue;
     var bits=[];
     var b = judge(s.backgroundColor); if(b) bits.push('bg ' + b);
+    // Every colour inside a gradient, not just the ones I happened to hardcode. A
+    // violet stop in the hero wash survived an earlier version of this checker that
+    // only looked at solid background colours.
+    if (s.backgroundImage && s.backgroundImage !== 'none') {
+      var stops = s.backgroundImage.match(/rgba?\([^)]+\)|#[0-9a-fA-F]{3,8}/g) || [];
+      stops.forEach(function(x){ var j = judge(x); if(j) bits.push('gradient ' + j); });
+    }
     ['Top','Right','Bottom','Left'].forEach(function(side){
       if (parseFloat(s['border'+side+'Width']) >= 1){
         var j = judge(s['border'+side+'Color']); if(j) bits.push('border'+side[0] + ' ' + j); }});
