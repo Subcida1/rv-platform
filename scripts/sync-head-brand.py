@@ -7,17 +7,29 @@ patching nothing.
 
 Run: python3 scripts/sync-head-brand.py
 """
+import re
+import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import site_constants as C  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 CANON = "https://originrv.com"
 
-# Cloudflare Web Analytics. The token is public by design: it ships in the HTML
-# of every page and only permits submitting pageviews to this account, so it is
-# not a secret and should not be treated as one. Empty means no beacon is
-# emitted. The site is not proxied through Cloudflare, so there is no automatic
-# edge injection and this snippet is the only route that works.
-BEACON_TOKEN = "3727183603b6402b9249de33fa381acd"
+# theme-color and the analytics beacon are shared with build-manuals-pages.py,
+# which generates the manuals pages: they live in site_constants.py so the two
+# scripts cannot disagree. theme-color is normalised on EVERY run, not only when
+# the icon block is missing. The old skip-if-branded guard meant a page that was
+# already branded kept whatever colour it was born with, which is how all 28
+# hand-written pages stayed on the retired rose while the 11 generated ones were
+# already #3d7fc2.
+THEME_COLOR = C.THEME_COLOR
+THEME_META_RE = re.compile(r'<meta name="theme-color" content="[^"]*">')
+
+# The analytics beacon, shared with the manuals generator so a generator re-run
+# cannot drop it. See scripts/site_constants.py for why the token is public.
+BEACON = C.BEACON
 
 ICON_ANCHOR = '<link rel="stylesheet" href="assets/css/style.css">'
 ICON_BLOCK = """<link rel="icon" type="image/svg+xml" href="assets/img/brand/favicon.svg">
@@ -25,7 +37,7 @@ ICON_BLOCK = """<link rel="icon" type="image/svg+xml" href="assets/img/brand/fav
 {ind}<link rel="icon" type="image/png" sizes="16x16" href="assets/img/brand/favicon-16.png">
 {ind}<link rel="apple-touch-icon" sizes="180x180" href="assets/img/brand/apple-touch-icon.png">
 {ind}<link rel="manifest" href="site.webmanifest">
-{ind}<meta name="theme-color" content="#f43f5e">"""
+{ind}<meta name="theme-color" content="{theme}">"""
 
 OG_ANCHOR = '<meta property="og:site_name" content="OriginRV">'
 OG_BLOCK = """<meta property="og:image" content="{c}/assets/img/brand/og-default.png">
@@ -61,7 +73,15 @@ for page in pages:
         line_start = html.rfind("\n", 0, idx) + 1
         indent = html[line_start:idx]
         html = html.replace(
-            ICON_ANCHOR, ICON_ANCHOR + "\n" + ICON_BLOCK.format(ind=indent), 1)
+            ICON_ANCHOR, ICON_ANCHOR + "\n" + ICON_BLOCK.format(ind=indent, theme=THEME_COLOR), 1)
+
+    # Runs on every page every time, deliberately outside the skip-if-branded
+    # guard above: a page that already had its icon links kept whatever
+    # theme-color it was born with, which is how 28 pages stayed rose.
+    html, n_theme = THEME_META_RE.subn(
+        '<meta name="theme-color" content="%s">' % THEME_COLOR, html)
+    if n_theme == 0:
+        raise SystemExit("no theme-color meta in %s" % rel)
 
     if "og-default.png" not in html:
         if OG_ANCHOR not in html:
@@ -71,10 +91,10 @@ for page in pages:
         html = html.replace(
             OG_ANCHOR, OG_ANCHOR + "\n" + OG_BLOCK.format(c=CANON, ind=indent), 1)
 
-    if BEACON_TOKEN and "cloudflareinsights" not in html:
+    if BEACON and "cloudflareinsights" not in html:
         if BODY_ANCHOR not in html:
             raise SystemExit("no </body> in %s" % rel)
-        html = html.replace(BODY_ANCHOR, BEACON % BEACON_TOKEN + BODY_ANCHOR, 1)
+        html = html.replace(BODY_ANCHOR, BEACON + BODY_ANCHOR, 1)
 
     if html == before:
         skipped.append(rel)

@@ -21,6 +21,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import manuals_rules as R  # noqa: E402
+import site_constants as C  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 MANIFEST = ROOT / "_data/manuals.json"
@@ -156,7 +157,7 @@ def head(title, desc, canonical, schemas):
   <link rel="icon" type="image/png" sizes="16x16" href="assets/img/brand/favicon-16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/img/brand/apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
-  <meta name="theme-color" content="#3d7fc2">
+  <meta name="theme-color" content="{theme}">
   <meta property="og:type" content="website">
   <meta property="og:title" content="{title} | OriginRV">
   <meta property="og:description" content="{desc}">
@@ -175,18 +176,24 @@ def head(title, desc, canonical, schemas):
 </head>
 <body class="g-theme-mist">
   <div id="site-nav"></div>
-""".format(canonical=canonical, title=esc(title), desc=esc(desc), site=SITE, ld=ld)
+""".format(canonical=canonical, title=esc(title), desc=esc(desc), site=SITE, ld=ld,
+           theme=C.THEME_COLOR)
 
 
 def foot(script):
     """config.js comes first: site.js reads CFG.routes to build the nav and footer,
-    so without it the shell throws and every page renders with no navigation."""
+    so without it the shell throws and every page renders with no navigation.
+
+    The analytics beacon goes last, right before </body>, the same place
+    sync-head-brand.py puts it. Generating it here is what keeps a rebuild from
+    quietly dropping it: verify.py compares these pages to this script's output.
+    """
     return """  <div id="site-footer"></div>
   <script src="assets/js/config.js"></script>
   <script src="assets/js/site.js"></script>
-%s</body>
+%s%s</body>
 </html>
-""" % (script and "  <script src=\"%s\"></script>\n" % script or "")
+""" % (script and "  <script src=\"%s\"></script>\n" % script or "", C.BEACON)
 
 
 def site_schema():

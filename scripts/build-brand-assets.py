@@ -31,8 +31,17 @@ from PIL import Image, ImageDraw, ImageFilter, ImageFont
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "assets" / "img" / "brand"
 
-# Brand palette, mirrored from assets/css/style.css (--b1, --b2, --b3)
-STOPS = [(0.0, (249, 115, 22)), (0.5, (244, 63, 94)), (1.0, (139, 92, 246))]
+# Brand palette, mirrored from the LIVE theme, never from :root. The sunset
+# gradient declared in :root (#f97316 / #f43f5e / #8b5cf6) is retired: every page
+# puts class="g-theme-mist" on <body>, and that theme's --btn-grad overrides it.
+# The nav logo tile (.logo-mark in assets/css/style.css) paints var(--btn-grad),
+# so the icon tile is built from the same three stops and the tab icon and the
+# on-page logo are the same colour by construction. Read the body class, not the
+# top of the stylesheet.
+STOPS = [(0.0, (30, 111, 196)), (0.5, (47, 127, 214)), (1.0, (63, 143, 232))]
+# Address-bar tint for mobile browsers and the installed-PWA theme colour: --b1
+# of that same mist theme, the blue the rest of the page is built from.
+THEME_COLOR = "#3d7fc2"
 INK = (15, 23, 42)          # --text
 INK_2 = (85, 98, 122)       # --text-2
 INK_3 = (103, 116, 142)     # --text-3
@@ -76,6 +85,19 @@ GB = (min([p[0] for p in TREE] + [p[0] for p in RV] + [w[0] - w[2] for w in RV_W
 SS = 4  # supersample factor for every raster we draw
 FONT_BLACK = "/usr/share/fonts/truetype/lato/Lato-Black.ttf"
 FONT_REGULAR = "/usr/share/fonts/truetype/lato/Lato-Regular.ttf"
+
+
+def svg_gradient_stops():
+    """The tile gradient as SVG <stop> lines, generated from STOPS.
+
+    Hand-written hex here is how the SVG favicon drifted from the rasters in the
+    first place: STOPS was changed and the three literal stop colors were not.
+    Generating them means the vector and the PNGs cannot be given different
+    colours by hand.
+    """
+    return "".join(
+        '      <stop offset="%g" stop-color="#%02x%02x%02x"/>\n' % (off, r, g, b)
+        for off, (r, g, b) in STOPS)
 
 
 def ramp(stops, n):
@@ -166,9 +188,7 @@ def favicon_svg(tile=64, radius_ratio=0.23, fill=0.7):
         '  <defs>\n'
         '    <linearGradient id="orv" gradientUnits="userSpaceOnUse" x1="0" y1="0" '
         'x2="%(t)d" y2="%(t)d">\n'
-        '      <stop offset="0" stop-color="#f97316"/>\n'
-        '      <stop offset=".5" stop-color="#f43f5e"/>\n'
-        '      <stop offset="1" stop-color="#8b5cf6"/>\n'
+        '%(stops)s'
         '    </linearGradient>\n'
         '  </defs>\n'
         '  <rect width="%(t)d" height="%(t)d" rx="%(r)d" fill="url(#orv)"/>\n'
@@ -182,7 +202,7 @@ def favicon_svg(tile=64, radius_ratio=0.23, fill=0.7):
         '  </g>\n'
         '</svg>\n'
     ) % dict(t=tile, r=round(tile * radius_ratio), tree=pts(TREE), rv=pts(RV),
-             windows=windows, wheels=wheels)
+             windows=windows, wheels=wheels, stops=svg_gradient_stops())
 
 
 def og_card(path, w=1200, h=630):
@@ -328,7 +348,7 @@ def main():
         '  "start_url": "/",\n'
         '  "display": "standalone",\n'
         '  "background_color": "#ffffff",\n'
-        '  "theme_color": "#f43f5e",\n'
+        '  "theme_color": "' + THEME_COLOR + '",\n'
         '  "icons": [\n'
         '    { "src": "assets/img/brand/icon-192.png", "sizes": "192x192", "type": "image/png" },\n'
         '    { "src": "assets/img/brand/icon-512.png", "sizes": "512x512", "type": "image/png" },\n'
