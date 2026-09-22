@@ -12,11 +12,12 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 CANON = "https://originrv.com"
 
-# Cloudflare Web Analytics. The token is public by design: it is visible in the
-# HTML of every page and only permits submitting pageviews to this account.
-# Empty means no beacon is emitted. The site is not proxied through Cloudflare,
-# so there is no automatic injection and this snippet is the only route.
-BEACON_TOKEN = ""
+# Cloudflare Web Analytics. The token is public by design: it ships in the HTML
+# of every page and only permits submitting pageviews to this account, so it is
+# not a secret and should not be treated as one. Empty means no beacon is
+# emitted. The site is not proxied through Cloudflare, so there is no automatic
+# edge injection and this snippet is the only route that works.
+BEACON_TOKEN = "3727183603b6402b9249de33fa381acd"
 
 ICON_ANCHOR = '<link rel="stylesheet" href="assets/css/style.css">'
 ICON_BLOCK = """<link rel="icon" type="image/svg+xml" href="assets/img/brand/favicon.svg">
@@ -38,10 +39,14 @@ pages = sorted(p for p in ROOT.rglob("*.html") if ".git" not in p.parts)
 patched, skipped = [], []
 
 # The beacon goes last in the body, which is where Cloudflare's own setup
-# instructions put it, rather than in the head with everything else.
+# instructions put it, rather than in the head with everything else. Copied
+# verbatim from the dashboard snippet: it is type="module", not the older
+# defer variant, and it carries its own HTML comment markers.
 BODY_ANCHOR = "</body>"
-BEACON = ('<script defer src="https://static.cloudflareinsights.com/beacon.min.js" '
-          'data-cf-beacon=\'{"token": "%s"}\'></script>\n')
+BEACON = ("<!-- Cloudflare Web Analytics -->"
+          "<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' "
+          "data-cf-beacon='{\"token\": \"%s\"}'></script>"
+          "<!-- End Cloudflare Web Analytics -->\n")
 
 for page in pages:
     rel = page.relative_to(ROOT)
