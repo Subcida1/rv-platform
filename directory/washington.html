@@ -322,7 +322,7 @@
       else if (r.d != null) badge = '<span class="listing-dist">about ' + Math.round(r.d) + ' mi</span>';
       else if (x.region) badge = '<span class="listing-dist region">' + esc(x.region) + '</span>';
       var emerg = x.r
-        ? '<span class="listing-emerg roadside">Roadside / stuck</span>'
+        ? '<span class="listing-emerg">Roadside / stuck</span>'
         : (x.e ? '<span class="listing-emerg">Emergency mobile repair</span>' : '');
       // Scope label. A glass-only or roof-only business is worth listing in a
       // sparse region, but the visitor has to know that is all it does.

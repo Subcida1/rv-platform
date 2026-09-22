@@ -10,6 +10,11 @@
   --surface-2:#fafbfc;
   --border:#e7eaf0;
   --border-2:#d8dde6;
+  /* The tinted-surface family. Amber and cream used to carry these, which read gold
+     against the pure white cards (Ty, 2026-09-22: "its kind of goldish against my pure
+     white elements"). The site is one blue now, and every one of these still says what
+     it means in words, so nothing loses its meaning. Red for an actual failure stays. */
+  --tint-bg:#eaf1fa; --tint-edge:#cfe0f2; --tint-ink:#2a6aad;
   --text:#0f172a;
   --text-2:#55627a;
   --text-3:#67748e;
@@ -77,7 +82,7 @@ input,select,textarea{font-family:inherit}
 .badge-soft{background:var(--grad-soft);color:var(--b1)}
 .badge-tint{background:var(--bg-3);color:var(--text-2)}
 .badge-green{background:#e7f8ef;color:#0f7a45}
-.badge-orange{background:#fff1e6;color:#c2570a}
+.badge-note{background:var(--tint-bg);color:var(--tint-ink)}
 
 /* ================= NAV ================= */
 .util{background:var(--bg-3);border-bottom:1px solid var(--border);font-size:12.5px;color:var(--text-2)}
@@ -614,7 +619,7 @@ details.faq summary{cursor:pointer;font-weight:700;font-size:15.5px;padding:16px
 details.faq summary::after{content:"+";position:absolute;right:0;color:var(--text-3);font-size:20px;font-weight:500}
 details.faq[open] summary::after{content:"-"}
 details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-bottom:18px}
-.callout{background:var(--grad-soft-2);border:1px solid #f3d4d9;border-radius:var(--radius-sm);padding:18px 22px;margin-top:20px;color:var(--text);font-size:14.5px;line-height:1.65}
+.callout{background:var(--grad-soft-2);border:1px solid var(--tint-edge);border-radius:var(--radius-sm);padding:18px 22px;margin-top:20px;color:var(--text);font-size:14.5px;line-height:1.65}
 
 /* ---------- app / phone ---------- */
 .phone{width:236px;height:476px;border-radius:36px;background:#fff;border:1px solid var(--border-2);box-shadow:0 40px 90px -30px rgba(15,23,42,.4);padding:14px;position:relative;margin:0 auto}
@@ -678,10 +683,10 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 .v-row{display:flex;align-items:center;gap:12px;border:1px solid var(--border);border-radius:var(--radius-sm);padding:13px 14px;margin-bottom:9px;background:var(--surface)}
 .v-row .v-dot{width:10px;height:10px;border-radius:50%;flex:none}
 .v-row.ok .v-dot{background:var(--c-emerald)}
-.v-row.warn .v-dot{background:var(--c-amber)}
+.v-row.warn .v-dot{background:var(--b1)}
 .v-row.bad .v-dot{background:var(--c-rose)}
 .v-row.ok{border-color:#cfe9d8;background:#f3faf5}
-.v-row.warn{border-color:#f3dcae;background:#fdf6ec}
+.v-row.warn{border-color:var(--tint-edge);background:var(--tint-bg)}
 .v-row.bad{border-color:#f6bcc2;background:#fdf0f2}
 .v-txt{flex:1;display:flex;flex-direction:column}
 .v-txt b{font-size:14.5px;font-weight:700}
@@ -721,8 +726,8 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 .deck-sim-row b{font-weight:800;text-align:right;white-space:nowrap}
 .deck-sim-row.ok{background:#f3faf5;border:1px solid #cfe9d8;color:#0f7a45}
 .deck-sim-row.ok b{color:#0f7a45}
-.deck-sim-row.warn{background:#fdf6ec;border:1px solid #f3dcae;color:#b45309}
-.deck-sim-row.warn b{color:#b45309}
+.deck-sim-row.warn{background:var(--tint-bg);border:1px solid var(--tint-edge);color:var(--tint-ink)}
+.deck-sim-row.warn b{color:var(--tint-ink)}
 .deck-sim-note{font-size:12.5px;color:var(--text-3);margin-top:10px}
 
 /* scale locator cards */
@@ -746,16 +751,16 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
   --asphalt:#1e293b;
   --sign:#0f172a;
   --sign-text:#ffffff;
-  --cl-yellow:#e8b100;
+  --cl-mark:#3d7fc2;
   --cl-white:#ffffff;
   --cl-dash:#d0d5dd;
 }
 /* mile marker eyebrow: replaces the generic uppercase label */
 .sec-eyebrow.mile{display:inline-flex;align-items:center;gap:9px;background:var(--sign);color:#fff;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:none;padding:5px 13px;border-radius:6px;border:1px solid #cbd5e1;box-shadow:0 1px 0 rgba(255,255,255,.35) inset}
-.sec-eyebrow.mile::before{content:"MP";display:inline-grid;place-items:center;width:26px;height:20px;background:var(--cl-yellow);color:var(--sign);font-weight:800;border-radius:4px;font-size:10.5px}
-.sec-eyebrow.mile .mile-num{color:var(--cl-yellow);font-weight:800}
+.sec-eyebrow.mile::before{content:"MP";display:inline-grid;place-items:center;width:26px;height:20px;background:var(--cl-mark);color:var(--sign);font-weight:800;border-radius:4px;font-size:10.5px}
+.sec-eyebrow.mile .mile-num{color:var(--cl-mark);font-weight:800}
 /* centerline divider: two-tone dashed highway line */
-.centerline{height:14px;margin:0 auto;max-width:240px;background:linear-gradient(90deg,var(--cl-yellow) 22px,var(--asphalt) 22px 44px);background-size:88px 14px;border-radius:999px;opacity:.9;position:relative}
+.centerline{height:14px;margin:0 auto;max-width:240px;background:linear-gradient(90deg,var(--cl-mark) 22px,var(--asphalt) 22px 44px);background-size:88px 14px;border-radius:999px;opacity:.9;position:relative}
 .centerline::after{content:"";position:absolute;left:44px;top:0;width:0;height:14px}
 .centerline.long{max-width:480px}
 /* route shield chip (state-highway style) */
@@ -768,7 +773,7 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 /* kicker: small-town signpost */
 .kicker.signpost{position:relative;padding-left:34px}
 .kicker.signpost::before{content:"";position:absolute;left:0;top:-6px;width:24px;height:34px;background:var(--sign);border-radius:2px;border:1px solid #cbd5e1}
-.kicker.signpost::after{content:"\25CF";position:absolute;left:8px;top:8px;color:var(--cl-yellow);font-size:12px}
+.kicker.signpost::after{content:"\25CF";position:absolute;left:8px;top:8px;color:var(--cl-mark);font-size:12px}
 /* stat/card accent: exit-sign numbers */
 .hstat .num.exit-sign{font-family:ui-monospace,Menlo,Consolas,monospace}
 /* deck: route-line connector */
@@ -837,8 +842,8 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 .tool-viz .viz-row b{font-weight:800;text-align:right;white-space:nowrap}
 .tool-viz .viz-row.ok{background:#f3faf5;border:1px solid #cfe9d8}
 .tool-viz .viz-row.ok b{color:#0f7a45}
-.tool-viz .viz-row.warn{background:#fdf6ec;border:1px solid #f3dcae}
-.tool-viz .viz-row.warn b{color:#b45309}
+.tool-viz .viz-row.warn{background:var(--tint-bg);border:1px solid var(--tint-edge)}
+.tool-viz .viz-row.warn b{color:var(--tint-ink)}
 .verified{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:#0f7a45;background:#eef8f2;border:1px solid #cfe9d8;border-radius:999px;padding:6px 13px}
 .verified::before{content:"\2713";display:grid;place-items:center;width:19px;height:19px;border-radius:50%;background:#0f7a45;color:#fff;font-size:11px;font-weight:900}
 /* quieter primary hover (the old pink glow bubble) */
@@ -1002,7 +1007,7 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 .field input:focus, .field select:focus{background:var(--surface);border-color:var(--b1);box-shadow:0 0 0 3px var(--glow)}
 .field select{cursor:pointer}
 
-.disclaimer-big{margin-top:16px;padding:15px 18px;background:var(--bg-2);border:1px solid var(--border);border-left:4px solid var(--cl-yellow);border-radius:var(--radius-sm);font-size:14px;color:var(--text-2);line-height:1.7}
+.disclaimer-big{margin-top:16px;padding:15px 18px;background:var(--bg-2);border:1px solid var(--border);border-left:4px solid var(--b1);border-radius:var(--radius-sm);font-size:14px;color:var(--text-2);line-height:1.7}
 .disclaimer-big b{color:var(--text)}
 /* ============================================================
    KISS pass (2026-09-17): one big answer, comfy fields
@@ -1013,7 +1018,7 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 .w-overall b{font-size:30px;font-weight:800;letter-spacing:-.02em}
 .w-overall small{font-size:13.5px;line-height:1.5;opacity:.9}
 .w-overall.ok{background:#ecfbf1;border-color:#bfe8cd;color:#0f7a45}
-.w-overall.warn{background:#fff7e6;border-color:#f2dcae;color:#9a5b00}
+.w-overall.warn{background:var(--tint-bg);border-color:var(--tint-edge);color:var(--tint-ink)}
 .w-overall.bad{background:#fdeeee;border-color:#f2b8be;color:#b42338}
 .field input, .field select{min-height:50px;font-size:16px}
 .field label{font-size:14.5px;font-weight:700;color:var(--text)}
@@ -1317,8 +1322,7 @@ figure:has(svg[role="img"]){overflow-x:auto;overflow-y:hidden}
 /* Emergency / roadside badge on directory listings.
    Two kinds, two colors. Roadside (the RV may not move) is the more urgent
    and stays red. Emergency mobile repair (something inside failed) is amber. */
-.listing-emerg{display:inline-block;font-size:11.5px;font-weight:800;color:#8a5a00;background:#fff6e5;border:1px solid #f0d9a8;border-radius:999px;padding:4px 10px;align-self:flex-start}
-.listing-emerg.roadside{color:#b42338;background:#fdeeee;border-color:#f2b8be}
+.listing-emerg{display:inline-block;font-size:11.5px;font-weight:800;color:var(--tint-ink);background:var(--tint-bg);border:1px solid var(--tint-edge);border-radius:999px;padding:4px 10px;align-self:flex-start}
 /* Scope label: says plainly when a business only does part of the job. */
 .listing-flags{display:flex;gap:6px;flex-wrap:wrap}
 .listing-spec{display:inline-block;font-size:11.5px;font-weight:700;color:var(--text-2);background:var(--bg-2);border:1px solid var(--border);border-radius:999px;padding:4px 10px}

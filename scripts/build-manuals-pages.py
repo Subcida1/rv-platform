@@ -216,7 +216,7 @@ def row_html(r):
             "paid": "paid subscription"}.get(r["gate"], "")
     bits = []
     if gate:
-        bits.append('<span class="badge badge-orange">%s</span>' % esc(gate))
+        bits.append('<span class="badge badge-note">%s</span>' % esc(gate))
     if r.get("rev"):
         bits.append('<span class="man-note">revision %s</span>' % esc(r["rev"]))
     # The badge is a claim, so it follows the audit's verdict rather than the
@@ -461,9 +461,9 @@ def brand_row(r):
     if years:
         meta.insert(0, '<span class="man-brand">%s</span>' % esc(years))
     if r["gate"] == "vin-or-login":
-        meta.append('<span class="badge badge-orange">VIN or account needed</span>')
+        meta.append('<span class="badge badge-note">VIN or account needed</span>')
     elif r["gate"] == "free-account":
-        meta.append('<span class="badge badge-orange">free account needed</span>')
+        meta.append('<span class="badge badge-note">free account needed</span>')
     if r["url"]:
         foot = ('<a class="man-go" href="%s" target="_blank" rel="noopener">Open the %s '
                 'archive &#8594;</a>' % (esc(r["url"]), esc(r["brand"])))
