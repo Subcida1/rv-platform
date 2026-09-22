@@ -30,9 +30,15 @@ ROOT = Path(__file__).resolve().parent.parent
 # ---------------------------------------------------------------- rules
 
 # Ty's rule is "never sell authenticity". These are the shapes that keep appearing.
+# The first entry is the verbatim sentence that was on 17 guides. The rest are the PARAPHRASES
+# that survived a literal sweep: about.html said the same thing twice in different words
+# ("get updated when real-world data changes", "get rewritten when the facts change"), which is
+# why this list now matches the idea rather than one known string.
 DILIGENCE = [
     (r"We update these guides when real-world data changes", "verbatim sentence from all 17 guides"),
-    (r"we are not going to invent", "diligence claim, not a fact"),
+    (r"(?:get|gets|are|is)\s+(?:updated|rewritten|revised)\s+(?:when|as|if)\s+"
+     r"(?:real[- ]world data|the facts|things|information|new data)", "diligence claim, reworded"),
+    (r"\bwe are not going to invent", "diligence claim, not a fact"),
     (r"\bwe (?:could not|couldn't|cannot) find\b", "disclosure is fine; check it is not editorialising"),
     (r"\bwe (?:check|checked|verify|verified|update|tested|review)\b", "first-person diligence claim"),
     (r"\bwe (?:scrape|scraped|hand-build|hand-build|built by hand|don't invent|do not invent)\b", "self-defence"),
@@ -40,6 +46,13 @@ DILIGENCE = [
     (r"\b(?:real, |genuinely )?verified (?:businesses|listings|facts)\b", "trust adjective"),
     (r"\bfact-checked\b", "trust adverb"),
     (r"check any figure for yourself", "promises more than a source list can deliver"),
+    # the self-praise cluster, all of which sits on about.html
+    (r"[Tt]hat's the covenant", "grandiosity"),
+    (r"\bEvery page here is built\b", "self-praise"),
+    (r"\bexplicitly rejecting\b", "self-praise: arguing for our own virtue"),
+    (r"\bthe way a good shop would build it\b", "self-praise"),
+    (r"\bnot someone who read about it\b", "self-praise by contrast"),
+    (r"\bthis is a site by someone who\b", "self-praise"),
 ]
 
 # Manufacturers and agencies whose claims must be traceable. Extend as pages are added.
