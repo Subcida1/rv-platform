@@ -176,6 +176,26 @@ if bad:
 else:
     print("  every listing carries a name, area, phone, description and a valid type")
 
+print("\n=== meta description length (140-160 chars, or Google rewrites it) ===")
+bad = []
+for p in sorted(ROOT.rglob("*.html")):
+    if ".git" in p.parts:
+        continue
+    m = re.search(r'<meta name="description" content="(.*?)">', p.read_text(encoding="utf-8"), re.S)
+    if not m:
+        bad.append("%s: no meta description" % p.relative_to(ROOT))
+        continue
+    n = len(m.group(1))
+    if not (140 <= n <= 160):
+        bad.append("%s: %d chars (want 140-160)" % (p.relative_to(ROOT), n))
+for b in bad:
+    print("  FAIL " + b)
+if bad:
+    fails.append("meta description length")
+else:
+    print("  all %d pages have a description between 140 and 160 chars"
+          % len([1 for q in ROOT.rglob("*.html") if ".git" not in q.parts]))
+
 if "--links" in sys.argv:
     print("\n=== external listing links (live HTTP) ===")
     src = ROOT / "assets/js/listings/listings-or.js"
