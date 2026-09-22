@@ -374,23 +374,38 @@ than shipping an empty nav.
 
 ---
 
-## 11. Inline styles on the guide pages (open, 2026-09-22)
+## 11. Inline styles on the guide pages — DONE 2026-09-22
 
-The 17 guide pages carry **60 to 152 `style=` attributes each**. Every heading,
-paragraph and note sets its own font size and colour inline:
+The 17 guides carried **1412 `style=` attributes across 47 distinct strings**. Every
+heading, paragraph and note set its own type scale inline. It had already drifted:
+body copy at line-height 1.65 on one page and 1.9 on another, paragraph spacing at
+6, 8, 10, 12 and 14px depending on who typed it.
 
-```html
-<p style="color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px">
-```
+**They now carry none.** The type scale lives in one block in `assets/css/style.css`
+under "Guide prose (2026-09-22)": `.guide-head` for the page header, `.guide-page`
+for the body, and descendant rules for h2, h3, p, ul, cards, figures, captions and
+images. The hub (`/guides/`) is `.guide-hub` instead, because it is a page of cards
+rather than prose and the prose rules were reaching into its guide cards.
 
-Two costs. Each guide re-invents the type scale, so sizes drift between pages
-(14.5px here, 16.5px there), which is where the small visual inconsistencies come
-from. And a change to the design system has to be typed into 39 files by hand, so
-it will never be consistent.
+**Two classes the pages had already taken:** `.deck` is the homepage's two-column
+deck section and `.guide-body` is a guide card's body. The guide prose uses `.lede`
+and `.guide-page`. Check a name against `style.css` before adding one.
 
-The fix is a handful of prose classes in `style.css` (`.prose p`, `.note`,
-`.callout`, `.warn`) and then stripping the inline styles. Not hard, but it wants
-a pass per page and a visual check on each, so it is a project rather than a
-sweep. Worth doing before more guides land.
+**Measured, not eyeballed.** All 18 pages were screenshotted from a clean checkout of
+the previous commit (`git worktree add --detach /tmp/head-check HEAD`) and again
+after, then diffed pixel by pixel:
+
+- **5 pages pixel-identical**, which is what proves the class system reproduces the
+  original exactly.
+- the other 12 differ only by the normalisation of the paragraph variants, between
+  -24 and +45px in page height, +112px across all 18.
+- the pixel diff caught three of my own scoping mistakes, each of which would have
+  shipped a broken layout: a blanket `.guide-page .wrap{max-width:820px}` squeezed
+  the hub's card grid, a `.guide-page .card` rule added a margin to all 17 guide
+  cards, and a `.guide-hub .card` rule did it again.
+
+**What is left elsewhere** (not in scope, but the same job): 55 attributes on the 4
+root pages, 76 on the directory pages, 32 on the manuals pages, 28 on the tools
+pages. The guides were the bulk and the worst drift.
 
 ---
