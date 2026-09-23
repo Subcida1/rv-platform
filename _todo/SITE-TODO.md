@@ -505,3 +505,14 @@ root pages, 76 on the directory pages, 32 on the manuals pages, 28 on the tools
 pages. The guides were the bulk and the worst drift.
 
 ---
+
+## 12. Content queue additions (2026-09-23, from the towing pilot)
+
+- **A dedicated trailer-brakes guide.** Ty's call when the towing page surfaced that it never mentions
+  trailer brakes, a brake controller, or the weight at which they are legally required. The towing
+  page gets a short paragraph and links here; the full treatment — electric vs hydraulic vs surge,
+  breakaway switches, controller setup, the state weight thresholds, and what 49 CFR 393.43 actually
+  requires — earns its own page. **Primary sources are free and already identified:** 49 CFR 393.42-393.43
+  (breakaway brakes must "apply automatically and immediately upon breakaway" and "remain in the applied
+  position for at least 15 minutes"), FMVSS 121 (49 CFR 571.121), and NFPA 1192 (2026) ch. on vehicular
+  braking. See `_specs/rv-towing-capacity.md` C16.

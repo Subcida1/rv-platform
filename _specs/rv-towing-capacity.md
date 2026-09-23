@@ -95,12 +95,12 @@ source exists · `UNSOURCED` = asserted flat · `WRONG` = contradicted by a veri
 | C11 | "A dry weight of 5,500 pounds can be 6,500 loaded" | illustrative | n/a |
 | C12 | "GCWR is the most the truck and trailer together may weigh, everything" | definition | n/a |
 | C13 | "exceed [the load index] and the sidewall flexes harder, generating internal heat" | NHTSA tires page is linked; **whether that page supports this mechanism is unverified.** | UNVERIFIED |
-| C14 | "NHTSA links tire-related crashes to more than 600 highway fatalities a year" | NHTSA tires page is linked. **The 600 figure and its presence on the linked page are both unverified.** | UNVERIFIED |
-| C15 | "**The trade association numbers** say an overloaded truck can add 25 to 50 percent to its stopping distance" | unnamed. Name the association and link it, or cut the figure. | NAMED-UNSOURCED |
-| C16 | brake-fade passage on a 6 % grade | **never mentions trailer brakes, a brake controller, or the weight threshold at which they are legally required** (49 CFR 393.43 requires breakaway brakes that "remain in the applied position for at least 15 minutes"). | GAP |
+| C14 | ~~"more than 600 highway fatalities a year"~~ → **"511 people died in tire-related crashes in 2024"** | **VERIFIED 2026-09-23.** The linked NHTSA page states "511 Total motor vehicle traffic fatalities in 2024 in tire-related crashes" and "In 2024, a total of 511 people died on the road in tire-related crashes." The 600 figure is real but older and lives on a *different* NHTSA page ("more than 600 people will die in those crashes", TireWise, an average). Use the current number, which also matches the page we already link. | **FIXED → 511 (2024)** |
+| C15 | ~~"**The trade association numbers** say an overloaded truck can add 25 to 50 percent to its stopping distance"~~ | **CUT — the figure is unsupported, and this was our own weasel wording, not a citation we inherited.** NHTSA/DOT's *Influence of Size and Weight Variables*: stopping distance "will increase approximately in proportion to the change in total gross weight" (10 % heavier ≈ 10 % longer), and "one cannot confidently generalize on the likely influence of increased axle load on stopping performance". For trucks whose brakes can lock the wheels, "increased axle loading results in small reductions in stopping distance." Link Commercial Vehicle Testing measured **+8 %** for a **+10 %** weight increase. A 25–50 % longer stop would require a 25–50 % overload. **Replace with the proportional relationship, cited, or drop the number entirely** and let the fade argument carry the paragraph. | **CUT** |
+| C16 | brake-fade passage on a 6 % grade | **never mentions trailer brakes, a brake controller, or the weight threshold at which they are legally required** (49 CFR 393.43 requires breakaway brakes that "remain in the applied position for at least 15 minutes"). **RULED 2026-09-23: add a short factual paragraph here, and queue a dedicated trailer-brakes guide** (logged in `_todo/SITE-TODO.md` §12). | GAP → RULED |
 | C17 | "an insurer that investigates can deny the claim because the RV was outside its rated limits" | unsupported as stated. Standard US policies cover negligence absent a specific exclusion. | UNSOURCED |
 | C18 | "Ratings are measured on a flat test track with no wind, sea level, ideal conditions" | same as C2 — a **second** instance of the same false claim | **WRONG** |
-| C19 | "keep the loaded trailer at or under 80 percent of rated towing capacity" | **The 80% rule is a convention with no standard behind it.** Today the page derives it from the false premise in C18. If J2807 tests gradeability at Davis Dam in 100 °F heat, the premise weakens and the rule must be re-argued on its own merits (real-world margin, wind, driver error) or stated plainly as a widely used convention. | UNSOURCED |
+| C19 | "keep the loaded trailer at or under 80 percent of rated towing capacity" | **RULED 2026-09-23: KEEP the rule, rebuild its reasoning.** It is a convention with no standard behind it, and today the page derives it from the false premise in C18. It must be re-grounded on things that survive scrutiny — margin for wind and gust fronts, driver reaction, load shift, and the fact that a rating is a ceiling rather than a target — and stated as a widely used convention rather than as something a standard implies. | UNSOURCED → RULED: re-ground |
 | C20 | "The towing calculator flags anything over 80 percent as yellow" | the tool's own behaviour — verifiable by using it | n/a |
 | C21 | calculator "runs all four checks at once: towing capacity, truck payload, **trailer payload**, and **truck gross weight**" | contradicts the page's own four ratings: **towing capacity, truck payload, trailer GVWR, GCWR**. Trailers have GVWR and CCC, not payload. | **WRONG** |
 | C22 | worked example → 6,393 lb loaded, 69 %, 1,167 of 1,500, 767 lb hitch | depends on **unstated constants**: 767 = **12 %** of 6,393 (J2807's convention is 10 %); 1,167 − 767 = **400 lb** for "two people and their gear"; and the propane contributes **≈43 lb**, not the **30 lb** the prose states (a "30 lb tank" holds 30 lb of propane, the filled cylinder weighs more). State the constants. | UNDERSTATED |
@@ -132,17 +132,21 @@ source exists · `UNSOURCED` = asserted flat · `WRONG` = contradicted by a veri
 - **D8 — the worked example's constants are invisible** (C22).
 - **D9 — title and meta promise a calculator** the page is not.
 
-## 8. Open questions for Ty
+## 8. RULED — Ty, 2026-09-23
 
-1. **The 80% rule's future.** Keep it and re-argue it honestly, or demote it to "a convention some
-   towers use" and let the four ratings carry the page? This is the one editorial call I cannot make
-   for you — it changes the page's thesis, not just its wording.
-2. **The 600-fatality figure** (C14) needs verifying against the linked NHTSA page before it stays.
-3. **Trailer brakes** (D4) — a short factual paragraph, or a link out to a dedicated guide? My
-   recommendation: a short paragraph here, because "can I tow this" is incomplete without it, and
-   the full treatment earns its own page later.
-4. **C15's trade association** — if you know which body the 25–50 % figure came from, we keep it and
-   cite it. If not, the figure goes.
+| # | Question | Ruling |
+|---|---|---|
+| 1 | The 80% rule's future | **Keep it, rebuild the reasoning** on ground that survives (wind, gust fronts, driver reaction, load shift, a rating is a ceiling not a target). State it as a convention, not as something a standard implies. |
+| 2 | The 600-fatality figure | **Fix, not cut.** NHTSA's own linked page says **511 died in tire-related crashes in 2024**. The 600 was a real but older average on a different NHTSA page. |
+| 3 | Trailer brakes | **Write a short paragraph here, and queue a full guide.** Logged in `_todo/SITE-TODO.md` §12. |
+| 4 | The 25–50 % stopping figure | **CUT.** Unsupported, and it was our own unnamed-authority wording rather than an inherited citation. See C15 for the evidence. |
+| 5 | The 13 H1 page titles | **Leave them alone.** Lowercase the 61 H2/H3 section headings only; title case on a page title is a different convention, and the rule will say so. |
+
+**Standing rule that came out of question 4, and it is mine to hold:** a claim in our own content
+that needs a source gets **verified or cut**. It is never Ty's job to remember where wording our own
+pipeline produced came from — asking him is handing him my debt, and it quietly makes him responsible
+for a citation he never chose. The only part legitimately his is the editorial call (keep with a real
+citation, or drop it).
 
 ## 9. Site-wide sweep, measured (Phase 1 size)
 
