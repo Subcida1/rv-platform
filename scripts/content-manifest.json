@@ -126,9 +126,9 @@
         "id": "C9",
         "text": "the converter/charger must match the battery chemistry, and the wrong profile under- or over-charges",
         "source": "the converter maker's manual",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Progressive Dynamics' own owner manual, read for the 12-volt page on 2026-09-23, states that the unit can recharge lithium iron phosphate batteries and lists the charge profile per model, which is the chemistry-match claim this page makes.",
+        "at": "2026-09-23"
       },
       {
         "id": "C10",
@@ -158,9 +158,9 @@
         "id": "C13",
         "text": "AGM and gel take the lead-acid rules without watering",
         "source": "East Penn/Deka's manual",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Cloud read East Penn/Deka's 8A and 8G installation and operation manual on 2026-09-23: it carries a percentage-of-charge table with separate Gel and AGM columns, which is the page's claim that these take the lead-acid rules without the watering. Trojan's maintenance page states the contrast directly: flooded cells 'require watering periodically'.",
+        "at": "2026-09-23"
       },
       {
         "id": "C14",
@@ -1820,7 +1820,121 @@
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
-    "sources": []
+    "sources": [],
+    "claims": [
+      {
+        "id": "C1",
+        "text": "the job protects four things and the order matters: tank and lines, heater, traps, waste tanks",
+        "source": "the page's own structure",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C2",
+        "text": "about 2 to 3 gallons of antifreeze for a typical travel trailer, 4 to 6 for a big fifth wheel, less if the lines are blown first",
+        "source": "an antifreeze maker's coverage label, or state it as field practice. A quantity a reader buys on",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C3",
+        "text": "set the compressor to 30 to 40 psi and never exceed 50, which can damage lines and fittings",
+        "source": "a maker's blow-out guidance or the plumbing maker's pressure rating. A number that damages hardware if wrong",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C4",
+        "text": "a partially full water heater is the classic crack point",
+        "source": "the water heater makers' own drain-and-store instruction",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C5",
+        "text": "drain the tank and open the low-point drains, then run every faucet to let air in",
+        "source": "maker's winterising instructions",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C6",
+        "text": "the anode rod or drain plug must come out to drain the tank",
+        "source": "Suburban's own guide (maker-hosted, see D1)",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C7",
+        "text": "sanitise with one quarter cup of bleach per 15 gallons, or a commercial product per its label",
+        "source": "a tank maker's sanitising instruction, or the label",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C8",
+        "text": "blow-out and antifreeze are two valid methods, and many owners use both",
+        "source": "the two methods are documented; the \"many owners\" half is a prevalence claim",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C9",
+        "text": "\"most technicians drain them every winter regardless of\"",
+        "source": "unnamed authority",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C10",
+        "text": "\"Most owners use antifreeze because it is forgiving\"",
+        "source": "prevalence claim, no source",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C11",
+        "text": "antifreeze is the safer default for a first-timer because it survives a missed trap",
+        "source": "reasoning from the mechanism, and honestly framed",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C12",
+        "text": "remove the inline water filter and protect the wet bay",
+        "source": "maker's instructions",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C13",
+        "text": "dump the waste tanks before storage",
+        "source": "practice",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C14",
+        "text": "\"Last reviewed: Sep 21, 2026, against the sources listed below\"",
+        "source": "provenance; fine print per Ty's ruling",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      }
+    ]
   },
   "index.html": {
     "hash": "013934fff985146d",
