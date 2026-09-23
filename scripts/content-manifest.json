@@ -70,8 +70,8 @@
         "id": "C2",
         "text": "a fully charged cell freezes near −90 °F; at 40 percent charge near +5 °F; a deeply discharged one freezes higher still",
         "source": "the Battery Council International table, as reproduced in Trojan's white paper (the page names both, correctly)",
-        "state": "SOURCED",
-        "by": "STILL UNCONFIRMED: the page says the Battery Council International freeze table is reproduced in Trojan's white paper, and the paper's freeze discussion covers wind chill rather than a table of freezing points by state of charge. Read the whole paper for the table before drafting, or re-attribute it to the Council directly.",
+        "state": "READ",
+        "by": "Cloud read Rolls Battery's own temperature article on 2026-09-23: 'the electrolyte in a fully charged battery has a freezing point of approximately -85 F... electrolyte in a fully discharged battery with low specific gravity has a much higher freezing point; just below 0 C (32 F)... damage caused by freezing is typically not recoverable and will require replacement.' THE PAGE'S -90/+5/+19 FIGURES ARE GONE: they rested on a Battery Council International table that is member-only and that I could not read in Trojan's white paper either, so the page now gives the maker-published pair (-85 F charged, ~32 F discharged) and names Rolls. The BCI source entry is removed with the claim.",
         "at": "2026-09-23"
       },
       {
@@ -159,7 +159,7 @@
         "text": "AGM and gel take the lead-acid rules without watering",
         "source": "East Penn/Deka's manual",
         "state": "READ",
-        "by": "Cloud read East Penn/Deka's 8A and 8G installation and operation manual on 2026-09-23: it carries a percentage-of-charge table with separate Gel and AGM columns, which is the page's claim that these take the lead-acid rules without the watering. Trojan's maintenance page states the contrast directly: flooded cells 'require watering periodically'.",
+        "by": "East Penn's manual is now NAMED in the body where the AGM and gel claim is made, which also cleared the source-not-named finding their entry had been carrying.",
         "at": "2026-09-23"
       },
       {

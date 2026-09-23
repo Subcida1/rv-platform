@@ -57,7 +57,7 @@
  <h2>How to store RV batteries for winter, by chemistry</h2>
  <div class="card">
  <h3>Flooded lead-acid batteries: Charge to 100%, then disconnect</h3>
- <p>For lead-acid, your state of charge is your freeze protection. The electrolyte freezing point depends on how charged the battery is, and the difference is enormous. According to the <a href="https://batterycouncil.org/" target="_blank" rel="noopener">Battery Council International</a> freeze table, a fully charged lead-acid cell (specific gravity about 1.28) does not freeze until roughly <b>-90°F</b>. At a 40 percent charge it freezes near <b>+5°F</b>, and a deeply discharged battery can freeze at about <b>+19°F</b>, barely a dozen degrees below the freezing mark and well within reach of an unheated garage. This is why a battery that survives a Colorado winter can die in a warm garage: it was stored half-empty, and the half-empty electrolyte froze from the inside out.</p>
+ <p>For lead-acid, your state of charge is your freeze protection, and Trojan's storage guidance is the short version of everything below: charge it fully, disconnect it, keep it cool and dry, and check the voltage partway through the winter. The electrolyte freezing point depends on how charged the battery is, and the difference is enormous. A fully charged lead-acid cell does not freeze until roughly <b>-85°F</b>, and a fully discharged one freezes just below <b>+32°F</b>: those are the figures <a href="https://support.rollsbattery.com/en/support/solutions/articles/208147-how-does-temperature-impact-battery-efficiency-and-lifespan-" target="_blank" rel="noopener">Rolls Battery</a> publishes, and Rolls adds the consequence in its own words, that damage from freezing is typically not recoverable and will require replacement. So a flat battery is the one that cracks, at temperatures an unheated garage reaches easily. This is why a battery that survives a Colorado winter can die in a warm garage: it was stored half-empty, and the half-empty electrolyte froze from the inside out.</p>
  <p><b>Fill cells with distilled water first</b>, then charge. Add water after charging, not before, because the acid expands as the battery charges, and a full cell before charging can overflow.</p>
  <p><b>Charge fully before storage.</b> A partially charged lead-acid battery will sulfate, forming hard crystals on the plates that permanently reduce capacity. Charge to 100 percent, then disconnect the negative terminal so no parasitic load can drain it.</p>
  <p><b>Check voltage every 4 to 6 weeks.</b> Lead-acid self-discharges at roughly 3 to 10 percent per month at room temperature, flooded batteries at the high end and sealed types lower. If the resting voltage drops below 12.4 volts, charge it again, then re-check. Clean the terminals before storage and coat them lightly with dielectric grease or petroleum jelly to keep corrosion out. (While the battery is out, it is the perfect moment to <a href="tools/weight-calculator.html">verify your RV weight limits</a> against what you actually carry.)</p>
@@ -65,7 +65,7 @@
  <div class="card">
  <h3>LiFePO4 lithium batteries: Store at partial charge, never charge near freezing</h3>
  <p>Lithium plays by the opposite rules, and getting them wrong is expensive because the damage is permanent and cumulative. Charging a lithium cell near freezing causes <b>lithium plating</b>, and the makers put the floor above the freezing point rather than at it: Victron specifies 5°C (41°F) as the lowest temperature its cells may be charged at, and says charging below that causes permanent damage. In Fahrenheit terms: the lithium ions cannot absorb into the anode quickly enough, so they deposit as solid metal on its surface instead. Each cold charge steals capacity that never returns, and repeated plating can eventually form internal structures that compromise the cell. This is not a gentle caution, it is a hard electrical rule, and it is why a lithium bank with no low-temperature cutoff must not be connected to solar or a charger during a cold winter.</p>
- <p><b>Store near 50 percent, in the 40 to 60 percent band</b> if your BMS or vendor manual lists a specific figure. Storing lithium at 100 percent for months causes slightly faster degradation than storing at 50 percent, and storing near zero risks the BMS entering a protection mode that is annoying to exit in spring.</p>
+ <p><b>Store at least 50 percent.</b> Battle Born, which makes these cells, says to store them with at least a 50 percent charge, and notes that a fully charged bank in good conditions can last a year; the working band people use is 40 to 60 percent unless your BMS or vendor manual lists a specific figure. Storing lithium at 100 percent for months causes slightly faster degradation than storing at 50 percent, and storing near zero risks the BMS entering a protection mode that is annoying to exit in spring.</p>
  <p><b>Disconnect the loads, and do not leave a trickle charger on the pack.</b> Lithium self-discharges at only 2 to 3 percent per month and holds for months, but a detector, monitor, or inverter standby still drains it. The maintenance-charge advice that keeps lead-acid alive is wrong for lithium: a float charger left on a lithium pack all winter is the wrong tool.</p>
  <p><b>Never charge below freezing.</b> If the bank stays where it can freeze, physically disconnect the solar panels, the charger, and shore power. If your BMS has a low-temperature charge cutoff, confirm it is actually enabled rather than assuming it is.</p>
  <figure class="inline">
@@ -75,7 +75,7 @@
  </div>
  <div class="card">
  <h3>AGM and gel batteries: The lead-acid rules, minus the watering</h3>
- <p>Sealed lead-acid batteries follow the flooded rules: full charge, disconnect, re-check every 4 to 6 weeks, keep a smart maintainer on them if they sit connected. They never need watering, and they tolerate cold the same way, with the same freeze protection from a full charge.</p>
+ <p>Sealed lead-acid batteries follow the flooded rules: full charge, disconnect, re-check every 4 to 6 weeks, keep a smart maintainer on them if they sit connected. East Penn, which builds both AGM and gel types, publishes a state-of-charge table with a column for each, and neither needs the watering a flooded cell does. They never need watering, and they tolerate cold the same way, with the same freeze protection from a full charge.</p>
  </div>
 <h2>RV battery parasitic drain: What quietly empties the bank</h2>
  <div class="card">
@@ -157,13 +157,13 @@
  <div class="card srcs">
  <h3>Sources</h3>
  <ul>
+  <li><a href="https://support.rollsbattery.com/en/support/solutions/articles/208147-how-does-temperature-impact-battery-efficiency-and-lifespan-" target="_blank" rel="noopener">Rolls Battery, how temperature affects a lead-acid battery (freezing points by state of charge)</a></li>
  <li><a href="https://www.trojanbattery.com/resources/battery-maintenance" target="_blank" rel="noopener">Trojan Battery, battery maintenance (PDF, self-discharge and freeze points)</a></li>
  <li><a href="https://assets.ctfassets.net/nh2mdhlonj7m/21jnTECnYKYj8s6syRiFSh/cfb008fe05eb4ade6cefa94bce796fa8/WP_DeepCycleBatteryStorage_0512.pdf" target="_blank" rel="noopener">Trojan Battery, deep-cycle battery storage white paper (PDF)</a></li>
  <li><a href="https://battlebornbatteries.com/blogs/articles/how-long-do-lithium-ion-batteries-last" target="_blank" rel="noopener">Battle Born, how long lithium batteries last (storage charge)</a></li>
  <li><a href="https://battlebornbatteries.com/blogs/articles/faq-how-to-winterize-your-batteries" target="_blank" rel="noopener">Battle Born, winterizing and storing LiFePO4 batteries</a></li>
  <li><a href="https://www.victronenergy.com/upload/documents/Lithium_Battery_Smart/15958-Manual_Lithium_Smart_Battery-pdf-en.pdf" target="_blank" rel="noopener">Victron Energy, Lithium Smart battery manual (PDF)</a></li>
  <li><a href="https://www.eastpennmanufacturing.com/wp-content/uploads/8A-8G-IO-Manual-1833.pdf" target="_blank" rel="noopener">East Penn / Deka, 8A and 8G installation and operation manual (PDF)</a></li>
-  <li><a href="https://batterycouncil.org/" target="_blank" rel="noopener">Battery Council International (the freeze table this page quotes is reproduced in the Trojan white paper above)</a></li>
 </ul>
  </div>
 </div>
