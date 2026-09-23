@@ -147,6 +147,20 @@
   --cl-mark:var(--mark);
   --cl-white:#ffffff;
   --cl-dash:var(--dash);
+  /* ---- SEARCH SPECTRUM. Used in exactly one place: the search button's ring,
+     while the field has focus. Ty, 2026-09-22: "scroll basically the google colors
+     across the search bars stroke... don't make it blatant theft, just inspired
+     from. And just on the 'search' button."
+     These are our own four values, not theirs, but they sit in the same family, and
+     the family is the point: a multi-hue ring is what reads as "search" without a
+     word being written. This is the one deliberate exception to the blue-only rule.
+     It is a 2px ring, it exists only for as long as the field has focus, and it
+     never carries text, so nothing here is a contrast decision. Anything else that
+     reads warm is still a bug. ---- */
+  --sp-1:#2f80ed;
+  --sp-2:#14b8a6;
+  --sp-3:#f2a63b;
+  --sp-4:#e8503a;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -297,6 +311,33 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
 .search-bar input{flex:1;background:none;border:none;outline:none;color:var(--text);font-size:16px}
 .search-bar input::placeholder{color:var(--text-3)}
 .search-bar .btn{padding:11px 24px}
+/* Ty, 2026-09-22: "when you click up on the bar to input text, can we scroll
+   basically the google colors across the search bars stroke, how they kinda spread
+   out... just on the 'search' button."
+   The Search button is already a gradient-stroke pill (see .btn-gb): a white face
+   on the padding box, --grad on the border box, and a 2px transparent border
+   letting the border box show through as the stroke. So the stroke is ALREADY a
+   gradient -- this replaces that one layer with a four-hue conic and rotates its
+   angle, which sweeps the bands around the stroke. The white face still rides the
+   padding box exactly as before, so the middle stays opaque and opaque white, and
+   only the 2px stroke carries colour.
+   Scoped to the search bar, so no other .btn-gb anywhere on the site is touched.
+   @property is what makes the angle interpolable. Without it the custom property is
+   an unparsed token, the animation cannot interpolate it, and the ring holds its
+   0deg frame: a static spectrum instead of a spinning one, which is the right way
+   for this to degrade. Reduced motion does the same thing on purpose.
+   The idle stroke is --grad, a blue, and --sp-1 is a blue too, so the button does
+   not jump when focus arrives -- the colour arrives by spreading rather than by
+   switching. */
+@property --sp-angle{syntax:"<angle>";initial-value:0deg;inherits:false}
+.search-bar:focus-within .btn-gb{
+  background-image:
+    linear-gradient(var(--surface),var(--surface)),
+    conic-gradient(from var(--sp-angle),
+      var(--sp-1),var(--sp-2),var(--sp-3),var(--sp-4),var(--sp-1));
+  animation:sp-scroll 2.8s linear infinite;
+}
+@keyframes sp-scroll{to{--sp-angle:360deg}}
 /* live results, Google-style. Sits inside .search (already position:relative). */
 .srch-drop{position:absolute;left:0;right:0;top:calc(100% + 8px);background:var(--surface);border:1px solid var(--border-2);border-radius:18px;box-shadow:0 18px 44px rgba(15,23,42,.14);padding:8px;z-index:60;max-height:min(66vh,440px);overflow-y:auto;text-align:left}
 .srch-cat{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--text-3);padding:10px 14px 6px}
@@ -1781,9 +1822,30 @@ figure:has(svg[role="img"]){overflow-x:auto;overflow-y:hidden}
   35%{opacity:1}
   to{transform:translate3d(340%,0,0) skewX(-16deg);opacity:0}
 }
+/* Ty, 2026-09-22: "The winter guides button is amazing, can we make that display on
+   mobile just all the time since they dont have hover?"
+   A touch device never enters :hover, so without this the button sits plain on the
+   one device where the season matters most. Keyed on hover capability rather than a
+   width breakpoint, because what is missing is the hover, not the screen size: a
+   narrow desktop window with a mouse still gets the hover behaviour it always had.
+   Showing the snow permanently means holding the button on its blue face, and that
+   part is not optional. The flakes are white, and white on the pale face was already
+   tried and rejected as invisible, so the face and the snow have to arrive together.
+   --brand-deep with white text is the pair that measures 5.09:1 and clears AA.
+   The sheen is deliberately NOT run here. It is a one-shot flourish that reads as
+   "something just happened", and looping it when nobody touched anything would claim
+   an interaction that did not occur. */
+@media(hover:none){
+  .btn-snow{background:var(--brand-deep);border-color:var(--brand-deep);color:var(--text-inv);
+    box-shadow:0 12px 26px -14px var(--glow),inset 0 1px 0 rgba(255,255,255,.22)}
+  .btn-snow::before{opacity:1;animation-play-state:running}
+}
 @media(prefers-reduced-motion:reduce){
   .btn-snow::before,.btn-snow::after{animation:none;opacity:0}
   .btn-snow:hover{background:var(--brand-deep);border-color:var(--brand-deep);color:var(--text-inv)}
+  /* The search ring keeps its spectrum and stops moving, which is the same
+     degradation as a browser without @property: colour stays, motion goes. */
+  .search-bar:focus-within .btn-gb{animation:none}
   /* The ring and the readout cross-fade are both purely decorative, so they go.
      The JS also stops cycling under this query, so the panel holds the first
      readout instead of swapping behind a motionless label. */

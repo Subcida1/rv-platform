@@ -78,6 +78,15 @@ node scripts/audit-colour.mjs             # every page: anything warm, or not bl
 `audit-colour.mjs` needs Chrome on 9380 and the site on 8170; see its header for the two
 commands. It is the tool to run after any colour change, and it reports **zero** today.
 
+**Its one blind spot, recorded so a zero is not read as a guarantee.** The search button
+carries a four-hue spectrum on its stroke while the field has focus. That is the single
+deliberate exception to the blue-only rule (the tokens are `--sp-1` through `--sp-4`),
+and two of those hues are warm. The audit does not flag them, because it never focuses an
+input and the ring does not paint until something does. So a clean run means *nothing warm
+is painted at rest*, not *nothing warm exists here*. Extend the spectrum to anything that
+paints at rest and the audit will see it, which is the correct outcome: it should stay a
+finding.
+
 ## Rules that came out of getting this wrong
 
 - **A tint has to be measurable to be a tint.** `#f7f8fa` is three points bluer than red,
