@@ -148,8 +148,8 @@
         "text": "step 3, the sail switch window is 30 seconds",
         "source": "Suburban service manual",
         "state": "READ",
-        "by": null,
-        "at": null
+        "by": "Cloud read 'circuit remains open for 30 seconds after the blower motor starts' in the public Suburban manual",
+        "at": "2026-09-23"
       },
       {
         "id": "C7",
@@ -164,16 +164,16 @@
         "text": "step 5, 7 seconds of ignition time (Atwood about 6)",
         "source": "Suburban service manual",
         "state": "READ",
-        "by": null,
-        "at": null
+        "by": "Cloud read the seven-second ignition timing in the Suburban service manual",
+        "at": "2026-09-23"
       },
       {
         "id": "C9",
         "text": "step 6, at least 7 microamps within 7 seconds",
         "source": "Suburban service manual",
         "state": "READ",
-        "by": null,
-        "at": null
+        "by": "Cloud read 'at least seven microamps within seven seconds after the burner is ignited' in the Suburban NT manual",
+        "at": "2026-09-23"
       },
       {
         "id": "C10",
@@ -212,24 +212,24 @@
         "text": "step 3, about 75 percent of normal rpm at 12 volts",
         "source": "Suburban service manual",
         "state": "READ",
-        "by": null,
-        "at": null
+        "by": "Cloud read 'approximately 75% of the normal rpm' in the Suburban NT and training manuals",
+        "at": "2026-09-23"
       },
       {
         "id": "C15",
         "text": "\"older time-delay models wait 12 to 18 seconds after the purge\"",
         "source": "Suburban service manual",
         "state": "READ",
-        "by": null,
-        "at": null
+        "by": "Cloud read 'After a 12-18 second delay' in the Suburban NT manual",
+        "at": "2026-09-23"
       },
       {
         "id": "C16",
         "text": "Suburban calls the sail switch a safety device; Atwood calls it one that ensures airflow",
         "source": "the makers' own service and consumer manuals",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Cloud read Atwood's Hydro Flame shop manual (air flow wording) and both Suburban manuals (75 percent rpm gate) on 2026-09-23; the page's wording attribution is wrong, see D11.3",
+        "at": "2026-09-23"
       },
       {
         "id": "C17",
@@ -243,9 +243,9 @@
         "id": "C18",
         "text": "\"the limit and sail switches are reversed on 79 and 80 series units\"",
         "source": "Atwood service manual",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Cloud read the reversed limit and sail switch note in Atwood's Hydro Flame shop manual, 2026-09-23",
+        "at": "2026-09-23"
       },
       {
         "id": "C19",
@@ -276,8 +276,8 @@
         "text": "voltage range 12 V nominal, 10.5 minimum, 13.5 maximum",
         "source": "Suburban service manual",
         "state": "READ",
-        "by": null,
-        "at": null
+        "by": "Cloud read the 10.5 to 13.5 volt range in the Suburban service and training manual",
+        "at": "2026-09-23"
       },
       {
         "id": "C23",
@@ -308,8 +308,8 @@
         "text": "line pressure minimum 11 inches of water column, maximum 14",
         "source": "Suburban service manual",
         "state": "READ",
-        "by": null,
-        "at": null
+        "by": "Cloud read 'Line Pressure: Minimum 11 WC, Maximum 14 WC' in the Suburban service manual",
+        "at": "2026-09-23"
       },
       {
         "id": "C27",
@@ -348,8 +348,8 @@
         "text": "limit switch causes: insufficient return air, minimum duct area, sharp turns",
         "source": "Suburban service manual",
         "state": "READ",
-        "by": null,
-        "at": null
+        "by": "Cloud read the return air, minimum duct area and sharp turns guidance in the Suburban manual",
+        "at": "2026-09-23"
       },
       {
         "id": "C32",
@@ -436,16 +436,16 @@
         "text": "Suburban's NT manual documents mud daubers and wasps nesting in the combustion air housing, and instructs clearing it and checking the combustion air wheel for warpage",
         "source": "Suburban NT series service manual",
         "state": "READ",
-        "by": null,
-        "at": null
+        "by": "Cloud read the mud dauber paragraph verbatim in the Suburban NT manual",
+        "at": "2026-09-23"
       },
       {
         "id": "C43",
         "text": "\"soot is formed whenever combustion is incomplete\" and the furnace must be shut down",
         "source": "Suburban service manual",
         "state": "READ",
-        "by": null,
-        "at": null
+        "by": "Cloud read the soot warning in the Suburban NT and training manuals",
+        "at": "2026-09-23"
       },
       {
         "id": "C44",
