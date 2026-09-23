@@ -33,6 +33,11 @@ import requests
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SWEEP_PATH = os.path.join(ROOT, "data", "gsc", "coverage-sweep.json")
+# The baseline for the week-on-week coverage diff. It lives in a committed path
+# and is published with the rest of the repo, so a run with no checkout (the
+# cloud sandbox) can still diff against last week by fetching it.
+SNAPSHOT = os.path.join(ROOT, "_log", "reports", "coverage-latest.json")
+SNAPSHOT_URL = "https://originrv.com/_log/reports/coverage-latest.json"
 REPORT_DIR = os.path.join(ROOT, "_log", "reports")
 
 
@@ -205,10 +210,19 @@ def build(args):
 
     # ---------- 3. coverage ----------
     previous_sweep = None
-    if os.path.exists(SWEEP_PATH):
+    for candidate in (SNAPSHOT, SWEEP_PATH):
+        if os.path.exists(candidate):
+            try:
+                previous_sweep = json.load(open(candidate))
+                break
+            except ValueError:
+                continue
+    if previous_sweep is None:
         try:
-            previous_sweep = json.load(open(SWEEP_PATH))
-        except ValueError:
+            resp = requests.get(SNAPSHOT_URL, timeout=(10, 30))
+            if resp.status_code == 200:
+                previous_sweep = resp.json()
+        except (requests.RequestException, ValueError):
             previous_sweep = None
 
     flags = []
@@ -243,10 +257,12 @@ def build(args):
         failed = [r for r in rows if r["coverageState"].startswith("INSPECT_FAILED")]
         if failed:
             flags.append("%d URL(s) could not be inspected; the API returned an error" % len(failed))
-        os.makedirs(os.path.dirname(SWEEP_PATH), exist_ok=True)
-        with open(SWEEP_PATH, "w") as fh:
-            json.dump({"site": site, "generated": datetime.now().isoformat(timespec="seconds"),
-                       "urls": rows}, fh, indent=2)
+        snapshot = {"site": site, "generated": datetime.now().isoformat(timespec="seconds"),
+                    "urls": rows}
+        for path in (SWEEP_PATH, SNAPSHOT):
+            os.makedirs(os.path.dirname(path), exist_ok=True)
+            with open(path, "w") as fh:
+                json.dump(snapshot, fh, indent=2)
 
     # ---------- 4. change log against effects ----------
     entries = change_entries(args.window, today)

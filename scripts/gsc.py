@@ -76,12 +76,31 @@ ROW_LIMIT = 25000  # API maximum
 
 
 def key_path(explicit=None):
-    return os.path.expanduser(
-        explicit or os.environ.get("ORIGINRV_GSC_SA") or DEFAULT_KEY
-    )
+    """Where the credential lives, or an empty string when it arrives inline.
+
+    The agent secret is exposed as ORIGINRV_GSC_SA, so the same name cannot
+    safely mean "path" and "the JSON itself". If the value looks like JSON we
+    treat it as the credential and there is no path. ORIGINRV_GSC_SA_FILE always
+    means a path.
+    """
+    if explicit:
+        return os.path.expanduser(explicit)
+    env = os.environ.get("ORIGINRV_GSC_SA") or ""
+    if env.strip().startswith("{"):
+        return ""
+    return os.path.expanduser(env or os.environ.get("ORIGINRV_GSC_SA_FILE") or DEFAULT_KEY)
 
 
 def load_credentials(path):
+    inline = (os.environ.get("ORIGINRV_GSC_SA") or "").strip()
+    if inline.startswith("{"):
+        creds = json.loads(inline)
+        for field in ("client_email", "private_key"):
+            if field not in creds:
+                sys.exit("The inline credential is missing %r." % field)
+        return creds
+    if not path:
+        path = os.path.expanduser(DEFAULT_KEY)
     if not os.path.exists(path):
         sys.exit(
             "No credential file at %s\n"
