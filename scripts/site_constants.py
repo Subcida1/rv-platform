@@ -102,3 +102,67 @@ BEACON = ("<!-- Cloudflare Web Analytics -->"
           "<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' "
           "data-cf-beacon='{\"token\": \"3727183603b6402b9249de33fa381acd\"}'></script>"
           "<!-- End Cloudflare Web Analytics -->\n")
+
+# ============================================================================
+# GA4 (Google Analytics 4), added 2026-09-22.
+#
+# WHY IT IS HERE. The site had Cloudflare Web Analytics and nothing else, which
+# counts pageviews and referrers and stops there: no query terms, no events, no
+# funnels, and no way to see the traffic that arrives from an AI assistant. The
+# GEO work (reference/projects/originrv-geo.md) lists the GA4 AI Assistant
+# channel as one of the few free instruments that can measure that, so this earns
+# its place on measurement, not on habit.
+#
+# THE ID IS THE SWITCH. Leave GA4_ID empty and nothing is injected and nothing is
+# claimed; set it to the property's measurement ID and both generators write the
+# tag into all 39 pages on their next run. verify.py fails the build if the
+# constant and the pages disagree in EITHER direction, so a half-finished
+# removal cannot pass as done.
+#
+# A measurement ID is not a secret. It ships in the HTML of every page by design,
+# the way the Cloudflare token above does, and it grants no access to the account:
+# it can only submit events. Do not put an API secret or a service account key
+# here.
+#
+# PLACEMENT. It goes in <head>, unlike the Cloudflare beacon which goes last in
+# the body, because gtag.js is what Google's own instructions say to load early.
+# It must NOT go before <base href="/">: verify.py requires the base tag to be the
+# first thing in head, and several pages resolve assets through it.
+#
+# CONSENT. This is the plain US-style install with no cookie banner, which is what
+# the site's audience (Oregon, Washington, California RV owners) needs today. GA4
+# anonymises IPs by default. If EU or UK traffic ever matters, this becomes a
+# Consent Mode plus banner job and the default below changes with it.
+GA4_ID = ""
+
+
+def ga4_block(indent=""):
+    """The gtag.js snippet for GA4_ID, or "" when no ID is configured.
+
+    The blank line after <head> matters: verify.py checks that <base href="/"> is
+    the first element in head, and an injected tag must never displace it.
+    """
+    if not GA4_ID:
+        return ""
+    return (
+        "<!-- Google tag (gtag.js) -->\n"
+        "%s<script async src=\"https://www.googletagmanager.com/gtag/js?id=%s\"></script>\n"
+        "%s<script>\n"
+        "%s  window.dataLayer = window.dataLayer || [];\n"
+        "%s  function gtag(){dataLayer.push(arguments);}\n"
+        "%s  gtag('js', new Date());\n"
+        "%s  gtag('config', '%s');\n"
+        "%s</script>\n" % (indent, GA4_ID, indent, indent, indent, indent, indent, GA4_ID, indent)
+    )
+
+
+# Matches a previously injected gtag block, so a re-run can replace it instead of
+# stacking a second copy when the measurement ID changes. It has to consume BOTH
+# script tags: the async loader's closing tag comes first, so a non-greedy match to
+# the first "</script>" would strip the loader and leave the inline config behind,
+# which is a half-removed tag that still half-works.
+GA4_BLOCK_RE = re.compile(
+    r'<!-- Google tag \(gtag\.js\) -->\s*'
+    r'<script[^>]*></script>\s*'
+    r'<script>.*?</script>\s*',
+    re.S)

@@ -51,14 +51,24 @@ pages = sorted(p for p in ROOT.rglob("*.html") if ".git" not in p.parts)
 patched, skipped = [], []
 
 # The beacon goes last in the body, which is where Cloudflare's own setup
-# instructions put it, rather than in the head with everything else. Copied
-# verbatim from the dashboard snippet: it is type="module", not the older
-# defer variant, and it carries its own HTML comment markers.
+# instructions put it, rather than in the head with everything else.
 BODY_ANCHOR = "</body>"
-BEACON = ("<!-- Cloudflare Web Analytics -->"
-          "<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' "
-          "data-cf-beacon='{\"token\": \"%s\"}'></script>"
-          "<!-- End Cloudflare Web Analytics -->\n")
+# GA4 goes in the head, unlike the beacon. This is the anchor for it, and the tag
+# is inserted immediately before it so it cannot displace <base href="/">, which
+# verify.py requires to be the first element in head on every page.
+HEAD_ANCHOR = "</head>"
+# BEACON is C.BEACON, assigned near the top of this file.
+#
+# It used to be RE-ASSIGNED here as a second copy carrying a "%s" where the token
+# belongs, with no .format() call to fill it, so the string contained the literal
+# characters %s. Nothing caught it because the injection is guarded by "does this
+# page already carry cloudflareinsights", and all 39 pages do, so the branch never
+# ran: the first NEW page would have been the one to receive
+# data-cf-beacon='{"token": "%s"}' and silently report nothing.
+#
+# Found 2026-09-22 while adding GA4 to this same injection point. There is one copy
+# of the snippet and it lives in scripts/site_constants.py, which is what stops the
+# two generators drifting apart. Do not add a second one here.
 
 for page in pages:
     rel = page.relative_to(ROOT)
@@ -90,6 +100,18 @@ for page in pages:
         indent = html[line_start + 1:html.index(OG_ANCHOR)]
         html = html.replace(
             OG_ANCHOR, OG_ANCHOR + "\n" + OG_BLOCK.format(c=CANON, ind=indent), 1)
+
+    # GA4. Strip any previously injected block before writing the current one, so a
+    # changed measurement ID replaces rather than stacks. When GA4_ID is empty the
+    # builder returns "" and the page is left alone; verify.py then fails the build
+    # if any page still carries a tag, so a half-finished removal cannot pass.
+    stripped = C.GA4_BLOCK_RE.sub("", html)
+    if stripped != html:
+        html = stripped
+    if C.GA4_ID and C.GA4_ID not in html:
+        if HEAD_ANCHOR not in html:
+            raise SystemExit("no </head> in %s" % rel)
+        html = html.replace(HEAD_ANCHOR, C.ga4_block("  ") + HEAD_ANCHOR, 1)
 
     if BEACON and "cloudflareinsights" not in html:
         if BODY_ANCHOR not in html:

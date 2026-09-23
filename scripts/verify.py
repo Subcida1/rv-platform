@@ -463,6 +463,37 @@ for p in pages:
     if C.BEACON not in html:
         bad_beacon.append(str(p.relative_to(ROOT)))
 
+print("\n=== GA4: the measurement ID and the pages agree, in both directions ===")
+# GA4 rides the same two generators as the beacon, so it has the same drift risk,
+# plus one more: a tag that is injected but never removed leaves a property
+# collecting data after someone believes it is off. Checked both ways on purpose.
+# The ID itself is not a secret (it ships in every page by design and can only
+# submit events), so printing it here is fine. See site_constants.GA4_ID.
+ga4_bad = []
+for p in pages:
+    html = p.read_text(encoding="utf-8")
+    rel = str(p.relative_to(ROOT))
+    found = C.GA4_BLOCK_RE.search(html)
+    if C.GA4_ID:
+        if not found:
+            ga4_bad.append("%s: no GA4 tag (expected %s)" % (rel, C.GA4_ID))
+        elif C.GA4_ID not in html:
+            ga4_bad.append("%s: carries a different GA4 tag than %s" % (rel, C.GA4_ID))
+        elif html.count("googletagmanager.com/gtag/js") != 1:
+            ga4_bad.append("%s: %d gtag loaders, expected 1"
+                           % (rel, html.count("googletagmanager.com/gtag/js")))
+    elif found:
+        ga4_bad.append("%s: still carries a GA4 tag while GA4_ID is empty" % rel)
+if ga4_bad:
+    for b in ga4_bad[:12]:
+        print("  " + b)
+    print("  fix: python3 scripts/sync-head-brand.py && python3 scripts/build-manuals-pages.py")
+    fails.append("GA4 tag")
+elif C.GA4_ID:
+    print("  %s present exactly once on all %d pages" % (C.GA4_ID, len(pages)))
+else:
+    print("  GA4_ID is empty and no page carries a tag (the switch is off, cleanly)")
+
 manifest = json.loads((ROOT / "site.webmanifest").read_text(encoding="utf-8"))
 if manifest.get("theme_color") != C.THEME_COLOR:
     bad_theme.append("site.webmanifest: %s" % manifest.get("theme_color"))

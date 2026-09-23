@@ -173,11 +173,11 @@ def head(title, desc, canonical, schemas):
   <meta name="twitter:title" content="{title} | OriginRV">
   <meta name="twitter:description" content="{desc}">
 {ld}
-</head>
+{ga4}</head>
 <body class="g-theme-mist">
   <div id="site-nav"><!-- nav:start --><!-- nav:end --></div>
 """.format(canonical=canonical, title=esc(title), desc=esc(desc), site=SITE, ld=ld,
-           theme=C.THEME_COLOR)
+           theme=C.THEME_COLOR, ga4=C.ga4_block("  "))
 
 
 def foot(script):
@@ -187,6 +187,11 @@ def foot(script):
     The analytics beacon goes last, right before </body>, the same place
     sync-head-brand.py puts it. Generating it here is what keeps a rebuild from
     quietly dropping it: verify.py compares these pages to this script's output.
+
+    GA4 is templated into these pages by head() above, not here, because it belongs
+    in <head>. Both generators read the same constant, C.GA4_ID, which is the only
+    reason a manuals rebuild cannot drop the tag while the rest of the site keeps
+    it. verify.py checks all 39 pages for it in both directions.
     """
     return """  <div id="site-footer"><!-- footer:start --><!-- footer:end --></div>
   <script src="assets/js/config.js"></script>
