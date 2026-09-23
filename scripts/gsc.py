@@ -70,6 +70,7 @@ TOKEN_URL = "https://oauth2.googleapis.com/token"
 SCOPE = "https://www.googleapis.com/auth/webmasters.readonly"
 API = "https://www.googleapis.com/webmasters/v3"
 DEFAULT_SITE = "sc-domain:originrv.com"
+BASE_URL = "https://originrv.com"
 DEFAULT_KEY = "~/.config/originrv/gsc-sa.json"
 ROW_LIMIT = 25000  # API maximum
 
@@ -365,6 +366,54 @@ def sitemap_urls(path):
     return re.findall(r"<loc>([^<]+)</loc>", text)
 
 
+def inspect_url(token, site, url):
+    """One URL's index state, as a flat row."""
+    resp = None
+    for attempt in (1, 2):
+        resp = requests.post(
+            "https://searchconsole.googleapis.com/v1/urlInspection/index:inspect",
+            headers={"Authorization": "Bearer " + token, "Content-Type": "application/json"},
+            json={"inspectionUrl": url, "siteUrl": site},
+            timeout=(10, 60),
+        )
+        if resp.status_code < 500:
+            break
+        time.sleep(2)  # 500s here are usually transient, seen once on 2026-09-22
+    if resp.status_code != 200:
+        return {"url": url, "coverageState": "INSPECT_FAILED_HTTP_%s" % resp.status_code}
+    status = resp.json().get("inspectionResult", {}).get("indexStatusResult", {})
+    return {
+        "url": url,
+        "coverageState": status.get("coverageState", "UNKNOWN"),
+        "verdict": status.get("verdict", ""),
+        "lastCrawlTime": status.get("lastCrawlTime", ""),
+        "googleCanonical": status.get("googleCanonical", ""),
+        "userCanonical": status.get("userCanonical", ""),
+        "robotsTxtState": status.get("robotsTxtState", ""),
+    }
+
+
+def sweep(token, site, urls, workers=5, show=False):
+    """Inspect a list of URLs in parallel, streaming results as they land.
+
+    Sequential inspection of 39 URLs takes over three minutes, and printing only
+    at the end makes a slow run look identical to a hung one.
+    """
+    from concurrent.futures import ThreadPoolExecutor, as_completed
+
+    rows = []
+    with ThreadPoolExecutor(max_workers=workers) as pool:
+        futures = [pool.submit(inspect_url, token, site, u) for u in urls]
+        for future in as_completed(futures):
+            row = future.result()
+            rows.append(row)
+            if show:
+                print("  %-66s %s" % (row["url"].replace(BASE_URL, ""),
+                                      row["coverageState"]), flush=True)
+    rows.sort(key=lambda r: r["url"])
+    return rows
+
+
 def cmd_audit(args):
     """Inspect every published URL and report the coverage picture.
 
@@ -380,40 +429,7 @@ def cmd_audit(args):
     print("Property: %s" % args.site)
     print("Inspecting %d published URL(s) from %s\n" % (len(urls), args.sitemap))
 
-    from concurrent.futures import ThreadPoolExecutor, as_completed
-
-    def inspect_one(url):
-        resp = requests.post(
-            "https://searchconsole.googleapis.com/v1/urlInspection/index:inspect",
-            headers={"Authorization": "Bearer " + token, "Content-Type": "application/json"},
-            json={"inspectionUrl": url, "siteUrl": args.site},
-            timeout=(10, 60),
-        )
-        if resp.status_code != 200:
-            return {"url": url, "coverageState": "INSPECT_FAILED_HTTP_%s" % resp.status_code}
-        status = resp.json().get("inspectionResult", {}).get("indexStatusResult", {})
-        return {
-            "url": url,
-            "coverageState": status.get("coverageState", "UNKNOWN"),
-            "verdict": status.get("verdict", ""),
-            "lastCrawlTime": status.get("lastCrawlTime", ""),
-            "googleCanonical": status.get("googleCanonical", ""),
-            "userCanonical": status.get("userCanonical", ""),
-            "robotsTxtState": status.get("robotsTxtState", ""),
-        }
-
-    # Sequential inspection of 39 URLs takes over three minutes, and printing only
-    # at the end makes a slow run look identical to a hung one. A handful of
-    # workers cuts it to well under a minute and each result prints as it lands.
-    rows = []
-    with ThreadPoolExecutor(max_workers=args.workers) as pool:
-        futures = [pool.submit(inspect_one, u) for u in urls]
-        for future in as_completed(futures):
-            row = future.result()
-            rows.append(row)
-            print("  %-66s %s" % (row["url"].replace("https://originrv.com", ""),
-                                  row["coverageState"]), flush=True)
-    rows.sort(key=lambda r: r["url"])
+    rows = sweep(token, args.site, urls, workers=args.workers)
     print()
 
     groups = {}
