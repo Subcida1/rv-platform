@@ -200,13 +200,22 @@
  return href ? '<a href="' + esc(href) + '" target="_blank" rel="noopener">' + inner + '</a>' : '<div class="deck-card">' + inner + '</div>';
  }
  var html = '';
- /* embedded CAT Scale map first, per Ty: CAT is the main resource */
+ /* embedded CAT Scale map first, per Ty: CAT is the main resource.
+    The zoom is z=7 and the number is load-bearing. It arrived as z=4, which framed
+    the whole western United States and collapsed every pin into one unreadable
+    blob, while the heading directly above it promised "locations near you". The
+    embed geolocates the visitor, so z=7 shows their own state and the one beside
+    it, which is the scale that heading claims. Ty, 2026-09-22: "should be like half
+    a stateish".
+    z=8 was rendered and rejected: it framed a single metro, and for a rural reader
+    that can mean a map with no pins on it at all, which is worse than one that is
+    slightly too wide. All three were rendered and compared before choosing. */
  var main = SC.main;
  if (main && main.map) {
    html += '<div class="scale-map">' +
      '<div class="scale-map-head"><span class="verified">Certified</span><b>CAT Scale locations near you</b>' +
      '<a href="' + esc(main.url) + '" target="_blank" rel="noopener">Open full locator \u2192</a></div>' +
-     '<iframe src="https://maps.google.com/maps?q=CAT+Scale&t=&z=4&ie=UTF8&iwloc=&output=embed" style="width:100%;height:420px;border:0;border-radius:12px" loading="lazy" title="Map of CAT Scale certified truck scale locations" allowfullscreen></iframe></div>';
+     '<iframe src="https://maps.google.com/maps?q=CAT+Scale&t=&z=7&ie=UTF8&iwloc=&output=embed" style="width:100%;height:420px;border:0;border-radius:12px" loading="lazy" title="Map of CAT Scale certified truck scale locations" allowfullscreen></iframe></div>';
  }
  SC.sources.forEach(function (src) {
    html += card(src);
