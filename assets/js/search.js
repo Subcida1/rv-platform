@@ -99,6 +99,38 @@
     return esc(text.slice(0, start)) + '<b>' + esc(text.slice(start, end + 1)) + '</b>' + esc(text.slice(end + 1));
   }
 
+  /* Report a settled search to GA4.
+
+     WHY: the contact page tells visitors "it also records the words people type
+     into the site search, so we know what to write next". That was NOT true. GA4
+     only receives site search if the site sends it, either through Enhanced
+     Measurement watching a query parameter in the URL (this search is client-side
+     and changes no URL) or through an explicit event. Nothing was being recorded,
+     so the site was claiming a thing it did not do. This makes the sentence true.
+
+     Shape is from Google's own reference: event "search", parameter
+     "search_term", which is REQUIRED for that event.
+
+     Only settled queries count. The results repaint on a 60ms debounce because
+     they have to feel instant, but logging on that cadence would send "w", "wi",
+     "win", "wint"... for one word typed once. 900ms of quiet, at least three
+     characters, and never the same term twice in a row.
+
+     gtag is guarded rather than assumed: the GA4 tag is driven by a constant in
+     site_constants.py and can be switched off, in which case this quietly does
+     nothing instead of throwing. */
+  var lastTerm = null, reportTimer = null;
+  function report(raw) {
+    var term = String(raw == null ? '' : raw).replace(/\s+/g, ' ').trim();
+    if (reportTimer) clearTimeout(reportTimer);
+    if (term.length < 3 || term === lastTerm) return;
+    reportTimer = setTimeout(function () {
+      if (typeof window.gtag !== 'function') return;
+      lastTerm = term;
+      window.gtag('event', 'search', { search_term: term });
+    }, 900);
+  }
+
   function init() {
     var form = document.querySelector('form.js-search-form');
     if (!form || !INDEX.length) return;
@@ -171,6 +203,7 @@
     input.addEventListener('input', function () {
       clearTimeout(t);
       t = setTimeout(function () { paint(search(input.value), input.value.trim().toLowerCase()); }, 60);
+      report(input.value);
     });
     input.addEventListener('focus', function () {
       if (input.value.trim()) paint(search(input.value), input.value.trim().toLowerCase());
