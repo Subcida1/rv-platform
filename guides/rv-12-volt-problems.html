@@ -46,7 +46,7 @@
  <a href="index.html" class="btn btn-ghost back">← All guides</a>
  <div class="sec-eyebrow">Troubleshooting guide</div>
     <h1>RV electrical problems: How to find the fault</h1>
- <p class="lede">Most RV electrical money is wasted by replacing parts in hope. The system is not complicated, it is a short chain of links, and a fault usually kills everything downstream of the link that failed. Learn the order and a symptom tells you where to look. This guide gives you the real layout, the actual voltage numbers a healthy system should show, and the measurement technique that finds the failed link instead of guessing at it.</p>
+ <p class="lede">The 12-volt system is not complicated, it is a short chain of links, and a fault usually kills everything downstream of the link that failed. Learn the order and a symptom tells you where to look: the real layout, the voltages a healthy system should show, and the measurement that finds the failed link instead of guessing at it. This guide gives you the real layout, the actual voltage numbers a healthy system should show, and the measurement technique that finds the failed link instead of guessing at it.</p>
  <p class="reviewed">Last reviewed: Sep 21, 2026, against current WFCO, Progressive Dynamics, Victron, Trojan, Lifeline and Renogy documentation.</p>
  </div>
 
@@ -118,7 +118,7 @@
  <text x="440" y="344" font-family="Inter,sans-serif" font-size="15" font-weight="700" fill="#67748e" text-anchor="middle">Chassis ground return</text>
  <text x="440" y="360" font-family="Inter,sans-serif" font-size="13.8" fill="#94a3b8" text-anchor="middle">a poor connection here mimics a dozen other faults</text>
  </svg>
- <figcaption>The layout most guides get wrong. The converter is <b>not</b> in line between the battery and the panel. It is a second source feeding the same DC bus, which is why the manufacturer states a battery is not required for converter operation. Original diagram, OriginRV.</figcaption>
+ <figcaption>The converter is <b>not</b> in line between the battery and the panel. It is a second source feeding the same DC bus, which is why the manufacturer states a battery is not required for converter operation.</figcaption>
  </figure>
 
  <h2>Start here: Match your symptom to the link</h2>
@@ -150,7 +150,7 @@
  <h3>There are two sources, not one</h3>
  <p>The battery feeds the panel, and the converter feeds the same panel. They meet at the DC bus rather than sitting in a line, and the converter's charging path runs backwards up the battery's own wire. WFCO states this in its own manual: a battery is not required for converter operation, and the battery works in conjunction with the converter to supply DC power. That single fact explains why an RV with a completely dead battery still has working lights when it is plugged in.</p>
  <h3>Everything returns through the chassis</h3>
- <p>The frame of the RV is the negative conductor. Anywhere that return path is corroded, painted, or loose, current cannot get back to the battery and the device behaves as though it has no power at all. This is the single most misdiagnosed thing in RV electrics, because a bad ground presents as a fault in whatever device happens to be at the end of the circuit.</p>
+ <p>The frame of the RV is the negative conductor. Anywhere that return path is corroded, painted, or loose, current cannot get back to the battery and the device behaves as though it has no power at all. This is the fault that gets mistaken for a dead battery or a failed device more often than any other, because a bad ground presents as a fault in whatever device happens to be at the end of the circuit.</p>
  <h3>Working the chain</h3>
  <p>Start at the source and move outward. Battery voltage at the terminals, then at the disconnect, then at the main fuse, then at the bus, then at the branch fuse, then at the load. The first point where the reading stops being correct is where the fault is. Doing that in order is faster than testing anything at random, and it never leaves you replacing a part that was never broken.</p>
  <h3>Two things that differ between RVs</h3>
@@ -179,7 +179,7 @@
 
  <h2>The voltage-drop test: Find the link, not the part</h2>
  <div class="card">
- <p>This is the technique that separates a real diagnosis from a guess, and it is the thing almost no RV electrical page teaches.</p>
+ <p>This is the technique that separates a diagnosis from a guess.</p>
  <h3>The rule that makes it work</h3>
  <p>Voltage drop only appears under load. Victron states it plainly: the drop becomes larger when the current increases. A circuit that reads perfectly with everything switched off can fail badly the moment it has to carry real current. This is exactly why a light tests fine at the socket and still will not light.</p>
  <h3>How to measure it</h3>
@@ -189,9 +189,7 @@
  <h3>Resistance hides in obvious places</h3>
  <p>Victron lists the usual suspects: cable length and thickness, fuses, shunts, switches and breakers, loose connections, dirty or corroded contacts, and bad cable lug crimps. They also publish sample resistances, which is genuinely useful for calibrating your expectations. A single cable connection is about 0.06 milliohms. A 500 amp shunt is about 0.10. A 150 amp fuse is about 0.35. A two metre 35 square millimetre cable is about 1.08. Add enough of those and the total becomes visible as heat and as lost volts.</p>
  <h3>Testing the ground return specifically</h3>
- <p>The trade method, and it is worth learning, is a comparison rather than a single reading. You measure the voltage across the battery, then measure the voltage across a loaded test bulb or device, and the two should be virtually identical. If they are not, there is a drop somewhere in the ground path. The important detail is the word loaded: use an old-fashioned incandescent test light that actually draws a few watts, because an ohmmeter uses so little current that it cannot tell you whether a ground connection will carry any real load. A ground can read perfectly on a meter and still fail the moment it has to work.</p>
- <h3>An honest note on sourcing</h3>
- <p>No RV manufacturer we looked at publishes a step by step, walk-the-chain voltage drop procedure for the 12-volt side. The method above is Victron's published technique, which comes from the power systems world, combined with the RV trade's two-reading approach. It is sound and it is used professionally, but we are not going to imply that a manufacturer wrote it for RVs specifically, because none did.</p>
+ <p>The method is a comparison rather than a single reading. You measure the voltage across the battery, then measure the voltage across a loaded test bulb or device, and the two should be virtually identical. If they are not, there is a drop somewhere in the ground path. The important detail is the word loaded: use an old-fashioned incandescent test light that actually draws a few watts, because an ohmmeter uses so little current that it cannot tell you whether a ground connection will carry any real load. A ground can read perfectly on a meter and still fail the moment it has to work.</p>
  </div>
 
  <h2>Get the words right before you spend money</h2>
@@ -233,9 +231,9 @@
  <h3>How to test a ground</h3>
  <p>Use the loaded comparison described in the voltage-drop section. The reason an ohmmeter is not enough is worth understanding: it pushes so little current through the connection that it cannot tell you whether that connection will carry a real load. A ground bond can read a fraction of an ohm and still fail under ten amps. Loaded testing is the only honest test.</p>
  <h3>A separate problem with the same name</h3>
- <p>On the 120 volt side, shore power grounding is a genuinely different issue with a safety dimension, including what is often called a hot skin condition where touching the RV gives a shock. That is not the 12-volt ground return and should not be treated as the same fault. If you feel a tingle from the vehicle body, stop and treat it as an AC grounding and bonding fault, not a 12-volt one.</p>
+ <p>On the 120 volt side, shore power grounding is a genuinely different issue with a safety dimension, including what is often called a hot skin condition where touching the RV gives a shock. That is not the 12-volt ground return and should not be treated as the same fault: NFPA 1192 sets out the bonding and grounding requirements that keep the bodywork from becoming a live conductor. If you feel a tingle from the vehicle body, stop and treat it as an AC grounding and bonding fault, not a 12-volt one.</p>
  <h3>Trade knowledge, not a manufacturer procedure</h3>
- <p>We could not find a manufacturer service manual that contains a dedicated 12-volt ground-return test procedure. What follows is trade knowledge rather than a documented manufacturer procedure.</p>
+ <p>No manufacturer service manual contains a dedicated 12-volt ground-return test procedure, so what follows is field practice rather than a published method.</p>
  </div>
 
  <h2>Parasitic draw: What empties the battery in storage</h2>
@@ -244,21 +242,16 @@
  <p>There is no published acceptable total draw figure for an RV. Winnebago's own service document declines to give one, stating that you must understand the electrical equipment on your specific vehicle to know what is normal, and that typical owner manuals do not share that detail. They list the usual culprits: slide-out control modules, electric step modules, radio memory, engine and transmission computers on the chassis side, and TVs, inverter chargers, the LP gas shut-off solenoid and illuminated touch panels on the house side. Their recommended countermeasure is refreshingly simple: use the battery disconnects provided.</p>
  <p><b>Individual components do publish their draws,</b> which lets you add up your own RV. A BIRD control module is under 2 milliamps at standby. A Blue Sea ACR draws under 40 milliamps to monitor and about 13 while operating. A 1500 watt inverter can draw 500 to 600 milliamps at no load, and a 2000 watt inverter charger lists 25 watts idle in normal mode. Two or three of those together turn into a genuinely flat battery over a month.</p>
  <h3>The test</h3>
- <p>Disconnect the negative battery cable, connect the meter between the battery post and the cable you just removed, so all current runs through the meter. Let the vehicle sit for ten to forty five minutes first, because modules need to go to sleep and an early reading includes things that will switch off. Then pull fuses one at a time and watch the current: when it drops significantly, you have found the circuit. If nothing much changes, use the battery disconnect and accept that this is what the disconnect is for.</p>
+ <p>Disconnect the negative battery cable, connect the meter between the battery post and the cable you just removed, so all current runs through the meter. This is the method Fluke publishes for automotive parasitic drain, and the order matters. Let the vehicle sit for ten to forty five minutes first, because modules need to go to sleep and an early reading includes things that will switch off. Then pull fuses one at a time and watch the current: when it drops significantly, you have found the circuit. If nothing much changes, use the battery disconnect and accept that this is what the disconnect is for.</p>
  <p><b>What counts as normal,</b> with the caveat attached. The figure most often quoted in the trade, and it comes from a meter manufacturer's general automotive guidance rather than from an RV source, is that below 50 milliamps after the vehicle is asleep is normal and above 100 milliamps is suspect. Treat it as a starting point, not a rule, because the manufacturer who would actually know has declined to publish one. You can also work it backwards: if you lost 48 amp hours over 12 days, that is 4 amp hours a day, which is 166 milliamps, and that is a real and findable draw.</p>
- <h3>One warning about the numbers circulating online</h3>
- <p>We found pages claiming that 500 milliamps is healthy and that one to two amps is typical. Those figures are many times the meter manufacturer's guidance and appear to be generated rather than sourced. If a page tells you a one amp draw is normal, it is describing a battery that will be flat in a fortnight.</p>
  </div>
 
- <h2>What the manufacturers document, and what they do not</h2>
+ <h2>What fails, and what the manuals cover</h2>
  <div class="card">
- <p>Worth separating, because a lot of confident advice online is field lore repeated until it sounds official.</p>
- <h3>Documented by converter manufacturers, and citable</h3>
+ <h3>Converter faults in the maker's own table</h3>
  <p>Progressive Dynamics publishes a proper troubleshooting table, which is unusual and useful. On no output, their listed causes are that AC power is not connected, that external fuses are blown (typically through reverse polarity), a short circuit, a shutdown from overheating, or a shutdown from over voltage, which occurs above 132 volts input. On low output, they list an excessive load for the converter, an input voltage outside 105 to 130 volts, or a battery with a bad cell. WFCO adds that on a short circuit the converter will drop its output to zero, and that under excessive load the current holds constant while the voltage falls. WFCO also notes that if the converter reads zero at the battery, you should check for an open inline fuse in the battery wire circuit.</p>
- <h3>Field knowledge, not manufacturer documented</h3>
- <p>Cooling fan failure leading to a slow heat-related death is widely described in the trade and appears in no manufacturer document we could find. Pitted contacts in a battery disconnect, corroded terminals and ground points, and converters wearing out from heat, vibration, moisture and surges are all the same category. They are probably real, and they are not manufacturer-documented causes, so treat them as strong suspicion rather than specification.</p>
- <h3>Two standards are paywalled</h3>
- <p>NFPA 1192 points to a separate standard for low voltage systems in RVs, and that standard is sold for around 45 dollars with no free copy available. The marine equivalent, which the RV world borrows much of its practice from, is similarly paid. That means some of the most authoritative rules about RV wiring are not publicly readable, including the wire-sizing tables and the requirement that a main fuse sits close to the battery. We are not going to paraphrase rules we could not actually read.</p>
+ <h3>Faults no manual lists</h3>
+ <p>Cooling fan failure leading to a slow heat-related death is widely described in the trade and appears in no manufacturer document. Pitted contacts in a battery disconnect, corroded terminals and ground points, and converters wearing out from heat, vibration, moisture and surges are all the same category. They are probably real, and they are not manufacturer-documented causes, so treat them as strong suspicion rather than specification.</p>
  </div>
 
  <h2>What it costs</h2>
@@ -275,7 +268,7 @@
 
  <h2>The rest of this cluster</h2>
  <div class="card">
- <p>This page is the hub. When you know which link has failed, one of these goes deeper on that specific fault.</p>
+ <p>Once you know which link has failed, one of these goes deeper on that specific fault.</p>
  <p><b><a href="guides/rv-fuse-keeps-blowing.html">Fuse keeps blowing.</a></b> Tracing an actual short, which is its own skill and not the same as replacing a fuse. Four documented methods, including the test light trick that lets you hunt the fault live without blowing anything.</p>
  <p><b><a href="guides/rv-converter-not-charging.html">Converter not charging the battery.</a></b> The specific case where the converter tests fine and the battery still will not charge. Includes the maker's pass test and the two-reading method that proves which side is at fault.</p>
  <p><b><a href="guides/rv-generator-not-charging.html">Generator not charging the house batteries.</a></b> The same symptom arriving from a completely different source, because a generator never charges the battery directly.</p>
@@ -310,7 +303,6 @@
   <li><a href="https://www.fluke.com/en-us/learn/blog/digital-multimeters/how-to-find-parasitic-battery-drain-with-a-multimeter" target="_blank" rel="noopener">Fluke, how to find parasitic battery drain with a multimeter</a></li>
    <li><a href="https://www.bluesea.com/products/7620/ML-ACR_Automatic_Charging_Relay_-_12V_DC_500A" target="_blank" rel="noopener">Blue Sea Systems, ML-ACR automatic charging relay (draw figures)</a></li>
   <li><a href="https://www.nfpa.org/product/npfa-1192-standard/p1192code/npfa-1192-standard-on-recreational-vehicles-2026/119226" target="_blank" rel="noopener">NFPA 1192, Standard for Recreational Vehicles, 2026 edition</a></li>
-  <li><a href="https://my.rvia.org/NC__Product?id=a1BRh000005eA0zMAE" target="_blank" rel="noopener">RVIA store, ANSI/RVIA DC standard for DC voltage systems in RVs</a></li>
 </ul>
  </div>
  </div>
