@@ -203,9 +203,9 @@
         "id": "C13",
         "text": "step 2, relay delay 1 to 25 seconds, or 1 to 2 seconds when the relay is on the board",
         "source": "Atwood service manual",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Cloud read the Atwood shop manual on 2026-09-23: the relay delay 'takes 1-25 seconds', which is the figure the page cites, and the same manual describes the time delay relay and the heat anticipator setting",
+        "at": "2026-09-23"
       },
       {
         "id": "C14",
@@ -291,9 +291,9 @@
         "id": "C24",
         "text": "Truma thresholds: warning under 10.4 V, undervoltage under 10.0 V, overvoltage above 16.4 V",
         "source": "Truma VarioHeat operating instructions",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "CONFIRMED",
+        "by": "Cloud cut the unverified 10.0 volt and 16.4 volt thresholds on 2026-09-23. Truma's own VarioHeat error-code page states only the 10.4 volt imminent-undervoltage warning, and Truma's owner's manual, which carries the rest, is behind a download page that answers 500",
+        "at": "2026-09-23"
       },
       {
         "id": "C25",
@@ -331,9 +331,9 @@
         "id": "C29",
         "text": "Truma: butane concentration too high for heating below roughly 10 °C",
         "source": "Truma operating instructions",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "CONFIRMED",
+        "by": "Cloud cut the unverified 10 degrees Celsius figure and the frozen-regulator heater advice on 2026-09-23, keeping the substance Truma does publish: butane concentration in the cylinder is listed as a cause of its flame-not-detected fault",
+        "at": "2026-09-23"
       },
       {
         "id": "C30",
@@ -355,9 +355,9 @@
         "id": "C32",
         "text": "Atwood: air boosters must never be installed, they cause limit cycling",
         "source": "Atwood consumer manual",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Cloud read both Atwood and Dometic owner documents on 2026-09-23: Dometic's DF-series instructions say 'Do NOT install air boosters in the duct system', and Atwood's owner manual adds that such devices 'will cause the furnace to cycle on limit and to have erratic sail switch operation'",
+        "at": "2026-09-23"
       },
       {
         "id": "C33",
@@ -491,9 +491,9 @@
         "id": "C49",
         "text": "Furrion, Atwood and Truma all instruct owners not to repair the furnace themselves",
         "source": "the three makers' manuals, quoted",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Cloud read the Atwood and Dometic owner manuals: 'Never attempt to repair the furnace yourself. Seek the help of a qualified service person' (Atwood) and 'Never attempt to repair the Furnace yourself' (Dometic). Furrion's manual carries its own version, read earlier. The Truma half is still unread because its manual is unreachable",
+        "at": "2026-09-23"
       },
       {
         "id": "C50",

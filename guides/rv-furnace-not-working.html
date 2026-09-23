@@ -255,7 +255,7 @@
  <p>The furnace is a heavy 12-volt load, and it is strict about voltage in a way your lights are not. Atwood's manual puts its 79 series furnace at 3.4 amps while it runs. Suburban publishes a furnace voltage range of 12 volts DC nominal, minimum 10.5 and maximum 13.5, and its module board checks for a minimum 9.5 volts, going into standby below that. The older time-delay manuals are explicit: low supply voltage will not provide sufficient motor rpm to engage the sail switch.</p>
  <p>If the supply voltage is the problem rather than the furnace, work the 12-volt path in order: battery terminal voltage under load, the master disconnect, the main DC fuses, the converter output, and the chassis ground returns. The <a href="guides/rv-12-volt-problems.html">guide to finding 12-volt faults</a> walks that path, with a figure for each point and a method for finding where the volts are being lost.</p>
  <p>This is why a furnace so often "works on shore power but not on battery." The battery may happily run lights and a water pump while being too weak to spin the blower to the speed the sail switch needs. Charge the battery, or plug in, before you replace any part.</p>
- <p>Truma publishes the same idea as numeric thresholds: a warning at under 10.4 volts, an undervoltage fault at under 10.0 volts, and an overvoltage fault above 16.4 volts.</p>
+ <p>Truma publishes the same idea as a numeric threshold: its imminent-undervoltage warning appears when the battery falls below 10.4 volts.</p>
  <p><b>One warning from Suburban's own manual:</b> never use a battery charger to power or test the furnace. Chargers can deliver more than 14.5 volts and damage the module board.</p>
  </div>
 
@@ -267,7 +267,7 @@
  <h3>The pressure drop test</h3>
  <p>This is the most useful furnace-specific gas check and the one most owners never run. Measure line pressure, then cycle the furnace and watch the pressure on demand. Suburban's instruction is that the drop should not exceed half an inch of water column. A larger drop indicates a faulty regulator, a restriction or kink in the gas line, or moisture contamination.</p>
  <h3>Moisture and cold</h3>
- <p>Suburban notes that lockout can occur if gas pressure fluctuates when the thermostat calls for heat, caused by a failing regulator, an obstruction or kink, or moisture in the regulator or lines. Truma is explicit about cold weather: butane concentration in the cylinder is too high for heating below roughly 10 degrees Celsius, and a frozen regulator needs a heater rather than more spark.</p>
+ <p>Suburban notes that lockout can occur if gas pressure fluctuates when the thermostat calls for heat, caused by a failing regulator, an obstruction or kink, or moisture in the regulator or lines. Truma lists a butane-heavy cylinder among the causes of its flame-not-detected fault, which is why the same furnace can work at home and struggle in the cold.</p>
  <h3>The excess flow device</h3>
  <p>The pigtail fitting contains an excess flow valve, and those valves are surge sensitive: they close on a sudden rush of flow rather than on a steady one, which is what a tank valve opened quickly into empty lines produces. Trade guidance is to treat the tank shutoff valve as either fully open or fully closed and never throttled, and to open it slowly. If the furnace locks out straight after a refill or a tank change, close the valve, wait, then open it slowly before hunting for a furnace fault.</p>
  </div>
