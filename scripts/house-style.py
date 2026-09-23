@@ -247,20 +247,15 @@ def check_page(path):
     for level, txt in headings(html):
         if txt.endswith("."):
             findings.append(("heading", "ends with a period (no heading should)", txt))
-        # INVERTED 2026-09-23, Ty's ruling (recorded in reference/projects/originrv-content-engine.md).
-        # It pointed the other way because a site-wide tally read 49 capital vs 34 lowercase and
-        # took the majority as the standard. The majority was the OLDER batch, not the better one.
-        # The reason it is binary at all: the competing rule ("periods on statement headings, not
-        # labels") needs a human judgement on every heading, so it cannot be scripted and drifted
-        # for exactly that reason. Lowercase after a colon is the editorial standard for a heading
-        # that is not a full sentence, and it is what the newest work already does.
-        # All-caps words (GVWR, NHTSA, DC) are exempt -- an acronym is not a sentence start.
-        # Proper nouns are NOT exempted, so a finding on one of those is expected rather than a
-        # bug. This rule stays REPORT-ONLY until its false positives have been counted, which is
-        # the standard every other rule in this file had to meet.
-        m = re.search(r":\s+([A-Za-z][A-Za-z'\-]*)", txt)
-        if m and m.group(1)[0].isupper() and not m.group(1).isupper():
-            findings.append(("heading", "capital after colon, should be lowercase", txt))
+        # CAPITAL after a colon, per Ty's final ruling 2026-09-23: mirror the big sites, and
+        # Google's own developer style guide says "capitalize... the first word in a subheading
+        # after a colon". This rule briefly pointed the other way; it is back, and the lowercase
+        # pass that ran in between was reverted by re-running normalize-house-style.py.
+        # A LOWERCASE letter after a colon is the defect. Acronyms need no exemption because the
+        # defect is lowercase, not capital.
+        m = re.search(r":\s+([a-z])(?![A-Za-z])", txt)
+        if m:
+            findings.append(("heading", "lowercase after colon, should be capital", txt))
 
     # 4  "12 volt"   -- language rules run on the WHOLE page, not body_only (see page_text)
     prose = page_text(html)

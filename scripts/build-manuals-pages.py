@@ -45,6 +45,25 @@ BLURB = {
 }
 
 # A short H1, and one niche keyword per page carried in the title tag.
+ACRONYMS = {"RV", "RVS", "AC", "DC", "GFCI", "NHTSA", "SAE", "DOT", "PDF"}
+
+
+def sentence(t):
+    """Sentence case, the convention Ty settled on 2026-09-23 (mirror the big sites; Google's own
+    developer style guide says sentence case for titles and headings). Acronyms survive, because
+    lowercasing RV to rv would be worse than the shout it replaced."""
+    out = []
+    for i, w in enumerate(t.split()):
+        core = "".join(c for c in w if c.isalpha())
+        if core.upper() in ACRONYMS:
+            out.append(w)
+        elif i == 0:
+            out.append(w[:1].upper() + w[1:].lower())
+        else:
+            out.append(w.lower())
+    return " ".join(out)
+
+
 SHORT = {
     "power-and-electrical": "ELECTRICAL",
     "water-and-plumbing": "WATER AND PLUMBING",
@@ -289,7 +308,7 @@ def hub(rows, oem_count, model_count=0):
     body = """
   <div class="wrap page-intro">
     <div class="sec-eyebrow">Manuals</div>
-    <h1 class="dir-title man-title">RV MANUALS</h1>
+    <h1 class="dir-title man-title">RV manuals</h1>
     <p class="man-lede">Owner's manuals, service manuals, parts lists and wiring diagrams
     for the systems and accessories in your RV. Every row links the maker's own page or
     document.</p>
@@ -408,7 +427,7 @@ def system_page(slug, title, desc, rows):
     body = """
   <div class="wrap page-intro">
     <div class="man-crumb"><a href="manuals/index.html">RV Manuals</a></div>
-    <h1 class="dir-title man-title">%s MANUALS</h1>
+    <h1 class="dir-title man-title">%s manuals</h1>
     <p class="man-lede">%s. %d documents and libraries from %d makers, each linked at the
     source.</p>
   </div>
@@ -426,7 +445,7 @@ def system_page(slug, title, desc, rows):
 %s
     </div>
   </div>
-""" % (SHORT[slug], esc(BLURB[slug]), len(rows), n_brands, len(rows),
+""" % (sentence(SHORT[slug]), esc(BLURB[slug]), len(rows), n_brands, len(rows),
        "\n".join(row_html(r) for r in rows), related)
 
     return (head(title, desc, "%s/manuals/%s.html" % (SITE, slug), [collection, crumb])
@@ -615,7 +634,7 @@ def brands_page(rows, models_by_brand=None):
     body = """
   <div class="wrap page-intro">
     <div class="man-crumb"><a href="manuals/index.html">RV Manuals</a></div>
-    <h1 class="dir-title man-title">RV MANUALS BY BRAND</h1>
+    <h1 class="dir-title man-title">RV manuals by brand</h1>
     <p class="man-lede">Where each RV manufacturer publishes its own owner's manual, how
     far back the archive reaches, and how the documents are organised. %d brands and %d
     model lines, each linked to the maker's own manual, parts list, accessory
@@ -729,7 +748,7 @@ def recalls_page(rows, bulletins, source_note):
     body = """
   <div class="wrap page-intro">
     <div class="man-crumb"><a href="manuals/index.html">RV Manuals</a></div>
-    <h1 class="dir-title man-title">RV RECALLS AND SERVICE BULLETINS</h1>
+    <h1 class="dir-title man-title">RV recalls and service bulletins</h1>
     <p class="man-lede">How to find out whether your RV, or something fitted to it, has been
     recalled, and where the manufacturer service bulletins are kept.</p>
   </div>

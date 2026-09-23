@@ -45,7 +45,7 @@
  <div class="wrap page-intro w-820">
  <a href="index.html" class="btn btn-ghost back">← All guides</a>
  <div class="sec-eyebrow">Troubleshooting guide</div>
-    <h1>RV furnace not working: the troubleshooting guide</h1>
+    <h1>RV furnace not working: The troubleshooting guide</h1>
  <p class="lede">A furnace that will not light is usually not a dead furnace. Most failures trace to a sail switch that never closed, airflow blocked somewhere in the duct or return, a battery too flat to spin the blower to speed, or propane that never reached the burner. This guide works the way a technician works: it walks the ignition sequence in order, so your symptom tells you which step failed instead of sending you shopping for a control board you did not need.</p>
  <p class="reviewed">Last reviewed: Sep 21, 2026, against the sources listed below.</p>
  </div>
@@ -128,7 +128,7 @@
  <figcaption>A simplified cross section, drawn to show how the parts relate rather than exact proportions. The heat exchanger is sealed, so combustion gases never mix with the air you breathe. Original diagram, OriginRV.</figcaption>
  </figure>
 
- <h2>Start here: match your symptom to its fault</h2>
+ <h2>Start here: Match your symptom to its fault</h2>
  <div class="card">
  <h3>Nothing happens at all. No blower, no click</h3>
  <p>The furnace is not being asked to run, or it has no power. Check the thermostat is set to heat and above room temperature, then the furnace fuse, then the 12-volt supply. A tripped limit switch left open, or a hard lockout, also presents this way.</p>
@@ -144,7 +144,7 @@
  <p>Stop. Do not run the furnace. That is incomplete combustion, and both Suburban and Furrion instruct owners to shut the unit down immediately.</p>
  </div>
 
- <h2>The ignition sequence: where your unit is stopping</h2>
+ <h2>The ignition sequence: Where your unit is stopping</h2>
 
  <figure class="tight">
  <svg viewBox="0 0 880 262" width="100%" role="img" aria-label="The eight steps of the RV furnace ignition sequence in order, with the timing of each step" >
@@ -235,7 +235,7 @@
  </div>
  </div>
 
- <h2>The sail switch: the most common single fault</h2>
+ <h2>The sail switch: The most common single fault</h2>
  <div class="card">
  <p>The sail switch is a paddle sitting in the blower's airstream. When enough air moves, it closes and completes a circuit that tells the board it is safe to add gas. Suburban describes it as a safety device that will not let ignition occur until it sees 75 percent of the motor's rpm, and Atwood calls it a safety device that ensures airflow before ignition. It is the furnace's way of proving the chamber is being ventilated.</p>
  <h3>Why it fails</h3>
@@ -250,7 +250,7 @@
  <p>Do not jumper the sail switch to make the furnace run. The controller sees the jumper and will not start the blower. These switches exist to keep gas out of an unventilated chamber.</p>
  </div>
 
- <h2>Low voltage: the fault that mimics everything</h2>
+ <h2>Low voltage: The fault that mimics everything</h2>
  <div class="card">
  <p>The furnace is the heaviest 12-volt load in the RV, and it is fussy about voltage in a way your lights are not. Suburban publishes a furnace voltage range of 12 volts DC nominal, minimum 10.5 and maximum 13.5, and its module board checks for a minimum 9.5 volts, going into standby below that. The older time-delay manuals are explicit: low supply voltage will not provide sufficient motor rpm to engage the sail switch.</p>
  <p>If the voltage itself is the problem rather than the furnace, the <a href="guides/rv-12-volt-problems.html">guide to finding 12-volt faults</a> works the whole system in order, from the battery through the disconnect, the main fuse and the converter, with a figure for what each point should read and a method for finding where the volts are being lost.</p>
@@ -272,7 +272,7 @@
  <p>If the tank valve is opened too quickly, the excess flow valve in the pigtail can trip. The resulting trickle is enough for a pilot light and nowhere near enough to sustain a furnace. Close the valve, wait, and reopen slowly.</p>
  </div>
 
- <h2>Airflow: ducts, returns, and why the furnace short cycles</h2>
+ <h2>Airflow: Ducts, returns, and why the furnace short cycles</h2>
  <div class="card">
  <p>The limit switch is an in-line safety that opens at a set temperature and cuts power to the ignition system, protecting the furnace from overheating. When it trips, the furnace stops heating. It is doing its job, and the cause is usually airflow, not the switch.</p>
  <p>Suburban's own guidance names the causes: insufficient return air will cause the furnace to overheat and cycle on limit, a minimum duct area must be maintained through the whole system including the register, and sharp turns in the duct raise static pressure and cause limit cycling. Atwood's consumer manual adds that air boosters should never be installed, because they cause limit cycling and erratic sail switch behavior.</p>
@@ -282,7 +282,7 @@
  <p>Many limit switches are automatic reset, and some Suburban units use a manual reset plunger. But "reset it and keep going" is treating the symptom. If a limit switch trips repeatedly, the documented cause is airflow, and the fix is the duct or the return, not the switch.</p>
  </div>
 
- <h2>Ignition and flame sense: lights, then quits</h2>
+ <h2>Ignition and flame sense: Lights, then quits</h2>
  <div class="card">
  <p>When the furnace lights and then shuts off seconds later, gas and spark are working and the board is not seeing the flame. Suburban senses the flame through the spark wire and electrode rather than a separate probe on some models, which is why electrode position matters so much on those units.</p>
  <p><b>Suburban's own alignment specs,</b> worth having in front of you: electrode-to-ground gap no more than 1/8 inch, the gap between sensor and ground should be twice the electrode gap, the electrode sits about 1/4 inch above and directly over the burner slots, and the sensor probe should sit in the inner blue cone of the flame, about 1/4 to 5/16 inch above the burner.</p>
@@ -292,7 +292,7 @@
  <p><b>A Suburban warning worth repeating:</b> never run the furnace with the electrode wire disconnected or the assembly removed, and make sure the spark never reaches the flame sensor portion. Sparking to the sensor will damage the module board.</p>
  </div>
 
- <h2>Diagnostic codes: what your brand actually gives you</h2>
+ <h2>Diagnostic codes: What your brand actually gives you</h2>
  <div class="card">
  <p>This is where brands differ most, and where bad information is most common.</p>
  <p><b>Atwood, now owned by Dometic, publishes a real table</b> in its own service manual. One flash with a 3 second pause is an airflow or limit fault. Two flashes is a flame sense fault. Three flashes is an ignition lockout fault. A steady light with no flashing is an internal control failure. The consumer manual adds the lockout type: a soft lockout is a timed condition that will make further attempts, while a hard lockout requires resetting the thermostat or cycling the power switch. On Atwood's two-stage Excalibur units the codes are numeric: 1 low input voltage, 2 ignition failure, 3 open high limit, 4 stuck APS which is the sail switch, 5 module fault.</p>
@@ -303,14 +303,14 @@
  <p>Its manual states that error codes can only be retrieved by a qualified RV service provider with a Furrion diagnostic PCB, so there is no owner-readable code on those units. It does publish a reset procedure: thermostat off, wait 60 seconds, on to heat for more than 20 seconds, off, then on again within 20 seconds. Or remove power for about 5 minutes. Furrion also says that if the furnace still does not ignite after three attempts, contact a qualified service provider.</p>
  </div>
 
- <h2>Insects and nests: a real blockage, an unlisted cause</h2>
+ <h2>Insects and nests: A real blockage, an unlisted cause</h2>
  <div class="card">
  <p>Mud daubers and other insects nesting in the intake, the burner tube or the heat exchanger is one of the most commonly reported furnace blockages, and this one is in the manufacturers' own service literature rather than only in the field. Suburban's NT series service manual lists it directly, describing how insects such as mud daubers and wasps build nests inside the combustion air housing after coming in through the fresh air intake, and instructing that the housing be cleared and the combustion air wheel checked for warpage. Atwood's furnace service manual gives the same instruction in its own words, telling technicians to check the air intake and flue areas for internal obstructions such as wasp or bird nests.</p>
  <p>The mechanism is the one the manufacturers do document. A blocked combustion air intake or exhaust obstructs airflow, combustion becomes incomplete, and incomplete combustion produces soot. Suburban's own words: soot is formed whenever combustion is incomplete, this is your visual warning that the furnace is operating in an unsafe manner, and if soot is present, shut it down immediately and contact a qualified service person. Furrion says the same and adds that owners should inspect the vent monthly during heating season.</p>
  <p>One case reported on an owner forum describes a nest in the heat exchanger blocking hot gases until the tube failed, letting combustion gases mix with the heated air. That is the mechanism to take seriously.</p>
  </div>
 
- <h2>Carbon monoxide: the hard stop</h2>
+ <h2>Carbon monoxide: The hard stop</h2>
  <div class="card">
  <p>A furnace is a combustion appliance inside the space you sleep in. This section is short on purpose.</p>
  <p>The CDC describes carbon monoxide as an odorless, colorless gas that kills without warning, and lists headache, dizziness, weakness, upset stomach, vomiting, chest pain and confusion as the common symptoms, often described as flu-like. People who are sleeping can die before they have symptoms. The CDC also notes that more than 400 Americans die each year from unintentional carbon monoxide poisoning not linked to fires.</p>

@@ -45,7 +45,7 @@
  <div class="wrap page-intro w-820">
  <a href="index.html" class="btn btn-ghost back">← All guides</a>
  <div class="sec-eyebrow">Troubleshooting guide</div>
-    <h1>RV solar not charging: panel or controller</h1>
+    <h1>RV solar not charging: Panel or controller</h1>
  <p class="lede">Solar is the easiest system on the RV to diagnose, because it is only three things in a row and you can measure each one separately. Panel, controller, battery. Find which link is not passing power along and you are done. What makes it feel harder than it is, is that one of the most common answers is that nothing is broken at all.</p>
  <p class="reviewed">Last reviewed: Sep 21, 2026, against current Victron, Renogy, Go Power and Zamp documentation.</p>
  </div>
@@ -106,9 +106,9 @@
  <h2>Check these two things before you test anything</h2>
  <div class="card">
  <p>Both of these produce the complaint "solar has stopped charging", and neither is a fault. Ruling them out first saves you an afternoon.</p>
- <h3>One: the battery is full</h3>
+ <h3>One: The battery is full</h3>
  <p>This is stated plainly in controller manufacturer documentation, and it is the single most common false alarm. Once the battery is full, the controller will stop or significantly reduce its charge current. Their own wording is that this behaviour is normal and is not a fault. If your controller shows little or nothing in the afternoon after working all morning, that is the system doing its job. Check the battery's actual state rather than the controller display.</p>
- <h3>Two: the controller is set for the wrong battery chemistry</h3>
+ <h3>Two: The controller is set for the wrong battery chemistry</h3>
  <p>Controller makers ship with a default profile. Zamp's own manual states plainly that the default setting is AGM, and carries the warning that an incorrect battery type setting may damage your battery. If you have fitted lithium and left the controller on the lead-acid profile, the bank will be chronically undercharged and it will look exactly like a failing panel. This is a setting, not a fault, and it is worth checking before you test anything electrical.</p>
  <p><b>Related, and it trips people up:</b> lithium batteries generally will not accept charge in the cold, commonly below about five degrees Celsius. A battery that stops charging on a cold morning and starts again later is not a fault, it is a protection feature. Controllers handle it differently, and some will show an error rather than simply going quiet.</p>
  </div>
@@ -132,11 +132,11 @@
  <h2>Testing it in three measurements</h2>
  <div class="card">
  <p>Solar is easy to test because there are only three points, and the manufacturers publish expected values for each.</p>
- <h3>Measurement one: the panel</h3>
+ <h3>Measurement one: The panel</h3>
  <p>With the panel isolated from the controller, measure its open circuit voltage and its short circuit current in good sun at midday, and compare against the figures on its label. The manufacturer's guidance is that if readings are much lower than stated, the panel may be faulty. Do this following your own controller's recommended procedure rather than improvising, because the order you disconnect things matters on some units.</p>
- <h3>Measurement two: the input to the controller</h3>
+ <h3>Measurement two: The input to the controller</h3>
  <p>You should see the array's operating voltage there. One maker gives a practical range of roughly 16 to 23 volts depending on the panel rating and sun conditions, with panel current between about 2 and 9 amps. Another gives a simpler rule that the panel voltage needs to be about 5 volts above battery voltage before charging will even commence, which is worth knowing because on a cloudy day that condition may simply not be met.</p>
- <h3>Measurement three: the controller's output at the battery terminals</h3>
+ <h3>Measurement three: The controller's output at the battery terminals</h3>
  <p>This is the decisive one. Measure the voltage at the controller's battery terminals, then measure it at the battery bank itself. Any real difference between the two readings is volts being lost in the wire between them rather than in either device, and that difference is the fault you are looking for.</p>
  <h3>What the combination tells you</h3>
  <p>Panel output present and controller input present, but nothing coming out of the controller, means the controller is the fault. Panel output missing means the panel or its wiring is the fault. Everything present at the controller but a lower voltage at the battery means the wire between them, and the fix is often a thicker or shorter cable rather than a new part.</p>

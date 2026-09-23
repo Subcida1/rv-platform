@@ -321,8 +321,38 @@ def main():
         if not entry:
             print("FAIL  %s is not in the manifest (run --seed first)" % page)
             return 1
-        entry["claims"] = seed_claims_from_spec(page) or entry.get("claims", [])
+        # MERGE, NEVER OVERWRITE. The first version assigned seed_claims_from_spec() straight over
+        # the ledger, which silently destroyed every recorded state, by and at -- i.e. exactly the
+        # evidence the ledger exists to hold. Caught by bug-testing the tool rather than the pages:
+        # record a claim, re-seed, watch the record vanish.
+        #
+        # A claim already in the ledger is left ALONE. --force is the explicit way to take the
+        # spec's word over the record, and even then it never touches by/at, because those are a
+        # fact about a person having read something and no re-seed can unmake that.
+        ledger = entry.get("claims") or []
+        have = {c.get("id"): c for c in ledger}
+        added = updated = 0
+        for c in seed_claims_from_spec(page):
+            if c["id"] in have:
+                existing = have[c["id"]]
+                # A RECORDED state is EVIDENCE; a spec-derived state is an ASSERTION. Once somebody
+                # has recorded that they read a source (by is set), no re-seed may lower it -- not
+                # even --force. Otherwise --force becomes a quiet way to lose the only human work in
+                # the ledger, which is the failure this whole file exists to prevent.
+                if existing.get("by"):
+                    continue
+                if "--force" in sys.argv:
+                    for k, v in c.items():
+                        if k not in ("by", "at"):
+                            existing[k] = v
+                    updated += 1
+                continue
+            ledger.append(c)
+            added += 1
+        entry["claims"] = ledger
         save(man)
+        if updated:
+            print("--force: refreshed %d existing claim(s) from the spec (by/at preserved)" % updated)
         n = len(entry["claims"])
         print("%s: %d claims seeded from %s" % (page, n, spec_path(page).relative_to(ROOT)))
         for st in CLAIM_STATES:
