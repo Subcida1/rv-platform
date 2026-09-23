@@ -197,9 +197,20 @@ def check_page(path):
     for level, txt in headings(html):
         if txt.endswith("."):
             findings.append(("heading", "ends with a period (no heading should)", txt))
-        m = re.search(r":\s+(\w)", txt)
-        if m and m.group(1).islower():
-            findings.append(("heading", "lowercase after colon, should be capital", txt))
+        # INVERTED 2026-09-23, Ty's ruling (recorded in reference/projects/originrv-content-engine.md).
+        # It pointed the other way because a site-wide tally read 49 capital vs 34 lowercase and
+        # took the majority as the standard. The majority was the OLDER batch, not the better one.
+        # The reason it is binary at all: the competing rule ("periods on statement headings, not
+        # labels") needs a human judgement on every heading, so it cannot be scripted and drifted
+        # for exactly that reason. Lowercase after a colon is the editorial standard for a heading
+        # that is not a full sentence, and it is what the newest work already does.
+        # All-caps words (GVWR, NHTSA, DC) are exempt -- an acronym is not a sentence start.
+        # Proper nouns are NOT exempted, so a finding on one of those is expected rather than a
+        # bug. This rule stays REPORT-ONLY until its false positives have been counted, which is
+        # the standard every other rule in this file had to meet.
+        m = re.search(r":\s+([A-Za-z][A-Za-z'\-]*)", txt)
+        if m and m.group(1)[0].isupper() and not m.group(1).isupper():
+            findings.append(("heading", "capital after colon, should be lowercase", txt))
 
     # 4  "12 volt"
     prose = text_of(body_only(html))
