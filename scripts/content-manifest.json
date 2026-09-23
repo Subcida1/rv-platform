@@ -96,57 +96,57 @@
         "id": "C2",
         "text": "flooded lead-acid resting voltages: 12.73 V at 100%, down to 11.51 V at 10%",
         "source": "the maker's chart - which one is named? The page says \"from the same source\"",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "AI Studio lane retrieved Trojan's OWN datasheets (T-1275, SSIG 12 170) on 2026-09-23 and quoted the chart back: 12.73 V at 100 percent down to 11.51 V at 10 percent. Read by the lane, quoted verbatim; not independently re-read by me.",
+        "at": "2026-09-23"
       },
       {
         "id": "C3",
         "text": "charging set points 14.7 V absorption, 13.5 V float, 16.2 V equalization",
         "source": "same source as C2",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Same retrieval: Trojan's charger settings at 77 F are 14.70 absorption, 13.50 float, 16.20 equalization.",
+        "at": "2026-09-23"
       },
       {
         "id": "C4",
         "text": "Lifeline publishes 14.3 V ± 0.1 absorption and 13.3 V float",
         "source": "Lifeline technical manual (in Sources)",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "The lane retrieved Lifeline's technical manual (Table 5-2 / App C): 14.3 V plus or minus 0.1 absorption, 13.3 V plus or minus 0.1 float at 77 F.",
+        "at": "2026-09-23"
       },
       {
         "id": "C5",
         "text": "Renogy resting chart: 13.6 V at 100%, 13.4 at 90, 13.3 at 80, 13.2 at 70",
         "source": "Renogy voltage chart (in Sources)",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "The lane retrieved Renogy's Core and Smart LFP technical manuals and quoted the curve: 13.6 V at 100 percent, 13.0 at 50, 12.0 at 10; charging target 14.4 V plus or minus 0.2; and the two-hour rest requirement before measuring resting voltage.",
+        "at": "2026-09-23"
       },
       {
         "id": "C6",
         "text": "\"the curve is much flatter for most of the usable range, so voltage alone tells you much less\"",
         "source": "the caveat is attributed to the maker",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Same retrieval: the flatness caveat and the 2-hour rest requirement are Renogy's, not ours.",
+        "at": "2026-09-23"
       },
       {
         "id": "C7",
         "text": "Victron advises no more than 2.5 percent voltage drop, which is about 0.3 volts on a 12-volt system",
         "source": "Victron, Wiring Unlimited (in Sources) - two numbers a reader acts on",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "The lane retrieved Victron's Wiring Unlimited sections 2.7-2.8: 2.5 percent maximum allowable drop, 0.3 V on a 12-volt system.",
+        "at": "2026-09-23"
       },
       {
         "id": "C8",
         "text": "a single cable connection is about 0.06 milliohms, a 500-amp shunt about 0.10, a 150-amp fuse about 0.35",
         "source": "the page's appendix calls this \"field knowledge, not manufacturer documented\". It is a number a reader acts on, so it must be read or cut",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "THE PAGE HAD CALLED THESE FIELD KNOWLEDGE AND THE LANE FOUND THEM IN VICTRON: 0.06 milliohms for a single cable connection, 0.10 for a 500 A shunt, 0.35 for a 150 A fuse, 1.08 for a 2-metre 35 mm2 cable. This is the one I most want spot-checked by eye, because a claim that moved from 'field knowledge' to 'documented' should be re-read rather than accepted.",
+        "at": "2026-09-23"
       },
       {
         "id": "C9",
@@ -232,73 +232,73 @@
         "id": "C19",
         "text": "\"This is the single most misdiagnosed thing in RV electrics\" (a bad ground)",
         "source": "ranking claim, no source",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "state": "CONFIRMED",
+        "by": "Cloud rewrote the grounds ranking claim on 2026-09-23: it now says this is the fault most often mistaken for a dead battery, with the mechanism, instead of calling it the single most misdiagnosed thing in RV electrics",
+        "at": "2026-09-23"
       },
       {
         "id": "C20",
         "text": "\"Most RV electrical money is wasted by replacing parts in hope.\"",
         "source": "prevalence claim, no source",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "state": "CONFIRMED",
+        "by": "Cloud cut the lede's prevalence claim, 'most RV electrical money is wasted by replacing parts in hope', on 2026-09-23. The lede now opens on the chain.",
+        "at": "2026-09-23"
       },
       {
         "id": "C21",
         "text": "\"The trade method, and it is worth learning\"",
         "source": "unnamed authority - the trade",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "state": "CONFIRMED",
+        "by": "Cloud cut 'the trade method' on 2026-09-23; the sentence now states the method without an unnamed authority behind it.",
+        "at": "2026-09-23"
       },
       {
         "id": "C22",
         "text": "\"The layout most guides get wrong\"",
         "source": "a claim about other pages, and it sells by contrast",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "state": "CONFIRMED",
+        "by": "Cloud cut 'the layout most guides get wrong' and 'Original diagram, OriginRV' from the diagram caption on 2026-09-23. The caption states what the diagram shows.",
+        "at": "2026-09-23"
       },
       {
         "id": "C23",
         "text": "\"the thing almost no RV electrical page teaches\"",
         "source": "second instance of the same shape",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "state": "CONFIRMED",
+        "by": "Cloud cut 'the thing almost no RV electrical page teaches' on 2026-09-23.",
+        "at": "2026-09-23"
       },
       {
         "id": "C24",
         "text": "\"Several of the numbers in this guide come from converter makers themselves, which means you can check your own unit against the spec\"",
         "source": "a diligence claim in the banned shape",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "state": "CONFIRMED",
+        "by": "Cloud cut the diligence claim in the short version on 2026-09-23; it now says to compare measurements against the maker's specification.",
+        "at": "2026-09-23"
       },
       {
         "id": "C25",
         "text": "\"No RV manufacturer we looked at publishes a step by step, walk-the-chain voltage drop procedure\"",
         "source": "a process disclosure, and an argument for our usefulness",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "state": "CONFIRMED",
+        "by": "Cloud cut the process disclosure 'no RV manufacturer we looked at publishes...' with the sourcing appendix on 2026-09-23.",
+        "at": "2026-09-23"
       },
       {
         "id": "C26",
         "text": "NFPA 1192 and the ANSI/RVIA DC standard are both paywalled",
         "source": "true and already documented, but it is a statement about our sourcing inside the reader's page",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "state": "CONFIRMED",
+        "by": "Cloud deleted the paywall section on 2026-09-23. What a source costs is no longer on the reader's page.",
+        "at": "2026-09-23"
       },
       {
         "id": "C27",
         "text": "the hot skin condition: touching the RV can give a shock, and it is a ground fault",
         "source": "NFPA 1192 or a safety source. A safety claim: source it or cut the mechanism",
         "state": "SOURCED",
-        "by": null,
-        "at": null
+        "by": "Still unread: the hot-skin mechanism. NFPA 1192 is now named in the body for the bonding requirement, but nobody has opened the standard.",
+        "at": "2026-09-23"
       },
       {
         "id": "C28",
