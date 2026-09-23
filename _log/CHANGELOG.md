@@ -16,6 +16,14 @@ No secrets, keys, tokens or customer details in here. This file is committed.
 
 ## 2026-09-22
 
+### infra: Bing API wired for query and traffic stats; grounding queries and Citation Share confirmed absent from it
+- why: Bing is the index Copilot reads, so its coverage matters, and the AI question needed settling rather than assuming
+- expect: Bing sections show real numbers about 48 hours after verification, and Bing coverage should move ahead of Google's because of the IndexNow submissions. The AI reports stay manual.
+- files: scripts/weekly-report.py
+- tags: bing, indexnow, ai
+- commit: 68b9642 (pushed)
+- deployed: 2026-09-22T22:00:23-07:00
+
 ### infra: Cloudflare field Core Web Vitals in the report, a 404 watch, and IndexNow on change
 - why: no other instrument exposes real-user LCP, CLS and INP; the 404 page needed watching because a dead link is invisible otherwise; and IndexNow was a command I had to remember
 - expect: the vitals section keeps showing LCP well under 2500 ms, and stays honest as samples grow. If the 404 line ever shows a hit, that is a real broken link to chase.
