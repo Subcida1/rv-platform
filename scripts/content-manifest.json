@@ -73,16 +73,22 @@
     "sources": []
   },
   "guides/rv-12-volt-problems.html": {
-    "hash": "c5479ddc8a9957d6",
-    "status": "unverified",
-    "verified_by": null,
-    "verified_at": null,
+    "hash": "c242c774ea452a8f",
+    "status": "verified",
+    "verified_by": "AI Studio lane (Gemini 3.8 Flash) through the AUTOLOOP, four rounds on 2026-09-23, all unattended: the first pass found the sourcing appendix and the number-set verification, the confirm found two FIX-INCOMPLETE items including a false claim in my own summary, and the closing round confirmed all six changes with no regressions",
+    "verified_at": "2026-09-23",
     "sources": [
-      "outbox/reply-20260922-2016-part3-fixes-batch3.md",
-      "outbox/reply-20260922-2026-fixes-confirm-batch4.md"
+      "inbox/REVIEW-REQUEST-20260923-0422-rv-12-volt-problems.md",
+      "outbox/REVIEW-20260923-0422-rv-12-volt-problems.md",
+      "inbox/REVIEW-REQUEST-20260923-0449-rv-12-volt-problems-confirm.md",
+      "outbox/REPLY-RV12V-CONFIRM-0452.md",
+      "inbox/REVIEW-REQUEST-20260923-0456-rv-12-volt-problems-final.md",
+      "inbox/REVIEW-REQUEST-20260923-0459-rv-12-volt-problems-close.md",
+      "outbox/REPLY-RV12V-CLOSE-0459.md",
+      "spec:_specs/rv-12-volt-problems.md"
     ],
-    "invalidated_by": "house-style sweep 2026-09-23: 77 colon lowercases across 16 pages; heading text changed, meaning did not",
-    "invalidated_at": "2026-09-23",
+    "spec": "_specs/rv-12-volt-problems.md",
+    "spec_waived": false,
     "claims": [
       {
         "id": "C1",
