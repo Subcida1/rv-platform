@@ -66,6 +66,20 @@
   --danger-edge:#f2b8be;
   --danger-soft:#f43f5e;   /* the rose still used for error borders and dots */
 
+  /* ---- CAUTION: the amber between "fine" and "failed". Added 2026-09-22.
+     There was no amber token, so every warn state was painted with the BLUE tint
+     family, which meant a reading at the edge of a limit looked the same as an
+     ordinary blue chip. Ty: "anything outside the rules near the edge as yellow,
+     not our blue". Six rules were doing it and none of them was deliberate.
+     Amber ink on a pale amber wash, #8a5a00 on #fef8e3, measures about 5.5:1, so
+     it passes AA; pure yellow is not usable as text on white. Deliberately NOT
+     the retired sunset orange. --warn-soft is the dot, matching --danger-soft's
+     role for the failed state. ---- */
+  --warn:#8a5a00;
+  --warn-bg:#fef8e3;
+  --warn-edge:#f2dd9e;
+  --warn-soft:#c98a04;
+
   /* ---- ACCENTS: links and one highlight. Nothing else earns a colour. ---- */
   --sky:#0ea5e9;
   --indigo:#6366f1;
@@ -856,11 +870,14 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 .v-row{display:flex;align-items:center;gap:12px;border:1px solid var(--border);border-radius:var(--radius-sm);padding:13px 14px;margin-bottom:9px;background:var(--surface)}
 .v-row .v-dot{width:10px;height:10px;border-radius:50%;flex:none}
 .v-row.ok .v-dot{background:var(--b1)}
-.v-row.warn .v-dot{background:var(--b1)}
+.v-row.warn .v-dot{background:var(--warn-soft)}
 .v-row.bad .v-dot{background:var(--c-rose)}
 .v-row.ok{border-color:var(--border);background:var(--surface)}
-.v-row.warn{border-color:var(--tint-edge);background:var(--tint-bg)}
-.v-row.bad{border-color:#f6bcc2;background:#fdf0f2}
+.v-row.warn{border-color:var(--warn-edge);background:var(--warn-bg)}
+/* The failed row's border and wash were the two hardcoded hexes, #f6bcc2 and
+   #fdf0f2, near-duplicates of --danger-edge and --danger-bg sitting outside the
+   token layer where nothing can retheme them. Now the tokens. */
+.v-row.bad{border-color:var(--danger-edge);background:var(--danger-bg)}
 .v-txt{flex:1;display:flex;flex-direction:column}
 .v-txt b{font-size:14.5px;font-weight:700}
 .v-txt span{font-size:12.5px;color:var(--text-2)}
@@ -925,8 +942,15 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 .deck-sim-row b{font-weight:800;text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
 .deck-sim-row.ok{background:var(--surface);border:1px solid var(--border);color:var(--text-2)}
 .deck-sim-row.ok b{color:var(--text)}
-.deck-sim-row.warn{background:var(--tint-bg);border:1px solid var(--tint-edge);color:var(--tint-ink)}
-.deck-sim-row.warn b{color:var(--tint-ink)}
+.deck-sim-row.warn{background:var(--warn-bg);border:1px solid var(--warn-edge);color:var(--warn)}
+.deck-sim-row.warn b{color:var(--warn)}
+/* There was NO .bad rule here at all. The panel's cycling readouts include an
+   overloaded set (9,357 lb, 102% of both ratings), and those rows had nowhere to
+   land, so an overweight reading rendered in the ordinary ink colour with no
+   warning in it. Ty asked for red, so here it is, on the same --danger tokens the
+   calculator's own failed verdicts use. */
+.deck-sim-row.bad{background:var(--danger-bg);border:1px solid var(--danger-edge);color:var(--danger)}
+.deck-sim-row.bad b{color:var(--danger)}
 /* Sits under the button, not above it, and centred. Ty, 2026-09-22: "It should
    probably be below the button not above it, and it needs to be spaced out and
    centered." Above the button it read as a caption for the rows; below, it
@@ -1043,8 +1067,8 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 .tool-viz .viz-row b{font-weight:800;text-align:right;white-space:nowrap}
 .tool-viz .viz-row.ok{background:var(--surface);border:1px solid var(--border)}
 .tool-viz .viz-row.ok b{color:var(--text)}
-.tool-viz .viz-row.warn{background:var(--tint-bg);border:1px solid var(--tint-edge)}
-.tool-viz .viz-row.warn b{color:var(--tint-ink)}
+.tool-viz .viz-row.warn{background:var(--warn-bg);border:1px solid var(--warn-edge)}
+.tool-viz .viz-row.warn b{color:var(--warn)}
 .verified{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:var(--tint-ink);background:var(--tint-bg);border:1px solid var(--tint-edge);border-radius:999px;padding:6px 13px}
 .verified::before{content:"\2713";display:grid;place-items:center;width:19px;height:19px;border-radius:50%;background:var(--b1);color:var(--text-inv);font-size:11px;font-weight:900}
 /* quieter primary hover (the old pink glow bubble) */
@@ -1217,7 +1241,7 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 .w-overall b{font-size:30px;font-weight:800;letter-spacing:-.02em}
 .w-overall small{font-size:13.5px;line-height:1.5;opacity:.9}
 .w-overall.ok{background:var(--surface);border-color:var(--border);color:var(--text)}
-.w-overall.warn{background:var(--tint-bg);border-color:var(--tint-edge);color:var(--tint-ink)}
+.w-overall.warn{background:var(--warn-bg);border-color:var(--warn-edge);color:var(--warn)}
 .w-overall.bad{background:var(--danger-bg);border-color:var(--danger-edge);color:var(--danger)}
 .field input, .field select{min-height:50px;font-size:16px}
 .field label{font-size:14.5px;font-weight:700;color:var(--text)}
