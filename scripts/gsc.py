@@ -460,6 +460,76 @@ def cmd_audit(args):
     return 0
 
 
+def totals(token, site, start, end):
+    """Clicks and impressions for a range, all values combined into one row."""
+    if start > end:
+        return None
+    payload = query(token, site, {
+        "startDate": start.isoformat(), "endDate": end.isoformat(),
+        "dataState": "all", "rowLimit": 1,
+    })
+    rows = payload.get("rows", [])
+    if not rows:
+        return (0.0, 0.0)
+    return (rows[0].get("clicks", 0.0), rows[0].get("impressions", 0.0))
+
+
+def cmd_changes(args):
+    """Read the change log against Search Console.
+
+    Each change gets a window before its deploy date and the same length after,
+    so the effect can be read rather than guessed. On a property this young most
+    rows are zeros, which is the honest answer rather than a failure: the point
+    is that the join exists and starts working the moment data does.
+    """
+    creds = load_credentials(key_path(args.key))
+    token = access_token(creds)
+    if not os.path.exists(args.log):
+        sys.exit("No change log at %s. Log a change with scripts/log-change.py" % args.log)
+    entries = [json.loads(line) for line in open(args.log) if line.strip()]
+    if not entries:
+        sys.exit("The change log is empty.")
+
+    today = date.today()
+    print("Property: %s" % args.site)
+    print("Windows: %d days either side of each change's deploy date" % args.window)
+    print("Note: Google finalises data two to three days late, so recent days read as zero.\n")
+
+    for entry in sorted(entries, key=lambda e: e["ts"], reverse=True):
+        stamp = entry.get("deployed") or entry["date"]
+        try:
+            deployed = date.fromisoformat(stamp[:10])
+        except ValueError:
+            print("%-10s %s: unreadable deploy date %r" % (entry["date"], entry["area"], stamp))
+            continue
+        before_end = deployed - timedelta(days=1)
+        before_start = before_end - timedelta(days=args.window - 1)
+        after_start = deployed
+        after_end = min(today, deployed + timedelta(days=args.window))
+        after_days = (after_end - after_start).days + 1 if after_start <= after_end else 0
+
+        before = totals(token, args.site, before_start, before_end)
+        after = totals(token, args.site, after_start, after_end)
+
+        print("%s  [%s] %s" % (entry["date"], entry["area"], entry["summary"][:78]))
+        if before:
+            print("    before %2dd  %s to %s   %6.0f clicks  %6.0f impressions"
+                  % (args.window, before_start, before_end, before[0], before[1]))
+        if after:
+            print("    after  %2dd  %s to %s   %6.0f clicks  %6.0f impressions  (%d of %d days elapsed)"
+                  % (args.window, after_start, after_end, after[0], after[1], after_days, args.window))
+            if after_days == 0:
+                print("    not measurable yet: no full day has passed since deploy")
+            elif after[0] > (before[0] if before else 0):
+                print("    clicks up on the prior window")
+            else:
+                print("    no change yet")
+        if entry.get("expect"):
+            print("    expected: %s" % entry["expect"][:150])
+        print()
+    return 0
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__.split("\n")[1])
     parser.add_argument("--key", help="service account JSON (default %s)" % DEFAULT_KEY)
@@ -476,6 +546,11 @@ def main():
     audit.add_argument("--show", type=int, default=5, help="urls to list per coverage state")
     audit.add_argument("--workers", type=int, default=5, help="parallel inspections")
     audit.set_defaults(func=cmd_audit)
+
+    changes = sub.add_parser("changes", help="read the change log against the metrics")
+    changes.add_argument("--log", default="_log/changes.jsonl")
+    changes.add_argument("--window", type=int, default=14, help="days either side of a change")
+    changes.set_defaults(func=cmd_changes)
 
     insp = sub.add_parser("inspect", help="is Google indexing this page")
     insp.add_argument("--url", default="https://originrv.com/")

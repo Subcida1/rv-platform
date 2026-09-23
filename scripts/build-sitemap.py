@@ -39,7 +39,7 @@ def published_pages():
     """Every page on the site, as sitemap-relative paths."""
     pages = []
     for dirpath, dirnames, filenames in os.walk(ROOT):
-        dirnames[:] = [d for d in dirnames if d not in {".git", "workers", "_todo", "node_modules"}]
+        dirnames[:] = [d for d in dirnames if d not in {".git", "workers", "_todo", "_log", "node_modules"}]
         for name in filenames:
             if name.endswith(".html"):
                 rel = os.path.relpath(os.path.join(dirpath, name), ROOT)
