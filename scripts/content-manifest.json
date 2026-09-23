@@ -1861,16 +1861,16 @@
         "id": "C3",
         "text": "below about 40 °F, a loaded tire on a hard surface can take a set",
         "source": "a tire maker's storage guidance",
-        "state": "OPEN",
-        "by": "FLAG: the page says a loaded tire below about 40 F on a hard surface can take a set. Michelin and Goodyear both confirm cold makes temporary flat spots more likely and that storage under load causes them, but neither states a 40 F threshold. Source it or drop the number.",
+        "state": "CONFIRMED",
+        "by": "Cloud cut the 40 F flat-spot threshold on 2026-09-23. Michelin and Goodyear both state that cold makes temporary flat spots more likely and that storage under load causes them, and neither publishes a temperature, so the number was ours. The sentence now says 'in cold weather' and keeps the two-to-four-week timeline.",
         "at": "2026-09-23"
       },
       {
         "id": "C4",
         "text": "support the frame with jack stands so they carry about 95 percent of the weight",
         "source": "a number a reader acts on, and 95 percent needs a source or a plainer statement",
-        "state": "OPEN",
-        "by": "FLAG: the page's jack-stand advice gives 'roughly 95 percent of the weight'. Goodyear says 'all weight is removed', Michelin says jack it up or remove the tires, and neither publishes a percentage. Reword to something a maker's language supports, or source the figure.",
+        "state": "CONFIRMED",
+        "by": "Cloud reworded the jack-stand figure on 2026-09-23. Goodyear says 'store the vehicle such that all weight is removed from the tires', Michelin says jack it up or remove the tires, and neither publishes the 95 percent the page carried. It now says the stands carry the weight and the tires are lowered to barely touch a board.",
         "at": "2026-09-23"
       },
       {
@@ -1925,9 +1925,9 @@
         "id": "C11",
         "text": "\"The rule that saves most people\" - a heading",
         "source": "prevalence claim, and one of five sitewide (see D1)",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "state": "CONFIRMED",
+        "by": "Cloud retitled the closing heading on 2026-09-23, from 'The rule that saves most people' to 'What actually protects the tires' -- the same fix the plumbing and battery pages got, and the third page in the programme to lose that heading shape.",
+        "at": "2026-09-23"
       },
       {
         "id": "C12",
