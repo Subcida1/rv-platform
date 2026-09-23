@@ -71,24 +71,24 @@
         "text": "a fully charged cell freezes near −90 °F; at 40 percent charge near +5 °F; a deeply discharged one freezes higher still",
         "source": "the Battery Council International table, as reproduced in Trojan's white paper (the page names both, correctly)",
         "state": "SOURCED",
-        "by": null,
-        "at": null
+        "by": "STILL UNCONFIRMED: the page says the Battery Council International freeze table is reproduced in Trojan's white paper, and the paper's freeze discussion covers wind chill rather than a table of freezing points by state of charge. Read the whole paper for the table before drafting, or re-attribute it to the Council directly.",
+        "at": "2026-09-23"
       },
       {
         "id": "C3",
         "text": "lead-acid self-discharges at roughly 3 to 10 percent per month at room temperature, flooded at the high end and sealed lower",
         "source": "Trojan's battery maintenance document",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "OPEN",
+        "by": "DEFECT: the page's '3 to 10 percent per month at room temperature' is not in Trojan's storage white paper. The paper gives a stand-loss test result in specific gravity (0.0015 per week at 42 F) and says heat above 80 F accelerates self-discharge, with no monthly percentage. Needs a source or a re-framing around what the maker does publish.",
+        "at": "2026-09-23"
       },
       {
         "id": "C4",
         "text": "above 12.4 volts resting is healthy; below 12.2 volts, recharge",
         "source": "Trojan's maintenance guidance - two numbers a reader acts on",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "OPEN",
+        "by": "DEFECT: the page's 'above 12.4 volts resting is healthy, below 12.2 recharge' is not in the cited table. Trojan's own state-of-charge table rows are 12.50 V at 80 percent, 12.37 at 70, 12.27 at 60 and 12.10 at 50, so 12.4 and 12.2 are our own rounding presented as thresholds. Either attribute the rule to whoever states it or say plainly that it is a working rule of thumb.",
+        "at": "2026-09-23"
       },
       {
         "id": "C5",
