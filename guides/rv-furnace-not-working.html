@@ -149,7 +149,7 @@
  <figure class="tight">
  <svg viewBox="0 0 880 262" width="100%" role="img" aria-label="The eight steps of the RV furnace ignition sequence in order, with the timing of each step" >
  <title>The RV furnace ignition sequence, step by step</title>
- <desc>Eight steps in order. One, the board checks for at least 9.5 volts. Two, the thermostat calls and the blower starts. Three, airflow is proven when the sail switch closes, with a 30 second window. Four, a 15 second purge. Five, the gas valve opens and the ignitor fires for a 7 second trial. Six, the board confirms the flame, needing 7 microamps. Seven, three failed attempts cause lockout. Eight, a 90 second post-purge when the thermostat is satisfied.</desc>
+ <desc>Eight steps in order. One, the board checks for at least 9.5 volts. Two, the thermostat calls and the blower starts. Three, airflow is proven when the sail switch closes, with a 30 second window on the module boards. Four, a 15 second purge. Five, the gas valve opens and the ignitor fires for a 7 second trial. Six, the board confirms the flame, which Suburban puts at 7 microamps and the control makers put at 0.7. Seven, three failed attempts cause lockout. Eight, a 90 second post-purge when the thermostat is satisfied.</desc>
  <defs><marker id="sq" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94a3b8"/></marker></defs>
 
  <!-- ROW 1 -->
@@ -190,7 +190,7 @@
  <rect x="234" y="162" width="196" height="64" rx="10" fill="#ffffff" stroke="#f97316" stroke-width="2"/>
  <circle cx="258" cy="194" r="15" fill="#f97316"/><text x="258" y="199" font-family="Inter,sans-serif" font-size="14" font-weight="800" fill="#fff" text-anchor="middle">6</text>
  <text x="282" y="188" font-family="Inter,sans-serif" font-size="13.5" font-weight="700" fill="#0f172a">Flame confirmed</text>
- <text x="282" y="206" font-family="Inter,sans-serif" font-size="11.5" fill="#67748e">7 microamps</text>
+ <text x="282" y="206" font-family="Inter,sans-serif" font-size="11.5" fill="#67748e">0.7 to 7 microamps</text>
 
  <line x1="434" y1="194" x2="444" y2="194" stroke="#94a3b8" stroke-width="2" marker-end="url(#sq)"/>
 
@@ -219,7 +219,7 @@
  <h3>2. Thermostat calls for heat</h3>
  <p>The board confirms the sail switch circuit is open before starting, which is a self-check. Then it energizes the blower. On Atwood units there is a relay delay of 1 to 25 seconds here, or 1 to 2 seconds if the relay is on the board itself.</p>
  <h3>3. Airflow is proven</h3>
- <p>The blower must come up to speed and push the sail switch closed. Suburban's older time-delay models want roughly 75 percent of normal rpm at 12 volts before ignition is allowed. If the sail switch circuit is still open 30 seconds after the blower starts, the board locks out and stops the blower.</p>
+ <p>The blower must come up to speed and push the sail switch closed. Suburban's older time-delay models want roughly 75 percent of normal rpm at 12 volts before ignition is allowed, and on those furnaces a sail switch that never closes leaves the blower running until the thermostat is satisfied or switched off, because there is no board in charge of the motor. The fan control module boards do own the motor: if the sail switch circuit is still open 30 seconds after the blower starts, the board locks out and stops the blower.</p>
  <h3>4. Purge</h3>
  <p>Suburban runs a pre-purge of about 15 seconds; Atwood's is 15 to 17 seconds. This clears the combustion chamber before gas is introduced. It is why a furnace makes you wait after the blower starts.</p>
  <h3>5. Gas and spark</h3>
