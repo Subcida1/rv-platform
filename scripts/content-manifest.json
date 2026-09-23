@@ -139,9 +139,9 @@
         "id": "C5",
         "text": "step 1, the board checks for at least 9.5 volts",
         "source": "Suburban service manual",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Cloud read 'The module board constantly checks for a minimum 9.5 volts' in the Suburban service and training manual",
+        "at": "2026-09-23"
       },
       {
         "id": "C6",
@@ -155,9 +155,9 @@
         "id": "C7",
         "text": "step 4, pre-purge about 15 seconds (Atwood 15 to 17)",
         "source": "Suburban and Atwood service manuals",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Cloud read '15 Seconds Purge Cycle' in the Suburban manual and the 15 to 17 second purge in Atwood's shop manual",
+        "at": "2026-09-23"
       },
       {
         "id": "C8",
@@ -188,7 +188,7 @@
         "text": "step 7, Atwood soft lockout times out after one hour, hard lockout needs the thermostat cycled",
         "source": "Atwood consumer manual",
         "state": "READ",
-        "by": "Cloud read Atwood's 'three try for ignition, one hour lockout' in the shop manual; the Suburban board's retry count is not stated in the documents read, so the generic phrasing needs narrowing",
+        "by": "Cloud read 'The module will try three times for ignition before lockout' in the Suburban service and training manual -- this corrects my earlier note that the Suburban retry count was not stated",
         "at": "2026-09-23"
       },
       {
@@ -251,25 +251,25 @@
         "id": "C19",
         "text": "\"Do not jumper the sail switch. The controller sees the jumper and will not start the blower.\"",
         "source": "Suburban service manual",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "CONFIRMED",
+        "by": "Cloud cut the unverifiable 'the controller sees the jumper and will not start the blower' mechanism on 2026-09-23 and kept the safety instruction",
+        "at": "2026-09-23"
       },
       {
         "id": "C20",
         "text": "test method: full voltage across a closed switch, and OL against near zero ohms on a bench",
         "source": "method, plus the maker's flow chart",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "CONFIRMED",
+        "by": "Cloud: a test method, and methods carry no source, following the same treatment the towing spec gave its meter procedure",
+        "at": "2026-09-23"
       },
       {
         "id": "C21",
         "text": "the board cannot distinguish a bad sail switch from a blocked duct",
         "source": "Suburban service manual",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Cloud read the circuit description in the Suburban manual: the sail switch completes a circuit through the limit switch to the module board, so the board reads the circuit rather than the switch itself",
+        "at": "2026-09-23"
       },
       {
         "id": "C22",
@@ -315,17 +315,17 @@
         "id": "C27",
         "text": "the on-demand pressure drop should not exceed half an inch of water column",
         "source": "Suburban service manual",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Cloud read the pressure drop test in the Suburban service and training manual: the drop should not be more than half an inch WC, and more indicates a faulty regulator, a restriction or pinch in the line, or moisture",
+        "at": "2026-09-23"
       },
       {
         "id": "C28",
         "text": "lockout from gas pressure fluctuation: failing regulator, kink, moisture",
         "source": "Suburban service manual",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Cloud read the lockout-from-pressure-fluctuation causes in the Suburban service and training manual",
+        "at": "2026-09-23"
       },
       {
         "id": "C29",
@@ -363,17 +363,17 @@
         "id": "C33",
         "text": "\"A federal recall on Forest River and Coachmen units describes the mechanism: short cycling punctures the burn chamber, allowing carbon monoxide in\"",
         "source": "NHTSA recall 24V047 - the recall number must appear in the body, and the Source entry must name the vehicles",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Cloud read NHTSA 24V047: Forest River, vehicle 2023-2024 Coachmen Prism Class C, 213 units, short cycling from inadequate return air puncturing the burn chamber and allowing carbon monoxide poisoning",
+        "at": "2026-09-23"
       },
       {
         "id": "C34",
         "text": "limit switches are usually automatic reset, some Suburban units use a manual plunger",
         "source": "Suburban service manual",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "CONFIRMED",
+        "by": "Cloud removed the Suburban attribution for the manual reset plunger on 2026-09-23; Atwood's manual lists a manual reset limit switch, and the maker could not be pinned for Suburban",
+        "at": "2026-09-23"
       },
       {
         "id": "C35",
@@ -387,9 +387,9 @@
         "id": "C36",
         "text": "Suburban senses flame through the spark wire and electrode on some models",
         "source": "Suburban service manual",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Cloud read 'The flame is sensed through the spark wire and electrode' in the Suburban service and training manual",
+        "at": "2026-09-23"
       },
       {
         "id": "C37",
@@ -419,17 +419,17 @@
         "id": "C40",
         "text": "Truma VarioHeat codes E2H, E16H, W27H, W29H, and Combi 17, 18, 41, 43, 44, 255",
         "source": "Truma error-code pages and the Combi troubleshooting chart",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Cloud read Truma's own VarioHeat error code page: E2H and E16H flame not detected, W27H blocked warm air outlet, W29H undervoltage under 10.4 V. The Combi numbers are on a different page.",
+        "at": "2026-09-23"
       },
       {
         "id": "C41",
         "text": "Furrion: codes only readable with a diagnostic PCB; reset procedure 60 s, 20 s, within 20 s, or about 5 minutes without power",
         "source": "Furrion troubleshooting manual",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Cloud read the Furrion manual: the reset procedure, the 60 second and 5 minute steps, three repeats, and the diagnostic PCB requirement",
+        "at": "2026-09-23"
       },
       {
         "id": "C42",
@@ -475,8 +475,8 @@
         "id": "C47",
         "text": "\"Two federal recalls describe the failure\" (short cycling puncturing the burn chamber; a missing exhaust vent)",
         "source": "NHTSA 24V047 and 25V528 - name both in the body",
-        "state": "SOURCED",
-        "by": "Cloud named both recall numbers in the body on 2026-09-23; the recall PDFs themselves are not yet opened",
+        "state": "READ",
+        "by": "Cloud read NHTSA 25V528: 'Missing Furnace Exhaust Vent May Allow Carbon Monoxide to Enter the Vehicle'",
         "at": "2026-09-23"
       },
       {
@@ -499,17 +499,17 @@
         "id": "C50",
         "text": "the owner-doable list and the hand-off list",
         "source": "anchored to what the makers permit",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "CONFIRMED",
+        "by": "Cloud: the owner-versus-technician split is our editorial judgement, anchored to the makers' own prohibitions, and it is labelled as a split rather than sourced to a document",
+        "at": "2026-09-23"
       },
       {
         "id": "C51",
         "text": "Suburban: the module board is not field repairable and is replaced rather than repaired",
         "source": "Suburban service manual",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Cloud read the Suburban flow chart replacing the module board rather than repairing it",
+        "at": "2026-09-23"
       },
       {
         "id": "C52",
@@ -523,9 +523,9 @@
         "id": "C53",
         "text": "\"Last reviewed: Sep 21, 2026, against the sources listed below\"",
         "source": "page-level claim; under the new shape it becomes per-claim",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "CONFIRMED",
+        "by": "Ty ruled 2026-09-23: the reviewed line stays as provenance and is now fine print, not a diligence claim",
+        "at": "2026-09-23"
       }
     ]
   },
@@ -954,9 +954,9 @@
         "id": "C17",
         "text": "\"an insurer that investigates can deny the claim because the RV was outside its rated limits\"",
         "source": "unsupported as stated. Standard US policies cover negligence absent a specific exclusion.",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "OPEN",
+        "by": "unsupported as written: a standard US policy covers negligence absent a specific exclusion, and no readable source says an overloaded private RV is denied. Needs the editorial call to cut or re-ground, 2026-09-23",
+        "at": "2026-09-23"
       },
       {
         "id": "C18",
@@ -1034,9 +1034,9 @@
         "id": "C27",
         "text": "FAQ: \"an overweight RV can void insurance coverage in a crash\"",
         "source": "third instance of C17",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "OPEN",
+        "by": "same claim as C17 in the FAQ; same blocker",
+        "at": "2026-09-23"
       },
       {
         "id": "C28",
