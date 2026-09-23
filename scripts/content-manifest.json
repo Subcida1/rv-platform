@@ -66,11 +66,14 @@
     "sources": []
   },
   "guides/rv-12-volt-problems.html": {
-    "hash": "6d0711cceb3ed5b4",
-    "status": "unverified",
-    "verified_by": null,
-    "verified_at": null,
-    "sources": []
+    "hash": "ff0633fe8890cb78",
+    "status": "verified",
+    "verified_by": "Claude Desktop (review + confirm rounds)",
+    "verified_at": "2026-09-22",
+    "sources": [
+      "outbox/reply-20260922-2016-part3-fixes-batch3.md",
+      "outbox/reply-20260922-2026-fixes-confirm-batch4.md"
+    ]
   },
   "guides/rv-converter-not-charging.html": {
     "hash": "305462e8942b672a",
@@ -90,18 +93,24 @@
     ]
   },
   "guides/rv-fuse-keeps-blowing.html": {
-    "hash": "4f558537e48aa544",
-    "status": "unverified",
-    "verified_by": null,
-    "verified_at": null,
-    "sources": []
+    "hash": "9e041136a3335059",
+    "status": "verified",
+    "verified_by": "Claude Desktop (review + confirm rounds)",
+    "verified_at": "2026-09-22",
+    "sources": [
+      "outbox/reply-20260922-2016-part3-fixes-batch3.md",
+      "outbox/reply-20260922-2026-fixes-confirm-batch4.md"
+    ]
   },
   "guides/rv-generator-not-charging.html": {
-    "hash": "86bd8aa31e59c009",
-    "status": "unverified",
-    "verified_by": null,
-    "verified_at": null,
-    "sources": []
+    "hash": "b32ebb1ffc7b9d9f",
+    "status": "verified",
+    "verified_by": "Claude Desktop (review + confirm rounds)",
+    "verified_at": "2026-09-22",
+    "sources": [
+      "outbox/reply-20260922-2016-part3-fixes-batch3.md",
+      "outbox/reply-20260922-2026-fixes-confirm-batch4.md"
+    ]
   },
   "guides/rv-lights-not-working.html": {
     "hash": "d4f653327e76bdb7",
