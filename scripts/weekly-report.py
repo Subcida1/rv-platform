@@ -100,6 +100,80 @@ def ga4_summary(token, prop, start, end):
                     [m["value"] for m in rows[0]["metricValues"]])), None
 
 
+def ga4_page_views(token, prop, path, start, end):
+    """Views for one exact page path, which is how the 404 page gets watched."""
+    body = {"dateRanges": [{"startDate": start.isoformat(), "endDate": end.isoformat()}],
+            "dimensions": [{"name": "pagePath"}], "metrics": [{"name": "screenPageViews"}],
+            "dimensionFilter": {"filter": {"fieldName": "pagePath",
+                                           "stringFilter": {"value": path, "matchType": "EXACT"}}}}
+    data, err = ga4_run(token, prop, body)
+    if err:
+        return None, err
+    rows = data.get("rows", [])
+    return (int(rows[0]["metricValues"][0]["value"]) if rows else 0), None
+
+
+CF_API = "https://api.cloudflare.com/client/v4/graphql"
+CF_QUERY = """query($tag: String!, $start: Time!, $end: Time!) {
+  viewer { accounts(filter: {accountTag: $tag}) {
+    rumPageloadEventsAdaptiveGroups(limit: 1, filter: {datetime_geq: $start, datetime_leq: $end, bot: 0}) {
+      count
+      sum { visits }
+    }
+    rumWebVitalsEventsAdaptiveGroups(limit: 1, filter: {datetime_geq: $start, datetime_leq: $end, bot: 0}) {
+      count
+      quantiles { largestContentfulPaintP75 cumulativeLayoutShiftP75
+                  interactionToNextPaintP75 timeToFirstByteP75 }
+    }
+  } }
+}"""
+
+
+def cf_rum(token, tag, start, end):
+    """Cloudflare Web Analytics: page loads, visits, and field Core Web Vitals.
+
+    TWO things about this API that are not obvious and both bite:
+
+    1. The duration fields are MICROSECONDS, even though Cloudflare's own dashboard
+       describes them in milliseconds. Verified 2026-09-22 against two independent
+       sources. Reporting the raw number would publish an LCP of 420 seconds.
+    2. A value of -1 means the metric had NO SAMPLE, not that it was instantaneous.
+       INP is -1 whenever nobody interacted with the page, which at our traffic is
+       most weeks.
+
+    Neither GA4 nor the Search Console API exposes field CWV, so this is the only
+    real-user performance signal we have.
+    """
+    resp = requests.post(CF_API, json={"query": CF_QUERY, "variables": {
+        "tag": tag, "start": start + "T00:00:00Z", "end": end + "T23:59:59Z"}},
+        headers={"Authorization": "Bearer " + token, "Content-Type": "application/json"},
+        timeout=(10, 45))
+    if resp.status_code != 200:
+        return None, "HTTP %s: %s" % (resp.status_code, resp.text[:160])
+    body = resp.json()
+    if body.get("errors"):
+        return None, str(body["errors"])[:200]
+    accounts = ((body.get("data") or {}).get("viewer") or {}).get("accounts") or []
+    if not accounts:
+        return None, "the account tag returned nothing (wrong tag, or no RUM data yet)"
+
+    def us(value):
+        return None if value is None or value < 0 else round(value / 1000.0)
+
+    load_rows = accounts[0].get("rumPageloadEventsAdaptiveGroups") or [{}]
+    vitals_rows = accounts[0].get("rumWebVitalsEventsAdaptiveGroups") or [{}]
+    q = vitals_rows[0].get("quantiles", {})
+    return {
+        "loads": load_rows[0].get("count", 0),
+        "visits": (load_rows[0].get("sum") or {}).get("visits", 0),
+        "samples": vitals_rows[0].get("count", 0),
+        "lcp_ms": us(q.get("largestContentfulPaintP75")),
+        "cls": None if q.get("cumulativeLayoutShiftP75", -1) < 0 else q.get("cumulativeLayoutShiftP75"),
+        "inp_ms": us(q.get("interactionToNextPaintP75")),
+        "ttfb_ms": us(q.get("timeToFirstByteP75")),
+    }, None
+
+
 def ga4_pages(token, prop, start, end, limit=10):
     body = {"dateRanges": [{"startDate": start.isoformat(), "endDate": end.isoformat()}],
             "dimensions": [{"name": "pagePath"}],
@@ -251,7 +325,9 @@ def build(args):
     add("")
 
     # ---------- 3. on-site behaviour ----------
-    add("## 3. On-site behaviour (GA4)")
+    add("## 3. On-site behaviour")
+    add("")
+    add("### Engagement (GA4, live to today)")
     add("")
     # GA4 has no reporting lag, unlike Search Console, so this window runs to today
     # rather than stopping at the lagged date. Using the Search Console window here
@@ -259,6 +335,7 @@ def build(args):
     ga_start = today - timedelta(days=6)
     ga_token = gsc.access_token(creds, gsc.GA_SCOPE)
     tot, err = ga4_summary(ga_token, args.ga4_property, ga_start, today)
+    ga4_token = ga_token
     if err:
         add("GA4 unavailable: %s" % err)
         add("")
@@ -286,9 +363,44 @@ def build(args):
             add("No page-level engagement in the window.")
     add("")
     add("The site events added 2026-09-22 (site_search, faq_open, outbound_click, js_error) land")
-    add("in GA4's Events report first. They belong in this section once there is volume worth")
-    add("summarising, because the search terms that find nothing are the content backlog and")
-    add("faq_open is the only direct measure of which question brought someone in.")
+    add("in GA4's Events report first. They belong here once there is volume worth summarising,")
+    add("because the search terms that find nothing are the content backlog and faq_open is the")
+    add("only direct measure of which question brought someone in.")
+    add("")
+
+    notfound, nerr = ga4_page_views(ga4_token, args.ga4_property, "/404.html", ga_start, today)
+    if nerr:
+        add("404 watch unavailable: %s" % nerr)
+    elif notfound:
+        add("**%d hit(s) on the 404 page in this window**, which means a link somewhere is dead."
+            % notfound)
+        flags.append("%d hit(s) on the 404 page: a dead internal link or an old external one"
+                     % notfound)
+    else:
+        add("No 404 hits in this window, so no dead link has been followed.")
+    add("")
+
+    add("### Field performance (Cloudflare Web Analytics)")
+    add("")
+    cf, cf_err = cf_rum(args.cf_token, args.cf_account, ga_start.isoformat(), today.isoformat())
+    if cf_err:
+        add("Cloudflare unavailable: %s" % cf_err)
+    else:
+        add("| metric | value | good is |")
+        add("|---|---|---|")
+        add("| page loads | %s | |" % cf["loads"])
+        add("| visits | %s | |" % cf["visits"])
+        add("| LCP p75 | %s | under 2500 ms |" % ("%s ms" % cf["lcp_ms"] if cf["lcp_ms"] is not None else "no sample"))
+        add("| CLS p75 | %s | under 0.1 |" % ("%s" % cf["cls"] if cf["cls"] is not None else "no sample"))
+        add("| INP p75 | %s | under 200 ms |" % ("%s ms" % cf["inp_ms"] if cf["inp_ms"] is not None else "no sample"))
+        add("| TTFB p75 | %s | under 800 ms |" % ("%s ms" % cf["ttfb_ms"] if cf["ttfb_ms"] is not None else "no sample"))
+        add("")
+        add("Real-user measurements from %s samples, so read the shape and not the decimal."
+            % cf["samples"])
+        add("Durations come back from the API in microseconds and are divided by 1000 here, so")
+        add("taken raw the LCP would read as minutes rather than a fraction of a second. A value shown as")
+        add("no sample means the metric recorded nothing, which is normal for INP on a site")
+        add("nobody is clicking around yet.")
     add("")
 
     # ---------- 3. coverage ----------
@@ -408,9 +520,8 @@ def build(args):
     # Derived, not asserted: this line claimed GA4 was unwired for an hour after it was
     # wired, because it was prose. It now reports what actually happened in section 3.
     add("- GA4: %s" % ("wired, section 3 above" if not err else "NOT answering: %s" % err))
-    add("- Cloudflare Web Analytics: token stored, not yet wired. Field Core Web Vitals")
-    add("  (real-user LCP, CLS, INP) is the reason it is worth wiring, since neither GA4 nor")
-    add("  the Search Console API exposes them.")
+    add("- Cloudflare Web Analytics: wired, section 3. The only source of field Core Web Vitals,")
+    add("  since neither GA4 nor the Search Console API exposes them.")
     add("- Bing Webmaster Tools: site verified and sitemap submitted by hand. The API is not")
     add("  wired, so grounding queries and Citation Share are a manual look in its UI.")
     add("- IndexNow: wired for submission (scripts/indexnow.py), not yet automatic on change.")
@@ -437,6 +548,10 @@ def main():
     parser.add_argument("--window", type=int, default=14, help="days either side of a change")
     parser.add_argument("--no-sweep", action="store_true", help="skip the 39 URL sweep")
     parser.add_argument("--ga4-property", default="555179873", help="GA4 property id")
+    parser.add_argument("--cf-account", default="0e651a735455111c539444e89d846f1a",
+                        help="Cloudflare account tag (from npx wrangler whoami)")
+    parser.add_argument("--cf-token", default=os.environ.get("CLOUDFLARE_ANALYTICS_TOKEN", ""),
+                        help="Cloudflare API token; defaults to the agent secret")
     parser.add_argument("--quiet", action="store_true", help="write the file, print only the path")
     args = parser.parse_args()
 

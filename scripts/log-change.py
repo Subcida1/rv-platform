@@ -174,6 +174,17 @@ def cmd_add(args):
         print("note: no --expect recorded, so this entry cannot be checked later.")
     print("deployed: %s | %s" % (entry["deployed"] or "not yet",
                                  "pushed" if entry["git"]["pushed"] else "NOT pushed"))
+
+    if args.ping:
+        # Run after the deploy, not before: IndexNow fetches the URL, and pinging a page
+        # that has not gone live yet tells the engine about the version it already has.
+        if not entry["git"]["pushed"]:
+            print("IndexNow skipped: the change is not pushed, so the pages are not live yet.")
+        else:
+            r = subprocess.run([sys.executable, os.path.join(ROOT, "scripts", "indexnow.py"), "--changed"],
+                               capture_output=True, text=True, cwd=ROOT)
+            tail = (r.stdout or r.stderr).strip().split("\n")[-1]
+            print("IndexNow: %s" % tail)
     return 0
 
 
@@ -218,6 +229,8 @@ def main():
     parser.add_argument("--actor", default=os.environ.get("AGENT_NAME", "cloud"))
     parser.add_argument("--deployed", help="pass 'now' to stamp the live date immediately")
     parser.add_argument("--sha", help="the commit that carries this change, for logging after the fact")
+    parser.add_argument("--ping", action="store_true",
+                        help="after logging, tell IndexNow about the pages whose lastmod is today")
     parser.add_argument("--list", action="store_true", help="show recent entries")
     parser.add_argument("--limit", type=int, default=15)
     parser.add_argument("--mark-deployed", dest="ref", help="entry id, sha or summary substring")
