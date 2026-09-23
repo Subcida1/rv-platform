@@ -1826,7 +1826,113 @@
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
-    "sources": []
+    "sources": [],
+    "claims": [
+      {
+        "id": "C1",
+        "text": "a tire loses about 1 psi for every 10 °F the air cools, without leaking",
+        "source": "a tire maker's own guidance. The page's headline number, and the meta description promises it",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C2",
+        "text": "the body's version reads \"about 1 to 2 psi\" - a second figure for the same rule",
+        "source": "same source. Two numbers for one rule on one page: reconcile or cut one",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C3",
+        "text": "below about 40 °F, a loaded tire on a hard surface can take a set",
+        "source": "a tire maker's storage guidance",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C4",
+        "text": "support the frame with jack stands so they carry about 95 percent of the weight",
+        "source": "a number a reader acts on, and 95 percent needs a source or a plainer statement",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C5",
+        "text": "lower the tires to a storage pressure while the weight is off",
+        "source": "the same guidance, with the figure the maker gives",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C6",
+        "text": "the 80 percent load margin on tire load matters as much in winter",
+        "source": "the same convention the tire page uses (125 percent of measured load = 80 percent of capacity)",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C7",
+        "text": "breathable fabric covers beat plastic because plastic traps moisture",
+        "source": "a tire or cover maker's own material guidance",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C8",
+        "text": "the six-year age rule and the DOT code",
+        "source": "Goodyear's bulletin and 49 CFR 574.5 - both already read for the tire page",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C9",
+        "text": "the pressure to use is the certification-label figure, not the sidewall maximum",
+        "source": "the tire page's source, already read",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C10",
+        "text": "check pressure cold, before the RV has moved",
+        "source": "definition; the placard says so",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C11",
+        "text": "\"The rule that saves most people\" - a heading",
+        "source": "prevalence claim, and one of five sitewide (see D1)",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C12",
+        "text": "check the pressure again before the first spring trip",
+        "source": "practice",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C13",
+        "text": "\"Last reviewed: Sep 21, 2026, against the sources listed below\"",
+        "source": "provenance; fine print per Ty's ruling",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      }
+    ]
   },
   "guides/winterize-plumbing.html": {
     "hash": "fcdf93ecc5280572",
