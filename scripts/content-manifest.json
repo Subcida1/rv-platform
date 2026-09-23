@@ -165,7 +165,233 @@
     "status": "verified",
     "verified_by": "AI Studio lane (Gemini 3.8 Flash), 3 rounds; page-level only, per-claim provenance still pending",
     "verified_at": "2026-09-22",
-    "sources": []
+    "sources": [],
+    "claims": [
+      {
+        "id": "C1",
+        "text": "\"maximum loaded trailer weight your truck is rated to pull, measured by the manufacturer under the SAE J2807 standard\"",
+        "source": "SAE J2807_202411 (already in Sources)",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C2",
+        "text": "\"a controlled test track, ideal conditions, no wind, no steep grades\" (appears at §1 and again at the 80% heading)",
+        "source": "J2807 §1.1 requires \"acceleration, gradeability, understeer, trailer sway response, braking and park brake at GCWR\". Highway Gradeability ru",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C3",
+        "text": "\"It assumes a bare trailer and little load in the truck.\"",
+        "source": "J2807 assumes a standard test trailer (12 sq ft frontal area below 1,500 lb TWR, up to 60 sq ft above 12,000 lb), a 150 lb driver and 150 lb",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C4",
+        "text": "\"Find your number in the owner's manual towing table for your exact cab, engine, axle ratio, and four-wheel-drive setup\"",
+        "source": "manufacturer's own towing guide — instructional, no citation needed",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C5",
+        "text": "\"Payload is how much weight your truck itself may carry: people, gear, fuel, and the tongue weight\"",
+        "source": "Ford owner manual, Load Carrying: base curb weight includes \"full fluids\"; payload = GVWR − base curb weight. Fuel is already inside the rat",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C6",
+        "text": "payload definition omits hitch hardware",
+        "source": "Ford's own subtract-list names \"Hitch hardware weight, such as a draw bar, ball, locks or weight distributing\". A WDH head + shank is ~75–10",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C7",
+        "text": "\"the yellow and white sticker inside the driver's door, the one that says occupants and cargo should never exceed a specific number\"",
+        "source": "FMVSS 110 (49 CFR 571.110) is the legal basis for that placard. Naming it converts a description into a citation.",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C8",
+        "text": "\"a half-ton can promise 10,000 pounds of towing on paper yet the sticker allows nowhere near that\"",
+        "source": "illustrative — no source required",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C9",
+        "text": "\"Tongue weight counts against payload, and too much of it unweights the front axle\"",
+        "source": "J2807's understeer/handling criteria; and J2807 assumes 10 % tongue weight for conventional towing, which the page's own example does not us",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C10",
+        "text": "\"GVWR is the maximum a loaded trailer may weigh\"",
+        "source": "definition",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C11",
+        "text": "\"A dry weight of 5,500 pounds can be 6,500 loaded\"",
+        "source": "illustrative",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C12",
+        "text": "\"GCWR is the most the truck and trailer together may weigh, everything\"",
+        "source": "definition",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C13",
+        "text": "\"exceed [the load index] and the sidewall flexes harder, generating internal heat\"",
+        "source": "NHTSA tires page is linked; whether that page supports this mechanism is unverified.",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C14",
+        "text": "~~\"more than 600 highway fatalities a year\"~~ → \"511 people died in tire-related crashes in 2024\"",
+        "source": "VERIFIED 2026-09-23. The linked NHTSA page states \"511 Total motor vehicle traffic fatalities in 2024 in tire-related crashes\" and \"In 2024,",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C15",
+        "text": "~~\"The trade association numbers say an overloaded truck can add 25 to 50 percent to its stopping distance\"~~",
+        "source": "CUT — the figure is unsupported, and this was our own weasel wording, not a citation we inherited. NHTSA/DOT's Influence of Size and Weight ",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C16",
+        "text": "brake-fade passage on a 6 % grade",
+        "source": "never mentions trailer brakes, a brake controller, or the weight threshold at which they are legally required (49 CFR 393.43 requires breaka",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C17",
+        "text": "\"an insurer that investigates can deny the claim because the RV was outside its rated limits\"",
+        "source": "unsupported as stated. Standard US policies cover negligence absent a specific exclusion.",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C18",
+        "text": "\"Ratings are measured on a flat test track with no wind, sea level, ideal conditions\"",
+        "source": "same as C2 — a second instance of the same false claim",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C19",
+        "text": "\"keep the loaded trailer at or under 80 percent of rated towing capacity\"",
+        "source": "RULED 2026-09-23: KEEP the rule, rebuild its reasoning. It is a convention with no standard behind it, and today the page derives it from th",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C20",
+        "text": "\"The towing calculator flags anything over 80 percent as yellow\"",
+        "source": "the tool's own behaviour — verifiable by using it",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C21",
+        "text": "calculator \"runs all four checks at once: towing capacity, truck payload, trailer payload, and truck gross weight\"",
+        "source": "contradicts the page's own four ratings: towing capacity, truck payload, trailer GVWR, GCWR. Trailers have GVWR and CCC, not payload.",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C22",
+        "text": "worked example → 6,393 lb loaded, 69 %, 1,167 of 1,500, 767 lb hitch",
+        "source": "depends on unstated constants: 767 = 12 % of 6,393 (J2807's convention is 10 %); 1,167 − 767 = 400 lb for \"two people and their gear\"; and t",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C23",
+        "text": "\"It refuses to give an answer until the four core numbers are in\"",
+        "source": "tool behaviour",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C24",
+        "text": "FAQ: \"That figure assumes ideal road, no wind, no load in the truck, and a bare trailer.\"",
+        "source": "same as C3 — a third instance",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C25",
+        "text": "FAQ: \"Is the 80% rule the law? No, it is a widely used safety guideline, not a regulation. The legally binding limits are the manufacturer ratings.\"",
+        "source": "correct, and the best sentence on the page",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C26",
+        "text": "FAQ: \"every experienced tower treats 80% as the practical maximum\"",
+        "source": "unnamed group standing in for a claim. \"Every\" is also indefensible.",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C27",
+        "text": "FAQ: \"an overweight RV can void insurance coverage in a crash\"",
+        "source": "third instance of C17",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C28",
+        "text": "\"Last reviewed: Sep 21, 2026, against the sources listed below.\"",
+        "source": "two sources are listed; the page draws on J2807, NHTSA, an unnamed trade association, state brake law and the calculator's own assumptions. ",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      }
+    ]
   },
   "guides/rv-water-heater-not-heating.html": {
     "hash": "3b788de2ce5b480b",

@@ -115,6 +115,29 @@
  return '<a' + (cls ? ' class="' + cls + '"' : '') + ' href="' + R(CFG.routes.signin) + '">Sign in</a>';
  }
 
+ /* The road mark that sits inside every search field. One more copy of it lives
+    here because the shell is built in JavaScript; verify.py fails the build if any
+    page has a .search-bar without it, so the copies cannot drift. */
+ var ROAD_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 21.5 9.2 3.5"/><path d="M20 21.5 14.8 3.5"/><path d="M12 20.6v-4" stroke-width="2.4"/><path d="M12 12.2v-3" stroke-width="1.7"/><path d="M12 5.5v-2" stroke-width="1.1"/></svg>';
+
+ /* The site-wide search field. It appears in two places and the CSS decides which
+    one you get: a compact field in the nav from 900px up, and the same field at the
+    top of the mobile menu below that. Both are form.js-search-form, so search.js
+    gives each its own dropdown with its own ids.
+
+    Why 900. Measured free space in the nav: 507px at 1400, 316 at 1024, 192 at 900,
+    75 at 768. A field needs about 160px plus the extra 20px gap it introduces, so
+    it fits from roughly 860 up and there is real headroom at 900. Below that the
+    burger and the menu carry it, and the menu already holds every nav link, so
+    nothing is lost by reaching for it. */
+ function searchFieldHTML(cls, placeholder) {
+ return '<form class="' + cls + ' js-search-form" role="search">' +
+ '<div class="search-bar">' + ROAD_ICON +
+ '<input type="search" autocomplete="off" aria-label="Search OriginRV" placeholder="' +
+ esc(placeholder) + '">' +
+ '</div></form>';
+ }
+
  function navHTML() {
  var rt = CFG.routes;
  return '<div class="util"><div class="wrap">' +
@@ -144,10 +167,12 @@
  '<a href="' + R(rt.manualsRecalls) + '">Recalls and bulletins<span class="sm">Check a unit, and the federal bulletin file</span></a>' +
  '<a href="' + R(rt.manuals) + '">All manuals<span class="sm">Every system, linked at the maker</span></a></div></div>' +
  '</div>' +
+ searchFieldHTML('nav-search', 'Search') +
  '<div class="nav-actions">' + signinLink('btn btn-outline btn-sm') + '<a class="btn btn-primary btn-sm" href="' + R(rt.calculator) + '">Free Tool</a>' +
  '<button class="burger" aria-label="Menu" onclick="RV.toggleMenu()"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h12M4 10h12M4 14h12"/></svg></button></div>' +
  '</div>' +
- '<div class="mobile-menu"><a class="mm-top" href="' + R(rt.home) + '">Home</a>' +
+ '<div class="mobile-menu">' + searchFieldHTML('mm-search', 'Search the site') +
+ '<a class="mm-top" href="' + R(rt.home) + '">Home</a>' +
  mmGroup('Tools', rt.tools, [['Weight calculator', rt.calculator]]) +
  mmGroup('Guides', rt.guides, [['Winterize plumbing', rt.guideWinterize],
    ['Battery cold storage', rt.guideBattery], ['Tires through winter', rt.guideTires],
@@ -219,6 +244,34 @@
  es.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
  }, { threshold: 0.16 });
  els.forEach(function (e) { io.observe(e); });
+ }
+
+ /* ---------- the site-wide search field ----------
+   The nav carries a search field on all 40 pages, and the markup is inert without
+   search.js, which only the homepage used to load. Adding a script tag to the other
+   37 pages would rot: the next page added would be born without one. So site.js
+   pulls it, because the field is part of the shell that site.js already owns.
+
+   Guarded on the tag, not on a flag: the homepage loads search.js STATICALLY, and
+   a second copy would run the whole file twice and give every form two dropdowns,
+   with the second set of ids colliding with the first. */
+ function initSearchScript() {
+ /* Deferred to DOMContentLoaded on purpose. site.js is itself a parser-inserted
+   script that runs BEFORE the parser reaches the tags below it, so on the homepage
+   the static search.js tag was not in the DOM yet, the guard found nothing, and a
+   second copy was injected: six dropdowns instead of three, with colliding ids.
+   By DOMContentLoaded every script tag in the document has been parsed. */
+ function inject() {
+ var already = document.querySelector('script[src*="assets/js/search.js"]');
+ if (already) return;
+ var s = document.createElement('script');
+ s.src = 'assets/js/search.js';
+ s.async = true;
+ document.head.appendChild(s);
+ }
+ if (document.readyState === 'loading')
+ document.addEventListener('DOMContentLoaded', inject);
+ else inject();
  }
 
  /* ---------- home search routing ---------- */
@@ -344,5 +397,6 @@
  injectShell();
  initReveal();
  initSearch();
+ initSearchScript();
  initTracking();
 })();

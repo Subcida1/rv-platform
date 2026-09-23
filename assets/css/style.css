@@ -304,6 +304,47 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
 .mm-top:last-child{border-bottom:none}
 .mobile-menu a:hover{color:var(--text)}
 
+/* ============================================================
+   SITE-WIDE SEARCH (2026-09-22)
+
+   Ty: "i'd like to integrate a sitewide searchfield basically as its going to be
+   an 'everything rv' site so we need a sitewide searchfield, integrate it cleanly
+   and intelligently."
+
+   It is ONE field in two positions. Above 900px it sits in the nav as a compact
+   pill; below that the same markup appears at the top of the mobile menu. The
+   breakpoint is measured, not chosen: free space in the nav is 507px at 1400,
+   316 at 1024, 192 at 900 and 75 at 768, and a field needs about 160px plus the
+   20px gap it introduces. 900 leaves real headroom; 768 has none.
+
+   The nav-links and burger breakpoints moved from 720 to 900 so ONE line governs
+   the whole nav. The consequence worth knowing: a tablet in portrait (721 to 899)
+   now gets the burger menu instead of inline nav links. Nothing is lost, because
+   the menu carries every link the nav does plus the search field, and the two
+   layouts can no longer disagree about which one is showing.
+   ============================================================ */
+.nav-search{display:none;position:relative;flex:0 1 260px;min-width:150px}
+/* min-width 150, not 0: the field shrinks as the nav tightens, and 0 would let
+   it collapse to a sliver at exactly the breakpoint. At 900px there is 172px
+   of room, so the floor is never reached and never forces an overflow. */
+.nav-search .search-bar{padding:4px 4px 4px 14px;gap:8px;box-shadow:none}
+.nav-search .search-bar input{min-height:36px;font-size:14.5px}
+.nav-search .search-bar svg{width:19px;height:19px}
+/* The field is 260px at its widest, which is too narrow to read a result that has
+   a description, so the panel opens wider than the field and hangs from its right
+   edge rather than its left. */
+.nav-search .srch-drop{left:auto;right:0;width:min(420px,86vw)}
+/* position:relative is LOAD-BEARING, not decoration. Without it the dropdown's
+   containing block falls back to nav.main, and nav.main grows to include the open
+   mobile menu, so the dropdown's top:100% becomes "below the entire 834px menu"
+   instead of "below this field": measured at y=943 with the field at y=108. The nav
+   field at the top of this file already carries its own. */
+.mm-search{position:relative;padding-bottom:14px}
+
+@media(min-width:900px){
+  .nav-search{display:block}
+}
+
 /* ================= HERO (HOME) ================= */
 .hero{position:relative;overflow:hidden;background:var(--bg)}
 .hero-bg{position:absolute;inset:0;background:radial-gradient(900px 480px at 82% -8%,rgba(61,127,194,.16),transparent 60%),radial-gradient(800px 460px at 12% 8%,rgba(86,143,211,.14),transparent 58%),radial-gradient(700px 420px at 50% 120%,rgba(91,150,216,.12),transparent 60%),linear-gradient(180deg,#fdfbfa 0%,var(--surface) 40%)}
@@ -2050,4 +2091,15 @@ figure:has(svg[role="img"]){overflow-x:auto;overflow-y:hidden}
 @media(max-width:380px){
   .deck-sim-row{flex-direction:column;align-items:flex-start;gap:3px}
   .deck-sim-row b{text-align:left;white-space:normal}
+}
+
+/* ---------------------------------------------------------------------------
+   The nav switches to the menu at 900px, matching the search field's breakpoint
+   above, so there is one line where the nav changes shape rather than two that
+   could disagree. These override the older 720px rules further up, which stay in
+   place because they also carry grid and spacing changes.
+   --------------------------------------------------------------------------- */
+@media(max-width:899px){
+  .nav-links{display:none}
+  .burger{display:block}
 }

@@ -33,6 +33,80 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 MANIFEST = ROOT / "scripts" / "content-manifest.json"
+SPECS = ROOT / "_specs"
+
+# ---------------------------------------------------------------- claim provenance
+#
+# Ty, 2026-09-23: "we want to make sure facts are right."
+#
+# "Sourced" used to mean only that a name appears in the Sources block. Nobody had to OPEN it. That
+# is how the towing guide carried SAE J2807 while describing it wrongly THREE times -- every gate
+# passed, because the gate never asked whether anyone had read the document.
+#
+# Four states, and the floor is the point:
+#   OPEN      a known problem. No source, or the claim is contradicted. Never publishable.
+#   SOURCED   a source is named and nobody has read it. Not done.
+#   READ      someone opened the source and confirmed it says what we claim.
+#   CONFIRMED a verbatim quote sits in the spec, or two independent parties agree.
+#
+# A page is NOT done while any claim sits at OPEN or SOURCED. The reviewer lane cannot do this for
+# us -- it has no access to the repo, and for a paywalled standard it has no access at all.
+CLAIM_STATES = ("OPEN", "SOURCED", "READ", "CONFIRMED")
+CLAIM_FLOOR = ("OPEN", "SOURCED")   # a verified page may carry neither
+
+
+def spec_path(page_rel):
+    """_specs/<basename>.md -- the per-page spec: what the page IS, and where every claim comes
+    from. Its absence is why no model knew what "better" meant before 2026-09-23."""
+    return SPECS / (Path(page_rel).stem + ".md")
+
+
+def spec_exists(page_rel):
+    return spec_path(page_rel).exists()
+
+
+def state_from_spec_text(status):
+    """Map a spec's prose status onto the four-state ledger."""
+    u = (status or "").upper()
+    if "CONFIRM" in u:
+        return "CONFIRMED"
+    if "READ" in u:
+        return "READ"
+    for bad in ("WRONG", "UNSOURCED", "INTERNAL", "MISSING", "GAP", "OVER-CLAIMS", "INCOMPLETE"):
+        if bad in u:
+            return "OPEN"
+    if u.strip() in ("N/A", "OK"):
+        return "CONFIRMED"   # a definition or an illustration needs no source, so it is not a gap
+    return "SOURCED"
+
+
+def seed_claims_from_spec(page_rel):
+    """Build the claim list from the spec's claims table, so it is authored once.
+
+    The spec already carries `| C1 | claim | source it should carry | status |` rows. Reading them
+    here means the ledger cannot drift from the spec by a transcription mistake."""
+    sp = spec_path(page_rel)
+    if not sp.exists():
+        return []
+    claims = []
+    for line in sp.read_text(encoding="utf-8").splitlines():
+        if not line.lstrip().startswith("|"):
+            continue
+        cells = [c.strip() for c in line.strip().strip("|").split("|")]
+        if len(cells) < 4:
+            continue
+        cid = re.sub(r"[*`]", "", cells[0]).strip()
+        if not re.fullmatch(r"C\d+", cid):
+            continue
+        claims.append({
+            "id": cid,
+            "text": re.sub(r"[*`]", "", cells[1])[:180],
+            "source": re.sub(r"[*`]", "", cells[2])[:140],
+            "state": state_from_spec_text(cells[3]),
+            "by": None,
+            "at": None,
+        })
+    return claims
 
 
 def visible_text(raw):
@@ -140,13 +214,86 @@ def main():
         if rel not in live:
             print("FAIL  %s is not a page in this site" % rel)
             return 1
+        # THE SPEC GATE. A page cannot be marked verified without a spec on disk, because a page
+        # nobody agreed a target for is a page that cannot be judged. --no-spec is an explicit,
+        # RECORDED bypass: a conscious choice rather than a silent skip.
+        waived = "--no-spec" in sys.argv
+        if not spec_exists(rel) and not waived:
+            print("FAIL  %s has no spec at %s" % (rel, spec_path(rel).relative_to(ROOT)))
+            print("      write the spec first, or pass --no-spec to waive it on the record.")
+            return 1
         srcs = [s for s in arg("--sources", "").split(",") if s]
-        man[rel] = {"hash": live[rel], "status": "verified",
-                    "verified_by": arg("--by", "unknown"),
-                    "verified_at": arg("--at", __import__("datetime").date.today().isoformat()),
-                    "sources": srcs}
+        entry = {"hash": live[rel], "status": "verified",
+                 "verified_by": arg("--by", "unknown"),
+                 "verified_at": arg("--at", __import__("datetime").date.today().isoformat()),
+                 "sources": srcs,
+                 "spec": str(spec_path(rel).relative_to(ROOT)) if spec_exists(rel) else None,
+                 "spec_waived": bool(waived and not spec_exists(rel))}
+        # carry the claim ledger over if one exists; otherwise seed it from the spec
+        prev = man.get(rel, {})
+        entry["claims"] = prev.get("claims") or seed_claims_from_spec(rel)
+        # THE CLAIM FLOOR: refuse to verify with a claim still at OPEN or SOURCED.
+        blocked = [c["id"] for c in entry["claims"] if c["state"] in CLAIM_FLOOR]
+        if blocked and "--no-claims" not in sys.argv:
+            print("FAIL  %s has %d claim(s) below the floor: %s"
+                  % (rel, len(blocked), ", ".join(blocked[:14])))
+            print("      record them with --claim, or pass --no-claims to waive on the record.")
+            return 1
+        man[rel] = entry
         save(man)
-        print("verified %s by %s" % (rel, man[rel]["verified_by"]))
+        print("verified %s by %s  (%d claims, %d at CONFIRMED)"
+              % (rel, entry["verified_by"], len(entry["claims"]),
+                 len([c for c in entry["claims"] if c["state"] == "CONFIRMED"])))
+        return 0
+
+    if "--claim" in sys.argv:
+        page = arg("--claim")
+        if page not in man and page not in live:
+            print("FAIL  %s is not a page in this site" % page)
+            return 1
+        entry = man.setdefault(page, {"hash": live.get(page), "status": "unverified",
+                                      "verified_by": None, "verified_at": None,
+                                      "sources": []})
+        entry.setdefault("claims", seed_claims_from_spec(page))
+        cid = arg("--id")
+        state = (arg("--state") or "").upper()
+        if state not in CLAIM_STATES:
+            print("FAIL  --state must be one of %s" % ", ".join(CLAIM_STATES))
+            return 1
+        hit = None
+        for c in entry["claims"]:
+            if c["id"] == cid:
+                hit = c
+                break
+        if hit is None:
+            if not cid:
+                print("FAIL  --id is required")
+                return 1
+            hit = {"id": cid, "text": arg("--text", ""), "source": arg("--source", "")}
+            entry["claims"].append(hit)
+        hit["state"] = state
+        hit["by"] = arg("--by", "unknown")
+        hit["at"] = __import__("datetime").date.today().isoformat()
+        if arg("--source"):
+            hit["source"] = arg("--source")
+        save(man)
+        print("claim %s on %s -> %s" % (cid, page, state))
+        return 0
+
+    if "--claims" in sys.argv:
+        page = arg("--claims")
+        entry = man.get(page)
+        if not entry:
+            print("FAIL  %s is not in the manifest (run --seed first)" % page)
+            return 1
+        entry["claims"] = seed_claims_from_spec(page) or entry.get("claims", [])
+        save(man)
+        n = len(entry["claims"])
+        print("%s: %d claims seeded from %s" % (page, n, spec_path(page).relative_to(ROOT)))
+        for st in CLAIM_STATES:
+            ids = [c["id"] for c in entry["claims"] if c["state"] == st]
+            if ids:
+                print("   %-10s %2d  %s" % (st, len(ids), " ".join(ids[:18])))
         return 0
 
     drift, unverified, missing = [], [], []

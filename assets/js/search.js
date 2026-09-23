@@ -11,8 +11,50 @@
 (function () {
   'use strict';
 
-  var INDEX = window.RV_SEARCH || [];
+  /* Safe to include twice. The nav field needs this script on every page, so
+     site.js pulls it in, and the homepage ALSO loads it as a static tag. A second
+     run would wire a second dropdown onto every form, with ids colliding against
+     the first set. The flag is set synchronously at the top, before anything else
+     runs, so a second copy bails on its first statement. */
+  if (window.RV_SEARCH_WIRED) return;
+  window.RV_SEARCH_WIRED = 1;
+
+  /* THE INDEX IS LOADED LAZILY.
+
+     The nav now carries a search field on all 40 pages, so this script runs
+     everywhere, but the index it searches is 33KB and most visitors never use it.
+     Loading it with every page would tax everyone for a feature most ignore. So it
+     arrives on the first FOCUS, which is early enough that it is usually there
+     before the first character is typed, and certainly before anyone has finished
+     a word.
+
+     window.RV_SEARCH is checked first because the homepage loads search-index.js
+     statically: the hero search there is the page's whole point and paying for the
+     index up front is right on that page. Where it is absent, this fetches it once
+     and queues whatever asked. */
+  var INDEX = window.RV_SEARCH || null;
+  var loading = false, waiting = [];
   var MAX = 7;
+
+  function loadIndex(then) {
+    if (INDEX) { if (then) then(); return; }
+    if (then) waiting.push(then);
+    if (loading) return;
+    loading = true;
+    var s = document.createElement('script');
+    /* Relative on purpose: every page carries <base href="/">, so this resolves to
+       /assets/js/search-index.js from any depth, which is how hub.js loads its own
+       corpus too. */
+    s.src = 'assets/js/search-index.js';
+    s.onload = function () {
+      INDEX = window.RV_SEARCH || [];
+      loading = false;
+      var w = waiting; waiting = [];
+      for (var i = 0; i < w.length; i++) w[i]();
+    };
+    s.onerror = function () { loading = false; waiting = []; };
+    document.head.appendChild(s);
+  }
 
   function esc(s) {
     return String(s == null ? '' : s)
@@ -56,7 +98,7 @@
 
   function search(q, limit) {
     q = norm(q);
-    if (!q) return [];
+    if (!q || !INDEX) return [];
     var hits = [];
     for (var i = 0; i < INDEX.length; i++) {
       var s = score(INDEX[i], q);
@@ -131,16 +173,23 @@
     }, 900);
   }
 
-  function init() {
-    var form = document.querySelector('form.js-search-form');
-    if (!form || !INDEX.length) return;
+  /* One form, one dropdown.
+
+     This used to build exactly one listbox for the first form on the page, with a
+     hardcoded id of "srch-drop". That was fine while the hero was the only search
+     box on the site. The nav now carries one too, and on the homepage BOTH are
+     present, so the id has to be per-form: two elements sharing an id would break
+     aria-controls and give the second dropdown the first one's options. setup()
+     takes an index and derives every id from it. */
+  function setup(form, n) {
     var input = form.querySelector('input');
     if (!input) return;
+    var dropId = 'srch-drop-' + n;
 
     // build the listbox
     var box = document.createElement('div');
     box.className = 'srch-drop';
-    box.id = 'srch-drop';
+    box.id = dropId;
     box.setAttribute('role', 'listbox');
     box.hidden = true;
     form.appendChild(box);
@@ -148,7 +197,7 @@
     input.setAttribute('role', 'combobox');
     input.setAttribute('autocomplete', 'off');
     input.setAttribute('aria-expanded', 'false');
-    input.setAttribute('aria-controls', 'srch-drop');
+    input.setAttribute('aria-controls', dropId);
     input.setAttribute('aria-autocomplete', 'list');
 
     var items = [], active = -1;
@@ -189,7 +238,7 @@
           html += '<div class="srch-cat">' + esc(LABEL[it.c] || it.c) + '</div>';
           lastCat = it.c;
         }
-        html += '<a class="srch-opt" role="option" id="srch-opt-' + i + '" href="' + esc(it.u) + '"' +
+        html += '<a class="srch-opt" role="option" id="' + dropId + '-opt-' + i + '" href="' + esc(it.u) + '"' +
                 ' data-i="' + i + '" aria-selected="false">' +
                 '<span class="srch-t">' + highlight(it.t, q) + '</span>' +
                 (it.d ? '<span class="srch-d">' + esc(it.d) + '</span>' : '') +
@@ -220,11 +269,19 @@
     var t = null;
     input.addEventListener('input', function () {
       clearTimeout(t);
-      t = setTimeout(function () { paint(search(input.value), input.value.trim().toLowerCase()); }, 60);
+      t = setTimeout(function () {
+        loadIndex(function () {
+          paint(search(input.value), input.value.trim().toLowerCase());
+        });
+      }, 60);
       report(input.value);
     });
+    /* Prefetch on focus, so the index is usually in hand before the first
+       character lands rather than after it. */
     input.addEventListener('focus', function () {
-      if (input.value.trim()) paint(search(input.value), input.value.trim().toLowerCase());
+      loadIndex(function () {
+        if (input.value.trim()) paint(search(input.value), input.value.trim().toLowerCase());
+      });
     });
     input.addEventListener('keydown', function (e) {
       if (e.key === 'ArrowDown') { e.preventDefault(); if (box.hidden) paint(search(input.value), input.value.trim().toLowerCase()); else move(1); }
@@ -244,6 +301,16 @@
     });
     document.addEventListener('click', function (e) { if (!form.contains(e.target)) close(); });
     form.addEventListener('submit', close);
+  }
+
+  function init() {
+    /* Wire the forms regardless of whether the index has arrived. This used to bail
+       on an empty index, which was fine when the index was a static tag on the one
+       page that had a search box. With the index lazy-loaded the list is empty at
+       this point on every page except the homepage, and bailing would leave the nav
+       field inert. */
+    var forms = document.querySelectorAll('form.js-search-form');
+    for (var i = 0; i < forms.length; i++) setup(forms[i], i);
   }
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);

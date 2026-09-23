@@ -90,11 +90,30 @@ async function evalJs(expression) {
    keystroke. Typing inside the probe would measure an empty dropdown. */
 const PREP = `(function(){
   document.querySelectorAll('details:not([open])').forEach(function(d){ d.open = true; });
-  var sInput = document.querySelector('#man-q') || document.querySelector('.search-bar input');
-  if (sInput) {
-    sInput.value = sInput.id === 'man-q' ? 'dometic' : 'winterize my RV';
-    sInput.dispatchEvent(new Event('input', { bubbles: true }));
-    sInput.dispatchEvent(new Event('focus', { bubbles: true }));
+  /* The mobile menu is another surface that only exists after a tap, and it holds
+     the site-wide search field below 900px. Open it so its field and its dropdown
+     are measured too. Only where the burger is actually shown: toggleMenu sets an
+     inline display:flex, which would force the menu VISIBLE at desktop widths where
+     it does not exist, and measuring 40 menu rows per desktop render is how this
+     produced 2238 phantom tap-target warnings in one run. */
+  var burger = document.querySelector('.burger');
+  if (window.RV && window.RV.toggleMenu && burger && getComputedStyle(burger).display !== 'none') {
+    var mm = document.querySelector('.mobile-menu');
+    if (mm && getComputedStyle(mm).display === 'none') window.RV.toggleMenu();
+  }
+  /* Every search field on the page, not just the first: the nav one, the one in the
+     mobile menu, and the hero. Each has its own dropdown and each has to be measured
+     with results in it, since the panel is hidden until something is typed. */
+  document.querySelectorAll('form.js-search-form input').forEach(function(i){
+    i.value = 'winterize my RV';
+    i.dispatchEvent(new Event('input', { bubbles: true }));
+    i.dispatchEvent(new Event('focus', { bubbles: true }));
+  });
+  var mq = document.querySelector('#man-q');
+  if (mq) {
+    mq.value = 'dometic';
+    mq.dispatchEvent(new Event('input', { bubbles: true }));
+    mq.dispatchEvent(new Event('focus', { bubbles: true }));
   }
   return 1;
 })()`;
@@ -333,6 +352,18 @@ function note(sev, kind, key, detail) {
 }
 const isBenign = (t) => /^https?:/.test(t) || t === '';
 
+/* The 44px target and the 12px type floor are TOUCH rules. They are not desktop
+   rules, and applying them above this width produced 2238 tap warnings and 176
+   type warnings in a single run, every one of them a normal desktop control: a
+   36px footer link under a mouse is correct, and an 11.5px badge is correct on a
+   pointer device. Those phantom warnings were not visible before because this tool
+   had only ever been run at phone widths.
+
+   Layout faults (overflow, clipping, edge crowding, a box that does not fit) are
+   still judged at EVERY width, because those are wrong everywhere. Only the two
+   touch rules are gated. */
+const TOUCH_MAX = 800;
+
 for (const r of report) {
   const p = r.probe || {};
   const where = r.page + ' @' + r.width;
@@ -358,15 +389,21 @@ for (const r of report) {
       msg: e.box + ' > ' + e.sel + ' "' + e.text + '" ' + (e.why || '') +
            (e.over ? ' by ' + e.over + 'px' : ' gap L' + e.gapL + ' R' + e.gapR) });
   }
-  for (const e of p.tiny || []) { tally.tiny++; note('WARN', 'tiny', e.sel + e.fs, { page: where, msg: e.sel + ' ' + e.fs + 'px "' + e.text + '"' }); }
-  for (const e of p.taps || []) {
-    if (e.h >= 32 && e.w >= 32) { tally.tapWarn++; note('WARN', 'tap', e.sel + '|' + e.text, { page: where, msg: e.sel + ' ' + e.w + 'x' + e.h + ' "' + e.text + '"' }); }
-    else { tally.tapFail++; note('FAIL', 'tap', e.sel + '|' + e.text, { page: where, msg: e.sel + ' ' + e.w + 'x' + e.h + ' "' + e.text + '"' }); }
+  const touch = r.width <= TOUCH_MAX;
+  if (touch) {
+    for (const e of p.tiny || []) { tally.tiny++; note('WARN', 'tiny', e.sel + e.fs, { page: where, msg: e.sel + ' ' + e.fs + 'px "' + e.text + '"' }); }
+    for (const e of p.taps || []) {
+      if (e.h >= 32 && e.w >= 32) { tally.tapWarn++; note('WARN', 'tap', e.sel + '|' + e.text, { page: where, msg: e.sel + ' ' + e.w + 'x' + e.h + ' "' + e.text + '"' }); }
+      else { tally.tapFail++; note('FAIL', 'tap', e.sel + '|' + e.text, { page: where, msg: e.sel + ' ' + e.w + 'x' + e.h + ' "' + e.text + '"' }); }
+    }
   }
 }
 
 console.log('\n================ MOBILE AUDIT ================');
 console.log(report.length + ' renders: ' + pages.length + ' pages x ' + WIDTHS.join('/') + 'px\n');
+const touchRenders = report.filter((r) => r.width <= TOUCH_MAX).length;
+console.log('Touch rules judged on ' + touchRenders + ' of ' + report.length +
+            ' renders (' + TOUCH_MAX + 'px and under); layout faults judged on all of them.');
 console.log('FAIL tap targets (<32): ' + tally.tapFail);
 console.log('WARN tap targets (32-43): ' + tally.tapWarn);
 console.log('FAIL edge-crowded text: ' + tally.edge);
