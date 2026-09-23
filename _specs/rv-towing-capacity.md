@@ -143,3 +143,28 @@ source exists · `UNSOURCED` = asserted flat · `WRONG` = contradicted by a veri
    the full treatment earns its own page later.
 4. **C15's trade association** — if you know which body the 25–50 % figure came from, we keep it and
    cite it. If not, the figure goes.
+
+## 9. Site-wide sweep, measured (Phase 1 size)
+
+Run 2026-09-23 with `scripts/house-style.py --only heading` after inverting the colon rule:
+
+| | count |
+|---|---|
+| **H2 / H3 section headings** | **61** |
+| **H1 page titles** | **13** |
+| total reported | 74 across 40 pages |
+
+**The split matters, and it is a decision rather than an arithmetic result.** The 61 H2/H3 findings
+are unambiguous under the ruling. The 13 H1s are arguable — an H1 is a page title, and title case
+after a colon (`RV battery winter storage: Lead-acid and lithium rules`) is a defensible convention
+there. The earlier tally that produced the wrong rule had already flagged this and asked for the
+split before the convention was called; it was never done.
+
+**Recommendation:** apply lowercase to the 61 H2/H3, and exempt H1 from the rule — or make it 74 and
+change the 13 titles too. Either is fine; what is not fine is leaving the rule ambiguous, because it
+will drift again. This is question 5 for you.
+
+This page is **not** in the findings list — the six fixes in commit `df9ecac` cleared it.
+
+*(Correction to that commit's message: it says "24 of which are H1". The measured figure is 13.
+The number was written into the message before the measurement ran.)*
