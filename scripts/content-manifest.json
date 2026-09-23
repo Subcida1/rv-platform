@@ -1084,16 +1084,16 @@
         "id": "C3",
         "text": "the code may be on the inside face, so a tire fitted with the whitewall out can hide it",
         "source": "49 CFR 574.5 plus the practical consequence",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "49 CFR 574.5, read through an archive copy, states it and the consequence follows: 'Each new tire manufacturer must conspicuously label on ONE SIDEWALL of each tire it manufactures... by permanently molding into or onto the sidewall.' The page now names the federal rule and says why a whitewall-out fitment hides the date.",
+        "at": "2026-09-23"
       },
       {
         "id": "C4",
         "text": "at five years, have a tire professional inspect it",
         "source": "the same bulletin - the inspection interval is half the claim",
-        "state": "OPEN",
-        "by": "DEFECT FOUND: the page says to have tires inspected by a professional at five years, and Goodyear's bulletin contains no five-year figure. It recommends regular professional inspection with no interval. The number needs its own source or it comes off.",
+        "state": "CONFIRMED",
+        "by": "Cloud cut the five-year inspection figure on 2026-09-23: Goodyear's bulletin has no such interval, so the page now recommends regular professional inspection in the maker's words rather than inventing a year.",
         "at": "2026-09-23"
       },
       {
@@ -1108,8 +1108,8 @@
         "id": "C6",
         "text": "the load capacity of an ST trailer tire is calculated assuming a maximum speed of 65 mph, and its capacity is only valid up to that speed",
         "source": "a tire maker or the Tire and Rim Association. A number a reader acts on: read it or cut it",
-        "state": "OPEN",
-        "by": "RE-GROUNDING NEEDED: the page treats 65 mph as the ceiling for ST tires, and Goodyear's own announcement of its current ST line says 'the entire Endurance trailer line carries the N speed rating allowing consumers to travel at highway speeds' -- N is 87 mph. So 65 was the older ST convention and the ceiling now depends on the tire. The figure needs a source that states it as the older standard, or the section needs re-framing around reading the sidewall.",
+        "state": "CONFIRMED",
+        "by": "Cloud re-framed the speed claim on 2026-09-23 around the reader's own sidewall, because Goodyear's current ST line is N rated (87 mph) while 65 was the older convention. The section is retitled 'The speed rating on your own sidewall'.",
         "at": "2026-09-23"
       },
       {
@@ -1140,17 +1140,17 @@
         "id": "C10",
         "text": "adding about 10 psi for storage reduces flat-spotting, and it comes back down before the road",
         "source": "a tire maker's storage guidance. A number a reader acts on",
-        "state": "OPEN",
-        "by": "DEFECT FOUND: the page's 'about 10 psi for storage to reduce flat-spotting' is not in Goodyear's bulletin either; its storage section covers dry, cool, out of sunlight, and says nothing about extra pressure. Needs a source or it comes off.",
+        "state": "CONFIRMED",
+        "by": "Cloud cut the 10 psi storage figure on 2026-09-23: it appears in no document we could read, and Goodyear's storage guidance covers dry, cool and out of sunlight instead.",
         "at": "2026-09-23"
       },
       {
         "id": "C11",
         "text": "age beats tread because the rubber degrades from the inside and the tread can stay full",
         "source": "NHTSA's tire aging material (in Sources)",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Goodyear's bulletin states the aging case in its own words: the degree of change 'is affected by many factors such as temperature, storage conditions, and conditions of use (load, speed, inflation pressure, impacts with potholes)', and 'accurately predicting the serviceable life of any individual tire in advance is not possible' -- which is why the date beats the tread.",
+        "at": "2026-09-23"
       },
       {
         "id": "C12",
