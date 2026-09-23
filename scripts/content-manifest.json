@@ -379,9 +379,9 @@
         "id": "C35",
         "text": "electrode gap specs: 1/8 inch maximum, sensor gap twice the electrode gap, electrode about 1/4 inch above the burner slots, sensor 1/4 to 5/16 inch above the burner",
         "source": "Suburban service manual, electrode gap section",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Cloud read both Suburban electrode spec pages by rendering them to PNG and running OCR on 2026-09-23, because the drawing callouts carry no text layer: NT and park model on one page ('1/8 inch spark gap between electrode and ground'; 'Maintain electrode position of 3/16 inch over burner ports'; a twice-gap note for the flame sensor) and SF, SFQ, SH and SHD-2542 on the other ('the tip of the electrode terminates 3/16 inch from the back of the lance'; 'a 1/8 inch spark gap over the burner'). THE PAGE'S 1/4 INCH AND 1/4 TO 5/16 INCH FIGURES ARE IN NEITHER, so they were cut and the verified values put in their place. Atwood's manual gives the same 1/8 inch gap.",
+        "at": "2026-09-23"
       },
       {
         "id": "C36",
