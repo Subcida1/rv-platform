@@ -35,6 +35,12 @@ BASE = "https://originrv.com/"
 NS = "http://www.sitemaps.org/schemas/sitemap/0.9"
 
 
+# Reachable but deliberately unlisted. A 404 page carries noindex and must never
+# be submitted as a URL worth crawling; it only has to exist for the server to
+# serve it. Everything else on disk is expected in the sitemap.
+UNLISTED = {"404.html"}
+
+
 def published_pages():
     """Every page on the site, as sitemap-relative paths."""
     pages = []
@@ -42,8 +48,9 @@ def published_pages():
         dirnames[:] = [d for d in dirnames if d not in {".git", "workers", "_todo", "_log", "node_modules"}]
         for name in filenames:
             if name.endswith(".html"):
-                rel = os.path.relpath(os.path.join(dirpath, name), ROOT)
-                pages.append(rel.replace(os.sep, "/"))
+                rel = os.path.relpath(os.path.join(dirpath, name), ROOT).replace(os.sep, "/")
+                if rel not in UNLISTED:
+                    pages.append(rel)
     return sorted(pages)
 
 
