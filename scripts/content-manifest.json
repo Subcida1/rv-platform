@@ -235,9 +235,9 @@
         "id": "C17",
         "text": "sail switch location on Suburban direct-vent units, and on Atwood units",
         "source": "the makers' own service manuals",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Visual pass, 2026-09-23: the lane confirmed from Atwood's 85-series pictorial diagrams that the sail switch sits between the gas valve and the ignition control, directly above the limit switch. The Suburban MOUNTING detail (blower intake side, between the motor and the return-air opening) is NOT shown by any Suburban figure in the pass, so it was cut and replaced with what Suburban's own manuals do say: the sail switch sits in the blower's airstream where the room air wheel pushes its paddle closed. The 79/80 reversal note is in Atwood's manual at page 16 (my page selection for the pass missed it; extracted text line 1245 reads '(Limit and Sail Switch are reversed in 79/80 Series.)'), and Suburban's own diagrams carry a variant note that the order differs on some models.",
+        "at": "2026-09-23"
       },
       {
         "id": "C18",
@@ -380,7 +380,7 @@
         "text": "electrode gap specs: 1/8 inch maximum, sensor gap twice the electrode gap, electrode about 1/4 inch above the burner slots, sensor 1/4 to 5/16 inch above the burner",
         "source": "Suburban service manual, electrode gap section",
         "state": "READ",
-        "by": "Cloud read both Suburban electrode spec pages by rendering them to PNG and running OCR on 2026-09-23, because the drawing callouts carry no text layer: NT and park model on one page ('1/8 inch spark gap between electrode and ground'; 'Maintain electrode position of 3/16 inch over burner ports'; a twice-gap note for the flame sensor) and SF, SFQ, SH and SHD-2542 on the other ('the tip of the electrode terminates 3/16 inch from the back of the lance'; 'a 1/8 inch spark gap over the burner'). THE PAGE'S 1/4 INCH AND 1/4 TO 5/16 INCH FIGURES ARE IN NEITHER, so they were cut and the verified values put in their place. Atwood's manual gives the same 1/8 inch gap.",
+        "by": "Visual pass, 2026-09-23, and it CORRECTED ME: 1/4 inch DOES appear, on the remote flame sense arrangement (Figure 32: 'APPROXIMATELY 1/4\" OR TWICE GAP BETWEEN GROUND AND FLAME SENSOR', and Note 2: '1/4\" spark gap between ground and flame sensor'). 5/16 appears nowhere. So the original sentence attached the right number to the wrong element, and the page now states the remote-sense figure with its own value instead of only 'twice the electrode gap'.",
         "at": "2026-09-23"
       },
       {
