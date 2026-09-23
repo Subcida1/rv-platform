@@ -1829,11 +1829,21 @@
     "sources": []
   },
   "guides/winterize-plumbing.html": {
-    "hash": "91f658867ef3c303",
-    "status": "unverified",
-    "verified_by": null,
-    "verified_at": null,
-    "sources": [],
+    "hash": "fcdf93ecc5280572",
+    "status": "verified",
+    "verified_by": "Claude Desktop lane, three rounds on 2026-09-23: the first enumerated the nine prevalence claims my purge had missed (including two stated twice), the confirm caught that I had listed a heading as cut without touching it plus a comprehension error my own cut introduced, and the closing round re-read the whole page and found nothing new",
+    "verified_at": "2026-09-23",
+    "sources": [
+      "inbox/REVIEW-REQUEST-20260923-1256-winterize-plumbing.md",
+      "outbox/REPLY-WINTERIZE-REVIEW-1256.md",
+      "inbox/REVIEW-REQUEST-20260923-1320-winterize-plumbing-confirm.md",
+      "outbox/REPLY-WINTERIZE-CONFIRM-1320.md",
+      "inbox/REVIEW-REQUEST-20260923-1326-winterize-plumbing-close.md",
+      "outbox/REPLY-WINTERIZE-CLOSE-1326.md",
+      "spec:_specs/winterize-plumbing.md"
+    ],
+    "spec": "_specs/winterize-plumbing.md",
+    "spec_waived": false,
     "claims": [
       {
         "id": "C1",
@@ -1927,9 +1937,9 @@
         "id": "C12",
         "text": "remove the inline water filter and protect the wet bay",
         "source": "maker's instructions",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Cloud read Camco's winterizing instructions on 2026-09-23 (a circulating copy of their PDF; Camco's own site hosts the product pages the body links). The filter half is the maker's own step: 'Bypass any in-line or under-sink water filtration systems.' The wet-bay half is field practice, and the page frames it as such.",
+        "at": "2026-09-23"
       },
       {
         "id": "C13",
