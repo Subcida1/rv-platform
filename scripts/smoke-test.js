@@ -34,16 +34,20 @@ function context() {
   const SEARCH_INPUT = stubEl('input'); SEARCH_INPUT.value = 'can my truck tow it';
   const SEARCH_FORM = stubEl('form');
   SEARCH_FORM.querySelector = sel => (sel === 'input' ? SEARCH_INPUT : null);
+  // Listeners are recorded rather than discarded, because a delegated handler
+  // that is never invoked cannot be tested at all. The recorded ones are only
+  // called explicitly, by the tests that want them.
+  const doc = {
+    readyState: 'complete', head: stubEl('head'), body: stubEl('body'),
+    createElement: stubEl,
+    getElementById: id => byId[id] || (byId[id] = stubEl('div')),
+    querySelector: () => null,
+    querySelectorAll: sel => (sel === 'form.js-search-form' ? [SEARCH_FORM] : []),
+    addEventListener(t, fn) { (this._ev = this._ev || {})[t] = fn; },
+  };
   const sandbox = {
     console,
-    document: {
-      readyState: 'complete', head: stubEl('head'), body: stubEl('body'),
-      createElement: stubEl,
-      getElementById: id => byId[id] || (byId[id] = stubEl('div')),
-      querySelector: () => null,
-      querySelectorAll: sel => (sel === 'form.js-search-form' ? [SEARCH_FORM] : []),
-      addEventListener() {},
-    },
+    document: doc,
     location: { pathname: '/index.html', href: '', origin: 'https://example.com' },
     IntersectionObserver: function () { this.observe = () => {}; this.disconnect = () => {}; },
     setTimeout, clearTimeout, setInterval, clearInterval,
@@ -51,6 +55,8 @@ function context() {
   sandbox.window = sandbox;
   sandbox.globalThis = sandbox;
   sandbox.__form = SEARCH_FORM;
+  sandbox.__document = doc;
+  sandbox.addEventListener = function (t, fn) { (sandbox._ev = sandbox._ev || {})[t] = fn; };
   sandbox.__fetchCalls = [];
   sandbox.fetch = (url, opts) => {
     sandbox.__fetchCalls.push({ url, opts });
@@ -157,6 +163,82 @@ if (sb.window.RV && sb.__form && sb.__form._ev && typeof sb.__form._ev.submit ==
   }
 } else {
   console.log('  FAIL hero search form has NO submit handler');
+  failed++;
+}
+
+// 2c. the search event must carry the term and must admit when nothing matched.
+//     fell_through is the whole point: it is the difference between a question we
+//     answered and one we have no page for.
+if (sb.window.RV && typeof sb.window.RV.track === 'function') {
+  sb.__gtag = [];
+  sb.gtag = function () { sb.__gtag.push(Array.prototype.slice.call(arguments)); };
+  const input = sb.__form.querySelector('input');
+
+  input.value = 'can my truck tow it';
+  sb.__form.fire('submit', { preventDefault() {} });
+  const hit = sb.__gtag[sb.__gtag.length - 1];
+
+  input.value = 'water pump not building pressure';
+  sb.__form.fire('submit', { preventDefault() {} });
+  const miss = sb.__gtag[sb.__gtag.length - 1];
+
+  const okHit = hit && hit[0] === 'event' && hit[1] === 'site_search' &&
+                hit[2].search_term === 'can my truck tow it' && hit[2].fell_through === 'no';
+  const okMiss = miss && miss[0] === 'event' && miss[1] === 'site_search' &&
+                 miss[2].search_term === 'water pump not building pressure' && miss[2].fell_through === 'yes';
+
+  if (okHit && okMiss) {
+    console.log('  ok   site_search records the term and flags a question we cannot answer');
+  } else {
+    console.log('  FAIL site_search event wrong: hit=' + JSON.stringify(hit) + ' miss=' + JSON.stringify(miss));
+    failed++;
+  }
+
+  // and it must stay silent when analytics is absent, rather than throwing
+  delete sb.gtag;
+  let threw = false;
+  try { sb.__form.fire('submit', { preventDefault() {} }); } catch (e) { threw = true; }
+  console.log(threw ? '  FAIL site_search throws with no gtag present' : '  ok   site_search is silent when gtag is absent');
+  if (threw) failed++;
+} else {
+  console.log('  FAIL RV.track is not exposed');
+  failed++;
+}
+
+// 2d. faq_open, outbound_click and js_error are delegated handlers, so they are
+//     invoked here the way the browser would.
+sb.__gtag = [];
+sb.gtag = function () { sb.__gtag.push(Array.prototype.slice.call(arguments)); };
+const named = n => sb.__gtag.filter(c => c[1] === n).pop();
+
+try {
+  sb.__document._ev.toggle({ target: { tagName: 'DETAILS', open: true,
+    querySelector: () => ({ textContent: 'Why does my furnace blow cold air?' }) } });
+  const faq = named('faq_open');
+  if (faq && faq[2].question === 'Why does my furnace blow cold air?') {
+    console.log('  ok   faq_open carries the question that was opened');
+  } else { console.log('  FAIL faq_open wrong: ' + JSON.stringify(faq)); failed++; }
+
+  // a closed accordion is not an open, and an internal link is not outbound
+  sb.__gtag = [];
+  sb.__document._ev.toggle({ target: { tagName: 'DETAILS', open: false, querySelector: () => null } });
+  sb.__document._ev.click({ target: { closest: () => ({ getAttribute: () => '/guides/index.html', textContent: 'Guides' }) } });
+  if (sb.__gtag.length === 0) console.log('  ok   closed accordions and internal links record nothing');
+  else { console.log('  FAIL noise recorded: ' + JSON.stringify(sb.__gtag)); failed++; }
+
+  sb.__document._ev.click({ target: { closest: () => ({
+    getAttribute: () => 'https://www.norcold.com/manuals/RM1350.pdf', textContent: 'Norcold RM1350' }) } });
+  const out = named('outbound_click');
+  if (out && out[2].link_host === 'www.norcold.com') {
+    console.log('  ok   outbound_click names the maker we sent someone to');
+  } else { console.log('  FAIL outbound_click wrong: ' + JSON.stringify(out)); failed++; }
+
+  sb._ev.error({ message: 'e is not a function' });
+  const err = named('js_error');
+  if (err && err[2].message === 'e is not a function') console.log('  ok   js_error records a broken script');
+  else { console.log('  FAIL js_error wrong: ' + JSON.stringify(err)); failed++; }
+} catch (e) {
+  console.log('  FAIL delegated handlers threw: ' + e.message);
   failed++;
 }
 

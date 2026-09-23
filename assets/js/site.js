@@ -11,6 +11,69 @@
 
  var CFG = window.RV_CONFIG || {};
 
+ /* ---------- analytics ----------
+   Four events, and they exist because the page-view count cannot answer any of
+   the questions we actually have. GA4 knows a page loaded; it does not know what
+   someone typed, which question they opened, or whether a document link was
+   worth their click.
+
+      site_search   the typed query, where the router sent them, and whether the
+                    router fell through to the generic index. A fall-through is
+                    a question we have no page for, which is the content backlog.
+      faq_open      one vote per question, and every guide ships ten to twelve.
+      outbound_click  which makers and documents people leave for. This is the
+                    only evidence we will get about which manuals matter.
+      js_error      the calculators are client-side, so a broken script would
+                    otherwise fail silently with nothing recorded anywhere.
+
+   Every one of these is inert when gtag, window.addEventListener or the event
+   target is missing, so the smoke test's DOM stub and any older browser stay
+   quiet rather than throwing. No URLs are built here: `new URL` is not a global
+   in a bare JS context, so the host is taken with a regex instead. */
+ function track(name, params) {
+ if (typeof window.gtag !== 'function') return;
+ try { window.gtag('event', name, params || {}); } catch (e) { /* never break a page for a metric */ }
+ }
+
+ function hostOf(href) {
+ var m = /^https?:\/\/([^\/?#]+)/i.exec(href || '');
+ return m ? m[1].toLowerCase() : '';
+ }
+
+ function trim(s, n) { return String(s == null ? '' : s).replace(/\s+/g, ' ').trim().slice(0, n || 100); }
+
+ function initTracking() {
+ if (typeof document.addEventListener !== 'function') return;
+
+ // 'toggle' does not bubble, so this has to listen in the capture phase.
+ document.addEventListener('toggle', function (e) {
+ var el = e && e.target;
+ if (!el || el.tagName !== 'DETAILS' || !el.open) return;
+ var summary = typeof el.querySelector === 'function' ? el.querySelector('summary') : null;
+ track('faq_open', { question: trim(summary ? summary.textContent : ''), page: location.pathname });
+ }, true);
+
+ document.addEventListener('click', function (e) {
+ var el = e && e.target;
+ var link = el && typeof el.closest === 'function' ? el.closest('a[href]') : null;
+ if (!link) return;
+ var href = link.getAttribute ? link.getAttribute('href') || '' : '';
+ var host = hostOf(href);
+ // internal navigation is already a page view; this is for leaving the site
+ if (!host || host.indexOf('originrv.com') >= 0) return;
+ track('outbound_click', { link_host: trim(host), link_text: trim(link.textContent), page: location.pathname });
+ });
+
+ if (typeof window.addEventListener !== 'function') return;
+ window.addEventListener('error', function (e) {
+ track('js_error', { message: trim(e && e.message), page: location.pathname });
+ });
+ window.addEventListener('unhandledrejection', function (e) {
+ var reason = e && e.reason;
+ track('js_error', { message: trim('unhandled rejection: ' + (reason && reason.message ? reason.message : reason)), page: location.pathname });
+ });
+ }
+
  /* ---------- computed base path (fixes subdirectory 404s) ---------- */
  function computeBase() {
  try {
@@ -195,7 +258,16 @@
  f.addEventListener('submit', function (e) {
  e.preventDefault();
  var input = f.querySelector('input');
- location.href = searchRoute(input ? input.value : '');
+ var query = input ? input.value : '';
+ var dest = searchRoute(query);
+ // The router's last resort is the generic guides index. Landing there means
+ // nothing matched, which is the clearest signal we can get that a page is missing.
+ track('site_search', {
+ search_term: trim(query),
+ destination: dest,
+ fell_through: dest === R(CFG.routes.guides) ? 'yes' : 'no'
+ });
+ location.href = dest;
  });
  });
  }
@@ -265,10 +337,12 @@
  contactEmail: CFG.contact ? CFG.contact.email : '',
  toggleMenu: toggleMenu,
  searchRoute: searchRoute,
+ track: track,
  claimMailto: claimMailto,
  claimSubmit: claimSubmit
  };
  injectShell();
  initReveal();
  initSearch();
+ initTracking();
 })();
