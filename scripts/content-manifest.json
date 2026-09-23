@@ -146,7 +146,217 @@
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
-    "sources": []
+    "sources": [],
+    "claims": [
+      {
+        "id": "C1",
+        "text": "an RV fridge is not a house fridge; absorption and 12-volt compressor are the two types",
+        "source": "qualitative",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C2",
+        "text": "~~\"roughly 80 percent of factory-installed RV fridges are absorption units\"~~ cut, and the page now describes the two types with no prevalence figure",
+        "source": "claim removed",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C3",
+        "text": "absorption runs on propane, on 120-volt shore power, and on some models 12-volt while driving",
+        "source": "Dometic RM 85xx operating manual",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C4",
+        "text": "the absorption cycle is a sealed ammonia and water solution driven by heat, with no moving parts in the cooling unit",
+        "source": "Dometic RM 85xx operating manual",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C5",
+        "text": "replaced the unnamed \"industry\" appeal with the maker's published limit: built to run within 3 degrees off level side to side and 6 degrees front to back, past which the cooling sy",
+        "source": "Norcold N400/N510 owner's manual, \"Leveling\"",
+        "state": "READ",
+        "by": "Cloud opened the Norcold N400/N510 owner's manual and read the 3 and 6 degree leveling caution",
+        "at": "2026-09-23"
+      },
+      {
+        "id": "C6",
+        "text": "NHTSA recalls for Dometic and Norcold trace fires to cooling units that developed a fatigue crack in the boiler tube and released flammable solution",
+        "source": "NHTSA recall notice 10V-584; Dometic recall page",
+        "state": "READ",
+        "by": "Cloud opened NHTSA recall notice 10V-584 and Dometic's recall page; both state the boiler tube crack mechanism",
+        "at": "2026-09-23"
+      },
+      {
+        "id": "C7",
+        "text": "~~\"Dometic's recall alone covered more than 900,000 units\"~~ replaced with the recall's published scope: Dometic covers two-door units built April 1997 through September 2006, Norc",
+        "source": "Dometic recall page; NHTSA 10V-584",
+        "state": "READ",
+        "by": "Cloud opened Dometic's recall page (April 1997 to September 2006) and NHTSA 10V-584 (1200 series, through October 2010); no unit count appears in either",
+        "at": "2026-09-23"
+      },
+      {
+        "id": "C8",
+        "text": "Norcold's remedy for the 1200 series is a retrofit kit, part number 634737, fitted to the cooling unit",
+        "source": "NHTSA recall notice 10V-584",
+        "state": "READ",
+        "by": "Cloud read Norcold part number 634737 RECALL KIT HTS in the 10V-584 notice",
+        "at": "2026-09-23"
+      },
+      {
+        "id": "C9",
+        "text": "the two signs that mean stop: the smell of ammonia, and yellow staining at the back or sides",
+        "source": "recall notices and service literature",
+        "state": "READ",
+        "by": "Cloud read the ammonia and yellow residue signs in the recall notices and the Dometic fault tables",
+        "at": "2026-09-23"
+      },
+      {
+        "id": "C10",
+        "text": "~~\"the heating element should be noticeably warm within 15 to 20 minutes\"~~ replaced with the makers' own timings: the freezer compartment cold about an hour after switching on and",
+        "source": "Dometic RM 85xx operating manual; Norcold N400/N510 owner's manual",
+        "state": "READ",
+        "by": "Cloud read Dometic RM 85xx (freezer cold about an hour, compartment several hours) and Norcold N400/N510 (eight hours, call service after two)",
+        "at": "2026-09-23"
+      },
+      {
+        "id": "C11",
+        "text": "~~\"a dirty burner orifice, the number one owner fix\"~~ ranking dropped; clearing the orifice is stated as the first thing to try",
+        "source": "ranking claim removed",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C12",
+        "text": "~~\"the classic cause\"~~ replaced: a battery that reads fine at rest but sags under load is the first thing to rule out",
+        "source": "ranking claim removed",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C13",
+        "text": "boiler hot, absorber warm, evaporator cold as the diagnostic, and Dometic's fault tables point at a defective heating element for a unit that will not cool on 12-volt or mains powe",
+        "source": "Dometic RM 85xx operating manual, fault tables",
+        "state": "READ",
+        "by": "Cloud read the Dometic RM 85xx fault tables: no cooling on 12-volt or mains points at the heating element",
+        "at": "2026-09-23"
+      },
+      {
+        "id": "C14",
+        "text": "the yellow residue is sodium chromate from the leaked solution",
+        "source": "Dometic RM 85xx operating manual",
+        "state": "READ",
+        "by": "Cloud read the Dometic RM 85xx manual on the ammonia and water solution",
+        "at": "2026-09-23"
+      },
+      {
+        "id": "C15",
+        "text": "~~\"the repair often costs more than replacing the entire refrigerator\"~~ replaced with the mechanism: a cooling unit is a sealed assembly with no serviceable parts, so it is replac",
+        "source": "cost and behaviour claim removed",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C16",
+        "text": "~~\"about one pound of propane for roughly eight hours\"~~ replaced with Dometic's own consumption column: 0.6 lb of propane over 24 hours at 25 °C, 0.8 lb on the largest models",
+        "source": "Dometic RM 85xx operating manual, consumption column",
+        "state": "READ",
+        "by": "Cloud read Dometic's consumption column: 270 g over 24 hours at 25 C, 380 g on the largest models",
+        "at": "2026-09-23"
+      },
+      {
+        "id": "C17",
+        "text": "~~\"draws about 300 to 400 watts continuously\"~~ replaced with the published rating and consumption: a 135 W mains element on a mid-size unit, 125 to 190 W across the family, and 2.",
+        "source": "Dometic RM 85xx operating manual, rating and consumption columns",
+        "state": "READ",
+        "by": "Cloud read Dometic's rating column: 125 to 190 W mains, and 2.4 to 3.2 kWh over 24 hours",
+        "at": "2026-09-23"
+      },
+      {
+        "id": "C18",
+        "text": "~~\"drawing 10 to 30 amps\"~~ replaced with the battery column: a 130 W 12-volt element, about 11 amps at 12 volts, taking a 100 amp-hour battery down to half charge in about four ho",
+        "source": "Dometic RM 85xx operating manual, battery column",
+        "state": "READ",
+        "by": "Cloud read Dometic's battery column: 120 to 170 W, about 11 amps at 12 volts on a mid-size unit",
+        "at": "2026-09-23"
+      },
+      {
+        "id": "C19",
+        "text": "~~\"3 to 5 amps while running, 30 to 80 amp-hours per day\"~~ replaced: Dometic's 1.6 to 2.8 cubic foot compressor units are rated at 5.0 to 5.6 amps on 12 volts, about 60 to 67 watt",
+        "source": "Dometic CRX50/CRX65/CRX80 manual; arithmetic stated on the page",
+        "state": "READ",
+        "by": "Cloud read the Dometic CRX50/65/80 manual: 5.0, 5.5 and 5.6 amps at 12 volts, 40 to 48 W on AC",
+        "at": "2026-09-23"
+      },
+      {
+        "id": "C20",
+        "text": "~~\"a boondocking power budget treats about 25 amp-hours a day as the healthy baseline\"~~ cut; the section now states the duty-cycle relationship instead of a baseline nobody publis",
+        "source": "claim removed",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C21",
+        "text": "~~\"roughly a quarter of the energy\"~~ replaced with like-for-like rated loads: 5.6 amps on 12 volts, about 67 watts while the compressor runs, against a 135 W element in a mid-size",
+        "source": "Dometic CRX50/CRX65/CRX80 manual; Dometic RM 85xx operating manual; arithmetic stated on the page",
+        "state": "READ",
+        "by": "Cloud read both rated loads: CRX 5.6 A at 12 V, and the RM 85xx 135 W mains element",
+        "at": "2026-09-23"
+      },
+      {
+        "id": "C22",
+        "text": "~~\"struggle in direct sun above about 95 degrees\"~~ replaced with the published rating band: cooling performance held from 10 to 32 °C ambient (50 to 90 °F), an extra fan recommend",
+        "source": "Dometic RM 85xx operating manual",
+        "state": "READ",
+        "by": "Cloud read Dometic's Climatic Class SN statement: performance held from 10 to 32 C ambient, fan recommended above",
+        "at": "2026-09-23"
+      },
+      {
+        "id": "C23",
+        "text": "~~\"can read 10 to 20 degrees warmer than its setting\"~~ replaced with the maker's own statement that the temperature levels do not relate to absolute temperature values",
+        "source": "Dometic RM 85xx operating manual",
+        "state": "READ",
+        "by": "Cloud read Dometic's note that the temperature levels do not relate to absolute temperature values",
+        "at": "2026-09-23"
+      },
+      {
+        "id": "C24",
+        "text": "~~\"Ninety percent of 'my RV fridge is not cooling' begins as...\"~~ cut to \"Most ... cases begin as a leveling, ventilation, seal, or burner problem\", and the closing sentence rebui",
+        "source": "figure cut, per Ty's ruling",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C25",
+        "text": "\"Last reviewed: Sep 23, 2026, against the sources listed below\"",
+        "source": "the seven documents listed are the ones opened for this page on 2026-09-23",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C26",
+        "text": "the Sources block carries no intro sentence at all; the \"so you can check the figures\" tic was removed sitewide on 2026-09-23",
+        "source": "claim removed",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      }
+    ]
   },
   "guides/rv-solar-not-charging.html": {
     "hash": "7f3719b89a290507",

@@ -33,11 +33,13 @@ page and it is 60 characters; that is not enough room to fix it afterwards.
 
 | | |
 |---|---|
-| **Target query** | |
-| **Title (whole string, including the brand suffix)** | |
-| **Characters** | **measure it, do not estimate** -- Google truncates around 60 |
-| **Query position** | front-loaded |
-| **Intent** | informational / comparison / troubleshooting |
+| **Target query** | `rv refrigerator not cooling` / `rv fridge not cooling` |
+| **Title (whole string)** | **RV Fridge Not Cooling: Absorption vs Compressor Fridge** |
+| **Characters** | **54** (measured, not estimated; guides carry no brand suffix, so this is the whole string) |
+| **Query position** | front-loaded: "RV Fridge Not Cooling" is the first four words |
+| **Intent** | troubleshooting, urgent, with a safety question underneath it |
+| **H1** | RV refrigerator not cooling: The complete troubleshooting guide (63 characters, no limit on an H1) |
+| **Meta description** | 145 characters, inside the 140-160 gate |
 
 Rules, from the 2026-09-23 audit of all 40 live titles:
 - **Under 60 characters including ` | OriginRV`.** Only one live title was over, and it was the only
@@ -108,34 +110,34 @@ H2  The other suspects, in order
 
 **The pattern to notice: the recall material is well sourced. Every performance number is not.**
 
-| # | Claim | Source it should carry | Status |
+| # | Claim on the page now | Source it carries | Status |
 |---|---|---|---|
-| C1 | "an RV fridge is not a house fridge. Most RVs use an absorption unit" | qualitative, fine as is | OK |
-| C2 | **"Roughly 80 percent of factory-installed RV fridges are absorption units"** | no source exists for this. Either find an RVIA/industry figure or **cut the number** and say "most" | **UNSOURCED** |
-| C3 | absorption runs on propane, 120 V, some models 12 V while driving | manufacturer operating manual (already in Sources) | SOURCED |
-| C4 | "An absorption fridge works by gravity. The ammonia solution flows downhill…" | physics explanation; Dometic operating manual covers the cycle | PARTIAL |
-| C5 | **"The RV service industry has long treated unlevel operation as the leading contributor to absorption cooling unit failures"** | **unnamed authority** — "the industry" standing in for a claim. Name a body or state it as our own plain observation | **NAMED-UNSOURCED** |
-| C6 | "NHTSA recalls… trace fires back to cooling units that developed a fatigue crack in the boiler tube" | NHTSA recall notices — already in Sources | SOURCED |
-| C7 | **"Dometic's recall alone covered more than 900,000 units"** | needs the figure verified against the recall notice already linked, or cut | **UNVERIFIED** |
-| C8 | "Some recalled units received a retrofit kit, and some retrofit kits are years old now" | recall notices | PARTIAL |
-| C9 | symptoms that mean shut it off: ammonia smell, yellow residue, running hard without cooling | recall notices + service literature | SOURCED |
-| C10 | "the heating element should be noticeably warm within **15 to 20 minutes**" | manufacturer manual | **UNSOURCED** |
-| C11 | "A yellow or flickering flame means a dirty burner orifice, **the number one owner fix**" | a ranking claim with no source. Drop "number one" or find one | **UNSOURCED** |
-| C12 | "a battery that reads fine resting but sags when the compressor starts is **the classic cause**" | same shape as C11 | **UNSOURCED** |
-| C13 | boiler hot / absorber warm / evaporator cold as the diagnostic | manufacturer service manual | PARTIAL |
-| C14 | "the yellow **sodium chromate** residue" | correct chemistry; Dometic manual | PARTIAL |
-| C15 | "**the repair often costs more than replacing the entire refrigerator, which is why most owners replace**" | cost + behaviour claim, no source | **UNSOURCED** |
-| C16 | "about **one pound of propane** for roughly **eight hours**" | Dometic manual or a propane-consumption figure | **UNSOURCED** |
-| C17 | "120-volt shore power: draws about **300 to 400 watts** continuously" | Dometic manual states the element wattage — cite it | **UNSOURCED** |
-| C18 | "12-volt: drawing **10 to 30 amps**, able to drain a **100 amp-hour battery in about four hours**" | arithmetic ✓ (100/25 = 4). Cite the draw from the manual | PARTIAL |
-| C19 | "compressor: **3 to 5 amps** while running, landing around **30 to 80 amp-hours per day**" | computed: 3 A at 100 % duty is 72 Ah/day and 5 A is 120 Ah/day. So **80 Ah/day is unreachable on a 3 A unit at any duty cycle** (72 is its ceiling), while on a 5 A unit the pair implies a 25–67 % duty cycle. The two ranges therefore only hold together near the top of the amp range — and the duty cycle is never mentioned. See D3 | **UNDERSTATED** |
-| C20 | "**a boondocking power budget treats about 25 amp-hours a day** as the healthy baseline for a DC fridge" | **contradicts C19 two paragraphs earlier (30 to 80)** | **INTERNAL** |
-| C21 | "a modern compressor fridge uses roughly **a quarter of the energy** of an absorption unit on electric" | **does not reconcile with the page's own figures.** Absorption at 120 V is 300–400 W; the compressor at 3–5 A × 12 V is 36–60 W. That is a ratio of **5.0× to 11.1×**, so the compressor uses roughly **a fifth to an eleventh** of the energy — a quarter is outside that range entirely. Correct the multiple, or say which mode it is compared against (against 12 V absorption, 120–360 W, the ratio is 2.0×–10.0×, where a quarter is closer) | **WRONG** |
-| C22 | "Absorption fridges struggle in direct sun above about **95 degrees**" | no source | **UNSOURCED** |
-| C23 | "an absorption fridge can read **10 to 20 degrees warmer** than its setting and still be healthy" | no source | **UNSOURCED** |
-| C24 | **"Ninety percent of 'my RV fridge is not cooling' begins as a leveling, ventilation, seal, or burner problem"** | no source exists. It is also the page's closing claim, so it carries weight | **UNSOURCED** |
-| C25 | "Last reviewed: Sep 21, 2026, against the sources listed below" | page-level claim, same shape as the towing page's C28 | OVER-CLAIMS |
-| C26 | Sources intro: "so you can check the figures for yourself" | **fine here, and do NOT import the towing fix.** All five sources are free and reachable — unlike SAE J2807 | OK |
+| C1 | an RV fridge is not a house fridge; absorption and 12-volt compressor are the two types | qualitative | CONFIRMED |
+| C2 | ~~"roughly 80 percent of factory-installed RV fridges are absorption units"~~ cut, and the page now describes the two types with no prevalence figure | claim removed | CONFIRMED |
+| C3 | absorption runs on propane, on 120-volt shore power, and on some models 12-volt while driving | Dometic RM 85xx operating manual | CONFIRMED |
+| C4 | the absorption cycle is a sealed ammonia and water solution driven by heat, with no moving parts in the cooling unit | Dometic RM 85xx operating manual | CONFIRMED |
+| C5 | replaced the unnamed "industry" appeal with the maker's published limit: built to run within 3 degrees off level side to side and 6 degrees front to back, past which the cooling system can be damaged | Norcold N400/N510 owner's manual, "Leveling" | READ |
+| C6 | NHTSA recalls for Dometic and Norcold trace fires to cooling units that developed a fatigue crack in the boiler tube and released flammable solution | NHTSA recall notice 10V-584; Dometic recall page | READ |
+| C7 | ~~"Dometic's recall alone covered more than 900,000 units"~~ replaced with the recall's published scope: Dometic covers two-door units built April 1997 through September 2006, Norcold the 1200, 1201, 1210 and 1211 models built through October 2010, by serial number | Dometic recall page; NHTSA 10V-584 | READ |
+| C8 | Norcold's remedy for the 1200 series is a retrofit kit, part number 634737, fitted to the cooling unit | NHTSA recall notice 10V-584 | READ |
+| C9 | the two signs that mean stop: the smell of ammonia, and yellow staining at the back or sides | recall notices and service literature | READ |
+| C10 | ~~"the heating element should be noticeably warm within 15 to 20 minutes"~~ replaced with the makers' own timings: the freezer compartment cold about an hour after switching on and the food compartment several hours (Dometic), eight hours to cool before loading food and call service if it has not started cooling within about two hours (Norcold) | Dometic RM 85xx operating manual; Norcold N400/N510 owner's manual | READ |
+| C11 | ~~"a dirty burner orifice, the number one owner fix"~~ ranking dropped; clearing the orifice is stated as the first thing to try | ranking claim removed | CONFIRMED |
+| C12 | ~~"the classic cause"~~ replaced: a battery that reads fine at rest but sags under load is the first thing to rule out | ranking claim removed | CONFIRMED |
+| C13 | boiler hot, absorber warm, evaporator cold as the diagnostic, and Dometic's fault tables point at a defective heating element for a unit that will not cool on 12-volt or mains power | Dometic RM 85xx operating manual, fault tables | READ |
+| C14 | the yellow residue is sodium chromate from the leaked solution | Dometic RM 85xx operating manual | READ |
+| C15 | ~~"the repair often costs more than replacing the entire refrigerator"~~ replaced with the mechanism: a cooling unit is a sealed assembly with no serviceable parts, so it is replaced as a unit rather than repaired | cost and behaviour claim removed | CONFIRMED |
+| C16 | ~~"about one pound of propane for roughly eight hours"~~ replaced with Dometic's own consumption column: 0.6 lb of propane over 24 hours at 25 °C, 0.8 lb on the largest models | Dometic RM 85xx operating manual, consumption column | READ |
+| C17 | ~~"draws about 300 to 400 watts continuously"~~ replaced with the published rating and consumption: a 135 W mains element on a mid-size unit, 125 to 190 W across the family, and 2.4 to 3.2 kWh over 24 hours at 25 °C | Dometic RM 85xx operating manual, rating and consumption columns | READ |
+| C18 | ~~"drawing 10 to 30 amps"~~ replaced with the battery column: a 130 W 12-volt element, about 11 amps at 12 volts, taking a 100 amp-hour battery down to half charge in about four hours | Dometic RM 85xx operating manual, battery column | READ |
+| C19 | ~~"3 to 5 amps while running, 30 to 80 amp-hours per day"~~ replaced: Dometic's 1.6 to 2.8 cubic foot compressor units are rated at 5.0 to 5.6 amps on 12 volts, about 60 to 67 watts, and the page now states the daily figure as running draw times duty cycle, with its own example (5.5 amps at half the time, about 66 amp-hours) | Dometic CRX50/CRX65/CRX80 manual; arithmetic stated on the page | READ |
+| C20 | ~~"a boondocking power budget treats about 25 amp-hours a day as the healthy baseline"~~ cut; the section now states the duty-cycle relationship instead of a baseline nobody published | claim removed | CONFIRMED |
+| C21 | ~~"roughly a quarter of the energy"~~ replaced with like-for-like rated loads: 5.6 amps on 12 volts, about 67 watts while the compressor runs, against a 135 W element in a mid-size absorption unit that runs most of the time on shore power | Dometic CRX50/CRX65/CRX80 manual; Dometic RM 85xx operating manual; arithmetic stated on the page | READ |
+| C22 | ~~"struggle in direct sun above about 95 degrees"~~ replaced with the published rating band: cooling performance held from 10 to 32 °C ambient (50 to 90 °F), an extra fan recommended above that, and sunlit installs listed by the maker among the conditions where perishables cannot be held | Dometic RM 85xx operating manual | READ |
+| C23 | ~~"can read 10 to 20 degrees warmer than its setting"~~ replaced with the maker's own statement that the temperature levels do not relate to absolute temperature values | Dometic RM 85xx operating manual | READ |
+| C24 | ~~"Ninety percent of 'my RV fridge is not cooling' begins as..."~~ cut to "Most ... cases begin as a leveling, ventilation, seal, or burner problem", and the closing sentence rebuilt | figure cut, per Ty's ruling | CONFIRMED |
+| C25 | "Last reviewed: Sep 23, 2026, against the sources listed below" | the seven documents listed are the ones opened for this page on 2026-09-23 | CONFIRMED |
+| C26 | the Sources block carries no intro sentence at all; the "so you can check the figures" tic was removed sitewide on 2026-09-23 | claim removed | CONFIRMED |
 
 ## 7. Defects, ranked
 
@@ -159,15 +161,42 @@ H2  The other suspects, in order
   yellow residue are the two things that turn this page from a tip list into something worth
   reading. If anything, they belong higher.
 
-## 8. Open questions for Ty
+## 8. Ruled and decided
 
-1. **The title says "The complete troubleshooting guide"** — the same suffix the towing page's
-   sibling problem had. Keep, or retitle? And it currently capitalises after the colon.
-2. **C24 ("Ninety percent…")** — cut the figure and say "most", or find a source? My recommendation:
-   cut it. It is unfindable and it is the closing line, so it is the one a reader remembers.
-3. **C2 ("Roughly 80 percent…")** — same question. Recommendation: cut to "most".
-4. **C21 ("a quarter of the energy")** — correct it to the figures the page already prints (about a
-   seventh against 120 V shore power), or compare it against 12 V absorption where a quarter is
-   closer? Recommendation: correct it, and say which mode.
-5. **Do we want the fire content elevated?** A short "stop if you see this" block near the top, before
-   the troubleshooting, would serve the reader who is actually worried.
+| # | Question | Answer |
+|---|---|---|
+| 1 | The H1 and the `<title>` frame the page differently ("The complete troubleshooting guide" against "Absorption vs Compressor Fridge") | **Leave the H1 alone.** It is a working page title, the rule says not to churn one for style, and case has no ranking effect. The two agree on substance: both describe a troubleshooting guide for a fridge that is not cooling. Measured: title 54 characters, H1 63 (no limit on an H1). |
+| 2 | C24, "Ninety percent of cases..." | **RULED by Ty: cut the figure.** Applied to the page. |
+| 3 | C2, "Roughly 80 percent of factory-installed fridges are absorption units" | **RULED by Ty: cut the figure.** Applied, and taken further: the lede and the type section no longer state any prevalence figure at all, because "most" is the same unsourced claim with a smaller number in it. |
+| 4 | C21, "roughly a quarter of the energy" | **Decided (mine).** The claim is now built on two rated loads from the makers rather than a ratio: a 135 W element in a mid-size absorption unit, and a 2.8 cubic foot compressor unit at 5.6 amps on 12 volts, about 67 watts while it runs, plus the fact that it rests. Nothing in the sentence needs a comparison the page cannot show. |
+| 5 | Elevate the fire content? | **Decided (mine): yes.** A stop callout now sits directly under the answer block, naming both signs and the action, and the symptoms paragraph was deleted from the leveling section so the signs appear twice on the page (action at the top, mechanism in the cooling-unit section) rather than three times. This does not change what the page claims, which is why it was mine to make. |
+
+**One decision that was not on the list, taken the same day:** the two structural defects the
+instruments could not see. A stray `>` was rendering as visible text on three pages
+(`guides/rv-refrigerator-not-cooling.html`, `guides/battery-winter-storage.html`, and `404.html` where
+a truncated `<link>` tag swallowed the next tag and printed the spare bracket). All three are fixed,
+and `verify.py` now has a check for the class: two closing brackets in a row, or a tag opened and
+never closed. Negative-tested by reintroducing the typo on `404.html` and watching the gate fail with
+the right file and line.
+
+## 9. Drafted, 2026-09-23
+
+Every defect in §7 was addressed on the page, and the four unsourced numbers that could not be
+sourced were **replaced with published figures from documents that were then opened**, not deleted:
+Dometic's RM 85xx operating manual (element ratings, 24-hour consumption, ambient band, fault tables,
+the temperature-level note), Norcold's N400/N510 owner's manual (the 3 and 6 degree leveling limits,
+cool-down times), Norcold's N6/N8 installation manual, Norcold's 1200-series recall notice, Dometic's
+recall page, and Dometic's CRX50/65/80 manual for the compressor draw. Sources went **5 to 7**, and
+every maker named in the body appears in that list.
+
+The page gained the site's second table (mode, draw, per day, when to use it, verdict), which is what
+makes the duty-cycle relationship visible instead of buried in four bullets that contradicted each
+other.
+
+**D6 was stale.** The five headings that "break the colon convention" were written before Ty settled
+the rule the other way: a capital after a colon in a heading. `house-style.py` reports **0 findings**
+on this page.
+
+**Not yet done on this page:** the independent review round, and therefore the verdict. Per-claim
+provenance is recorded here and in the ledger, but the manifest still records a page-level verdict,
+which is still the wrong shape.

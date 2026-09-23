@@ -797,6 +797,26 @@ if _gutter_bad:
 else:
     print("  no class on a .wrap zeroes its horizontal padding")
 
+print("\n=== no tag is left unterminated, and no spare angle bracket renders as text ===")
+_bracket_bad = []
+for _p in sorted(p for p in ROOT.rglob("*.html") if ".git" not in p.parts):
+    _raw = re.sub(r"<(script|style)\b.*?</\1>", "", _p.read_text(encoding="utf-8"), flags=re.S | re.I)
+    for _m in re.finditer(r">[ \t\r\n]*>", _raw):
+        _line = _raw.count("\n", 0, _m.start()) + 1
+        _bracket_bad.append("%s line %d: two closing brackets in a row (%r)"
+                            % (_p.relative_to(ROOT), _line, _raw[_m.start():_m.start() + 12].replace("\n", " ")))
+    for _m in re.finditer(r"<[a-zA-Z][^<>]*<", _raw):
+        _line = _raw.count("\n", 0, _m.start()) + 1
+        _bracket_bad.append("%s line %d: a tag opened and never closed (%r)"
+                            % (_p.relative_to(ROOT), _line, _raw[_m.start():_m.start() + 40].replace("\n", " ")))
+if _bracket_bad:
+    for _b in _bracket_bad:
+        print("  " + _b)
+    print("  a tag that never closes swallows the next one, and the spare bracket prints as text")
+    fails.append("unterminated tag")
+else:
+    print("  every tag closes, and no spare bracket prints")
+
 if "--links" in sys.argv:
     print("\n=== external listing links (live HTTP) ===")
     src = ROOT / "assets/js/listings/listings-or.js"
