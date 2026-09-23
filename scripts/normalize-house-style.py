@@ -7,7 +7,10 @@ rule ("statement headings take a period, label headings do not") needed a human 
 every heading, which is why it would have drifted again. These cannot.
 
   RULE 1  No heading ends with a full stop. Question marks and other punctuation stay.
-  RULE 2  A capital letter follows a colon inside a heading.
+  RULE 2  A LOWERCASE letter follows a colon inside a heading.  INVERTED 2026-09-23 on Ty's
+          ruling. It enforced the opposite because a site-wide tally read 49 capital vs 34
+          lowercase and took the majority as the standard -- the majority was the OLDER batch.
+          All-caps is left alone: an acronym is not a sentence start.
 
 Plus the sweep: "We update these guides when real-world data changes." is a claim about the
 site's diligence rather than a fact about the page, and Ty's standing rule is to never sell
@@ -56,14 +59,17 @@ def fix_heading(inner_html):
     if stripped.endswith("."):
         inner_html = stripped[:-1]
         reasons.append("dropped trailing period")
-    # RULE 2: capitalise the first letter after a colon
+    # RULE 2 (INVERTED 2026-09-23, Ty's ruling): LOWERCASE the first letter after a colon.
+    # The (?![A-Z]) guard leaves an all-caps word alone, so "Sources: NHTSA and SAE" survives
+    # while "The 80% rule: Margin is..." becomes "margin is...". Without that guard the rule
+    # would mangle every acronym it met.
     plain = TAG.sub("", inner_html)
-    m = re.search(r":(\s+)([a-z])", plain)
+    m = re.search(r":(\s+)([A-Z])(?![A-Z])", plain)
     if m:
         if "<" in inner_html:
             return inner_html, reasons + ["SKIPPED colon rule: heading has inline markup"]
-        inner_html = plain[:m.start(2)] + m.group(2).upper() + plain[m.end(2):]
-        reasons.append("capitalised after colon")
+        inner_html = plain[:m.start(2)] + m.group(2).lower() + plain[m.end(2):]
+        reasons.append("lowercased after colon")
     return inner_html, reasons
 
 
