@@ -1062,7 +1062,129 @@
       "outbox/reply-20260922-1434-batch1-signoff-batch2-checklists.md"
     ],
     "invalidated_by": "house-style sweep 2026-09-23: 77 colon lowercases across 16 pages; heading text changed, meaning did not",
-    "invalidated_at": "2026-09-23"
+    "invalidated_at": "2026-09-23",
+    "claims": [
+      {
+        "id": "C1",
+        "text": "the six-year rule: RV tires should be replaced six years from their date of manufacture",
+        "source": "Goodyear's product service bulletin 2022-16 on RV tire service life (in Sources, with a federal copy linked)",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C2",
+        "text": "the DOT date code is four digits, week and year, and it is stamped on one sidewall only",
+        "source": "49 CFR 574.5 (in Sources)",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C3",
+        "text": "the code may be on the inside face, so a tire fitted with the whitewall out can hide it",
+        "source": "49 CFR 574.5 plus the practical consequence",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C4",
+        "text": "at five years, have a tire professional inspect it",
+        "source": "the same bulletin - the inspection interval is half the claim",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C5",
+        "text": "ST tires are built for trailers and LT for light trucks, and the same size can carry different capacity by type",
+        "source": "a tire maker's own guide",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C6",
+        "text": "the load capacity of an ST trailer tire is calculated assuming a maximum speed of 65 mph, and its capacity is only valid up to that speed",
+        "source": "a tire maker or the Tire and Rim Association. A number a reader acts on: read it or cut it",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C7",
+        "text": "some carry a speed symbol implying more, but that rating only applies at the pressure and load stated for it, so 65 is the ceiling unless the tire says otherwise",
+        "source": "the same source as C6",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C8",
+        "text": "keep 15 percent headroom between the tire's rated load and the load it actually carries; 125 percent of the measured load is better",
+        "source": "Tire and Rim Association guidance or a maker's load tables. Two numbers a reader acts on",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C9",
+        "text": "the pressure to use is the one on the vehicle's certification label, not the maximum molded on the sidewall",
+        "source": "Michelin's load and inflation tables (in Sources) and the placard's legal basis (FMVSS 110)",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C10",
+        "text": "adding about 10 psi for storage reduces flat-spotting, and it comes back down before the road",
+        "source": "a tire maker's storage guidance. A number a reader acts on",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C11",
+        "text": "age beats tread because the rubber degrades from the inside and the tread can stay full",
+        "source": "NHTSA's tire aging material (in Sources)",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C12",
+        "text": "sidewall cracking, bulges, and anything caught in the tread are stops rather than symptoms",
+        "source": "visual inspection guidance; safety framing",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C13",
+        "text": "the certification label's pressure is a cold pressure",
+        "source": "definition; the placard says so",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C14",
+        "text": "never buy used RV tires",
+        "source": "our advice, and the page already argues it",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C15",
+        "text": "\"Last reviewed: Sep 21, 2026, against the sources listed below\"",
+        "source": "provenance; Ty ruled it stays and is fine print",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      }
+    ]
   },
   "guides/rv-towing-capacity.html": {
     "hash": "b1e4c9755bd1819b",
