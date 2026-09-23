@@ -941,8 +941,8 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 .w-disclaimer{font-size:12px;color:var(--text-3);padding-top:14px;border-top:1px solid var(--border);line-height:1.5}
 
 /* ---------- review dates (doctrine: show freshness) ---------- */
-.reviewed{font-size:12.5px;color:var(--text-3);margin-top:14px;border-bottom:1px solid var(--border);padding-bottom:10px}
-.reviewed::before{content:"\2713 ";color:var(--b1);font-weight:800}
+.reviewed{font-size:11.5px;color:var(--text-3);font-style:italic;margin-top:14px}
+.reviewed::before{content:""}
 
 /* ---------- hero CTA + everything deck (2026-09-16) ---------- */
 .hero-cta{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:20px}
