@@ -73,6 +73,46 @@ def totals(gsc, token, site, start, end):
     return rows[0]
 
 
+GA4_API = "https://analyticsdata.googleapis.com/v1beta/properties/%s:runReport"
+
+
+def ga4_run(token, prop, body):
+    resp = requests.post(GA4_API % prop,
+                         headers={"Authorization": "Bearer " + token},
+                         json=body, timeout=(10, 45))
+    if resp.status_code != 200:
+        return None, "HTTP %s: %s" % (resp.status_code, resp.text[:200])
+    return resp.json(), None
+
+
+def ga4_summary(token, prop, start, end):
+    """Sessions, users, page views and average session length for a range."""
+    body = {"dateRanges": [{"startDate": start.isoformat(), "endDate": end.isoformat()}],
+            "metrics": [{"name": "sessions"}, {"name": "totalUsers"},
+                        {"name": "screenPageViews"}, {"name": "averageSessionDuration"}]}
+    data, err = ga4_run(token, prop, body)
+    if err:
+        return None, err
+    rows = data.get("rows", [])
+    if not rows:
+        return [], None
+    return list(zip(["sessions", "users", "page views", "average session (s)"],
+                    [m["value"] for m in rows[0]["metricValues"]])), None
+
+
+def ga4_pages(token, prop, start, end, limit=10):
+    body = {"dateRanges": [{"startDate": start.isoformat(), "endDate": end.isoformat()}],
+            "dimensions": [{"name": "pagePath"}],
+            "metrics": [{"name": "screenPageViews"}, {"name": "sessions"}],
+            "orderBys": [{"metric": {"metricName": "screenPageViews"}, "desc": True}],
+            "limit": limit}
+    data, err = ga4_run(token, prop, body)
+    if err:
+        return [], err
+    return [(r["dimensionValues"][0]["value"], r["metricValues"][0]["value"],
+             r["metricValues"][1]["value"]) for r in data.get("rows", [])], None
+
+
 def top_rows(gsc, token, site, dimension, start, end, limit=10):
     payload = gsc.query(token, site, {
         "startDate": start.isoformat(), "endDate": end.isoformat(),
@@ -210,6 +250,47 @@ def build(args):
         add("No page data in the window.")
     add("")
 
+    # ---------- 3. on-site behaviour ----------
+    add("## 3. On-site behaviour (GA4)")
+    add("")
+    # GA4 has no reporting lag, unlike Search Console, so this window runs to today
+    # rather than stopping at the lagged date. Using the Search Console window here
+    # would sit before the tag existed and could only ever print zeros.
+    ga_start = today - timedelta(days=6)
+    ga_token = gsc.access_token(creds, gsc.GA_SCOPE)
+    tot, err = ga4_summary(ga_token, args.ga4_property, ga_start, today)
+    if err:
+        add("GA4 unavailable: %s" % err)
+        add("")
+        add("If this reports a disabled API or a missing permission, check that the Analytics")
+        add("Data API is enabled on the project and that the service account is a Viewer on")
+        add("the GA4 property.")
+    elif not tot:
+        add("GA4 returned no rows for %s to %s. Either nobody loaded a page, or the site was" % (ga_start, today))
+        add("not being measured yet. The tag went live on 2026-09-21.")
+    else:
+        add("| metric | %s to %s (includes today, GA4 is live) |" % (ga_start, today))
+        add("|---|---|")
+        for label, value in tot:
+            add("| %s | %s |" % (label, value))
+        add("")
+        pages, perr = ga4_pages(ga_token, args.ga4_property, ga_start, today)
+        if perr:
+            add("Page-level figures unavailable: %s" % perr)
+        elif pages:
+            add("| page | views | sessions |")
+            add("|---|---|---|")
+            for path, views, sessions in pages:
+                add("| %s | %s | %s |" % (path, views, sessions))
+        else:
+            add("No page-level engagement in the window.")
+    add("")
+    add("The site events added 2026-09-22 (site_search, faq_open, outbound_click, js_error) land")
+    add("in GA4's Events report first. They belong in this section once there is volume worth")
+    add("summarising, because the search terms that find nothing are the content backlog and")
+    add("faq_open is the only direct measure of which question brought someone in.")
+    add("")
+
     # ---------- 3. coverage ----------
     previous_sweep = None
     for candidate in (SNAPSHOT, SWEEP_PATH):
@@ -229,14 +310,14 @@ def build(args):
 
     flags = []
     if args.no_sweep:
-        add("## 3. Indexing coverage")
+        add("## 4. Indexing coverage")
         add("")
         add("Skipped (--no-sweep).")
         add("")
     else:
         rows, counts, changes = coverage(gsc, token, site, previous_sweep)
         indexed = counts.get("Submitted and indexed", 0)
-        add("## 3. Indexing coverage")
+        add("## 4. Indexing coverage")
         add("")
         add("| state | urls |")
         add("|---|---|")
@@ -268,7 +349,7 @@ def build(args):
 
     # ---------- 4. change log against effects ----------
     entries = change_entries(args.window, today)
-    add("## 4. Changes, and what they did")
+    add("## 5. Changes, and what they did")
     add("")
     if not entries:
         add("The change log is empty.")
@@ -303,7 +384,7 @@ def build(args):
 
     # ---------- 5. health and instruments ----------
     h = health()
-    add("## 5. Health")
+    add("## 6. Health")
     add("")
     add("- robots.txt: HTTP %s, %d bytes" % (h["robots"]["status"], h["robots"]["bytes"]))
     add("- sitemap.xml: HTTP %s, %d entries carrying lastmod" % (h["sitemap"]["status"], h["sitemap"]["lastmod"]))
@@ -321,7 +402,7 @@ def build(args):
     except Exception as exc:
         add("- sitemap fetch state unavailable (%s)" % exc)
     add("")
-    add("## 6. Instruments")
+    add("## 7. Instruments")
     add("")
     add("- Search Console: wired, this report.")
     add("- GA4: **not wired to this report.** Needs the Analytics Data API enabled on the")
@@ -332,7 +413,7 @@ def build(args):
     add("")
 
     # ---------- 7. flags ----------
-    add("## 7. Worth a look")
+    add("## 8. Worth a look")
     add("")
     if flags:
         for flag in flags:
@@ -350,6 +431,7 @@ def main():
     parser.add_argument("--lag", type=int, default=3, help="days of reporting lag to exclude")
     parser.add_argument("--window", type=int, default=14, help="days either side of a change")
     parser.add_argument("--no-sweep", action="store_true", help="skip the 39 URL sweep")
+    parser.add_argument("--ga4-property", default="555179873", help="GA4 property id")
     parser.add_argument("--quiet", action="store_true", help="write the file, print only the path")
     args = parser.parse_args()
 

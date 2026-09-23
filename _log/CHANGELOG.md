@@ -16,6 +16,22 @@ No secrets, keys, tokens or customer details in here. This file is committed.
 
 ## 2026-09-22
 
+### infra: GA4 in the weekly report, on a live seven day window
+- why: GA4 has no reporting lag, so the Search Console window would have sat before the tag existed and could only ever print zeros
+- expect: the report shows sessions and top pages every week from now on, and the first non-zero figures should be Ty's own visits
+- files: scripts/weekly-report.py, scripts/gsc.py
+- tags: instrumentation, ga4
+- commit: 9d06882 (pushed)
+- deployed: 2026-09-22T21:27:24-07:00
+
+### search: Four GA4 events: site_search with a fall-through flag, faq_open, outbound_click, js_error
+- why: the page-view count cannot answer what someone typed, which question they opened, or whether a document link was worth the click; the typed on-site query was discarded entirely
+- expect: within 2 weeks, site_search events show terms we have no page for, and faq_open shows which of each guide's 10 to 12 questions people actually open. Zero events would mean the events are not firing, which is a different finding from nobody searching.
+- files: assets/js/site.js, scripts/smoke-test.js
+- tags: instrumentation, ga4, events
+- commit: 9d06882 (pushed)
+- deployed: 2026-09-22T21:25:58-07:00
+
 ### seo: Sitemap entries carry lastmod, taken from the last commit that touched each page
 - why: the sitemap had no lastmod at all; a hand-written date rots, and a stale one is worse than none
 - expect: crawl coverage starts moving: the 22 URLs Google has never fetched begin to appear, and the 8 'discovered, not indexed' convert. Window 2 to 4 weeks.

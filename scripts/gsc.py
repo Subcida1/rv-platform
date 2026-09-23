@@ -68,6 +68,7 @@ if os.environ.get("ORIGINRV_GSC_IPV6") != "1":
 
 TOKEN_URL = "https://oauth2.googleapis.com/token"
 SCOPE = "https://www.googleapis.com/auth/webmasters.readonly"
+GA_SCOPE = "https://www.googleapis.com/auth/analytics.readonly"
 API = "https://www.googleapis.com/webmasters/v3"
 DEFAULT_SITE = "sc-domain:originrv.com"
 BASE_URL = "https://originrv.com"
@@ -115,13 +116,17 @@ def load_credentials(path):
     return creds
 
 
-def access_token(creds):
-    """Sign a JWT with the service account key and exchange it for a token."""
+def access_token(creds, scope=SCOPE):
+    """Sign a JWT with the service account key and exchange it for a token.
+
+    The same credential reads two products, so the scope is a parameter: Search
+    Console (default) or the Analytics Data API (GA_SCOPE)."""
+    assert scope
     now = int(time.time())
     assertion = jwt.encode(
         {
             "iss": creds["client_email"],
-            "scope": SCOPE,
+            "scope": scope,
             "aud": creds.get("token_uri", TOKEN_URL),
             "iat": now,
             "exp": now + 3600,
