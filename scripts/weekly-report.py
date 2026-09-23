@@ -404,11 +404,16 @@ def build(args):
     add("")
     add("## 7. Instruments")
     add("")
-    add("- Search Console: wired, this report.")
-    add("- GA4: **not wired to this report.** Needs the Analytics Data API enabled on the")
-    add("  originrv-analytics project and the service account added as a GA4 viewer.")
-    add("- Bing Webmaster Tools: not wired. Its grounding queries are the only free")
-    add("  query-level AI data, and it needs a separate login.")
+    add("- Search Console: wired. Performance, coverage, sitemap and indexing all come from it.")
+    # Derived, not asserted: this line claimed GA4 was unwired for an hour after it was
+    # wired, because it was prose. It now reports what actually happened in section 3.
+    add("- GA4: %s" % ("wired, section 3 above" if not err else "NOT answering: %s" % err))
+    add("- Cloudflare Web Analytics: token stored, not yet wired. Field Core Web Vitals")
+    add("  (real-user LCP, CLS, INP) is the reason it is worth wiring, since neither GA4 nor")
+    add("  the Search Console API exposes them.")
+    add("- Bing Webmaster Tools: site verified and sitemap submitted by hand. The API is not")
+    add("  wired, so grounding queries and Citation Share are a manual look in its UI.")
+    add("- IndexNow: wired for submission (scripts/indexnow.py), not yet automatic on change.")
     add("- Generative AI impressions: not available through the GSC API at all; UI only.")
     add("")
 
