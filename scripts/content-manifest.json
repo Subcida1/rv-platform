@@ -1076,7 +1076,249 @@
       "outbox/reply-20260922-2026-fixes-confirm-batch4.md"
     ],
     "invalidated_by": "house-style sweep 2026-09-23: 77 colon lowercases across 16 pages; heading text changed, meaning did not",
-    "invalidated_at": "2026-09-23"
+    "invalidated_at": "2026-09-23",
+    "claims": [
+      {
+        "id": "C1",
+        "text": "\"most people assume it means a dead unit. It usually does not. The majority of no-hot-water problems trace to one small part, a flipped switch, a valve left in winter mode, or a sa",
+        "source": "three frequency claims in two sentences, none sourced",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C2",
+        "text": "\"The single most common mistake in spring is turning on the electric element while the tank is empty\"",
+        "source": "ranking claim. The spring spike in the service-call data supports the timing; the superlative needs either a source or a plainer sentence",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C3",
+        "text": "\"This is the single most common winter-to-spring mistake, and it is the most expensive small error on this page\"",
+        "source": "second and third instance of the same superlative, plus a self-reference to the page",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C4",
+        "text": "an empty tank burns out the electric element in seconds",
+        "source": "the maker's operation manual; the mechanism is documented in service literature",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C5",
+        "text": "\"Never run the electric element with no water in the tank\"",
+        "source": "the maker's own warning",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C6",
+        "text": "on a three-valve bypass setup, normal operation is the two line valves open and the centre bypass valve closed",
+        "source": "plumbing convention, documented in winterising material rather than in a heater manual. Name a source or state it as the common arrangement",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C7",
+        "text": "an outside shower with both faucets open lets cold water cross into the hot line",
+        "source": "mechanism, unsourced",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C8",
+        "text": "many RV water heaters have a second on-off rocker switch behind the exterior access door",
+        "source": "the maker's manual or wiring diagram",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C9",
+        "text": "the ECO is a high-limit safety switch that kills the electric element if the water overheats, typically around 180 degrees",
+        "source": "Suburban and Atwood service manuals - a number a reader acts on",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C10",
+        "text": "the ECO reset is a small button, often red, under the access panel or on the thermostat assembly; pressing it brings electric mode back, and a repeat trip means thermostat or sedim",
+        "source": "the maker's manual",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C11",
+        "text": "\"the thermostat is set to open around 130 degrees and shut the element off; if it fails closed the water keeps climbing until the ECO trip at roughly 180 degrees catches it\"",
+        "source": "the maker's manual - two numbers a reader acts on",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C12",
+        "text": "open the tank valve fully; air in the line after a refill stops ignition; bleeding through a stove burner clears it",
+        "source": "maker's manual plus the same propane behaviour the furnace page sourced to the EFV and regulator literature",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C13",
+        "text": "the propane side runs on 12-volt DC for the ignition board, spark and gas valve, so a blown fuse kills propane ignition while electric still works",
+        "source": "the maker's manual or wiring diagram",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C14",
+        "text": "\"if it clicks for about 6 to 8 seconds then stops, that is a safety lockout: the unit did not detect a flame\"",
+        "source": "the maker's manual - a number a reader acts on",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C15",
+        "text": "a steady blue flame is correct; a yellow or flickering flame means incomplete combustion, usually a dirty burner or a spider nest",
+        "source": "the maker's service manual. This is a safety claim and it must be sourced or cut.",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C16",
+        "text": "\"cleaning the burner tube is a routine owner job, and one of the most common fixes in the trade\"",
+        "source": "the second half is an unnamed-authority ranking claim",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C17",
+        "text": "a dry-fired element shows bulging or chalky white residue, can be tested for continuity through the element and none to the tank, and is replaced at a modest part cost",
+        "source": "the maker's manual for the failure appearance; the test is a method",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C18",
+        "text": "\"buy the same rating, do not guess wattage\"",
+        "source": "the maker's manual lists element ratings per model",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C19",
+        "text": "Suburban uses a steel tank with a sacrificial anode rod that must be replaced as it wears, and the rod is a common leak point when cross-threaded",
+        "source": "Suburban service manual",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C20",
+        "text": "Atwood and Dometic use an aluminium tank and a nylon drain plug with no anode rod",
+        "source": "the Dometic (Atwood) operation manual already linked",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C21",
+        "text": "an aftermarket anode rod in an Atwood aluminium tank can seize in the threads because of the metal reaction",
+        "source": "a specific warning; the maker's manual or the anode maker's guidance. Verify or cut.",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C22",
+        "text": "Suburban gas-electric models often carry two separate thermostats, one per heat source, which is why one side can fail alone and why the electric thermostat failing closed can over",
+        "source": "Suburban service manual",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C23",
+        "text": "\"heavy sediment at the tank bottom traps heat and can trip the ECO\"",
+        "source": "maker's service literature",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C24",
+        "text": "\"if you smell ammonia or see heavy soot, stop using the propane side\"",
+        "source": "a safety stop. Soot is documented; ammonia is a refrigerator warning, not a water heater one - check this, it may be a crossed wire from the",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C25",
+        "text": "\"you can reasonably replace the heating element, the thermostat, the ECO, the fuses and the anode rod, and clean the burner\"",
+        "source": "our editorial split, anchored to what the makers permit",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C26",
+        "text": "\"hand off a tank leak, a failed gas valve, a bad circuit board, or anything inside the propane combustion chamber\"",
+        "source": "our editorial split",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C27",
+        "text": "\"when a repair quote approaches the price of a new unit, ask about the labor separately, because RVers replace these water heaters regularly\"",
+        "source": "a behaviour claim with no source",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C28",
+        "text": "element test method: meters on ohms, low resistance across the terminals, open to the tank body",
+        "source": "a method, no source needed",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C29",
+        "text": "FAQ: \"most units run one heat source at a time from the selector switch, and propane is the higher-output option. Running both at once on older units can draw more current\"",
+        "source": "two claims, unsourced. The higher-output half is checkable against maker ratings",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C30",
+        "text": "\"Last reviewed: Sep 21, 2026, against the sources listed below\"",
+        "source": "provenance metadata. Ty ruled 2026-09-23 that the line stays and is fine print",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      }
+    ]
   },
   "guides/tires-winter.html": {
     "hash": "f2ad0cde3438fca4",
