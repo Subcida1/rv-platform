@@ -84,9 +84,33 @@ async function evalJs(expression) {
 /* The probe. Everything here is a measurement, never a judgement: the report
    section decides what is a fault, so the thresholds can be re-argued without
    touching the browser side. */
+/* Put the page into its interactive state BEFORE the probe, and let the caller
+   wait, because both of these are asynchronous: the homepage search paints on a
+   60ms debounce, and the manuals hub fetches a 210KB corpus on the first
+   keystroke. Typing inside the probe would measure an empty dropdown. */
+const PREP = `(function(){
+  document.querySelectorAll('details:not([open])').forEach(function(d){ d.open = true; });
+  var sInput = document.querySelector('#man-q') || document.querySelector('.search-bar input');
+  if (sInput) {
+    sInput.value = sInput.id === 'man-q' ? 'dometic' : 'winterize my RV';
+    sInput.dispatchEvent(new Event('input', { bubbles: true }));
+    sInput.dispatchEvent(new Event('focus', { bubbles: true }));
+  }
+  return 1;
+})()`;
+
 const PROBE = `(function(){
   var vw = document.documentElement.clientWidth, vh = document.documentElement.clientHeight;
   var EDGE = 16, TIGHT = 10;
+  /* Content that only exists after an interaction was invisible to this audit.
+     Two cases, both real and both fixed here:
+       - controls inside a closed <details> were SKIPPED (the manuals pages are
+         full of accordions), so nothing inside one had ever been measured;
+       - the site-wide search dropdown is hidden until something is typed, so none
+         of its options had ever been measured against the tap-target bar.
+     PREP above opens the accordions and types; this re-opens in case something on
+     the page closed itself, and then measures. */
+  document.querySelectorAll('details:not([open])').forEach(function(d){ d.open = true; });
   function vis(e){
     var cs = getComputedStyle(e);
     if (cs.display === 'none' || cs.visibility === 'hidden' || parseFloat(cs.opacity) === 0) return false;
@@ -211,7 +235,16 @@ const PROBE = `(function(){
         rec.why = 'overflows its box'; rec.over = Math.round(r2.right - innerR);
         out.tight.push(rec);
       } else if (pr2.width > 0 && r2.width >= pr2.width * 0.92 && (gapBL < TIGHT || gapBR < TIGHT)) {
-        rec.why = 'no padding'; out.tight.push(rec);
+        /* An element carrying its own padding is not text against an edge: the
+           words are inset by that padding. Without this, a small inner panel
+           reported a fault because the panel's own inset is 8px while the
+           threshold is 10: the search dropdown holds its options with 8px and the
+           zero-result line carries 14px of its own, so its text sits 22px in.
+           Measure where the words are, not where the box is. */
+        var ownL = parseFloat(getComputedStyle(el).paddingLeft);
+        var ownR = parseFloat(getComputedStyle(el).paddingRight);
+        var covered = (gapBL < TIGHT && ownL >= TIGHT) || (gapBR < TIGHT && ownR >= TIGHT);
+        if (!covered) { rec.why = 'no padding'; out.tight.push(rec); }
       }
     }
     var fs = parseFloat(cs2.fontSize);
@@ -278,7 +311,10 @@ for (const rel of pages) {
       await new Promise((r) => setTimeout(r, 120));
       if (await evalJs('document.readyState') === 'complete') break;
     }
-    await new Promise((r) => setTimeout(r, 600));
+    /* Open the page's interactive state, then wait for it, then measure. 1600ms
+       because the manuals hub fetches a 210KB corpus on the first keystroke. */
+    await evalJs(PREP);
+    await new Promise((r) => setTimeout(r, 1600));
     const p = await evalJs(PROBE);
     report.push({ page: rel, width: w, probe: p });
   }

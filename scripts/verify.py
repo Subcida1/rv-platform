@@ -494,6 +494,33 @@ elif C.GA4_ID:
 else:
     print("  GA4_ID is empty and no page carries a tag (the switch is off, cleanly)")
 
+print("\n=== every search bar carries the same mark ===")
+# The road mark reaches the generated manuals pages from site_constants.ROAD_ICON and
+# sits inline in the hand-written ones (the homepage and the three state directory
+# pages). That is five copies of one SVG, and duplicated markup is exactly how the
+# Cloudflare beacon drifted between its two generators. So: any page with a
+# .search-bar must carry the mark, and must carry one per search bar.
+search_bad, search_pages = [], 0
+for _p in pages:
+    _html = _p.read_text(encoding="utf-8")
+    _bars = _html.count('class="search-bar"')
+    if not _bars:
+        continue
+    search_pages += 1
+    _marks = _html.count(C.ROAD_ICON_MARK)
+    if _marks == 0:
+        search_bad.append("%s: has a .search-bar but no road mark" % _p.relative_to(ROOT))
+    elif _marks != _bars:
+        search_bad.append("%s: %d search bar(s) but %d road mark(s)"
+                          % (_p.relative_to(ROOT), _bars, _marks))
+if search_bad:
+    for _b in search_bad[:12]:
+        print("  " + _b)
+    print("  fix: node scripts/build-shell.mjs && python3 scripts/build-manuals-pages.py")
+    fails.append("search mark")
+else:
+    print("  %d page(s) with a search bar, every one carrying the same mark" % search_pages)
+
 manifest = json.loads((ROOT / "site.webmanifest").read_text(encoding="utf-8"))
 if manifest.get("theme_color") != C.THEME_COLOR:
     bad_theme.append("site.webmanifest: %s" % manifest.get("theme_color"))

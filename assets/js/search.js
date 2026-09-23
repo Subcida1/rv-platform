@@ -163,7 +163,25 @@
     function paint(list, q) {
       items = list;
       active = -1;
-      if (!list.length) { close(); return; }
+      /* ZERO RESULTS USED TO CLOSE THE PANEL SILENTLY, which reads as a broken
+         search rather than an empty one: you type, the dropdown vanishes, and
+         nothing says whether the site has nothing or the search failed. That is
+         the same impression the manuals search gave when it was throwing, so the
+         two were indistinguishable from the outside. Say it in words, like Google
+         does. Two characters is the floor, because one keystroke matching nothing
+         is noise rather than information. */
+      if (!list.length) {
+        if (q && q.length >= 2) {
+          box.innerHTML = '<div class="srch-none">Nothing matches <b>' + esc(q) + '</b>.' +
+            '<span>Try fewer words, or a maker, a model line, or a symptom like ' +
+            'winterize or tongue weight.</span></div>';
+          box.hidden = false;
+          input.setAttribute('aria-expanded', 'true');
+        } else {
+          close();
+        }
+        return;
+      }
       var html = '', lastCat = '';
       for (var i = 0; i < list.length; i++) {
         var it = list[i];
@@ -213,7 +231,14 @@
       else if (e.key === 'ArrowUp') { e.preventDefault(); move(-1); }
       else if (e.key === 'Escape') { close(); }
       else if (e.key === 'Enter') {
+        /* THE TOP RESULT, not the keyword router. Enter used to submit the form
+           unless you had already arrowed down onto an option, so typing a query
+           that had three visible matches and pressing Enter sent you to whatever
+           the router's keyword table guessed instead of the result you were
+           looking at. Google takes the first result. The router is still the
+           fallback, but only when the search itself found nothing. */
         if (active >= 0 && items[active]) { e.preventDefault(); location.href = items[active].u; }
+        else if (items.length) { e.preventDefault(); location.href = items[0].u; }
         // otherwise let the form submit and site.js route it
       }
     });

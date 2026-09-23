@@ -329,7 +329,7 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
    did not: this site is about the road. Sized up to 23px from 20px because the
    three dashes need the extra millimetre to stay distinct. */
 .search-bar svg{width:23px;height:23px;stroke:var(--text-3);flex:none}
-.search-bar input{flex:1;background:none;border:none;outline:none;color:var(--text);font-size:16px}
+.search-bar input{flex:1;background:none;border:none;outline:none;color:var(--text);font-size:16px;min-height:44px}
 .search-bar input::placeholder{color:var(--text-3)}
 .search-bar .btn{padding:11px 24px}
 /* Ty, 2026-09-22: "when you click up on the bar to input text, can we scroll
@@ -368,6 +368,11 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
 .srch-t{display:block;font-size:14.5px;font-weight:700;color:var(--text)}
 .srch-t b{color:var(--b1);font-weight:800}
 .srch-d{display:block;font-size:12.5px;color:var(--text-3);margin-top:2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+/* The zero-result line. It replaced a panel that simply disappeared, which is
+   indistinguishable from a search that is broken. */
+.srch-none{padding:14px;font-size:14px;color:var(--text-2)}
+.srch-none b{color:var(--text)}
+.srch-none span{display:block;margin-top:6px;font-size:13px;color:var(--text-3)}
 .chips{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:18px}
 .chip{font-size:13px;font-weight:500;color:var(--text-2);border:1px solid var(--border-2);border-radius:999px;padding:7px 15px;background:var(--surface);transition:.16s;cursor:pointer}
 .chip:hover{color:var(--b1);border-color:var(--b2)}
@@ -1656,8 +1661,14 @@ figure:has(svg[role="img"]){overflow-x:auto;overflow-y:hidden}
 .man-tile-count{font-size:12.5px;font-weight:800;color:var(--b1)}
 
 .man-search{margin-top:8px}
-.man-search input{width:100%;max-width:660px;font:inherit;font-size:15.5px;padding:14px 18px;border:1px solid var(--border-2);border-radius:14px;background:var(--surface);color:var(--text)}
-.man-search input:focus{outline:none;border-color:var(--b1);box-shadow:0 0 0 3px var(--glow)}
+/* The input used to be its own bordered, rounded, padded box. It now sits inside
+   the shared .search-bar pill, so those styles drew a box inside a pill and made
+   the manuals bar 73px tall against the directory's 41px. The pill provides the
+   border, the radius, the background and the focus ring, so this keeps only the
+   type, and the width moves to the pill. Ty, 2026-09-22: "make all of our search
+   bars act like the one on the homepage". */
+.man-search input{font:inherit;font-size:15.5px;color:var(--text)}
+.man-search .search-bar{max-width:660px}
 .man-facets{display:flex;flex-wrap:wrap;gap:9px;margin-top:14px}
 .man-facets .chip.on{background:var(--grad);color:var(--text-inv);border-color:transparent}
 .man-status{margin-top:16px;font-size:13.5px;color:var(--text-3);max-width:720px}
@@ -1747,6 +1758,16 @@ figure:has(svg[role="img"]){overflow-x:auto;overflow-y:hidden}
 .man-table th{text-align:left;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--text-3);padding:8px 10px;border-bottom:1px solid var(--border-2)}
 .man-table td{padding:8px 10px;border-bottom:1px solid var(--border);color:var(--text-2)}
 .man-table td:last-child{text-align:right;font-weight:700;color:var(--text)}
+/* A wide data table on a phone. The towing guide's worked-example table is five
+   columns (Rating, Where it comes from, Limit, Example, Used) inside a card whose
+   content box is 268px on a 360px screen. A table with table-layout:auto refuses
+   to shrink below its min-content width, so it ran 24px past its card and body's
+   overflow-x:hidden clipped the last column off, silently, with no way to reach
+   it. Rather than squashing five columns into 268px, the table scrolls sideways
+   inside its own container, the same thing the wide guide diagrams already do.
+   This is deliberately a wrapper rather than overflow on the card itself: the
+   card would then slide its heading sideways too. */
+.table-scroll{overflow-x:auto;overflow-y:hidden}
 
 /* ============================================================
    SNOW BUTTON (2026-09-22)
@@ -2008,6 +2029,12 @@ figure:has(svg[role="img"]){overflow-x:auto;overflow-y:hidden}
      button was pushed 13px out of the pill at 360px (found by audit-mobile, not
      by eye). This lets the field give up the space instead. */
   .search-bar input{min-height:44px;font-size:16px;min-width:0}
+  /* The dropdown was never measured by the mobile audit, because it is hidden
+     until something is typed, so its options were never checked against the
+     tap-target bar. A one-line option (no description) comes to about 43px on
+     padding alone, so this holds them at 44. The audit now types into a search
+     field, so this is a measured value rather than a guess. */
+  .srch-opt{min-height:44px;padding-top:12px;padding-bottom:12px}
 }
 
 /* ---------------------------------------------------------------------------

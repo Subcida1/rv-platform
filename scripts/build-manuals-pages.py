@@ -789,17 +789,64 @@ HUB_JS = r"""/* Manuals hub. Search the whole corpus, and filter it by document 
     document.head.appendChild(s);
   }
 
+  /* THE CORPUS HOLDS THREE SHAPES, and this renderer used to know only one.
+
+     A document row (110) has title, doc_types, system, key and covers. A brand
+     library (44) has brand, years and note. A model line (654) has brand, model,
+     years and segments. The model and brand rows arrived when the model axis was
+     built, and nothing here was updated for them, so r.doc_types on a model row
+     was undefined, .join() threw inside the filter, and the exception killed the
+     whole render before a single row was drawn. The hub search was dead for every
+     query from then until 2026-09-22: typing threw, the results list stayed hidden
+     and the status line never moved. Nothing in the build could see it, because a
+     thrown exception is not a failing assertion.
+
+     NOTE: this string is written to assets/js/manuals/hub.js by main(). Fixing the
+     generated file does nothing; the fix belongs here or the next build reverts it.
+
+     Rule for anything added here: read every field defensively. The corpus is
+     generated from three different tables and they do not share a shape. */
+
+  function haystack(r) {
+    var parts = [r.brand, r.host, r.title, r.key, r.covers, r.model, r.years, r.note, r.gate];
+    if (r.doc_types) parts.push(r.doc_types.join(' ').replace(/-/g, ' '));
+    if (r.segments) parts.push(r.segments.join(' ').replace(/-/g, ' '));
+    return parts.filter(function (x) { return x != null && x !== ''; })
+      .join(' ').toLowerCase();
+  }
+
+  function metaHTML(r) {
+    var bits;
+    if (r.type === 'model') {
+      bits = [(r.segments || []).join(', ').replace(/-/g, ' '), r.years];
+    } else if (r.type === 'brand') {
+      bits = ['Model years ' + r.years, r.note];
+    } else {
+      bits = [r.brand, r.key ? 'keyed by ' + r.key : '', r.covers];
+    }
+    return bits.filter(function (x) { return x; })
+      .map(function (x) { return '<span>' + esc(x) + '</span>'; }).join('');
+  }
+
   function rowHTML(r) {
+    var brandish = (r.type === 'model' || r.type === 'brand');
+    var label = r.type === 'model' ? (r.brand + ' ' + r.model) : (r.title || r.brand);
+    var kinds = (r.doc_types || []).map(function (t) {
+      return '<span class="badge badge-tint">' + esc(t.replace(/-/g, ' ')) + '</span>';
+    }).join('');
+    /* A model or brand row points at the maker's library page, not at a document
+       for that model, so the label says library rather than implying the manual
+       itself is one click away. That is how the brand page words the same link. */
+    var foot = brandish
+      ? '<a class="man-go" href="' + esc(r.url) + '" target="_blank" rel="noopener">Open ' +
+        esc(r.brand) + "'s library &#8594;</a>"
+      : '<a class="man-go" href="manuals/' + esc(r.system) + '.html">Open the ' +
+        esc(String(r.system).replace(/-/g, ' ')) + ' list &#8594;</a>';
     return '<li class="man-row"><div class="man-row-top">' +
       '<a class="man-doc" href="' + esc(r.url) + '" target="_blank" rel="noopener">' +
-      esc(r.title) + '</a><span class="man-types">' +
-      r.doc_types.map(function (t) {
-        return '<span class="badge badge-tint">' + esc(t.replace(/-/g, ' ')) + '</span>';
-      }).join('') + '</span></div>' +
-      '<div class="man-row-meta"><span class="man-brand">' + esc(r.brand) + '</span>' +
-      '<span>keyed by ' + esc(r.key) + '</span><span>' + esc(r.covers) + '</span></div>' +
-      '<div class="man-row-foot"><a class="man-go" href="manuals/' + esc(r.system) +
-      '.html">Open the ' + esc(r.system.replace(/-/g, ' ')) + ' list &#8594;</a></div></li>';
+      esc(label) + '</a><span class="man-types">' + kinds + '</span></div>' +
+      '<div class="man-row-meta">' + metaHTML(r) + '</div>' +
+      '<div class="man-row-foot">' + foot + '</div></li>';
   }
 
   function render() {
@@ -812,16 +859,18 @@ HUB_JS = r"""/* Manuals hub. Search the whole corpus, and filter it by document 
     }
     load(function () {
       var hits = rows.filter(function (r) {
-        if (type && r.doc_types.indexOf(type) < 0) return false;
+        /* A doc-type facet can only ever match a document row: it is the only
+           shape that carries doc_types. Everything else drops out while a facet
+           is on, which is what filtering by document type should do. */
+        if (type) return (r.doc_types || []).indexOf(type) >= 0;
         if (!q) return true;
-        return [r.brand, r.host, r.title, r.key, r.covers,
-                r.doc_types.join(' ').replace(/-/g, ' ')].join(' ').toLowerCase()
-          .indexOf(q) >= 0;
+        return haystack(r).indexOf(q) >= 0;
       });
       status.textContent = hits.length
         ? hits.length + ' match' + (hits.length === 1 ? '' : 'es') +
           (q ? ' for "' + q + '"' : '')
-        : 'Nothing matches that. Try a maker name like Dometic, or open a system below.';
+        : 'Nothing matches that. Try a maker like Dometic, a model line like Jay ' +
+          'Flight, or open a system below.';
       ul.innerHTML = hits.slice(0, 60).map(rowHTML).join('');
       ul.hidden = false;
     });
@@ -876,6 +925,24 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from stamp_assets import stamp_html  # noqa: E402  (path set above)
 
 
+# Every manuals search input gets the same .search-bar pill and the same road mark
+# as the homepage, so the site's three search bars look and behave alike. Applied
+# as ONE pass over the generated HTML rather than as three edits inside the
+# templates, because the templates are %-formatted and adding a placeholder to each
+# would have to be kept in step with its argument list. A new template gets this
+# for free.
+SEARCH_INPUT_RE = re.compile(r'(<div class="man-search">\n)(\s*)(<input id="man-q"[^>]*>)')
+
+
+def pill_search(html):
+    def wrap(m):
+        ind = m.group(2)
+        return (m.group(1) + ind + '<div class="search-bar">\n'
+                + ind + '  ' + C.ROAD_ICON + '\n'
+                + ind + '  ' + m.group(3) + '</div>')
+    return SEARCH_INPUT_RE.sub(wrap, html)
+
+
 def main():
     doc, error = R.load(MANIFEST)
     if error:
@@ -911,7 +978,7 @@ def main():
     # Rule #11 covers everything we ship, generated pages included.
     # stamp before anything compares or writes: the asset hash belongs to the page,
     # and verify.py fails the build when a stamp is stale
-    pages = {path: stamp_html(text) for path, text in pages.items()}
+    pages = {path: pill_search(stamp_html(text)) for path, text in pages.items()}
     for path, text in pages.items():
         for ch, name in (("\u2014", "em dash"), ("\u2013", "en dash"),
                          ("\u00b7", "middot")):
