@@ -101,8 +101,25 @@ AUTHORITY = [
     (r"\b(?:tire|RV|service)\s+engineers\b", "appeals to unnamed engineers"),
     (r"\bengineers\s+(?:say|recommend|agree|settle)\b", "appeals to unnamed engineers"),
     (r"\bexperts\s+(?:say|recommend|agree)\b", "appeals to unnamed experts"),
+    # Caught a real one on rv-fuse-keeps-blowing: the page promised "a named trade expert"
+    # four times and never named anyone. Worse than an anonymous appeal, because it asserts
+    # there IS a name the reader is simply not being given.
+    (r"\bnamed\s+(?:trade\s+|industry\s+)?(?:expert|technician|engineer|authority)\b",
+     "asserts a named source without naming it"),
     (r"\b(?:weather services|snow engineering references|industry references)\b",
      "appeals to unnamed references"),
+    # The shape that keeps recurring: a category of manufacturer standing in for a named
+    # maker -- "a converter manufacturer warns", "a fuse manufacturer's own guidance",
+    # "a manufacturer states it directly". Each was real, and each is decoration where a
+    # citation belongs.
+    # NARROW on purpose. The obvious version -- "a|the <word> manufacturer" -- fired on my own
+    # honest disclosure ("trade knowledge rather than a documented manufacturer procedure"), on
+    # "not endorsed by any manufacturer we could find", and on "the manufacturer says" where the
+    # page had already named the maker two sentences earlier. A rule that fires on disclosures and
+    # on contextually-named references is a rule that gets ignored. This matches only the
+    # unambiguous shape: an INDEFINITE maker standing in as the authority for a claim.
+    (r"\b(?:a|an)\s+\w*\s*manufacturer\s+(?:states|says|warns|advises|recommends|gives|publishes)\b",
+     "an unnamed manufacturer used as the authority for a claim"),
     (r"\bmanufacturers?\s+(?:rarely|typically|generally)\b",
      "generalises about what manufacturers do without a source"),
     # Two patterns were DROPPED after measuring their false-positive rate at 8 of 9 hits:

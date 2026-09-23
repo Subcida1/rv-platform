@@ -37,6 +37,7 @@ import argparse
 import csv
 import json
 import os
+import re
 import sys
 import time
 import urllib.parse
@@ -358,6 +359,94 @@ def cmd_inspect(args):
     return 0
 
 
+def sitemap_urls(path):
+    """The URLs we publish, read from our own sitemap so the audit reflects the site."""
+    text = open(path).read()
+    return re.findall(r"<loc>([^<]+)</loc>", text)
+
+
+def cmd_audit(args):
+    """Inspect every published URL and report the coverage picture.
+
+    This is the setup question on a young property. Raw impressions cannot tell
+    us whether Search Console is wired correctly; the per-URL coverage state can.
+    """
+    creds = load_credentials(key_path(args.key))
+    token = access_token(creds)
+    urls = sitemap_urls(args.sitemap)
+    if not urls:
+        sys.exit("No <loc> entries in %s" % args.sitemap)
+
+    print("Property: %s" % args.site)
+    print("Inspecting %d published URL(s) from %s\n" % (len(urls), args.sitemap))
+
+    rows = []
+    for url in urls:
+        resp = requests.post(
+            "https://searchconsole.googleapis.com/v1/urlInspection/index:inspect",
+            headers={"Authorization": "Bearer " + token, "Content-Type": "application/json"},
+            json={"inspectionUrl": url, "siteUrl": args.site},
+            timeout=(10, 60),
+        )
+        if resp.status_code != 200:
+            rows.append({"url": url, "coverageState": "INSPECT_FAILED_HTTP_%s" % resp.status_code})
+            continue
+        status = resp.json().get("inspectionResult", {}).get("indexStatusResult", {})
+        rows.append({
+            "url": url,
+            "coverageState": status.get("coverageState", "UNKNOWN"),
+            "verdict": status.get("verdict", ""),
+            "lastCrawlTime": status.get("lastCrawlTime", ""),
+            "googleCanonical": status.get("googleCanonical", ""),
+            "userCanonical": status.get("userCanonical", ""),
+            "robotsTxtState": status.get("robotsTxtState", ""),
+        })
+        time.sleep(0.2)
+
+    groups = {}
+    for row in rows:
+        groups.setdefault(row["coverageState"], []).append(row)
+
+    print("COVERAGE SUMMARY")
+    for state, items in sorted(groups.items(), key=lambda kv: -len(kv[1])):
+        print("  %-34s %d" % (state, len(items)))
+    print()
+
+    indexed = [r for r in rows if "indexed" in (r.get("coverageState") or "").lower()
+               and "not indexed" not in (r.get("coverageState") or "").lower()]
+    print("Indexed: %d of %d" % (len(indexed), len(rows)))
+    for row in indexed:
+        print("  %-64s crawled %s" % (row["url"], row.get("lastCrawlTime") or "unknown"))
+    print()
+
+    print("NOT YET INDEXED")
+    for state, items in sorted(groups.items(), key=lambda kv: -len(kv[1])):
+        if items and items[0] in indexed:
+            continue
+        print("  %s:" % state)
+        for row in items[:args.show]:
+            print("    %s" % row["url"])
+        if len(items) > args.show:
+            print("    ... and %d more" % (len(items) - args.show))
+    print()
+
+    mismatched = [r for r in rows if r.get("googleCanonical") and r.get("userCanonical")
+                  and r["googleCanonical"] != r["userCanonical"]]
+    if mismatched:
+        print("CANONICAL DIFFERENCES (declared vs what Google chose)")
+        for row in mismatched:
+            print("  %s\n    declared %s\n    Google   %s" % (row["url"], row["userCanonical"], row["googleCanonical"]))
+        print()
+
+    out = os.path.join(args.out, "coverage-sweep.json")
+    os.makedirs(args.out, exist_ok=True)
+    with open(out, "w") as fh:
+        json.dump({"site": args.site, "generated": time.strftime("%Y-%m-%dT%H:%M:%S"),
+                   "urls": rows}, fh, indent=2)
+    print("Full sweep written to %s" % out)
+    return 0
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__.split("\n")[1])
     parser.add_argument("--key", help="service account JSON (default %s)" % DEFAULT_KEY)
@@ -367,6 +456,12 @@ def main():
     sub.add_parser("selftest", help="offline proof that JWT signing works").set_defaults(func=cmd_selftest)
     sub.add_parser("properties", help="list properties this credential can see").set_defaults(func=cmd_properties)
     sub.add_parser("sitemaps", help="sitemap submission and fetch state").set_defaults(func=cmd_sitemaps)
+
+    audit = sub.add_parser("audit", help="inspect every published URL and report coverage")
+    audit.add_argument("--sitemap", default="sitemap.xml")
+    audit.add_argument("--out", default="data/gsc")
+    audit.add_argument("--show", type=int, default=5, help="urls to list per coverage state")
+    audit.set_defaults(func=cmd_audit)
 
     insp = sub.add_parser("inspect", help="is Google indexing this page")
     insp.add_argument("--url", default="https://originrv.com/")

@@ -42,11 +42,14 @@
     "sources": []
   },
   "guides/battery-winter-storage.html": {
-    "hash": "be9bd7d9f3a04d47",
-    "status": "unverified",
-    "verified_by": null,
-    "verified_at": null,
-    "sources": []
+    "hash": "a611c8647700a487",
+    "status": "verified",
+    "verified_by": "Claude Desktop (review + confirm rounds)",
+    "verified_at": "2026-09-22",
+    "sources": [
+      "inbox/REPLY-REQUEST-20260922-1434-batch1-signoff-batch2-checklists.md",
+      "outbox/reply-20260922-1434-batch1-signoff-batch2-checklists.md"
+    ]
   },
   "guides/index.html": {
     "hash": "4cfe45f2ba3475fe",
@@ -77,11 +80,14 @@
     "sources": []
   },
   "guides/rv-furnace-not-working.html": {
-    "hash": "378ca286d5235d84",
-    "status": "unverified",
-    "verified_by": null,
-    "verified_at": null,
-    "sources": []
+    "hash": "2f24b0c7349938ed",
+    "status": "verified",
+    "verified_by": "Claude Desktop (review + confirm rounds)",
+    "verified_at": "2026-09-22",
+    "sources": [
+      "inbox/REPLY-REQUEST-20260922-1434-batch1-signoff-batch2-checklists.md",
+      "outbox/reply-20260922-1434-batch1-signoff-batch2-checklists.md"
+    ]
   },
   "guides/rv-fuse-keeps-blowing.html": {
     "hash": "4f558537e48aa544",
@@ -133,11 +139,14 @@
     "sources": []
   },
   "guides/rv-tire-replacement.html": {
-    "hash": "461fcef7f04500af",
-    "status": "unverified",
-    "verified_by": null,
-    "verified_at": null,
-    "sources": []
+    "hash": "33715766aa2180f4",
+    "status": "verified",
+    "verified_by": "Claude Desktop (review + confirm rounds)",
+    "verified_at": "2026-09-22",
+    "sources": [
+      "inbox/REPLY-REQUEST-20260922-1434-batch1-signoff-batch2-checklists.md",
+      "outbox/reply-20260922-1434-batch1-signoff-batch2-checklists.md"
+    ]
   },
   "guides/rv-towing-capacity.html": {
     "hash": "0010df373c2a5e48",
