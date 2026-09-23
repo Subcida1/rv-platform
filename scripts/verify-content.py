@@ -51,6 +51,18 @@ SPECS = ROOT / "_specs"
 #
 # A page is NOT done while any claim sits at OPEN or SOURCED. The reviewer lane cannot do this for
 # us -- it has no access to the repo, and for a paywalled standard it has no access at all.
+# Everything we publish is dash-clean (verify.py enforces it). Seeding claim text out of a spec
+# imported em and en dashes into content-manifest.json on the first run, which failed the gate --
+# so the conversion happens here, at the boundary, rather than being remembered.
+DASHES = {"\u2014": "-", "\u2013": "-", "\u00b7": "-", "\u2012": "-", "\u2015": "-"}
+
+
+def plain_dashes(t):
+    for bad, good in DASHES.items():
+        t = t.replace(bad, good)
+    return t
+
+
 CLAIM_STATES = ("OPEN", "SOURCED", "READ", "CONFIRMED")
 CLAIM_FLOOR = ("OPEN", "SOURCED")   # a verified page may carry neither
 
@@ -100,8 +112,8 @@ def seed_claims_from_spec(page_rel):
             continue
         claims.append({
             "id": cid,
-            "text": re.sub(r"[*`]", "", cells[1])[:180],
-            "source": re.sub(r"[*`]", "", cells[2])[:140],
+            "text": plain_dashes(re.sub(r"[*`]", "", cells[1]))[:180],
+            "source": plain_dashes(re.sub(r"[*`]", "", cells[2]))[:140],
             "state": state_from_spec_text(cells[3]),
             "by": None,
             "at": None,
@@ -246,6 +258,28 @@ def main():
                  len([c for c in entry["claims"] if c["state"] == "CONFIRMED"])))
         return 0
 
+    if "--reset" in sys.argv:
+        # A mechanical change (the 2026-09-23 house-style sweep rewrote headings on 16 pages) makes
+        # a verified page a DIFFERENT page without anyone editing its meaning. The verdict has to
+        # go, but the claim ledger is about facts and survives. Record why, so a later reader is not
+        # left guessing whether the page regressed or was merely re-lettered.
+        rel = arg("--reset")
+        e = man.get(rel)
+        if not e:
+            print("FAIL  %s is not in the manifest" % rel)
+            return 1
+        was = e.get("status")
+        e["status"] = "unverified"
+        e["hash"] = live[rel]
+        e["verified_by"] = None
+        e["verified_at"] = None
+        e["invalidated_by"] = plain_dashes(arg("--why", "mechanical change"))
+        e["invalidated_at"] = __import__("datetime").date.today().isoformat()
+        save(man)
+        print("reset %s (%s -> unverified), hash refreshed, claims kept (%d)"
+              % (rel, was, len(e.get("claims") or [])))
+        return 0
+
     if "--claim" in sys.argv:
         page = arg("--claim")
         if page not in man and page not in live:
@@ -269,13 +303,14 @@ def main():
             if not cid:
                 print("FAIL  --id is required")
                 return 1
-            hit = {"id": cid, "text": arg("--text", ""), "source": arg("--source", "")}
+            hit = {"id": cid, "text": plain_dashes(arg("--text", "")),
+                   "source": plain_dashes(arg("--source", ""))}
             entry["claims"].append(hit)
         hit["state"] = state
         hit["by"] = arg("--by", "unknown")
         hit["at"] = __import__("datetime").date.today().isoformat()
         if arg("--source"):
-            hit["source"] = arg("--source")
+            hit["source"] = plain_dashes(arg("--source"))
         save(man)
         print("claim %s on %s -> %s" % (cid, page, state))
         return 0

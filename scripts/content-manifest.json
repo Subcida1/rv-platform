@@ -42,14 +42,16 @@
     "sources": []
   },
   "guides/battery-winter-storage.html": {
-    "hash": "a611c8647700a487",
-    "status": "verified",
-    "verified_by": "Claude Desktop (review + confirm rounds)",
-    "verified_at": "2026-09-22",
+    "hash": "59c93139440ddfe4",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
     "sources": [
       "inbox/REPLY-REQUEST-20260922-1434-batch1-signoff-batch2-checklists.md",
       "outbox/reply-20260922-1434-batch1-signoff-batch2-checklists.md"
-    ]
+    ],
+    "invalidated_by": "house-style sweep 2026-09-23: 77 colon lowercases across 16 pages; heading text changed, meaning did not",
+    "invalidated_at": "2026-09-23"
   },
   "guides/index.html": {
     "hash": "4cfe45f2ba3475fe",
@@ -66,14 +68,16 @@
     "sources": []
   },
   "guides/rv-12-volt-problems.html": {
-    "hash": "ff0633fe8890cb78",
-    "status": "verified",
-    "verified_by": "Claude Desktop (review + confirm rounds)",
-    "verified_at": "2026-09-22",
+    "hash": "c5479ddc8a9957d6",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
     "sources": [
       "outbox/reply-20260922-2016-part3-fixes-batch3.md",
       "outbox/reply-20260922-2026-fixes-confirm-batch4.md"
-    ]
+    ],
+    "invalidated_by": "house-style sweep 2026-09-23: 77 colon lowercases across 16 pages; heading text changed, meaning did not",
+    "invalidated_at": "2026-09-23"
   },
   "guides/rv-converter-not-charging.html": {
     "hash": "305462e8942b672a",
@@ -83,34 +87,40 @@
     "sources": []
   },
   "guides/rv-furnace-not-working.html": {
-    "hash": "2f24b0c7349938ed",
-    "status": "verified",
-    "verified_by": "Claude Desktop (review + confirm rounds)",
-    "verified_at": "2026-09-22",
+    "hash": "8c1a5584a2cbc62a",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
     "sources": [
       "inbox/REPLY-REQUEST-20260922-1434-batch1-signoff-batch2-checklists.md",
       "outbox/reply-20260922-1434-batch1-signoff-batch2-checklists.md"
-    ]
+    ],
+    "invalidated_by": "house-style sweep 2026-09-23: 77 colon lowercases across 16 pages; heading text changed, meaning did not",
+    "invalidated_at": "2026-09-23"
   },
   "guides/rv-fuse-keeps-blowing.html": {
-    "hash": "9e041136a3335059",
-    "status": "verified",
-    "verified_by": "Claude Desktop (review + confirm rounds)",
-    "verified_at": "2026-09-22",
+    "hash": "62a555c759ee9bea",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
     "sources": [
       "outbox/reply-20260922-2016-part3-fixes-batch3.md",
       "outbox/reply-20260922-2026-fixes-confirm-batch4.md"
-    ]
+    ],
+    "invalidated_by": "house-style sweep 2026-09-23: 77 colon lowercases across 16 pages; heading text changed, meaning did not",
+    "invalidated_at": "2026-09-23"
   },
   "guides/rv-generator-not-charging.html": {
-    "hash": "b32ebb1ffc7b9d9f",
-    "status": "verified",
-    "verified_by": "Claude Desktop (review + confirm rounds)",
-    "verified_at": "2026-09-22",
+    "hash": "9042cdb8d7537c93",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
     "sources": [
       "outbox/reply-20260922-2016-part3-fixes-batch3.md",
       "outbox/reply-20260922-2026-fixes-confirm-batch4.md"
-    ]
+    ],
+    "invalidated_by": "house-style sweep 2026-09-23: 77 colon lowercases across 16 pages; heading text changed, meaning did not",
+    "invalidated_at": "2026-09-23"
   },
   "guides/rv-lights-not-working.html": {
     "hash": "d4f653327e76bdb7",
@@ -141,24 +151,28 @@
     "sources": []
   },
   "guides/rv-tank-sensors-reading-wrong.html": {
-    "hash": "c402b126b78fecac",
-    "status": "verified",
-    "verified_by": "Claude Desktop (review + confirm rounds)",
-    "verified_at": "2026-09-22",
+    "hash": "72eb8a919acc90b2",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
     "sources": [
       "outbox/reply-20260922-1434-batch1-signoff-batch2-checklists.md",
       "outbox/reply-20260922-2026-fixes-confirm-batch4.md"
-    ]
+    ],
+    "invalidated_by": "house-style sweep 2026-09-23: 77 colon lowercases across 16 pages; heading text changed, meaning did not",
+    "invalidated_at": "2026-09-23"
   },
   "guides/rv-tire-replacement.html": {
-    "hash": "33715766aa2180f4",
-    "status": "verified",
-    "verified_by": "Claude Desktop (review + confirm rounds)",
-    "verified_at": "2026-09-22",
+    "hash": "b1f80dabcb1d2e0f",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
     "sources": [
       "inbox/REPLY-REQUEST-20260922-1434-batch1-signoff-batch2-checklists.md",
       "outbox/reply-20260922-1434-batch1-signoff-batch2-checklists.md"
-    ]
+    ],
+    "invalidated_by": "house-style sweep 2026-09-23: 77 colon lowercases across 16 pages; heading text changed, meaning did not",
+    "invalidated_at": "2026-09-23"
   },
   "guides/rv-towing-capacity.html": {
     "hash": "b78e376567c64cd2",
@@ -194,7 +208,7 @@
       {
         "id": "C4",
         "text": "\"Find your number in the owner's manual towing table for your exact cab, engine, axle ratio, and four-wheel-drive setup\"",
-        "source": "manufacturer's own towing guide — instructional, no citation needed",
+        "source": "manufacturer's own towing guide - instructional, no citation needed",
         "state": "CONFIRMED",
         "by": null,
         "at": null
@@ -210,7 +224,7 @@
       {
         "id": "C6",
         "text": "payload definition omits hitch hardware",
-        "source": "Ford's own subtract-list names \"Hitch hardware weight, such as a draw bar, ball, locks or weight distributing\". A WDH head + shank is ~75–10",
+        "source": "Ford's own subtract-list names \"Hitch hardware weight, such as a draw bar, ball, locks or weight distributing\". A WDH head + shank is ~75-10",
         "state": "SOURCED",
         "by": null,
         "at": null
@@ -226,7 +240,7 @@
       {
         "id": "C8",
         "text": "\"a half-ton can promise 10,000 pounds of towing on paper yet the sticker allows nowhere near that\"",
-        "source": "illustrative — no source required",
+        "source": "illustrative - no source required",
         "state": "CONFIRMED",
         "by": null,
         "at": null
@@ -282,7 +296,7 @@
       {
         "id": "C15",
         "text": "~~\"The trade association numbers say an overloaded truck can add 25 to 50 percent to its stopping distance\"~~",
-        "source": "CUT — the figure is unsupported, and this was our own weasel wording, not a citation we inherited. NHTSA/DOT's Influence of Size and Weight ",
+        "source": "CUT - the figure is unsupported, and this was our own weasel wording, not a citation we inherited. NHTSA/DOT's Influence of Size and Weight ",
         "state": "CONFIRMED",
         "by": null,
         "at": null
@@ -306,7 +320,7 @@
       {
         "id": "C18",
         "text": "\"Ratings are measured on a flat test track with no wind, sea level, ideal conditions\"",
-        "source": "same as C2 — a second instance of the same false claim",
+        "source": "same as C2 - a second instance of the same false claim",
         "state": "SOURCED",
         "by": null,
         "at": null
@@ -322,7 +336,7 @@
       {
         "id": "C20",
         "text": "\"The towing calculator flags anything over 80 percent as yellow\"",
-        "source": "the tool's own behaviour — verifiable by using it",
+        "source": "the tool's own behaviour - verifiable by using it",
         "state": "CONFIRMED",
         "by": null,
         "at": null
@@ -354,7 +368,7 @@
       {
         "id": "C24",
         "text": "FAQ: \"That figure assumes ideal road, no wind, no load in the truck, and a bare trailer.\"",
-        "source": "same as C3 — a third instance",
+        "source": "same as C3 - a third instance",
         "state": "SOURCED",
         "by": null,
         "at": null
@@ -394,14 +408,16 @@
     ]
   },
   "guides/rv-water-heater-not-heating.html": {
-    "hash": "3b788de2ce5b480b",
-    "status": "verified",
-    "verified_by": "Claude Desktop (review + confirm rounds)",
-    "verified_at": "2026-09-22",
+    "hash": "67da1fe9a8916fc9",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
     "sources": [
       "outbox/reply-20260922-1434-batch1-signoff-batch2-checklists.md",
       "outbox/reply-20260922-2026-fixes-confirm-batch4.md"
-    ]
+    ],
+    "invalidated_by": "house-style sweep 2026-09-23: 77 colon lowercases across 16 pages; heading text changed, meaning did not",
+    "invalidated_at": "2026-09-23"
   },
   "guides/tires-winter.html": {
     "hash": "f2ad0cde3438fca4",

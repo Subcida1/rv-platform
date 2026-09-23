@@ -45,7 +45,7 @@
  <div class="wrap page-intro w-820">
  <a href="index.html" class="btn btn-ghost back">← All guides</a>
  <div class="sec-eyebrow">Troubleshooting guide</div>
-    <h1>RV tank sensors reading wrong: The troubleshooting guide</h1>
+    <h1>RV tank sensors reading wrong: the troubleshooting guide</h1>
  <p class="lede">Almost every RV has the same complaint: the panel says the black tank is full when you dumped it yesterday, or the gray tank shows a third when it is empty. This is not usually a broken sensor. Most of the time it is residue inside the tank completing a circuit the sensor was never meant to complete, and the single most useful thing you can learn is why that happens. Understand the mechanism and the whole problem stops being mysterious.</p>
  <p class="reviewed">Last reviewed: Sep 21, 2026, against current Valterra, Thetford, Lippert and Garnet service guidance.</p>
  </div>
@@ -117,7 +117,7 @@
  <figcaption>The mechanism, side by side. On the left, the factory probe system: residue lining the tank carries current between the level probes and the ground probe, so the panel sees a level that is not there. On the right, external sensors read the contents through the wall and never touch waste, which removes that specific failure. Original diagram, OriginRV.</figcaption>
  </figure>
 
- <h2>Start here: Match your symptom to its cause</h2>
+ <h2>Start here: match your symptom to its cause</h2>
  <div class="card">
  <h3>Always reads full, even when you just dumped</h3>
  <p>The classic fouled-probe symptom. Residue is bridging the probes. Cleaning is the right first move, and if the tank is verifiably dry and still reads full, it is not residue at all but wiring or the board.</p>
@@ -131,7 +131,7 @@
  <p>Very useful information. The panel and the wiring loom are common to all tanks, so a single bad tank points at that tank's probes or that tank's wiring, not at the display.</p>
  </div>
 
- <h2>Why the reading is wrong: It measures conductivity, not depth</h2>
+ <h2>Why the reading is wrong: it measures conductivity, not depth</h2>
  <div class="card">
  <p>This is the fact that makes everything else make sense, and it is stated directly by the companies that make the parts. Valterra, which manufactures the Horst replacement probes, describes the failure like this: the sludge acts like a conductor between the positive content level sensors down the tank to the negative probe located at the bottom, and this triggers the panel to show liquid even when there is none.</p>
  <p>So a factory sensor is not a float and not a depth gauge. There is a ground probe, usually at the bottom, and a series of level probes at fixed heights. The panel sends a small current out and looks for it coming back. Anything that conducts gets counted as liquid. Clean water conducts a little. Sludge conducts more. That difference is the entire problem.</p>
@@ -146,9 +146,9 @@
  <h2>The two tests that tell you what you are dealing with</h2>
  <div class="card">
  <p>Before buying anything, run these two. Together they separate a dirty sensor from a dead circuit, which is the only decision that actually matters at this point.</p>
- <h3>Test one: The dry and wet test</h3>
+ <h3>Test one: the dry and wet test</h3>
  <p>This is the one to run first, and it is free. Dump the tank completely and let it dry out properly. Then check the panel. If it still reads full on a tank you know is dry, cleaning cannot be your answer, because there is no residue left to carry any current. That result points at a wiring fault or a failed board. The other half of the test is the reverse: if the panel reads empty when dry but shows levels again as soon as you add liquid, the probes are fouled, and cleaning is the right first move.</p>
- <h3>Test two: Swap two tanks at the panel</h3>
+ <h3>Test two: swap two tanks at the panel</h3>
  <p>This test needs no tools. If the fresh tank reads correctly and the gray tank does not, swap those two wires at the panel. If the fault follows the wire, the problem is in that tank's wiring or its pigtail, not the display. If the fault stays on the same tank position regardless of which wire is in it, the panel board itself is the problem. This single swap tells you which side of the connector to work on.</p>
  <h3>What to measure</h3>
  <p>KIB no longer publishes its tank-monitor documentation online, so the figures below are reported rather than linked. The values it gives for its pigtail harness: red to orange reads essentially zero ohms, red to green reads about 68,000 ohms, and red to yellow about 188,000 ohms. The probe maker's own website documents a different check on the probes themselves, noting that with the tank empty a probe should read infinity and that a submerged probe reads somewhere between roughly 10,000 and 100,000 ohms depending on the water, and adds that this must be done with an analog meter rather than a digital one.</p>
