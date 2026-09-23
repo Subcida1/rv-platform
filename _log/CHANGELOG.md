@@ -16,6 +16,14 @@ No secrets, keys, tokens or customer details in here. This file is committed.
 
 ## 2026-09-22
 
+### infra: Cloudflare field Core Web Vitals in the report, a 404 watch, and IndexNow on change
+- why: no other instrument exposes real-user LCP, CLS and INP; the 404 page needed watching because a dead link is invisible otherwise; and IndexNow was a command I had to remember
+- expect: the vitals section keeps showing LCP well under 2500 ms, and stays honest as samples grow. If the 404 line ever shows a hit, that is a real broken link to chase.
+- files: scripts/weekly-report.py, scripts/log-change.py
+- tags: cloudflare, vitals, indexnow
+- commit: 7f44fd3 (pushed)
+- deployed: 2026-09-22T21:49:56-07:00
+
 ### homepage: A 404 page that keeps the visitor, and a plain statement of what we record
 - why: GitHub's default 404 dropped people on a bare page with no navigation and left no trace, so a broken internal link was invisible; and we now record on-site search terms, which visitors should be told
 - expect: on-site search terms start appearing in GA4 with the fell-through flag, and any broken internal link shows up as a 404 hit on a real page instead of silence
