@@ -115,9 +115,9 @@
         "id": "C2",
         "text": "soot or a yellow flame = stop, do not run it, and \"both Suburban and Furrion instruct owners to shut the unit down immediately\"",
         "source": "Suburban service manual; Furrion troubleshooting manual",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Cloud read the soot warning verbatim in the Suburban service and training manual: the furnace should not be operated until the problem is corrected",
+        "at": "2026-09-23"
       },
       {
         "id": "C3",
@@ -187,9 +187,9 @@
         "id": "C11",
         "text": "step 7, Atwood soft lockout times out after one hour, hard lockout needs the thermostat cycled",
         "source": "Atwood consumer manual",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Cloud read Atwood's 'three try for ignition, one hour lockout' in the shop manual; the Suburban board's retry count is not stated in the documents read, so the generic phrasing needs narrowing",
+        "at": "2026-09-23"
       },
       {
         "id": "C12",
@@ -220,7 +220,7 @@
         "text": "\"older time-delay models wait 12 to 18 seconds after the purge\"",
         "source": "Suburban service manual",
         "state": "READ",
-        "by": "Cloud read 'After a 12-18 second delay' in the Suburban NT manual",
+        "by": "Cloud read '7 Seconds Ignition Cycle' and '7 seconds of ignition time' in the Suburban service and training manual, and Atwood's six seconds",
         "at": "2026-09-23"
       },
       {
@@ -299,9 +299,9 @@
         "id": "C25",
         "text": "\"never use a battery charger to power or test the furnace; chargers can exceed 14.5 volts and damage the board\"",
         "source": "Suburban service manual",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Cloud read 'Never use a battery charger to power or test an electronic ignition furnace' and the 14.5 volt limit in both Suburban manuals",
+        "at": "2026-09-23"
       },
       {
         "id": "C26",
@@ -348,7 +348,7 @@
         "text": "limit switch causes: insufficient return air, minimum duct area, sharp turns",
         "source": "Suburban service manual",
         "state": "READ",
-        "by": "Cloud read the return air, minimum duct area and sharp turns guidance in the Suburban manual",
+        "by": "Cloud read the return air and minimum duct requirement in the Suburban service and training manual",
         "at": "2026-09-23"
       },
       {

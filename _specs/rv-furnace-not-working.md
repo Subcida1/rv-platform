@@ -280,14 +280,20 @@ and the "most misdiagnosed" ranking are gone, the lockout minutes now match the 
 board condition, the "heaviest 12-volt load" became a published 3.4 amps, the owner-forum anecdote was
 replaced by the documented mechanism, and the four price ranges were cut.
 
-**Ledger after the pass: 53 claims — 18 READ, 7 CONFIRMED, 28 SOURCED, 0 OPEN.** What remains is a
+**Ledger after the pass: 53 claims — 21 READ, 7 CONFIRMED, 25 SOURCED, 0 OPEN.** What remains is a
 reading load rather than a defect list, and the floor rule is explicit: no page verifies with a claim at
-SOURCED. Two of the 28 carry numbers a reader acts on and are worth naming here:
+SOURCED. Four things worth naming here for the next pass:
 
 - **C27, the half-inch pressure-drop limit** — I did not find it in either Suburban document I opened.
   Either it is in a chapter I did not reach, or it needs cutting.
 - **C35, the electrode geometry** — the values live in drawing callouts rather than in text, so only the
   1/8 inch gap (0.125 in the drawing) is confirmed.
+- **C11, the retry count** — Atwood publishes "three try for ignition, one hour lockout". The Suburban
+  board's retry count is **not stated** in the documents I read, so "three failed attempts and the board
+  gives up" needs narrowing to the board that says it.
+- **C45 and C46, the CDC claims, are blocked on a tool, not on evidence.** `cdc.gov` answers curl with
+  403; the site already owns the answer, `scripts/fetch-rendered.mjs`, which asks a real browser. That is
+  the next attempt, and until it runs those two stay SOURCED.
 
 **Not yet done:** the independent review round, and therefore the verdict. A verdict may not cover text
 the reviewer never saw, and this text has not been reviewed.
