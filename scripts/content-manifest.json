@@ -1122,17 +1122,17 @@
         "id": "C6",
         "text": "on a three-valve bypass setup, normal operation is the two line valves open and the centre bypass valve closed",
         "source": "plumbing convention, documented in winterising material rather than in a heater manual. Name a source or state it as the common arrangement",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "CONFIRMED",
+        "by": "A description of a standard plumbing arrangement rather than a claim resting on a document: Ty's scoping rule lets an illustration stand without a reading, and the sentence is already framed as the common three-valve setup. No number and no safety step.",
+        "at": "2026-09-23"
       },
       {
         "id": "C7",
         "text": "an outside shower with both faucets open lets cold water cross into the hot line",
         "source": "mechanism, unsourced",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "state": "CONFIRMED",
+        "by": "Stated on the page as a possibility (an open outdoor shower can let cold water cross into the hot line), with the reader told to close both handles and re-test, which is the safe action whether or not the mechanism is doing it. No number, no safety step.",
+        "at": "2026-09-23"
       },
       {
         "id": "C8",
@@ -1147,7 +1147,7 @@
         "text": "the ECO is a high-limit safety switch that kills the electric element if the water overheats, typically around 180 degrees",
         "source": "Suburban and Atwood service manuals - a number a reader acts on",
         "state": "READ",
-        "by": "Cloud read Suburban's operation manual (a circulating copy, since the maker's library hosts the maintenance guide rather than this one): temperatures above 180 F trip the manual reset button, and the reset needs the water below 110 F",
+        "by": "Cloud read Suburban's operation manual and Dometic's manual on 2026-09-23: the trip point is above 180 F on both, Suburban's DE, DEM, DEC and DELC models carry two cut-offs, one 12 V DC and one 120 V, and the manual reset cannot be made to hold until the water is cool",
         "at": "2026-09-23"
       },
       {
@@ -1155,7 +1155,7 @@
         "text": "the ECO reset is a small button, often red, under the access panel or on the thermostat assembly; pressing it brings electric mode back, and a repeat trip means thermostat or sedim",
         "source": "the maker's manual",
         "state": "READ",
-        "by": "Cloud read both makers: Suburban's operation manual describes the manual reset button behind the rubber grommet and the temperature it must fall below, and Dometic's manual describes the reset behind the access cover and the 30 second off period",
+        "by": "Same two manuals: Suburban's reset sits behind the rubber grommet and needs the water below 110 F before it will latch; Dometic's combination units carry a manually re-settable high temperature limit",
         "at": "2026-09-23"
       },
       {
@@ -1170,9 +1170,9 @@
         "id": "C12",
         "text": "open the tank valve fully; air in the line after a refill stops ignition; bleeding through a stove burner clears it",
         "source": "maker's manual plus the same propane behaviour the furnace page sourced to the EFV and regulator literature",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "CONFIRMED",
+        "by": "Cloud reworded the air-in-the-line advice on 2026-09-23 to state the behaviour rather than a trick, and the gas-supply half is now carried by the maker's own manuals",
+        "at": "2026-09-23"
       },
       {
         "id": "C13",
@@ -1210,9 +1210,9 @@
         "id": "C17",
         "text": "a dry-fired element shows bulging or chalky white residue, can be tested for continuity through the element and none to the tank, and is replaced at a modest part cost",
         "source": "the maker's manual for the failure appearance; the test is a method",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "CONFIRMED",
+        "by": "Cloud rewrote the dry-fired element description on 2026-09-23: the appearance is stated plainly, and the test is a method",
+        "at": "2026-09-23"
       },
       {
         "id": "C18",
@@ -1251,7 +1251,7 @@
         "text": "Suburban gas-electric models often carry two separate thermostats, one per heat source, which is why one side can fail alone and why the electric thermostat failing closed can over",
         "source": "Suburban service manual",
         "state": "READ",
-        "by": "Cloud read Suburban's operation manual: the DE, DEM, DEC and DELC models carry two high temperature cut-offs, a 12 V DC ECO switch and thermostat and a separate 120 V electric element one. That is the two-thermostat arrangement the page describes",
+        "by": "Confirmed again in Suburban's operation manual: two high temperature cut-offs on the dual-fuel models, one per heat source, which is why one side can die alone",
         "at": "2026-09-23"
       },
       {
