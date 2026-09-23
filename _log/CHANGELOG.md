@@ -16,6 +16,22 @@ No secrets, keys, tokens or customer details in here. This file is committed.
 
 ## 2026-09-22
 
+### homepage: A 404 page that keeps the visitor, and a plain statement of what we record
+- why: GitHub's default 404 dropped people on a bare page with no navigation and left no trace, so a broken internal link was invisible; and we now record on-site search terms, which visitors should be told
+- expect: on-site search terms start appearing in GA4 with the fell-through flag, and any broken internal link shows up as a 404 hit on a real page instead of silence
+- files: 404.html, contact.html, scripts/build-sitemap.py
+- tags: 404, privacy, search
+- commit: 89296f2 (pushed)
+- deployed: 2026-09-22T21:38:01-07:00
+
+### infra: IndexNow wired and 39 URLs submitted
+- why: Bing drives Copilot citations and IndexNow tells it about a change in minutes rather than at its next crawl; Google does not participate, so this is a Bing lever only
+- expect: faster first crawl for the 22 URLs Google and Bing have not fetched. Bing coverage should move ahead of Google's, which is the readable signal that IndexNow did anything.
+- files: scripts/indexnow.py, 9da3b864f99bd5ff574e8a0ed53a0e4f.txt
+- tags: indexnow, bing, crawl
+- commit: 89296f2 (pushed)
+- deployed: 2026-09-22T21:38:01-07:00
+
 ### infra: GA4 in the weekly report, on a live seven day window
 - why: GA4 has no reporting lag, so the Search Console window would have sat before the tag existed and could only ever print zeros
 - expect: the report shows sessions and top pages every week from now on, and the first non-zero figures should be Ty's own visits
