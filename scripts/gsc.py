@@ -380,8 +380,9 @@ def cmd_audit(args):
     print("Property: %s" % args.site)
     print("Inspecting %d published URL(s) from %s\n" % (len(urls), args.sitemap))
 
-    rows = []
-    for url in urls:
+    from concurrent.futures import ThreadPoolExecutor, as_completed
+
+    def inspect_one(url):
         resp = requests.post(
             "https://searchconsole.googleapis.com/v1/urlInspection/index:inspect",
             headers={"Authorization": "Bearer " + token, "Content-Type": "application/json"},
@@ -389,10 +390,9 @@ def cmd_audit(args):
             timeout=(10, 60),
         )
         if resp.status_code != 200:
-            rows.append({"url": url, "coverageState": "INSPECT_FAILED_HTTP_%s" % resp.status_code})
-            continue
+            return {"url": url, "coverageState": "INSPECT_FAILED_HTTP_%s" % resp.status_code}
         status = resp.json().get("inspectionResult", {}).get("indexStatusResult", {})
-        rows.append({
+        return {
             "url": url,
             "coverageState": status.get("coverageState", "UNKNOWN"),
             "verdict": status.get("verdict", ""),
@@ -400,8 +400,21 @@ def cmd_audit(args):
             "googleCanonical": status.get("googleCanonical", ""),
             "userCanonical": status.get("userCanonical", ""),
             "robotsTxtState": status.get("robotsTxtState", ""),
-        })
-        time.sleep(0.2)
+        }
+
+    # Sequential inspection of 39 URLs takes over three minutes, and printing only
+    # at the end makes a slow run look identical to a hung one. A handful of
+    # workers cuts it to well under a minute and each result prints as it lands.
+    rows = []
+    with ThreadPoolExecutor(max_workers=args.workers) as pool:
+        futures = [pool.submit(inspect_one, u) for u in urls]
+        for future in as_completed(futures):
+            row = future.result()
+            rows.append(row)
+            print("  %-66s %s" % (row["url"].replace("https://originrv.com", ""),
+                                  row["coverageState"]), flush=True)
+    rows.sort(key=lambda r: r["url"])
+    print()
 
     groups = {}
     for row in rows:
@@ -461,6 +474,7 @@ def main():
     audit.add_argument("--sitemap", default="sitemap.xml")
     audit.add_argument("--out", default="data/gsc")
     audit.add_argument("--show", type=int, default=5, help="urls to list per coverage state")
+    audit.add_argument("--workers", type=int, default=5, help="parallel inspections")
     audit.set_defaults(func=cmd_audit)
 
     insp = sub.add_parser("inspect", help="is Google indexing this page")
