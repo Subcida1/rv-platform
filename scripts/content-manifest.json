@@ -1082,41 +1082,41 @@
         "id": "C1",
         "text": "\"most people assume it means a dead unit. It usually does not. The majority of no-hot-water problems trace to one small part, a flipped switch, a valve left in winter mode, or a sa",
         "source": "three frequency claims in two sentences, none sourced",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "state": "CONFIRMED",
+        "by": "Cloud removed the lede's frequency claims on 2026-09-23 and its narration about the guide walking the system like a technician",
+        "at": "2026-09-23"
       },
       {
         "id": "C2",
         "text": "\"The single most common mistake in spring is turning on the electric element while the tank is empty\"",
         "source": "ranking claim. The spring spike in the service-call data supports the timing; the superlative needs either a source or a plainer sentence",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "state": "CONFIRMED",
+        "by": "Cut: the spring superlative is replaced with a plain statement that the empty-tank mistake is the one that costs the most",
+        "at": "2026-09-23"
       },
       {
         "id": "C3",
         "text": "\"This is the single most common winter-to-spring mistake, and it is the most expensive small error on this page\"",
         "source": "second and third instance of the same superlative, plus a self-reference to the page",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "state": "CONFIRMED",
+        "by": "Cut: the second and third superlative, including the self-reference to the page",
+        "at": "2026-09-23"
       },
       {
         "id": "C4",
         "text": "an empty tank burns out the electric element in seconds",
         "source": "the maker's operation manual; the mechanism is documented in service literature",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Cloud read Dometic's own operation manual for the Atwood 4, 6 and 10 models on 2026-09-23: a dry element 'may burn out element and void warranty'",
+        "at": "2026-09-23"
       },
       {
         "id": "C5",
         "text": "\"Never run the electric element with no water in the tank\"",
         "source": "the maker's own warning",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Same manual, same reading: the dry-fire warning is in the maker's own words, and Suburban's operation manual carries the same instruction",
+        "at": "2026-09-23"
       },
       {
         "id": "C6",
@@ -1139,32 +1139,32 @@
         "text": "many RV water heaters have a second on-off rocker switch behind the exterior access door",
         "source": "the maker's manual or wiring diagram",
         "state": "READ",
-        "by": "Cloud read Suburban's own operation and maintenance guide (Part 206244, maker-hosted at library.suburbanrv.com) on 2026-09-23: it shows the secondary 110V switch alongside the primary, which is the page's hidden-switch claim",
+        "by": "Cloud read Suburban's maker-hosted operation and maintenance guide: the secondary 110-volt switch sits alongside the primary, which is the hidden switch the page describes",
         "at": "2026-09-23"
       },
       {
         "id": "C9",
         "text": "the ECO is a high-limit safety switch that kills the electric element if the water overheats, typically around 180 degrees",
         "source": "Suburban and Atwood service manuals - a number a reader acts on",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Cloud read Suburban's operation manual (a circulating copy, since the maker's library hosts the maintenance guide rather than this one): temperatures above 180 F trip the manual reset button, and the reset needs the water below 110 F",
+        "at": "2026-09-23"
       },
       {
         "id": "C10",
         "text": "the ECO reset is a small button, often red, under the access panel or on the thermostat assembly; pressing it brings electric mode back, and a repeat trip means thermostat or sedim",
         "source": "the maker's manual",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Cloud read both makers: Suburban's operation manual describes the manual reset button behind the rubber grommet and the temperature it must fall below, and Dometic's manual describes the reset behind the access cover and the 30 second off period",
+        "at": "2026-09-23"
       },
       {
         "id": "C11",
         "text": "\"the thermostat is set to open around 130 degrees and shut the element off; if it fails closed the water keeps climbing until the ECO trip at roughly 180 degrees catches it\"",
         "source": "the maker's manual - two numbers a reader acts on",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Same document: the thermostat is 'a temperature sensing limit designed to maintain a water temperature of 130 F', non-adjustable. Dometic's manual gives 140 F for the Atwood units, which is why the page now states both instead of one",
+        "at": "2026-09-23"
       },
       {
         "id": "C12",
@@ -1178,33 +1178,33 @@
         "id": "C13",
         "text": "the propane side runs on 12-volt DC for the ignition board, spark and gas valve, so a blown fuse kills propane ignition while electric still works",
         "source": "the maker's manual or wiring diagram",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Cloud read the 12-volt control requirement in both makers' manuals: the thermostat, ECO and ignition circuits run on 12 V DC, which is why a DC fuse kills the propane side while 120-volt electric keeps working",
+        "at": "2026-09-23"
       },
       {
         "id": "C14",
         "text": "\"if it clicks for about 6 to 8 seconds then stops, that is a safety lockout: the unit did not detect a flame\"",
         "source": "the maker's manual - a number a reader acts on",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "CONFIRMED",
+        "by": "Cloud softened the unsourced 6-to-8 second window to a few seconds on 2026-09-23 and used the sourced figure instead: Dometic's manual says to leave the switch off for at least 30 seconds to clear a lockout",
+        "at": "2026-09-23"
       },
       {
         "id": "C15",
         "text": "a steady blue flame is correct; a yellow or flickering flame means incomplete combustion, usually a dirty burner or a spider nest",
         "source": "the maker's service manual. This is a safety claim and it must be sourced or cut.",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Cloud read Dometic's manual: 'Presence of soot indicates the need to adjust flue', which is the combustion-problem warning the page carries",
+        "at": "2026-09-23"
       },
       {
         "id": "C16",
         "text": "\"cleaning the burner tube is a routine owner job, and one of the most common fixes in the trade\"",
         "source": "the second half is an unnamed-authority ranking claim",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "state": "CONFIRMED",
+        "by": "Cut: 'one of the most common fixes in the trade' is gone; cleaning the burner tube is stated as a routine owner job",
+        "at": "2026-09-23"
       },
       {
         "id": "C17",
@@ -1218,81 +1218,81 @@
         "id": "C18",
         "text": "\"buy the same rating, do not guess wattage\"",
         "source": "the maker's manual lists element ratings per model",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Same manual: it forbids aftermarket heating elements outright because they can lack critical safety devices, and warns the warranty can be voided. The page now says that instead of the vaguer buy-the-same-rating line",
+        "at": "2026-09-23"
       },
       {
         "id": "C19",
         "text": "Suburban uses a steel tank with a sacrificial anode rod that must be replaced as it wears, and the rod is a common leak point when cross-threaded",
         "source": "Suburban service manual",
         "state": "READ",
-        "by": "Same document, same reading: 'Each Suburban water heater is equipped with a replaceable anode rod... Replacement of the anode rod is recommended when consumption or weight loss is greater than 75%', and it names the pipe thread sealant requirement the page mentions",
+        "by": "Cloud read Suburban's maker-hosted guide: replacement of the anode rod is recommended when consumption or weight loss is greater than 75 percent, and a potable-water thread sealant is required",
         "at": "2026-09-23"
       },
       {
         "id": "C20",
         "text": "Atwood and Dometic use an aluminium tank and a nylon drain plug with no anode rod",
         "source": "the Dometic (Atwood) operation manual already linked",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Cloud read Dometic's manual: the Atwood units drain through a drain plug and the manual documents hydrogen sulfide odour from the water supply, with no anode rod in the service list",
+        "at": "2026-09-23"
       },
       {
         "id": "C21",
         "text": "an aftermarket anode rod in an Atwood aluminium tank can seize in the threads because of the metal reaction",
         "source": "a specific warning; the maker's manual or the anode maker's guidance. Verify or cut.",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "CONFIRMED",
+        "by": "Cloud rewrote the aftermarket-anode warning on 2026-09-23: no maker document contains the seizing mechanism, so the sentence now states the maker's design instead of a mechanism nothing supports",
+        "at": "2026-09-23"
       },
       {
         "id": "C22",
         "text": "Suburban gas-electric models often carry two separate thermostats, one per heat source, which is why one side can fail alone and why the electric thermostat failing closed can over",
         "source": "Suburban service manual",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Cloud read Suburban's operation manual: the DE, DEM, DEC and DELC models carry two high temperature cut-offs, a 12 V DC ECO switch and thermostat and a separate 120 V electric element one. That is the two-thermostat arrangement the page describes",
+        "at": "2026-09-23"
       },
       {
         "id": "C23",
         "text": "\"heavy sediment at the tank bottom traps heat and can trip the ECO\"",
         "source": "maker's service literature",
         "state": "READ",
-        "by": "Same document: 'Sediment on the bottom of the tank forms a layer of insulation between the gas burner and the water. The sediment slows heat transfer and overheats the tank bottom.' That is the page's sediment claim, in Suburban's own words",
+        "by": "Cloud read Suburban's maker-hosted guide: sediment forms an insulating layer between the burner and the water, slows heat transfer and overheats the tank bottom",
         "at": "2026-09-23"
       },
       {
         "id": "C24",
         "text": "\"if you smell ammonia or see heavy soot, stop using the propane side\"",
         "source": "a safety stop. Soot is documented; ammonia is a refrigerator warning, not a water heater one - check this, it may be a crossed wire from the",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "state": "CONFIRMED",
+        "by": "Cloud cut the ammonia warning on 2026-09-23. A water heater has no ammonia; that is a refrigerator cooling-unit sign. The section now carries the combustion warning and Dometic's own hydrogen sulfide explanation for a rotten-egg smell",
+        "at": "2026-09-23"
       },
       {
         "id": "C25",
         "text": "\"you can reasonably replace the heating element, the thermostat, the ECO, the fuses and the anode rod, and clean the burner\"",
         "source": "our editorial split, anchored to what the makers permit",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "CONFIRMED",
+        "by": "Cloud: the owner-versus-technician split is our editorial judgement, labelled as a split and anchored to what the makers' own manuals permit",
+        "at": "2026-09-23"
       },
       {
         "id": "C26",
         "text": "\"hand off a tank leak, a failed gas valve, a bad circuit board, or anything inside the propane combustion chamber\"",
         "source": "our editorial split",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "CONFIRMED",
+        "by": "Same: our editorial split, stated as a split",
+        "at": "2026-09-23"
       },
       {
         "id": "C27",
         "text": "\"when a repair quote approaches the price of a new unit, ask about the labor separately, because RVers replace these water heaters regularly\"",
         "source": "a behaviour claim with no source",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "state": "CONFIRMED",
+        "by": "Cloud cut the unsourced 'RVers replace these water heaters regularly' claim and kept the advice about asking for labour separately",
+        "at": "2026-09-23"
       },
       {
         "id": "C28",
@@ -1306,17 +1306,17 @@
         "id": "C29",
         "text": "FAQ: \"most units run one heat source at a time from the selector switch, and propane is the higher-output option. Running both at once on older units can draw more current\"",
         "source": "two claims, unsourced. The higher-output half is checkable against maker ratings",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "state": "CONFIRMED",
+        "by": "Cloud cut the unsourced claims about the selector switch and the current draw on 2026-09-23, keeping the switch advice and the empty-tank rule",
+        "at": "2026-09-23"
       },
       {
         "id": "C30",
         "text": "\"Last reviewed: Sep 21, 2026, against the sources listed below\"",
         "source": "provenance metadata. Ty ruled 2026-09-23 that the line stays and is fine print",
         "state": "CONFIRMED",
-        "by": null,
-        "at": null
+        "by": "Ty ruled 2026-09-23 that the reviewed line stays and is fine print",
+        "at": "2026-09-23"
       }
     ]
   },
