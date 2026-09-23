@@ -47,16 +47,21 @@
     "sources": []
   },
   "guides/battery-winter-storage.html": {
-    "hash": "59c93139440ddfe4",
-    "status": "unverified",
-    "verified_by": null,
-    "verified_at": null,
+    "hash": "9d49ea49c50cc1da",
+    "status": "verified",
+    "verified_by": "Claude Desktop lane, three rounds on 2026-09-23. Round one found nine items including a watering-order contradiction visible from the page's own text. The confirm found my new self-discharge sentence contradicting its own citation, and a count I had wrong. The closing round confirmed all of it. DEVIATION, recorded deliberately: after the reviewer's closing 'yes', I applied the one-character punctuation fix it flagged as trivial (a seam left by my own deletion of the 12.2 clause), so the recorded text differs from the reviewed text by that single comma-to-period. The reviewer called it non-blocking in the same breath as the yes.",
+    "verified_at": "2026-09-23",
     "sources": [
-      "inbox/REPLY-REQUEST-20260922-1434-batch1-signoff-batch2-checklists.md",
-      "outbox/reply-20260922-1434-batch1-signoff-batch2-checklists.md"
+      "inbox/REVIEW-REQUEST-20260923-1322-battery-winter-storage.md",
+      "outbox/REPLY-BATTERY-REVIEW-1322.md",
+      "inbox/REVIEW-REQUEST-20260923-1520-battery-winter-storage-confirm.md",
+      "outbox/REPLY-BATTERY-CONFIRM-1520.md",
+      "inbox/REVIEW-REQUEST-20260923-1556-battery-winter-storage-close.md",
+      "outbox/REPLY-BATTERY-CLOSE-1556.md",
+      "spec:_specs/battery-winter-storage.md"
     ],
-    "invalidated_by": "house-style sweep 2026-09-23: 77 colon lowercases across 16 pages; heading text changed, meaning did not",
-    "invalidated_at": "2026-09-23",
+    "spec": "_specs/battery-winter-storage.md",
+    "spec_waived": false,
     "claims": [
       {
         "id": "C1",
