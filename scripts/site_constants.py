@@ -133,7 +133,7 @@ BEACON = ("<!-- Cloudflare Web Analytics -->"
 # the site's audience (Oregon, Washington, California RV owners) needs today. GA4
 # anonymises IPs by default. If EU or UK traffic ever matters, this becomes a
 # Consent Mode plus banner job and the default below changes with it.
-GA4_ID = ""
+GA4_ID = "G-G8X4MQ0P3X"
 
 
 def ga4_block(indent=""):
