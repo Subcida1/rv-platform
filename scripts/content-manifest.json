@@ -56,7 +56,129 @@
       "outbox/reply-20260922-1434-batch1-signoff-batch2-checklists.md"
     ],
     "invalidated_by": "house-style sweep 2026-09-23: 77 colon lowercases across 16 pages; heading text changed, meaning did not",
-    "invalidated_at": "2026-09-23"
+    "invalidated_at": "2026-09-23",
+    "claims": [
+      {
+        "id": "C1",
+        "text": "lead-acid stores at 100 percent charge; lithium stores at partial charge",
+        "source": "Trojan's storage white paper; Battle Born's storage guidance",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C2",
+        "text": "a fully charged cell freezes near −90 °F; at 40 percent charge near +5 °F; a deeply discharged one freezes higher still",
+        "source": "the Battery Council International table, as reproduced in Trojan's white paper (the page names both, correctly)",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C3",
+        "text": "lead-acid self-discharges at roughly 3 to 10 percent per month at room temperature, flooded at the high end and sealed lower",
+        "source": "Trojan's battery maintenance document",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C4",
+        "text": "above 12.4 volts resting is healthy; below 12.2 volts, recharge",
+        "source": "Trojan's maintenance guidance - two numbers a reader acts on",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C5",
+        "text": "charging a lithium cell below about 32 °F causes permanent damage",
+        "source": "Battle Born and Victron both publish this",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C6",
+        "text": "a sunny winter day can put charge into a frozen lithium bank, which is why the shutdown order matters",
+        "source": "Battle Born's winterising guidance; Victron's manual",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C7",
+        "text": "MPPT is the better choice in winter because it harvests more from weak light",
+        "source": "Victron's own controller guidance",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C8",
+        "text": "inverter standby is the largest hidden drain in a stored RV",
+        "source": "the inverter maker's own no-load figure",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C9",
+        "text": "the converter/charger must match the battery chemistry, and the wrong profile under- or over-charges",
+        "source": "the converter maker's manual",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C10",
+        "text": "specific gravity falls as a lead-acid cell discharges, which is how a hydrometer reads state of charge",
+        "source": "Trojan's maintenance document",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C11",
+        "text": "a frozen battery can crack its case",
+        "source": "Trojan's freeze warning",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C12",
+        "text": "disconnect the negative terminal so nothing parasitic draws",
+        "source": "practice; the mechanism is in the drain section",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C13",
+        "text": "AGM and gel take the lead-acid rules without watering",
+        "source": "East Penn/Deka's manual",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C14",
+        "text": "\"The rule that saves most batteries\"",
+        "source": "a heading, and the page's summary; check the body does not overstate it",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C15",
+        "text": "\"Last reviewed: Sep 21, 2026, against the sources listed below\"",
+        "source": "provenance; Ty ruled it stays and is fine print",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      }
+    ]
   },
   "guides/index.html": {
     "hash": "4cfe45f2ba3475fe",
