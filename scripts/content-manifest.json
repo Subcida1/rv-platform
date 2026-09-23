@@ -1230,9 +1230,9 @@
         "id": "C5",
         "text": "ST tires are built for trailers and LT for light trucks, and the same size can carry different capacity by type",
         "source": "a tire maker's own guide",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "AI Studio lane retrieval on 2026-09-23, quoting Goodyear engineering documentation and the RV Safety and Education Foundation: ST tires are built for non-driven, non-steered trailer axles with heavier polyester cords and stiffer sidewalls to take lateral scrub in tight multi-axle turns, and carry roughly 10 percent more load than an equivalent-size LT at maximum inflation. Mixing constructions across one axle is prohibited practice. Read by the lane; the page's ST vs LT section matches.",
+        "at": "2026-09-23"
       },
       {
         "id": "C6",
@@ -1254,9 +1254,9 @@
         "id": "C8",
         "text": "keep 15 percent headroom between the tire's rated load and the load it actually carries; 125 percent of the measured load is better",
         "source": "Tire and Rim Association guidance or a maker's load tables. Two numbers a reader acts on",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "The arithmetic is mine and it checks: 125 percent of measured load is 80 percent of capacity (1/1.25 = 0.80), which is the same 80 percent convention the rest of the site uses. BUT I CORRECTED THE LANE'S ATTRIBUTION: it credited the 15 percent reserve to NHTSA's FMVSS 110 rulemaking, and 49 CFR 571.110, which I read on 2026-09-23, says the load on a tire shall be no greater than 94 percent of its rating at the placard pressure -- a 6 percent reserve, not 15. So 15 percent is industry practice rather than the federal rule, and the page states it as 'the working rule' rather than as a regulation.",
+        "at": "2026-09-23"
       },
       {
         "id": "C9",
