@@ -185,6 +185,14 @@
         "state": "CONFIRMED",
         "by": "Cloud cut the unsourced lithium rate on 2026-09-23: 'self-discharges at only 2 to 3 percent per month' is in no cited document, and the sentence now says lithium holds its charge far longer than lead-acid without a figure.",
         "at": "2026-09-23"
+      },
+      {
+        "id": "C17",
+        "text": "charge first, then add water; adding before charging may overflow",
+        "source": "Trojan Battery maintenance page",
+        "state": "READ",
+        "by": "NEW CLAIM FOUND BY THE REVIEW, and it was a contradiction rather than a gap: the page said 'Fill cells with distilled water first, then charge' and in the next sentence said to add water after charging, not before, while the checklist sided with the first. Trojan settles it: 'Charge the battery first and then add water if needed. Adding water to a battery before charging may result in overflow of the electrolyte.' The page now gives that order, Trojan's 1/8 inch below the vent well level, and the checklist matches.",
+        "at": "2026-09-23"
       }
     ]
   },
