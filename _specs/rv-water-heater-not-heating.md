@@ -136,12 +136,29 @@ in principle, with the reason recorded
 
 ## 8. Defects, ranked
 
-- **D1 — the two primary sources are declared unlinkable, and the furnace page proved that claim is
-  usually false.** Sources says the Suburban manual has *"no public copy to link"* and the Atwood one
-  likewise. On the furnace page the same wording turned out to be wrong: the documents circulate, and I
-  read both. **Find them, read the numbers (C9, C11, C14, C15, C19, C22), then keep the entries unlinked
-  and make the wording accurate** — no *maker* copy is published, which is true, where "no public copy"
-  is not. The rehost gate forbids citing the copies that circulate.
+- **D1 — the two primary sources are declared unlinkable, and the answer is now partly known.**
+  Sources says the Suburban manual has *"no public copy to link"* and the Atwood one likewise. What the
+  hunt found on 2026-09-23:
+
+  - **A maker-hosted document does exist, and it is citable:**
+    `library.suburbanrv.com/wp-content/uploads/2023/04/206244_Suburban_Water_Heaters_RevA_03-22-2023.pdf`
+    — Suburban's own *tank water heaters operation and maintenance guide* (part 206244, 2023). Read it:
+    it carries the secondary 110-volt switch, the anode replacement rule (consumption or weight loss
+    greater than 75 percent), the pipe thread sealant requirement, the sediment-trap mechanism in its own
+    words, and a 15-second purge that matches the figure on the furnace page.
+  - **The service manual is reachable only as a scan.** Three copies found and downloaded
+    (bryantrv, rvpartsexpress, myrvworks): one answers 403, two have no text layer. **Reading the
+    service-manual figures therefore needs OCR**, targeting the section headed "Thermostat Failure and
+    ECO Switches" for the 130 °F preset, the 180 °F trip and the reset-below-110 °F rule. That is a task
+    for the drafting pass, not a blocker, and it is why C9, C11 and C22 are still SOURCED.
+  - **The 130 °F and 180 °F figures do appear in Suburban's own operation manual** for specific models
+    (visible in a supplier's copy of it: the thermostat "is a temperature sensing limit designed to
+    maintain a water temperature of 130°F (54°C)", and "temperatures above 180°F will cause manual reset
+    button to trip"). If a maker-hosted copy of that model's operation manual turns up, those claims are
+    readable without OCR.
+  - Whatever happens, **the entries stay unlinked unless a maker copy is published, and the wording
+    becomes accurate rather than apologetic**: no maker copy published, where "no public copy" is false.
+    The rehost gate forbids citing the copies that circulate.
 - **D2 — the superlatives.** C2, C3 and C16 all assert a ranking nobody published, and C3 also points at
   the page itself ("on this page"). Either source them or say the thing plainly.
 - **D3 — the lede narrates the page** ("This guide walks the system like a technician does"), the same

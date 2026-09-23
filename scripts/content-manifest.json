@@ -1138,9 +1138,9 @@
         "id": "C8",
         "text": "many RV water heaters have a second on-off rocker switch behind the exterior access door",
         "source": "the maker's manual or wiring diagram",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Cloud read Suburban's own operation and maintenance guide (Part 206244, maker-hosted at library.suburbanrv.com) on 2026-09-23: it shows the secondary 110V switch alongside the primary, which is the page's hidden-switch claim",
+        "at": "2026-09-23"
       },
       {
         "id": "C9",
@@ -1226,9 +1226,9 @@
         "id": "C19",
         "text": "Suburban uses a steel tank with a sacrificial anode rod that must be replaced as it wears, and the rod is a common leak point when cross-threaded",
         "source": "Suburban service manual",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Same document, same reading: 'Each Suburban water heater is equipped with a replaceable anode rod... Replacement of the anode rod is recommended when consumption or weight loss is greater than 75%', and it names the pipe thread sealant requirement the page mentions",
+        "at": "2026-09-23"
       },
       {
         "id": "C20",
@@ -1258,9 +1258,9 @@
         "id": "C23",
         "text": "\"heavy sediment at the tank bottom traps heat and can trip the ECO\"",
         "source": "maker's service literature",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Same document: 'Sediment on the bottom of the tank forms a layer of insulation between the gas burner and the water. The sediment slows heat transfer and overheats the tank bottom.' That is the page's sediment claim, in Suburban's own words",
+        "at": "2026-09-23"
       },
       {
         "id": "C24",
