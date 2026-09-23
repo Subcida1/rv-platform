@@ -161,10 +161,10 @@
     ]
   },
   "guides/rv-towing-capacity.html": {
-    "hash": "0010df373c2a5e48",
-    "status": "unverified",
-    "verified_by": null,
-    "verified_at": null,
+    "hash": "b78e376567c64cd2",
+    "status": "verified",
+    "verified_by": "AI Studio lane (Gemini 3.8 Flash), 3 rounds; page-level only, per-claim provenance still pending",
+    "verified_at": "2026-09-22",
     "sources": []
   },
   "guides/rv-water-heater-not-heating.html": {
