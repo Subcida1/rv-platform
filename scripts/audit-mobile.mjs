@@ -31,7 +31,25 @@
 import fs from 'node:fs';
 
 const args = process.argv.slice(2);
-const argOf = (n, d) => { const i = args.indexOf(n); return i >= 0 ? args[i + 1] : d; };
+const argOf = (n, d) => {
+  const i = args.indexOf(n);
+  if (i < 0) return d;
+  const v = args[i + 1];
+  if (v === undefined || v.startsWith('--')) { console.error('error: ' + n + ' needs a value'); process.exit(2); }
+  return v;
+};
+/* Refuse anything unrecognised. A typo used to be ignored in silence: passing
+   --only instead of --page ran the whole site and reported clean, which reads
+   exactly like the check you asked for having passed. */
+{
+  const KNOWN = ['--port', '--base', '--out', '--page', '--widths'];
+  for (let i = 0; i < args.length; i++) {
+    if (args[i].startsWith('--') && !KNOWN.includes(args[i])) {
+      console.error('error: unknown flag ' + args[i] + ' (known: ' + KNOWN.join(', ') + ')');
+      process.exit(2);
+    }
+  }
+}
 const PORT = Number(argOf('--port', 9340));
 const BASE = argOf('--base', 'http://127.0.0.1:8130/');
 const OUT = argOf('--out', '/tmp/mobile-audit.json');
@@ -329,6 +347,27 @@ for (const rel of pages) {
     for (let i = 0; i < 80; i++) {
       await new Promise((r) => setTimeout(r, 120));
       if (await evalJs('document.readyState') === 'complete') break;
+    }
+    /* WAIT UNTIL style.css HAS ACTUALLY APPLIED, or this measures unstyled elements.
+       That is not hypothetical: one run reported 26 "small tap target" warnings on a
+       single manuals page whose stylesheet hash was identical to its siblings, with
+       the nav reading desktop-sized at 393px because none of the mobile CSS had been
+       applied yet. A re-run of the same page was clean. nav.main resolves to
+       position:sticky in the stylesheet and static before it, which makes it a
+       reliable sentinel. If it never applies, say so instead of reporting findings
+       that describe a page nobody will ever see. */
+    let cssReady = false;
+    for (let i = 0; i < 40; i++) {
+      cssReady = await evalJs(
+        "(function(){var n=document.querySelector('nav.main');" +
+        "return !!n && getComputedStyle(n).position === 'sticky';})()") === true;
+      if (cssReady) break;
+      await new Promise((r) => setTimeout(r, 120));
+    }
+    if (!cssReady) {
+      report.push({ page: rel, width: w, probe: null, unstyled: true });
+      console.error('  ! stylesheet never applied: ' + rel + ' @' + w + ' (skipped)');
+      continue;
     }
     /* Open the page's interactive state, then wait for it, then measure. 1600ms
        because the manuals hub fetches a 210KB corpus on the first keystroke. */

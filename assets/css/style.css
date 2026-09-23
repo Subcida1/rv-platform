@@ -2136,3 +2136,71 @@ body.is-embed .embed-credit{display:flex;position:fixed;left:0;right:0;bottom:0;
 body.is-embed .embed-credit .logo-mark{width:26px;height:26px;border-radius:8px;box-shadow:none;flex:none}
 body.is-embed .embed-credit .logo-mark svg{width:15px;height:15px}
 body.is-embed .embed-credit a{font-weight:800;color:var(--b1)}
+
+/* ===========================================================================
+   TWO ACCORDION SECTIONS THAT MUST NOT LOOK ALIKE
+
+   The calculator page ends with thirteen towing TERMS and then four QUESTIONS,
+   both built from details.faq, so they rendered as seventeen identical bordered
+   cards in a row and read as one long list interrupted by a heading. They are two
+   different things and the page said so only in prose.
+
+   Ty: "they're pretty much identical looking elements and I feel like we should
+   visually separate them somehow as well."
+
+   So each now looks like what it is. TERMS are a vocabulary you scan for a word
+   you have heard, so they are flat rows on rules: no card, no radius, nothing
+   pretending to be a tile. QUESTIONS are questions, so they keep the card and gain
+   a question mark, which names the section at a glance.
+
+   Deliberately NOT a restructure: both stay accordions. The complaint was that
+   they look the same, not that they behave the same, and turning the glossary into
+   an always-open list would have been a different change than the one asked for.
+   =========================================================================== */
+#terms details.faq{background:none;border:0;border-bottom:1px solid var(--border);
+  border-radius:0;padding:0;margin-bottom:0;box-shadow:none}
+#terms details.faq[open]{border-bottom-color:var(--border-2);box-shadow:none}
+#terms details.faq summary{padding:15px 0}
+#terms details.faq p{padding-bottom:16px;margin:0}
+
+#questions details.faq summary{padding-left:36px}
+#questions details.faq summary::before{content:"?";position:absolute;left:0;top:50%;
+  transform:translateY(-50%);width:23px;height:23px;border-radius:7px;
+  display:grid;place-items:center;background:var(--tint-bg);border:1px solid var(--tint-edge);
+  color:var(--tint-ink);font-size:13.5px;font-weight:800;line-height:1}
+
+/* ===========================================================================
+   SITE RULE: BUTTON GROUPS  (Ty, 2026-09-23)
+
+   "it seems we keep placing buttons vertically stacked when we should be placing
+   them side by side. we should make them fit side by side perfectly on mobile
+   because it just looks better that way and if we have to vertically stack buttons
+   they should be centered not to the left. that should be a site-wide rule."
+
+   Swept the whole site at 393px and found three shapes breaking it, not the one he
+   pointed at:
+     .tool-btns            justify:normal      -> left aligned on wrap
+     .prose .spread        justify:space-between (17 prev/next guide nav pairs)
+     .loc-row              justify:normal      -> the directory's location buttons
+   .hero-cta and .cta-row already centre, so they are only listed to make the rule
+   complete and to stop the next person re-diagnosing them.
+
+   flex:1 1 0 makes two buttons share the row equally, which is what "fit side by
+   side perfectly" means, and justify-content:center then centres whatever still
+   wraps. Desktop is untouched: the media query starts below 721px, and the
+   space-between pairs keep reading as prev-left, next-right above it.
+   =========================================================================== */
+@media(max-width:720px){
+  .tool-btns,.loc-row,.prose .spread,.hero-cta,.cta-row{justify-content:center}
+  /* Equal halves of the row, so they sit side by side rather than stacking. */
+  .tool-btns .btn,.prose .spread .btn{flex:1 1 0;min-width:0;padding-left:14px;padding-right:14px}
+}
+
+/* A big number with its label crammed against it.
+   Ty: "the text right next to the weight is way too close ... you've got it
+   literally right after lb without a space and then there's a huge change in font
+   size as well so its just kind of a jarring visual thing."
+   The label is a <small> sitting inline right after a 30 to 44px number, so it was
+   jammed against the unit and dropped 2.4x in size on the same baseline. On its own
+   line it reads as a caption, which is what it is. */
+.tool-viz .viz-total small{display:block;margin-top:4px;font-size:13px;line-height:1.4}
