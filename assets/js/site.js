@@ -274,6 +274,33 @@
  else inject();
  }
 
+ /* ---------- embed mode ----------
+   The calculator is offered as an iframe embed. Two things follow from that being
+   an iframe rather than a script:
+
+   1. Everything INSIDE it is cross-origin, so the page embedding it cannot reach in
+      and strip anything. That is the whole protection: the credit is part of the
+      document we serve, not a line of code they paste and can delete.
+   2. The one thing they CAN still do is shorten the iframe, which would crop a
+      credit bar sitting at the bottom of our page. So the bar is position:fixed,
+      which pins it to the VISIBLE bottom edge of whatever height they chose. To crop
+      it they would have to shrink the iframe until the calculator itself is unusable.
+
+   The emblogger cannot remove this. They can only stop embedding us.
+
+   The credit is injected rather than written into the page so any future embeddable
+   page gets it for free. */
+ function initEmbedMode() {
+ if (!/[?&]embed=1\b/.test(location.search)) return;
+ document.body.classList.add('is-embed');
+ var bar = document.createElement('div');
+ bar.className = 'embed-credit';
+ bar.innerHTML = '<span class="logo-mark">' + CFG.brand.mark + '</span>' +
+ '<span>Free RV weight calculator by</span>' +
+ '<a href="' + R('') + '" target="_blank" rel="noopener">' + esc(CFG.brand.name) + '</a>';
+ document.body.appendChild(bar);
+ }
+
  /* ---------- home search routing ---------- */
  /* Ordered on purpose: a question about DOING something (tow it, find a tech)
     beats a question about reading about it, and a specific guide beats the
@@ -398,5 +425,6 @@
  initReveal();
  initSearch();
  initSearchScript();
+ initEmbedMode();
  initTracking();
 })();

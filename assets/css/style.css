@@ -2103,3 +2103,36 @@ figure:has(svg[role="img"]){overflow-x:auto;overflow-y:hidden}
   .nav-links{display:none}
   .burger{display:block}
 }
+
+/* ===========================================================================
+   EMBED MODE  (?embed=1)
+
+   The calculator is offered as an iframe. Everything inside it is served from
+   originrv.com, so the page embedding it is cross-origin and cannot reach in to
+   strip anything: the credit is part of the document we send, not a line of code
+   they paste and can delete.
+
+   The one thing they CAN do is shorten the iframe, which would crop a credit bar
+   sitting at the end of our page. So the bar is position:FIXED, which pins it to
+   the visible bottom edge of whatever height they chose. Cropping it means
+   shrinking the iframe until the calculator itself is unusable.
+
+   Site chrome is hidden because an embed should be the tool, not our whole site
+   wearing someone else's page. The embed offer section is hidden too: it is
+   pointless inside an embed of itself.
+   =========================================================================== */
+body.is-embed .util,
+body.is-embed nav.main,
+body.is-embed footer,
+body.is-embed #embed{display:none}
+/* Room for the fixed bar so it never covers the last of the content. */
+body.is-embed{padding-bottom:56px}
+
+.embed-credit{display:none}
+body.is-embed .embed-credit{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:300;
+  align-items:center;justify-content:center;gap:10px;height:56px;padding:0 16px;
+  background:var(--surface);border-top:1px solid var(--border);
+  font-size:13.5px;color:var(--text-2);text-align:center}
+body.is-embed .embed-credit .logo-mark{width:26px;height:26px;border-radius:8px;box-shadow:none;flex:none}
+body.is-embed .embed-credit .logo-mark svg{width:15px;height:15px}
+body.is-embed .embed-credit a{font-weight:800;color:var(--b1)}
