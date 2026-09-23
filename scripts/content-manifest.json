@@ -866,17 +866,17 @@
         "id": "C5",
         "text": "\"Payload is how much weight your truck itself may carry: people, gear, fuel, and the tongue weight\"",
         "source": "Ford owner manual, Load Carrying: base curb weight includes \"full fluids\"; payload = GVWR − base curb weight. Fuel is already inside the rat",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Cloud read GMC's own trailering guide on 2026-09-23: 'CURB WEIGHT: The weight of a vehicle with all of the standard and optional equipment and a full tank of fuel, but without any passengers or cargo.' Fuel is inside the rating, which is what the page now says, and the page names no maker for the definition, so a maker's own guide is the evidence rather than the citation.",
+        "at": "2026-09-23"
       },
       {
         "id": "C6",
         "text": "payload definition omits hitch hardware",
         "source": "Ford's own subtract-list names \"Hitch hardware weight, such as a draw bar, ball, locks or weight distributing\". A WDH head + shank is ~75-10",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Same document, same reading: the GVWR definition names 'the weight of the hitch' among the things it covers, and cargo weight 'also includes the trailer tongue or hitch weight'. Hitch hardware counting against payload is a definition, and it is now read as well as defined.",
+        "at": "2026-09-23"
       },
       {
         "id": "C7",
