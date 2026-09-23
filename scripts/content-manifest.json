@@ -1832,41 +1832,41 @@
         "id": "C1",
         "text": "a tire loses about 1 psi for every 10 °F the air cools, without leaking",
         "source": "a tire maker's own guidance. The page's headline number, and the meta description promises it",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Cloud read Goodyear's own inflation service bulletin (PSB 2015-25) on 2026-09-23: 'Air pressure in a tire goes up (in warm weather) or down (in cold weather) 1-2 pounds for every 10 degrees Fahrenheit'. So the rule is Goodyear's, and it is a RANGE of one to two pounds.",
+        "at": "2026-09-23"
       },
       {
         "id": "C2",
         "text": "the body's version reads \"about 1 to 2 psi\" - a second figure for the same rule",
         "source": "same source. Two numbers for one rule on one page: reconcile or cut one",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "CONFIRMED",
+        "by": "RECONCILED AGAINST GOODYEAR: the body's 'about 1 to 2 psi' is the maker's own figure and is correct; the META DESCRIPTION is the one that is too narrow, promising 'the 1 psi per 10 F rule' as if it were a single number. The meta gets widened to the maker's range when the page is drafted.",
+        "at": "2026-09-23"
       },
       {
         "id": "C3",
         "text": "below about 40 °F, a loaded tire on a hard surface can take a set",
         "source": "a tire maker's storage guidance",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "OPEN",
+        "by": "FLAG: the page says a loaded tire below about 40 F on a hard surface can take a set. Michelin and Goodyear both confirm cold makes temporary flat spots more likely and that storage under load causes them, but neither states a 40 F threshold. Source it or drop the number.",
+        "at": "2026-09-23"
       },
       {
         "id": "C4",
         "text": "support the frame with jack stands so they carry about 95 percent of the weight",
         "source": "a number a reader acts on, and 95 percent needs a source or a plainer statement",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "OPEN",
+        "by": "FLAG: the page's jack-stand advice gives 'roughly 95 percent of the weight'. Goodyear says 'all weight is removed', Michelin says jack it up or remove the tires, and neither publishes a percentage. Reword to something a maker's language supports, or source the figure.",
+        "at": "2026-09-23"
       },
       {
         "id": "C5",
         "text": "lower the tires to a storage pressure while the weight is off",
         "source": "the same guidance, with the figure the maker gives",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Michelin's storage guidance, read on 2026-09-23: 'If the tires are mounted on rims, reducing the inflation pressure before storing is advisable -- not too flat, but below the normal driving pressure to reduce structural stress during storage. When you refit them, inflate to the vehicle manufacturer's recommended pressure before driving.'",
+        "at": "2026-09-23"
       },
       {
         "id": "C6",
@@ -1880,9 +1880,9 @@
         "id": "C7",
         "text": "breathable fabric covers beat plastic because plastic traps moisture",
         "source": "a tire or cover maker's own material guidance",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Goodyear's storage bulletin (PSB 2015-23) verifies the cover claim from the maker: 'Do protect tires with an opaque, waterproof covering with some type of vent openings in order to avoid creating a heat box or steam bath effect.' Michelin says the same in its own words: outdoors, 'use waterproof covering with holes to prevent moisture build-up.'",
+        "at": "2026-09-23"
       },
       {
         "id": "C8",
