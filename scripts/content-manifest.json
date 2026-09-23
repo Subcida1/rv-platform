@@ -219,41 +219,41 @@
         "id": "C1",
         "text": "Keystone's manuals give a roof limit of 30 pounds per square foot, about two feet of snow",
         "source": "Keystone's own 2026 owner's manual (in Sources) - the page's load-bearing citation",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Cloud read Keystone's own 2026 owner's manual on 2026-09-23: 'Snow loads that exceed 2 feet or 30 pounds per square foot can lead to damage of the roof structure as well as to the axles and suspension. The roof should be free of snow before transporting the RV.' The 30 psf / 2 feet rating is the maker's, and it covers the axles and suspension too, not just the roof.",
+        "at": "2026-09-23"
       },
       {
         "id": "C2",
         "text": "Keystone states snow loads exceeding two feet or 30 psf should be removed",
         "source": "the same manual",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Same passage, and it carries an instruction the page does not use: 'The roof should be free of snow before transporting the RV.' Also worth adding, from the same page: 'These roofs are not designed to accommodate chairs, coolers, multiple people, etc.' -- the maker saying plainly that the roof is not a surface to stand on.",
+        "at": "2026-09-23"
       },
       {
         "id": "C3",
         "text": "Boxabl rates its Baby Box 120 at 20 psf",
         "source": "Boxabl's spec sheet (in Sources) - a prefab structure, not an RV: check the comparison is honest",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Cloud read Boxabl's Baby Box 120 spec sheet on 2026-09-23: '20 psf Roof Live Load Rating (flat roof)', alongside a 6,400 lb GVWR and a hitch. SO THE COMPARISON IS APT AFTER ALL and my spec flagged it wrongly: the Baby Box is a towable SIP-panel structure, not an unrelated prefab, and its 20 psf is a building-code live load for a flat roof rather than an RV maker's rating. Keep it, and label it as what it is.",
+        "at": "2026-09-23"
       },
       {
         "id": "C4",
         "text": "\"owners work from roughly 20 to 25 psf as the point to start paying attention\"",
         "source": "unnamed-owner prevalence. The class. Either a maker/industry source or our own advice stated as ours",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "state": "CONFIRMED",
+        "by": "RE-GROUNDED, and this is a real improvement: the page said 'owners work from roughly 20 to 25 psf as the point to start paying attention' -- the unnamed-owner class. Boxabl's 20 psf roof live load is the documented basis for that threshold, so the page will state the figure and its origin rather than what owners do.",
+        "at": "2026-09-23"
       },
       {
         "id": "C5",
         "text": "snow weighs roughly 3 to 6 lb/sq ft per foot of fresh powder, and 15 to 25 for wet or compacted snow",
         "source": "a structural or weather source. The page's core math",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Cloud read two authoritative sources on 2026-09-23 and the page's ranges hold inside both. NWS: 'Snow Loads' (weather.gov/media/ajk/articles/snowloads.pdf) states '62.4 pounds of water on a square foot, 1 foot deep, or 5.2 pounds per inch', with a table converting inches of water equivalent to pounds per square foot. USDA NRCS gives the density spread that produces the page's other range: '10 inches of newly fallen snow typically has about 1 inch of water content (10 percent density). For very light powder snow 1 inch of SWE could result in 25 inches of snow depth (4 percent density). Or for very heavy snow, 1 inch of SWE might total just 5 inches of snow depth (20 percent density).' A foot of powder at 4 to 10 percent density is 2.5 to 6.2 psf, which is the page's '3 to 6', and a foot of wet snow at 30 to 48 percent is 15 to 25 psf, which is the page's other range. AND THE READING FOUND A BETTER METHOD THAN THE PAGE TEACHES: the NWS approach is to take a core sample with a cylinder, melt it, measure the inches of water, and multiply by 5.2 -- which replaces guessing the snow type entirely. Worth adding when the page is drafted.",
+        "at": "2026-09-23"
       },
       {
         "id": "C6",
