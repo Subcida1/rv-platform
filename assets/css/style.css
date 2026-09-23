@@ -1791,6 +1791,16 @@ figure:has(svg[role="img"]){overflow-x:auto;overflow-y:hidden}
   .deck-sim{transition:none}
 }
 
+/* A pair of CTAs in a section body. This was a bare <div class="center sp-14">, so
+   the buttons were inline-flex and simply wrapped: on a phone "Find a service" and
+   "Claim your business" measured 167 + 198 + 10 = 375px into 345px of width, so
+   they broke onto two lines, LEFT aligned (this site left-aligns .center below
+   420px), with no gap between them. Ty, 2026-09-22: "their on top of eachother ands
+   it looks bad, if we layer them vertically it needs to space and center them."
+   A flex row answers both readings of what he wants: centred side by side when they
+   fit, centred with a real gap when they do not. gap replaces the old ml-10. */
+.cta-row{display:flex;flex-wrap:wrap;justify-content:center;align-items:stretch;gap:10px}
+
 /* ============================================================
    MOBILE PASS (2026-09-22)
 
@@ -1876,6 +1886,48 @@ figure:has(svg[role="img"]){overflow-x:auto;overflow-y:hidden}
 
   /* ---- the search field's own inset was 8px, tight against a 46px button ---- */
   .search-bar{padding:10px 10px 12px}
-  .search-bar .btn{height:48px}
-  .search-bar input{min-height:44px;font-size:16px}
+
+  /* ---- CTA pairs share the row instead of wrapping left-aligned. flex:1 1 0
+     makes them equal width, which is what reads as deliberate when they sit
+     side by side. Text can wrap inside a button (the rule above sets
+     white-space:normal on mobile), and align-items:stretch keeps the two the
+     same height when one label needs two lines. ---- */
+  .cta-row{gap:8px}
+  .cta-row .btn{flex:1 1 0;min-width:0;padding-left:14px;padding-right:14px;font-size:14.5px}
+
+  /* ---- THE SEARCH BAR, one row. It was a 999px-radius pill with flex-wrap on,
+     so the field sat on line one and a 290px full-width button wrapped to line
+     two inside the pill: measured 128px tall on a 360px screen. A pill that tall
+     with a full-width button inside it reads as a blob, not a search box. Now it
+     holds icon, field and a compact button on one line, sized by its content
+     rather than a fixed height, which is the shape a phone search field should
+     be. The two rules that used to set this (.search-bar .btn{height:48px} and
+     .search-bar input{min-height:44px}) are DELETED, not overridden: leaving them
+     below won the cascade and quietly kept the button at 48px while I believed I
+     had set 44. ---- */
+  .search-bar{flex-wrap:nowrap;padding:6px 6px 6px 16px;gap:8px}
+  .search-bar .btn{width:auto;min-height:44px;padding:0 18px;flex:none}
+  /* 44px, not the 18px the field's own line-height gives it: the input is the
+     only thing in the pill that takes focus, so a short box means a tap above or
+     below the text lands on nothing.
+     min-width:0 is load-bearing. An <input> carries an intrinsic width of about
+     twenty characters and will NOT shrink past it, so with flex-wrap:nowrap the
+     button was pushed 13px out of the pill at 360px (found by audit-mobile, not
+     by eye). This lets the field give up the space instead. */
+  .search-bar input{min-height:44px;font-size:16px;min-width:0}
+}
+
+/* ---------------------------------------------------------------------------
+   Narrow phones, under 380px.
+
+   The verdict readouts put the label and the value on one row with the value
+   right-aligned and nowrap. That is right down to about 380px; below it the pair
+   does not fit and the value was pushed 33px past the row, which body's
+   overflow-x:hidden then clipped. Found at 320px by audit-mobile, and it passes
+   at 360 and up, so it only bites narrow phones. Stacked, each readout reads as
+   a label over its value instead of two clipped columns.
+   --------------------------------------------------------------------------- */
+@media(max-width:380px){
+  .deck-sim-row{flex-direction:column;align-items:flex-start;gap:3px}
+  .deck-sim-row b{text-align:left;white-space:normal}
 }
