@@ -321,7 +321,14 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
 .search{max-width:720px;margin:36px auto 0;position:relative}
 .search-bar{display:flex;align-items:center;gap:12px;background:var(--surface);border:1px solid var(--border-2);border-radius:999px;padding:8px 8px 8px 22px;box-shadow:var(--shadow);transition:.18s}
 .search-bar:focus-within{border-color:var(--b1);box-shadow:0 0 0 3px var(--glow)}
-.search-bar svg{width:20px;height:20px;stroke:var(--text-3);flex:none}
+/* The search mark is a road receding to its vanishing point, with the centreline
+   dashes getting shorter and closer together as they go, so the perspective reads
+   even at this size. It replaces a magnifier glyph whose circle-and-handle turned
+   into an unreadable blob at 20px, which Ty spotted: "whatever the icon is on the
+   left of the searchbar is unidentifiable". It also says something the magnifier
+   did not: this site is about the road. Sized up to 23px from 20px because the
+   three dashes need the extra millimetre to stay distinct. */
+.search-bar svg{width:23px;height:23px;stroke:var(--text-3);flex:none}
 .search-bar input{flex:1;background:none;border:none;outline:none;color:var(--text);font-size:16px}
 .search-bar input::placeholder{color:var(--text-3)}
 .search-bar .btn{padding:11px 24px}
