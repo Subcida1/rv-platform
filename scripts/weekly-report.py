@@ -174,6 +174,29 @@ def cf_rum(token, tag, start, end):
     }, None
 
 
+BING_API = "https://ssl.bing.com/webmaster/api.svc/json/"
+BING_SITE = "https://originrv.com/"
+
+
+def bing_call(method, token, **params):
+    params["apikey"] = token
+    resp = requests.get(BING_API + method, params=params, timeout=(8, 25))
+    if resp.status_code != 200:
+        return None, "HTTP %s" % resp.status_code
+    try:
+        return resp.json().get("d", []), None
+    except ValueError:
+        return None, "unreadable response"
+
+
+def bing_number(row, *wanted):
+    """Bing's field names are not documented in one place, so match loosely."""
+    for key, value in row.items():
+        if key.lower() in wanted:
+            return value
+    return None
+
+
 def ga4_pages(token, prop, start, end, limit=10):
     body = {"dateRanges": [{"startDate": start.isoformat(), "endDate": end.isoformat()}],
             "dimensions": [{"name": "pagePath"}],
@@ -380,6 +403,40 @@ def build(args):
         add("No 404 hits in this window, so no dead link has been followed.")
     add("")
 
+    add("### Bing (the index Copilot reads)")
+    add("")
+    bing_key = args.bing_token
+    if not bing_key:
+        add("No Bing token available, so this section is skipped.")
+    else:
+        traffic, terr = bing_call("GetRankAndTrafficStats", bing_key, siteUrl=BING_SITE)
+        queries, qerr = bing_call("GetQueryStats", bing_key, siteUrl=BING_SITE)
+        if terr and qerr:
+            add("Bing API unavailable: %s" % terr)
+        elif not traffic and not queries:
+            add("Bing has no data yet. It begins reporting roughly 48 hours after a site is")
+            add("verified, and this site was verified 2026-09-22, so empty is expected here,")
+            add("not a fault. The API itself works: GetUserSites returns this property.")
+        else:
+            if traffic:
+                imp = sum(bing_number(r, "impressions") or 0 for r in traffic)
+                clk = sum(bing_number(r, "clicks") or 0 for r in traffic)
+                add("- %d day(s) of traffic: %s impressions, %s clicks" % (len(traffic), int(imp), int(clk)))
+            if queries:
+                add("")
+                add("| query | impressions | clicks |")
+                add("|---|---|---|")
+                for row in queries[:10]:
+                    add("| %s | %s | %s |" % (row.get("Query", "?"),
+                                              bing_number(row, "impressions") or 0,
+                                              bing_number(row, "clicks") or 0))
+        add("")
+        add("**Grounding queries and Citation Share are not reachable through this API.** Verified")
+        add("2026-09-22 by probing five plausible method names, all of which returned 404 while")
+        add("GetQueryStats returned 200. Those two AI reports stay a manual look in Bing's own")
+        add("interface, and this is now settled rather than assumed.")
+    add("")
+
     add("### Field performance (Cloudflare Web Analytics)")
     add("")
     cf, cf_err = cf_rum(args.cf_token, args.cf_account, ga_start.isoformat(), today.isoformat())
@@ -522,8 +579,9 @@ def build(args):
     add("- GA4: %s" % ("wired, section 3 above" if not err else "NOT answering: %s" % err))
     add("- Cloudflare Web Analytics: wired, section 3. The only source of field Core Web Vitals,")
     add("  since neither GA4 nor the Search Console API exposes them.")
-    add("- Bing Webmaster Tools: site verified and sitemap submitted by hand. The API is not")
-    add("  wired, so grounding queries and Citation Share are a manual look in its UI.")
+    add("- Bing Webmaster Tools: API wired for query and traffic stats, section 3. Grounding")
+    add("  queries and Citation Share are NOT in the API (five method names probed, all 404), so")
+    add("  those two stay a manual look in Bing's interface.")
     add("- IndexNow: wired for submission (scripts/indexnow.py), not yet automatic on change.")
     add("- Generative AI impressions: not available through the GSC API at all; UI only.")
     add("")
@@ -552,6 +610,8 @@ def main():
                         help="Cloudflare account tag (from npx wrangler whoami)")
     parser.add_argument("--cf-token", default=os.environ.get("CLOUDFLARE_ANALYTICS_TOKEN", ""),
                         help="Cloudflare API token; defaults to the agent secret")
+    parser.add_argument("--bing-token", default=os.environ.get("BING_WEBMASTER_API_KEY", ""),
+                        help="Bing Webmaster API key; defaults to the agent secret")
     parser.add_argument("--quiet", action="store_true", help="write the file, print only the path")
     args = parser.parse_args()
 
