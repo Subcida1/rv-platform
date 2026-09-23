@@ -82,7 +82,233 @@
       "outbox/reply-20260922-2026-fixes-confirm-batch4.md"
     ],
     "invalidated_by": "house-style sweep 2026-09-23: 77 colon lowercases across 16 pages; heading text changed, meaning did not",
-    "invalidated_at": "2026-09-23"
+    "invalidated_at": "2026-09-23",
+    "claims": [
+      {
+        "id": "C1",
+        "text": "the system is a short chain and a fault kills everything downstream of the failed link",
+        "source": "the page's own thesis; a structural description",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C2",
+        "text": "flooded lead-acid resting voltages: 12.73 V at 100%, down to 11.51 V at 10%",
+        "source": "the maker's chart - which one is named? The page says \"from the same source\"",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C3",
+        "text": "charging set points 14.7 V absorption, 13.5 V float, 16.2 V equalization",
+        "source": "same source as C2",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C4",
+        "text": "Lifeline publishes 14.3 V ± 0.1 absorption and 13.3 V float",
+        "source": "Lifeline technical manual (in Sources)",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C5",
+        "text": "Renogy resting chart: 13.6 V at 100%, 13.4 at 90, 13.3 at 80, 13.2 at 70",
+        "source": "Renogy voltage chart (in Sources)",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C6",
+        "text": "\"the curve is much flatter for most of the usable range, so voltage alone tells you much less\"",
+        "source": "the caveat is attributed to the maker",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C7",
+        "text": "Victron advises no more than 2.5 percent voltage drop, which is about 0.3 volts on a 12-volt system",
+        "source": "Victron, Wiring Unlimited (in Sources) - two numbers a reader acts on",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C8",
+        "text": "a single cable connection is about 0.06 milliohms, a 500-amp shunt about 0.10, a 150-amp fuse about 0.35",
+        "source": "the page's appendix calls this \"field knowledge, not manufacturer documented\". It is a number a reader acts on, so it must be read or cut",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C9",
+        "text": "diode-based combiners lose roughly 0.7 volts",
+        "source": "a maker's datasheet for a diode isolator",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C10",
+        "text": "battery-circuit fuses run 30 A on a numbered circuit, varying by model",
+        "source": "the converter maker's manual",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C11",
+        "text": "converter output fuses run from a single 40 A up to two 40s depending on output",
+        "source": "the converter maker's manual",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C12",
+        "text": "ANL-style fuses take roughly 35 to 400 amps",
+        "source": "a fuse maker's own ratings",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C13",
+        "text": "fuse colour code: red 10 A, blue 15, yellow 20, green 30",
+        "source": "a standard chart, and the page credits the image",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C14",
+        "text": "parasitic draw arithmetic: 48 amp hours over 12 days is 4 amp hours a day",
+        "source": "arithmetic, stated on the page",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C15",
+        "text": "Winnebago's parasitic draw service bulletin",
+        "source": "Winnebago bulletin (in Sources)",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C16",
+        "text": "the Fluke method for finding parasitic drain with a multimeter",
+        "source": "Fluke (in Sources)",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C17",
+        "text": "the ML-ACR draw figures",
+        "source": "Blue Sea Systems (in Sources)",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C18",
+        "text": "\"a source quoting $500 to $520 installed for a common 55 to 60 amp unit in a specific brand of trailer\"",
+        "source": "\"one source\" - unnamed. A price a reader acts on: name it or cut the numbers",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C19",
+        "text": "\"This is the single most misdiagnosed thing in RV electrics\" (a bad ground)",
+        "source": "ranking claim, no source",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C20",
+        "text": "\"Most RV electrical money is wasted by replacing parts in hope.\"",
+        "source": "prevalence claim, no source",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C21",
+        "text": "\"The trade method, and it is worth learning\"",
+        "source": "unnamed authority - the trade",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C22",
+        "text": "\"The layout most guides get wrong\"",
+        "source": "a claim about other pages, and it sells by contrast",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C23",
+        "text": "\"the thing almost no RV electrical page teaches\"",
+        "source": "second instance of the same shape",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C24",
+        "text": "\"Several of the numbers in this guide come from converter makers themselves, which means you can check your own unit against the spec\"",
+        "source": "a diligence claim in the banned shape",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C25",
+        "text": "\"No RV manufacturer we looked at publishes a step by step, walk-the-chain voltage drop procedure\"",
+        "source": "a process disclosure, and an argument for our usefulness",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C26",
+        "text": "NFPA 1192 and the ANSI/RVIA DC standard are both paywalled",
+        "source": "true and already documented, but it is a statement about our sourcing inside the reader's page",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C27",
+        "text": "the hot skin condition: touching the RV can give a shock, and it is a ground fault",
+        "source": "NFPA 1192 or a safety source. A safety claim: source it or cut the mechanism",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C28",
+        "text": "\"Last reviewed: Sep 21, 2026, against the sources listed below\"",
+        "source": "provenance; Ty ruled it stays and is fine print",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      }
+    ]
   },
   "guides/rv-converter-not-charging.html": {
     "hash": "305462e8942b672a",
