@@ -1183,16 +1183,21 @@
     "invalidated_at": "2026-09-23"
   },
   "guides/rv-tire-replacement.html": {
-    "hash": "b1f80dabcb1d2e0f",
-    "status": "unverified",
-    "verified_by": null,
-    "verified_at": null,
+    "hash": "602022d83945a62a",
+    "status": "verified",
+    "verified_by": "AI Studio lane (Gemini 3.8 Flash) through the AUTOLOOP, three rounds on 2026-09-23: the first found my own five-year sibling-miss and two phrasing defects, the confirm caught a redundant paragraph lead, and the closing round confirmed the narrower lead preserves the section's convention",
+    "verified_at": "2026-09-23",
     "sources": [
-      "inbox/REPLY-REQUEST-20260922-1434-batch1-signoff-batch2-checklists.md",
-      "outbox/reply-20260922-1434-batch1-signoff-batch2-checklists.md"
+      "inbox/REVIEW-REQUEST-20260923-0633-rv-tire-replacement.md",
+      "outbox/REPLY-RVTIRE-REVIEW-0633.md",
+      "inbox/REVIEW-REQUEST-20260923-1230-rv-tire-replacement-confirm.md",
+      "outbox/REPLY-RVTIRE-CONFIRM-1230.md",
+      "inbox/REVIEW-REQUEST-20260923-1246-rv-tire-replacement-close.md",
+      "outbox/REPLY-RVTIRE-CLOSE-1246.md",
+      "spec:_specs/rv-tire-replacement.md"
     ],
-    "invalidated_by": "house-style sweep 2026-09-23: 77 colon lowercases across 16 pages; heading text changed, meaning did not",
-    "invalidated_at": "2026-09-23",
+    "spec": "_specs/rv-tire-replacement.md",
+    "spec_waived": false,
     "claims": [
       {
         "id": "C1",
