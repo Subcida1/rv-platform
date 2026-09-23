@@ -175,10 +175,10 @@
     "invalidated_at": "2026-09-23"
   },
   "guides/rv-towing-capacity.html": {
-    "hash": "b78e376567c64cd2",
-    "status": "verified",
-    "verified_by": "AI Studio lane (Gemini 3.8 Flash), 3 rounds; page-level only, per-claim provenance still pending",
-    "verified_at": "2026-09-22",
+    "hash": "fb34b50fc28c7ca3",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
     "sources": [],
     "claims": [
       {
@@ -405,7 +405,9 @@
         "by": null,
         "at": null
       }
-    ]
+    ],
+    "invalidated_by": "D9 applied 2026-09-23: title/og/twitter dropped 'Calculator' (the page is a guide that points at a tool) and the meta followed. Title text is visible text, so the 3-round verdict is stale. Needs a confirm round.",
+    "invalidated_at": "2026-09-23"
   },
   "guides/rv-water-heater-not-heating.html": {
     "hash": "67da1fe9a8916fc9",
