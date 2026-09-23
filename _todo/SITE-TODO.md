@@ -516,3 +516,11 @@ pages. The guides were the bulk and the worst drift.
   (breakaway brakes must "apply automatically and immediately upon breakaway" and "remain in the applied
   position for at least 15 minutes"), FMVSS 121 (49 CFR 571.121), and NFPA 1192 (2026) ch. on vehicular
   braking. See `_specs/rv-towing-capacity.md` C16.
+
+- **The calculator has no GCWR check.** Found 2026-09-23 while fixing the towing guide. The tool
+  takes truck GVWR and trailer GVWR separately and verdicts `Towing capacity`, `Truck payload`,
+  `Trailer payload` and `Truck gross weight` (see `assets/js/weight.js`), but there is **no GCWR
+  field**, so the limit the guide calls "the binding ceiling for the whole RV" is the one limit the
+  tool cannot check. The guide now says so honestly and tells the reader to add it up by hand.
+  Fix is one more input plus one more verdict row. Worth doing: a reader who checks three of four
+  limits and stops is exactly the reader the page exists to catch.
