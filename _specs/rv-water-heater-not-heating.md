@@ -206,3 +206,33 @@ RVBusiness and supplied by Specialized Dispatch Services.
 **For Ty, if he wants one:** C27 ("RVers replace these water heaters regularly") is a behaviour claim with
 no source. My recommendation is to cut the claim and keep the advice — ask about labour separately —
 because the price comparison stands on its own without it.
+
+## 11. Drafted and verified, 2026-09-23
+
+**VERIFIED after two review rounds.** Ledger: 30 claims, 13 READ, 17 CONFIRMED, nothing below the floor.
+
+**Round one found the trap this section existed to catch, and it was in my own ordering.** The tank
+check told readers to open a hot faucet, which runs steady even with the tank dry when the bypass valves
+are still in winter mode. The check now names that trap, sends the reader to the bypass setting first,
+and then to the temperature and pressure relief valve — the one check that comes from the tank rather
+than the plumbing around it.
+
+**Round one also corrected two maker-level facts:** the ECO protects both heat sources, not just the
+element (Suburban's dual-fuel models carry two, 12 V DC and 120 V), and the reset will not hold while the
+water is above about 110 °F. FAQ 5 was wrong in the other direction — Dometic's manual says the heater is
+designed to run on gas, electricity, or both.
+
+**One finding was partly refused, and the confirm round independently upheld the refusal.** The reviewer
+said Atwood's ECO is automatic-reset and clears with a switch cycle. Dometic's own manual describes a
+*"manually re-setable high temperature limit switch on combination gas/electric units"*, so that half was
+not printed — and the confirming round retrieved the same sentence from Dometic manual MPD 93756 and said
+holding it back was correct. **That is the first time a lane has verified a refusal rather than a fix.**
+
+**Applied in full:** the carbon monoxide and gas-smell warning the propane section was missing, the
+tank-full section reordered around the bypass trap, the dry-fired element description, and three
+phrasing fixes.
+
+**Queued, not done:** the confirm round suggested a parenthetical that the water supply must be
+pressurised when the T&P lever is lifted. The same round judged the text sound without it, and any edit
+now would void a verdict that cost two rounds. **Add it the next time this page is opened for another
+reason, and expect to re-verify the page when you do.**
