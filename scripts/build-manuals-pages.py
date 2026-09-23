@@ -277,7 +277,7 @@ def hub(rows, oem_count, model_count=0):
 
     collection = {
         "@context": "https://schema.org", "@type": "CollectionPage",
-        "name": HUB_TITLE, "url": SITE + "/manuals/", "description": desc,
+        "name": HUB_TITLE, "url": SITE + "/manuals/index.html", "description": desc,
         "isPartOf": site_schema(),
         "mainEntity": {
             "@type": "ItemList", "numberOfItems": len(R.SYSTEMS),
@@ -371,9 +371,9 @@ def hub(rows, oem_count, model_count=0):
   </div>
 """ % (len(rows), n_brands, model_count, "\n".join(tiles), oem_count)
 
-    return (head(HUB_TITLE, desc, SITE + "/manuals/",
+    return (head(HUB_TITLE, desc, SITE + "/manuals/index.html",
                  [collection, breadcrumbs([("OriginRV", SITE + "/"),
-                                           ("RV Manuals", SITE + "/manuals/")])])
+                                           ("RV Manuals", SITE + "/manuals/index.html")])])
             + body + foot("assets/js/manuals/hub.js"))
 
 
@@ -402,7 +402,7 @@ def system_page(slug, title, desc, rows):
         <ul class="man-links">%s</ul>
       </div>""" % "".join(links)) if links else ""
 
-    crumb = breadcrumbs([("OriginRV", SITE + "/"), ("RV Manuals", SITE + "/manuals/"),
+    crumb = breadcrumbs([("OriginRV", SITE + "/"), ("RV Manuals", SITE + "/manuals/index.html"),
                          (title, "%s/manuals/%s.html" % (SITE, slug))])
 
     body = """
@@ -609,7 +609,7 @@ def brands_page(rows, models_by_brand=None):
                 for i, r in enumerate([r for r in
                                        sorted(rows, key=lambda r: r["brand"].lower())
                                        if r["url"]], 1)]}}
-    crumb = breadcrumbs([("OriginRV", SITE + "/"), ("RV Manuals", SITE + "/manuals/"),
+    crumb = breadcrumbs([("OriginRV", SITE + "/"), ("RV Manuals", SITE + "/manuals/index.html"),
                          (BRANDS_TITLE, SITE + "/manuals/brands.html")])
 
     body = """
@@ -714,7 +714,7 @@ def recalls_page(rows, bulletins, source_note):
       <p class="man-status">%s</p>""" % (len(bulletins), esc(window), format(total, ","),
                                          table, esc(source_note)))
 
-    crumb = breadcrumbs([("OriginRV", SITE + "/"), ("RV Manuals", SITE + "/manuals/"),
+    crumb = breadcrumbs([("OriginRV", SITE + "/"), ("RV Manuals", SITE + "/manuals/index.html"),
                          (RECALL_TITLE, SITE + "/manuals/recalls.html")])
     collection = {
         "@context": "https://schema.org", "@type": "CollectionPage",
