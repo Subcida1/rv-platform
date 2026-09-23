@@ -103,9 +103,9 @@ H2  The other suspects, in order
 | C16 | "about **one pound of propane** for roughly **eight hours**" | Dometic manual or a propane-consumption figure | **UNSOURCED** |
 | C17 | "120-volt shore power: draws about **300 to 400 watts** continuously" | Dometic manual states the element wattage — cite it | **UNSOURCED** |
 | C18 | "12-volt: drawing **10 to 30 amps**, able to drain a **100 amp-hour battery in about four hours**" | arithmetic ✓ (100/25 = 4). Cite the draw from the manual | PARTIAL |
-| C19 | "compressor: **3 to 5 amps** while running, landing around **30 to 80 amp-hours per day**" | the two figures only reconcile with a duty cycle, which is never stated. See D3 | **UNDERSTATED** |
+| C19 | "compressor: **3 to 5 amps** while running, landing around **30 to 80 amp-hours per day**" | at a 100 % duty cycle 3–5 A is 72–120 Ah/day, so the stated 30–80 only works at roughly a **25–65 % duty cycle**, which is never mentioned. A fridge does cycle, so the figure is plausible — the reader just cannot check it. See D3 | **UNDERSTATED** |
 | C20 | "**a boondocking power budget treats about 25 amp-hours a day** as the healthy baseline for a DC fridge" | **contradicts C19 two paragraphs earlier (30 to 80)** | **INTERNAL** |
-| C21 | "a modern compressor fridge uses roughly **a quarter of the energy** of an absorption unit on electric" | **does not reconcile with the page's own figures.** 300–400 W vs 36–60 W is a **sixth to an eighth**, not a quarter. Correct the multiple or change which mode it is compared against | **WRONG** |
+| C21 | "a modern compressor fridge uses roughly **a quarter of the energy** of an absorption unit on electric" | **does not reconcile with the page's own figures.** Absorption at 120 V is 300–400 W; the compressor at 3–5 A × 12 V is 36–60 W. That is a ratio of **5.0× to 11.1×**, so the compressor uses roughly **a fifth to an eleventh** of the energy — a quarter is outside that range entirely. Correct the multiple, or say which mode it is compared against (against 12 V absorption, 120–360 W, the ratio is 2.0×–10.0×, where a quarter is closer) | **WRONG** |
 | C22 | "Absorption fridges struggle in direct sun above about **95 degrees**" | no source | **UNSOURCED** |
 | C23 | "an absorption fridge can read **10 to 20 degrees warmer** than its setting and still be healthy" | no source | **UNSOURCED** |
 | C24 | **"Ninety percent of 'my RV fridge is not cooling' begins as a leveling, ventilation, seal, or burner problem"** | no source exists. It is also the page's closing claim, so it carries weight | **UNSOURCED** |
@@ -120,9 +120,11 @@ H2  The other suspects, in order
   hot) needs the same treatment the recall claims already get.
 - **D2 — "the RV service industry" is an unnamed authority** (C5), in the section carrying the page's
   most serious claim.
-- **D3 — the compressor duty cycle is invisible** (C19). 3–5 A and 30–80 Ah/day cannot both be true at
-  a 100 % duty cycle; the reader cannot check the arithmetic. State the cycle, or give Ah/day and drop
-  the instantaneous draw.
+- **D3 — the compressor duty cycle is invisible** (C19). 3–5 A at 100 % duty is 72–120 Ah/day, so the
+  page's 30–80 implies a 25–65 % duty cycle that is never stated. State it, or give Ah/day and drop the
+  instantaneous draw. (This one is *plausible* rather than wrong — a fridge does cycle — but a reader
+  cannot verify it, and that is the line this page has to hold, because it is the same page that asks
+  them to trust a fire warning.)
 - **D4 — the power section needs a table, not four bullets.** It is the most table-shaped content on
   the site: `Mode | Draw | Per day | When to use it | Verdict`. The bullets already contain every
   column; a table makes the comparison liftable and makes C20/C21 visible instead of buried.
