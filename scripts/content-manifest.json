@@ -1834,17 +1834,17 @@
         "id": "C2",
         "text": "about 2 to 3 gallons of antifreeze for a typical travel trailer, 4 to 6 for a big fifth wheel, less if the lines are blown first",
         "source": "an antifreeze maker's coverage label, or state it as field practice. A quantity a reader buys on",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Cloud read Camco's own winterizing instructions (2 to 4 gallons of antifreeze, amount may vary) and Heartland's winterization guide (at least 2 gallons, 3 or 4 for a larger trailer with a washing machine) on 2026-09-23. Camco is the maker of the blow-out gear the page links.",
+        "at": "2026-09-23"
       },
       {
         "id": "C3",
         "text": "set the compressor to 30 to 40 psi and never exceed 50, which can damage lines and fittings",
         "source": "a maker's blow-out guidance or the plumbing maker's pressure rating. A number that damages hardware if wrong",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "MAKERS DISAGREE, AND THE PAGE NOW SAYS SO. Winnebago's own page, read on 2026-09-23: 'You'll only be blowing out your lines at 35-50 psi -- any higher may damage your plumbing.' Jayco's owner manual for the Eagle fifth wheel, read from a circulating copy: 'Recommended air pressure is 30 PSI MAX. Exceeding this pressure may rupture water line couplings and void your warranty.' The page now gives both brackets and tells the reader the ceiling is their own manual's.",
+        "at": "2026-09-23"
       },
       {
         "id": "C4",
@@ -1882,25 +1882,25 @@
         "id": "C8",
         "text": "blow-out and antifreeze are two valid methods, and many owners use both",
         "source": "the two methods are documented; the \"many owners\" half is a prevalence claim",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "state": "CONFIRMED",
+        "by": "Cloud cut the 'many owners' count on 2026-09-23; the sentence now says the two methods combine well.",
+        "at": "2026-09-23"
       },
       {
         "id": "C9",
         "text": "\"most technicians drain them every winter regardless of\"",
         "source": "unnamed authority",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "state": "CONFIRMED",
+        "by": "Cloud cut 'most technicians' on 2026-09-23; the heater-drain advice stands on its own.",
+        "at": "2026-09-23"
       },
       {
         "id": "C10",
         "text": "\"Most owners use antifreeze because it is forgiving\"",
         "source": "prevalence claim, no source",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "state": "CONFIRMED",
+        "by": "Cloud cut 'most owners use antifreeze' on 2026-09-23; it now says antifreeze is the forgiving choice because it survives a missed trap.",
+        "at": "2026-09-23"
       },
       {
         "id": "C11",
