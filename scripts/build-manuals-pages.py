@@ -76,7 +76,7 @@ SHORT = {
 }
 
 TITLE = {
-    "power-and-electrical": ("RV Electrical Manuals: Converters, Inverters, Solar",
+    "power-and-electrical": ("RV Electrical Manuals: Converters and Inverters",
                              "RV electrical manuals from the makers: converters, inverters, "
                              "batteries, solar controllers, distribution panels and "
                              "generators"),

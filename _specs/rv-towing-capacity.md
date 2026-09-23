@@ -22,6 +22,27 @@ is uncertain, the page must say it is uncertain rather than round it off.
 a failure-mode section, a rule-of-thumb section, then "open the calculator") settle this. The title
 and meta description currently promise a calculator, which the page is not.
 
+## Title and target query
+
+**Decide these together, BEFORE any prose.** The `<title>` is the highest-value SEO element on the
+page and it is 60 characters; that is not enough room to fix it afterwards.
+
+| | |
+|---|---|
+| **Target query** | |
+| **Title (whole string, including the brand suffix)** | |
+| **Characters** | **measure it, do not estimate** -- Google truncates around 60 |
+| **Query position** | front-loaded |
+| **Intent** | informational / comparison / troubleshooting |
+
+Rules, from the 2026-09-23 audit of all 40 live titles:
+- **Under 60 characters including ` | OriginRV`.** Only one live title was over, and it was the only
+  real SEO defect the audit found.
+- **The query goes first.** Every working title on the site already does this.
+- **Sentence case, with a capital after a colon** (Google's documented rule for a subheading).
+- **Do not mass-edit a title for style.** Case has no documented ranking effect; a working title is
+  worth more than a tidy one. Rewrite a title only for a measured reason.
+
 ## 2. Target query and intent
 
 - **Primary query class:** `how much can i tow` / `rv towing capacity` — informational, asked by
