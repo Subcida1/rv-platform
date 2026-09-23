@@ -101,7 +101,433 @@
       "outbox/reply-20260922-1434-batch1-signoff-batch2-checklists.md"
     ],
     "invalidated_by": "house-style sweep 2026-09-23: 77 colon lowercases across 16 pages; heading text changed, meaning did not",
-    "invalidated_at": "2026-09-23"
+    "invalidated_at": "2026-09-23",
+    "claims": [
+      {
+        "id": "C1",
+        "text": "\"Most failures trace to a sail switch, airflow, a flat battery, or propane\"",
+        "source": "a frequency claim. Either find a source or state it as the four causes without \"most\"",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C2",
+        "text": "soot or a yellow flame = stop, do not run it, and \"both Suburban and Furrion instruct owners to shut the unit down immediately\"",
+        "source": "Suburban service manual; Furrion troubleshooting manual",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C3",
+        "text": "\"The single most misdiagnosed furnace fault\" (works on shore power, fails on battery)",
+        "source": "ranking claim, no source exists",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C4",
+        "text": "\"Every furnace runs this sequence, and it never varies\"",
+        "source": "wrong as stated. The page's own code sections show brands differ in thresholds, purges and retry logic",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C5",
+        "text": "step 1, the board checks for at least 9.5 volts",
+        "source": "Suburban service manual",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C6",
+        "text": "step 3, the sail switch window is 30 seconds",
+        "source": "Suburban service manual",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C7",
+        "text": "step 4, pre-purge about 15 seconds (Atwood 15 to 17)",
+        "source": "Suburban and Atwood service manuals",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C8",
+        "text": "step 5, 7 seconds of ignition time (Atwood about 6)",
+        "source": "Suburban service manual",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C9",
+        "text": "step 6, at least 7 microamps within 7 seconds",
+        "source": "Suburban service manual",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C10",
+        "text": "step 7, three failed attempts then lockout, \"Suburban runs the blower for 5 minutes and then shuts down in lockout\"",
+        "source": "the 5 minutes belongs to a different condition. The same document says failed ignition gives \"blower will run for 3 minutes and then shutdow",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C11",
+        "text": "step 7, Atwood soft lockout times out after one hour, hard lockout needs the thermostat cycled",
+        "source": "Atwood consumer manual",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C12",
+        "text": "step 8, 90 second post-purge",
+        "source": "Suburban service manual",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C13",
+        "text": "step 2, relay delay 1 to 25 seconds, or 1 to 2 seconds when the relay is on the board",
+        "source": "Atwood service manual",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C14",
+        "text": "step 3, about 75 percent of normal rpm at 12 volts",
+        "source": "Suburban service manual",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C15",
+        "text": "\"older time-delay models wait 12 to 18 seconds after the purge\"",
+        "source": "Suburban service manual",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C16",
+        "text": "Suburban calls the sail switch a safety device; Atwood calls it one that ensures airflow",
+        "source": "the makers' own service and consumer manuals",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C17",
+        "text": "sail switch location on Suburban direct-vent units, and on Atwood units",
+        "source": "the makers' own service manuals",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C18",
+        "text": "\"the limit and sail switches are reversed on 79 and 80 series units\"",
+        "source": "Atwood service manual",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C19",
+        "text": "\"Do not jumper the sail switch. The controller sees the jumper and will not start the blower.\"",
+        "source": "Suburban service manual",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C20",
+        "text": "test method: full voltage across a closed switch, and OL against near zero ohms on a bench",
+        "source": "method, plus the maker's flow chart",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C21",
+        "text": "the board cannot distinguish a bad sail switch from a blocked duct",
+        "source": "Suburban service manual",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C22",
+        "text": "voltage range 12 V nominal, 10.5 minimum, 13.5 maximum",
+        "source": "Suburban service manual",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C23",
+        "text": "\"The furnace is the heaviest 12-volt load in the RV\"",
+        "source": "comparative claim, no source",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C24",
+        "text": "Truma thresholds: warning under 10.4 V, undervoltage under 10.0 V, overvoltage above 16.4 V",
+        "source": "Truma VarioHeat operating instructions",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C25",
+        "text": "\"never use a battery charger to power or test the furnace; chargers can exceed 14.5 volts and damage the board\"",
+        "source": "Suburban service manual",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C26",
+        "text": "line pressure minimum 11 inches of water column, maximum 14",
+        "source": "Suburban service manual",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C27",
+        "text": "the on-demand pressure drop should not exceed half an inch of water column",
+        "source": "Suburban service manual",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C28",
+        "text": "lockout from gas pressure fluctuation: failing regulator, kink, moisture",
+        "source": "Suburban service manual",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C29",
+        "text": "Truma: butane concentration too high for heating below roughly 10 °C",
+        "source": "Truma operating instructions",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C30",
+        "text": "the excess flow valve in the pigtail can trip on a fast tank-valve opening, leaving a trickle",
+        "source": "propane equipment literature, not a furnace manual. Name a source or cut",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C31",
+        "text": "limit switch causes: insufficient return air, minimum duct area, sharp turns",
+        "source": "Suburban service manual",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C32",
+        "text": "Atwood: air boosters must never be installed, they cause limit cycling",
+        "source": "Atwood consumer manual",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C33",
+        "text": "\"A federal recall on Forest River and Coachmen units describes the mechanism: short cycling punctures the burn chamber, allowing carbon monoxide in\"",
+        "source": "NHTSA recall 24V047 - the recall number must appear in the body, and the Source entry must name the vehicles",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C34",
+        "text": "limit switches are usually automatic reset, some Suburban units use a manual plunger",
+        "source": "Suburban service manual",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C35",
+        "text": "electrode gap specs: 1/8 inch maximum, sensor gap twice the electrode gap, electrode about 1/4 inch above the burner slots, sensor 1/4 to 5/16 inch above the burner",
+        "source": "Suburban service manual, electrode gap section",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C36",
+        "text": "Suburban senses flame through the spark wire and electrode on some models",
+        "source": "Suburban service manual",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C37",
+        "text": "Atwood states the principle without publishing a number, and \"we could not find a published microamp figure for Atwood\"",
+        "source": "first half is a source claim; second half is a process disclosure",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C38",
+        "text": "Atwood blink codes (one, two, three flashes, steady) and Excalibur numeric codes 1 to 5",
+        "source": "Atwood service and consumer manuals",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C39",
+        "text": "\"Suburban does not publish a standardized blink code table … several third-party sites publish Suburban blink code tables, and they contradict each other, which is a reliable sign ",
+        "source": "first half is a real finding. The inference about other sites is a claim about them, and it reads as selling our own care",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C40",
+        "text": "Truma VarioHeat codes E2H, E16H, W27H, W29H, and Combi 17, 18, 41, 43, 44, 255",
+        "source": "Truma error-code pages and the Combi troubleshooting chart",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C41",
+        "text": "Furrion: codes only readable with a diagnostic PCB; reset procedure 60 s, 20 s, within 20 s, or about 5 minutes without power",
+        "source": "Furrion troubleshooting manual",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C42",
+        "text": "Suburban's NT manual documents mud daubers and wasps nesting in the combustion air housing, and instructs clearing it and checking the combustion air wheel for warpage",
+        "source": "Suburban NT series service manual",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C43",
+        "text": "\"soot is formed whenever combustion is incomplete\" and the furnace must be shut down",
+        "source": "Suburban service manual",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C44",
+        "text": "\"One case reported on an owner forum describes a nest in the heat exchanger blocking hot gases until the tube failed\"",
+        "source": "unnamed forum case. The mechanism is documented by the maker and by the recall; this anecdote adds nothing a source can carry",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C45",
+        "text": "CDC: more than 400 Americans die each year from unintentional carbon monoxide poisoning not linked to fires, and the symptom list",
+        "source": "CDC, Carbon Monoxide Poisoning Basics",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C46",
+        "text": "stop and evacuate: gas smell, yellow or lazy flame, soot at the vent, alarm. Furrion's protocol: evacuate, shut off at the container, no switches or phones, no engine or generator",
+        "source": "Furrion manual; CDC",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C47",
+        "text": "\"Two federal recalls describe the failure\" (short cycling puncturing the burn chamber; a missing exhaust vent)",
+        "source": "NHTSA 24V047 and 25V528 - name both in the body",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C48",
+        "text": "\"the 2026 edition of NFPA 1192 added carbon monoxide requirements\"",
+        "source": "NFPA 1192 (2026), free read-only viewer",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C49",
+        "text": "Furrion, Atwood and Truma all instruct owners not to repair the furnace themselves",
+        "source": "the three makers' manuals, quoted",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C50",
+        "text": "the owner-doable list and the hand-off list",
+        "source": "anchored to what the makers permit",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C51",
+        "text": "Suburban: the module board is not field repairable and is replaced rather than repaired",
+        "source": "Suburban service manual",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C52",
+        "text": "four installed-price ranges: sail or limit switch $150 to $325; ignitor or board $275 to $700; blower $225 to $600; replacement $900 to $2,600",
+        "source": "\"RV service companies\" - an unnamed group, four number ranges, no named source. Verify against named published pricing or cut the numbers",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C53",
+        "text": "\"Last reviewed: Sep 21, 2026, against the sources listed below\"",
+        "source": "page-level claim; under the new shape it becomes per-claim",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      }
+    ]
   },
   "guides/rv-fuse-keeps-blowing.html": {
     "hash": "62a555c759ee9bea",
