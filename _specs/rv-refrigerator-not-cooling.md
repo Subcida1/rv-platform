@@ -22,6 +22,10 @@ knows whether they are in the dangerous case.
 **This page carries a safety claim the site should be proud of**: the ammonia smell and the yellow
 residue are the two symptoms that mean *stop*, and they are stated clearly. Keep that prominence.
 
+**Demand: D2** - a measured source. Refrigerators appear in the top ten of the 7,300-record
+field-service call analysis (RVBusiness / Specialized Dispatch Services, 2026-06-19), so the demand
+is measured rather than assumed. Differentiation is a separate question; see D1-D7.
+
 ## 2. Target query and intent
 
 - **Primary:** `rv refrigerator not cooling` / `rv fridge not cooling` — informational, urgent,
