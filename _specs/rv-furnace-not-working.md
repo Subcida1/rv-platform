@@ -125,9 +125,9 @@ number one in the defect list.
 | C13 | step 2, relay delay 1 to 25 seconds, or 1 to 2 seconds when the relay is on the board | Atwood service manual | SOURCED |
 | C14 | step 3, about 75 percent of normal rpm at 12 volts | Suburban service manual | READ |
 | C15 | "older time-delay models wait 12 to 18 seconds after the purge" | Suburban service manual | READ |
-| C16 | Suburban calls the sail switch a safety device; Atwood calls it one that ensures airflow | the makers' own service and consumer manuals | SOURCED |
+| C16 | Suburban calls the sail switch a safety device; Atwood calls it one that ensures airflow | the makers' own manuals. **The wording currently given to Suburban is Atwood's, and Suburban's own phrasing differs; see D11.3** | READ |
 | C17 | sail switch location on Suburban direct-vent units, and on Atwood units | the makers' own service manuals | SOURCED |
-| C18 | "the limit and sail switches are reversed on 79 and 80 series units" | Atwood service manual | SOURCED |
+| C18 | "the limit and sail switches are reversed on 79 and 80 series units" | Atwood Hydro Flame shop manual | READ |
 | C19 | "Do not jumper the sail switch. The controller sees the jumper and will not start the blower." | Suburban service manual | SOURCED |
 | C20 | test method: full voltage across a closed switch, and OL against near zero ohms on a bench | method, plus the maker's flow chart | SOURCED |
 | C21 | the board cannot distinguish a bad sail switch from a blocked duct | Suburban service manual | SOURCED |
@@ -174,8 +174,12 @@ number one in the defect list.
   9.5-volt board check, the 30-second sail switch window, the 7 microamps in 7 seconds, the 12 to 18
   second delay, the 75 percent rpm figure, the 10.5 to 13.5 volt range, the 11 to 14 inches of water
   column, the mud dauber paragraph and the soot warning. **So roughly twenty claims on this page move
-  from unverifiable to readable**, and the reader gets real links instead of an apology. The Atwood
-  service manual needs the same treatment in the drafting pass.
+  from unverifiable to readable**, and the reader gets real links instead of an apology. **The Atwood
+  manual is public too**, checked the same night: `myrvworks.com/wp-content/uploads/2019/04/Atwood-Shop-Manual-HydroFlame.pdf`
+  (the Hydro Flame shop manual, 2004 edition, hosted alongside the Suburban mirror), also carried by
+  `techsupport.pdxrvwholesale.com/wp-content/uploads/2018/10/Atwood-HydroFlame-Service-Manual-2007.pdf`.
+  It contains the 79/80 reversed-switch note verbatim, the 15 to 17 second purge, the six-second flame
+  sense, the three-try one-hour lockout, and the 79-series diagnostic chart.
 - **D2 — one figure does not match the document, and the shape of the error is a conflation** (C10).
   The page says a failed ignition runs the blower for 5 minutes. The document says failed ignition
   gives **3 minutes**, and that 5 minutes is the limit-switch-open condition. Fix, and say which board
@@ -199,6 +203,30 @@ number one in the defect list.
   sourced.
 - **D10 — the spruce-up items the instruments already list:** two `figure-repeated` REVIEW prompts
   (9.5 volts four times, 12 volts three times) and the page-level "Last reviewed" line.
+- **D11 — the page mixes board families across makers, and it does so three times.** This is the
+  finding that reading the documents produced rather than searching them, and it is one class, not
+  three bugs:
+  1. **The Suburban lockout minutes** (C10): failed ignition is 3 minutes, the 5-minute figure is the
+     limit-switch-open condition.
+  2. **The Atwood code mapping.** The service manual's chart for the 79-series board reads 1 flash low
+     input voltage, 2 ignition failure, 3 open high limit, 4 stuck sail switch, 5 module fault. The
+     page's paragraph gives a different mapping (one flash airflow or limit, two flame sense, three
+     ignition lockout) and then a numeric set matching the manual. Both may be real, on different
+     boards, but the page presents them as one story under one heading. **Say which board family each
+     belongs to.**
+  3. **An attribution swap in the sail switch section** (C16). The page writes: *"Suburban describes it
+     as a safety device that will not let ignition occur until it sees 75 percent of the motor's rpm,
+     and Atwood calls it a safety device that ensures airflow before ignition."* The wording *"will not
+     let ignition occur until it sees 75% of the motor's rpm's"* appears **once** in the whole set of
+     documents I opened — in the **Atwood** manual. It appears zero times in either Suburban manual,
+     whose own words are *"the room air blower must be operating at approximately 75% of the normal rpm
+     at 12-volts DC before ignition can occur."* The substance is Suburban's; the sentence as written
+     reads as a paraphrase of Atwood. The Atwood half of the sentence is right — *"a safety device that
+     insures air flow before ignition"* is Atwood's verbatim wording.
+
+  **Rule this establishes for every page: a timing figure or a code table belongs to a BOARD FAMILY,
+  not to a brand.** Any number of this shape must say which control board it came from, because the
+  same maker publishes several.
 
 ## 9. Demand tier — D2, measured
 
