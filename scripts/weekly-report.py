@@ -37,7 +37,9 @@ SWEEP_PATH = os.path.join(ROOT, "data", "gsc", "coverage-sweep.json")
 # and is published with the rest of the repo, so a run with no checkout (the
 # cloud sandbox) can still diff against last week by fetching it.
 SNAPSHOT = os.path.join(ROOT, "_log", "reports", "coverage-latest.json")
-SNAPSHOT_URL = "https://originrv.com/_log/reports/coverage-latest.json"
+# Not originrv.com: GitHub Pages runs Jekyll (no .nojekyll), and Jekyll skips
+# underscore-prefixed directories, so /_log/ 404s on the site while raw serves it.
+SNAPSHOT_URL = "https://raw.githubusercontent.com/Subcida1/rv-platform/main/_log/reports/coverage-latest.json"
 REPORT_DIR = os.path.join(ROOT, "_log", "reports")
 
 
