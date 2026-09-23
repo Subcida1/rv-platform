@@ -1068,17 +1068,17 @@
         "id": "C1",
         "text": "the six-year rule: RV tires should be replaced six years from their date of manufacture",
         "source": "Goodyear's product service bulletin 2022-16 on RV tire service life (in Sources, with a federal copy linked)",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Cloud read Goodyear's own product service bulletin (PSB 2022-16, the federal copy in NHTSA's TSB archive) on 2026-09-23: 'Tire Replacement - 6 Years in Service... any tire in service, including your spare... 6 years or more be replaced even if such tire appears serviceable and even if it has not reached the legal treadwear limit', with the DOT code as the fallback when the service date is unknown.",
+        "at": "2026-09-23"
       },
       {
         "id": "C2",
         "text": "the DOT date code is four digits, week and year, and it is stamped on one sidewall only",
         "source": "49 CFR 574.5 (in Sources)",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Cloud read 49 CFR 574.5 through an archive copy (ecfr.gov answers a Request Access block to curl) on 2026-09-23: 'The date code, consisting of four numerical symbols, is the final group. The date code must identify the week and year of manufacture.' That is the page's claim in the regulation's words.",
+        "at": "2026-09-23"
       },
       {
         "id": "C3",
@@ -1092,9 +1092,9 @@
         "id": "C4",
         "text": "at five years, have a tire professional inspect it",
         "source": "the same bulletin - the inspection interval is half the claim",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "OPEN",
+        "by": "DEFECT FOUND: the page says to have tires inspected by a professional at five years, and Goodyear's bulletin contains no five-year figure. It recommends regular professional inspection with no interval. The number needs its own source or it comes off.",
+        "at": "2026-09-23"
       },
       {
         "id": "C5",
@@ -1140,9 +1140,9 @@
         "id": "C10",
         "text": "adding about 10 psi for storage reduces flat-spotting, and it comes back down before the road",
         "source": "a tire maker's storage guidance. A number a reader acts on",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "OPEN",
+        "by": "DEFECT FOUND: the page's 'about 10 psi for storage to reduce flat-spotting' is not in Goodyear's bulletin either; its storage section covers dry, cool, out of sunlight, and says nothing about extra pressure. Needs a source or it comes off.",
+        "at": "2026-09-23"
       },
       {
         "id": "C11",
@@ -1172,9 +1172,9 @@
         "id": "C14",
         "text": "never buy used RV tires",
         "source": "our advice, and the page already argues it",
-        "state": "CONFIRMED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Goodyear states it as a rule rather than as our advice: 'consumers should never purchase or install used tires of any age on their RV as the service, maintenance and storage history of used tires is largely unknown'.",
+        "at": "2026-09-23"
       },
       {
         "id": "C15",
