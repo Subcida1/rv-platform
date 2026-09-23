@@ -1108,17 +1108,17 @@
         "id": "C6",
         "text": "the load capacity of an ST trailer tire is calculated assuming a maximum speed of 65 mph, and its capacity is only valid up to that speed",
         "source": "a tire maker or the Tire and Rim Association. A number a reader acts on: read it or cut it",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "OPEN",
+        "by": "RE-GROUNDING NEEDED: the page treats 65 mph as the ceiling for ST tires, and Goodyear's own announcement of its current ST line says 'the entire Endurance trailer line carries the N speed rating allowing consumers to travel at highway speeds' -- N is 87 mph. So 65 was the older ST convention and the ceiling now depends on the tire. The figure needs a source that states it as the older standard, or the section needs re-framing around reading the sidewall.",
+        "at": "2026-09-23"
       },
       {
         "id": "C7",
         "text": "some carry a speed symbol implying more, but that rating only applies at the pressure and load stated for it, so 65 is the ceiling unless the tire says otherwise",
         "source": "the same source as C6",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Goodyear's own materials support the qualifier: the current ST line is N-rated (87 mph), so the page's 'unless your tire explicitly carries one, treat 65 as the ceiling, not a suggestion' is the correct rule, and the reader is told to check the sidewall.",
+        "at": "2026-09-23"
       },
       {
         "id": "C8",
@@ -1132,9 +1132,9 @@
         "id": "C9",
         "text": "the pressure to use is the one on the vehicle's certification label, not the maximum molded on the sidewall",
         "source": "Michelin's load and inflation tables (in Sources) and the placard's legal basis (FMVSS 110)",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Goodyear's Special Trailer tire guidance, read on 2026-09-23, states it directly: 'Check your trailer's certification placard to determine the load limits', 'never fit your trailer with new tires that have less load capacity than shown on the trailer's tire placard', and check pressures cold, adding 4 psi if the tire is hot. Michelin's load and inflation tables page answers 200 but renders its tables client-side, so the numbers themselves are not readable by curl.",
+        "at": "2026-09-23"
       },
       {
         "id": "C10",
