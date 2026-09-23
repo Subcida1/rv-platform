@@ -43,7 +43,27 @@ import urllib.parse
 from datetime import date, timedelta
 
 import jwt
+import socket
 import requests
+
+# --- IPv4 preference, and why it is here -------------------------------------
+# On this machine oauth2.googleapis.com and www.googleapis.com resolve to an
+# AAAA record as well as an A record, and the IPv6 route blackholes. Python's
+# socket layer has no Happy Eyeballs, so it stalls on the v6 address instead of
+# falling through to v4, and the process hangs with no output at all (requests
+# timeouts do not reliably cover that first attempt). Measured 2026-09-22:
+#   curl -4 -> HTTP 404 in 0.19s      curl -6 -> timeout after 10s
+# Dropping AAAA answers for this process only. Set ORIGINRV_GSC_IPV6=1 to
+# restore both families if this machine's IPv6 ever starts working.
+if os.environ.get("ORIGINRV_GSC_IPV6") != "1":
+    _real_getaddrinfo = socket.getaddrinfo
+
+    def _ipv4_first(*args, **kwargs):
+        answers = _real_getaddrinfo(*args, **kwargs)
+        v4 = [a for a in answers if a[0] == socket.AF_INET]
+        return v4 or answers
+
+    socket.getaddrinfo = _ipv4_first
 
 TOKEN_URL = "https://oauth2.googleapis.com/token"
 SCOPE = "https://www.googleapis.com/auth/webmasters.readonly"
@@ -95,7 +115,7 @@ def access_token(creds):
             "grant_type": "urn:ietf:params:oauth:grant-type:jwt-bearer",
             "assertion": assertion,
         },
-        timeout=30,
+        timeout=(10, 30),
     )
     if resp.status_code != 200:
         sys.exit("Token exchange failed (%s): %s" % (resp.status_code, resp.text[:400]))
@@ -107,7 +127,7 @@ def api_post(token, path, body=None):
         "%s/%s" % (API, path),
         headers={"Authorization": "Bearer " + token, "Content-Type": "application/json"},
         json=body or {},
-        timeout=60,
+        timeout=(10, 60),
     )
     return resp
 
@@ -116,7 +136,7 @@ def api_get(token, path):
     return requests.get(
         "%s/%s" % (API, path),
         headers={"Authorization": "Bearer " + token},
-        timeout=60,
+        timeout=(10, 60),
     )
 
 
@@ -174,6 +194,11 @@ def cmd_properties(args):
     entries = resp.json().get("siteEntry", [])
     if not entries:
         print("Authenticated as %s, but it can see no properties." % creds["client_email"])
+        print("The credential works; it has not been shared a property yet. In Search Console:")
+        print("  Settings > Users and permissions > Add user")
+        print("  paste: %s" % creds["client_email"])
+        print("  permission: Full")
+        print("Then re-run: python3 scripts/gsc.py properties")
         return 1
     print("Authenticated as %s" % creds["client_email"])
     for entry in entries:
