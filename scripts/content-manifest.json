@@ -132,11 +132,14 @@
     "sources": []
   },
   "guides/rv-tank-sensors-reading-wrong.html": {
-    "hash": "20b4624362c67bf9",
-    "status": "unverified",
-    "verified_by": null,
-    "verified_at": null,
-    "sources": []
+    "hash": "c402b126b78fecac",
+    "status": "verified",
+    "verified_by": "Claude Desktop (review + confirm rounds)",
+    "verified_at": "2026-09-22",
+    "sources": [
+      "outbox/reply-20260922-1434-batch1-signoff-batch2-checklists.md",
+      "outbox/reply-20260922-2026-fixes-confirm-batch4.md"
+    ]
   },
   "guides/rv-tire-replacement.html": {
     "hash": "33715766aa2180f4",
@@ -156,11 +159,14 @@
     "sources": []
   },
   "guides/rv-water-heater-not-heating.html": {
-    "hash": "602b124d31b3c13d",
-    "status": "unverified",
-    "verified_by": null,
-    "verified_at": null,
-    "sources": []
+    "hash": "3b788de2ce5b480b",
+    "status": "verified",
+    "verified_by": "Claude Desktop (review + confirm rounds)",
+    "verified_at": "2026-09-22",
+    "sources": [
+      "outbox/reply-20260922-1434-batch1-signoff-batch2-checklists.md",
+      "outbox/reply-20260922-2026-fixes-confirm-batch4.md"
+    ]
   },
   "guides/tires-winter.html": {
     "hash": "f2ad0cde3438fca4",
