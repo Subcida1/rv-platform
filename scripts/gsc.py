@@ -145,6 +145,13 @@ def explain(resp, site):
     if resp.status_code == 200:
         return None
     body = resp.text[:400]
+    if resp.status_code == 404:
+        return (
+            "HTTP 404. Google's 404 means the request path or property string did not\n"
+            "match a route, NOT that a permission is missing (that comes back 403).\n"
+            "Check the URL contains sites/<siteUrl>/ and that the property string is\n"
+            "exactly %r, which sites.list reports verbatim." % site
+        )
     if resp.status_code in (401, 403) and "permission" in body.lower():
         return (
             "The credential authenticated but cannot see the property.\n"
@@ -207,7 +214,10 @@ def cmd_properties(args):
 
 
 def query(token, site, body):
-    resp = api_post(token, "%s/searchAnalytics/query" % urllib.parse.quote(site, safe=""), body)
+    # The "sites/" segment is required. Omitting it yields a bare Google 404 with
+    # an HTML error page, which looks like a permission or propagation problem and
+    # is neither. Keep the prefix in step with cmd_sitemaps.
+    resp = api_post(token, "sites/%s/searchAnalytics/query" % urllib.parse.quote(site, safe=""), body)
     problem = explain(resp, site)
     if problem:
         sys.exit(problem)
@@ -284,6 +294,70 @@ def cmd_pull(args):
     return 0
 
 
+def cmd_sitemaps(args):
+    """Sitemap submission state. With a young property this is the actionable
+    question: whether Google has fetched the sitemap at all."""
+    creds = load_credentials(key_path(args.key))
+    token = access_token(creds)
+    resp = api_get(token, "sites/%s/sitemaps" % urllib.parse.quote(args.site, safe=""))
+    problem = explain(resp, args.site)
+    if problem:
+        sys.exit(problem)
+    maps = resp.json().get("sitemap", [])
+    if not maps:
+        print("No sitemap submitted for %s." % args.site)
+        print("Submit it in Search Console: Sitemaps > enter sitemap.xml > Submit")
+        return 1
+    for entry in maps:
+        print(entry.get("path"))
+        for key in ("lastSubmitted", "lastDownloaded", "isPending", "isSitemapsIndex",
+                    "warnings", "errors", "type"):
+            value = entry.get(key)
+            if value not in (None, "0", 0, False):
+                print("   %-16s %s" % (key, value))
+        for content in entry.get("contents", []):
+            print("   %-16s %s = %s discovered" % ("contents", content.get("type"),
+                                                   content.get("submitted")))
+    return 0
+
+
+def cmd_inspect(args):
+    """URL Inspection. With a new property reporting zero impressions, this is
+    the question that actually matters: has Google crawled and indexed the page."""
+    creds = load_credentials(key_path(args.key))
+    token = access_token(creds)
+    resp = requests.post(
+        "https://searchconsole.googleapis.com/v1/urlInspection/index:inspect",
+        headers={"Authorization": "Bearer " + token, "Content-Type": "application/json"},
+        json={"inspectionUrl": args.url, "siteUrl": args.site},
+        timeout=(10, 60),
+    )
+    if resp.status_code != 200:
+        print("HTTP %s: %s" % (resp.status_code, resp.text[:500]))
+        if resp.status_code == 403:
+            print("Enable the API on the Cloud project, then retry.")
+        return 1
+    result = resp.json().get("inspectionResult", {})
+    print("URL: %s" % args.url)
+    for label, key, block in (
+        ("verdict", "verdict", "indexStatusResult"),
+        ("coverageState", "coverageState", "indexStatusResult"),
+        ("robotsTxtState", "robotsTxtState", "indexStatusResult"),
+        ("indexingState", "indexingState", "indexStatusResult"),
+        ("pageFetchState", "pageFetchState", "indexStatusResult"),
+        ("crawledAs", "crawledAs", "indexStatusResult"),
+        ("lastCrawlTime", "lastCrawlTime", "indexStatusResult"),
+        ("googleCanonical", "googleCanonical", "indexStatusResult"),
+        ("userCanonical", "userCanonical", "indexStatusResult"),
+        ("mobileUsability", "verdict", "mobileUsabilityResult"),
+        ("richResults", "verdict", "richResultsResult"),
+    ):
+        value = result.get(block, {}).get(key)
+        if value:
+            print("  %-16s %s" % (label, value))
+    return 0
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__.split("\n")[1])
     parser.add_argument("--key", help="service account JSON (default %s)" % DEFAULT_KEY)
@@ -292,6 +366,11 @@ def main():
 
     sub.add_parser("selftest", help="offline proof that JWT signing works").set_defaults(func=cmd_selftest)
     sub.add_parser("properties", help="list properties this credential can see").set_defaults(func=cmd_properties)
+    sub.add_parser("sitemaps", help="sitemap submission and fetch state").set_defaults(func=cmd_sitemaps)
+
+    insp = sub.add_parser("inspect", help="is Google indexing this page")
+    insp.add_argument("--url", default="https://originrv.com/")
+    insp.set_defaults(func=cmd_inspect)
 
     pull = sub.add_parser("pull", help="download reports as CSV")
     pull.add_argument("--days", type=int, default=28, help="days back from the lagged end date")
