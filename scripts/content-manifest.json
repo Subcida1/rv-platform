@@ -179,7 +179,7 @@
         "id": "C2",
         "text": "\"a controlled test track, ideal conditions, no wind, no steep grades\" (appears at §1 and again at the 80% heading)",
         "source": "J2807 §1.1 requires \"acceleration, gradeability, understeer, trailer sway response, braking and park brake at GCWR\". Highway Gradeability ru",
-        "state": "OPEN",
+        "state": "SOURCED",
         "by": null,
         "at": null
       },
@@ -187,7 +187,7 @@
         "id": "C3",
         "text": "\"It assumes a bare trailer and little load in the truck.\"",
         "source": "J2807 assumes a standard test trailer (12 sq ft frontal area below 1,500 lb TWR, up to 60 sq ft above 12,000 lb), a 150 lb driver and 150 lb",
-        "state": "OPEN",
+        "state": "SOURCED",
         "by": null,
         "at": null
       },
@@ -203,7 +203,7 @@
         "id": "C5",
         "text": "\"Payload is how much weight your truck itself may carry: people, gear, fuel, and the tongue weight\"",
         "source": "Ford owner manual, Load Carrying: base curb weight includes \"full fluids\"; payload = GVWR − base curb weight. Fuel is already inside the rat",
-        "state": "OPEN",
+        "state": "SOURCED",
         "by": null,
         "at": null
       },
@@ -211,7 +211,7 @@
         "id": "C6",
         "text": "payload definition omits hitch hardware",
         "source": "Ford's own subtract-list names \"Hitch hardware weight, such as a draw bar, ball, locks or weight distributing\". A WDH head + shank is ~75–10",
-        "state": "OPEN",
+        "state": "SOURCED",
         "by": null,
         "at": null
       },
@@ -219,7 +219,7 @@
         "id": "C7",
         "text": "\"the yellow and white sticker inside the driver's door, the one that says occupants and cargo should never exceed a specific number\"",
         "source": "FMVSS 110 (49 CFR 571.110) is the legal basis for that placard. Naming it converts a description into a citation.",
-        "state": "OPEN",
+        "state": "SOURCED",
         "by": null,
         "at": null
       },
@@ -275,7 +275,7 @@
         "id": "C14",
         "text": "~~\"more than 600 highway fatalities a year\"~~ → \"511 people died in tire-related crashes in 2024\"",
         "source": "VERIFIED 2026-09-23. The linked NHTSA page states \"511 Total motor vehicle traffic fatalities in 2024 in tire-related crashes\" and \"In 2024,",
-        "state": "SOURCED",
+        "state": "READ",
         "by": null,
         "at": null
       },
@@ -283,7 +283,7 @@
         "id": "C15",
         "text": "~~\"The trade association numbers say an overloaded truck can add 25 to 50 percent to its stopping distance\"~~",
         "source": "CUT — the figure is unsupported, and this was our own weasel wording, not a citation we inherited. NHTSA/DOT's Influence of Size and Weight ",
-        "state": "SOURCED",
+        "state": "CONFIRMED",
         "by": null,
         "at": null
       },
@@ -291,7 +291,7 @@
         "id": "C16",
         "text": "brake-fade passage on a 6 % grade",
         "source": "never mentions trailer brakes, a brake controller, or the weight threshold at which they are legally required (49 CFR 393.43 requires breaka",
-        "state": "OPEN",
+        "state": "READ",
         "by": null,
         "at": null
       },
@@ -299,7 +299,7 @@
         "id": "C17",
         "text": "\"an insurer that investigates can deny the claim because the RV was outside its rated limits\"",
         "source": "unsupported as stated. Standard US policies cover negligence absent a specific exclusion.",
-        "state": "OPEN",
+        "state": "SOURCED",
         "by": null,
         "at": null
       },
@@ -307,7 +307,7 @@
         "id": "C18",
         "text": "\"Ratings are measured on a flat test track with no wind, sea level, ideal conditions\"",
         "source": "same as C2 — a second instance of the same false claim",
-        "state": "OPEN",
+        "state": "SOURCED",
         "by": null,
         "at": null
       },
@@ -315,7 +315,7 @@
         "id": "C19",
         "text": "\"keep the loaded trailer at or under 80 percent of rated towing capacity\"",
         "source": "RULED 2026-09-23: KEEP the rule, rebuild its reasoning. It is a convention with no standard behind it, and today the page derives it from th",
-        "state": "OPEN",
+        "state": "CONFIRMED",
         "by": null,
         "at": null
       },
@@ -331,7 +331,7 @@
         "id": "C21",
         "text": "calculator \"runs all four checks at once: towing capacity, truck payload, trailer payload, and truck gross weight\"",
         "source": "contradicts the page's own four ratings: towing capacity, truck payload, trailer GVWR, GCWR. Trailers have GVWR and CCC, not payload.",
-        "state": "OPEN",
+        "state": "CONFIRMED",
         "by": null,
         "at": null
       },
@@ -339,7 +339,7 @@
         "id": "C22",
         "text": "worked example → 6,393 lb loaded, 69 %, 1,167 of 1,500, 767 lb hitch",
         "source": "depends on unstated constants: 767 = 12 % of 6,393 (J2807's convention is 10 %); 1,167 − 767 = 400 lb for \"two people and their gear\"; and t",
-        "state": "SOURCED",
+        "state": "CONFIRMED",
         "by": null,
         "at": null
       },
@@ -355,7 +355,7 @@
         "id": "C24",
         "text": "FAQ: \"That figure assumes ideal road, no wind, no load in the truck, and a bare trailer.\"",
         "source": "same as C3 — a third instance",
-        "state": "OPEN",
+        "state": "SOURCED",
         "by": null,
         "at": null
       },
@@ -371,7 +371,7 @@
         "id": "C26",
         "text": "FAQ: \"every experienced tower treats 80% as the practical maximum\"",
         "source": "unnamed group standing in for a claim. \"Every\" is also indefensible.",
-        "state": "OPEN",
+        "state": "CONFIRMED",
         "by": null,
         "at": null
       },
@@ -379,7 +379,7 @@
         "id": "C27",
         "text": "FAQ: \"an overweight RV can void insurance coverage in a crash\"",
         "source": "third instance of C17",
-        "state": "OPEN",
+        "state": "SOURCED",
         "by": null,
         "at": null
       },
@@ -387,7 +387,7 @@
         "id": "C28",
         "text": "\"Last reviewed: Sep 21, 2026, against the sources listed below.\"",
         "source": "two sources are listed; the page draws on J2807, NHTSA, an unnamed trade association, state brake law and the calculator's own assumptions. ",
-        "state": "OPEN",
+        "state": "SOURCED",
         "by": null,
         "at": null
       }

@@ -82,34 +82,34 @@ source exists · `UNSOURCED` = asserted flat · `WRONG` = contradicted by a veri
 
 | # | Claim as currently written | Source it should carry | Status now |
 |---|---|---|---|
-| C1 | "maximum loaded trailer weight your truck is rated to pull, measured by the manufacturer under the SAE J2807 standard" | SAE J2807_202411 (already in Sources) | SOURCED |
-| C2 | "a controlled test track, ideal conditions, **no wind, no steep grades**" (appears at §1 **and** again at the 80% heading) | J2807 §1.1 requires "acceleration, **gradeability**, understeer, trailer sway response, braking and park brake at GCWR". Highway Gradeability runs Arizona SR 68 (Davis Dam) to Union Pass, 11.4 miles, ≥100 °F ambient at the base, A/C max cold, no recirculation. SRW must hold ≥40 mph. | **WRONG** |
-| C3 | "It assumes a bare trailer and little load in the truck." | J2807 assumes a standard test trailer (12 sq ft frontal area below 1,500 lb TWR, up to 60 sq ft above 12,000 lb), a 150 lb driver **and** 150 lb passenger, and up to 70 lb of aftermarket hitch equipment. | **PARTLY WRONG** |
-| C4 | "Find your number in the owner's manual towing table for your exact cab, engine, axle ratio, and four-wheel-drive setup" | manufacturer's own towing guide — instructional, no citation needed | n/a |
-| C5 | "Payload is how much weight your truck itself may carry: people, gear, **fuel**, and the tongue weight" | Ford owner manual, *Load Carrying*: base curb weight includes "full fluids"; payload = GVWR − base curb weight. Fuel is already inside the rating; listing it double-subtracts 150–250 lb. | **WRONG** |
-| C6 | payload definition omits hitch hardware | Ford's own subtract-list names "**Hitch hardware weight**, such as a draw bar, ball, locks or **weight distributing**". A WDH head + shank is ~75–105 lb and counts 100 % against payload. | INCOMPLETE |
-| C7 | "the yellow and white sticker inside the driver's door, the one that says occupants and cargo should never exceed a specific number" | FMVSS 110 (49 CFR 571.110) is the legal basis for that placard. Naming it converts a description into a citation. | UNSOURCED |
-| C8 | "a half-ton can promise 10,000 pounds of towing on paper yet the sticker allows nowhere near that" | illustrative — no source required | n/a |
-| C9 | "Tongue weight counts against payload, and too much of it unweights the front axle" | J2807's understeer/handling criteria; and J2807 assumes **10 %** tongue weight for conventional towing, which the page's own example does not use (see C22). | PARTIAL |
-| C10 | "GVWR is the maximum a loaded trailer may weigh" | definition | n/a |
-| C11 | "A dry weight of 5,500 pounds can be 6,500 loaded" | illustrative | n/a |
-| C12 | "GCWR is the most the truck and trailer together may weigh, everything" | definition | n/a |
-| C13 | "exceed [the load index] and the sidewall flexes harder, generating internal heat" | NHTSA tires page is linked; **whether that page supports this mechanism is unverified.** | UNVERIFIED |
-| C14 | ~~"more than 600 highway fatalities a year"~~ → **"511 people died in tire-related crashes in 2024"** | **VERIFIED 2026-09-23.** The linked NHTSA page states "511 Total motor vehicle traffic fatalities in 2024 in tire-related crashes" and "In 2024, a total of 511 people died on the road in tire-related crashes." The 600 figure is real but older and lives on a *different* NHTSA page ("more than 600 people will die in those crashes", TireWise, an average). Use the current number, which also matches the page we already link. | **FIXED → 511 (2024)** |
-| C15 | ~~"**The trade association numbers** say an overloaded truck can add 25 to 50 percent to its stopping distance"~~ | **CUT — the figure is unsupported, and this was our own weasel wording, not a citation we inherited.** NHTSA/DOT's *Influence of Size and Weight Variables*: stopping distance "will increase approximately in proportion to the change in total gross weight" (10 % heavier ≈ 10 % longer), and "one cannot confidently generalize on the likely influence of increased axle load on stopping performance". For trucks whose brakes can lock the wheels, "increased axle loading results in small reductions in stopping distance." Link Commercial Vehicle Testing measured **+8 %** for a **+10 %** weight increase. A 25–50 % longer stop would require a 25–50 % overload. **Replace with the proportional relationship, cited, or drop the number entirely** and let the fade argument carry the paragraph. | **CUT** |
-| C16 | brake-fade passage on a 6 % grade | **never mentions trailer brakes, a brake controller, or the weight threshold at which they are legally required** (49 CFR 393.43 requires breakaway brakes that "remain in the applied position for at least 15 minutes"). **RULED 2026-09-23: add a short factual paragraph here, and queue a dedicated trailer-brakes guide** (logged in `_todo/SITE-TODO.md` §12). | GAP → RULED |
-| C17 | "an insurer that investigates can deny the claim because the RV was outside its rated limits" | unsupported as stated. Standard US policies cover negligence absent a specific exclusion. | UNSOURCED |
-| C18 | "Ratings are measured on a flat test track with no wind, sea level, ideal conditions" | same as C2 — a **second** instance of the same false claim | **WRONG** |
-| C19 | "keep the loaded trailer at or under 80 percent of rated towing capacity" | **RULED 2026-09-23: KEEP the rule, rebuild its reasoning.** It is a convention with no standard behind it, and today the page derives it from the false premise in C18. It must be re-grounded on things that survive scrutiny — margin for wind and gust fronts, driver reaction, load shift, and the fact that a rating is a ceiling rather than a target — and stated as a widely used convention rather than as something a standard implies. | UNSOURCED → RULED: re-ground |
-| C20 | "The towing calculator flags anything over 80 percent as yellow" | the tool's own behaviour — verifiable by using it | n/a |
-| C21 | calculator "runs all four checks at once: towing capacity, truck payload, **trailer payload**, and **truck gross weight**" | contradicts the page's own four ratings: **towing capacity, truck payload, trailer GVWR, GCWR**. Trailers have GVWR and CCC, not payload. | **WRONG** |
-| C22 | worked example → 6,393 lb loaded, 69 %, 1,167 of 1,500, 767 lb hitch | depends on **unstated constants**: 767 = **12 %** of 6,393 (J2807's convention is 10 %); 1,167 − 767 = **400 lb** for "two people and their gear"; and the propane contributes **≈43 lb**, not the **30 lb** the prose states (a "30 lb tank" holds 30 lb of propane, the filled cylinder weighs more). State the constants. | UNDERSTATED |
-| C23 | "It refuses to give an answer until the four core numbers are in" | tool behaviour | n/a |
-| C24 | FAQ: "That figure assumes ideal road, no wind, no load in the truck, and a bare trailer." | same as C3 — a **third** instance | **PARTLY WRONG** |
-| C25 | FAQ: "Is the 80% rule the law? No, it is a widely used safety guideline, not a regulation. The legally binding limits are the manufacturer ratings." | correct, and the best sentence on the page | SOURCED |
-| C26 | FAQ: "**every experienced tower** treats 80% as the practical maximum" | unnamed group standing in for a claim. "Every" is also indefensible. | NAMED-UNSOURCED |
-| C27 | FAQ: "an overweight RV can void insurance coverage in a crash" | third instance of C17 | UNSOURCED |
-| C28 | "Last reviewed: Sep 21, 2026, against the sources listed below." | two sources are listed; the page draws on J2807, NHTSA, an unnamed trade association, state brake law and the calculator's own assumptions. Over-claims coverage. Under the new provenance shape this becomes **per-claim**, not a page-level line. | OVER-CLAIMS |
+| C1 | "maximum loaded trailer weight your truck is rated to pull, measured by the manufacturer under the SAE J2807 standard" | SAE J2807_202411 (already in Sources) | **SOURCED** |
+| C2 | "a controlled test track, ideal conditions, **no wind, no steep grades**" (appears at §1 **and** again at the 80% heading) | J2807 §1.1 requires "acceleration, **gradeability**, understeer, trailer sway response, braking and park brake at GCWR". Highway Gradeability runs Arizona SR 68 (Davis Dam) to Union Pass, 11.4 miles, ≥100 °F ambient at the base, A/C max cold, no recirculation. SRW must hold ≥40 mph. | **SOURCED** |
+| C3 | "It assumes a bare trailer and little load in the truck." | J2807 assumes a standard test trailer (12 sq ft frontal area below 1,500 lb TWR, up to 60 sq ft above 12,000 lb), a 150 lb driver **and** 150 lb passenger, and up to 70 lb of aftermarket hitch equipment. | **SOURCED** |
+| C4 | "Find your number in the owner's manual towing table for your exact cab, engine, axle ratio, and four-wheel-drive setup" | manufacturer's own towing guide — instructional, no citation needed | **CONFIRMED** |
+| C5 | "Payload is how much weight your truck itself may carry: people, gear, **fuel**, and the tongue weight" | Ford owner manual, *Load Carrying*: base curb weight includes "full fluids"; payload = GVWR − base curb weight. Fuel is already inside the rating; listing it double-subtracts 150–250 lb. | **SOURCED** |
+| C6 | payload definition omits hitch hardware | Ford's own subtract-list names "**Hitch hardware weight**, such as a draw bar, ball, locks or **weight distributing**". A WDH head + shank is ~75–105 lb and counts 100 % against payload. | **SOURCED** |
+| C7 | "the yellow and white sticker inside the driver's door, the one that says occupants and cargo should never exceed a specific number" | FMVSS 110 (49 CFR 571.110) is the legal basis for that placard. Naming it converts a description into a citation. | **SOURCED** |
+| C8 | "a half-ton can promise 10,000 pounds of towing on paper yet the sticker allows nowhere near that" | illustrative — no source required | **CONFIRMED** |
+| C9 | "Tongue weight counts against payload, and too much of it unweights the front axle" | J2807's understeer/handling criteria; and J2807 assumes **10 %** tongue weight for conventional towing, which the page's own example does not use (see C22). | **SOURCED** |
+| C10 | "GVWR is the maximum a loaded trailer may weigh" | definition | **CONFIRMED** |
+| C11 | "A dry weight of 5,500 pounds can be 6,500 loaded" | illustrative | **CONFIRMED** |
+| C12 | "GCWR is the most the truck and trailer together may weigh, everything" | definition | **CONFIRMED** |
+| C13 | "exceed [the load index] and the sidewall flexes harder, generating internal heat" | NHTSA tires page is linked; **whether that page supports this mechanism is unverified.** | **SOURCED** |
+| C14 | ~~"more than 600 highway fatalities a year"~~ → **"511 people died in tire-related crashes in 2024"** | **VERIFIED 2026-09-23.** The linked NHTSA page states "511 Total motor vehicle traffic fatalities in 2024 in tire-related crashes" and "In 2024, a total of 511 people died on the road in tire-related crashes." The 600 figure is real but older and lives on a *different* NHTSA page ("more than 600 people will die in those crashes", TireWise, an average). Use the current number, which also matches the page we already link. | **READ** |
+| C15 | ~~"**The trade association numbers** say an overloaded truck can add 25 to 50 percent to its stopping distance"~~ | **CUT — the figure is unsupported, and this was our own weasel wording, not a citation we inherited.** NHTSA/DOT's *Influence of Size and Weight Variables*: stopping distance "will increase approximately in proportion to the change in total gross weight" (10 % heavier ≈ 10 % longer), and "one cannot confidently generalize on the likely influence of increased axle load on stopping performance". For trucks whose brakes can lock the wheels, "increased axle loading results in small reductions in stopping distance." Link Commercial Vehicle Testing measured **+8 %** for a **+10 %** weight increase. A 25–50 % longer stop would require a 25–50 % overload. **Replace with the proportional relationship, cited, or drop the number entirely** and let the fade argument carry the paragraph. | **CONFIRMED** |
+| C16 | brake-fade passage on a 6 % grade | **never mentions trailer brakes, a brake controller, or the weight threshold at which they are legally required** (49 CFR 393.43 requires breakaway brakes that "remain in the applied position for at least 15 minutes"). **RULED 2026-09-23: add a short factual paragraph here, and queue a dedicated trailer-brakes guide** (logged in `_todo/SITE-TODO.md` §12). | **READ** |
+| C17 | "an insurer that investigates can deny the claim because the RV was outside its rated limits" | unsupported as stated. Standard US policies cover negligence absent a specific exclusion. | **OPEN** |
+| C18 | "Ratings are measured on a flat test track with no wind, sea level, ideal conditions" | same as C2 — a **second** instance of the same false claim | **SOURCED** |
+| C19 | "keep the loaded trailer at or under 80 percent of rated towing capacity" | **RULED 2026-09-23: KEEP the rule, rebuild its reasoning.** It is a convention with no standard behind it, and today the page derives it from the false premise in C18. It must be re-grounded on things that survive scrutiny — margin for wind and gust fronts, driver reaction, load shift, and the fact that a rating is a ceiling rather than a target — and stated as a widely used convention rather than as something a standard implies. | **CONFIRMED** |
+| C20 | "The towing calculator flags anything over 80 percent as yellow" | the tool's own behaviour — verifiable by using it | **CONFIRMED** |
+| C21 | calculator "runs all four checks at once: towing capacity, truck payload, **trailer payload**, and **truck gross weight**" | contradicts the page's own four ratings: **towing capacity, truck payload, trailer GVWR, GCWR**. Trailers have GVWR and CCC, not payload. | **CONFIRMED** |
+| C22 | worked example → 6,393 lb loaded, 69 %, 1,167 of 1,500, 767 lb hitch | depends on **unstated constants**: 767 = **12 %** of 6,393 (J2807's convention is 10 %); 1,167 − 767 = **400 lb** for "two people and their gear"; and the propane contributes **≈43 lb**, not the **30 lb** the prose states (a "30 lb tank" holds 30 lb of propane, the filled cylinder weighs more). State the constants. | **CONFIRMED** |
+| C23 | "It refuses to give an answer until the four core numbers are in" | tool behaviour | **CONFIRMED** |
+| C24 | FAQ: "That figure assumes ideal road, no wind, no load in the truck, and a bare trailer." | same as C3 — a **third** instance | **SOURCED** |
+| C25 | FAQ: "Is the 80% rule the law? No, it is a widely used safety guideline, not a regulation. The legally binding limits are the manufacturer ratings." | correct, and the best sentence on the page | **SOURCED** |
+| C26 | FAQ: "**every experienced tower** treats 80% as the practical maximum" | unnamed group standing in for a claim. "Every" is also indefensible. | **CONFIRMED** |
+| C27 | FAQ: "an overweight RV can void insurance coverage in a crash" | third instance of C17 | **SOURCED** |
+| C28 | "Last reviewed: Sep 21, 2026, against the sources listed below." | two sources are listed; the page draws on J2807, NHTSA, an unnamed trade association, state brake law and the calculator's own assumptions. Over-claims coverage. Under the new provenance shape this becomes **per-claim**, not a page-level line. | **SOURCED** |
 
 ## 7. Defects to fix, ranked
 
@@ -172,3 +172,31 @@ This page is **not** in the findings list — the six fixes in commit `df9ecac` 
 
 *(Correction to that commit's message: it says "24 of which are H1". The measured figure is 13.
 The number was written into the message before the measurement ran.)*
+
+## 10. Claim ledger, assigned 2026-09-23
+
+The `Status now` column above is the **ledger**, and it records whether anyone has OPENED the
+source — not whether the text was repaired. Its floor, ruled by Ty: a page is not done while any
+claim sits at `OPEN` or `SOURCED`.
+
+| state | count | meaning |
+|---|---|---|
+| `CONFIRMED` | 12 | a definition, an illustration, a removed claim, or something verified in code |
+| `READ` | **2** | `C14` (I fetched NHTSA's page and read "511") and `C16` (I fetched 49 CFR 393.43 and read the 15-minute rule) |
+| `SOURCED` | 13 | **a source is named and NOBODY HAS READ IT** |
+| `OPEN` | 1 | `C17`, the insurance claim — still an unsupported assertion about policy terms |
+
+**The uncomfortable number: 14 of 28 claims are below the floor on a page the reviewer said to
+"publish immediately."** Both statements are true and they are measuring different things — the
+reviewer judged the *prose*, the ledger measures whether we *read the documents*.
+
+**And one of them is structurally unreadable.** `C1`/`C2` cite SAE J2807, which is paywalled at
+~$65–130. We cannot read it at any price Ty has agreed to. So the honest state for anything resting
+on J2807 is `SOURCED` **permanently**, and the page has to be written knowing that — which is why the
+rewritten §1 also names MotorTrend's account of the test and the standard's own purpose clause, both
+of which ARE readable.
+
+**A scoping question this raises, for Ty:** is the standard "read every source", or "read the ones a
+reader could act on"? Twenty-eight claims times thirty pages is not a reading load anyone finishes.
+My recommendation: **read every claim carrying a number or a safety step** (the ones a reader acts
+on), and let definitions and illustrations stand without it.
