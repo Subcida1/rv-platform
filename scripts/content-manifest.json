@@ -834,17 +834,17 @@
         "id": "C2",
         "text": "\"a controlled test track, ideal conditions, no wind, no steep grades\" (appears at §1 and again at the 80% heading)",
         "source": "J2807 §1.1 requires \"acceleration, gradeability, understeer, trailer sway response, braking and park brake at GCWR\". Highway Gradeability ru",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Cloud read MotorTrend's account of the J2807 protocol on 2026-09-23: combination handling requirements for understeer and trailer sway response, braking requirements at maximum GCWR, and the Highway Gradeability run on the 11.4 mile Davis Dam Grade to Union Pass with a 100 F minimum at the base, A/C on max cold with outside air, and 40 mph sustained for single rear wheel",
+        "at": "2026-09-23"
       },
       {
         "id": "C3",
         "text": "\"It assumes a bare trailer and little load in the truck.\"",
         "source": "J2807 assumes a standard test trailer (12 sq ft frontal area below 1,500 lb TWR, up to 60 sq ft above 12,000 lb), a 150 lb driver and 150 lb",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "WAIVED",
+        "by": "The test-trailer assumptions (frontal area by trailer weight, a 150 lb driver and passenger, up to 70 lb of hitch equipment) are stated in SAE J2807 itself, which is paywalled at about 65 to 130 dollars and which Ty has not agreed to buy. The readable accounts cover the frontal area only. The page states these as the standard's own assumptions, so it does not claim more than the standard's scope.",
+        "at": "2026-09-23"
       },
       {
         "id": "C4",
@@ -874,9 +874,9 @@
         "id": "C7",
         "text": "\"the yellow and white sticker inside the driver's door, the one that says occupants and cargo should never exceed a specific number\"",
         "source": "FMVSS 110 (49 CFR 571.110) is the legal basis for that placard. Naming it converts a description into a citation.",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Cloud read 49 CFR 571.110 on 2026-09-23: the placard's required text is the combined weight of occupants and cargo should never exceed a stated figure, which is what makes the door sticker a citation rather than a description",
+        "at": "2026-09-23"
       },
       {
         "id": "C8",
@@ -890,9 +890,9 @@
         "id": "C9",
         "text": "\"Tongue weight counts against payload, and too much of it unweights the front axle\"",
         "source": "J2807's understeer/handling criteria; and J2807 assumes 10 % tongue weight for conventional towing, which the page's own example does not us",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "WAIVED",
+        "by": "The 10 percent tongue weight convention is SAE J2807's, and the standard is paywalled. The page's own sentence is about tongue weight counting against payload and unweighting the front axle, which is a load-transfer statement rather than the standard's convention, and the handling half is now read via MotorTrend.",
+        "at": "2026-09-23"
       },
       {
         "id": "C10",
@@ -954,17 +954,17 @@
         "id": "C17",
         "text": "\"an insurer that investigates can deny the claim because the RV was outside its rated limits\"",
         "source": "unsupported as stated. Standard US policies cover negligence absent a specific exclusion.",
-        "state": "OPEN",
-        "by": "unsupported as written: a standard US policy covers negligence absent a specific exclusion, and no readable source says an overloaded private RV is denied. Needs the editorial call to cut or re-ground, 2026-09-23",
+        "state": "CONFIRMED",
+        "by": "Cloud read the page's current text on 2026-09-23: the categorical denial claim is gone, and the paragraph now says there is no blanket rule either way, that exclusions vary by state and policy, and to read your own policy. My ledger said OPEN because the seeding carried the spec's as-found status, not the page.",
         "at": "2026-09-23"
       },
       {
         "id": "C18",
         "text": "\"Ratings are measured on a flat test track with no wind, sea level, ideal conditions\"",
         "source": "same as C2 - a second instance of the same false claim",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Same reading: the gradeability run is the Davis Dam Grade on Arizona SR 68, so the flat-track description it replaced was wrong",
+        "at": "2026-09-23"
       },
       {
         "id": "C19",
@@ -1010,17 +1010,17 @@
         "id": "C24",
         "text": "FAQ: \"That figure assumes ideal road, no wind, no load in the truck, and a bare trailer.\"",
         "source": "same as C3 - a third instance",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "WAIVED",
+        "by": "Corrected note: the page's FAQ already states the standard's own assumptions correctly (a 150 lb driver and passenger, up to 70 lb of hitch equipment, and a test trailer of a defined frontal area). My earlier note about loose wording was stale. The waiver is only because those assumptions live in SAE J2807, which is paywalled.",
+        "at": "2026-09-23"
       },
       {
         "id": "C25",
         "text": "FAQ: \"Is the 80% rule the law? No, it is a widely used safety guideline, not a regulation. The legally binding limits are the manufacturer ratings.\"",
         "source": "correct, and the best sentence on the page",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "CONFIRMED",
+        "by": "A definition, and Ty's scoping rule lets a definition stand without a reading: the 80 percent rule is a convention, not a regulation, and the binding limits are the manufacturer ratings",
+        "at": "2026-09-23"
       },
       {
         "id": "C26",
@@ -1034,17 +1034,17 @@
         "id": "C27",
         "text": "FAQ: \"an overweight RV can void insurance coverage in a crash\"",
         "source": "third instance of C17",
-        "state": "OPEN",
-        "by": "same claim as C17 in the FAQ; same blocker",
+        "state": "CONFIRMED",
+        "by": "Same: the FAQ no longer claims an overweight RV voids coverage.",
         "at": "2026-09-23"
       },
       {
         "id": "C28",
         "text": "\"Last reviewed: Sep 21, 2026, against the sources listed below.\"",
         "source": "two sources are listed; the page draws on J2807, NHTSA, an unnamed trade association, state brake law and the calculator's own assumptions. ",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "CONFIRMED",
+        "by": "Provenance metadata, and Ty ruled on 2026-09-23 that it stays: 'leave it, make it fine print tho'",
+        "at": "2026-09-23"
       }
     ],
     "invalidated_by": "D9 applied 2026-09-23: title/og/twitter dropped 'Calculator' (the page is a guide that points at a tool) and the meta followed. Title text is visible text, so the 3-round verdict is stale. Needs a confirm round.",

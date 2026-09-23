@@ -63,8 +63,15 @@ def plain_dashes(t):
     return t
 
 
-CLAIM_STATES = ("OPEN", "SOURCED", "READ", "CONFIRMED")
+CLAIM_STATES = ("OPEN", "SOURCED", "READ", "CONFIRMED", "WAIVED")
 CLAIM_FLOOR = ("OPEN", "SOURCED")   # a verified page may carry neither
+# WAIVED IS ABOVE THE FLOOR, AND IT IS NOT A FREE PASS. It means the source is unreadable in
+# principle: a paywalled standard, or a host that refuses every client we have. It must be recorded
+# with the reason in --by, and --status prints every waiver, so they cannot quietly accumulate.
+#
+# Ty's scoping rule, 2026-09-23, decides which claims have to be READ at all: read every claim that
+# carries a NUMBER or a SAFETY STEP, and let a definition or an illustration stand without one. Both
+# were his call, after two review-cleared pages were blocked by claims nobody could open.
 
 
 def spec_path(page_rel):
@@ -82,6 +89,8 @@ def state_from_spec_text(status):
     u = (status or "").upper()
     if "CONFIRM" in u:
         return "CONFIRMED"
+    if "WAIVED" in u:
+        return "WAIVED"
     if "READ" in u:
         return "READ"
     for bad in ("WRONG", "UNSOURCED", "INTERNAL", "MISSING", "GAP", "OVER-CLAIMS", "INCOMPLETE"):
@@ -256,6 +265,10 @@ def main():
         print("verified %s by %s  (%d claims, %d at CONFIRMED)"
               % (rel, entry["verified_by"], len(entry["claims"]),
                  len([c for c in entry["claims"] if c["state"] == "CONFIRMED"])))
+        wv = [c["id"] for c in entry["claims"] if c["state"] == "WAIVED"]
+        if wv:
+            print("  %d claim(s) waived, above the floor and on the record: %s"
+                  % (len(wv), ", ".join(wv)))
         return 0
 
     if "--reset" in sys.argv:
@@ -293,6 +306,10 @@ def main():
         state = (arg("--state") or "").upper()
         if state not in CLAIM_STATES:
             print("FAIL  --state must be one of %s" % ", ".join(CLAIM_STATES))
+            return 1
+        if state == "WAIVED" and not arg("--by"):
+            print("FAIL  --state WAIVED needs the reason in --by: what makes this source unreadable.")
+            print("      A waiver with no reason is a claim nobody can audit.")
             return 1
         hit = None
         for c in entry["claims"]:
@@ -377,6 +394,13 @@ def main():
               "%d drifted" % (len(live), v, len(unverified), len(missing), len(drift)))
         for r in unverified:
             print("   unverified  %s" % r)
+        waivers = [(r, c) for r in live for c in (man.get(r, {}).get("claims") or [])
+                   if c.get("state") == "WAIVED"]
+        if waivers:
+            print("\n-- WAIVED CLAIMS (%d). Above the floor, on the record, not read --"
+                  % len(waivers))
+            for r, c in waivers:
+                print("   %s %s  %s" % (r, c["id"], (c.get("by") or "")[:120]))
         return 0
 
     print("=" * 96)
