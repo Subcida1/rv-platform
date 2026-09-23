@@ -107,9 +107,9 @@
         "id": "C1",
         "text": "\"Most failures trace to a sail switch, airflow, a flat battery, or propane\"",
         "source": "a frequency claim. Either find a source or state it as the four causes without \"most\"",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "state": "CONFIRMED",
+        "by": "Cloud removed the 'most failures' count from the lede on 2026-09-23; the four causes stand without a frequency claim",
+        "at": "2026-09-23"
       },
       {
         "id": "C2",
@@ -123,17 +123,17 @@
         "id": "C3",
         "text": "\"The single most misdiagnosed furnace fault\" (works on shore power, fails on battery)",
         "source": "ranking claim, no source exists",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "state": "CONFIRMED",
+        "by": "Cloud removed the 'single most misdiagnosed' ranking on 2026-09-23",
+        "at": "2026-09-23"
       },
       {
         "id": "C4",
         "text": "\"Every furnace runs this sequence, and it never varies\"",
         "source": "wrong as stated. The page's own code sections show brands differ in thresholds, purges and retry logic",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Cloud read the ignition sequence in the Suburban service and training manual and the Atwood shop manual and qualified the universal claim",
+        "at": "2026-09-23"
       },
       {
         "id": "C5",
@@ -179,9 +179,9 @@
         "id": "C10",
         "text": "step 7, three failed attempts then lockout, \"Suburban runs the blower for 5 minutes and then shuts down in lockout\"",
         "source": "the 5 minutes belongs to a different condition. The same document says failed ignition gives \"blower will run for 3 minutes and then shutdow",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Cloud read both conditions in the Suburban service and training manual: failed ignition runs the blower 3 minutes, the 5-minute figure is the limit-switch-open condition",
+        "at": "2026-09-23"
       },
       {
         "id": "C11",
@@ -195,9 +195,9 @@
         "id": "C12",
         "text": "step 8, 90 second post-purge",
         "source": "Suburban service manual",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Cloud read 'The post purge period of 90 seconds begins' in the Suburban service and training manual",
+        "at": "2026-09-23"
       },
       {
         "id": "C13",
@@ -283,9 +283,9 @@
         "id": "C23",
         "text": "\"The furnace is the heaviest 12-volt load in the RV\"",
         "source": "comparative claim, no source",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Cloud read 'the 79 series furnace draws only 3.4 amps' in the Atwood shop manual and dropped the heaviest-load ranking",
+        "at": "2026-09-23"
       },
       {
         "id": "C24",
@@ -339,9 +339,9 @@
         "id": "C30",
         "text": "the excess flow valve in the pigtail can trip on a fast tank-valve opening, leaving a trickle",
         "source": "propane equipment literature, not a furnace manual. Name a source or cut",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Cloud read the excess flow valve guidance: valves are surge sensitive and close on a sudden rush, and the tank valve should be fully open or fully closed, never throttled",
+        "at": "2026-09-23"
       },
       {
         "id": "C31",
@@ -395,25 +395,25 @@
         "id": "C37",
         "text": "Atwood states the principle without publishing a number, and \"we could not find a published microamp figure for Atwood\"",
         "source": "first half is a source claim; second half is a process disclosure",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "CONFIRMED",
+        "by": "Cloud rewrote the Atwood microamp disclosure so it is about Atwood rather than about us",
+        "at": "2026-09-23"
       },
       {
         "id": "C38",
         "text": "Atwood blink codes (one, two, three flashes, steady) and Excalibur numeric codes 1 to 5",
         "source": "Atwood service and consumer manuals",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Cloud read the 79 series code chart: one flash low input voltage through five module fault, with soft and hard lockout labels",
+        "at": "2026-09-23"
       },
       {
         "id": "C39",
         "text": "\"Suburban does not publish a standardized blink code table … several third-party sites publish Suburban blink code tables, and they contradict each other, which is a reliable sign ",
         "source": "first half is a real finding. The inference about other sites is a claim about them, and it reads as selling our own care",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "CONFIRMED",
+        "by": "Cloud cut the claim about third-party tables being generated rather than sourced",
+        "at": "2026-09-23"
       },
       {
         "id": "C40",
@@ -451,9 +451,9 @@
         "id": "C44",
         "text": "\"One case reported on an owner forum describes a nest in the heat exchanger blocking hot gases until the tube failed\"",
         "source": "unnamed forum case. The mechanism is documented by the maker and by the recall; this anecdote adds nothing a source can carry",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "state": "CONFIRMED",
+        "by": "Cloud cut the owner-forum anecdote; the mechanism is documented by the maker and by NHTSA recall 24V047",
+        "at": "2026-09-23"
       },
       {
         "id": "C45",
@@ -476,16 +476,16 @@
         "text": "\"Two federal recalls describe the failure\" (short cycling puncturing the burn chamber; a missing exhaust vent)",
         "source": "NHTSA 24V047 and 25V528 - name both in the body",
         "state": "SOURCED",
-        "by": null,
-        "at": null
+        "by": "Cloud named both recall numbers in the body on 2026-09-23; the recall PDFs themselves are not yet opened",
+        "at": "2026-09-23"
       },
       {
         "id": "C48",
         "text": "\"the 2026 edition of NFPA 1192 added carbon monoxide requirements\"",
         "source": "NFPA 1192 (2026), free read-only viewer",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "CONFIRMED",
+        "by": "Cloud cut the unreadable '2026 edition added carbon monoxide requirements' claim; NFPA's product page does not render to a reader",
+        "at": "2026-09-23"
       },
       {
         "id": "C49",
@@ -515,9 +515,9 @@
         "id": "C52",
         "text": "four installed-price ranges: sail or limit switch $150 to $325; ignitor or board $275 to $700; blower $225 to $600; replacement $900 to $2,600",
         "source": "\"RV service companies\" - an unnamed group, four number ranges, no named source. Verify against named published pricing or cut the numbers",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "state": "CONFIRMED",
+        "by": "Cloud cut the four unnamed repair price ranges on 2026-09-23 and kept the shape of the advice",
+        "at": "2026-09-23"
       },
       {
         "id": "C53",

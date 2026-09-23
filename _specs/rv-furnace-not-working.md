@@ -166,20 +166,20 @@ number one in the defect list.
 
 ## 8. Defects, ranked
 
-- **D1 — the page's central sourcing claim is false, and it is the one that matters.** Sources says the
-  Suburban manual has *"no public copy to link"* because Airxcel releases it to service centres only.
-  It is publicly readable, in more than one place, including archives hosted by RV manufacturers.
-  I downloaded and read two copies on 2026-09-23: the Suburban service and training manual (Heartland
-  Owners archive) and the NT-series service manual (myrvworks mirror). They contain, verbatim, the
-  9.5-volt board check, the 30-second sail switch window, the 7 microamps in 7 seconds, the 12 to 18
-  second delay, the 75 percent rpm figure, the 10.5 to 13.5 volt range, the 11 to 14 inches of water
-  column, the mud dauber paragraph and the soot warning. **So roughly twenty claims on this page move
-  from unverifiable to readable**, and the reader gets real links instead of an apology. **The Atwood
-  manual is public too**, checked the same night: `myrvworks.com/wp-content/uploads/2019/04/Atwood-Shop-Manual-HydroFlame.pdf`
-  (the Hydro Flame shop manual, 2004 edition, hosted alongside the Suburban mirror), also carried by
-  `techsupport.pdxrvwholesale.com/wp-content/uploads/2018/10/Atwood-HydroFlame-Service-Manual-2007.pdf`.
-  It contains the 79/80 reversed-switch note verbatim, the 15 to 17 second purge, the six-second flame
-  sense, the three-try one-hour lockout, and the 79-series diagnostic chart.
+- **D1 — the figures are verified; the Sources note overstated, and the documents cannot be linked.**
+  *Correction to how this defect was first written, the same night, because `verify.py` refused the fix:*
+  the page's Sources said the Suburban manual has *"no public copy to link"*. That is wrong — copies
+  circulate, and I read two of them on 2026-09-23 — but the fix I proposed, linking those copies, is
+  banned by the site's own gate: **sixteen document-rehost hosts** (`myrvworks.com`,
+  `heartlandowners.org`, `bryantrv.com`, `manualslib.com` and the rest) may not be cited, because a
+  rehost can vanish and it is somebody else's copy of a copyrighted file. **A circulating copy makes a
+  figure verifiable; it does not make it citable.** So both entries stay unlinked and the wording becomes
+  true instead of apologetic: no *maker* copy is published, and Airxcel's own service literature is
+  released to its service network. **What the reading bought is verification, not links**: the 9.5-volt
+  board check, the 30-second sail switch window, 7 microamps in 7 seconds, the 12 to 18 second delay, the
+  75 percent rpm gate, the 10.5 to 13.5 volt range, the 11 and 14 inches of water column, the mud dauber
+  instruction and the soot warning are all verbatim in the documents, and two errors surfaced that no
+  search would have found (C10's minutes, and D11's board families).
 - **D2 — one figure does not match the document, and the shape of the error is a conflation** (C10).
   The page says a failed ignition runs the blower for 5 minutes. The document says failed ignition
   gives **3 minutes**, and that 5 minutes is the limit-switch-open condition. Fix, and say which board
@@ -270,4 +270,24 @@ ranges rest on "RV service companies" — no named source, and the page is hones
 publishes pricing. **My recommendation: cut the numbers and keep the shape of the advice** (which jobs
 are parts-cheap and labour-heavy, and that access drives the labour), unless he knows a named published
 rate card worth citing. Twenty-eight hundred characters of the page's authority sit on those four
-numbers, which is a bigger deal than it looks.
+numbers, which is a bigger deal than it looks. **RULED and applied 2026-09-23: the numbers are cut**, and
+the section now explains what drives a bill instead.
+
+## 11. Drafted, 2026-09-23 — and what the ledger says now
+
+Every defect in §8 was addressed on the page. The six OPEN claims are closed: the lede's frequency count
+and the "most misdiagnosed" ranking are gone, the lockout minutes now match the document and name the
+board condition, the "heaviest 12-volt load" became a published 3.4 amps, the owner-forum anecdote was
+replaced by the documented mechanism, and the four price ranges were cut.
+
+**Ledger after the pass: 53 claims — 18 READ, 7 CONFIRMED, 28 SOURCED, 0 OPEN.** What remains is a
+reading load rather than a defect list, and the floor rule is explicit: no page verifies with a claim at
+SOURCED. Two of the 28 carry numbers a reader acts on and are worth naming here:
+
+- **C27, the half-inch pressure-drop limit** — I did not find it in either Suburban document I opened.
+  Either it is in a chapter I did not reach, or it needs cutting.
+- **C35, the electrode geometry** — the values live in drawing callouts rather than in text, so only the
+  1/8 inch gap (0.125 in the drawing) is confirmed.
+
+**Not yet done:** the independent review round, and therefore the verdict. A verdict may not cover text
+the reviewer never saw, and this text has not been reviewed.
