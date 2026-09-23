@@ -297,3 +297,41 @@ SOURCED. Four things worth naming here for the next pass:
 
 **Not yet done:** the independent review round, and therefore the verdict. A verdict may not cover text
 the reviewer never saw, and this text has not been reviewed.
+
+## 12. Review round 1, 2026-09-23 — ten findings, and one I did not apply as written
+
+The lane returned ten findings. Nine were applied. The one that matters is the one where the reviewer
+and the documents disagree.
+
+**Finding 1: the reviewer says the page's seven microamps is a 10× error and should be 0.7.**
+The page reports Suburban's published minimum as seven microamps. **Both Suburban documents say seven**,
+verbatim, three times in one of them — *"the flame sensor is generating at least seven microamps within
+seven seconds after the burner is ignited"* — so the page is faithful to its source, and the reviewer's
+own retrieval agreed those figures exist. What the reviewer adds is real and important: **the control
+makers specify 0.7 microamps as the minimum** for their own modules (Fenwal's 35-60 series, 0.7 µA at
+the FC+/FC− test pins), and a reader who measures a healthy 2.5 µA against Suburban's seven would
+condemn a working sensor.
+
+**Disposition: keep Suburban's figure, attributed, and add the control maker's minimum beside it.** The
+page now gives both numbers and names both sources, and says plainly that a burner the board keeps lit
+is a burner the board is sensing. Swapping seven for 0.7 would have meant overriding two maker documents
+on a reviewer's assertion, which is the same error in the other direction; printing both removes the trap
+the reviewer identified without pretending to know which document is in error. **This is a maker
+document against a control datasheet, and the page shows the disagreement rather than resolving it.**
+
+**The other nine:**
+
+| # | finding | disposition |
+|---|---|---|
+| 2 | the codes section claimed Suburban holds the blower indefinitely, contradicting step 7 | **Applied.** It now splits the legacy time-delay furnaces (blower until the thermostat is turned off) from the fan control module boards (3 minutes, then shutdown). My error: I wrote the section from the NT manual, which describes the legacy board. |
+| 3 | step 5 implied a 15-second purge *plus* 12 to 18 seconds | **Applied.** The 12 to 18 seconds *is* the purge on the time-delay models, and the valve opens at the end of it. |
+| 4 | a sentence whose subject was our other guide | **Applied.** It now walks the electrical path, with the internal link kept. |
+| 5 | "each figure below says which maker and which board it came from" | **Applied.** Now about matching a figure to the board in the unit. |
+| 6 | "Original diagram, OriginRV" in two captions | **Applied.** Both removed. |
+| 7 | three self-referential fragments | **Two applied.** "A Suburban warning worth repeating" became "Suburban's warning states", and the "where bad information is most common" clause became a statement about boards. **The third — the "Last reviewed… against the sources listed below" line — is held**, because that line is identical on all seventeen guides and changing one page's metadata is worse than the claim it removes. It goes to Ty as a site-wide decision. |
+| 8 | "narrows the fault instead of widening it" | **Applied.** Rewritten. |
+| 9 | the CO section omits that CO is odourless and that alarms expire | **Deferred, and it is an addition rather than a defect.** The odourless point is already on the page from the CDC sentence. The alarm-lifespan point needs a source (an alarm maker's replacement guidance, which is its own maker copy); adding an unsourced safety claim to the CO section is the one thing this page's rules exist to prevent. Queued. |
+| 10 | "the failure is in steps 2 to 5" | **Applied.** If the blower runs, step 2 has passed: now steps 3 to 5. |
+
+**New source entry:** Fenwal 35-60 series flame sensor current check, named and unlinked — copies
+circulate on distributor sites, which the rehost gate forbids citing.
