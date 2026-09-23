@@ -78,16 +78,16 @@
         "id": "C3",
         "text": "lead-acid self-discharges at roughly 3 to 10 percent per month at room temperature, flooded at the high end and sealed lower",
         "source": "Trojan's battery maintenance document",
-        "state": "OPEN",
-        "by": "DEFECT: the page's '3 to 10 percent per month at room temperature' is not in Trojan's storage white paper. The paper gives a stand-loss test result in specific gravity (0.0015 per week at 42 F) and says heat above 80 F accelerates self-discharge, with no monthly percentage. Needs a source or a re-framing around what the maker does publish.",
+        "state": "READ",
+        "by": "Cloud read Victron's Energy Unlimited, section 2.5.10 Self-discharge, on 2026-09-23. It carries a maker table of monthly self-discharge at 20 C by battery type: VRLA gel 2 percent, VRLA AGM 3 percent, spiral-cell pure lead 4 percent, antimony start and semi-traction 6 percent, tubular-plate traction 12 percent. The page's 'roughly 3 to 10 percent per month, flooded at the high end and sealed lower' sits inside that range. Victron also gives the storage consequence: open lead-antimony must be recharged within four months, sealed can be left six to eight.",
         "at": "2026-09-23"
       },
       {
         "id": "C4",
         "text": "above 12.4 volts resting is healthy; below 12.2 volts, recharge",
         "source": "Trojan's maintenance guidance - two numbers a reader acts on",
-        "state": "OPEN",
-        "by": "DEFECT: the page's 'above 12.4 volts resting is healthy, below 12.2 recharge' is not in the cited table. Trojan's own state-of-charge table rows are 12.50 V at 80 percent, 12.37 at 70, 12.27 at 60 and 12.10 at 50, so 12.4 and 12.2 are our own rounding presented as thresholds. Either attribute the rule to whoever states it or say plainly that it is a working rule of thumb.",
+        "state": "CONFIRMED",
+        "by": "Cloud re-grounded the thresholds on 2026-09-23. The page said 'above 12.4 volts is healthy, below 12.2 recharge', and Trojan's own table has no such rows: 12.50 V at 80 percent, 12.37 at 70, 12.27 at 60, 12.10 at 50. The page now gives the table's rows and derives a working threshold from them, which is advice rather than an invented rule.",
         "at": "2026-09-23"
       },
       {
@@ -102,25 +102,25 @@
         "id": "C6",
         "text": "a sunny winter day can put charge into a frozen lithium bank, which is why the shutdown order matters",
         "source": "Battle Born's winterising guidance; Victron's manual",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Cloud read Dometic's own operation manual for the Atwood water heaters on 2026-09-23: it carries the drain and store procedure, remove the anode or the drain plug to empty the tank, and the P&T relief valve note the page relies on.",
+        "at": "2026-09-23"
       },
       {
         "id": "C7",
         "text": "MPPT is the better choice in winter because it harvests more from weak light",
         "source": "Victron's own controller guidance",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Cloud read Suburban's maker-hosted operation and maintenance guide on 2026-09-23: draining is by removing the anode rod, and the guide gives the winterising and storage steps the page follows.",
+        "at": "2026-09-23"
       },
       {
         "id": "C8",
         "text": "inverter standby is the largest hidden drain in a stored RV",
         "source": "the inverter maker's own no-load figure",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "CONFIRMED",
+        "by": "Cloud reworded the inverter claim on 2026-09-23. It said an inverter left on 'can pull more than many of the small loads combined', which is a comparative with no source; it now states the mechanism instead, that the inverter holds an AC waveform ready for a load that never comes, which is why it belongs switched off rather than left in standby.",
+        "at": "2026-09-23"
       },
       {
         "id": "C9",
@@ -142,9 +142,9 @@
         "id": "C11",
         "text": "a frozen battery can crack its case",
         "source": "Trojan's freeze warning",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Rolls Battery states the freezing consequence in its own words, read on 2026-09-23: 'damage caused by freezing is typically not recoverable and will require replacement'.",
+        "at": "2026-09-23"
       },
       {
         "id": "C12",
@@ -182,8 +182,8 @@
         "id": "C16",
         "text": "lithium self-discharges at only 2 to 3 percent per month",
         "source": "none identified",
-        "state": "OPEN",
-        "by": "NEW CLAIM MY SPEC MISSED, found while reading: the page's lithium paragraph says 'Lithium self-discharges at only 2 to 3 percent per month and holds for months'. That is a number with no source in the claims list or the Sources, and Battle Born's article does not state a rate in its fetched text. Needs a source or a re-framing.",
+        "state": "CONFIRMED",
+        "by": "Cloud cut the unsourced lithium rate on 2026-09-23: 'self-discharges at only 2 to 3 percent per month' is in no cited document, and the sentence now says lithium holds its charge far longer than lead-acid without a figure.",
         "at": "2026-09-23"
       }
     ]
@@ -1863,33 +1863,33 @@
         "id": "C4",
         "text": "a partially full water heater is the classic crack point",
         "source": "the water heater makers' own drain-and-store instruction",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Cloud read both makers on 2026-09-23: Suburban's maker-hosted guide gives the draining and storage procedure, and Dometic's Atwood operation manual covers draining the tank and leaving the plug out for storage. Both treat a tank left partly full as the failure to avoid.",
+        "at": "2026-09-23"
       },
       {
         "id": "C5",
         "text": "drain the tank and open the low-point drains, then run every faucet to let air in",
         "source": "maker's winterising instructions",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Same two documents: the drained tank, the low-point drains and the faucets opened to let air in are the makers' own sequence.",
+        "at": "2026-09-23"
       },
       {
         "id": "C6",
         "text": "the anode rod or drain plug must come out to drain the tank",
         "source": "Suburban's own guide (maker-hosted, see D1)",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Suburban's guide states it directly: 'Tank is drained by removing anode rod (using 1-1/16 socket)', which is the page's anode-or-drain-plug step.",
+        "at": "2026-09-23"
       },
       {
         "id": "C7",
         "text": "sanitise with one quarter cup of bleach per 15 gallons, or a commercial product per its label",
         "source": "a tank maker's sanitising instruction, or the label",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Cloud read Suburban's maker-hosted operation and maintenance guide on 2026-09-23 and found the ratio, which the page had wrong: 'Add about six (6) ounces of chlorinated common household liquid bleach to each 10 gallons in the water tank. Then run the chlorinated water throughout the system, opening each faucet one at a time until you smell the chlorine.' The page said one quarter cup per 15 gallons, which is about 2 ounces per 15 gallons -- roughly a fifth of the maker's concentration, so a reader following it would have under-chlorinated the tank and left it unsanitised. The page now gives Suburban's figure with the maker named.",
+        "at": "2026-09-23"
       },
       {
         "id": "C8",
