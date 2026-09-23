@@ -46,7 +46,7 @@
  <a href="index.html" class="btn btn-ghost back">← All guides</a>
  <div class="sec-eyebrow">Troubleshooting guide</div>
     <h1>RV electrical problems: How to find the fault</h1>
- <p class="lede">The 12-volt system is not complicated, it is a short chain of links, and a fault usually kills everything downstream of the link that failed. Learn the order and a symptom tells you where to look. This guide gives you the real layout, the actual voltage numbers a healthy system should show, and the measurement technique that finds the failed link instead of guessing at it.</p>
+ <p class="lede">The 12-volt system is not complicated, it is a short chain of links, and a fault usually kills everything downstream of the link that failed. Learn the order and a symptom tells you where to look.</p>
  <p class="reviewed">Last reviewed: Sep 21, 2026, against current WFCO, Progressive Dynamics, Victron, Trojan, Lifeline and Renogy documentation.</p>
  </div>
 
@@ -213,7 +213,7 @@
  <div class="card">
  <p>RV fuses are not mysterious once you know which is which.</p>
  <p><b>Branch circuits</b> use ordinary automotive blade fuses. WFCO specifies ATC or ATO types, naming Littelfuse type 257 and Bussmann type ATC as examples, so replace like for like rather than whatever fits the slot.</p>
- <p><b>High-current feeds</b> use bolt-on fuses. Mid-range feeders take MIDI style, and main battery feeds, alternator lines and inverter inputs take ANL style in roughly the 35 to 400 amp range. High-draw loads like slide-outs and leveling jacks often use resettable breakers instead.</p>
+ <p><b>High-current feeds</b> use bolt-on fuses. Mid-range feeders take MIDI style, and main battery feeds, alternator lines and inverter inputs take ANL style, which the maker rates from 35 to 750 amps. High-draw loads like slide-outs and leveling jacks often use resettable breakers instead.</p>
  <p><b>The main fuse,</b> which protects the battery feed to the panel. Its rating is specific to your panel, so check rather than assume. WFCO publishes the battery circuit fuse per model, in one series it is a 30 amp fuse on a numbered circuit that differs by model.</p>
  <h3>Reverse polarity fuses</h3>
  <p>These are on the converter itself, usually two of them, and their only job is to protect the converter if the battery is ever connected backwards. WFCO is blunt about the trigger: a reversed battery connection, even if only for a second, will cause these fuses to blow. That is a very common self-inflicted fault after battery replacement, and it presents as a converter with no DC output at all. Their published instruction is to check the reverse polarity fuses first, inspect for a break in the element, and if there is no visible break, check continuity. Ratings vary by model, in one series running from a single 40 amp fuse up to two 40s depending on output.</p>
@@ -232,15 +232,13 @@
  <p>Use the loaded comparison described in the voltage-drop section. The reason an ohmmeter is not enough is worth understanding: it pushes so little current through the connection that it cannot tell you whether that connection will carry a real load. A ground bond can read a fraction of an ohm and still fail under ten amps. Loaded testing is the only honest test.</p>
  <h3>A separate problem with the same name</h3>
  <p>On the 120 volt side, shore power grounding is a genuinely different issue with a safety dimension, including what is often called a hot skin condition where touching the RV gives a shock. That is not the 12-volt ground return and should not be treated as the same fault: NFPA 1192 sets out the bonding and grounding requirements that keep the bodywork from becoming a live conductor. If you feel a tingle from the vehicle body, stop and treat it as an AC grounding and bonding fault, not a 12-volt one.</p>
- <h3>The test, and what to expect</h3>
- <p>A load-test comparison rather than a single reading, and no manual spells it out as a single procedure.</p>
  </div>
 
  <h2>Parasitic draw: What empties the battery in storage</h2>
  <div class="card">
  <h3>Expected draw thresholds</h3>
  <p>There is no published acceptable total draw figure for an RV. Winnebago's own service document declines to give one, stating that you must understand the electrical equipment on your specific vehicle to know what is normal, and that typical owner manuals do not share that detail. They list the usual culprits: slide-out control modules, electric step modules, radio memory, engine and transmission computers on the chassis side, and TVs, inverter chargers, the LP gas shut-off solenoid and illuminated touch panels on the house side. Their recommended countermeasure is refreshingly simple: use the battery disconnects provided.</p>
- <p><b>Individual components do publish their draws,</b> which lets you add up your own RV. A BIRD control module is under 2 milliamps at standby. A Blue Sea ACR draws under 40 milliamps to monitor and about 13 while operating. A 1500 watt inverter can draw 500 to 600 milliamps at no load, and a 2000 watt inverter charger lists 25 watts idle in normal mode. Two or three of those together turn into a genuinely flat battery over a month.</p>
+ <p><b>Individual components do publish their draws,</b> which lets you add up your own RV. A BIRD control module is under 2 milliamps at standby. A battery-combining relay draws tens of milliamps while it monitors and rather less once it has operated. A 1500 watt inverter can draw 500 to 600 milliamps at no load, and a 2000 watt inverter charger lists 25 watts idle in normal mode. Two or three of those together turn into a genuinely flat battery over a month.</p>
  <h3>The test</h3>
  <p>Disconnect the negative battery cable, connect the meter between the battery post and the cable you just removed, so all current runs through the meter. This is the method Fluke publishes for automotive parasitic drain, and the order matters. Let the vehicle sit for ten to forty five minutes first, because modules need to go to sleep and an early reading includes things that will switch off. Then pull fuses one at a time and watch the current: when it drops significantly, you have found the circuit. If nothing much changes, use the battery disconnect and accept that this is what the disconnect is for.</p>
  <p><b>What counts as normal,</b> with the caveat attached. The figure most often quoted in the trade, and it comes from a meter manufacturer's general automotive guidance rather than from an RV source, is that below 50 milliamps after the vehicle is asleep is normal and above 100 milliamps is suspect. Treat it as a starting point rather than a rule: that figure is generic automotive guidance from a meter maker, not an RV figure. You can also work it backwards: if you lost 48 amp hours over 12 days, that is 4 amp hours a day, which is 166 milliamps, and that is a real and findable draw.</p>
@@ -254,16 +252,14 @@
  <p>Cooling fan failure leading to a slow heat-related death is widely described in the trade. Pitted contacts in a battery disconnect, corroded terminals and ground points, and converters wearing out from heat, vibration, moisture and surges are all the same category. They are wear and environment problems rather than faults with a listed cause, so treat them as strong suspicion until you have measured something.</p>
  </div>
 
- <h2>What it costs</h2>
+ <h2>What a repair costs, and what drives it</h2>
  <div class="card">
- <p>No manufacturer publishes repair pricing, so every figure below comes from service companies and is a range rather than a quote.</p>
- <p><b>A diagnosis</b> runs roughly $150 to $285, and some shops credit it against the repair. A mobile technician call including a minor fix such as a loose connection, a bad fuse or a dead outlet is around $150 to $400. Given how often the answer turns out to be a fuse or a connection, paying for the diagnosis is usually the cheapest path to being right.</p>
- <p><b>Converter replacement</b> is broadly $400 to $1,200 installed, with one service source quoting $500 to $520 installed for a common 55 to 60 amp unit in a specific brand of trailer. Repairs rather than replacement are quoted anywhere from $150 to $900.</p>
- <p><b>Large inverter chargers</b> are a different grade and are quoted from $750 up to $4,500, with labor described as three to fourteen hours at shop rates that can exceed $250 an hour.</p>
- <p><b>Distribution panels</b> are surprisingly cheap as parts: a bare AC panel is around $75 to $110, an AC and DC panel around $100, and a full replacement power centre section closer to $427. The labor is the cost here, not the part.</p>
- <p><b>A disconnect switch</b> is about $40 for a simple manual on-off switch, while a motorhome battery control panel runs roughly $157 to $245.</p>
+ <p>What you pay comes down to three things: the part, the diagnosis, and how hard the fault is to reach. A diagnosis is its own charge at most shops, and some credit it against the repair if you go ahead.</p>
+ <p><b>The part is rarely the expensive half.</b> A fuse, a breaker or a disconnect switch costs little. A converter or an inverter charger is a different grade of part entirely, and one with a bigger output costs more than a small one for the obvious reason. Distribution panels are surprisingly cheap as parts: the labour is the cost there, not the panel.</p>
+ <p><b>Labour is where the money goes, and it scales with access.</b> Shop rates run high and are charged by the hour, so a fault behind a panel or under a bed is a longer job than one at the battery. Large inverter chargers are quoted in hours as much as in parts, and the range is wide because the installation is.</p>
+ <p><b>Ask before you authorise.</b> Two questions change the bill more than anything else: was the fault confirmed by measuring rather than assumed, and is the quote parts or parts and labour.</p>
  <h3>The comparison worth making</h3>
- <p>If a shop quotes a converter replacement, ask whether the reverse polarity fuses were checked first and whether the fault was confirmed by measuring at both the converter and the battery. Those two questions cost nothing and they eliminate the most common false diagnosis in this system.</p>
+ <p>If a shop quotes a converter replacement, ask whether the reverse polarity fuses were checked first, and whether the fault was confirmed by measuring at both the converter and the battery. Those two questions cost nothing, and they eliminate the most common false diagnosis in this system.</p>
  </div>
 
  <h2>Troubleshooting specific 12-volt circuits</h2>
@@ -301,7 +297,6 @@
   <li><a href="https://www.renogy.com/blogs/general-solar/lifepo4-voltage-chart" target="_blank" rel="noopener">Renogy, LiFePO4 voltage chart</a></li>
   <li><a href="https://www.winnebago.com/Files/Files/Winnebago/Resources/Service/2017-05%20Parasitic%20Draw-12V%20Electrical%20Systems.pdf" target="_blank" rel="noopener">Winnebago service bulletin on parasitic draw (PDF)</a></li>
   <li><a href="https://www.fluke.com/en-us/learn/blog/digital-multimeters/how-to-find-parasitic-battery-drain-with-a-multimeter" target="_blank" rel="noopener">Fluke, how to find parasitic battery drain with a multimeter</a></li>
-   <li><a href="https://www.bluesea.com/products/7620/ML-ACR_Automatic_Charging_Relay_-_12V_DC_500A" target="_blank" rel="noopener">Blue Sea Systems, ML-ACR automatic charging relay (draw figures)</a></li>
   <li><a href="https://www.nfpa.org/product/npfa-1192-standard/p1192code/npfa-1192-standard-on-recreational-vehicles-2026/119226" target="_blank" rel="noopener">NFPA 1192, Standard for Recreational Vehicles, 2026 edition</a></li>
 </ul>
  </div>

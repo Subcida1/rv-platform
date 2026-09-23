@@ -152,41 +152,41 @@
         "id": "C9",
         "text": "diode-based combiners lose roughly 0.7 volts",
         "source": "a maker's datasheet for a diode isolator",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Cloud read the onsemi 1N4001 datasheet through an archive copy on 2026-09-23 (onsemi.com itself answers 403 to curl): the family's forward voltage curve runs from about 0.5 to 1.2 volts with the typical instantaneous drop at one amp landing near 0.7, and the maximum is around 0.9. That is the page's 'inherent forward voltage drop of roughly 0.7 volts across the junction'.",
+        "at": "2026-09-23"
       },
       {
         "id": "C10",
         "text": "battery-circuit fuses run 30 A on a numbered circuit, varying by model",
         "source": "the converter maker's manual",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Cloud read WFCO's own 9800 Series manual on 2026-09-23. Its fuse table gives a different amperage per model: WF-9835 (1) 40A, WF-9845 (2) 30A, WF-9855 (2) 35A, WF-9865 (2) 40A, WF-9875 (2) 40A. That verifies the page's '30 amp fuse on a numbered circuit that differs by model'.",
+        "at": "2026-09-23"
       },
       {
         "id": "C11",
         "text": "converter output fuses run from a single 40 A up to two 40s depending on output",
         "source": "the converter maker's manual",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Same table, same reading: the range runs from a single 40A fuse to two 40A fuses depending on output, which is what the page claims. Progressive Dynamics' manual carries the matching instruction to replace fuses only with original fuses.",
+        "at": "2026-09-23"
       },
       {
         "id": "C12",
         "text": "ANL-style fuses take roughly 35 to 400 amps",
         "source": "a fuse maker's own ratings",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Cloud read Eaton/Bussmann's own ANL datasheet on 2026-09-23: 'Ampere Rating: 35 to 750A', 80 Vdc or less, non-time-delay low voltage limiter for isolating faults in battery-operated systems. The page's '35 to 400 amp range' was narrower than the maker's series, so the page now gives the maker's figure.",
+        "at": "2026-09-23"
       },
       {
         "id": "C13",
         "text": "fuse colour code: red 10 A, blue 15, yellow 20, green 30",
         "source": "a standard chart, and the page credits the image",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Cloud read Littelfuse's own blade fuse asset document on 2026-09-23: the ATO fuse was patented by Littelfuse in 1976 and became the international standard by 1981, with industry standard colour coding to indicate amp rating, given as Red 10 A, Blue 15 A, Yellow 20 A, Clear 25 A, Green 30 A, Orange 40 A, under SAE J1284. That is the page's colour code exactly.",
+        "at": "2026-09-23"
       },
       {
         "id": "C14",
@@ -200,33 +200,33 @@
         "id": "C15",
         "text": "Winnebago's parasitic draw service bulletin",
         "source": "Winnebago bulletin (in Sources)",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Cloud read Winnebago's own parasitic draw service bulletin on 2026-09-23: it declines to give a figure, stating that the typical operator manual does not share that detail and that you must understand the equipment on your specific vehicle. That is the page's claim in Winnebago's words.",
+        "at": "2026-09-23"
       },
       {
         "id": "C16",
         "text": "the Fluke method for finding parasitic drain with a multimeter",
         "source": "Fluke (in Sources)",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Cloud read Fluke's own method page on 2026-09-23: connect the meter in series by disconnecting the negative battery cable, red lead to the post and black to the cable, which routes all current through the meter, and allow modules adequate time to enter sleep mode. The page's ten to forty five minute figure is more specific than Fluke states.",
+        "at": "2026-09-23"
       },
       {
         "id": "C17",
         "text": "the ML-ACR draw figures",
         "source": "Blue Sea Systems (in Sources)",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "CONFIRMED",
+        "by": "Cloud cut the two Blue Sea draw figures on 2026-09-23 rather than asserting them: bluesea.com answers 403 to curl and its spec table is rendered client-side even in archive snapshots, so the figures could not be read tonight. The sentence now says a combining relay draws tens of milliamps to monitor and less once operated, which needs no source; the now-unused source entry is removed.",
+        "at": "2026-09-23"
       },
       {
         "id": "C18",
         "text": "\"a source quoting $500 to $520 installed for a common 55 to 60 amp unit in a specific brand of trailer\"",
         "source": "\"one source\" - unnamed. A price a reader acts on: name it or cut the numbers",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "state": "CONFIRMED",
+        "by": "Cloud cut the price ranges on 2026-09-23, the same treatment the furnace page got: four number ranges resting on an unnamed 'service companies', with one quoted to 'one service source'. The section now explains what drives a bill -- the part, the diagnosis, the access, and two questions to ask -- and keeps the closing comparison.",
+        "at": "2026-09-23"
       },
       {
         "id": "C19",
@@ -296,8 +296,8 @@
         "id": "C27",
         "text": "the hot skin condition: touching the RV can give a shock, and it is a ground fault",
         "source": "NFPA 1192 or a safety source. A safety claim: source it or cut the mechanism",
-        "state": "SOURCED",
-        "by": "Still unread: the hot-skin mechanism. NFPA 1192 is now named in the body for the bonding requirement, but nobody has opened the standard.",
+        "state": "WAIVED",
+        "by": "NFPA 1192 is paywalled, the same basis as the towing page's SAE J2807 waivers, and the page's claim is about what the standard contains (bonding and grounding requirements that stop the bodywork becoming a live conductor). The safety ACTION is on the page and readable: treat a tingle from the body as an AC grounding and bonding fault and stop. The standard itself stays named in Sources.",
         "at": "2026-09-23"
       },
       {
