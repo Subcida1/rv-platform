@@ -4,7 +4,8 @@ Open items for originrv.com, newest concerns first. This file lives in `_todo/`
 so GitHub Pages does not publish it, because the repository is public and this is
 a working document rather than site content.
 
-Last updated 2026-09-22. Section 1 rewritten after the free-source photo sweep.
+Last updated 2026-09-22 (evening). Section 6 brought current: GA4 is wired, the
+sitemap and the claim Worker were both re-checked from outside.
 
 ---
 
@@ -234,14 +235,25 @@ Build order from the keyword research, next first:
 - **Grid card counts.** Fixed on 2026-09-21 with a rule that centres a lone final
   card, but the issue returns whenever the guide count is odd plus one. Worth
   knowing rather than re-diagnosing.
-- **Analytics.** Still not wired. Search Console is verified and the sitemap is
-  submitted, but nothing measures on-site behaviour.
-- **Claim form endpoint** in `assets/js/config.js` needs the deployed Worker URL
-  if it is not already set.
-- **Search Console sitemap status.** Worth a look once Google has had a few days
-  to crawl. A "Couldn't fetch" after the first day or two would be worth
-  investigating rather than waiting out. Submitted 2026-09-21; all 29 URLs were
-  confirmed returning 200 beforehand.
+- **Analytics — DONE 2026-09-22.** GA4 is live on all 39 pages as `G-G8X4MQ0P3X` (the
+  OriginRV property; the Analytics *account* is still named RV Axis, which is only a
+  folder label and changes nothing). It is driven by one constant,
+  `site_constants.GA4_ID`, and both generators write it, so it is switched on and off
+  with a single edit rather than 39. `verify.py` enforces it in both directions: every
+  page must carry exactly one matching tag when the ID is set, and none may carry one
+  when it is empty. Confirmed working from the outside, not from a dashboard: the
+  loader returns 200, the `g/collect` beacon returns 204 with the right `tid`, and Ty
+  saw himself as an active user in Realtime. Cloudflare Web Analytics is still there
+  and still only counts pageviews and referrers.
+- **Claim form endpoint — confirmed alive 2026-09-22.** The Worker URL is already set
+  in `assets/js/config.js`. A GET returns 405 and an empty POST returns 400, which is
+  what a working POST-only endpoint returns. Re-check if a claim ever silently fails.
+- **Search Console sitemap status — checked 2026-09-22, healthy.** Fetched from
+  outside: `sitemap.xml` is 200, it lists 39 URLs, and all 39 return 200. Nothing for
+  Google to choke on, so a "Couldn't fetch" at this point would be a Google-side or
+  DNS-side question rather than a site one.
+- **Search Console is linked to GA4** (done 2026-09-22), so query data and on-site
+  behaviour can be read together.
 
 ---
 
