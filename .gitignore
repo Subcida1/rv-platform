@@ -6,3 +6,6 @@ __pycache__/
 workers/.wrangler/
 .wrangler/
 .dev.vars
+
+# Search Console exports written by scripts/gsc.py. Local measurement data, not site assets.
+data/gsc/

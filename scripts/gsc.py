@@ -1,0 +1,284 @@
+#!/usr/bin/env python3
+"""
+Pull originrv.com search performance from the Google Search Console API.
+
+A service account authenticates with a signed JWT, exchanges it for an access
+token, then calls the Search Analytics API. No new dependencies: PyJWT,
+cryptography and requests are already present, which matters because pip on
+this machine is externally managed (PEP 668) and refuses global installs.
+
+Setup (once, in the browser):
+  1. Google Cloud Console, create a project.
+  2. APIs and Services, Library, enable "Google Search Console API".
+  3. IAM and Admin, Service Accounts, create one, then Keys, Add key, JSON.
+     Save the downloaded file as ~/.config/originrv/gsc-sa.json
+  4. Search Console, Settings, Users and permissions, Add user, paste the
+     service account address (ends in iam.gserviceaccount.com), permission Full.
+
+Usage:
+  python3 scripts/gsc.py selftest                     # offline proof the signing works
+  python3 scripts/gsc.py properties                   # what can this credential see
+  python3 scripts/gsc.py pull --days 28               # write CSVs to data/gsc/
+  python3 scripts/gsc.py pull --days 28 --fresh       # include unfinalised days
+  python3 scripts/gsc.py pull --days 90 --out /tmp/gsc
+
+Notes that cost time if forgotten:
+  - The credential file is a SECRET. Keep it outside the repository, mode 600.
+    Never paste its contents into memory, chat or a commit.
+  - A Domain property is addressed as sc-domain:originrv.com, not a URL.
+  - The API returns top rows only; Google documents that it "does not guarantee
+    to return all data rows". Paging with startRow is handled here.
+  - The generative AI performance report is NOT reachable through this API.
+    Its `type` parameter only accepts web, image, video, news, discover and
+    googleNews, so AI Overviews and AI Mode impressions stay a UI number.
+"""
+
+import argparse
+import csv
+import json
+import os
+import sys
+import time
+import urllib.parse
+from datetime import date, timedelta
+
+import jwt
+import requests
+
+TOKEN_URL = "https://oauth2.googleapis.com/token"
+SCOPE = "https://www.googleapis.com/auth/webmasters.readonly"
+API = "https://www.googleapis.com/webmasters/v3"
+DEFAULT_SITE = "sc-domain:originrv.com"
+DEFAULT_KEY = "~/.config/originrv/gsc-sa.json"
+ROW_LIMIT = 25000  # API maximum
+
+
+def key_path(explicit=None):
+    return os.path.expanduser(
+        explicit or os.environ.get("ORIGINRV_GSC_SA") or DEFAULT_KEY
+    )
+
+
+def load_credentials(path):
+    if not os.path.exists(path):
+        sys.exit(
+            "No credential file at %s\n"
+            "Create the service account and download its JSON key, then save it there.\n"
+            "Override the location with --key or ORIGINRV_GSC_SA." % path
+        )
+    with open(path) as fh:
+        creds = json.load(fh)
+    for field in ("client_email", "private_key", "token_uri"):
+        if field not in creds:
+            sys.exit("%s is missing the %r field; is it a service account key?" % (path, field))
+    return creds
+
+
+def access_token(creds):
+    """Sign a JWT with the service account key and exchange it for a token."""
+    now = int(time.time())
+    assertion = jwt.encode(
+        {
+            "iss": creds["client_email"],
+            "scope": SCOPE,
+            "aud": creds.get("token_uri", TOKEN_URL),
+            "iat": now,
+            "exp": now + 3600,
+        },
+        creds["private_key"],
+        algorithm="RS256",
+        headers={"kid": creds.get("private_key_id", "")},
+    )
+    resp = requests.post(
+        creds.get("token_uri", TOKEN_URL),
+        data={
+            "grant_type": "urn:ietf:params:oauth:grant-type:jwt-bearer",
+            "assertion": assertion,
+        },
+        timeout=30,
+    )
+    if resp.status_code != 200:
+        sys.exit("Token exchange failed (%s): %s" % (resp.status_code, resp.text[:400]))
+    return resp.json()["access_token"]
+
+
+def api_post(token, path, body=None):
+    resp = requests.post(
+        "%s/%s" % (API, path),
+        headers={"Authorization": "Bearer " + token, "Content-Type": "application/json"},
+        json=body or {},
+        timeout=60,
+    )
+    return resp
+
+
+def api_get(token, path):
+    return requests.get(
+        "%s/%s" % (API, path),
+        headers={"Authorization": "Bearer " + token},
+        timeout=60,
+    )
+
+
+def explain(resp, site):
+    """Turn Google's error into the actual next action."""
+    if resp.status_code == 200:
+        return None
+    body = resp.text[:400]
+    if resp.status_code in (401, 403) and "permission" in body.lower():
+        return (
+            "The credential authenticated but cannot see the property.\n"
+            "Add the service account address to Search Console:\n"
+            "  Settings > Users and permissions > Add user > <service account email> > Full\n"
+            "Property requested: %s\nGoogle said: %s" % (site, body)
+        )
+    if resp.status_code == 403:
+        return "Forbidden. Is the Search Console API enabled on the Cloud project?\nGoogle said: %s" % body
+    return "HTTP %s: %s" % (resp.status_code, body)
+
+
+def cmd_selftest(_args):
+    """Prove the signing path offline, with a throwaway key, before we ever hit Google."""
+    from cryptography.hazmat.primitives import serialization
+    from cryptography.hazmat.primitives.asymmetric import rsa
+
+    key = rsa.generate_private_key(public_exponent=65537, key_size=2048)
+    pem = key.private_bytes(
+        encoding=serialization.Encoding.PEM,
+        format=serialization.PrivateFormat.PKCS8,
+        encryption_algorithm=serialization.NoEncryption(),
+    ).decode()
+    now = int(time.time())
+    token = jwt.encode(
+        {"iss": "selftest@example.iam.gserviceaccount.com", "scope": SCOPE,
+         "aud": TOKEN_URL, "iat": now, "exp": now + 60},
+        pem, algorithm="RS256", headers={"kid": "selftest"},
+    )
+    decoded = jwt.decode(token, jwt.algorithms.RSAAlgorithm.from_jwk(
+        json.dumps(jwt.algorithms.RSAAlgorithm.to_jwk(
+            key.public_key(), as_dict=True))), algorithms=["RS256"], audience=TOKEN_URL)
+    ok = decoded["iss"].startswith("selftest@") and decoded["scope"] == SCOPE
+    print("RS256 signing and verification:", "PASS" if ok else "FAIL")
+    print("claim round-trip:", json.dumps({k: decoded[k] for k in ("iss", "aud")}, indent=None))
+    print("PyJWT", jwt.__version__, "| requests", requests.__version__, "| offline, no network used")
+    return 0 if ok else 1
+
+
+def cmd_properties(args):
+    creds = load_credentials(key_path(args.key))
+    token = access_token(creds)
+    resp = api_get(token, "sites")
+    problem = explain(resp, args.site)
+    if problem:
+        sys.exit(problem)
+    entries = resp.json().get("siteEntry", [])
+    if not entries:
+        print("Authenticated as %s, but it can see no properties." % creds["client_email"])
+        return 1
+    print("Authenticated as %s" % creds["client_email"])
+    for entry in entries:
+        print("  %-40s %s" % (entry.get("siteUrl"), entry.get("permissionLevel")))
+    return 0
+
+
+def query(token, site, body):
+    resp = api_post(token, "%s/searchAnalytics/query" % urllib.parse.quote(site, safe=""), body)
+    problem = explain(resp, site)
+    if problem:
+        sys.exit(problem)
+    return resp.json()
+
+
+def page_all(token, site, body):
+    """Walk startRow until the API stops returning rows."""
+    rows, start = [], 0
+    body = dict(body, rowLimit=ROW_LIMIT)
+    while True:
+        body["startRow"] = start
+        payload = query(token, site, body)
+        batch = payload.get("rows", [])
+        rows.extend(batch)
+        if len(batch) < ROW_LIMIT:
+            return rows, payload.get("metadata", {})
+        start += ROW_LIMIT
+
+
+def write_csv(path, dims, rows):
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    with open(path, "w", newline="") as fh:
+        writer = csv.writer(fh)
+        writer.writerow(list(dims) + ["clicks", "impressions", "ctr", "position"])
+        for row in rows:
+            writer.writerow(
+                list(row.get("keys", []))
+                + [round(row.get("clicks", 0), 2), round(row.get("impressions", 0), 2),
+                   round(row.get("ctr", 0), 4), round(row.get("position", 0), 2)]
+            )
+    return path
+
+
+def cmd_pull(args):
+    creds = load_credentials(key_path(args.key))
+    token = access_token(creds)
+    end = date.today() - timedelta(days=args.lag)
+    start = end - timedelta(days=args.days)
+    state = "all" if args.fresh else "final"
+    print("Property: %s" % args.site)
+    print("Range:    %s to %s (%s data)" % (start, end, state))
+    print("Credential: %s" % creds["client_email"])
+    print()
+
+    reports = [("query", ["query"]), ("page", ["page"]), ("date", ["date"]),
+               ("country", ["country"]), ("device", ["device"]),
+               ("appearance", ["searchAppearance"])]
+    if args.only:
+        wanted = set(args.only.split(","))
+        reports = [r for r in reports if r[0] in wanted]
+
+    total_impressions = 0
+    for name, dims in reports:
+        rows, meta = page_all(token, args.site, {
+            "startDate": start.isoformat(), "endDate": end.isoformat(),
+            "dimensions": dims, "dataState": state,
+        })
+        path = write_csv(os.path.join(args.out, "gsc-%s.csv" % name), dims, rows)
+        print("%-10s %6d rows -> %s" % (name, len(rows), path))
+        if meta.get("first_incomplete_date"):
+            print("           (unfinalised from %s on)" % meta["first_incomplete_date"])
+        if name == "query":
+            total_impressions = sum(r.get("impressions", 0) for r in rows)
+            for row in sorted(rows, key=lambda r: -r.get("impressions", 0))[:15]:
+                print("           %7.0f impr  pos %4.1f  %s" % (
+                    row.get("impressions", 0), row.get("position", 0), row["keys"][0]))
+    print()
+    if total_impressions == 0:
+        print("No impressions in this range. For a property verified 2026-09-21 that is expected,")
+        print("not a failure: there is simply nothing indexed well enough yet to report.")
+    else:
+        print("Total impressions across returned query rows: %.0f" % total_impressions)
+    return 0
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__.split("\n")[1])
+    parser.add_argument("--key", help="service account JSON (default %s)" % DEFAULT_KEY)
+    parser.add_argument("--site", default=DEFAULT_SITE, help="property, e.g. sc-domain:originrv.com")
+    sub = parser.add_subparsers(dest="cmd", required=True)
+
+    sub.add_parser("selftest", help="offline proof that JWT signing works").set_defaults(func=cmd_selftest)
+    sub.add_parser("properties", help="list properties this credential can see").set_defaults(func=cmd_properties)
+
+    pull = sub.add_parser("pull", help="download reports as CSV")
+    pull.add_argument("--days", type=int, default=28, help="days back from the lagged end date")
+    pull.add_argument("--lag", type=int, default=3, help="skip this many recent days (reporting lag)")
+    pull.add_argument("--out", default="data/gsc", help="directory for the CSVs")
+    pull.add_argument("--fresh", action="store_true", help="include unfinalised days (dataState=all)")
+    pull.add_argument("--only", help="comma list: query,page,date,country,device,appearance")
+    pull.set_defaults(func=cmd_pull)
+
+    args = parser.parse_args()
+    sys.exit(args.func(args) or 0)
+
+
+if __name__ == "__main__":
+    main()
