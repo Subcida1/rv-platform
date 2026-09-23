@@ -7,7 +7,7 @@ They are editorial conventions, not correctness bugs, so this REPORTS rather tha
 
 What a script can judge, and therefore what is here:
   1. a heading that ends with a period (none should)
-  2. lowercase after a colon in a heading (should be capital)
+  2. capital after a colon in a heading (should be lowercase)
   3. attributive "12 volt" (should be "12-volt") vs the bare measurement, which stays
   4. diligence / authenticity-selling phrases (Ty's hard rule: never sell authenticity)
   5. a manufacturer named in the body with no entry in the Sources list
@@ -45,7 +45,14 @@ DILIGENCE = [
     (r"\bno (?:scraped|invented|made-up)\b", "self-defence"),
     (r"\b(?:real, |genuinely )?verified (?:businesses|listings|facts)\b", "trust adjective"),
     (r"\bfact-checked\b", "trust adverb"),
-    (r"check any figure for yourself", "promises more than a source list can deliver"),
+    # GENERALISED 2026-09-23. This rule was written for "check ANY FIGURE for yourself" and the
+    # site actually says "check THE FIGURES for yourself" -- two words apart -- so it fired ZERO
+    # times against the 16 pages that carry the phrase it exists for. Found by asking the rule a
+    # direct question: does it catch the site's most repeated instance of its own class? It did
+    # not. Same lesson as the duplicate-passage checker: checking one spelling is not checking
+    # the class.
+    (r"check (?:any|the|every|all) figures? for yourself",
+     "promises more than a source list can deliver"),
     # the self-praise cluster, all of which sits on about.html
     (r"[Tt]hat's the covenant", "grandiosity"),
     (r"\bEvery page here is built\b", "self-praise"),
@@ -53,6 +60,30 @@ DILIGENCE = [
     (r"\bthe way a good shop would build it\b", "self-praise"),
     (r"\bnot someone who read about it\b", "self-praise by contrast"),
     (r"\bthis is a site by someone who\b", "self-praise"),
+]
+
+# SELF-REFERENTIAL COPY: sentences about the page rather than the subject.
+#
+# Ty, 2026-09-23: "we need to clear up justifying statements like this 'Oregon has the most
+# listings. Washington and California cover the counties along the Oregon line so far.' theres
+# just no need to put these types of defensive justifying statements scattered all over."
+#
+# THE RULE: write about the RV, not about the page. If a sentence describes our process, our
+# scope, or our honesty, it goes. Four shapes, one root -- diligence claims and authenticity
+# selling already had rules (DILIGENCE and CONTRAST above); this adds the other two.
+#
+# MEASURED BEFORE TRUSTED, which is the discipline the authority rule needed three passes to
+# learn. Every pattern below was counted site-wide on its own. Each returned only true positives
+# EXCEPT `not yet`, which fired on "not yet worth buying" -- a verdict on a PRODUCT, not an
+# apology for our scope -- and was dropped. Result: 21 findings, 0 known false positives.
+# Deliberately NOT included because they measured zero or risked crying wolf: "for now",
+# "which is why we", "will follow", "to come", "at this time".
+SELF_REFERENTIAL = [
+    (r"\bcoming soon\b", "scope apology: announces what is missing"),
+    (r"\bso far\b", "scope hedge: apologises for the scope"),
+    (r"\bso this page\b", "implementation narration: the page describing itself"),
+    (r"\bnothing loads until\b", "implementation narration"),
+    (r"\bthis page (?:stays|loads|works)\b", "implementation narration"),
 ]
 
 # Claude's finding on the main pages (2026-09-21), which I had missed: the site's signature move
@@ -152,6 +183,25 @@ def body_only(html):
     return html[:cut.start()] if cut else html
 
 
+def page_text(html):
+    """The WHOLE page's text, script/style stripped, INCLUDING the Sources block.
+
+    Added 2026-09-23 after a rule was found to be structurally unable to fire. body_only() cuts at
+    the Sources heading -- correct for the COVERAGE rule, which must not count source labels as
+    body mentions -- but the LANGUAGE rules were run through the same extractor, so anything in the
+    Sources block was invisible to them. That is exactly where this site keeps its most repeated
+    diligence phrase, "so you can check the figures for yourself", on 16 pages. The rule for it
+    could never have fired however it was worded.
+
+    One extractor was serving two rules with opposite needs. This is the other one.
+    VOID_RE already removes <script>, so JSON-LD (which duplicates the visible FAQ) is excluded and
+    nothing is counted twice. Note this DOES include the injected nav and footer, which appear on
+    all 40 pages -- so a pattern matching shell copy would fire 40 times, and the first run was
+    checked for exactly that."""
+    return text_of(html)
+
+
+
 def headings(html):
     """(level, raw text) for h1-h3, skipping any inside script/style."""
     clean = VOID_RE.sub("", html)
@@ -212,8 +262,8 @@ def check_page(path):
         if m and m.group(1)[0].isupper() and not m.group(1).isupper():
             findings.append(("heading", "capital after colon, should be lowercase", txt))
 
-    # 4  "12 volt"
-    prose = text_of(body_only(html))
+    # 4  "12 volt"   -- language rules run on the WHOLE page, not body_only (see page_text)
+    prose = page_text(html)
     for m in re.finditer(r"\b12 volt(?!-)(s?)\b(\s+)(\w+)", prose):
         tail = m.group(0)
         if m.group(1) == "s":
@@ -229,6 +279,12 @@ def check_page(path):
         for m in re.finditer(pat, prose, re.I):
             ctx = re.sub(r"\s+", " ", prose[max(0, m.start() - 40):m.end() + 40]).strip()
             findings.append(("diligence", why, ctx))
+
+    # 5d  self-referential copy: the page talking about itself instead of the RV
+    for pat, why in SELF_REFERENTIAL:
+        for m in re.finditer(pat, prose, re.I):
+            ctx = re.sub(r"\s+", " ", prose[max(0, m.start() - 50):m.end() + 50]).strip()
+            findings.append(("self-referential", why, ctx))
 
     # 5b  contrast-praise and trust adjectives
     for pat, why in CONTRAST:
