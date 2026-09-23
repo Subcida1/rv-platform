@@ -213,7 +213,105 @@
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
-    "sources": []
+    "sources": [],
+    "claims": [
+      {
+        "id": "C1",
+        "text": "Keystone's manuals give a roof limit of 30 pounds per square foot, about two feet of snow",
+        "source": "Keystone's own 2026 owner's manual (in Sources) - the page's load-bearing citation",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C2",
+        "text": "Keystone states snow loads exceeding two feet or 30 psf should be removed",
+        "source": "the same manual",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C3",
+        "text": "Boxabl rates its Baby Box 120 at 20 psf",
+        "source": "Boxabl's spec sheet (in Sources) - a prefab structure, not an RV: check the comparison is honest",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C4",
+        "text": "\"owners work from roughly 20 to 25 psf as the point to start paying attention\"",
+        "source": "unnamed-owner prevalence. The class. Either a maker/industry source or our own advice stated as ours",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C5",
+        "text": "snow weighs roughly 3 to 6 lb/sq ft per foot of fresh powder, and 15 to 25 for wet or compacted snow",
+        "source": "a structural or weather source. The page's core math",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C6",
+        "text": "one inch of water weighs about 5 lb/sq ft",
+        "source": "a physical constant (5.2 lb/ft²) - verifiable arithmetic",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C7",
+        "text": "\"at 5 pounds per cubic foot is roughly four to five feet\" of snow",
+        "source": "derived from C5 and C6 - check the arithmetic holds",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C8",
+        "text": "ice dams form at the eaves and back water up under the roof edge",
+        "source": "a roofing or insulation source",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C9",
+        "text": "a roof that is walked on in cold weather can crack a membrane",
+        "source": "maker guidance on roof materials",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C10",
+        "text": "the vents, skylights and AC shrouds are where snow load concentrates",
+        "source": "engineering description",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C11",
+        "text": "\"The single most valuable habit\" - a heading",
+        "source": "a ranking claim in a heading: the fourth instance of this shape in the programme",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C12",
+        "text": "\"Last reviewed: Sep 21, 2026, against the sources listed below\"",
+        "source": "provenance; fine print per Ty's ruling",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      }
+    ]
   },
   "guides/rv-12-volt-problems.html": {
     "hash": "c242c774ea452a8f",
