@@ -62,9 +62,9 @@
         "id": "C1",
         "text": "lead-acid stores at 100 percent charge; lithium stores at partial charge",
         "source": "Trojan's storage white paper; Battle Born's storage guidance",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "OPEN",
+        "by": "CONFLICT FOUND, needs resolving before drafting: the page says lithium stores at PARTIAL charge, and Battle Born's own winterising guidance says 'We recommend storing them fully charged in an environment above freezing if possible', which is the opposite instruction from the same maker the page cites. Either the partial-charge advice belongs to a different maker or a different storage duration, or the page is wrong. Read Battle Born's second article (how long lithium batteries last) before deciding.",
+        "at": "2026-09-23"
       },
       {
         "id": "C2",
@@ -94,9 +94,9 @@
         "id": "C5",
         "text": "charging a lithium cell below about 32 °F causes permanent damage",
         "source": "Battle Born and Victron both publish this",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Cloud read Victron's Lithium Smart battery manual, section 4.7.3, on 2026-09-23: 'A lithium battery cell will sustain permanent damage when charged at temperatures below 5C', with a default of 5C and a warranty void if set lower. THE PAGE SAID 32 F, WHICH IS 9 DEGREES TOO LOW, so it now says near freezing in the heading, gives Victron's 5 C / 41 F in the body, and the FAQ answer says 41 F in both copies.",
+        "at": "2026-09-23"
       },
       {
         "id": "C6",
@@ -134,9 +134,9 @@
         "id": "C10",
         "text": "specific gravity falls as a lead-acid cell discharges, which is how a hydrometer reads state of charge",
         "source": "Trojan's maintenance document",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Cloud read Trojan's maintenance page on 2026-09-23: it carries the state-of-charge table by percentage, specific gravity and open-circuit voltage (100 percent at 1.277 SG and 12.73 V, 50 percent at 1.172 and 12.10, 20 percent at 1.098 and 11.66). It also cross-checks the Trojan chart on the 12-volt page, which carries the same numbers.",
+        "at": "2026-09-23"
       },
       {
         "id": "C11",
