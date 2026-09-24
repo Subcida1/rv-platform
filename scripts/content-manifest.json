@@ -1595,9 +1595,9 @@
     ]
   },
   "guides/rv-generator-not-charging.html": {
-    "hash": "9c654d9b50ba7591",
+    "hash": "4bc8fc35a5061f0a",
     "status": "verified",
-    "verified_by": "Claude Desktop lane, two rounds on 2026-09-24. The full review (JOB-20260924-0655) returned NO, blocked by two contradictions between the body and its own FAQ, both read against Cummins Onan handbook before either sentence was touched and both times the FAQ was the sourced copy. The air conditioner figure was 1,200 to 2,400 in the body against the handbook own 1,400 to 2,400, and the charger carried an invented amp range that disagreed with the watts printed beside it; both corrected. Four further findings applied, including the handbook own phrase invisible loads replacing a prevalence line. The review refuelling gap was answered rather than declined: the cited handbook carries no such line, so the page states one as ours and the list intro says which item is ours. Confirm round JOB-20260924-0715 returned PART 1: CONFIRMED on all six edits, both blockers cleared.",
+    "verified_by": "Claude Desktop lane, third round on 2026-09-24. The class sweep (JOB-20260924-0735 PART 2) found eight instances on a page that had passed a full review and a confirm round, seven of them in sentences written or rewritten by the draft pass itself. Applied: the safety list introduction that said this page already cites, which now names the handbook; the positional cross-reference and the sentence about what people expect under the portable generator entry; a second positional word in the sizing cross-reference; the lede, which carried two findings at once, a claim about what an unnamed reader feels and a mixed metaphor, now in second person and plain English; and the figure caption claim about what owners carry. Declined with the reason: the independent-shops ordering claim, kept because the cost convention keeps relative ordering and it names what it compares. Confirm round JOB-20260924-0750 returned PART 1: CONFIRMED on all five edits and confirmed the declined finding was left alone. Verdict re-earned.",
     "verified_at": "2026-09-24",
     "sources": [
       "Cummins Onan RV generator handbook",

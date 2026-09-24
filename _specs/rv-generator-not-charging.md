@@ -612,3 +612,15 @@ blocks**. That is the raw-HTML staging earning its keep.
 
 **Consequence, the same as the outlets page:** the page is now **`drifting`** and the gate fails until a
 confirm round re-earns the verdict.
+
+**The re-earned verdict, 2026-09-24 07:55 (JOB-20260924-0750): CONFIRMED on all five edits**, and two of its
+answers say something a diff cannot. On the portable-generator entry it read the named section in full and
+reported that *"the referenced section supplies the why; the teaser line no longer needed to carry that weight
+itself"*, which is the check a cut requires. And on the lede it read the paragraph as the page's opening:
+*"it names the reader's likely assumption directly rather than as an unnamed generalization, corrects it in the
+same breath, and previews the payoff the rest of the page delivers on."* That is the difference between a
+class instance and a hook, judged by the only instrument that can judge it.
+
+**The gate is green: 15 verified, 24 unverified, 0 drifting, ALL CHECKS PASSED.** Both of this session's pages
+went through the full cycle - review, confirm, class sweep, re-earned verdict - and both were drifted on
+purpose in between, with the reason written down.
