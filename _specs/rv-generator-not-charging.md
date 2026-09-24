@@ -396,12 +396,69 @@ source naming (D1), the *"never"* edit in the meta and the three social strings 
 FAQ surge fix (D4), the prevalence cuts (D6), the diagram count (D8) and the diagram fit check (D11). None
 of them need a second pair of eyes.
 
-## 11. State at handoff
+## 11. State at handoff, 2026-09-24 06:50 UTC
 
-Placeholder. The drafter fills this once the page is written, in the shape the converter and fuse specs
-use: what is done and committed, the numbered items remaining before the first review round, and why the
-handoff happened where it did. A class sweep is a standing step after verification, per the fuse spec's
-§13.
+**Done and committed.** The draft pass is applied as 34 exact pairs, and the page has nothing outstanding
+that a drafter can settle, so it goes to its first review round.
+
+**D3, the absolute.** *"The generator never charges them directly"* is gone from the meta, `og:`, `twitter:`
+and both schemas, replaced by *"The generator does not do the charging."* The wording is deliberately not the
+spec's *"does not charge the house bank directly"*, because the page's own portable-generator section says the
+DC outlet does push current into a battery, badly: an absolute about *direct* charging would contradict the
+page two sections later. The meta description measures 151 characters, inside the gate.
+
+**D1, the unnamed authority, closed.** Every *"the manufacturer"* shape now names Cummins Onan (the callout,
+the thesis, the order of checks, H3 One, the sizing numbers, H3 *What the loads draw*, two FAQ answers), the
+current-limit sentence names Victron, and the AC input voltage line already named Xantrex. The two shapes with
+no nameable source were cut rather than reworded, per the standing ruling.
+
+**D2, the six failed-search disclosures, all gone**, including the H3 *Field evidence without manufacturer
+documentation* and its paragraph, which the spec's decision 5 sends with its heading. **That is the one real
+content loss in this pass**, recorded plainly: the section carried three checks a reader could still make (a
+loose junction box connection, a dead leg feeding the converter, a corroded brush block or slip rings). None
+of them has a nameable source, and the material cannot come back without one.
+
+**D5, the cost section.** All eight dollar figures are out and the ordering stays: a breaker check is free, a
+transfer switch is a modest part, generator repair is the expensive end and is quoted by the job. The heading
+that said *"The comparison worth making"* is now *"The order to spend in"*, and the sentence under it argues
+the order the page already argues.
+
+**D6 and D7.** *"That instinct is usually wrong"*, *"much shorter and much cheaper"*, *"more common than people
+expect"*, *"repeatedly described by owners and technicians"*, *"most owners spending"*, *"the part is far
+cheaper than a generator repair"* and *"written by people who see these failures daily"* are all gone. The
+headings are renames per §6: *The causes*, *What the loads draw*, *Adding the loads up*, *The order to spend
+in*, *Related guides*, and the label *"Documented by manufacturers:"* is cut with the section that needed it.
+
+**D8, the diagram.** *"Four things sit between the generator and the battery, and three of them are not the
+generator"* is now *three things … and two of them are not the generator*, which is what the figure actually
+draws (the breaker is on the generator, the transfer switch and the charger are the two that are not). Its
+failed-search line about the missing failure table is now *"why the charger is where to look"*.
+
+**C32 and C33, the portable-generator figures, now sourced and corrected.** The reading found these figures
+were not in Honda's manual at all, and that the manual was not in Sources. Both are fixed by reading the
+manual: **Honda's EU2000i owner's manual gives a maximum charging output of 8 A on the DC outlet (about 96 W),
+AC output rated 1,600 VA with 2,000 VA maximum, and says the DC output is not regulated.** The page's
+invented *"eight or ten amps, usually nearer five, around 60 watts"* and *"somewhere between 1,000 and 1,600
+watts"* are replaced by Honda's figures in the body **and** in the FAQ answer, and the manual is now in
+Sources. URL fetched before being cited: **200, `application/pdf`**.
+
+**Two keeps, with reasons, so the review does not have to re-litigate them.** *"The generator is so rarely the
+fault"* is the page's thesis and the maker's own order of checks supports it; it is not a claim about what
+owners do. And the FAQ answer's *"many units limit how much AC current they draw"* is an unnamed plural, but
+the claim is carried by Victron, named in the same answer two sentences later.
+
+**Also declined, by convention:** the structural note that the H3 `Sources` sits inside the Related guides
+block. Every verified page puts the same `<div class="card srcs"><h3>Sources</h3>` at the foot of the page,
+so changing this one page would make it the only page that differs.
+
+**Instruments, run before this was reported.** `verify.py` **ALL CHECKS PASSED**; the FAQ schema is in sync
+by `sync-faq-schema.py`, not by hand; `house-style.py` 0 findings; `check-diagram-fit.mjs` **14 labels, all
+fit, tightest 12.9px** against a 6px floor; the class grep sweep returns none; and the whole diff was read
+back for joined-sentence damage.
+
+**Left for verification:** the reviewed line now reads *Sep 23, 2026, against Cummins Onan, Victron, Xantrex
+and Honda documentation*, and the class sweep is a standing step **after** verification per the converter
+spec's §13.
 
 ## 12. The safety gap, 2026-09-24 (and what was done about it)
 
