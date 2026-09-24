@@ -16,6 +16,14 @@ No secrets, keys, tokens or customer details in here. This file is committed.
 
 ## 2026-09-24
 
+### copy: Towing page: the load placard rule scoped to the trucks it actually covers
+- why: FMVSS 110 stops at 10,000 lb GVWR and FMVSS 120 imposes no equivalent placard, so the sentence was false for the one-ton trucks that tow the heaviest fifth wheels; the independent pass had confirmed the standard without checking its scope
+- expect: no search effect; the value is that a heavy-truck reader is no longer told a number is regulated when it is the maker's own label
+- files: guides/rv-towing-capacity.html
+- tags: accuracy
+- commit: bcfd118 (pushed)
+- deployed: 2026-09-24T15:49:26-07:00
+
 ### guides: Slide-out page corrected: the seating check belonged to the rack and pinion system, not the in-wall one
 - why: the independent AI Studio pass found the page telling in-wall owners to look for a no-gap motor seating that system does not have, while never telling them to re-engage the motor they had disengaged; that combination leaves a room able to move on the road
 - expect: no search effect; the test is whether the override section holds up when the slide-out cluster starts drawing impressions in December
