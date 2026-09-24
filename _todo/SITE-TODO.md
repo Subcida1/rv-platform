@@ -859,6 +859,29 @@ What ran instead, and what it is worth:
 
 **The credit wall is a standing risk to this programme**: every review, every reading lane and every fresh-context check runs through it. Worth knowing before the next content block is planned.
 
+### The one review still outstanding: the slide-out page
+
+**Its independent pass is queued and blocked on a browser, not on us.** The AI Studio job is written
+(`claude-bridge/inbox/REVIEW-REQUEST-20260924-1418-slideout-page.md`), copied into the durable directory queue
+(`queue/jobs/20260924-1418-SLIDEOUT-REVIEW.md`), and the loop will send it by itself the moment the AI Studio
+composer is empty. It is **not** in the consumed ledger, so it has not gone out.
+
+**What is blocking it:** the lane reports `busy — composer has text — refusing to touch it`, which is the loop
+declining to clobber text left in the composer by a previous send. Nothing on this side can clear a browser
+composer. **The unblock is one tap in the AI Studio tab**: if the box holds a request starting *"# REVIEW REQUEST
+— the slide-out page, its first independent pass"*, press Enter; if it holds anything else, clear it.
+
+**What that page already has, so the gap is bounded:** every one of its eight citations was read first-hand while
+it was drafted (Lippert's four documents and BAL's three), and a free reader pass on the local cascade found four
+prevalence claims which are fixed. The missing piece is the independent lane, and note what the freeze page's
+pass was worth when it did run: four claim groups confirmed, **two confident accusations that were both wrong**,
+and one substantive finding that is now on the page. So this is worth finishing, and it is not worth blocking
+anything else on.
+
+**The hardening that came out of that round is already in this job:** it must quote only sentences actually
+present in the file (the freeze job invented six), report `NONE FOUND` when a class is absent, and quote a
+document's own words and location before calling a claim contradicted.
+
 ### What is done, and where it is
 
 - **Two guides drafted, registered end to end and passing `verify.py`:** `freeze-damage-triage` (winter
