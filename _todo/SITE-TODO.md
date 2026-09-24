@@ -570,3 +570,220 @@ pages. The guides were the bulk and the worst drift.
   tool cannot check. The guide now says so honestly and tells the reader to add it up by hand.
   Fix is one more input plus one more verdict row. Worth doing: a reader who checks three of four
   limits and stops is exactly the reader the page exists to catch.
+
+---
+
+## 13. The coverage map — nine stages (2026-09-24, Cloud session)
+
+Ty's direction: *"we need to cover everything if we want to serve as the authoritive source... we want to cast a really wide net."*
+
+Agreed as ambition, and this section is what makes it finite. It is derived from the site's own
+data model, not invented: `_data/guides.json` carries exactly two groups, **`winter` (4)** and
+**`fix` (13)**, so all 17 guides land in two buckets that both mean *something is wrong or it is
+winter*. Nine stages is the shape of what an RV source has to cover; the two existing groups are
+stages 7 and 8 of it.
+
+**Wide net, serial build.** The map is deliberately wide and the build is not. Every page still
+walks the pipeline in `reference/projects/originrv-content-engine.md` (spec → draft → mechanical
+normalisation → edit pass → independent review → claim list → publish → monitor), with a human
+point at spec, claim list and publish. Breadth lives here; throughput stays one page at a time.
+Opening stages faster than that only produces a backlog of thin pages, which is the shape Google's
+scaled-content-abuse policy names — *"unoriginal content that provides little to no value to users,
+no matter how it's created."*
+
+### The gate: what earns a page
+
+Both of Ty's own qualifiers are encoded here — *"unless the depth just isnt there and it isnt
+necessary."*
+
+1. **Someone asks the question.** Demand evidence, not a slot filled in to complete a matrix: an SDS
+   call category, community-thread repetition, or a `fell_through` site search.
+2. **It carries something specific and checkable** — a figure, an ordered procedure, a primary
+   document, a table — that a template cannot produce.
+3. **Deleting every other page would still leave it worth reading.** This is the anti-doorway test,
+   and it is what separates an authoritative source from a farm of pages.
+
+A stage that cannot produce pages passing those three is not a stage we build. Stage 9 is the
+current candidate for that ruling.
+
+### The formats
+
+The answer decides the format; format is not decoration.
+
+| Format | What it is | In use on the site |
+|---|---|---|
+| Guide | a question answered | the 17 |
+| Tool | an input, a verdict | `tools/weight-calculator.html` |
+| Walkthrough | an ordered procedure the reader follows | **none yet** — stage 3's opener |
+| Checklist | used at a moment: pre-departure, scale day, walkthrough | **none yet** |
+| Table | a limit or spec read across | 5 pages carry one — see the correction below |
+| Diagram | inline SVG | `rv-fuse-keeps-blowing`, `rv-12-volt-problems` (3 each) |
+
+**Correction to a standing claim:** the 2026-09-21 note that the site has *zero* tables sitewide is
+stale. Measured 2026-09-24: **5 pages carry a `<table>`** — `rv-refrigerator-not-cooling`,
+`roof-snow-load`, `rv-tank-sensors-reading-wrong`, `rv-towing-capacity`, `manuals/recalls`. Tables
+remain a named lever, and they are no longer absent.
+
+---
+
+### Stage 1 — Choosing and buying a used RV
+**Coverage 0 of 17.** Empty, high intent, and a strong authority fit.
+
+- Pre-purchase inspection, in the order that finds the expensive things first: roof and sealant,
+  delamination, soft floors, water staining, tyre DOT dates, battery age, propane leak test, tank
+  valve operation
+- Testing the systems on a walkthrough with **no hookups** — this is the link into stage 3
+- Title and paperwork: salvage and rebuilt titles, VIN against title, liens, bill of sale
+- Private sale versus dealer: who actually owes you a warranty
+- Used versus new: the defect curve against the depreciation curve
+- Hiring an inspector: what NRVIA certification does and does not cover
+- Buying from out of state, sight unseen
+
+**Fits:** checklist (the inspection, carried to the unit) · guide (title traps) · table (what each
+system should show at a walkthrough)
+
+### Stage 2 — Matching the unit to the tow vehicle
+**Coverage 1 guide + 1 tool.** Anchored, with two gaps already scoped in §12.
+
+- (built) `guides/rv-towing-capacity.html`, `tools/weight-calculator.html`
+- **Trailer brakes and breakaway** — the page §12 scoped, primary sources identified (49 CFR
+  393.42-393.43, FMVSS 121, NFPA 1192 2026 ch. on vehicular braking)
+- **The calculator's missing GCWR field** — one input, one verdict row (§12)
+- Weight-distributing versus weight-carrying hitches
+- Tongue weight and hitch class
+- **Weighing day**: how to use a CAT scale and read the three numbers
+- Fifth wheel, travel trailer, and motorhome-plus-toad, where the rules differ
+
+**Fits:** walkthrough (scale day) · tool (the repaired calculator) · table (the limits, and what each
+one protects) · guide (hitches, toad setups)
+
+### Stage 3 — Learning the systems after you buy
+**Coverage 0 of 17.** The missing front door, and the one stage that turns the existing 17 guides
+into a curriculum instead of a bucket.
+
+- One walkthrough hub: how propane, 12-volt, 120-volt, water, waste, heat and cold connect, and
+  which system to learn first
+- One page per system, each linking into the fault guides that already exist: propane · 12-volt and
+  the converter · 120-volt and shore power · batteries · fresh water and the pump · the water heater ·
+  waste and the tanks · furnace · air conditioning · solar and generator
+- The first night plugged in: what to shut off, what to leave on
+- The manual you actually got versus the one you need — the guide side linking the manuals directory in
+- The order to learn it in, and what is safe to ignore for now
+
+**Fits:** walkthrough (the hub and each procedure) · diagram (the systems, and where the 12-volt and
+120-volt halves meet) · table (what each system does when it is working) · checklist (first night)
+
+### Stage 4 — First trip, hookups and leveling
+**Coverage 0.** Leveling jacks is already §5 item 2.
+
+- Hookups: 30 versus 50 amp, adapters, surge protection, the water pressure regulator, and the order
+  to connect and disconnect
+- The sewer ritual: what stays closed and why, and the P-trap (the existing tank and sewer material
+  links here)
+- Leveling: blocks, stabilisers and jacks — **stabilisers are not jacks**
+- Slide-outs at a campsite (links the queued slide-out page once built)
+- Site types: full hookup, electric and water only, dry, boondock
+- The departure order, and what people break by doing it in the wrong sequence
+
+**Fits:** checklist (arrival and departure) · walkthrough (hookup in order) · guide (leveling) ·
+table (amperage, and what it will run)
+
+### Stage 5 — Living in it day to day
+**Coverage 0.** The site's real differentiation: the one stage where a factory service manual is not
+a competitor.
+
+**Instrument note, and it matters: the demand evidence used everywhere else cannot see this stage.**
+The SDS dataset is 7,300+ field-service events, so by construction it can only show faults. Fault
+evidence will never nominate a living-in-it page. This stage's demand has to come from community
+threads and search fall-through, and its build order should say so rather than inheriting an order
+from service calls.
+
+- **Condensation**: where it comes from, what it quietly destroys, how to stop it — highest value in
+  this stage, peaking in the same window as stage 8
+- The power budget: amp-hours, what runs off what, what a generator or solar actually carries, and
+  why the fridge is the question
+- Water: conserving, refilling, showering
+- Waste: how long tanks really last, and the dump cadence that avoids a crisis
+- Propane: cooking, the fridge on propane, consumption against a tank
+- Living in it through a winter — overlaps stage 8 deliberately, and that overlap is the seasonal
+  window open right now
+- Internet, working from it, signal
+- Mail, domicile, the state you register in, insurance
+- Full-time cost reality: site fees, fuel, and the maintenance reserve nobody budgets
+- Laundry, storage, humidity, mould
+
+**Fits:** guide (condensation, cost) · tool (power budget) · table (what each appliance draws) ·
+walkthrough (a winter day)
+
+### Stage 6 — Maintenance and wear
+**Coverage 2 of 17.** Roof leak repair is already §5 item 6.
+
+- Roof: resealing, sealant types, the inspection schedule, how often resealing is actually needed
+- Tyres: (built `rv-tire-replacement`) plus **load range and pressure as a page** — demand item 3,
+  and the weakest result set found
+- Batteries: watering, equalising, replacement — the winter half is built
+- Wheel bearings and axle service
+- Brakes and suspension inspection (links stage 2's brake page)
+- Slide seals, gaskets, caulking
+- Anode rods and water heater maintenance (links the built water-heater guide)
+- A **maintenance calendar**: what to do by month
+
+**Fits:** table (by month; torque by size) · guide (resealing, bearings) · tool (the calendar)
+
+### Stage 7 — Fixing what breaks
+**Coverage 13 of 17 — the only stage the site actually owns**, and the stage every competitor also
+covers, because it is the stage field-service data can see.
+
+- §5's queue: slide-outs (spec written, unbuilt) · leveling jacks · battery not charging standalone ·
+  toilet not flushing · black tank clog · roof leak repair
+- Demand item 4: A/C not cooling · sewer smell · water pump not building pressure · the
+  wiring-diagram truth page
+- **Commerce walls — do not target:** `rv trailer brakes`, `rv 12v fuse box`, and later
+  `rv 50 amp vs 30 amp`
+
+**This stage is finishable. Finish it before widening it.**
+
+### Stage 8 — Winterising, storage and de-winterising
+**Coverage 3 built + 1 queued.**
+
+- (built) `winterize-plumbing` · `battery-winter-storage` · `tires-winter` · `roof-snow-load`
+- **Freeze-damage triage** — demand item 2, peak Nov-Dec, and the one page whose seasonal window is
+  open right now
+- **De-winterising**: the spring order, and checking what the winter did — the Mar-Apr reveal peak
+- Storage versus living in it through winter: two different problems, and the site has neither
+- Rodents and pests in storage
+
+**Fits:** checklist (winterise order, de-winterise order) · guide (freeze triage) · table (what to
+drain, in what order)
+
+### Stage 9 — Seasonal hazards
+**Coverage thin, and it overlaps stages 6 and 8 almost entirely. Ruling needed.**
+
+- Freeze (stage 8) · snow load (built) · heat and sun on roof, tyres and batteries · hail and storm ·
+  wildfire smoke and evacuation
+
+This stage cannot currently produce pages that pass the third gate — they would be variants of stage
+8 pages. **Recommend folding it into stage 8 and keeping only what survives**, rather than
+manufacturing a stage to fill. That is Ty's own qualifier applied to his own map.
+
+---
+
+### Build order, so it is not re-litigated per page
+
+Inherited from the content engine and unchanged: **measured call volume first, then what a wrong
+answer costs the reader, with a seasonal tiebreak — a page whose demand peak is within about four
+months goes first, because indexing lags publication and a page has to be aged before its season
+arrives.**
+
+Applied as of 2026-09-24:
+
+1. **Freeze-damage triage** (stage 8) — Nov-Dec peak, inside the window
+2. **The new-owner walkthrough** (stage 3) — the front door, and the page that makes the existing 17
+   a curriculum
+3. **Trailer brakes** (stage 2) — sources identified, and it closes a gap the towing page admits to
+4. **The calculator's GCWR field** (stage 2) — small, and it closes the one limit the tool cannot check
+5. **The slide-out page** (stage 7) — spec written; publish Jan-Feb for the May peak
+6. Then stage 5 opens, on its own demand instrument
+
+Then stop adding and watch what Google does with these, because none of it is worth anything while
+nothing is indexed. GSC, range ending 2026-09-21: **0 queries, 0 pages, 0 impressions**.
