@@ -46,7 +46,7 @@
  <a href="index.html" class="btn btn-ghost back">← All guides</a>
  <div class="sec-eyebrow">Troubleshooting guide</div>
     <h1>RV outlets not working: The 120 volt side</h1>
- <p class="lede">This is a different system from the rest of this cluster. RV outlets run on 120 volts from the shore pedestal rather than 12 volts from the battery, and that changes both how they fail and how you should treat them. The good news is that the most common cause has a reset button and costs nothing to fix, and one manufacturer publishes an exact list of why that button will sometimes refuse.</p>
+ <p class="lede">RV outlets run on 120 volts from the shore pedestal rather than 12 volts from the battery, and that changes both how they fail and how you should treat them. The good news is that the most common cause has a reset button and costs nothing to fix, and Leviton publishes an exact list of why that button will sometimes refuse.</p>
  <p class="reviewed">Last reviewed: Sep 21, 2026, against the sources listed below.</p>
  </div>
 
@@ -126,7 +126,7 @@
  <h3>The main breaker</h3>
  <p>A tripped breaker frequently does not look tripped, and you cannot tell by looking at it. To reset one you have to push it firmly to off and then firmly back on, not just flick it. If it will not stay on, stop, because there is a real fault on that circuit and repeatedly resetting it is not a fix.</p>
  <p><b>The branch breakers,</b> one per circuit, typically 15 or 20 amps. Same reset action. A dead branch kills everything on it, and the outlets in an RV are chained rather than run individually, so a fault in one outlet taking out the ones after it is normal behaviour rather than a mystery.</p>
- <h3>The GFCI, and why to find it first</h3>
+ <h3>The GFCI</h3>
  <p>RVs put a ground fault outlet at the head of a chain, normally near a sink or in a wet location, and it protects every outlet downstream of it. When it trips, the whole downstream string goes dead at once. The practical consequence is that the outlet you are testing may be perfectly healthy and simply not receiving any power. Find the GFCI on that circuit first.</p>
  <h3>The inverter</h3>
  <p>An inverter/charger has an AC pass-through circuit with internal relays that feed its designated outlets from shore power when it is present and from the batteries when it is not. So some outlets work on battery and some never will, and that is by design. Manufacturers also document a failsafe behaviour worth knowing: on at least one product line, the AC output stays live if AC input is available even when the operating switch is set to off. Do not assume an outlet is dead just because you switched the inverter off.</p>
@@ -140,43 +140,43 @@
  <h3>Two, the line and load leads are reversed</h3>
  <p>Wiring the incoming supply to the outgoing terminals is a common mistake after replacement, and the device locks out rather than functioning incorrectly. The manufacturer's LED diagnostic chart names reversed line and load leads as a specific reading.</p>
  <p><b>Three, it has failed its own internal test,</b> meaning it may no longer be able to protect you in a ground fault. This is the one that matters for safety, because a GFCI that has failed this way still looks fine.</p>
- <h3>What the manufacturer says to do about it</h3>
+ <h3>When to replace it</h3>
  <p>The instruction is direct: if the red indication continues, or the GFCI will not reset, replace it. Leviton puts the same test as: if the status indicator does not turn green when the reset button is pressed and released, or the GFCI cannot be reset, it must be replaced. That is a manufacturer telling you not to keep trying.</p>
  <h3>One cause you will read about that we could not source</h3>
  <p>Moisture is widely given as a reason a GFCI will not reset, and it is almost certainly true, but we could not find it named in any GFCI manufacturer's documentation. It appears only in forums and owner reports. Treat it as likely and test it by drying the outlet, but know that it is field knowledge rather than manufacturer wording.</p>
  </div>
 
- <h2>Testing an outlet properly</h2>
+ <h2>Testing an outlet</h2>
  <div class="card">
- <h3>Use a plug in outlet tester, not just a multimeter</h3>
+ <h3>The outlet tester, and what it reads</h3>
  <p>A multimeter tells you whether voltage is present. A tester tells you how the outlet is wired: whether the ground is connected, whether hot and neutral are reversed, whether the neutral is open. Those are exactly the faults that cause dead outlets and they are invisible to a voltage reading.</p>
  <h3>Test a known good outlet first</h3>
  <p>Every tester has its own pattern of lights and the charts assume a particular model. Plug it into an outlet you know works so you can see what a good result looks like on your tester before you try to interpret a bad one.</p>
  <h3>Press the test button on the GFCI and listen</h3>
  <p>A working GFCI clicks off when you press test, and clicks back on when you press reset. If test does nothing, that is another sign the device is not functioning.</p>
- <h3>A note on what to look for</h3>
+ <h3>What actually causes dead outlets</h3>
  <p>In an RV the most common genuine problems behind dead outlets are a tripped GFCI, a tripped pedestal breaker, a loose connection at an outlet where the wiring is push-in rather than screwed down, and corrosion at outlets in damp locations. A fault inside the wall is much rarer than any of those.</p>
  </div>
 
- <h2>Hot skin: The one to take seriously</h2>
+ <h2>Hot skin</h2>
  <div class="card">
- <p>If you feel a tingle or a shock when you touch the vehicle body, or when you touch a metal part of it while standing on wet ground, that is a condition commonly called hot skin. It means voltage is present on the chassis that should not be there, and it is a genuine electrocution risk rather than a curiosity.</p>
+ <p>If you feel a tingle or a shock when you touch the vehicle body, or when you touch a metal part of it while standing on wet ground, that is a condition commonly called hot skin. It means voltage is present on the chassis that should not be there. That is a shock risk to anyone touching the vehicle, and it is not a curiosity.</p>
  <h3>What to do</h3>
  <p>Unplug from shore power immediately. Do not continue using the RV while it is doing this, and do not treat it as something to tolerate. It should be found and fixed before the RV is used on hookups again.</p>
  <h3>Why it happens</h3>
- <p>The usual causes are a fault in the pedestal supply itself, reverse polarity at the pedestal, or a missing or broken ground connection somewhere in the path. Note that this is the 120 volt grounding and bonding system, which is a completely different thing from the 12-volt chassis return discussed elsewhere in this cluster. They share the word ground and nothing else.</p>
- <p><b>One thing that is genuinely a test,</b> for anyone who wants to check an RV or a pedestal before trusting it: the trade checks bonding continuity and expects a low impedance rather than simply continuity. A cheap multimeter cannot meaningfully assess this, which is why hot skin problems are best handed to someone with the right instrument. Getting someone qualified to look at it is the correct call.</p>
+ <p>The usual causes are reverse polarity at the pedestal, or a missing or broken ground connection somewhere in the path. Note that this is the 120 volt grounding and bonding system, which is a completely different thing from the 12-volt chassis return. They share the word ground and nothing else.</p>
+ <p>A cheap multimeter cannot meaningfully assess the grounding and bonding path, which is why a hot skin problem is best handed to someone with the right instrument. Getting someone qualified to look at it is the correct call.</p>
  </div>
 
  <h2>What it costs</h2>
  <div class="card">
- <p><b>A GFCI is one of the cheapest parts on the whole RV,</b> running roughly $17 to $34 depending on the model and whether it is weather resistant, which you want for an outdoor location. If the manufacturer's instruction is to replace it, that is not an expensive decision.</p>
- <p><b>Professional diagnosis</b> runs around $95 to $185 as a standalone fee, with labour at roughly $125 to $195 an hour. Given that a tripped breaker or a reset GFCI accounts for a good share of dead outlet complaints, checking those two yourself first is the highest-value few minutes in this guide.</p>
+ <p><b>A GFCI is one of the cheapest parts on the whole RV,</b> and a weather-resistant one costs a little more, which is what you want for an outdoor location. If the maker's instruction is to replace it, that is not an expensive decision.</p>
+ <p><b>Professional diagnosis</b> is charged as its own fee, and labour by the hour, and both are the reason to do the two free checks first. A tripped breaker or a reset GFCI accounts for a good share of dead outlet complaints, so finding out which one you have before anyone is paid to look takes a few minutes rather than a callout.</p>
  <h3>Where it gets expensive</h3>
  <p>A hot skin fault or a damaged run inside a wall is a different scale of job, and neither is something to price up from a guide. If the safety tests point at either, the next call is to a qualified electrician rather than to a parts supplier.</p>
  </div>
 
- <h2>The rest of this cluster</h2>
+ <h2>Related guides</h2>
  <div class="card">
  <p>Remember this is the 120 volt system, so the <a href="guides/rv-12-volt-problems.html">12-volt diagnostic guide</a> covers a different half of the RV. If your lights rather than your outlets are out, that is <a href="guides/rv-lights-not-working.html">lights not working</a>. And if the fault is that the batteries are not charging rather than outlets being dead, see <a href="guides/rv-converter-not-charging.html">converter not charging</a>.</p>
  </div>
