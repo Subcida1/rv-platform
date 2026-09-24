@@ -409,3 +409,42 @@ five sweep-shaped jobs in a row, so a new job was pattern-matched to the shape o
 looked like a perfectly good review; it just answered a different question. **So the next job opens by saying
 it is NOT a sweep and that the sweep work is finished**, and it asks four answerable questions in sequence
 rather than a list of dimensions - **a job that can be answered by pattern-matching is a job that will be.**
+
+## 14. Seven D1 and D5 instances, found on a verified page by a new check, 2026-09-24 08:45
+
+**This is the most uncomfortable entry in this spec, and it is the most useful.** The page has been verified,
+reviewed, confirmed, and class-swept - and the sweep reported **zero instances**. Seven fragments this spec's
+own D1 and D5 ordered cut were still on it.
+
+They were found by a checker that did not exist until an hour earlier: `scripts/check-spec-fragments.py` pulls
+every quoted fragment out of a spec's defect section and greps the page for it. It got written because the
+lights page missed one of its own spec's decisions and **nothing was checking whether a spec's edits actually
+happened** - the review judged the page as written, the sweep hunted for classes by pattern, and both looked at
+a page that had quietly kept some of its own to-do list.
+
+**Applied (seven).**
+
+| was | now |
+|---|---|
+| "The distinction in the protection industry is a useful one: a fuse maker's own guidance is that overcurrents below about 600 percent of rated current are termed an overload" | "The distinction matters, and it is easy to lose: an overload is too much legitimate load on the circuit, and a short circuit is a fault in the wire." |
+| "Fuse manufacturers document it: a conductor that is too small generates heat..." | "A conductor that is too small generates heat..." |
+| "Dirty or loose connections do the same, and the manufacturers describe these as the root cause of many so-called nuisance openings." | "Dirty or loose connections do the same thing." |
+| "A fuse maker's own guidance notes that breakers reset after tripping..." (a SECOND instance of the same phrase, found only after the first was fixed) | "Breakers reset after tripping..." |
+| "Owners describe it exactly that way: the automatic breakers keep trying to reset themselves..." | "The automatic breaker keeps trying to reset itself, and each time it does it sends power back into the fault." |
+| "That one method finds most shorts." | cut; the sentence before it already says it |
+| "That is the whole reason the manufacturers repeat this in every manual." (another sibling, found the same way) | "That is the whole reason it matters." |
+| "No, and every manufacturer says so explicitly." (FAQ answer and schema copy) | "No." The named maker follows immediately and carries the claim. |
+
+**The 600 percent figure went rather than being restated as ours.** The spec recorded it as unsourced, and the
+paragraph defines both terms in the very next sentence, so the number was carrying weight it did not need.
+
+**The pattern, and it has now happened on three pages in one night:** fixing one instance leaves its siblings.
+Two of the seven above were found only *after* the first instance of the same phrase was fixed and the checker
+was re-run. A local audit that runs once finds the first one.
+
+**Declined, with the reason:** the checker also flags the bare word "documented" in the FAQ answer *"Only the
+slide-out harness is documented by a manufacturer"*. That is a specific statement about what is and is not
+documented, not an appeal to an unnamed authority, and it stays.
+
+**Outstanding:** the confirm round on the seven edits. The page is drifting until it lands, which is the gate
+doing its job for the second time on this page.
