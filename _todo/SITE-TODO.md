@@ -861,24 +861,33 @@ What ran instead, and what it is worth:
 
 ### Where the site stands, end of 2026-09-24
 
-**Twenty guides live.** Today published: `freeze-damage-triage`, `rv-slide-out-not-working`,
-`manuals/start-here.html` (the walkthrough, pinned in the manuals hub by Ty's ruling) and
-`trailer-brakes-required`. Every page has had an independent lane look at it, and every finding was tested
-against its source before anything changed.
+**Twenty-two guides live.** Published today: `freeze-damage-triage`, `rv-slide-out-not-working`, the new-owner
+walkthrough (`manuals/start-here.html`, pinned in the manuals hub), `trailer-brakes-required`,
+`rv-roof-leak-repair` and `rv-leveling-jacks-not-working`. Every gate green and every page confirmed from outside.
 
-**The measured lesson, which changes what a reviewer is asked for:**
+**Two gates were added today, both because nothing watched the thing they now watch:**
+
+- **The guides index ItemList** claimed 8 items while the catalogue held 19. It is rebuilt from `_data/guides.json`
+  by `sync-counts.py` now, so registering a guide updates the catalogue, both card lists, the counts and the
+  structured data in one command, and `verify.py` fails if they disagree in either direction.
+- **The photographs.** Nine third-party photographs carried credits and the state tiles were CC0 with provenance
+  in a CREDITS.md, but nothing enforced any of it, and a photograph with no credit or with a licence forbidding
+  commercial use would have shipped unchallenged. Now gated in three categories, and negative-tested twice.
+
+**Four independent reviews are queued for the lanes**, whose rate limit and transport have both been unreliable
+tonight: the brakes page's citations, the brakes page's advice, the roof page, and the leveling page. **None of
+those three pages has had an independent pass yet** and none of them claims one.
+
+**The measured lesson that came out of the reviews:**
 
 | Asked to check | What came back |
 |---|---|
-| citations against documents | **six fabricated "verbatim" quotations across two passes**, four false accusations against pages that were right, and one `PUBLISHED-AS-IS` verdict that missed a real defect (it confirmed FMVSS 110 without checking that the standard stops at 10,000 lb GVWR, which was where the reader lived) |
-| a page against its own argument | **no fabricated quotation at all**, and every finding real: a rack-and-pinion seating check applied to the in-wall system in a travel-safety sentence, an unstated roll-away hazard, a diagram caption contradicting the prose above it, and two factual omissions about what runs on 12 volts |
+| citations against documents | **six fabricated "verbatim" quotations across two passes**, four false accusations against pages that were right, and one `PUBLISHED-AS-IS` verdict that missed a real defect |
+| a page against its own argument | **no fabricated quotation**, and every finding real - including a rack-and-pinion seating check applied to the in-wall system, an unstated roll-away hazard, a caption contradicting its own prose, and the missing commerce gate in the federal scope argument |
 
 **So: ask a lane for the argument, and check the citations by fetching the document.** Two traps to hand every
-reviewer: confirming a standard exists is not confirming what it covers, and a negative finding is only worth
-something if the reviewer says what it searched.
-
-**Two reviews of the brakes page are in flight** (AI Studio on the twelve citations, Claude on the legal reading
-and whether the advice is complete). Neither is a gate: they produce candidate lists.
+reviewer: confirming a standard exists is not confirming what it covers, and a negative finding is worth nothing
+unless the reviewer says what it searched.
 
 ### The independent passes: both done, both adjudicated (2026-09-24)
 
