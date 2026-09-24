@@ -431,3 +431,32 @@ So the precautions are now a **Before you run it** section at the top of the pag
 the handbook, and recorded in the ledger as claim C45 with the document named. **The lesson worth keeping: on
 a safety page, check whether the missing content is a decision or an unread document.** This one was an unread
 document, and the reading took ten minutes.
+
+## 13. The reading, 2026-09-24 23:31
+
+**32 claims read: 11 SUPPORTED, 2 WRONG, 19 NOT FOUND.** The two WRONG ones are the reason this step exists.
+
+1. **C18, an invented percentage.** The page said Victron's WeakAC setting *"reduces maximum charge current by
+   approximately 20 percent."* Victron's FAQ names the setting and gives **no percentage at all**; its own wording
+   is that *"the total charge current possible will be less that the rated maximum charge current output of the
+   charger."* The page now carries that wording. **That is the second invented figure tonight** - the converter's
+   resting-voltage table was the first.
+2. **C29, wrong sizing ranges.** Against Cummins' own *"What size generator do I need to power an RV?"*: a Class B
+   with one air conditioner is **2,000 to 3,600 W**, not the page's 2,500 to 2,800 (that is Cummins' *"good
+   minimum threshold for 30-amp RVs"*, a different number for a different thing), and a Class C is **2,800 to
+   4,000 W**, not 3,200 to 4,000. Corrected. The Class A and fifth-wheel ranges matched.
+3. **The air-conditioner watts disagreed, and the body was right.** The body says *"1,200 to 2,400 watts, and
+   start-up surge is three to four times that"*; an FAQ answer said *"1,500 watts running and up to 3,500 watts
+   starting"*. Cummins p.17 says air conditioners *"can draw 3-4 times the typical 1,400-2,400 watts needed to
+   run"*, so **the FAQ was the wrong copy** and is now aligned with the body and the maker.
+4. **The diesel "second charging path" is not in the handbook.** The page claimed *"the same answer adds one
+   caveat... many diesel generators also carry an alternator which can charge batteries directly"*. Cummins' FAQ
+   says *"Not directly"* and nothing more, and the alternator in the diesel service manual charges the **genset's
+   own starting battery**, not the house bank. **That claim is cut**, which also resolves the meta-versus-body
+   contradiction the spec flagged: the page no longer asserts a diesel exception the cited document does not
+   carry.
+
+**Also flagged for the draft, not yet applied:** C32 and C33 are carried by Honda's EU2000i owner's manual,
+which is **not** in the page's Sources; the manual does not contain the "eight or ten amps", "nearer five / 60
+watts" or 1,000 W lower-bound figures the page uses. And C9's blanket line is our search narration rather than a
+maker statement, because the handbook does carry a "No electricity in coach" troubleshooting entry.

@@ -1304,16 +1304,21 @@
     ]
   },
   "guides/rv-fuse-keeps-blowing.html": {
-    "hash": "62a555c759ee9bea",
-    "status": "unverified",
-    "verified_by": null,
-    "verified_at": null,
+    "hash": "8f951bcb75bc2437",
+    "status": "verified",
+    "verified_by": "Gemini autoloop lane for the review rounds of 2026-09-24 (argument review JOB-0605 found the series-meter safety instruction, the voltage-drop method's scope, the missing ordering step and the clamp-method dead end; confirm JOB-0612 returned Confirmed: YES on all four). Claude then confirmed the post-sweep clause fix (JOB-20260924-0632): 'this page builds on' is gone, the sentence reads correctly, and the deletion left nothing broken. Note for the record: the class sweep for this page was reported as zero instances by the loop but a local pattern audit found one, and the loop dropped a job's calls twice tonight - both recorded in the spec.",
+    "verified_at": "2026-09-23",
     "sources": [
-      "outbox/reply-20260922-2016-part3-fixes-batch3.md",
-      "outbox/reply-20260922-2026-fixes-confirm-batch4.md"
+      "Volkswagen/Audi service bulletin on excess current draw",
+      " Winnebago 2024 Vita owner manual",
+      " Tiffin 2026 Open Trail owner manual",
+      " Progressive Dynamics PD4500 manual",
+      " Lippert SlimRack Plus manual",
+      " OptiFuse RV fuses explained",
+      " RVelectricity on finding 12-volt shorts"
     ],
-    "invalidated_by": "house-style sweep 2026-09-23: 77 colon lowercases across 16 pages; heading text changed, meaning did not",
-    "invalidated_at": "2026-09-23",
+    "spec": "_specs/rv-fuse-keeps-blowing.md",
+    "spec_waived": false,
     "claims": [
       {
         "id": "C1",
@@ -1604,34 +1609,34 @@
       {
         "id": "C1",
         "text": "\"A generator never charges your batteries directly\": it makes 120 volt AC, that AC passes through a transfer switch to a converter or inverter charger, and only that device charges",
-        "source": "the Cummins Onan RV generator handbook (in Sources) documents the generator-to-charger path; the absolute word \"never\" is denied by C2",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "source": "Cummins Onan RV Generator Handbook, FAQ, printed p.21",
+        "state": "READ",
+        "by": "Reading agent (subagent-1790231019104-16), 2026-09-24. \"Can a generator charge my RV house battery? Not directly. But a generator does provide power to operate your converter / charger, which charges batteries.\"  NOTE: Confirms the generator-to-charger path; the absolute word \"never\" is not in the maker text, which says \"Not directly\".",
+        "at": "2026-09-23"
       },
       {
         "id": "C2",
         "text": "\"many diesel generators also carry an alternator which can charge batteries directly, so a diesel RV has a second charging path that a gas one usually does not\"",
-        "source": "the Cummins Onan RV generator handbook (in Sources); this sentence contradicts C1 as written and is the reason \"never\" has to go",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "source": "Cummins Onan RV Generator Handbook (searched; no such sentence)",
+        "state": "CONFIRMED",
+        "by": "CUT, 2026-09-24, under Ty's ruling (name the source or cut the sentence). Reading agent (subagent-1790231019104-16) searched the cited maker documents and found nothing carrying it. The handbook says only \"Not directly. But a generator does provide power to operate your converter / charger, which charges batteries.\" It never mentions a diesel generator alternator charging batteries directly. A different Cummins document, the HDKAG diesel service manual, does document \"Battery Charge Circuit: Alternator G1, powered by a belt from the engine, supplies B+ voltage to recharge the generator set starting battery through circuit breaker CB13.\" That is the generator set starting battery, not the house bank.",
+        "at": "2026-09-23"
       },
       {
         "id": "C3",
         "text": "\"That instinct is usually wrong\" (lede)",
-        "source": "a prevalence claim with no source",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "source": "none named; no maker document carries a prevalence claim",
+        "state": "CONFIRMED",
+        "by": "CUT, 2026-09-24, under Ty's ruling (name the source or cut the sentence). Reading agent (subagent-1790231019104-16) searched the cited maker documents and found nothing carrying it. \"That instinct is usually wrong\" is an unmeasured prevalence claim.",
+        "at": "2026-09-23"
       },
       {
         "id": "C4",
         "text": "\"the list of suspects gets much shorter and much cheaper\" (lede)",
-        "source": "a ranking and cost claim with no source",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "source": "none named; no maker document carries this ranking or cost claim",
+        "state": "CONFIRMED",
+        "by": "CUT, 2026-09-24, under Ty's ruling (name the source or cut the sentence). Reading agent (subagent-1790231019104-16) searched the cited maker documents and found nothing carrying it. none",
+        "at": "2026-09-23"
       },
       {
         "id": "C5",
@@ -1660,18 +1665,18 @@
       {
         "id": "C8",
         "text": "the diagram's \"why the manufacturer does not publish a battery-charging failure table for it.\"",
-        "source": "failed-search disclosure and unnamed authority; cut",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "source": "none named; failed-search disclosure",
+        "state": "CONFIRMED",
+        "by": "CUT, 2026-09-24, under Ty's ruling (name the source or cut the sentence). Reading agent (subagent-1790231019104-16) searched the cited maker documents and found nothing carrying it. \"why the manufacturer does not publish a battery-charging failure table for it\" is a search narration, not a maker statement.",
+        "at": "2026-09-23"
       },
       {
         "id": "C9",
         "text": "\"Onan's generator documentation does not contain a house battery charging failure table. We looked, across installation, operator and service material.\"",
-        "source": "failed-search disclosure; the fact may stand only if the Onan document is named and quoted, and the narration goes",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "source": "Cummins Onan RV Generator Handbook (searched; claim not carried)",
+        "state": "CONFIRMED",
+        "by": "CUT, 2026-09-24, under Ty's ruling (name the source or cut the sentence). Reading agent (subagent-1790231019104-16) searched the cited maker documents and found nothing carrying it. The handbook's Troubleshooting Guide does have a \"No electricity in coach\" entry, so the blanket \"does not contain a house battery charging failure table\" is our search narration, not a maker statement.",
+        "at": "2026-09-23"
       },
       {
         "id": "C10",
@@ -1684,42 +1689,42 @@
       {
         "id": "C11",
         "text": "\"the manufacturer's own order of checks\" is to check the generator's circuit breakers first, and if the breaker is on, AC is present and the outlets are still dead, the likely caus",
-        "source": "the Cummins Onan RV generator handbook (in Sources); the sentence says \"the manufacturer\"",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "source": "Cummins Onan RV Generator Handbook, Troubleshooting Guide, printed p.37",
+        "state": "READ",
+        "by": "Reading agent (subagent-1790231019104-16), 2026-09-24. \"Tripped circuit breaker. Reset the circuit breaker. Check at distribution panel and genset.\" and \"Automatic Transfer Switch failure. Possible issue with coach's Automatic Transfer Switch. Contact your Cummins authorized Onan RV service dealer.\"  NOTE: The handbook carries the breaker-first then transfer-switch order for \"No electricity in coach\" and places the switch in the coach. It says \"Automatic Transfer Switch\", not \"transfer relay\", and does not use the words \"check those first\".",
+        "at": "2026-09-23"
       },
       {
         "id": "C12",
         "text": "H3 One: \"On a 50 amp coach there may be a pair of them\" and \"This is the manufacturer's first check and it costs nothing.\"",
-        "source": "a count plus an unnamed authority; the Cummins Onan handbook (in Sources)",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "source": "Cummins Onan RV Generator Handbook (searched; count not carried)",
+        "state": "CONFIRMED",
+        "by": "CUT, 2026-09-24, under Ty's ruling (name the source or cut the sentence). Reading agent (subagent-1790231019104-16) searched the cited maker documents and found nothing carrying it. The handbook says \"the circuit breakers on the generator\" (plural, printed p.17) and lists \"Tripped circuit breaker\" in the Troubleshooting Guide, but nowhere states that a 50 amp coach has a pair of generator breakers, and it does not say the check costs nothing.",
+        "at": "2026-09-23"
       },
       {
         "id": "C13",
         "text": "H3 Two: a failed transfer switch stuck in the shore position or with burnt contacts never lets generator power through; \"Transfer switch makers publish their own test procedures, a",
-        "source": "the transfer-switch maker's test procedure is unnamed and no maker is in Sources; name one or cut the sentence; \"far cheaper\" is a ranking",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "source": "Go Power TS-30 Transfer Switch Owner's Manual, Operational Testing, printed p.7",
+        "state": "READ",
+        "by": "Reading agent (subagent-1790231019104-16), 2026-09-24. \"There is a pre-programmed 20-30 second delay in the transfer switch. The delay is designed to allow the generator a brief warm-up period. When the delay completes its cycle the switch should engage and the RV load should operate normally.\"  NOTE: A transfer switch maker does publish its own test procedure (Operational Testing, Troubleshooting, Hi-Pot Testing). The \"part is far cheaper than a generator repair\" ranking is carried by no document.",
+        "at": "2026-09-23"
       },
       {
         "id": "C14",
         "text": "\"An inverter charger engages its charging function automatically once it senses a qualified AC input, and the practical test is simply whether battery voltage climbs after it does.",
-        "source": "the Xantrex Freedom SW 2000 owner's guide (in Sources)",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "source": "Xantrex Freedom SW 2000 Owner's Guide, Charge Mode, printed p.15",
+        "state": "READ",
+        "by": "Reading agent (subagent-1790231019104-16), 2026-09-24. \"Whenever nominal AC is present at the inverter's input the unit passes input power through to the connected load and begins charging the batteries, indicated by the Charge Mode indicator light.\"  NOTE: Also, printed p.14: \"It takes about 15 seconds for the unit to transition from invert mode to charge mode after the application of qualified AC.\"",
+        "at": "2026-09-23"
       },
       {
         "id": "C15",
         "text": "\"Where the inverter works but the charger does not, Xantrex's guidance is to check the AC input voltage at the inverter and confirm it is within the unit's range.\"",
-        "source": "the Xantrex Freedom SW 2000 owner's guide (in Sources)",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "source": "Xantrex Freedom SW 2000 Owner's Guide, Troubleshooting table 1-2, printed p.25",
+        "state": "READ",
+        "by": "Reading agent (subagent-1790231019104-16), 2026-09-24. \"Charger is inoperative and unit will not accept AC. AC voltage has dropped out-of-tolerance. Check the AC voltage for proper voltage and frequency (depending on model). See \\\"Specifications\\\" on page 28.\"  NOTE: Matches \"check the AC input voltage at the inverter and confirm it is within the unit's range\".",
+        "at": "2026-09-23"
       },
       {
         "id": "C16",
@@ -1732,74 +1737,74 @@
       {
         "id": "C17",
         "text": "H3 Five: \"Victron publishes a starting point of 80 percent of the generator's capacity in watts.\"",
-        "source": "the Victron MultiPlus generator FAQ (in Sources); the figure must be read there before drafting",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "source": "Victron Energy MultiPlus Generator FAQ, Software Settings, 2.2 AC Input Current Limit",
+        "state": "READ",
+        "by": "Reading agent (subagent-1790231019104-16), 2026-09-24. \"A reasonable starting point for the AC Current input limit is 80% of the generator capacity in Watts.\"  NOTE: The 80 percent figure applies to the AC input current limit, not to the charge current.",
+        "at": "2026-09-23"
       },
       {
         "id": "C18",
         "text": "\"They also publish a setting called WeakAC... which reduces maximum charge current by approximately 20 percent.\"",
-        "source": "the Victron MultiPlus generator FAQ (in Sources); the figure must be read there, and it is the page's most likely wrong number",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "source": "Victron Energy MultiPlus Generator FAQ, Software Settings, 3.1 Derating of the power factor",
+        "state": "READ",
+        "by": "Reading agent (subagent-1790231019104-16), 2026-09-24. WRONG. \"Effectively, when Weak AC is enabled, the total charge current possible will be less that the rated maximum charge current output of the charger (under normal conditions).\"  NOTE: The FAQ names the setting and describes the effect, but states no percentage. There is no \"approximately 20 percent\" anywhere in the page. The only percentage near this subject is a different rule: \"get one that is at least 30% larger than required than an equivalent AVR based model\" for inverter-based generators.",
+        "at": "2026-09-23"
       },
       {
         "id": "C19",
         "text": "H3 Six: an undersized generator is \"more common than people expect once air conditioning is in the picture.\"",
-        "source": "a prevalence claim with no source",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "source": "none named; prevalence claim",
+        "state": "CONFIRMED",
+        "by": "CUT, 2026-09-24, under Ty's ruling (name the source or cut the sentence). Reading agent (subagent-1790231019104-16) searched the cited maker documents and found nothing carrying it. none",
+        "at": "2026-09-23"
       },
       {
         "id": "C20",
         "text": "the H2 \"The ranked causes\" and the label \"Documented by manufacturers:\" present six causes as one documented order",
-        "source": "the six are separately attributed to Onan, Xantrex and Victron, but no single document publishes this ranking; the ranking word is ours",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "source": "none named; no single maker document publishes this six-item ranking",
+        "state": "CONFIRMED",
+        "by": "CUT, 2026-09-24, under Ty's ruling (name the source or cut the sentence). Reading agent (subagent-1790231019104-16) searched the cited maker documents and found nothing carrying it. The six causes are separately documented by Onan, Xantrex and Victron; the ranking word and the label \"Documented by manufacturers\" are ours.",
+        "at": "2026-09-23"
       },
       {
         "id": "C21",
         "text": "\"A fault in the wiring between the generator and the transfer switch, including a loose junction box connection, is repeatedly described by owners and technicians.\"",
-        "source": "\"owners and technicians\", unnamed; no document",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "source": "none named; \"owners and technicians\" unnamed",
+        "state": "CONFIRMED",
+        "by": "CUT, 2026-09-24, under Ty's ruling (name the source or cut the sentence). Reading agent (subagent-1790231019104-16) searched the cited maker documents and found nothing carrying it. none",
+        "at": "2026-09-23"
       },
       {
         "id": "C22",
         "text": "\"One account notes that a coach has two hot legs in that run, and if the one feeding the converter is dead then the batteries will not charge even though the generator runs.\"",
-        "source": "\"One account\", unnamed; a two-hot-leg claim a reader could act on",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "source": "none named; \"One account\" unnamed",
+        "state": "CONFIRMED",
+        "by": "CUT, 2026-09-24, under Ty's ruling (name the source or cut the sentence). Reading agent (subagent-1790231019104-16) searched the cited maker documents and found nothing carrying it. The Go Power TS-30 manual mentions \"hot 1, hot 2 (if present)\" as output terminals, but carries nothing about one hot leg feeding the converter.",
+        "at": "2026-09-23"
       },
       {
         "id": "C23",
         "text": "\"Generator output faults such as a corroded brush block or slip rings, giving zero output at the terminals, are also field-reported.\"",
-        "source": "\"field-reported\", unnamed; no document",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "source": "Cummins Onan RV Generator Handbook (searched; fault not carried)",
+        "state": "CONFIRMED",
+        "by": "CUT, 2026-09-24, under Ty's ruling (name the source or cut the sentence). Reading agent (subagent-1790231019104-16) searched the cited maker documents and found nothing carrying it. The handbook mentions slip rings and corrosion only in the exercise FAQ (\"In sets equipped with brushes, exercising helps prevent corrosion buildup on slip rings\"), not as a zero-output fault. No maker document carries \"corroded brush block or slip rings giving zero output\".",
+        "at": "2026-09-23"
       },
       {
         "id": "C24",
         "text": "\"neither appears in a manufacturer failure table we could find\"",
-        "source": "failed-search disclosure; cut",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "source": "none named; failed-search disclosure",
+        "state": "CONFIRMED",
+        "by": "CUT, 2026-09-24, under Ty's ruling (name the source or cut the sentence). Reading agent (subagent-1790231019104-16) searched the cited maker documents and found nothing carrying it. none",
+        "at": "2026-09-23"
       },
       {
         "id": "C25",
         "text": "the charger is \"listed as drawing up to 3,000 watts, or roughly 6 to 28 amps\" and \"the documentation notes that chargers come on automatically and can draw a large load\"; repeated ",
-        "source": "\"the documentation\", unnamed; numbers; name the document that lists it or the figures go",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "source": "Cummins Onan RV Generator Handbook, Common Power Requirements table, printed p.15 and Managing Electrical Loads, printed p.17",
+        "state": "READ",
+        "by": "Reading agent (subagent-1790231019104-16), 2026-09-24. \"BATTERY CHARGER Up to 3000 6-28\" and \"Battery chargers are activated automatically and can draw a large load (up to 3,000 watts).\"  NOTE: Table watts and amps match the page exactly; the \"comes on automatically\" wording matches \"activated automatically\".",
+        "at": "2026-09-23"
       },
       {
         "id": "C26",
@@ -1812,10 +1817,10 @@
       {
         "id": "C27",
         "text": "\"An air conditioner running draws 1,200 to 2,400 watts, and its start-up surge is three to four times that.\"",
-        "source": "numbers with no named document; the Cummins Onan handbook is the candidate carrier and must be read or the figures go",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "source": "Cummins Onan RV Generator Handbook, Common Power Requirements table, printed p.15 and Managing Electrical Loads, printed p.17",
+        "state": "READ",
+        "by": "Reading agent (subagent-1790231019104-16), 2026-09-24. \"AIR CONDITIONER 1200-2400 10-20\" and \"During startup, air conditioners need \"reserve\" power and can draw 3-4 times the typical 1,400-2,400 watts needed to run.\"  NOTE: The \"three to four times\" rule is carried on p.17. The same handbook's p.16 says \"can draw up to three times more power during the first few seconds of startup\", so the maker itself gives both \"up to three\" and \"3-4 times\".",
+        "at": "2026-09-23"
       },
       {
         "id": "C28",
@@ -1828,10 +1833,10 @@
       {
         "id": "C29",
         "text": "\"Manufacturer recommended generator sizes by RV type\": Class B one air conditioner 2,500 to 2,800 watts; Class C one 3,200 to 4,000; Class A two 15,000 BTU 5,500 to 8,000; Class A ",
-        "source": "\"Manufacturer\", unnamed, and six ranges; name the document carrying them",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "source": "Cummins, \"What size generator do I need to power an RV?\", cummins.com (2021-04-12)",
+        "state": "READ",
+        "by": "Reading agent (subagent-1790231019104-16), 2026-09-24. WRONG. \"Class B Van with one AC unit: 2,000 to 3,600 watts\" and \"Class C RV with one AC unit: 2,800 to 4,000 watts\" and \"Class A RV with two AC units (15,000 BTU each): 5,500 to 8,000 watts\" and \"Class A RV with three AC units (15,000 BTU each): 10,000 to 12,500 watts\" and \"Fifth wheel with two AC units: 5,500 to 7,000 watts\"  NOTE: Three of the five ranges match. Two are wrong: the page says Class B \"2,500 to 2,800\", but Cummins says 2,000 to 3,600 (2,500-2,800 is Cummins' \"good minimum threshold for 30-amp RVs that have AC units\", not the Class B range); the page says Class C \"3,200 to 4,000\", but Cummins says 2,800 to 4,000. This table is on the maker's web page, not in the handbook the page cites.",
+        "at": "2026-09-23"
       },
       {
         "id": "C30",
@@ -1852,74 +1857,74 @@
       {
         "id": "C32",
         "text": "\"The 12-volt DC outlet is not voltage or current regulated, so it will not properly charge RV batteries directly without an external charge controller. It is limited to a maximum o",
-        "source": "numbers with no document on the page; the portable generator maker (Honda EU2000i) is nameable but is not in Sources, so either add its manu",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "source": "Honda EU2000i Generator Owner's Manual, DC Receptacle and Specifications",
+        "state": "READ",
+        "by": "Reading agent (subagent-1790231019104-16), 2026-09-24. \"The DC charging output is not regulated.\" and \"Only for charging 12V automotive batteries.\" and \"Maximum charging output= 8A\"  NOTE: The manual carries the unregulated DC output and a maximum of 8A (about 96 watts at 12V). It does not state \"eight or ten amps\", \"usually nearer five\" or \"around 60 watts\", and it is not in the page's Sources.",
+        "at": "2026-09-23"
       },
       {
         "id": "C33",
         "text": "\"The same generator's 120 volt outlet, feeding your existing 40 or 80 amp charger through the shore cord, delivers somewhere between 1,000 and 1,600 watts.\"",
-        "source": "a number carried by the portable generator's own rating (Honda EU2000i, not in Sources); add the manual or drop the range",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "source": "Honda EU2000i Generator Owner's Manual, Specifications",
+        "state": "READ",
+        "by": "Reading agent (subagent-1790231019104-16), 2026-09-24. \"Rated output 1,600 VA\" and \"Maximum output 2,000 VA\"  NOTE: The maker rates the 120 volt outlet at 1,600 VA continuous (2,000 VA max). The 1,000 watt lower bound in the page's \"between 1,000 and 1,600 watts\" is not in the manual, and the manual is not in the page's Sources.",
+        "at": "2026-09-23"
       },
       {
         "id": "C34",
         "text": "\"an onboard generator's own DC circuit, which is typically a much smaller regulated output, and not the path used to charge the house bank.\"",
-        "source": "the Cummins Onan RV generator handbook (in Sources)",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "source": "Cummins Onan RV Generator Handbook (searched; claim not carried)",
+        "state": "CONFIRMED",
+        "by": "CUT, 2026-09-24, under Ty's ruling (name the source or cut the sentence). Reading agent (subagent-1790231019104-16) searched the cited maker documents and found nothing carrying it. The handbook does not describe an onboard generator DC circuit. Its FAQ says only \"Not directly. But a generator does provide power to operate your converter / charger, which charges batteries.\" The HDKAG service manual documents a belt-driven alternator that recharges the generator set starting battery, not the house bank.",
+        "at": "2026-09-23"
       },
       {
         "id": "C35",
         "text": "\"no manufacturer publishes repair pricing, so these are commercial sources and ranges.\"",
-        "source": "failed-search disclosure plus unnamed commercial sources; cut",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "source": "none named; failed-search disclosure plus unnamed commercial sources",
+        "state": "CONFIRMED",
+        "by": "CUT, 2026-09-24, under Ty's ruling (name the source or cut the sentence). Reading agent (subagent-1790231019104-16) searched the cited maker documents and found nothing carrying it. none",
+        "at": "2026-09-23"
       },
       {
         "id": "C36",
         "text": "\"A common 50 amp unit runs roughly $189 to $350, with heavier 100 amp units around $695 to $798.\"",
-        "source": "two dollar ranges with no document behind them",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "source": "none named; two dollar ranges with no document",
+        "state": "CONFIRMED",
+        "by": "CUT, 2026-09-24, under Ty's ruling (name the source or cut the sentence). Reading agent (subagent-1790231019104-16) searched the cited maker documents and found nothing carrying it. none",
+        "at": "2026-09-23"
       },
       {
         "id": "C37",
         "text": "\"We could not find an RV specific installed price from any attributable source, only part prices, so treat labour as an unknown and ask your shop for it directly.\"",
-        "source": "failed-search disclosure; cut",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "source": "none named; failed-search disclosure",
+        "state": "CONFIRMED",
+        "by": "CUT, 2026-09-24, under Ty's ruling (name the source or cut the sentence). Reading agent (subagent-1790231019104-16) searched the cited maker documents and found nothing carrying it. none",
+        "at": "2026-09-23"
       },
       {
         "id": "C38",
         "text": "\"Generator repair is where the money is, quoted broadly from $150 up to several thousand, with most owners spending somewhere between $350 and $900.\"",
-        "source": "dollar figures plus \"most owners\", unnamed",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "source": "none named; dollar figures plus \"most owners\"",
+        "state": "CONFIRMED",
+        "by": "CUT, 2026-09-24, under Ty's ruling (name the source or cut the sentence). Reading agent (subagent-1790231019104-16) searched the cited maker documents and found nothing carrying it. none",
+        "at": "2026-09-23"
       },
       {
         "id": "C39",
         "text": "\"A mobile service visit with oil, filter and plug runs around $280 to $350, and a full service suite closer to $485. Authorised generator service labour is quoted at roughly $175 t",
-        "source": "four dollar figures, unnamed",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "source": "none named; four dollar figures",
+        "state": "CONFIRMED",
+        "by": "CUT, 2026-09-24, under Ty's ruling (name the source or cut the sentence). Reading agent (subagent-1790231019104-16) searched the cited maker documents and found nothing carrying it. none",
+        "at": "2026-09-23"
       },
       {
         "id": "C40",
         "text": "\"A generator service visit and a transfer switch replacement are in the same broad price band.\"",
-        "source": "a ranking claim with no document",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "source": "none named; ranking claim with no document",
+        "state": "CONFIRMED",
+        "by": "CUT, 2026-09-24, under Ty's ruling (name the source or cut the sentence). Reading agent (subagent-1790231019104-16) searched the cited maker documents and found nothing carrying it. none",
+        "at": "2026-09-23"
       },
       {
         "id": "C41",
@@ -1932,10 +1937,10 @@
       {
         "id": "C42",
         "text": "FAQ2 and the FAQPage schema: \"the manufacturer's own troubleshooting guide tells you to check... the likely cause is a faulty transfer relay\"",
-        "source": "unnamed; the Cummins Onan RV generator handbook (in Sources)",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "source": "Cummins Onan RV Generator Handbook, Troubleshooting Guide, printed p.37",
+        "state": "READ",
+        "by": "Reading agent (subagent-1790231019104-16), 2026-09-24. \"Tripped circuit breaker. Reset the circuit breaker. Check at distribution panel and genset.\" and \"Automatic Transfer Switch failure. Possible issue with coach's Automatic Transfer Switch.\"  NOTE: Same finding as C11. The handbook calls it an \"Automatic Transfer Switch\", not a \"transfer relay\".",
+        "at": "2026-09-23"
       },
       {
         "id": "C43",
