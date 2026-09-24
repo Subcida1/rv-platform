@@ -350,3 +350,53 @@ system squeaks. Both are quoted, each against its own document.
 - **Read the paragraph back, not the pair, after every replacement.** Two pages lost a sentence to this in one
   night: a replacement that ends by restating the sentence already following it leaves the page saying one thing
   twice, and no instrument here catches it.
+
+## 13. The independent pass, 2026-09-24 (AI Studio lane, JOB-20260924-1418)
+
+**This lane was materially better than the one that reviewed the freeze page, and it caught a defect that would
+have shipped.** Every Part 1 claim came back CONFIRMED with the page of the manual quoted, and unlike the freeze
+round it made no false accusations. Two of its findings were real and both are fixed; one was a typo no
+instrument here could see.
+
+### The defect it found, and it was ours
+
+**The page generalised a SlimRack seating check onto the in-wall system, in a travel-safety sentence.** The old
+closing text said the maker's procedures *end by putting the motors back and confirming they are seated with no
+gap*, and the FAQ repeated it. That check is **CCD-0001459's** (rack and pinion): *"Make sure motor is properly
+seated with no gap between the mounting bracket and block."* **The in-wall manual has no such check**, and its
+disengagement procedure stops one step earlier than the job needs: *"Reinstall motor retention screw to hold motor
+in place or remove motor."* There is **no instruction anywhere in CCD-0001602** telling the reader to push the
+motor back down into its coupler once the room is in.
+
+**So an in-wall owner following the page would have left both motors disengaged and driven.** The page now
+separates the two systems, gives the no-gap check to the rack and pinion procedure where it belongs, and states
+the re-engagement step explicitly **as ours rather than the manual's**, which is what it is.
+
+### The second real finding: the room can move while you are still working
+
+**With both motors disengaged nothing holds the room, so on a coach that is not level it can travel under its own
+weight before the reader is ready for it.** The page said the room was held by nothing once the motors were out,
+which covers the state after the job and not the moment during it. **A blocking caution now sits before the push
+instruction.**
+
+### And the one-instrument-cannot-see-it class
+
+**The lane found the word *"towel-off"* on the live page**, where *"towable"* was meant. No gate here types prose:
+`verify.py` checks structure and banned strings, `house-style.py` checks headings and hyphenation, and neither
+looks for a word that is simply wrong. **A human-equivalent reader is the only thing that catches it, which is the
+argument for the lane existing at all.**
+
+### What it found that was already fixed, and why
+
+**Its two prevalence findings were against a superseded copy.** It quoted *"usually a power or interlock problem"*
+and *"a room that is crooked usually has..."* - both of which had already been rewritten hours earlier. **The
+cause is ours: the file was staged for the lane BEFORE the fixes were applied.** The lesson is mechanical and
+now permanent: **re-stage the prose after every edit, immediately before the job goes out**, or the lane reviews a
+page that no longer exists.
+
+### Also fixed from its reading
+
+Two diligence-shaped asides (*"Everything in it is published by the maker"*, *"without a gap being filled by
+invention"*) and two page self-references (*"the only thing on the page that cannot wait"*, *"the electrical half
+of this page"*). Both classes are already in the trap list; the lane's value here was finding them in prose I had
+written and read twice.
