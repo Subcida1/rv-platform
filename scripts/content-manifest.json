@@ -1303,7 +1303,281 @@
       "outbox/reply-20260922-2026-fixes-confirm-batch4.md"
     ],
     "invalidated_by": "house-style sweep 2026-09-23: 77 colon lowercases across 16 pages; heading text changed, meaning did not",
-    "invalidated_at": "2026-09-23"
+    "invalidated_at": "2026-09-23",
+    "claims": [
+      {
+        "id": "C1",
+        "text": "the test light method: pull the blown fuse and bridge its holder with an incandescent test light, dim means no short and bright means a short is present, then flex and wiggle the w",
+        "source": "the Volkswagen/Audi service bulletin (in Sources); the page also credits \"the trade press\", unnamed",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C2",
+        "text": "\"The bulb caps fault current at under about one amp, so nothing burns while you hunt\", carried in the body, the diagram, the FAQ and the schema",
+        "source": "the Volkswagen/Audi service bulletin (in Sources); no maker publishes a tracing method, so the figure must be found there or it has no docum",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C3",
+        "text": "voltage-drop method: meter on the millivolt DC range, probes on the two small test tabs on top of the fuse, do not pull the fuse, then convert millivolts to milliamps with a chart ",
+        "source": "the Volkswagen/Audi service bulletin (in Sources)",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C4",
+        "text": "clamp method: the clamp must be a DC Hall-effect type because many inexpensive clamps are AC only, clamp a single conductor because both directions cancel, and a series meter is ca",
+        "source": "the Volkswagen/Audi service bulletin (in Sources)",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C5",
+        "text": "\"disconnect the components from the circuit one by one, and if the values are now within the normal range, the component causing the excess draw has been identified\"",
+        "source": "the Volkswagen/Audi service bulletin (in Sources), quoted",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C6",
+        "text": "\"overcurrents below about 600 percent of rated current are termed an overload, while a short circuit is above that\" attributed to \"the protection industry\" and \"a fuse maker's own ",
+        "source": "OptiFuse, RV fuses explained (in Sources); the sentence does not name it",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C7",
+        "text": "a fuse lasts indefinitely only if it runs at no more than about 75 percent of its rating",
+        "source": "OptiFuse (in Sources); attributed to \"the manufacturers\"",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C8",
+        "text": "nuisance openings: an undersized conductor generates heat, the fuse sees that heat and opens before it should, and dirty or loose connections do the same",
+        "source": "OptiFuse (in Sources); attributed to \"Fuse manufacturers\" and \"the manufacturers\"",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C9",
+        "text": "Winnebago safety wording: fuses and circuit breakers must be replaced with those of the same size and amperage rating only, and a higher rated fuse or breaker must never be used",
+        "source": "the Winnebago 2024 Vita owner manual (in Sources)",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C10",
+        "text": "Winnebago stop condition: if a fuse is not the cause of the problem, the wiring system should be checked immediately by an authorised service centre",
+        "source": "the Winnebago 2024 Vita owner manual (in Sources)",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C11",
+        "text": "Tiffin's manuals use the same never-use-a-higher-rated-fuse wording",
+        "source": "a Tiffin owner manual, named in the sentence but absent from Sources",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C12",
+        "text": "Progressive Dynamics fire and shock warning: fuses should be replaced only with the same type and rating",
+        "source": "the Progressive Dynamics PD4500 owner's manual (in Sources)",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C13",
+        "text": "the practical stop list: a fuse that blows instantly on every replacement, repeated blows after testing obvious loads, heat or discolouration at the panel, water at a live fixture,",
+        "source": "our own compiled list, drawing on the makers' stop wording above, but it carries safety steps",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C14",
+        "text": "main-feed diagnostic: around 12 volts on both sides of a component means it is passing, and voltage on one side only means the open point is found",
+        "source": "our own method, the voltage-drop method the 12-volt hub uses",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C15",
+        "text": "Lippert's slide-out troubleshooting material lists defective wiring and instructs harness inspection and replacement, so a fuse that blows only when the slide moves points there",
+        "source": "the Lippert SlimRack slide-out manual (in Sources)",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C16",
+        "text": "the six short locations, ordered, with \"The most commonly reported cause\" first, presented as \"this ordering comes from technician and owner experience\"",
+        "source": "unnamed technician and owner experience; only the slide-out entry has a maker document",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C17",
+        "text": "\"a junction box under a slide holding standing water, with the circuit reading well below 12 volts and every light on it flickering\"",
+        "source": "\"field reports\", unnamed",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C18",
+        "text": "\"Field reports describe whole systems going dead this way, and insurers now sell pest cover for exactly this reason\"",
+        "source": "\"Field reports\" and \"insurers\", unnamed",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C19",
+        "text": "many RVs use a resettable or auto-resetting breaker on the battery feed, often near the A-frame or in a battery compartment, and \"Owners consistently report finding them by acciden",
+        "source": "\"Owners consistently report\", unnamed",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C20",
+        "text": "\"A fuse maker's own guidance notes that breakers reset after tripping\" and adds a caution that frequent tripping might indicate a deeper electrical issue needing professional atten",
+        "source": "OptiFuse (in Sources); the sentence does not name it",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C21",
+        "text": "\"Owners describe it exactly that way: the automatic breakers keep trying to reset themselves and in doing so keep sending power to the fault, over and over\" and \"An auto-resetting ",
+        "source": "\"Owners describe\", unnamed, and a number a reader might act on",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C22",
+        "text": "cost figures: diagnosis $95 to $185; shop and mobile labour $125 to $195 an hour with most technicians $135 to $165; mobile trip fee $75 to $150; repairing a short $200 to $1,200; ",
+        "source": "\"commercial service company estimate pages\", unnamed",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C23",
+        "text": "\"Four documented methods\" in the meta and schema and \"Four documented tracing methods\" in the schema",
+        "source": "the page's own count, checked against the four H3s; arithmetic, but \"documented\" is the overclaim in D4",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C24",
+        "text": "\"Last reviewed: Sep 21, 2026.\"",
+        "source": "provenance, fine print per Ty's ruling",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C25",
+        "text": "the blade-fuse image credit: A7N8X, Wikimedia Commons, CC BY-SA 3.0",
+        "source": "image provenance",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C26",
+        "text": "\"That one method finds most shorts.\"",
+        "source": "a prevalence claim with no source",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C27",
+        "text": "\"The most commonly reported cause\" of shorts is wire chafing, and \"Owners report whole bundles of circuits shorting this way\"",
+        "source": "prevalence plus unnamed owners",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C28",
+        "text": "FAQ: \"The most commonly reported places are...\" and \"Only the slide-out harness is documented by a manufacturer, so the rest comes from technician and owner experience rather than ",
+        "source": "prevalence, unnamed experience, and a failed-search note",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C29",
+        "text": "\"No, and every manufacturer says so explicitly.\"",
+        "source": "a universal claim; the body names Winnebago, Tiffin and Progressive Dynamics, not every maker",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C30",
+        "text": "the short versus overload versus old-fuse distinction, including that speed of failure separates them",
+        "source": "a definition, may stand",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C31",
+        "text": "the dead-short main-feed candidate list: the main breaker or fuse on the positive battery cable, the battery disconnect, and the frame ground",
+        "source": "our own definition of the path, may stand",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C32",
+        "text": "\"The fuse protects the wire, not the device on the end of it.\"",
+        "source": "an explanation, may stand",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C33",
+        "text": "\"Many panels light a small red LED next to the blown fuse\"",
+        "source": "an illustration; unsure whether a maker document carries it, so treat it as the page's own description",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C34",
+        "text": "\"What is manufacturer documented is named where it applies\"",
+        "source": "process narration about our sourcing, cut",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      }
+    ]
   },
   "guides/rv-generator-not-charging.html": {
     "hash": "9042cdb8d7537c93",
