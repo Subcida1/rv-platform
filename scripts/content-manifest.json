@@ -3752,9 +3752,9 @@
     ]
   },
   "guides/rv-towing-capacity.html": {
-    "hash": "c72a05ab135a1bcd",
+    "hash": "f4543f2a7458136e",
     "status": "verified",
-    "verified_by": "Cloud 2026-09-24, re-verify after the brake-paragraph change. The five state thresholds and the commercial scope of the federal rule were read from the codes themselves (California CVC 26303 and 26302, Washington RCW 46.37.340, Oregon ORS 815, Texas 547.401, Illinois 625 ILCS 5/12-301, 49 CFR 393.1 and 393.42(b)). A reader pass on the local Gemini cascade found four language-class violations, all fixed; one generalisation was kept with the judgement recorded in the spec. No stronger-model lane ran.",
+    "verified_by": "Cloud 2026-09-24, re-verify after the FMVSS 110 scope fix. The independent AI Studio pass (JOB-20260924-1439, recorded in _specs section 11) returned PUBLISHED-AS-IS with every claim confirmed, but it also produced three fabricated verbatim quotations (393.43(d) reworded, 393.42(b) cited as paragraph 1 when the 3,000 lb exception is (b)(3) and (b)(4), and CVC 26303 merged with 26304), all three checked against the sources and all three wrong, while the page was right. It then missed a real defect by confirming FMVSS 110 without checking its scope: the standard stops at 10,000 lb GVWR, so the placard sentence was false for a one-ton truck. That sentence now scopes the standard and says what applies above it.",
     "verified_at": "2026-09-24",
     "sources": [],
     "spec": "_specs/rv-towing-capacity.md",

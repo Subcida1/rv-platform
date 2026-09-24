@@ -221,3 +221,47 @@ of which ARE readable.
 reader could act on"? Twenty-eight claims times thirty pages is not a reading load anyone finishes.
 My recommendation: **read every claim carrying a number or a safety step** (the ones a reader acts
 on), and let definitions and illustrations stand without it.
+
+## 11. The independent pass after the brake-paragraph change, 2026-09-24 (AI Studio, JOB-20260924-1439)
+
+**Verdict from the lane: PUBLISHED-AS-IS, every claim confirmed, all six sentence classes `NONE FOUND`.** It went
+through the three state codes, the federal scope and both CFR sections, the JSA protocol figures, FMVSS 110, the
+NHTSA figure and the calculator's promises, and found nothing wrong. **The verdict is recorded, and it is not the
+whole result, because the pass produced three fabricated "verbatim" quotations and missed one real defect.**
+
+### The quotes it invented, each checked against the source
+
+1. **49 CFR 393.43(d).** The lane quoted it as *"Every full trailer and any semitrailer... shall be equipped with
+   brakes to apply automatically in case of breakaway from the towing vehicle and shall remain applied for at
+   least 15 minutes."* **The regulation reads:** *"Every trailer required to be equipped with brakes shall have
+   brakes which apply automatically and immediately upon breakaway from the towing vehicle. With the exception of
+   trailers having three or more axles, all brakes with which the trailer is required to be equipped must be
+   applied upon breakaway from the towing vehicle. The brakes must remain in the applied position for at least
+   15 minutes."* The page's wording matches the regulation. **The lane's quotation does not exist.**
+2. **49 CFR 393.42(b).** It cited the 3,000 pound exception as **paragraph (b)(1)**. **It is (b)(3) and (b)(4)**,
+   and (b)(1) is about driveaway-towaway operations. The substance is right, the citation is wrong.
+3. **California CVC 26303.** It presented one "verbatim" quotation that merges **26303** (the 1,500 pound
+   trailer-coach threshold) with **26304(a)** (the 15 minute breakaway retention). Two sections, one quotation
+   mark. **The page cites them separately and correctly.**
+
+**The page was right in all three places and the lane was wrong in all three.** That is now three passes running
+where a confident "verbatim" quote from this lane could not be found in the document it named.
+
+### The defect it confirmed past
+
+**It confirmed FMVSS 110 as the source of the load placard, which it is, and did not check the standard's scope.
+FMVSS 110 applies to vehicles of 10,000 pounds GVWR or less**, and FMVSS 120, which covers everything above that,
+imposes no equivalent placard mandate - only a rule about non-pneumatic spare tyre placards. **So the page's
+sentence, "required by FMVSS 110, which is why every truck sold here carries it in the same place", was false for
+exactly the truck a heavy fifth wheel owner drives.** That sentence now scopes the standard and says plainly that
+above 10,000 pounds the placard is the maker's own label.
+
+**The lesson, and it applies to every lane:** confirming that a standard exists is not confirming its scope. **Ask
+"what does this standard cover, and where does it stop?"** - the boundary is where the reader lives.
+
+### And the transport, three attempts deep
+
+The review was written three times before it reached disk: the first `write_file` was dropped as a duplicate, the
+second reply carried no tool-call marker at all, and the third landed. That is recorded in
+`claude-bridge/AUTOLOOP.md` as gotcha 13, with the rule that matters: **check for the file, never for the loop's
+state.**
