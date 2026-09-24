@@ -859,28 +859,29 @@ What ran instead, and what it is worth:
 
 **The credit wall is a standing risk to this programme**: every review, every reading lane and every fresh-context check runs through it. Worth knowing before the next content block is planned.
 
-### The one review still outstanding: the slide-out page
+### The independent passes: both done, both adjudicated (2026-09-24)
 
-**Its independent pass is queued and blocked on a browser, not on us.** The AI Studio job is written
-(`claude-bridge/inbox/REVIEW-REQUEST-20260924-1418-slideout-page.md`), copied into the durable directory queue
-(`queue/jobs/20260924-1418-SLIDEOUT-REVIEW.md`), and the loop will send it by itself the moment the AI Studio
-composer is empty. It is **not** in the consumed ledger, so it has not gone out.
+**No review is outstanding. All three pages that were published today have had an independent lane look at them,
+and each lane's findings were tested against the documents before anything was changed.** The three rounds came
+back with very different value, and the pattern is worth keeping:
 
-**What is blocking it:** the lane reports `busy — composer has text — refusing to touch it`, which is the loop
-declining to clobber text left in the composer by a previous send. Nothing on this side can clear a browser
-composer. **The unblock is one tap in the AI Studio tab**: if the box holds a request starting *"# REVIEW REQUEST
-— the slide-out page, its first independent pass"*, press Enter; if it holds anything else, clear it.
+| Page | Lane verdict | What it actually produced |
+|---|---|---|
+| freeze-damage triage | CORRECTIONS NEEDED | four claim groups confirmed; **two accusations both false** (the Suburban socket size, the PPI wording), proved wrong by fetching the documents; six invented "quotes"; **one real finding** about a split pump housing that is now on the page |
+| slide-out | CORRECTIONS NEEDED | every claim confirmed with page numbers, **no false accusations**, and **two real defects**: a SlimRack seating check generalised onto the in-wall system in a travel-safety sentence, and an unstated roll-away hazard; plus the word `towel-off` on a live page, which no gate here can see |
+| towing | PUBLISHED-AS-IS | every claim confirmed and **the verdict was wrong**: it confirmed FMVSS 110 without checking that the standard stops at 10,000 lb GVWR, so the placard sentence was false for a one-ton truck. It also invented three "verbatim" quotations that could not be fetched. |
 
-**What that page already has, so the gap is bounded:** every one of its eight citations was read first-hand while
-it was drafted (Lippert's four documents and BAL's three), and a free reader pass on the local cascade found four
-prevalence claims which are fixed. The missing piece is the independent lane, and note what the freeze page's
-pass was worth when it did run: four claim groups confirmed, **two confident accusations that were both wrong**,
-and one substantive finding that is now on the page. So this is worth finishing, and it is not worth blocking
-anything else on.
+**Three passes, six fabricated quotations between them, and exactly one page (the slide-out) where the lane was
+both clean and substantive.** A lane's verdict is a candidate list; the fetch is the finding.
 
-**The hardening that came out of that round is already in this job:** it must quote only sentences actually
-present in the file (the freeze job invented six), report `NONE FOUND` when a class is absent, and quote a
-document's own words and location before calling a claim contradicted.
+**The hardening that now travels with every job:** quote only sentences actually in the file, report `NONE FOUND`
+when a class is absent, quote a document's own words and location before calling a claim contradicted, and ask
+*what does this standard cover and where does it stop* rather than confirming that it exists.
+
+**Two process rules earned the hard way:** re-stage the prose immediately before a job goes out (the slide-out
+lane reviewed a copy that had already been superseded), and **check for the reply FILE, never for the loop's
+state** (the towing review took three attempts: one dropped write, one reply with no tool marker, one that
+landed).
 
 ### What is done, and where it is
 
