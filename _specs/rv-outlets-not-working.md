@@ -323,11 +323,65 @@ safety-restatement work (D5), the diligence qualifiers (D9), the four-place repe
 (D10), the two malformed schema questions and the diagram fit check (D11). None of them need a second pair of
 eyes.
 
-## 11. State at handoff
+## 11. State at handoff, 2026-09-24 06:45 UTC
 
-Placeholder. The drafter fills this once the page is written, in the shape the converter and fuse specs use:
-what is done and committed, the numbered items remaining before the first review round, and why the handoff
-happened where it did. A class sweep is a standing step after verification, per the converter spec's §13.
+**Done and committed (4816ecb, pushed).** This is the pass that closes the spec's numbered items, so the
+page goes to its first review round with nothing outstanding.
+
+**D3, the overclaim.** *"Exact"* is out of the meta description, the `og:description`, the
+`twitter:description` and the Article schema. It was also in the **lede**, which the spec did not list:
+*"Leviton publishes an exact list of why that button will sometimes refuse"* claims an exhaustiveness the
+body itself denies, so it went with the other four. That edit put the meta description at **138 characters,
+under the gate's 140 floor**; the sentence was lengthened to 149 rather than left to fail, which is the
+gate doing exactly what it is for.
+
+**D1, the unnamed authority, now closed.** Five *"the manufacturer"* shapes and one *"the maker's own
+literature"* name Leviton, and *"Manufacturers also document ... on at least one product line"* names
+Xantrex. **The two documents the page names but was not linking are now in Sources**: Leviton's *LED
+Indicator Light Diagnosis for GFCIs* (the chart that lists reversed line and load leads) and Leviton's
+AFCI/GFCI instruction sheet (the *"does not turn Green ... it must be replaced"* wording). Both URLs were
+fetched before being added: **200, `application/pdf`, and each carries the wording the page attributes to
+it.** Naming Xantrex in the body also clears the coverage checker's standing review prompt on this page.
+
+**D10.** The third lockout reason was a bold sentence, so the outline stopped at two. It is an H3 now, and
+the four copies (callout, body, FAQ, schema) agree; the schema copy is written by `sync-faq-schema.py`
+rather than by hand.
+
+**D6 and D9, the prevalence and ranking shapes the spec listed, all gone.** *"Almost always a tripped GFCI"*,
+*"the most common cause has a reset button"*, *"the most common genuine problems"*, *"a good share of dead
+outlet complaints"*, *"often a tripped breaker at the post, and it is somebody else's problem"*, *"the clue
+that sends people the wrong way"* (diagram), *"the most useful manufacturer documentation in this whole
+guide"*, and *"that is a manufacturer telling you not to keep trying"*.
+
+**Two deliberate keeps, with the reason, so the review does not have to re-litigate them.**
+
+1. *"A fault inside the wall is much rarer than any of those"* is a comparative statement of likelihood in
+   a diagnostic ordering, not a claim about what owners do. The ranking word the spec named is gone.
+2. *"If the maker's instruction is to replace it"* in the cost section refers generically to the reader's
+   own device, which need not be a Leviton. It carries no claim of its own.
+
+**Two spec items declined, with the reason recorded.**
+
+- **The structural note on the Sources heading** (*"the H3 Sources sits under the last H2 ... move it out or
+  promote it"*) is declined by convention, not left open. Every verified page carries the same
+  `<div class="card srcs"><h3>Sources</h3>` at the foot of the page; changing this one page would make it
+  the only page that differs.
+- **D2's condition** was *"keep the moisture fact only if it gets a named source."* The reading found no
+  maker that names moisture as a lockout cause, so the fact stays only in the shape it already has: as a
+  test to run (*"dry the outlet and try the reset again"*), which is advice rather than a sourced claim, and
+  the narration of our search is gone.
+
+**Instruments, all run before this was reported rather than after.** `verify.py` **ALL CHECKS PASSED**;
+`house-style.py` 0 findings; `check-diagram-fit.mjs` every label fits (the diagram line was shortened, so
+the margin improved); the class grep sweep returns none; and the whole diff was read back line by line for
+joined-sentence damage, which is the failure a deletion leaves behind and no reviewer checks for.
+
+**Left for verification, not for the drafter:** the reviewed line is updated to *Sep 23, 2026, against
+Leviton and Xantrex documentation*, and the class sweep is a standing step **after** verification per the
+converter spec's §13.
+
+**Why the handoff is here:** the page has nothing outstanding that a drafter can settle. What it needs next
+is the thing this page has not had yet, which is a full review round.
 
 ## 12. The reading, 2026-09-24 23:13 (safety first)
 
