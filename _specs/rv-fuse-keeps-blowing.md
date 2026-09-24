@@ -349,3 +349,38 @@ article); **that is not a rate card, so it does not meet the bar Ty set**, and t
 **Also recorded for the draft, from the spec's own defect list:** the meta description and the schema both say
 *"four documented methods"* while the body admits no manufacturer documents any of the four. That contradiction
 is in the two places a search engine reads first, and it is the page's worst single defect.
+
+## 12. State at handoff, 2026-09-24 05:52 UTC
+
+**Done and committed, in this order:**
+
+1. **The page's worst defect is fixed: the meta and schema promised what the body denied.** The meta description
+   and the Article schema both said *"four documented methods"* while the body says *"Only the slide-out harness
+   is documented by a manufacturer"*. Both now say four **methods** with no documentation claim, and the meta is
+   145 characters (was 159, against a 160 gate).
+2. **The failed-search disclosure beside that fact is cut**, and the sentence now carries the fact alone: *"Only
+   the slide-out harness is documented by a manufacturer. The rest of this page is the method a technician
+   uses, and it is marked as such where it appears."*
+3. **The inverted maker rule is fixed** (see the reading, §11): OptiFuse sizes a fuse at about 125 percent of
+   the continuous current, which is not the 75 percent ceiling the page had.
+4. **Three headings renamed**: *"Intermittent shorts, which are the worst kind"* to *"Intermittent shorts"*;
+   *"The rest of this cluster"* to *"Related guides"* (internal vocabulary); *"An honest caveat on all of it"*
+   to *"What is not published"*.
+5. **The figcaption's ranking shape is gone** (*"The method that saves the most time and the most fuses"* became
+   *"The test light in the fuse holder"*).
+6. **The cost section is down to relative ordering**: five dollar figures and the *"we could not find an
+   independent cost survey"* caveat are gone, and what remains is access-not-parts, the intermittent-fault
+   labour argument, and the rodent-harness case as the expensive end. The page now carries **no dollar figures
+   at all**, matching the settled convention and the other six pages.
+
+**What remains, and it is one job: the prose pass.** An audit run after the above leaves these instances, which
+need reading rather than a blind sweep, because some are legitimate:
+
+- unnamed authority: *"field reports"* (2), *"the trade press"* (1), *"owners report"* (1), *"most commonly"*
+  (3), *"no manufacturer"* (1) - each is either named to a real document or cut;
+- diligence qualifiers: *"honest"* (1), *"genuinely"* (2) - cut;
+- *"documented"* (4) - **these need reading, not cutting**: at least one is the legitimate maker-documented
+  slide-out harness fact, and the rest have to be judged one at a time.
+
+Then the review round, queued through the autoloop, and a class sweep after it - which is now a standing step
+after any verification.
