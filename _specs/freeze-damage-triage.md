@@ -323,3 +323,54 @@ first, because two of the three are printed by every other page in this category
 
 **Nothing here is a guess, and the claims list in section 7 carries each one with its document.** The page is NOT
 yet drafted as of this reading; the draft follows it.
+
+## 13. The independent pass, 2026-09-24 (AI Studio lane, JOB-20260924-1415, reply 9690 bytes)
+
+**The lane ran after publication, because the credit wall blocked it while the page was being built.** It was given
+the page and asked to open each cited document and say whether it says what the page claims. **Its result is
+recorded here in full, including the parts that were wrong**, because the value of a lane's output is decided by
+its false-positive rate and not by how confident it sounds.
+
+### What it confirmed, quoting the documents
+
+- **SHURflo 911-1008 Rev K**: the freeze-damage and warranty-void wording, `For seized or locked diaphragm
+  assembly (water frozen?)`, and `Pump housing for cracks or loose drive assembly screws`. All three hold.
+- **Norcold 628942A**: the 0 F ice maker caution and the sentence saying the water line heater does not protect the
+  run from the vehicle shut-off valve to the solenoid. Both hold.
+- **Suburban 206244**: the tank-must-be-filled imperative and the warranty exclusion for firing it dry. Holds.
+- **Jayco, KZ RV, Venture**: freeze damage excluded, and 32 F as the winterising trigger. Holds.
+
+### The two findings it was confidently wrong about, and the proof
+
+1. **It claimed the 1-1/16 inch socket is not in the Suburban manual** and that citing it as the manual's words is
+   "factually incorrect". **The manual says it**: *"5. Remove anode rod from tank. The anode rod is accessible at
+   the front of the water heater (using 1-1/16 socket)."* The wording the lane read past is split across the
+   manual's two-column layout, which is also why a grep for the phrase as one line returns nothing. **No change
+   was made.** This is the class this programme keeps meeting: a false accusation against a page that was right.
+2. **It claimed PPI TR-52 reads "CAUTION: PEX tubing systems..."** and that "piping" is an error introduced here.
+   **The fetched report reads `NOTICE: PEX piping systems should not be intentionally subjected to freezing.`**
+   and it contains no "CAUTION" line at all. The page quotes the copy it links. **No change was made.**
+
+**Both accusations were checked by fetching the document rather than by weighing the lane's confidence.** That is
+the rule this section exists to record.
+
+### The one finding that was worth having, and it is now on the page
+
+**The lane read the pump test as a risk it had not been told about: a pump whose housing or strainer has already
+split will spray the moment the pump is switched on, so the test itself can make a flood worse.** The page told the
+reader to run the pump and watch it, and the SHURflo document it already cites names the housing for cracks. **The
+instruction to look at the pump and its strainer before switching it on is now in the page**, above the test, with
+the reason stated. That finding was worth the round by itself.
+
+### And the part of the reply that was invented
+
+**Its "sentence classes" section quotes six sentences that are not on the page.** *"Our editorial team verified
+every cited manual specification..."*, *"Industry experts and manufacturers recommend..."*, *"The most common cause
+of spring flooding in travel trailers is usually..."*, *"We could not find any published guideline..."*, *"The table
+above outlines the exact torque and socket requirements..."* and *"Do not let the plumbing get overtaken by
+cold-lock..."* - **none of them exists in the page** (`grep` returns zero for each). The lane constructed
+illustrative examples of each class instead of finding instances, which is exactly what the job asked it not to do.
+
+**The lesson for the next job is in the request, not the lane:** it must be told to quote only sentences present in
+the file, and to report `NONE FOUND` for a class it cannot find. Without that instruction the section reads like
+findings and is worth nothing.

@@ -209,9 +209,9 @@
     ]
   },
   "guides/freeze-damage-triage.html": {
-    "hash": "a523750a9f17799d",
+    "hash": "bc568f22ef7bb773",
     "status": "verified",
-    "verified_by": "Cloud 2026-09-24. Deviation from the prescribed lane, recorded: the Letta account is at $0, so no stronger-model subagent could run. Instead every figure and safety claim was verified first-hand against the maker PDFs it cites (SHURflo 911-1008, Norcold 628942A, Suburban 206244, PPI TR-52, Jayco, KZ RV, Venture: one misquote found and fixed), and two independent reader passes ran on free lanes (Gemini 3.6 via the local cascade, DeepSeek via OpenRouter). Their findings were reconciled against the site's rules: the ones the rules support were applied, the rest rejected with reasons. No stronger-model pass has run on this page.",
+    "verified_by": "Cloud 2026-09-24, re-verify after the pump-inspection addition. The independent AI Studio lane ran after publication (JOB-20260924-1415, recorded in _specs section 13) and confirmed the SHURflo, Norcold, Suburban and coach-maker citations against the documents. Its two contradicted findings were both checked by fetching the documents and both are wrong: the Suburban manual does specify the 1-1/16 inch socket (split across its two-column layout) and PPI TR-52 reads 'piping', not 'tubing'. No change was made for either. Its one substantive finding, that a split pump housing or strainer sprays the moment the pump test starts, is now on the page above the test. Its six sentence-class quotations were invented and appear nowhere in the file; the next job request forbids that.",
     "verified_at": "2026-09-24",
     "sources": [],
     "spec": "_specs/freeze-damage-triage.md",
