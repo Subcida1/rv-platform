@@ -309,11 +309,59 @@ this the expensive way - its draft missed a decision the spec had already made, 
 review round and a sweep had both passed, and then only because a lane was asked for its working rather than its
 verdict. A five-minute grep of the page against the spec's own list catches that class before the draft starts.
 
-## 11. State at handoff
+## 11. State at handoff, 2026-09-24 08:00 UTC
 
-Placeholder. The drafter fills this once the page is written, in the shape the converter, fuse, outlet, generator
-and lights specs use: what is done and committed, the numbered items remaining before the first review round,
-and why the handoff happened where it did.
+**Done and committed: the draft pass, 35 exact pairs.** Every item in the spec's defect list is closed, and the
+page goes to its first review round with nothing outstanding.
+
+**The reading changed four claims rather than tidying them.** Victron's troubleshooting page, Victron's Wiring
+Unlimited, Go Power's GP-PWM-10 manual, Renogy's guide and Zamp's controller manuals were all opened, and:
+
+1. **The 16 to 23 volt and 2 to 9 amp controller-input range was found nowhere.** No document carries it. It is
+   **cut**, and Victron's documented rule replaces it: charging begins when the panel voltage is 5 volts above
+   the battery voltage and continues while it stays 1 volt above.
+2. **The 14.4 / 13.8 defaults and the 14.2 / 13.5 lithium profile were found nowhere.** Go Power's manual gives
+   14.4 volts bulk and absorption with 13.7 float for flooded and AGM, **and no lithium profile at all**, which
+   turns out to be a better paragraph than the one it replaced: the absence of a lithium setting *is* the
+   setting problem the page is about.
+3. **"In the manufacturer's words, it essentially decouples the array and battery voltages" and "a good low cost
+   solution for small systems only" are in no fetched document.** Both are the page's own explanation now, with
+   the maker's name off them.
+4. **The connection order was found, in three makers' manuals, and the page had deferred it to the reader
+   instead of stating it.** Renogy, Go Power and Zamp all state that the battery goes on the controller first
+   and the panel second. **The page now says so**, and adds the reverse for disconnection, which is the same
+   rule read backwards rather than a separately documented one. This is the correction that matters most: it is
+   the only instruction on the page that damages hardware when it is wrong.
+
+**Also corrected from the reading:** the broomstick claim now uses Go Power's own wording (*"may cause the power
+output to be reduced"*, not *"can cut its power"*), the equalisation and temperature-compensation rules are
+Victron's verbatim, the staging table is named as Victron's, and Zamp's AGM default and battery-damage warning
+are carried with Zamp named.
+
+**D1, the unnamed authority, closed.** Twelve attributions became names: Victron for the cause list, the wiring
+faults, the equalisation rule, the cold figure, the 2.5 percent and the 5 volt rule; Go Power for the shading
+line and the panel test; Zamp for the AGM default. **A second pass found three siblings the first missed** -
+*"Controller makers ship with a default profile"*, *"the manufacturers publish expected values for each"* and
+*"the manufacturer's own list of reasons charging stops"* - and then a third pass found three more in the FAQ
+answers and the "most common answer" ranking. **Four passes, because fixing one instance keeps leaving its
+siblings.**
+
+**D7, the coverage gap, reconciled in both directions.** Zamp is now in Sources (its controller manuals, with
+the AGM default and the battery-type warning); Renogy stays, because the connection order gives it something to
+carry; and the reviewed line names all four.
+
+**D3, the cost section.** All four figure families out and the ordering kept, so the page says a controller is a
+modest part and labour is hourly without pretending to a price list.
+
+**Instruments before this was reported:** `verify.py` **ALL CHECKS PASSED**; the FAQ schema is in sync;
+`house-style.py` 0 findings; `check-diagram-fit.mjs` **10 labels, all fit, tightest 17.1px** against a 6px
+floor; `check-spec-fragments.py` is down to **one** fragment, the word *"another"* inside the FAQ sentence
+*"Shading is another"*, which is ordinary English rather than an authority appeal; and the class greps return
+**zero** for unnamed-maker, prevalence and self-narration markers.
+
+**Why the handoff is here:** nothing needs another drafting pass, and the page has not had the thing every other
+page in this set has had - a full review round by a model that did not write it, then a confirm, then a class
+sweep with the raw HTML. **The page is not verified and should not be until all three have run.**
 
 **Two standing steps now apply to this page and did not exist when the set began:**
 
