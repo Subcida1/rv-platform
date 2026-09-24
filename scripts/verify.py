@@ -335,7 +335,12 @@ for p in pages:
     for b in blocks:
         try:
             d = json.loads(b)
-        except Exception:
+        except Exception as e:
+            # NOT a skip. An ld+json block that will not parse is broken markup that no
+            # search engine can read, and skipping it made the parity check silently pass
+            # on a page whose FAQ schema had just been corrupted by a bad rewrite
+            # (2026-09-23). Fail loudly instead.
+            bad.append("%s: ld+json block does not parse (%s)" % (p.relative_to(ROOT), str(e)[:60]))
             continue
         for node in (d if isinstance(d, list) else [d]):
             if isinstance(node, dict) and node.get("@type") == "FAQPage":

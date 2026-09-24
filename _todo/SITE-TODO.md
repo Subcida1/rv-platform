@@ -319,6 +319,8 @@ research is in `/home/user/Documents/research/manuals/`. Read those before touch
 python3 scripts/test-manuals.py                    rule assertions
 python3 scripts/build-manuals.py                   rebuild the shards
 python3 scripts/build-manuals.py --check           validate only, no writes
+python3 scripts/sync-faq-schema.py --check         is every FAQPage schema still in sync with its visible FAQ?
+python3 scripts/sync-faq-schema.py                 repair any page that is out of sync
 python3 scripts/verify.py                          the full gate, runs --check for you
 python3 scripts/audit-manuals.py --live            check every link over the network
 python3 scripts/audit-manuals.py --live --only Dometic    one brand
