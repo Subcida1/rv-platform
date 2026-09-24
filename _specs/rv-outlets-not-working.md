@@ -456,3 +456,38 @@ re-applied as exact pairs, and the page is intact at 34 KB with all gates green.
 
 **The lesson, and it is the same one as the anchor rules in a new form: never build a replacement out of a
 prefix slice.** A slice silently takes the tail; an old-to-new pair either matches or fails loudly.
+
+## 14. The full review round, 2026-09-24 06:50 (Claude Desktop, JOB-20260924-0645)
+
+**Verdict: NO, blocked by two findings, and both were real.** This was the page's first full review: argument
+and order of steps, contradictions, safety, promise against delivery, prose tics, structure. It confirmed the
+two blockers from the safety pass are fixed, and it came back clean on the order of the walk, on every repeated
+copy of the three lockout reasons, the amp ratings, the reset instruction and the diagram text, on the promise
+the title and lede make, and on structure.
+
+**Applied (three).**
+
+1. **The moisture step sent a reader into a wet electrical box with no power-off rule.** The page defines
+   *"the power is off"* once, at the top, and repeats the cross-reference at the line-and-load step; the
+   moisture paragraph below it did not. *"dry the outlet and try the reset again"* is now *"unplug the shore
+   cord at the pedestal first, as the safety note at the top says, then dry the outlet and try the reset
+   again."* Wet plus live is the worst combination the page describes, and it was the one step that asked for
+   it without saying so.
+2. **The tester paragraph described a wiring fault and then stopped.** It said what a plug-in tester reads and
+   never said what to do about a missing ground or reversed polarity, which are conditions a reader could
+   otherwise keep plugging appliances into. One sentence added: *"Any of those three readings is a wiring
+   fault rather than a supply fault, so stop using that outlet and have the wiring corrected before you plug
+   anything back in."*
+3. **A prose tic the body had already lost survived in the FAQ.** *"Yes, and this catches people out"* is the
+   same unnamed-people shape as the four that were cut from the body. It is now *"Yes. A tripped breaker often
+   does not look tripped, so you cannot tell by looking."*
+
+**Declined (one), with the reason recorded so it is not re-raised.** *"They share the word ground and
+nothing else"* was called a line written for effect. It is a distinction, not a flourish: the page is
+separating the 120 volt grounding and bonding system from the 12 volt chassis return, which is the single
+confusion that section exists to kill. The reviewer itself graded it a low-priority note rather than a real
+tic. Kept.
+
+**Also worth recording:** the review's finding 1 is a **safety gap introduced by the previous round's fix**.
+The safety pass told me to add the moisture caveat before the replace rule; I did, and the new paragraph
+carried no power-off rule. A repair that moves a step has to be re-read as a step, not as a sentence.
