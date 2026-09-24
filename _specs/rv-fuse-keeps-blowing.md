@@ -306,3 +306,46 @@ them need a second pair of eyes.
 Placeholder. The drafter fills this once the page is written, in the shape the converter and tank-sensor specs
 use: what is done and committed, the numbered items remaining before the first review round, and why the
 handoff happened where it did.
+
+## 11. The reading, 2026-09-24 21:03
+
+**25 claims read. 7 supported, 1 wrong, 17 with no source anywhere.** The supported seven are the page's spine
+and they are good: Volkswagen/Audi's own 12-volt short-tracing service bulletin (the voltage-drop method, the
+in-line ammeter method), Winnebago's Vita owner manual (electrical cautions, the driving section), Tiffin's
+2026 Open Trail manual, Progressive Dynamics' PD4500 manual (the DC panel section) and Lippert's SlimRack Plus
+slide-out manual.
+
+**THE ONE WRONG CLAIM, corrected:** the page said a fuse *"is only expected to last indefinitely if it runs at
+no more than about 75 percent of its rating."* OptiFuse states the opposite direction and a different number:
+for a load running three hours or more, *"target ~125% of continuous current so nuisance openings are
+minimized."* The page now carries the maker's own rule. **Same defect shape as the converter's bulk-charge
+trigger: a mechanism stated backwards.** Two pages, two of them, in one night.
+
+**The seventeen cuts are mostly rankings and folk procedure**, but six of them name a document carrying a
+NARROWER TRUE VERSION, and the draft should use the narrow version rather than delete the fact:
+
+- **C28** - the slide-out harness as "the most commonly reported location" is unsupported, but **Lippert
+  documents it as its one entry**, so the location can be stated on Lippert alone with no ranking.
+- **C27** - the protection advice is unsupported as a general claim, but **Winnebago's own installation drawing
+  000158603** instructs *"SECURE CONDUIT 41953, TAB AS REQUIRED, OVER ALL WIRES IN CONTACT WITH SHARP EDGES"*,
+  which is the same advice from a maker.
+- **C29** - *"every manufacturer says so explicitly"* is unsupported; **three named makers do say it**
+  (Winnebago, Tiffin, Progressive Dynamics). Name them.
+- **C18** - the second half is separately true and nameable on **Progressive Dynamics' own page** (damage from a
+  non-domed battery or similar), which the drafter should read and use if the sentence survives.
+- **C1/C2** - the test-light method and the one-amp figure are carried by a **named trade publication**
+  (RVelectricity, "Finding 12-Volt DC Short Circuits"). Nameable, and a judgment call for the drafter: a named
+  publication clears the letter of Ty's ruling, and it is weaker evidence than a maker document, so it gets
+  named in the sentence and not in the Sources list as a maker.
+- **C20** - OptiFuse carries the automatic-reset half; the caution clause is Winnebago's.
+
+**Cut outright, with no narrower version available:** C4 (Hall-effect versus AC-only clamps), C6, C8, C16, C17,
+C19, C21, C22 (all five cost figures), C26, C34 (which also carries a markdown asterisk that does not render).
+
+**Cost section:** per the settled convention, the five dollar figures go and the section keeps relative
+ordering. The reading did find a nameable commercial page carrying two of them (A1 RV Repair's 2026 cost
+article); **that is not a rate card, so it does not meet the bar Ty set**, and the figures stay cut.
+
+**Also recorded for the draft, from the spec's own defect list:** the meta description and the schema both say
+*"four documented methods"* while the body admits no manufacturer documents any of the four. That contradiction
+is in the two places a search engine reads first, and it is the page's worst single defect.
