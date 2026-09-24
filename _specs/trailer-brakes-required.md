@@ -342,3 +342,40 @@ Washington RCW 46.37.340(4) (*remain applied for at least fifteen minutes*, for 
 
 **Nothing here is a guess. The claims list in section 7 carries each one with its document and section number, and
 the table in section 3 is built only from sections actually read.** The page is not yet drafted as of this reading.
+
+### The citations pass, 2026-09-24 (AI Studio, JOB-20260924-1622) — and the finding that could not be settled
+
+**Verdict: CORRECTIONS NEEDED.** Eight of its twelve checks came back CONFIRMED with the text quoted, matching
+this spec's own reading, including the two details that were wrong on the page's predecessor: the CFR paragraph
+numbers (the 3,000 pound exception is (b)(3) and (b)(4), not (b)(1)) and the .030 inch clearance belonging to
+Dexter's air brake manual rather than its electric one.
+
+**Its one substantive finding, and why the page changed for a different reason than it asked.**
+
+The lane quoted **Texas Transportation Code 547.402(c)** as explicitly authorising surge brakes, *"A trailer or
+semitrailer that has a gross weight of 15,000 pounds or less may use surge or inertia brake systems to satisfy the
+requirements of Subsection (a)"*, which would make this page's absence claim false.
+
+**Texas cannot be read from this machine at all.** `statutes.capitol.texas.gov` has been rebuilt as a JavaScript
+single-page application: both the section URL and the chapter URL return an app shell, and the fetched file is
+181KB of script with no statute text in it, no `brakes`, no section numbers. **My first check counted zero
+occurrences of "surge" in that file and I nearly reported it as evidence** - a negative measured with the wrong
+instrument, which is the third time in one day. `www.statutes.legis.texas.gov` does not resolve and Justia returns
+403.
+
+**So neither the lane's quotation nor the page's absence claim can be settled here**, and the page took the route
+already used for Illinois: **Texas came out rather than being cited unverified.** The table is California, Oregon
+and Washington, each read from its own code, the surge paragraph's absence claim covers exactly those three, and
+the 4,500 pound row, the FAQ mention, the callout's range and the source link all went with it. **A later session
+with a working source can settle Texas in one fetch**; until then the page does not speak for a code nobody here
+has read.
+
+### The other five, all ours
+
+- **"One maker's own installation sheet"** was unnamed authority. It names CURT now.
+- **"Electric drum brakes are what most travel trailers and fifth wheels carry"** was a prevalence claim, and the
+  replacement is stronger: they are the type a controller drives directly.
+- **"The number most owners do not have to hand"** was prevalence about owners.
+- **"Each threshold below"** was page self-reference.
+- The lane's Oregon figure (a 40 foot stop from 20 mph) **was not adopted**: this spec's own reading found 25 and
+  35 feet, so neither number goes in the page until one of them is read again.
