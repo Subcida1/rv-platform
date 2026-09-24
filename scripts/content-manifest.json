@@ -1304,18 +1304,16 @@
     ]
   },
   "guides/rv-fuse-keeps-blowing.html": {
-    "hash": "8f951bcb75bc2437",
+    "hash": "dc38b5cd5df6f43b",
     "status": "verified",
-    "verified_by": "Gemini autoloop lane for the review rounds of 2026-09-24 (argument review JOB-0605 found the series-meter safety instruction, the voltage-drop method's scope, the missing ordering step and the clamp-method dead end; confirm JOB-0612 returned Confirmed: YES on all four). Claude then confirmed the post-sweep clause fix (JOB-20260924-0632): 'this page builds on' is gone, the sentence reads correctly, and the deletion left nothing broken. Note for the record: the class sweep for this page was reported as zero instances by the loop but a local pattern audit found one, and the loop dropped a job's calls twice tonight - both recorded in the spec.",
-    "verified_at": "2026-09-23",
+    "verified_by": "AI Studio lane, two rounds on 2026-09-24. A new checker found seven fragments this spec's own D1 and D5 had ordered cut and which were still on a verified, reviewed, confirmed and class-swept page: an unnamed fuse maker's guidance twice, unnamed manufacturers twice, unnamed owners, a ranking about our own method, and a universal claim about every maker, whose named citation followed immediately. Its class sweep had reported zero instances the night it ran, the same failure the spec already records once. All seven fixed, and two were found only after the first instance of the same phrase was fixed and the checker re-run, which is the sibling pattern for the third time in one night. Confirm round JOB-20260924-0900 returned PART 2: CONFIRMED on all seven. That confirm own quoting then exposed a defect introduced by the fix: the replacement sentence defined the overload and short distinction while the sentence after it defined overload again, so the paragraph said the same thing twice. Cut, and the one-item confirm JOB-20260924-0905 returned PART 1: CONFIRMED, reading the subsection against the two beside it. The six hundred percent figure went with the attribution rather than being restated as ours, because the paragraph defines both terms in the next sentence.",
+    "verified_at": "2026-09-24",
     "sources": [
-      "Volkswagen/Audi service bulletin on excess current draw",
-      " Winnebago 2024 Vita owner manual",
-      " Tiffin 2026 Open Trail owner manual",
-      " Progressive Dynamics PD4500 manual",
-      " Lippert SlimRack Plus manual",
-      " OptiFuse RV fuses explained",
-      " RVelectricity on finding 12-volt shorts"
+      "Winnebago 2024 Vita owner manual",
+      "OptiFuse RV fuses explained",
+      "Volkswagen Audi service bulletin on excess current draw",
+      "Progressive Dynamics PD4500 series owner manual",
+      "Lippert SlimRack slide-out service manual"
     ],
     "spec": "_specs/rv-fuse-keeps-blowing.md",
     "spec_waived": false,
