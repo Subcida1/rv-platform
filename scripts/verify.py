@@ -361,6 +361,71 @@ if bad:
 else:
     print("  %d guides, every one named in the index's ItemList, and the count agrees" % len(catalogue))
 
+print("\n=== every photograph is either credited or recorded ===")
+# Nothing checked this until 2026-09-24. The site was honest already - nine third-party
+# photographs carried a credit and a licence link in their captions, the footer carried the
+# modification note, and the state tile photographs are CC0 with provenance written to
+# assets/img/states/CREDITS.md - but a photograph added without any of that would have shipped
+# unchallenged, and a licence forbidding commercial use would have shipped with it.
+#
+# Three categories, because the site genuinely has three, and the rule follows the mechanism
+# each one already uses:
+#   1. the site's own photograph, named explicitly, because "no credit line" is deliberate for it
+#   2. a third-party photograph whose licence requires attribution: figure caption carries a
+#      credit and a licence link
+#   3. a third-party photograph whose licence does not require attribution: its provenance is
+#      recorded in a CREDITS.md beside the file, which is how the state tiles do it
+OWN_PHOTOS = {"rv-trailer-at-night.jpg"}
+CREDIT_MARKER = re.compile(r"\bcredit\b", re.I)
+LICENCE_LINK = re.compile(r"creativecommons\.org|publicdomain|/licen[cs]es?/|unsplash|pexels", re.I)
+UNUSABLE = re.compile(r"by-nc|by-nd|noncommercial|noderiv", re.I)
+
+recorded = {}          # image stem -> the CREDITS.md that records it
+for credits in sorted(ROOT.glob("assets/img/**/CREDITS.md")):
+    body = credits.read_text(encoding="utf-8")
+    for m in UNUSABLE.finditer(body):
+        (recorded.setdefault("__bad__", [])).append("%s names '%s'"
+                                                    % (credits.relative_to(ROOT), m.group(0)))
+    for stem in re.findall(r"^##\s+(.+)$", body, re.M):
+        recorded[stem.strip().lower()] = credits.relative_to(ROOT)
+
+bad = list(recorded.pop("__bad__", []))
+for p in pages:
+    txt = strip_bodies(p.read_text(encoding="utf-8"))
+    for m in re.finditer(r'<img\b[^>]*src="(assets/img/[^"]+)"', txt):
+        name = m.group(1).split("/")[-1].split("?")[0]
+        if name in OWN_PHOTOS:
+            continue
+        fig = txt.rfind("<figure", 0, m.start())
+        end_fig = txt.find("</figure>", fig) if fig != -1 else -1
+        in_figure = fig != -1 and end_fig > m.start()
+        cap = ""
+        if in_figure:
+            blk = txt[fig:end_fig]
+            c = re.search(r"<figcaption\b[^>]*>(.*?)</figcaption>", blk, re.S)
+            cap = c.group(1) if c else ""
+        if cap and CREDIT_MARKER.search(cap) and LICENCE_LINK.search(cap):
+            continue                                    # category 2
+        stem = re.sub(r"-\d+$", "", name.rsplit(".", 1)[0]).lower()
+        if stem in recorded:
+            continue                                    # category 3
+        where = "in a figure with no credit in its caption" if in_figure else "outside any figure"
+        bad.append("%s: %s is uncredited, %s, and no CREDITS.md records it"
+                   % (p.relative_to(ROOT), name, where))
+    # A licence that forbids commercial use is not fixed by crediting it properly. The first
+    # version of this check missed that, and the negative test caught the miss: a caption whose
+    # link was rewritten to by-nc passed, because the unusable-licence scan only looked at
+    # CREDITS.md files. So the page's own text is scanned too.
+    for m in UNUSABLE.finditer(txt):
+        bad.append("%s: names the licence '%s', which is not usable on a commercial site"
+                   % (p.relative_to(ROOT), m.group(0)))
+if bad:
+    for b in bad[:12]:
+        print("  " + b)
+    fails.append("photo credits")
+else:
+    print("  every third-party photograph is credited in its caption or recorded in a CREDITS.md")
+
 print("\n=== FAQ schema matches the visible FAQ word for word ===")
 # Google requires FAQPage markup to match the text a reader can see. Scripts now edit page
 # text in bulk (normalize-house-style.py hyphenates "12 volt" across the whole file, including
