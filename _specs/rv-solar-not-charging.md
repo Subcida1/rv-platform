@@ -363,6 +363,65 @@ floor; `check-spec-fragments.py` is down to **one** fragment, the word *"another
 page in this set has had - a full review round by a model that did not write it, then a confirm, then a class
 sweep with the raw HTML. **The page is not verified and should not be until all three have run.**
 
+## 12. The full review round, 2026-09-24 09:10 (AI Studio lane, JOB-20260924-0910)
+
+**Verdict: NO, blocked by four findings, and two of them were safety problems the page had created rather than
+inherited.** Nine findings came back, and the reviewer went at the electrical practice rather than the prose.
+
+**Applied (eight).**
+
+1. **Short-circuit current was being measured by shorting the panel through a multimeter.** That is how meter
+   fuses blow and fingers get burned: a panel in sun draws an arc when the short is broken, and most meters are
+   fused at 10 amps, which a larger array exceeds. The panel test now leads with open circuit voltage, states the
+   metre limit, and names a DC clamp meter as the way to read current.
+2. **The panels were not covered before being disconnected.** A panel in sunlight is a live source that cannot be
+   switched off, and the page told a reader to take the array apart with no instruction to cover it. It now says
+   to cover the panels with a blanket or cardboard first, and it states what the wrong connection order actually
+   costs: a controller connected to a panel with no battery on it has nowhere to put the current, and a unit that
+   senses system voltage automatically can be left set for the wrong one.
+3. **The 5 volt rule was presented as universal when it is Victron's own MPPT behaviour.** On a PWM controller
+   charging begins as soon as the panel is above the battery at all, so the old sentence would have had PWM
+   owners diagnosing working equipment on an overcast day. The rule is now scoped to Victron's MPPT chargers, and
+   the PWM case is stated beside it.
+4. **The chemistry mechanism was backwards, and it was backwards in three places** - the original paragraph, the
+   one this draft had just written, and a FAQ answer. *"A lead-acid profile will undercharge a lithium bank"* is
+   wrong: **14.4 volts is a sane absorption figure for lithium.** The real risk is that a lead-acid profile
+   applies **equalisation and temperature compensation**, which lithium must not see, so **the battery shuts the
+   charge down to protect itself** - and that is what makes it look like a failing panel. The corrected
+   mechanism is also the one the page's own chemistry section already carries from Victron.
+5. **The diagnostic order ran invasive-first, and that was a real flaw.** Measurement one told a reader to
+   disconnect the array before checking whether power was even reaching the controller, and Measurement two then
+   needed those wires back on. The section now runs **non-invasive first**: what the controller is receiving,
+   then what it is sending, then - only if the input was missing - the panel on its own. **This is a deliberate
+   deviation from §6's heading tree**, recorded here rather than left implicit: the three headings are renamed
+   (*What the controller is receiving*, *What the controller is sending*, *The panel, isolated*) and the spine is
+   the same three readings along the same path.
+6. The self-reference in *"the manual this page cites"* is gone.
+7. **Temperatures now carry Fahrenheit**, and the physical threshold is distinguished from the safety one:
+   Victron's 5 degrees Celsius is 41 Fahrenheit, and below freezing, 32 Fahrenheit, charging does real damage.
+8. The prose tics: the lede's *"easiest system on the RV"* superlative, the caption's *"the first thing worth
+   checking"*, *"rather than leaving you to guess"*, *"Translated into the order worth checking"*, *"cheaper
+   again"* and *"no amount of panel will fix it"*.
+
+**Declined (one), with the reason recorded.** The causes section was flagged as duplicating the two non-faults
+from the opening. It does, and **that is Victron's own structure**: its ranked list begins with *"The battery is
+fully charged"*, and the section's heading now promises *"in Victron's order"*. Removing the first entry would
+break the faithfulness the heading claims, so the repetition stays and is kept short.
+
+**And a defect I introduced, for the second time tonight.** My replacement for the chemistry paragraph ended
+*"it is a setting rather than a fault"* while the sentence already following it said *"This is a setting, not a
+fault"*. Same class as the fuse page's duplicated overload definition, found the same way: **by reading the
+paragraph back rather than the pair.** `duplicate-passages.py` does not catch this, because it finds repeated
+passages rather than two adjacent sentences saying one thing. **The guard is the read-back, and the class has now
+happened twice in one night, which makes it worth a small checker of its own: flag any paragraph whose adjacent
+sentences overlap heavily in content words.**
+
+**Instruments before this was reported:** `verify.py` ALL CHECKS PASSED, FAQ schema in sync, `house-style.py` 0
+findings, both diagrams fit, the spec-fragment checker down to its one accepted false positive, and the class
+greps at zero.
+
+**Next:** the confirm round, then the class sweep with the raw HTML.
+
 **Two standing steps now apply to this page and did not exist when the set began:**
 
 - `python3 scripts/check-spec-fragments.py --page guides/rv-solar-not-charging.html` **after every editing pass**.
