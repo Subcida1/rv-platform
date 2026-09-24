@@ -388,7 +388,7 @@
     ]
   },
   "guides/index.html": {
-    "hash": "73b4bba0bae9bbd4",
+    "hash": "871584dc623cdccd",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -2943,6 +2943,13 @@
       }
     ]
   },
+  "guides/rv-roof-leak-repair.html": {
+    "hash": "02ba795896f3d290",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
+  },
   "guides/rv-slide-out-not-working.html": {
     "hash": "ccd19b3ba571eb3d",
     "status": "verified",
@@ -4369,7 +4376,7 @@
     ]
   },
   "guides/trailer-brakes-required.html": {
-    "hash": "116db6cef0e5143e",
+    "hash": "1d0a5c49b0214317",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -4685,7 +4692,7 @@
     ]
   },
   "index.html": {
-    "hash": "222ca1278962e40b",
+    "hash": "1fa97f88ffdd476e",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
