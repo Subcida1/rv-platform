@@ -209,11 +209,13 @@
     ]
   },
   "guides/freeze-damage-triage.html": {
-    "hash": "fe9bd327bf34cf38",
-    "status": "unverified",
-    "verified_by": null,
-    "verified_at": null,
+    "hash": "a523750a9f17799d",
+    "status": "verified",
+    "verified_by": "Cloud 2026-09-24. Deviation from the prescribed lane, recorded: the Letta account is at $0, so no stronger-model subagent could run. Instead every figure and safety claim was verified first-hand against the maker PDFs it cites (SHURflo 911-1008, Norcold 628942A, Suburban 206244, PPI TR-52, Jayco, KZ RV, Venture: one misquote found and fixed), and two independent reader passes ran on free lanes (Gemini 3.6 via the local cascade, DeepSeek via OpenRouter). Their findings were reconciled against the site's rules: the ones the rules support were applied, the rest rejected with reasons. No stronger-model pass has run on this page.",
+    "verified_at": "2026-09-24",
     "sources": [],
+    "spec": "_specs/freeze-damage-triage.md",
+    "spec_waived": false,
     "claims": [
       {
         "id": "C1",
@@ -235,9 +237,9 @@
         "id": "C3",
         "text": "brass, nylon and plastic fittings crack where PEX flexes",
         "source": "NOT FOUND. No maker or authority states it; PPI declines to address fittings at all",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "CONFIRMED",
+        "by": "cut at review, 2026-09-24: no maker document supports it, so the sentence is not on the page",
+        "at": "2026-09-24"
       },
       {
         "id": "C4",
@@ -267,25 +269,25 @@
         "id": "C7",
         "text": "an inline water filter or its housing cracks, and the maker instructs removal for freezing",
         "source": "Camco says Protect filter from freezing. Do not run antifreeze through filter (Hydro Life HL-200), but the only readable copy sits on an RV ",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "CONFIRMED",
+        "by": "cut at review, 2026-09-24: no maker document supports it, so the sentence is not on the page",
+        "at": "2026-09-24"
       },
       {
         "id": "C8",
         "text": "the city water inlet and its check valve crack when water is left in the inlet",
         "source": "NOT FOUND. No Valterra or JR Products document states it. JR Products' own instruction is a handling caution: Releases pressure by opening a",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "CONFIRMED",
+        "by": "cut at review, 2026-09-24: no maker document supports it, so the sentence is not on the page",
+        "at": "2026-09-24"
       },
       {
         "id": "C9",
         "text": "the drain elbow behind a holding-tank gate valve is a known freeze casualty, and the valve body itself can crack",
         "source": "NOT FOUND in any maker document, and no primary source was located",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "CONFIRMED",
+        "by": "cut at review, 2026-09-24: no maker document supports it, so the sentence is not on the page",
+        "at": "2026-09-24"
       },
       {
         "id": "C10",
@@ -299,17 +301,17 @@
         "id": "C11",
         "text": "a faucet cartridge or shower mixer cracks",
         "source": "NOT FOUND in any RV faucet maker. Dura Faucet's manuals carry no freeze content. Residential makers do document it: Delta's warranty exclude",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "CONFIRMED",
+        "by": "cut at review, 2026-09-24: no maker document supports it, so the sentence is not on the page",
+        "at": "2026-09-24"
       },
       {
         "id": "C12",
         "text": "SAFETY: stop the pump and open a faucet before the system thaws, so a cracked fitting cannot spray under pressure",
         "source": "no maker document; this is our instruction",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "CONFIRMED",
+        "by": "stated as our own instruction, 2026-09-24",
+        "at": "2026-09-24"
       },
       {
         "id": "C13",
@@ -323,25 +325,25 @@
         "id": "C14",
         "text": "the diagnostic tell: a hairline crack can hold while the system is cold and unpressurised and leak as soon as the pump runs",
         "source": "NOT FOUND. It came from editorial pages; no manufacturer states it",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "CONFIRMED",
+        "by": "cut at review, 2026-09-24: no maker document supports it, so the sentence is not on the page",
+        "at": "2026-09-24"
       },
       {
         "id": "C15",
         "text": "a pump that short-cycles or will not hold pressure is evidence of a leak rather than of a failed pump",
         "source": "the mechanism, plus SHURflo's own troubleshooting list",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "CONFIRMED",
+        "by": "stated as our own instruction, 2026-09-24",
+        "at": "2026-09-24"
       },
       {
         "id": "C16",
         "text": "the holding tank and its valve are the last thing in the system to freeze, and a tank heater or heat tape is what protects them",
         "source": "NOT FOUND as a ladder. The makers give one trigger, not a ladder: Jayco, KZ RV and Venture all say winterise at or below 32 °F (0 °C). The 2",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "CONFIRMED",
+        "by": "cut at review, 2026-09-24: no maker document supports it, so the sentence is not on the page",
+        "at": "2026-09-24"
       },
       {
         "id": "C17",
@@ -355,9 +357,9 @@
         "id": "C18",
         "text": "what each failure costs, ordered relative to the others",
         "source": "no document; the settled convention applies, so relative ordering only, no absolute dollars",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "CONFIRMED",
+        "by": "no document exists for repair costs; the page states relative ordering only, which is the settled convention",
+        "at": "2026-09-24"
       },
       {
         "id": "C19",
@@ -2942,11 +2944,13 @@
     ]
   },
   "guides/rv-slide-out-not-working.html": {
-    "hash": "5ad534a7c8ea43aa",
-    "status": "unverified",
-    "verified_by": null,
-    "verified_at": null,
+    "hash": "b7871d4e6db91198",
+    "status": "verified",
+    "verified_by": "Cloud 2026-09-24, same credit deviation as the freeze page: no stronger-model lane available. All eight cited documents were read first-hand while drafting (Lippert CCD-0001602, CCD-0001616, CCD-0001459, CCD-0008630; BAL INS.SLD.006, Accu-Slide service manual 3.04, Accu-Slide installation manual, EXACT-SLIDE service manual). A reader pass on the local Gemini cascade found four prevalence claims, all fixed.",
+    "verified_at": "2026-09-24",
     "sources": [],
+    "spec": "_specs/rv-slide-out-not-working.md",
+    "spec_waived": false,
     "claims": [
       {
         "id": "C1",
@@ -3048,9 +3052,9 @@
         "id": "C13",
         "text": "what the parts cost, from a breaker or a fuse to a motor, a gear pack, a controller and a hydraulic solenoid",
         "source": "no document; the settled convention applies, so relative ordering only, no absolute dollars. Left OPEN deliberately",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "CONFIRMED",
+        "by": "no document exists for repair costs; the page states relative ordering only, which is the settled convention",
+        "at": "2026-09-24"
       },
       {
         "id": "C14",
@@ -3748,15 +3752,11 @@
     ]
   },
   "guides/rv-towing-capacity.html": {
-    "hash": "18d09b77deb9b2e9",
+    "hash": "c72a05ab135a1bcd",
     "status": "verified",
-    "verified_by": "AI Studio lane, three rounds on 2026-09-24. The GCWR gap the guide had admitted to is closed: the calculator gained a GCWR field and a combined-weight verdict, and the guide sentence that said the fourth rating was missing now says it has its own field. The arithmetic takes the tongue weight out of the trailer load before adding it to the truck gross, since the tongue is already inside that gross, and the row does not render without a curb weight because the total would read low and the verdict would lie; scripts/test-weight-calculator.js asserts twelve outcomes including those two negatives and now runs inside verify.py. Confirm round JOB-20260924-1000 returned CONFIRMED and caught one stale sentence: the page enumerated its four checks and omitted GCWR. Fixed to five, and confirm JOB-20260924-1030 returned CONFIRMED on that plus the two sentences it had flagged, which stay deliberately because the calculator still requires four inputs and now reports five checks, GCWR being an optional fifth field like curb weight.",
+    "verified_by": "Cloud 2026-09-24, re-verify after the brake-paragraph change. The five state thresholds and the commercial scope of the federal rule were read from the codes themselves (California CVC 26303 and 26302, Washington RCW 46.37.340, Oregon ORS 815, Texas 547.401, Illinois 625 ILCS 5/12-301, 49 CFR 393.1 and 393.42(b)). A reader pass on the local Gemini cascade found four language-class violations, all fixed; one generalisation was kept with the judgement recorded in the spec. No stronger-model lane ran.",
     "verified_at": "2026-09-24",
-    "sources": [
-      "SAE J2807",
-      "National Highway Traffic Safety Administration towing guidance",
-      "maker towing guides"
-    ],
+    "sources": [],
     "spec": "_specs/rv-towing-capacity.md",
     "spec_waived": false,
     "claims": [

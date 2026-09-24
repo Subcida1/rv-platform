@@ -260,6 +260,12 @@ reading both done - the November to December window is the reason it is first) a
   loader returns 200, the `g/collect` beacon returns 204 with the right `tid`, and Ty
   saw himself as an active user in Realtime. Cloudflare Web Analytics is still there
   and still only counts pageviews and referrers.
+  **The four custom events are shipped, not missing — verified on disk 2026-09-24.**
+  `assets/js/site.js` fires `faq_open`, `outbound_click` and `site_search` carrying a
+  `fell_through` flag, and `assets/js/search.js` fires `search` with the term. **The
+  2026-09-22 demand research still says "zero custom events anywhere in the site", and
+  that line is stale** — it was written hours before the same evening's change
+  (`20260922T2125-8dc0` in `_log/CHANGELOG.md`). Do not re-raise the events as a gap.
 - **Claim form endpoint — confirmed alive 2026-09-22.** The Worker URL is already set
   in `assets/js/config.js`. A GET returns 405 and an empty POST returns 400, which is
   what a working POST-only endpoint returns. Re-check if a claim ever silently fails.
