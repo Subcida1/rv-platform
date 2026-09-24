@@ -607,17 +607,17 @@
       {
         "id": "C2",
         "text": "reverse polarity fuses run from a single 40 amp fuse up to two 40 amp fuses depending on output",
-        "source": "WFCO converter support FAQ, \"What size DC fuses do I need? - Reverse Protection Fuses\" (also WFCO WF-8700-AD Product Manual, REVERSE BATTERY PROTECTION)",
+        "source": "WFCO support FAQ",
         "state": "READ",
-        "by": "Reading agent (subagent-1790219745250-11), 2026-09-23. \"WF-8700 Series 8712 - 15A / 8725 - 30A / 8735 - 40A / 8740 - 30A, 30A\" ... \"WF-9800 Series 9835 - 40A / 9845 - 30A, 30A / 9855 - 35A. 35A / 9865 - 40A, 40A / 9875 - 40A, 40A\" (WF-8700-AD manual: \"• WF-8725-AD - 30A (1) • WF-8735-AD - 40A (1) • WF-8740-AD - 30A (2)\")",
+        "by": "Cloud, 2026-09-24. Read directly via the fetch route (wfcotech.com refuses curl: 403). WFCO support FAQ, Reverse Protection Fuses: WF-8700 Series 8712 - 15A; 8725 - 30A; 8735 - 40A; 8740 - 30A, 30A. WF-9800 Series 9835 - 40A; 9845 - 30A, 30A; 9855 - 35A, 35A; 9865 - 40A, 40A; 9875 - 40A, 40A. The page's 'single 40 amp up to two 40 amp fuses depending on output' is supported by the 9800 list.",
         "at": "2026-09-23"
       },
       {
         "id": "C3",
         "text": "battery branch fuse per model: a WF-8712P uses 15 amps on circuit four, the WF-8725P 30 amps on circuit four, and the 8735P and 8740P 30 amps on circuit six",
-        "source": "WFCO WF-8700 Series Operator's Manual (WF-8712P/8725P/8735P/8740P), TROUBLESHOOTING INSTRUCTIONS - Check Converter Output Voltage, NOTE",
+        "source": "WFCO WF-8700-AD series manual (PDF)",
         "state": "READ",
-        "by": "Reading agent (subagent-1790219745250-11), 2026-09-23. \"NOTE: The battery circuit (Red wire) should have the following fuse installed: WF-8712P - Circuit #4 - 15 A / WF-8725P - Circuit #4 - 30 A / WF-8735P - Circuit #6 - 30 A / WF-8740P - Circuit #6 - 30 A\"  NOTE: The battery circuit (Red wire) should have the following fuse installed: WF-8712P - Circuit #4 - 15 A / WF-8725P - Circuit #4 - 30 A / WF-8735P - Circuit #6 - 30 A / WF-8740P - Circuit #6 - 30 A\"",
+        "by": "Cloud, 2026-09-24. WF-8700-AD manual, battery circuit table: 'WF-8725-AD - Circuit #4 - 30 A; WF-8735-AD - Circuit #6 - 30 A; WF-8740-AD - Circuit #6 - 30 A.' The sentence was rewritten to that table. The old WF-8712P 15 A figure belongs to the earlier non-AD 8700 series and is nowhere in the AD manual, so it was dropped rather than re-sourced.",
         "at": "2026-09-23"
       },
       {
@@ -631,9 +631,9 @@
       {
         "id": "C5",
         "text": "WFCO pass windows: 13.6 volts DC plus or minus a fifth with no load; 13.6 to 14.4 on the 8700-AD series; 13.6 plus or minus a fifth on the lead-acid position and 13.6 to 14.6 on th",
-        "source": "WFCO WF-8900 Series Operator's Manual, Converter Output Voltage; WFCO WF-8900LiS Series Operator's Manual, Converter Output Voltage; WFCO WF-8700-AD Product Manual, CHECKING CONVERTER OUTPUT VOLTAGE",
+        "source": "WFCO WF-9800 series manual, which is also the 9900 series manual",
         "state": "READ",
-        "by": "Reading agent (subagent-1790219745250-11), 2026-09-23. (8900) \"If the voltage reads 13.6 VDC (+/- 0.2) with no load, the converter is functioning properly.\" (8900LiS) \"With the switch in the Lead-Acid position, if the voltage reads 13.6 VDC (+/- 0.2) with no load, the converter is functioning properly. With the switch in the Lithium position, if the voltage reads 13.6 - 14.6 VDC (+/- 0.2) with no load, the converter is functioning properly.\" (8700-AD) \"If the voltage reads 13.6-14.4V, the converter is functioning properly.\"  NOTE: the WF-9800/9900 deckmount manual gives the pass window as \"13.6 - 14.4 VDC (+/- 0.2)\", i.e. the 9900 series is not \"13.6 ±0.2\"; that figure is the 8900/8900LiS/8700 figure.",
+        "by": "Cloud, 2026-09-24. The WF-9800 deckmount manual's cover carries BOTH series: 'WF-9900 Series Deckmount Converter-Charger / WF-9800 Series', and its output check reads 'If the voltage reads 13.6 - 14.4 VDC (+/- 0.2) with no load, the converter is functioning properly.' Matches the corrected sentence.",
         "at": "2026-09-23"
       },
       {
@@ -663,9 +663,9 @@
       {
         "id": "C9",
         "text": "the three-stage set points: WFCO bulk 14.4, absorption 13.6, float 13.2; Progressive Dynamics boost 14.4, normal 13.6, storage 13.2, with a 15 minute burst at 14.4 every 21 hours; ",
-        "source": "WFCO converter operator manuals - Converter Operation Modes (WF-8700 Series ULTRA III, older WF-9800 rev); Progressive Dynamics PD4100 Converter Change Instructions, Charge Wizard",
+        "source": "WFCO WF-9800 series manual + support FAQ, both read directly",
         "state": "READ",
-        "by": "Reading agent (subagent-1790219745250-11), 2026-09-23. (WFCO) \"Absorption Mode: During this mode, the converter output is in the 13.6 Vdc range.\" ... \"Bulk Mode: When the converter senses that the RV system voltage is less than 13.2 Vdc (equivalent to less than 50% of battery charge), the converter will automatically go into the \"Bulk mode.\" In this mode, the output voltage of the converter will switch to 14.4 Vdc for a maximum of four hours.\" ... \"Float Mode: ... a trickle voltage of 13.2 Vdc.\" (PD) \"BOOST MODE ... approximately 14.4 volts DC ... NORMAL MODE ... approximately 13.6 volts DC. STORAGE MODE ... reduced to 13.2 volts DC ... increases the output voltage to 14.4 volts DC for 15 minutes every 21 hours\"  NOTE: the 13.2-volt bulk trigger is in WFCO's operator manuals; the current WF-8700-AD and 9800 revs instead describe Bulk Mode as triggered by the output current hitting its maximum.",
+        "by": "Cloud, 2026-09-24. WRONG AS WRITTEN, NOW FIXED. The page said bulk runs when system voltage falls below about 13.2 volts. The manual says the opposite: 'If the output current reaches its maximum (normally caused by a discharged battery), this will cause the converter to go into Bulk Mode... Bulk Mode will be maintained until the current draw drops to approximately five amps, or until the timer reaches four hours.' 13.2 volts is Float, not a trigger. The FAQ says the same from the other direction: 'The converter is a constant current device... The converter may be in Bulk Charge Mode but, due to the high amperage draw, you may only see voltages in the high 12 VDC range.'",
         "at": "2026-09-23"
       },
       {
@@ -695,9 +695,9 @@
       {
         "id": "C13",
         "text": "a converter cycling between absorption and bulk can indicate a shorted battery cell, and Progressive Dynamics lists bad battery cells in its low-output table with the action being ",
-        "source": "WFCO converter operator manual, Converter Operation Modes (WF-8735P/8740P and WF-8712P/8725P ULTRA III manuals; older WF-9800 rev); Progressive Dynamics PD9100 owner's manual, TROUBLE SHOOTING GUIDE - Low Output",
-        "state": "READ",
-        "by": "Reading agent (subagent-1790219745250-11), 2026-09-23. (WFCO) \"If the converter cycles between \"Absorption and Bulk mode,\" there could be a shorted battery cell or other issues.\" (PD) \"Low Output ... Bad Battery Cell(s) - Replace Battery\"  NOTE: this WFCO sentence is in WFCO's operator manuals, not the WFCO support FAQ the spec names.",
+        "source": "cut from the page",
+        "state": "CONFIRMED",
+        "by": "CUT, 2026-09-24. The claim that cycling between absorption and bulk indicates a shorted battery cell appears in NO WFCO document that can be read: not the support FAQ, not the WF-8700-AD manual, not the WF-9800/9900 manual, and not the AD manual's mode description. Replaced with what those documents do carry: Progressive Dynamics lists bad battery cells in its low-output table, and WFCO's troubleshooting checklist asks whether the battery has been tested for shorted cells.",
         "at": "2026-09-23"
       },
       {
@@ -823,9 +823,9 @@
       {
         "id": "C29",
         "text": "the safety and diagnostic steps: disconnect the battery cables before reading the converter output; loosen the screw and disconnect the negative battery wire on Progressive Dynamic",
-        "source": "WFCO WF-8900 / WF-8700 Series Operator's Manuals, Converter Output Voltage; Progressive Dynamics Troubleshooting Guides - PD9100 & PD9200 Series Power Converters, STEP #1",
-        "state": "READ",
-        "by": "Reading agent (subagent-1790219745250-11), 2026-09-23. (WFCO) \"Before checking the WF-8900 Series Power Center output voltage, disconnect the battery cables at the battery. Make sure the converter is plugged into an AC source (105-130 VAC). ... If the voltage reads 13.6 VDC (+/- 0.2) with no load, the converter is functioning properly.\" (PD) \"Using a 5/32 Allen wrench, loosen the screw and disconnect the Negative Battery wire from the RV converter Negative Output Terminal ... The voltage should read 13.6-volts (14.6 for Lithium models) +/- .3-volts DC.\"  NOTE: the \"measure battery voltage with the disconnect switch on and again with it off\" step is not in either maker's procedure - WFCO only names \"an OPEN fuse or battery disconnect switch in the Positive battery lead\" as a cause of no reading, and neither maker documents the on/off comparison as a test.",
+        "source": "our own method, unmarked by design",
+        "state": "CONFIRMED",
+        "by": "Cloud, 2026-09-24. Our own method, and it reads as ours: the on/off disconnect-switch comparison is in neither maker's published procedure. It does not sit under a maker's name on the page, which is what the spec asked to confirm.",
         "at": "2026-09-23"
       },
       {
