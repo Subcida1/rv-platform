@@ -517,3 +517,40 @@ document, and the reading took ten minutes.
 which is **not** in the page's Sources; the manual does not contain the "eight or ten amps", "nearer five / 60
 watts" or 1,000 W lower-bound figures the page uses. And C9's blanket line is our search narration rather than a
 maker statement, because the handbook does carry a "No electricity in coach" troubleshooting entry.
+
+## 14. The full review round, 2026-09-24 07:06 (Claude Desktop, JOB-20260924-0655 PART 2)
+
+**Verdict: NO, blocked by two findings, and both were contradictions between the body and the FAQ.** Both were
+read against Cummins Onan's own handbook before either sentence was touched, and both times the *FAQ* was the
+copy that matched the document and the body was ours.
+
+1. **The air conditioner's running watts did not match itself.** The body said *"1,200 to 2,400 watts"*; the
+   FAQ said *"1,400 to 2,400 watts"* for a 15,000 BTU unit. The handbook's line is *"air conditioners need
+   'reserve' power and can draw 3-4 times the typical 1,400-2,400 watts needed to run"*, so the FAQ was right
+   and the body's low end was ours. **The body is now 1,400 to 2,400**, which is both the consistent copy and
+   the sourced one. This is the number the sizing section turns on, which is why it mattered.
+2. **The battery charger's watts and amps did not describe the same thing.** The page said *"up to 3,000
+   watts, or roughly 6 to 28 amps"*. The handbook says only *"Battery chargers are activated automatically and
+   can draw a large load (up to 3,000 watts)"*, and gives no amp figure at all; 3,000 W at 120 V is about
+   25 A, so the amp range was not just unsourced, it disagreed with the watts printed beside it. **The amp
+   figure is removed.** One number, one source.
+
+**Applied also.** The sentence *"This is the fact the whole guide rests on"* had the guide as its subject and
+now starts from the claim. Two *"useful"* framings (*"Very useful."* in the symptom list, *"That is useful
+information"* in a FAQ answer) are gone. And *"This catches people out because the charger is invisible"* is
+now *"Cummins Onan calls battery chargers invisible loads"*, which drops the prevalence claim and names the
+maker: the phrase is the handbook's own.
+
+**Finding 6, the refuelling gap, answered rather than declined.** The review flagged that nothing warns
+against refuelling a running or hot generator, and told us to check whether the cited handbook carries a line.
+**It does not** (grepped across the whole document: no refuelling, fuel-spill or hot-engine instruction).
+So the page now carries one as **ours**, plainly stated, with the list's intro adjusted to *"The first five are
+Cummins Onan's own safety precautions... The last one is ours."* This is the same shape the hot-skin warning
+took on the outlets page: a safety instruction too important to drop and with no document behind it is stated
+as ours rather than attributed to anyone.
+
+**Clean on everything else.** The order of the walk, the coherence of the safety list against the rest of the
+page, the promise the title and lede make, and the structure all came back clean, and it confirmed the
+corrected Honda figures read correctly.
+
+**Next:** the confirm round, then the class sweep.
