@@ -384,3 +384,28 @@ need reading rather than a blind sweep, because some are legitimate:
 
 Then the review round, queued through the autoloop, and a class sweep after it - which is now a standing step
 after any verification.
+
+## 13. The prose pass, 2026-09-24 22:57, and the review that answered a different question
+
+**The prose pass is done.** Twelve instances out: the *"field reports"* attributions, the unnamed *"trade
+press"* (RVelectricity is now named, because the reading established that it carries the method), three
+prevalence rankings, the *"No manufacturer publishes a ranked list"* disclosure along with the provenance
+sentence beside it, the *"An honest note before you read these / we went looking... could not find one"* opener,
+and three diligence qualifiers. The page also now returns **zero hits on a page-wide punctuation-damage
+sweep**.
+
+**Two errors I introduced doing it, both caught by reading the joined text rather than by anyone else:** a
+deletion left *"next to the blown fuse, ."*, and one replacement contradicted the sentence after it by calling
+the method *"not a published procedure"* when the next line cites a Volkswagen/Audi service bulletin. That is
+the second time tonight a deletion of mine left punctuation damage; both were mine to catch.
+
+**Then the review, and what it taught about the lane.** The first review job asked for argument,
+contradictions, safety and structure. What came back was three class instances and a NO. The three were real
+and are applied, including *"The rest of this page is the method a technician uses"* - a sentence **I wrote an
+hour earlier**, in a pass whose entire purpose was removing that class.
+
+**The likely cause is context bleed, which is the documented failure mode of this design:** that tab had run
+five sweep-shaped jobs in a row, so a new job was pattern-matched to the shape of the previous five. The reply
+looked like a perfectly good review; it just answered a different question. **So the next job opens by saying
+it is NOT a sweep and that the sweep work is finished**, and it asks four answerable questions in sequence
+rather than a list of dimensions - **a job that can be answered by pattern-matching is a job that will be.**
