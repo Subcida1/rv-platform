@@ -888,7 +888,7 @@ landed).
 - **Two guides drafted, registered end to end and passing `verify.py`:** `freeze-damage-triage` (winter
   group) and `rv-slide-out-not-working` (fix group). Both are committed and **neither is pushed**, so
   nothing is live and no crawler has been pinged.
-- **Three new specs:** `freeze-damage-triage`, `trailer-brakes-required`, `new-rv-owner`. Each carries its
+- **Three new specs:** `freeze-damage-triage`, `trailer-brakes-required`, `start-here`. Each carries its
   claims list with per-claim status and its own reading section.
 - **Two readings done, and they corrected the plan rather than confirming it** - three claims on the freeze
   page and one legal premise on the brakes page. **A reading that confirms everything has not been done

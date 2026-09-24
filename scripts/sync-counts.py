@@ -142,4 +142,44 @@ for _slug, _suffix in PAGES.items():
     sync(_slug, _suffix, data[_suffix])
 sync_index(data)
 sync_home(data)
+def sync_itemlist():
+    """The guides index names every guide in a JSON-LD ItemList, and that block is the one
+    piece of our own inventory that is not a data-claim marker. It drifted to 8 items while
+    the catalogue held 19 before 2026-09-24, so it is rewritten here rather than remembered,
+    and verify.py fails if it disagrees with the catalogue in either direction.
+
+    The entry's name comes from the card the same page renders beside it, so the structured
+    data cannot say something the visible list does not."""
+    page = ROOT / "guides" / "index.html"
+    html = page.read_text(encoding="utf-8")
+    groups = C.guides()
+    order = [slug for g in ("winter", "fix") for slug in groups[g]]
+
+    items = []
+    for i, slug in enumerate(order, 1):
+        m = re.search(r'href="guides/%s\.html">.*?<div class="guide-title">([^<]+)</div>'
+                      % re.escape(slug), html, re.S)
+        if not m:
+            raise SystemExit("FAIL  guides/index.html has no card for %s, so the ItemList "
+                             "cannot name it" % slug)
+        items.append({"@type": "ListItem", "position": i, "name": m.group(1).strip(),
+                      "url": "https://originrv.com/guides/%s.html" % slug})
+
+    block = json.dumps({"@context": "https://schema.org", "@type": "ItemList",
+                        "name": "RV Guides", "numberOfItems": len(items),
+                        "itemListElement": items}, separators=(",", ":"))
+    new = '<script type="application/ld+json">%s</script>' % block
+    old = re.search(r'<script type="application/ld\+json">\{"@context":"https://schema\.org",'
+                    r'"@type":"ItemList","name":"RV Guides".*?</script>', html, re.S)
+    if not old:
+        raise SystemExit("FAIL  guides/index.html: no ItemList block to rewrite")
+
+    if old.group(0) != new:
+        page.write_text(html.replace(old.group(0), new, 1), encoding="utf-8")
+        print("  itemlist: rewritten, %d guides named" % len(items))
+    else:
+        print("  itemlist: %d guides, already current" % len(items))
+
+
 sync_claims()
+sync_itemlist()
