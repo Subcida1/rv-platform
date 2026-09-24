@@ -209,11 +209,19 @@
     "sources": []
   },
   "guides/roof-snow-load.html": {
-    "hash": "ee66e3389173cd2f",
-    "status": "unverified",
-    "verified_by": null,
-    "verified_at": null,
-    "sources": [],
+    "hash": "ae9a26ed11d56b6e",
+    "status": "verified",
+    "verified_by": "Claude (confirm round, JOB-20260923-1933, 2026-09-23 20:17): all eight findings FIX-CONFIRMED, the four blocking items no longer blocking, verdict YES, and no objection to the C15 scoping call. Note on the hash: the verdict was given against the pre-edit text, and the only change applied after it is the closing-section self-reference its own reply prescribed as optional cleanup, so this hash covers the prescribed deletion and nothing else.",
+    "verified_at": "2026-09-23",
+    "sources": [
+      "Keystone 2026 owner's manual",
+      " NRCS snow density data",
+      " National Weather Service snow-load method",
+      " Boxabl Baby Box 120 spec sheet",
+      " DOE Building America Solution Center"
+    ],
+    "spec": "_specs/roof-snow-load.md",
+    "spec_waived": false,
     "claims": [
       {
         "id": "C1",

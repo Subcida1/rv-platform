@@ -225,3 +225,25 @@ What the eight were, and what each became:
 - **A ledger built from spec rows will miss facts the drafter treats as background.** Claude found four
   actionable Keystone facts under a claim list that only had room for twelve entries. The reading is broader
   than the ledger, and the ledger is the smaller artifact.
+
+## 13. The confirm round, 2026-09-23 20:17 — VERIFIED
+
+All eight findings FIX-CONFIRMED, the four blocking items no longer blocking, and **the page is recorded as
+verified — the eleventh in the programme.** Two notes worth keeping:
+
+- **Claude explicitly declined to challenge the C15 scoping call** (*"an RV roof has almost no fall to it"*,
+  recorded CONFIRMED under Ty's no-number-no-safety-step rule rather than as a read source). Its reasoning:
+  the reworded sentence describes a structural fact about low-slope roofs rather than asserting a design
+  intent across an unspecified "most", so it does not need a citation, and it carries no number that could be
+  wrong. **It said it would have held the line against *"by design"* or *"most RV roofs"*** — the difference
+  between a description and a prevalence claim, which is a useful calibration of where that line sits.
+- **The confirm round found one more instance of the class it had just cleared**, in the closing section:
+  *"learn the one piece of arithmetic in this guide"*. Minor, called optional, and its own reply prescribed
+  the deletion — so it is applied **after** the verdict, and the ledger's `--by` note says exactly that. Same
+  call as on the tank-sensor page: a known instance of a banned class does not go live to protect a hash.
+
+**A pattern across both confirm rounds:** each one found a leftover instance of the exact class it had just
+approved fixes for, in a part of the page the first round never quoted — a `figcaption` here, a FAQ answer on
+the tank page. **The first round reads the body; the second reads the margins.** The next review request's
+item list should tell the reviewer to check captions, fine print and FAQ answers against the same classes. It
+has now paid off twice.
