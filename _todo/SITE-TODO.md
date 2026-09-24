@@ -859,6 +859,27 @@ What ran instead, and what it is worth:
 
 **The credit wall is a standing risk to this programme**: every review, every reading lane and every fresh-context check runs through it. Worth knowing before the next content block is planned.
 
+### Where the site stands, end of 2026-09-24
+
+**Twenty guides live.** Today published: `freeze-damage-triage`, `rv-slide-out-not-working`,
+`manuals/start-here.html` (the walkthrough, pinned in the manuals hub by Ty's ruling) and
+`trailer-brakes-required`. Every page has had an independent lane look at it, and every finding was tested
+against its source before anything changed.
+
+**The measured lesson, which changes what a reviewer is asked for:**
+
+| Asked to check | What came back |
+|---|---|
+| citations against documents | **six fabricated "verbatim" quotations across two passes**, four false accusations against pages that were right, and one `PUBLISHED-AS-IS` verdict that missed a real defect (it confirmed FMVSS 110 without checking that the standard stops at 10,000 lb GVWR, which was where the reader lived) |
+| a page against its own argument | **no fabricated quotation at all**, and every finding real: a rack-and-pinion seating check applied to the in-wall system in a travel-safety sentence, an unstated roll-away hazard, a diagram caption contradicting the prose above it, and two factual omissions about what runs on 12 volts |
+
+**So: ask a lane for the argument, and check the citations by fetching the document.** Two traps to hand every
+reviewer: confirming a standard exists is not confirming what it covers, and a negative finding is only worth
+something if the reviewer says what it searched.
+
+**Two reviews of the brakes page are in flight** (AI Studio on the twelve citations, Claude on the legal reading
+and whether the advice is complete). Neither is a gate: they produce candidate lists.
+
 ### The independent passes: both done, both adjudicated (2026-09-24)
 
 **No review is outstanding. All three pages that were published today have had an independent lane look at them,
