@@ -1,0 +1,331 @@
+# SPEC: `guides/rv-lights-not-working.html`
+
+**Written:** 2026-09-24 · **Status:** spec written, not drafted · **Sixteenth spec of the content-engine programme**
+**Template:** mirrors `_specs/rv-outlets-not-working.md`, which mirrors `_specs/rv-generator-not-charging.md`
+
+---
+
+## 1. What the page is for
+
+Answer *"why are my RV lights out, and is it the fixture, the circuit or the whole coach?"* for someone standing
+in a dark camper with a torch.
+
+The page's idea, and it is a good one: **the number of lights affected narrows the search before a meter comes
+out.** One fixture, one group, every light, each points somewhere different, and that triage costs nothing. Its
+second idea is better still and is the page's real asset: **the light circuit is a loop and the chassis is the
+return conductor**, so a fixture can show full voltage at the socket and still be dead. That is the one thing on
+this page that a reader is unlikely to arrive knowing.
+
+So the page does four jobs: the count, the causes in order, the return path and how to test it under load, and
+the failure modes of LED fixtures specifically. It closes on what it costs, where the cheap answer stops, and
+which sibling page to read instead.
+
+**Why it is harder than its position in the queue suggests:** the two documents already in its Sources (ITC and
+WFCO) are cited once each, and the rest of the page is carried by *"the trade"* and by *"owners"* — five
+attributions to nobody, plus a sentence that announces our own research habits. The sourcing is thin and the
+classes are thick. Conversely, **the safety content is real and currently attributed to strangers**: the page's
+warning against grounding a fixture to the frame at a random point is currently carried by *"owners who have
+tried this describe..."*, which is the one shape that must not carry a shock and short-circuit warning.
+
+**The one thing to hold on to:** this is a 12-volt page, so it is not lethal the way the outlets page is, but it
+is a *fire* page. A dead short across a chassis ground, a fixture grounded past its load, and a fuse that is
+being repeatedly replaced are all fire-shaped problems. Every one of those steps gets read against a document
+per the claim floor.
+
+## 2. Title and target query
+
+| | |
+|---|---|
+| **Target query** | `rv lights not working` / `rv interior lights not working` / `rv led lights not working` / `all rv lights not working` |
+| **Title (whole string)** | **RV Lights Not Working: Finding the Fault** |
+| **Characters** | **40** |
+| **Query position** | front-loaded: the exact query is the first four words |
+| **H1** | RV lights not working: Finding the fault |
+| **H1 characters** | 38 |
+| **Meta description** | 143 characters, inside the 140 to 160 gate |
+| **Decision** | **Keep the title, the H1 and the meta.** All three front-load the query, all three are true, and the meta's *"One fixture, one circuit or all of them tells you where to look"* is the page's own thesis stated in one line. Nothing to change here. |
+
+**On the query list:** the demand research carries a measured repetition count for nineteen fault topics, and
+**lights is not one of them**. The secondary queries below are derived from the page's own topics rather than
+from a measured volume list, and the spec says so rather than implying a dataset behind them.
+
+## 3. Target query and intent
+
+- **Primary:** `rv lights not working`, `rv interior lights not working`, `rv ceiling lights not working`,
+  `all rv lights not working`, `rv lights dim when something else turns on`.
+- **Secondary:** `rv led light flickering`, `rv lights stay on dim when switched off`, `rv light fixture not
+  working but others are`, `rv 12 volt lights not working`, `rv light ground wire`, `are rv led lights
+  repairable`, `rv light switch not working`, `rv multiplex lighting`.
+- **Intent:** a triage under mild frustration, often with a torch in hand and one hand free. The reader does not
+  know whether they are looking at a bulb, a fuse, a switch or a whole system, and the page's first move is to
+  collapse that question to one of three answers.
+- **The commercial edge:** the query ends in either a fuse (cents), a fixture (a few tens of dollars) or a
+  damaged wire run (a real bill). The page is honest that the free checks come first, the same posture as the
+  fuse, converter, outlet and generator pages.
+- **The safety layer:** this is where the page is currently weakest. Twelve volts will not electrocute the
+  reader, so the risks here are **fire and damage**: a dead short created by grounding a fixture past its load,
+  an overheated switch, a fuse that keeps being replaced, and a converter running high eating LED drivers. All
+  four are in the claims list below whether or not they carry a number.
+
+## 4. Answer-first block
+
+> Count how many lights are out. One fixture out means the fixture or its own ground. A group out together means
+> the fuse, the shared switch, or a shared ground on that run. Every light out means the fault is upstream of
+> the lights entirely, so look at the battery, the disconnect, the main fuse and the converter instead. And a
+> light can show full voltage at the socket and still not work, because the return path through the chassis is
+> what completes the circuit.
+
+The page's existing *"The short version"* callout is already this block. Keep it, keep it first, and cut only
+its opening *"And remember that"*, which is the writer addressing the reader about the page rather than about
+the RV.
+
+## 5. Entity set
+
+`light` · `fixture` · `LED` · `incandescent` · `filament` · `driver` · `driver board` · `branch fuse` ·
+`switch` · `ground` · `chassis` · `chassis return` · `ground bus` · `frame` · `12 volts` · `voltage` ·
+`voltage drop` · `under load` · `ohmmeter` · `resistance` · `corrosion` · `dissimilar metals` · `junction box` ·
+`water intrusion` · `multiplex` · `control module` · `load resistor` · `PWM dimmer` · `converter` ·
+`charging stage` · `battery` · `battery disconnect` · `main fuse` · `water pump` · `furnace blower` ·
+`ITC` · `WFCO` · `10 to 14 volts DC` · `user-serviceable` · `warranty` · `aftermarket LED module`
+
+## 6. Heading tree
+
+Sentence case, capital after a colon, no terminal periods. Current tree on the left of each line, proposed on
+the right where it changes. Ranking-shape headings, vague headings and internal vocabulary are flagged inline.
+
+```
+H1  RV lights not working: Finding the fault
+H2  Count the lights first
+  H3  One fixture out, the rest on that switch working
+  H3  A group of lights out together
+  H3  Every light in the coach out
+H2  The causes, in the order worth checking          -> The causes                 (ranking shape, D7)
+  H3  The branch fuse
+  H3  The switch
+  H3  The ground at the fixture
+  H3  The fixture itself
+  H3  Corrosion in the socket or the wiring connector
+  H3  Water intrusion
+H2  Why a light can test fine and still not work
+  H3  Why the return fails
+  H3  How to test it properly                        -> How to test the return      (vague adverb, D7)
+  H3  One safety note worth having                   -> What not to do              (self-narration in a heading, D3)
+H2  LED versus incandescent, and one voltage detail  -> LED versus incandescent     (vague tail, D7)
+  H3  An LED fixture usually degrades first          -> drop "usually"              (prevalence, D4)
+  H3  They are not repairable                        -> No user-serviceable parts   (names the fact, D7)
+  H3  The voltage detail worth knowing               -> The voltage these fixtures want (self-narration, D7)
+H2  Dim or flickering lights
+  H3  Everything dims when a big load starts
+  H3  One fixture flickers on its own
+  H3  Lights on a dimmer flicker or buzz
+  H3  Lights flicker when they are switched off
+  H3  One that is completely normal                  -> Brightness change with the charging stage (vague, D7)
+H2  What it costs                                     -> keep the ordering, cut every figure (D5)
+  H3  Why this is a cheap repair                     -> Parts                      (heading about the page, D7)
+  H3  Where it stops being cheap
+H2  The rest of this cluster                         -> Related guides             (internal vocabulary, D8)
+  H3  Sources                                        -> move out of the navigation block
+```
+
+**Renames proposed: nine firm, six conditional on other edits.** *"The causes, in the order worth checking"*
+asserts a ranking no document publishes; *"The causes"* is enough. *"How to test it properly"*, *"One safety
+note worth having"*, *"The voltage detail worth knowing"*, *"One that is completely normal"*, *"Why this is a
+cheap repair"* are all headings about the page or about the writer's judgement rather than about the RV. *"LED
+versus incandescent, and one voltage detail"* buries its second half. *"They are not repairable"* is a claim a
+heading should state as the fact the section carries (*"No user-serviceable parts"*).
+
+Two structural notes, not renames:
+
+- **The H3 `Sources` sits under the last H2**, which puts the sources inside a navigation block. Every verified
+  page has the same shape, so this is **declined by convention** rather than left open.
+- **The diagram carries an internal count.** It labels four test points `1 2 3 4` and the caption says
+  *"Four points, and only the fourth one is usually skipped"*, which is both a self-referential count and a
+  prevalence claim. The figure's four labels are fine; the caption's claim is the defect (D8).
+
+## 7. Claims list: the core of this spec
+
+**Statuses below are what the spec knows at authoring time; the live ledger is
+`scripts/content-manifest.json`**, and this page has no ledger entry for its claims yet, so everything starts
+at the status the page's own attribution earns: `NAMED` where a maker is named on the page, `UNNAMED` where the
+authority is *"the trade"*, *"owners"* or *"manufacturers"*, and `OURS` where the page states it on its own
+authority.
+
+The floor is Ty's scoping rule: every claim carrying a **number** or a **safety step** gets read against the
+maker's own document before drafting; a definition, an illustration or arithmetic may stand. Because this is a
+**fire page**, **every claim about a short circuit, a ground, an overheated switch, a fuse and a converter's
+output voltage is in the list whether or not it carries a number.**
+
+The two documents already in Sources are **ITC's 3.5 inch Radiance light installation instructions** and
+**WFCO's WF-9800 series converter manual**. Neither has been opened. `SOURCED` below means the document is on
+the page and unread, not that anything is verified.
+
+**The headline finding: the page has two good documents cited once each, and five attributions to nobody.**
+Its best safety sentence and its most useful technical explanation (the ground-under-load test) are both
+carried by strangers today.
+
+| # | Claim | Source it should carry | Status |
+|---|---|---|---|
+| C1 | the light circuit is a loop: battery or converter, through the fuse, the switch and the fixture, and back to the battery **through the chassis as the return conductor** | our own definition of the circuit; it is the page's thesis | OURS |
+| C2 | the number of lights affected narrows the search: one fixture, one group, or every light | our own method, stated as ours | OURS |
+| C3 | **"test 1, 2 and 3 for 12 volts, then test point 4, the ground"**, with the diagram numbering the four points | our own method, an instruction | OURS |
+| C4 | with the switch on, **both terminals should read around 12 volts** measured against a known good ground, and voltage on one terminal only means the switch is open when it should be closed | a maker document, or restated as our own test | UNNAMED |
+| C5 | **an ohmmeter cannot tell you whether a connection will carry a load**: it pushes too little current, and a ground can read a fraction of an ohm and still fail under a couple of amps | a document, or restated as our own explanation | OURS |
+| C6 | the ground must be tested **under load**: with the circuit on, measure between the fixture's ground point and the battery negative, and any significant voltage across that path is volts lost in the return | our own method; the page's most useful instruction | OURS |
+| C7 | **SAFETY: do not ground the switch, or run a wire from the fixture straight to the frame at a random point**, because the ground in this circuit comes after the load and doing this creates a dead short | **a document, or restated as our own warning.** Currently carried by *"owners who have tried this describe..."* | UNNAMED |
+| C8 | **"a fuse that is not pushed fully home, or that has corrosion on its blades, behaves exactly like a blown one"** | plausible and mechanical; may stand as ours | OURS |
+| C9 | **"owners describe switches that have overheated and stopped working"** | unnamed owners; cut unless a document carries it | UNNAMED |
+| C10 | on modern LED fixtures a small **driver board** converts the supply and **fails before the LEDs do** | a maker document | UNNAMED |
+| C11 | **"manufacturers state there are no user-serviceable parts inside, and opening the unit voids the warranty"** (repeated in the FAQ and again as *"fixture manufacturers state"*) | **ITC's instruction sheet is in Sources and is almost certainly the document behind this; name it** | SOURCED |
+| C12 | corrosion: any connection between two different metals is a corrosion site once moisture is present, and resistance climbs until the connection disappears | a physics explanation; may stand as ours | OURS |
+| C13 | **"owners have reported junction boxes holding standing water, with the circuit reading well below 12 volts and every light on it flickering"** | unnamed owners; cut, or restate as a symptom a reader can look for | UNNAMED |
+| C14 | **"one manufacturer's fitting instructions specify an operating range of 10 to 14 volts DC"** and interior installation only | **ITC** (in Sources, unnamed in the body) | SOURCED |
+| C15 | if a converter is failing and pushing output high, **you can damage LED fixtures with no obvious symptom until they start dropping** | depends on C14's document; a number-and-damage claim | SOURCED |
+| C16 | **WFCO states that lights powered from the converter output may change brightness slightly when the converter changes charging stage** | WFCO, named on the page and in Sources | NAMED |
+| C17 | **"lights flicker when switched off" can be current leakage through a multiplex control module**, a known behaviour of those systems, with a load resistor as the usual remedy | a document, or cut: *"a known behaviour"* names nobody | UNNAMED |
+| C18 | **"a pulse-width dimmer and a driver that does not suit it"** is a compatibility problem rather than a fault | a document, or restated as ours | OURS |
+| C19 | **"the water pump or the furnace blower starting should not visibly dim your lights"**, and when it does, look for loose or corroded connections at the distribution panel | our own expectation, stated as ours | OURS |
+| C20 | an incandescent bulb **fails abruptly when the filament breaks**, and nothing else in the circuit changes | a definition; may stand | OURS |
+| C21 | an LED fixture **dims, flickers or behaves oddly before it dies**, and **heat buildup inside the fixture is the usual cause** | a maker document, or restated as ours | UNNAMED |
+| C22 | **cost: replacement LED ceiling fixtures "roughly $14 to $38"** and modules less than that | no document; settled convention applies | UNNAMED |
+| C23 | **cost: professional diagnosis "around $95 to $185" as a standalone fee, with labour at "roughly $125 to $195 an hour"** | no document; settled convention applies | UNNAMED |
+| C24 | **cost: rewiring a location "roughly $300 to $650"**, and water damage behind a wall beyond that | no document; settled convention applies | UNNAMED |
+| C25 | the triage is **"a synthesis of how the trade approaches the problem"** and no manufacturer publishes it in these words | failed-search disclosure plus unnamed authority; cut both, keep the method as ours | UNNAMED |
+| C26 | **"this is the single most useful thing on the page"** and **"the triage in this guide is worth doing yourself first"** | self-reference and self-praise; cut | OURS |
+| C27 | **"the most under-tested part of the circuit and the answer more often than people expect"** | prevalence and ranking; the fact may survive without them | UNNAMED |
+| C28 | **"cheap and common"** (the switch), **"almost every RV light is LED now"**, **"which is often the sensible middle path"** | prevalence; cut the claim, keep the fact | UNNAMED |
+| C29 | **"The trade wording is exactly that: if you read 12 volts at the fixture using a good ground and the light does not come on, either the light is bad or the ground side has a problem."** | *"the trade"* is the doctrine's own example; state it as ours | UNNAMED |
+
+### Attributions to nobody, to be named or cut
+
+Cut under the standing ruling (`originrv-voice.md`, THE UNNAMED-AUTHORITY RULE), not reworded. Where a real
+document exists, name it instead:
+
+- **U1** *"a synthesis of how the trade approaches the problem"* (the triage's opening). Cut.
+- **U2** *"The trade wording is exactly that: ..."* (the return path). Restate as ours.
+- **U3** *"Owners describe switches that have overheated"* (the switch). Cut or source.
+- **U4** *"Owners have reported junction boxes holding standing water"* (water intrusion). Cut or source.
+- **U5** *"Owners who have tried this describe creating a dead short"* (**the safety note**). Restate as ours.
+- **U6** *"Manufacturers state there are no user-serviceable parts inside"*, *"several manufacturers state"*,
+  *"Fixture manufacturers state"* (**three instances**, body and FAQ answers). Name ITC.
+- **U7** *"One manufacturer's fitting instructions specify an operating range of 10 to 14 volts DC"*
+  (the voltage detail). Name ITC.
+- **U8** *"it is a known behaviour with those systems"* (multiplex flicker). Cut or source.
+
+### Failed-search and diligence disclosures
+
+Cut under the same ruling, never narrate the search that failed:
+
+- **F1** *"We should be straight with you that no manufacturer publishes it in these words"* (the triage). Cut.
+
+## 8. Defects, ranked
+
+- **D1: five attributions to nobody, one of them carrying the page's only shock-and-short warning.** *"the
+  trade"* twice, *"owners"* three times, *"manufacturers"* three times, *"one manufacturer"* once, *"those
+  systems"* once. Two of the named documents (ITC, WFCO) are already in Sources and account for three of these.
+  **Name the source or cut the sentence.** No third option.
+- **D2: the failed-search disclosure that opens the triage section**, *"We should be straight with you that no
+  manufacturer publishes it in these words, so it is a synthesis of how the trade approaches the problem"*.
+  This one sentence carries the failed-search class, the unnamed-authority class **and** the diligence class at
+  once, and it sits in the paragraph that introduces the page's best structure. Cut the whole sentence; the
+  triage that follows it is the page's own method and needs no apology.
+- **D3: self-reference and self-praise, in a heading and in the body.** *"This is the single most useful thing
+  on the page"*, *"the triage in this guide is worth doing yourself first"*, the H3 *"One safety note worth
+  having"*, the H3 *"The voltage detail worth knowing"*, and the caption's *"only the fourth one is usually
+  skipped"*. The page is currently grading its own homework in five places.
+- **D4: prevalence and ranking.** *"the answer more often than people expect"*, *"the most under-tested part of
+  the circuit"*, *"cheap and common"*, *"almost every RV light is LED now"*, *"often the sensible middle path"*,
+  *"An LED fixture usually degrades first"* (a heading), *"heat buildup inside the fixture is the usual cause"*.
+  The sentences work without the frequency word; the facts that survive stay.
+- **D5: the cost section is four unnamed figure families with no document behind any of them.** *"$14 to $38"*,
+  *"$95 to $185"*, *"$125 to $195 an hour"*, *"$300 to $650"*, plus the ranking *"more than the parts by a wide
+  margin"*. The settled convention applies: **no absolute dollar figures unless a publishable source carries
+  them, relative ordering only.** Cut the figures and keep the ordering (a fuse is cents, a fixture is cheap, a
+  wire run is the expensive end). **Do not chase new sources for them;** this is the same open question the
+  tank-sensor, converter, fuse, outlet and generator pages closed the same way.
+- **D6: the safety note stands on strangers.** *"Owners who have tried this describe creating a dead short,
+  because the ground in this circuit comes after the load rather than before it."* The mechanism is the reason
+  the warning matters, and it is currently attributed to nobody. **Restate as our own warning**, in the shape
+  the hot-skin warning took on the outlets page: the fact is too important to cut and has no document behind
+  it.
+- **D7: headings about the page rather than the RV.** The five renames flagged in §6, plus *"The causes, in the
+  order worth checking"*, which asserts an ordering no document publishes.
+- **D8: internal vocabulary and an internal count.** *"The rest of this cluster"* is this programme's word for
+  the sibling guides. And the diagram's caption, *"Four points, and only the fourth one is usually skipped"*, is
+  a count about our own figure plus a prevalence claim.
+- **D9: the coverage checker already flags this page.** `house-style.py` reports *"in Sources, this maker is
+  never named in the body: Progressive Dynamics"*. **Check that first**: the entry may be a leftover from a
+  converter citation, in which case it should be removed from Sources rather than named in this body.
+- **D10: repeated figures and the diagram fit check.** *"12 volts"* appears **five times** on this page, and
+  the page also carries **10 to 14 volts**, **a fraction of an ohm**, **a couple of amps** and the ITC range.
+  When one changes, grep all of them together with the FAQ answers and the schema. Separately,
+  `scripts/check-diagram-fit.mjs` runs after any edit to the figure, because Inter is named but not shipped and
+  the diagram's label widths vary by platform.
+
+### The three checks, answered at spec time
+
+- **(a) A meta, title or schema claiming what the body denies:** **not found.** The meta, the H1 and the lede
+  all make the same triage promise the page keeps.
+- **(b) A maker rule inverted:** **not found at spec time.** The candidates to read carefully are C4 (the switch
+  test), C6 (the load test) and C15 (over-voltage damaging LED drivers), because each one tells a reader to
+  trust a measurement.
+- **(c) A FAQ answer carrying a second, un-updated copy of a claim:** **one to check, not yet confirmed.** The
+  *"no user-serviceable parts"* claim appears in the body, in the FAQ answer about repairability and again in
+  the FAQ answer about a single dead fixture. Three copies, and the sibling-copy failure has cost this
+  programme rounds on four other pages.
+
+## 9. Demand tier: D2, and the measurement is honest about what it does not have
+
+**Tier: D2**, and the reason it is not D1 is a gap in the data rather than a judgement about the page.
+
+- **There is no separate repetition count for lights.** The 2026-09-22 community-repetition lane measured
+  nineteen fault topics from distinct threads, and lighting is not among them. The tier is therefore set from
+  the category it sits inside rather than from its own number, and **the spec says so rather than inventing
+  one.**
+- **Electrical and power is the single largest category in the SDS field service-call analysis** of more than
+  7,300 in-the-field records, January to May 2026: **747 calls**, ahead of water heater at 686 and
+  tire/wheel/axle/brake at 627. Lighting sits inside the top category rather than beside it.
+- **Seasonality runs the page's way.** Electrical complaints climb January through April and crest in May, the
+  "classic de-winterization wave", and a dark camper in a cold month is an urgent symptom.
+- **This page is one of seven siblings under `rv-12-volt-problems.html`**, the 12-volt hub, which is already
+  verified and feeds the whole electrical category. It is the sibling that covers **lighting** specifically,
+  and it links to the hub, to the fuse page and to the outlets page from its closing section.
+
+## 10. Decisions made
+
+1. **The loop-and-return thesis stays and stays first.** The idea that the chassis is the return conductor, and
+   that a fixture can read full voltage and still be dead, is the page's best contribution and is correct. It
+   keeps its own section and its own diagram.
+2. **The count-first triage stays**, with the failed-search sentence cut (D2). The method becomes the page's own
+   method, stated plainly, with no apology attached to it.
+3. **The title, H1 and meta stay** (see §2). Nothing in them is an overclaim and all three front-load the
+   query.
+4. **ITC and WFCO become the page's named spine.** ITC's instruction sheet carries the operating range, the
+   interior-only condition and (to be confirmed by the reading) the no-user-serviceable-parts wording; WFCO
+   carries the charging-stage brightness change, which the page already attributes correctly. Every reference
+   to *"manufacturers"*, *"one manufacturer"* and *"the trade"* names one of them or is cut.
+5. **The unnamed-authority class is named or cut** (D1, U1 to U8). This is Ty's standing ruling rather than a
+   new call.
+6. **The failed-search disclosure is cut** (D2, F1).
+7. **The safety note becomes our own warning** (D6), because the mechanism is right, the risk is real, and there
+   is no document behind it.
+8. **The cost section follows the settled convention** (D5): relative ordering only, the four figure families
+   gone, and no new sources chased for it.
+9. **The headings are renamed** per §6 (D7, D8), and the diagram's caption claim goes with them.
+10. **`house-style.py`'s coverage flag for Progressive Dynamics is checked first** (D9), because the fix might
+    be to remove a stale Sources entry rather than to name a maker in the body.
+
+**For Ty: no open calls on this page.** The one question the sibling specs put to him was the cost section, and
+that convention is settled: *"leave it and continue"*. Everything here is the drafter's, and the reading will
+settle the rest.
+
+**Everything else is the drafter's to decide:** the nine heading renames and the source naming (D1), the
+self-reference cuts (D3), the prevalence cuts (D4), the safety restatement (D6), the diagram caption (D8), the
+coverage flag (D9), and the figure sweep and diagram fit check (D10). None of them need a second pair of eyes.
+
+## 11. State at handoff
+
+Placeholder. The drafter fills this once the page is written, in the shape the converter, fuse, outlet and
+generator specs use: what is done and committed, the numbered items remaining before the first review round,
+and why the handoff happened where it did. A class sweep is a standing step **after** verification, per the
+converter spec's §13, and it now runs with the raw HTML as well as the prose view so it can see the meta
+description and the structured data.
