@@ -1291,7 +1291,289 @@
       "outbox/reply-20260922-2026-fixes-confirm-batch4.md"
     ],
     "invalidated_by": "house-style sweep 2026-09-23: 77 colon lowercases across 16 pages; heading text changed, meaning did not",
-    "invalidated_at": "2026-09-23"
+    "invalidated_at": "2026-09-23",
+    "claims": [
+      {
+        "id": "C1",
+        "text": "The KIB pigtail resistance figures - red to orange reads essentially zero ohms, red to green about 68,000, red to yellow about 188,000",
+        "source": "KIB's tank monitor documentation, which the page itself says is no longer published online: \"the figures below are reported rather than link",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C2",
+        "text": "\"Do not short fresh water tank probes with jumper wires to test them. Use water, or a 43,000 ohm resistor.\"",
+        "source": "the same unreachable KIB document",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C3",
+        "text": "A probe reads infinity with the tank empty and roughly 10,000 to 100,000 ohms submerged, on an analog meter rather than a digital one",
+        "source": "the probe maker's own site (Valterra, Horst Miracle Probes)",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C4",
+        "text": "Adding a teaspoon of salt to fresh or soft water so the panel can see it",
+        "source": "Valterra's Horst documentation",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C5",
+        "text": "\"Recommendations to drive around with ice cubes are no longer necessary\"",
+        "source": "Valterra's Horst documentation, quoted",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C6",
+        "text": "\"Sludge acts like a conductor between the positive content level sensors down the tank to the negative probe located at the bottom\"",
+        "source": "Valterra's Horst documentation, quoted",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C7",
+        "text": "Teflon-sleeved replacement probes with a shield over the black-tank probe, fitting the existing holes and working with the existing panel",
+        "source": "Valterra's Horst product page",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C8",
+        "text": "White is ground at the empty level, yellow the one-third probe, green two-thirds, red full",
+        "source": "Lippert's Intelli-view tank monitor manual (in Sources)",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C9",
+        "text": "Thetford's cleaning method: half the bottle into a 40 gallon black tank and half into the gray, flush and fill, mix by driving, sit 24 hours, drive again, dump and rinse",
+        "source": "Thetford's Level Gauge Cleaner page (in Sources)",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C10",
+        "text": "Thetford's cleaner must not go in the fresh water tank",
+        "source": "the same Thetford page",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C11",
+        "text": "Garnet's advice for an already-fouled tank: a liquid treatment left in with roughly 30 percent fresh water, driving for two or three days; and the waste did not build up in one day",
+        "source": "Garnet's SeeLevel guidance",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C12",
+        "text": "SeeLevel limits: not for metal tanks; tank wall under about three eighths of an inch; metal within about two inches of a sender can be misread as water; every sender and the consol",
+        "source": "the SeeLevel 709 series manual (in Sources)",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C13",
+        "text": "Garnet's own concession that extreme internal sludge buildup will stop the gauge working properly",
+        "source": "the same SeeLevel manual",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C14",
+        "text": "SeeLevel diagnostics: signal power typically 50 to 60 percent, works down to about 20 percent, 100 percent ideal, with discrete error codes",
+        "source": "the same SeeLevel manual",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C15",
+        "text": "Removing an adhered sensor after installation damages it and the damage is not covered",
+        "source": "the same SeeLevel manual",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C16",
+        "text": "Thetford's own claim that organic residue dissolves and mineral scale and electrical faults are outside what a cleaner can do",
+        "source": "the same Thetford page",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C17",
+        "text": "\"A tank treatment manufacturer\" says low water is the number one contributor to fouling, and recommends three to five gallons of water after every dump",
+        "source": "unnamed. The page names Tank Blaster elsewhere without linking it",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C18",
+        "text": "Leaving the black valve open leaves a pyramid of solids directly below the toilet",
+        "source": "the same unnamed tank treatment maker",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C19",
+        "text": "Tank Blaster's instructions call out the end of season, before winterizing, as a key time to treat",
+        "source": "Tank Blaster's instructions",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C20",
+        "text": "Hydro-cleaning runs around ten times the pressure of a typical onboard tank rinser, and one service operator reports sensors working again in the large majority of cases",
+        "source": "one unnamed service operator",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C21",
+        "text": "One empirical test with a clear tank found most of the ice simply sat there after an hour of erratic driving",
+        "source": "unnamed",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C22",
+        "text": "Reaching useful scrubbing action would take something like five ten-gallon bags of ice in a 30 gallon tank",
+        "source": "our own estimate",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C23",
+        "text": "A four-pack of fouling-resistant probes runs around $36, and one owner reported about $35 and a couple of hours",
+        "source": "retail listing plus an unnamed owner",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C24",
+        "text": "Diagnosis and cleaning $90 to $250; professional cleaning $250 to $600; mobile sensor replacement $140 to $220; a technician total of $150 to $350; shop rates $170 to $195 an hour;",
+        "source": "unnamed cost indexes and one unnamed service company",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C25",
+        "text": "One measured test through a flow meter found the gauge read full at about 69 percent of capacity; a multi-month review found fresh and gray good while galley and black were badly i",
+        "source": "three unnamed owner reports",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C26",
+        "text": "Radar sensors are a real product; vibration sensors work on metal tanks and cost in the low hundreds; a pneumatic gauge patented in 2025 is reported accurate to an eighth of an inc",
+        "source": "trade press and a patent, unnamed",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C27",
+        "text": "Adhesive capacitive sensors are generally not directly compatible with the resistive tank inputs of some popular monitoring systems",
+        "source": "unnamed",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C28",
+        "text": "Rubber bushing probe seals do not return to shape once removed; spin-welded probes cannot be removed and the usual answer is a new hole at the same level",
+        "source": "probe maker guidance, unnamed",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C29",
+        "text": "Mineral scale frequently cannot be cleaned off effectively",
+        "source": "our own statement, no document",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C30",
+        "text": "\"A survey said 78 percent of owners report sensor inaccuracies\"",
+        "source": "no source exists; the page says so itself",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C31",
+        "text": "\"A new standard now governs holding tank monitoring\"",
+        "source": "no such standard found; the 2026 RV standard change is about carbon monoxide",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C32",
+        "text": "\"Almost every RV has the same complaint\" and \"the single most useful thing you can learn\"",
+        "source": "prevalence and ranking shapes, no source",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C33",
+        "text": "\"Not endorsed by any manufacturer we could find\" / \"No manufacturer endorsement found\" / \"we could not find any RV manufacturer endorsing it\" / \"There is no manufacturer rule publi",
+        "source": "diligence claims about our own search",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C34",
+        "text": "\"Last reviewed: Sep 21, 2026, against current Valterra, Thetford, Lippert and Garnet service guidance\"",
+        "source": "provenance, fine print per Ty's ruling",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C35",
+        "text": "The comparison advice: if a shop quotes several hundred dollars to clean a tank, ask what the retrofit costs installed",
+        "source": "our own advice, and it is advice rather than a claim",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      }
+    ]
   },
   "guides/rv-tire-replacement.html": {
     "hash": "602022d83945a62a",
