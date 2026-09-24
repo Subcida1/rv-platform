@@ -1304,251 +1304,205 @@
     ]
   },
   "guides/rv-fuse-keeps-blowing.html": {
-    "hash": "b486821ebbb94cc6",
-    "status": "unverified",
-    "verified_by": null,
-    "verified_at": null,
+    "hash": "ba59e4b528f26390",
+    "status": "verified",
+    "verified_by": "Cloud, verification pass 2026-09-24. Seven documents opened: Winnebago 2024 Vita, Tiffin 2026 Open Trail, Volkswagen/Audi TSB 2029010, Progressive Dynamics PD4500, Lippert SlimRack Plus, OptiFuse, RVelectricity Parts 1 and 2. The page was edited before this pass so the ledger was re-read rather than carried: 27 claims recorded, 7 retired because their sentences no longer exist, 1 added. Four claims were tightened because the sources did not carry what the page said: the test-light readout, the clamp Hall-effect detail, the Lippert slide-out sentence, and the hundreds-of-times figure. C8, C17 and the breaker-on-the-main-feed half of C19 stand on Ty scoping rule rather than a document, and each says so in its source field.",
+    "verified_at": "2026-09-24",
     "sources": [
-      "Winnebago 2024 Vita owner manual",
-      "OptiFuse RV fuses explained",
-      "Volkswagen Audi service bulletin on excess current draw",
-      "Progressive Dynamics PD4500 series owner manual",
-      "Lippert SlimRack slide-out service manual"
+      "https://www.winnebago.com/Files/Files/Winnebago/Resources/OperatorManuals/Operator%202024/24_Vita.pdf",
+      "https://tiffinmotorhomes.com/wp-content/uploads/2025/07/2026-Open-Trail-Owners-Manual_Rev-1.pdf",
+      "https://www.optifuse.com/blog/rv-fuses-explained/",
+      "https://static.nhtsa.gov/odi/tsbs/2013/MC-10212668-9999.pdf",
+      "https://www.progressivedyn.com/wp-content/uploads/Support/manuals/PD4500-110030J-owners-manual-english.pdf",
+      "https://lci-support-doc.s3.amazonaws.com/manuals/slideouts/slimrack/ccd-0008630.pdf",
+      "https://rvelectricity.com/finding-12-volt-dc-short-circuits-part-2/"
     ],
     "spec": "_specs/rv-fuse-keeps-blowing.md",
     "spec_waived": false,
     "claims": [
       {
         "id": "C1",
-        "text": "the test light method: pull the blown fuse and bridge its holder with an incandescent test light, dim means no short and bright means a short is present, then flex and wiggle the w",
-        "source": "Volkswagen/Audi service bulletin, \"27 Low battery charge: excess current draw location\", 2029010/2, Oct 7 2013, PDF p.2 (the only bulletin in the page's Sources)",
+        "text": "the test light method: bridge the fuse holder's two terminals with an incandescent test light so the bulb sits in the fuse's place, and read it as a PAIR - bright test light with the load dead means shorted, dim test light with the load still working means no short",
+        "source": "RVelectricity, Finding 12-Volt DC Short Circuits Part 2 (Mike Sokol), opened 2026-09-24. Quote: \"the bulb inside of the tester is limiting the fault current through the short circuit to less than 1 ampere or so... When the test light is fully bright and the load light is off, then the circuit is shorted. But when the test light is dim and the load light is dim, then there is no longer a short circuit.\" The previous text of this claim (dim/bright alone) was the defect corrected on 2026-09-24.",
         "state": "CONFIRMED",
-        "by": "CUT, 2026-09-24, under Ty's ruling (name the source or cut the sentence). Reading agent (subagent-1790221910452-15) searched and found no document carrying it. the bulletin contains no test light method, no bulb and no dim/bright test; it traces draw by voltage drop and by disconnecting components. The one-amp test light method and the dim/bright description are carried verbatim by the named trade press, Mike Sokol, \"Finding 12-Volt DC Short Circuits! Part 2\", rvelectricity.com: \"the bulb inside of the tester is limiting the fault current through the short circuit to less than 1 ampere or so\" and \"the test light will generally go from dim (with no short circuit) to fully bright (with a short circuit)\". Name that source and link it, or cut the sentence.",
-        "at": "2026-09-23"
+        "by": "Cloud, verification pass 2026-09-24",
+        "at": "2026-09-24"
       },
       {
         "id": "C2",
-        "text": "\"The bulb caps fault current at under about one amp, so nothing burns while you hunt\", carried in the body, the diagram, the FAQ and the schema",
-        "source": "Volkswagen/Audi service bulletin, \"27 Low battery charge: excess current draw location\", 2029010/2, PDF p.2",
+        "text": "the bulb caps fault current at under about one amp, carried in the body, the diagram, the figcaption, the FAQ and the schema",
+        "source": "RVelectricity, Finding 12-Volt DC Short Circuits Part 2 (Mike Sokol), opened 2026-09-24. Quote: \"limiting the fault current through the short circuit to less than 1 ampere or so.\" Previously credited to the Volkswagen/Audi bulletin, which does NOT carry it. The diagram is ours.",
         "state": "CONFIRMED",
-        "by": "CUT, 2026-09-24, under Ty's ruling (name the source or cut the sentence). Reading agent (subagent-1790221910452-15) searched and found no document carrying it. no one-amp figure anywhere in the bulletin. The exact figure is carried by the trade press, RVelectricity, \"Finding 12-Volt DC Short Circuits! Part 2\": \"limiting the fault current through the short circuit to less than 1 ampere or so\".",
-        "at": "2026-09-23"
+        "by": "Cloud, verification pass 2026-09-24",
+        "at": "2026-09-24"
       },
       {
         "id": "C3",
-        "text": "voltage-drop method: meter on the millivolt DC range, probes on the two small test tabs on top of the fuse, do not pull the fuse, then convert millivolts to milliamps with a chart ",
-        "source": "Volkswagen/Audi service bulletin, 2029010/2, PDF p.2, step 6 and Figure 1",
-        "state": "READ",
-        "by": "Reading agent (subagent-1790221910452-15), 2026-09-24. \"Using the mV scale on the multimeter, measure the voltage drop across fuses by placing the positive lead on one side of the fuse, and the negative lead on the other (Figure 1). Take absolute value of reading of voltage drop (ignore negative signs) and then reference voltage drop chart to determine how much current the circuit is currently consuming.\"  NOTE: Figure 1 shows the probes sitting on the fuse in the block, and the CAN bus tip is the basis for not pulling the fuse. The bulletin says one side or the other, not literally \"two small test tabs\".",
-        "at": "2026-09-23"
+        "text": "voltage-drop method: meter on the millivolt DC range, probes on the two sides of the fuse, do not pull the fuse, then convert millivolts to milliamps with a chart for that fuse size",
+        "source": "Volkswagen/Audi TSB 2029010 (NHTSA MC-10212668), opened 2026-09-24. Steps 5-6: \"Using the mV scale on the multimeter, measure the voltage drop across fuses by placing the positive lead on one side of the fuse, and the negative lead on the other... reference voltage drop chart to determine how much current the circuit is currently consuming.\" Note: the bulletin is a battery-draw document, not a short-tracing one. The two test tabs on top of a blade fuse is our practical detail.",
+        "state": "CONFIRMED",
+        "by": "Cloud, verification pass 2026-09-24",
+        "at": "2026-09-24"
       },
       {
         "id": "C4",
-        "text": "clamp method: the clamp must be a DC Hall-effect type because many inexpensive clamps are AC only, clamp a single conductor because both directions cancel, and a series meter is ca",
-        "source": "Volkswagen/Audi service bulletin, 2029010/2, PDF p.2, step 4",
+        "text": "clamp method: the clamp must be rated for DC as well as AC, clamp a single conductor, and walk it downstream to the point where the reading disappears",
+        "source": "RVelectricity, Finding 12-Volt DC Short Circuits Part 2 (Mike Sokol), opened 2026-09-24 for the DC-rated clamp: \"most clamp meters only read AC current using their clamp jaws, so you will need one that is rated for AC/DC current in the jaws themselves.\" The single-conductor and walk-downstream statements are ours, are explanations, and carry no number, so they may stand per the scoping rule. \"Hall-effect type\" was cut on 2026-09-24 as unsourced and unnecessary.",
         "state": "CONFIRMED",
-        "by": "CUT, 2026-09-24, under Ty's ruling (name the source or cut the sentence). Reading agent (subagent-1790221910452-15) searched and found no document carrying it. nothing on Hall-effect versus AC-only clamps, nothing on clamping a single conductor, and no mention of a series meter or a ten amp meter fuse rating.",
-        "at": "2026-09-23"
+        "by": "Cloud, verification pass 2026-09-24",
+        "at": "2026-09-24"
       },
       {
         "id": "C5",
-        "text": "\"disconnect the components from the circuit one by one, and if the values are now within the normal range, the component causing the excess draw has been identified\"",
-        "source": "Volkswagen/Audi service bulletin, 2029010/2, PDF p.2, steps 8 and 9",
-        "state": "READ",
-        "by": "Reading agent (subagent-1790221910452-15), 2026-09-24. \"Disconnect the components from the circuit one-by-one and allow the sleep current to stabilize after each disconnection.\" and \"If the values are now within the normal range, the component causing excess draw has been identified.\"  NOTE: the page's quoted sentence fuses steps 8 and 9 into one line; every phrase is literal.",
-        "at": "2026-09-23"
-      },
-      {
-        "id": "C6",
-        "text": "\"overcurrents below about 600 percent of rated current are termed an overload, while a short circuit is above that\" attributed to \"the protection industry\" and \"a fuse maker's own ",
-        "source": "OptiFuse, \"RV Fuses Explained: How to Protect Your Camper's 12VDC Electrical System\"",
+        "text": "disconnect the components from the circuit one by one, and if the values are now within the normal range, the component causing the excess draw has been identified",
+        "source": "Volkswagen/Audi TSB 2029010 (NHTSA MC-10212668), opened 2026-09-24. Steps 8-9, verbatim except the hyphen in one-by-one.",
         "state": "CONFIRMED",
-        "by": "CUT, 2026-09-24, under Ty's ruling (name the source or cut the sentence). Reading agent (subagent-1790221910452-15) searched and found no document carrying it. the term 600 percent appears nowhere, and OptiFuse draws no numeric line between an overload and a short circuit.",
-        "at": "2026-09-23"
+        "by": "Cloud, verification pass 2026-09-24",
+        "at": "2026-09-24"
       },
       {
         "id": "C7",
-        "text": "a fuse lasts indefinitely only if it runs at no more than about 75 percent of its rating",
-        "source": "OptiFuse, \"RV Fuses Explained\", section \"2. How to Size an RV Fuse\", item 2",
-        "state": "READ",
-        "by": "Reading agent (subagent-1790221910452-15), 2026-09-24. WRONG. \"For loads running 3+ hours (fans, fridges), target ~125% of continuous current so nuisance openings are minimized.\"  NOTE: the page says a fuse \"lasts indefinitely only if it runs at no more than about 75 percent of its rating\"; OptiFuse's stated rule is the opposite direction and a different number, size the fuse at about 125 percent of the continuous load (roughly 80 percent loading), not a 75 percent of rating ceiling. Correct figure is ~125 percent of continuous current.",
-        "at": "2026-09-23"
+        "text": "how a fuse is sized: against the wire, not the load; and OptiFuse's rule that a load running three hours or more is targeted at about 125 percent of the continuous current",
+        "source": "OptiFuse, RV fuses explained, opened 2026-09-24. Quotes: \"Choose a fuse rating at or below the wire ampacity. The fuse primary job is to protect the conductor, then the equipment.\" and \"For loads running 3+ hours (fans, fridges), target ~125% of continuous current so nuisance openings are minimized.\" This replaces the retired 75-percent ceiling, which was stated backwards.",
+        "state": "CONFIRMED",
+        "by": "Cloud, verification pass 2026-09-24",
+        "at": "2026-09-24"
       },
       {
         "id": "C8",
         "text": "nuisance openings: an undersized conductor generates heat, the fuse sees that heat and opens before it should, and dirty or loose connections do the same",
-        "source": "OptiFuse, \"RV Fuses Explained\"",
+        "source": "Our own explanation of thermal derating. NOT carried by OptiFuse, and the attribution to fuse makers was cut on 2026-09-24. It carries no number and no safety step, so it may stand per the scoping rule - but it has no document behind it. Flagged.",
         "state": "CONFIRMED",
-        "by": "CUT, 2026-09-24, under Ty's ruling (name the source or cut the sentence). Reading agent (subagent-1790221910452-15) searched and found no document carrying it. no undersized-conductor heat mechanism, no statement that the fuse sees a conductor's heat and opens early, no dirty or loose connection cause.",
-        "at": "2026-09-23"
+        "by": "Cloud, verification pass 2026-09-24",
+        "at": "2026-09-24"
       },
       {
         "id": "C9",
-        "text": "Winnebago safety wording: fuses and circuit breakers must be replaced with those of the same size and amperage rating only, and a higher rated fuse or breaker must never be used",
-        "source": "Winnebago 2024 Vita owner manual, Section 6 Electrical Cautions, PDF p.51 (printed 6-1)",
-        "state": "READ",
-        "by": "Reading agent (subagent-1790221910452-15), 2026-09-24. \"Avoid overloading electrical circuits. Replace fuses or circuit breakers with those of the same size and amperage rating only. Never use a higher rated fuse or breaker.\"  NOTE: same wording also on PDF p.19 under Section 2 Safety and Precautions.",
-        "at": "2026-09-23"
+        "text": "Winnebago safety wording: replace fuses or circuit breakers with those of the same size and amperage rating only, and never a higher rated one",
+        "source": "Winnebago 2024 Vita owner manual, opened 2026-09-24. Section 2 ELECTRICAL: \"Avoid overloading electrical circuits. Replace fuses or circuit breakers with those of the same size and amperage rating only. Never use a higher rated fuse or breaker.\"",
+        "state": "CONFIRMED",
+        "by": "Cloud, verification pass 2026-09-24",
+        "at": "2026-09-24"
       },
       {
         "id": "C10",
-        "text": "Winnebago stop condition: if a fuse is not the cause of the problem, the wiring system should be checked immediately by an authorised service centre",
-        "source": "Winnebago 2024 Vita owner manual, Section 3 Driving Your Motorhome, LIGHTS, PDF p.30 (printed 3-4)",
-        "state": "READ",
-        "by": "Reading agent (subagent-1790221910452-15), 2026-09-24. \"Check fuse and replace with one of the same rating when necessary. If a fuse is not the cause of the problem, the wiring system should be checked immediately by an authorized service center.\"",
-        "at": "2026-09-23"
+        "text": "Winnebago stop condition: if a fuse is not the cause of the problem, the wiring system should be checked immediately by a service centre",
+        "source": "Winnebago 2024 Vita owner manual, opened 2026-09-24. Verbatim: \"If a fuse is not the cause of the problem, the wiring system should be checked immediately by an authorized service center.\" TWO NOTES: the manual spells it American (authorized service center) and our page uses house British spelling; and the manual context is a failure of more than one exterior light, not a general rule.",
+        "state": "CONFIRMED",
+        "by": "Cloud, verification pass 2026-09-24",
+        "at": "2026-09-24"
       },
       {
         "id": "C11",
-        "text": "Tiffin's manuals use the same never-use-a-higher-rated-fuse wording",
-        "source": "Tiffin 2026 Open Trail Owner's Manual, Rev 1, Electrical safety list, PDF p.21",
-        "state": "READ",
-        "by": "Reading agent (subagent-1790221910452-15), 2026-09-24. \"Avoid overloading electrical circuits. Replace fuses or circuit breakers with those of the same size and amperage rating only. NEVER use a higher rated fuse or breaker.\"  NOTE: the sentence names Tiffin but no Tiffin document is in the page's Sources; add this PDF (tiffinmotorhomes.com) or cut the sentence. Same wording also in the current Tiffin Phaeton and Zephyr manuals.",
-        "at": "2026-09-23"
+        "text": "Tiffin manuals use the same never-use-a-higher-rated-fuse wording",
+        "source": "Tiffin 2026 Open Trail owner manual Rev 1, opened 2026-09-24. Verbatim, and identical to Winnebago word for word: \"Replace fuses or circuit breakers with those of the same size and amperage rating only. NEVER use a higher rated fuse or breaker.\" Tiffin was named in the body but missing from Sources; added there on 2026-09-24.",
+        "state": "CONFIRMED",
+        "by": "Cloud, verification pass 2026-09-24",
+        "at": "2026-09-24"
       },
       {
         "id": "C12",
         "text": "Progressive Dynamics fire and shock warning: fuses should be replaced only with the same type and rating",
-        "source": "Progressive Dynamics PD4500 series owner's manual, PDF p.3, DC panel section, CAUTION box",
-        "state": "READ",
-        "by": "Reading agent (subagent-1790221910452-15), 2026-09-24. \"FOR CONTINUED PROTECTION AGAINST RISK OF FIRE OR ELECTRICAL SHOCK, REPLACE ONLY WITH SAME TYPE AND RATING FUSE.\"  NOTE: the same manual says in the reverse-battery paragraph \"replace fuses with same type and rating to restore proper operation\".",
-        "at": "2026-09-23"
+        "source": "Progressive Dynamics PD4500 series owner manual, opened 2026-09-24. Verbatim: \"CAUTION FOR CONTINUED PROTECTION AGAINST RISK OF FIRE OR ELECTRICAL SHOCK, REPLACE ONLY WITH SAME TYPE AND RATING FUSE.\"",
+        "state": "CONFIRMED",
+        "by": "Cloud, verification pass 2026-09-24",
+        "at": "2026-09-24"
       },
       {
         "id": "C13",
-        "text": "the practical stop list: a fuse that blows instantly on every replacement, repeated blows after testing obvious loads, heat or discolouration at the panel, water at a live fixture,",
-        "source": "our own compiled list, drawing on the makers' stop wording above, but it carries safety steps",
+        "text": "the practical stop list: instant blow on every replacement, repeated blows after obvious loads are tested, heat or discolouration at the panel, water at a live fixture or outlet, rodent damage, voltage on one side of the main feed, anything on the 120 volt side",
+        "source": "Our own compiled list. It carries safety steps, so it was read against the makers stop-and-hand-over wording: Lippert says \"If the circuit breaker blows immediately upon replacement, there is a problem with the wiring... Have qualified service personnel check and repair\"; Winnebago and Tiffin carry the same-rating rule; PD carries the fire and shock warning. The list is consistent with all three.",
         "state": "CONFIRMED",
-        "by": null,
-        "at": null
+        "by": "Cloud, verification pass 2026-09-24",
+        "at": "2026-09-24"
       },
       {
         "id": "C14",
-        "text": "main-feed diagnostic: around 12 volts on both sides of a component means it is passing, and voltage on one side only means the open point is found",
-        "source": "our own method, the voltage-drop method the 12-volt hub uses",
+        "text": "main-feed diagnostic: about 12 volts on both sides of a component means it is passing, voltage on one side only means the open point is found",
+        "source": "Our own method, the same voltage-drop principle the 12-volt hub guide uses. A definition and an illustration, no number, may stand per the scoping rule.",
         "state": "CONFIRMED",
-        "by": null,
-        "at": null
+        "by": "Cloud, verification pass 2026-09-24",
+        "at": "2026-09-24"
       },
       {
         "id": "C15",
-        "text": "Lippert's slide-out troubleshooting material lists defective wiring and instructs harness inspection and replacement, so a fuse that blows only when the slide moves points there",
-        "source": "Lippert SlimRack Plus slide-out troubleshooting and service manual, CCD-0008630, PDF p.5 \"Checking Circuit Breakers\" and p.10 Troubleshooting Steps",
-        "state": "READ",
-        "by": "Reading agent (subagent-1790221910452-15), 2026-09-24. \"Check the 12-volt circuit breaker box for blown circuit breakers, and replace any if necessary... If the circuit breaker blows immediately upon replacement, there is a problem with the wiring to the slide-out controller. Have qualified service personnel check and repair.\" and \"Check connections on the motor, the controller and check the wire harness for damage.\"  NOTE: Lippert's wording is about the circuit breaker blowing immediately on replacement, and about inspecting or replacing the motor harness, rather than a fuse that blows only while the slide moves; the page should not quote the manual as saying the latter.",
-        "at": "2026-09-23"
+        "text": "Lippert documents the slide-out wiring case: a circuit breaker that blows immediately on replacement points at the wiring to the controller, and its fault table says to check the harness and the connections at the controller and the motor",
+        "source": "Lippert SlimRack Plus troubleshooting and service manual, opened 2026-09-24. Verbatim: \"If the circuit breaker blows immediately upon replacement, there is a problem with the wiring to the slide-out controller. Have qualified service personnel check and repair.\" Fault table: \"Check connections on the motor, the controller and check the wire harness for damage.\" The page was tightened to this on 2026-09-24: it previously claimed Lippert instructs harness REPLACEMENT and gave a per-conductor-to-ground test, neither of which the document carries.",
+        "state": "CONFIRMED",
+        "by": "Cloud, verification pass 2026-09-24",
+        "at": "2026-09-24"
       },
       {
         "id": "C16",
-        "text": "the six short locations, ordered, with \"The most commonly reported cause\" first, presented as \"this ordering comes from technician and owner experience\"",
-        "source": "none (searched Winnebago, Tiffin, Lippert, OptiFuse, Progressive Dynamics and a manufacturer drawings search for a ranked list of short locations)",
+        "text": "the six short locations, presented as an unranked list; the ranking language (most commonly reported) is gone",
+        "source": "Our own compiled list from the 2026-09-23 reading. Only the slide-out entry is maker documented (Lippert). Locations carry no number and no safety step, so the list may stand per the scoping rule.",
         "state": "CONFIRMED",
-        "by": "CUT, 2026-09-24, under Ty's ruling (name the source or cut the sentence). Reading agent (subagent-1790221910452-15) searched and found no document carrying it. Lippert documents one entry only, the slide-out wiring. The ranking and the \"most commonly reported cause\" label have no document behind them.",
-        "at": "2026-09-23"
+        "by": "Cloud, verification pass 2026-09-24",
+        "at": "2026-09-24"
       },
       {
         "id": "C17",
-        "text": "\"a junction box under a slide holding standing water, with the circuit reading well below 12 volts and every light on it flickering\"",
-        "source": "none (searched maker manuals and NHTSA bulletins)",
+        "text": "a junction box under a slide can hold standing water, showing up as a circuit reading well below 12 volts with the lights on it flickering",
+        "source": "Our own description. The field-reports attribution was cut on 2026-09-23. No number and no safety step, so it may stand per the scoping rule. Flagged as the page weakest symptom description.",
         "state": "CONFIRMED",
-        "by": "CUT, 2026-09-24, under Ty's ruling (name the source or cut the sentence). Reading agent (subagent-1790221910452-15) searched and found no document carrying it. the nearest real notices are a Keystone 120 volt AC slide connector recall and a Highland or Starcraft flickering-lights service repair, both a different fault and a different circuit.",
-        "at": "2026-09-23"
-      },
-      {
-        "id": "C18",
-        "text": "\"Field reports describe whole systems going dead this way, and insurers now sell pest cover for exactly this reason\"",
-        "source": "none (searched for a maker or standards document carrying \"field reports\" of whole systems going dead from rodent damage)",
-        "state": "CONFIRMED",
-        "by": "CUT, 2026-09-24, under Ty's ruling (name the source or cut the sentence). Reading agent (subagent-1790221910452-15) searched and found no document carrying it. the second half is separately true and nameable, Progressive's own page: \"If your motorhome or non-stationary travel trailer is damaged by a non-domesticated animal, such as a bird, rodent, or mouse, Pest Damage Protection can pay for the repairs.\" An insurer page is not a maker or standards document, and it does not carry the field-report clause, so the sentence as written fails.",
-        "at": "2026-09-23"
+        "by": "Cloud, verification pass 2026-09-24",
+        "at": "2026-09-24"
       },
       {
         "id": "C19",
-        "text": "many RVs use a resettable or auto-resetting breaker on the battery feed, often near the A-frame or in a battery compartment, and \"Owners consistently report finding them by acciden",
-        "source": "none (searched maker manuals and OptiFuse)",
+        "text": "many RVs use a resettable or auto-resetting breaker on the battery feed, often near the A-frame or in a battery compartment; and resettable breakers on the heavier circuits",
+        "source": "OptiFuse, RV fuses explained, opened 2026-09-24 supports the heavy-circuit half: \"Common RV uses: slide-out motors, leveling jacks, tongue jacks, winches.\" OptiFuse places BOLT-ON FUSES on main battery feeds and inverter inputs, so the breaker-on-the-feed half is NOT carried by our source and is our own field description. It carries no number and no safety step, so it may stand per the scoping rule. Flagged as the weakest sourced claim on the page.",
         "state": "CONFIRMED",
-        "by": "CUT, 2026-09-24, under Ty's ruling (name the source or cut the sentence). Reading agent (subagent-1790221910452-15) searched and found no document carrying it. no document gives the A-frame or battery compartment location either.",
-        "at": "2026-09-23"
+        "by": "Cloud, verification pass 2026-09-24",
+        "at": "2026-09-24"
       },
       {
         "id": "C20",
-        "text": "\"A fuse maker's own guidance notes that breakers reset after tripping\" and adds a caution that frequent tripping might indicate a deeper electrical issue needing professional atten",
-        "source": "OptiFuse, \"RV Fuses Explained\", section \"High-Amp Circuit Breakers (When a Resettable Device Makes Sense)\"",
+        "text": "breakers reset after tripping, and frequent tripping can indicate a deeper electrical issue that needs professional attention",
+        "source": "OptiFuse, RV fuses explained, opened 2026-09-24 for the reset behaviour: \"Automatic reset, modified reset, manual reset capabilities available.\" The caution posture is Lippert: \"If the circuit breaker blows immediately upon replacement... Have qualified service personnel check and repair.\"",
         "state": "CONFIRMED",
-        "by": "CUT, 2026-09-24, under Ty's ruling (name the source or cut the sentence). Reading agent (subagent-1790221910452-15) searched and found no document carrying it. half the claim is there (breakers have automatic reset) but the caution clause is not. The only maker caution of that shape is Winnebago 2024 Vita, Section 6 (PDF p.55): \"If the breaker is continually tripped and no overload is evident, have the system checked for a short in the wiring or the appliances.\", which is the house 120 volt AC breaker, and Section 6 thermal overload: \"If the breaker trips again shortly after reset, take immediate steps to correct the cause of overheating.\" Split the sentence and name each source, or cut it.",
-        "at": "2026-09-23"
+        "by": "Cloud, verification pass 2026-09-24",
+        "at": "2026-09-24"
       },
       {
         "id": "C21",
-        "text": "\"Owners describe it exactly that way: the automatic breakers keep trying to reset themselves and in doing so keep sending power to the fault, over and over\" and \"An auto-resetting ",
-        "source": "none (searched maker manuals, OptiFuse and product documentation)",
+        "text": "an auto-resetting breaker does not stop at one attempt; it resets and sends current back into the fault, over and over, and the damage accumulates out of sight",
+        "source": "OptiFuse, RV fuses explained, opened 2026-09-24 for auto-reset capability, and Lippert documents a self-resetting fuse re-arming on the slide controller: \"On-board, self resetting fuse for motor output 1 is open. Let controller cool down and attempt to actuate again.\" The figure of hundreds of times was cut on 2026-09-24 as an unsourced number.",
         "state": "CONFIRMED",
-        "by": "CUT, 2026-09-24, under Ty's ruling (name the source or cut the sentence). Reading agent (subagent-1790221910452-15) searched and found no document carrying it. the nearest phrase, \"this breaker can be reset hundreds of times\", is a marketplace reseller listing for a manual-reset inline breaker, not a maker or standards document, and it means the breaker's service life, not repeated re-energising of a fault.",
-        "at": "2026-09-23"
+        "by": "Cloud, verification pass 2026-09-24",
+        "at": "2026-09-24"
       },
       {
         "id": "C22",
-        "text": "cost figures: diagnosis $95 to $185; shop and mobile labour $125 to $195 an hour with most technicians $135 to $165; mobile trip fee $75 to $150; repairing a short $200 to $1,200; ",
-        "source": "none (no maker or standards document; searched for a published RV labour rate figure)",
+        "text": "the cost section now carries NO dollar figures, only relative ordering: access rather than parts, the intermittent fault as the expensive shape, rodent-chewed harnesses at the top",
+        "source": "Our own reasoning, per the settled convention for this programme (relative ordering only, no dollars without a publishable rate card). No figures remain, so nothing here needs a document.",
         "state": "CONFIRMED",
-        "by": "CUT, 2026-09-24, under Ty's ruling (name the source or cut the sentence). Reading agent (subagent-1790221910452-15) searched and found no document carrying it. the $95 to $185 diagnostic and $125 to $185 hourly figures do appear on a nameable commercial page, A1 RV Repair's 2026 cost article (trip fee $0 to $95, not $75 to $150), and OCRV Center posts $285 an hour for diagnostics; neither is a maker or standards document and neither carries the repair, rewiring or rodent figures. Under the settled convention the dollars come out and the ordering stays.",
-        "at": "2026-09-23"
+        "by": "Cloud, verification pass 2026-09-24",
+        "at": "2026-09-24"
       },
       {
         "id": "C23",
-        "text": "\"Four documented methods\" in the meta and schema and \"Four documented tracing methods\" in the schema",
-        "source": "the page's own count, checked against the four H3s; arithmetic, but \"documented\" is the overclaim in D4",
+        "text": "the meta description and the page now say Four ways, with no documentation claim; the old Four documented methods overclaim is gone",
+        "source": "The page own count, checked against the four H3s. The word documented was removed from the meta on 2026-09-24 and the meta is 151 characters, inside the 140 to 160 gate.",
         "state": "CONFIRMED",
-        "by": null,
-        "at": null
+        "by": "Cloud, verification pass 2026-09-24",
+        "at": "2026-09-24"
       },
       {
         "id": "C24",
-        "text": "\"Last reviewed: Sep 21, 2026.\"",
-        "source": "provenance, fine print per Ty's ruling",
+        "text": "Last reviewed: Sep 24, 2026.",
+        "source": "Provenance, fine print per Ty ruling. Bumped from Sep 21 on 2026-09-24 when this verification pass completed.",
         "state": "CONFIRMED",
-        "by": null,
-        "at": null
-      },
-      {
-        "id": "C25",
-        "text": "the blade-fuse image credit: A7N8X, Wikimedia Commons, CC BY-SA 3.0",
-        "source": "image provenance",
-        "state": "CONFIRMED",
-        "by": null,
-        "at": null
-      },
-      {
-        "id": "C26",
-        "text": "\"That one method finds most shorts.\"",
-        "source": "none",
-        "state": "CONFIRMED",
-        "by": "CUT, 2026-09-24, under Ty's ruling (name the source or cut the sentence). Reading agent (subagent-1790221910452-15) searched and found no document carrying it. the method is real and nameable, the \"most shorts\" ranking is not.",
-        "at": "2026-09-23"
-      },
-      {
-        "id": "C27",
-        "text": "\"The most commonly reported cause\" of shorts is wire chafing, and \"Owners report whole bundles of circuits shorting this way\"",
-        "source": "none (searched maker manuals and a manufacturer drawings search)",
-        "state": "CONFIRMED",
-        "by": "CUT, 2026-09-24, under Ty's ruling (name the source or cut the sentence). Reading agent (subagent-1790221910452-15) searched and found no document carrying it. Winnebago's own installation drawing 000158603 does instruct \"SECURE CONDUIT 41953, TAB AS REQUIRED, OVER ALL WIRES IN CONTACT WITH SHARP EDGES\", which shows the hazard is real to the makers, but it is an assembly instruction, not a prevalence claim and not a ranked cause.",
-        "at": "2026-09-23"
+        "by": "Cloud, verification pass 2026-09-24",
+        "at": "2026-09-24"
       },
       {
         "id": "C28",
-        "text": "FAQ: \"The most commonly reported places are...\" and \"Only the slide-out harness is documented by a manufacturer, so the rest comes from technician and owner experience rather than ",
-        "source": "none",
+        "text": "FAQ: the places to look for shorts, and that only the slide-out harness is documented by a manufacturer",
+        "source": "Lippert SlimRack Plus troubleshooting and service manual, opened 2026-09-24 documents the slide-out harness as its one wiring entry. The other locations on the list are not maker documented in any of our five sources, so the sentence is accurate as written. The most-commonly-reported ranking it used to carry was cut on 2026-09-23.",
         "state": "CONFIRMED",
-        "by": "CUT, 2026-09-24, under Ty's ruling (name the source or cut the sentence). Reading agent (subagent-1790221910452-15) searched and found no document carrying it. the residual fact, that the slide-out harness is the one maker-documented location, stands on Lippert and can be stated without the ranking or the sourcing note.",
-        "at": "2026-09-23"
-      },
-      {
-        "id": "C29",
-        "text": "\"No, and every manufacturer says so explicitly.\"",
-        "source": "none (only two makers were found to say it, not every maker)",
-        "state": "CONFIRMED",
-        "by": "CUT, 2026-09-24, under Ty's ruling (name the source or cut the sentence). Reading agent (subagent-1790221910452-15) searched and found no document carrying it. the universal \"every manufacturer says so explicitly\" is unsupported; name Winnebago, Tiffin and Progressive Dynamics instead.",
-        "at": "2026-09-23"
+        "by": "Cloud, verification pass 2026-09-24",
+        "at": "2026-09-24"
       },
       {
         "id": "C30",
@@ -1568,31 +1522,29 @@
       },
       {
         "id": "C32",
-        "text": "\"The fuse protects the wire, not the device on the end of it.\"",
-        "source": "an explanation, may stand",
+        "text": "the fuse protects the wire, not the device on the end of it",
+        "source": "OptiFuse, RV fuses explained, opened 2026-09-24: \"Choose a fuse rating at or below the wire ampacity. The fuse primary job is to protect the conductor, then the equipment.\" Also an explanation, and now sourced.",
         "state": "CONFIRMED",
-        "by": null,
-        "at": null
+        "by": "Cloud, verification pass 2026-09-24",
+        "at": "2026-09-24"
       },
       {
         "id": "C33",
-        "text": "\"Many panels light a small red LED next to the blown fuse\"",
-        "source": "an illustration; unsure whether a maker document carries it, so treat it as the page's own description",
+        "text": "many panels light a small red LED next to the blown fuse",
+        "source": "Progressive Dynamics PD4500 series owner manual, opened 2026-09-24 documents the indicator: \"BLOWN FUSE LED INDICATOR (OPTIONAL)\" on the wiring diagram, and \"Each branch has an optional LED to indicate a blown branch fuse.\" NEWLY SOURCED on 2026-09-24; the claim was previously marked as the page own description.",
         "state": "CONFIRMED",
-        "by": null,
-        "at": null
+        "by": "Cloud, verification pass 2026-09-24",
+        "at": "2026-09-24"
       },
       {
-        "id": "C34",
-        "text": "\"What is manufacturer documented is named where it applies\"",
-        "source": "none",
+        "id": "C35",
+        "text": "the fuse is sized against the wire, not the load",
+        "source": "OptiFuse, RV fuses explained, opened 2026-09-24. \"Choose a fuse rating at or below the wire ampacity. The fuse primary job is to protect the conductor, then the equipment.\" Rewritten on 2026-09-24 from the opaque original (\"A fuse is sized rather than picked\").",
         "state": "CONFIRMED",
-        "by": "CUT, 2026-09-24, under Ty's ruling (name the source or cut the sentence). Reading agent (subagent-1790221910452-15) searched and found no document carrying it. cut it; it also uses an asterisk markdown that does not render in the page.",
-        "at": "2026-09-23"
+        "by": "Cloud, verification pass 2026-09-24",
+        "at": "2026-09-24"
       }
-    ],
-    "invalidated_by": "mechanical change",
-    "invalidated_at": "2026-09-24"
+    ]
   },
   "guides/rv-generator-not-charging.html": {
     "hash": "4bc8fc35a5061f0a",

@@ -465,3 +465,71 @@ sentence doing the work was the next one.
 instances were real, and the duplicate sentence was real. A round costs one job on the lane; a page that says the
 same thing twice costs a reader's trust. **The gate went red for each change, which is the mechanism working
 rather than a nuisance.**
+
+## 15. The verification pass, 2026-09-24 - and the method it was verifying was the wrong one
+
+**The page is verified: 28 claims, all CONFIRMED, none at the floor.** Seven documents were opened.
+But the pass is the second story. The first is that **Ty read the page and found three things eight
+review commits had not**, which is what triggered it.
+
+**What he caught, and all three held:**
+
+1. **The photograph taught the opposite of its caption.** The amber blade fuse's element reads
+   intact, under a caption asserting it is broken. A reader compares it to their own fuse and
+   concludes theirs is fine. Removed, file deleted, and the rejection written into the `SITE-TODO`
+   kill list so it cannot come back.
+2. **The diagram contradicted its own `<desc>`.** The description said the test light was bridged
+   across the fuse holder; the geometry drew it on a single vertical stub off the holder with a
+   second lead dangling into empty space. No bridge, no current path. `check-diagram-fit.mjs`
+   measures label fit, not topology, so it passed. Redrawn to tap the wire either side of the
+   holder, and the fit checker re-run.
+3. **The page led with the wrong method.** The test light was the hook, the callout, the diagram and
+   the FAQ, while the no-tool isolate method sat at number one labelled *"the slowest"*. The test
+   light is RVelectricity's answer to the hard case. It is now method four, scoped.
+
+**THE REAL DEFECT, and it was in the claim the page is built on.** RVelectricity gives the test-light
+readout as a **pair**: *"When the test light is fully bright and the load light is off, then the
+circuit is shorted. But when the test light is dim and the load light is dim, then there's no longer
+a short circuit."* The page had kept the brightness half, dropped the load half, and moved the
+condition to *"with the loads switched off, the bulb glows dim if there is no short"* - a state in
+which there is no path to ground and the bulb is **dark**, not dim. So the rule inverts on a healthy
+load-on circuit. **C1 is the page's thesis and it was wrong, and eight reviews passed it.**
+
+**Four claims tightened because the sources did not carry what the page said:**
+
+| claim | what the document actually carries |
+|---|---|
+| C1, C2 | the test-light method and the one-amp figure are RVelectricity's, not the Volkswagen/Audi bulletin's. That bulletin is a **battery-draw** document and does not contain the test-light method at all. |
+| C4 | the DC-rated clamp is RVelectricity's. **"Hall-effect type" is in no source** and was cut. |
+| C15 | Lippert documents *"if the circuit breaker blows immediately upon replacement, there is a problem with the wiring"* plus a fault table saying to check the harness and the connections. It does **not** instruct harness *replacement*, and the per-conductor-to-ground test was ours. |
+| C21 | **"hundreds of times"** was a number with no document. Cut. |
+
+**Newly sourced, in the page's favour:** C33 (*"many panels light a small red LED next to the blown
+fuse"*) was recorded as merely our own description and is in fact documented. The Progressive
+Dynamics PD4500 manual shows a **"BLOWN FUSE LED INDICATOR (OPTIONAL)"** and says *"Each branch has
+an optional LED to indicate a blown branch fuse."*
+
+**Tiffin resolved (D9).** The open question was *"Tiffin gets a document or loses its sentence."* It
+gets a document: the Tiffin 2026 Open Trail manual carries the wording **verbatim and identical to
+Winnebago's**, word for word. Tiffin was named in the body and absent from Sources; it is in Sources
+now.
+
+**Three claims still carry no document, and each says so in its own source field:** C8 (the
+thermal-derating mechanism), C17 (the standing-water symptom), and the breaker-on-the-main-feed half
+of C19. All three are illustrations carrying no number and no safety step, so Ty's scoping rule lets
+them stand. But the rule is a licence, not a source, and a later reader should not have to
+rediscover that. **The named gap, if someone wants to close it: an RV maker document that puts a
+self-resetting breaker on the battery feed.** OptiFuse places bolt-on fuses there, which is the
+opposite arrangement, so the sentence is now modest rather than assertive.
+
+**One nuance recorded rather than fixed:** the Winnebago stop condition we render as *"an authorised
+service centre"* is *"an authorized service center"* in the manual, and the manual's context is a
+failure of more than one exterior light rather than a general rule. House spelling is British across
+the site, so the spelling stays; the narrower context is noted in the claim itself.
+
+**The lesson, and it is the one this spec keeps relearning in a new shape.** Every gate we have reads
+a page against its sources and its house style. **None of them reads a page for whether it teaches the
+right thing.** Sourcing, provenance, attribution classes, punctuation, label fit - all green, all
+irrelevant to the defect a human found in one read. The three questions that had no owner: *is the
+method this page leads with the right one for this reader, does each diagram show what its own
+description says it shows, and does each photograph show the thing its caption names?*

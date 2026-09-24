@@ -47,7 +47,7 @@
  <div class="sec-eyebrow">Troubleshooting guide</div>
     <h1>RV fuse keeps blowing: How to trace it</h1>
  <p class="lede">A fuse that keeps blowing is not a fuse problem. Something on that circuit is drawing far more current than it should, and the fuse is the only part of the system doing its job correctly. Replacing it repeatedly is not diagnosis. The good news is that tracing a short is a learned skill, and the tools are the last part of it rather than the first.</p>
- <p class="reviewed">Last reviewed: Sep 21, 2026.</p>
+ <p class="reviewed">Last reviewed: Sep 24, 2026.</p>
  </div>
 
  <div class="sec prose">
@@ -72,7 +72,7 @@
  <h3>One: Isolate by pulling loads</h3>
  <p>The slowest of the four and the easiest to trust, and the only one that needs no tools. With every load on that circuit switched off or disconnected, fit a fresh fuse. If it holds, bring the loads back one at a time: the one that blows the fuse is where the problem is. If it blows with everything disconnected, the fault is in the wire run itself and nothing plugged into the circuit is responsible. The technique appears in a Volkswagen/Audi service bulletin on tracing excess current draw in almost exactly these words: disconnect the components from the circuit one by one, and if the values are now within the normal range, the component causing the excess draw has been identified.</p>
  <h3>Two: Measure current with a clamp meter</h3>
- <p>A DC clamp lets you read current without breaking the circuit, which is a real advantage. Two things matter here. The clamp has to be rated for DC as well as AC, which means a Hall-effect type; many inexpensive clamps only do AC and will read nothing useful on a 12-volt circuit. And you must clamp a single conductor, because clamping the whole cable clamps both directions and the fields cancel to zero. With every load switched off and current still showing, walk the clamp downstream along the wire: the fault sits just before the point where the reading disappears.</p>
+ <p>A DC clamp lets you read current without breaking the circuit, which is a real advantage. Two things matter here. The clamp has to be rated for DC as well as AC. Most clamp meters only read AC through their jaws, and one of those will read nothing useful on a 12-volt circuit. And you must clamp a single conductor, because clamping the whole cable clamps both directions and the fields cancel to zero. With every load switched off and current still showing, walk the clamp downstream along the wire: the fault sits just before the point where the reading disappears.</p>
  <h3>Three: Measure voltage drop across the fuse</h3>
  <p>The least invasive method and the least known. Set the meter to millivolts DC and touch the probes to the two small test tabs on top of the fuse, without pulling it and without disturbing anything. Any positive reading means current is flowing, and a larger reading means more current. This one is for an overload rather than a dead short: a fuse that blows the instant you fit it leaves no current to measure, and the meter reads supply voltage across the gap instead of a drop. You then convert millivolts to milliamps with a chart for that fuse size. This is the right method when the fault only appears under load, because it leaves the circuit exactly as it was.</p>
  <h3>Four: The test light in the fuse holder</h3>
@@ -136,7 +136,7 @@
  <h3>Wire chafing on a sharp sheet metal edge</h3>
  <p>Usually a missing or perished grommet where a bundle passes through a frame member or bulkhead. A whole bundle of circuits can short this way at one point. When you have a mystery fault on wires that share a route, this is the first place to look, and it is often visible once you are under the RV with a torch.</p>
  <h3>A pinched or chafed harness in a slide-out</h3>
- <p>This one is manufacturer documented. Lippert's own slide-out troubleshooting material lists defective wiring and instructs harness inspection and replacement. If the fuse blows only when the slide moves, this is your answer, and the harness test is to check each conductor to ground at the controller and motor ends.</p>
+ <p>This one is manufacturer documented. Lippert's slide-out troubleshooting material gives one test for wiring: a circuit breaker that blows immediately when you replace it points at the wiring to the controller, and its fault table says to check the harness and the connections at both the controller and the motor. If the fuse blows only when the slide moves, the harness is where to look.</p>
  <h3>Water reaching a fixture or junction</h3>
  <p>A junction box under a slide can hold standing water, which shows up as a circuit reading well below 12 volts with every light on it flickering. If the fault appears in rain, this is it.</p>
  <h3>Rodent damage</h3>
@@ -155,7 +155,7 @@
  <h3>A dead short on the main feed</h3>
  <p>Everything 12-volt is dead at once, while the 120 volt side still works on shore power. Here you are not looking at a branch fuse at all. The candidates are the main breaker or fuse on the positive battery cable, the battery disconnect, and the frame ground. Work along the battery-to-panel path measuring voltage at each point: around 12 volts on both sides of a component means it is passing, and voltage on one side only means you have found the open point.</p>
  <h3>A note on main-feed breakers</h3>
- <p>Many RVs use a resettable or auto-resetting breaker on the battery feed rather than a fuse, often mounted somewhere awkward near the A-frame or in a battery compartment. Before assuming a complex fault, find that breaker and confirm it is set.</p>
+ <p>Many RVs use a resettable or auto-resetting breaker on the battery feed, often mounted somewhere awkward near the A-frame or in a battery compartment. Before assuming a complex fault, find that breaker and confirm it is set.</p>
  </div>
 
  <h2>Intermittent shorts</h2>
@@ -170,9 +170,9 @@
 
  <h2>Resettable breakers, and why they hide faults</h2>
  <div class="card">
- <p>RVs use fuses on branch circuits and resettable breakers on the heavier things: the main battery feed, inverter feeds, slide and jack circuits, awning circuits. Breakers reset after tripping, which is convenient, and frequent tripping can indicate a deeper electrical issue that needs professional attention.</p>
+ <p>RVs use fuses on branch circuits and resettable breakers on the heavier things: slide and jack circuits, winches, and often the battery feed itself. Breakers reset after tripping, which is convenient, and frequent tripping can indicate a deeper electrical issue that needs professional attention.</p>
  <h3>The masking problem</h3>
- <p>An auto-resetting breaker does not stop at one attempt. It resets and sends current back into the fault, over and over, hundreds of times in a bad case. A fuse blows once and forces you to find the cause. The breaker keeps feeding the damage, and the damage accumulates somewhere you cannot see.</p>
+ <p>An auto-resetting breaker does not stop at one attempt. It resets and sends current back into the fault, over and over. A fuse blows once and forces you to find the cause. The breaker keeps feeding the damage, and the damage accumulates somewhere you cannot see.</p>
  <h3>What to do about it</h3>
  <p>If a resettable breaker on a slide or jack circuit keeps tripping, treat that as a fault to find rather than a button to press. And if a circuit uses an auto-resetting type and something on it fails intermittently for no obvious reason, that breaker is a suspect rather than a cure.</p>
  </div>
@@ -212,6 +212,7 @@
  <h3>Sources</h3>
  <ul>
   <li><a href="https://www.winnebago.com/Files/Files/Winnebago/Resources/OperatorManuals/Operator%202024/24_Vita.pdf" target="_blank" rel="noopener">Winnebago 2024 Vita owner manual, fuse and breaker wording (PDF)</a></li>
+  <li><a href="https://tiffinmotorhomes.com/wp-content/uploads/2025/07/2026-Open-Trail-Owners-Manual_Rev-1.pdf" target="_blank" rel="noopener">Tiffin 2026 Open Trail owner manual (PDF)</a></li>
   <li><a href="https://www.optifuse.com/blog/rv-fuses-explained/" target="_blank" rel="noopener">OptiFuse, RV fuses explained</a></li>
   <li><a href="https://static.nhtsa.gov/odi/tsbs/2013/MC-10212668-9999.pdf" target="_blank" rel="noopener">Volkswagen/Audi service bulletin on tracing excess current draw (PDF)</a></li>
    <li><a href="https://www.progressivedyn.com/wp-content/uploads/Support/manuals/PD4500-110030J-owners-manual-english.pdf" target="_blank" rel="noopener">Progressive Dynamics, PD4500 series owner's manual (PDF)</a></li>
