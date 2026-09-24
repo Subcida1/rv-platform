@@ -1,6 +1,13 @@
 {
+  "404.html": {
+    "hash": "b5c378aa192d7b71",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
+  },
   "about.html": {
-    "hash": "ccfc3840489c34f8",
+    "hash": "8078ad073019e9d0",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -26,7 +33,7 @@
     "sources": []
   },
   "directory/index.html": {
-    "hash": "94bdbdb75b7e3559",
+    "hash": "4b438a82b7362215",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -202,7 +209,7 @@
     ]
   },
   "guides/index.html": {
-    "hash": "4cfe45f2ba3475fe",
+    "hash": "704903e713550d80",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -1543,6 +1550,62 @@
         "state": "CONFIRMED",
         "by": "Cloud, verification pass 2026-09-24",
         "at": "2026-09-24"
+      },
+      {
+        "id": "C6",
+        "text": "\"overcurrents below about 600 percent of rated current are termed an overload, while a short circuit is above that\" attributed to \"the protection industry\" and \"a fuse maker's own ",
+        "source": "OptiFuse, RV fuses explained (in Sources); the sentence does not name it",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C18",
+        "text": "\"Field reports describe whole systems going dead this way, and insurers now sell pest cover for exactly this reason\"",
+        "source": "\"Field reports\" and \"insurers\", unnamed",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C25",
+        "text": "the blade-fuse image credit: A7N8X, Wikimedia Commons, CC BY-SA 3.0",
+        "source": "image provenance",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C26",
+        "text": "\"That one method finds most shorts.\"",
+        "source": "a prevalence claim with no source",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C27",
+        "text": "\"The most commonly reported cause\" of shorts is wire chafing, and \"Owners report whole bundles of circuits shorting this way\"",
+        "source": "prevalence plus unnamed owners",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C29",
+        "text": "\"No, and every manufacturer says so explicitly.\"",
+        "source": "a universal claim; the body names Winnebago, Tiffin and Progressive Dynamics, not every maker",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C34",
+        "text": "\"What is manufacturer documented is named where it applies\"",
+        "source": "process narration about our sourcing, cut",
+        "state": "OPEN",
+        "by": null,
+        "at": null
       }
     ]
   },
@@ -2698,6 +2761,127 @@
         "state": "CONFIRMED",
         "by": null,
         "at": null
+      }
+    ]
+  },
+  "guides/rv-slide-out-not-working.html": {
+    "hash": "60108ed146f0b8f8",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": [],
+    "claims": [
+      {
+        "id": "C1",
+        "text": "the manual override procedure for an in-wall electric slide, and whether it is a controller button sequence, a motor release, or both",
+        "source": "Lippert In-Wall Slide-Out owner's manual, CCD-0001602, Rev 04.19.23",
+        "state": "READ",
+        "by": "Lippert CCD-0001602 / CCD-0001616 / CCD-0001459 / CCD-0008630 and BAL overrides, read 2026-09-24",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C2",
+        "text": "the manual override for a hydraulic slide, and what it needs to turn the pump (a drill, a hex, a specific port)",
+        "source": "Lippert Hydraulic Through Frame Slide-Out owner's manual, CCD-0001616, Rev 03.11.2026",
+        "state": "READ",
+        "by": "Lippert CCD-0001602 / CCD-0001616 / CCD-0001459 / CCD-0008630 and BAL overrides, read 2026-09-24",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C3",
+        "text": "the manual override for a cable slide",
+        "source": "BAL Accu-Slide service manual 3.04, and the Accu-Slide manual override procedure INS.SLD.006 on balrvproducts.com",
+        "state": "READ",
+        "by": "Lippert CCD-0001602 / CCD-0001616 / CCD-0001459 / CCD-0008630 and BAL overrides, read 2026-09-24",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C4",
+        "text": "a slide-out needs the house battery above a usable voltage to run, and a low battery is the first thing to check",
+        "source": "Lippert CCD-0001602 (capable from 8 volts, greater amperage) and CCD-0001459 (engine or generator running, or shore power)",
+        "state": "READ",
+        "by": "Lippert CCD-0001602 / CCD-0001616 / CCD-0001459 / CCD-0008630 and BAL overrides, read 2026-09-24",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C5",
+        "text": "an ignition or parking-brake interlock may be required for the room to move, and what it is differs by coach maker",
+        "source": "the same maker's two manuals disagree: CCD-0001602 requires the ignition OFF, CCD-0001459 requires the engine or generator running, the park",
+        "state": "READ",
+        "by": "Lippert CCD-0001602 / CCD-0001616 / CCD-0001459 / CCD-0008630 and BAL overrides, read 2026-09-24",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C6",
+        "text": "a self-resetting 12 volt breaker feeds the slide circuit, it trips rather than blows, and it may be behind a panel or near the battery",
+        "source": "Lippert CCD-0001602: a minimum 30 amp circuit breaker, and a 30 amp resetting or blade fuse at the controller, with the location deferred to",
+        "state": "READ",
+        "by": "Lippert CCD-0001602 / CCD-0001616 / CCD-0001459 / CCD-0008630 and BAL overrides, read 2026-09-24",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C7",
+        "text": "controller fault codes, what they mean, and whether the code is a blink count, a display, or an app",
+        "source": "CCD-0001602 for the in-wall controller (codes 2, 3, 4, 5, 6, 8, 9; red LED 2 to 9 blinks, green LED 1 or 2 for motor 1 or 2). SlimRack repor",
+        "state": "READ",
+        "by": "Lippert CCD-0001602 / CCD-0001616 / CCD-0001459 / CCD-0008630 and BAL overrides, read 2026-09-24",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C8",
+        "text": "the mechanisms differ in their failure modes: in-wall electric (motor or gear pack), cable (cable, pulley, bracket), rack and pinion (gear, rail), hydraulic (fluid, pump, solenoid,",
+        "source": "CCD-0001602, CCD-0001459, CCD-0001616, BAL service and override documents, one per mechanism",
+        "state": "READ",
+        "by": "Lippert CCD-0001602 / CCD-0001616 / CCD-0001459 / CCD-0008630 and BAL overrides, read 2026-09-24",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C9",
+        "text": "SAFETY: never reach into, under or through a gap in a room that can be commanded to move, and clear the room before travel",
+        "source": "Lippert CCD-0001602 and CCD-0001616: Keep hands and other body parts away from slide-out mechanisms during actuation. Severe injury or death",
+        "state": "READ",
+        "by": "Lippert CCD-0001602 / CCD-0001616 / CCD-0001459 / CCD-0008630 and BAL overrides, read 2026-09-24",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C10",
+        "text": "SAFETY: take the load off the mechanism before manually retracting, because the room's weight is on the gears or the ram",
+        "source": "CONFIRMED - CUT. No maker document states it. The nearest wording is a service instruction: replacing a gear rack requires the room to be su",
+        "state": "CONFIRMED",
+        "by": "cut: no maker states it, see spec C10",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C11",
+        "text": "a room that moves crooked or slowly is an alignment, seal or mechanism problem, not an electrical one",
+        "source": "BAL Accu-Slide installation manual: outside cables slack about 1/2 inch (1 inch total) when the room is full out, inside cables slack when f",
+        "state": "READ",
+        "by": "Lippert CCD-0001602 / CCD-0001616 / CCD-0001459 / CCD-0008630 and BAL overrides, read 2026-09-24",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C12",
+        "text": "the slide seals and the roof of the room need conditioning, and a seal that drags can make the room appear to be failing",
+        "source": "Lippert CCD-0001602 maintenance (keep the gear racks and seals clean and free of debris; no grease or lubrication is necessary) and CCD-0001",
+        "state": "READ",
+        "by": "Lippert CCD-0001602 / CCD-0001616 / CCD-0001459 / CCD-0008630 and BAL overrides, read 2026-09-24",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C13",
+        "text": "what the parts cost, from a breaker or a fuse to a motor, a gear pack, a controller and a hydraulic solenoid",
+        "source": "no document; the settled convention applies, so relative ordering only, no absolute dollars. Left OPEN deliberately",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C14",
+        "text": "anything a reader is told to do while the room is in motion",
+        "source": "Lippert CCD-0001602, CCD-0001459 and CCD-0001616 safety wording, quoted",
+        "state": "READ",
+        "by": "Lippert CCD-0001602 / CCD-0001616 / CCD-0001459 / CCD-0008630 and BAL overrides, read 2026-09-24",
+        "at": "2026-09-24"
       }
     ]
   },
@@ -4139,84 +4323,84 @@
     ]
   },
   "index.html": {
-    "hash": "013934fff985146d",
+    "hash": "9c1ec196ee992bb4",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "manuals/brands.html": {
-    "hash": "9a52d8d984118c32",
+    "hash": "baaa8a0c00f59a5f",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "manuals/chassis-and-drivetrain.html": {
-    "hash": "481341e3cd7b1ce6",
+    "hash": "d11df04a80d9d21c",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "manuals/exterior-and-body.html": {
-    "hash": "07d51fcfef9afc44",
+    "hash": "1227a92c579c0eb3",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "manuals/heating-and-cooling.html": {
-    "hash": "c984806adddc200f",
+    "hash": "5c56eb5e50ac0424",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "manuals/index.html": {
-    "hash": "dbd831b1a6356a63",
+    "hash": "dc777621fec1c09f",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "manuals/kitchen-and-appliances.html": {
-    "hash": "a105fc1c0f02f3d5",
+    "hash": "8d2ba9377c1891c2",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "manuals/power-and-electrical.html": {
-    "hash": "9805bf4786d6f566",
+    "hash": "7a65512d35fe9340",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "manuals/recalls.html": {
-    "hash": "00a35b6f31caa439",
+    "hash": "8c77fe14aa116fbd",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "manuals/sanitation-and-tanks.html": {
-    "hash": "13146a68ffea2b71",
+    "hash": "33620d59ec874ead",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "manuals/towing-and-running-gear.html": {
-    "hash": "ea60e80bfe7abb32",
+    "hash": "48ca0744c9094b37",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "manuals/water-and-plumbing.html": {
-    "hash": "3bd7dce537f8773d",
+    "hash": "96db9646bb703003",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -4230,14 +4414,14 @@
     "sources": []
   },
   "tools/index.html": {
-    "hash": "e8996519cdb3a39e",
+    "hash": "df0d937f640904ce",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "tools/weight-calculator.html": {
-    "hash": "b2b5bd9f01e39cf9",
+    "hash": "4c854fcded333fd4",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,

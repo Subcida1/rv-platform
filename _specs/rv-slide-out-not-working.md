@@ -131,8 +131,8 @@ H2  Related guides
 ## 7. Claims list: what has to be read before this page is drafted
 
 Statuses use the ledger's vocabulary (`CONFIRMED`, `READ`, `WAIVED`, `SOURCED`, `OPEN`) because the status column
-is a machine input to `verify-content.py`. **Nothing here is sourced yet, so everything starts at `SOURCED` or
-`OPEN`, and the reading is the next step.**
+is a machine input to `verify-content.py`. **The reading is done: the status column below carries what was read, and
+the documents are named in `## 12`.**
 
 The floor is Ty's scoping rule: every claim carrying a **number** or a **safety step** gets read against the
 maker's own document before drafting; a definition, an illustration or arithmetic may stand. **Because a moving
@@ -144,20 +144,20 @@ carries a number.**
 
 | # | Claim | Source it should carry | Status |
 |---|---|---|---|
-| C1 | **the manual override procedure for an in-wall electric slide**, and whether it is a controller button sequence, a motor release, or both | **Lippert's Schwintek in-wall slide-out manual** (in the manuals corpus) | OPEN |
-| C2 | **the manual override for a hydraulic slide**, and what it needs to turn the pump (a drill, a hex, a specific port) | **Lippert's hydraulic slide-out manual** | OPEN |
-| C3 | **the manual override for a cable slide** | **Norco/BAL Accu-Slide manual** | OPEN |
-| C4 | **a slide-out needs the house battery above a usable voltage to run**, and a low battery is the first thing to check | a maker document stating the operating voltage requirement | OPEN |
-| C5 | **an ignition or parking-brake interlock may be required** for the room to move, and what it is differs by coach maker | a coach maker's owner manual (Winnebago, Tiffin, Keystone are all in the corpus) | OPEN |
-| C6 | **a self-resetting 12 volt breaker feeds the slide circuit**, it trips rather than blows, and it may be behind a panel or near the battery | a maker document, plus one that names where it is | OPEN |
-| C7 | **controller fault codes**, what they mean, and whether the code is a blink count, a display, or an app | **Lippert's controller documentation for the specific system**; a generic table is not acceptable and the page must not imply one | OPEN |
-| C8 | **the mechanisms differ in their failure modes**: in-wall electric (motor or gear pack), cable (cable, pulley, bracket), rack and pinion (gear, rail), hydraulic (fluid, pump, solenoid, ram) | one document per mechanism, or one comparison from a maker | OPEN |
-| C9 | **SAFETY: never reach into, under or through a gap in a room that can be commanded to move**, and clear the room before travel | a maker's safety wording | OPEN |
-| C10 | **SAFETY: take the load off the mechanism before manually retracting**, because the room's weight is on the gears or the ram | a maker's override procedure, which states this | OPEN |
-| C11 | **a room that moves crooked or slowly is an alignment, seal or mechanism problem**, not an electrical one | a maker's alignment or service document | OPEN |
-| C12 | **the slide seals and the roof of the room need conditioning**, and a seal that drags can make the room appear to be failing | a maker document, or the parts maker's | OPEN |
-| C13 | **what the parts cost**, from a breaker or a fuse to a motor, a gear pack, a controller and a hydraulic solenoid | no document; the settled convention applies, so **relative ordering only, no absolute dollars** unless a publishable source carries them | OPEN |
-| C14 | **anything a reader is told to do while the room is in motion** | a maker's safety wording, or restated as our own instruction | OPEN |
+| C1 | **the manual override procedure for an in-wall electric slide**, and whether it is a controller button sequence, a motor release, or both | **Lippert In-Wall Slide-Out owner's manual, CCD-0001602, Rev 04.19.23** | **READ** |
+| C2 | **the manual override for a hydraulic slide**, and what it needs to turn the pump (a drill, a hex, a specific port) | **Lippert Hydraulic Through Frame Slide-Out owner's manual, CCD-0001616, Rev 03.11.2026** | **READ** |
+| C3 | **the manual override for a cable slide** | **BAL Accu-Slide service manual 3.04, and the Accu-Slide manual override procedure INS.SLD.006** on balrvproducts.com | **READ** |
+| C4 | **a slide-out needs the house battery above a usable voltage to run**, and a low battery is the first thing to check | Lippert CCD-0001602 (capable from 8 volts, greater amperage) and CCD-0001459 (engine or generator running, or shore power) | **READ** |
+| C5 | **an ignition or parking-brake interlock may be required** for the room to move, and what it is differs by coach maker | the same maker's two manuals disagree: CCD-0001602 requires the ignition OFF, CCD-0001459 requires the engine or generator running, the parking brake where applicable, and park or neutral | **READ** |
+| C6 | **a self-resetting 12 volt breaker feeds the slide circuit**, it trips rather than blows, and it may be behind a panel or near the battery | Lippert CCD-0001602: a minimum 30 amp circuit breaker, and a 30 amp resetting or blade fuse at the controller, with the location deferred to the RV manufacturer | **READ** |
+| C7 | **controller fault codes**, what they mean, and whether the code is a blink count, a display, or an app | CCD-0001602 for the in-wall controller (codes 2, 3, 4, 5, 6, 8, 9; red LED 2 to 9 blinks, green LED 1 or 2 for motor 1 or 2). SlimRack reports its own scheme (CCD-0001459); hydraulic and cable publish none | **READ** |
+| C8 | **the mechanisms differ in their failure modes**: in-wall electric (motor or gear pack), cable (cable, pulley, bracket), rack and pinion (gear, rail), hydraulic (fluid, pump, solenoid, ram) | CCD-0001602, CCD-0001459, CCD-0001616, BAL service and override documents, one per mechanism | **READ** |
+| C9 | **SAFETY: never reach into, under or through a gap in a room that can be commanded to move**, and clear the room before travel | Lippert CCD-0001602 and CCD-0001616: *Keep hands and other body parts away from slide-out mechanisms during actuation. Severe injury or death may result.* | **READ** |
+| C10 | **SAFETY: take the load off the mechanism before manually retracting**, because the room's weight is on the gears or the ram | **CONFIRMED - CUT.** No maker document states it. The nearest wording is a service instruction: replacing a gear rack requires the room to be supported *to get the weight off the slideout arms*. It must NOT be presented as a manual-retract step, and the heading that assumed it is replaced by the travel-safety rule the reading did find | CONFIRMED |
+| C11 | **a room that moves crooked or slowly is an alignment, seal or mechanism problem**, not an electrical one | BAL Accu-Slide installation manual: outside cables slack about 1/2 inch (1 inch total) when the room is full out, inside cables slack when full in, half of each chain tight | **READ** |
+| C12 | **the slide seals and the roof of the room need conditioning**, and a seal that drags can make the room appear to be failing | Lippert CCD-0001602 maintenance (keep the gear racks and seals clean and free of debris; no grease or lubrication is necessary) and CCD-0001459 maintenance (a dry lubricant by hand if the system squeaks) | **READ** |
+| C13 | **what the parts cost**, from a breaker or a fuse to a motor, a gear pack, a controller and a hydraulic solenoid | no document; the settled convention applies, so **relative ordering only, no absolute dollars**. Left OPEN deliberately | OPEN |
+| C14 | **anything a reader is told to do while the room is in motion** | Lippert CCD-0001602, CCD-0001459 and CCD-0001616 safety wording, quoted | **READ** |
 
 **Naming, not inference.** Every maker named above is a real document that has to be *fetched and read* before its
 name goes in a sentence. **The solar page's two unverified attributions were caught only while recording its
@@ -233,7 +233,9 @@ This programme's classes were learned the hard way on seventeen pages. They appl
 
 **For Ty: no open calls.** The one question the sibling specs raised was the cost convention, and it is settled.
 
-## 11. State at handoff## 12. The reading, 2026-09-24 11:10 (reading agent, five makers, safety first)
+## 11. The reading
+
+### The first pass, 2026-09-24 11:10 (reading agent, five makers, safety first)
 
 **Nine of the ten items came back SUPPORTED with verbatim quotes, and ONE came back NOT FOUND in a way that
 matters.** The reading went at the override procedures first, because that is the page's most valuable content
@@ -308,11 +310,35 @@ diagnostic one.**
   stripped gears, the whole gearbox replaced), hydraulic (**pump-side only** - motor, Trombetta, low voltage; **no
   maker-stated solenoid or ram leak failure was found**).
 
-**All ten items need recording against this page's claims before it is drafted, and none of them is a guess.**
+**All ten items are recorded against this page's claims, and none of them is a guess.**
 
+### The second pass, reading the documents first-hand before the draft (Cloud, 2026-09-24)
 
-Placeholder. The drafter fills this once the page exists, in the shape the other specs use: what is done and
-committed, the numbered items remaining before the first review round, and why the handoff happened where it did.
+Four things changed between the summary above and the draft, and each one came from opening the document rather
+than from trusting the summary:
+
+1. **The in-wall fault table was completed from the document, and it has no code 7.** Red LED 2 to 9: 2 battery
+   drop out (below 6 volts while running, or a short in the switch wiring), 3 low battery (below 8 volts at the
+   start of a cycle), 4 high battery (above 18 volts), 5 excessive motor current, 6 motor short circuit, 8 wire
+   short between controller and motor, 9 hall power shorted to ground. **There is no code 7**, and the page says
+   so rather than filling the gap.
+2. **The two Lippert controllers differ on protection, not only on codes.** The in-wall override keeps over-current
+   and short-circuit detection enabled. Lippert's SlimRack troubleshooting documentation states the opposite for
+   its own system: *when in electronic override mode, electronic protections will be disabled.*
+3. **The interlock disagreement is inside one maker, not across makers.** CCD-0001602 requires the ignition OFF;
+   CCD-0001459 requires the engine or generator RUNNING, the parking brake where applicable, and the transmission
+   in park or neutral. **The page states both and attributes each, instead of inventing a universal rule.**
+4. **The hydraulic override direction is printed with its document named and the room as the check.**
+   CCD-0001616 Rev 03.11.2026 says forward, clockwise, retracts and reverse extends. The first pass found another
+   Lippert document saying the opposite, so the page gives the direction with the manual named and tells the
+   reader to watch the room and reverse the drill if it moves the wrong way.
+
+**One more pair the page uses, because it is the kind of thing a competitor's page gets wrong:** the in-wall
+maintenance section says *no grease or lubrication is necessary, and in some situations may be detrimental to the
+long-term dependability of the system*, while the rack and pinion manual says to hand-apply a dry lubricant if the
+system squeaks. Both are quoted, each against its own document.
+
+## 12. State at handoff, 2026-09-24 (Cloud)
 
 **The three standing steps for this page, all earned on the pages before it:**
 
