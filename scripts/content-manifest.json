@@ -1336,114 +1336,114 @@
       {
         "id": "C3",
         "text": "A probe reads infinity with the tank empty and roughly 10,000 to 100,000 ohms submerged, on an analog meter rather than a digital one",
-        "source": "the probe maker's own site (Valterra, Horst Miracle Probes)",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "source": "rvprobes.com FAQ",
+        "state": "READ",
+        "by": "Cloud, 2026-09-23. rvprobes.com FAQ (Horst, the probe maker's own site): 'with no water in the tanks. It should read infinity on the Ohm meter'; 'the resistance between the common probe and any of the individual probes while submerged and with no wires on them should be about 10000 ohms to 100000 ohms depending on the water. This must be done with an analog ohm meter.'",
+        "at": "2026-09-23"
       },
       {
         "id": "C4",
         "text": "Adding a teaspoon of salt to fresh or soft water so the panel can see it",
-        "source": "Valterra's Horst documentation",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "source": "rvprobes.com FAQ",
+        "state": "READ",
+        "by": "Cloud, 2026-09-23. Same FAQ: 'If you are testing the tank with fresh water or soft water, there may not be enough connectivity in the water to make a reading. ... You can add a teaspoon of salt to your fresh water.'",
+        "at": "2026-09-23"
       },
       {
         "id": "C5",
         "text": "\"Recommendations to drive around with ice cubes are no longer necessary\"",
-        "source": "Valterra's Horst documentation, quoted",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "source": "no reachable document",
+        "state": "OPEN",
+        "by": "Cloud, 2026-09-23. NOT FOUND. The Valterra product page carries no ice-cube statement (the only 'ice' hit there and in the maker's FAQ is inside the word 'service'). The quote attributed to the probe maker cannot be reached, so under Ty's ruling the sentence is cut unless an archived copy surfaces.",
+        "at": "2026-09-23"
       },
       {
         "id": "C6",
         "text": "\"Sludge acts like a conductor between the positive content level sensors down the tank to the negative probe located at the bottom\"",
-        "source": "Valterra's Horst documentation, quoted",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "source": "Valterra product page + rvprobes.com FAQ",
+        "state": "READ",
+        "by": "Cloud, 2026-09-23. Valterra product page, quoted in the page: 'The sludge acts like a conductor between the positive content level sensors down the tank to the negative probe that is located at the bottom of the tank.' The maker's FAQ says the same as 'false conductance'.",
+        "at": "2026-09-23"
       },
       {
         "id": "C7",
         "text": "Teflon-sleeved replacement probes with a shield over the black-tank probe, fitting the existing holes and working with the existing panel",
-        "source": "Valterra's Horst product page",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "source": "Valterra product page + rvprobes.com FAQ",
+        "state": "READ",
+        "by": "Cloud, 2026-09-23. Valterra: 'Delrin body and teflon tube which prevents any liquid residue or sludge from setting up a conductive path'; 'roof over the probe sensor to prevent toilet paper'; 'fit the 3/8in diameter holes of existing probes'; 'Compatibility with existing wiring and monitors.'",
+        "at": "2026-09-23"
       },
       {
         "id": "C8",
         "text": "White is ground at the empty level, yellow the one-third probe, green two-thirds, red full",
-        "source": "Lippert's Intelli-view tank monitor manual (in Sources)",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "source": "Lippert Intelli-view manual",
+        "state": "READ",
+        "by": "Cloud, 2026-09-23. Lippert Intelli-view manual: 'White - Ground(-) connect to EMPTY (E) sensor'; 'Yellow - LOW level (1/3)'; 'Green - MID level (2/3)'; 'Red - FULL level (F)'.",
+        "at": "2026-09-23"
       },
       {
         "id": "C9",
         "text": "Thetford's cleaning method: half the bottle into a 40 gallon black tank and half into the gray, flush and fill, mix by driving, sit 24 hours, drive again, dump and rinse",
-        "source": "Thetford's Level Gauge Cleaner page (in Sources)",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "source": "Thetford Level Gauge Cleaner page",
+        "state": "READ",
+        "by": "Cloud, 2026-09-23. Thetford's own Level Gauge Cleaner FAQ: 'choose a warm day, above 75F, pour 1/2 of bottle of LGC into 40 gallon black holding tank through toilet opening. Pour 1/2 ... into 40 gallon grey holding tank ... Flush the drain with running water and fill the tank. Mix by driving around and let it sit 24 hours. Drive vehicle again to loosen deposits. Empty and rinse.' The page omits the 75F requirement.",
+        "at": "2026-09-23"
       },
       {
         "id": "C10",
         "text": "Thetford's cleaner must not go in the fresh water tank",
-        "source": "the same Thetford page",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "source": "Thetford Level Gauge Cleaner page",
+        "state": "READ",
+        "by": "Cloud, 2026-09-23. Same Thetford page: 'DO NOT use in freshwater tank.'",
+        "at": "2026-09-23"
       },
       {
         "id": "C11",
         "text": "Garnet's advice for an already-fouled tank: a liquid treatment left in with roughly 30 percent fresh water, driving for two or three days; and the waste did not build up in one day",
-        "source": "Garnet's SeeLevel guidance",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "source": "Garnet SeeLevel 709 manual p.23",
+        "state": "READ",
+        "by": "Cloud, 2026-09-23. Garnet SeeLevel manual p.23: 'a high concentration of the chemical in the tank and approximately 30% full of fresh water. Hopefully you can drive for 2-3 days'; 'The waste did not build up on the tank wall in one day, so it may not dissolve in one treatment!' It names Tissue Digester, Sensor Cleaner and Happy Campers Extreme Cleaner.",
+        "at": "2026-09-23"
       },
       {
         "id": "C12",
         "text": "SeeLevel limits: not for metal tanks; tank wall under about three eighths of an inch; metal within about two inches of a sender can be misread as water; every sender and the consol",
-        "source": "the SeeLevel 709 series manual (in Sources)",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "source": "Garnet SeeLevel 709 manual, sender installation + troubleshooting",
+        "state": "READ",
+        "by": "Cloud, 2026-09-23. Garnet SeeLevel manual. TWO CORRECTIONS NEEDED: (a) the page says 'anything metal within roughly two inches of the sender can be misread as water' but the manual reads 'any metal is at least 1in away from either side, top and bottom of the sender, and at least 2in away from the face of the sender'; (b) the page says the wall must be 'under about three eighths of an inch' but the manual's own wording is a tested case: 'We have tested the sender on an actual tank with 3/8in wall thickness to ensure proper operation', and a thicker wall reads zero. The metal-tank and shared-ground claims are confirmed.",
+        "at": "2026-09-23"
       },
       {
         "id": "C13",
         "text": "Garnet's own concession that extreme internal sludge buildup will stop the gauge working properly",
-        "source": "the same SeeLevel manual",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "source": "Garnet SeeLevel 709 manual",
+        "state": "READ",
+        "by": "Cloud, 2026-09-23. Garnet manual: 'If sludge buildup in the tank becomes extreme the gauge will cease to operate properly.'",
+        "at": "2026-09-23"
       },
       {
         "id": "C14",
         "text": "SeeLevel diagnostics: signal power typically 50 to 60 percent, works down to about 20 percent, 100 percent ideal, with discrete error codes",
-        "source": "the same SeeLevel manual",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "source": "Garnet SeeLevel 709 manual",
+        "state": "READ",
+        "by": "Cloud, 2026-09-23. Garnet manual: 'Typical signal power should be 50% to 60%. The gauge will work with minimum signal strength as low as 20% ... P00 = 100%.' There is an Error Codes section covering open circuit and short circuit.",
+        "at": "2026-09-23"
       },
       {
         "id": "C15",
         "text": "Removing an adhered sensor after installation damages it and the damage is not covered",
-        "source": "the same SeeLevel manual",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "source": "Garnet SeeLevel 709 manual",
+        "state": "READ",
+        "by": "Cloud, 2026-09-23. Garnet manual: 'Removing the sender from the tank after the sender has been permanently installed will cause damage to the sender that is NOT covered under warranty.'",
+        "at": "2026-09-23"
       },
       {
         "id": "C16",
         "text": "Thetford's own claim that organic residue dissolves and mineral scale and electrical faults are outside what a cleaner can do",
-        "source": "the same Thetford page",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "source": "Thetford page does not carry it",
+        "state": "OPEN",
+        "by": "Cloud, 2026-09-23. NOT SUPPORTED AS ATTRIBUTED. The Thetford page says the cleaner 'Removes toilet paper sludge and soap scum buildup' and says nothing about mineral scale or electrical faults, so our sentence that the maker draws that line is our inference wearing their name.",
+        "at": "2026-09-23"
       },
       {
         "id": "C17",
