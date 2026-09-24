@@ -209,6 +209,7 @@ carry it. See D9.
 | C42 | FAQ2 and the FAQPage schema: **"the manufacturer's own troubleshooting guide tells you to check... the likely cause is a faulty transfer relay"** | unnamed; the Cummins Onan RV generator handbook (in Sources) | SOURCED |
 | C43 | the Article schema description: **"the ranked causes, generator sizing against charger and air conditioning load, and why a portable generator's 12-volt outlet is the wrong tool."** | the page's own wording; "ranked causes" is the same ranking shape as C20 | CONFIRMED |
 | C44 | **"The rest of this cluster"** and its three cross-links (converter not charging, 12-volt diagnostic, fuse keeps blowing) | the three links resolve and each guide is real; the heading word is internal vocabulary (D8) | CONFIRMED |
+| C45 | **The safety precautions added 2026-09-24: a working carbon monoxide detector and its expiry date, exhaust gas being deadly and no running with a faulty exhaust, the tail pipe extending past the vehicle edge, running where wind carries fumes away, service with the engine off and the negative cable disconnected, autostart off before maintenance, and never backfeeding a building except through an approved transfer device** | Cummins Onan RV generator handbook, Important Safety Precautions, which was already in Sources | READ, 2026-09-24 |
 
 ### Sentences attributed to an unnamed authority
 
@@ -401,3 +402,32 @@ Placeholder. The drafter fills this once the page is written, in the shape the c
 use: what is done and committed, the numbered items remaining before the first review round, and why the
 handoff happened where it did. A class sweep is a standing step after verification, per the fuse spec's
 §13.
+
+## 12. The safety gap, 2026-09-24 (and what was done about it)
+
+**The page had no safety content at all.** Zero mentions of carbon monoxide, exhaust, fumes, fuel, running a
+generator while travelling, or bonding and neutral-ground. On a page about a petrol, LP or diesel generator
+that is a fire and CO risk, this was an absence rather than a prose defect, and the spec recorded it as a call
+for Ty.
+
+**It did not need to be his call once the document was read.** Cummins Onan's RV Generator Handbook is already
+in this page's Sources list, and its "Important Safety Precautions" section carries all of it, verbatim:
+
+- *"Never operate or occupy your RV unless equipped with a functioning carbon monoxide detector. Be sure to check
+  the expiration date on your detector."*
+- *"Exhaust gas is deadly. Check all exhaust system connections regularly for leaks and tighten them as
+  necessary. DO NOT operate the generator with a faulty exhaust system."*
+- *"The tail pipe must extend past the edge of the vehicle."* and, if the RV bottoms out, inspect the exhaust.
+- *"Always operate the generator in an area where the wind will carry away the exhaust fumes."*
+- *"Perform all service and maintenance work with the generator engine off and the negative battery cable
+  disconnected."*
+- *"Be sure to deactivate your autostart system before storing your RV, conducting electrical maintenance or
+  handing over your RV to a service center."*
+- *"Backfeed to utility systems can create serious risks to life or property. Do not connect the generator to a
+  building electrical system except through an approved transfer device and after the building's main breaker
+  is opened."*
+
+So the precautions are now a **Before you run it** section at the top of the page, five items, all traceable to
+the handbook, and recorded in the ledger as claim C45 with the document named. **The lesson worth keeping: on
+a safety page, check whether the missing content is a decision or an unread document.** This one was an unread
+document, and the reading took ten minutes.

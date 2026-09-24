@@ -1952,6 +1952,14 @@
         "state": "CONFIRMED",
         "by": null,
         "at": null
+      },
+      {
+        "id": "C45",
+        "text": "The safety precautions added 2026-09-24: a working carbon monoxide detector and its expiry date, exhaust gas being deadly and no running with a faulty exhaust, the tail pipe extend",
+        "source": "Cummins Onan RV generator handbook",
+        "state": "READ",
+        "by": "Cloud, 2026-09-24. Read directly through the fetch route (mart.cummins.com serves the handbook). The five precautions on the page are all from the Important Safety Precautions section, quoted word for word in the spec.",
+        "at": "2026-09-23"
       }
     ]
   },
