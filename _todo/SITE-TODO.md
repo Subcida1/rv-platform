@@ -227,18 +227,23 @@ way the nine new ones were checked.
 Build order from the keyword research, next first. **Statuses re-checked on disk 2026-09-24, not taken
 from this note** - see section 14 for what is staged and section 13 for the full nine-stage map.
 
-1. **Slide-outs** — publish January to February so it is indexed before the May
-   spike the service-call data shows. **DRAFTED 2026-09-24 and unstaged for publish:**
-   `guides/rv-slide-out-not-working.html` exists, registered and passing the gate, with
-   `_specs/rv-slide-out-not-working.md` carrying both the spec and the reading. **The
-   draft is not live: it needs the review round and Ty's go.** Its month is January, so
-   there is no hurry, and the review should use this page as the one that tests whether
-   the reading-to-draft path holds.
-2. Leveling jacks and landing gear.
-3. Battery not charging, as a standalone triage page.
-4. Toilet not flushing.
-5. Black tank clogged.
-6. Roof leak repair. The snow load guide already exists; leaks do not.
+**Status at the end of 2026-09-24: items 1 to 4 and 6 are all published.** Only the black tank clog remains
+from this list, and its spec is the next thing to write.
+
+1. **Slide-outs — PUBLISHED 2026-09-24** as `guides/rv-slide-out-not-working.html`, five months before its own
+   window, because its spec's only timing instruction is that it be indexed before the May crest. Its independent
+   pass then caught a defect that would have shipped: the page told in-wall owners to look for a rack-and-pinion
+   motor seating check their system does not have, while never telling them to re-engage the motor they had
+   disengaged.
+2. **Leveling jacks and landing gear — PUBLISHED** as `guides/rv-leveling-jacks-not-working.html`, standing on
+   Lippert's master leveling manual. **No independent pass has run yet** and the page does not claim one.
+3. **Battery not charging — PUBLISHED** as `guides/rv-battery-not-charging.html`, the router between the four
+   charging sources the site already had pages for. **No independent pass has run yet.**
+4. **Toilet not flushing — SPEC WRITTEN AND READ, NOT DRAFTED.** `_specs/rv-toilet-not-flushing.md` carries the
+   claims list and the reading, which is Thetford's permanent toilet manual — a source the freeze page already
+   cited. The draft is the next content step.
+5. **Black tank clogged** — not started.
+6. **Roof leak repair — PUBLISHED** as `guides/rv-roof-leak-repair.html`. **No independent pass has run yet.**
 
 **Ahead of all of the above, because their windows are open now:** freeze-damage triage (drafted, spec and
 reading both done - the November to December window is the reason it is first) and the new-owner walkthrough
