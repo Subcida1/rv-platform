@@ -329,3 +329,69 @@ generator specs use: what is done and committed, the numbered items remaining be
 and why the handoff happened where it did. A class sweep is a standing step **after** verification, per the
 converter spec's §13, and it now runs with the raw HTML as well as the prose view so it can see the meta
 description and the structured data.
+
+## 12. The reading, 2026-09-24 07:35 (reading agent, the two cited documents plus a hunt)
+
+**Both documents were opened, and the page's best-sourced claim and its worst-sourced claim were both settled
+by the same step.**
+
+**ITC's 3.5 inch Recessed Radiance Light installation instructions** (single page, DOC 710-00077, Rev B,
+08/22/23) carries two of the page's claims verbatim, in its Safety Instructions bullet list:
+
+- *"Operating Voltage: 10 - 14V DC"* (**C14 supported**)
+- *"Light is rated for interior installation only, do not install in wet locations."*
+
+**And it carries none of the others.** There is no user-serviceable-parts wording and no warranty-voiding
+statement anywhere in it, so **C11 has no document behind it** and the attribution has to go: the page's
+*"manufacturers state there are no user-serviceable parts inside, and opening the unit voids the warranty"* is
+stated three times, in the body and in two FAQ answers, and it is ours rather than theirs. The wiring diagram
+in the same sheet labels conductors only (*"White (-)"*, *"Black (+)"*, *"Fuse 12V DC (+)"*) and says nothing
+about grounding, dimming, heat, the driver, or LEDs failing before drivers do.
+
+**WFCO's WF-9800 series manual carries one claim verbatim and contradicts another:**
+
+- *"Lights that are powered from the output may change brightness slightly at that time."* The sentence follows
+  the Bulk-to-Absorption change back to 13.6 volts, so it ties the brightness change to a charging-stage change
+  exactly as the page says (**C16 supported**).
+- The manual gives its own output range, *"If the voltage reads 13.6 - 14.4 VDC (+/- 0.2) with no load, the
+  converter is functioning properly"*, which supports the range half of **C15**.
+- **And it contradicts the page's failure mode for the same claim.** The page says *"if a converter is failing
+  and pushing output high, or something upstream is running over voltage, you can be damaging LED fixtures"*.
+  WFCO describes a failed converter as reading **0.0 VDC**, not high: *"If the converter output voltage at the
+  battery reads 0.0 VDC... the converter is not functioning properly."* **So the page's over-voltage story has
+  no document behind it and the document it cites describes the opposite failure.** This is the same shape as
+  the generator page's invented percentages: a plausible mechanism that a maker document does not carry. **It
+  is corrected or cut in the draft**, and the honest surviving claim is narrower: the fixtures are rated 10 to
+  14 volts, so if you are losing them one after another, measure the supply before replacing the next one.
+- **The manual's fuses are not what the page implies they might be.** They are *"Reverse Battery Protection"*
+  fuses, *"to protect the converter from damage if the RV battery is accidentally connected in reverse"*, not
+  output or lighting-circuit protection.
+
+**The hunt for the safety note's mechanism: NOT FOUND, and the list is worth keeping.** No maker document states
+that the return path runs through the chassis, that a ground must sit after the load, or that a fixture should
+never be grounded straight to the frame. Checked and named: ITC's other sheets, WFCO, Progressive Dynamics
+PD9100/9200/9300/4500, Battle Born, Victron (Wiring Unlimited and the MultiPlus RV grounding guidance), Blue Sea
+Systems, Littelfuse, and RV maker material (Keystone's 12V wire standard, Heartland's electrical guide,
+Winnebago's wiring diagrams and operator manual). **So C6 and C7 are our own method and our own warning**, and
+the spec's decision 7 stands on evidence rather than on an assumption.
+
+Two near misses are worth recording because they are as close as this gets:
+
+- **Progressive Dynamics** does say *"Chassis bonding wire must be a separate wire ran directly from the
+  grounding lug provided on the converter. DO NOT connect output negative to chassis using the same wire."*
+  That is a bonding instruction rather than a return-path one, and it does not carry the page's warning, but it
+  is the nearest thing to a maker saying *do not use that wire as your return*.
+- **Blue Sea Systems** distinguishes the current-carrying *"negative ground wire"* from the *"normally
+  non-current carrying"* grounding wire, which cuts **against** the page's chassis-return framing rather than
+  for it.
+
+**The most useful thing the reading found that the page does not use:** WFCO's own short-circuit text.
+*"Should a short circuit occur in the RV, the WF-9800 Series Converter-Charger will drop the voltage output to
+zero volts"*, and the manual's instruction that an RV in that state *"will require inspection by a qualified
+service technician"*. For a page whose only short-circuit warning currently rests on strangers, **that is a
+maker-grade mechanism to put behind it**, from a document already in Sources. Use it.
+
+**One lead for the driver claim (C10), not yet followed:** ITC's Porch Light sheet (part 6976) cites *"circuit
+board overheating reasons"* and says the *"LED source is not replaceable"*. That is a **different product
+sheet**, so citing it for a Radiance fixture would be a stretch unless the draft makes the point generically
+about ITC's LED fixtures rather than about this one.
