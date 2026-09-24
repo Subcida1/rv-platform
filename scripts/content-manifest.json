@@ -590,9 +590,9 @@
     ]
   },
   "guides/rv-converter-not-charging.html": {
-    "hash": "160ae85750527611",
+    "hash": "30b311b1eaae0d2b",
     "status": "verified",
-    "verified_by": "Gemini autoloop lane (JOB-20260924-0404-converter-confirm, 2026-09-23 22:38 PDT), on a page first reviewed by Claude (JOB-20260924-0355): confirmed the three blocking findings - the FAQ's shorted-cell claim replaced, the FAQ's reverse-polarity first step now naming WFCO and Progressive Dynamics separately, and the DC-board branch fuse restored to the closing checklist with the list renumbered. Verdict YES. SCOPE OF THIS VERDICT, stated so a later reader is not misled: the confirm round checked the three blocking items and did not re-sweep for new findings, so the five non-blocking prose findings from round one are applied but confirmed only by my own read-back, and no margin sweep was run by this lane.",
+    "verified_by": "Gemini autoloop lane, two rounds on 2026-09-23: sweep JOB-20260924-0451 found seven class instances (five applied, two declined with reasons in the spec), and confirm JOB-20260924-0456 verified all five edits on the re-read page - verdict 'All five confirmed: YES'. One repair landed AFTER that verdict and is disclosed here: my own edit of item 1 left a comma splice ('of it, Any one of these'), the confirm reported the phrase GONE without flagging the damage even though the job asked it to check for exactly that, so I read the joined text myself and changed the comma to a full stop. Punctuation only, no meaning change. Original verdict: Claude (JOB-20260924-0355) plus a confirm, then this sweep round.",
     "verified_at": "2026-09-23",
     "sources": [
       "WFCO WF-8700-AD manual",

@@ -389,3 +389,14 @@ a page is verified, one class sweep job goes in the queue.
 **Process note:** applying these five made the page `drifted` in the content gate, which is the gate doing its
 job. The verdict has to be re-earned, so a confirm job (JOB-20260924-0456) went into the loop checking exactly
 the five edits. **A post-verification sweep is a new round, not a footnote.**
+
+**Sweep-confirm, 22:49 (JOB-20260924-0456): all five confirmed on a re-read of the page.** One thing it
+missed, and it matters more than the five: **my own item 1 edit left a comma splice** (*"on the battery side of
+it, Any one of these being open..."*) because I removed a clause and never re-read the joined sentence. The
+confirm reported the phrase GONE and did not flag the damage, **even though the job asked it to check for
+exactly that.** So the rule stands and has now been tested the hard way: **the reviewer verifies the words you
+point at, and reading the joined text after a deletion is mine.** Repaired before recording, and the repair is
+disclosed in the ledger's `by` field.
+
+That is the third time this session that an instrument told me the right thing about the wrong question, or the
+wrong thing about the right one.
