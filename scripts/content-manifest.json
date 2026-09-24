@@ -1613,7 +1613,297 @@
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
-    "sources": []
+    "sources": [],
+    "claims": [
+      {
+        "id": "C1",
+        "text": "outlet circuits are daisy chained rather than wired individually, and a ground fault outlet at the head of the chain protects every outlet after it",
+        "source": "a verifiable definition of RV branch wiring; Leviton's instruction sheet (in Sources) documents downstream protection",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C2",
+        "text": "the pedestal is 30 or 50 amp, and a 50 amp RV has two 120 volt legs so one dead leg takes out roughly half the coach while the other half runs",
+        "source": "our own definition of shore service; no maker document on the page carries the numbers, so if this is treated as a claim rather than a defin",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C3",
+        "text": "branch breakers are one per circuit and typically 15 or 20 amps, and a dead branch kills everything on it",
+        "source": "our own definition; no maker document",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C4",
+        "text": "an inverter/charger has an AC pass-through circuit with internal relays that feed its designated outlets from shore power when it is present and from the batteries when it is not",
+        "source": "Xantrex Freedom SW 2000 owner guide (in Sources)",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C5",
+        "text": "\"Manufacturers also document a failsafe behaviour worth knowing: on at least one product line, the AC output stays live if AC input is available even when the operating switch is s",
+        "source": "Xantrex Freedom SW 2000 owner guide (in Sources); the sentence names no maker and hedges with \"at least one product line\"",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C6",
+        "text": "the 120 volt AC system and the 12 volt DC system are separate except at the converter",
+        "source": "our own definition",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C7",
+        "text": "\"120 volts can kill you.\"",
+        "source": "a safety claim with no document named on the page; Leviton's instruction sheet (in Sources) carries shock and power-off wording, and the sen",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C8",
+        "text": "\"Do not open a panel or work inside an outlet with the shore cord connected.\" and \"Everything below that involves opening anything assumes the power is off.\"",
+        "source": "Leviton's instruction sheet (in Sources); a safety step, must be carried by the document",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C9",
+        "text": "hot skin is voltage present on the chassis that should not be there, and \"it is a genuine electrocution risk\"",
+        "source": "a safety claim with no document anywhere on the page; name an electrical-safety or maker source or restate it as our own warning",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C10",
+        "text": "hot skin stop steps: unplug from shore power immediately, do not continue using the RV, fix it before hooking up again",
+        "source": "our own compiled stop instruction, carrying safety steps",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C11",
+        "text": "\"The usual causes are a fault in the pedestal supply itself, reverse polarity at the pedestal, or a missing or broken ground connection somewhere in the path.\"",
+        "source": "a ground and polarity safety claim with no document named; \"usual causes\" is also a prevalence shape",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C12",
+        "text": "\"the trade checks bonding continuity and expects a low impedance rather than simply continuity\"",
+        "source": "\"the trade\", unnamed; a bonding safety claim with no document. Cut under the standing ruling",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C13",
+        "text": "a cheap multimeter cannot meaningfully assess bonding, so hot skin problems are best handed to someone with the right instrument",
+        "source": "our own recommendation, a safety step",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C14",
+        "text": "a GFCI lockout prevents reset in three situations: no power reaching it, line and load leads reversed, or a failed internal self test",
+        "source": "Leviton's instruction sheet (in Sources); a number and a safety step, must be carried by the document",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C15",
+        "text": "\"The manufacturer's LED diagnostic chart names reversed line and load leads as a specific reading.\"",
+        "source": "Leviton (in Sources); the sentence names no maker",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C16",
+        "text": "replace the GFCI if it will not reset: \"if the red indication continues, or the GFCI will not reset, replace it\", and Leviton's form, that a status indicator which does not turn gr",
+        "source": "Leviton's instruction sheet (in Sources); a safety step",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C17",
+        "text": "\"Wiring the incoming supply to the outgoing terminals is a common mistake after replacement\"",
+        "source": "a prevalence claim with no source",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C18",
+        "text": "moisture is a reason a GFCI will not reset, \"we could not find it named in any GFCI manufacturer's documentation\", and \"It appears only in forums and owner reports.\"",
+        "source": "a failed-search disclosure plus unnamed owner reports",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C19",
+        "text": "a plug in outlet tester reads wiring (missing ground, reversed hot and neutral, open neutral) while a multimeter reads only voltage",
+        "source": "a tool definition, may stand",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C20",
+        "text": "\"Every tester has its own pattern of lights and the charts assume a particular model\", so test a known good outlet first",
+        "source": "an illustration and a method, may stand",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C21",
+        "text": "\"A working GFCI clicks off when you press test, and clicks back on when you press reset.\" and a test that does nothing is a sign the device is not functioning",
+        "source": "Leviton's instruction sheet (in Sources); a test procedure on a live device",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C22",
+        "text": "\"In an RV the most common genuine problems behind dead outlets are a tripped GFCI, a tripped pedestal breaker, a loose connection at an outlet where the wiring is push-in rather th",
+        "source": "prevalence and ranking with no source",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C23",
+        "text": "a tripped breaker frequently does not look tripped, so reset by pushing firmly to off and then firmly back on, and if it will not stay on there is a real fault",
+        "source": "our own reset method, carrying a safety step; no maker document on the page, and if a document is required the drafter names one",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C24",
+        "text": "\"At a campground that is often a tripped breaker at the post, and it is somebody else's problem.\"",
+        "source": "a prevalence claim with no source",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C25",
+        "text": "\"the most common cause has a reset button and costs nothing to fix\" (lede)",
+        "source": "a ranking and prevalence claim with no source",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C26",
+        "text": "\"one manufacturer publishes an exact list of why that button will sometimes refuse\" (lede)",
+        "source": "Leviton (in Sources); the sentence names no maker",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C27",
+        "text": "\"A string of outlets dead, others fine\" is \"Almost always a tripped GFCI upstream of them.\"",
+        "source": "a prevalence claim with no source",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C28",
+        "text": "\"This is the case worth checking first because it costs nothing.\"",
+        "source": "a ranking shape; the reset-first advice is fine, the ranking word is not",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C29",
+        "text": "\"This is the most useful manufacturer documentation in this whole guide\"",
+        "source": "self-narration about our sourcing, plus a ranking",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C30",
+        "text": "the diagram: pedestal, main breaker, branch breaker, a GFCI first in the chain, outlets downstream dead, and the caption \"Original diagram, OriginRV.\"",
+        "source": "an illustration and image provenance, may stand",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C31",
+        "text": "\"Last reviewed: Sep 21, 2026, against the sources listed below.\"",
+        "source": "provenance, fine print per Ty's ruling",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C32",
+        "text": "the meta description and Article schema call the reset reasons \"the exact reasons a GFCI refuses to reset\" and \"the exact manufacturer conditions that stop a GFCI resetting\"",
+        "source": "the page's own wording; Leviton carries three conditions, but \"exact\" is the overclaim in D3, set against the body's own disclosure that moi",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C33",
+        "text": "\"A GFCI is one of the cheapest parts on the whole RV, running roughly $17 to $34 depending on the model and whether it is weather resistant\"",
+        "source": "a cost figure and a ranking with no document behind either",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C34",
+        "text": "professional diagnosis \"around $95 to $185 as a standalone fee, with labour at roughly $125 to $195 an hour\"",
+        "source": "cost figures, unnamed",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C35",
+        "text": "\"a tripped breaker or a reset GFCI accounts for a good share of dead outlet complaints\"",
+        "source": "a prevalence claim with no source",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C36",
+        "text": "\"checking those two yourself first is the highest-value few minutes in this guide\"",
+        "source": "a ranking and self-narration with no source",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      }
+    ]
   },
   "guides/rv-refrigerator-not-cooling.html": {
     "hash": "e771ce4f4df634f0",
