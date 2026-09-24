@@ -90,7 +90,11 @@ Deliberately **rejected** so they do not get added later by mistake:
 - 1947 to 1960 Australian caravan interiors — wrong era, wrong continent, and not
   one shows a ceiling light, which is the shot the guide actually needs;
 - vintage ceramic fuse boxes, and industrial stationary battery banks;
-- the whole Elgaard dump-station series, for the reason above.
+- the whole Elgaard dump-station series, for the reason above;
+- the amber blade fuse from Wikimedia that sat on `rv-fuse-keeps-blowing` until
+  2026-09-24 — the element inside reads intact, so it does not show a failure at
+  all, and a reader comparing it to their own fuse concludes theirs is fine. The
+  file is deleted, not just unreferenced.
 
 A wrong-but-plausible photo is worse than no photo.
 
