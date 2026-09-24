@@ -450,3 +450,65 @@ maker-grade mechanism to put behind it**, from a document already in Sources. Us
 board overheating reasons"* and says the *"LED source is not replaceable"*. That is a **different product
 sheet**, so citing it for a Radiance fixture would be a stretch unless the draft makes the point generically
 about ITC's LED fixtures rather than about this one.
+
+## 13. The full review round, 2026-09-24 08:05 (AI Studio lane, JOB-20260924-0800)
+
+**Verdict: NO, blocked by three findings, and the first one is the most important catch on this page.** Nine
+findings came back on a page that had just been drafted, and the reviewer went at the physics rather than the
+prose.
+
+**Finding 1, applied in half and declined in half, and the half that was declined is the interesting one.**
+
+- **The applied half is a real inversion, and it was inherited.** The page said *"Do not solve a suspected
+  ground fault by grounding the switch or running a wire from the fixture straight to the frame at a random
+  point. That creates a dead short, because the ground in this circuit comes after the load rather than before
+  it, and the load is what limits the current."* **That is backwards.** Anything on the supply side of the
+  light, the switch included, shorts when it touches the chassis. The fixture's own ground lead sits **after**
+  the load, so tapping it to the frame does not short anything: the light limits the current, and that is in
+  fact how a suspect return gets tested. The page now says both things, in the right order, and keeps the
+  bypass test as a test rather than a repair.
+- **The declined half is a claim about the document, and the document disagrees with the reviewer.** It said
+  WFCO converters *"self-reset once the short is removed"* and do **not** need a qualified inspection. The
+  manual, fetched and read: *"the converter will resume normal operation"* **and** *"short-circuit conditions
+  are dangerous, and an RV will require inspection by a qualified service technician"*. Both halves are true,
+  the page's sentence was supported, and it now tracks the manual's wording more exactly. **A reviewer can be
+  right about the physics and wrong about the document in the same finding.**
+
+**And the lesson, which outranks the finding.** That inverted sentence was **not** written by the draft pass:
+it came from the original page, carried by *"owners who have tried this describe..."*, and the draft pass
+**restated it as ours**. Restating an unsourced claim as our own does not just change who says it, it makes us
+the authority for whether it is true, and this one was false. **The rule from here: a claim we adopt as ours
+gets checked for correctness, not only for attribution.** The attribution work had made the page *cleaner* and
+left it *wrong*, which is a worse trade than it looks.
+
+**Applied (five more, all real).**
+
+2. **The ground-under-load test sent the reader to the battery negative**, which lives on the tongue or in an
+   underbelly tray 20 feet away, with a long lead draped past the battery's own terminals. It now measures to a
+   clean unpainted chassis point nearby, which is the same measurement at arm's length, and it now says what a
+   fully broken return reads (full supply voltage) rather than only what a resistive one reads.
+3. **The page contradicted itself about sealed fixtures.** It said nothing inside is serviceable and then
+   recommended fitting an aftermarket module inside it. Aftermarket modules and bulbs fit **older fixtures with
+   a removable bulb**; a sealed LED assembly is replaced. Both body copies, both FAQ answers and the schema
+   copy now make that distinction.
+4. **The causes list contradicted the count.** The triage tells a reader with one dead fixture not to test
+   upstream, and the very next section started at the branch fuse. A scoping paragraph now says plainly which
+   case the list is for.
+5. **The diagram's test point 4 was ambiguous and would mislead.** Three points are supply tests; the fourth is
+   the return, and a **healthy** return reads close to zero volts. A reader testing it for 12 volts and seeing
+   zero would have diagnosed a working ground as dead. The caption now says what each point should read.
+6. **14.4 volts is not "at the top of" a 14 volt rating, it is above it**, and the switch test told a reader to
+   measure to a known good ground when wall switches live in plastic boxes with no ground in them. The switch
+   is now tested across its own terminals, which needs no reference, with a caution that the circuit is live
+   while you do it.
+
+**Declined (three), with the reasons.** The WFCO half of finding 1 above. **Finding 5**, the supply-level gap:
+the candidates are already named on the page, and the procedure for them is the 12-volt hub page's job, which
+is verified and linked from here, so duplicating it would break the sibling-linking the programme relies on.
+And the *"Original diagram, OriginRV"* credit, which is the provenance line every diagram on the site carries.
+
+**Instruments before this was reported:** `verify.py` ALL CHECKS PASSED, FAQ schema in sync, `house-style.py`
+0 findings, `check-diagram-fit.mjs` 5 labels all fit (tightest 22.8px against a 6px floor), the class sweep
+none, and every rewritten paragraph read back in full.
+
+**Next:** the confirm round on the sixteen applied pairs. The page is not verified.
