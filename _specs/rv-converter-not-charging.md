@@ -352,3 +352,40 @@ read-back and no margin sweep was run by that lane.
 
 **The page is recorded as verified - the twelfth in the programme** - and it is the first page whose confirm
 round ran unattended through the queue rather than through a paste.
+
+## 13. The margin sweep, 2026-09-24 22:47 (Gemini autoloop)
+
+The confirm round's scope note above said no margin sweep had been run. So one was commissioned as its own
+queued job (JOB-20260924-0451), with all six banned classes spelled out and an instruction to read captions,
+alt text, fine print and every FAQ answer. It found **seven instances** in a page that had passed a full
+review and a confirm round.
+
+**Applied (five):**
+
+| was | now |
+|---|---|
+| "which the fifth check below covers" | cut |
+| "from the pass test above" | "from the pass test" |
+| "owners routinely misread this as a converter that is not working" | "which can look like a converter that is not working" |
+| "the voltage-drop method this page assumes" | "the voltage-drop method" |
+| "that is a very common self-inflicted fault after battery replacement" | "that is" clause cut |
+
+**Declined (two), with the reason recorded so the same items are not re-raised:**
+
+- *"the converter produces the right voltage, the battery still goes flat, and the converter gets replaced"* -
+  the sweep called this prevalence. It is the page's statement of the misdiagnosis the page exists to prevent,
+  not a claim about what owners generally do, and the suggested fix ("but the battery still goes flat") removes
+  the point.
+- *"one of the break points on the diagram is open"* - the sweep called this self-reference. It points a reader
+  at a figure, which is ordinary technical writing. The class is a sentence whose *subject* is the guide's own
+  argument, like "the rows of that table are the whole argument", not any mention of a figure.
+
+**The lesson, and it is the sharpest one of the night: a page that passed a full review and a confirm round
+still had seven class instances left.** Both of those rounds read the body and the prescribed findings. The
+sweep read the same page looking only for six named patterns and found them. **The class sweep is a different
+instrument from the review, and a page is not clean until it has had one.** Adding it as a standing step: after
+a page is verified, one class sweep job goes in the queue.
+
+**Process note:** applying these five made the page `drifted` in the content gate, which is the gate doing its
+job. The verdict has to be re-earned, so a confirm job (JOB-20260924-0456) went into the loop checking exactly
+the five edits. **A post-verification sweep is a new round, not a footnote.**
