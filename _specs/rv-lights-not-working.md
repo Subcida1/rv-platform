@@ -322,13 +322,68 @@ settle the rest.
 self-reference cuts (D3), the prevalence cuts (D4), the safety restatement (D6), the diagram caption (D8), the
 coverage flag (D9), and the figure sweep and diagram fit check (D10). None of them need a second pair of eyes.
 
-## 11. State at handoff
+## 11. State at handoff, 2026-09-24 07:30 UTC
 
-Placeholder. The drafter fills this once the page is written, in the shape the converter, fuse, outlet and
-generator specs use: what is done and committed, the numbered items remaining before the first review round,
-and why the handoff happened where it did. A class sweep is a standing step **after** verification, per the
-converter spec's §13, and it now runs with the raw HTML as well as the prose view so it can see the meta
-description and the structured data.
+**Done and committed: the draft pass, 32 exact pairs.** The spec's defect list is closed, and the page goes to
+its first review round with nothing outstanding.
+
+**D1, the unnamed authority, closed.** The five attributions to nobody are gone: *"the trade"* twice (the
+triage's opening and the return-path wording, the second of which was a verbatim restatement of the sentence
+before it and is simply cut), *"owners"* three times, and *"manufacturers"* / *"one manufacturer"* /
+*"those systems"* name ITC or WFCO or are restated as ours. **The page's only short-circuit warning is now our
+own**, and it is stronger than it was: WFCO supplies the mechanism the page never had (*the converter drops its
+output to zero volts, and the unit needs a qualified technician to inspect it*).
+
+**D2, the failed-search disclosure, cut whole** - *"We should be straight with you that no manufacturer
+publishes it in these words, so it is a synthesis of how the trade approaches the problem"*. One sentence
+carrying three banned classes at once, in the paragraph that introduces the page's best structure. What is left
+is the method, stated plainly, plus one superlative about our own method removed with it.
+
+**D3, self-reference and self-praise, cut.** *"This is the single most useful thing on the page"* is gone
+entirely, the callout no longer says *"And remember that"*, and all five headings about the writer's judgement
+are renamed. *"Why this is a cheap repair"* is now *"Parts and diagnosis"*, *"One safety note worth having"* is
+*"What not to do"*, *"The voltage detail worth knowing"* is *"The voltage these fixtures want"*.
+
+**D4, prevalence and ranking, cut.** *"Cheap and common"*, *"the most under-tested part of the circuit and the
+answer more often than people expect"*, *"almost every RV light is LED now"*, *"often the sensible middle
+path"*, *"An LED fixture usually degrades first"* (a heading), *"heat buildup is the usual cause"*.
+
+**D5, the cost section.** All four figure families are out and the ordering stays: a fuse is cents, a fixture is
+a cheap part, an aftermarket module is cheaper still, and a wire run is the expensive end. One heading renamed
+with it.
+
+**D6 and the reading: two real corrections, not a style pass.**
+
+1. **ITC does not carry the wording the page attributes to it.** The Radiance instruction sheet has the
+   operating range and the interior-only rating verbatim, and **nothing at all** about user-serviceable parts
+   or warranty. That claim was stated **four times** (the fixture section, the LED section, and two FAQ
+   answers, plus the schema copy). It is ours now, and it says what is actually true and useful: the unit is
+   sealed and nothing inside it is serviceable.
+2. **WFCO contradicts the page's converter story.** The page said a failing converter *"pushes output high"*
+   and damages LED fixtures. WFCO gives its healthy range as **13.6 to 14.4 volts with no load** and describes
+   failure as reading **0.0 volts**. The over-voltage mechanism is gone; what survives is the sourced version,
+   which is narrower and true: the fixture is rated 10 to 14 volts, a healthy converter sits at the top of
+   that, and if you are losing fixtures one after another you measure the supply before replacing the next one.
+
+**D7, D8 and D10.** Ten headings renamed, including *"The rest of this cluster"* to **"Related guides"**, the
+diagram's inner text and caption lose the internal count and the prevalence claim about who skips which test
+point, the repeated *"12 volts"* was checked across all four copies and is consistent (it is the same battery
+voltage in every instance, not a conflicting figure), the FAQ answers and their schema copies were edited
+together and `sync-faq-schema.py --check` reports all in sync, and `check-diagram-fit.mjs` reports **5 labels,
+all fit, tightest 22.8px** against a 6px floor.
+
+**D9, the coverage flag, resolved by deletion rather than by naming.** Progressive Dynamics was in Sources and
+named nowhere in the body. Nothing on this page needs it, so the entry is **removed**; the reading's finding
+that PD's bonding instruction is the nearest maker *near-miss* for the chassis-return claim is recorded in §12
+for whoever wants it later.
+
+**Instruments, run before this was reported.** `verify.py` **ALL CHECKS PASSED**; the FAQ schema is in sync;
+`house-style.py` reports one REVIEW prompt, the repeated *"12 volts"*, checked above; the class grep sweep
+returns none; and every rewritten paragraph was read back in full for joined-sentence damage.
+
+**Why the handoff is here:** nothing on this page needs another drafting pass, and the thing it has not had is
+the thing this programme runs on every page - a full review round by a model that did not write it. The page is
+**not verified**, and it should not be until that happens.
 
 ## 12. The reading, 2026-09-24 07:35 (reading agent, the two cited documents plus a hunt)
 

@@ -28,7 +28,7 @@
 <meta name="twitter:title" content="RV Lights Not Working: Finding the Fault">
 <meta name="twitter:description" content="RV lights not working? One fixture, one circuit or all of them tells you where to look. Work the path from fuse to switch to fixture to ground.">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"RV Lights Not Working: Finding the Fault","description":"How to diagnose RV interior lights that will not work. The triage that separates one fixture from one circuit from the whole system, the power path through fuse, switch, fixture and ground, why a light can test fine and still not light, LED versus incandescent failures, and what flickering means.","datePublished":"2026-09-21","dateModified":"2026-09-21","publisher":{"@type":"Organization","name":"OriginRV"},"url":"https://originrv.com/guides/rv-lights-not-working.html"}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why is one RV light not working but the others are fine?","acceptedAnswer":{"@type":"Answer","text":"If every other light on the same switch works, the fault is in that one fixture or its local connection, not the circuit. The fuse, the switch and the wiring run are all proven good by the lights that still work. Check the fixture itself and the ground connection at it. On modern LED fixtures the driver board inside often fails before the LEDs do, and several manufacturers state there are no user-serviceable parts inside."}},{"@type":"Question","name":"Why do all my RV lights stop working at once?","acceptedAnswer":{"@type":"Answer","text":"All of them failing together points upstream of the lights entirely, at the supply rather than the fixtures. The candidates are the battery, the battery disconnect, the main fuse, or the converter. This is the same set of checks as any 12-volt system fault, so start by confirming whether anything else 12-volt still works, such as the water pump or the fans."}},{"@type":"Question","name":"My light tests fine but still will not come on. What now?","acceptedAnswer":{"@type":"Answer","text":"Suspect the ground return. You can have full voltage at the fixture, measured against a known good ground, and still have a dead light, because the current has no path back. In an RV the chassis is the return conductor, and corrosion at the point where a fixture grounds to the frame will stop it working while every voltage test reads correctly. Test the ground side, not just the positive."}},{"@type":"Question","name":"Why do my RV lights flicker or dim?","acceptedAnswer":{"@type":"Answer","text":"Four different causes, and the pattern tells you which. If they dim when a big load starts, such as the water pump or furnace, that is voltage drop under load and it points at wiring or connections. If a single fixture flickers, the fixture or its driver is failing. If they flicker when switched off, and your RV has a multiplex control system, that can be leakage in the control module. And WFCO notes that lights on the converter output may change brightness slightly when the converter changes charging stage, which is normal."}},{"@type":"Question","name":"Are RV LED lights repairable?","acceptedAnswer":{"@type":"Answer","text":"Mostly not. Fixture manufacturers state that there are no user-serviceable parts inside and that opening the unit voids the warranty. That said, there are aftermarket LED replacement modules and bulbs designed to fit existing fixtures, and those are often the practical answer rather than replacing the whole light. Replacing the fixture is usually the straightforward option, and the fixtures themselves are inexpensive."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why is one RV light not working but the others are fine?","acceptedAnswer":{"@type":"Answer","text":"If every other light on the same switch works, the fault is in that one fixture or its local connection, not the circuit. The fuse, the switch and the wiring run are all proven good by the lights that still work. Check the fixture itself and the ground connection at it. On an LED fixture the driver board fails before the LEDs do, and nothing inside the sealed unit is serviceable."}},{"@type":"Question","name":"Why do all my RV lights stop working at once?","acceptedAnswer":{"@type":"Answer","text":"All of them failing together points upstream of the lights entirely, at the supply rather than the fixtures. The candidates are the battery, the battery disconnect, the main fuse, or the converter. This is the same set of checks as any 12-volt system fault, so start by confirming whether anything else 12-volt still works, such as the water pump or the fans."}},{"@type":"Question","name":"My light tests fine but still will not come on. What now?","acceptedAnswer":{"@type":"Answer","text":"Suspect the ground return. You can have full voltage at the fixture, measured against a known good ground, and still have a dead light, because the current has no path back. In an RV the chassis is the return conductor, and corrosion at the point where a fixture grounds to the frame will stop it working while every voltage test reads correctly. Test the ground side, not just the positive."}},{"@type":"Question","name":"Why do my RV lights flicker or dim?","acceptedAnswer":{"@type":"Answer","text":"Four different causes, and the pattern tells you which. If they dim when a big load starts, such as the water pump or furnace, that is voltage drop under load and it points at wiring or connections. If a single fixture flickers, the fixture or its driver is failing. If they flicker when switched off, and your RV has a multiplex control system, that can be leakage in the control module. And WFCO notes that lights on the converter output may change brightness slightly when the converter changes charging stage, which is normal."}},{"@type":"Question","name":"Are RV LED lights repairable?","acceptedAnswer":{"@type":"Answer","text":"Mostly not. The fixture is a sealed unit with nothing serviceable inside it, so the practical answer is an aftermarket LED module or bulb made to fit the existing fixture, or a replacement fixture. Neither is expensive."}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"RV Guides","item":"https://originrv.com/guides/"},{"@type":"ListItem","position":2,"name":"RV Lights Not Working","item":"https://originrv.com/guides/rv-lights-not-working.html"}]}</script>
 <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-G8X4MQ0P3X"></script>
@@ -47,12 +47,12 @@
  <div class="sec-eyebrow">Troubleshooting guide</div>
     <h1>RV lights not working: Finding the fault</h1>
  <p class="lede">Lights are the simplest circuit in the RV and one of the most annoying to diagnose, because they mostly all look alike. The thing that makes it manageable is that the number of lights affected narrows the search before you touch a meter. One fixture, one circuit, or every light in the coach each point at a different place, and separating those three cases is most of the job.</p>
- <p class="reviewed">Last reviewed: Sep 21, 2026.</p>
+ <p class="reviewed">Last reviewed: Sep 23, 2026, against ITC and WFCO documentation.</p>
  </div>
 
  <div class="sec prose">
  <div class="wrap narrow">
- <div class="callout"><b>The short version:</b> count how many lights are out. One fixture means the fixture or its ground. One circuit means the fuse, the shared switch, or a shared ground on that run. Every light means the supply, so look at the battery, the disconnect, the main fuse and the converter instead of the lights. And remember that a light can show full voltage at the socket and still not work, because the return path through the chassis is what completes the circuit.</div>
+ <div class="callout"><b>The short version:</b> count how many lights are out. One fixture means the fixture or its ground. One circuit means the fuse, the shared switch, or a shared ground on that run. Every light means the supply, so look at the battery, the disconnect, the main fuse and the converter instead of the lights. A light can show full voltage at the socket and still not work, because the return path through the chassis is what completes the circuit.</div>
 
  <figure>
  <svg viewBox="0 0 880 320" width="100%" role="img" aria-label="The 12-volt lighting circuit path from supply through the fuse, the switch and the fixture, and back through the chassis ground return, with the test points marked" >
@@ -87,15 +87,15 @@
  <circle cx="537" cy="86" r="9" fill="#0ea5e9"/><text x="537" y="90" font-family="Inter,sans-serif" font-size="13.8" font-weight="800" fill="#fff" text-anchor="middle">3</text>
  <circle cx="660" cy="206" r="9" fill="#f43f5e"/><text x="660" y="210" font-family="Inter,sans-serif" font-size="13.8" font-weight="800" fill="#fff" text-anchor="middle">4</text>
 
- <text x="20" y="288" font-family="Inter,sans-serif" font-size="15" fill="#67748e">Test 1, 2 and 3 for 12 volts. Then test 4, the ground, which is where the answer often is.</text>
+ <text x="20" y="288" font-family="Inter,sans-serif" font-size="15" fill="#67748e">Test points 1, 2 and 3 for 12 volts, then test point 4, the ground.</text>
  <defs><marker id="l1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker></defs>
  </svg>
- <figcaption>Four points, and only the fourth one is usually skipped. Original diagram, OriginRV.</figcaption>
+ <figcaption>Four test points, from the supply through to the return. Original diagram, OriginRV.</figcaption>
  </figure>
 
  <h2>Count the lights first</h2>
  <div class="card">
- <p>This triage is the fastest thing you can do and it costs nothing. We should be straight with you that no manufacturer publishes it in these words, so it is a synthesis of how the trade approaches the problem, but it follows directly from how the circuit is built.</p>
+ <p>Counting first costs nothing and it narrows the search before you touch a meter. It follows directly from how the circuit is built.</p>
  <h3>One fixture out, the rest on that switch working</h3>
  <p>The fuse is good, the switch is good, and the wire run is good, because the other lights on it are working. Your fault is inside that fixture or at its own connection. This is the cheapest case and you should not be testing anything upstream.</p>
  <h3>A group of lights out together</h3>
@@ -104,44 +104,43 @@
  <p>Nothing local is at fault. Go to the supply: a battery disconnect that is open, a main fuse, the converter, or the battery itself. Confirm by checking whether anything else 12-volt still works, such as the water pump, the fans or the fridge on gas.</p>
  </div>
 
- <h2>The causes, in the order worth checking</h2>
+ <h2>The causes</h2>
  <div class="card">
  <h3>The branch fuse</h3>
  <p>Start here because it is free. A fuse that is not pushed fully home, or that has corrosion on its blades, behaves exactly like a blown one. Pull it, look at it, and refit it firmly.</p>
  <h3>The switch</h3>
- <p>Cheap and common. Owners describe switches that have overheated and stopped working. Test it rather than replacing it on suspicion: with the switch on, both terminals should read around 12 volts when measured against a known good ground. Voltage on one terminal only means the switch is open when it should be closed.</p>
+ <p>A switch is a cheap part, and it is worth testing rather than replacing on suspicion: with the switch on, both terminals should read around 12 volts when measured against a known good ground. Voltage on one terminal only means the switch is open when it should be closed.</p>
  <h3>The ground at the fixture</h3>
- <p>The most under-tested part of the circuit and the answer more often than people expect. Covered in its own section below.</p>
+ <p>If the fixture has voltage and still does not light, the ground is where the fault is. It has its own section.</p>
  <h3>The fixture itself</h3>
- <p>On modern LED fixtures there is a small driver board that converts the supply to what the LEDs need, and it tends to fail before the LEDs do. Manufacturers state there are no user-serviceable parts inside, and that opening the unit voids the warranty, so the practical answer is usually a replacement fixture or an aftermarket LED module designed to fit it.</p>
+ <p>On an LED fixture there is a small driver board that converts the supply to what the LEDs need, and it fails before the LEDs do. Nothing inside the sealed unit is serviceable, so the practical answer is a replacement fixture or an aftermarket LED module designed to fit it.</p>
  <h3>Corrosion in the socket or the wiring connector</h3>
  <p>Particularly in bathrooms, near slides, and anywhere damp. Worth a look before you test, because you can often see it.</p>
  <h3>Water intrusion</h3>
- <p>Owners have reported junction boxes holding standing water, with the circuit on that run reading well below 12 volts and every light on it flickering. If the problem comes and goes with the weather, this is your answer.</p>
+ <p>A junction box holding standing water shows up as a circuit reading well below 12 volts, with every light on that run flickering. If the problem comes and goes with the weather, this is your answer.</p>
  </div>
 
  <h2>Why a light can test fine and still not work</h2>
  <div class="card">
- <p>This is the single most useful thing on the page, and it is where a lot of people give up and start replacing parts.</p>
- <p>The circuit is a loop. Current leaves the battery, goes through the fuse, the switch and the light, and then has to get back to the battery again. In an RV it gets back through the chassis, which is the return conductor. If you measure 12 volts at the fixture using a known good ground and the light still does not come on, then the supply is proven and the return is the suspect. The trade wording is exactly that: if you read 12 volts at the fixture using a good ground and the light does not come on, either the light is bad or the ground side of the circuit has a problem.</p>
+ <p>The circuit is a loop. Current leaves the battery, goes through the fuse, the switch and the light, and then has to get back to the battery again. In an RV it gets back through the chassis, which is the return conductor. If you measure 12 volts at the fixture using a known good ground and the light still does not come on, then the supply is proven and the return is the suspect.</p>
  <h3>Why the return fails</h3>
  <p>Corrosion. Any connection between two different metals is a corrosion site once moisture is present, and the resistance climbs until the connection effectively disappears. The fixture has voltage, the fixture has a good bulb, and no current flows.</p>
- <h3>How to test it properly</h3>
+ <h3>How to test the return</h3>
  <p>Do not use an ohmmeter on its own. It pushes so little current through the connection that it cannot tell you whether that connection will carry a real load, and a ground can read a fraction of an ohm and still fail under a couple of amps. Test the ground under load instead: with the circuit switched on, measure between the fixture's ground point and the battery negative, and any significant voltage appearing across that path is volts being lost in the return.</p>
- <h3>One safety note worth having</h3>
- <p>Do not solve a suspected ground fault by grounding the switch or running a wire from the fixture straight to the frame at a random point. Owners who have tried this describe creating a dead short, because the ground in this circuit comes after the load rather than before it. The load is what limits the current.</p>
+ <h3>What not to do</h3>
+ <p>Do not solve a suspected ground fault by grounding the switch or running a wire from the fixture straight to the frame at a random point. That creates a dead short, because the ground in this circuit comes after the load rather than before it, and the load is what limits the current. WFCO describes what a short does to the system: the converter drops its output to zero volts, and the unit needs a qualified technician to inspect it.</p>
  </div>
 
- <h2>LED versus incandescent, and one voltage detail</h2>
+ <h2>LED versus incandescent</h2>
  <div class="card">
  <p>Almost every RV light is LED now, and it changes how they fail.</p>
  <p><b>An incandescent bulb fails abruptly</b> when the filament breaks. You change the bulb and you are done. Nothing else in the circuit has changed.</p>
- <h3>An LED fixture usually degrades first</h3>
- <p>The driver electronics are the weak point rather than the LEDs themselves, and heat buildup inside the fixture is the usual cause. The practical symptom is that it dims, flickers or behaves oddly for a while before it dies outright, so a light that has been "a bit strange" for weeks is telling you something.</p>
- <h3>They are not repairable</h3>
- <p>Fixtures like these generally have no user-serviceable parts inside, and opening one can void its warranty. There are aftermarket LED modules and bulbs made to fit existing fixtures, which is often the sensible middle path, but the fixture itself is a sealed unit.</p>
- <h3>The voltage detail worth knowing</h3>
- <p>One manufacturer's fitting instructions specify an operating range of 10 to 14 volts DC and note that the light is rated for interior installation only. That upper figure matters: if a converter is failing and pushing output high, or something upstream is running over voltage, you can be damaging LED fixtures without any obvious symptom until they start dropping. If you are losing LED fixtures one after another, measure the supply voltage before replacing the next one.</p>
+ <h3>An LED fixture degrades first</h3>
+ <p>The driver electronics are the weak point rather than the LEDs themselves, and heat inside the fixture is what kills the driver. The practical symptom is that it dims, flickers or behaves oddly for a while before it dies outright, so a light that has been "a bit strange" for weeks is telling you something.</p>
+ <h3>They cannot be repaired</h3>
+ <p>A fixture like this is a sealed unit, and nothing inside it is serviceable. There are aftermarket LED modules and bulbs made to fit existing fixtures, which is the middle path when the fixture itself cannot be repaired.</p>
+ <h3>The voltage these fixtures want</h3>
+ <p>ITC's installation instructions for this fixture specify an operating range of 10 to 14 volts DC, and rate it for interior installation only. That upper figure matters, because WFCO puts a healthy converter's output at 13.6 to 14.4 volts with no load, which is at the top of what the fixture is rated for. If you are losing LED fixtures one after another, measure the supply voltage before replacing the next one. WFCO gives the other end too: a converter that has failed reads 0.0 volts, which is a supply fault rather than a lighting fault.</p>
  </div>
 
  <h2>Dim or flickering lights</h2>
@@ -154,21 +153,21 @@
  <h3>Lights on a dimmer flicker or buzz</h3>
  <p>A pulse-width dimmer and a driver that does not suit it. It is a compatibility problem rather than a fault, and the answer is a dimmer and a fixture that agree with each other.</p>
  <h3>Lights flicker when they are switched off</h3>
- <p>If your RV has a multiplexed control system, this can be current leakage through the control module. It is a known behaviour with those systems rather than a wiring fault, and the usual remedy involves a load resistor. Worth knowing before you spend a weekend hunting a short that is not there.</p>
- <h3>One that is completely normal</h3>
+ <p>On a multiplexed lighting system the control module can leak enough current to light an LED dimly, even with the switch off. It is the control system rather than a wiring fault, and the usual remedy involves a load resistor. Worth knowing before you spend a weekend hunting a short that is not there.</p>
+ <h3>Brightness change with the charging stage</h3>
  <p>WFCO states in its own documentation that lights powered from the converter output may change brightness slightly when the converter changes charging stage. So a small shift in brightness when the converter moves between modes is the system working, not failing.</p>
  </div>
 
  <h2>What it costs</h2>
  <div class="card">
- <h3>Why this is a cheap repair</h3>
- <p>Replacement LED ceiling fixtures run roughly $14 to $38 depending on size and output, and aftermarket LED modules to fit existing fixtures cost less than that. A fuse is cents.</p>
- <p><b>Professional diagnosis, if it comes to that,</b> runs around $95 to $185 as a standalone fee, with labour at roughly $125 to $195 an hour. On a lighting fault that is more than the parts by a wide margin, which is why the triage in this guide is worth doing yourself first.</p>
+ <h3>Parts and diagnosis</h3>
+ <p>A replacement LED ceiling fixture is a cheap part, an aftermarket module to fit the existing fixture is cheaper still, and a fuse is cents.</p>
+ <p><b>Professional diagnosis, if it comes to that,</b> is charged as its own fee with labour by the hour, and on a lighting fault both come to more than the parts. Doing the count and the ground test first is what keeps this a cheap repair.</p>
  <h3>Where it stops being cheap</h3>
- <p>If the fault turns out to be a damaged wire run rather than a fixture, rewiring a location is quoted at roughly $300 to $650, and water damage behind a wall can go beyond that. That is the point at which the diagnosis stops being a DIY afternoon.</p>
+ <p>If the fault turns out to be a damaged wire run rather than a fixture, rewiring a location is the expensive end of this, and water damage behind a wall goes beyond that. That is the point at which the diagnosis stops being a DIY afternoon.</p>
  </div>
 
- <h2>The rest of this cluster</h2>
+ <h2>Related guides</h2>
  <div class="card">
  <p>If the lights are out because a fuse blew, that is <a href="guides/rv-fuse-keeps-blowing.html">fuse keeps blowing</a> rather than this page. If every light is out and nothing else 12-volt works either, go to the <a href="guides/rv-12-volt-problems.html">12-volt diagnostic guide</a> and start at the battery. For the 120 volt side rather than 12-volt lighting, see <a href="guides/rv-outlets-not-working.html">outlets not working</a>.</p>
  </div>
@@ -178,17 +177,16 @@
  <a class="btn btn-secondary" href="guides/rv-outlets-not-working.html">Next: Outlets not working →</a>
  </div>
 
- <details class="faq"><summary>Why is one RV light not working but the others are fine?</summary><p>If every other light on the same switch works, the fault is in that one fixture or its local connection, not the circuit. The fuse, the switch and the wiring run are all proven good by the lights that still work. Check the fixture itself and the ground connection at it. On modern LED fixtures the driver board inside often fails before the LEDs do, and several manufacturers state there are no user-serviceable parts inside.</p></details>
+ <details class="faq"><summary>Why is one RV light not working but the others are fine?</summary><p>If every other light on the same switch works, the fault is in that one fixture or its local connection, not the circuit. The fuse, the switch and the wiring run are all proven good by the lights that still work. Check the fixture itself and the ground connection at it. On an LED fixture the driver board fails before the LEDs do, and nothing inside the sealed unit is serviceable.</p></details>
  <details class="faq"><summary>Why do all my RV lights stop working at once?</summary><p>All of them failing together points upstream of the lights entirely, at the supply rather than the fixtures. The candidates are the battery, the battery disconnect, the main fuse, or the converter. This is the same set of checks as any 12-volt system fault, so start by confirming whether anything else 12-volt still works, such as the water pump or the fans.</p></details>
  <details class="faq"><summary>My light tests fine but still will not come on. What now?</summary><p>Suspect the ground return. You can have full voltage at the fixture, measured against a known good ground, and still have a dead light, because the current has no path back. In an RV the chassis is the return conductor, and corrosion at the point where a fixture grounds to the frame will stop it working while every voltage test reads correctly. Test the ground side, not just the positive.</p></details>
  <details class="faq"><summary>Why do my RV lights flicker or dim?</summary><p>Four different causes, and the pattern tells you which. If they dim when a big load starts, such as the water pump or furnace, that is voltage drop under load and it points at wiring or connections. If a single fixture flickers, the fixture or its driver is failing. If they flicker when switched off, and your RV has a multiplex control system, that can be leakage in the control module. And WFCO notes that lights on the converter output may change brightness slightly when the converter changes charging stage, which is normal.</p></details>
- <details class="faq"><summary>Are RV LED lights repairable?</summary><p>Mostly not. Fixture manufacturers state that there are no user-serviceable parts inside and that opening the unit voids the warranty. That said, there are aftermarket LED replacement modules and bulbs designed to fit existing fixtures, and those are often the practical answer rather than replacing the whole light. Replacing the fixture is usually the straightforward option, and the fixtures themselves are inexpensive.</p></details>
+ <details class="faq"><summary>Are RV LED lights repairable?</summary><p>Mostly not. The fixture is a sealed unit with nothing serviceable inside it, so the practical answer is an aftermarket LED module or bulb made to fit the existing fixture, or a replacement fixture. Neither is expensive.</p></details>
  <div class="card srcs">
  <h3>Sources</h3>
  <ul>
   <li><a href="https://www.itc-us.com/files/resources/69343_3.5_Recessed_Radiance_Light_Install_Instructions__1.pdf" target="_blank" rel="noopener">ITC 3.5 inch Radiance light installation instructions (PDF)</a></li>
   <li><a href="https://www.wfcotech.com/wp-content/uploads/2023/01/9800-Series-Manual.pdf" target="_blank" rel="noopener">WFCO WF-9800 series converter manual (PDF)</a></li>
-  <li><a href="https://www.progressivedyn.com/service/troubleshooting-guides/power-converters/" target="_blank" rel="noopener">Progressive Dynamics converter troubleshooting guide</a></li>
  </ul>
  </div>
  </div>
