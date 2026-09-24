@@ -1,4 +1,4 @@
-# SPEC: `guides/new-rv-owner.html`
+# SPEC: `manuals/start-here.html`
 
 **Written:** 2026-09-24 · **Status:** spec written, awaiting Ty on the one structural call · **Twenty-first spec, and the fourth page that does not exist yet**
 **Template:** mirrors `_specs/rv-slide-out-not-working.md`, with one difference: this page's open question is not about
@@ -244,3 +244,39 @@ Spec written 2026-09-24, **placement ruled the same afternoon**, so this spec is
 **Nothing is drafted and the page does not exist.** The generator function and the pinned block land together with
 the page, because a pinned block that points at a page nobody has written is the dead link this site's own rules
 forbid.
+
+## 13. The independent pass, 2026-09-24 (AI Studio, JOB-20260924-1610, pasted by Ty)
+
+**Verdict from the lane: CORRECTIONS NEEDED, and it was right about all of it.** Note what this lane did differently
+from the three that came before: it **named no false accusation and invented no quotation**, and every finding was
+about the page's structure or mechanics rather than its wording. Three of the four fixes below came from it.
+
+### What it caught
+
+1. **The diagram caption contradicted the page's own prose, and the caption was wrong.** The caption said the
+   converter is *the one component that normally joins* the two electrical halves. The prose two paragraphs above
+   it named three joins. **The caption is the false version**: an inverter joins them the other way, and every
+   appliance with a 120-volt element and a 12-volt board is a place a fault crosses - the absorption fridge in
+   electric mode, a dual-fuel water heater, the air conditioner's controls. Both now say the same thing.
+2. **The furnace and the fridge depend on 12 volts, and the page credited them to propane alone.** A furnace will
+   not light without enough voltage to spin its blower and close the sail switch, and an absorption fridge's board
+   runs on 12 volts in every mode. **That omission worked against the page's own argument**, which is that a weak
+   battery imitates everything else.
+3. **The first-night checklist skipped the two things that go wrong before the utilities matter.** It now leads
+   with levelling and stabilising - with Norcold's published limit, 3 degrees off level side to side and 6 front to
+   back, past which the cooling system can be damaged - and it adds lighting a stove burner before the furnace or
+   water heater, because a line full of air burns one of a furnace's three ignition attempts before it locks out.
+4. **"Safe to ignore: seals and slide wipers" was the wrong instruction.** Servicing them is annual; *looking* at
+   them is not, and a wiper seal that has folded inward runs water into the room instead of off it. The entry now
+   separates the two.
+
+### What it said that needed no action
+
+Its Part 3 check came back `NONE FOUND` for all six sentence classes, and it opened the linked guides and confirmed
+they deliver the diagnostic depth the walkthrough implies. Its one overstatement - that ignoring the seals
+"invites structural water damage during the first rainstorm" - was softened rather than adopted, because the
+annual-servicing half of the original sentence was correct and is what the fix preserves.
+
+**The pattern across four passes now:** the two passes that checked the page against *documents* were the ones
+that produced fabricated quotations (six and three of them). **The pass that checked the page against its own
+argument produced none and found the most consequential defect.** Structural review is where this lane is strong.

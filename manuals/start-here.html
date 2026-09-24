@@ -72,8 +72,8 @@
         <tr><td>Fresh water</td><td>City water through the inlet, or the tank and its pump, out to every tap, the toilet and the shower.</td><td><a href="manuals/water-and-plumbing.html">Water and plumbing documents</a></td></tr>
         <tr><td>Waste</td><td>Holds what the sinks, the shower and the toilet send it, until you dump it into a sewer connection.</td><td><a href="manuals/sanitation-and-tanks.html">Tank and sanitation documents</a></td></tr>
         <tr><td>The water heater</td><td>Heats water on propane or on 120 volts, into a tank that has to be full before either one is switched on.</td><td><a href="guides/rv-water-heater-not-heating.html">Water heater not heating</a></td></tr>
-        <tr><td>Propane and the fridge</td><td>Cooks, and runs the absorption fridge and the furnace when there is no hookup.</td><td><a href="guides/rv-refrigerator-not-cooling.html">Fridge not cooling</a></td></tr>
-        <tr><td>Heat and cold</td><td>The furnace warms the coach in winter and the air conditioner cools it in summer, and the two of them are the largest power draws on the coach.</td><td><a href="guides/rv-furnace-not-working.html">Furnace not working</a></td></tr>
+        <tr><td>Propane and the fridge</td><td>Cooks, and runs the absorption fridge on propane when there is no hookup, though the fridge's board still needs 12 volts to decide anything.</td><td><a href="guides/rv-refrigerator-not-cooling.html">Fridge not cooling</a></td></tr>
+        <tr><td>Heat and cold</td><td>The furnace warms the coach in winter and the air conditioner cools it in summer. Both are the largest draws on the coach, and the furnace will not light at all without enough 12-volt power to spin its blower and close the sail switch.</td><td><a href="guides/rv-furnace-not-working.html">Furnace not working</a></td></tr>
         <tr><td>The extras</td><td>Solar, a generator and an inverter are three more ways to make or move power, none of which a first trip depends on.</td><td><a href="guides/rv-solar-not-charging.html">Solar not charging</a></td></tr>
     </tbody>
   </table>
@@ -128,10 +128,12 @@
   <h2>Where the two electrical halves meet</h2>
   <p>Two systems share one battery and one ground, and almost every confusing electrical symptom
   comes from that arrangement. 120 volts arrives at the pedestal and goes to the outlets, the air
-  conditioner and the water heater's electric element. The converter turns some of that into 12
-  volts to charge the battery. Everything else runs off the battery at 12 volts. Three places
-  touch both halves: the converter, an inverter if one is fitted, and the water heater, which has
-  an element on one side and a burner on the other.</p>
+  conditioner and any heating element. The converter turns some of that into 12 volts to charge
+  the battery. Everything else runs off the battery at 12 volts.</p>
+  <p><b>Several components touch both halves</b>, and that is where a fault crosses from one to the
+  other: the converter, which turns 120 into 12; an inverter, if one is fitted, which turns 12 back
+  into 120; and every appliance with a 120-volt element and a 12-volt board, which is the fridge in
+  its electric mode, a dual-fuel water heater, and the air conditioner's controls.</p>
 
   <figure>
     <svg viewBox="0 0 640 210" width="100%" role="img" aria-label="The 120-volt side and the 12-volt side, and the converter that joins them">
@@ -147,19 +149,24 @@
 
       <rect x="228" y="118" width="184" height="60" rx="8" fill="var(--tint-bg)" stroke="var(--tint-edge)" stroke-width="2"/>
       <text x="320" y="142" text-anchor="middle" font-size="14" font-weight="700" fill="var(--text)">Converter</text>
-      <text x="320" y="161" text-anchor="middle" font-size="12" fill="var(--text-2)">120 in, 12 out, and the</text>
-      <text x="320" y="175" text-anchor="middle" font-size="12" fill="var(--text-2)">only join on a typical coach</text>
+      <text x="320" y="161" text-anchor="middle" font-size="12" fill="var(--text-2)">120 in, 12 out. Appliances with</text>
+      <text x="320" y="175" text-anchor="middle" font-size="12" fill="var(--text-2)">both touch both halves too</text>
 
       <path d="M103 100 L103 148 L222 148" fill="none" stroke="var(--border-2)" stroke-width="2"/>
       <path d="M418 148 L537 148 L537 106" fill="none" stroke="var(--border-2)" stroke-width="2"/>
       <path d="M537 106 L531 118 M537 106 L543 118" fill="none" stroke="var(--border-2)" stroke-width="2"/>
     </svg>
-    <figcaption>The two halves of a coach's electrical system, and the one component that
-    normally joins them.</figcaption>
+    <figcaption>The two halves of a coach's electrical system, and the components that touch both:
+    a converter, an inverter where one is fitted, and anything with a 120-volt element and a
+    12-volt board.</figcaption>
   </figure>
 
   <h2>Your first night plugged in</h2>
   <ol>
+    <li><b>Level and stabilise the coach first.</b> Slides, and the water system, and an absorption
+    fridge all want the coach level, and the fridge has a published limit: Norcold builds its
+    absorption units to run within 3 degrees off level side to side and 6 front to back, and past
+    that the cooling system can be damaged.</li>
     <li><b>Look at the pedestal before you plug in.</b> Breaker off, and look at the socket for
     scorching or a loose fit.</li>
     <li><b>Connect, then switch the pedestal breaker on</b>, so nothing is arcing while you hold
@@ -174,6 +181,10 @@
     is the mistake that costs the most on a first trip.</li>
     <li><b>Propane last</b>, opening the valve slowly, and if you smell it, shut it off and find
     out why before anything is lit.</li>
+    <li><b>Light the stove before the furnace or the water heater.</b> A line that has been shut off
+    holds air, and a furnace that tries to light into air burns one of its three ignition attempts
+    before it locks out. A burner on the stove pushes the air through in a few seconds, and it is
+    the one propane appliance you can watch light.</li>
   </ol>
   <p>What to leave off on the first night: the air conditioner until you know the coach's amperage
   and what the pedestal can give, and the water heater's electric element until you know the
@@ -197,8 +208,9 @@
     charging and know what normal looks like.</li>
     <li><b>Tank sensor calibration.</b> The sensors read conductivity rather than depth, so a
     reading that disagrees with the tank is normal rather than urgent.</li>
-    <li><b>Seals, slide wipers and roof caulking.</b> These matter, and they are an annual job
-    rather than a first-week one.</li>
+    <li><b>Seals, slide wipers and roof caulking.</b> Servicing them is an annual job rather than a
+    first-week one, and looking at them is not: a wiper seal that has folded inward on a slide room
+    runs water into the room instead of off it, and it takes a glance while the room goes out.</li>
     <li><b>The weight math</b>, once your combination is matched. It comes back into play the day
     you change a truck, a trailer or how you load it.</li>
   </ul>

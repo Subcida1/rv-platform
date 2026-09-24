@@ -388,7 +388,7 @@
     ]
   },
   "guides/index.html": {
-    "hash": "700a0f5fae2f9132",
+    "hash": "73b4bba0bae9bbd4",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -4368,6 +4368,191 @@
       }
     ]
   },
+  "guides/trailer-brakes-required.html": {
+    "hash": "116db6cef0e5143e",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": [],
+    "claims": [
+      {
+        "id": "C1",
+        "text": "49 CFR 393.42 states which vehicles and combinations need brakes, in its own words, and it is written for commercial motor vehicles",
+        "source": "eCFR 49 CFR 393.42(a): Every commercial motor vehicle shall be equipped with brakes acting on all wheels. Scope is closed by 393.1(a): only ",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C2",
+        "text": "49 CFR 393.43 requires trailer brakes to apply automatically and immediately on breakaway and to remain applied at least 15 minutes",
+        "source": "eCFR 393.43(d): Every trailer required to be equipped with brakes shall have brakes which apply automatically and immediately upon breakaway",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C3",
+        "text": "the federal rule is not what binds a personal RV; state equipment law is",
+        "source": "393.1(a) limits Part 393 to commercial motor vehicles, and 390.5 defines one at 10,001 lb GVWR or more. A privately owned travel trailer is ",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C4",
+        "text": "FMVSS 121 applies to air brake systems and does not cover a trailer's electric brakes",
+        "source": "49 CFR 571.121 S1: This standard establishes performance and equipment requirements for braking systems on vehicles equipped with air brake ",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C5",
+        "text": "each state's threshold, verbatim",
+        "source": "California CVC 26303 (trailer coach or camp trailer, gross weight 1,500 lb or more, brakes on at least two wheels) and CVC 26302 (general tr",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C6",
+        "text": "the common figure people repeat, 3,000 pounds, is a state-shaped threshold and not a federal one",
+        "source": "CORRECTED BY THE READING, in both directions. There is a 3,000 lb figure in the federal rule, but it is an exception - 393.42(b)(3)-(4) exem",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C7",
+        "text": "which weight the threshold applies to (trailer GVWR, unladen weight, or gross weight)",
+        "source": "California and Washington both use gross weight; Texas uses gross weight above 4,500 lb. States differ, and the table names the weight each ",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C8",
+        "text": "the breakaway switch must be powered by its own battery, and the battery has to be maintained and charged",
+        "source": "CURT breakaway kit 52042: The breakaway kit uses a battery to engage the trailer's electric brakes if the trailer becomes disconnected; The ",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C9",
+        "text": "how a breakaway switch actually works, in the maker's words, including what pulling the pin does",
+        "source": "CURT 52042: Test the breakaway by pulling firmly on the cable of the breakaway switch. The battery will activate the brakes. and The trailer",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C10",
+        "text": "electric drum brakes are the default on travel trailers; electric-over-hydraulic exists for heavier units; surge brakes are hydraulic and actuate from the coupler",
+        "source": "Dexter's own description of operation: current from the controller energises the electromagnets, which are attracted to the rotating armatur",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C11",
+        "text": "surge brakes do not satisfy an electric-brake requirement where one exists",
+        "source": "NOT FOUND, and the reading says why: the word \"surge\" does not appear anywhere in the brake chapters of the Oregon, Washington, California, ",
+        "state": "CONFIRMED",
+        "by": "reworded to what the codes say: no state section reviewed names surge brakes, and the page states that rather than asserting they are legal or illegal",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C12",
+        "text": "controller types differ: time-delayed applies a set ramp, proportional reads deceleration",
+        "source": "Tekonsha's own manual describes the inertial sensor and the boost levels that increase its sensitivity. The time-delayed comparison is not d",
+        "state": "CONFIRMED",
+        "by": "cut: the time-delayed versus proportional comparison appears in no maker document read, so the page gives the maker's own gain procedure and boost setting instead",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C13",
+        "text": "SAFETY: the gain test the makers publish - at low speed, squeeze the manual override, and the trailer should pull the combination back",
+        "source": "Tekonsha Prodigy P2: With engine running hold manual full left and set Power Knob to indicate approximately 6.0; Drive tow vehicle and trail",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C14",
+        "text": "the shoe-to-drum adjustment gap, in thousandths of an inch",
+        "source": "CORRECTED: the number is not in the electric-brake procedure. Dexter's electric brake adjustment ends rotate the star wheel in the opposite ",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C15",
+        "text": "the amperage a brake magnet draws, and what that means for the controller and the wiring",
+        "source": "Dexter's Magnet Amperes chart: 2.5 A per magnet for 7 x 1 1/4 inch brakes, 3.0 A for 10 and 12 inch sizes; system draw 5.0 / 6.0 A for two b",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C16",
+        "text": "SAFETY: never go under a trailer that is not chocked and supported, and never test a breakaway by pulling the cable while standing behind the unit",
+        "source": "our own instruction; CURT's own procedure is the sourced half (disconnect the tow connector first, then pull the cable)",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C17",
+        "text": "a trailer brake that is not working lengthens the stopping distance and the truck does all the work",
+        "source": "the mechanism, stated plainly",
+        "state": "CONFIRMED",
+        "by": "stated as the mechanism with no figure claimed, 2026-09-24",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C18",
+        "text": "what each failure costs, ordered relative to the others (a controller, an actuator, magnets and shoes, a full axle set)",
+        "source": "no document; the settled convention applies, so relative ordering only, no absolute dollars",
+        "state": "CONFIRMED",
+        "by": "no document exists for repair costs; relative ordering only, the settled convention",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C19",
+        "text": "SAE J2807's braking test is part of how a truck is rated",
+        "source": "already READ for _specs/rv-towing-capacity.md; link, do not re-read, and do not repeat the towing math",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C20",
+        "text": "anything a reader is told to do to a live brake circuit or under a trailer",
+        "source": "our own instruction",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C21",
+        "text": "the breakaway retention time appears in state law too, not only in the federal rule",
+        "source": "California CVC 26304(a): power brakes on a trailer shall be capable of stopping and holding such vehicle stationary for not less than 15 min",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C22",
+        "text": "NFPA 1192's braking chapter",
+        "source": "WAIVED - free access is behind an NFPA login, and a secondary summary will not be quoted as the standard",
+        "state": "WAIVED",
+        "by": null,
+        "at": null
+      }
+    ]
+  },
   "guides/winterize-plumbing.html": {
     "hash": "fcdf93ecc5280572",
     "status": "verified",
@@ -4500,7 +4685,7 @@
     ]
   },
   "index.html": {
-    "hash": "acfbc7d6387970c0",
+    "hash": "222ca1278962e40b",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -4570,11 +4755,95 @@
     "sources": []
   },
   "manuals/start-here.html": {
-    "hash": "f58297018e3d07ff",
-    "status": "unverified",
-    "verified_by": null,
-    "verified_at": null,
-    "sources": []
+    "hash": "a68ae74dd7a04376",
+    "status": "verified",
+    "verified_by": "Cloud 2026-09-24, after the independent AI Studio pass (JOB-20260924-1610, recorded in the spec's section 13). Four corrections applied: the diagram caption contradicted the page's own prose and claimed the converter was the only join when an inverter and every dual-voltage appliance also join the halves; the furnace and fridge rows now state that both depend on 12 volts, which the review was right about and which reinforces the page's own argument; the first-night checklist now leads with levelling and carries Norcold's published 3 and 6 degree limit, and adds a stove burn-off before the furnace or the water heater because a line full of air costs one of three ignition attempts; and the seals entry separates looking at them from servicing them. All six sentence-class checks returned NONE FOUND and the lane produced no fabricated quotation.",
+    "verified_at": "2026-09-24",
+    "sources": [],
+    "spec": "_specs/start-here.md",
+    "spec_waived": false,
+    "claims": [
+      {
+        "id": "C1",
+        "text": "the coach has nine systems, and the list of them",
+        "source": "definitional; the systems are the ones the makers themselves enumerate",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C2",
+        "text": "what each system does when it is working",
+        "source": "definitional, and the descriptions come from the fault guides that already read their sources",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C3",
+        "text": "the order to learn them, and the reasoning for it",
+        "source": "our own instruction. This is the page's argument and it is honestly ours: no maker publishes a learning order",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C4",
+        "text": "which systems are safe to leave alone at first, and why",
+        "source": "our own instruction, with the reason stated",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C5",
+        "text": "SAFETY: shore power is connected before anything else, and polarity and surge protection are checked",
+        "source": "rv-outlets-not-working, which read the sources for hot skin and GFCI behaviour. Link, do not restate",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C6",
+        "text": "SAFETY: propane and carbon monoxide, and what a new owner must not do",
+        "source": "rv-furnace-not-working, which read the maker's CO and ignition material. Link, do not restate",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C7",
+        "text": "SAFETY: a water heater must have water in it before it is fired",
+        "source": "rv-water-heater-not-heating, which read the maker's drain-and-fire material. Link, do not restate",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C8",
+        "text": "12-volt faults imitate other faults, which is why voltage is learned early",
+        "source": "rv-12-volt-problems, the hub page for that cluster",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C9",
+        "text": "what a maker's owner manual typically contains and typically omits",
+        "source": "the manuals directory's own reading, and the site's existing finding that makers ship one document across many years. No prevalence claim",
+        "state": "CONFIRMED",
+        "by": "rests on the manuals directory's own finding: every row links the maker's document, and appliance makers publish their own separate documents",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C10",
+        "text": "anything a reader is told to do that carries a number or a risk",
+        "source": "the page it belongs to, linked",
+        "state": "CONFIRMED",
+        "by": "every instruction on the page is either the maker's own procedure or stated as ours, 2026-09-24",
+        "at": "2026-09-24"
+      }
+    ]
   },
   "manuals/towing-and-running-gear.html": {
     "hash": "48ca0744c9094b37",
