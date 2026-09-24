@@ -14,6 +14,32 @@ No secrets, keys, tokens or customer details in here. This file is committed.
 
 <!-- newest first -->
 
+## 2026-09-24
+
+### guides: Published the freeze-damage triage guide: stop the pressure first, then read the pump
+- why: the November to December window opens in six weeks and indexing lags publication; two independent research lanes converged on this page as the top winter gap, and the reading that preceded the draft killed three claims every competing page prints
+- expect: by late November, this page should be the site's first entry with Search Console impressions, and the freeze-order question should surface in Bing grounding queries before Google reports anything
+- files: guides/freeze-damage-triage.html
+- tags: content
+- commit: ab36e98 (unpushed)
+- deployed: 2026-09-24T13:57:18-07:00
+
+### guides: Published the slide-out override guide, five months ahead of its own window
+- why: the spec's only timing instruction is that it be indexed before the May crest, which publishing now satisfies better than February, and the manual override is what a stranded owner needs the moment they search
+- expect: slide-out queries should show impressions by December, months before the May peak, and the manual-override phrasing should be the first of that cluster to appear
+- files: guides/rv-slide-out-not-working.html
+- tags: content
+- commit: ab36e98 (unpushed)
+- deployed: 2026-09-24T13:57:18-07:00
+
+### copy: Towing page: the 3,000 pound claim replaced with five state thresholds read from the codes
+- why: the sentence asserted a rule that is an exemption inside a commercial-vehicle regulation, and the states do not cluster at 3,000: Oregon requires no trailer brakes, California requires them at 1,500 pounds for a trailer coach
+- expect: no search effect; this is a correctness fix whose test is whether the forthcoming brakes page converts the same reader better than the sentence did
+- files: guides/rv-towing-capacity.html
+- tags: accuracy
+- commit: ab36e98 (unpushed)
+- deployed: 2026-09-24T13:57:18-07:00
+
 ## 2026-09-22
 
 ### infra: Bing API wired for query and traffic stats; grounding queries and Citation Share confirmed absent from it
