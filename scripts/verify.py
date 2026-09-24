@@ -187,6 +187,19 @@ for line in r.stdout.splitlines():
 if r.returncode != 0:
     fails.append("runtime smoke test")
 
+print("\n=== the weight calculator's verdicts ===")
+# Nothing tested weight.js until the GCWR verdict was added on 2026-09-24, and the
+# calculator's arithmetic has to agree with the verified towing guide. This executes
+# the real file against a DOM stub and asserts the rendered verdict rows, including
+# the two cases where a row must NOT appear: no combination without a GCWR, and none
+# without a curb weight, because the total would read low and the verdict would lie.
+r = subprocess.run(["node", "scripts/test-weight-calculator.js"], capture_output=True, text=True, cwd=str(ROOT))
+for line in r.stdout.splitlines():
+    if line.strip():
+        print("  " + line.strip())
+if r.returncode != 0:
+    fails.append("weight calculator verdicts")
+
 print("\n=== homepage figures match reality ===")
 bad = []
 idx = (ROOT / "index.html").read_text(encoding="utf-8")

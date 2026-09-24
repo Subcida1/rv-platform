@@ -141,6 +141,21 @@
      : tgPct <= 100 ? 'At the truck GVWR edge, check passengers and bed gear.'
      : 'OVER truck GVWR. The truck itself is overloaded.'));
  }
+ /* GCWR check: the whole combination. The tongue weight is already inside the truck's
+    gross weight, so it is taken out of the trailer's loaded weight here rather than
+    counted twice. Needs curb, because without the truck's own weight the total would
+    read low and the verdict would lie. */
+ var gcwr = num('w-gcwr');
+ if (gcwr > 0 && curb > 0 && loaded > 0) {
+   var combined = truckGross + Math.max(0, loaded - tongue);
+   var gcPct = (combined / gcwr) * 100;
+   var gcCls = gcPct <= 90 ? 'ok' : (gcPct <= 100 ? 'warn' : 'bad');
+   rows.push(verdictRow(gcCls, 'Combined weight',
+     fmt(combined) + ' / ' + fmt(gcwr) + ' lb',
+     gcPct <= 90 ? 'Truck and trailer together stay under the GCWR.'
+     : gcPct <= 100 ? 'At the GCWR edge. GCWR and payload are usually the two that bind first.'
+     : 'OVER the GCWR. Together the truck and trailer weigh more than the maker rates.'));
+ }
  var lowT = Math.round(loaded * tongueRange[0]), highT = Math.round(loaded * tongueRange[1]);
  var tNote = 'Estimated ' + Math.round(tonguePct * 100) + '% of loaded weight. Real RVs run ' + fmt(lowT) + ' to ' + fmt(highT) + ' lb. A certified scale settles it.';
  rows.push(verdictRow('ok', 'Hitch / pin load', fmt(tongue) + ' lb', tNote));
