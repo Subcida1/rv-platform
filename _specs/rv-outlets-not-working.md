@@ -491,3 +491,22 @@ tic. Kept.
 **Also worth recording:** the review's finding 1 is a **safety gap introduced by the previous round's fix**.
 The safety pass told me to add the moisture caveat before the replace rule; I did, and the new paragraph
 carried no power-off rule. A repair that moves a step has to be re-read as a step, not as a sentence.
+
+## 15. The confirm round and the verdict, 2026-09-24 07:00 (Claude Desktop, JOB-20260924-0655)
+
+**PART 1: CONFIRMED on all three edits.** The confirm did what a confirm is for: it read each fixed sentence
+*together with the sentence before and after it* and reported on the join, not just on the fragment. Its notes
+are specific to the page: the moisture paragraph is still a self-contained note and its cross reference now
+matches the pattern used at the reversed-leads step; the tester paragraph now ends on an instruction instead of
+trailing off on a description, and the following subsection is about calibrating the tester rather than about
+what a bad reading means, so the two do not overlap; and the FAQ answer still opens with a direct yes without
+the unnamed-people claim.
+
+**The page is recorded as verified - the fourteenth in the programme.** `verify-content.py --verify` wrote the
+verdict with the four source documents (three Leviton sheets and the Xantrex guide), and the gate reports
+**14 verified, 25 unverified, 0 drifting**.
+
+**Outstanding, and it is the reason the verdict is provisional in the standing sense:** the class sweep is a
+step **after** verification, per the converter spec's §13, and it has not been run on this page. If the sweep
+finds and changes anything, the verdict has to be re-earned, which is the gate doing its job rather than a
+formality to skip.

@@ -1976,11 +1976,22 @@
     "sources": []
   },
   "guides/rv-outlets-not-working.html": {
-    "hash": "d128f817b8c2cd3d",
-    "status": "unverified",
-    "verified_by": null,
-    "verified_at": null,
-    "sources": [],
+    "hash": "8163acea53325425",
+    "status": "verified",
+    "verified_by": "Claude Desktop lane, two rounds on 2026-09-24. The full review (JOB-20260924-0645) returned NO, blocked by two real findings. The moisture step told a reader to dry a wet electrical box with no power-off rule, and the tester paragraph listed the wiring faults a tester reads and then stopped without saying what to do about them. Both fixed, one prose tic cut from the FAQ, and one flourish declined with the reason recorded in the spec section 14. Confirm round JOB-20260924-0655 returned PART 1: CONFIRMED on all three edits, both blockers cleared, and read each edit together with the sentences around it.",
+    "verified_at": "2026-09-24",
+    "sources": [
+      "Leviton",
+      " testing a GFCI instruction sheet",
+      "Leviton",
+      " LED indicator light diagnosis for GFCIs",
+      "Leviton",
+      " installing and testing an AFCI/GFCI receptacle",
+      "Xantrex",
+      " Freedom SW 2000 owner guide"
+    ],
+    "spec": "_specs/rv-outlets-not-working.md",
+    "spec_waived": false,
     "claims": [
       {
         "id": "C1",
