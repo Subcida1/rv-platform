@@ -448,3 +448,20 @@ documented, not an appeal to an unnamed authority, and it stays.
 
 **Outstanding:** the confirm round on the seven edits. The page is drifting until it lands, which is the gate
 doing its job for the second time on this page.
+
+**The confirm landed, PART 2: CONFIRMED on all seven - and its own quoting exposed a defect I had just
+introduced.** My replacement sentence defined the overload-versus-short distinction, and **the sentence that
+followed it defined overload again**, because that sentence was already there and my rewrite had swallowed its
+job. The paragraph now said the same thing twice. The reviewer quoted both sentences in sequence and called the
+paragraph *"clear and complete"*, which is the blind spot worth naming: **a confirm checks whether an edit is
+present, not whether the paragraph still needs the sentence that was already there.** The duplicate is cut.
+
+**The lesson, and it applies to every attribution edit on this programme:** when an attributed sentence is
+replaced by an unattributed restatement, **check whether the paragraph already defines the term**. The
+attribution sentence usually sat beside a definition, and that is often exactly why it was decoration: the
+sentence doing the work was the next one.
+
+**And a note on the round count, since this page has now had three tonight.** Each was earned: the seven D1/D5
+instances were real, and the duplicate sentence was real. A round costs one job on the lane; a page that says the
+same thing twice costs a reader's trust. **The gate went red for each change, which is the mechanism working
+rather than a nuisance.**
