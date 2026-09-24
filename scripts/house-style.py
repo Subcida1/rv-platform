@@ -117,6 +117,12 @@ BRANDS = [
     "Optifuse", "Apollo", "Lifeline", "Trojan", "Battle Born", "Go Power", "Magnum", "Shurflo",
     "Forest River", "Coachmen", "Winnebago", "Heartland", "Grand Design", "Keystone", "Jayco",
     "Airstream", "NHTSA", "CDC", "NFPA", "SAE", "DOT", "UL",
+    # added 2026-09-23: document-makers this programme cites as authorities. The rule only
+    # ever checks names in this list, so a maker missing here is unchecked -- which is how
+    # Michelin came to be cited four times on tires-winter with no Sources entry while the
+    # gate stayed silent. A reviewer caught it, not the instrument.
+    "Michelin", "Goodyear", "East Penn", "Deka", "Rolls", "Boxabl", "Fluke",
+    "Littelfuse", "Eaton", "Bussmann", "Airxcel", "Ford", "GMC",
 ]
 
 VOID_RE = re.compile(r"<(script|style)\b.*?</\1>", re.S | re.I)
