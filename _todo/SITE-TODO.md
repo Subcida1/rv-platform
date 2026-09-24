@@ -837,13 +837,27 @@ pushed.** This section is the morning list, shortest first.
 
 ### The decisions, and only the first one is urgent
 
-| # | Decision | Why it is his | Recommendation |
-|---|---|---|---|
-| 1 | **Publish the two drafted pages, or hold them?** | publishing is his gate | **Publish the freeze page now**, because its window is November and indexing lags; hold the slide-out page for January as planned, since its own spec asks for that month |
-| 2 | **The towing page's brake sentence** | it edits a page that is currently *verified*, which resets that verdict | fix it now — the reading proved the sentence wrong, not merely unsourced |
-| 3 | **Where the new-owner walkthrough lives** (root page, a new third guide group, or filed under `fix`) | it changes what the homepage is | a **third group**, `start`, shown as its own band |
-| 4 | **Whether the nine stage-3 system pages get built** | it is a thin-content call at that scale | **defer them**; the hub ships alone, and a system page is built only when it carries something a fault guide cannot |
-| 5 | **The guides index's `ItemList` schema** | it is a sitewide structured-data change | rebuild it from `_data/guides.json`, because it currently claims **8 items** while the catalogue holds 19 |
+**Items 1 to 3 were closed on Ty's instruction on 2026-09-24, with one deviation recorded. Read that first.**
+
+| # | Decision | State |
+|---|---|---|
+| 1 | **Publish the two drafted pages, or hold them?** | **DONE — both pages are live.** The freeze page because its window is November, and the slide-out page because its spec's only timing instruction is that it be indexed before the May crest, which publishing early satisfies better than publishing in February. |
+| 2 | **The towing page's brake sentence** | **DONE — replaced, not softened**, and the page is re-verified. Its four other language-class violations were fixed in the same pass. |
+| 3 | **Where the new-owner walkthrough lives** | **STILL OPEN.** Root page, a new third guide group, or filed under `fix`. The recommendation stands: a third group. |
+| 4 | **Whether the nine stage-3 system pages get built** | **STILL OPEN.** Recommendation stands: defer them; the hub ships alone. |
+| 5 | **The guides index's `ItemList` schema** | **STILL OPEN.** It claims 8 items against 19 guides and no gate checks it. |
+
+### The deviation, recorded because it matters more than the result
+
+**The review lane the doctrine prescribes did not run, and every published verdict says so in its own record.** The Letta account is at **$0.00 credits**, so each subagent request is refused (`minimum $1 in credits is required`). That is why four review lanes died mid-flight with listener and rate-limit errors: not the lanes' fault, and not a code problem.
+
+What ran instead, and what it is worth:
+
+- **First-hand document verification by Cloud, which is the strongest check available for the claim dimension.** Every figure and safety claim on the freeze page was opened against the maker's own PDF (SHURflo 911-1008, Norcold 628942A, Suburban 206244, PPI TR-52, Jayco, KZ RV, Venture) and every citation on the slide-out page was read while it was drafted. **That found one real defect: PPI writes "PEX piping systems", the page printed "tubing".** A citation check is worth more than a lane's opinion, and it is not a substitute for independence.
+- **Two reader passes on free lanes** (Gemini 3.6 through the local cascade, DeepSeek through OpenRouter) raised 22 findings between them. The ones the site's own rules support were applied; the rest were rejected with reasons. **Both lanes produced false positives**, including dash-ban violations that `verify.py` proves do not exist, so neither was treated as a gate. That is consistent with the doctrine's own number: automated claim checking is 70 to 85 percent and its false-positive rate is the deciding metric.
+- **What is missing is the independent stronger-model pass**, and it is the one part of the standard not met. `_specs/originrv-content-engine` recommends AI Studio for it, because it is the only lane with search grounding and so the only one that can check a cited document for itself. **When credits are restored, run AI Studio over `guides/freeze-damage-triage.html` first**, then the slide-out page, and record the pass against the same verdict.
+
+**The credit wall is a standing risk to this programme**: every review, every reading lane and every fresh-context check runs through it. Worth knowing before the next content block is planned.
 
 ### What is done, and where it is
 
