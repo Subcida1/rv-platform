@@ -331,8 +331,7 @@ def hub(rows, oem_count, model_count=0):
         </div>
       </div>
       <div id="man-status" class="man-status">%d documents and libraries across %d makers,
-        and %d model lines. Start typing, or open a system below. Nothing loads until you
-        type, so this page stays light.</div>
+        and %d model lines. Start typing, or open a system below.</div>
       <ul id="man-results" class="man-list" hidden></ul>
     </div>
   </div>
