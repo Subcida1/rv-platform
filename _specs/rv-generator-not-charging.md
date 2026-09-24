@@ -554,3 +554,25 @@ page, the promise the title and lede make, and the structure all came back clean
 corrected Honda figures read correctly.
 
 **Next:** the confirm round, then the class sweep.
+
+## 15. The confirm round and the verdict, 2026-09-24 07:18 (Claude Desktop, JOB-20260924-0715)
+
+**PART 1: CONFIRMED on all six edits**, and the confirm again did the work that matters rather than the work
+the request spelled out: it read every fixed sentence with the sentence before and after it and reported on the
+join. Two of its notes are worth keeping because they say something about the fixes rather than about the
+sentences: the charger line no longer carries a mismatched amp figure *beside a converter line that does pair
+correctly*, which is the sibling problem the review found; and the *invisible loads* sentence now stands as the
+section's opening line rather than a mid-paragraph aside, which is where the maker's own phrase belongs.
+
+**The page is recorded as verified - the fifteenth in the programme.** `verify-content.py --verify` wrote the
+verdict with its four source documents (Cummins Onan, Victron, Xantrex and Honda), and the gate reports
+**15 verified, 24 unverified, 0 drifting**.
+
+**Outstanding:** the class sweep, the same standing step after verification that the outlets page is waiting on.
+If it changes anything, the verdict has to be re-earned.
+
+**And the pattern worth naming, because it has now happened on two pages in a row:** the blocking findings on
+this page were not prose defects, they were **the body disagreeing with its own FAQ**, which is the sibling-copy
+failure this programme has now hit on the converter, the tank, the fuse and here. The FAQ is written as a
+paraphrase rather than a copy, so grepping for the old string does not find it. When a figure changes anywhere
+on a page, the check has to be against the *claim* in all four places, body, FAQ, diagram and schema.
