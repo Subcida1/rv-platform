@@ -461,6 +461,37 @@ were caught while recording the claims and removed.
 
 **Outstanding:** the class sweep with the raw HTML, which is the last standing step on this page.
 
+## 14. The class sweep, 2026-09-24 10:55 (AI Studio lane, JOB-20260924-1055)
+
+**Zero instances, and this time the zero came with its working.** The first attempt at this sweep was **consumed by
+the lane and produced nothing** - the drop the fuse spec already records twice tonight - so it was retired and
+re-queued with changed content and fresh call ids, because a retry has to be new bytes rather than the same ones.
+
+**The report gave, for each of the six patterns, the phrases it searched for and the surfaces it read** (body,
+headings, both figure captions, the text inside both SVGs, and all five visible FAQ answers), which is what makes
+a zero admissible rather than merely asserted. Three of its notes are worth keeping:
+
+- **`"below"` appears four times and every one is a physical or numerical threshold** (*"below about 5 degrees
+  Celsius"*, *"below 32 Fahrenheit"*, *"far below the battery voltage"*, *"at or below the resting battery
+  voltage"*) rather than a reference to where something sits on the page. That is the distinction the pattern
+  exists to draw, and it is the first sweep on this programme to draw it explicitly.
+- **`"most"` twice and `"often"` three times, all about hardware rather than people** (*"most meters are fused at
+  10 amps"*, *"controllers are often fitted with a fuse"*). Prevalence is a claim about what people do; a
+  frequency word about a control board is ordinary technical writing, and that line has now been drawn on three
+  pages.
+- **The closest call was the heading itself**: *"The causes, in Victron's order"* contains an ordering term and
+  was judged clean because it attributes the order to Victron's published documentation rather than asserting one.
+  That is exactly the right reading, and it is the difference between this heading and the *"ranked causes"* it
+  replaced.
+
+**It also ran a consistency pass the request did not ask for**: the 10 amp fuse limit, the battery-first
+connection order, the lithium BMS shutdown explanation and the float-stage behaviour were each compared across
+the body and the FAQ answers, and all four agree.
+
+**So the solar page's verdict stands**, and with it the guide programme: **seventeen of seventeen guides verified
+and swept, 17 verified, 22 unverified, 0 drifting** once the other session's in-flight work on the fuse page is
+set aside.
+
 **Two standing steps now apply to this page and did not exist when the set began:**
 
 - `python3 scripts/check-spec-fragments.py --page guides/rv-solar-not-charging.html` **after every editing pass**.
