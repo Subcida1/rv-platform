@@ -268,7 +268,7 @@ Cut under the same ruling — never narrate the search that failed:
 
 1. **The chain thesis stays and stays first.** *"The converter is only the first link"* is the page's
    whole argument and it is correct.
-2. **The title and H1 stay** (see §2). The meta description stays at 157 for now.
+2. **The title and H1 stay** (see §2). The meta description was trimmed to 152 characters (D9).
 3. **Every maker figure is kept and attributed.** The pass tests, the fuse ratings, the three-stage set
    points and the recharge times are the page's asset and each already has a Sources entry.
 4. **The unnamed-authority and failed-search classes are cut** (D1, D2, D3). This is Ty's standing
@@ -293,3 +293,39 @@ Cut under the same ruling — never narrate the search that failed:
 **Everything else is the drafter's to decide:** the heading renames (D6, D7, D8), the three cuts
 (C19, C21, C22's figures), the F1 to F3 deletions, the cost-section's final wording, and the diagram
 fit check. None of them need a second pair of eyes.
+
+## 11. State at handoff, 2026-09-24 03:45 UTC
+
+**Done and committed:** the nine heading renames; the invented resting-voltage table replaced with Trojan's
+real ten-percent steps in the body *and* in the FAQ answer that carried a second copy; the half-true
+"both major manufacturers open their procedures there" replaced with what each maker actually does; the six
+unnamed-authority sentences cut; all three failed-search disclosures cut; the two sections whose only support
+was a failed search deleted; the cost section reduced to its decision rule, with **every dollar figure gone**
+(the page now carries none, matching the verified 12-volt hub and furnace); the meta description trimmed from
+157 to 152 characters.
+
+**Also fixed in the tooling:** `verify-content.py` wrote `--by` raw into the manifest, which `verify.py`
+polices as a published file, so a reviewer quote pasted in brought 40 em/en dashes into the dash rule. Both
+write sites sanitise now, negative-tested by injecting a dash and confirming it lands as a hyphen.
+
+**Remaining before the first review round, in order:**
+
+1. **C3** — the per-model branch-fuse figures (8712P 15 A on circuit four; 8725P 30 A on four; 8735P and
+   8740P 30 A on six) exist in the WFCO WF-8700 **non-AD** Series manual, not the `-AD` manual this spec
+   names. Add that document to Sources and correct the attribution.
+2. **C13** — the *"cycles between absorption and bulk, therefore a shorted battery cell"* wording is in
+   WFCO's **operator manuals**, not the support FAQ the page cites. Move the citation.
+3. **C9** — the *"below about 13.2 volts"* bulk trigger is in older WFCO operator manuals; current revisions
+   trigger bulk on current. Either cite the older revision or restate the claim.
+4. **C29** — the disconnect-switch on/off reading is in neither maker's procedure. It is our own method, so
+   it must read as ours and not sit under a maker's name.
+5. **D5** — the diagram documents four break points while the H3 list runs First through Fifth, with the
+   converter output as First. That is coherent (the output is not a break), but a reader should not have to
+   work it out. One clause fixes it or confirms it.
+6. **D10** — the remaining repeated figures (13.6, 132, 12, 70 hours) across body, FAQ and schema. The volts
+   pair is synced; the rest have not had the three-way check.
+7. Then: `export-prose.py`, the review request, and Claude's first round on this page.
+
+**Why the handoff:** the page is mid-draft, and items 1 to 6 are all surgical citation work that needs the
+same kind of careful reading the tank-sensor page took. Stopping here keeps each of those edits inside a
+context that can also verify it.
