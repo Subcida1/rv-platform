@@ -551,3 +551,14 @@ fault:"* turns a hedge into an absolute, and an inverter that has failed produce
 gate **fails** (*"1 verified page(s) changed without re-verification"*) until a confirm round re-earns the
 verdict. The converter page did exactly this after its sweep. A page is not verified because it was verified
 once; it is verified because the text that is committed is the text that was reviewed.
+
+**The re-earned verdict, 2026-09-24 07:40 (JOB-20260924-0735 PART 1): CONFIRMED on all four edits**, with the
+one that mattered most read in full rather than in fragments: *"the section's job was to tell the reader what
+actually causes dead outlets, and the four listed causes are still all there and still actionable; the sentence
+that was removed was a comparison about how rare a wall fault is, not a fifth cause."* That is the check a cut
+needs and cannot get from a diff. The confirm also reported, unprompted, that the declined finding is unchanged
+and not re-raised, which is what a recorded decline is for.
+
+**The gate is green again: 15 verified, 24 unverified, 0 drifting, ALL CHECKS PASSED.** The page was drifted
+for about twenty minutes, on purpose, with the reason written down. That is what a real gate looks like when it
+is working: it went red because the text changed, and it went green because the new text was reviewed.

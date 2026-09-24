@@ -1978,9 +1978,9 @@
     "sources": []
   },
   "guides/rv-outlets-not-working.html": {
-    "hash": "8163acea53325425",
+    "hash": "ee29adbd6bc6848a",
     "status": "verified",
-    "verified_by": "Claude Desktop lane, two rounds on 2026-09-24. The full review (JOB-20260924-0645) returned NO, blocked by two real findings. The moisture step told a reader to dry a wet electrical box with no power-off rule, and the tester paragraph listed the wiring faults a tester reads and then stopped without saying what to do about them. Both fixed, one prose tic cut from the FAQ, and one flourish declined with the reason recorded in the spec section 14. Confirm round JOB-20260924-0655 returned PART 1: CONFIRMED on all three edits, both blockers cleared, and read each edit together with the sentences around it.",
+    "verified_by": "Claude Desktop lane, third round on 2026-09-24. The class sweep (JOB-20260924-0715 PART 2) found six instances on a page that had already passed a full review and a confirm round: four applied, one declined with the reason (Usually not a fault is a claim about the situation rather than about what owners do, and the sweep own suggested fix would have made it worse). Applied: the breaker sentence that said the same thing twice, in the body and again in the FAQ answer and its schema copy; the unattributed frequency claim that closed the causes list; and the safety callout self-reference, reworded with its scope kept exactly. The sweep was given the raw HTML as well as the prose view, so it read the meta description, the social strings and both JSON-LD blocks and reported the other classes clean across all of them. Confirm round JOB-20260924-0735 returned PART 1: CONFIRMED on all four edits and confirmed the declined finding was left alone. Verdict re-earned: the text that is committed is now the text that was reviewed.",
     "verified_at": "2026-09-24",
     "sources": [
       "Leviton",
