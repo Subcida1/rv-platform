@@ -310,3 +310,31 @@ it had, because every figure belonged to an unnamed single source. A section wit
 "what does this cost" is a measured demand cluster. Either a source for shop labour surfaces (a published
 rate card, a maker's own price list), or this page keeps the decision-rule version and gives up its cost
 angle. Flagged for Ty.
+
+## 14. The first review round, 2026-09-23 20:01 (Claude)
+
+Verdict: **not yet**, four blocking items and four prevalence claims. All applied the same evening.
+
+1. **The page contradicted itself, and the review was right to open with it.** The short version said cleaning
+   *"cannot fix mineral scale"* flatly, while three places in the body say it usually cannot, with one
+   attributed exception (Tank Blaster's hard-water claim). The summary now matches the body. **This is the same
+   failure shape as the roof page's half-connected cause:** a summary written at one moment, a body that got
+   more careful later, and nobody reading them against each other.
+2. **"The GEO method" was a label we cannot source, and it collides with our own internal vocabulary.**
+   Generative engine optimization is a term in this very programme. The heading and the label are gone; the
+   recipe is described by what it is.
+3. **Teaspoon and pinch were the same maker instruction stated twice with two different amounts.** Both are
+   teaspoons now.
+4. **Four prevalence claims** (*"come up in every thread"*, *"the most repeated advice"*, *"the retrofit most
+   owners arrive at"* ×2, *"gray is the one most owners ignore"*). All cut, which is the same class the ruling
+   removed from the rest of the page — I wrote four new ones while cutting fifteen old ones.
+5. **One soft self-narration lead-in** (*"Then the part worth reading twice"*) went with them.
+
+**Clean on the first pass, worth recording:** no orphaned references from the fifteen cuts, the resistance
+table is internally consistent (green-to-yellow plus orange-to-green equals orange-to-yellow exactly), the
+3/8 inch figures agree everywhere they appear, no ranking-shaped headings survived the rename, and the
+*"from the inside/underneath"* flourish is absent from this page.
+
+**Left open, and Claude independently agreed the section is thin but not broken:** the cost section, plus its
+suggestion that *relative* cost ordering (cleaner, then DIY probes, then a shop) may clear Ty's bar where
+absolute dollar figures do not. That one is Ty's call, not ours.
