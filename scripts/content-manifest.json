@@ -590,11 +590,21 @@
     ]
   },
   "guides/rv-converter-not-charging.html": {
-    "hash": "305462e8942b672a",
-    "status": "unverified",
-    "verified_by": null,
-    "verified_at": null,
-    "sources": [],
+    "hash": "160ae85750527611",
+    "status": "verified",
+    "verified_by": "Gemini autoloop lane (JOB-20260924-0404-converter-confirm, 2026-09-23 22:38 PDT), on a page first reviewed by Claude (JOB-20260924-0355): confirmed the three blocking findings - the FAQ's shorted-cell claim replaced, the FAQ's reverse-polarity first step now naming WFCO and Progressive Dynamics separately, and the DC-board branch fuse restored to the closing checklist with the list renumbered. Verdict YES. SCOPE OF THIS VERDICT, stated so a later reader is not misled: the confirm round checked the three blocking items and did not re-sweep for new findings, so the five non-blocking prose findings from round one are applied but confirmed only by my own read-back, and no margin sweep was run by this lane.",
+    "verified_at": "2026-09-23",
+    "sources": [
+      "WFCO WF-8700-AD manual",
+      " WFCO WF-9800 and 9900 deckmount manual",
+      " WFCO support FAQ",
+      " Progressive Dynamics converter troubleshooting guide",
+      " Trojan battery maintenance",
+      " Cummins Onan F-1362",
+      " Xantrex TRUECHARGE datasheet"
+    ],
+    "spec": "_specs/rv-converter-not-charging.md",
+    "spec_waived": false,
     "claims": [
       {
         "id": "C1",

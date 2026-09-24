@@ -329,3 +329,26 @@ write sites sanitise now, negative-tested by injecting a dash and confirming it 
 **Why the handoff:** the page is mid-draft, and items 1 to 6 are all surgical citation work that needs the
 same kind of careful reading the tank-sensor page took. Stopping here keeps each of those edits inside a
 context that can also verify it.
+
+## 12. The review rounds, 2026-09-24 - VERIFIED
+
+**Round one (Claude, JOB-20260924-0355, 20:57): no, with three blocking findings.** The most useful two were
+the same trap twice:
+
+- **The FAQ is a PARAPHRASE of the body, not a copy.** Two of the four corrections from the reading never
+  reached it, because I fixed the body and grepped for the old string. The FAQ had word-shuffled both claims -
+  and its version of the shorted-cell claim was *stronger* than the one I deleted ("WFCO lists ... as the
+  cause" over "there could be"). **Rule from here: check a correction against the CLAIM, not the string.**
+- The closing check-in-this-order list omitted the DC-board branch fuse entirely, though it has its own
+  section and a per-model table earlier.
+- Also applied: the disconnect switch presented as certainly in the charging path when the page says three
+  sections later that its position varies; a missing branch for a low-but-nonzero reading; and five diligence
+  qualifiers that read as the writer vouching for its own claims.
+
+**Confirm round (Gemini autoloop, JOB-20260924-0404, 22:38): YES.** All three blocking findings confirmed
+against the staged page. **The verdict's scope is recorded in the ledger**: it checked the three blocking
+items and did not re-sweep for new findings, so the five non-blocking prose findings are confirmed by my own
+read-back and no margin sweep was run by that lane.
+
+**The page is recorded as verified - the twelfth in the programme** - and it is the first page whose confirm
+round ran unattended through the queue rather than through a paste.
