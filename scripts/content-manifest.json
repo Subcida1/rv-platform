@@ -1599,7 +1599,361 @@
       "outbox/reply-20260922-2026-fixes-confirm-batch4.md"
     ],
     "invalidated_by": "house-style sweep 2026-09-23: 77 colon lowercases across 16 pages; heading text changed, meaning did not",
-    "invalidated_at": "2026-09-23"
+    "invalidated_at": "2026-09-23",
+    "claims": [
+      {
+        "id": "C1",
+        "text": "\"A generator never charges your batteries directly\": it makes 120 volt AC, that AC passes through a transfer switch to a converter or inverter charger, and only that device charges",
+        "source": "the Cummins Onan RV generator handbook (in Sources) documents the generator-to-charger path; the absolute word \"never\" is denied by C2",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C2",
+        "text": "\"many diesel generators also carry an alternator which can charge batteries directly, so a diesel RV has a second charging path that a gas one usually does not\"",
+        "source": "the Cummins Onan RV generator handbook (in Sources); this sentence contradicts C1 as written and is the reason \"never\" has to go",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C3",
+        "text": "\"That instinct is usually wrong\" (lede)",
+        "source": "a prevalence claim with no source",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C4",
+        "text": "\"the list of suspects gets much shorter and much cheaper\" (lede)",
+        "source": "a ranking and cost claim with no source",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C5",
+        "text": "\"Last reviewed: Sep 21, 2026, against current Cummins Onan, Xantrex and Victron documentation.\"",
+        "source": "provenance, fine print per Ty's ruling",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C6",
+        "text": "the diagram: generator makes 120 volt AC, passes to the generator breaker, then the transfer switch in the coach, then the converter or inverter charger, then the battery; caption ",
+        "source": "an illustration and image provenance, may stand",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C7",
+        "text": "the diagram's \"Four things sit between the generator and the battery, and three of them are not the generator.\"",
+        "source": "arithmetic; the count does not hold (only the generator breaker is on the generator, the transfer switch and charger are two more, so three ",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C8",
+        "text": "the diagram's \"why the manufacturer does not publish a battery-charging failure table for it.\"",
+        "source": "failed-search disclosure and unnamed authority; cut",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C9",
+        "text": "\"Onan's generator documentation does not contain a house battery charging failure table. We looked, across installation, operator and service material.\"",
+        "source": "failed-search disclosure; the fact may stand only if the Onan document is named and quoted, and the narration goes",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C10",
+        "text": "\"House charging is the coach's system rather than the generator's... and the guide you actually need is the converter one.\"",
+        "source": "our own scope signposting; no number and no safety step",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C11",
+        "text": "\"the manufacturer's own order of checks\" is to check the generator's circuit breakers first, and if the breaker is on, AC is present and the outlets are still dead, the likely caus",
+        "source": "the Cummins Onan RV generator handbook (in Sources); the sentence says \"the manufacturer\"",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C12",
+        "text": "H3 One: \"On a 50 amp coach there may be a pair of them\" and \"This is the manufacturer's first check and it costs nothing.\"",
+        "source": "a count plus an unnamed authority; the Cummins Onan handbook (in Sources)",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C13",
+        "text": "H3 Two: a failed transfer switch stuck in the shore position or with burnt contacts never lets generator power through; \"Transfer switch makers publish their own test procedures, a",
+        "source": "the transfer-switch maker's test procedure is unnamed and no maker is in Sources; name one or cut the sentence; \"far cheaper\" is a ranking",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C14",
+        "text": "\"An inverter charger engages its charging function automatically once it senses a qualified AC input, and the practical test is simply whether battery voltage climbs after it does.",
+        "source": "the Xantrex Freedom SW 2000 owner's guide (in Sources)",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C15",
+        "text": "\"Where the inverter works but the charger does not, Xantrex's guidance is to check the AC input voltage at the inverter and confirm it is within the unit's range.\"",
+        "source": "the Xantrex Freedom SW 2000 owner's guide (in Sources)",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C16",
+        "text": "H3 Four: the battery disconnect or the inline fuse near the battery are the break points, \"Exactly the same break points as a shore power fault, because it is the same wire. If the",
+        "source": "our own definition and the shore-power-versus-generator equivalence; no maker document carries it",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C17",
+        "text": "H3 Five: \"Victron publishes a starting point of 80 percent of the generator's capacity in watts.\"",
+        "source": "the Victron MultiPlus generator FAQ (in Sources); the figure must be read there before drafting",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C18",
+        "text": "\"They also publish a setting called WeakAC... which reduces maximum charge current by approximately 20 percent.\"",
+        "source": "the Victron MultiPlus generator FAQ (in Sources); the figure must be read there, and it is the page's most likely wrong number",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C19",
+        "text": "H3 Six: an undersized generator is \"more common than people expect once air conditioning is in the picture.\"",
+        "source": "a prevalence claim with no source",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C20",
+        "text": "the H2 \"The ranked causes\" and the label \"Documented by manufacturers:\" present six causes as one documented order",
+        "source": "the six are separately attributed to Onan, Xantrex and Victron, but no single document publishes this ranking; the ranking word is ours",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C21",
+        "text": "\"A fault in the wiring between the generator and the transfer switch, including a loose junction box connection, is repeatedly described by owners and technicians.\"",
+        "source": "\"owners and technicians\", unnamed; no document",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C22",
+        "text": "\"One account notes that a coach has two hot legs in that run, and if the one feeding the converter is dead then the batteries will not charge even though the generator runs.\"",
+        "source": "\"One account\", unnamed; a two-hot-leg claim a reader could act on",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C23",
+        "text": "\"Generator output faults such as a corroded brush block or slip rings, giving zero output at the terminals, are also field-reported.\"",
+        "source": "\"field-reported\", unnamed; no document",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C24",
+        "text": "\"neither appears in a manufacturer failure table we could find\"",
+        "source": "failed-search disclosure; cut",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C25",
+        "text": "the charger is \"listed as drawing up to 3,000 watts, or roughly 6 to 28 amps\" and \"the documentation notes that chargers come on automatically and can draw a large load\"; repeated ",
+        "source": "\"the documentation\", unnamed; numbers; name the document that lists it or the figures go",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C26",
+        "text": "\"A converter is smaller at 500 to 1,000 watts, about 4 to 8 amps.\"",
+        "source": "our own definition and arithmetic (1,000 watts at 120 volts is about 8 amps)",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C27",
+        "text": "\"An air conditioner running draws 1,200 to 2,400 watts, and its start-up surge is three to four times that.\"",
+        "source": "numbers with no named document; the Cummins Onan handbook is the candidate carrier and must be read or the figures go",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C28",
+        "text": "\"a 30 amp shore connection delivers about 3,600 watts and a 50 amp connection about 12,000.\"",
+        "source": "arithmetic (30 times 120, 50 times 240)",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C29",
+        "text": "\"Manufacturer recommended generator sizes by RV type\": Class B one air conditioner 2,500 to 2,800 watts; Class C one 3,200 to 4,000; Class A two 15,000 BTU 5,500 to 8,000; Class A ",
+        "source": "\"Manufacturer\", unnamed, and six ranges; name the document carrying them",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C30",
+        "text": "\"Many inverter chargers let you reduce charge current precisely so the generator can cope, which is a settings change rather than a repair.\"",
+        "source": "our own recommendation, supported by the Victron AC input limit setting (in Sources)",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C31",
+        "text": "the portable generator photo figcaption: \"Its 120 volt outlet is what you want, fed into the shore power inlet, not the small 12-volt outlet.\" credited \"Image credit: TaurusEmerald",
+        "source": "image provenance and a usage instruction, may stand",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C32",
+        "text": "\"The 12-volt DC outlet is not voltage or current regulated, so it will not properly charge RV batteries directly without an external charge controller. It is limited to a maximum o",
+        "source": "numbers with no document on the page; the portable generator maker (Honda EU2000i) is nameable but is not in Sources, so either add its manu",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C33",
+        "text": "\"The same generator's 120 volt outlet, feeding your existing 40 or 80 amp charger through the shore cord, delivers somewhere between 1,000 and 1,600 watts.\"",
+        "source": "a number carried by the portable generator's own rating (Honda EU2000i, not in Sources); add the manual or drop the range",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C34",
+        "text": "\"an onboard generator's own DC circuit, which is typically a much smaller regulated output, and not the path used to charge the house bank.\"",
+        "source": "the Cummins Onan RV generator handbook (in Sources)",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C35",
+        "text": "\"no manufacturer publishes repair pricing, so these are commercial sources and ranges.\"",
+        "source": "failed-search disclosure plus unnamed commercial sources; cut",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C36",
+        "text": "\"A common 50 amp unit runs roughly $189 to $350, with heavier 100 amp units around $695 to $798.\"",
+        "source": "two dollar ranges with no document behind them",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C37",
+        "text": "\"We could not find an RV specific installed price from any attributable source, only part prices, so treat labour as an unknown and ask your shop for it directly.\"",
+        "source": "failed-search disclosure; cut",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C38",
+        "text": "\"Generator repair is where the money is, quoted broadly from $150 up to several thousand, with most owners spending somewhere between $350 and $900.\"",
+        "source": "dollar figures plus \"most owners\", unnamed",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C39",
+        "text": "\"A mobile service visit with oil, filter and plug runs around $280 to $350, and a full service suite closer to $485. Authorised generator service labour is quoted at roughly $175 t",
+        "source": "four dollar figures, unnamed",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C40",
+        "text": "\"A generator service visit and a transfer switch replacement are in the same broad price band.\"",
+        "source": "a ranking claim with no document",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C41",
+        "text": "FAQ5 and the FAQPage schema: \"a 15,000 BTU air conditioner draws about 1,500 watts running and up to 3,500 watts starting\"",
+        "source": "arithmetic check against the body, which says the surge is three to four times running (C27); the FAQ copy states a different ratio",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C42",
+        "text": "FAQ2 and the FAQPage schema: \"the manufacturer's own troubleshooting guide tells you to check... the likely cause is a faulty transfer relay\"",
+        "source": "unnamed; the Cummins Onan RV generator handbook (in Sources)",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C43",
+        "text": "the Article schema description: \"the ranked causes, generator sizing against charger and air conditioning load, and why a portable generator's 12-volt outlet is the wrong tool.\"",
+        "source": "the page's own wording; \"ranked causes\" is the same ranking shape as C20",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C44",
+        "text": "\"The rest of this cluster\" and its three cross-links (converter not charging, 12-volt diagnostic, fuse keeps blowing)",
+        "source": "the three links resolve and each guide is real; the heading word is internal vocabulary (D8)",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      }
+    ]
   },
   "guides/rv-lights-not-working.html": {
     "hash": "d4f653327e76bdb7",
