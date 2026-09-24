@@ -1971,11 +1971,250 @@
     ]
   },
   "guides/rv-lights-not-working.html": {
-    "hash": "d4f653327e76bdb7",
-    "status": "unverified",
-    "verified_by": null,
-    "verified_at": null,
-    "sources": []
+    "hash": "845d24cfe9c77bf0",
+    "status": "verified",
+    "verified_by": "AI Studio lane, two rounds on 2026-09-24. The full review (JOB-20260924-0800) returned NO, blocked by three findings, and the first was the catch of the night: the page safety warning was inverted, claiming that grounding the switch or the fixture ground lead creates a dead short because the ground comes after the load. What shorts is a supply-side conductor, and the ground lead after the load is safe to tap and is how a suspect return gets tested. That sentence came from the original page and the draft pass had restated it as ours, which is the lesson: a claim adopted as ours has to be checked for correctness, not only for attribution. The other half of that finding was declined because the reviewer was wrong about the document: WFCO says both that the converter resumes normal operation and that a short-circuit condition is dangerous and the RV needs inspection by a qualified technician, and the page now tracks that wording more closely. Five more findings applied: the ground-under-load test measures to a local chassis point rather than the battery negative; sealed LED assemblies no longer get aftermarket modules recommended for them, in three places; the causes list says which case it applies to; the diagram caption says what test point 4 should read, a healthy ground being near zero volts; and 14.4 volts is above a 14 volt rating rather than at the top of it, with the switch test moved to across-the-terminals. Two further declines recorded: the supply-level procedure belongs to the verified 12-volt hub page this page links to, and the diagram provenance line is a site convention. Confirm round JOB-20260924-0830 returned PART 1: CONFIRMED on all sixteen edits and cleared all three blockers.",
+    "verified_at": "2026-09-24",
+    "sources": [
+      "ITC 3.5 inch Radiance light installation instructions",
+      "WFCO WF-9800 series converter manual"
+    ],
+    "spec": "_specs/rv-lights-not-working.md",
+    "spec_waived": false,
+    "claims": [
+      {
+        "id": "C1",
+        "text": "the light circuit is a loop: battery or converter, through the fuse, the switch and the fixture, and back to the battery through the chassis as the return conductor",
+        "source": "our own definition of the circuit; it is the page's thesis",
+        "state": "CONFIRMED",
+        "by": "Our own definition, method or instruction, or a claim resolved in the draft. Ty's scoping rule: a definition, an illustration or a method may stand without a source.",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C2",
+        "text": "the number of lights affected narrows the search: one fixture, one group, or every light",
+        "source": "our own method, stated as ours",
+        "state": "CONFIRMED",
+        "by": "Our own definition, method or instruction, or a claim resolved in the draft. Ty's scoping rule: a definition, an illustration or a method may stand without a source.",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C3",
+        "text": "\"test 1, 2 and 3 for 12 volts, then test point 4, the ground\", with the diagram numbering the four points",
+        "source": "our own method, an instruction",
+        "state": "CONFIRMED",
+        "by": "Our own definition, method or instruction, or a claim resolved in the draft. Ty's scoping rule: a definition, an illustration or a method may stand without a source.",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C4",
+        "text": "with the switch on, both terminals should read around 12 volts measured against a known good ground, and voltage on one terminal only means the switch is open when it should be clo",
+        "source": "a maker document, or restated as our own test",
+        "state": "CONFIRMED",
+        "by": "The switch test is our own method, restated in the draft as the across-the-terminals voltage-drop test because a wall switch has no ground in its box.",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C5",
+        "text": "an ohmmeter cannot tell you whether a connection will carry a load: it pushes too little current, and a ground can read a fraction of an ohm and still fail under a couple of amps",
+        "source": "a document, or restated as our own explanation",
+        "state": "CONFIRMED",
+        "by": "Our own definition, method or instruction, or a claim resolved in the draft. Ty's scoping rule: a definition, an illustration or a method may stand without a source.",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C6",
+        "text": "the ground must be tested under load: with the circuit on, measure between the fixture's ground point and the battery negative, and any significant voltage across that path is volt",
+        "source": "our own method; the page's most useful instruction",
+        "state": "CONFIRMED",
+        "by": "Our own definition, method or instruction, or a claim resolved in the draft. Ty's scoping rule: a definition, an illustration or a method may stand without a source.",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C7",
+        "text": "SAFETY: do not ground the switch, or run a wire from the fixture straight to the frame at a random point, because the ground in this circuit comes after the load and doing this cre",
+        "source": "a document, or restated as our own warning. Currently carried by \"owners who have tried this describe...\"",
+        "state": "CONFIRMED",
+        "by": "SAFETY, restated as our own warning in the draft and CORRECTED in the review round: the original explanation was inverted. What shorts is a supply-side conductor; the ground lead after the load is safe to tap. The reviewer's physics check and the WFCO wording are recorded in the spec section 13.",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C8",
+        "text": "\"a fuse that is not pushed fully home, or that has corrosion on its blades, behaves exactly like a blown one\"",
+        "source": "plausible and mechanical; may stand as ours",
+        "state": "CONFIRMED",
+        "by": "Our own definition, method or instruction, or a claim resolved in the draft. Ty's scoping rule: a definition, an illustration or a method may stand without a source.",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C9",
+        "text": "\"owners describe switches that have overheated and stopped working\"",
+        "source": "unnamed owners; cut unless a document carries it",
+        "state": "CONFIRMED",
+        "by": "Unnamed owners. Cut in the draft under the unnamed-authority rule.",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C10",
+        "text": "on modern LED fixtures a small driver board converts the supply and fails before the LEDs do",
+        "source": "a maker document",
+        "state": "CONFIRMED",
+        "by": "Driver board fails before the LEDs. No maker document carries it for this fixture, so it is stated as ours.",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C11",
+        "text": "\"manufacturers state there are no user-serviceable parts inside, and opening the unit voids the warranty\" (repeated in the FAQ and again as \"fixture manufacturers state\")",
+        "source": "ITC's instruction sheet is in Sources and is almost certainly the document behind this; name it",
+        "state": "CONFIRMED",
+        "by": "Was attributed to manufacturers and cut in the draft: the ITC Radiance sheet carries no user-serviceable-parts wording and no warranty clause at all. The page now states the sealed unit as ours.",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C12",
+        "text": "corrosion: any connection between two different metals is a corrosion site once moisture is present, and resistance climbs until the connection disappears",
+        "source": "a physics explanation; may stand as ours",
+        "state": "CONFIRMED",
+        "by": "Our own definition, method or instruction, or a claim resolved in the draft. Ty's scoping rule: a definition, an illustration or a method may stand without a source.",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C13",
+        "text": "\"owners have reported junction boxes holding standing water, with the circuit reading well below 12 volts and every light on it flickering\"",
+        "source": "unnamed owners; cut, or restate as a symptom a reader can look for",
+        "state": "CONFIRMED",
+        "by": "Unnamed owners' report. Restated in the draft as a symptom a reader can look for.",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C14",
+        "text": "\"one manufacturer's fitting instructions specify an operating range of 10 to 14 volts DC\" and interior installation only",
+        "source": "ITC (in Sources, unnamed in the body)",
+        "state": "READ",
+        "by": "ITC 3.5 inch Radiance light installation instructions: \"Operating Voltage: 10 - 14V DC\" and \"Light is rated for interior installation only, do not install in wet locations.\"",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C15",
+        "text": "if a converter is failing and pushing output high, you can damage LED fixtures with no obvious symptom until they start dropping",
+        "source": "depends on C14's document; a number-and-damage claim",
+        "state": "CONFIRMED",
+        "by": "CORRECTED in the draft: WFCO gives a healthy converter output of 13.6 to 14.4 V and describes failure as 0.0 V, so the over-voltage mechanism was removed.",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C16",
+        "text": "WFCO states that lights powered from the converter output may change brightness slightly when the converter changes charging stage",
+        "source": "WFCO, named on the page and in Sources",
+        "state": "READ",
+        "by": "WFCO WF-9800 series manual: \"Lights that are powered from the output may change brightness slightly at that time.\"",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C17",
+        "text": "\"lights flicker when switched off\" can be current leakage through a multiplex control module, a known behaviour of those systems, with a load resistor as the usual remedy",
+        "source": "a document, or cut: \"a known behaviour\" names nobody",
+        "state": "CONFIRMED",
+        "by": "Unnamed systems. Restated in the draft as our own statement about multiplexed control modules.",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C18",
+        "text": "\"a pulse-width dimmer and a driver that does not suit it\" is a compatibility problem rather than a fault",
+        "source": "a document, or restated as ours",
+        "state": "CONFIRMED",
+        "by": "Our own definition, method or instruction, or a claim resolved in the draft. Ty's scoping rule: a definition, an illustration or a method may stand without a source.",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C19",
+        "text": "\"the water pump or the furnace blower starting should not visibly dim your lights\", and when it does, look for loose or corroded connections at the distribution panel",
+        "source": "our own expectation, stated as ours",
+        "state": "CONFIRMED",
+        "by": "Our own definition, method or instruction, or a claim resolved in the draft. Ty's scoping rule: a definition, an illustration or a method may stand without a source.",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C20",
+        "text": "an incandescent bulb fails abruptly when the filament breaks, and nothing else in the circuit changes",
+        "source": "a definition; may stand",
+        "state": "CONFIRMED",
+        "by": "Our own definition, method or instruction, or a claim resolved in the draft. Ty's scoping rule: a definition, an illustration or a method may stand without a source.",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C21",
+        "text": "an LED fixture dims, flickers or behaves oddly before it dies, and heat buildup inside the fixture is the usual cause",
+        "source": "a maker document, or restated as ours",
+        "state": "CONFIRMED",
+        "by": "LED fixture degrades before it dies, heat kills the driver. Stated as ours; no maker document carries it for this fixture.",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C22",
+        "text": "cost: replacement LED ceiling fixtures \"roughly $14 to $38\" and modules less than that",
+        "source": "no document; settled convention applies",
+        "state": "CONFIRMED",
+        "by": "Cost figures cut in the draft per the settled convention: relative ordering only, no absolute dollars without a publishable source.",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C23",
+        "text": "cost: professional diagnosis \"around $95 to $185\" as a standalone fee, with labour at \"roughly $125 to $195 an hour\"",
+        "source": "no document; settled convention applies",
+        "state": "CONFIRMED",
+        "by": "Cost figures cut in the draft per the settled convention.",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C24",
+        "text": "cost: rewiring a location \"roughly $300 to $650\", and water damage behind a wall beyond that",
+        "source": "no document; settled convention applies",
+        "state": "CONFIRMED",
+        "by": "Cost figures cut in the draft per the settled convention.",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C25",
+        "text": "the triage is \"a synthesis of how the trade approaches the problem\" and no manufacturer publishes it in these words",
+        "source": "failed-search disclosure plus unnamed authority; cut both, keep the method as ours",
+        "state": "CONFIRMED",
+        "by": "The failed-search disclosure and the unnamed trade attribution. Cut whole in the draft.",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C26",
+        "text": "\"this is the single most useful thing on the page\" and \"the triage in this guide is worth doing yourself first\"",
+        "source": "self-reference and self-praise; cut",
+        "state": "CONFIRMED",
+        "by": "Self-reference and self-praise. Cut in the draft.",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C27",
+        "text": "\"the most under-tested part of the circuit and the answer more often than people expect\"",
+        "source": "prevalence and ranking; the fact may survive without them",
+        "state": "CONFIRMED",
+        "by": "Prevalence and ranking. Cut in the draft.",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C28",
+        "text": "\"cheap and common\" (the switch), \"almost every RV light is LED now\", \"which is often the sensible middle path\"",
+        "source": "prevalence; cut the claim, keep the fact",
+        "state": "CONFIRMED",
+        "by": "Prevalence. Cut in the draft.",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C29",
+        "text": "\"The trade wording is exactly that: if you read 12 volts at the fixture using a good ground and the light does not come on, either the light is bad or the ground side has a problem",
+        "source": "\"the trade\" is the doctrine's own example; state it as ours",
+        "state": "CONFIRMED",
+        "by": "The trade attribution, which restated the sentence before it. Cut in the draft.",
+        "at": "2026-09-24"
+      }
+    ]
   },
   "guides/rv-outlets-not-working.html": {
     "hash": "ee29adbd6bc6848a",

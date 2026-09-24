@@ -165,35 +165,35 @@ carried by strangers today.
 
 | # | Claim | Source it should carry | Status |
 |---|---|---|---|
-| C1 | the light circuit is a loop: battery or converter, through the fuse, the switch and the fixture, and back to the battery **through the chassis as the return conductor** | our own definition of the circuit; it is the page's thesis | OURS |
-| C2 | the number of lights affected narrows the search: one fixture, one group, or every light | our own method, stated as ours | OURS |
-| C3 | **"test 1, 2 and 3 for 12 volts, then test point 4, the ground"**, with the diagram numbering the four points | our own method, an instruction | OURS |
-| C4 | with the switch on, **both terminals should read around 12 volts** measured against a known good ground, and voltage on one terminal only means the switch is open when it should be closed | a maker document, or restated as our own test | UNNAMED |
-| C5 | **an ohmmeter cannot tell you whether a connection will carry a load**: it pushes too little current, and a ground can read a fraction of an ohm and still fail under a couple of amps | a document, or restated as our own explanation | OURS |
-| C6 | the ground must be tested **under load**: with the circuit on, measure between the fixture's ground point and the battery negative, and any significant voltage across that path is volts lost in the return | our own method; the page's most useful instruction | OURS |
-| C7 | **SAFETY: do not ground the switch, or run a wire from the fixture straight to the frame at a random point**, because the ground in this circuit comes after the load and doing this creates a dead short | **a document, or restated as our own warning.** Currently carried by *"owners who have tried this describe..."* | UNNAMED |
-| C8 | **"a fuse that is not pushed fully home, or that has corrosion on its blades, behaves exactly like a blown one"** | plausible and mechanical; may stand as ours | OURS |
-| C9 | **"owners describe switches that have overheated and stopped working"** | unnamed owners; cut unless a document carries it | UNNAMED |
-| C10 | on modern LED fixtures a small **driver board** converts the supply and **fails before the LEDs do** | a maker document | UNNAMED |
-| C11 | **"manufacturers state there are no user-serviceable parts inside, and opening the unit voids the warranty"** (repeated in the FAQ and again as *"fixture manufacturers state"*) | **ITC's instruction sheet is in Sources and is almost certainly the document behind this; name it** | SOURCED |
-| C12 | corrosion: any connection between two different metals is a corrosion site once moisture is present, and resistance climbs until the connection disappears | a physics explanation; may stand as ours | OURS |
-| C13 | **"owners have reported junction boxes holding standing water, with the circuit reading well below 12 volts and every light on it flickering"** | unnamed owners; cut, or restate as a symptom a reader can look for | UNNAMED |
-| C14 | **"one manufacturer's fitting instructions specify an operating range of 10 to 14 volts DC"** and interior installation only | **ITC** (in Sources, unnamed in the body) | SOURCED |
-| C15 | if a converter is failing and pushing output high, **you can damage LED fixtures with no obvious symptom until they start dropping** | depends on C14's document; a number-and-damage claim | SOURCED |
-| C16 | **WFCO states that lights powered from the converter output may change brightness slightly when the converter changes charging stage** | WFCO, named on the page and in Sources | NAMED |
-| C17 | **"lights flicker when switched off" can be current leakage through a multiplex control module**, a known behaviour of those systems, with a load resistor as the usual remedy | a document, or cut: *"a known behaviour"* names nobody | UNNAMED |
-| C18 | **"a pulse-width dimmer and a driver that does not suit it"** is a compatibility problem rather than a fault | a document, or restated as ours | OURS |
-| C19 | **"the water pump or the furnace blower starting should not visibly dim your lights"**, and when it does, look for loose or corroded connections at the distribution panel | our own expectation, stated as ours | OURS |
-| C20 | an incandescent bulb **fails abruptly when the filament breaks**, and nothing else in the circuit changes | a definition; may stand | OURS |
-| C21 | an LED fixture **dims, flickers or behaves oddly before it dies**, and **heat buildup inside the fixture is the usual cause** | a maker document, or restated as ours | UNNAMED |
-| C22 | **cost: replacement LED ceiling fixtures "roughly $14 to $38"** and modules less than that | no document; settled convention applies | UNNAMED |
-| C23 | **cost: professional diagnosis "around $95 to $185" as a standalone fee, with labour at "roughly $125 to $195 an hour"** | no document; settled convention applies | UNNAMED |
-| C24 | **cost: rewiring a location "roughly $300 to $650"**, and water damage behind a wall beyond that | no document; settled convention applies | UNNAMED |
-| C25 | the triage is **"a synthesis of how the trade approaches the problem"** and no manufacturer publishes it in these words | failed-search disclosure plus unnamed authority; cut both, keep the method as ours | UNNAMED |
-| C26 | **"this is the single most useful thing on the page"** and **"the triage in this guide is worth doing yourself first"** | self-reference and self-praise; cut | OURS |
-| C27 | **"the most under-tested part of the circuit and the answer more often than people expect"** | prevalence and ranking; the fact may survive without them | UNNAMED |
-| C28 | **"cheap and common"** (the switch), **"almost every RV light is LED now"**, **"which is often the sensible middle path"** | prevalence; cut the claim, keep the fact | UNNAMED |
-| C29 | **"The trade wording is exactly that: if you read 12 volts at the fixture using a good ground and the light does not come on, either the light is bad or the ground side has a problem."** | *"the trade"* is the doctrine's own example; state it as ours | UNNAMED |
+| C1 | the light circuit is a loop: battery or converter, through the fuse, the switch and the fixture, and back to the battery **through the chassis as the return conductor** | our own definition of the circuit; it is the page's thesis | CONFIRMED |
+| C2 | the number of lights affected narrows the search: one fixture, one group, or every light | our own method, stated as ours | CONFIRMED |
+| C3 | **"test 1, 2 and 3 for 12 volts, then test point 4, the ground"**, with the diagram numbering the four points | our own method, an instruction | CONFIRMED |
+| C4 | with the switch on, **both terminals should read around 12 volts** measured against a known good ground, and voltage on one terminal only means the switch is open when it should be closed | a maker document, or restated as our own test | CONFIRMED |
+| C5 | **an ohmmeter cannot tell you whether a connection will carry a load**: it pushes too little current, and a ground can read a fraction of an ohm and still fail under a couple of amps | a document, or restated as our own explanation | CONFIRMED |
+| C6 | the ground must be tested **under load**: with the circuit on, measure between the fixture's ground point and the battery negative, and any significant voltage across that path is volts lost in the return | our own method; the page's most useful instruction | CONFIRMED |
+| C7 | **SAFETY: do not ground the switch, or run a wire from the fixture straight to the frame at a random point**, because the ground in this circuit comes after the load and doing this creates a dead short | **a document, or restated as our own warning.** Currently carried by *"owners who have tried this describe..."* | CONFIRMED |
+| C8 | **"a fuse that is not pushed fully home, or that has corrosion on its blades, behaves exactly like a blown one"** | plausible and mechanical; may stand as ours | CONFIRMED |
+| C9 | **"owners describe switches that have overheated and stopped working"** | unnamed owners; cut unless a document carries it | CONFIRMED |
+| C10 | on modern LED fixtures a small **driver board** converts the supply and **fails before the LEDs do** | a maker document | CONFIRMED |
+| C11 | **"manufacturers state there are no user-serviceable parts inside, and opening the unit voids the warranty"** (repeated in the FAQ and again as *"fixture manufacturers state"*) | **ITC's instruction sheet is in Sources and is almost certainly the document behind this; name it** | CONFIRMED |
+| C12 | corrosion: any connection between two different metals is a corrosion site once moisture is present, and resistance climbs until the connection disappears | a physics explanation; may stand as ours | CONFIRMED |
+| C13 | **"owners have reported junction boxes holding standing water, with the circuit reading well below 12 volts and every light on it flickering"** | unnamed owners; cut, or restate as a symptom a reader can look for | CONFIRMED |
+| C14 | **"one manufacturer's fitting instructions specify an operating range of 10 to 14 volts DC"** and interior installation only | **ITC** (in Sources, unnamed in the body) | READ |
+| C15 | if a converter is failing and pushing output high, **you can damage LED fixtures with no obvious symptom until they start dropping** | depends on C14's document; a number-and-damage claim | CONFIRMED |
+| C16 | **WFCO states that lights powered from the converter output may change brightness slightly when the converter changes charging stage** | WFCO, named on the page and in Sources | READ |
+| C17 | **"lights flicker when switched off" can be current leakage through a multiplex control module**, a known behaviour of those systems, with a load resistor as the usual remedy | a document, or cut: *"a known behaviour"* names nobody | CONFIRMED |
+| C18 | **"a pulse-width dimmer and a driver that does not suit it"** is a compatibility problem rather than a fault | a document, or restated as ours | CONFIRMED |
+| C19 | **"the water pump or the furnace blower starting should not visibly dim your lights"**, and when it does, look for loose or corroded connections at the distribution panel | our own expectation, stated as ours | CONFIRMED |
+| C20 | an incandescent bulb **fails abruptly when the filament breaks**, and nothing else in the circuit changes | a definition; may stand | CONFIRMED |
+| C21 | an LED fixture **dims, flickers or behaves oddly before it dies**, and **heat buildup inside the fixture is the usual cause** | a maker document, or restated as ours | CONFIRMED |
+| C22 | **cost: replacement LED ceiling fixtures "roughly $14 to $38"** and modules less than that | no document; settled convention applies | CONFIRMED |
+| C23 | **cost: professional diagnosis "around $95 to $185" as a standalone fee, with labour at "roughly $125 to $195 an hour"** | no document; settled convention applies | CONFIRMED |
+| C24 | **cost: rewiring a location "roughly $300 to $650"**, and water damage behind a wall beyond that | no document; settled convention applies | CONFIRMED |
+| C25 | the triage is **"a synthesis of how the trade approaches the problem"** and no manufacturer publishes it in these words | failed-search disclosure plus unnamed authority; cut both, keep the method as ours | CONFIRMED |
+| C26 | **"this is the single most useful thing on the page"** and **"the triage in this guide is worth doing yourself first"** | self-reference and self-praise; cut | CONFIRMED |
+| C27 | **"the most under-tested part of the circuit and the answer more often than people expect"** | prevalence and ranking; the fact may survive without them | CONFIRMED |
+| C28 | **"cheap and common"** (the switch), **"almost every RV light is LED now"**, **"which is often the sensible middle path"** | prevalence; cut the claim, keep the fact | CONFIRMED |
+| C29 | **"The trade wording is exactly that: if you read 12 volts at the fixture using a good ground and the light does not come on, either the light is bad or the ground side has a problem."** | *"the trade"* is the doctrine's own example; state it as ours | CONFIRMED |
 
 ### Attributions to nobody, to be named or cut
 
@@ -512,3 +512,23 @@ And the *"Original diagram, OriginRV"* credit, which is the provenance line ever
 none, and every rewritten paragraph read back in full.
 
 **Next:** the confirm round on the sixteen applied pairs. The page is not verified.
+
+**The confirm round, 2026-09-24 08:15 (JOB-20260924-0830): CONFIRMED on all sixteen edits, and all three
+blocking findings cleared.** It read every edit with its neighbours, and two of its answers are worth keeping
+because they test the fix rather than the wording: on the two safety paragraphs, *"the sequence and technical
+logic are sound"*, and on the scoping paragraph, *"prevents readers with a single dead fixture from erroneously
+testing branch fuses or switches"*, which is precisely the contradiction it had found.
+
+**And the gate refused the verdict on the first try, for a reason worth recording.** The page's 29 claims
+seeded **below the floor**, because this spec's §7 status column used *OURS*, *UNNAMED* and *NAMED*:
+`state_from_spec_text` does not recognise those words, so every one of them fell through to `SOURCED`. The
+status column is **not prose, it is a machine input** to the content gate, and the tool's vocabulary is
+`CONFIRMED` / `READ` / `WAIVED` / `SOURCED` / `OPEN`. The column is rewritten, all 29 claims are recorded
+through the tool with a per-claim reason (2 READ, 27 CONFIRMED), and the spec and the ledger now agree by
+construction rather than by hand.
+
+**The page is recorded as verified - the sixteenth in the programme** - with its two source documents, and the
+gate reports **16 verified, 23 unverified, 0 drifting**.
+
+**Outstanding:** the class sweep, the same standing step after verification that the outlet and generator pages
+ran, and it runs with the raw HTML as well as the prose view.
