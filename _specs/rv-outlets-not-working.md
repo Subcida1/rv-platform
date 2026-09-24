@@ -510,3 +510,44 @@ verdict with the four source documents (three Leviton sheets and the Xantrex gui
 step **after** verification, per the converter spec's §13, and it has not been run on this page. If the sweep
 finds and changes anything, the verdict has to be re-earned, which is the gate doing its job rather than a
 formality to skip.
+
+## 16. The class sweep and the re-earned verdict, 2026-09-24 07:22 (Claude Desktop, JOB-20260924-0715 PART 2)
+
+**The sweep found six instances on a page that had passed a full review, a confirm round and my own class
+grep.** It was given the raw HTML as well as the prose view this time, which is the change worth keeping: it
+checked every heading, the figure caption, the SVG's title and desc, the meta description, the `og:` and
+`twitter:` strings and **both JSON-LD blocks**, and reported the other three classes clean across all of them.
+The meta and the schema are exactly where this page's worst defect lived, and a prose-only sweep cannot see
+them.
+
+**Applied (four).**
+
+1. **The breaker sentence said the same thing twice.** *"A tripped breaker frequently does not look tripped, and
+   you cannot tell by looking at it."* It is now *"You cannot tell whether a breaker is tripped by looking at
+   it."* **Applied as a redundancy fix, not as a prevalence fix:** a frequency word about a circuit breaker is
+   ordinary technical writing, and calling that a banned class is the instrument over-reaching. The sentence
+   was the defect, not the word.
+2. **The same sentence in the FAQ answer and in its schema copy**, which is a pair of edits rather than one:
+   leaving the schema behind would put the machine-readable answer out of step with the visible one.
+3. **The unattributed comparative frequency claim closing the causes list is cut:** *"A fault inside the wall
+   is much rarer than any of those."* **This reverses a decision I recorded in §11,** where I kept it as a
+   likelihood comparison rather than a claim about owners. On a second read it is a claim about how often each
+   fault occurs in the population, which is the one thing we have no source for, and the list carries the
+   reader's next move without it. The wall's expense is already carried two sections later, in the cost
+   section, where it belongs.
+4. **The safety callout's self-reference is reworded, with its scope kept exactly.** *"Everything below that
+   involves opening anything assumes the power is off"* had the page's own layout as its subject; it now reads
+   *"Opening a panel or an outlet is only safe with the power off, and off means the shore cord unplugged at
+   the pedestal rather than the breaker switched off..."*. Same rule, same definition of off, no reference to
+   where the rule sits on the page.
+
+**Declined (one), with the reason recorded.** *"Usually not a fault"*, in the shore-power-versus-inverter
+entry. The sweep classed it as prevalence, but it is a frequency claim about the situation rather than about
+what owners or technicians do, which is the definition of the class. It is also the page's own diagnostic
+judgement about a symptom, and **the sweep's own suggested fix would have made the claim worse**: *"Not a
+fault:"* turns a hedge into an absolute, and an inverter that has failed produces the same symptom.
+
+**The consequence, recorded because it is the point of the exercise:** the page is now **`drifting`** and the
+gate **fails** (*"1 verified page(s) changed without re-verification"*) until a confirm round re-earns the
+verdict. The converter page did exactly this after its sweep. A page is not verified because it was verified
+once; it is verified because the text that is committed is the text that was reviewed.
