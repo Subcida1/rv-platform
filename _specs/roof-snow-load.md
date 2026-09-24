@@ -1,6 +1,6 @@
 # SPEC — `guides/roof-snow-load.html`
 
-**Written:** 2026-09-23 · **Status:** awaiting drafting · **Tenth spec of the content-engine programme**
+**Written:** 2026-09-23 · **Status:** drafted 2026-09-23, in review · **Tenth spec of the content-engine programme**
 **Template:** mirrors `_specs/rv-towing-capacity.md`
 
 ---
@@ -82,7 +82,11 @@ H2  When the snow comes
 
 ## 7. Claims list — the core of this spec
 
-| # | Claim | Source it should carry | Status |
+**THE STATUS COLUMN BELOW IS STALE. The live ledger is `scripts/content-manifest.json`** — read it
+with `python3 scripts/verify-content.py --claims guides/roof-snow-load.html`. Every one of these
+twelve was read or confirmed on 2026-09-23 while the page was drafted; nothing sits below the floor.
+
+| # | Claim | Source it should carry | Status at spec time |
 |---|---|---|---|
 | C1 | **Keystone's manuals give a roof limit of 30 pounds per square foot, about two feet of snow** | Keystone's own 2026 owner's manual (in Sources) — **the page's load-bearing citation** | SOURCED |
 | C2 | Keystone states snow loads exceeding two feet or 30 psf should be removed | the same manual | SOURCED |
@@ -136,3 +140,44 @@ to May 2026 (RVBusiness / Specialized Dispatch Services, 2026-06-19).
 3. **Keystone's rating is the page's spine** and gets read before drafting; it is a maker's published figure
    and the page's best asset.
 4. **The Boxabl comparison is questioned rather than kept by default** (D2).
+
+## 11. The draft, 2026-09-23
+
+Written and staged for review the same day. What the four waiting additions became:
+
+- **Keystone's walkability rule** went into *If you have to clear the roof*, where a wrong answer
+  puts somebody on a ladder in the cold: units with a factory ladder have walkable roofs, some have
+  a walkable roof and no ladder, others have neither, and the ladder is rated to 250 pounds. The
+  inspect section keeps only the setup, so the rule is not stated twice.
+- **Keystone's materials and care** replaced three unsourced claims. The roof assembly description
+  (paneling, truss, insulation, decking, membrane) now does two jobs: it is why an RV with no attic
+  still has an ice-dam problem, and why the roof is not a surface to stand on. The 90-day sealant
+  interval replaced *"Sealant life is roughly two seasons"*; the same-sealant and no-silicone rules
+  replaced *"One tube of sealant costs a few dollars."*
+- **DOE's ice-dam causes and its collapse line** are in: interior warmth named alongside the sun,
+  and *"in severe cases, ice dams have caused roof collapses."*
+- **The NWS core method** is Step 3, and it is the better half of the page: melt a cylinder of snow
+  and multiply the inches of water by 5.2. It removes the guess at snow type entirely.
+
+Decisions the draft settled, all of which were live claims:
+
+- **D2 resolved.** Boxabl builds the Baby Box 120 as a factory-built towable RV and its 20 psf is a
+  second published figure, not a prefab comparison. The 20 to 25 rule of thumb is gone and **C4 now
+  rests on the two published ratings**.
+- **D4 resolved.** The ranges rest on NRCS density figures, with the water-equivalent method beside
+  them. The derived column (water content times 62.4) is new and is the page's only table.
+- **D1 resolved on this page** with *Protect the roof before the snow*. The same heading shape is
+  still live on three verified pages (`rv-furnace-not-working`, `rv-refrigerator-not-cooling`,
+  `rv-water-heater-not-heating`) and is still Ty's call.
+- **Cut for having nothing behind them**: the dynamic-versus-static load paragraph, *"gutters and
+  downspouts"* (an RV has none), *"every RV owner ... wonders the same thing"*, *"accelerates aging
+  faster than almost anything else"*, *"a known term in the trade: a fishmouth"*, and the cover
+  FAQ's abrasion claims.
+- **The worked examples were rebuilt** so all three share one roof and one foot of depth and only
+  the snow type changes. That demonstrates the thesis instead of asserting it.
+
+Left open:
+
+- The **"we could not find" disclosure class** survives on five other guides. Not this page's
+  problem, and it needs one ruling before anyone sweeps it.
+- **C12's ledger text was refreshed** to the Sep 23 review date the rewrite set.
