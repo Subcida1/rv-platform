@@ -233,7 +233,83 @@ This programme's classes were learned the hard way on seventeen pages. They appl
 
 **For Ty: no open calls.** The one question the sibling specs raised was the cost convention, and it is settled.
 
-## 11. State at handoff
+## 11. State at handoff## 12. The reading, 2026-09-24 11:10 (reading agent, five makers, safety first)
+
+**Nine of the ten items came back SUPPORTED with verbatim quotes, and ONE came back NOT FOUND in a way that
+matters.** The reading went at the override procedures first, because that is the page's most valuable content
+and the thing most likely to be written from memory.
+
+### The overrides, which are three different procedures and not one
+
+- **In-wall electric (Lippert In-Wall Owner's Manual, CCD-0001602): the override is not a tool. It is a button
+  sequence.** *"Press the mode button on the controller six times and hold on the seventh for five seconds to
+  enter electronic manual override mode... Use the extend/retract switch to move both motors in or out."*
+  Over-current and short-circuit detection stay enabled, and it applies to controllers C-1, C-2 and D-0 only.
+  The fallback when power or the controller is dead is the **motor disengagement procedure** (remove the
+  retention screws, pull each motor up about 1/2 inch) and then pushing the room.
+- **Hydraulic (Lippert Through Frame, CCD-0001616): a drill on a hex coupler turns the pump.** *"Using a standard
+  hex bit and auxiliary drive device (cordless or electric drill), insert hex bit into coupler found under
+  protective label... A standard 38 inch room will take approximately 45 seconds to retract."* Multi-valve
+  systems need the valve overridden first (TI-048 / CCD-0001907, a 5/32 hex).
+- **Cable (Norco/BAL Accu-Slide Service Manual 3.04): a flexible shaft on the 1/4 inch hex at the motor.** *"If
+  the cables tighten, and the motor is difficult to turn, REVERSE THE DIRECTION. Over-torquing can happen,
+  resulting in severe damage."* BAL's EXACT-SLIDE uses a #3 square bit instead and says **DO NOT USE AN IMPACT
+  DRIVER**.
+
+### Four traps the reading found, each of which would have been written confidently and wrongly
+
+1. **The rotation direction is not universal.** Two Lippert documents give **opposite** directions for the same
+   hydraulic override: one says counterclockwise to extend and clockwise to retract, the other says the reverse.
+   **The page must not state one direction.** It says the drill turns the pump and the reader should watch the
+   room.
+2. **The fault codes belong to ONE controller.** A real published table exists for the **In-Wall (Schwintek)**
+   controller only: LED 2 battery drop-out below 6 volts while running, 3 low battery below 8 volts at start, 5
+   excessive motor current (an obstruction), 6 motor short circuit; the green LED blinks motor 1 or motor 2.
+   **SlimRack has its own separate scheme and must not be blended in**, and no table exists for the hydraulic or
+   cable systems. This is exactly the generic table the spec's decision 4 forbade.
+3. **The interlock differs by maker, and all three are real.** Lippert: *"In the case of a motorized unit,
+   ignition MUST be off to operate the slide-out."* Winnebago: level, and *"have the parking brake on"*.
+   Keystone-type towables use the iN-Command **travel lock**, tied to the tow vehicle's brake signal, which
+   disables all motorized functions until it is unlocked. **No single rule applies to every coach.**
+4. **The breaker exists, but its location does not.** A **30 amp auto-reset** breaker feeds the in-wall circuit,
+   and Lippert explicitly **defers the physical location to the RV manufacturer**. The page can name the breaker
+   and must tell the reader to find its own.
+
+### The safety wording, which is quotable
+
+- Lippert: *"Keep hands and other body parts away from slide-out mechanisms during actuation. Severe injury or
+  death may result."* and *"Moving parts can pinch, crush or cut. Keep clear and use caution."*
+- Winnebago: *"Keep all persons clear of the slideout room and moving parts while extending or retracting. Do not
+  occupy the slideout room while it is being extended or retracted."* and **"Never drive the vehicle with a
+  slideout room extended."**
+- Lippert on travel: *"Install transit bars (if so equipped) on the slide-out room during storage and
+  transportation."*
+
+### And the one NOT FOUND, which is the most important line in the reading
+
+**No maker states that the load must be taken off the gears or the ram before a manual retraction.** The nearest
+wording is a **service** instruction, not a retraction one: replacing a gear rack requires *"the slideout room
+must be supported to get the weight off the slideout arms."* **That must not be presented as a manual-retract
+step**, and the spec's C10 was written as though it might be.
+
+### What the page must carry that a page like this would probably miss
+
+**Lippert: DO NOT MOVE THE RV UNLESS THE MOTORS ARE PLUGGED IN.** If the reader has disengaged both motors to
+push the room in, the room is no longer held, and the page has to say what to do about that before the wheels
+turn. **The reading calls it the thing a page like this would miss, and it is a travel-safety step rather than a
+diagnostic one.**
+
+### Voltage and the rest
+
+- **The in-wall controller runs on as little as 8 volts**, at greater amperage, and Lippert advises charging the
+  battery **below 11 volts**; Winnebago's practice is to **run the engine** so the alternator supplies the room.
+- **Failure modes per mechanism, all four quoted**: in-wall (excessive motor current, one side stalling, debris in
+  the rack), cable (kinked cables, failing over time, cable replacement), rack and pinion (broken gear key,
+  stripped gears, the whole gearbox replaced), hydraulic (**pump-side only** - motor, Trombetta, low voltage; **no
+  maker-stated solenoid or ram leak failure was found**).
+
+**All ten items need recording against this page's claims before it is drafted, and none of them is a guess.**
+
 
 Placeholder. The drafter fills this once the page exists, in the shape the other specs use: what is done and
 committed, the numbered items remaining before the first review round, and why the handoff happened where it did.
