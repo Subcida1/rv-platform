@@ -338,3 +338,18 @@ table is internally consistent (green-to-yellow plus orange-to-green equals oran
 **Left open, and Claude independently agreed the section is thin but not broken:** the cost section, plus its
 suggestion that *relative* cost ordering (cleaner, then DIY probes, then a shop) may clear Ty's bar where
 absolute dollar figures do not. That one is Ty's call, not ours.
+
+**Confirm round, 20:08 → verdict YES at 20:11.** All six fixes (the five blockers plus the market claim I
+caught applying its own note) marked FIX-CONFIRMED, headline and body verified to agree, and **the page is
+recorded as verified — the tenth in the programme.**
+
+Two things about this page worth carrying to the next one:
+
+- **It caught a class no gate can see: internal vocabulary in reader-facing copy.** *"The GEO method"* was
+  our own term for generative engine optimization, in a heading about holding tanks. Recorded in
+  `reference/projects/originrv-voice.md` as THE INTERNAL-VOCABULARY LEAK, with the other words to hunt.
+- **The confirm round found one more instance of the class it had just cleared** (*"You will see this argued
+  both ways"* in the black-and-gray FAQ) and called it optional. Its own reply prescribed the deletion, so it
+  is applied, and **that application happened after the verdict — the recorded hash covers the prescribed
+  deletion and the `--by` note says so.** The alternative was leaving a known instance of a banned class live
+  to protect a hash, which would have cost a whole round to fix later.

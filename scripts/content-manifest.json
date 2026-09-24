@@ -1306,16 +1306,19 @@
     "sources": []
   },
   "guides/rv-tank-sensors-reading-wrong.html": {
-    "hash": "72eb8a919acc90b2",
-    "status": "unverified",
-    "verified_by": null,
-    "verified_at": null,
+    "hash": "49cd91e91eb574be",
+    "status": "verified",
+    "verified_by": "Claude (confirm round, JOB-20260923-2008, 2026-09-23 20:11): all six fixes FIX-CONFIRMED, headline and body agree, verdict YES. Note on the hash: the verdict was given against the pre-edit text, and the only change applied after it is the FAQ clause its own reply prescribed as optional cleanup, so this hash covers the prescribed deletion and nothing else.",
+    "verified_at": "2026-09-23",
     "sources": [
-      "outbox/reply-20260922-1434-batch1-signoff-batch2-checklists.md",
-      "outbox/reply-20260922-2026-fixes-confirm-batch4.md"
+      "RV Probes FAQ and home page",
+      " Valterra product page",
+      " Thetford Level Gauge Cleaner + Tank Blaster + two support FAQs",
+      " Lippert Intelli-view manual",
+      " Garnet SeeLevel 709 manual"
     ],
-    "invalidated_by": "house-style sweep 2026-09-23: 77 colon lowercases across 16 pages; heading text changed, meaning did not",
-    "invalidated_at": "2026-09-23",
+    "spec": "_specs/rv-tank-sensors-reading-wrong.md",
+    "spec_waived": false,
     "claims": [
       {
         "id": "C1",
