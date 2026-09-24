@@ -3433,18 +3433,14 @@
     ]
   },
   "guides/rv-towing-capacity.html": {
-    "hash": "b1e4c9755bd1819b",
+    "hash": "18d09b77deb9b2e9",
     "status": "verified",
-    "verified_by": "AI Studio lane (Gemini 3.8 Flash), four rounds across 2026-09-22 and 09-23: three on the prose and one closing confirm after the insurance paragraph and the tire mechanism were re-grounded",
-    "verified_at": "2026-09-23",
+    "verified_by": "AI Studio lane, three rounds on 2026-09-24. The GCWR gap the guide had admitted to is closed: the calculator gained a GCWR field and a combined-weight verdict, and the guide sentence that said the fourth rating was missing now says it has its own field. The arithmetic takes the tongue weight out of the trailer load before adding it to the truck gross, since the tongue is already inside that gross, and the row does not render without a curb weight because the total would read low and the verdict would lie; scripts/test-weight-calculator.js asserts twelve outcomes including those two negatives and now runs inside verify.py. Confirm round JOB-20260924-1000 returned CONFIRMED and caught one stale sentence: the page enumerated its four checks and omitted GCWR. Fixed to five, and confirm JOB-20260924-1030 returned CONFIRMED on that plus the two sentences it had flagged, which stay deliberately because the calculator still requires four inputs and now reports five checks, GCWR being an optional fifth field like curb weight.",
+    "verified_at": "2026-09-24",
     "sources": [
-      "inbox/REVIEW-REQUEST-20260923-2307-rv-towing-capacity-final.md",
-      "outbox/REVIEW-20260923-2307-rv-towing-capacity-final.md",
-      "inbox/REVIEW-REQUEST-20260923-0825-rv-towing-capacity-title-confirm.md",
-      "outbox/REVIEW-20260923-0825-rv-towing-capacity-title-confirm.md",
-      "inbox/REVIEW-REQUEST-20260923-0341-rv-towing-capacity-confirm.md",
-      "outbox/REVIEW-20260923-0341-rv-towing-capacity-confirm.md",
-      "spec:_specs/rv-towing-capacity.md"
+      "SAE J2807",
+      "National Highway Traffic Safety Administration towing guidance",
+      "maker towing guides"
     ],
     "spec": "_specs/rv-towing-capacity.md",
     "spec_waived": false,
