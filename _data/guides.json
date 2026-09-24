@@ -5,7 +5,8 @@
       "winterize-plumbing",
       "battery-winter-storage",
       "tires-winter",
-      "roof-snow-load"
+      "roof-snow-load",
+      "freeze-damage-triage"
     ],
     "fix": [
       "rv-12-volt-problems",

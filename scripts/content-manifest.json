@@ -208,8 +208,185 @@
       }
     ]
   },
+  "guides/freeze-damage-triage.html": {
+    "hash": "fe9bd327bf34cf38",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": [],
+    "claims": [
+      {
+        "id": "C1",
+        "text": "water expands as it freezes and the expansion, not the cold, is what cracks a fitting or a tank",
+        "source": "a definition; the makers state the consequence rather than the mechanism",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C2",
+        "text": "PEX tolerates freezing better than the rigid material around it",
+        "source": "PPI TR-52, Resistance of PEX Pipe and Tubing to Breakage when Frozen (2020): the elasticity of the material typically allows it to expand wi",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C3",
+        "text": "brass, nylon and plastic fittings crack where PEX flexes",
+        "source": "NOT FOUND. No maker or authority states it; PPI declines to address fittings at all",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C4",
+        "text": "the toilet's water valve is a first failure point, and the maker's own instruction protects it",
+        "source": "Thetford Permanent RV Toilet Owner's Manual, Form 34077: Disconnect supply line at water valve. Completely drain the toilet's water supply l",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C5",
+        "text": "a water heater tank can crack and the crack is often discovered only after it is refilled and heated",
+        "source": "Suburban Tank Water Heaters Operation & Maintenance Guide, part 206244 (03-22-2023): If RV is to be stored during winter months, the water h",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C6",
+        "text": "the water pump's head, and its strainer or filter housing, crack when water is left in them",
+        "source": "SHURflo 4008 manual 911-1008 Rev K: If water is allowed to freeze in the system, serious damage to the plumbing and pump may occur. Failures",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C7",
+        "text": "an inline water filter or its housing cracks, and the maker instructs removal for freezing",
+        "source": "Camco says Protect filter from freezing. Do not run antifreeze through filter (Hydro Life HL-200), but the only readable copy sits on an RV ",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C8",
+        "text": "the city water inlet and its check valve crack when water is left in the inlet",
+        "source": "NOT FOUND. No Valterra or JR Products document states it. JR Products' own instruction is a handling caution: Releases pressure by opening a",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C9",
+        "text": "the drain elbow behind a holding-tank gate valve is a known freeze casualty, and the valve body itself can crack",
+        "source": "NOT FOUND in any maker document, and no primary source was located",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C10",
+        "text": "an ice maker or water dispenser supply line cracks",
+        "source": "Norcold (Thetford) owner's manual 628942A: Do not operate the ice maker when the ambient air temperature is 0° F. or lower. Damage to the wa",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C11",
+        "text": "a faucet cartridge or shower mixer cracks",
+        "source": "NOT FOUND in any RV faucet maker. Dura Faucet's manuals carry no freeze content. Residential makers do document it: Delta's warranty exclude",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C12",
+        "text": "SAFETY: stop the pump and open a faucet before the system thaws, so a cracked fitting cannot spray under pressure",
+        "source": "no maker document; this is our instruction",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C13",
+        "text": "SAFETY: a water heater must have water in it before it is fired",
+        "source": "Suburban 206244: It is imperative that the water heater tank be filled with water before operating the water heater. Operation of the water ",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C14",
+        "text": "the diagnostic tell: a hairline crack can hold while the system is cold and unpressurised and leak as soon as the pump runs",
+        "source": "NOT FOUND. It came from editorial pages; no manufacturer states it",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C15",
+        "text": "a pump that short-cycles or will not hold pressure is evidence of a leak rather than of a failed pump",
+        "source": "the mechanism, plus SHURflo's own troubleshooting list",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C16",
+        "text": "the holding tank and its valve are the last thing in the system to freeze, and a tank heater or heat tape is what protects them",
+        "source": "NOT FOUND as a ladder. The makers give one trigger, not a ladder: Jayco, KZ RV and Venture all say winterise at or below 32 °F (0 °C). The 2",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C17",
+        "text": "freeze damage is excluded from the maker's warranty, and winterisation is required",
+        "source": "Jayco 2022 owner's manual: The RV should be winterized at the end of the camping season or when it will be exposed to temperatures that will",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C18",
+        "text": "what each failure costs, ordered relative to the others",
+        "source": "no document; the settled convention applies, so relative ordering only, no absolute dollars",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C19",
+        "text": "the order to check in: lines and fittings, then fixtures, then the water heater",
+        "source": "the page's own argument, built from the failure evidence",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C20",
+        "text": "anything a reader is told to do to a tank, a line or a heater that is still frozen",
+        "source": "our own instruction, stated as ours",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C21",
+        "text": "the temperature at which winterisation is required is 32 °F (0 °C), and it is the makers' own number",
+        "source": "Jayco, KZ RV and Venture owner's manuals, quoted above",
+        "state": "READ",
+        "by": null,
+        "at": null
+      }
+    ]
+  },
   "guides/index.html": {
-    "hash": "704903e713550d80",
+    "hash": "51fa31a01af91f20",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -2765,7 +2942,7 @@
     ]
   },
   "guides/rv-slide-out-not-working.html": {
-    "hash": "60108ed146f0b8f8",
+    "hash": "5ad534a7c8ea43aa",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -4323,7 +4500,7 @@
     ]
   },
   "index.html": {
-    "hash": "9c1ec196ee992bb4",
+    "hash": "79035b1b36ddc16b",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
