@@ -576,3 +576,39 @@ this page were not prose defects, they were **the body disagreeing with its own 
 failure this programme has now hit on the converter, the tank, the fuse and here. The FAQ is written as a
 paraphrase rather than a copy, so grepping for the old string does not find it. When a figure changes anywhere
 on a page, the check has to be against the *claim* in all four places, body, FAQ, diagram and schema.
+
+## 16. The class sweep, 2026-09-24 07:45 (Claude Desktop, JOB-20260924-0735 PART 2)
+
+**Eight instances on a page that had passed a full review and a confirm round, and it found the lede.** Seven
+of the eight sit in sentences I wrote or rewrote in the draft pass, which is now the third page in a row where
+my own edits are the most reliable source of new instances.
+
+**Applied (five pairs, covering seven findings).**
+
+1. **"the handbook this page already cites"** in the safety list's introduction. The most literal instance of
+   the pattern on the page: *"this page"*, written by me, in the paragraph whose entire job is to attribute the
+   five items above it. It now names the document: *"from its RV generator handbook."*
+2. **"read the section on that below"** and **"It does not work the way people expect"**, the two sentences
+   under the portable-generator symptom entry. The section is now named rather than pointed at, and the
+   sentence about what people expect is gone because the section itself explains it.
+3. **"Covered in the sizing section below"** loses its positional word.
+4. **The lede**, which carried two findings at once: *"The instinct is to blame the generator"* is a claim about
+   what an unnamed reader feels, and *"the list of suspects gets shorter and cheaper"* mixes a detective
+   metaphor with a cost metaphor. It now reads *"You are probably blaming the generator... the list of things
+   it could be gets shorter and cheaper."* **Second person fixes the first half without losing the pivot the
+   paragraph turns on**, which is the whole reason the lede exists.
+5. **The figure caption's "of the kind many owners carry"** is cut. The photograph still shows what it shows.
+
+**Declined (one), with the reason recorded.** *"independent shops charge less than a dealer"* was classed as
+prevalence because *"shops"* appears in the pattern's own example list. It is an **ordering** claim rather than
+a claim about what shops do, the settled cost convention on this programme is explicitly to keep the relative
+ordering and drop absolute figures, and it names the two things it compares rather than appealing to an unnamed
+authority. Kept.
+
+**Clean across everything a prose-only sweep cannot see:** it reported RANKING IN A HEADING OR CAPTION,
+INTERNAL VOCABULARY and DILIGENCE clear, having checked every heading, both figure captions, the SVG's title
+and desc, the image alt text, the meta description, the `og:` and `twitter:` strings and **all three JSON-LD
+blocks**. That is the raw-HTML staging earning its keep.
+
+**Consequence, the same as the outlets page:** the page is now **`drifting`** and the gate fails until a
+confirm round re-earns the verdict.
