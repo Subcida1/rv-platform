@@ -2748,11 +2748,19 @@
     ]
   },
   "guides/rv-solar-not-charging.html": {
-    "hash": "7f3719b89a290507",
-    "status": "unverified",
-    "verified_by": null,
-    "verified_at": null,
-    "sources": [],
+    "hash": "2220561ff1bbd26e",
+    "status": "verified",
+    "verified_by": "AI Studio lane, three rounds on 2026-09-24. The reading opened Victron's MPPT troubleshooting page, Victron's Wiring Unlimited, Go Power's GP-PWM-10 manual, Renogy's guide and Zamp's manuals, and FOUR claims had nothing behind them: the 16 to 23 volt and 2 to 9 amp input range, the 14.4 / 13.8 defaults and the 14.2 / 13.5 lithium profile, the decoupling quote, and the PWM small-systems-only assessment. All cut or restated as ours, and the documented replacements are Victron's 5 volt rule and Go Power's 14.4 / 13.7 for flooded and AGM with no lithium profile at all. The connection order was FOUND, in Renogy, Go Power and Zamp, all three stating battery-before-panel, and the page now states it and what the wrong order costs instead of deferring it. The full review (JOB-20260924-0910) returned NO, blocked by four findings, two of them safety problems the page had created: short circuit current measured by shorting a panel through a multimeter, and panels disconnected without being covered. It also caught that the chemistry mechanism was backwards in three places - a lead-acid profile applies equalisation and temperature compensation, which lithium refuses, rather than undercharging it - and that the measurement section ran invasive-first. The section is reordered so the non-invasive readings come first, a deliberate deviation recorded in the spec. Confirm JOB-20260924-0920 returned CONFIRMED on all seven checks, including that a reader can do measurements one and two without taking anything apart. Recording the claims then caught TWO ATTRIBUTIONS THE READING HAD NOT VERIFIED - Victron named for wiring faults its list does not contain, and Go Power named for panel-test guidance it never carried - and both are our own statements now, confirmed by JOB-20260924-0930. Claims recorded 12 READ and 17 CONFIRMED.",
+    "verified_at": "2026-09-24",
+    "sources": [
+      "Victron Energy SmartSolar MPPT troubleshooting",
+      "Victron Energy Wiring Unlimited",
+      "Go Power GP-PWM-10 solar controller manual",
+      "Renogy charge controller troubleshooting guide",
+      "Zamp Solar controller manuals"
+    ],
+    "spec": "_specs/rv-solar-not-charging.md",
+    "spec_waived": false,
     "claims": [
       {
         "id": "C1",

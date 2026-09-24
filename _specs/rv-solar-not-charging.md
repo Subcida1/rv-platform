@@ -439,6 +439,28 @@ each with the quote in the ledger's `by` field, including the eight-cause list c
 
 **Still outstanding:** one more confirm for the two de-attributed sentences, then the class sweep.
 
+## 13. The verdict, 2026-09-24 09:30 (AI Studio lane, JOB-20260924-0930)
+
+**The second confirm: CONFIRMED on both de-attributed sentences**, and it answered the question that actually
+matters for them rather than checking that words were present: *"the sentence states standard diagnostic
+tradecraft ... without claiming proprietary equipment facts on our own authority; a reader receives it as sound
+troubleshooting advice rather than an unverified manufacturer specification."* That is the check a de-attribution
+needs, because removing a maker's name can leave a sentence sounding *more* authoritative, not less.
+
+**The page is recorded as verified - the seventeenth in the programme, and the last of the set.** The gate
+reports **17 verified, 22 unverified, 0 drifting**, and the whole guide set is now through this cycle:
+spec, reading, draft, full review, confirm, verification, class sweep.
+
+**What this page's cycle cost and bought, in one line each:** four claims had nothing behind them and were cut
+or restated (the 16 to 23 volt range, the charge defaults, the decoupling quote, the PWM assessment); the
+connection order was found in three makers and stated instead of deferred; two safety problems the draft had
+created were caught by the review (shorting a panel through a meter, and disconnecting uncovered panels); the
+chemistry mechanism was backwards in three places and is now the sourced one; the measurement section was
+reordered so nothing is dismantled before it is measured; and two attributions that had been made by inference
+were caught while recording the claims and removed.
+
+**Outstanding:** the class sweep with the raw HTML, which is the last standing step on this page.
+
 **Two standing steps now apply to this page and did not exist when the set began:**
 
 - `python3 scripts/check-spec-fragments.py --page guides/rv-solar-not-charging.html` **after every editing pass**.
