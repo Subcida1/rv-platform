@@ -76,7 +76,7 @@ H2  When the snow comes
   H3  Read the load, not just the depth
   H3  Ice dams target the eaves
   H3  If you have to clear the roof
-  H3  The single most valuable habit      <-- see D1
+  H3  Protect the roof before the snow      <-- retitled from "The single most valuable habit", see D1
   H3  Sources
 ```
 
