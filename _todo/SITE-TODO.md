@@ -905,6 +905,15 @@ follow-up. **Four pages have had no independent pass and do not claim one: `rv-r
 at 6:43 PM to drain whatever has landed; the first thing a returning session should do is read
 `claude-bridge/outbox/` for replies newer than `REPLY-JOB-20260924-1625`.
 
+**What was tried on the stuck lane, so it is not tried again.** The lane alternated between `busy - lane is
+mid-response` (up to twenty minutes on one job) and `idle - prompt already sent` with nothing written. Three
+separate failures, all already documented in `claude-bridge/AUTOLOOP.md`: a `write_file` dropped as a duplicate, a
+reply with no tool call in it at all, and the filename-skip where the loop records a job's name as sent without
+its content ever going out. **The rename fix for that filename-skip was tried on all five queued jobs and the loop
+still reported idle with nothing picked up**, so that failure mode is ruled out. **The next person with a browser
+should look at the tab itself** - a stale composer, a rate-limit banner, or a conversation grown long enough to
+stall are all plausible, and none of them is visible from here.
+
 **The measured lesson that came out of the reviews:**
 
 | Asked to check | What came back |
