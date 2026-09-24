@@ -16,6 +16,14 @@ No secrets, keys, tokens or customer details in here. This file is committed.
 
 ## 2026-09-24
 
+### guides: Slide-out page corrected: the seating check belonged to the rack and pinion system, not the in-wall one
+- why: the independent AI Studio pass found the page telling in-wall owners to look for a no-gap motor seating that system does not have, while never telling them to re-engage the motor they had disengaged; that combination leaves a room able to move on the road
+- expect: no search effect; the test is whether the override section holds up when the slide-out cluster starts drawing impressions in December
+- files: guides/rv-slide-out-not-working.html
+- tags: accuracy
+- commit: dde8ffb (pushed)
+- deployed: 2026-09-24T15:42:08-07:00
+
 ### guides: Published the freeze-damage triage guide: stop the pressure first, then read the pump
 - why: the November to December window opens in six weeks and indexing lags publication; two independent research lanes converged on this page as the top winter gap, and the reading that preceded the draft killed three claims every competing page prints
 - expect: by late November, this page should be the site's first entry with Search Console impressions, and the freeze-order question should surface in Bing grounding queries before Google reports anything
