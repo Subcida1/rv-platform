@@ -586,7 +586,257 @@
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
-    "sources": []
+    "sources": [],
+    "claims": [
+      {
+        "id": "C1",
+        "text": "the converter output is around 13.6 volts DC and a failed unit gives nothing or a low reading",
+        "source": "WFCO and Progressive Dynamics converter manuals (in Sources)",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C2",
+        "text": "reverse polarity fuses run from a single 40 amp fuse up to two 40 amp fuses depending on output",
+        "source": "WFCO converter support FAQ and the WF-8700-AD and WF-9800 manuals (in Sources)",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C3",
+        "text": "battery branch fuse per model: a WF-8712P uses 15 amps on circuit four, the WF-8725P 30 amps on circuit four, and the 8735P and 8740P 30 amps on circuit six",
+        "source": "the WFCO WF-8700-AD series manual (in Sources)",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C4",
+        "text": "the inline fuse or breaker in the battery positive lead is often an auto-resetting thermal type within about eighteen inches of the battery positive terminal",
+        "source": "WFCO converter support FAQ (in Sources)",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C5",
+        "text": "WFCO pass windows: 13.6 volts DC plus or minus a fifth with no load; 13.6 to 14.4 on the 8700-AD series; 13.6 plus or minus a fifth on the lead-acid position and 13.6 to 14.6 on th",
+        "source": "WFCO FAQs and the WF-9800 series manual (in Sources)",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C6",
+        "text": "Progressive Dynamics pass figures: 13.6 volts, or 14.6 for lithium models, plus or minus three tenths; the older PD4000 documents give 13.6 normal, 14.4 boost and 13.2 storage, all",
+        "source": "Progressive Dynamics troubleshooting guide and its model documents (in Sources)",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C7",
+        "text": "Progressive Dynamics no-output causes: AC power not connected, blown external fuses usually through reverse polarity, a short circuit, a thermal shutdown, or an over-voltage shutdo",
+        "source": "the Progressive Dynamics troubleshooting guide (in Sources)",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C8",
+        "text": "the AC input window is 100 to 125 volts AC on the PD4135, and WFCO cite 105 to 130",
+        "source": "Progressive Dynamics and WFCO documents (in Sources)",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C9",
+        "text": "the three-stage set points: WFCO bulk 14.4, absorption 13.6, float 13.2; Progressive Dynamics boost 14.4, normal 13.6, storage 13.2, with a 15 minute burst at 14.4 every 21 hours; ",
+        "source": "WFCO and Progressive Dynamics converter documents (in Sources)",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C10",
+        "text": "\"even in normal absorption mode at 13.6 volts, your batteries are being charged, just at a slower rate\"",
+        "source": "WFCO converter support FAQ (in Sources), quoted",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C11",
+        "text": "WFCO auto-detecting units run 13.2 to 14.4 for lead-acid in three stages and 13.6 to 14.6 for lithium in two, with bulk targets of 14.4 and 14.6; Progressive Dynamics holds a const",
+        "source": "WFCO and Progressive Dynamics documents (in Sources)",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C12",
+        "text": "\"any battery reading below 12 volts while disconnected is a possible indication of battery trouble\"",
+        "source": "WFCO converter support FAQ (in Sources), quoted",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C13",
+        "text": "a converter cycling between absorption and bulk can indicate a shorted battery cell, and Progressive Dynamics lists bad battery cells in its low-output table with the action being ",
+        "source": "WFCO FAQ and the Progressive Dynamics troubleshooting guide (in Sources)",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C14",
+        "text": "the resting voltages: about 12.7 volts full, 12.4 about three quarters, 12.2 half, 12.0 a quarter, after at least six hours idle and preferably twenty four",
+        "source": "Trojan Battery's open-circuit voltage by state of charge page (in Sources)",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C15",
+        "text": "a fully charged flooded cell reads a specific gravity around 1.277 with a tolerance of about seven thousandths",
+        "source": "Trojan Battery's battery maintenance page (in Sources)",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C16",
+        "text": "battery size should not be less than the converter size in amps, and Xantrex publishes maximum bank sizes of 220 amp hours for its 40 and 60 amp models and 400 amp hours for the 80",
+        "source": "Progressive Dynamics sizing guidance and the Xantrex TRUECHARGE datasheet (in Sources)",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C17",
+        "text": "a 125 amp hour battery discharged to 10.5 volts reaches full charge in about 70 hours on a 60 amp converter at 13.6 volts without boost, becomes 90 percent in two to three hours an",
+        "source": "Progressive Dynamics documents and the Cummins Onan F-1362 load management PDF (in Sources)",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C18",
+        "text": "\"Field reports describe a 70 amp converter delivering only about 20 amps during a boost charge over a long run of undersized wire\"",
+        "source": "unnamed field reports - no document. A number a reader acts on (D1, U1)",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C19",
+        "text": "the informal trade guidance of charging at around ten percent of amp hours, with the page's own note that it is not published by any manufacturer",
+        "source": "unnamed trade practice plus a failed search (D2, F1)",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C20",
+        "text": "the ten failure modes, including over-voltage shutdown above 132 volts, presented as \"the order both makers check them\"",
+        "source": "the ten facts rest on WFCO and Progressive Dynamics documents (in Sources), but the ordering is the page's own claim, not a published rankin",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C21",
+        "text": "cooling fan wear contributing to a slow heat-related failure, and converters degrading over years from heat, vibration, moisture and surges",
+        "source": "\"widely reported by technicians\" and admitted to be in no manufacturer failure table - no document (D1, D2, U2, F2)",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C22",
+        "text": "a 55 amp converter sells for roughly $287 to $381; replacement installed runs broadly $500 to $1,200; one service company quotes $500 to $520 installed for a typical 55 to 60 amp u",
+        "source": "\"commercial sources\", unnamed, plus \"one service company\" (D3, U3)",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C23",
+        "text": "\"This is the most expensive misdiagnosis in RV electrics\"",
+        "source": "a ranking claim with no source - prevalence class (D4)",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C24",
+        "text": "the reverse polarity fuses are \"the single most common cause\"",
+        "source": "a ranking claim with no source. That both makers open their procedures there is separate and sourced (C28)",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C25",
+        "text": "\"A large share of converter complaints are not faults at all\"",
+        "source": "a prevalence claim with no source (D4)",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C26",
+        "text": "\"Both can be true at once, and that happens more often than people expect\" and \"the rest period is the part people skip, and skipping it is why tired batteries get called fine\"",
+        "source": "claims about what people do, no source (D4)",
+        "state": "OPEN",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C27",
+        "text": "\"Progressive Dynamics says outright not to replace the converter until these checks have been run\"",
+        "source": "the Progressive Dynamics troubleshooting guide (in Sources)",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C28",
+        "text": "\"both major manufacturers open their own procedures\" with the reverse polarity fuses",
+        "source": "WFCO and Progressive Dynamics troubleshooting procedures (in Sources)",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C29",
+        "text": "the safety and diagnostic steps: disconnect the battery cables before reading the converter output; loosen the screw and disconnect the negative battery wire on Progressive Dynamic",
+        "source": "the makers' own pass-test methods, WFCO and Progressive Dynamics (in Sources) - safety steps, so they must be read against both documents be",
+        "state": "SOURCED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C30",
+        "text": "the charging path is a short chain and any open link between converter and battery leaves the converter testing correctly, counted as \"the five places it breaks\" while the diagram ",
+        "source": "the page's own mechanism description and diagram. A verifiable definition, but the five-versus-four count is internally inconsistent (D5)",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C31",
+        "text": "\"Last reviewed: Sep 21, 2026, against current WFCO and Progressive Dynamics service documentation.\"",
+        "source": "provenance, fine print per Ty's ruling",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      }
+    ]
   },
   "guides/rv-furnace-not-working.html": {
     "hash": "5971af2e90fc77cf",
