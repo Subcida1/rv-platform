@@ -359,3 +359,13 @@ Two things about this page worth carrying to the next one:
   is applied, and **that application happened after the verdict — the recorded hash covers the prescribed
   deletion and the `--by` note says so.** The alternative was leaving a known instance of a banned class live
   to protect a hash, which would have cost a whole round to fix later.
+
+## 15. The class sweep, 2026-09-24 22:53 (Gemini autoloop)
+
+A sweep of a page that had already passed a review and a confirm round. **One instance found:** the FAQ answer
+*"Every system **on this page** has a failure mode its maker documents."* Fixed in the visible answer and its
+schema copy. Everything else on the page came back clean, including the captions and the fine print, which is
+what the sweep instruction is for.
+
+**Applying it drifted the page**, which the content gate caught immediately, so the verdict was re-earned
+through the same lane rather than assumed.

@@ -247,3 +247,15 @@ approved fixes for, in a part of the page the first round never quoted — a `fi
 the tank page. **The first round reads the body; the second reads the margins.** The next review request's
 item list should tell the reviewer to check captions, fine print and FAQ answers against the same classes. It
 has now paid off twice.
+
+## 14. The class sweep, 2026-09-24 22:53 (Gemini autoloop)
+
+**One instance reported, and it is DECLINED.** The sweep flagged *"learn the one piece of arithmetic that
+matters: one inch of water weighs 5.2 pounds per square foot"* as self-reference and proposed *"know that one
+inch of water weighs 5.2 pounds per square foot"*.
+
+**Why it is declined:** that sentence is the replacement the confirm round prescribed at 20:17 tonight, for the
+older *"learn the one piece of arithmetic in this guide"* which was a genuine instance and **is** gone. The
+subject of the surviving sentence is the reader's action, not the guide's argument, which is what the class is.
+The proposed rewrite is not an improvement, and re-editing a verified page for it would drift the verdict for
+no gain. **Recorded so the next sweep does not raise it again.**

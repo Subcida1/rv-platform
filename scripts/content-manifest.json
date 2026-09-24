@@ -1848,14 +1848,14 @@
     "sources": []
   },
   "guides/rv-tank-sensors-reading-wrong.html": {
-    "hash": "49cd91e91eb574be",
+    "hash": "f64b9e4bacf78bd4",
     "status": "verified",
-    "verified_by": "Claude (confirm round, JOB-20260923-2008, 2026-09-23 20:11): all six fixes FIX-CONFIRMED, headline and body agree, verdict YES. Note on the hash: the verdict was given against the pre-edit text, and the only change applied after it is the FAQ clause its own reply prescribed as optional cleanup, so this hash covers the prescribed deletion and nothing else.",
+    "verified_by": "Gemini autoloop lane, sweep round on 2026-09-23: sweep JOB-20260924-0500 found one instance (the FAQ answer 'Every system on this page has...'), it was cut in the visible FAQ and its schema copy, and confirm JOB-20260924-0521 verified the sentence present and correctly punctuated - verdict 'Confirmed: YES'. I also checked the string myself: 'on this page' returns 0 on the page. The original verdict was Claude's review plus a confirm (JOB-20260923-2001 and 2008); this is the re-earned verdict after the sweep.",
     "verified_at": "2026-09-23",
     "sources": [
       "RV Probes FAQ and home page",
       " Valterra product page",
-      " Thetford Level Gauge Cleaner + Tank Blaster + two support FAQs",
+      " Thetford Level Gauge Cleaner and Tank Blaster and two support FAQs",
       " Lippert Intelli-view manual",
       " Garnet SeeLevel 709 manual"
     ],
