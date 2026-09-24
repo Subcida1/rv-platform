@@ -219,8 +219,10 @@ of the class so cheap to fix:
   RV equipment"* (a heading), *"counterfeit versions circulate on the large marketplaces"*, *"worth more here
   than in most categories"*.
 - **D5: the writer's judgement about the source, before the source is used.** *"This is unusually good, because a
-  major controller manufacturer publishes a ranked list"* and *"And a number worth carrying"*. Cut both; the
-  list stands on its own once Victron is named.
+  major controller manufacturer publishes a ranked list"*, *"And a number worth carrying"*, and *"So the honest
+  test of 'is my solar working' is not whether the controller is showing charge current"*. Cut the first two; the
+  list stands on its own once Victron is named. The third is the writer certifying its own test as honest, which
+  is the same shape: reword to state the test rather than vouch for it.
 - **D6: internal vocabulary and a vague heading.** *"The rest of this cluster"*, and the H3 *"One caution worth
   passing on"*.
 - **D7: the coverage gap, in both directions.** The body cites **Zamp** and Sources does not list it; Sources
@@ -292,6 +294,20 @@ settled: *"leave it and continue"*.
 **Everything else is the drafter's to decide:** the source naming (D1), the connection order (D2), the cost
 convention (D3), the prevalence cuts (D4), the self-narration cuts (D5), the heading renames (D6), the coverage
 reconciliation (D7), the figure sweep (D8) and the diagram fit check (D9).
+
+### The page was swept against this spec BEFORE the draft, and the spec was incomplete
+
+**A class grep of the page was run as a completeness check on the list above, and it found one instance the spec
+had missed:** *"So the honest test of 'is my solar working'..."*. That is the writer vouching for its own test,
+and it is now in D5. **The counts it returned, for the record:** 18 unnamed-maker markers (*"the manufacturer"*,
+*"one maker"*, *"another"*, *"controller makers"*, *"more than one maker"*, and the possessives), 15 prevalence
+markers, 5 diligence or self-narration markers, 5 ranking markers, 1 internal-vocabulary marker and 7 dollar
+figures.
+
+**The standing change: sweep the page against the spec before drafting, not only after.** The lights page taught
+this the expensive way - its draft missed a decision the spec had already made, and nothing noticed until a
+review round and a sweep had both passed, and then only because a lane was asked for its working rather than its
+verdict. A five-minute grep of the page against the spec's own list catches that class before the draft starts.
 
 ## 11. State at handoff
 
