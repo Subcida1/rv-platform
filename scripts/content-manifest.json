@@ -388,7 +388,7 @@
     ]
   },
   "guides/index.html": {
-    "hash": "51fa31a01af91f20",
+    "hash": "700a0f5fae2f9132",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -4500,7 +4500,7 @@
     ]
   },
   "index.html": {
-    "hash": "79035b1b36ddc16b",
+    "hash": "acfbc7d6387970c0",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -4535,7 +4535,7 @@
     "sources": []
   },
   "manuals/index.html": {
-    "hash": "dc777621fec1c09f",
+    "hash": "8aaec4a8288ece31",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -4564,6 +4564,13 @@
   },
   "manuals/sanitation-and-tanks.html": {
     "hash": "33620d59ec874ead",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
+  },
+  "manuals/start-here.html": {
+    "hash": "f58297018e3d07ff",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,

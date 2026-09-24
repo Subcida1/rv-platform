@@ -338,6 +338,18 @@ def hub(rows, oem_count, model_count=0):
 
   <div class="sec pad-26">
     <div class="wrap">
+      <a class="card man-pinned" href="manuals/start-here.html">
+        <div class="man-pinned-tag">Start here</div>
+        <div class="man-pinned-title">New to this coach? Learn the systems in order</div>
+        <div class="man-pinned-body">Nine systems, what each one does when it is working, the order
+        worth learning them in, and the guide for each one when it breaks.</div>
+        <div class="guide-go sp-12">Open the walkthrough &#8594;</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="sec pad-26">
+    <div class="wrap">
       <h2 class="man-h2">Browse by system</h2>
       <div class="guide-grid man-grid">
 %s
@@ -393,6 +405,240 @@ def hub(rows, oem_count, model_count=0):
                  [collection, breadcrumbs([("OriginRV", SITE + "/"),
                                            ("RV Manuals", SITE + "/manuals/index.html")])])
             + body + foot("assets/js/manuals/hub.js"))
+
+
+START_TITLE = "New RV Owner: The Systems, in the Order to Learn Them"
+
+# The page that turns the guides into a curriculum. It is deliberately not a list of links:
+# its argument is the order, and the order is the thing nobody publishes. Every safety step
+# on it links into a guide that read its source rather than restating it, because a second
+# copy of a sourced claim is a second thing to drift.
+#
+# It lives in the manuals section by Ty's ruling (2026-09-24): the walkthrough does not
+# deserve a nav slot, so the hub carries a pinned block instead, and CTAs point at it from
+# the homepage and the guides index.
+
+
+def start_here_page():
+    """The new-owner walkthrough. Prose, one table and one diagram, all hand-authored here
+    because this page is not a slice of the manuals manifest."""
+    desc = meta_desc("Nine systems in a new RV, what each one does when it is working, and the "
+                     "order worth learning them in, with the guide for each one when it breaks")
+
+    rows = [
+        ("Shore power and the 120-volt side",
+         "Brings 120 volts in from the pedestal and feeds the outlets, the air conditioner, the "
+         "microwave and the water heater's electric element.",
+         "guides/rv-outlets-not-working.html", "Outlets not working"),
+        ("The 12-volt house system",
+         "Runs the lights, the water pump, the furnace fan, the fridge's control board and the "
+         "slide-outs, all off the house battery.",
+         "guides/rv-12-volt-problems.html", "12-volt faults"),
+        ("The battery and its charging",
+         "Keeps the house battery full from shore power through the converter, and charges it "
+         "from the engine while you drive.",
+         "guides/rv-converter-not-charging.html", "Converter not charging"),
+        ("Fresh water",
+         "City water through the inlet, or the tank and its pump, out to every tap, the toilet "
+         "and the shower.",
+         "manuals/water-and-plumbing.html", "Water and plumbing documents"),
+        ("Waste",
+         "Holds what the sinks, the shower and the toilet send it, until you dump it into a "
+         "sewer connection.",
+         "manuals/sanitation-and-tanks.html", "Tank and sanitation documents"),
+        ("The water heater",
+         "Heats water on propane or on 120 volts, into a tank that has to be full before either "
+         "one is switched on.",
+         "guides/rv-water-heater-not-heating.html", "Water heater not heating"),
+        ("Propane and the fridge",
+         "Cooks, and runs the absorption fridge and the furnace when there is no hookup.",
+         "guides/rv-refrigerator-not-cooling.html", "Fridge not cooling"),
+        ("Heat and cold",
+         "The furnace warms the coach in winter and the air conditioner cools it in summer, and "
+         "the two of them are the largest power draws on the coach.",
+         "guides/rv-furnace-not-working.html", "Furnace not working"),
+        ("The extras",
+         "Solar, a generator and an inverter are three more ways to make or move power, none of "
+         "which a first trip depends on.",
+         "guides/rv-solar-not-charging.html", "Solar not charging"),
+    ]
+    table_rows = "\n".join(
+        '        <tr><td>%s</td><td>%s</td><td><a href="%s">%s</a></td></tr>' % row
+        for row in rows)
+
+    crumb = breadcrumbs([("OriginRV", SITE + "/"),
+                         ("RV Manuals", SITE + "/manuals/index.html"),
+                         ("New RV owner", SITE + "/manuals/start-here.html")])
+
+    body = """
+  <div class="wrap page-intro">
+    <div class="man-crumb"><a href="manuals/index.html">RV Manuals</a></div>
+    <h1 class="dir-title man-title">New RV owner: The systems, in the order to learn them</h1>
+    <p class="man-lede">Nine systems, one order. A coach rarely fails all at once, and it is
+    easier to learn when you take them in the order they can hurt you.</p>
+  </div>
+
+  <div class="sec prose">
+    <div class="wrap narrow">
+
+  <div class="callout"><b>The short version:</b> shore power first, because it is the one that
+  can kill. Then the 12-volt side, because a weak battery imitates almost every other fault.
+  Then water in, then waste, then propane and heat. The extras come last, and the inverter can
+  wait until you have used the coach twice.</div>
+
+  <h2>What you actually bought: Nine systems, and what each is for</h2>
+  <p>Every system below is a separate document in the manuals section, and each one has its own
+  way of failing. Knowing what a system does when it is working is what lets you read a symptom
+  later, and it is the one thing a fault guide cannot supply, because a fault guide starts from
+  something that has already broken.</p>
+
+  <div class="table-scroll">
+  <table class="man-table">
+    <thead><tr><th>System</th><th>What it does when it is working</th><th>When it breaks</th></tr></thead>
+    <tbody>
+%s
+    </tbody>
+  </table>
+  </div>
+
+  <h2>The order to learn them, and why</h2>
+  <p>The order below is not alphabetical and it is not the order a maker's manual lists them in.
+  It runs from the system that can injure you, through the one that imitates all the others, to
+  the ones you can safely leave until you have slept in the coach a few nights.</p>
+
+  <h3>First: shore power, because it is the one that hurts</h3>
+  <p>The 120-volt side is the only part of a coach that can kill you, and it is also the first
+  thing you connect, so it gets learned first. What to know before your first hookup: the
+  pedestal is somebody else's wiring, a breaker on the pedestal is what you switch rather than
+  the plug, and a coach with a wiring fault can put voltage on its own skin. The
+  <a href="guides/rv-outlets-not-working.html">outlets and GFCI guide</a> covers the chain from
+  the pedestal inward, including why a GFCI will not reset and what hot skin is.</p>
+
+  <h3>Second: 12 volts, because it imitates everything else</h3>
+  <p>Half the coach runs on 12 volts, and a battery that is low makes the pump weak, the furnace
+  fan slow and the fridge's board unhappy, so a voltage problem gets misread as three different
+  faults. Learning this system second means you stop chasing the wrong part before you start.
+  The <a href="guides/rv-12-volt-problems.html">12-volt guide</a> has the layout and the voltage
+  drop test; the <a href="guides/battery-winter-storage.html">battery care guide</a> covers what
+  keeps a bank healthy, and the
+  <a href="guides/rv-converter-not-charging.html">converter guide</a> covers what charges it.</p>
+
+  <h3>Third: water in, then water out</h3>
+  <p>Two systems that share a set of pipes and a set of habits. Water in is city water or the tank
+  and its pump, and water out is two tanks and a valve. Learn them in that order because the
+  fresh side is where you will first notice a leak, and because every fault on the waste side is
+  a smell or a reading rather than a flood. The
+  <a href="manuals/water-and-plumbing.html">water and plumbing documents</a> are the maker's own,
+  and the <a href="guides/winterize-plumbing.html">winterising guide</a> doubles as the map of
+  where the water actually sits.</p>
+
+  <h3>Fourth: propane, heat and the fridge</h3>
+  <p>Propane is the one fuel you can learn by smell, and the furnace and the fridge are its two
+  biggest consumers. Two things are worth knowing before the first cold night: how the furnace
+  proves itself safe to light, and that an absorption fridge needs the coach close to level to
+  work at all. The <a href="guides/rv-furnace-not-working.html">furnace guide</a> carries the
+  carbon monoxide hard stop, and the
+  <a href="guides/rv-refrigerator-not-cooling.html">fridge guide</a> explains why level matters.</p>
+
+  <h3>Fifth: the extras, and what can wait</h3>
+  <p>Solar, a generator and an inverter are all ways of making or moving power, and none of them
+  is needed to spend a first weekend at a hookup. When one of them stops working,
+  <a href="guides/rv-solar-not-charging.html">solar</a> and
+  <a href="guides/rv-generator-not-charging.html">the generator</a> both have their own guide, and
+  both begin by checking two things before anything is tested.</p>
+
+  <h2>Where the two electrical halves meet</h2>
+  <p>Two systems share one battery and one ground, and almost every confusing electrical symptom
+  comes from that arrangement. 120 volts arrives at the pedestal and goes to the outlets, the air
+  conditioner and the water heater's electric element. The converter turns some of that into 12
+  volts to charge the battery. Everything else runs off the battery at 12 volts. Three places
+  touch both halves: the converter, an inverter if one is fitted, and the water heater, which has
+  an element on one side and a burner on the other.</p>
+
+  <figure>
+    <svg viewBox="0 0 640 210" width="100%%" role="img" aria-label="The 120-volt side and the 12-volt side, and the converter that joins them">
+      <rect x="8" y="26" width="190" height="74" rx="8" fill="none" stroke="var(--border-2)" stroke-width="2"/>
+      <text x="103" y="52" text-anchor="middle" font-size="15" font-weight="700" fill="var(--text)">120 volts</text>
+      <text x="103" y="72" text-anchor="middle" font-size="12" fill="var(--text-2)">Pedestal, outlets,</text>
+      <text x="103" y="88" text-anchor="middle" font-size="12" fill="var(--text-2)">air conditioning</text>
+
+      <rect x="442" y="26" width="190" height="74" rx="8" fill="none" stroke="var(--border-2)" stroke-width="2"/>
+      <text x="537" y="52" text-anchor="middle" font-size="15" font-weight="700" fill="var(--text)">12 volts</text>
+      <text x="537" y="72" text-anchor="middle" font-size="12" fill="var(--text-2)">Lights, pump, furnace,</text>
+      <text x="537" y="88" text-anchor="middle" font-size="12" fill="var(--text-2)">slide-outs, fridge board</text>
+
+      <rect x="228" y="118" width="184" height="60" rx="8" fill="var(--tint-bg)" stroke="var(--tint-edge)" stroke-width="2"/>
+      <text x="320" y="142" text-anchor="middle" font-size="14" font-weight="700" fill="var(--text)">Converter</text>
+      <text x="320" y="161" text-anchor="middle" font-size="12" fill="var(--text-2)">120 in, 12 out, and the</text>
+      <text x="320" y="175" text-anchor="middle" font-size="12" fill="var(--text-2)">only join on a typical coach</text>
+
+      <path d="M103 100 L103 148 L222 148" fill="none" stroke="var(--border-2)" stroke-width="2"/>
+      <path d="M418 148 L537 148 L537 106" fill="none" stroke="var(--border-2)" stroke-width="2"/>
+      <path d="M537 106 L531 118 M537 106 L543 118" fill="none" stroke="var(--border-2)" stroke-width="2"/>
+    </svg>
+    <figcaption>The two halves of a coach's electrical system, and the one component that
+    normally joins them.</figcaption>
+  </figure>
+
+  <h2>Your first night plugged in</h2>
+  <ol>
+    <li><b>Look at the pedestal before you plug in.</b> Breaker off, and look at the socket for
+    scorching or a loose fit.</li>
+    <li><b>Connect, then switch the pedestal breaker on</b>, so nothing is arcing while you hold
+    the plug.</li>
+    <li><b>Check the coach's own breaker panel</b> for anything tripped, and switch the converter
+    on if it has its own switch.</li>
+    <li><b>Confirm the battery is charging</b> by watching its voltage rise over a few minutes
+    rather than by trusting a light.</li>
+    <li><b>Water next</b>, on city water with a pressure regulator, or off the tank and the pump.
+    Open a tap and let it run before you trust the hot side.</li>
+    <li><b>Fill the water heater before you switch it on</b>, on either fuel. Firing an empty tank
+    is the mistake that costs the most on a first trip.</li>
+    <li><b>Propane last</b>, opening the valve slowly, and if you smell it, shut it off and find
+    out why before anything is lit.</li>
+  </ol>
+  <p>What to leave off on the first night: the air conditioner until you know the coach's amperage
+  and what the pedestal can give, and the water heater's electric element until you know the
+  tank is full.</p>
+
+  <h2>The manual you got, and the manual you need</h2>
+  <p>The manual in the drawer covers the coach. It rarely covers the appliances inside it well,
+  because those are other makers' equipment, and it often covers several model years at once.
+  Every appliance maker publishes its own document, and that is the one with the wiring diagram,
+  the fault codes and the part numbers: find the label inside or behind each appliance for its
+  model number, then open it in the <a href="manuals/index.html">manuals section</a>, which links
+  each document at the maker rather than rehosting it. If you do not know who made something,
+  <a href="manuals/brands.html">the brand list</a> covers 44 coach makers and how far back each
+  one's archive reaches.</p>
+
+  <h2>What is safe to ignore for now</h2>
+  <ul>
+    <li><b>The inverter</b>, if you mostly camp with hookups. It matters when you start running
+    120-volt equipment off the battery.</li>
+    <li><b>The solar controller's settings</b>, until you have watched a full sunny day of
+    charging and know what normal looks like.</li>
+    <li><b>Tank sensor calibration.</b> The sensors read conductivity rather than depth, so a
+    reading that disagrees with the tank is normal rather than urgent.</li>
+    <li><b>Seals, slide wipers and roof caulking.</b> These matter, and they are an annual job
+    rather than a first-week one.</li>
+    <li><b>The weight math</b>, once your combination is matched. It comes back into play the day
+    you change a truck, a trailer or how you load it.</li>
+  </ul>
+
+  <h2>Go deeper</h2>
+  <p>Each system above has its own document set in the manuals section, and the fault guides are
+  organised the same way: one page per symptom, each one citing the documents it rests on, and
+  each one starting with the checks that cost nothing. The
+  <a href="guides/index.html">guide index</a> is the whole set in one place, including the
+  <a href="guides/rv-towing-capacity.html">weight and towing</a> material and the
+  <a href="guides/winterize-plumbing.html">winter set</a>.</p>
+
+    </div>
+  </div>
+""" % table_rows
+
+    return (head(START_TITLE, desc, SITE + "/manuals/start-here.html", [crumb])
+            + body + foot(""))
 
 
 def system_page(slug, title, desc, rows):
@@ -988,6 +1234,7 @@ def main():
         title, desc = TITLE[slug]
         pages[OUTDIR / ("%s.html" % slug)] = system_page(
             slug, title, meta_desc(desc), by_system.get(slug, []))
+    pages[OUTDIR / "start-here.html"] = start_here_page()
     pages[OUTDIR / "brands.html"] = brands_page(brands, models_by_brand)
     pages[OUTDIR / "recalls.html"] = recalls_page(doc.get("recalls", []),
                                                   doc.get("bulletins", []),
