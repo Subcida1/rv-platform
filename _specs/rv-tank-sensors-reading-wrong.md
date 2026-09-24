@@ -127,6 +127,12 @@ H2  Sources
 The floor is Ty's scoping rule: every claim carrying a **number** or a **safety step** gets read; a
 definition or an illustration may stand without one.
 
+**Reading a ledger entry, after this page:** fifteen of these claims ended up **cut** rather than sourced, and
+the ledger has only five states, none of which means "the sentence no longer exists". The convention here,
+matching the roof page, is **CONFIRMED with the reason in `by`**, always beginning `CUT`. A later reader
+should treat `CONFIRMED` + a `CUT` note as *resolved, not verified*: the claim is gone from the page and the
+note says why.
+
 **The headline finding: this page is far from the floor.** It carries roughly fourteen sentences attributed
 to unnamed authorities, several of them numbers, in a page whose whole argument is that the cheap diagnosis
 is the right one. None of that is a wording problem — the sources have to be named or the sentences cut.
@@ -220,17 +226,87 @@ service-call dataset.
 - **The page is also a purchase page** — probes and a retrofit are real products — which is why the honesty of
   the cheap-diagnosis-first argument is worth protecting.
 
-## 10. Decisions made, and what needs Ty
+## 11. The reading, 2026-09-23
+
+**17 claims read against the makers' own documents, up from zero.** The documents: RV Probes' own FAQ and
+home page, Valterra's product page, Thetford's Level Gauge Cleaner page, two Thetford support FAQs, Thetford's
+Tank Blaster page, Lippert's Intelli-view manual, Garnet's SeeLevel 709 manual.
+
+**Three attributions did not hold, and all three were pointing at the wrong document rather than at nothing:**
+
+- **C1, the KIB resistance table.** Two of the three figures the page printed (68,000 and 188,000 ohms) are
+  published by **the probe maker's own FAQ**, with different colour pairs, plus a third figure (green–yellow,
+  120,000) the page did not have. No KIB document carries them. The draft moves the table to the document
+  that does, and the *"reported rather than linked"* apology goes with the attribution.
+- **C5, the ice-cube rejection.** Not on the Valterra page at all. It is on **rvprobes.com's home page**, live
+  and in the Wayback copy: *"No More Scrubbings and Ice Cubes to get Correct Monitor Panel Readings."* The
+  page paraphrased that as something the maker never wrote, so the draft uses their words.
+- **C16, what a cleaner can and cannot fix.** Thetford publishes it, on a different FAQ from the one cited:
+  *"Not all sensor issues can be corrected by using Level Gauge Cleaner."* The claim survives with their
+  wording and the right link.
+
+**Two claims the reading corrected, both numbers:**
+- **C12.** The page said metal within *"roughly two inches"* of a sender can misread; the manual says **1 inch**
+  from the sides, top and bottom, and **2 inches** from the face. The page's wall figure also described a spec
+  (*"under about three eighths of an inch"*) where the manual describes a test.
+- **C22.** The ice-cube volume estimate was ours, so it was cut rather than dressed as a source.
+
+**One claim was killed outright:** C2, the *"do not jumper the probes, use a 43,000 ohm resistor"* warning.
+No 43,000 ohm figure or jumper warning exists in the maker's FAQ, its how-it-works page, its archived home
+pages, or anywhere else reachable. A safety step nobody can check is exactly what the claim floor exists to
+catch, so it is gone.
+
+**One tension found and left standing:** Thetford's Tank Blaster page claims its additives *"tackle hard water
+deposits on tank sensors"*, which sits against this page's statement that scale is usually permanent. The
+draft keeps both, attributes each to whoever says it, and tells the reader to judge with the dry test.
+
+## 12. The draft, 2026-09-23
+
+Written the same evening. The rule that did the most work was Ty's: **name the source or cut the sentence.**
+
+**Cut, for having no source:** the whole *"Two claims about this you will see repeated"* H2 (an entire section
+about our own search, and the two claims in it had no supporting document); the KIB jumper warning; the
+hydro-cleaning pressure figure and the *"large majority of cases"*; the unnamed owner reports (the 69 percent
+flow-meter test, the multi-month review, the one-year report); the radar, vibration and pneumatic-gauge
+subsection; the compatibility gotcha; every cost figure; the dishwasher-detergent entry; and the
+*"no manufacturer rule is published anywhere… we looked"* opener.
+
+**Renamed headings** (the ranking shapes): *"The two tests that tell you what you are dealing with"*,
+*"What manufacturers actually recommend"*, *"The practical rule"*, *"Built-in diagnostics are genuinely
+useful"*, *"Cheaper middle ground"*, *"One thing to check before you buy anything"*, *"An honest note on the
+rest"*, *"Something worth knowing about the whole category"*.
+
+**Added:** a real table of the resistance figures, which the GEO lane had named the site's strongest table
+candidate; Thetford's 75F requirement and its *"not all sensor issues can be corrected"* line; the grey-valve
+nuance from the same FAQ; and the maker's own route for a spin-welded probe (drill a new 3/8 inch hole at the
+same level).
+
+**Left open:**
+- **The cost section.** Four paragraphs of unnamed single-source figures went, and a section with no numbers
+  is thin. Either a source for shop rates surfaces, or this stays a decision-rule section and the page loses
+  its cost angle. Flagged for Ty rather than decided.
+- **The 12-volt cluster siblings** (converter, fuse, generator, lights, outlets, solar) still carry the same
+  unnamed-authority class the ruling now cuts.
+
+
+## 13. Decisions made, and the one thing still open
 
 1. **The thesis stays and stays first.** Conductivity-not-depth is the page's whole argument and it is
    correct.
-2. **The title stays; the meta description changes** (D7).
+2. **The title stays; the meta description changes** (D7). *"The retrofit that ends it"* is gone: the page's
+   own retrofit section is about the limits the maker's manual admits.
 3. **The research-report section is cut** (D1), which also removes the two unsupportable claims. This is
    Ty's standing rule rather than a new call: write about the RV, not about our search.
-4. **Every unnamed authority is named or cut** (D2). This is the work of the draft.
+4. **Every unnamed authority is named or cut** (D2). Done in the draft; 17 claims read, 16 cut.
 5. **A table replaces the prose figures** (D8), carrying only what was read.
 
-**For Ty, one question, and it is the same one the roof spec left open:** the *"we could not find"*
-disclosure class survives on five other guides, and this page is where it is worst — five instances.
-My recommendation is to cut it everywhere: state what is true, never narrate the search that failed to find
-it. Standing rule either way, so the next page does not need asking again.
+**The ruling this spec was waiting on came in on 2026-09-23:** Ty agreed that the unnamed-authority and
+failed-search class is **cut**, not reworded — name the source or drop the sentence, and never narrate the
+search that failed. It is now doctrine in `reference/projects/originrv-voice.md` and applies to the whole
+programme, so this question does not need asking again.
+
+**Still open, and it is a real decision rather than a wording question:** the cost section lost every figure
+it had, because every figure belonged to an unnamed single source. A section with no numbers is thin, and
+"what does this cost" is a measured demand cluster. Either a source for shop labour surfaces (a published
+rate card, a maker's own price list), or this page keeps the decision-rule version and gives up its cost
+angle. Flagged for Ty.

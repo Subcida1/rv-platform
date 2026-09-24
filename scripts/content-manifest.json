@@ -1328,9 +1328,9 @@
       {
         "id": "C2",
         "text": "\"Do not short fresh water tank probes with jumper wires to test them. Use water, or a 43,000 ohm resistor.\"",
-        "source": "no reachable document",
-        "state": "OPEN",
-        "by": "Cloud, 2026-09-23. NOT FOUND. No 43000 ohm figure or jumper warning appears in the maker's FAQ, how-it-works page or archived home pages, and the KIB document the page says was withdrawn is not in the Wayback index. A safety step nobody can check cannot ship, so the sentence is cut.",
+        "source": "cut from the page",
+        "state": "CONFIRMED",
+        "by": "CUT, 2026-09-23, under Ty's ruling (name the source or cut the sentence). No 43,000 ohm figure or jumper warning exists in any reachable document.",
         "at": "2026-09-23"
       },
       {
@@ -1448,10 +1448,10 @@
       {
         "id": "C17",
         "text": "\"A tank treatment manufacturer\" says low water is the number one contributor to fouling, and recommends three to five gallons of water after every dump",
-        "source": "unnamed. The page names Tank Blaster elsewhere without linking it",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "source": "cut from the page",
+        "state": "CONFIRMED",
+        "by": "CUT, 2026-09-23, under Ty's ruling (name the source or cut the sentence). The three-to-five-gallons and 'number one contributor' lines were attributed to an unnamed treatment maker. The page now states the mechanism without a figure.",
+        "at": "2026-09-23"
       },
       {
         "id": "C18",
@@ -1472,114 +1472,114 @@
       {
         "id": "C20",
         "text": "Hydro-cleaning runs around ten times the pressure of a typical onboard tank rinser, and one service operator reports sensors working again in the large majority of cases",
-        "source": "one unnamed service operator",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "source": "cut from the page",
+        "state": "CONFIRMED",
+        "by": "CUT, 2026-09-23, under Ty's ruling (name the source or cut the sentence). The ten-times-pressure figure and the single-operator success rate had no source.",
+        "at": "2026-09-23"
       },
       {
         "id": "C21",
         "text": "One empirical test with a clear tank found most of the ice simply sat there after an hour of erratic driving",
-        "source": "unnamed",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "source": "cut from the page",
+        "state": "CONFIRMED",
+        "by": "CUT, 2026-09-23, under Ty's ruling (name the source or cut the sentence). The clear-tank ice test had no source.",
+        "at": "2026-09-23"
       },
       {
         "id": "C22",
         "text": "Reaching useful scrubbing action would take something like five ten-gallon bags of ice in a 30 gallon tank",
-        "source": "our own estimate",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "source": "cut from the page",
+        "state": "CONFIRMED",
+        "by": "CUT, 2026-09-23, under Ty's ruling (name the source or cut the sentence). The five-ten-gallon-bags estimate was ours, so it is gone rather than dressed as a source.",
+        "at": "2026-09-23"
       },
       {
         "id": "C23",
         "text": "A four-pack of fouling-resistant probes runs around $36, and one owner reported about $35 and a couple of hours",
-        "source": "retail listing plus an unnamed owner",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "source": "cut from the page",
+        "state": "CONFIRMED",
+        "by": "CUT, 2026-09-23, under Ty's ruling (name the source or cut the sentence). Probe prices rested on a retail listing plus an unnamed owner.",
+        "at": "2026-09-23"
       },
       {
         "id": "C24",
         "text": "Diagnosis and cleaning $90 to $250; professional cleaning $250 to $600; mobile sensor replacement $140 to $220; a technician total of $150 to $350; shop rates $170 to $195 an hour;",
-        "source": "unnamed cost indexes and one unnamed service company",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "source": "cut from the page",
+        "state": "CONFIRMED",
+        "by": "CUT, 2026-09-23, under Ty's ruling (name the source or cut the sentence). Every cost figure belonged to an unnamed single source, so the whole set is gone.",
+        "at": "2026-09-23"
       },
       {
         "id": "C25",
         "text": "One measured test through a flow meter found the gauge read full at about 69 percent of capacity; a multi-month review found fresh and gray good while galley and black were badly i",
-        "source": "three unnamed owner reports",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "source": "cut from the page",
+        "state": "CONFIRMED",
+        "by": "CUT, 2026-09-23, under Ty's ruling (name the source or cut the sentence). Three unnamed owner reports: the 69 percent flow-meter test, the multi-month review, the one-year report.",
+        "at": "2026-09-23"
       },
       {
         "id": "C26",
         "text": "Radar sensors are a real product; vibration sensors work on metal tanks and cost in the low hundreds; a pneumatic gauge patented in 2025 is reported accurate to an eighth of an inc",
-        "source": "trade press and a patent, unnamed",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "source": "cut from the page",
+        "state": "CONFIRMED",
+        "by": "CUT, 2026-09-23, under Ty's ruling (name the source or cut the sentence). The radar, vibration and pneumatic-gauge subsection was all unnamed products.",
+        "at": "2026-09-23"
       },
       {
         "id": "C27",
         "text": "Adhesive capacitive sensors are generally not directly compatible with the resistive tank inputs of some popular monitoring systems",
-        "source": "unnamed",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "source": "cut from the page",
+        "state": "CONFIRMED",
+        "by": "CUT, 2026-09-23, under Ty's ruling (name the source or cut the sentence). The compatibility claim was unnamed.",
+        "at": "2026-09-23"
       },
       {
         "id": "C28",
         "text": "Rubber bushing probe seals do not return to shape once removed; spin-welded probes cannot be removed and the usual answer is a new hole at the same level",
-        "source": "probe maker guidance, unnamed",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "source": "rvprobes.com FAQ, installation",
+        "state": "READ",
+        "by": "Cloud, 2026-09-23. The maker's own FAQ covers the spin-welded case: 'Optionally, you can also choose to drill 3/8in diameter holes next to the existing probes.' The rubber-bushing half is the same well-nut versus spin-molded distinction the maker's instructions describe.",
+        "at": "2026-09-23"
       },
       {
         "id": "C29",
         "text": "Mineral scale frequently cannot be cleaned off effectively",
-        "source": "our own statement, no document",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "source": "cut from the page",
+        "state": "CONFIRMED",
+        "by": "CUT, 2026-09-23, under Ty's ruling (name the source or cut the sentence). Restated: the page now carries Thetford's own 'not all sensor issues can be corrected' line and Tank Blaster's hard-water claim, with our conclusion marked as ours.",
+        "at": "2026-09-23"
       },
       {
         "id": "C30",
         "text": "\"A survey said 78 percent of owners report sensor inaccuracies\"",
-        "source": "no source exists; the page says so itself",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "source": "cut from the page",
+        "state": "CONFIRMED",
+        "by": "CUT, 2026-09-23, under Ty's ruling (name the source or cut the sentence). The 78 percent survey claim and the section that carried it are gone.",
+        "at": "2026-09-23"
       },
       {
         "id": "C31",
         "text": "\"A new standard now governs holding tank monitoring\"",
-        "source": "no such standard found; the 2026 RV standard change is about carbon monoxide",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "source": "cut from the page",
+        "state": "CONFIRMED",
+        "by": "CUT, 2026-09-23, under Ty's ruling (name the source or cut the sentence). The holding-tank standard claim and its section are gone.",
+        "at": "2026-09-23"
       },
       {
         "id": "C32",
         "text": "\"Almost every RV has the same complaint\" and \"the single most useful thing you can learn\"",
-        "source": "prevalence and ranking shapes, no source",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "source": "cut from the page",
+        "state": "CONFIRMED",
+        "by": "CUT, 2026-09-23, under Ty's ruling (name the source or cut the sentence). The prevalence and ranking shapes in the lede are gone.",
+        "at": "2026-09-23"
       },
       {
         "id": "C33",
         "text": "\"Not endorsed by any manufacturer we could find\" / \"No manufacturer endorsement found\" / \"we could not find any RV manufacturer endorsing it\" / \"There is no manufacturer rule publi",
-        "source": "diligence claims about our own search",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "source": "cut from the page",
+        "state": "CONFIRMED",
+        "by": "CUT, 2026-09-23, under Ty's ruling (name the source or cut the sentence). The diligence and failed-search sentences are gone.",
+        "at": "2026-09-23"
       },
       {
         "id": "C34",
