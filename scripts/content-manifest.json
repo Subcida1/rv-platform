@@ -305,8 +305,32 @@
       },
       {
         "id": "C12",
-        "text": "Last reviewed: Sep 23, 2026, against the sources listed below",
+        "text": "\"Last reviewed: Sep 21, 2026, against the sources listed below\"",
         "source": "provenance; fine print per Ty's ruling",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C13",
+        "text": "Keystone's maintenance facts: attachments, seams and joints need attention every 90 days; touch-ups need the same sealant as originally installed, because two brands may not bond; ",
+        "source": "Keystone 2026 owner's manual, Care and Maintenance",
+        "state": "READ",
+        "by": "Cloud, 2026-09-23. Keystone 2026 owner's manual, Care and Maintenance section (roof seams and joints): inspect at least every 90 days; same sealant as originally installed because two brands may not bond; no silicone product on the roof material.",
+        "at": "2026-09-23"
+      },
+      {
+        "id": "C14",
+        "text": "The Alpha system is Alpha's TPO membrane, the same manual's name for the roof material, with Alpha sealants supplied by the dealership",
+        "source": "Keystone 2026 owner's manual, Alpha TPO roof material",
+        "state": "READ",
+        "by": "Cloud, 2026-09-23. Same manual, Alpha TPO roof material section",
+        "at": "2026-09-23"
+      },
+      {
+        "id": "C15",
+        "text": "An RV roof has almost no fall to it, so meltwater pools where the deck dips",
+        "source": "a construction description rather than a figure - Ty's scoping rule: no number and no safety step, so it is read-free by rule, but it is ite",
         "state": "CONFIRMED",
         "by": null,
         "at": null

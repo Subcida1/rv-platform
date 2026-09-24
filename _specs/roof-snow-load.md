@@ -100,6 +100,9 @@ twelve was read or confirmed on 2026-09-23 while the page was drafted; nothing s
 | C10 | the vents, skylights and AC shrouds are where snow load concentrates | engineering description | CONFIRMED |
 | C11 | "The single most valuable habit" — a heading | **a ranking claim in a heading: the fourth instance of this shape in the programme** | NAMED-UNSOURCED |
 | C12 | "Last reviewed: Sep 21, 2026, against the sources listed below" | provenance; fine print per Ty's ruling | CONFIRMED |
+| C13 | **Keystone's maintenance facts: attachments, seams and joints need attention every 90 days; touch-ups need the same sealant as originally installed, because two brands may not bond; never a silicone product on the membrane; Alpha sealants on an Alpha system** | the same Keystone 2026 owner's manual, care and maintenance section — **itemized after Claude flagged them as unlisted** | READ, 2026-09-23 |
+| C14 | **The Alpha system is Alpha's TPO membrane, the same manual's name for the roof material, with Alpha sealants supplied by the dealership** | the same Keystone manual, "Alpha TPO roof material" | READ, 2026-09-23 |
+| C15 | **An RV roof has almost no fall to it, so meltwater pools where the deck dips** | a construction description rather than a figure — **Ty's scoping rule: no number and no safety step, so it is read-free by rule, but it is itemized here because the whole ponding argument rests on it** | CONFIRMED by scoping rule |
 
 ## 8. Defects, ranked
 
@@ -181,3 +184,44 @@ Left open:
 - The **"we could not find" disclosure class** survives on five other guides. Not this page's
   problem, and it needs one ruling before anyone sweeps it.
 - **C12's ledger text was refreshed** to the Sep 23 review date the rewrite set.
+
+## 12. The first review round, 2026-09-23 19:20 (Claude)
+
+Verdict: **no, not yet** — findings 1, 3, 5 and 8 needed fixes and 4 needed completing. All eight applied the
+same evening; the confirm round was sent at 19:33. **The full arithmetic was audited and passed**: the table's
+four rows, the 5 pf/sq ft-per-inch constant, the five-feet/fourteen-inch spread to 30 psf, and all three worked
+examples. That is worth knowing on its own — the page's numbers survived an adversarial re-derivation.
+
+What the eight were, and what each became:
+
+1. **A caption that made the page its own subject** (*"The weight of the load is the question this guide
+   answers"*) — cut. It survived the language pass because it sat in a `figcaption` rather than body prose.
+2. **Three weaker echoes of the same tic** — *"what this guide works from"*, *"that single constant is the
+   whole shortcut"*, *"the rows of that table are the whole argument"* — all reworded so the subject is the
+   number or the reader's task rather than the guide's method.
+3. **A third instance of the "from the inside/underneath" flourish** across the programme (the battery and
+   tire pages had both been cut for it) — stated plainly, and the whole site grepped for siblings.
+4. **The ice-dam section named two causes and connected one.** Now scoped: the DOE cause that needs an exposed
+   dark surface is explained as not applying to a snow-covered light membrane, and the interior-heat cause is
+   the one followed.
+5. **An unsourced claim about what "people" do** — the clause was cut.
+6. **A load-bearing claim not in the ledger** (*"Most RV roofs are nearly flat by design"*) — reworded, and now
+   C15, recorded CONFIRMED under Ty's scoping rule rather than as a read source, with that stated openly to the
+   reviewer so it can be challenged.
+7. **Four Keystone maintenance facts not itemized** — they do come from the manual already read, and are now
+   C13/C14, READ, with the manual's own wording recorded.
+8. **"The Alpha system" used with no definition** — defined and made actionable through the manual's own route
+   (the dealership and the unit's paperwork).
+
+**What this round taught, for the rest of the programme:**
+
+- **A `figcaption` is body prose.** The self-referential pass reads paragraphs and walks past captions; the
+  tell that made finding 1 survive is the same one that makes *"the rows of that table"* survive. Grep the
+  figures too.
+- **The "manufactured flourish" family is a named tic now:** a mechanism dressed as a dramatic inversion
+  (*"melts its own roof from underneath"*, *"froze from the inside out"*, *"kills tires from the inside out"*)
+  has appeared on three pages, and **all three were cut**. It is the invented-idiom rule wearing physics
+  clothes, and grepping its wordings sitewide is now part of the pass.
+- **A ledger built from spec rows will miss facts the drafter treats as background.** Claude found four
+  actionable Keystone facts under a claim list that only had room for twelve entries. The reading is broader
+  than the ledger, and the ledger is the smaller artifact.
