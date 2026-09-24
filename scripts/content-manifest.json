@@ -275,8 +275,8 @@
         "id": "C8",
         "text": "ice dams form at the eaves and back water up under the roof edge",
         "source": "a roofing or insulation source",
-        "state": "SOURCED",
-        "by": "The ice-dam mechanism the page describes is standard building science (slush runs to the cold eave, refreezes, meltwater backs up under the membrane) and it is not wrong, but no source on the page carries it. It needs a real one -- a roofing or building-science authority -- or the section should be cut back to what the page can support. Keystone's manual covers roof MATERIAL and sealant (TPO, Alpha sealants, 90-day maintenance on rubber roofs) and says nothing about ice dams.",
+        "state": "READ",
+        "by": "Cloud read two authorities on 2026-09-23. DOE Building Science: 'freeze-thaw cycles can lead to the formation of ice dams. These occur when warmth from the attic causes roof snow to melt and flow to roof eaves. When water refreezes at the colder overhang it can form a buildup of ice, causing more snowmelt to puddle. Eventually, the water can back up between the shingles then saturate and penetrate the roof underlayment and begin leaking into the attic.' UMN Extension gives the temperature mechanics and the definition: 'An ice dam is a ridge of ice that forms at the edge of a roof and prevents melting snow from draining off the roof.' BOTH WORTH ADDING: the page attributes the melt to the afternoon sun, and DOE attributes it to attic warmth -- both happen, and the page currently names only one cause. And DOE carries a line that belongs on a snow-load page in its own right: 'In severe cases, ice dams have caused roof collapses.'",
         "at": "2026-09-23"
       },
       {
