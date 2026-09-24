@@ -388,7 +388,7 @@
     ]
   },
   "guides/index.html": {
-    "hash": "c22f6c844e6ffaba",
+    "hash": "9dbc95e9c0aa2e2a",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -774,6 +774,13 @@
         "at": null
       }
     ]
+  },
+  "guides/rv-battery-not-charging.html": {
+    "hash": "49bdc1d611a5ccb4",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
   },
   "guides/rv-converter-not-charging.html": {
     "hash": "30b311b1eaae0d2b",
@@ -4699,7 +4706,7 @@
     ]
   },
   "index.html": {
-    "hash": "0cd76834890f430a",
+    "hash": "a59366b31a5d8fdb",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <base href="/"> <!-- must stay first: every other URL on the page resolves against it -->
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="canonical" href="https://originrv.com/guides/rv-battery-not-charging.html">
+ <title>RV Battery Not Charging: Which of the Four Sources</title>
+ <meta name="description" content="RV battery not charging? Four sources charge it and all four fail the same way. The ten-minute test that finds which one, and the voltages to expect on a meter.">
+ <link rel="stylesheet" href="assets/css/style.css?v=b3df7fc0">
+<link rel="icon" type="image/svg+xml" href="assets/img/brand/favicon.svg?v=dd9ff106">
+ <link rel="icon" type="image/png" sizes="32x32" href="assets/img/brand/favicon-32.png?v=d9338088">
+ <link rel="icon" type="image/png" sizes="16x16" href="assets/img/brand/favicon-16.png?v=f67f4631">
+ <link rel="apple-touch-icon" sizes="180x180" href="assets/img/brand/apple-touch-icon.png?v=c0518cb6">
+ <link rel="manifest" href="site.webmanifest">
+ <meta name="theme-color" content="#3d7fc2">
+<meta property="og:type" content="article">
+<meta property="og:title" content="RV Battery Not Charging: Which of the Four Sources">
+<meta property="og:description" content="RV battery not charging? Four sources charge it and all four fail the same way. The ten-minute test that finds which one, and the voltages to expect on a meter.">
+<meta property="og:url" content="https://originrv.com/guides/rv-battery-not-charging.html">
+<meta property="og:site_name" content="OriginRV">
+<meta property="og:image" content="https://originrv.com/assets/img/brand/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="OriginRV">
+<meta name="twitter:image" content="https://originrv.com/assets/img/brand/og-default.png">
+<meta name="twitter:image:alt" content="OriginRV">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="RV Battery Not Charging: Which of the Four Sources">
+<meta name="twitter:description" content="RV battery not charging? Four sources charge it and all four fail the same way. The ten-minute test that finds which one, and the voltages to expect on a meter.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"RV Battery Not Charging: Which of the Four Sources","description":"Four sources charge an RV battery - the converter on shore power, a solar controller, a generator through the same converter, and the tow vehicle's alternator. How to test one source at a time with a meter, the voltage each one should produce, what the converter's three modes mean, and how to tell a discharged battery from a finished one.","datePublished":"2026-09-24","dateModified":"2026-09-24","publisher":{"@type":"Organization","name":"OriginRV"},"url":"https://originrv.com/guides/rv-battery-not-charging.html"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why is my RV battery not charging while plugged in?","acceptedAnswer":{"@type":"Answer","text":"Plugged in means shore power is reaching the converter, not that the converter is charging the battery. Put a meter on the battery terminals with the coach plugged in: a converter working normally drives the reading to about 13.6 volts, and in its boost mode to about 14.4. If the reading stays at the battery's rested voltage, the charging is not arriving, and the next checks are the converter's own breaker and its connections. If the reading is right and the battery still goes flat, the battery is the suspect rather than the charging."}},{"@type":"Question","name":"What voltage should an RV battery show while it is charging?","acceptedAnswer":{"@type":"Answer","text":"A converter's normal mode is about 13.6 volts and its boost mode about 14.4. A battery maker's own figures for the battery side are a charge, absorption and equalize range of 13.80 to 14.60 volts, and a float or standby voltage of 13.50 volts at 77 degrees Fahrenheit. A rested lead-acid battery at full charge reads about 12.73 volts, so anything above that with a source running means current is going in."}},{"@type":"Question","name":"Why does my RV battery read 13.2 volts?","acceptedAnswer":{"@type":"Answer","text":"That is likely the converter's storage mode rather than a fault. Progressive Dynamics' converter senses the battery and picks one of three modes: boost at about 14.4 volts, normal at about 13.6, and storage at about 13.2, which it drops to once there has been no significant battery usage for 30 hours so the battery uses less water. In storage mode it also raises the output periodically to about 14.4 volts to help prevent sulfation."}},{"@type":"Question","name":"How do I tell a discharged battery from a finished one?","acceptedAnswer":{"@type":"Answer","text":"Voltage at rest tells you the state of charge rather than the health: Trojan's own table puts a full battery at 12.73 volts, 80 percent at 12.50, 70 percent at 12.37, 60 percent at 12.27 and 50 percent at 12.10. A finished battery can read perfectly well at rest and then collapse the moment a load arrives, which is what a load test shows. East Penn's manual also gives the charging figure worth knowing: 108 to 115 percent of the amp-hours taken out should go back in."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"RV Guides","item":"https://originrv.com/guides/"},{"@type":"ListItem","position":2,"name":"RV Battery Not Charging","item":"https://originrv.com/guides/rv-battery-not-charging.html"}]}</script>
+<!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G8X4MQ0P3X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-G8X4MQ0P3X');
+  </script>
+</head>
+<body class="g-theme-mist">
+ <div id="site-nav"><!-- nav:start --><div class="util"><div class="wrap"><div class="util-l"><span class="dot"></span><a href="/directory/index.html">Find a tech</a><a href="/guides/index.html">Winter guides</a></div><div class="util-r"><a href="/contact.html">Contact</a><span class="muted">Free tools, No paywall, Built for RVers</span></div></div></div><nav class="main"><div class="wrap"><a class="logo" href="/"><span class="logo-mark"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><polygon points="4 1.6 5.7 6.8 5 6.8 6.6 11.4 5.8 11.4 7.6 16 5.2 16 5.2 19.4 2.8 19.4 2.8 16 0.4 16 2.2 11.4 1.4 11.4 3 6.8 2.3 6.8"/><path fill-rule="evenodd" d="M8.2 16L8.2 13.6L9 13.2L11.6 10.4L8.6 10.4L8.9 8.2L23.6 8.2L23.6 16.6L9.6 16.6ZM13.6 10H16.4A0.4 0.4 0 0 1 16.8 10.4V12.2A0.4 0.4 0 0 1 16.4 12.6H13.6A0.4 0.4 0 0 1 13.2 12.2V10.4A0.4 0.4 0 0 1 13.6 10ZM18.4 10H20.8A0.4 0.4 0 0 1 21.2 10.4V12.2A0.4 0.4 0 0 1 20.8 12.6H18.4A0.4 0.4 0 0 1 18 12.2V10.4A0.4 0.4 0 0 1 18.4 10Z"/><circle cx="11.6" cy="18" r="1.4"/><circle cx="20.4" cy="18" r="1.4"/></svg></span><span class="logo-name"><span>OriginRV</span></span></a><div class="nav-links"><a class="nav-link" href="/">Home</a><div class="nav-group"><a class="nav-link" href="/tools/index.html">Tools</a><div class="drop"><a href="/tools/weight-calculator.html">Weight Calculator<span class="sm">Live, free</span></a><a href="/tools/index.html">More tools<span class="sm">Campgrounds, stops, GPS, building</span></a></div></div><div class="nav-group"><a class="nav-link" href="/guides/index.html">Guides</a><div class="drop"><a href="/guides/winterize-plumbing.html">Winterize Your Plumbing<span class="sm">Tanks, lines, antifreeze, bypass</span></a><a href="/guides/battery-winter-storage.html">Battery Care in Cold<span class="sm">Lead-acid vs lithium rules</span></a><a href="/guides/tires-winter.html">Tires Through Winter<span class="sm">Pressure, flat spots, covers</span></a><a href="/guides/roof-snow-load.html">Roof Under Snow Load<span class="sm">Seals, ice, weight</span></a></div></div><div class="nav-group"><a class="nav-link" href="/directory/index.html">Directory</a><div class="drop"><a href="/directory/oregon.html">Find a service<span class="sm">Mobile techs and repair centers in Oregon</span></a><a href="/directory/oregon.html#claim">Claim your business<span class="sm">Free listing, you control it</span></a></div></div><div class="nav-group"><a class="nav-link" href="/manuals/index.html">Manuals</a><div class="drop"><a href="/manuals/power-and-electrical.html">Electrical<span class="sm">Converters, inverters, solar, generators</span></a><a href="/manuals/towing-and-running-gear.html">Towing and running gear<span class="sm">Hitches, axles, brakes, tires</span></a><a href="/manuals/kitchen-and-appliances.html">Kitchen and appliances<span class="sm">Fridges, ranges, microwaves</span></a><a href="/manuals/brands.html">Owner manuals by brand<span class="sm">44 makers, 1973 to 2027</span></a><a href="/manuals/recalls.html">Recalls and bulletins<span class="sm">Check a unit, and the federal bulletin file</span></a><a href="/manuals/index.html">All manuals<span class="sm">Every system, linked at the maker</span></a></div></div></div><form class="nav-search js-search-form" role="search"><div class="search-bar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 21.5 9.2 3.5"/><path d="M20 21.5 14.8 3.5"/><path d="M12 20.6v-4" stroke-width="2.4"/><path d="M12 12.2v-3" stroke-width="1.7"/><path d="M12 5.5v-2" stroke-width="1.1"/></svg><input type="search" autocomplete="off" aria-label="Search OriginRV" placeholder="Search"></div></form><div class="nav-actions"><a class="btn btn-primary btn-sm" href="/tools/weight-calculator.html">Free Tool</a><button class="burger" aria-label="Menu" onclick="RV.toggleMenu()"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h12M4 10h12M4 14h12"/></svg></button></div></div><div class="mobile-menu"><form class="mm-search js-search-form" role="search"><div class="search-bar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 21.5 9.2 3.5"/><path d="M20 21.5 14.8 3.5"/><path d="M12 20.6v-4" stroke-width="2.4"/><path d="M12 12.2v-3" stroke-width="1.7"/><path d="M12 5.5v-2" stroke-width="1.1"/></svg><input type="search" autocomplete="off" aria-label="Search OriginRV" placeholder="Search the site"></div></form><a class="mm-top" href="/">Home</a><div class="mm-group"><a class="mm-head" href="/tools/index.html">Tools</a><a class="mm-sub" href="/tools/weight-calculator.html">Weight calculator</a></div><div class="mm-group"><a class="mm-head" href="/guides/index.html">Guides</a><a class="mm-sub" href="/guides/winterize-plumbing.html">Winterize plumbing</a><a class="mm-sub" href="/guides/battery-winter-storage.html">Battery cold storage</a><a class="mm-sub" href="/guides/tires-winter.html">Tires through winter</a><a class="mm-sub" href="/guides/roof-snow-load.html">Roof snow load</a></div><div class="mm-group"><a class="mm-head" href="/directory/index.html">Directory</a><a class="mm-sub" href="/directory/oregon.html">Find a service</a><a class="mm-sub" href="/directory/oregon.html#claim">Claim your business</a></div><div class="mm-group"><a class="mm-head" href="/manuals/index.html">Manuals</a><a class="mm-sub" href="/manuals/power-and-electrical.html">Electrical</a><a class="mm-sub" href="/manuals/towing-and-running-gear.html">Towing and running gear</a><a class="mm-sub" href="/manuals/brands.html">Owner manuals by brand</a><a class="mm-sub" href="/manuals/recalls.html">Recalls and bulletins</a></div><a class="mm-top" href="/about.html">About</a><a class="mm-top" href="/contact.html">Contact</a></div></nav><!-- nav:end --></div>
+
+ <div class="wrap page-intro w-820">
+ <a href="index.html" class="btn btn-ghost back">← All guides</a>
+ <div class="sec-eyebrow">12-volt guide</div>
+    <h1>RV battery not charging: Finding which source is failing</h1>
+ <p class="lede">Four different things charge the house battery, and all four fail with the same symptom: the battery is flat in the morning and everything on it is slow. The test that separates them needs one meter and ten minutes, and it is the same test whichever one has failed.</p>
+ <p class="reviewed">Last reviewed: Sep 24, 2026.</p>
+ </div>
+
+ <div class="sec prose">
+ <div class="wrap narrow">
+ <div class="callout"><b>The short version:</b> put a meter on the battery terminals and note the reading with everything switched off. Then enable one charging source at a time and watch. A source that is working lifts the reading by roughly a volt, from a rested battery's 12.7 to something near 13.6. A source that has failed changes nothing. That is the whole diagnosis, and it costs nothing but the meter.</div>
+
+ <h2>The four things that charge it</h2>
+ <div class="card">
+ <p>An RV's house battery is charged from four places, and they are not interchangeable: they connect at different points, they produce different voltages, and they fail in different ways.</p>
+ <h3>Shore power, through the converter</h3>
+ <p>Plugging in does not charge the battery directly. The converter takes 120 volts from the pedestal and produces a regulated 12-volt supply, and the battery sits on that supply. Progressive Dynamics, which makes them, describes its own converter as having a <b>nominal voltage output of 13.6 VDC</b> and sensing the battery to pick one of three modes. That number, and the two other modes, are the ones to expect on a meter.</p>
+ <h3>Solar, through its controller</h3>
+ <p>A panel on the roof produces whatever the sun gives it, and the controller between the panel and the battery decides what reaches the battery. A controller that has failed, or one that has been disconnected or shaded, leaves the battery exactly as it found it. The <a href="guides/rv-solar-not-charging.html">solar guide</a> starts with the two checks worth doing before anything is tested.</p>
+ <h3>A generator, through the same converter</h3>
+ <p>A generator does not charge the battery either. It supplies 120 volts to the coach, which means it feeds the same converter that shore power feeds, so a generator that runs perfectly and does not charge the battery is telling you the fault is downstream of both. The <a href="guides/rv-generator-not-charging.html">generator guide</a> calls that out as its own first point: the generator is not the charger.</p>
+ <h3>The tow vehicle, through the alternator</h3>
+ <p>The seventh pin of the trailer connector is a charge line from the tow vehicle, and it does send current to the trailer battery while the engine runs. It is the smallest of the four sources and the one most often lost without anyone noticing, because a trailer that charges at home and goes flat on the road is usually a charge line that was never connected.</p>
+ </div>
+
+ <h2>The ten-minute test, one source at a time</h2>
+ <div class="card">
+ <h3>What a working source does to the reading</h3>
+ <p>This test works because a charging source raises the voltage at the terminals, and a failed one does not. Work through it in this order:</p>
+ <ul>
+  <li><b>Everything off, meter on the battery terminals.</b> Note the reading. A rested lead-acid battery at full charge sits near 12.7 volts, and the table further down gives the rest of the scale.</li>
+  <li><b>Switch on one source.</b> Plug in for the converter, unshade the panels for solar, start the generator, or start the tow vehicle for the alternator.</li>
+  <li><b>Watch the meter for a minute.</b> A working source lifts the reading by roughly a volt. The converter's normal mode lands near 13.6 and its boost mode near 14.4, and a solar controller will do whatever its own profile says.</li>
+  <li><b>Turn that source off before testing the next.</b> Otherwise you cannot tell which one moved the reading, and one working source will hide three dead ones.</li>
+ </ul>
+ <h3>What the numbers should be</h3>
+ <p>There is no single correct charging voltage, because the sources do not produce the same one and the battery makers ask for a range rather than a figure. What matters is the direction: <b>above the rested voltage means current is going in, and the rested voltage means nothing is</b>. East Penn's manual, for the battery side, gives a charge, absorption and equalize range of <b>13.80 to 14.60 volts at 77 F</b> and a float or standby voltage of <b>13.50 volts plus or minus 0.5 percent</b>. Trojan describes what a charger does with the same idea in three stages: <b>bulk, acceptance and float</b>.</p>
+ <p>Read together, those mean the converter's normal mode and the battery's float figure are close, and the converter's boost mode sits inside the battery's absorption range. That is the system working as designed. What is not normal is a source switched on and a meter that does not move.</p>
+ </div>
+
+ <h2>Is it the charging, or is it the battery</h2>
+ <div class="card">
+ <p>A battery that has reached the end of its life behaves exactly like a battery that is not being charged: it goes flat, it recovers slowly, and everything on it is slow. Nothing on the charging side will fix it, and this is the branch that saves a needless converter.</p>
+ <h3>A battery at rest, and what the voltage says about charge</h3>
+ <p>Let the surface charge go first, because a battery that was just charging reads high for a while. Trojan publishes the scale, from its own state-of-charge table, and these are the 12-volt figures:</p>
+ <div class="table-scroll">
+ <table class="man-table">
+  <thead><tr><th>Charge</th><th>Volts at rest</th><th>Specific gravity, flooded</th></tr></thead>
+  <tbody>
+   <tr><td>100 percent</td><td>12.73</td><td>1.277</td></tr>
+   <tr><td>90 percent</td><td>12.62</td><td>1.258</td></tr>
+   <tr><td>80 percent</td><td>12.50</td><td>1.238</td></tr>
+   <tr><td>70 percent</td><td>12.37</td><td>1.217</td></tr>
+   <tr><td>60 percent</td><td>12.27</td><td>1.195</td></tr>
+   <tr><td>50 percent</td><td>12.10</td><td>1.172</td></tr>
+  </tbody>
+ </table>
+ </div>
+ <p>The same page makes the point that matters for diagnosis: voltage and specific gravity checks <i>will not only show the state of charge but also help spot signs of improper care, such as undercharging and over-watering</i>. A reading that is low everywhere with water levels that are wrong is telling you about the charging, not the battery.</p>
+ <h3>The load test that separates a flat battery from a finished one</h3>
+ <p>A battery at the end of its life can read perfectly well at rest and then collapse the moment a load arrives. That is what a load test shows and a voltmeter alone does not, and it is the reason a shop's test is worth more than a driveway reading. It is also the reason to look at the whole system before buying parts: a battery that was ruined by chronic undercharging will be ruined again by the next one if the charging fault is not found first.</p>
+ <p><b>And one figure worth knowing for the health of the bank:</b> East Penn's manual states that <b>108 to 115 percent of the amp-hours taken out</b> should go back in after a discharge. Charging back exactly what you used is not quite enough, and a system whose source is marginally too small or too briefly connected will slowly lose ground without ever looking broken.</p>
+ </div>
+
+ <h2>What the converter should be doing</h2>
+ <div class="card">
+ <h3>Three modes, and why 13.2 volts is not a fault</h3>
+ <p>Converters are not fixed-voltage power supplies; they change what they put out depending on what they think the battery needs, which is why a reading that looks wrong often is not. Progressive Dynamics' manual describes the three modes its converter selects by sensing the battery:</p>
+ <ul>
+  <li><b>Boost, about 14.4 VDC</b>, when the sensed battery voltage has dropped below a preset level, to recharge quickly.</li>
+  <li><b>Normal, about 13.6 VDC</b>, the standing output.</li>
+  <li><b>Storage, 13.2 VDC</b>, which it drops to after <b>30 hours</b> with no significant battery usage, for minimal water usage, and in which it periodically raises the output to about 14.4 VDC to help prevent sulfation.</li>
+ </ul>
+ <p><b>So a meter reading of 13.2 volts on a coach that has been sitting plugged in is the converter doing its job.</b> Reading 13.2 while the battery is being used heavily is not. The same manual gives the lithium variant different numbers again: a nominal output of <b>14.6 VDC</b>, with a mode switch that selects a constant 14.6 volts for a lithium battery or the three-stage profile for a lead-acid one, and its caution is worth repeating for a flooded bank, that the fluid levels matter.</p>
+ <h3>What the battery maker asks for instead</h3>
+ <p>The two documents do not disagree, they answer different questions. The converter maker says what its box will produce. The battery makers say what the battery wants to receive, and both of the ones read for this page publish ranges rather than a single figure, because the right voltage moves with temperature and with the stage of the charge. That is also why the converter's automatic modes exist at all, and why a fixed-output charger is a compromise rather than an equivalent.</p>
+ </div>
+
+ <h2>The three things that are not the charging system</h2>
+ <div class="card">
+ <p>Before any of the above, rule these out, because each one produces the same flat battery and none of them is a charging fault.</p>
+ <ul>
+  <li><b>A disconnect or a switch.</b> A battery disconnect left open, or a salesman switch by the door, takes the battery out of the circuit while everything else carries on working from the converter.</li>
+  <li><b>A draw bigger than the charge.</b> A parasitic load that never shuts off will flatten a battery faster than a small charger fills it, and the symptom is a battery that is always low even though every source tests fine. The <a href="guides/battery-winter-storage.html">battery storage guide</a> has the parasitic drain section, including how to measure the draw.</li>
+  <li><b>A connection.</b> A loose or corroded terminal, or a crimp that has gone green, drops voltage between the source and the battery, so the source reads correctly at its own end and the battery never sees it. Measure at both ends of the run: a difference of more than a few tenths of a volt is the fault, and the <a href="guides/rv-12-volt-problems.html">12-volt guide</a> works that test properly.</li>
+ </ul>
+ </div>
+
+ <h2>What it costs</h2>
+ <div class="card">
+ <p>The cost of this fault is decided by which branch it lands on, and the two cheapest outcomes are the two most common.</p>
+ <p><b>At the bottom</b> is the diagnosis itself, and the fixes it leads to: a disconnect left off, a terminal cleaned and tightened, a charge line plugged in, a converter that was switched off at its own breaker. None of that is a part.</p>
+ <p><b>In the middle</b> sits the charging hardware: a converter, a solar controller, or a section of cable. These are modest parts, and they are the ones a reader usually expects to be buying when they arrive, which is why the page spends its time on the test rather than the parts list.</p>
+ <p><b>At the top</b> is a battery bank, because that is a set of cells rather than a component, and it is the outcome nobody predicts. It is also the one that comes back if the charging fault is not fixed first, which is the whole argument for testing in this order rather than buying in it.</p>
+ </div>
+
+ <h2>Related guides</h2>
+ <div class="card">
+ <p>Each of the four sources has its own page: <a href="guides/rv-converter-not-charging.html">the converter</a>, <a href="guides/rv-solar-not-charging.html">solar</a> and <a href="guides/rv-generator-not-charging.html">the generator</a>, and the battery side is in <a href="guides/battery-winter-storage.html">battery care and storage</a>. When the fault turns out not to be the charging at all, the <a href="guides/rv-12-volt-problems.html">12-volt diagnostic guide</a> is the hub for the rest of the system.</p>
+ </div>
+
+ <div class="flex between gap spread">
+ <a class="btn btn-gb" href="guides/rv-12-volt-problems.html">Start here: 12-volt basics</a>
+ <a class="btn btn-secondary" href="guides/rv-converter-not-charging.html">Next: Converter not charging →</a>
+ </div>
+
+ <details class="faq"><summary>Why is my RV battery not charging while plugged in?</summary><p>Plugged in means shore power is reaching the converter, not that the converter is charging the battery. Put a meter on the battery terminals with the coach plugged in: a converter working normally drives the reading to about 13.6 volts, and in its boost mode to about 14.4. If the reading stays at the battery's rested voltage, the charging is not arriving, and the next checks are the converter's own breaker and its connections. If the reading is right and the battery still goes flat, the battery is the suspect rather than the charging.</p></details>
+ <details class="faq"><summary>What voltage should an RV battery show while it is charging?</summary><p>A converter's normal mode is about 13.6 volts and its boost mode about 14.4. A battery maker's own figures for the battery side are a charge, absorption and equalize range of 13.80 to 14.60 volts, and a float or standby voltage of 13.50 volts at 77 degrees Fahrenheit. A rested lead-acid battery at full charge reads about 12.73 volts, so anything above that with a source running means current is going in.</p></details>
+ <details class="faq"><summary>Why does my RV battery read 13.2 volts?</summary><p>That is likely the converter's storage mode rather than a fault. Progressive Dynamics' converter senses the battery and picks one of three modes: boost at about 14.4 volts, normal at about 13.6, and storage at about 13.2, which it drops to once there has been no significant battery usage for 30 hours so the battery uses less water. In storage mode it also raises the output periodically to about 14.4 volts to help prevent sulfation.</p></details>
+ <details class="faq"><summary>How do I tell a discharged battery from a finished one?</summary><p>Voltage at rest tells you the state of charge rather than the health: Trojan's own table puts a full battery at 12.73 volts, 80 percent at 12.50, 70 percent at 12.37, 60 percent at 12.27 and 50 percent at 12.10. A finished battery can read perfectly well at rest and then collapse the moment a load arrives, which is what a load test shows. East Penn's manual also gives the charging figure worth knowing: 108 to 115 percent of the amp-hours taken out should go back in.</p></details>
+ <div class="card srcs">
+ <h3>Sources</h3>
+ <ul>
+  <li><a href="https://www.progressivedyn.com/wp-content/uploads/Support/manuals/PD4500-110030J-owners-manual-english.pdf" target="_blank" rel="noopener">Progressive Dynamics PD4500 converter owner's manual: the three modes and their voltages (PDF)</a></li>
+  <li><a href="https://www.eastpennmanufacturing.com/wp-content/uploads/8A-8G-IO-Manual-1833.pdf" target="_blank" rel="noopener">East Penn / Deka 8A and 8G installation and operation manual: charge, absorption, equalize and float voltages (PDF)</a></li>
+  <li><a href="https://www.trojanbattery.com/resources/battery-maintenance" target="_blank" rel="noopener">Trojan Battery, battery maintenance: the state-of-charge table, the three charging stages, and equalising</a></li>
+</ul>
+ </div>
+ </div>
+ </div>
+
+ <div id="site-footer"><!-- footer:start --><div class="foot-top"><div class="wrap"><div class="foot-grid"><div class="foot-brand"><a class="logo" href="/"><span class="logo-mark"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><polygon points="4 1.6 5.7 6.8 5 6.8 6.6 11.4 5.8 11.4 7.6 16 5.2 16 5.2 19.4 2.8 19.4 2.8 16 0.4 16 2.2 11.4 1.4 11.4 3 6.8 2.3 6.8"/><path fill-rule="evenodd" d="M8.2 16L8.2 13.6L9 13.2L11.6 10.4L8.6 10.4L8.9 8.2L23.6 8.2L23.6 16.6L9.6 16.6ZM13.6 10H16.4A0.4 0.4 0 0 1 16.8 10.4V12.2A0.4 0.4 0 0 1 16.4 12.6H13.6A0.4 0.4 0 0 1 13.2 12.2V10.4A0.4 0.4 0 0 1 13.6 10ZM18.4 10H20.8A0.4 0.4 0 0 1 21.2 10.4V12.2A0.4 0.4 0 0 1 20.8 12.6H18.4A0.4 0.4 0 0 1 18 12.2V10.4A0.4 0.4 0 0 1 18.4 10Z"/><circle cx="11.6" cy="18" r="1.4"/><circle cx="20.4" cy="18" r="1.4"/></svg></span><span class="logo-name"><span>OriginRV</span></span></a><p>Every mile of the RV life, one toolkit.</p></div><div class="foot-col"><h5>Tools</h5><a href="/tools/weight-calculator.html">Weight calculator</a><a href="/tools/weight-calculator.html#why">Why it matters</a><a href="/tools/weight-calculator.html#embed">Embed on your site</a></div><div class="foot-col"><h5>Guides</h5><a href="/guides/winterize-plumbing.html">Winterize plumbing</a><a href="/guides/battery-winter-storage.html">Battery cold storage</a><a href="/guides/tires-winter.html">Tires through winter</a><a href="/guides/roof-snow-load.html">Roof snow load</a></div><div class="foot-col"><h5>Directory</h5><a href="/directory/index.html">Find a service</a><a href="/directory/index.html#claim">Claim your business</a><a href="/directory/index.html#seed">What a listing carries</a></div><div class="foot-col"><h5>Manuals</h5><a href="/manuals/index.html">All RV manuals</a><a href="/manuals/brands.html">Owner manuals by brand</a><a href="/manuals/recalls.html">Recalls and bulletins</a><a href="/manuals/power-and-electrical.html">Electrical manuals</a><a href="/manuals/towing-and-running-gear.html">Towing manuals</a></div><div class="foot-col"><h5>Company</h5><a href="/about.html">About</a><a href="/contact.html">Contact</a><a href="/tools/index.html">All tools</a></div></div></div><div class="wrap foot-bottom"><span>© 2026 OriginRV. Built for the open road.</span><span class="foot-credit">Third-party photographs appear under the licences credited beside each one, resized for display.</span><span class="legal"><a href="/">Home</a><a href="/directory/index.html">Directory</a><a href="/guides/index.html">Guides</a></span></div></div><!-- footer:end --></div>
+ <script src="assets/js/config.js?v=949a5b83"></script>
+ <script src="assets/js/site.js?v=1d3d99e9"></script>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "3727183603b6402b9249de33fa381acd"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
