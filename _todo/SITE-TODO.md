@@ -218,7 +218,12 @@ way the nine new ones were checked.
 Build order from the keyword research, next first:
 
 1. **Slide-outs** — publish January to February so it is indexed before the May
-   spike the service-call data shows.
+   spike the service-call data shows. **SPEC WRITTEN 2026-09-24:**
+   `_specs/rv-slide-out-not-working.md`. It is the first page in this programme
+   that does not exist yet, so its section 9 lists the six build steps outside the
+   page file itself (the catalogue group, the two card lists, `sync-counts.py`,
+   the search index and the sitemap), and its section 7 lists the documents to read
+   before a word of it is drafted. **The reading is the next step, not the draft.**
 2. Leveling jacks and landing gear.
 3. Battery not charging, as a standalone triage page.
 4. Toilet not flushing.
@@ -272,8 +277,28 @@ never sees the traffic and cannot add headers. Proxying GitHub Pages is possible
 but risks breaking GitHub's certificate renewal, since it cannot complete the
 challenge through a proxy. Defer both to the hosting move, where they are native.
 
-**DMARC is still missing**, and it is a pure DNS record, so it is safe to add
-today with no proxying. SPF and DKIM are already in place.
+**DMARC is NOT missing, and this note said it was for three days. Corrected 2026-09-24
+after checking from outside.** The record is live:
+
+```
+_dmarc.originrv.com  TXT  "v=DMARC1; p=none; rua=mailto:contact@originrv.com"
+```
+
+The whole mail setup was re-verified from outside the same day, and all four parts are
+present and healthy: **SPF** `v=spf1 include:_spf.mx.cloudflare.net ~all`, **DKIM** with a
+real key at the `cf2024-1` selector (Cloudflare Email Routing's own), **three MX routes**
+(`route1` to `route3.mx.cloudflare.net`), and the DMARC record above.
+
+**The one real decision left is the policy, and it is Ty's.** `p=none` monitors and
+enforces nothing; `p=quarantine` or `p=reject` would actually stop spoofed mail claiming
+to be from originrv.com. The evidence says tightening is probably safe, because the only
+outbound mail from this domain goes through Cloudflare's own sender and both SPF and DKIM
+are Cloudflare-controlled, so alignment should hold. **"Should" is not proof.** The cheap
+test: change it to `p=quarantine`, submit one claim form, and confirm the notification
+still arrives. If it does, move to `p=reject`. If it does not, the Worker's sender is not
+aligned and `p=none` was the right call. **Do not tighten this without that test**,
+because the failure is silent: the form would keep returning success while the mail
+stopped arriving, which is exactly the bug the claim Worker was fixed for once already.
 
 **Rate limiting is done.** Two Cloudflare Rate Limiting bindings on the Worker:
 5/minute per IP and 30/minute on a constant key as a volume backstop. Measured
