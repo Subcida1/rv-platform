@@ -1320,18 +1320,18 @@
       {
         "id": "C1",
         "text": "The KIB pigtail resistance figures - red to orange reads essentially zero ohms, red to green about 68,000, red to yellow about 188,000",
-        "source": "KIB's tank monitor documentation, which the page itself says is no longer published online: \"the figures below are reported rather than link",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "source": "rvprobes.com FAQ",
+        "state": "READ",
+        "by": "Cloud, 2026-09-23. THE FIGURES ARE REAL BUT THE ATTRIBUTION IS NOT. The maker's FAQ publishes green-yellow about 120000 ohms, orange-green about 68000, orange-yellow about 188000, 'infinity' with no water, and 10000 to 100000 ohms submerged on an analog meter. Two of our three numbers match exactly, with a different colour pair, and no KIB document exists to carry them. The draft moves the table to the document that carries it, with its own colours, and the 'reported rather than linked' framing goes.",
+        "at": "2026-09-23"
       },
       {
         "id": "C2",
         "text": "\"Do not short fresh water tank probes with jumper wires to test them. Use water, or a 43,000 ohm resistor.\"",
-        "source": "the same unreachable KIB document",
+        "source": "no reachable document",
         "state": "OPEN",
-        "by": null,
-        "at": null
+        "by": "Cloud, 2026-09-23. NOT FOUND. No 43000 ohm figure or jumper warning appears in the maker's FAQ, how-it-works page or archived home pages, and the KIB document the page says was withdrawn is not in the Wayback index. A safety step nobody can check cannot ship, so the sentence is cut.",
+        "at": "2026-09-23"
       },
       {
         "id": "C3",
@@ -1352,9 +1352,9 @@
       {
         "id": "C5",
         "text": "\"Recommendations to drive around with ice cubes are no longer necessary\"",
-        "source": "no reachable document",
-        "state": "OPEN",
-        "by": "Cloud, 2026-09-23. NOT FOUND. The Valterra product page carries no ice-cube statement (the only 'ice' hit there and in the maker's FAQ is inside the word 'service'). The quote attributed to the probe maker cannot be reached, so under Ty's ruling the sentence is cut unless an archived copy surfaces.",
+        "source": "rvprobes.com home page (Wayback 2025-12-17 copy; live page serves the same text)",
+        "state": "READ",
+        "by": "Cloud, 2026-09-23. FOUND in the maker's own home page, live and in the Wayback copy: 'No More Scrubbings and Ice Cubes to get Correct Monitor Panel Readings.' Note for the draft: our sentence paraphrases that as 'recommendations to drive around with ice cubes are no longer necessary', which is not the maker's wording, so the sentence gets rewritten to say what their page actually says.",
         "at": "2026-09-23"
       },
       {
@@ -1440,9 +1440,9 @@
       {
         "id": "C16",
         "text": "Thetford's own claim that organic residue dissolves and mineral scale and electrical faults are outside what a cleaner can do",
-        "source": "Thetford page does not carry it",
-        "state": "OPEN",
-        "by": "Cloud, 2026-09-23. NOT SUPPORTED AS ATTRIBUTED. The Thetford page says the cleaner 'Removes toilet paper sludge and soap scum buildup' and says nothing about mineral scale or electrical faults, so our sentence that the maker draws that line is our inference wearing their name.",
+        "source": "Thetford FAQ, sensors always reading 2/3 full",
+        "state": "READ",
+        "by": "Cloud, 2026-09-23. The line the page needs IS published by Thetford, on a different FAQ from the one we cited: 'Not all sensor issues can be corrected by using Level Gauge Cleaner. However, Thetford Level Gauge Cleaner will effectively work on restoring sensors that fail due to tissue and sludge build up.' So the claim is theirs after all, with their wording, and the page points at the wrong Thetford page.",
         "at": "2026-09-23"
       },
       {
@@ -1456,18 +1456,18 @@
       {
         "id": "C18",
         "text": "Leaving the black valve open leaves a pyramid of solids directly below the toilet",
-        "source": "the same unnamed tank treatment maker",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "source": "Thetford FAQ, dump valves open",
+        "state": "READ",
+        "by": "Cloud, 2026-09-23. Thetford's own FAQ, 'Can I leave my dump valves open when I have sewer hookups at my camp site?': 'Never leave the black tank dump valve open during use even if you have a sewer hookup at your campsite. If left open during use, the liquids will quickly drain leaving a pyramid of solids in the tank directly below the toilet.' The page's sentence now has a named source and a link. The FAQ also allows the grey valve to stay open with a hookup, which the page does not mention.",
+        "at": "2026-09-23"
       },
       {
         "id": "C19",
         "text": "Tank Blaster's instructions call out the end of season, before winterizing, as a key time to treat",
-        "source": "Tank Blaster's instructions",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "source": "Thetford Tank Blaster page",
+        "state": "READ",
+        "by": "Cloud, 2026-09-23. Thetford's own Tank Blaster page: 'Use Tank Blaster(R) quarterly and most importantly at the end of season before placed into storage or winterize. Any time odors seem strong or if solids pyramid exists in the holding tank.' Also names the product correctly as Thetford's, and says its additives 'tackle hard water deposits on tank sensors', which is in tension with our blanket claim that cleaners cannot touch scale and has to be handled in the draft.",
+        "at": "2026-09-23"
       },
       {
         "id": "C20",
