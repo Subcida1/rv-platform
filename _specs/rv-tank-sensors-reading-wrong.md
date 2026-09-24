@@ -305,7 +305,13 @@ failed-search class is **cut**, not reworded — name the source or drop the sen
 search that failed. It is now doctrine in `reference/projects/originrv-voice.md` and applies to the whole
 programme, so this question does not need asking again.
 
-**Still open, and it is a real decision rather than a wording question:** the cost section lost every figure
+**SETTLED BY TY, 2026-09-23 20:48: "leave it and continue."** The thin decision-rule cost section stays
+as shipped. It matches the two pages already verified (the 12-volt hub and the furnace, which carry zero
+dollar figures and use relative ordering), it keeps the verdict, and it costs no review round. The
+standing convention for the rest of the cluster: no absolute dollar figures unless a publishable source
+carries them, relative ordering only, and **do not retrofit already-verified pages for it.**
+
+**The reasoning, kept because the question will come back:** the cost section lost every figure
 it had, because every figure belonged to an unnamed single source. A section with no numbers is thin, and
 "what does this cost" is a measured demand cluster. Either a source for shop labour surfaces (a published
 rate card, a maker's own price list), or this page keeps the decision-rule version and gives up its cost
