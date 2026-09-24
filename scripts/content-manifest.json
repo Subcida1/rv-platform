@@ -2752,7 +2752,241 @@
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
-    "sources": []
+    "sources": [],
+    "claims": [
+      {
+        "id": "C1",
+        "text": "solar is three things in a row - panel, charge controller, battery - and each can be measured separately",
+        "source": "our own framing; a definition",
+        "state": "CONFIRMED",
+        "by": "Our own definition, method or instruction, or a claim resolved in the draft. Ty's scoping rule: a definition, an illustration or a method may stand without a source.",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C2",
+        "text": "solar and the converter are parallel charging paths meeting at one battery, and a fault in one leaves the other working",
+        "source": "our own definition of the system",
+        "state": "CONFIRMED",
+        "by": "Our own definition, method or instruction, or a claim resolved in the draft. Ty's scoping rule: a definition, an illustration or a method may stand without a source.",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C3",
+        "text": "\"one of the most common answers is that nothing is broken at all\" (lede)",
+        "source": "prevalence with no source; cut or restate",
+        "state": "CONFIRMED",
+        "by": "Prevalence, cut from the lede.",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C4",
+        "text": "once the battery is full the controller stops or significantly reduces its current, and that is normal rather than a fault",
+        "source": "Victron and Go Power: both document a full battery as a reason no current flows",
+        "state": "READ",
+        "by": "Victron SmartSolar troubleshooting lists \"The battery is fully charged, and no further current is required\" as its first cause, and Go Power documents the same behaviour.",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C5",
+        "text": "\"Controller makers ship with a default profile. Zamp's own manual states plainly that the default setting is AGM\" and warns an incorrect battery type setting may damage your batter",
+        "source": "Zamp's manual, which is named on the page and missing from Sources",
+        "state": "READ",
+        "by": "Zamp controller manuals: \"the default setting is AGM Battery\" and \"Caution: Incorrect battery type setting may damage your battery.\"",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C6",
+        "text": "lithium batteries \"generally will not accept charge in the cold, commonly below about five degrees Celsius\", and a battery that stops charging on a cold morning is protecting itsel",
+        "source": "a maker document; Battle Born or Victron both publish low-temperature cut-off figures",
+        "state": "READ",
+        "by": "Victron SmartSolar troubleshooting: \"lithium batteries are prone to damage when charged in temperatures below 5C\".",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C7",
+        "text": "\"a major controller manufacturer publishes a ranked list of why solar stops charging\"",
+        "source": "Victron, whose troubleshooting page is already linked; name it",
+        "state": "READ",
+        "by": "Victron SmartSolar troubleshooting publishes the ranked list this page now names it for.",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C8",
+        "text": "the ranked cause list itself: full battery; reversed panel polarity; panel voltage too high; reversed battery polarity; the controller disconnected from the battery through a cable",
+        "source": "Victron's troubleshooting page. Eight items, each read",
+        "state": "READ",
+        "by": "All eight causes verified one by one against Victron's \"Batteries are not charged\" section: full battery, reverse PV polarity, PV voltage too high, reverse battery polarity, disconnected via cable or fuse or breaker, incorrect charger configuration, externally controlled, temperature compensation.",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C9",
+        "text": "\"Documented by more than one maker\" that a fuse sits between the controller and the battery and is easy not to know about",
+        "source": "name the makers or cut the attribution",
+        "state": "READ",
+        "by": "The fuse is Victron's fifth cause verbatim: \"The solar charger is disconnected from the battery, possibly due to cable, fuse, or circuit breaker issues.\"",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C10",
+        "text": "\"Go Power puts it plainly: an object as small as a broomstick held across a module can cut its power\"",
+        "source": "Go Power's manual, which is in Sources",
+        "state": "READ",
+        "by": "Go Power GP-PWM-10 manual: \"An object as small as a broomstick held across the solar module may cause the power output to be reduced.\"",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C11",
+        "text": "\"Wiring faults, which the manufacturer names as loose wires, loose connections, and badly crimped connectors\", and hand-crimped connectors are a weak point",
+        "source": "Victron; name it",
+        "state": "CONFIRMED",
+        "by": "DE-ATTRIBUTED while recording these claims: the draft had named Victron, and Victron's troubleshooting list names no wiring faults. The page now states it as ours.",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C12",
+        "text": "\"Reversed polarity... is a common result of reconnecting things\"",
+        "source": "prevalence; the mechanism is documented, the frequency is not",
+        "state": "CONFIRMED",
+        "by": "The frequency claim is gone; the mechanism is stated as ours.",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C13",
+        "text": "panel test: measure open circuit voltage and short circuit current in good sun at midday and compare against the panel's label; \"the manufacturer's guidance is that if readings are",
+        "source": "a named maker document",
+        "state": "CONFIRMED",
+        "by": "DE-ATTRIBUTED while recording these claims: the panel-test guidance was never sourced to Go Power. The page now states what a low reading means as ours.",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C14",
+        "text": "SAFETY AND DAMAGE: \"the order you disconnect things matters on some units\", and the page defers the order to the reader's own controller procedure",
+        "source": "Go Power's manual states the order (battery to controller first, panel second; panel off first when disconnecting). The page must state it r",
+        "state": "READ",
+        "by": "The connection order is stated by three makers: Renogy (\"connect the battery first and the solar array afterward\"), Go Power (\"First, connect the battery to the controller and then connect the solar panel\") and Zamp (\"Connect the battery first, then the solar panels\"). The reverse order for disconnection is the same rule read backwards and is stated nowhere verbatim, which is how the page now presents it.",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C15",
+        "text": "controller input: \"roughly 16 to 23 volts depending on the panel rating and sun conditions, with panel current between about 2 and 9 amps\", from one maker",
+        "source": "name the maker; a number with no name on the page",
+        "state": "CONFIRMED",
+        "by": "The 16 to 23 volt and 2 to 9 amp range was found in NO document. Cut, and Victron's documented 5 volt rule replaced it (C16).",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C16",
+        "text": "\"Another gives a simpler rule that the panel voltage needs to be about 5 volts above battery voltage before charging will even commence\"",
+        "source": "name the maker; a number with no name on the page",
+        "state": "READ",
+        "by": "Victron SmartSolar troubleshooting: \"The solar charger starts charging when the PV voltage is 5V above the battery voltage. Charging continues if the PV voltage remains 1V higher than the battery voltage.\"",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C17",
+        "text": "measurement three: the controller's output at its battery terminals against the battery bank itself, and any real difference is volts lost in the wire",
+        "source": "our own method, and the page's best test",
+        "state": "CONFIRMED",
+        "by": "Our own method, and the page's best test.",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C18",
+        "text": "\"Victron's wiring guidance states that an excessive voltage drop of more than 2.5 percent is unacceptable anywhere in the system\"",
+        "source": "Victron's Wiring Unlimited; named but unread",
+        "state": "READ",
+        "by": "Victron Wiring Unlimited: \"we advise aiming for a voltage drop no bigger than 2.5%\", and the troubleshooting page: \"An excessive voltage drop of more than 2.5% is unacceptable.\"",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C19",
+        "text": "MPPT hunts the array's maximum power point and harvests more energy, particularly when panel voltage is well above battery voltage or in cooler conditions; \"in the manufacturer's w",
+        "source": "Victron; name it",
+        "state": "CONFIRMED",
+        "by": "The \"decouples the array and battery voltages\" attribution was found in NO document; the explanation is the page's own now.",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C20",
+        "text": "PWM \"is a good low cost solution for small systems only\" (the maker's own assessment)",
+        "source": "Victron; name it",
+        "state": "CONFIRMED",
+        "by": "The \"good low cost solution for small systems only\" attribution was found in NO document; the comparison is the page's own now.",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C21",
+        "text": "\"sealed and lithium batteries do not require equalisation and should not undergo it\", and temperature compensation should be disabled for lithium",
+        "source": "Victron; name it",
+        "state": "READ",
+        "by": "Victron: \"sealed batteries and lithium batteries do not require equalisation and should not undergo the equalisation process\" and \"for lithium batteries, disable the temperature compensation setting.\"",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C22",
+        "text": "bulk runs from empty to roughly 80 percent state of charge, absorption covers the last 20 percent at a held voltage, float holds a lower maintenance voltage",
+        "source": "a definition; the stage names are standard, the 80 percent figure should be checked",
+        "state": "READ",
+        "by": "Victron SmartSolar troubleshooting: \"Bulk stage: 0-80% SoC. Absorption stage 80-100% SoC. Float stage: 100% SoC.\"",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C23",
+        "text": "\"Victron's published defaults for lead-acid are around 14.4 volts absorption and 13.8 float\", and their lithium profile drops to about 14.2 and 13.5",
+        "source": "Victron; named but unread, four numbers",
+        "state": "CONFIRMED",
+        "by": "CORRECTED: no document gives Victron's 14.4 / 13.8 defaults or a 14.2 / 13.5 lithium profile. Go Power's manual gives 14.4 bulk and absorption with 13.7 float for flooded and AGM, and no lithium profile, which is what the page now carries.",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C24",
+        "text": "cost: \"a 100 watt panel kit with a 20 amp MPPT controller sells for around $140\", a Victron 100/30 \"runs roughly $132 to $135\"",
+        "source": "no document; settled convention applies",
+        "state": "CONFIRMED",
+        "by": "Cost figures cut per the settled convention.",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C25",
+        "text": "cost: professional diagnosis \"around $95 to $185\" as a standalone fee, \"labour around $125 to $195 an hour\"",
+        "source": "no document; settled convention applies",
+        "state": "CONFIRMED",
+        "by": "Cost figures cut per the settled convention.",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C26",
+        "text": "\"Counterfeit versions circulate on the large marketplaces\" and buying from a reputable seller is worth more here than in most categories",
+        "source": "a market claim with no source, plus a ranking",
+        "state": "CONFIRMED",
+        "by": "The market claim is cut; the advice stays.",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C27",
+        "text": "\"the single most common false alarm\" (the full battery), \"it trips people up\", \"the quiet killer\" (voltage drop), \"A lot of 'solar has stopped working' is really a controller behav",
+        "source": "prevalence and ranking with no source",
+        "state": "CONFIRMED",
+        "by": "Prevalence and ranking, cut.",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C28",
+        "text": "\"This is unusually good, because a major controller manufacturer publishes a ranked list\" and \"And a number worth carrying:\"",
+        "source": "the writer's judgement about our own sourcing; cut",
+        "state": "CONFIRMED",
+        "by": "The writer's judgement about the source, cut.",
+        "at": "2026-09-24"
+      },
+      {
+        "id": "C29",
+        "text": "the reviewed line claims \"against current Victron, Renogy, Go Power and Zamp documentation\"",
+        "source": "Zamp is named in the body and absent from Sources; Renogy is in Sources and named nowhere. Reconcile both",
+        "state": "CONFIRMED",
+        "by": "Coverage reconciled both ways: Zamp added to Sources, Renogy kept because the connection order gives it something to carry.",
+        "at": "2026-09-24"
+      }
+    ]
   },
   "guides/rv-tank-sensors-reading-wrong.html": {
     "hash": "f64b9e4bacf78bd4",

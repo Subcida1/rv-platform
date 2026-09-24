@@ -422,6 +422,23 @@ greps at zero.
 
 **Next:** the confirm round, then the class sweep with the raw HTML.
 
+**The confirm round, 2026-09-24 09:20: CONFIRMED on all seven checks**, and it answered the one thing a diff
+cannot: *"a reader can perform Measurements One and Two completely in place without taking any wiring apart."*
+That is the check that mattered, because the reorder is the largest structural change of the round.
+
+**And the claims-recording step caught two attributions the reading had not verified.** The draft named
+**Victron** for the sentence about wiring faults, and **Go Power** for the panel-test guidance. Checked against
+what the reading actually returned: **Victron's troubleshooting list names no loose wires and no crimped
+connectors**, and the panel-test guidance was never sourced to Go Power at all. **Both sentences are ours now.**
+That is the fourth time tonight that a step nobody designed as a check turned out to be one - a sweep's working,
+a confirm's quoting, and now the ledger's own provenance fields - and it is the same root cause every time: a
+name attached to a claim by inference rather than by reading.
+
+**The claims are recorded: 12 READ, 17 CONFIRMED.** The twelve READ are the ones a document carries verbatim,
+each with the quote in the ledger's `by` field, including the eight-cause list checked cause by cause.
+
+**Still outstanding:** one more confirm for the two de-attributed sentences, then the class sweep.
+
 **Two standing steps now apply to this page and did not exist when the set began:**
 
 - `python3 scripts/check-spec-fragments.py --page guides/rv-solar-not-charging.html` **after every editing pass**.
