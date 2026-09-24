@@ -870,9 +870,18 @@ What ran instead, and what it is worth:
 
 ### Where the site stands, end of 2026-09-24
 
-**Twenty-two guides live.** Published today: `freeze-damage-triage`, `rv-slide-out-not-working`, the new-owner
-walkthrough (`manuals/start-here.html`, pinned in the manuals hub), `trailer-brakes-required`,
-`rv-roof-leak-repair` and `rv-leveling-jacks-not-working`. Every gate green and every page confirmed from outside.
+**Twenty-four guides live, up from seventeen at the start of the day.** Published today:
+`freeze-damage-triage`, `rv-slide-out-not-working`, the new-owner walkthrough (`manuals/start-here.html`, pinned
+in the manuals hub by Ty's ruling), `trailer-brakes-required`, `rv-roof-leak-repair`,
+`rv-leveling-jacks-not-working`, `rv-battery-not-charging` and `rv-toilet-not-flushing`, plus a correctness fix on
+the towing page. **All 46 sitemap URLs return 200**, every gate green, and every page confirmed live from outside.
+
+**The day's single most useful finding, and it changes how work is handed to a lane:** the passes asked to check
+**citations against documents** produced six fabricated verbatim quotations, four false accusations against pages
+that were right, and one `PUBLISHED-AS-IS` verdict that missed a real defect. The passes asked to review a page
+**against its own argument** produced none, and found every real defect, including a rack-and-pinion seating check
+applied to the in-wall system that would have sent somebody onto the highway with a room held by nothing. **Ask a
+lane for the argument; check the citations by fetching the document.**
 
 **Two gates were added today, both because nothing watched the thing they now watch:**
 
@@ -883,9 +892,13 @@ walkthrough (`manuals/start-here.html`, pinned in the manuals hub), `trailer-bra
   in a CREDITS.md, but nothing enforced any of it, and a photograph with no credit or with a licence forbidding
   commercial use would have shipped unchallenged. Now gated in three categories, and negative-tested twice.
 
-**Four independent reviews are queued for the lanes**, whose rate limit and transport have both been unreliable
-tonight: the brakes page's citations, the brakes page's advice, the roof page, and the leveling page. **None of
-those three pages has had an independent pass yet** and none of them claims one.
+**SEVEN reviews are queued and none has returned.** The bridge lane has been stuck mid-response since 16:26 and
+AI Studio is rate-limited, so nothing has come back. Waiting in `claude-bridge/queue/jobs/`: the brakes citations,
+the brakes advice, the roof page, the leveling page, the battery page, the toilet page, and the walkthrough's own
+follow-up. **Four pages have had no independent pass and do not claim one: `rv-roof-leak-repair`,
+`rv-leveling-jacks-not-working`, `rv-battery-not-charging` and `rv-toilet-not-flushing`.** A backstop check fires
+at 6:43 PM to drain whatever has landed; the first thing a returning session should do is read
+`claude-bridge/outbox/` for replies newer than `REPLY-JOB-20260924-1625`.
 
 **The measured lesson that came out of the reviews:**
 
