@@ -326,6 +326,41 @@ else:
     print("  %d data-claim markers match the data on all %d pages; "
           "%d grid count(s) matched to the cards under them" % (markers_ok, len(pages), len(grids)))
 
+print("\n=== the guides index names every guide in its structured data ===")
+# The guides index carries an ItemList in JSON-LD, and it is the one place on the site that
+# describes our own inventory outside a data-claim marker. It is hand-kept, so it drifted:
+# on 2026-09-24 it claimed 8 items while the catalogue held 19, and nothing noticed because
+# the counts check above reads markers and this is not one. Rebuilt from the catalogue, and
+# checked here in both directions so it cannot drift back.
+gi = (ROOT / "guides" / "index.html").read_text(encoding="utf-8")
+ilm = re.search(r'<script type="application/ld\+json">(\{"@context":"https://schema\.org","@type":"ItemList"[^<]*\})</script>', gi)
+bad = []
+if not ilm:
+    bad.append("guides/index.html: no ItemList block found to check")
+else:
+    try:
+        data = json.loads(ilm.group(1))
+    except Exception as exc:
+        data = None
+        bad.append("guides/index.html: the ItemList does not parse (%s)" % exc)
+    if data:
+        listed = {e["url"].rsplit("/", 1)[-1][:-5] for e in data.get("itemListElement", [])}
+        if data.get("numberOfItems") != len(listed):
+            bad.append("guides/index.html: ItemList claims %s items and lists %d"
+                       % (data.get("numberOfItems"), len(listed)))
+        if listed != catalogue:
+            if catalogue - listed:
+                bad.append("guides/index.html: ItemList omits %s" % ", ".join(sorted(catalogue - listed)))
+            if listed - catalogue:
+                bad.append("guides/index.html: ItemList names pages that do not exist: %s"
+                           % ", ".join(sorted(listed - catalogue)))
+if bad:
+    for b in bad[:8]:
+        print("  " + b)
+    fails.append("guides index ItemList")
+else:
+    print("  %d guides, every one named in the index's ItemList, and the count agrees" % len(catalogue))
+
 print("\n=== FAQ schema matches the visible FAQ word for word ===")
 # Google requires FAQPage markup to match the text a reader can see. Scripts now edit page
 # text in bulk (normalize-house-style.py hyphenates "12 volt" across the whole file, including
