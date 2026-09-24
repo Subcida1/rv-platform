@@ -351,6 +351,14 @@ for p in pages:
                re.findall(r'<details class="faq"><summary>(.*?)</summary><p>(.*?)</p></details>', txt, re.S)}
     for e in faq.get("mainEntity", []):
         faq_count += 1
+        # STRUCTURE, not just text. Four entities across three pages carried "type" instead
+        # of "@type" and NOTHING caught it: parity only ever compared the question and the
+        # answer text, so an entity Google would ignore passed as correct markup. Found on
+        # 2026-09-24 while speccing the outlets page.
+        if e.get("@type") != "Question" or (e.get("acceptedAnswer") or {}).get("@type") != "Answer":
+            bad.append("%s: FAQ entity missing @type (found %r / %r)"
+                       % (p.relative_to(ROOT), e.get("@type"), (e.get("acceptedAnswer") or {}).get("@type")))
+            continue
         q, a = plain(e["name"]), plain(e["acceptedAnswer"]["text"])
         if visible.get(q) != a:
             bad.append("%s: %s" % (p.relative_to(ROOT), q[:60]))
