@@ -52,7 +52,7 @@
 
  <div class="sec prose">
  <div class="wrap narrow">
- <div class="callout"><b>Safety first, because this is not the 12-volt side.</b> 120 volts can kill you. Do not open a panel or work inside an outlet with the shore cord connected. If you feel any tingle from the vehicle body, unplug immediately and treat it as a serious fault rather than something to live with. Everything below that involves opening anything assumes the power is off.</div>
+ <div class="callout"><b>Safety first, because this is not the 12-volt side.</b> 120 volts can kill you. Do not open a panel or work inside an outlet with the shore cord connected. If you feel any tingle from the vehicle body, unplug immediately and treat it as a serious fault rather than something to live with. Everything below that involves opening anything assumes the power is off, and off means the shore cord unplugged at the pedestal rather than the breaker switched off, with the voltage confirmed absent at the terminals before you touch them.</div>
 
  <div class="callout"><b>The short version:</b> outlet circuits are daisy chained, and a ground fault outlet at the head of the chain protects every outlet after it. So one tripped GFCI can kill a whole string of outlets while the others carry on working. Find it and reset it before you test anything. If it will not reset, the manufacturer lists exactly three reasons why, and after those it is a replacement.</div>
 
@@ -137,19 +137,19 @@
  <p>This is the most useful manufacturer documentation in this whole guide, because a GFCI that will not reset is a specific diagnostic rather than a vague problem. The maker's own literature describes a lockout feature that will prevent reset in three situations, and here they are in their own terms.</p>
  <h3>One, there is no power reaching the outlet</h3>
  <p>A GFCI cannot reset without power, so a dead upstream breaker presents as a failed GFCI. Check the supply before condemning the device.</p>
- <h3>Two, the line and load leads are reversed</h3>
+ <h3>Two, the line and load leads are reversed (check this with the shore cord unplugged, as the safety note at the top says)</h3>
  <p>Wiring the incoming supply to the outgoing terminals is a common mistake after replacement, and the device locks out rather than functioning incorrectly. The manufacturer's LED diagnostic chart names reversed line and load leads as a specific reading.</p>
  <p><b>Three, it has failed its own internal test,</b> meaning it may no longer be able to protect you in a ground fault. This is the one that matters for safety, because a GFCI that has failed this way still looks fine.</p>
  <h3>When to replace it</h3>
- <p>The instruction is direct: if the red indication continues, or the GFCI will not reset, replace it. Leviton puts the same test as: if the status indicator does not turn green when the reset button is pressed and released, or the GFCI cannot be reset, it must be replaced. That is a manufacturer telling you not to keep trying.</p>
- <h3>One cause you will read about that we could not source</h3>
- <p>Moisture is widely given as a reason a GFCI will not reset, and it is almost certainly true, but we could not find it named in any GFCI manufacturer's documentation. It appears only in forums and owner reports. Treat it as likely and test it by drying the outlet, but know that it is field knowledge rather than manufacturer wording.</p>
+ <p>The instruction is direct: if the red indication continues, or the GFCI will not reset, replace it, after ruling out moisture as the reason it is refusing (moisture is covered below). Leviton puts the same test as: if the status indicator does not turn green when the reset button is pressed and released, or the GFCI cannot be reset, it must be replaced. That is a manufacturer telling you not to keep trying.</p>
+ 
+ <p>Moisture is widely given as a reason a GFCI will not reset, and it is worth testing before you spend anything: dry the outlet and try the reset again. Water in a box is the one cause on this page that costs nothing to rule out.</p>
  </div>
 
  <h2>Testing an outlet</h2>
  <div class="card">
  <h3>The outlet tester, and what it reads</h3>
- <p>A multimeter tells you whether voltage is present. A tester tells you how the outlet is wired: whether the ground is connected, whether hot and neutral are reversed, whether the neutral is open. Those are exactly the faults that cause dead outlets and they are invisible to a voltage reading.</p>
+ <p>A multimeter tells you whether voltage is present. Hold the probes only by their insulated handles with your fingers behind the finger guards, and keep the two tips from touching each other or anything else while the circuit is live. A tester tells you how the outlet is wired: whether the ground is connected, whether hot and neutral are reversed, whether the neutral is open. Those are exactly the faults that cause dead outlets and they are invisible to a voltage reading.</p>
  <h3>Test a known good outlet first</h3>
  <p>Every tester has its own pattern of lights and the charts assume a particular model. Plug it into an outlet you know works so you can see what a good result looks like on your tester before you try to interpret a bad one.</p>
  <h3>Press the test button on the GFCI and listen</h3>

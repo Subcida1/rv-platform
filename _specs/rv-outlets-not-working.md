@@ -373,3 +373,32 @@ a GFCI *"clicks"*.
 
 **Cost figures** (*$17 to $34*, *$95 to $185*, *$125 to $195 an hour*) are cut to relative ordering per the
 settled convention.
+
+## 13. The safety review, 2026-09-24 23:29 (Claude) — and a page I truncated
+
+**Claude's verdict was NO, blocked by two findings, and both were right.** The review was scoped deliberately:
+safety only, no prose, no sourcing.
+
+1. **No safe meter handling.** The page told the reader *"A multimeter tells you whether voltage is present"* and
+   handed them a live 120-volt action with no technique. Fixed with one sentence: insulated handles, fingers
+   behind the finger guards, tips not touching anything else while the circuit is live.
+2. **"Power is off" was never defined**, and it reaches the line/load-reversal step, which is only checkable by
+   opening the device. Fixed: off now means *the shore cord unplugged at the pedestal rather than the breaker
+   switched off*, with voltage confirmed absent at the terminals, and the reversal step says so where it matters.
+3. **The replace rule came before the moisture caveat**, so a reader stopping at *"replace it"* bins a GFCI that
+   needed drying. Fixed with a pointer at that sentence and the caveat rewritten.
+4. Its schema check was inconclusive because `export-prose.py` strips `script` blocks, so the staged file has no
+   JSON-LD. **That is a limit of the staging, not the page**, and the next request should say so up front.
+
+**The C18 rewrite also removed the last failed-search disclosure on the page** (*"we could not find it named in
+any GFCI manufacturer's documentation"*), and **the heading above it - *"One cause you will read about that we
+could not source"* - is gone with it.** The fact stays; the narration of our search goes.
+
+**And a mistake worth recording, because it cost a restore.** Cutting that heading, I built the replacement as a
+prefix slice (`s[:match] + " "`) instead of an old-to-new pair, which deleted everything after the heading -
+the page went from 33.7 KB to 15 KB and the gate caught it immediately as five failures (tag balance, FAQ
+parity, analytics beacon, static shell). `git checkout` restored the committed version, the six edits were
+re-applied as exact pairs, and the page is intact at 34 KB with all gates green.
+
+**The lesson, and it is the same one as the anchor rules in a new form: never build a replacement out of a
+prefix slice.** A slice silently takes the tail; an old-to-new pair either matches or fails loudly.
