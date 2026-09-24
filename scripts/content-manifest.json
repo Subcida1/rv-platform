@@ -276,16 +276,16 @@
         "text": "ice dams form at the eaves and back water up under the roof edge",
         "source": "a roofing or insulation source",
         "state": "SOURCED",
-        "by": null,
-        "at": null
+        "by": "The ice-dam mechanism the page describes is standard building science (slush runs to the cold eave, refreezes, meltwater backs up under the membrane) and it is not wrong, but no source on the page carries it. It needs a real one -- a roofing or building-science authority -- or the section should be cut back to what the page can support. Keystone's manual covers roof MATERIAL and sealant (TPO, Alpha sealants, 90-day maintenance on rubber roofs) and says nothing about ice dams.",
+        "at": "2026-09-23"
       },
       {
         "id": "C9",
         "text": "a roof that is walked on in cold weather can crack a membrane",
         "source": "maker guidance on roof materials",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "state": "READ",
+        "by": "Cloud read Keystone's own manual on 2026-09-23 and it answers this better than the page does: 'Your RV may be equipped with an exterior roof ladder. Units with factory installed ladders have walkable roofs. Some units have walkable roofs but no ladder and others do not have a ladder or walkable roof. The ladder capacity is 250lb.' So walkability is a per-unit fact the maker states, not a judgement call -- which is a materially better instruction for the page's 'if you have to clear the roof' section than generic care advice. ADD WHEN DRAFTING.",
+        "at": "2026-09-23"
       },
       {
         "id": "C10",
@@ -299,9 +299,9 @@
         "id": "C11",
         "text": "\"The single most valuable habit\" - a heading",
         "source": "a ranking claim in a heading: the fourth instance of this shape in the programme",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "state": "CONFIRMED",
+        "by": "Cloud will retitle the closing heading when the page is drafted. It is 'The single most valuable habit' -- the same ranking-in-a-heading shape as 'the rule that saves most people/owners' on four other pages, and the third page in the programme to lose it.",
+        "at": "2026-09-23"
       },
       {
         "id": "C12",
