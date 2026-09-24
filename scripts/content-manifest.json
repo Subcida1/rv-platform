@@ -2004,18 +2004,18 @@
       {
         "id": "C4",
         "text": "an inverter/charger has an AC pass-through circuit with internal relays that feed its designated outlets from shore power when it is present and from the batteries when it is not",
-        "source": "Xantrex Freedom SW 2000 owner guide (in Sources)",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "source": "Xantrex, Freedom SW 2000 Owner's Guide (975-0528-01-01), Introduction p.1 and Materials List p.2",
+        "state": "READ",
+        "by": "Reading agent (subagent-1790230080754-13), 2026-09-24. \"The inverter features an AC pass-through circuit, powering your in-vehicle, consumer appliances from utility or generator power while charging the batteries. When utility power is disconnected or the generator is stopped, the in-vehicle battery backup system keeps your appliances powered until utility power is restored.\"  NOTE: The guide also lists a \"fully automatic AC transfer relay\" and, on p.5, an \"internal pass-through relay and wiring from the AC output to the user-installed branch circuit breaker\".",
+        "at": "2026-09-23"
       },
       {
         "id": "C5",
         "text": "\"Manufacturers also document a failsafe behaviour worth knowing: on at least one product line, the AC output stays live if AC input is available even when the operating switch is s",
-        "source": "Xantrex Freedom SW 2000 owner guide (in Sources); the sentence names no maker and hedges with \"at least one product line\"",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "source": "Xantrex, Freedom SW 2000 Owner's Guide (975-0528-01-01), Operating The Freedom SW 2000, \"OFF Mode\" and \"Charge Mode\", p.15",
+        "state": "READ",
+        "by": "Reading agent (subagent-1790230080754-13), 2026-09-24. \"Once in OFF Mode, if qualified AC power becomes available then the unit automatically starts charging. However, when AC becomes unavailable, the unit will not transition to Invert Mode until the ON/STANDBY switch is pressed once.\"  NOTE: The same page states \"Whenever nominal AC is present at the inverter's input the unit passes input power through to the connected load and begins charging the batteries\". Together these carry the claim that the AC output stays live with AC input even with the switch off. The guide also says at p.iv \"Turning off the inverter/charger using the on/off switch on the front panel will not reduce an electrical shock hazard.\"",
+        "at": "2026-09-23"
       },
       {
         "id": "C6",
@@ -2028,26 +2028,26 @@
       {
         "id": "C7",
         "text": "\"120 volts can kill you.\"",
-        "source": "a safety claim with no document named on the page; Leviton's instruction sheet (in Sources) carries shock and power-off wording, and the sen",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "source": "Leviton, Installing and Testing a GFCI Receptacle (Cat. No. 7591-PL, DI-100-07591-02A), Important Safety Instructions, p.1",
+        "state": "READ",
+        "by": "Reading agent (subagent-1790230080754-13), 2026-09-24. \"To prevent severe shock or electrocution always turn the power OFF at the service panel before working with wiring.\"  NOTE: The sheet also warns \"If you miswired the GFCI it may not prevent personal injury or death due to a ground fault (electrical shock).\" It does not use the number \"120 volts\"; the device is rated 15A-125V AC, 60 Hz.",
+        "at": "2026-09-23"
       },
       {
         "id": "C8",
         "text": "\"Do not open a panel or work inside an outlet with the shore cord connected.\" and \"Everything below that involves opening anything assumes the power is off.\"",
-        "source": "Leviton's instruction sheet (in Sources); a safety step, must be carried by the document",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "source": "Leviton, Installing and Testing a GFCI Receptacle (Cat. No. 7591-PL, DI-100-07591-02A), Important Safety Instructions and step 5, p.1",
+        "state": "READ",
+        "by": "Reading agent (subagent-1790230080754-13), 2026-09-24. \"To prevent severe shock or electrocution always turn the power OFF at the service panel before working with wiring.\"  NOTE: Step 5 makes the reader switch off the branch breaker and confirm the test lamp or radio \"must turn OFF\" before working. Leviton's wording is the service panel, not an RV shore cord; no maker wording names the shore cord, so the phrase \"with the shore cord connected\" is ours.",
+        "at": "2026-09-23"
       },
       {
         "id": "C9",
         "text": "hot skin is voltage present on the chassis that should not be there, and \"it is a genuine electrocution risk\"",
-        "source": "a safety claim with no document anywhere on the page; name an electrical-safety or maker source or restate it as our own warning",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "source": "none",
+        "state": "CONFIRMED",
+        "by": "CUT, 2026-09-24, under Ty's ruling (name the source or cut the sentence). Reading agent (subagent-1790230080754-13), safety-first pass, searched maker sheets and support pages and found no document carrying it. Searched Winnebago, Tiffin, Keystone, Crossroads and TrailManor owner material and the RVIA GMI page. TrailManor's manual says \"NEVER operate your RV with a hot skin\" and to disconnect immediately; Winnebago and Tiffin safety pages say \"Careless handling of electrical components can be fatal\" and \"Improper grounding of the vehicle can cause personal injury\"; the RVIA page defines hot skin as an RV's metal exterior or frame becoming electrified and calls it \"a serious electrical safety hazard\". No maker document states in its own words that hot skin is a genuine electrocution risk. NFPA 1192 and ABYC E-11 are WAIVED (paywalled). Restate this as our own warning per D5.",
+        "at": "2026-09-23"
       },
       {
         "id": "C10",
@@ -2060,18 +2060,18 @@
       {
         "id": "C11",
         "text": "\"The usual causes are a fault in the pedestal supply itself, reverse polarity at the pedestal, or a missing or broken ground connection somewhere in the path.\"",
-        "source": "a ground and polarity safety claim with no document named; \"usual causes\" is also a prevalence shape",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "source": "TrailManor Classic Travel Trailer Owners Manual, Electrical safety section",
+        "state": "READ",
+        "by": "Reading agent (subagent-1790230080754-13), 2026-09-24. \"NEVER operate your RV with a \"hot skin\". If you can feel even a small shock from the RV while standing on the ground, you should immediately disconnect the RV from the power source and locate the trouble. The fault is usually from a break in the grounding circuit, which should be continuous from the skin or frame to the distribution panel board to the third pin on the power supply cord and then back to the park receptacle and earth ground.\"  NOTE: The same manual warns \"you should be certain that the polarity of the RV Park power supply is not reversed\". It carries the missing or broken ground and the reverse polarity at the pedestal; it does not name \"a fault in the pedestal supply itself\" as a usual cause. NFPA 1192 and ABYC E-11 are the standards of record here and are WAIVED (paywalled, not readable).",
+        "at": "2026-09-23"
       },
       {
         "id": "C12",
         "text": "\"the trade checks bonding continuity and expects a low impedance rather than simply continuity\"",
-        "source": "\"the trade\", unnamed; a bonding safety claim with no document. Cut under the standing ruling",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "source": "none",
+        "state": "CONFIRMED",
+        "by": "CUT, 2026-09-24, under Ty's ruling (name the source or cut the sentence). Reading agent (subagent-1790230080754-13), safety-first pass, searched maker sheets and support pages and found no document carrying it. Searched RV maker manuals, Progressive Dynamics converter manuals (PD9100 series, PD9300), WFCO material, and the standards. No maker document states that the trade checks bonding continuity and expects a low impedance rather than simply continuity. The nearest readable material is third-party trade commentary (rvelectricity.com) and ABYC E-01, which describes DC bonding on boats as needing \"a low-resistance electrical path\"; neither is a maker document for this claim. NFPA 1192 and ABYC E-11 are WAIVED (paywalled).",
+        "at": "2026-09-23"
       },
       {
         "id": "C13",
@@ -2084,42 +2084,42 @@
       {
         "id": "C14",
         "text": "a GFCI lockout prevents reset in three situations: no power reaching it, line and load leads reversed, or a failed internal self test",
-        "source": "Leviton's instruction sheet (in Sources); a number and a safety step, must be carried by the document",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "source": "Leviton, Installing and Testing a GFCI Receptacle (Cat. No. 7591-PL, DI-100-07591-02A), section 1 \"What is a GFCI?\", p.1",
+        "state": "READ",
+        "by": "Reading agent (subagent-1790230080754-13), 2026-09-24. \"GFCI's contain a lockout feature that will prevent RESET if: There is no power being supplied to the GFCI. The GFCI is miswired due to reversal of the LINE and LOAD leads. The GFCI cannot pass its internal test, indicating that it may not be able to provide protection in the event of a ground fault.\"",
+        "at": "2026-09-23"
       },
       {
         "id": "C15",
         "text": "\"The manufacturer's LED diagnostic chart names reversed line and load leads as a specific reading.\"",
-        "source": "Leviton (in Sources); the sentence names no maker",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "source": "Leviton, \"LED Indicator Light Diagnosis for GFCIs\" instruction sheet (GFTR, GFNL, GFNT, GFWT, GFSW, GFRBF)",
+        "state": "READ",
+        "by": "Reading agent (subagent-1790230080754-13), 2026-09-24. \"GFCIs - Multi-Function Indicator Light For Power Status/GFCI Status/Miswiring Diagnosis\" ... \"LED GREEN (White*) ... Tripped (RESET button out) ... Load Power OFF ... Line and Load leads are reversed ... Review instructions for correct wiring\"  NOTE: This is Leviton's diagnostic chart and reversed line and load leads is listed as the reading in the tripped, load-off state.",
+        "at": "2026-09-23"
       },
       {
         "id": "C16",
         "text": "replace the GFCI if it will not reset: \"if the red indication continues, or the GFCI will not reset, replace it\", and Leviton's form, that a status indicator which does not turn gr",
-        "source": "Leviton's instruction sheet (in Sources); a safety step",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "source": "Leviton, \"LED Indicator Light Diagnosis for GFCIs\" instruction sheet; and Leviton Circuit AFCI/GFCI instruction sheet (agtr1), step 8(d)",
+        "state": "READ",
+        "by": "Reading agent (subagent-1790230080754-13), 2026-09-24. \"If RED indication continues, or GFCI will not RESET, replace GFCI.\" and \"If the Status Indicator Light does not turn Green when the RESET button is depressed and then released, or the AFCI/GFCI cannot be reset, it must be replaced.\"  NOTE: Both wordings are Leviton's. The 7591 sheet linked in Sources says only \"If the Indicator light does not go out and come back on or if the GFCI cannot be reset, then it must be replaced\", so cite the LED Diagnosis sheet and the AFCI/GFCI sheet for the red and green wordings.",
+        "at": "2026-09-23"
       },
       {
         "id": "C17",
         "text": "\"Wiring the incoming supply to the outgoing terminals is a common mistake after replacement\"",
-        "source": "a prevalence claim with no source",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "source": "Leviton Product Support, \"What to Do When Your GFCI or AFCI Isn't Working\" (leviton.com); Leviton blog \"How to Reset a GFCI Outlet After Lockout\"; Leviton page \"GFCI Line Load Reversal\"",
+        "state": "READ",
+        "by": "Reading agent (subagent-1790230080754-13), 2026-09-24. \"One of the most common causes line/load reversal during installation.\" and \"Line/load reversal is a common wiring mistake that happens when the line connectors are accidentally connected to the load terminals.\"  NOTE: Leviton names this reversal as \"a common wiring mistake\", so the prevalence is maker carried after all. The mechanism is also right: Leviton says line/load reversal \"prevents the device from operating properly\" and \"will not provide proper protection\".",
+        "at": "2026-09-23"
       },
       {
         "id": "C18",
         "text": "moisture is a reason a GFCI will not reset, \"we could not find it named in any GFCI manufacturer's documentation\", and \"It appears only in forums and owner reports.\"",
-        "source": "a failed-search disclosure plus unnamed owner reports",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "source": "none",
+        "state": "CONFIRMED",
+        "by": "CUT, 2026-09-24, under Ty's ruling (name the source or cut the sentence). Reading agent (subagent-1790230080754-13), safety-first pass, searched maker sheets and support pages and found no document carrying it. Searched Leviton, Eaton (Slim GFCI), Hubbell (SNAPConnect) and the Legrand/Pass and Seymour family GFCI instruction sheets plus Leviton support pages. No GFCI maker names moisture as a reason a GFCI will not reset. A Leviton support blog lists \"exposure to water\" as a damage reason for replacement, not as a reset lockout cause. The page's own failed-search admission holds; moisture as a no-reset cause appears only in third-party consumer material.",
+        "at": "2026-09-23"
       },
       {
         "id": "C19",
@@ -2140,18 +2140,18 @@
       {
         "id": "C21",
         "text": "\"A working GFCI clicks off when you press test, and clicks back on when you press reset.\" and a test that does nothing is a sign the device is not functioning",
-        "source": "Leviton's instruction sheet (in Sources); a test procedure on a live device",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "source": "Leviton, Installing and Testing a GFCI Receptacle (Cat. No. 7591-PL, DI-100-07591-02A), step 8(b) and 8(d), p.2",
+        "state": "READ",
+        "by": "Reading agent (subagent-1790230080754-13), 2026-09-24. \"Press the TEST button (then RESET button) every month to assure proper operation. If the Indicator light does not go out and come back on or if the GFCI cannot be reset, then it must be replaced.\"  NOTE: The sheet documents TEST removing power and RESET restoring it, and no change meaning replacement. The word \"click\" is not in the maker text; the indicator and lamp behaviour is what Leviton states.",
+        "at": "2026-09-23"
       },
       {
         "id": "C22",
         "text": "\"In an RV the most common genuine problems behind dead outlets are a tripped GFCI, a tripped pedestal breaker, a loose connection at an outlet where the wiring is push-in rather th",
-        "source": "prevalence and ranking with no source",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "source": "none",
+        "state": "CONFIRMED",
+        "by": "CUT, 2026-09-24, under Ty's ruling (name the source or cut the sentence). Reading agent (subagent-1790230080754-13), safety-first pass, searched maker sheets and support pages and found no document carrying it. Searched maker manuals and GFCI maker sheets for a ranking of the causes of dead outlets and for push-in wiring and damp-location corrosion as the most common genuine problems. No document rates them. Leviton's sheet describes both side-wire and back-wire methods and requires tightening the terminal clamp; it does not name push-in wiring as a failure cause.",
+        "at": "2026-09-23"
       },
       {
         "id": "C23",
@@ -2164,50 +2164,50 @@
       {
         "id": "C24",
         "text": "\"At a campground that is often a tripped breaker at the post, and it is somebody else's problem.\"",
-        "source": "a prevalence claim with no source",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "source": "none",
+        "state": "CONFIRMED",
+        "by": "CUT, 2026-09-24, under Ty's ruling (name the source or cut the sentence). Reading agent (subagent-1790230080754-13), safety-first pass, searched maker sheets and support pages and found no document carrying it. No document carries the prevalence that a campground issue is \"often\" a tripped breaker at the post or the claim that \"it is somebody else's problem\".",
+        "at": "2026-09-23"
       },
       {
         "id": "C25",
         "text": "\"the most common cause has a reset button and costs nothing to fix\" (lede)",
-        "source": "a ranking and prevalence claim with no source",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "source": "none",
+        "state": "CONFIRMED",
+        "by": "CUT, 2026-09-24, under Ty's ruling (name the source or cut the sentence). Reading agent (subagent-1790230080754-13), safety-first pass, searched maker sheets and support pages and found no document carrying it. No document ranks the most common cause as one that has a reset button and costs nothing to fix.",
+        "at": "2026-09-23"
       },
       {
         "id": "C26",
         "text": "\"one manufacturer publishes an exact list of why that button will sometimes refuse\" (lede)",
-        "source": "Leviton (in Sources); the sentence names no maker",
-        "state": "SOURCED",
-        "by": null,
-        "at": null
+        "source": "Leviton, Installing and Testing a GFCI Receptacle (Cat. No. 7591-PL, DI-100-07591-02A), section 1 \"What is a GFCI?\", p.1",
+        "state": "READ",
+        "by": "Reading agent (subagent-1790230080754-13), 2026-09-24. \"GFCI's contain a lockout feature that will prevent RESET if: There is no power being supplied to the GFCI. The GFCI is miswired due to reversal of the LINE and LOAD leads. The GFCI cannot pass its internal test, indicating that it may not be able to provide protection in the event of a ground fault.\"  NOTE: Leviton is the one manufacturer and it publishes this list. The word \"exact\" is the page's own qualifier and is flagged separately as D3.",
+        "at": "2026-09-23"
       },
       {
         "id": "C27",
         "text": "\"A string of outlets dead, others fine\" is \"Almost always a tripped GFCI upstream of them.\"",
-        "source": "a prevalence claim with no source",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "source": "none",
+        "state": "CONFIRMED",
+        "by": "CUT, 2026-09-24, under Ty's ruling (name the source or cut the sentence). Reading agent (subagent-1790230080754-13), safety-first pass, searched maker sheets and support pages and found no document carrying it. No document carries the prevalence that a string of dead outlets is \"almost always\" a tripped GFCI upstream. The chain and downstream protection mechanism is documented by Leviton; the \"almost always\" prevalence is not.",
+        "at": "2026-09-23"
       },
       {
         "id": "C28",
         "text": "\"This is the case worth checking first because it costs nothing.\"",
-        "source": "a ranking shape; the reset-first advice is fine, the ranking word is not",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "source": "none",
+        "state": "CONFIRMED",
+        "by": "CUT, 2026-09-24, under Ty's ruling (name the source or cut the sentence). Reading agent (subagent-1790230080754-13), safety-first pass, searched maker sheets and support pages and found no document carrying it. No document carries the ranking \"worth checking first because it costs nothing\".",
+        "at": "2026-09-23"
       },
       {
         "id": "C29",
         "text": "\"This is the most useful manufacturer documentation in this whole guide\"",
-        "source": "self-narration about our sourcing, plus a ranking",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "source": "none",
+        "state": "CONFIRMED",
+        "by": "CUT, 2026-09-24, under Ty's ruling (name the source or cut the sentence). Reading agent (subagent-1790230080754-13), safety-first pass, searched maker sheets and support pages and found no document carrying it. Self narration about our sourcing and a ranking; no document behind it.",
+        "at": "2026-09-23"
       },
       {
         "id": "C30",
@@ -2236,34 +2236,34 @@
       {
         "id": "C33",
         "text": "\"A GFCI is one of the cheapest parts on the whole RV, running roughly $17 to $34 depending on the model and whether it is weather resistant\"",
-        "source": "a cost figure and a ranking with no document behind either",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "source": "none",
+        "state": "CONFIRMED",
+        "by": "CUT, 2026-09-24, under Ty's ruling (name the source or cut the sentence). Reading agent (subagent-1790230080754-13), safety-first pass, searched maker sheets and support pages and found no document carrying it. No publishable source carries \"$17 to $34\" or the ranking \"one of the cheapest parts on the whole RV\". Per D4, drop the dollar figures and keep the relative ordering.",
+        "at": "2026-09-23"
       },
       {
         "id": "C34",
         "text": "professional diagnosis \"around $95 to $185 as a standalone fee, with labour at roughly $125 to $195 an hour\"",
-        "source": "cost figures, unnamed",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "source": "none",
+        "state": "CONFIRMED",
+        "by": "CUT, 2026-09-24, under Ty's ruling (name the source or cut the sentence). Reading agent (subagent-1790230080754-13), safety-first pass, searched maker sheets and support pages and found no document carrying it. No publishable source carries \"$95 to $185\" or \"roughly $125 to $195 an hour\". Unnamed cost figures, per D4.",
+        "at": "2026-09-23"
       },
       {
         "id": "C35",
         "text": "\"a tripped breaker or a reset GFCI accounts for a good share of dead outlet complaints\"",
-        "source": "a prevalence claim with no source",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "source": "none",
+        "state": "CONFIRMED",
+        "by": "CUT, 2026-09-24, under Ty's ruling (name the source or cut the sentence). Reading agent (subagent-1790230080754-13), safety-first pass, searched maker sheets and support pages and found no document carrying it. No document carries the prevalence that a tripped breaker or a reset GFCI accounts for \"a good share\" of dead outlet complaints.",
+        "at": "2026-09-23"
       },
       {
         "id": "C36",
         "text": "\"checking those two yourself first is the highest-value few minutes in this guide\"",
-        "source": "a ranking and self-narration with no source",
-        "state": "OPEN",
-        "by": null,
-        "at": null
+        "source": "none",
+        "state": "CONFIRMED",
+        "by": "CUT, 2026-09-24, under Ty's ruling (name the source or cut the sentence). Reading agent (subagent-1790230080754-13), safety-first pass, searched maker sheets and support pages and found no document carrying it. No document carries the ranking \"the highest-value few minutes in this guide\".",
+        "at": "2026-09-23"
       }
     ]
   },

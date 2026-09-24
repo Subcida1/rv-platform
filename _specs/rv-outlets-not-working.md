@@ -328,3 +328,48 @@ eyes.
 Placeholder. The drafter fills this once the page is written, in the shape the converter and fuse specs use:
 what is done and committed, the numbered items remaining before the first review round, and why the handoff
 happened where it did. A class sweep is a standing step after verification, per the converter spec's §13.
+
+## 12. The reading, 2026-09-24 23:13 (safety first)
+
+**24 claims read: 11 SUPPORTED, 0 WRONG, 13 NOT FOUND.** This was a safety-first pass and it answered the
+question the spec was built around.
+
+**What held up.** The two maker documents in the page's Sources both carry their weight: Leviton's 7591 sheet
+(DI-100-07591-02A) has the three-reason lockout verbatim, the live-circuit and shock warning, and the
+replace-on-no-reset rule; Xantrex's Freedom SW 2000 guide has the AC pass-through circuit, the internal relays
+and the failsafe (*"Once in OFF Mode, if qualified AC power becomes available then the unit automatically starts
+charging"*).
+
+**Three things the reading improved on the spec, all in the page's favour:**
+
+- **C15, C16 and C17 are sourced, by different Leviton documents than the one linked.** Leviton's *"LED Indicator
+  Light Diagnosis for GFCIs"* is the chart that lists *"Line and Load leads are reversed"* as a reading, and an
+  AFCI/GFCI sheet carries the *"does not turn Green ... it must be replaced"* wording. **Those sheets go into
+  Sources.** And Leviton's own support material calls line/load reversal *"one of the most common causes"*, which
+  turns a prevalence claim into a named one: the maker says it, so the page can too.
+- **C11 is supported by the TrailManor owner's manual**: *"NEVER operate your RV with a hot skin ... The fault is
+  usually from a break in the grounding circuit"*, with reversed park polarity warned on the same page.
+
+**The safety claims that stand on nothing, which is what decides what the page keeps:**
+
+- **C9, hot skin as an electrocution risk: NOT FOUND as written.** No maker document says it in its own words. The
+  nearest maker text is TrailManor's *"NEVER operate your RV with a hot skin"* and Winnebago's and Tiffin's
+  *"Careless handling of electrical components can be fatal"*. The RVIA calls it *"a serious electrical safety
+  hazard"*, and that is an industry body rather than a maker. **NFPA 1192 and ABYC E-11 are WAIVED** (paywalled).
+  **The warning is too important to cut and too unsourced to attribute, so it is RESTATED AS OURS** - stated
+  plainly as this page's own warning, which is honest and keeps the reader protected.
+- **C12, bonding continuity checked by "the trade" expecting low impedance: NOT FOUND. CUT.** Only third-party
+  trade commentary and a boat standard (ABYC E-01) are near it, and neither is a maker document.
+- **C11 keeps two of its three causes**: the maker documents a broken ground and reversed park polarity, but not
+  *a fault in the pedestal supply itself*.
+- **C18, moisture as a no-reset cause: NOT FOUND as a maker cause.** Searched Leviton, Eaton, Hubbell and the
+  Legrand family sheets; none names it. **So the page's failed-search admission was accurate** and the fact
+  survives only in third-party consumer material, which is why that admission has to go even though the fact is
+  real.
+
+**Limits the reading flagged rather than papered over, for the drafter:** Leviton says *"electrocution"*, not
+*"120 volts"*; the maker's live-work rule is about the service panel, not the shore cord; and no maker text says
+a GFCI *"clicks"*.
+
+**Cost figures** (*$17 to $34*, *$95 to $185*, *$125 to $195 an hour*) are cut to relative ordering per the
+settled convention.
