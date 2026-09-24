@@ -117,14 +117,18 @@ A wrong-but-plausible photo is worse than no photo.
   generator. Two Flickr photographs and one from geograph could not be traced back
   without an API key, though their captions are structurally correct.
 
-### Still open: nothing enforces the credits
+### CLOSED 2026-09-24: the credits are enforced now
 
-`verify.py` has no licence or credit check. The guide photographs carry correct
-credits and the footer carries the modification note, but a photograph added
-without either would ship unchallenged. A small gate would close it: every
-`<figure>` holding an `<img>` under `assets/img/` must have a figcaption naming an
-author and linking a licence, and no CC BY-NC or CC BY-ND may appear on a
-commercial site.
+`verify.py` checks every photograph in three categories, because the site has three and each keeps its
+provenance somewhere different: the site's own photograph (named explicitly, because no credit line is the
+deliberate instruction for it), a third-party photograph whose licence requires attribution (its figure caption
+must carry both a credit and a licence link), and one whose licence does not (its provenance must be recorded in
+a CREDITS.md beside the file, which is how the state tiles already did it). Plus one rule that is not
+presentation: no licence forbidding commercial use, anywhere a page or a CREDITS.md names one.
+
+**Negative-tested twice, and the first version failed its own test.** Stripping a caption's credit was caught;
+rewriting a licence link to by-nc was not, because the unusable-licence scan only looked at CREDITS.md files and
+never at the caption. Fixed and re-tested.
 
 ### Download mechanics, learned the hard way
 
