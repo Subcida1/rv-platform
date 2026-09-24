@@ -609,7 +609,7 @@
         "text": "reverse polarity fuses run from a single 40 amp fuse up to two 40 amp fuses depending on output",
         "source": "WFCO converter support FAQ, \"What size DC fuses do I need? - Reverse Protection Fuses\" (also WFCO WF-8700-AD Product Manual, REVERSE BATTERY PROTECTION)",
         "state": "READ",
-        "by": "Reading agent (subagent-1790219745250-11), 2026-09-23. \"WF-8700 Series 8712 – 15A / 8725 – 30A / 8735 – 40A / 8740 – 30A, 30A\" ... \"WF-9800 Series 9835 – 40A / 9845 – 30A, 30A / 9855 – 35A. 35A / 9865 – 40A, 40A / 9875 – 40A, 40A\" (WF-8700-AD manual: \"• WF-8725-AD – 30A (1) • WF-8735-AD – 40A (1) • WF-8740-AD – 30A (2)\")",
+        "by": "Reading agent (subagent-1790219745250-11), 2026-09-23. \"WF-8700 Series 8712 - 15A / 8725 - 30A / 8735 - 40A / 8740 - 30A, 30A\" ... \"WF-9800 Series 9835 - 40A / 9845 - 30A, 30A / 9855 - 35A. 35A / 9865 - 40A, 40A / 9875 - 40A, 40A\" (WF-8700-AD manual: \"• WF-8725-AD - 30A (1) • WF-8735-AD - 40A (1) • WF-8740-AD - 30A (2)\")",
         "at": "2026-09-23"
       },
       {
@@ -617,7 +617,7 @@
         "text": "battery branch fuse per model: a WF-8712P uses 15 amps on circuit four, the WF-8725P 30 amps on circuit four, and the 8735P and 8740P 30 amps on circuit six",
         "source": "WFCO WF-8700 Series Operator's Manual (WF-8712P/8725P/8735P/8740P), TROUBLESHOOTING INSTRUCTIONS - Check Converter Output Voltage, NOTE",
         "state": "READ",
-        "by": "Reading agent (subagent-1790219745250-11), 2026-09-23. \"NOTE: The battery circuit (Red wire) should have the following fuse installed: WF-8712P – Circuit #4 – 15 A / WF-8725P – Circuit #4 – 30 A / WF-8735P – Circuit #6 – 30 A / WF-8740P – Circuit #6 – 30 A\"  NOTE: The battery circuit (Red wire) should have the following fuse installed: WF-8712P – Circuit #4 – 15 A / WF-8725P – Circuit #4 – 30 A / WF-8735P – Circuit #6 – 30 A / WF-8740P – Circuit #6 – 30 A\"",
+        "by": "Reading agent (subagent-1790219745250-11), 2026-09-23. \"NOTE: The battery circuit (Red wire) should have the following fuse installed: WF-8712P - Circuit #4 - 15 A / WF-8725P - Circuit #4 - 30 A / WF-8735P - Circuit #6 - 30 A / WF-8740P - Circuit #6 - 30 A\"  NOTE: The battery circuit (Red wire) should have the following fuse installed: WF-8712P - Circuit #4 - 15 A / WF-8725P - Circuit #4 - 30 A / WF-8735P - Circuit #6 - 30 A / WF-8740P - Circuit #6 - 30 A\"",
         "at": "2026-09-23"
       },
       {
@@ -649,7 +649,7 @@
         "text": "Progressive Dynamics no-output causes: AC power not connected, blown external fuses usually through reverse polarity, a short circuit, a thermal shutdown, or an over-voltage shutdo",
         "source": "Progressive Dynamics PD9100 owner's manual (109205n), TROUBLE SHOOTING GUIDE (same table in PD4100 manual)",
         "state": "READ",
-        "by": "Reading agent (subagent-1790219745250-11), 2026-09-23. \"1. No Output — 120 VAC supply not connected ... External Fuses Blown — Check for Reverse Polarity ... Short Circuit — Trace RV Circuits for possible fault ... Unit has shutdown due to overheating ... Unit has shutdown due to over voltage ... Converter will shut down if the input voltage exceeds 132 Volts\" ... \"3. Low Output — ... Excessive Load for Converter ... Input Voltage not between 105-130 VAC ... Bad Battery Cell(s) — Replace Battery\"",
+        "by": "Reading agent (subagent-1790219745250-11), 2026-09-23. \"1. No Output - 120 VAC supply not connected ... External Fuses Blown - Check for Reverse Polarity ... Short Circuit - Trace RV Circuits for possible fault ... Unit has shutdown due to overheating ... Unit has shutdown due to over voltage ... Converter will shut down if the input voltage exceeds 132 Volts\" ... \"3. Low Output - ... Excessive Load for Converter ... Input Voltage not between 105-130 VAC ... Bad Battery Cell(s) - Replace Battery\"",
         "at": "2026-09-23"
       },
       {
@@ -697,7 +697,7 @@
         "text": "a converter cycling between absorption and bulk can indicate a shorted battery cell, and Progressive Dynamics lists bad battery cells in its low-output table with the action being ",
         "source": "WFCO converter operator manual, Converter Operation Modes (WF-8735P/8740P and WF-8712P/8725P ULTRA III manuals; older WF-9800 rev); Progressive Dynamics PD9100 owner's manual, TROUBLE SHOOTING GUIDE - Low Output",
         "state": "READ",
-        "by": "Reading agent (subagent-1790219745250-11), 2026-09-23. (WFCO) \"If the converter cycles between \"Absorption and Bulk mode,\" there could be a shorted battery cell or other issues.\" (PD) \"Low Output ... Bad Battery Cell(s) — Replace Battery\"  NOTE: this WFCO sentence is in WFCO's operator manuals, not the WFCO support FAQ the spec names.",
+        "by": "Reading agent (subagent-1790219745250-11), 2026-09-23. (WFCO) \"If the converter cycles between \"Absorption and Bulk mode,\" there could be a shorted battery cell or other issues.\" (PD) \"Low Output ... Bad Battery Cell(s) - Replace Battery\"  NOTE: this WFCO sentence is in WFCO's operator manuals, not the WFCO support FAQ the spec names.",
         "at": "2026-09-23"
       },
       {
@@ -705,7 +705,7 @@
         "text": "the resting voltages: about 12.7 volts full, 12.4 about three quarters, 12.2 half, 12.0 a quarter, after at least six hours idle and preferably twenty four",
         "source": "Trojan Battery, Battery Maintenance - Testing, \"Open-Circuit Voltage Test\" Table 1 (12V column)",
         "state": "READ",
-        "by": "Reading agent (subagent-1790219745250-11), 2026-09-23. WRONG. \"Percentage of Charge | Open Circuit Voltage 12V — 100: 12.73; 90: 12.62; 80: 12.50; 70: 12.37; 60: 12.27; 50: 12.10; 40: 11.89; 30: 11.81; 20: 11.66; 10: 11.51\" ... \"For accurate voltage readings, batteries must remain idle (no charging, no discharging) for at least 6 hrs, preferably 24 hrs.\"  NOTE: the page says 12.4 = three quarters, 12.2 = half, 12.0 = a quarter. Trojan publishes in 10% steps and gives 50% = 12.10 V, 70% = 12.37 V, 30% = 11.81 V, 20% = 11.66 V — there is no 75% or 25% row, and the half/quarter figures do not match Trojan's table. The \"6 hrs, preferably 24\" rest rule is correct.  RE-VERIFIED BY CLOUD against trojanbattery.com directly: 12.73/12.10/11.66 confirmed, and the strings 12.4 and 12.0 do not appear on Trojan's page.",
+        "by": "Reading agent (subagent-1790219745250-11), 2026-09-23. WRONG. \"Percentage of Charge | Open Circuit Voltage 12V - 100: 12.73; 90: 12.62; 80: 12.50; 70: 12.37; 60: 12.27; 50: 12.10; 40: 11.89; 30: 11.81; 20: 11.66; 10: 11.51\" ... \"For accurate voltage readings, batteries must remain idle (no charging, no discharging) for at least 6 hrs, preferably 24 hrs.\"  NOTE: the page says 12.4 = three quarters, 12.2 = half, 12.0 = a quarter. Trojan publishes in 10% steps and gives 50% = 12.10 V, 70% = 12.37 V, 30% = 11.81 V, 20% = 11.66 V - there is no 75% or 25% row, and the half/quarter figures do not match Trojan's table. The \"6 hrs, preferably 24\" rest rule is correct.  RE-VERIFIED BY CLOUD against trojanbattery.com directly: 12.73/12.10/11.66 confirmed, and the strings 12.4 and 12.0 do not appear on Trojan's page.",
         "at": "2026-09-23"
       },
       {
@@ -721,7 +721,7 @@
         "text": "battery size should not be less than the converter size in amps, and Xantrex publishes maximum bank sizes of 220 amp hours for its 40 and 60 amp models and 400 amp hours for the 80",
         "source": "Progressive Dynamics FAQs About Power Converters/Chargers (\"What Type of batteries are recommended?\"); Xantrex TRUECHARGE RV datasheet (804-0220), Converter Specifications",
         "state": "READ",
-        "by": "Reading agent (subagent-1790219745250-11), 2026-09-23. (PD) \"Battery size should not be less than the converter size in AMPS.\" (Xantrex) \"Recommended maximum battery bank size — TRUECHARGE RV - 40A: 220 Ah; TRUECHARGE RV - 60A: 220 Ah; TRUECHARGE RV - 80A: 400 Ah\"",
+        "by": "Reading agent (subagent-1790219745250-11), 2026-09-23. (PD) \"Battery size should not be less than the converter size in AMPS.\" (Xantrex) \"Recommended maximum battery bank size - TRUECHARGE RV - 40A: 220 Ah; TRUECHARGE RV - 60A: 220 Ah; TRUECHARGE RV - 80A: 400 Ah\"",
         "at": "2026-09-23"
       },
       {
@@ -753,7 +753,7 @@
         "text": "the ten failure modes, including over-voltage shutdown above 132 volts, presented as \"the order both makers check them\"",
         "source": "WFCO converter support FAQ (fuse/disconnect/inline-fuse steps) and WFCO/PD converter manuals; Progressive Dynamics PD9100/PD4100 TROUBLE SHOOTING GUIDE (over-voltage 132 V, excessive load, overheating, bad cell)",
         "state": "READ",
-        "by": "Reading agent (subagent-1790219745250-11), 2026-09-23. (WFCO) \"the Reverse Polarity fuses may be blown at the converter or there is an OPEN fuse or battery disconnect switch in the Positive battery lead\" ... (PD) \"Converter will shut down if the input voltage exceeds 132 Volts\" ... \"Low Output ... Excessive Load for Converter ... Bad Battery Cell(s) — Replace Battery\"  NOTE: the ten individual failure modes are documented, but the claim that this is \"the order both makers check them\" is not: neither maker publishes this sequence. WFCO opens with the converter output voltage then the reverse polarity fuses; PD opens with the converter output voltage then the AC input, reaching the reverse battery fuses only at the zero-volt branch.",
+        "by": "Reading agent (subagent-1790219745250-11), 2026-09-23. (WFCO) \"the Reverse Polarity fuses may be blown at the converter or there is an OPEN fuse or battery disconnect switch in the Positive battery lead\" ... (PD) \"Converter will shut down if the input voltage exceeds 132 Volts\" ... \"Low Output ... Excessive Load for Converter ... Bad Battery Cell(s) - Replace Battery\"  NOTE: the ten individual failure modes are documented, but the claim that this is \"the order both makers check them\" is not: neither maker publishes this sequence. WFCO opens with the converter output voltage then the reverse polarity fuses; PD opens with the converter output voltage then the AC input, reaching the reverse battery fuses only at the zero-volt branch.",
         "at": "2026-09-23"
       },
       {
@@ -817,7 +817,7 @@
         "text": "\"both major manufacturers open their own procedures\" with the reverse polarity fuses",
         "source": "Progressive Dynamics Troubleshooting Guides - PD9100 & PD9200 Series Power Converters, STEP #1",
         "state": "READ",
-        "by": "Reading agent (subagent-1790219745250-11), 2026-09-23. WRONG. \"STEP # 1 Converter Output Voltage Test ... The voltage should read 13.6-volts (14.6 for Lithium models) +/- .3-volts DC. If the voltage is in this range, the converter is good. If good and the batteries are not charging. Check the fuse or breaker in the battery positive lead. If the converter output voltage is zero volts, check the Reverse Battery Protection Fuse(s) to see if they are blown.\"  NOTE: PD does not open with the reverse polarity fuses — it opens with the converter output voltage test and only reaches the reverse battery fuses when the reading is zero. The claim is true for WFCO (\"If there is no DC output coming from the WFCO ... first check the reverse polarity fuse(s) on the fuse board\"), but false for Progressive Dynamics.",
+        "by": "Reading agent (subagent-1790219745250-11), 2026-09-23. WRONG. \"STEP # 1 Converter Output Voltage Test ... The voltage should read 13.6-volts (14.6 for Lithium models) +/- .3-volts DC. If the voltage is in this range, the converter is good. If good and the batteries are not charging. Check the fuse or breaker in the battery positive lead. If the converter output voltage is zero volts, check the Reverse Battery Protection Fuse(s) to see if they are blown.\"  NOTE: PD does not open with the reverse polarity fuses - it opens with the converter output voltage test and only reaches the reverse battery fuses when the reading is zero. The claim is true for WFCO (\"If there is no DC output coming from the WFCO ... first check the reverse polarity fuse(s) on the fuse board\"), but false for Progressive Dynamics.",
         "at": "2026-09-23"
       },
       {
@@ -825,7 +825,7 @@
         "text": "the safety and diagnostic steps: disconnect the battery cables before reading the converter output; loosen the screw and disconnect the negative battery wire on Progressive Dynamic",
         "source": "WFCO WF-8900 / WF-8700 Series Operator's Manuals, Converter Output Voltage; Progressive Dynamics Troubleshooting Guides - PD9100 & PD9200 Series Power Converters, STEP #1",
         "state": "READ",
-        "by": "Reading agent (subagent-1790219745250-11), 2026-09-23. (WFCO) \"Before checking the WF-8900 Series Power Center output voltage, disconnect the battery cables at the battery. Make sure the converter is plugged into an AC source (105-130 VAC). ... If the voltage reads 13.6 VDC (+/- 0.2) with no load, the converter is functioning properly.\" (PD) \"Using a 5/32 Allen wrench, loosen the screw and disconnect the Negative Battery wire from the RV converter Negative Output Terminal ... The voltage should read 13.6-volts (14.6 for Lithium models) +/- .3-volts DC.\"  NOTE: the \"measure battery voltage with the disconnect switch on and again with it off\" step is not in either maker's procedure — WFCO only names \"an OPEN fuse or battery disconnect switch in the Positive battery lead\" as a cause of no reading, and neither maker documents the on/off comparison as a test.",
+        "by": "Reading agent (subagent-1790219745250-11), 2026-09-23. (WFCO) \"Before checking the WF-8900 Series Power Center output voltage, disconnect the battery cables at the battery. Make sure the converter is plugged into an AC source (105-130 VAC). ... If the voltage reads 13.6 VDC (+/- 0.2) with no load, the converter is functioning properly.\" (PD) \"Using a 5/32 Allen wrench, loosen the screw and disconnect the Negative Battery wire from the RV converter Negative Output Terminal ... The voltage should read 13.6-volts (14.6 for Lithium models) +/- .3-volts DC.\"  NOTE: the \"measure battery voltage with the disconnect switch on and again with it off\" step is not in either maker's procedure - WFCO only names \"an OPEN fuse or battery disconnect switch in the Positive battery lead\" as a cause of no reading, and neither maker documents the on/off comparison as a test.",
         "at": "2026-09-23"
       },
       {

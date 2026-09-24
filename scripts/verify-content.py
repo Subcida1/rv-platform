@@ -245,7 +245,10 @@ def main():
             return 1
         srcs = [s for s in arg("--sources", "").split(",") if s]
         entry = {"hash": live[rel], "status": "verified",
-                 "verified_by": arg("--by", "unknown"),
+                 # plain_dashes on the two human-written strings: they land in a PUBLISHED file
+                 # (the manifest is scanned by verify.py's dash rule), and a reviewer quote pasted
+                 # into --by brought 40 em/en dashes into the gate on 2026-09-23.
+                 "verified_by": plain_dashes(arg("--by", "unknown")),
                  "verified_at": arg("--at", __import__("datetime").date.today().isoformat()),
                  "sources": srcs,
                  "spec": str(spec_path(rel).relative_to(ROOT)) if spec_exists(rel) else None,
@@ -324,7 +327,7 @@ def main():
                    "source": plain_dashes(arg("--source", ""))}
             entry["claims"].append(hit)
         hit["state"] = state
-        hit["by"] = arg("--by", "unknown")
+        hit["by"] = plain_dashes(arg("--by", "unknown"))
         hit["at"] = __import__("datetime").date.today().isoformat()
         if arg("--source"):
             hit["source"] = plain_dashes(arg("--source"))
