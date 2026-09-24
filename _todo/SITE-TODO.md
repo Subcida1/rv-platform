@@ -242,7 +242,12 @@ from this list, and its spec is the next thing to write.
 4. **Toilet not flushing — SPEC WRITTEN AND READ, NOT DRAFTED.** `_specs/rv-toilet-not-flushing.md` carries the
    claims list and the reading, which is Thetford's permanent toilet manual — a source the freeze page already
    cited. The draft is the next content step.
-5. **Black tank clogged** — not started.
+5. **Black tank clogged** — not started, and the reading is the first step rather than the spec. **Where the
+   document hunt already stands:** Valterra's product pages return 404 to this machine (the site has been
+   restructured), and Lippert's own document centre answers 200 but renders its index in JavaScript, so neither
+   can be read directly. **The route that worked twice today is a search for the specific document**, which is how
+   Lippert's 47,958-word master leveling manual and their slide-out manuals were found on their own S3 host. Try
+   the waste and sanitation side of that S3 bucket and Valterra's download paths before writing anything.
 6. **Roof leak repair — PUBLISHED** as `guides/rv-roof-leak-repair.html`. **No independent pass has run yet.**
 
 **Ahead of all of the above, because their windows are open now:** freeze-damage triage (drafted, spec and
