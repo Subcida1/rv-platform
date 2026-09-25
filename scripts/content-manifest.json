@@ -3377,9 +3377,9 @@
     ]
   },
   "guides/rv-slide-out-not-working.html": {
-    "hash": "ccd19b3ba571eb3d",
+    "hash": "0c304514cf9f273f",
     "status": "verified",
-    "verified_by": "Cloud 2026-09-24, re-verify after the independent AI Studio pass (JOB-20260924-1418, recorded in _specs section 13). All Part 1 claims confirmed against the manuals with page numbers. Two real findings fixed: the page had generalised a CCD-0001459 no-gap seating check onto the in-wall system, which has no such check and whose own procedure stops before re-engagement, leaving a room able to move on the road; and the roll-away hazard while the second motor is still in is now stated. It also caught the word 'towel-off' on the live page, which no gate here can see, plus two diligence asides and two page self-references, all fixed. Its two prevalence findings were against a stale staged copy, so the stage-now rule is recorded in the spec.",
+    "verified_by": "Cloud 2026-09-24, re-verified after the Qwen lane's recheck (JOB-20260924-2120, VERDICT CORRECTIONS APPLIED). The lane reviewed the corrected page against its own three findings and judged all three fixed, including the technical accuracy of the travel-limit adjustment. Corrections made from its earlier review JOB-20260924-2101: the unverified negative claim about Lippert's manual removed while the mechanical requirement stayed, the adjustment the page named but never explained now explained, and the prying step now warns what force does to the housing.",
     "verified_at": "2026-09-24",
     "sources": [],
     "spec": "_specs/rv-slide-out-not-working.md",
