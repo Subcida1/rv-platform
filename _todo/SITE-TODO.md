@@ -910,7 +910,11 @@ mid-response` (up to twenty minutes on one job) and `idle - prompt already sent`
 separate failures, all already documented in `claude-bridge/AUTOLOOP.md`: a `write_file` dropped as a duplicate, a
 reply with no tool call in it at all, and the filename-skip where the loop records a job's name as sent without
 its content ever going out. **The rename fix for that filename-skip was tried on all five queued jobs and the loop
-still reported idle with nothing picked up**, so that failure mode is ruled out. **The next person with a browser
+still reported idle with nothing picked up**, so that failure mode is ruled out. **A content change was tried as well** - one job was edited so its
+hash would differ from anything the loop had recorded - and the lane still reported `idle - prompt already sent`
+and sent nothing. **So neither the name nor the hash explains it**: the loop is not scanning at all, or its
+unattended mode is off. Rechecked two hours later at 18:44: the lane is still idle, the outbox is unchanged, and
+the oldest reply in it is still 16:25. **The next person with a browser
 should look at the tab itself** - a stale composer, a rate-limit banner, or a conversation grown long enough to
 stall are all plausible, and none of them is visible from here.
 
