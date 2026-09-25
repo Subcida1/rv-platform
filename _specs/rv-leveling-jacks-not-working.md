@@ -168,3 +168,32 @@ audit **with the server on port 8130 and a fresh Chrome debug port**.
    page is not the document. The one exception is the stabiliser override, which is short and is where the
    power-tool ban lives.
 5. **No photograph.** The free sources have none, and the page does not need one.
+
+## 12. The independent pass, 2026-09-24 (bridge lane, JOB-20260924-1640, pasted by Ty)
+
+**Verdict: CORRECTIONS NEEDED.** All eight of its document checks came back CONFIRMED with the manual's own words,
+and it called the three-system separation *"the right move"*, the check order *"the path of least resistance"*, and
+the no-fault-code-table decision *"the safest and most accurate approach"*. **No fabricated quotation and no false
+accusation** - the third clean pass from this lane.
+
+**Two findings were right and both are now on the page, with better detail than the lane gave:**
+
+1. **The electric jack overrides, which a stranded reader needs and the page only pointed at.** The manual gives
+   them in full and the page now does too: unplug the power harness to the motor first, then **a 3/8 inch drive
+   ratchet with an extension and no socket** into the port on the top of the jack motor under its rubber plug, or
+   the **3/4 inch** manual override nut on a front jack, or a **5/16 inch socket** from the port on the bottom of a
+   rear jack.
+   **And the detail worth the whole section: for the jacks a 12 to 18 volt cordless or pneumatic screw gun is
+   acceptable, and only an impact gun is ruled out - while the stabiliser override bans power tools entirely.**
+   Two overrides on one coach, two different answers, which is exactly why the page refuses to give a general rule.
+2. **The hydraulic fluid check.** The manual gives the figure and the trap: check the level is within **1/4 inch of
+   the fill spout lip** with the jacks and slide-outs fully retracted, and **fill it only in that position**, or it
+   overflows into its own compartment when they retract. The manual's own list for a jack time-out fault is the
+   same set: obstructions, leaks, fluid level, and voltage to the power unit motor under load.
+
+**And this review found six page self-references and two prevalence claims of mine that no gate checks.** They are
+fixed: *"this page"* five times, *"the majority of the calls"*, and *"most of it"*. **`house-style.py` does not look
+for sentence classes, which is why an independent reader is the only thing that finds them** - the leveling page
+had never had one.
+
+**Rejected:** the *"Last reviewed"* fine print again, and *"the expensive shape of this fault"* as invented idiom.

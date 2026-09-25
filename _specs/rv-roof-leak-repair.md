@@ -197,3 +197,31 @@ is a promise nobody asked for.**
 6. **No photograph.** The free sources have no RV roof photography; the honest version is that this page needs a
    phone shot of a lap sealant bead from the owner, and it is not a blocker.
 7. The page does not publish before its review.
+
+## 12. The independent pass, 2026-09-24 (bridge lane, JOB-20260924-1634, pasted by Ty)
+
+**Verdict: CORRECTIONS NEEDED.** Both sources came back CONFIRMED with the page's quotations matched, and it
+called the stain correction *"fundamentally right and highly useful"* and the hose test *"sound as described"*.
+**No fabricated quotation and no false accusation.**
+
+**The finding that matters most is one a reader with water coming in right now needs, and the page did not have
+it.** Three immediate mitigation steps are now their own section near the top:
+
+- **kill the 12-volt supply to the wet area**, because ceiling lights and vent fans are the fittings water reaches
+  first and a wet fixture with live 12 volts behind it is how a leak becomes a fire. The 120-volt case links out to
+  the outlets page.
+- **drain a sagging ceiling rather than let it fall.** A panel holding a pool comes down eventually and takes the
+  insulation and wiring with it; a hole at the lowest point of the sag and a bucket converts a collapse into a drip.
+- **get it under cover.** Every hour of rain adds to what the repair has to deal with.
+
+**Three more accepted:**
+
+- **The rear ladder mounts belong in the penetration list.** They take a pull every time somebody climbs, which is
+  a different stress from the rest of the roof.
+- **A wet membrane is a slip hazard the page never mentioned.** EPDM and TPO both go slick when damp, and the
+  ladder advice was otherwise complete. The page now says to inspect dry if possible and to treat a wet roof like ice.
+- **Two prevalence hedges and a self-reference**, all mine: *"Almost every roof leak is at a discontinuity"*,
+  *"water that has been travelling for months usually means..."*, and *"the manuals behind this page"*.
+
+**Rejected:** its reading of *"The expensive shape is decking"* as invented idiom. That is plain English and it
+stays. The *"Last reviewed"* line was flagged as diligence again, and it is deliberate fine print per Ty's ruling.

@@ -2296,11 +2296,143 @@
     ]
   },
   "guides/rv-leveling-jacks-not-working.html": {
-    "hash": "8d8e175f8cf7fbf6",
-    "status": "unverified",
-    "verified_by": null,
-    "verified_at": null,
-    "sources": []
+    "hash": "1c6915761fec5bf9",
+    "status": "verified",
+    "verified_by": "Cloud 2026-09-24, first independent pass by the bridge lane (JOB-20260924-1640, spec section 12). All eight document checks confirmed. Two content additions applied from the manual and better than the lane paraphrased them: the electric jack override procedures with the maker's own tools, including that a cordless screw gun is allowed on jacks and only impacts are banned, which is the opposite of the stabiliser rule; and the hydraulic fluid check with the 1/4 inch figure and the retract-before-filling trap. This pass also found six page self-references and two prevalence claims of mine that no gate checks, all fixed.",
+    "verified_at": "2026-09-24",
+    "sources": [],
+    "spec": "_specs/rv-leveling-jacks-not-working.md",
+    "spec_waived": false,
+    "claims": [
+      {
+        "id": "C1",
+        "text": "a leveling system is a leveling system and must not be used to support the coach for service, such as changing a tire",
+        "source": "Lippert's master owner's manual for leveling and stabilization, quoted, including its warning that the attempt could result in damage to the",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C2",
+        "text": "once stabiliser legs are extended, do not use the tongue jack or the landing gear, because lifting or levelling on extended stabilisers damages them and voids their warranty",
+        "source": "same manual, quoted",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C3",
+        "text": "a stabiliser has circuit protection that trips rather than lifting, and legs that will not extend further have reached it",
+        "source": "same manual, quoted",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C4",
+        "text": "stabiliser legs must be fully retracted before moving the trailer",
+        "source": "same manual, quoted",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C5",
+        "text": "a stabiliser pair that extends unevenly is fixed by holding RETRACT until both are fully retracted, letting the protection reset, then restarting",
+        "source": "same manual, quoted",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C6",
+        "text": "Ground Control 3.0 requires a minimum of 12.75 volts DC from the battery for proper operation, and the other systems want the battery fully charged and testing at 12+ volts DC unde",
+        "source": "same manual, quoted",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C7",
+        "text": "before unhitching: park on a level surface and chock the tires, then extend the landing gear inner legs to within 4 to 5 inches of the ground",
+        "source": "same manual, quoted",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C8",
+        "text": "twist prevention protection locks out individual rear jack operation to protect the frame, and the jacks still work during Auto Level",
+        "source": "same manual, quoted",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C9",
+        "text": "the zero point is the position the system returns to every time Auto Level runs, and it has to be set before Auto Level is used",
+        "source": "same manual, quoted",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C10",
+        "text": "the zero point procedure, in the maker's own sequence, differs between the touch pad and the OneControl panel",
+        "source": "same manual, quoted in both forms",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C11",
+        "text": "a PSX stabiliser's manual override is a crank handle on the end opposite the motor, used after disconnecting one motor lead, and the PSX2 takes a 5/16 inch socket",
+        "source": "same manual, quoted",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C12",
+        "text": "SAFETY: do not use a power tool on a stabiliser override, because it can damage the motor",
+        "source": "same manual, quoted",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C13",
+        "text": "the maker requires the battery be fully charged and load tested before operating a leveling system",
+        "source": "same manual, quoted",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C14",
+        "text": "a coach that will not retract onto its wheels needs the legs dealt with before it can be moved",
+        "source": "our own instruction, stated as ours, with the maker's manual-override procedures linked rather than reproduced in half",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C15",
+        "text": "the order to check in: supply, ground and mode, then the fault, then the mechanism",
+        "source": "our own structure",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C16",
+        "text": "what the work costs, ordered relative to itself",
+        "source": "no document; the settled convention applies, so relative ordering only",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      }
+    ]
   },
   "guides/rv-lights-not-working.html": {
     "hash": "27f541c95b738db1",
@@ -3082,11 +3214,167 @@
     ]
   },
   "guides/rv-roof-leak-repair.html": {
-    "hash": "02ba795896f3d290",
-    "status": "unverified",
-    "verified_by": null,
-    "verified_at": null,
-    "sources": []
+    "hash": "a4060e55a8cc4f05",
+    "status": "verified",
+    "verified_by": "Cloud 2026-09-24, first independent pass by the bridge lane (JOB-20260924-1634, spec section 12). Both sources confirmed with quotations matched. Five fixes applied: the three immediate mitigation steps for an actively wet ceiling, which the page lacked entirely; the rear ladder mounts in the penetration list; the wet-membrane slip hazard the ladder advice omitted; two prevalence hedges of mine; and a self-reference. The Last reviewed fine print rejected as diligence, per Ty's ruling.",
+    "verified_at": "2026-09-24",
+    "sources": [],
+    "spec": "_specs/rv-roof-leak-repair.md",
+    "spec_waived": false,
+    "claims": [
+      {
+        "id": "C1",
+        "text": "lap sealant is a secondary seal along a roof's edges, air vents, vent pipes and screw heads",
+        "source": "Dicor's own page for its self-levelling lap sealant, quoted",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C2",
+        "text": "it is compatible with EPDM, TPO and PVC membranes and adheres to aluminium, wood, vinyl, galvanized metal, fibreglass",
+        "source": "same page",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C3",
+        "text": "self-levelling is for horizontal surfaces; a vertical seam needs a non-sag product",
+        "source": "the maker's own product line, which separates them",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C4",
+        "text": "surface prep: clean all dirt, loose paint, rust, oil and grease, and let it dry before applying",
+        "source": "the maker's directions for use, quoted",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C5",
+        "text": "cure times at 50 to 70 F: skins in 5 minutes, waterproof in 4 hours, 80 percent in 48 hours, 100 percent in 30 days",
+        "source": "the maker's own table",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C6",
+        "text": "in cold weather the container is warmed to room temperature before use",
+        "source": "the maker's directions",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C7",
+        "text": "SAFETY: the sealant is flammable and irritates skin, eyes and airways, and the maker requires fresh air during application and drying",
+        "source": "the maker's caution, quoted",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C8",
+        "text": "inspect all sealants at least every six months",
+        "source": "Jayco's owner manual, quoted",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C9",
+        "text": "replace sealant when you see cracks, peeling, voids, gaps, breaks, looseness or any sign of deterioration",
+        "source": "Jayco's owner manual, quoted",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C10",
+        "text": "always use the same type of sealant that was removed",
+        "source": "Jayco's owner manual, quoted",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C11",
+        "text": "sealants have no set lifetime, and UV exposure, air pollution and freezing temperatures damage them",
+        "source": "Jayco's owner manual, quoted",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C12",
+        "text": "cap seal all trim and openings at least once after the first year, then as cracks, peeling, lifting and shrinkage appear",
+        "source": "Jayco's owner manual, quoted",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C13",
+        "text": "SAFETY: do not prop a ladder against the body of the coach, because it damages the finish",
+        "source": "Jayco's owner manual, quoted",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C14",
+        "text": "the roof has decking under the membrane and can be walked on with caution",
+        "source": "Jayco's owner manual, quoted",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C15",
+        "text": "a roof has four places it normally leaks: penetrations, front and rear cap seams, hatches and skylights, and the sidewall transition",
+        "source": "our own structure, built from the maker's own trim and cap language; stated as an order to check, never as a frequency",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C16",
+        "text": "water runs along framing before it drips, so the stain is not above the entry point",
+        "source": "mechanism, stated plainly as ours",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C17",
+        "text": "the hose test: one area at a time, low to high, with someone inside watching",
+        "source": "our own instruction",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C18",
+        "text": "soft decking or a delaminated wall is a repair rather than a reseal",
+        "source": "our own judgement, stated as ours",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C19",
+        "text": "what the work costs, ordered relative to itself",
+        "source": "no document; the settled convention applies, so relative ordering only",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      }
+    ]
   },
   "guides/rv-slide-out-not-working.html": {
     "hash": "ccd19b3ba571eb3d",
@@ -4521,11 +4809,13 @@
     ]
   },
   "guides/trailer-brakes-required.html": {
-    "hash": "1d0a5c49b0214317",
-    "status": "unverified",
-    "verified_by": null,
-    "verified_at": null,
+    "hash": "d2253003ac740667",
+    "status": "verified",
+    "verified_by": "Cloud 2026-09-24, second independent pass by the bridge lane (JOB-20260924-1628, spec section 14). All citations confirmed including the two earlier lanes got wrong; two new findings applied, the walking-pace test now asks for a drag rather than a stop and names the one-sided pull it reveals. Its Part 1 list was mostly already-fixed work because it read a stale staged copy, which section 13 already records as a lesson. Its Oregon 40-foot figure was not adopted - this spec's reading found 25 and 35 feet, so neither goes in.",
+    "verified_at": "2026-09-24",
     "sources": [],
+    "spec": "_specs/trailer-brakes-required.md",
+    "spec_waived": false,
     "claims": [
       {
         "id": "C1",

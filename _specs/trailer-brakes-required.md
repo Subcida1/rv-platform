@@ -379,3 +379,33 @@ has read.
 - **"Each threshold below"** was page self-reference.
 - The lane's Oregon figure (a 40 foot stop from 20 mph) **was not adopted**: this spec's own reading found 25 and
   35 feet, so neither number goes in the page until one of them is read again.
+
+## 14. The second independent pass, 2026-09-24 (bridge lane, JOB-20260924-1628, pasted by Ty)
+
+**Verdict: CORRECTIONS NEEDED.** Every citation in Part 2 came back CONFIRMED, including the two details earlier
+lanes got wrong: it agreed that **CVC 26303 contains no 15 minute retention clause** (that is 26304 and the
+Washington and federal sections) and that the 3,000 pound figure is an exception at (b)(3) and (b)(4). **No
+fabricated quotation and no false accusation.**
+
+**Its Part 1 findings were mostly already on the page, because it read a staged copy from before the previous
+round's fixes** - the same stale-stage mistake this spec's section 13 records. Break-in, the grease-versus-
+adjustment distinction, the ground path, the drum consequences and the descent technique were all applied at
+16:30 and it read the 16:21 copy. **The lesson stands and has now cost two rounds: re-stage immediately before a
+job goes out.**
+
+**Two findings were genuinely new and both are now on the page:**
+
+1. **The walking-pace test overstated what it proves.** *"A working set of trailer brakes drags the combination to
+   a stop"* is not true of a truck in gear or on a slope. The page now asks the reader to feel for a distinct drag
+   rather than for a stop, and says why.
+2. **The test also reveals an imbalance, and the page never said so.** A combination that pulls or yaws to one side
+   as the trailer's brakes come on has one side working harder, which is a diagnosis the reader gets for free.
+
+**One figure it offered is NOT on the page and will not be:** it cited an Oregon stopping standard in ORS 815.315
+of 40 feet from 20 mph, where this spec's own reading found 25 and 35 feet in ORS 815.125. **Neither number goes in
+until one is read again**, and the page carries no Oregon figure.
+
+**Its class findings were mostly misapplications again** - the "Last reviewed" fine print, a description read as
+unnamed authority, and a sentence with no idiom in it read as invented idiom. **The two real ones were fixed:** a
+prevalence claim (*"most people never read"*, now *"easy to skip"*) and a self-reference (*"this page's federal
+material"*).
