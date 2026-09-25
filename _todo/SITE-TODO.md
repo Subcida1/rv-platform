@@ -859,7 +859,7 @@ pushed.** This section is the morning list, shortest first.
 | 2 | **The towing page's brake sentence** | **DONE — replaced, not softened**, and the page is re-verified. Its four other language-class violations were fixed in the same pass. |
 | 3 | **Where the new-owner walkthrough lives** | **STILL OPEN.** Root page, a new third guide group, or filed under `fix`. The recommendation stands: a third group. |
 | 4 | **Whether the nine stage-3 system pages get built** | **STILL OPEN.** Recommendation stands: defer them; the hub ships alone. |
-| 5 | **The guides index's `ItemList` schema** | **STILL OPEN.** It claims 8 items against 19 guides and no gate checks it. |
+| 5 | **The guides index's `ItemList` schema** | **DONE — verified 2026-09-24 21:18: the live file reads `numberOfItems: 24` against 24 guide pages, and `sync-counts.py` plus `verify.py` keep it that way. The "claims 8 against 19" wording above was true when this table was written and is not any more.** |
 
 ### The deviation, recorded because it matters more than the result
 
@@ -981,6 +981,9 @@ landed).
 - **The guides index's `ItemList` structured data is stale**: `numberOfItems: 8` and eight old entries,
   against 19 guides. **No gate checks it.** Rebuilding it from `_data/guides.json` is the same class of fix
   as the counts, and it is the only place on the site that under-reports our own inventory.
+  **FIXED — superseded, checked 2026-09-24 21:18: the live file now reads `numberOfItems: 24` against 24
+  guide pages on disk, and the rebuild is the one recorded above (`sync-counts.py`, gated by `verify.py`).
+  This bullet was written before that fix landed. Do not re-do it.**
 - **The two guide card lists disagree about one card's meta text** (`Roof Under Snow Load`: *Seals, ice,
   weight, removal* on the homepage, *Seals, ice dams, removal* in the guides index). Harmless, unowned, and
   now recorded rather than remembered.
