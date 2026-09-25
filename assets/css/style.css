@@ -1767,8 +1767,13 @@ figure:has(svg[role="img"]){overflow-x:auto;overflow-y:hidden}
 /* The pinned block at the top of the manuals hub (Ty, 2026-09-24). The new-owner
    walkthrough does not deserve a nav slot, so it is pinned above the system tiles and
    made visibly different from them: a tinted card with a brand edge, a tag, and a
-   bolder title, rather than one more tile in the same grid. */
-.man-pinned{padding-top:22px;padding-bottom:22px;padding-left:22px;padding-right:22px;border-color:var(--tint-edge);border-left:4px solid var(--brand);background:var(--tint-bg)}
+   bolder title, rather than one more tile in the same grid.
+   DISPLAY:BLOCK IS LOAD-BEARING. The block is an <a>, and an anchor is inline by
+   default: every other card on these hubs sets its own display (.man-tile is flex,
+   .card.promo is block), and this one did not, so it rendered as a sliver with its
+   text spilling out and its border wrapping per line. Caught by Ty from a screenshot,
+   and by measuring the element rather than by reading the markup. */
+.man-pinned{display:block;padding-top:22px;padding-bottom:22px;padding-left:22px;padding-right:22px;border-color:var(--tint-edge);border-left:4px solid var(--brand);background:var(--tint-bg)}
 .man-pinned-tag{font-size:11.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--brand)}
 .man-pinned-title{font-size:20px;font-weight:800;line-height:1.3;color:var(--text);margin-top:6px;margin-bottom:6px}
 .man-pinned-body{font-size:14.5px;line-height:1.6;color:var(--text-2);max-width:72ch}
