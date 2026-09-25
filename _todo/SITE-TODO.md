@@ -915,7 +915,29 @@ hash would differ from anything the loop had recorded - and the lane still repor
 and sent nothing. **So neither the name nor the hash explains it**: the loop is not scanning at all, or its
 unattended mode is off. Rechecked two hours later at 18:44: the lane is still idle, the outbox is unchanged, and
 the oldest reply in it is still 16:25. **The next person with a browser
-should look at the tab itself** - a stale composer, a rate-limit banner, or a conversation grown long enough to
+should look at the tab itself
+
+### 2026-09-24 late: the inline anchor, and the audit that was run on the wrong pages
+
+**The "Start here" block on the guides index and the manuals hub rendered as a sliver**, with its text spilling
+out and its border wrapping per line. **Ty caught it from a screenshot, not a gate.** The cause, measured on the
+rendered page rather than read from the markup: the block is an `<a class="card man-pinned">`, an anchor is
+`display:inline` by default, `.card` sets background, border, radius and overflow but **no display**, and
+`.man-pinned` never set one either - while every other card on those hubs does (`.man-tile` is flex, `.card.promo`
+is block). One property fixes it, and the CSS comment now says it is load-bearing.
+
+**Two process failures underneath, and the second is the general one:**
+
+1. **The block was "verified" by grepping the live page for its class name and getting a match.** That proves the
+   markup is present and says nothing about how it renders. A grep is not a look.
+2. **The mobile audit was run on the four NEW pages and never on the two pages that were MODIFIED.** The break was
+   on a modified page. **Rule: when a change touches an existing page, that page gets the audit too** - the new page
+   is usually the safer of the two, because it is the one being looked at.
+
+**Related trap found the same evening:** the content gate reported two pages drifting, and the cause was **a
+parallel Cloud session editing the same files** (commit `23bed44` improved the freeze and roof pages after their
+verdicts were recorded). **Do not re-verify another session's edits to close a gate** - read the commit log first,
+and leave the verdict to whoever made the change.** - a stale composer, a rate-limit banner, or a conversation grown long enough to
 stall are all plausible, and none of them is visible from here.
 
 **The measured lesson that came out of the reviews:**
