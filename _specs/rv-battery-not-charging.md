@@ -153,3 +153,48 @@ rebuilds the ItemList), `build-shell.mjs`, **sitemap by hand** then `--write`, s
 4. **The converter's modes are quoted from the converter maker**, and the battery's voltage ranges from two battery
    makers, so the page compares two documents rather than asserting one number.
 5. **No photograph.** Nothing here needs one.
+
+## 12. The independent pass, 2026-09-24 (bridge lane, JOB-20260924-1650, pasted by Ty)
+
+**Verdict: CORRECTIONS NEEDED, and it was the most useful of this page's reviews.** It confirmed all three sources
+with quoted text, and it independently checked the page's one piece of arithmetic - the "roughly a volt" lift -
+against the two documents: 13.6 volts from the converter against 12.73 volts at rest is 0.87, which it agreed is
+fairly called roughly a volt. **No fabricated quotation and no false accusation**, which is the second time this
+lane has produced a clean, useful pass.
+
+### What was accepted, and one that went in differently than it asked
+
+1. **The two safety points the page was missing.** A battery can arc, melt a probe or crack a case, so the page now
+   says to touch the probes to the terminals and nothing else; and it now says to unplug from shore power before
+   going into the converter, because that cover comes off with 120 volts inside it. **Both were real gaps and both
+   are ours, stated plainly.**
+2. **A DC-to-DC charger is a fifth source** where one is fitted. The page's "four sources" framing was the whole
+   thesis, and a reader with a DC-to-DC charger would have tested four things and found nothing.
+3. **The lift is smaller on a nearly full battery**, because the converter has moved to float or storage. That is
+   derived from the converter maker's own mode table, and it prevents the test producing a false failure.
+4. **The converter maker's troubleshooting table**, which nothing on the page had used: *reverse battery fuses
+   blown* (check polarity, replace the fuses) and *no battery connection* (check the wiring, including any inline
+   fuse). Both are the maker's own entries for exactly this symptom.
+5. **Deep discharge, in a sourced form rather than the asserted one.** The lane said smart chargers will refuse to
+   charge below about 10.5 volts. **No document read for this page says that**, so it is not on the page as a
+   statement about chargers. What went in is the sourced half - Trojan's *do not leave batteries deeply discharged
+   for any length of time* - plus our own instruction to bench-charge the battery and run the test again, which
+   gets the reader to the same place without asserting something unverifiable.
+
+### What was rejected, with reasons
+
+- Its first "diligence" instance was **`Last reviewed: Sep 24, 2026.`** That is the fine print Ty ruled stays on
+  every page on 2026-09-23, unaltered, with only its presentation changed. **Rejected.**
+- Its "unnamed authority" instance named no authority: *"The converter takes 120 volts from the pedestal and
+  produces a regulated 12-volt supply"* is a description of what the box does, not a claim about who says so, and
+  the same paragraph names Progressive Dynamics two sentences later. **Rejected.**
+- Its "invented idiom" instance quoted a sentence containing no idiom. **Rejected.**
+- The two genuine house-rule hits were both real and both applied: a reader-expectation claim about what people
+  are braced to buy, and a self-reference to what "the page" spends its time on.
+
+### And the gate caught the writer
+
+The first version of the accepted edit contained **"some rigs also fit a DC-to-DC charger"**. `verify.py` failed on
+banned words inside a second, because **`rig` is this writer's recurring drift word** and the rule is in the trap
+list for exactly this reason. Fixed to "some coaches", and the gate is why it was caught in the same minute rather
+than by a reader.

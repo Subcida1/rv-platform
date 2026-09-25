@@ -776,11 +776,135 @@
     ]
   },
   "guides/rv-battery-not-charging.html": {
-    "hash": "49bdc1d611a5ccb4",
-    "status": "unverified",
-    "verified_by": null,
-    "verified_at": null,
-    "sources": []
+    "hash": "b6052bdfc4f52e1a",
+    "status": "verified",
+    "verified_by": "Cloud 2026-09-24, after the bridge lane's pass (JOB-20260924-1650, recorded in the spec's section 12; the reply arrived by Ty pasting it, because the lane answered in its tab and wrote nothing to disk). All three sources confirmed with quotes, and the lane independently checked the page's one piece of arithmetic as fair. Five fixes applied: the terminal-shorting and shore-power safety points the page lacked, a DC-to-DC charger as a fifth source where fitted, the smaller voltage lift on a nearly full battery, the converter maker's own troubleshooting entries for reverse-polarity fuses and no battery connection, and deep discharge in the sourced form rather than the asserted charger lockout the lane claimed but no document supports. Three of its class findings rejected with reasons, including the Last reviewed line which is deliberate fine print.",
+    "verified_at": "2026-09-24",
+    "sources": [],
+    "spec": "_specs/rv-battery-not-charging.md",
+    "spec_waived": false,
+    "claims": [
+      {
+        "id": "C1",
+        "text": "a converter's nominal regulated output is 13.6 VDC, and it selects one of three modes by sensing the battery: normal, boost and storage",
+        "source": "Progressive Dynamics' own manual, quoted",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C2",
+        "text": "boost is about 14.4 VDC, normal about 13.6, and storage 13.2 VDC once there has been no significant battery usage for 30 hours; in storage the output periodically rises to 14.4 VDC",
+        "source": "same manual, quoted",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C3",
+        "text": "the lithium variant's numbers differ: nominal 14.6 VDC, with a mode switch selecting a constant 14.6 for lithium or the three-stage profile for lead-acid",
+        "source": "same manual, quoted",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C4",
+        "text": "charge, absorption and equalize sit between 13.80 and 14.60 volts at 77 F, and float/standby is 13.50 volts plus or minus 0.5 percent",
+        "source": "East Penn's own installation and operation manual, quoted",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C5",
+        "text": "a battery should have 108 to 115 percent of the amp-hours removed replaced after a discharge",
+        "source": "same manual, quoted",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C6",
+        "text": "battery operating temperature above 77 F reduces life, and the manufacturer reduces its warranty period proportionally for every 13 F above that",
+        "source": "same manual, quoted",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C7",
+        "text": "a charger usually has three distinct stages: bulk, acceptance and float",
+        "source": "Trojan's battery maintenance page, quoted",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C8",
+        "text": "state of charge from open-circuit voltage, per Trojan's own table: 12.73 V is 100 percent, 12.50 is 80, 12.37 is 70, 12.27 is 60, 12.10 is 50",
+        "source": "same page, table values",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C9",
+        "text": "equalising is an overcharge for flooded batteries only, performed after the battery is fully charged, to reverse stratification and remove sulfate crystals",
+        "source": "same page, quoted",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C10",
+        "text": "voltage and specific gravity checks show state of charge and help spot improper care such as undercharging and over-watering",
+        "source": "same page, quoted",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C11",
+        "text": "the four charging sources on an RV, and that the symptom is identical for all four",
+        "source": "our own structure, stated as ours",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C12",
+        "text": "the isolation test: meter on the battery, one source at a time, watch for the reading to lift",
+        "source": "our own instruction",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C13",
+        "text": "a working source lifts the reading by roughly a volt",
+        "source": "the two makers' own numbers, compared: a floated lead-acid bank sits near 12.7 at rest and a converter drives it to 13.6, a difference of ab",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C14",
+        "text": "a battery at the end of its life reads like a battery that is not being charged",
+        "source": "our own judgement, stated as ours",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C15",
+        "text": "what the work costs, ordered relative to itself",
+        "source": "no document; the settled convention, so relative ordering only",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      }
+    ]
   },
   "guides/rv-converter-not-charging.html": {
     "hash": "30b311b1eaae0d2b",

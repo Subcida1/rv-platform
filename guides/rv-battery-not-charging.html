@@ -65,10 +65,13 @@
  <p>A generator does not charge the battery either. It supplies 120 volts to the coach, which means it feeds the same converter that shore power feeds, so a generator that runs perfectly and does not charge the battery is telling you the fault is downstream of both. The <a href="guides/rv-generator-not-charging.html">generator guide</a> calls that out as its own first point: the generator is not the charger.</p>
  <h3>The tow vehicle, through the alternator</h3>
  <p>The seventh pin of the trailer connector is a charge line from the tow vehicle, and it does send current to the trailer battery while the engine runs. It is the smallest of the four sources and the one most often lost without anyone noticing, because a trailer that charges at home and goes flat on the road is usually a charge line that was never connected.</p>
+ <p><b>Some coaches also have a DC-to-DC charger</b> between the tow vehicle and the trailer, which turns that charge line into a proper multi-stage charge rather than a straight connection. Where one is fitted it is a fifth source, and it is the one to check when the charge line tests fine and the battery still goes flat while you drive.</p>
  </div>
 
  <h2>The ten-minute test, one source at a time</h2>
  <div class="card">
+ <h3>Two safety points before the meter comes out</h3>
+ <p>A battery can deliver enough current to arc, melt a probe tip or crack a case. Touch the probes to the terminals and nothing else, and never bridge the two posts with a tool, a ring or a hand. And if the next step takes you into the converter rather than to the battery, <b>unplug the coach from shore power first</b>: a converter's cover comes off with 120 volts inside it, and the battery will still be there when you plug back in.</p>
  <h3>What a working source does to the reading</h3>
  <p>This test works because a charging source raises the voltage at the terminals, and a failed one does not. Work through it in this order:</p>
  <ul>
@@ -77,6 +80,7 @@
   <li><b>Watch the meter for a minute.</b> A working source lifts the reading by roughly a volt. The converter's normal mode lands near 13.6 and its boost mode near 14.4, and a solar controller will do whatever its own profile says.</li>
   <li><b>Turn that source off before testing the next.</b> Otherwise you cannot tell which one moved the reading, and one working source will hide three dead ones.</li>
  </ul>
+ <p><b>And expect a smaller lift on a battery that is nearly full.</b> A converter moves to its float or storage mode as the battery fills, so the reading may come up by half a volt rather than a full one, and that is the system working rather than a source failing. It is the reason to run this test on a battery that is actually low.</p>
  <h3>What the numbers should be</h3>
  <p>There is no single correct charging voltage, because the sources do not produce the same one and the battery makers ask for a range rather than a figure. What matters is the direction: <b>above the rested voltage means current is going in, and the rested voltage means nothing is</b>. East Penn's manual, for the battery side, gives a charge, absorption and equalize range of <b>13.80 to 14.60 volts at 77 F</b> and a float or standby voltage of <b>13.50 volts plus or minus 0.5 percent</b>. Trojan describes what a charger does with the same idea in three stages: <b>bulk, acceptance and float</b>.</p>
  <p>Read together, those mean the converter's normal mode and the battery's float figure are close, and the converter's boost mode sits inside the battery's absorption range. That is the system working as designed. What is not normal is a source switched on and a meter that does not move.</p>
@@ -101,6 +105,7 @@
  </table>
  </div>
  <p>The same page makes the point that matters for diagnosis: voltage and specific gravity checks <i>will not only show the state of charge but also help spot signs of improper care, such as undercharging and over-watering</i>. A reading that is low everywhere with water levels that are wrong is telling you about the charging, not the battery.</p>
+ <p><b>If the battery is very deeply discharged, treat the reading as inconclusive.</b> Put it on a standalone charger first, then run the test again, because a battery that far down tells you nothing about whether the coach's charging works. Trojan's maintenance page makes the general point plainly: do not leave batteries deeply discharged for any length of time, and charge them after each period of use.</p>
  <h3>The load test that separates a flat battery from a finished one</h3>
  <p>A battery at the end of its life can read perfectly well at rest and then collapse the moment a load arrives. That is what a load test shows and a voltmeter alone does not, and it is the reason a shop's test is worth more than a driveway reading. It is also the reason to look at the whole system before buying parts: a battery that was ruined by chronic undercharging will be ruined again by the next one if the charging fault is not found first.</p>
  <p><b>And one figure worth knowing for the health of the bank:</b> East Penn's manual states that <b>108 to 115 percent of the amp-hours taken out</b> should go back in after a discharge. Charging back exactly what you used is not quite enough, and a system whose source is marginally too small or too briefly connected will slowly lose ground without ever looking broken.</p>
@@ -116,6 +121,7 @@
   <li><b>Storage, 13.2 VDC</b>, which it drops to after <b>30 hours</b> with no significant battery usage, for minimal water usage, and in which it periodically raises the output to about 14.4 VDC to help prevent sulfation.</li>
  </ul>
  <p><b>So a meter reading of 13.2 volts on a coach that has been sitting plugged in is the converter doing its job.</b> Reading 13.2 while the battery is being used heavily is not. The same manual gives the lithium variant different numbers again: a nominal output of <b>14.6 VDC</b>, with a mode switch that selects a constant 14.6 volts for a lithium battery or the three-stage profile for a lead-acid one, and its caution is worth repeating for a flooded bank, that the fluid levels matter.</p>
+ <p>The converter maker's own troubleshooting table lists two causes for a battery that does not charge while the rest of the coach has power, and both are worth checking before anything is condemned: <b>reverse battery fuses blown</b>, which means checking the battery polarity and replacing the fuses, and <b>no battery connection</b>, which means checking the wiring to the battery, including any inline fuse.</p>
  <h3>What the battery maker asks for instead</h3>
  <p>The two documents do not disagree, they answer different questions. The converter maker says what its box will produce. The battery makers say what the battery wants to receive, and both of the ones read for this page publish ranges rather than a single figure, because the right voltage moves with temperature and with the stage of the charge. That is also why the converter's automatic modes exist at all, and why a fixed-output charger is a compromise rather than an equivalent.</p>
  </div>
@@ -134,7 +140,7 @@
  <div class="card">
  <p>The cost of this fault is decided by which branch it lands on, and the two cheapest outcomes are the two most common.</p>
  <p><b>At the bottom</b> is the diagnosis itself, and the fixes it leads to: a disconnect left off, a terminal cleaned and tightened, a charge line plugged in, a converter that was switched off at its own breaker. None of that is a part.</p>
- <p><b>In the middle</b> sits the charging hardware: a converter, a solar controller, or a section of cable. These are modest parts, and they are the ones a reader usually expects to be buying when they arrive, which is why the page spends its time on the test rather than the parts list.</p>
+ <p><b>In the middle</b> sits the charging hardware: a converter, a solar controller, or a section of cable. These are modest parts, and they are what a reader is often braced to buy. The ten-minute test decides whether that purchase is needed at all, which is why it comes first.</p>
  <p><b>At the top</b> is a battery bank, because that is a set of cells rather than a component, and it is the outcome nobody predicts. It is also the one that comes back if the charging fault is not fixed first, which is the whole argument for testing in this order rather than buying in it.</p>
  </div>
 
