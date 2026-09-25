@@ -280,3 +280,48 @@ annual-servicing half of the original sentence was correct and is what the fix p
 **The pattern across four passes now:** the two passes that checked the page against *documents* were the ones
 that produced fabricated quotations (six and three of them). **The pass that checked the page against its own
 argument produced none and found the most consequential defect.** Structural review is where this lane is strong.
+
+## 14. RULED BY TY, 2026-09-24: the page was a skeleton, and it led with the wrong thing
+
+**Verbatim, on seeing it live:** *"The New RV owner page is extremely thin and hardly even covers the majority of
+the basics. i feel like we have a very rough skeleton up right now and we need to go through it all one by one and
+actually build it out research the content and provide helpful stuff. Most people with new rvs dont want an
+immediate system > what it does when it works > when it breaks panel like you've laid out. They probably want more
+like dont forget to not leave tanks open, the fill the water heater before turning it on is perfect, other stuff
+you have, maybe just put this 3 column thing lower i dunno."*
+
+**He is right about both halves, and the first half is the more important one.** The page was built as an
+orientation hub over guides that already existed, so it said nothing a reader could not have got from the index. **A
+new owner does not want a systems matrix; they want the handful of specific mistakes that cost money**, and the
+coach manual already contains most of them as instructions in capitals.
+
+### What changed
+
+1. **The page now leads with twelve expensive mistakes**, each one a maker's own instruction with the reason
+   attached, drawn from **Jayco's owner's manual** and, for the leveling one, **Lippert's**: never travel with full
+   waste tanks; close the dump valves when empty and never leave the black valve open; never plug into a pedestal
+   you have not tested with a ground monitor; fill the water heater before switching it on; never move the coach
+   with the slide motors disconnected; never test for a propane leak with a flame; never fit a bigger fuse; do not
+   reverse the battery cables; never leave the coach while filling the fresh tank; do not remove or plug the water
+   heater's relief valve; never blow the lines out with a valve closed; do not let the leveling system hold the
+   coach while you work under it.
+2. **The systems table moved below the practical material**, which is where the reader gets to it — after the first
+   trip rather than before it.
+3. **The first-night checklist stayed**, because the water-heater step he singled out as *"perfect"* lives in it,
+   and it now leads with levelling and carries the pedestal test.
+4. **The title, the description and the pinned block on the manuals hub all moved with the page's new job:** it is
+   no longer *"the systems, in the order to learn them"* but *"the things to get right first"*.
+
+### The find worth recording
+
+**The Jayco manual states, in capitals, `DO NOT MOVE THE RV UNLESS THE MOTORS ARE PLUGGED IN`.** The slide-out page
+has that rule on it as **our own instruction**, because the first reading pass could not find it in the Lippert
+documents. **It was a coach-maker instruction all along**, and this rewrite is what surfaced it. **A rule that lives
+in the coach manual rather than the component manual is exactly the kind of thing one lane reading one maker will
+miss** - worth remembering when a claim is marked "ours" only because the document was not found.
+
+### State at handoff
+
+**The rewrite has had no independent pass**, and its manifest verdict says so in those words. The gate correctly
+flagged the page as drifted when its text changed. A review job is queued for the new text, because the previous
+pass covered a page that no longer exists.

@@ -5197,9 +5197,9 @@
     "sources": []
   },
   "manuals/start-here.html": {
-    "hash": "a68ae74dd7a04376",
+    "hash": "92022b3e4c8b2533",
     "status": "verified",
-    "verified_by": "Cloud 2026-09-24, after the independent AI Studio pass (JOB-20260924-1610, recorded in the spec's section 13). Four corrections applied: the diagram caption contradicted the page's own prose and claimed the converter was the only join when an inverter and every dual-voltage appliance also join the halves; the furnace and fridge rows now state that both depend on 12 volts, which the review was right about and which reinforces the page's own argument; the first-night checklist now leads with levelling and carries Norcold's published 3 and 6 degree limit, and adds a stove burn-off before the furnace or the water heater because a line full of air costs one of three ignition attempts; and the seals entry separates looking at them from servicing them. All six sentence-class checks returned NONE FOUND and the lane produced no fabricated quotation.",
+    "verified_by": "Cloud 2026-09-24, REWRITTEN FROM THE COACH MANUAL ON TY'S DIRECTION AND NOT INDEPENDENTLY REVIEWED YET. Ty's ruling, recorded in the spec's section 14: the page was thin and led with a systems matrix nobody wants first. It now leads with twelve expensive mistakes, each a maker's own instruction quoted from Jayco's owner manual (and Lippert for the leveling rule), with the systems table demoted below them. The previous lane pass covered a page that no longer exists, so this verdict claims a rewrite and nothing more; a review job is queued for the new text.",
     "verified_at": "2026-09-24",
     "sources": [],
     "spec": "_specs/start-here.md",
