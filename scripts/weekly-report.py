@@ -287,6 +287,26 @@ def build(args):
         % (cur_start, end, args.lag))
     add("")
 
+    # An incomplete run has to say so at the TOP. Both of these sections skip
+    # silently-ish when their token is absent, and a reader who pipes the output
+    # through head will never reach the line that admits it. The tokens are agent
+    # secrets, and the harness only injects one into a child shell when the launch
+    # line names it, which is exactly the mistake this catches.
+    incomplete = []
+    if not args.cf_token:
+        incomplete.append("Cloudflare field performance - no CLOUDFLARE_ANALYTICS_TOKEN reached this shell")
+    if not args.bing_token:
+        incomplete.append("Bing - no BING_WEBMASTER_API_KEY reached this shell")
+    if incomplete:
+        add("**INCOMPLETE RUN: the launch line did not name the secrets, so these are missing.**")
+        add("")
+        for s in incomplete:
+            add("- %s" % s)
+        add("")
+        add('Run it as `CLOUDFLARE_ANALYTICS_TOKEN="$CLOUDFLARE_ANALYTICS_TOKEN" '
+            'BING_WEBMASTER_API_KEY="$BING_WEBMASTER_API_KEY" bash scripts/weekly.sh`.')
+        add("")
+
     # ---------- 1. headline ----------
     current = totals(gsc, token, site, cur_start, end)
     previous = totals(gsc, token, site, prev_start, prev_end)
