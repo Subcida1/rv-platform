@@ -23,7 +23,7 @@ Fast enough to run on every push, which is the only reason it gets run.
 | 10 | `html-validate` | second opinion, offline, adds the WCAG-technical markup rules | same boundary as above |
 | 11 | W3C checker, **CSS mode** | our stylesheet is parsed. A malformed rule is dropped SILENTLY by every browser, so the symptom is missing styling and no error anywhere | vnu's CSS mode predates `@property` and `var()` in a gradient angle; those two are filtered by name |
 
-## 2. On a schedule — `scripts/ci-full.sh`, 3 steps
+## 2. On a schedule — `scripts/ci-full.sh`, 4 steps
 
 These need a browser or the open internet, so they cannot be in the push gate. A slow gate is a
 skipped gate.
@@ -31,9 +31,9 @@ skipped gate.
 | step | what it is for | fails the run? |
 |---|---|---|
 | **`check-a11y.mjs`** (axe-core) | WCAG on the RENDERED page: contrast, ARIA that resolves to nothing, landmark structure, anything behind the mobile menu. `html-validate` sees the file; this sees the page | **yes**, on serious and critical — those are the levels that stop somebody using the page |
-| **linkinator** | every link on the served site: 521 of them | **no, it reports.** Measured 2026-09-26: 15 "broken", mostly 403/423/429 — bot protection and rate limiting, not dead pages, one of them *us* being rate-limited mid-crawl. A gate that fails on other people's Cloudflare is red most weeks |
-| **Lighthouse** | lab Core Web Vitals. LCP 3.5 s, CLS 0, TBT 780 ms, 0.65 at the time of writing | **no.** Lab numbers on a simulated mobile CPU are not field numbers. The thresholds are LCP 2.5 s / INP 200 ms / CLS 0.1 at p75, and the weekly report carries the real-user data from Cloudflare |
-| **Vale** | prose: weasel words (`usually` is an unsourced prevalence claim) and condescension (`simply`, `easily` — wrong at a stuck reader) | **no, it reports.** 287 findings across 25 guides after tuning: a triage list, not 287 defects |
+| **linkinator** | every link on the served site: **524 of them** | **no, it reports.** Tuned 2026-09-27 from 15 failures to **2**, both documented in the link-debt section below. The 12 that vanished were 403/423/429 — bot protection and rate limiting — and the root cause was that linkinator ships a **2019-era Chrome 79 user agent**. `linkinator.config.json` now sets a current UA, a 30 second timeout (**the default is NO timeout**, which is why three links hung forever and reported status 0), retries, and 403/423/429 → `warn` while **404 and 410 stay failures**. Corroborated externally: Redis's docs run the same approach and state the principle — *"403/429 both mean the host is up"*. Never accept 404 or 410 |
+| **Lighthouse** | lab Core Web Vitals. Measured 2026-09-27: LCP 3525 ms, CLS 0, TBT 849 ms | **yes, on two ceilings added 2026-09-27.** It had numbers and no threshold, so it could not fail and therefore said nothing. Now **CLS > 0.25 fails, LCP > 6 s fails**, and LCP > 4 s and TBT > 1500 ms warn. The field targets are LCP 2.5 s / INP 200 ms / CLS 0.1 at p75, and the lab ceiling is deliberately looser because a simulated mobile CPU on a shared runner is not a visitor. CLS is stable between the two so it takes the tight value |
+| **Vale** v3.23.0 | prose. **Packages: RedHat, proselint, write-good, alex** | **no, it reports.** Tuned 2026-09-27 from **1,082 findings to 103** across the written pages. Four rule families went, each SAMPLED at its real line numbers first: `alex.Profanity*` (438 — not adapted to RV vocabulary); `alex.Condescending` (57, and **exactly 1 of 57 was real** — it fires on "simply" in its MERELY sense and on "easy to miss", which is REASSURING, the opposite of condescending); `alex.Ablist` (**all 12 are the word "special"**, as in ST tyres — 100% false positives); and the `Microsoft.*` conventions, because Microsoft DEMANDS contractions inside safety instructions. **RedHat replaced it and agrees with four of our own house rules** — it bans the em-dash character, forbids contractions, flags "this section", and offers plain-language swaps. It found NOTHING, because `verify.py` and `house-style.py` already enforce all four. **SCOPE: longform written content only** — tool UI, directory listings and the 404 are not articles; pointing a prose gate at them produced 15 findings and 15 false positives |
 
 **Why axe runs inside the Chrome we already drive, and not pa11y:** `npx pa11y` downloads 1.3 GB of
 Puppeteer Chromium and that browser then crashed on this machine. `@axe-core/cli` wants chromedriver
@@ -53,7 +53,14 @@ flatpak. It attaches to a running Chrome with `--port` instead.
   2026-09-26 a review round was wasted because a lane was handed a copy three hours out of date and
   its accurate quotations read as fabrications. `--check` finds stale copies; 13 of 48 were stale.
 - **`check-spec-fragments.py`** — a spec's defect list is a list of EDITS, and nothing was checking
-  that the edits happened. This does.
+  that the edits happened. This does. **Measured 2026-09-27: 12 candidates, 1 real miss.** The miss
+  was `rv-converter-not-charging`, whose lede still read "both major manufacturers publish the
+  numbers" — unnamed authority, listed in its own spec as U5 and never fixed. The other eleven are
+  legitimate leftovers, exactly as its docstring predicts: a figure the spec quotes in order to
+  CHECK is meant to still be on the page.
+- **`check-indexability.py`** — **negative-tested 2026-09-27**, because a check that has never
+  failed is not evidence: against four fixtures it passes a correct page and FAILS one with meta
+  robots noindex, FAILS one whose canonical points elsewhere, and FAILS a 404.
 - **`house-style.py`** — our ten house rules. It keeps the two that Vale cannot do (unnamed
   authority, unsourced prevalence) and stays the floor rather than being replaced.
 - **`quality-score.py`** — longform scoring that deliberately refuses to score the two questions
@@ -63,7 +70,29 @@ flatpak. It attaches to a running Chrome with `--port` instead.
 ## 4. Rendered-page and maker-facing audits
 
 `audit-render.mjs`, `audit-mobile.mjs`, `audit-colour.mjs`, `measure-layout.mjs`, `shot.mjs` —
-layout, mobile cramping, colour, screenshots, all over CDP. `audit-manuals.py`,
+layout, mobile cramping, colour, screenshots, all over CDP.
+
+**Three repairs here, all found by measuring the tools rather than the site (2026-09-27):**
+
+- **`audit-render.mjs` was counting other people's servers.** Identical input returned 92, 89 and 84
+  of 94 clean on consecutive runs, and every difference was a `REQFAIL` to `cloudflareinsights.com`
+  or `maps.google.com` — third-party resources that cannot load from a localhost preview and fail
+  intermittently. The exempt list named one host; it is now the general rule: **a failed fetch to
+  anything that is not 127.0.0.1 or localhost is not a defect in our page.** After the fix: 94/94.
+- **`audit-colour.mjs` could not run at all.** It required a JSON page list as `argv[4]` and
+  defaulted to `/tmp/pages.json`, a file nothing in this repo produced, so every documented
+  invocation died with ENOENT. It now walks the repo like its siblings. Result: 2 elements across 48
+  pages, both an amber warning row on `tools/index.html` — which is the semantically correct colour
+  for a warning, and it reports that as WARM for review rather than as a fault.
+- **`audit-mobile.mjs` was never broken.** It crashed twice with a WebSocket error and was listed as
+  a defect; re-run, it completes normally — 47 renders, **zero failures**, 3 warning classes (the
+  "Last reviewed" line and the pinned tag at 11.5 px, and one 40 px input). Calling it broken without
+  re-running it is the same error as calling a link dead without opening it in a browser.
+
+**These audits need their own Chrome debug ports and fail silently without them** — 9340 for render
+and mobile, 9380 for colour. Two drivers on one page target corrupt both runs, which is why they
+cannot share, but the failure mode is a connection error with no explanation.
+ `audit-manuals.py`,
 `audit-listings.py`, `audit-descriptions.py` — check our rows against the maker's or the business's
 own site, which is the drift that otherwise goes unnoticed for months. `check-diagram-fit.mjs`,
 `check-indexability.py`.
