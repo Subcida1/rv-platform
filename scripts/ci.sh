@@ -45,6 +45,27 @@ step "W3C Nu Html Checker, $(echo "$pages" | wc -w) pages" \
 step "html-validate (offline, adds the WCAG-technical rules)" \
      npx --yes html-validate $pages
 
+# The same checker validates CSS with --css, so our stylesheet gets a parse check for no new
+# dependency at all. That matters: a malformed rule is dropped SILENTLY by every browser, so the
+# symptom is missing styling with no error anywhere.
+#
+# TWO KNOWN LIMITATIONS, filtered by name rather than silenced by a flag, because vnu's CSS mode
+# predates what it cannot parse and both of these are ours-and-correct:
+#   * `@property` -- registered custom properties. We use one deliberately: a rotating gradient
+#     angle needs it or the animation cannot interpolate.
+#   * `var()` inside a `conic-gradient(from ...)` angle -- vnu cannot resolve the variable.
+# Anything else in the output still fails the step, so a genuine syntax error cannot hide here.
+csscheck() {
+  local out
+  out=$(npx --yes vnu-jar --css assets/css/style.css 2>&1 \
+        | grep -v 'Unrecognized at-rule “@property”' \
+        | grep -v 'is not a “conic-gradient” value')
+  [ -z "$out" ] && return 0
+  printf '%s\n' "$out"
+  return 1
+}
+step "W3C Nu Html Checker, CSS mode (two documented limitations filtered)" csscheck
+
 printf '\n================================================================\n'
 if [ "$fail" -eq 0 ]; then
   printf 'every check passed\n'
