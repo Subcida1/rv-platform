@@ -76,10 +76,15 @@ const server = spawn('python3', ['-m', 'http.server', String(HTTP), '--bind', '1
   { cwd: ROOT, stdio: 'ignore', detached: true });
 server.unref();
 fs.rmSync(PROFILE, { recursive: true, force: true });
-const chrome = spawn('flatpak', ['run', 'com.google.Chrome', '--headless=new',
-  `--remote-debugging-port=${CDP}`, `--user-data-dir=${PROFILE}`, '--no-first-run',
-  '--no-default-browser-check', '--disable-gpu', '--window-size=1400,1000', 'about:blank'],
-  { stdio: 'ignore', detached: true });
+/* Locally Chrome is the flatpak build; a GitHub runner has neither flatpak nor that app id, so
+   CHROME_BIN lets the pipeline point at the browser that is actually there. Honouring it is not
+   optional: without this the scheduled run would fail on a browser it was never going to find. */
+const CHROME_ARGS = ['--headless=new', `--remote-debugging-port=${CDP}`, `--user-data-dir=${PROFILE}`,
+  '--no-first-run', '--no-default-browser-check', '--disable-gpu', '--window-size=1400,1000',
+  'about:blank'];
+const [cmd, ...pre] = (process.env.CHROME_BIN || 'flatpak').split(/\s+/);
+const chromeArgs = process.env.CHROME_BIN ? [...pre, ...CHROME_ARGS] : ['run', 'com.google.Chrome', ...CHROME_ARGS];
+const chrome = spawn(cmd, chromeArgs, { stdio: 'ignore', detached: true });
 chrome.unref();
 
 function cleanup() {

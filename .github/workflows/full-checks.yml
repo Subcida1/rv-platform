@@ -1,0 +1,33 @@
+# The checks that need a browser or the open internet, on a schedule.
+#
+# WHY THIS IS NOT IN checks.yml. That workflow runs on every push and must stay fast. This one
+# starts a headless Chrome, renders pages, and fetches hundreds of other people's URLs, which
+# takes minutes. A slow gate on every push is a gate that gets bypassed.
+#
+# Run it by hand any time:
+#   bash scripts/ci-full.sh
+
+name: full-checks
+
+on:
+  schedule:
+    # 13:40 UTC Mondays, after the weekly report (13:00) and the indexability check (13:10), so a
+    # fresh failure is not buried inside a report that also changed.
+    - cron: '40 13 * * 1'
+  workflow_dispatch:
+
+jobs:
+  browser-and-links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      # flatpak is not available on the runner, so check-a11y.mjs is told to use the Chrome the
+      # runner already has rather than the flatpak build it looks for locally.
+      - name: accessibility and links
+        env:
+          CHROME_BIN: /usr/bin/google-chrome
+        run: bash scripts/ci-full.sh
