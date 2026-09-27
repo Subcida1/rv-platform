@@ -1,0 +1,30 @@
+# Indexability, checked against the LIVE site on a schedule.
+#
+# WHY THIS IS NOT IN checks.yml. That workflow runs on every push and must not depend on the
+# network or on a deploy having finished. This one asks a different question -- "is what is live
+# right now eligible to be indexed?" -- so it runs after deploys and on a timer, against
+# originrv.com itself, and it would be wrong to run it against the working tree.
+#
+# THE THREE WAYS A PAGE DISAPPEARS WITH NO OTHER SYMPTOM: it 404s after a rename, it gains a
+# stray noindex, or its canonical starts pointing somewhere else. On disk it looks perfect, and
+# every other gate we run reads the disk.
+#
+# Run it by hand any time:
+#   python3 scripts/check-indexability.py
+
+name: indexability
+
+on:
+  schedule:
+    # 13:10 UTC on Mondays, an hour after the weekly report, so a fresh failure is not buried
+    # inside a report that also changed.
+    - cron: '10 13 * * 1'
+  workflow_dispatch:
+
+jobs:
+  live:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: every sitemap URL returns 200, is indexable, and points at itself
+        run: python3 scripts/check-indexability.py --strict
