@@ -1009,3 +1009,59 @@ landed).
 - **The two guide card lists disagree about one card's meta text** (`Roof Under Snow Load`: *Seals, ice,
   weight, removal* on the homepage, *Seals, ice dams, removal* in the guides index). Harmless, unowned, and
   now recorded rather than remembered.
+
+---
+
+## 15. Every queued review job was staged from a page that no longer exists (2026-09-26)
+
+**Five review jobs were written on 2026-09-24 and every one of them hands its lane a copy of a page that is
+not the page on disk.** Measured on the visible-text digest, which is what `verify-content.py` hashes, not on
+file bytes:
+
+| job | staged copy | page on disk | |
+|---|---|---|---|
+| 2121 roof recheck | 09-24 21:21, `70c0588f` | `93b8bf72` | stale |
+| 2122 freeze recheck | 09-24 21:21, `afb3827a` | `8f587416` | stale |
+| 2123 toilet recheck | 09-24 21:22, `15d457c1` | `7584e090` | stale |
+| 2255 new-owner review | 09-24 22:45, `f5f9ac6c` | `92022b3e` | stale |
+| 2103 leveling recheck | 09-24 16:32, `8c93f272` | `1c691576` | stale, **and its reply came back** |
+
+The staged copies were written in the same minutes the jobs were, and the corrections the jobs ask about
+landed at 21:22 and 22:42. So each job asks a lane to check fixes against the text from before the fixes.
+
+**The cost of this was already paid, and it was mistaken for the lane's fault.** The leveling recheck
+returned at 01:15 on 09-25 and was never adjudicated until 09-26. Adjudicating it, four of its quotations
+attributed to the page could not be found in the page, and the first reading of that was three fabricated
+quotations, because the documented failure mode is exactly that. **It is not what happened.** All four are
+verbatim in `claude-bridge/staged/guides__rv-leveling-jacks-not-working.html`: `the majority of the calls`,
+`half of this page`, and `charging it first is the cheapest test on this page` were removed from the live page
+in its own first pass, three hours after the copy was staged. **The lane quoted its file exactly. The job was
+one revision behind it.**
+
+**The rule this earns: re-staging is not a step before a job goes out, it is a step before a job is
+BELIEVED.** A stale stage makes a reply wrong in both directions at once, which is the worst available
+failure here: defects already fixed read as still present, and the lane's accurate quotations read as
+fabrications. The second one is worse than the first, because it discredits the pass that was working and
+sends the next person hunting a liar who is not there.
+
+So, in order, before any of these five is sent or believed: **refresh the staged copy from the repo, then
+send.** And when a quotation in a reply cannot be found on the page, **check the staged copy before calling
+it invented.** `scripts/check-review-quotes.py` does both halves of that automatically and labels the case
+`STALE STAGE`, so the distinction is mechanical rather than remembered:
+
+```
+python3 scripts/check-review-quotes.py ~/claude-bridge/outbox/REPLY-<job>.md --page guides/<page>.html
+```
+
+It takes every string a reply attributes to the page (including an unquoted `Before:` payload, which is where
+the fourth miss hid) and reports it against the live page **and** the staged copy. On the leveling reply it
+reports `6 on the page, 4 in the staged copy only, 0 nowhere`, which is the correct verdict and not the one
+the hand check first produced.
+
+**Also fixed on 09-26, same class of false green:** `manuals/start-here.html` carried `status: verified` while
+its own verdict text reads *REWRITTEN ON TY'S DIRECTION AND NOT INDEPENDENTLY REVIEWED YET*. The manifest's
+`status` field is what every count and every summary line trusts, and it cannot tell a lane pass from a note,
+so the page was counted in the 24. Reset to `unverified` with its 10 claims kept. **The gate now reads 23
+verified, 25 unverified, 2 drifting**, and the two drifting are the freeze and roof pages whose rechecks are
+in the table above. `start-here` must not be re-marked until the queued pass returns.
+

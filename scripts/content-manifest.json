@@ -5198,9 +5198,9 @@
   },
   "manuals/start-here.html": {
     "hash": "92022b3e4c8b2533",
-    "status": "verified",
-    "verified_by": "Cloud 2026-09-24, REWRITTEN FROM THE COACH MANUAL ON TY'S DIRECTION AND NOT INDEPENDENTLY REVIEWED YET. Ty's ruling, recorded in the spec's section 14: the page was thin and led with a systems matrix nobody wants first. It now leads with twelve expensive mistakes, each a maker's own instruction quoted from Jayco's owner manual (and Lippert for the leveling rule), with the systems table demoted below them. The previous lane pass covered a page that no longer exists, so this verdict claims a rewrite and nothing more; a review job is queued for the new text.",
-    "verified_at": "2026-09-24",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
     "sources": [],
     "spec": "_specs/start-here.md",
     "spec_waived": false,
@@ -5285,7 +5285,9 @@
         "by": "every instruction on the page is either the maker's own procedure or stated as ours, 2026-09-24",
         "at": "2026-09-24"
       }
-    ]
+    ],
+    "invalidated_by": "mechanical change",
+    "invalidated_at": "2026-09-26"
   },
   "manuals/towing-and-running-gear.html": {
     "hash": "48ca0744c9094b37",
