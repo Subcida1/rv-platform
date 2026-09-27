@@ -52,6 +52,44 @@ linkreport() {
 }
 step "linkinator: every link on the served site" linkreport
 
+# ---------------------------------------------------------------- Core Web Vitals
+# Lighthouse wants a Chrome BINARY it can exec, and locally ours is a flatpak with no path a
+# launcher can use -- that is what killed the naive `npx lighthouse <url>` and what killed pa11y
+# before it. It CAN attach to a Chrome already running, so this starts the same headless Chrome
+# the other audits use and points Lighthouse at it with --port.
+#
+# Lab numbers, not field numbers. They catch a regression before it ships; the weekly report's
+# Cloudflare section is the real-user measurement and is the one to trust about actual visitors.
+LH_PORT=9347
+flatpak run com.google.Chrome --headless=new --remote-debugging-port=$LH_PORT \
+  --user-data-dir=/tmp/lh-ci-full --no-first-run --disable-gpu about:blank >/dev/null 2>&1 &
+LH_PID=$!
+sleep 8
+
+lighthouse() {
+  timeout 400 npx --yes lighthouse "http://127.0.0.1:$PORT/index.html" --port=$LH_PORT --quiet \
+    --output=json --only-categories=performance --output-path=/tmp/lh-ci.json >/dev/null 2>&1
+  python3 - <<'PYEOF'
+import json, sys
+try:
+    a = json.load(open('/tmp/lh-ci.json'))['audits']
+except Exception as e:
+    print('    lighthouse produced no usable output:', e); sys.exit(1)
+for k in ('first-contentful-paint', 'largest-contentful-paint',
+          'cumulative-layout-shift', 'total-blocking-time'):
+    print('    %-28s %s' % (k, (a.get(k) or {}).get('displayValue', '?')))
+# The published thresholds are LCP <= 2.5 s and CLS <= 0.1 at the 75th percentile of real users.
+# This is a lab run of one page, so it reports and does not fail: a lab number is not a field
+# number, and failing a build on a simulated mobile CPU would be the noise this project keeps
+# having to strip back out.
+print('    (lab values. The field thresholds are LCP 2.5s, INP 200ms, CLS 0.1 at p75, and the')
+print('     weekly report carries the real-user numbers from Cloudflare.)')
+PYEOF
+  return 0
+}
+step "Lighthouse: Core Web Vitals, lab" lighthouse
+kill "$LH_PID" 2>/dev/null
+
 printf '\n================================================================\n'
 if [ "$fail" -eq 0 ]; then
   printf 'no failures. Read the link report above by hand: it reports, it does not judge.\n'
