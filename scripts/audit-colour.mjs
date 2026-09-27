@@ -23,7 +23,11 @@
      node scripts/audit-colour.mjs
    ============================================================ */
 import fs from 'node:fs';
+import path from 'node:path';
 
+import { fileURLToPath } from 'node:url';
+
+const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const PORT = Number(process.argv[2] || 9380);
 const BASE = process.argv[3] || 'http://127.0.0.1:8170/';
 const list = await (await fetch(`http://127.0.0.1:${PORT}/json/list`)).json();
@@ -101,7 +105,19 @@ await send('Page.enable'); await send('Runtime.enable'); await send('Network.ena
 await send('Network.setCacheDisabled', { cacheDisabled: true });
 await send('Emulation.setDeviceMetricsOverride', { width: 1440, height: 1000, deviceScaleFactor: 1, mobile: false });
 
-const pages = JSON.parse(fs.readFileSync(process.argv[4] || '/tmp/pages.json', 'utf8'));
+/* THE PAGE LIST IS OPTIONAL, AND THAT IS A REPAIR. As written this required a JSON array of page
+   paths as argv[4], defaulting to /tmp/pages.json -- a file nothing in this repo produced, so the
+   audit could not run at all as documented and failed with ENOENT. Its siblings (audit-render,
+   check-diagram-fit) walk the repo themselves, which is the right shape for a site audit: give it
+   an argument to narrow the run, not to make it possible. */
+const pagesArg = process.argv.slice(2).find((a) => a.endsWith('.json'));
+const pages = pagesArg
+  ? JSON.parse(fs.readFileSync(pagesArg, 'utf8'))
+  : fs.readdirSync(ROOT, { recursive: true })
+      .filter((f) => f.endsWith('.html'))
+      .map((f) => path.relative(ROOT, path.resolve(ROOT, f)))
+      .filter((f) => !f.startsWith('..'))
+      .sort();
 let total = 0;
 for (const rel of pages) {
   await send('Page.navigate', { url: BASE + rel + '?cb=' + Date.now() });
