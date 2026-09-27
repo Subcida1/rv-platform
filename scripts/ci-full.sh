@@ -93,6 +93,27 @@ except Exception as e:
 for k in ('first-contentful-paint', 'largest-contentful-paint',
           'cumulative-layout-shift', 'total-blocking-time'):
     print('    %-28s %s' % (k, (a.get(k) or {}).get('displayValue', '?')))
+
+# THRESHOLDS, so the numbers mean something. Lab and field are not the same measurement, so these
+# are deliberately looser than the published field targets (LCP 2.5s, INP 200ms, CLS 0.1 at p75):
+# a simulated mobile CPU on a shared runner is not a real visitor. CLS is stable between the two
+# and gets the tight value; LCP is the one that moves, so it warns at 4s and fails at 6s.
+lcp = (a.get('largest-contentful-paint') or {}).get('numericValue')
+cls = (a.get('cumulative-layout-shift') or {}).get('numericValue')
+tbt = (a.get('total-blocking-time') or {}).get('numericValue')
+bad = []
+if cls is not None and cls > 0.25:
+    bad.append('CLS %.3f above the 0.25 lab ceiling' % cls)
+if lcp is not None and lcp > 6000:
+    bad.append('LCP %.0fms above the 6s lab ceiling' % lcp)
+if lcp is not None and lcp > 4000:
+    print('    WARN  LCP above 4s in the lab (field target is 2.5s; lab is not field)')
+if tbt is not None and tbt > 1500:
+    print('    WARN  TBT %sms, which is the lab proxy for INP' % round(tbt))
+if bad:
+    print('    FAIL  ' + '; '.join(bad))
+    raise SystemExit(1)
+print('    within the lab ceilings (CLS 0.25, LCP 6s)')
 # The published thresholds are LCP <= 2.5 s and CLS <= 0.1 at the 75th percentile of real users.
 # This is a lab run of one page, so it reports and does not fail: a lab number is not a field
 # number, and failing a build on a simulated mobile CPU would be the noise this project keeps
