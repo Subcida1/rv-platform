@@ -115,7 +115,7 @@ RELATED = {
                              "rv-solar-not-charging", "rv-outlets-not-working",
                              "rv-lights-not-working"],
     "water-and-plumbing": ["rv-water-heater-not-heating", "winterize-plumbing"],
-    "heating-and-cooling": ["rv-furnace-not-working"],
+    "heating-and-cooling": ["rv-furnace-not-working", "rv-air-conditioner-not-cooling"],
     "kitchen-and-appliances": ["rv-refrigerator-not-cooling"],
     "exterior-and-body": ["roof-snow-load"],
     "towing-and-running-gear": ["rv-towing-capacity", "rv-tire-replacement", "tires-winter"],
@@ -460,7 +460,7 @@ def start_here_page():
          "The furnace warms the coach in winter and the air conditioner cools it in summer. Both are the "
          "largest draws on the coach, and the furnace will not light at all without enough 12-volt power to "
          "spin its blower and close the sail switch.",
-         "guides/rv-furnace-not-working.html", "Furnace not working"),
+         SITE + "/manuals/heating-and-cooling.html", "Heating and cooling documents"),
         ("The extras",
          "Solar, a generator and an inverter are three more ways to make or move power, none of "
          "which a first trip depends on.",
