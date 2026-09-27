@@ -147,7 +147,11 @@ for (const page of pages) {
   const out = await send('Runtime.evaluate', {
     expression: `axe.run(document, { resultTypes: ['violations'] }).then(r => JSON.stringify({
       v: r.violations.map(x => ({ id: x.id, impact: x.impact, help: x.help, n: x.nodes.length,
-        sample: (x.nodes[0] && x.nodes[0].target) || [] })),
+        sample: (x.nodes[0] && x.nodes[0].target) || [],
+        // axe's own measurement, so the report says WHY rather than only WHAT. For contrast it
+        // carries the two colours it compared and the ratio it computed, which is the difference
+        // between "fix this selector" and knowing which token is wrong.
+        data: (x.nodes[0] && x.nodes[0].any && x.nodes[0].any[0] && x.nodes[0].any[0].data) || null })),
       version: axe.version }))`,
     returnByValue: true, awaitPromise: true,
   });
@@ -160,6 +164,13 @@ for (const page of pages) {
     byRule.set(x.id, (byRule.get(x.id) || 0) + 1);
     console.log(`      ${EXIT_ON.has(x.impact) ? 'FAIL' : 'warn'}  [${x.impact}] ${x.id} x${x.n}  ${x.help}`);
     console.log(`              first: ${x.sample.join(' ')}`);
+    if (x.data) {
+      const d = x.data;
+      const why = d.contrastRatio
+        ? `ratio ${d.contrastRatio} (needs ${d.expectedContrastRatio}) fg ${d.fgColor} on bg ${d.bgColor}`
+        : Object.entries(d).slice(0, 3).map(([k, v]) => `${k}=${v}`).join(' ');
+      console.log(`              why:   ${why}`);
+    }
   }
 }
 
