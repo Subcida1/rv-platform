@@ -1,0 +1,46 @@
+# The checks that run on every change to the site.
+#
+# WHY THIS EXISTS. Ty, 2026-09-26: "build the robot that runs our checks". Until this file
+# existed the repo had 45 scripts in scripts/ and nothing ran them -- every gate depended on
+# a human remembering the command. The first night the standard validators were pointed at
+# the site they found a FATAL html error on the homepage (a script element between </head>
+# and <body>, which makes the W3C checker stop reading the page) plus five elements carrying
+# duplicate class attributes that browsers were silently discarding. None of our own gates
+# can see either class of defect, and none of them had ever been run automatically.
+#
+# WHAT IT DOES NOT DO. It cannot tell you a page is GOOD. Google's own words: "just because
+# a page meets all of these requirements and best practices, doesn't mean that Google will
+# crawl, index, or serve its content." These steps catch broken, not bad. The judgement --
+# is this true, does it answer its title, does it help a reader -- stays with the content
+# gate and the review lanes.
+#
+# Run the whole thing locally before pushing:
+#   bash scripts/ci.sh
+
+name: checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      # The W3C Nu checker is a Java jar. This is the only step that needs more than
+      # python3 and node, and both runners already have it.
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      - name: the site's own gates
+        run: bash scripts/ci.sh

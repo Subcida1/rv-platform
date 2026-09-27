@@ -1,0 +1,54 @@
+#!/usr/bin/env bash
+# ci.sh -- every check, in the order that fails fastest and cheapest first.
+#
+# Local and CI run the same file, deliberately: a pipeline whose steps only exist inside
+# .github/workflows/checks.yml is a pipeline nobody can reproduce when it goes red at 1am.
+#
+# Exit is non-zero on the first failure, so the output names the first thing that broke
+# rather than a wall of noise.
+set -uo pipefail
+cd "$(dirname "$0")/.."
+
+fail=0
+step() {                        # step <label> <command...>
+  local label="$1"; shift
+  printf '\n=== %s\n' "$label"
+  if "$@"; then
+    printf '    ok\n'
+  else
+    printf '    FAILED: %s\n' "$label"
+    fail=1
+  fi
+}
+
+# ---------------------------------------------------------------- 1. our own gates
+step "verify.py: the site's own checks"        python3 scripts/verify.py
+step "verify-content.py: verdicts still match the pages they cover" \
+                                               python3 scripts/verify-content.py --strict
+step "build-shell.mjs --check: nav and footer are in the HTML" \
+                                               node scripts/build-shell.mjs --check
+step "stamp_assets.py --check: every asset hash is current" \
+                                               python3 scripts/stamp_assets.py --check
+
+# ---------------------------------------------------------------- 2. behaviour
+step "weight calculator"                       node scripts/test-weight-calculator.js
+step "directory rendering"                     node scripts/test-directory.js
+step "manuals"                                 python3 scripts/test-manuals.py
+step "smoke test"                              node scripts/smoke-test.js
+
+# ---------------------------------------------------------------- 3. structure
+# The W3C checker is the authority on whether the markup is valid, and the one that found
+# the fatal error on the homepage. It does not need installing: npx fetches the jar.
+pages=$(git ls-files '*.html' | grep -v '^_' | tr '\n' ' ')
+step "W3C Nu Html Checker, $(echo "$pages" | wc -w) pages" \
+     npx --yes vnu-jar --skip-non-html $pages
+step "html-validate (offline, adds the WCAG-technical rules)" \
+     npx --yes html-validate $pages
+
+printf '\n================================================================\n'
+if [ "$fail" -eq 0 ]; then
+  printf 'every check passed\n'
+else
+  printf 'AT LEAST ONE CHECK FAILED -- read the first FAILED line above\n'
+fi
+exit "$fail"
