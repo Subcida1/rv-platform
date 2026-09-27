@@ -26,14 +26,14 @@
     "invalidated_at": "2026-09-23"
   },
   "directory/california.html": {
-    "hash": "2b80789161e486e9",
+    "hash": "7cde0450e68dd3bc",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/index.html": {
-    "hash": "4b438a82b7362215",
+    "hash": "6a89560f7c4b8c5c",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -1618,7 +1618,7 @@
     ]
   },
   "guides/rv-fuse-keeps-blowing.html": {
-    "hash": "35b9f6c6bf021f82",
+    "hash": "5965be1aad8c7336",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -3321,6 +3321,13 @@
       }
     ]
   },
+  "guides/rv-sewer-smell.html": {
+    "hash": "036dc4026738c2e6",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
+  },
   "guides/rv-slide-out-not-working.html": {
     "hash": "33cfd424790a2c3b",
     "status": "unverified",
@@ -4484,7 +4491,7 @@
     ]
   },
   "guides/rv-water-heater-not-heating.html": {
-    "hash": "d4961b84f5bcf7de",
+    "hash": "bce1fc5fa08fafd5",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -5186,7 +5193,7 @@
     ]
   },
   "index.html": {
-    "hash": "48ea2c18b5fa6011",
+    "hash": "6142213eb07aba16",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -5214,7 +5221,7 @@
     "sources": []
   },
   "manuals/heating-and-cooling.html": {
-    "hash": "c8d359d0443c7aa5",
+    "hash": "3dcec244325c2667",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -5256,7 +5263,7 @@
     "sources": []
   },
   "manuals/start-here.html": {
-    "hash": "92022b3e4c8b2533",
+    "hash": "3b6cfe00defe6db9",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,

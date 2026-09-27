@@ -35,11 +35,31 @@ ROOT = Path(__file__).resolve().parent.parent
 # Adding a guide is: put it in _data/guides.json, add its card, run
 # scripts/sync-counts.py. The words and the digits in every page follow.
 
-WORD = {0: "zero", 1: "one", 2: "two", 3: "three", 4: "four", 5: "five",
-        6: "six", 7: "seven", 8: "eight", 9: "nine", 10: "ten", 11: "eleven",
-        12: "twelve", 13: "thirteen", 14: "fourteen", 15: "fifteen",
-        16: "sixteen", 17: "seventeen", 18: "eighteen", 19: "nineteen",
-        20: "twenty"}
+_ONES = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine",
+         "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen",
+         "seventeen", "eighteen", "nineteen"]
+_TENS = {2: "twenty", 3: "thirty", 4: "forty", 5: "fifty", 6: "sixty", 7: "seventy",
+         8: "eighty", 9: "ninety"}
+
+
+def number_word(n):
+    """Spell a count. A FUNCTION, not a dict, and that is the fix rather than the style.
+
+    This was a dict that stopped at 20, so adding a 26th guide -- 21 in the fix group -- crashed
+    the counts machinery with KeyError: 21. Extending the dict by one would only have moved the
+    ceiling to 22 and left the same trap for the next person. The site will keep growing, so the
+    spelling is computed now.
+    """
+    if n < 20:
+        return _ONES[n]
+    if n < 100:
+        tens, rest = divmod(n, 10)
+        return _TENS[tens] + ("" if rest == 0 else "-" + _ONES[rest])
+    return str(n)
+
+
+# kept for anything that still imports it, but it is no longer the source of truth
+WORD = {i: number_word(i) for i in range(100)}
 
 
 def guides():
@@ -62,8 +82,8 @@ def claim_values():
     for key, slugs in sorted(g.items()):
         n = len(slugs)
         out["guides-%s" % key] = str(n)
-        out["guides-%s-word" % key] = WORD[n].capitalize()
-        out["guides-%s-word-lc" % key] = WORD[n]
+        out["guides-%s-word" % key] = number_word(n).capitalize()
+        out["guides-%s-word-lc" % key] = number_word(n)
 
     # Tools: one entry per page that is not the index, and the pipeline cards
     # counted from the page itself, since the claim is "N building" and the cards

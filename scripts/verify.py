@@ -237,9 +237,37 @@ print("\n=== every stated count matches the data it comes from ===")
 #   1. the marker system covers the pages (a marker that stopped matching fails)
 #   2. every guide on disk is registered in _data/guides.json, both directions
 #   3. any spelled-out count still sitting in prose matches the grid below it
-WORDS = {"one": 1, "two": 2, "three": 3, "four": 4, "five": 5, "six": 6, "seven": 7,
-         "eight": 8, "nine": 9, "ten": 10, "eleven": 11, "twelve": 12,
-         "thirteen": 13, "fourteen": 14, "fifteen": 15, "sixteen": 16, "seventeen": 17}
+# Reads spelled-out counts BACK out of pages, so it has to cover whatever the writer can produce.
+# It stopped at seventeen while the writer stopped at twenty, which meant a claim of "Eighteen
+# guides" or "Twenty-one guides" was invisible to the gate rather than wrong -- the exact failure
+# this check exists to catch. Built from the same rule so the two cannot drift apart again.
+_ONES_R = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine",
+           "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen",
+           "seventeen", "eighteen", "nineteen"]
+_TENS_R = ["", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"]
+
+
+def _word_to_num(w):
+    w = w.lower()
+    if "-" in w:
+        a, b = w.split("-", 1)
+        if a in _TENS_R and b in _ONES_R:
+            return _TENS_R.index(a) * 10 + _ONES_R.index(b)
+    if w in _ONES_R:
+        return _ONES_R.index(w)
+    if w in _TENS_R:
+        return _TENS_R.index(w) * 10
+    return None
+
+
+WORDS = {}
+for _i in range(100):
+    if _i < 20:
+        WORDS[_ONES_R[_i]] = _i
+    else:
+        _t, _r = divmod(_i, 10)
+        WORDS[_TENS_R[_t]] = _t * 10
+        WORDS["%s-%s" % (_TENS_R[_t], _ONES_R[_r])] = _i
 
 idx_html = (ROOT / "index.html").read_text(encoding="utf-8")
 bad = []
