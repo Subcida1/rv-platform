@@ -320,14 +320,14 @@ def hub(rows, oem_count, model_count=0):
         <input id="man-q" type="search" autocomplete="off" aria-label="Search every manual"
                placeholder="Search a maker, a model line or a part: Jayco, Jay Flight, Dometic">
         <div class="man-facets">
-          <button class="chip on" data-type="">Everything</button>
-          <button class="chip" data-type="owner-and-operating">Owner's</button>
-          <button class="chip" data-type="service-and-repair">Service</button>
-          <button class="chip" data-type="parts-and-breakdown">Parts</button>
-          <button class="chip" data-type="installation">Installation</button>
-          <button class="chip" data-type="wiring-diagram">Wiring</button>
-          <button class="chip" data-type="spec-sheet">Spec sheets</button>
-          <button class="chip" data-type="bulletin-and-recall">Bulletins</button>
+          <button type="button" class="chip on" data-type="">Everything</button>
+          <button type="button" class="chip" data-type="owner-and-operating">Owner's</button>
+          <button type="button" class="chip" data-type="service-and-repair">Service</button>
+          <button type="button" class="chip" data-type="parts-and-breakdown">Parts</button>
+          <button type="button" class="chip" data-type="installation">Installation</button>
+          <button type="button" class="chip" data-type="wiring-diagram">Wiring</button>
+          <button type="button" class="chip" data-type="spec-sheet">Spec sheets</button>
+          <button type="button" class="chip" data-type="bulletin-and-recall">Bulletins</button>
         </div>
       </div>
       <div id="man-status" class="man-status">%d documents and libraries across %d makers,
@@ -570,7 +570,7 @@ def start_here_page():
 
   <h3>10. Do not remove or plug the water heater's relief valve</h3>
   <p>Two instructions in one line, both absolute: <i>Do not place a valve between the pressure and
-  temperature (P&T) valve and the tank. Do not remove or plug the relief valve under any
+  temperature (P&amp;T) valve and the tank. Do not remove or plug the relief valve under any
   circumstances.</i> The valve is what opens if the tank reaches 120 degrees F or 150 pounds of
   pressure, and it is the reason a heater that is misbehaving vents water rather than becoming a
   projectile.</p>
