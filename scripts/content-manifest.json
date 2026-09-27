@@ -388,7 +388,7 @@
     ]
   },
   "guides/index.html": {
-    "hash": "36b41abe25e8fccc",
+    "hash": "cf463c04d5e4addd",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -774,6 +774,13 @@
         "at": null
       }
     ]
+  },
+  "guides/rv-air-conditioner-not-cooling.html": {
+    "hash": "b683f27e7f2e3a73",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
   },
   "guides/rv-battery-not-charging.html": {
     "hash": "b6052bdfc4f52e1a",
@@ -5177,7 +5184,7 @@
     ]
   },
   "index.html": {
-    "hash": "8b6bff91b4520748",
+    "hash": "48ea2c18b5fa6011",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -5198,35 +5205,35 @@
     "sources": []
   },
   "manuals/exterior-and-body.html": {
-    "hash": "1227a92c579c0eb3",
+    "hash": "5023e424f65bcc46",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "manuals/heating-and-cooling.html": {
-    "hash": "5c56eb5e50ac0424",
+    "hash": "c8d359d0443c7aa5",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "manuals/index.html": {
-    "hash": "8aaec4a8288ece31",
+    "hash": "b89f937c844dfc38",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "manuals/kitchen-and-appliances.html": {
-    "hash": "8d2ba9377c1891c2",
+    "hash": "91bc484d483e71f5",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "manuals/power-and-electrical.html": {
-    "hash": "7a65512d35fe9340",
+    "hash": "30828b35063b3ba5",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -5240,7 +5247,7 @@
     "sources": []
   },
   "manuals/sanitation-and-tanks.html": {
-    "hash": "33620d59ec874ead",
+    "hash": "595ee6943ae2f825",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -5340,14 +5347,14 @@
     "invalidated_at": "2026-09-26"
   },
   "manuals/towing-and-running-gear.html": {
-    "hash": "48ca0744c9094b37",
+    "hash": "0fa6a5d0e5ca2ac1",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "manuals/water-and-plumbing.html": {
-    "hash": "96db9646bb703003",
+    "hash": "294ed42db6df0b5a",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,

@@ -96,7 +96,13 @@ REHOST = ("manualslib.com", "manualsonline.com", "manuals.plus", "manualzz.com",
           # it slipped through the first sweep: the page cited it for a CUMMINS
           # handbook. A maker's domain hosting another maker's document is still a
           # rehost, so match on the host, not on whether the domain looks legit.
-          "apollomanufacturing.ca")
+          "apollomanufacturing.ca",
+          # Added 2026-09-27 while writing the air conditioning guide, which cited all three from
+          # manufacturer documents found only as mirrors: bdub.net for an Atwood AirCommand service
+          # manual, pantherrvproducts.com for a Dometic installation manual, and rvupgradestore.com
+          # for a Coleman-Mach service manual. The class rule caught the other three mirrors in the
+          # same guide and let these through, which is exactly the drift this list exists to stop.
+          "bdub.net", "pantherrvproducts.com", "rvupgradestore.com")
 bad = []
 for p in pages:
     txt = p.read_text(encoding="utf-8")
