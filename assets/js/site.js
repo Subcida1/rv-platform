@@ -133,7 +133,11 @@
  function searchFieldHTML(cls, placeholder) {
  return '<form class="' + cls + ' js-search-form" role="search">' +
  '<div class="search-bar">' + ROAD_ICON +
- '<input type="search" autocomplete="off" aria-label="Search OriginRV" placeholder="' +
+ /* name="q" is not decoration: search.js reads ?q= on load to honour the WebSite
+       SearchAction the homepage declares, and without a name a real form submit carries no
+       query at all. Added 2026-09-27 at the GENERATOR, after I first hand-edited the 97
+       generated inputs and the shell check correctly failed the build. */
+'<input type="search" autocomplete="off" name="q" aria-label="Search OriginRV" placeholder="' +
  esc(placeholder) + '">' +
  '</div></form>';
  }
