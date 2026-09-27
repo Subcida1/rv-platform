@@ -31,7 +31,8 @@
       "rv-air-conditioner-not-cooling",
       "rv-sewer-smell",
       "rv-propane-furnace-wont-light",
-      "rv-water-pump-wont-prime"
+      "rv-water-pump-wont-prime",
+      "rv-condensation-inside"
     ]
   }
 }
