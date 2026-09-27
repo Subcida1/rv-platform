@@ -4,8 +4,14 @@
  pages and every listed business, from window.RV_SEARCH (built by
  scripts/build-search-index.py).
 
- Progressive enhancement: with JS off, the form still submits and
- site.js routes the plain query. With JS on, you get suggestions.
+ Progressive enhancement: with JS off the form still submits with ?q=, and
+ search.js reads that parameter on load and runs the search. It did NOT before
+ 2026-09-27 -- this comment said "site.js routes the plain query" and site.js
+ does no such thing: nothing on the site read ?q= at all, no search.html exists,
+ and the input had no name attribute, so the form submitted nothing and the
+ homepage's WebSite schema advertised a SearchAction to a URL that dropped the
+ query on the floor. A declared feature that does not exist is the one thing this
+ site does not ship.
  Keyboard: Down/Up to move, Enter to open, Escape to close.
  ============================================================ */
 (function () {
@@ -303,6 +309,29 @@
     form.addEventListener('submit', close);
   }
 
+  /* ?q= ON ARRIVAL.
+
+     The homepage's WebSite schema declares SearchAction -> index.html?q={query},
+     and nothing honoured it: that URL produced an empty box and a dropped query.
+     This reads it and hands the value to the SAME pipeline the typing path uses,
+     by setting the value and dispatching the event the debounced listener already
+     watches. Reusing the path matters -- a second search implementation is how a
+     feature and its promise drift apart in the first place. */
+  function fromUrl() {
+    var q = '';
+    try { q = new URLSearchParams(location.search).get('q') || ''; } catch (e) { q = ''; }
+    q = q.trim();
+    if (!q) return false;
+    var forms = document.querySelectorAll('form.js-search-form');
+    for (var i = 0; i < forms.length; i++) {
+      var input = forms[i].querySelector('input[type="text"]');
+      if (!input || input.value.trim()) continue;   // never overwrite what the reader typed
+      input.value = q;
+      input.dispatchEvent(new Event('input', { bubbles: true }));
+    }
+    return true;
+  }
+
   function init() {
     /* Wire the forms regardless of whether the index has arrived. This used to bail
        on an empty index, which was fine when the index was a static tag on the one
@@ -311,6 +340,7 @@
        field inert. */
     var forms = document.querySelectorAll('form.js-search-form');
     for (var i = 0; i < forms.length; i++) setup(forms[i], i);
+    fromUrl();
   }
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
