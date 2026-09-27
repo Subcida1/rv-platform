@@ -324,7 +324,13 @@
     if (!q) return false;
     var forms = document.querySelectorAll('form.js-search-form');
     for (var i = 0; i < forms.length; i++) {
-      var input = forms[i].querySelector('input[type="text"]');
+      /* NOT input[type="text"]. The nav field is type="search" and the homepage hero
+         field is type="text", so the first version of this filled the hero box and did
+         NOTHING on every other page of the site -- silently, because a querySelector
+         that matches nothing is not an error. Match whatever input the form holds, which
+         is how the rest of this file queries it. Found by probing the live page and
+         seeing inputValue empty with the index never loaded. */
+      var input = forms[i].querySelector('input');
       if (!input || input.value.trim()) continue;   // never overwrite what the reader typed
       input.value = q;
       input.dispatchEvent(new Event('input', { bubbles: true }));

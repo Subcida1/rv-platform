@@ -269,7 +269,16 @@
  var already = document.querySelector('script[src*="assets/js/search.js"]');
  if (already) return;
  var s = document.createElement('script');
- s.src = 'assets/js/search.js';
+ /* THE STAMP IS NOT COSMETIC. Every other asset carries ?v=<hash> from stamp_assets.py, so a
+    deploy invalidates it in every browser. This one was injected with a bare URL, so a
+    returning visitor could keep running an OLD search.js until their cache expired -- which
+    is exactly what happened while debugging the ?q= work on 2026-09-27: three probes read a
+    stale script and reported a working feature broken. Read from the homepage's static tag,
+    which stamp_assets.py keeps current. */
+ try {
+ var ref = document.querySelector('script[src*="assets/js/search.js?v="]');
+ s.src = 'assets/js/search.js' + (ref ? ref.src.slice(ref.src.indexOf('?v=')) : '');
+ } catch (e) { s.src = 'assets/js/search.js'; }
  s.async = true;
  document.head.appendChild(s);
  }
