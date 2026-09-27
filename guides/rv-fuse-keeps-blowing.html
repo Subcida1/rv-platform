@@ -83,6 +83,28 @@
 <p>Read that against what you saw. A fuse that survives a minute of driving and then blows is seeing a modest multiple, which points at a load. One that blows the instant the circuit is switched on, or the instant you fit it, is seeing a multiple in the hundreds of percent and is looking at a dead short. OptiFuse publishes a comparable table, and the two agree closely enough that the shape is worth trusting even where the numbers differ.</p>
 <p><b>A caution about the numbers themselves.</b> The published ranges are wide on purpose, because they cover manufacturing tolerance and temperature, so they tell you which class of fault you are looking at rather than exactly when a fuse will go. Eaton also notes its fuses derate about 0.15 percent per degree of ambient temperature above 23&deg;C, which matters little in a cool climate and not much more in a hot one.</p>
 
+<h2>Which fuse is which</h2>
+<p>Most RV branch circuits use the blade fuse in the ATC or ATO size, and the colour tells you the rating without reading the number. Two fuse makers publish the same mapping, which is why the colour can be trusted on any brand:</p>
+<table>
+<tbody>
+<tr><th>Colour</th><th>Rating</th></tr>
+<tr><td>Black</td><td>1 amp</td></tr>
+<tr><td>Grey</td><td>2 amp</td></tr>
+<tr><td>Violet</td><td>3 amp</td></tr>
+<tr><td>Pink</td><td>4 amp</td></tr>
+<tr><td>Tan</td><td>5 amp</td></tr>
+<tr><td>Brown</td><td>7.5 amp</td></tr>
+<tr><td>Red</td><td>10 amp</td></tr>
+<tr><td>Blue</td><td>15 amp</td></tr>
+<tr><td>Yellow</td><td>20 amp</td></tr>
+<tr><td>Clear</td><td>25 amp</td></tr>
+<tr><td>Green</td><td>30 amp</td></tr>
+<tr><td>Orange</td><td>40 amp</td></tr>
+</tbody>
+</table>
+<p>That also gives you a fast way to catch a mistake somebody else made. A 20 amp circuit carrying a blue fuse has been downrated and will nuisance-blow; a 15 amp circuit carrying a yellow one has been uprated, which is the dangerous direction and the thing the same-rating rule below exists to stop.</p>
+<p>Above the blade sizes the hardware changes. Heavier feeds use the bolt-down family, MIDI and larger, and Littelfuse publishes a limit worth knowing: MIDI fuses rated <b>150 to 200 amps</b> are for short circuit protection only, not overload protection. So a very large fuse on a battery feed is there to stop a catastrophic fault, not to protect the cable against a slow overload, and treating it as a general-purpose fuse misreads what it does.</p>
+
  <h2>Four ways to find the fault</h2>
  <div class="card">
  <p><b>Settle one thing first:</b> whether the fault is on a single branch circuit or the whole 12-volt system, because that changes which of these methods is worth starting with. The section below on one circuit against the whole system covers how to tell.</p>
@@ -256,6 +278,7 @@
 <li><a href="https://lci-support-doc.s3.amazonaws.com/manuals/leveling-and-stabilization/tonguejacks/ccd-0001563.pdf" target="_blank" rel="noopener">Lippert power tongue jack owner's manual</a>.</li>
 <li><a href="https://www.thetford.com/app/uploads/2024/09/640083D_SM_N8DCXN10DCX-ENG.pdf" target="_blank" rel="noopener">Norcold N8DCX and N10DCX service manual</a>.</li>
 <li><a href="https://www.grote.com/signal-lighting/rv-marine-utility/led-submersible-trailer-lighting-kits/49020/" target="_blank" rel="noopener">Grote 49020 clearance lamp specification</a>.</li>
+ <li><a href="https://www.littelfuse.com/assetdocs/midi-32v-bolt-down-series-data-sheet?assetguid=b55e8034-180d-40f6-a0a7-bebc2d4a94f5" target="_blank" rel="noopener">Littelfuse, MIDI bolt-down fuse data sheet</a>, for the bolt-down range and the note that its largest ratings are short circuit protection only.</li>
 </ul>
 
  <ul>
