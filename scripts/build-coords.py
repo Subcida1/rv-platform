@@ -33,7 +33,16 @@ BELT = {
     # The northern California corridor reaches further south than the border
     # itself: Redding (40.58) and Red Bluff (40.18) serve Siskiyou County, so
     # the belt has to include them or their listings cannot be ranked.
-    "CA": lambda lat, lng: lat >= 39.8 and lng <= -119.0,
+    #
+    # Extended from 39.8 to 38.0 on 2026-09-27. The California directory grew
+    # from 3 border-corridor listings to 36 covering the 101 and I-5 corridors
+    # and the Sacramento valley, and every listing whose base city is missing
+    # from this table gets a null distance, which means it can never be ranked
+    # by distance and can never match a reader's town. Sacramento (38.58),
+    # Santa Rosa (38.44) and Petaluma (38.23) were all absent and all in use.
+    # 38.0 is set by the southernmost base city, with margin. Coordinates still
+    # come from GeoNames rather than being typed, which is the file's rule.
+    "CA": lambda lat, lng: lat >= 38.0 and lng <= -119.0,
     "ID": lambda lat, lng: lng >= -117.7,
     "NV": lambda lat, lng: lng >= -117.7 and lat >= 41.4,
 }
@@ -133,15 +142,27 @@ def main():
 
     if "--check" not in sys.argv:
         return
-    text = LISTINGS.read_text(encoding="utf-8")
+    # LISTINGS is the DIRECTORY of state files, not a file. This line used to call read_text()
+    # on it and die with IsADirectoryError, so the --check mode had never once verified anything.
+    # Found 2026-09-27 while extending the California belt. Read every state file.
+    text = "".join(f.read_text(encoding="utf-8") for f in sorted(LISTINGS.glob("*.js")))
     names = set(re.findall(r'"base"\s*:\s*"([^"]+)"', text))
     for group in re.findall(r'"areas"\s*:\s*\[([^\]]*)\]', text):
         names.update(re.findall(r'"([^"]+)"', group))
     names.discard("")
     missing = sorted(n for n in names if n.lower() not in city_map)
-    print("  names checked %d | unresolved %d" % (len(names), len(missing)))
-    for n in missing:
-        print("    UNRESOLVED: %s" % n)
+    # A name like "Klamath County" is a REGION, not a town, and can never be in a town table.
+    # Listing it as unresolved put eight permanent items in a report where they buried the one
+    # real miss, which is the failure mode this project keeps meeting: an instrument that cannot
+    # tell a real fault from an expected non-result teaches the reader to ignore it.
+    regions = [n for n in missing if n.lower().endswith(" county")]
+    towns = [n for n in missing if not n.lower().endswith(" county")]
+    print("  names checked %d | unresolved towns %d | region names %d (expected)"
+          % (len(names), len(towns), len(regions)))
+    for n in towns:
+        print("    UNRESOLVED TOWN: %s  (GeoNames cities1000 omits places under 1000 people)" % n)
+    for n in regions:
+        print("    region name, no coordinate needed: %s" % n)
     sys.exit(1 if missing else 0)
 
 
