@@ -15,6 +15,10 @@ perfectly fine on disk and in every other gate we run.
 WHY IT IS NOT IN THE FAST GATE. It needs the network, so it cannot run on every push without making
 the build depend on the internet. Run it after a deploy, or on a schedule.
 
+NEGATIVE-TESTED 2026-09-27, because a check that has never failed is not evidence: against three
+crafted fixtures on a local server it FAILS a page with meta robots noindex, FAILS a page whose
+canonical points at a different URL, FAILS a 404, and passes the correct page. All four behaved.
+
 Run: python3 scripts/check-indexability.py                     every URL in the sitemap
      python3 scripts/check-indexability.py --base URL          a different origin
      python3 scripts/check-indexability.py --strict            exit 1 on any failure
