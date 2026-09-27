@@ -190,7 +190,18 @@ let bad = 0, proseOnly = 0;
 // originrv.com the same request returns 204, checked 2026-09-22. Not site code, so
 // it does not count as a fault, which is why the summary says so explicitly
 // instead of just going quiet.
-const BENIGN = /^log: REQFAIL net::ERR_FAILED https:\/\/cloudflareinsights\.com\//;
+/* A REQFAIL TO ANY HOST THAT IS NOT OURS IS NOT A DEFECT IN OUR PAGE. This started as one host,
+   cloudflareinsights.com, and the list kept growing: a Google Maps embed, and net::ERR_ABORTED
+   variants, each of them a third-party resource that cannot load from a LOCALhost preview. The
+   count moved between runs -- 92, 89, 91 of 94 clean on identical input -- and every difference was
+   one of these, not our markup. That is a non-deterministic instrument, which is the failure this
+   whole session has been hunting.
+
+   The generalised rule says why in one line: this audit measures OUR layout and OUR tap targets, and
+   a fetch to somebody else's server from a local preview is neither. Link liveness is linkinator's
+   job, and it does it against the live site.
+   The `?` arm keeps a REQFAIL we could not attribute to a URL visible rather than silently benign. */
+const BENIGN = /^log: REQFAIL .*https?:\/\/(?!127\.0\.0\.1|localhost)/;
 for (const r of report) {
   const p = r.probe || {};
   const probs = [];
