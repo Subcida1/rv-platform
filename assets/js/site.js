@@ -140,11 +140,11 @@
 
  function navHTML() {
  var rt = CFG.routes;
- return '<div class="util"><div class="wrap">' +
+ return '<div class="util" role="navigation" aria-label="Utility"><div class="wrap">' +
  '<div class="util-l"><span class="dot"></span><a href="' + R(rt.directory) + '">Find a tech</a><a href="' + R(rt.guides) + '">Winter guides</a></div>' +
  '<div class="util-r"><a href="' + R(rt.contact) + '">Contact</a><span class="muted">Free tools, No paywall, Built for RVers</span></div>' +
  '</div></div>' +
- '<nav class="main"><div class="wrap">' +
+ '<nav class="main" aria-label="Main"><div class="wrap">' +
  logoHTML() +
  '<div class="nav-links">' +
  '<a class="nav-link" href="' + R(rt.home) + '">Home</a>' +

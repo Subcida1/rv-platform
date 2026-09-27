@@ -195,6 +195,7 @@ def head(title, desc, canonical, schemas):
 {ga4}</head>
 <body class="g-theme-mist">
   <div id="site-nav"><!-- nav:start --><!-- nav:end --></div>
+ <main id="main">
 """.format(canonical=canonical, title=esc(title), desc=esc(desc), site=SITE, ld=ld,
            theme=C.THEME_COLOR, ga4=C.ga4_block("  "))
 
@@ -212,7 +213,9 @@ def foot(script):
     reason a manuals rebuild cannot drop the tag while the rest of the site keeps
     it. verify.py checks all 39 pages for it in both directions.
     """
-    return """  <div id="site-footer"><!-- footer:start --><!-- footer:end --></div>
+    return """  </main>
+
+ <div id="site-footer" role="contentinfo"><!-- footer:start --><!-- footer:end --></div>
   <script src="assets/js/config.js"></script>
   <script src="assets/js/site.js"></script>
 %s%s</body>
