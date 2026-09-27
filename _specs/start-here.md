@@ -325,3 +325,60 @@ miss** - worth remembering when a claim is marked "ours" only because the docume
 **The rewrite has had no independent pass**, and its manifest verdict says so in those words. The gate correctly
 flagged the page as drifted when its text changed. A review job is queued for the new text, because the previous
 pass covered a page that no longer exists.
+
+## 15. The citation check, 2026-09-26: fetched, not asked
+
+**Why this section exists instead of a lane's verdict.** The 09-24 record is that passes asked to check
+citations against documents returned six invented "verbatim" quotations, four false accusations against pages
+that were right, and one wrong `PUBLISHED-AS-IS`. Asking a lane to verify a quotation is asking for something
+it cannot do: it has one read tool and one staged file, so any "quote" it reports back about Jayco's manual is
+its own writing. **The check that works is the fetch**, so it was done here, by the party that owns the page.
+The queued review for this page therefore asks about the page's **argument** and explicitly tells the lane not
+to check citations.
+
+**Document:** Jayco's 2022 Alante owner's manual,
+`https://www.jayco.com/uploads/rvs/manuals/555-2022-Jayco-Alante-OM.pdf`, downloaded 2026-09-26, 9,840,399
+bytes, sha256 begins `929e19615d04d771`, 57,566 words extracted with `pdftotext -layout`. Every quotation on
+the page was compared against it with all whitespace removed.
+
+| # | the page's twelve | result |
+|---|---|---|
+| 1 | never travel with the tanks full | **verbatim, CONFIRMED** |
+| 2 | drain the black tank first, "so the grey tank wastewater can help rinse any solids or debris from the dump outlet and sewer hose" | **verbatim, CONFIRMED** |
+| 3 | the ground-monitor instruction, the three prohibited receptacles, and "Doing so may result in property damage or serious injury." | **CONFIRMED**, with two rendering notes below |
+| 4 | Suburban: "It is imperative that the water heater tank be filled with water before operating the water heater." | **not in this document.** Suburban's own manual is the source; `_specs/freeze-damage-triage.md` records it read there, and the wording on this page matches `guides/freeze-damage-triage.html` exactly |
+| 5 | the slide-motor capitals | **verbatim, CONFIRMED** |
+| 6 | no open flame, and the ammonia and chlorine warning | **verbatim, CONFIRMED** |
+| 7 | "Never use a higher rated replacement fuse" and the fire it causes | **verbatim, CONFIRMED** |
+| 8 | do not reverse the battery cables, and the reverse polarity fuses it blows | **verbatim, CONFIRMED** |
+| 9 | never leave the coach while filling, and the overflow-tube instruction | **CONFIRMED.** The page paraphrases rather than quotes. The manual: *Do not cap, block or modify the fresh water tank overflow tubes in any way*, and *Be careful not to overfill the fresh water holding tank. It can pressurize the tank, causing leakage and water damage and void the warranty.* |
+| 10 | the P&T valve instruction, and 120 degrees F / 150 pounds | **verbatim, CONFIRMED.** The manual: *designed to open if the temperature of the water within the heater reaches 120 degrees F, or if the water pressure in the heater reaches 150 pounds* |
+| 11 | no air pressure with valves closed, and the 30 PSI limit | **verbatim, CONFIRMED.** The manual: *Recommended air pressure is 30 PSI MAX. Exceeding this pressure may rupture water line couplings and void your warranty.* |
+| 12 | Lippert's prohibition and its consequence | **verbatim, CONFIRMED**, and see the note below |
+
+**Two rendering notes on item 3, neither of them a false claim.** The first quotation elides the manual's own
+parenthetical `(i.e., the campsite power receptacle or electrical box)` with no ellipsis to show it. The second
+turns a bulleted list into a sentence: the manual prints `DO NOT plug the shore power cord into a campsite
+receptacle(s):` then three bullets, and the page prints one sentence with commas and *or*. Every word is the
+manual's; the punctuation is ours. Both are worth fixing for tidiness and neither misleads.
+
+**Item 12, and the reason this had to be read rather than grepped.** A first pass reported item 12 as NOT
+FOUND, and it was wrong. Lippert's master leveling manual words the same prohibition differently for every
+system it builds, and all of these are in the one document:
+
+- Ground Control 2.0: *designed as a "leveling" system only and should not be used to provide service for any
+  reason under the **coach** such as changing tires or servicing the leveling system*
+- and elsewhere *under the **trailer***, with the consequence written as *damage to the **trailer** and/or cause
+  death or serious injury*, *damage to the **travel trailer** and/or...*, and *damage to the **5th wheel**
+  and/or...*
+
+**So this page and `guides/rv-leveling-jacks-not-working.html` are both quoting the manual correctly while
+appearing to contradict each other**, and a grep for one variant reports the other as a fabrication. Same
+lesson as section 15 of SITE-TODO: read the document, do not test your pattern against it. **Also settled
+here: the leveling recheck's suspicion that the 12.75 volt figure is wrong is a false positive.** The manual
+reads *Ground Control 3.0 requires a minimum of 12.75V DC from the battery for proper operation*, and a second
+system reads *Level-Up requires a minimum of 12.75 VDC from the battery for proper operation*.
+
+**Net: no fabricated citation on this page.** One elision and one reflow, both cosmetic, both listed above.
+**Still outstanding: the argument review** (queued 2026-09-26 as `20260926-2253-RV-STARTHERE-R1`, AI Studio),
+and item 4's Suburban wording against Suburban's own document.

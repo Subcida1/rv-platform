@@ -71,12 +71,22 @@ def norm(t):
 
 
 def stated(text, hay):
-    # A lane truncating a long quotation with an ellipsis is quoting correctly, so a quote
-    # that ends in one is matched on the part before it. Without this the leveling reply's
-    # prevalence finding reads as a fabrication when it is a verbatim quote of the file it
-    # was handed, cut off at the same place.
-    body = re.sub(r"[.\u2026\s]+$", "", text)
-    return norm(body) in hay or norm(text) in hay
+    """Is this quotation in that file? Compared with EVERY space removed.
+
+    Two reasons, and both were live failures here.
+
+    A lane truncating a long quotation with an ellipsis is quoting correctly, so a quote that
+    ends in one is matched on the part before it. And stripping all whitespace is not
+    cosmetics: extracting text from markup leaves a space where an inline tag was, so the page
+    reads "is therefore the exit , and" while the lane writes "is therefore the exit, and".
+    The roof reply's fourth quotation was reported as absent from the page for exactly that
+    one space. The same trap produced two wrong instruments in `stage-for-bridge.py` on the
+    same evening, so this is the shape of the bug in this codebase, not an edge case.
+    """
+    def b(t):
+        return re.sub(r"\s+", "", t)
+
+    return b(re.sub(r"[.\u2026\s]+$", "", text)) in b(hay) or b(text) in b(hay)
 
 
 def main():

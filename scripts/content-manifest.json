@@ -3214,10 +3214,10 @@
     ]
   },
   "guides/rv-roof-leak-repair.html": {
-    "hash": "a4060e55a8cc4f05",
+    "hash": "93b8bf724c1a5d26",
     "status": "verified",
-    "verified_by": "Cloud 2026-09-24, first independent pass by the bridge lane (JOB-20260924-1634, spec section 12). Both sources confirmed with quotations matched. Five fixes applied: the three immediate mitigation steps for an actively wet ceiling, which the page lacked entirely; the rear ladder mounts in the penetration list; the wet-membrane slip hazard the ladder advice omitted; two prevalence hedges of mine; and a self-reference. The Last reviewed fine print rejected as diligence, per Ty's ruling.",
-    "verified_at": "2026-09-24",
+    "verified_by": "Cloud 2026-09-26, second independent pass: Qwen, job 20260926-2250-RV-ROOF-R2, VERDICT CORRECTIONS APPLIED. It judged all four 09-24 corrections FIXED and reported that the corrections broke nothing. All four of its quotations were checked mechanically against the live page (scripts/check-review-quotes.py: 4 on the page, 0 staged-only, 0 nowhere), so the verdict rests on sentences that are actually there.",
+    "verified_at": "2026-09-26",
     "sources": [],
     "spec": "_specs/rv-roof-leak-repair.md",
     "spec_waived": false,
