@@ -61,9 +61,27 @@
  <p>The fuse fails the instant you fit it, with the element vaporised or blackened. A short is a direct path to ground that does not need anything switched on.</p>
  <h3>An overload</h3>
  <p>The fuse lasts seconds to minutes before failing, and the load is near the fuse rating. The distinction matters, and it is easy to lose: an overload is too much legitimate load on the circuit, and a short circuit is a fault in the wire.</p>
+ <p>Littelfuse publishes where the line between them sits. An overload is an overcurrent confined to the normal current paths, and happens "when too many devices are connected to the circuit, or when a device connected to the circuit malfunctions in a way that causes it to draw higher than normal current, usually in the range of one to six times normal current." A short circuit is current out of its normal path. Their overcurrent guide gives the threshold in numbers: "overcurrents less than 600% of the rated current of the device or application are termed as an overload fault current", and above that they are a short circuit fault current.</p>
+ <p>That single number is the most useful thing on this page. A 15 amp fuse seeing 40 amps is an overload, roughly two and a half times its rating, and you are looking for a load or a device. The same fuse seeing 150 amps is at ten times its rating and you are looking for a fault in the wire.</p>
  <h3>An old fuse in a bad holder</h3>
  <p>It will have you chasing a fault that does not exist. A conductor that is too small generates heat, that heat is seen by the fuse, and the fuse opens before it should. Dirty or loose connections do the same thing. The signs are a fuse that fails below its rating, and a holder or clip that is discoloured, loose or scored. The fuse is sized against the wire, not the load. OptiFuse's own guidance for a load that runs three hours or more is to target about 125 percent of the continuous current, which is what keeps nuisance openings down, so a circuit built right up to the fuse's rating will eat fuses for years without any fault at all.</p>
  </div>
+
+<h3>How long a fuse should take to blow</h3>
+<p>Fuses are deliberately slow at low multiples and almost instant at high ones. Eaton publishes the curve for the ATC blade fuses used in most RVs, as a percentage of the fuse's rating:</p>
+<table>
+<tbody>
+<tr><th>Current as a percentage of the fuse rating</th><th>How long it may take to open</th></tr>
+<tr><td>110 percent</td><td>may hold for 100 hours or more, which is why a fuse slightly undersized for its circuit can last a whole trip</td></tr>
+<tr><td>135 percent</td><td>0.75 seconds to 2 minutes, and up to 4 minutes on fuses below 4 amps</td></tr>
+<tr><td>160 percent</td><td>0.25 to 50 seconds</td></tr>
+<tr><td>200 percent</td><td>0.15 to 5 seconds</td></tr>
+<tr><td>350 percent</td><td>0.04 to 0.5 seconds</td></tr>
+<tr><td>600 percent</td><td>0.02 to 0.1 seconds</td></tr>
+</tbody>
+</table>
+<p>Read that against what you saw. A fuse that survives a minute of driving and then blows is seeing a modest multiple, which points at a load. One that blows the instant the circuit is switched on, or the instant you fit it, is seeing a multiple in the hundreds of percent and is looking at a dead short. OptiFuse publishes a comparable table, and the two agree closely enough that the shape is worth trusting even where the numbers differ.</p>
+<p><b>A caution about the numbers themselves.</b> The published ranges are wide on purpose, because they cover manufacturing tolerance and temperature, so they tell you which class of fault you are looking at rather than exactly when a fuse will go. Eaton also notes its fuses derate about 0.15 percent per degree of ambient temperature above 23&deg;C, which matters little in a cool climate and not much more in a hot one.</p>
 
  <h2>Four ways to find the fault</h2>
  <div class="card">
@@ -71,6 +89,22 @@
  <p>Work through them in order. The first needs no tools, and it tells you which of the other three is worth your time.</p>
  <h3>One: Isolate by pulling loads</h3>
  <p>The slowest of the four and the easiest to trust, and the only one that needs no tools. With every load on that circuit switched off or disconnected, fit a fresh fuse. If it holds, bring the loads back one at a time: the one that blows the fuse is where the problem is. If it blows with everything disconnected, the fault is in the wire run itself and nothing plugged into the circuit is responsible. The technique appears in a Volkswagen/Audi service bulletin on tracing excess current draw in almost exactly these words: disconnect the components from the circuit one by one, and if the values are now within the normal range, the component causing the excess draw has been identified.</p>
+<h3>What the load should be drawing</h3>
+<p>Manufacturers publish the current their equipment draws, so a measured reading can be compared against a real number rather than a guess. All of these are the maker's own figures:</p>
+<table>
+<tbody>
+<tr><th>Load</th><th>Published current</th></tr>
+<tr><td>Water pump, Flojet RV series</td><td>2.2 amps at 30 psi, on a 5 amp fuse</td></tr>
+<tr><td>Water pump, SHURflo 4029</td><td>up to 2.8 amps, with a 5 amp fuse recommended</td></tr>
+<tr><td>Roof vent fan, Dometic Fan-Tastic 3350</td><td>36 watts, under 3 amps, on a 4 amp slo-blo fuse</td></tr>
+<tr><td>Roof vent fan, MaxxFan Deluxe</td><td>2.5 amps on high, 0.16 amps on low, on a circuit rated for at least 5 amps</td></tr>
+<tr><td>Power tongue jack, Lippert</td><td>30 amps, on a 30 amp ATO fuse</td></tr>
+<tr><td>Refrigerator on 12 volts, Norcold two-way compressor models</td><td>a 15 amp in-line fuse, with a compressor stall current of 15 amps</td></tr>
+<tr><td>LED clearance or marker lamp, Grote</td><td>0.055 to 0.060 amps</td></tr>
+</tbody>
+</table>
+<p>Two things follow. First, the spread is enormous: a lamp draws hundredths of an amp and a tongue jack draws thirty, so "the fuse is too small" is a different question on each circuit. Second, most of these loads come with a fuse size the maker specifies, so the correct fuse for a given appliance is usually written in its own manual rather than needing to be worked out.</p>
+
  <h3>Two: Measure current with a clamp meter</h3>
  <p>A DC clamp lets you read current without breaking the circuit, which is a real advantage. Two things matter here. The clamp has to be rated for DC as well as AC. Most clamp meters only read AC through their jaws, and one of those will read nothing useful on a 12-volt circuit. And you must clamp a single conductor, because clamping the whole cable clamps both directions and the fields cancel to zero. With every load switched off and current still showing, walk the clamp downstream along the wire: the fault sits just before the point where the reading disappears.</p>
  <h3>Three: Measure voltage drop across the fuse</h3>
@@ -209,7 +243,21 @@
  <details class="faq"><summary>Can I just fit a bigger fuse to stop it blowing?</summary><p>No. Winnebago's wording is that fuses and circuit breakers must be replaced only with the same size and amperage rating, and never with a higher rated one. The fuse is sized to protect the wire, not the device. A bigger fuse means the wire becomes the weakest link, and a wire that fails heats up inside a wall where you cannot see it.</p></details>
  <details class="faq"><summary>Where do 12-volt shorts usually happen in an RV?</summary><p>The places to look are where a wire bundle passes over a sharp sheet metal edge without a grommet, inside a slide-out where the harness flexes every time the slide moves, and at any point where water has reached a fixture or a junction. Rodent damage is also common and often overlooked. Only the slide-out harness is documented by a manufacturer.</p></details>
  <div class="card srcs">
- <h3>Sources</h3>
+<h3>Sources</h3>
+<ul>
+<li><a href="https://www.littelfuse.com/assetdocs/littelfuse-fuseology?assetguid=c81c1a21-b903-44b6-b46d-180c48f7c3c5" target="_blank" rel="noopener">Littelfuse, Fuseology</a>, for the definitions of overload and short circuit and the one to six times normal current range.</li>
+<li><a href="https://www.littelfuse.com/assetdocs/powr-speed-overcurrent-protection-fundamentals?assetguid=4b7c2998-57e4-4214-a377-e1d1722b669b" target="_blank" rel="noopener">Littelfuse, Overcurrent Protection Fundamentals</a>, for the 600 percent threshold that separates an overload from a short circuit.</li>
+<li><a href="https://www.eaton.com/content/dam/eaton/products/electrical-circuit-protection/fuses/bussmann-series-blade-fuses/bus-ele-ds-2009-atc.pdf" target="_blank" rel="noopener">Eaton / Bussmann, ATC blade fuses technical data</a>, for the time-current table and the ambient derating figure.</li>
+<li><a href="https://www.optifuse.com/optifuse_ecommerce_tools/datasheets/ANR.pdf" target="_blank" rel="noopener">OptiFuse, ANR blade fuse datasheet</a>, for the colour-to-rating table and a second time-current curve.</li>
+<li><a href="https://www.xylem.com/siteassets/brand/flojet/resources/technical-brochure/flojet-rv-water-pump-r3426504a-datasheet.pdf" target="_blank" rel="noopener">Flojet RV water pump datasheet</a>.</li>
+<li><a href="https://www.pentair.com/content/dam/extranet/web/nam/shurflo/data-sheets/pds-4029-181-A32.pdf" target="_blank" rel="noopener">Pentair SHURflo 4029 product data sheet</a>.</li>
+<li><a href="https://media.dometic.com/externalassets/dometic-fantastic-vent-3350_78799.pdf" target="_blank" rel="noopener">Dometic Fan-Tastic Vent 3350 installation and operation manual</a>.</li>
+<li><a href="https://library.maxxair.com/wp-content/uploads/2023/03/02_international-maxxfan-maxxfan-plus-installation-instructions.pdf" target="_blank" rel="noopener">MaxxAir MaxxFan installation instructions</a>.</li>
+<li><a href="https://lci-support-doc.s3.amazonaws.com/manuals/leveling-and-stabilization/tonguejacks/ccd-0001563.pdf" target="_blank" rel="noopener">Lippert power tongue jack owner's manual</a>.</li>
+<li><a href="https://www.thetford.com/app/uploads/2024/09/640083D_SM_N8DCXN10DCX-ENG.pdf" target="_blank" rel="noopener">Norcold N8DCX and N10DCX service manual</a>.</li>
+<li><a href="https://www.grote.com/signal-lighting/rv-marine-utility/led-submersible-trailer-lighting-kits/49020/" target="_blank" rel="noopener">Grote 49020 clearance lamp specification</a>.</li>
+</ul>
+
  <ul>
   <li><a href="https://www.winnebago.com/Files/Files/Winnebago/Resources/OperatorManuals/Operator%202024/24_Vita.pdf" target="_blank" rel="noopener">Winnebago 2024 Vita owner manual, fuse and breaker wording (PDF)</a></li>
   <li><a href="https://tiffinmotorhomes.com/wp-content/uploads/2025/07/2026-Open-Trail-Owners-Manual_Rev-1.pdf" target="_blank" rel="noopener">Tiffin 2026 Open Trail owner manual (PDF)</a></li>

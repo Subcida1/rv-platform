@@ -1618,10 +1618,10 @@
     ]
   },
   "guides/rv-fuse-keeps-blowing.html": {
-    "hash": "b9a8f0760ca9469b",
-    "status": "verified",
-    "verified_by": "Cloud 2026-09-27, re-verification pass: Gemini, job 20260927-0155-RV-rv-fuse-keeps-blowing-REVERIFY, VERDICT CORRECTIONS NEEDED. It confirmed the style edit kept the meaning, quoting the sentence correctly (check-review-quotes.py: 1 on the page, 0 staged-only, 0 nowhere). Of four findings ONE was real and is applied: the page told the reader to measure along the battery-to-panel path and never warned that a low-voltage circuit still carries enough current to weld a probe and burn skin. One was weak (probing behind panels, already covered). ONE WAS A FABRICATED QUOTATION -- it criticised a rule about 'three feet of a moving slide-out or door hinge', and the word 'hinge' appears ZERO times on the page. Separately, the claim gate refused this verdict because six claims sat at OPEN or SOURCED; all six describe sentences that no longer exist on the page, so they were retired rather than waived, which is what this page's earlier pass did for seven others.",
-    "verified_at": "2026-09-27",
+    "hash": "35b9f6c6bf021f82",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
     "sources": [],
     "spec": "_specs/rv-fuse-keeps-blowing.md",
     "spec_waived": false,
@@ -1858,7 +1858,9 @@
         "by": null,
         "at": null
       }
-    ]
+    ],
+    "invalidated_by": "mechanical change",
+    "invalidated_at": "2026-09-27"
   },
   "guides/rv-generator-not-charging.html": {
     "hash": "4bc8fc35a5061f0a",
