@@ -30,7 +30,8 @@
       "rv-toilet-not-flushing",
       "rv-air-conditioner-not-cooling",
       "rv-sewer-smell",
-      "rv-propane-furnace-wont-light"
+      "rv-propane-furnace-wont-light",
+      "rv-water-pump-wont-prime"
     ]
   }
 }

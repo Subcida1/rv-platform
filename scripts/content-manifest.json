@@ -388,7 +388,7 @@
     ]
   },
   "guides/index.html": {
-    "hash": "cc281c0844e18b4c",
+    "hash": "4445275a55370129",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -2934,7 +2934,7 @@
     ]
   },
   "guides/rv-propane-furnace-wont-light.html": {
-    "hash": "64dd8e33c79cd975",
+    "hash": "5a1f155dde8988c3",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -4758,6 +4758,13 @@
     "invalidated_by": "mechanical change",
     "invalidated_at": "2026-09-27"
   },
+  "guides/rv-water-pump-wont-prime.html": {
+    "hash": "3ee27b6a3afe2c1f",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
+  },
   "guides/tires-winter.html": {
     "hash": "fd1cebc2276bb601",
     "status": "verified",
@@ -5202,7 +5209,7 @@
     ]
   },
   "index.html": {
-    "hash": "65cedc8cec019ad3",
+    "hash": "14e87963e1b5cfaa",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
