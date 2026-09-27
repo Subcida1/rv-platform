@@ -1174,10 +1174,10 @@
     ]
   },
   "guides/rv-furnace-not-working.html": {
-    "hash": "5971af2e90fc77cf",
-    "status": "verified",
-    "verified_by": "AI Studio lane (Gemini 3.8 Flash), four prose rounds plus one visual pass across 2026-09-23: the first pass found the board-family conflation and the microamp conflict, the second found two more attribution slips, and the visual pass corrected the electrode geometry and exposed a page-selection error of mine",
-    "verified_at": "2026-09-23",
+    "hash": "2fa4fbf03a6fcecf",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
     "sources": [
       "inbox/REVIEW-REQUEST-20260923-1006-rv-furnace-not-working.md",
       "outbox/REVIEW-20260923-1006-rv-furnace-not-working.md",
@@ -1618,13 +1618,15 @@
         "by": "Ty ruled 2026-09-23: the reviewed line stays as provenance and is now fine print, not a diligence claim",
         "at": "2026-09-23"
       }
-    ]
+    ],
+    "invalidated_by": "mechanical change",
+    "invalidated_at": "2026-09-27"
   },
   "guides/rv-fuse-keeps-blowing.html": {
-    "hash": "ba59e4b528f26390",
-    "status": "verified",
-    "verified_by": "Cloud, verification pass 2026-09-24. Seven documents opened: Winnebago 2024 Vita, Tiffin 2026 Open Trail, Volkswagen/Audi TSB 2029010, Progressive Dynamics PD4500, Lippert SlimRack Plus, OptiFuse, RVelectricity Parts 1 and 2. The page was edited before this pass so the ledger was re-read rather than carried: 27 claims recorded, 7 retired because their sentences no longer exist, 1 added. Four claims were tightened because the sources did not carry what the page said: the test-light readout, the clamp Hall-effect detail, the Lippert slide-out sentence, and the hundreds-of-times figure. C8, C17 and the breaker-on-the-main-feed half of C19 stand on Ty scoping rule rather than a document, and each says so in its source field.",
-    "verified_at": "2026-09-24",
+    "hash": "d2b1d26727ff6ad7",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
     "sources": [
       "https://www.winnebago.com/Files/Files/Winnebago/Resources/OperatorManuals/Operator%202024/24_Vita.pdf",
       "https://tiffinmotorhomes.com/wp-content/uploads/2025/07/2026-Open-Trail-Owners-Manual_Rev-1.pdf",
@@ -1917,7 +1919,9 @@
         "by": null,
         "at": null
       }
-    ]
+    ],
+    "invalidated_by": "mechanical change",
+    "invalidated_at": "2026-09-27"
   },
   "guides/rv-generator-not-charging.html": {
     "hash": "4bc8fc35a5061f0a",
@@ -2989,10 +2993,10 @@
     ]
   },
   "guides/rv-refrigerator-not-cooling.html": {
-    "hash": "e771ce4f4df634f0",
-    "status": "verified",
-    "verified_by": "AI Studio lane (Gemini 3.8 Flash), two rounds 2026-09-23: first pass found 11 items including a fire-safety error in the stop callout, confirm round found all 10 applied with no regressions",
-    "verified_at": "2026-09-23",
+    "hash": "3e5480fc78634784",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
     "sources": [
       "inbox/REVIEW-REQUEST-20260923-0840-rv-refrigerator-not-cooling.md",
       "outbox/REVIEW-20260923-0840-rv-refrigerator-not-cooling.md",
@@ -3211,7 +3215,9 @@
         "by": null,
         "at": null
       }
-    ]
+    ],
+    "invalidated_by": "mechanical change",
+    "invalidated_at": "2026-09-27"
   },
   "guides/rv-roof-leak-repair.html": {
     "hash": "93b8bf724c1a5d26",
@@ -3377,10 +3383,10 @@
     ]
   },
   "guides/rv-slide-out-not-working.html": {
-    "hash": "0c304514cf9f273f",
-    "status": "verified",
-    "verified_by": "Cloud 2026-09-24, re-verified after the Qwen lane's recheck (JOB-20260924-2120, VERDICT CORRECTIONS APPLIED). The lane reviewed the corrected page against its own three findings and judged all three fixed, including the technical accuracy of the travel-limit adjustment. Corrections made from its earlier review JOB-20260924-2101: the unverified negative claim about Lippert's manual removed while the mechanical requirement stayed, the adjustment the page named but never explained now explained, and the prying step now warns what force does to the housing.",
-    "verified_at": "2026-09-24",
+    "hash": "33cfd424790a2c3b",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
     "sources": [],
     "spec": "_specs/rv-slide-out-not-working.md",
     "spec_waived": false,
@@ -3497,7 +3503,9 @@
         "by": "Lippert CCD-0001602 / CCD-0001616 / CCD-0001459 / CCD-0008630 and BAL overrides, read 2026-09-24",
         "at": "2026-09-24"
       }
-    ]
+    ],
+    "invalidated_by": "mechanical change",
+    "invalidated_at": "2026-09-27"
   },
   "guides/rv-solar-not-charging.html": {
     "hash": "2220561ff1bbd26e",
@@ -4047,9 +4055,9 @@
   },
   "guides/rv-tire-replacement.html": {
     "hash": "602022d83945a62a",
-    "status": "verified",
-    "verified_by": "AI Studio lane (Gemini 3.8 Flash) through the AUTOLOOP, three rounds on 2026-09-23: the first found my own five-year sibling-miss and two phrasing defects, the confirm caught a redundant paragraph lead, and the closing round confirmed the narrower lead preserves the section's convention",
-    "verified_at": "2026-09-23",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
     "sources": [
       "inbox/REVIEW-REQUEST-20260923-0633-rv-tire-replacement.md",
       "outbox/REPLY-RVTIRE-REVIEW-0633.md",
@@ -4182,7 +4190,9 @@
         "by": null,
         "at": null
       }
-    ]
+    ],
+    "invalidated_by": "mechanical change",
+    "invalidated_at": "2026-09-27"
   },
   "guides/rv-toilet-not-flushing.html": {
     "hash": "7584e09041ab0da2",
@@ -4535,10 +4545,10 @@
     ]
   },
   "guides/rv-water-heater-not-heating.html": {
-    "hash": "083e79fdc26f6d66",
-    "status": "verified",
-    "verified_by": "AI Studio lane (Gemini 3.8 Flash), two rounds 2026-09-23: first pass found the winter-bypass trap in the tank check plus two maker-level corrections, confirm round found all applied and independently confirmed the refusal on Atwood's ECO wording",
-    "verified_at": "2026-09-23",
+    "hash": "d4961b84f5bcf7de",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
     "sources": [
       "inbox/REVIEW-REQUEST-20260923-0354-rv-water-heater-not-heating.md",
       "outbox/REVIEW-20260923-0354-rv-water-heater-not-heating.md",
@@ -4789,7 +4799,9 @@
         "by": "Ty ruled 2026-09-23 that the reviewed line stays and is fine print",
         "at": "2026-09-23"
       }
-    ]
+    ],
+    "invalidated_by": "mechanical change",
+    "invalidated_at": "2026-09-27"
   },
   "guides/tires-winter.html": {
     "hash": "fd1cebc2276bb601",
