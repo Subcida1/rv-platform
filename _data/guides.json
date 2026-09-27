@@ -32,7 +32,8 @@
       "rv-sewer-smell",
       "rv-propane-furnace-wont-light",
       "rv-water-pump-wont-prime",
-      "rv-condensation-inside"
+      "rv-condensation-inside",
+      "rv-delamination"
     ]
   }
 }

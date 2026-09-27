@@ -388,7 +388,7 @@
     ]
   },
   "guides/index.html": {
-    "hash": "5afb9174dccbd5aa",
+    "hash": "ead60494867b78a1",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -1188,6 +1188,13 @@
     ],
     "invalidated_by": "mechanical change",
     "invalidated_at": "2026-09-27"
+  },
+  "guides/rv-delamination.html": {
+    "hash": "a1422c8f0c53e242",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
   },
   "guides/rv-furnace-not-working.html": {
     "hash": "63a5acf4057fb7c4",
@@ -5216,7 +5223,7 @@
     ]
   },
   "index.html": {
-    "hash": "1b94312c7928d6bd",
+    "hash": "b0317a6b447deae0",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
