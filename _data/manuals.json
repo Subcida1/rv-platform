@@ -71,13 +71,14 @@
         "owner-and-operating"
       ],
       "title": "Magnum owner's manuals index",
-      "url": "https://www.magnum-dimensions.com/documents/magnum-owner's-manuals",
+      "url": "https://www.magnum-dimensions.com/support#documents",
       "key": "document ID and product series",
       "covers": "MS, ME, MM and MMS inverter chargers and PT-100 MPPT controllers",
       "gate": "none",
       "link_stability": "library_page_only",
       "status": "verified",
-      "checked": "2026-09-21"
+      "checked": "2026-09-27",
+      "note": "/documents/ 404s for everyone including the maker's own site; their docs anchor is /support#documents, verified 200 on 2026-09-27"
     },
     {
       "brand": "Go Power!",
@@ -862,7 +863,8 @@
       "gate": "none",
       "link_stability": "stable_part_keyed",
       "status": "verified",
-      "checked": "2026-09-21"
+      "checked": "2026-09-27",
+      "note": "host resolves but refuses TCP/443 from here and Chrome gets nothing (2026-09-27). Link kept: the doc is still indexed and our rules forbid a rehost"
     },
     {
       "brand": "Demco",

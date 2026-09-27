@@ -76,6 +76,27 @@ page one of these generates by hand will fail a gate — correctly. Fix the gene
 
 ---
 
+## Known link debt — measured, with the evidence
+
+Two hosts cannot be verified by an automated checker. Both were tested rather than assumed, and the
+method matters: **a checker is not a browser, so a failure from one is not proof a link is broken.**
+
+| host | what it does | evidence |
+|---|---|---|
+| `hwhcorp.com` | **works for readers.** Strict clients refuse it | browser loads 12,187 characters of body text; `curl` gets nothing — the server omits its TLS intermediate certificate and Chrome fetches it via AIA where curl does not |
+| `tekonsha.com` | **has no answer at all right now** | the host resolves (207.32.249.85) but refuses TCP on 443; headless Chrome returns 0 bytes. Link kept: the document is still indexed by search engines and this site's rules forbid citing a rehost |
+
+**The rule this established: before treating a checker's failure as a site defect, load the URL in a
+real browser.** Two of the three "real" failures here were not defects at all — one was a certificate
+chain the browser repairs and one was the maker's own 404.
+
+**Never accept 404 or 410**, per the documented practice the linkinator tuning follows (Redis docs'
+`.lychee.toml` states it directly: *"429 = rate-limited and 403 = bot-blocked (both mean the host is
+up, not that the link is broken)"*). Bot-block codes become warnings so they stay visible; a genuine
+404 stays a failure, which is how the Magnum documentation path was caught and fixed.
+
+---
+
 ## Evaluated and rejected, so nobody rebuilds them
 
 - **`paper-verify`, `citeguard`, `veriquote`** (claim-level citation verification). Measured on our

@@ -44,10 +44,25 @@ done
 #
 # So this step REPORTS rather than fails. A gate that fails on other people's bot protection
 # would be red most weeks, and the two real findings would be lost in the noise.
+# TUNED ON MEASUREMENT, and the root cause of the noise was one default: linkinator ships with a
+# 2019-era Chrome 79 user agent, which a lot of hosts treat as a scraper. First run on 2026-09-27:
+# 521 links, 15 "failures", and of those THREE were real. Proved by fetching the same URLs
+# ourselves: wfcotech.com/support/faq/ answers 403 to the crawler and 200 with 101 KB to a current
+# browser UA. The rest were 403/423/429 bot protection and rate limiting, one of them us being
+# rate-limited mid-crawl.
+#
+# So: a current user agent, a timeout (the default is NO TIMEOUT, which is why three links hung
+# forever and came back as status 0), and bot-block codes demoted to warnings. A genuine 403 still
+# surfaces as a warning rather than vanishing, and 404 stays a failure -- which is how the Magnum
+# documentation path was caught.
 linkreport() {
-  timeout 600 npx --yes linkinator "http://127.0.0.1:$PORT/" --recurse --silent 2>&1 \
-    | grep -E '^\s*\[|ERROR|Scanned' | sed 's/^/    /'
-  printf '    (403/423/429 are bot protection, not breakage; [0] is no response at all)\n'
+  timeout 900 npx --yes linkinator "http://127.0.0.1:$PORT/" --recurse \
+    --user-agent "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36" \
+    --timeout 20000 \
+    --retry \
+    --status-code "403:warn" --status-code "423:warn" --status-code "429:warn" \
+    2>&1 | grep -E '^\s*\[|ERROR|OK|Scanned' | sed 's/^/    /'
+  printf '    ([0] = no response at all, which is a real failure; 403/423/429 are bot protection)\n'
   return 0
 }
 step "linkinator: every link on the served site" linkreport
