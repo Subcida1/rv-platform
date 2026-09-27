@@ -388,7 +388,7 @@
     ]
   },
   "guides/index.html": {
-    "hash": "4d33c919efb72192",
+    "hash": "4ca96f22c227de80",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -779,6 +779,13 @@
   },
   "guides/rv-air-conditioner-not-cooling.html": {
     "hash": "b683f27e7f2e3a73",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
+  },
+  "guides/rv-battery-disconnect.html": {
+    "hash": "0c02dd7c2e1dc19a",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -1199,7 +1206,7 @@
     "sources": []
   },
   "guides/rv-furnace-carbon-monoxide.html": {
-    "hash": "e2547f3e2336e0a7",
+    "hash": "5fa060450c494b38",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -2966,7 +2973,7 @@
     "sources": []
   },
   "guides/rv-propane-furnace-wont-light.html": {
-    "hash": "5a1f155dde8988c3",
+    "hash": "c6f8693be9311a4f",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -4539,7 +4546,7 @@
     ]
   },
   "guides/rv-two-appliances-stopped.html": {
-    "hash": "91eee2d002121c02",
+    "hash": "7d277fb8dd859bf4",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -5255,7 +5262,7 @@
     ]
   },
   "index.html": {
-    "hash": "ac297039c86ca795",
+    "hash": "a85401061ab1828d",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
