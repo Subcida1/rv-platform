@@ -388,7 +388,7 @@
     ]
   },
   "guides/index.html": {
-    "hash": "d134a6d39c5c7cdc",
+    "hash": "ef0addddcc67771e",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -916,7 +916,7 @@
     ]
   },
   "guides/rv-condensation-inside.html": {
-    "hash": "97896a5540fa338b",
+    "hash": "9834d2a2de833ad3",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -1192,7 +1192,7 @@
     "invalidated_at": "2026-09-27"
   },
   "guides/rv-delamination.html": {
-    "hash": "a1422c8f0c53e242",
+    "hash": "6a46c198410ea6a9",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -2951,6 +2951,13 @@
       }
     ]
   },
+  "guides/rv-pin-weight-and-payload.html": {
+    "hash": "8c9b6cb2448ee3d6",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
+  },
   "guides/rv-propane-furnace-wont-light.html": {
     "hash": "5a1f155dde8988c3",
     "status": "unverified",
@@ -3356,7 +3363,7 @@
     "sources": []
   },
   "guides/rv-slide-out-leaking.html": {
-    "hash": "3a481aecd3ffeadd",
+    "hash": "533f00dc94d4f6e8",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -4525,7 +4532,7 @@
     ]
   },
   "guides/rv-two-appliances-stopped.html": {
-    "hash": "b437f5e97760e4dd",
+    "hash": "91eee2d002121c02",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -4791,7 +4798,7 @@
     "invalidated_at": "2026-09-27"
   },
   "guides/rv-water-pump-wont-prime.html": {
-    "hash": "3ee27b6a3afe2c1f",
+    "hash": "cffb6788018d0837",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -5241,7 +5248,7 @@
     ]
   },
   "index.html": {
-    "hash": "2770754dd880578b",
+    "hash": "3af6047798b48864",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
