@@ -144,3 +144,35 @@ The ten-step sweep in `_todo/SITE-TODO.md` §9, unchanged.
    reader can test with a bucket and a watch.
 4. **The silicone-only rule is called out as a safety line**, because the maker attaches a damage warning to it.
 5. **No photograph.** Nothing here needs one.
+
+## 12. The vent claim, checked against documents, 2026-09-26
+
+**The page asserts a symptom set with nothing behind it.** Section 7 of the page reads: *"A blocked roof
+vent is the other impostor: with the tank unable to breathe, the bowl drains slowly, gurgles, or pushes
+back."* That sentence was written from plumbing intuition. It was never checked, and the page's independent
+review passed it without a document to check it against. It is the last assertion on this site resting on
+nothing, so it was checked by fetching documents rather than by asking a lane.
+
+**What the documents actually say.** Searched across all 16 waste-system documents in Lippert's own library
+plus Jayco's coach manual:
+
+| part of the claim | what the documents support |
+|---|---|
+| the vent releases air from the tank, and an obstruction defeats it | **supported, and by the coach builder.** Jayco's 2022 Alante owner's manual, Vents section, verbatim: *"Vent pipes and vents release air from the grey and black water holding tanks. On most models the exterior vent cap is attached to the roof and must be kept clear of obstructions to perform as intended."* |
+| the mechanism, stated as equipment: a closed vessel locks without a vent | **supported in adjacent equipment.** Lippert's Sump Pump System OEM manual, verbatim: *"A gasket seals the sump box against overflow, and the sump box has an air vent to prevent air locks."* Same principle, different part |
+| *"the bowl drains slowly, gurgles, or pushes back"* | **not supported by any document retrieved.** No file in Lippert's library for the tank or the vent states any drainage symptom. The words "gurgle" and "drain slowly" appear in none of the 16 waste documents, and the 360 Siphon manual, which is the roof-vent product itself, is entirely about odour and oxygenation and says nothing about how a bowl drains |
+
+**Verdict: keep the step, cut the symptom list, or find it a source.** The vent belongs in the first step --
+Jayco's own wording grounds why, and an obstructed vent that cannot release air is a real impostor. What has
+to go is the specific symptom set, because it is the part a reader would act on and it is the part with
+nothing behind it. Two ways to close it, and the choice is Ty's:
+
+1. **Cut to what is documented**, keeping the citation: the vent releases air from the tank and must be kept
+   clear of obstructions to do it, so check it before blaming a part.
+2. **Find a plumbing authority for the symptoms.** A blocked vent causing slow drainage and gurgling is
+   ordinary building-plumbing behaviour and is very likely documented in a plumbing code or an authority's
+   venting guidance. That would let the sentence stay as written with a real citation. Not done yet -- the
+   search so far covered the RV makers' library, not plumbing codes.
+
+**Do not resolve this by rewording it.** A softer version of an unsourced symptom claim is the same defect
+wearing a hedge, which is the failure this page's own review caught twice elsewhere.
