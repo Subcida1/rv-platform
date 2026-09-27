@@ -388,7 +388,7 @@
     ]
   },
   "guides/index.html": {
-    "hash": "ef0addddcc67771e",
+    "hash": "4d33c919efb72192",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -1193,6 +1193,13 @@
   },
   "guides/rv-delamination.html": {
     "hash": "6a46c198410ea6a9",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
+  },
+  "guides/rv-furnace-carbon-monoxide.html": {
+    "hash": "e2547f3e2336e0a7",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -5248,7 +5255,7 @@
     ]
   },
   "index.html": {
-    "hash": "3af6047798b48864",
+    "hash": "ac297039c86ca795",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
