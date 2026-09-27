@@ -299,6 +299,13 @@ def cmd_pull(args):
         wanted = set(args.only.split(","))
         reports = [r for r in reports if r[0] in wanted]
 
+    # Two bugs lived here until 2026-09-27, and together they reported ZERO impressions when the
+    # site had 41. `total_impressions` was only assigned inside `if name == "query"`, so a pull that
+    # did not include query rows left it at 0 and the summary announced "No impressions in this
+    # range" over a date table full of them. And when the query table DID run, it reported the
+    # SAMPLED query total -- 15 -- as the site's impressions, while the authoritative per-day total
+    # was 41. The date table is the real number: it is not sampled and it sums to the property total.
+    true_total = None
     total_impressions = 0
     for name, dims in reports:
         rows, meta = page_all(token, args.site, {
@@ -309,17 +316,27 @@ def cmd_pull(args):
         print("%-10s %6d rows -> %s" % (name, len(rows), path))
         if meta.get("first_incomplete_date"):
             print("           (unfinalised from %s on)" % meta["first_incomplete_date"])
+        if name == "date":
+            true_total = sum(r.get("impressions", 0) for r in rows)
         if name == "query":
             total_impressions = sum(r.get("impressions", 0) for r in rows)
             for row in sorted(rows, key=lambda r: -r.get("impressions", 0))[:15]:
                 print("           %7.0f impr  pos %4.1f  %s" % (
                     row.get("impressions", 0), row.get("position", 0), row["keys"][0]))
     print()
-    if total_impressions == 0:
-        print("No impressions in this range. For a property verified 2026-09-21 that is expected,")
-        print("not a failure: there is simply nothing indexed well enough yet to report.")
+    shown = true_total if true_total is not None else total_impressions
+    if shown == 0:
+        print("No impressions in this range.")
+        if true_total is None:
+            print("(No date table was pulled, so this is not conclusive -- re-run with --only date.)")
     else:
-        print("Total impressions across returned query rows: %.0f" % total_impressions)
+        if true_total is not None:
+            print("Total impressions: %.0f  (from the date table, the authoritative total)"
+                  % true_total)
+        if total_impressions and total_impressions != true_total:
+            print("Note: the query table sums to %.0f -- lower because GSC samples and withholds"
+                  % total_impressions)
+            print("      low-volume queries. Trust the date total, not the query total.")
     return 0
 
 
