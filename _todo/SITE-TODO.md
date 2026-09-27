@@ -1012,51 +1012,65 @@ landed).
 
 ---
 
-## 15. Every queued review job was staged from a page that no longer exists (2026-09-26)
+## 15. One staged copy was stale, and two wrong instruments said five were (2026-09-26)
 
-**Five review jobs were written on 2026-09-24 and every one of them hands its lane a copy of a page that is
-not the page on disk.** Measured on the visible-text digest, which is what `verify-content.py` hashes, not on
-file bytes:
+**The finding first.** The leveling recheck (`JOB-20260924-2103`) was answered from
+`claude-bridge/staged/guides__rv-leveling-jacks-not-working.html`, staged 09-24 16:32, while the page it
+describes was corrected at 20:15. Its reply came back at 01:15 on 09-25 and was never adjudicated until now.
+Reading it, four quotations attributed to the page could not be found on the page, and the documented failure
+mode for these lanes is fabricated quotations, six of them on 09-24, so the first reading was three more fakes.
+**That was wrong.** All four are verbatim in the staged copy: `the majority of the calls`, `half of this page`
+and `charging it first is the cheapest test on this page` were removed from the live page by its own first
+pass, three hours after the copy was taken. **The lane quoted its file exactly. The job was one revision
+behind it.**
 
-| job | staged copy | page on disk | |
-|---|---|---|---|
-| 2121 roof recheck | 09-24 21:21, `70c0588f` | `93b8bf72` | stale |
-| 2122 freeze recheck | 09-24 21:21, `afb3827a` | `8f587416` | stale |
-| 2123 toilet recheck | 09-24 21:22, `15d457c1` | `7584e090` | stale |
-| 2255 new-owner review | 09-24 22:45, `f5f9ac6c` | `92022b3e` | stale |
-| 2103 leveling recheck | 09-24 16:32, `8c93f272` | `1c691576` | stale, **and its reply came back** |
+**Then the correction, because the first version of this section published a wrong table.** That table claimed
+all five queued jobs were staged stale, on the strength of comparing `digest(staged file)` against
+`digest(page)`. Those are two different pipelines: the staged copy keeps the nav and footer and drops the head,
+while `verify-content.digest` removes nav and footer and adds the title and meta description. They can never
+match, so every copy reads stale and the tool says nothing. **The four queued jobs were not stale.** Checked
+properly, the roof, freeze, toilet and start-here copies match the pages on disk, and the freeze job's four
+corrections are all present in its staged copy.
 
-The staged copies were written in the same minutes the jobs were, and the corrections the jobs ask about
-landed at 21:22 and 22:42. So each job asks a lane to check fixes against the text from before the fixes.
+**Three instruments were needed, and the first two were wrong the same way: each measured the transform
+instead of the content.**
 
-**The cost of this was already paid, and it was mistaken for the lane's fault.** The leveling recheck
-returned at 01:15 on 09-25 and was never adjudicated until 09-26. Adjudicating it, four of its quotations
-attributed to the page could not be found in the page, and the first reading of that was three fabricated
-quotations, because the documented failure mode is exactly that. **It is not what happened.** All four are
-verbatim in `claude-bridge/staged/guides__rv-leveling-jacks-not-working.html`: `the majority of the calls`,
-`half of this page`, and `charging it first is the cheapest test on this page` were removed from the live page
-in its own first pass, three hours after the copy was staged. **The lane quoted its file exactly. The job was
-one revision behind it.**
+| instrument | what it did | why it failed |
+|---|---|---|
+| one-directional containment | is every line of the copy still on the page | blind to ADDITIONS. The 09-24 corrections were nearly all additions, so it called stale copies current |
+| digest comparison | `digest(copy)` vs `digest(page)` | the two pipelines differ by construction, so everything read stale |
+| **two-directional, sentence level, whitespace stripped** | a page sentence absent from the copy is an addition; a copy sentence absent from the page is a removal | works. Whitespace is stripped because the two extractors join inline tags differently |
 
-**The rule this earns: re-staging is not a step before a job goes out, it is a step before a job is
-BELIEVED.** A stale stage makes a reply wrong in both directions at once, which is the worst available
-failure here: defects already fixed read as still present, and the lane's accurate quotations read as
-fabrications. The second one is worse than the first, because it discredits the pass that was working and
-sends the next person hunting a liar who is not there.
+`scripts/stage-for-bridge.py` is that third instrument. `--check` finds **13 stale copies out of 48**, and the
+two that matter are `guides/rv-leveling-jacks-not-working.html`, the leveling recheck above, and
+`guides/rv-towing-capacity.html`, staged before the FMVSS 110 correction. Staging now writes a side-car
+recording the source path and the page's visible-text digest at that moment, so "was this copy taken from this
+revision" is answerable exactly rather than inferred.
 
-So, in order, before any of these five is sent or believed: **refresh the staged copy from the repo, then
-send.** And when a quotation in a reply cannot be found on the page, **check the staged copy before calling
-it invented.** `scripts/check-review-quotes.py` does both halves of that automatically and labels the case
-`STALE STAGE`, so the distinction is mechanical rather than remembered:
+**The rule this earns: re-staging is a step before a job is BELIEVED, not only before it goes out.** A stale
+stage makes a reply wrong in both directions at once, and the second direction is the worse one: defects
+already fixed read as still present, and the lane's accurate quotations read as fabrications, which discredits
+the pass that was working and sends the next person hunting a liar who is not there.
+
+**And the second rule, which this cost more than the first: when a measurement says something surprising about
+five things at once, suspect the measurement.** Two instruments were built here in twenty minutes and both
+were wrong, in the same direction, because each was answering a question about the extractor rather than about
+the page. The hand check that settled it was three greps for the specific wording a job said it had changed.
+
+**Check a reply against the copy it was written from, not only against the page.**
+`scripts/check-review-quotes.py` takes every string a reply attributes to the page, including an unquoted
+`Before:` payload, which is where the fourth miss hid, and reports each against the live page and the staged
+copy, labelling the third case `STALE STAGE`:
 
 ```
 python3 scripts/check-review-quotes.py ~/claude-bridge/outbox/REPLY-<job>.md --page guides/<page>.html
 ```
 
-It takes every string a reply attributes to the page (including an unquoted `Before:` payload, which is where
-the fourth miss hid) and reports it against the live page **and** the staged copy. On the leveling reply it
-reports `6 on the page, 4 in the staged copy only, 0 nowhere`, which is the correct verdict and not the one
-the hand check first produced.
+On the leveling reply it reads `6 on the page, 4 in the staged copy only, 0 nowhere`. **The lane did not
+fabricate a word.** The four jobs below were re-issued on 09-26 as `20260926-2250` through `20260926-2253`,
+each with a fresh name, because the picker skips a job whose NAME is already in the lane's sent ledger, which
+is why they had sat unsent since 09-24 (see section 16).
+
 
 **Also fixed on 09-26, same class of false green:** `manuals/start-here.html` carried `status: verified` while
 its own verdict text reads *REWRITTEN ON TY'S DIRECTION AND NOT INDEPENDENTLY REVIEWED YET*. The manifest's
