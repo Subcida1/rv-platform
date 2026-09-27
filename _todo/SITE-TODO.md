@@ -1120,3 +1120,69 @@ walking the directory at all that night. Do not read that note as evidence that 
 `20260926-2251-RV-FREEZE-R2` (Qwen), `20260926-2252-RV-TOILET-R2` (Qwen), `20260926-2253-RV-STARTHERE-R1`
 (AI Studio, no capture) and `20260926-2300-RV-STARTHERE-R1B` (Gemini, the duplicate). The four 09-24 originals
 are retired into `claude-bridge/queue/jobs/superseded-20260926/`, which the queue scan ignores.
+
+---
+
+## 17. Lippert's document bucket is listable, and that unblocks the whole manuals programme (2026-09-26)
+
+Section 5 of this file recorded the black-tank page as stalled on the document hunt: *Valterra's product pages
+return 404 to this machine, and Lippert's own document centre answers 200 but renders its index in JavaScript,
+so neither can be read directly.* That was true and the conclusion drawn from it was too narrow.
+
+**`https://lci-support-doc.s3.amazonaws.com/` answers an S3 list request.** No index page, no JavaScript, no
+scraping. One `?list-type=2` walk returned **5,758 keys, 5,154 of them PDFs**, in six pages of 1,000. The full
+key list is committed at
+`/home/user/Documents/research/lci-support-doc-bucket-keys-2026-09-26.txt` (outside the site repo, because it is
+sourcing material rather than a site asset).
+
+```
+curl -s 'https://lci-support-doc.s3.amazonaws.com/?list-type=2&prefix=manuals/&max-keys=1000'
+```
+
+Paginate with `NextContinuationToken`. The top-level folders and their sizes:
+
+| folder | keys |
+|---|---|
+| `manuals/` | 1,328 |
+| `ranch-hand/` | 728 |
+| `technical-information-sheets/` | 655 |
+| `complists/` | 446 |
+| `assemblies/` | 357 |
+| `furrion documentation/` | 207 |
+| `quickreferences/` | 195 |
+| `power gear_kwikee/` | 146 |
+
+**What this is for.** The manuals directory (`_specs/manuals*`, section 8) promises "every official RV manual
+sourced and verified, linked not mirrored". One listable bucket is a large fraction of the industry's
+aftermarket and OEM documentation, from the maker's own host, with a `ccd-` document number per file and a
+LastModified date. **This is the sourcing route for the manuals programme, not just for one page.**
+
+**The black-tank page's sources, identified rather than guessed.** The 16 files under
+`manuals/sewer_and_fresh_water/` were each downloaded and identified from their own first page:
+
+| file | document | size |
+|---|---|---|
+| `ccd_0001595.pdf` | **Waste Master OWNER'S MANUAL** | 3.9 MB |
+| `ccd_0001594.pdf` | Waste Master OEM Installation Manual | 2.4 MB |
+| `ccd_0001593.pdf` | Waste Master Hose Aftermarket Manual | 2.1 MB |
+| `ccd-0002186.pdf` | Waste Master Tubular Storage Enclosure | 635 KB |
+| `ccd_0001583.pdf` | **360 Siphon Aftermarket Manual** (tank vent) | 1.3 MB |
+| `ccd-0001584.pdf` | 360 Siphon OEM Installation Manual | 457 KB |
+| `ccd_0001585.pdf` | Flow Down Aftermarket Manual | 649 KB |
+| `ccd-0001591.pdf` | Sump Pump System OEM Installation Manual | 2.9 MB |
+| `ccd-0001592.pdf` | Sump Pump System OWNER'S MANUAL | 717 KB |
+| `ccd-0001590.pdf`, `ccd-0001763.pdf` | Flow Max fluid pumps, 115 V AC and 12 V DC | 2.2 / 3.4 MB |
+| `ccd-0003522.pdf`, `ccd-0004086.pdf` | Floe integrated water drainage, 636 and 838 | 915 KB / 924 KB |
+| `ccd-0006465.pdf` | Wanderer 2.0 UV-LED water treatment | 1.9 MB |
+| `ccd-0006483.pdf` | RV Injection Shower Pan OEM | 503 KB |
+| `ccd-0001587.pdf` | Flow Max Fluid Pump OEM | 1.7 MB |
+
+**The two that matter most for the queued page**: the Waste Master owner's manual, and the 360 Siphon manual,
+because the toilet page already asserts that a blocked roof vent makes a bowl drain slowly or gurgle and neither
+document has been opened yet. There is also
+`Training Hand-outs/waste-master-master-training-powerpoint-hand-out.pdf` and
+`Training Hand-outs/sewer-and-fresh-water-master-training-powerpoint-hand-out.pdf`, which are training material
+rather than manuals and should be treated as secondary sources.
+
+**Valterra was never needed, and the search that the earlier session described as "the route that worked twice"
+was not the route.** The route is the bucket listing.
