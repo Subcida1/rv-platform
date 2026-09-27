@@ -1,5 +1,23 @@
 #!/usr/bin/env python3
-"""House-style check: report the mechanical defects that a script can judge.
+"""
+MEASURED 2026-09-27, and the measurement is the point: 27 findings across 48 pages, and on
+inspection ZERO of them were defects.
+
+  figure-repeated (23) -- a consistency prompt, and the repetition is correct in every case.
+    "13.6 volts" appears 10 times on the converter page because it is the float voltage the whole
+    page is about. The prompt is not wrong; its subject simply is not a fault.
+  coverage (4) -- ALL FOUR false positives, and the reason is structural: the rule greps for a
+    manufacturer's NAME and cannot tell "X says Y" from "X's product is called Z". Littelfuse and
+    Bussmann appear inside "WFCO specifies ATC or ATO types, naming Littelfuse type 257 and
+    Bussmann type ATC as examples" -- the authority is WFCO and it is named. DOT appears in card
+    teaser text on two hub pages, which is a reference to a topic rather than a claim the hub makes.
+    Adding any of them to a Sources block would be wrong, because none of them is a source.
+
+So this is a REVIEW AID, not a defect finder, which is what its own footer already says. Its real
+value is the job a machine cannot do -- read every instance of a pattern together before trusting
+any one of them -- and that is worth 27 prompts on a site of this size. It should not be read as a
+score, and nobody should expect its count to fall.
+House-style check: report the mechanical defects that a script can judge.
 
 These are the rules the furnace pilot produced (see reference/projects/rv-content-quality.md).
 They are editorial conventions, not correctness bugs, so this REPORTS rather than fails, and
