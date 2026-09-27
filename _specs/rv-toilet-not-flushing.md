@@ -162,17 +162,32 @@ plus Jayco's coach manual:
 | the mechanism, stated as equipment: a closed vessel locks without a vent | **supported in adjacent equipment.** Lippert's Sump Pump System OEM manual, verbatim: *"A gasket seals the sump box against overflow, and the sump box has an air vent to prevent air locks."* Same principle, different part |
 | *"the bowl drains slowly, gurgles, or pushes back"* | **not supported by any document retrieved.** No file in Lippert's library for the tank or the vent states any drainage symptom. The words "gurgle" and "drain slowly" appear in none of the 16 waste documents, and the 360 Siphon manual, which is the roof-vent product itself, is entirely about odour and oxygenation and says nothing about how a bowl drains |
 
-**Verdict: keep the step, cut the symptom list, or find it a source.** The vent belongs in the first step --
-Jayco's own wording grounds why, and an obstructed vent that cannot release air is a real impostor. What has
-to go is the specific symptom set, because it is the part a reader would act on and it is the part with
-nothing behind it. Two ways to close it, and the choice is Ty's:
+**Resolved 2026-09-26: the symptom list CAN stand, because the mechanism is documented -- just not by an
+RV maker.** The right authority is plumbing engineering, not the RV industry, and it was found by searching
+there rather than in the maker's library.
 
-1. **Cut to what is documented**, keeping the citation: the vent releases air from the tank and must be kept
-   clear of obstructions to do it, so check it before blaming a part.
-2. **Find a plumbing authority for the symptoms.** A blocked vent causing slow drainage and gurgling is
-   ordinary building-plumbing behaviour and is very likely documented in a plumbing code or an authority's
-   venting guidance. That would let the sentence stay as written with a real citation. Not done yet -- the
-   search so far covered the RV makers' library, not plumbing codes.
+**IAPMO, the publisher of the Uniform Plumbing Code**, in its own training article on UPC Section 901.2
+("Vents Required"), by its Manager of Education and Training Development, fetched and read in full rather
+than quoted from a search result:
 
-**Do not resolve this by rewording it.** A softer version of an unsourced symptom claim is the same defect
-wearing a hedge, which is the failure this page's own review caught twice elsewhere.
+> *"Back pressure occurs when there is positive air pressure ... in the drainage system. As water flows down
+> a stack drawing air along with it, it also pushes air ahead of itself. The air volume will flow through the
+> building drain and dissipate into the sewer drainage system **unless there is a blockage in the air path** ...
+> Such blockages in the air path generate positive pressures and may have an adverse effect on trap seals.
+> This back pressure on the outlet side of the trap **could push air bubbles through the trap way** releasing
+> sewer gas into the living space and, if significant enough, **could even blow the water out of the trap way**."*
+
+The same article covers the other direction under Siphonage: *"sufficient negative pressure ... to draw water
+out of the fixture trap."* So the authority documents both halves of what the page asserts -- air pushed back
+through the trap, and water drawn out of it -- as the two consequences of a vent that cannot do its job.
+
+**What this means for the sentence as written.** It is no longer unsourced, but it IS unattributed, and this
+site does not publish an unnamed authority. The wording needs the source in it, and the honest shape is that
+the RV maker says the vent must be kept clear of obstructions *to perform as intended*, and the plumbing code
+publisher describes what happens to the bowl when the air path is blocked. Two sources, both named, and the
+reader gets a real mechanism instead of an assertion.
+
+**Still to do, and it is a page edit plus a review round, not a research question:** rewrite the sentence with
+both sources named, then re-run an independent pass on this page, because changing prose resets its verified
+hash. Do not resolve it by rewording alone -- a hedge is the same defect wearing a disguise, which this page's
+own review caught twice elsewhere.
