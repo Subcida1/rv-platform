@@ -33,7 +33,8 @@
       "rv-propane-furnace-wont-light",
       "rv-water-pump-wont-prime",
       "rv-condensation-inside",
-      "rv-delamination"
+      "rv-delamination",
+      "rv-slide-out-leaking"
     ]
   }
 }

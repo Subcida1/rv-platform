@@ -388,7 +388,7 @@
     ]
   },
   "guides/index.html": {
-    "hash": "ead60494867b78a1",
+    "hash": "0f41d9906dd5bbcb",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -3351,6 +3351,13 @@
     "verified_at": null,
     "sources": []
   },
+  "guides/rv-slide-out-leaking.html": {
+    "hash": "3a481aecd3ffeadd",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
+  },
   "guides/rv-slide-out-not-working.html": {
     "hash": "33cfd424790a2c3b",
     "status": "unverified",
@@ -5223,7 +5230,7 @@
     ]
   },
   "index.html": {
-    "hash": "b0317a6b447deae0",
+    "hash": "eba45f2d05b636d6",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
