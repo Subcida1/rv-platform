@@ -88,6 +88,25 @@ PYEOF
   return 0
 }
 step "Lighthouse: Core Web Vitals, lab" lighthouse
+
+# ---------------------------------------------------------------- prose
+# Vale. Styles are fetched rather than vendored (they are a dependency, not content), so sync first.
+#
+# IT REPORTS, IT DOES NOT FAIL, and the reason is measured rather than cautious. Across 25 guides
+# its tuned config produces 287 findings, and the three rules carrying most of them --
+# write-good.Weasel, alex.Condescending, Microsoft.Terms -- are exactly the kind worth reading:
+# 'usually' is an unsourced prevalence claim, and telling a stuck reader to "simply" do something
+# is condescending. But 287 candidates is a triage list, not 287 defects, and a gate that fails on
+# the community's severity labels rather than ours would be noise within a week.
+#
+# What the packages do NOT do, established before adopting: no entity recognition, no entailment.
+# "Is this an unnamed authority?" and "is this prevalence claim unsourced?" stay in house-style.py.
+valeprose() {
+  ~/.local/bin/vale sync >/dev/null 2>&1 || { echo "    vale not installed (see docs)"; return 1; }
+  ~/.local/bin/vale guides/ manuals/ *.html 2>&1 | tail -30
+  return 0
+}
+step "Vale: prose style and weasel words (reports, does not judge)" valeprose
 kill "$LH_PID" 2>/dev/null
 
 printf '\n================================================================\n'
