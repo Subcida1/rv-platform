@@ -489,6 +489,16 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
 
 /* guides */
 .guide-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+
+/* GUIDES HUB, GROUPED BY SYSTEM (2026-09-27). The hub was one flat grid of 24 tiles, so a reader
+   scanned all 24 to find their one. The sites that own this space organise by system -- one
+   competitor says it outright, "structured as a diagnostic system, not a blog" -- and grouping also
+   puts every guide one hop from its siblings instead of 24 hops apart. Headings here are smaller
+   than .sec-head h2 deliberately: they sit INSIDE a section, not beside it.
+   margin, never the padding shorthand, so the .wrap gutter is not zeroed. */
+.guide-group{margin-top:46px;font-size:clamp(20px,2.4vw,26px);font-weight:800;letter-spacing:-.02em;color:var(--text)}
+.guide-group:first-of-type{margin-top:26px}
+.guide-group-note{margin-top:6px;margin-bottom:20px;font-size:14.5px;color:var(--text-2)}
 /* .guide-thumb is gone: it was a 130px-tall empty block holding a 46px emoji,
    which is the "floating emoji in a void" the guides index already dropped. The
    last user was the homepage, which now uses .guide-ic like everything else. */
