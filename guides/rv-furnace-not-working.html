@@ -215,7 +215,7 @@
  <div class="card">
  <p>Every forced-draft RV furnace runs this same sequence in this same order. The thresholds and the timings differ between makers and between control board generations, so match every figure to the board in your own unit. The value of knowing the order is that each step produces its own symptom when it fails, which narrows the possibilities instead of widening them.</p>
  <h3>1. Power check</h3>
- <p>The control board verifies it has enough voltage. Suburban boards look for at least 9.5 volts and go into standby below that, resuming when adequate power returns. Nothing else happens until this passes.</p>
+ <p>The control board verifies it has enough voltage. Suburban boards look for at least 9.5 volts and go into standby below that, resuming when adequate power returns. Nothing else happens until this passes. <b>Before you probe anything on the board, take the 12 volts out of it.</b> Pull the fuse or switch the disconnect off, and treat every connector as live until a meter proves otherwise. A probe that slips off a control-board pin and touches the chassis is a dead short through the board, and on a live circuit it can weld the probe tip and burn you.</p>
  <h3>2. Thermostat calls for heat</h3>
  <p>The board confirms the sail switch circuit is open before starting, which is a self-check. Then it energizes the blower. On Atwood units there is a relay delay of 1 to 25 seconds here, or 1 to 2 seconds if the relay is on the board itself.</p>
  <h3>3. Airflow is proven</h3>
@@ -235,7 +235,7 @@
  </div>
  </div>
 
- <h2>The sail switch: The most common single fault</h2>
+ <h2>The sail switch: where to look first</h2>
  <div class="card">
  <p>The sail switch is a paddle sitting in the blower's airstream. When enough air moves, it closes and completes a circuit that tells the board it is safe to add gas. Suburban's wording is that the room air blower must be running at approximately 75 percent of its normal rpm before ignition can occur, and Atwood's is that the sail switch is a safety device that insures air flow before ignition. Both phrases describe the same job: proving the chamber is being ventilated before gas arrives.</p>
  <h3>Why it fails</h3>
