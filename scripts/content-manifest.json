@@ -209,10 +209,10 @@
     ]
   },
   "guides/freeze-damage-triage.html": {
-    "hash": "bc568f22ef7bb773",
+    "hash": "8f587416bd1af4ee",
     "status": "verified",
-    "verified_by": "Cloud 2026-09-24, re-verify after the pump-inspection addition. The independent AI Studio lane ran after publication (JOB-20260924-1415, recorded in _specs section 13) and confirmed the SHURflo, Norcold, Suburban and coach-maker citations against the documents. Its two contradicted findings were both checked by fetching the documents and both are wrong: the Suburban manual does specify the 1-1/16 inch socket (split across its two-column layout) and PPI TR-52 reads 'piping', not 'tubing'. No change was made for either. Its one substantive finding, that a split pump housing or strainer sprays the moment the pump test starts, is now on the page above the test. Its six sentence-class quotations were invented and appear nowhere in the file; the next job request forbids that.",
-    "verified_at": "2026-09-24",
+    "verified_by": "Cloud 2026-09-26, second independent pass: Qwen, job 20260926-2251-RV-FREEZE-R2, VERDICT CORRECTIONS APPLIED on three of the four 09-24 corrections. It confirmed the 120-volt warning, the softened tap diagnosis and the shore-water sentence as FIXED, quoting each, and all three quotations are on the live page mechanically (check-review-quotes.py: 3 on the page, 0 staged-only, 0 nowhere). THE FOURTH IS NOT COVERED: the lane reported that its file read was truncated before the water heater section and wrote NONE FOUND for that correction rather than inventing a quotation, which is the honest answer and means the new thaw-check paragraph has no independent verdict. It is covered only by this page's own claims list. It also stated that the corrections broke nothing.",
+    "verified_at": "2026-09-26",
     "sources": [],
     "spec": "_specs/freeze-damage-triage.md",
     "spec_waived": false,
@@ -4185,11 +4185,119 @@
     ]
   },
   "guides/rv-toilet-not-flushing.html": {
-    "hash": "c84242e3707941f9",
-    "status": "unverified",
-    "verified_by": null,
-    "verified_at": null,
-    "sources": []
+    "hash": "7584e09041ab0da2",
+    "status": "verified",
+    "verified_by": "Cloud 2026-09-26, FIRST independent pass on record: Qwen, job 20260926-2252-RV-TOILET-R2, VERDICT CORRECTIONS APPLIED. All three corrections from the 09-24 review are confirmed FIXED, each quoted, and all four of its quotations are on the live page mechanically (4 on the page, 0 staged-only, 0 nowhere): the pump-off and pressure-bleed step now precedes the supply-line instruction in both the body and the FAQ, the tank-and-vent first step is in place and the claim about a blocked vent is confirmed as written, and the Thetford attribution reads as fact. Nothing the corrections touched was broken.",
+    "verified_at": "2026-09-26",
+    "sources": [],
+    "spec": "_specs/rv-toilet-not-flushing.md",
+    "spec_waived": false,
+    "claims": [
+      {
+        "id": "C1",
+        "text": "a toilet that will not hold water is diagnosed in the maker's own order: check for and remove debris from the blade seal track, check blade seal compression with the mechanism, and",
+        "source": "Thetford's permanent toilet owner's manual, quoted",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C2",
+        "text": "a poor flush is first a pedal problem: \"Pedals or hand levers must be held fully open during flush\"",
+        "source": "same manual, quoted",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C3",
+        "text": "a good flush should be obtained within 2 to 3 seconds",
+        "source": "same manual, quoted",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C4",
+        "text": "if the poor flush persists, remove the water supply line and check the flow rate, which should be at least ten quarts (9.5 litres) per minute",
+        "source": "same manual, quoted",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C5",
+        "text": "a pedal or hand lever that is harder than normal takes a light film of Thetford drain valve lubricant or silicone spray on the blade or ball",
+        "source": "same manual, quoted",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C6",
+        "text": "SAFETY/CAUTION: no spray lubricant other than silicone, because other sprays damage the mechanism",
+        "source": "same manual, quoted",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C7",
+        "text": "a leak at the back of the toilet is the water supply line connection at the water valve: resecure or retighten, and if the leak persists from the valve, replace it",
+        "source": "same manual, quoted",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C8",
+        "text": "a vacuum breaker that leaks while flushing is replaced, or the water module with it, depending on the model",
+        "source": "same manual, quoted",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C9",
+        "text": "a leak between the closet flange and the toilet is the flange nuts, then flange height (the maker's spacers set it 7/16 inch above the floor), then the flange seal",
+        "source": "same manual, quoted",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C10",
+        "text": "the names of the parts involved, as the maker lists them: seat and cover, vacuum breaker, flush tube, flush nozzle assembly, water module, water valve",
+        "source": "same manual's parts list",
+        "state": "READ",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C11",
+        "text": "three faults, three answers, and the order to test them in",
+        "source": "our own structure",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C12",
+        "text": "black-water hygiene: anything opened here is a sewage path, so gloves and a clean-up plan",
+        "source": "our own instruction",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C13",
+        "text": "what the work costs, ordered relative to itself",
+        "source": "convention; relative ordering only",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      }
+    ]
   },
   "guides/rv-towing-capacity.html": {
     "hash": "f4543f2a7458136e",
