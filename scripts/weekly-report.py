@@ -210,6 +210,32 @@ def ga4_pages(token, prop, start, end, limit=10):
              r["metricValues"][1]["value"]) for r in data.get("rows", [])], None
 
 
+def ga4_channels(token, prop, start, end, limit=12):
+    """Sessions by default channel group, which is where AI-assistant referrals show up.
+
+    WHY THIS EXISTS. Google documents "AI Assistant" as a DEFAULT channel group and defines it as
+    the channel "by which users arrive at your site from sources like ChatGPT, Gemini, Deepseek,
+    Copilot, or Grok" -- verified in Google's own Analytics help on 2026-09-27. It is free, it is
+    automatic, and it is the only first-party measurement of whether AI answers are sending anyone
+    here. Bing reports that as AI Performance and Google reports it in Search Console, but BOTH of
+    those are UI-and-CSV only with no API; this one comes through the Data API.
+
+    Note the split Google makes, because it is easy to misread: AI-answer traffic from GOOGLE
+    (AI Overviews and AI Mode) is NOT in this channel -- it sits under Organic Search. So a zero
+    here does not mean nobody arrived from an AI answer.
+    """
+    body = {"dateRanges": [{"startDate": start.isoformat(), "endDate": end.isoformat()}],
+            "dimensions": [{"name": "sessionDefaultChannelGroup"}],
+            "metrics": [{"name": "sessions"}, {"name": "totalUsers"}],
+            "orderBys": [{"metric": {"metricName": "sessions"}, "desc": True}],
+            "limit": limit}
+    data, err = ga4_run(token, prop, body)
+    if err:
+        return [], err
+    return [(r["dimensionValues"][0]["value"], r["metricValues"][0]["value"],
+             r["metricValues"][1]["value"]) for r in data.get("rows", [])], None
+
+
 def top_rows(gsc, token, site, dimension, start, end, limit=10):
     payload = gsc.query(token, site, {
         "startDate": start.isoformat(), "endDate": end.isoformat(),
@@ -379,6 +405,8 @@ def build(args):
     ga_token = gsc.access_token(creds, gsc.GA_SCOPE)
     tot, err = ga4_summary(ga_token, args.ga4_property, ga_start, today)
     ga4_token = ga_token
+
+
     if err:
         add("GA4 unavailable: %s" % err)
         add("")
@@ -430,6 +458,32 @@ def build(args):
         add("No 404 hits in this window, so no dead link has been followed.")
     add("")
 
+    add("### How people arrive (GA4 channel groups, live to today)")
+    add("")
+    add("`AI Assistant` is Google's own channel for arrivals from ChatGPT, Gemini, Deepseek, Copilot")
+    add("and Grok. It EXCLUDES Google's own AI Overviews and AI Mode, which sit under Organic")
+    add("Search, so a zero here is not proof that no AI answer sent anyone.")
+    add("")
+    if ga_token and args.ga4_property and ga_start:
+        chan, cerr = ga4_channels(ga_token, args.ga4_property, ga_start, today)
+        if cerr:
+            add("GA4 channels unavailable: %s" % cerr)
+        elif not chan:
+            add("GA4 returned no channel rows for this window.")
+        else:
+            add("| channel | sessions | users |")
+            add("|---|---|---|")
+            for name, sess, users in chan:
+                add("| %s | %s | %s |" % (name, sess, users))
+            ai = [(n, x, u) for n, x, u in chan if "assistant" in n.lower()]
+            add("")
+            if ai:
+                add("**AI assistant referrals: %s session(s) from %s.**" % (ai[0][1], ai[0][0]))
+            else:
+                add("**No AI assistant referrals in this window.**")
+    else:
+        add("No GA4 credentials reached this shell, so this section is skipped.")
+    add("")
     add("### Bing (the index Copilot reads)")
     add("")
     bing_key = args.bing_token
