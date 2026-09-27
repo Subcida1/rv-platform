@@ -89,6 +89,19 @@ layout, mobile cramping, colour, screenshots, all over CDP.
   "Last reviewed" line and the pinned tag at 11.5 px, and one 40 px input). Calling it broken without
   re-running it is the same error as calling a link dead without opening it in a browser.
 
+**`audit-mobile.mjs` measured at all three widths, 2026-09-27 (141 renders): ZERO failures.**
+Six tap targets in the 32-43px warn band and 78 small-type warns in three classes:
+
+| class | count | verdict |
+|---|---|---|
+| `p.reviewed` at 11.5px — the "Last reviewed" line | 72 renders | **by design.** 11.5px is the house size for de-emphasised meta, used in nine places: badges, labels, tags, routes, the reviewed line. De-emphasising it is the point |
+| `div.man-pinned-tag` at 11.5px — "Start here" | 6 renders | same house size, same reason |
+| `input 137x40` — a calculator control | 3 renders | **not a fault.** WCAG 2.5.8's floor is 24px and this is 40; the 44px figure is the comfortable target, not the requirement |
+
+So the audit's 12px floor is a PROMPT about a size that was chosen deliberately, in the same family as
+`house-style.py`'s review items. Do not "fix" it by nudging nine styles to satisfy a threshold, and do
+not read the 78 as a backlog. What the run is actually for is the FAIL column, and it is zero.
+
 **These audits need their own Chrome debug ports and fail silently without them** — 9340 for render
 and mobile, 9380 for colour. Two drivers on one page target corrupt both runs, which is why they
 cannot share, but the failure mode is a connection error with no explanation.
