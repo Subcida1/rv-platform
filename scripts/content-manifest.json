@@ -532,10 +532,10 @@
     ]
   },
   "guides/rv-12-volt-problems.html": {
-    "hash": "c242c774ea452a8f",
-    "status": "verified",
-    "verified_by": "AI Studio lane (Gemini 3.8 Flash) through the AUTOLOOP, four rounds on 2026-09-23, all unattended: the first pass found the sourcing appendix and the number-set verification, the confirm found two FIX-INCOMPLETE items including a false claim in my own summary, and the closing round confirmed all six changes with no regressions",
-    "verified_at": "2026-09-23",
+    "hash": "8261e38270bc6e62",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
     "sources": [
       "inbox/REVIEW-REQUEST-20260923-0422-rv-12-volt-problems.md",
       "outbox/REVIEW-20260923-0422-rv-12-volt-problems.md",
@@ -773,7 +773,9 @@
         "by": null,
         "at": null
       }
-    ]
+    ],
+    "invalidated_by": "mechanical change",
+    "invalidated_at": "2026-09-27"
   },
   "guides/rv-air-conditioner-not-cooling.html": {
     "hash": "b683f27e7f2e3a73",
@@ -1197,10 +1199,10 @@
     "sources": []
   },
   "guides/rv-furnace-not-working.html": {
-    "hash": "63a5acf4057fb7c4",
-    "status": "verified",
-    "verified_by": "Cloud 2026-09-27, re-verification pass: Gemini, job 20260927-0200-RV-rv-furnace-not-working-REVERIFY2, VERDICT CORRECTIONS NEEDED. It confirmed the heading edit kept the meaning, quoting it correctly (check-review-quotes.py: on the page). TWO FINDINGS WERE REAL AND ARE APPLIED. (1) The H2 read 'The sail switch: The most common single fault' while the body says the usual suspects are the sail switch AND propane, so the heading asserted a ranking the page does not support; it now reads 'where to look first'. (2) The page sends the reader to probe the control board and never warned to take the 12 volts out first; a probe slipping off a board pin onto the chassis is a dead short through the board, and a caution is now in the power-check section. One finding was weak (multi-pin harness probing, partly covered). All six sentence classes returned NONE FOUND. NOTE ON MY OWN CHECK: I first tested finding (1) with a sentence-level grep and concluded it was fabricated, because 'hinge'-style failures had made me wary. The claim is in a HEADING, and a sentence grep does not see headings. The lane was right and my check was wrong.",
-    "verified_at": "2026-09-27",
+    "hash": "f9667d11896fde6d",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
     "sources": [],
     "spec": "_specs/rv-furnace-not-working.md",
     "spec_waived": false,
@@ -1629,7 +1631,9 @@
         "by": "Ty ruled 2026-09-23: the reviewed line stays as provenance and is now fine print, not a diligence claim",
         "at": "2026-09-23"
       }
-    ]
+    ],
+    "invalidated_by": "mechanical change",
+    "invalidated_at": "2026-09-27"
   },
   "guides/rv-fuse-keeps-blowing.html": {
     "hash": "5965be1aad8c7336",
@@ -2955,7 +2959,7 @@
     "sources": []
   },
   "guides/rv-refrigerator-not-cooling.html": {
-    "hash": "3e5480fc78634784",
+    "hash": "05b2e0a129875b0e",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -4528,7 +4532,7 @@
     "sources": []
   },
   "guides/rv-water-heater-not-heating.html": {
-    "hash": "bce1fc5fa08fafd5",
+    "hash": "72770fbd2397ee1b",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
