@@ -67,7 +67,10 @@ if os.environ.get("ORIGINRV_GSC_IPV6") != "1":
     socket.getaddrinfo = _ipv4_first
 
 TOKEN_URL = "https://oauth2.googleapis.com/token"
-SCOPE = "https://www.googleapis.com/auth/webmasters.readonly"
+# Full scope, not readonly, since 2026-09-27. Submission returned "Insufficient Permission" and
+# the cause was this line rather than the account: a readonly token can never PUT a sitemap.
+# Read commands are unaffected by the wider scope.
+SCOPE = "https://www.googleapis.com/auth/webmasters"
 GA_SCOPE = "https://www.googleapis.com/auth/analytics.readonly"
 API = "https://www.googleapis.com/webmasters/v3"
 DEFAULT_SITE = "sc-domain:originrv.com"
@@ -321,14 +324,29 @@ def cmd_pull(args):
 
 
 def cmd_sitemaps(args):
-    """Sitemap submission state. With a young property this is the actionable
-    question: whether Google has fetched the sitemap at all."""
+    """Sitemap submission state, and now submission itself.
+
+    Reading the state was all this did until 2026-09-27, which is odd for the one command whose own
+    docstring calls this "the actionable question". When the answer is a sitemap six days stale, the
+    tool ought to re-submit it rather than print an instruction to go and do it by hand.
+    """
     creds = load_credentials(key_path(args.key))
     token = access_token(creds)
     resp = api_get(token, "sites/%s/sitemaps" % urllib.parse.quote(args.site, safe=""))
     problem = explain(resp, args.site)
     if problem:
         sys.exit(problem)
+    if getattr(args, "submit", False):
+        feed = urllib.parse.quote(getattr(args, "feed", "/sitemap.xml"), safe="")
+        put = requests.put(
+            "https://www.googleapis.com/webmasters/v3/sites/%s/sitemaps/%s"
+            % (urllib.parse.quote(args.site, safe=""), feed),
+            headers={"Authorization": "Bearer " + token}, timeout=(10, 60))
+        if put.status_code in (200, 204):
+            print("resubmitted %s (HTTP %s)" % (getattr(args, "feed", "/sitemap.xml"), put.status_code))
+        else:
+            print("resubmit failed: HTTP %s %s" % (put.status_code, put.text[:200]))
+        return
     maps = resp.json().get("sitemap", [])
     if not maps:
         print("No sitemap submitted for %s." % args.site)
@@ -578,7 +596,10 @@ def main():
 
     sub.add_parser("selftest", help="offline proof that JWT signing works").set_defaults(func=cmd_selftest)
     sub.add_parser("properties", help="list properties this credential can see").set_defaults(func=cmd_properties)
-    sub.add_parser("sitemaps", help="sitemap submission and fetch state").set_defaults(func=cmd_sitemaps)
+    _sm = sub.add_parser("sitemaps", help="sitemap submission and fetch state")
+    _sm.add_argument("--submit", action="store_true", help="re-submit the sitemap to Search Console")
+    _sm.add_argument("--feed", default="/sitemap.xml", help="sitemap path, default /sitemap.xml")
+    _sm.set_defaults(func=cmd_sitemaps)
 
     audit = sub.add_parser("audit", help="inspect every published URL and report coverage")
     audit.add_argument("--sitemap", default="sitemap.xml")
