@@ -1079,3 +1079,44 @@ so the page was counted in the 24. Reset to `unverified` with its 10 claims kept
 verified, 25 unverified, 2 drifting**, and the two drifting are the freeze and roof pages whose rechecks are
 in the table above. `start-here` must not be re-marked until the queued pass returns.
 
+
+---
+
+## 16. Why four review jobs sat unsent for two days, and what actually released them (2026-09-26)
+
+**The symptom.** Five review jobs were written on 09-24 evening. Four were never sent, and no reply ever came
+back for them. All six lanes reported `idle - prompt already sent` and looked healthy while the queue held work.
+
+**What was not the cause, checked first.** None of the five job files was in `queue/consumed.json`. The ledger
+had 76 entries and not one matched any of the five, on either the raw or the trimmed file text. So the bridge had
+never consumed them, and a suppressed-by-content story is ruled out.
+
+**What released them.** Fresh filenames with a small content change, written in the current convention, and the
+lanes took them within a minute: Qwen picked the roof recheck, AI Studio the start-here review, Gemini took a
+second copy of start-here. **So the suppression was keyed on the job's NAME, not on its content** — which is the
+bridge's own documented behaviour, because `pickJobFromDir` skips any name already in the lane's `sentJobs`
+ledger without ever reading the file.
+
+**How the names got in there is not established and is recorded as unverified.** The likely route is the
+filename-skip already documented on 09-24, where the loop recorded a job's name as sent while its content never
+went out. What is established is the cure: **renaming releases a job whose name is stuck, and the loop must be
+scanning for that to work.** The 09-24 note says the rename was tried and *"the loop still reported idle with
+nothing picked up"* — correct at the time, and the right cure applied against the wrong fault. The loop was not
+walking the directory at all that night. Do not read that note as evidence that renaming does not work.
+
+**Two lane-level facts from the same hour, both worth knowing before the next round:**
+
+- **AI Studio's capture hit its ceiling on the start-here job** — 20 attempts, 259 s in flight, then the flight
+  was released and a `NO ANSWER WAS CAPTURED` notice was written to the reply path. That notice is not a reply
+  and `scripts/check-review-quotes.py` has nothing to say about it; the file must be read to see it. The job was
+  duplicated onto Gemini with its own reply path rather than waited on, and the AI Studio lane re-submitted the
+  same job on its own afterwards.
+- **The ledger is keyed on the trimmed job text**, confirmed against live sends: the roof job is `5g32sl-2762` in
+  the ledger and the file is 2763 bytes, the one-byte difference being the trailing newline `toolText().trim()`
+  removes. Worth knowing because a hash computed from the raw file will not match it, which is a false
+  "not consumed" that reads exactly like a job that never went out.
+
+**The four jobs, as issued on 09-26:** `20260926-2250-RV-ROOF-R2` (Qwen, returned, verdict recorded),
+`20260926-2251-RV-FREEZE-R2` (Qwen), `20260926-2252-RV-TOILET-R2` (Qwen), `20260926-2253-RV-STARTHERE-R1`
+(AI Studio, no capture) and `20260926-2300-RV-STARTHERE-R1B` (Gemini, the duplicate). The four 09-24 originals
+are retired into `claude-bridge/queue/jobs/superseded-20260926/`, which the queue scan ignores.

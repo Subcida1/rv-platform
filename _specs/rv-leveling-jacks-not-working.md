@@ -197,3 +197,30 @@ for sentence classes, which is why an independent reader is the only thing that 
 had never had one.
 
 **Rejected:** the *"Last reviewed"* fine print again, and *"the expensive shape of this fault"* as invented idiom.
+
+## 13. The recheck that came back against the wrong file, and its adjudication (2026-09-26)
+
+**The reply was in the outbox for two days and was never read.** `JOB-20260924-2103` was answered at 01:15 on
+09-25; the overnight session that would have read it was the one spent on the bridge instead. It was read on
+09-26 and is recorded here so it is not mistaken for a list of findings.
+
+**It is not a list of findings, because the job handed the lane the wrong file.** The staged copy the lane was
+given, `claude-bridge/staged/guides__rv-leveling-jacks-not-working.html`, was written at 16:32 on 09-24. The page
+was corrected at 20:15, in the same session, from the first pass's own findings. So the reply describes the
+**pre-correction** page: its four quotations attributed to the page are all verbatim from that copy, and two of
+them, `the majority of the calls` and `which half of this page you need`, are sentences the first pass had
+already deleted from the live page. **The lane quoted its file exactly.** Four quotations that could not be
+found on the page are not four inventions; they are one stale stage.
+
+**Adjudicated, item by item, against the live page and the documents:**
+
+| the reply's finding | verdict |
+|---|---|
+| a prevalence claim, *the majority of the calls* | **already fixed.** Deleted by the first pass at 20:15; the phrase is on no live page |
+| a self-reference, *which half of this page you need* | **already fixed.** The live sentence reads *which half of the work you need*, which is not a self-reference |
+| the hydraulic override steps are not actually given | **rejected, per a decision already recorded.** C14 says the maker's override procedures are linked rather than reproduced in half, because the drive point, the tool and the direction differ per system. The reply's proposed generic steps would be wrong on at least one of the three |
+| *Ground Control 3.0 requires a minimum of 12.75V DC* may be wrong, because a rested lead-acid battery sits near 12.6V | **rejected, and checked against the document.** Lippert's master manual reads, verbatim, *Ground Control 3.0 requires a minimum of 12.75V DC from the battery for proper operation*, and a second system reads *Level-Up requires a minimum of 12.75 VDC from the battery for proper operation*. The figure is the maker's and the page uses it for the right thing: charge the battery first, because it is the cheapest test on the page. The reply could not open the manual. This is the same false-positive class as everything else attributed to a lane here |
+
+**No page change follows from this reply.** The page's verdict stands, its hash already covers the live text, and
+what the reply actually demonstrates is the standing rule in SITE-TODO section 15: a stale stage makes a reply
+wrong in both directions, and the direction that matters is when a lane's accurate quotation is read as a lie.
