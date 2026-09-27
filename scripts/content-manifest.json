@@ -388,7 +388,7 @@
     ]
   },
   "guides/index.html": {
-    "hash": "cf463c04d5e4addd",
+    "hash": "cc281c0844e18b4c",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -2933,6 +2933,13 @@
       }
     ]
   },
+  "guides/rv-propane-furnace-wont-light.html": {
+    "hash": "64dd8e33c79cd975",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
+  },
   "guides/rv-refrigerator-not-cooling.html": {
     "hash": "3e5480fc78634784",
     "status": "unverified",
@@ -5195,7 +5202,7 @@
     ]
   },
   "index.html": {
-    "hash": "6142213eb07aba16",
+    "hash": "65cedc8cec019ad3",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,

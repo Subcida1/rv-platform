@@ -29,7 +29,8 @@
       "rv-battery-not-charging",
       "rv-toilet-not-flushing",
       "rv-air-conditioner-not-cooling",
-      "rv-sewer-smell"
+      "rv-sewer-smell",
+      "rv-propane-furnace-wont-light"
     ]
   }
 }
