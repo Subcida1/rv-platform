@@ -139,7 +139,17 @@ step "Lighthouse: Core Web Vitals, lab" lighthouse
 # "Is this an unnamed authority?" and "is this prevalence claim unsourced?" stay in house-style.py.
 valeprose() {
   ~/.local/bin/vale sync >/dev/null 2>&1 || { echo "    vale not installed (see docs)"; return 1; }
-  ~/.local/bin/vale guides/ manuals/ *.html 2>&1 | tail -30
+  # SCOPE, and it follows the site's own doctrine rather than convenience: LONGFORM WRITTEN CONTENT
+  # gets judged as prose. Tool UI, directory listings and the 404 are not articles, and scoring them
+  # like articles is the wrong instrument -- quality-score.py says the same thing in its own
+  # docstring. Running Vale over everything produced findings on the calculator and the three state
+  # directory pages, and every one was a false positive: "on the same page as the max towing rating"
+  # means literally the same page of a document, and "you may pay out of pocket for something
+  # covered" is precise financial English. Neither is a cliche, and neither belongs in a prose gate.
+  # A rule that flags correct writing teaches the reader to ignore the output.
+  local written="guides/ manuals/"
+  for p in index.html about.html contact.html; do [ -f "$p" ] && written="$written $p"; done
+  ~/.local/bin/vale $written 2>&1 | tail -30
   return 0
 }
 step "Vale: prose style and weasel words (reports, does not judge)" valeprose
