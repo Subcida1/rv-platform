@@ -21,7 +21,7 @@ No secrets, keys, tokens or customer details in here. This file is committed.
 - expect: no search effect. The value is that a guide is now worth printing, which is the prerequisite for the two things the gap analysis put at the top: the checklists and the maintenance calendar, which are the pages that earn repeat visits and inbound links. If nothing measurable changes, the next question is whether anyone prints at all, and the honest answer is that this is groundwork rather than a lever.
 - files: assets/css/style.css, assets/js/site.js, scripts/smoke-test.js
 - tags: style
-- commit: 845ee9d (pushed)
+- commit: 8f0b640 (pushed)
 - deployed: 2026-09-28T07:01:47+00:00
 
 ### copy: Byline moved to OriginRV; Ty's name is on the About page only, as Ty B.
@@ -55,6 +55,22 @@ No secrets, keys, tokens or customer details in here. This file is committed.
 - tags: accuracy
 - commit: 73ea72e (pushed)
 - deployed: 2026-09-28T05:30:48+00:00
+
+### style: A directory page prints as a directory: the interactive finder is hidden on paper, and the region list is what prints
+- why: The print stylesheet landed tonight for the guide pages, and the three directory pages were not covered because they were being rebuilt in parallel. Measured in print media at 794px: the finder printed as route buttons, a location box, and a ranked grid showing six of the state's listings because no location had been typed - controls that cannot be pressed plus a sixth of the data - and the claim form printed as a form with no submit button. The region sections below the finder carry every business in the state.
+- expect: No search effect. The value is the same as the print stylesheet's: a directory page is now worth printing, which is what a printed RV directory is for. Check that the screen layout is untouched - measured at 1280, 1024 and 393, 36 rows, no clipping, no sideways scroll - and that no page outside the three state pages changed, since the rule is scoped with body[data-state].
+- files: assets/css/style.css, directory/california.html, directory/oregon.html, directory/washington.html
+- tags: style, directory
+- commit: 326092b (pushed)
+- deployed: 2026-09-28T01:01:05-07:00
+
+### directory: Directory pipeline rebuilt: a coordinate table per state from the Census Gazetteer, listings in JSON, and every state page gains a static region list of all its businesses
+- why: Ranking is distance-based, so a business with no coordinate cannot be placed at all, and the table was Oregon-shaped: one file served all three state pages, so the California page ranked against Oregon's map. The belt of out-of-state places had been widened by hand twice (41.4 to 39.8 to 38.0 degrees) until Northern California fitted inside Oregon's file, which is the wall for fifty states. Separately, hand-editing 300 KB of JavaScript shards had stopped working at a few hundred records, and the pages carried no crawlable listing text at all - the only server-side copy of a business was inside JSON-LD. Measured before rebuilding: all 36 California listings did resolve, but Fresno, Bakersfield, Los Angeles, San Diego and ZIP 90001 returned 'We could not place', because the table stopped at 38N, and a Eugene ZIP typed on the California page reported its results 'anywhere in Oregon'.
+- expect: Within 4 weeks, directory URLs pick up impressions on queries that name a town, because the state pages now contain every business in plain HTML where before they had only structured data and script-rendered cards. No click expectation from this alone: the site's constraint is authority and time, not content. Watch that the existing foothold does not move - 'mobile rv repair' sits at position 8 and the towing calculator ranks 59-75 - and that the 36 California listings keep ranking now that they are read against their own state's table rather than Oregon's.
+- files: _data/listings/california.json, _data/listings/oregon.json, _data/listings/washington.json, _data/place-aliases.json, scripts/build-listings.py, scripts/build-coords.py, scripts/place_names.py, assets/js/finder.js, assets/js/coords-ca.js, assets/js/coords-or.js, assets/js/coords-wa.js, directory/california.html, directory/oregon.html, directory/washington.html, scripts/verify.py, scripts/ci.sh
+- tags: directory, infra
+- commit: 2276f14 (pushed)
+- deployed: 2026-09-28T01:01:00-07:00
 
 ## 2026-09-24
 
