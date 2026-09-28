@@ -51,9 +51,13 @@ CLAIMS = {
           # "Auto and RV Repair" IS a claim to repair the vehicle, and the first version of
           # this pattern did not list it, so Florence RV and Pacific Crest were flagged for
           # missing words their sites use.
-          r"auto(motive)? repair|truck repair|diesel (repair|mechanic)"),
+          r"auto(motive)? repair|truck repair|diesel (repair|mechanic)|"
+          # "roadside assistance for light mechanical" is a claim to work on the vehicle, and
+          # "emergencies" is the plural a site actually writes: the first version of these two
+          # patterns matched neither, so two correct records were flagged for words they carry.
+          r"light mechanical|\bmechanical work"),
     "e": ("emergency mobile repair",
-          r"\b24[/\s-]*7\b|\bemergency\b|after[- ]hours|same[- ]day|\burgen(t|cy)\b"),
+          r"\b24[/\s-]*7\b|\bemergenc(y|ies)\b|after[- ]hours|same[- ]day|\burgen(t|cy)\b"),
     # The first version of these patterns was too literal and flagged correct records:
     # Otto's says "come right to your door or site" and Pro RV says "a full service RV
     # repair and maintenance facility", and neither matched. Measured 2026-09-28 by opening
@@ -129,13 +133,55 @@ def sentences_around(text, pattern, limit=2, window=170):
     return out
 
 
+# One level of sub-pages, because a claim lives where the business put it, not necessarily on
+# the home page. Measured 2026-09-28: RVFix's emergency line is "Sunday only for emergencies"
+# on its services page and All Around's is "24hr Emergency Service" away from its home page, so
+# both were reported as missing the very words they carry. The same lesson this project has
+# recorded for coverage claims, applied to tags.
+SUBPAGE = re.compile(r"href=[\"']([^\"']*)[\"'][^>]*>([^<]{0,60})", re.I)
+WANT = re.compile(r"service|about|contact|faq|question|repair|emergency|rate|hour", re.I)
+
+
+def site_text(url):
+    """The home page, plus up to three sub-pages whose link text or path suggests a claim."""
+    text, err = fetch_site(url)
+    if text is None:
+        return None, err
+    host = re.sub(r"^https?://", "", url).split("/")[0]
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": UA})
+        with urllib.request.urlopen(req, timeout=25) as r:
+            html = r.read().decode("utf-8", "replace")
+    except Exception:
+        return text, None
+    seen, pages = set(), []
+    for href, label in SUBPAGE.findall(html):
+        if href.startswith(("mailto:", "tel:", "#", "javascript:")):
+            continue
+        if host not in href and href.startswith("http"):
+            continue
+        if WANT.search(label) or WANT.search(href):
+            full = href if href.startswith("http") else url.rstrip("/") + "/" + href.lstrip("./")
+            if full in seen or full.rstrip("/") == url.rstrip("/"):
+                continue
+            seen.add(full)
+            pages.append(full)
+        if len(pages) >= 3:
+            break
+    for u in pages:
+        more, _ = fetch_site(u)
+        if more:
+            text += " " + more
+    return text, None
+
+
 def check(rec):
     if not rec.get("u"):
         # Two listings deliberately carry no URL: their sites are gone and the phone was
         # verified by other means. That is a recorded decision, not a gap.
         return {"n": rec["n"], "err": None, "found": {}, "missing": [],
                 "unconfirmed": [], "parked": False, "nosite": True}
-    text, err = fetch_site(rec.get("u"))
+    text, err = site_text(rec.get("u"))
     out = {"n": rec["n"], "err": err, "found": {}, "missing": [], "unconfirmed": [],
            "parked": False}
     if text is None:
