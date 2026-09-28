@@ -63,7 +63,8 @@ CLAIMS = {
     "center": ("you drive it in",
                r"\bshop\b|\bbays?\b|\bfacility\b|our (location|facility|shop)|"
                r"bring (it|your rv|your trailer|your unit)|drop[- ]?off|in[- ]shop|"
-               r"\bservice cent(er|re)\b|drive[- ]in|\blifts?\b"),
+               r"\bservice cent(er|re)\b|drive[- ]in|\blifts?\b|\bstore\b|"
+               r"\bpremises\b|visit us|come (in|by)|walk[- ]in"),
 }
 
 
@@ -128,10 +129,11 @@ def check(rec):
     if not rec.get("u"):
         # Two listings deliberately carry no URL: their sites are gone and the phone was
         # verified by other means. That is a recorded decision, not a gap.
-        return {"n": rec["n"], "err": None, "found": {}, "missing": [], "parked": False,
-                "nosite": True}
+        return {"n": rec["n"], "err": None, "found": {}, "missing": [],
+                "unconfirmed": [], "parked": False, "nosite": True}
     text, err = fetch_site(rec.get("u"))
-    out = {"n": rec["n"], "err": err, "found": {}, "missing": [], "parked": False}
+    out = {"n": rec["n"], "err": err, "found": {}, "missing": [], "unconfirmed": [],
+           "parked": False}
     if text is None:
         return out
     if PARKED.search(text):
@@ -150,8 +152,18 @@ def check(rec):
         hits = sentences_around(text, pat)
         if hits:
             out["found"][key] = hits
-        else:
+        elif key in ("r", "e"):
+            # A missing roadside or emergency claim is a real question: those tags assert
+            # something specific and the site should be saying it.
             out["missing"].append("%s (%s)" % (key, label))
+        else:
+            # A missing TYPE word is not evidence of a wrong type. Five records were
+            # hand-checked on 2026-09-28 after this flagged them (Otto's, Pro RV, Jefferson's
+            # Overland, McColloch's, FIN Coachworks) and all five were correct; the sites
+            # simply say it in words nobody would have guessed ("come right to your door",
+            # "a full service RV facility", "store"). Absence checks are weak and presence
+            # checks are strong, so this one is reported as unconfirmed rather than flagged.
+            out["unconfirmed"].append("%s (%s)" % (key, label))
     if not re.search(r"\brv\b|\brvs\b|motorhome|travel trailer|fifth wheel|recreational vehicle",
                      text, re.I):
         out["missing"].append("not obviously RV-specific")
@@ -211,6 +223,9 @@ def main():
                 flagged += 1
             else:
                 clean += 1
+            for u in res.get("unconfirmed") or []:
+                print("  unconfirmed %-38s the site does not say it in words we match: %s"
+                      % (res["n"], u))
             if write:
                 ev = rec.setdefault("evidence", {})
                 ev["checked"] = rec.get("u")

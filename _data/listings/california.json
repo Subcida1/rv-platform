@@ -2893,8 +2893,10 @@
         "type_quote": "Call(619) 390-2305, and let our experts come to you!",
         "emergency_quote": null,
         "roadside_quote": "Experience peace of mind with San Diego Pacific Crest Services' 24/7 emergency roadside assistance near me for your RV in San Diego County, CA ... We specialize in the mechanical aspects of your RV, focusing on the engine, transmission, and brakes.",
-        "bar_number": null
-      }
+        "bar_number": null,
+        "correction": "2026-09-28: the roadside tag is supported (\"24/7 Emergency Roadside Assistance & Mobile Repairs\"), and the same page says \"We specialize in class 6, 7 & 8 trucks and trailers\", so the limitation is now stated. Whether a heavy-duty truck company belongs in an RV-specific directory is the same open question as Skinner's Truck Repair."
+      },
+      "spec": "Heavy-duty truck shop; RVs taken as vehicles, not coach systems"
     },
     {
       "n": "RV Specialists",
@@ -3344,7 +3346,7 @@
       "p": "(661) 775-8375",
       "u": "https://elitecoachrv.com/",
       "t": "both",
-      "e": true,
+      "e": false,
       "r": false,
       "d": "Elite Coach Works RV is a full-service RV body, paint and collision facility with locations in Valencia and Castaic. It handles paint, body and collision work, permanent roofs, repair and service, brake repairs, and appliance and system repairs on Class A, B and C motorhomes, travel trailers, fifth wheels and Living Vehicles. The site says it offers emergency and same-day service with a mobile service team that provides on-site repairs at the customer's location and serves Valencia, Ventura and the San Fernando Valley.",
       "g": [
@@ -3369,8 +3371,10 @@
         "type_quote": "A Full-Service RV Body, Paint, & Collision Facility; Our mobile service team is equipped to handle a wide range of RV issues, providing convenient on-site repairs at your location.",
         "emergency_quote": "We offer emergency and same-day maintenance services to address urgent repairs and get you back on the road as quickly as possible.",
         "roadside_quote": null,
-        "bar_number": null
-      }
+        "bar_number": null,
+        "correction": "2026-09-28: was tagged emergency mobile repair. Its own site has no emergency, 24/7 or after-hours wording anywhere and describes a body, paint and collision facility, so the tag was asserted rather than sourced. Removed, and the scope limitation now states what it actually does."
+      },
+      "spec": "Body, paint and collision only"
     },
     {
       "n": "El Toro RV Service",

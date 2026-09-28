@@ -939,7 +939,7 @@ window.RV_LISTINGS_CA = [
    "brakes"
   ],  "base": "el cajon",  "areas": [
    "san diego county"
-  ],  "region": "San Diego County",  "reg": "san-diego"
+  ],  "region": "San Diego County",  "spec": "Heavy-duty truck shop; RVs taken as vehicles, not coach systems",  "reg": "san-diego"
  },
  {  "n": "RV Specialists",  "c": "San Diego, CA",  "p": "(858) 455-9898",  "u": "https://myrvspecialists.com/",  "t": "center",  "e": false,  "r": false,  "d": "RV Specialists is a family owned RV service center at 8616 Miramar Place in San Diego that has operated since 1987. It performs RV service, repair, slide repair, collision repair and bodywork, and sells propane on site. It states that all repairs are done at its Miramar facility and that it does not offer mobile RV repair.",  "g": [
    "shop",
@@ -1117,7 +1117,7 @@ window.RV_LISTINGS_CA = [
    "center"
   ],  "base": "agoura hills",  "areas": [],  "region": "Ventura & LA Counties",  "reg": "la-county"
  },
- {  "n": "Elite Coach Works RV",  "c": "Valencia, CA",  "p": "(661) 775-8375",  "u": "https://elitecoachrv.com/",  "t": "both",  "e": true,  "r": false,  "d": "Elite Coach Works RV is a full-service RV body, paint and collision facility with locations in Valencia and Castaic. It handles paint, body and collision work, permanent roofs, repair and service, brake repairs, and appliance and system repairs on Class A, B and C motorhomes, travel trailers, fifth wheels and Living Vehicles. The site says it offers emergency and same-day service with a mobile service team that provides on-site repairs at the customer's location and serves Valencia, Ventura and the San Fernando Valley.",  "g": [
+ {  "n": "Elite Coach Works RV",  "c": "Valencia, CA",  "p": "(661) 775-8375",  "u": "https://elitecoachrv.com/",  "t": "both",  "e": false,  "r": false,  "d": "Elite Coach Works RV is a full-service RV body, paint and collision facility with locations in Valencia and Castaic. It handles paint, body and collision work, permanent roofs, repair and service, brake repairs, and appliance and system repairs on Class A, B and C motorhomes, travel trailers, fifth wheels and Living Vehicles. The site says it offers emergency and same-day service with a mobile service team that provides on-site repairs at the customer's location and serves Valencia, Ventura and the San Fernando Valley.",  "g": [
    "mobile",
    "center",
    "emergency"
@@ -1125,7 +1125,7 @@ window.RV_LISTINGS_CA = [
    "valencia",
    "castaic",
    "santa clarita"
-  ],  "region": "Valencia, Ventura, and the San Fernando Valley",  "reg": "la-county"
+  ],  "region": "Valencia, Ventura, and the San Fernando Valley",  "spec": "Body, paint and collision only",  "reg": "la-county"
  },
  {  "n": "El Toro RV Service",  "c": "Orange, CA",  "p": "(949) 830-1996",  "u": "https://www.eltororvservice.com/",  "t": "center",  "e": false,  "r": true,  "d": "El Toro RV Service is an RV repair and collision center in Orange that says it has served Orange County since 1989. It offers RV collision repair, paint and body work, maintenance, parts, plumbing, electrical, water damage, frame, suspension, tire and brake work, and appliance service, working on motorhomes, travel trailers, campervans and fifth wheels. The site lists Long Beach and a wide set of Orange County cities among the areas it serves.",  "g": [
    "center",
