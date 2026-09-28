@@ -2317,6 +2317,17 @@ body.is-embed .embed-credit a{font-weight:800;color:var(--b1)}
 @media print{
   @page{margin:16mm 14mm}
 
+  /* ---- The directory's printable content is its region list ----
+     A directory page's finder is interactive: route buttons, a location box, and a
+     ranked grid that shows six of the state's listings because the reader has not typed
+     a location yet. On paper that is a set of controls nobody can press plus a sixth of
+     the data. The region sections below carry every business in the state, so those are
+     what prints. Scoped to the state pages with body[data-state], which
+     scripts/build-listings.py writes and scripts/verify.py asserts. */
+  body[data-state] .finder,
+  body[data-state] #d-results,
+  body[data-state] .form-card{display:none !important}
+
   /* ---- 1. navigation has no meaning on paper ---- */
   #site-nav,#site-footer,.mobile-menu,.nav-search,.js-search-form,
   .btn,.burger,.guide-ic,.tool-btns,.back,.to-top,.skip-link{display:none !important}
