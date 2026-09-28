@@ -56,6 +56,14 @@ No secrets, keys, tokens or customer details in here. This file is committed.
 - commit: 73ea72e (pushed)
 - deployed: 2026-09-28T05:30:48+00:00
 
+### infra: coverage-gaps.py: where the directory is thin, computed from the listings rather than guessed
+- why: The handoff's method for finding the next batch is to compute gaps, and it was done by hand for Oregon twice. Doing it by hand cannot be repeated for fifty states, and it cannot be checked.
+- expect: No site effect by itself. It changes what the next data pass works on: for California it puts the Shasta and Siskiyou gaps at the top of the reachable work, and names the Los Angeles basin as 142 towns with the nearest base 355 miles away, which is a scope decision rather than a research task.
+- files: scripts/coverage-gaps.py
+- tags: directory, infra
+- commit: HEAD (unpushed)
+- deployed: 2026-09-28T01:03:50-07:00
+
 ### style: A directory page prints as a directory: the interactive finder is hidden on paper, and the region list is what prints
 - why: The print stylesheet landed tonight for the guide pages, and the three directory pages were not covered because they were being rebuilt in parallel. Measured in print media at 794px: the finder printed as route buttons, a location box, and a ranked grid showing six of the state's listings because no location had been typed - controls that cannot be pressed plus a sixth of the data - and the claim form printed as a form with no submit button. The region sections below the finder carry every business in the state.
 - expect: No search effect. The value is the same as the print stylesheet's: a directory page is now worth printing, which is what a printed RV directory is for. Check that the screen layout is untouched - measured at 1280, 1024 and 393, 36 rows, no clipping, no sideways scroll - and that no page outside the three state pages changed, since the rule is scoped with body[data-state].
