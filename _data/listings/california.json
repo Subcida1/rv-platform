@@ -353,30 +353,6 @@
       }
     },
     {
-      "n": "Mor-Jon Inc.",
-      "base": "Crescent City",
-      "c": "Crescent City",
-      "region": "Del Norte County",
-      "p": "707-464-4131",
-      "u": "https://www.mor-jon.com/",
-      "t": "center",
-      "e": false,
-      "areas": [
-        "Crescent City"
-      ],
-      "g": [
-        "Truck shop",
-        "RV oil changes",
-        "NAPA Truck Service Center"
-      ],
-      "d": "Heavy-duty truck shop that also services motor homes, light trucks and cars. NAPA Truck Service Center. RV oil changes and routine service. Open Monday to Friday 8 to 5, Saturday 8 to 3.",
-      "evidence": {
-        "checked": "https://www.mor-jon.com/",
-        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
-        "center_quote": "0 AM - 5:00 PM Wednesday : 8:00 AM - 5:00 PM Thursday : 8:00 AM - 5:00 PM Friday : 8:00 AM - 5:00 PM Saturday : 8:00 AM - 3:00 PM Sunday : CLOSED 707-464-4131 Contact Us OUR LOCATION 137 E."
-      }
-    },
-    {
       "n": "Century Mobile Homes and RV Service Center",
       "base": "Eureka",
       "c": "Eureka",
@@ -447,40 +423,6 @@
         "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
         "center_quote": "rland and RV Services Jefferson&#x27;s Overland and RV Services Jefferson&#x27;s Overland and RV Services Jefferson&#x27;s Overland and RV Services Home Repairs RV Parts Store About Us Contact Us More Home Repairs RV Parts Store About Us Contact Us Home Repairs RV Parts Store About Us Contact Us Contact Us Looking for something special? Whethe"
       }
-    },
-    {
-      "n": "Skinner's Truck Repair",
-      "base": "Mount Shasta",
-      "c": "Mount Shasta and the I-5 corridor",
-      "region": "Siskiyou County",
-      "p": "530-926-3860",
-      "u": "https://www.skinnerstruckrepair.com/",
-      "t": "center",
-      "e": false,
-      "areas": [
-        "Mount Shasta",
-        "Weed",
-        "Yreka",
-        "Dunsmuir",
-        "McCloud",
-        "Redding",
-        "Susanville"
-      ],
-      "g": [
-        "24 hour roadside",
-        "Diesel shop",
-        "Not RV-specific"
-      ],
-      "d": "Family-owned diesel and truck repair shop with roadside assistance: tyres, air lines, airbags, electrical, fuel leaks and transfer, alternators and water pumps. It works on the vehicle rather than the coach, and its customers include fifth-wheel owners, so it is the right call for a breakdown and the wrong one for a failed furnace or water heater.",
-      "evidence": {
-        "checked": "https://www.skinnerstruckrepair.com/",
-        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
-        "center_quote": "ROADSIDE TRUCK REPAIR + MORE, SERVING YOU FOR OVER 60 YEARS FAMILY OWNED FOR THREE GENERATIONS SHOP FACILITIES OFF I-5 EXIT 743 Mount Shasta, CA (530) 926-3860 (530) 926-4300 1 (800) 572- 3201 Skinner&#39;s Truck Repair SERVICES SERVICES ROADSIDE ASSISTANCE General Rep",
-        "roadside_quote": "rescue at Grass Lake rest area on hwy 97 to replace a broken leaf spring on our 5th wheel trailer and resolved our leaking coolant system on our Ram truck",
-        "correction": "2026-09-28: was tagged emergency mobile repair (in-coach) with no roadside tag. Its own site never claims RV work and it is a diesel and truck roadside shop, so the tag was the opposite of the business. Found by scripts/audit-tags.py. Whether a truck shop belongs in an RV-specific directory at all is Ty's call: the standing inclusion rule says RV-specific only, and this keeps the listing with the limitation stated in spec pending that decision."
-      },
-      "r": true,
-      "spec": "Diesel and truck roadside shop, not a coach specialist"
     },
     {
       "n": "TowTally Camping",
@@ -638,67 +580,6 @@
         "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
         "center_quote": "Service & Repair - Chico CA Trailer Sales RV Service | Chico Truck & RV --> 9 Call Us (530) 891-9225 9 Visit Us 5 Three Sevens Lane, Chico, Ca 95973    Home Inventory Inventory Reduction Deals Carts / Toolboxes Car / Racing Trailers Cargo / Enclosed Trailers Dump Trailers Equip"
       }
-    },
-    {
-      "n": "L & T Truck Repair",
-      "base": "Willows",
-      "c": "Willows and the upper Sacramento Valley",
-      "region": "Glenn County",
-      "p": "530-685-5580",
-      "u": "https://www.lttruckrepair.com/services/rv-repair",
-      "t": "center",
-      "e": false,
-      "areas": [
-        "Willows",
-        "Red Bluff",
-        "Corning",
-        "Orland",
-        "Oroville",
-        "Yuba City"
-      ],
-      "g": [
-        "24 hour roadside",
-        "Mobile service",
-        "Diesel shop"
-      ],
-      "d": "RV repair and maintenance covering engine, brakes, electrical, plumbing and HVAC, plus diesel mechanic services. Roadside truck repair is published as available 24/7 for breakdowns, and mobile service runs across the upper Sacramento Valley, after hours by appointment. Shop open Monday to Friday.",
-      "evidence": {
-        "checked": "https://www.lttruckrepair.com/services/rv-repair",
-        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
-        "e_quote": "Truck Towing Read More When your diesel truck or fleet is sidelined, you need a repair service that understands the urgency and has the expertise to get you back on the road swiftly and safely.",
-        "center_quote": "Drive in today and experience the peace of mind that comes with expert care for your home on the road.",
-        "roadside_quote": "understand that breakdowns don't adhere to business hours, which is why our roadside truck repair services are available 24/7",
-        "correction": "2026-09-28: was tagged emergency mobile repair with no roadside tag. The site's 24/7 is roadside truck repair and its mobile after-hours service is 'by appointment only', so the two tags were the wrong way round. Corrected by hand from the site's own words; found by scripts/audit-tags.py.",
-        "r_quote": "g Fire Apparatus Service & Repair Vehicle Fire Pre-Inspection Cummins & Paccar Software Updates DPF/DOC Baking & Cleaning EGR & DPF Emissions Cleaning Repair Axle Repair Brake Repair Coolant System Repair Diagnostics & Electrical Repair Driveline Repair Diesel Engine Repair Express Lube HVAC System Repair Exhaust System Repair Oil & Fluid Susp"
-      },
-      "r": true
-    },
-    {
-      "n": "Jeff's Truck Service",
-      "base": "Chico",
-      "c": "Chico and Red Bluff",
-      "region": "Butte County",
-      "p": "530-895-8070",
-      "u": "https://www.jeffs-truckservice.com/rv-and-motorhome-body-collision",
-      "t": "center",
-      "e": false,
-      "areas": [
-        "Chico",
-        "Red Bluff"
-      ],
-      "g": [
-        "24 hour roadside",
-        "Body and collision",
-        "Truck shop"
-      ],
-      "d": "RV and motorhome body and collision repair, plus truck and trailer repair and maintenance. Advertise 24 hour roadside assistance. Monday to Friday 8 to 6, Saturday 8 to 6.",
-      "evidence": {
-        "checked": "https://www.jeffs-truckservice.com/rv-and-motorhome-body-collision",
-        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
-        "e_quote": "com 13514 California 99 Chico, CA 95973 24-7 Roadside Assistance Mon - Fri 8a - 6p Sat 8a - 6p Sun - Closed RV and Motorhome Body Collision Looking for reliable RV and motorhome body collision service around Red Bl",
-        "correction": "2026-09-28: was tagged emergency mobile repair. Its only 24/7 claim is '24-7 Roadside Assistance' in the header, and it is a body and collision shop, so an in-coach emergency tag was wrong. Flagged by a bridge lane's audit and confirmed against the site."
-      },
-      "spec": "Body and collision repair, with a 24 hour roadside assistance line"
     },
     {
       "n": "Corey's RV Repair",
@@ -2913,44 +2794,6 @@
         "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
         "center_quote": "Contact Us GET IN TOUCH 1555 S Coast Hwy Suite 1/2, Oceanside, CA 92054 TEXT/CALL 24/7 (858)723-0139 Shop Home Testimonials Expert RV Tips and Maintenance Guides Contact US RV Service RV Services Warranty Services Specialized RV Services © Copyright | RV Fun Center | San Die"
       }
-    },
-    {
-      "n": "San Diego Pacific Crest Services",
-      "c": "El Cajon, CA",
-      "p": "(619) 390-2305",
-      "u": "https://www.pacificcrestservices.net/",
-      "t": "mobile",
-      "e": false,
-      "r": true,
-      "d": "San Diego Pacific Crest Services is an RV mechanic service based at 13272 Highway 8 Business in El Cajon. It focuses on the mechanical side of the RV such as the engine, transmission and brakes and offers 24/7 emergency roadside assistance and mobile service across San Diego County. It states that it leaves the living space untouched and can arrange towing for complex repairs.",
-      "g": [
-        "mobile",
-        "roadside",
-        "mechanical",
-        "engine",
-        "transmission",
-        "brakes"
-      ],
-      "base": "El Cajon",
-      "areas": [
-        "San Diego County"
-      ],
-      "region": "San Diego County",
-      "evidence": {
-        "checked": "https://www.pacificcrestservices.net/",
-        "phone_quote": "Give our experts a call anytime at (619) 390-2305.",
-        "coverage_quotes": [
-          "San Diego Pacific Crest Services is your trusted partner for all your RV repair needs in San Diego County, CA."
-        ],
-        "type_quote": "Call(619) 390-2305, and let our experts come to you!",
-        "emergency_quote": null,
-        "roadside_quote": "Experience peace of mind with San Diego Pacific Crest Services' 24/7 emergency roadside assistance near me for your RV in San Diego County, CA ... We specialize in the mechanical aspects of your RV, focusing on the engine, transmission, and brakes.",
-        "bar_number": null,
-        "correction": "2026-09-28: the roadside tag is supported (\"24/7 Emergency Roadside Assistance & Mobile Repairs\"), and the same page says \"We specialize in class 6, 7 & 8 trucks and trailers\", so the limitation is now stated. Whether a heavy-duty truck company belongs in an RV-specific directory is the same open question as Skinner's Truck Repair.",
-        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
-        "mobile_quote": "Mobile Semi Mechanic | San Deigo, CA | Pacific Crest SRVS 13272 Highway 8 Business El Cajon, CA 92021 (619) 390-2305 Home About Us Fleet Services GSA Fleet Management Specialty"
-      },
-      "spec": "Heavy-duty truck shop; RVs taken as vehicles, not coach systems"
     },
     {
       "n": "RV Specialists",

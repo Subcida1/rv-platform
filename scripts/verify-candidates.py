@@ -61,8 +61,37 @@ def resolves(host):
         return False
 
 
+EXCLUDED_PATH = Path(__file__).resolve().parent.parent / "_data" / "excluded.json"
+
+
+def excluded(rec):
+    """Has Ty already ruled this business out?
+
+    The passes keep FINDING these businesses - they are in the search results for every market -
+    so without this the same ruling gets made again every few states, and the answer is not
+    obvious from a candidate record. _data/excluded.json holds the businesses and the rule that
+    excludes each. A candidate matching one by name or by site is reported as a note rather than
+    a rejection, because a note is enough for the next person to stop and look.
+    """
+    if not EXCLUDED_PATH.exists():
+        return None
+    data = json.loads(EXCLUDED_PATH.read_text(encoding="utf-8"))
+    name = re.sub(r"[^a-z0-9]", "", rec.get("n", "").lower())
+    url = re.sub(r"^https?://(www\.)?", "", rec.get("u", "") or "").rstrip("/").lower()
+    for group, body in data.items():
+        if not isinstance(body, dict):
+            continue
+        for b in body.get("businesses", []):
+            bn = re.sub(r"[^a-z0-9]", "", (b.get("n") or "").lower())
+            bu = re.sub(r"^https?://(www\.)?", "", (b.get("u") or "") or "").rstrip("/").lower()
+            if (bn and bn == name) or (bu and url and bu in url):
+                return "PREVIOUSLY EXCLUDED (%s): %s" % (group, b.get("why", ""))
+    return None
+
+
 def check(rec):
-    out = {"n": rec.get("n"), "ok": True, "bad": [], "warn": [], "site": None}
+    out = {"n": rec.get("n"), "ok": True, "bad": [], "warn": [], "site": None,
+           "excluded": excluded(rec)}
     url = rec.get("u") or ""
     host = re.sub(r"^https?://", "", url).split("/")[0]
     if not host or not resolves(host):
@@ -114,9 +143,8 @@ def check(rec):
             # gate cannot tell a paraphrase from an invention. What does reject is the
             # hard layer above: the phone, the RV words, the parked-page test.
             out["warn"].append("evidence not verbatim on the page: %r" % q2[:80])
-    if rec.get("e") and rec.get("r"):
-        out["ok"] = False
-        out["bad"].append("claims emergency and roadside at once")
+    # e and r are independent and a business may hold both (build-listings stopped forbidding
+    # it on 2026-09-28); this gate kept rejecting the combination for a while after.
     if (rec.get("t") or "") not in ("mobile", "center", "both"):
         out["ok"] = False
         out["bad"].append("bad type %r" % rec.get("t"))
@@ -129,6 +157,11 @@ def main():
     print("%d candidate(s) in %s\n" % (len(recs), path.name))
     with ThreadPoolExecutor(max_workers=4) as ex:
         results = list(ex.map(check, recs))
+    for r in results:
+        ex = r.get("excluded")
+        if ex:
+            r["ok"] = False
+            r["bad"].insert(0, ex)
     good = [r for r in results if r["ok"]]
     unknown = [r for r in results if r["ok"] is None]
     for r in results:

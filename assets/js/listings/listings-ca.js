@@ -38,14 +38,6 @@ window.RV_LISTINGS_CA = [
    "klamath"
   ],  "region": "Del Norte County",  "reg": "north-coast"
  },
- {  "n": "Mor-Jon Inc.",  "base": "crescent city",  "c": "Crescent City",  "region": "Del Norte County",  "p": "707-464-4131",  "u": "https://www.mor-jon.com/",  "t": "center",  "e": false,  "areas": [
-   "crescent city"
-  ],  "g": [
-   "Truck shop",
-   "RV oil changes",
-   "NAPA Truck Service Center"
-  ],  "d": "Heavy-duty truck shop that also services motor homes, light trucks and cars. NAPA Truck Service Center. RV oil changes and routine service. Open Monday to Friday 8 to 5, Saturday 8 to 3.",  "reg": "north-coast"
- },
  {  "n": "Century Mobile Homes and RV Service Center",  "base": "eureka",  "c": "Eureka",  "region": "Humboldt County",  "p": "707-445-8411",  "u": "https://centurymobilehomesandrvs.com/",  "t": "center",  "e": false,  "areas": [
    "eureka"
   ],  "g": [
@@ -69,20 +61,6 @@ window.RV_LISTINGS_CA = [
    "Appliances",
    "Body repair"
   ],  "d": "Locally owned RV repair shop off I-5. Appliance repair, electrical diagnostics, body repair, plumbing, structural repairs and interior remodeling. Also offers mobile repairs for travellers broken down. Monday to Friday 9 to 5, Saturday by appointment.",  "reg": "shasta-i5"
- },
- {  "n": "Skinner's Truck Repair",  "base": "mount shasta",  "c": "Mount Shasta and the I-5 corridor",  "region": "Siskiyou County",  "p": "530-926-3860",  "u": "https://www.skinnerstruckrepair.com/",  "t": "center",  "e": false,  "areas": [
-   "mount shasta",
-   "weed",
-   "yreka",
-   "dunsmuir",
-   "mccloud",
-   "redding",
-   "susanville"
-  ],  "g": [
-   "24 hour roadside",
-   "Diesel shop",
-   "Not RV-specific"
-  ],  "d": "Family-owned diesel and truck repair shop with roadside assistance: tyres, air lines, airbags, electrical, fuel leaks and transfer, alternators and water pumps. It works on the vehicle rather than the coach, and its customers include fifth-wheel owners, so it is the right call for a breakdown and the wrong one for a failed furnace or water heater.",  "r": true,  "spec": "Diesel and truck roadside shop, not a coach specialist",  "reg": "shasta-i5"
  },
  {  "n": "TowTally Camping",  "base": "redding",  "c": "Redding",  "region": "Shasta County",  "p": "530-241-7848",  "u": "https://www.towtallycamping.com/service-repair-rv/",  "t": "center",  "e": false,  "areas": [
    "redding"
@@ -144,28 +122,6 @@ window.RV_LISTINGS_CA = [
    "Inspections",
    "Solar"
   ],  "d": "RV repair and service including 150-point pre-purchase inspections, roofing, electrical and solar, plumbing, and chassis work on engine, transmission, brakes and suspension. Monday to Friday 8 to 5:30.",  "reg": "valley-north-bay"
- },
- {  "n": "L & T Truck Repair",  "base": "willows",  "c": "Willows and the upper Sacramento Valley",  "region": "Glenn County",  "p": "530-685-5580",  "u": "https://www.lttruckrepair.com/services/rv-repair",  "t": "center",  "e": false,  "areas": [
-   "willows",
-   "red bluff",
-   "corning",
-   "orland",
-   "oroville",
-   "yuba city"
-  ],  "g": [
-   "24 hour roadside",
-   "Mobile service",
-   "Diesel shop"
-  ],  "d": "RV repair and maintenance covering engine, brakes, electrical, plumbing and HVAC, plus diesel mechanic services. Roadside truck repair is published as available 24/7 for breakdowns, and mobile service runs across the upper Sacramento Valley, after hours by appointment. Shop open Monday to Friday.",  "r": true,  "reg": "valley-north-bay"
- },
- {  "n": "Jeff's Truck Service",  "base": "chico",  "c": "Chico and Red Bluff",  "region": "Butte County",  "p": "530-895-8070",  "u": "https://www.jeffs-truckservice.com/rv-and-motorhome-body-collision",  "t": "center",  "e": false,  "areas": [
-   "chico",
-   "red bluff"
-  ],  "g": [
-   "24 hour roadside",
-   "Body and collision",
-   "Truck shop"
-  ],  "d": "RV and motorhome body and collision repair, plus truck and trailer repair and maintenance. Advertise 24 hour roadside assistance. Monday to Friday 8 to 6, Saturday 8 to 6.",  "spec": "Body and collision repair, with a 24 hour roadside assistance line",  "reg": "valley-north-bay"
  },
  {  "n": "Corey's RV Repair",  "base": "ukiah",  "c": "Ukiah and Mendocino and Lake counties",  "region": "Mendocino County",  "p": "707-621-2654",  "u": "https://www.coreysrv.com/",  "t": "center",  "e": false,  "areas": [
    "ukiah",
@@ -929,17 +885,6 @@ window.RV_LISTINGS_CA = [
    "solar",
    "insurance"
   ],  "base": "oceanside",  "areas": [],  "region": "San Diego County",  "reg": "san-diego"
- },
- {  "n": "San Diego Pacific Crest Services",  "c": "El Cajon, CA",  "p": "(619) 390-2305",  "u": "https://www.pacificcrestservices.net/",  "t": "mobile",  "e": false,  "r": true,  "d": "San Diego Pacific Crest Services is an RV mechanic service based at 13272 Highway 8 Business in El Cajon. It focuses on the mechanical side of the RV such as the engine, transmission and brakes and offers 24/7 emergency roadside assistance and mobile service across San Diego County. It states that it leaves the living space untouched and can arrange towing for complex repairs.",  "g": [
-   "mobile",
-   "roadside",
-   "mechanical",
-   "engine",
-   "transmission",
-   "brakes"
-  ],  "base": "el cajon",  "areas": [
-   "san diego county"
-  ],  "region": "San Diego County",  "spec": "Heavy-duty truck shop; RVs taken as vehicles, not coach systems",  "reg": "san-diego"
  },
  {  "n": "RV Specialists",  "c": "San Diego, CA",  "p": "(858) 455-9898",  "u": "https://myrvspecialists.com/",  "t": "center",  "e": false,  "r": false,  "d": "RV Specialists is a family owned RV service center at 8616 Miramar Place in San Diego that has operated since 1987. It performs RV service, repair, slide repair, collision repair and bodywork, and sells propane on site. It states that all repairs are done at its Miramar facility and that it does not offer mobile RV repair.",  "g": [
    "shop",
