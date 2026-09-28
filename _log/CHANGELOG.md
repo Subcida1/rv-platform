@@ -16,12 +16,26 @@ No secrets, keys, tokens or customer details in here. This file is committed.
 
 ## 2026-09-28
 
+### copy: Byline moved to OriginRV; Ty's name is on the About page only, as Ty B.
+- why: the trust fix earlier the same day put his full name on every guide, and he changed his mind about the shape of it: the guides are accredited to OriginRV, and his name appears in one place, the About page, as Ty B. The Article schema author changes from a Person to an Organization to match, so the structured data and the visible byline say the same thing. The About page keeps the editorial-policy card and the honest check line either way.
+- expect: no search effect. If anything it is a small E-E-A-T trade: an Organization author is a weaker signal than a named Person for the author-authority half of the framework, while a named author on one page and an organization on 35 is at least internally consistent. Worth watching whether the About page picks up branded queries, since that page is now the only place a name appears.
+- files: guides/*.html, about.html, scripts/content-manifest.json
+- tags: accuracy
+- commit: da39995 (pushed)
+
+### infra: cross-check.py: the first check that reads two pages at once
+- why: every other check here is per-page by construction, and two pages contradicting each other is what actually shipped: winterize-plumbing told readers to leave the dump valves open or cracked while start-here told them to close them, and both passed every gate. It was found by a human reading the site. The script assembles every instance of a subject across the whole site and flags the subset that cannot both be true. Four rules were built and measured against the live site before one was kept, and the three rejected ones are recorded in its docstring: comparing sentence contexts gave six findings and zero real ones while also missing the motivating bug; ranking by distinct-value count broke on table rows; flagging disjoint value sets flagged axle-with-percent three ways because 110 load reserve, 80 payload and 40 brake ratio are three different facts. The rule that survived is narrow: exactly two distinct values site-wide for one subject and unit, each on exactly one page, in sentences sharing three content words. It is validated both ways, which is the only reason to trust it: reintroducing the 120 F relief-valve figure makes it fire, and fixing it makes it silent. It reports rather than gates, and ci.sh prints it on every run.
+- expect: the first thing to watch is whether it stays silent. A check that fires for the wrong reason gets ignored within a week, and this one was rejected three times for exactly that. The second is whether it earns its place by catching something the review lanes miss, which is the class it was built for: a fact stated on two pages with different numbers.
+- files: scripts/cross-check.py, scripts/ci.sh, _TOOLS.md
+- tags: accuracy
+- commit: da39995 (pushed)
+
 ### copy: Trust fix: named author and an honest check line across all 35 guides, plus an editorial policy on the About page
 - why: the external review's trust verdict was the one finding that was not a content bug: about.html was anonymous first person ('The person behind this site'), no author was named anywhere, and all 36 guides carried a 'Last reviewed' date inside a single week. Those were publication dates wearing a review label, and the reviewer read them correctly as a bulk-publication signal. Ty's decision: his name goes on it, and the label was wrong. The check line now reads 'By Ty Brandes. Written and checked against the sources below on <date>.', linking to the About page, and the About page names him in the lede, title, meta, social strings and schema, with a new card stating how a guide is put together: the documents behind each claim are named and linked, both sides are named where sources disagree, a maker's own specification is labelled as such, and the date at the top is the date the claims were last checked rather than the date the page was written. Author added to the Article schema on all 35 guides.
 - expect: no search effect on its own. The test is whether the two trust signals a reader can see start moving the numbers the review implied they should: watch whether the guides begin earning impressions at all, since 24 of them have essentially zero presence, and whether the About page picks up any branded or author-shaped queries. If nothing moves in a month, the constraint is inbound links rather than authorship, which is what the indexing finding already says.
 - files: guides/*.html, about.html, scripts/content-manifest.json
 - tags: accuracy
-- commit: 269e62f (pushed)
+- commit: 66d3aa4 (pushed)
 - deployed: 2026-09-28T05:56:39+00:00
 
 ### guides: External-review correction pass: 16 content defects fixed across 15 guides, plus a weight-calculator propane change

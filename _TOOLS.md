@@ -66,6 +66,27 @@ flatpak. It attaches to a running Chrome with `--port` instead.
 - **`quality-score.py`** — longform scoring that deliberately refuses to score the two questions
   needing judgement, and says so in its own docstring.
 - **`duplicate-passages.py`** — passages repeated within or across pages.
+- **`cross-check.py`** — **the only check here that reads two pages at once**, and the one that
+  exists because two pages contradicting each other is what actually shipped: `winterize-plumbing`
+  told readers to leave the dump valves "open or cracked" while `manuals/start-here` told them to
+  close them, and both pages passed every gate. Every other check is per-page by construction.
+  **It reports; it does not gate.** `ci.sh` prints the narrow section on every run.
+  Three parts, and only the first is machine-judged:
+  1. **Same fact, two values.** Exactly two distinct values site-wide for one subject and unit,
+     each appearing on exactly one page, in sentences sharing three content words. Deliberately
+     blind to everything else: a value on two pages kills the finding, three or more values kill
+     it, and a fact stated once is out of scope.
+  2. **Value inventory**, ranked fewest-distinct-values first, for reading.
+  3. **Subject index** — every page a subject appears on, and how often.
+  **Validated both ways, which is the only reason to trust it.** Reintroducing the 120 F
+  relief-valve figure into `start-here` makes part 1 fire; fixing it makes it silent. Four earlier
+  rules were measured against the live site and rejected: comparing sentence contexts gave six
+  findings and ZERO real ones while also MISSING the motivating bug; ranking by distinct-value
+  count broke on table rows; flagging disjoint value sets flagged `axle` with unit `%` three ways
+  (110 load reserve, 80 payload, 40 brake ratio) because those are three different facts. The
+  parts it does not judge, it ranks instead, and says so in its own output.
+  **What it cannot do:** it compares numbers and antonyms, not meaning. A claim on one page only is
+  invisible to it. It says nothing about whether a value is correct, only that two pages disagree.
 
 ## 4. Rendered-page and maker-facing audits
 

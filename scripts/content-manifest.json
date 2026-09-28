@@ -54,9 +54,9 @@
     "sources": []
   },
   "guides/battery-winter-storage.html": {
-    "hash": "a64df031c3693df9",
+    "hash": "b9e69400b2284d6a",
     "status": "verified",
-    "verified_by": "Claude Desktop lane, three rounds on 2026-09-23. Round one found nine items including a watering-order contradiction visible from the page's own text. The confirm found my new self-discharge sentence contradicting its own citation, and a count I had wrong. The closing round confirmed all of it. DEVIATION, recorded deliberately: after the reviewer's closing 'yes', I applied the one-character punctuation fix it flagged as trivial (a seam left by my own deletion of the 12.2 clause), so the recorded text differs from the reviewed text by that single comma-to-period. The reviewer called it non-blocking in the same breath as the yes. Since that verdict the only further change to this page's visible text is the site-wide check line, applied on Ty's instruction: it now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' rather than 'Last reviewed: <date> ...', because the old wording implied a review cycle that had not happened and named no author. No claim text changed in that pass.",
+    "verified_by": "Claude Desktop lane, three rounds on 2026-09-23. Round one found nine items including a watering-order contradiction visible from the page's own text. The confirm found my new self-discharge sentence contradicting its own citation, and a count I had wrong. The closing round confirmed all of it. DEVIATION, recorded deliberately: after the reviewer's closing 'yes', I applied the one-character punctuation fix it flagged as trivial (a seam left by my own deletion of the 12.2 clause), so the recorded text differs from the reviewed text by that single comma-to-period. The reviewer called it non-blocking in the same breath as the yes. Since that verdict the only further change to this page's visible text is the site-wide check line, applied on Ty's instruction: it now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' rather than 'Last reviewed: <date> ...', because the old wording implied a review cycle that had not happened and named no author. No claim text changed in that pass. CHANGED AGAIN 2026-09-28 on Ty's instruction: the check line now reads 'By OriginRV. Written and checked against the sources below on <date>.' rather than a person's name, and the Article schema author is an Organization rather than a Person. His name appears only on the About page, as Ty B. No claim text changed in that pass either.",
     "verified_at": "2026-09-28",
     "sources": [],
     "spec": "_specs/battery-winter-storage.md",
@@ -176,10 +176,10 @@
       },
       {
         "id": "C15",
-        "text": "\"By Ty Brandes. Written and checked against the sources below on <date>.\"",
+        "text": "\"By OriginRV. Written and checked against the sources below on <date>.\"",
         "source": "provenance; the byline and the relabel were applied site-wide on 2026-09-28",
         "state": "CONFIRMED",
-        "by": "RELPELLED 2026-09-28 on Ty's instruction. The line was 'Last reviewed: <date> ...', which implied a review cycle that had not happened and named no author. It now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' across all 35 content guides. The claim text below is the new form.",
+        "by": "RELPELLED 2026-09-28 on Ty's instruction. The line was 'Last reviewed: <date> ...', which implied a review cycle that had not happened and named no author. It now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' across all 35 content guides. The claim text below is the new form. CHANGED AGAIN 2026-09-28 on Ty's instruction: the byline is OriginRV rather than a person, and his name appears only on the About page, as Ty B. The Article schema author is an Organization, not a Person.",
         "at": "2026-09-28"
       },
       {
@@ -201,9 +201,9 @@
     ]
   },
   "guides/freeze-damage-triage.html": {
-    "hash": "c97c266358ba2ba8",
+    "hash": "5c7035158cf52b1d",
     "status": "verified",
-    "verified_by": "Cloud 2026-09-26, second independent pass: Qwen, job 20260926-2251-RV-FREEZE-R2, VERDICT CORRECTIONS APPLIED on three of the four 09-24 corrections. It confirmed the 120-volt warning, the softened tap diagnosis and the shore-water sentence as FIXED, quoting each, and all three quotations are on the live page mechanically (check-review-quotes.py: 3 on the page, 0 staged-only, 0 nowhere). THE FOURTH IS NOT COVERED: the lane reported that its file read was truncated before the water heater section and wrote NONE FOUND for that correction rather than inventing a quotation, which is the honest answer and means the new thaw-check paragraph has no independent verdict. It is covered only by this page's own claims list. It also stated that the corrections broke nothing. Since that verdict the only further change to this page's visible text is the site-wide check line, applied on Ty's instruction: it now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' rather than 'Last reviewed: <date> ...', because the old wording implied a review cycle that had not happened and named no author. No claim text changed in that pass.",
+    "verified_by": "Cloud 2026-09-26, second independent pass: Qwen, job 20260926-2251-RV-FREEZE-R2, VERDICT CORRECTIONS APPLIED on three of the four 09-24 corrections. It confirmed the 120-volt warning, the softened tap diagnosis and the shore-water sentence as FIXED, quoting each, and all three quotations are on the live page mechanically (check-review-quotes.py: 3 on the page, 0 staged-only, 0 nowhere). THE FOURTH IS NOT COVERED: the lane reported that its file read was truncated before the water heater section and wrote NONE FOUND for that correction rather than inventing a quotation, which is the honest answer and means the new thaw-check paragraph has no independent verdict. It is covered only by this page's own claims list. It also stated that the corrections broke nothing. Since that verdict the only further change to this page's visible text is the site-wide check line, applied on Ty's instruction: it now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' rather than 'Last reviewed: <date> ...', because the old wording implied a review cycle that had not happened and named no author. No claim text changed in that pass. CHANGED AGAIN 2026-09-28 on Ty's instruction: the check line now reads 'By OriginRV. Written and checked against the sources below on <date>.' rather than a person's name, and the Article schema author is an Organization rather than a Person. His name appears only on the About page, as Ty B. No claim text changed in that pass either.",
     "verified_at": "2026-09-28",
     "sources": [],
     "spec": "_specs/freeze-damage-triage.md",
@@ -387,9 +387,9 @@
     "sources": []
   },
   "guides/roof-snow-load.html": {
-    "hash": "5cc85478e3101c92",
+    "hash": "b7f2727434498f2c",
     "status": "verified",
-    "verified_by": "Cloud 2026-09-28, external-review correction pass plus a fresh-context confirm round. An external review flagged the page's use of Boxabl's 20 psf as a fallback rating for a roof whose manual publishes nothing. The figure was real and the inference was not: the Boxabl Baby Box 120 (model BXB-000029) is a factory-built towable RV compliant with NFPA 1192 and its spec sheet does rate the roof at 20 psf live load, but taking the lower of two figures published for two other RVs does not produce a rating for a third. The page now says so in four places and treats an unrated roof as having no stated snow allowance. The confirm round verified Keystone's own manual wording ('Snow loads that exceed 2 feet or 30 pounds per square foot'), the Boxabl spec sheet, the NWS snow-load figures and the NRCS density range, re-checked every arithmetic step on the page, and prescribed two further fixes, both applied: the worked example now labels 30 psf a stand-in, and the 'same limit stated two ways' sentence now says whichever of the two a given snowfall reaches first is the one that binds. Those two are the only changes made after the confirm verdict. Since that verdict the only further change to this page's visible text is the site-wide check line, applied on Ty's instruction: it now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' rather than 'Last reviewed: <date> ...', because the old wording implied a review cycle that had not happened and named no author. No claim text changed in that pass.",
+    "verified_by": "Cloud 2026-09-28, external-review correction pass plus a fresh-context confirm round. An external review flagged the page's use of Boxabl's 20 psf as a fallback rating for a roof whose manual publishes nothing. The figure was real and the inference was not: the Boxabl Baby Box 120 (model BXB-000029) is a factory-built towable RV compliant with NFPA 1192 and its spec sheet does rate the roof at 20 psf live load, but taking the lower of two figures published for two other RVs does not produce a rating for a third. The page now says so in four places and treats an unrated roof as having no stated snow allowance. The confirm round verified Keystone's own manual wording ('Snow loads that exceed 2 feet or 30 pounds per square foot'), the Boxabl spec sheet, the NWS snow-load figures and the NRCS density range, re-checked every arithmetic step on the page, and prescribed two further fixes, both applied: the worked example now labels 30 psf a stand-in, and the 'same limit stated two ways' sentence now says whichever of the two a given snowfall reaches first is the one that binds. Those two are the only changes made after the confirm verdict. Since that verdict the only further change to this page's visible text is the site-wide check line, applied on Ty's instruction: it now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' rather than 'Last reviewed: <date> ...', because the old wording implied a review cycle that had not happened and named no author. No claim text changed in that pass. CHANGED AGAIN 2026-09-28 on Ty's instruction: the check line now reads 'By OriginRV. Written and checked against the sources below on <date>.' rather than a person's name, and the Article schema author is an Organization rather than a Person. His name appears only on the About page, as Ty B. No claim text changed in that pass either.",
     "verified_at": "2026-09-28",
     "sources": [],
     "spec": "_specs/roof-snow-load.md",
@@ -485,10 +485,10 @@
       },
       {
         "id": "C12",
-        "text": "\"By Ty Brandes. Written and checked against the sources below on <date>.\"",
+        "text": "\"By OriginRV. Written and checked against the sources below on <date>.\"",
         "source": "provenance; the byline and the relabel were applied site-wide on 2026-09-28",
         "state": "CONFIRMED",
-        "by": "RELPELLED 2026-09-28 on Ty's instruction. The line was 'Last reviewed: <date> ...', which implied a review cycle that had not happened and named no author. It now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' across all 35 content guides. The claim text below is the new form.",
+        "by": "RELPELLED 2026-09-28 on Ty's instruction. The line was 'Last reviewed: <date> ...', which implied a review cycle that had not happened and named no author. It now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' across all 35 content guides. The claim text below is the new form. CHANGED AGAIN 2026-09-28 on Ty's instruction: the byline is OriginRV rather than a person, and his name appears only on the About page, as Ty B. The Article schema author is an Organization, not a Person.",
         "at": "2026-09-28"
       },
       {
@@ -753,10 +753,10 @@
       },
       {
         "id": "C28",
-        "text": "\"By Ty Brandes. Written and checked against the sources below on <date>.\"",
+        "text": "\"By OriginRV. Written and checked against the sources below on <date>.\"",
         "source": "provenance; the byline and the relabel were applied site-wide on 2026-09-28",
         "state": "CONFIRMED",
-        "by": "RELPELLED 2026-09-28 on Ty's instruction. The line was 'Last reviewed: <date> ...', which implied a review cycle that had not happened and named no author. It now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' across all 35 content guides. The claim text below is the new form.",
+        "by": "RELPELLED 2026-09-28 on Ty's instruction. The line was 'Last reviewed: <date> ...', which implied a review cycle that had not happened and named no author. It now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' across all 35 content guides. The claim text below is the new form. CHANGED AGAIN 2026-09-28 on Ty's instruction: the byline is OriginRV rather than a person, and his name appears only on the About page, as Ty B. The Article schema author is an Organization, not a Person.",
         "at": "2026-09-28"
       }
     ],
@@ -778,9 +778,9 @@
     "sources": []
   },
   "guides/rv-battery-not-charging.html": {
-    "hash": "c3e6b49729de9a40",
+    "hash": "b201932243710f80",
     "status": "verified",
-    "verified_by": "Cloud 2026-09-24, after the bridge lane's pass (JOB-20260924-1650, recorded in the spec's section 12; the reply arrived by Ty pasting it, because the lane answered in its tab and wrote nothing to disk). All three sources confirmed with quotes, and the lane independently checked the page's one piece of arithmetic as fair. Five fixes applied: the terminal-shorting and shore-power safety points the page lacked, a DC-to-DC charger as a fifth source where fitted, the smaller voltage lift on a nearly full battery, the converter maker's own troubleshooting entries for reverse-polarity fuses and no battery connection, and deep discharge in the sourced form rather than the asserted charger lockout the lane claimed but no document supports. Three of its class findings rejected with reasons, including the Last reviewed line which is deliberate fine print. Since that verdict the only further change to this page's visible text is the site-wide check line, applied on Ty's instruction: it now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' rather than 'Last reviewed: <date> ...', because the old wording implied a review cycle that had not happened and named no author. No claim text changed in that pass.",
+    "verified_by": "Cloud 2026-09-24, after the bridge lane's pass (JOB-20260924-1650, recorded in the spec's section 12; the reply arrived by Ty pasting it, because the lane answered in its tab and wrote nothing to disk). All three sources confirmed with quotes, and the lane independently checked the page's one piece of arithmetic as fair. Five fixes applied: the terminal-shorting and shore-power safety points the page lacked, a DC-to-DC charger as a fifth source where fitted, the smaller voltage lift on a nearly full battery, the converter maker's own troubleshooting entries for reverse-polarity fuses and no battery connection, and deep discharge in the sourced form rather than the asserted charger lockout the lane claimed but no document supports. Three of its class findings rejected with reasons, including the Last reviewed line which is deliberate fine print. Since that verdict the only further change to this page's visible text is the site-wide check line, applied on Ty's instruction: it now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' rather than 'Last reviewed: <date> ...', because the old wording implied a review cycle that had not happened and named no author. No claim text changed in that pass. CHANGED AGAIN 2026-09-28 on Ty's instruction: the check line now reads 'By OriginRV. Written and checked against the sources below on <date>.' rather than a person's name, and the Article schema author is an Organization rather than a Person. His name appears only on the About page, as Ty B. No claim text changed in that pass either.",
     "verified_at": "2026-09-28",
     "sources": [],
     "spec": "_specs/rv-battery-not-charging.md",
@@ -1174,10 +1174,10 @@
       },
       {
         "id": "C31",
-        "text": "\"By Ty Brandes. Written and checked against the sources below on <date>.\"",
+        "text": "\"By OriginRV. Written and checked against the sources below on <date>.\"",
         "source": "provenance; the byline and the relabel were applied site-wide on 2026-09-28",
         "state": "CONFIRMED",
-        "by": "RELPELLED 2026-09-28 on Ty's instruction. The line was 'Last reviewed: <date> ...', which implied a review cycle that had not happened and named no author. It now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' across all 35 content guides. The claim text below is the new form.",
+        "by": "RELPELLED 2026-09-28 on Ty's instruction. The line was 'Last reviewed: <date> ...', which implied a review cycle that had not happened and named no author. It now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' across all 35 content guides. The claim text below is the new form. CHANGED AGAIN 2026-09-28 on Ty's instruction: the byline is OriginRV rather than a person, and his name appears only on the About page, as Ty B. The Article schema author is an Organization, not a Person.",
         "at": "2026-09-28"
       }
     ],
@@ -1625,10 +1625,10 @@
       },
       {
         "id": "C53",
-        "text": "\"By Ty Brandes. Written and checked against the sources below on <date>.\"",
+        "text": "\"By OriginRV. Written and checked against the sources below on <date>.\"",
         "source": "provenance; the byline and the relabel were applied site-wide on 2026-09-28",
         "state": "CONFIRMED",
-        "by": "RELPELLED 2026-09-28 on Ty's instruction. The line was 'Last reviewed: <date> ...', which implied a review cycle that had not happened and named no author. It now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' across all 35 content guides. The claim text below is the new form.",
+        "by": "RELPELLED 2026-09-28 on Ty's instruction. The line was 'Last reviewed: <date> ...', which implied a review cycle that had not happened and named no author. It now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' across all 35 content guides. The claim text below is the new form. CHANGED AGAIN 2026-09-28 on Ty's instruction: the byline is OriginRV rather than a person, and his name appears only on the About page, as Ty B. The Article schema author is an Organization, not a Person.",
         "at": "2026-09-28"
       }
     ],
@@ -1814,10 +1814,10 @@
       },
       {
         "id": "C24",
-        "text": "\"By Ty Brandes. Written and checked against the sources below on <date>.\"",
+        "text": "\"By OriginRV. Written and checked against the sources below on <date>.\"",
         "source": "provenance; the byline and the relabel were applied site-wide on 2026-09-28",
         "state": "CONFIRMED",
-        "by": "RELPELLED 2026-09-28 on Ty's instruction. The line was 'Last reviewed: <date> ...', which implied a review cycle that had not happened and named no author. It now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' across all 35 content guides. The claim text below is the new form.",
+        "by": "RELPELLED 2026-09-28 on Ty's instruction. The line was 'Last reviewed: <date> ...', which implied a review cycle that had not happened and named no author. It now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' across all 35 content guides. The claim text below is the new form. CHANGED AGAIN 2026-09-28 on Ty's instruction: the byline is OriginRV rather than a person, and his name appears only on the About page, as Ty B. The Article schema author is an Organization, not a Person.",
         "at": "2026-09-28"
       },
       {
@@ -1928,10 +1928,10 @@
       },
       {
         "id": "C5",
-        "text": "\"By Ty Brandes. Written and checked against the sources below on <date>.\"",
+        "text": "\"By OriginRV. Written and checked against the sources below on <date>.\"",
         "source": "provenance; the byline and the relabel were applied site-wide on 2026-09-28",
         "state": "CONFIRMED",
-        "by": "RELPELLED 2026-09-28 on Ty's instruction. The line was 'Last reviewed: <date> ...', which implied a review cycle that had not happened and named no author. It now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' across all 35 content guides. The claim text below is the new form.",
+        "by": "RELPELLED 2026-09-28 on Ty's instruction. The line was 'Last reviewed: <date> ...', which implied a review cycle that had not happened and named no author. It now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' across all 35 content guides. The claim text below is the new form. CHANGED AGAIN 2026-09-28 on Ty's instruction: the byline is OriginRV rather than a person, and his name appears only on the About page, as Ty B. The Article schema author is an Organization, not a Person.",
         "at": "2026-09-28"
       },
       {
@@ -2259,9 +2259,9 @@
     "invalidated_at": "2026-09-27"
   },
   "guides/rv-leveling-jacks-not-working.html": {
-    "hash": "2a1cf80b9d19ce09",
+    "hash": "112e89a0f8a94a92",
     "status": "verified",
-    "verified_by": "Cloud 2026-09-24, first independent pass by the bridge lane (JOB-20260924-1640, spec section 12). All eight document checks confirmed. Two content additions applied from the manual and better than the lane paraphrased them: the electric jack override procedures with the maker's own tools, including that a cordless screw gun is allowed on jacks and only impacts are banned, which is the opposite of the stabiliser rule; and the hydraulic fluid check with the 1/4 inch figure and the retract-before-filling trap. This pass also found six page self-references and two prevalence claims of mine that no gate checks, all fixed. Since that verdict the only further change to this page's visible text is the site-wide check line, applied on Ty's instruction: it now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' rather than 'Last reviewed: <date> ...', because the old wording implied a review cycle that had not happened and named no author. No claim text changed in that pass.",
+    "verified_by": "Cloud 2026-09-24, first independent pass by the bridge lane (JOB-20260924-1640, spec section 12). All eight document checks confirmed. Two content additions applied from the manual and better than the lane paraphrased them: the electric jack override procedures with the maker's own tools, including that a cordless screw gun is allowed on jacks and only impacts are banned, which is the opposite of the stabiliser rule; and the hydraulic fluid check with the 1/4 inch figure and the retract-before-filling trap. This pass also found six page self-references and two prevalence claims of mine that no gate checks, all fixed. Since that verdict the only further change to this page's visible text is the site-wide check line, applied on Ty's instruction: it now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' rather than 'Last reviewed: <date> ...', because the old wording implied a review cycle that had not happened and named no author. No claim text changed in that pass. CHANGED AGAIN 2026-09-28 on Ty's instruction: the check line now reads 'By OriginRV. Written and checked against the sources below on <date>.' rather than a person's name, and the Article schema author is an Organization rather than a Person. His name appears only on the About page, as Ty B. No claim text changed in that pass either.",
     "verified_at": "2026-09-28",
     "sources": [],
     "spec": "_specs/rv-leveling-jacks-not-working.md",
@@ -2398,9 +2398,9 @@
     ]
   },
   "guides/rv-lights-not-working.html": {
-    "hash": "8d9a33f40743b787",
+    "hash": "eb070ad641a6ac4c",
     "status": "verified",
-    "verified_by": "AI Studio lane, third round on 2026-09-24. Two late fixes, both found by asking the sweep for its working rather than accepting a bare zero: the spec had listed almost every RV light is LED now under prevalence and the draft pass never applied it, and the ground entry carried a positional self-reference. Both fixed, and the confirm round JOB-20260924-0900 returned PART 1: CONFIRMED on both edits, reading each with its neighbours. The miss is also what prompted scripts/check-spec-fragments.py, which pulls every quoted fragment out of a spec defect section and greps the page: nothing had been checking whether a spec decisions were actually applied, and the review and the sweep both judge the page as written. Since that verdict the only further change to this page's visible text is the site-wide check line, applied on Ty's instruction: it now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' rather than 'Last reviewed: <date> ...', because the old wording implied a review cycle that had not happened and named no author. No claim text changed in that pass.",
+    "verified_by": "AI Studio lane, third round on 2026-09-24. Two late fixes, both found by asking the sweep for its working rather than accepting a bare zero: the spec had listed almost every RV light is LED now under prevalence and the draft pass never applied it, and the ground entry carried a positional self-reference. Both fixed, and the confirm round JOB-20260924-0900 returned PART 1: CONFIRMED on both edits, reading each with its neighbours. The miss is also what prompted scripts/check-spec-fragments.py, which pulls every quoted fragment out of a spec defect section and greps the page: nothing had been checking whether a spec decisions were actually applied, and the review and the sweep both judge the page as written. Since that verdict the only further change to this page's visible text is the site-wide check line, applied on Ty's instruction: it now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' rather than 'Last reviewed: <date> ...', because the old wording implied a review cycle that had not happened and named no author. No claim text changed in that pass. CHANGED AGAIN 2026-09-28 on Ty's instruction: the check line now reads 'By OriginRV. Written and checked against the sources below on <date>.' rather than a person's name, and the Article schema author is an Organization rather than a Person. His name appears only on the About page, as Ty B. No claim text changed in that pass either.",
     "verified_at": "2026-09-28",
     "sources": [],
     "spec": "_specs/rv-lights-not-working.md",
@@ -2641,9 +2641,9 @@
     ]
   },
   "guides/rv-outlets-not-working.html": {
-    "hash": "05e8fd11ff7d0887",
+    "hash": "0da7bdc0982ed41f",
     "status": "verified",
-    "verified_by": "Claude Desktop lane, third round on 2026-09-24. The class sweep (JOB-20260924-0715 PART 2) found six instances on a page that had already passed a full review and a confirm round: four applied, one declined with the reason (Usually not a fault is a claim about the situation rather than about what owners do, and the sweep own suggested fix would have made it worse). Applied: the breaker sentence that said the same thing twice, in the body and again in the FAQ answer and its schema copy; the unattributed frequency claim that closed the causes list; and the safety callout self-reference, reworded with its scope kept exactly. The sweep was given the raw HTML as well as the prose view, so it read the meta description, the social strings and both JSON-LD blocks and reported the other classes clean across all of them. Confirm round JOB-20260924-0735 returned PART 1: CONFIRMED on all four edits and confirmed the declined finding was left alone. Verdict re-earned: the text that is committed is now the text that was reviewed. Since that verdict the only further change to this page's visible text is the site-wide check line, applied on Ty's instruction: it now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' rather than 'Last reviewed: <date> ...', because the old wording implied a review cycle that had not happened and named no author. No claim text changed in that pass.",
+    "verified_by": "Claude Desktop lane, third round on 2026-09-24. The class sweep (JOB-20260924-0715 PART 2) found six instances on a page that had already passed a full review and a confirm round: four applied, one declined with the reason (Usually not a fault is a claim about the situation rather than about what owners do, and the sweep own suggested fix would have made it worse). Applied: the breaker sentence that said the same thing twice, in the body and again in the FAQ answer and its schema copy; the unattributed frequency claim that closed the causes list; and the safety callout self-reference, reworded with its scope kept exactly. The sweep was given the raw HTML as well as the prose view, so it read the meta description, the social strings and both JSON-LD blocks and reported the other classes clean across all of them. Confirm round JOB-20260924-0735 returned PART 1: CONFIRMED on all four edits and confirmed the declined finding was left alone. Verdict re-earned: the text that is committed is now the text that was reviewed. Since that verdict the only further change to this page's visible text is the site-wide check line, applied on Ty's instruction: it now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' rather than 'Last reviewed: <date> ...', because the old wording implied a review cycle that had not happened and named no author. No claim text changed in that pass. CHANGED AGAIN 2026-09-28 on Ty's instruction: the check line now reads 'By OriginRV. Written and checked against the sources below on <date>.' rather than a person's name, and the Article schema author is an Organization rather than a Person. His name appears only on the About page, as Ty B. No claim text changed in that pass either.",
     "verified_at": "2026-09-28",
     "sources": [],
     "spec": "_specs/rv-outlets-not-working.md",
@@ -2891,10 +2891,10 @@
       },
       {
         "id": "C31",
-        "text": "\"By Ty Brandes. Written and checked against the sources below on <date>.\"",
+        "text": "\"By OriginRV. Written and checked against the sources below on <date>.\"",
         "source": "provenance; the byline and the relabel were applied site-wide on 2026-09-28",
         "state": "CONFIRMED",
-        "by": "RELPELLED 2026-09-28 on Ty's instruction. The line was 'Last reviewed: <date> ...', which implied a review cycle that had not happened and named no author. It now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' across all 35 content guides. The claim text below is the new form.",
+        "by": "RELPELLED 2026-09-28 on Ty's instruction. The line was 'Last reviewed: <date> ...', which implied a review cycle that had not happened and named no author. It now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' across all 35 content guides. The claim text below is the new form. CHANGED AGAIN 2026-09-28 on Ty's instruction: the byline is OriginRV rather than a person, and his name appears only on the About page, as Ty B. The Article schema author is an Organization, not a Person.",
         "at": "2026-09-28"
       },
       {
@@ -3162,10 +3162,10 @@
       },
       {
         "id": "C25",
-        "text": "\"By Ty Brandes. Written and checked against the sources below on <date>.\"",
+        "text": "\"By OriginRV. Written and checked against the sources below on <date>.\"",
         "source": "provenance; the byline and the relabel were applied site-wide on 2026-09-28",
         "state": "CONFIRMED",
-        "by": "RELPELLED 2026-09-28 on Ty's instruction. The line was 'Last reviewed: <date> ...', which implied a review cycle that had not happened and named no author. It now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' across all 35 content guides. The claim text below is the new form.",
+        "by": "RELPELLED 2026-09-28 on Ty's instruction. The line was 'Last reviewed: <date> ...', which implied a review cycle that had not happened and named no author. It now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' across all 35 content guides. The claim text below is the new form. CHANGED AGAIN 2026-09-28 on Ty's instruction: the byline is OriginRV rather than a person, and his name appears only on the About page, as Ty B. The Article schema author is an Organization, not a Person.",
         "at": "2026-09-28"
       },
       {
@@ -3181,9 +3181,9 @@
     "invalidated_at": "2026-09-27"
   },
   "guides/rv-roof-leak-repair.html": {
-    "hash": "1fc082bcad99c400",
+    "hash": "a9bbac7bf8674e53",
     "status": "verified",
-    "verified_by": "Cloud 2026-09-28, external-review correction pass plus a fresh-context confirm round. An external review noted that the page told readers to cut a small hole in a sagging wet ceiling with no mention of the wiring running through RV ceilings. The gap was real: RV ceiling runs carry 12-volt wiring to lights, vents, detectors and speakers, 120-volt wiring to the air conditioner and on some models a ceiling fixture, and ducting. The bullet now names what is in the cavity, requires the shore power, generator, inverter and 12-volt system to be killed with the feeding fuses and breakers pulled before anything goes through the panel, keeps the hole clear of visible fixtures, specifies a hand tool rather than a drill, adds eye and breathing protection, and defers to a technician where the cavity is unknown. The confirm round verified the ceiling contents against Airxcel's ceiling-assembly instructions ('The 115 VAC service for the roof top unit must be routed into the ceiling plenum') and the NHTSA service advisory showing the cavity contents, confirmed the ordering now puts isolation before the action, and prescribed one typo fix ('A hatches hinges' to 'A hatch hinges'), which is the only change made after the confirm verdict. Since that verdict the only further change to this page's visible text is the site-wide check line, applied on Ty's instruction: it now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' rather than 'Last reviewed: <date> ...', because the old wording implied a review cycle that had not happened and named no author. No claim text changed in that pass.",
+    "verified_by": "Cloud 2026-09-28, external-review correction pass plus a fresh-context confirm round. An external review noted that the page told readers to cut a small hole in a sagging wet ceiling with no mention of the wiring running through RV ceilings. The gap was real: RV ceiling runs carry 12-volt wiring to lights, vents, detectors and speakers, 120-volt wiring to the air conditioner and on some models a ceiling fixture, and ducting. The bullet now names what is in the cavity, requires the shore power, generator, inverter and 12-volt system to be killed with the feeding fuses and breakers pulled before anything goes through the panel, keeps the hole clear of visible fixtures, specifies a hand tool rather than a drill, adds eye and breathing protection, and defers to a technician where the cavity is unknown. The confirm round verified the ceiling contents against Airxcel's ceiling-assembly instructions ('The 115 VAC service for the roof top unit must be routed into the ceiling plenum') and the NHTSA service advisory showing the cavity contents, confirmed the ordering now puts isolation before the action, and prescribed one typo fix ('A hatches hinges' to 'A hatch hinges'), which is the only change made after the confirm verdict. Since that verdict the only further change to this page's visible text is the site-wide check line, applied on Ty's instruction: it now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' rather than 'Last reviewed: <date> ...', because the old wording implied a review cycle that had not happened and named no author. No claim text changed in that pass. CHANGED AGAIN 2026-09-28 on Ty's instruction: the check line now reads 'By OriginRV. Written and checked against the sources below on <date>.' rather than a person's name, and the Article schema author is an Organization rather than a Person. His name appears only on the About page, as Ty B. No claim text changed in that pass either.",
     "verified_at": "2026-09-28",
     "sources": [],
     "spec": "_specs/rv-roof-leak-repair.md",
@@ -3483,9 +3483,9 @@
     "invalidated_at": "2026-09-27"
   },
   "guides/rv-solar-not-charging.html": {
-    "hash": "ce1026bc8781db6a",
+    "hash": "58201315aa5be214",
     "status": "verified",
-    "verified_by": "Cloud 2026-09-28, external-review correction pass plus a fresh-context confirm round. The page explained the battery-first connection order with 'a panel connected to a controller with no battery on it has nowhere to put its current', which is bad physics: a panel is a current-limited source, so with an open input it simply rises to its open-circuit voltage and no current flows. The procedure was right and the explanation was not. The page now gives the real reasons: the controller sees the panel's full open-circuit voltage instead of a battery-clamped input, which is the cause Renogy names for the damage, and without a battery it can fail to establish or mis-detect the system voltage. The confirm round verified the replacement against Renogy's own manual language, Victron's MPPT manual ('In case the solar charger does not measure a battery voltage, it will default to 12V'), and Go Power's GP-PWM-10, and prescribed three further fixes, all applied: the Zamp attribution hedged to its current install guides, 'killed' softened to 'damaged' to match the body, and the Renogy source repointed at the article that actually carries the open-circuit-voltage claim. Those three are the only changes made after the confirm verdict. Since that verdict the only further change to this page's visible text is the site-wide check line, applied on Ty's instruction: it now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' rather than 'Last reviewed: <date> ...', because the old wording implied a review cycle that had not happened and named no author. No claim text changed in that pass.",
+    "verified_by": "Cloud 2026-09-28, external-review correction pass plus a fresh-context confirm round. The page explained the battery-first connection order with 'a panel connected to a controller with no battery on it has nowhere to put its current', which is bad physics: a panel is a current-limited source, so with an open input it simply rises to its open-circuit voltage and no current flows. The procedure was right and the explanation was not. The page now gives the real reasons: the controller sees the panel's full open-circuit voltage instead of a battery-clamped input, which is the cause Renogy names for the damage, and without a battery it can fail to establish or mis-detect the system voltage. The confirm round verified the replacement against Renogy's own manual language, Victron's MPPT manual ('In case the solar charger does not measure a battery voltage, it will default to 12V'), and Go Power's GP-PWM-10, and prescribed three further fixes, all applied: the Zamp attribution hedged to its current install guides, 'killed' softened to 'damaged' to match the body, and the Renogy source repointed at the article that actually carries the open-circuit-voltage claim. Those three are the only changes made after the confirm verdict. Since that verdict the only further change to this page's visible text is the site-wide check line, applied on Ty's instruction: it now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' rather than 'Last reviewed: <date> ...', because the old wording implied a review cycle that had not happened and named no author. No claim text changed in that pass. CHANGED AGAIN 2026-09-28 on Ty's instruction: the check line now reads 'By OriginRV. Written and checked against the sources below on <date>.' rather than a person's name, and the Article schema author is an Organization rather than a Person. His name appears only on the About page, as Ty B. No claim text changed in that pass either.",
     "verified_at": "2026-09-28",
     "sources": [],
     "spec": "_specs/rv-solar-not-charging.md",
@@ -3717,18 +3717,18 @@
       },
       {
         "id": "C29",
-        "text": "\"By Ty Brandes. Written and checked against the sources below on <date>.\"",
+        "text": "\"By OriginRV. Written and checked against the sources below on <date>.\"",
         "source": "provenance; the byline and the relabel were applied site-wide on 2026-09-28",
         "state": "CONFIRMED",
-        "by": "RELPELLED 2026-09-28 on Ty's instruction. The line was 'Last reviewed: <date> ...', which implied a review cycle that had not happened and named no author. It now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' across all 35 content guides. The claim text below is the new form.",
+        "by": "RELPELLED 2026-09-28 on Ty's instruction. The line was 'Last reviewed: <date> ...', which implied a review cycle that had not happened and named no author. It now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' across all 35 content guides. The claim text below is the new form. CHANGED AGAIN 2026-09-28 on Ty's instruction: the byline is OriginRV rather than a person, and his name appears only on the About page, as Ty B. The Article schema author is an Organization, not a Person.",
         "at": "2026-09-28"
       }
     ]
   },
   "guides/rv-tank-sensors-reading-wrong.html": {
-    "hash": "537f2ec3ea71c377",
+    "hash": "617b1dff7e3c0f89",
     "status": "verified",
-    "verified_by": "Cloud 2026-09-28, external-review correction pass plus a fresh-context confirm round. The page taught that a verifiably dry tank still reading full proves a wiring fault, because 'there is no residue left to carry any current'. That is backwards: emptying a tank does not remove what is stuck to the probes, and dried sludge, struvite and mineral scale are the classic cause of a false full. The rule was corrected in the two places it appeared, and the confirm round found it stated in two further places the first pass had missed (the 'always reads full' symptom card and the featured FAQ), both then fixed, so the rule now reads consistently in all six locations. Struvite is now defined on the page. The confirm round verified the mechanism against RV Tank Specialist, Walex, Ask The RV Engineer and Kleen Tank, and confirmed the corrected order of operations. No change was made after the confirm verdict. Since that verdict the only further change to this page's visible text is the site-wide check line, applied on Ty's instruction: it now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' rather than 'Last reviewed: <date> ...', because the old wording implied a review cycle that had not happened and named no author. No claim text changed in that pass.",
+    "verified_by": "Cloud 2026-09-28, external-review correction pass plus a fresh-context confirm round. The page taught that a verifiably dry tank still reading full proves a wiring fault, because 'there is no residue left to carry any current'. That is backwards: emptying a tank does not remove what is stuck to the probes, and dried sludge, struvite and mineral scale are the classic cause of a false full. The rule was corrected in the two places it appeared, and the confirm round found it stated in two further places the first pass had missed (the 'always reads full' symptom card and the featured FAQ), both then fixed, so the rule now reads consistently in all six locations. Struvite is now defined on the page. The confirm round verified the mechanism against RV Tank Specialist, Walex, Ask The RV Engineer and Kleen Tank, and confirmed the corrected order of operations. No change was made after the confirm verdict. Since that verdict the only further change to this page's visible text is the site-wide check line, applied on Ty's instruction: it now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' rather than 'Last reviewed: <date> ...', because the old wording implied a review cycle that had not happened and named no author. No claim text changed in that pass. CHANGED AGAIN 2026-09-28 on Ty's instruction: the check line now reads 'By OriginRV. Written and checked against the sources below on <date>.' rather than a person's name, and the Article schema author is an Organization rather than a Person. His name appears only on the About page, as Ty B. No claim text changed in that pass either.",
     "verified_at": "2026-09-28",
     "sources": [],
     "spec": "_specs/rv-tank-sensors-reading-wrong.md",
@@ -4000,10 +4000,10 @@
       },
       {
         "id": "C34",
-        "text": "\"By Ty Brandes. Written and checked against the sources below on <date>.\"",
+        "text": "\"By OriginRV. Written and checked against the sources below on <date>.\"",
         "source": "provenance; the byline and the relabel were applied site-wide on 2026-09-28",
         "state": "CONFIRMED",
-        "by": "RELPELLED 2026-09-28 on Ty's instruction. The line was 'Last reviewed: <date> ...', which implied a review cycle that had not happened and named no author. It now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' across all 35 content guides. The claim text below is the new form.",
+        "by": "RELPELLED 2026-09-28 on Ty's instruction. The line was 'Last reviewed: <date> ...', which implied a review cycle that had not happened and named no author. It now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' across all 35 content guides. The claim text below is the new form. CHANGED AGAIN 2026-09-28 on Ty's instruction: the byline is OriginRV rather than a person, and his name appears only on the About page, as Ty B. The Article schema author is an Organization, not a Person.",
         "at": "2026-09-28"
       },
       {
@@ -4147,10 +4147,10 @@
       },
       {
         "id": "C15",
-        "text": "\"By Ty Brandes. Written and checked against the sources below on <date>.\"",
+        "text": "\"By OriginRV. Written and checked against the sources below on <date>.\"",
         "source": "provenance; the byline and the relabel were applied site-wide on 2026-09-28",
         "state": "CONFIRMED",
-        "by": "RELPELLED 2026-09-28 on Ty's instruction. The line was 'Last reviewed: <date> ...', which implied a review cycle that had not happened and named no author. It now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' across all 35 content guides. The claim text below is the new form.",
+        "by": "RELPELLED 2026-09-28 on Ty's instruction. The line was 'Last reviewed: <date> ...', which implied a review cycle that had not happened and named no author. It now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' across all 35 content guides. The claim text below is the new form. CHANGED AGAIN 2026-09-28 on Ty's instruction: the byline is OriginRV rather than a person, and his name appears only on the About page, as Ty B. The Article schema author is an Organization, not a Person.",
         "at": "2026-09-28"
       }
     ],
@@ -4158,9 +4158,9 @@
     "invalidated_at": "2026-09-27"
   },
   "guides/rv-toilet-not-flushing.html": {
-    "hash": "66f62cf170df25ec",
+    "hash": "1545cdf3dc9348f4",
     "status": "verified",
-    "verified_by": "Cloud 2026-09-26, FIRST independent pass on record: Qwen, job 20260926-2252-RV-TOILET-R2, VERDICT CORRECTIONS APPLIED. All three corrections from the 09-24 review are confirmed FIXED, each quoted, and all four of its quotations are on the live page mechanically (4 on the page, 0 staged-only, 0 nowhere): the pump-off and pressure-bleed step now precedes the supply-line instruction in both the body and the FAQ, the tank-and-vent first step is in place and the claim about a blocked vent is confirmed as written, and the Thetford attribution reads as fact. Nothing the corrections touched was broken. Since that verdict the only further change to this page's visible text is the site-wide check line, applied on Ty's instruction: it now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' rather than 'Last reviewed: <date> ...', because the old wording implied a review cycle that had not happened and named no author. No claim text changed in that pass.",
+    "verified_by": "Cloud 2026-09-26, FIRST independent pass on record: Qwen, job 20260926-2252-RV-TOILET-R2, VERDICT CORRECTIONS APPLIED. All three corrections from the 09-24 review are confirmed FIXED, each quoted, and all four of its quotations are on the live page mechanically (4 on the page, 0 staged-only, 0 nowhere): the pump-off and pressure-bleed step now precedes the supply-line instruction in both the body and the FAQ, the tank-and-vent first step is in place and the claim about a blocked vent is confirmed as written, and the Thetford attribution reads as fact. Nothing the corrections touched was broken. Since that verdict the only further change to this page's visible text is the site-wide check line, applied on Ty's instruction: it now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' rather than 'Last reviewed: <date> ...', because the old wording implied a review cycle that had not happened and named no author. No claim text changed in that pass. CHANGED AGAIN 2026-09-28 on Ty's instruction: the check line now reads 'By OriginRV. Written and checked against the sources below on <date>.' rather than a person's name, and the Article schema author is an Organization rather than a Person. His name appears only on the About page, as Ty B. No claim text changed in that pass either.",
     "verified_at": "2026-09-28",
     "sources": [],
     "spec": "_specs/rv-toilet-not-flushing.md",
@@ -4499,10 +4499,10 @@
       },
       {
         "id": "C28",
-        "text": "\"By Ty Brandes. Written and checked against the sources below on <date>.\"",
+        "text": "\"By OriginRV. Written and checked against the sources below on <date>.\"",
         "source": "provenance; the byline and the relabel were applied site-wide on 2026-09-28",
         "state": "CONFIRMED",
-        "by": "RELPELLED 2026-09-28 on Ty's instruction. The line was 'Last reviewed: <date> ...', which implied a review cycle that had not happened and named no author. It now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' across all 35 content guides. The claim text below is the new form.",
+        "by": "RELPELLED 2026-09-28 on Ty's instruction. The line was 'Last reviewed: <date> ...', which implied a review cycle that had not happened and named no author. It now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' across all 35 content guides. The claim text below is the new form. CHANGED AGAIN 2026-09-28 on Ty's instruction: the byline is OriginRV rather than a person, and his name appears only on the About page, as Ty B. The Article schema author is an Organization, not a Person.",
         "at": "2026-09-28"
       }
     ],
@@ -4765,10 +4765,10 @@
       },
       {
         "id": "C30",
-        "text": "\"By Ty Brandes. Written and checked against the sources below on <date>.\"",
+        "text": "\"By OriginRV. Written and checked against the sources below on <date>.\"",
         "source": "provenance; the byline and the relabel were applied site-wide on 2026-09-28",
         "state": "CONFIRMED",
-        "by": "RELPELLED 2026-09-28 on Ty's instruction. The line was 'Last reviewed: <date> ...', which implied a review cycle that had not happened and named no author. It now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' across all 35 content guides. The claim text below is the new form.",
+        "by": "RELPELLED 2026-09-28 on Ty's instruction. The line was 'Last reviewed: <date> ...', which implied a review cycle that had not happened and named no author. It now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' across all 35 content guides. The claim text below is the new form. CHANGED AGAIN 2026-09-28 on Ty's instruction: the byline is OriginRV rather than a person, and his name appears only on the About page, as Ty B. The Article schema author is an Organization, not a Person.",
         "at": "2026-09-28"
       }
     ],
@@ -4783,9 +4783,9 @@
     "sources": []
   },
   "guides/tires-winter.html": {
-    "hash": "f72cd089d5132b85",
+    "hash": "7466d36d486f1bb1",
     "status": "verified",
-    "verified_by": "Cloud 2026-09-28, external-review correction pass plus a fresh-context confirm round. The page carried a 15 percent load headroom figure for trailer tires. No standards body publishes 15 percent: the published figure is a 10 percent reserve, the tires on an axle rated to at least 110 percent of the axle rating (NFPA 1192 section 8.6.2.2, with 106 percent above 8,000 lb GAWR in 8.6.2.3), against a federal floor in 49 CFR 571.120 that requires no margin at all. The companion tire page was corrected in the same pass and this cross-reference now matches it at 10 percent. The confirm round verified the standard against NFPA 1192 and 49 CFR 571.120 and found one remaining defect, which it prescribed the exact text for and which is applied: the sentence compared a 10 percent tire reserve to the towing page's 80 percent convention as if they were the same margin, and now names them as separate questions. That replacement is the only change made after the confirm verdict. Since that verdict the only further change to this page's visible text is the site-wide check line, applied on Ty's instruction: it now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' rather than 'Last reviewed: <date> ...', because the old wording implied a review cycle that had not happened and named no author. No claim text changed in that pass.",
+    "verified_by": "Cloud 2026-09-28, external-review correction pass plus a fresh-context confirm round. The page carried a 15 percent load headroom figure for trailer tires. No standards body publishes 15 percent: the published figure is a 10 percent reserve, the tires on an axle rated to at least 110 percent of the axle rating (NFPA 1192 section 8.6.2.2, with 106 percent above 8,000 lb GAWR in 8.6.2.3), against a federal floor in 49 CFR 571.120 that requires no margin at all. The companion tire page was corrected in the same pass and this cross-reference now matches it at 10 percent. The confirm round verified the standard against NFPA 1192 and 49 CFR 571.120 and found one remaining defect, which it prescribed the exact text for and which is applied: the sentence compared a 10 percent tire reserve to the towing page's 80 percent convention as if they were the same margin, and now names them as separate questions. That replacement is the only change made after the confirm verdict. Since that verdict the only further change to this page's visible text is the site-wide check line, applied on Ty's instruction: it now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' rather than 'Last reviewed: <date> ...', because the old wording implied a review cycle that had not happened and named no author. No claim text changed in that pass. CHANGED AGAIN 2026-09-28 on Ty's instruction: the check line now reads 'By OriginRV. Written and checked against the sources below on <date>.' rather than a person's name, and the Article schema author is an Organization rather than a Person. His name appears only on the About page, as Ty B. No claim text changed in that pass either.",
     "verified_at": "2026-09-28",
     "sources": [],
     "spec": "_specs/tires-winter.md",
@@ -4889,18 +4889,18 @@
       },
       {
         "id": "C13",
-        "text": "\"By Ty Brandes. Written and checked against the sources below on <date>.\"",
+        "text": "\"By OriginRV. Written and checked against the sources below on <date>.\"",
         "source": "provenance; the byline and the relabel were applied site-wide on 2026-09-28",
         "state": "CONFIRMED",
-        "by": "RELPELLED 2026-09-28 on Ty's instruction. The line was 'Last reviewed: <date> ...', which implied a review cycle that had not happened and named no author. It now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' across all 35 content guides. The claim text below is the new form.",
+        "by": "RELPELLED 2026-09-28 on Ty's instruction. The line was 'Last reviewed: <date> ...', which implied a review cycle that had not happened and named no author. It now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' across all 35 content guides. The claim text below is the new form. CHANGED AGAIN 2026-09-28 on Ty's instruction: the byline is OriginRV rather than a person, and his name appears only on the About page, as Ty B. The Article schema author is an Organization, not a Person.",
         "at": "2026-09-28"
       }
     ]
   },
   "guides/trailer-brakes-required.html": {
-    "hash": "4f923400a1110a96",
+    "hash": "d64c86a1140a3f6b",
     "status": "verified",
-    "verified_by": "Cloud 2026-09-28, external-review correction pass plus a fresh-context confirm round. An external review flagged the descent advice as dangerous and it was: the page told readers to hold the controller's manual override ahead of the truck's pedal on a descent, which no authoritative source teaches and which controller makers warn against (Redarc: 'Manual override should not be used in place of the regular vehicle brakes'; Elecbrakes: 'Never use Manual Override to slow the vehicle and trailer during normal driving'). The same sentence also had the hot-drum diagnosis inverted. Rewritten to engine braking first, snub braking, gain sets how much and boost sets how early, with the override reserved for gain-setting, warming and a brief sway correction. The confirm round verified every citation against ORS 815.125(7), the ODOT towing brochure, CDL downgrade guidance and the Hayes and Tekonsha controller manuals, and prescribed five further fixes, all applied: 'four state codes' to three, the CMV definition to 49 CFR 390.5, the snub sentence's self-contradiction, 'the trailer's brochure', and the qualifier that a little extra trailer heat is the lead the page asks for. Those five are the only changes made after the confirm verdict. Since that verdict the only further change to this page's visible text is the site-wide check line, applied on Ty's instruction: it now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' rather than 'Last reviewed: <date> ...', because the old wording implied a review cycle that had not happened and named no author. No claim text changed in that pass.",
+    "verified_by": "Cloud 2026-09-28, external-review correction pass plus a fresh-context confirm round. An external review flagged the descent advice as dangerous and it was: the page told readers to hold the controller's manual override ahead of the truck's pedal on a descent, which no authoritative source teaches and which controller makers warn against (Redarc: 'Manual override should not be used in place of the regular vehicle brakes'; Elecbrakes: 'Never use Manual Override to slow the vehicle and trailer during normal driving'). The same sentence also had the hot-drum diagnosis inverted. Rewritten to engine braking first, snub braking, gain sets how much and boost sets how early, with the override reserved for gain-setting, warming and a brief sway correction. The confirm round verified every citation against ORS 815.125(7), the ODOT towing brochure, CDL downgrade guidance and the Hayes and Tekonsha controller manuals, and prescribed five further fixes, all applied: 'four state codes' to three, the CMV definition to 49 CFR 390.5, the snub sentence's self-contradiction, 'the trailer's brochure', and the qualifier that a little extra trailer heat is the lead the page asks for. Those five are the only changes made after the confirm verdict. Since that verdict the only further change to this page's visible text is the site-wide check line, applied on Ty's instruction: it now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' rather than 'Last reviewed: <date> ...', because the old wording implied a review cycle that had not happened and named no author. No claim text changed in that pass. CHANGED AGAIN 2026-09-28 on Ty's instruction: the check line now reads 'By OriginRV. Written and checked against the sources below on <date>.' rather than a person's name, and the Article schema author is an Organization rather than a Person. His name appears only on the About page, as Ty B. No claim text changed in that pass either.",
     "verified_at": "2026-09-28",
     "sources": [],
     "spec": "_specs/trailer-brakes-required.md",
@@ -5085,9 +5085,9 @@
     ]
   },
   "guides/winterize-plumbing.html": {
-    "hash": "27a0d95e9a69c05e",
+    "hash": "46d64bfb80041967",
     "status": "verified",
-    "verified_by": "Cloud 2026-09-28, external-review correction pass plus a fresh-context confirm round. Two defects were corrected. The bleach ratio: the page presented Suburban's six-ounces-per-10-gallons as the routine sanitizing dose for 'the tanks it builds', but Suburban builds water heaters rather than tanks, and that figure is their heavy chlorination for sulfur odour, roughly 4.5 times the standard dose. The page now gives a quarter cup per 15 gallons (about 50 ppm), notes the makers' doubled 100 ppm option, and keeps the Suburban figure as its own separately labelled item. The dump-valve advice: 'leave the valves open or cracked' was wrong and is now closed with RV antifreeze, with the Drain Master and Airstream counter-practice named rather than omitted. The confirm round verified both against Winnebago's and Jayco's fresh water procedures, Suburban's own manual, Drain Master and Airstream, and prescribed four further fixes, all applied: 'a shorter hour' to 'just one hour', the damage claim scoped to routine sanitize, Airstream added to the valve caveat, and 'tank dosed' to 'system dosed'. The Drain Master and Airstream sources were added. Those four plus the two source entries are the only changes made after the confirm verdict. Since that verdict the only further change to this page's visible text is the site-wide check line, applied on Ty's instruction: it now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' rather than 'Last reviewed: <date> ...', because the old wording implied a review cycle that had not happened and named no author. No claim text changed in that pass.",
+    "verified_by": "Cloud 2026-09-28, external-review correction pass plus a fresh-context confirm round. Two defects were corrected. The bleach ratio: the page presented Suburban's six-ounces-per-10-gallons as the routine sanitizing dose for 'the tanks it builds', but Suburban builds water heaters rather than tanks, and that figure is their heavy chlorination for sulfur odour, roughly 4.5 times the standard dose. The page now gives a quarter cup per 15 gallons (about 50 ppm), notes the makers' doubled 100 ppm option, and keeps the Suburban figure as its own separately labelled item. The dump-valve advice: 'leave the valves open or cracked' was wrong and is now closed with RV antifreeze, with the Drain Master and Airstream counter-practice named rather than omitted. The confirm round verified both against Winnebago's and Jayco's fresh water procedures, Suburban's own manual, Drain Master and Airstream, and prescribed four further fixes, all applied: 'a shorter hour' to 'just one hour', the damage claim scoped to routine sanitize, Airstream added to the valve caveat, and 'tank dosed' to 'system dosed'. The Drain Master and Airstream sources were added. Those four plus the two source entries are the only changes made after the confirm verdict. Since that verdict the only further change to this page's visible text is the site-wide check line, applied on Ty's instruction: it now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' rather than 'Last reviewed: <date> ...', because the old wording implied a review cycle that had not happened and named no author. No claim text changed in that pass. CHANGED AGAIN 2026-09-28 on Ty's instruction: the check line now reads 'By OriginRV. Written and checked against the sources below on <date>.' rather than a person's name, and the Article schema author is an Organization rather than a Person. His name appears only on the About page, as Ty B. No claim text changed in that pass either.",
     "verified_at": "2026-09-28",
     "sources": [],
     "spec": "_specs/winterize-plumbing.md",
@@ -5199,10 +5199,10 @@
       },
       {
         "id": "C14",
-        "text": "\"By Ty Brandes. Written and checked against the sources below on <date>.\"",
+        "text": "\"By OriginRV. Written and checked against the sources below on <date>.\"",
         "source": "provenance; the byline and the relabel were applied site-wide on 2026-09-28",
         "state": "CONFIRMED",
-        "by": "RELPELLED 2026-09-28 on Ty's instruction. The line was 'Last reviewed: <date> ...', which implied a review cycle that had not happened and named no author. It now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' across all 35 content guides. The claim text below is the new form.",
+        "by": "RELPELLED 2026-09-28 on Ty's instruction. The line was 'Last reviewed: <date> ...', which implied a review cycle that had not happened and named no author. It now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' across all 35 content guides. The claim text below is the new form. CHANGED AGAIN 2026-09-28 on Ty's instruction: the byline is OriginRV rather than a person, and his name appears only on the About page, as Ty B. The Article schema author is an Organization, not a Person.",
         "at": "2026-09-28"
       }
     ]
