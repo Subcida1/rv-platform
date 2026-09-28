@@ -160,7 +160,7 @@ def check(path, no_fetch=False):
     if not qs or not urls:
         print(f"  {path.name}: {len(qs)} quote(s), {len(urls)} source(s) - nothing to check")
         return 0
-    corpus, failed, thin = [], 0, []
+    corpus, failed, thin, failed_urls = [], 0, [], []
     if no_fetch:
         for u in urls:
             cached = CACHE / hashlib.sha256(u.encode()).hexdigest()[:20]
@@ -171,6 +171,8 @@ def check(path, no_fetch=False):
             t = fetch(u)
             if t.startswith("__FETCH_FAILED__"):
                 failed += 1
+                # list them, or a count is all you get and you cannot tell a WAF block from a typo
+                failed_urls.append((u, t.replace("__FETCH_FAILED__", "").strip()[:90]))
             elif len(t) < 600:
                 # Fetched, but there is almost no text in it. On these sites that means the page builds
                 # its content in JavaScript, so an HTTP fetch returns a shell. Treating a shell as a
@@ -246,6 +248,9 @@ def check(path, no_fetch=False):
     if failed:
         print(f"    WARNING {failed} source(s) could not be fetched, so quotes from them will read as")
         print("            missing. Check the unreachable URLs before believing any hit below.")
+        for u, why in failed_urls:
+            print(f"              {u}")
+            print(f"                {why}")
     if thin:
         print(f"    WARNING {len(thin)} source(s) returned almost no text - they are probably rendered in")
         print("            JavaScript, so an HTTP fetch cannot see their content. Any hit below may be")
