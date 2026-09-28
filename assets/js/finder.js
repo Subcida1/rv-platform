@@ -194,9 +194,13 @@
       else if (r.serves) badge = '<span class="listing-dist serves">Serves your area</span>';
       else if (r.d != null) badge = '<span class="listing-dist">about ' + Math.round(r.d) + ' mi</span>';
       else if (x.region) badge = '<span class="listing-dist region">' + esc(x.region) + '</span>';
-      var emerg = x.r
-        ? '<span class="listing-emerg roadside">Roadside / stuck</span>'
-        : (x.e ? '<span class="listing-emerg">Emergency mobile repair</span>' : '');
+      // Both can be true: a mobile tech with a 24-hour line that also does brakes and axles
+      // serves a coach failure AND a vehicle breakdown. Showing one label and hiding the other
+      // told the reader less than the data knows. Until 2026-09-28 the data model forbade the
+      // combination outright, which was worse.
+      var emerg = '';
+      if (x.r) emerg += '<span class="listing-emerg roadside">Roadside / stuck</span>';
+      if (x.e) emerg += '<span class="listing-emerg">Emergency mobile repair</span>';
       // Scope label. A glass-only or roof-only business is worth listing in a
       // sparse region, but the visitor has to know that is all it does.
       var spec = x.spec ? '<span class="listing-spec">' + esc(x.spec) + '</span>' : '';

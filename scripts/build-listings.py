@@ -122,8 +122,8 @@ def validate(data, slug):
                 bad.append("%s: no %s" % (name, f))
         if row.get("t") not in TYPE_LABEL:
             bad.append("%s: type %r must be mobile, center or both" % (name, row.get("t")))
-        if row.get("r") and row.get("e"):
-            bad.append("%s: claims both roadside and emergency" % name)
+        # e and r are independent, and a business may hold both. The rule used to forbid it;
+        # the 2026-09-28 New Mexico pass showed why that was wrong (see below).
         unknown = set(row) - set(REQUIRED) - set(OPTIONAL)
         if unknown:
             bad.append("%s: unknown field(s) %s" % (name, ", ".join(sorted(unknown))))
