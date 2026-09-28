@@ -89,6 +89,9 @@
     // listing side is canonicalised when the shard is built.
     function canon(s) {
       return String(s || '').trim().toLowerCase()
+        // accents folded, because the coordinate table's keys have none and a reader
+        // typing "La Cañada Flintridge" must reach the same place as "La Canada Flintridge"
+        .normalize('NFKD').replace(/[\u0300-\u036f]/g, '')
         .replace(/[.,']/g, '')
         .replace(/^st\s+/, 'saint ')
         .replace(/^mt\s+/, 'mount ')

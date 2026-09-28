@@ -18,6 +18,7 @@ Python side; test-directory.js pins the JavaScript side against the same cases.
 """
 
 import re
+import unicodedata
 
 # LSAD code -> the word the Census appends to NAME. Used ONLY on Census names.
 LSAD = {"25": "city", "43": "town", "47": "village", "57": "cdp", "53": "city",
@@ -66,12 +67,11 @@ def census_keys(name, lsad=None):
     return [k for k in out if k]
 
 
-# KNOWN GAP, recorded 2026-09-28: canonical() does not fold accents, so the Census's
-# "La Cañada Flintridge city" is keyed with the tilde and neither a reader nor a listing
-# writing "La Canada Flintridge" matches it. Found when a Los Angeles listing needed that
-# town. It is covered today by an entry in _data/place-aliases.json. Folding the accent
-# (unicodedata NFKD, strip combining marks) is the real fix, and it has to be done in
-# finder.js's canon() in the same change or the two sides stop agreeing.
+# Accents are folded, so the Census's "La Cañada Flintridge" and a reader typing "La Canada
+# Flintridge" reach the same key. Without this the two names are different places as far as
+# the directory is concerned, and nothing reports it: the reader simply gets no match.
+# The same fold is in finder.js's canon(); the two sides have to agree or a name resolves in
+# the check and not in the browser.
 
 
 def canonical(name, census_name=False, lsad=None):
@@ -87,6 +87,8 @@ def canonical(name, census_name=False, lsad=None):
                 if des and n.endswith(" " + des):
                     n = n[: -len(des) - 1]
                     break
+    n = unicodedata.normalize("NFKD", n)
+    n = "".join(c for c in n if not unicodedata.combining(c))
     n = n.replace(".", "").replace("'", "")
     n = re.sub(r"^st\b", "saint", n)
     n = re.sub(r"^mt\b", "mount", n)

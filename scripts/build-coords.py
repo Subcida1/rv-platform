@@ -487,13 +487,16 @@ def selftest():
     for name, lsad, want in cases:
         got = canonical(name, census_name=True, lsad=lsad)
         assert got == want, "census %r -> %r, wanted %r" % (name, got, want)
-    for name, want in [("Baker City", "baker city"), ("Crescent City", "crescent city"),
+    for name, want in [("La Cañada Flintridge", "la canada flintridge"),
+                       ("La Canada Flintridge", "la canada flintridge"),
+                       ("Piñon Hills", "pinon hills"), ("Pinon Hills", "pinon hills"),
+                       ("Baker City", "baker city"), ("Crescent City", "crescent city"),
                        ("St. Helens", "saint helens"), ("Saint Helens", "saint helens"),
                        ("Mt. Shasta", "mount shasta"), ("Bend, OR", "bend, or")]:
         got = canonical(name)
         assert got == want, "reader %r -> %r, wanted %r" % (name, got, want)
-    print("  normalisation: %d censuses names and %d reader names, as expected"
-          % (len(cases), 6))
+    print("  normalisation: %d census names and %d reader names, as expected"
+          % (len(cases), 10))
 
 
 def main():
