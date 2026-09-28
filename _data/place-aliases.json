@@ -177,5 +177,9 @@
   "Ira": {
     "to_zip": "79527",
     "why": "A community in Scurry County with no Census place. 79527 is the ZIP area that serves it."
+  },
+  "Joyce": {
+    "to": "Port Angeles",
+    "why": "A small community on SR-112 west of Port Angeles. The Census place file does not carry it and its ZIP area (98343) is not in the table, so the coordinate used is Port Angeles, which the listing itself names as its coverage."
   }
 }

@@ -126,8 +126,15 @@ REHOST = ("manualslib.com", "manualsonline.com", "manuals.plus", "manualzz.com",
           # for a Coleman-Mach service manual. The class rule caught the other three mirrors in the
           # same guide and let these through, which is exactly the drift this list exists to stop.
           "bdub.net", "pantherrvproducts.com", "rvupgradestore.com")
+# SCOPE: this is a CITATION rule, and it applies to the pages that cite documents. The
+# directory pages are a different thing entirely - they link each business's own website, and a
+# business whose website happens to be a manual rehost is still the business. On 2026-09-28 the
+# gate failed the build because a Washington listing linked myrvworks.com, which is on the list
+# below; excluding it would have been the wrong fix, because the listing is accurate.
+CITING = [p for p in pages if p.parent.name in ("guides", "manuals", "tools")
+          or p.name in ("index.html", "about.html")]
 bad = []
-for p in pages:
+for p in CITING:
     txt = p.read_text(encoding="utf-8")
     for m in re.finditer(r'href="(https?://[^"]+)"', txt):
         low = m.group(1).lower()

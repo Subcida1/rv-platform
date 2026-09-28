@@ -9,14 +9,104 @@
     {
       "key": "tri-cities",
       "label": "The Tri-Cities"
+    },
+    {
+      "key": "puget-sound",
+      "label": "Seattle, Tacoma and Puget Sound"
+    },
+    {
+      "key": "olympic-north",
+      "label": "The Olympic Peninsula and the north Sound"
+    },
+    {
+      "key": "eastern-wa",
+      "label": "Spokane and eastern Washington"
     }
   ],
   "region_of": {
-    "Vancouver": "sw",
-    "Longview": "sw",
+    "Airway Heights": "eastern-wa",
+    "Anacortes": "olympic-north",
+    "Auburn": "puget-sound",
+    "Bellevue": "puget-sound",
+    "Bellingham": "olympic-north",
+    "Blaine": "olympic-north",
+    "Bonney Lake": "puget-sound",
+    "Bothell": "puget-sound",
+    "Bremerton": "puget-sound",
+    "Burien": "puget-sound",
+    "Burlington": "olympic-north",
+    "Cheney": "eastern-wa",
+    "Chimacum": "olympic-north",
+    "Clallam Bay": "olympic-north",
+    "Clarkston": "eastern-wa",
+    "Colfax": "eastern-wa",
+    "Colville": "eastern-wa",
+    "Coupeville": "olympic-north",
+    "Davenport": "eastern-wa",
+    "Dayton": "eastern-wa",
+    "Deer Park": "eastern-wa",
+    "Duvall": "puget-sound",
+    "East Wenatchee": "eastern-wa",
+    "Edmonds": "puget-sound",
+    "Ellensburg": "eastern-wa",
+    "Everett": "puget-sound",
+    "Federal Way": "puget-sound",
+    "Ferndale": "olympic-north",
+    "Fife": "puget-sound",
+    "Forks": "olympic-north",
+    "Gold Bar": "puget-sound",
+    "Grand Coulee": "eastern-wa",
+    "Joyce": "olympic-north",
     "Kennewick": "tri-cities",
+    "Kent": "puget-sound",
+    "Kirkland": "puget-sound",
+    "Lacey": "puget-sound",
+    "Lake Stevens": "puget-sound",
+    "Lakewood": "puget-sound",
+    "Longview": "sw",
+    "Lynden": "olympic-north",
+    "Lynnwood": "puget-sound",
+    "Marysville": "puget-sound",
+    "Medical Lake": "eastern-wa",
+    "Monroe": "puget-sound",
+    "Moses Lake": "eastern-wa",
+    "Mount Vernon": "olympic-north",
+    "Mukilteo": "puget-sound",
+    "Newport": "eastern-wa",
+    "Oak Harbor": "olympic-north",
+    "Okanogan": "eastern-wa",
+    "Olympia": "puget-sound",
+    "Omak": "eastern-wa",
+    "Othello": "eastern-wa",
     "Pasco": "tri-cities",
-    "Richland": "tri-cities"
+    "Port Angeles": "olympic-north",
+    "Port Hadlock": "olympic-north",
+    "Port Townsend": "olympic-north",
+    "Pullman": "eastern-wa",
+    "Puyallup": "puget-sound",
+    "Renton": "puget-sound",
+    "Republic": "eastern-wa",
+    "Richland": "tri-cities",
+    "Ritzville": "eastern-wa",
+    "Seattle": "puget-sound",
+    "Sedro-Woolley": "olympic-north",
+    "Sequim": "olympic-north",
+    "Shelton": "puget-sound",
+    "Snohomish": "puget-sound",
+    "Spokane": "eastern-wa",
+    "Spokane Valley": "eastern-wa",
+    "Stanwood": "olympic-north",
+    "Starbuck": "eastern-wa",
+    "Sultan": "puget-sound",
+    "Sumner": "puget-sound",
+    "Tacoma": "puget-sound",
+    "Tumwater": "puget-sound",
+    "Union Gap": "eastern-wa",
+    "Vancouver": "sw",
+    "Walla Walla": "eastern-wa",
+    "Wenatchee": "eastern-wa",
+    "Yakima": "eastern-wa",
+    "Yelm": "puget-sound"
   },
   "listings": [
     {
@@ -249,6 +339,589 @@
         "checked": "https://rvroof.com/locations/travelers-destination-rv-service-center/",
         "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
         "center_quote": "RV Roof Repair in Washington | Travelers Destination RV Service Center Skip to content Go to sitemap View accessibility statement FIND A LOCATION For Vendors RV Show Calendar Testimonials Get a Free Sample Contact Us For Vendors RV Show Cal"
+      }
+    },
+    {
+      "n": "Levi the RV Guy",
+      "c": "Tacoma, WA",
+      "p": "(253) 592-0476",
+      "u": "https://www.levithervguy.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Levi the RV Guy is an RVTAA-certified mobile RV repair and tank cleaning technician in the greater Seattle-Tacoma area. He comes to the RV at homes, campgrounds and storage lots for electrical, plumbing, appliance, awning and leveling system repairs, and he cleans holding tanks with RV tank hydro jetting. Service covers Seattle-Tacoma, Puyallup, Eatonville, Graham, Spanaway, Olympia, Dupont, Lakewood, Enumclaw and Sumner.",
+      "g": [
+        "mobile",
+        "rv repair",
+        "tank cleaning",
+        "tank hydro jetting",
+        "certified technician"
+      ],
+      "base": "Tacoma",
+      "areas": [
+        "Seattle",
+        "Tacoma",
+        "Puyallup",
+        "Eatonville",
+        "Graham",
+        "Spanaway",
+        "Olympia",
+        "Dupont",
+        "Lakewood",
+        "Enumclaw",
+        "Sumner"
+      ],
+      "region": "Greater Puget Sound Area and western Washington",
+      "evidence": {
+        "checked": "https://www.levithervguy.com/",
+        "phone_quote": "Levi@levithervguy.com (253) 592-0476",
+        "coverage_quotes": [
+          "We provide service in Seattle-Tacoma, Puyallup, Eatonville, Graham, Spanaway, Olympia, Dupont, Lakewood, Enumclaw, Sumner, and most of the western Washington area.",
+          "I bring top-quality, on-site service to RV owners in Graham, Sumner, Puyallup, Spanaway, Olympia, Tacoma, and beyond!"
+        ],
+        "type_quote": "Levi the RV Guy is a Mobile Repair Technician providing RV Service, maintenance, and RV Tank cleaning!",
+        "emergency_quote": null,
+        "roadside_quote": null
+      }
+    },
+    {
+      "n": "Infield RV LLC",
+      "c": "Monroe, WA",
+      "p": "(425) 387-0213",
+      "u": "https://www.infieldrv.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Infield RV LLC is a mobile RV repair business based out of Monroe, Washington, with more than 15 years of RV repair experience. Its technicians travel to the RV at campsites, storage facilities or driveways for maintenance, diagnostics, electrical, plumbing, appliance, slide-out and leveling repairs. It works from Seattle to Arlington, Lynnwood to Sultan, Marysville, Bothell, Bellevue, Lake Stevens and Granite Falls.",
+      "g": [
+        "mobile",
+        "rv repair",
+        "maintenance",
+        "diagnostics",
+        "emergency mobile rv repair"
+      ],
+      "base": "Monroe",
+      "areas": [
+        "Seattle",
+        "Arlington",
+        "Lynnwood",
+        "Sultan",
+        "Marysville",
+        "Bothell",
+        "Bellevue",
+        "Lake Stevens",
+        "Granite Falls"
+      ],
+      "region": "North King County, Snohomish County, Skagit County and Island County",
+      "spec": "Appointments 35 miles or less from Monroe carry a $100 travel charge; 36 miles or more may carry additional mileage charges.",
+      "evidence": {
+        "checked": "https://www.infieldrv.com/",
+        "phone_quote": "ken@infieldrv.com (425) 387 - 0213",
+        "coverage_quotes": [
+          "We frequent Seattle to Arlington, Lynnwood to Sultan, Marysville, Bothell, Belleview, Lake Stevens, Granite Falls and more.",
+          "BASED OUT OF MONROE WA",
+          "NORTH KING COUNTY SNOHOMISH COUNTY SKAGIT COUNTY ISLAND COUNTY"
+        ],
+        "type_quote": "MOBILE SERVICE MEANS WE COME TO YOU! Based out of Monroe Washington, with quick and easy access to all of Snohomish county",
+        "emergency_quote": null,
+        "roadside_quote": null
+      }
+    },
+    {
+      "n": "Everett Mobile RV Repair",
+      "c": "Everett, WA",
+      "p": "425-931-7188",
+      "u": "https://www.everettmobilervrepair.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Everett Mobile RV Repair is a mobile RV repair business run by Paul Davidson out of Everett, Washington. He travels to the RV and works on water heaters, furnaces, plumbing, skylights, roof inspections and sealing, windows, awnings, electrical and propane systems, and trailer brakes and axles. Service covers north King County, Snohomish County and Island County.",
+      "g": [
+        "mobile",
+        "rv repair",
+        "roof sealing",
+        "propane",
+        "trailer brakes"
+      ],
+      "base": "Everett",
+      "areas": [
+        "Everett"
+      ],
+      "region": "N King County, Snohomish County and Island County",
+      "evidence": {
+        "checked": "https://www.everettmobilervrepair.com/",
+        "phone_quote": "Paul Davidson 425-931-7188",
+        "coverage_quotes": [
+          "Mobile business supporting N King county, Snohomish County, Island County",
+          "My mobile repair business is dedicated to serving Snohomish county and N King county"
+        ],
+        "type_quote": "My mobile RV repair service brings the expertise right to your doorstep. No need to worry about towing your RV to a repair shop. I will come to you and fix any issues on-site",
+        "emergency_quote": null,
+        "roadside_quote": null
+      }
+    },
+    {
+      "n": "Misha's Mobile RV Repair",
+      "c": "Olympia, WA",
+      "p": "360-480-6559",
+      "u": "https://mishasmobilervrepair.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Misha's Mobile RV Repair is a family-run mobile RV service that has worked the Olympia and Thurston County area for more than 15 years. The technician comes to homes, storage lots and campsites for repairs and installations including air conditioners, water heaters, furnaces, plumbing, electrical, roofs and slide-outs. The business also stocks RV parts and can source hard-to-find items.",
+      "g": [
+        "mobile",
+        "rv repair",
+        "installations",
+        "rv parts",
+        "roofs",
+        "slide-outs"
+      ],
+      "base": "Olympia",
+      "areas": [
+        "Olympia",
+        "Lacey",
+        "Tacoma"
+      ],
+      "region": "Thurston County",
+      "evidence": {
+        "checked": "https://mishasmobilervrepair.com/",
+        "phone_quote": "Tel: 360-480-6559",
+        "coverage_quotes": [
+          "Misha's Mobile RV has been serving the Olympia and Thurston County area for more than 15 years.",
+          "Olympia & Surrounding Area"
+        ],
+        "type_quote": "As the name implies, WE COME TO YOU! Leaving your RV isn't always an option, especially if your living or traveling in it full time.",
+        "emergency_quote": null,
+        "roadside_quote": null
+      }
+    },
+    {
+      "n": "Pros RV Repair & Rebuild",
+      "c": "Ferndale, WA",
+      "p": "360-595-4403",
+      "u": "https://prosrvrepair.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Pros RV Repair & Rebuild is a mobile RV service based in Ferndale, Washington, started in 2008. It handles roof resealing and replacement, water damage, fiberglass work, EPDM, TPO and PVC roofs, plumbing, appliances, water heaters, furnaces, A/C units, awnings, leveling jacks and slide-outs. Mobile service covers Whatcom, Skagit and Island counties, and roofing jobs carry a one-year warranty.",
+      "g": [
+        "mobile",
+        "rv repair",
+        "roof replacement",
+        "water damage",
+        "fiberglass"
+      ],
+      "base": "Ferndale",
+      "areas": [
+        "Ferndale"
+      ],
+      "region": "Whatcom, Skagit and Island County",
+      "evidence": {
+        "checked": "https://prosrvrepair.com/",
+        "phone_quote": "916 Willeys Lake Road, Ferndale, Washington 98248, United States 360-595-4403 (3605954403)",
+        "coverage_quotes": [
+          "We offer mobile SERVICES in Whatcom - Skagit - Island County"
+        ],
+        "type_quote": "Mobile Services Roof Resealing Water Damage Repair Fiberglass Repairs",
+        "emergency_quote": null,
+        "roadside_quote": null
+      }
+    },
+    {
+      "n": "JR's RV Repair & Rebuild",
+      "c": "Sedro-Woolley, WA",
+      "p": "360-854-9722",
+      "u": "https://www.jrsrvrepair.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "JR's RV Repair & Rebuild is a family-owned RV repair and parts shop at 1162 State Route 20 in Sedro-Woolley, Washington, operating since 2000. The shop specializes in collision repair, rotten wood and structural damage repair, plus general motor home, trailer and camper work. It serves Mount Vernon, Burlington, Sedro-Woolley and the greater Skagit County area, and accepts insurance jobs and most extended warranties.",
+      "g": [
+        "rv repair shop",
+        "collision repair",
+        "wood repair",
+        "parts",
+        "insurance work"
+      ],
+      "base": "Sedro-Woolley",
+      "areas": [
+        "Mount Vernon",
+        "Burlington",
+        "Sedro-Woolley"
+      ],
+      "region": "Skagit County",
+      "evidence": {
+        "checked": "https://www.jrsrvrepair.com/",
+        "phone_quote": "Located in Sedro Woolley, WA | 360-854-9722",
+        "coverage_quotes": [
+          "our owner John (aka JR) has developed a trusting relationship and reputation with RV owners in Mount Vernon, Burlington, Sedro-Woolley and the greater Skagit County, WA area"
+        ],
+        "type_quote": "Located in Sedro-Woolley, WA, JR's RV Repair & Rebuild is your full-service RV repair and parts center. We specialize in rotten wood repair and structural damage repair caused by collisions or other accidents, as well as motor home, trailer and camper repair.",
+        "emergency_quote": null,
+        "roadside_quote": null
+      }
+    },
+    {
+      "n": "Care-RV Service",
+      "c": "Port Angeles, WA",
+      "p": "360-808-7308",
+      "u": "https://www.carervservice.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Care-RV Service is a family-owned mobile RV repair business serving Port Angeles, Sequim and the Olympic Peninsula, owned and operated by technician David Lynn. Its technicians come to the RV on site for A/C, furnace, water heater, refrigerator, plumbing, electrical, solar, propane, slide, jack and step repairs. The business also performs RV inspections and works with warranties.",
+      "g": [
+        "mobile",
+        "rv repair",
+        "inspections",
+        "propane",
+        "solar",
+        "warranty"
+      ],
+      "base": "Port Angeles",
+      "areas": [
+        "Port Angeles",
+        "Sequim"
+      ],
+      "region": "Olympic Peninsula",
+      "evidence": {
+        "checked": "https://www.carervservice.com/",
+        "phone_quote": "360-808-7308 (1-360-808-7308)",
+        "coverage_quotes": [
+          "Serving Port Angeles, Sequim, and the Olympic Peninsula, WA"
+        ],
+        "type_quote": "Our caring mobile RV technicians come to you and repair your RV on-site!",
+        "emergency_quote": null,
+        "roadside_quote": null
+      }
+    },
+    {
+      "n": "My RV Works, Inc.",
+      "c": "Joyce, WA",
+      "p": "(800) 235-6813",
+      "u": "https://myrvworks.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "My RV Works, Inc. is a mobile RV repair service covering the northern Olympic Peninsula in Washington state. All work is mobile, with the technician coming to the RV, and the technician is RVIA and RVDA certified. The company is based in Joyce and also publishes RV repair videos and sells RV tech tools.",
+      "g": [
+        "mobile",
+        "rv repair",
+        "certified technician",
+        "rv tech tools"
+      ],
+      "base": "Joyce",
+      "areas": [
+        "Port Angeles"
+      ],
+      "region": "Northern Olympic Peninsula",
+      "evidence": {
+        "checked": "https://myrvworks.com/",
+        "phone_quote": "Phone (800) 235-6813 (8002356813)",
+        "coverage_quotes": [
+          "My RV Works, Inc. is a mobile RV repair service company serving the Northern Olympic Peninsula in Washington state.",
+          "Our service area covers the Northern Olympic Peninsulas in Washington state."
+        ],
+        "type_quote": "All work is mobile, we come to you.",
+        "emergency_quote": null,
+        "roadside_quote": null
+      }
+    },
+    {
+      "n": "Mobuilt RV",
+      "c": "Port Angeles, WA",
+      "p": "360-457-4101",
+      "u": "https://www.mobuiltrv.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Mobuiltrv is an RV repair and parts shop at 4130 S. Tumwater Truck Route in Port Angeles, Washington. The business dates to 1972 and is run by the Baier family, which has three generations of RV service experience. It sells RV parts and supplies, offers propane sales, and is open Monday through Friday.",
+      "g": [
+        "rv repair shop",
+        "rv parts",
+        "propane sales"
+      ],
+      "base": "Port Angeles",
+      "areas": [
+        "Port Angeles"
+      ],
+      "region": "Olympic Peninsula",
+      "evidence": {
+        "checked": "https://www.mobuiltrv.com/",
+        "phone_quote": "360-457-4101",
+        "coverage_quotes": [
+          "The Olympic Peninsula's local source for Repairs, Parts & Supplies",
+          "We have moved! We are now located at: 4130 S. Tumwater Truck Route in Port Angeles, WA."
+        ],
+        "type_quote": "Originally opened in 1972, Mobuilt RV is under new ownership since May 2013 by Ed Baier, a long-term employee since 1995. The Baier family has 3 generations of RV service experience.",
+        "emergency_quote": null,
+        "roadside_quote": null
+      }
+    },
+    {
+      "n": "Eric's RV Repair, Service and Performance Center",
+      "c": "Sequim, WA",
+      "p": "(360) 683-3696",
+      "u": "https://www.ericsrv.com/",
+      "t": "center",
+      "e": false,
+      "r": true,
+      "d": "Eric's RV Repair, Service and Performance Center is an RV repair and performance shop at 275 S. 7th Ave. in Sequim, Washington. Open since 1972, it addresses engine performance and handling problems for motorhomes and trucks used for towing heavy 5th wheel trailers, including steering and sway control work. Hours are Monday through Friday, 8am to 5pm.",
+      "g": [
+        "rv repair shop",
+        "motorhome performance",
+        "engine",
+        "handling",
+        "sway control"
+      ],
+      "base": "Sequim",
+      "areas": [
+        "Sequim"
+      ],
+      "region": "Olympic Peninsula and Clallam County",
+      "evidence": {
+        "checked": "https://www.ericsrv.com/",
+        "phone_quote": "275 S. 7th Ave., Sequim, Washington 98382 Tel: (360) 683-3696",
+        "coverage_quotes": [
+          "Eric's RV is your Olympic Peninsula RV Repair, Service and Performance Center shop."
+        ],
+        "type_quote": "Since 1972 he has addressed engine performance and handling problems for motorhomes and trucks used for towing heavy 5th wheel trailers.",
+        "emergency_quote": null,
+        "roadside_quote": "Since 1972 he has addressed engine performance and handling problems for motorhomes and trucks used for towing heavy 5th wheel trailers."
+      }
+    },
+    {
+      "n": "Jake The RV Guy",
+      "c": "Seattle, WA",
+      "p": "(407) 785-8421",
+      "u": "https://www.jakethervguy.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Jake The RV Guy is an NRVTA-certified mobile RV technician serving the Puget Sound region around Seattle, Tacoma and Olympia. He comes to the campsite for HVAC, electrical, plumbing and appliance repairs and builds custom RV solar systems. Service is aimed at RV parks and campgrounds such as Dash Point State Park, Sun Outdoors Gig Harbor and Angle Lake RV Park.",
+      "g": [
+        "mobile",
+        "rv repair",
+        "solar installation",
+        "hvac",
+        "appliances"
+      ],
+      "base": "Seattle",
+      "areas": [
+        "Seattle",
+        "Tacoma",
+        "Olympia",
+        "Gig Harbor",
+        "Bellevue",
+        "SeaTac"
+      ],
+      "region": "Puget Sound region",
+      "evidence": {
+        "checked": "https://www.jakethervguy.com/",
+        "phone_quote": "Jacob@jakethervguy.com (407) 785-8421",
+        "coverage_quotes": [
+          "Whether you're camping in the Puget Sound region of Washington, around Seattle, Tacoma, Olympia, or the surrounding areas, I bring professional service directly to your campsite.",
+          "Whether you're at Dash Point State Park, Lake Pleasant RV Park, Sun Outdoors Gig Harbor, Fay Bainbridge Park, or a popular spot like Trailer Inns RV Park in Bellevue or Angle Lake RV Park in SeaTac"
+        ],
+        "type_quote": "I provide reliable, mobile RV repair and solar installation services to keep your adventures on track.",
+        "emergency_quote": null,
+        "roadside_quote": null
+      }
+    },
+    {
+      "n": "Elite RV",
+      "c": "Spokane, WA",
+      "p": "509-437-8015",
+      "u": "https://www.elitervwa.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Elite RV is a mobile RV repair, maintenance and restoration business serving Spokane and the Inland Northwest. Certified technicians diagnose and repair electrical faults and appliance breakdowns on site and also do preventive maintenance such as roof sealing and system checks. Restoration work covers storm damage, water leaks and aging interiors.",
+      "g": [
+        "mobile",
+        "rv repair",
+        "maintenance",
+        "restoration"
+      ],
+      "base": "Spokane",
+      "areas": [
+        "Spokane"
+      ],
+      "region": "Inland Northwest",
+      "evidence": {
+        "checked": "https://www.elitervwa.com/",
+        "phone_quote": "509-437-8015 service@elitervwa.com",
+        "coverage_quotes": [
+          "we specialize in on-site RV repair and maintenance across Spokane and the Inland Northwest."
+        ],
+        "type_quote": "our certified techs bring fast, reliable RV repair straight to you. We diagnose and fix issues on-site",
+        "emergency_quote": null,
+        "roadside_quote": null
+      }
+    },
+    {
+      "n": "Truline RV",
+      "c": "Spokane Valley, WA",
+      "p": "509-892-7333",
+      "u": "https://trulinecustomrv.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Truline RV is a family-owned RV repair and customization shop at 4510 North Barker in Spokane Valley, Washington. It does RV repair, body repair, interior remodeling, flooring, roofing and accessory installation for RV owners. The business has been in operation more than 20 years and serves Spokane, Spokane Valley, Airway Heights and the greater Pacific Northwest.",
+      "g": [
+        "rv repair shop",
+        "rv body repair",
+        "remodeling",
+        "flooring",
+        "roofing",
+        "accessories"
+      ],
+      "base": "Spokane Valley",
+      "areas": [
+        "Spokane",
+        "Spokane Valley",
+        "Airway Heights"
+      ],
+      "region": "Pacific Northwest",
+      "evidence": {
+        "checked": "https://trulinecustomrv.com/",
+        "phone_quote": "4510 North Barker Spokane Valley, Washington 99027 Phone 509.892.7333",
+        "coverage_quotes": [
+          "Truline Rv Spokane RV Repair - RV Repair Spokane, Spokane Valley, Airway Heights, Upgrades and customizations.",
+          "serving Spokane, Washington and the greater Pacific Northwest with unmatched craftsmanship and care"
+        ],
+        "type_quote": "At Truline RV, we specialize in RV repair, remodeling, upgrades, flooring, roofing and accessories",
+        "emergency_quote": null,
+        "roadside_quote": null
+      }
+    },
+    {
+      "n": "Superior Mobile RV Service",
+      "c": "Spokane, WA",
+      "p": "+1 (509) 240-1889",
+      "u": "https://www.superiormobilervservices.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Superior Mobile RV Service is a mobile RV service headquartered in Spokane, Washington, serving all of Eastern Washington and Moses Lake. The technician travels to the RV for repairs including pre-purchase inspections, winterizing, hitch installation, roof sealing, awning and slide-out work, plumbing, propane system testing and appliance and generator maintenance. The business also offers custom annual inspection plans.",
+      "g": [
+        "mobile",
+        "rv repair",
+        "maintenance",
+        "inspections",
+        "propane"
+      ],
+      "base": "Spokane",
+      "areas": [
+        "Spokane",
+        "Moses Lake"
+      ],
+      "region": "Eastern Washington",
+      "evidence": {
+        "checked": "https://www.superiormobilervservices.com/",
+        "phone_quote": "+1 (509) 240-1889 jake@superiormobilervservices.com",
+        "coverage_quotes": [
+          "We're headquartered in Spokane, WA, serving all of Eastern Washington, and now including Moses Lake.",
+          "Spokane, WA 99201, United States ... Spokane, WA Moses Lake, WA"
+        ],
+        "type_quote": "As a mobile RV service, we travel directly to you. No long waits at the dealership or having to move out of your home for repairs",
+        "emergency_quote": null,
+        "roadside_quote": null
+      }
+    },
+    {
+      "n": "PNW RV",
+      "c": "Spokane, WA",
+      "p": "509-999-0747",
+      "u": "https://pnwrv.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "PNW RV is a mobile RV repair service working in the Spokane and Eastern Washington area. Its technician comes to the RV for minor and complex repairs, pre-purchase inspections and annual inspections, and it installs Vroom slide systems. The business also offers a residential-style black tank flush and a sewer hose P-trap.",
+      "g": [
+        "mobile",
+        "rv repair",
+        "inspections",
+        "slide systems"
+      ],
+      "base": "Spokane",
+      "areas": [
+        "Spokane"
+      ],
+      "region": "Spokane/Eastern Washington",
+      "evidence": {
+        "checked": "https://pnwrv.com/",
+        "phone_quote": "509-999-0747 (5099990747)",
+        "coverage_quotes": [
+          "We are currently servicing the Spokane/Eastern Washington area."
+        ],
+        "type_quote": "Our RV mobile repair service comes directly to you. ... We provide mobile services and will come to you.",
+        "emergency_quote": null,
+        "roadside_quote": null
+      }
+    },
+    {
+      "n": "J & D RV Repair and Inspections",
+      "c": "Spokane Valley, WA",
+      "p": "360-202-7984",
+      "u": "http://jdrvinspectionandrepair.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "J & D RV Repair and Inspections is a mobile RV technician business based in Spokane Valley, Washington. The NRVTA-certified technician travels to the RV for repairs and inspections covering refrigerators, air conditioners, water heaters, furnaces and exterior work. It also does RV maintenance and upgrades.",
+      "g": [
+        "mobile",
+        "rv repair",
+        "inspections",
+        "nrtta certified",
+        "upgrades"
+      ],
+      "base": "Spokane Valley",
+      "areas": [
+        "Spokane Valley"
+      ],
+      "region": null,
+      "evidence": {
+        "checked": "http://jdrvinspectionandrepair.com/",
+        "phone_quote": "Call Jeff Ripke: 360-202-7984 (509-795-6998)",
+        "coverage_quotes": [
+          "I live in Spokane Valley, Washington, USA, and am just a call away."
+        ],
+        "type_quote": "As Mobile RV Tech, I can come to your home or wherever your RV is to tune it up for your next outdoor adventure.",
+        "emergency_quote": null,
+        "roadside_quote": null
+      }
+    },
+    {
+      "n": "Modern Pioneer RV Services LLC",
+      "c": "Starbuck, WA",
+      "p": "+1 (855) 516-6337",
+      "u": "https://modernpioneerrv.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Modern Pioneer RV Services LLC is a mobile RV repair business owned and operated by a certified RV technician in Starbuck, Washington. The owner, Josie Clanton, is a 2024 NRVTA graduate, and the business serves Eastern Washington by traveling to the RV. Veterans, first responders, medical providers and teachers receive a 10 percent discount on repairs.",
+      "g": [
+        "mobile",
+        "rv repair",
+        "nrtta certified",
+        "veteran discount"
+      ],
+      "base": "Starbuck",
+      "areas": [
+        "Starbuck"
+      ],
+      "region": "Eastern Washington",
+      "evidence": {
+        "checked": "https://modernpioneerrv.com/",
+        "phone_quote": "Please feel free to call or text us at our business line: +1 (855) 516 - 6337.",
+        "coverage_quotes": [
+          "Certified RV technician owned and operated LLC, proudly serving Eastern Washington!"
+        ],
+        "type_quote": "We're mobile - we come to you! Give us a call today!",
+        "emergency_quote": null,
+        "roadside_quote": null
       }
     }
   ]
