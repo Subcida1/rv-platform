@@ -88,6 +88,11 @@ def main():
     head = set_meta(head, 'name="twitter:title"', a.title)
     head = set_meta(head, 'property="og:url"', new_url)
     head = re.sub(r'"headline":\s*"[^"]*"', json.dumps("headline") + ': ' + json.dumps(a.title), head, count=1)
+    # The JSON-LD description is NOT a meta tag, so set_meta never touched it and every page built from
+    # the template inherited the TEMPLATE's description verbatim. Nine guides published 2026-09-27 all
+    # carried a JSON-LD description about sewer smell while their <title> and headline were correct, and
+    # nothing caught it because every gate reads the HTML meta tags, not the structured data.
+    head = re.sub(r'"description":\s*"[^"]*"', json.dumps("description") + ': ' + json.dumps(a.desc), head, count=1)
     head = re.sub(r'"datePublished":\s*"[^"]*"', '"datePublished": "2026-09-27"', head, count=1)
     head = re.sub(r'"dateModified":\s*"[^"]*"', '"dateModified": "2026-09-27"', head, count=1)
 
