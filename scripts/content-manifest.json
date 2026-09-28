@@ -5404,5 +5404,26 @@
     "verified_by": null,
     "verified_at": null,
     "sources": []
+  },
+  "directory/arizona.html": {
+    "hash": "c081c6478799a4c4",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
+  },
+  "directory/utah.html": {
+    "hash": "9e7e752ab4867ccd",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
+  },
+  "directory/nevada.html": {
+    "hash": "180e92ac0b3db262",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
   }
 }

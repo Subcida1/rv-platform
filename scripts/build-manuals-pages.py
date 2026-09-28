@@ -109,18 +109,29 @@ TITLE = {
 HUB_TITLE = "RV Owner's Manuals and Service Manuals"
 
 # Guides that already answer the question this system raises. Only real pages.
+# Which guides cover this system failing. Filled out on 2026-09-28: the map existed and
+# rendered, but half the systems had one or two entries and chassis had none, so most guides
+# had no route in from the page that catalogues their manuals. A manual tells you the spec;
+# the guide tells you what to do when it stops working, and a reader on one wants the other.
 RELATED = {
     "power-and-electrical": ["rv-12-volt-problems", "rv-converter-not-charging",
                              "rv-fuse-keeps-blowing", "rv-generator-not-charging",
                              "rv-solar-not-charging", "rv-outlets-not-working",
-                             "rv-lights-not-working"],
-    "water-and-plumbing": ["rv-water-heater-not-heating", "winterize-plumbing"],
-    "heating-and-cooling": ["rv-furnace-not-working", "rv-air-conditioner-not-cooling"],
-    "kitchen-and-appliances": ["rv-refrigerator-not-cooling"],
-    "exterior-and-body": ["roof-snow-load"],
-    "towing-and-running-gear": ["rv-towing-capacity", "rv-tire-replacement", "tires-winter"],
-    "sanitation-and-tanks": ["rv-tank-sensors-reading-wrong"],
-    "chassis-and-drivetrain": [],
+                             "rv-lights-not-working", "rv-battery-not-charging",
+                             "rv-battery-disconnect"],
+    "water-and-plumbing": ["rv-water-heater-not-heating", "winterize-plumbing",
+                           "rv-water-pump-wont-prime", "freeze-damage-triage"],
+    "heating-and-cooling": ["rv-furnace-not-working", "rv-air-conditioner-not-cooling",
+                            "rv-furnace-carbon-monoxide", "rv-propane-furnace-wont-light",
+                            "rv-condensation-inside"],
+    "kitchen-and-appliances": ["rv-refrigerator-not-cooling", "rv-two-appliances-stopped"],
+    "exterior-and-body": ["roof-snow-load", "rv-roof-leak-repair", "rv-delamination"],
+    "towing-and-running-gear": ["rv-towing-capacity", "rv-tire-replacement", "tires-winter",
+                                "rv-pin-weight-and-payload", "trailer-brakes-required"],
+    "sanitation-and-tanks": ["rv-tank-sensors-reading-wrong", "rv-sewer-smell",
+                             "rv-toilet-not-flushing"],
+    "chassis-and-drivetrain": ["trailer-brakes-required", "rv-tire-replacement",
+                               "rv-towing-capacity"],
 }
 
 
