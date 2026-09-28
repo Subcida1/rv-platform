@@ -31,6 +31,7 @@ Usage:
 """
 import argparse
 import html
+import datetime
 import json
 import pathlib
 import re
@@ -93,8 +94,11 @@ def main():
     # carried a JSON-LD description about sewer smell while their <title> and headline were correct, and
     # nothing caught it because every gate reads the HTML meta tags, not the structured data.
     head = re.sub(r'"description":\s*"[^"]*"', json.dumps("description") + ': ' + json.dumps(a.desc), head, count=1)
-    head = re.sub(r'"datePublished":\s*"[^"]*"', '"datePublished": "2026-09-27"', head, count=1)
-    head = re.sub(r'"dateModified":\s*"[^"]*"', '"dateModified": "2026-09-27"', head, count=1)
+    # These were HARDCODED to a literal date, so every guide built from this tool would carry the date
+    # the tool was last edited rather than the date it was built. Correct tonight, wrong from tomorrow.
+    _today = datetime.date.today().isoformat()
+    head = re.sub(r'"datePublished":\s*"[^"]*"', '"datePublished": %s' % json.dumps(_today), head, count=1)
+    head = re.sub(r'"dateModified":\s*"[^"]*"', '"dateModified": %s' % json.dumps(_today), head, count=1)
 
     body = pathlib.Path(a.body).read_text(encoding="utf-8")
     # the lede paragraph under the H1 is part of the body file's first block; inject if the body
