@@ -56,6 +56,30 @@ No secrets, keys, tokens or customer details in here. This file is committed.
 - commit: 73ea72e (pushed)
 - deployed: 2026-09-28T05:30:48+00:00
 
+### directory: California: 25 verified listings added outside the northern corridor, and the Census naming gaps that blocked them
+- why: The page said California and could only place its northern third. Three bounded research passes covered the San Joaquin valley and the Central Coast, at 24 candidates, of which the grounding gate rejected 5 before anything shipped. Two Census naming patterns were silently making real towns unresolvable: official names with the common one in parentheses (Paso Robles, Ventura) and hyphenated names (Carmel).
+- expect: Within 4 weeks, the California page gains impressions on central-coast and valley town queries, and the region sections are the part that gets indexed. No click expectation yet.
+- files: _data/listings/california.json, scripts/verify-candidates.py, scripts/place_names.py, scripts/build-coords.py, _data/place-aliases.json
+- tags: directory, data
+- commit: 545df24 (pushed)
+- deployed: 2026-09-28T02:19:23-07:00
+
+### style: Pills link where they point, and the directory's stat strip filters the finder
+- why: Ty: 'little pill button looking things ... they don't even link to the guides'. Six elements looked pressable and went nowhere. Making the directory counts the filter also removes the case where the strip and the route cards could disagree.
+- expect: No search effect by itself. Watch the finder's interaction: if the strip is used more than the route cards, the cards are the redundant control and should shrink.
+- files: index.html, tools/index.html, assets/js/finder.js, assets/css/style.css, directory/california.html, directory/oregon.html, directory/washington.html
+- tags: design, ux, directory
+- commit: e96ec58 (pushed)
+- deployed: 2026-09-28T02:19:23-07:00
+
+### seo: Internal linking instrumented: 30 candidates found, the first 6 links placed, and the thin-inbound list
+- why: Internal links are the one ranking input fully under our control and the site has 142 across 75 pages. The tool finds sentences mentioning another page's subject without linking to it, and reports inbound counts; three state pages and every manual system page have one inbound link each.
+- expect: Within 6-8 weeks, the pages that gain inbound links should show more internal-link impressions in Search Console, and the low-inbound pages should start appearing for their own subject queries. If nothing moves, the linking is not the constraint and authority is.
+- files: scripts/link-opportunities.py, guides/, scripts/verify.py
+- tags: seo, content
+- commit: 99848b3 (pushed)
+- deployed: 2026-09-28T02:19:23-07:00
+
 ### infra: coverage-gaps.py: where the directory is thin, computed from the listings rather than guessed
 - why: The handoff's method for finding the next batch is to compute gaps, and it was done by hand for Oregon twice. Doing it by hand cannot be repeated for fifty states, and it cannot be checked.
 - expect: No site effect by itself. It changes what the next data pass works on: for California it puts the Shasta and Siskiyou gaps at the top of the reachable work, and names the Los Angeles basin as 142 towns with the nearest base 355 miles away, which is a scope decision rather than a research task.
