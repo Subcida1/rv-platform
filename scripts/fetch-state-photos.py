@@ -80,6 +80,15 @@ PHOTOS += [
 ]
 
 
+PHOTOS += [
+    ("wyoming",
+     "Adams The Tetons and the Snake River.jpg",
+     "Public domain (US government commission, 1942)", "Ansel Adams",
+     "https://commons.wikimedia.org/wiki/File:Adams_The_Tetons_and_the_Snake_River.jpg",
+     "The Tetons and the Snake River, Wyoming"),
+]
+
+
 def commons_page(title):
     return "https://commons.wikimedia.org/wiki/File:" + urllib.parse.quote(title.replace(" ", "_"))
 

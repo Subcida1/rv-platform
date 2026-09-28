@@ -44,3 +44,10 @@ Recorded anyway, because the source should be traceable.
 - Author: Damon Joyce, National Park Service
 - Licence: Public domain (National Park Service) <https://commons.wikimedia.org/wiki/File:Delicate_Arch_in_Arches_National_Park._NPS-Damon_Joyce_(18686376391).jpg>
 - Tile alt text: Delicate Arch in Arches National Park, Utah
+
+## wyoming
+
+- File: [Adams The Tetons and the Snake River.jpg](https://commons.wikimedia.org/wiki/File:Adams_The_Tetons_and_the_Snake_River.jpg)
+- Author: Ansel Adams
+- Licence: Public domain (US government commission, 1942) <https://commons.wikimedia.org/wiki/File:Adams_The_Tetons_and_the_Snake_River.jpg>
+- Tile alt text: The Tetons and the Snake River, Wyoming
