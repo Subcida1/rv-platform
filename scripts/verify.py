@@ -47,6 +47,29 @@ BANNED = ((r"\brigs?\b", "rig (they are RVs)"),
           (r"origin\s+rv\b", "brand renders OriginRV, no space in the middle"))
 
 
+def without_provenance(p, txt):
+    """Drop the provenance block before the style rules read a listings source.
+
+    _data/listings/*.json keeps an `evidence` object per record: the sentences copied from
+    the business's own site, which is the directory's whole claim to being checkable. The
+    dash rule and the banned-word rule govern copy WE write. A quotation is somebody
+    else's words, and rewording it to suit our house style would corrupt the record that
+    makes the listing verifiable. Quoted material is checked against its source instead,
+    by check-quotes.py. What ships to a page is the shard, which carries no evidence, and
+    that is still read in full.
+    """
+    if p.parent.name == "listings" and p.suffix == ".json":
+        try:
+            data = json.loads(txt)
+        except ValueError:
+            return txt
+        for row in data.get("listings", []):
+            if isinstance(row, dict):
+                row.pop("evidence", None)
+        return json.dumps(data, ensure_ascii=False)
+    return txt
+
+
 def published_files(include_python=False):
     out = []
     for pat in PUBLISHED + (("*.py",) if include_python else ()):
@@ -57,7 +80,7 @@ def published_files(include_python=False):
 print("=== dash rule (no em dash, en dash, middot in anything we publish) ===")
 bad = []
 for p in published_files():
-    txt = p.read_text(encoding="utf-8", errors="replace")
+    txt = without_provenance(p, p.read_text(encoding="utf-8", errors="replace"))
     for ch, name in (("\u2014", "em dash"), ("\u2013", "en dash"), ("\u00b7", "middot")):
         i = txt.find(ch)
         if i >= 0:
@@ -71,7 +94,7 @@ bad = []
 for p in published_files(include_python=True):
     if p == Path(__file__).resolve():  # this checker names the banned words itself
         continue
-    txt = p.read_text(encoding="utf-8", errors="replace")
+    txt = without_provenance(p, p.read_text(encoding="utf-8", errors="replace"))
     for pat, label in BANNED:
         m = re.search(pat, txt, re.I)
         if m:
@@ -466,6 +489,13 @@ print("\n=== listing data integrity ===")
 # RVer does not ship without one. Ty caught a listing rendering "Phone on their
 # site" instead. Never again: missing phone is a build failure.
 listing_files = sorted((ROOT / "assets" / "js" / "listings").glob("listings-*.js"))
+
+# The listings SOURCE (_data/listings/*.json) carries an `evidence` block per record: the
+# sentences copied from the business's own site, which is the directory's provenance. The
+# dash rule and the banned-word rule apply to copy WE write, and a quotation from somebody
+# else is not ours to restyle. Quoted material is checked against its source instead, by
+# check-quotes.py. So the two rules skip the evidence block and still read everything we
+# publish, which is the shard and the pages built from it.
 bad = []
 for lf in listing_files:
     rows = json.loads(re.search(r"=\s*(\[.*\])\s*;", lf.read_text(encoding="utf-8"), re.S).group(1))
