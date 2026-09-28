@@ -36,10 +36,25 @@ LANES = ["aistudio.google.com", "chat.deepseek.com", "chatgpt.com",
 BODY = """You are reviewing one page from a website. No human is watching. Earlier jobs in this
 conversation are FINISHED and this one stands alone.
 
-CALL 1 - call_id 7714, tool read_text_file, one parameter path="staged/{staged}".
-Read ALL of it before answering anything.
+A PAGE ARRIVES IN TWO CHUNKS. This is deliberate and it is not a workaround for a broken tool.
 
-CALL 2 - call_id 7714, tool write_file, two parameters:
+CALL 1 - call_id 7714, tool read_text_file, two parameters:
+  path="staged/{staged}"
+  head=70
+That gives you the top of the page, in order.
+
+CALL 2 - call_id 7714, tool read_text_file, two parameters:
+  path="staged/{staged}"
+  tail=80
+That gives you the BOTTOM of the page, and the source list is in it. Read both before answering, and do
+not ask for the same path a third time with no head or tail: that exact call has already run and will be
+dropped as a duplicate.
+
+WHY TWO CALLS: a very large tool result cannot be typed back into this conversation - it goes into the
+message box and will not send, so the whole result is lost rather than cut. Two smaller slices always
+arrive. The page is roughly 13,000 to 19,000 characters and neither slice exceeds the limit.
+
+CALL 3 - call_id 7714, tool write_file, two parameters:
   path="/home/user/claude-bridge/outbox/REPLY-{jobid}.md"
   content=<your whole review, beginning with the JOB ID line {jobid}>
 Write the review into that file. Do not print it in the chat. The file IS the reply.
@@ -58,7 +73,7 @@ answer. An invented criticism is worse than no criticism at all.
 
 The page's rule is that every factual claim traces to a manufacturer's own document, and the source list
 at the end says what each source supports. Does any claim look stronger than the source could support?
-Quote the claim. The source list is at the END of the page, so read to the end before answering this.
+Quote the claim. The source list is at the END of the page and arrives in your second call, so do not answer this part before you have read it.
 
 ## Part 2 - overclaiming
 

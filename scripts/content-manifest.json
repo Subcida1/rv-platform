@@ -4055,10 +4055,10 @@
     ]
   },
   "guides/rv-tire-replacement.html": {
-    "hash": "602022d83945a62a",
-    "status": "verified",
-    "verified_by": "AI Studio lane (Gemini 3.8 Flash) through the AUTOLOOP, three rounds on 2026-09-23: the first found my own five-year sibling-miss and two phrasing defects, the confirm caught a redundant paragraph lead, and the closing round confirmed the narrower lead preserves the section's convention",
-    "verified_at": "2026-09-23",
+    "hash": "9e41e5e819099a02",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
     "sources": [
       "inbox/REVIEW-REQUEST-20260923-0633-rv-tire-replacement.md",
       "outbox/REPLY-RVTIRE-REVIEW-0633.md",
