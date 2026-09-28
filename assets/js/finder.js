@@ -136,6 +136,8 @@
       // belongs in either route. Only an explicit mismatch excludes it.
       if (state.route === 'mobile' && x.t === 'center') return false;
       if (state.route === 'center' && x.t === 'mobile') return false;
+      // the emergency pill: a failure inside the coach, not a breakdown on the road
+      if (state.route === 'emergency' && !x.e) return false;
       if (state.q) {
         var hay = [x.n, x.c, (x.g || []).join(' '), x.region || '', (x.areas || []).join(' ')].join(' ').toLowerCase();
         if (hay.indexOf(state.q) < 0) return false;
@@ -198,7 +200,7 @@
       var flags = (emerg || spec) ? '<div class="listing-flags">' + emerg + spec + '</div>' : '';
       // Someone broken down wants to call, so the phone leads and the site follows.
       var call = x.p
-        ? '<a class="btn btn-gb btn-sm listing-call" href="tel:' + esc(telHref(x.p)) + '">' + PHONE_ICON + esc(x.p).replace(/-/g, '&#8209;') + '</a>'
+        ? '<a class="btn btn-gb btn-sm listing-call" href="tel:' + esc(telHref(x.p)) + '">' + PHONE_ICON + esc(x.p).replace(/-/g, '&#8209;').replace(/ /g, '&nbsp;') + '</a>'
         : '<span class="listing-call none">Phone on their site</span>';
       // A couple of these businesses have lost their website (one domain is
       // parked, one was replaced by an unrelated template). Render the name as
@@ -257,21 +259,29 @@
     }
 
     /* ---------- route buttons ---------- */
-    Array.prototype.forEach.call(document.querySelectorAll('.finder-route'), function (btn) {
-      btn.addEventListener('click', function () {
-        var r = btn.getAttribute('data-r');
-        state.route = (state.route === r) ? null : r;
-        Array.prototype.forEach.call(document.querySelectorAll('.finder-route'), function (b) {
+    // ONE place writes the route's pressed state, so the three route cards and the
+    // stat strip below them can never disagree about what is filtered.
+    function syncRoutes() {
+      Array.prototype.forEach.call(document.querySelectorAll('.finder-route, .finder-stat'),
+        function (b) {
           var on = b.getAttribute('data-r') === state.route;
           b.classList.toggle('on', on);
           b.setAttribute('aria-pressed', on ? 'true' : 'false');
         });
-        state.step = 0;
-        render(true);
-        var top = $('d-results');
-        if (top && top.scrollIntoView) top.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    function setRoute(r) {
+      // 'all' is the listings pill: it means no filter rather than a filter of its own
+      state.route = (r === 'all' || state.route === r) ? null : r;
+      syncRoutes();
+      state.step = 0;
+      render(true);
+      var top = $('d-results');
+      if (top && top.scrollIntoView) top.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    Array.prototype.forEach.call(document.querySelectorAll('.finder-route, .finder-stat'),
+      function (btn) {
+        btn.addEventListener('click', function () { setRoute(btn.getAttribute('data-r')); });
       });
-    });
 
     /* ---------- location ---------- */
     function note(msg, bad) {
@@ -332,9 +342,7 @@
     });
     $('d-clear').addEventListener('click', function () {
       state.route = null; state.q = ''; si.value = '';
-      Array.prototype.forEach.call(document.querySelectorAll('.finder-route'), function (b) {
-        b.classList.remove('on'); b.setAttribute('aria-pressed', 'false');
-      });
+      syncRoutes();
       state.step = 0;
       render(true);
     });

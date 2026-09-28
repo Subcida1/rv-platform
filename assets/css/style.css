@@ -2408,3 +2408,30 @@ body.is-embed .embed-credit a{font-weight:800;color:var(--b1)}
   figure svg{print-color-adjust:exact;-webkit-print-color-adjust:exact}
 }
 
+
+/* ---------- a pill that states a number goes where the number points ----------
+   Ty, 2026-09-28: "little pill button looking things ... about how many guides we
+   have and they don't even link to the guides". These were divs and spans styled to
+   look pressable, going nowhere. The linking ones are anchors now and carry the
+   affordance; the one with no destination (tools still being built) stays a span and
+   deliberately has none, so the difference is visible instead of implied. */
+a.hstat{display:block;text-decoration:none;color:inherit;
+  transition:border-color .16s,box-shadow .16s,transform .16s}
+a.hstat:hover{border-color:var(--border-2);box-shadow:var(--shadow);transform:translateY(-1px)}
+a.hstat:focus-visible{outline:2px solid var(--b1,var(--brand));outline-offset:2px}
+a.hstat .lbl::after{content:" \2192";color:var(--b1,var(--brand));font-weight:700}
+a.tchip{text-decoration:none}
+a.tchip:hover{border-color:var(--border-2);color:var(--text)}
+a.tchip:focus-visible{outline:2px solid var(--b1,var(--brand));outline-offset:2px}
+
+/* The directory's stat strip filters the finder. "7 mobile techs" IS the mobile route,
+   so the same control that reports a number sets the filter: one state, written in one
+   place (.finder-stat is bound next to .finder-route in finder.js), so the strip and the
+   three route cards cannot disagree. */
+.guide-stats .finder-stat{font:inherit;font-size:12.5px;color:var(--text-3);background:var(--surface);
+  border:1px solid var(--border);border-radius:999px;padding:6px 14px;cursor:pointer;
+  transition:border-color .16s,color .16s,background .16s}
+.guide-stats .finder-stat:hover{border-color:var(--border-2);color:var(--text)}
+.guide-stats .finder-stat:focus-visible{outline:2px solid var(--b1,var(--brand));outline-offset:2px}
+.guide-stats .finder-stat.on{border-color:var(--b1,var(--brand));background:var(--tint-bg);color:var(--text)}
+.guide-stats .finder-stat b{color:var(--text)}

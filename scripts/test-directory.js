@@ -23,16 +23,22 @@ function El(id) {
     id, style: {}, value: '', textContent: '', innerHTML: '', _attrs: {}, _handlers: {},
     addEventListener(t, f) { (this._handlers[t] = this._handlers[t] || []).push(f); },
     fire(t, ev) { (this._handlers[t] || []).forEach(f => f(ev || {})); },
-    setAttribute() {}, classList: { add() {}, remove() {}, toggle() {} },
+    setAttribute(k, v) { this._attrs[k] = v; },
+    classList: { add() {}, remove() {}, toggle() {} },
     closest() { return null; }, scrollIntoView() {}, remove() {},
     getAttribute(k) { return this._attrs[k]; },
   };
 }
 const els = {};
 const routes = ['roadside', 'mobile', 'center'].map(r => { const e = El('route-' + r); e._attrs = { 'data-r': r }; return e; });
+// The state page's stat strip is the same control as the route cards: "7 mobile techs"
+// sets the mobile filter. Bound together in finder.js, so this harness exposes both.
+const stats = ['all', 'mobile', 'center', 'roadside', 'emergency']
+  .map(r => { const e = El('stat-' + r); e._attrs = { 'data-r': r }; return e; });
 const document = {
   getElementById: id => (els[id] = els[id] || El(id)),
-  querySelectorAll: sel => (sel === '.finder-route' ? routes : []),
+  querySelectorAll: sel => (sel === '.finder-route' ? routes
+    : (sel === '.finder-route, .finder-stat' ? routes.concat(stats) : [])),
   querySelector: () => null,
   createElement: () => El('new'),
   body: { appendChild() {}, getAttribute: k => STUB_BODY[k] || null },
@@ -75,6 +81,7 @@ const hasMore = () => els['d-more-wrap'].style.display === 'block';
 
 function typeLocation(v) { els['loc'].value = v; els['loc'].fire('keydown', { key: 'Enter', preventDefault() {} }); }
 function clickRoute(r) { routes.find(x => x._attrs['data-r'] === r).fire('click'); }
+function clickStat(r) { stats.find(x => x._attrs['data-r'] === r).fire('click'); }
 function search(v) { els['d-search'].value = v; els['d-search'].fire('input'); }
 
 console.log('\n1. First page stays small');
@@ -82,6 +89,47 @@ check('shows 6, not a wall of listings', count() === '6' && cards().length === 6
 const TOTAL = (sandbox.window.RV_LISTINGS_OR || []).length;
 check('reports the size of the set', new RegExp('Showing 6 of ' + TOTAL + ' listings').test(sortNote()), sortNote());
 check('offers more', hasMore());
+
+console.log('\n2b. The stat strip is the filter, not a decoration');
+/* Runs before any location is set, so the totals are the whole state and a filtered
+   count is comparable. The cards paginate six at a time, so what is checked is which
+   businesses are shown, by name, against the record they came from. */
+const recFor = n => (sandbox.window.RV_LISTINGS_OR || []).find(x => x.n === n) || {};
+const typeOf = n => recFor(n).t;
+const totalIn = () => Number((sortNote().match(/(\d+) listings/) || [])[1] || 0);
+const pressed = r => { const e = stats.find(x => x._attrs['data-r'] === r); return e._attrs['aria-pressed']; };
+const allTotal = totalIn();
+clickStat('mobile');
+check('the mobile pill drops the service centres',
+  cards().length > 0 && names().every(n => typeOf(n) !== 'center'),
+  names().filter(n => typeOf(n) === 'center').join(', '));
+check('and it shows that it is on', pressed('mobile') === 'true', 'pressed=' + pressed('mobile'));
+const mobTotal = totalIn();
+check('the mobile total is smaller than everything', mobTotal < allTotal, mobTotal + ' of ' + allTotal);
+clickStat('emergency');
+check('the emergency pill shows only emergency mobile repair',
+  cards().length > 0 && names().every(n => recFor(n).e === true),
+  names().filter(n => !recFor(n).e).join(', '));
+check('turning one pill on turns the other off',
+  pressed('mobile') === 'false' && pressed('emergency') === 'true',
+  'mobile=' + pressed('mobile') + ' emergency=' + pressed('emergency'));
+clickStat('center');
+check('the centre pill drops the mobile-only businesses',
+  cards().length > 0 && names().every(n => typeOf(n) !== 'mobile'),
+  names().filter(n => typeOf(n) === 'mobile').join(', '));
+clickStat('all');
+check('the listings pill clears every filter', totalIn() === allTotal,
+  totalIn() + ' after, ' + allTotal + ' before');
+check('and no pill is left on',
+  ['all', 'mobile', 'center', 'roadside', 'emergency'].every(r => pressed(r) === 'false'),
+  ['all', 'mobile', 'center', 'roadside', 'emergency'].map(r => r + '=' + pressed(r)).join(' '));
+clickStat('roadside');
+check('the roadside pill filters too', cards().length > 0 && names().every(n => recFor(n).r === true),
+  names().filter(n => !recFor(n).r).join(', '));
+clickStat('roadside');
+clickStat('mobile');
+clickStat('mobile');
+check('clicking the same pill twice clears it', pressed('mobile') === 'false', 'pressed=' + pressed('mobile'));
 
 console.log('\n2. Distance ranking, and what we cannot place drops below what we can');
 typeLocation('Klamath');
