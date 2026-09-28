@@ -56,6 +56,14 @@ No secrets, keys, tokens or customer details in here. This file is committed.
 - commit: 73ea72e (pushed)
 - deployed: 2026-09-28T05:30:48+00:00
 
+### directory: Skinner's Truck Repair re-tagged: it was carrying the in-coach emergency tag while being a diesel truck roadside shop
+- why: The audit read its site and found no RV claim anywhere - it is a truck shop whose customers include fifth-wheel owners. The tag was the opposite of the business. Found by scripts/audit-tags.py, the first real defect it produced.
+- expect: No search effect. One listing's category changes; the standing question is whether a truck shop belongs in an RV-specific directory at all, which is Ty's call under his own inclusion rule.
+- files: _data/listings/california.json
+- tags: directory, data
+- commit: bbd25de (pushed)
+- deployed: 2026-09-28T02:49:06-07:00
+
 ### copy: The 30 PSI winterising figure now names Jayco, and the page was fixed in its generator
 - why: An unnamed-authority claim that also read as a contradiction of the Furrion figure on another page. Caught by the site's own style rules, not by a reviewer.
 - expect: No search effect. If the winterising guide and this page now agree in a reader's mind, the cross-check.py direction pairs for pressure should stop firing.
