@@ -79,6 +79,13 @@ def claim_values():
     total = sum(len(v) for v in g.values())
     out = {"guides-total": str(total)}
 
+    # How many states the directory covers. Written as a word in prose it would drift the
+    # first time a state is added, which is exactly what happened on 2026-09-28: the homepage
+    # said "Live in Oregon, Washington and California" with six states live.
+    n_states = len(state_shards())
+    out["states-total"] = str(n_states)
+    out["states-total-word"] = number_word(n_states).capitalize()
+
     for key, slugs in sorted(g.items()):
         n = len(slugs)
         out["guides-%s" % key] = str(n)
