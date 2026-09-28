@@ -721,9 +721,8 @@ window.RV_LISTINGS_CA = [
    "boat repair",
    "paint stripe touch-up"
   ],  "base": "hesperia",  "areas": [
-   "san bernardino county",
-   "los angeles county"
-  ],  "region": "Orange County; Inland Empire; San Gabriel Valley; High Desert",  "reg": "desert-high"
+   "san bernardino county"
+  ],  "region": "Orange County; Inland Empire; San Gabriel Valley; High Desert; Los Angeles County",  "reg": "desert-high"
  },
  {  "n": "High Desert Mobile RV Service",  "c": "Victorville, CA",  "p": "(760) 563-6019",  "u": "https://highdesertmobilervservice.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Mobile RV repair service based in Victorville that travels to customers across the San Bernardino and High Desert area. Handles a wide range of recreational vehicle and mobile home problems. Also handles emergency motorhome repairs and travels to you for emergency roadside work on RVs.",  "g": [
    "mobile RV repair",
@@ -817,5 +816,353 @@ window.RV_LISTINGS_CA = [
    "truckee",
    "gardnerville"
   ],  "region": "Lake Tahoe Basin; Carson City",  "reg": "sierra-east"
+ },
+ {  "n": "A1 RV Repairs & Services",  "c": "Lemon Grove, CA",  "p": "(619) 259-0372",  "u": "https://a1rvrepairsandservices.com/",  "t": "both",  "e": true,  "r": false,  "d": "A1 RV Repairs & Services handles RV electrical, plumbing, solar, generator, roof and appliance work for motorhomes, travel trailers and fifth wheels. The business runs a mobile service across San Diego County and an appointment only shop at 7655 Lemon Avenue in Lemon Grove. It advertises emergency repairs including awning storm damage.",  "g": [
+   "mobile",
+   "shop",
+   "emergency",
+   "electrical",
+   "solar",
+   "generator",
+   "plumbing",
+   "roof"
+  ],  "base": "lemon grove",  "areas": [
+   "san diego county"
+  ],  "region": "San Diego County",  "spec": "Sewer tank flush requires sewer hookups and no pump truck service is offered.",  "reg": "san-diego"
+ },
+ {  "n": "RV Pro Mobile Inc",  "c": "Chula Vista, CA",  "p": "(619) 975-5795",  "u": "https://www.rvpromobileincca.com/",  "t": "both",  "e": true,  "r": false,  "d": "RV Pro Mobile Inc is a family operated RV repair business in Chula Vista that says it has served San Diego County since 2002. It offers 24-hour emergency service, mobile on-site repairs and free in-shop estimates for electrical, plumbing, appliance, roof and slide-out work. RVIA-certified technicians list North County and East County as part of the service area.",  "g": [
+   "mobile",
+   "shop",
+   "emergency",
+   "electrical",
+   "plumbing",
+   "appliances",
+   "roofing"
+  ],  "base": "chula vista",  "areas": [
+   "san diego county",
+   "north county",
+   "east county"
+  ],  "region": "San Diego County",  "reg": "san-diego"
+ },
+ {  "n": "SOS Services USA",  "c": "Chula Vista, CA",  "p": "(619) 784-1331",  "u": "https://sosmobilerepairs.com/",  "t": "mobile",  "e": true,  "r": false,  "d": "SOS Services USA is a veteran owned mobile RV repair business based at 195 Mace Street in Chula Vista. It works on RV air conditioners, refrigerators, stoves, water heaters, furnaces and generators at the customer's location and advertises emergency and preventive maintenance. It describes itself as a local small business serving San Diego.",  "g": [
+   "mobile",
+   "emergency",
+   "appliances",
+   "hvac",
+   "generator"
+  ],  "base": "chula vista",  "areas": [],  "region": "San Diego",  "reg": "san-diego"
+ },
+ {  "n": "EWT Mobile RV Service",  "c": "San Marcos, CA",  "p": "(760) 218-9293",  "u": "https://www.ewtmobilerv.com/",  "t": "mobile",  "e": true,  "r": false,  "d": "EWT Mobile RV Service is a mobile RV and trailer repair and inspection business based in San Marcos. It advertises 24/7 emergency service and handles electrical, HVAC, plumbing, slide and appliance repairs at the customer's location across San Diego County. It also offers RV and trailer inspections and is locally owned and operated.",  "g": [
+   "mobile",
+   "emergency",
+   "inspections",
+   "electrical",
+   "hvac",
+   "plumbing",
+   "slides"
+  ],  "base": "san marcos",  "areas": [
+   "san diego",
+   "san diego county"
+  ],  "region": "San Diego County",  "reg": "san-diego"
+ },
+ {  "n": "760 RV",  "c": "San Marcos, CA",  "p": "(760) 421-6889",  "u": "https://www.760rv.com/",  "t": "center",  "e": false,  "r": false,  "d": "760 RV is an RV body, paint and systems repair shop at 999 Linda Vista Unit B in San Marcos. It repairs fiberglass, collision damage, roofs and RV systems for Class A, B and C motorhomes, trailers and RecVans. The shop says it serves San Diego County and works with local dealerships and insurance carriers.",  "g": [
+   "shop",
+   "bodywork",
+   "collision",
+   "roofing",
+   "systems repair"
+  ],  "base": "san marcos",  "areas": [
+   "san diego",
+   "escondido",
+   "temecula",
+   "carlsbad",
+   "oceanside",
+   "vista",
+   "san clemente"
+  ],  "region": "San Diego County",  "reg": "san-diego"
+ },
+ {  "n": "Sonrise RV Parts and Body Repair",  "c": "Escondido, CA",  "p": "(760) 745-2444",  "u": "https://www.sonriserv.com/",  "t": "center",  "e": false,  "r": false,  "d": "Sonrise RV Parts and Body Repair is a family owned RV shop at 1931 Don Lee Pl in Escondido that has operated since 1987. It handles RV collision, bodywork, painting, appliance, plumbing, AC and roofing repairs and also sells RV parts and accessories. It serves Escondido and North County San Diego and offers military, police and firefighter discounts.",  "g": [
+   "shop",
+   "bodywork",
+   "collision",
+   "roofing",
+   "appliances",
+   "plumbing",
+   "parts"
+  ],  "base": "escondido",  "areas": [
+   "poway",
+   "valley center",
+   "oceanside"
+  ],  "region": "North County San Diego",  "reg": "san-diego"
+ },
+ {  "n": "County RV Service Center",  "c": "Santee, CA",  "p": "619-440-6688",  "u": "https://www.countyrv.com/",  "t": "center",  "e": false,  "r": false,  "d": "County RV Service Center is an RV repair shop at 10229 Prospect Ave in Santee. It provides RV repairs, RV mechanical service and RV body shop work with free estimates and insurance support. The shop states that it serves all of San Diego County.",  "g": [
+   "shop",
+   "mechanical",
+   "body shop",
+   "insurance"
+  ],  "base": "santee",  "areas": [
+   "san diego county"
+  ],  "region": "San Diego County",  "reg": "san-diego"
+ },
+ {  "n": "San Diego RV Center",  "c": "El Cajon, CA",  "p": "(619) 561-3531",  "u": "https://www.sandiegorvcenter.com/",  "t": "center",  "e": false,  "r": false,  "d": "San Diego RV Center is a full service RV repair shop at 9398 Bond Avenue in El Cajon that says it has specialized in RVs since 1990. It handles roof repair and replacement, collision repair, solar installation, CARB testing, A/C and mechanical work for motorhomes, trailers and toy haulers. It lists San Diego, El Cajon, La Mesa, Santee, Lakeside, Spring Valley and Lemon Grove in its service area.",  "g": [
+   "shop",
+   "collision",
+   "roofing",
+   "solar",
+   "mechanical",
+   "insurance"
+  ],  "base": "el cajon",  "areas": [
+   "san diego",
+   "el cajon",
+   "la mesa",
+   "santee",
+   "lakeside",
+   "spring valley",
+   "lemon grove"
+  ],  "region": "San Diego County",  "reg": "san-diego"
+ },
+ {  "n": "RV Fun Center",  "c": "Oceanside, CA",  "p": "(858)723-0139",  "u": "https://rvfuncenter.com/",  "t": "center",  "e": false,  "r": false,  "d": "RV Fun Center is a family owned RV service and repair shop at 1555 S Coast Hwy Suite 1/2 in Oceanside. It handles RV repair, remodeling, collision and structure repair, coach and chassis repair, solar and accessories for motorhomes, campers and trailers. It describes itself as a San Diego County RV service destination and supports warranty and insurance work.",  "g": [
+   "shop",
+   "collision",
+   "bodywork",
+   "remodeling",
+   "solar",
+   "insurance"
+  ],  "base": "oceanside",  "areas": [],  "region": "San Diego County",  "reg": "san-diego"
+ },
+ {  "n": "San Diego Pacific Crest Services",  "c": "El Cajon, CA",  "p": "(619) 390-2305",  "u": "https://www.pacificcrestservices.net/",  "t": "mobile",  "e": false,  "r": true,  "d": "San Diego Pacific Crest Services is an RV mechanic service based at 13272 Highway 8 Business in El Cajon. It focuses on the mechanical side of the RV such as the engine, transmission and brakes and offers 24/7 emergency roadside assistance and mobile service across San Diego County. It states that it leaves the living space untouched and can arrange towing for complex repairs.",  "g": [
+   "mobile",
+   "roadside",
+   "mechanical",
+   "engine",
+   "transmission",
+   "brakes"
+  ],  "base": "el cajon",  "areas": [
+   "san diego county"
+  ],  "region": "San Diego County",  "reg": "san-diego"
+ },
+ {  "n": "RV Specialists",  "c": "San Diego, CA",  "p": "(858) 455-9898",  "u": "https://myrvspecialists.com/",  "t": "center",  "e": false,  "r": false,  "d": "RV Specialists is a family owned RV service center at 8616 Miramar Place in San Diego that has operated since 1987. It performs RV service, repair, slide repair, collision repair and bodywork, and sells propane on site. It states that all repairs are done at its Miramar facility and that it does not offer mobile RV repair.",  "g": [
+   "shop",
+   "service",
+   "collision",
+   "bodywork",
+   "slides",
+   "propane"
+  ],  "base": "san diego",  "areas": [],  "region": "San Diego",  "spec": "Does not offer mobile RV repair services; all repairs must be done at the Miramar facility.",  "reg": "san-diego"
+ },
+ {  "n": "4G RV Services",  "c": "Poway, CA",  "p": "858-231-5020",  "u": "https://www.4grvservices.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "4G RV Services is a mobile RV repair and maintenance business owned by Tom Graham in Poway. It works on refrigerators, plumbing, electrical, water heaters, air conditioners and sealants for Class A, B and C RVs, travel trailers and fifth wheels around San Diego County. Graham is an NRVTA Certified RV Technician.",  "g": [
+   "mobile",
+   "maintenance",
+   "electrical",
+   "plumbing",
+   "appliances",
+   "hvac"
+  ],  "base": "poway",  "areas": [
+   "san diego county"
+  ],  "region": "San Diego County",  "reg": "san-diego"
+ },
+ {  "n": "RV Express Mobile Service LLC",  "c": "Los Angeles, CA",  "p": "(714) 880-0303",  "u": "https://www.rvexpressmobileservices.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "RV Express Mobile Service LLC is a mobile RV repair and maintenance company that drives a service truck to wherever the RV is parked, so the unit does not have to be taken to a shop. It services travel trailers, fifth wheels, toy haulers and Class A, B and C motorhomes, covering roof resealing, appliance repair, slide-outs, electrical and plumbing diagnostics, generators and awnings. The site lists Los Angeles and Orange County among its service regions.",  "g": [
+   "mobile"
+  ],  "base": "los angeles",  "areas": [
+   "los angeles",
+   "inglewood",
+   "torrance",
+   "lancaster",
+   "beverly hills",
+   "pasadena",
+   "compton",
+   "calabasas",
+   "long beach",
+   "la mirada",
+   "malibu",
+   "culver city",
+   "santa monica",
+   "glendale",
+   "west hollywood",
+   "santa clarita",
+   "orange",
+   "newport beach",
+   "huntington beach",
+   "lake forest",
+   "santa ana",
+   "garden grove",
+   "tustin",
+   "laguna niguel",
+   "irvine",
+   "laguna beach",
+   "fullerton",
+   "westminster",
+   "anaheim",
+   "costa mesa",
+   "mission viejo",
+   "san clemente"
+  ],  "region": "Inland Empire, Los Angeles, and Orange County regions",  "reg": "la-county"
+ },
+ {  "n": "Steven's Mobile RV Repair",  "c": "Orange County, CA",  "p": "(949) 683-0893",  "u": "https://stevensmobilerv.com/",  "t": "mobile",  "e": true,  "r": false,  "d": "Steven's Mobile RV Repair is a family-run mobile service based in Orange County that travels to the RV, with free travel up to 30 miles and a per-mile charge beyond that. The site says the owner is a certified RV technician who arrives prepared to fix the problem on site. It states the business operates 24/7 for emergency services at an emergency hourly rate.",  "g": [
+   "mobile",
+   "emergency"
+  ],  "base": "",  "areas": [],  "region": "Orange County, CA; Orange County",  "reg": "la-county"
+ },
+ {  "n": "EXO-RV",  "c": "Orange, CA",  "p": "(714) 334-4459",  "u": "https://exomobilervservice.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "EXO-RV is a family-owned mobile RV repair service based in Orange that comes to the RV at the owner's home, storage facility or campground. It provides diagnostics, repairs, maintenance and generator service, including electrical, roof and awning, plumbing, appliance and HVAC work. The site says the father-and-son team has served Orange County for more than 20 years and is an authorized service provider for Cummins/Onan, Dometic, Lippert, Coleman Mach, Suburban and Carefree.",  "g": [
+   "mobile"
+  ],  "base": "orange",  "areas": [],  "region": "Orange County, CA",  "reg": "la-county"
+ },
+ {  "n": "Magic Wand RV Services",  "c": "Laguna Niguel, CA",  "p": "612-787-7283",  "u": "https://magicwandrv.com/",  "t": "mobile",  "e": true,  "r": false,  "d": "Magic Wand RV Services is a small family-owned mobile RV repair shop based in Laguna Niguel that travels to the customer's location. It services Class A motorhomes, fifth wheels, travel trailers, vans and mobile homes, working on water heaters, roofs, slide seals, air conditioners and batteries. The site says it is on call for emergencies such as a stuck slide, steps that will not retract, or levelers not working, and lists cities across south Orange County and beyond.",  "g": [
+   "mobile",
+   "emergency"
+  ],  "base": "laguna niguel",  "areas": [
+   "dana point",
+   "laguna beach",
+   "newport beach",
+   "costa mesa",
+   "laguna niguel",
+   "san juan capistrano",
+   "mission viejo",
+   "irvine",
+   "san clemente",
+   "oceanside",
+   "huntington beach",
+   "lake forest"
+  ],  "region": "Orange County, San Diego, Southern California",  "reg": "la-county"
+ },
+ {  "n": "Class A Mobile RV Services LLC",  "c": "Huntington Beach, CA",  "p": "(949) 659-6938",  "u": "https://classamobilervservices.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Class A Mobile RV Services LLC is a mobile RV repair company based in Huntington Beach that performs repairs at the RV's location instead of at a shop. It offers electrical, roofing and leak, solar, plumbing and diagnostic services for motorhomes. The site states the business specializes only in Class A motorhomes and serves Orange County RV owners and nearby communities.",  "g": [
+   "mobile"
+  ],  "base": "huntington beach",  "areas": [
+   "huntington beach"
+  ],  "region": "Orange County",  "spec": "Specializes only in Class A motorhomes.",  "reg": "la-county"
+ },
+ {  "n": "Santa Clarita RV",  "c": "Santa Clarita, CA",  "p": "(661) 618-1886",  "u": "http://santaclaritarv.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Santa Clarita RV provides mobile RV repair, maintenance, electrical work, plumbing and installations and brings the service directly to the RV's location. The site says it does not handle chassis or engine work, keeping its scope to the coach. It states it serves the Santa Clarita Valley and lists Saugus, Valencia, Newhall, Canyon Country, Castaic, San Fernando, Burbank and Northridge.",  "g": [
+   "mobile"
+  ],  "base": "santa clarita",  "areas": [
+   "saugus",
+   "valencia",
+   "newhall",
+   "canyon country",
+   "castaic",
+   "san fernando",
+   "burbank",
+   "northridge"
+  ],  "region": "Santa Clarita Valley",  "spec": "Please Note: We do not handle chassis or engine work.",  "reg": "la-county"
+ },
+ {  "n": "OCRV Center",  "c": "Yorba Linda, CA",  "p": "714-909-1444",  "u": "https://ocrvcenter.com/",  "t": "center",  "e": false,  "r": true,  "d": "OCRV Center is an RV collision, body and paint shop in Yorba Linda with a 35,000 square foot facility, working on RVs, trailers, campers, vans and motorhomes. It performs RV collision repair, body and paint, fiberglass and frame repair, roof repair, slide-out work, remodeling and upgrades. The site states the shop does not provide mobile service, though a dedicated mobile technician can come to the location to perform on-site evaluations, and it lists customers across Orange, Los Angeles and Riverside counties.",  "g": [
+   "center",
+   "roadside"
+  ],  "base": "yorba linda",  "areas": [
+   "los angeles",
+   "long beach",
+   "glendale",
+   "torrance",
+   "pomona",
+   "pasadena",
+   "santa clarita",
+   "inglewood",
+   "el monte",
+   "lancaster",
+   "west covina",
+   "norwalk",
+   "burbank",
+   "downey",
+   "compton",
+   "santa monica",
+   "whittier",
+   "orange",
+   "santa ana",
+   "anaheim",
+   "huntington beach",
+   "garden grove",
+   "irvine",
+   "fullerton",
+   "costa mesa",
+   "mission viejo",
+   "westminster",
+   "buena park",
+   "newport beach",
+   "lake forest",
+   "yorba linda",
+   "fountain valley",
+   "la habra",
+   "tustin",
+   "laguna niguel",
+   "cypress",
+   "san clemente",
+   "placentia",
+   "brea",
+   "dana point",
+   "laguna hills",
+   "stanton",
+   "san juan capistrano",
+   "seal beach"
+  ],  "region": "Southern California",  "spec": "We do not provide mobile service. However we do have a dedicated mobile technician who is able to come directly to your location and perform on-site evaluations.",  "reg": "la-county"
+ },
+ {  "n": "Benchmark RV Center",  "c": "Sun Valley, CA",  "p": "818-504-4813",  "u": "https://benchmarkrv.com/",  "t": "center",  "e": false,  "r": false,  "d": "Benchmark RV Center is a family-owned RV service center and storage facility in Sun Valley with a complete maintenance and repair facility under one roof. It offers RV service and repair, a full paint and body shop for fiberglass and aluminum, parts and accessories, on-site dump and propane, and RV storage. The site says its RVIA/RVDA certified technicians maintain RVs and lists the Los Angeles and San Fernando Valley communities it serves.",  "g": [
+   "center"
+  ],  "base": "sun valley",  "areas": [
+   "los angeles",
+   "sun valley",
+   "northridge",
+   "pasadena",
+   "chatsworth",
+   "santa clarita",
+   "woodland hills",
+   "west hills",
+   "tarzana",
+   "glendale",
+   "lacanada/flintridge",
+   "sunland",
+   "tujunga",
+   "la crescenta"
+  ],  "region": "East San Fernando Valley",  "reg": "la-county"
+ },
+ {  "n": "Coast RV Center",  "c": "Agoura Hills, CA",  "p": "(818) 889-8889",  "u": "https://coastrvcenter.com/",  "t": "center",  "e": false,  "r": false,  "d": "Coast RV Center is an RV repair, maintenance and parts business in Agoura Hills that has served Ventura and LA counties for over 43 years. It provides repair and maintenance for major motorhome and trailer brands, from routine maintenance to mechanical and body repairs, with multiple service bays and a retail store for hard-to-find RV parts. The site says customers schedule service by phone and visit the shop just off Highway 101.",  "g": [
+   "center"
+  ],  "base": "agoura hills",  "areas": [],  "region": "Ventura & LA Counties",  "reg": "la-county"
+ },
+ {  "n": "Elite Coach Works RV",  "c": "Valencia, CA",  "p": "(661) 775-8375",  "u": "https://elitecoachrv.com/",  "t": "both",  "e": true,  "r": false,  "d": "Elite Coach Works RV is a full-service RV body, paint and collision facility with locations in Valencia and Castaic. It handles paint, body and collision work, permanent roofs, repair and service, brake repairs, and appliance and system repairs on Class A, B and C motorhomes, travel trailers, fifth wheels and Living Vehicles. The site says it offers emergency and same-day service with a mobile service team that provides on-site repairs at the customer's location and serves Valencia, Ventura and the San Fernando Valley.",  "g": [
+   "mobile",
+   "center",
+   "emergency"
+  ],  "base": "valencia",  "areas": [
+   "valencia",
+   "castaic",
+   "santa clarita"
+  ],  "region": "Valencia, Ventura, and the San Fernando Valley",  "reg": "la-county"
+ },
+ {  "n": "El Toro RV Service",  "c": "Orange, CA",  "p": "(949) 830-1996",  "u": "https://www.eltororvservice.com/",  "t": "center",  "e": false,  "r": true,  "d": "El Toro RV Service is an RV repair and collision center in Orange that says it has served Orange County since 1989. It offers RV collision repair, paint and body work, maintenance, parts, plumbing, electrical, water damage, frame, suspension, tire and brake work, and appliance service, working on motorhomes, travel trailers, campervans and fifth wheels. The site lists Long Beach and a wide set of Orange County cities among the areas it serves.",  "g": [
+   "center",
+   "roadside"
+  ],  "base": "orange",  "areas": [
+   "aliso viejo",
+   "anaheim",
+   "brea",
+   "costa mesa",
+   "cypress",
+   "dana point",
+   "fountain valley",
+   "fullerton",
+   "garden grove",
+   "huntington beach",
+   "irvine",
+   "la habra",
+   "laguna beach",
+   "laguna hills",
+   "laguna niguel",
+   "laguna woods",
+   "lake forest",
+   "long beach",
+   "mission viejo",
+   "newport beach",
+   "orange",
+   "placentia",
+   "rancho santa margarita",
+   "san clemente",
+   "san juan capistrano",
+   "santa ana",
+   "tustin",
+   "yorba linda"
+  ],  "region": "Orange County",  "reg": "la-county"
+ },
+ {  "n": "Airstream Los Angeles",  "c": "San Gabriel, CA",  "p": "626-285-2222",  "u": "https://www.airstreamlosangeles.com/collision-center",  "t": "center",  "e": false,  "r": false,  "d": "Airstream Los Angeles operates a factory certified body shop and collision center in San Gabriel for Airstream travel trailers. It performs collision repair, aluminum panel replacement, hail and dent repair, polishing, and full body restoration using genuine Airstream OEM parts. The site says it accepts all insurance companies and offers free estimates, and holds Airstream's Five Rivet service designation.",  "g": [
+   "center"
+  ],  "base": "san gabriel",  "areas": [],  "region": "",  "spec": "Airstream travel trailers only.",  "reg": "la-county"
  }
 ];

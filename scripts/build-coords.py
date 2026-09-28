@@ -90,6 +90,11 @@ READER_MARGIN = 25.0
 # of the county it overlaps most on land. 137 of them straddle a line.
 MILES_PER_DEGREE = 69.0
 
+# How far a same-named place may be before it is refused rather than attached. A listing in
+# Los Angeles naming "Saugus" must not be placed in Massachusetts because that is the only
+# Saugus any dataset carries.
+NEAR_STATE_MILES = 250.0
+
 def rows(path, delim="\t"):
     with open(path, encoding="utf-8-sig") as fh:
         head = [h.strip() for h in fh.readline().rstrip("\n").split(delim)]
@@ -337,8 +342,15 @@ def build(places, zips, write=True):
         for row in listing_names(slug):
             for name in ([row.get("base")] if row.get("base") else []) + list(row.get("areas") or []):
                 key = canonical(name)
-                if key in city:
+                entry0 = alias.get(name)
+                if key in city and not (isinstance(entry0, dict) and entry0.get("force")):
                     continue
+                if key in city and isinstance(entry0, dict) and entry0.get("force"):
+                    # The table carries this name for a DIFFERENT place. "Sun Valley" is Sun
+                    # Valley, Nevada in the Census place file, 500 miles from the Los Angeles
+                    # neighbourhood a listing means, and because the name resolves the name
+                    # check cannot see the error.
+                    pass
                 entry = alias.get(name)
                 target = entry.get("to") if isinstance(entry, dict) else (entry or name)
                 to_zip = entry.get("to_zip") if isinstance(entry, dict) else None
@@ -350,11 +362,21 @@ def build(places, zips, write=True):
                     continue
                 candidates = nation.get(canonical(target) if target else key, [])
                 if candidates:
-                    # the same-named place nearest this state's own coordinates
+                    # the same-named place nearest this state's coordinates, and only if it is
+                    # plausibly in this state's neighbourhood. Without the ceiling this
+                    # attached Saugus to Saugus, Massachusetts, Newhall to a town in Iowa and
+                    # West Hills to New York: names that exist only as a neighbourhood here
+                    # picked up a same-named place 2,000 miles away, silently, and a reader
+                    # in Los Angeles would have been shown a shop listed as three states off.
                     pick = min(candidates, key=lambda c: nearest_distance(near, c[1]))
-                    city[key] = pick[1]
-                    forced.append("%s -> %s (%s)" % (name, target, pick[0])
-                                  if target != name else "%s (%s)" % (name, pick[0]))
+                    d_mi = nearest_distance(near, pick[1])
+                    if d_mi <= NEAR_STATE_MILES:
+                        city[key] = pick[1]
+                        forced.append("%s -> %s (%s)" % (name, target, pick[0])
+                                      if target != name else "%s (%s)" % (name, pick[0]))
+                        continue
+                    unresolved.append("%s (nearest namesake is in %s, %.0f miles away; needs a "
+                                      "ZIP alias or a correction)" % (name, pick[0], d_mi))
                     continue
                 if name.lower().endswith(" county"):
                     continue

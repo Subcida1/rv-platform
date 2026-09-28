@@ -19,5 +19,75 @@
   "California Valley": {
     "to_zip": "93453",
     "why": "A small community on the Carrizo Plain, not a Census place. 93453 is the ZIP area that serves it, and its centroid is the Census's own coordinate."
+  },
+  "Sun Valley": {
+    "to_zip": "91352",
+    "force": true,
+    "why": "The Census place file carries Sun Valley, NEVADA, 500 miles away, so this name resolves to the wrong place and no check can see it. The Los Angeles neighbourhood of the same name is only in the ZIP table, and 91352 is its ZIP."
+  },
+  "Valencia": {
+    "to_zip": "91355",
+    "why": "A neighbourhood of Santa Clarita, not a Census place. 91355 is its ZIP area, whose centroid is the Census's own.",
+    "force": true
+  },
+  "Canyon Country": {
+    "to_zip": "91351",
+    "why": "A neighbourhood of Santa Clarita, not a Census place. 91351 is its ZIP area.",
+    "force": true
+  },
+  "Chatsworth": {
+    "to_zip": "91311",
+    "why": "A Los Angeles neighbourhood, not a Census place. 91311 is its ZIP area.",
+    "force": true
+  },
+  "Northridge": {
+    "to_zip": "91343",
+    "why": "A Los Angeles neighbourhood, not a Census place. 91343 is its ZIP area.",
+    "force": true
+  },
+  "Van Nuys": {
+    "to_zip": "91401",
+    "why": "A Los Angeles neighbourhood, not a Census place. 91401 is its ZIP area.",
+    "force": true
+  },
+  "Saugus": {
+    "to_zip": "91350",
+    "why": "A neighbourhood of Santa Clarita. The only Saugus in the Census place file is in Massachusetts, so before the distance ceiling this resolved 2,600 miles from the listing. 91350 is its ZIP area.",
+    "force": true
+  },
+  "Newhall": {
+    "to_zip": "91321",
+    "why": "A neighbourhood of Santa Clarita; the Census name is only in Iowa. 91321 is its ZIP area.",
+    "force": true
+  },
+  "Woodland Hills": {
+    "to_zip": "91364",
+    "why": "A Los Angeles neighbourhood; the Census carries Woodland Hills in Utah. 91364 is its ZIP area.",
+    "force": true
+  },
+  "West Hills": {
+    "to_zip": "91307",
+    "why": "A Los Angeles neighbourhood; the Census carries West Hills in New York. 91307 is its ZIP area.",
+    "force": true
+  },
+  "Sunland": {
+    "to_zip": "91040",
+    "why": "A Los Angeles neighbourhood, not a Census place. 91040 is its ZIP area.",
+    "force": true
+  },
+  "Tarzana": {
+    "to_zip": "91356",
+    "why": "A Los Angeles neighbourhood, not a Census place. 91356 is its ZIP area.",
+    "force": true
+  },
+  "Tujunga": {
+    "to_zip": "91042",
+    "force": true,
+    "why": "A Los Angeles neighbourhood, not a Census place. 91042 is its ZIP area."
+  },
+  "LaCanada/Flintridge": {
+    "to_zip": "91011",
+    "force": true,
+    "why": "The listing writes the name without its accents or its spaces, and the Census spelling (La Canada Flintridge) does not match it either. 91011 is the ZIP area that covers it."
   }
 }

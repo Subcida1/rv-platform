@@ -66,6 +66,14 @@ def census_keys(name, lsad=None):
     return [k for k in out if k]
 
 
+# KNOWN GAP, recorded 2026-09-28: canonical() does not fold accents, so the Census's
+# "La Cañada Flintridge city" is keyed with the tilde and neither a reader nor a listing
+# writing "La Canada Flintridge" matches it. Found when a Los Angeles listing needed that
+# town. It is covered today by an entry in _data/place-aliases.json. Folding the accent
+# (unicodedata NFKD, strip combining marks) is the real fix, and it has to be done in
+# finder.js's canon() in the same change or the two sides stop agreeing.
+
+
 def canonical(name, census_name=False, lsad=None):
     """The key a place is stored under, and the key a reader's input is looked up by."""
     n = str(name or "").strip().lower()
