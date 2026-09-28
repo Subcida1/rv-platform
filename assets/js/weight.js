@@ -9,7 +9,6 @@
  'use strict';
 
  var WATER_LB = 8.34; // lb per gallon (fresh/gray/black)
- var PROPANE_LB = 4.24; // lb per gallon (common rule)
 
  function $(id) { return document.getElementById(id); }
  function num(id) { var v = parseFloat($(id).value); return isNaN(v) || v < 0 ? 0 : v; }
@@ -25,7 +24,6 @@
  function propaneVal() {
    var el = $('w-propane');
    var v = el ? el.value : '0';
-   if (v === '9.4b') return 9.4; // two 20 lb tanks
    var n = parseFloat(v);
    return isNaN(n) || n < 0 ? 0 : n;
  }
@@ -49,7 +47,7 @@
  var grayGal = ($('w-gray-full') && $('w-gray-full').checked) ? Math.max(0, num('w-gray-gal')) : 0;
  var blackGal = ($('w-black-full') && $('w-black-full').checked) ? Math.max(0, num('w-black-gal')) : 0;
  var water = (h2oF + grayGal + blackGal) * WATER_LB;
- var propaneLb = propane * PROPANE_LB;
+ var propaneLb = propane; // the select carries the full cylinder weight, propane plus steel
  var loaded = rigUVW + water + propaneLb + cargoTrailer;
 
  /* tongue: measured value wins; else est. 12% TT / 20% FW */
@@ -177,7 +175,7 @@
  ['ok', 'SAFE', 'Everything checks out. Keep the load this light or lighter.'];
  html = '<div class="w-overall ' + ov[0] + '"><span>Can your truck tow it?</span><b>' + ov[1] + '</b><small>' + ov[2] + '</small></div>' +
  '<div class="w-total"><span>Loaded trailer</span><b>' + fmt(loaded) + ' lb</b>' +
- '<small>' + fmt(water) + ' lb water, ' + fmt(propaneLb) + ' lb propane, ' + fmt(cargoTrailer) + ' lb cargo</small></div>' +
+ '<small>' + fmt(water) + ' lb water, ' + fmt(propaneLb) + ' lb propane and tanks, ' + fmt(cargoTrailer) + ' lb cargo</small></div>' +
  rows.join('') +
  (payloadCap > 0 && payloadRemain > 0
  ? '<div class="w-remain">Weight to spare in the truck: <b>' + fmt(payloadRemain) + ' lb</b></div>' : '') +

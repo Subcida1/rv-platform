@@ -395,17 +395,11 @@
     "sources": []
   },
   "guides/roof-snow-load.html": {
-    "hash": "ae9a26ed11d56b6e",
+    "hash": "430c6f7f3bef05bc",
     "status": "verified",
-    "verified_by": "Claude (confirm round, JOB-20260923-1933, 2026-09-23 20:17): all eight findings FIX-CONFIRMED, the four blocking items no longer blocking, verdict YES, and no objection to the C15 scoping call. Note on the hash: the verdict was given against the pre-edit text, and the only change applied after it is the closing-section self-reference its own reply prescribed as optional cleanup, so this hash covers the prescribed deletion and nothing else.",
-    "verified_at": "2026-09-23",
-    "sources": [
-      "Keystone 2026 owner's manual",
-      " NRCS snow density data",
-      " National Weather Service snow-load method",
-      " Boxabl Baby Box 120 spec sheet",
-      " DOE Building America Solution Center"
-    ],
+    "verified_by": "Cloud 2026-09-28, external-review correction pass plus a fresh-context confirm round. An external review flagged the page's use of Boxabl's 20 psf as a fallback rating for a roof whose manual publishes nothing. The figure was real and the inference was not: the Boxabl Baby Box 120 (model BXB-000029) is a factory-built towable RV compliant with NFPA 1192 and its spec sheet does rate the roof at 20 psf live load, but taking the lower of two figures published for two other RVs does not produce a rating for a third. The page now says so in four places and treats an unrated roof as having no stated snow allowance. The confirm round verified Keystone's own manual wording ('Snow loads that exceed 2 feet or 30 pounds per square foot'), the Boxabl spec sheet, the NWS snow-load figures and the NRCS density range, re-checked every arithmetic step on the page, and prescribed two further fixes, both applied: the worked example now labels 30 psf a stand-in, and the 'same limit stated two ways' sentence now says whichever of the two a given snowfall reaches first is the one that binds. Those two are the only changes made after the confirm verdict.",
+    "verified_at": "2026-09-28",
+    "sources": [],
     "spec": "_specs/roof-snow-load.md",
     "spec_waived": false,
     "claims": [
@@ -3207,10 +3201,10 @@
     "invalidated_at": "2026-09-27"
   },
   "guides/rv-roof-leak-repair.html": {
-    "hash": "93b8bf724c1a5d26",
+    "hash": "9398bccf739b3efc",
     "status": "verified",
-    "verified_by": "Cloud 2026-09-26, second independent pass: Qwen, job 20260926-2250-RV-ROOF-R2, VERDICT CORRECTIONS APPLIED. It judged all four 09-24 corrections FIXED and reported that the corrections broke nothing. All four of its quotations were checked mechanically against the live page (scripts/check-review-quotes.py: 4 on the page, 0 staged-only, 0 nowhere), so the verdict rests on sentences that are actually there.",
-    "verified_at": "2026-09-26",
+    "verified_by": "Cloud 2026-09-28, external-review correction pass plus a fresh-context confirm round. An external review noted that the page told readers to cut a small hole in a sagging wet ceiling with no mention of the wiring running through RV ceilings. The gap was real: RV ceiling runs carry 12-volt wiring to lights, vents, detectors and speakers, 120-volt wiring to the air conditioner and on some models a ceiling fixture, and ducting. The bullet now names what is in the cavity, requires the shore power, generator, inverter and 12-volt system to be killed with the feeding fuses and breakers pulled before anything goes through the panel, keeps the hole clear of visible fixtures, specifies a hand tool rather than a drill, adds eye and breathing protection, and defers to a technician where the cavity is unknown. The confirm round verified the ceiling contents against Airxcel's ceiling-assembly instructions ('The 115 VAC service for the roof top unit must be routed into the ceiling plenum') and the NHTSA service advisory showing the cavity contents, confirmed the ordering now puts isolation before the action, and prescribed one typo fix ('A hatches hinges' to 'A hatch hinges'), which is the only change made after the confirm verdict.",
+    "verified_at": "2026-09-28",
     "sources": [],
     "spec": "_specs/rv-roof-leak-repair.md",
     "spec_waived": false,
@@ -3509,17 +3503,11 @@
     "invalidated_at": "2026-09-27"
   },
   "guides/rv-solar-not-charging.html": {
-    "hash": "2220561ff1bbd26e",
+    "hash": "55790142d33da419",
     "status": "verified",
-    "verified_by": "AI Studio lane, three rounds on 2026-09-24. The reading opened Victron's MPPT troubleshooting page, Victron's Wiring Unlimited, Go Power's GP-PWM-10 manual, Renogy's guide and Zamp's manuals, and FOUR claims had nothing behind them: the 16 to 23 volt and 2 to 9 amp input range, the 14.4 / 13.8 defaults and the 14.2 / 13.5 lithium profile, the decoupling quote, and the PWM small-systems-only assessment. All cut or restated as ours, and the documented replacements are Victron's 5 volt rule and Go Power's 14.4 / 13.7 for flooded and AGM with no lithium profile at all. The connection order was FOUND, in Renogy, Go Power and Zamp, all three stating battery-before-panel, and the page now states it and what the wrong order costs instead of deferring it. The full review (JOB-20260924-0910) returned NO, blocked by four findings, two of them safety problems the page had created: short circuit current measured by shorting a panel through a multimeter, and panels disconnected without being covered. It also caught that the chemistry mechanism was backwards in three places - a lead-acid profile applies equalisation and temperature compensation, which lithium refuses, rather than undercharging it - and that the measurement section ran invasive-first. The section is reordered so the non-invasive readings come first, a deliberate deviation recorded in the spec. Confirm JOB-20260924-0920 returned CONFIRMED on all seven checks, including that a reader can do measurements one and two without taking anything apart. Recording the claims then caught TWO ATTRIBUTIONS THE READING HAD NOT VERIFIED - Victron named for wiring faults its list does not contain, and Go Power named for panel-test guidance it never carried - and both are our own statements now, confirmed by JOB-20260924-0930. Claims recorded 12 READ and 17 CONFIRMED.",
-    "verified_at": "2026-09-24",
-    "sources": [
-      "Victron Energy SmartSolar MPPT troubleshooting",
-      "Victron Energy Wiring Unlimited",
-      "Go Power GP-PWM-10 solar controller manual",
-      "Renogy charge controller troubleshooting guide",
-      "Zamp Solar controller manuals"
-    ],
+    "verified_by": "Cloud 2026-09-28, external-review correction pass plus a fresh-context confirm round. The page explained the battery-first connection order with 'a panel connected to a controller with no battery on it has nowhere to put its current', which is bad physics: a panel is a current-limited source, so with an open input it simply rises to its open-circuit voltage and no current flows. The procedure was right and the explanation was not. The page now gives the real reasons: the controller sees the panel's full open-circuit voltage instead of a battery-clamped input, which is the cause Renogy names for the damage, and without a battery it can fail to establish or mis-detect the system voltage. The confirm round verified the replacement against Renogy's own manual language, Victron's MPPT manual ('In case the solar charger does not measure a battery voltage, it will default to 12V'), and Go Power's GP-PWM-10, and prescribed three further fixes, all applied: the Zamp attribution hedged to its current install guides, 'killed' softened to 'damaged' to match the body, and the Renogy source repointed at the article that actually carries the open-circuit-voltage claim. Those three are the only changes made after the confirm verdict.",
+    "verified_at": "2026-09-28",
+    "sources": [],
     "spec": "_specs/rv-solar-not-charging.md",
     "spec_waived": false,
     "claims": [
@@ -3758,17 +3746,11 @@
     ]
   },
   "guides/rv-tank-sensors-reading-wrong.html": {
-    "hash": "f64b9e4bacf78bd4",
+    "hash": "8f8765ca273ef746",
     "status": "verified",
-    "verified_by": "Gemini autoloop lane, sweep round on 2026-09-23: sweep JOB-20260924-0500 found one instance (the FAQ answer 'Every system on this page has...'), it was cut in the visible FAQ and its schema copy, and confirm JOB-20260924-0521 verified the sentence present and correctly punctuated - verdict 'Confirmed: YES'. I also checked the string myself: 'on this page' returns 0 on the page. The original verdict was Claude's review plus a confirm (JOB-20260923-2001 and 2008); this is the re-earned verdict after the sweep.",
-    "verified_at": "2026-09-23",
-    "sources": [
-      "RV Probes FAQ and home page",
-      " Valterra product page",
-      " Thetford Level Gauge Cleaner and Tank Blaster and two support FAQs",
-      " Lippert Intelli-view manual",
-      " Garnet SeeLevel 709 manual"
-    ],
+    "verified_by": "Cloud 2026-09-28, external-review correction pass plus a fresh-context confirm round. The page taught that a verifiably dry tank still reading full proves a wiring fault, because 'there is no residue left to carry any current'. That is backwards: emptying a tank does not remove what is stuck to the probes, and dried sludge, struvite and mineral scale are the classic cause of a false full. The rule was corrected in the two places it appeared, and the confirm round found it stated in two further places the first pass had missed (the 'always reads full' symptom card and the featured FAQ), both then fixed, so the rule now reads consistently in all six locations. Struvite is now defined on the page. The confirm round verified the mechanism against RV Tank Specialist, Walex, Ask The RV Engineer and Kleen Tank, and confirmed the corrected order of operations. No change was made after the confirm verdict.",
+    "verified_at": "2026-09-28",
+    "sources": [],
     "spec": "_specs/rv-tank-sensors-reading-wrong.md",
     "spec_waived": false,
     "claims": [
@@ -4129,11 +4111,11 @@
       },
       {
         "id": "C8",
-        "text": "keep 15 percent headroom between the tire's rated load and the load it actually carries; 125 percent of the measured load is better",
-        "source": "Tire and Rim Association guidance or a maker's load tables. Two numbers a reader acts on",
+        "text": "keep a 10 percent load reserve: the tires on an axle must be rated to carry at least 110 percent of the axle rating on the certification label, with 106 percent allowed on axles above 8,000 lb",
+        "source": "NFPA 1192 section 8.6.2, RVIA-adopted, with 49 CFR 571.120 for the federal floor",
         "state": "READ",
-        "by": "The arithmetic is mine and it checks: 125 percent of measured load is 80 percent of capacity (1/1.25 = 0.80), which is the same 80 percent convention the rest of the site uses. BUT I CORRECTED THE LANE'S ATTRIBUTION: it credited the 15 percent reserve to NHTSA's FMVSS 110 rulemaking, and 49 CFR 571.110, which I read on 2026-09-23, says the load on a tire shall be no greater than 94 percent of its rating at the placard pressure -- a 6 percent reserve, not 15. So 15 percent is industry practice rather than the federal rule, and the page states it as 'the working rule' rather than as a regulation.",
-        "at": "2026-09-23"
+        "by": "CORRECTED 2026-09-28. The page previously carried '15 percent headroom / 125 percent of the measured load', which no standards body publishes; the arithmetic was sound but the figure was enthusiast folklore. Read on 2026-09-28: NFPA 1192 8.6.2.2 requires the sum of tire maximum load ratings on an axle of 8,000 lb GAWR or less to be not less than 110 percent of the GAWR, and 8.6.2.3 allows 106 percent above 8,000 lb. 49 CFR 571.120 S5.1.2 requires only that the sum of tire maximum load ratings be not less than the GAWR, so there is no federal reserve at all, which is why the 10 percent is an industry addition. Corroborated by RVIA's own standards officer describing the 10 percent reserve (Modern Tire Dealer, 2017) and by tire engineer Barry Smith on the pre-November-2017 margins. The page and the tires-winter cross-reference were both changed to the 10 percent framing, and the old 15 percent figure was retired.",
+        "at": "2026-09-28"
       },
       {
         "id": "C9",
@@ -4821,21 +4803,11 @@
     "sources": []
   },
   "guides/tires-winter.html": {
-    "hash": "fd1cebc2276bb601",
+    "hash": "df47ebe3f574625f",
     "status": "verified",
-    "verified_by": "Claude Desktop lane, four rounds on 2026-09-23: the first found eight items including a body/FAQ sibling miss and a self-contradicting timeline paragraph, the confirm found the same defect recurring inside the paragraph I rewrote to fix it plus a false-consensus claim, the closing round found that Michelin was cited four times with no Sources entry, and that finding exposed a gap in our own coverage checker rather than in the page",
-    "verified_at": "2026-09-23",
-    "sources": [
-      "inbox/REVIEW-REQUEST-20260923-1622-tires-winter.md",
-      "outbox/REPLY-TIRESWINTER-REVIEW-1622.md",
-      "inbox/REVIEW-REQUEST-20260923-1630-tires-winter-confirm.md",
-      "outbox/REPLY-TIRESWINTER-CONFIRM-1630.md",
-      "inbox/REVIEW-REQUEST-20260923-1814-tires-winter-close.md",
-      "outbox/REPLY-TIRESWINTER-CLOSE-1814.md",
-      "inbox/REVIEW-REQUEST-20260923-1822-tires-winter-final.md",
-      "outbox/REPLY-TIRESWINTER-FINAL-1822.md",
-      "spec:_specs/tires-winter.md"
-    ],
+    "verified_by": "Cloud 2026-09-28, external-review correction pass plus a fresh-context confirm round. The page carried a 15 percent load headroom figure for trailer tires. No standards body publishes 15 percent: the published figure is a 10 percent reserve, the tires on an axle rated to at least 110 percent of the axle rating (NFPA 1192 section 8.6.2.2, with 106 percent above 8,000 lb GAWR in 8.6.2.3), against a federal floor in 49 CFR 571.120 that requires no margin at all. The companion tire page was corrected in the same pass and this cross-reference now matches it at 10 percent. The confirm round verified the standard against NFPA 1192 and 49 CFR 571.120 and found one remaining defect, which it prescribed the exact text for and which is applied: the sentence compared a 10 percent tire reserve to the towing page's 80 percent convention as if they were the same margin, and now names them as separate questions. That replacement is the only change made after the confirm verdict.",
+    "verified_at": "2026-09-28",
+    "sources": [],
     "spec": "_specs/tires-winter.md",
     "spec_waived": false,
     "claims": [
@@ -4881,11 +4853,11 @@
       },
       {
         "id": "C6",
-        "text": "the 80 percent load margin on tire load matters as much in winter",
-        "source": "the same convention the tire page uses (125 percent of measured load = 80 percent of capacity)",
-        "state": "CONFIRMED",
-        "by": null,
-        "at": null
+        "text": "the load reserve on tire load matters as much in winter",
+        "source": "the same standard the tire page uses: 10 percent reserve, tires rated to at least 110 percent of the axle rating (NFPA 1192 section 8.6.2)",
+        "state": "READ",
+        "by": "CORRECTED 2026-09-28. This claim previously read 'the 80 percent load margin' and sourced it to the tire page's '125 percent of measured load = 80 percent of capacity' convention. That convention was retired on 2026-09-28 as unsourced; the published figure is a 10 percent reserve against the axle rating. The page now says 'the 10 percent load reserve', which matches the tire page.",
+        "at": "2026-09-28"
       },
       {
         "id": "C7",
@@ -4946,10 +4918,10 @@
     ]
   },
   "guides/trailer-brakes-required.html": {
-    "hash": "d2253003ac740667",
+    "hash": "e626627697f3d7cc",
     "status": "verified",
-    "verified_by": "Cloud 2026-09-24, second independent pass by the bridge lane (JOB-20260924-1628, spec section 14). All citations confirmed including the two earlier lanes got wrong; two new findings applied, the walking-pace test now asks for a drag rather than a stop and names the one-sided pull it reveals. Its Part 1 list was mostly already-fixed work because it read a stale staged copy, which section 13 already records as a lesson. Its Oregon 40-foot figure was not adopted - this spec's reading found 25 and 35 feet, so neither goes in.",
-    "verified_at": "2026-09-24",
+    "verified_by": "Cloud 2026-09-28, external-review correction pass plus a fresh-context confirm round. An external review flagged the descent advice as dangerous and it was: the page told readers to hold the controller's manual override ahead of the truck's pedal on a descent, which no authoritative source teaches and which controller makers warn against (Redarc: 'Manual override should not be used in place of the regular vehicle brakes'; Elecbrakes: 'Never use Manual Override to slow the vehicle and trailer during normal driving'). The same sentence also had the hot-drum diagnosis inverted. Rewritten to engine braking first, snub braking, gain sets how much and boost sets how early, with the override reserved for gain-setting, warming and a brief sway correction. The confirm round verified every citation against ORS 815.125(7), the ODOT towing brochure, CDL downgrade guidance and the Hayes and Tekonsha controller manuals, and prescribed five further fixes, all applied: 'four state codes' to three, the CMV definition to 49 CFR 390.5, the snub sentence's self-contradiction, 'the trailer's brochure', and the qualifier that a little extra trailer heat is the lead the page asks for. Those five are the only changes made after the confirm verdict.",
+    "verified_at": "2026-09-28",
     "sources": [],
     "spec": "_specs/trailer-brakes-required.md",
     "spec_waived": false,
@@ -5133,19 +5105,11 @@
     ]
   },
   "guides/winterize-plumbing.html": {
-    "hash": "fcdf93ecc5280572",
+    "hash": "b9457db4719ca582",
     "status": "verified",
-    "verified_by": "Claude Desktop lane, three rounds on 2026-09-23: the first enumerated the nine prevalence claims my purge had missed (including two stated twice), the confirm caught that I had listed a heading as cut without touching it plus a comprehension error my own cut introduced, and the closing round re-read the whole page and found nothing new",
-    "verified_at": "2026-09-23",
-    "sources": [
-      "inbox/REVIEW-REQUEST-20260923-1256-winterize-plumbing.md",
-      "outbox/REPLY-WINTERIZE-REVIEW-1256.md",
-      "inbox/REVIEW-REQUEST-20260923-1320-winterize-plumbing-confirm.md",
-      "outbox/REPLY-WINTERIZE-CONFIRM-1320.md",
-      "inbox/REVIEW-REQUEST-20260923-1326-winterize-plumbing-close.md",
-      "outbox/REPLY-WINTERIZE-CLOSE-1326.md",
-      "spec:_specs/winterize-plumbing.md"
-    ],
+    "verified_by": "Cloud 2026-09-28, external-review correction pass plus a fresh-context confirm round. Two defects were corrected. The bleach ratio: the page presented Suburban's six-ounces-per-10-gallons as the routine sanitizing dose for 'the tanks it builds', but Suburban builds water heaters rather than tanks, and that figure is their heavy chlorination for sulfur odour, roughly 4.5 times the standard dose. The page now gives a quarter cup per 15 gallons (about 50 ppm), notes the makers' doubled 100 ppm option, and keeps the Suburban figure as its own separately labelled item. The dump-valve advice: 'leave the valves open or cracked' was wrong and is now closed with RV antifreeze, with the Drain Master and Airstream counter-practice named rather than omitted. The confirm round verified both against Winnebago's and Jayco's fresh water procedures, Suburban's own manual, Drain Master and Airstream, and prescribed four further fixes, all applied: 'a shorter hour' to 'just one hour', the damage claim scoped to routine sanitize, Airstream added to the valve caveat, and 'tank dosed' to 'system dosed'. The Drain Master and Airstream sources were added. Those four plus the two source entries are the only changes made after the confirm verdict.",
+    "verified_at": "2026-09-28",
+    "sources": [],
     "spec": "_specs/winterize-plumbing.md",
     "spec_waived": false,
     "claims": [

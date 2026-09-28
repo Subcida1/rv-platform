@@ -130,7 +130,7 @@
  <h3>Works plugged in, dies when you unplug</h3>
  <p>The converter is carrying everything and the battery is not contributing. Either the battery is finished, or it is not being charged. Those are different problems with the same symptom, and the next section separates them.</p>
  <h3>Dim or weak even while plugged in</h3>
- <p>The converter or its 120 volt feed. On shore power the converter should carry the whole load by itself, so the battery is not in the picture at all.</p>
+ <p>The converter or its 120 volt feed. On shore power a healthy converter carries the normal 12-volt loads and keeps the battery charged, which is why the lights work with no battery fitted at all. The battery is not out of the picture, though: the two sit in parallel on the same DC bus, and the converter is current-limited, so a load that asks for more than it can deliver pulls the converter's voltage down and the battery supplies the difference. That is why the heavy intermittent loads, a slide or a jack, are where a weak converter shows itself first.</p>
  <h3>One circuit dead, everything else fine</h3>
  <p>That branch fuse, or the load at the end of it. Nothing upstream is at fault, because upstream feeds the circuits that still work.</p>
  <h3>Fuse blows again as soon as you replace it</h3>
@@ -152,7 +152,8 @@
  <h3>There are two sources, not one</h3>
  <p>The battery feeds the panel, and the converter feeds the same panel. They meet at the DC bus rather than sitting in a line, and the converter's charging path runs backwards up the battery's own wire. WFCO states this in its own manual: a battery is not required for converter operation, and the battery works in conjunction with the converter to supply DC power. That single fact explains why an RV with a completely dead battery still has working lights when it is plugged in.</p>
  <h3>Everything returns through the chassis</h3>
- <p>The frame of the RV is the negative conductor. Anywhere that return path is corroded, painted, or loose, current cannot get back to the battery and the device behaves as though it has no power at all. This is the fault that gets mistaken for a dead battery or a failed device more often than any other, because a bad ground presents as a fault in whatever device happens to be at the end of the circuit.</p>
+ <p>The frame of the RV is the return path for many circuits. Anywhere that return path is corroded, painted, or loose, current cannot get back to the battery and the device behaves as though it has no power at all. This is the fault that gets mistaken for a dead battery or a failed device more often than any other, because a bad ground presents as a fault in whatever device happens to be at the end of the circuit.</p>
+ <p><b>It is not the return path for all of them.</b> A trailer commonly runs a dedicated negative wire back to a bus for the house circuits, with the frame carrying the vehicle lighting and brakes, and Progressive Dynamics' own wiring diagram says the chassis may or may not carry the DC negative. So a circuit with its own negative wire has its own set of connections to check, and a fault there will not show up as a frame problem at all. Where the frame is used, its joints are the corrosion sites, and that is the half of this section that catches people.</p>
  <h3>Working the chain</h3>
  <p>Start at the source and move outward. Battery voltage at the terminals, then at the disconnect, then at the main fuse, then at the bus, then at the branch fuse, then at the load. The first point where the reading stops being correct is where the fault is. Doing that in order is faster than testing anything at random, and it never leaves you replacing a part that was never broken.</p>
  <h3>Two things that differ between RVs</h3>
@@ -225,7 +226,7 @@
 
  <h2>Grounds: The fault that pretends to be something else</h2>
  <div class="card">
- <p>In an RV, the chassis is the negative conductor. It is not an earth ground in the household sense and does not need to be. It is simply the return path, and every device depends on it.</p>
+ <p>In an RV, the chassis is bonded to the 12-volt negative and serves as the return path for many circuits, though not all of them. It is not an earth ground in the household sense and does not need to be. It is a local ground plane: the frame works as the return because it is the largest piece of metal in the vehicle, not because it is connected to the earth.</p>
  <h3>Why grounds fail</h3>
  <p>Every connection point between two different metals is a corrosion site once moisture is involved, and corrosion raises resistance until the connection effectively disappears. The result is a device that has proper voltage at it and still will not run, which sends people looking at the device instead of the frame.</p>
  <h3>The clue that points at a ground rather than a supply</h3>

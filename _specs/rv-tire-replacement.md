@@ -93,7 +93,7 @@ H2  The visual checks before every trip
 | C5 | ST tires are built for trailers and LT for light trucks, and the same size can carry different capacity by type | a tire maker's own guide | SOURCED |
 | C6 | **the load capacity of an ST trailer tire is calculated assuming a maximum speed of 65 mph**, and its capacity is only valid up to that speed | a tire maker or the Tire and Rim Association. **A number a reader acts on: read it or cut it** | SOURCED |
 | C7 | some carry a speed symbol implying more, but that rating only applies at the pressure and load stated for it, so 65 is the ceiling unless the tire says otherwise | the same source as C6 | SOURCED |
-| C8 | **keep 15 percent headroom between the tire's rated load and the load it actually carries; 125 percent of the measured load is better** | Tire and Rim Association guidance or a maker's load tables. **Two numbers a reader acts on** | SOURCED |
+| C8 | **keep a 10 percent load reserve: the tires on an axle rated to carry at least 110 percent of the axle rating on the certification label, and 106 percent above 8,000 lb GAWR** | NFPA 1192 section 8.6.2 (RVIA-adopted), with 49 CFR 571.120 for the federal floor. **SUPERSEDED 2026-09-28: this row previously read "15 percent headroom / 125 percent of the measured load", which no standards body publishes. Corrected on the page and in the manifest; the old figure is retired.** | READ |
 | C9 | the pressure to use is the one on the vehicle's certification label, not the maximum molded on the sidewall | Michelin's load and inflation tables (in Sources) and the placard's legal basis (FMVSS 110) | SOURCED |
 | C10 | adding about **10 psi for storage** reduces flat-spotting, and it comes back down before the road | a tire maker's storage guidance. **A number a reader acts on** | SOURCED |
 | C11 | age beats tread because the rubber degrades from the inside and the tread can stay full | NHTSA's tire aging material (in Sources) | SOURCED |
@@ -117,6 +117,8 @@ H2  The visual checks before every trip
   should make clear which is advice and which is a maker's published rule.
 - **D5 — C8's two figures point the same way but are not the same number** (15 percent headroom vs 125
   percent of measured load). State both, or state one and give the maths.
+  **CLOSED 2026-09-28: both figures were wrong. The published standard is a 10 percent reserve against
+  the axle rating (NFPA 1192 8.6.2.2), so the page now states one figure and its basis.**
 - **D6 — check the ST speed claim against the tyre age: the 65 mph figure is the older ST standard**, and
   some newer ST tires carry higher ratings. If the maker documents both, the page must not present 65 as
   universal.

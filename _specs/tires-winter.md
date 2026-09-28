@@ -84,7 +84,7 @@ H2  The spring check
 | C3 | below about **40 °F**, a loaded tire on a hard surface can take a set | a tire maker's storage guidance | SOURCED |
 | C4 | support the frame with jack stands so they carry about **95 percent of the weight** | **a number a reader acts on, and 95 percent needs a source or a plainer statement** | SOURCED |
 | C5 | lower the tires to a storage pressure while the weight is off | the same guidance, with the figure the maker gives | SOURCED |
-| C6 | **the 80 percent load margin** on tire load matters as much in winter | the same convention the tire page uses (125 percent of measured load = 80 percent of capacity) | CONFIRMED |
+| C6 | **the load reserve** on tire load matters as much in winter | the same standard the tire page uses: 10 percent reserve, tires rated to at least 110 percent of the axle rating (NFPA 1192 section 8.6.2). **SUPERSEDED 2026-09-28: this row previously read "the 80 percent load margin" sourced to the tire page's retired 125-percent convention.** | READ |
 | C7 | breathable fabric covers beat plastic because plastic traps moisture | a tire or cover maker's own material guidance | SOURCED |
 | C8 | the six-year age rule and the DOT code | Goodyear's bulletin and 49 CFR 574.5 — **both already read for the tire page** | READ |
 | C9 | the pressure to use is the certification-label figure, not the sidewall maximum | the tire page's source, already read | READ |
