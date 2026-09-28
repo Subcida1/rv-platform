@@ -287,8 +287,8 @@
       "region": "Siskiyou County",
       "p": "530-926-3860",
       "u": "https://www.skinnerstruckrepair.com/",
-      "t": "both",
-      "e": true,
+      "t": "center",
+      "e": false,
       "areas": [
         "Mount Shasta",
         "Weed",
@@ -303,12 +303,16 @@
         "Diesel shop",
         "Not RV-specific"
       ],
-      "d": "Family-owned full-service diesel and truck shop with roadside assistance: tires, airlines, airbags, electrical, fuel leaks and transfer, alternators and water pumps. Serves Mount Shasta, Weed, Yreka, Dunsmuir, McCloud, Redding and Susanville. 24 hour roadside, seven days. A truck shop rather than an RV specialist, useful on I-5 for the chassis side rather than the coach.",
+      "d": "Family-owned diesel and truck repair shop with roadside assistance: tyres, air lines, airbags, electrical, fuel leaks and transfer, alternators and water pumps. It works on the vehicle rather than the coach, and its customers include fifth-wheel owners, so it is the right call for a breakdown and the wrong one for a failed furnace or water heater.",
       "evidence": {
         "checked": "https://www.skinnerstruckrepair.com/",
         "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
-        "center_quote": "ROADSIDE TRUCK REPAIR + MORE, SERVING YOU FOR OVER 60 YEARS FAMILY OWNED FOR THREE GENERATIONS SHOP FACILITIES OFF I-5 EXIT 743 Mount Shasta, CA (530) 926-3860 (530) 926-4300 1 (800) 572- 3201 Skinner&#39;s Truck Repair SERVICES SERVICES ROADSIDE ASSISTANCE General Rep"
-      }
+        "center_quote": "ROADSIDE TRUCK REPAIR + MORE, SERVING YOU FOR OVER 60 YEARS FAMILY OWNED FOR THREE GENERATIONS SHOP FACILITIES OFF I-5 EXIT 743 Mount Shasta, CA (530) 926-3860 (530) 926-4300 1 (800) 572- 3201 Skinner&#39;s Truck Repair SERVICES SERVICES ROADSIDE ASSISTANCE General Rep",
+        "roadside_quote": "rescue at Grass Lake rest area on hwy 97 to replace a broken leaf spring on our 5th wheel trailer and resolved our leaking coolant system on our Ram truck",
+        "correction": "2026-09-28: was tagged emergency mobile repair (in-coach) with no roadside tag. Its own site never claims RV work and it is a diesel and truck roadside shop, so the tag was the opposite of the business. Found by scripts/audit-tags.py. Whether a truck shop belongs in an RV-specific directory at all is Ty's call: the standing inclusion rule says RV-specific only, and this keeps the listing with the limitation stated in spec pending that decision."
+      },
+      "r": true,
+      "spec": "Diesel and truck roadside shop, not a coach specialist"
     },
     {
       "n": "TowTally Camping",

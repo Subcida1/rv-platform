@@ -70,7 +70,7 @@ window.RV_LISTINGS_CA = [
    "Body repair"
   ],  "d": "Locally owned RV repair shop off I-5. Appliance repair, electrical diagnostics, body repair, plumbing, structural repairs and interior remodeling. Also offers mobile repairs for travellers broken down. Monday to Friday 9 to 5, Saturday by appointment.",  "reg": "shasta-i5"
  },
- {  "n": "Skinner's Truck Repair",  "base": "mount shasta",  "c": "Mount Shasta and the I-5 corridor",  "region": "Siskiyou County",  "p": "530-926-3860",  "u": "https://www.skinnerstruckrepair.com/",  "t": "both",  "e": true,  "areas": [
+ {  "n": "Skinner's Truck Repair",  "base": "mount shasta",  "c": "Mount Shasta and the I-5 corridor",  "region": "Siskiyou County",  "p": "530-926-3860",  "u": "https://www.skinnerstruckrepair.com/",  "t": "center",  "e": false,  "areas": [
    "mount shasta",
    "weed",
    "yreka",
@@ -82,7 +82,7 @@ window.RV_LISTINGS_CA = [
    "24 hour roadside",
    "Diesel shop",
    "Not RV-specific"
-  ],  "d": "Family-owned full-service diesel and truck shop with roadside assistance: tires, airlines, airbags, electrical, fuel leaks and transfer, alternators and water pumps. Serves Mount Shasta, Weed, Yreka, Dunsmuir, McCloud, Redding and Susanville. 24 hour roadside, seven days. A truck shop rather than an RV specialist, useful on I-5 for the chassis side rather than the coach.",  "reg": "shasta-i5"
+  ],  "d": "Family-owned diesel and truck repair shop with roadside assistance: tyres, air lines, airbags, electrical, fuel leaks and transfer, alternators and water pumps. It works on the vehicle rather than the coach, and its customers include fifth-wheel owners, so it is the right call for a breakdown and the wrong one for a failed furnace or water heater.",  "r": true,  "spec": "Diesel and truck roadside shop, not a coach specialist",  "reg": "shasta-i5"
  },
  {  "n": "TowTally Camping",  "base": "redding",  "c": "Redding",  "region": "Shasta County",  "p": "530-241-7848",  "u": "https://www.towtallycamping.com/service-repair-rv/",  "t": "center",  "e": false,  "areas": [
    "redding"
