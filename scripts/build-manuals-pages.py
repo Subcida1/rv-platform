@@ -238,7 +238,7 @@ def row_html(r):
     types = "".join('<span class="badge badge-tint">%s</span>'
                     % esc(t.replace("-", " ")) for t in r["doc_types"])
     host = ("" if r.get("host", r["brand"]) == r["brand"]
-            else '<span class="man-host">via %s</span>' % esc(r["host"]))
+            else ' <span class="man-host">via %s</span>' % esc(r["host"]))
     gate = {"none": "", "free-account": "free account needed",
             "paid": "paid subscription"}.get(r["gate"], "")
     bits = []
@@ -574,9 +574,10 @@ def start_here_page():
   <h3>10. Do not remove or plug the water heater's relief valve</h3>
   <p>Two instructions in one line, both absolute: <i>Do not place a valve between the pressure and
   temperature (P&amp;T) valve and the tank. Do not remove or plug the relief valve under any
-  circumstances.</i> The valve is what opens if the tank reaches 120 degrees F or 150 pounds of
+  circumstances.</i> The valve is what opens if the tank reaches 210 degrees F or 150 pounds of
   pressure, and it is the reason a heater that is misbehaving vents water rather than becoming a
-  projectile.</p>
+  projectile. Suburban publish both figures for their own valves, and 210 is the one that matters:
+  120 F is a thermostat setting on some models, not a relief temperature.</p>
 
   <h3>11. Never blow the water lines out with a valve closed</h3>
   <p>When the plumbing gets winterised with air rather than antifreeze: <i>Never apply air pressure

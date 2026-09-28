@@ -77,6 +77,20 @@ csscheck() {
 }
 step "W3C Nu Html Checker, CSS mode (two documented limitations filtered)" csscheck
 
+# ---------------------------------------------------------------- 4. across pages
+# REPORTING, NOT GATING, and the distinction is deliberate. Every step above reads one
+# page; this is the only one that reads two at once, and it exists because two pages
+# contradicting each other is what actually shipped (winterize-plumbing told readers to
+# leave the dump valves open while start-here told them to close them, and both passed
+# every gate). The section printed here is the narrow one: exactly two distinct values
+# site-wide for one subject and unit, each on exactly one page, in sentences that share
+# three content words. It is validated both ways: reintroducing the 120 F relief-valve
+# figure makes it fire, and fixing it makes it silent. It still does not fail the build,
+# because it is a prompt rather than a proof and a prompt that fails a build gets
+# deleted. Full report, including the subject index: python3 scripts/cross-check.py
+printf '\n=== cross-check.py: two pages naming one fact with different numbers ===\n'
+python3 scripts/cross-check.py --only same-fact | sed -n '9,60p'
+
 printf '\n================================================================\n'
 if [ "$fail" -eq 0 ]; then
   printf 'every check passed\n'

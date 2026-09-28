@@ -46,6 +46,10 @@ function context(attrs) {
   const SEARCH_INPUT = stubEl('input'); SEARCH_INPUT.value = 'can my truck tow it';
   const SEARCH_FORM = stubEl('form');
   SEARCH_FORM.querySelector = sel => (sel === 'input' ? SEARCH_INPUT : null);
+  // Two closed <details>, so initPrint() has something to open. A closed one prints its
+  // summary and drops its content, which is the whole reason the handler exists.
+  const DETAILS = [stubEl('details'), stubEl('details')];
+  DETAILS.forEach(d => { d.open = false; });
   // Listeners are recorded rather than discarded, because a delegated handler
   // that is never invoked cannot be tested at all. The recorded ones are only
   // called explicitly, by the tests that want them.
@@ -54,7 +58,8 @@ function context(attrs) {
     createElement: stubEl,
     getElementById: id => byId[id] || (byId[id] = stubEl('div')),
     querySelector: () => null,
-    querySelectorAll: sel => (sel === 'form.js-search-form' ? [SEARCH_FORM] : []),
+    querySelectorAll: sel => (sel === 'form.js-search-form' ? [SEARCH_FORM]
+                              : sel === 'details:not([open])' ? DETAILS : []),
     addEventListener(t, fn) { (this._ev = this._ev || {})[t] = fn; },
   };
   const sandbox = {
@@ -68,6 +73,7 @@ function context(attrs) {
   sandbox.globalThis = sandbox;
   sandbox.__form = SEARCH_FORM;
   sandbox.__document = doc;
+  sandbox.__details = DETAILS;
   sandbox.addEventListener = function (t, fn) { (sandbox._ev = sandbox._ev || {})[t] = fn; };
   sandbox.__fetchCalls = [];
   sandbox.fetch = (url, opts) => {
@@ -216,6 +222,33 @@ if (sb.window.RV && typeof sb.window.RV.track === 'function') {
   console.log('  FAIL RV.track is not exposed');
   failed++;
 }
+
+// 2e. print: every <details> is opened before the page is printed, and put back after.
+//     A closed <details> prints its summary and NOT its content, and no CSS rule changes
+//     that: the browser hides the content slot, so `details > *:not(summary){display:block}`
+//     does nothing. Measured 2026-09-28 by printing a two-element test page to PDF and
+//     reading the text back, with the rule applied and the answer still missing. Every
+//     guide keeps its FAQ in <details>, so without this the answers vanish from every
+//     printed page while the page still looks complete.
+try {
+  const before = sb._ev && sb._ev.beforeprint;
+  const after = sb._ev && sb._ev.afterprint;
+  if (typeof before !== 'function' || typeof after !== 'function') {
+    console.log('  FAIL print handlers not wired, so FAQ answers would not print');
+    failed++;
+  } else {
+    before();
+    const opened = sb.__details.every(d => d.open === true);
+    after();
+    const restored = sb.__details.every(d => d.open === false);
+    if (opened && restored) {
+      console.log('  ok   beforeprint opens every <details>, afterprint puts them back');
+    } else {
+      console.log('  FAIL print handling: opened=' + opened + ' restored=' + restored);
+      failed++;
+    }
+  }
+} catch (e) { console.log('  FAIL print handling threw: ' + e.message); failed++; }
 
 // 2d. faq_open, outbound_click and js_error are delegated handlers, so they are
 //     invoked here the way the browser would.
