@@ -28,8 +28,20 @@ function stubEl(tag) {
   return e;
 }
 
-function context() {
+// The page's real <body> attributes, handed to the stub. The directory finder reads
+// data-state / data-state-name from there, so a page that lost them fails here for
+// the same reason it would fail in a browser.
+function bodyAttrs(html) {
+  const m = html.match(/<body([^>]*)>/);
+  const out = {};
+  if (m) for (const a of m[1].matchAll(/([a-zA-Z-]+)="([^"]*)"/g)) out[a[1]] = a[2];
+  return out;
+}
+
+function context(attrs) {
   const byId = {};
+  const BODY = stubEl('body');
+  BODY.getAttribute = k => (attrs && k in attrs ? attrs[k] : null);
   // a stand-in for the hero search form, so initSearch() has something to wire
   const SEARCH_INPUT = stubEl('input'); SEARCH_INPUT.value = 'can my truck tow it';
   const SEARCH_FORM = stubEl('form');
@@ -38,7 +50,7 @@ function context() {
   // that is never invoked cannot be tested at all. The recorded ones are only
   // called explicitly, by the tests that want them.
   const doc = {
-    readyState: 'complete', head: stubEl('head'), body: stubEl('body'),
+    readyState: 'complete', head: stubEl('head'), body: BODY,
     createElement: stubEl,
     getElementById: id => byId[id] || (byId[id] = stubEl('div')),
     querySelector: () => null,
@@ -330,7 +342,16 @@ const PAGES = [
   ['index.html', ['assets/js/config.js', 'assets/js/site.js']],
   ['guides/index.html', ['assets/js/config.js', 'assets/js/site.js']],
   ['directory/index.html', ['assets/js/config.js', 'assets/js/site.js']],
-  ['directory/oregon.html', ['assets/js/config.js', 'assets/js/site.js', 'assets/js/coords-or.js', 'assets/js/listings/listings-or.js']],
+  // All three state pages execute for real now. The finder is one shared file and each
+  // page loads its own coordinate and listing shard, which is the pairing verify.py
+  // asserts; before 2026-09-27 all three pages shared coords-or.js and carried their
+  // own 316-line copy of the finder, which had silently drifted.
+  ['directory/oregon.html', ['assets/js/config.js', 'assets/js/site.js',
+    'assets/js/coords-or.js', 'assets/js/listings/listings-or.js', 'assets/js/finder.js']],
+  ['directory/washington.html', ['assets/js/config.js', 'assets/js/site.js',
+    'assets/js/coords-wa.js', 'assets/js/listings/listings-wa.js', 'assets/js/finder.js']],
+  ['directory/california.html', ['assets/js/config.js', 'assets/js/site.js',
+    'assets/js/coords-ca.js', 'assets/js/listings/listings-ca.js', 'assets/js/finder.js']],
 ];
 // The manuals pages are generated from a fixed eight-system taxonomy, so glob
 // them rather than listing nine lines that will go stale. This is exactly the
@@ -343,11 +364,11 @@ for (const f of fs.readdirSync(path.join(ROOT, 'manuals'))) {
   PAGES.push(['manuals/' + f, ['assets/js/config.js', 'assets/js/site.js', extra]]);
 }
 for (const [page, scripts] of PAGES) {
-  const ctx = context();
+  const html = fs.readFileSync(path.join(ROOT, page), 'utf8');
+  const ctx = context(bodyAttrs(html));
   let threw = null;
   try {
     for (const s of scripts) runIn(ctx, s);
-    const html = fs.readFileSync(path.join(ROOT, page), 'utf8');
     for (const m of html.matchAll(/<script>([\s\S]*?)<\/script>/g)) {
       vm.runInContext(m[1], ctx, { filename: page + ' (inline)' });
     }

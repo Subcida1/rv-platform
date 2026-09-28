@@ -1,0 +1,7 @@
+{
+  "_readme": "Names a listing uses that no Census source carries, with the nearest place that does. Applied by scripts/build-coords.py so a reader typing the listing's own name resolves, and so the name keys the served-area match. Every entry needs a reason: this file is the only place in the coordinate build where a name is mapped to a coordinate it is not literally the name of.",
+  "Charleston": {
+    "to": "Coos Bay",
+    "why": "Charleston, Oregon is an unincorporated community inside Coos Bay's urban area with no census designated place and a population under 1,000, so neither the Census place file nor GeoNames carries it. It appears in a listing's served areas (Curry County and Coos County coverage). Mapped to Coos Bay, about 5 miles east, which is its postal address (ZIP 97420)."
+  }
+}

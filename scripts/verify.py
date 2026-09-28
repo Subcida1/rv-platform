@@ -491,6 +491,59 @@ if bad:
 else:
     print("  every listing carries a name, area, phone, description and a valid type")
 
+print("\n=== directory pages name their own state, and their files agree ===")
+# THE DEFECT THIS EXISTS FOR (2026-09-27, found by a bridge lane's design review and
+# confirmed live): one coordinate file served all three state pages, so the California
+# page ranked its listings against Oregon's table, and all three pages said "anywhere
+# in Oregon" because the finder was three byte-identical copies and only one had ever
+# been corrected. A file per state makes that quieter, not louder: the wrong pair now
+# looks plausible in both files. So the page declares its identity, and this asserts
+# that the declaration, the script tags, and the data files all agree.
+bad, checked = [], []
+for page in sorted((ROOT / "directory").glob("*.html")):
+    html = page.read_text(encoding="utf-8")
+    body = re.search(r"<body([^>]*)>", html)
+    st = (re.search(r'data-state="([A-Z]{2})"', body.group(1)) if body else None)
+    nm = (re.search(r'data-state-name="([^"]+)"', body.group(1)) if body else None)
+    if page.name == "index.html":
+        if st:
+            bad.append("index.html declares a state; the hub has none")
+        continue
+    if not st or not nm:
+        bad.append("%s: <body> has no data-state / data-state-name" % page.name)
+        continue
+    st, nm = st.group(1), nm.group(1)
+    slugs = re.findall(r'<script src="assets/js/(coords-[a-z]{2}|listings/listings-[a-z]{2})\.js',
+                       html)
+    if len(slugs) != 2:
+        bad.append("%s: expected one coords and one listings shard, found %s"
+                   % (page.name, slugs or "none"))
+        continue
+    for src in slugs:
+        if src.rsplit("-", 1)[1] != st.lower():
+            bad.append("%s declares %s but loads %s" % (page.name, st, src))
+    if "assets/js/finder.js" not in html:
+        bad.append("%s does not load the shared finder" % page.name)
+    if re.search(r"RV_LISTINGS", html):
+        bad.append("%s still carries an inline copy of the finder" % page.name)
+    coords = ROOT / "assets/js" / ("coords-%s.js" % st.lower())
+    if not coords.exists():
+        bad.append("%s: no %s" % (page.name, coords.name))
+        continue
+    text = coords.read_text(encoding="utf-8")
+    if '"state":"%s"' % st not in text:
+        bad.append("%s: coords-%s.js does not say state %s" % (page.name, st.lower(), st))
+    if "window.RV_COORDS_%s " % st not in text:
+        bad.append("%s: coords-%s.js does not define RV_COORDS_%s"
+                   % (page.name, st.lower(), st))
+    checked.append("%s (%s, %s)" % (page.name, st, nm))
+for b in bad:
+    print("  FAIL " + b)
+if bad:
+    fails.append("directory page state pairing")
+else:
+    print("  %s all name, load and declare the same state" % ", ".join(checked))
+
 print("\n=== meta description length (140-160 chars, or Google rewrites it) ===")
 bad = []
 for p in sorted(ROOT.rglob("*.html")):

@@ -10,3 +10,6 @@ workers/.wrangler/
 # Search Console exports written by scripts/gsc.py. Local measurement data, not site assets.
 data/gsc/
 .vale/styles/
+
+# Census Gazetteer source files (about 20 MB, public domain, refetched with --fetch).
+_data/source/

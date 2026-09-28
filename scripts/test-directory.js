@@ -11,10 +11,11 @@ const path = require('path');
 const vm = require('vm');
 
 const ROOT = path.resolve(__dirname, '..');
-const html = fs.readFileSync(path.join(ROOT, 'directory/oregon.html'), 'utf8');
-const blocks = [...html.matchAll(/<script(?![^>]*\bsrc=)[^>]*>([\s\S]*?)<\/script>/g)].map(m => m[1]);
-const code = blocks.find(b => b.includes('RV_LISTINGS_OR'));
-if (!code) { console.error('FAIL: could not find the page script'); process.exit(1); }
+/* The finder is one shared file now, not a copy inlined per page: three byte-identical
+   copies had drifted, and all three printed "anywhere in Oregon" on the Washington and
+   California pages. This loads the real shared file, and the page's own state declaration. */
+const code = fs.readFileSync(path.join(ROOT, 'assets/js/finder.js'), 'utf8');
+const STUB_BODY = { 'data-state': 'OR', 'data-state-name': 'Oregon' };
 
 /* ---------- DOM stub ---------- */
 function El(id) {
@@ -34,7 +35,7 @@ const document = {
   querySelectorAll: sel => (sel === '.finder-route' ? routes : []),
   querySelector: () => null,
   createElement: () => El('new'),
-  body: { appendChild() {} },
+  body: { appendChild() {}, getAttribute: k => STUB_BODY[k] || null },
   head: { firstChild: null, insertBefore() {} },
 };
 const sandbox = {
@@ -86,7 +87,19 @@ console.log('\n2. Distance ranking, and what we cannot place drops below what we
 typeLocation('Klamath');
 check('names the town it sorted for', /Klamath/.test(sortNote()), sortNote());
 check('nearest stated base wins', first() === 'JBK RV Mobile Repair', 'first=' + first());
-check('next nearest follows', names()[1] === 'Jackson RV', 'second=' + names()[1]);
+/* This used to assert names()[1] === 'Jackson RV'. That pinned a one-mile tie:
+   Jackson RV, Precision RV and Brothers RV were 79, 79 and 80 miles from Klamath
+   under the old GeoNames table, and 81, 81, 81 under the Census one, so a rounding
+   difference reordered them. The test was measuring the coordinate table, not the
+   ranking. What the ranking actually promises is that the visible order follows
+   increasing distance, so that is what this checks now. */
+const badgeMiles = () => badges().map((b, i) => b === 'home' ? 0
+  : b === 'serves' ? -1
+    : Number((cards()[i].match(/about (\d+) mi/) || [])[1] ?? NaN));
+const mi = badgeMiles();
+check('every card is ordered by distance',
+  mi.every(x => !Number.isNaN(x)) && mi.every((x, i) => i === 0 || mi[i - 1] <= x),
+  JSON.stringify(mi));
 check('every card carries a distance badge', badges().every(b => b === 'distance'), JSON.stringify(badges()));
 // Businesses with no stated base only surface once the radius is wide open.
 // Click until the visible count stops growing: relying on hasMore() alone
@@ -235,6 +248,26 @@ check('every roadside listing comes to you or dispatches',
 check('emergency listings are mobile-repair type, not roadside',
   emerg.every(x => /furnace|water|fridge|refrigerator|appliance|electrical|plumbing|emergency/i.test(x.d)),
   emerg.map(x => x.n).join(' | '));
+
+console.log('\n12. A location we cannot place, and names the tables spell differently');
+/* A fresh-context review found this on 2026-09-27: outZip was removed from the data
+   when the belt was merged into one zip map, but locate() still read CO.outZip, so any
+   ZIP that was not in the table threw inside the input handler and the reader got no
+   message at all. Nothing here covered a ZIP miss, which is why it shipped. */
+typeLocation('99999');
+check('an unplaceable ZIP is reported, not thrown',
+  /could not place/i.test(els['loc-note'].textContent), els['loc-note'].textContent);
+check('and the results on screen are left alone', cards().length > 0, cards().length + ' cards');
+/* The tables are keyed by scripts/place_names.py's canonical(), and the browser has to
+   reach the same form. "St. Helens" is stored as "saint helens"; "Mt Shasta" as
+   "mount shasta". The same review found the checker folding St./Mt. while the browser
+   did not, so a listing written "Mt. Shasta" would pass every gate and never rank. */
+for (const [typed, want] of [['St. Helens', /St\.? Helens|Saint Helens/i], ['Mt Shasta', /Shasta/i]]) {
+  typeLocation(typed);
+  check('"' + typed + '" resolves to the same town as the table key',
+    /Sorted for/i.test(els['loc-note'].textContent) && want.test(els['loc-note'].textContent),
+    els['loc-note'].textContent);
+}
 
 console.log('\n' + passes + ' passed, ' + fails + ' failed');
 process.exit(fails ? 1 : 0);

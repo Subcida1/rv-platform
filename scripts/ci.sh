@@ -29,6 +29,17 @@ step "build-shell.mjs --check: nav and footer are in the HTML" \
                                                node scripts/build-shell.mjs --check
 step "stamp_assets.py --check: every asset hash is current" \
                                                python3 scripts/stamp_assets.py --check
+# The two derivations that keep the directory honest, and the reason they are separate
+# steps rather than one: --check on the listings builder proves every listing-derived
+# block matches the JSON, and --check on the coordinate builder proves every name a
+# listing uses resolves in ITS OWN state's table. The second one is what the old check
+# could not see, when one coordinate file served three pages.
+step "build-listings.py --check: generated blocks match _data/listings" \
+                                               python3 scripts/build-listings.py --check
+step "build-coords.py --check: every listing name resolves in its own state" \
+                                               python3 scripts/build-coords.py --check
+step "build-search-index.py --check: the site search index is current" \
+                                               python3 scripts/build-search-index.py --check
 
 # ---------------------------------------------------------------- 2. behaviour
 step "weight calculator"                       node scripts/test-weight-calculator.js
