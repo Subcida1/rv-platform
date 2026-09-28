@@ -268,9 +268,52 @@ def check(path, no_fetch=False):
     return len(missing) + len(near)
 
 
+def check_links(path):
+    """Every source a page cites, fetched for status alone.
+
+    WHY THIS IS SEPARATE FROM THE QUOTE CHECK. That check only touches a URL if the page happens to quote
+    something attributed to it, so a dead citation with no quotation attached is invisible to it - and the
+    condensation page had exactly that problem twice: an ASHRAE PDF returning 404 and an Airstream article
+    URL that had been guessed rather than checked, both found only by accident while chasing something else.
+    A citation is a promise that a document exists. This tests the promise directly.
+
+    A 403 is reported as BLOCKED rather than dead: several makers here sit behind a web application
+    firewall or Cloudflare, and one of those (Airstream) is known to serve 403 to everything automated
+    while working perfectly in a browser.
+    """
+    text = path.read_text(encoding="utf-8")
+    urls = sources_on_page(text)
+    if not urls:
+        return 0
+    import urllib.error
+    dead, blocked = [], []
+    for u in urls:
+        try:
+            req = urllib.request.Request(u, headers={"User-Agent": UA})
+            with urllib.request.urlopen(req, timeout=45) as r:
+                r.read(2048)
+        except urllib.error.HTTPError as e:
+            (blocked if e.code in (401, 403, 429) else dead).append((u, str(e.code)))
+        except Exception as e:
+            dead.append((u, type(e).__name__))
+    print(f"\n  {path.name}: {len(urls)} source(s), {len(dead)} dead, {len(blocked)} blocked")
+    for u, why in dead:
+        print(f"    DEAD      {why:>4}  {u}")
+    for u, why in blocked:
+        print(f"    blocked   {why:>4}  {u}")
+    return len(dead)
+
+
 def main():
     args = [a for a in sys.argv[1:] if not a.startswith("--")]
     no_fetch = "--no-fetch" in sys.argv
+    if "--links-only" in sys.argv:
+        pages = ([pathlib.Path(a) for a in args] if args
+                 else sorted(q for q in (ROOT / "guides").glob("*.html") if q.name != "index.html"))
+        total = sum(check_links(q) for q in pages)
+        print(f"\n  dead source links: {total}")
+        print("  BLOCKED is not dead: several makers serve 403 to automation and work fine in a browser.")
+        return
     pages = ([pathlib.Path(a) for a in args] if args
              else sorted(p for p in (ROOT / "guides").glob("*.html") if p.name != "index.html"))
     total = sum(check(p, no_fetch) for p in pages)
