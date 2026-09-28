@@ -128,7 +128,9 @@
         "type_quote": "He has a fully stocked truck to repair RVs in a quick and efficient manner.",
         "emergency_quote": null,
         "roadside_quote": null,
-        "licence": null
+        "licence": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Repair: Montana Mobile R."
       }
     },
     {
@@ -158,7 +160,9 @@
         "type_quote": "Mobile service that comes to your location to fix problems on the house side of your RV.",
         "emergency_quote": null,
         "roadside_quote": null,
-        "licence": null
+        "licence": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Service Request Anderson Mobile RV Service & Repair Offering convenient, timely on-site repair for house-side RV and camper issues Contact Us Our Services Service Request Available Services HOURS OF OP"
       }
     },
     {
@@ -190,7 +194,10 @@
         "type_quote": "Sit tight! We'll come to you as quickly as possible.",
         "emergency_quote": null,
         "roadside_quote": "Providing roadside assistance for light mechanical in the heavy-duty space.",
-        "licence": null
+        "licence": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Star 5 Service | Mobile RV Repair — Kalispell, MT | Mobile RV Repair & Roadside Assistance — Serving Kalispell, Whitefish, Columbia Falls & West Glacier Home Service Areas Kalispell Services We",
+        "r_quote": "&#8220;Light&#8221; Heavy-Duty Providing roadside assistance for light mechanical in the heavy-duty space."
       }
     },
     {
@@ -209,7 +216,7 @@
       "areas": [],
       "region": "Gallatin Valley within 60 miles",
       "evidence": {
-        "checked": "https://paneromobilerv.com/about-us",
+        "checked": "https://paneromobilerv.com/",
         "phone_quote": "(406) 589-2303",
         "coverage_quotes": [
           "Panero Mobile RV Service is a mobile RV repair service based out of Belgrade Montana. We service Gallatin Valley and the surrounding areas within 60 miles."
@@ -217,7 +224,9 @@
         "type_quote": "We have a fully stocked trailer equipped to repair your RV in an efficient and professional manner.",
         "emergency_quote": null,
         "roadside_quote": null,
-        "licence": null
+        "licence": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Panero Mobile RV Service Home Contact (406) 589-2303 About Us FAQ Home Contact (406) 589-2303 About Us FAQ Contact Us Today! (406) 589-2303 &uarr; Back to Top © Panero Mobile Rv Servi"
       }
     },
     {
@@ -242,7 +251,7 @@
       ],
       "region": "Greater Flathead Valley",
       "evidence": {
-        "checked": "https://www.campeasymobilervrepair.com/services",
+        "checked": "https://www.campeasymobilervrepair.com/",
         "phone_quote": "(951) 546-6838",
         "coverage_quotes": [
           "CampEasy is based in Kalispell, Montana, and we proudly serve the entire Flathead Valley, including Whitefish, Columbia Falls, Bigfork, and surrounding areas."
@@ -250,7 +259,10 @@
         "type_quote": "Emergency Calls Available, including weekends and holidays. Stuck trying to get home or to your next stop? We've got you covered. Slide stuck or leveling system not operational, give us a call!!",
         "emergency_quote": "Emergency Calls Available, including weekends and holidays. Stuck trying to get home or to your next stop? We've got you covered. Slide stuck or leveling system not operational, give us a call!!",
         "roadside_quote": null,
-        "licence": null
+        "licence": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "e_quote": "OUR WORK SERVICES Services Annual Maintenance RV Orientation/Walkthrough Slide Repair Winterization/De-Winterization Appliance Repair RV Classes Plumbing Seal Inspection Emergency Services Electrical Awning Repair Roof Inspection View More CONTACT Contact GET IN TOUCH We are Mobile! Please contact us to ensure we are in your area! ​ liz.",
+        "mobile_quote": "--> CampEasy Mobile RV Service and Repair top of page Location FIND US! Phone HOME ABOUT US SERVICES What We Offer CONTACT More Use tab to navigate through the menu items."
       }
     },
     {
@@ -283,7 +295,9 @@
         "type_quote": "If it's on your RV, we work on it. No towing, no waiting weeks for a dealer appointment. We come to you.",
         "emergency_quote": null,
         "roadside_quote": null,
-        "licence": null
+        "licence": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Road Runner RV | Mobile Repair Service | Lincoln & Flathead County, MT Road Runner RV 406-303-9402 Northwestern Montana's Mobile RV Specialist Road Runner RV Professional mobile repair — we com"
       },
       "reg": "northwest-mt"
     },
@@ -311,7 +325,9 @@
         "type_quote": "Mountain Peak Mobile RV Service brings expert, certified repair directly to you.",
         "emergency_quote": null,
         "roadside_quote": null,
-        "licence": null
+        "licence": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Mobile RV Service LLC &#8211; Mobile RV Service LLC Home About Services Contact Us get a quote Menu Welcome To Mountain Peak Mobile RV Service RV Trouble? Our Mobile Service Co"
       },
       "reg": "northwest-mt"
     },
@@ -340,7 +356,9 @@
         "type_quote": "Specializing In Mobile Repair",
         "emergency_quote": null,
         "roadside_quote": null,
-        "licence": null
+        "licence": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "--> Rocky Mountain Repair LLC top of page Call us: (406) 253-9694 Rocky Mountain Repair LLC The Flathead&#39;s Best Mobile RV Repair HOME REPAIRS STORE GALLERY CONTACT More Use tab to navigate through the menu items."
       },
       "reg": "northwest-mt"
     },
@@ -374,7 +392,10 @@
         "type_quote": "We come to you!",
         "emergency_quote": "24/7 Availability for Emergency Calls",
         "roadside_quote": null,
-        "licence": null
+        "licence": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "e_quote": "com Hours Open today 08:00 am – 06:00 pm 24/7 Availability for Emergency Calls Get directions Raving Reviews from Our RVers Convenient online payment is available! We accept all credit and debit cards.",
+        "mobile_quote": "Expert-Certified Mobile RV Repair Services 406-407-5651 Miller&#x27;s Mobile RV Rescue Miller&#x27;s Mobile RV Rescue Miller&#x27;s Mobile RV Rescue Miller&#x27;s Mobile RV Rescue Your RV's Bes"
       }
     },
     {
@@ -394,7 +415,7 @@
         "Billings"
       ],
       "evidence": {
-        "checked": "https://www.mtrvrepair.com/contact",
+        "checked": "https://www.mtrvrepair.com/",
         "phone_quote": "Call Us 406-369-6398",
         "coverage_quotes": [
           "Mobile - We come to you. Shop space available as needed and for clients passing through town."
@@ -402,7 +423,9 @@
         "type_quote": "We specialize in RV repair and maintenance services. AC, heat, plumbing, appliances, and slide repair just to name a few.",
         "emergency_quote": null,
         "roadside_quote": null,
-        "licence": null
+        "licence": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "By noon the next day he had sourced all replacement parts, including the axel, and was on site ready to work."
       }
     },
     {
@@ -431,7 +454,10 @@
         "type_quote": "Trust our experts to take care of your chassis, body work, window repair, and other interior and exterior services.",
         "emergency_quote": null,
         "roadside_quote": "including paint and decal repair, suspension repair, fiberglass repair and metalwork, RV roof repairs, part fabrication, window repair and more",
-        "licence": null
+        "licence": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "r_quote": "Trust our experts to take care of your chassis, body work, window repair, and other interior and exterior services.",
+        "center_quote": "Home - Martin&#039;s RV Service Center About Us RV Maintenance &#038; Service RV Collision Repairs RV Roof &#038; AC Repair Contact Us Request an Appointment Map Privacy Policy Select Page Montana&#8217;s RV"
       }
     },
     {
@@ -459,7 +485,9 @@
         "type_quote": "At Decker Services Mobile RV Repair, our mission is to provide top-notch mobile RV repair and maintenance services.",
         "emergency_quote": null,
         "roadside_quote": null,
-        "licence": null
+        "licence": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Mobile RV Maintenance & Repair Services 1-406-660-7042 Decker Services Mobile RV Repair Decker Services Mobile RV Repair Decker Services Mobile RV Repair Decker Services Mobile"
       }
     },
     {
@@ -487,7 +515,9 @@
         "type_quote": "We come to RV parks, campgrounds, private properties, and other accessible RV locations.",
         "emergency_quote": null,
         "roadside_quote": null,
-        "licence": null
+        "licence": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "First Response Mobile RV Repair | West Yellowstone, MT (214) 702-8191 Client Login Request Service Home Services RV Diagnostics & General Repair RV Air Conditioner Service RV Electrical Repai"
       }
     },
     {
@@ -514,7 +544,9 @@
         "type_quote": "Mobile - By appt only",
         "emergency_quote": null,
         "roadside_quote": null,
-        "licence": null
+        "licence": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "--> Done Rite RV Mobile Repair | Montana | RV Repair top of page 406-565-1084 rvrepairdonerite@gmail."
       },
       "reg": "northwest-mt"
     },
@@ -544,7 +576,9 @@
         "type_quote": "nrvta/rvtaa certified/insured repairs/maintenance",
         "emergency_quote": null,
         "roadside_quote": null,
-        "licence": null
+        "licence": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Fish&#x27;s Mobile R."
       }
     },
     {
@@ -564,7 +598,7 @@
         "Sidney"
       ],
       "evidence": {
-        "checked": "https://amunrudsrv.com/service",
+        "checked": "https://amunrudsrv.com/",
         "phone_quote": "(406) 433-2226",
         "coverage_quotes": [
           "At Amunrud's RV we are best known for our service/repairs! With over 30 years of experience in the industry, Mike is the best around",
@@ -573,7 +607,8 @@
         "type_quote": "We run on a first-come, first-served basis. Call to find out timing. For minor repairs we try to squeeze them in so long as it doesn't take away from those already waiting!",
         "emergency_quote": null,
         "roadside_quote": null,
-        "licence": null
+        "licence": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site"
       }
     }
   ]
