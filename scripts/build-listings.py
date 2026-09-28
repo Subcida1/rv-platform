@@ -135,7 +135,10 @@ def validate(data, slug):
                        "renamed key, and either way it renders as an empty section" % k)
     if data.get("state") != (PAGES.get(slug) or slug[:2].upper()):
         bad.append("state %r is not the USPS code for %s" % (data.get("state"), slug))
-    if data.get("name", "").lower() != slug:
+    # The slug is the file name; the display name is what a reader sees. They must be the same
+    # place, and the first version compared them literally, which failed the moment a state had
+    # two words in it: the page says "RV Repair in New Mexico" and the file is newmexico.json.
+    if re.sub(r"[^a-z]", "", data.get("name", "").lower()) != re.sub(r"[^a-z]", "", slug):
         bad.append("name %r does not match the file name %s" % (data.get("name"), slug))
     if bad:
         print("FAIL  %s" % (DATA / ("%s.json" % slug)).relative_to(ROOT))

@@ -1,0 +1,627 @@
+{
+  "state": "NM",
+  "name": "New Mexico",
+  "regions": [
+    {
+      "key": "albuquerque",
+      "label": "Albuquerque and the middle Rio Grande"
+    },
+    {
+      "key": "north-nm",
+      "label": "Santa Fe, Taos and the north"
+    },
+    {
+      "key": "four-corners",
+      "label": "Farmington, Aztec and the Four Corners"
+    },
+    {
+      "key": "south-nm",
+      "label": "Las Cruces, Alamogordo and the south"
+    },
+    {
+      "key": "southeast-nm",
+      "label": "Roswell, Carlsbad and the south-east"
+    }
+  ],
+  "region_of": {
+    "Albuquerque": "albuquerque",
+    "Bernalillo": "albuquerque",
+    "Rio Rancho": "albuquerque",
+    "Los Lunas": "albuquerque",
+    "Belen": "albuquerque",
+    "Moriarty": "albuquerque",
+    "Edgewood": "albuquerque",
+    "Grants": "albuquerque",
+    "Milan": "albuquerque",
+    "Socorro": "albuquerque",
+    "Magdalena": "albuquerque",
+    "Estancia": "albuquerque",
+    "Tijeras": "albuquerque",
+    "Cedar Crest": "albuquerque",
+    "Santa Fe": "north-nm",
+    "Espanola": "north-nm",
+    "Los Alamos": "north-nm",
+    "White Rock": "north-nm",
+    "Taos": "north-nm",
+    "Questa": "north-nm",
+    "Las Vegas": "north-nm",
+    "Raton": "north-nm",
+    "Clayton": "north-nm",
+    "Springer": "north-nm",
+    "Chama": "north-nm",
+    "Cuba": "north-nm",
+    "Dulce": "north-nm",
+    "Tierra Amarilla": "north-nm",
+    "Pojoaque": "north-nm",
+    "Farmington": "four-corners",
+    "Aztec": "four-corners",
+    "Bloomfield": "four-corners",
+    "Kirtland": "four-corners",
+    "Shiprock": "four-corners",
+    "Flora Vista": "four-corners",
+    "Navajo Dam": "four-corners",
+    "Las Cruces": "south-nm",
+    "Mesilla": "south-nm",
+    "Anthony": "south-nm",
+    "Sunland Park": "south-nm",
+    "Chaparral": "south-nm",
+    "Alamogordo": "south-nm",
+    "Tularosa": "south-nm",
+    "Ruidoso": "south-nm",
+    "Alto": "south-nm",
+    "Carrizozo": "south-nm",
+    "Truth or Consequences": "south-nm",
+    "Elephant Butte": "south-nm",
+    "Deming": "south-nm",
+    "Silver City": "south-nm",
+    "Lordsburg": "south-nm",
+    "Bayard": "south-nm",
+    "Hatch": "south-nm",
+    "Roswell": "southeast-nm",
+    "Carlsbad": "southeast-nm",
+    "Artesia": "southeast-nm",
+    "Lovington": "southeast-nm",
+    "Hobbs": "southeast-nm",
+    "Portales": "southeast-nm",
+    "Clovis": "southeast-nm",
+    "Tucumcari": "southeast-nm",
+    "Santa Rosa": "southeast-nm",
+    "Vaughn": "southeast-nm",
+    "Fort Sumner": "southeast-nm",
+    "Lake Arthur": "southeast-nm"
+  },
+  "listings": [
+    {
+      "n": "Tom's RV Service & Sales",
+      "c": "Albuquerque, NM",
+      "p": "(505) 323-5947",
+      "u": "https://www.tomsrvnm.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Tom's RV Service & Sales is an RV repair and service shop at 136 Moon St NE in Albuquerque. It advertises complete RV service on all types of recreational vehicles, including body damage repair, RV appliance repair, electrical, RV plumbing and heating, satellite accessories, solar installation, hitching and wiring, and brake systems. The shop says it has been in business over 30 years and also sells used and consignment RVs.",
+      "g": [
+        "center"
+      ],
+      "base": "Albuquerque",
+      "areas": [
+        "Albuquerque"
+      ],
+      "evidence": {
+        "checked": "https://www.tomsrvnm.com/",
+        "phone_quote": "(505) 323-5947",
+        "coverage_quotes": [
+          "Tom's RV Service & Sales is your one-stop shop for RV repair and RV service solution in Albuquerque, NM."
+        ],
+        "type_quote": "Stop by our shop in Albuquerque, NM to check out our used and consignment RV's for sale.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "ABQ Mobile RV Repair",
+      "c": "Albuquerque, NM",
+      "p": "505-537-5474",
+      "u": "https://abqmobilervrepair.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "ABQ Mobile RV Repair is a mobile-only RV repair service based in Albuquerque. Technicians come to your location, campground, driveway, storage facility or roadside and fix AC systems, electrical faults, plumbing leaks, slide-outs, roof seals, water heaters and generators on site, with most repairs done in one visit. The site says it offers same-day availability and 24-hour emergency service across the Albuquerque metro.",
+      "g": [
+        "mobile",
+        "emergency"
+      ],
+      "base": "Albuquerque",
+      "areas": [
+        "Albuquerque",
+        "Rio Rancho",
+        "Los Lunas",
+        "Edgewood",
+        "Bernalillo",
+        "Placitas",
+        "Belen",
+        "Corrales",
+        "Tijeras",
+        "Moriarty",
+        "Cedar Crest",
+        "Bosque Farms",
+        "Sandia Park",
+        "Peralta"
+      ],
+      "region": "Central New Mexico",
+      "spec": "Shop visits are typically only necessary for major structural damage, full roof replacements, or chassis repairs requiring a lift.",
+      "evidence": {
+        "checked": "https://abqmobilervrepair.com/",
+        "phone_quote": "505-537-5474",
+        "coverage_quotes": [
+          "From Rio Rancho to Edgewood, Moriarty to Los Lunas, we come to you across the full ABQ metro.",
+          "We serve RV owners throughout the Albuquerque metro and surrounding Central New Mexico communities including Rio Rancho, Edgewood, Los Lunas, Moriarty, Bernalillo, Corrales, Belen, Tijeras, Cedar Crest, and Sandia Park."
+        ],
+        "type_quote": "Mobile Service Only",
+        "emergency_quote": "Yes, we offer same-day availability and 24-hour emergency service across the Albuquerque metro. Whether your AC fails under the New Mexico sun, your slide-out gets stuck at a campground near the Sandia Mountains, or you lose power at Route 66 RV Resort, call 505-537-5474 for immediate assistance.",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Sean's RV Service & Repair",
+      "c": "Albuquerque, NM",
+      "p": "(505) 385-7369",
+      "u": "https://www.seansrv.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Sean's RV Service & Repair is a mobile RV repair business in Albuquerque with more than 25 years of experience. The site says the technician comes to you for electrical systems, plumbing, winterizing and de-winterizing, appliances, satellites, slide-outs, awnings, leveling systems and trailer axle service. Standard hours are Monday through Friday 8am to 5pm, with weekends closed.",
+      "g": [
+        "mobile"
+      ],
+      "base": "Albuquerque",
+      "areas": [
+        "Albuquerque"
+      ],
+      "evidence": {
+        "checked": "https://www.seansrv.com/",
+        "phone_quote": "(505) 385-7369",
+        "coverage_quotes": [
+          "Mobile RV Repair | Sean's RV Service & Repair | Albuquerque"
+        ],
+        "type_quote": "I will come to YOU!",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "En Route RV Repair, LLC",
+      "c": "Albuquerque, NM",
+      "p": "575-973-2453",
+      "u": "https://enroutervrepair.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "En Route RV Repair is a mobile RV repair and service company in Albuquerque that comes to your location instead of you taking the RV to a dealer. Its certified technician handles mobile repair plus A/C cleaning, furnace checks, roof inspections, maintenance and orientation on RV upkeep. The site lists coverage in Albuquerque and surrounding towns including Bernalillo, Carnuel, Tijeras, Cedar Crest, Edgewood, Moriarty, Belen, Los Lunas, Sandia Park and Rio Rancho.",
+      "g": [
+        "mobile"
+      ],
+      "base": "Albuquerque",
+      "areas": [
+        "Albuquerque",
+        "Bernalillo",
+        "Carnuel",
+        "Tijeras",
+        "Cedar Crest",
+        "Edgewood",
+        "Moriarty",
+        "Belen",
+        "Los Lunas",
+        "Sandia Park",
+        "Rio Rancho"
+      ],
+      "region": "Albuquerque and surrounding areas",
+      "evidence": {
+        "checked": "https://enroutervrepair.com/",
+        "phone_quote": "Call or Text: 575-973-2453",
+        "coverage_quotes": [
+          "A Mobile RV Repair and Service company in Albuquerque, New Mexico servicing Albuquerque and surrounding areas.",
+          "Areas we Cover: Albuquerque, Bernalillo, Carnuel, Tijeras, Cedar Crest, Edgewood, Moriarty, Belen, Los Lunas, Sandia Park, Rio Rancho and others"
+        ],
+        "type_quote": "Let our Certified RV Service Technician come to you and save you the stress and make repairs On-Site.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Cary's RV Services, LLC",
+      "c": "Albuquerque, NM",
+      "p": "(505) 401-5397",
+      "u": "https://carysrvservices.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Cary's RV Services provides certified mobile RV repair and inspections in Albuquerque, Rio Rancho, Bernalillo and nearby areas. A Level 2 Certified RV Technician handles heating and AC repair, plumbing and water systems, electrical, roof and seal work, slide-out repairs and carpentry. The business is based at 14305 Central Ave NW in Albuquerque and posts a 90-day warranty on repairs.",
+      "g": [
+        "mobile"
+      ],
+      "base": "Albuquerque",
+      "areas": [
+        "Albuquerque",
+        "Rio Rancho",
+        "Bernalillo"
+      ],
+      "region": "nearby areas",
+      "spec": "Operates in Albuquerque and surrounding areas from March through November and in Yuma, Arizona from December through February.",
+      "evidence": {
+        "checked": "https://carysrvservices.com/",
+        "phone_quote": "Call Us: (505) 401-5397",
+        "coverage_quotes": [
+          "Cary's RV Services, LLC provides certified mobile RV repair throughout Albuquerque, Rio Rancho, Bernalillo, and nearby areas.",
+          "I operate in Albuquerque and surrounding areas from March through November."
+        ],
+        "type_quote": "Get professional mobile RV repair wherever you're parked.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Good Sense RV & Motors",
+      "c": "Albuquerque, NM",
+      "p": "505-300-4100",
+      "u": "https://www.goodsenserv.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Good Sense RV & Motors runs an RV service and repair department in Albuquerque staffed by RVIA Certified RV Technicians. The listed work includes a 45 point inspection, annual wheel service, electrical system inspection, water heater maintenance, furnace upkeep, water leak prevention, generator service, bearing and leaf spring repair, roof replacement and repair, winterization and hitch installation. The shop is at 12505 Central Ave NW and takes service on a first come first served basis.",
+      "g": [
+        "center"
+      ],
+      "base": "Albuquerque",
+      "areas": [
+        "Albuquerque"
+      ],
+      "evidence": {
+        "checked": "https://www.goodsenserv.com/rv-service",
+        "phone_quote": "(505) 300-4100",
+        "coverage_quotes": [
+          "RV SERVICE AND REPAIR IN ALBUQUERQUE, NM"
+        ],
+        "type_quote": "Good Sense RV and Motors is home to world class RVIA Certified RV Technicians who have built their reputations off quality work and fair pricing.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Tally Ho Services, LLC Mobile RV Repairs",
+      "c": "Albuquerque, NM",
+      "p": "(505) 401-3826",
+      "u": "https://www.tallyhorv.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Tally Ho Services is a mobile RV repair business run by owners Don and Claire Gray in Albuquerque. The site says they come to you for winterizing and de-winterizing, plumbing, electrical, ACs, furnaces, water heaters, solar, inverters, batteries, leveling systems and slide-outs. Service is advertised for Albuquerque and surrounding areas.",
+      "g": [
+        "mobile"
+      ],
+      "base": "Albuquerque",
+      "areas": [
+        "Albuquerque"
+      ],
+      "region": "surrounding areas",
+      "evidence": {
+        "checked": "https://www.tallyhorv.com/",
+        "phone_quote": "(505) 401-3826",
+        "coverage_quotes": [
+          "Servicing Albuquerque and surrounding areas.",
+          "Don & Claire Gray, owners | Albuquerque, NM"
+        ],
+        "type_quote": "Tally Ho Services, LLC Mobile RV Repairs",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Rocky Mountain RV & Marine",
+      "c": "Albuquerque, NM",
+      "p": "505-292-7800",
+      "u": "https://www.rmrv.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Rocky Mountain RV & Marine is an RV and marine service center at 12700 Central SE in Albuquerque. Its RVIA Certified and Master Certified technicians handle routine maintenance and complex repairs, and the facility has a 24 bay service center, a 54 foot paint booth and body shop capabilities. The site says it serves customers from Albuquerque, Rio Rancho, Santa Fe, Los Lunas and surrounding areas.",
+      "g": [
+        "center"
+      ],
+      "base": "Albuquerque",
+      "areas": [
+        "Albuquerque",
+        "Rio Rancho",
+        "Santa Fe",
+        "Los Lunas"
+      ],
+      "region": "surrounding areas",
+      "evidence": {
+        "checked": "https://www.rmrv.com/rv-service",
+        "phone_quote": "505-292-7800",
+        "coverage_quotes": [
+          "We proudly serve customers from Albuquerque, Rio Rancho, Santa Fe, Los Lunas, and surrounding areas, offering a convenient, full-service solution for RV and boat maintenance."
+        ],
+        "type_quote": "Our facility features a 24-bay service center, a 54-foot state-of-the-art paint booth, and advanced body shop capabilities",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Albuquerque RV",
+      "c": "Albuquerque, NM",
+      "p": "505-365-1273",
+      "u": "https://www.albuquerquerv.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Albuquerque RV is an RV dealer at 13805 I-40 W Frontage Rd in Albuquerque with a service department for motorhomes and trailers. The service department is staffed by technicians who maintain and repair Forest River and Keystone RVs. Service hours are Monday through Saturday 9am to 6pm, with Sunday closed.",
+      "g": [
+        "center"
+      ],
+      "base": "Albuquerque",
+      "areas": [
+        "Albuquerque"
+      ],
+      "evidence": {
+        "checked": "https://www.albuquerquerv.com/rv-service",
+        "phone_quote": "505-365-1273",
+        "coverage_quotes": [
+          "We are proud to provide quality service in the Albuquerque area."
+        ],
+        "type_quote": "Give us a call and we'll get you in and out of the shop in an efficient and timely manner",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Santa Fe RV",
+      "c": "Santa Fe, NM",
+      "p": "(505) 474-5354",
+      "u": "https://www.santaferv.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Santa Fe RV is an RV dealer and service center at 5029 Agua Fria St in Santa Fe. Its service department works on all brands of RVs, horse and utility trailers, with winterizing and de-winterizing, roof repair or replacement, plumbing, 12 volt and 120 volt electrical, awning repair, wheel bearings and brake service, propane inspection and water heater service. Service hours are Monday through Friday 9am to 5pm and Saturday 10am to 4pm.",
+      "g": [
+        "center"
+      ],
+      "base": "Santa Fe",
+      "areas": [
+        "Santa Fe"
+      ],
+      "evidence": {
+        "checked": "https://www.santaferv.com/rv-service",
+        "phone_quote": "Service: 505-474-5354",
+        "coverage_quotes": [
+          "We work on all brands of RV's, Horse, and Utility Trailers."
+        ],
+        "type_quote": "Our service capabilities include, and are not limited to, installation of accessories, hitches, wiring, and even repairing collision damage.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Recreation Preservation",
+      "c": "Las Cruces, NM",
+      "p": "(575) 649-5227",
+      "u": "https://recreationpreservation.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Recreation Preservation is a mobile RV and boat repair business serving Las Cruces and Southern New Mexico since 2013. An RVDA Master Certified technician comes to you for repairs, modifications, chassis and mechanical work, electrical, lighting, plumbing and damage repair. The business also works on boats and builds decks and small structures to customer specifications.",
+      "g": [
+        "mobile"
+      ],
+      "base": "Las Cruces",
+      "areas": [
+        "Las Cruces"
+      ],
+      "region": "Southern New Mexico",
+      "evidence": {
+        "checked": "https://recreationpreservation.com/",
+        "phone_quote": "CALL NOW (575) 649-5227",
+        "coverage_quotes": [
+          "Recreation Preservation offers 20 years of experience in full-service, mobile RV and boat repair in Las Cruces and Southern New Mexico",
+          "Serving Southern New Mexico since 2013"
+        ],
+        "type_quote": "Call us and We Come To You!",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "The RV Wizards",
+      "c": "Ruidoso, NM",
+      "p": "888-789-9737",
+      "u": "https://www.thervwizards.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "The RV Wizards provides mobile RV repair and maintenance in Ruidoso, Alto and surrounding areas in Lincoln County. Technicians travel to your campsite or property for diagnostics, repair and preventative maintenance on motorhomes, travel trailers, fifth wheels and camper vans. The site says pricing depends on the service type and parts and that estimates are provided before work starts.",
+      "g": [
+        "mobile"
+      ],
+      "base": "Ruidoso",
+      "areas": [
+        "Ruidoso",
+        "Alto"
+      ],
+      "region": "Lincoln County",
+      "evidence": {
+        "checked": "https://www.thervwizards.com/",
+        "phone_quote": "888-789-9737",
+        "coverage_quotes": [
+          "The RV Wizards specialize in mobile RV diagnostics, repair, and preventative maintenance throughout Ruidoso, Alto, and surrounding areas.",
+          "We serve Alto, Ruidoso, and surrounding communities, offering mobile RV repair and maintenance wherever your RV is parked."
+        ],
+        "type_quote": "We come directly to your campsite, so you don't have to deal with the hassle of moving your RV or waiting at a shop.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Alamo RV & Truck Center",
+      "c": "Alamogordo, NM",
+      "p": "(575) 434-3783",
+      "u": "https://www.alamorvtruckcenter.com/",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "Alamo RV & Truck Center is an RV parts and service center at 7023 US-54 in Alamogordo. Its technicians handle major mechanical repairs, electrical repairs, collision damage repairs and insurance work, plus installations of custom systems, accessories and hitches. The shop also offers mobile RV repair in the Tularosa Basin and surrounding areas.",
+      "g": [
+        "center",
+        "mobile"
+      ],
+      "base": "Alamogordo",
+      "areas": [
+        "Alamogordo"
+      ],
+      "region": "Tularosa Basin",
+      "evidence": {
+        "checked": "https://www.alamorvtruckcenter.com/",
+        "phone_quote": "(575) 434-3783",
+        "coverage_quotes": [
+          "we offer mobile RV repair services in the Tularosa Basin and surrounding areas"
+        ],
+        "type_quote": "We also specialize in installations of custom systems, accessories, hitches and more. ... sometimes it can be difficult to bring your RV to our shop for repairs. That's why we offer mobile RV repair services",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "O'Neill RV Mobile Services",
+      "c": "Elephant Butte, NM",
+      "p": "575-744-5043",
+      "u": "http://www.oneillrv.itgo.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "O'Neill RV Mobile Services is a mobile RV repair business founded in 1997 by Rick O'Neill and based at 300 Rock Canyon Rd in Elephant Butte. The business says it specializes in the house side of the RV and serves most of Sierra County, including Elephant Butte, Truth or Consequences and Williamsburg, plus nearby communities. Hours are usually Monday through Saturday about 9 to 5 and the site advises calling before heading out.",
+      "g": [
+        "mobile"
+      ],
+      "base": "Elephant Butte",
+      "areas": [
+        "Elephant Butte",
+        "Truth or Consequences",
+        "Williamsburg"
+      ],
+      "region": "Sierra County",
+      "spec": "Specializes in only the house side of the RV, not the chassis or engine side.",
+      "evidence": {
+        "checked": "http://www.oneillrv.itgo.com/",
+        "phone_quote": "575-744-5043 - office",
+        "coverage_quotes": [
+          "I serve most of Sierra County in New Mexico including Elephant Butte, Truth or Consequences, Williamsburg and many other of our nearby communities."
+        ],
+        "type_quote": "when I opened my mobile service business in Elephant Butte, NM I decided I wanted to specialize in only the house side of the RV",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Chisolm Trail RV",
+      "c": "Aztec, NM",
+      "p": "505-334-5500",
+      "u": "https://www.ctrvaztec.com/rv-service-department",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Chisolm Trail RV is an RV dealer and service center at 993 NM 516 in Aztec. Its on-site service center and parts department handle routine maintenance such as brake pads, rotors, wheel bearings and battery care, plus appliance installations, gas and plumbing repairs, electrical diagnostics and slide-out adjustments. The site says it also serves customers nearby in Farmington.",
+      "g": [
+        "center"
+      ],
+      "base": "Aztec",
+      "areas": [
+        "Aztec",
+        "Farmington"
+      ],
+      "evidence": {
+        "checked": "https://www.ctrvaztec.com/rv-service-department",
+        "phone_quote": "Phone: 505-334-5500",
+        "coverage_quotes": [
+          "If you're located nearby in Farmington, New Mexico, and are looking to set up an appointment with our amazing on-site service center"
+        ],
+        "type_quote": "we here at Chisolm Trail RV offer not only a helpful on-site service center but a well-stocked parts department",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "12 Volt Electrical Services LLC",
+      "c": "Farmington, NM",
+      "p": "505-324-6548",
+      "u": "https://www.12voltelectrical.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "12 Volt Electrical Services is a certified mobile RV service and repair business at 2 Road 1990 in Farmington. It comes to you for RV toilet and holding tank clog removal, propane system service and repair, and RV electrical service. The business says it is LP-6 certified by the NM Construction Industries Division and services the Four Corners area.",
+      "g": [
+        "mobile"
+      ],
+      "base": "Farmington",
+      "areas": [
+        "Farmington"
+      ],
+      "region": "Four Corners Area",
+      "evidence": {
+        "checked": "https://www.12voltelectrical.com/",
+        "phone_quote": "Call us today to schedule an appointment! 505-324-6548",
+        "coverage_quotes": [
+          "Servicing the Four Corners Area"
+        ],
+        "type_quote": "Certified Mobile RV Service & RepaiR ... Help and piece of mind is on the way. We come to you!",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Main Trailer Sales, Inc",
+      "c": "Roswell, NM",
+      "p": "(575) 622-1751",
+      "u": "https://www.maintrailersalesinc.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Main Trailer Sales is an RV service and sales business in Roswell whose service staff have over 30 years of experience. It works on fifth wheels, toy haulers and travel trailers, with larger jobs such as body work or roof replacement usually handled during the off season. The site says it serves the areas of Acme, Dexter, Caprock and Picacho.",
+      "g": [
+        "center"
+      ],
+      "base": "Roswell",
+      "areas": [
+        "Roswell",
+        "Dexter",
+        "Picacho"
+      ],
+      "evidence": {
+        "checked": "https://www.maintrailersalesinc.com/rv-service",
+        "phone_quote": "(575) 622-1751",
+        "coverage_quotes": [
+          "Main Trailer Sales is proud to provide quality service to the areas of Acme, Dexter, Caprock and Picacho."
+        ],
+        "type_quote": "Give us a call and we'll get you in and out of the shop in an efficient and timely manner",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null,
+        "correction": "2026-09-28: Acme and Caprock were listed as covered areas. Neither is a Census place and I could not point at a ZIP that serves either, so both were dropped rather than resolved to a coordinate I cannot stand behind. Dropped: Acme, Caprock"
+      }
+    }
+  ]
+}

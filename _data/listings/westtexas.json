@@ -1,0 +1,580 @@
+{
+  "state": "TX",
+  "name": "West Texas",
+  "regions": [
+    {
+      "key": "el-paso",
+      "label": "El Paso and the far west"
+    },
+    {
+      "key": "panhandle",
+      "label": "Amarillo, Lubbock and the Panhandle"
+    },
+    {
+      "key": "permian",
+      "label": "Midland, Odessa and the Permian Basin"
+    },
+    {
+      "key": "concho",
+      "label": "San Angelo, Abilene and the Concho valley"
+    },
+    {
+      "key": "south-tx",
+      "label": "Uvalde, Del Rio and the south"
+    }
+  ],
+  "region_of": {
+    "El Paso": "el-paso",
+    "Horizon City": "el-paso",
+    "San Elizario": "el-paso",
+    "Socorro": "el-paso",
+    "Clint": "el-paso",
+    "Fabens": "el-paso",
+    "Van Horn": "el-paso",
+    "Sierra Blanca": "el-paso",
+    "Fort Stockton": "el-paso",
+    "Marfa": "el-paso",
+    "Alpine": "el-paso",
+    "Presidio": "el-paso",
+    "Amarillo": "panhandle",
+    "Canyon": "panhandle",
+    "Hereford": "panhandle",
+    "Dumas": "panhandle",
+    "Borger": "panhandle",
+    "Pampa": "panhandle",
+    "Plainview": "panhandle",
+    "Wolfforth": "panhandle",
+    "Lubbock": "panhandle",
+    "Levelland": "panhandle",
+    "Snyder": "panhandle",
+    "Post": "panhandle",
+    "Tulia": "panhandle",
+    "Childress": "panhandle",
+    "Memphis": "panhandle",
+    "Midland": "permian",
+    "Odessa": "permian",
+    "Andrews": "permian",
+    "Stanton": "permian",
+    "Kermit": "permian",
+    "Monahans": "permian",
+    "Pecos": "permian",
+    "Big Spring": "permian",
+    "Colorado City": "permian",
+    "Wink": "permian",
+    "Crane": "permian",
+    "Gardendale": "permian",
+    "San Angelo": "concho",
+    "Robert Lee": "concho",
+    "Abilene": "concho",
+    "Early": "concho",
+    "Brownwood": "concho",
+    "Ballinger": "concho",
+    "Coleman": "concho",
+    "Brady": "concho",
+    "Sweetwater": "concho",
+    "Merkel": "concho",
+    "Winters": "concho",
+    "Menard": "concho",
+    "Paint Rock": "concho",
+    "Uvalde": "south-tx",
+    "Del Rio": "south-tx",
+    "Hondo": "south-tx",
+    "Pearsall": "south-tx",
+    "Carrizo Springs": "south-tx",
+    "Crystal City": "south-tx",
+    "Eagle Pass": "south-tx",
+    "Junction": "south-tx",
+    "Sonora": "south-tx",
+    "Ozona": "south-tx",
+    "Brackettville": "south-tx",
+    "Kerrville": "south-tx",
+    "Fredericksburg": "south-tx"
+  },
+  "listings": [
+    {
+      "n": "El Paso Mobile RV Repair",
+      "c": "El Paso",
+      "p": "915-990-3150",
+      "u": "https://elpasomobilervrepair.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "Mobile RV repair serving El Paso and the Borderland, working at driveways, campgrounds and roadside stops inside about a 30 minute radius. The site describes on-site diagnosis and repair of air conditioning, electrical, plumbing, appliance, roof leak, water heater, awning, slide-out and generator problems so owners can avoid towing. It also offers pre-trip and pre-purchase inspections, winterization, and emergency service.",
+      "g": [
+        "mobile",
+        "emergency"
+      ],
+      "base": "El Paso",
+      "areas": [
+        "El Paso",
+        "Horizon City",
+        "Socorro",
+        "Clint",
+        "San Elizario",
+        "Anthony",
+        "Canutillo",
+        "Vinton",
+        "Santa Teresa",
+        "Sunland Park"
+      ],
+      "region": "Borderland Region",
+      "evidence": {
+        "checked": "https://elpasomobilervrepair.com/",
+        "phone_quote": "915-990-3150",
+        "coverage_quotes": [
+          "We provide mobile RV repair throughout El Paso County, TX and nearby portions of Doa Ana County, NM, diagnosing and repairing common RV system issues where your unit is currently parked.",
+          "Our coverage includes central and west El Paso, east side neighborhoods, and surrounding cities such as Horizon City, Socorro, Clint, San Elizario, Anthony, Canutillo, and Vinton, as well as Santa Teresa and Sunland Park in New Mexico."
+        ],
+        "type_quote": "Mobile RV repair in El Paso, TX | On-Site Service ... On-site diagnosis and repair for common RV system issues at your driveway, campground, or roadside location",
+        "emergency_quote": "Open 24/7; Emergency Service Available",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Road-House Mobile RV Repair and Inspection",
+      "c": "El Paso",
+      "p": "915-740-5288",
+      "u": "https://www.roadhouseri.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Mobile RV repair and inspection business in El Paso that brings its service to the customer rather than asking for a drop-off. It advertises RV repairs plus detailed pre-purchase and pre-sale inspections. The site gives a single El Paso phone number and states it does not perform Texas DMV safety inspections.",
+      "g": [
+        "mobile"
+      ],
+      "base": "El Paso",
+      "areas": [
+        "El Paso"
+      ],
+      "evidence": {
+        "checked": "https://www.roadhouseri.com/",
+        "phone_quote": "Contact Us 915-740-5288 ... Contact (915) 740-5288",
+        "coverage_quotes": [
+          "Address El Paso, TX 79907"
+        ],
+        "type_quote": "Road-House Mobile RV prides itself on bringing its services to you. Is your RV needing repairs? Give us a call and we bring our mobile service to you.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "RV Mobile Services LLC",
+      "c": "Amarillo",
+      "p": "(806) 437-0896",
+      "u": "https://www.rvmobileservice806.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Family owned mobile RV repair business in Amarillo that sets aside time each day for RVers passing through. It lists rubber roof coating and restoring, unit maintenance, accessory install, AC/DC electrical, leak repairs and resealing, awning and slidetopper repairs, water heater and plumbing, and appliance repair. The site publishes one phone number for quotes.",
+      "g": [
+        "mobile"
+      ],
+      "base": "Amarillo",
+      "areas": [
+        "Amarillo"
+      ],
+      "evidence": {
+        "checked": "https://www.rvmobileservice806.com/",
+        "phone_quote": "Call (806) 437-0896 (8064370896) to get started with a quote!",
+        "coverage_quotes": [
+          "We love our RV family and the travelers that come through Amarillo."
+        ],
+        "type_quote": "RV Mobile Service! Travelers are a huge priority! ... Call or text for help!",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Roving Rooster",
+      "c": "Amarillo",
+      "p": "(337) 515-1281",
+      "u": "https://www.rovingroosterrv.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Mobile RV repair and maintenance company based in Amarillo that comes to the customer's location instead of asking for a shop visit. Listed services include air conditioning, roofs, appliances, fiberglass and wheel bearings, plus an RV delivery option. The site names a service radius of 100 miles around Amarillo.",
+      "g": [
+        "mobile"
+      ],
+      "base": "Amarillo",
+      "areas": [
+        "Amarillo"
+      ],
+      "region": "within 100 miles of Amarillo, TX",
+      "spec": "RV Delivery* *Within 100 miles of Amarillo, TX",
+      "evidence": {
+        "checked": "https://www.rovingroosterrv.com/",
+        "phone_quote": "(337) 515-1281",
+        "coverage_quotes": [
+          "Specializing in mobile services, we bring expert care directly to your location ... *Within 100 miles of Amarillo, TX"
+        ],
+        "type_quote": "We come to you, providing hassle-free RV repair and maintenance right where you are.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Red Rover Mobile RV Service",
+      "c": "Amarillo",
+      "p": "1-806-731-2355",
+      "u": "https://www.redroverrv.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "One-technician mobile RV repair service based around Amarillo and the I-40 corridor, operating on site for slide outs, awnings, plumbing, electrical, rubber roof, appliances, propane systems, air conditioning and heat systems. The operator states he performs all repairs on recreational vehicles except engine work. Coverage is seasonal, with the Amarillo area served roughly April 15 to October 15 and the Rio Grande Valley in winter.",
+      "g": [
+        "mobile"
+      ],
+      "base": "Amarillo",
+      "areas": [
+        "Bushland",
+        "Dumas",
+        "Dalhart",
+        "Vega",
+        "Clarendon",
+        "Hereford",
+        "Pampa",
+        "Plainview"
+      ],
+      "region": "along Interstate 40 near the Amarillo, Texas area",
+      "spec": "I perform all repairs on Recreational Vehicles. (except engine work) I do minor repairs on Park Models and Mobile Homes.",
+      "evidence": {
+        "checked": "https://www.redroverrv.com/",
+        "phone_quote": "Call 1-806-731-2355 for mobile RV Repair service along Interstate 40, I-40, near the Amarillo, Texas area",
+        "coverage_quotes": [
+          "1-806-731-2355 Call me for mobile RV Repair service along Interstate 40, I-40, near the Amarillo, Texas area including Bushland, Dumas, Dalhart, Vega, Clarendon, Hereford, Pampa and Plainview."
+        ],
+        "type_quote": "I do \"On Site\" RV repairs and RV Service. I perform all repairs on Recreational Vehicles.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Caprock RV Services",
+      "c": "Lubbock",
+      "p": "(806) 368-0005",
+      "u": "https://caprockrvservices.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Locally owned RV sales, service and repair center on Marsha Sharp Freeway in Lubbock. It is a full-service shop handling plumbing and fresh, gray and black water systems, roofing and leak repair, electrical and solar, air conditioning and heating, and chassis work. The site names an after-hours voicemail on the same line for breakdown messages.",
+      "g": [
+        "center"
+      ],
+      "base": "Lubbock",
+      "areas": [
+        "Lubbock",
+        "Slaton",
+        "Wolfforth",
+        "Shallowater"
+      ],
+      "evidence": {
+        "checked": "https://caprockrvservices.com/contact",
+        "phone_quote": "Main Line: (806) 368-0005",
+        "coverage_quotes": [
+          "Caprock RV is proud to serve Lubbock, Slaton, Wolfforth, Shallowater, and all of West Texas."
+        ],
+        "type_quote": "Visit Our RV Service Center in Lubbock ... Full-Service RV Shop",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Travelers RV Services",
+      "c": "Midland",
+      "p": "432.818.6905",
+      "u": "https://www.travelersrvservice.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "NRVTA certified mobile RV technician providing on-site maintenance and repair in Midland and Odessa. Listed services include A/C repair and install, preventive maintenance, inspections, appliance install and repair, generator repair, RV orientation and emergency services. The site states the phone is on call weekends and after hours.",
+      "g": [
+        "mobile",
+        "emergency"
+      ],
+      "base": "Midland",
+      "areas": [
+        "Midland",
+        "Odessa",
+        "Andrews",
+        "Stanton",
+        "Big Spring",
+        "Garden City",
+        "Monahans",
+        "Kermit",
+        "Pecos"
+      ],
+      "evidence": {
+        "checked": "https://www.travelersrvservice.com/",
+        "phone_quote": "432.818.6905",
+        "coverage_quotes": [
+          "Welcome to Travelers RV Services, your trusted partner for on-site mobile RV maintenance and repairs in the Midland, Odessa, Andrews, Stanton, Big Spring, Garden City, Monahans, Kemit, Pecos and surrounding areas."
+        ],
+        "type_quote": "MOBILE RV REPAIR IN MIDLAND & ODESSA, TX ... on-site mobile RV maintenance and repairs",
+        "emergency_quote": "Opening Hours Mon - Fri: 8am - 5pm On Call: Weekends & After Hours. Services ... Emergency Services",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Midland RV Repair",
+      "c": "Midland",
+      "p": "(432) 302-6674",
+      "u": "https://midlandrvrepair.com/rv-repair/",
+      "t": "mobile",
+      "e": false,
+      "r": true,
+      "d": "Mobile RV repair service for Midland and Odessa residents that also looks at trailers. It handles brake repair, collision repair, air conditioning, appliances, replacement parts, slide-out seals, and sends a mobile technician for roadside breakdowns including jump starts and flat tires. The site describes emergency motorhome repair for broken down RVs.",
+      "g": [
+        "mobile",
+        "roadside"
+      ],
+      "base": "Midland",
+      "areas": [
+        "Midland",
+        "Odessa"
+      ],
+      "evidence": {
+        "checked": "https://midlandrvrepair.com/rv-repair/",
+        "phone_quote": "RV Repair - (432) 302-6674",
+        "coverage_quotes": [
+          "We offer motorhome repair services for Midland and Odessa residents, and we'd be happy to look at your trailer too."
+        ],
+        "type_quote": "RV Brake Repair ... Collision Repair ... It is wise to have your brakes repaired either every two years or every 12,000 miles.",
+        "emergency_quote": null,
+        "roadside_quote": "Has your RV broken down on the side of the road? We are just a phone call away. We provide emergency motorhome repair services for broken down RVs.",
+        "licence": null
+      }
+    },
+    {
+      "n": "Basin RV Repair LLC",
+      "c": "Odessa",
+      "p": "432-310-5681",
+      "u": "https://www.basinrv.com/",
+      "t": "both",
+      "e": true,
+      "r": false,
+      "d": "Family run mobile RV repair business based in Odessa serving the Permian Basin, bringing the shop to campgrounds, driveways and roadside locations. On-site work covers appliances, electrical faults, leaks, sewer valves, windows and doors, awnings, roof fixtures and slide seals, while major jobs such as roof replacement and remodeling are done at its shop. It advertises 24 hour emergency roadside assistance with fuel, battery jumps, tire changes and towing when needed.",
+      "g": [
+        "mobile",
+        "center",
+        "emergency"
+      ],
+      "base": "Odessa",
+      "areas": [
+        "Odessa"
+      ],
+      "region": "Permian Basin",
+      "evidence": {
+        "checked": "https://www.basinrv.com/",
+        "phone_quote": "Reach us at 432-310-5681 ... CALL OR TEXT 432-310-5681",
+        "coverage_quotes": [
+          "Basin RV Repair serves Odessa and communities throughout the Permian Basin."
+        ],
+        "type_quote": "Mobile RV Repair - we bring the professional shop directly to you! ... Shop Repairs: Major, heavy-duty jobs are done at our shop.",
+        "emergency_quote": "24-hour emergency roadside service available every day. ... Stuck on the road? We answer, day or night.",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "American Truck & RV",
+      "c": "San Angelo",
+      "p": "(325) 653-1978",
+      "u": "https://www.amtrv.com/about-us",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Long established RV dealer and service center at 4110 Ben Ficklin Rd in San Angelo, in the same location since 1983. It has certified RV technicians and handles basic maintenance through major repairs including insurance and warranty jobs, with a large in-stock parts inventory. The site names a service area across the Concho Valley, Big Country, Central Texas, Permian Basin and West Texas.",
+      "g": [
+        "center"
+      ],
+      "base": "San Angelo",
+      "areas": [
+        "San Angelo"
+      ],
+      "region": "Concho Valley, Big Country, Central Texas, Permian Basin, and West Texas",
+      "evidence": {
+        "checked": "https://www.amtrv.com/about-us",
+        "phone_quote": "Call us at (325) 653-1978",
+        "coverage_quotes": [
+          "American Truck & RV is located in San Angelo, Texas, and serves the Concho Valley, Big Country, Central Texas, Permian Basin, and West Texas areas."
+        ],
+        "type_quote": "We have certified RV Technicians, and can take care of anything from basic maintenance to major repairs, including insurance and warranty jobs.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "JT/RV Mobile Service",
+      "c": "Abilene",
+      "p": "(325) 665-5825",
+      "u": "https://jtrvmobileservice.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Veteran and family owned mobile RV repair and maintenance business serving Abilene. The technician is NRVTA certified and propane certified with the Texas Railroad Commission, and the business is licensed, insured and approved by manufacturers and extended warranty companies. It comes to the customer's location and offers a 90 day guarantee on parts and labor.",
+      "g": [
+        "mobile"
+      ],
+      "base": "Abilene",
+      "areas": [
+        "Abilene"
+      ],
+      "region": "the Big Country",
+      "evidence": {
+        "checked": "https://jtrvmobileservice.com/about-us",
+        "phone_quote": "justin@jtrvmobileservice.com text or call (325) 665-5825",
+        "coverage_quotes": [
+          "JT/RV is a veteran and family-owned and operated mobile RV service proudly serving the Abilene, TX community."
+        ],
+        "type_quote": "We bring reliable, honest RV repair and maintenance directly to you ... We Come To You.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Open Road Mobile RV Services, LLC",
+      "c": "Early",
+      "p": "325-203-2205",
+      "u": "https://www.openroadrepair.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Mobile RV repair business based in Early with a storefront address on Early Boulevard serving Brown County and beyond. Technicians travel to the customer and handle electrical fixes, plumbing, appliance repairs and more on site. The site publishes a single phone number for free quotes and scheduling.",
+      "g": [
+        "mobile"
+      ],
+      "base": "Early",
+      "areas": [
+        "Early",
+        "Brownwood"
+      ],
+      "region": "Brown County, TX",
+      "evidence": {
+        "checked": "https://www.openroadrepair.com/",
+        "phone_quote": "Call us today at 325-203-2205 for a free quote or to schedule your service.",
+        "coverage_quotes": [
+          "Serving Brown County, TX, and Beyond! Come and see us at our store located at 1004 Early Boulevard in Early, TX."
+        ],
+        "type_quote": "At Open Road Mobile RV Services, we bring expert RV repair right to your doorstep! ... our skilled technicians travel to you, ensuring your RV issues are professionally inspected and solutions provided on-site.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Happy Camper RV Repair",
+      "c": "Snyder",
+      "p": "(325) 515-8842",
+      "u": "https://www.happycamperrvservice.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "Mobile RV repair business based in Snyder serving West Texas and the Permian Basin. It handles heating and cooling, flooring, camper interior, exterior and structural repairs, roof repairs, electrical services and general handyman tasks at the customer's location. The site advertises 24/7 emergency service for any RV issue.",
+      "g": [
+        "mobile",
+        "emergency"
+      ],
+      "base": "Snyder",
+      "areas": [
+        "Snyder",
+        "Ira",
+        "Hermleigh",
+        "Roby",
+        "Post"
+      ],
+      "region": "West Texas and the Permian Basin",
+      "evidence": {
+        "checked": "https://www.happycamperrvservice.com/",
+        "phone_quote": "Help Line: (325) 515-8842",
+        "coverage_quotes": [
+          "We are your go-to source for high-quality RV repair services in the West Texas and Permian Basin area.",
+          "Snyder, TX (325) 515-8842 ... Ira, TX ... Hermleigh, TX ... Roby, TX ... Post, TX"
+        ],
+        "type_quote": "On-Site Mobile RV Service - Professional mobile repairs at your location for ultimate convenience.",
+        "emergency_quote": "Our experienced mobile RV technicians provide fast, reliable repairs and 24/7 emergency service for all RV types.",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Matthews RV Repair, LLC",
+      "c": "Hondo",
+      "p": "888-557-8776",
+      "u": "http://www.matthewsrvrepair.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Mobile authorized service center working out of Hondo that performs all repairs at the customer's location across South Central Texas. The lead technician is an RVIA Master Certified Technician and is state licensed for RV propane systems, with 30 years in the trades. The service area named on the site includes Uvalde, Carrizo Springs, Crystal City and Pearsall in the south of the region.",
+      "g": [
+        "mobile"
+      ],
+      "base": "Hondo",
+      "areas": [
+        "Uvalde",
+        "Carrizo Springs",
+        "Crystal City",
+        "Pearsall",
+        "Cotulla",
+        "Dilley",
+        "Knippa",
+        "Sabinal",
+        "Asherton",
+        "Big Wells"
+      ],
+      "region": "South Central Texas",
+      "evidence": {
+        "checked": "http://www.matthewsrvrepair.com/",
+        "phone_quote": "TOLL FREE : 888-55RVPRO (888-557-8776)",
+        "coverage_quotes": [
+          "We provide Mobile RV Repair to the following South Central Texas communities : ... Carrizo Springs ... Crystal City ... Pearsall ... Uvalde",
+          "We also provide Mobile RV Repair to rural areas of the following South Central Texas counties : Atascosa, Dimmit, Frio, La Salle, Medina, Uvalde, Zavala."
+        ],
+        "type_quote": "MATTHEWS RV REPAIR, LLC is a Mobile Authorized Service Center. We offer Mobile RV Repair in Hondo TX and surrounding areas. We perform all repairs at your location.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Call Smitty RV Service",
+      "c": "Junction",
+      "p": "210-504-6811",
+      "u": "https://callsmittyrv.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Mobile RV repair covering Junction and the surrounding Kimble County area, including remote ranch properties and local RV parks. The technician specialises in the living side of the RV, covering air conditioning and heating, plumbing, electrical, appliances, and general maintenance such as roof inspections and slide-out lubrication. The site states plainly that it does not offer emergency roadside assistance for tires or towing.",
+      "g": [
+        "mobile"
+      ],
+      "base": "Junction",
+      "areas": [
+        "Junction"
+      ],
+      "region": "Kimble County",
+      "spec": "I do not offer emergency roadside assistance (tires/towing). I focus exclusively on on-site habitation and system repairs.",
+      "evidence": {
+        "checked": "https://callsmittyrv.com/rv-service-junction-tx/",
+        "phone_quote": "Call Smitty Today: 210-504-6811",
+        "coverage_quotes": [
+          "Call Smitty RV Service provides professional, reliable mobile RV repair across Junction, Texas, and the surrounding Kimble County area.",
+          "Based in the heart of the Hill Country, I cover a wide radius around Junction."
+        ],
+        "type_quote": "On-Site Service: I come to my campsite, barn, or property ... I specialize in the \"living\" side of your RV.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    }
+  ]
+}

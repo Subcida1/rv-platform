@@ -169,5 +169,13 @@
   "Cameron": {
     "to": "Ennis",
     "why": "A small community on US-287 that the Census place file does not carry. The listing also names Ennis, the nearest town, and that is the coordinate used rather than a ZIP guessed at."
+  },
+  "Alto": {
+    "to_zip": "88312",
+    "why": "The Ruidoso and Alto community in Lincoln County. The Census place file carries Alto, TEXAS 475 miles away, so the name resolves to the wrong state; 88312 is the ZIP area that serves it."
+  },
+  "Ira": {
+    "to_zip": "79527",
+    "why": "A community in Scurry County with no Census place. 79527 is the ZIP area that serves it."
   }
 }

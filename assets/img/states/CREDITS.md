@@ -72,3 +72,17 @@ Recorded anyway, because the source should be traceable.
 - Author: National Park Service
 - Licence: Public domain (National Park Service) <https://commons.wikimedia.org/wiki/File:Rocky_mountain_national_park.jpg>
 - Tile alt text: Rocky Mountain National Park, Colorado
+
+## newmexico
+
+- File: [Carlsbad Caverns National Park P1012859.jpg](https://commons.wikimedia.org/wiki/File:Carlsbad_Caverns_National_Park_P1012859.jpg)
+- Author: National Park Service
+- Licence: Public domain (National Park Service) <https://commons.wikimedia.org/wiki/File:Carlsbad_Caverns_National_Park_P1012859.jpg>
+- Tile alt text: Carlsbad Caverns National Park, New Mexico
+
+## westtexas
+
+- File: [Gfp-texas-big-bend-national-park-plants-on-the-desert-horizon.jpg](https://commons.wikimedia.org/wiki/File:Gfp-texas-big-bend-national-park-plants-on-the-desert-horizon.jpg)
+- Author: National Park Service
+- Licence: Public domain (National Park Service) <https://commons.wikimedia.org/wiki/File:Gfp-texas-big-bend-national-park-plants-on-the-desert-horizon.jpg>
+- Tile alt text: Desert horizon in Big Bend National Park, Texas

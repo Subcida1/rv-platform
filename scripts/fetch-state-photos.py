@@ -108,6 +108,20 @@ PHOTOS += [
 ]
 
 
+PHOTOS += [
+    ("newmexico",
+     "Carlsbad Caverns National Park P1012859.jpg",
+     "Public domain (National Park Service)", "National Park Service",
+     "https://commons.wikimedia.org/wiki/File:Carlsbad_Caverns_National_Park_P1012859.jpg",
+     "Carlsbad Caverns National Park, New Mexico"),
+    ("westtexas",
+     "Gfp-texas-big-bend-national-park-plants-on-the-desert-horizon.jpg",
+     "Public domain (National Park Service)", "National Park Service",
+     "https://commons.wikimedia.org/wiki/File:Gfp-texas-big-bend-national-park-plants-on-the-desert-horizon.jpg",
+     "Desert horizon in Big Bend National Park, Texas"),
+]
+
+
 def commons_page(title):
     return "https://commons.wikimedia.org/wiki/File:" + urllib.parse.quote(title.replace(" ", "_"))
 
