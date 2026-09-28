@@ -17,6 +17,8 @@ const ASK = {
   utah: ['Salt Lake City', 'Provo', 'St. George', 'Ogden', 'Moab'],
   washington: ['Seattle', 'Spokane', 'Vancouver', 'Kennewick', 'Yakima'],
   wyoming: ['Cheyenne', 'Casper', 'Gillette', 'Sheridan', 'Rock Springs', 'Jackson'],
+  newmexico: ['Albuquerque', 'Santa Fe', 'Las Cruces', 'Roswell', 'Farmington', 'Gallup'],
+  westtexas: ['El Paso', 'Amarillo', 'Lubbock', 'Midland', 'Odessa', 'San Angelo', 'Abilene', 'Del Rio'],
 };
 
 function El(id) {
@@ -61,7 +63,8 @@ function ask(slug, code, town) {
 let none = [];
 for (const [slug, towns] of Object.entries(ASK)) {
   const code = { arizona: 'AZ', california: 'CA', colorado: 'CO', idaho: 'ID', montana: 'MT',
-    nevada: 'NV', oregon: 'OR', utah: 'UT', washington: 'WA', wyoming: 'WY' }[slug];
+    nevada: 'NV', oregon: 'OR', utah: 'UT', washington: 'WA', wyoming: 'WY',
+    newmexico: 'NM', westtexas: 'TX' }[slug];
   const out = [];
   for (const t of towns) {
     const r = ask(slug, code, t);
