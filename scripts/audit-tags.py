@@ -187,7 +187,11 @@ def check(rec):
     # buyers. The research is explicit that the words alone do not tell you which it is.
     if rec.get("t") in ("center", "both") and re.search(r"dealership|dealer\b", text, re.I) \
             and not re.search(r"all makes|any make|retail|walk[- ]in|we service all", text, re.I):
-        out["missing"].append("dealer site: confirm the service department takes outside work")
+        # Same lesson as the type check: this fires on the WORD "dealer" appearing anywhere.
+        # Eight California records were hand-checked on 2026-09-28 and only two said anything
+        # about taking outside work; the rest are repair shops whose pages merely mention
+        # dealers. Absence of a phrase is not evidence of a locked service department.
+        out["unconfirmed"].append("mentions dealers; the site does not say it takes outside work")
     return out
 
 
