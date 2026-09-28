@@ -1,0 +1,690 @@
+{
+  "state": "ID",
+  "name": "Idaho",
+  "regions": [
+    {
+      "key": "treasure-valley",
+      "label": "Boise, Meridian and the Treasure Valley"
+    },
+    {
+      "key": "magic-valley",
+      "label": "Twin Falls and the Magic Valley"
+    },
+    {
+      "key": "eastern-id",
+      "label": "Idaho Falls, Rexburg and the east"
+    },
+    {
+      "key": "north-id",
+      "label": "Coeur d'Alene, Sandpoint and the north"
+    }
+  ],
+  "region_of": {
+    "Boise": "treasure-valley",
+    "Meridian": "treasure-valley",
+    "Nampa": "treasure-valley",
+    "Caldwell": "treasure-valley",
+    "Eagle": "treasure-valley",
+    "Star": "treasure-valley",
+    "Garden City": "treasure-valley",
+    "Kuna": "treasure-valley",
+    "Emmett": "treasure-valley",
+    "Middleton": "treasure-valley",
+    "Fruitland": "treasure-valley",
+    "Payette": "treasure-valley",
+    "Weiser": "treasure-valley",
+    "Ontario": "treasure-valley",
+    "Twin Falls": "magic-valley",
+    "Kimberly": "magic-valley",
+    "Jerome": "magic-valley",
+    "Gooding": "magic-valley",
+    "Burley": "magic-valley",
+    "Rupert": "magic-valley",
+    "Buhl": "magic-valley",
+    "Wendell": "magic-valley",
+    "Hailey": "magic-valley",
+    "Ketchum": "magic-valley",
+    "Bellevue": "magic-valley",
+    "Shoshone": "magic-valley",
+    "Filer": "magic-valley",
+    "Hansen": "magic-valley",
+    "Idaho Falls": "eastern-id",
+    "Rexburg": "eastern-id",
+    "Rigby": "eastern-id",
+    "Pocatello": "eastern-id",
+    "Blackfoot": "eastern-id",
+    "American Falls": "eastern-id",
+    "Arco": "eastern-id",
+    "Salmon": "eastern-id",
+    "Challis": "eastern-id",
+    "Driggs": "eastern-id",
+    "Victor": "eastern-id",
+    "Soda Springs": "eastern-id",
+    "Montpelier": "eastern-id",
+    "St. Anthony": "eastern-id",
+    "Coeur d'Alene": "north-id",
+    "Hayden": "north-id",
+    "Post Falls": "north-id",
+    "Sandpoint": "north-id",
+    "Ponderay": "north-id",
+    "Priest River": "north-id",
+    "Pierce": "north-id",
+    "Bonners Ferry": "north-id",
+    "Lewiston": "north-id",
+    "Moscow": "north-id",
+    "Rathdrum": "north-id",
+    "Kellogg": "north-id",
+    "Wallace": "north-id"
+  },
+  "listings": [
+    {
+      "n": "Fix It RV Repair",
+      "c": "Eagle, ID",
+      "p": "208-740-3676",
+      "u": "https://fixitrvrepair.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Fix It RV Repair is a mobile repair business based in Eagle that serves Boise, Meridian, Nampa, Caldwell and the wider Treasure Valley. Its technicians handle appliances, air conditioning, heating, electrical, plumbing, propane, leveling systems, water leaks and roof repairs. Owners call or text 208-740-3676 to schedule service.",
+      "g": [
+        "mobile"
+      ],
+      "base": "Eagle",
+      "areas": [
+        "Eagle",
+        "Boise",
+        "Meridian",
+        "Nampa",
+        "Caldwell"
+      ],
+      "region": "Treasure Valley",
+      "evidence": {
+        "checked": "https://fixitrvrepair.com/",
+        "phone_quote": "Whatever service or repairs you are needing please give us a call or text 208-740-3676 (2087403676) and we'll take care of the rest.",
+        "coverage_quotes": [
+          "Fix It RV Repair is a mobile repair business and has been providing residents in Eagle, Boise, Meridian, Nampa, Caldwell Idaho also non as the Treasure Valley and surrounding areas with your RV, Camper or Camp Trailer repairs and service."
+        ],
+        "type_quote": "Fix It RV Repair is a mobile repair business and has been providing residents in Eagle, Boise, Meridian, Nampa, Caldwell Idaho also non as the Treasure Valley and surrounding areas with your RV, Camper or Camp Trailer repairs and service.",
+        "emergency_quote": null,
+        "roadside_quote": null
+      }
+    },
+    {
+      "n": "All Around Mobile RV",
+      "c": "Boise, ID",
+      "p": "(208) 740-8239",
+      "u": "https://allaroundrvidaho.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "All Around Mobile RV is a mobile repair service based in Boise that covers Idaho's greater Treasure Valley. It comes to campgrounds, RV parks and driveways instead of asking owners to tow an RV to a shop, and it handles appliances, plumbing, propane, electrical, routine maintenance and inspections. The business lists 24hr Emergency Service and can be reached at (208) 740-8239.",
+      "g": [
+        "mobile",
+        "emergency"
+      ],
+      "base": "Boise",
+      "areas": [],
+      "region": "Idaho's greater Treasure Valley",
+      "evidence": {
+        "checked": "https://allaroundrvidaho.com/",
+        "phone_quote": "(208) 740-8239",
+        "coverage_quotes": [
+          "Factory trained and Certified Technicians serving Idaho's greater Treasure Valley and Specializing in all things Repair, Service, and Inspections"
+        ],
+        "type_quote": "Our mobile repair service eliminates the hassle of towing your RV to a shop. We'll come to your location in Idaho, whether you're at a campground, RV park, or even your own driveway.",
+        "emergency_quote": "24hr Emergency Service",
+        "roadside_quote": null
+      }
+    },
+    {
+      "n": "Base Camp Mobile RV Services",
+      "c": "Boise, ID",
+      "p": "(208) 859-9642",
+      "u": "https://www.bc-rv.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Base Camp Mobile RV Services is a family-run, veteran-owned mobile RV repair business based in Boise. It comes to customers across southern Idaho and names Boise, Nampa, Meridian, Kuna, Star, Eagle, Middleton, Caldwell, Emmett, Mountain Home, Cascade, McCall and Stanley among the places it serves. Darin Wilson can be reached at (208) 859-9642.",
+      "g": [
+        "mobile"
+      ],
+      "base": "Boise",
+      "areas": [
+        "Boise",
+        "Nampa",
+        "Meridian",
+        "Kuna",
+        "Star",
+        "Eagle",
+        "Middleton",
+        "Caldwell",
+        "Emmett",
+        "Mountain Home",
+        "Cascade",
+        "McCall",
+        "Stanley"
+      ],
+      "region": "southern Idaho",
+      "evidence": {
+        "checked": "https://www.bc-rv.com/",
+        "phone_quote": "(208) 859-9642",
+        "coverage_quotes": [
+          "Proud to serve Boise, Nampa, Meridian, Kuna, Star, Eagle, Middleton, Caldwell, Emmett, Mountain Home, Cascade, McCall, Stanley and all rural areas and campsites in southern Idaho."
+        ],
+        "type_quote": "we bring top-quality RV repairs and maintenance directly to you—wherever you are in the Treasure Valley and beyond. We come to you – because your adventure shouldn't have to wait!",
+        "emergency_quote": null,
+        "roadside_quote": null
+      }
+    },
+    {
+      "n": "L&L Mobile RV Tech Services",
+      "c": "Nampa, ID",
+      "p": "(208) 899-9019",
+      "u": "https://www.llrvtech.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "L&L Mobile RV Tech Services is a mobile RV repair business based in Nampa serving the Treasure Valley. It offers winterizing and de-winterizing, appliance repairs, and RV repairs such as awnings, brakes and wheel bearings, generators and slide-outs, and it says it is NRVTA certified and insured. The business serves Boise, Meridian, Nampa, Kuna, Caldwell and surrounding areas and can be reached at (208) 899-9019.",
+      "g": [
+        "mobile"
+      ],
+      "base": "Nampa",
+      "areas": [
+        "Boise",
+        "Meridian",
+        "Nampa",
+        "Kuna",
+        "Caldwell"
+      ],
+      "region": "Treasure Valley",
+      "evidence": {
+        "checked": "https://www.llrvtech.com/",
+        "phone_quote": "(208) 899-9019",
+        "coverage_quotes": [
+          "NOW SERVING THE TREASURE VALLEY IN IDAHO (Boise, Meridian, Nampa, Kuna, Caldwell & surrounding areas)"
+        ],
+        "type_quote": "L&L MOBILE RV TECH SERVICES ... BOOK A CERTIFIED AND INSURED RV TECHNICIAN FOR YOUR RV REPAIR AND MAINTENANCE NEEDS TODAY",
+        "emergency_quote": null,
+        "roadside_quote": null
+      }
+    },
+    {
+      "n": "1A Mobile RV Repair",
+      "c": "Star, ID",
+      "p": "(208) 391-3176",
+      "u": "https://www.1amobilervrepair.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "1A Mobile RV Repair is a mobile RV appliance repair service based in Star. It comes to driveways, RV parks and storage lots within about 40 minutes of Star, covering Eagle, Meridian, Middleton, Emmett, Boise, Nampa, Caldwell and Garden City. The father and son team is NRVTA certified and can be reached at (208) 391-3176.",
+      "g": [
+        "mobile"
+      ],
+      "base": "Star",
+      "areas": [
+        "Star",
+        "Eagle",
+        "Meridian",
+        "Middleton",
+        "Emmett",
+        "Boise",
+        "Nampa",
+        "Caldwell",
+        "Garden City"
+      ],
+      "region": "Treasure Valley",
+      "spec": "Does not offer engine/mechanical, solar installs, full roof replacement, windshields, slide-outs, awnings, brakes, tires or generators.",
+      "evidence": {
+        "checked": "https://www.1amobilervrepair.com/",
+        "phone_quote": "(208) 391-3176",
+        "coverage_quotes": [
+          "We serve approximately a 40-minute radius from Star, Idaho — covering Eagle, Meridian, Middleton, Emmett, Boise, Nampa, Caldwell, Garden City."
+        ],
+        "type_quote": "We come to your driveway, RV park, or storage lot. No towing, no loading, no shop appointments.",
+        "emergency_quote": null,
+        "roadside_quote": null
+      }
+    },
+    {
+      "n": "Mobile RV Repair of Boise",
+      "c": "Boise, ID",
+      "p": "208-803-0016",
+      "u": "https://mobilervrepairofboise.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "Mobile RV Repair of Boise is a mobile service that comes to homes, storage lots, campgrounds and roadside locations across the Treasure Valley. It works on air conditioners, electrical systems, plumbing, appliances, roofs, water heaters, awnings, slide-outs, generators and winterization, and states that it does not perform major engine, drivetrain or body repairs. The business serves Boise, Meridian, Nampa, Caldwell, Eagle, Kuna, Garden City, Star, Middleton and Hidden Springs and can be reached at 208-803-0016.",
+      "g": [
+        "mobile",
+        "emergency"
+      ],
+      "base": "Boise",
+      "areas": [
+        "Boise",
+        "Meridian",
+        "Nampa",
+        "Caldwell",
+        "Eagle",
+        "Kuna",
+        "Garden City",
+        "Star",
+        "Middleton",
+        "Hidden Springs"
+      ],
+      "region": "Treasure Valley",
+      "spec": "Does not perform major engine, drivetrain or body repairs.",
+      "evidence": {
+        "checked": "https://mobilervrepairofboise.com/",
+        "phone_quote": "208-803-0016",
+        "coverage_quotes": [
+          "we provide on-site service in Boise, Meridian, Nampa, Caldwell, Eagle, Kuna, Garden City, Star, Middleton, and Hidden Springs."
+        ],
+        "type_quote": "Our mobile technicians travel directly to your location — whether you're at home, in storage, at a campground, or stranded roadside.",
+        "emergency_quote": "Emergency RV Repair — Roadside help when you need it most",
+        "roadside_quote": null
+      }
+    },
+    {
+      "n": "Boise Valley RV",
+      "c": "Garden City, ID",
+      "p": "(208) 375-4701",
+      "u": "https://www.boisevalleyrv.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Boise Valley RV is an RV repair shop in Garden City that has been fixing RVs in the Treasure Valley since 1984. Dave and Debi Duncan's team works on all makes and models of motorhomes and travel trailers and also sells parts. Customers drive to the shop at 100 E 43rd, Garden City, and can call (208) 375-4701.",
+      "g": [
+        "center"
+      ],
+      "base": "Garden City",
+      "areas": [
+        "Boise",
+        "Eagle",
+        "Meridian",
+        "Kuna",
+        "Star",
+        "Middleton",
+        "Nampa",
+        "Caldwell",
+        "Emmett"
+      ],
+      "region": "Treasure Valley",
+      "evidence": {
+        "checked": "https://www.boisevalleyrv.com/",
+        "phone_quote": "Phone: (208) 375-4701 (208-375-4701) Address: 100 E 43rd, Garden City, Idaho 83714",
+        "coverage_quotes": [
+          "Boise, ID, Eagle, ID, Meridian, ID, Kuna, ID, Star, ID, Middleton, ID, Nampa, ID, Caldwell, ID, Emmett, ID"
+        ],
+        "type_quote": "Your One-Stop Shop for RV Repair, Boise, ID, Accessories & Installation Services in Boise, ID & the Treasure Valley Area ... Since 1984, Dave & Debi Duncan have been providing RV parts and repairs of all RV makes and models",
+        "emergency_quote": null,
+        "roadside_quote": null
+      }
+    },
+    {
+      "n": "Total Trailer Solutions, LLC",
+      "c": "Kimberly / Twin Falls, ID",
+      "p": "(208) 425-0388",
+      "u": "https://www.totaltraileridaho.com/",
+      "t": "both",
+      "e": false,
+      "r": true,
+      "d": "Total Trailer Solutions is an RVTI Master Certified trailer and RV repair shop in Kimberly that also runs a mobile service. It handles brakes, axles, suspension, bearings, electrical, plumbing, appliances, solar and off-grid builds, and offers emergency roadside assistance throughout Southern Idaho. The shop serves Twin Falls, Kimberly, Jerome, Filer, Gooding, Buhl, Wendell, Burley, Rupert and nearby towns and can be reached at (208) 425-0388.",
+      "g": [
+        "mobile",
+        "center",
+        "roadside"
+      ],
+      "base": "Kimberly",
+      "areas": [
+        "Twin Falls",
+        "Kimberly",
+        "Jerome",
+        "Filer",
+        "Castleford",
+        "Hazelton",
+        "Shoshone",
+        "Gooding",
+        "Buhl",
+        "Hansen",
+        "Wendell",
+        "Eden",
+        "Burley",
+        "Rupert",
+        "Heyburn",
+        "Declo"
+      ],
+      "region": "Southern Idaho",
+      "evidence": {
+        "checked": "https://www.totaltraileridaho.com/",
+        "phone_quote": "Phone (208) 425-0388 (2084250388)",
+        "coverage_quotes": [
+          "We proudly serve residents and businesses in the following nearby cities and towns: Twin Falls, ID, Kimberly, ID, Jerome, ID, Filer, ID, Castleford, ID, Hazelton, ID, Shoshone, ID, Gooding, ID, Buhl, ID, Hansen, ID, Wendell, ID, Eden, ID, Burley, ID, Rupert, ID, Heyburn, ID, Declo, ID"
+        ],
+        "type_quote": "In-shop and mobile repair for every system on your trailer or RV.",
+        "emergency_quote": null,
+        "roadside_quote": "We offer comprehensive in-shop repairs at our Twin Falls location and emergency roadside assistance throughout Southern Idaho. [services include] Brakes ... Axle & suspension ... Bearings & hubs"
+      }
+    },
+    {
+      "n": "Snake River RV",
+      "c": "Twin Falls, ID",
+      "p": "(208) 886-0397",
+      "u": "https://snakerv.com/",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "Snake River RV is an RV repair shop in Twin Falls that also offers a mobile winterizing service and comes to the customer's location for it. Its work includes diagnostics and repairs, re-flooring, roof repair, resealing, re-striping, leak repair and winterizing for RVs and campers. The shop is at 3087 Highland Ave. East, Twin Falls, and can be reached at (208) 886-0397.",
+      "g": [
+        "mobile",
+        "center"
+      ],
+      "base": "Twin Falls",
+      "areas": [
+        "Twin Falls",
+        "Kimberly"
+      ],
+      "evidence": {
+        "checked": "https://snakerv.com/",
+        "phone_quote": "Snake River RV Phone: (208) 886-0397 Alternate Phone: (208) 320-8474",
+        "coverage_quotes": [
+          "Trust us to repair you RV in Twin Falls, ID",
+          "3087 Highland Ave. East, Twin Falls, ID 83301"
+        ],
+        "type_quote": "At Snake River RV, we'll come to you to winterize your vehicle.",
+        "emergency_quote": null,
+        "roadside_quote": null
+      }
+    },
+    {
+      "n": "DT Services",
+      "c": "Jerome, ID",
+      "p": "(208) 207-9420",
+      "u": "https://www.dtservicesid.co/rv-repair",
+      "t": "both",
+      "e": false,
+      "r": true,
+      "d": "DT Services repairs RVs across Southeast Idaho from its shop in Jerome and also sends mobile service to customers. It works on engine diagnostics and repairs, transmissions and power train, brakes and suspension, HVAC and electrical systems. The business serves Jerome, Twin Falls, Pocatello, Blackfoot, Rigby, Declo, Malad City, Lava Hot Springs and nearby towns, and can be reached at (208) 207-9420.",
+      "g": [
+        "mobile",
+        "center",
+        "roadside"
+      ],
+      "base": "Jerome",
+      "areas": [
+        "Jerome",
+        "Inkom",
+        "McCammon",
+        "Pocatello",
+        "Twin Falls",
+        "Declo",
+        "Blackfoot",
+        "Malad City",
+        "Lava Hot Springs",
+        "Ammon",
+        "Ririe",
+        "Rigby",
+        "Garfield"
+      ],
+      "region": "Southeast Idaho",
+      "evidence": {
+        "checked": "https://www.dtservicesid.co/rv-repair",
+        "phone_quote": "(208) 207-9420",
+        "coverage_quotes": [
+          "Serving Inkom, ID, McCammon, ID, Pocatello, ID, Twin Falls, ID, Declo, ID, Blackfoot, ID, Malad City, ID, Lava Hot Springs, ID",
+          "Jerome Shop 96 West 100 Road South Jerome, ID 83338 and surrounding areas"
+        ],
+        "type_quote": "Our mobile services come to you ... Jerome Shop",
+        "emergency_quote": null,
+        "roadside_quote": "Engine diagnostics and repairs ... Brake and suspension work ... Transmissions and power train"
+      }
+    },
+    {
+      "n": "K&M Mobile RV Repair, LLC",
+      "c": "Rigby, ID",
+      "p": "208-534-1557",
+      "u": "https://kmmobilervrepairid.wixsite.com/website",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "K&M Mobile RV Repair is a trailer and RV repair business based in Rigby serving Eastern Idaho. It works on refrigerators, heaters, slide-outs, generators and more, and names Rigby, Idaho Falls, Rexburg, Pocatello and Blackfoot as areas it serves. The business can be reached at 208-534-1557 and lists Sunday as emergency only.",
+      "g": [
+        "mobile"
+      ],
+      "base": "Rigby",
+      "areas": [
+        "Rigby",
+        "Idaho Falls",
+        "Rexburg",
+        "Pocatello",
+        "Blackfoot"
+      ],
+      "region": "Eastern Idaho",
+      "evidence": {
+        "checked": "https://kmmobilervrepairid.wixsite.com/website",
+        "phone_quote": "CALL US TODAY: 208-534-1557",
+        "coverage_quotes": [
+          "We are a trailer and RV repair shop located in Eastern Idaho. We service Rigby, Idaho Falls, Rexburg, Pocatello, Blackfoot and surrounding areas.",
+          "Address: Rigby, Idaho - serving Eastern Idaho"
+        ],
+        "type_quote": "K&M Mobile RV Repair, LLC ... K&M Mobile RV Repair, believes in getting you back on the road as soon, and as safely, as possible.",
+        "emergency_quote": null,
+        "roadside_quote": null
+      }
+    },
+    {
+      "n": "Eagle Rock RV Service",
+      "c": "Idaho Falls, ID",
+      "p": "(208) 228-5131",
+      "u": "https://www.eaglerockrvservice.com/rv-maintenance-and-repair",
+      "t": "both",
+      "e": false,
+      "r": true,
+      "d": "Eagle Rock RV Service is an RV repair and maintenance business in Idaho Falls. Its work includes engine and transmission repairs, engine diagnostics, brakes, alignments, wheel bearings, frames, welding, bodywork and plumbing, and it offers mobile repair at a few Idaho Falls RV parks. The shop can be reached at (208) 228-5131.",
+      "g": [
+        "mobile",
+        "center",
+        "roadside"
+      ],
+      "base": "Idaho Falls",
+      "areas": [
+        "Idaho Falls"
+      ],
+      "evidence": {
+        "checked": "https://www.eaglerockrvservice.com/rv-maintenance-and-repair",
+        "phone_quote": "Main: (208) 228-5131",
+        "coverage_quotes": [
+          "We offer mobile repair to Idaho Falls Luxury RV Park, Sunny Side Acres, and Snake River RV Park."
+        ],
+        "type_quote": "Our RV repair and maintenance services cover: Braking systems ... All engine and transmission repairs ... We offer mobile repair to Idaho Falls Luxury RV Park, Sunny Side Acres, and Snake River RV Park.",
+        "emergency_quote": null,
+        "roadside_quote": "All engine and transmission repairs ... Engine diagnostics ... Braking systems ... Alignments ... Frames"
+      }
+    },
+    {
+      "n": "No Limit RV Repair and Fabrication",
+      "c": "Idaho Falls, ID",
+      "p": "(208) 522-1131",
+      "u": "https://nolimitrv.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "No Limit RV Repair and Fabrication is an RV repair and fabrication shop in Idaho Falls with more than 23 years in the RV industry. The locally owned team repairs all makes and models of RVs and trailers and also handles fleet maintenance and remodels. It is located at 6724 W Overland Dr. Suite A and can be reached at (208) 522-1131.",
+      "g": [
+        "center"
+      ],
+      "base": "Idaho Falls",
+      "areas": [
+        "Idaho Falls"
+      ],
+      "evidence": {
+        "checked": "https://nolimitrv.com/",
+        "phone_quote": "Give us a call at (208) 522-1131 ... 6724 W Overland Dr. Suite A Idaho Falls, Idaho 83402",
+        "coverage_quotes": [
+          "Count on No Limit RV Repair and Fabrication in Idaho Falls, ID when you need immediate RV repair or fabrication services.",
+          "6724 W Overland Dr. Suite A Idaho Falls, Idaho 83402"
+        ],
+        "type_quote": "we repair all makes and models of RVs. This allows us to serve both residential and commercial clients. Whether you want your own RV repaired or have your fleet maintained or remodeled",
+        "emergency_quote": null,
+        "roadside_quote": null
+      }
+    },
+    {
+      "n": "Ergon RV Services LLC",
+      "c": "Coeur d'Alene, ID",
+      "p": "(208) 500-2383",
+      "u": "https://www.ergonrv.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "Ergon RV Services is a certified and insured mobile RV repair business based in Coeur d'Alene. It comes to the customer's location for diagnostics and repairs and covers Coeur d'Alene and Spokane, handling issues such as AC failures, refrigerator problems and unexpected breakdowns. The business offers after-hours emergency service and can be reached at (208) 500-2383.",
+      "g": [
+        "mobile",
+        "emergency"
+      ],
+      "base": "Coeur d'Alene",
+      "areas": [
+        "Coeur d'Alene"
+      ],
+      "region": "Northern Idaho",
+      "evidence": {
+        "checked": "https://www.ergonrv.com/",
+        "phone_quote": "Call or Text (208)500-2383 (208-500-2383)",
+        "coverage_quotes": [
+          "Ergon RV provides fast, certified mobile RV repair throughout Coeur d'Alene and Spokane",
+          "Northern Idaho's premier mobile RV service"
+        ],
+        "type_quote": "Ergon RV Mobile Repair Certified And Insured We Come To You!",
+        "emergency_quote": "Emergency service available after hours",
+        "roadside_quote": null
+      }
+    },
+    {
+      "n": "All Seasons RV, LLC",
+      "c": "Hayden, ID",
+      "p": "208-772-6581",
+      "u": "https://allseasonsrvllc.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "All Seasons RV is a family owned, full-service RV repair facility in Hayden. It has been in the RV industry over 20 years, repairs and modifies RVs, and is a local authorized Onan dealer for generator repairs and maintenance. The shop is at 10191 N Government Way, Hayden, and can be reached at 208-772-6581.",
+      "g": [
+        "center"
+      ],
+      "base": "Hayden",
+      "areas": [
+        "Hayden",
+        "Coeur d'Alene"
+      ],
+      "region": "North Idaho",
+      "evidence": {
+        "checked": "https://allseasonsrvllc.com/",
+        "phone_quote": "All Seasons RV, LLC 208-772-6581 10191 N Government Way Hayden, ID 83835",
+        "coverage_quotes": [
+          "Best RV Service Center in Couer d'Alene | Hayden | ID and Surrounding Areas",
+          "10191 N Government Way Hayden, ID 83835"
+        ],
+        "type_quote": "We are a full-service, family owned RV repair facility located in North Idaho.",
+        "emergency_quote": null,
+        "roadside_quote": null
+      }
+    },
+    {
+      "n": "Lake RV Inc",
+      "c": "Ponderay / Sandpoint, ID",
+      "p": "208-263-3922",
+      "u": "https://www.lakervinc.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Lake RV is an RV and trailer service and repair facility with a large parts store in Ponderay, north of Sandpoint. Its work includes roof repairs, furnaces, plumbing, electrical, wire harnesses, brakes, bearing packs and trailer hitches, and it is an authorized service center for Atwood, Dometic, Norcold, Suburban and Thetford. The shop is at 498 Fontaine Dr, Ponderay, and can be reached at 208-263-3922.",
+      "g": [
+        "center"
+      ],
+      "base": "Ponderay",
+      "areas": [
+        "Ponderay",
+        "Sandpoint"
+      ],
+      "region": "North Idaho",
+      "evidence": {
+        "checked": "https://www.lakervinc.com/",
+        "phone_quote": "498 Fontaine Dr, Ponderay, ID 208-263-3922",
+        "coverage_quotes": [
+          "498 Fontaine Dr, Ponderay, ID 83852",
+          "Off Hwy 95, North of Sandpoint, just behind the Co-op"
+        ],
+        "type_quote": "Service & Repair Facility & Large Parts Store ... We work on RVs, travel-, horse- and utility trailers…",
+        "emergency_quote": null,
+        "roadside_quote": null
+      }
+    },
+    {
+      "n": "Thunder Heart RV",
+      "c": "Pierce, ID",
+      "p": "208-400-0356",
+      "u": "https://www.thunderheartrv.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "Thunder Heart RV is a mobile RV repair business based in Pierce that services Northern Idaho and Eastern Washington. It comes to the customer's location and works on air conditioning, refrigerators, furnaces, electrical, plumbing, tanks, LP systems, awnings and slide-outs. The business tells customers to call or text for an emergency and can be reached at 208-400-0356.",
+      "g": [
+        "mobile",
+        "emergency"
+      ],
+      "base": "Pierce",
+      "areas": [],
+      "region": "Northern Idaho and Eastern Washington",
+      "evidence": {
+        "checked": "https://www.thunderheartrv.com/",
+        "phone_quote": "208-400-0356 (+1 208-400-0356)",
+        "coverage_quotes": [
+          "Servicing Northern Idaho and Eastern Washington"
+        ],
+        "type_quote": "we bring our professional repair services right to you, so you don't have to worry about any additional hassle or expense.",
+        "emergency_quote": "GOT AN EMERGENCY?! CALL OR TEXT US!",
+        "roadside_quote": null
+      }
+    },
+    {
+      "n": "Mobile One Roadside Services",
+      "c": "Priest River, ID",
+      "p": "(208) 610-1440",
+      "u": "http://mobileoneroadside.com/rv-roadside-service.html",
+      "t": "mobile",
+      "e": false,
+      "r": true,
+      "d": "Mobile One Roadside Services is a 24 hour RV and motorhome roadside repair business based in Priest River. It comes to the RV park, home or breakdown site and works on diesel pushers and gasoline engines, with specialists in electrical, driveability, air brakes and cooling systems, and it does not provide towing. It serves Sandpoint, Sagle, Rathdrum, Priest River, Post Falls, Ponderay, Hayden, Coeur d'Alene, Bonners Ferry, Athol and Moscow and can be reached at (208) 610-1440.",
+      "g": [
+        "mobile",
+        "roadside"
+      ],
+      "base": "Priest River",
+      "areas": [
+        "Sandpoint",
+        "Sagle",
+        "Rathdrum",
+        "Priest River",
+        "Post Falls",
+        "Ponderay",
+        "Hayden",
+        "Coeur d'Alene",
+        "Bonners Ferry",
+        "Athol",
+        "Moscow",
+        "Kellogg"
+      ],
+      "region": "North Idaho, Eastern Washington, and Western Montana",
+      "spec": "We Do Not Provide Towing Service.",
+      "evidence": {
+        "checked": "http://mobileoneroadside.com/rv-roadside-service.html",
+        "phone_quote": "Contact dispatch 24 hours a day at 208-610-1440! ... Mobile One Roadside Services Priest River, Idaho - (208)610-1440",
+        "coverage_quotes": [
+          "Mobile Truck, Trailer and RV repair in Spokane, Eastern Washington, North Idaho, Western Montana, Eastport, Kettle Falls, Bonners Ferry, Post Falls, Coeur d'Alene, Rathdrum, Athol, Sandpoint, Priest River, Priest Lake, Newport, Oldtown, Kellogg, Moscow, Hayden, Sagle, Deer Park, Ponderay and all points between."
+        ],
+        "type_quote": "We Come to You, at the RV park, your home, or the breakdown site.",
+        "emergency_quote": null,
+        "roadside_quote": "Our service technicians are experienced and qualified to work on diesel pushers as well as gasoline engines. We have specialists in electrical and driveability, air brakes and cooling systems and much more. We Do Not Provide Towing Service"
+      }
+    }
+  ]
+}

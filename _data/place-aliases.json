@@ -145,5 +145,29 @@
   "Heber City": {
     "to": "Heber",
     "why": "The Census carries the town as Heber city, which keys as heber; the listing writes Heber City, which is what the town is called locally."
+  },
+  "Boise": {
+    "to": "Boise City",
+    "why": "The Census carries Idaho's capital as Boise City, which keys as boise city; the listing and everybody in Idaho say Boise."
+  },
+  "Sagle": {
+    "to_zip": "83860",
+    "why": "A community in Bonner County with no Census place. 83860 is the ZIP area that serves it."
+  },
+  "Cahone": {
+    "to_zip": "81320",
+    "why": "A community in Dolores County with no Census place. 81320 is the ZIP area that serves it."
+  },
+  "Yellow Jacket": {
+    "to_zip": "81335",
+    "why": "A community in Montezuma County with no Census place. 81335 is the ZIP area."
+  },
+  "Hygiene": {
+    "to_zip": "80503",
+    "why": "A community west of Longmont with no Census place. 80503 is the ZIP area that serves it."
+  },
+  "Cameron": {
+    "to": "Ennis",
+    "why": "A small community on US-287 that the Census place file does not carry. The listing also names Ennis, the nearest town, and that is the coordinate used rather than a ZIP guessed at."
   }
 }

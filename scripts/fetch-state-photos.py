@@ -89,6 +89,25 @@ PHOTOS += [
 ]
 
 
+PHOTOS += [
+    ("idaho",
+     "Idaho scene LCCN2011630880.tif",
+     "Public domain (no known restrictions)", "Carol M. Highsmith",
+     "https://www.loc.gov/item/2011630880/",
+     "Idaho landscape"),
+    ("montana",
+     "Lake-sherburne-964855.jpg",
+     "Public domain (National Park Service)", "National Park Service",
+     "https://commons.wikimedia.org/wiki/File:Lake-sherburne-964855.jpg",
+     "Lake Sherburne in Glacier National Park, Montana"),
+    ("colorado",
+     "Rocky mountain national park.jpg",
+     "Public domain (National Park Service)", "National Park Service",
+     "https://commons.wikimedia.org/wiki/File:Rocky_mountain_national_park.jpg",
+     "Rocky Mountain National Park, Colorado"),
+]
+
+
 def commons_page(title):
     return "https://commons.wikimedia.org/wiki/File:" + urllib.parse.quote(title.replace(" ", "_"))
 

@@ -51,3 +51,24 @@ Recorded anyway, because the source should be traceable.
 - Author: Ansel Adams
 - Licence: Public domain (US government commission, 1942) <https://commons.wikimedia.org/wiki/File:Adams_The_Tetons_and_the_Snake_River.jpg>
 - Tile alt text: The Tetons and the Snake River, Wyoming
+
+## idaho
+
+- File: [Idaho scene LCCN2011630880.tif](https://commons.wikimedia.org/wiki/File:Idaho_scene_LCCN2011630880.tif)
+- Author: Carol M. Highsmith
+- Licence: Public domain (no known restrictions) <https://www.loc.gov/item/2011630880/>
+- Tile alt text: Idaho landscape
+
+## montana
+
+- File: [Lake-sherburne-964855.jpg](https://commons.wikimedia.org/wiki/File:Lake-sherburne-964855.jpg)
+- Author: National Park Service
+- Licence: Public domain (National Park Service) <https://commons.wikimedia.org/wiki/File:Lake-sherburne-964855.jpg>
+- Tile alt text: Lake Sherburne in Glacier National Park, Montana
+
+## colorado
+
+- File: [Rocky mountain national park.jpg](https://commons.wikimedia.org/wiki/File:Rocky_mountain_national_park.jpg)
+- Author: National Park Service
+- Licence: Public domain (National Park Service) <https://commons.wikimedia.org/wiki/File:Rocky_mountain_national_park.jpg>
+- Tile alt text: Rocky Mountain National Park, Colorado

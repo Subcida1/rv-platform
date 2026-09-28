@@ -1,0 +1,580 @@
+{
+  "state": "MT",
+  "name": "Montana",
+  "regions": [
+    {
+      "key": "northwest-mt",
+      "label": "Missoula and the Flathead"
+    },
+    {
+      "key": "southwest-mt",
+      "label": "Bozeman, Butte and the southwest"
+    },
+    {
+      "key": "north-central-mt",
+      "label": "Great Falls and the Hi-Line"
+    },
+    {
+      "key": "eastern-mt",
+      "label": "Billings and the east"
+    }
+  ],
+  "region_of": {
+    "Missoula": "northwest-mt",
+    "Kalispell": "northwest-mt",
+    "Whitefish": "northwest-mt",
+    "Columbia Falls": "northwest-mt",
+    "Coram": "northwest-mt",
+    "West Glacier": "northwest-mt",
+    "Polson": "northwest-mt",
+    "Libby": "northwest-mt",
+    "Seeley Lake": "northwest-mt",
+    "Ronan": "northwest-mt",
+    "Bigfork": "northwest-mt",
+    "Hungry Horse": "northwest-mt",
+    "Superior": "northwest-mt",
+    "Thompson Falls": "northwest-mt",
+    "Eureka": "northwest-mt",
+    "Bozeman": "southwest-mt",
+    "Belgrade": "southwest-mt",
+    "Butte": "southwest-mt",
+    "Dillon": "southwest-mt",
+    "Anaconda": "southwest-mt",
+    "Virginia City": "southwest-mt",
+    "Livingston": "southwest-mt",
+    "West Yellowstone": "southwest-mt",
+    "Three Forks": "southwest-mt",
+    "Manhattan": "southwest-mt",
+    "Boulder": "southwest-mt",
+    "Deer Lodge": "southwest-mt",
+    "Whitehall": "southwest-mt",
+    "Great Falls": "north-central-mt",
+    "Havre": "north-central-mt",
+    "Malta": "north-central-mt",
+    "Glasgow": "north-central-mt",
+    "Lewistown": "north-central-mt",
+    "Shelby": "north-central-mt",
+    "Cut Bank": "north-central-mt",
+    "Chinook": "north-central-mt",
+    "Chester": "north-central-mt",
+    "Conrad": "north-central-mt",
+    "Fort Benton": "north-central-mt",
+    "Stanford": "north-central-mt",
+    "Wolf Point": "north-central-mt",
+    "Poplar": "north-central-mt",
+    "Culbertson": "north-central-mt",
+    "Plentywood": "north-central-mt",
+    "Scobey": "north-central-mt",
+    "Browning": "north-central-mt",
+    "Billings": "eastern-mt",
+    "Miles City": "eastern-mt",
+    "Glendive": "eastern-mt",
+    "Sidney": "eastern-mt",
+    "Baker": "eastern-mt",
+    "Laurel": "eastern-mt",
+    "Red Lodge": "eastern-mt",
+    "Columbus": "eastern-mt",
+    "Roundup": "eastern-mt",
+    "Forsyth": "eastern-mt",
+    "Hardin": "eastern-mt",
+    "Broadus": "eastern-mt",
+    "Terry": "eastern-mt",
+    "Wibaux": "eastern-mt"
+  },
+  "listings": [
+    {
+      "n": "Montana Mobile Tech",
+      "c": "Virginia City, MT",
+      "p": "480-495-9579",
+      "u": "https://mtmobilervrepair.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "A mobile RV repair service based out of Virginia City. It says it runs a fully stocked truck and does on-site repair of air conditioners, furnaces, refrigerators, water heaters, plumbing, electrical systems, and LP systems on motorhomes, fifth wheels, travel trailers, and slide-in campers. Coverage rotates with the season, with the southwest Montana counties in summer and the High Line in spring and fall.",
+      "g": [
+        "mobile"
+      ],
+      "base": "Virginia City",
+      "areas": [
+        "Ennis",
+        "McAllister",
+        "Norris",
+        "Harrison",
+        "Pony",
+        "Cameron",
+        "Virginia City",
+        "Alder",
+        "Sheridan",
+        "Twin Bridges",
+        "Dillon",
+        "West Yellowstone",
+        "Bozeman",
+        "Belgrade",
+        "Three Forks",
+        "Fort Peck",
+        "Malta",
+        "Glasgow"
+      ],
+      "region": "Madison, Beaverhead, and Gallatin Counties; the High Line and Phillips, Valley, and Garfield Counties",
+      "spec": "Seasonal: southwest Montana counties in summer, and Fort Peck, Malta, Glasgow, and the High Line in spring and fall.",
+      "evidence": {
+        "checked": "https://mtmobilervrepair.com/",
+        "phone_quote": "Call Now! (site contact telephone 480-495-9579)",
+        "coverage_quotes": [
+          "Montana Mobile Tech is a mobile RV repair service based out of Virginia City, Montana, and is now in its 15th year of operation.",
+          "In the spring and fall, we service Fort Peck, Malta, Glasgow, and the High Line including the counties of Phillips, Valley, and Garfield.",
+          "During the summer months, we service Madison, Beaverhead, and Gallatin Counties which includes the towns of Ennis, McAllister, Norris, Harrison, Pony, Cameron, Virginia City, Alder, Sheridan, Twin Bridges, Dillon, West Yellowstone, Bozeman, Belgrade, Three Forks, and surrounding areas."
+        ],
+        "type_quote": "He has a fully stocked truck to repair RVs in a quick and efficient manner.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Anderson Mobile RV Service & Repair",
+      "c": "Missoula, MT",
+      "p": "406-493-4153",
+      "u": "https://www.andersonmobilerv.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "A mobile RV service working only on the house side of the coach, based in the Missoula area. It states it operates solely as a mobile service in the Missoula and Bitterroot areas and comes to your location. Repairs cover all house-side systems and appliances, and customers pay a service call fee plus an hourly labor rate.",
+      "g": [
+        "mobile"
+      ],
+      "base": "Missoula",
+      "areas": [
+        "Missoula"
+      ],
+      "region": "Missoula & Bitterroot areas",
+      "evidence": {
+        "checked": "https://www.andersonmobilerv.com/",
+        "phone_quote": "Phone: 406-493-4153",
+        "coverage_quotes": [
+          "We operate solely as a mobile service in the Missoula & Bitterroot areas.",
+          "Includes Missoula and the surrounding area."
+        ],
+        "type_quote": "Mobile service that comes to your location to fix problems on the house side of your RV.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Star 5 Service",
+      "c": "Kalispell, MT",
+      "p": "(406) 607-2185",
+      "u": "https://star5service.com/",
+      "t": "mobile",
+      "e": false,
+      "r": true,
+      "d": "A family owned mobile RV repair and roadside assistance business based in Kalispell. The site says technicians come to you for trailer, fifth wheel, and Class A motorhome work, and it advertises roadside assistance for light mechanical in the heavy-duty space, with reviews describing bearing and brake drum repair. Regular hours are 8am to 5pm and after-hours service is available.",
+      "g": [
+        "mobile",
+        "roadside"
+      ],
+      "base": "Kalispell",
+      "areas": [
+        "Kalispell",
+        "Columbia Falls",
+        "Whitefish",
+        "West Glacier"
+      ],
+      "evidence": {
+        "checked": "https://star5service.com/",
+        "phone_quote": "Give us a call: (406) 607-2185",
+        "coverage_quotes": [
+          "Service Areas - Kalispell, MT - Columbia Falls, MT - Whitefish, MT - West Glacier, MT"
+        ],
+        "type_quote": "Sit tight! We'll come to you as quickly as possible.",
+        "emergency_quote": null,
+        "roadside_quote": "Providing roadside assistance for light mechanical in the heavy-duty space.",
+        "licence": null
+      }
+    },
+    {
+      "n": "Panero Mobile RV Service",
+      "c": "Belgrade, MT",
+      "p": "(406) 589-2303",
+      "u": "https://paneromobilerv.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "A mobile RV repair service based out of Belgrade that serves the Gallatin Valley and surrounding areas within 60 miles. It runs a fully stocked trailer and the owners, Logan and Sienna Panero-Eley, take calls and do the work directly. The site is a mobile service that repairs your RV on site.",
+      "g": [
+        "mobile"
+      ],
+      "base": "Belgrade",
+      "areas": [],
+      "region": "Gallatin Valley within 60 miles",
+      "evidence": {
+        "checked": "https://paneromobilerv.com/about-us",
+        "phone_quote": "(406) 589-2303",
+        "coverage_quotes": [
+          "Panero Mobile RV Service is a mobile RV repair service based out of Belgrade Montana. We service Gallatin Valley and the surrounding areas within 60 miles."
+        ],
+        "type_quote": "We have a fully stocked trailer equipped to repair your RV in an efficient and professional manner.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "CampEasy Mobile RV Service & Repair LLC",
+      "c": "Kalispell, MT",
+      "p": "(951) 546-6838",
+      "u": "https://www.campeasymobilervrepair.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "A mobile RV service based in Kalispell that serves the entire Flathead Valley. It does appliance diagnostics and repair, slide and awning repair, electrical, plumbing, winterization, and roof and seal inspections, all at your location. Emergency calls are available including weekends and holidays, with a stated emergency fee, and it names stuck slides, jacks, and awnings as the urgent cases.",
+      "g": [
+        "mobile",
+        "emergency"
+      ],
+      "base": "Kalispell",
+      "areas": [
+        "Kalispell",
+        "Whitefish",
+        "Columbia Falls",
+        "Bigfork"
+      ],
+      "region": "Greater Flathead Valley",
+      "evidence": {
+        "checked": "https://www.campeasymobilervrepair.com/services",
+        "phone_quote": "(951) 546-6838",
+        "coverage_quotes": [
+          "CampEasy is based in Kalispell, Montana, and we proudly serve the entire Flathead Valley, including Whitefish, Columbia Falls, Bigfork, and surrounding areas."
+        ],
+        "type_quote": "Emergency Calls Available, including weekends and holidays. Stuck trying to get home or to your next stop? We've got you covered. Slide stuck or leveling system not operational, give us a call!!",
+        "emergency_quote": "Emergency Calls Available, including weekends and holidays. Stuck trying to get home or to your next stop? We've got you covered. Slide stuck or leveling system not operational, give us a call!!",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Road Runner RV",
+      "c": "Libby and Kalispell, MT",
+      "p": "406-303-9402",
+      "u": "https://www.roadrunnerrv406.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "A locally owned mobile RV repair business covering Lincoln and Flathead Counties in northwestern Montana. Owner and technician Jason Fosgate comes to you with no shop drop-off, and the shop says it is factory authorized for Dometic, Suburban, and Lippert warranty work. For breakdowns and urgent repairs it says it will do its best to get to you the same day.",
+      "g": [
+        "mobile"
+      ],
+      "base": "",
+      "areas": [
+        "Libby",
+        "Kalispell",
+        "Whitefish",
+        "Polson"
+      ],
+      "region": "Northwestern Montana; Lincoln & Flathead County",
+      "evidence": {
+        "checked": "https://www.roadrunnerrv406.com/",
+        "phone_quote": "Phone / Text 406-303-9402",
+        "coverage_quotes": [
+          "Professional mobile repair - we come to you, anywhere in Lincoln & Flathead County",
+          "From Libby to Kalispell, Whitefish to Polson"
+        ],
+        "type_quote": "If it's on your RV, we work on it. No towing, no waiting weeks for a dealer appointment. We come to you.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      },
+      "reg": "northwest-mt"
+    },
+    {
+      "n": "Mountain Peak Mobile RV Service",
+      "c": "Flathead Valley, MT",
+      "p": "409-349-6978",
+      "u": "https://mtnpeakrvs.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "A mobile RV service working anywhere in the greater Flathead Valley and surrounding areas. Founded by Dan Binder, a National RV Training Academy graduate, it comes to you for diagnostics, appliance repair, A/C service, electrical work, and exterior and awning repairs. The site states emergency services are available and lists hours of Monday through Friday, 8am to 5pm.",
+      "g": [
+        "mobile"
+      ],
+      "base": "",
+      "areas": [],
+      "region": "Greater Flathead Valley; Flathead Valley",
+      "evidence": {
+        "checked": "https://mtnpeakrvs.com/",
+        "phone_quote": "Phone: 1-409-FIX MY RV (409-349-6978)",
+        "coverage_quotes": [
+          "Our Mobile Service Comes to You! Anywhere in the Flathead Valley and Surrounding Areas."
+        ],
+        "type_quote": "Mountain Peak Mobile RV Service brings expert, certified repair directly to you.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      },
+      "reg": "northwest-mt"
+    },
+    {
+      "n": "Rocky Mountain Repair LLC",
+      "c": "Flathead Valley, MT",
+      "p": "(406) 253-9694",
+      "u": "https://www.rockymountainrepairllc.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "A mobile RV repair business in the Flathead Valley started by Brent Keller in 2003. It advertises itself as the Flathead's mobile RV repair and an authorized service center for Dometic, Norcold, Splendide, and Suburban. The work covers furnaces, refrigerators, water heaters, awnings, steps, electrical, roof reseals, slide outs, toilets, and air conditioners.",
+      "g": [
+        "mobile"
+      ],
+      "base": "",
+      "areas": [],
+      "region": "Flathead Valley",
+      "evidence": {
+        "checked": "https://www.rockymountainrepairllc.com/",
+        "phone_quote": "Call us: (406) 253-9694",
+        "coverage_quotes": [
+          "The Flathead's Best Mobile RV Repair",
+          "I am a fourth generation Flathead Valley native"
+        ],
+        "type_quote": "Specializing In Mobile Repair",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      },
+      "reg": "northwest-mt"
+    },
+    {
+      "n": "Miller's Mobile RV Rescue",
+      "c": "Coram, MT",
+      "p": "406-407-5651",
+      "u": "https://millersmobilervrescue.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "A certified mobile RV repair service based in Coram and serving the West Glacier, Coram, and Columbia Falls area. It comes to your site for A/C and furnace issues, plumbing and water systems, water heaters, roof seals, awnings, landing gear, stabilizers, slides, and generator maintenance. The site states 24/7 availability for emergency calls.",
+      "g": [
+        "mobile",
+        "emergency"
+      ],
+      "base": "Coram",
+      "areas": [
+        "Coram",
+        "West Glacier",
+        "Columbia Falls"
+      ],
+      "region": "West Glacier area",
+      "evidence": {
+        "checked": "https://millersmobilervrescue.com/",
+        "phone_quote": "406-407-5651",
+        "coverage_quotes": [
+          "Mobile RV repair serving the West Glacier, Coram, Columbia Falls Area",
+          "Miller's Mobile RV Rescue - Coram, MT, USA"
+        ],
+        "type_quote": "We come to you!",
+        "emergency_quote": "24/7 Availability for Emergency Calls",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Montana RV Repair and Maintenance",
+      "c": "Billings, MT",
+      "p": "406-369-6398",
+      "u": "https://www.mtrvrepair.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "A Billings RV repair and maintenance business that works mobile and comes to you, with shop space available as needed. It says it specializes in RV repair and maintenance covering air conditioning, heat, plumbing, appliances, and slide repair, plus winterization and generator tune-ups. It aims to meet service needs within the first 24 to 48 hours.",
+      "g": [
+        "mobile"
+      ],
+      "base": "Billings",
+      "areas": [
+        "Billings"
+      ],
+      "evidence": {
+        "checked": "https://www.mtrvrepair.com/contact",
+        "phone_quote": "Call Us 406-369-6398",
+        "coverage_quotes": [
+          "Mobile - We come to you. Shop space available as needed and for clients passing through town."
+        ],
+        "type_quote": "We specialize in RV repair and maintenance services. AC, heat, plumbing, appliances, and slide repair just to name a few.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Martin's RV Service Center",
+      "c": "Great Falls, MT",
+      "p": "406-453-0527",
+      "u": "https://martinsrvservicecenter.com/",
+      "t": "center",
+      "e": false,
+      "r": true,
+      "d": "A full service RV and trailer repair center in Great Falls that has been operating since 1969. The shop does routine maintenance, roof repair and replacement, collision and structural repairs, and suspension repair, along with chassis, body, and window work. It is a drive-to facility at 1601 24th Ave S with weekday hours, closed weekends.",
+      "g": [
+        "center",
+        "roadside"
+      ],
+      "base": "Great Falls",
+      "areas": [],
+      "region": "central Montana",
+      "evidence": {
+        "checked": "https://martinsrvservicecenter.com/",
+        "phone_quote": "406-453-0527",
+        "coverage_quotes": [
+          "At Martin's Service Center, located in central Montana, we're here to keep your RV running smoothly.",
+          "Full-Service RV and Trailer Repair Center 1601 24th Ave S, Great Falls, MT 59405"
+        ],
+        "type_quote": "Trust our experts to take care of your chassis, body work, window repair, and other interior and exterior services.",
+        "emergency_quote": null,
+        "roadside_quote": "including paint and decal repair, suspension repair, fiberglass repair and metalwork, RV roof repairs, part fabrication, window repair and more",
+        "licence": null
+      }
+    },
+    {
+      "n": "Decker Services Mobile RV Repair",
+      "c": "Dillon, MT",
+      "p": "406-660-7042",
+      "u": "https://mobilerepairsrv.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "A mobile RV repair and maintenance technician serving Dillon and the surrounding areas seven days a week. The service comes to your location and states regular hours of 9am to 5pm. Customers can call directly for after-hours appointments.",
+      "g": [
+        "mobile"
+      ],
+      "base": "Dillon",
+      "areas": [
+        "Dillon"
+      ],
+      "evidence": {
+        "checked": "https://mobilerepairsrv.com/",
+        "phone_quote": "4066607042",
+        "coverage_quotes": [
+          "Reliable mobile RV tech serving Dillon MT and surrounding areas, 7 days a week."
+        ],
+        "type_quote": "At Decker Services Mobile RV Repair, our mission is to provide top-notch mobile RV repair and maintenance services.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "First Response Mobile RV Repair",
+      "c": "West Yellowstone, MT",
+      "p": "(214) 702-8191",
+      "u": "https://frmobilerv.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "A veteran owned mobile RV service based in West Yellowstone that does on-site diagnostics, repairs, and preventive maintenance at campgrounds, RV parks, and private properties. It works on fifth wheels, travel trailers, motorhomes, and living-quarters horse trailers. The technician comes to your location and confirms availability, travel fees, and scheduling before the visit.",
+      "g": [
+        "mobile"
+      ],
+      "base": "West Yellowstone",
+      "areas": [
+        "West Yellowstone"
+      ],
+      "evidence": {
+        "checked": "https://frmobilerv.com/",
+        "phone_quote": "(214) 702-8191",
+        "coverage_quotes": [
+          "On-site RV diagnostics, repairs, and preventive maintenance at campgrounds, RV parks, and private properties throughout West Yellowstone and surrounding areas."
+        ],
+        "type_quote": "We come to RV parks, campgrounds, private properties, and other accessible RV locations.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Done Rite RV Mobile Repair LLC",
+      "c": "Mission Valley, MT",
+      "p": "406-565-1084",
+      "u": "https://www.doneritervmobilerepair.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "A mobile RV repair business serving the greater Mission Valley in Montana by appointment. It says it can repair or replace any item in your recreational vehicle, using new or used parts, with over 20 years of experience. The work covers appliances, electrical, roof and structural, winterization, and plumbing, and it is an authorized service center for Double D Trailers.",
+      "g": [
+        "mobile"
+      ],
+      "base": "",
+      "areas": [],
+      "region": "greater Mission Valley; Mission Valley",
+      "evidence": {
+        "checked": "https://www.doneritervmobilerepair.com/",
+        "phone_quote": "(406)565-1084",
+        "coverage_quotes": [
+          "We have the ability to repair or replace any item in your recreational vehicle. From new to used parts, we can get you back on the road immediately. Serving the greater Mission Valley."
+        ],
+        "type_quote": "Mobile - By appt only",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      },
+      "reg": "northwest-mt"
+    },
+    {
+      "n": "Fish's Mobile RV Repair LLC",
+      "c": "Anaconda, MT",
+      "p": "(406) 490-3070",
+      "u": "https://fishsmobile.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "A mobile RV repair and maintenance business based in Anaconda, working as an RV service truck in western Montana. The site states it is NRVTA and RVTAA certified, licensed, and insured, and it performs repairs and maintenance on site. It is listed as serving within about 100 miles of Anaconda.",
+      "g": [
+        "mobile"
+      ],
+      "base": "Anaconda",
+      "areas": [
+        "Anaconda"
+      ],
+      "region": "western Montana",
+      "evidence": {
+        "checked": "https://fishsmobile.com/",
+        "phone_quote": "(406) 490-3070",
+        "coverage_quotes": [
+          "I am an RV service truck, based in Anaconda, working in the Western Montana area."
+        ],
+        "type_quote": "nrvta/rvtaa certified/insured repairs/maintenance",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Amunrud's RV",
+      "c": "Sidney, MT",
+      "p": "(406) 433-2226",
+      "u": "https://amunrudsrv.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "A family owned RV business in Sidney, operating since 1969, that says it is best known for its service and repairs. It takes service work on a first-come, first-served basis and will try to squeeze in minor repairs, with a standard hourly labor rate and a separate rate for diesel engines and off-site labor. The shop is at 2656 South Central Ave in Sidney.",
+      "g": [
+        "center"
+      ],
+      "base": "Sidney",
+      "areas": [
+        "Sidney"
+      ],
+      "evidence": {
+        "checked": "https://amunrudsrv.com/service",
+        "phone_quote": "(406) 433-2226",
+        "coverage_quotes": [
+          "At Amunrud's RV we are best known for our service/repairs! With over 30 years of experience in the industry, Mike is the best around",
+          "2656 South Central Ave, Sidney, MT 59270"
+        ],
+        "type_quote": "We run on a first-come, first-served basis. Call to find out timing. For minor repairs we try to squeeze them in so long as it doesn't take away from those already waiting!",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    }
+  ]
+}

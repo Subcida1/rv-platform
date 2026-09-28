@@ -1,0 +1,838 @@
+{
+  "state": "CO",
+  "name": "Colorado",
+  "regions": [
+    {
+      "key": "front-range",
+      "label": "Denver, Colorado Springs and the Front Range"
+    },
+    {
+      "key": "mountains-co",
+      "label": "The mountains and the I-70 corridor"
+    },
+    {
+      "key": "western-slope",
+      "label": "Grand Junction and the Western Slope"
+    },
+    {
+      "key": "southwest-co",
+      "label": "Durango, Cortez and the southwest"
+    },
+    {
+      "key": "plains-co",
+      "label": "Fort Morgan, Sterling and the eastern plains"
+    }
+  ],
+  "region_of": {
+    "Denver": "front-range",
+    "Aurora": "front-range",
+    "Lakewood": "front-range",
+    "Arvada": "front-range",
+    "Commerce City": "front-range",
+    "Thornton": "front-range",
+    "Westminster": "front-range",
+    "Brighton": "front-range",
+    "Fort Collins": "front-range",
+    "Loveland": "front-range",
+    "Windsor": "front-range",
+    "Greeley": "front-range",
+    "Longmont": "front-range",
+    "Boulder": "front-range",
+    "Castle Rock": "front-range",
+    "Colorado Springs": "front-range",
+    "Fountain": "front-range",
+    "Falcon": "front-range",
+    "Pueblo": "front-range",
+    "Pueblo West": "front-range",
+    "Monument": "front-range",
+    "Woodland Park": "front-range",
+    "Larkspur": "front-range",
+    "Broomfield": "front-range",
+    "Johnstown": "front-range",
+    "Berthoud": "front-range",
+    "Wellington": "front-range",
+    "Idaho Springs": "mountains-co",
+    "Georgetown": "mountains-co",
+    "Dillon": "mountains-co",
+    "Silverthorne": "mountains-co",
+    "Frisco": "mountains-co",
+    "Breckenridge": "mountains-co",
+    "Vail": "mountains-co",
+    "Avon": "mountains-co",
+    "Eagle": "mountains-co",
+    "Gypsum": "mountains-co",
+    "Estes Park": "mountains-co",
+    "Grand Lake": "mountains-co",
+    "Winter Park": "mountains-co",
+    "Salida": "mountains-co",
+    "Buena Vista": "mountains-co",
+    "Fairplay": "mountains-co",
+    "Leadville": "mountains-co",
+    "Steamboat Springs": "mountains-co",
+    "Craig": "mountains-co",
+    "Grand Junction": "western-slope",
+    "Fruita": "western-slope",
+    "Montrose": "western-slope",
+    "Delta": "western-slope",
+    "Gunnison": "western-slope",
+    "Rifle": "western-slope",
+    "Glenwood Springs": "western-slope",
+    "Silt": "western-slope",
+    "New Castle": "western-slope",
+    "Palisade": "western-slope",
+    "Olathe": "western-slope",
+    "Hotchkiss": "western-slope",
+    "Cedaredge": "western-slope",
+    "Durango": "southwest-co",
+    "Cortez": "southwest-co",
+    "Bayfield": "southwest-co",
+    "Pagosa Springs": "southwest-co",
+    "Alamosa": "southwest-co",
+    "Trinidad": "southwest-co",
+    "Walsenburg": "southwest-co",
+    "Monte Vista": "southwest-co",
+    "Del Norte": "southwest-co",
+    "Ignacio": "southwest-co",
+    "Mancos": "southwest-co",
+    "Dolores": "southwest-co",
+    "Fort Morgan": "plains-co",
+    "Sterling": "plains-co",
+    "Brush": "plains-co",
+    "Weldona": "plains-co",
+    "Lamar": "plains-co",
+    "La Junta": "plains-co",
+    "Burlington": "plains-co",
+    "Wray": "plains-co",
+    "Yuma": "plains-co",
+    "Holyoke": "plains-co",
+    "Akron": "plains-co",
+    "Rocky Ford": "plains-co"
+  },
+  "listings": [
+    {
+      "n": "Western Sky Mobile RV Repair and Inspections",
+      "c": "Colorado Springs, CO",
+      "p": "719-347-1331",
+      "u": "https://coloradowesternskyrv.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Western Sky Mobile RV Repair and Inspections is a mobile RV repair, service and inspection company. The company says it services Colorado Springs and surrounding areas and comes to the customer. Its own site gives the phone number 719-347-1331.",
+      "g": [
+        "mobile RV repair",
+        "RV service",
+        "RV inspections",
+        "we come to you"
+      ],
+      "base": "Colorado Springs",
+      "areas": [
+        "Colorado Springs"
+      ],
+      "region": null,
+      "evidence": {
+        "checked": "https://coloradowesternskyrv.com/",
+        "phone_quote": "Give us a call (+17193471331)",
+        "coverage_quotes": [
+          "Servicing Colorado Springs and surrounding areas."
+        ],
+        "type_quote": "Colorado's Mobile RV Repair, Service, and Inspection Company.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "SW Mobile RV Repair",
+      "c": "Colorado Springs & Southern Colorado",
+      "p": "720-588-3660",
+      "u": "https://swmrv.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "SW Mobile RV Repair is a mobile RV service that comes to the customer with no shop drop-off. The site says it serves Colorado Springs, Pueblo, Monument, Woodland Park, Castle Rock and surrounding areas across southern Colorado. It states it does not perform drivetrain or chassis mechanical work on Class A, B or C motorhomes and does not service black or grey tanks.",
+      "g": [
+        "mobile RV repair",
+        "electrical",
+        "hydraulics",
+        "awnings",
+        "warranty work",
+        "no shop drop-off"
+      ],
+      "base": "Colorado Springs",
+      "areas": [
+        "Colorado Springs",
+        "Pueblo",
+        "Monument",
+        "Woodland Park",
+        "Castle Rock"
+      ],
+      "region": "Southern Colorado",
+      "spec": "Does not perform drivetrain or chassis mechanical work on Class A, B, or C motorhomes; does not service black or grey tanks.",
+      "evidence": {
+        "checked": "https://swmrv.com/",
+        "phone_quote": "720-588-3660 (7205883660)",
+        "coverage_quotes": [
+          "We serve Colorado Springs, Pueblo, Monument, Woodland Park, Castle Rock, and surrounding areas across southern Colorado."
+        ],
+        "type_quote": "No towing, no shop drop-off. We come to your campsite, driveway, or storage facility.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "ASAP Mobile RV Tech",
+      "c": "Larkspur, Monument & Colorado Springs",
+      "p": "719-922-2151",
+      "u": "https://asapmobilervtech.com/",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "ASAP Mobile RV Tech is a family-owned mobile RV repair and maintenance business with a shop in Larkspur. The site says it provides mobile RV repair service to Monument and Colorado Springs as well as the Front Range and surrounding areas. Listed work includes maintenance, repairs, winterizing, spring wake-up and roof repair and re-coating.",
+      "g": [
+        "mobile RV repair",
+        "RV maintenance",
+        "RV generators",
+        "RV solar",
+        "RV roofing"
+      ],
+      "base": "Larkspur",
+      "areas": [
+        "Monument",
+        "Colorado Springs",
+        "Larkspur"
+      ],
+      "region": "Front Range",
+      "evidence": {
+        "checked": "https://asapmobilervtech.com/",
+        "phone_quote": "# 719-922-2151",
+        "coverage_quotes": [
+          "We are a family-owned and operated business that provides mobile RV repair service to Monument and Colorado Springs, as well as the Front Range and surrounding areas."
+        ],
+        "type_quote": "Along with our mobile service, we now also have a shop in Larkspur CO for all your needs!",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Caliber RV Inspection & Service LLC",
+      "c": "Fountain & Colorado Springs, CO",
+      "p": "719-726-2537",
+      "u": "https://www.caliberrvco.com/repairs-and-welding",
+      "t": "mobile",
+      "e": false,
+      "r": true,
+      "d": "Caliber RV Inspection & Service LLC is a veteran-owned mobile RV repair and welding business based in Fountain. The site says its technician comes directly to the customer in Fountain, Colorado Springs, Pueblo, Monument and Security-Widefield for interior, exterior, appliance and chassis work. It states the technician performs brake inspections, replaces pads and rotors and handles chassis, suspension and frame repairs.",
+      "g": [
+        "mobile RV repair",
+        "RV welding",
+        "chassis and suspension repair",
+        "structural frame repairs",
+        "RV appliance repair"
+      ],
+      "base": "Fountain",
+      "areas": [
+        "Fountain",
+        "Colorado Springs",
+        "Pueblo",
+        "Monument",
+        "Security-Widefield",
+        "Castle Rock",
+        "Peyton",
+        "Calhan"
+      ],
+      "region": "Southern Colorado",
+      "evidence": {
+        "checked": "https://www.caliberrvco.com/repairs-and-welding",
+        "phone_quote": "719-726-2537",
+        "coverage_quotes": [
+          "Fountain, CO | Pueblo, CO | Calhan, CO | Peyton, CO | Castle Rock, CO | Black Forest, CO | Fort Carson, CO | Monument, CO | Widefield, CO | US Air Force Academy, CO | Stratmoor, CO | Colorado Springs, CO"
+        ],
+        "type_quote": "Caliber RV Inspection & Service LLC offers mobile RV repair services that come directly to you",
+        "emergency_quote": null,
+        "roadside_quote": "Our technician can perform brake inspections, replace worn-out pads and rotors, and adjust the braking system for optimal performance.",
+        "licence": null
+      }
+    },
+    {
+      "n": "Wright Choice RV",
+      "c": "Pueblo West, CO",
+      "p": "(719) 332-3289",
+      "u": "https://www.wrightchoicerv.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "Wright Choice RV is a veteran-owned mobile RV repair and service business in Pueblo West. The site says it travels to the customer at home, at a storage facility or at a campsite for electrical, plumbing, awning, appliance and LP work. It lists emergency services available after normal business hours and on weekends.",
+      "g": [
+        "mobile RV repair",
+        "mobile emergency repair",
+        "RV inspections and diagnostics",
+        "electrical",
+        "plumbing",
+        "welding"
+      ],
+      "base": "Pueblo West",
+      "areas": [
+        "Pueblo West",
+        "Pueblo"
+      ],
+      "region": "Southern Colorado",
+      "evidence": {
+        "checked": "https://www.wrightchoicerv.com/",
+        "phone_quote": "(719) 332-3289",
+        "coverage_quotes": [
+          "We Travel to You!",
+          "651 Calle De Caballos Pueblo West, CO 81007"
+        ],
+        "type_quote": "Mobile Emergency Repair ... We offer mobile service where you need it! At home, storage facility, campsite we can take care of your RV repair needs.",
+        "emergency_quote": "Emergency Services: Available after normal business hours and on weekends",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "RV Remedy, LLC",
+      "c": "Pueblo, CO",
+      "p": "719-460-0991",
+      "u": "https://rvremedy.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "RV Remedy, LLC is an RV repair and parts shop at 2126 Unit B South Prairie Avenue in Pueblo. The site says it handles complete roof repairs, damaged walls, floors, windows, appliances, plumbing and electrical systems. It also runs a full-service detailing shop and buys damaged travel trailers.",
+      "g": [
+        "RV repair",
+        "roof repair",
+        "RV appliances",
+        "RV detailing",
+        "RV parts"
+      ],
+      "base": "Pueblo",
+      "areas": [
+        "Pueblo"
+      ],
+      "region": null,
+      "evidence": {
+        "checked": "https://rvremedy.com/",
+        "phone_quote": "719-460-0991 (7194600991)",
+        "coverage_quotes": [
+          "Whether you need RV parts in Pueblo, CO, or reliable RV repair in Pueblo, CO, we have you covered."
+        ],
+        "type_quote": "We also help you make the most of what you have with our full-service detailing shop for both inside and out",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Jefe's RV Service",
+      "c": "Denver Metro (Commerce City), CO",
+      "p": "720-484-5816",
+      "u": "https://www.jefesrvservice.com/",
+      "t": "both",
+      "e": true,
+      "r": false,
+      "d": "Jefe's RV Service is an RV repair shop and mobile service based in Commerce City serving the Denver metro area. The site says it handles electrical, plumbing, appliance, structural and exterior repairs plus winterization and pre-purchase inspections. It publishes an emergency RV repair hotline and states it does not work on engines, transmissions or brakes.",
+      "g": [
+        "RV repair shop",
+        "mobile RV repair",
+        "emergency RV repair hotline",
+        "hail damage repair",
+        "RV winterization"
+      ],
+      "base": "Commerce City",
+      "areas": [
+        "Denver",
+        "Arvada",
+        "Broomfield",
+        "Thornton",
+        "Westminster",
+        "Northglenn",
+        "Commerce City",
+        "Brighton",
+        "Louisville",
+        "Lafayette",
+        "Superior"
+      ],
+      "region": "Denver Metro / Front Range",
+      "spec": "We do NOT work on engines, transmissions, brakes, or any other mechanical components.",
+      "evidence": {
+        "checked": "https://www.jefesrvservice.com/",
+        "phone_quote": "Emergency RV Repair Hotline: (720) 484-5816",
+        "coverage_quotes": [
+          "Primary Service Areas: Denver, Arvada, Broomfield, Thornton, Westminster, Northglenn, Federal Heights, Commerce City, Brighton, Louisville, Lafayette, Superior, and surrounding Colorado communities."
+        ],
+        "type_quote": "Our centrally located facility allows us to provide efficient service throughout the metro area, and our mobile repair capabilities extend our reach to customers who need on-site repairs.",
+        "emergency_quote": "Emergency RV Repair Hotline: (720) 484-5816",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "RVFix Mobile Repair, LLC",
+      "c": "Arvada & Front Range, CO",
+      "p": "(303) 241-2290",
+      "u": "https://rvfixmobilerepair.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "RVFix Mobile Repair, LLC is a family-owned mobile RV repair business based in Arvada. The site says it travels to surrounding Front Range communities within a 60 mile radius, including Granby and Grand Lake in the summer. It says Sunday is reserved for emergencies and lists plumbing, electrical, appliance, roof and slide-out work.",
+      "g": [
+        "mobile RV repair",
+        "we come to you",
+        "plumbing",
+        "electrical",
+        "roof repair",
+        "slide-out repair"
+      ],
+      "base": "Arvada",
+      "areas": [
+        "Arvada",
+        "Granby",
+        "Grand Lake"
+      ],
+      "region": "Colorado Front Range",
+      "evidence": {
+        "checked": "https://rvfixmobilerepair.com/",
+        "phone_quote": "(303) 241-2290 (+13032412290)",
+        "coverage_quotes": [
+          "From our home base in Arvada, Co we travel to all of the surrounding Front Range communities, including Granby and Grand Lake areas in the summer.",
+          "We come to you wherever you need us within a 60 mile radius of our homebase in Arvada."
+        ],
+        "type_quote": "We're a family-owned mobile RV repair company that provides quality service to Colorado's Front Range RVers.",
+        "emergency_quote": "Our service hours are Mon-Sat 9am-5pm. Sunday only for emergencies.",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "On the Road Mobile RV Repair",
+      "c": "Denver Foothills & Front Range, CO",
+      "p": "720-968-6205",
+      "u": "https://www.mobile-rv-repair.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "On the Road Mobile RV Repair performs RV repair in the field for motorhomes, towables, campers and overland RVs. The site says it is located in the Denver foothills and serves across the Front Range, with a trip fee outside a 60 mile radius. It notes emergency rates apply outside of business hours.",
+      "g": [
+        "mobile RV repair",
+        "in the field",
+        "solar",
+        "furnace and water heater",
+        "emergency rates outside business hours"
+      ],
+      "base": "Denver",
+      "areas": [
+        "Denver"
+      ],
+      "region": "Front Range",
+      "evidence": {
+        "checked": "https://www.mobile-rv-repair.com/",
+        "phone_quote": "OTRmobileRVrepair@gmail.com 720-968-6205",
+        "coverage_quotes": [
+          "We are located in the Denver foothills and we are happy to offer our services across the front range.",
+          "Location: Denver Colorado and surrounding foothills."
+        ],
+        "type_quote": "Our skilled technician performs your RV repair in the field.",
+        "emergency_quote": "We understand that emergencies happen and we will do our best to not leave you stranded. Emergency rates apply outside of business hours.",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Big Bear RV Repair NoCo",
+      "c": "Fort Collins & Northern Colorado",
+      "p": "720-260-7451",
+      "u": "https://www.bigbearrvrepairnoco.com/",
+      "t": "mobile",
+      "e": false,
+      "r": true,
+      "d": "Big Bear RV Repair NoCo is a mobile RV repair service near Fort Collins with a yard for large projects. The site says it covers Fort Collins, Loveland, Windsor, Greeley, Johnstown and other northern Colorado towns up the I-25 corridor. Its listed work includes powertrain and drivetrain repairs, Onan generators, trailer bearings, brakes and axles and emergency roadside service.",
+      "g": [
+        "mobile RV repair",
+        "on-site RV service",
+        "emergency roadside",
+        "bearings brakes and axles",
+        "powertrain and drivetrain service"
+      ],
+      "base": "Fort Collins",
+      "areas": [
+        "Fort Collins",
+        "Loveland",
+        "Greeley",
+        "Windsor",
+        "Johnstown",
+        "Berthoud",
+        "Wellington",
+        "Timnath",
+        "Longmont",
+        "Brighton",
+        "Thornton",
+        "Westminster",
+        "Broomfield"
+      ],
+      "region": "Northern Colorado / I-25 corridor",
+      "evidence": {
+        "checked": "https://www.bigbearrvrepairnoco.com/",
+        "phone_quote": "Call or text to 720-260-7451",
+        "coverage_quotes": [
+          "Our service area includes Fort Collins, Loveland, Windsor, Greeley, Johnstown, Berthoud, Wellington, Timnath, and nearby unincorporated areas like Laporte, Bellvue, and Livermore and the I-25 corridor up to Cheyenne, WY.",
+          "Fort Collins, Loveland, Greeley, Windsor, Johnstown, Berthoud, Timnath, Wellington, Severance, Milliken, Evans, La Salle, Eaton, Gilcrest, Ault, Platteville, Firestone, Longmont, Brighton, Thornton, Westminster, Broomfield."
+        ],
+        "type_quote": "We are primarily a mobile service. For large projects, we do have a yard.",
+        "emergency_quote": null,
+        "roadside_quote": "We do minor service/repairs on powertrains and drivetrains and Onan generators.",
+        "licence": null
+      }
+    },
+    {
+      "n": "High Road RV Repair",
+      "c": "Windsor & Northern Colorado",
+      "p": "970-217-1394",
+      "u": "https://highroadrvrepair.com/",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "High Road RV Repair is a mobile RV repair service in Northern Colorado with a shop for larger jobs or winter work. The site says the technician comes to the customer with a fully stocked mobile repair truck and can also do work at the shop. It lists electrical, plumbing, solar, appliance and maintenance work and states engine repair is not offered.",
+      "g": [
+        "mobile RV repair",
+        "we come to you",
+        "shop for larger jobs",
+        "electrical",
+        "plumbing",
+        "solar"
+      ],
+      "base": "Windsor",
+      "areas": [],
+      "region": "Northern Colorado",
+      "spec": "No engine repair.",
+      "evidence": {
+        "checked": "https://highroadrvrepair.com/",
+        "phone_quote": "Phone Number: 970-217-1394",
+        "coverage_quotes": [
+          "High Road RV Repair is your trusted mobile RV repair service provider in Northern Colorado."
+        ],
+        "type_quote": "Are You Mobile? Yes I do my best to come prepared with a fully stocked mobile repair truck to fix your problem on location. Do You Have a Shop? We have a shop for larger jobs or when winter weather forces us indoors.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "L Triple C RV Services",
+      "c": "Fort Collins & Northern Colorado",
+      "p": "970 691 0464",
+      "u": "https://ltriplecrv.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "L Triple C RV Services is a certified mobile RV technician business based in Fort Collins. The site says it offers mobile RV maintenance and repair service in the Northern Colorado and Southern Wyoming area and comes to the customer's home or campsite. It lists annual maintenance, efficiency evaluations, solar installs and new owner orientations.",
+      "g": [
+        "mobile RV maintenance",
+        "mobile RV repair",
+        "NRVTA certified",
+        "solar installs",
+        "annual maintenance"
+      ],
+      "base": "Fort Collins",
+      "areas": [],
+      "region": "Northern Colorado and Southern Wyoming",
+      "evidence": {
+        "checked": "https://ltriplecrv.com/",
+        "phone_quote": "Call or Text 970 691 0464",
+        "coverage_quotes": [
+          "Offering mobile RV maintenance and repair service in the Northern Colorado and Southern Wyoming area."
+        ],
+        "type_quote": "Mobile Certified RV technician that can come to your home or campsite and help with your RV repair.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Colorado RV Service",
+      "c": "Estes Park, Longmont & Boulder County",
+      "p": "303-525-7894",
+      "u": "https://www.coloradorvservice.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Colorado RV Service is a mobile RV repair and maintenance business located in Estes Park. The site says it serves Estes Park, Longmont, Boulder and Boulder County, including campgrounds near Rocky Mountain National Park, and comes to the customer. It lists furnace, air conditioner, propane, water system, brake, bearing and roof work.",
+      "g": [
+        "mobile RV repair",
+        "we come to you",
+        "RV inspections",
+        "furnace repair",
+        "brake and bearing service",
+        "roof sealing"
+      ],
+      "base": "Estes Park",
+      "areas": [
+        "Estes Park",
+        "Longmont",
+        "Boulder",
+        "Hygiene",
+        "Mead",
+        "Firestone",
+        "Frederick",
+        "Berthoud"
+      ],
+      "region": "Boulder County / Northern Colorado",
+      "evidence": {
+        "checked": "https://www.coloradorvservice.com/about-us",
+        "phone_quote": "Call Us: 303-525-7894",
+        "coverage_quotes": [
+          "We proudly provide mobile RV repair in Estes Park, Longmont, Boulder, and throughout Boulder County, including campgrounds and staging areas near Rocky Mountain National Park.",
+          "We are local and regularly service: Longmont, Hygiene, Mead, Firestone, Frederick, Boulder, Berthoud"
+        ],
+        "type_quote": "Colorado RV Service is located in Estes Park and provides fast mobile RV repair for campers, travel trailers, fifth wheels, and motorhomes near Rocky Mountain National Park.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Nathan's RV Service",
+      "c": "Weldona & Fort Morgan, CO",
+      "p": "(970) 232-9914",
+      "u": "https://www.nathansrvservice.com/",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "Nathan's RV Service is an RV repair and customization shop in Weldona that also runs a mobile service. The site says the shop is by appointment only and the mobile service range is 35 miles from the shop, with shop drop-off outside that range. Listed work includes cabinetry, electrical, plumbing, flooring, awnings, jacks, roof, slideouts, appliances, lithium conversions and solar.",
+      "g": [
+        "RV repair shop",
+        "mobile RV service",
+        "RV customization",
+        "lithium conversions",
+        "solar charging"
+      ],
+      "base": "Weldona",
+      "areas": [
+        "Weldona",
+        "Fort Morgan"
+      ],
+      "region": "Fort Morgan area",
+      "evidence": {
+        "checked": "https://www.nathansrvservice.com/",
+        "phone_quote": "(970) 232-9914",
+        "coverage_quotes": [
+          "Shop Location by Appointment Only",
+          "Mobile service range is 35 miles from shop location.",
+          "In 2023, Nathan relocated his shop from Fort Collins to a more peaceful spot near North Jackson Lake to better serve local full-timers, state park campers, and his amazing neighbors in the Fort Morgan area."
+        ],
+        "type_quote": "Shop Location by Appointment Only ... Mobile service range is 35 miles from shop location.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Onward RV Services",
+      "c": "Grand Junction & Western Colorado",
+      "p": "(970) 366-8559",
+      "u": "https://www.onwardrvservices.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Onward RV Services is a mobile RV repair business based in Grand Junction. The site says it provides mobile RV repair to Grand Junction and surrounding areas, including Mesa, Montrose, Delta and Garfield counties, and comes to the customer's location. It lists solar, air conditioning, awning, refrigerator, furnace, water heater, jack, slide, electrical, generator and waste system work.",
+      "g": [
+        "mobile RV repair",
+        "we come to you",
+        "RV appliances",
+        "solar",
+        "electrical"
+      ],
+      "base": "Grand Junction",
+      "areas": [
+        "Grand Junction"
+      ],
+      "region": "Western Colorado",
+      "evidence": {
+        "checked": "https://www.onwardrvservices.com/",
+        "phone_quote": "(970) 366-8559",
+        "coverage_quotes": [
+          "We provide mobile RV repair services to Grand Junction and surrounding areas, including the following counties Mesa, Montrose, Delta, and Garfield."
+        ],
+        "type_quote": "We are Onward RV Services and provide mobile RV repair in Grand Junction.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Waypoint RV",
+      "c": "Fruita & Grand Junction, CO",
+      "p": "970.639.0353",
+      "u": "https://waypointrvservice.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Waypoint RV is an on-site and mobile RV repair business based in Fruita. The site says it handles water heaters, air conditioning, furnaces, refrigerators and roofs and offers mobile rescue visits to get an RV moving again. It charges a 75 dollar per hour travel fee for mobile service and also offers RV and camper detailing.",
+      "g": [
+        "on-site RV repairs",
+        "mobile rescue",
+        "water heaters",
+        "air conditioning",
+        "roof repair"
+      ],
+      "base": "Fruita",
+      "areas": [
+        "Fruita"
+      ],
+      "region": null,
+      "evidence": {
+        "checked": "https://waypointrvservice.com/",
+        "phone_quote": "970.639.0353 (970-639-0353)",
+        "coverage_quotes": [
+          "Fruita, CO 81521"
+        ],
+        "type_quote": "On-Site RV Repairs When No One Else Calls You Back",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "High Altitude RV Repair & Consulting",
+      "c": "Cortez, CO",
+      "p": "970-749-8311",
+      "u": "https://highaltitudervrepair.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "High Altitude RV Repair & Consulting is a mobile RV repair business in Cortez. The site says it serves Cortez, Dolores, Mancos, Dove Creek, Towaoc, Cahone, Yellow Jacket and Pleasant View and offers mobile service that comes to the customer. It says it handles everything from routine maintenance to complex repairs.",
+      "g": [
+        "mobile RV repair",
+        "on-location service",
+        "RV maintenance",
+        "RV consulting"
+      ],
+      "base": "Cortez",
+      "areas": [
+        "Cortez",
+        "Dolores",
+        "Mancos",
+        "Dove Creek",
+        "Towaoc",
+        "Cahone",
+        "Yellow Jacket",
+        "Pleasant View"
+      ],
+      "region": null,
+      "evidence": {
+        "checked": "https://highaltitudervrepair.com/",
+        "phone_quote": "+1.9707498311 (+19707498311)",
+        "coverage_quotes": [
+          "At High Altitude RV Repair & Consulting, we pride ourselves on delivering top-notch RV repair services in various locations across Colorado, including Cortez, Dolores, Mancos, Dove Creek, Towaoc, Cahone, Yellow Jacket, and Pleasant View."
+        ],
+        "type_quote": "We offer mobile RV repair services for your convenience. No need to worry about driving your RV to a repair shop; we bring our services to you.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Ark Valley RV Services",
+      "c": "Salida, Buena Vista & Gunnison, CO",
+      "p": "(719) 626-1046",
+      "u": "https://www.arkvalleyrvservices.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Ark Valley RV Services is a mobile RV repair business based in Salida. The site says it serves Salida, Buena Vista, Gunnison and Leadville in the Arkansas River Valley and that the technician comes to the customer. It lists RV repairs, diagnostics, maintenance, cleanings, upgrades and winterizing plans.",
+      "g": [
+        "mobile RV repair",
+        "RV diagnostics",
+        "RV maintenance",
+        "winterizing",
+        "warranty work"
+      ],
+      "base": "Salida",
+      "areas": [
+        "Salida",
+        "Buena Vista",
+        "Gunnison",
+        "Leadville"
+      ],
+      "region": "Arkansas River Valley / high country",
+      "evidence": {
+        "checked": "https://www.arkvalleyrvservices.com/",
+        "phone_quote": "Tel: (719) 626-1046",
+        "coverage_quotes": [
+          "(Salida, Buena Vista, Gunnison, Leadville)",
+          "We run out of Salida, Colorado, and are able to service Salida, Buena Vista, Gunnison, and surrounding counties."
+        ],
+        "type_quote": "At Ark Valley RV Services, I am dedicated to providing top-notch mobile RV repair services.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Selective RV Services",
+      "c": "Montrose & Ouray Counties, CO",
+      "p": "(970) 258-0179",
+      "u": "https://selectivervservices.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Selective RV Services is a mobile RV repair business based in Montrose. The site says it serves ranches, RV parks, Black Canyon National Park, state parks and public lands throughout Montrose and Ouray counties by appointment. Listed work includes preventative maintenance checks, emergency slide, awning and landing gear retract, generator repair, solar consultation and inspections.",
+      "g": [
+        "mobile RV repair",
+        "by appointment",
+        "generator repair",
+        "solar consultation",
+        "inspections"
+      ],
+      "base": "Montrose",
+      "areas": [],
+      "region": "Montrose and Ouray counties",
+      "spec": "No slideouts or furnaces.",
+      "evidence": {
+        "checked": "https://selectivervservices.com/",
+        "phone_quote": "(970) 258-0179",
+        "coverage_quotes": [
+          "Serving ranches, RV parks, Black Canyon National Park, state parks, and public lands throughout Montrose and Ouray counties."
+        ],
+        "type_quote": "Mobile RV Services and Repair",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Moyes Mobile RV",
+      "c": "Loveland & Longmont, CO",
+      "p": "(970) 775-8661",
+      "u": "https://moyesrv.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Moyes Mobile RV is a mobile RV repair and appliance repair business in Loveland and Longmont. The site says it serves RV owners in Loveland and Longmont within a 30 mile radius and that as a mobile business it travels to the customer's home or campground. It offers tent trailer and lift system services and discounts for seniors and veterans.",
+      "g": [
+        "mobile RV repair",
+        "RV appliance repair",
+        "we come to you",
+        "tent trailer and lift system service"
+      ],
+      "base": "Loveland",
+      "areas": [
+        "Loveland",
+        "Longmont"
+      ],
+      "region": null,
+      "evidence": {
+        "checked": "https://moyesrv.com/",
+        "phone_quote": "(970) 775-8661",
+        "coverage_quotes": [
+          "Moyes Mobile RV provides mobile RV repair services to RV owners in Loveland, Longmont, CO and within a 30-mile radius."
+        ],
+        "type_quote": "You don't have to worry about coming to us - as a mobile business, we can travel to your home or campground.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    }
+  ]
+}
