@@ -54,8 +54,8 @@ def norm(s):
 
 # the same measurement is written several ways across a page and its source; make them one way
 UNIT_SUBS = (
-    (r"(\d)\s*(?:\u00b0|deg(?:rees)?)\s*F\b", r"\1 F"),
-    (r"(\d)\s*(?:\u00b0|deg(?:rees)?)\s*C\b", r"\1 C"),
+    (r"(\d+)\s*(?:\u00b0|deg(?:rees)?)\s*F\b", r"\1 F"),
+    (r"(\d+)\s*(?:\u00b0|deg(?:rees)?)\s*C\b", r"\1 C"),
     (r"(\d)\s*[\u2033\"]\s*(?:\[|\()?\s*(\d+)\s*mm", r"\1 inch (\2mm)"),
     (r"(\d+)\s*/\s*(\d+)\s*[\u2033\"]", r"\1/\2 inch"),
     (r"\bpsi\b", "PSI"), (r"\bwc\b", "WC"),
@@ -92,6 +92,11 @@ def quotes_on_page(text):
     somebody else's, and reporting them as unsourced quotations is noise.
     """
     body = text.split("<body", 1)[1] if "<body" in text else text
+    # Strip attribute values before looking for quotations. An alt or title attribute is a description of
+    # an IMAGE, not a quotation from anybody, and the sweep reported three of them as unsourced quotes -
+    # "Schematic of an RV 12-volt system...", "A Honda EU2000i portable inverter generator". Same class as
+    # reading the <title> as a quote: the page describing itself is not the page quoting a source.
+    body = re.sub(r'\b(?:alt|title|aria-label|placeholder)="[^"]*"', " ", body)
     out = []
     for m in re.finditer(r"<b>\s*[\"\"](.*?)[\"\"]\s*</b>", body, re.S):
         q = norm(m.group(1))
@@ -196,12 +201,15 @@ def check(path, no_fetch=False):
                 return True
         return False
 
+    corpus_fold = [c.lower() for c in corpus]
+
     def present(q, c):
         """A quote containing an ellipsis has had text omitted, so check its fragments separately.
         The first run flagged genuine Winnebago wording as unsourced purely because the page wrote
         "... on the roof ..." while the manual writes it as one sentence."""
         frags = [f.strip() for f in re.split(r"\s*\.\.\.+\s*|\s*\u2026\s*", q) if len(f.split()) >= 3]
-        return all(any(f in c or word_run(f, c) for c in corpus) for f in (frags or [q]))
+        return all(any(f.lower() in cf or word_run(f.lower(), cf) for cf in corpus_fold)
+                   for f in (frags or [q]))
 
     def near_miss(q):
         """Distinguish "not in any source" from "in a source but not verbatim".
@@ -213,10 +221,10 @@ def check(path, no_fetch=False):
         Those are quotation-fidelity defects, not missing sources, and they deserve saying differently -
         a reader checking either quote against the maker's page finds words that do not match.
         """
-        qw = q.split()
+        qw = q.lower().split()
         best = (0, None)
         for c in corpus:
-            cw = c.split()
+            cw = c.lower().split()
             for start in range(0, max(1, len(cw) - len(qw) + 1)):
                 window = cw[start:start + len(qw)]
                 hits = sum(1 for a, b in zip(qw, window) if a == b)
