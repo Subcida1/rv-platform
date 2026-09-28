@@ -340,5 +340,344 @@ window.RV_LISTINGS_CA = [
    "Mobile only",
    "Warranty work"
   ],  "d": "Dealer-trained RVIA technician, mobile to your site, servicing every RV system except automotive and chassis: electrical including 12 and 120 volt, inverter, converter, transfer switches, generators and solar, electronics, appliances, plumbing, HVAC, roofing, awnings, slide toppers and interiors. Accepts insurance and extended warranty work. Dealer representative for Dometic, Norcold, Suburban, Thetford, Lippert and Coleman.",  "reg": "valley-north-bay"
+ },
+ {  "n": "On-Site Mobile RV Repair",  "c": "Stockton and San Joaquin County",  "p": "(209) 901-7667",  "u": "https://www.on-site-rv.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Veteran-owned mobile RV repair business based in Stockton that comes to the RV at a driveway, storage lot, campground, marina, or roadside. It works only on the house side of the coach, covering generators, air conditioners, appliances, electrical, plumbing, propane, slide-outs, leveling jacks, awnings, and roof resealing. Owner Rob Leal is a certified Lippert landing gear and slide-out technician and offers same-day appointments.",  "g": [
+   "mobile RV repair",
+   "veteran-owned",
+   "Lippert certified",
+   "generators",
+   "air conditioning",
+   "slide-outs",
+   "roof resealing",
+   "same-day service"
+  ],  "base": "stockton",  "areas": [
+   "stockton",
+   "lodi",
+   "manteca",
+   "tracy",
+   "modesto",
+   "french camp",
+   "lathrop",
+   "brentwood",
+   "discovery bay",
+   "livermore"
+  ],  "region": "San Joaquin Valley",  "spec": "Mobile only, no shop; house-side RV systems only, no engines, drivetrain, or chassis",  "reg": "central-valley"
+ },
+ {  "n": "California RV Specialists",  "c": "Lodi and San Joaquin County",  "p": "209-263-7040",  "u": "https://calrvspecialists.com/",  "t": "center",  "e": false,  "r": false,  "d": "Independent RV repair facility in Lodi that has served Northern California since 2003 and repairs RVs rather than selling them. It handles general repair, preventive maintenance, diagnostics, inspections, roof repair and replacement, suspension and brake work, slide-outs, appliances, electrical and solar, and insurance or warranty repairs. The shop states it does not offer mobile service and does not do engine, transmission, or chassis repairs.",  "g": [
+   "independent RV repair",
+   "RV roof repair",
+   "suspension",
+   "brakes",
+   "slide-outs",
+   "appliances",
+   "electrical",
+   "solar",
+   "inspections",
+   "warranty repairs"
+  ],  "base": "lodi",  "areas": [
+   "lodi",
+   "sacramento",
+   "stockton",
+   "modesto",
+   "elk grove",
+   "galt",
+   "manteca",
+   "tracy",
+   "fairfield",
+   "vacaville",
+   "napa",
+   "davis",
+   "woodland",
+   "roseville",
+   "folsom",
+   "auburn"
+  ],  "region": "Northern California",  "spec": "Shop only, no mobile; no engine, transmission, or chassis repairs",  "reg": "central-valley"
+ },
+ {  "n": "Geweke's Lodi RV Collision Center",  "c": "Lodi and San Joaquin County",  "p": "(209) 368-0561",  "u": "https://www.lodirvcollision.com/",  "t": "center",  "e": false,  "r": true,  "d": "RV collision and service shop in Lodi that has served the San Joaquin region for over 35 years, working on motorhomes, fifth wheels, travel trailers, toy haulers, and trailers. It performs RV body and collision repair, roof and exterior work, interior comfort systems, electrical, plumbing, and tank service, and installs upgrades such as solar and satellite. The shop also advertises 24/7 light towing and handles insurance and extended warranty claims.",  "g": [
+   "RV collision repair",
+   "body repair",
+   "roof repair",
+   "electrical",
+   "plumbing",
+   "towing",
+   "insurance claims",
+   "warranty support"
+  ],  "base": "lodi",  "areas": [],  "region": "San Joaquin region",  "reg": "central-valley"
+ },
+ {  "n": "Tracy Mobile RV Service",  "c": "Tracy and San Joaquin County",  "p": "(510) 812-1420",  "u": "https://www.tracymobilervservice.com/",  "t": "mobile",  "e": true,  "r": false,  "d": "Mobile RV repair business based in Tracy that brings maintenance and repair to the RV's location. It specializes in RV-specific electrical repairs, air conditioning service, alignment, flooring, and general repairs for RVs and trailers. The site states that the team handles emergency repairs alongside routine maintenance.",  "g": [
+   "mobile RV repair",
+   "RV electrical",
+   "RV AC service",
+   "RV alignment",
+   "RV flooring",
+   "emergency repairs"
+  ],  "base": "tracy",  "areas": [
+   "tracy"
+  ],  "reg": "central-valley"
+ },
+ {  "n": "Roger's Camping Trailers Inc.",  "c": "Tracy and San Joaquin County",  "p": "(510) 657-5218",  "u": "https://www.rogerscampingtrailers.com/",  "t": "center",  "e": false,  "r": false,  "d": "Family-run RV and trailer repair shop in Tracy that has been in business since 1965. It provides roof maintenance and repair, plumbing repairs, trailer undercarriage service for brakes, springs, wheel bearings, and axles, and appliance repair and replacement. The shop also sells RVs and lists customers across the Central Valley and nearby Bay Area cities.",  "g": [
+   "RV repair",
+   "trailer repair",
+   "roof maintenance",
+   "plumbing repairs",
+   "undercarriage service",
+   "appliance repair"
+  ],  "base": "tracy",  "areas": [
+   "san ramon",
+   "dublin",
+   "pleasanton",
+   "livermore",
+   "manteca",
+   "lathrop",
+   "antioch",
+   "modesto",
+   "tracy",
+   "stockton"
+  ],  "region": "Central Valley",  "reg": "central-valley"
+ },
+ {  "n": "Toscano RV",  "c": "Los Banos and Merced County",  "p": "(209) 826-2488",  "u": "https://www.toscanorv.com/we-repair-your-rv-motorhome-or-trailer--service",  "t": "center",  "e": false,  "r": false,  "d": "RV dealership and service department in Los Banos that has been in business since 1965, with a repair shop serving Class A, B, and C motorhomes, fifth wheels, toy haulers, travel trailers, tent trailers, folding campers, and truck campers. Its factory-trained technicians specialize in Airstream, Redwood RV, Eclipse, Forest River, KZ RV, and Lance and perform warranty and recall work. The site says it serves the surrounding Central Valley and Bay Area and that customers bring their RV to the dealership.",  "g": [
+   "RV service department",
+   "motorhomes",
+   "fifth wheels",
+   "travel trailers",
+   "warranty work",
+   "Airstream"
+  ],  "base": "los banos",  "areas": [],  "region": "Central Valley and the Bay Area",  "reg": "central-valley"
+ },
+ {  "n": "Century Club RV and Solar",  "c": "Bakersfield",  "p": "(661) 412-2277",  "u": "https://www.centuryclubrv.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Mobile-only RV repair and renovation business based out of Bakersfield, CA. They handle anything from small fixes to full renovations, custom carpentry, flooring replacement, roof and slide leak inspections, winterization, and off-grid solar systems. They state they come to you as a mobile service company, so there is no shop to drive to.",  "g": [
+   "mobile service",
+   "RV repair",
+   "renovations",
+   "solar",
+   "boondocking"
+  ],  "base": "bakersfield",  "areas": [],  "reg": "central-valley"
+ },
+ {  "n": "Bakersfield RV Center, Inc.",  "c": "Bakersfield",  "p": "661-480-1900",  "u": "https://www.bakersfieldrvcenter.com/",  "t": "center",  "e": false,  "r": false,  "d": "RV-only repair and collision shop in East Bakersfield with more than 30 years in business. They run an 8500 square foot service center for motorhome and travel trailer collision repair, fiberglass and metal body work, paint and restoration, electrical, plumbing, appliances, generators and roof sealants. Customers bring their RV to the shop for service and free estimates, and they also welcome extended service contracts.",  "g": [
+   "RV collision repair",
+   "RV body work",
+   "RV paint",
+   "RV appliances",
+   "shop"
+  ],  "base": "bakersfield",  "areas": [],  "reg": "central-valley"
+ },
+ {  "n": "Rosedale RV",  "c": "Bakersfield",  "p": "661-588-0277",  "u": "https://www.rosedalerv.net/",  "t": "both",  "e": false,  "r": false,  "d": "Bakersfield RV service center and parts store that also offers mobile service, established in 1982 as Advanced RV Mobile. They do complete RV repairs plus collision repair, hitches, holding tanks, A/C, refrigerators, furnaces, awnings, generators, water heaters, plumbing, electrical diagnostics and restorations. Customers can bring the RV to the shop or use their mobile and on-site service, and they accept insurance and extended warranties.",  "g": [
+   "mobile service",
+   "shop",
+   "parts",
+   "collision repair",
+   "appliances"
+  ],  "base": "bakersfield",  "areas": [],  "reg": "central-valley"
+ },
+ {  "n": "Compass RV Fresno",  "c": "Fresno and the Central Valley",  "p": "(559)614-6545",  "u": "https://compassrvfresno.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Locally owned mobile RV repair service working across the Central Valley since 2023. They come to your location and work on Lippert leveling, slide-out and awning systems, Dometic toilets, refrigerators, awnings, air conditioners and water heaters, and Norcold refrigerators. You book by phone or email and they provide quotes on request.",  "g": [
+   "mobile service",
+   "Lippert",
+   "Dometic",
+   "Norcold",
+   "slide-outs"
+  ],  "base": "fresno",  "areas": [],  "region": "Central Valley",  "reg": "central-valley"
+ },
+ {  "n": "CTS RV Repair",  "c": "Fresno, Clovis, Sanger and Fowler",  "p": "(559) 246-5125",  "u": "https://ctsrvrepair.com/",  "t": "center",  "e": false,  "r": false,  "d": "Fresno RV repair shop with 30 years of experience serving the local RV community, focused on the inside systems of motorhomes and trailers. They handle appliances, air conditioning, plumbing, refrigeration, awnings, roofing, wheels and brakes, plus RV water heaters and solar panel installation, and they stock and source parts. They are a shop you bring the RV to and they state they perform any RV repair except engine service.",  "g": [
+   "shop",
+   "RV solar",
+   "RV parts",
+   "appliances",
+   "no engine service"
+  ],  "base": "fresno",  "areas": [
+   "clovis",
+   "huron",
+   "sanger",
+   "mendota",
+   "merced",
+   "fresno",
+   "coarsegold",
+   "fowler"
+  ],  "spec": "Shop only, no mobile; no engine service",  "reg": "central-valley"
+ },
+ {  "n": "Mikes RV Center",  "c": "Madera and surrounding areas",  "p": "559-822-4860",  "u": "https://mikesrvcenter.net/",  "t": "both",  "e": false,  "r": true,  "d": "Locally owned RV repair shop in Madera, in business since 1995, that works on RV repairs at the shop or comes to you. They service electrical, plumbing, appliances, air conditioning and heating, brakes, suspension and steering, lighting, generators, slide-outs, roofs, windows, doors and water heaters, and they stock RV parts and accessories. They also state they offer mobile RV repair and 24/7 roadside assistance for breakdowns on the road or repairs at your campsite.",  "g": [
+   "shop",
+   "mobile service",
+   "roadside assistance",
+   "parts",
+   "appliances"
+  ],  "base": "madera",  "areas": [
+   "madera"
+  ],  "reg": "central-valley"
+ },
+ {  "n": "RV Express",  "c": "Visalia and surrounding areas",  "p": "(559) 651-8080",  "u": "https://rvexpressca.com/",  "t": "center",  "e": false,  "r": false,  "d": "Family-owned RV repair and service shop in Visalia that has served the area for over 35 years. They repair motorhomes, travel trailers, 5th wheels and toy haulers, handling collision repairs, roof repairs, appliance repairs, and accessory or hitch installation, and they also sell parts and offer RV storage. Customers visit their full-service shop on West Goshen Avenue.",  "g": [
+   "shop",
+   "collision repairs",
+   "roof repairs",
+   "appliance repairs",
+   "storage"
+  ],  "base": "visalia",  "areas": [
+   "visalia"
+  ],  "reg": "central-valley"
+ },
+ {  "n": "The Mobile RV Repair Company",  "c": "Paso Robles and San Luis Obispo County",  "p": "(805) 423-8242",  "u": "https://themobilervrepaircompany.com/",  "t": "mobile",  "e": true,  "r": false,  "d": "A mobile RV repair company serving San Luis Obispo County, including Paso Robles, San Luis Obispo, and Pismo Beach. Technicians come to the customer at home, at a campground, or on the road. It handles roof inspections and repairs, appliance repairs and replacements, battery upgrades, slide out repairs, and hitch installations.",  "g": [
+   "mobile service",
+   "RV roof repair",
+   "RV appliances",
+   "slide out repair",
+   "SLO County"
+  ],  "base": "paso robles",  "areas": [
+   "paso robles",
+   "san luis obispo",
+   "pismo beach",
+   "san luis obispo county"
+  ],  "region": "San Luis Obispo County",  "reg": "central-coast"
+ },
+ {  "n": "Mike's Mobile RV Repair and Service",  "c": "Arroyo Grande and San Luis Obispo County",  "p": "(805) 710-3985",  "u": "https://mobilemikesrvservice.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "A family owned mobile RV repair and service business based in Arroyo Grande. It serves San Luis Obispo County and Northern Santa Barbara County and works on RVs inside and out with an RV technician and mechanic who has over 25 years of experience.",  "g": [
+   "mobile service",
+   "family owned",
+   "RV technician",
+   "extended warranties welcome"
+  ],  "base": "arroyo grande",  "areas": [
+   "san luis obispo county",
+   "northern santa barbara county"
+  ],  "reg": "central-coast"
+ },
+ {  "n": "Freedom RV Repair",  "c": "Paso Robles and the Central Coast",  "p": "805-975-5936",  "u": "https://www.frvrepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "A mobile RV repair service based in Paso Robles that comes to the customer at home or at a campsite. It handles roof repairs, air conditioning, brakes, bearings, electrical, plumbing, and seals. It does not do chassis work.",  "g": [
+   "mobile service",
+   "RV roof repair",
+   "RV air conditioning",
+   "brakes and bearings",
+   "no chassis work"
+  ],  "base": "paso robles",  "areas": [
+   "paso robles",
+   "atascadero",
+   "templeton",
+   "san luis obispo",
+   "creston",
+   "california valley",
+   "nacimiento lake",
+   "lake nacimiento",
+   "morro bay",
+   "pismo beach",
+   "cambria",
+   "king city",
+   "lockwood",
+   "bradley"
+  ],  "spec": "Mobile only, no chassis work",  "reg": "central-coast"
+ },
+ {  "n": "RV101 Repair",  "c": "Paso Robles to Pismo Beach",  "p": "(805) 835-1584",  "u": "https://rv101repair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "A mobile RV repair unit serving San Luis Obispo County from Paso Robles to Pismo Beach. It does general repairs and maintenance including electrical, plumbing, roof leaks, water pumps, trailer brakes, and air conditioning.",  "g": [
+   "mobile service",
+   "general RV repairs",
+   "electrical",
+   "plumbing",
+   "trailer brakes"
+  ],  "base": "",  "areas": [
+   "paso robles",
+   "pismo beach"
+  ],  "region": "San Luis Obispo County",  "reg": "central-coast"
+ },
+ {  "n": "Alan O'Neill RV Repairs",  "c": "Paso Robles and the Central Coast",  "p": "805 610 9394",  "u": "https://ifixrv.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "A mobile RV repair business working out of Paso Robles that travels to nearby towns. It handles RV repairs and installations including furnace repair and rearview camera installs.",  "g": [
+   "mobile service",
+   "RV repairs",
+   "furnace repair"
+  ],  "base": "paso robles",  "areas": [
+   "paso robles",
+   "templeton",
+   "san miguel",
+   "atascadero",
+   "pismo beach",
+   "morro bay",
+   "arroyo grande",
+   "cambria",
+   "cayucos"
+  ],  "reg": "central-coast"
+ },
+ {  "n": "Cal Coast RV LLC",  "c": "San Luis Obispo County",  "p": "805-369-9675",  "u": "https://calcoastrvrepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "An RV repair and maintenance company serving San Luis Obispo County. It works on travel trailers, fifth wheels, Class A, B, and C motorhomes, and pop ups, doing roof reseals, appliance repair, satellite installs, and solar installs.",  "g": [
+   "RV repairs",
+   "solar",
+   "appliance repair",
+   "roof reseals",
+   "SLO County"
+  ],  "base": "",  "areas": [
+   "atascadero",
+   "templeton",
+   "paso robles",
+   "pismo beach",
+   "san luis obispo",
+   "cambria"
+  ],  "region": "San Luis Obispo County",  "reg": "central-coast"
+ },
+ {  "n": "Monterey Mobile RV Repair",  "c": "Monterey and the Monterey Bay",  "p": "831.760.1898",  "u": "https://montereymobilervrepair.com/",  "t": "mobile",  "e": true,  "r": false,  "d": "A mobile RV repair service based in Pacific Grove that comes to customers in Monterey County. It offers emergency RV repairs and handles electrical, mechanical, heating, and cooling issues at a campground or roadside.",  "g": [
+   "mobile service",
+   "emergency RV repairs",
+   "electrical",
+   "RV furnace repair",
+   "RV A/C repair",
+   "24 hours"
+  ],  "base": "pacific grove",  "areas": [
+   "monterey",
+   "carmel",
+   "carmel valley",
+   "pebble beach",
+   "seaside",
+   "marina",
+   "watsonville",
+   "castroville",
+   "prunedale",
+   "aromas"
+  ],  "region": "Monterey County",  "reg": "central-coast"
+ },
+ {  "n": "Lavender Mobile RV Solutions",  "c": "Lompoc and the Santa Barbara County coast",  "p": "833-788-3244",  "u": "https://lavendermobilerv.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "A fully mobile RV repair service covering Santa Barbara and Ventura Counties from Lompoc to Ventura. It repairs household systems and appliances such as air conditioning, refrigeration, furnaces, water heaters, plumbing, electrical, and slide outs. It does not perform chassis, engine, or mechanical work.",  "g": [
+   "mobile service",
+   "RV appliances",
+   "electrical",
+   "slide outs",
+   "master certified technician"
+  ],  "base": "",  "areas": [
+   "lompoc",
+   "buellton",
+   "solvang",
+   "santa ynez",
+   "goleta",
+   "santa barbara",
+   "carpinteria",
+   "summerland",
+   "ventura"
+  ],  "region": "Santa Barbara & Ventura Counties",  "spec": "Mobile only, no chassis, engine, or mechanical work",  "reg": "central-coast"
+ },
+ {  "n": "Myers Mobile RV Repair",  "c": "the California Central Coast",  "p": "(805) 459-5991",  "u": "https://myersrvrepair.com/",  "t": "mobile",  "e": true,  "r": false,  "d": "A mobile RV and trailer repair business founded by Harry Myers that serves the California Central Coast. It handles diagnostics and inspections, awnings, air conditioning, furnaces, heaters, water heaters, refrigerators, leak detection, electrical work, and roof maintenance.",  "g": [
+   "mobile service",
+   "RV and trailer repair",
+   "RV appliances",
+   "leak detection",
+   "after hours"
+  ],  "base": "",  "areas": [],  "region": "California Central Coast",  "reg": "central-coast"
+ },
+ {  "n": "Gleason's Salinas RV",  "c": "Salinas and Monterey County",  "p": "831-758-1344",  "u": "https://www.salinasrv.com/",  "t": "center",  "e": false,  "r": false,  "d": "An RV repair, parts, and custom fabrication shop in Salinas that has served Monterey County since 1986. It handles warranty repairs, body and frame repair, electrical work, generators, suspension upgrades, and trailer repairs.",  "g": [
+   "RV repair shop",
+   "RV parts",
+   "custom fabrication",
+   "Hydralift installer",
+   "warranty repairs"
+  ],  "base": "salinas",  "areas": [
+   "salinas",
+   "monterey county"
+  ],  "region": "Monterey County",  "reg": "central-coast"
+ },
+ {  "n": "RV Service Center of Santa Cruz",  "c": "Santa Cruz and the Monterey Bay",  "p": "(831) 427-0881",  "u": "https://www.rvservicerepair.com/",  "t": "center",  "e": false,  "r": false,  "d": "An RV repair and collision shop in Santa Cruz that has served the area since the 1970s. It works on motor homes, campers, and trailers with fiberglass and aluminum body work, roof replacements, and appliance and AC repairs.",  "g": [
+   "RV repair shop",
+   "RV collision repair",
+   "body work",
+   "roof replacement",
+   "RV parts"
+  ],  "base": "santa cruz",  "areas": [
+   "santa cruz",
+   "monterey",
+   "monterey county"
+  ],  "region": "Santa Cruz County",  "reg": "central-coast"
+ },
+ {  "n": "Paso RV",  "c": "Paso Robles and the Central Coast",  "p": "805-800-2990",  "u": "https://www.pasorv.com/",  "t": "center",  "e": false,  "r": false,  "d": "A full service RV repair center in Paso Robles that has served the Central Coast for more than 40 years. It provides in house repair, maintenance, upgrades, and collision services for motorhomes, travel trailers, fifth wheels, toy haulers, and pop up campers.",  "g": [
+   "RV repair center",
+   "RV collision repair",
+   "solar installation",
+   "RV parts",
+   "roof repair"
+  ],  "base": "paso robles",  "areas": [
+   "paso robles"
+  ],  "region": "California's Central Coast",  "reg": "central-coast"
  }
 ];

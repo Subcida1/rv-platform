@@ -39,6 +39,33 @@ DESIGNATIONS = ("city and borough", "city-county", "unified government",
 LSAD_WORDS = {"city", "town", "village", "borough", "cdp"}
 
 
+def census_keys(name, lsad=None):
+    """Every key a Census place should be reachable by: the primary name, plus the
+    forms a reader actually types.
+
+    Two patterns in the file make the primary name unrecognisable:
+
+      "El Paso de Robles (Paso Robles) city"   the official name, the common one in
+      "San Buenaventura (Ventura) city"        parentheses
+      "Carmel-by-the-Sea city"                 hyphenated, and the reader types "Carmel"
+
+    Without this, a business in Paso Robles has a base town that does not resolve, and the
+    California page could not place it. Found 2026-09-28 by the coordinate check, on the
+    first records added outside the northern corridor.
+    """
+    out = [canonical(name, census_name=True, lsad=lsad)]
+    m = re.search(r"\(([^)]+)\)", name)
+    if m:
+        alt = canonical(m.group(1), census_name=True, lsad=lsad)
+        if alt and alt not in out:
+            out.append(alt)
+    if "-" in name:
+        head = canonical(name.split("-")[0], census_name=True, lsad=None)
+        if len(head) >= 4 and head not in out:
+            out.append(head)
+    return [k for k in out if k]
+
+
 def canonical(name, census_name=False, lsad=None):
     """The key a place is stored under, and the key a reader's input is looked up by."""
     n = str(name or "").strip().lower()

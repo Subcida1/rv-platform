@@ -54,7 +54,10 @@ PAGES = {"oregon": "OR", "washington": "WA", "california": "CA"}
 # only in Oregon and Washington: a validator that demanded them would fail two states
 # on data that is correct.
 REQUIRED = ("n", "c", "p", "d", "t")
-OPTIONAL = ("u", "e", "r", "g", "base", "areas", "radius", "region", "spec", "reg")
+OPTIONAL = ("u", "e", "r", "g", "base", "areas", "radius", "region", "spec", "reg",
+            # provenance: what the finder recorded as evidence for this record. Not
+            # shipped, see shard_text.
+            "evidence")
 TYPE_LABEL = {"mobile": "Mobile technician", "center": "Service center",
               "both": "Mobile and shop"}
 START, END = "<!-- LISTINGS:REGIONS-START -->", "<!-- LISTINGS:REGIONS-END -->"
@@ -165,6 +168,7 @@ def shard_text(data):
             r["base"] = canonical(r["base"])
         if r.get("areas"):
             r["areas"] = [canonical(a) for a in r["areas"]]
+        r.pop("evidence", None)     # provenance, kept in the JSON, not sent to the browser
         r.pop("_", None)
         rows.append(r)
     st = data["state"]
@@ -238,9 +242,11 @@ def tel_text(p):
 
     With real hyphens the validator fails these rows (tel-non-breaking, from
     html-validate's recommended set) and a number can break across two lines. The
-    href keeps real hyphens; only the visible text changes.
+    href keeps real hyphens; only the visible text changes. The spaces matter too: the
+    validator's tel-non-breaking rule wants both, and a number split across two lines is
+    the reason it exists.
     """
-    return esc(p).replace("-", "&#8209;")
+    return esc(p).replace("-", "&#8209;").replace(" ", "&nbsp;")
 
 
 def regions_text(data, slug):

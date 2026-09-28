@@ -3,5 +3,21 @@
   "Charleston": {
     "to": "Coos Bay",
     "why": "Charleston, Oregon is an unincorporated community inside Coos Bay's urban area with no census designated place and a population under 1,000, so neither the Census place file nor GeoNames carries it. It appears in a listing's served areas (Curry County and Coos County coverage). Mapped to Coos Bay, about 5 miles east, which is its postal address (ZIP 97420)."
+  },
+  "Nacimiento Lake": {
+    "to": "Lake Nacimiento",
+    "why": "The Census files it as 'Lake Nacimiento CDP'; the listing and the locals say it the other way round. Same place."
+  },
+  "Carmel Valley": {
+    "to": "Carmel Valley Village",
+    "why": "The Census carries the community as 'Carmel Valley Village CDP'; the listing names the valley it sits in. Same place."
+  },
+  "Pebble Beach": {
+    "to_zip": "93953",
+    "why": "An unincorporated community with no census designated place and no row in the Census place file at all, so the only coordinate any source carries is the ZIP area that serves it, 93953. That ZCTA centroid is the Census's own."
+  },
+  "California Valley": {
+    "to_zip": "93453",
+    "why": "A small community on the Carrizo Plain, not a Census place. 93453 is the ZIP area that serves it, and its centroid is the Census's own coordinate."
   }
 }

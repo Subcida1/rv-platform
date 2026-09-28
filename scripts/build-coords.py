@@ -59,7 +59,7 @@ from collections import defaultdict
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from place_names import canonical  # noqa: E402
+from place_names import canonical, census_keys  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "assets" / "js"
@@ -166,10 +166,9 @@ def load_sources():
     for r in rows(SRC / need[0]):
         if r["USPS"] not in STATES:
             continue
-        key = canonical(r["NAME"], census_name=True, lsad=r["LSAD"])
-        if key:
-            places[r["USPS"]][key] = [round(float(r["INTPTLAT"]), 3),
-                                      round(float(r["INTPTLONG"]), 3)]
+        ll = [round(float(r["INTPTLAT"]), 3), round(float(r["INTPTLONG"]), 3)]
+        for key in census_keys(r["NAME"], r["LSAD"]):
+            places[r["USPS"]].setdefault(key, ll)
 
     zips = defaultdict(dict)
     for r in rows(SRC / need[1]):
@@ -340,8 +339,15 @@ def build(places, zips, write=True):
                 key = canonical(name)
                 if key in city:
                     continue
-                target = alias.get(name, {}).get("to") if isinstance(alias.get(name), dict) \
-                    else alias.get(name, name)
+                entry = alias.get(name)
+                target = entry.get("to") if isinstance(entry, dict) else (entry or name)
+                to_zip = entry.get("to_zip") if isinstance(entry, dict) else None
+                if to_zip and to_zip in zipm:
+                    # A place the Census carries only as a ZIP area: its ZCTA centroid IS
+                    # the coordinate for that ZIP, so nothing is guessed.
+                    city[key] = zipm[to_zip]
+                    forced.append("%s -> ZIP %s" % (name, to_zip))
+                    continue
                 candidates = nation.get(canonical(target) if target else key, [])
                 if candidates:
                     # the same-named place nearest this state's own coordinates
