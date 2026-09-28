@@ -806,5 +806,16 @@ window.RV_LISTINGS_CA = [
   ],  "base": "indio",  "areas": [
    "morongo valley"
   ],  "region": "Coachella Valley",  "reg": "coachella"
+ },
+ {  "n": "Reno-Tahoe Mobile RV Repair",  "c": "Truckee and the Lake Tahoe Basin",  "p": "(800) 712-0616",  "u": "https://www.rtmrr.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "A mobile RV repair business based in the Lake Tahoe Basin at Stateline, Nevada. It says it serves Lake Tahoe, Truckee, Carson City, Gardnerville and surrounding areas, and comes to the customer's location. Work covers slide rooms, leveling systems, electrical troubleshooting, batteries, chargers and inverters, plumbing, winterizing, water heaters, refrigerators, air conditioners and furnaces, with weekend and after-hours rates available.",  "g": [
+   "mobile service",
+   "slide out repair",
+   "RV electrical",
+   "RV plumbing",
+   "after hours rates"
+  ],  "base": "stateline",  "areas": [
+   "truckee",
+   "gardnerville"
+  ],  "region": "Lake Tahoe Basin; Carson City",  "reg": "sierra-east"
  }
 ];
