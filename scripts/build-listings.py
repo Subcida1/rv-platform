@@ -36,6 +36,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+import site_constants as C  # noqa: E402
 from place_names import canonical  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -47,7 +48,7 @@ SITE = "https://originrv.com"
 # The slug is the page and the file name; the code is the USPS code and it lives in
 # the JSON. Conflating them shipped a shard called window.RV_LISTINGS_or, which the
 # finder never looks for and the page-state gate rejects.
-PAGES = {"oregon": "OR", "washington": "WA", "california": "CA"}
+PAGES = {slug: code.upper() for code, slug in C.state_shards().items()}
 
 # Fields a listing must carry, and the ones that are optional by state. `r` (roadside)
 # is absent from every California record, `radius` exists only in Oregon and `spec`
@@ -341,6 +342,11 @@ def build(kind):
             st, slug)
     totals = {st: out[(slug, "counts")]["total"] for slug, st in PAGES.items()}
 
+    def read_or_empty(path):
+        """A state that has never been built has no shard yet. Reading it to compare is how
+        the first new state after California failed."""
+        return path.read_text(encoding="utf-8") if path.exists() else ""
+
     def put(path, new, old, what):
         if new == old:
             return old
@@ -353,7 +359,7 @@ def build(kind):
         data = read_state(slug)
         # 1. the shard
         shard = SHARDS / ("listings-%s.js" % st.lower())
-        put(shard, out[(slug, "shard")], shard.read_text(encoding="utf-8"), "shard")
+        put(shard, out[(slug, "shard")], read_or_empty(shard), "shard")
 
         # 2. the page
         page = ROOT / "directory" / ("%s.html" % slug)

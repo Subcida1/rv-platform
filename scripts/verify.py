@@ -234,7 +234,7 @@ bad = []
 idx = (ROOT / "index.html").read_text(encoding="utf-8")
 guide_files = [f for f in (ROOT / "guides").glob("*.html") if f.name != "index.html"]
 businesses = 0
-for suffix in ("or", "wa", "ca"):
+for suffix in sorted(C.state_shards()):
     rows = json.loads(re.search(
         r"=\s*(\[.*\])\s*;",
         (ROOT / "assets" / "js" / "listings" / ("listings-%s.js" % suffix)).read_text(encoding="utf-8"),

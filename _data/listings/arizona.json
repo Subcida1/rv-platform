@@ -1,0 +1,754 @@
+{
+  "state": "AZ",
+  "name": "Arizona",
+  "regions": [
+    {
+      "key": "phoenix-valley",
+      "label": "Phoenix and the Valley"
+    },
+    {
+      "key": "tucson-south",
+      "label": "Tucson and southern Arizona"
+    },
+    {
+      "key": "northern-az",
+      "label": "Northern Arizona and the I-40 corridor"
+    },
+    {
+      "key": "colorado-river",
+      "label": "The Colorado River and Yuma"
+    }
+  ],
+  "region_of": {
+    "Ajo": "tucson-south",
+    "Anthem": "phoenix-valley",
+    "Apache Junction": "phoenix-valley",
+    "Avondale": "phoenix-valley",
+    "Benson": "tucson-south",
+    "Bouse": "colorado-river",
+    "Buckeye": "phoenix-valley",
+    "Bullhead City": "colorado-river",
+    "Camp Verde": "northern-az",
+    "Carefree": "phoenix-valley",
+    "Casa Grande": "tucson-south",
+    "Cave Creek": "phoenix-valley",
+    "Chandler": "phoenix-valley",
+    "Chino Valley": "northern-az",
+    "Clarkdale": "northern-az",
+    "Coolidge": "tucson-south",
+    "Cottonwood": "northern-az",
+    "Douglas": "tucson-south",
+    "Eagar": "northern-az",
+    "Ehrenberg": "colorado-river",
+    "El Mirage": "phoenix-valley",
+    "Eloy": "tucson-south",
+    "Flagstaff": "northern-az",
+    "Florence": "tucson-south",
+    "Fort Mohave": "colorado-river",
+    "Fortuna Foothills": "colorado-river",
+    "Fountain Hills": "phoenix-valley",
+    "Gilbert": "phoenix-valley",
+    "Glendale": "phoenix-valley",
+    "Goodyear": "phoenix-valley",
+    "Grand Canyon": "northern-az",
+    "Green Valley": "tucson-south",
+    "Holbrook": "northern-az",
+    "Jerome": "northern-az",
+    "Kingman": "northern-az",
+    "Lake Havasu City": "colorado-river",
+    "Litchfield Park": "phoenix-valley",
+    "Marana": "tucson-south",
+    "Mesa": "phoenix-valley",
+    "Mohave Valley": "colorado-river",
+    "New River": "phoenix-valley",
+    "Nogales": "tucson-south",
+    "Oro Valley": "tucson-south",
+    "Page": "northern-az",
+    "Parker": "colorado-river",
+    "Peach Springs": "colorado-river",
+    "Peoria": "phoenix-valley",
+    "Phoenix": "phoenix-valley",
+    "Pinetop": "northern-az",
+    "Prescott": "northern-az",
+    "Prescott Valley": "northern-az",
+    "Quartzsite": "colorado-river",
+    "Queen Creek": "phoenix-valley",
+    "Sahuarita": "tucson-south",
+    "Salome": "colorado-river",
+    "San Luis": "colorado-river",
+    "Scottsdale": "phoenix-valley",
+    "Sedona": "northern-az",
+    "Seligman": "northern-az",
+    "Sells": "tucson-south",
+    "Show Low": "northern-az",
+    "Sierra Vista": "tucson-south",
+    "Snowflake": "northern-az",
+    "Somerton": "colorado-river",
+    "Springerville": "northern-az",
+    "Surprise": "phoenix-valley",
+    "Tempe": "phoenix-valley",
+    "Tolleson": "phoenix-valley",
+    "Tucson": "tucson-south",
+    "Vail": "tucson-south",
+    "Wellton": "colorado-river",
+    "Wenden": "colorado-river",
+    "Wickenburg": "northern-az",
+    "Willcox": "tucson-south",
+    "Williams": "northern-az",
+    "Winslow": "northern-az",
+    "Yuma": "colorado-river"
+  },
+  "listings": [
+    {
+      "n": "On The Road Again RV Service & Repair",
+      "c": "Phoenix, AZ",
+      "p": "(602) 296-7549",
+      "u": "https://www.azrvservices.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "On The Road Again RV Service & Repair is an RVIA Master Certified mobile RV service that comes to your home, RV park, storage facility or roadside anywhere within 100 miles of Phoenix. It serves Phoenix, Scottsdale, Mesa, Chandler, Gilbert, Tempe, Peoria, Surprise, Goodyear and Avondale. The site lists Saturday and Sunday as emergency hours and says after-hours and weekend service is available.",
+      "g": [
+        "mobile",
+        "emergency"
+      ],
+      "base": "Phoenix",
+      "areas": [
+        "Phoenix",
+        "Scottsdale",
+        "Mesa",
+        "Chandler",
+        "Gilbert",
+        "Tempe",
+        "Peoria",
+        "Surprise",
+        "Goodyear",
+        "Avondale"
+      ],
+      "region": "Phoenix metro area",
+      "evidence": {
+        "checked": "https://www.azrvservices.com/",
+        "phone_quote": "(602) 296-7549",
+        "coverage_quotes": [
+          "Serving Phoenix, Scottsdale, Mesa, Chandler, Gilbert, Tempe, Peoria, Surprise, Goodyear, Avondale & beyond.",
+          "we serve Phoenix and the surrounding area up to 100 miles out"
+        ],
+        "type_quote": "Can't get your rig to a shop? We come to you - home, RV park, storage facility, or roadside - anywhere within 100 miles of Phoenix.",
+        "emergency_quote": "Saturday: Emergency | Sunday: Emergency ... We dispatch fast across all Phoenix metro. After-hours and weekend service available.",
+        "roadside_quote": null
+      }
+    },
+    {
+      "n": "PHX Mobile RV Repair",
+      "c": "Phoenix, AZ",
+      "p": "602-731-3106",
+      "u": "https://mobilervrepairofphoenix.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "PHX Mobile RV Repair is a mobile RV repair service based in Phoenix at 4104 S 3rd Ave. Technicians come to your RV at home, at an RV resort or roadside across Phoenix, Scottsdale, Tempe, Mesa, Chandler, Gilbert, Glendale, Peoria, Paradise Valley, Avondale and Goodyear. The site lists the business hours as open 24/7 with emergency service available.",
+      "g": [
+        "mobile",
+        "emergency"
+      ],
+      "base": "Phoenix",
+      "areas": [
+        "Phoenix",
+        "Scottsdale",
+        "Tempe",
+        "Mesa",
+        "Chandler",
+        "Gilbert",
+        "Glendale",
+        "Peoria",
+        "Paradise Valley",
+        "Avondale",
+        "Goodyear"
+      ],
+      "region": "the Valley",
+      "evidence": {
+        "checked": "https://mobilervrepairofphoenix.com/",
+        "phone_quote": "602-731-3106",
+        "coverage_quotes": [
+          "Our mobile team proudly serves RV owners throughout the Phoenix, AZ metro area, including Scottsdale, Tempe, Mesa, Chandler, Gilbert, Glendale, Peoria, Paradise Valley, Avondale, and Goodyear."
+        ],
+        "type_quote": "PHX Mobile RV Repair is Phoenix's trusted mobile RV repair service. We come to you, wherever you are in the Valley.",
+        "emergency_quote": "Business Hours: Open 24/7; Emergency Service Available",
+        "roadside_quote": null
+      }
+    },
+    {
+      "n": "Lucky Luke RV",
+      "c": "Phoenix, AZ",
+      "p": "480-433-6776",
+      "u": "https://luckylukerv.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Lucky Luke RV is a mobile RV repair service based in the Phoenix metro area that works where your RV sits at your home, campground, storage lot or RV park. It lists coverage of Phoenix, Scottsdale, Mesa, Chandler, Gilbert, Tempe, Peoria, Glendale, Surprise, Queen Creek, Goodyear and Avondale. Service calls start at $79 with labor at $169 per hour.",
+      "g": [
+        "mobile"
+      ],
+      "base": "Phoenix",
+      "areas": [
+        "Phoenix",
+        "Scottsdale",
+        "Mesa",
+        "Chandler",
+        "Gilbert",
+        "Tempe",
+        "Peoria",
+        "Glendale",
+        "Surprise",
+        "Queen Creek",
+        "Goodyear",
+        "Avondale"
+      ],
+      "region": "Phoenix metro area",
+      "evidence": {
+        "checked": "https://luckylukerv.com/",
+        "phone_quote": "480-433-6776 (4804336776)",
+        "coverage_quotes": [
+          "Based in the Phoenix metro area, serving the surrounding region.",
+          "Phoenix Scottsdale Mesa Chandler Gilbert Tempe Peoria Glendale Surprise Queen Creek Goodyear Avondale"
+        ],
+        "type_quote": "No towing, no drop-off. We work right where your RV sits - home, campground, storage, or RV park.",
+        "emergency_quote": null,
+        "roadside_quote": null
+      }
+    },
+    {
+      "n": "Highroad Mobile RV Repair",
+      "c": "New River, AZ",
+      "p": "602-892-8925",
+      "u": "https://azrv.repair/",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "Highroad Mobile RV Repair runs a mobile unit for on-site AC work and a steel shop in New River for larger projects. The mobile unit serves Anthem, New River, Desert Hills, Cave Creek and North Scottsdale, and the site welcomes clients from all over the valley to the shop. The owner is a former Air Force aircraft mechanic certified through the National RV Technician Training Academy.",
+      "g": [
+        "both"
+      ],
+      "base": "New River",
+      "areas": [
+        "Anthem",
+        "New River",
+        "Desert Hills",
+        "Cave Creek"
+      ],
+      "region": "North Phoenix region; North Scottsdale",
+      "evidence": {
+        "checked": "https://azrv.repair/",
+        "phone_quote": "Call or text us at 602-892-8925.",
+        "coverage_quotes": [
+          "Our fully equipped mobile unit prioritizes rapid response throughout the North Phoenix region, specifically serving: Anthem & New River, Desert Hills, Cave Creek, North Scottsdale, Surrounding North Phoenix Communities"
+        ],
+        "type_quote": "While our mobile unit handles the emergencies, our brand-new, high-clearance steel facility in New River handles the heavy lifting. We welcome clients from all over the valley to our shop for complex, multi-day projects",
+        "emergency_quote": null,
+        "roadside_quote": null
+      }
+    },
+    {
+      "n": "Big's RV Service",
+      "c": "Flagstaff, AZ",
+      "p": "928-326-3195",
+      "u": "https://bigsrvs.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "Big's RV Service is a mobile RV repair business based in Northern Arizona that sends technicians to your campsite, driveway or RV park. It serves Flagstaff, Williams, Parks, Bellemont, Munds Park, Camp Verde, Cottonwood and Kachina Village, and a second service area covering Peoria, Glendale, Surprise, Litchfield Park, Goodyear, Buckeye and Sun City. The site states it services RV systems and components, not vehicle engines, chassis or roadside breakdowns.",
+      "g": [
+        "mobile",
+        "emergency"
+      ],
+      "base": "Flagstaff",
+      "areas": [
+        "Flagstaff",
+        "Williams",
+        "Parks",
+        "Bellemont",
+        "Munds Park",
+        "Camp Verde",
+        "Cottonwood",
+        "Kachina Village",
+        "Peoria",
+        "Glendale",
+        "Surprise",
+        "Litchfield Park",
+        "Goodyear",
+        "Buckeye",
+        "Sun City"
+      ],
+      "region": "Northern Arizona and the Phoenix Valley",
+      "spec": "Services RV systems and components only, not vehicle engines, chassis, or roadside emergencies/breakdowns.",
+      "evidence": {
+        "checked": "https://bigsrvs.com/",
+        "phone_quote": "928-326-3195",
+        "coverage_quotes": [
+          "Big's RV Service provides fast, dependable mobile RV repair in Northern Arizona, including Flagstaff, Williams, Parks, Bellemont, Munds Park, Camp Verde, Cottonwood, and Kachina Village.",
+          "our Phoenix Valley location (Peoria, Glendale, Surprise, Litchfield Park, Goodyear, Buckeye, and Sun City)"
+        ],
+        "type_quote": "We bring fully certified technicians straight to your campsite, driveway, or RV park so you can spend less time waiting at a shop",
+        "emergency_quote": "Emergency On Site Services: Rapid response repairs to get critical systems running (available with standard travel time fees).",
+        "roadside_quote": null
+      }
+    },
+    {
+      "n": "T&A Mobile RV Repair",
+      "c": "Tucson, AZ",
+      "p": "520.800.3554",
+      "u": "https://azrv.tech/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "T&A Mobile RV Repair is a mobile RV repair service based in Tucson that comes to your location instead of a shop. It covers Tucson, Benson and Willcox and lists Pima, Pinal, Cochise and Santa Cruz Counties in Southern Arizona. The site states emergency service is available.",
+      "g": [
+        "mobile",
+        "emergency"
+      ],
+      "base": "Tucson",
+      "areas": [
+        "Tucson",
+        "Benson",
+        "Willcox"
+      ],
+      "region": "Pima, Pinal, Cochise and Santa Cruz Counties, Southern Arizona",
+      "evidence": {
+        "checked": "https://azrv.tech/",
+        "phone_quote": "520.800.3554 (5208003554)",
+        "coverage_quotes": [
+          "We provide Mobile RV Repair service to the following areas: Pima County, AZ; Pinal County, AZ; Cochise County, AZ; Santa Cruz County, AZ",
+          "Benson, Arizona as well as the surrounding areas",
+          "T&A Mobile RV Repair is excited to bring our top-notch mobile RV repair services to Willcox and the surrounding areas."
+        ],
+        "type_quote": "One of the major benefits of T&A Mobile RV Repair is that we come to you! No need to worry about complex transport of your RV to our facility",
+        "emergency_quote": "EMERGENCY SERVICE AVAILABLE ... If you need emergency service, give us a call and we can discuss your exact needs.",
+        "roadside_quote": null
+      }
+    },
+    {
+      "n": "All RV",
+      "c": "Tucson, AZ",
+      "p": "520-622-1578",
+      "u": "https://allrvtucson.com/",
+      "t": "both",
+      "e": false,
+      "r": true,
+      "d": "All RV is an RV service center at 537 W Grant Road in Tucson with five service bays and mobile service in Pima County. Mobile coverage includes Tucson, Marana, Green Valley, Catalina, Oracle and Vail. The shop lists complete engine and generator service, transmission and oil changes, and complete brake service.",
+      "g": [
+        "both",
+        "roadside"
+      ],
+      "base": "Tucson",
+      "areas": [
+        "Tucson",
+        "Marana",
+        "Green Valley",
+        "Catalina",
+        "Oracle",
+        "Vail"
+      ],
+      "region": "Pima County",
+      "evidence": {
+        "checked": "https://allrvtucson.com/",
+        "phone_quote": "Call Us At 520-622-1578 (5206221578)",
+        "coverage_quotes": [
+          "Mobile Service available in the Pima County Areas (Tucson, Marana, Green Valley, Catalina, Oracle, Vail )"
+        ],
+        "type_quote": "We are not a dealer that sell RV's. We service and install and have a retail show room and 5 service bays - also we go out to on site to do repairs.",
+        "emergency_quote": null,
+        "roadside_quote": "Wheel Bearing Packs - Complete engine and generator service: Transmission/Oil Changes. radiator flush and replacement, hoses, belts, tires, (Gas and Diesel operated ) Complete brake service."
+      }
+    },
+    {
+      "n": "Holmes Tuttle RV Service Center",
+      "c": "Tucson, AZ",
+      "p": "(520) 292-3675",
+      "u": "https://holmestuttlerv.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Holmes Tuttle RV Service Center is an RV repair and service shop at 660 W Automall Drive in Tucson. The site states it has the specialized tools, equipment and training for RV repair and service and has served Tucson and Southern Arizona for more than 50 years. Work is drop-off at the shop.",
+      "g": [
+        "center"
+      ],
+      "base": "Tucson",
+      "areas": [
+        "Tucson"
+      ],
+      "region": "Southern Arizona",
+      "evidence": {
+        "checked": "https://holmestuttlerv.com/",
+        "phone_quote": "Call Us:(520) 292-3675 (520-292-3675)",
+        "coverage_quotes": [
+          "Holmes Tuttle has been serving Tucson and Southern Arizona communities for more than 50 years"
+        ],
+        "type_quote": "We have the specialized tools, equipment and training necessary to handle RV repair and service.",
+        "emergency_quote": null,
+        "roadside_quote": null
+      }
+    },
+    {
+      "n": "Carl's RV",
+      "c": "Tucson, AZ",
+      "p": "520-889-9900",
+      "u": "https://carlsrv.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Carl's RV is a family-owned RV parts and service shop at 3435 E Pennsylvania St in Tucson, in business since 1985. It services motorhomes, coaches, travel trailers, fifth wheels and tent trailers. Work is done at the shop on Monday through Thursday.",
+      "g": [
+        "center"
+      ],
+      "base": "Tucson",
+      "areas": [
+        "Tucson"
+      ],
+      "region": null,
+      "evidence": {
+        "checked": "https://carlsrv.com/",
+        "phone_quote": "Call 520-889-9900",
+        "coverage_quotes": [
+          "Carl's RV has been a part of the Tucson community since 1985"
+        ],
+        "type_quote": "our experienced service department can get you back on the road again",
+        "emergency_quote": null,
+        "roadside_quote": null
+      }
+    },
+    {
+      "n": "Truck, Coach & Bus of Tucson LLC",
+      "c": "Tucson, AZ",
+      "p": "(520) 244-9193",
+      "u": "https://rvrepairtucson.com/",
+      "t": "center",
+      "e": false,
+      "r": true,
+      "d": "Truck, Coach & Bus of Tucson LLC is an RV paint, body and mechanic shop at 5255 S Swan Road in Tucson. The site lists diesel and gas engines, brake and suspension work and generator service along with fiberglass and collision repair. It states it is open 24 hours.",
+      "g": [
+        "center",
+        "roadside"
+      ],
+      "base": "Tucson",
+      "areas": [
+        "Tucson"
+      ],
+      "region": null,
+      "evidence": {
+        "checked": "https://rvrepairtucson.com/",
+        "phone_quote": "(520) 244-9193 (5202449193)",
+        "coverage_quotes": [
+          "we handle it all under one roof in Tucson"
+        ],
+        "type_quote": "From the engine to the exterior finish, we handle it all under one roof in Tucson.",
+        "emergency_quote": null,
+        "roadside_quote": "Certified Mechanic: Full chassis and engine maintenance for diesel pushers and gas rigs ... DIESEL & GAS ENGINES ... BRAKE & SUSPENSION ... GENERATOR SERVICE"
+      }
+    },
+    {
+      "n": "Mobil Tech RV Repair",
+      "c": "Quartzsite, AZ",
+      "p": "928-916-3687",
+      "u": "https://www.mobilervrepairquartzsite.com/",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "Mobil Tech RV Repair is an RV repair business with a shop at 46147 Hwy 60 in Salome that also sends a mobile unit to customers in Quartzsite and the surrounding area. Services include RV refrigeration, air conditioning, heating, roof restoration and awning repair. Some repairs, such as awning and body damage, are done in the shop.",
+      "g": [
+        "both"
+      ],
+      "base": "Salome",
+      "areas": [
+        "Quartzsite"
+      ],
+      "region": "Quartzsite region",
+      "evidence": {
+        "checked": "https://www.mobilervrepairquartzsite.com/",
+        "phone_quote": "46147 Hwy 60 Salome, AZ 85348 Telephone: 9289163687",
+        "coverage_quotes": [
+          "Mobil Tech RV Repair has offered reliable RV refrigeration services to the Quartzsite, AZ region for more than ten years.",
+          "Mobil Tech RV Repair is here to take care of all the RV air conditioning service needs of Quartzsite, AZ and the surrounding area."
+        ],
+        "type_quote": "We have a fully stocked and equipped service shop. For your convenience our mobile RV repair shop can come to you in your time of need.",
+        "emergency_quote": null,
+        "roadside_quote": null
+      }
+    },
+    {
+      "n": "BlackSheep RV LLC",
+      "c": "Lake Havasu City, AZ",
+      "p": "928-566-2834",
+      "u": "https://blacksheeprv.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "BlackSheep RV LLC is a mobile RV repair business based in Lake Havasu that comes to your RV. It covers Lake Havasu, Parker and Needles and is available seven days a week from 7:00 AM to 9:30 PM. Services include AC repair, battery systems, refrigerator repair, electrical troubleshooting and water heater service.",
+      "g": [
+        "mobile"
+      ],
+      "base": "Lake Havasu City",
+      "areas": [
+        "Lake Havasu City",
+        "Parker",
+        "Needles"
+      ],
+      "region": null,
+      "evidence": {
+        "checked": "https://blacksheeprv.com/",
+        "phone_quote": "Call Now 928-566-2834 (9285662834)",
+        "coverage_quotes": [
+          "BlackSheep RV LLC provides reliable, honest mobile RV repair throughout Lake Havasu and surrounding areas.",
+          "Service Areas: Lake Havasu, Parker, Needles, and surrounding areas."
+        ],
+        "type_quote": "We come to you for RV AC repair, electrical troubleshooting, battery upgrades, refrigerator service, leaks, water heaters, tank valves, and more.",
+        "emergency_quote": null,
+        "roadside_quote": null
+      }
+    },
+    {
+      "n": "Byrd's RV & Marine Repair Center",
+      "c": "Lake Havasu City, AZ",
+      "p": "928-412-0450",
+      "u": "https://byrdsmobile.net/rv-repair/",
+      "t": "both",
+      "e": false,
+      "r": true,
+      "d": "Byrd's RV & Marine Repair Center is based in Lake Havasu with a shop and mobile service covering up to a 250-mile radius. Onsite mobile repair covers Mohave Valley, Kingman, Bullhead City, Lake Havasu, Parker, Dolan, Lake Mead, Meadview, Needles, Laughlin and Golden Valley. The site states its licensed mechanics do full diagnostics and work on gas and diesel engines, and it offers chassis service with axle welding and frame repair.",
+      "g": [
+        "both",
+        "roadside"
+      ],
+      "base": "Lake Havasu City",
+      "areas": [
+        "Mohave Valley",
+        "Kingman",
+        "Bullhead City",
+        "Lake Havasu City",
+        "Parker",
+        "Dolan",
+        "Meadview",
+        "Needles",
+        "Laughlin",
+        "Golden Valley"
+      ],
+      "region": "Lake Mead",
+      "evidence": {
+        "checked": "https://byrdsmobile.net/rv-repair/",
+        "phone_quote": "Contact us at 928-412-0450",
+        "coverage_quotes": [
+          "We can cover up to a 250-mile radius around our shop in Lake Havasu.",
+          "Now Serving these locations for onsite mobile repair: Mohave Valley, Kingman, Bullhead City, Lake Havasu, Parker, Dolan, Lake Mead, Meadview, Needles, Laughlin, Golden Valley"
+        ],
+        "type_quote": "we offer mobile service and can come to you for most repairs that you need ... If you need to bring your vehicle to us, our shops are equipped with state-of-the-art tools",
+        "emergency_quote": null,
+        "roadside_quote": "Our licensed mechanics can do a full diagnostic and work on gas and diesel engines with no problem ... With our complete chassis service, we even offer axel welding and frame repair."
+      }
+    },
+    {
+      "n": "ProTech RV Service & Solar",
+      "c": "Lake Havasu City, AZ",
+      "p": "(928) 733-8850",
+      "u": "https://www.ptrvserviceandsolar.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "ProTech RV Service & Solar is an RV repair and solar shop at 1595 Dover Ave Suite B in Lake Havasu City. It specializes in coach systems, RV electrical diagnostics, Victron solar installations, lithium battery upgrades and RV body repair. It also lists service in Mesa, Arizona and Colorado Springs.",
+      "g": [
+        "center"
+      ],
+      "base": "Lake Havasu City",
+      "areas": [
+        "Lake Havasu City",
+        "Mesa"
+      ],
+      "region": null,
+      "evidence": {
+        "checked": "https://www.ptrvserviceandsolar.com/",
+        "phone_quote": "1595 Dover Ave., Suite B Lake Havasu City, AZ 86403 (928) 733-8850",
+        "coverage_quotes": [
+          "Proudly serving Lake Havasu City, Mesa, and Colorado Springs"
+        ],
+        "type_quote": "Pro Tech RV provides expert RV repair, RV electrical diagnostics, RV solar installation, lithium battery upgrades, and RV body repair in Lake Havasu City, Arizona.",
+        "emergency_quote": null,
+        "roadside_quote": null
+      }
+    },
+    {
+      "n": "RV Tank Specialist, LLC",
+      "c": "Cottonwood, AZ",
+      "p": "(928) 295-0358",
+      "u": "https://www.rvtankspecialist.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "RV Tank Specialist is a 100% mobile RV repair service based in Cottonwood that comes to your campsite, driveway or storage facility. It serves the Verde Valley including Cottonwood, Camp Verde, Cornville, Jerome, Clarkdale and Rimrock, plus Sedona, Prescott, Flagstaff, Williams, Kingman, Lake Havasu, Peach Springs and Seligman. The technician is diesel certified and the business also does black and gray tank cleaning.",
+      "g": [
+        "mobile"
+      ],
+      "base": "Cottonwood",
+      "areas": [
+        "Cottonwood",
+        "Camp Verde",
+        "Cornville",
+        "Jerome",
+        "Clarkdale",
+        "Rimrock",
+        "Sedona",
+        "Munds Park",
+        "Prescott",
+        "Prescott Valley",
+        "Chino Valley",
+        "Dewey",
+        "Mayer",
+        "Bagdad",
+        "Flagstaff",
+        "Williams",
+        "Kingman",
+        "Peach Springs",
+        "Seligman"
+      ],
+      "region": "Verde Valley and Northern Arizona; Lake Havasu",
+      "evidence": {
+        "checked": "https://www.rvtankspecialist.com/",
+        "phone_quote": "RV Tank Specialist, LLC - Cottonwood, AZ 86326 - (928) 295-0358",
+        "coverage_quotes": [
+          "VERDE VALLEY: Cottonwood, Camp Verde, Cornville, Jerome, Clarkdale, Rimrock",
+          "PRESCOTT REGION: Prescott, Prescott Valley, Chino Valley, Dewey, Mayer, Bagdad",
+          "FLAGSTAFF & BEYOND: Flagstaff, Williams, Kingman, Lake Havasu, Peach Springs, Seligman",
+          "Based in Cottonwood. Within approximately one hour of travel."
+        ],
+        "type_quote": "100% MOBILE SERVICE ... Josh comes to your campsite, driveway, or storage facility and fixes it right - no towing, no shop, no waiting.",
+        "emergency_quote": null,
+        "roadside_quote": null
+      }
+    },
+    {
+      "n": "Aspen RV Mobile RV Repair",
+      "c": "Camp Verde, AZ",
+      "p": "928-683-5522",
+      "u": "https://www.aspenrvrepair.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Aspen RV is a mobile RV repair and maintenance business serving the Verde Valley. It covers Camp Verde, Cottonwood and Sedona, plus Prescott Valley, Prescott, Flagstaff, Payson, Happy Jack and Mormon Lake. The owner is a Certified Technician through the RVI and RVDA industry associations.",
+      "g": [
+        "mobile"
+      ],
+      "base": "Camp Verde",
+      "areas": [
+        "Camp Verde",
+        "Cottonwood",
+        "Sedona",
+        "Prescott Valley",
+        "Prescott",
+        "Flagstaff",
+        "Payson",
+        "Happy Jack",
+        "Mormon Lake"
+      ],
+      "region": "Verde Valley",
+      "evidence": {
+        "checked": "https://www.aspenrvrepair.com/",
+        "phone_quote": "928-683-5522",
+        "coverage_quotes": [
+          "Aspen RV Serves the entire Verde Valley to include Camp Verde, Cottonwood, Sedona. We also provide service in Prescott Valley, Prescott and surrounding areas, Flagstaff, Payson, Happy Jack, Mormon Lake, and many more areas."
+        ],
+        "type_quote": "With Aspen RV you don't need to wait, we make it easy and convenient because we are mobile and come to you.",
+        "emergency_quote": null,
+        "roadside_quote": null
+      }
+    },
+    {
+      "n": "Verde RV Solutions",
+      "c": "Camp Verde, AZ",
+      "p": "480-389-7063",
+      "u": "https://www.verdervsolutions.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "Verde RV Solutions is a mobile RV repair service based out of the Cottonwood and Camp Verde area that comes to you. It handles routine maintenance, indoor and outdoor repairs and emergency services such as slide problems and roof leaks. The site lists Saturday and Sunday as emergency only.",
+      "g": [
+        "mobile",
+        "emergency"
+      ],
+      "base": "Camp Verde",
+      "areas": [
+        "Camp Verde",
+        "Cottonwood"
+      ],
+      "region": null,
+      "evidence": {
+        "checked": "https://www.verdervsolutions.com/",
+        "phone_quote": "Contact Us: 480-389-7063",
+        "coverage_quotes": [
+          "Based out of the Cottonwood/Camp Verde area, we are a mobile RV repair service."
+        ],
+        "type_quote": "We come to you! no need to haul your RV to a repair shop.",
+        "emergency_quote": "Emergency services: Got a flat tire? A stubborn slide that just wont move? Maybe you've discovered a leak in your roof, whatever the case, we can help you get back on the road. ... Monday-Friday 8am-5pm, Saturday-Sunday Emergency Only.",
+        "roadside_quote": null
+      }
+    },
+    {
+      "n": "MILTECH RV",
+      "c": "Yuma, AZ",
+      "p": "515-257-6021",
+      "u": "https://www.miltechrv.net/yuma-rv-repair",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "MILTECH RV is a certified mobile RV repair, diagnostics and inspection business that comes to your RV park, resort or campground in the Yuma area. It covers Yuma, Fortuna Foothills, Wellton, Somerton and San Luis. It operates in Yuma seasonally from November 12, 2026 to April 15, 2027.",
+      "g": [
+        "mobile"
+      ],
+      "base": "Yuma",
+      "areas": [
+        "Yuma",
+        "Fortuna Foothills",
+        "Wellton",
+        "Somerton",
+        "San Luis"
+      ],
+      "region": null,
+      "spec": "Yuma service is seasonal only: November 12, 2026 to April 15, 2027.",
+      "evidence": {
+        "checked": "https://www.miltechrv.net/yuma-rv-repair",
+        "phone_quote": "Call/Text: 515-257-6021",
+        "coverage_quotes": [
+          "Mobile RV Service Throughout the Yuma Area: Yuma - Fortuna Foothills - Wellton - Somerton - San Luis and surrounding RV parks and resorts"
+        ],
+        "type_quote": "MILTECH RV provides certified mobile RV repair, diagnostics, maintenance, and inspections directly at your RV park, resort, campground or approved service location in the Yuma area.",
+        "emergency_quote": null,
+        "roadside_quote": null
+      }
+    },
+    {
+      "n": "RV Connection and Satellite Electronics, Inc.",
+      "c": "Yuma, AZ",
+      "p": "(480) 288-1111",
+      "u": "https://www.rvconnect.co/rv-service",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "RV Connection and Satellite Electronics, Inc. offers on-site RV repair in Yuma and surrounding areas. Services include RV diagnostics, AC repair, refrigerator, water heater and furnace repairs, roof and awning repair and electrical repair. The business is based at 4475 East 32nd Street in Yuma.",
+      "g": [
+        "mobile"
+      ],
+      "base": "Yuma",
+      "areas": [
+        "Yuma"
+      ],
+      "region": null,
+      "evidence": {
+        "checked": "https://www.rvconnect.co/rv-service",
+        "phone_quote": "Call us at (480) 288-1111 now to schedule RV repair services.",
+        "coverage_quotes": [
+          "RV Connection and Satellite Electronics, Inc. offers on-site RV repair services in Yuma, AZ and surrounding areas",
+          "4475 East 32 Nd Street Yuma, Az 85365"
+        ],
+        "type_quote": "Whether you're parked at a campground or stuck on the side of the road, we can service your RV wherever you are.",
+        "emergency_quote": null,
+        "roadside_quote": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,731 @@
+{
+  "state": "UT",
+  "name": "Utah",
+  "regions": [
+    {
+      "key": "wasatch",
+      "label": "The Wasatch Front"
+    },
+    {
+      "key": "st-george",
+      "label": "St. George and the southwest"
+    },
+    {
+      "key": "southeast-parks",
+      "label": "The southeast and the national parks"
+    }
+  ],
+  "region_of": {
+    "Salt Lake City": "wasatch",
+    "West Valley City": "wasatch",
+    "Taylorsville": "wasatch",
+    "South Jordan": "wasatch",
+    "Sandy": "wasatch",
+    "Saratoga Springs": "wasatch",
+    "Lehi": "wasatch",
+    "Provo": "wasatch",
+    "Orem": "wasatch",
+    "Spanish Fork": "wasatch",
+    "Layton": "wasatch",
+    "Ogden": "wasatch",
+    "Clearfield": "wasatch",
+    "Bountiful": "wasatch",
+    "West Jordan": "wasatch",
+    "Draper": "wasatch",
+    "Murray": "wasatch",
+    "Logan": "wasatch",
+    "Brigham City": "wasatch",
+    "Woods Cross": "wasatch",
+    "North Salt Lake": "wasatch",
+    "St. George": "st-george",
+    "Washington": "st-george",
+    "Hurricane": "st-george",
+    "La Verkin": "st-george",
+    "Ivins": "st-george",
+    "Santa Clara": "st-george",
+    "Cedar City": "st-george",
+    "Kanab": "st-george",
+    "Panguitch": "st-george",
+    "Beaver": "st-george",
+    "Fillmore": "st-george",
+    "Nephi": "st-george",
+    "Parowan": "st-george",
+    "Springdale": "st-george",
+    "Escalante": "st-george",
+    "Moab": "southeast-parks",
+    "Monticello": "southeast-parks",
+    "Blanding": "southeast-parks",
+    "Bluff": "southeast-parks",
+    "Green River": "southeast-parks",
+    "Price": "southeast-parks",
+    "Helper": "southeast-parks",
+    "Castle Dale": "southeast-parks",
+    "Huntington": "southeast-parks",
+    "Ferron": "southeast-parks",
+    "Wellington": "southeast-parks",
+    "Torrey": "southeast-parks",
+    "Vernal": "southeast-parks",
+    "Roosevelt": "southeast-parks",
+    "Duchesne": "southeast-parks",
+    "Richfield": "southeast-parks",
+    "Salina": "southeast-parks"
+  },
+  "listings": [
+    {
+      "n": "Wasatch RV Service",
+      "c": "Central Utah",
+      "p": "(435) 248-2177",
+      "u": "https://wasatchrvservice.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "A fully mobile RV repair and maintenance service working across Central and Northern Utah, naming Sanpete, Utah, Wasatch, Juab, Summit, Carbon, Emery, and Salt Lake Counties. Technicians come to the RV at a home, campground, or storage facility with no towing. Services include electrical and solar, plumbing and water systems, slide-outs and jacks, appliances, maintenance, inspections, and winterization.",
+      "g": [
+        "mobile"
+      ],
+      "base": "",
+      "areas": [
+        "Ephraim",
+        "Manti",
+        "Mount Pleasant",
+        "Fairview",
+        "Moroni",
+        "Gunnison",
+        "Spring City",
+        "Provo",
+        "Orem",
+        "Spanish Fork",
+        "Payson",
+        "Salem",
+        "Springville",
+        "Mapleton",
+        "Heber City",
+        "Midway",
+        "Charleston",
+        "Nephi",
+        "Mona",
+        "Park City",
+        "Kamas",
+        "Coalville",
+        "Price",
+        "Helper",
+        "Wellington",
+        "Castle Dale",
+        "Huntington",
+        "Ferron",
+        "Salt Lake City",
+        "Sandy",
+        "Draper",
+        "West Jordan"
+      ],
+      "region": "Central and Northern Utah; Sanpete County",
+      "evidence": {
+        "checked": "https://wasatchrvservice.com/",
+        "phone_quote": "CALL (435) 248-2177",
+        "coverage_quotes": [
+          "Fast, on-site RV repair, diagnostics, and maintenance across Sanpete County, Utah County, and Salt Lake County.",
+          "We proudly serve RV owners throughout Central and Northern Utah, including Sanpete, Utah, Wasatch, Juab, Summit, Carbon, Emery, and Salt Lake Counties."
+        ],
+        "type_quote": "No. We are a fully mobile RV service. We come to you so there’s no towing, no driving, and no waiting weeks for dealership availability.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      },
+      "reg": "wasatch"
+    },
+    {
+      "n": "Expedition Mobile RV Services",
+      "c": "Hurricane, UT",
+      "p": "626-687-2557",
+      "u": "https://expeditionrvservices.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "A husband and wife mobile RV service working out of Hurricane and St. George in Southwestern Utah. The team travels to the RV at a resort, campsite, or roadside location with no towing. Repairs cover air conditioners, furnaces, water heaters, electrical and converter diagnostics, slide-outs, roof resealing, and awnings.",
+      "g": [
+        "mobile"
+      ],
+      "base": "Hurricane",
+      "areas": [
+        "St. George",
+        "Springdale",
+        "Virgin",
+        "Hurricane",
+        "LaVerkin",
+        "Washington",
+        "Santa Clara",
+        "Ivins",
+        "Cedar City",
+        "Kanab"
+      ],
+      "region": "Southwestern Utah",
+      "evidence": {
+        "checked": "https://expeditionrvservices.com/",
+        "phone_quote": "626-687-2557",
+        "coverage_quotes": [
+          "Our regular service area includes St. George, Springdale, Virgin, Hurricane, LaVerkin, Washington, Santa Clara, and Ivins. We also offer extended mobile service to Littlefield, Beaver Dam, Mesquite, Cedar City, Kanab, and, in some cases, East Zion and Bryce Canyon."
+        ],
+        "type_quote": "Fast, Reliable, and 100% Mobile RV Service – We Come to You!",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Basecamp RV Services LLC",
+      "c": "Layton, UT",
+      "p": "801-609-8522",
+      "u": "https://www.basecamprvutah.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "A mobile RV maintenance and repair business based in Layton, Utah, serving Northern Utah. Diagnostics, repairs, maintenance, and upgrades are performed at the RV rather than in a shop. The focus is seasonal services, inspections, and system care delivered on-site.",
+      "g": [
+        "mobile"
+      ],
+      "base": "Layton",
+      "areas": [],
+      "region": "Northern Utah",
+      "evidence": {
+        "checked": "https://www.basecamprvutah.com/",
+        "phone_quote": "801-609-8522",
+        "coverage_quotes": [
+          "At Basecamp RV, our mission is to provide professional, reliable mobile RV service and maintenance throughout Northern Utah."
+        ],
+        "type_quote": "Diagnostics, Repairs, Maintenance and Upgrades performed at your RV.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Outback RV Repairs",
+      "c": "South Jordan, UT",
+      "p": "385.707.6102",
+      "u": "https://www.outbackrvrepairs.com/",
+      "t": "mobile",
+      "e": false,
+      "r": true,
+      "d": "A mobile RV repair shop based in South Jordan, Utah, serving northern Utah and surrounding areas with a technician who brings over 20 years of experience. The shop comes to the customer and handles maintenance, exterior, and interior work including bearings, brakes and axles, roofing, slide-outs, plumbing, appliances, and electrical. Because the site lists brake and axle repair, the vehicle itself can be serviced.",
+      "g": [
+        "mobile",
+        "roadside"
+      ],
+      "base": "South Jordan",
+      "areas": [],
+      "region": "northern Utah",
+      "evidence": {
+        "checked": "https://www.outbackrvrepairs.com/",
+        "phone_quote": "385.707.6102",
+        "coverage_quotes": [
+          "S erving northern Utah & surrounding areas."
+        ],
+        "type_quote": "MOBILE RV REPAIRS WE COME TO YOU!",
+        "emergency_quote": null,
+        "roadside_quote": "BRAKES & AXLE",
+        "licence": null
+      }
+    },
+    {
+      "n": "DIG-It Mobile RV Service & Repair",
+      "c": "Taylorsville, UT",
+      "p": "(801) 259-3588",
+      "u": "https://dig-itrv.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "A master RV technician based in Taylorsville, Utah, providing mobile RV service and repair along the Wasatch Front. The technician comes to the RV with no towing required and handles inspections, slide-outs and leveling, roof leaks, 12V and 120V electrical, plumbing and tanks, and appliances. The site states the technician is available 24/7 for emergencies.",
+      "g": [
+        "mobile",
+        "emergency"
+      ],
+      "base": "Taylorsville",
+      "areas": [
+        "Taylorsville",
+        "Salt Lake City",
+        "Ogden",
+        "Provo"
+      ],
+      "region": "the entire Wasatch Front",
+      "evidence": {
+        "checked": "https://dig-itrv.com/",
+        "phone_quote": "Direct Mobile: (801) 259-3588",
+        "coverage_quotes": [
+          "Proudly serving Taylorsville and the entire Wasatch Front, including Salt Lake City, Ogden, and Provo.",
+          "Counties Covered: Salt Lake County Utah County Weber County Davis County Wasatch County Summit County Tooele County"
+        ],
+        "type_quote": "We come to you—no towing required.",
+        "emergency_quote": "Master Technician | Available 24/7 for Emergencies",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "CP Mobile RV Repair",
+      "c": "West Valley City, UT",
+      "p": "801-638-7036",
+      "u": "https://www.cpmobilerv.com/",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "A mobile RV repair business working out of West Valley City, Utah, serving Salt Lake County and surrounding areas within a 30 mile radius. The company offers both mobile on-site service and in-shop work, along with battery, solar, and inverter installations. Customers can call or text to schedule.",
+      "g": [
+        "mobile",
+        "center"
+      ],
+      "base": "West Valley City",
+      "areas": [],
+      "region": "Salt Lake County",
+      "evidence": {
+        "checked": "https://www.cpmobilerv.com/",
+        "phone_quote": "801-638-7036",
+        "coverage_quotes": [
+          "We serve Salt Lake County and surrounding areas within a 30 mile radius."
+        ],
+        "type_quote": "Our Mobile Services ... In Shop Services",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Quick & Easy Mobile RV Repair",
+      "c": "Salt Lake City, UT",
+      "p": "(801) 866-4880",
+      "u": "https://www.quickeasymobilerv.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "A mobile RV repair service run by two brothers from Salt Lake City, Utah, with over 20 years of hands-on RV experience. The team travels to the RV whether it is at home or on the road, and offers mobile service and installs throughout Utah. The business positions itself as an alternative to dealership lots.",
+      "g": [
+        "mobile"
+      ],
+      "base": "Salt Lake City",
+      "areas": [],
+      "region": "Utah",
+      "evidence": {
+        "checked": "https://www.quickeasymobilerv.com/",
+        "phone_quote": "Utah: (801) 866-4880",
+        "coverage_quotes": [
+          "We take pride in offering mobile RV service and installs throughout Utah, Texas, and the surrounding states."
+        ],
+        "type_quote": "We are a mobile RV repair service. We come to you!",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Trailer Brothers",
+      "c": "Saratoga Springs, UT",
+      "p": "(801) 503-2561",
+      "u": "https://www.trailer-brothers.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "A family-run mobile RV and trailer repair business based in Saratoga Springs, Utah, serving Salt Lake City and surrounding areas. The team performs repairs and installations at the customer's location, including roof repair, electrical, water heaters, solar and inverters, airbags and compressors, air conditioning and heating, and plumbing. Appointments are booked by phone or text.",
+      "g": [
+        "mobile"
+      ],
+      "base": "Saratoga Springs",
+      "areas": [
+        "Salt Lake City",
+        "West Valley City",
+        "Provo",
+        "West Jordan",
+        "Orem",
+        "Sandy",
+        "Lehi",
+        "South Jordan",
+        "Springville",
+        "American Fork",
+        "Taylorsville",
+        "Pleasant Grove",
+        "Draper",
+        "Riverton",
+        "Spanish Fork",
+        "Payson",
+        "Saratoga Springs",
+        "Eagle Mountain"
+      ],
+      "evidence": {
+        "checked": "https://www.trailer-brothers.com/",
+        "phone_quote": "Phone or Text: (801) 503-2561",
+        "coverage_quotes": [
+          "Salt Lake City, West Valley City, Provo, West Jordan, Orem, Sandy, Lehi, South Jordan, Springville, American Fork, Taylorsville, Pleasant Grove, Draper, Riverton, Spanish Fork, Payson, Saratoga Springs, Eagle Mountain in Utah."
+        ],
+        "type_quote": "Mobile RV Repair and Installations in Salt Lake City, UT",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Dixie RV Doctor",
+      "c": "St. George, UT",
+      "p": "(435) 817-8283",
+      "u": "https://www.rvdoctor.org/",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "A locally owned mobile and in-shop RV repair company based in St. George, Utah, with additional locations in Hurricane. The team comes to the customer's campground, RV park, or driveway and also runs a shop, handling roof sealing, awnings, electrical and solar including lithium and Victron upgrades, plumbing, heating, and appliances. The business says it is licensed, certified, and insured.",
+      "g": [
+        "mobile",
+        "center"
+      ],
+      "base": "St. George",
+      "areas": [
+        "St. George",
+        "Washington",
+        "Santa Clara",
+        "Ivins",
+        "Hurricane",
+        "La Verkin",
+        "Cedar City",
+        "Enterprise",
+        "Leeds",
+        "Apple Valley",
+        "New Harmony",
+        "Rockville",
+        "Virgin",
+        "Springdale",
+        "Hildale"
+      ],
+      "region": "Southern Utah",
+      "evidence": {
+        "checked": "https://www.rvdoctor.org/",
+        "phone_quote": "(435) 817-8283",
+        "coverage_quotes": [
+          "Areas We Serve St. George Washington Santa Clara Ivins Hurricane La Verkin Cedar City Enterprise Leeds Apple Valley New Harmony Rockville Virgin Springdale Hildale",
+          "Dixie RV Doctor is a locally owned mobile and in-shop RV repair company serving St. George and surrounding communities."
+        ],
+        "type_quote": "Mobile RV Repair We come to your location so you don't have to tow your RV anywhere.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "In The Sticks Mobile RV Service, LLC",
+      "c": "Cedar City, UT",
+      "p": "(435) 572-5187",
+      "u": "https://inthesticksmobilervservice.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "A mobile RV repair business based in Cedar City, Utah, working the surrounding towns and all points between. The owner comes to the customer's campsite or home for routine checks, diagnostics, and repairs, and has Cummins Onan training for RV generator service. The service area includes Cedar City, Panguitch, and Bryce Canyon National Park.",
+      "g": [
+        "mobile"
+      ],
+      "base": "Cedar City",
+      "areas": [
+        "Cedar City",
+        "Modena",
+        "Enterprise",
+        "New Harmony",
+        "Milford",
+        "Circleville",
+        "Panguitch",
+        "Tropic",
+        "Duck Creek Village",
+        "Bryce Canyon"
+      ],
+      "evidence": {
+        "checked": "https://inthesticksmobilervservice.com/",
+        "phone_quote": "(435) 572-5187",
+        "coverage_quotes": [
+          "I am based out of Cedar City, Utah. My service area includes the following towns and all points in between.",
+          "Modena • Enterprise • New Harmony • Milford • Circleville • Panguitch Bryce Canyon N.P. • Tropic • Duck Creek Village"
+        ],
+        "type_quote": "Give me a call, and let me come to you to get your trailer or motorhome ready for your next trip—or come to your rescue when problems arise.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "High Desert RV Mobile Service",
+      "c": "Washington, UT",
+      "p": "435-229-1835",
+      "u": "https://hdrvmobile.com/",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "A family-owned RV service in Washington, Utah, serving Southern Utah since 2015 with more than 25 years of experience. The business runs a service shop and also offers mobile service to the RV. Work covers appliances, hydraulics, solar, electrical systems, Onan generators, satellite systems, and RV parts, with warranty service for Suburban, Lippert, Carefree of Colorado, and Dometic.",
+      "g": [
+        "mobile",
+        "center"
+      ],
+      "base": "Washington",
+      "areas": [],
+      "region": "Southern Utah",
+      "evidence": {
+        "checked": "https://hdrvmobile.com/",
+        "phone_quote": "CALL 435-229-1835",
+        "coverage_quotes": [
+          "Located in Southern Utah, we are a family-owned business, servicing our community since 2015, as High Desert RV Mobile Service.",
+          "Service Shop 173 S Warehouse Road, Unit 1 Washington, Utah 84780"
+        ],
+        "type_quote": "Does your RV need a new furnace, refrigerator, or other appliances? We are certified in all RV appliances and offer Mobile Service.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Red Rock Mobile RV Repair",
+      "c": "St. George, UT",
+      "p": "435-218-8930",
+      "u": "https://redrockmobilervrepair.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "A mobile RV repair service based in St. George, Utah, that comes to the customer so the RV does not need to go to a shop. The owner has 12 years in the RV repair industry and is Onan and Aqua Hot certified, LCI trained, and Dometic certified. Repairs include electrical, plumbing, air conditioning, furnaces, and water heaters.",
+      "g": [
+        "mobile"
+      ],
+      "base": "St. George",
+      "areas": [
+        "St. George"
+      ],
+      "region": "St. George and surrounding areas",
+      "evidence": {
+        "checked": "https://redrockmobilervrepair.com/",
+        "phone_quote": "435-218-8930",
+        "coverage_quotes": [
+          "Affordable pricing. Quality mobile service. Serving St.George and surrounding areas for Rv repair."
+        ],
+        "type_quote": "Red Rock Mobile RV Repair will come to you. No need to go to a shop.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "A.R.M.S. American RV Mobile Services, LLC",
+      "c": "Ogden, UT",
+      "p": "801-725-8044",
+      "u": "https://www.armsrv.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "A family-owned mobile RV repair business located in Ogden, Utah, with over 20 years of RV repair experience. The technician comes to the customer's home so the RV does not need to be towed or dropped at a shop. The site notes that not all repairs can be done in a mobile setting, particularly in poor weather.",
+      "g": [
+        "mobile"
+      ],
+      "base": "Ogden",
+      "areas": [
+        "Ogden"
+      ],
+      "evidence": {
+        "checked": "https://www.armsrv.com/",
+        "phone_quote": "801-725-8044",
+        "coverage_quotes": [
+          "A.R.M.S. American RV Mobile Services, LLC 801-725-8044 Located in Ogden, Utah"
+        ],
+        "type_quote": "Get your R.V. repairs done at the convenience of your own home!",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Rocky Mountain RV & Service",
+      "c": "Layton, UT",
+      "p": "(801) 295-3741",
+      "u": "https://rmrvut.com/",
+      "t": "center",
+      "e": false,
+      "r": true,
+      "d": "An RV and UTV repair shop on Fairfield Road in Layton, Utah, minutes from I-15, serving the Wasatch Front. The shop handles appliances, electrical diagnostics and rewiring, plumbing, roof resealing, slide-outs, suspension and chassis work, brakes, lighting, batteries, solar, and seasonal prep. The site states it does not offer RV engine repair, but it does list suspension and chassis work.",
+      "g": [
+        "center",
+        "roadside"
+      ],
+      "base": "Layton",
+      "areas": [
+        "Layton",
+        "Clearfield",
+        "Kaysville",
+        "Syracuse",
+        "South Weber",
+        "Ogden",
+        "Roy",
+        "Farmington",
+        "Bountiful",
+        "Centerville",
+        "North Salt Lake"
+      ],
+      "region": "Northern Utah / Wasatch Front",
+      "spec": "No RV engine repair: \"Do you work on RV engines? No, we do not offer engine repair services for RVs.\"",
+      "evidence": {
+        "checked": "https://rmrvut.com/",
+        "phone_quote": "(801) 295-3741",
+        "coverage_quotes": [
+          "Based right here in the heart of Davis County, we proudly serve outdoor enthusiasts throughout Layton, Kaysville, Ogden, and the greater Northern Utah area.",
+          "Proudly providing RV Parts and services to the following areas: Clearfield, UT | Kaysville, UT | Syracuse, UT | South Weber, UT | Ogden, UT | Roy, UT | Farmington, UT | Bountiful, UT | Centerville, UT | North Salt Lake, UT"
+        ],
+        "type_quote": "Our RV repair shop in Layton, UT, handles nearly every part of your RV — excluding engine repairs — with services that include:",
+        "emergency_quote": null,
+        "roadside_quote": "Suspension and chassis work",
+        "licence": null
+      }
+    },
+    {
+      "n": "RV Upgraders",
+      "c": "Salt Lake City, UT",
+      "p": "(385) 261-2649",
+      "u": "https://www.rvupgradersut.com/",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "An RV and trailer service, repair, and customization shop on West 900 South in Salt Lake City, Utah, with over 19 years of experience and ASE certification. Most jobs are handled in-shop, covering exterior, interior, fifth wheel installations, collision care, and metal fabrication. The site says mobile service is available for special situations.",
+      "g": [
+        "center",
+        "mobile"
+      ],
+      "base": "Salt Lake City",
+      "areas": [],
+      "region": "Salt Lake City and the valley",
+      "evidence": {
+        "checked": "https://www.rvupgradersut.com/",
+        "phone_quote": "Phone:(385) 261-2649",
+        "coverage_quotes": [
+          "We offer the best prices in Salt Lake City and the valley"
+        ],
+        "type_quote": "Virtually all our jobs are handled in-shop, so you can expect to receive great pricing with high-quality service. Mobile Service Available: For special situations, we can offer our mobile services to you.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Done Right Mobile Repair",
+      "c": "Hurricane, UT",
+      "p": "435-668-3943",
+      "u": "https://www.donerightmr.com/services/rv-repair/",
+      "t": "mobile",
+      "e": false,
+      "r": true,
+      "d": "A mobile repair business based at North 520 West in Hurricane, Utah, that comes to the RV wherever it is parked in Southern Utah. The site is built around the vehicle itself, offering engine diagnosis and repair, chassis inspection and service, suspension and steering, brake service, cooling system repair, and A/C recharge. It also meets customers at Zion, Bryce, and other Southern Utah campsites.",
+      "g": [
+        "mobile",
+        "roadside"
+      ],
+      "base": "Hurricane",
+      "areas": [
+        "St. George",
+        "Washington",
+        "Hurricane",
+        "Ivins",
+        "Santa Clara",
+        "Cedar City",
+        "Kanab",
+        "Springdale"
+      ],
+      "region": "Southern Utah",
+      "evidence": {
+        "checked": "https://www.donerightmr.com/services/rv-repair/",
+        "phone_quote": "435-668-3943",
+        "coverage_quotes": [
+          "We come to you — wherever your RV is parked in Southern Utah.",
+          "68 N 520 W, Hurricane, UT 84737",
+          "St. George, UT / Washington, UT / Hurricane, UT / Ivins, UT / Santa Clara, UT / Cedar City, UT / Kanab, UT / Springdale, UT"
+        ],
+        "type_quote": "RV breakdown at the campsite? Problem at home before a big trip? We come to you — wherever your RV is parked in Southern Utah. Engine, chassis, electrical, suspension, and more.",
+        "emergency_quote": null,
+        "roadside_quote": "Engine diagnosis & repair ... Chassis inspection & service ... Suspension & steering ... Brake service & inspection",
+        "licence": null
+      }
+    },
+    {
+      "n": "Kennys Mobile RV Repair",
+      "c": "Price, UT",
+      "p": "435-630-2938",
+      "u": "https://www.kennysmobilervrepair.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "A mobile RV repair business at South 200 West in Price, Utah, with over 30 years of experience. The owner comes to the customer's location rather than having the RV taken to a dealership. Office hours are Monday through Friday, with an after-hours line for calls or texts.",
+      "g": [
+        "mobile",
+        "emergency"
+      ],
+      "base": "Price",
+      "areas": [
+        "Price"
+      ],
+      "evidence": {
+        "checked": "https://www.kennysmobilervrepair.com/",
+        "phone_quote": "For after hour service call or text (435) 630-2938",
+        "coverage_quotes": [
+          "433 South 200 West, Price, UT, USA"
+        ],
+        "type_quote": "Tired of taking your RV to a dealership and waiting weeks to get it back? Let Kennys Mobile RV come to you!",
+        "emergency_quote": "For after hour service call or text (435) 630-2938",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Desert Monkey Mobile RV and Van Repair",
+      "c": "La Verkin, UT",
+      "p": "(435) 817-6535",
+      "u": "https://www.desertmonkeyrvrepair.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "A mobile RV and travel trailer repair business at North 470 West in La Verkin, Utah. The company performs full-service RV repair at the customer's location, with no towing, and advertises transparent pricing. Hours are Monday through Friday, with weekends by availability.",
+      "g": [
+        "mobile"
+      ],
+      "base": "La Verkin",
+      "areas": [],
+      "evidence": {
+        "checked": "https://www.desertmonkeyrvrepair.com/",
+        "phone_quote": "(435) 817-6535",
+        "coverage_quotes": [
+          "180 N 470 W La Verkin, UT 84745"
+        ],
+        "type_quote": "Desert Monkey Mobile RV and Van Repair is here for your RV and travel trailer needs, and at a reasonable and transparent price.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Semper Fi RV",
+      "c": "Layton, UT",
+      "p": "(385) 590-9922",
+      "u": "https://www.semperfirv.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "A Marine veteran-owned mobile RV inspection and repair business based in Layton, Utah, working within a 50 mile radius. The owner is an NRVTA certified RV inspector and certified RV technician, and the service comes to the customer's location. Offerings include buyer and seller inspections, new RV orientation, mobile maintenance and repair, and fluid analysis.",
+      "g": [
+        "mobile"
+      ],
+      "base": "Layton",
+      "areas": [
+        "Layton",
+        "Salt Lake City",
+        "Park City",
+        "Ogden",
+        "Provo",
+        "Logan"
+      ],
+      "region": "Northern Utah",
+      "evidence": {
+        "checked": "https://www.semperfirv.com/",
+        "phone_quote": "(385) 590-9922",
+        "coverage_quotes": [
+          "Semper Fi RV provides mobile services within a 50-mile radius of Layton, Utah, including Salt Lake City, Park City, Ogden, Provo, Logan, and surrounding areas."
+        ],
+        "type_quote": "Mobile Maintenance & Repair – On-site service for all major RV systems. ... With mobile service for your convenience, we bring expertise directly to you.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    }
+  ]
+}

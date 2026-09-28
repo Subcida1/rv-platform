@@ -1,0 +1,579 @@
+{
+  "state": "NV",
+  "name": "Nevada",
+  "regions": [
+    {
+      "key": "reno-north",
+      "label": "Reno, Sparks and the north"
+    },
+    {
+      "key": "i80-east",
+      "label": "The I-80 corridor east"
+    },
+    {
+      "key": "las-vegas",
+      "label": "Las Vegas and Henderson"
+    }
+  ],
+  "region_of": {
+    "Reno": "reno-north",
+    "Sparks": "reno-north",
+    "Fernley": "reno-north",
+    "Fallon": "reno-north",
+    "Yerington": "reno-north",
+    "Gardnerville": "reno-north",
+    "Minden": "reno-north",
+    "Carson City": "reno-north",
+    "Stateline": "reno-north",
+    "Incline Village": "reno-north",
+    "Virginia City": "reno-north",
+    "Dayton": "reno-north",
+    "Silver Springs": "reno-north",
+    "Washoe Valley": "reno-north",
+    "Winnemucca": "i80-east",
+    "Battle Mountain": "i80-east",
+    "Elko": "i80-east",
+    "Wells": "i80-east",
+    "West Wendover": "i80-east",
+    "Eureka": "i80-east",
+    "Lovelock": "i80-east",
+    "Jackpot": "i80-east",
+    "Spring Creek": "i80-east",
+    "Carlin": "i80-east",
+    "Las Vegas": "las-vegas",
+    "Henderson": "las-vegas",
+    "North Las Vegas": "las-vegas",
+    "Boulder City": "las-vegas",
+    "Pahrump": "las-vegas",
+    "Mesquite": "las-vegas",
+    "Summerlin": "las-vegas",
+    "Enterprise": "las-vegas",
+    "Blue Diamond": "las-vegas",
+    "Searchlight": "las-vegas",
+    "Laughlin": "las-vegas"
+  },
+  "listings": [
+    {
+      "n": "Leading Edge RV",
+      "c": "Reno / Sparks, NV",
+      "p": "775-250-3171",
+      "u": "https://www.leadingedgerv.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Leading Edge RV is a mobile RV repair service that comes to you, based in Reno, Nevada and working the Reno and Sparks area. The site says it has no traditional shop and does not do RV engine repair, roadside service, axle or chassis service. It lists general repairs and maintenance, pre-purchase inspections, and specialty service as a certified Aqua-Hot, Atwood, Dometic, Truma and Lippert provider.",
+      "g": [
+        "mobile",
+        "house side only",
+        "certified"
+      ],
+      "base": "Reno",
+      "areas": [
+        "Reno",
+        "Sparks"
+      ],
+      "region": null,
+      "spec": "No RV engine repair, roadside service, axle or chassis service",
+      "evidence": {
+        "checked": "https://www.leadingedgerv.com/",
+        "phone_quote": "leadingedgerv@gmail.com | Tel: 775-250-3171",
+        "coverage_quotes": [
+          "Mobile RV Service Serving Reno and Sparks, Nevada",
+          "We are located in Reno, Nevada and service the Reno Sparks Area."
+        ],
+        "type_quote": "Leading Edge RV is a mobile RV repair service that comes to you. We do not have a traditional shop.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "American Mobile RV Service",
+      "c": "Reno / Sparks / Carson City, NV",
+      "p": "775 315-1870",
+      "u": "https://www.americanmobilervservice.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "American Mobile RV Service provides mobile repair for Class A, B and C RVs and all trailer models. It serves Reno, Sparks, Carson City, most of Northwestern Nevada and Lake Tahoe. Listed work covers refrigerators, air conditioning, furnaces, water heaters, electrical, converters, inverters, plumbing, awnings and wheel bearings, plus off-grid solar and used-RV inspections.",
+      "g": [
+        "mobile"
+      ],
+      "base": "Reno",
+      "areas": [
+        "Reno",
+        "Sparks",
+        "Carson City"
+      ],
+      "region": "Northwestern Nevada; Lake Tahoe",
+      "evidence": {
+        "checked": "https://www.americanmobilervservice.com/",
+        "phone_quote": "American Mobile RV Service Phone: 775 315-1870",
+        "coverage_quotes": [
+          "Welcome to American Mobile RV Service....servicing Reno, Sparks, Carson City , most of Northwestern Nevada and Lake Tahoe"
+        ],
+        "type_quote": "American Mobile RV Service offers a wide range of services for your class A, B, or C RV as well as services for all trailer models including camp trailers.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Great Basin Mobile RV Repair",
+      "c": "Sparks, NV",
+      "p": "775-220-5065",
+      "u": "https://www.greatbasinmobilervrepair.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Great Basin Mobile RV Repair is a family-owned mobile service based in Sparks, Nevada that brings repair to your campground, storage facility or driveway. It advertises certified technicians for appliances, electrical, plumbing, water tanks, body and trim, and venting or roofing work. The site lists Sparks, Reno, Carson City and surrounding Northern Nevada towns.",
+      "g": [
+        "mobile"
+      ],
+      "base": "Sparks",
+      "areas": [
+        "Sparks",
+        "Reno",
+        "Carson City",
+        "Incline Village",
+        "Sun Valley",
+        "Spanish Springs",
+        "Washoe City"
+      ],
+      "region": "Northern Nevada; Lake Tahoe",
+      "evidence": {
+        "checked": "https://www.greatbasinmobilervrepair.com/",
+        "phone_quote": "2245 Contrail Street, Sparks, NV 89441, Phone: 775-220-5065",
+        "coverage_quotes": [
+          "Serving Northern Nevada & Surrounding Areas - Reno - Sparks - Carson",
+          "We Provide Services to the Following Cities, Towns and Surrounding Regions of NV: Lake Tahoe, NV ... Carson City, NV, Sparks, NV, Reno, NV"
+        ],
+        "type_quote": "Great Basin Mobile RV Repair is a family-owned and operated business serving RV enthusiasts across Northern Nevada & surrounding areas.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "On-Site RV",
+      "c": "Reno, NV",
+      "p": "775-437-2525",
+      "u": "https://onsitervreno.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "On-Site RV is a mobile RV repair service that brings the shop to you in Reno and the surrounding areas of Northern Nevada. It says technicians have over 30 years of experience and handle electrical diagnostics, air conditioning and heating, plumbing, winterization, appliance repair, slide-out and leveling systems, and roof sealing. The site states it comes directly to you to avoid towing.",
+      "g": [
+        "mobile"
+      ],
+      "base": "Reno",
+      "areas": [
+        "Reno",
+        "Sparks"
+      ],
+      "region": "Northern Nevada",
+      "evidence": {
+        "checked": "https://onsitervreno.com/",
+        "phone_quote": "775-437-2525",
+        "coverage_quotes": [
+          "Reno, NV & Surrounding Areas",
+          "At On-Site RV, we bring the shop to you, offering mobile RV repair services in Reno and the surrounding areas."
+        ],
+        "type_quote": "We come directly to you, saving you time, stress, towing fees, and long service-center waits.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Reno-Tahoe Mobile RV Repair",
+      "c": "Stateline / Lake Tahoe, NV",
+      "p": "(800) 712-0616",
+      "u": "https://www.rtmrr.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Reno-Tahoe Mobile RV Repair is owned and operated by Miles MacArthur and based in Stateline, Nevada in the Lake Tahoe Basin. The mobile service covers winterization, plumbing and appliance repair, custom solar installation, slide-outs and battery charging problems. It serves Lake Tahoe, Truckee, Carson City, Gardnerville and surrounding areas and says it is licensed and insured in Nevada.",
+      "g": [
+        "mobile",
+        "licensed and insured"
+      ],
+      "base": "Stateline",
+      "areas": [
+        "Stateline",
+        "Truckee",
+        "Carson City",
+        "Gardnerville",
+        "Reno"
+      ],
+      "region": "Lake Tahoe Basin; Lake Tahoe",
+      "evidence": {
+        "checked": "https://www.rtmrr.com/",
+        "phone_quote": "(800) 712-0616",
+        "coverage_quotes": [
+          "Serving Lake Tahoe, Truckee, Carson City, Gardnerville and surrounding areas.",
+          "Based in Stateline Nevada / Lake Tahoe Basin"
+        ],
+        "type_quote": "Our mobile service comes to you.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Big Sky Mobile RV Services",
+      "c": "Elko, NV",
+      "p": "775-340-1125",
+      "u": "https://bigskymobilervservices.com/",
+      "t": "mobile",
+      "e": false,
+      "r": true,
+      "d": "Big Sky Mobile RV Services is a family-owned mobile repair business serving North Eastern Nevada from Elko, including Spring Creek and Wells. It comes to your campsite, home or the road and covers AC and furnaces, refrigerators, water heaters, plumbing and tanks, electrical, and brake and suspension work. Owner Manny LeProvost is described as a certified RV technician with over 25 years of RVing experience.",
+      "g": [
+        "mobile",
+        "roadside",
+        "certified",
+        "warranty"
+      ],
+      "base": "Elko",
+      "areas": [
+        "Elko",
+        "Spring Creek",
+        "Wells"
+      ],
+      "region": "North Eastern Nevada",
+      "evidence": {
+        "checked": "https://bigskymobilervservices.com/",
+        "phone_quote": "Call or text: 775-340-1125",
+        "coverage_quotes": [
+          "We service most of North Eastern Nevada, including Spring Creek, Elko, Wells, and more.",
+          "We are your trusted and reliable RV repair and maintenance service provider in North Eastern Nevada."
+        ],
+        "type_quote": "We are a mobile service, which means we come to you wherever you are.",
+        "emergency_quote": null,
+        "roadside_quote": "Our mobile RV repair service covers a wide range of repairs including appliance repair, plumbing issues, electrical systems, roof and window leaks, brake and suspension work, and more.",
+        "licence": null
+      }
+    },
+    {
+      "n": "Open Roads RV",
+      "c": "Elko, NV",
+      "p": "775-388-7445",
+      "u": "https://www.openroads-rv.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Open Roads RV is a mobile RV repair service started by John and Angela Starman and based in Elko, Nevada. It lists coverage across Elko, Wells, Crescent Valley, Winnemucca, Battle Mountain, Eureka, Wendover, Spring Creek and Ryndon. The site says its mission is to bring quality mobile RV service to Northern Nevada.",
+      "g": [
+        "mobile"
+      ],
+      "base": "Elko",
+      "areas": [
+        "Elko",
+        "Wells",
+        "Crescent Valley",
+        "Winnemucca",
+        "Battle Mountain",
+        "Eureka",
+        "Wendover",
+        "Spring Creek",
+        "Ryndon"
+      ],
+      "region": "Northern Nevada",
+      "evidence": {
+        "checked": "https://www.openroads-rv.com/about-us",
+        "phone_quote": "Call Us Now: 775-388-7445",
+        "coverage_quotes": [
+          "With our business based in Elko, NV we cover the following areas: Elko - Wells - Crescent Valley - Winnemucca - Battle Mountain - Eureka - Wendover - Spring Creek - Ryndon - And many many others!"
+        ],
+        "type_quote": "It is our mission to bring quality mobile RV service to Northern Nevada.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Round Up Mobile RV",
+      "c": "Yerington, NV",
+      "p": "(775) 434-5088",
+      "u": "https://www.roundupmobilerv.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Round Up Mobile RV is a veteran-owned, NRVTA-certified mobile service based in Yerington, Nevada. It provides on-site repair at your campsite or home across Lyon, Douglas and Mineral counties, covering AC, water heaters, furnaces, refrigerators, slide-outs, electrical, plumbing and roof coatings. The site publishes a $75 service fee that covers the first 30 miles and a 90-day workmanship warranty.",
+      "g": [
+        "mobile",
+        "certified",
+        "warranty"
+      ],
+      "base": "Yerington",
+      "areas": [
+        "Yerington"
+      ],
+      "region": "Lyon County, Douglas County, Mineral County",
+      "evidence": {
+        "checked": "https://www.roundupmobilerv.com/",
+        "phone_quote": "(775-434-5088)",
+        "coverage_quotes": [
+          "We provide professional mobile service right at your RV campsite or home in Lyon County, Douglas County, Mineral County and the surrounding areas.",
+          "Service Fee: $75 covers travel within the first 30 miles of Yerington, NV."
+        ],
+        "type_quote": "On-Site RV Repair & Maintenance - We Come to You",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Ridgeback RV Services",
+      "c": "Gardnerville, NV",
+      "p": "(775) 525-9505",
+      "u": "https://ridgebackrvservices.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Ridgeback RV Services is a mobile RV service based in Douglas County, Nevada and operated by certified RV tech John Vanek. It serves Gardnerville, Minden, Carson City, Zephyr Cove and the South Lake Tahoe area, coming to your home, campground or storage facility. The site says it is licensed by the State of Nevada Board for the Regulation of Liquefied Petroleum Gas to install or repair LP-Gas systems on RVs.",
+      "g": [
+        "mobile",
+        "certified",
+        "licensed and insured",
+        "LP gas"
+      ],
+      "base": "Gardnerville",
+      "areas": [
+        "Gardnerville",
+        "Minden",
+        "Carson City",
+        "Zephyr Cove",
+        "South Lake Tahoe"
+      ],
+      "region": "Douglas County, Highway 395 corridor",
+      "evidence": {
+        "checked": "https://ridgebackrvservices.com/",
+        "phone_quote": "(775) 525-9505",
+        "coverage_quotes": [
+          "We serve Gardnerville, Minden, Carson City, Zephyr Cove, South Lake Tahoe, and the Highway 395 corridor south of Gardnerville.",
+          "Ridgeback RV Services, LLC is your mobile RV service solution based in Douglas County, Nevada."
+        ],
+        "type_quote": "As a mobile RV service, we come to you!",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Horizon Equipment Repair",
+      "c": "Fernley, NV",
+      "p": "775-741-1690",
+      "u": "https://horizonequipmentrepair.com/services/rv-repair/",
+      "t": "both",
+      "e": false,
+      "r": true,
+      "d": "Horizon Equipment Repair is based in Fernley, Nevada and says it has provided RV repair there and across Northern Nevada for more than 23 years. It offers both in-shop and mobile service and specializes in engine diagnostics and repairs, transmission, drive train, brakes and electrical work on Class A and C motorhomes and motor coaches. It says emergency service is on call 24/7.",
+      "g": [
+        "mobile",
+        "center",
+        "roadside",
+        "emergency"
+      ],
+      "base": "Fernley",
+      "areas": [
+        "Fernley",
+        "Fallon",
+        "Tonopah"
+      ],
+      "region": "Northern Nevada",
+      "spec": "Primarily a heavy equipment repair company; RV repair is one of its service lines",
+      "evidence": {
+        "checked": "https://horizonequipmentrepair.com/services/rv-repair/",
+        "phone_quote": "775-741-1690",
+        "coverage_quotes": [
+          "For over 23 years, Horizon Equipment Repair has been providing RV repair services in Fernley, NV, and surrounding areas.",
+          "Horizon Equipment Repair is located in Fernley, Nevada but we offer RV repair and maintenance services in and around the rural communities, highways and campsites in Northern Nevada."
+        ],
+        "type_quote": "Do you offer in shop or onsite mobile service? Both! We can handle repair and maintenance services in our shop or at your location or jobsite.",
+        "emergency_quote": "24/7 emergency service is also available.",
+        "roadside_quote": "We excel in engine diagnostics and repairs, clutch and transmission work, electrical diagnostics, drive train diagnostics, and brake services.",
+        "licence": null
+      }
+    },
+    {
+      "n": "TekRV",
+      "c": "Las Vegas, NV",
+      "p": "725-221-3390",
+      "u": "https://tekrv.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "TekRV is a fully mobile RV repair service covering Las Vegas, Summerlin, Henderson, North Las Vegas and Boulder City. It works only on the house side of the RV, such as A/C, refrigerators, water heaters, furnaces, plumbing, electrical, slides, leveling and propane, and states it does not do engine or chassis work. Technician Steve is a Truma Level III Certified Technician and Dealer and an Aqua-Hot Certified Technician.",
+      "g": [
+        "mobile",
+        "house side only",
+        "certified"
+      ],
+      "base": "Las Vegas",
+      "areas": [
+        "Las Vegas",
+        "Summerlin",
+        "Henderson",
+        "North Las Vegas",
+        "Boulder City"
+      ],
+      "region": null,
+      "spec": "No engine, transmission, brake, suspension or tire work; house side only",
+      "evidence": {
+        "checked": "https://tekrv.com/",
+        "phone_quote": "725-221-3390 (+17252213390)",
+        "coverage_quotes": [
+          "Serving Las Vegas · Summerlin · Henderson · North Las Vegas · Boulder City",
+          "We're fully mobile across Las Vegas, Summerlin, Henderson, North Las Vegas, and Boulder City"
+        ],
+        "type_quote": "You can't come to us - we don't have a shop. That's the point: your RV gets fixed where it sits, without a tow and without waiting weeks for a dealer bay.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Happy Hals",
+      "c": "Henderson / Las Vegas, NV",
+      "p": "(702) 280-0320",
+      "u": "https://hals-rv.com/",
+      "t": "mobile",
+      "e": false,
+      "r": true,
+      "d": "Happy Hals provides mobile RV, generator, marine and fleet repair across Henderson, Las Vegas and the surrounding valley. It diagnoses and repairs at your site, covering residential systems and chassis work, generator service and installation, solar and power systems, and pre-purchase and pre-trip inspections. It is Cummins Onan, RVMP and Duromax warranty and repair certified.",
+      "g": [
+        "mobile",
+        "roadside",
+        "certified",
+        "warranty"
+      ],
+      "base": "Henderson",
+      "areas": [
+        "Henderson",
+        "Las Vegas",
+        "Boulder City"
+      ],
+      "region": "greater Las Vegas area; Lake Mead",
+      "evidence": {
+        "checked": "https://hals-rv.com/",
+        "phone_quote": "(702) 280-0320 (+17022800320)",
+        "coverage_quotes": [
+          "We cover the greater Las Vegas area, including Henderson, Lake Mead and Boulder City.",
+          "Mobile RV, generator, marine and fleet repair serving Las Vegas and Henderson, Nevada."
+        ],
+        "type_quote": "We bring the shop to your RV",
+        "emergency_quote": null,
+        "roadside_quote": "Residential systems and chassis work, at your site.",
+        "licence": null
+      }
+    },
+    {
+      "n": "24/7 MotorCoach",
+      "c": "Las Vegas, NV",
+      "p": "702-757-2471",
+      "u": "https://24-7motorcoach.com/",
+      "t": "center",
+      "e": false,
+      "r": true,
+      "d": "24/7 MotorCoach is an RV dealership and repair center at 3930 W Windmill Ln in Las Vegas with indoor service bays. It services all makes and models and states that every brand on its site is one it services, including diesel engine repair, brakes, generator service, collision, tires and glass. The site publishes its Nevada repair garage licence GAR000046449 and body shop licence BD0000048448.",
+      "g": [
+        "center",
+        "roadside",
+        "licence",
+        "collision",
+        "indoor bays"
+      ],
+      "base": "Las Vegas",
+      "areas": [
+        "Las Vegas",
+        "Henderson",
+        "North Las Vegas",
+        "Boulder City",
+        "Summerlin",
+        "Green Valley",
+        "Centennial Hills",
+        "Enterprise",
+        "Spring Valley",
+        "Paradise",
+        "Whitney"
+      ],
+      "region": "Las Vegas Valley / Clark County",
+      "evidence": {
+        "checked": "https://24-7motorcoach.com/",
+        "phone_quote": "Schedule Service: 702-757-2471",
+        "coverage_quotes": [
+          "We service Tiffin, Newmar, American Coach, Thor, Itasca, Spartan and Monaco, along with every other major coach make.",
+          "Las Vegas Henderson North Las Vegas Boulder City Summerlin Green Valley Centennial Hills Enterprise Spring Valley Paradise Whitney Clark County"
+        ],
+        "type_quote": "State-of-the-art facilities equipped for scheduled maintenance, collision repair, and everything in between.",
+        "emergency_quote": null,
+        "roadside_quote": "Expert diesel engine maintenance and repair",
+        "licence": "Repair Garage License #: GAR000046449; Body Shop License #: BD0000048448"
+      }
+    },
+    {
+      "n": "Henderson RV",
+      "c": "Las Vegas, NV",
+      "p": "702-407-1222",
+      "u": "https://www.hendersonrv.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Henderson RV is a full-service RV shop at 13001 S. Las Vegas Blvd in Las Vegas offering repair, service, parts, storage, propane and dump. It works on motorhomes, travel trailers, fifth wheels and utility trailers and handles collision and body repair as well as general service. The site says it works with insurance and honors all extended warranties.",
+      "g": [
+        "center",
+        "collision",
+        "storage",
+        "parts"
+      ],
+      "base": "Las Vegas",
+      "areas": [],
+      "region": "Las Vegas Valley",
+      "evidence": {
+        "checked": "https://www.hendersonrv.com/",
+        "phone_quote": "Call us: 702-407-1222",
+        "coverage_quotes": [
+          "13001 S. Las Vegas Blvd. Las Vegas, NV 89044"
+        ],
+        "type_quote": "We are a one-stop-shop for anything you need from RV parts, RV repair, RV storage, and RV service.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "On The Spot Mobile RV Repair",
+      "c": "Mesquite, NV",
+      "p": "801-643-9573",
+      "u": "https://www.onthespotmobilervrepair.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "On The Spot Mobile RV Repair is run by Rob Deleyser, a nationally certified RV technician based in Mesquite, Nevada. He is licensed, bonded and insured and is a US military veteran. The mobile service covers water heaters, plumbing, air conditioning, refrigerators, heaters, electrical and exterior and interior repairs in Mesquite and the surrounding areas.",
+      "g": [
+        "mobile",
+        "certified",
+        "licensed and insured"
+      ],
+      "base": "Mesquite",
+      "areas": [
+        "Mesquite"
+      ],
+      "region": null,
+      "evidence": {
+        "checked": "https://www.onthespotmobilervrepair.com/",
+        "phone_quote": "Phone: 801-643-9573",
+        "coverage_quotes": [
+          "Available in Mesquite Nevada and the Surrounding Areas",
+          "I'm based out of Mesquite, Nevada"
+        ],
+        "type_quote": "Mobile RV Repair available from: 8am-6pm, Wednesday through Sunday",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    }
+  ]
+}

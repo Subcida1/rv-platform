@@ -89,5 +89,61 @@
     "to_zip": "91011",
     "force": true,
     "why": "The listing writes the name without its accents or its spaces, and the Census spelling (La Canada Flintridge) does not match it either. 91011 is the ZIP area that covers it."
+  },
+  "Lake Havasu": {
+    "to": "Lake Havasu City",
+    "why": "The listing and the locals shorten it; the Census carries it as Lake Havasu City. Same place."
+  },
+  "North Scottsdale": {
+    "to": "Scottsdale",
+    "why": "A district of Scottsdale, not a Census place."
+  },
+  "Happy Jack": {
+    "to_zip": "86024",
+    "why": "A small community in Coconino County with no Census place. 86024 is the ZIP area that serves it."
+  },
+  "Rimrock": {
+    "to_zip": "86335",
+    "why": "A community in Yavapai County the Census place file does not carry. 86335 is the ZIP area that serves it."
+  },
+  "Dolan": {
+    "to_zip": "86441",
+    "why": "The listing shortens Dolan Springs. 86441 is the ZIP area that serves it."
+  },
+  "Carson City": {
+    "to_zip": "89701",
+    "why": "Nevada's capital is an independent city, and the Census place file carries no place row for it at all, so the state's own capital could not be resolved. 89701 is its ZIP area."
+  },
+  "Centennial Hills": {
+    "to_zip": "89149",
+    "why": "A Las Vegas neighbourhood, not a Census place."
+  },
+  "Summerlin": {
+    "to_zip": "89135",
+    "why": "A Las Vegas neighbourhood, not a Census place."
+  },
+  "Ryndon": {
+    "to_zip": "89801",
+    "why": "A small community east of Elko with no Census place. 89801 is the ZIP area that serves it."
+  },
+  "Washoe City": {
+    "to_zip": "89704",
+    "why": "A community in Washoe Valley with no Census place. 89704 is the ZIP area."
+  },
+  "Bryce Canyon": {
+    "to": "Bryce Canyon City",
+    "why": "The listing shortens it; the Census carries Bryce Canyon City."
+  },
+  "Duck Creek Village": {
+    "to_zip": "84762",
+    "why": "A community on Cedar Mountain the Census place file does not carry. 84762 is the ZIP area that serves it."
+  },
+  "LaVerkin": {
+    "to": "La Verkin",
+    "why": "The listing writes the town as one word; the Census carries it as La Verkin, two words."
+  },
+  "Heber City": {
+    "to": "Heber",
+    "why": "The Census carries the town as Heber city, which keys as heber; the listing writes Heber City, which is what the town is called locally."
   }
 }

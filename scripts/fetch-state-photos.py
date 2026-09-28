@@ -54,6 +54,32 @@ PHOTOS = [
 ]
 
 
+# Added 2026-09-28 with the state, from the same Library of Congress collection the
+# California tile uses. Public domain, so no attribution burden, which is the rule these
+# tiles follow.
+PHOTOS += [
+    ("arizona",
+     "Rural Desert, Arizona LCCN2010630926.tif",
+     "Public domain (no known restrictions)", "Carol M. Highsmith",
+     "https://www.loc.gov/item/2010630926/",
+     "Desert and distant mesas in rural Arizona"),
+]
+
+
+PHOTOS += [
+    ("nevada",
+     "Great Basin National Park, Nevada, seen from Wheeler Peak - 20040621.jpg",
+     "Public domain (no known restrictions)", "National Park Service",
+     "https://commons.wikimedia.org/wiki/File:Great_Basin_National_Park,_Nevada,_seen_from_Wheeler_Peak_-_20040621.jpg",
+     "Great Basin National Park seen from Wheeler Peak, Nevada"),
+    ("utah",
+     "Delicate Arch in Arches National Park. NPS-Damon Joyce (18686376391).jpg",
+     "Public domain (National Park Service)", "Damon Joyce, National Park Service",
+     "https://commons.wikimedia.org/wiki/File:Delicate_Arch_in_Arches_National_Park._NPS-Damon_Joyce_(18686376391).jpg",
+     "Delicate Arch in Arches National Park, Utah"),
+]
+
+
 def commons_page(title):
     return "https://commons.wikimedia.org/wiki/File:" + urllib.parse.quote(title.replace(" ", "_"))
 

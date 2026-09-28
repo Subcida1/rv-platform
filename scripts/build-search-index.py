@@ -75,7 +75,8 @@ def directories():
 def businesses():
     """Every listing, so a search for a town or a business name finds it."""
     out = []
-    files = {"or": "oregon", "wa": "washington", "ca": "california"}
+    import site_constants as C
+    files = {code: slug for code, slug in C.state_shards().items()}
     for suffix, state in files.items():
         lf = ROOT / "assets" / "js" / "listings" / ("listings-%s.js" % suffix)
         if not lf.exists():

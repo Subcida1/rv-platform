@@ -213,3 +213,21 @@ ROAD_ICON = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-
 # whole string would break on whitespace; this is the part that cannot be
 # anything else.
 ROAD_ICON_MARK = 'M12 20.6v-4'
+
+
+def state_shards():
+    """slug -> USPS code for every state with a listings file.
+
+    Three scripts hardcoded ("or", "wa", "ca") and all three were wrong the moment a fourth
+    state arrived: the homepage counted 151 businesses against a page saying 204, and the
+    site search index quietly stopped including Arizona, Utah and Nevada. One place knows.
+    """
+    import json
+    from pathlib import Path
+    out = {}
+    for f in sorted((Path(__file__).resolve().parent.parent / "_data" / "listings").glob("*.json")):
+        data = json.loads(f.read_text(encoding="utf-8"))
+        code = (data.get("state") or "").upper()
+        if code:
+            out[code.lower()] = f.stem
+    return out

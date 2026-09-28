@@ -1347,7 +1347,7 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 .waste-row{margin-top:14px;padding:12px 14px;background:var(--surface);border:1px dashed var(--border);border-radius:var(--radius-sm)}
 .waste-label{display:block;font-size:12px;color:var(--text-3);line-height:1.5;margin-bottom:10px;font-weight:600}
 .waste-grid{display:flex;gap:12px;flex-wrap:wrap}
-.waste-box{display:flex;align-items:center;gap:8px;font-size:13.5px;color:var(--text);font-weight:700;cursor:pointer;padding:8px 12px;border:1px solid var(--border);border-radius:9px;background:var(--surface)}
+.waste-box{display:flex;align-items:center;gap:8px;font-size:13.5px;color:var(--text);font-weight:700;cursor:pointer;padding:8px 12px;min-height:44px;border:1px solid var(--border);border-radius:9px;background:var(--surface)}
 .waste-box:hover{border-color:var(--border-2)}
 .waste-box input{width:17px;height:17px;accent-color:var(--c-sky);cursor:pointer}
 .waste-grid select{border:1px solid var(--border-2);border-radius:8px;padding:6px 8px;min-height:24px;font-size:12.5px;background:var(--surface);color:var(--text);cursor:pointer}
