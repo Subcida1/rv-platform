@@ -176,6 +176,45 @@ def digest(raw):
     return hashlib.sha256(visible_text(raw).encode("utf-8")).hexdigest()[:16]
 
 
+# ---------------------------------------------------------------------------
+# THE CHECK DATE, and why this digest is not the one above.
+#
+# Every guide ends with "Written and checked against the sources on <date>". That is a claim,
+# and a stale date is a false one. But the digest above moves when a LINK is inserted (the tag
+# becomes a space before the following comma) and when a <script type="application/ld+json">
+# block is rewritten, and neither of those is a claim change. So gating on it would have
+# demanded a date bump every time somebody added a link, which is how a gate gets ignored.
+#
+# claim_text() therefore drops INTERNAL link text. Navigation is not a claim; the words around
+# it are. External link text stays, because a citation is a claim.
+BYLINE = re.compile(r'<p class="reviewed">[^<]*(?:<[^>]+>[^<]*)*?on ([A-Z][a-z]{2} \d{1,2}, \d{4})')
+INTERNAL_A = re.compile(r'<a\b[^>]*href="(?!https?:|mailto:|tel:)[^"]*"[^>]*>.*?</a>', re.S | re.I)
+
+
+def byline_date(raw):
+    """The date the page says it was checked, or None if it carries no such line."""
+    m = BYLINE.search(raw)
+    if m:
+        return m.group(1)
+    m = re.search(r'class="reviewed".*?on ([A-Z][a-z]{2} \d{1,2}, \d{4})', raw, re.S)
+    return m.group(1) if m else None
+
+
+def claim_text(raw):
+    """The page's prose, with navigation removed and spacing canonical."""
+    s = re.sub(r"<(script|style)\b.*?</\1>", " ", raw, flags=re.S | re.I)
+    s = INTERNAL_A.sub(" ", s)
+    s = re.sub(r"<[^>]+>", " ", s)
+    s = s.replace("&nbsp;", " ").replace("&#8594;", " ")
+    s = re.sub(r"\s+", " ", s)
+    s = re.sub(r"\s+([.,;:!?])", r"\1", s)     # a tag before a comma must not read as a change
+    return s.strip()
+
+
+def claim_digest(raw):
+    return hashlib.sha256(claim_text(raw).encode("utf-8")).hexdigest()[:16]
+
+
 def pages():
     """Every published page, in a stable order."""
     out = []
@@ -208,6 +247,24 @@ def main():
     man = load()
     live = {str(p.relative_to(ROOT)): digest(p.read_text(encoding="utf-8"))
             for p in pages()}
+
+    if "--stamp-claims" in sys.argv:
+        # Establishes the baseline: what the prose says TODAY, next to the date the page
+        # currently claims. From here on, prose that moves without the date moving is a
+        # failure, and prose that moves WITH the date is housekeeping.
+        n = 0
+        for rel, _ in live.items():
+            raw = (ROOT / rel).read_text(encoding="utf-8")
+            d = byline_date(raw)
+            if not d:
+                continue
+            man.setdefault(rel, {})
+            man[rel]["claims"] = claim_digest(raw)
+            man[rel]["claims_date"] = d
+            n += 1
+        save(man)
+        print("stamped the claim digest and date for %d page(s) that carry a check date" % n)
+        return 0
 
     if "--seed" in sys.argv:
         added = refreshed = 0
@@ -423,10 +480,37 @@ def main():
         print("\n-- NOT IN THE MANIFEST (%d) -- run --seed" % len(missing))
         for r in missing[:10]:
             print("   %s" % r)
+    stale_date = []
+    for rel in sorted(live):
+        raw = (ROOT / rel).read_text(encoding="utf-8")
+        d = byline_date(raw)
+        if not d:
+            continue
+        rec = man.get(rel) or {}
+        if not rec.get("claims"):
+            continue
+        moved = rec["claims"] != claim_digest(raw)
+        redated = rec.get("claims_date") != d
+        if moved and not redated:
+            stale_date.append((rel, rec.get("claims_date"), d))
+        elif moved and redated:
+            man[rel]["claims"] = claim_digest(raw)
+            man[rel]["claims_date"] = d
+    if stale_date:
+        print("\n=== the prose moved but the check date did not ===")
+        for rel, was, now in stale_date[:10]:
+            print("  %s says %s, and its words have changed since" % (rel, was))
+        print("  update the date on the page, or the claim is not true")
+        save(man)
+
     print("\n  %d verified, %d unverified, %d drifting, %d unmanifested"
           % (len([r for r in live if man.get(r, {}).get("status") == "verified"]),
              len(unverified), len(drift), len(missing)))
 
+    if stale_date and "--strict" in sys.argv:
+        print("\nFAIL  %d page(s) carry a check date their words have moved past"
+              % len(stale_date))
+        return 1
     if drift and "--strict" in sys.argv:
         print("\nFAIL  %d verified page(s) changed without re-verification" % len(drift))
         return 1
