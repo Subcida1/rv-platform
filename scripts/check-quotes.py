@@ -33,7 +33,7 @@ import sys
 import urllib.request
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-CACHE = pathlib.Path("/tmp/quote-source-cache")
+CACHE = pathlib.Path("/tmp/quote-source-cache-v2")   # v2 stores RAW text and normalises on read
 UA = ("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) "
       "Chrome/154.0.0.0 Safari/537.36")
 
@@ -47,6 +47,20 @@ def norm(s):
                  # the marks a page and a PDF disagree about: inch/foot primes, primes, low quotes
                  ("\u2033", '"'), ("\u2032", "'"), ("\u2039", "<"), ("\u203a", ">"),
                  ("\u201a", ","), ("\u201e", '"'), ("\u02bc", "'"), ("\u2122", "(tm)")):
+        s = s.replace(a, b)
+    # QUOTE MARKS. A page integrating a quotation may set it in single or double marks and the source may
+    # do the opposite - "structural components" against 'Structural Components'. Unifying them is not a
+    # judgement about style, it is removing a difference that has nothing to do with the words.
+    for a in ("\u2018", "\u2019", "\u201a", "\u02bc", "\u2032", "\u201c", "\u201d", "\u201e", "\u2033"):
+        s = s.replace(a, '"')
+    # SUPERSCRIPTS. PDF extraction renders ft2, m3, 100 as ft2 / m3 / 100; a page writes ft.2 or ft2.
+    for a, b in (("\u00b2", "2"), ("\u00b3", "3"), ("\u00b9", "1"), ("\u2070", "0")):
+        s = s.replace(a, b)
+    # FRACTIONS. A manual prints "approximately 1/2 inch" with a single fraction glyph; a page integrating
+    # the same sentence writes "1/2 inch". Found by chasing one reported missing quote back into the cache,
+    # where the source had it all along.
+    for a, b in (("\u00bd", "1/2"), ("\u00bc", "1/4"), ("\u00be", "3/4"), ("\u2153", "1/3"),
+                 ("\u2154", "2/3"), ("\u215b", "1/8"), ("\u215c", "3/8"), ("\u215d", "5/8")):
         s = s.replace(a, b)
     s = unify_units(s)
     return re.sub(r"\s+", " ", s).strip()
@@ -121,18 +135,83 @@ def sources_on_page(text):
     return urls
 
 
+CHROME_PROFILE = "/tmp/quotefetch-chrome"
+
+
+CHALLENGE_MARKERS = (
+    "just a moment", "enable javascript", "checking your browser", "cf-browser-verification",
+    "cf-chl-", "attention required", "please verify you are a human", "ddos protection",
+)
+
+
+def looks_like_challenge(text):
+    """True when a fetch returned an interstitial rather than the document.
+
+    Learned the hard way. The browser fallback accepted a Cloudflare challenge page as a successful fetch -
+    23 KB of "Just a moment..." passed a length check - and then every quotation from that source was
+    reported as MISSING. That is the worst possible failure for this tool: a false negative that looks
+    exactly like a real finding, produced by the very mechanism added to remove them. Two different
+    Airstream URLs came back 28,975 and 28,954 bytes, which is what gave it away - identical sizes for
+    different articles.
+    """
+    low = text[:4000].lower()
+    return any(m in low for m in CHALLENGE_MARKERS)
+
+
+def fetch_browser(url, budget=9000):
+    """Second attempt at a source, through a real browser engine.
+
+    WHY THIS EXISTS. Some of the sources this site cites refuse a plain HTTP client and work perfectly for
+    a reader: government pages returning 403, and makers behind Cloudflare that serve a challenge to
+    anything automated. The first pass reported those as unreachable and could not be judged at all, which
+    left thirteen guides with a permanent hole in their verification.
+
+    Flags chosen from what already works on this machine: flatpak Chrome, --headless=new, and a
+    --virtual-time-budget so client-rendered pages have time to build their content before the DOM is
+    dumped. The dedicated profile directory matters - using the default one races with the Chrome the user
+    is running for his own work, and launching into a live profile can fail or, worse, disturb it.
+
+    Deliberately NOT a guarantee: a web application firewall that refuses browsers too will still refuse
+    this, and the caller reports that as blocked rather than quietly treating it as searched.
+    """
+    import subprocess
+    cmd = ["flatpak", "run", "com.google.Chrome", "--headless=new", "--disable-gpu", "--no-sandbox",
+           f"--user-data-dir={CHROME_PROFILE}", f"--virtual-time-budget={budget}",
+           "--dump-dom", url]
+    try:
+        r = subprocess.run(cmd, capture_output=True, text=True, timeout=90)
+        return r.stdout or ""
+    except Exception:
+        return ""
+
+
 def fetch(url):
     """Cached fetch. PDFs are downloaded and read with pdftotext, which is how the verifiers read them."""
     CACHE.mkdir(parents=True, exist_ok=True)
     key = hashlib.sha256(url.encode()).hexdigest()[:20]
     cached = CACHE / key
     if cached.exists():
-        return cached.read_text(encoding="utf-8", errors="replace")
+        raw_cached = cached.read_text(encoding="utf-8", errors="replace")
+        if looks_like_challenge(raw_cached):
+            return "__FETCH_FAILED__ cached copy is a challenge page"
+        # normalise HERE, not before writing. The v1 cache stored normalised text, so every change to the
+        # normalisation rules silently invalidated every source already fetched - and a stale-normalised
+        # source reads as a missing quotation, which is indistinguishable from a real finding.
+        return norm(cached.read_text(encoding="utf-8", errors="replace"))
     try:
         req = urllib.request.Request(url, headers={"User-Agent": UA})
         with urllib.request.urlopen(req, timeout=45) as r:
             raw = r.read()
     except Exception as e:
+        # SECOND ATTEMPT, through a real browser. Government pages return 403 to an HTTP client while
+        # working fine for a reader, and makers behind Cloudflare serve a challenge to anything automated.
+        # The first pass could not judge those at all, which left thirteen guides permanently unverifiable.
+        dom = fetch_browser(url)
+        if dom and looks_like_challenge(dom):
+            return f"__FETCH_FAILED__ browser got a challenge page, not the document"
+        if dom and len(norm(dom)) > 600:
+            cached.write_text(dom, encoding="utf-8")
+            return norm(dom)
         # NEVER cache a failure. Writing "" on error means one transient network blip poisons the cache
         # permanently: a later --no-fetch run reads empty for that source and reports every quote from it
         # as missing, which is a silent false positive generator with no way to tell it apart from a real
@@ -149,9 +228,8 @@ def fetch(url):
             txt = ""
     else:
         txt = raw.decode("utf-8", errors="replace")
-    txt = norm(txt)
     cached.write_text(txt, encoding="utf-8")
-    return txt
+    return norm(txt)
 
 
 def check(path, no_fetch=False):
@@ -165,7 +243,7 @@ def check(path, no_fetch=False):
         for u in urls:
             cached = CACHE / hashlib.sha256(u.encode()).hexdigest()[:20]
             if cached.exists():
-                corpus.append(cached.read_text(encoding="utf-8", errors="replace"))
+                corpus.append(norm(cached.read_text(encoding="utf-8", errors="replace")))
     else:
         for u in urls:
             t = fetch(u)
