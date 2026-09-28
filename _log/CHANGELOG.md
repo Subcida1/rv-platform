@@ -61,7 +61,7 @@ No secrets, keys, tokens or customer details in here. This file is committed.
 - expect: No site effect by itself. It changes what the next data pass works on: for California it puts the Shasta and Siskiyou gaps at the top of the reachable work, and names the Los Angeles basin as 142 towns with the nearest base 355 miles away, which is a scope decision rather than a research task.
 - files: scripts/coverage-gaps.py
 - tags: directory, infra
-- commit: HEAD (unpushed)
+- commit: 2ce8fb1 (pushed)
 - deployed: 2026-09-28T01:03:50-07:00
 
 ### style: A directory page prints as a directory: the interactive finder is hidden on paper, and the region list is what prints
