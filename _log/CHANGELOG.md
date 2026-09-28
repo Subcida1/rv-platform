@@ -22,6 +22,7 @@ No secrets, keys, tokens or customer details in here. This file is committed.
 - files: guides/*.html, about.html, scripts/content-manifest.json
 - tags: accuracy
 - commit: da39995 (pushed)
+- deployed: 2026-09-28T06:35:01+00:00
 
 ### infra: cross-check.py: the first check that reads two pages at once
 - why: every other check here is per-page by construction, and two pages contradicting each other is what actually shipped: winterize-plumbing told readers to leave the dump valves open or cracked while start-here told them to close them, and both passed every gate. It was found by a human reading the site. The script assembles every instance of a subject across the whole site and flags the subset that cannot both be true. Four rules were built and measured against the live site before one was kept, and the three rejected ones are recorded in its docstring: comparing sentence contexts gave six findings and zero real ones while also missing the motivating bug; ranking by distinct-value count broke on table rows; flagging disjoint value sets flagged axle-with-percent three ways because 110 load reserve, 80 payload and 40 brake ratio are three different facts. The rule that survived is narrow: exactly two distinct values site-wide for one subject and unit, each on exactly one page, in sentences sharing three content words. It is validated both ways, which is the only reason to trust it: reintroducing the 120 F relief-valve figure makes it fire, and fixing it makes it silent. It reports rather than gates, and ci.sh prints it on every run.
@@ -29,6 +30,7 @@ No secrets, keys, tokens or customer details in here. This file is committed.
 - files: scripts/cross-check.py, scripts/ci.sh, _TOOLS.md
 - tags: accuracy
 - commit: da39995 (pushed)
+- deployed: 2026-09-28T06:35:01+00:00
 
 ### copy: Trust fix: named author and an honest check line across all 35 guides, plus an editorial policy on the About page
 - why: the external review's trust verdict was the one finding that was not a content bug: about.html was anonymous first person ('The person behind this site'), no author was named anywhere, and all 36 guides carried a 'Last reviewed' date inside a single week. Those were publication dates wearing a review label, and the reviewer read them correctly as a bulk-publication signal. Ty's decision: his name goes on it, and the label was wrong. The check line now reads 'By Ty Brandes. Written and checked against the sources below on <date>.', linking to the About page, and the About page names him in the lede, title, meta, social strings and schema, with a new card stating how a guide is put together: the documents behind each claim are named and linked, both sides are named where sources disagree, a maker's own specification is labelled as such, and the date at the top is the date the claims were last checked rather than the date the page was written. Author added to the Article schema on all 35 guides.
