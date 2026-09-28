@@ -56,6 +56,22 @@ No secrets, keys, tokens or customer details in here. This file is committed.
 - commit: 73ea72e (pushed)
 - deployed: 2026-09-28T05:30:48+00:00
 
+### copy: The 30 PSI winterising figure now names Jayco, and the page was fixed in its generator
+- why: An unnamed-authority claim that also read as a contradiction of the Furrion figure on another page. Caught by the site's own style rules, not by a reviewer.
+- expect: No search effect. If the winterising guide and this page now agree in a reader's mind, the cross-check.py direction pairs for pressure should stop firing.
+- files: scripts/build-manuals-pages.py, manuals/start-here.html, _specs/start-here.md
+- tags: copy, content
+- commit: be3cd47 (pushed)
+- deployed: 2026-09-28T02:45:46-07:00
+
+### directory: Listing accuracy pass: every record's tags checked against the business's own site, with the evidence recorded for the 91 that had none
+- why: Ty: 'make sure the listings are accurate and truthful to their category.' A lane's audit exposed that 91 of 116 records predate the evidence field, so their tags were unverifiable by inspection. Research also changed two rules: a tow operator advertising 'RV towing' is transport rather than roadside repair, and '24/7 by appointment' is not 24/7.
+- expect: No search effect. The value is that a tag can now be checked from the file rather than by re-reading every site, and that one wrong pair of tags (L & T Truck Repair) was corrected before a stranded reader acted on it. Watch whether the dealer-service-department prompts turn out to be false alarms; if they are, the check is noise and should be dropped.
+- files: scripts/audit-tags.py, _data/listings/california.json, _data/listings/oregon.json, _data/listings/washington.json
+- tags: directory, data
+- commit: 03023a1 (pushed)
+- deployed: 2026-09-28T02:45:45-07:00
+
 ### directory: California: 25 verified listings added outside the northern corridor, and the Census naming gaps that blocked them
 - why: The page said California and could only place its northern third. Three bounded research passes covered the San Joaquin valley and the Central Coast, at 24 candidates, of which the grounding gate rejected 5 before anything shipped. Two Census naming patterns were silently making real towns unresolvable: official names with the common one in parentheses (Paso Robles, Ventura) and hyphenated names (Carmel).
 - expect: Within 4 weeks, the California page gains impressions on central-coast and valley town queries, and the region sections are the part that gets indexed. No click expectation yet.
