@@ -50,6 +50,18 @@ def load_gsc():
     return module
 
 
+def is_indexed(state):
+    """True only for a state that means Google HAS the page in the index.
+
+    This exists because the first version of the regression check tested
+    `"indexed" in state`, and "Discovered - currently not indexed" contains the
+    substring "indexed", so queue churn was reported as pages leaving the index.
+    The positive states are the ones that START with one of these.
+    """
+    state = (state or "").lower()
+    return state.startswith("submitted and indexed") or state.startswith("indexed")
+
+
 def fmt_delta(now, before):
     if before == 0:
         return "new" if now else "0"
@@ -588,7 +600,7 @@ def build(args):
             add("")
             for url, was, now in changes:
                 add("- %s: %s -> **%s**" % (url.replace(gsc.BASE_URL, ""), was, now))
-                if "indexed" in was and "indexed" not in now:
+                if is_indexed(was) and not is_indexed(now):
                     flags.append("regression: %s left the index (%s)" % (url, now))
             add("")
         elif previous_sweep:
@@ -670,7 +682,8 @@ def build(args):
     add("- Bing Webmaster Tools: API wired for query and traffic stats, section 3. Grounding")
     add("  queries and Citation Share are NOT in the API (five method names probed, all 404), so")
     add("  those two stay a manual look in Bing's interface.")
-    add("- IndexNow: wired for submission (scripts/indexnow.py), not yet automatic on change.")
+    add("- IndexNow: wired, and log-change.py --ping submits the pages whose lastmod is today")
+    add("  after a change is pushed. It refuses to ping unpushed work.")
     add("- Generative AI impressions: not available through the GSC API at all; UI only.")
     add("")
 
