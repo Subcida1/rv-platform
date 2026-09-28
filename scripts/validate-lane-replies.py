@@ -51,6 +51,25 @@ def quotes_in(text):
     return out
 
 
+HARNESS_HEADERS = (
+    "CAPTURED BY THE BRIDGE HARNESS",
+    "NO ANSWER WAS CAPTURED",
+)
+
+
+def harness_wrote(text):
+    """True when the harness wrote the file rather than the lane.
+
+    TWO HEADERS, NOT ONE. Both strings mean the harness authored the reply: one says it captured the
+    lane's answer, the other says no answer arrived and the flight was released. A classifier that greps
+    only the first labels every capture-ceiling reply as LANE-WRITTEN, which is the opposite of the
+    truth -- measured 2026-09-27 17:47, it mislabelled 3 of 4 replies. Across the whole outbox: 48 files
+    carry the first string and 27 carry the second, so a one-string check is wrong about 27 of them.
+    """
+    head = text[:600]
+    return any(h in head for h in HARNESS_HEADERS)
+
+
 def prompt_for(jobid):
     """The job file's own text, so a lane that echoes the instructions can be told apart from one
     that invented a quote. Learned from the first real run: four replies contained "quotes" that were
@@ -92,6 +111,11 @@ def check(reply_path):
     jobid = reply_path.name.replace("REPLY-", "").replace(".md", "")
     page, slug = staged_for(jobid)
     print(f"\n=== {jobid}")
+    if harness_wrote(reply):
+        kind = "capture" if "CAPTURED BY THE BRIDGE HARNESS" in reply[:600] else "NO ANSWER"
+        print(f"    HARNESS-WRITTEN ({kind}): the lane did not author this file")
+        print("    nothing here reflects the lane's review, so there is nothing to validate")
+        return
     if page is None:
         print(f"    could not find the staged page for this job (looked for {slug})")
         return
