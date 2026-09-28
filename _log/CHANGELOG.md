@@ -22,6 +22,7 @@ No secrets, keys, tokens or customer details in here. This file is committed.
 - files: guides/trailer-brakes-required.html, guides/winterize-plumbing.html, guides/rv-tank-sensors-reading-wrong.html, guides/roof-snow-load.html, guides/rv-roof-leak-repair.html, guides/rv-solar-not-charging.html, guides/tires-winter.html, guides/rv-tire-replacement.html, guides/rv-condensation-inside.html, guides/rv-fuse-keeps-blowing.html, guides/rv-12-volt-problems.html, guides/rv-refrigerator-not-cooling.html, guides/rv-propane-furnace-wont-light.html, guides/rv-two-appliances-stopped.html, guides/rv-towing-capacity.html, tools/weight-calculator.html, tools/index.html, assets/js/weight.js, manuals/start-here.html, scripts/build-manuals-pages.py, scripts/content-manifest.json
 - tags: accuracy
 - commit: 04c3761 (pushed)
+- deployed: 2026-09-28T05:30:48+00:00
 
 ## 2026-09-24
 
