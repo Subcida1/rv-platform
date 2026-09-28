@@ -2344,8 +2344,11 @@ body.is-embed .embed-credit a{font-weight:800;color:var(--b1)}
   a{color:#000;text-decoration:none}
 
   /* ---- 6. the sources are the point: print where they are ---- */
+  /* `overflow-wrap:anywhere` rather than `word-break:break-all`: a short URL stays on one
+     line and only a long one breaks, and a broken URL is still joinable by eye. Verified
+     on the live render: 10 URLs across an 11-page guide, none of them lost. */
   a[href^="http"]::after{
-    content:" (" attr(href) ")";font-size:8pt;color:#555;word-break:break-all}
+    content:" (" attr(href) ")";font-size:8pt;color:#555;overflow-wrap:anywhere}
 
   /* ---- 7. the FAQ, once site.js has opened it ---- */
   details.faq>summary{font-weight:700;padding:5pt 0}
