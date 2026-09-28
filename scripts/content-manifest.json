@@ -5278,9 +5278,9 @@
     "sources": []
   },
   "manuals/start-here.html": {
-    "hash": "3b6cfe00defe6db9",
+    "hash": "450dc838370549a1",
     "status": "unverified",
-    "verified_by": null,
+    "verified_by": " CHANGED 2026-09-28: one sentence was attributed. It read \"The manual's limit is 30 PSI maximum\", an unnamed authority for a specific number, and read against the Furrion figure on the water-heater guide it looked like a contradiction. The number is Jayco's, which the winterising guide already says ('Jayco caps its system at 30 psi ... while Winnebago publishes 35 to 50 psi'), and the sentence now names Jayco and says the ceiling is the plumbing's rather than one number for every RV. The change was made in the page's generator, scripts/build-manuals-pages.py, and the page regenerated. No other text changed.",
     "verified_at": null,
     "sources": [],
     "spec": "_specs/start-here.md",

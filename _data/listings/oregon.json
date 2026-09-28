@@ -71,7 +71,13 @@
         "Family owned",
         "Roadside"
       ],
-      "base": "Salem"
+      "base": "Salem",
+      "evidence": {
+        "checked": "https://www.oakparkrvmobileservice.com/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "e_quote": "Do you offer emergency RV repair services? Yes.",
+        "mobile_quote": "Oak Park RV Mobile Services in Salem, OR | Oak Park RV Mobile Service Salem RV Mobile 27+ Reviews 8:30 AM -5:00 PM | Salem, OR CALL 503-581-5407 Home RV Mobile Services FAQs Reviews Review"
+      }
     },
     {
       "n": "Peace of Mind Mobile RV Repair",
@@ -87,7 +93,12 @@
         "Mobile + in-shop"
       ],
       "base": "Eugene",
-      "region": "Lane County"
+      "region": "Lane County",
+      "evidence": {
+        "checked": "https://www.peaceofmindrvrepair.com/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "--> HOME | Peace Of Mind Mobile top of page Peace of mind mobile RV repair We provide peace of mind by offering our services at your location or in-shop for your convenience."
+      }
     },
     {
       "n": "AAA RV Tech",
@@ -102,7 +113,12 @@
         "Inspections",
         "No towing"
       ],
-      "base": "Portland"
+      "base": "Portland",
+      "evidence": {
+        "checked": "https://aaarvtech.com/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "AAA RV Tech | Mobile RV Repair Portland, OR | (305) 354-6748 Click To Skip To Main Content Call us: (305) 354-6748 Email us: hugo@aaarvtech."
+      }
     },
     {
       "n": "Happy Mobile RV Repair",
@@ -127,7 +143,12 @@
       "reg": [
         "central",
         "southern"
-      ]
+      ],
+      "evidence": {
+        "checked": "https://www.happymobilerv.com/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Happy Mobile RV Repair LLC | Schedule Your RV Repair Today 0 Skip to Content Home Contact FAQ Call Now! Open Menu Close Menu Home Contact FAQ Call Now! Open Menu Close Menu Home Cont"
+      }
     },
     {
       "n": "JBK RV Mobile Repair",
@@ -143,7 +164,12 @@
         "Appointment only"
       ],
       "base": "Grants Pass",
-      "region": "Grants Pass and surrounding areas"
+      "region": "Grants Pass and surrounding areas",
+      "evidence": {
+        "checked": "https://jbkrvmobilerepair.com/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Expert RV Mobile Repair Services at Your Location Home Shop More Home Shop Call Now or Request Service Home Shop Call Now or Request Service JBK RV Mobile Repair LLC: We come to you Vete"
+      }
     },
     {
       "n": "Fixin Trips Mobile RV Service",
@@ -165,7 +191,12 @@
         "Prineville",
         "La Pine"
       ],
-      "region": "Central Oregon"
+      "region": "Central Oregon",
+      "evidence": {
+        "checked": "https://www.fixintrips.com/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "--> Mobile RV Service & Repair | Bend, OR | Fixin Trips top of page HOME ABOUT US SERVICES REVIEWS CONTACT More Use tab to navigate through the menu items."
+      }
     },
     {
       "n": "Bald Bros RV Repair",
@@ -183,7 +214,12 @@
       "base": "Bend",
       "areas": [
         "Redmond"
-      ]
+      ],
+      "evidence": {
+        "checked": "https://baldbrosrv.com/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "At Bald Bros RV Repair, we provide professional mobile RV repair and maintenance services, bringing expert service directly to your campsite, home, or storage location."
+      }
     },
     {
       "n": "Ark Mobile RV Repair Service",
@@ -199,7 +235,12 @@
         "Family owned"
       ],
       "base": "La Pine",
-      "region": "Central Oregon"
+      "region": "Central Oregon",
+      "evidence": {
+        "checked": "https://www.arkmobilerv.com/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Mobile RV Repair Services | Ark Mobile Rv Repair Service Black telephone receiver icon."
+      }
     },
     {
       "n": "At Your Door Mobile RV Repair",
@@ -215,7 +256,12 @@
         "No towing"
       ],
       "base": "Bend",
-      "region": "Bend area, April through September"
+      "region": "Bend area, April through September",
+      "evidence": {
+        "checked": "https://aydmobilervrepair.com/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Mobile RV Repair in Bend, OR 97701 | At Your Door Mobile RV Repair LLC Skip to main content Mobile RV Repair Services in Oregon and Arizona - Call Today! Home Services All Serv"
+      }
     },
     {
       "n": "NRV Services",
@@ -231,7 +277,12 @@
         "Generators"
       ],
       "base": "Bend",
-      "region": "Bend and surrounding areas"
+      "region": "Bend and surrounding areas",
+      "evidence": {
+        "checked": "https://nrvservices.net/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "ces LLC Home About Certifications Testimonials & Reviews More Home About Certifications Testimonials & Reviews Home About Certifications Testimonials & Reviews Providing mobile RV Repair and inspection services Mobile Tech Services Our mobile RV repair services cover a wide range of essential components, including air conditioners, refrigerator"
+      }
     },
     {
       "n": "Freedom RV Services",
@@ -254,7 +305,13 @@
         "Eugene",
         "Newport"
       ],
-      "radius": 50
+      "radius": 50,
+      "evidence": {
+        "checked": "https://freedomrvmobile.com/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "e_quote": "If you're calling for an urgent matter, feel free to contact us, but the rates are double for after hours service.",
+        "mobile_quote": "Freedom RV Mobile Skip to content Rob@FreedomRVMobile."
+      }
     },
     {
       "n": "Crazy Creek RV Repair",
@@ -273,7 +330,13 @@
       "areas": [
         "Bend"
       ],
-      "region": "Central Oregon"
+      "region": "Central Oregon",
+      "evidence": {
+        "checked": "https://crazycreekrvrepair.com/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "e_quote": "Request a Repair from John What Are Your Hours? Because RV issues don’t wait for office hours, we are available 24/7 for emergency repairs.",
+        "mobile_quote": "Mobile RV Repair in Bend, Oregon | Crazy Creek RV Repair About Us Services FAQs Get Your RV Repaired at Your Home About Services Get Your RV Fixed Now Faqs CALL NOW: 541-408-39"
+      }
     },
     {
       "n": "Kings Mobile RV Service",
@@ -297,7 +360,12 @@
       "reg": [
         "north-coast",
         "south-coast"
-      ]
+      ],
+      "evidence": {
+        "checked": "https://kingsmobilervserv.univer.se/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Oregon Coast RV Repairs Kings Mobile RV Serice LLC Expert RV repairs and services on the Oregon Coast from Port Orford to Florence (541) 404-1179 Call to schedule your appointment today! At Kings Mobile RV"
+      }
     },
     {
       "n": "Bandon Mobile RV Repair",
@@ -335,7 +403,12 @@
       "areas": [
         "Yachats",
         "Lincoln City"
-      ]
+      ],
+      "evidence": {
+        "checked": "https://harrismobilervservice.com/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "I am available for on-site mobile RV repairs by appointment only ."
+      }
     },
     {
       "n": "BAM Mobile RV Service and Repair",
@@ -350,7 +423,13 @@
         "Detailing",
         "Est. 2023"
       ],
-      "base": "Salem"
+      "base": "Salem",
+      "evidence": {
+        "checked": "https://bammobilerv.com/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "e_quote": "From emergency repairs to scheduled maintenance, we take pride in offering reliable service backed by skill, experience, and customer-focused care.",
+        "mobile_quote": "Service Salem OR: Expert Care for Your RV Skip to content Menu Menu Home About Us Services Complete RV Tank Cleaning Solution Gallery Contact Us GET A FREE ESTIMATE BAM Mobile RV Service & Repair | RV inspection service Salem, OR Need Your RV Repaired? We Are There."
+      }
     },
     {
       "n": "Family RV Mobile Repairs",
@@ -365,7 +444,12 @@
         "LP system",
         "Winterization"
       ],
-      "base": "Salem"
+      "base": "Salem",
+      "evidence": {
+        "checked": "https://www.familyrvoregon.com/mobile-rv-repairs",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "--> Mobile RV Repair in Salem, OR | Family RV | Used RV Sales top of page Family RV 4935 Commercial St SE Salem, OR 97302 (503) 385-8443 info@familyrvoregon."
+      }
     },
     {
       "n": "RV Masters of Oregon",
@@ -381,7 +465,12 @@
         "Braking systems"
       ],
       "base": "Reedsport",
-      "region": "Southern Oregon coast"
+      "region": "Southern Oregon coast",
+      "evidence": {
+        "checked": "https://rvmastersoforegonllc.com/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Mobile RV Repair & Garage Skip to content Email: @rvmastersoforegonllc."
+      }
     },
     {
       "n": "Sutton RV Service",
@@ -396,7 +485,12 @@
         "Indoor bays",
         "Warranty work"
       ],
-      "base": "Eugene"
+      "base": "Eugene",
+      "evidence": {
+        "checked": "https://www.suttonrv.com/rv-service",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "Sutton RV Service Center is next door to our main administration and sales office (50 HWY 99N, Eugene, OR 97402)."
+      }
     },
     {
       "n": "Curtis Trailers",
@@ -411,7 +505,12 @@
         "RVIA/RVDA certified",
         "Two locations"
       ],
-      "base": "Portland"
+      "base": "Portland",
+      "evidence": {
+        "checked": "https://www.curtistrailers.com/rv-service",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "iness Is Your Vacation! 2 Locations Beaverton 21525 SW Tualatin Valley Hwy Aloha, OR 97003 (503) 985-8411 Portland 10177 SE Powell Blvd Portland, OR 97266 (971) 245-2554 Shop All Location Inventory Toggle navigation Menu Contact Us Contact RV Search Search Search RVs All RVs New Pre-Owned Specials Tow Guides Clearance Service & Parts Service"
+      }
     },
     {
       "n": "Southside RV Repair and Shelter Factory",
@@ -426,7 +525,12 @@
         "Parts on site",
         "Roof work"
       ],
-      "base": "Corvallis"
+      "base": "Corvallis",
+      "evidence": {
+        "checked": "https://www.southsiderv.com/auto-repair",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "ties Located in Corvallis, OR | 541-754-9390 Home About Us Products and Services All-Steel Shelters Contact Excellent Repair Services Are you having issues with your RV? Bring it to Southside RV Repair & Shelter Factory for a repair job."
+      }
     },
     {
       "n": "Jackson RV",
@@ -441,7 +545,12 @@
         "Collision repair",
         "Big parts inventory"
       ],
-      "base": "Medford"
+      "base": "Medford",
+      "evidence": {
+        "checked": "http://jacksonrv.com/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "als RV FAQs RV Storage Contact Us OVER 20 YEARS IN SOUTHERN OREGON Jackson RV Parts & Service Largest RV Parts & Accessory inventory in the Rogue Valley Newly expanded 8 bay shop holds larger motor homes and 5th wheels Experienced staff that will diagnose and resolve most RV problems Specialize in major collision repair and we are happy to p"
+      }
     },
     {
       "n": "Straight Line RV and Boat",
@@ -457,7 +566,12 @@
         "Insurance help"
       ],
       "base": "Springfield",
-      "spec": "Body and collision only"
+      "spec": "Body and collision only",
+      "evidence": {
+        "checked": "http://www.straightline-rv.com/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "RV & Boat Body Shop | Fiberglass & Collision Repair Skip to main content 845 Shelley St."
+      }
     },
     {
       "n": "Florence RV and Automotive Specialists",
@@ -472,7 +586,12 @@
         "24/7 roadside"
       ],
       "base": "Florence",
-      "r": true
+      "r": true,
+      "evidence": {
+        "checked": "https://florencerv.com/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "We have 3 large Service Bays all RV Capable complete with all the modern equipment necessary to competently diagnose and make appropriate repairs."
+      }
     },
     {
       "n": "Porter's RV",
@@ -487,7 +606,12 @@
         "Coast",
         "Full service"
       ],
-      "base": "Coos Bay"
+      "base": "Coos Bay",
+      "evidence": {
+        "checked": "https://www.portersrv.com/rv-service",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "RV Service in Coos Bay, Oregon | RV Service and Repair | Porter&#39;s RVs Skip to main content Call or Text 541-269-5121 541-269-5121 www."
+      }
     },
     {
       "n": "Tony's RV Repair",
@@ -502,7 +626,12 @@
         "Collision repair",
         "30-plus years"
       ],
-      "base": "Coos Bay"
+      "base": "Coos Bay",
+      "evidence": {
+        "checked": "https://tonysrvrepair.com/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "Coos Bay best RV repair &#8211; Coos Bay&#039;s RV repair shop Service : (541) 267-1664 Facebook Services Having electrical issues? Body or Roof issues Appliance services Plumbin"
+      }
     },
     {
       "n": "Mobile RV Services of Central Oregon",
@@ -524,7 +653,12 @@
         "Prineville",
         "La Pine"
       ],
-      "region": "Central Oregon"
+      "region": "Central Oregon",
+      "evidence": {
+        "checked": "https://www.mobilervrepairco.com/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Mobile RV Repair in Bend, Oregon | Mobile RV Services of Central Oregon 0 Skip to Content Mobile RV Services of Central Oregon RV Services RV Repair Tips & Maintenance Blog — B"
+      }
     },
     {
       "n": "Rusted Hitch RV Roofing",
@@ -541,7 +675,12 @@
       ],
       "base": "Bend",
       "region": "Oregon, Idaho, and parts of Washington",
-      "spec": "RV roofs only"
+      "spec": "RV roofs only",
+      "evidence": {
+        "checked": "https://rustedhitchrvrepair.com/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "RV Roof Repair Mobile Sevices- OREGON - WASHINGTON- IDAHO- We come To you! Home Mobile Services Contact Us REVIEWS Photos & merch More Home Mobile Services Contact Us REVIEWS Photos & merch H"
+      }
     },
     {
       "n": "Cascade Auto Glass",
@@ -562,7 +701,12 @@
         "The Dalles"
       ],
       "region": "Columbia River Gorge",
-      "spec": "Windshield and glass only"
+      "spec": "Windshield and glass only",
+      "evidence": {
+        "checked": "https://cascadeautoglass.com/rv-windshield-replacement-in-hood-river/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "content Skip to footer Services Windshield Replacement Auto Glass Replacement ADAS Recalibration Back Glass Replacement Car Window Replacement RV Windshield Replacement Mobile Auto Glass Repair Rock Chip Repair Windshield Repair Locations About About CAG Affirm Payments Nationwide Warranty What You Should Know Windshield Safety FAQs News Conta"
+      }
     },
     {
       "n": "Oregon RV Appliance Repair",
@@ -578,7 +722,12 @@
         "Shop only"
       ],
       "base": "Tangent",
-      "spec": "Shop only, no mobile"
+      "spec": "Shop only, no mobile",
+      "evidence": {
+        "checked": "https://oregonrv.com/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "Need mobile &#8216;onsite&#8217; service? Since shop workloads often restrict our ability to facilitate onsite repairs in a timely manner, we are unable to provide mobile service."
+      }
     },
     {
       "n": "Precision RV & Boat Mechanical Service",
@@ -609,7 +758,13 @@
       ],
       "region": "Southern Oregon",
       "r": true,
-      "spec": "Mechanical systems only"
+      "spec": "Mechanical systems only",
+      "evidence": {
+        "checked": "https://www.graveyardgaragecustoms.com/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "r_quote": "Mechanical only Engine, chassis, cooling, brakes, tires — not house systems.",
+        "mobile_quote": "Precision RV & Boat Mechanical Service | 24/7 Mobile Mechanic Medford, OR Skip to content Graveyard Garage Customs Precision RV & Boat Mechanical Service 24/7 Mobile Mechanic Services How it works Service area About Shop F"
+      }
     },
     {
       "n": "Ken's RV Service",
@@ -630,7 +785,12 @@
         "Marion County",
         "Washington County"
       ],
-      "region": "Willamette Valley"
+      "region": "Willamette Valley",
+      "evidence": {
+        "checked": "https://kensrvservice.com/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Home - Ken&#039;s RV Service Home About Gallery Contact Leave A Review In need of mobile RV repair or service? Contact us today! 503-880-5343 ken@kensrvservice."
+      }
     },
     {
       "n": "Skyline RV Mobile Repair",
@@ -653,7 +813,12 @@
         "Yachats",
         "Florence"
       ],
-      "region": "Oregon coast"
+      "region": "Oregon coast",
+      "evidence": {
+        "checked": "https://skylinervmobilerepair.com/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Skyline RV Mobile Repair Skip to content Home About Us Contact About Us Contact Home Skyline RV Mobile Repair Newport, Oregon RV Repairs That Come to You At Skyline RV Mobile Repair, we p"
+      }
     },
     {
       "n": "Great NW RV Mobile Repair",
@@ -669,7 +834,12 @@
         "Mobile only"
       ],
       "base": "Tigard",
-      "region": "Oregon"
+      "region": "Oregon",
+      "evidence": {
+        "checked": "https://www.greatnwrv.com/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "--> Great NW RV Mobile Repair LLC | RV | Tigard, OR, USA top of page Servicing The Great Northwest HOME ABOUT US SERVICES CONTACT MORE Use tab to navigate through the menu items."
+      }
     },
     {
       "n": "Tillamook RV Repair & Sales",
@@ -693,7 +863,13 @@
         "Nehalem",
         "Oceanside"
       ],
-      "region": "Oregon coast"
+      "region": "Oregon coast",
+      "evidence": {
+        "checked": "https://tillamookrvrepairandsales.com/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "We also offer mobile service, trailer delivery, and a selection of RV sales on consignment.",
+        "center_quote": "Top RV Repair Shop in Tillamook Tillamook RV Repair & Sales Tillamook RV Repair & Sales Tillamook RV Repair & Sales Tillamook RV Repair & Sales Tillamook RV Repair & Sales Tillamook RV Rep"
+      }
     },
     {
       "n": "Page's Mobile RV Service",
@@ -709,7 +885,12 @@
         "Idaho based"
       ],
       "base": "La Grande",
-      "region": "Eastern Oregon"
+      "region": "Eastern Oregon",
+      "evidence": {
+        "checked": "https://www.pagesmobilerv.com/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Mobile RV Repair Service - Page&#039;s Mobile RV Service Skip to content Page&#8217;s Mobile RV Service Menu About us Community for sale or trade Recommended Parts and Supplies"
+      }
     },
     {
       "n": "Rocking R Campers",
@@ -732,7 +913,11 @@
         "Payette",
         "Weiser"
       ],
-      "region": "Eastern Oregon"
+      "region": "Eastern Oregon",
+      "evidence": {
+        "checked": "https://www.rockingrcampersllc.com/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site"
+      }
     },
     {
       "n": "Gib's RV Superstore",
@@ -755,7 +940,13 @@
         "Reedsport",
         "Bandon"
       ],
-      "region": "Oregon coast"
+      "region": "Oregon coast",
+      "evidence": {
+        "checked": "https://www.gibsrvsuperstore.com/rv-service-mobile",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Mobile RV Service | Gibs RV Superstore | Coos Bay Oregon Skip to main content Toggle navigation Menu Contact Us Contact RV Search Search Shop RVs All RVs New RVs Used RVs Wildw",
+        "center_quote": "Mobile RV Service | Gibs RV Superstore | Coos Bay Oregon Skip to main content Toggle navigation Menu Contact Us Contact RV Search Search Shop RVs All RVs New RVs Used RVs Wildwood Sale Model Closeout Specials The Backro"
+      }
     },
     {
       "n": "Brothers RV",
@@ -783,7 +974,13 @@
         "Curry County"
       ],
       "region": "Southern Oregon",
-      "spec": "Coach systems only"
+      "spec": "Coach systems only",
+      "evidence": {
+        "checked": "https://brothersrvrepair.com/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "o content Skip to content Home RV Services RV Repair &#038; Coach Service RV Roof Replacement RV Refrigerator Repair RV Slide-Out Repair Maintenance &#038; Winterization Mobile RV Repair Insurance-Related Repair RV Warranty Repair RV Storage About Us Service Areas Central Point Medford White City Eagle Point Ashland Contact Home RV Services RV",
+        "center_quote": "n Mobile RV Repair Insurance-Related Repair RV Warranty Repair RV Storage About Us Service Areas Central Point Medford White City Eagle Point Ashland Contact Talk to the shop (541) 500-1768 Home RV Services RV Repair &#038; Coach Service RV Roof Replacement RV Refrigerator Repair RV Slide-Out Repair Maintenance &#038; Winterization Mobile RV"
+      }
     },
     {
       "n": "JC RV Repair",
@@ -805,7 +1002,12 @@
         "Eugene",
         "Springfield"
       ],
-      "region": "Willamette Valley"
+      "region": "Willamette Valley",
+      "evidence": {
+        "checked": "http://jcrvrepair.com/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "City, Harrisburg, Veneta, Eugene and all of Lane and Linn County Oregon since 1996 CELL: (541) 554-0354 EVENINGS: (541) 868-5794 CAMPERS, TRAILERS, LOW-LYING MOTOR HOMES On-site mobile service exclusively APPLIANCES : We repair cook tops and ovens, refrigerators."
+      }
     },
     {
       "n": "Cool Water RV",
@@ -826,7 +1028,12 @@
         "Lakeview",
         "Chiloquin"
       ],
-      "region": "Klamath Basin"
+      "region": "Klamath Basin",
+      "evidence": {
+        "checked": "https://www.coolwaterrvllc.com/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "--> Cool Water RV LLC | RV Repair, Maintenance & Upgrades | 1650 Owens Street, Klamath Falls, OR, USA top of page Cool Water RV &quot;We&#39;re more than just a shop, We&#39;re a community."
+      }
     },
     {
       "n": "AAA RV Parts & Repair",
@@ -845,7 +1052,12 @@
       "areas": [
         "Klamath County"
       ],
-      "region": "Klamath Basin"
+      "region": "Klamath Basin",
+      "evidence": {
+        "checked": "https://rvklamath.com/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "Expert RV Repair Shop Services 541-205-3634 AAA RV SERVICE,PARTS & MOBILE REPAIR 5506 ALTAMONT DR KLAMATH F AAA RV SERVICE,PARTS & MOBILE REPAIR 5506 ALTAMONT DR KLAMATH F AAA RV SERVICE,PART"
+      }
     },
     {
       "n": "Atlas Mobile RV",
@@ -867,7 +1079,12 @@
         "Umatilla",
         "Boardman"
       ],
-      "region": "Eastern Oregon"
+      "region": "Eastern Oregon",
+      "evidence": {
+        "checked": "https://atlasmobilerv.com/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Professional Mobile RV Service | Atlas Mobile RV Skip to content Main Menu HOME ABOUT RV Tips &#038; News SERVICES INSPECTIONS REPAIR UPGRADE WARRANTY MEMBERSHIPS CONTACT Stop Waiting Weeks"
+      }
     },
     {
       "n": "R&B RV Service and Supply",
@@ -912,7 +1129,12 @@
         "Albany",
         "Cottage Grove"
       ],
-      "region": "Willamette Valley"
+      "region": "Willamette Valley",
+      "evidence": {
+        "checked": "https://www.bishs.com/junction-city-oregon/rv-service",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "RV Service & RV Body Shop | RV Repairs | RV Maintenance | Bish's RV of Junction City, Oregon Skip to main content Stock # or Model Search OR For RV Service: Call: 1."
+      }
     },
     {
       "n": "Albany RV",
@@ -934,7 +1156,13 @@
         "Lebanon",
         "Eugene"
       ],
-      "region": "Willamette Valley"
+      "region": "Willamette Valley",
+      "evidence": {
+        "checked": "https://www.albany-rv.com/mobile-service",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Mobile RV Service & Repair in Albany, OR | RV Certified Technicians Skip to main content 541-917-7395 541-917-7395 www.",
+        "center_quote": "u, Expert Care on Site On‑Site RV Repairs in Albany, Oregon: Mobile Service You Can Trust At Albany RV, we specialize in mobile RV repair services delivered directly to your location within 30 miles of Albany, Oregon ."
+      }
     }
   ]
 }

@@ -34,7 +34,12 @@
       ],
       "base": "Vancouver",
       "areas": [],
-      "region": "Clark and Cowlitz County WA, Columbia County OR"
+      "region": "Clark and Cowlitz County WA, Columbia County OR",
+      "evidence": {
+        "checked": "https://www.timsrv.com/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Tim&#39;s Mobile RV Repair Vancouver, Washington and Portland, Oregon Home Page About Us On The Job Photos Photo Gallery Contact Us / Feedback Mobile Service Is Done At Your Home Or Plac"
+      }
     },
     {
       "n": "Cannon's RV Repair",
@@ -51,7 +56,12 @@
       ],
       "base": "Vancouver",
       "areas": [],
-      "region": "Clark County WA and Multnomah County OR"
+      "region": "Clark County WA and Multnomah County OR",
+      "evidence": {
+        "checked": "https://cannonsrvrepair.com/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Cannons Rv Repair Skip to content Search Toggle Cannons Rv Repair 360-851-9636 Highly Rated Rv Repair In Vancouver, WA Home Services Service Area Clark County Washington Mobile Rv Repair Cowlitz County Washington Mobile Rv Repair Multnomah County Oregon Rv Repair Vancouver, WA Rv Repair Camas, Washington Rv Repair Washougal, WA Rv Repair Salmon"
+      }
     },
     {
       "n": "OGRVS (Off Grid RV Services)",
@@ -74,7 +84,13 @@
         "Saint Helens"
       ],
       "region": "SW Washington",
-      "r": true
+      "r": true,
+      "evidence": {
+        "checked": "https://ogrvs.com/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "r_quote": "Book Service Now Common RV Challenges We Solve Book Service Now Mechanical Breakdowns We quickly diagnose and repair engine and brake issues to keep you on the move.",
+        "mobile_quote": "About Us How It Works RV Repair Areas Blog Contact Us RV Towing Calculator Adventure With Confidence Servicing RVs, motorhomes, campers, and travel trailers, ensuring that your home on wheels is always adventure-ready."
+      }
     },
     {
       "n": "Pro RV Repair",
@@ -90,7 +106,12 @@
         "54-point inspection"
       ],
       "base": "Vancouver",
-      "areas": []
+      "areas": [],
+      "evidence": {
+        "checked": "https://pro-world.com/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "Special Offers Vancouver/Portland (360) 993-4295 Pro RV Pro Trailer Mobile Repair Body Shop Special offers Winterize-an-rv Road Ready Inspection Resources About Us Contact Pro RV Pro Trailer Mobile Repair Body Shop Special offers Winterize-an-rv Road Ready Insp"
+      }
     },
     {
       "n": "Ideal RV Repair",
@@ -115,7 +136,12 @@
         "Longview",
         "Kelso"
       ],
-      "region": "SW Washington"
+      "region": "SW Washington",
+      "evidence": {
+        "checked": "https://idealrvrepair.com/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Awning Repair Rv Entry Step Repair Rv Water Heater Repair Rv Roof Resealing Rv Furnace Repair Rv Refrigerator Repair Rv Flooring Upgrades Contact Menu Search for: Submit Mobile Rv Repair Vancouver, WA Ideal Rv Repair proudly provides Rv Repair to the Vancouver, Washington area."
+      }
     },
     {
       "n": "Otto's Mobile RV Repair",
@@ -138,7 +164,12 @@
         "Stevenson",
         "Goldendale"
       ],
-      "region": "SW Washington"
+      "region": "SW Washington",
+      "evidence": {
+        "checked": "https://www.ottos-mobile-rv-repair.com/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Otto&#39;s Mobile RV Repair Search this site Embedded Files Skip to main content Skip to navigation View this months special offers Special Offers Otto&#39;s Mobile RV Repair Home Service"
+      }
     },
     {
       "n": "Trusty Wrench RV Doctor",
@@ -160,7 +191,12 @@
         "West Richland",
         "Walla Walla"
       ],
-      "region": "Tri-Cities"
+      "region": "Tri-Cities",
+      "evidence": {
+        "checked": "https://www.thervdoctor.net/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Mobile RV Repair Tri-Cities WA | Trusty Wrench RV Doctor Services Service Area About Schedule Service Schedule Schedule Winterization Winterize Mobile RV Repair Mobile RV Repai"
+      }
     },
     {
       "n": "Tier One RV",
@@ -181,7 +217,12 @@
         "Richland",
         "West Richland"
       ],
-      "region": "Tri-Cities"
+      "region": "Tri-Cities",
+      "evidence": {
+        "checked": "https://www.tieronerv.com/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "--> Tier One RV LLC | Mobile Rv repair top of page Home Our services About Us Reviews Contact Privacy Policy Terms & Conditions Accessibility Statement Reliable roadside help."
+      }
     },
     {
       "n": "Travelers Destination RV Service Center",
@@ -203,7 +244,12 @@
         "Walla Walla"
       ],
       "region": "Tri-Cities",
-      "spec": "RV roofs only"
+      "spec": "RV roofs only",
+      "evidence": {
+        "checked": "https://rvroof.com/locations/travelers-destination-rv-service-center/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "RV Roof Repair in Washington | Travelers Destination RV Service Center Skip to content Go to sitemap View accessibility statement FIND A LOCATION For Vendors RV Show Calendar Testimonials Get a Free Sample Contact Us For Vendors RV Show Cal"
+      }
     }
   ]
 }

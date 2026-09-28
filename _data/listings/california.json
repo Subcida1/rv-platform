@@ -124,7 +124,12 @@
         "Red Bluff",
         "Weaverville"
       ],
-      "region": "Northern California"
+      "region": "Northern California",
+      "evidence": {
+        "checked": "https://www.boondockrv.com/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Mobile RV Repair in Redding & Northern California | Boondock RV Javascript must be enabled for the correct page display Skip to main content Skip to main content 1-833-266-6781"
+      }
     },
     {
       "n": "BossBros RV",
@@ -147,7 +152,12 @@
         "Red Bluff",
         "Corning"
       ],
-      "region": "Northern California"
+      "region": "Northern California",
+      "evidence": {
+        "checked": "https://www.bossbrosrv.com/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "BossBros RV | Mobile RV Repair in Redding, CA & Nor-Cal Services Pre-Delivery Inspection (P."
+      }
     },
     {
       "n": "David's Mobile RV Service",
@@ -168,7 +178,12 @@
         "Fort Dick",
         "Klamath"
       ],
-      "region": "Del Norte County"
+      "region": "Del Norte County",
+      "evidence": {
+        "checked": "https://davidnanney.com/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "David&#039;s Mobile RV Service &#8211; Reliable, Honest Service Skip to content 855-I-FIX-RVs (434-9787) david@ifixrvs."
+      }
     },
     {
       "n": "Mor-Jon Inc.",
@@ -187,7 +202,12 @@
         "RV oil changes",
         "NAPA Truck Service Center"
       ],
-      "d": "Heavy-duty truck shop that also services motor homes, light trucks and cars. NAPA Truck Service Center. RV oil changes and routine service. Open Monday to Friday 8 to 5, Saturday 8 to 3."
+      "d": "Heavy-duty truck shop that also services motor homes, light trucks and cars. NAPA Truck Service Center. RV oil changes and routine service. Open Monday to Friday 8 to 5, Saturday 8 to 3.",
+      "evidence": {
+        "checked": "https://www.mor-jon.com/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "0 AM - 5:00 PM Wednesday : 8:00 AM - 5:00 PM Thursday : 8:00 AM - 5:00 PM Friday : 8:00 AM - 5:00 PM Saturday : 8:00 AM - 3:00 PM Sunday : CLOSED 707-464-4131 Contact Us OUR LOCATION 137 E."
+      }
     },
     {
       "n": "Century Mobile Homes and RV Service Center",
@@ -206,7 +226,12 @@
         "Mobile homes too",
         "Licensed contractor"
       ],
-      "d": "RV and mobile home repair and remodels. State plainly on their own site that they do not offer mobile RV service, so the RV comes to their Eureka shop. RV and mobile home licensed contractor. Monday to Friday 8 to 4:30."
+      "d": "RV and mobile home repair and remodels. State plainly on their own site that they do not offer mobile RV service, so the RV comes to their Eureka shop. RV and mobile home licensed contractor. Monday to Friday 8 to 4:30.",
+      "evidence": {
+        "checked": "https://centurymobilehomesandrvs.com/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "Century Mobile Homes and RV Service Center | Mobile Home Services in Eureka CA Skip to main content Century Mobile Homes Center | RV Repair in Eureka, CA CALL OR TEXT US (707) 445-8411 EMAIL US john."
+      }
     },
     {
       "n": "Johnson Automotive & Electric",
@@ -225,7 +250,12 @@
         "Winterizing",
         "Tire service"
       ],
-      "d": "RV automotive repair and preventative maintenance, plumbing, toilet repair, tire inspection and replacement, and winterizing. ASE-certified technicians. Monday to Saturday 8 to 5."
+      "d": "RV automotive repair and preventative maintenance, plumbing, toilet repair, tire inspection and replacement, and winterizing. ASE-certified technicians. Monday to Saturday 8 to 5.",
+      "evidence": {
+        "checked": "https://johnsonautomotive.net/service-RVRepair.html",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "Arcata, CA Eureka, CA Fortuna, CA Garberville, CA McKinleyville, CA We Are The Digital Shop What is SmartFlow? Digital Inspections Financing VSS Pricing Contact RV Repair In Eureka, CA Your Trusted Partner for Comprehensive RV Repair in Eureka At Johnson Automo"
+      }
     },
     {
       "n": "Jefferson's Overland and RV Services",
@@ -244,7 +274,11 @@
         "Appliances",
         "Body repair"
       ],
-      "d": "Locally owned RV repair shop off I-5. Appliance repair, electrical diagnostics, body repair, plumbing, structural repairs and interior remodeling. Also offers mobile repairs for travellers broken down. Monday to Friday 9 to 5, Saturday by appointment."
+      "d": "Locally owned RV repair shop off I-5. Appliance repair, electrical diagnostics, body repair, plumbing, structural repairs and interior remodeling. Also offers mobile repairs for travellers broken down. Monday to Friday 9 to 5, Saturday by appointment.",
+      "evidence": {
+        "checked": "https://overlandandrv.com/contact-us",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site"
+      }
     },
     {
       "n": "Skinner's Truck Repair",
@@ -269,7 +303,12 @@
         "Diesel shop",
         "Not RV-specific"
       ],
-      "d": "Family-owned full-service diesel and truck shop with roadside assistance: tires, airlines, airbags, electrical, fuel leaks and transfer, alternators and water pumps. Serves Mount Shasta, Weed, Yreka, Dunsmuir, McCloud, Redding and Susanville. 24 hour roadside, seven days. A truck shop rather than an RV specialist, useful on I-5 for the chassis side rather than the coach."
+      "d": "Family-owned full-service diesel and truck shop with roadside assistance: tires, airlines, airbags, electrical, fuel leaks and transfer, alternators and water pumps. Serves Mount Shasta, Weed, Yreka, Dunsmuir, McCloud, Redding and Susanville. 24 hour roadside, seven days. A truck shop rather than an RV specialist, useful on I-5 for the chassis side rather than the coach.",
+      "evidence": {
+        "checked": "https://www.skinnerstruckrepair.com/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "ROADSIDE TRUCK REPAIR + MORE, SERVING YOU FOR OVER 60 YEARS FAMILY OWNED FOR THREE GENERATIONS SHOP FACILITIES OFF I-5 EXIT 743 Mount Shasta, CA (530) 926-3860 (530) 926-4300 1 (800) 572- 3201 Skinner&#39;s Truck Repair SERVICES SERVICES ROADSIDE ASSISTANCE General Rep"
+      }
     },
     {
       "n": "TowTally Camping",
@@ -288,7 +327,12 @@
         "Trailers and motorhomes",
         "Propane"
       ],
-      "d": "Repairs, installs and maintenance on travel trailers, fifth wheels, truck campers, pop-ups and Class A, B and C motorhomes. Propane, electrical and wiring, plumbing, leak detection, winterizing, air conditioning, furnace, water heaters, refrigerators, roofs, trailer brakes, wheel bearings, awnings and slide-outs. Work is done on their lot."
+      "d": "Repairs, installs and maintenance on travel trailers, fifth wheels, truck campers, pop-ups and Class A, B and C motorhomes. Propane, electrical and wiring, plumbing, leak detection, winterizing, air conditioning, furnace, water heaters, refrigerators, roofs, trailer brakes, wheel bearings, awnings and slide-outs. Work is done on their lot.",
+      "evidence": {
+        "checked": "https://www.towtallycamping.com/service-repair-rv/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "DI Fees, Real Pricing, No Pressure Click to Learn More Great Deals on RVs & Trailers, No PDI Fees, Real Pricing, No Pressure Click to Learn More Old Oasis (530) 241-7848 Service Center 18691 Old Oasis Rd."
+      }
     },
     {
       "n": "All Wheel Auto, Truck & RV Repair",
@@ -307,7 +351,12 @@
         "Generators",
         "TPMS"
       ],
-      "d": "Motorhome and RV services including generator service, wheel alignment, brakes and suspension, gas and diesel oil changes, fluid service, roof repair, tires and TPMS, Workhorse warranty and recalls, and pre-trip and pre-purchase safety inspections. Monday to Friday 7:30 to 5:30."
+      "d": "Motorhome and RV services including generator service, wheel alignment, brakes and suspension, gas and diesel oil changes, fluid service, roof repair, tires and TPMS, Workhorse warranty and recalls, and pre-trip and pre-purchase safety inspections. Monday to Friday 7:30 to 5:30.",
+      "evidence": {
+        "checked": "https://allwheelinc.com/MotorhomeRV.html",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "Anderson, CA Chico, CA Palo Cedro, CA Red Bluff, CA Redding, CA We Are The Digital Shop What is SmartFlow? Digital Inspections Request Appointment Motorhome/RV At our mechanic shop, we offer a comprehensive range of services to ensure your RV is in top cond"
+      }
     },
     {
       "n": "Andrew's Automotive Repair",
@@ -325,7 +374,12 @@
         "Chassis work",
         "Inspections"
       ],
-      "d": "RV pre-trip inspection, preventative maintenance, oil and filter change, suspension and steering repair, and electrical service and repair."
+      "d": "RV pre-trip inspection, preventative maintenance, oil and filter change, suspension and steering repair, and electrical service and repair.",
+      "evidence": {
+        "checked": "https://www.andrewsautoredding.com/services/rv-service",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "Fortunately, you can count on our technicians at our RV auto repair shop to handle all your RV needs."
+      }
     },
     {
       "n": "MR RV Mobile Repairs",
@@ -349,7 +403,12 @@
         "Forest River authorised",
         "Keystone authorised"
       ],
-      "d": "Mobile RV and trailer repairs, and an authorised mobile repair service for Forest River and Keystone, handling dealer recalls and most warranty companies. Do not work on bearings, brakes, chassis, engines or fibreglass. Monday to Friday 8:30 to 5."
+      "d": "Mobile RV and trailer repairs, and an authorised mobile repair service for Forest River and Keystone, handling dealer recalls and most warranty companies. Do not work on bearings, brakes, chassis, engines or fibreglass. Monday to Friday 8:30 to 5.",
+      "evidence": {
+        "checked": "https://mrrvrepairs.com/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "MR RV Mobile Repairs and Service HOME MOBILE REPAIRS Mobile RV Repair Service RV Air Conditioner RV Roof Repair RV Awning Repair ABOUT US BLOG CONTACT US 1-530-678-6778 Mobile RV Rep"
+      }
     },
     {
       "n": "Ron's R.V. Service",
@@ -368,7 +427,12 @@
         "Warranty facility",
         "Collision repair"
       ],
-      "d": "Roof air conditioning service and sales, appliance repair as an authorised warranty facility, awnings, extended warranty work, collision repair and structural maintenance on metal siding, rubber roofing, and satellite installation. Monday to Thursday 8 to 5, Friday 8 to 3."
+      "d": "Roof air conditioning service and sales, appliance repair as an authorised warranty facility, awnings, extended warranty work, collision repair and structural maintenance on metal siding, rubber roofing, and satellite installation. Monday to Thursday 8 to 5, Friday 8 to 3.",
+      "evidence": {
+        "checked": "https://ronsrvservice.com/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "rvices (just to name a few) Air Conditioning We service and sell all types of roof A/C units big or small Read More Appliance Repair We are an authorized warranty repair facility for most major brands Read More Awnings We specialize in the reparation, replacement and full installation of Carefree and Dometic awnings Read More &#8230; Extended War"
+      }
     },
     {
       "n": "Chico Truck & RV",
@@ -396,7 +460,12 @@
         "Inspections",
         "Solar"
       ],
-      "d": "RV repair and service including 150-point pre-purchase inspections, roofing, electrical and solar, plumbing, and chassis work on engine, transmission, brakes and suspension. Monday to Friday 8 to 5:30."
+      "d": "RV repair and service including 150-point pre-purchase inspections, roofing, electrical and solar, plumbing, and chassis work on engine, transmission, brakes and suspension. Monday to Friday 8 to 5:30.",
+      "evidence": {
+        "checked": "https://www.chicotruckandrv.com/service-and-repair/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "Repair & Service requires more than what an ordinary automotive mechanic can offer; we go above and beyond to be the one-stop shop for all your regular maintenance service and repair needs."
+      }
     },
     {
       "n": "L & T Truck Repair",
@@ -406,7 +475,7 @@
       "p": "530-685-5580",
       "u": "https://www.lttruckrepair.com/services/rv-repair",
       "t": "center",
-      "e": true,
+      "e": false,
       "areas": [
         "Willows",
         "Red Bluff",
@@ -420,7 +489,16 @@
         "Mobile service",
         "Diesel shop"
       ],
-      "d": "RV repair and maintenance covering engine, brakes, electrical, plumbing and HVAC, plus diesel mechanic services. Roadside assistance 24 hours and mobile service across the upper Sacramento Valley. Shop open Monday to Friday 7 to 4."
+      "d": "RV repair and maintenance covering engine, brakes, electrical, plumbing and HVAC, plus diesel mechanic services. Roadside truck repair is published as available 24/7 for breakdowns, and mobile service runs across the upper Sacramento Valley, after hours by appointment. Shop open Monday to Friday.",
+      "evidence": {
+        "checked": "https://www.lttruckrepair.com/services/rv-repair",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "e_quote": "Truck Towing Read More When your diesel truck or fleet is sidelined, you need a repair service that understands the urgency and has the expertise to get you back on the road swiftly and safely.",
+        "center_quote": "Drive in today and experience the peace of mind that comes with expert care for your home on the road.",
+        "roadside_quote": "understand that breakdowns don't adhere to business hours, which is why our roadside truck repair services are available 24/7",
+        "correction": "2026-09-28: was tagged emergency mobile repair with no roadside tag. The site's 24/7 is roadside truck repair and its mobile after-hours service is 'by appointment only', so the two tags were the wrong way round. Corrected by hand from the site's own words; found by scripts/audit-tags.py."
+      },
+      "r": true
     },
     {
       "n": "Jeff's Truck Service",
@@ -440,7 +518,12 @@
         "Body and collision",
         "Truck shop"
       ],
-      "d": "RV and motorhome body and collision repair, plus truck and trailer repair and maintenance. Advertise 24 hour roadside assistance. Monday to Friday 8 to 6, Saturday 8 to 6."
+      "d": "RV and motorhome body and collision repair, plus truck and trailer repair and maintenance. Advertise 24 hour roadside assistance. Monday to Friday 8 to 6, Saturday 8 to 6.",
+      "evidence": {
+        "checked": "https://www.jeffs-truckservice.com/rv-and-motorhome-body-collision",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "e_quote": "com 13514 California 99 Chico, CA 95973 24-7 Roadside Assistance Mon - Fri 8a - 6p Sat 8a - 6p Sun - Closed RV and Motorhome Body Collision Looking for reliable RV and motorhome body collision service around Red Bl"
+      }
     },
     {
       "n": "Corey's RV Repair",
@@ -461,7 +544,11 @@
         "Rebuilds",
         "Parts"
       ],
-      "d": "Inspection and preventative maintenance for coaches, travel trailers, fifth wheels and trailer chassis. Complete repair and replacement of slide-outs, appliances, roof, chassis, awnings, and ground-up rebuilds. RV parts. Mobile service offered for Lake and Mendocino counties. Monday to Friday 9 to 5."
+      "d": "Inspection and preventative maintenance for coaches, travel trailers, fifth wheels and trailer chassis. Complete repair and replacement of slide-outs, appliances, roof, chassis, awnings, and ground-up rebuilds. RV parts. Mobile service offered for Lake and Mendocino counties. Monday to Friday 9 to 5.",
+      "evidence": {
+        "checked": "https://www.coreysrv.com/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site"
+      }
     },
     {
       "n": "Redwood Empire RVs",
@@ -483,7 +570,12 @@
         "Dealer with service",
         "Under-hood work"
       ],
-      "d": "RV dealer offering service and maintenance including inspections, tune-ups, electrical, plumbing and appliance systems, and repairs to roof, siding and under-hood. Monday to Saturday 9 to 5:30."
+      "d": "RV dealer offering service and maintenance including inspections, tune-ups, electrical, plumbing and appliance systems, and repairs to roof, siding and under-hood. Monday to Saturday 9 to 5:30.",
+      "evidence": {
+        "checked": "https://www.rvukiahca.com/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "Comprehensive Services Under One Roof: From selection to maintenance, repairs to consignment services, Redwood Empire RVs is your one-stop shop for everything RV-related."
+      }
     },
     {
       "n": "Ocean View RV",
@@ -502,7 +594,12 @@
         "Service calls",
         "Tires"
       ],
-      "d": "Trailer service and repair on travel trailers, motorhomes, cab-over campers, boat and horse trailers. General trailer repair, custom modifications and routine maintenance. Offers service calls for RVs that cannot come in. Vehicle accessories and tires."
+      "d": "Trailer service and repair on travel trailers, motorhomes, cab-over campers, boat and horse trailers. General trailer repair, custom modifications and routine maintenance. Offers service calls for RVs that cannot come in. Vehicle accessories and tires.",
+      "evidence": {
+        "checked": "https://www.ocean-view-rv.com/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "Whether you are local and/or set up for long term stay and do not want to \"pack it all up' just to bring your trailer down to the shop or if you are stuck on the side of the road and simply cannot get to us."
+      }
     },
     {
       "n": "RV Repair Connection",
@@ -521,7 +618,12 @@
         "Mobile only",
         "LP systems"
       ],
-      "d": "RVIA-certified mobile RV maintenance and repair: installations, appliances, heating and air conditioning, electrical, slide-outs and leveling jacks, audio and video, plumbing, LP systems, roofs, interiors and exteriors including siding, windows, doors and awnings. Excludes engine and tire work."
+      "d": "RVIA-certified mobile RV maintenance and repair: installations, appliances, heating and air conditioning, electrical, slide-outs and leveling jacks, audio and video, plumbing, LP systems, roofs, interiors and exteriors including siding, windows, doors and awnings. Excludes engine and tire work.",
+      "evidence": {
+        "checked": "https://rvrepairconnection.com/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Mobile RV Repair Shop Santa Rosa, Sonoma County, CA | RV Repair Connection Skip to content RVIA Certified service techs come to you! Call to schedule an appointment 707-495-269"
+      }
     },
     {
       "n": "FIN Coachworks",
@@ -541,7 +643,11 @@
         "Propane",
         "Upholstery"
       ],
-      "d": "Family-owned RV interior and exterior repair: roof and seam repair, awnings, satellite, fresh and waste water, propane connections and sensors, flooring, cabinet and trim work, furniture and upholstery, and inspection. Class A, B and C."
+      "d": "Family-owned RV interior and exterior repair: roof and seam repair, awnings, satellite, fresh and waste water, propane connections and sensors, flooring, cabinet and trim work, furniture and upholstery, and inspection. Class A, B and C.",
+      "evidence": {
+        "checked": "https://www.fincoachworks.com/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site"
+      }
     },
     {
       "n": "West Coast RV Repair",
@@ -561,7 +667,12 @@
         "Sealtech leak testing",
         "Insurance work"
       ],
-      "d": "Mobile service covering appliance repair and replacement including refrigerators, furnaces, water heaters, air conditioning and heat pumps, roof and seal repair and coating, Sealtech pressure leak testing, plumbing, satellite systems, flooring, insurance and collision work, jack repair, slide-out repair excluding in-wall and cable systems, Onan generator installation, and 12 and 120 volt electrical."
+      "d": "Mobile service covering appliance repair and replacement including refrigerators, furnaces, water heaters, air conditioning and heat pumps, roof and seal repair and coating, Sealtech pressure leak testing, plumbing, satellite systems, flooring, insurance and collision work, jack repair, slide-out repair excluding in-wall and cable systems, Onan generator installation, and 12 and 120 volt electrical.",
+      "evidence": {
+        "checked": "https://www.westcoastrvrepair.com/services.html",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "West Coast RV Repair Services West Coast RV Repair Services West Coast RV Repair provides full Mobile Service and Repair to All of Sonoma, Marin, Lake, and Mendocino Counties."
+      }
     },
     {
       "n": "Jared's Mobile RV Services",
@@ -579,7 +690,12 @@
         "Mobile only",
         "By appointment"
       ],
-      "d": "Mobile RV service by appointment, describing themselves as a factory trained and certified technician. Their site publishes little beyond the phone number and the city."
+      "d": "Mobile RV service by appointment, describing themselves as a factory trained and certified technician. Their site publishes little beyond the phone number and the city.",
+      "evidence": {
+        "checked": "https://jaredsmobilerv.com/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Jared&#x27;s Mobile RV Services 707-303-0512 Home Contact Us Gallery Home Contact Us Gallery 707-303-0512 Home Contact Us Gallery Reliable Factory Trained & Certified Technician Reliable Fa"
+      }
     },
     {
       "n": "Dan Shavlik's RV Service",
@@ -598,7 +714,12 @@
         "BAR registered",
         "Since 1999"
       ],
-      "d": "RV repairs, maintenance and upgrades: towing systems, hitch installation, brake controller wiring, electrical appliances, satellite tune-ups, suspension, roofing, fuel tank plumbing, collision and leak repair, and axles. BAR registered and in business since 1999. Monday to Friday 8:30 to 5:30."
+      "d": "RV repairs, maintenance and upgrades: towing systems, hitch installation, brake controller wiring, electrical appliances, satellite tune-ups, suspension, roofing, fuel tank plumbing, collision and leak repair, and axles. BAR registered and in business since 1999. Monday to Friday 8:30 to 5:30.",
+      "evidence": {
+        "checked": "https://dansrvrepair.com/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "We take pride in being certified as the following: Norcold Service Center Thor Motor Coach Service Center Dometic Service Repair Center Some of Our Services Dan Shavlik’s RV Service is your provider of solutions such as recreational vehicle re"
+      }
     },
     {
       "n": "RV & Yacht Repair",
@@ -617,7 +738,12 @@
         "Seven days",
         "Pre-purchase inspections"
       ],
-      "d": "On-site repair and maintenance: air conditioning, diagnostics, annual roof resealing, 12 and 120 volt electrical, solar and inverters, plumbing, slides, roofing and awnings, leveling, axles and bearings, gas absorption refrigeration, furnace, cabinetry, and pre-purchase inspections. Open seven days 7 to 7."
+      "d": "On-site repair and maintenance: air conditioning, diagnostics, annual roof resealing, 12 and 120 volt electrical, solar and inverters, plumbing, slides, roofing and awnings, leveling, axles and bearings, gas absorption refrigeration, furnace, cabinetry, and pre-purchase inspections. Open seven days 7 to 7.",
+      "evidence": {
+        "checked": "https://calirvrepair.com/napa-valley/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "&#8211; Brentwood, CA Call us now 707-356-9623 Request a Guestimate Find us on Map Client Special Prompt and Convenient Service Certified RV Repair- At Your Home This Week! Certified RV Repair- At Your Home This Week! Get Your Free Checklist Extraordinary Places to RV Boondocking Solutions Roof Maintenance RV Service When You Nee"
+      }
     },
     {
       "n": "Norcal Mobile RV Services",
@@ -639,7 +765,12 @@
         "Mobile only",
         "Same day usually"
       ],
-      "d": "Full-service mobile RV maintenance and repair for all makes and models: electrical, plumbing and appliance repairs. Comes to your home, storage yard or campsite, usually the same day."
+      "d": "Full-service mobile RV maintenance and repair for all makes and models: electrical, plumbing and appliance repairs. Comes to your home, storage yard or campsite, usually the same day.",
+      "evidence": {
+        "checked": "https://norcalmobilervservices.com/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Norcal Mobile RV Services Norcal Mobile RV Services Services Reviews About 707-207-9600 Book Now Northern California's Mobile RV Experts RV Repair That Comes to You Fast, professional"
+      }
     },
     {
       "n": "Along for the Ride RV Repair",
@@ -658,7 +789,11 @@
         "RVTAA certified",
         "Mobile only"
       ],
-      "d": "NRVIA-certified inspector and RVTAA-certified advanced RV technician. RV repairs, appliance repair, water heater and furnace work, and remodels and upgrades. Offers NRVIA pre-purchase inspections with a written report."
+      "d": "NRVIA-certified inspector and RVTAA-certified advanced RV technician. RV repairs, appliance repair, water heater and furnace work, and remodels and upgrades. Offers NRVIA pre-purchase inspections with a written report.",
+      "evidence": {
+        "checked": "https://www.alongfortheridervrepairs.com/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site"
+      }
     },
     {
       "n": "Unplug RV",
@@ -679,7 +814,12 @@
         "Solar",
         "Chassis work"
       ],
-      "d": "Mobile RV repairs plus a shop: roof repair and replacement, appliances, slide-outs, awnings, plumbing, electrical, mechanical, generator, and chassis, suspension and brake work. Maintenance, inspections and upgrades including solar, inverters and air conditioning."
+      "d": "Mobile RV repairs plus a shop: roof repair and replacement, appliances, slide-outs, awnings, plumbing, electrical, mechanical, generator, and chassis, suspension and brake work. Maintenance, inspections and upgrades including solar, inverters and air conditioning.",
+      "evidence": {
+        "checked": "https://unplugrv.com/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Unplug RV — RV Sales, Service & Mobile RV Repair | Lincoln & West Sacramento, CA Skip to content (916) 836-8602 Lincoln | W."
+      }
     },
     {
       "n": "Ryan's Mobile RV",
@@ -699,7 +839,11 @@
         "Seven days",
         "Pre-purchase inspections"
       ],
-      "d": "Mobile RV repair and maintenance: air conditioning, diagnostics, annual roof resealing and UV treatment, 12 and 115 volt electrical diagnosis and repair, solar and inverters, black, grey and fresh water plumbing, slides, roofing and awnings, leveling, axles and bearings, gas absorption refrigeration, furnace, cabinetry, and pre-purchase inspections. Open seven days 7 to 7."
+      "d": "Mobile RV repair and maintenance: air conditioning, diagnostics, annual roof resealing and UV treatment, 12 and 115 volt electrical diagnosis and repair, solar and inverters, black, grey and fresh water plumbing, slides, roofing and awnings, leveling, axles and bearings, gas absorption refrigeration, furnace, cabinetry, and pre-purchase inspections. Open seven days 7 to 7.",
+      "evidence": {
+        "checked": "https://ryansmobilerv.com/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site"
+      }
     },
     {
       "n": "McColloch's RV Repair",
@@ -720,7 +864,11 @@
         "Mobile often available",
         "Wheel bearings"
       ],
-      "d": "Thirty years and more in RV repair: engine diagnostics, electrical repairs, appliance servicing, roof repairs, de-winterizing, plumbing, hitch installation, wheel bearing repacks, air conditioning repair and replacement, roof resealing, and slide-out and awning repair. Mobile service is often offered. Most makes and models of fifth wheels and travel trailers."
+      "d": "Thirty years and more in RV repair: engine diagnostics, electrical repairs, appliance servicing, roof repairs, de-winterizing, plumbing, hitch installation, wheel bearing repacks, air conditioning repair and replacement, roof resealing, and slide-out and awning repair. Mobile service is often offered. Most makes and models of fifth wheels and travel trailers.",
+      "evidence": {
+        "checked": "https://sacramentotrailerrepair.com/rv-repair-rocklin-ca/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site"
+      }
     },
     {
       "n": "Rehorn RV Collision Center",
@@ -739,7 +887,11 @@
         "Insurance network",
         "Adventure vans"
       ],
-      "d": "RV and motorhome repair, travel trailers, fifth wheels and adventure vans, with collision repair, service and maintenance and parts. In the direct repair network for Nationwide, Progressive and National General."
+      "d": "RV and motorhome repair, travel trailers, fifth wheels and adventure vans, with collision repair, service and maintenance and parts. In the direct repair network for Nationwide, Progressive and National General.",
+      "evidence": {
+        "checked": "https://www.rehornrv.com/contact",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site"
+      }
     },
     {
       "n": "Sacramento Motorhome Service Center",
@@ -758,7 +910,12 @@
         "Six bay shop",
         "OEM dealer"
       ],
-      "d": "Motorhome and coach maintenance and repair, with OEM dealer status for Freightliner Custom Chassis, Detroit, Cummins and Cat. Six-bay motorhome shop. Monday to Friday 7 to 3:30."
+      "d": "Motorhome and coach maintenance and repair, with OEM dealer status for Freightliner Custom Chassis, Detroit, Cummins and Cat. Six-bay motorhome shop. Monday to Friday 7 to 3:30.",
+      "evidence": {
+        "checked": "https://www.californiatruckcenters.com/maintenance-and-repair-your-motorhome--sacramento-motorhomes",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "Motorhome Service Center | Sacramento Truck Center | Sacramento, CA Skip to main content --> Toggle navigation Menu Home Sales All Inventory New Inventory Pre-Owned Inventory Winter Closeout Inv"
+      }
     },
     {
       "n": "RV Lad",
@@ -775,7 +932,12 @@
       "g": [
         "Mobile only"
       ],
-      "d": "On-site mobile RV repair. Their site publishes the phone number and the phrase onsite mobile RV repair, and nothing further."
+      "d": "On-site mobile RV repair. Their site publishes the phone number and the phrase onsite mobile RV repair, and nothing further.",
+      "evidence": {
+        "checked": "https://www.rvlad.com/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Onsite Mobile RV Repair Sacramento, Wilton, Elk Grove | RV Lad - The RV Lad --> --> --> --> --> Jump directly to main content Toggle navigation Menu Contact@RVLad."
+      }
     },
     {
       "n": "The RV Academy",
@@ -794,7 +956,12 @@
         "Photo inspection report",
         "Training"
       ],
-      "d": "Mobile RV repair and instructional service working on Dometic, Suburban, Coleman-Airxcel, Thetford, Norcold, Lippert and Aquahot equipment. Electrical, appliances, leveling jacks, slides and plumbing. Inspections with a photo report, windshield chip and crack repair, and driving and safety training."
+      "d": "Mobile RV repair and instructional service working on Dometic, Suburban, Coleman-Airxcel, Thetford, Norcold, Lippert and Aquahot equipment. Electrical, appliances, leveling jacks, slides and plumbing. Inspections with a photo report, windshield chip and crack repair, and driving and safety training.",
+      "evidence": {
+        "checked": "https://thervacademy.com/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Home - The RV Academy +916-714-3765 &#105;&#110;&#102;&#111;&#64;&#116;&#104;&#101;r&#118;a&#99;ad&#101;&#109;y&#46;&#99;&#111;m Mobile RV Repair Instruction &#038; Services Testimonials About Contact Mobile RV Repair Instruction &#038; Services Testimonials About Contact Repair Your Roadtrip We are a pr"
+      }
     },
     {
       "n": "American RV Service Center",
@@ -814,7 +981,12 @@
         "RVDA certified",
         "Collision"
       ],
-      "d": "Complete RV repairs and collision services, RV appliances and RV plumbing. Authorised AAA repair facility with Onan, Dometic, Norcold and RVDA-certified technicians."
+      "d": "Complete RV repairs and collision services, RV appliances and RV plumbing. Authorised AAA repair facility with Onan, Dometic, Norcold and RVDA-certified technicians.",
+      "evidence": {
+        "checked": "https://www.americanrvservicecenter.com/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "American RV Service Center | Collision Repair | Rocklin, CA Supporting copy for the Request Service call out button."
+      }
     },
     {
       "n": "Blue Mountain Mobile RV Service and Repair",
@@ -834,7 +1006,12 @@
         "Mobile only",
         "Warranty work"
       ],
-      "d": "Dealer-trained RVIA technician, mobile to your site, servicing every RV system except automotive and chassis: electrical including 12 and 120 volt, inverter, converter, transfer switches, generators and solar, electronics, appliances, plumbing, HVAC, roofing, awnings, slide toppers and interiors. Accepts insurance and extended warranty work. Dealer representative for Dometic, Norcold, Suburban, Thetford, Lippert and Coleman."
+      "d": "Dealer-trained RVIA technician, mobile to your site, servicing every RV system except automotive and chassis: electrical including 12 and 120 volt, inverter, converter, transfer switches, generators and solar, electronics, appliances, plumbing, HVAC, roofing, awnings, slide toppers and interiors. Accepts insurance and extended warranty work. Dealer representative for Dometic, Norcold, Suburban, Thetford, Lippert and Coleman.",
+      "evidence": {
+        "checked": "https://www.bluemountainrvrepair.com/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "one, CA Jackson, CA Pine Grove, CA Pioneer, CA Placerville, CA Plymouth, CA Pollock Pines, CA Shingle Springs, CA South Lake Tahoe, CA Sutter Creek, CA Call Us premier ﻿ Mobile RV Services and Repair SERVING EL DORADO AND AMADOR COUNTY Reliable RV Services Available NEAR YOU Welcome to Blue Mountain Mobile RV Service and Repair, your trusted pa"
+      }
     },
     {
       "n": "On-Site Mobile RV Repair",
@@ -879,7 +1056,9 @@
         ],
         "type_quote": "No Shop. No Towing. I Come to Your RV. I drive to where the RV sits, driveway, storage lot, campground, marina or roadside. There's no shop to visit, because there isn't one.",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "--> On-Site Mobile RV Repair | Stockton & Central Valley CA top of page Home About Services RV Air Conditioner Repair RV Appliance & Refrigerator Repair RV Awning & Slide-Topper Rep"
       }
     },
     {
@@ -932,7 +1111,9 @@
         ],
         "type_quote": "To maintain a safe and efficient work environment: No mobile RV service - No engine, transmission, or chassis repairs",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "V INSURANCE RV Extended Warranty Insurance RV Extended Warranty Information CONTACT & APPOINTMNETS RV EXPERT WITNESS RV ARTICLES RV VIDEOS RV Extended Warranty In The RV Shop With Dustin RV Shop Talk Talkin' RV Tech What’s in the RV groups? What’s in the RV box? Cool RV Tools &#038; Gadgets RV OWNERS COMMUNITY AMAZON RV STORE DUSTIN IN THE ME"
       }
     },
     {
@@ -958,7 +1139,7 @@
       "areas": [],
       "region": "San Joaquin region",
       "evidence": {
-        "checked": "https://www.lodirvcollision.com/contact",
+        "checked": "https://www.lodirvcollision.com/",
         "phone_quote": "### Phone (2093680561) (209) 368-0561 Text Us (530) 645-9031",
         "coverage_quotes": [
           "Geweke Lodi RV Collision Center has been the San Joaquin region's trusted repair and service shop for over 35 years.",
@@ -966,7 +1147,10 @@
         ],
         "type_quote": "We specialize in full RV collision repair, towing, trailer service, and automotive bodywork.",
         "emergency_quote": null,
-        "roadside_quote": "24/7 Light Towing Available* Stranded? Call us anytime and check with our driver if we can tow your type of vehicle."
+        "roadside_quote": "24/7 Light Towing Available* Stranded? Call us anytime and check with our driver if we can tow your type of vehicle.",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "r_quote": "Trailer Services We service utility, boat, and horse trailers &#8211; brakes, axles, hitches, framing.",
+        "center_quote": "​ Geweke Lodi RV Collision Center has been the San Joaquin region&#8217;s trusted repair and service shop for over 35 years."
       }
     },
     {
@@ -998,7 +1182,10 @@
         ],
         "type_quote": "Expert maintenance and repair brought right to your door in Tracy, CA.",
         "emergency_quote": "Our customers trust us for fast, honest, and knowledgeable service. From emergency repairs to expert electrical work, we're dedicated to getting you back on the road safely and efficiently.",
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "e_quote": "From emergency repairs to expert electrical work, we&#8217;re dedicated to getting you back on the road safely and efficiently.",
+        "mobile_quote": "RV Services | Tracy Mobile RV Service | Tracy, CA Skip to main content Tracy Mobile RV Service Give us call: (510) 812-1420 tracymobilerv@gmail."
       }
     },
     {
@@ -1041,7 +1228,9 @@
         ],
         "type_quote": "Address 8010 W 11th St. Tracy, CA 95304 | Phone (510) 657-5218 | Business Hours Tuesday - Friday: 10am - 4pm Saturday: 9am - 3pm Sunday - Monday: Closed",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "has been selected for the 2022 Tracy Award in the RV Repair Shop category by the Tracy Award Program."
       }
     },
     {
@@ -1073,7 +1262,9 @@
         ],
         "type_quote": "Bring your towable RV or motorhome to our dealership today!",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "and truck camper than the service staff at our Los Banos, CA RV dealer location! We offer service to customers in the surrounding areas, including Central Valley and the Bay Area."
       }
     },
     {
@@ -1102,7 +1293,9 @@
         ],
         "type_quote": "We are a mobile service company that comes to you.",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "--> Mobile Rv Repair | Century Club Rv And Solar | Bakersfield top of page Home Gallery Services Contact Us About Reviews More Use tab to navigate through the menu items."
       }
     },
     {
@@ -1132,7 +1325,9 @@
         ],
         "type_quote": "Visit us at our 8500 square foot Service Center that is especially equipped to handle all of your RV repair and RV collision needs.",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "Your RV won't sit for weeks on end in our shop, we strive to get the repairs complete as quickly as possible."
       }
     },
     {
@@ -1154,12 +1349,15 @@
       "base": "Bakersfield",
       "areas": [],
       "evidence": {
-        "checked": "https://www.rosedalerv.net/services.html",
+        "checked": "https://www.rosedalerv.net/",
         "phone_quote": "661-588-0277 (Office)",
         "coverage_quotes": [],
         "type_quote": "Complete RV Mobile Service and On-Site Services",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "The business was originally established in 1982 as Advanced RV Mobile and provided mobile service to RV park residents.",
+        "center_quote": "Customers also wanted the option to bring their RV to a service center."
       }
     },
     {
@@ -1189,7 +1387,9 @@
         ],
         "type_quote": "Get Fast and Reliable Mobile RV Repair Service",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Mobile RV Repair | Compass RV Fresno Contact us today and ask about our winter specials! Home Contact Us Home Contact Us More Home Contact Us Home Contact Us Call us today! (55"
       }
     },
     {
@@ -1231,7 +1431,9 @@
         "roadside_quote": null,
         "dropped": [
           "Auckland: a Fresno County locality with no Census place and no coordinate in any source this build reads, so a reader cannot be placed there. Removed from areas and from the served-area match rather than given a guess."
-        ]
+        ],
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "\" May 30, 2025 Judith Clouse \"Had an electrical problem on our RV while at Sequoia NP and needed to find a repair shop in Fresno."
       }
     },
     {
@@ -1263,7 +1465,11 @@
         ],
         "type_quote": "WE DO RV REPAIR AT OUR SHOP OR WE COME TO YOU!",
         "emergency_quote": null,
-        "roadside_quote": "That's why we offer mobile RV repair and 24/7 roadside assistance services, bringing our expertise directly to you, wherever you may be."
+        "roadside_quote": "That's why we offer mobile RV repair and 24/7 roadside assistance services, bringing our expertise directly to you, wherever you may be.",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "r_quote": "“ Our trailer running lights and brake lights mysteriously stopped working while camping in Yosemite.",
+        "mobile_quote": "air Services in Madera, CA | Mikes RV Center Madera RV Repair Services 10+ Reviews 8:00 AM - 5:00 PM | 14718 CA-41 Madera, CA 93636 CALL 559-822-4860 Home RV Repair Shop Mobile RV Repair Mobile RV Repair RV Roadside Assistance RV Parts & Accessories Reviews Reviews Add a Review Contact Us 559-822-4860 Trusted RV Repair Specialists Full-Service",
+        "center_quote": "V Repair Services in Madera, CA | Mikes RV Center Madera RV Repair Services 10+ Reviews 8:00 AM - 5:00 PM | 14718 CA-41 Madera, CA 93636 CALL 559-822-4860 Home RV Repair Shop Mobile RV Repair Mobile RV Repair RV Roadside Assistance RV Parts & Accessories Reviews Reviews Add a Review Contact Us 559-822-4860 Trusted RV Repair Specialists Full-S"
       }
     },
     {
@@ -1294,7 +1500,9 @@
         ],
         "type_quote": "Visit our full-service shop or browse our Parts Store for accessories and essentials.",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "Visit our full-service shop or browse our Parts Store for accessories and essentials."
       }
     },
     {
@@ -1330,7 +1538,10 @@
         ],
         "type_quote": "we come to you!",
         "emergency_quote": "Unexpected urgent issues? Our mobile team is ready to assist wherever you are in SLO County.",
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "e_quote": "Anytime, Anywhere in SLO County! (805) 423-8242 we come to you! Customer Satisfaction Guaranteed At The Mobile RV Repair Company, we understand the urgency when you need mobile RV repair.",
+        "mobile_quote": "Mobile RV Repair Paso Robles & San Luis Obispo | On-Site Service Take 15% OFF Labor during the month of September! The Mobile RV Repair Company The Mobile RV Repair Company The"
       }
     },
     {
@@ -1361,7 +1572,9 @@
         ],
         "type_quote": "Mobile RV Repair - Mike's Mobile RV Repair and Service",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Mobile RV Repair - Mike&#x27;s Mobile RV Repair and Service (805) 710-3985 (805) 710-3985 Licensed and Insured."
       }
     },
     {
@@ -1406,7 +1619,9 @@
         ],
         "type_quote": "Yes, as a mobile RV repair company, we come to you!",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "iews FAQs Service Areas Contact Us Location 805-975-5936 Contact Us Now Expert RV Repair Services in Paso Robles, CA At Freedom RV Repair, we specialize in comprehensive mobile RV repair services, tackling everything from roofs to air conditioning systems, brakes to bearings, ensuring your travel experience is seamless and worry-free."
       }
     },
     {
@@ -1439,7 +1654,9 @@
         ],
         "type_quote": "Our mobile technicians give you expert knowledge and quick service.",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Mobile RV Repair for San Luis Obispo County Home About Services Contact Get Quote Experienced Mobile RV Repair in San Luis Obispo County We understand the importance of afforda"
       },
       "reg": "central-coast"
     },
@@ -1477,7 +1694,9 @@
         ],
         "type_quote": "Mobile RV Repairs",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Paso Robles &#x2d; Mobile RV Repairs&lt;br /&gt; Tel: 805 610 9394 Skip to content Mobile RV Repairs Tel: 805 610 9394 Menu Menu Paso Robles RV Repairs Tel 805 610 9394 Mobile RV Repairs Tel: 805"
       }
     },
     {
@@ -1515,7 +1734,9 @@
         ],
         "type_quote": "Central Coast RV Medic LLC - Rv Rentals, Rv Repair, Mobile Rv Repair",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Central Coast RV Medic LLC - Rv Rentals, Rv Repair, Mobile Rv Repair RVTI RVSA Lippert Components CERTIFIED RVTI RVSA Lippert Components CERTIFIED RVTI RVSA Lippert Components CERTIFIED RVTI RVSA Lippert Components CERTIFIED Hom"
       },
       "reg": "central-coast"
     },
@@ -1559,7 +1780,10 @@
         ],
         "type_quote": "Our mobile tech comes directly to you!",
         "emergency_quote": "Our Mobile RV Repair service technician will come to you depending on availability and location, can repair minor issues and allow you to resume your trip.",
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Monterey Mobile RV Repair Monterey Mobile RV Repair Monterey Mobile RV Repair Monterey Mobile RV Repair Monterey Mobile RV Repair Monterey Mobile RV Repair Monterey Mobile RV Repair Mon",
+        "e_quote": "service Family Owned, Fine Tuned Family Owned, Fine Tuned Family Owned, Fine Tuned Family Owned, Fine Tuned We come to you and provide Quality RV Repair service About Us Emergency RV Repairs RV REPAIR Roadside or at your campground RV REPAIR Roadside or at your campground We strive to get you back on the road so that you can safely make your desti"
       }
     },
     {
@@ -1601,7 +1825,9 @@
         ],
         "type_quote": "Yes. Lavender Mobile RV Solutions is a fully mobile service — we come to your driveway, campsite, or storage lot throughout our service area, from Lompoc to Ventura across Santa Barbara and Ventura Counties.",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Mobile RV Repair — Santa Barbara & Ventura Counties | Lavender Mobile RV Solutions Home Services Service Areas About RV Tips RV Solar Sizer Get an Estimate 833-RVTECH-4 Get a F"
       },
       "reg": "central-coast"
     },
@@ -1632,7 +1858,10 @@
         ],
         "type_quote": "Experience fast and reliable service for all your mobile RV repair and mobile trailer repair needs",
         "emergency_quote": "Emergency or After Hours?",
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "e_quote": "On the Road Again with Myers mobile rv: Our Cross-Country RV Trip Contact Us Emergency or After Hours? Leaving town or expecting guests and have an unexpected repair need? Our mobile RV repair and mobile trailer repair services may be available for your co",
+        "mobile_quote": "es Expert Camping Trailer Repair Services Expert Camping Trailer Repair Services Expert Camping Trailer Repair Services Experience fast and reliable service for all your mobile RV repair and mobile trailer repair needs, ensuring your RV travel trailer repair is hassle-free and your journeys more enjoyable."
       },
       "reg": "central-coast"
     },
@@ -1666,7 +1895,9 @@
         ],
         "type_quote": "Visit us today at 302 Commission St, or pick up the phone at 831-758-1344 to get started on your repair procedure.",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "allery and Testimonials Contact Us 831-758-1344 QUALITY RV SERVICE, PARTS, ACCESSORIES AND MORE RV Repair and Service Since 1986 Call or stop by today! 831-758-1344 View Our Location 831-758-1344 View Our Location Button RV Repair and Parts in Salinas, CA Gleason&rsquo;s Salinas RV, located in Salinas, CA, offers expert RV repair, parts, and custom f"
       }
     },
     {
@@ -1701,7 +1932,9 @@
         ],
         "type_quote": "Drivers can bring their RV in for full-service repairs.",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "OME SERVICES AC REPAIR RV REFRIGERATOR REPAIRS RV REPAIR TRAILER REPAIR RV BODY REPAIR RV DAMAGE INSURANCE PARTS TIPS & TRICKS FAQ CONTACT US BLOG MONTEREY, CA RV REPAIR SHOP WE ARE HERE FOR YOU EVERY MILE OF THE WAY! REPAIRS FOR RECREATIONAL VEHICLES Since 1978, Santa Cruz has trusted RV Service Center Of Santa Cruz for quality repairs of mo"
       }
     },
     {
@@ -1734,7 +1967,8 @@
         ],
         "type_quote": "Paso RV provides complete in-house RV repair, maintenance, upgrades, and collision services under one roof",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site"
       }
     }
   ]

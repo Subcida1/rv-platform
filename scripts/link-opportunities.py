@@ -73,14 +73,19 @@ def text_of(fragment):
 
 
 def sentences(fragment):
-    """Prose sentences, and whether each one already carries an internal link."""
+    """Prose sentences that carry no link yet.
+
+    A sentence that already has one is skipped WHOLE rather than stripped and tested on the
+    remainder. Stripping leaves text like "The carries the carbon monoxide hard stop, and
+    the explains why level matters", where the anchor text has been removed and the leftover
+    words still match a subject - so the tool reported a missing link that was already
+    there. Measured 2026-09-28 on manuals/start-here.html.
+    """
     out = []
     for chunk in re.split(r"(?<=[.!?])\s+", fragment):
         if "<a " in chunk:
-            inner = re.sub(r"<a\b.*?</a>", " ", chunk, flags=re.S | re.I)
-        else:
-            inner = chunk
-        text = text_of(inner)
+            continue
+        text = text_of(chunk)
         if len(text) < 25:
             continue
         out.append(text)
@@ -161,6 +166,11 @@ def main():
             for sent in sentences(frag[s]):
                 low = sent.lower()
                 hits = [w for w in words if re.search(r"\b%s" % re.escape(w), low)]
+                # Two subject words at opposite ends of a long sentence are two unrelated
+                # mentions, not a reference. Require them within 90 characters of each other.
+                pos = sorted(low.find(h) for h in hits)
+                if len(pos) >= 2 and pos[-1] - pos[0] > 90:
+                    continue
                 if len(hits) >= 2:
                     strong.append((len(hits), rel[s], rel[t], ", ".join(hits), sent))
                 elif len(hits) == 1 and len(words) <= 3:

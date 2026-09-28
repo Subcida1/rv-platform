@@ -145,7 +145,7 @@ window.RV_LISTINGS_CA = [
    "Solar"
   ],  "d": "RV repair and service including 150-point pre-purchase inspections, roofing, electrical and solar, plumbing, and chassis work on engine, transmission, brakes and suspension. Monday to Friday 8 to 5:30.",  "reg": "valley-north-bay"
  },
- {  "n": "L & T Truck Repair",  "base": "willows",  "c": "Willows and the upper Sacramento Valley",  "region": "Glenn County",  "p": "530-685-5580",  "u": "https://www.lttruckrepair.com/services/rv-repair",  "t": "center",  "e": true,  "areas": [
+ {  "n": "L & T Truck Repair",  "base": "willows",  "c": "Willows and the upper Sacramento Valley",  "region": "Glenn County",  "p": "530-685-5580",  "u": "https://www.lttruckrepair.com/services/rv-repair",  "t": "center",  "e": false,  "areas": [
    "willows",
    "red bluff",
    "corning",
@@ -156,7 +156,7 @@ window.RV_LISTINGS_CA = [
    "24 hour roadside",
    "Mobile service",
    "Diesel shop"
-  ],  "d": "RV repair and maintenance covering engine, brakes, electrical, plumbing and HVAC, plus diesel mechanic services. Roadside assistance 24 hours and mobile service across the upper Sacramento Valley. Shop open Monday to Friday 7 to 4.",  "reg": "valley-north-bay"
+  ],  "d": "RV repair and maintenance covering engine, brakes, electrical, plumbing and HVAC, plus diesel mechanic services. Roadside truck repair is published as available 24/7 for breakdowns, and mobile service runs across the upper Sacramento Valley, after hours by appointment. Shop open Monday to Friday.",  "r": true,  "reg": "valley-north-bay"
  },
  {  "n": "Jeff's Truck Service",  "base": "chico",  "c": "Chico and Red Bluff",  "region": "Butte County",  "p": "530-895-8070",  "u": "https://www.jeffs-truckservice.com/rv-and-motorhome-body-collision",  "t": "center",  "e": true,  "areas": [
    "chico",
