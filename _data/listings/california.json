@@ -444,7 +444,8 @@
       "d": "Locally owned RV repair shop off I-5. Appliance repair, electrical diagnostics, body repair, plumbing, structural repairs and interior remodeling. Also offers mobile repairs for travellers broken down. Monday to Friday 9 to 5, Saturday by appointment.",
       "evidence": {
         "checked": "https://overlandandrv.com/contact-us",
-        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site"
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "rland and RV Services Jefferson&#x27;s Overland and RV Services Jefferson&#x27;s Overland and RV Services Jefferson&#x27;s Overland and RV Services Home Repairs RV Parts Store About Us Contact Us More Home Repairs RV Parts Store About Us Contact Us Home Repairs RV Parts Store About Us Contact Us Contact Us Looking for something special? Whethe"
       }
     },
     {
@@ -635,7 +636,7 @@
       "evidence": {
         "checked": "https://www.chicotruckandrv.com/service-and-repair/",
         "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
-        "center_quote": "Repair & Service requires more than what an ordinary automotive mechanic can offer; we go above and beyond to be the one-stop shop for all your regular maintenance service and repair needs."
+        "center_quote": "Service & Repair - Chico CA Trailer Sales RV Service | Chico Truck & RV --> 9 Call Us (530) 891-9225 9 Visit Us 5 Three Sevens Lane, Chico, Ca 95973    Home Inventory Inventory Reduction Deals Carts / Toolboxes Car / Racing Trailers Cargo / Enclosed Trailers Dump Trailers Equip"
       }
     },
     {
@@ -667,7 +668,8 @@
         "e_quote": "Truck Towing Read More When your diesel truck or fleet is sidelined, you need a repair service that understands the urgency and has the expertise to get you back on the road swiftly and safely.",
         "center_quote": "Drive in today and experience the peace of mind that comes with expert care for your home on the road.",
         "roadside_quote": "understand that breakdowns don't adhere to business hours, which is why our roadside truck repair services are available 24/7",
-        "correction": "2026-09-28: was tagged emergency mobile repair with no roadside tag. The site's 24/7 is roadside truck repair and its mobile after-hours service is 'by appointment only', so the two tags were the wrong way round. Corrected by hand from the site's own words; found by scripts/audit-tags.py."
+        "correction": "2026-09-28: was tagged emergency mobile repair with no roadside tag. The site's 24/7 is roadside truck repair and its mobile after-hours service is 'by appointment only', so the two tags were the wrong way round. Corrected by hand from the site's own words; found by scripts/audit-tags.py.",
+        "r_quote": "g Fire Apparatus Service & Repair Vehicle Fire Pre-Inspection Cummins & Paccar Software Updates DPF/DOC Baking & Cleaning EGR & DPF Emissions Cleaning Repair Axle Repair Brake Repair Coolant System Repair Diagnostics & Electrical Repair Driveline Repair Diesel Engine Repair Express Lube HVAC System Repair Exhaust System Repair Oil & Fluid Susp"
       },
       "r": true
     },
@@ -1040,7 +1042,8 @@
       "d": "Thirty years and more in RV repair: engine diagnostics, electrical repairs, appliance servicing, roof repairs, de-winterizing, plumbing, hitch installation, wheel bearing repacks, air conditioning repair and replacement, roof resealing, and slide-out and awning repair. Mobile service is often offered. Most makes and models of fifth wheels and travel trailers.",
       "evidence": {
         "checked": "https://sacramentotrailerrepair.com/rv-repair-rocklin-ca/",
-        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site"
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "Name Description Duration Cookie Preferences This cookie is used to store the user's cookie consent preferences."
       }
     },
     {
@@ -2192,7 +2195,9 @@
         "type_quote": "CRG Mobile RV Repair serves the Coachella Valley with \"Certified\" Mobile RV Repair service that comes to you, on site when you need help.",
         "emergency_quote": null,
         "roadside_quote": null,
-        "bar_number": null
+        "bar_number": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "--> Home | CRG Mobile RV Repair | Coachella Valley, CA top of page Your Certified ​​ RV REPAIR MAN HOME ABOUT GALLERY More Use tab to navigate through the menu items."
       }
     },
     {
@@ -2220,7 +2225,9 @@
         "type_quote": "For added convenience, we also offer mobile services, bringing expert care directly to your location, so you can keep your adventure going without disruption.",
         "emergency_quote": null,
         "roadside_quote": null,
-        "bar_number": null
+        "bar_number": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "For added convenience, we also offer mobile services , bringing expert care directly to your location, so you can keep your adventure going without disruption."
       }
     },
     {
@@ -2251,7 +2258,9 @@
         "type_quote": "American Mobile RV Repair in Hesperia, CA provides you with affordable RV and boat repair service. Most repairs can be done mobile at your home.",
         "emergency_quote": null,
         "roadside_quote": null,
-        "bar_number": null
+        "bar_number": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "American Mobile RV Repair - Hesperia, CA | (760) 261-8751 Home About Our Services RV Repair Boat Repair Fiberglass Repair RV Collision Repair Gallery Full Gallery Reviews Contact Select"
       },
       "region": "Orange County; Inland Empire; San Gabriel Valley; High Desert; Los Angeles County"
     },
@@ -2281,7 +2290,9 @@
         "type_quote": "Welcome to Mobile RV Services, the premier mobile RV Repair Service in Victorville, CA!",
         "emergency_quote": "We also handle Emergency Motor home Repairs in any situation.",
         "roadside_quote": null,
-        "bar_number": null
+        "bar_number": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Home About Services Gallery Testimonials Blog Contact Us Menu Home About Services Gallery Testimonials Blog Contact Us \"Lets us Come To You\" Motorhome Repair RV Services Mobile RV Repairs Get A Quote Motorhome Repair RV Services Mobile RV Repairs Get A Quote SERVICES ABOUT US SPECIALS Welcome to Mobile RV Services Best Local Mobile RV Service i"
       },
       "region": "High Desert"
     },
@@ -2324,7 +2335,9 @@
         "emergency_quote": null,
         "roadside_quote": null,
         "bar_number": null,
-        "correction": "2026-09-28: 'Big Bear' was listed as an area. The Census calls the place Big Bear Lake, and a reader typing 'Big Bear' still resolves against it by prefix, but the table key is the Census name so the area now matches it exactly."
+        "correction": "2026-09-28: 'Big Bear' was listed as an area. The Census calls the place Big Bear Lake, and a reader typing 'Big Bear' still resolves against it by prefix, but the table key is the Census name so the area now matches it exactly.",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "--> Mobile RV Repair Services | The Reliable Rv – Yucca Valley top of page Home Welcome Services About Us Gallery Blog More Use tab to navigate through the menu items."
       }
     },
     {
@@ -2354,7 +2367,10 @@
         "type_quote": "Now Offering Mobile Repair Services. Our professionally trained specialists are ready to help with your next vehicle project.",
         "emergency_quote": null,
         "roadside_quote": null,
-        "bar_number": null
+        "bar_number": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Monday - 9 am to 6 pm Tuesday - 9 am to 6 pm Wednesday - 9 am to 6 pm Thursday - 9 am to 6 pm Friday - 9 am to 6 pm Saturday - 9 am to 6 pm Now Offering Mobile Repair Services Our professionally trained specialists are ready to help with your next vehicle project.",
+        "center_quote": "We were happy to find a local RV service/repair shop that's not a busy overpriced dealership."
       },
       "region": "Inland Empire"
     },
@@ -2397,7 +2413,9 @@
         "type_quote": "No Mobile Service - No House Calls",
         "emergency_quote": null,
         "roadside_quote": null,
-        "bar_number": "ARD 314817"
+        "bar_number": "ARD 314817",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "epair RV Maintenance RV Mechanic RV Plumbing Repair Transmissions Tow Package Service About Our Service Areas Careers in the RV Industry Blog Customer Reviews Why We Are In-Shop Only Brands We Service Winnebago Grand Design Thor Motor Coach Fleetwood and Holiday Rambler Forest River and Keystone Contact CALL: 909-627-7566 CONTACT US! Call (909)"
       },
       "region": "Inland Empire"
     },
@@ -2433,7 +2451,9 @@
         "type_quote": "At Foothill RV, we are your local specialists for service and upgrades to your recreational vehicle.",
         "emergency_quote": null,
         "roadside_quote": null,
-        "bar_number": null
+        "bar_number": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "The shop was clean, they were friendly."
       },
       "region": "Inland Empire"
     },
@@ -2462,7 +2482,9 @@
         "type_quote": "Hemet Valley RV Siding & Storage is a dual-functioning company in California, specializing in aluminum and fiberglass RV Siding and Aluminum RV Travel Trailer Siding.",
         "emergency_quote": null,
         "roadside_quote": null,
-        "bar_number": null
+        "bar_number": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "LEARN MORE STORAGE When you’re not using your RV, you need a safe place to store it."
       }
     },
     {
@@ -2497,7 +2519,11 @@
         "type_quote": "WAGNER RV REPAIR IS FAMILY OWNED AND OPERATED AND HAS BEEN IN THE REPAIR INDUSTRY FOR WELL OVER 30 YEARS",
         "emergency_quote": "EMERGENCY SERVICES 760 972 5191",
         "roadside_quote": null,
-        "bar_number": null
+        "bar_number": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "e_quote": "SELL YOUR RV ON CONSIGNMENT INDIO We have Two Complete Service & Repair Shops Warranty Approved for All Major Brands Four Mobile Service Vans SHOPS AND MOBILE AVAILABLE EMERGENCY SERVICES 760 972 5191 WAGNER RV REPAIR IS FAMILY OWNED AND OPERATED AND HAS BEEN IN THE REPAIR INDUSTRY FOR WELL OVER 30 YEARS OUR MORRONGO SHOP IS THE PERFECT LOCATION",
+        "mobile_quote": "LOSED MORONGO VALLEY RV REPAIR W AGNE R WE WILL SELL YOUR RV ON CONSIGNMENT INDIO We have Two Complete Service & Repair Shops Warranty Approved for All Major Brands Four Mobile Service Vans SHOPS AND MOBILE AVAILABLE EMERGENCY SERVICES 760 972 5191 WAGNER RV REPAIR IS FAMILY OWNED AND OPERATED AND HAS BEEN IN THE REPAIR INDUSTRY FOR WELL OVER 3",
+        "center_quote": "ND MOBILE AVAILABLE EMERGENCY SERVICES 760 972 5191 WAGNER RV REPAIR IS FAMILY OWNED AND OPERATED AND HAS BEEN IN THE REPAIR INDUSTRY FOR WELL OVER 30 YEARS OUR MORRONGO SHOP IS THE PERFECT LOCATION FOR CONSIGNING YOUR RV."
       }
     },
     {
@@ -2533,7 +2559,9 @@
         "emergency_quote": null,
         "roadside_quote": null,
         "bar_number": null,
-        "correction": "2026-09-28: base was 'Stateline, Nevada', which is not a table key, and 'Lake Tahoe' and 'Carson City' were listed as areas. Lake Tahoe is a lake and Carson City is in Nevada, so neither is a town a reader on this page can be placed in; both moved to the region wording. The base is Stateline, which sits on the state line and is in this state's coordinate belt."
+        "correction": "2026-09-28: base was 'Stateline, Nevada', which is not a table key, and 'Lake Tahoe' and 'Carson City' were listed as areas. Lake Tahoe is a lake and Carson City is in Nevada, so neither is a town a reader on this page can be placed in; both moved to the region wording. The base is Stateline, which sits on the state line and is in this state's coordinate belt.",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Reno - Tahoe Mobile RV Repair 0 Skip to Content Home Services FAQs Terms Contact Us Open Menu Close Menu Open Menu Close Menu Home Services FAQs Terms Contact Us Home Services FAQs Terms Co"
       }
     },
     {
@@ -2571,7 +2599,11 @@
         "type_quote": "Bring your recreational vehicle to our RV Repair Shop conveniently located at: 7655 Lemon Avenue, Lemon Grove, CA 91945 - BY APPOINTMENT ONLY - Or let us come to you with our RV Mobile Service anywhere in San Diego County.",
         "emergency_quote": "RV Awning Emergency Repairs - Fast response to storm damage, travel mishaps, or mechanical failures",
         "roadside_quote": null,
-        "bar_number": null
+        "bar_number": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "e_quote": "Whether you need a replacement, new installation, or emergency service, our cer Show More 🔧 RV Generator & Mobile Repair Services in San Diego County Looking for expert RV troubleshooting, maintenance, and service? We specialize in",
+        "mobile_quote": "Mobile RV Service / In-Shop RV Repairs Throughout San Diego County A1 RV REPAIRS & SERVICES LLC - (619)259-0372 A1 RV REPAIRS & SERVICES LLC - (619)259-0372 A1 RV REPAIRS & SER",
+        "center_quote": "Mobile RV Service / In-Shop RV Repairs Throughout San Diego County A1 RV REPAIRS & SERVICES LLC - (619)259-0372 A1 RV REPAIRS & SERVICES LLC - (619)259-0372 A1 RV REPAIRS & SERVICES LLC - (619)259-"
       }
     },
     {
@@ -2609,7 +2641,11 @@
         "type_quote": "Free In-Shop Estimates ... Our mobile repair service brings the expertise of our shop directly to your location.",
         "emergency_quote": "We understand that RV problems can occur at any time, which is why we offer 24-hour emergency services to keep you on the road",
         "roadside_quote": null,
-        "bar_number": null
+        "bar_number": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "e_quote": "RV Repair Shop San Diego, CA 24-Hour Emergency Services Mobile RV Repair Available 10% Senior and Military Discounts (619) 975-5795 Request Lorem Epsom Hero Request Form Name: Phone: Email: Services Thank you for con",
+        "mobile_quote": "RV Repair Shop | Chula Vista, CA | RV Pro Mobile Get Ready for Desert Season! Call Today for RV Service, Upgrades, Remodels & Storage.",
+        "center_quote": "RV Repair Shop | Chula Vista, CA | RV Pro Mobile Get Ready for Desert Season! Call Today for RV Service, Upgrades, Remodels & Storage."
       }
     },
     {
@@ -2641,7 +2677,10 @@
         "type_quote": "MOBILE RV REPAIRS ... RV MOBILE REPAIR SERVICES, A/C UNITS, REFRIGIRATORS, STOVES, WATER HEATERS AND FURNACES.",
         "emergency_quote": "EMERGENCY AND PREVENTIVE MAINTENANCE ... Do you need urgent repairs?",
         "roadside_quote": null,
-        "bar_number": null
+        "bar_number": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "e_quote": "Mobile Technician SAN DIEGO RV MOBILE REPAIR SERVICES EMERGENCY AND PREVENTIVE MAINTENANCE AQUA-HOT AND TRUMA MOBILE SERVICE Follow Me CONTACT US Hello Schedule Send Message Emergency and preventive maintenance.",
+        "mobile_quote": "RV MOBILE REPAIR in San Diego - Sos Services (619) 784-1331 (619) 784-1331 Home Services About Us Specials Shop More Home Services About Us Specials Shop Home Services About Us Sp"
       }
     },
     {
@@ -2677,7 +2716,10 @@
         "type_quote": "Rely on us for mobile RV services in San Diego County ... Mobile RV Service is ready to help with top-quality service at your location.",
         "emergency_quote": "Offer 24/7 Emergency Services - We're available around the clock for urgent repairs.",
         "roadside_quote": null,
-        "bar_number": null
+        "bar_number": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "e_quote": "1 Perfect 5⭐ Reviews - We have 90+ 5⭐ reviews from customers on Google & Yelp! 2 ﻿ Offer 24/7 Emergency Services - We're available around the clock for urgent repairs.",
+        "mobile_quote": "Mobile RV Services & Inspections | EWT Mobile RV Service | San Marcos, CA ELEMENT--> ELEMENT--> ELEMENT--> Reach Out Today (760) 218-9293 Home Services RV & Trailer Inspections"
       }
     },
     {
@@ -2717,7 +2759,9 @@
         "type_quote": "From cracked fiberglass and faded paint to collision damage and leaky roofs, 760RV is the trusted RV service and RecVan repair shop for San Diego County and surrounding areas.",
         "emergency_quote": null,
         "roadside_quote": null,
-        "bar_number": null
+        "bar_number": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "From cracked fiberglass and faded paint to collision damage and leaky roofs, 760RV is the trusted RV service and RecVan repair shop for San Diego County and surrounding areas."
       }
     },
     {
@@ -2755,7 +2799,9 @@
         "type_quote": "Sonrise RV Parts And Body Repair is family owned and operated since 1987. We provide service and repair on most types and brands of RV's.",
         "emergency_quote": null,
         "roadside_quote": null,
-        "bar_number": null
+        "bar_number": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "RV Electrical & Motorhome Repair Shop, RV Painting Services Poway, Valley Center, Escondido CA and North County San Diego - Sonrise RV Parts and Body Repair Parts And Body Repair Address: 1931 Don Lee Pl Esc"
       }
     },
     {
@@ -2787,7 +2833,9 @@
         "type_quote": "County RV Service Center has the skilled technicians to handle any repair you need for your RV ... From oil changes to transmission repairs, count on us for any mechanical service your RV needs.",
         "emergency_quote": null,
         "roadside_quote": null,
-        "bar_number": null
+        "bar_number": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "County RV Service Center | RV Repair | Santee, CA Serving All of San Diego County | Located in Santee, CA 619-440-6688 Home RV Repairs RV Mechanical RV Body Shop Tow Packages Fabrication Warrant"
       }
     },
     {
@@ -2827,7 +2875,9 @@
         "type_quote": "Our motorhome specialists use the best techniques to provide the kind of RV service you deserve ... We are also equipped with a 60' RV paint booth to custom paint or repair fiberglass and body damage.",
         "emergency_quote": null,
         "roadside_quote": null,
-        "bar_number": null
+        "bar_number": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "From general repairs to maintenance services, we do it all! LEARN MORE RV ROOF REPAIR & COATING Come over to our RV repair shop to get your roof fixed quickly and with safety in mind."
       }
     },
     {
@@ -2859,7 +2909,9 @@
         "type_quote": "our skilled technicians specialize in a multitude of services including remodeling, carpeting and flooring, collision and structure repair, as well as coach and chassis repair.",
         "emergency_quote": null,
         "roadside_quote": null,
-        "bar_number": null
+        "bar_number": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "Contact Us GET IN TOUCH 1555 S Coast Hwy Suite 1/2, Oceanside, CA 92054 TEXT/CALL 24/7 (858)723-0139 Shop Home Testimonials Expert RV Tips and Maintenance Guides Contact US RV Service RV Services Warranty Services Specialized RV Services © Copyright | RV Fun Center | San Die"
       }
     },
     {
@@ -2885,7 +2937,7 @@
       ],
       "region": "San Diego County",
       "evidence": {
-        "checked": "https://www.pacificcrestservices.net/rv-repairs-san-deigo",
+        "checked": "https://www.pacificcrestservices.net/",
         "phone_quote": "Give our experts a call anytime at (619) 390-2305.",
         "coverage_quotes": [
           "San Diego Pacific Crest Services is your trusted partner for all your RV repair needs in San Diego County, CA."
@@ -2894,7 +2946,9 @@
         "emergency_quote": null,
         "roadside_quote": "Experience peace of mind with San Diego Pacific Crest Services' 24/7 emergency roadside assistance near me for your RV in San Diego County, CA ... We specialize in the mechanical aspects of your RV, focusing on the engine, transmission, and brakes.",
         "bar_number": null,
-        "correction": "2026-09-28: the roadside tag is supported (\"24/7 Emergency Roadside Assistance & Mobile Repairs\"), and the same page says \"We specialize in class 6, 7 & 8 trucks and trailers\", so the limitation is now stated. Whether a heavy-duty truck company belongs in an RV-specific directory is the same open question as Skinner's Truck Repair."
+        "correction": "2026-09-28: the roadside tag is supported (\"24/7 Emergency Roadside Assistance & Mobile Repairs\"), and the same page says \"We specialize in class 6, 7 & 8 trucks and trailers\", so the limitation is now stated. Whether a heavy-duty truck company belongs in an RV-specific directory is the same open question as Skinner's Truck Repair.",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Mobile Semi Mechanic | San Deigo, CA | Pacific Crest SRVS 13272 Highway 8 Business El Cajon, CA 92021 (619) 390-2305 Home About Us Fleet Services GSA Fleet Management Specialty"
       },
       "spec": "Heavy-duty truck shop; RVs taken as vehicles, not coach systems"
     },
@@ -2920,7 +2974,7 @@
       "region": "San Diego",
       "spec": "Does not offer mobile RV repair services; all repairs must be done at the Miramar facility.",
       "evidence": {
-        "checked": "https://myrvspecialists.com/contact/",
+        "checked": "https://myrvspecialists.com/",
         "phone_quote": "Call Today! (858) 455-9898 ... 8616 Miramar Place San Diego, CA, 92121",
         "coverage_quotes": [
           "Do you need RV repair in San Diego? Look no further than RV Specialists!"
@@ -2928,7 +2982,9 @@
         "type_quote": "All Repairs Done Onsite ... RV Specialists does not offer mobile RV repair services. All repairs must be done at our Miramar facility.",
         "emergency_quote": null,
         "roadside_quote": null,
-        "bar_number": null
+        "bar_number": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "We Have A Full Service Body And Paint Facility Equipped To Handle Both Aluminum And Fiberglass Repairs With State Of The Art Computerized Color Matching."
       }
     },
     {
@@ -2962,7 +3018,9 @@
         "type_quote": "Mobile repairs and maintenance on Class A, Class B, and Class C RVs, Travel Trailers, and Fifth Wheels around San Diego County",
         "emergency_quote": null,
         "roadside_quote": null,
-        "bar_number": null
+        "bar_number": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "--> 4G RV Services | Mobile RV Repair in San Diego top of page info@4GRVServices."
       }
     },
     {
@@ -3024,7 +3082,9 @@
         "type_quote": "We Come to You - Home, campground, or storage lot - our service comes to your location across Southern California.",
         "emergency_quote": null,
         "roadside_quote": null,
-        "bar_number": null
+        "bar_number": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Mobile RV Repair & Maintenance Services in Los Angeles, CA Skip to content rvexpressmobileservices HOME ABOUT US SERVICES RENTALS CONTACT US HOME ABOUT US SERVICES RENTALS CONT"
       }
     },
     {
@@ -3053,7 +3113,10 @@
         "type_quote": "WE DRIVE TO YOU",
         "emergency_quote": "We operate 24/7 for emergency services.",
         "roadside_quote": null,
-        "bar_number": null
+        "bar_number": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "e_quote": "k Cleaning Exteriors, Slide-Outs, and Roofs Propane System Electrical & Generator Refrigerator SOLAR CONSULTATION, SOLAR PARTS & PACKAGES, LITHIUM UPGRADES Warranty Work EMERGENCY RECOVERY (SLIDES STUCK OUT/LANDING GEAR STUCK DOWN) about us Hi I am Steven, owner/operator of Steven’s Mobile RV Repair.",
+        "mobile_quote": "home - Steven’s Mobile RV Repair Steven’s Mobile RV Service and Repair – Certified & Insured (949) 683-0893 Steven’s Mobile RV Service and Repair – Certified & Insured (949) 683-0893 rv repair"
       },
       "reg": "la-county"
     },
@@ -3082,7 +3145,9 @@
         "type_quote": "We come to your home, storage facility, or campground to save you time and hassle.",
         "emergency_quote": null,
         "roadside_quote": null,
-        "bar_number": null
+        "bar_number": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Mobile RV Repair in Orange County, CA | EXO-RV Home About Us Services Contact (714) 334-4459 Home About Us Services Contact (714) 334-4459 FAMILY-OWNED • TRUSTED SINCE 2004 Mob"
       }
     },
     {
@@ -3124,7 +3189,10 @@
         "type_quote": "We travel to your location - Enjoy the convenience of our fully mobile service.",
         "emergency_quote": "Hours Monday - Saturday 7am - 7pm On-call for emergencies; Emergency Support ... Slide stuck, Steps won't retract, Levelers not working",
         "roadside_quote": null,
-        "bar_number": null
+        "bar_number": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "e_quote": "From routine maintenance to emergency repairs, we are dedicated to keeping your RV in top condition for all your adventures.",
+        "mobile_quote": "Magic Wand RV Services | Mobile RV Repair Shop in Orange County California 0 Skip to Content Magic Wand RV Services WHAT WE OFFER WHY CHOOSE US CONTACT US REVIEWS AREAS WE SERVE Open Menu Close Menu Op"
       }
     },
     {
@@ -3155,7 +3223,9 @@
         "type_quote": "Mobile service at your location ... Repairs are done at the RV's location.",
         "emergency_quote": null,
         "roadside_quote": null,
-        "bar_number": null
+        "bar_number": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Mobile RV Company | Class A Mobile RV Services LLC Skip to content camrvservices@gmail."
       }
     },
     {
@@ -3192,7 +3262,9 @@
         "type_quote": "Mobile Service - We come directly to your location to provide convenient RV service.",
         "emergency_quote": null,
         "roadside_quote": null,
-        "bar_number": null
+        "bar_number": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Santa Clarita RV Contact Us &times; Home Appointment About Contact Us Santa Clarita RV Mobile Service --> Professional RV repair, maintenance, electrical work, plumbing, installations, and mobile service brought directly to you."
       }
     },
     {
@@ -3267,7 +3339,10 @@
         "type_quote": "Our fully equipped RV Body Shop That Can Handle Any Size Vehicle.",
         "emergency_quote": null,
         "roadside_quote": "RV Frame Repair is a complex and timely process ... We specialize in all types of repairs, from basic RV maintenance and preventative measures to complex RV collision repairs.",
-        "bar_number": "ARD00288521"
+        "bar_number": "ARD00288521",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "r_quote": "n Repair Needs! From Van Dent Repair, Van Body Damage & Certified Van Collision Repair! Trailer Repair Our Shop Can Handle All Of Your Trailer Repair Needs! From Trailer Frame Repair, Aluminum Repairs & Even Horse Trailer Repair! RV Paint Shop Your One-Stop RV Paint Shop ! With Two Indoor Paint Booths, You Can Rest Assured Knowing Your RV Paint Will",
+        "center_quote": "The Best RV Repair Shop In Orange County - OCRV Center Skip to content Mon-Fri: 8AM-7PM 23281 La Palma Ave Yorba Linda CA 92887 Search Youtube Google Yelp Tiktok Facebook Instagram 714-909-1444"
       }
     },
     {
@@ -3309,7 +3384,9 @@
         "type_quote": "helping owners save time and money by having a complete maintenance and repair facility under one roof!",
         "emergency_quote": null,
         "roadside_quote": null,
-        "bar_number": null
+        "bar_number": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "e Parts and Accessories Service • Repairs About Benchmark RV As a family owned business, Benchmark RV has proudly built a reputation over the years as a trusted One-Stop Service Center to the RV community."
       }
     },
     {
@@ -3337,7 +3414,9 @@
         "type_quote": "With multiple service bays and a commitment to customer satisfaction, you can trust us to handle all your RV care needs.",
         "emergency_quote": null,
         "roadside_quote": null,
-        "bar_number": null
+        "bar_number": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "Quality RV Repair & Maintenance at Coast RV Center In Ventura & LA Counties Serving Ventura & LA Counties with Reliable Repairs, Maintenance, and a Fully Stocked Retail Store with Hard-to-Find Parts for Over 43 Years 818-889-8889 See Store Store Discover a comprehensive range of RV parts and accessories at our fully-stocked store."
       }
     },
     {
@@ -3372,7 +3451,10 @@
         "emergency_quote": "We offer emergency and same-day maintenance services to address urgent repairs and get you back on the road as quickly as possible.",
         "roadside_quote": null,
         "bar_number": null,
-        "correction": "2026-09-28: was tagged emergency mobile repair. Its own site has no emergency, 24/7 or after-hours wording anywhere and describes a body, paint and collision facility, so the tag was asserted rather than sourced. Removed, and the scope limitation now states what it actually does."
+        "correction": "2026-09-28: was tagged emergency mobile repair. Its own site has no emergency, 24/7 or after-hours wording anywhere and describes a body, paint and collision facility, so the tag was asserted rather than sourced. Removed, and the scope limitation now states what it actually does.",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "RV Repair, Customization & Maintenance in California Where Excellence Meets The Open Road – Premium RV Services Welcome to Elite Coach Works, where we believe that your RV deserves the highest level of care, whether you’re preparing for your next great adventure or restoring it to its finest condition.",
+        "center_quote": "ills, CA RV Service & Repair near Newhall, CA RV Service & Repair near Palmdale, CA RV Service & Repair near Santa Clarita, CA A Full-Service RV Body, Paint, & Collision Facility Our industry-leading equipment and Elite service restores your RV to pre-accident condition."
       },
       "spec": "Body, paint and collision only"
     },
@@ -3431,7 +3513,10 @@
         "type_quote": "Our service center is equipped to address a wide range of RV needs ... We are a one-stop shop for RV parts & Services near you.",
         "emergency_quote": null,
         "roadside_quote": "addressing water damage, frame issues, suspension problems, and tire and brake concerns",
-        "bar_number": null
+        "bar_number": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "r_quote": "Why is professional RV service and repair necessary? Safety: Ensures that all safety systems, such as brakes and tires, are in good condition to prevent accidents and injuries on the road.",
+        "center_quote": "RV Service Orange County | El Toro RV Repair & Service Center Skip to content Call us +1 (949) 830-1996 Open Mon -Fri at: 8."
       }
     },
     {
@@ -3459,7 +3544,9 @@
         "type_quote": "Airstream Los Angeles is a fully credentialed, Factory Certified collision center.",
         "emergency_quote": null,
         "roadside_quote": null,
-        "bar_number": null
+        "bar_number": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "Collision Center | Airstream Los Angeles Skip to main content --> Our Locations Airstream Inland Empire 27969 Jefferson Ave Temecula, CA 92592 Shop Now Airstream Los Angeles 1212 E Las Tunas Drive San Gabriel, CA 91776 Storage Center Shop Now Airst"
       }
     }
   ]
