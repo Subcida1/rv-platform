@@ -135,7 +135,10 @@
         ],
         "type_quote": "Can't get your rig to a shop? We come to you - home, RV park, storage facility, or roadside - anywhere within 100 miles of Phoenix.",
         "emergency_quote": "Saturday: Emergency | Sunday: Emergency ... We dispatch fast across all Phoenix metro. After-hours and weekend service available.",
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "e_quote": "obile RV Repair Phoenix, AZ Mobile Boat Repair Phoenix, AZ Get More Info &#57469; Contact Us (602) 296-7549 &#57530; Hours Mon &#8211; Friday 8:00 am – 6:00 pm Saturday: Emergency Sunday: Emergency &#57563; Services RVs RV Repairs RV Service Boat Repair & Service Mobile Tire Repair Windshield Replacement &#57547; Schedule & Status &#57503; Schedul",
+        "mobile_quote": "Mobile RV Repair Phoenix, Arizona | ++ RVIA Master Certified Call us now: (602) 296-7549 | View Google Maps → Schedule Appointment | Check Account Open/Close Menu Skip to conte"
       }
     },
     {
@@ -174,7 +177,10 @@
         ],
         "type_quote": "PHX Mobile RV Repair is Phoenix's trusted mobile RV repair service. We come to you, wherever you are in the Valley.",
         "emergency_quote": "Business Hours: Open 24/7; Emergency Service Available",
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "e_quote": "in Phoenix | Fast On-Site RV Service Home About Services RV Air Conditioner Repair RV Electrical System Repair RV Plumbing Repair RV Appliance Repair RV Roof Leak Repair Emergency RV Repair RV Water Heater Repair RV Awning Repair and Replacement RV Slide-Out Repair RV Generator Repair RV Brake Repairs Pre-Trip RV Inspections Pre-Purchase RV Inspec",
+        "mobile_quote": "Mobile RV Repair in Phoenix | Fast On-Site RV Service Home About Services RV Air Conditioner Repair RV Electrical System Repair RV Plumbing Repair RV Appliance Repair RV Roof L"
       }
     },
     {
@@ -214,7 +220,9 @@
         ],
         "type_quote": "No towing, no drop-off. We work right where your RV sits - home, campground, storage, or RV park.",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Mobile RV Service-Arizona Lucky Luke RV | Mobile RV Service & Repair — Phoenix, Arizona Lucky Luke RV Mobile RV Service & Repair Home About Us Services 📞 480-433-6776 Home Abou"
       }
     },
     {
@@ -245,7 +253,9 @@
         ],
         "type_quote": "While our mobile unit handles the emergencies, our brand-new, high-clearance steel facility in New River handles the heavy lifting. We welcome clients from all over the valley to our shop for complex, multi-day projects",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "REQUEST AN INSPECTION By appointment only: Highroad Mobile RV Repair, LLC 602-892-8925"
       }
     },
     {
@@ -290,7 +300,10 @@
         ],
         "type_quote": "We bring fully certified technicians straight to your campsite, driveway, or RV park so you can spend less time waiting at a shop",
         "emergency_quote": "Emergency On Site Services: Rapid response repairs to get critical systems running (available with standard travel time fees).",
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "e_quote": "Emergency On Site Services: Rapid response repairs to get critical systems running (available with standard travel time fees).",
+        "mobile_quote": "Mobile RV Repair in Northern Arizona | Big's RV Service Skip to content Services About Reviews Service Area FAQ Get an appointment Book Now! Need Help? Call us! 928-326-3195 Re"
       }
     },
     {
@@ -323,7 +336,10 @@
         ],
         "type_quote": "One of the major benefits of T&A Mobile RV Repair is that we come to you! No need to worry about complex transport of your RV to our facility",
         "emergency_quote": "EMERGENCY SERVICE AVAILABLE ... If you need emergency service, give us a call and we can discuss your exact needs.",
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "e_quote": "Tucson Mobile RV Repair Service - T&A Mobile RV Repair BUSINESS HOURS: M - F 8am - 5pm EMERGENCY SERVICE AVAILABLE 520.",
+        "mobile_quote": "Tucson Mobile RV Repair Service - T&A Mobile RV Repair BUSINESS HOURS: M - F 8am - 5pm EMERGENCY SERVICE AVAILABLE 520."
       }
     },
     {
@@ -357,7 +373,11 @@
         ],
         "type_quote": "We are not a dealer that sell RV's. We service and install and have a retail show room and 5 service bays - also we go out to on site to do repairs.",
         "emergency_quote": null,
-        "roadside_quote": "Wheel Bearing Packs - Complete engine and generator service: Transmission/Oil Changes. radiator flush and replacement, hoses, belts, tires, (Gas and Diesel operated ) Complete brake service."
+        "roadside_quote": "Wheel Bearing Packs - Complete engine and generator service: Transmission/Oil Changes. radiator flush and replacement, hoses, belts, tires, (Gas and Diesel operated ) Complete brake service.",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "r_quote": "work on many problems associated with 5th wheels, travel trailers, motorhomes and tent trailers, weather from pack rat damage, tire blowouts, collision damage, axle and chassis repair, repair and or replacement of appliances, and maintenance of your engine.",
+        "mobile_quote": "Recreational Service Center and body shop and retail store Mobile Service available in the Pima County Areas (Tucson, Marana, Green Valley, Catalina, Oracle, Vail ) At All RV service center our service department is staffed with highly",
+        "center_quote": "Home - All RV Skip to content Home Our Catalog Contact Home Our Catalog Contact RV Services & Parts Recreational Service Center and body shop and retail store (show room) Call Us At 520-622-1578 visit us We are located at: 537 W."
       }
     },
     {
@@ -385,7 +405,9 @@
         ],
         "type_quote": "We have the specialized tools, equipment and training necessary to handle RV repair and service.",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "Holmes Tuttle RV Service — Best RV Service in Tucson & Southern Arizona Holmes Tuttle RV Service Best RV Service in Tucson & Southern Arizona Holmes Tuttle RV Service Center 660 W."
       }
     },
     {
@@ -413,7 +435,9 @@
         ],
         "type_quote": "our experienced service department can get you back on the road again",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "Home - Carls RV - Tucson RV Repair - 520-889-9900 Home RV Parts and Accessories RV Service and Repair Ebay Store Directions Tech Tips Select Page Call 520-889-9900 Carl&#8217;s RV provides rv parts, accessories and service on all brands of Motor Coaches, Motorhomes, Tent Trailers,"
       }
     },
     {
@@ -442,7 +466,10 @@
         ],
         "type_quote": "From the engine to the exterior finish, we handle it all under one roof in Tucson.",
         "emergency_quote": null,
-        "roadside_quote": "Certified Mechanic: Full chassis and engine maintenance for diesel pushers and gas rigs ... DIESEL & GAS ENGINES ... BRAKE & SUSPENSION ... GENERATOR SERVICE"
+        "roadside_quote": "Certified Mechanic: Full chassis and engine maintenance for diesel pushers and gas rigs ... DIESEL & GAS ENGINES ... BRAKE & SUSPENSION ... GENERATOR SERVICE",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "r_quote": "FIBERGLASS REPAIR ROOF REPLACEMENTS INSURANCE CLAIM HELP Certified Mechanic Full chassis and engine maintenance for diesel pushers and gas rigs.",
+        "center_quote": "uck, Coach & Bus of Tucson LLC | RV Paint, Body & Mechanic Truck, Coach & Bus Of Tucson LLC Paint Collision Mechanic Gallery (520) 244-9193 Tucson's Elite RV Restoration Shop Get a Free Estimate View Our Work Complete RV Solutions From the engine to the exterior finish, we handle it all under one roof in Tucson."
       }
     },
     {
@@ -471,7 +498,10 @@
         ],
         "type_quote": "We have a fully stocked and equipped service shop. For your convenience our mobile RV repair shop can come to you in your time of need.",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "For your convenience our mobile RV repair shop can come to you in your time of need.",
+        "center_quote": "We have a fully stocked and equipped service shop."
       }
     },
     {
@@ -502,7 +532,9 @@
         ],
         "type_quote": "We come to you for RV AC repair, electrical troubleshooting, battery upgrades, refrigerator service, leaks, water heaters, tank valves, and more.",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Mobile RV Repair Lake Havasu | BlackSheep RV LLC BlackSheep RV Menu Home Services About Reviews Contact 📞 928-566-2834 Fast • Reliable • Professional Mobile RV Repair in Lake H"
       }
     },
     {
@@ -541,7 +573,11 @@
         ],
         "type_quote": "we offer mobile service and can come to you for most repairs that you need ... If you need to bring your vehicle to us, our shops are equipped with state-of-the-art tools",
         "emergency_quote": null,
-        "roadside_quote": "Our licensed mechanics can do a full diagnostic and work on gas and diesel engines with no problem ... With our complete chassis service, we even offer axel welding and frame repair."
+        "roadside_quote": "Our licensed mechanics can do a full diagnostic and work on gas and diesel engines with no problem ... With our complete chassis service, we even offer axel welding and frame repair.",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "r_quote": "With our complete chassis service, we even offer axel welding and frame repair.",
+        "mobile_quote": "To make things easy and convenient for you, we offer mobile service and can come to you for most repairs that you need.",
+        "center_quote": "We can cover up to a 250-mile radius around our shop in Lake Havasu."
       }
     },
     {
@@ -570,7 +606,9 @@
         ],
         "type_quote": "Pro Tech RV provides expert RV repair, RV electrical diagnostics, RV solar installation, lithium battery upgrades, and RV body repair in Lake Havasu City, Arizona.",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "--> RV Repair & Solar Installation in Lake Havasu City | ProTech RV top of page HOME BOOK YOUR DROP OFF SERVICES RV Solar RV Electrical Repair & Diagnostics RV Body Repair Hail Damage Experts RV Repair RV Solar RV Electrical Repair & Diagnostics RV Body Repair Hail Damage"
       }
     },
     {
@@ -619,7 +657,9 @@
         ],
         "type_quote": "100% MOBILE SERVICE ... Josh comes to your campsite, driveway, or storage facility and fixes it right - no towing, no shop, no waiting.",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "RV Tank Specialist | Mobile RV Repair | Cottonwood & Northern Arizona Home RV Repair About Reviews Service Areas Book Online &#128222; (928) 295-0358 &#9776; Cottonwood, AZ &mdash; Northern Arizona"
       }
     },
     {
@@ -655,7 +695,9 @@
         ],
         "type_quote": "With Aspen RV you don't need to wait, we make it easy and convenient because we are mobile and come to you.",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Aspen RV Mobile RV Repair - Aspen RV Home Services About Contact Certifications Privacy Policy Providing On-site RV Repair and Maintenance for the Verde Valley and Surrounding Areas 928"
       }
     },
     {
@@ -685,7 +727,10 @@
         ],
         "type_quote": "We come to you! no need to haul your RV to a repair shop.",
         "emergency_quote": "Emergency services: Got a flat tire? A stubborn slide that just wont move? Maybe you've discovered a leak in your roof, whatever the case, we can help you get back on the road. ... Monday-Friday 8am-5pm, Saturday-Sunday Emergency Only.",
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "e_quote": "Emergency services Got a flat tire? A stubborn slide that just wont move? Maybe you’ve discovered a leak in your roof, whatever the case, we can help you get back on the road.",
+        "mobile_quote": "Verde RV Solutions- Mobile RV repair 0 Skip to Content About Contact Open Menu Close Menu About Contact Open Menu Close Menu About Contact Mobile RV repair, fast and easy Based out of the Cottonwo"
       }
     },
     {
@@ -718,7 +763,9 @@
         ],
         "type_quote": "MILTECH RV provides certified mobile RV repair, diagnostics, maintenance, and inspections directly at your RV park, resort, campground or approved service location in the Yuma area.",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Mobile RV Repair Yuma AZ | MilTech RV Skip to main content Mobile RV Repair & Inspections • Des Moines & Yuma • 515-257-6021 RV Services Pre-Purchase Inspection RV A/C & Furnac"
       }
     },
     {
@@ -747,7 +794,9 @@
         ],
         "type_quote": "Whether you're parked at a campground or stuck on the side of the road, we can service your RV wherever you are.",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "offers on-site RV repair services in Yuma, AZ and surrounding areas."
       }
     }
   ]

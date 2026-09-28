@@ -194,7 +194,7 @@ window.RV_LISTINGS_UT = [
    "springdale"
   ],  "region": "Southern Utah",  "reg": "st-george"
  },
- {  "n": "Kennys Mobile RV Repair",  "c": "Price, UT",  "p": "435-630-2938",  "u": "https://www.kennysmobilervrepair.com/",  "t": "mobile",  "e": true,  "r": false,  "d": "A mobile RV repair business at South 200 West in Price, Utah, with over 30 years of experience. The owner comes to the customer's location rather than having the RV taken to a dealership. Office hours are Monday through Friday, with an after-hours line for calls or texts.",  "g": [
+ {  "n": "Kennys Mobile RV Repair",  "c": "Price, UT",  "p": "435-630-2938",  "u": "https://www.kennysmobilervrepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "A mobile RV repair business at South 200 West in Price, Utah, with over 30 years of experience. The owner comes to the customer's location rather than having the RV taken to a dealership. Office hours are Monday through Friday, with an after-hours line for calls or texts.",  "g": [
    "mobile",
    "emergency"
   ],  "base": "price",  "areas": [

@@ -84,7 +84,9 @@
         "type_quote": "Leading Edge RV is a mobile RV repair service that comes to you. We do not have a traditional shop.",
         "emergency_quote": null,
         "roadside_quote": null,
-        "licence": null
+        "licence": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "--> Leading Edge RV | Mobile RV Service and Repair top of page HOME FAQs SERVICES OUR WORK ABOUT US CONTACT More Use tab to navigate through the menu items."
       }
     },
     {
@@ -115,7 +117,9 @@
         "type_quote": "American Mobile RV Service offers a wide range of services for your class A, B, or C RV as well as services for all trailer models including camp trailers.",
         "emergency_quote": null,
         "roadside_quote": null,
-        "licence": null
+        "licence": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "American Mobile RV Service - Home Home Our Services Gallery Current Specials About Us Contact Us Legal Mumbo Jumbo Welcome to American Mobile RV Service."
       }
     },
     {
@@ -151,7 +155,9 @@
         "type_quote": "Great Basin Mobile RV Repair is a family-owned and operated business serving RV enthusiasts across Northern Nevada & surrounding areas.",
         "emergency_quote": null,
         "roadside_quote": null,
-        "licence": null
+        "licence": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Great Basin Mobile RV Repairs, RV Services, Sparks, NV --> Northern Nevada & Surrounding Areas - Reno - Sparks - Carson Licensed, Bonded and Insured Leave us a Google Review Mon-Fri: 7am -"
       }
     },
     {
@@ -182,7 +188,9 @@
         "type_quote": "We come directly to you, saving you time, stress, towing fees, and long service-center waits.",
         "emergency_quote": null,
         "roadside_quote": null,
-        "licence": null
+        "licence": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Mobile RV Repair Services Reno - Skip to content 775-437-2525 onsiterv775@gmail."
       }
     },
     {
@@ -217,7 +225,9 @@
         "type_quote": "Our mobile service comes to you.",
         "emergency_quote": null,
         "roadside_quote": null,
-        "licence": null
+        "licence": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Reno - Tahoe Mobile RV Repair 0 Skip to Content Home Services FAQs Terms Contact Us Open Menu Close Menu Open Menu Close Menu Home Services FAQs Terms Contact Us Home Services FAQs Terms Co"
       }
     },
     {
@@ -252,7 +262,10 @@
         "type_quote": "We are a mobile service, which means we come to you wherever you are.",
         "emergency_quote": null,
         "roadside_quote": "Our mobile RV repair service covers a wide range of repairs including appliance repair, plumbing issues, electrical systems, roof and window leaks, brake and suspension work, and more.",
-        "licence": null
+        "licence": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "r_quote": "Preventative Maintenance We can perform regular check-ups and tune-ups on your RV’s engine, brakes, tires, suspension, fluids and filters to prevent breakdowns and extend the life of your RV.",
+        "mobile_quote": "Big Sky Mobile RV Services - Let's Go Camping! Skip to content Get A Quote Services How it Works About Us FAQ Reviews WELCOME TO BIG SKY MOBILE RV SErVICES, LLC Glad you stopped by."
       }
     },
     {
@@ -281,7 +294,7 @@
       ],
       "region": "Northern Nevada",
       "evidence": {
-        "checked": "https://www.openroads-rv.com/about-us",
+        "checked": "https://www.openroads-rv.com/",
         "phone_quote": "Call Us Now: 775-388-7445",
         "coverage_quotes": [
           "With our business based in Elko, NV we cover the following areas: Elko - Wells - Crescent Valley - Winnemucca - Battle Mountain - Eureka - Wendover - Spring Creek - Ryndon - And many many others!"
@@ -289,7 +302,9 @@
         "type_quote": "It is our mission to bring quality mobile RV service to Northern Nevada.",
         "emergency_quote": null,
         "roadside_quote": null,
-        "licence": null
+        "licence": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "--> Mobile Recreational Vehicle Repair Service | Open Roads RV | Nevada top of page Mission Statement &quot;It is our mission to bring quality mobile RV service to Northern Nevada."
       }
     },
     {
@@ -321,7 +336,9 @@
         "type_quote": "On-Site RV Repair & Maintenance - We Come to You",
         "emergency_quote": null,
         "roadside_quote": null,
-        "licence": null
+        "licence": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Round Up Mobile RV: On-Site Repair in Lyon County, Mineral County, & Douglas County NV Home Services Pricing About Contact Call / Text Address Yerington, NV 89447 Get in touch 775-434-5"
       }
     },
     {
@@ -358,7 +375,9 @@
         "type_quote": "As a mobile RV service, we come to you!",
         "emergency_quote": null,
         "roadside_quote": null,
-        "licence": null
+        "licence": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Certified & Licensed Mobile RV Service - Ridgeback RV Services Mon-Fri: 9."
       }
     },
     {
@@ -394,7 +413,11 @@
         "type_quote": "Do you offer in shop or onsite mobile service? Both! We can handle repair and maintenance services in our shop or at your location or jobsite.",
         "emergency_quote": "24/7 emergency service is also available.",
         "roadside_quote": "We excel in engine diagnostics and repairs, clutch and transmission work, electrical diagnostics, drive train diagnostics, and brake services.",
-        "licence": null
+        "licence": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "r_quote": "Specialized Services: We excel in engine diagnostics and repairs, clutch and transmission work, electrical diagnostics, drive train diagnostics, and brake services.",
+        "mobile_quote": "We offer mobile RV repair, pre-trip inspections, scheduled services, and 24/7 emergency assistance .",
+        "center_quote": "Convenient Mobile Service: We bring our expert repair services directly to your location, saving you time and hassle."
       }
     },
     {
@@ -431,7 +454,9 @@
         "type_quote": "You can't come to us - we don't have a shop. That's the point: your RV gets fixed where it sits, without a tow and without waiting weeks for a dealer bay.",
         "emergency_quote": null,
         "roadside_quote": null,
-        "licence": null
+        "licence": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Mobile RV Repair Las Vegas NV | TekRV — We Come to You Weekdays 9–5 · Text anytime · By appointment Serving Las Vegas · Summerlin · Henderson · North Las Vegas · Boulder City S"
       }
     },
     {
@@ -466,7 +491,10 @@
         "type_quote": "We bring the shop to your RV",
         "emergency_quote": null,
         "roadside_quote": "Residential systems and chassis work, at your site.",
-        "licence": null
+        "licence": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "r_quote": "What we do RV Repair Residential systems and chassis work, at your site.",
+        "mobile_quote": "Happy Hals | Mobile RV, Generator & Marine Repair — Las Vegas Skip to content Service Generator Sales Warranty & Claims Service Area Contact Call us at (702) 280-0320 Mobile service · Las V"
       }
     },
     {
@@ -476,7 +504,7 @@
       "u": "https://24-7motorcoach.com/",
       "t": "center",
       "e": false,
-      "r": true,
+      "r": false,
       "d": "24/7 MotorCoach is an RV dealership and repair center at 3930 W Windmill Ln in Las Vegas with indoor service bays. It services all makes and models and states that every brand on its site is one it services, including diesel engine repair, brakes, generator service, collision, tires and glass. The site publishes its Nevada repair garage licence GAR000046449 and body shop licence BD0000048448.",
       "g": [
         "center",
@@ -510,8 +538,11 @@
         "type_quote": "State-of-the-art facilities equipped for scheduled maintenance, collision repair, and everything in between.",
         "emergency_quote": null,
         "roadside_quote": "Expert diesel engine maintenance and repair",
-        "licence": "Repair Garage License #: GAR000046449; Body Shop License #: BD0000048448"
-      }
+        "licence": "Repair Garage License #: GAR000046449; Body Shop License #: BD0000048448",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "correction": "2026-09-28: was tagged roadside. The 24/7 in its name is branding, and its own site lists no engine, transmission, brake, chassis or towing work, so the tag rested on the name rather than on a claim. Removed. The independent research reached the same conclusion from the same site: its 24/7 is security and storage, with published hours of Mon-Fri 8-5."
+      },
+      "spec": "Shop only; indoor bays, no roadside or chassis work"
     },
     {
       "n": "Henderson RV",
@@ -540,7 +571,9 @@
         "type_quote": "We are a one-stop-shop for anything you need from RV parts, RV repair, RV storage, and RV service.",
         "emergency_quote": null,
         "roadside_quote": null,
-        "licence": null
+        "licence": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "PARTS Share Your Thoughts With Us SERVICE, RV parts & ACCESSORIES, collision and storage If you are an RV owner, stop by Henderson RV in Las Vegas, NV! We are a one-stop-shop for anything you need from RV parts, RV repair, RV storage, and RV service."
       }
     },
     {
@@ -572,7 +605,9 @@
         "type_quote": "Mobile RV Repair available from: 8am-6pm, Wednesday through Sunday",
         "emergency_quote": null,
         "roadside_quote": null,
-        "licence": null
+        "licence": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "On The Spot Search this site Embedded Files Skip to main content Skip to navigation On The Spot On The Spot Mobile RV Repair Services Available Water Heaters ⚫ Plumbing ⚫ Air Conditioning Refrigerators ⚫ Heaters Electrical ⚫ Exterior Repairs ⚫ Interior Repairs *Available in Mesquite"
       }
     }
   ]

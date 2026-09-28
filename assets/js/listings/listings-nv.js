@@ -129,7 +129,7 @@ window.RV_LISTINGS_NV = [
    "boulder city"
   ],  "region": "greater Las Vegas area; Lake Mead",  "reg": "las-vegas"
  },
- {  "n": "24/7 MotorCoach",  "c": "Las Vegas, NV",  "p": "702-757-2471",  "u": "https://24-7motorcoach.com/",  "t": "center",  "e": false,  "r": true,  "d": "24/7 MotorCoach is an RV dealership and repair center at 3930 W Windmill Ln in Las Vegas with indoor service bays. It services all makes and models and states that every brand on its site is one it services, including diesel engine repair, brakes, generator service, collision, tires and glass. The site publishes its Nevada repair garage licence GAR000046449 and body shop licence BD0000048448.",  "g": [
+ {  "n": "24/7 MotorCoach",  "c": "Las Vegas, NV",  "p": "702-757-2471",  "u": "https://24-7motorcoach.com/",  "t": "center",  "e": false,  "r": false,  "d": "24/7 MotorCoach is an RV dealership and repair center at 3930 W Windmill Ln in Las Vegas with indoor service bays. It services all makes and models and states that every brand on its site is one it services, including diesel engine repair, brakes, generator service, collision, tires and glass. The site publishes its Nevada repair garage licence GAR000046449 and body shop licence BD0000048448.",  "g": [
    "center",
    "roadside",
    "licence",
@@ -147,7 +147,7 @@ window.RV_LISTINGS_NV = [
    "spring valley",
    "paradise",
    "whitney"
-  ],  "region": "Las Vegas Valley / Clark County",  "reg": "las-vegas"
+  ],  "region": "Las Vegas Valley / Clark County",  "spec": "Shop only; indoor bays, no roadside or chassis work",  "reg": "las-vegas"
  },
  {  "n": "Henderson RV",  "c": "Las Vegas, NV",  "p": "702-407-1222",  "u": "https://www.hendersonrv.com/",  "t": "center",  "e": false,  "r": false,  "d": "Henderson RV is a full-service RV shop at 13001 S. Las Vegas Blvd in Las Vegas offering repair, service, parts, storage, propane and dump. It works on motorhomes, travel trailers, fifth wheels and utility trailers and handles collision and body repair as well as general service. The site says it works with insurance and honors all extended warranties.",  "g": [
    "center",
