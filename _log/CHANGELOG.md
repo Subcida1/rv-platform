@@ -16,12 +16,19 @@ No secrets, keys, tokens or customer details in here. This file is committed.
 
 ## 2026-09-28
 
+### style: Print stylesheet: a guide now prints as a document, with its FAQ answers and its sources
+- why: nothing in the stylesheet was print-aware, so Ctrl+P produced the nav, the footer, the search, the buttons and the mobile menu, and the article underneath them. Two problems beyond hiding chrome were not obvious. First, 22 rules in the stylesheet set color:transparent over a clipped background for gradient text, and browsers strip backgrounds when printing, so every heading and every big number would have printed as blank space. Second, and this one is not CSS: a closed details prints its summary and NOT its content, and no rule changes that, because the browser hides the content slot. Measured by printing a two-element test page to PDF and reading the text back, with the rule applied and the answer still missing. Every guide keeps its FAQ in details, so a third of some pages would have vanished while the page still looked complete. assets/js/site.js gained initPrint(), which opens every details on beforeprint and restores them on afterprint, and scripts/smoke-test.js asserts both halves, negative-tested by removing the call and watching it fail. Two layout rules were measured and relaxed: withholding breaks inside .card left a third of page one empty, and withholding them inside table left the bottom third of a page empty, so a card may break and a table may span pages while a row may not. External links print their URL, because a printed page that names a document without saying where it is has lost the one thing that made it checkable.
+- expect: no search effect. The value is that a guide is now worth printing, which is the prerequisite for the two things the gap analysis put at the top: the checklists and the maintenance calendar, which are the pages that earn repeat visits and inbound links. If nothing measurable changes, the next question is whether anyone prints at all, and the honest answer is that this is groundwork rather than a lever.
+- files: assets/css/style.css, assets/js/site.js, scripts/smoke-test.js
+- tags: style
+- commit: 845ee9d (pushed)
+
 ### copy: Byline moved to OriginRV; Ty's name is on the About page only, as Ty B.
 - why: the trust fix earlier the same day put his full name on every guide, and he changed his mind about the shape of it: the guides are accredited to OriginRV, and his name appears in one place, the About page, as Ty B. The Article schema author changes from a Person to an Organization to match, so the structured data and the visible byline say the same thing. The About page keeps the editorial-policy card and the honest check line either way.
 - expect: no search effect. If anything it is a small E-E-A-T trade: an Organization author is a weaker signal than a named Person for the author-authority half of the framework, while a named author on one page and an organization on 35 is at least internally consistent. Worth watching whether the About page picks up branded queries, since that page is now the only place a name appears.
 - files: guides/*.html, about.html, scripts/content-manifest.json
 - tags: accuracy
-- commit: da39995 (pushed)
+- commit: f931e1b (pushed)
 - deployed: 2026-09-28T06:35:01+00:00
 
 ### infra: cross-check.py: the first check that reads two pages at once
@@ -29,7 +36,7 @@ No secrets, keys, tokens or customer details in here. This file is committed.
 - expect: the first thing to watch is whether it stays silent. A check that fires for the wrong reason gets ignored within a week, and this one was rejected three times for exactly that. The second is whether it earns its place by catching something the review lanes miss, which is the class it was built for: a fact stated on two pages with different numbers.
 - files: scripts/cross-check.py, scripts/ci.sh, _TOOLS.md
 - tags: accuracy
-- commit: da39995 (pushed)
+- commit: f931e1b (pushed)
 - deployed: 2026-09-28T06:35:01+00:00
 
 ### copy: Trust fix: named author and an honest check line across all 35 guides, plus an editorial policy on the About page

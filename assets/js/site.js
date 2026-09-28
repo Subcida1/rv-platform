@@ -424,7 +424,35 @@
  .catch(fallback);
  }
 
- /* ---------- init ---------- */
+ /* ---------- print: open every <details> so nothing is lost on paper ---------- */
+/*
+   MEASURED 2026-09-28, and this is not a style preference. A closed <details> prints its
+   summary and NOT its content, and no CSS rule changes that: the browser hides the content
+   slot, so `details > *:not(summary){display:block}` does nothing at all. Verified by
+   printing a two-element test page to PDF and reading the text back: the closed element
+   printed its question and dropped its answer, with the CSS rule applied.
+
+   Every guide carries its FAQ in <details>, so without this the answers vanish from every
+   printed page and the page looks complete while missing a third of its content. The
+   handler reopens nothing that was already open, and restores the page afterwards.
+*/
+function initPrint() {
+  if (typeof window.addEventListener !== 'function') return;
+  var opened = [];
+  function openAll() {
+    opened = [];
+    var d = document.querySelectorAll('details:not([open])');
+    for (var i = 0; i < d.length; i++) { opened.push(d[i]); d[i].open = true; }
+  }
+  function restore() {
+    for (var i = 0; i < opened.length; i++) { opened[i].open = false; }
+    opened = [];
+  }
+  window.addEventListener('beforeprint', openAll);
+  window.addEventListener('afterprint', restore);
+}
+
+/* ---------- init ---------- */
  window.RV = {
  brand: CFG.brand,
  contactEmail: CFG.contact ? CFG.contact.email : '',
@@ -440,4 +468,5 @@
  initSearchScript();
  initEmbedMode();
  initTracking();
+ initPrint();
 })();

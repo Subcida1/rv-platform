@@ -2255,3 +2255,114 @@ body.is-embed .embed-credit a{font-weight:800;color:var(--b1)}
    jammed against the unit and dropped 2.4x in size on the same baseline. On its own
    line it reads as a caption, which is what it is. */
 .tool-viz .viz-total small{display:block;margin-top:4px;font-size:13px;line-height:1.4}
+
+/* ============================================================================
+   PRINT (2026-09-28)
+
+   Why this is a block in the main stylesheet rather than a print.css: the site prints
+   from the CSS it renders with, so a reader who hits Ctrl+P gets the article and not a
+   screenshot of a nav bar. Nothing above this line is print-aware, so this is the one
+   place print behaviour is defined.
+
+   Four things it has to get right, and only three of them are CSS:
+
+   1. CHROME OFF. The nav, the footer, the search, the buttons and the mobile menu are
+      navigation, and a printed page cannot be navigated.
+
+   2. GRADIENT TEXT. Twenty-two rules in this file set `color:transparent` over a
+      clipped background. Browsers strip backgrounds when printing, so every one of
+      them would print as blank space: headings, the big numbers, the CTA labels.
+      They are turned back into solid ink here, by name, because there is no selector
+      for "element whose colour is transparent".
+
+   3. THE SOURCES PRINT, WITH THEIR URLS. They are the reason a guide is worth
+      anything, and a printed page that names a document without saying where it is
+      has lost the one thing that made it checkable.
+
+   4. THE FAQ ANSWERS, AND THIS IS NOT CSS. A closed <details> prints its summary and
+      NOT its content, and no rule here changes that: the browser hides the content
+      slot, so `details > *:not(summary){display:block}` does nothing at all. Measured
+      2026-09-28 by printing a two-element test page to PDF and reading the text back,
+      with the rule applied and the answer still missing. The fix is in
+      assets/js/site.js (initPrint), which opens every <details> on beforeprint and
+      restores them on afterprint. This block only styles them once they are open.
+   ============================================================================ */
+@media print{
+  @page{margin:16mm 14mm}
+
+  /* ---- 1. navigation has no meaning on paper ---- */
+  #site-nav,#site-footer,.mobile-menu,.nav-search,.js-search-form,
+  .btn,.burger,.guide-ic,.tool-btns,.back,.to-top,.skip-link{display:none !important}
+
+  /* ---- 2. the page becomes a document: full width, black on white ---- */
+  html,body{background:#fff !important;color:#000}
+  .wrap,.wrap.wide,.wrap.narrow,.wrap.page-intro,
+  .wrap.w-520,.wrap.w-680,.wrap.w-720,.wrap.w-820,
+  .prose .narrow,.w-820,.w-720,.page-intro.narrow{
+    max-width:none;width:auto;margin-left:0;margin-right:0;
+    padding-left:0;padding-right:0}
+  .sec,.sec.prose{padding-top:0;padding-bottom:0}
+  .page-intro{padding-top:0;padding-bottom:10pt}
+
+  /* A printed card is a box, not a tinted panel. */
+  .card,.callout,details.faq,.table-scroll,.man-table,.tool-viz,.w-total{
+    background:#fff !important;border-color:#bbb !important;box-shadow:none !important}
+  .card,.callout,details.faq{padding:9pt 11pt}
+
+  /* ---- 3. gradient text back to solid ink (see note 2 above) ---- */
+  .grad-text,.eyebrow,.cta,.grand,.calc .out,.deck-go,
+  .hero h1 .grad,.quote .grad,.cat-card .meta,.com-card .stat,
+  .big-card .num,.rate-total .n,.w-total b,.tool-viz .viz-total,
+  .tool-strip .tchip b,.sec-eyebrow,.card-h,.card-h-sm{
+    background:none !important;
+    -webkit-background-clip:border-box !important;background-clip:border-box !important;
+    color:#000 !important}
+
+  /* ---- 4. type ---- */
+  body{font-size:10.5pt;line-height:1.5}
+  h1{font-size:20pt;line-height:1.15}
+  h2{font-size:14pt;margin-top:15pt}
+  h3{font-size:12pt;margin-top:11pt}
+  .lede{font-size:11.5pt}
+  .reviewed{font-size:8.5pt;color:#555}
+  p,li{orphans:3;widows:3}
+
+  /* ---- 5. keep a heading with what it introduces, and a SHORT block whole ---- */
+  h1,h2,h3,h4{break-after:avoid;page-break-after:avoid}
+  /* Measured: withholding breaks inside `.card` left a third of page one empty. A card
+     here is a whole section, often longer than a sheet, so `avoid` cannot be honoured
+     and the renderer starts it on a fresh page anyway. Only blocks that are reliably
+     smaller than a page are kept whole. */
+  figure,details.faq,.callout,pre,blockquote,.man-row,.tick{
+    break-inside:avoid;page-break-inside:avoid}
+  /* A table is allowed to span pages; a ROW is not allowed to split. Withholding breaks
+     inside the table instead left the bottom third of a page empty, because the
+     threshold table is taller than the space it had left. */
+  table{break-inside:auto;page-break-inside:auto}
+  tr{break-inside:avoid;page-break-inside:avoid}
+  img,svg{max-width:100% !important;height:auto}
+  a{color:#000;text-decoration:none}
+
+  /* ---- 6. the sources are the point: print where they are ---- */
+  a[href^="http"]::after{
+    content:" (" attr(href) ")";font-size:8pt;color:#555;word-break:break-all}
+
+  /* ---- 7. the FAQ, once site.js has opened it ---- */
+  details.faq>summary{font-weight:700;padding:5pt 0}
+  /* The screen rule is `details.faq[open] summary::after`, which outranks a bare
+     `details.faq summary::after` on specificity, so the marker printed anyway. Match it. */
+  details.faq[open]>summary::after,details.faq>summary::after{content:""}
+  details.faq p{padding-bottom:0}
+
+  /* ---- 8. tables keep their columns instead of scrolling ---- */
+  .table-scroll{overflow:visible !important}
+  table{width:100%;border-collapse:collapse;font-size:9.5pt}
+  th,td{border:1px solid #bbb;padding:4pt 6pt;text-align:left}
+  /* The screen rule `.man-table td:last-child{text-align:right}` outranks a bare `td`,
+     and right-aligned prose in the last column of the threshold table is unreadable on
+     paper. Match its specificity. */
+  .man-table th,.man-table td,.man-table td:last-child{text-align:left}
+
+  /* ---- 9. diagrams keep their colour ---- */
+  figure svg{print-color-adjust:exact;-webkit-print-color-adjust:exact}
+}
