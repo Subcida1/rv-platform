@@ -1145,7 +1145,7 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 /* quieter primary hover (the old pink glow bubble) */
 .btn-primary:hover{box-shadow:0 6px 14px -8px var(--glow);transform:none}
 .tool-strip{display:flex;flex-wrap:wrap;gap:9px;margin-top:16px}
-.tool-strip .tchip{font-size:13px;font-weight:700;color:var(--text-2);background:var(--surface);border:1px solid var(--border);padding:7px 13px;border-radius:999px;display:inline-flex;align-items:center;gap:7px}
+.tool-strip .tchip{font-size:13px;font-weight:700;color:var(--text-2);background:var(--surface);border:1px solid var(--border);padding:0 14px;min-height:44px;border-radius:999px;display:inline-flex;align-items:center;gap:7px}
 .tool-strip .tchip b{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 /* pipeline cards: 4-col when wide */
 .tool-pipe{grid-template-columns:repeat(4,1fr)}
@@ -2274,7 +2274,7 @@ body.is-embed .embed-credit a{font-weight:800;color:var(--b1)}
 .finder-region-flags{display:inline-flex;flex-wrap:wrap;gap:6px}
 .finder-region-call{font-weight:700;color:var(--text);white-space:nowrap;text-decoration:none;text-align:right}
 .finder-region-call:hover{color:var(--b1,var(--brand))}
-.finder-flag{display:inline-block;font-size:12px;font-weight:700;padding:2px 9px;border-radius:999px;background:var(--tint-bg);color:var(--b1,var(--brand));white-space:nowrap}
+.finder-flag{display:inline-block;font-size:12px;font-weight:700;padding:2px 9px;border-radius:14px;background:var(--tint-bg);color:var(--b1,var(--brand));white-space:normal;max-width:100%;overflow-wrap:anywhere}
 .finder-flag.roadside{background:var(--danger-bg);color:var(--danger)}
 .finder-flag.spec{background:var(--surface);color:var(--text-2);border:1px solid var(--border-2)}
 @media (max-width:640px){
@@ -2429,7 +2429,8 @@ a.tchip:focus-visible{outline:2px solid var(--b1,var(--brand));outline-offset:2p
    place (.finder-stat is bound next to .finder-route in finder.js), so the strip and the
    three route cards cannot disagree. */
 .guide-stats .finder-stat{font:inherit;font-size:12.5px;color:var(--text-3);background:var(--surface);
-  border:1px solid var(--border);border-radius:999px;padding:6px 14px;cursor:pointer;
+  border:1px solid var(--border);border-radius:999px;padding:0 15px;min-height:44px;cursor:pointer;
+  display:inline-flex;align-items:center;
   transition:border-color .16s,color .16s,background .16s}
 .guide-stats .finder-stat:hover{border-color:var(--border-2);color:var(--text)}
 .guide-stats .finder-stat:focus-visible{outline:2px solid var(--b1,var(--brand));outline-offset:2px}

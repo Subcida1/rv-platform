@@ -21,58 +21,111 @@
     {
       "key": "central-coast",
       "label": "The Central Coast"
+    },
+    {
+      "key": "inland-empire",
+      "label": "The Inland Empire"
+    },
+    {
+      "key": "desert-high",
+      "label": "The high desert"
+    },
+    {
+      "key": "coachella",
+      "label": "The Coachella Valley"
     }
   ],
   "region_of": {
+    "Adelanto": "desert-high",
+    "Apple Valley": "desert-high",
     "Arroyo Grande": "central-coast",
     "Atascadero": "central-coast",
+    "Baker": "desert-high",
     "Bakersfield": "central-valley",
+    "Barstow": "desert-high",
+    "Bermuda Dunes": "coachella",
+    "Big Bear Lake": "desert-high",
     "Buellton": "central-coast",
     "Camarillo": "central-coast",
     "Carmel": "central-coast",
     "Carpinteria": "central-coast",
+    "Cathedral City": "coachella",
     "Ceres": "central-valley",
     "Chico": "valley-north-bay",
+    "Chino": "inland-empire",
+    "Chino Hills": "inland-empire",
+    "Claremont": "inland-empire",
     "Clovis": "central-valley",
+    "Coachella": "coachella",
+    "Corona": "inland-empire",
     "Crescent City": "north-coast",
     "Delano": "central-valley",
+    "Desert Hot Springs": "coachella",
+    "Eastvale": "inland-empire",
     "Eureka": "north-coast",
     "Fairfield": "valley-north-bay",
+    "Fontana": "inland-empire",
     "Fort Bragg": "north-coast",
     "Fresno": "central-valley",
     "Gilroy": "central-coast",
     "Goleta": "central-coast",
     "Grover Beach": "central-coast",
     "Hanford": "central-valley",
+    "Hemet": "inland-empire",
+    "Hesperia": "desert-high",
     "Hollister": "central-coast",
+    "Indian Wells": "coachella",
+    "Indio": "coachella",
+    "Joshua Tree": "desert-high",
     "King City": "central-coast",
+    "La Quinta": "coachella",
+    "Lake Elsinore": "inland-empire",
+    "Landers": "desert-high",
     "Lincoln": "valley-north-bay",
     "Lodi": "central-valley",
     "Lompoc": "central-coast",
     "Los Banos": "central-valley",
+    "Lucerne Valley": "desert-high",
     "Madera": "central-valley",
     "Manteca": "central-valley",
     "Marina": "central-coast",
+    "Menifee": "inland-empire",
     "Merced": "central-valley",
     "Modesto": "central-valley",
     "Monterey": "central-coast",
+    "Moreno Valley": "inland-empire",
     "Morro Bay": "central-coast",
     "Mount Shasta": "shasta-i5",
+    "Murrieta": "inland-empire",
     "Napa": "valley-north-bay",
+    "Norco": "inland-empire",
     "Ojai": "central-coast",
+    "Ontario": "inland-empire",
     "Oxnard": "central-coast",
     "Pacific Grove": "central-coast",
+    "Palm Desert": "coachella",
+    "Palm Springs": "coachella",
     "Paso Robles": "central-coast",
+    "Perris": "inland-empire",
     "Petaluma": "valley-north-bay",
+    "Phelan": "desert-high",
+    "Pinon Hills": "desert-high",
     "Pismo Beach": "central-coast",
     "Placerville": "valley-north-bay",
+    "Pomona": "inland-empire",
     "Porterville": "central-valley",
+    "Rancho Cucamonga": "inland-empire",
+    "Rancho Mirage": "coachella",
     "Redding": "shasta-i5",
+    "Redlands": "inland-empire",
     "Ridgecrest": "central-valley",
+    "Riverside": "inland-empire",
     "Rocklin": "valley-north-bay",
     "Roseville": "valley-north-bay",
     "Sacramento": "valley-north-bay",
     "Salinas": "central-coast",
+    "San Bernardino": "inland-empire",
+    "San Jacinto": "inland-empire",
     "San Luis Obispo": "central-coast",
     "Santa Barbara": "central-coast",
     "Santa Cruz": "central-coast",
@@ -85,20 +138,28 @@
     "Sonoma": "valley-north-bay",
     "Stockton": "central-valley",
     "Tehachapi": "central-valley",
+    "Temecula": "inland-empire",
+    "Thermal": "coachella",
     "Thousand Oaks": "central-coast",
+    "Thousand Palms": "coachella",
     "Tracy": "central-valley",
     "Tulare": "central-valley",
     "Turlock": "central-valley",
+    "Twentynine Palms": "desert-high",
     "Ukiah": "north-coast",
+    "Upland": "inland-empire",
     "Vacaville": "valley-north-bay",
     "Ventura": "central-coast",
+    "Victorville": "desert-high",
     "Visalia": "central-valley",
     "Wasco": "central-valley",
     "Watsonville": "central-coast",
     "West Sacramento": "valley-north-bay",
     "Willows": "valley-north-bay",
     "Wilton": "valley-north-bay",
-    "Yreka": "shasta-i5"
+    "Wrightwood": "desert-high",
+    "Yreka": "shasta-i5",
+    "Yucca Valley": "desert-high"
   },
   "listings": [
     {
@@ -512,7 +573,7 @@
       "p": "530-895-8070",
       "u": "https://www.jeffs-truckservice.com/rv-and-motorhome-body-collision",
       "t": "center",
-      "e": true,
+      "e": false,
       "areas": [
         "Chico",
         "Red Bluff"
@@ -526,8 +587,10 @@
       "evidence": {
         "checked": "https://www.jeffs-truckservice.com/rv-and-motorhome-body-collision",
         "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
-        "e_quote": "com 13514 California 99 Chico, CA 95973 24-7 Roadside Assistance Mon - Fri 8a - 6p Sat 8a - 6p Sun - Closed RV and Motorhome Body Collision Looking for reliable RV and motorhome body collision service around Red Bl"
-      }
+        "e_quote": "com 13514 California 99 Chico, CA 95973 24-7 Roadside Assistance Mon - Fri 8a - 6p Sat 8a - 6p Sun - Closed RV and Motorhome Body Collision Looking for reliable RV and motorhome body collision service around Red Bl",
+        "correction": "2026-09-28: was tagged emergency mobile repair. Its only 24/7 claim is '24-7 Roadside Assistance' in the header, and it is a body and collision shop, so an in-coach emergency tag was wrong. Flagged by a bridge lane's audit and confirmed against the site."
+      },
+      "spec": "Body and collision repair, with a 24 hour roadside assistance line"
     },
     {
       "n": "Corey's RV Repair",
@@ -1973,6 +2036,363 @@
         "emergency_quote": null,
         "roadside_quote": null,
         "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site"
+      }
+    },
+    {
+      "n": "CRG Mobile RV Repair",
+      "c": "Coachella Valley, CA",
+      "p": "(951) 445-8842",
+      "u": "https://www.crgmobilervrepair.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Certified mobile RV repair service that comes to you, on site, in the Coachella Valley. Based in Hemet and serving Palm Springs, Palm Desert, La Quinta, Desert Hot Springs, Indio and Rancho Mirage for well over 35 years. Work covers plumbing, heating and air, water leaks, electronics, roof repair, generators and appliances on RVs, fifth wheels, travel trailers and campers.",
+      "g": [
+        "mobile RV repair",
+        "on-site service",
+        "roof repair",
+        "Onan generator service",
+        "appliance repair",
+        "35+ years"
+      ],
+      "base": "Hemet",
+      "areas": [
+        "Palm Springs",
+        "Palm Desert",
+        "Rancho Mirage",
+        "Cathedral City",
+        "Bermuda Dunes",
+        "Murrieta",
+        "Riverside",
+        "Beaumont",
+        "Escondido",
+        "La Quinta",
+        "Desert Hot Springs",
+        "Indio",
+        "Hemet",
+        "Temecula",
+        "Lake Elsinore",
+        "San Bernardino",
+        "Banning"
+      ],
+      "region": "Coachella Valley",
+      "evidence": {
+        "checked": "https://www.crgmobilervrepair.com/",
+        "phone_quote": "phone: (951) 445-8842",
+        "coverage_quotes": [
+          "We've been providing Palm Springs, Palm Desert, La Quinta, Desert Hot Springs, Indio & the Rancho Mirage areas our expertise for well over 35 years.",
+          "We service a great part of Southern California to include Palm Springs, Palm Desert, Rancho Mirage, Cathedral City, Bermuda Dunes, Murrieta, Riverside, Beaumont, Escondido, La Quinta, Desert Hot Springs, Indio, Hemet, Temecula, Lake Elsinore, San Bernardino & Banning."
+        ],
+        "type_quote": "CRG Mobile RV Repair serves the Coachella Valley with \"Certified\" Mobile RV Repair service that comes to you, on site when you need help.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "bar_number": null
+      }
+    },
+    {
+      "n": "Avery's RV Service And Repair",
+      "c": "Hesperia, CA",
+      "p": "(760) 910-0079",
+      "u": "https://averyrvserviceandrepair.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "RV maintenance and repair business in Hesperia, established in 2019 with technicians who have worked on RVs since 2001. Work covers electrical, roof repairs, plumbing and solar installations. They also offer mobile service that brings the work to your location.",
+      "g": [
+        "mobile RV repair",
+        "RV maintenance",
+        "electrical",
+        "roof repair",
+        "solar installation"
+      ],
+      "base": "Hesperia",
+      "areas": [],
+      "evidence": {
+        "checked": "https://averyrvserviceandrepair.com/",
+        "phone_quote": "(760) 910-0079",
+        "coverage_quotes": [],
+        "type_quote": "For added convenience, we also offer mobile services, bringing expert care directly to your location, so you can keep your adventure going without disruption.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "bar_number": null
+      }
+    },
+    {
+      "n": "American Mobile RV Repair",
+      "c": "Hesperia, CA",
+      "p": "(760) 261-8751",
+      "u": "https://www.rvrepairinhesperiaca.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Mobile RV, boat and fiberglass repair business in Hesperia with certified RV technicians. Most repairs can be done mobile at your home, and they also sell RV appliances and accessories. Mobile service covers San Bernardino County, Orange County, the Inland Empire, the San Gabriel Valley, all Los Angeles County and the High Desert.",
+      "g": [
+        "mobile RV repair",
+        "RV fiberglass repair",
+        "boat repair",
+        "paint stripe touch-up"
+      ],
+      "base": "Hesperia",
+      "areas": [
+        "San Bernardino County",
+        "Los Angeles County"
+      ],
+      "evidence": {
+        "checked": "https://www.rvrepairinhesperiaca.com/",
+        "phone_quote": "Telephone:(760) 261-8751",
+        "coverage_quotes": [
+          "You don't have to gas up your RV and bring it to us. We can come to you. We offer our mobile service to San Bernardino County, Orange County, Inland Empire, San Gabriel Valley, all Los Angeles County and locally in the High Desert."
+        ],
+        "type_quote": "American Mobile RV Repair in Hesperia, CA provides you with affordable RV and boat repair service. Most repairs can be done mobile at your home.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "bar_number": null
+      },
+      "region": "Orange County; Inland Empire; San Gabriel Valley; High Desert"
+    },
+    {
+      "n": "High Desert Mobile RV Service",
+      "c": "Victorville, CA",
+      "p": "(760) 563-6019",
+      "u": "https://highdesertmobilervservice.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Mobile RV repair service based in Victorville that travels to customers across the San Bernardino and High Desert area. Handles a wide range of recreational vehicle and mobile home problems. Also handles emergency motorhome repairs and travels to you for emergency roadside work on RVs.",
+      "g": [
+        "mobile RV repair",
+        "emergency RV repair"
+      ],
+      "base": "Victorville",
+      "areas": [
+        "San Bernardino"
+      ],
+      "evidence": {
+        "checked": "https://highdesertmobilervservice.com/",
+        "phone_quote": "Phone: (760) 563-6019",
+        "coverage_quotes": [
+          "We can travel to you within the San Bernadino and High Desert area for emergency roadside repairs so we can get you up and running as soon as possible."
+        ],
+        "type_quote": "Welcome to Mobile RV Services, the premier mobile RV Repair Service in Victorville, CA!",
+        "emergency_quote": "We also handle Emergency Motor home Repairs in any situation.",
+        "roadside_quote": null,
+        "bar_number": null
+      },
+      "region": "High Desert"
+    },
+    {
+      "n": "The Reliable RV",
+      "c": "Yucca Valley, CA",
+      "p": "760-974-7715",
+      "u": "https://www.thereliablerv.net/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Mobile RV repair company in Yucca Valley that works at your home or campsite. Handles roofing (including Crazy Seal roof coating), maintenance, troubleshooting, electrical, plumbing, heating and air and awning installs. Service area lists Yucca Valley, Joshua Tree, Palm Springs, Palm Desert, La Quinta, Indio and Desert Hot Springs.",
+      "g": [
+        "mobile RV repair",
+        "at your home or campsite",
+        "roof coating (Crazy Seal)",
+        "slide-out repair",
+        "awning installs"
+      ],
+      "base": "Yucca Valley",
+      "areas": [
+        "Yucca Valley",
+        "Joshua Tree",
+        "Palm Springs",
+        "Palm Desert",
+        "La Quinta",
+        "Indio",
+        "Desert Hot Springs",
+        "Big Bear Lake",
+        "Banning",
+        "Beaumont"
+      ],
+      "evidence": {
+        "checked": "https://www.thereliablerv.net/",
+        "phone_quote": "760-974-7715",
+        "coverage_quotes": [
+          "Service area-Yucca Valley, Joshua Tree, Palm Springs, Palm Desert, La Quinta, Indio, Desert Hot Springs , Big Bear, Banning, Beaumont and more."
+        ],
+        "type_quote": "At The Reliable RV, we specialize in providing top-notch mobile repair services right at your home or campsite.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "bar_number": null,
+        "correction": "2026-09-28: 'Big Bear' was listed as an area. The Census calls the place Big Bear Lake, and a reader typing 'Big Bear' still resolves against it by prefix, but the table key is the Census name so the area now matches it exactly."
+      }
+    },
+    {
+      "n": "Overland RV LLC",
+      "c": "Riverside, CA",
+      "p": "951-223-1726",
+      "u": "https://overlandrv.com/",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "RV and trailer service business in Riverside that has served the Inland Empire for over four years. Services include roof repairs, diesel engine maintenance, routine maintenance and complex repairs. They now offer mobile repair services that come to you, alongside their shop at 4979 La Sierra Ave.",
+      "g": [
+        "mobile RV repair",
+        "RV roof repair",
+        "diesel engine service",
+        "RV & trailer service",
+        "Inland Empire"
+      ],
+      "base": "Riverside",
+      "areas": [],
+      "evidence": {
+        "checked": "https://overlandrv.com/",
+        "phone_quote": "Phone: 951-223-1726",
+        "coverage_quotes": [
+          "With over four years of dedicated service in the heart of the Inland Empire, we've become synonymous with excellence in RV and trailer servicing, roof repairs, diesel engine maintenance, and so much more."
+        ],
+        "type_quote": "Now Offering Mobile Repair Services. Our professionally trained specialists are ready to help with your next vehicle project.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "bar_number": null
+      },
+      "region": "Inland Empire"
+    },
+    {
+      "n": "McBride's RV Service & Paint",
+      "c": "Chino, CA (serving Corona and Rancho Cucamonga)",
+      "p": "(909) 627-7566",
+      "u": "https://mcbridesrvrepair.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Family-owned RV repair, collision and paint shop in Chino, serving Southern California and the Inland Empire since 1967. Services include chassis service, engine repair, brake and transmission work, slide-out repair, generators, awnings and full-body paint. There is no mobile service; all work is done at the shop.",
+      "g": [
+        "RV repair",
+        "RV collision repair",
+        "RV paint & body",
+        "chassis/engine/brake/transmission service",
+        "Onan generator service"
+      ],
+      "base": "Chino",
+      "areas": [
+        "Corona",
+        "Rancho Cucamonga",
+        "Chino Hills",
+        "Diamond Bar",
+        "Eastvale",
+        "Montclair",
+        "Pomona",
+        "Walnut",
+        "Yorba Linda"
+      ],
+      "spec": "No mobile service, no house calls; all work is performed in shop.",
+      "evidence": {
+        "checked": "https://mcbridesrvrepair.com/",
+        "phone_quote": "Call (909) 627-7566",
+        "coverage_quotes": [
+          "Since 1967, our family-owned shop has been the go-to facility for RV owners across Southern California and the Inland Empire.",
+          "From our home base in Chino, McBride's RV is proud to extend our expert services to communities throughout the Inland Empire, Orange County, and Los Angeles County."
+        ],
+        "type_quote": "No Mobile Service - No House Calls",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "bar_number": "ARD 314817"
+      },
+      "region": "Inland Empire"
+    },
+    {
+      "n": "Foothill RV",
+      "c": "Moreno Valley, CA",
+      "p": "840-228-9562",
+      "u": "https://www.foothillrvcenterinc.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "RV service and upgrade shop in Moreno Valley serving the Inland Empire, Riverside, Corona, Perris and Murrieta. Services include repairs, maintenance, remodels and collision repair, and they also service large RV fleets. They are a Winnebago specialist but service all models and sizes.",
+      "g": [
+        "RV repair",
+        "RV maintenance",
+        "RV remodel",
+        "collision repair",
+        "fleet service"
+      ],
+      "base": "Moreno Valley",
+      "areas": [
+        "Riverside",
+        "Corona",
+        "Perris",
+        "Murrieta"
+      ],
+      "evidence": {
+        "checked": "https://www.foothillrvcenterinc.com/",
+        "phone_quote": "Phone 840-228-9562",
+        "coverage_quotes": [
+          "Serving Inland Empire, Riverside, Corona, Perris and Murrieta"
+        ],
+        "type_quote": "At Foothill RV, we are your local specialists for service and upgrades to your recreational vehicle.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "bar_number": null
+      },
+      "region": "Inland Empire"
+    },
+    {
+      "n": "Hemet Valley RV Siding & Storage",
+      "c": "Hemet, CA",
+      "p": "(951) 765-5075",
+      "u": "https://www.hemetvalleyrv.net/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "RV siding and storage company in Hemet, in business since 2005. Specializes in aluminum and fiberglass RV siding and aluminum travel trailer siding for repair and restoration projects. They also store RVs on a secured, gated lot; customers bring units to the Hemet location.",
+      "g": [
+        "RV siding",
+        "travel trailer siding",
+        "RV restoration parts",
+        "RV storage"
+      ],
+      "base": "Hemet",
+      "areas": [],
+      "spec": "Specializes in RV siding supply and storage rather than full-service mechanical repair.",
+      "evidence": {
+        "checked": "https://www.hemetvalleyrv.net/",
+        "phone_quote": "phone: (951) 765-5075",
+        "coverage_quotes": [],
+        "type_quote": "Hemet Valley RV Siding & Storage is a dual-functioning company in California, specializing in aluminum and fiberglass RV Siding and Aluminum RV Travel Trailer Siding.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "bar_number": null
+      }
+    },
+    {
+      "n": "Wagner RV Repair",
+      "c": "Indio, CA",
+      "p": "760-972-5191",
+      "u": "https://dwagner347.wixsite.com/wagnerrvrepair",
+      "t": "both",
+      "e": true,
+      "r": false,
+      "d": "Family-owned RV repair business with two complete service and repair shops, in Indio and Morongo Valley, plus four mobile service vans. Warranty approved for all major brands and in the repair industry for well over 30 years. The site lists a dedicated emergency services line for RV repairs.",
+      "g": [
+        "RV repair",
+        "mobile service vans",
+        "warranty approved",
+        "emergency services",
+        "two shops"
+      ],
+      "base": "Indio",
+      "areas": [
+        "Morongo Valley"
+      ],
+      "region": "Coachella Valley",
+      "evidence": {
+        "checked": "https://dwagner347.wixsite.com/wagnerrvrepair",
+        "phone_quote": "EMERGENCY SERVICES 760 972 5191",
+        "coverage_quotes": [
+          "We have Two Complete Service & Repair Shops",
+          "Four Mobile Service Vans",
+          "SHOPS AND MOBILE AVAILABLE"
+        ],
+        "type_quote": "WAGNER RV REPAIR IS FAMILY OWNED AND OPERATED AND HAS BEEN IN THE REPAIR INDUSTRY FOR WELL OVER 30 YEARS",
+        "emergency_quote": "EMERGENCY SERVICES 760 972 5191",
+        "roadside_quote": null,
+        "bar_number": null
       }
     }
   ]

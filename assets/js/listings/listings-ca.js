@@ -158,14 +158,14 @@ window.RV_LISTINGS_CA = [
    "Diesel shop"
   ],  "d": "RV repair and maintenance covering engine, brakes, electrical, plumbing and HVAC, plus diesel mechanic services. Roadside truck repair is published as available 24/7 for breakdowns, and mobile service runs across the upper Sacramento Valley, after hours by appointment. Shop open Monday to Friday.",  "r": true,  "reg": "valley-north-bay"
  },
- {  "n": "Jeff's Truck Service",  "base": "chico",  "c": "Chico and Red Bluff",  "region": "Butte County",  "p": "530-895-8070",  "u": "https://www.jeffs-truckservice.com/rv-and-motorhome-body-collision",  "t": "center",  "e": true,  "areas": [
+ {  "n": "Jeff's Truck Service",  "base": "chico",  "c": "Chico and Red Bluff",  "region": "Butte County",  "p": "530-895-8070",  "u": "https://www.jeffs-truckservice.com/rv-and-motorhome-body-collision",  "t": "center",  "e": false,  "areas": [
    "chico",
    "red bluff"
   ],  "g": [
    "24 hour roadside",
    "Body and collision",
    "Truck shop"
-  ],  "d": "RV and motorhome body and collision repair, plus truck and trailer repair and maintenance. Advertise 24 hour roadside assistance. Monday to Friday 8 to 6, Saturday 8 to 6.",  "reg": "valley-north-bay"
+  ],  "d": "RV and motorhome body and collision repair, plus truck and trailer repair and maintenance. Advertise 24 hour roadside assistance. Monday to Friday 8 to 6, Saturday 8 to 6.",  "spec": "Body and collision repair, with a 24 hour roadside assistance line",  "reg": "valley-north-bay"
  },
  {  "n": "Corey's RV Repair",  "base": "ukiah",  "c": "Ukiah and Mendocino and Lake counties",  "region": "Mendocino County",  "p": "707-621-2654",  "u": "https://www.coreysrv.com/",  "t": "center",  "e": false,  "areas": [
    "ukiah",
@@ -679,5 +679,132 @@ window.RV_LISTINGS_CA = [
   ],  "base": "paso robles",  "areas": [
    "paso robles"
   ],  "region": "California's Central Coast",  "reg": "central-coast"
+ },
+ {  "n": "CRG Mobile RV Repair",  "c": "Coachella Valley, CA",  "p": "(951) 445-8842",  "u": "https://www.crgmobilervrepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Certified mobile RV repair service that comes to you, on site, in the Coachella Valley. Based in Hemet and serving Palm Springs, Palm Desert, La Quinta, Desert Hot Springs, Indio and Rancho Mirage for well over 35 years. Work covers plumbing, heating and air, water leaks, electronics, roof repair, generators and appliances on RVs, fifth wheels, travel trailers and campers.",  "g": [
+   "mobile RV repair",
+   "on-site service",
+   "roof repair",
+   "Onan generator service",
+   "appliance repair",
+   "35+ years"
+  ],  "base": "hemet",  "areas": [
+   "palm springs",
+   "palm desert",
+   "rancho mirage",
+   "cathedral city",
+   "bermuda dunes",
+   "murrieta",
+   "riverside",
+   "beaumont",
+   "escondido",
+   "la quinta",
+   "desert hot springs",
+   "indio",
+   "hemet",
+   "temecula",
+   "lake elsinore",
+   "san bernardino",
+   "banning"
+  ],  "region": "Coachella Valley",  "reg": "inland-empire"
+ },
+ {  "n": "Avery's RV Service And Repair",  "c": "Hesperia, CA",  "p": "(760) 910-0079",  "u": "https://averyrvserviceandrepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "RV maintenance and repair business in Hesperia, established in 2019 with technicians who have worked on RVs since 2001. Work covers electrical, roof repairs, plumbing and solar installations. They also offer mobile service that brings the work to your location.",  "g": [
+   "mobile RV repair",
+   "RV maintenance",
+   "electrical",
+   "roof repair",
+   "solar installation"
+  ],  "base": "hesperia",  "areas": [],  "reg": "desert-high"
+ },
+ {  "n": "American Mobile RV Repair",  "c": "Hesperia, CA",  "p": "(760) 261-8751",  "u": "https://www.rvrepairinhesperiaca.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Mobile RV, boat and fiberglass repair business in Hesperia with certified RV technicians. Most repairs can be done mobile at your home, and they also sell RV appliances and accessories. Mobile service covers San Bernardino County, Orange County, the Inland Empire, the San Gabriel Valley, all Los Angeles County and the High Desert.",  "g": [
+   "mobile RV repair",
+   "RV fiberglass repair",
+   "boat repair",
+   "paint stripe touch-up"
+  ],  "base": "hesperia",  "areas": [
+   "san bernardino county",
+   "los angeles county"
+  ],  "region": "Orange County; Inland Empire; San Gabriel Valley; High Desert",  "reg": "desert-high"
+ },
+ {  "n": "High Desert Mobile RV Service",  "c": "Victorville, CA",  "p": "(760) 563-6019",  "u": "https://highdesertmobilervservice.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Mobile RV repair service based in Victorville that travels to customers across the San Bernardino and High Desert area. Handles a wide range of recreational vehicle and mobile home problems. Also handles emergency motorhome repairs and travels to you for emergency roadside work on RVs.",  "g": [
+   "mobile RV repair",
+   "emergency RV repair"
+  ],  "base": "victorville",  "areas": [
+   "san bernardino"
+  ],  "region": "High Desert",  "reg": "desert-high"
+ },
+ {  "n": "The Reliable RV",  "c": "Yucca Valley, CA",  "p": "760-974-7715",  "u": "https://www.thereliablerv.net/",  "t": "mobile",  "e": false,  "r": false,  "d": "Mobile RV repair company in Yucca Valley that works at your home or campsite. Handles roofing (including Crazy Seal roof coating), maintenance, troubleshooting, electrical, plumbing, heating and air and awning installs. Service area lists Yucca Valley, Joshua Tree, Palm Springs, Palm Desert, La Quinta, Indio and Desert Hot Springs.",  "g": [
+   "mobile RV repair",
+   "at your home or campsite",
+   "roof coating (Crazy Seal)",
+   "slide-out repair",
+   "awning installs"
+  ],  "base": "yucca valley",  "areas": [
+   "yucca valley",
+   "joshua tree",
+   "palm springs",
+   "palm desert",
+   "la quinta",
+   "indio",
+   "desert hot springs",
+   "big bear lake",
+   "banning",
+   "beaumont"
+  ],  "reg": "desert-high"
+ },
+ {  "n": "Overland RV LLC",  "c": "Riverside, CA",  "p": "951-223-1726",  "u": "https://overlandrv.com/",  "t": "both",  "e": false,  "r": false,  "d": "RV and trailer service business in Riverside that has served the Inland Empire for over four years. Services include roof repairs, diesel engine maintenance, routine maintenance and complex repairs. They now offer mobile repair services that come to you, alongside their shop at 4979 La Sierra Ave.",  "g": [
+   "mobile RV repair",
+   "RV roof repair",
+   "diesel engine service",
+   "RV & trailer service",
+   "Inland Empire"
+  ],  "base": "riverside",  "areas": [],  "region": "Inland Empire",  "reg": "inland-empire"
+ },
+ {  "n": "McBride's RV Service & Paint",  "c": "Chino, CA (serving Corona and Rancho Cucamonga)",  "p": "(909) 627-7566",  "u": "https://mcbridesrvrepair.com/",  "t": "center",  "e": false,  "r": false,  "d": "Family-owned RV repair, collision and paint shop in Chino, serving Southern California and the Inland Empire since 1967. Services include chassis service, engine repair, brake and transmission work, slide-out repair, generators, awnings and full-body paint. There is no mobile service; all work is done at the shop.",  "g": [
+   "RV repair",
+   "RV collision repair",
+   "RV paint & body",
+   "chassis/engine/brake/transmission service",
+   "Onan generator service"
+  ],  "base": "chino",  "areas": [
+   "corona",
+   "rancho cucamonga",
+   "chino hills",
+   "diamond bar",
+   "eastvale",
+   "montclair",
+   "pomona",
+   "walnut",
+   "yorba linda"
+  ],  "spec": "No mobile service, no house calls; all work is performed in shop.",  "region": "Inland Empire",  "reg": "inland-empire"
+ },
+ {  "n": "Foothill RV",  "c": "Moreno Valley, CA",  "p": "840-228-9562",  "u": "https://www.foothillrvcenterinc.com/",  "t": "center",  "e": false,  "r": false,  "d": "RV service and upgrade shop in Moreno Valley serving the Inland Empire, Riverside, Corona, Perris and Murrieta. Services include repairs, maintenance, remodels and collision repair, and they also service large RV fleets. They are a Winnebago specialist but service all models and sizes.",  "g": [
+   "RV repair",
+   "RV maintenance",
+   "RV remodel",
+   "collision repair",
+   "fleet service"
+  ],  "base": "moreno valley",  "areas": [
+   "riverside",
+   "corona",
+   "perris",
+   "murrieta"
+  ],  "region": "Inland Empire",  "reg": "inland-empire"
+ },
+ {  "n": "Hemet Valley RV Siding & Storage",  "c": "Hemet, CA",  "p": "(951) 765-5075",  "u": "https://www.hemetvalleyrv.net/",  "t": "center",  "e": false,  "r": false,  "d": "RV siding and storage company in Hemet, in business since 2005. Specializes in aluminum and fiberglass RV siding and aluminum travel trailer siding for repair and restoration projects. They also store RVs on a secured, gated lot; customers bring units to the Hemet location.",  "g": [
+   "RV siding",
+   "travel trailer siding",
+   "RV restoration parts",
+   "RV storage"
+  ],  "base": "hemet",  "areas": [],  "spec": "Specializes in RV siding supply and storage rather than full-service mechanical repair.",  "reg": "inland-empire"
+ },
+ {  "n": "Wagner RV Repair",  "c": "Indio, CA",  "p": "760-972-5191",  "u": "https://dwagner347.wixsite.com/wagnerrvrepair",  "t": "both",  "e": true,  "r": false,  "d": "Family-owned RV repair business with two complete service and repair shops, in Indio and Morongo Valley, plus four mobile service vans. Warranty approved for all major brands and in the repair industry for well over 30 years. The site lists a dedicated emergency services line for RV repairs.",  "g": [
+   "RV repair",
+   "mobile service vans",
+   "warranty approved",
+   "emergency services",
+   "two shops"
+  ],  "base": "indio",  "areas": [
+   "morongo valley"
+  ],  "region": "Coachella Valley",  "reg": "coachella"
  }
 ];
