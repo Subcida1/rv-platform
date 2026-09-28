@@ -22,6 +22,7 @@ No secrets, keys, tokens or customer details in here. This file is committed.
 - files: assets/css/style.css, assets/js/site.js, scripts/smoke-test.js
 - tags: style
 - commit: 845ee9d (pushed)
+- deployed: 2026-09-28T07:01:47+00:00
 
 ### copy: Byline moved to OriginRV; Ty's name is on the About page only, as Ty B.
 - why: the trust fix earlier the same day put his full name on every guide, and he changed his mind about the shape of it: the guides are accredited to OriginRV, and his name appears in one place, the About page, as Ty B. The Article schema author changes from a Person to an Organization to match, so the structured data and the visible byline say the same thing. The About page keeps the editorial-policy card and the honest check line either way.
