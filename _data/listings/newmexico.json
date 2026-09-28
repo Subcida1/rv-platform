@@ -116,7 +116,9 @@
         "type_quote": "Stop by our shop in Albuquerque, NM to check out our used and consignment RV's for sale.",
         "emergency_quote": null,
         "roadside_quote": null,
-        "licence": null
+        "licence": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "Local RV Repair, Maintenance & Storage Service Shop Albuquerque NM - Tom's RV Service & Sales info@tomsrvnm."
       }
     },
     {
@@ -161,7 +163,10 @@
         "type_quote": "Mobile Service Only",
         "emergency_quote": "Yes, we offer same-day availability and 24-hour emergency service across the Albuquerque metro. Whether your AC fails under the New Mexico sun, your slide-out gets stuck at a campground near the Sandia Mountains, or you lose power at Route 66 RV Resort, call 505-537-5474 for immediate assistance.",
         "roadside_quote": null,
-        "licence": null
+        "licence": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "e_quote": "Mobile RV Repair Albuquerque NM — Fast On-Site RV Service Skip to content Home What We Fix Emergency RV Repair Pre-Trip RV Inspections RV Air Conditioner Repair RV Appliance Repair RV Awning Repair &#038; Replacement RV Brake, Axle &#038; Suspension Repairs RV Electrica",
+        "mobile_quote": "Mobile RV Repair Albuquerque NM — Fast On-Site RV Service Skip to content Home What We Fix Emergency RV Repair Pre-Trip RV Inspections RV Air Conditioner Repair RV Appliance Re"
       }
     },
     {
@@ -189,7 +194,9 @@
         "type_quote": "I will come to YOU!",
         "emergency_quote": null,
         "roadside_quote": null,
-        "licence": null
+        "licence": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "--> Mobile RV Repair | Sean's RV Service & Repair | Albuquerque top of page SEAN&#39;S RV SERVICE Home Services About Reviews Contact More Use tab to navigate through the menu item"
       }
     },
     {
@@ -229,7 +236,9 @@
         "type_quote": "Let our Certified RV Service Technician come to you and save you the stress and make repairs On-Site.",
         "emergency_quote": null,
         "roadside_quote": null,
-        "licence": null
+        "licence": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Mobile RV Repair | En Route RV Repair LLC En Route Rv Repair, LLC A Mobile Rv Repair Company."
       }
     },
     {
@@ -262,7 +271,9 @@
         "type_quote": "Get professional mobile RV repair wherever you're parked.",
         "emergency_quote": null,
         "roadside_quote": null,
-        "licence": null
+        "licence": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Cary’s RV Services | Mobile RV Repair You Can Trust Skip to content About Service Area Services Electrical Services RV Refrigerator Repair Roof Repairs &#038; Maintenance Plumbing Repairs &#038; Se"
       }
     },
     {
@@ -290,7 +301,8 @@
         "type_quote": "Good Sense RV and Motors is home to world class RVIA Certified RV Technicians who have built their reputations off quality work and fair pricing.",
         "emergency_quote": null,
         "roadside_quote": null,
-        "licence": null
+        "licence": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site"
       }
     },
     {
@@ -320,7 +332,9 @@
         "type_quote": "Tally Ho Services, LLC Mobile RV Repairs",
         "emergency_quote": null,
         "roadside_quote": null,
-        "licence": null
+        "licence": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Tally Ho Services, LLC Mobile RV Repairs Don & Claire Gray Tally Ho Services, LLC Mobile RV Repairs Servicing Albuquerque and surrounding areas."
       }
     },
     {
@@ -352,7 +366,9 @@
         "type_quote": "Our facility features a 24-bay service center, a 54-foot state-of-the-art paint booth, and advanced body shop capabilities",
         "emergency_quote": null,
         "roadside_quote": null,
-        "licence": null
+        "licence": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "Our service center is built to handle everything from minor fixes to full-scale repairs."
       }
     },
     {
@@ -380,7 +396,9 @@
         "type_quote": "Give us a call and we'll get you in and out of the shop in an efficient and timely manner",
         "emergency_quote": null,
         "roadside_quote": null,
-        "licence": null
+        "licence": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "| Albuquerque, NM 505-365-1273 Toggle navigation Menu Contact Us Contact RV Search Search Shop RVs AI Search Assistant New RVs Used RVs RV Specials Get A Quote RV Financing Finance Application Payment Calculator Pre-Qualify No SSN Trade & Consign Trade RV Consignm"
       }
     },
     {
@@ -408,7 +426,9 @@
         "type_quote": "Our service capabilities include, and are not limited to, installation of accessories, hitches, wiring, and even repairing collision damage.",
         "emergency_quote": null,
         "roadside_quote": null,
-        "licence": null
+        "licence": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": ") Confirm Email Quick Links All Inventory Parts Service Contact Us Our Location 5029 AGUA FRIA ST SANTA FE, NM 87507 Get Directions » Contact Us » Our Hours MON - FRI: 9AM - 5PM SATURDAY: CLOSED SUNDAY: CLOSED Connect With Us facebook Copyright © 20"
       }
     },
     {
@@ -438,7 +458,9 @@
         "type_quote": "Call us and We Come To You!",
         "emergency_quote": null,
         "roadside_quote": null,
-        "licence": null
+        "licence": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "RV and Marine Service - Recreation Preservation Home Services Contact Us Home Services Contact Us Home Services Contact Us Recreation Preservation Mobile RV and Boat Service/Repair Recreation Preservation Mobile RV and Boat Service/Repair Recreation Preservation Mobile RV and Boat Service/Repair Recreation Preservation Mo"
       }
     },
     {
@@ -469,7 +491,9 @@
         "type_quote": "We come directly to your campsite, so you don't have to deal with the hassle of moving your RV or waiting at a shop.",
         "emergency_quote": null,
         "roadside_quote": null,
-        "licence": null
+        "licence": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Mobile RV Repair & Maintenance | The RV Wizards | Ruidoso, NM Home RV Service Desk App."
       }
     },
     {
@@ -499,7 +523,10 @@
         "type_quote": "We also specialize in installations of custom systems, accessories, hitches and more. ... sometimes it can be difficult to bring your RV to our shop for repairs. That's why we offer mobile RV repair services",
         "emergency_quote": null,
         "roadside_quote": null,
-        "licence": null
+        "licence": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "com Skip menu &times; HOME PAGE ABOUT US RV&#39;S & TRUCKS CONTACT US Alamo RV & Truck Center | Mobile RV Repair & Sales Service! Take A Virtual Tour Of Our Store & Lot Area! Take A Virtual Tour! Find Your RV Or Truck - USED RV'S & TRUCKS FOR SALE - ALAMO RV & TRUCK CENTE",
+        "center_quote": "Alamo RV | Parts & Service Center Go to content Alamo RV | Parts & Service Center Fb PHONE: ( 575) 434-3783 EMAIL: info@alamorvtruckcenter."
       }
     },
     {
@@ -531,7 +558,9 @@
         "type_quote": "when I opened my mobile service business in Elephant Butte, NM I decided I wanted to specialize in only the house side of the RV",
         "emergency_quote": null,
         "roadside_quote": null,
-        "licence": null
+        "licence": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Close Welcome To O'Neill's RV Services Welcome To My Homepage My Photos O'Neill RV Mobile Services O'Neill RV Mobile Services was founded in 1997 by myself Rick O'Neill."
       }
     },
     {
@@ -560,7 +589,9 @@
         "type_quote": "we here at Chisolm Trail RV offer not only a helpful on-site service center but a well-stocked parts department",
         "emergency_quote": null,
         "roadside_quote": null,
-        "licence": null
+        "licence": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "Service Department | Chisolm Trail RV - Aztec in New Mexico , New Mexico Connect with Us: Toggle navigation Menu Contact Us Contact RV Search Search Shop for RVs Class A Class C Fifth Wheels Camping Trailers Toy Haulers Travel Trailers New Inventory Pre-Owned Inventory Showroom Shopper Guide Make an Offer Value Your Trade"
       }
     },
     {
@@ -589,7 +620,9 @@
         "type_quote": "Certified Mobile RV Service & RepaiR ... Help and piece of mind is on the way. We come to you!",
         "emergency_quote": null,
         "roadside_quote": null,
-        "licence": null
+        "licence": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "12 Volt Electrical Services HOME services Batteries About US Contact (505) 324-6548 Certified Mobile RV Service & RepaiR Servicing the Four Corners Area LP Gas Certified Help and piece of mind is on the way."
       }
     },
     {
@@ -620,7 +653,9 @@
         "emergency_quote": null,
         "roadside_quote": null,
         "licence": null,
-        "correction": "2026-09-28: Acme and Caprock were listed as covered areas. Neither is a Census place and I could not point at a ZIP that serves either, so both were dropped rather than resolved to a coordinate I cannot stand behind. Dropped: Acme, Caprock"
+        "correction": "2026-09-28: Acme and Caprock were listed as covered areas. Neither is a Census place and I could not point at a ZIP that serves either, so both were dropped rather than resolved to a coordinate I cannot stand behind. Dropped: Acme, Caprock",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "RV Service in Roswell, New Mexico | RV Service and Repair | Main Trailer Sales, Inc Skip to main content Our Location Roswell, NM 2900 W 2nd St Roswell, NM 88201-1209 575-622-1751 Shop Now Get Directions Toggle navigation Menu Contact Us Contact RV Search Search Inventory Manufacturers"
       }
     }
   ]

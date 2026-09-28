@@ -128,7 +128,10 @@
         "type_quote": "Mobile RV repair in El Paso, TX | On-Site Service ... On-site diagnosis and repair for common RV system issues at your driveway, campground, or roadside location",
         "emergency_quote": "Open 24/7; Emergency Service Available",
         "roadside_quote": null,
-        "licence": null
+        "licence": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "e_quote": "air in El Paso, TX | On-Site Service Home About Services RV Air Conditioner Repair RV Electrical System Repair RV Plumbing Repair RV Appliance Repair RV Roof Leak Repair Emergency RV Repair RV Water Heater Repair RV Awning Repair and Replacement RV Slide-Out Repair RV Generator Repair Pre-Trip RV Inspections Pre-Purchase RV Inspections RV Winteriz",
+        "mobile_quote": "Mobile RV Repair in El Paso, TX | On-Site Service Home About Services RV Air Conditioner Repair RV Electrical System Repair RV Plumbing Repair RV Appliance Repair RV Roof Leak"
       }
     },
     {
@@ -156,7 +159,9 @@
         "type_quote": "Road-House Mobile RV prides itself on bringing its services to you. Is your RV needing repairs? Give us a call and we bring our mobile service to you.",
         "emergency_quote": null,
         "roadside_quote": null,
-        "licence": null
+        "licence": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "--> Rv | Road-house Mobile Rv Repair And Inspection | El Paso top of page Home About Services Repairs Inspections Walk Through Contact Us Reviews Events More Use tab to navigate through the menu i"
       }
     },
     {
@@ -184,7 +189,9 @@
         "type_quote": "RV Mobile Service! Travelers are a huge priority! ... Call or text for help!",
         "emergency_quote": null,
         "roadside_quote": null,
-        "licence": null
+        "licence": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "RV MOBILE SERVICES LLC | RV REPAIRS 0 Skip to Content About Services FAQs Contact (806) 437-0896 Open Menu Close Menu About Services FAQs Contact (806) 437-0896 Open Menu Close Me"
       }
     },
     {
@@ -214,7 +221,9 @@
         "type_quote": "We come to you, providing hassle-free RV repair and maintenance right where you are.",
         "emergency_quote": null,
         "roadside_quote": null,
-        "licence": null
+        "licence": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Get in touch with us today to let us know how we can help you! ROVING ROOSTER We come to you, providing hassle-free RV repair and maintenance right where you are."
       }
     },
     {
@@ -251,7 +260,9 @@
         "type_quote": "I do \"On Site\" RV repairs and RV Service. I perform all repairs on Recreational Vehicles.",
         "emergency_quote": null,
         "roadside_quote": null,
-        "licence": null
+        "licence": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "RV Service Center mobile service, Red Rover Mobile RV Service in Texas Call 1-806-731-2355 for mobile RV Repair service along Interstate 40, I-40, near the Amarillo , Texas area Slide Outs &star"
       }
     },
     {
@@ -274,7 +285,7 @@
         "Shallowater"
       ],
       "evidence": {
-        "checked": "https://caprockrvservices.com/contact",
+        "checked": "https://caprockrvservices.com/",
         "phone_quote": "Main Line: (806) 368-0005",
         "coverage_quotes": [
           "Caprock RV is proud to serve Lubbock, Slaton, Wolfforth, Shallowater, and all of West Texas."
@@ -282,7 +293,9 @@
         "type_quote": "Visit Our RV Service Center in Lubbock ... Full-Service RV Shop",
         "emergency_quote": null,
         "roadside_quote": null,
-        "licence": null
+        "licence": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "RV Parts, Maintenance & Repairs Backed by Decades of Experience BROWSE INVENTORY Why Caprock RV Services Is the Right Choice in Lubbock As a locally owned, family-run RV service center, we bring a personal touch to every repair, sale, and parts purchase."
       }
     },
     {
@@ -319,7 +332,10 @@
         "type_quote": "MOBILE RV REPAIR IN MIDLAND & ODESSA, TX ... on-site mobile RV maintenance and repairs",
         "emergency_quote": "Opening Hours Mon - Fri: 8am - 5pm On Call: Weekends & After Hours. Services ... Emergency Services",
         "roadside_quote": null,
-        "licence": null
+        "licence": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "e_quote": "CONTACT US Ready to Experience Exceptional RV Service? GET IN TOUCH Our Services - A/C Repair / Install - Preventive Maintenance - Inspections - Emergency Services - Appliance Install / Repair - RV Orientation - Generator Repair Opening Hours Mon - Fri: 8am - 5pm On Call: Weekends & After Hours Leave us a Review! Contact U",
+        "mobile_quote": "--> Mobile RV Repair Midland and Odessa TX | Travelers RV Service | Camper repair Mildnad Texas top of page Travelers RV Service LLC NRVTA Certified Technician Home Services Member"
       }
     },
     {
@@ -349,7 +365,10 @@
         "type_quote": "RV Brake Repair ... Collision Repair ... It is wise to have your brakes repaired either every two years or every 12,000 miles.",
         "emergency_quote": null,
         "roadside_quote": "Has your RV broken down on the side of the road? We are just a phone call away. We provide emergency motorhome repair services for broken down RVs.",
-        "licence": null
+        "licence": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "r_quote": "RV Brake Repair It is wise to have your brakes repaired either every two years or every 12,000 miles.",
+        "mobile_quote": "Have a flat tire? We can take care of that too! Just give us a call, and we’ll send a mobile RV technician your way."
       }
     },
     {
@@ -380,7 +399,11 @@
         "type_quote": "Mobile RV Repair - we bring the professional shop directly to you! ... Shop Repairs: Major, heavy-duty jobs are done at our shop.",
         "emergency_quote": "24-hour emergency roadside service available every day. ... Stuck on the road? We answer, day or night.",
         "roadside_quote": null,
-        "licence": null
+        "licence": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "e_quote": "--> Home | Basin RV Repair LLC top of page Mon&ndash;Sat 8am&ndash;7pm &middot; 24/7 Emergency Services 432-310-5681 Log In Home Services Shop Parts Ask A Tech Used RV Parts & Clearance Blog Contact FAQ Odessa, TX Welcome To Basin Rv Mobile/Shop RV Repai",
+        "mobile_quote": "sh;7pm &middot; 24/7 Emergency Services 432-310-5681 Log In Home Services Shop Parts Ask A Tech Used RV Parts & Clearance Blog Contact FAQ Odessa, TX Welcome To Basin Rv Mobile/Shop RV Repairs &mdash; we bring the professional shop directly to you! Or feel fee to drop your rig off at our location.",
+        "center_quote": "--> Home | Basin RV Repair LLC top of page Mon&ndash;Sat 8am&ndash;7pm &middot; 24/7 Emergency Services 432-310-5681 Log In Home Services Shop Parts Ask A Tech Used RV Parts & Clearance Blog Contact FAQ Odessa, TX Welcome To Basin Rv Mobile/Shop RV Repairs &mdash; we bring the professional shop directly to you!"
       }
     },
     {
@@ -409,7 +432,9 @@
         "type_quote": "We have certified RV Technicians, and can take care of anything from basic maintenance to major repairs, including insurance and warranty jobs.",
         "emergency_quote": null,
         "roadside_quote": null,
-        "licence": null
+        "licence": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "\" Happy Trails, American Truck & RV Family Contact Us Call us at (325) 653-1978 or come by today and experience our superior service and selection! We look forward to serving you! Contact us Quick Links Home RVs for Sale Consignment Financing Parts Service Abo"
       }
     },
     {
@@ -430,7 +455,7 @@
       ],
       "region": "the Big Country",
       "evidence": {
-        "checked": "https://jtrvmobileservice.com/about-us",
+        "checked": "https://jtrvmobileservice.com/",
         "phone_quote": "justin@jtrvmobileservice.com text or call (325) 665-5825",
         "coverage_quotes": [
           "JT/RV is a veteran and family-owned and operated mobile RV service proudly serving the Abilene, TX community."
@@ -438,7 +463,9 @@
         "type_quote": "We bring reliable, honest RV repair and maintenance directly to you ... We Come To You.",
         "emergency_quote": null,
         "roadside_quote": null,
-        "licence": null
+        "licence": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "JT/RV Mobile Service | Explore with Confidence &mdash; Schedule Service Today 0 Skip to Content Home Services Prices Warranties/Recalls About Us Call Open Menu Close Menu Home Servic"
       }
     },
     {
@@ -468,7 +495,9 @@
         "type_quote": "At Open Road Mobile RV Services, we bring expert RV repair right to your doorstep! ... our skilled technicians travel to you, ensuring your RV issues are professionally inspected and solutions provided on-site.",
         "emergency_quote": null,
         "roadside_quote": null,
-        "licence": null
+        "licence": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Open Road Mobile RV Services - Home Home Store HOURS About Contact Home Store HOURS About Contact menu close close close Home Store HOURS About Contact BUY ONLINE! Welcome to Open Road M"
       }
     },
     {
@@ -503,7 +532,10 @@
         "type_quote": "On-Site Mobile RV Service - Professional mobile repairs at your location for ultimate convenience.",
         "emergency_quote": "Our experienced mobile RV technicians provide fast, reliable repairs and 24/7 emergency service for all RV types.",
         "roadside_quote": null,
-        "licence": null
+        "licence": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "e_quote": "From routine maintenance to emergency services and major renovations, we ensure your RV stays safe, comfortable, and road-ready.",
+        "mobile_quote": "y Camper RV Repair | RV repair | Snyder, TX, USA top of page Home About Us Our Services Contact Us CONTACT US Welcome to Happy Camper RV Repair Your Trusted and Reliable Mobile RV Repair Experts At Happy Camper RV Repair, we provide on-site RV and camper repairs with speed, expertise, and care."
       }
     },
     {
@@ -542,7 +574,9 @@
         "type_quote": "MATTHEWS RV REPAIR, LLC is a Mobile Authorized Service Center. We offer Mobile RV Repair in Hondo TX and surrounding areas. We perform all repairs at your location.",
         "emergency_quote": null,
         "roadside_quote": null,
-        "licence": null
+        "licence": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "--> --> --> Matthews RV Repair - Providing Mobile Recreational Vehicle repairs in South Central Texas --> --> --> --> --> --> --> --> --> --> --> --> --> --> --> --> --> --> --> --> --> --> WELCOME TO OUR MOBILE RV REPA"
       }
     },
     {
@@ -564,7 +598,7 @@
       "region": "Kimble County",
       "spec": "I do not offer emergency roadside assistance (tires/towing). I focus exclusively on on-site habitation and system repairs.",
       "evidence": {
-        "checked": "https://callsmittyrv.com/rv-service-junction-tx/",
+        "checked": "https://callsmittyrv.com/",
         "phone_quote": "Call Smitty Today: 210-504-6811",
         "coverage_quotes": [
           "Call Smitty RV Service provides professional, reliable mobile RV repair across Junction, Texas, and the surrounding Kimble County area.",
@@ -573,7 +607,9 @@
         "type_quote": "On-Site Service: I come to my campsite, barn, or property ... I specialize in the \"living\" side of your RV.",
         "emergency_quote": null,
         "roadside_quote": null,
-        "licence": null
+        "licence": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Home - Call Smitty RV Service Skip to content Call Smitty RV Service Call 210-504-6811 for mobile service Home Specials Services Contact About Hill Country Mobile RV Repair in Junction, TX Tap to Call Smitty Now Call Smitty RV Service Quick, a"
       }
     }
   ]
