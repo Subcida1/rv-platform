@@ -1103,7 +1103,8 @@
         "roadside_quote": null,
         "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
         "mobile_quote": "Mobile RV Repair DFW | RVTAA Certified Tech | Prime Mobile RV Repair 0 Skip to Content Home Mobile RV Services RV Repair RV Air Conditioner RV Water Heater RV Refrigerator RV F",
-        "correction": "2026-09-29: the audit reported no emergency language, and that was the audit's limit: this business runs a page per city (Allen, Argyle, Arlington and about thirty more) and each one says \"EMERGENCY <CITY> RV REPAIR - CALL OR TEXT FOR FASTER RESPONSE\". The tag stands and the claim is on the city pages, not the home page."
+        "correction": "2026-09-29: the audit reported no emergency language, and that was the audit's limit: this business runs a page per city (Allen, Argyle, Arlington and about thirty more) and each one says \"EMERGENCY <CITY> RV REPAIR - CALL OR TEXT FOR FASTER RESPONSE\". The tag stands and the claim is on the city pages, not the home page.",
+        "e_quote": "Emergency Services available - Call or Text for faster response We are based out of Lewisville, Texas and serve the greater North Dallas-Fort, Worth, Texas area."
       }
     },
     {
@@ -1971,7 +1972,7 @@
         "emergency_quote": "After Hours $200 per technician",
         "roadside_quote": null,
         "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
-        "e_quote": "50 additional mile over 10 miles Hourly Rate $150 per technician After Hours $200 per technician No trip charge for follow ups *some exceptions apply html, body, div, span, applet, object, iframe, p, blockquote, a, cite, code, del, dfn, font, img",
+        "e_quote": "50 additional mile over 10 miles Hourly Rate $150 per technician After Hours $200 per technician No trip charge for follow ups *some exceptions apply SERVICES - Heads Up RV - what we do, pricing and where we go Home Services Shop Appointment Cont",
         "mobile_quote": "Heads Up RV - Mobile RV Repair with Integrity Home Services Shop Appointment Contact Us Home Services Shop Appointment Contact Us NEW SERVICE! Keep your tanks fresh, clean & odor free! RV HO"
       }
     },
