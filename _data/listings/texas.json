@@ -814,9 +814,9 @@
         "roadside_quote": null,
         "licence": null,
         "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
-        "e_quote": "--> Home | Basin RV Repair LLC top of page Mon&ndash;Sat 8am&ndash;7pm &middot; 24/7 Emergency Services 432-310-5681 Log In Home Services Shop Parts Ask A Tech Used RV Parts & Clearance Blog Contact FAQ Odessa, TX Welcome To Basin Rv Mobile/Shop RV Repai",
-        "mobile_quote": "sh;7pm &middot; 24/7 Emergency Services 432-310-5681 Log In Home Services Shop Parts Ask A Tech Used RV Parts & Clearance Blog Contact FAQ Odessa, TX Welcome To Basin Rv Mobile/Shop RV Repairs &mdash; we bring the professional shop directly to you! Or feel fee to drop your rig off at our location.",
-        "center_quote": "--> Home | Basin RV Repair LLC top of page Mon&ndash;Sat 8am&ndash;7pm &middot; 24/7 Emergency Services 432-310-5681 Log In Home Services Shop Parts Ask A Tech Used RV Parts & Clearance Blog Contact FAQ Odessa, TX Welcome To Basin Rv Mobile/Shop RV Repairs &mdash; we bring the professional shop directly to you!"
+        "e_quote": "--> Home | Basin RV Repair LLC top of page Mon&ndash;Sat 8am&ndash;7pm &middot; 24/7 Emergency Services 432-310-5681 Log In Home Services Shop Parts Ask A Tech USA RV Board Used RV Parts & Clearance Blog Contact FAQ Odessa, TX Welcome To Basin Rv Mobile/",
+        "mobile_quote": "t; 24/7 Emergency Services 432-310-5681 Log In Home Services Shop Parts Ask A Tech USA RV Board Used RV Parts & Clearance Blog Contact FAQ Odessa, TX Welcome To Basin Rv Mobile/Shop RV Repairs &mdash; we bring the professional shop directly to you! Or feel fee to drop your rig off at our location.",
+        "center_quote": "--> Home | Basin RV Repair LLC top of page Mon&ndash;Sat 8am&ndash;7pm &middot; 24/7 Emergency Services 432-310-5681 Log In Home Services Shop Parts Ask A Tech USA RV Board Used RV Parts & Clearance Blog Contact FAQ Odessa, TX Welcome To Basin Rv Mobile/Shop RV Repairs &mdash; we bring the professional shop dir"
       }
     },
     {
@@ -1051,7 +1051,9 @@
         ],
         "type_quote": "we specialize in on-site repairs for both new and used RVs, whether it's a motorhome, fifth wheel, travel trailer, job-site trailer, or a horse trailer with living quarters",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "RV Tech Mobile Services 10% Discount on Labor Rate for Seniors, Veterans, 1st Responders and Teachers 817-751-7667 Office 817-751-7667 Office Home Contact Us Serving the Greater DFW Ar"
       }
     },
     {
@@ -1098,7 +1100,10 @@
         ],
         "type_quote": "All service calls are performed by a RVTAA Certified Service Technician.",
         "emergency_quote": "EMERGENCY GAINESVILLE, TX RV REPAIR - CALL OR TEXT FOR FASTER RESPONSE",
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Mobile RV Repair DFW | RVTAA Certified Tech | Prime Mobile RV Repair 0 Skip to Content Home Mobile RV Services RV Repair RV Air Conditioner RV Water Heater RV Refrigerator RV F",
+        "correction": "2026-09-29: the audit reported no emergency language, and that was the audit's limit: this business runs a page per city (Allen, Argyle, Arlington and about thirty more) and each one says \"EMERGENCY <CITY> RV REPAIR - CALL OR TEXT FOR FASTER RESPONSE\". The tag stands and the claim is on the city pages, not the home page."
       }
     },
     {
@@ -1146,7 +1151,10 @@
         ],
         "type_quote": "We also offer body work, collision and weather damage repair at our conveniently located RV repair shop in Ponder, TX, along with mobile boat repair for many smaller jobs.",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Boat & RV Repair: RV Body Shop, Mobile RV Repair & Boat Repair (940) 202-9488 Request Service Home Mobile RV Repairs ALL SERVICES Air Conditioner Battery Electrical Fridge &#038; Appliances Heater/Furnace Plu",
+        "center_quote": "Boat & RV Repair: RV Body Shop, Mobile RV Repair & Boat Repair (940) 202-9488 Request Service Home Mobile RV Repairs ALL SERVICES Air Conditioner Battery Electrical Fridge &#038; Appliances Heater/Fur"
       }
     },
     {
@@ -1176,7 +1184,10 @@
         ],
         "type_quote": "Patriot RV Tech is a 100% Veteran owned & operated Business. Our certified RV Technicians are dedicated to providing the highest quality mobile rv repair service possible!",
         "emergency_quote": "24/7 Emergency Service",
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "e_quote": "Patriot RV Tech - Dallas/Fort Worth Mobile RV Repair & RV Service 24/7 Open REQUEST A CALL BACK For Business: For Business inquiry fill our short feedback form or you can also send us an email and we’ll get in touch shortly, or Troll Free N",
+        "mobile_quote": "Patriot RV Tech - Dallas/Fort Worth Mobile RV Repair & RV Service 24/7 Open REQUEST A CALL BACK For Business: For Business inquiry fill our short feedback form or you can also send us an email and we’ll get in to"
       }
     },
     {
@@ -1238,7 +1249,10 @@
         ],
         "type_quote": "100% Mobile RV Service You Can Count On",
         "emergency_quote": "SAT - SUN - CLOSED (EMERGENCY ONLY)",
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "e_quote": "ill DeSoto Lancaster Duncanville Wylie Rowlett Rockwall Burleson Haltom City Southlake Colleyville Trophy Club Learn more Hours MON - FRI - 9AM - 5PM SAT - SUN - CLOSED (EMERGENCY ONLY) Contact (945)-201-0199 andrewgreene@greenervservice.",
+        "mobile_quote": "Greene RV Service Mobile Repair Experts in Dallas TX 0 Skip to Content Services About Contact Service Area Testimonials FAQs CONTACT US Open Menu Close Menu Services About Contact Service Area T"
       }
     },
     {
@@ -1273,7 +1287,10 @@
         ],
         "type_quote": "Blue Moon Mobile RV is a licensed and insured RV repair shop with mobile service based in Carrollton, Texas.",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Blue Moon Mobile RV is a licensed and insured RV repair shop with mobile service based in Carrollton, Texas.",
+        "center_quote": "Blue Moon Mobile RV is a licensed and insured RV repair shop with mobile service based in Carrollton, Texas."
       }
     },
     {
@@ -1309,7 +1326,9 @@
         ],
         "type_quote": "Specialized RV Repair and Conversions, Inc. is a full-service RV, motorhome, and travel trailer repair shop in the heart of the DFW metroplex.",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "ut Repair RV Blowout Damage Repair RV Roof Repair RV Collision &#038; Body Repair Contact RV & Motorhome Repair in the Dallas–Fort Worth Metroplex Full-service RV repair shop in Alvarado, TX — 40+ years on motorhomes, travel trailers and luxury coaches."
       }
     },
     {
@@ -1341,7 +1360,9 @@
         ],
         "type_quote": "RV repair and renovation are what we do best.",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "pair Fort Worth, TX | RV Service Forth Worth | Coach Specialists Of Texas Has your RV been affected by Hail Damage ? Contact us to schedule service! Contact US Mansfield Service Center 817-842-1144 Plano Service Center 972-516-2222 Fort Worth Service Center (817)-842-1144 Authorization Services RV Collision Repair RV Roof Replacement RV Diagnostic Serv"
       }
     },
     {
@@ -1371,7 +1392,10 @@
         ],
         "type_quote": "We will come to you as a Mobile RV Repair service and can provide RV parts in a timely fashion",
         "emergency_quote": "Emergency, After Hours - Hourly Rate",
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "e_quote": "Emergency, After Hours - Hourly Rate Contact for details Please call for details.",
+        "mobile_quote": "RV Repair, Mobile RV Repair - Collincountyrvrepair - Dallas, Texas Mobile RV REPAIR Mobile RV REPAIR Mobile RV REPAIR Mobile RV REPAIR Located in McKinney, TX in Collin County Let our cer"
       }
     },
     {
@@ -1406,7 +1430,9 @@
         ],
         "type_quote": "We're not just another auto body shop, we specialize in RVs and motorcoaches.",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "s Services RV Repair GSA RV Repair Fleet Services Articles Contact CALL US Full-Service RV Repair & Restoration in Alliance / Fort Worth We’re not just another auto body shop— we specialize in RVs and motorcoaches ."
       }
     },
     {
@@ -1435,7 +1461,9 @@
         ],
         "type_quote": "North Texas RV, located in Krum, Texas, is your go-to source for all RV repair, service, sales, and more.",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "Our 16-acre facility is also home to Best Value RV , where we are proud to assist with your RV purchase – minus the strong-arm sales tactics and marked-up prices you may find at other dealer"
       }
     },
     {
@@ -1466,7 +1494,9 @@
         ],
         "type_quote": "Candid RV is a premier, professional mobile RV repair service bringing expert on-site solutions directly to your home, campground, or storage facility within a 25-mile radius of Whitesboro.",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Mobile RV Repair in Whitesboro, TX | Candid RV Mon - Fri: 7:00 AM - 6:00 PM Serving Lake Texoma & North Central Texas (972) 364-7765 Home About About Us Philosophy Reviews Why"
       }
     },
     {
@@ -1492,7 +1522,9 @@
         ],
         "type_quote": "Max's Mobile RV repair is your best choice for all types of Mobile RV Repair & Maintenance",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Max&#x27;s Mobile RV Repair, LLC Home Services Message From The Owner Photo Gallery Service Area Contact Us More Home Services Message From The Owner Photo Gallery Service Area Contact Us"
       }
     },
     {
@@ -1521,7 +1553,10 @@
         ],
         "type_quote": "We do inspections, maintenance, RV repairs and service. We come to you for after hours and weekend appointments.",
         "emergency_quote": "We come to you for after hours and weekend appointments.",
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "e_quote": "We come to you for after hours and weekend appointments.",
+        "mobile_quote": "Mobile RV Repair Services Serving Tyler, TX and surrounding communities Home Services Contact About Home Services Contact About More Home Services Contact About Home Services C"
       }
     },
     {
@@ -1551,7 +1586,9 @@
         ],
         "type_quote": "ETX RV REPAIR is a full-service RV Repair Shop.",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "--> East Texas RV Repair and Service Center| Etx Rv Repair | Tyler TX top of page ETX RV REPAIR East Texas RV Repair and Service Center Getting You Back On The Road Home Service Center Contact Us Our Services Phot"
       }
     },
     {
@@ -1560,7 +1597,7 @@
       "p": "903-619-3181",
       "u": "https://mikesmobilervrepairtyler.com/services",
       "t": "mobile",
-      "e": true,
+      "e": false,
       "r": false,
       "d": "Family owned mobile RV and trailer repair business based in Tyler. The company repairs electrical, plumbing, hydraulic, brake, leveling, slide-out and awning systems and also sells and services air conditioners, water heaters and furnaces. Twenty four hour and major holiday emergency service is offered.",
       "g": [
@@ -1582,7 +1619,11 @@
         ],
         "type_quote": "With our mobile service and experienced technicians, we can quickly diagnose and repair issues with your RV, camper or trailer conveniently at your location",
         "emergency_quote": "24 hour and major holiday emergency service available",
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "e_quote": "0 pm Tue 08:00 am – 09:00 pm Wed 08:00 am – 09:00 pm Thu 08:00 am – 09:00 pm Fri 08:00 am – 09:00 pm Sat 08:00 am – 09:00 pm Sun By Appointment 24 hour and major holiday emergency service available Home Services Service Area Contact Us Photo Gallery Mike&#x27;s Mobile RV and Trailer Repair - Home Home Services Service Area Contact Us Photo Gallery",
+        "mobile_quote": "Mike&#x27;s Mobile RV and Trailer Repair in Tyler, Texas Home Services Service Area Contact Us Photo Gallery Home Services Service Area Contact Us Photo Gallery More Home Services Service",
+        "correction": "2026-09-29: was tagged emergency mobile repair. Its own site says \"By Appointment 24 hour and major holiday emergency\", which is an appointment line rather than a round-the-clock one, so the tag was wrong. Removed. Found by the audit reading the site rather than the record."
       }
     },
     {
@@ -1609,7 +1650,9 @@
         ],
         "type_quote": "We come to you!",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "--> Texan Mobile RV Services | Mobile RV Repair | Longview, TX, USA top of page Welcome! Call Today! 903-291-7212 Home Services Contact We come to you! Texan Mobile RV Services is your g"
       }
     },
     {
@@ -1640,7 +1683,10 @@
         ],
         "type_quote": "We are the leading provider of mobile RV repair services in East Texas.",
         "emergency_quote": "Min charge for services outside of normal hours $250 *Immediate response and priority service during non-business hours.",
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "e_quote": "Emergency/After Hours Min charge for services outside of normal hours $250 *Immediate response and priority service during non-business hours.",
+        "mobile_quote": "Mobile RV Repair East Texas | Xpress Mobile RV Solutions Services About Us Reviews Contact Us FAQ Get an appointment Book Now! Need Help? Call us! 903-254-8963 Welcome to Xpres"
       }
     },
     {
@@ -1676,7 +1722,9 @@
         ],
         "type_quote": "Mobile RV repair for 5th wheels, travel trailers, and motorhomes in Nacogdoches and surrounding East Texas areas",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Walter's Mobile Solutions | Mobile RV Repair in Nacogdoches, TX Walter's Mobile Solutions Mobile RV Repair • Nacogdoches, TX Services Service Area Schedule ☰ Services Service Area Sched"
       }
     },
     {
@@ -1706,7 +1754,9 @@
         ],
         "type_quote": "At Sojourner Mobile RV Repair, we strive to provide top-quality, on-site RV Repair to enhance your travel experience.",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Mobile RV Repair - Quality Service at Your Location More Sign In Create Account My Account Signed in as: filler@godaddy."
       }
     },
     {
@@ -1737,7 +1787,10 @@
         ],
         "type_quote": "Mobile RV services in northeast Texas",
         "emergency_quote": "Emergency Call-Outs",
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "e_quote": "ow Call 817-583-4596 Mobile RV services in northeast Texas Butler RV Repair Serving Mount Pleasant to Texarkana Serving Northeast Texas RV Maintenance Campground Service Emergency Call-Outs Certified in: AC & DC Electrical Propane Water systems Water heaters Air Conditioning Furnaces Exterior systems Owner/Technician: Bradly Butler 817-583-4596 in",
+        "mobile_quote": "Butler RV Repair &#8211; Serving Mount Pleasant to Texarkana Skip to content Menu On-Call RV Repair Call Now Call 817-583-4596 Mobile RV services in northeast Texas Butler RV Repair Serving Mount Pleasant to Texarkana Serving Northeast Texas RV Maintenance Campground Service Emergency Call-Outs Certifi"
       }
     },
     {
@@ -1767,7 +1820,9 @@
         ],
         "type_quote": "Taylor Mobile RV Repair is a completely mobile service company with multiple trucks at the ready.",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Taylor Mobile RV Repair Home Contact Contact Brad Taylor Brad is the owner of Taylor Mobile RV Repair."
       }
     },
     {
@@ -1796,7 +1851,10 @@
         ],
         "type_quote": "we provide mobile RV repair and maintenance at your location",
         "emergency_quote": "Emergency Hours - After 6 & Weekends",
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "e_quote": "--> RV Repair & Maintenance Services Waco TX | Relax RV Service top of page Home RV Repair & Service RV AC Repair RV Roof Sealing RV Winterization Emergency RV Repair About Us Photo Gallery Contact Us More.",
+        "mobile_quote": "Call Us Today: (254) 495-7711 Mobile RV Repair & Maintenance Services in Waco, TX From AC cleaning and repair to water heaters, furnaces, plumbing, electrical systems, slide-outs, roof sealing, generators,"
       }
     },
     {
@@ -1830,7 +1888,9 @@
         ],
         "type_quote": "When your RV needs repair, we come to you. No towing. No shop.",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Mobile RV Repair Near Me in Central Texas | Boss Bull Mobile RV Services Services Locations Brands FAQ Contact (512) 675-3887 Schedule an Appointment Services Locations Brands"
       }
     },
     {
@@ -1880,7 +1940,9 @@
         ],
         "type_quote": "I travel to your location and provide professional mobile RV service in the surrounding communities of Austin.",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "ATX MOBILE RV REPAIR Skip to main content ATX MOBILE RV REPAIR ATX MOBILE RV REPAIR Welcome Services Testimonials About Me Welcome to ATX Mobile Rv Repair! I am an RVIA Master cert"
       }
     },
     {
@@ -1900,14 +1962,17 @@
       "areas": [],
       "region": "Austin and surrounding Hill Country",
       "evidence": {
-        "checked": "https://www.headsuprv.com/contact",
+        "checked": "https://www.headsuprv.com/",
         "phone_quote": "CALL US NOW AT (512) 953-7000",
         "coverage_quotes": [
           "We offer a wide range of mobile RV repair services to owners located in the Austin and surrounding Hill Country area."
         ],
         "type_quote": "Fully Mobile RV Repair – We bring the tools, parts, and know-how directly to you.",
         "emergency_quote": "After Hours $200 per technician",
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "e_quote": "50 additional mile over 10 miles Hourly Rate $150 per technician After Hours $200 per technician No trip charge for follow ups *some exceptions apply html, body, div, span, applet, object, iframe, p, blockquote, a, cite, code, del, dfn, font, img",
+        "mobile_quote": "Heads Up RV - Mobile RV Repair with Integrity Home Services Shop Appointment Contact Us Home Services Shop Appointment Contact Us NEW SERVICE! Keep your tanks fresh, clean & odor free! RV HO"
       }
     },
     {
@@ -1959,7 +2024,10 @@
         ],
         "type_quote": "We come to you in well-stocked, professional vans. ... A Workshop For Repairs When Necessary. Some jobs need to be done in a shop.",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "ite Slide Out Repair Pricing Locations Leander Shop Austin North Austin South Austin San Antonio Denton Houston The Woodlands Fort Worth Request Service Blog Select Page Mobile RV & Trailer Repair Relax.",
+        "center_quote": "erter Repair Lithium Batteries Solar Leveling Repair Plumbing Repair Faucet Repair Toilet Repair Propane Roof Repair Satellite Slide Out Repair Pricing Locations Leander Shop Austin North Austin South Austin San Antonio Denton Houston The Woodlands Fort Worth Request Service Blog Select Page Mobile RV & Trailer Repair Relax."
       }
     },
     {
@@ -1991,7 +2059,9 @@
         ],
         "type_quote": "Mobile repair service in Austin and surrounding area",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Camper Alex Mobile RV Repair - Austin TX 0 Skip to Content RV Repair Home Maintenance Packages Our History Services RV Air Conditioning Service RV Awning Service RV Roof Repair RV Electric"
       }
     },
     {
@@ -2018,7 +2088,10 @@
         ],
         "type_quote": "You don't have to drive or tow your unit to your local RV dealer or shop; we will come to you!",
         "emergency_quote": "Emergency Calls 24-7",
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "e_quote": "f page Central Texas Mobile RV Service LLC :512-829-1177 5720 Blue Bluff RD Austin TX 78724 EMAIL US HERE HOME OUR SERVICES Mobile RV Services RV Upgrades RV Inspections EMERGENCY REPAIRS BY CLASS TYPE Motorhome Fifth Wheel Travel Trailer Toy Hauler Campers Other Repairs SERVICE RATES ABOUT US CONTACT US More Use tab to navigate through the menu i",
+        "mobile_quote": "--> 5138D21A724E0982A37D5C610D78790E Recreational vehicle repair | Central Texas Mobile RV Service | Austin top of page Central Texas Mobile RV Service LLC :512-829-1177 5720 Blue Bluff RD Austin TX 78724 EMAIL US HERE HOME OUR SERVICES Mobile RV Services R"
       }
     },
     {
@@ -2046,7 +2119,9 @@
         ],
         "type_quote": "From our state of the art 60,000-pound lift to our 50-foot paint bay, Iron Horse RV Specialists is equipped to take care of your needs.",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "We’re a Tiffin and Entegra Authorized Service Center, but we’ve worked with Airstream, Country Coach, Heartland, Keystone, Monaco, Newmar, Thor and so many others."
       }
     },
     {
@@ -2088,7 +2163,9 @@
         ],
         "type_quote": "Fast, honest, on-site RV repair at your campsite, driveway, storage unit, or RV park. Serving all of San Antonio and surrounding areas. No towing required. ... In-Shop Service — By Appointment Only",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Mobile RV Repair San Antonio TX | (210) 508-6015"
       }
     },
     {
@@ -2124,7 +2201,10 @@
         ],
         "type_quote": "Whether you're camping at Canyon Lake, parked at your home in Spring Branch, or stuck roadside near Boerne, we come to you fully equipped to handle most repairs on the first visit.",
         "emergency_quote": "Yes! We prioritize emergency calls for situations like loss of power, AC, or water. ... $250 Priority Dispatch & Diagnosis Immediate routing to rescue your trip.",
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "e_quote": "--> Home | Moreno Mobile RV Repair San Antonio top of page Home Services Pricing FAQ About Emergency AC Repair More Use tab to navigate through the menu items.",
+        "mobile_quote": "--> Home | Moreno Mobile RV Repair San Antonio top of page Home Services Pricing FAQ About Emergency AC Repair More Use tab to navigate through the menu items."
       }
     },
     {
@@ -2157,7 +2237,9 @@
         ],
         "type_quote": "Do you do mobile repairs? No, we perform all RV repairs at our facility where we have the proper equipment, parts inventory, and team available to complete the job correctly the first time.",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "RV Repair & Body Shop San Antonio | Class A RV Repairs Skip to main content Class A RV Repairs Menu RV Repair RV Collision RV Body Shop Our Work RV Body Shop Gallery RV Repair Gallery Buy &#0"
       }
     },
     {
@@ -2184,7 +2266,10 @@
         ],
         "type_quote": "Get in touch with us today to book our RV Mobile or in shop repair services!",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "--> Home - Grant RV Repair & Services LLC in Seguin, TX top of page GRANT RV REPAIR & SERVICES LLC Home Services Contact QUALITY WORK AT QUALITY PRICING Looking for mobile RV repair services? Book with Grant RV Repair & Services LLC today! You may also visit our RV repair shop in Seguin, Texas.",
+        "center_quote": "Services Contact QUALITY WORK AT QUALITY PRICING Looking for mobile RV repair services? Book with Grant RV Repair & Services LLC today! You may also visit our RV repair shop in Seguin, Texas."
       }
     },
     {
@@ -2218,7 +2303,10 @@
         ],
         "type_quote": "Our certified technicians come directly to your location, whether you are at home, in a campground, or traveling across the region.",
         "emergency_quote": "24/7 Emergency Repairs",
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "e_quote": "chnicians 100% Customer Satisfaction More About Us Certified Repairs RV Types we Cover View All Services CLASS A MOTORHOMES CLASS C MOTORHOMES TRAVEL TRAILERS 5TH WHEELS 24/7 Emergency Repairs 5th Wheels Motorhomes Travel Trailers Contact A&N RV Service today to schedule your mobile RV repair or maintenance visit and experience the convenienc",
+        "mobile_quote": "A&N RV Service &#8211; Best Mobile RV Repair & Maintenance Service in the Texas Hill Country Skip to content Home About Us Services Gallery Pricing Contact Home About Us Services Gallery Pricing Contact A"
       }
     },
     {
@@ -2253,7 +2341,9 @@
         ],
         "type_quote": "We bring expert RV repair directly to your location — home, campground, or storage facility.",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Mobile RV Repair Texas Hill Country | AM Mobile RV Mobile RV Repair in the Texas Hill Country Expert mobile RV repair in the Texas Hill Country that comes to you."
       }
     },
     {
@@ -2302,7 +2392,9 @@
         ],
         "type_quote": "100% Mobile Service ... Based in Burnet and traveling daily throughout the Highland Lakes, greater Austin, the Hill Country, and San Antonio.",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Mobile RV Repair in Burnet, TX | Amazing RV Solutions | Central Texas Skip to main content Burnet, TX & Central Texas Mon–Fri: 8:00 AM – 5:00 PM (855) 642-1714 info@amazingrvso"
       }
     },
     {
@@ -2328,7 +2420,7 @@
       ],
       "region": "Highland Lakes",
       "evidence": {
-        "checked": "https://www.ltssvcs.com/emergency-mobile-rv-repairs",
+        "checked": "https://www.ltssvcs.com/",
         "phone_quote": "(512) 234-2826",
         "coverage_quotes": [
           "Serving the Entire Highland Lakes Community and All Surrounding Areas, TX",
@@ -2336,7 +2428,10 @@
         ],
         "type_quote": "Our team of certified RV mechanics brings a wealth of experience to every job ... We're proud to offer mobile services, bringing our expertise directly to you",
         "emergency_quote": "Our certified RV mechanics are available 24/7/365 for a wide range of services",
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "e_quote": "Trust LTS Luxury Coach Care to keep you cozy on every adventure! Learn More Learn More Emergency Mobile RV Repairs When unexpected issues arise, our emergency mobile RV repair service is just a phone call away.",
+        "mobile_quote": "ving the Serving the Entire Highland Lakes Community and All Surrounding Areas Shop For Parts Request Appointment Call or Text Us (512) 234-2826 Home RV Repair & Service Mobile RV Repair RV Air Conditioning Services RV Appliance Repairs RV Awning & Slide Topper Repairs RV Batteries RV Electrical Repairs RV Leveling Jacks and Slide-Out Repairs R"
       }
     },
     {
@@ -2359,14 +2454,16 @@
         "Robstown"
       ],
       "evidence": {
-        "checked": "https://dansmobilervrepair.com/contact-us/",
+        "checked": "https://dansmobilervrepair.com/",
         "phone_quote": "Corpus Christi, TX - 361-850-0318",
         "coverage_quotes": [
           "We service Corpus Christi, TX and the surrounding area."
         ],
         "type_quote": "We will send our certified repair specialist to your location. We can do all repairs to your RV on-site.",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Dan’s Mobile RV Repair – Corpus Christi, Kingsville, Rockport, Robstown Mobile RV Repair, RV Plumbing, RV Remodels, RV Road Side Assistance Home Services RV Parks Contact Us ✕ SERVIC"
       }
     },
     {
@@ -2392,7 +2489,9 @@
         ],
         "type_quote": "Your location, our destination. That means our business will come to you for complete RV repairs.",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "South Texas RV Repair, LLC Media Special-izations Photos Roof Job Slide Show About us About Me South Texas RV Repair A mobile company founded in 2019 - based out of Rockport Phone Call us! Email Email us! Google Business Google us! Hours of operation MON-FRI 8-6 WEEKENDS call for availabilty We"
       }
     },
     {
@@ -2426,7 +2525,10 @@
         ],
         "type_quote": "We offer on-site service Monday thru Friday with one of our three service trucks and do work Saturdays with limited service.",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "We offer on-site service Monday thru Friday with one of our three service trucks and do work Saturdays with limited service.",
+        "center_quote": "Warranty&#x27;s Home Links Gallery Extended Warranty&#x27;s Contact Us (361) 779-9304 Contact Us (361) 779-9304 About ACRV Center ACRV Center is a full service RV repair facility serving all of South Texas area with Quality Service and the areas largest selection of parts for servicing your rv."
       }
     },
     {
@@ -2458,7 +2560,9 @@
         ],
         "type_quote": "We combined a knowledgeable technician, with a service truck equipped with all the tools needed to make many RV repairs on site.",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "STATEWIDE MOBILE RV REPAIR WELCOME TO STATEWIDE MOBILE RV REPAIR Take a minute and see how many AMPS you could be using in your RV&#39;s 30 or 50 AMP electrical system."
       }
     },
     {
@@ -2492,7 +2596,9 @@
         ],
         "type_quote": "Mobile On-Site RV Service and Maintenance ... Most repairs can be completed at your campsite, home, or RV park without hauling your RV to a shop.",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Mobile RV Repair | Port Lavaca & Victoria | The RV Pro | The RV Pro The RV Pro Mobile RV Repair & Diagnostics RV AC • Electrical • Plumbing • Roof Repair • Appliances • Solar &"
       }
     },
     {
@@ -2518,14 +2624,17 @@
       ],
       "region": "Houston area",
       "evidence": {
-        "checked": "https://roamingbearsrv.com/service/",
+        "checked": "https://roamingbearsrv.com/",
         "phone_quote": "Phone : 281– 872– 9200",
         "coverage_quotes": [
           "Serving Class A, Class C, fifth wheels, and travel trailers throughout the Houston area."
         ],
         "type_quote": "we provide on-site mobile repair services for many issues. Call us to check availability and schedule a visit.",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "epair We offer full service RV repair thru our service company Houston RV Services, We specialize in RV roof, RV insurance work, RV paint and body work, we also offer RV mobile repair.",
+        "center_quote": "How do I schedule a repair or maintenance appointment? You can schedule service by calling our shop or using the online booking form on our website."
       }
     },
     {
@@ -2558,7 +2667,9 @@
         ],
         "type_quote": "Houston's Most Trusted RV Repair Specialists",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "What started as a passion for craftsmanship has grown into Houston's most trusted RV repair shop."
       }
     },
     {
@@ -2599,7 +2710,9 @@
         ],
         "type_quote": "We repair motorhomes, travel trailers, fifth wheels, and camper vans at our Spring, TX location.",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "Houston RV Repair - TX RV Repair Shop Houston Skip to content Schedule OPEN (MON - FRI) 7:00AM - 4:00PM Appointment APPOINTMENT (346) 708-4612 Home About RV Safety Inspection Checklist Services RV Windshield"
       }
     },
     {
@@ -2631,7 +2744,9 @@
         ],
         "type_quote": "Carey's RV Service Center offers Timely, Cost Effective Repair of Recreational Vehicles.",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "Carey&#39;s RV Service Center, Houston Texas Carey&#39;s RV Service Center, Houston Texas Professional Service, For all your RV needs RVDA-RVIA Certified Technicians."
       }
     },
     {
@@ -2677,7 +2792,9 @@
         ],
         "type_quote": "Mobile convenience— we come to you!",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "&bull; Fully insured! &bull; Over 10 years of expertise! &bull; Mobile convenience&mdash; we come to you! &bull; Warranty work&mdash; no problem! &bull; Insurance claims too! SERVICES WHAT WE DO We perform the following services and more."
       }
     },
     {
@@ -2709,7 +2826,9 @@
         ],
         "type_quote": "At Action RV Services of Conroe, TX we believe and know that no two RVs are the same.",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "Houston's RV Service Center | Collision, Upgrades | Action RV Conroe \"Our customers' satisfaction is our greatest responsibility and source of pride!\" 5902 West Davis, Conroe, TX 77304 | P: (936) 4"
       }
     },
     {
@@ -2742,7 +2861,9 @@
         ],
         "type_quote": "Bear Ridge - RV Repair Conroe, TX, Mobile RV Repair",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Mobile RV Repair in Tomball, Montgomery, Magnolia, Cypress & Conroe, TX | Bear Ridge RV Home RV Repair Services Services RV AC Repair RV Water Heater Repair RV Furnace Repair R"
       }
     },
     {
@@ -2774,7 +2895,10 @@
         ],
         "type_quote": "Whether your RV is located in your driveway or elsewhere, Prestige RV Service will conveniently come to you! We also offer full shop services by appointment only.",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Established Customers RV SERVICE Welcome to Prestige RV Service! We offer both Mobile RV Services primarily serving Brazoria, Harris, Galveston and Fort Bend Counties and Shop Services in Alvin, Texas by appointment.",
+        "center_quote": "stablished Customers RV SERVICE Welcome to Prestige RV Service! We offer both Mobile RV Services primarily serving Brazoria, Harris, Galveston and Fort Bend Counties and Shop Services in Alvin, Texas by appointment."
       }
     },
     {
@@ -2804,7 +2928,9 @@
         ],
         "type_quote": "Prompt & Professional Mobile RV Repair & Maintenance",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "EZ-Mobile-RV-Repair Home Services Photo Gallery Service Area Contact Us Home Services Photo Gallery Service Area Contact Us More Home Services Photo Gallery Service Area Contact U"
       }
     },
     {
@@ -2837,7 +2963,10 @@
         ],
         "type_quote": "Reliable RV Repairs: At Your Campsite or In Our Shop",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "content Services Service Packages Rates Inspections About HL Contact Blog Services Service Packages Rates Inspections About HL Contact Blog call now Reliable RV Repairs: At Your Campsite or In Our Shop NRVTA Certified Technician providing expert mobile service and full-shop repairs in San Leon and surrounding areas.",
+        "center_quote": "e Packages Rates Inspections About HL Contact Blog Services Service Packages Rates Inspections About HL Contact Blog call now Reliable RV Repairs: At Your Campsite or In Our Shop NRVTA Certified Technician providing expert mobile service and full-shop repairs in San Leon and surrounding areas."
       }
     },
     {
@@ -2871,7 +3000,10 @@
         ],
         "type_quote": "We come directly to your location, saving you the hassle of moving or towing your RV.",
         "emergency_quote": "✦ 24/7 Mobile RV Roof Repair ✦ ... Emergency services (storm damage, separation while driving).",
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "e_quote": "ion, and Replacement Galveston RV Roofing, Where Quality Travels with You! &ldquo;Roof Damage? We will work to help resolve any and all insurance claims for you!!&rdquo; Emergency services (storm damage, separation while driving).",
+        "mobile_quote": "Get A Quote Conttact Us ✦ 24/7 Mobile RV Roof Repair ✦ Leak Detection & Waterproofing ✦ Full Roof Replacements ✦ Insurance Claim Assistance ✦ Serving Galveston, Harris & Brazoria Counties 25 Years Of experie"
       }
     },
     {
@@ -2904,7 +3036,10 @@
         ],
         "type_quote": "For your convenience, we offer mobile service calls.",
         "emergency_quote": "Call us for 24/7 emergency services and roadside assistance.",
-        "roadside_quote": "From roadside services to general recreational repairs and recreational services, the certified technicians are standing by, ready to help you with your vehicle."
+        "roadside_quote": "From roadside services to general recreational repairs and recreational services, the certified technicians are standing by, ready to help you with your vehicle.",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "e_quote": "Call us for 24/7 emergency services and roadside assistance.",
+        "mobile_quote": "& Surrounding Areas Home Recreational Service Recreational Repairs Request an Appointment Gallery Reviews About Contact RV Repairs and Services in Beaumont, TX We offer Mobile Service Calls Warranties Available We Do Insurance Work (409) 794-2243 Hours: Request an Appointment We Go the Extra Mile Get the 5-star service and repairs you need for"
       }
     },
     {
@@ -2935,7 +3070,9 @@
         ],
         "type_quote": "You can bring your RV to our shop for everything from appliances and air conditioning repair to underbody and structural work.",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "ur over 40 years of experience ensures the job will be done right the first time! Read more About Our RV Service Handling Most of Your RV Service Needs Read more You can bring your RV to our shop for everything from appliances and air conditioning repair to underbody and structural work."
       }
     },
     {
@@ -2968,7 +3105,10 @@
         ],
         "type_quote": "That's why Cornerstone Mobile RV Repair will come to you.",
         "emergency_quote": "24 / 7 Emergency Service Our office hours are Mon-Fri 7am-6pm. After hours and weekends Emergency Service available.",
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "e_quote": "04 Competitive Prices Call us for a quote! 05 24 / 7 Emergency Service Our office hours are Mon-Fri 7am-6pm.",
+        "mobile_quote": "Cornerstone mobile RV Repair &#8211; Mobile RV repair services in Houston, Texas and surrounding areas Skip to content Home Services Reviews Contact CALL: (281) 223-4491 Home Services Revi"
       }
     },
     {
@@ -3002,14 +3142,17 @@
       "region": "East Houston",
       "spec": "Major repairs such as slide-out floor rebuilds, roof replacements, and blow-out damage with interior damage are scheduled at their shop facility.",
       "evidence": {
-        "checked": "https://cuttingedgervservice.com/mobile-rv-repair",
+        "checked": "https://cuttingedgervservice.com/",
         "phone_quote": "281-576-0044 (2815760044)",
         "coverage_quotes": [
           "Mobile Repair Services is available for the following areas: Wallisville, Anahuac, Liberty, Dayton, Crosby, Baytown, Cove, and Mont Belvieu."
         ],
         "type_quote": "Major RV Repairs such as: slide out floor rebuilds, roof replacements, and blow out damages that have interior damage, etc. will need to be scheduled at our shop facility.",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "nal Roof Solutions for Your RV Needs RV Life Made simple Cutting Edge RV Service 12535 I-10 East Baytown, TX 77523 US 281-576-0044 281-576-0044 Home RV Service & Repairs Mobile RV Repair Valet Storage About Us More Home RV Service & Repairs Mobile RV Repair Valet Storage About Us Home RV Service & Repairs Mobile RV Repair Valet Storage About Us",
+        "center_quote": "RV SERVICE & REPAIRS Cutting Edge RV Service is a Full-Service Repair Facility, from the Tires to the Roof and everything in between."
       }
     },
     {
@@ -3038,14 +3181,16 @@
       ],
       "region": "West Houston",
       "evidence": {
-        "checked": "https://www.homeawaycamping.com/rv-services-maintenance-and-repair.html",
+        "checked": "https://www.homeawaycamping.com/",
         "phone_quote": "TAP TO CALL (832) 859-9850",
         "coverage_quotes": [
           "We're locally owned and insured, serving Brookshire, Katy, Hempstead, and West Houston RV parks."
         ],
         "type_quote": "Brookshire's Mobile RV Experts",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Home HOMEAWAY CAMPING Home Mobile RV Repair and Service | Locations Brookshire Fulshear Hempstead Katy Sealy Waller Greater West Houston Richmond Rosenberg Sugar Land Cypress Tomball Spring Missouri City"
       }
     },
     {
@@ -3071,14 +3216,16 @@
       ],
       "region": "Tomball and surrounding",
       "evidence": {
-        "checked": "https://fullhookupmobilervrepair.com/home-page",
+        "checked": "https://fullhookupmobilervrepair.com/",
         "phone_quote": "Call: 832-349-2716 (8323492716)",
         "coverage_quotes": [
           "The Full Hook Up Mobile RV Repair | Tomball, TX"
         ],
         "type_quote": "We are a trusted local source for on-site repairs because we deliver on our promises of fast service and affordable rates.",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Gallery Service Area Contact Us More Home Page Services Photo Gallery Service Area Contact Us Home Page Services Photo Gallery Service Area Contact Us Call: 832-349-2716 Mobile RV Repair & Services Mobile RV Repair & Services Mobile RV Repair & Services Mobile RV Repair & Services Certified & Insured RV Technician Call Now Call: 832-349-2716 Mo"
       }
     },
     {
@@ -3111,7 +3258,9 @@
         ],
         "type_quote": "Whether you need roof repairs, slide-out service, electrical diagnostics, plumbing fixes, or a full mechanical overhaul, Woodlands RV Center in The Woodlands, TX is the trusted local shop to keep your rig road-ready year-round.",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "eed roof repairs, slide-out service, electrical diagnostics, plumbing fixes, or a full mechanical overhaul, Woodlands RV Center in The Woodlands, TX is the trusted local shop to keep your rig road-ready year-round."
       }
     },
     {
@@ -3144,7 +3293,9 @@
         ],
         "type_quote": "At Adventure Recreational Vehicle Repairs, we pride ourselves on providing our customers with prompt, quality, and convenient service.",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "We offer mobile service in the Washington County and surrounding areas."
       }
     },
     {
@@ -3180,7 +3331,9 @@
         ],
         "type_quote": "We come to you when you need service or repairs. Campsite, home or on the road, we are here to help you keep on your Way!",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Contact Us About Mobile RV Service and Repair We come to you when you need service or repairs."
       }
     },
     {
@@ -3206,14 +3359,16 @@
       ],
       "region": "Houston",
       "evidence": {
-        "checked": "https://cdrvservicecenter.com/index.html",
+        "checked": "https://cdrvservicecenter.com/",
         "phone_quote": "C & D RV Service Center 2311 Preston Ave, Pasadena, TX 77503 713-534-6304",
         "coverage_quotes": [
           "C & D RV Service Center - Houston Texas Trailer Repair"
         ],
         "type_quote": "We are a full service RV and Trailer repair facility.",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "C & D RV Service Center - Houston Texas Trailer Repair | RV & Trailer Repair & Parts Home Services FOR SALE Contact OUR WORK RV PRODUCTS 713-534-6304 Welco me to C&D RV Service Center We are a"
       }
     },
     {
@@ -3244,7 +3399,9 @@
         ],
         "type_quote": "We Come To You",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Discount RV & Trailer Repair: Mobile Repair Solutions Get in Touch Home: Welcome Our Services Discount RV & Trailer Repair will do more than just fix your immediate RV issues! Our professional team will als"
       }
     }
   ]

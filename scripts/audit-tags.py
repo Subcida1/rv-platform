@@ -47,7 +47,8 @@ CLAIMS = {
     "r": ("roadside / chassis work",
           r"\bchassis\b|\bdrivetrain\b|engine (repair|diagnostic|work)|\bbrakes?\b|"
           r"\bsuspension\b|\btransmission\b|\bframe repair\b|fault codes|"
-          r"roadside (repair|breakdown)|will not start|won'?t start|overheating|"
+          r"road\s?side\s+(repair|breakdown|service|services|assistance|help)|"
+          r"will not start|won'?t start|overheating|"
           # "Auto and RV Repair" IS a claim to repair the vehicle, and the first version of
           # this pattern did not list it, so Florence RV and Pacific Crest were flagged for
           # missing words their sites use.

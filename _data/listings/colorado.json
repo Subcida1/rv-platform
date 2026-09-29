@@ -915,7 +915,7 @@
       "region": "Summit County",
       "spec": "In-county repair diagnosis is $125. Service calls outside Summit County are billed at $2.50 per mile.",
       "evidence": {
-        "checked": "https://fourseasonsmobilervrepair.com/parts-%26-faq",
+        "checked": "https://fourseasonsmobilervrepair.com/",
         "phone_quote": "(970) 471-8772",
         "coverage_quotes": [
           "Repair diagnosis service calls in Summit County are $125.00. Outside of Summit County, service calls are $2.50 per mile.",
@@ -923,7 +923,9 @@
         ],
         "type_quote": "RV technicians in CO - Four Seasons Mobile RV Repair",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "RV technicians in CO - Four Seasons Mobile RV Repair Home Services & Repair Parts & FAQ About Us More Home Services & Repair Parts & FAQ About Us Home Services & Repair Parts & FAQ About Us “We Work While You Pla"
       }
     },
     {
@@ -954,7 +956,9 @@
         ],
         "type_quote": "We are the oldest Mobile RV (recreational vehicle) Repair Service based in Weld County, Colorado.",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "DM RV Repair Mobile Service We are the oldest Mobile RV (recreational vehicle) Repair Service based in Weld County, Colorado."
       },
       "reg": "plains-co"
     },
@@ -981,7 +985,9 @@
         ],
         "type_quote": "we provide top-notch mobile RV repair services to customers throughout Southwest Colorado and Northern New Mexico",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Expert RV Maintenance and Repair Services Just Us Mobile RV Repair Just Us Mobile RV Repair Just Us Mobile RV Repair Just Us Mobile RV Repair Just Us Mobile RV Repair Just Us Mobile RV Repair Just Us Mobile RV Repair Just Us M"
       }
     },
     {
@@ -1007,7 +1013,10 @@
         "coverage_quotes": [],
         "type_quote": "OUR SERVICES ... RV Pro can send a technician out at a moments notice in most cases.",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "--> Rv Service | RV Pro mobile rv repair | United States top of page Your comfort is priority #1 HOME ABOUT US SERVICES CONTACT Frequent questions More Use tab to navigate through the menu items.",
+        "center_quote": "OUR SERVICES - Generator Mechanics - All RV Maintenance - Accessory installations - Hitch and wiring service - RV appliance repair - Solar and Batteries ​ VISIT US 26076 US Highway PO Box 716 South Fork, Co."
       }
     },
     {
@@ -1049,7 +1058,10 @@
         ],
         "type_quote": "Our RV technicians are certified in all aspects of camper repair.",
         "emergency_quote": null,
-        "roadside_quote": "Emergency and Road Side Services"
+        "roadside_quote": "Emergency and Road Side Services",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "--> Mobile RV Repair | Kodiak RV Repair top of page RV Repair Mobile RV Repair RV Maintenance RV Parts Giving Back Kodiak Kares Give Aways! Sponsorships About Us Contact Us More Us",
+        "center_quote": "1-970-422-1222 Mobile RV Repair We know towing your camper into our shop isn&#39;t always an option."
       }
     },
     {
@@ -1080,7 +1092,9 @@
         ],
         "type_quote": "We're a family-owned mobile RV repair company that provides quality service to Colorado's Front Range RVers.",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "RVFix Mobile RV Repair In Arvada, Co Serving the Colorado Front Range! Call us today! ‪ (303) 241-2290 Close Who We Are Services Service Area Request Service Trusted Mobile RV Repair"
       }
     },
     {
@@ -1101,7 +1115,7 @@
       ],
       "region": "the Front Range / Denver area; Denver metro area",
       "evidence": {
-        "checked": "https://hitechrvservice.com/service-areas/mobile-rv-service-idaho-springs-co/",
+        "checked": "https://hitechrvservice.com/",
         "phone_quote": "Call us now at 720-292-1499",
         "coverage_quotes": [
           "Hi‑Tech RV Service & Solar Specialists proudly serves Idaho Springs, Colorado, with expert mobile RV repair, maintenance, and solar upgrades.",
@@ -1109,7 +1123,9 @@
         ],
         "type_quote": "Our Certified Mobile RV Service Techs and Solar Specialists come to you.",
         "emergency_quote": null,
-        "roadside_quote": null
+        "roadside_quote": null,
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "ization, De-winterization, and Pre-Trip Inspections RV Blog Photo Gallery Get an estimate Contact us Hi-Tech RV Service, RV Inspections & Solar Specialists Our Certified Mobile RV Service Techs and Solar Specialists come to you."
       },
       "reg": "front-range"
     }
