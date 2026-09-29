@@ -3,7 +3,7 @@
    those businesses may be 100 miles away. This asks each state page's own finder for its
    largest towns and reports how many businesses come back. */
 const fs = require('fs'), path = require('path'), vm = require('vm');
-const ROOT = '/home/user/Documents/rv-platform';
+const ROOT = path.resolve(__dirname, '..');   // portable: the runner's checkout is not at this machine's path
 const finder = fs.readFileSync(path.join(ROOT, 'assets/js/finder.js'), 'utf8');
 
 const ASK = {

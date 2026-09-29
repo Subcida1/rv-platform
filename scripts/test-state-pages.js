@@ -3,7 +3,10 @@
    loading another state's file), so it is checked rather than assumed: each page is driven
    through its own finder code in a Node VM, with the state's real files. */
 const fs = require('fs'), path = require('path'), vm = require('vm');
-const ROOT = '/home/user/Documents/rv-platform';
+// path.resolve(__dirname, '..'), like every other test here. This file shipped with the absolute
+// path of the machine it was written on, so it passed locally and failed on the runner - every
+// push, for a day, mailing Ty a failure notice for a test that was green on his desk.
+const ROOT = path.resolve(__dirname, '..');
 const finder = fs.readFileSync(path.join(ROOT, 'assets/js/finder.js'), 'utf8');
 
 const STATES = [['arizona','AZ','Phoenix'],['california','CA','Redding'],['colorado','CO','Denver'],
