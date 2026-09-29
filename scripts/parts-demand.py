@@ -80,17 +80,23 @@ def main():
     print("measuring %d parts, shortest phrasing first\n" % len(parts))
     measured = 0
     for p in parts:
-        best, best_q = None, None
-        for q in queries_for(p):
+        # THE FIRST VERSION TOOK THE MAX ACROSS QUERIES AND PRODUCED NONSENSE: "TV and
+        # entertainment" came back at 8.9 million a week, which is the volume for "TV", not for
+        # anything in an RV. A bare head term is always bigger than the RV-qualified one, so the
+        # ranking was really a ranking of how broad each part's shortest word is.
+        # Now the RV-qualified form is asked FIRST and wins if it answers; the bare form is only a
+        # fallback, and it is marked, because a number for "tires" is not our audience.
+        best, best_q, qualified = None, None, True
+        for i, q in enumerate(queries_for(p)):
             v = volume(key, q)
             time.sleep(0.4)
-            if v is not None and (best is None or v > best):
-                best, best_q = v, q
+            if v is not None:
+                best, best_q, qualified = v, q, (i == 0 or q.startswith("rv "))
+                break
+        p["demand"] = ({"weekly": best, "query": best_q, "rv_qualified": qualified}
+                       if best is not None else None)
         if best is not None:
-            p["demand"] = {"weekly": best, "query": best_q}
             measured += 1
-        else:
-            p["demand"] = None
     with_gap = [p for p in parts if not p["guide"] and p.get("demand")]
     with_gap.sort(key=lambda p: -p["demand"]["weekly"])
     covered = [p for p in parts if p["guide"] and p.get("demand")]

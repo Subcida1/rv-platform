@@ -1,5 +1,5 @@
 {
-  "note": "The parts index: every part an RV is made of, by system, with what it does, how it fails, which RV types have it, which of our guides already covers it, and the phrasings a reader would search. Built 2026-09-29 from Ty's list plus the 110 component makers already catalogued in _data/manuals.json. No models, no specs: this is the index that tells us what content to research next. Two kinds of guide exist and only one maps cleanly here: a PART guide (rv-furnace-not-working, rv-water-pump-wont-prime) belongs to one part, while a SYMPTOM guide (rv-two-appliances-stopped, rv-12-volt-problems, rv-towing-capacity) spans several parts and links to none of them, which is why nine of the 35 guides appear nowhere in this file. A symptom guide is not a gap; it is a different shape, and the content plan should count both.",
+  "note": "The parts index: every part an RV is made of, by system, with what it does, how it fails, which RV types have it, which of our guides already covers it, and the phrasings a reader would search. Built 2026-09-29 from Ty's list plus the 110 component makers already catalogued in _data/manuals.json. No models, no specs: this is the index that tells us what content to research next.",
   "systems": [
     {
       "key": "towing-and-running-gear",
@@ -27,7 +27,11 @@
             "rv coupler adjustment",
             "hitch coupler loose",
             "trailer coupler replacement"
-          ]
+          ],
+          "demand": {
+            "weekly": 1740,
+            "query": "coupler"
+          }
         },
         {
           "id": "tongue-jack",
@@ -51,7 +55,11 @@
             "electric tongue jack died",
             "rv tongue jack replacement",
             "trailer jack switch"
-          ]
+          ],
+          "demand": {
+            "weekly": 526,
+            "query": "trailer jack"
+          }
         },
         {
           "id": "stabilizer-jacks",
@@ -75,7 +83,11 @@
             "stabilizer jack bent",
             "scissor jack will not crank",
             "rv stabilizer replacement"
-          ]
+          ],
+          "demand": {
+            "weekly": 173,
+            "query": "stabilisers"
+          }
         },
         {
           "id": "leveling-jacks-hydraulic",
@@ -98,7 +110,11 @@
             "hydraulic jacks won't retract",
             "jack down alarm",
             "rv leveling system error"
-          ]
+          ],
+          "demand": {
+            "weekly": 28,
+            "query": "hydraulic levelers"
+          }
         },
         {
           "id": "weight-distribution-hitch",
@@ -119,7 +135,11 @@
             "weight distribution hitch setup",
             "wd hitch noise",
             "hitch bar weight"
-          ]
+          ],
+          "demand": {
+            "weekly": 88,
+            "query": "equalizer hitch"
+          }
         },
         {
           "id": "sway-control",
@@ -139,7 +159,11 @@
             "trailer sway fix",
             "sway control adjustment",
             "anti sway bar rv"
-          ]
+          ],
+          "demand": {
+            "weekly": 596,
+            "query": "sway bar"
+          }
         },
         {
           "id": "safety-chains",
@@ -160,7 +184,11 @@
           "kw": [
             "safety chain length rv",
             "safety chains crossed"
-          ]
+          ],
+          "demand": {
+            "weekly": 44,
+            "query": "safety chains"
+          }
         },
         {
           "id": "breakaway-switch",
@@ -180,7 +208,11 @@
           "kw": [
             "breakaway switch test",
             "breakaway cable replacement"
-          ]
+          ],
+          "demand": {
+            "weekly": 54,
+            "query": "breakaway cable"
+          }
         },
         {
           "id": "trailer-brakes",
@@ -204,7 +236,11 @@
             "trailer brakes not working",
             "electric brake magnet replacement",
             "surge brake problems"
-          ]
+          ],
+          "demand": {
+            "weekly": 106,
+            "query": "trailer brakes"
+          }
         },
         {
           "id": "brake-controller",
@@ -227,7 +263,11 @@
             "brake controller gain setting",
             "brake controller not working",
             "c30 brake controller"
-          ]
+          ],
+          "demand": {
+            "weekly": 539,
+            "query": "brake controller"
+          }
         },
         {
           "id": "axle",
@@ -249,7 +289,11 @@
             "bent trailer axle",
             "torsion axle replacement",
             "axle alignment rv"
-          ]
+          ],
+          "demand": {
+            "weekly": 10632,
+            "query": "axle"
+          }
         },
         {
           "id": "leaf-springs-and-shackles",
@@ -271,7 +315,11 @@
             "trailer leaf spring broken",
             "shackle bushing replacement",
             "wet bolt kit rv"
-          ]
+          ],
+          "demand": {
+            "weekly": 82061,
+            "query": "suspension"
+          }
         },
         {
           "id": "wheel-bearings",
@@ -295,7 +343,11 @@
             "trailer wheel bearing repack",
             "bearing replacement rv",
             "grease seal leaking trailer"
-          ]
+          ],
+          "demand": {
+            "weekly": 329077,
+            "query": "races"
+          }
         },
         {
           "id": "tires",
@@ -321,7 +373,11 @@
             "best trailer tires",
             "tire load range rv",
             "rv tire age"
-          ]
+          ],
+          "demand": {
+            "weekly": 161286,
+            "query": "tires"
+          }
         },
         {
           "id": "tire-pressure-monitoring",
@@ -344,7 +400,11 @@
             "rv tpms not reading",
             "tpms sensor battery",
             "best rv tire monitor"
-          ]
+          ],
+          "demand": {
+            "weekly": 3203,
+            "query": "tpms"
+          }
         },
         {
           "id": "lug-nuts-and-torque",
@@ -367,7 +427,11 @@
             "rv lug nut torque",
             "trailer wheel torque spec",
             "lug nuts loosening"
-          ]
+          ],
+          "demand": {
+            "weekly": 470,
+            "query": "lug nuts"
+          }
         },
         {
           "id": "fifth-wheel-landing-gear",
@@ -388,7 +452,8 @@
           "kw": [
             "fifth wheel landing gear not working",
             "landing gear motor replacement"
-          ]
+          ],
+          "demand": null
         },
         {
           "id": "kingpin-and-fifth-wheel-hitch",
@@ -410,7 +475,11 @@
             "fifth wheel hitch clunk",
             "kingpin box replacement",
             "slider hitch stuck"
-          ]
+          ],
+          "demand": {
+            "weekly": 60060,
+            "query": "kingpin"
+          }
         },
         {
           "id": "toad-setup",
@@ -431,7 +500,11 @@
             "flat tow setup rv",
             "tow bar binding",
             "dinghy braking system"
-          ]
+          ],
+          "demand": {
+            "weekly": 631,
+            "query": "tow bar"
+          }
         },
         {
           "id": "air-suspension-and-helper-springs",
@@ -453,7 +526,11 @@
             "rv air bag leak",
             "sumo spring install",
             "timbren rv"
-          ]
+          ],
+          "demand": {
+            "weekly": 566,
+            "query": "air suspension"
+          }
         }
       ]
     },
@@ -485,7 +562,11 @@
             "rv power cord melted",
             "shore power plug burned",
             "50 amp cord replacement"
-          ]
+          ],
+          "demand": {
+            "weekly": 1087,
+            "query": "power cord"
+          }
         },
         {
           "id": "shore-power-inlet",
@@ -507,7 +588,8 @@
           "kw": [
             "rv power inlet replacement",
             "shore power inlet burned"
-          ]
+          ],
+          "demand": null
         },
         {
           "id": "surge-protector-and-ems",
@@ -530,7 +612,11 @@
             "rv surge protector tripping",
             "ems low voltage shutdown",
             "pedestal miswired"
-          ]
+          ],
+          "demand": {
+            "weekly": 90372,
+            "query": "ems"
+          }
         },
         {
           "id": "transfer-switch",
@@ -552,7 +638,11 @@
             "rv transfer switch failure",
             "ats chattering",
             "generator not powering coach"
-          ]
+          ],
+          "demand": {
+            "weekly": 57531,
+            "query": "ats"
+          }
         },
         {
           "id": "breaker-panel-and-120v-breakers",
@@ -576,7 +666,11 @@
             "rv breaker keeps tripping",
             "gfci breaker rv",
             "distribution panel wiring"
-          ]
+          ],
+          "demand": {
+            "weekly": 193,
+            "query": "distribution panel"
+          }
         },
         {
           "id": "converter-and-charger",
@@ -601,7 +695,11 @@
             "rv converter not charging battery",
             "converter fan loud",
             "lithium charge profile converter"
-          ]
+          ],
+          "demand": {
+            "weekly": 1420345,
+            "query": "converter"
+          }
         },
         {
           "id": "inverter",
@@ -626,7 +724,11 @@
             "rv inverter not working",
             "inverter alarm code",
             "pure sine vs modified sine rv"
-          ]
+          ],
+          "demand": {
+            "weekly": 16300,
+            "query": "inverter"
+          }
         },
         {
           "id": "inverter-charger",
@@ -646,7 +748,11 @@
           "kw": [
             "inverter charger fault code",
             "magnum remote panel not working"
-          ]
+          ],
+          "demand": {
+            "weekly": 184,
+            "query": "xantrex"
+          }
         },
         {
           "id": "house-battery",
@@ -672,7 +778,11 @@
             "rv battery not holding charge",
             "lifepo4 bms shutdown",
             "agm vs lithium rv"
-          ]
+          ],
+          "demand": {
+            "weekly": 528,
+            "query": "deep cycle"
+          }
         },
         {
           "id": "battery-disconnect",
@@ -695,7 +805,11 @@
           "kw": [
             "rv battery disconnect switch",
             "battery draining while stored"
-          ]
+          ],
+          "demand": {
+            "weekly": 33338,
+            "query": "kill switch"
+          }
         },
         {
           "id": "battery-monitor-and-shunt",
@@ -717,7 +831,11 @@
             "rv battery monitor inaccurate",
             "shunt wiring",
             "state of charge"
-          ]
+          ],
+          "demand": {
+            "weekly": 5741,
+            "query": "shunt"
+          }
         },
         {
           "id": "solar-panels",
@@ -741,7 +859,11 @@
             "rv solar not charging",
             "solar panel shade loss",
             "mc4 connector corrosion"
-          ]
+          ],
+          "demand": {
+            "weekly": 1333161,
+            "query": "solar"
+          }
         },
         {
           "id": "solar-charge-controller",
@@ -764,7 +886,11 @@
           "kw": [
             "mppt controller settings",
             "solar controller not charging"
-          ]
+          ],
+          "demand": {
+            "weekly": 1872,
+            "query": "mppt"
+          }
         },
         {
           "id": "fuses",
@@ -788,7 +914,11 @@
             "rv fuse keeps blowing",
             "12 volt fuse location",
             "inline fuse rv"
-          ]
+          ],
+          "demand": {
+            "weekly": 1251,
+            "query": "fuses"
+          }
         },
         {
           "id": "12-volt-outlets-and-usb",
@@ -811,7 +941,11 @@
           "kw": [
             "rv 12v outlet not working",
             "usb port replacement rv"
-          ]
+          ],
+          "demand": {
+            "weekly": 4699,
+            "query": "usb port"
+          }
         },
         {
           "id": "120-volt-outlets-and-gfci",
@@ -835,7 +969,11 @@
             "rv outlets not working",
             "gfci reset rv",
             "outlet no power"
-          ]
+          ],
+          "demand": {
+            "weekly": 1023,
+            "query": "gfci outlet"
+          }
         },
         {
           "id": "light-fixtures-and-leds",
@@ -860,7 +998,11 @@
             "rv lights flickering",
             "led light replacement rv",
             "porch light not working"
-          ]
+          ],
+          "demand": {
+            "weekly": 89354,
+            "query": "led lights"
+          }
         },
         {
           "id": "wiring-harness-and-connectors",
@@ -885,7 +1027,11 @@
             "rv wiring corrosion",
             "bad ground rv",
             "rodent chewed wiring rv"
-          ]
+          ],
+          "demand": {
+            "weekly": 1046,
+            "query": "wiring harness"
+          }
         },
         {
           "id": "generator",
@@ -908,7 +1054,11 @@
             "rv generator won't start",
             "onan surging",
             "generator starts then dies"
-          ]
+          ],
+          "demand": {
+            "weekly": 1303119,
+            "query": "generator"
+          }
         },
         {
           "id": "control-and-monitor-panel",
@@ -933,7 +1083,11 @@
             "rv control panel not working",
             "monitor panel blank",
             "touch panel unresponsive"
-          ]
+          ],
+          "demand": {
+            "weekly": 898748,
+            "query": "control"
+          }
         }
       ]
     },
@@ -965,7 +1119,11 @@
             "rv fresh water tank cleaning",
             "fresh tank cracked",
             "tank sag"
-          ]
+          ],
+          "demand": {
+            "weekly": 56,
+            "query": "fresh water tank"
+          }
         },
         {
           "id": "gravity-fill-and-city-water-inlet",
@@ -989,7 +1147,8 @@
             "city water filling fresh tank",
             "rv water inlet check valve",
             "gravity fill cap"
-          ]
+          ],
+          "demand": null
         },
         {
           "id": "water-pressure-regulator",
@@ -1011,7 +1170,11 @@
             "rv water pressure regulator",
             "what psi for rv water",
             "regulator failed"
-          ]
+          ],
+          "demand": {
+            "weekly": 1091,
+            "query": "pressure regulator"
+          }
         },
         {
           "id": "inline-water-filter",
@@ -1032,7 +1195,11 @@
           "kw": [
             "rv water filter cartridge",
             "filter housing leaking"
-          ]
+          ],
+          "demand": {
+            "weekly": 75530,
+            "query": "water filter"
+          }
         },
         {
           "id": "water-pump",
@@ -1058,7 +1225,11 @@
             "rv water pump won't prime",
             "water pump runs constantly",
             "rv pump surging"
-          ]
+          ],
+          "demand": {
+            "weekly": 3678,
+            "query": "water pump"
+          }
         },
         {
           "id": "pump-strainer-and-check-valve",
@@ -1080,7 +1251,11 @@
           "kw": [
             "water pump strainer clogged",
             "pump check valve stuck"
-          ]
+          ],
+          "demand": {
+            "weekly": 2919,
+            "query": "strainer"
+          }
         },
         {
           "id": "accumulator-tank",
@@ -1100,7 +1275,11 @@
           "kw": [
             "rv accumulator tank",
             "water pump cycling fix"
-          ]
+          ],
+          "demand": {
+            "weekly": 1579,
+            "query": "accumulator"
+          }
         },
         {
           "id": "pex-lines-and-fittings",
@@ -1124,7 +1303,11 @@
             "rv pex leak",
             "water line froze and split",
             "crimp ring replacement"
-          ]
+          ],
+          "demand": {
+            "weekly": 21326,
+            "query": "pex"
+          }
         },
         {
           "id": "low-point-drains",
@@ -1146,7 +1329,11 @@
           "kw": [
             "rv low point drains location",
             "low point drain leaking"
-          ]
+          ],
+          "demand": {
+            "weekly": 25,
+            "query": "low point drain"
+          }
         },
         {
           "id": "water-heater-tank",
@@ -1171,7 +1358,11 @@
             "rv water heater not heating",
             "water heater smells like rotten eggs",
             "rv water heater leaking"
-          ]
+          ],
+          "demand": {
+            "weekly": 38051,
+            "query": "suburban"
+          }
         },
         {
           "id": "water-heater-tankless",
@@ -1195,7 +1386,11 @@
             "tankless rv water heater cold",
             "aquago error code",
             "tankless water heater freeze"
-          ]
+          ],
+          "demand": {
+            "weekly": 210938,
+            "query": "on demand"
+          }
         },
         {
           "id": "water-heater-anode-rod",
@@ -1216,7 +1411,11 @@
           "kw": [
             "rv water heater anode replacement",
             "anode rod ate away"
-          ]
+          ],
+          "demand": {
+            "weekly": 4112,
+            "query": "anode"
+          }
         },
         {
           "id": "water-heater-bypass",
@@ -1237,7 +1436,11 @@
           "kw": [
             "water heater bypass valve position",
             "rv bypass kit install"
-          ]
+          ],
+          "demand": {
+            "weekly": 53,
+            "query": "bypass kit"
+          }
         },
         {
           "id": "faucets-and-shower-mixer",
@@ -1262,7 +1465,11 @@
             "rv faucet dripping",
             "rv shower valve replacement",
             "low water pressure rv"
-          ]
+          ],
+          "demand": {
+            "weekly": 14861,
+            "query": "faucets"
+          }
         },
         {
           "id": "shower-pan-and-drain",
@@ -1284,7 +1491,11 @@
           "kw": [
             "rv shower drain clogged",
             "shower pan crack repair"
-          ]
+          ],
+          "demand": {
+            "weekly": 33764,
+            "query": "shower drain"
+          }
         },
         {
           "id": "outside-shower",
@@ -1305,7 +1516,11 @@
           "kw": [
             "rv outside shower leaking",
             "outside shower winterize"
-          ]
+          ],
+          "demand": {
+            "weekly": 29,
+            "query": "outside shower"
+          }
         },
         {
           "id": "water-system-winterising",
@@ -1329,7 +1544,11 @@
             "how to winterize an rv",
             "rv antifreeze amount",
             "blow out water lines"
-          ]
+          ],
+          "demand": {
+            "weekly": 2372,
+            "query": "antifreeze"
+          }
         }
       ]
     },
@@ -1360,7 +1579,11 @@
             "rv toilet won't flush",
             "toilet not holding water",
             "rv toilet seal replacement"
-          ]
+          ],
+          "demand": {
+            "weekly": 160725,
+            "query": "toilet"
+          }
         },
         {
           "id": "toilet-vacuum-or-macerator",
@@ -1381,7 +1604,11 @@
           "kw": [
             "vacuflush losing vacuum",
             "macerator toilet clogged"
-          ]
+          ],
+          "demand": {
+            "weekly": 160725,
+            "query": "toilet"
+          }
         },
         {
           "id": "toilet-composting",
@@ -1401,7 +1628,11 @@
           "kw": [
             "composting toilet rv smell",
             "composting toilet fan replacement"
-          ]
+          ],
+          "demand": {
+            "weekly": 160725,
+            "query": "toilet"
+          }
         },
         {
           "id": "cassette-toilet",
@@ -1421,7 +1652,11 @@
           "kw": [
             "cassette toilet leaking",
             "cassette toilet seal"
-          ]
+          ],
+          "demand": {
+            "weekly": 7633,
+            "query": "cassette"
+          }
         },
         {
           "id": "black-tank",
@@ -1446,7 +1681,11 @@
             "black tank sensor wrong",
             "black tank pyramid",
             "holding tank crack"
-          ]
+          ],
+          "demand": {
+            "weekly": 1517,
+            "query": "black tank"
+          }
         },
         {
           "id": "grey-tank",
@@ -1470,7 +1709,11 @@
             "grey tank smell",
             "grey tank sensor",
             "galley tank"
-          ]
+          ],
+          "demand": {
+            "weekly": 81,
+            "query": "grey tank"
+          }
         },
         {
           "id": "gate-valves",
@@ -1495,7 +1738,11 @@
             "rv dump valve leaking",
             "black tank valve stuck",
             "dump valve replacement"
-          ]
+          ],
+          "demand": {
+            "weekly": 162,
+            "query": "gate valves"
+          }
         },
         {
           "id": "cable-operated-valves",
@@ -1516,7 +1763,8 @@
           "kw": [
             "rv cable dump valve adjustment",
             "cable valve replacement"
-          ]
+          ],
+          "demand": null
         },
         {
           "id": "electric-dump-valves",
@@ -1536,7 +1784,11 @@
           "kw": [
             "electric dump valve failure",
             "e-valve replacement"
-          ]
+          ],
+          "demand": {
+            "weekly": 45,
+            "query": "electric valve"
+          }
         },
         {
           "id": "sewer-hose-and-fittings",
@@ -1560,7 +1812,11 @@
             "rv sewer hose leak",
             "bayonet gasket",
             "best sewer hose"
-          ]
+          ],
+          "demand": {
+            "weekly": 134,
+            "query": "rv sewer hose"
+          }
         },
         {
           "id": "macerator-pump",
@@ -1581,7 +1837,11 @@
           "kw": [
             "rv macerator clogged",
             "macerator pump not working"
-          ]
+          ],
+          "demand": {
+            "weekly": 733,
+            "query": "macerator"
+          }
         },
         {
           "id": "tank-flush-and-rinsing",
@@ -1602,7 +1862,8 @@
           "kw": [
             "black tank flush not working",
             "tank flush vacuum breaker"
-          ]
+          ],
+          "demand": null
         },
         {
           "id": "tank-level-sensors",
@@ -1625,7 +1886,11 @@
             "rv tank sensors wrong",
             "black tank sensor fix",
             "seelevel sensors"
-          ]
+          ],
+          "demand": {
+            "weekly": 27,
+            "query": "level gauges"
+          }
         },
         {
           "id": "holding-tank-treatment",
@@ -1648,7 +1913,11 @@
             "best rv tank treatment",
             "black tank smell",
             "tank digester"
-          ]
+          ],
+          "demand": {
+            "weekly": 338,
+            "query": "digester"
+          }
         },
         {
           "id": "vent-stack-and-air-admittance-valve",
@@ -1671,7 +1940,11 @@
             "rv sewer smell inside",
             "air admittance valve rv",
             "tank vent blocked"
-          ]
+          ],
+          "demand": {
+            "weekly": 949,
+            "query": "aav"
+          }
         },
         {
           "id": "p-traps-and-drains",
@@ -1694,7 +1967,11 @@
             "rv sink smells",
             "p trap drained rv",
             "shower drain smell"
-          ]
+          ],
+          "demand": {
+            "weekly": 33669,
+            "query": "sink drain"
+          }
         }
       ]
     },
@@ -1727,7 +2004,11 @@
             "rv furnace not working",
             "furnace lights then shuts off",
             "sail switch rv furnace"
-          ]
+          ],
+          "demand": {
+            "weekly": 24549,
+            "query": "furnace"
+          }
         },
         {
           "id": "furnace-sail-switch",
@@ -1749,7 +2030,11 @@
             "sail switch rv",
             "furnace clicks but no heat",
             "sail switch cleaning"
-          ]
+          ],
+          "demand": {
+            "weekly": 22,
+            "query": "sail switch"
+          }
         },
         {
           "id": "furnace-control-board-and-igniter",
@@ -1772,7 +2057,11 @@
             "rv furnace control board",
             "furnace igniter replacement",
             "furnace lockout reset"
-          ]
+          ],
+          "demand": {
+            "weekly": 2279,
+            "query": "control board"
+          }
         },
         {
           "id": "furnace-ducting-and-floor-registers",
@@ -1796,7 +2085,11 @@
             "rv furnace not blowing air",
             "floor vent no heat",
             "rv duct disconnected"
-          ]
+          ],
+          "demand": {
+            "weekly": 6127,
+            "query": "registers"
+          }
         },
         {
           "id": "rooftop-air-conditioner",
@@ -1821,7 +2114,11 @@
             "rv air conditioner not cooling",
             "rv ac freezing up",
             "ac runs but not cold"
-          ]
+          ],
+          "demand": {
+            "weekly": 137932,
+            "query": "air conditioner"
+          }
         },
         {
           "id": "air-conditioner-capacitor",
@@ -1843,7 +2140,11 @@
             "rv ac capacitor replacement",
             "compressor hums won't start",
             "hard start capacitor rv"
-          ]
+          ],
+          "demand": {
+            "weekly": 176,
+            "query": "run capacitor"
+          }
         },
         {
           "id": "air-conditioner-gasket-and-shroud",
@@ -1865,7 +2166,8 @@
             "rv ac gasket replacement",
             "ac leaking inside rv",
             "ac shroud cracked"
-          ]
+          ],
+          "demand": null
         },
         {
           "id": "air-conditioner-condensate-drain",
@@ -1887,7 +2189,11 @@
           "kw": [
             "rv ac dripping inside",
             "ac condensate drain"
-          ]
+          ],
+          "demand": {
+            "weekly": 1761,
+            "query": "condensate"
+          }
         },
         {
           "id": "heat-pump-and-heat-strip",
@@ -1908,7 +2214,11 @@
           "kw": [
             "rv heat pump not heating",
             "heat strip not working"
-          ]
+          ],
+          "demand": {
+            "weekly": 38589,
+            "query": "heat pump"
+          }
         },
         {
           "id": "thermostat",
@@ -1933,7 +2243,11 @@
             "rv thermostat not working",
             "thermostat blank display",
             "upgrade rv thermostat"
-          ]
+          ],
+          "demand": {
+            "weekly": 76205,
+            "query": "thermostat"
+          }
         },
         {
           "id": "roof-vent-fan",
@@ -1958,7 +2272,11 @@
             "rv roof vent fan not working",
             "fantastic fan lid stuck",
             "maxxair fan repair"
-          ]
+          ],
+          "demand": {
+            "weekly": 191,
+            "query": "maxxair"
+          }
         },
         {
           "id": "ceiling-vents-and-hatch",
@@ -1982,7 +2300,11 @@
             "rv roof vent leaking",
             "vent lid replacement",
             "rv vent crank"
-          ]
+          ],
+          "demand": {
+            "weekly": 297,
+            "query": "roof vent"
+          }
         },
         {
           "id": "portable-and-auxiliary-heat",
@@ -2005,7 +2327,11 @@
             "rv electric heater best",
             "safe heater rv",
             "carbon monoxide heater rv"
-          ]
+          ],
+          "demand": {
+            "weekly": 284354,
+            "query": "portable"
+          }
         },
         {
           "id": "dehumidifier-and-ventilation",
@@ -2028,7 +2354,11 @@
             "rv condensation fix",
             "best dehumidifier rv",
             "stop condensation rv"
-          ]
+          ],
+          "demand": {
+            "weekly": 40927,
+            "query": "dehumidifier"
+          }
         }
       ]
     },
@@ -2060,7 +2390,11 @@
             "rv roof leak repair",
             "epdm vs tpo",
             "rv roof reseal cost"
-          ]
+          ],
+          "demand": {
+            "weekly": 7131,
+            "query": "tpo"
+          }
         },
         {
           "id": "roof-sealant-and-lap-sealant",
@@ -2084,7 +2418,11 @@
             "rv roof sealant type",
             "lap sealant redo",
             "silicone on rv roof"
-          ]
+          ],
+          "demand": {
+            "weekly": 337,
+            "query": "roof sealant"
+          }
         },
         {
           "id": "roof-coating",
@@ -2106,7 +2444,11 @@
             "rv roof coating best",
             "coating over epdm",
             "roof recoat bubbles"
-          ]
+          ],
+          "demand": {
+            "weekly": 588,
+            "query": "roof coating"
+          }
         },
         {
           "id": "skylight",
@@ -2128,7 +2470,11 @@
           "kw": [
             "rv skylight leaking",
             "skylight replacement"
-          ]
+          ],
+          "demand": {
+            "weekly": 47703,
+            "query": "skylight"
+          }
         },
         {
           "id": "slide-out-and-mechanism",
@@ -2153,7 +2499,11 @@
             "rv slide out not working",
             "slide out grinding",
             "schwintek motor replacement"
-          ]
+          ],
+          "demand": {
+            "weekly": 124,
+            "query": "slide out"
+          }
         },
         {
           "id": "slide-seals-and-wipers",
@@ -2177,7 +2527,11 @@
             "rv slide seal replacement",
             "slide out leaking water",
             "slide seal lubricant"
-          ]
+          ],
+          "demand": {
+            "weekly": 46,
+            "query": "wiper seal"
+          }
         },
         {
           "id": "slide-topper-awning",
@@ -2200,7 +2554,8 @@
             "slide topper flapping",
             "topper replacement",
             "slide topper not rolling up"
-          ]
+          ],
+          "demand": null
         },
         {
           "id": "windows",
@@ -2225,7 +2580,11 @@
             "rv window leaking",
             "rv window crank replacement",
             "fogged rv windows"
-          ]
+          ],
+          "demand": {
+            "weekly": 34081319,
+            "query": "windows"
+          }
         },
         {
           "id": "window-shades-and-blinds",
@@ -2249,7 +2608,11 @@
             "rv day night shade string repair",
             "shade replacement",
             "blinds rv"
-          ]
+          ],
+          "demand": {
+            "weekly": 1205,
+            "query": "window shades"
+          }
         },
         {
           "id": "entry-door-and-lock",
@@ -2274,7 +2637,11 @@
             "rv door not closing",
             "rv door lock replacement",
             "door hinge sag"
-          ]
+          ],
+          "demand": {
+            "weekly": 329,
+            "query": "entry door"
+          }
         },
         {
           "id": "door-and-window-seals",
@@ -2297,7 +2664,11 @@
           "kw": [
             "rv door seal leaking",
             "weatherstrip replacement rv"
-          ]
+          ],
+          "demand": {
+            "weekly": 450605,
+            "query": "door"
+          }
         },
         {
           "id": "baggage-and-bay-doors",
@@ -2320,7 +2691,11 @@
             "rv compartment latch replacement",
             "bay door strut",
             "storage door leaking"
-          ]
+          ],
+          "demand": {
+            "weekly": 47311,
+            "query": "baggage"
+          }
         },
         {
           "id": "body-panels-and-siding",
@@ -2344,7 +2719,11 @@
             "rv delamination repair",
             "rv siding damage",
             "sidewall bubble"
-          ]
+          ],
+          "demand": {
+            "weekly": 175,
+            "query": "filon"
+          }
         },
         {
           "id": "decals-and-graphics",
@@ -2367,7 +2746,11 @@
             "remove rv decals",
             "rv graphics replacement",
             "decal cracking"
-          ]
+          ],
+          "demand": {
+            "weekly": 224206,
+            "query": "graphics"
+          }
         },
         {
           "id": "underbelly-and-coroplast",
@@ -2389,7 +2772,11 @@
             "rv underbelly sagging",
             "coroplast repair",
             "rodents in rv underbelly"
-          ]
+          ],
+          "demand": {
+            "weekly": 1233,
+            "query": "coroplast"
+          }
         },
         {
           "id": "fender-skirts-and-trim",
@@ -2410,7 +2797,11 @@
           "kw": [
             "rv fender skirt replacement",
             "trim insert rv"
-          ]
+          ],
+          "demand": {
+            "weekly": 22,
+            "query": "wheel trim"
+          }
         },
         {
           "id": "bumper-and-rear-rack",
@@ -2433,7 +2824,11 @@
             "rv bumper bike rack",
             "rear hitch rv",
             "bumper rust"
-          ]
+          ],
+          "demand": {
+            "weekly": 31010,
+            "query": "bumper"
+          }
         },
         {
           "id": "entry-steps",
@@ -2457,7 +2852,11 @@
             "rv electric steps not working",
             "step motor replacement",
             "steps sagging"
-          ]
+          ],
+          "demand": {
+            "weekly": 105,
+            "query": "rv steps"
+          }
         },
         {
           "id": "awning",
@@ -2482,7 +2881,11 @@
             "rv awning won't retract",
             "awning fabric replacement",
             "awning arm bent"
-          ]
+          ],
+          "demand": {
+            "weekly": 5072,
+            "query": "awning"
+          }
         },
         {
           "id": "awning-accessories",
@@ -2503,7 +2906,11 @@
           "kw": [
             "rv awning shade panel",
             "awning tie down"
-          ]
+          ],
+          "demand": {
+            "weekly": 77,
+            "query": "sun blocker"
+          }
         },
         {
           "id": "ladder-and-roof-access",
@@ -2524,7 +2931,11 @@
           "kw": [
             "rv ladder loose",
             "roof ladder repair"
-          ]
+          ],
+          "demand": {
+            "weekly": 107838,
+            "query": "ladder"
+          }
         },
         {
           "id": "exterior-lighting",
@@ -2549,7 +2960,11 @@
             "rv tail light not working",
             "marker light repair",
             "led clearance light"
-          ]
+          ],
+          "demand": {
+            "weekly": 739,
+            "query": "porch light"
+          }
         },
         {
           "id": "backup-and-side-cameras",
@@ -2572,7 +2987,11 @@
             "rv backup camera not working",
             "wireless camera dropout",
             "rear camera install rv"
-          ]
+          ],
+          "demand": {
+            "weekly": 352989,
+            "query": "backup"
+          }
         }
       ]
     },
@@ -2604,7 +3023,11 @@
             "rv fridge not cooling",
             "ammonia smell fridge",
             "rv fridge works on propane not electric"
-          ]
+          ],
+          "demand": {
+            "weekly": 41071,
+            "query": "refrigerator"
+          }
         },
         {
           "id": "refrigerator-compressor-or-12v",
@@ -2628,7 +3051,11 @@
             "12v fridge not cooling",
             "compressor fridge rv",
             "rv fridge low voltage"
-          ]
+          ],
+          "demand": {
+            "weekly": 41071,
+            "query": "refrigerator"
+          }
         },
         {
           "id": "refrigerator-venting-and-fans",
@@ -2651,7 +3078,8 @@
             "rv fridge vent fan",
             "fridge not cooling in hot weather",
             "baffle rv fridge"
-          ]
+          ],
+          "demand": null
         },
         {
           "id": "cooktop-and-oven",
@@ -2677,7 +3105,11 @@
             "rv stove burner won't light",
             "rv oven pilot light",
             "rv cooktop igniter"
-          ]
+          ],
+          "demand": {
+            "weekly": 349027,
+            "query": "range"
+          }
         },
         {
           "id": "microwave-and-convection",
@@ -2699,7 +3131,11 @@
           "kw": [
             "rv microwave not working",
             "convection microwave rv"
-          ]
+          ],
+          "demand": {
+            "weekly": 93316,
+            "query": "microwave"
+          }
         },
         {
           "id": "range-hood-and-vent",
@@ -2721,7 +3157,11 @@
           "kw": [
             "rv range hood fan",
             "range hood filter"
-          ]
+          ],
+          "demand": {
+            "weekly": 910,
+            "query": "range hood"
+          }
         },
         {
           "id": "washer-and-dryer",
@@ -2743,7 +3183,11 @@
           "kw": [
             "rv washer dryer not draining",
             "splendide vented vs ventless"
-          ]
+          ],
+          "demand": {
+            "weekly": 47626,
+            "query": "washer"
+          }
         },
         {
           "id": "water-dispenser-and-ice-maker",
@@ -2764,7 +3208,11 @@
           "kw": [
             "rv ice maker leaking",
             "fridge water line frozen"
-          ]
+          ],
+          "demand": {
+            "weekly": 6888,
+            "query": "ice maker"
+          }
         },
         {
           "id": "furniture-and-seating",
@@ -2788,7 +3236,11 @@
             "rv furniture peeling",
             "rv recliner not working",
             "dinette bed conversion"
-          ]
+          ],
+          "demand": {
+            "weekly": 455135,
+            "query": "furniture"
+          }
         },
         {
           "id": "bed-and-mattress",
@@ -2812,7 +3264,11 @@
             "rv mattress replacement",
             "murphy bed strut",
             "rv bunk ladder"
-          ]
+          ],
+          "demand": {
+            "weekly": 214156,
+            "query": "bed"
+          }
         },
         {
           "id": "cabinets,-drawers-and-latches",
@@ -2836,7 +3292,11 @@
             "rv cabinet latch replacement",
             "drawer slide rv",
             "cabinet doors opening while driving"
-          ]
+          ],
+          "demand": {
+            "weekly": 71,
+            "query": "drawer slide"
+          }
         },
         {
           "id": "flooring-and-subfloor",
@@ -2860,7 +3320,11 @@
             "soft floor rv",
             "rv floor water damage",
             "vinyl flooring replacement rv"
-          ]
+          ],
+          "demand": {
+            "weekly": 137320,
+            "query": "carpet"
+          }
         },
         {
           "id": "tv-and-entertainment",
@@ -2884,7 +3348,11 @@
             "rv tv antenna not working",
             "rv wifi booster",
             "rv satellite setup"
-          ]
+          ],
+          "demand": {
+            "weekly": 8909265,
+            "query": "tv"
+          }
         },
         {
           "id": "central-vacuum-and-cleaning",
@@ -2904,7 +3372,11 @@
           "guide": null,
           "kw": [
             "rv central vacuum not working"
-          ]
+          ],
+          "demand": {
+            "weekly": 341984,
+            "query": "vacuum"
+          }
         }
       ]
     },
@@ -2933,7 +3405,11 @@
             "rv overheating on grades",
             "diesel pusher derate",
             "motorhome limp mode"
-          ]
+          ],
+          "demand": {
+            "weekly": 464524,
+            "query": "engine"
+          }
         },
         {
           "id": "cooling-system",
@@ -2955,7 +3431,11 @@
             "rv overheating coolant",
             "diesel pusher radiator cleaning",
             "fan clutch rv"
-          ]
+          ],
+          "demand": {
+            "weekly": 8834,
+            "query": "radiator"
+          }
         },
         {
           "id": "belts,-hoses-and-filters",
@@ -2976,7 +3456,11 @@
             "rv serpentine belt replacement",
             "diesel fuel filter change rv",
             "air filter motorhome"
-          ]
+          ],
+          "demand": {
+            "weekly": 68227,
+            "query": "air filter"
+          }
         },
         {
           "id": "emissions-and-def",
@@ -2997,7 +3481,11 @@
             "def system derate",
             "dpf cleaning rv",
             "regen problems motorhome"
-          ]
+          ],
+          "demand": {
+            "weekly": 54552,
+            "query": "def"
+          }
         },
         {
           "id": "chassis-brakes",
@@ -3019,7 +3507,11 @@
             "rv air brake adjustment",
             "brake chamber replacement",
             "abs light motorhome"
-          ]
+          ],
+          "demand": {
+            "weekly": 144,
+            "query": "air brakes"
+          }
         },
         {
           "id": "air-system-compressor,-dryer,-governor",
@@ -3040,7 +3532,11 @@
             "rv air dryer replacement",
             "air pressure loss overnight",
             "compressor governor"
-          ]
+          ],
+          "demand": {
+            "weekly": 7356,
+            "query": "air compressor"
+          }
         },
         {
           "id": "steering-and-alignment",
@@ -3061,7 +3557,11 @@
             "rv wanders on highway",
             "motorhome alignment",
             "steering stabilizer rv"
-          ]
+          ],
+          "demand": {
+            "weekly": 21724,
+            "query": "alignment"
+          }
         },
         {
           "id": "suspension-and-shocks",
@@ -3082,7 +3582,11 @@
             "motorhome porpoising",
             "rv shocks replacement",
             "ride height valve"
-          ]
+          ],
+          "demand": {
+            "weekly": 174394,
+            "query": "springs"
+          }
         },
         {
           "id": "alternator-and-starter",
@@ -3104,7 +3608,11 @@
             "motorhome alternator not charging",
             "rv starter solenoid",
             "chassis battery drain"
-          ]
+          ],
+          "demand": {
+            "weekly": 59578,
+            "query": "starter"
+          }
         },
         {
           "id": "chassis-battery-and-isolator",
@@ -3125,7 +3633,11 @@
             "rv chassis battery drains",
             "battery isolator rv",
             "boost switch not working"
-          ]
+          ],
+          "demand": {
+            "weekly": 31,
+            "query": "starting battery"
+          }
         },
         {
           "id": "dash-air-conditioning",
@@ -3147,7 +3659,11 @@
           "kw": [
             "rv dash ac not cold",
             "motorhome ac compressor"
-          ]
+          ],
+          "demand": {
+            "weekly": 23,
+            "query": "dash ac"
+          }
         },
         {
           "id": "exhaust-and-turbo",
@@ -3167,7 +3683,11 @@
           "kw": [
             "exhaust brake not working",
             "turbo actuator rv"
-          ]
+          ],
+          "demand": {
+            "weekly": 467220,
+            "query": "turbo"
+          }
         },
         {
           "id": "fuel-system",
@@ -3188,7 +3708,11 @@
             "motorhome fuel starvation",
             "lift pump failure rv",
             "fuel gauge wrong"
-          ]
+          ],
+          "demand": {
+            "weekly": 1644,
+            "query": "fuel pump"
+          }
         },
         {
           "id": "wheels,-tyres-and-tpms",
@@ -3209,7 +3733,11 @@
             "motorhome tire blowout",
             "rv tyre age",
             "aluminium wheel crack"
-          ]
+          ],
+          "demand": {
+            "weekly": 799,
+            "query": "tyre pressure"
+          }
         }
       ]
     }

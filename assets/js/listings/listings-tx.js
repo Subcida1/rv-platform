@@ -885,5 +885,109 @@ window.RV_LISTINGS_TX = [
   ],  "base": "rosenberg",  "areas": [
    "rosenberg"
   ],  "region": "Rosenberg and surrounding",  "reg": "gulf-coast"
+ },
+ {  "n": "Heart of Texas RV Pros (HOT RV Pros)",  "c": "Temple, TX",  "p": "844-278-7767",  "u": "https://hotrvpros.com/service/",  "t": "both",  "e": false,  "r": false,  "d": "Heart of Texas RV Pros runs an RV service department at 4068 Paramount Parkway in Temple and also sends mobile service to customers around Central Texas. The shop repairs appliances, plumbing, electrical, hydraulic, integrated control and monitoring systems, slide outs, leveling systems, roofs, doors, awnings and exterior lighting, and it has a full paint and body shop with a full length paint booth. It also builds custom conversions and remodels, performs pre-purchase inspections, and works with insurance companies.",  "g": [
+   "RV-specific",
+   "in shop service",
+   "mobile service",
+   "paint and body shop",
+   "insurance work",
+   "remodeling"
+  ],  "base": "temple",  "areas": [],  "region": "Central Texas (Heart of Texas)",  "reg": "waco"
+ },
+ {  "n": "Love Fixin RV",  "c": "Killeen, TX",  "p": "(254) 551-7731",  "u": "https://www.lovefixinrv.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Love Fixin RV is a bonded and insured mobile RV repair technician based in Killeen, TX 76543. Technician Bill Hosler comes to the customer's campsite, driveway or storage facility to service HVAC, electrical, plumbing, water heaters, refrigeration and roof inspections, and offers exterior and interior repair and renovation. Hours are Monday through Friday 9am to 5pm, with Saturday and Sunday by appointment only.",  "g": [
+   "RV-specific",
+   "mobile service",
+   "bonded and insured",
+   "certified technician"
+  ],  "base": "killeen",  "areas": [
+   "belton",
+   "bruceville",
+   "copperas cove",
+   "florence",
+   "gatesville",
+   "harker heights",
+   "jarrell",
+   "kempner",
+   "lorena",
+   "mcgregor",
+   "morgans point resort",
+   "rogers",
+   "salado",
+   "temple",
+   "the grove"
+  ],  "region": "Bell County",  "reg": "waco"
+ },
+ {  "n": "Compass Conversions",  "c": "Temple, TX",  "p": "254-771-9909",  "u": "https://compassconversions.com/",  "t": "center",  "e": false,  "r": false,  "d": "Compass Conversions is an RV maintenance, repair and remodeling shop in Temple, Texas. The team handles RV repair and routine maintenance, renovates RVs with modern features, works with insurance companies on repairs, and also does horse trailer and custom trailer conversions into living quarters built to RVIA standards. Service is scheduled by appointment by calling 254-771-9909.",  "g": [
+   "RV-specific",
+   "in shop service",
+   "insurance work",
+   "remodeling",
+   "custom conversions"
+  ],  "base": "temple",  "areas": [],  "reg": "waco"
+ },
+ {  "n": "TX-RV Medic LLC",  "c": "Belton, TX",  "p": "(817) 996-4290",  "u": "https://txrvmedic.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "TX-RV Medic LLC is a mobile RV repair service in Belton, Texas owned by Larry Brymer. The NRVTA certified technician repairs air conditioning, appliances, awnings, electrical, furnaces, plumbing, leveling systems, batteries, propane, refrigeration, roofs, satellite systems, slide outs, solar and water heaters wherever the RV is located. Business hours are Monday through Friday 8am to 5pm and Saturday 9am to 5pm.",  "g": [
+   "RV-specific",
+   "mobile service",
+   "NRVTA certified"
+  ],  "base": "belton",  "areas": [
+   "belton"
+  ],  "reg": "waco"
+ },
+ {  "n": "Family RV Inspection & Mobile Repair",  "c": "Whitney, TX",  "p": "(254) 580-3929",  "u": "https://familyinspectionservices.com/",  "t": "mobile",  "e": false,  "r": true,  "d": "Family RV Inspection & Mobile Repair is a veteran owned mobile RV repair company based in Whitney, Texas. Jason Gray's technicians diagnose and repair RV water heaters, air conditioning, plumbing and electrical systems at the customer's location, and also provide RV maintenance and diagnostics. The company says it can be trusted with all of a customer's roadside assistance needs and can diagnose and repair the issue quickly to get them back on the road, with hours Monday through Friday 8am to 6pm and Saturday 8am to noon.",  "g": [
+   "RV-specific",
+   "mobile service",
+   "veteran owned",
+   "roadside assistance"
+  ],  "base": "whitney",  "areas": [
+   "whitney"
+  ],  "reg": "waco"
+ },
+ {  "n": "DCB RV Repairs",  "c": "Mexia, TX",  "p": "817-933-7087",  "u": "https://dcbrvrepairs.com/",  "t": "center",  "e": false,  "r": false,  "d": "DCB RV Repairs is an RV service and collision repair shop in Mexia, Texas with more than 20 years in the RV industry. The shop handles RV roof systems and full roof replacements, yearly and semi-annual maintenance, wheel bearing packing, slide service, generator service, and customizing work such as solar, satellite, under carriage lighting and leveling systems. It handles insurance claims from any carrier, and repairs carry a 90 day or 2,500 mile warranty while collision repairs carry a 120 day or 3,500 mile warranty.",  "g": [
+   "RV-specific",
+   "in shop service",
+   "collision repair",
+   "insurance claims",
+   "roof systems"
+  ],  "base": "mexia",  "areas": [
+   "mexia"
+  ],  "reg": "east-tx"
+ },
+ {  "n": "American Vintage Trailers | Airstream & RV Repair",  "c": "Gatesville, TX",  "p": "(254) 248-1186",  "u": "https://www.airstreamrepairandremodel.com/",  "t": "center",  "e": false,  "r": false,  "d": "American Vintage Trailers specializes in Airstream, vintage RV and travel trailer repair, restoration and remodeling from a shop at 8072 US-84 in Gatesville, Texas. The team does electrical, plumbing, mechanical, axle, brake, lighting and structural repairs, roof resealing and replacement, shell polishing, and full frame off restorations, and has been in vintage trailer repair since 2011. The shop works by drop off and says it specializes in in-shop repairs rather than mobile service.",  "g": [
+   "RV-specific",
+   "Airstream specialist",
+   "vintage RV",
+   "in shop service",
+   "restoration",
+   "remodeling"
+  ],  "base": "gatesville",  "areas": [
+   "gatesville",
+   "waco",
+   "killeen",
+   "temple",
+   "belton",
+   "hillsboro",
+   "whitney",
+   "mexia",
+   "groesbeck",
+   "teague",
+   "fairfield",
+   "itasca",
+   "west",
+   "cameron"
+  ],  "region": "Central Texas",  "spec": "in-shop repairs only, no mobile or on-site service",  "reg": "waco"
+ },
+ {  "n": "RV Hero Service & Repair",  "c": "Elm Mott, TX",  "p": "(254) 495-5050",  "u": "https://www.rvhero.com/",  "t": "both",  "e": true,  "r": false,  "d": "RV Hero Service & Repair is a family owned RV shop at 1064 N McLennan Dr, Suite 101 in Elm Mott, Texas with an 8,000 square foot facility and a mobile fleet dispatched within a 50-mile radius of Waco. The Price family's four master technicians repair air conditioning, slide outs, leveling systems, water heaters, furnaces, water pumps, refrigerators, awnings, slide toppers, windows, toilets, grey and black tanks, electrical, converters, inverters, plumbing, roofs and floors, and the shop stocks new, used and obsolete RV parts. It works with insurance claims and lists 24 hour service every day with an emergency service number.",  "g": [
+   "RV-specific",
+   "in shop service",
+   "mobile service",
+   "master technicians",
+   "insurance claims",
+   "24 hour emergency service",
+   "parts inventory"
+  ],  "base": "elm mott",  "areas": [
+   "waco",
+   "elm mott"
+  ],  "region": "Central Texas",  "spec": "does not do engine or front-end work",  "reg": "waco"
  }
 ];

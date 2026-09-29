@@ -8,10 +8,10 @@ Nothing here is a decision; it is what to read.
 - [Colorado](colorado.md) — 27 listings
 - [Idaho](idaho.md) — 18 listings
 - [Montana](montana.md) — 19 listings
-- [Nevada](nevada.md) — 15 listings
+- [Nevada](nevada.md) — 23 listings
 - [New Mexico](newmexico.md) — 17 listings
 - [Oregon](oregon.md) — 46 listings
-- [Texas](texas.md) — 80 listings
+- [Texas](texas.md) — 88 listings
 - [Utah](utah.md) — 19 listings
 - [Washington](washington.md) — 26 listings
 - [Wyoming](wyoming.md) — 9 listings

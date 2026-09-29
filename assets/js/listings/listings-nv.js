@@ -163,5 +163,113 @@ window.RV_LISTINGS_NV = [
   ],  "base": "mesquite",  "areas": [
    "mesquite"
   ],  "region": null,  "reg": "las-vegas"
+ },
+ {  "n": "RVQC (At Your RV)",  "c": "Winnemucca",  "p": "(407) 476-0505",  "u": "https://rvqc.com/",  "t": "mobile",  "e": true,  "r": false,  "d": "RVQC is a locally owned mobile RV repair and inspection service based in Winnemucca. The owner is a warranty repair certified RVTAA technician and an NRVIA certified inspector who comes to the RV with no tow and no shop. It repairs air conditioners, refrigerators, water heaters, furnaces, slide-outs, leveling systems, electrical, plumbing and propane systems.",  "g": [
+   "mobile service",
+   "on-site repairs",
+   "RVTAA certified technician",
+   "NRVIA certified inspector",
+   "24/7 emergency service",
+   "warranty repair authorized",
+   "300+ point RV inspections"
+  ],  "base": "winnemucca",  "areas": [
+   "winnemucca",
+   "battle mountain",
+   "lovelock",
+   "elko",
+   "golconda",
+   "imlay",
+   "fernley",
+   "sparks"
+  ],  "region": "Northern Nevada",  "reg": "i80-east"
+ },
+ {  "n": "Open Roads RV Mobile Repair Service",  "c": "Elko",  "p": "775-388-7445",  "u": "https://www.openroads-rv.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Open Roads RV is a mobile RV repair and maintenance service run by John and Angela Starman and based in Elko. It travels to the RV for repairs, solar upgrades, winterizing and installations across Northern Nevada. The owners state they started the business because there were not enough qualified RV repairmen in the area.",  "g": [
+   "mobile service",
+   "on-site repairs",
+   "solar upgrades",
+   "winterizing",
+   "RV repair",
+   "RV maintenance"
+  ],  "base": "elko",  "areas": [
+   "elko",
+   "wells",
+   "crescent valley",
+   "winnemucca",
+   "battle mountain",
+   "eureka",
+   "wendover",
+   "spring creek",
+   "ryndon"
+  ],  "region": "Northern Nevada",  "reg": "i80-east"
+ },
+ {  "n": "Destinations Mobile RV Services",  "c": "Northern Nevada",  "p": "775-895-6515",  "u": "https://www.destinationsmobilervservices.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Destinations Mobile is a mobile RV repair, inspection and maintenance company serving Northern Nevada and Lake Tahoe. Its technicians are Certified Advanced RVTAA Technicians, Advanced NRVIA Inspectors and Nevada LP Board Certified. It performs on-site repairs and inspections on new and used RVs.",  "g": [
+   "mobile service",
+   "on-site repairs",
+   "Advanced RVTAA technician",
+   "Advanced NRVIA inspector",
+   "Nevada LP Board Certified",
+   "RV inspections"
+  ],  "base": "",  "areas": [],  "region": "Northern Nevada and Lake Tahoe",  "reg": "reno-north"
+ },
+ {  "n": "Fix It Rick Mobile RV Repair",  "c": "Northern Nevada",  "p": "(775) 342-5826",  "u": "https://fixitrickmobilervrepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Fix It Rick Mobile RV Repair is a family owned mobile RV repair business based in Northern Nevada. Owner and operator Rick Fuller is a Certified RV Technician who trained at the National RV Training Academy after 10 years as an HVAC technician. It brings the repair shop to the RV rather than requiring the RV to be brought in.",  "g": [
+   "mobile service",
+   "on-site repairs",
+   "Certified RV Technician",
+   "NRVTA trained"
+  ],  "base": "",  "areas": [],  "region": "Northern Nevada",  "reg": "reno-north"
+ },
+ {  "n": "Elite Mobile RV Service & Repair",  "c": "Las Vegas",  "p": "(702) 592-4529",  "u": "https://www.eliterv.vegas/",  "t": "mobile",  "e": true,  "r": false,  "d": "Elite Mobile RV Service & Repair is a mobile RV repair business based in Las Vegas that serves Southern Nevada. It diagnoses, repairs and replaces RV and travel trailer systems including air conditioning, electrical, plumbing, solar, hydraulics and appliances in one visit. The site states it is open 24/7 and offers same day emergency repairs.",  "g": [
+   "mobile service",
+   "on-site repairs",
+   "24/7 emergency service",
+   "same day service",
+   "solar panel installation",
+   "hydraulic repair"
+  ],  "base": "las vegas",  "areas": [
+   "las vegas",
+   "henderson",
+   "north las vegas",
+   "boulder city",
+   "laughlin",
+   "pahrump"
+  ],  "region": "Southern Nevada",  "reg": "las-vegas"
+ },
+ {  "n": "TNT RV Repair",  "c": "Henderson",  "p": "702-682-2936",  "u": "https://tntrvrepairs.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "TNT RV Repair is a mobile RV service and repair business serving Southern Nevada from Henderson. It travels to the RV at parks, storage facilities, homes and Nellis Air Force Base for electrical, appliance, plumbing and generator repair, plus awning and slide-out topper replacement. It works with extended warranty and insurance claims and offers military discounts.",  "g": [
+   "mobile service",
+   "on-site repairs",
+   "RV electrical service and repair",
+   "RV appliance repair",
+   "RV plumbing repair",
+   "generator repair and service",
+   "military discounts",
+   "warranty and insurance claims"
+  ],  "base": "henderson",  "areas": [
+   "las vegas",
+   "henderson",
+   "boulder city"
+  ],  "region": "Southern Nevada; Lake Mead",  "reg": "las-vegas"
+ },
+ {  "n": "Busted Knuckle Mechanics",  "c": "Henderson",  "p": "(702) 767-7125",  "u": "https://www.bustedknucklemobile.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Busted Knuckle Mechanics is a veteran and family owned mobile RV repair business working out of Henderson. It has fully mobile service trucks and offers repairs, custom work, custom fabrication, solar installation and accessory installation to the greater Las Vegas area and Boulder City. It was started in 2013 to meet a need for mobile RV repair in Las Vegas.",  "g": [
+   "mobile service",
+   "on-site repairs",
+   "custom fabrication",
+   "solar installation",
+   "accessory installation",
+   "veteran owned",
+   "family owned"
+  ],  "base": "henderson",  "areas": [
+   "henderson",
+   "las vegas",
+   "boulder city"
+  ],  "region": "greater Las Vegas area",  "reg": "las-vegas"
+ },
+ {  "n": "Nevada Mobile RV Service",  "c": "Nevada",  "p": "(775) 267-9876",  "u": "https://nvmobilerv.com/",  "t": "both",  "e": false,  "r": false,  "d": "Nevada Mobile RV Service is run by John Larson, an RVTI Master Certified RV Technician who started the business in 1989. It rebuilds and reconditions gas absorption refrigerators, designs and builds 12 volt solar systems, and repairs LP appliances, electrical, plumbing and awnings. The site states some repairs, rebuilds and installations are done at the shop and the rest are mobile.",  "g": [
+   "mobile service",
+   "shop based",
+   "RVTI Master Certified RV Technician",
+   "Norcold and Dometic certified",
+   "solar design and build",
+   "refrigerator rebuilding"
+  ],  "base": "",  "areas": [],  "region": "",  "reg": "reno-north"
  }
 ];

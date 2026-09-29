@@ -1,4 +1,4 @@
-# Texas — 80 listings
+# Texas — 88 listings
 
 ## Amarillo, Lubbock and the Panhandle (5)
 
@@ -170,10 +170,12 @@
 - **AM Mobile RV Service**  _Tarpley_  (512) 550-9579  https://ammobilerv.com/  `mobile`
     > We bring expert RV repair directly to your location — home, campground, or storage facility.
 
-## Tyler, Longview and east Texas (9)
+## Tyler, Longview and east Texas (10)
 
 - **Texan Mobile RV Services**  _Longview_  903-291-7212  https://www.texanmobilervservices.com/  `mobile`
     > We come to you!
+- **DCB RV Repairs**  _Mexia_  817-933-7087  https://dcbrvrepairs.com/  `shop`
+    > We would like to become your go to RV Service technician & Collision repair expert
 - **Butler RV Repair**  _Mount Pleasant_  817-583-4596  https://butlerrvrepair.com/  `mobile, EMERGENCY`
     > Emergency Call-Outs
 - **Walter's Mobile Solutions**  _Nacogdoches_  (936) 553-6813  https://walterssolutions.com/  `mobile`  **typically serves within about 100 miles**
@@ -191,7 +193,21 @@
 - **Mike's Mobile RV and Trailer Repair**  _Tyler_  903-619-3181  https://mikesmobilervrepairtyler.com/services  `mobile`
     > 24 hour and major holiday emergency service available
 
-## Waco, Temple and Killeen (1)
+## Waco, Temple and Killeen (8)
 
+- **TX-RV Medic LLC**  _Belton_  (817) 996-4290  https://txrvmedic.com/  `mobile`
+    > we provide fast, reliable service tailored to your needs with a mobile RV technician
+- **RV Hero Service & Repair**  _Elm Mott_  (254) 495-5050  https://www.rvhero.com/  `mobile + shop, EMERGENCY`  **does not do engine or front-end work**
+    > Business Hours Mon - Sun: 24 Hour Service
+- **American Vintage Trailers | Airstream & RV Repair**  _Gatesville_  (254) 248-1186  https://www.airstreamrepairandremodel.com/  `shop`  **in-shop repairs only, no mobile or on-site service**
+    > we specialize in comprehensive, in-shop repairs that require our specialized tools and equipment
+- **Love Fixin RV**  _Killeen_  (254) 551-7731  https://www.lovefixinrv.com/  `mobile`
+    > provides mobile services in Harker Heights, Killeen, TX and the surrounding areas
+- **Compass Conversions**  _Temple_  254-771-9909  https://compassconversions.com/  `shop`
+    > Compass Conversions in Temple, Texas works hard to give all our clients top-tier service
+- **Heart of Texas RV Pros (HOT RV Pros)**  _Temple_  844-278-7767  https://hotrvpros.com/service/  `mobile + shop`
+    > In addition to our in-shop services, we also provide convenient mobile service, bringing our expertise directly to your location.
 - **Relax RV Service**  _Waco_  254-495-7711  https://www.relaxrvservice.com/services  `mobile, EMERGENCY`
     > Emergency Hours - After 6 & Weekends
+- **Family RV Inspection & Mobile Repair**  _Whitney_  (254) 580-3929  https://familyinspectionservices.com/  `mobile, ROADSIDE`
+    > We are a locally owned and operated RV repair company that you can trust with all of your roadside assistance needs. Our technicians can diagnose the issue and repair it quickly, so you can 
