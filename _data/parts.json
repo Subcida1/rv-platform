@@ -1,5 +1,5 @@
 {
-  "note": "The parts index: every part an RV is made of, by system, with what it does, how it fails, which RV types have it, which of our guides already covers it, and the phrasings a reader would search. Built 2026-09-29 from Ty's list plus the 110 component makers already catalogued in _data/manuals.json. No models, no specs: this is the index that tells us what content to research next.",
+  "note": "The parts index: every part an RV is made of, by system, with what it does, how it fails, which RV types have it, which of our guides already covers it, and the phrasings a reader would search. Built 2026-09-29 from Ty's list plus the 110 component makers already catalogued in _data/manuals.json. No models, no specs: this is the index that tells us what content to research next. Each part also carries `makers`: the manufacturers already catalogued in the manuals directory whose documentation covers it, with the archive URL. 36 of 138 parts have a source waiting before any research starts, and a part with makers and no guide is the cheapest content on this list.",
   "systems": [
     {
       "key": "towing-and-running-gear",
@@ -31,7 +31,8 @@
           "demand": {
             "weekly": 1740,
             "query": "coupler"
-          }
+          },
+          "makers": []
         },
         {
           "id": "tongue-jack",
@@ -59,7 +60,13 @@
           "demand": {
             "weekly": 526,
             "query": "trailer jack"
-          }
+          },
+          "makers": [
+            {
+              "brand": "Barker",
+              "url": "https://www.barkermfg.com/owners-manuals.html"
+            }
+          ]
         },
         {
           "id": "stabilizer-jacks",
@@ -87,7 +94,8 @@
           "demand": {
             "weekly": 173,
             "query": "stabilisers"
-          }
+          },
+          "makers": []
         },
         {
           "id": "leveling-jacks-hydraulic",
@@ -114,7 +122,8 @@
           "demand": {
             "weekly": 28,
             "query": "hydraulic levelers"
-          }
+          },
+          "makers": []
         },
         {
           "id": "weight-distribution-hitch",
@@ -139,7 +148,8 @@
           "demand": {
             "weekly": 88,
             "query": "equalizer hitch"
-          }
+          },
+          "makers": []
         },
         {
           "id": "sway-control",
@@ -163,7 +173,13 @@
           "demand": {
             "weekly": 596,
             "query": "sway bar"
-          }
+          },
+          "makers": [
+            {
+              "brand": "Hensley",
+              "url": "https://hensleymfg.com/pages/hensley-arrow-product-manuals"
+            }
+          ]
         },
         {
           "id": "safety-chains",
@@ -188,7 +204,8 @@
           "demand": {
             "weekly": 44,
             "query": "safety chains"
-          }
+          },
+          "makers": []
         },
         {
           "id": "breakaway-switch",
@@ -212,7 +229,8 @@
           "demand": {
             "weekly": 54,
             "query": "breakaway cable"
-          }
+          },
+          "makers": []
         },
         {
           "id": "trailer-brakes",
@@ -240,7 +258,8 @@
           "demand": {
             "weekly": 106,
             "query": "trailer brakes"
-          }
+          },
+          "makers": []
         },
         {
           "id": "brake-controller",
@@ -267,7 +286,8 @@
           "demand": {
             "weekly": 539,
             "query": "brake controller"
-          }
+          },
+          "makers": []
         },
         {
           "id": "axle",
@@ -293,7 +313,13 @@
           "demand": {
             "weekly": 10632,
             "query": "axle"
-          }
+          },
+          "makers": [
+            {
+              "brand": "Dexter",
+              "url": "https://www.dextergroup.com/resources/information-center/resource-manuals"
+            }
+          ]
         },
         {
           "id": "leaf-springs-and-shackles",
@@ -319,7 +345,8 @@
           "demand": {
             "weekly": 82061,
             "query": "suspension"
-          }
+          },
+          "makers": []
         },
         {
           "id": "wheel-bearings",
@@ -347,7 +374,8 @@
           "demand": {
             "weekly": 329077,
             "query": "races"
-          }
+          },
+          "makers": []
         },
         {
           "id": "tires",
@@ -377,7 +405,13 @@
           "demand": {
             "weekly": 161286,
             "query": "tires"
-          }
+          },
+          "makers": [
+            {
+              "brand": "Carlstar",
+              "url": "https://www.carlstar.com/our-products/product-detail/radial-trail-hd/"
+            }
+          ]
         },
         {
           "id": "tire-pressure-monitoring",
@@ -404,7 +438,17 @@
           "demand": {
             "weekly": 3203,
             "query": "tpms"
-          }
+          },
+          "makers": [
+            {
+              "brand": "EEZ RV Products",
+              "url": "https://eezrvproducts.com/downloads-%26-videos"
+            },
+            {
+              "brand": "TST Truck System Technologies",
+              "url": "https://tsttruck.com/media/productsupport/tmp/documents/TST-Doc-507_Manual-_B_.pdf"
+            }
+          ]
         },
         {
           "id": "lug-nuts-and-torque",
@@ -431,7 +475,8 @@
           "demand": {
             "weekly": 470,
             "query": "lug nuts"
-          }
+          },
+          "makers": []
         },
         {
           "id": "fifth-wheel-landing-gear",
@@ -453,7 +498,8 @@
             "fifth wheel landing gear not working",
             "landing gear motor replacement"
           ],
-          "demand": null
+          "demand": null,
+          "makers": []
         },
         {
           "id": "kingpin-and-fifth-wheel-hitch",
@@ -479,7 +525,13 @@
           "demand": {
             "weekly": 60060,
             "query": "kingpin"
-          }
+          },
+          "makers": [
+            {
+              "brand": "Reese",
+              "url": "https://www.reesehitches.com/media/installation_instruction/30047.pdf"
+            }
+          ]
         },
         {
           "id": "toad-setup",
@@ -504,7 +556,17 @@
           "demand": {
             "weekly": 631,
             "query": "tow bar"
-          }
+          },
+          "makers": [
+            {
+              "brand": "Demco",
+              "url": "https://cdn.demco-products.com/documents/TB20040.pdf"
+            },
+            {
+              "brand": "Roadmaster",
+              "url": "https://www.roadmasterinc.com/support/manuals/"
+            }
+          ]
         },
         {
           "id": "air-suspension-and-helper-springs",
@@ -530,7 +592,8 @@
           "demand": {
             "weekly": 566,
             "query": "air suspension"
-          }
+          },
+          "makers": []
         }
       ]
     },
@@ -566,7 +629,8 @@
           "demand": {
             "weekly": 1087,
             "query": "power cord"
-          }
+          },
+          "makers": []
         },
         {
           "id": "shore-power-inlet",
@@ -589,7 +653,8 @@
             "rv power inlet replacement",
             "shore power inlet burned"
           ],
-          "demand": null
+          "demand": null,
+          "makers": []
         },
         {
           "id": "surge-protector-and-ems",
@@ -616,7 +681,8 @@
           "demand": {
             "weekly": 90372,
             "query": "ems"
-          }
+          },
+          "makers": []
         },
         {
           "id": "transfer-switch",
@@ -642,7 +708,8 @@
           "demand": {
             "weekly": 57531,
             "query": "ats"
-          }
+          },
+          "makers": []
         },
         {
           "id": "breaker-panel-and-120v-breakers",
@@ -670,7 +737,8 @@
           "demand": {
             "weekly": 193,
             "query": "distribution panel"
-          }
+          },
+          "makers": []
         },
         {
           "id": "converter-and-charger",
@@ -699,7 +767,21 @@
           "demand": {
             "weekly": 1420345,
             "query": "converter"
-          }
+          },
+          "makers": [
+            {
+              "brand": "Go Power!",
+              "url": "https://support.gopowersolar.com/"
+            },
+            {
+              "brand": "Progressive Dynamics",
+              "url": "https://www.progressivedyn.com/support-manuals-troubleshooting-guides/"
+            },
+            {
+              "brand": "WFCO",
+              "url": "https://www.wfcotech.com/support/product-downloads/"
+            }
+          ]
         },
         {
           "id": "inverter",
@@ -728,7 +810,41 @@
           "demand": {
             "weekly": 16300,
             "query": "inverter"
-          }
+          },
+          "makers": [
+            {
+              "brand": "Go Power!",
+              "url": "https://support.gopowersolar.com/"
+            },
+            {
+              "brand": "Magnum Energy",
+              "url": "https://www.magnum-dimensions.com/support#documents"
+            },
+            {
+              "brand": "Progressive Dynamics",
+              "url": "https://www.progressivedyn.com/support-manuals-troubleshooting-guides/"
+            },
+            {
+              "brand": "Renogy",
+              "url": "https://www.renogy.com/support/"
+            },
+            {
+              "brand": "Rich Solar",
+              "url": "https://richsolar.com/pages/user-manual-and-software-downloads"
+            },
+            {
+              "brand": "Samlex America",
+              "url": "https://samlexamerica.com/resources-support/product-documentation/"
+            },
+            {
+              "brand": "Victron Energy",
+              "url": "https://www.victronenergy.com/support-and-downloads"
+            },
+            {
+              "brand": "Xantrex",
+              "url": "https://xantrex.com/library/"
+            }
+          ]
         },
         {
           "id": "inverter-charger",
@@ -752,7 +868,17 @@
           "demand": {
             "weekly": 184,
             "query": "xantrex"
-          }
+          },
+          "makers": [
+            {
+              "brand": "Magnum Energy",
+              "url": "https://www.magnum-dimensions.com/support#documents"
+            },
+            {
+              "brand": "Xantrex",
+              "url": "https://xantrex.com/library/"
+            }
+          ]
         },
         {
           "id": "house-battery",
@@ -782,7 +908,17 @@
           "demand": {
             "weekly": 528,
             "query": "deep cycle"
-          }
+          },
+          "makers": [
+            {
+              "brand": "Battle Born",
+              "url": "https://battlebornbatteries.com/blogs/product-resources"
+            },
+            {
+              "brand": "Renogy",
+              "url": "https://www.renogy.com/support/"
+            }
+          ]
         },
         {
           "id": "battery-disconnect",
@@ -809,7 +945,8 @@
           "demand": {
             "weekly": 33338,
             "query": "kill switch"
-          }
+          },
+          "makers": []
         },
         {
           "id": "battery-monitor-and-shunt",
@@ -835,7 +972,8 @@
           "demand": {
             "weekly": 5741,
             "query": "shunt"
-          }
+          },
+          "makers": []
         },
         {
           "id": "solar-panels",
@@ -863,7 +1001,33 @@
           "demand": {
             "weekly": 1333161,
             "query": "solar"
-          }
+          },
+          "makers": [
+            {
+              "brand": "EcoFlow",
+              "url": "https://www.ecoflow.com/us/support/download/index"
+            },
+            {
+              "brand": "Go Power!",
+              "url": "https://support.gopowersolar.com/"
+            },
+            {
+              "brand": "Jackery",
+              "url": "https://www.jackery.com/pages/user-guides"
+            },
+            {
+              "brand": "Renogy",
+              "url": "https://www.renogy.com/support/"
+            },
+            {
+              "brand": "Rich Solar",
+              "url": "https://richsolar.com/pages/user-manual-and-software-downloads"
+            },
+            {
+              "brand": "Zamp Solar",
+              "url": "https://www.zampsolar.com/pages/support"
+            }
+          ]
         },
         {
           "id": "solar-charge-controller",
@@ -890,7 +1054,21 @@
           "demand": {
             "weekly": 1872,
             "query": "mppt"
-          }
+          },
+          "makers": [
+            {
+              "brand": "Magnum Energy",
+              "url": "https://www.magnum-dimensions.com/support#documents"
+            },
+            {
+              "brand": "Victron Energy",
+              "url": "https://www.victronenergy.com/support-and-downloads"
+            },
+            {
+              "brand": "Zamp Solar",
+              "url": "https://www.zampsolar.com/pages/support"
+            }
+          ]
         },
         {
           "id": "fuses",
@@ -918,7 +1096,8 @@
           "demand": {
             "weekly": 1251,
             "query": "fuses"
-          }
+          },
+          "makers": []
         },
         {
           "id": "12-volt-outlets-and-usb",
@@ -945,7 +1124,8 @@
           "demand": {
             "weekly": 4699,
             "query": "usb port"
-          }
+          },
+          "makers": []
         },
         {
           "id": "120-volt-outlets-and-gfci",
@@ -973,7 +1153,8 @@
           "demand": {
             "weekly": 1023,
             "query": "gfci outlet"
-          }
+          },
+          "makers": []
         },
         {
           "id": "light-fixtures-and-leds",
@@ -1002,7 +1183,8 @@
           "demand": {
             "weekly": 89354,
             "query": "led lights"
-          }
+          },
+          "makers": []
         },
         {
           "id": "wiring-harness-and-connectors",
@@ -1031,7 +1213,8 @@
           "demand": {
             "weekly": 1046,
             "query": "wiring harness"
-          }
+          },
+          "makers": []
         },
         {
           "id": "generator",
@@ -1058,7 +1241,37 @@
           "demand": {
             "weekly": 1303119,
             "query": "generator"
-          }
+          },
+          "makers": [
+            {
+              "brand": "Champion",
+              "url": "https://www.championpowerequipment.com/product-manuals-diagrams/"
+            },
+            {
+              "brand": "Cummins Onan",
+              "url": "https://www.cummins.com/en-na/generators/rv-generators/rv-generator-manuals"
+            },
+            {
+              "brand": "Firman",
+              "url": "https://firmanpowerequipment.com/pages/product-model-search"
+            },
+            {
+              "brand": "Generac",
+              "url": "https://www.generac.com/support/product-info-user-manuals/"
+            },
+            {
+              "brand": "Honda",
+              "url": "https://powerequipment.honda.com/support/owners-manuals/generators"
+            },
+            {
+              "brand": "WEN",
+              "url": "https://wenproducts.com/collections/generators-manual"
+            },
+            {
+              "brand": "Westinghouse",
+              "url": "https://westinghouse.com/pages/manuals"
+            }
+          ]
         },
         {
           "id": "control-and-monitor-panel",
@@ -1087,7 +1300,8 @@
           "demand": {
             "weekly": 898748,
             "query": "control"
-          }
+          },
+          "makers": []
         }
       ]
     },
@@ -1123,7 +1337,8 @@
           "demand": {
             "weekly": 56,
             "query": "fresh water tank"
-          }
+          },
+          "makers": []
         },
         {
           "id": "gravity-fill-and-city-water-inlet",
@@ -1148,7 +1363,8 @@
             "rv water inlet check valve",
             "gravity fill cap"
           ],
-          "demand": null
+          "demand": null,
+          "makers": []
         },
         {
           "id": "water-pressure-regulator",
@@ -1174,7 +1390,8 @@
           "demand": {
             "weekly": 1091,
             "query": "pressure regulator"
-          }
+          },
+          "makers": []
         },
         {
           "id": "inline-water-filter",
@@ -1199,7 +1416,8 @@
           "demand": {
             "weekly": 75530,
             "query": "water filter"
-          }
+          },
+          "makers": []
         },
         {
           "id": "water-pump",
@@ -1229,7 +1447,13 @@
           "demand": {
             "weekly": 3678,
             "query": "water pump"
-          }
+          },
+          "makers": [
+            {
+              "brand": "Valterra",
+              "url": "https://valterra.com/downloads/"
+            }
+          ]
         },
         {
           "id": "pump-strainer-and-check-valve",
@@ -1255,7 +1479,8 @@
           "demand": {
             "weekly": 2919,
             "query": "strainer"
-          }
+          },
+          "makers": []
         },
         {
           "id": "accumulator-tank",
@@ -1279,7 +1504,8 @@
           "demand": {
             "weekly": 1579,
             "query": "accumulator"
-          }
+          },
+          "makers": []
         },
         {
           "id": "pex-lines-and-fittings",
@@ -1307,7 +1533,8 @@
           "demand": {
             "weekly": 21326,
             "query": "pex"
-          }
+          },
+          "makers": []
         },
         {
           "id": "low-point-drains",
@@ -1333,7 +1560,8 @@
           "demand": {
             "weekly": 25,
             "query": "low point drain"
-          }
+          },
+          "makers": []
         },
         {
           "id": "water-heater-tank",
@@ -1362,7 +1590,25 @@
           "demand": {
             "weekly": 38051,
             "query": "suburban"
-          }
+          },
+          "makers": [
+            {
+              "brand": "Eemax",
+              "url": "https://www.eemax.com/resources/"
+            },
+            {
+              "brand": "Lippert",
+              "url": "https://support.lci1.com/documentation/"
+            },
+            {
+              "brand": "Suburban",
+              "url": "https://library.suburbanrv.com/"
+            },
+            {
+              "brand": "Truma",
+              "url": "https://www.truma.com/us/service/download-center/"
+            }
+          ]
         },
         {
           "id": "water-heater-tankless",
@@ -1390,7 +1636,25 @@
           "demand": {
             "weekly": 210938,
             "query": "on demand"
-          }
+          },
+          "makers": [
+            {
+              "brand": "Eemax",
+              "url": "https://www.eemax.com/resources/"
+            },
+            {
+              "brand": "Lippert",
+              "url": "https://support.lci1.com/documentation/"
+            },
+            {
+              "brand": "Suburban",
+              "url": "https://library.suburbanrv.com/"
+            },
+            {
+              "brand": "Truma",
+              "url": "https://www.truma.com/us/service/download-center/"
+            }
+          ]
         },
         {
           "id": "water-heater-anode-rod",
@@ -1415,7 +1679,8 @@
           "demand": {
             "weekly": 4112,
             "query": "anode"
-          }
+          },
+          "makers": []
         },
         {
           "id": "water-heater-bypass",
@@ -1440,7 +1705,8 @@
           "demand": {
             "weekly": 53,
             "query": "bypass kit"
-          }
+          },
+          "makers": []
         },
         {
           "id": "faucets-and-shower-mixer",
@@ -1469,7 +1735,8 @@
           "demand": {
             "weekly": 14861,
             "query": "faucets"
-          }
+          },
+          "makers": []
         },
         {
           "id": "shower-pan-and-drain",
@@ -1495,7 +1762,8 @@
           "demand": {
             "weekly": 33764,
             "query": "shower drain"
-          }
+          },
+          "makers": []
         },
         {
           "id": "outside-shower",
@@ -1520,7 +1788,8 @@
           "demand": {
             "weekly": 29,
             "query": "outside shower"
-          }
+          },
+          "makers": []
         },
         {
           "id": "water-system-winterising",
@@ -1548,7 +1817,8 @@
           "demand": {
             "weekly": 2372,
             "query": "antifreeze"
-          }
+          },
+          "makers": []
         }
       ]
     },
@@ -1583,7 +1853,21 @@
           "demand": {
             "weekly": 160725,
             "query": "toilet"
-          }
+          },
+          "makers": [
+            {
+              "brand": "Dometic",
+              "url": "https://www.dometic.com/en-us/lp/documents-database"
+            },
+            {
+              "brand": "Nature's Head",
+              "url": "https://natureshead.net/installation-guide-and-manuals/"
+            },
+            {
+              "brand": "Thetford",
+              "url": "https://www.thetford.com/support/"
+            }
+          ]
         },
         {
           "id": "toilet-vacuum-or-macerator",
@@ -1608,7 +1892,21 @@
           "demand": {
             "weekly": 160725,
             "query": "toilet"
-          }
+          },
+          "makers": [
+            {
+              "brand": "Dometic",
+              "url": "https://www.dometic.com/en-us/lp/documents-database"
+            },
+            {
+              "brand": "Nature's Head",
+              "url": "https://natureshead.net/installation-guide-and-manuals/"
+            },
+            {
+              "brand": "Thetford",
+              "url": "https://www.thetford.com/support/"
+            }
+          ]
         },
         {
           "id": "toilet-composting",
@@ -1632,7 +1930,21 @@
           "demand": {
             "weekly": 160725,
             "query": "toilet"
-          }
+          },
+          "makers": [
+            {
+              "brand": "Dometic",
+              "url": "https://www.dometic.com/en-us/lp/documents-database"
+            },
+            {
+              "brand": "Nature's Head",
+              "url": "https://natureshead.net/installation-guide-and-manuals/"
+            },
+            {
+              "brand": "Thetford",
+              "url": "https://www.thetford.com/support/"
+            }
+          ]
         },
         {
           "id": "cassette-toilet",
@@ -1656,7 +1968,13 @@
           "demand": {
             "weekly": 7633,
             "query": "cassette"
-          }
+          },
+          "makers": [
+            {
+              "brand": "Thetford",
+              "url": "https://www.thetford.com/support/"
+            }
+          ]
         },
         {
           "id": "black-tank",
@@ -1685,7 +2003,13 @@
           "demand": {
             "weekly": 1517,
             "query": "black tank"
-          }
+          },
+          "makers": [
+            {
+              "brand": "Dometic",
+              "url": "https://www.dometic.com/en-us/lp/documents-database"
+            }
+          ]
         },
         {
           "id": "grey-tank",
@@ -1713,7 +2037,8 @@
           "demand": {
             "weekly": 81,
             "query": "grey tank"
-          }
+          },
+          "makers": []
         },
         {
           "id": "gate-valves",
@@ -1742,7 +2067,8 @@
           "demand": {
             "weekly": 162,
             "query": "gate valves"
-          }
+          },
+          "makers": []
         },
         {
           "id": "cable-operated-valves",
@@ -1764,7 +2090,8 @@
             "rv cable dump valve adjustment",
             "cable valve replacement"
           ],
-          "demand": null
+          "demand": null,
+          "makers": []
         },
         {
           "id": "electric-dump-valves",
@@ -1788,7 +2115,13 @@
           "demand": {
             "weekly": 45,
             "query": "electric valve"
-          }
+          },
+          "makers": [
+            {
+              "brand": "Valterra",
+              "url": "https://valterra.com/downloads/"
+            }
+          ]
         },
         {
           "id": "sewer-hose-and-fittings",
@@ -1816,7 +2149,13 @@
           "demand": {
             "weekly": 134,
             "query": "rv sewer hose"
-          }
+          },
+          "makers": [
+            {
+              "brand": "Valterra",
+              "url": "https://valterra.com/downloads/"
+            }
+          ]
         },
         {
           "id": "macerator-pump",
@@ -1841,7 +2180,8 @@
           "demand": {
             "weekly": 733,
             "query": "macerator"
-          }
+          },
+          "makers": []
         },
         {
           "id": "tank-flush-and-rinsing",
@@ -1863,7 +2203,8 @@
             "black tank flush not working",
             "tank flush vacuum breaker"
           ],
-          "demand": null
+          "demand": null,
+          "makers": []
         },
         {
           "id": "tank-level-sensors",
@@ -1890,7 +2231,8 @@
           "demand": {
             "weekly": 27,
             "query": "level gauges"
-          }
+          },
+          "makers": []
         },
         {
           "id": "holding-tank-treatment",
@@ -1917,7 +2259,8 @@
           "demand": {
             "weekly": 338,
             "query": "digester"
-          }
+          },
+          "makers": []
         },
         {
           "id": "vent-stack-and-air-admittance-valve",
@@ -1944,7 +2287,8 @@
           "demand": {
             "weekly": 949,
             "query": "aav"
-          }
+          },
+          "makers": []
         },
         {
           "id": "p-traps-and-drains",
@@ -1971,7 +2315,8 @@
           "demand": {
             "weekly": 33669,
             "query": "sink drain"
-          }
+          },
+          "makers": []
         }
       ]
     },
@@ -2008,7 +2353,17 @@
           "demand": {
             "weekly": 24549,
             "query": "furnace"
-          }
+          },
+          "makers": [
+            {
+              "brand": "Lippert",
+              "url": "https://support.lci1.com/documentation/"
+            },
+            {
+              "brand": "Suburban",
+              "url": "https://library.suburbanrv.com/"
+            }
+          ]
         },
         {
           "id": "furnace-sail-switch",
@@ -2034,7 +2389,8 @@
           "demand": {
             "weekly": 22,
             "query": "sail switch"
-          }
+          },
+          "makers": []
         },
         {
           "id": "furnace-control-board-and-igniter",
@@ -2061,7 +2417,8 @@
           "demand": {
             "weekly": 2279,
             "query": "control board"
-          }
+          },
+          "makers": []
         },
         {
           "id": "furnace-ducting-and-floor-registers",
@@ -2089,7 +2446,8 @@
           "demand": {
             "weekly": 6127,
             "query": "registers"
-          }
+          },
+          "makers": []
         },
         {
           "id": "rooftop-air-conditioner",
@@ -2118,7 +2476,21 @@
           "demand": {
             "weekly": 137932,
             "query": "air conditioner"
-          }
+          },
+          "makers": [
+            {
+              "brand": "Dometic",
+              "url": "https://www.dometic.com/en-us/lp/documents-database"
+            },
+            {
+              "brand": "RecPro",
+              "url": "https://recpro.com/manuals-and-instructions/"
+            },
+            {
+              "brand": "Zero Breeze",
+              "url": "https://www.zerobreeze.com/pages/manual-download"
+            }
+          ]
         },
         {
           "id": "air-conditioner-capacitor",
@@ -2144,7 +2516,8 @@
           "demand": {
             "weekly": 176,
             "query": "run capacitor"
-          }
+          },
+          "makers": []
         },
         {
           "id": "air-conditioner-gasket-and-shroud",
@@ -2167,7 +2540,8 @@
             "ac leaking inside rv",
             "ac shroud cracked"
           ],
-          "demand": null
+          "demand": null,
+          "makers": []
         },
         {
           "id": "air-conditioner-condensate-drain",
@@ -2193,7 +2567,8 @@
           "demand": {
             "weekly": 1761,
             "query": "condensate"
-          }
+          },
+          "makers": []
         },
         {
           "id": "heat-pump-and-heat-strip",
@@ -2218,7 +2593,17 @@
           "demand": {
             "weekly": 38589,
             "query": "heat pump"
-          }
+          },
+          "makers": [
+            {
+              "brand": "Coleman-Mach",
+              "url": "https://library.coleman-mach.com/"
+            },
+            {
+              "brand": "Dometic",
+              "url": "https://www.dometic.com/en-us/lp/documents-database"
+            }
+          ]
         },
         {
           "id": "thermostat",
@@ -2247,7 +2632,13 @@
           "demand": {
             "weekly": 76205,
             "query": "thermostat"
-          }
+          },
+          "makers": [
+            {
+              "brand": "Coleman-Mach",
+              "url": "https://library.coleman-mach.com/"
+            }
+          ]
         },
         {
           "id": "roof-vent-fan",
@@ -2276,7 +2667,8 @@
           "demand": {
             "weekly": 191,
             "query": "maxxair"
-          }
+          },
+          "makers": []
         },
         {
           "id": "ceiling-vents-and-hatch",
@@ -2304,7 +2696,8 @@
           "demand": {
             "weekly": 297,
             "query": "roof vent"
-          }
+          },
+          "makers": []
         },
         {
           "id": "portable-and-auxiliary-heat",
@@ -2331,7 +2724,8 @@
           "demand": {
             "weekly": 284354,
             "query": "portable"
-          }
+          },
+          "makers": []
         },
         {
           "id": "dehumidifier-and-ventilation",
@@ -2358,7 +2752,8 @@
           "demand": {
             "weekly": 40927,
             "query": "dehumidifier"
-          }
+          },
+          "makers": []
         }
       ]
     },
@@ -2394,7 +2789,8 @@
           "demand": {
             "weekly": 7131,
             "query": "tpo"
-          }
+          },
+          "makers": []
         },
         {
           "id": "roof-sealant-and-lap-sealant",
@@ -2422,7 +2818,8 @@
           "demand": {
             "weekly": 337,
             "query": "roof sealant"
-          }
+          },
+          "makers": []
         },
         {
           "id": "roof-coating",
@@ -2448,7 +2845,8 @@
           "demand": {
             "weekly": 588,
             "query": "roof coating"
-          }
+          },
+          "makers": []
         },
         {
           "id": "skylight",
@@ -2474,7 +2872,13 @@
           "demand": {
             "weekly": 47703,
             "query": "skylight"
-          }
+          },
+          "makers": [
+            {
+              "brand": "Dometic",
+              "url": "https://www.dometic.com/en-us/lp/documents-database"
+            }
+          ]
         },
         {
           "id": "slide-out-and-mechanism",
@@ -2503,7 +2907,8 @@
           "demand": {
             "weekly": 124,
             "query": "slide out"
-          }
+          },
+          "makers": []
         },
         {
           "id": "slide-seals-and-wipers",
@@ -2531,7 +2936,8 @@
           "demand": {
             "weekly": 46,
             "query": "wiper seal"
-          }
+          },
+          "makers": []
         },
         {
           "id": "slide-topper-awning",
@@ -2555,7 +2961,8 @@
             "topper replacement",
             "slide topper not rolling up"
           ],
-          "demand": null
+          "demand": null,
+          "makers": []
         },
         {
           "id": "windows",
@@ -2584,7 +2991,8 @@
           "demand": {
             "weekly": 34081319,
             "query": "windows"
-          }
+          },
+          "makers": []
         },
         {
           "id": "window-shades-and-blinds",
@@ -2612,7 +3020,8 @@
           "demand": {
             "weekly": 1205,
             "query": "window shades"
-          }
+          },
+          "makers": []
         },
         {
           "id": "entry-door-and-lock",
@@ -2641,7 +3050,8 @@
           "demand": {
             "weekly": 329,
             "query": "entry door"
-          }
+          },
+          "makers": []
         },
         {
           "id": "door-and-window-seals",
@@ -2668,7 +3078,8 @@
           "demand": {
             "weekly": 450605,
             "query": "door"
-          }
+          },
+          "makers": []
         },
         {
           "id": "baggage-and-bay-doors",
@@ -2695,7 +3106,8 @@
           "demand": {
             "weekly": 47311,
             "query": "baggage"
-          }
+          },
+          "makers": []
         },
         {
           "id": "body-panels-and-siding",
@@ -2723,7 +3135,8 @@
           "demand": {
             "weekly": 175,
             "query": "filon"
-          }
+          },
+          "makers": []
         },
         {
           "id": "decals-and-graphics",
@@ -2750,7 +3163,8 @@
           "demand": {
             "weekly": 224206,
             "query": "graphics"
-          }
+          },
+          "makers": []
         },
         {
           "id": "underbelly-and-coroplast",
@@ -2776,7 +3190,8 @@
           "demand": {
             "weekly": 1233,
             "query": "coroplast"
-          }
+          },
+          "makers": []
         },
         {
           "id": "fender-skirts-and-trim",
@@ -2801,7 +3216,8 @@
           "demand": {
             "weekly": 22,
             "query": "wheel trim"
-          }
+          },
+          "makers": []
         },
         {
           "id": "bumper-and-rear-rack",
@@ -2828,7 +3244,13 @@
           "demand": {
             "weekly": 31010,
             "query": "bumper"
-          }
+          },
+          "makers": [
+            {
+              "brand": "Hollywood Racks",
+              "url": "https://hollywoodracks.com/pages/installation-instructions"
+            }
+          ]
         },
         {
           "id": "entry-steps",
@@ -2856,7 +3278,8 @@
           "demand": {
             "weekly": 105,
             "query": "rv steps"
-          }
+          },
+          "makers": []
         },
         {
           "id": "awning",
@@ -2885,7 +3308,25 @@
           "demand": {
             "weekly": 5072,
             "query": "awning"
-          }
+          },
+          "makers": [
+            {
+              "brand": "Aleko",
+              "url": "https://alekoproducts.com/product-manuals/"
+            },
+            {
+              "brand": "Dometic",
+              "url": "https://www.dometic.com/en-us/lp/documents-database"
+            },
+            {
+              "brand": "Lippert",
+              "url": "https://support.lci1.com/documentation/"
+            },
+            {
+              "brand": "Zip Dee",
+              "url": "https://www.awningsbyzipdee.com/resources/manuals-guides/"
+            }
+          ]
         },
         {
           "id": "awning-accessories",
@@ -2910,7 +3351,8 @@
           "demand": {
             "weekly": 77,
             "query": "sun blocker"
-          }
+          },
+          "makers": []
         },
         {
           "id": "ladder-and-roof-access",
@@ -2935,7 +3377,8 @@
           "demand": {
             "weekly": 107838,
             "query": "ladder"
-          }
+          },
+          "makers": []
         },
         {
           "id": "exterior-lighting",
@@ -2964,7 +3407,8 @@
           "demand": {
             "weekly": 739,
             "query": "porch light"
-          }
+          },
+          "makers": []
         },
         {
           "id": "backup-and-side-cameras",
@@ -2991,7 +3435,8 @@
           "demand": {
             "weekly": 352989,
             "query": "backup"
-          }
+          },
+          "makers": []
         }
       ]
     },
@@ -3027,7 +3472,17 @@
           "demand": {
             "weekly": 41071,
             "query": "refrigerator"
-          }
+          },
+          "makers": [
+            {
+              "brand": "Norcold",
+              "url": "https://www.thetford.com/app/uploads/2024/09/640083E_SM_N8DCXN10DCX-1.pdf"
+            },
+            {
+              "brand": "RecPro",
+              "url": "https://recpro.com/manuals-and-instructions/"
+            }
+          ]
         },
         {
           "id": "refrigerator-compressor-or-12v",
@@ -3055,7 +3510,25 @@
           "demand": {
             "weekly": 41071,
             "query": "refrigerator"
-          }
+          },
+          "makers": [
+            {
+              "brand": "Dometic",
+              "url": "https://www.dometic.com/en-us/lp/documents-database"
+            },
+            {
+              "brand": "Norcold",
+              "url": "https://www.thetford.com/app/uploads/2024/09/640083E_SM_N8DCXN10DCX-1.pdf"
+            },
+            {
+              "brand": "RecPro",
+              "url": "https://recpro.com/manuals-and-instructions/"
+            },
+            {
+              "brand": "Unique",
+              "url": "https://uniqueappliances.com/en-us/pages/technical-support"
+            }
+          ]
         },
         {
           "id": "refrigerator-venting-and-fans",
@@ -3079,7 +3552,8 @@
             "fridge not cooling in hot weather",
             "baffle rv fridge"
           ],
-          "demand": null
+          "demand": null,
+          "makers": []
         },
         {
           "id": "cooktop-and-oven",
@@ -3109,7 +3583,21 @@
           "demand": {
             "weekly": 349027,
             "query": "range"
-          }
+          },
+          "makers": [
+            {
+              "brand": "Greystone",
+              "url": "https://support.lci1.com/greystone-ranges"
+            },
+            {
+              "brand": "RecPro",
+              "url": "https://recpro.com/manuals-and-instructions/"
+            },
+            {
+              "brand": "Suburban",
+              "url": "https://library.suburbanrv.com/"
+            }
+          ]
         },
         {
           "id": "microwave-and-convection",
@@ -3135,7 +3623,8 @@
           "demand": {
             "weekly": 93316,
             "query": "microwave"
-          }
+          },
+          "makers": []
         },
         {
           "id": "range-hood-and-vent",
@@ -3161,7 +3650,8 @@
           "demand": {
             "weekly": 910,
             "query": "range hood"
-          }
+          },
+          "makers": []
         },
         {
           "id": "washer-and-dryer",
@@ -3187,7 +3677,13 @@
           "demand": {
             "weekly": 47626,
             "query": "washer"
-          }
+          },
+          "makers": [
+            {
+              "brand": "Splendide",
+              "url": "https://www.splendide.com/service/docs.html"
+            }
+          ]
         },
         {
           "id": "water-dispenser-and-ice-maker",
@@ -3212,7 +3708,8 @@
           "demand": {
             "weekly": 6888,
             "query": "ice maker"
-          }
+          },
+          "makers": []
         },
         {
           "id": "furniture-and-seating",
@@ -3240,7 +3737,8 @@
           "demand": {
             "weekly": 455135,
             "query": "furniture"
-          }
+          },
+          "makers": []
         },
         {
           "id": "bed-and-mattress",
@@ -3268,7 +3766,8 @@
           "demand": {
             "weekly": 214156,
             "query": "bed"
-          }
+          },
+          "makers": []
         },
         {
           "id": "cabinets,-drawers-and-latches",
@@ -3296,7 +3795,8 @@
           "demand": {
             "weekly": 71,
             "query": "drawer slide"
-          }
+          },
+          "makers": []
         },
         {
           "id": "flooring-and-subfloor",
@@ -3324,7 +3824,8 @@
           "demand": {
             "weekly": 137320,
             "query": "carpet"
-          }
+          },
+          "makers": []
         },
         {
           "id": "tv-and-entertainment",
@@ -3352,7 +3853,8 @@
           "demand": {
             "weekly": 8909265,
             "query": "tv"
-          }
+          },
+          "makers": []
         },
         {
           "id": "central-vacuum-and-cleaning",
@@ -3376,7 +3878,8 @@
           "demand": {
             "weekly": 341984,
             "query": "vacuum"
-          }
+          },
+          "makers": []
         }
       ]
     },
@@ -3409,7 +3912,17 @@
           "demand": {
             "weekly": 464524,
             "query": "engine"
-          }
+          },
+          "makers": [
+            {
+              "brand": "Allison",
+              "url": "https://www.allisontransmission.com/aftermarket-and-channel/parts-and-service/service-tools--information/publications"
+            },
+            {
+              "brand": "Cummins",
+              "url": "https://www.cummins.com/support/manuals"
+            }
+          ]
         },
         {
           "id": "cooling-system",
@@ -3435,7 +3948,8 @@
           "demand": {
             "weekly": 8834,
             "query": "radiator"
-          }
+          },
+          "makers": []
         },
         {
           "id": "belts,-hoses-and-filters",
@@ -3460,7 +3974,8 @@
           "demand": {
             "weekly": 68227,
             "query": "air filter"
-          }
+          },
+          "makers": []
         },
         {
           "id": "emissions-and-def",
@@ -3485,7 +4000,8 @@
           "demand": {
             "weekly": 54552,
             "query": "def"
-          }
+          },
+          "makers": []
         },
         {
           "id": "chassis-brakes",
@@ -3511,7 +4027,8 @@
           "demand": {
             "weekly": 144,
             "query": "air brakes"
-          }
+          },
+          "makers": []
         },
         {
           "id": "air-system-compressor,-dryer,-governor",
@@ -3536,7 +4053,8 @@
           "demand": {
             "weekly": 7356,
             "query": "air compressor"
-          }
+          },
+          "makers": []
         },
         {
           "id": "steering-and-alignment",
@@ -3561,7 +4079,8 @@
           "demand": {
             "weekly": 21724,
             "query": "alignment"
-          }
+          },
+          "makers": []
         },
         {
           "id": "suspension-and-shocks",
@@ -3586,7 +4105,8 @@
           "demand": {
             "weekly": 174394,
             "query": "springs"
-          }
+          },
+          "makers": []
         },
         {
           "id": "alternator-and-starter",
@@ -3612,7 +4132,8 @@
           "demand": {
             "weekly": 59578,
             "query": "starter"
-          }
+          },
+          "makers": []
         },
         {
           "id": "chassis-battery-and-isolator",
@@ -3637,7 +4158,8 @@
           "demand": {
             "weekly": 31,
             "query": "starting battery"
-          }
+          },
+          "makers": []
         },
         {
           "id": "dash-air-conditioning",
@@ -3663,7 +4185,8 @@
           "demand": {
             "weekly": 23,
             "query": "dash ac"
-          }
+          },
+          "makers": []
         },
         {
           "id": "exhaust-and-turbo",
@@ -3687,7 +4210,8 @@
           "demand": {
             "weekly": 467220,
             "query": "turbo"
-          }
+          },
+          "makers": []
         },
         {
           "id": "fuel-system",
@@ -3712,7 +4236,8 @@
           "demand": {
             "weekly": 1644,
             "query": "fuel pump"
-          }
+          },
+          "makers": []
         },
         {
           "id": "wheels,-tyres-and-tpms",
@@ -3737,7 +4262,8 @@
           "demand": {
             "weekly": 799,
             "query": "tyre pressure"
-          }
+          },
+          "makers": []
         }
       ]
     }
