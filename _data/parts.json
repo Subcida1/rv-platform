@@ -1,5 +1,5 @@
 {
-  "note": "The parts index: every part an RV is made of, by system, with what it does, how it fails, which RV types have it, which of our guides already covers it, and the phrasings a reader would search. Built 2026-09-29 from Ty's list plus the 110 component makers already catalogued in _data/manuals.json. No models, no specs: this is the index that tells us what content to research next.",
+  "note": "The parts index: every part an RV is made of, by system, with what it does, how it fails, which RV types have it, which of our guides already covers it, and the phrasings a reader would search. Built 2026-09-29 from Ty's list plus the 110 component makers already catalogued in _data/manuals.json. No models, no specs: this is the index that tells us what content to research next. Two kinds of guide exist and only one maps cleanly here: a PART guide (rv-furnace-not-working, rv-water-pump-wont-prime) belongs to one part, while a SYMPTOM guide (rv-two-appliances-stopped, rv-12-volt-problems, rv-towing-capacity) spans several parts and links to none of them, which is why nine of the 35 guides appear nowhere in this file. A symptom guide is not a gap; it is a different shape, and the content plan should count both.",
   "systems": [
     {
       "key": "towing-and-running-gear",
