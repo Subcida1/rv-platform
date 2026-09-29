@@ -181,5 +181,53 @@
   "Joyce": {
     "to": "Port Angeles",
     "why": "A small community on SR-112 west of Port Angeles. The Census place file does not carry it and its ZIP area (98343) is not in the table, so the coordinate used is Port Angeles, which the listing itself names as its coverage."
+  },
+  "Gordonville": {
+    "to_zip": "76245",
+    "why": "A small community in Grayson County near Lake Texoma, with no Census place. 76245 is the ZIP area that serves it."
+  },
+  "Pipe Creek": {
+    "to_zip": "78063",
+    "why": "A community in Bandera County the Census place file does not carry. 78063 is the ZIP area that serves it."
+  },
+  "Spicewood": {
+    "to_zip": "78669",
+    "why": "A community across Burnet and Travis counties with no Census place. 78669 is the ZIP area that serves it."
+  },
+  "Tarpley": {
+    "to_zip": "78883",
+    "why": "A community in Bandera County with no Census place. 78883 is the ZIP area that serves it."
+  },
+  "Cypress": {
+    "to_zip": "77429",
+    "why": "A Houston suburb the Census place file does not carry as a place (it has Little Cypress, which is elsewhere). 77429 is the ZIP area that serves it."
+  },
+  "Del Valle": {
+    "to_zip": "78617",
+    "why": "A community south-east of Austin with no Census place. 78617 is the ZIP area that serves it."
+  },
+  "Wallisville": {
+    "to_zip": "77597",
+    "why": "A community in Chambers County with no Census place. 77597 is the ZIP area."
+  },
+  "West Lake": {
+    "to": "West Lake Hills",
+    "why": "The listing shortens it; the Census carries West Lake Hills city."
+  },
+  "Central Heights": {
+    "to_zip": "75961",
+    "why": "A community north of Nacogdoches with no Census place. 75961 is the ZIP area that serves it."
+  },
+  "Woden": {
+    "to": "Nacogdoches",
+    "why": "A small community in Nacogdoches County. Its own ZIP area (75978) is not in the table, so the coordinate used is Nacogdoches, the county seat the listing also names rather than a number guessed at."
+  },
+  "Camp Bullis": {
+    "to": "San Antonio",
+    "why": "A military reservation on San Antonio's north-west edge, not a town a reader lives in. The listing's own coverage is San Antonio."
+  },
+  "Clear Lake City": {
+    "to": "Houston",
+    "why": "A district of Houston, and the Census carries no place for it under that name."
   }
 }

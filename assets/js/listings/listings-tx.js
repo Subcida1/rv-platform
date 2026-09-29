@@ -139,5 +139,751 @@ window.RV_LISTINGS_TX = [
   ],  "base": "junction",  "areas": [
    "junction"
   ],  "region": "Kimble County",  "spec": "I do not offer emergency roadside assistance (tires/towing). I focus exclusively on on-site habitation and system repairs.",  "reg": "south-tx"
+ },
+ {  "n": "RV Tech Mobile Services",  "c": "Roanoke",  "p": "817-751-7667",  "u": "https://rvtechmobileservices.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Veteran founded mobile RV repair business serving the Dallas and Fort Worth area since 2017. Technicians come to motorhomes, fifth wheels, travel trailers and horse trailers with living quarters. Service calls are scheduled directly, typically within 12 hours of the first call.",  "g": [
+   "t: mobile"
+  ],  "base": "roanoke",  "areas": [
+   "dallas",
+   "fort worth"
+  ],  "region": "the Greater DFW Area",  "reg": "dfw"
+ },
+ {  "n": "Prime Mobile RV Repair",  "c": "Lewisville",  "p": "(972) 829-5903",  "u": "https://www.primemobilervrepair.com/",  "t": "mobile",  "e": true,  "r": false,  "d": "RVTAA certified mobile RV repair based in Lewisville serving the greater North Dallas and Fort Worth area. Work is limited to RV house systems such as air conditioning, electrical, slide-outs, plumbing and water heaters. Service is performed on site at homes, campgrounds, RV parks and storage lots.",  "g": [
+   "t: mobile",
+   "e: true"
+  ],  "base": "lewisville",  "areas": [
+   "coppell",
+   "denton",
+   "flower mound",
+   "highland village",
+   "lewisville",
+   "plano",
+   "frisco",
+   "mckinney",
+   "allen",
+   "carrollton",
+   "dallas",
+   "fort worth",
+   "arlington",
+   "grapevine",
+   "gainesville",
+   "krum",
+   "roanoke"
+  ],  "region": "North Dallas-Fort Worth",  "spec": "We focus exclusively on RV house systems and do not perform engine, chassis, generator, solar or structural body repairs",  "reg": "dfw"
+ },
+ {  "n": "JBRV Mobile RV Repair",  "c": "Ponder",  "p": "(940) 202-9488",  "u": "https://jbrvmobilervrepair.com/",  "t": "both",  "e": false,  "r": false,  "d": "Mobile RV repair team plus an RV body shop in Ponder covering North DFW. The mobile crew travels to homes, campgrounds, storage facilities and job sites for repairs and maintenance. Body work, collision and weather damage repair are handled at the Ponder shop.",  "g": [
+   "t: both"
+  ],  "base": "ponder",  "areas": [
+   "argyle",
+   "bartonville",
+   "corinth",
+   "decatur",
+   "denton",
+   "flower mound",
+   "fort worth",
+   "haslet",
+   "justin",
+   "keller",
+   "krum",
+   "lake dallas",
+   "lewisville",
+   "northlake",
+   "ponder",
+   "rhome",
+   "roanoke",
+   "southlake",
+   "trophy club",
+   "westlake"
+  ],  "region": "North DFW",  "reg": "dfw"
+ },
+ {  "n": "Patriot RV Tech",  "c": "Fort Worth",  "p": "(682) 309-2725",  "u": "https://patriotrvtech.com/",  "t": "mobile",  "e": true,  "r": false,  "d": "Veteran owned mobile RV repair business serving Dallas and Fort Worth. NRVTA certified technicians handle air conditioning, water heaters, furnaces, refrigeration, electrical, hydraulic and slide-out repair. The company advertises 24/7 emergency service.",  "g": [
+   "t: mobile",
+   "e: true"
+  ],  "base": "fort worth",  "areas": [
+   "dallas",
+   "fort worth"
+  ],  "region": "Dallas / Fort Worth",  "reg": "dfw"
+ },
+ {  "n": "Greene RV Service",  "c": "Dallas",  "p": "(945) 201-0199",  "u": "https://www.greenervservice.com/",  "t": "mobile",  "e": true,  "r": false,  "d": "Mobile RV repair business serving Dallas and the surrounding cities. Technicians come to homes, campgrounds, storage facilities or the side of the road for repairs and maintenance. The company states it does not offer paint and body work or heavy chassis work on drivable RVs, and takes emergency weekend calls when needed.",  "g": [
+   "t: mobile",
+   "e: true"
+  ],  "base": "dallas",  "areas": [
+   "dallas",
+   "fort worth",
+   "arlington",
+   "irving",
+   "grand prairie",
+   "plano",
+   "garland",
+   "mesquite",
+   "carrollton",
+   "frisco",
+   "mckinney",
+   "denton",
+   "lewisville",
+   "richardson",
+   "allen",
+   "north richland hills",
+   "euless",
+   "bedford",
+   "hurst",
+   "flower mound",
+   "grapevine",
+   "coppell",
+   "the colony",
+   "keller",
+   "mansfield",
+   "cedar hill",
+   "desoto",
+   "rowlett",
+   "burleson",
+   "southlake",
+   "colleyville",
+   "trophy club"
+  ],  "region": "Dallas Fort Worth",  "spec": "We DONT OFFER paint & body services or heavy chassis work on drivable RVs",  "reg": "dfw"
+ },
+ {  "n": "Blue Moon Mobile RV",  "c": "Carrollton",  "p": "972-323-5050",  "u": "https://www.bluemoonrv.com/rv-services",  "t": "both",  "e": false,  "r": false,  "d": "Licensed and insured RV repair shop in Carrollton with mobile service across DFW. The company is not a dealer and focuses on maintenance and repair, including Cummins Onan generator service, air conditioning, electrical, plumbing, slide-outs and collision repair. Service is available at the shop, at a driveway or at a campsite.",  "g": [
+   "t: both"
+  ],  "base": "carrollton",  "areas": [
+   "dallas",
+   "carrollton",
+   "lewisville",
+   "plano",
+   "frisco",
+   "denton"
+  ],  "region": "DFW",  "spec": "we do not install customer-supplied parts",  "reg": "dfw"
+ },
+ {  "n": "Specialized RV Repair & Conversions",  "c": "Alvarado",  "p": "(682) 342-8110",  "u": "https://specializedrvtx.com/",  "t": "center",  "e": false,  "r": false,  "d": "Full service RV repair shop in Alvarado serving the Dallas and Fort Worth metroplex. Certified technicians handle routine maintenance, collision, storm, roof, structural and custom conversion work. Repairs cover motorhomes, travel trailers, fifth wheels, toy haulers and camper vans.",  "g": [
+   "t: center"
+  ],  "base": "alvarado",  "areas": [
+   "fort worth",
+   "arlington",
+   "mansfield",
+   "burleson",
+   "cleburne",
+   "midlothian",
+   "granbury",
+   "glen rose",
+   "grandview"
+  ],  "region": "Dallas-Fort Worth metroplex",  "reg": "dfw"
+ },
+ {  "n": "Coach Specialists of Texas",  "c": "Fort Worth",  "p": "817-842-1144",  "u": "https://www.coachspecialists.com/about-us/locations/fort-worth/",  "t": "center",  "e": false,  "r": false,  "d": "RV repair and renovation company with a Fort Worth facility that handles mechanical systems, air conditioning, refrigeration, hydraulics, suspension, collision and roof replacement. The shop has a paint booth large enough for any size motor coach and a department dedicated to RV roof replacement. Additional drop off locations are listed in Plano, Mansfield and Denton.",  "g": [
+   "t: center"
+  ],  "base": "fort worth",  "areas": [
+   "fort worth",
+   "plano",
+   "mansfield",
+   "denton"
+  ],  "region": "North Texas",  "reg": "dfw"
+ },
+ {  "n": "Collin County RV Repair",  "c": "McKinney",  "p": "(214) 560-3188",  "u": "https://collincountyrvrepair.com/",  "t": "mobile",  "e": true,  "r": false,  "d": "Mobile RV repair business based in McKinney in Collin County. Certified technicians travel to the customer for electrical, plumbing, heating and air conditioning repairs plus roof, slide-out and appliance work. Emergency and after-hours service is offered at an hourly rate.",  "g": [
+   "t: mobile",
+   "e: true"
+  ],  "base": "mckinney",  "areas": [
+   "mckinney"
+  ],  "region": "Collin County",  "reg": "dfw"
+ },
+ {  "n": "Alliance CoachWorks",  "c": "Fort Worth",  "p": "(817) 897-2901",  "u": "https://www.alliancecoachworks.com/rvrepair",  "t": "center",  "e": false,  "r": false,  "d": "RV and motorcoach repair shop in Fort Worth that specializes in structural and exterior work. Services include collision and structural repair, fiberglass cap and sidewall repair, roof sealing, slide-out repair and paint matching. Oversized bays are used so Class A, B and C coaches are not turned away for size.",  "g": [
+   "t: center"
+  ],  "base": "fort worth",  "areas": [
+   "fort worth",
+   "keller",
+   "haslet",
+   "southlake",
+   "trophy club",
+   "grapevine",
+   "northlake",
+   "justin"
+  ],  "region": "Fort Worth",  "reg": "dfw"
+ },
+ {  "n": "North Texas RV",  "c": "Krum",  "p": "940-482-0186",  "u": "https://ntrvrepair.com/",  "t": "center",  "e": false,  "r": false,  "d": "Family owned RV repair, service and storage business in Krum serving North Texas for almost 30 years. Repairs cover all makes and models, including collision, paint, bodywork, remodeling and fire and water damage restoration. The service department also fabricates parts that can no longer be ordered.",  "g": [
+   "t: center"
+  ],  "base": "krum",  "areas": [
+   "krum",
+   "denton"
+  ],  "region": "North Texas",  "reg": "dfw"
+ },
+ {  "n": "Candid RV",  "c": "Whitesboro",  "p": "(972) 364-7765",  "u": "https://candidrv.com/services/",  "t": "mobile",  "e": false,  "r": false,  "d": "Family owned mobile RV repair business operating from Whitesboro since 2022. Technicians repair slide-outs, electrical, propane, plumbing, HVAC, awnings, leveling jacks, refrigeration, generators and roofing on site. Work is provided within a 25 mile radius of Whitesboro across the Lake Texoma area.",  "g": [
+   "t: mobile"
+  ],  "base": "whitesboro",  "areas": [
+   "whitesboro",
+   "gainesville"
+  ],  "region": "Lake Texoma & North Central Texas",  "spec": "within a 25-mile radius of Whitesboro",  "reg": "dfw"
+ },
+ {  "n": "Max's Mobile RV Repair",  "c": "Gordonville",  "p": "940-765-8256",  "u": "https://maxsmobilervrepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Mobile RV repair and maintenance business based in Gordonville. An RVTAA certified technician provides prompt service to RV owners in Gordonville and the surrounding region. Work is done at the customer's location.",  "g": [
+   "t: mobile"
+  ],  "base": "gordonville",  "areas": [],  "region": "Gordonville and its surrounding region",  "reg": "dfw"
+ },
+ {  "n": "GHH RV Services",  "c": "Tyler",  "p": "(903) 780 1998",  "u": "https://ghhrvservices.com/",  "t": "mobile",  "e": true,  "r": false,  "d": "Mobile RV repair and inspection business based in Tyler and serving most of East Texas. The company handles preventative maintenance, general repairs and pre-purchase inspections at the customer's location. After hours and weekend appointments are available.",  "g": [
+   "t: mobile",
+   "e: true"
+  ],  "base": "tyler",  "areas": [
+   "tyler"
+  ],  "region": "most of the East Texas area",  "reg": "east-tx"
+ },
+ {  "n": "ETX RV Repair",  "c": "Tyler",  "p": "430-435-1689",  "u": "https://www.etxrvrepair.com/",  "t": "center",  "e": false,  "r": false,  "d": "Full service RV repair shop and parts center in Tyler serving the greater Tyler area. The shop works on hydraulics, electrical, plumbing, water pumps, roof, air conditioning, water heaters, furnaces, slide-outs, cabinetry and flooring. The business states plainly that it does not make mobile calls and does not do state inspections.",  "g": [
+   "t: center"
+  ],  "base": "tyler",  "areas": [
+   "tyler"
+  ],  "region": "Greater Tyler",  "spec": "We do not do Mobile Calls. We do not do state inspections.",  "reg": "east-tx"
+ },
+ {  "n": "Mike's Mobile RV and Trailer Repair",  "c": "Tyler",  "p": "903-619-3181",  "u": "https://mikesmobilervrepairtyler.com/services",  "t": "mobile",  "e": true,  "r": false,  "d": "Family owned mobile RV and trailer repair business based in Tyler. The company repairs electrical, plumbing, hydraulic, brake, leveling, slide-out and awning systems and also sells and services air conditioners, water heaters and furnaces. Twenty four hour and major holiday emergency service is offered.",  "g": [
+   "t: mobile",
+   "e: true"
+  ],  "base": "tyler",  "areas": [
+   "tyler",
+   "longview"
+  ],  "region": "East Texas",  "reg": "east-tx"
+ },
+ {  "n": "Texan Mobile RV Services",  "c": "Longview",  "p": "903-291-7212",  "u": "https://www.texanmobilervservices.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Mobile RV repair and maintenance business based in Longview. The company is insured and certified and travels to the customer for repair and maintenance work. Service is arranged by phone.",  "g": [
+   "t: mobile"
+  ],  "base": "longview",  "areas": [
+   "longview"
+  ],  "reg": "east-tx"
+ },
+ {  "n": "Xpress Mobile RV Solutions",  "c": "Rusk",  "p": "903-254-8963",  "u": "https://xpressmobilervsolutions.com/",  "t": "mobile",  "e": true,  "r": false,  "d": "Mobile RV repair business based in Rusk serving Cherokee County and the surrounding East Texas area. Technicians come to the customer for repairs and maintenance on air conditioners, awnings and other RV systems. Work beyond 30 miles of Rusk is billed per mile, and non-business hour service carries a higher minimum.",  "g": [
+   "t: mobile",
+   "e: true"
+  ],  "base": "rusk",  "areas": [
+   "rusk"
+  ],  "region": "East Texas",  "spec": "Base fee for services within 30 miles of Rusk, TX",  "reg": "east-tx"
+ },
+ {  "n": "Walter's Mobile Solutions",  "c": "Nacogdoches",  "p": "(936) 553-6813",  "u": "https://walterssolutions.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Mobile RV repair business owned and operated by Robert Walter in Nacogdoches. The company services fifth wheels, travel trailers and motorhomes for roof leaks, electrical faults, slide-out problems and water system issues. Service covers roughly a 100 mile radius around Nacogdoches.",  "g": [
+   "t: mobile"
+  ],  "base": "nacogdoches",  "areas": [
+   "nacogdoches",
+   "lufkin",
+   "garrison",
+   "central heights",
+   "douglas",
+   "woden",
+   "appleby"
+  ],  "region": "East Texas",  "spec": "typically serves within about 100 miles",  "reg": "east-tx"
+ },
+ {  "n": "Sojourner Mobile RV Repair",  "c": "Palestine",  "p": "903-516-8107",  "u": "https://smrvr.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Mobile RV repair business based in Palestine serving Tyler, Athens, Jacksonville and the surrounding area. Services include air conditioning, water heater, furnace, slide-out, plumbing and electrical repair. Repairs are performed at the customer's location.",  "g": [
+   "t: mobile"
+  ],  "base": "palestine",  "areas": [
+   "palestine",
+   "tyler",
+   "athens",
+   "jacksonville"
+  ],  "reg": "east-tx"
+ },
+ {  "n": "Butler RV Repair",  "c": "Mount Pleasant",  "p": "817-583-4596",  "u": "https://butlerrvrepair.com/",  "t": "mobile",  "e": true,  "r": false,  "d": "Mobile RV repair business serving northeast Texas from Mount Pleasant to Texarkana. Owner technician Bradly Butler handles RV maintenance, campground service and emergency call-outs. Work covers AC and DC electrical, propane, water systems, water heaters, air conditioning, furnaces and exterior systems.",  "g": [
+   "t: mobile",
+   "e: true"
+  ],  "base": "mount pleasant",  "areas": [
+   "mount pleasant",
+   "texarkana"
+  ],  "region": "Northeast Texas",  "reg": "east-tx"
+ },
+ {  "n": "Taylor Mobile RV Repair",  "c": "Texarkana",  "p": "870-648-6468",  "u": "https://www.taylor-rv-repair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Family run mobile RV repair business operating in Texarkana and a 150 mile radius into the four states area. Services include air conditioner and furnace repair, water heaters, slide-outs, electrical, plumbing, awnings, roof recoat and repairs and leveling systems. The company works with manufacturer warranties and most extended warranty companies.",  "g": [
+   "t: mobile"
+  ],  "base": "texarkana",  "areas": [
+   "texarkana"
+  ],  "region": "4-States Area",  "spec": "operates in Texarkana and a 150 mile radius into the surrounding 4-States area of Arkansas, Texas, Louisiana, and Oklahoma",  "reg": "east-tx"
+ },
+ {  "n": "Relax RV Service",  "c": "Waco",  "p": "254-495-7711",  "u": "https://www.relaxrvservice.com/services",  "t": "mobile",  "e": true,  "r": false,  "d": "Locally owned mobile RV repair and maintenance business based in Waco. Services include air conditioning cleaning and repair, water heaters, furnaces, plumbing, electrical, slide-outs, roof sealing, generators and winterization. Emergency and after hours service is offered after 6pm and on weekends.",  "g": [
+   "t: mobile",
+   "e: true"
+  ],  "base": "waco",  "areas": [
+   "waco"
+  ],  "region": "McLennan and surrounding counties from Dallas to Austin",  "reg": "waco"
+ },
+ {  "n": "Boss Bull Mobile RV Services",  "c": "Hutto / Central Texas",  "p": "(512) 675-3887",  "u": "https://bossbullrv.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Boss Bull Mobile RV Services is a mobile RV repair company founded by Rich Mahre in 2023 that dispatches to campgrounds, RV parks, storage facilities, and residences throughout Central Texas. They repair RV air conditioners, electrical, plumbing, furnace, water heater, slide-out, leveling, roof, leak, refrigerator, awning, and generator systems, and also do RV solar installation and lithium battery upgrades. Repairs are completed on site and backed by a 30-day labor warranty.",  "g": [
+   "t: mobile"
+  ],  "base": "hutto",  "areas": [
+   "austin",
+   "round rock",
+   "georgetown",
+   "cedar park",
+   "leander",
+   "pflugerville",
+   "marble falls"
+  ],  "region": "Central Texas",  "reg": "central-tx"
+ },
+ {  "n": "ATX Mobile RV Repair",  "c": "Austin, TX",  "p": "(512)-667-2332",  "u": "https://www.atxmobilervrepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "ATX Mobile RV Repair is an RVIA Master certified technician with over 20 years of experience who travels to the customer's location for mobile RV service around Austin. He describes himself as factory trained and proficient in all electrical, appliance and generator work. Hours are Monday through Friday 9:00AM to 5:00PM.",  "g": [
+   "t: mobile"
+  ],  "base": "austin",  "areas": [
+   "austin",
+   "kyle",
+   "buda",
+   "san marcos",
+   "del valle",
+   "lockhart",
+   "manchaca",
+   "oak hill",
+   "sunset valley",
+   "wimberley",
+   "driftwood",
+   "dripping springs"
+  ],  "reg": "central-tx"
+ },
+ {  "n": "Heads Up RV",  "c": "Spicewood, TX",  "p": "(512) 953-7000",  "u": "https://www.headsuprv.com/",  "t": "mobile",  "e": true,  "r": false,  "d": "Heads Up RV is an owner operated mobile RV repair business serving Austin and the surrounding Hill Country, bringing tools and parts to homes, campsites, RV parks, and storage lots. Services include AC service and replacement, water heater service and replacement, slideout maintenance, rubber roof maintenance, furnace service and replacement, and RV holding tank cleaning. The site publishes an after hours rate of $200 per technician.",  "g": [
+   "t: mobile",
+   "e: true"
+  ],  "base": "spicewood",  "areas": [],  "region": "Austin and surrounding Hill Country",  "reg": "central-tx"
+ },
+ {  "n": "RV Specialists",  "c": "Austin, TX",  "p": "512 259 1202",  "u": "https://rvstx.com/",  "t": "both",  "e": false,  "r": false,  "d": "RV Specialists is a licensed and insured Austin company whose technicians come to the customer in well-stocked vans and return if needed, with a workshop available when a job needs a shop. They service everything on the RV except the drive train and generator, including air conditioners, refrigerators, water heaters, furnaces, roofs, and leaks, and they handle insurance estimates and extended warranty repairs. Coverage is listed around North Austin, Austin, and South Austin.",  "g": [
+   "t: both"
+  ],  "base": "austin",  "areas": [
+   "austin",
+   "leander",
+   "jarrell",
+   "georgetown",
+   "west lake",
+   "sunset valley",
+   "bastrop",
+   "elgin",
+   "manor",
+   "lockhart",
+   "manchaca",
+   "seguin",
+   "new braunfels",
+   "kyle",
+   "buda"
+  ],  "spec": "Services everything on the RV except the drive train and generator",  "reg": "central-tx"
+ },
+ {  "n": "Camper Alex Mobile RV Repair",  "c": "Austin, TX",  "p": "512-271-2556",  "u": "https://www.camperalexrv.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Camper Alex Mobile RV Repair is a mobile RV repair business in Austin that works on electrical, awnings, plumbing, HVAC, appliances, roof resealing and replacement, and RV inspections. Repairs and inspections are done on site at the customer's location, and the company offers maintenance packages. Office hours are Monday through Friday 9am to 5pm, with weekends by appointment.",  "g": [
+   "t: mobile"
+  ],  "base": "austin",  "areas": [
+   "leander",
+   "round rock",
+   "georgetown",
+   "liberty hill",
+   "austin"
+  ],  "region": "Central Texas",  "reg": "central-tx"
+ },
+ {  "n": "Central Texas Mobile RV Service LLC",  "c": "Austin, TX",  "p": "512-829-1177",  "u": "https://www.centraltexasmobilervservice.com/",  "t": "mobile",  "e": true,  "r": false,  "d": "Central Texas Mobile RV Service is a mobile RV repair company based on Blue Bluff Rd in Austin that offers RV inspections, service and repair, winterizing, and custom upgrades on motorhomes, fifth wheels, travel trailers, toy haulers, and campers. All of their RV repair techs are RVIA certified and they describe their service range as within 100 miles of Austin with mobile emergency RV repairs. Hours are weekdays 8:00am to 6:00pm and Saturdays 8:00am to 12:00pm, with emergency calls 24-7.",  "g": [
+   "t: mobile",
+   "e: true"
+  ],  "base": "austin",  "areas": [],  "region": "within 100 miles of Austin TX",  "reg": "central-tx"
+ },
+ {  "n": "Iron Horse RV Specialists",  "c": "San Antonio, TX",  "p": "(210) 657-1996",  "u": "https://www.ironhorserv.com/",  "t": "center",  "e": false,  "r": false,  "d": "Iron Horse RV Specialists is an RV repair shop on Randolph Blvd in San Antonio with over 50 years in the RV industry, servicing any brand of diesel or gas motorhome, fifth wheel, travel trailer, and pop-up. The facility has a 60,000-pound lift and a 50-foot paint bay and regularly performs appliance repair, brake service, chassis lubrication, oil change, generator service, leak inspection, paint and body, pre-purchase inspection, and propane refill. They work with insurance companies and honor extended warranties, and they do not offer engine rebuilds, internal generator work, or rear end replacement.",  "g": [
+   "t: center"
+  ],  "base": "san antonio",  "areas": [
+   "san antonio"
+  ],  "spec": "Does not offer engine rebuilds, internal generator work, or rear end replacement",  "reg": "san-antonio"
+ },
+ {  "n": "Southwest Mobile RV Repair",  "c": "Floresville / San Antonio, TX",  "p": "(210) 508-6015",  "u": "https://swmobilerv.com/",  "t": "both",  "e": false,  "r": false,  "d": "Southwest Mobile RV Repair is a mobile RV repair business run by Levy that serves on-site at campsites, driveways, storage units, and RV parks across San Antonio and surrounding areas, with no towing required. Repairs include RV air conditioner repair, roof replacement and reseal, slide-out repair, electrical, inverters and solar, generator repair, and water heater and furnace replacement. They also take RVs by appointment at a shop on Buttercup Ln in Floresville.",  "g": [
+   "t: both"
+  ],  "base": "floresville",  "areas": [
+   "san antonio",
+   "leon valley",
+   "helotes",
+   "boerne",
+   "converse",
+   "universal city",
+   "new braunfels",
+   "seguin",
+   "schertz",
+   "kerrville",
+   "bandera",
+   "pleasanton",
+   "floresville",
+   "lackland afb",
+   "camp bullis"
+  ],  "region": "Hill Country",  "reg": "san-antonio"
+ },
+ {  "n": "Moreno Mobile RV",  "c": "Spring Branch / San Antonio, TX",  "p": "210-899-7720",  "u": "https://www.morenomobilerv.com/",  "t": "mobile",  "e": true,  "r": false,  "d": "Moreno Mobile RV provides mobile repair and system upgrades to RV owners across Spring Branch, Boerne, New Braunfels, and Canyon Lake and the greater Texas Hill Country. They diagnose and repair rooftop and basement AC units, roof sealing, slide-out systems, hydraulic leveling, and 12V/120V electrical systems, and they stock common parts to fix most issues on the first visit. They prioritize emergency calls for loss of power, AC, or water and offer a $250 priority dispatch and diagnosis option.",  "g": [
+   "t: mobile",
+   "e: true"
+  ],  "base": "spring branch",  "areas": [
+   "spring branch",
+   "bulverde",
+   "canyon lake",
+   "new braunfels",
+   "boerne",
+   "seguin",
+   "fredericksburg",
+   "kerrville"
+  ],  "region": "Texas Hill Country",  "reg": "san-antonio"
+ },
+ {  "n": "Class A RV Repairs",  "c": "Pipe Creek / San Antonio, TX",  "p": "(830) 535-6007",  "u": "https://classarvrepairs.com/",  "t": "center",  "e": false,  "r": false,  "d": "Class A RV Repairs is a family-owned RV repair and body shop at 9500 TX-16 S in Pipe Creek, northwest of San Antonio, handling Class A, B, and C motorhomes, travel trailers, 5th wheels, goosenecks, horse trailers, and slide-in campers. Services include collision repair, fiberglass and body work, full exterior paint in a dedicated RV paint booth, general service and maintenance, and system diagnostics, and they work directly with insurance providers. They perform all work at their facility and do not do mobile repairs.",  "g": [
+   "t: center"
+  ],  "base": "pipe creek",  "areas": [
+   "pipe creek",
+   "san antonio",
+   "boerne",
+   "bandera",
+   "kerrville"
+  ],  "region": "Hill Country",  "spec": "No mobile repairs; all work performed at the Pipe Creek facility",  "reg": "san-antonio"
+ },
+ {  "n": "Grant RV Repair & Services LLC",  "c": "Seguin, TX",  "p": "830-243-8010",  "u": "https://www.grantrvrepairandservicesllc.com/",  "t": "both",  "e": false,  "r": false,  "d": "Grant RV Repair & Services LLC started in 2018 as a mobile RV repair company and now also runs an RV repair shop at 1448 Eastwood Drive in Seguin, Texas. They repair air conditioning, stoves, roofing, flooring, and electrical systems, and the owner has been in the industry for more than 20 years. The business is described as fully licensed and insured and offers both mobile and in-shop repair.",  "g": [
+   "t: both"
+  ],  "base": "seguin",  "areas": [
+   "seguin"
+  ],  "reg": "san-antonio"
+ },
+ {  "n": "A&N RV Service",  "c": "Comfort, TX",  "p": "(830) 446-7710",  "u": "https://anrvservice.com/",  "t": "mobile",  "e": true,  "r": false,  "d": "A&N RV Service is a licensed and insured mobile RV repair business based in Comfort, Texas that serves the Texas Hill Country with certified technicians for Class A, B, and C motorhomes, fifth wheels, and travel trailers. Services include free multi-point inspection, AC service and replacement, water heater service, furnace repairs, roof and body sealant, electrical and plumbing, wheel bearings and brakes, and slide out repairs. The site advertises 24/7 emergency repairs.",  "g": [
+   "t: mobile",
+   "e: true"
+  ],  "base": "comfort",  "areas": [
+   "comfort",
+   "boerne",
+   "fredericksburg",
+   "kerrville"
+  ],  "region": "Texas Hill Country",  "reg": "san-antonio"
+ },
+ {  "n": "AM Mobile RV Service",  "c": "Tarpley, TX",  "p": "(512) 550-9579",  "u": "https://ammobilerv.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "AM Mobile RV Service is owned and operated by Alan Matthews, a dedicated RV technician based in Tarpley, Texas who brings repairs directly to homes, campgrounds, and storage facilities across the Texas Hill Country. They handle RV AC repair and replacement, full electrical diagnostics including converters, inverters, batteries, wiring and solar, plumbing including water heaters and tanks, roof repair and resealing, and hydraulic leveling and slide-out repair. Service call fee is $78 to $98 or $2 per mile, whichever is greater, with a $125 per hour labor rate.",  "g": [
+   "t: mobile"
+  ],  "base": "tarpley",  "areas": [
+   "bandera",
+   "kerrville",
+   "hondo",
+   "fredericksburg",
+   "tarpley",
+   "pipe creek",
+   "medina",
+   "comfort"
+  ],  "region": "Texas Hill Country",  "reg": "san-antonio"
+ },
+ {  "n": "Amazing RV Solutions",  "c": "Burnet, TX",  "p": "(855) 642-1714",  "u": "https://www.amazingrvsolutions.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Amazing RV Solutions is a fully mobile RV repair service based in Burnet, Texas that travels daily throughout the Highland Lakes, greater Austin, the Hill Country, and San Antonio. Their NRVTA-trained and RVTAA-registered technicians perform on-site repairs at homes, storage lots, campgrounds, RV parks, or roadside, covering electrical, plumbing, LP gas, appliances, roof seals, and exterior systems. The service call fee is $150 paid at scheduling, with repair labor and parts quoted separately for approval before work begins.",  "g": [
+   "t: mobile"
+  ],  "base": "burnet",  "areas": [
+   "burnet",
+   "marble falls",
+   "kingsland",
+   "horseshoe bay",
+   "llano",
+   "lampasas",
+   "bertram",
+   "spicewood",
+   "georgetown",
+   "leander",
+   "cedar park",
+   "liberty hill",
+   "round rock",
+   "hutto",
+   "elgin",
+   "bastrop",
+   "fredericksburg",
+   "kerrville",
+   "boerne",
+   "bandera",
+   "san antonio",
+   "johnson city"
+  ],  "region": "Central Texas",  "reg": "central-tx"
+ },
+ {  "n": "LTS Luxury Coach Care",  "c": "Burnet, TX",  "p": "(512) 234-2826",  "u": "https://www.ltssvcs.com/",  "t": "mobile",  "e": true,  "r": false,  "d": "LTS Luxury Coach Care is a locally and family-owned mobile RV repair business in Burnet, Texas serving Burnet, Marble Falls, Llano, Kingsland, and the surrounding Highland Lakes. Their NRVTA and RVTAA certified mechanics come to campsites, RV parks, or driveways and handle electrical, plumbing, generator, appliance, and Aqua-Hot and Oasis heating system work on brands including Entegra, Prevost, Fleetwood, Monaco, Tiffin, Newmar, and Winnebago. The site states they are available 24/7/365 for emergency mobile RV repairs.",  "g": [
+   "t: mobile",
+   "e: true"
+  ],  "base": "burnet",  "areas": [
+   "burnet",
+   "marble falls",
+   "llano",
+   "kingsland",
+   "granite shoals"
+  ],  "region": "Highland Lakes",  "reg": "central-tx"
+ },
+ {  "n": "Dan's Mobile RV Repair",  "c": "Corpus Christi, TX",  "p": "361-850-0318",  "u": "https://dansmobilervrepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Dan's Mobile RV Repair is a mobile RV repair business in Corpus Christi that sends a certified specialist to the customer's location and completes repairs on site, saving the trip to a dealership. They repair air conditioners, water heaters, electrical, awnings, refrigerators, microwaves, stoves, plumbing, and furnaces, and honor most extended warranty policies and insurance claims. Their service area is Corpus Christi and the surrounding area, with free estimates inside the city limits.",  "g": [
+   "t: mobile"
+  ],  "base": "corpus christi",  "areas": [
+   "corpus christi",
+   "kingsville",
+   "rockport",
+   "robstown"
+  ],  "reg": "coastal-bend"
+ },
+ {  "n": "South Texas RV Repair, LLC",  "c": "Rockport, TX",  "p": "361-205-1637",  "u": "https://www.stxrvr.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "South Texas RV Repair is a mobile RV repair company founded in 2019 and based out of Rockport, Texas that travels to the customer's location for complete RV repairs. Their technicians handle plumbing, air conditioners, electrical, furnaces, water heaters including on-demand units, awnings, roof repairs, slide outs, flooring, ovens, microwaves, refrigerators, furniture, and lighting. Hours are Monday through Friday 8 to 6, with weekends by call for availability.",  "g": [
+   "t: mobile"
+  ],  "base": "rockport",  "areas": [],  "region": "South Texas",  "reg": "coastal-bend"
+ },
+ {  "n": "ACRV Repair Center",  "c": "Port Aransas, TX",  "p": "(361) 779-9304",  "u": "https://acrvcenter.com/",  "t": "both",  "e": false,  "r": false,  "d": "ACRV Repair Center is a full service RV repair facility at 2035 SH-361 in Port Aransas serving South Texas including Port Aransas, Rockport, Aransas Pass, Fulton, Portland, and Corpus Christi. They offer on-site service Monday through Friday with three service trucks and limited Saturday service, and they are certified with the State of Texas for propane installations and repairs. They use OEM approved parts and provide a 30-day labor warranty.",  "g": [
+   "t: both"
+  ],  "base": "port aransas",  "areas": [
+   "port aransas",
+   "rockport",
+   "aransas pass",
+   "fulton",
+   "portland",
+   "corpus christi"
+  ],  "region": "South Texas",  "reg": "coastal-bend"
+ },
+ {  "n": "Statewide Mobile RV Repair",  "c": "Victoria, TX",  "p": "361-549-8491",  "u": "http://www.statewidemobilervrepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Statewide Mobile RV Repair provides on-site RV repair to full time and part time RVers, with Victoria, Texas as the main market area. They use RVIA certified technicians and a service truck equipped to make many RV repairs on site, and say they handle insurance and warranty work professionally. They travel frequently to Port O'Connor, Seadrift, Tivoli, and Port Lavaca, and quote a service fee for coming to any location.",  "g": [
+   "t: mobile"
+  ],  "base": "victoria",  "areas": [
+   "victoria",
+   "port oconnor",
+   "seadrift",
+   "tivoli",
+   "port lavaca"
+  ],  "region": "South Texas",  "reg": "coastal-bend"
+ },
+ {  "n": "The RV Pro",  "c": "Port Lavaca, TX",  "p": "361-333-1002",  "u": "https://thervpro.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "The RV Pro is owned and operated by Russell, who brings mobile RV repair and diagnostics to campsites, storage lots, and driveways across Port Lavaca, Victoria, Palacios, Seadrift, Port O'Connor, Edna, and Bloomington. They specialize in RV air conditioning repair, electrical and power systems, plumbing and water systems, roof repair, appliances, and solar and Victron systems. They are factory-certified by several major RV manufacturers, carry full liability insurance, and offer same-day repairs when possible.",  "g": [
+   "t: mobile"
+  ],  "base": "port lavaca",  "areas": [
+   "port lavaca",
+   "victoria",
+   "palacios",
+   "seadrift",
+   "port oconnor",
+   "edna",
+   "bloomington"
+  ],  "region": "Texas Gulf Coast",  "reg": "coastal-bend"
+ },
+ {  "n": "Roaming Bears RV",  "c": "Houston",  "p": "281-872-9200",  "u": "https://roamingbearsrv.com/",  "t": "both",  "e": false,  "r": false,  "d": "Roaming Bears RV repairs trailers, fifth wheels, motorhomes, camper vans and toy haulers at its shop at 16712 N Freeway in Houston, and also sends technicians out for on-site service on many jobs. The site lists roof replacement, generator service, air conditioning, appliances, flooring, brakes and drivetrain work along with body, fiberglass and paint repair. They advertise financing and can bill insurance.",  "g": [
+   "RV repair",
+   "on-site mobile service",
+   "roof replacement",
+   "generator service",
+   "body and paint",
+   "insurance work"
+  ],  "base": "houston",  "areas": [
+   "houston"
+  ],  "region": "Houston area",  "reg": "gulf-coast"
+ },
+ {  "n": "Joe's Complete RV Repair",  "c": "Houston",  "p": "832-687-9566",  "u": "https://completervrepair.com/",  "t": "center",  "e": false,  "r": false,  "d": "Joe's Complete RV Repair is a Houston shop at 8614 Rockmore Drive that does roof replacement, doors and windows, welding and fabrication, custom paint, and body and collision repair on all RV types. Joe has worked on large vehicles including buses and Class A motorhomes since the 1980s. The shop works directly with insurance companies and is open Monday through Saturday.",  "g": [
+   "RV repair",
+   "roof replacement",
+   "collision repair",
+   "welding and fabrication",
+   "custom paint",
+   "insurance work"
+  ],  "base": "houston",  "areas": [
+   "houston"
+  ],  "region": "Houston",  "reg": "gulf-coast"
+ },
+ {  "n": "TX RV Repair Shop",  "c": "Spring",  "p": "346-708-4612",  "u": "https://www.txrvrepairshop.com/",  "t": "center",  "e": false,  "r": false,  "d": "TX RV Repair Shop repairs motorhomes, travel trailers, fifth wheels and camper vans at its Spring location on Rhodes Road. Technicians hold RVDA and RVIA certifications and the shop handles electrical systems, plumbing, roofs, windshields, appliances, A/C and insurance repair estimates. They also service the largest motorhome rental fleet in Texas.",  "g": [
+   "RV repair",
+   "electrical repair",
+   "roof inspection",
+   "insurance estimates",
+   "RVDA and RVIA certified"
+  ],  "base": "spring",  "areas": [
+   "houston",
+   "spring",
+   "conroe",
+   "sugar land",
+   "pasadena",
+   "league city",
+   "webster",
+   "la porte",
+   "clear lake city",
+   "missouri city"
+  ],  "region": "Greater Houston Area",  "reg": "gulf-coast"
+ },
+ {  "n": "Carey's RV Service Center",  "c": "Houston",  "p": "713-466-0131",  "u": "http://www.careysrv.com/",  "t": "center",  "e": false,  "r": false,  "d": "Carey's RV Service Center in Houston at 9310 Cornett Drive has 30 years of experience and RVDA-RVIA certified technicians. The shop takes in RVs immediately for floors, roofs, windows, siding, structure and water damage, paint and body, appliances, awnings, engine, drive train and chassis work. It is an authorized warranty service center for brands including Gulf Stream, Tiffin, Dometic, Norcold and Thetford.",  "g": [
+   "RV repair",
+   "warranty service center",
+   "body and paint",
+   "appliances",
+   "insurance claims"
+  ],  "base": "houston",  "areas": [
+   "houston"
+  ],  "region": "Houston",  "reg": "gulf-coast"
+ },
+ {  "n": "Extreme RV Tech LLC",  "c": "Katy",  "p": "281-948-6272",  "u": "https://extremervtech.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Extreme RV Tech is a family-owned mobile RV repair business based in Katy that comes to the customer. Technician Tony Uriegas handles roof replacement, wall and ceiling panels, flooring, slide-out systems, water heaters, furnaces, A/C, fridges, 110 and 12 volt electrical, windows and awnings, plus upgrades. The company is fully insured and takes warranty work and insurance claims.",  "g": [
+   "RV repair",
+   "mobile RV repair",
+   "roof replacement",
+   "slide-out repair",
+   "insurance claims",
+   "warranty work"
+  ],  "base": "katy",  "areas": [
+   "houston",
+   "katy",
+   "cypress",
+   "sugar land",
+   "pearland",
+   "humble",
+   "sealy",
+   "hempstead",
+   "alvin",
+   "highlands",
+   "columbus",
+   "conroe",
+   "the woodlands"
+  ],  "region": "Katy and surrounding Houston areas",  "reg": "gulf-coast"
+ },
+ {  "n": "Action RV Service Center",  "c": "Conroe",  "p": "(936) 441-1165",  "u": "https://www.actionrvconroetexas.com/",  "t": "center",  "e": false,  "r": false,  "d": "Action RV Service Center in Conroe is a full-service RV repair shop and collision center for towables and motorized RVs. The team handles appliances, flooring, leveling systems, electrical, camera and entertainment systems, towing equipment and paint and body work. Action RV also offers pre-purchase inspections and works with insurance.",  "g": [
+   "RV repair",
+   "collision center",
+   "appliances",
+   "leveling systems",
+   "pre-purchase inspection"
+  ],  "base": "conroe",  "areas": [
+   "conroe"
+  ],  "region": "North Houston",  "reg": "gulf-coast"
+ },
+ {  "n": "Bear Ridge RV Mobile Technician, LLC",  "c": "Conroe",  "p": "713-906-9415",  "u": "https://bearridgerv.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Bear Ridge RV Mobile Technician is a family-run mobile RV repair business based in Conroe. Technician Ignacio \"Nacho\" R. is certified through the National RV Training Academy in exterior systems, air conditioning and heat pumps, absorption refrigerators, and water heaters and furnaces, and the business is a Truma certified service partner. They specialize in A/C, water heaters, furnaces and holding tank sanitation.",  "g": [
+   "RV repair",
+   "mobile RV repair",
+   "air conditioning",
+   "water heaters",
+   "furnaces",
+   "Truma service"
+  ],  "base": "conroe",  "areas": [
+   "conroe"
+  ],  "region": "Conroe",  "reg": "gulf-coast"
+ },
+ {  "n": "Prestige RV Service",  "c": "Alvin",  "p": "281-245-6057",  "u": "https://www.prestigerv.net/",  "t": "both",  "e": false,  "r": false,  "d": "Prestige RV Service runs mobile service and a shop in Alvin by appointment. It repairs and maintains motorhomes, fifth wheels, toy haulers, travel trailers and pop-ups, and also works on trailer types including livestock, food, utility and boat trailers. The company handles insurance and warranty repairs and guarantees its workmanship for 60 days.",  "g": [
+   "RV repair",
+   "mobile RV repair",
+   "RV maintenance",
+   "RV inspection",
+   "insurance and warranty repairs"
+  ],  "base": "alvin",  "areas": [
+   "alvin"
+  ],  "region": "Brazoria, Harris, Galveston and Fort Bend Counties",  "reg": "gulf-coast"
+ },
+ {  "n": "EZ-Mobile-RV-Repair",  "c": "Freeport",  "p": "832-769-2719",  "u": "https://ez-mobile-rv-repair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "EZ-Mobile-RV-Repair is a mobile RV repair and maintenance service working out of Freeport on the Brazoria County coast. The business advertises prompt, professional on-site RV repair and asks customers to call for service. Its site lists a single direct phone line for scheduling.",  "g": [
+   "RV repair",
+   "mobile RV repair",
+   "RV maintenance"
+  ],  "base": "freeport",  "areas": [
+   "freeport"
+  ],  "region": "Brazoria County",  "reg": "gulf-coast"
+ },
+ {  "n": "Higher Level RV Services",  "c": "San Leon",  "p": "979-800-6978",  "u": "https://higherlevelrvservices.com/",  "t": "both",  "e": false,  "r": false,  "d": "Higher Level RV Services offers mobile on-site repair and a 4,000 square foot shop in San Leon, run by an NRVTA-certified technician. Work includes A/C tune-ups, furnace restoration, appliance and refrigerator diagnostics, LP gas pressure checks, water systems, slides, jacks and roof sealant inspection. The site publishes a mobile fee and an hourly shop rate.",  "g": [
+   "RV repair",
+   "mobile RV repair",
+   "A/C service",
+   "furnace service",
+   "appliance repair",
+   "roof maintenance"
+  ],  "base": "san leon",  "areas": [
+   "san leon"
+  ],  "region": "San Leon and surrounding areas",  "reg": "gulf-coast"
+ },
+ {  "n": "Galveston RV Roofing",  "c": "San Leon",  "p": "409-241-0932",  "u": "https://www.galvestonrvroofing.com/",  "t": "mobile",  "e": true,  "r": false,  "d": "Galveston RV Roofing is a mobile RV roofing company based in San Leon that comes to the RV rather than requiring it to be towed. It handles roof repair, full roof replacement, restoration and resealing, slide-out seal replacement, and leak detection with moisture scans. The site offers emergency service for storm damage and separation while driving, and states 24/7 call or text.",  "g": [
+   "RV roof repair",
+   "mobile RV repair",
+   "roof replacement",
+   "leak detection",
+   "insurance claim assistance",
+   "24/7"
+  ],  "base": "san leon",  "areas": [
+   "san leon"
+  ],  "region": "Galveston, Harris & Brazoria Counties",  "spec": "Emergency services for storm damage and separation while driving; help resolving insurance claims.",  "reg": "gulf-coast"
+ },
+ {  "n": "Byron's RV Repair LLC",  "c": "Beaumont",  "p": "(409) 794-2243",  "u": "https://www.byronsrvrepairtx.com/",  "t": "mobile",  "e": true,  "r": true,  "d": "Byron's RV Repair is an RVIA-certified RV repair business serving the Golden Triangle area from Beaumont. It makes mobile service calls and offers pickup and delivery in some cases, and states it provides 24/7 emergency services and roadside assistance. The company accepts insurance claims and works with manufacturer and extended warranties.",  "g": [
+   "RV repair",
+   "mobile RV repair",
+   "roadside assistance",
+   "24/7 emergency",
+   "insurance claims",
+   "warranty work"
+  ],  "base": "beaumont",  "areas": [
+   "beaumont"
+  ],  "region": "Golden Triangle & Surrounding Areas",  "reg": "gulf-coast"
+ },
+ {  "n": "Qualls RV Service",  "c": "Beaumont",  "p": "409-656-3052",  "u": "https://www.quallsrvservice.com/",  "t": "center",  "e": false,  "r": false,  "d": "Qualls RV Service is a family-owned RV repair shop at 6430 Westwood Blvd in Beaumont with over 40 years of experience. Customers bring the RV in for appliance and air conditioning repair, underbody and structural work, and other service. Parts installed come with a manufacturer's warranty.",  "g": [
+   "RV repair",
+   "appliances",
+   "air conditioning",
+   "structural repair"
+  ],  "base": "beaumont",  "areas": [
+   "beaumont"
+  ],  "region": "Beaumont",  "reg": "gulf-coast"
+ },
+ {  "n": "Cornerstone Mobile RV Repair",  "c": "Houston",  "p": "(281) 223-4491",  "u": "https://cornerstonemobilervrepair.com/",  "t": "mobile",  "e": true,  "r": false,  "d": "Cornerstone Mobile RV Repair is an RVIA-certified mobile RV repair service in Houston that comes to the customer. Services include A/C repair, annual maintenance, brakes and bearings, appliances, electrical, flooring, plumbing, roof sealing and replacement, slide-outs, awnings and water heaters. The site offers emergency service after hours and on weekends and says all work is guaranteed.",  "g": [
+   "RV repair",
+   "mobile RV repair",
+   "RVIA certified",
+   "appliances",
+   "roof sealing",
+   "24/7 emergency"
+  ],  "base": "houston",  "areas": [
+   "houston"
+  ],  "region": "Houston, Texas and surrounding areas",  "reg": "gulf-coast"
+ },
+ {  "n": "Cutting Edge RV Service",  "c": "Baytown",  "p": "281-576-0044",  "u": "https://cuttingedgervservice.com/",  "t": "both",  "e": false,  "r": false,  "d": "Cutting Edge RV Service is based at 12535 Interstate 10 East in Baytown and runs mobile repair vans stocked with RV parts alongside its shop. Mobile service reaches Wallisville, Anahuac, Liberty, Dayton, Crosby, Baytown, Cove and Mont Belvieu. Vans carry air conditioners, water heaters, refrigerators, microwaves, furnaces, leveling systems, slide-out motors and tanks.",  "g": [
+   "RV repair",
+   "mobile RV repair",
+   "air conditioning",
+   "water heaters",
+   "leveling systems",
+   "roof caulking"
+  ],  "base": "baytown",  "areas": [
+   "wallisville",
+   "anahuac",
+   "liberty",
+   "dayton",
+   "crosby",
+   "baytown",
+   "cove",
+   "mont belvieu"
+  ],  "region": "East Houston",  "spec": "Major repairs such as slide-out floor rebuilds, roof replacements, and blow-out damage with interior damage are scheduled at their shop facility.",  "reg": "gulf-coast"
+ },
+ {  "n": "Homeaway Camping",  "c": "Brookshire",  "p": "(832) 859-9850",  "u": "https://www.homeawaycamping.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Homeaway Camping is a mobile RV repair service working out of the Brookshire and Katy area west of Houston. Certified technician Phillip Williams holds NRVTA Level 1 and RVTAA certifications plus Lippert factory training. The site lists roof inspection and sealing, awnings and slide-outs, HVAC, propane and water heater service, tank sanitation, battery, converter and generator maintenance, electrical, brakes and appliances.",  "g": [
+   "RV repair",
+   "mobile RV repair",
+   "roof repair",
+   "HVAC service",
+   "appliance repair",
+   "NRVTA certified"
+  ],  "base": "brookshire",  "areas": [
+   "brookshire",
+   "katy",
+   "hempstead",
+   "sealy"
+  ],  "region": "West Houston",  "reg": "gulf-coast"
+ },
+ {  "n": "The Full Hook Up Mobile RV Repair",  "c": "Tomball",  "p": "832-349-2716",  "u": "https://fullhookupmobilervrepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "The Full Hook Up Mobile RV Repair is a certified and insured mobile RV technician based in Tomball serving the surrounding area. It services motorhomes, fifth wheels, bumper pulls and living quarters, with roof reseals, awning repair, air conditioners and furnaces, plumbing, refrigeration, electrical systems, batteries and converters. Customers call to request an estimate.",  "g": [
+   "RV repair",
+   "mobile RV repair",
+   "roof reseal",
+   "air conditioning",
+   "appliance repair"
+  ],  "base": "tomball",  "areas": [
+   "tomball",
+   "the woodlands"
+  ],  "region": "Tomball and surrounding",  "reg": "gulf-coast"
+ },
+ {  "n": "Woodlands RV Center",  "c": "The Woodlands",  "p": "281-363-2300",  "u": "https://woodlandsrvcenter.com/",  "t": "center",  "e": false,  "r": false,  "d": "Woodlands RV Center in The Woodlands provides RV repair and collision service for motorhomes, fifth wheels and travel trailers. Its I-CAR Gold Class and ASE-certified team handles mechanical and engine repair, frame straightening, custom color-matched paint, roof and exterior maintenance, slide-out service, and electrical and plumbing diagnostics. The site says the business has worked on North Houston vehicles since 1995.",  "g": [
+   "RV repair",
+   "collision repair",
+   "engine repair",
+   "frame straightening",
+   "custom paint",
+   "slide-out service"
+  ],  "base": "the woodlands",  "areas": [
+   "the woodlands"
+  ],  "region": "North Houston",  "reg": "gulf-coast"
+ },
+ {  "n": "Adventure R.V. Repairs",  "c": "Brenham",  "p": "979-277-4163",  "u": "https://www.adventurervrepairs.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Adventure R.V. Repairs is a family-owned mobile RV repair business based in Brenham serving Washington County and surrounding areas. Staff are RVT-certified, licensed with the Texas Railroad Commission, and insured to work on LP gas appliances. Services include appliance repair and replacement, exterior body work, and slide-outs, plumbing, electrical and interiors.",  "g": [
+   "RV repair",
+   "mobile RV repair",
+   "appliance repair",
+   "body work",
+   "LP gas service",
+   "insurance and warranty claims"
+  ],  "base": "brenham",  "areas": [
+   "brenham"
+  ],  "region": "Washington County and surrounding areas",  "reg": "gulf-coast"
+ },
+ {  "n": "Waymaker RV Services",  "c": "Sealy",  "p": "979-399-9800",  "u": "https://waymakerrvservices.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Waymaker RV Services is a mobile RV service and repair business based in Sealy. It comes to the customer at a campsite, home or on the road. The site says it repairs A/C, furnace, water heater, propane system, plumbing and electrical, and lists coverage across Katy, Sealy, Columbus and Brookshire.",  "g": [
+   "RV repair",
+   "mobile RV service",
+   "A/C repair",
+   "propane system",
+   "plumbing",
+   "electrical"
+  ],  "base": "sealy",  "areas": [
+   "katy",
+   "sealy",
+   "columbus",
+   "brookshire"
+  ],  "region": "Sealy and surrounding",  "reg": "gulf-coast"
+ },
+ {  "n": "C & D RV Service Center",  "c": "Pasadena",  "p": "713-534-6304",  "u": "https://cdrvservicecenter.com/",  "t": "center",  "e": false,  "r": false,  "d": "C & D RV Service Center is a family-owned full-service RV and trailer repair facility at 2311 Preston Ave in Pasadena. It works on all years, makes and models of travel trailers, motorhomes, enclosed trailers and box trucks, with roof-mounted A/C installation, appliances, flooring, electrical, roofing, body and slide-out repair, plus small engine work on Onan units. A 3,000 square foot parts and accessories showroom is on site.",  "g": [
+   "RV repair",
+   "trailer repair",
+   "appliances",
+   "electrical repair",
+   "roofing",
+   "parts and accessories"
+  ],  "base": "pasadena",  "areas": [
+   "pasadena"
+  ],  "region": "Houston",  "reg": "gulf-coast"
+ },
+ {  "n": "Discount RV & Trailer Repair",  "c": "Rosenberg",  "p": "(832) 763-8190",  "u": "https://rvgod99.wixsite.com/website",  "t": "mobile",  "e": false,  "r": false,  "d": "Discount RV & Trailer Repair serves Rosenberg and the surrounding area with mobile service that comes to the customer. The business handles RV and trailer repair including fluid checks, battery testing and alignment. It is open Monday through Saturday and asks customers to call for service.",  "g": [
+   "RV repair",
+   "trailer repair",
+   "mobile service",
+   "battery testing"
+  ],  "base": "rosenberg",  "areas": [
+   "rosenberg"
+  ],  "region": "Rosenberg and surrounding",  "reg": "gulf-coast"
  }
 ];

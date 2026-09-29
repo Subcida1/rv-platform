@@ -518,8 +518,10 @@ for lf in listing_files:
             bad.append("%s: no description" % name)
         if row.get("t") not in ("mobile", "center", "both"):
             bad.append("%s: type must be mobile, center or both" % name)
-        if row.get("r") and row.get("e"):
-            bad.append("%s: claims both roadside and emergency" % name)
+        # e and r are independent and a business may hold both. The rule forbidding it was
+        # lifted on 2026-09-28, and this was the THIRD copy of it - the builder and the
+        # candidate gate were changed first and this one kept failing builds for a legitimate
+        # record (Byron's RV Repair in Texas claims a 24/7 emergency line and roadside service).
     print("  %-40s %d listings" % (str(lf.relative_to(ROOT)), len(rows)))
 for b in bad:
     print("  FAIL " + b)

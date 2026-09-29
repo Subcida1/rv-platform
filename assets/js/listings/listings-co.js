@@ -254,5 +254,56 @@ window.RV_LISTINGS_CO = [
    "loveland",
    "longmont"
   ],  "region": null,  "reg": "front-range"
+ },
+ {  "n": "Four Seasons Mobile RV Repair",  "c": "Breckenridge",  "p": "(970) 471-8772",  "u": "https://fourseasonsmobilervrepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Four Seasons Mobile RV Repair is a mobile RV repair business that services Summit County. It handles appliances, hydronic heating and water heaters, water systems, electrical and LP systems, plus winterization, custom skirting, annual inspections and interior remodels. It also offers RV and equipment storage and orders parts for customers.",  "g": [
+   "mobile"
+  ],  "base": "breckenridge",  "areas": [],  "region": "Summit County",  "spec": "In-county repair diagnosis is $125. Service calls outside Summit County are billed at $2.50 per mile.",  "reg": "mountains-co"
+ },
+ {  "n": "DM RV Repair Mobile Service",  "c": "Weld County",  "p": "970.461.2424",  "u": "https://www.rvmobilerepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "DM RV Repair Mobile Service is a mobile-only RV repair business based in Weld County. It services all makes and models of RV, covering awnings, furnaces, water heaters, refrigerators, air conditioning, plumbing, electrical, hydraulic leveling systems, slide-out rooms and diesel heating systems. It bills insurance, extended warranty and component warranty claims directly.",  "g": [
+   "mobile"
+  ],  "base": "",  "areas": [
+   "loveland",
+   "sterling",
+   "brighton"
+  ],  "region": "Weld County",  "reg": "plains-co"
+ },
+ {  "n": "Just Us Mobile RV Repair",  "c": "Pagosa Springs",  "p": "(970) 389-0276",  "u": "https://justusmobilervrepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Just Us Mobile RV Repair is a mobile RV repair business based in Pagosa Springs. It comes to customers at home or at camp for routine maintenance and complex repairs, including electrical and plumbing work. Its stated service area is Southwest Colorado and Northern New Mexico.",  "g": [
+   "mobile"
+  ],  "base": "pagosa springs",  "areas": [],  "region": "Southwest Colorado and Northern New Mexico",  "reg": "southwest-co"
+ },
+ {  "n": "RV Pro",  "c": "South Fork",  "p": "1-866-557-8776",  "u": "https://www.rvpro1.com/",  "t": "both",  "e": false,  "r": false,  "d": "RV Pro is an RV repair and maintenance business in South Fork with a mobile call-out service. It installs RV accessories such as satellite systems, surge protectors and solar systems, and it offers breakdown service. Larger repairs are referred to partner RV repair facilities.",  "g": [
+   "mobile",
+   "center"
+  ],  "base": "south fork",  "areas": [],  "region": null,  "spec": "Larger repairs are referred out to partner repair facilities.",  "reg": "southwest-co"
+ },
+ {  "n": "Kodiak RV Repair",  "c": "Mancos",  "p": "970-422-1222",  "u": "https://www.kodiakrental.com/mobile-rv-repair",  "t": "both",  "e": false,  "r": true,  "d": "Kodiak RV Repair is the mobile repair side of an RV business based in Mancos near Durango. It sends certified technicians to campers, RVs and travel trailers to repair air conditioners, appliances, electrical systems, plumbing, propane systems, slide-outs, solar systems and running gear. Among the places it lists serving are Ouray, Silverton, Telluride and Pagosa Springs.",  "g": [
+   "mobile",
+   "center",
+   "roadside"
+  ],  "base": "mancos",  "areas": [
+   "ouray",
+   "silverton",
+   "telluride",
+   "pagosa springs",
+   "durango",
+   "bayfield",
+   "cortez",
+   "dolores",
+   "dove creek",
+   "mancos"
+  ],  "region": null,  "reg": "southwest-co"
+ },
+ {  "n": "RVFix Mobile Repair",  "c": "Arvada",  "p": "(303) 241-2290",  "u": "https://rvfixmobilerepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "RVFix Mobile Repair is a family-owned mobile RV repair business based in Arvada. It travels to customers on the Front Range within a 60 mile radius, and out to the Granby and Grand Lake areas in the summer. It repairs Class A, B and C motorhomes, vans, travel trailers, fifth wheels, truck campers and horse trailer living quarters.",  "g": [
+   "mobile"
+  ],  "base": "arvada",  "areas": [
+   "granby",
+   "grand lake"
+  ],  "region": "Colorado Front Range",  "spec": "Travels to the Granby and Grand Lake areas in summer only.",  "reg": "front-range"
+ },
+ {  "n": "Hi-Tech RV Service & Solar Specialists",  "c": "Idaho Springs",  "p": "720-292-1499",  "u": "https://hitechrvservice.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Hi-Tech RV Service & Solar Specialists is a mobile RV repair business that works the Front Range and the Denver area. It provides mobile RV repairs, maintenance, solar installation and appliance work, plus NRVIA-certified RV inspections. It publishes a dedicated service area page for Idaho Springs.",  "g": [
+   "mobile"
+  ],  "base": "",  "areas": [
+   "idaho springs"
+  ],  "region": "the Front Range / Denver area; Denver metro area",  "reg": "front-range"
  }
 ];

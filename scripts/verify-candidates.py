@@ -41,6 +41,17 @@ def fetch(url, timeout=25):
     return raw.decode("utf-8", "replace")
 
 
+# A phone can be published without appearing in the visible text: in a tel: link, a form value,
+# a schema.org content attribute. Four central-Texas records were rejected for a phone that was
+# on their page in exactly that form - "tel:361-205-1637 / 361-205-1637" - which is my checker
+# reading the wrong place, not a business hiding its number.
+PUBLISHED = re.compile(r'(?:href|content|value|data-[a-z0-9-]+)="([^"]*)"', re.I)
+
+
+def attrs_of(html):
+    return " ".join(PUBLISHED.findall(html))
+
+
 def text_of(html):
     t = re.sub(r"<(script|style)\b.*?</\1>", " ", html, flags=re.S | re.I)
     t = re.sub(r"<[^>]+>", " ", t)
@@ -125,7 +136,7 @@ def check(rec):
         out["ok"] = False
         out["bad"].append("reads as a collision or body shop")
     ph = digits(rec.get("p"))
-    if ph and ph not in digits(page):
+    if ph and ph not in digits(page) and ph not in digits(attrs_of(html)):
         out["ok"] = False
         out["bad"].append("phone %s not on their site" % rec.get("p"))
     ev = rec.get("evidence") or {}
