@@ -1,5 +1,5 @@
 {
-  "note": "The parts index: every part an RV is made of, by system, with what it does, how it fails, which RV types have it, which of our guides already covers it, and the phrasings a reader would search. Built 2026-09-29 from Ty's list plus the 110 component makers already catalogued in _data/manuals.json. No models, no specs: this is the index that tells us what content to research next. Each part also carries `makers`: the manufacturers already catalogued in the manuals directory whose documentation covers it, with the archive URL. 36 of 138 parts have a source waiting before any research starts, and a part with makers and no guide is the cheapest content on this list.",
+  "note": "The parts index: every part an RV is made of, by system, with what it does, how it fails, which RV types have it, which of our guides already covers it, and the phrasings a reader would search. Built 2026-09-29 from Ty's list plus the 110 component makers already catalogued in _data/manuals.json. No models, no specs: this is the index that tells us what content to research next. Each part also carries `makers`: the manufacturers already catalogued in the manuals directory whose documentation covers it, with the archive URL. 36 of 138 parts have a source waiting before any research starts, and a part with makers and no guide is the cheapest content on this list. A ninth system, propane, was added after a completeness check against the manuals taxonomy found the supply side of every gas appliance missing: the furnace and water heater were indexed, and the tank, regulator, hoses and detector feeding them were not.",
   "systems": [
     {
       "key": "towing-and-running-gear",
@@ -594,6 +594,56 @@
             "query": "air suspension"
           },
           "makers": []
+        },
+        {
+          "id": "wheel-chocks-and-jack-pads",
+          "n": "Wheel chocks and jack pads",
+          "aka": "chocks|leveling blocks|jack pad|stabilizer pad",
+          "does": "stops the trailer rolling and keeps a jack off soft ground",
+          "fails": [
+            "chocks lost",
+            "blocks sinking in mud or hot asphalt",
+            "pads crushing",
+            "chocks too small for the tyre"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome"
+          ],
+          "guide": null,
+          "kw": [
+            "rv wheel chocks",
+            "leveling blocks sinking",
+            "rv jack pads"
+          ],
+          "makers": [],
+          "demand": null
+        },
+        {
+          "id": "tire-chains",
+          "n": "Tire chains",
+          "aka": "snow chains|cable chains|traction devices",
+          "does": "gets you over a pass in a chain-control area",
+          "fails": [
+            "wrong size",
+            "fitted to the wrong axle",
+            "speed exceeded and links broken",
+            "cable chains failing fast"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome"
+          ],
+          "guide": "tires-winter",
+          "kw": [
+            "rv tire chains",
+            "chain laws rv",
+            "snow chains trailer"
+          ],
+          "makers": [],
+          "demand": null
         }
       ]
     },
@@ -1302,6 +1352,81 @@
             "query": "control"
           },
           "makers": []
+        },
+        {
+          "id": "portable-generator",
+          "n": "Portable generator",
+          "aka": "inverter generator|Honda eu2200|Firman|Westinghouse",
+          "does": "power away from a pedestal without running the coach generator",
+          "fails": [
+            "hard starting after storage",
+            "carburettor gum",
+            "low oil shutdown",
+            "parallel kit",
+            "noise rules at the park"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome",
+            "van"
+          ],
+          "guide": null,
+          "kw": [
+            "rv portable generator",
+            "inverter generator for rv",
+            "generator carburettor cleaning"
+          ],
+          "makers": [],
+          "demand": null
+        },
+        {
+          "id": "battery-combiner-and-acr",
+          "n": "Battery combiner and ACR",
+          "aka": "ACR|automatic charging relay|battery separator|combiner",
+          "does": "lets the alternator charge both banks without linking them when parked",
+          "fails": [
+            "relay stuck closed and drains both",
+            "stuck open and the house never charges",
+            "wrong threshold"
+          ],
+          "types": [
+            "motorhome",
+            "van"
+          ],
+          "guide": null,
+          "kw": [
+            "battery acr rv",
+            "combiner not charging house battery"
+          ],
+          "makers": [],
+          "demand": null
+        },
+        {
+          "id": "cell-and-wifi-booster",
+          "n": "Cell and wifi booster",
+          "aka": "cell booster|weboost|wifi booster|antenna",
+          "does": "pulls a usable signal where there is barely one",
+          "fails": [
+            "no gain outdoors",
+            "wrong band",
+            "booster oscillation shutdown",
+            "cable loss"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome",
+            "van"
+          ],
+          "guide": null,
+          "kw": [
+            "rv cell booster not working",
+            "best rv wifi booster",
+            "weboost install rv"
+          ],
+          "makers": [],
+          "demand": null
         }
       ]
     },
@@ -1819,6 +1944,30 @@
             "query": "antifreeze"
           },
           "makers": []
+        },
+        {
+          "id": "water-softener-and-filtration",
+          "n": "Water softener and filtration",
+          "aka": "water softener|onboard filter|portable softener",
+          "does": "takes hardness and taste out of park water",
+          "fails": [
+            "resin exhausted",
+            "not regenerated",
+            "flow restriction",
+            "freeze damage"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome"
+          ],
+          "guide": null,
+          "kw": [
+            "rv water softener",
+            "rv water filtration system"
+          ],
+          "makers": [],
+          "demand": null
         }
       ]
     },
@@ -3437,6 +3586,54 @@
             "query": "backup"
           },
           "makers": []
+        },
+        {
+          "id": "bike-and-kayak-carriers",
+          "n": "Bike and kayak carriers",
+          "aka": "bike rack|kayak rack|hitch rack|roof rack",
+          "does": "carries toys outside",
+          "fails": [
+            "bumper-mounted rack pulling the bumper off",
+            "hitch rack over the tongue weight limit",
+            "strap wear"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome",
+            "van"
+          ],
+          "guide": null,
+          "kw": [
+            "rv bike rack bumper",
+            "best rv bike rack",
+            "kayak rack rv"
+          ],
+          "makers": [],
+          "demand": null
+        },
+        {
+          "id": "roof-cargo-and-ladders",
+          "n": "Roof cargo and ladders",
+          "aka": "roof rack|cargo carrier|ladder rack",
+          "does": "adds storage on the roof",
+          "fails": [
+            "mounting through the membrane and leaking",
+            "weight over the roof rating",
+            "corrosion"
+          ],
+          "types": [
+            "trailer",
+            "motorhome",
+            "van"
+          ],
+          "guide": null,
+          "kw": [
+            "rv roof rack install",
+            "roof cargo carrier rv"
+          ],
+          "makers": [],
+          "demand": null
         }
       ]
     },
@@ -3880,6 +4077,57 @@
             "query": "vacuum"
           },
           "makers": []
+        },
+        {
+          "id": "grill-and-outdoor-cooking",
+          "n": "Grill and outdoor cooking",
+          "aka": "rv grill|BBQ|Camp Chef|Weber Q|portable grill",
+          "does": "cooks outside off the coach's propane or its own bottle",
+          "fails": [
+            "low flame from a long hose",
+            "regulator mismatch on a quick connect",
+            "burner rust",
+            "grease fire"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome",
+            "van"
+          ],
+          "guide": null,
+          "kw": [
+            "rv grill low flame",
+            "rv quick connect grill",
+            "best rv bbq"
+          ],
+          "makers": [],
+          "demand": null
+        },
+        {
+          "id": "fire-extinguisher",
+          "n": "Fire extinguisher",
+          "aka": "rv fire extinguisher|dry chemical|foam",
+          "does": "the first response to a galley or engine fire",
+          "fails": [
+            "expired",
+            "discharged",
+            "wrong class for a grease or electrical fire",
+            "mounted where you cannot reach it"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome",
+            "van"
+          ],
+          "guide": null,
+          "kw": [
+            "rv fire extinguisher type",
+            "fire extinguisher replacement rv"
+          ],
+          "makers": [],
+          "demand": null
         }
       ]
     },
@@ -4264,6 +4512,237 @@
             "query": "tyre pressure"
           },
           "makers": []
+        }
+      ]
+    },
+    {
+      "key": "propane",
+      "label": "Propane system",
+      "note": "The supply side: what holds the gas, what regulates it, and what carries it to the appliances.",
+      "parts": [
+        {
+          "id": "propane-tank",
+          "n": "Propane tank",
+          "aka": "LP tank|ASME tank|DOT cylinder|20 lb tank",
+          "does": "holds the gas the appliances burn",
+          "fails": [
+            "overfilled",
+            "relief valve weeping",
+            "rusted mount",
+            "expired certification on a DOT cylinder",
+            "gauge wrong"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome",
+            "van"
+          ],
+          "guide": null,
+          "kw": [
+            "rv propane tank replacement",
+            "propane tank certification",
+            "asme vs dot tank rv"
+          ],
+          "makers": [],
+          "demand": null
+        },
+        {
+          "id": "propane-regulator",
+          "n": "Propane regulator",
+          "aka": "two stage regulator|rv regulator|auto changeover",
+          "does": "drops tank pressure to what the appliances need",
+          "fails": [
+            "freezes in cold",
+            "diaphragm failure",
+            "wrong delivery pressure",
+            "oil contamination from a bad fill"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome",
+            "van"
+          ],
+          "guide": null,
+          "kw": [
+            "rv propane regulator replacement",
+            "regulator freezing",
+            "propane pressure too low"
+          ],
+          "makers": [],
+          "demand": null
+        },
+        {
+          "id": "auto-changeover-and-pigtail-hoses",
+          "n": "Auto changeover and pigtail hoses",
+          "aka": "changeover valve|pigtail|soft nose hose|acme nut",
+          "does": "switches and feeds from two tanks",
+          "fails": [
+            "leaking at the acme nut",
+            "check valve stuck",
+            "hose cracking",
+            "changeover indicator wrong"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel"
+          ],
+          "guide": null,
+          "kw": [
+            "rv propane pigtail leaking",
+            "auto changeover valve",
+            "acme nut leak"
+          ],
+          "makers": [],
+          "demand": null
+        },
+        {
+          "id": "propane-supply-lines-and-fittings",
+          "n": "Propane supply lines and fittings",
+          "aka": "copper line|flare fitting|gas line|rubber hose",
+          "does": "carries gas to each appliance",
+          "fails": [
+            "flare leaking",
+            "line chafed through a bulkhead",
+            "hose dated out",
+            "wrong sealant used on a flare"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome",
+            "van"
+          ],
+          "guide": null,
+          "kw": [
+            "rv propane leak",
+            "flare fitting leak",
+            "propane line replacement"
+          ],
+          "makers": [],
+          "demand": null
+        },
+        {
+          "id": "propane-shutoff-valve",
+          "n": "Propane shutoff valve",
+          "aka": "tank valve|service valve|manual shutoff",
+          "does": "isolates the gas",
+          "fails": [
+            "stiff from age",
+            "weeping at the stem",
+            "left closed and appliances 'fail'"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome",
+            "van"
+          ],
+          "guide": null,
+          "kw": [
+            "rv propane valve stiff",
+            "tank valve leaking"
+          ],
+          "makers": [],
+          "demand": null
+        },
+        {
+          "id": "propane-leak-detector",
+          "n": "Propane leak detector",
+          "aka": "LP detector|propane alarm|gas alarm",
+          "does": "warns of a leak inside the coach",
+          "fails": [
+            "beeping at the end of its life",
+            "false alarms from aerosols",
+            "expired sensor",
+            "fuse blown so it reads dead"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome",
+            "van"
+          ],
+          "guide": "rv-furnace-carbon-monoxide",
+          "kw": [
+            "rv propane detector beeping",
+            "lp detector replacement",
+            "detector false alarm"
+          ],
+          "makers": [],
+          "demand": null
+        },
+        {
+          "id": "propane-tank-gauge-and-monitor",
+          "n": "Propane tank gauge and monitor",
+          "aka": "tank gauge|LP level|sonar gauge|mopeka",
+          "does": "tells you how much gas is left",
+          "fails": [
+            "stuck float",
+            "sender failure",
+            "Bluetooth drop",
+            "reads full when empty"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome",
+            "van"
+          ],
+          "guide": null,
+          "kw": [
+            "rv propane gauge not working",
+            "lp tank monitor"
+          ],
+          "makers": [],
+          "demand": null
+        },
+        {
+          "id": "propane-refill-and-exchange",
+          "n": "Propane refill and exchange",
+          "aka": "refill|exchange tank|bulk fill",
+          "does": "getting more gas",
+          "fails": [
+            "exchange tanks short-filled",
+            "tank not purged",
+            "overfilled in cold",
+            "filler valve leak"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome",
+            "van"
+          ],
+          "guide": null,
+          "kw": [
+            "propane refill vs exchange rv",
+            "how long does rv propane last"
+          ],
+          "makers": [],
+          "demand": null
+        },
+        {
+          "id": "extend-a-stay-and-external-supply",
+          "n": "Extend-a-stay and external supply",
+          "aka": "extend a stay|portable tank kit|stay longer",
+          "does": "runs the coach from an external tank",
+          "fails": [
+            "leaking tee",
+            "left connected while driving",
+            "wrong hose for the appliance"
+          ],
+          "types": [
+            "motorhome"
+          ],
+          "guide": null,
+          "kw": [
+            "rv extend a stay kit",
+            "run rv on external propane"
+          ],
+          "makers": [],
+          "demand": null
         }
       ]
     }
