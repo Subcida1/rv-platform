@@ -1,0 +1,3217 @@
+{
+  "note": "The parts index: every part an RV is made of, by system, with what it does, how it fails, which RV types have it, which of our guides already covers it, and the phrasings a reader would search. Built 2026-09-29 from Ty's list plus the 110 component makers already catalogued in _data/manuals.json. No models, no specs: this is the index that tells us what content to research next.",
+  "systems": [
+    {
+      "key": "towing-and-running-gear",
+      "label": "Towing and running gear",
+      "note": "Everything between the tow vehicle and the road, which is where a breakdown strands you.",
+      "parts": [
+        {
+          "id": "hitch-coupler",
+          "n": "Hitch coupler",
+          "aka": "coupler|ball coupler|A-frame coupler",
+          "does": "clamps the trailer tongue onto the hitch ball",
+          "fails": [
+            "latch will not close",
+            "worn ball",
+            "coupler too loose and rattles",
+            "seized latch pin"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "pop-up"
+          ],
+          "guide": null,
+          "kw": [
+            "rv coupler adjustment",
+            "hitch coupler loose",
+            "trailer coupler replacement"
+          ]
+        },
+        {
+          "id": "tongue-jack",
+          "n": "Tongue jack",
+          "aka": "trailer jack|A-frame jack|electric tongue jack|power jack",
+          "does": "raises and lowers the tongue so the trailer can be hitched and levelled",
+          "fails": [
+            "motor dies or grinds",
+            "switch dead",
+            "gear strip under load",
+            "manual override seized",
+            "jack foot bent"
+          ],
+          "types": [
+            "trailer",
+            "pop-up"
+          ],
+          "guide": null,
+          "kw": [
+            "tongue jack not working",
+            "electric tongue jack died",
+            "rv tongue jack replacement",
+            "trailer jack switch"
+          ]
+        },
+        {
+          "id": "stabilizer-jacks",
+          "n": "Stabilizer jacks",
+          "aka": "scissor jacks|stabilisers|stabilizing jacks",
+          "does": "hold the trailer steady once it is parked, they do not lift it",
+          "fails": [
+            "bent screw",
+            "stripped nut",
+            "seized pivot",
+            "pad torn off",
+            "crank handle lost"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "pop-up"
+          ],
+          "guide": "rv-leveling-jacks-not-working",
+          "kw": [
+            "stabilizer jack bent",
+            "scissor jack will not crank",
+            "rv stabilizer replacement"
+          ]
+        },
+        {
+          "id": "leveling-jacks-hydraulic",
+          "n": "Leveling jacks (hydraulic)",
+          "aka": "hydraulic levelers|HWH jacks|level-up system|jacks down light",
+          "does": "lift and level a motorhome on its own suspension",
+          "fails": [
+            "won't retract",
+            "jack down alarm",
+            "fluid leak",
+            "solenoid failure",
+            "control panel error",
+            "spring pack broken"
+          ],
+          "types": [
+            "motorhome"
+          ],
+          "guide": "rv-leveling-jacks-not-working",
+          "kw": [
+            "hydraulic jacks won't retract",
+            "jack down alarm",
+            "rv leveling system error"
+          ]
+        },
+        {
+          "id": "weight-distribution-hitch",
+          "n": "Weight-distribution hitch",
+          "aka": "WD hitch|equalizer hitch|load leveling hitch",
+          "does": "moves tongue weight forward onto the tow vehicle's front axle",
+          "fails": [
+            "bars clunk",
+            "chain links stretched",
+            "head bolts loose",
+            "wrong bar weight"
+          ],
+          "types": [
+            "trailer"
+          ],
+          "guide": null,
+          "kw": [
+            "weight distribution hitch setup",
+            "wd hitch noise",
+            "hitch bar weight"
+          ]
+        },
+        {
+          "id": "sway-control",
+          "n": "Sway control",
+          "aka": "sway bar|anti-sway|friction sway control",
+          "does": "resists trailer sway from wind and passing trucks",
+          "fails": [
+            "friction pad worn",
+            "bracket loose",
+            "over-tightened and noisy"
+          ],
+          "types": [
+            "trailer"
+          ],
+          "guide": null,
+          "kw": [
+            "trailer sway fix",
+            "sway control adjustment",
+            "anti sway bar rv"
+          ]
+        },
+        {
+          "id": "safety-chains",
+          "n": "Safety chains",
+          "aka": "breakaway chains",
+          "does": "catch the trailer if the coupler fails",
+          "fails": [
+            "wrong length",
+            "too light",
+            "crossed wrong",
+            "rusted through"
+          ],
+          "types": [
+            "trailer",
+            "pop-up"
+          ],
+          "guide": null,
+          "kw": [
+            "safety chain length rv",
+            "safety chains crossed"
+          ]
+        },
+        {
+          "id": "breakaway-switch",
+          "n": "Breakaway switch",
+          "aka": "breakaway cable|breakaway kit",
+          "does": "applies the trailer brakes if it separates from the tow vehicle",
+          "fails": [
+            "pin missing",
+            "cable snapped",
+            "battery dead",
+            "switch corroded"
+          ],
+          "types": [
+            "trailer"
+          ],
+          "guide": null,
+          "kw": [
+            "breakaway switch test",
+            "breakaway cable replacement"
+          ]
+        },
+        {
+          "id": "trailer-brakes",
+          "n": "Trailer brakes",
+          "aka": "electric brakes|surge brakes|brake assembly",
+          "does": "slow and stop the trailer itself",
+          "fails": [
+            "grabbing",
+            "no braking",
+            "magnet worn",
+            "shoes glazed",
+            "backing plate bent",
+            "grease on shoes"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel"
+          ],
+          "guide": "trailer-brakes-required",
+          "kw": [
+            "trailer brakes not working",
+            "electric brake magnet replacement",
+            "surge brake problems"
+          ]
+        },
+        {
+          "id": "brake-controller",
+          "n": "Brake controller",
+          "aka": "trailer brake controller|proportional controller",
+          "does": "tells the trailer brakes how hard to apply",
+          "fails": [
+            "wrong gain",
+            "no output",
+            "error codes",
+            "wiring short",
+            "not detecting trailer"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel"
+          ],
+          "guide": "trailer-brakes-required",
+          "kw": [
+            "brake controller gain setting",
+            "brake controller not working",
+            "c30 brake controller"
+          ]
+        },
+        {
+          "id": "axle",
+          "n": "Axle",
+          "aka": "trailer axle|torsion axle|spring axle",
+          "does": "carries the weight and holds the wheels",
+          "fails": [
+            "bent spindle",
+            "camber worn",
+            "torsion rubber tired",
+            "axle flipped wrong"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel"
+          ],
+          "guide": null,
+          "kw": [
+            "bent trailer axle",
+            "torsion axle replacement",
+            "axle alignment rv"
+          ]
+        },
+        {
+          "id": "leaf-springs-and-shackles",
+          "n": "Leaf springs and shackles",
+          "aka": "suspension|equalizer|shackle kit|wet bolt kit",
+          "does": "spring the trailer over bumps",
+          "fails": [
+            "flat springs",
+            "broken leaf",
+            "worn shackle bushings",
+            "equalizer cracked"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel"
+          ],
+          "guide": null,
+          "kw": [
+            "trailer leaf spring broken",
+            "shackle bushing replacement",
+            "wet bolt kit rv"
+          ]
+        },
+        {
+          "id": "wheel-bearings",
+          "n": "Wheel bearings",
+          "aka": "bearings|races|grease seals|bearing buddy",
+          "does": "let the wheel spin freely on the spindle",
+          "fails": [
+            "dry and scored",
+            "water intrusion",
+            "seal leak",
+            "over-greased and blown seal",
+            "burnt spindle"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "pop-up"
+          ],
+          "guide": null,
+          "kw": [
+            "trailer wheel bearing repack",
+            "bearing replacement rv",
+            "grease seal leaking trailer"
+          ]
+        },
+        {
+          "id": "tires",
+          "n": "Tires",
+          "aka": "ST tires|load range|speed rating",
+          "does": "carry the load and absorb the road",
+          "fails": [
+            "sidewall blowout",
+            "uneven wear",
+            "age cracking",
+            "underinflation heat",
+            "wrong load range"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome",
+            "van"
+          ],
+          "guide": null,
+          "kw": [
+            "rv tire blowout",
+            "best trailer tires",
+            "tire load range rv",
+            "rv tire age"
+          ]
+        },
+        {
+          "id": "tire-pressure-monitoring",
+          "n": "Tire pressure monitoring",
+          "aka": "TPMS|tire sensors|pressure monitor",
+          "does": "warns before a tire fails",
+          "fails": [
+            "sensor battery dead",
+            "signal loss",
+            "wrong pressure setting",
+            "valve stem leak"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome"
+          ],
+          "guide": null,
+          "kw": [
+            "rv tpms not reading",
+            "tpms sensor battery",
+            "best rv tire monitor"
+          ]
+        },
+        {
+          "id": "lug-nuts-and-torque",
+          "n": "Lug nuts and torque",
+          "aka": "wheel torque|lug pattern",
+          "does": "hold the wheel on",
+          "fails": [
+            "loosened by heat cycling",
+            "over-torqued and stretched",
+            "rusted",
+            "wrong taper"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome"
+          ],
+          "guide": null,
+          "kw": [
+            "rv lug nut torque",
+            "trailer wheel torque spec",
+            "lug nuts loosening"
+          ]
+        },
+        {
+          "id": "fifth-wheel-landing-gear",
+          "n": "Fifth-wheel landing gear",
+          "aka": "front jacks|landing legs|electric landing gear",
+          "does": "raise and lower the front of a fifth wheel to hitch it",
+          "fails": [
+            "motor failure",
+            "gearbox stripped",
+            "leg bent",
+            "switch dead",
+            "one leg lags"
+          ],
+          "types": [
+            "fifth-wheel"
+          ],
+          "guide": null,
+          "kw": [
+            "fifth wheel landing gear not working",
+            "landing gear motor replacement"
+          ]
+        },
+        {
+          "id": "kingpin-and-fifth-wheel-hitch",
+          "n": "Kingpin and fifth-wheel hitch",
+          "aka": "kingpin box|fifth wheel hitch|slider hitch",
+          "does": "connects a fifth wheel to the truck bed",
+          "fails": [
+            "hard to latch",
+            "clunking",
+            "jaw wear",
+            "slider stuck",
+            "pin box flex"
+          ],
+          "types": [
+            "fifth-wheel"
+          ],
+          "guide": null,
+          "kw": [
+            "fifth wheel hitch clunk",
+            "kingpin box replacement",
+            "slider hitch stuck"
+          ]
+        },
+        {
+          "id": "toad-setup",
+          "n": "Toad setup",
+          "aka": "dinghy tow|tow bar|baseplate|flat tow",
+          "does": "lets a motorhome pull a car with four wheels down",
+          "fails": [
+            "baseplate cracks",
+            "tow bar binds",
+            "safety cable wear",
+            "aux brake not engaging"
+          ],
+          "types": [
+            "motorhome"
+          ],
+          "guide": null,
+          "kw": [
+            "flat tow setup rv",
+            "tow bar binding",
+            "dinghy braking system"
+          ]
+        },
+        {
+          "id": "air-suspension-and-helper-springs",
+          "n": "Air suspension and helper springs",
+          "aka": "air bags|sumo springs|helper springs",
+          "does": "carry heavy loads without squatting",
+          "fails": [
+            "air leak",
+            "bag rupture",
+            "compressor failure",
+            "overloaded and bottomed out"
+          ],
+          "types": [
+            "motorhome",
+            "trailer"
+          ],
+          "guide": null,
+          "kw": [
+            "rv air bag leak",
+            "sumo spring install",
+            "timbren rv"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "power-and-electrical",
+      "label": "Power and electrical",
+      "note": "Two systems in one place: the 120 volt side from the pedestal, and the 12 volt side that runs the coach.",
+      "parts": [
+        {
+          "id": "shore-power-cord",
+          "n": "Shore power cord",
+          "aka": "power cord|shore cord|30 amp cord|50 amp cord",
+          "does": "brings park power into the coach",
+          "fails": [
+            "burned plug",
+            "loose twist lock",
+            "broken neutral",
+            "cord end melted",
+            "wrong adapter"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome",
+            "van"
+          ],
+          "guide": null,
+          "kw": [
+            "rv power cord melted",
+            "shore power plug burned",
+            "50 amp cord replacement"
+          ]
+        },
+        {
+          "id": "shore-power-inlet",
+          "n": "Shore power inlet",
+          "aka": "power inlet|twist lock inlet|receptacle",
+          "does": "where the cord meets the coach",
+          "fails": [
+            "scorched pins",
+            "water intrusion",
+            "loose screws",
+            "melted housing"
+          ],
+          "types": [
+            "trailer",
+            "motorhome",
+            "van"
+          ],
+          "guide": null,
+          "kw": [
+            "rv power inlet replacement",
+            "shore power inlet burned"
+          ]
+        },
+        {
+          "id": "surge-protector-and-ems",
+          "n": "Surge protector and EMS",
+          "aka": "EMS|surge guard|electrical management",
+          "does": "shields the coach from bad park power",
+          "fails": [
+            "nuisance shutdowns",
+            "low voltage trip",
+            "failed relay",
+            "miswired pedestal alarm"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome"
+          ],
+          "guide": null,
+          "kw": [
+            "rv surge protector tripping",
+            "ems low voltage shutdown",
+            "pedestal miswired"
+          ]
+        },
+        {
+          "id": "transfer-switch",
+          "n": "Transfer switch",
+          "aka": "ATS|automatic transfer switch",
+          "does": "chooses between shore power and generator",
+          "fails": [
+            "chattering",
+            "burned contacts",
+            "stuck on one source",
+            "buzzy hum",
+            "generator not passing through"
+          ],
+          "types": [
+            "motorhome"
+          ],
+          "guide": null,
+          "kw": [
+            "rv transfer switch failure",
+            "ats chattering",
+            "generator not powering coach"
+          ]
+        },
+        {
+          "id": "breaker-panel-and-120v-breakers",
+          "n": "Breaker panel and 120V breakers",
+          "aka": "distribution panel|main breaker|GFCI breaker",
+          "does": "protects the circuits inside the coach",
+          "fails": [
+            "tripping from actual fault",
+            "weak breaker",
+            "burned bus",
+            "loose neutral"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome",
+            "van"
+          ],
+          "guide": null,
+          "kw": [
+            "rv breaker keeps tripping",
+            "gfci breaker rv",
+            "distribution panel wiring"
+          ]
+        },
+        {
+          "id": "converter-and-charger",
+          "n": "Converter and charger",
+          "aka": "converter|battery charger|power center|WFCO|Progressive Dynamics",
+          "does": "turns 120 volts into 12 volts and charges the house battery",
+          "fails": [
+            "will not charge",
+            "overcharging",
+            "fan scream",
+            "dead output",
+            "wrong charge profile for lithium"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome",
+            "van"
+          ],
+          "guide": "rv-converter-not-charging",
+          "kw": [
+            "rv converter not charging battery",
+            "converter fan loud",
+            "lithium charge profile converter"
+          ]
+        },
+        {
+          "id": "inverter",
+          "n": "Inverter",
+          "aka": "inverter|pure sine|modified sine",
+          "does": "makes 120 volts from the batteries for off grid use",
+          "fails": [
+            "alarm and shutdown",
+            "overheat",
+            "no output",
+            "hum in audio",
+            "dead transfer"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome",
+            "van"
+          ],
+          "guide": null,
+          "kw": [
+            "rv inverter not working",
+            "inverter alarm code",
+            "pure sine vs modified sine rv"
+          ]
+        },
+        {
+          "id": "inverter-charger",
+          "n": "Inverter charger",
+          "aka": "inverter/charger|Xantrex|Magnum",
+          "does": "combines inverting and charging in one unit",
+          "fails": [
+            "fault codes",
+            "will not pass through",
+            "charger stage wrong",
+            "remote panel dead"
+          ],
+          "types": [
+            "motorhome"
+          ],
+          "guide": null,
+          "kw": [
+            "inverter charger fault code",
+            "magnum remote panel not working"
+          ]
+        },
+        {
+          "id": "house-battery",
+          "n": "House battery",
+          "aka": "coach battery|deep cycle|AGM|LiFePO4|lithium",
+          "does": "stores power for everything that runs without shore power",
+          "fails": [
+            "sulfated",
+            "swollen",
+            "will not hold voltage",
+            "BMS shutdown",
+            "freezing",
+            "mismatched bank"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome",
+            "van"
+          ],
+          "guide": "rv-battery-not-charging",
+          "kw": [
+            "rv battery not holding charge",
+            "lifepo4 bms shutdown",
+            "agm vs lithium rv"
+          ]
+        },
+        {
+          "id": "battery-disconnect",
+          "n": "Battery disconnect",
+          "aka": "kill switch|battery switch|isolator switch",
+          "does": "cuts the house battery from the coach",
+          "fails": [
+            "left on and draining",
+            "corroded lugs",
+            "switch rated too low",
+            "bypassed by a previous owner"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome",
+            "van"
+          ],
+          "guide": "rv-battery-disconnect",
+          "kw": [
+            "rv battery disconnect switch",
+            "battery draining while stored"
+          ]
+        },
+        {
+          "id": "battery-monitor-and-shunt",
+          "n": "Battery monitor and shunt",
+          "aka": "shunt|battery monitor|state of charge",
+          "does": "tells you what is really left in the bank",
+          "fails": [
+            "wrong capacity setting",
+            "reads 100 percent when empty",
+            "wiring on the wrong side of the shunt"
+          ],
+          "types": [
+            "trailer",
+            "motorhome",
+            "van"
+          ],
+          "guide": null,
+          "kw": [
+            "rv battery monitor inaccurate",
+            "shunt wiring",
+            "state of charge"
+          ]
+        },
+        {
+          "id": "solar-panels",
+          "n": "Solar panels",
+          "aka": "solar|PV panels",
+          "does": "charge the batteries from the sun",
+          "fails": [
+            "shaded and dead",
+            "delaminated",
+            "MC4 corrosion",
+            "roof mount leak"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome",
+            "van"
+          ],
+          "guide": "rv-solar-not-charging",
+          "kw": [
+            "rv solar not charging",
+            "solar panel shade loss",
+            "mc4 connector corrosion"
+          ]
+        },
+        {
+          "id": "solar-charge-controller",
+          "n": "Solar charge controller",
+          "aka": "MPPT|PWM controller|solar controller",
+          "does": "manages what the panels send to the batteries",
+          "fails": [
+            "wrong battery type selected",
+            "no output",
+            "overheat",
+            "Bluetooth dropped",
+            "undersized"
+          ],
+          "types": [
+            "trailer",
+            "motorhome",
+            "van"
+          ],
+          "guide": "rv-solar-not-charging",
+          "kw": [
+            "mppt controller settings",
+            "solar controller not charging"
+          ]
+        },
+        {
+          "id": "fuses",
+          "n": "Fuses",
+          "aka": "blade fuse|ANL fuse|class T|12 volt fuse|inline fuse",
+          "does": "protect every 12 volt circuit",
+          "fails": [
+            "blowing repeatedly from a real fault",
+            "wrong rating",
+            "corroded holder",
+            "hidden inline fuse missed"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome",
+            "van"
+          ],
+          "guide": "rv-fuse-keeps-blowing",
+          "kw": [
+            "rv fuse keeps blowing",
+            "12 volt fuse location",
+            "inline fuse rv"
+          ]
+        },
+        {
+          "id": "12-volt-outlets-and-usb",
+          "n": "12 volt outlets and USB",
+          "aka": "cigarette outlet|USB port|12v socket",
+          "does": "power small devices from the coach battery",
+          "fails": [
+            "dead circuit",
+            "corroded socket",
+            "fuse blown",
+            "wired after the disconnect"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome",
+            "van"
+          ],
+          "guide": null,
+          "kw": [
+            "rv 12v outlet not working",
+            "usb port replacement rv"
+          ]
+        },
+        {
+          "id": "120-volt-outlets-and-gfci",
+          "n": "120 volt outlets and GFCI",
+          "aka": "receptacles|GFCI outlet|outlet not working",
+          "does": "run household appliances on shore or generator power",
+          "fails": [
+            "downstream of a tripped GFCI",
+            "loose backstab",
+            "scorched",
+            "daisy chain lost"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome",
+            "van"
+          ],
+          "guide": "rv-outlets-not-working",
+          "kw": [
+            "rv outlets not working",
+            "gfci reset rv",
+            "outlet no power"
+          ]
+        },
+        {
+          "id": "light-fixtures-and-leds",
+          "n": "Light fixtures and LEDs",
+          "aka": "12 volt lights|LED lights|dome lights|porch light",
+          "does": "light the inside and outside",
+          "fails": [
+            "flicker",
+            "dim",
+            "dead fixture",
+            "switch failure",
+            "burnt connector"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome",
+            "van"
+          ],
+          "guide": "rv-lights-not-working",
+          "kw": [
+            "rv lights flickering",
+            "led light replacement rv",
+            "porch light not working"
+          ]
+        },
+        {
+          "id": "wiring-harness-and-connectors",
+          "n": "Wiring harness and connectors",
+          "aka": "12 volt wiring|wire nuts|scotchloks|junction box",
+          "does": "carry power and signals through the coach",
+          "fails": [
+            "corrosion",
+            "rodent damage",
+            "vibration chafe",
+            "bad splices",
+            "ground loss"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome",
+            "van"
+          ],
+          "guide": null,
+          "kw": [
+            "rv wiring corrosion",
+            "bad ground rv",
+            "rodent chewed wiring rv"
+          ]
+        },
+        {
+          "id": "generator",
+          "n": "Generator",
+          "aka": "onan|genset|built in generator",
+          "does": "makes its own power when there is no pedestal",
+          "fails": [
+            "will not start",
+            "starts then dies",
+            "surging",
+            "low oil shutdown",
+            "brushes worn",
+            "propane vs gas"
+          ],
+          "types": [
+            "motorhome"
+          ],
+          "guide": "rv-generator-not-charging",
+          "kw": [
+            "rv generator won't start",
+            "onan surging",
+            "generator starts then dies"
+          ]
+        },
+        {
+          "id": "control-and-monitor-panel",
+          "n": "Control and monitor panel",
+          "aka": "monitor panel|control panel|touch panel",
+          "does": "shows tank levels, battery, and runs systems",
+          "fails": [
+            "dead display",
+            "wrong readings",
+            "ribbon connector",
+            "firmware",
+            "unresponsive buttons"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome",
+            "van"
+          ],
+          "guide": "rv-tank-sensors-reading-wrong",
+          "kw": [
+            "rv control panel not working",
+            "monitor panel blank",
+            "touch panel unresponsive"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "water-and-plumbing",
+      "label": "Water and plumbing",
+      "note": "The fresh side: getting clean water in, keeping it in, and getting it hot.",
+      "parts": [
+        {
+          "id": "fresh-water-tank",
+          "n": "Fresh water tank",
+          "aka": "potable tank|holding tank fresh",
+          "does": "stores drinking and washing water on board",
+          "fails": [
+            "cracked from freezing",
+            "algae and odour",
+            "sagging mounts",
+            "sensor wrong",
+            "drain valve leaking"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome",
+            "van"
+          ],
+          "guide": "winterize-plumbing",
+          "kw": [
+            "rv fresh water tank cleaning",
+            "fresh tank cracked",
+            "tank sag"
+          ]
+        },
+        {
+          "id": "gravity-fill-and-city-water-inlet",
+          "n": "Gravity fill and city water inlet",
+          "aka": "gravity fill|city water connection|fresh water inlet",
+          "does": "two ways to put water in the tank or run off park pressure",
+          "fails": [
+            "check valve leaking",
+            "cap lost",
+            "screen torn",
+            "backflow into the tank"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome",
+            "van"
+          ],
+          "guide": null,
+          "kw": [
+            "city water filling fresh tank",
+            "rv water inlet check valve",
+            "gravity fill cap"
+          ]
+        },
+        {
+          "id": "water-pressure-regulator",
+          "n": "Water pressure regulator",
+          "aka": "pressure regulator|inline regulator",
+          "does": "protects the plumbing from park pressure that is too high",
+          "fails": [
+            "stuck open and blows a fitting",
+            "stuck closed and no flow",
+            "cheap unit fails silently"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome"
+          ],
+          "guide": null,
+          "kw": [
+            "rv water pressure regulator",
+            "what psi for rv water",
+            "regulator failed"
+          ]
+        },
+        {
+          "id": "inline-water-filter",
+          "n": "Inline water filter",
+          "aka": "water filter|sediment filter|carbon filter",
+          "does": "takes sediment and taste out of park water",
+          "fails": [
+            "clogged and drops pressure",
+            "cartridge overdue",
+            "housing cracked in a freeze"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome"
+          ],
+          "guide": null,
+          "kw": [
+            "rv water filter cartridge",
+            "filter housing leaking"
+          ]
+        },
+        {
+          "id": "water-pump",
+          "n": "Water pump",
+          "aka": "12 volt pump|demand pump|Shurflo|Remco",
+          "does": "pressurises the system from the fresh tank",
+          "fails": [
+            "runs without stopping",
+            "surges",
+            "will not prime",
+            "diaphragm torn",
+            "pressure switch stuck",
+            "noisy"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome",
+            "van"
+          ],
+          "guide": "rv-water-pump-wont-prime",
+          "kw": [
+            "rv water pump won't prime",
+            "water pump runs constantly",
+            "rv pump surging"
+          ]
+        },
+        {
+          "id": "pump-strainer-and-check-valve",
+          "n": "Pump strainer and check valve",
+          "aka": "strainer|inlet filter|check valve",
+          "does": "keeps debris out of the pump and stops backflow",
+          "fails": [
+            "clogged",
+            "cracked bowl",
+            "valve stuck open and the tank fills itself"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome",
+            "van"
+          ],
+          "guide": "rv-water-pump-wont-prime",
+          "kw": [
+            "water pump strainer clogged",
+            "pump check valve stuck"
+          ]
+        },
+        {
+          "id": "accumulator-tank",
+          "n": "Accumulator tank",
+          "aka": "pressure tank|accumulator",
+          "does": "smooths the pump's cycling",
+          "fails": [
+            "waterlogged",
+            "bladder burst",
+            "fitted on the wrong side"
+          ],
+          "types": [
+            "trailer",
+            "motorhome"
+          ],
+          "guide": null,
+          "kw": [
+            "rv accumulator tank",
+            "water pump cycling fix"
+          ]
+        },
+        {
+          "id": "pex-lines-and-fittings",
+          "n": "PEX lines and fittings",
+          "aka": "pex|sharkbite|crimp rings|water lines",
+          "does": "carry water through the coach",
+          "fails": [
+            "freeze split",
+            "crimp ring failure",
+            "vibration chafe",
+            "rodent chew"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome",
+            "van"
+          ],
+          "guide": "freeze-damage-triage",
+          "kw": [
+            "rv pex leak",
+            "water line froze and split",
+            "crimp ring replacement"
+          ]
+        },
+        {
+          "id": "low-point-drains",
+          "n": "Low point drains",
+          "aka": "drain valves|low point drain",
+          "does": "empty the lines for winter",
+          "fails": [
+            "left open and flooding",
+            "seized",
+            "broken handle",
+            "hidden behind a panel"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome"
+          ],
+          "guide": "winterize-plumbing",
+          "kw": [
+            "rv low point drains location",
+            "low point drain leaking"
+          ]
+        },
+        {
+          "id": "water-heater-tank",
+          "n": "Water heater (tank)",
+          "aka": "Atwood|Suburban|6 gallon|10 gallon",
+          "does": "heats water for taps and shower",
+          "fails": [
+            "no hot water",
+            "pilot or igniter failure",
+            "rotten egg smell",
+            "leaking tank",
+            "element burned on 120 volt"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome",
+            "van"
+          ],
+          "guide": "rv-water-heater-not-heating",
+          "kw": [
+            "rv water heater not heating",
+            "water heater smells like rotten eggs",
+            "rv water heater leaking"
+          ]
+        },
+        {
+          "id": "water-heater-tankless",
+          "n": "Water heater (tankless)",
+          "aka": "on demand|Truma AquaGo|Girard|Fogatti",
+          "does": "heats water as it flows",
+          "fails": [
+            "cold then hot cycling",
+            "error codes",
+            "scale in the heat exchanger",
+            "freeze damage",
+            "low flow lockout"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome"
+          ],
+          "guide": "rv-water-heater-not-heating",
+          "kw": [
+            "tankless rv water heater cold",
+            "aquago error code",
+            "tankless water heater freeze"
+          ]
+        },
+        {
+          "id": "water-heater-anode-rod",
+          "n": "Water heater anode rod",
+          "aka": "anode|sacrificial anode",
+          "does": "sacrifices itself to protect the tank",
+          "fails": [
+            "consumed and the tank corrodes",
+            "wrong material",
+            "stripped drain plug"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome"
+          ],
+          "guide": "rv-water-heater-not-heating",
+          "kw": [
+            "rv water heater anode replacement",
+            "anode rod ate away"
+          ]
+        },
+        {
+          "id": "water-heater-bypass",
+          "n": "Water heater bypass",
+          "aka": "bypass kit|winterizing bypass|three way valve",
+          "does": "lets you winterise without filling the heater",
+          "fails": [
+            "valve left in bypass and no hot water",
+            "leaking",
+            "wrong plumbing"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome"
+          ],
+          "guide": "winterize-plumbing",
+          "kw": [
+            "water heater bypass valve position",
+            "rv bypass kit install"
+          ]
+        },
+        {
+          "id": "faucets-and-shower-mixer",
+          "n": "Faucets and shower mixer",
+          "aka": "kitchen faucet|bath faucet|shower valve",
+          "does": "deliver hot and cold water",
+          "fails": [
+            "drip",
+            "low flow from a clogged aerator",
+            "cartridge failure",
+            "freeze crack",
+            "vacuum breaker"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome",
+            "van"
+          ],
+          "guide": null,
+          "kw": [
+            "rv faucet dripping",
+            "rv shower valve replacement",
+            "low water pressure rv"
+          ]
+        },
+        {
+          "id": "shower-pan-and-drain",
+          "n": "Shower pan and drain",
+          "aka": "shower drain|shower pan|grey tank drain",
+          "does": "drains the shower to the grey tank",
+          "fails": [
+            "clogged with hair",
+            "P-trap leak",
+            "pan flex cracking",
+            "no air admittance"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome"
+          ],
+          "guide": null,
+          "kw": [
+            "rv shower drain clogged",
+            "shower pan crack repair"
+          ]
+        },
+        {
+          "id": "outside-shower",
+          "n": "Outside shower",
+          "aka": "exterior shower|utility shower",
+          "does": "rinse gear and pets outside",
+          "fails": [
+            "leaking quick connect",
+            "freeze damage",
+            "valve left open"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome"
+          ],
+          "guide": "winterize-plumbing",
+          "kw": [
+            "rv outside shower leaking",
+            "outside shower winterize"
+          ]
+        },
+        {
+          "id": "water-system-winterising",
+          "n": "Water system winterising",
+          "aka": "antifreeze|blow out|winterize",
+          "does": "protects the plumbing from freezing",
+          "fails": [
+            "antifreeze left in the fresh tank",
+            "air blow-out missed a line",
+            "bypass wrong",
+            "drains forgotten"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome",
+            "van"
+          ],
+          "guide": "winterize-plumbing",
+          "kw": [
+            "how to winterize an rv",
+            "rv antifreeze amount",
+            "blow out water lines"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "sanitation-and-tanks",
+      "label": "Sanitation and tanks",
+      "note": "The waste side: toilet, holding tanks, valves, and the sewer connection.",
+      "parts": [
+        {
+          "id": "toilet-gravity",
+          "n": "Toilet (gravity)",
+          "aka": "rv toilet|foot flush toilet|Aqua-Magic|SeaLand",
+          "does": "flushes into the black tank",
+          "fails": [
+            "will not hold water",
+            "leaking seal",
+            "ball valve stiff",
+            "sprayer leaks",
+            "floor seal leaking"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome"
+          ],
+          "guide": "rv-toilet-not-flushing",
+          "kw": [
+            "rv toilet won't flush",
+            "toilet not holding water",
+            "rv toilet seal replacement"
+          ]
+        },
+        {
+          "id": "toilet-vacuum-or-macerator",
+          "n": "Toilet (vacuum or macerator)",
+          "aka": "vacuum toilet|macerating toilet|VacuFlush",
+          "does": "flushes with a vacuum or grinds waste to a tank remote from the toilet",
+          "fails": [
+            "loses vacuum",
+            "pump runs constantly",
+            "seal leak",
+            "control board",
+            "clogged macerator"
+          ],
+          "types": [
+            "motorhome"
+          ],
+          "guide": null,
+          "kw": [
+            "vacuflush losing vacuum",
+            "macerator toilet clogged"
+          ]
+        },
+        {
+          "id": "toilet-composting",
+          "n": "Toilet (composting)",
+          "aka": "composting toilet|Nature's Head|Air Head",
+          "does": "separates solids from liquid and composts, no black tank",
+          "fails": [
+            "fan failed and smell",
+            "media too wet",
+            "urine diverter leaking"
+          ],
+          "types": [
+            "van",
+            "motorhome"
+          ],
+          "guide": null,
+          "kw": [
+            "composting toilet rv smell",
+            "composting toilet fan replacement"
+          ]
+        },
+        {
+          "id": "cassette-toilet",
+          "n": "Cassette toilet",
+          "aka": "cassette|porta potti",
+          "does": "a removable tank you carry to a dump point",
+          "fails": [
+            "seal leak",
+            "cassette cracked",
+            "vent blocked"
+          ],
+          "types": [
+            "van",
+            "pop-up"
+          ],
+          "guide": null,
+          "kw": [
+            "cassette toilet leaking",
+            "cassette toilet seal"
+          ]
+        },
+        {
+          "id": "black-tank",
+          "n": "Black tank",
+          "aka": "holding tank|waste tank",
+          "does": "holds toilet waste",
+          "fails": [
+            "sensor coated and reads wrong",
+            "pyramid build-up",
+            "crack",
+            "valve leaking",
+            "vent blocked"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome",
+            "van"
+          ],
+          "guide": "rv-tank-sensors-reading-wrong",
+          "kw": [
+            "black tank sensor wrong",
+            "black tank pyramid",
+            "holding tank crack"
+          ]
+        },
+        {
+          "id": "grey-tank",
+          "n": "Grey tank",
+          "aka": "grey water tank|galley tank",
+          "does": "holds sink and shower water",
+          "fails": [
+            "odor",
+            "grease build-up",
+            "sensor wrong",
+            "valve leaking"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome",
+            "van"
+          ],
+          "guide": "rv-sewer-smell",
+          "kw": [
+            "grey tank smell",
+            "grey tank sensor",
+            "galley tank"
+          ]
+        },
+        {
+          "id": "gate-valves",
+          "n": "Gate valves",
+          "aka": "dump valves|black valve|grey valve|T handle",
+          "does": "let the tanks empty into the sewer hose",
+          "fails": [
+            "hard to pull",
+            "leaking when closed",
+            "cable stretch",
+            "handle pulled out",
+            "seal torn"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome",
+            "van"
+          ],
+          "guide": null,
+          "kw": [
+            "rv dump valve leaking",
+            "black tank valve stuck",
+            "dump valve replacement"
+          ]
+        },
+        {
+          "id": "cable-operated-valves",
+          "n": "Cable-operated valves",
+          "aka": "cable valve|remote dump valve",
+          "does": "lets a valve be operated from a compartment away from the tank",
+          "fails": [
+            "cable stretching",
+            "kinked",
+            "handle pulled free",
+            "will not close fully"
+          ],
+          "types": [
+            "motorhome",
+            "fifth-wheel"
+          ],
+          "guide": null,
+          "kw": [
+            "rv cable dump valve adjustment",
+            "cable valve replacement"
+          ]
+        },
+        {
+          "id": "electric-dump-valves",
+          "n": "Electric dump valves",
+          "aka": "E-Valve|electric valve|auto dump",
+          "does": "dumps at the push of a switch",
+          "fails": [
+            "motor failure",
+            "switch dead",
+            "wiring corrosion",
+            "will not close and drips"
+          ],
+          "types": [
+            "motorhome"
+          ],
+          "guide": null,
+          "kw": [
+            "electric dump valve failure",
+            "e-valve replacement"
+          ]
+        },
+        {
+          "id": "sewer-hose-and-fittings",
+          "n": "Sewer hose and fittings",
+          "aka": "stinky slinky|sewer hose|bayonet fitting",
+          "does": "carries waste from the valve to the dump point",
+          "fails": [
+            "pinhole leaks",
+            "torn bellows",
+            "missing gasket",
+            "wrong bayonet lugs"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome",
+            "van"
+          ],
+          "guide": null,
+          "kw": [
+            "rv sewer hose leak",
+            "bayonet gasket",
+            "best sewer hose"
+          ]
+        },
+        {
+          "id": "macerator-pump",
+          "n": "Macerator pump",
+          "aka": "macerator|sewage pump",
+          "does": "grinds and pumps waste through a small hose",
+          "fails": [
+            "jammed impeller",
+            "worn blades",
+            "motor burned",
+            "clogged from wipes"
+          ],
+          "types": [
+            "motorhome",
+            "trailer"
+          ],
+          "guide": null,
+          "kw": [
+            "rv macerator clogged",
+            "macerator pump not working"
+          ]
+        },
+        {
+          "id": "tank-flush-and-rinsing",
+          "n": "Tank flush and rinsing",
+          "aka": "black tank flush|tank rinser|San-T-Flush",
+          "does": "rinses the black tank after dumping",
+          "fails": [
+            "check valve failed and water backs into the coach",
+            "sprayer clogged",
+            "vacuum breaker"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome"
+          ],
+          "guide": null,
+          "kw": [
+            "black tank flush not working",
+            "tank flush vacuum breaker"
+          ]
+        },
+        {
+          "id": "tank-level-sensors",
+          "n": "Tank level sensors",
+          "aka": "tank sensors|level gauges|probes",
+          "does": "tell you how full the tanks are",
+          "fails": [
+            "coated and read 1/3 or full when empty",
+            "external sensors peeling",
+            "wiring fault"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome",
+            "van"
+          ],
+          "guide": "rv-tank-sensors-reading-wrong",
+          "kw": [
+            "rv tank sensors wrong",
+            "black tank sensor fix",
+            "seelevel sensors"
+          ]
+        },
+        {
+          "id": "holding-tank-treatment",
+          "n": "Holding tank treatment",
+          "aka": "tank chemicals|digester|enzyme treatment",
+          "does": "breaks down waste and controls odour",
+          "fails": [
+            "over-treatment",
+            "wrong product killing the good bacteria",
+            "no treatment at all"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome",
+            "van"
+          ],
+          "guide": "rv-sewer-smell",
+          "kw": [
+            "best rv tank treatment",
+            "black tank smell",
+            "tank digester"
+          ]
+        },
+        {
+          "id": "vent-stack-and-air-admittance-valve",
+          "n": "Vent stack and air admittance valve",
+          "aka": "tank vent|AAV|Studor vent|cheater valve",
+          "does": "lets air in so tanks drain and smells go out the roof",
+          "fails": [
+            "blocked vent",
+            "AAV stuck and lets sewer gas in",
+            "vent pipe cracked",
+            "nest in the stack"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome"
+          ],
+          "guide": "rv-sewer-smell",
+          "kw": [
+            "rv sewer smell inside",
+            "air admittance valve rv",
+            "tank vent blocked"
+          ]
+        },
+        {
+          "id": "p-traps-and-drains",
+          "n": "P-traps and drains",
+          "aka": "p trap|sink drain|shower trap",
+          "does": "keeps sewer gas out of the living space",
+          "fails": [
+            "dried out while stored",
+            "frozen and cracked",
+            "siphoned empty by a fan"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome",
+            "van"
+          ],
+          "guide": "rv-sewer-smell",
+          "kw": [
+            "rv sink smells",
+            "p trap drained rv",
+            "shower drain smell"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "heating-and-cooling",
+      "label": "Heating and cooling",
+      "note": "Furnace, air conditioning, heat pumps, and the ducts that carry what they make.",
+      "parts": [
+        {
+          "id": "furnace",
+          "n": "Furnace",
+          "aka": "rv furnace|Suburban NT|Atwood|Hydro Flame",
+          "does": "burns propane to heat the coach through ducts",
+          "fails": [
+            "will not light",
+            "lights then shuts off",
+            "sail switch dirty",
+            "igniter failure",
+            "limit switch tripping",
+            "squealing blower"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome",
+            "van"
+          ],
+          "guide": "rv-furnace-not-working",
+          "kw": [
+            "rv furnace not working",
+            "furnace lights then shuts off",
+            "sail switch rv furnace"
+          ]
+        },
+        {
+          "id": "furnace-sail-switch",
+          "n": "Furnace sail switch",
+          "aka": "sail switch|air proving switch",
+          "does": "proves the blower is moving air before the burner lights",
+          "fails": [
+            "dust and lint stop it closing",
+            "bent arm",
+            "intermittent no-heat"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome"
+          ],
+          "guide": "rv-furnace-not-working",
+          "kw": [
+            "sail switch rv",
+            "furnace clicks but no heat",
+            "sail switch cleaning"
+          ]
+        },
+        {
+          "id": "furnace-control-board-and-igniter",
+          "n": "Furnace control board and igniter",
+          "aka": "control board|Dinosaur board|igniter",
+          "does": "runs the ignition sequence and flame sensing",
+          "fails": [
+            "no spark",
+            "repeated lockout",
+            "board corrosion",
+            "flame sensor failure"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome"
+          ],
+          "guide": "rv-furnace-not-working",
+          "kw": [
+            "rv furnace control board",
+            "furnace igniter replacement",
+            "furnace lockout reset"
+          ]
+        },
+        {
+          "id": "furnace-ducting-and-floor-registers",
+          "n": "Furnace ducting and floor registers",
+          "aka": "floor vents|registers|heat ducts|duct hose",
+          "does": "carries heated air from the furnace to the rooms",
+          "fails": [
+            "crushed duct",
+            "disconnected run",
+            "register closed",
+            "debris",
+            "no air at the far vents"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome"
+          ],
+          "guide": null,
+          "kw": [
+            "rv furnace not blowing air",
+            "floor vent no heat",
+            "rv duct disconnected"
+          ]
+        },
+        {
+          "id": "rooftop-air-conditioner",
+          "n": "Rooftop air conditioner",
+          "aka": "rv ac|air conditioner|Coleman Mach|Dometic Brisk|Penguin",
+          "does": "cools the coach from the roof",
+          "fails": [
+            "freezes up",
+            "runs but no cold",
+            "short cycles",
+            "leaks water inside",
+            "compressor hum then trip"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome",
+            "van"
+          ],
+          "guide": "rv-air-conditioner-not-cooling",
+          "kw": [
+            "rv air conditioner not cooling",
+            "rv ac freezing up",
+            "ac runs but not cold"
+          ]
+        },
+        {
+          "id": "air-conditioner-capacitor",
+          "n": "Air conditioner capacitor",
+          "aka": "start capacitor|run capacitor|hard start",
+          "does": "gives the compressor the jolt it needs to start",
+          "fails": [
+            "bulged and dead",
+            "compressor hums and trips",
+            "hard start kit needed"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome"
+          ],
+          "guide": "rv-air-conditioner-not-cooling",
+          "kw": [
+            "rv ac capacitor replacement",
+            "compressor hums won't start",
+            "hard start capacitor rv"
+          ]
+        },
+        {
+          "id": "air-conditioner-gasket-and-shroud",
+          "n": "Air conditioner gasket and shroud",
+          "aka": "ac gasket|roof gasket|ac cover|shroud",
+          "does": "seals the roof opening and protects the unit",
+          "fails": [
+            "leaking into the ceiling",
+            "gasket crushed",
+            "shroud cracked and UV rotted"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome"
+          ],
+          "guide": "rv-roof-leak-repair",
+          "kw": [
+            "rv ac gasket replacement",
+            "ac leaking inside rv",
+            "ac shroud cracked"
+          ]
+        },
+        {
+          "id": "air-conditioner-condensate-drain",
+          "n": "Air conditioner condensate drain",
+          "aka": "ac drain|condensate|drip pan",
+          "does": "carries condensation off the roof",
+          "fails": [
+            "blocked pan",
+            "overflowing into the coach",
+            "drain tube missing",
+            "roof staining"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome"
+          ],
+          "guide": "rv-air-conditioner-not-cooling",
+          "kw": [
+            "rv ac dripping inside",
+            "ac condensate drain"
+          ]
+        },
+        {
+          "id": "heat-pump-and-heat-strip",
+          "n": "Heat pump and heat strip",
+          "aka": "heat pump|heat strip|reverse cycle",
+          "does": "heats as well as cools, down to a temperature limit",
+          "fails": [
+            "no heat below about 40F",
+            "reversing valve",
+            "heat strip burned",
+            "thermostat set wrong"
+          ],
+          "types": [
+            "motorhome",
+            "trailer"
+          ],
+          "guide": null,
+          "kw": [
+            "rv heat pump not heating",
+            "heat strip not working"
+          ]
+        },
+        {
+          "id": "thermostat",
+          "n": "Thermostat",
+          "aka": "rv thermostat|wall thermostat|Coleman thermostat|digital thermostat",
+          "does": "tells the furnace and AC when to run",
+          "fails": [
+            "zone missing",
+            "blank display",
+            "wrong mode",
+            "thermostat wire chewed",
+            "battery in remote"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome",
+            "van"
+          ],
+          "guide": null,
+          "kw": [
+            "rv thermostat not working",
+            "thermostat blank display",
+            "upgrade rv thermostat"
+          ]
+        },
+        {
+          "id": "roof-vent-fan",
+          "n": "Roof vent fan",
+          "aka": "Fantastic Fan|Maxxair|ceiling fan|power vent",
+          "does": "pulls hot air out of the coach",
+          "fails": [
+            "will not turn",
+            "lid stuck",
+            "rain sensor failed",
+            "motor squeal",
+            "remote lost"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome",
+            "van"
+          ],
+          "guide": null,
+          "kw": [
+            "rv roof vent fan not working",
+            "fantastic fan lid stuck",
+            "maxxair fan repair"
+          ]
+        },
+        {
+          "id": "ceiling-vents-and-hatch",
+          "n": "Ceiling vents and hatch",
+          "aka": "roof vent|vent lid|escape hatch",
+          "does": "ventilation and an emergency exit",
+          "fails": [
+            "lid cracked by UV",
+            "hinge broken",
+            "seal leaking",
+            "crank stripped"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome",
+            "van"
+          ],
+          "guide": "rv-roof-leak-repair",
+          "kw": [
+            "rv roof vent leaking",
+            "vent lid replacement",
+            "rv vent crank"
+          ]
+        },
+        {
+          "id": "portable-and-auxiliary-heat",
+          "n": "Portable and auxiliary heat",
+          "aka": "space heater|electric heater|fireplace heater|buddy heater",
+          "does": "adds heat where the furnace cannot reach",
+          "fails": [
+            "overloads the circuit",
+            "tip-over switch",
+            "carbon monoxide risk with unvented propane"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome",
+            "van"
+          ],
+          "guide": null,
+          "kw": [
+            "rv electric heater best",
+            "safe heater rv",
+            "carbon monoxide heater rv"
+          ]
+        },
+        {
+          "id": "dehumidifier-and-ventilation",
+          "n": "Dehumidifier and ventilation",
+          "aka": "dehumidifier|moisture control|damp rid",
+          "does": "keeps condensation and mould down",
+          "fails": [
+            "undersized",
+            "runs off the inverter and flattens the battery",
+            "drain forgotten"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome",
+            "van"
+          ],
+          "guide": "rv-condensation-inside",
+          "kw": [
+            "rv condensation fix",
+            "best dehumidifier rv",
+            "stop condensation rv"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "exterior-and-body",
+      "label": "Exterior and body",
+      "note": "The shell: roof, walls, windows, doors, awnings, slides and the gear that hangs off them.",
+      "parts": [
+        {
+          "id": "roof-membrane",
+          "n": "Roof membrane",
+          "aka": "EPDM|TPO|rubber roof|filon",
+          "does": "the waterproof skin over everything",
+          "fails": [
+            "chalking and pinholing",
+            "seams lifting",
+            "tree damage",
+            "screw back-out",
+            "ponding at low spots"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome",
+            "van"
+          ],
+          "guide": "rv-roof-leak-repair",
+          "kw": [
+            "rv roof leak repair",
+            "epdm vs tpo",
+            "rv roof reseal cost"
+          ]
+        },
+        {
+          "id": "roof-sealant-and-lap-sealant",
+          "n": "Roof sealant and lap sealant",
+          "aka": "Dicor|self leveling sealant|lap sealant|alpha systems",
+          "does": "seals every penetration on the roof",
+          "fails": [
+            "cracked by UV",
+            "wrong product on the wrong membrane",
+            "silicone used where it should not be",
+            "missed fasteners"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome",
+            "van"
+          ],
+          "guide": "rv-roof-leak-repair",
+          "kw": [
+            "rv roof sealant type",
+            "lap sealant redo",
+            "silicone on rv roof"
+          ]
+        },
+        {
+          "id": "roof-coating",
+          "n": "Roof coating",
+          "aka": "rv roof coating|roof paint|henry's tropi-cool",
+          "does": "renews an aged roof",
+          "fails": [
+            "applied over a wet or dirty roof and blistered",
+            "incompatible product",
+            "trapped moisture"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome"
+          ],
+          "guide": "rv-roof-leak-repair",
+          "kw": [
+            "rv roof coating best",
+            "coating over epdm",
+            "roof recoat bubbles"
+          ]
+        },
+        {
+          "id": "skylight",
+          "n": "Skylight",
+          "aka": "roof skylight|shower skylight|dome",
+          "does": "lets light into the shower or ceiling",
+          "fails": [
+            "cracked and leaking",
+            "yellowed",
+            "wrong sealant",
+            "screws stripped"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome"
+          ],
+          "guide": "rv-roof-leak-repair",
+          "kw": [
+            "rv skylight leaking",
+            "skylight replacement"
+          ]
+        },
+        {
+          "id": "slide-out-and-mechanism",
+          "n": "Slide-out and mechanism",
+          "aka": "slide room|slide out|Lippert slide",
+          "does": "extends the living space",
+          "fails": [
+            "will not move",
+            "grinds",
+            "one side lags",
+            "controller error",
+            "rack and pinion stripped",
+            "Schwintek motor failure"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome"
+          ],
+          "guide": "rv-slide-out-not-working",
+          "kw": [
+            "rv slide out not working",
+            "slide out grinding",
+            "schwintek motor replacement"
+          ]
+        },
+        {
+          "id": "slide-seals-and-wipers",
+          "n": "Slide seals and wipers",
+          "aka": "slide seal|wiper seal|bulb seal",
+          "does": "keep water and wind out of the slide opening",
+          "fails": [
+            "torn",
+            "compressed",
+            "squealing on the wall",
+            "debris trapped",
+            "no lubrication"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome"
+          ],
+          "guide": "rv-slide-out-leaking",
+          "kw": [
+            "rv slide seal replacement",
+            "slide out leaking water",
+            "slide seal lubricant"
+          ]
+        },
+        {
+          "id": "slide-topper-awning",
+          "n": "Slide topper awning",
+          "aka": "slide topper|slide awning|carefree topper",
+          "does": "keeps leaves and rain off the slide roof",
+          "fails": [
+            "flapping in wind",
+            "spring broken",
+            "fabric worn",
+            "roller not retracting"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome"
+          ],
+          "guide": null,
+          "kw": [
+            "slide topper flapping",
+            "topper replacement",
+            "slide topper not rolling up"
+          ]
+        },
+        {
+          "id": "windows",
+          "n": "Windows",
+          "aka": "framed window|frameless window|exit window|window seal",
+          "does": "light, view and ventilation",
+          "fails": [
+            "seal leaking",
+            "crank operator stripped",
+            "fogged double pane",
+            "frameless latch loose",
+            "glass cracked"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome",
+            "van"
+          ],
+          "guide": "rv-roof-leak-repair",
+          "kw": [
+            "rv window leaking",
+            "rv window crank replacement",
+            "fogged rv windows"
+          ]
+        },
+        {
+          "id": "window-shades-and-blinds",
+          "n": "Window shades and blinds",
+          "aka": "day night shades|roller shade|mini blinds",
+          "does": "privacy and light control",
+          "fails": [
+            "strings broken",
+            "spring lost",
+            "night shade failing",
+            "roller flying up"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome",
+            "van"
+          ],
+          "guide": null,
+          "kw": [
+            "rv day night shade string repair",
+            "shade replacement",
+            "blinds rv"
+          ]
+        },
+        {
+          "id": "entry-door-and-lock",
+          "n": "Entry door and lock",
+          "aka": "rv door|entry door|door latch|deadbolt",
+          "does": "the way in and out",
+          "fails": [
+            "out of square and sticking",
+            "latch misaligned",
+            "lock failure",
+            "hinge pulled",
+            "screen door catch"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome",
+            "van"
+          ],
+          "guide": null,
+          "kw": [
+            "rv door not closing",
+            "rv door lock replacement",
+            "door hinge sag"
+          ]
+        },
+        {
+          "id": "door-and-window-seals",
+          "n": "Door and window seals",
+          "aka": "weatherstrip|door gasket|foam seal",
+          "does": "keep water and drafts out",
+          "fails": [
+            "compressed",
+            "peeling",
+            "wrong thickness",
+            "leaking at the bottom corner"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome",
+            "van"
+          ],
+          "guide": "rv-roof-leak-repair",
+          "kw": [
+            "rv door seal leaking",
+            "weatherstrip replacement rv"
+          ]
+        },
+        {
+          "id": "baggage-and-bay-doors",
+          "n": "Baggage and bay doors",
+          "aka": "storage door|compartment door|latch",
+          "does": "access to the basement and storage",
+          "fails": [
+            "latch failure",
+            "gas strut dead",
+            "seal leaking",
+            "hinge pulled from the frame"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome"
+          ],
+          "guide": null,
+          "kw": [
+            "rv compartment latch replacement",
+            "bay door strut",
+            "storage door leaking"
+          ]
+        },
+        {
+          "id": "body-panels-and-siding",
+          "n": "Body panels and siding",
+          "aka": "filon|fiberglass siding|aluminum siding|sidewall",
+          "does": "the coach's skin",
+          "fails": [
+            "delamination bubbles",
+            "impact damage",
+            "screw rust bleed",
+            "decal peel",
+            "hail"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome"
+          ],
+          "guide": "rv-delamination",
+          "kw": [
+            "rv delamination repair",
+            "rv siding damage",
+            "sidewall bubble"
+          ]
+        },
+        {
+          "id": "decals-and-graphics",
+          "n": "Decals and graphics",
+          "aka": "rv decals|graphics|stripes",
+          "does": "the coach's look",
+          "fails": [
+            "cracking and fading",
+            "peeling edges",
+            "removal damaging gelcoat"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome",
+            "van"
+          ],
+          "guide": null,
+          "kw": [
+            "remove rv decals",
+            "rv graphics replacement",
+            "decal cracking"
+          ]
+        },
+        {
+          "id": "underbelly-and-coroplast",
+          "n": "Underbelly and coroplast",
+          "aka": "underbelly|coroplast|belly pan|insulation",
+          "does": "protects tanks and wiring from road debris",
+          "fails": [
+            "sagging",
+            "torn by road debris",
+            "rodent entry",
+            "water trapped inside"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel"
+          ],
+          "guide": null,
+          "kw": [
+            "rv underbelly sagging",
+            "coroplast repair",
+            "rodents in rv underbelly"
+          ]
+        },
+        {
+          "id": "fender-skirts-and-trim",
+          "n": "Fender skirts and trim",
+          "aka": "fender skirt|wheel trim|molding",
+          "does": "covers the wheel openings and edges",
+          "fails": [
+            "cracked",
+            "lost on the road",
+            "screw holes stripped",
+            "trim insert shrunk"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel"
+          ],
+          "guide": null,
+          "kw": [
+            "rv fender skirt replacement",
+            "trim insert rv"
+          ]
+        },
+        {
+          "id": "bumper-and-rear-rack",
+          "n": "Bumper and rear rack",
+          "aka": "rear bumper|bumper hitch|bike rack",
+          "does": "the back end, and often a second hitch",
+          "fails": [
+            "bumper pulled from the frame by a loaded rack",
+            "rust",
+            "end caps lost",
+            "sewer hose stored inside"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome"
+          ],
+          "guide": null,
+          "kw": [
+            "rv bumper bike rack",
+            "rear hitch rv",
+            "bumper rust"
+          ]
+        },
+        {
+          "id": "entry-steps",
+          "n": "Entry steps",
+          "aka": "rv steps|folding steps|electric steps|step above",
+          "does": "getting in and out safely",
+          "fails": [
+            "sagging",
+            "electric steps not retracting",
+            "motor failure",
+            "control module",
+            "steps hitting the ground"
+          ],
+          "types": [
+            "motorhome",
+            "trailer",
+            "fifth-wheel"
+          ],
+          "guide": null,
+          "kw": [
+            "rv electric steps not working",
+            "step motor replacement",
+            "steps sagging"
+          ]
+        },
+        {
+          "id": "awning",
+          "n": "Awning",
+          "aka": "patio awning|Dometic awning|Carefree|manual awning",
+          "does": "shade outside the door",
+          "fails": [
+            "will not extend",
+            "spring broken",
+            "fabric torn",
+            "arms bent by wind",
+            "motor failure",
+            "roller sag"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome"
+          ],
+          "guide": null,
+          "kw": [
+            "rv awning won't retract",
+            "awning fabric replacement",
+            "awning arm bent"
+          ]
+        },
+        {
+          "id": "awning-accessories",
+          "n": "Awning accessories",
+          "aka": "awning shade|sun blocker|awning tie down",
+          "does": "extend the awning's usefulness",
+          "fails": [
+            "shade panel flapping",
+            "tie-downs pulling stakes",
+            "lights left up in wind"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome"
+          ],
+          "guide": null,
+          "kw": [
+            "rv awning shade panel",
+            "awning tie down"
+          ]
+        },
+        {
+          "id": "ladder-and-roof-access",
+          "n": "Ladder and roof access",
+          "aka": "rv ladder|roof ladder",
+          "does": "gets you onto the roof",
+          "fails": [
+            "loose mounts",
+            "steps cracked",
+            "pulled from the body by a heavy climber"
+          ],
+          "types": [
+            "motorhome",
+            "trailer",
+            "fifth-wheel"
+          ],
+          "guide": null,
+          "kw": [
+            "rv ladder loose",
+            "roof ladder repair"
+          ]
+        },
+        {
+          "id": "exterior-lighting",
+          "n": "Exterior lighting",
+          "aka": "porch light|marker lights|tail lights|brake lights|clearance lights",
+          "does": "visibility and legal lighting",
+          "fails": [
+            "corroded sockets",
+            "water in the lens",
+            "burned bulbs",
+            "loose ground",
+            "LED failure"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome",
+            "van"
+          ],
+          "guide": "rv-lights-not-working",
+          "kw": [
+            "rv tail light not working",
+            "marker light repair",
+            "led clearance light"
+          ]
+        },
+        {
+          "id": "backup-and-side-cameras",
+          "n": "Backup and side cameras",
+          "aka": "backup camera|rear view camera|observation camera",
+          "does": "sees behind and beside a long vehicle",
+          "fails": [
+            "signal dropout",
+            "water in the housing",
+            "wiring chafe at the hitch",
+            "monitor dead"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome"
+          ],
+          "guide": null,
+          "kw": [
+            "rv backup camera not working",
+            "wireless camera dropout",
+            "rear camera install rv"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "kitchen-and-appliances",
+      "label": "Kitchen and appliances",
+      "note": "The things that make a coach liveable: cold food, hot food, and somewhere to sit.",
+      "parts": [
+        {
+          "id": "refrigerator-absorption",
+          "n": "Refrigerator (absorption)",
+          "aka": "rv fridge|Norcold|Dometic absorption|two way fridge",
+          "does": "cools with heat and ammonia, running on propane or 120 volts",
+          "fails": [
+            "not cooling",
+            "works on propane but not electric",
+            "ammonia smell and yellow residue",
+            "leveling",
+            "venting",
+            "thermistor"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome"
+          ],
+          "guide": "rv-refrigerator-not-cooling",
+          "kw": [
+            "rv fridge not cooling",
+            "ammonia smell fridge",
+            "rv fridge works on propane not electric"
+          ]
+        },
+        {
+          "id": "refrigerator-compressor-or-12v",
+          "n": "Refrigerator (compressor or 12V)",
+          "aka": "compressor fridge|12 volt fridge|Everchill|Unique",
+          "does": "cools with a compressor, no propane needed",
+          "fails": [
+            "will not start on low voltage",
+            "fan noisy",
+            "defrost drain blocked",
+            "door seal"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome",
+            "van"
+          ],
+          "guide": "rv-refrigerator-not-cooling",
+          "kw": [
+            "12v fridge not cooling",
+            "compressor fridge rv",
+            "rv fridge low voltage"
+          ]
+        },
+        {
+          "id": "refrigerator-venting-and-fans",
+          "n": "Refrigerator venting and fans",
+          "aka": "fridge vent|roof vent fridge|fridge fan",
+          "does": "moves heat away from the coil",
+          "fails": [
+            "blocked vent",
+            "failed fan",
+            "baffle missing",
+            "poor install causing poor cooling"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome"
+          ],
+          "guide": "rv-refrigerator-not-cooling",
+          "kw": [
+            "rv fridge vent fan",
+            "fridge not cooling in hot weather",
+            "baffle rv fridge"
+          ]
+        },
+        {
+          "id": "cooktop-and-oven",
+          "n": "Cooktop and oven",
+          "aka": "rv stove|range|Greystone|Atwood stove",
+          "does": "cooks with propane",
+          "fails": [
+            "burner will not light",
+            "low flame",
+            "igniter clicking",
+            "oven pilot",
+            "thermocouple",
+            "burner cap clogged"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome",
+            "van"
+          ],
+          "guide": null,
+          "kw": [
+            "rv stove burner won't light",
+            "rv oven pilot light",
+            "rv cooktop igniter"
+          ]
+        },
+        {
+          "id": "microwave-and-convection",
+          "n": "Microwave and convection",
+          "aka": "rv microwave|convection microwave|Greystone microwave",
+          "does": "heats and sometimes bakes",
+          "fails": [
+            "dead on inverter power",
+            "door interlock",
+            "turntable motor",
+            "convection element"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome"
+          ],
+          "guide": null,
+          "kw": [
+            "rv microwave not working",
+            "convection microwave rv"
+          ]
+        },
+        {
+          "id": "range-hood-and-vent",
+          "n": "Range hood and vent",
+          "aka": "range hood|stove vent|exhaust fan",
+          "does": "pulls cooking fumes out",
+          "fails": [
+            "fan noisy",
+            "filter clogged",
+            "light dead",
+            "flapper stuck open"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome"
+          ],
+          "guide": null,
+          "kw": [
+            "rv range hood fan",
+            "range hood filter"
+          ]
+        },
+        {
+          "id": "washer-and-dryer",
+          "n": "Washer and dryer",
+          "aka": "rv washer|washer dryer combo|Splendide",
+          "does": "laundry on board",
+          "fails": [
+            "will not drain",
+            "leaks",
+            "unbalanced load",
+            "ventless drying slow",
+            "water supply valve"
+          ],
+          "types": [
+            "motorhome",
+            "fifth-wheel"
+          ],
+          "guide": null,
+          "kw": [
+            "rv washer dryer not draining",
+            "splendide vented vs ventless"
+          ]
+        },
+        {
+          "id": "water-dispenser-and-ice-maker",
+          "n": "Water dispenser and ice maker",
+          "aka": "ice maker|water dispenser|fridge water line",
+          "does": "cold water and ice without opening the fridge",
+          "fails": [
+            "line frozen or kinked",
+            "valve failed",
+            "slow fill",
+            "leak behind the fridge"
+          ],
+          "types": [
+            "motorhome",
+            "fifth-wheel"
+          ],
+          "guide": "winterize-plumbing",
+          "kw": [
+            "rv ice maker leaking",
+            "fridge water line frozen"
+          ]
+        },
+        {
+          "id": "furniture-and-seating",
+          "n": "Furniture and seating",
+          "aka": "dinette|sofa|recliner|captain chairs",
+          "does": "somewhere to sit and sleep",
+          "fails": [
+            "frame failure",
+            "upholstery peeling",
+            "recliner mechanism",
+            "dinette bed conversion"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome",
+            "van"
+          ],
+          "guide": null,
+          "kw": [
+            "rv furniture peeling",
+            "rv recliner not working",
+            "dinette bed conversion"
+          ]
+        },
+        {
+          "id": "bed-and-mattress",
+          "n": "Bed and mattress",
+          "aka": "rv mattress|short queen|bunk|murphy bed",
+          "does": "sleeping",
+          "fails": [
+            "mattress worn",
+            "murphy bed mechanism",
+            "bunk ladder",
+            "underbed storage struts"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome",
+            "van"
+          ],
+          "guide": null,
+          "kw": [
+            "rv mattress replacement",
+            "murphy bed strut",
+            "rv bunk ladder"
+          ]
+        },
+        {
+          "id": "cabinets,-drawers-and-latches",
+          "n": "Cabinets, drawers and latches",
+          "aka": "cabinet latch|drawer slide|gas strut",
+          "does": "storage that stays shut while driving",
+          "fails": [
+            "latches pop open on the road",
+            "slides break",
+            "struts lose gas",
+            "hinges pull out"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome",
+            "van"
+          ],
+          "guide": null,
+          "kw": [
+            "rv cabinet latch replacement",
+            "drawer slide rv",
+            "cabinet doors opening while driving"
+          ]
+        },
+        {
+          "id": "flooring-and-subfloor",
+          "n": "Flooring and subfloor",
+          "aka": "vinyl flooring|carpet|soft floor|subfloor",
+          "does": "the floor you walk on",
+          "fails": [
+            "soft spots from a leak",
+            "vinyl peeling",
+            "carpet worn",
+            "delaminated subfloor from water"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome",
+            "van"
+          ],
+          "guide": "rv-delamination",
+          "kw": [
+            "soft floor rv",
+            "rv floor water damage",
+            "vinyl flooring replacement rv"
+          ]
+        },
+        {
+          "id": "tv-and-entertainment",
+          "n": "TV and entertainment",
+          "aka": "rv tv|sound system|antenna|satellite|wifi",
+          "does": "entertainment and connectivity",
+          "fails": [
+            "antenna will not raise",
+            "no signal after a move",
+            "speaker failure",
+            "wifi booster dropout"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "motorhome",
+            "van"
+          ],
+          "guide": null,
+          "kw": [
+            "rv tv antenna not working",
+            "rv wifi booster",
+            "rv satellite setup"
+          ]
+        },
+        {
+          "id": "central-vacuum-and-cleaning",
+          "n": "Central vacuum and cleaning",
+          "aka": "central vac|vacuum",
+          "does": "cleaning without hauling a vacuum",
+          "fails": [
+            "clogged hose",
+            "bag full",
+            "motor failure",
+            "hidden in a compartment"
+          ],
+          "types": [
+            "motorhome",
+            "fifth-wheel"
+          ],
+          "guide": null,
+          "kw": [
+            "rv central vacuum not working"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "chassis-and-drivetrain",
+      "label": "Chassis and drivetrain",
+      "note": "Motorhome-specific: the truck underneath the house, and the parts that strand you.",
+      "parts": [
+        {
+          "id": "engine-and-drivetrain",
+          "n": "Engine and drivetrain",
+          "aka": "gas engine|diesel pusher|cummins|v10|transmission",
+          "does": "moves the coach",
+          "fails": [
+            "overheating on grades",
+            "derate",
+            "transmission temperature",
+            "limp mode",
+            "check engine light"
+          ],
+          "types": [
+            "motorhome"
+          ],
+          "guide": null,
+          "kw": [
+            "rv overheating on grades",
+            "diesel pusher derate",
+            "motorhome limp mode"
+          ]
+        },
+        {
+          "id": "cooling-system",
+          "n": "Cooling system",
+          "aka": "radiator|coolant|fan clutch|charge air cooler",
+          "does": "keeps the engine at temperature",
+          "fails": [
+            "coolant loss",
+            "fan clutch failure",
+            "radiator plugged with bugs",
+            "side radiator vs rear",
+            "coolant type"
+          ],
+          "types": [
+            "motorhome"
+          ],
+          "guide": null,
+          "kw": [
+            "rv overheating coolant",
+            "diesel pusher radiator cleaning",
+            "fan clutch rv"
+          ]
+        },
+        {
+          "id": "belts,-hoses-and-filters",
+          "n": "Belts, hoses and filters",
+          "aka": "serpentine belt|air filter|fuel filter|oil filter",
+          "does": "routine parts that stop you if neglected",
+          "fails": [
+            "belt squeal or failure",
+            "hose burst",
+            "filter clogged and derate",
+            "DEF filter"
+          ],
+          "types": [
+            "motorhome"
+          ],
+          "guide": null,
+          "kw": [
+            "rv serpentine belt replacement",
+            "diesel fuel filter change rv",
+            "air filter motorhome"
+          ]
+        },
+        {
+          "id": "emissions-and-def",
+          "n": "Emissions and DEF",
+          "aka": "DEF|DPF|regen|EGR|check engine",
+          "does": "meets emissions rules on modern diesels",
+          "fails": [
+            "derate from bad DEF",
+            "DPF plugged from short trips",
+            "regen failures",
+            "sensor codes"
+          ],
+          "types": [
+            "motorhome"
+          ],
+          "guide": null,
+          "kw": [
+            "def system derate",
+            "dpf cleaning rv",
+            "regen problems motorhome"
+          ]
+        },
+        {
+          "id": "chassis-brakes",
+          "n": "Chassis brakes",
+          "aka": "air brakes|hydraulic brakes|brake chambers|slack adjusters",
+          "does": "stop a heavy vehicle",
+          "fails": [
+            "air pressure loss",
+            "chamber failure",
+            "slack adjuster out of adjustment",
+            "hydraulic fluid loss",
+            "ABS light"
+          ],
+          "types": [
+            "motorhome"
+          ],
+          "guide": "trailer-brakes-required",
+          "kw": [
+            "rv air brake adjustment",
+            "brake chamber replacement",
+            "abs light motorhome"
+          ]
+        },
+        {
+          "id": "air-system-compressor,-dryer,-governor",
+          "n": "Air system (compressor, dryer, governor)",
+          "aka": "air compressor|air dryer|governor|air tanks",
+          "does": "supplies air for brakes and suspension",
+          "fails": [
+            "air dryer saturated",
+            "governor failure",
+            "pressure loss overnight",
+            "water in the tanks"
+          ],
+          "types": [
+            "motorhome"
+          ],
+          "guide": null,
+          "kw": [
+            "rv air dryer replacement",
+            "air pressure loss overnight",
+            "compressor governor"
+          ]
+        },
+        {
+          "id": "steering-and-alignment",
+          "n": "Steering and alignment",
+          "aka": "alignment|kingpins|tie rod|steering stabiliser|wander",
+          "does": "keeps a heavy coach going straight",
+          "fails": [
+            "wander and push from trucks",
+            "uneven tyre wear",
+            "steering stabiliser worn",
+            "kingpin play"
+          ],
+          "types": [
+            "motorhome"
+          ],
+          "guide": null,
+          "kw": [
+            "rv wanders on highway",
+            "motorhome alignment",
+            "steering stabilizer rv"
+          ]
+        },
+        {
+          "id": "suspension-and-shocks",
+          "n": "Suspension and shocks",
+          "aka": "shocks|springs|air bags|sway bar|track bar",
+          "does": "carries the house without bouncing",
+          "fails": [
+            "worn shocks and porpoising",
+            "sway bar bushings",
+            "air bag leak",
+            "ride height valve"
+          ],
+          "types": [
+            "motorhome"
+          ],
+          "guide": null,
+          "kw": [
+            "motorhome porpoising",
+            "rv shocks replacement",
+            "ride height valve"
+          ]
+        },
+        {
+          "id": "alternator-and-starter",
+          "n": "Alternator and starter",
+          "aka": "alternator|starter|charging system",
+          "does": "starts the engine and charges the chassis battery",
+          "fails": [
+            "no crank",
+            "slow crank",
+            "alternator not charging",
+            "solenoid failure",
+            "chassis battery drain"
+          ],
+          "types": [
+            "motorhome"
+          ],
+          "guide": null,
+          "kw": [
+            "motorhome alternator not charging",
+            "rv starter solenoid",
+            "chassis battery drain"
+          ]
+        },
+        {
+          "id": "chassis-battery-and-isolator",
+          "n": "Chassis battery and isolator",
+          "aka": "starting battery|chassis battery|battery isolator|boost switch",
+          "does": "starts the engine and is meant to be kept separate from the house bank",
+          "fails": [
+            "drains the house",
+            "isolator failure",
+            "boost switch dead",
+            "parasitic draw"
+          ],
+          "types": [
+            "motorhome"
+          ],
+          "guide": "rv-battery-not-charging",
+          "kw": [
+            "rv chassis battery drains",
+            "battery isolator rv",
+            "boost switch not working"
+          ]
+        },
+        {
+          "id": "dash-air-conditioning",
+          "n": "Dash air conditioning",
+          "aka": "dash ac|engine ac|evaporator",
+          "does": "cools the cab while driving",
+          "fails": [
+            "no cold",
+            "refrigerant loss",
+            "compressor",
+            "blend door",
+            "condenser fan"
+          ],
+          "types": [
+            "motorhome",
+            "van"
+          ],
+          "guide": null,
+          "kw": [
+            "rv dash ac not cold",
+            "motorhome ac compressor"
+          ]
+        },
+        {
+          "id": "exhaust-and-turbo",
+          "n": "Exhaust and turbo",
+          "aka": "exhaust|turbo|wastegate|exhaust brake|jake brake",
+          "does": "gets the gases out and helps slow the coach",
+          "fails": [
+            "turbo actuator",
+            "exhaust leaks",
+            "exhaust brake inoperative",
+            "particulate filter"
+          ],
+          "types": [
+            "motorhome"
+          ],
+          "guide": null,
+          "kw": [
+            "exhaust brake not working",
+            "turbo actuator rv"
+          ]
+        },
+        {
+          "id": "fuel-system",
+          "n": "Fuel system",
+          "aka": "fuel pump|lift pump|fuel filter|fuel gauge",
+          "does": "delivers fuel",
+          "fails": [
+            "lift pump failure",
+            "fuel filter clogged",
+            "gauge wrong",
+            "fuel starvation on grades"
+          ],
+          "types": [
+            "motorhome"
+          ],
+          "guide": null,
+          "kw": [
+            "motorhome fuel starvation",
+            "lift pump failure rv",
+            "fuel gauge wrong"
+          ]
+        },
+        {
+          "id": "wheels,-tyres-and-tpms",
+          "n": "Wheels, tyres and TPMS",
+          "aka": "aluminium wheels|tyre pressure|load range|tpms",
+          "does": "carry the load at highway speed",
+          "fails": [
+            "age cracking",
+            "sidewall failure from underinflation",
+            "wheel cracks",
+            "sensor batteries"
+          ],
+          "types": [
+            "motorhome"
+          ],
+          "guide": "rv-tire-replacement",
+          "kw": [
+            "motorhome tire blowout",
+            "rv tyre age",
+            "aluminium wheel crack"
+          ]
+        }
+      ]
+    }
+  ]
+}
