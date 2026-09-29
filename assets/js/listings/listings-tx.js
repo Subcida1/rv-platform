@@ -326,7 +326,7 @@ window.RV_LISTINGS_TX = [
    "tyler"
   ],  "region": "Greater Tyler",  "spec": "We do not do Mobile Calls. We do not do state inspections.",  "reg": "east-tx"
  },
- {  "n": "Mike's Mobile RV and Trailer Repair",  "c": "Tyler",  "p": "903-619-3181",  "u": "https://mikesmobilervrepairtyler.com/services",  "t": "mobile",  "e": true,  "r": false,  "d": "Family owned mobile RV and trailer repair business based in Tyler. The company repairs electrical, plumbing, hydraulic, brake, leveling, slide-out and awning systems and also sells and services air conditioners, water heaters and furnaces. Twenty four hour and major holiday emergency service is offered.",  "g": [
+ {  "n": "Mike's Mobile RV and Trailer Repair",  "c": "Tyler",  "p": "903-619-3181",  "u": "https://mikesmobilervrepairtyler.com/services",  "t": "mobile",  "e": false,  "r": false,  "d": "Family owned mobile RV and trailer repair business based in Tyler. The company repairs electrical, plumbing, hydraulic, brake, leveling, slide-out and awning systems and also sells and services air conditioners, water heaters and furnaces. Twenty four hour and major holiday emergency service is offered.",  "g": [
    "t: mobile",
    "e: true"
   ],  "base": "tyler",  "areas": [

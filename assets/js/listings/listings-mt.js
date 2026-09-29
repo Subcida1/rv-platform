@@ -119,5 +119,37 @@ window.RV_LISTINGS_MT = [
   ],  "base": "sidney",  "areas": [
    "sidney"
   ],  "reg": "eastern-mt"
+ },
+ {  "n": "D&D RV Center, LLC",  "c": "Helena, MT",  "p": "406-442-8542",  "u": "https://www.ddrvcenter.com/",  "t": "center",  "e": false,  "r": false,  "d": "D&D RV Center is an RV sales and service center at 806 Stanley St in Helena. Its service department does everything from warranty work to large insurance and collision jobs, plus appliance repair, wheel bearing packing, and roof cleaning and treatment. Service department hours are Monday through Friday, 9 AM to 5:30 PM.",  "g": [
+   "RV sales",
+   "RV service",
+   "collision repair",
+   "appliance repair",
+   "roof treatment"
+  ],  "base": "helena",  "areas": [
+   "great falls",
+   "bozeman",
+   "butte"
+  ],  "reg": "north-central-mt"
+ },
+ {  "n": "Hamilton RV Center",  "c": "Hamilton, MT",  "p": "406.802.7055",  "u": "https://www.hamiltonrvsales.com/service",  "t": "center",  "e": false,  "r": false,  "d": "Hamilton RV Center runs an RV service department at 2000 N. 1st St in Hamilton. Its technicians work on travel trailers, fifth wheels, tent trailers and toy haulers with diagnostic and maintenance equipment and genuine parts. The service department serves Hamilton and its neighbors including Stevensville, Philipsburg, Missoula, Leesburg, Carmen and Cobalt.",  "g": [
+   "RV service",
+   "travel trailer repair",
+   "fifth wheel repair"
+  ],  "base": "hamilton",  "areas": [
+   "stevensville",
+   "philipsburg",
+   "missoula"
+  ],  "reg": "northwest-mt"
+ },
+ {  "n": "Highway 93 RV",  "c": "Victor, MT",  "p": "406-961-8688",  "u": "https://highway93rv.com/",  "t": "center",  "e": false,  "r": false,  "d": "Highway 93 RV is an RV parts and repair business in Victor serving the Bitterroot Valley. It carries RV parts for electrical, plumbing, propane, awning and towing systems, and it services and repairs electrical systems in most RVs including 15, 30 and 50 amp service. It serves Victor, Hamilton, Stevensville, Florence and Darby.",  "g": [
+   "RV parts",
+   "electrical repair"
+  ],  "base": "victor",  "areas": [
+   "hamilton",
+   "stevensville",
+   "florence",
+   "darby"
+  ],  "region": "Bitterroot Valley",  "spec": "Primarily a parts and do it yourself help center; in-shop repair is limited to electrical systems in most RVs.",  "reg": "northwest-mt"
  }
 ];

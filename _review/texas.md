@@ -188,7 +188,7 @@
     > ETX RV REPAIR is a full-service RV Repair Shop.
 - **GHH RV Services**  _Tyler_  (903) 780 1998  https://ghhrvservices.com/  `mobile, EMERGENCY`
     > We come to you for after hours and weekend appointments.
-- **Mike's Mobile RV and Trailer Repair**  _Tyler_  903-619-3181  https://mikesmobilervrepairtyler.com/services  `mobile, EMERGENCY`
+- **Mike's Mobile RV and Trailer Repair**  _Tyler_  903-619-3181  https://mikesmobilervrepairtyler.com/services  `mobile`
     > 24 hour and major holiday emergency service available
 
 ## Waco, Temple and Killeen (1)

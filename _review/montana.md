@@ -1,4 +1,4 @@
-# Montana — 16 listings
+# Montana — 19 listings
 
 ## Billings and the east (2)
 
@@ -20,12 +20,14 @@
 - **First Response Mobile RV Repair**  _West Yellowstone_  (214) 702-8191  https://frmobilerv.com/  `mobile`
     > We come to RV parks, campgrounds, private properties, and other accessible RV locations.
 
-## Great Falls and the Hi-Line (1)
+## Great Falls and the Hi-Line (2)
 
 - **Martin's RV Service Center**  _Great Falls_  406-453-0527  https://martinsrvservicecenter.com/  `shop, ROADSIDE`
     > including paint and decal repair, suspension repair, fiberglass repair and metalwork, RV roof repairs, part fabrication, window repair and more
+- **D&D RV Center, LLC**  _Helena_  406-442-8542  https://www.ddrvcenter.com/  `shop`
+    > In our Service Department, we do everything from warranty on the units we sell to large insurance and collision jobs.
 
-## Missoula and the Flathead (8)
+## Missoula and the Flathead (10)
 
 - **Done Rite RV Mobile Repair LLC**  _greater Mission Valley_  406-565-1084  https://www.doneritervmobilerepair.com/  `mobile`
     > Mobile - By appt only
@@ -37,9 +39,13 @@
     > Specializing In Mobile Repair
 - **Miller's Mobile RV Rescue**  _Coram_  406-407-5651  https://millersmobilervrescue.com/  `mobile, EMERGENCY`
     > 24/7 Availability for Emergency Calls
+- **Hamilton RV Center**  _Hamilton_  406.802.7055  https://www.hamiltonrvsales.com/service  `shop`
+    > Hamilton RV has Technicians who have the latest diagnostic and maintenance equipment! We are here to fix your RV quickly with genuine Parts.
 - **CampEasy Mobile RV Service & Repair LLC**  _Kalispell_  (951) 546-6838  https://www.campeasymobilervrepair.com/  `mobile, EMERGENCY`
     > Emergency Calls Available, including weekends and holidays. Stuck trying to get home or to your next stop? We've got you covered. Slide stuck or leveling system not operational, give us a ca
 - **Star 5 Service**  _Kalispell_  (406) 607-2185  https://star5service.com/  `mobile, ROADSIDE`
     > Providing roadside assistance for light mechanical in the heavy-duty space.
 - **Anderson Mobile RV Service & Repair**  _Missoula_  406-493-4153  https://www.andersonmobilerv.com/  `mobile`
     > Mobile service that comes to your location to fix problems on the house side of your RV.
+- **Highway 93 RV**  _Victor_  406-961-8688  https://highway93rv.com/  `shop`  **Primarily a parts and do it yourself help center; in-shop repair is limited to electrical systems in most RVs.**
+    > We also service and repair electrical systems in most RVs.

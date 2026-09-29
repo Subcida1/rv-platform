@@ -7,7 +7,7 @@ Nothing here is a decision; it is what to read.
 - [California](california.md) — 91 listings
 - [Colorado](colorado.md) — 27 listings
 - [Idaho](idaho.md) — 18 listings
-- [Montana](montana.md) — 16 listings
+- [Montana](montana.md) — 19 listings
 - [Nevada](nevada.md) — 15 listings
 - [New Mexico](newmexico.md) — 17 listings
 - [Oregon](oregon.md) — 46 listings

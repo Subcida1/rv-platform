@@ -93,17 +93,43 @@ def resolves(host):
 
 
 def fetch_site(url):
+    """The page, read properly, or an honest failure.
+
+    THE DEFECT THIS FIXES, 2026-09-29. A single attempt was enough until it silently returned a
+    FRAGMENT: Prime Mobile RV Repair's home page came back at 4,936 characters when the same URL
+    returns 203,980, so the audit found no links, fetched no city pages, and reported that a
+    business advertising "EMERGENCY <CITY> RV REPAIR" on thirty pages had no emergency language.
+    A short read is not an empty page, and a checker that cannot tell the difference reports its
+    own failures as the site's.
+
+    So: every URL is tried up to three times, a body that disagrees with the Content-Length the
+    server declared is retried rather than trusted, and the longest successful read wins.
+    """
     host = re.sub(r"^https?://", "", url or "").split("/")[0]
     if not host or not resolves(host):
         return None, "domain does not resolve: %s" % host
-    last = None
-    for attempt in (url, url.replace("https://", "http://"), "https://www." + host + "/"):
-        try:
-            req = urllib.request.Request(attempt, headers={"User-Agent": UA})
-            with urllib.request.urlopen(req, timeout=25) as r:
-                return text_of(r.read().decode("utf-8", "replace")), None
-        except (urllib.error.URLError, urllib.error.HTTPError, OSError) as e:
-            last = e
+    best, last = None, None
+    attempts = (url, url.replace("https://", "http://"), "https://www." + host + "/", url)
+    for attempt in attempts:
+        for _ in range(2):
+            try:
+                req = urllib.request.Request(attempt, headers={"User-Agent": UA})
+                with urllib.request.urlopen(req, timeout=25) as r:
+                    body = r.read()
+                    declared = r.headers.get("Content-Length")
+                    if declared and declared.isdigit() and abs(int(declared) - len(body)) > 512:
+                        last = "short read: %d of %s bytes" % (len(body), declared)
+                        continue
+                    text = text_of(body.decode("utf-8", "replace"))
+                    if best is None or len(text) > len(best):
+                        best = text
+                    if len(text) > 500:
+                        return text, None
+                    last = "page read as %d characters" % len(text)
+            except (urllib.error.URLError, urllib.error.HTTPError, OSError) as e:
+                last = e
+    if best:
+        return best, None
     return None, "could not fetch (bot wall or down): %s" % last
 
 
@@ -139,41 +165,65 @@ def sentences_around(text, pattern, limit=2, window=170):
 # on its services page and All Around's is "24hr Emergency Service" away from its home page, so
 # both were reported as missing the very words they carry. The same lesson this project has
 # recorded for coverage claims, applied to tags.
-SUBPAGE = re.compile(r"href=[\"']([^\"']*)[\"'][^>]*>([^<]{0,60})", re.I)
+# Anchors, properly: an href that comes AFTER a class attribute is still an href, and the first
+# version of this only matched href-first, so what it mostly collected was favicons and images
+# and the real navigation never got fetched. Measured on Prime Mobile RV Repair, whose emergency
+# claim is on thirty per-city pages the audit never reached.
+ANCHOR = re.compile(r'<a\b[^>]*href="([^"]+)"[^>]*>(.*?)</a>', re.S | re.I)
+TAGS = re.compile(r"<[^>]+>")
+ASSET = re.compile(r"\.(jpe?g|png|gif|webp|svg|ico|css|js|pdf|zip|mp4)(\?|$)", re.I)
 WANT = re.compile(r"service|about|contact|faq|question|repair|emergency|rate|hour", re.I)
 
 
 def site_text(url):
-    """The home page, plus up to three sub-pages whose link text or path suggests a claim."""
+    """The home page, plus up to three REAL sub-pages whose link text or path suggests a claim.
+
+    Two defects fixed here on 2026-09-29, both found by asking why a business advertising
+    "EMERGENCY <CITY> RV REPAIR" on thirty pages read as having no emergency language:
+      * the link pattern missed any anchor with an attribute before its href;
+      * the page's OWN url was re-fetched as a candidate, and on this site the no-trailing-slash
+        form returns a 4,936-character stub where the slashed form returns 203,980 - so the
+        audit read a stub, found no links in it, and stopped.
+    """
     text, err = fetch_site(url)
     if text is None:
-        return None, err
+        return None, err, 0
     host = re.sub(r"^https?://", "", url).split("/")[0]
     try:
         req = urllib.request.Request(url, headers={"User-Agent": UA})
         with urllib.request.urlopen(req, timeout=25) as r:
             html = r.read().decode("utf-8", "replace")
     except Exception:
-        return text, None
-    seen, pages = set(), []
-    for href, label in SUBPAGE.findall(html):
-        if href.startswith(("mailto:", "tel:", "#", "javascript:")):
+        return text, None, 0
+    self_key = url.rstrip("/")
+    seen, pages, candidates = set(), [], []
+    for href, inner in ANCHOR.findall(html):
+        if href.startswith(("mailto:", "tel:", "#", "javascript:", "data:")):
             continue
-        if host not in href and href.startswith("http"):
+        if ASSET.search(href):
             continue
+        if href.startswith("http") and host not in href:
+            continue
+        full = href if href.startswith("http") else url.rstrip("/") + "/" + href.lstrip("./")
+        if full.rstrip("/") == self_key or full.rstrip("/") in seen:
+            continue
+        label = TAGS.sub(" ", inner)
         if WANT.search(label) or WANT.search(href):
-            full = href if href.startswith("http") else url.rstrip("/") + "/" + href.lstrip("./")
-            if full in seen or full.rstrip("/") == url.rstrip("/"):
-                continue
-            seen.add(full)
-            pages.append(full)
-        if len(pages) >= 3:
+            seen.add(full.rstrip("/"))
+            candidates.append(full)
+            if len(pages) < 5:
+                pages.append(full)
+        if len(pages) >= 5:
             break
     for u in pages:
         more, _ = fetch_site(u)
         if more:
             text += " " + more
-    return text, None
+    # How many candidate pages were left unread. A site that runs one page per city has more
+    # than any checker will fetch, and the audit has to say so rather than report the site's
+    # silence: measured on Prime Mobile RV Repair, whose emergency claim sits on the city pages.
+    left = max(0, len(candidates) - len(pages))
+    return text, None, left
 
 
 def check(rec):
@@ -182,7 +232,7 @@ def check(rec):
         # verified by other means. That is a recorded decision, not a gap.
         return {"n": rec["n"], "err": None, "found": {}, "missing": [],
                 "unconfirmed": [], "parked": False, "nosite": True}
-    text, err = site_text(rec.get("u"))
+    text, err, unread = site_text(rec.get("u"))
     out = {"n": rec["n"], "err": err, "found": {}, "missing": [], "unconfirmed": [],
            "parked": False}
     if text is None:
@@ -203,10 +253,17 @@ def check(rec):
         hits = sentences_around(text, pat)
         if hits:
             out["found"][key] = hits
-        elif key in ("r", "e"):
-            # A missing roadside or emergency claim is a real question: those tags assert
-            # something specific and the site should be saying it.
+        elif key in ("r", "e") and unread == 0:
+            # A missing roadside or emergency claim is a real question when the audit read the
+            # whole site: those tags assert something specific and the site should be saying it.
             out["missing"].append("%s (%s)" % (key, label))
+        elif key in ("r", "e"):
+            # ...but not when it did not. A site with pages left unread may say it somewhere the
+            # audit never looked - Prime Mobile RV Repair says EMERGENCY on thirty city pages and
+            # none of the five the audit read. Reporting that as "no language found" states a
+            # fact about my checker, not about the business.
+            out["unconfirmed"].append("%s (%s), with %d candidate page(s) left unread"
+                                      % (key, label, unread))
         else:
             # A missing TYPE word is not evidence of a wrong type. Five records were
             # hand-checked on 2026-09-28 after this flagged them (Otto's, Pro RV, Jefferson's
