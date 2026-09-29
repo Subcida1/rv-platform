@@ -30,7 +30,7 @@ _Everything between the tow vehicle and the road, which is where a breakdown str
 - **What it does.** applies the trailer brakes if it separates from the tow vehicle
 - **How it fails.** pin missing; cable snapped; battery dead; switch corroded
 - **On.** trailer
-- **Demand.** 54 a week for "breakaway cable" (bare term, not RV-qualified)
+- **Demand.** 28 a week for "breakaway switch" (bare term, not RV-qualified)
 - **Searches.** breakaway switch test; breakaway cable replacement
 
 ### Fifth-wheel landing gear
@@ -45,7 +45,7 @@ _Everything between the tow vehicle and the road, which is where a breakdown str
 - **What it does.** clamps the trailer tongue onto the hitch ball
 - **How it fails.** latch will not close; worn ball; coupler too loose and rattles; seized latch pin
 - **On.** trailer, fifth-wheel, pop-up
-- **Demand.** 1740 a week for "coupler" (bare term, not RV-qualified)
+- **Demand.** 23 a week for "hitch coupler" (bare term, not RV-qualified)
 - **Searches.** rv coupler adjustment; hitch coupler loose; trailer coupler replacement
 
 ### Kingpin and fifth-wheel hitch
@@ -62,7 +62,7 @@ _Everything between the tow vehicle and the road, which is where a breakdown str
 - **What it does.** spring the trailer over bumps
 - **How it fails.** flat springs; broken leaf; worn shackle bushings; equalizer cracked
 - **On.** trailer, fifth-wheel
-- **Demand.** 82061 a week for "suspension" (bare term, not RV-qualified)
+- **Demand.** 325 a week for "leaf springs" (bare term, not RV-qualified)
 - **Searches.** trailer leaf spring broken; shackle bushing replacement; wet bolt kit rv
 
 ### Lug nuts and torque
@@ -87,7 +87,7 @@ _Everything between the tow vehicle and the road, which is where a breakdown str
 - **How it fails.** friction pad worn; bracket loose; over-tightened and noisy
 - **On.** trailer
 - **Documentation we hold.** Hensley
-- **Demand.** 596 a week for "sway bar" (bare term, not RV-qualified)
+- **Demand.** 66 a week for "sway control" (bare term, not RV-qualified)
 - **Searches.** trailer sway fix; sway control adjustment; anti sway bar rv
 
 ### Tire pressure monitoring
@@ -96,7 +96,7 @@ _Everything between the tow vehicle and the road, which is where a breakdown str
 - **How it fails.** sensor battery dead; signal loss; wrong pressure setting; valve stem leak
 - **On.** trailer, fifth-wheel, motorhome
 - **Documentation we hold.** EEZ RV Products, TST Truck System Technologies
-- **Demand.** 3203 a week for "tpms" (bare term, not RV-qualified)
+- **Demand.** 21 a week for "rv tire pressure monitoring"
 - **Searches.** rv tpms not reading; tpms sensor battery; best rv tire monitor
 
 ### Tires
@@ -105,7 +105,7 @@ _Everything between the tow vehicle and the road, which is where a breakdown str
 - **How it fails.** sidewall blowout; uneven wear; age cracking; underinflation heat; wrong load range
 - **On.** trailer, fifth-wheel, motorhome, van
 - **Documentation we hold.** Carlstar
-- **Demand.** 161286 a week for "tires" (bare term, not RV-qualified)
+- **Demand.** 73 a week for "rv tires"
 - **Searches.** rv tire blowout; best trailer tires; tire load range rv; rv tire age
 
 ### Toad setup
@@ -123,7 +123,7 @@ _Everything between the tow vehicle and the road, which is where a breakdown str
 - **How it fails.** motor dies or grinds; switch dead; gear strip under load; manual override seized; jack foot bent
 - **On.** trailer, pop-up
 - **Documentation we hold.** Barker
-- **Demand.** 526 a week for "trailer jack" (bare term, not RV-qualified)
+- **Demand.** 61 a week for "tongue jack" (bare term, not RV-qualified)
 - **Searches.** tongue jack not working; electric tongue jack died; rv tongue jack replacement; trailer jack switch
 
 ### Weight-distribution hitch
@@ -139,7 +139,7 @@ _Everything between the tow vehicle and the road, which is where a breakdown str
 - **What it does.** let the wheel spin freely on the spindle
 - **How it fails.** dry and scored; water intrusion; seal leak; over-greased and blown seal; burnt spindle
 - **On.** trailer, fifth-wheel, pop-up
-- **Demand.** 329077 a week for "races" (bare term, not RV-qualified)
+- **Demand.** 276 a week for "wheel bearings" (bare term, not RV-qualified)
 - **Searches.** trailer wheel bearing repack; bearing replacement rv; grease seal leaking trailer
 
 ### Wheel chocks and jack pads
@@ -162,7 +162,7 @@ _Everything between the tow vehicle and the road, which is where a breakdown str
 - **What it does.** lift and level a motorhome on its own suspension
 - **How it fails.** won't retract; jack down alarm; fluid leak; solenoid failure; control panel error; spring pack broken
 - **On.** motorhome
-- **Demand.** 28 a week for "hydraulic levelers" (bare term, not RV-qualified)
+- **Demand.** 23 a week for "rv leveling jacks"
 - **Searches.** hydraulic jacks won't retract; jack down alarm; rv leveling system error
 
 ### Stabilizer jacks  `rv-leveling-jacks-not-working`
@@ -170,7 +170,7 @@ _Everything between the tow vehicle and the road, which is where a breakdown str
 - **What it does.** hold the trailer steady once it is parked, they do not lift it
 - **How it fails.** bent screw; stripped nut; seized pivot; pad torn off; crank handle lost
 - **On.** trailer, fifth-wheel, pop-up
-- **Demand.** 173 a week for "stabilisers" (bare term, not RV-qualified)
+- **Demand.** 39 a week for "rv stabilizer jacks"
 - **Searches.** stabilizer jack bent; scissor jack will not crank; rv stabilizer replacement
 
 ### Tire chains  `tires-winter`
@@ -212,7 +212,7 @@ _Two systems in one place: the 120 volt side from the pedestal, and the 12 volt 
 - **What it does.** tells you what is really left in the bank
 - **How it fails.** wrong capacity setting; reads 100 percent when empty; wiring on the wrong side of the shunt
 - **On.** trailer, motorhome, van
-- **Demand.** 5741 a week for "shunt" (bare term, not RV-qualified)
+- **Demand.** 296 a week for "battery monitor" (bare term, not RV-qualified)
 - **Searches.** rv battery monitor inaccurate; shunt wiring; state of charge
 
 ### Breaker panel and 120V breakers
@@ -220,7 +220,7 @@ _Two systems in one place: the 120 volt side from the pedestal, and the 12 volt 
 - **What it does.** protects the circuits inside the coach
 - **How it fails.** tripping from actual fault; weak breaker; burned bus; loose neutral
 - **On.** trailer, fifth-wheel, motorhome, van
-- **Demand.** 193 a week for "distribution panel" (bare term, not RV-qualified)
+- **Demand.** 177 a week for "breaker panel" (bare term, not RV-qualified)
 - **Searches.** rv breaker keeps tripping; gfci breaker rv; distribution panel wiring
 
 ### Cell and wifi booster
@@ -236,7 +236,7 @@ _Two systems in one place: the 120 volt side from the pedestal, and the 12 volt 
 - **How it fails.** alarm and shutdown; overheat; no output; hum in audio; dead transfer
 - **On.** trailer, fifth-wheel, motorhome, van
 - **Documentation we hold.** Go Power!, Magnum Energy, Progressive Dynamics, Renogy, Rich Solar, Samlex America, Victron Energy, Xantrex
-- **Demand.** 16300 a week for "inverter" (bare term, not RV-qualified)
+- **Demand.** 34 a week for "rv inverter"
 - **Searches.** rv inverter not working; inverter alarm code; pure sine vs modified sine rv
 
 ### Inverter charger
@@ -245,7 +245,7 @@ _Two systems in one place: the 120 volt side from the pedestal, and the 12 volt 
 - **How it fails.** fault codes; will not pass through; charger stage wrong; remote panel dead
 - **On.** motorhome
 - **Documentation we hold.** Magnum Energy, Xantrex
-- **Demand.** 184 a week for "xantrex" (bare term, not RV-qualified)
+- **Demand.** 71 a week for "inverter charger" (bare term, not RV-qualified)
 - **Searches.** inverter charger fault code; magnum remote panel not working
 
 ### Portable generator
@@ -275,7 +275,7 @@ _Two systems in one place: the 120 volt side from the pedestal, and the 12 volt 
 - **What it does.** shields the coach from bad park power
 - **How it fails.** nuisance shutdowns; low voltage trip; failed relay; miswired pedestal alarm
 - **On.** trailer, fifth-wheel, motorhome
-- **Demand.** 90372 a week for "ems" (bare term, not RV-qualified)
+- **Demand.** 49 a week for "rv surge protector"
 - **Searches.** rv surge protector tripping; ems low voltage shutdown; pedestal miswired
 
 ### Transfer switch
@@ -283,7 +283,7 @@ _Two systems in one place: the 120 volt side from the pedestal, and the 12 volt 
 - **What it does.** chooses between shore power and generator
 - **How it fails.** chattering; burned contacts; stuck on one source; buzzy hum; generator not passing through
 - **On.** motorhome
-- **Demand.** 57531 a week for "ats" (bare term, not RV-qualified)
+- **Demand.** 1222 a week for "transfer switch" (bare term, not RV-qualified)
 - **Searches.** rv transfer switch failure; ats chattering; generator not powering coach
 
 ### Wiring harness and connectors
@@ -299,7 +299,7 @@ _Two systems in one place: the 120 volt side from the pedestal, and the 12 volt 
 - **What it does.** run household appliances on shore or generator power
 - **How it fails.** downstream of a tripped GFCI; loose backstab; scorched; daisy chain lost
 - **On.** trailer, fifth-wheel, motorhome, van
-- **Demand.** 1023 a week for "gfci outlet" (bare term, not RV-qualified)
+- **Demand.** 554 a week for "receptacles" (bare term, not RV-qualified)
 - **Searches.** rv outlets not working; gfci reset rv; outlet no power
 
 ### Battery disconnect  `rv-battery-disconnect`
@@ -307,7 +307,7 @@ _Two systems in one place: the 120 volt side from the pedestal, and the 12 volt 
 - **What it does.** cuts the house battery from the coach
 - **How it fails.** left on and draining; corroded lugs; switch rated too low; bypassed by a previous owner
 - **On.** trailer, fifth-wheel, motorhome, van
-- **Demand.** 33338 a week for "kill switch" (bare term, not RV-qualified)
+- **Demand.** 252 a week for "battery disconnect" (bare term, not RV-qualified)
 - **Searches.** rv battery disconnect switch; battery draining while stored
 
 ### Control and monitor panel  `rv-tank-sensors-reading-wrong`
@@ -324,7 +324,7 @@ _Two systems in one place: the 120 volt side from the pedestal, and the 12 volt 
 - **How it fails.** will not charge; overcharging; fan scream; dead output; wrong charge profile for lithium
 - **On.** trailer, fifth-wheel, motorhome, van
 - **Documentation we hold.** Go Power!, Progressive Dynamics, WFCO
-- **Demand.** 1420345 a week for "converter" (bare term, not RV-qualified)
+- **Demand.** 29 a week for "rv converter"
 - **Searches.** rv converter not charging battery; converter fan loud; lithium charge profile converter
 
 ### Fuses  `rv-fuse-keeps-blowing`
@@ -341,7 +341,7 @@ _Two systems in one place: the 120 volt side from the pedestal, and the 12 volt 
 - **How it fails.** will not start; starts then dies; surging; low oil shutdown; brushes worn; propane vs gas
 - **On.** motorhome
 - **Documentation we hold.** Champion, Cummins Onan, Firman, Generac, Honda, WEN, Westinghouse
-- **Demand.** 1303119 a week for "generator" (bare term, not RV-qualified)
+- **Demand.** 109 a week for "rv generator"
 - **Searches.** rv generator won't start; onan surging; generator starts then dies
 
 ### House battery  `rv-battery-not-charging`
@@ -350,7 +350,7 @@ _Two systems in one place: the 120 volt side from the pedestal, and the 12 volt 
 - **How it fails.** sulfated; swollen; will not hold voltage; BMS shutdown; freezing; mismatched bank
 - **On.** trailer, fifth-wheel, motorhome, van
 - **Documentation we hold.** Battle Born, Renogy
-- **Demand.** 528 a week for "deep cycle" (bare term, not RV-qualified)
+- **Demand.** 94 a week for "house battery" (bare term, not RV-qualified)
 - **Searches.** rv battery not holding charge; lifepo4 bms shutdown; agm vs lithium rv
 
 ### Light fixtures and LEDs  `rv-lights-not-working`
@@ -358,7 +358,7 @@ _Two systems in one place: the 120 volt side from the pedestal, and the 12 volt 
 - **What it does.** light the inside and outside
 - **How it fails.** flicker; dim; dead fixture; switch failure; burnt connector
 - **On.** trailer, fifth-wheel, motorhome, van
-- **Demand.** 89354 a week for "led lights" (bare term, not RV-qualified)
+- **Demand.** 1784 a week for "light fixtures" (bare term, not RV-qualified)
 - **Searches.** rv lights flickering; led light replacement rv; porch light not working
 
 ### Solar charge controller  `rv-solar-not-charging`
@@ -367,7 +367,7 @@ _Two systems in one place: the 120 volt side from the pedestal, and the 12 volt 
 - **How it fails.** wrong battery type selected; no output; overheat; Bluetooth dropped; undersized
 - **On.** trailer, motorhome, van
 - **Documentation we hold.** Magnum Energy, Victron Energy, Zamp Solar
-- **Demand.** 1872 a week for "mppt" (bare term, not RV-qualified)
+- **Demand.** 479 a week for "solar charge controller" (bare term, not RV-qualified)
 - **Searches.** mppt controller settings; solar controller not charging
 
 ### Solar panels  `rv-solar-not-charging`
@@ -376,7 +376,7 @@ _Two systems in one place: the 120 volt side from the pedestal, and the 12 volt 
 - **How it fails.** shaded and dead; delaminated; MC4 corrosion; roof mount leak
 - **On.** trailer, fifth-wheel, motorhome, van
 - **Documentation we hold.** EcoFlow, Go Power!, Jackery, Renogy, Rich Solar, Zamp Solar
-- **Demand.** 1333161 a week for "solar" (bare term, not RV-qualified)
+- **Demand.** 70 a week for "rv solar panels"
 - **Searches.** rv solar not charging; solar panel shade loss; mc4 connector corrosion
 
 ## Water and plumbing — 11 of 18 covered
@@ -388,7 +388,7 @@ _The fresh side: getting clean water in, keeping it in, and getting it hot._
 - **What it does.** smooths the pump's cycling
 - **How it fails.** waterlogged; bladder burst; fitted on the wrong side
 - **On.** trailer, motorhome
-- **Demand.** 1579 a week for "accumulator" (bare term, not RV-qualified)
+- **Demand.** 54 a week for "accumulator tank" (bare term, not RV-qualified)
 - **Searches.** rv accumulator tank; water pump cycling fix
 
 ### Faucets and shower mixer
@@ -411,7 +411,7 @@ _The fresh side: getting clean water in, keeping it in, and getting it hot._
 - **What it does.** takes sediment and taste out of park water
 - **How it fails.** clogged and drops pressure; cartridge overdue; housing cracked in a freeze
 - **On.** trailer, fifth-wheel, motorhome
-- **Demand.** 75530 a week for "water filter" (bare term, not RV-qualified)
+- **Demand.** 87 a week for "inline water filter" (bare term, not RV-qualified)
 - **Searches.** rv water filter cartridge; filter housing leaking
 
 ### Shower pan and drain
@@ -419,7 +419,7 @@ _The fresh side: getting clean water in, keeping it in, and getting it hot._
 - **What it does.** drains the shower to the grey tank
 - **How it fails.** clogged with hair; P-trap leak; pan flex cracking; no air admittance
 - **On.** trailer, fifth-wheel, motorhome
-- **Demand.** 33764 a week for "shower drain" (bare term, not RV-qualified)
+- **Demand.** 24 a week for "rv shower pan"
 - **Searches.** rv shower drain clogged; shower pan crack repair
 
 ### Water pressure regulator
@@ -427,7 +427,7 @@ _The fresh side: getting clean water in, keeping it in, and getting it hot._
 - **What it does.** protects the plumbing from park pressure that is too high
 - **How it fails.** stuck open and blows a fitting; stuck closed and no flow; cheap unit fails silently
 - **On.** trailer, fifth-wheel, motorhome
-- **Demand.** 1091 a week for "pressure regulator" (bare term, not RV-qualified)
+- **Demand.** 55 a week for "rv water pressure regulator"
 - **Searches.** rv water pressure regulator; what psi for rv water; regulator failed
 
 ### Water softener and filtration
@@ -442,7 +442,7 @@ _The fresh side: getting clean water in, keeping it in, and getting it hot._
 - **What it does.** stores drinking and washing water on board
 - **How it fails.** cracked from freezing; algae and odour; sagging mounts; sensor wrong; drain valve leaking
 - **On.** trailer, fifth-wheel, motorhome, van
-- **Demand.** 56 a week for "fresh water tank" (bare term, not RV-qualified)
+- **Demand.** 20 a week for "rv fresh water tank"
 - **Searches.** rv fresh water tank cleaning; fresh tank cracked; tank sag
 
 ### Low point drains  `winterize-plumbing`
@@ -450,7 +450,7 @@ _The fresh side: getting clean water in, keeping it in, and getting it hot._
 - **What it does.** empty the lines for winter
 - **How it fails.** left open and flooding; seized; broken handle; hidden behind a panel
 - **On.** trailer, fifth-wheel, motorhome
-- **Demand.** 25 a week for "low point drain" (bare term, not RV-qualified)
+- **Demand.** 22 a week for "drain valves" (bare term, not RV-qualified)
 - **Searches.** rv low point drains location; low point drain leaking
 
 ### Outside shower  `winterize-plumbing`
@@ -474,7 +474,7 @@ _The fresh side: getting clean water in, keeping it in, and getting it hot._
 - **What it does.** keeps debris out of the pump and stops backflow
 - **How it fails.** clogged; cracked bowl; valve stuck open and the tank fills itself
 - **On.** trailer, fifth-wheel, motorhome, van
-- **Demand.** 2919 a week for "strainer" (bare term, not RV-qualified)
+- **Demand.** 51 a week for "pump strainer" (bare term, not RV-qualified)
 - **Searches.** water pump strainer clogged; pump check valve stuck
 
 ### Water heater (tank)  `rv-water-heater-not-heating`
@@ -483,7 +483,7 @@ _The fresh side: getting clean water in, keeping it in, and getting it hot._
 - **How it fails.** no hot water; pilot or igniter failure; rotten egg smell; leaking tank; element burned on 120 volt
 - **On.** trailer, fifth-wheel, motorhome, van
 - **Documentation we hold.** Eemax, Lippert, Suburban, Truma
-- **Demand.** 38051 a week for "suburban" (bare term, not RV-qualified)
+- **Demand.** 123 a week for "rv water heater"
 - **Searches.** rv water heater not heating; water heater smells like rotten eggs; rv water heater leaking
 
 ### Water heater (tankless)  `rv-water-heater-not-heating`
@@ -492,7 +492,7 @@ _The fresh side: getting clean water in, keeping it in, and getting it hot._
 - **How it fails.** cold then hot cycling; error codes; scale in the heat exchanger; freeze damage; low flow lockout
 - **On.** trailer, fifth-wheel, motorhome
 - **Documentation we hold.** Eemax, Lippert, Suburban, Truma
-- **Demand.** 210938 a week for "on demand" (bare term, not RV-qualified)
+- **Demand.** 123 a week for "rv water heater"
 - **Searches.** tankless rv water heater cold; aquago error code; tankless water heater freeze
 
 ### Water heater anode rod  `rv-water-heater-not-heating`
@@ -500,7 +500,7 @@ _The fresh side: getting clean water in, keeping it in, and getting it hot._
 - **What it does.** sacrifices itself to protect the tank
 - **How it fails.** consumed and the tank corrodes; wrong material; stripped drain plug
 - **On.** trailer, fifth-wheel, motorhome
-- **Demand.** 4112 a week for "anode" (bare term, not RV-qualified)
+- **Demand.** 75 a week for "water heater anode rod" (bare term, not RV-qualified)
 - **Searches.** rv water heater anode replacement; anode rod ate away
 
 ### Water heater bypass  `winterize-plumbing`
@@ -517,7 +517,7 @@ _The fresh side: getting clean water in, keeping it in, and getting it hot._
 - **How it fails.** runs without stopping; surges; will not prime; diaphragm torn; pressure switch stuck; noisy
 - **On.** trailer, fifth-wheel, motorhome, van
 - **Documentation we hold.** Valterra
-- **Demand.** 3678 a week for "water pump" (bare term, not RV-qualified)
+- **Demand.** 78 a week for "rv water pump"
 - **Searches.** rv water pump won't prime; water pump runs constantly; rv pump surging
 
 ### Water system winterising  `winterize-plumbing`
@@ -545,7 +545,7 @@ _The waste side: toilet, holding tanks, valves, and the sewer connection._
 - **How it fails.** seal leak; cassette cracked; vent blocked
 - **On.** van, pop-up
 - **Documentation we hold.** Thetford
-- **Demand.** 7633 a week for "cassette" (bare term, not RV-qualified)
+- **Demand.** 126 a week for "cassette toilet" (bare term, not RV-qualified)
 - **Searches.** cassette toilet leaking; cassette toilet seal
 
 ### Electric dump valves
@@ -570,7 +570,7 @@ _The waste side: toilet, holding tanks, valves, and the sewer connection._
 - **What it does.** grinds and pumps waste through a small hose
 - **How it fails.** jammed impeller; worn blades; motor burned; clogged from wipes
 - **On.** motorhome, trailer
-- **Demand.** 733 a week for "macerator" (bare term, not RV-qualified)
+- **Demand.** 28 a week for "rv macerator pump"
 - **Searches.** rv macerator clogged; macerator pump not working
 
 ### Sewer hose and fittings
@@ -579,7 +579,7 @@ _The waste side: toilet, holding tanks, valves, and the sewer connection._
 - **How it fails.** pinhole leaks; torn bellows; missing gasket; wrong bayonet lugs
 - **On.** trailer, fifth-wheel, motorhome, van
 - **Documentation we hold.** Valterra
-- **Demand.** 134 a week for "rv sewer hose" (bare term, not RV-qualified)
+- **Demand.** 134 a week for "rv sewer hose"
 - **Searches.** rv sewer hose leak; bayonet gasket; best sewer hose
 
 ### Tank flush and rinsing
@@ -595,7 +595,7 @@ _The waste side: toilet, holding tanks, valves, and the sewer connection._
 - **How it fails.** fan failed and smell; media too wet; urine diverter leaking
 - **On.** van, motorhome
 - **Documentation we hold.** Dometic, Nature's Head, Thetford
-- **Demand.** 160725 a week for "toilet" (bare term, not RV-qualified)
+- **Demand.** 305 a week for "rv toilet"
 - **Searches.** composting toilet rv smell; composting toilet fan replacement
 
 ### Toilet (vacuum or macerator)
@@ -604,7 +604,7 @@ _The waste side: toilet, holding tanks, valves, and the sewer connection._
 - **How it fails.** loses vacuum; pump runs constantly; seal leak; control board; clogged macerator
 - **On.** motorhome
 - **Documentation we hold.** Dometic, Nature's Head, Thetford
-- **Demand.** 160725 a week for "toilet" (bare term, not RV-qualified)
+- **Demand.** 305 a week for "rv toilet"
 - **Searches.** vacuflush losing vacuum; macerator toilet clogged
 
 ### Black tank  `rv-tank-sensors-reading-wrong`
@@ -613,7 +613,7 @@ _The waste side: toilet, holding tanks, valves, and the sewer connection._
 - **How it fails.** sensor coated and reads wrong; pyramid build-up; crack; valve leaking; vent blocked
 - **On.** trailer, fifth-wheel, motorhome, van
 - **Documentation we hold.** Dometic
-- **Demand.** 1517 a week for "black tank" (bare term, not RV-qualified)
+- **Demand.** 44 a week for "rv black tank"
 - **Searches.** black tank sensor wrong; black tank pyramid; holding tank crack
 
 ### Grey tank  `rv-sewer-smell`
@@ -629,7 +629,7 @@ _The waste side: toilet, holding tanks, valves, and the sewer connection._
 - **What it does.** breaks down waste and controls odour
 - **How it fails.** over-treatment; wrong product killing the good bacteria; no treatment at all
 - **On.** trailer, fifth-wheel, motorhome, van
-- **Demand.** 338 a week for "digester" (bare term, not RV-qualified)
+- **Demand.** 25 a week for "tank chemicals" (bare term, not RV-qualified)
 - **Searches.** best rv tank treatment; black tank smell; tank digester
 
 ### P-traps and drains  `rv-sewer-smell`
@@ -637,7 +637,7 @@ _The waste side: toilet, holding tanks, valves, and the sewer connection._
 - **What it does.** keeps sewer gas out of the living space
 - **How it fails.** dried out while stored; frozen and cracked; siphoned empty by a fan
 - **On.** trailer, fifth-wheel, motorhome, van
-- **Demand.** 33669 a week for "sink drain" (bare term, not RV-qualified)
+- **Demand.** 498 a week for "p trap" (bare term, not RV-qualified)
 - **Searches.** rv sink smells; p trap drained rv; shower drain smell
 
 ### Tank level sensors  `rv-tank-sensors-reading-wrong`
@@ -654,7 +654,7 @@ _The waste side: toilet, holding tanks, valves, and the sewer connection._
 - **How it fails.** will not hold water; leaking seal; ball valve stiff; sprayer leaks; floor seal leaking
 - **On.** trailer, fifth-wheel, motorhome
 - **Documentation we hold.** Dometic, Nature's Head, Thetford
-- **Demand.** 160725 a week for "toilet" (bare term, not RV-qualified)
+- **Demand.** 305 a week for "rv toilet"
 - **Searches.** rv toilet won't flush; toilet not holding water; rv toilet seal replacement
 
 ### Vent stack and air admittance valve  `rv-sewer-smell`
@@ -662,7 +662,7 @@ _The waste side: toilet, holding tanks, valves, and the sewer connection._
 - **What it does.** lets air in so tanks drain and smells go out the roof
 - **How it fails.** blocked vent; AAV stuck and lets sewer gas in; vent pipe cracked; nest in the stack
 - **On.** trailer, fifth-wheel, motorhome
-- **Demand.** 949 a week for "aav" (bare term, not RV-qualified)
+- **Demand.** 79 a week for "vent stack" (bare term, not RV-qualified)
 - **Searches.** rv sewer smell inside; air admittance valve rv; tank vent blocked
 
 ## Heating and cooling — 9 of 14 covered
@@ -674,7 +674,7 @@ _Furnace, air conditioning, heat pumps, and the ducts that carry what they make.
 - **What it does.** carries heated air from the furnace to the rooms
 - **How it fails.** crushed duct; disconnected run; register closed; debris; no air at the far vents
 - **On.** trailer, fifth-wheel, motorhome
-- **Demand.** 6127 a week for "registers" (bare term, not RV-qualified)
+- **Demand.** 71 a week for "floor vents" (bare term, not RV-qualified)
 - **Searches.** rv furnace not blowing air; floor vent no heat; rv duct disconnected
 
 ### Heat pump and heat strip
@@ -691,7 +691,7 @@ _Furnace, air conditioning, heat pumps, and the ducts that carry what they make.
 - **What it does.** adds heat where the furnace cannot reach
 - **How it fails.** overloads the circuit; tip-over switch; carbon monoxide risk with unvented propane
 - **On.** trailer, fifth-wheel, motorhome, van
-- **Demand.** 284354 a week for "portable" (bare term, not RV-qualified)
+- **Demand.** 23 a week for "rv portable"
 - **Searches.** rv electric heater best; safe heater rv; carbon monoxide heater rv
 
 ### Roof vent fan
@@ -699,7 +699,7 @@ _Furnace, air conditioning, heat pumps, and the ducts that carry what they make.
 - **What it does.** pulls hot air out of the coach
 - **How it fails.** will not turn; lid stuck; rain sensor failed; motor squeal; remote lost
 - **On.** trailer, fifth-wheel, motorhome, van
-- **Demand.** 191 a week for "maxxair" (bare term, not RV-qualified)
+- **Demand.** 22 a week for "roof vent fan" (bare term, not RV-qualified)
 - **Searches.** rv roof vent fan not working; fantastic fan lid stuck; maxxair fan repair
 
 ### Thermostat
@@ -708,7 +708,7 @@ _Furnace, air conditioning, heat pumps, and the ducts that carry what they make.
 - **How it fails.** zone missing; blank display; wrong mode; thermostat wire chewed; battery in remote
 - **On.** trailer, fifth-wheel, motorhome, van
 - **Documentation we hold.** Coleman-Mach
-- **Demand.** 76205 a week for "thermostat" (bare term, not RV-qualified)
+- **Demand.** 31 a week for "rv thermostat"
 - **Searches.** rv thermostat not working; thermostat blank display; upgrade rv thermostat
 
 ### Air conditioner capacitor  `rv-air-conditioner-not-cooling`
@@ -716,7 +716,7 @@ _Furnace, air conditioning, heat pumps, and the ducts that carry what they make.
 - **What it does.** gives the compressor the jolt it needs to start
 - **How it fails.** bulged and dead; compressor hums and trips; hard start kit needed
 - **On.** trailer, fifth-wheel, motorhome
-- **Demand.** 176 a week for "run capacitor" (bare term, not RV-qualified)
+- **Demand.** 171 a week for "air conditioner capacitor" (bare term, not RV-qualified)
 - **Searches.** rv ac capacitor replacement; compressor hums won't start; hard start capacitor rv
 
 ### Air conditioner condensate drain  `rv-air-conditioner-not-cooling`
@@ -724,7 +724,7 @@ _Furnace, air conditioning, heat pumps, and the ducts that carry what they make.
 - **What it does.** carries condensation off the roof
 - **How it fails.** blocked pan; overflowing into the coach; drain tube missing; roof staining
 - **On.** trailer, fifth-wheel, motorhome
-- **Demand.** 1761 a week for "condensate" (bare term, not RV-qualified)
+- **Demand.** 230 a week for "ac drain" (bare term, not RV-qualified)
 - **Searches.** rv ac dripping inside; ac condensate drain
 
 ### Air conditioner gasket and shroud  `rv-roof-leak-repair`
@@ -739,7 +739,7 @@ _Furnace, air conditioning, heat pumps, and the ducts that carry what they make.
 - **What it does.** ventilation and an emergency exit
 - **How it fails.** lid cracked by UV; hinge broken; seal leaking; crank stripped
 - **On.** trailer, fifth-wheel, motorhome, van
-- **Demand.** 297 a week for "roof vent" (bare term, not RV-qualified)
+- **Demand.** 24 a week for "ceiling vents" (bare term, not RV-qualified)
 - **Searches.** rv roof vent leaking; vent lid replacement; rv vent crank
 
 ### Dehumidifier and ventilation  `rv-condensation-inside`
@@ -756,7 +756,7 @@ _Furnace, air conditioning, heat pumps, and the ducts that carry what they make.
 - **How it fails.** will not light; lights then shuts off; sail switch dirty; igniter failure; limit switch tripping; squealing blower
 - **On.** trailer, fifth-wheel, motorhome, van
 - **Documentation we hold.** Lippert, Suburban
-- **Demand.** 24549 a week for "furnace" (bare term, not RV-qualified)
+- **Demand.** 25 a week for "rv furnace"
 - **Searches.** rv furnace not working; furnace lights then shuts off; sail switch rv furnace
 
 ### Furnace control board and igniter  `rv-furnace-not-working`
@@ -764,7 +764,7 @@ _Furnace, air conditioning, heat pumps, and the ducts that carry what they make.
 - **What it does.** runs the ignition sequence and flame sensing
 - **How it fails.** no spark; repeated lockout; board corrosion; flame sensor failure
 - **On.** trailer, fifth-wheel, motorhome
-- **Demand.** 2279 a week for "control board" (bare term, not RV-qualified)
+- **Demand.** 27 a week for "furnace control board" (bare term, not RV-qualified)
 - **Searches.** rv furnace control board; furnace igniter replacement; furnace lockout reset
 
 ### Furnace sail switch  `rv-furnace-not-working`
@@ -781,7 +781,7 @@ _Furnace, air conditioning, heat pumps, and the ducts that carry what they make.
 - **How it fails.** freezes up; runs but no cold; short cycles; leaks water inside; compressor hum then trip
 - **On.** trailer, fifth-wheel, motorhome, van
 - **Documentation we hold.** Dometic, RecPro, Zero Breeze
-- **Demand.** 137932 a week for "air conditioner" (bare term, not RV-qualified)
+- **Demand.** 345 a week for "rv ac"
 - **Searches.** rv air conditioner not cooling; rv ac freezing up; ac runs but not cold
 
 ## Exterior and body — 10 of 25 covered
@@ -794,7 +794,7 @@ _The shell: roof, walls, windows, doors, awnings, slides and the gear that hangs
 - **How it fails.** will not extend; spring broken; fabric torn; arms bent by wind; motor failure; roller sag
 - **On.** trailer, fifth-wheel, motorhome
 - **Documentation we hold.** Aleko, Dometic, Lippert, Zip Dee
-- **Demand.** 5072 a week for "awning" (bare term, not RV-qualified)
+- **Demand.** 313 a week for "rv awning"
 - **Searches.** rv awning won't retract; awning fabric replacement; awning arm bent
 
 ### Awning accessories
@@ -810,7 +810,7 @@ _The shell: roof, walls, windows, doors, awnings, slides and the gear that hangs
 - **What it does.** sees behind and beside a long vehicle
 - **How it fails.** signal dropout; water in the housing; wiring chafe at the hitch; monitor dead
 - **On.** trailer, fifth-wheel, motorhome
-- **Demand.** 352989 a week for "backup" (bare term, not RV-qualified)
+- **Demand.** 32 a week for "rv backup"
 - **Searches.** rv backup camera not working; wireless camera dropout; rear camera install rv
 
 ### Baggage and bay doors
@@ -818,7 +818,7 @@ _The shell: roof, walls, windows, doors, awnings, slides and the gear that hangs
 - **What it does.** access to the basement and storage
 - **How it fails.** latch failure; gas strut dead; seal leaking; hinge pulled from the frame
 - **On.** trailer, fifth-wheel, motorhome
-- **Demand.** 47311 a week for "baggage" (bare term, not RV-qualified)
+- **Demand.** 49 a week for "rv baggage"
 - **Searches.** rv compartment latch replacement; bay door strut; storage door leaking
 
 ### Bike and kayak carriers
@@ -834,7 +834,7 @@ _The shell: roof, walls, windows, doors, awnings, slides and the gear that hangs
 - **How it fails.** bumper pulled from the frame by a loaded rack; rust; end caps lost; sewer hose stored inside
 - **On.** trailer, fifth-wheel, motorhome
 - **Documentation we hold.** Hollywood Racks
-- **Demand.** 31010 a week for "bumper" (bare term, not RV-qualified)
+- **Demand.** 25 a week for "rv bumper"
 - **Searches.** rv bumper bike rack; rear hitch rv; bumper rust
 
 ### Decals and graphics
@@ -842,7 +842,7 @@ _The shell: roof, walls, windows, doors, awnings, slides and the gear that hangs
 - **What it does.** the coach's look
 - **How it fails.** cracking and fading; peeling edges; removal damaging gelcoat
 - **On.** trailer, fifth-wheel, motorhome, van
-- **Demand.** 224206 a week for "graphics" (bare term, not RV-qualified)
+- **Demand.** 33 a week for "rv decals"
 - **Searches.** remove rv decals; rv graphics replacement; decal cracking
 
 ### Entry door and lock
@@ -858,7 +858,7 @@ _The shell: roof, walls, windows, doors, awnings, slides and the gear that hangs
 - **What it does.** getting in and out safely
 - **How it fails.** sagging; electric steps not retracting; motor failure; control module; steps hitting the ground
 - **On.** motorhome, trailer, fifth-wheel
-- **Demand.** 105 a week for "rv steps" (bare term, not RV-qualified)
+- **Demand.** 23 a week for "entry steps" (bare term, not RV-qualified)
 - **Searches.** rv electric steps not working; step motor replacement; steps sagging
 
 ### Fender skirts and trim
@@ -866,7 +866,7 @@ _The shell: roof, walls, windows, doors, awnings, slides and the gear that hangs
 - **What it does.** covers the wheel openings and edges
 - **How it fails.** cracked; lost on the road; screw holes stripped; trim insert shrunk
 - **On.** trailer, fifth-wheel
-- **Demand.** 22 a week for "wheel trim" (bare term, not RV-qualified)
+- **Demand.** 20 a week for "fender skirts" (bare term, not RV-qualified)
 - **Searches.** rv fender skirt replacement; trim insert rv
 
 ### Ladder and roof access
@@ -874,7 +874,7 @@ _The shell: roof, walls, windows, doors, awnings, slides and the gear that hangs
 - **What it does.** gets you onto the roof
 - **How it fails.** loose mounts; steps cracked; pulled from the body by a heavy climber
 - **On.** motorhome, trailer, fifth-wheel
-- **Demand.** 107838 a week for "ladder" (bare term, not RV-qualified)
+- **Demand.** 23 a week for "rv ladder"
 - **Searches.** rv ladder loose; roof ladder repair
 
 ### Roof cargo and ladders
@@ -896,7 +896,7 @@ _The shell: roof, walls, windows, doors, awnings, slides and the gear that hangs
 - **What it does.** protects tanks and wiring from road debris
 - **How it fails.** sagging; torn by road debris; rodent entry; water trapped inside
 - **On.** trailer, fifth-wheel
-- **Demand.** 1233 a week for "coroplast" (bare term, not RV-qualified)
+- **Demand.** 24 a week for "rv underbelly"
 - **Searches.** rv underbelly sagging; coroplast repair; rodents in rv underbelly
 
 ### Window shades and blinds
@@ -904,7 +904,7 @@ _The shell: roof, walls, windows, doors, awnings, slides and the gear that hangs
 - **What it does.** privacy and light control
 - **How it fails.** strings broken; spring lost; night shade failing; roller flying up
 - **On.** trailer, fifth-wheel, motorhome, van
-- **Demand.** 1205 a week for "window shades" (bare term, not RV-qualified)
+- **Demand.** 39 a week for "rv window shades"
 - **Searches.** rv day night shade string repair; shade replacement; blinds rv
 
 ### Body panels and siding  `rv-delamination`
@@ -912,7 +912,7 @@ _The shell: roof, walls, windows, doors, awnings, slides and the gear that hangs
 - **What it does.** the coach's skin
 - **How it fails.** delamination bubbles; impact damage; screw rust bleed; decal peel; hail
 - **On.** trailer, fifth-wheel, motorhome
-- **Demand.** 175 a week for "filon" (bare term, not RV-qualified)
+- **Demand.** 43 a week for "body panels" (bare term, not RV-qualified)
 - **Searches.** rv delamination repair; rv siding damage; sidewall bubble
 
 ### Door and window seals  `rv-roof-leak-repair`
@@ -920,7 +920,7 @@ _The shell: roof, walls, windows, doors, awnings, slides and the gear that hangs
 - **What it does.** keep water and drafts out
 - **How it fails.** compressed; peeling; wrong thickness; leaking at the bottom corner
 - **On.** trailer, fifth-wheel, motorhome, van
-- **Demand.** 450605 a week for "door" (bare term, not RV-qualified)
+- **Demand.** 105 a week for "rv door"
 - **Searches.** rv door seal leaking; weatherstrip replacement rv
 
 ### Exterior lighting  `rv-lights-not-working`
@@ -928,7 +928,7 @@ _The shell: roof, walls, windows, doors, awnings, slides and the gear that hangs
 - **What it does.** visibility and legal lighting
 - **How it fails.** corroded sockets; water in the lens; burned bulbs; loose ground; LED failure
 - **On.** trailer, fifth-wheel, motorhome, van
-- **Demand.** 739 a week for "porch light" (bare term, not RV-qualified)
+- **Demand.** 117 a week for "exterior lighting" (bare term, not RV-qualified)
 - **Searches.** rv tail light not working; marker light repair; led clearance light
 
 ### Roof coating  `rv-roof-leak-repair`
@@ -936,7 +936,7 @@ _The shell: roof, walls, windows, doors, awnings, slides and the gear that hangs
 - **What it does.** renews an aged roof
 - **How it fails.** applied over a wet or dirty roof and blistered; incompatible product; trapped moisture
 - **On.** trailer, fifth-wheel, motorhome
-- **Demand.** 588 a week for "roof coating" (bare term, not RV-qualified)
+- **Demand.** 108 a week for "rv roof coating"
 - **Searches.** rv roof coating best; coating over epdm; roof recoat bubbles
 
 ### Roof membrane  `rv-roof-leak-repair`
@@ -944,7 +944,7 @@ _The shell: roof, walls, windows, doors, awnings, slides and the gear that hangs
 - **What it does.** the waterproof skin over everything
 - **How it fails.** chalking and pinholing; seams lifting; tree damage; screw back-out; ponding at low spots
 - **On.** trailer, fifth-wheel, motorhome, van
-- **Demand.** 7131 a week for "tpo" (bare term, not RV-qualified)
+- **Demand.** 24 a week for "rv roof membrane"
 - **Searches.** rv roof leak repair; epdm vs tpo; rv roof reseal cost
 
 ### Roof sealant and lap sealant  `rv-roof-leak-repair`
@@ -952,7 +952,7 @@ _The shell: roof, walls, windows, doors, awnings, slides and the gear that hangs
 - **What it does.** seals every penetration on the roof
 - **How it fails.** cracked by UV; wrong product on the wrong membrane; silicone used where it should not be; missed fasteners
 - **On.** trailer, fifth-wheel, motorhome, van
-- **Demand.** 337 a week for "roof sealant" (bare term, not RV-qualified)
+- **Demand.** 126 a week for "rv roof sealant"
 - **Searches.** rv roof sealant type; lap sealant redo; silicone on rv roof
 
 ### Skylight  `rv-roof-leak-repair`
@@ -961,7 +961,7 @@ _The shell: roof, walls, windows, doors, awnings, slides and the gear that hangs
 - **How it fails.** cracked and leaking; yellowed; wrong sealant; screws stripped
 - **On.** trailer, fifth-wheel, motorhome
 - **Documentation we hold.** Dometic
-- **Demand.** 47703 a week for "skylight" (bare term, not RV-qualified)
+- **Demand.** 29 a week for "rv skylight"
 - **Searches.** rv skylight leaking; skylight replacement
 
 ### Slide seals and wipers  `rv-slide-out-leaking`
@@ -977,7 +977,7 @@ _The shell: roof, walls, windows, doors, awnings, slides and the gear that hangs
 - **What it does.** extends the living space
 - **How it fails.** will not move; grinds; one side lags; controller error; rack and pinion stripped; Schwintek motor failure
 - **On.** trailer, fifth-wheel, motorhome
-- **Demand.** 124 a week for "slide out" (bare term, not RV-qualified)
+- **Demand.** 36 a week for "slide-out" (bare term, not RV-qualified)
 - **Searches.** rv slide out not working; slide out grinding; schwintek motor replacement
 
 ### Windows  `rv-roof-leak-repair`
@@ -985,7 +985,7 @@ _The shell: roof, walls, windows, doors, awnings, slides and the gear that hangs
 - **What it does.** light, view and ventilation
 - **How it fails.** seal leaking; crank operator stripped; fogged double pane; frameless latch loose; glass cracked
 - **On.** trailer, fifth-wheel, motorhome, van
-- **Demand.** 34081319 a week for "windows" (bare term, not RV-qualified)
+- **Demand.** 73 a week for "rv windows"
 - **Searches.** rv window leaking; rv window crank replacement; fogged rv windows
 
 ## Kitchen and appliances — 5 of 16 covered
@@ -1005,7 +1005,7 @@ _The things that make a coach liveable: cold food, hot food, and somewhere to si
 - **What it does.** storage that stays shut while driving
 - **How it fails.** latches pop open on the road; slides break; struts lose gas; hinges pull out
 - **On.** trailer, fifth-wheel, motorhome, van
-- **Demand.** 71 a week for "drawer slide" (bare term, not RV-qualified)
+- **Demand.** 27 a week for "cabinet latch" (bare term, not RV-qualified)
 - **Searches.** rv cabinet latch replacement; drawer slide rv; cabinet doors opening while driving
 
 ### Central vacuum and cleaning
@@ -1013,7 +1013,7 @@ _The things that make a coach liveable: cold food, hot food, and somewhere to si
 - **What it does.** cleaning without hauling a vacuum
 - **How it fails.** clogged hose; bag full; motor failure; hidden in a compartment
 - **On.** motorhome, fifth-wheel
-- **Demand.** 341984 a week for "vacuum" (bare term, not RV-qualified)
+- **Demand.** 297 a week for "central vacuum" (bare term, not RV-qualified)
 - **Searches.** rv central vacuum not working
 
 ### Cooktop and oven
@@ -1022,7 +1022,7 @@ _The things that make a coach liveable: cold food, hot food, and somewhere to si
 - **How it fails.** burner will not light; low flame; igniter clicking; oven pilot; thermocouple; burner cap clogged
 - **On.** trailer, fifth-wheel, motorhome, van
 - **Documentation we hold.** Greystone, RecPro, Suburban
-- **Demand.** 349027 a week for "range" (bare term, not RV-qualified)
+- **Demand.** 5454 a week for "cooktop" (bare term, not RV-qualified)
 - **Searches.** rv stove burner won't light; rv oven pilot light; rv cooktop igniter
 
 ### Fire extinguisher
@@ -1037,7 +1037,7 @@ _The things that make a coach liveable: cold food, hot food, and somewhere to si
 - **What it does.** somewhere to sit and sleep
 - **How it fails.** frame failure; upholstery peeling; recliner mechanism; dinette bed conversion
 - **On.** trailer, fifth-wheel, motorhome, van
-- **Demand.** 455135 a week for "furniture" (bare term, not RV-qualified)
+- **Demand.** 361 a week for "rv furniture"
 - **Searches.** rv furniture peeling; rv recliner not working; dinette bed conversion
 
 ### Grill and outdoor cooking
@@ -1052,7 +1052,7 @@ _The things that make a coach liveable: cold food, hot food, and somewhere to si
 - **What it does.** heats and sometimes bakes
 - **How it fails.** dead on inverter power; door interlock; turntable motor; convection element
 - **On.** trailer, fifth-wheel, motorhome
-- **Demand.** 93316 a week for "microwave" (bare term, not RV-qualified)
+- **Demand.** 36 a week for "rv microwave"
 - **Searches.** rv microwave not working; convection microwave rv
 
 ### Range hood and vent
@@ -1068,7 +1068,7 @@ _The things that make a coach liveable: cold food, hot food, and somewhere to si
 - **What it does.** entertainment and connectivity
 - **How it fails.** antenna will not raise; no signal after a move; speaker failure; wifi booster dropout
 - **On.** trailer, fifth-wheel, motorhome, van
-- **Demand.** 8909265 a week for "tv" (bare term, not RV-qualified)
+- **Demand.** 76 a week for "rv tv"
 - **Searches.** rv tv antenna not working; rv wifi booster; rv satellite setup
 
 ### Washer and dryer
@@ -1077,7 +1077,7 @@ _The things that make a coach liveable: cold food, hot food, and somewhere to si
 - **How it fails.** will not drain; leaks; unbalanced load; ventless drying slow; water supply valve
 - **On.** motorhome, fifth-wheel
 - **Documentation we hold.** Splendide
-- **Demand.** 47626 a week for "washer" (bare term, not RV-qualified)
+- **Demand.** 90 a week for "rv washer"
 - **Searches.** rv washer dryer not draining; splendide vented vs ventless
 
 ### Flooring and subfloor  `rv-delamination`
@@ -1085,7 +1085,7 @@ _The things that make a coach liveable: cold food, hot food, and somewhere to si
 - **What it does.** the floor you walk on
 - **How it fails.** soft spots from a leak; vinyl peeling; carpet worn; delaminated subfloor from water
 - **On.** trailer, fifth-wheel, motorhome, van
-- **Demand.** 137320 a week for "carpet" (bare term, not RV-qualified)
+- **Demand.** 52188 a week for "flooring" (bare term, not RV-qualified)
 - **Searches.** soft floor rv; rv floor water damage; vinyl flooring replacement rv
 
 ### Refrigerator (absorption)  `rv-refrigerator-not-cooling`
@@ -1094,7 +1094,7 @@ _The things that make a coach liveable: cold food, hot food, and somewhere to si
 - **How it fails.** not cooling; works on propane but not electric; ammonia smell and yellow residue; leveling; venting; thermistor
 - **On.** trailer, fifth-wheel, motorhome
 - **Documentation we hold.** Norcold, RecPro
-- **Demand.** 41071 a week for "refrigerator" (bare term, not RV-qualified)
+- **Demand.** 457 a week for "rv refrigerator"
 - **Searches.** rv fridge not cooling; ammonia smell fridge; rv fridge works on propane not electric
 
 ### Refrigerator (compressor or 12V)  `rv-refrigerator-not-cooling`
@@ -1103,7 +1103,7 @@ _The things that make a coach liveable: cold food, hot food, and somewhere to si
 - **How it fails.** will not start on low voltage; fan noisy; defrost drain blocked; door seal
 - **On.** trailer, fifth-wheel, motorhome, van
 - **Documentation we hold.** Dometic, Norcold, RecPro, Unique
-- **Demand.** 41071 a week for "refrigerator" (bare term, not RV-qualified)
+- **Demand.** 457 a week for "rv refrigerator"
 - **Searches.** 12v fridge not cooling; compressor fridge rv; rv fridge low voltage
 
 ### Refrigerator venting and fans  `rv-refrigerator-not-cooling`
@@ -1118,7 +1118,7 @@ _The things that make a coach liveable: cold food, hot food, and somewhere to si
 - **What it does.** cold water and ice without opening the fridge
 - **How it fails.** line frozen or kinked; valve failed; slow fill; leak behind the fridge
 - **On.** motorhome, fifth-wheel
-- **Demand.** 6888 a week for "ice maker" (bare term, not RV-qualified)
+- **Demand.** 5085 a week for "water dispenser" (bare term, not RV-qualified)
 - **Searches.** rv ice maker leaking; fridge water line frozen
 
 ## Chassis and drivetrain — 3 of 14 covered
@@ -1130,7 +1130,7 @@ _Motorhome-specific: the truck underneath the house, and the parts that strand y
 - **What it does.** supplies air for brakes and suspension
 - **How it fails.** air dryer saturated; governor failure; pressure loss overnight; water in the tanks
 - **On.** motorhome
-- **Demand.** 7356 a week for "air compressor" (bare term, not RV-qualified)
+- **Demand.** 344 a week for "air system" (bare term, not RV-qualified)
 - **Searches.** rv air dryer replacement; air pressure loss overnight; compressor governor
 
 ### Alternator and starter
@@ -1138,7 +1138,7 @@ _Motorhome-specific: the truck underneath the house, and the parts that strand y
 - **What it does.** starts the engine and charges the chassis battery
 - **How it fails.** no crank; slow crank; alternator not charging; solenoid failure; chassis battery drain
 - **On.** motorhome
-- **Demand.** 59578 a week for "starter" (bare term, not RV-qualified)
+- **Demand.** 3366 a week for "alternator" (bare term, not RV-qualified)
 - **Searches.** motorhome alternator not charging; rv starter solenoid; chassis battery drain
 
 ### Belts, hoses and filters
@@ -1146,7 +1146,7 @@ _Motorhome-specific: the truck underneath the house, and the parts that strand y
 - **What it does.** routine parts that stop you if neglected
 - **How it fails.** belt squeal or failure; hose burst; filter clogged and derate; DEF filter
 - **On.** motorhome
-- **Demand.** 68227 a week for "air filter" (bare term, not RV-qualified)
+- **Demand.** 936 a week for "serpentine belt" (bare term, not RV-qualified)
 - **Searches.** rv serpentine belt replacement; diesel fuel filter change rv; air filter motorhome
 
 ### Cooling system
@@ -1154,7 +1154,7 @@ _Motorhome-specific: the truck underneath the house, and the parts that strand y
 - **What it does.** keeps the engine at temperature
 - **How it fails.** coolant loss; fan clutch failure; radiator plugged with bugs; side radiator vs rear; coolant type
 - **On.** motorhome
-- **Demand.** 8834 a week for "radiator" (bare term, not RV-qualified)
+- **Demand.** 1181 a week for "cooling system" (bare term, not RV-qualified)
 - **Searches.** rv overheating coolant; diesel pusher radiator cleaning; fan clutch rv
 
 ### Dash air conditioning
@@ -1170,7 +1170,7 @@ _Motorhome-specific: the truck underneath the house, and the parts that strand y
 - **What it does.** meets emissions rules on modern diesels
 - **How it fails.** derate from bad DEF; DPF plugged from short trips; regen failures; sensor codes
 - **On.** motorhome
-- **Demand.** 54552 a week for "def" (bare term, not RV-qualified)
+- **Demand.** 18460 a week for "emissions" (bare term, not RV-qualified)
 - **Searches.** def system derate; dpf cleaning rv; regen problems motorhome
 
 ### Engine and drivetrain
@@ -1187,7 +1187,7 @@ _Motorhome-specific: the truck underneath the house, and the parts that strand y
 - **What it does.** gets the gases out and helps slow the coach
 - **How it fails.** turbo actuator; exhaust leaks; exhaust brake inoperative; particulate filter
 - **On.** motorhome
-- **Demand.** 467220 a week for "turbo" (bare term, not RV-qualified)
+- **Demand.** 20027 a week for "exhaust" (bare term, not RV-qualified)
 - **Searches.** exhaust brake not working; turbo actuator rv
 
 ### Fuel system
@@ -1195,7 +1195,7 @@ _Motorhome-specific: the truck underneath the house, and the parts that strand y
 - **What it does.** delivers fuel
 - **How it fails.** lift pump failure; fuel filter clogged; gauge wrong; fuel starvation on grades
 - **On.** motorhome
-- **Demand.** 1644 a week for "fuel pump" (bare term, not RV-qualified)
+- **Demand.** 1035 a week for "fuel system" (bare term, not RV-qualified)
 - **Searches.** motorhome fuel starvation; lift pump failure rv; fuel gauge wrong
 
 ### Steering and alignment
@@ -1203,7 +1203,7 @@ _Motorhome-specific: the truck underneath the house, and the parts that strand y
 - **What it does.** keeps a heavy coach going straight
 - **How it fails.** wander and push from trucks; uneven tyre wear; steering stabiliser worn; kingpin play
 - **On.** motorhome
-- **Demand.** 21724 a week for "alignment" (bare term, not RV-qualified)
+- **Demand.** 13932 a week for "steering" (bare term, not RV-qualified)
 - **Searches.** rv wanders on highway; motorhome alignment; steering stabilizer rv
 
 ### Suspension and shocks
@@ -1211,7 +1211,7 @@ _Motorhome-specific: the truck underneath the house, and the parts that strand y
 - **What it does.** carries the house without bouncing
 - **How it fails.** worn shocks and porpoising; sway bar bushings; air bag leak; ride height valve
 - **On.** motorhome
-- **Demand.** 174394 a week for "springs" (bare term, not RV-qualified)
+- **Demand.** 23 a week for "rv suspension"
 - **Searches.** motorhome porpoising; rv shocks replacement; ride height valve
 
 ### Chassis battery and isolator  `rv-battery-not-charging`

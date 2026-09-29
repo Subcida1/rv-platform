@@ -77,6 +77,9 @@ def main():
 
     data = json.loads(PARTS.read_text(encoding="utf-8"))
     parts = [p for s in data["systems"] for p in s["parts"]]
+    # MEASURE BY ID, NOT BY OBJECT. The first run held the file in memory for the ten minutes it
+    # spent measuring and then wrote that copy back, silently deleting the propane system added
+    # while it ran. Identifiers survive; object identity does not.
     print("measuring %d parts, shortest phrasing first\n" % len(parts))
     measured = 0
     for p in parts:
@@ -109,8 +112,17 @@ def main():
     for p in sorted(covered, key=lambda x: -x["demand"]["weekly"])[:8]:
         print("  %5d/wk  %-34s %s" % (p["demand"]["weekly"], p["n"][:32], p["guide"]))
     if not a.no_write:
-        PARTS.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-        print("\ndemand written back into %s" % PARTS.relative_to(ROOT))
+        # re-read at write time and merge by id, so anything added since the run started survives
+        now = json.loads(PARTS.read_text(encoding="utf-8"))
+        measured_by_id = {p["id"]: p.get("demand") for p in parts}
+        merged = 0
+        for s in now["systems"]:
+            for p in s["parts"]:
+                if measured_by_id.get(p["id"]):
+                    p["demand"] = measured_by_id[p["id"]]
+                    merged += 1
+        PARTS.write_text(json.dumps(now, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+        print("\ndemand merged into %d part(s) in %s" % (merged, PARTS.relative_to(ROOT)))
 
 
 if __name__ == "__main__":

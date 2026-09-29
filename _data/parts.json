@@ -1,5 +1,5 @@
 {
-  "note": "The parts index: every part an RV is made of, by system, with what it does, how it fails, which RV types have it, which of our guides already covers it, and the phrasings a reader would search. Built 2026-09-29 from Ty's list plus the 110 component makers already catalogued in _data/manuals.json. No models, no specs: this is the index that tells us what content to research next. Each part also carries `makers`: the manufacturers already catalogued in the manuals directory whose documentation covers it, with the archive URL. 36 of 138 parts have a source waiting before any research starts, and a part with makers and no guide is the cheapest content on this list. A ninth system, propane, was added after a completeness check against the manuals taxonomy found the supply side of every gas appliance missing: the furnace and water heater were indexed, and the tank, regulator, hoses and detector feeding them were not.",
+  "note": "The parts index: every part an RV is made of, by system, with what it does, how it fails, which RV types have it, which of our guides already covers it, and the phrasings a reader would search. Built 2026-09-29 from Ty's list plus the 110 component makers already catalogued in _data/manuals.json. No models, no specs: this is the index that tells us what content to research next. Each part also carries `makers`: the manufacturers already catalogued in the manuals directory whose documentation covers it, with the archive URL. 36 of 138 parts have a source waiting before any research starts, and a part with makers and no guide is the cheapest content on this list. A ninth system, propane, was added after a completeness check against the manuals taxonomy found the supply side of every gas appliance missing: the furnace and water heater were indexed, and the tank, regulator, hoses and detector feeding them were not. A demand run must MERGE its results rather than write the file back from memory: the first run read _data/parts.json, spent ten minutes measuring, then wrote its in-memory copy over the propane system added while it ran.",
   "systems": [
     {
       "key": "towing-and-running-gear",
@@ -29,8 +29,9 @@
             "trailer coupler replacement"
           ],
           "demand": {
-            "weekly": 1740,
-            "query": "coupler"
+            "weekly": 23,
+            "query": "hitch coupler",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -58,8 +59,9 @@
             "trailer jack switch"
           ],
           "demand": {
-            "weekly": 526,
-            "query": "trailer jack"
+            "weekly": 61,
+            "query": "tongue jack",
+            "rv_qualified": false
           },
           "makers": [
             {
@@ -92,8 +94,9 @@
             "rv stabilizer replacement"
           ],
           "demand": {
-            "weekly": 173,
-            "query": "stabilisers"
+            "weekly": 39,
+            "query": "rv stabilizer jacks",
+            "rv_qualified": true
           },
           "makers": []
         },
@@ -120,8 +123,9 @@
             "rv leveling system error"
           ],
           "demand": {
-            "weekly": 28,
-            "query": "hydraulic levelers"
+            "weekly": 23,
+            "query": "rv leveling jacks",
+            "rv_qualified": true
           },
           "makers": []
         },
@@ -147,7 +151,8 @@
           ],
           "demand": {
             "weekly": 88,
-            "query": "equalizer hitch"
+            "query": "equalizer hitch",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -171,8 +176,9 @@
             "anti sway bar rv"
           ],
           "demand": {
-            "weekly": 596,
-            "query": "sway bar"
+            "weekly": 66,
+            "query": "sway control",
+            "rv_qualified": false
           },
           "makers": [
             {
@@ -203,7 +209,8 @@
           ],
           "demand": {
             "weekly": 44,
-            "query": "safety chains"
+            "query": "safety chains",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -227,8 +234,9 @@
             "breakaway cable replacement"
           ],
           "demand": {
-            "weekly": 54,
-            "query": "breakaway cable"
+            "weekly": 28,
+            "query": "breakaway switch",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -257,7 +265,8 @@
           ],
           "demand": {
             "weekly": 106,
-            "query": "trailer brakes"
+            "query": "trailer brakes",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -285,7 +294,8 @@
           ],
           "demand": {
             "weekly": 539,
-            "query": "brake controller"
+            "query": "brake controller",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -312,7 +322,8 @@
           ],
           "demand": {
             "weekly": 10632,
-            "query": "axle"
+            "query": "axle",
+            "rv_qualified": false
           },
           "makers": [
             {
@@ -343,8 +354,9 @@
             "wet bolt kit rv"
           ],
           "demand": {
-            "weekly": 82061,
-            "query": "suspension"
+            "weekly": 325,
+            "query": "leaf springs",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -372,8 +384,9 @@
             "grease seal leaking trailer"
           ],
           "demand": {
-            "weekly": 329077,
-            "query": "races"
+            "weekly": 276,
+            "query": "wheel bearings",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -403,8 +416,9 @@
             "rv tire age"
           ],
           "demand": {
-            "weekly": 161286,
-            "query": "tires"
+            "weekly": 73,
+            "query": "rv tires",
+            "rv_qualified": true
           },
           "makers": [
             {
@@ -436,8 +450,9 @@
             "best rv tire monitor"
           ],
           "demand": {
-            "weekly": 3203,
-            "query": "tpms"
+            "weekly": 21,
+            "query": "rv tire pressure monitoring",
+            "rv_qualified": true
           },
           "makers": [
             {
@@ -474,7 +489,8 @@
           ],
           "demand": {
             "weekly": 470,
-            "query": "lug nuts"
+            "query": "lug nuts",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -524,7 +540,8 @@
           ],
           "demand": {
             "weekly": 60060,
-            "query": "kingpin"
+            "query": "kingpin",
+            "rv_qualified": false
           },
           "makers": [
             {
@@ -555,7 +572,8 @@
           ],
           "demand": {
             "weekly": 631,
-            "query": "tow bar"
+            "query": "tow bar",
+            "rv_qualified": false
           },
           "makers": [
             {
@@ -591,7 +609,8 @@
           ],
           "demand": {
             "weekly": 566,
-            "query": "air suspension"
+            "query": "air suspension",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -678,7 +697,8 @@
           ],
           "demand": {
             "weekly": 1087,
-            "query": "power cord"
+            "query": "power cord",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -729,8 +749,9 @@
             "pedestal miswired"
           ],
           "demand": {
-            "weekly": 90372,
-            "query": "ems"
+            "weekly": 49,
+            "query": "rv surge protector",
+            "rv_qualified": true
           },
           "makers": []
         },
@@ -756,8 +777,9 @@
             "generator not powering coach"
           ],
           "demand": {
-            "weekly": 57531,
-            "query": "ats"
+            "weekly": 1222,
+            "query": "transfer switch",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -785,8 +807,9 @@
             "distribution panel wiring"
           ],
           "demand": {
-            "weekly": 193,
-            "query": "distribution panel"
+            "weekly": 177,
+            "query": "breaker panel",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -815,8 +838,9 @@
             "lithium charge profile converter"
           ],
           "demand": {
-            "weekly": 1420345,
-            "query": "converter"
+            "weekly": 29,
+            "query": "rv converter",
+            "rv_qualified": true
           },
           "makers": [
             {
@@ -858,8 +882,9 @@
             "pure sine vs modified sine rv"
           ],
           "demand": {
-            "weekly": 16300,
-            "query": "inverter"
+            "weekly": 34,
+            "query": "rv inverter",
+            "rv_qualified": true
           },
           "makers": [
             {
@@ -916,8 +941,9 @@
             "magnum remote panel not working"
           ],
           "demand": {
-            "weekly": 184,
-            "query": "xantrex"
+            "weekly": 71,
+            "query": "inverter charger",
+            "rv_qualified": false
           },
           "makers": [
             {
@@ -956,8 +982,9 @@
             "agm vs lithium rv"
           ],
           "demand": {
-            "weekly": 528,
-            "query": "deep cycle"
+            "weekly": 94,
+            "query": "house battery",
+            "rv_qualified": false
           },
           "makers": [
             {
@@ -993,8 +1020,9 @@
             "battery draining while stored"
           ],
           "demand": {
-            "weekly": 33338,
-            "query": "kill switch"
+            "weekly": 252,
+            "query": "battery disconnect",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -1020,8 +1048,9 @@
             "state of charge"
           ],
           "demand": {
-            "weekly": 5741,
-            "query": "shunt"
+            "weekly": 296,
+            "query": "battery monitor",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -1049,8 +1078,9 @@
             "mc4 connector corrosion"
           ],
           "demand": {
-            "weekly": 1333161,
-            "query": "solar"
+            "weekly": 70,
+            "query": "rv solar panels",
+            "rv_qualified": true
           },
           "makers": [
             {
@@ -1102,8 +1132,9 @@
             "solar controller not charging"
           ],
           "demand": {
-            "weekly": 1872,
-            "query": "mppt"
+            "weekly": 479,
+            "query": "solar charge controller",
+            "rv_qualified": false
           },
           "makers": [
             {
@@ -1145,7 +1176,8 @@
           ],
           "demand": {
             "weekly": 1251,
-            "query": "fuses"
+            "query": "fuses",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -1173,7 +1205,8 @@
           ],
           "demand": {
             "weekly": 4699,
-            "query": "usb port"
+            "query": "usb port",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -1201,8 +1234,9 @@
             "outlet no power"
           ],
           "demand": {
-            "weekly": 1023,
-            "query": "gfci outlet"
+            "weekly": 554,
+            "query": "receptacles",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -1231,8 +1265,9 @@
             "porch light not working"
           ],
           "demand": {
-            "weekly": 89354,
-            "query": "led lights"
+            "weekly": 1784,
+            "query": "light fixtures",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -1262,7 +1297,8 @@
           ],
           "demand": {
             "weekly": 1046,
-            "query": "wiring harness"
+            "query": "wiring harness",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -1289,8 +1325,9 @@
             "generator starts then dies"
           ],
           "demand": {
-            "weekly": 1303119,
-            "query": "generator"
+            "weekly": 109,
+            "query": "rv generator",
+            "rv_qualified": true
           },
           "makers": [
             {
@@ -1349,7 +1386,8 @@
           ],
           "demand": {
             "weekly": 898748,
-            "query": "control"
+            "query": "control",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -1460,8 +1498,9 @@
             "tank sag"
           ],
           "demand": {
-            "weekly": 56,
-            "query": "fresh water tank"
+            "weekly": 20,
+            "query": "rv fresh water tank",
+            "rv_qualified": true
           },
           "makers": []
         },
@@ -1513,8 +1552,9 @@
             "regulator failed"
           ],
           "demand": {
-            "weekly": 1091,
-            "query": "pressure regulator"
+            "weekly": 55,
+            "query": "rv water pressure regulator",
+            "rv_qualified": true
           },
           "makers": []
         },
@@ -1539,8 +1579,9 @@
             "filter housing leaking"
           ],
           "demand": {
-            "weekly": 75530,
-            "query": "water filter"
+            "weekly": 87,
+            "query": "inline water filter",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -1570,8 +1611,9 @@
             "rv pump surging"
           ],
           "demand": {
-            "weekly": 3678,
-            "query": "water pump"
+            "weekly": 78,
+            "query": "rv water pump",
+            "rv_qualified": true
           },
           "makers": [
             {
@@ -1602,8 +1644,9 @@
             "pump check valve stuck"
           ],
           "demand": {
-            "weekly": 2919,
-            "query": "strainer"
+            "weekly": 51,
+            "query": "pump strainer",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -1627,8 +1670,9 @@
             "water pump cycling fix"
           ],
           "demand": {
-            "weekly": 1579,
-            "query": "accumulator"
+            "weekly": 54,
+            "query": "accumulator tank",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -1657,7 +1701,8 @@
           ],
           "demand": {
             "weekly": 21326,
-            "query": "pex"
+            "query": "pex",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -1683,8 +1728,9 @@
             "low point drain leaking"
           ],
           "demand": {
-            "weekly": 25,
-            "query": "low point drain"
+            "weekly": 22,
+            "query": "drain valves",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -1713,8 +1759,9 @@
             "rv water heater leaking"
           ],
           "demand": {
-            "weekly": 38051,
-            "query": "suburban"
+            "weekly": 123,
+            "query": "rv water heater",
+            "rv_qualified": true
           },
           "makers": [
             {
@@ -1759,8 +1806,9 @@
             "tankless water heater freeze"
           ],
           "demand": {
-            "weekly": 210938,
-            "query": "on demand"
+            "weekly": 123,
+            "query": "rv water heater",
+            "rv_qualified": true
           },
           "makers": [
             {
@@ -1802,8 +1850,9 @@
             "anode rod ate away"
           ],
           "demand": {
-            "weekly": 4112,
-            "query": "anode"
+            "weekly": 75,
+            "query": "water heater anode rod",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -1829,7 +1878,8 @@
           ],
           "demand": {
             "weekly": 53,
-            "query": "bypass kit"
+            "query": "bypass kit",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -1859,7 +1909,8 @@
           ],
           "demand": {
             "weekly": 14861,
-            "query": "faucets"
+            "query": "faucets",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -1885,8 +1936,9 @@
             "shower pan crack repair"
           ],
           "demand": {
-            "weekly": 33764,
-            "query": "shower drain"
+            "weekly": 24,
+            "query": "rv shower pan",
+            "rv_qualified": true
           },
           "makers": []
         },
@@ -1912,7 +1964,8 @@
           ],
           "demand": {
             "weekly": 29,
-            "query": "outside shower"
+            "query": "outside shower",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -1941,7 +1994,8 @@
           ],
           "demand": {
             "weekly": 2372,
-            "query": "antifreeze"
+            "query": "antifreeze",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -2000,8 +2054,9 @@
             "rv toilet seal replacement"
           ],
           "demand": {
-            "weekly": 160725,
-            "query": "toilet"
+            "weekly": 305,
+            "query": "rv toilet",
+            "rv_qualified": true
           },
           "makers": [
             {
@@ -2039,8 +2094,9 @@
             "macerator toilet clogged"
           ],
           "demand": {
-            "weekly": 160725,
-            "query": "toilet"
+            "weekly": 305,
+            "query": "rv toilet",
+            "rv_qualified": true
           },
           "makers": [
             {
@@ -2077,8 +2133,9 @@
             "composting toilet fan replacement"
           ],
           "demand": {
-            "weekly": 160725,
-            "query": "toilet"
+            "weekly": 305,
+            "query": "rv toilet",
+            "rv_qualified": true
           },
           "makers": [
             {
@@ -2115,8 +2172,9 @@
             "cassette toilet seal"
           ],
           "demand": {
-            "weekly": 7633,
-            "query": "cassette"
+            "weekly": 126,
+            "query": "cassette toilet",
+            "rv_qualified": false
           },
           "makers": [
             {
@@ -2150,8 +2208,9 @@
             "holding tank crack"
           ],
           "demand": {
-            "weekly": 1517,
-            "query": "black tank"
+            "weekly": 44,
+            "query": "rv black tank",
+            "rv_qualified": true
           },
           "makers": [
             {
@@ -2185,7 +2244,8 @@
           ],
           "demand": {
             "weekly": 81,
-            "query": "grey tank"
+            "query": "grey tank",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -2215,7 +2275,8 @@
           ],
           "demand": {
             "weekly": 162,
-            "query": "gate valves"
+            "query": "gate valves",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -2263,7 +2324,8 @@
           ],
           "demand": {
             "weekly": 45,
-            "query": "electric valve"
+            "query": "electric valve",
+            "rv_qualified": false
           },
           "makers": [
             {
@@ -2297,7 +2359,8 @@
           ],
           "demand": {
             "weekly": 134,
-            "query": "rv sewer hose"
+            "query": "rv sewer hose",
+            "rv_qualified": true
           },
           "makers": [
             {
@@ -2327,8 +2390,9 @@
             "macerator pump not working"
           ],
           "demand": {
-            "weekly": 733,
-            "query": "macerator"
+            "weekly": 28,
+            "query": "rv macerator pump",
+            "rv_qualified": true
           },
           "makers": []
         },
@@ -2379,7 +2443,8 @@
           ],
           "demand": {
             "weekly": 27,
-            "query": "level gauges"
+            "query": "level gauges",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -2406,8 +2471,9 @@
             "tank digester"
           ],
           "demand": {
-            "weekly": 338,
-            "query": "digester"
+            "weekly": 25,
+            "query": "tank chemicals",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -2434,8 +2500,9 @@
             "tank vent blocked"
           ],
           "demand": {
-            "weekly": 949,
-            "query": "aav"
+            "weekly": 79,
+            "query": "vent stack",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -2462,8 +2529,9 @@
             "shower drain smell"
           ],
           "demand": {
-            "weekly": 33669,
-            "query": "sink drain"
+            "weekly": 498,
+            "query": "p trap",
+            "rv_qualified": false
           },
           "makers": []
         }
@@ -2500,8 +2568,9 @@
             "sail switch rv furnace"
           ],
           "demand": {
-            "weekly": 24549,
-            "query": "furnace"
+            "weekly": 25,
+            "query": "rv furnace",
+            "rv_qualified": true
           },
           "makers": [
             {
@@ -2537,7 +2606,8 @@
           ],
           "demand": {
             "weekly": 22,
-            "query": "sail switch"
+            "query": "sail switch",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -2564,8 +2634,9 @@
             "furnace lockout reset"
           ],
           "demand": {
-            "weekly": 2279,
-            "query": "control board"
+            "weekly": 27,
+            "query": "furnace control board",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -2593,8 +2664,9 @@
             "rv duct disconnected"
           ],
           "demand": {
-            "weekly": 6127,
-            "query": "registers"
+            "weekly": 71,
+            "query": "floor vents",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -2623,8 +2695,9 @@
             "ac runs but not cold"
           ],
           "demand": {
-            "weekly": 137932,
-            "query": "air conditioner"
+            "weekly": 345,
+            "query": "rv ac",
+            "rv_qualified": true
           },
           "makers": [
             {
@@ -2663,8 +2736,9 @@
             "hard start capacitor rv"
           ],
           "demand": {
-            "weekly": 176,
-            "query": "run capacitor"
+            "weekly": 171,
+            "query": "air conditioner capacitor",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -2714,8 +2788,9 @@
             "ac condensate drain"
           ],
           "demand": {
-            "weekly": 1761,
-            "query": "condensate"
+            "weekly": 230,
+            "query": "ac drain",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -2741,7 +2816,8 @@
           ],
           "demand": {
             "weekly": 38589,
-            "query": "heat pump"
+            "query": "heat pump",
+            "rv_qualified": false
           },
           "makers": [
             {
@@ -2779,8 +2855,9 @@
             "upgrade rv thermostat"
           ],
           "demand": {
-            "weekly": 76205,
-            "query": "thermostat"
+            "weekly": 31,
+            "query": "rv thermostat",
+            "rv_qualified": true
           },
           "makers": [
             {
@@ -2814,8 +2891,9 @@
             "maxxair fan repair"
           ],
           "demand": {
-            "weekly": 191,
-            "query": "maxxair"
+            "weekly": 22,
+            "query": "roof vent fan",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -2843,8 +2921,9 @@
             "rv vent crank"
           ],
           "demand": {
-            "weekly": 297,
-            "query": "roof vent"
+            "weekly": 24,
+            "query": "ceiling vents",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -2871,8 +2950,9 @@
             "carbon monoxide heater rv"
           ],
           "demand": {
-            "weekly": 284354,
-            "query": "portable"
+            "weekly": 23,
+            "query": "rv portable",
+            "rv_qualified": true
           },
           "makers": []
         },
@@ -2900,7 +2980,8 @@
           ],
           "demand": {
             "weekly": 40927,
-            "query": "dehumidifier"
+            "query": "dehumidifier",
+            "rv_qualified": false
           },
           "makers": []
         }
@@ -2936,8 +3017,9 @@
             "rv roof reseal cost"
           ],
           "demand": {
-            "weekly": 7131,
-            "query": "tpo"
+            "weekly": 24,
+            "query": "rv roof membrane",
+            "rv_qualified": true
           },
           "makers": []
         },
@@ -2965,8 +3047,9 @@
             "silicone on rv roof"
           ],
           "demand": {
-            "weekly": 337,
-            "query": "roof sealant"
+            "weekly": 126,
+            "query": "rv roof sealant",
+            "rv_qualified": true
           },
           "makers": []
         },
@@ -2992,8 +3075,9 @@
             "roof recoat bubbles"
           ],
           "demand": {
-            "weekly": 588,
-            "query": "roof coating"
+            "weekly": 108,
+            "query": "rv roof coating",
+            "rv_qualified": true
           },
           "makers": []
         },
@@ -3019,8 +3103,9 @@
             "skylight replacement"
           ],
           "demand": {
-            "weekly": 47703,
-            "query": "skylight"
+            "weekly": 29,
+            "query": "rv skylight",
+            "rv_qualified": true
           },
           "makers": [
             {
@@ -3054,8 +3139,9 @@
             "schwintek motor replacement"
           ],
           "demand": {
-            "weekly": 124,
-            "query": "slide out"
+            "weekly": 36,
+            "query": "slide-out",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -3084,7 +3170,8 @@
           ],
           "demand": {
             "weekly": 46,
-            "query": "wiper seal"
+            "query": "wiper seal",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -3138,8 +3225,9 @@
             "fogged rv windows"
           ],
           "demand": {
-            "weekly": 34081319,
-            "query": "windows"
+            "weekly": 73,
+            "query": "rv windows",
+            "rv_qualified": true
           },
           "makers": []
         },
@@ -3167,8 +3255,9 @@
             "blinds rv"
           ],
           "demand": {
-            "weekly": 1205,
-            "query": "window shades"
+            "weekly": 39,
+            "query": "rv window shades",
+            "rv_qualified": true
           },
           "makers": []
         },
@@ -3198,7 +3287,8 @@
           ],
           "demand": {
             "weekly": 329,
-            "query": "entry door"
+            "query": "entry door",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -3225,8 +3315,9 @@
             "weatherstrip replacement rv"
           ],
           "demand": {
-            "weekly": 450605,
-            "query": "door"
+            "weekly": 105,
+            "query": "rv door",
+            "rv_qualified": true
           },
           "makers": []
         },
@@ -3253,8 +3344,9 @@
             "storage door leaking"
           ],
           "demand": {
-            "weekly": 47311,
-            "query": "baggage"
+            "weekly": 49,
+            "query": "rv baggage",
+            "rv_qualified": true
           },
           "makers": []
         },
@@ -3282,8 +3374,9 @@
             "sidewall bubble"
           ],
           "demand": {
-            "weekly": 175,
-            "query": "filon"
+            "weekly": 43,
+            "query": "body panels",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -3310,8 +3403,9 @@
             "decal cracking"
           ],
           "demand": {
-            "weekly": 224206,
-            "query": "graphics"
+            "weekly": 33,
+            "query": "rv decals",
+            "rv_qualified": true
           },
           "makers": []
         },
@@ -3337,8 +3431,9 @@
             "rodents in rv underbelly"
           ],
           "demand": {
-            "weekly": 1233,
-            "query": "coroplast"
+            "weekly": 24,
+            "query": "rv underbelly",
+            "rv_qualified": true
           },
           "makers": []
         },
@@ -3363,8 +3458,9 @@
             "trim insert rv"
           ],
           "demand": {
-            "weekly": 22,
-            "query": "wheel trim"
+            "weekly": 20,
+            "query": "fender skirts",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -3391,8 +3487,9 @@
             "bumper rust"
           ],
           "demand": {
-            "weekly": 31010,
-            "query": "bumper"
+            "weekly": 25,
+            "query": "rv bumper",
+            "rv_qualified": true
           },
           "makers": [
             {
@@ -3425,8 +3522,9 @@
             "steps sagging"
           ],
           "demand": {
-            "weekly": 105,
-            "query": "rv steps"
+            "weekly": 23,
+            "query": "entry steps",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -3455,8 +3553,9 @@
             "awning arm bent"
           ],
           "demand": {
-            "weekly": 5072,
-            "query": "awning"
+            "weekly": 313,
+            "query": "rv awning",
+            "rv_qualified": true
           },
           "makers": [
             {
@@ -3499,7 +3598,8 @@
           ],
           "demand": {
             "weekly": 77,
-            "query": "sun blocker"
+            "query": "sun blocker",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -3524,8 +3624,9 @@
             "roof ladder repair"
           ],
           "demand": {
-            "weekly": 107838,
-            "query": "ladder"
+            "weekly": 23,
+            "query": "rv ladder",
+            "rv_qualified": true
           },
           "makers": []
         },
@@ -3554,8 +3655,9 @@
             "led clearance light"
           ],
           "demand": {
-            "weekly": 739,
-            "query": "porch light"
+            "weekly": 117,
+            "query": "exterior lighting",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -3582,8 +3684,9 @@
             "rear camera install rv"
           ],
           "demand": {
-            "weekly": 352989,
-            "query": "backup"
+            "weekly": 32,
+            "query": "rv backup",
+            "rv_qualified": true
           },
           "makers": []
         },
@@ -3667,8 +3770,9 @@
             "rv fridge works on propane not electric"
           ],
           "demand": {
-            "weekly": 41071,
-            "query": "refrigerator"
+            "weekly": 457,
+            "query": "rv refrigerator",
+            "rv_qualified": true
           },
           "makers": [
             {
@@ -3705,8 +3809,9 @@
             "rv fridge low voltage"
           ],
           "demand": {
-            "weekly": 41071,
-            "query": "refrigerator"
+            "weekly": 457,
+            "query": "rv refrigerator",
+            "rv_qualified": true
           },
           "makers": [
             {
@@ -3778,8 +3883,9 @@
             "rv cooktop igniter"
           ],
           "demand": {
-            "weekly": 349027,
-            "query": "range"
+            "weekly": 5454,
+            "query": "cooktop",
+            "rv_qualified": false
           },
           "makers": [
             {
@@ -3818,8 +3924,9 @@
             "convection microwave rv"
           ],
           "demand": {
-            "weekly": 93316,
-            "query": "microwave"
+            "weekly": 36,
+            "query": "rv microwave",
+            "rv_qualified": true
           },
           "makers": []
         },
@@ -3846,7 +3953,8 @@
           ],
           "demand": {
             "weekly": 910,
-            "query": "range hood"
+            "query": "range hood",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -3872,8 +3980,9 @@
             "splendide vented vs ventless"
           ],
           "demand": {
-            "weekly": 47626,
-            "query": "washer"
+            "weekly": 90,
+            "query": "rv washer",
+            "rv_qualified": true
           },
           "makers": [
             {
@@ -3903,8 +4012,9 @@
             "fridge water line frozen"
           ],
           "demand": {
-            "weekly": 6888,
-            "query": "ice maker"
+            "weekly": 5085,
+            "query": "water dispenser",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -3932,8 +4042,9 @@
             "dinette bed conversion"
           ],
           "demand": {
-            "weekly": 455135,
-            "query": "furniture"
+            "weekly": 361,
+            "query": "rv furniture",
+            "rv_qualified": true
           },
           "makers": []
         },
@@ -3962,7 +4073,8 @@
           ],
           "demand": {
             "weekly": 214156,
-            "query": "bed"
+            "query": "bed",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -3990,8 +4102,9 @@
             "cabinet doors opening while driving"
           ],
           "demand": {
-            "weekly": 71,
-            "query": "drawer slide"
+            "weekly": 27,
+            "query": "cabinet latch",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -4019,8 +4132,9 @@
             "vinyl flooring replacement rv"
           ],
           "demand": {
-            "weekly": 137320,
-            "query": "carpet"
+            "weekly": 52188,
+            "query": "flooring",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -4048,8 +4162,9 @@
             "rv satellite setup"
           ],
           "demand": {
-            "weekly": 8909265,
-            "query": "tv"
+            "weekly": 76,
+            "query": "rv tv",
+            "rv_qualified": true
           },
           "makers": []
         },
@@ -4073,8 +4188,9 @@
             "rv central vacuum not working"
           ],
           "demand": {
-            "weekly": 341984,
-            "query": "vacuum"
+            "weekly": 297,
+            "query": "central vacuum",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -4159,7 +4275,8 @@
           ],
           "demand": {
             "weekly": 464524,
-            "query": "engine"
+            "query": "engine",
+            "rv_qualified": false
           },
           "makers": [
             {
@@ -4194,8 +4311,9 @@
             "fan clutch rv"
           ],
           "demand": {
-            "weekly": 8834,
-            "query": "radiator"
+            "weekly": 1181,
+            "query": "cooling system",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -4220,8 +4338,9 @@
             "air filter motorhome"
           ],
           "demand": {
-            "weekly": 68227,
-            "query": "air filter"
+            "weekly": 936,
+            "query": "serpentine belt",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -4246,8 +4365,9 @@
             "regen problems motorhome"
           ],
           "demand": {
-            "weekly": 54552,
-            "query": "def"
+            "weekly": 18460,
+            "query": "emissions",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -4274,7 +4394,8 @@
           ],
           "demand": {
             "weekly": 144,
-            "query": "air brakes"
+            "query": "air brakes",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -4299,8 +4420,9 @@
             "compressor governor"
           ],
           "demand": {
-            "weekly": 7356,
-            "query": "air compressor"
+            "weekly": 344,
+            "query": "air system",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -4325,8 +4447,9 @@
             "steering stabilizer rv"
           ],
           "demand": {
-            "weekly": 21724,
-            "query": "alignment"
+            "weekly": 13932,
+            "query": "steering",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -4351,8 +4474,9 @@
             "ride height valve"
           ],
           "demand": {
-            "weekly": 174394,
-            "query": "springs"
+            "weekly": 23,
+            "query": "rv suspension",
+            "rv_qualified": true
           },
           "makers": []
         },
@@ -4378,8 +4502,9 @@
             "chassis battery drain"
           ],
           "demand": {
-            "weekly": 59578,
-            "query": "starter"
+            "weekly": 3366,
+            "query": "alternator",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -4405,7 +4530,8 @@
           ],
           "demand": {
             "weekly": 31,
-            "query": "starting battery"
+            "query": "starting battery",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -4432,7 +4558,8 @@
           ],
           "demand": {
             "weekly": 23,
-            "query": "dash ac"
+            "query": "dash ac",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -4456,8 +4583,9 @@
             "turbo actuator rv"
           ],
           "demand": {
-            "weekly": 467220,
-            "query": "turbo"
+            "weekly": 20027,
+            "query": "exhaust",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -4482,8 +4610,9 @@
             "fuel gauge wrong"
           ],
           "demand": {
-            "weekly": 1644,
-            "query": "fuel pump"
+            "weekly": 1035,
+            "query": "fuel system",
+            "rv_qualified": false
           },
           "makers": []
         },
@@ -4509,7 +4638,8 @@
           ],
           "demand": {
             "weekly": 799,
-            "query": "tyre pressure"
+            "query": "tyre pressure",
+            "rv_qualified": false
           },
           "makers": []
         }
