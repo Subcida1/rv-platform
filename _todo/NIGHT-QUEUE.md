@@ -1193,6 +1193,18 @@ dispatcher's generated prompt is the thing to check before blaming the lane.
 
 **To collect:** `python3 scripts/validate-lane-replies.py` when the reply lands.
 
+### The 54 stale staged copies are re-staged
+
+`stage-for-bridge.py --check` → the checker prints the stale set; `stage-for-bridge.py $(cat stale)` re-stages
+them. **54 down to 1**, and the one left is `tools/weight-calculator.html`, which reports **"digest current"**
+alongside *"2 wording difference(s)"*. That is the tool's own two-pipeline problem — its docstring says the staged
+copy keeps the nav and footer and drops the head while `verify-content.digest` does the reverse, so a digest match
+with a wording difference is expected of the comparison rather than of the file. **Worth a closer look before it
+is trusted either way**, because it is the same shape as every other instrument failure tonight: a checker
+reporting a difference it cannot actually see.
+
+**Run `--check` before sending any bridge job, and before believing any reply.**
+
 ## Log
 
 - **00:5x** Queue opened. A1 and A2 confirmed by reading the stylesheet and counting element usage.
