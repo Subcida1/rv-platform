@@ -686,6 +686,40 @@ reported that **all of them and every cummins.com PDF fetched HTTP 200 for it**.
 intermittent or agent-specific, not a property of those pages, and `check-quotes.py`'s 7 remaining flags are its
 own fetch problem rather than the site's. **Worth knowing before treating those flags as a page defect again.**
 
+## P. The bearing review also came back NO, and it found the same classes (`2887a99`)
+
+Report: `/home/user/Documents/research/review-trailer-wheel-bearings.md`. **Six confirmed defects, all fixed**, and
+it fetched all seven cited documents and compared **all 44 bolded quotations character-for-character**, which no
+previous review has been able to do.
+
+**The two that matter most, both of them repeat offences:**
+
+- **C1: the page named the wrong document for its own quotation.** The grease specification was credited to the
+  service manual and appears only on the **E-Z Lube product flyer** — which the page's Sources block already
+  credited, so the page contradicted itself.
+- **C3: the same unsupported economic claim I cut from the macerator page hours earlier** — *"a mobile technician
+  is the cheaper route than a roadside repair."* No cost evidence, and I wrote it again on a new page.
+
+**Also fixed:** a quotation whose punctuation I had stripped (`noise, or "bumpy" rotation` became
+`noise, or bumpy rotation`, twice — nested marks break the checker, so the remedy is now stated as the maker's
+rather than quoted); two sentences defending our own sourcing, one using the same *"honest reading"* phrasing the
+generator review also flagged; Lippert's phrase *"whichever comes first"* attached to a Dexter interval; and a
+lede that said the makers publish no interval of their own, which the page's own sourced figures contradict.
+
+**And two safety-shaped SUSPECTED items, both fixed:** my gloss drew an inference about the seal order that the
+manual does not make, and my jacking note narrowed the maker's rule to the axle when the same sentence forbids the
+**suspension** as well.
+
+**LEFT UNDONE, deliberately, because they are additions rather than defects:** the review lists six omissions it
+would like the page to carry — where to jack, the grease-mixing caution, intervals for standard against oil
+bearings, how to tell which bearing you have from the axle itself, the seal-lip warning, and E-Z Lube's 8,000 lb
+limit. **Those are a v2 pass with their own sourcing, not fixes to this one**, and the two that are genuinely
+safety-relevant (where to jack, the seal-lip warning) should go first.
+
+**Neither page is verified yet, and neither should be marked so by this shift.** Both have now been written,
+reviewed, corrected and re-checked, but the corrections changed the text after the review — so the only honest
+state is `unverified` until a second pass reads the corrected pages. **That is the next content job.**
+
 ## Log
 
 - **00:5x** Queue opened. A1 and A2 confirmed by reading the stylesheet and counting element usage.
