@@ -2479,3 +2479,42 @@ a.tchip:focus-visible{outline:2px solid var(--b1,var(--brand));outline-offset:2p
 /* .btn-gb carries a gradient STROKE rather than a fill, so a background change
    would not read on it; its hover signal is the lift plus the glow. Recorded
    here because the next person will otherwise try to give it a background. */
+
+/* ============================================================
+   THE CARD LIFT BELONGS TO THINGS YOU CAN CLICK.
+
+   Ty, 2026-10-02: "we have elements that do that slight zoom+lift that aren't
+   even clickable." Measured rather than guessed, with a browser pass over all
+   67 pages that classified every lifting container three ways:
+
+       LINKED   0     an <a href> inside it covering 60%+ of the card, the
+                      honest stretched-link pattern
+       PARTIAL  159   a link inside it, but a small one
+       DEAD     214   no link in it at all
+
+   Zero used the honest pattern. The lift was therefore a promise the markup
+   could not keep on 214 containers, and ambiguous on another 159.
+
+   The fix is the PRINCIPLE, not the 214 instances: a container that is not
+   itself a link does not move. That needs no class added to any page, and it
+   cannot drift as pages are added, because a new div.card is inert by default
+   and a new a.card lifts by default.
+
+   Specificity note: `div.card:hover` is (0,2,1) against `.card:hover` at
+   (0,1,1), so this wins on specificity as well as on source order. The
+   resting border and shadow are restored explicitly, because the earlier
+   rules changed all three properties together.
+   ============================================================ */
+@media(hover:hover){
+  a.card:hover,a.cat-card:hover,a.big-card:hover,a.deck-card:hover,
+  a.guide-card:hover,a.listing-card:hover,a.state-card:hover{
+    transform:translateY(-2px);border-color:var(--border-2);box-shadow:var(--shadow)
+  }
+  div.card:hover,div.cat-card:hover,div.tool-card:hover,div.deck-card:hover,
+  div.guide-card:hover,div.big-card:hover,div.listing-card:hover{
+    transform:none;border-color:var(--border);box-shadow:none
+  }
+  /* The decorative dot on a category card is part of the same promise, so it
+     stops with it. Kept on the anchor form, where the card really goes. */
+  div.cat-card:hover::after{transform:none}
+}

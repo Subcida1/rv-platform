@@ -220,19 +220,21 @@ where the site's value is."
 - **The knives are named.** A serious-injury warning in the maker's own manual is not optional context on a page
   that tells a reader to open things.
 
-## 12. Open decisions for Ty — this is the gate
+## 12. Decided 2026-10-02: Ty's answer to one, and the three he delegated
 
-1. **Scope: macerator only, or both toilets in one page?** I recommend macerator first, as spec'd. The vacuum
-   cluster is bigger in owner threads, but every VacuFlush manual we can cite is marine-facing, so the vacuum page
-   needs a disclosure sentence or a better source first. **The cost of my choice:** the larger owner complaint
-   waits for the second page. **The alternative:** one combined page now, with the provenance caveat written in
-   — faster coverage, muddier sourcing.
-2. **The 30-amp versus 40-amp conflict.** My recommendation: state both, each attached to its manual and revision,
-   later revision named as later. If you would rather cut it, the page can avoid the figure entirely — but then a
-   reader sizing a circuit gets nothing.
-3. **The Dometic 8000 Series row (M21).** Including it makes the page two makers instead of one and widens the
-   page to Dometic's macerator line. My recommendation: leave it out of v1, and let the vacuum page carry
-   Dometic. One maker, one voice, a shorter page.
-4. **Does the page get the tongue-jack treatment for photographs?** You said you would feed photos for the tongue
-   jack. A macerator toilet is behind a bowl valve and nobody photographs that — so my recommendation is no photos
-   for this page, and to keep the tongue jack as the photographed one.
+1. **Scope: MACERATOR ONLY, and no boat content anywhere.** His words: *"macerators? or whatever in RVs, we
+   dont do boat stuff."* The marine-sourced VacuFlush page is out, and so is any future page resting on boat
+   documentation. The vacuum toilet stays unbuilt until an RV-hosted Dometic VacuFlush manual is found. This
+   settles the deferral on the strongest available ground: not "the sourcing is awkward" but "we do not do boat
+   stuff."
+2. **The 30-amp against 40-amp conflict: Ty left it to me, and I am taking both.** Each figure names its manual
+   and revision, and the later revision is named as the later one. The page does not average the two and does not
+   pick a winner it cannot justify.
+3. **The Dometic 8000 Series row (M21): out of v1.** My call, on one-maker-one-voice grounds. **The consequence,
+   stated rather than hidden:** a reader with a Dometic macerator gets no Dometic-specific section on this page.
+   The remedy is a Dometic sibling page afterwards, not a wider first page.
+4. **Photographs: none for this page.** Nothing about a macerator toilet can be photographed without opening a
+   sewage path. The tongue jack stays the photographed guide.
+
+**What this changes in the build:** M21 is dropped from the claims list, the page is Thetford throughout, and
+every amp figure in it carries its document and revision. Nothing else in this spec moves.
