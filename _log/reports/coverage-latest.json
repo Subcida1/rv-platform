@@ -1,6 +1,6 @@
 {
   "site": "sc-domain:originrv.com",
-  "generated": "2026-10-01T21:46:33",
+  "generated": "2026-10-02T00:29:20",
   "urls": [
     {
       "url": "https://originrv.com/",
@@ -67,7 +67,7 @@
     },
     {
       "url": "https://originrv.com/directory/index.html",
-      "coverageState": "Discovered - currently not indexed",
+      "coverageState": "URL is unknown to Google",
       "verdict": "NEUTRAL",
       "lastCrawlTime": "",
       "googleCanonical": "",
@@ -166,7 +166,7 @@
     },
     {
       "url": "https://originrv.com/guides/index.html",
-      "coverageState": "Discovered - currently not indexed",
+      "coverageState": "URL is unknown to Google",
       "verdict": "NEUTRAL",
       "lastCrawlTime": "",
       "googleCanonical": "",
@@ -260,7 +260,7 @@
       "verdict": "PASS",
       "lastCrawlTime": "2026-09-23T05:45:25Z",
       "googleCanonical": "https://originrv.com/guides/rv-furnace-not-working.html",
-      "userCanonical": "https://originrv.com/guides/rv-furnace-not-working.html",
+      "userCanonical": "",
       "robotsTxtState": "ALLOWED"
     },
     {
@@ -512,7 +512,7 @@
       "verdict": "PASS",
       "lastCrawlTime": "2026-09-23T16:14:24Z",
       "googleCanonical": "https://originrv.com/manuals/index.html",
-      "userCanonical": "https://originrv.com/manuals/index.html",
+      "userCanonical": "",
       "robotsTxtState": "ALLOWED"
     },
     {
@@ -579,17 +579,8 @@
       "robotsTxtState": "ALLOWED"
     },
     {
-      "url": "https://originrv.com/signin.html",
-      "coverageState": "Discovered - currently not indexed",
-      "verdict": "NEUTRAL",
-      "lastCrawlTime": "",
-      "googleCanonical": "",
-      "userCanonical": "",
-      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
-    },
-    {
       "url": "https://originrv.com/tools/index.html",
-      "coverageState": "Discovered - currently not indexed",
+      "coverageState": "URL is unknown to Google",
       "verdict": "NEUTRAL",
       "lastCrawlTime": "",
       "googleCanonical": "",
