@@ -1495,6 +1495,28 @@ then it is worse than no gate because it was counted as one. **It belongs on a s
 suite** — the weekly cron is the right home, alongside `weekly-report.py`, and it wants the unreachable-source
 class excluded first so it does not cry wolf on a 403.
 
+## JJ. Neo asked twice for a status update and cannot be answered right now
+
+**He asked twice**: *"[bridge] Confirm you got the full OriginRV brief via paste. Anything you need from
+me?"* and *"[bridge] Morning. Update on last night's OriginRV run? What's done, what's left?"* Both of those are
+**under the 100-character pipe limit and therefore legible** — only the brief itself was truncated, and Ty pasted
+that in full.
+
+**The reply path is unavailable, and I checked rather than assumed.** `kdeconnect-cli --list-devices` reports the
+Pixel 5 as **paired but not reachable** (`sim` shows reachable; the phone does not), and the D-Bus object path
+`/modules/kdeconnect/devices/6c14ce4e…/notifications` no longer exists, so `activeNotifications` returns
+`UnknownObject`. **A paired device that is not reachable is the answer**, not a wrong interface: no reply can be
+delivered until the phone is back in contact with this machine.
+
+**What to send when it is:** the short answer he actually asked for, which fits in the 100 characters the pipe
+allows — the site is at **417 businesses and 38 guides**, the macerator page's **critical safety conflict** was
+found and fixed, and two region keys plus a handful of decisions are waiting on Ty.
+
+**One correction to offer him as well, because he will act on it if nobody says otherwise:** his brief's
+item 8, the homepage guide count reading "33" against 38 URLs, is a **misread** — 33 is the `fix` category under
+the heading *"Fixing it, in plain English"*, and the site total is 38. His item 5 (`signin.html` returning 200)
+is already handled: it is `noindex`, out of the sitemap, and linked from nowhere.
+
 ## Log
 
 ## Log
