@@ -1441,6 +1441,29 @@ predecessor once bold/italic tags and quotation marks are ignored** — no word 
 `rv-slide-out-not-working` 10 quotes, all present; `trailer-brakes-required` 7 quotes against 11 sources with
 **1 source unreachable** — a warning to verify by hand, not yet a finding.
 
+## HH. I told Ty the generator page doesn't link the fault guide. It does, and my probe was wrong.
+
+**Correcting my own claim from the spec-decision reply.** I said spec decision 4 was only half-shipped — the weight
+calculator linked, **the generator fault guide not**. That is wrong.
+
+**It is linked twice**, in the page's own **Related guides** section:
+
+> *"If the generator is already fitted and misbehaving rather than being chosen, that is **the generator fault
+> guide**."*
+
+and again as a button, *"Generator not charging"*. All three links in that block return **200**, and the page
+carries `<base href="/">`, so the relative hrefs resolve from the root.
+
+**Why I got it wrong, and it is the same failure as everything else today:** I searched for
+`href="/guides/rv-generator…"` **with a leading slash**. The page writes `href="guides/rv-generator…"` **without
+one**. My pattern didn't match a correct link and I read the miss as an absence. **A grep that returns nothing is
+evidence about my pattern, not about the page** — the rule is already in memory and I still walked into it,
+which is the second time tonight a wrong probe nearly produced a wrong "fix".
+
+**The first time was worse and it was caught:** Neo's "homepage says 33 guides" was the *fix group* count under
+the heading "Fixing it, in plain English", and changing it to 38 would have broken a correct number. Both cases
+are the same lesson and it now has two worked examples: **before acting on a flag, reproduce it by hand.**
+
 ## Log
 
 ## Log
