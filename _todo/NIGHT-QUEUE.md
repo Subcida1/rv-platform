@@ -234,6 +234,38 @@ stop relaying. **The lesson for the next chase: watch and report, do not nudge a
 unprompted.** He also says the full brief he typed is longer than 100 characters and asks for it to be pasted in
 rather than relayed, which is the right call for bulk context.
 
+## F. Competitor / wheelhouse mining. RESEARCH DONE, and the answer is mostly "we already have this"
+
+Report: `/home/user/Documents/research/wheelhouse-content-mining.md`. 15 sites read, 9 Tier-1 nuggets, each with a
+named maker document, 6 nuggets correctly marked UNSOURCEABLE and skipped.
+
+**Then each nugget was checked against our own library, because that is the first rung of the ladder and the
+mining report could not see it.** The method was a two-term regex per nugget across all 36 guides, and **that
+instrument is weak — it reported N1 as uncovered when the mechanism is plainly on our page**, so the numbers
+below were then confirmed by reading. Treat the regex result as a prompt to look, never as the finding.
+
+| nugget | verdict on reading |
+|---|---|
+| N1 tank panel: probes bridged, no reset button | **PARTLY OURS.** `rv-tank-sensors-reading-wrong` already explains that residue bridges the probes and cites Garnet and Lippert, better than any competitor page. What it does **not** carry is the reader's actual question: whether the panel has a reset button. It has **zero** occurrences of "reset". **Real, small gap** |
+| N2 auto-leveling can lift wheels off the ground | **NOT COVERED, but the mining report itself flags it as a HYPOTHESIS** with only one competitor page behind it. Our levelling guide says a stabiliser will not lift the coach, which is a different claim. **Verify against the Lippert manual before writing anything** |
+| N3 leveling and slide-out error codes | **ALREADY OURS** |
+| N4 toilet seal order and flow rate | **ALREADY OURS** — and the new macerator page is its sibling |
+| N5 water-heater anode on condition, not annually | **ALREADY OURS** |
+| N6 Dexter E-Z Lube vs Nev-R-Lube | **GENUINELY NOT COVERED.** No guide covers trailer bearing service at all; only two mention bearings in passing. **The clearest real gap of the nine**, with Dexter's own LIT-001-00 and LIT-002-00 named as sources |
+| N7 rooftop A/C: filter is the owner task | **ALREADY OURS** |
+| N8 Onan blink and fault codes | **PARTLY OURS** — `rv-generator-not-charging` already carries fault codes 14 and 15 from Cummins 983-0101. The full blink-code table is not there |
+| N9 generator sizing, locked rotor and derates | **PROBABLY NOT OURS.** The regex that said "covered" is the same weak instrument, and the guide it named is about fuses. **Re-check before believing it either way** |
+
+**What this is worth.** Five of nine nuggets were already published, and the one with the strongest competitor
+repetition (N1) is one where our page is already the better-sourced one. So the mining's real yield is **one clear
+new page (N6) and two small additions (N1, N8)** — not nine. That is the ladder working: check whether it already
+exists before writing it.
+
+**AND DO NOT EDIT THE VERIFIED PAGES OVERNIGHT FOR A ONE-LINE ADDITION.** `rv-tank-sensors-reading-wrong` is
+currently verified, and a content change resets that by design — so an N1 addition made at 01:30 would leave a
+6,000-word page unverified until somebody re-reviewed it. **The addition and its review belong in the same pass**,
+not split across a night.
+
 ## Log
 
 - **00:5x** Queue opened. A1 and A2 confirmed by reading the stylesheet and counting element usage.
