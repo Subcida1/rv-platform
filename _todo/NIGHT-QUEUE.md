@@ -850,6 +850,13 @@ symptoms": when an instrument names a place, READ ITS COORDINATES before buildin
 town called Airport Heights in Texas is not necessarily the one you have heard of, and `grep`ing the gazetteer
 for the name cost one command.
 
+**AND THE VALLEY BATCH IS DISPATCHED** (`task_31`), against the real cluster rather than the misread one, with
+two process fixes built in from this fire's mistakes: **the brief names all 92 already-listed Texas businesses**
+so the agent cannot spend its effort re-proposing them, and **it points at `_data/excluded.json`** so the settled
+exclusions are applied before candidates are proposed rather than after. It also asks for the published phone and
+says whether it came from visible text or only a `tel:` link, because a record needs one and the harvest tool is
+only 88 percent right.
+
 ## Log
 
 - **00:5x** Queue opened. A1 and A2 confirmed by reading the stylesheet and counting element usage.
