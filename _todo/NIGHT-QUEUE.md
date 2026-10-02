@@ -1168,6 +1168,31 @@ any document against them**, now named (98269 and iNDUS 210407).
 confirms all 16 quotations appear in the cited sources, so it is exact and stays as a quotation rather than being
 silently tidied.
 
+## AA. The bearings review was re-dispatched, and the stager found 54 stale copies on the way
+
+**`bridge-review.py --guides rv-trailer-wheel-bearings --round 2` dispatched `20261002-0904-…-REVIEW2`** to
+**`aistudio.google.com`** — a different lane from the one that reviewed the macerator page and from the subagents
+that reviewed this one, which is what the doctrine asks for.
+
+**Why it was re-dispatched at all:** the first bearings job **never completed**. Its reply file is not a review —
+it is a harness capture marked *"THE LANE DID NOT WRITE THIS FILE… settle: stalled"*, holding the lane's opening
+paragraph and a tool call and nothing else. So the bearing page has had two subagent passes and **no completed
+different-lane pass**, and the macerator episode just showed what that lane is good at: it found a safety
+instruction conflict that both subagent reviews walked past.
+
+**And the dispatcher found something worth its own note: 54 staged copies were out of date**, including
+`tools/weight-calculator.html` with seven wording differences. **A job using a stale copy hands its lane a page
+that is not the page on disk** — which is exactly the failure that made a lane's accurate quotations read as
+fabricated on 2026-09-26, and why `stage-for-bridge.py`'s own docstring says re-staging *"is not a step before a
+job goes out; it is a step before a job is believed."* The bearings page was re-staged before dispatch; **the
+other 53 are still stale and should be re-staged before anything else is sent.**
+
+**The job brief also carried the wrong tool name** — it told the lane to call `read_file` where the protocol
+provides `read_text_file`. The lane worked it out itself and still stalled, so it may be unrelated, but the
+dispatcher's generated prompt is the thing to check before blaming the lane.
+
+**To collect:** `python3 scripts/validate-lane-replies.py` when the reply lands.
+
 ## Log
 
 - **00:5x** Queue opened. A1 and A2 confirmed by reading the stylesheet and counting element usage.
