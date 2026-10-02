@@ -748,15 +748,33 @@ sentence is not in the research file, so I had no document text to check it agai
 verify is the defect this page was just reviewed for, so it waits for its own verification pass rather than going
 in on a reviewer's word.
 
-**STILL OUTSTANDING on these two pages, in priority order:**
+**UPDATE, fire #5: ALL TWELVE ITEMS ON THE BEARING PAGE ARE NOW ADDRESSED, and the last two were
+verified against source text rather than taken on a reviewer's word.**
 
-1. **Neither is verified, and that is now correct in a way it was not before.** Both have been written, reviewed,
-   corrected, re-corrected and re-checked, but **the corrections changed the text after each review**, so a
-   second pass has to read the corrected pages before either can be marked verified.
-2. **Two bearing omissions not yet added:** an interval for the other bearing types (standard greased, and
-   oil-lubricated hubs, whose heavy-duty oil clock is currently quoted without saying which axle it belongs to),
-   and the scope of the Nev-R-Lube replacement language plus the 8,000 lb limit's counterpart for Lippert.
-3. **The grease-mixing caution**, pending verification against the manual.
+- **The grease-mixing caution is in** (`b00969d`), the one deliberately held back last fire. Its source text was
+  in **the quote checker's own fetch cache** from the previous run, verbatim: *"Do not mix Lithium, calcium,
+  sodium or barium complex greases due to possible compatibility problems. When changing from one type of grease
+  to another, it is necessary to ensure all the old grease has been removed."* So the sentence that could not be
+  added safely last fire could be added safely once the document text was in hand. **That is the whole discipline
+  in one example: hold the claim, find the text, then add it.**
+- **The missing intervals for the other two bearing arrangements are in**, from the same cached document. A new
+  section names **plain greased bearings** (same twelve month or twelve thousand mile clock, but the hub comes
+  apart to be repacked) and **oil-lubricated hubs** (a different schedule entirely, with the maker's check
+  instruction quoted and the heavy-duty oil clock, *"at least once a year, or 100,000 miles"*). **The contrast is
+  the section's point: a greased hub is serviced more often than it is checked, and an oil hub is checked far more
+  often than it is serviced.**
+- **S3 closed** (`ef99046`): the Nev-R-Lube remedy language is now scoped to that system in both places, and the
+  second says plainly that a plain greased bearing with the same symptoms is a different job.
+- `check-quotes.py`: **38 quotations against 7 sources, every one present, none missing.**
+
+**BOTH VERIFICATION PASSES ARE NOW IN FLIGHT** (`task_26` bearing, `task_27` generator), and they are asked for
+the half that matters: **not just whether the corrections hold, but what the corrections broke or left
+half-done.** Every one of those edits was made in a hurry against prose a reader relies on, so the interesting
+question is whether a hurried fix introduced a new claim, a new contradiction, or a safety sequence that no longer
+reads in order.
+
+**The only item left after that is the state change itself**: if both verdicts are yes, both pages can finally be
+marked verified in the content manifest, which is the first time either would carry that.
 
 ## Log
 
