@@ -1297,6 +1297,41 @@ large tool result goes into the message box and will not send, so the result is 
 slices always arrive. My first instinct was to collapse it to one call, which would have traded a slow review for
 a silently empty one.
 
+## DD. The western Valley batch returned ZERO, and that is the finding
+
+**No listings were added, and none could honestly be.** The research pass covered Zapata and Starr counties,
+read all 97 existing listing names and cross-checked `excluded.json` before proposing anything, and came back
+with:
+
+- **Qualified candidates: 0.** No business in either county has a live own website carrying RV-repair evidence,
+  which is the settled standard.
+- **Possible but unverified: 5**, including **Falcon RV Repair** in Rio Grande City — the one genuine dedicated RV
+  repair business in the area, whose own site returns **HTTP 404**. It is this area's one real listing if it ever
+  gets a live site.
+- **Rejected: ~40** across five reasons (general auto/collision/tire/muffler, RV and mobile-home *parks*
+  miscategorised as "RV and Camper Repair", truck/diesel, dispatch networks, out-of-area).
+- **Blocked: 4 URLs** (404, 403 WAF, NXDOMAIN, and one domain that resolves to a Colorado park rather than the
+  Zapata one).
+
+**SO THE COVERAGE INSTRUMENT WAS TELLING THE TRUTH AND I WAS MISREADING IT AS A TO-DO.** It reports ~70 towns
+within 25 miles of a point with the nearest listed provider 55 miles away, and its own caption says *"a cluster of
+towns with no base near them is a populated area with no coverage."* **In this case the area has no coverage
+because it has no provider.** That is a different fact from a missing listing, and the directory cannot fix it by
+adding rows.
+
+**TWO THINGS THIS EARNS:**
+
+1. **A "no provider exists here" record, so this is not re-researched.** This pass cost **1.6 million tokens** to
+   establish a null, and the next person to look at that gap will see the same 70 towns and start the same search.
+   `_data/excluded.json` does this for businesses; **the area-level equivalent does not exist yet and should.**
+   Recommendation for Ty: a small `_data/no-coverage/<state>.json` holding areas that were searched and found
+   empty, with the date and the reason — read by the coverage instrument so a known-empty area stops appearing as
+   an actionable gap.
+2. **A policy question worth his ruling:** the standard is *"the business's own website."* Falcon RV Repair's own
+   site was a Google-hosted `business.site` page, which is arguably its own site and is now 404. **If a
+   Google-business page counts as a business's own site, then this area has one listing and the rule needs to say
+   so explicitly.** It should be a decision rather than an accident of what the fetch happened to return.
+
 ## Log
 
 ## Log
