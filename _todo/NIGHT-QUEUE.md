@@ -266,6 +266,45 @@ currently verified, and a content change resets that by design — so an N1 addi
 6,000-word page unverified until somebody re-reviewed it. **The addition and its review belong in the same pass**,
 not split across a night.
 
+## G. Directory expansion, state by state. MAP DONE, filling is the workstream
+
+Ty: *"As we fill out the states, lets go state by state and then ensure each region is analyzed in our search."*
+`scripts/coverage-gaps.py` already does exactly that analysis, so this is measured rather than guessed. Full
+output: `/tmp/coverage-gaps.txt`. A town counts as covered if a listing works out of it, names it, or works out
+of a town within 30 miles.
+
+| state | listings | towns | towns 30 to 75 mi from a base | towns with NO base within 150 mi |
+|---|---|---|---|---|
+| Texas | 88 | 1841 | **446** | 4 |
+| California | 91 | 1594 | **399** | 0 |
+| Montana | 19 | 496 | 201 | 12 |
+| New Mexico | 17 | 518 | 184 | 2 |
+| Arizona | 19 | 464 | 178 | 12 |
+| Washington | 26 | 637 | 173 | 0 |
+| Colorado | 27 | 479 | 120 | 0 |
+| Oregon | 46 | 425 | 94 | 0 |
+| Idaho | 18 | 236 | 88 | 0 |
+| Utah | 19 | 333 | 87 | **9** |
+| Wyoming | 9 | 204 | 77 | 0 |
+| Nevada | 23 | 132 | 23 | 1 |
+
+**The worst single gaps, ranked by how many uncovered towns sit within 25 miles of them:**
+
+- **Texas, Airport Heights: 117 towns, nearest base 138 mi.** The largest cluster anywhere by a wide margin.
+- **California, Redwood City: 46 towns, nearest base 39 mi.** With San Mateo, Foster City, Belmont and Hayward
+  right behind it, this is the **Bay Area Peninsula**, which is a dense populated area with no listed provider
+  inside 30 miles. That is the shape the instrument exists to find.
+- Washington, Hoquiam: 26 towns, 48 mi. New Mexico, Jamestown: 32 towns, 90 mi.
+- Montana, Herron: 20 towns, 100 mi. Wyoming, Alpine Northeast: 16 towns, 118 mi.
+- **Utah (9) and Arizona (12) and Montana (12) have towns with no base within 150 miles at all**, which is sparse
+  country rather than a dense gap, and a mobile tech who travels may be the only honest answer there.
+
+**What to do next, and the rules it has to respect:** add verified providers in the top clusters, starting with
+Texas and the California Bay Area. Every candidate goes through the site's own rules, which are not negotiable
+here: **RV repair only**, no truck or diesel shops that also take RVs, no cleaning/detailing/inspection-only
+businesses, and every one checked against `_data/excluded.json` before it is proposed again. Candidate research
+for the two biggest clusters has been dispatched; the insertion itself uses the existing pipeline.
+
 ## Log
 
 - **00:5x** Queue opened. A1 and A2 confirmed by reading the stylesheet and counting element usage.
