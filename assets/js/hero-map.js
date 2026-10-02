@@ -41,7 +41,8 @@ const trCtx  = trCv.getContext('2d');
 const root   = document.documentElement;
 
 const state = {
-  span: 3300,                // miles across the visible width
+  // No `span` here any more: how many miles fit across the screen now depends
+  // on the viewport width, and it lives in spanFor() next to computeFit().
   yOff: -12,                 // vertical framing, percent of hero height
   speed: 95,                 // route head speed, artboard px per second
   trailSec: 17,              // how many seconds of path stay on screen
@@ -55,8 +56,27 @@ const state = {
 let fit = {s:1, ox:0, oy:0};
 let cssW = 0, cssH = 0, dpr = 1;
 
+/* How many miles across the screen the map shows.
+
+   The map's scale comes from the WIDTH only, so a fixed 3300 miles (which reads
+   as "the whole country" on a desktop) leaves a portrait phone with a small
+   patch: measured 2026-10-02 at 393px, the canvas is 393 x 1051 and the map
+   occupies just 409 x 230px of it, so it stops reading as a background at all
+   and Ty saw it as "totally different on mobile". At 1265px the same map is
+   1316 x 740 against an 867px hero, which is what desktop gets.
+
+   Narrow screens therefore show LESS country, LARGER, which is the same thing a
+   background does when it stops trying to fit and starts filling. The numbers
+   are chosen so the map stays roughly 60 to 85 percent of the hero height at
+   each width, measured with hero-metrics.mjs rather than guessed. */
+function spanFor(w){
+  if(w < 520) return 1500;
+  if(w < 900) return 2200;
+  return 3300;
+}
+
 function computeFit(){
-  const pxPerMile = cssW / state.span;
+  const pxPerMile = cssW / spanFor(cssW);
   const s = pxPerMile / M.pxPerMile;
   return {
     s,
