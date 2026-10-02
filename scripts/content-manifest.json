@@ -139,7 +139,7 @@
     "claims_date": "Sep 24, 2026"
   },
   "guides/index.html": {
-    "hash": "4741faa3a904c268",
+    "hash": "318fa3fae958b736",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -322,7 +322,7 @@
     "claims_date": "Sep 23, 2026"
   },
   "guides/rv-macerator-toilet.html": {
-    "hash": "7878bd51d8f44123",
+    "hash": "27b3d3abd7f45dd4",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -485,6 +485,13 @@
     "invalidated_at": "2026-09-27",
     "claims_date": "Sep 23, 2026"
   },
+  "guides/rv-trailer-wheel-bearings.html": {
+    "hash": "caaa7114d2e47f15",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
+  },
   "guides/rv-two-appliances-stopped.html": {
     "hash": "88f8705e97f97990",
     "status": "unverified",
@@ -556,7 +563,7 @@
     "claims_date": "Sep 21, 2026"
   },
   "index.html": {
-    "hash": "373db4196d00e8b7",
+    "hash": "1fe4b225296a6fb7",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,

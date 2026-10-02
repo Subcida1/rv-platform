@@ -39,7 +39,8 @@
       "rv-pin-weight-and-payload",
       "rv-furnace-carbon-monoxide",
       "rv-battery-disconnect",
-      "rv-macerator-toilet"
+      "rv-macerator-toilet",
+      "rv-trailer-wheel-bearings"
     ]
   }
 }
