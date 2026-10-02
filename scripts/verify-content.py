@@ -454,8 +454,17 @@ def main():
               "%d drifted" % (len(live), v, len(unverified), len(missing), len(drift)))
         for r in unverified:
             print("   unverified  %s" % r)
-        waivers = [(r, c) for r in live for c in (man.get(r, {}).get("claims") or [])
-                   if c.get("state") == "WAIVED"]
+        # `claims` HAS TWO SHAPES AND THIS LINE USED TO ASSUME ONE. seed_claims_from_spec()
+        # builds a list of claim dicts, but --stamp-claims writes a digest HASH string into the
+        # same key, and --stamp-claims is what has actually been run on the guides. Iterating the
+        # hash yields its characters, so `c.get(...)` raised AttributeError and the whole --status
+        # command died - the one command that says whether anything is verified. Reported 2026-10-02
+        # while publishing a guide. A digest is not a list of waivers, so the honest reading is
+        # "this page carries no WAIVED claims to report" rather than a crash.
+        waivers = [(r, c) for r in live
+                   for c in (man.get(r, {}).get("claims")
+                             if isinstance(man.get(r, {}).get("claims"), list) else [])
+                   if isinstance(c, dict) and c.get("state") == "WAIVED"]
         if waivers:
             print("\n-- WAIVED CLAIMS (%d). Above the floor, on the record, not read --"
                   % len(waivers))

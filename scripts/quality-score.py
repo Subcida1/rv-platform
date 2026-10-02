@@ -86,10 +86,26 @@ def demand_tier(rel):
 
 
 def claim_states(rel, man):
+    """Per-claim states for a page, or None when the manifest holds a digest instead.
+
+    `claims` HAS TWO SHAPES AND BOTH ARE IN THE MANIFEST TODAY. seed_claims_from_spec() builds a
+    list of claim dicts; --stamp-claims writes a digest HASH string into the same key, and that is
+    what the guides have. Iterating the hash yields its characters, so `c.get(...)` raised
+    AttributeError and this whole report died - found 2026-10-02 while publishing a guide, and the
+    identical bug was in verify-content.py --status.
+
+    A digest is not a set of readable claims. Returning zeroes would print "0 claims, 0 blocked"
+    for a page full of them, which is a worse lie than a crash, so the caller is told None and
+    prints it as a digest.
+    """
     e = man.get(rel) or {}
     claims = e.get("claims") or []
+    if not isinstance(claims, list):
+        return {}, None
     counts = {}
     for c in claims:
+        if not isinstance(c, dict):
+            continue
         counts[c.get("state", "SOURCED")] = counts.get(c.get("state", "SOURCED"), 0) + 1
     return counts, len(claims)
 
@@ -124,7 +140,8 @@ def main():
     print("  " + "-" * 80)
     for rel, words, tier, why, rv_hits, rv_per_1k, n_claims, counts, blocked in rows:
         flag = "  <-- Q1 FLOOR" if tier == "D4" else ""
-        print(f"  {rel:<46}{words:>6} {tier:>3} {rv_per_1k:>6.1f} {n_claims:>7} {blocked:>4}{flag}")
+        claims_col = "digest" if n_claims is None else str(n_claims)
+        print(f"  {rel:<46}{words:>6} {tier:>3} {rv_per_1k:>6.1f} {claims_col:>7} {blocked:>4}{flag}")
 
     print()
     print("  Q1 DEMAND   D1 a GSC query we appear for | D2 a measured source (SDS, Bing WMT) |")
