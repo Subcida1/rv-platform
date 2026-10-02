@@ -1109,5 +1109,79 @@ window.RV_LISTINGS_CA = [
  {  "n": "Airstream Los Angeles",  "c": "San Gabriel, CA",  "p": "626-285-2222",  "u": "https://www.airstreamlosangeles.com/collision-center",  "t": "center",  "e": false,  "r": false,  "d": "Airstream Los Angeles operates a factory certified body shop and collision center in San Gabriel for Airstream travel trailers. It performs collision repair, aluminum panel replacement, hail and dent repair, polishing, and full body restoration using genuine Airstream OEM parts. The site says it accepts all insurance companies and offers free estimates, and holds Airstream's Five Rivet service designation.",  "g": [
    "center"
   ],  "base": "san gabriel",  "areas": [],  "region": "",  "spec": "Airstream travel trailers only.",  "reg": "la-county"
+ },
+ {  "n": "Almaden RV Service & Repairs",  "c": "San Jose, CA",  "p": "408-289-9442",  "u": "https://almadenrv.com/",  "t": "center",  "e": false,  "r": false,  "d": "Almaden RV Service and Repairs is an RV and coach service shop on Phelan Avenue in San Jose, working on motorhomes, fifth wheels, travel trailers and camper vans. Its own site says the work is done by factory-trained and certified technicians, and it offers body and paint alongside mechanical and coach service. It names the South Bay and the Peninsula towns it covers, including Redwood City, San Mateo and Palo Alto.",  "g": [
+   "Shop",
+   "Body and paint",
+   "South Bay"
+  ],  "base": "san jose",  "areas": [
+   "san jose",
+   "saratoga",
+   "campbell",
+   "cupertino",
+   "mountain view",
+   "palo alto",
+   "redwood city",
+   "san mateo"
+  ],  "region": "San Francisco, San Jose and the Bay Area",  "reg": "bay-area"
+ },
+ {  "n": "San Jose Mobile RV Repair",  "c": "San Jose, CA",  "p": "408-833-7037",  "u": "https://sanjosemobilervrepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "San Jose Mobile RV Repair is a mobile service covering San Jose and the greater South Bay, including Santa Clara, Sunnyvale, Cupertino, Mountain View, Milpitas, Campbell, Los Gatos, Saratoga and Fremont. Its own site lists air conditioning, plumbing, water heaters, awnings, slide-outs, roof, electrical, generator and appliance work, and says it comes to your driveway, campground or the roadside.",  "g": [
+   "Mobile only",
+   "South Bay"
+  ],  "base": "san jose",  "areas": [
+   "san jose",
+   "santa clara",
+   "sunnyvale",
+   "cupertino",
+   "mountain view",
+   "milpitas",
+   "campbell",
+   "los gatos",
+   "saratoga",
+   "fremont"
+  ],  "region": "San Francisco, San Jose and the Bay Area",  "reg": "bay-area"
+ },
+ {  "n": "California Camper Repair",  "c": "San Jose, CA",  "p": "510-793-8157",  "u": "https://www.californiacamperrepair.com/",  "t": "center",  "e": false,  "r": false,  "d": "California Camper Repair is an RV collision and coach repair facility in San Jose that describes itself as serving Northern California for over 36 years. Its own site covers body work and coach repairs, chassis, maintenance and parts, and it names Alameda County and the East Bay and South Bay cities it serves.",  "g": [
+   "Shop",
+   "Collision and body",
+   "36 years",
+   "South Bay"
+  ],  "base": "san jose",  "areas": [
+   "san jose",
+   "alameda county",
+   "oakland",
+   "hayward",
+   "fremont"
+  ],  "region": "San Francisco, San Jose and the Bay Area",  "reg": "bay-area"
+ },
+ {  "n": "Leale's RV Experts",  "c": "San Jose, CA",  "p": "408-286-5353",  "u": "https://leales.com/",  "t": "center",  "e": false,  "r": false,  "d": "Leale's RV Experts is a full-service RV repair shop in San Jose covering mechanical work, coach systems, collision and body work, upgrades and storage. Its own site says it has served San Jose and the Bay Area for over 15 years, and it also takes fleet service work.",  "g": [
+   "Shop",
+   "Fleet service",
+   "South Bay"
+  ],  "base": "san jose",  "areas": [
+   "san jose",
+   "bay area"
+  ],  "region": "San Francisco, San Jose and the Bay Area",  "reg": "bay-area"
+ },
+ {  "n": "Artspeed RV Mobile Service",  "c": "Fremont, CA",  "p": "(408) 590-5850",  "u": "https://artspeeds.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Artspeed RV Mobile Service is a mobile RV repair business working out of Fremont, covering leveling, air conditioning and furnace work, awnings, leak detection, electrical and generators. Its own site says the work is done at your location, whether that is home or a campground.",  "g": [
+   "Mobile only",
+   "East Bay"
+  ],  "base": "fremont",  "areas": [
+   "fremont",
+   "newark",
+   "union city",
+   "milpitas",
+   "hayward"
+  ],  "region": "San Francisco, San Jose and the Bay Area",  "reg": "bay-area"
+ },
+ {  "n": "V&V Bros RVs and Trailers",  "c": "Redwood City, CA",  "p": "650-556-1096",  "u": "https://vvrvtrailers.com/",  "t": "center",  "e": false,  "r": false,  "d": "V&V Bros RVs and Trailers is an RV and trailer parts and service business on Hansen Way in Redwood City, the town with the largest coverage gap on the Peninsula. Its own site advertises RV service and repairs alongside parts, including plumbing, electrical systems and solar, and takes repair appointments on Saturday mornings.",  "g": [
+   "Shop",
+   "Parts and service",
+   "Peninsula"
+  ],  "base": "redwood city",  "areas": [
+   "redwood city",
+   "san mateo county",
+   "peninsula"
+  ],  "region": "San Francisco, San Jose and the Bay Area",  "reg": "bay-area"
  }
 ];

@@ -45,6 +45,10 @@
     {
       "key": "la-county",
       "label": "Los Angeles and Orange County"
+    },
+    {
+      "key": "bay-area",
+      "label": "San Francisco, San Jose and the Bay Area"
     }
   ],
   "region_of": {
@@ -265,7 +269,58 @@
     "Wrightwood": "desert-high",
     "Yorba Linda": "la-county",
     "Yreka": "shasta-i5",
-    "Yucca Valley": "desert-high"
+    "Yucca Valley": "desert-high",
+    "San Francisco": "bay-area",
+    "Oakland": "bay-area",
+    "San Jose": "bay-area",
+    "Fremont": "bay-area",
+    "Hayward": "bay-area",
+    "Redwood City": "bay-area",
+    "San Mateo": "bay-area",
+    "Foster City": "bay-area",
+    "Belmont": "bay-area",
+    "Palo Alto": "bay-area",
+    "Milpitas": "bay-area",
+    "Santa Clara": "bay-area",
+    "Sunnyvale": "bay-area",
+    "Mountain View": "bay-area",
+    "Cupertino": "bay-area",
+    "Campbell": "bay-area",
+    "Saratoga": "bay-area",
+    "Los Gatos": "bay-area",
+    "Morgan Hill": "bay-area",
+    "Concord": "bay-area",
+    "Walnut Creek": "bay-area",
+    "Pleasanton": "bay-area",
+    "Livermore": "bay-area",
+    "Dublin": "bay-area",
+    "San Ramon": "bay-area",
+    "Danville": "bay-area",
+    "Martinez": "bay-area",
+    "Richmond": "bay-area",
+    "Berkeley": "bay-area",
+    "Alameda": "bay-area",
+    "San Leandro": "bay-area",
+    "Union City": "bay-area",
+    "Newark": "bay-area",
+    "Brentwood": "bay-area",
+    "Antioch": "bay-area",
+    "Pittsburg": "bay-area",
+    "Benicia": "bay-area",
+    "Vallejo": "bay-area",
+    "Hercules": "bay-area",
+    "Pinole": "bay-area",
+    "Daly City": "bay-area",
+    "South San Francisco": "bay-area",
+    "San Bruno": "bay-area",
+    "Millbrae": "bay-area",
+    "Burlingame": "bay-area",
+    "Menlo Park": "bay-area",
+    "Los Altos": "bay-area",
+    "Pacifica": "bay-area",
+    "Half Moon Bay": "bay-area",
+    "Los Altos Hills": "bay-area",
+    "East Palo Alto": "bay-area"
   },
   "listings": [
     {
@@ -3390,6 +3445,178 @@
         "bar_number": null,
         "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
         "center_quote": "Collision Center | Airstream Los Angeles Skip to main content --> Our Locations Airstream Inland Empire 27969 Jefferson Ave Temecula, CA 92592 Shop Now Airstream Los Angeles 1212 E Las Tunas Drive San Gabriel, CA 91776 Storage Center Shop Now Airst"
+      }
+    },
+    {
+      "n": "Almaden RV Service & Repairs",
+      "c": "San Jose, CA",
+      "p": "408-289-9442",
+      "u": "https://almadenrv.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Almaden RV Service and Repairs is an RV and coach service shop on Phelan Avenue in San Jose, working on motorhomes, fifth wheels, travel trailers and camper vans. Its own site says the work is done by factory-trained and certified technicians, and it offers body and paint alongside mechanical and coach service. It names the South Bay and the Peninsula towns it covers, including Redwood City, San Mateo and Palo Alto.",
+      "g": [
+        "Shop",
+        "Body and paint",
+        "South Bay"
+      ],
+      "base": "San Jose",
+      "areas": [
+        "San Jose",
+        "Saratoga",
+        "Campbell",
+        "Cupertino",
+        "Mountain View",
+        "Palo Alto",
+        "Redwood City",
+        "San Mateo"
+      ],
+      "region": "San Francisco, San Jose and the Bay Area",
+      "evidence": {
+        "checked": "https://almadenrv.com/",
+        "coverage_quotes": [
+          "South Bay, San Jose, Saratoga, Campbell, Cupertino, Mountain View, Palo Alto"
+        ]
+      }
+    },
+    {
+      "n": "San Jose Mobile RV Repair",
+      "c": "San Jose, CA",
+      "p": "408-833-7037",
+      "u": "https://sanjosemobilervrepair.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "San Jose Mobile RV Repair is a mobile service covering San Jose and the greater South Bay, including Santa Clara, Sunnyvale, Cupertino, Mountain View, Milpitas, Campbell, Los Gatos, Saratoga and Fremont. Its own site lists air conditioning, plumbing, water heaters, awnings, slide-outs, roof, electrical, generator and appliance work, and says it comes to your driveway, campground or the roadside.",
+      "g": [
+        "Mobile only",
+        "South Bay"
+      ],
+      "base": "San Jose",
+      "areas": [
+        "San Jose",
+        "Santa Clara",
+        "Sunnyvale",
+        "Cupertino",
+        "Mountain View",
+        "Milpitas",
+        "Campbell",
+        "Los Gatos",
+        "Saratoga",
+        "Fremont"
+      ],
+      "region": "San Francisco, San Jose and the Bay Area",
+      "evidence": {
+        "checked": "https://sanjosemobilervrepair.com/",
+        "type_quote": "We specialize in providing convenient, affordable, and dependable RV services",
+        "mobile_quote": "all delivered directly to your driveway, campground, or roadside location"
+      }
+    },
+    {
+      "n": "California Camper Repair",
+      "c": "San Jose, CA",
+      "p": "510-793-8157",
+      "u": "https://www.californiacamperrepair.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "California Camper Repair is an RV collision and coach repair facility in San Jose that describes itself as serving Northern California for over 36 years. Its own site covers body work and coach repairs, chassis, maintenance and parts, and it names Alameda County and the East Bay and South Bay cities it serves.",
+      "g": [
+        "Shop",
+        "Collision and body",
+        "36 years",
+        "South Bay"
+      ],
+      "base": "San Jose",
+      "areas": [
+        "San Jose",
+        "Alameda County",
+        "Oakland",
+        "Hayward",
+        "Fremont"
+      ],
+      "region": "San Francisco, San Jose and the Bay Area",
+      "evidence": {
+        "checked": "https://www.californiacamperrepair.com/",
+        "coverage_quotes": [
+          "From body work to coach repairs, California Camper Repair has the knowledge and experience to do it all."
+        ]
+      }
+    },
+    {
+      "n": "Leale's RV Experts",
+      "c": "San Jose, CA",
+      "p": "408-286-5353",
+      "u": "https://leales.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Leale's RV Experts is a full-service RV repair shop in San Jose covering mechanical work, coach systems, collision and body work, upgrades and storage. Its own site says it has served San Jose and the Bay Area for over 15 years, and it also takes fleet service work.",
+      "g": [
+        "Shop",
+        "Fleet service",
+        "South Bay"
+      ],
+      "base": "San Jose",
+      "areas": [
+        "San Jose",
+        "Bay Area"
+      ],
+      "region": "San Francisco, San Jose and the Bay Area",
+      "evidence": {
+        "checked": "https://leales.com/"
+      }
+    },
+    {
+      "n": "Artspeed RV Mobile Service",
+      "c": "Fremont, CA",
+      "p": "(408) 590-5850",
+      "u": "https://artspeeds.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Artspeed RV Mobile Service is a mobile RV repair business working out of Fremont, covering leveling, air conditioning and furnace work, awnings, leak detection, electrical and generators. Its own site says the work is done at your location, whether that is home or a campground.",
+      "g": [
+        "Mobile only",
+        "East Bay"
+      ],
+      "base": "Fremont",
+      "areas": [
+        "Fremont",
+        "Newark",
+        "Union City",
+        "Milpitas",
+        "Hayward"
+      ],
+      "region": "San Francisco, San Jose and the Bay Area",
+      "evidence": {
+        "checked": "https://artspeeds.com/"
+      }
+    },
+    {
+      "n": "V&V Bros RVs and Trailers",
+      "c": "Redwood City, CA",
+      "p": "650-556-1096",
+      "u": "https://vvrvtrailers.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "V&V Bros RVs and Trailers is an RV and trailer parts and service business on Hansen Way in Redwood City, the town with the largest coverage gap on the Peninsula. Its own site advertises RV service and repairs alongside parts, including plumbing, electrical systems and solar, and takes repair appointments on Saturday mornings.",
+      "g": [
+        "Shop",
+        "Parts and service",
+        "Peninsula"
+      ],
+      "base": "Redwood City",
+      "areas": [
+        "Redwood City",
+        "San Mateo County",
+        "Peninsula"
+      ],
+      "region": "San Francisco, San Jose and the Bay Area",
+      "evidence": {
+        "checked": "https://vvrvtrailers.com/"
       }
     }
   ]
