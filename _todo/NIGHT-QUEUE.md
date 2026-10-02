@@ -609,6 +609,39 @@ the page never cited at all.** The first is now prose, the second is paraphrased
 Sources. **Same class as the marine page the reviewer caught on the macerator page: the quotation marks were the
 lie, not the numbers.**
 
+## N. Fire #3 close: two guides published, one review still owed
+
+**BOTH CONTENT GAPS FROM THE MINING ARE NOW LIVE GUIDES.**
+
+| guide | subject | committed | state |
+|---|---|---|---|
+| `rv-trailer-wheel-bearings` | bearings: which type, and the real interval | `74d0692` | live, **UNREVIEWED** |
+| `rv-generator-sizing` | sizing: loads, derates, and no published formula | `1fbb6fc` | live, **UNREVIEWED** |
+
+**Verified live, not assumed.** `rv-generator-sizing` answered **200** with the right title and the homepage
+counter reading **38**, with `checks` and `pages-build-deployment` both **success**. **A 404 on the first check
+was the deployment still running (`in_progress`), not a failure** — worth remembering before reporting a push as
+broken.
+
+**Parts index: neither new page gets an assignment, and that is correct rather than an omission.**
+`Wheel bearings` was assigned (62 of 157 covered). But **`Generator` is already covered by
+`rv-generator-not-charging`**, and the sizing page is a second facet of the same part rather than a new one, so
+the index needs no change there. Same shape as the toilet. **The index tracks which parts we cover, not how many
+pages we have about them**, and forcing a second slug into a single `guide` field would break that meaning.
+
+**THE ONE THING STILL OWED: an independent review of both pages.** Neither has had one, so both sit
+`unverified` in the content manifest, which is the honest state. The macerator page's two reviews found seven and
+then ten defects respectively, so this is not a formality.
+
+**Retry conditions, both fixed and specific:**
+1. **The ChatGPT lane is out of quota until 6:53 AM** ("You've reached the limit for chats that include data
+   analysis"). A retry before then will fail the same way.
+2. **The prompt must say `read_text_file`, not `read_file`.** My job used the wrong name and the lane correctly
+   used the real one; `AUTOLOOP.md` defines it and past jobs use it 148 times.
+
+**Do not read `outbox/REPLY-20261002-0305-BEARINGS-REVIEW.md` as findings.** It is 1.7 KB of the lane's intention
+plus a usage-limit stop, captured by the harness. There is no review in it.
+
 ## Log
 
 - **00:5x** Queue opened. A1 and A2 confirmed by reading the stylesheet and counting element usage.
