@@ -633,9 +633,20 @@ pages we have about them**, and forcing a second slug into a single `guide` fiel
 `unverified` in the content manifest, which is the honest state. The macerator page's two reviews found seven and
 then ten defects respectively, so this is not a formality.
 
-**Retry conditions, both fixed and specific:**
+**BOTH REVIEWS ARE NOW IN FLIGHT, as SUBAGENTS rather than through the bridge** (`task_23` for the bearing page,
+`task_24` for the generator page). Reasoning: the bridge lane is quota-blocked, and the macerator page's *first*
+review came from a subagent, so that is a proven path that does not depend on the lane. **A subagent can also
+fetch the cited documents, which a bridge lane cannot** — and the macerator page's bridge review, unable to
+fetch, found only inference problems while the subagent found seven defects including quotation errors. Their
+reports land at `research/review-trailer-wheel-bearings.md` and `research/review-generator-sizing.md`.
+
+**So the bridge retry below is a SECOND pass, not the first.** Do not send it before reading the subagent
+reports, and do not send it at all if they find enough: two reviewers with different blind spots is the goal,
+not three reviews for their own sake.
+
+**If the bridge pass is still wanted, its retry conditions are specific:**
 1. **The ChatGPT lane is out of quota until 6:53 AM** ("You've reached the limit for chats that include data
-   analysis"). A retry before then will fail the same way.
+   analysis"). A retry before then fails the same way.
 2. **The prompt must say `read_text_file`, not `read_file`.** My job used the wrong name and the lane correctly
    used the real one; `AUTOLOOP.md` defines it and past jobs use it 148 times.
 
