@@ -66,7 +66,7 @@ That is the whole distinction used here.
 | tool | RV-qualified demand | state |
 |---|---|---|
 | Campground finder | 22 | needs data, not an account: see B |
-| Winterizing checklist / planner | 44 + 26 | **buildable**, and the sourcing exists (the winterising guide plus the manuals directory) |
+| Winterizing checklist / planner | 44 + 26, but read the caveat in §5 | **buildable**, and the sourcing exists (the winterising guide plus the manuals directory) |
 | Floor planner | 38 | **buildable**, a 2D layout tool with no external data. Biggest build in this bucket |
 | Tire date code decoder | no data (a dash) | **buildable and trivially correct**: the DOT code is federal, and NHTSA states the rule itself. Cheap. Justified by correctness, not by volume |
 | Tire pressure by load | 21 | needs the maker inflation tables per tyre, a real research pass first |
@@ -97,3 +97,13 @@ behind it and the sourcing already exists in the repo.
 
 **Do not build the voltage-drop or fuel-cost calculators.** They are the trap, and the numbers that made them
 look best are the reason to leave them alone.
+
+## 5. A correction to this document's own first draft
+
+The winterizing planner was first listed at "44 + 26" as though that were tool demand. **It is not.** Both of
+those are *guide-shaped* queries, and the tool-shaped phrasings (`rv antifreeze calculator`,
+`how much antifreeze for rv`) returned **nothing at all**. So the winterizing planner inherits demand from a
+topic we already cover with a page, and carries no measured demand of its own. It is still worth building, but
+the honest reason is that it would sit on a page that has demand rather than that a tool has demand, and that
+distinction is the entire point of this document. **Recorded rather than quietly edited, because a
+recommendation that overstates its own evidence is the defect this exercise exists to avoid.**
