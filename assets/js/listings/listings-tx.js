@@ -989,5 +989,47 @@ window.RV_LISTINGS_TX = [
    "waco",
    "elm mott"
   ],  "region": "Central Texas",  "spec": "does not do engine or front-end work",  "reg": "waco"
+ },
+ {  "n": "SATX Mobile RV Repair",  "c": "San Antonio, TX",  "p": "210-756-2300",  "u": "https://sanantoniomobilervrepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "SATX Mobile RV Repair is a 100% mobile service, so the technician comes to your driveway, campground, storage lot or the roadside rather than you bringing the RV in. Its own site lists same-day mobile diagnostics and repair for air conditioning, electrical, plumbing, roof leaks and generators, along with inspections, and says it covers the San Antonio area and the surrounding Hill Country.",  "g": [
+   "Mobile only",
+   "San Antonio"
+  ],  "base": "san antonio",  "areas": [
+   "san antonio",
+   "converse",
+   "alamo heights",
+   "new braunfels",
+   "boerne"
+  ],  "region": "San Antonio and the I-35 corridor",  "reg": "san-antonio"
+ },
+ {  "n": "Cypress RV Repair",  "c": "San Antonio, TX",  "p": "210-935-1088",  "u": "https://cypressrvrepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Cypress RV Repair is a mobile RV repair and inspection business working out of San Antonio and covering the Hill Country towns north of it, including Bulverde, Spring Branch, Canyon Lake and New Braunfels. Its own site describes coming to the customer and lists interior and electrical repair among its services.",  "g": [
+   "Mobile only",
+   "Hill Country"
+  ],  "base": "san antonio",  "areas": [
+   "bulverde",
+   "spring branch",
+   "canyon lake",
+   "new braunfels"
+  ],  "region": "San Antonio and the I-35 corridor",  "reg": "san-antonio"
+ },
+ {  "n": "Discount RV Mobile Repair & Service Center",  "c": "San Antonio, TX",  "p": "210-744-5271",  "u": "https://discountrvmobilerepair.com/",  "t": "both",  "e": false,  "r": false,  "d": "Discount RV Mobile Repair & Service Center runs both a mobile service and a shop in San Antonio, and its own site describes it as a choice for all types of RV repair and maintenance, serving RV and camper owners across the region. The services it lists include roof systems, awnings, air conditioning, furnace and water heater work, plumbing, electrical and solar, and slide-outs, and it also carries RV parts and accessories.",  "g": [
+   "Mobile and shop",
+   "San Antonio"
+  ],  "base": "san antonio",  "areas": [
+   "san antonio"
+  ],  "region": "San Antonio and the I-35 corridor",  "reg": "san-antonio"
+ },
+ {  "n": "Nifty Fifty RV Services",  "c": "San Antonio, TX",  "p": "(830) 217-6426",  "u": "https://www.niftyfiftyrv.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Nifty Fifty RV Services is a mobile RV repair business working across the San Antonio area and the Hill Country, from New Braunfels and Seguin through Boerne, Blanco and Canyon Lake. Its own site describes on-site repair work and advertises a 90-day warranty on its service, and it publishes RV inspection advice for owners heading out for a season.",  "g": [
+   "Mobile only",
+   "90-day warranty",
+   "Hill Country"
+  ],  "base": "san antonio",  "areas": [
+   "san antonio",
+   "new braunfels",
+   "san marcos",
+   "seguin",
+   "boerne",
+   "blanco",
+   "canyon lake"
+  ],  "region": "San Antonio and the I-35 corridor",  "reg": "san-antonio"
  }
 ];
