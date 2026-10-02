@@ -298,7 +298,20 @@ and not "annually" alone. There is also a rule whose cost is a brake job: if a h
 publishes 36,000 miles against Dexter's 12,000**, and the spec states both rather than resolving them, on the
 same principle as the Thetford circuit conflict. Three decisions are Ty's, in spec section 12.
 
-**N9 (generator sizing) is the remaining gap and still needs its own sourcing pass.**
+**N9 IS NOW SPEC'D TOO: `_specs/rv-generator-sizing.md` (`7f5429f`).** Its sourcing pass went to 19 maker
+documents and found something better than a figure: **the question has no published answer, and one maker says so
+in its own words.** Coleman-Mach: *"we cannot assist in sizing a generator for you."* Dometic's per-unit minimums
+carry the label "GENERAL guidelines". Cummins calls its wattage table high-level guidance. **No maker publishes a
+sizing formula and none publishes a margin percentage.** So the page does the arithmetic the makers decline to,
+from their own figures, and states three conflicts rather than resolving them: Onan's three-to-four-times startup
+ratio against Coleman-Mach's ×2.5, two Cummins pages disagreeing on Class B and C wattages, and Dometic's own
+minimums tracking the model (2.5 kW high-efficiency against 3.5 kW standard on the same job). **All 19 sources
+fetched clean**, which is unusual for this programme.
+
+**BOTH CONTENT GAPS ARE NOW SPEC'D AND NEITHER IS DRAFTED.** Four decisions sit with Ty across the two specs
+(trailer bearings section 12, generator sizing section 12). **The next shift's obvious work is drafting one of
+them**, and the trailer-bearing page is the better first draft because its claim base is simpler: every figure
+belongs to one of two axle types rather than to a table of loads across four makers.
 
 **AND DO NOT EDIT THE VERIFIED PAGES OVERNIGHT FOR A ONE-LINE ADDITION.** `rv-tank-sensors-reading-wrong` is
 currently verified, and a content change resets that by design — so an N1 addition made at 01:30 would leave a
