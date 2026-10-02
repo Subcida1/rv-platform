@@ -135,7 +135,7 @@ scrolling, which is a worse trade on a phone.
 
 ---
 
-## F. Competitor / wheelhouse content mining (added 01:01, Ty's second instruction)
+## F. Competitor / wheelhouse content mining. SEE THE FULL RESULT BELOW, at the second "F" heading
 
 > *"lets look up any competitors, or websites in our wheelhouse and look at their useful content and write
 > applicable content for our own. Information is gold and we should be panning for it. Lets sift out some
@@ -431,6 +431,44 @@ than a top pick, because choosing which number a stranded RVer dials is not the 
 business's own site, so a harvested number passes by construction and nothing downstream catches it being wrong.
 **Directory phones from this tool must be human-confirmed.** Some of those 49 are almost certainly stale records
 rather than harvester errors, so 12.25 percent is a ceiling rather than an error rate.
+
+## K. Neo's item 6/7 (PageSpeed 93): the payload is already lean, so measure the metric first
+
+Asked for "cut render-blocking, fix cache, unused JS". Measured instead of guessed, because a score is a verdict
+and the fix has to aim at the metric that is actually failing.
+
+**The homepage's real payload, from the files themselves (GitHub Pages gzips, so these are gzipped figures):**
+
+| resource | raw | gzipped |
+|---|---|---|
+| `assets/css/style.css` | 165.4 KB | **45.0 KB** |
+| `assets/js/search-index.js` | 146.0 KB | **38.4 KB** |
+| `assets/js/map-data.js` | 102.8 KB | 31.0 KB |
+| `assets/js/hero-map.js` | 34.4 KB | 12.9 KB |
+| `assets/js/site.js` | 26.4 KB | 9.6 KB |
+| `index.html` itself | 32.2 KB | 8.3 KB |
+| everything else (icons, search.js, config) | small | ~10 KB |
+| **TOTAL** | 539.2 KB | **164.9 KB** |
+
+**Three findings, and two of them say the named levers are already pulled:**
+
+1. **Render-blocking is already down to ONE resource**, `style.css`. The Google tag is `async`. There is no
+   framework, no runtime, and **no webfont** — the site names Inter everywhere but never ships it, so the visitor
+   renders in their own OS sans. That is a real trap for diagram label widths and a free performance win at the
+   same time.
+2. **Nothing is wastefully loaded sitewide.** `search-index.js`, `map-data.js` and `hero-map.js` each load on
+   **one** page, not 69. `search.js` loads everywhere but fetches the index on demand (`loadIndex` is called from
+   the input and focus handlers), with the homepage pre-loading it for instant search. **That eager preload is
+   the only real trade on the page: 38.4 KB gzipped bought for an instant search box.**
+3. **The largest single item is the stylesheet at 45 KB gzipped, and it is the only blocking request.** Splitting
+   it into critical inline plus deferred rest is the one technique left that would move the number.
+
+**The recommendation, and why nothing was changed:** 164.9 KB total, one blocking resource, no webfonts, no
+framework. A PageSpeed score of 93 is consistent with that, and **the remaining 7 points cannot be attributed to
+any of the three named levers because all three are already largely done.** Cutting the stylesheet would be a
+large, risky change to a 2,444-line design system for an unmeasured gain. **The next step is a real PageSpeed run
+to see which metric is failing — LCP, CLS or TBT — and optimise that.** Guessing at it is how a page gets worse
+while the score holds still.
 
 ## Log
 
