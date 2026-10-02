@@ -87,13 +87,32 @@ SEO/keyword research to choose which tools are worth building, then a catalogue 
 reason, so it is not re-litigated). Every tool ships functional, accurate, sourced, and mobile-tested, or it
 does not ship.
 
-## E. The map on mobile
+## E. The map on mobile. RESOLVED `2d7ec43`
 
-Ty: *"the america rv wander map animation thing we built looks totally different on mobile then it does on
-desktop."* **`grep -rln -i "wander\|us-map\|map-hero"` across the live site returns NOTHING**, and the demo at
-`/home/user/Documents/rv-map-demo/` is documented as deliberately not integrated. **So either it was integrated
-under a name I have not found, or Ty is looking at the standalone demo.** Establish which before changing
-anything — do not "fix" a page that does not carry it.
+**Found it.** The map IS on the live site, and my earlier search was looking for the wrong words: it is
+`assets/js/hero-map.js` plus `map-data.js`, added in `300af16` ("Add interactive hero map with roaming car").
+The standalone `rv-map-demo/` is a different thing and still is not integrated. **Lesson for the next search:
+this site's hero map is called `hero-map`, not "wander" or "us-map". A name I did not find is not evidence that
+the feature is absent.**
+
+**The defect, measured:** the map scale came from the hero WIDTH alone, a fixed `span: 3300` miles across. Hero
+height is 1051px at 393px wide and 867px at 1265px. So the same constant gave a 1316 x 740 map in an 867px hero
+on desktop, and a 409 x 230 patch in a 1051px hero on a phone: 22 percent of the box, parked mid-hero behind the
+sub-headline. The map had not shrunk, it had stopped being a background.
+
+**Fixed** with `spanFor(w)`: 1500 miles below 520px, 2200 below 900px, 3300 above. Desktop geometry is unchanged
+by construction, because the width tier above 900px returns the original constant. Checked by eye as well as by
+number at 393px; a first attempt at 1200 miles was discarded because the crop read as abstract coastline rather
+than as a map.
+
+**Deliberately not fixed, and it should stay that way:** the roaming trace follows `pointermove` (line 907). A
+phone has no hover, so cursor-chasing is desktop-only by nature. The car still roams by itself because the loop
+was decoupled from the pointer handler in an earlier fix. Driving it from a finger drag would fight page
+scrolling, which is a worse trade on a phone.
+
+**Left open:** the fade ramp `MAP_ERASE` is still calibrated to desktop element positions (its own comment cites
+"kicker 13%, h1 22%, sub 34%"). Measured 2026-10-02 the mobile positions are genuinely close (kicker 9%, h1
+15-21%, sub 23-32%), so the ramp is not badly wrong and was left alone. Re-check it if the hero layout changes.
 
 ---
 
@@ -123,7 +142,43 @@ build), so run it before D.
 
 ---
 
+- **01:0x** F RESEARCH DONE (report only, no page written yet): 15 wheelhouse sites read, 5 ranked nuggets,
+  6 nuggets marked UNSOURCEABLE and skipped. Report: `/home/user/Documents/research/wheelhouse-content-mining.md`.
+  Top nugget: the factory tank panel has no reset button because the probes are bridged, sourced to the Garnet
+  SeeLeveL sender manual and Lippert CCD-0008562.
+- **01:1x** C DONE `69a450c`. The macerator page is live, wired into all five places, and its 11 quotations are
+  mechanically verified against the four cited Thetford documents. **It publishes as UNVERIFIED in the content
+  manifest**, which is correct: nobody stronger than the drafter has reviewed it yet, and per Ty's rule that
+  means it is not yet blessed. An independent review is the next step for it.
+- **01:1x** INSTRUMENT FIX `65a1f95`: `check-quotes.py` had been reading quotations out of RAW MARKUP, so one
+  stray attribute quote made it skip every real quotation after it and report "0 quote(s), nothing to check",
+  which reads as a pass. Three defects fixed; measured coverage rose 226 to 269 quotations. **It caught a real
+  defect in my own page within a minute of working, which is the point of fixing an instrument.**
+- **01:1x** Also fixed: the homepage guides counter had no owner at all, and the gate's own failure message
+  named a script that could not fix it. `sync-counts.py` now owns it.
+
+## NEEDS TY (decisions I could not take overnight)
+
+1. **The seven guides that set maker text in `<i>` and are therefore uncheckable.** The checkable convention is
+   `<b>"text"</b>`, used by 17 pages; `<i>` with no marks (the toilet sibling, and 7 others) is invisible to
+   `check-quotes.py`, so their quotations have never been machine-verified. **My recommendation:** convert them
+   to the bold-quote convention the way I converted the new page. It is mechanical and it is the difference
+   between those pages being checked and not. **Cost:** it changes how ~15 quotations read on the sibling page.
+2. **The macerator page needs an independent review** before it counts as verified. I wrote it; the site's rule
+   is a pass by something strictly stronger.
+3. **The 30-amp against 40-amp conflict** is stated on the page rather than resolved, per your "your call".
+   If you would rather the page pick one, that is a one-line change.
+
 ## Log
 
 - **00:5x** Queue opened. A1 and A2 confirmed by reading the stylesheet and counting element usage.
-  E is an open question, not yet a defect.
+- **01:0x** A1 FIXED `fc89ea8` (one button hover contract, proved with a real pointer event).
+  A2 FIXED `07162fb` (lift belongs to clickable cards, negative-tested both ways).
+- **01:0x** E RESOLVED `2d7ec43` (hero map sized per viewport, not per width alone).
+- **01:0x** B started: instruments built and worth keeping, `/tmp/hover-proof.mjs` (does a hover rule actually
+  reach the element, by real dispatched event) and `/tmp/hero-metrics.mjs` (where hero elements actually sit, so
+  a fade ramp can be calibrated from measurement). Promote both into `scripts/` if they get used again.
+- **01:0x** F queued from Ty's second instruction, with the constraint that a competitor is a source of topics
+  and never of facts.
+- **Next:** keep working B (page-by-page mobile and interactive-element pass), then C (draft the macerator page),
+  then F, then D.
