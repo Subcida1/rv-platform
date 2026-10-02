@@ -40,7 +40,8 @@
       "rv-furnace-carbon-monoxide",
       "rv-battery-disconnect",
       "rv-macerator-toilet",
-      "rv-trailer-wheel-bearings"
+      "rv-trailer-wheel-bearings",
+      "rv-generator-sizing"
     ]
   }
 }

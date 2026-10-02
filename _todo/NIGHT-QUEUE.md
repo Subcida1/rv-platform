@@ -581,6 +581,34 @@ and **Southwest 210-508-6015** and **Class A 830-217-6511** for the two that tur
 businesses already listed stops an agent spending its effort verifying them. Add that list to every future
 candidate brief.
 
+## M. Three things fire #3 got wrong, and one tool trap
+
+**1. THE BRIDGE PROTOCOL'S READ TOOL IS `read_text_file`, NOT `read_file`, AND I WROTE THE WRONG NAME.**
+My review job told the lane to call `read_file`. It called `read_text_file`, which is correct: `AUTOLOOP.md`
+defines that name and past jobs use it **148 times**. The lane did the right thing and I gave it a broken
+instruction. **Any job prompt that asks a lane to read a staged file must say `read_text_file`.** Writing the
+reply is still `write_file`.
+
+**2. THE BEARING REVIEW DID NOT HAPPEN, FOR A REASON THAT IS FIXABLE.** The reply that landed was 1.7 KB of the
+lane's *intention* plus a hard stop: **"Chat paused until usage resets at 6:53 AM. You've reached the limit for
+chats that include data analysis."** So `rv-trailer-wheel-bearings.html` is **still unreviewed**, and the file in
+`outbox/` is a harness capture of a stalled answer rather than a review. **Retry after the quota resets**, with
+`read_text_file` in the prompt. Do not read that file as findings — there are none in it.
+
+**3. `check-quotes.py` SAYS "NOT IN ANY CITED SOURCE" FOR QUOTES FROM A SOURCE IT COULD NOT FETCH.** It does warn
+at the top ("3 source(s) could not be fetched, so quotes from them will read as missing"), but **the per-quote
+lines carry no such caveat, and reading only the tail of the output hides the warning entirely** — which is
+exactly what I did on the first run. Three cummins.com pages return a **bot challenge page**, so eight of the ten
+quotes it flagged on the generator page were unknowable rather than wrong. **Read the whole output, not the tail,
+and check the unreachable list before believing any hit.**
+
+**AND IT EARNED ITS KEEP ON THE OTHER TWO.** Of the ten flags, two were real defects of mine and both were the
+same shape: **a quotation I had reconstructed rather than copied.** The Onan "AIR CONDITION CAPACITY" rows were
+table cells I joined with `|` separators, and a sentence I quoted came from the **QD 3200 spec sheet, a document
+the page never cited at all.** The first is now prose, the second is paraphrased with its document added to
+Sources. **Same class as the marine page the reviewer caught on the macerator page: the quotation marks were the
+lie, not the numbers.**
+
 ## Log
 
 - **00:5x** Queue opened. A1 and A2 confirmed by reading the stylesheet and counting element usage.

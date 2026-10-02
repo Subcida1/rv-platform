@@ -139,7 +139,7 @@
     "claims_date": "Sep 24, 2026"
   },
   "guides/index.html": {
-    "hash": "318fa3fae958b736",
+    "hash": "f2ab227e6c369462",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -298,6 +298,13 @@
     "invalidated_by": "mechanical change",
     "invalidated_at": "2026-09-27",
     "claims_date": "Sep 23, 2026"
+  },
+  "guides/rv-generator-sizing.html": {
+    "hash": "22aafb8eb9fabd30",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
   },
   "guides/rv-leveling-jacks-not-working.html": {
     "hash": "112e89a0f8a94a92",
@@ -563,7 +570,7 @@
     "claims_date": "Sep 21, 2026"
   },
   "index.html": {
-    "hash": "1fe4b225296a6fb7",
+    "hash": "57e21ed1f465141c",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
