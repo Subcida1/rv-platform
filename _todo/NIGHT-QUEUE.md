@@ -720,6 +720,44 @@ safety-relevant (where to jack, the seal-lip warning) should go first.
 reviewed, corrected and re-checked, but the corrections changed the text after the review — so the only honest
 state is `unverified` until a second pass reads the corrected pages. **That is the next content job.**
 
+## Q. Fire #4: every review item on both pages is now addressed
+
+**Committed: `9b3a20f` (bearing page), `1b37470` (generator page).**
+
+**Bearing page, four of the six omissions added, safety two first** (`9b3a20f`):
+
+- **Where to jack**, the positive half of a rule the page only quoted the prohibition from: *"Elevate and support
+  the trailer unit per manufacturers' instructions."*
+- **The seal-lip warning**, which is the second cause of the very grease-on-brakes failure the seal section is
+  built around: *"DO NOT CONTACT RUBBER SEALING LIP WITH THE SPINDLE THREADS."*
+- **The fitting identifies the system, not the maker.** A Lippert Super Lube axle carries a spindle fitting too,
+  so it looks like an E-Z Lube from outside while the interval follows the maker. The page's binary framing
+  invited exactly that mistake.
+- **The system's scope**, from the flyer's own header: E-Z Lube is offered on *"TORFLEX® and Sprung axles up to
+  8,000 lbs."*
+
+**Generator page, the three accuracy items** (`1b37470`): the two Onan derate bases **disagree with each other**
+and the page printed both without saying so; Onan publishes **two ranges for the same load** (1,200 to 2,400 in
+its table, 1,400 to 2,400 paired with the startup multiplier) and the page used one number for both jobs; and the
+nearest thing to a **maker-published margin** is now quoted, Cummins' 4,000 watts against a 3,600-watt shore
+figure, with the extra 400 explained as motor starting.
+
+**ONE OMISSION DELIBERATELY NOT ADDED, and the reason is the whole point of the last review.** The review quoted
+Dexter's grease-mixing caution (*"Do not mix Lithium, calcium, sodium or barium complex greases"*). **That
+sentence is not in the research file, so I had no document text to check it against.** Adding a quotation I cannot
+verify is the defect this page was just reviewed for, so it waits for its own verification pass rather than going
+in on a reviewer's word.
+
+**STILL OUTSTANDING on these two pages, in priority order:**
+
+1. **Neither is verified, and that is now correct in a way it was not before.** Both have been written, reviewed,
+   corrected, re-corrected and re-checked, but **the corrections changed the text after each review**, so a
+   second pass has to read the corrected pages before either can be marked verified.
+2. **Two bearing omissions not yet added:** an interval for the other bearing types (standard greased, and
+   oil-lubricated hubs, whose heavy-duty oil clock is currently quoted without saying which axle it belongs to),
+   and the scope of the Nev-R-Lube replacement language plus the 8,000 lb limit's counterpart for Lippert.
+3. **The grease-mixing caution**, pending verification against the manual.
+
 ## Log
 
 - **00:5x** Queue opened. A1 and A2 confirmed by reading the stylesheet and counting element usage.
