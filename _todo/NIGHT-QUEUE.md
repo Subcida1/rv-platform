@@ -1078,11 +1078,25 @@ verifiably correct rather than by measured volume.
 | `audit-mobile.mjs` at **360** | 69 renders, **0 FAIL, 0 WARN** in every category |
 | `audit-mobile.mjs` at **393** | same |
 | `audit-mobile.mjs` at **430** | same |
-| `check-a11y.mjs --all` | in flight when this was written |
+| `check-a11y.mjs --all` | **71 pages, no violations at all** — see the caveat below |
 
 **Section B closes with no defects found**, which is the expected result rather than a suspicious one: the
 defects that sweep exists to find — false affordances, dead hover states, sub-12px type, cramped gutters — are the
 ones fixed at the start of the night, and every one of those fixes was verified with these same instruments.
+
+### And the a11y checker is not reproducible, which matters more than its clean result
+
+**Two runs minutes apart gave different answers for the same site.** A two-page run reported two moderate
+warnings — `landmark-one-main` ("Document should have one main landmark") and `region` ×4 ("All page content
+should be contained by landmarks", naming the `h1`) — and then `--all` reported **no violations on all 71 pages**,
+including the page that had just warned. I checked whether the hero sits outside `<main>` on index.html and it
+does not; it is the first child of `<main id="main">`, so the warning was not what it appeared to be either.
+
+**So a clean a11y run is not evidence of a clean site**, and the honest reading is: the instrument disagrees with
+itself, the two warnings it produced once are a known open item already recorded in memory ("contrast FIXED but
+landmarks still need a `build-shell.mjs` update"), and **the next step is to reproduce the warning deliberately
+rather than to declare accessibility verified.** My own rule from earlier tonight applies to this tool as much as
+to any other: run a check twice on the same input and hand-verify a sample of its findings before believing it.
 
 ### `check-a11y.mjs` could not run at all until IPv6 was worked around
 
