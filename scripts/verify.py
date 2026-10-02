@@ -350,7 +350,14 @@ sitemap_xml = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
 search_js = (ROOT / "assets" / "js" / "search-index.js").read_text(encoding="utf-8")
 for slug in tool_slugs:
     rel = "tools/%s.html" % slug
-    if 'href="/%s"' % rel not in tools_idx:
+    # EITHER FORM COUNTS. The nav links a tool absolutely (href="/tools/x.html") and the index
+    # card links it relatively (href="tools/x.html"); both resolve, because every page carries
+    # <base href="/">. The first version of this check demanded the absolute form only, so it
+    # passed on the nav link while being blind to whether the CARD for that same page existed,
+    # which is the omission it was written to catch. Found 2026-10-02 when the second tool's
+    # card was written the way the first card is written, and the check called a correct link
+    # missing.
+    if ('href="/%s"' % rel) not in tools_idx and ('href="%s"' % rel) not in tools_idx:
         bad.append("tools/index.html does not link %s" % rel)
     if "https://originrv.com/%s" % rel not in sitemap_xml:
         bad.append("sitemap.xml is missing %s" % rel)

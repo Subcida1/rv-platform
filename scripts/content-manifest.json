@@ -767,6 +767,17 @@
     "verified_at": null,
     "sources": []
   },
+  "tools/tire-date-code.html": {
+    "hash": "7a90f79d646e22a7",
+    "status": "unverified",
+    "verified_by": "New page, 2026-10-02. Not yet reviewed by an independent lane, so it is recorded unverified rather than claimed.",
+    "verified_at": "",
+    "sources": [],
+    "spec": "",
+    "spec_waived": true,
+    "claims": "9fc70179cb7e7cc6",
+    "claims_date": "Oct 2, 2026"
+  },
   "tools/weight-calculator.html": {
     "hash": "0183baa4da027752",
     "status": "unverified",
