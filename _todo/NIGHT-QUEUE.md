@@ -178,6 +178,14 @@ build), so run it before D.
 
 ## NEEDS TY (decisions I could not take overnight)
 
+0. **Neo has a full brief that never arrived, and it needs YOU to paste it.** He typed it out, the bridge truncated
+   it at ~100 characters, and he then said plainly: *"The relay's looping and this 100-char pipe is the wrong
+   channel for bulk context. Here's the whole …"* and *"Stop relaying — that brief I just sent is everything, all
+   of it. Copy-paste it into the terminal an…"*. **The full text is not on this machine and cannot be recovered
+   from this side** — the same limitation as his very first message tonight. If he still has it in the Muse app,
+   pasting it into this conversation is the fastest route. **I am deliberately not asking him again**: he has
+   asked twice for the relaying to stop, and a passive watcher is now armed that reports his messages without
+   nudging him.
 1. **The seven guides that set maker text in `<i>` and are therefore uncheckable.** The checkable convention is
    `<b>"text"</b>`, used by 17 pages; `<i>` with no marks (the toilet sibling, and 7 others) is invisible to
    `check-quotes.py`, so their quotations have never been machine-verified. **My recommendation:** convert them
