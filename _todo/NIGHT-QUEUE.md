@@ -857,6 +857,51 @@ exclusions are applied before candidates are proposed rather than after. It also
 says whether it came from visible text or only a `tel:` link, because a record needs one and the harvest tool is
 only 88 percent right.
 
+## T. The Valley batch landed, and this time the measurement agrees (`b8c7820`)
+
+**Five verified listings in the Rio Grande Valley**, taking the site from **406 to 411 businesses** (Texas 92 to
+97). Each passed `verify-candidates.py` against the business's own site:
+
+| listing | phone | type |
+|---|---|---|
+| RGV RV Repair | (956) 420-6868 | mobile |
+| Red's RV Repair | (956) 309-0967 | shop, Mission |
+| Sierra RV | (956) 266-3597 | two locations, La Feria and Port Isabel |
+| Miller's Mobile RV Solutions | (956) 410-9712 | mobile, Harlingen |
+| New Beginnings RV | 720-341-9892 | mobile, Mission |
+
+**MEASURED AFTERWARDS, THIS TIME BEFORE CLAIMING IT.** `coverage-gaps.py texas`:
+
+| | before | after |
+|---|---|---|
+| towns with a base within 30 miles | 771 | **918** |
+| towns 75 to 150 miles from a base | 382 | **147** |
+| towns 30 to 75 miles from a base | 446 | 523 |
+
+**The far band collapsed by 235 towns and 147 more are now within 30 miles**, and the 30-to-75 band grew because
+towns moved *into* it from further out. That is the shape a real improvement makes. **Last time I claimed a batch
+shrank a gap and had not measured it; this time the number is the first thing on the page.**
+
+### The batch needed a region key that did not exist, and that is a decision to check
+
+`build-listings.py` exits with `FAIL` when a listing's base town is absent from `region_of`, and **not one Valley
+city was mapped** — McAllen, Brownsville, Harlingen, Mission, Pharr, Edinburg, all absent. The two nearest keys
+are `south-tx`, which is Del Rio and Eagle Pass **300 miles west**, and `coastal-bend`, which is Corpus Christi
+**150 miles north**. Neither describes the Valley.
+
+**So a `rio-grande-valley` region was added and 23 towns mapped to it.** **FLAG FOR TY:** this adds a section to
+the Texas directory page, so it changes what that page *is*. It is defensible (the Valley is 1.3 million people
+and one of the country's biggest winter RV destinations, and the alternative was a label pointing a reader to the
+wrong end of the state), it is one data file, and it reverses in one commit. **If he would rather the Valley sat
+under an existing heading, that is a one-line change.** The same structural question is now open for California,
+where the Bay Area has no region either — see section L.
+
+**AND THE PROCESS FIXES IN THE BRIEF PAID OFF.** Because the brief named all 92 already-listed Texas businesses
+and pointed at `excluded.json`, **none of the ten candidates had to be rejected for a settled rule**, and **all
+ten carried a published phone in visible text** rather than only in a `tel:` link — which matters because the
+harvest tool is only 88 percent right and reading the phone off the business's own page is the check that
+replaces it.
+
 ## Log
 
 - **00:5x** Queue opened. A1 and A2 confirmed by reading the stylesheet and counting element usage.
