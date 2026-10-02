@@ -160,3 +160,17 @@ jack" are the same object and only one of them is in the reader's head.
 
 **Next step when Ty says go:** Tier 2, starting with the tongue jack, because it is the one he hit
 himself, the documentation is already in hand, and it proves the shape on the smallest possible case.
+
+**CORRECTED 2026-10-02 — the tongue jack WAITS FOR PHOTOS, and it is not the next page.** Ty replaced
+his own tongue jack and said he will feed photographs for the guide: *"so do that when i give photos not
+now."* So the tongue jack is **blocked on Ty's photographs** — do not build it from the plan alone, even
+though Barker's documentation is already catalogued and everything else here is ready. Photographs are
+also the one thing the free sources cannot supply, per `SITE-TODO.md` §1.
+
+**The live spec is now Tier 1:** `_specs/rv-macerator-toilet.md`, written 2026-10-02 from three
+sourcing passes. It is scoped to the **macerator** half of the `toilet-vacuum-or-macerator` part. The
+**vacuum** half is deliberately deferred and the reason is in that spec §7: every VacuFlush manual
+Dometic hosts for that line is marine-facing, so the vacuum page needs a disclosure sentence or a
+better source before it can be drafted. The owner-language pass also reversed this plan's implied
+order — the vacuum cluster is the *larger* one in the wild (18 of 60 threads against the macerator's
+12), so the deferral is a sourcing decision, not a demand one.
