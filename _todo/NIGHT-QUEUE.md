@@ -1538,6 +1538,22 @@ moderate landmark warnings on a two-page run, then no violations on the same sit
 72 pages clean. **A clean run is not evidence of a clean site**; the instrument disagrees with itself, and the
 right next step remains reproducing that warning deliberately rather than banking this zero. `NODE_OPTIONS=--dns-result-order=ipv4first` is still required to run it at all here.
 
+## LL. Ty's ruling: the empty-area record stays internal, no reader-facing sentence
+
+**Ruled 2026-10-02, asked directly.** His words: *"i dunno i feel like thats useless infooramtion. They should
+assume no one is near by if we dont list anybody as we should have everybody soon enough right?"*
+
+**So nothing reader-facing is added.** The internal record stays (`_data/no-coverage.json`), where it does its
+only real job: stopping the next pass spending a full research budget to rediscover that a searched area is
+empty. It is not surfaced on any state page.
+
+**My one caveat, made once and not re-litigated: the premise is not yet true.** The directory is at 417
+businesses and still has real 25-to-70-town gaps where nobody is listed, so *"no listing"* currently means
+*"we have not found one"* about as often as *"there is not one."* That is an argument for finishing the
+coverage rather than for a sentence on the page, which is why I agree with the ruling. **If a reader-facing
+statement is ever wanted, the honest form is a coverage statement rather than a per-area one, and it should wait
+until the gaps are actually closed.**
+
 ## Log
 
 ## Log
