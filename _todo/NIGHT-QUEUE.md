@@ -1221,6 +1221,34 @@ reporting a difference it cannot actually see.
 
 **Run `--check` before sending any bridge job, and before believing any reply.**
 
+## BB. The macerator re-review will not complete, and the reason looks structural
+
+**Four dispatches, one completed review.** The original round 1 came back whole. The three re-reviews of the
+corrected page did not:
+
+| round | lane | what came back |
+|---|---|---|
+| 2 | chatgpt.com | a `read_text_file` call, then adverts. **No answer.** |
+| 3 | chatgpt.com | a `read_text_file` call for `head=70`, then a second for `tail=80`, then adverts. **No answer.** |
+| 4 | gemini.google.com | in flight |
+
+**The pattern is visible in round 3 and it is not about the page.** The lane read the staged copy in **two
+chunks** — the top seventy lines, then the bottom eighty — and by the time it had both, **the capture window had
+closed and it never wrote its review.** `settle: settled` with an empty tail. The one attempt that produced a
+full review (the bearings round 4) read its page and answered, which is why it got through.
+
+**So the likely cause is the size of the job versus the capture ceiling**: a page that needs two reads exhausts
+the window before the model starts answering. **That is worth someone's attention as a harness question rather
+than a content one** — the fix is probably a shorter staged copy, or a first read that takes the whole page in one
+call, and it is beyond what I should change in a lane's plumbing at 9am.
+
+**THE HONEST STATE OF THE MACERATOR PAGE, SINCE THAT MATTERS MORE THAN THE RETRY:** it carries its **round-1
+review** — the one that found the CRITICAL power-isolation conflict — and my corrections to it. **But the
+corrections changed the text, so round 1 no longer covers what is on the page.** Verified today: the mechanical
+gates, an independent subagent pass, and my own reading. **Not verified: a completed different-lane pass on the
+corrected text.** If the gemini attempt fails, that stays outstanding rather than being counted as passed —
+**three failures is a finding about the bridge, and a fourth retry would be a loop.**
+
 ## Log
 
 - **00:5x** Queue opened. A1 and A2 confirmed by reading the stylesheet and counting element usage.
