@@ -111,13 +111,38 @@ def quotes_on_page(text):
     # "Schematic of an RV 12-volt system...", "A Honda EU2000i portable inverter generator". Same class as
     # reading the <title> as a quote: the page describing itself is not the page quoting a source.
     body = re.sub(r'\b(?:alt|title|aria-label|placeholder)="[^"]*"', " ", body)
+    # THE GENERAL PASS READS TEXT, NOT MARKUP, AND THAT IS THE POINT.
+    # Found 2026-10-02 while adding a guide that quotes heavily: this pass matched against raw
+    # HTML, where an ATTRIBUTE quote pairs with a real opening quotation mark, the span between
+    # them ends at that mark, and finditer resumes past it. Quotations after the first stray
+    # attribute were skipped, and the page reported "0 quote(s), nothing to check" while
+    # carrying fifteen of them. An instrument that reports nothing on a page full of
+    # quotations is worse than none, because a zero reads as a pass. Tags are stripped to a
+    # space rather than deleted so word runs stay intact.
+    plain = re.sub(r"<[^>]+>", " ", body)
+    # A bolded quotation is consumed by the pass above, so its marks are removed here. Left in,
+    # a SHORT bolded quote ("clog at pump inlet", four words, below the length floor) leaves a
+    # pair of stray marks that the general pass then matches as one long span, capturing our own
+    # prose between them and reporting it as a quotation from a source. That is a false positive
+    # against correct writing, which is the one output this tool must never produce.
+    plain = re.sub(r'<b>\s*[""](.*?)[""]\s*</b>', " ", plain, flags=re.S)
     out = []
     for m in re.finditer(r"<b>\s*[\"\"](.*?)[\"\"]\s*</b>", body, re.S):
         q = norm(m.group(1))
         if len(q.split()) >= 6 and looks_like_prose(q):
             out.append(q)
-    for m in re.finditer(r"[\"\"]([^\"\"<>]{40,400})[\"\"]", body):
-        q = norm(m.group(1))
+    # Marks are consumed in ORDERED PAIRS rather than by a length-limited regex match.
+    # finditer only consumes a match when the span is 40 to 400 characters, so a SHORT quoted
+    # fragment (our own prose quoting an owner: "It just hums") left two stray marks in the text
+    # and the next match paired them across the sentences in between, reporting our own writing
+    # as a quotation missing from a source. Pairing every mark strictly 1-2, 3-4 and then
+    # filtering by length means a short quote consumes its own marks and cannot drag a span.
+    marks = [m.start() for m in re.finditer(r"[\"\"]", plain)]
+    for a, b in zip(marks[0::2], marks[1::2]):
+        inner = plain[a + 1:b]
+        if not (40 <= len(inner) <= 400):
+            continue
+        q = norm(inner)
         if len(q.split()) >= 6 and q not in out and looks_like_prose(q):
             out.append(q)
     return out
