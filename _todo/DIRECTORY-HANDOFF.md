@@ -40,6 +40,16 @@ negotiable.** In the words already in the Oregon file:
 A record with no `u` is valid — the site is gone or parked, the business and phone are still verified. A
 record whose coverage is guessed is not.
 
+**A GOOGLE-HOSTED BUSINESS PAGE COUNTS AS THE BUSINESS'S OWN SITE.** Ty ruled this on 2026-10-02, asked
+directly because the western Rio Grande Valley pass turned on it: `Falcon RV Repair`, Rio Grande City, is a
+genuine dedicated RV repair business whose only web presence is a Google `business.site` page. A page the
+business built and controls is its own site whatever host serves it, so it satisfies this rule — **this was a
+decision rather than an accident of what a fetch happened to return.** It changes nothing today, because that
+particular page now returns 404, which is what keeps Falcon RV Repair out until it has a live site again.
+The same ruling applies to any equivalent first-party host (a business on Wix, Squarespace, Shopify, or a
+platform subdomain), and it does NOT make a directory or aggregator listing count, which remains what it always
+was: a way to FIND a candidate, never what establishes one.
+
 ## The three things to build, in this order
 
 **1. National coordinates.** `assets/js/coords-or.js` is Oregon-only and v1's rule was "hardcoded Oregon
