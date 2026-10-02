@@ -336,6 +336,36 @@ the gate exists to stop.
 link there would be overwritten. `build-manuals-pages.py --check` reports 14 pages generated and 0 differing, so
 any change has to go through the generator.
 
+**Candidate research is DONE** for both clusters. Report:
+`/home/user/Documents/research/directory-candidates-bayarea-and-sanantonio.md`
+
+- **Bay Area Peninsula: 14 usable candidates.** Strongest evidence: **Almaden RV Service & Repairs** (own site lists
+  Redwood City, San Mateo and Hayward in its service area) and **Bay Equipment And Repair (BEAR)** (own site names
+  Redwood City, San Mateo, Foster City and Belmont, and describes RV and motorhome collision repair).
+  **V&V Bros** is the only candidate with premises actually inside Redwood City, but its repair evidence is thin.
+- **San Antonio / Airport Heights: 15 usable candidates.** Strongest: **SATX Mobile RV Repair**, **Southwest Mobile
+  RV Repair**, and **Class A RV Repairs**, whose own site says *"RVs Only. Not Cars. Not Trucks. Exclusively RVs."*
+- The report carries a POSSIBLE BUT UNVERIFIED list (12, mostly businesses with no site of their own) and a
+  REJECTED AND WHY list grouped by exclusion reason, so 210 Truck Repair, GTC, PTR, Road Rescue Network and
+  others are not proposed again. No hard blocks were hit.
+
+**TWO POLICY CALLS THIS RAISES, and they are Ty's, not mine:**
+
+1. **`BEAR` is an RV *and* motorhome collision centre that also does trucks.** The settled rule excludes
+   truck/diesel/fleet shops, and this one is truck-adjacent while genuinely doing RV collision work. A collision
+   shop is repair, so the exclusion is about the truck side rather than the RV side. **My read: include it, because
+   the rule was written to keep truck businesses out, not to keep RV collision work out** — but it is close enough
+   to the line to ask.
+2. **Two dealer service centres are in the list (Blue Compass San Antonio, Ancira RV).** The directory already
+   carries a dealer with a mobile service side (Family RV Mobile Repairs, Oregon), so a dealer that repairs is
+   within the rule as written. Confirming rather than assuming.
+
+**Next step, and it is mechanical rather than judgemental:** put the 29 candidates through `verify-candidates.py`,
+which grounds a record against the business's own site and already rejects anything matching `_data/excluded.json`,
+then insert the clean ones into `_data/listings/california.json` and `texas.json` and run the builders
+(`build-listings.py`, `build-coords.py`, both have `--check` modes that run in CI). **Do not skip the verification
+step because the research looks good** — the research found them, the verifier is what admits them.
+
 ## Log
 
 - **00:5x** Queue opened. A1 and A2 confirmed by reading the stylesheet and counting element usage.
