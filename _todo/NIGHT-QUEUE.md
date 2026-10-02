@@ -62,7 +62,20 @@ by default. `div.card:hover` wins on specificity (0,2,1 against 0,1,1) as well a
 **Negative-tested both ways**, since a guard that has never failed is not evidence: `div.card` stays at `none`,
 `a.card` and `a.guide-card` both still reach `matrix(1,0,0,1,0,-2)`.
 
-### A3. The other lift/zoom classes
+### A3. The other lift/zoom classes. CLOSED, deliberately not cleaned
+
+**Measured:** `part-card`, `big-card` and `save-heart` are referenced by nothing outside the stylesheet, so they
+are dead. `tool-card`, `cat-card` and `deck-card` are live (`tools/index.html`, `site_constants.py`, `weight.js`).
+
+**Not removed, and the reason is the ratio.** The dead classes do not sit in their own tidy rules: they are woven
+into SIX shared selector lists alongside live ones, including `.cat-card:hover,.card:hover,.big-card:hover` at
+1083 and `.com-card .stat,.big-card .num,...` at 1268, plus the card-lift block this shift added at 2516/2521.
+Excising them means editing six lists that also carry live styles, to save roughly 400 bytes out of a 165 KB
+stylesheet, on a 68-page site, at 2am, with the only available proof being a full render sweep.
+
+**That is a risk larger than its value, so the honest answer is no.** Recorded here as a decision rather than
+left as an open item, so it is not quietly re-attempted. If it is ever done, do it with the render audit running
+before and after, in a commit of its own, and not mixed into anything else.
 
 `.cat-card` · `.big-card` · `.deck-card` · `.guide-card` · `.listing-card` · `.state-card:hover .state-photo img`
 (1709) · `.save-heart` (774, a control that was set to `transform:none` at 1081 — check whether it is used at all).
