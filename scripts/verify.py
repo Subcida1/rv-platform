@@ -339,6 +339,24 @@ if missing:
     bad.append("index.html links %d of %d guides, missing: %s"
                % (len(linked & on_disk), len(on_disk), ", ".join(missing)))
 
+# 3b. EVERY TOOL PAGE IS REGISTERED IN ALL THREE PLACES, BECAUSE NOTHING ELSE CHECKS IT.
+# Guides have new-guide.py owning all five registration places and this file fails on each
+# omission in turn. Tools had no equivalent at all until 2026-10-02, so a second tool page
+# could have shipped linked from nowhere, absent from the sitemap, and unsearchable, with
+# every gate green. Added when the tools lane was about to be built and that gap was found.
+tool_slugs = sorted(f.stem for f in (ROOT / "tools").glob("*.html") if f.name != "index.html")
+tools_idx = (ROOT / "tools" / "index.html").read_text(encoding="utf-8")
+sitemap_xml = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
+search_js = (ROOT / "assets" / "js" / "search-index.js").read_text(encoding="utf-8")
+for slug in tool_slugs:
+    rel = "tools/%s.html" % slug
+    if 'href="/%s"' % rel not in tools_idx:
+        bad.append("tools/index.html does not link %s" % rel)
+    if "https://originrv.com/%s" % rel not in sitemap_xml:
+        bad.append("sitemap.xml is missing %s" % rel)
+    if ('"%s"' % rel) not in search_js:
+        bad.append("the search index is missing %s (run build-search-index.py)" % rel)
+
 # 4. a spelled-out count left in prose still has to match the grid below it, so
 #    a hand-typed number that never gets a marker is still caught
 text_bits = []
