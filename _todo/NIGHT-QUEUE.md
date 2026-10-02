@@ -1363,6 +1363,46 @@ the gate will catch it if it is not registered.**
 format is federal and NHTSA states the rule itself, already quoted in this session — and it is justified by being
 verifiably correct rather than by measured demand.
 
+## FF. Neo's refreshed brief (pasted by Ty, 12:51): triaged, and two of his flags are wrong
+
+**The brief arrived in full via Ty's paste** — the bridge pipe truncates at exactly 100 characters, so the paste
+was the only route. Its counts are now stale (it says 411 listings and CA 91; the site is at 417 and CA 97), but
+the fix list is what matters.
+
+### His item 8 — "homepage guide-count copy says 33 against 38 URLs" — IS A FALSE ALARM
+
+**Checked before changing anything, and the 33 is correct.** The marker is
+`<span data-claim="guides-fix-word">Thirty-three</span> guides.` under the heading **"Fixing it, in plain
+English"** — it is the **`fix` group's** count, not the site total:
+
+| group | guides |
+|---|---|
+| `fix` | **33** |
+| `winter` | 5 |
+| **total** | **38** — matches the 38 guide files on disk |
+
+He compared a category count against the sitemap's 38 guide URLs. **"Fixing it" has 33 guides and says so.**
+Changing it to 38 would have made a correct number wrong, which is the same failure as leaving a wrong one.
+
+### His item 5 — "signin.html still returns 200" — is already handled
+
+It returns 200, and it is **`<meta name="robots" content="noindex">`, absent from the sitemap, and linked from
+nowhere** (grep finds no inbound link; only the file itself). His ask was "remove or noindex", and noindex is done.
+
+### His item 1 — FAQPage and HowTo — is based on a finding we already superseded
+
+**The FAQPage rich result was retired by Google on 2026-05-07** and adding it has no AI-citation lift; that is
+recorded in [[reference/projects/originrv-content-engine.md]]. Re-adding it would be work against a dead surface.
+
+### His items 6 and 7 — PageSpeed 93 and a real-device pass
+
+Item 6 was measured during the night: the homepage ships **164.9 KB gzipped** and the named levers were already
+pulled. Item 7 needs a real device, which is Ty's.
+
+**What this means for the brief:** its two checkable technical flags are a misread and a finished job, and its
+schema recommendation is against a retired feature. **The rest of it (traffic first, then affiliates; no ads or
+sponsors yet) matches where the site actually is.**
+
 ## Log
 
 ## Log
