@@ -1068,6 +1068,37 @@ the two blocked-on-Ty items. The DOT tire date decoder is the cheapest correct f
 is federal and NHTSA states the rule itself, already quoted in this session — and it is justified by being
 verifiably correct rather than by measured volume.
 
+## Y. The page-by-page sweep is done, and it is clean
+
+**Every instrument, every page, every width:**
+
+| instrument | result |
+|---|---|
+| `audit-render.mjs` | **138 of 138 renders clean** (68 pages, desktop and mobile) |
+| `audit-mobile.mjs` at **360** | 69 renders, **0 FAIL, 0 WARN** in every category |
+| `audit-mobile.mjs` at **393** | same |
+| `audit-mobile.mjs` at **430** | same |
+| `check-a11y.mjs --all` | in flight when this was written |
+
+**Section B closes with no defects found**, which is the expected result rather than a suspicious one: the
+defects that sweep exists to find — false affordances, dead hover states, sub-12px type, cramped gutters — are the
+ones fixed at the start of the night, and every one of those fixes was verified with these same instruments.
+
+### `check-a11y.mjs` could not run at all until IPv6 was worked around
+
+It died with `ENETUNREACH` connecting to a Cloudflare address, because it loads axe-core from
+`cdn.jsdelivr.net` and **this machine has no IPv6 route**. The fix is one environment variable:
+
+    NODE_OPTIONS="--dns-result-order=ipv4first" node scripts/check-a11y.mjs --all
+
+**Worth knowing for any tool here that fetches a CDN** — the failure looks like a broken checker, not a network
+fact, and it is the third instrument tonight that failed by answering a different question than the one asked.
+
+With the workaround, the result on the first pages: **no serious or critical violations**, and two moderate
+landmark warnings (`landmark-one-main` and `region`, the h1 named as content outside a landmark). **The hero is
+inside `<main>` on index.html**, so the warning is not what it first appears, and the full run's detail is the
+next thing to read rather than guess at.
+
 ## Log
 
 - **00:5x** Queue opened. A1 and A2 confirmed by reading the stylesheet and counting element usage.
