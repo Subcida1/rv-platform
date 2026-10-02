@@ -374,6 +374,64 @@ then insert the clean ones into `_data/listings/california.json` and `texas.json
 (`build-listings.py`, `build-coords.py`, both have `--check` modes that run in CI). **Do not skip the verification
 step because the research looks good** — the research found them, the verifier is what admits them.
 
+## I. The bridge lane review, 01:55. Second pass on the macerator page
+
+Ty brought the bridge up, so the corrected page went to the **ChatGPT lane** for the independent pass the site
+requires. Job `20261002-0155-MACERATOR-REVIEW`, reply at
+`outbox/REPLY-20261002-0155-MACERATOR-REVIEW.md`, 13 KB, verdict **NO**.
+
+**What made it useful is what it could NOT do.** It has no way to fetch the cited PDFs and said so plainly, which
+turned its findings into a review of **inferences rather than citations** — and that is precisely what the
+subagent review could not see, because that one spent its effort verifying quotations. Two passes with different
+blind spots found different classes of defect.
+
+**Fixed from it (`43865ec`):**
+
+- **CRITICAL and correct: the page gave two safety sequences.** The body gave the manual's order (open the bowl
+  valve, then switch off power); the FAQ told the reader to disconnect power first. For a job with sharp knives
+  under a bowl valve that is a contradiction. Resolved by giving the maker's order, telling a reader who is
+  unsure of their own model to isolate power FIRST, and handing the job to the maker's servicing rule.
+- **Three unsupported inferences, all mine**, introduced while fixing the first review: the claim that an intact
+  wipe cannot pass the pump (an absolute physical claim the maker never makes), the claim that a technician is
+  "the cheaper option" on a page that gives no prices, and the claim that household cleaners are "the usual
+  source" of the damage. Also a conclusion about long horizontal runs that no cited document draws.
+- **Model attribution.** Four documents across three models were presented as generic truths about "the toilet".
+  Each figure now names the manual or support page it comes from.
+- **Two internal contradictions of my own:** the summary still called the pump inlet the maker's "first answer"
+  after the detail had been corrected to name a full waste tank first, and "two causes and no more" sat above a
+  paragraph about a wiring problem.
+
+**NOT fixed, recorded deliberately:**
+
+1. **It flagged the byline, "Written and checked against the sources below", as authenticity language.** That line
+   is on all 36 guides and is a statement about provenance rather than a claim of virtue, so it is a sitewide
+   convention call rather than a page fix. **Worth Ty's eye, not mine at 2am.**
+2. **It could not certify the "generally have" quotation.** `check-quotes.py` already proves every quotation on
+   the page exists in a cited source, which is the stronger check, so this one is answered.
+3. A LOW note about grouping "two of the three faults" in the cost section.
+
+**The lesson worth keeping: two reviewers with different blind spots beat one thorough reviewer.** The subagent
+fetched and verified quotes and missed the inferences; the lane could not fetch and caught exactly the
+inferences. Neither pass alone would have produced this page.
+
+## J. The phone harvester, and its honest verdict
+
+`scripts/harvest-candidate-phones.py`, built because the 29 directory candidates need a phone per record and
+nothing in the repo found one. It has a real ground truth: **400 existing listings already carry a known phone
+and URL.** Measured over all of them: **84 percent exact, 49 wrong, 17 refused.**
+
+**The 40-listing sample said 3 wrong; the population said 49.** The sample understated it by nearly half, which
+is why the docstring carries the population number.
+
+Two fixes came from measurement rather than reasoning: the numbering plan is now checked, because the first run
+produced impossible numbers like `178-174-4674` read out of SVG coordinates; and ties now return NOTHING rather
+than a top pick, because choosing which number a stranded RVer dials is not the tool's judgement.
+
+**AND IT IS NOT SAFE TO AUTO-FILL FROM.** `verify-candidates.py` only checks that a phone appears on the
+business's own site, so a harvested number passes by construction and nothing downstream catches it being wrong.
+**Directory phones from this tool must be human-confirmed.** Some of those 49 are almost certainly stale records
+rather than harvester errors, so 12.25 percent is a ceiling rather than an error rate.
+
 ## Log
 
 - **00:5x** Queue opened. A1 and A2 confirmed by reading the stylesheet and counting element usage.
