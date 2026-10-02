@@ -1332,6 +1332,37 @@ adding rows.
    Google-business page counts as a business's own site, then this area has one listing and the rule needs to say
    so explicitly.** It should be a decision rather than an accident of what the fetch happened to return.
 
+## EE. The tools gate is in, and it supersedes my own earlier recommendation
+
+**`1cf35dd` adds the check that did not exist.** Every page under `tools/` must now appear in all three places —
+the tools index link, the sitemap `loc`, and the search index entry — and the failure message names which one is
+missing.
+
+**Negative-tested on all three branches**, because a guard that has never failed is not evidence:
+
+| break | fires |
+|---|---|
+| sitemap entry removed | `sitemap.xml is missing tools/weight-calculator.html` |
+| index link removed | `tools/index.html does not link tools/weight-calculator.html` |
+| search entry removed | `the search index is missing tools/weight-calculator.html (run build-search-index.py)` |
+| restored | `ALL CHECKS PASSED` |
+
+### I was wrong to say "build `new-tool.py` first", and the gate is why
+
+**Section X recommended writing `new-tool.py` before the next tool, on the grounds that a page could otherwise be
+born outside the contract.** That reasoning was sound but it aimed at the wrong target: **a scaffolder prevents an
+omission, and a gate DETECTS one.** Detection is the property that matters, because a scaffolder is only used by
+someone who already remembered to use it, while the gate fails the build whatever route the page arrived by.
+
+**So the scaffolder is now optional rather than prerequisite**, and I am not building it. With the gate in place,
+an unregistered tool page fails loudly on the next run; writing a generator for a directory that holds two files
+is the speculative build the ladder says to skip. **The tools lane is unblocked: any tool can be built now, and
+the gate will catch it if it is not registered.**
+
+**Still Ty's pick: which tool.** The DOT tire-date decoder remains the cheapest correct first one — the DOT code
+format is federal and NHTSA states the rule itself, already quoted in this session — and it is justified by being
+verifiably correct rather than by measured demand.
+
 ## Log
 
 ## Log
