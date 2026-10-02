@@ -326,9 +326,24 @@ repair** and which the maker states in a counter-intuitive order.
 - `verify.py`: ALL CHECKS PASSED, with the counter, both tiles and the ItemList registering automatically to 37.
 - It publishes **UNVERIFIED** in the content manifest, which is correct until it is reviewed.
 
-**The independent review is dispatched** as job `20261002-0305-BEARINGS-REVIEW` to the ChatGPT lane. On the
-macerator page the equivalent pass found seven defects the drafter could not see, three of them inferences
-introduced while fixing the first review, so its findings are expected to be real rather than ceremonial.
+**Verified end to end after the push, not assumed:**
+- `check-indexability.py`: **all 68 pages answer 200, are indexable and point at themselves**, and the new page is
+  named in that list individually rather than only counted in the total.
+- The live page answers **200** at `https://originrv.com/guides/rv-trailer-wheel-bearings.html` with the right
+  title, and its breadcrumb reads **"Trailer Wheel Bearings"**.
+- The live guides hub links it twice (tile and ItemList) and the live homepage counter reads **37**.
+- CI: `checks` **success** on every push. One Pages deployment shows `cancelled`, which is GitHub cancelling an
+  in-flight deploy when a newer one queues; the following deployment succeeded.
+
+**Parts index updated in the same fire (`44fc690`)**: `Wheel bearings` assigned, taking coverage to **62 of 157**,
+with `_todo/PARTS.md` regenerated from the data rather than edited. **`Toilet (vacuum or macerator)` deliberately
+stays a gap** even though the macerator page exists, because the part as named covers both technologies and
+assigning the guide would tell a future session the vacuum page is unnecessary.
+
+**The review is still out at the time this was written** (job `20261002-0305-BEARINGS-REVIEW`, queue state
+`sent | waiting for the answer`). A watcher is armed and will pull it in. **Treat its findings as expected work
+rather than a formality**: the equivalent pass on the macerator page found seven defects the drafter could not
+see, three of them inferences introduced while fixing the first review.
 
 **N9 (generator sizing) is spec'd and still undrafted** — the next content work once this review's findings are in.
 
