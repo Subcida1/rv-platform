@@ -470,6 +470,45 @@ large, risky change to a 2,444-line design system for an unmeasured gain. **The 
 to see which metric is failing — LCP, CLS or TBT — and optimise that.** Guessing at it is how a page gets worse
 while the score holds still.
 
+## L. Directory insertion: THREE BLOCKERS, found before inserting anything
+
+I went to insert the candidates this fire and stopped, because inserting would have created
+duplicates and put rows in the wrong region. All three findings are recorded rather than worked around.
+
+**BLOCKER 1: the Bay Area has no region in California, and the builder refuses unmapped towns.**
+`build-listings.py` line 142 does `sys.exit("FAIL  %s: base %r has no region in region_of")`. California's
+`regions` list has eleven keys and **not one of them is the Bay Area**: `north-coast`, `shasta-i5`,
+`valley-north-bay`, `central-valley`, `central-coast`, `inland-empire`, `desert-high`, `coachella`,
+`sierra-east`, `san-diego`, `la-county`. And **Redwood City, San Mateo, Foster City, Belmont, Hayward,
+San Jose, Palo Alto, San Francisco, Concord and Fremont are all absent from `region_of` entirely** (218 of
+California's 1,594 towns are mapped; Texas has 451). So **adding 14 Bay Area candidates was never a data
+insert** — it needs a region key, and a decision about which towns belong to it. **That is a taxonomy change
+that reshapes a published page, so it is Ty's call, not a 2am one.** Note the coverage instrument already fell
+back to labelling Redwood City as "The Central Coast", which is the mapping showing its seams.
+
+**BLOCKER 2: a third of the candidates are already in the directory.** The research agent could not see
+`_data/listings/`, so it had no way to know. `scripts/dedupe-candidates.py` (built this fire) reports, for the
+13 strongest: **2 already listed, 3 close enough to hand-check, 8 genuinely new.** The already-listed ones
+include **Southwest Mobile RV Repair** (Floresville) and **Class A RV Repairs** (Pipe Creek), both verified and
+both sitting in the very gap they were proposed to fill. Of the close ones, `Moreno Mobile RV Repair` and
+`Iron Horse` are the same businesses already listed, while `SATX Mobile RV Repair` against `ATX Mobile RV
+Repair` is two different shops in two different cities — which is exactly why the tool refuses to resolve a
+close match by itself.
+
+**BLOCKER 3: the phone harvester is 12.25 percent wrong, so every phone needs a human.** Recorded in section J.
+Reading each number off the business's own site is the only acceptable confirmation, and that is the work.
+
+**What is actually ready to insert, when the region question is settled:** the genuinely new San Antonio
+candidates, in an existing and correct region (`san-antonio`, "San Antonio and the I-35 corridor", with San
+Antonio, Pipe Creek, Spring Branch, Boerne, New Braunfels, Seguin and Canyon Lake all already mapped). Phones
+read from their own sites this fire: **SATX Mobile RV Repair 210-756-2300** (a `tel:` link, twice, consistent),
+and **Southwest 210-508-6015** and **Class A 830-217-6511** for the two that turn out to be already listed.
+**Class A publishes two different numbers, so it must not be auto-picked.**
+
+**Process fix, applied: the de-dup check belongs BEFORE the research, not after.** A brief that names the
+businesses already listed stops an agent spending its effort verifying them. Add that list to every future
+candidate brief.
+
 ## Log
 
 - **00:5x** Queue opened. A1 and A2 confirmed by reading the stylesheet and counting element usage.
