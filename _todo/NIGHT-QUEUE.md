@@ -254,12 +254,18 @@ below were then confirmed by reading. Treat the regex result as a prompt to look
 | N6 Dexter E-Z Lube vs Nev-R-Lube | **GENUINELY NOT COVERED.** No guide covers trailer bearing service at all; only two mention bearings in passing. **The clearest real gap of the nine**, with Dexter's own LIT-001-00 and LIT-002-00 named as sources |
 | N7 rooftop A/C: filter is the owner task | **ALREADY OURS** |
 | N8 Onan blink and fault codes | **PARTLY OURS** — `rv-generator-not-charging` already carries fault codes 14 and 15 from Cummins 983-0101. The full blink-code table is not there |
-| N9 generator sizing, locked rotor and derates | **PROBABLY NOT OURS.** The regex that said "covered" is the same weak instrument, and the guide it named is about fuses. **Re-check before believing it either way** |
+| N9 generator sizing, locked rotor and derates | **GENUINELY NOT COVERED, and the regex was wrong.** `rv-generator-not-charging` has no sizing content at all: every match for "size" on it is an icon attribute (`sizes="32x32"`) or SVG text. No guide on the site answers "what size generator do I need". **The regex named a fuse guide, which was a coincidental co-occurrence** |
 
 **What this is worth.** Five of nine nuggets were already published, and the one with the strongest competitor
-repetition (N1) is one where our page is already the better-sourced one. So the mining's real yield is **one clear
-new page (N6) and two small additions (N1, N8)** — not nine. That is the ladder working: check whether it already
-exists before writing it.
+repetition (N1) is one where our page is already the better-sourced one. So the mining's real yield is **two new
+pages (N6 trailer bearing service, N9 generator sizing) and two small additions (N1, N8)** — not nine. That is
+the ladder working: check whether it already exists before writing it.
+
+**AND THE INSTRUMENT BEHIND THE TABLE WAS WRONG THREE TIMES.** It called N1 uncovered when the mechanism is on
+the page, called N9 covered when nothing on the site addresses it, and named a fuse guide as the source of a
+generator-sizing claim on a word match. **Every line above was then confirmed by reading the page, and any figure
+from that regex should be treated as a prompt to look rather than a finding.** Recorded because the next person
+will otherwise trust a number that has already been wrong twice in the same table.
 
 **AND DO NOT EDIT THE VERIFIED PAGES OVERNIGHT FOR A ONE-LINE ADDITION.** `rv-tank-sensors-reading-wrong` is
 currently verified, and a content change resets that by design — so an N1 addition made at 01:30 would leave a
