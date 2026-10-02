@@ -653,6 +653,39 @@ not three reviews for their own sake.
 **Do not read `outbox/REPLY-20261002-0305-BEARINGS-REVIEW.md` as findings.** It is 1.7 KB of the lane's intention
 plus a usage-limit stop, captured by the harness. There is no review in it.
 
+## O. The generator review came back NO, and it was right (`1aadf1c`)
+
+Report: `/home/user/Documents/research/review-generator-sizing.md`. **Five confirmed defects, all fixed.**
+
+**C1 was the one that mattered, and it is the reason this pass exists.** The page told the reader to use Onan's
+worked altitude table and then did the arithmetic with the blanket percentage instead: it said a 7.0 kW set gives
+**5,530 W at 6,000 ft**, which is `7000 x (1 - 3.5% x 6)`. The table's own step gives **6,265** (`6,510 at
+5,000 ft minus 245`). **The page also contradicted its own FAQ**, which used the table basis. A reader sizing a
+generator for Colorado would have undersized it by 735 watts on the page's own numbers.
+
+**C2 and C3 are the THIRD appearance of the same defect class tonight, and all three are mine: a quotation from a
+document the page does not cite.** `"1,671"` watts and `"63"` locked-rotor amps came from the Airxcel Data Inquiry
+Sheet, which was never in Sources. Both dropped; the point is now made with the cited Dometic table and
+Coleman-Mach's own instruction to read the data tag. **The earlier two were the marine page on the macerator
+guide and the QD 3200 spec sheet on this one.**
+
+**C4:** coffee and microwave figures attributed to the Onan table when they are Cummins' table, with different
+numbers. Re-attributed. **C5:** a sentence explaining our own sourcing, which is the credibility-narration class
+the site bans. Cut.
+
+**Also from the review, and both fair:** the opening heading said *"nobody publishes the number you are looking
+for"*, which overstates it when Dometic publishes a per-unit minimum and Onan a per-unit capacity; and the worked
+example's surge band omitted the charger it was described as running alongside.
+
+**What the review confirmed CORRECT, which matters as much:** the Coleman-Mach refusal is exact; the two startup
+multipliers are attributed to their own makers and not merged; the two Cummins tables are each quoted without
+merging; Dometic's 2.5 against 3.5 kW is correctly tied to efficiency class; and house style is clean.
+
+**AND IT CONTRADICTED MY OWN BRIEF ON FETCHING.** I told it three cummins.com pages return a bot challenge. It
+reported that **all of them and every cummins.com PDF fetched HTTP 200 for it**. So the challenge is
+intermittent or agent-specific, not a property of those pages, and `check-quotes.py`'s 7 remaining flags are its
+own fetch problem rather than the site's. **Worth knowing before treating those flags as a page defect again.**
+
 ## Log
 
 - **00:5x** Queue opened. A1 and A2 confirmed by reading the stylesheet and counting element usage.
