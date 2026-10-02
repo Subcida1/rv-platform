@@ -1160,7 +1160,10 @@ window.RV_LISTINGS_CA = [
    "South Bay"
   ],  "base": "san jose",  "areas": [
    "san jose",
-   "bay area"
+   "santa clara",
+   "campbell",
+   "milpitas",
+   "fremont"
   ],  "region": "San Francisco, San Jose and the Bay Area",  "reg": "bay-area"
  },
  {  "n": "Artspeed RV Mobile Service",  "c": "Fremont, CA",  "p": "(408) 590-5850",  "u": "https://artspeeds.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Artspeed RV Mobile Service is a mobile RV repair business working out of Fremont, covering leveling, air conditioning and furnace work, awnings, leak detection, electrical and generators. Its own site says the work is done at your location, whether that is home or a campground.",  "g": [
@@ -1180,8 +1183,9 @@ window.RV_LISTINGS_CA = [
    "Peninsula"
   ],  "base": "redwood city",  "areas": [
    "redwood city",
-   "san mateo county",
-   "peninsula"
+   "san mateo",
+   "menlo park",
+   "palo alto"
   ],  "region": "San Francisco, San Jose and the Bay Area",  "reg": "bay-area"
  }
 ];

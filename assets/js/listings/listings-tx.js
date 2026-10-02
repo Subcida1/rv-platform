@@ -1053,7 +1053,8 @@ window.RV_LISTINGS_TX = [
   ],  "base": "mission",  "areas": [
    "mission",
    "mcallen",
-   "rio grande valley"
+   "pharr",
+   "edinburg"
   ],  "region": "McAllen, Harlingen and the Rio Grande Valley",  "reg": "rio-grande-valley"
  },
  {  "n": "Sierra RV",  "c": "La Feria, TX",  "p": "(956) 266-3597",  "u": "https://sierramobilerv.com/",  "t": "both",  "e": false,  "r": false,  "d": "Sierra RV, also branded Sierra Mobile RV, has two Rio Grande Valley locations, at La Feria and Port Isabel, and describes 25 years serving the Valley. Its own site covers air conditioner repair, maintenance and replacement, refrigerator, awning, water heater and furnace repair, roof repair, resealing and replacement, satellite installation and preventative maintenance.",  "g": [
@@ -1088,7 +1089,8 @@ window.RV_LISTINGS_TX = [
   ],  "base": "mission",  "areas": [
    "mission",
    "mcallen",
-   "rio grande valley"
+   "rio grande city",
+   "edinburg"
   ],  "region": "McAllen, Harlingen and the Rio Grande Valley",  "reg": "rio-grande-valley"
  }
 ];

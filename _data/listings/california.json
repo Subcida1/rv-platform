@@ -3567,7 +3567,10 @@
       "base": "San Jose",
       "areas": [
         "San Jose",
-        "Bay Area"
+        "Santa Clara",
+        "Campbell",
+        "Milpitas",
+        "Fremont"
       ],
       "region": "San Francisco, San Jose and the Bay Area",
       "evidence": {
@@ -3621,8 +3624,9 @@
       "base": "Redwood City",
       "areas": [
         "Redwood City",
-        "San Mateo County",
-        "Peninsula"
+        "San Mateo",
+        "Menlo Park",
+        "Palo Alto"
       ],
       "region": "San Francisco, San Jose and the Bay Area",
       "evidence": {
