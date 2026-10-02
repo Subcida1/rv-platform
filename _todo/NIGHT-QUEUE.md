@@ -1230,24 +1230,32 @@ corrected page did not:
 |---|---|---|
 | 2 | chatgpt.com | a `read_text_file` call, then adverts. **No answer.** |
 | 3 | chatgpt.com | a `read_text_file` call for `head=70`, then a second for `tail=80`, then adverts. **No answer.** |
-| 4 | gemini.google.com | in flight |
+| 4 | gemini.google.com | **the lane answered, and refused for a concrete reason — see below** |
 
-**The pattern is visible in round 3 and it is not about the page.** The lane read the staged copy in **two
-chunks** — the top seventy lines, then the bottom eighty — and by the time it had both, **the capture window had
-closed and it never wrote its review.** `settle: settled` with an empty tail. The one attempt that produced a
-full review (the bearings round 4) read its page and answered, which is why it got through.
+**ROUND 4 IS THE USEFUL ONE, because it diagnosed itself.** gemini.google.com replied in plain words:
 
-**So the likely cause is the size of the job versus the capture ceiling**: a page that needs two reads exhausts
-the window before the model starts answering. **That is worth someone's attention as a harness question rather
-than a content one** — the fix is probably a shorter staged copy, or a first read that takes the whole page in one
-call, and it is beyond what I should change in a lane's plumbing at 9am.
+> *"I cannot complete this job as requested because I do not have access to the local file system, nor do I have
+> the `read_text_file` or `write_file` tools in my environment. Because this is an automated pipeline, this job
+> will fail to execute those file-reading and writing calls. If you can modify the pipeline to pass the page text
+> directly into the prompt (or upload it as a document I can process), I can strictly execute the review…"*
 
-**THE HONEST STATE OF THE MACERATOR PAGE, SINCE THAT MATTERS MORE THAN THE RETRY:** it carries its **round-1
-review** — the one that found the CRITICAL power-isolation conflict — and my corrections to it. **But the
-corrections changed the text, so round 1 no longer covers what is on the page.** Verified today: the mechanical
-gates, an independent subagent pass, and my own reading. **Not verified: a completed different-lane pass on the
-corrected text.** If the gemini attempt fails, that stays outstanding rather than being counted as passed —
-**three failures is a finding about the bridge, and a fourth retry would be a loop.**
+**So there are two separate causes, and I had been treating them as one:**
+
+- **gemini.google.com has no bridge tools installed at all.** It never had a chance, and it said so. The bridge
+  userscript is not injecting the tool surface into that lane.
+- **chatgpt.com has the tools and ran out of capture window.** It called `read_text_file` — round 2 once, round 3
+  twice (head 70, then tail 80) — and the window closed before it wrote its answer.
+
+**Both have the same cheap fix, and gemini named it: put the page text in the prompt rather than making the lane
+fetch it.** That removes the tool dependency for a lane that lacks it and removes the extra round trip for a lane
+that has it. **This is a change to the dispatch path, not to a page, and it is the next thing to do on the bridge
+— not something to attempt at 9am while guessing.**
+
+**So: four dispatches, one completed review of the corrected text — none.** The page's status is unchanged and
+should be read as such: **round 1 plus corrections, verified by the gates and a subagent pass, and NOT verified by
+a completed different-lane pass on the current text.**
+
+## Log
 
 ## Log
 
