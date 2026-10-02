@@ -953,6 +953,40 @@ california` is running to record real evidence from each business's own site. **
 checks is already met** — domain resolves, phone digits on the page, site reads RV-specific — so the records are
 admissible; what is missing is the supporting quotation, and the auditor is the tool that owns it.
 
+## V. The California audit, and a standing question it surfaced about dealers
+
+**`audit-tags.py --write california`: 96 supported by their own site, 1 to look at, 0 that could not be fetched.**
+The one is mine — V&V Bros, which was the weakest-evidence candidate from the start. Its own sentence *"Saturdays
+from 8:00am-12:00pm for repairs, inquires, and appointments"* is real evidence and now sits in the record, and its
+description was narrowed from "service and repairs" to what the site actually claims.
+
+**BUT THE FLAG IS NOT AN ANOMALY I INTRODUCED, AND THAT IS THE FINDING WORTH TY'S EYE.** The same test flags
+**eight** California listings with the identical reason — *"mentions dealers; the site does not say it takes
+outside work"*:
+
+| flagged | |
+|---|---|
+| **Bakersfield RV Center, Inc.** | pre-existing |
+| **Paso RV** | pre-existing (different reason: "center, you drive it in") |
+| **Overland RV LLC** | pre-existing |
+| **760 RV** | pre-existing |
+| **San Diego RV Center** | pre-existing |
+| **Elite Coach Works RV** | pre-existing |
+| **Airstream Los Angeles** | pre-existing |
+| **V&V Bros RVs and Trailers** | **new, added this fire** |
+
+**So the directory already carries seven dealer-type businesses whose own sites do not say in words that they take
+outside work**, and my batch added the eighth. **The question for Ty is standing rather than about one row: should
+the directory carry dealerships at all?** The settled rules cover truck shops, service-not-repair businesses and
+dispatch networks; they say nothing about dealers. **My recommendation: leave them**, because a dealer's service
+department is a real place a stranded RVer can take a coach, and the alternative — removing eight rows — is a
+directory edit with real consequences that nobody asked for at 7am. But it should be a ruling rather than an
+accident of what the auditor's patterns happen to match.
+
+**And one earlier false alarm corrected itself.** My own 60-character probe had reported Leale's evidence as
+missing from its site; **the auditor found it there word for word** (`For over 15 years, Leale's RV has been the
+trusted choice for RV repair`). The probe was the defect, again.
+
 ## Log
 
 - **00:5x** Queue opened. A1 and A2 confirmed by reading the stylesheet and counting element usage.
