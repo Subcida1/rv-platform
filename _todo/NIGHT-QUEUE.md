@@ -288,6 +288,18 @@ generator-sizing claim on a word match. **Every line above was then confirmed by
 from that regex should be treated as a prompt to look rather than a finding.** Recorded because the next person
 will otherwise trust a number that has already been wrong twice in the same table.
 
+**N6 IS NOW SPEC'D: `_specs/rv-trailer-wheel-bearings.md` (`7743c65`).** Sourcing pass first, which found 46
+citable facts across 13 maker documents and one finding strong enough to carry the page on its own: **the advice
+repeated across competitor sites is wrong twice over.** Dexter builds E-Z Lube axles whose spindles are drilled
+with grease fittings, and Nev-R-Lube axles that are factory-sealed where "no further lubrication is ever needed"
+and a worn unit is replaced rather than repacked; and the interval is **12 months or 12,000 miles**, not 10,000
+and not "annually" alone. There is also a rule whose cost is a brake job: if a hub comes off an E-Z Lube axle,
+**the seals are replaced before the bearing is greased**, or the grease reaches the brake linings. **Lippert
+publishes 36,000 miles against Dexter's 12,000**, and the spec states both rather than resolving them, on the
+same principle as the Thetford circuit conflict. Three decisions are Ty's, in spec section 12.
+
+**N9 (generator sizing) is the remaining gap and still needs its own sourcing pass.**
+
 **AND DO NOT EDIT THE VERIFIED PAGES OVERNIGHT FOR A ONE-LINE ADDITION.** `rv-tank-sensors-reading-wrong` is
 currently verified, and a content change resets that by design — so an N1 addition made at 01:30 would leave a
 6,000-word page unverified until somebody re-reviewed it. **The addition and its review belong in the same pass**,
