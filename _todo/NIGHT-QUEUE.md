@@ -1464,6 +1464,37 @@ which is the second time tonight a wrong probe nearly produced a wrong "fix".
 the heading "Fixing it, in plain English", and changing it to 38 would have broken a correct number. Both cases
 are the same lesson and it now has two worked examples: **before acting on a flag, reproduce it by hand.**
 
+## II. The whole-site quote check: 76 flags, one real cause, and a correction to my own suggestion
+
+**`check-quotes.py` had never been pointed at the whole site.** Run across all 38 guides it flagged **76
+quotations** as absent from their cited sources. The largest cluster, **26 of the 76, sat on one page**, which is
+what made it worth reading rather than mass-fixing.
+
+**THE CAUSE WAS MARKUP, NOT CONTENT** (`dbb899c`). Ten quotations on `rv-propane-furnace-wont-light` were written
+as a bare quoted string with a bold fragment placed **inside** it:
+
+    compensating "for variation ... at <b>11" w. c.</b> to running appliances."
+
+Two failures at once: the bold sits inside the quotation instead of around it, so there is no unambiguous pair of
+marks; and **that source writes its own inch mark as a double quote**, so an inch sign and a quotation delimiter
+are the same character. The extractor paired a closing mark with a later opening one and captured **our own prose
+as though we had quoted it**, which is why several flags read like sentences we wrote rather than like maker text.
+
+**Repaired to the `<b>"whole quotation"</b>` convention**, inch mark written as the double prime. **No words
+moved, proven from the diff.** Flags on that page: **26 down to 11.**
+
+**The eleven that remain all rest on `marshallexcelsior.com`, which returns 403 to automated fetches** — the known
+false-positive class, needing a hand check rather than an edit. Not touched on a machine's word.
+
+### AND I WAS WRONG TO SAY "ADD IT TO ci.sh"
+
+**I wrote that in the commit message and it is bad advice, so it is corrected here before someone acts on it.**
+`check-quotes.py` **fetches every cited source**: that whole-site run took **8.7 minutes** against a CI job that
+takes about **40 seconds**. A gate that slow either gets skipped, gets commented out, or gets switched off, and
+then it is worse than no gate because it was counted as one. **It belongs on a schedule, not in the per-push
+suite** — the weekly cron is the right home, alongside `weekly-report.py`, and it wants the unreachable-source
+class excluded first so it does not cry wolf on a 403.
+
 ## Log
 
 ## Log
