@@ -776,6 +776,46 @@ reads in order.
 **The only item left after that is the state change itself**: if both verdicts are yes, both pages can finally be
 marked verified in the content manifest, which is the first time either would carry that.
 
+## R. Fire #5's verification passes: NO on both, and the reason was one mistake repeated
+
+**Both verification passes came back NO** — `97010de` (generator), `fe85928` (bearing) — and the instructive part
+is that **they found the same failure in my work twice, not a series of different ones.**
+
+**THE SHAPE: I fixed the paragraph the reviewer quoted and left the same claim standing everywhere else it
+appeared.** The generator page was worst for it. Three claims were corrected in the body and left untouched in
+the callout and FAQ: the **altitude method** (the callout still prescribed the blanket 3.5 percent rule that
+produces the very 5,530 figure the C1 fix existed to remove), the **startup multiplier** (still joined to the
+table range Onan does not pair it with), and the **"no maker publishes a formula" framing** (softened in the H2
+and left alone in the title, meta, h1, lede and callout). The bearing page had it in its description fields,
+which still named one maker's interval as *the* interval after the body had been corrected.
+
+**RULE THIS EARNS: when a claim is corrected, grep for every surface carrying it — body, callout, FAQ, headings,
+and all four description fields — and fix them in the same pass.** A claim is not fixed until every place it
+appears says the same thing. The `--desc` string appears **four times**, not three, because the JSON-LD carries
+it too; an assert caught that rather than letting a half-apply through.
+
+**AND ONE OF MY CORRECTIONS WAS WRONG WHERE IT MATTERED — SAFETY.** On the bearing page I had written that the
+lifting points come *"from the trailer's maker rather than the axle maker."* The cited manual says otherwise and
+says it directly: *"Use appropriately rated jack stands."* and *"Place jack stands under the trailer's frame
+only."* **I glossed a prohibition when the document contained a positive instruction, and the gloss was wrong
+about who specifies the point.** Replaced with the manual's own words.
+
+**One claim needed a source rather than a cut.** The verification called the Super Lube sentence unsourced. It is
+maker-published, on **Lippert's own grease guide** rather than the owner's manual the page cited — so the guide
+is now in Sources and the claim stands. `check-quotes.py`: **38 quotations against 8 sources, every one present.**
+
+### The recursion, named rather than chased
+
+**Every correction invalidates the pass that found it**, because a content change resets verification. That is
+the site's rule working correctly, but it means "verified" can never be reached by iterating fixes forever.
+
+**What I am doing about it rather than looping:** both pages have now had **a review and a verification pass**,
+and every defect either found has been fixed. **The fixes since are consistency corrections and one safety
+correction, all sourced and all verified by the mechanical gates.** The next pass should be a **focused check of
+those specific corrections**, not a third full review, and if it passes they can be marked verified. **If it
+finds another class of defect, that is the moment to stop and hand the pattern to Ty rather than fix and
+re-review again** — three rounds of the same loop is evidence about the process, not about the page.
+
 ## Log
 
 - **00:5x** Queue opened. A1 and A2 confirmed by reading the stylesheet and counting element usage.
