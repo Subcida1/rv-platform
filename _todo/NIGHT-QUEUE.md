@@ -1265,6 +1265,38 @@ advice without reading that docstring first.
 should be read as such: **round 1 plus corrections, verified by the gates and a subagent pass, and NOT verified by
 a completed different-lane pass on the current text.**
 
+## CC. The bridge failures are a ceiling MISMATCH, and the numbers say so
+
+**The two causes I recorded in section BB are wrong about the main one.** gemini genuinely lacks the tools, but
+chatgpt **has them and is not broken** — it is being cut off by a ceiling that fires far earlier than the design
+allows.
+
+`mcp-bridge-v0.7.32-nobreaker.user.js`:
+
+    const CAPTURE_MAX_ATTEMPTS = 20;
+    const CAPTURE_MAX_MS = 10 * 60 * 1000;      // 600 s
+
+**Either one releases the flight.** Tonight's failures reported **160 s in flight** and **130 s in flight** — so
+they hit the **20 attempts** ceiling at ~2.6 minutes, while the wall-clock ceiling would have allowed **10
+minutes**. At roughly 8 s per attempt, 20 attempts buys 160 s and 600 s needs about 75.
+
+**The two ceilings were tuned against different things and ended up inconsistent.** The comment says both were set
+from a lane that "WEDGED FOR 707 SECONDS… on 60 attempts", with 600 s chosen below 707 and 20 attempts chosen
+below 60. Both are defensible individually. **Together they mean the attempts guard is the binding one by a factor
+of nearly four**, so a job that legitimately needs three tool calls — read top, read bottom, write the answer —
+gets 160 seconds to do all three, and a long page does not.
+
+**RECOMMENDED CHANGE, for Ty rather than for me:** raise `CAPTURE_MAX_ATTEMPTS` to **~45**, which buys about 360
+s — still well below the 60-attempt wedge the number was chosen against, and inside the 10-minute wall-clock
+ceiling that already exists as the backstop. **I have not touched the userscript**, because changing it means
+rebuilding and re-installing it into every lane's browser, which is your step and not mine, and because 20 was a
+deliberate choice I should not silently overwrite.
+
+**WHAT THIS DOES NOT CHANGE:** the two-call read is *correct* and should stay. The template explains why — a very
+large tool result goes into the message box and will not send, so the result is lost rather than cut, and two
+slices always arrive. My first instinct was to collapse it to one call, which would have traded a slow review for
+a silently empty one.
+
 ## Log
 
 ## Log
