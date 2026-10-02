@@ -40,7 +40,7 @@
     "sources": []
   },
   "directory/colorado.html": {
-    "hash": "ccb2195cd8d88bb5",
+    "hash": "e5c14a73dc439221",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -54,21 +54,21 @@
     "sources": []
   },
   "directory/index.html": {
-    "hash": "aa497899e12e062b",
+    "hash": "dc12f7201e6c4574",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/montana.html": {
-    "hash": "2d3935fe426f4004",
+    "hash": "933dfa9204f04911",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/nevada.html": {
-    "hash": "180e92ac0b3db262",
+    "hash": "5f10b547a7ea31e9",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -88,6 +88,13 @@
     "verified_at": null,
     "sources": []
   },
+  "directory/texas.html": {
+    "hash": "ee04161405200fd0",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
+  },
   "directory/utah.html": {
     "hash": "9e7e752ab4867ccd",
     "status": "unverified",
@@ -97,13 +104,6 @@
   },
   "directory/washington.html": {
     "hash": "cec356d993d1f0af",
-    "status": "unverified",
-    "verified_by": null,
-    "verified_at": null,
-    "sources": []
-  },
-  "directory/westtexas.html": {
-    "hash": "24cd8101e8dd2299",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -139,7 +139,7 @@
     "claims_date": "Sep 24, 2026"
   },
   "guides/index.html": {
-    "hash": "4ca96f22c227de80",
+    "hash": "4741faa3a904c268",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -320,6 +320,13 @@
     "spec_waived": false,
     "claims": "fca406a8aa2289d9",
     "claims_date": "Sep 23, 2026"
+  },
+  "guides/rv-macerator-toilet.html": {
+    "hash": "7878bd51d8f44123",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
   },
   "guides/rv-outlets-not-working.html": {
     "hash": "0da7bdc0982ed41f",
@@ -549,7 +556,7 @@
     "claims_date": "Sep 21, 2026"
   },
   "index.html": {
-    "hash": "609cbd5afa1b29a5",
+    "hash": "373db4196d00e8b7",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,

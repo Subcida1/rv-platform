@@ -122,5 +122,36 @@ def sync_itemlist():
         print("  itemlist: %d guides, already current" % len(items))
 
 
+def sync_home_counters():
+    """The guides counter in the homepage hero.
+
+    It is a `data-count` attribute rather than a `data-claim` marker, because the hero
+    counts up to it in JavaScript, so sync_claims() cannot reach it. That left the guides
+    counter with NO owner at all: verify.py checked it, nothing wrote it, and the failure
+    message told the next person to run this script, which could not fix it. Found
+    2026-10-02 while publishing the macerator guide, and it is the same class of defect as
+    a TODO naming a script that is not there.
+
+    ONLY the guides counter is owned here. The businesses counter is derived from listing
+    data and belongs to scripts/build-listings.py, the single writer for everything that
+    comes out of _data/listings. Two writers on one page is how "8 live" came to sit next
+    to "17 Free guides, live now" in the first place, so this one deliberately stops at
+    the guides.
+    """
+    page = ROOT / "index.html"
+    html = page.read_text(encoding="utf-8")
+    total = sum(len(v) for v in C.guides().values())
+    pat = re.compile(r'(data-count=")\d+(">0</div><div class="lbl">Free guides, live now</div>)')
+    if not pat.search(html):
+        raise SystemExit("FAIL  index.html: no guides counter to rewrite")
+    new = pat.sub(lambda m: m.group(1) + str(total) + m.group(2), html, count=1)
+    if new != html:
+        page.write_text(new, encoding="utf-8")
+        print("  homepage: guides counter set to %d" % total)
+    else:
+        print("  homepage: guides counter already %d" % total)
+
+
 sync_claims()
 sync_itemlist()
+sync_home_counters()

@@ -38,7 +38,8 @@
       "rv-two-appliances-stopped",
       "rv-pin-weight-and-payload",
       "rv-furnace-carbon-monoxide",
-      "rv-battery-disconnect"
+      "rv-battery-disconnect",
+      "rv-macerator-toilet"
     ]
   }
 }
