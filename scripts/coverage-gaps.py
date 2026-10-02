@@ -141,6 +141,27 @@ def report(slug, radius, limit):
               % (town.title(), n, d, labels.get(reg, "-")))
     if not scored:
         print("    none")
+
+    # SEARCHED AND EMPTY, WHICH IS EVIDENCE RATHER THAN A FILTER. An area can be listed
+    # here because a pass went looking and found no provider that meets the standard.
+    # Nothing above is suppressed by it: the gap still appears in every number and every
+    # band, because suppressing it would hide a real gap the day a business opens. What
+    # this stops is the next pass spending another full research budget to rediscover the
+    # same emptiness -- the western Rio Grande Valley cost about 1.6 million tokens for a
+    # null. Written 2026-10-02 on Ty's instruction, after that pass.
+    nc = ROOT / "_data" / "no-coverage.json"
+    if nc.exists():
+        try:
+            doc = json.loads(nc.read_text(encoding="utf-8"))
+        except ValueError:
+            doc = {}
+        for row in doc.get(slug, []) or []:
+            print("\n  already searched and found empty: %s" % row.get("area"))
+            if row.get("searched"):
+                print("    searched %s | qualified businesses found: %s"
+                      % (row.get("searched"), row.get("qualified_found")))
+            if row.get("conclusion"):
+                print("    %s" % row.get("conclusion"))
     return scored
 
 

@@ -1,0 +1,17 @@
+{
+  "note": "Areas that were searched for RV repair businesses and found to have none. This is EVIDENCE, NOT A SUPPRESSION LIST: nothing here removes a gap from the coverage instrument. The gap keeps appearing, and this file is what stops the next pass spending a full research budget rediscovering the same emptiness. Add an entry when a pass concludes, never to make a number look better.",
+  "texas": [
+    {
+      "area": "Zapata County and Starr County, the western Rio Grande Valley",
+      "searched": "2026-10-02",
+      "towns": ["Zapata", "Falcon Heights", "Falcon", "San Ygnacio", "Roma", "Rio Grande City",
+                "Escobares", "La Grulla", "Garciasville", "Salineno", "Santa Elena", "Los Ebanos"],
+      "qualified_found": 0,
+      "cost": "one research pass, about 1.6 million tokens, for a null result",
+      "what_was_found": "No business in either county has a live own website carrying RV-repair evidence, which is the site's standard. Roughly forty others were rejected across five reasons: general auto, collision, tyre and muffler shops; RV and mobile-home PARKS that directories miscategorise as RV repair; truck and diesel; dispatch networks; and providers out of the area.",
+      "the_one_near_miss": "Falcon RV Repair, Rio Grande City, is a genuine dedicated RV repair business, and its own site was a Google-hosted page that now returns 404. If it gets a live site it is this area's one real listing.",
+      "nearest_real_capacity": "Ron Hoover RV and Marine, Laredo, about 50 miles west of Zapata, plus the listed Hidalgo County mobile technicians.",
+      "conclusion": "This area has no RV repair coverage because it has no provider, which is a different fact from a missing listing, and the directory cannot fix it by adding rows."
+    }
+  ]
+}
