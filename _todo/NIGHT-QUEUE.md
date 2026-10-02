@@ -1044,6 +1044,30 @@ which `verify.py` touches. **Run `bash scripts/ci.sh` before pushing.**
 rather than by running the suite before. The rule was already in my memory in weaker form ("run verify.py before
 reporting prose") and it was not the right rule.
 
+## X. Tools have no publication contract, and that is why the tools lane keeps not starting
+
+Checked before building a tool this fire, and it is the reason to stop rather than the reason to start:
+
+**Guides have `scripts/new-guide.py`**, which owns all five places a page must be registered — the page, the
+catalogue row, the hub tile, the homepage tile and the sitemap — and prints the build chain to run afterwards.
+It exists because "seven more guides were queued, that is seven chances to forget the sitemap, or the homepage
+tile, or the catalogue row, and verify.py fails on every one of those omissions in turn."
+
+**Tools have nothing.** `tools/index.html` carries a single `tool-card` and the tools directory holds two files.
+So a second tool page would mean hand-registering it in the tools index, the sitemap, the search index and
+whatever else the gates check, with no tool that owns the contract and no gate that names a missing place.
+
+**My recommendation for daylight rather than 8am:** before the next tool, **write `new-tool.py` by the same
+pattern** — derive the head from `tools/weight-calculator.html`, register the four places, print the build chain —
+and add the missing-place check to `verify.py` so a half-registered tool fails loudly. **Building the scaffolder
+and the second tool in one go is where the omission gets in**, and the whole point of the scaffolder is that a
+page cannot be born outside the contract.
+
+**What is ready when that exists:** `_todo/TOOLS-PLAN.md` has the measured demand, the buildable-alone list, and
+the two blocked-on-Ty items. The DOT tire date decoder is the cheapest correct first tool — the DOT code format
+is federal and NHTSA states the rule itself, already quoted in this session — and it is justified by being
+verifiably correct rather than by measured volume.
+
 ## Log
 
 - **00:5x** Queue opened. A1 and A2 confirmed by reading the stylesheet and counting element usage.
