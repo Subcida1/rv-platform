@@ -937,6 +937,22 @@ and the audit follows links it finds, so `urllib` refused it and the traceback e
 killable by the thing it is checking** — and an audit that dies partway through reports nothing about the
 listings it never reached, which looks exactly like an audit that found nothing.
 
+**RESULT, measured after the build rather than assumed** (`6c3e324`, homepage **411 to 417**):
+
+| California | before | after |
+|---|---|---|
+| towns with a base within 30 miles | 914 | **943** |
+| towns 30 to 75 miles from a base | 399 | 353 |
+
+**And the top-gap list for California is now empty** — no cluster of twenty or more uncovered towns within 25
+miles remains, which is what closing the Bay Area hole was for.
+
+**EVIDENCE ON THE SIX IS INCOMPLETE AND THAT IS DELIBERATE.** The Bay Area agent's evidence strings could not be
+confirmed verbatim, so the unconfirmed ones were **dropped rather than shipped**, and `audit-tags.py --write
+california` is running to record real evidence from each business's own site. **The hard layer the verifier
+checks is already met** — domain resolves, phone digits on the page, site reads RV-specific — so the records are
+admissible; what is missing is the supporting quotation, and the auditor is the tool that owns it.
+
 ## Log
 
 - **00:5x** Queue opened. A1 and A2 confirmed by reading the stylesheet and counting element usage.
