@@ -902,6 +902,41 @@ ten carried a published phone in visible text** rather than only in a `tel:` lin
 harvest tool is only 88 percent right and reading the phone off the business's own page is the check that
 replaces it.
 
+## U. Fire #7: the Bay Area batch, and two instrument failures on the way
+
+**Six Bay Area listings inserted** (`Almaden RV Service & Repairs`, `San Jose Mobile RV Repair`,
+`California Camper Repair`, `Leale's RV Experts`, `Artspeed RV Mobile Service`, `V&V Bros RVs and Trailers`),
+taking California to 97. **A `bay-area` region was added and 51 towns mapped to it** — the same structural gap
+the Valley had, and the same flag: it adds a section to the California page, one data file, reversible.
+
+**`BEAR` (Bay Equipment And Repair, Hayward) was left out on purpose.** It is an RV and *truck* collision centre,
+and the settled rule excludes truck businesses. It is the one candidate that is arguably inside the line rather
+than outside it, so it stays a policy question for Ty rather than a listing I created at 7am.
+
+### 1. My own evidence probe was the defect, not the data
+
+I checked the research agent's evidence strings against each business's own page using **a 60-character
+contiguous probe**, and 7 of 11 came back NOT FOUND. That looked like a scandal: a research pass supplying
+reconstructed quotations. **It was mostly my probe.** A 60-character run fails as soon as an HTML tag sits inside
+it, even when the page reads word for word identically — and re-checking with short probes found Leale's and
+Almaden's strings fully present, and Discount RV's present too. **A long contiguous probe across HTML is not a
+verbatim test; it is a test of whether the sentence happens to avoid a tag boundary.**
+
+**The honest state is now measured rather than assumed:** of the 18 evidence strings the Texas batches supplied,
+**17 are verbatim on the business's own page** (the eighteenth was a probe artefact, now confirmed present). The
+Bay Area agent's rows were the weaker ones, and where evidence could not be confirmed it was **dropped rather
+than shipped**, with `audit-tags.py --write` recording real evidence instead.
+
+### 2. `audit-tags.py` could be killed by a broken link on somebody else's website
+
+Running the auditor over California **crashed the whole run** with `InvalidURL: URL can't contain control
+characters`. One business's own page carries a malformed `href` holding a path, a space and a second full URL,
+and the audit follows links it finds, so `urllib` refused it and the traceback ended everything.
+
+**Patched** (`fetch_site` now skips a URL containing whitespace and records why), because **a checker must not be
+killable by the thing it is checking** — and an audit that dies partway through reports nothing about the
+listings it never reached, which looks exactly like an audit that found nothing.
+
 ## Log
 
 - **00:5x** Queue opened. A1 and A2 confirmed by reading the stylesheet and counting element usage.

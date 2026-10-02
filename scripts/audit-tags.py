@@ -105,6 +105,13 @@ def fetch_site(url):
     So: every URL is tried up to three times, a body that disagrees with the Content-Length the
     server declared is retried rather than trusted, and the longest successful read wins.
     """
+    # A LINK ON A BUSINESS'S OWN PAGE CAN BE MALFORMED, AND URLLIB REFUSES IT BY RAISING.
+    # Found 2026-10-02: one California site carries an href holding a path, a space and a
+    # second full URL, and the audit followed it and died with InvalidURL - the whole run,
+    # over one broken link on somebody else's website. A checker must not be killable by the
+    # thing it is checking, so a URL with whitespace in it is skipped and the reason recorded.
+    if re.search(r"\s", url or ""):
+        return None, "malformed url, skipped: %s" % (url or "")[:80]
     host = re.sub(r"^https?://", "", url or "").split("/")[0]
     if not host or not resolves(host):
         return None, "domain does not resolve: %s" % host
