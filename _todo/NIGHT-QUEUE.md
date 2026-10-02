@@ -80,12 +80,31 @@ element order, and whether anything promises what it cannot deliver. Instruments
 my four recommendations, marked in the spec as Cloud's calls for reversal.** Draft only after B's first tranche,
 so the page inherits the corrected button and card contract rather than the current one.
 
-## D. Tools — research, catalogue, build
+## D. Tools. RESEARCH DONE `ef97418`, build in progress
 
-SEO/keyword research to choose which tools are worth building, then a catalogue split three ways:
-**buildable alone** · **needs Ty** (an account, a credential, a decision) · **not worth building** (with the
-reason, so it is not re-litigated). Every tool ships functional, accurate, sourced, and mobile-tested, or it
-does not ship.
+**Full analysis: `_todo/TOOLS-PLAN.md`.** The short version, because it changes the plan from "build some tools"
+to "settle one licence question":
+
+- **The trap got the first ranking.** `voltage drop calculator` measures 1,803 a week and is worth nothing to us:
+  asked RV-qualified, `rv voltage drop` returns **nothing**. Same shape for fuel cost, generator sizing, battery,
+  tire date code. **A bare term measures the word, not our reader.**
+- **RV-qualified demand lives in PLACES:** `rv dump stations` **215** (plus `rv dump station near me` 55),
+  `rv gps` 61, `winterize rv` 44 + `rv winterizing` 26, `rv floor plan` 38, `campground finder` 22.
+- **Three of Ty's four pipeline tools are on that list.** His instinct was right.
+- **Buildable alone:** winterizing planner (measured demand, sourcing already in the repo), floor planner,
+  DOT tire date decoder, tire pressure once tyre inflation tables are researched.
+- **Needs Ty, all for a DATA or LICENCE reason rather than an engineering one:** dump and water stops (the
+  strongest number measured), campground finder, RV-aware GPS.
+- **Not worth building,** reason recorded so it is not re-litigated: every generic-only term, and anything whose
+  output numbers no maker document supports.
+
+**Next:** the dump-station data question is the one that decides the biggest tool. OpenStreetMap carries
+`amenity=sanitary_dump_station` under ODbL (free, but attribution and share-alike on derived data); a commercial
+feed costs money. **Feasibility test was still running when this was written** (`/tmp` python against Overpass,
+both the full-US and the single-state query). Read that result first, then either build it or put the licence
+question to Ty. **Meanwhile build the winterizing planner**, the only buildable tool with measured demand.
+
+## D-old. Every tool ships functional, accurate, sourced, and mobile-tested, or it does not ship.
 
 ## E. The map on mobile. RESOLVED `2d7ec43`
 
