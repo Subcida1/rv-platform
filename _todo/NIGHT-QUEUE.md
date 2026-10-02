@@ -188,6 +188,27 @@ build), so run it before D.
 3. **The 30-amp against 40-amp conflict** is stated on the page rather than resolved, per your "your call".
    If you would rather the page pick one, that is a one-line change.
 
+## IN FLIGHT when this shift ended (01:17)
+
+- **Full quote sweep** (`python3 scripts/check-quotes.py > /tmp/quote-sweep.log`): running, buffered, no output
+  yet. This is the first full sweep with the extraction fixed, so it may surface quotations that were invisible
+  before. **Read `/tmp/quote-sweep.log` at the start of the next shift**, and treat any "NOT IN ANY CITED SOURCE"
+  as a real defect to investigate rather than noise, since the known false-positive class was just removed.
+- **Overpass feasibility test** for the dump-station data (`/tmp` python against both the full-US and
+  single-state query). Full-US returned **504 Gateway Timeout**; the single-state query was still running.
+  **That timeout is itself the finding: a whole-country Overpass query is too heavy to be the live path**, so if
+  this goes ahead the data has to be pre-built into a static file by a script rather than queried at runtime.
+- **Independent review** of the macerator guide (subagent). Its verdict decides whether the page can be moved
+  from unverified to verified in the content manifest.
+
+## SERVICES LEFT RUNNING on purpose, so they are not a mystery
+
+- `python3 -m http.server 8130` in the repo root, and a headless Chrome on `--remote-debugging-port=9341`
+  (`/tmp/cdp-hover`, `/tmp/cdp-mobile`). The audits and screenshot tools need both. **Neither is Ty's; both were
+  started by this shift.** Stop them by the exact pid or the port, never by a name match.
+- A persistent monitor (`/tmp/chase-neo.py`) is watching the Muse bridge for new Neo messages and nudging him
+  when he stalls.
+
 ## Log
 
 - **00:5x** Queue opened. A1 and A2 confirmed by reading the stylesheet and counting element usage.
