@@ -313,6 +313,25 @@ fetched clean**, which is unusual for this programme.
 them**, and the trailer-bearing page is the better first draft because its claim base is simpler: every figure
 belongs to one of two axle types rather than to a table of loads across four makers.
 
+**UPDATE, fire #3: N6 IS PUBLISHED. `74d0692`.** `guides/rv-trailer-wheel-bearings.html` is live, the 37th guide.
+The page carries the finding that carries the page: **the repeated advice is wrong twice over** (which bearing you
+have, and an interval of 12 months or 12,000 miles rather than 10,000), plus **the seal rule whose cost is a brake
+repair** and which the maker states in a counter-intuitive order.
+
+**Measured before it was called done:**
+- `check-quotes.py`: **35 quotations against 7 sources, every one present, none missing.**
+- Mobile audit at 360/393/430: **zero failures and zero warnings in every category.**
+- Head checked: title matches the structured-data headline, description 157 characters, breadcrumb took the right
+  name (last night's `new-guide.py` fix working), no inherited template text.
+- `verify.py`: ALL CHECKS PASSED, with the counter, both tiles and the ItemList registering automatically to 37.
+- It publishes **UNVERIFIED** in the content manifest, which is correct until it is reviewed.
+
+**The independent review is dispatched** as job `20261002-0305-BEARINGS-REVIEW` to the ChatGPT lane. On the
+macerator page the equivalent pass found seven defects the drafter could not see, three of them inferences
+introduced while fixing the first review, so its findings are expected to be real rather than ceremonial.
+
+**N9 (generator sizing) is spec'd and still undrafted** — the next content work once this review's findings are in.
+
 **AND DO NOT EDIT THE VERIFIED PAGES OVERNIGHT FOR A ONE-LINE ADDITION.** `rv-tank-sensors-reading-wrong` is
 currently verified, and a content change resets that by design — so an N1 addition made at 01:30 would leave a
 6,000-word page unverified until somebody re-reviewed it. **The addition and its review belong in the same pass**,
