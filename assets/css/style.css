@@ -2442,3 +2442,40 @@ a.tchip:focus-visible{outline:2px solid var(--b1,var(--brand));outline-offset:2p
 .guide-stats .finder-stat:focus-visible{outline:2px solid var(--b1,var(--brand));outline-offset:2px}
 .guide-stats .finder-stat.on{border-color:var(--b1,var(--brand));background:var(--tint-bg);color:var(--text)}
 .guide-stats .finder-stat b{color:var(--text)}
+
+/* ============================================================
+   THE BUTTON HOVER CONTRACT: one place, and this is the place.
+
+   Six earlier rules in this file said `transform:none` on hover, so what a
+   button did when a pointer reached it depended on source order rather than
+   on a decision: .btn:hover at ~1080 (the Revision 2 "quiet animations"
+   block), then five repeats on .btn-primary:hover and .btn-gb:hover between
+   ~1146 and ~1294. Every button on the site ended up motionless, and the
+   asymmetry was worse than the stillness: .btn-secondary had no transform
+   rule at all, so it changed colour and background while its neighbour in the
+   same row changed only its shadow. Two buttons side by side responding
+   differently reads as broken, not as designed.
+
+   Revision 2 removed the lift deliberately ("motion should whisper, not
+   bounce"). Ty reversed that on 2026-10-02: "the check your rv's weight
+   button is bland af it doesnt even move." This block is that reversal, done
+   ONCE for every variant instead of per-variant, and it is declared last on
+   purpose so no earlier rule can outrank it.
+
+   Guarded by hover:hover so a touch device never inherits a hover state it
+   cannot leave, and switched off under prefers-reduced-motion like the rest
+   of the site's motion.
+   ============================================================ */
+@media(hover:hover){
+  .btn:hover,.btn-gb:hover{transform:translateY(-2px)}
+  .btn:active,.btn-gb:active{transform:translateY(0)}
+  .btn-primary:hover{box-shadow:0 16px 32px -12px var(--glow)}
+  .btn-gb:hover{box-shadow:0 16px 32px -14px var(--glow,rgba(127,180,233,.5))}
+  .btn-secondary:hover{border-color:var(--border-2);background:var(--surface-2)}
+}
+@media(prefers-reduced-motion:reduce){
+  .btn:hover,.btn-gb:hover{transform:none}
+}
+/* .btn-gb carries a gradient STROKE rather than a fill, so a background change
+   would not read on it; its hover signal is the lift plus the glow. Recorded
+   here because the next person will otherwise try to give it a background. */
