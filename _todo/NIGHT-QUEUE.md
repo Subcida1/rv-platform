@@ -10,6 +10,37 @@ anywhere without a maker source. Every page edit runs `verify.py` before it is r
 
 ---
 
+## MORNING BRIEF — read this first
+
+**69 commits, tree clean, CI green, live and serving.** Site went **402 to 417 businesses** and **36 to 38 guides**.
+The detail for every row is further down; this is the short version.
+
+### What shipped
+
+| | |
+|---|---|
+| **2 new guides** | `rv-trailer-wheel-bearings` and `rv-generator-sizing`, both built from sourcing passes, both live |
+| **15 new listings** | 4 San Antonio, 5 Rio Grande Valley, 6 Bay Area — every one verified against the business's own site |
+| **Directory coverage** | Texas towns within 30 mi of a provider **771 to 918**; California **914 to 943**. California's top-gap list is now **empty** |
+| **Your four UI complaints** | all fixed and proved with a real pointer event, not asserted: buttons move again, and 214 non-clickable cards stopped pretending |
+| **Hero map on mobile** | was a 409x230 strip in a 1051px hero; now sized per viewport |
+
+### What needs you, in the order I would take them
+
+1. **Two region-taxonomy calls I made and flagged.** Texas had no region for the Rio Grande Valley and California none for the Bay Area, so **verified businesses had nowhere to live**. I added `rio-grande-valley` and `bay-area`. Each adds a section to a state page, is one data file, and reverses in one commit.
+2. **Four spec decisions** across `_specs/rv-trailer-wheel-bearings.md` and `_specs/rv-generator-sizing.md` §12. Neither page can be drafted until those are settled — stage 1 is your gate.
+3. **The dealership question.** Eight California listings are dealer-type businesses whose own sites do not say they take outside work; **seven are pre-existing**. Your settled rules say nothing about dealers. I would leave them.
+4. **The sitewide byline.** *"Written and checked against the sources below"* on all 38 guides has now been flagged as selling authenticity by two independent reviewers. It is a convention call, not a page defect, which is why I left it.
+5. **Neo's full brief.** He typed it, the bridge truncated it at ~100 characters, and it is not on this machine. Pasting it in is the only route.
+
+### What I got wrong, kept visible
+
+- **Two red pushes on `main`.** `verify.py` is one gate, not the gate — `ci.sh` runs two more checks and four node suites it never touches. Now a memory correction.
+- **One misattributed safety quotation.** I put Lippert's jacking words in quotation marks and attributed them to Dexter, by grepping a document cache without checking which file I was reading.
+- **A batch of mine that did not shrink the gap I claimed it did.** I had misread the instrument's town and dispatched research at the wrong place entirely.
+
+---
+
 ## A. The UI/UX defects Ty named (his words, verbatim)
 
 > *"the check your rv's weight button is bland af it doesnt even move"*
