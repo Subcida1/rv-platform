@@ -12,8 +12,27 @@ anywhere without a maker source. Every page edit runs `verify.py` before it is r
 
 ## MORNING BRIEF — read this first
 
-**69 commits, tree clean, CI green, live and serving.** Site went **402 to 417 businesses** and **36 to 38 guides**.
+**73 commits, tree clean, CI green, live and serving.** Site went **402 to 417 businesses** and **36 to 38 guides**.
 The detail for every row is further down; this is the short version.
+
+### The page-by-page sweep is finished, and it is clean
+
+| instrument | result |
+|---|---|
+| render audit | 138 of 138 renders clean (68 pages × desktop and mobile) |
+| mobile crowding at 360 / 393 / 430 | 0 failures, 0 warnings in every category |
+| accessibility, all 71 pages | no violations — **but see the caveat, the tool disagrees with itself** |
+
+**One instrument result I would not bank:** `check-a11y.mjs` reported moderate landmark warnings on a two-page
+run and then no violations at all on the same site minutes later, including the page that had just warned. **A
+clean a11y run is not evidence of a clean site**; the next step is to reproduce that warning deliberately. Section
+Y has the detail, and `NODE_OPTIONS="--dns-result-order=ipv4first"` is needed to run that tool at all on this
+machine.
+
+**The tools lane has not started, on purpose.** Guides have `new-guide.py` owning all five registration places;
+**tools have no equivalent and no gate that enforces one** (I checked: `verify.py` has no tools check at all).
+Building `new-tool.py`, the missing gate and a first tool in one go is where the omission gets in. Section X has
+the recommendation.
 
 ### What shipped
 
