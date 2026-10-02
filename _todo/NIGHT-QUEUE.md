@@ -1132,6 +1132,42 @@ landmark warnings (`landmark-one-main` and `region`, the h1 named as content out
 inside `<main>` on index.html**, so the warning is not what it first appears, and the full run's detail is the
 next thing to read rather than guess at.
 
+## Z. A review sat unread in the bridge outbox for six hours, and the page carried a CRITICAL defect because of it
+
+**This is the worst thing that happened tonight, and it is not a content defect — it is me.**
+
+The macerator page's independent review came back from the bridge lane at about **3am**. I had asked for it, the
+lane replied, and **the reply sat in `/home/user/claude-bridge/outbox/REPLY-20261002-0155-MACERATOR-REVIEW.md`
+unread until 9am.** I believed the lane was quota-blocked — it had failed earlier with a quota error — and so I
+dispatched subagent reviews instead and treated the lane as dead **without once looking at its output directory**.
+
+**What was in it: a CRITICAL finding, on a live page.** The page gave two different orders for clearing an
+obstruction, in the one section about reaching past **sharp macerator knives**: the body reported the maker's
+order (open the valve, then cut the power, then reach in) as the instruction, while the page's own pre-warning
+said to isolate power before opening anything. **Power off is not optional in that job, and the page left a
+stranded reader choosing between two sequences.** Fixed (`15c0880`) with one unambiguous instruction in both
+places, and the manual's order still reported, because reporting it is the page's job.
+
+**THE RULE THIS EARNS, and it is the sharpest of the night: when a lane or a tool is suspected of failing, READ
+ITS OUTPUT BEFORE CONCLUDING ANYTHING FROM ITS SILENCE.** A quota error at one moment is not evidence about a
+directory six hours later. I inferred a dead lane from a failure that had already been recovered from, and the
+cost was a safety defect live on the site all night.
+
+### And the review itself was stale, which is its own lesson
+
+**By the time I read it, the page had moved.** Checking each finding against the page as it stands, most were
+already gone — the wipe claim, the technician-is-cheaper assertion, the household-cleaners usual-source claim,
+the "two causes and no more" absolute, the noisy-versus-humming conflation. **Applying a six-hour-old review
+blind would have meant re-fixing finished work and calling it diligence.** What was still live and is now fixed:
+a heading that said *"The pump inlet comes first"* directly above a paragraph saying the tank is the first entry
+and the inlet the second; a grouping that counted a voltage measurement as a fault; and **two requirements the
+page leans on — the licensed-tradesperson rule and the approved-competent-person servicing rule — quoted without
+any document against them**, now named (98269 and iNDUS 210407).
+
+**The suspected finding about the quotation containing "generally have" resolves as CORRECT**: `check-quotes.py`
+confirms all 16 quotations appear in the cited sources, so it is exact and stays as a quotation rather than being
+silently tidied.
+
 ## Log
 
 - **00:5x** Queue opened. A1 and A2 confirmed by reading the stylesheet and counting element usage.
