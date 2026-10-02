@@ -311,6 +311,31 @@ here: **RV repair only**, no truck or diesel shops that also take RVs, no cleani
 businesses, and every one checked against `_data/excluded.json` before it is proposed again. Candidate research
 for the two biggest clusters has been dispatched; the insertion itself uses the existing pipeline.
 
+## H. The new guide is near-orphaned, and fixing it needs three things at once
+
+**Found by counting inbound links.** `rv-macerator-toilet` has **2** (the guides hub and the homepage). Its gravity
+sibling has **5**, including contextual links from `rv-sewer-smell`, `manuals/sanitation-and-tanks` and
+`manuals/start-here`. Internal linking is one of the levers the demand research named, so an orphan page is a real
+cost.
+
+**The reason it is not fixed tonight, and it is a good reason.** No honest anchor phrase exists to hang a link on:
+the gravity sibling has **zero** occurrences of "macerator", and the sewer-smell guide talks only in flush balls
+and bowl seals. So a cross-link needs a NEW SENTENCE, not a link on existing words, and that is a prose change.
+
+**I tried it, and the gate caught me.** Adding one sentence to `rv-sewer-smell` made `verify.py` fail correctly
+with *"guides/rv-sewer-smell.html says Sep 27, 2026, and its words have changed since; update the date on the
+page, or the claim is not true."* The page's own checked-date line had become false. Bumping the date would
+assert a fresh check of the sources that did not happen, so **the sentence was reverted and the tree is clean.**
+
+**What the next pass has to do, all together, in one commit:** add the cross-link sentences (the gravity sibling
+needs one, the sewer-smell guide needs one), move each page's checked date to the day it is genuinely re-checked,
+and put those pages through the review that a content change requires. Doing any one of the three alone is what
+the gate exists to stop.
+
+**And a note on where NOT to link from:** `manuals/sanitation-and-tanks.html` is **generated**, so a hand-edited
+link there would be overwritten. `build-manuals-pages.py --check` reports 14 pages generated and 0 differing, so
+any change has to go through the generator.
+
 ## Log
 
 - **00:5x** Queue opened. A1 and A2 confirmed by reading the stylesheet and counting element usage.
