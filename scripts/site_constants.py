@@ -85,6 +85,10 @@ def claim_values():
     n_states = len(state_shards())
     out["states-total"] = str(n_states)
     out["states-total-word"] = number_word(n_states).capitalize()
+    # The same number mid-sentence. The homepage names the states it covers in prose, and
+    # naming three of twelve is the same drift in a longer form, so the sentence carries the
+    # count instead. It needs the lowercase spelling because that sentence does not start here.
+    out["states-total-word-lc"] = number_word(n_states)
 
     for key, slugs in sorted(g.items()):
         n = len(slugs)

@@ -354,32 +354,9 @@
       render(true);
     });
 
-    /* ---------- claim form ---------- */
-    var form = $('claim-form');
-    function setErr(id, msg) {
-      var el = $(id);
-      if (el) { el.textContent = msg; var f = el.closest && el.closest('.fld'); if (f) f.classList.toggle('has-err', !!msg); }
-    }
-    function toast(msg, bad) {
-      var out = document.createElement('div');
-      out.style.cssText = 'position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:' + (bad ? '#8a1f2b' : '#0f7a45') + ';color:#fff;border-radius:999px;padding:12px 22px;font-size:14.5px;font-weight:700;z-index:999;box-shadow:0 14px 30px -12px rgba(16,24,40,.35)';
-      out.textContent = msg;
-      document.body.appendChild(out);
-      setTimeout(function () { out.remove(); }, 4200);
-    }
-    if (form) form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var nameEl = form.querySelector('#cl-name'), cityEl = form.querySelector('#cl-city');
-      var n = nameEl.value.trim(), c = cityEl.value.trim(), ok = true;
-      if (n.length < 2) { setErr('cl-name-err', 'Add the business name'); ok = false; } else setErr('cl-name-err', '');
-      if (c.length < 2) { setErr('cl-city-err', 'Add the city'); ok = false; } else setErr('cl-city-err', '');
-      if (!ok) return;
-      RV.claimSubmit(form).then(function (how) {
-        if (how === 'sent') { toast('Request sent. It is in our inbox now.'); form.reset(); }
-        else if (how === 'mailto') { toast('Your email app is opening with the details filled in. Send it and the request reaches us.'); form.reset(); }
-        else { toast('Nothing was sent: there is no contact route available right now.', true); }
-      });
-    });
+    /* The claim form's submit handler moved to site.js on 2026-10-01, because the card is now
+       on the hub too and site.js is the only script on every page. This file still owns the
+       finder; it no longer owns the form. */
 
     /* ---------- stats + first paint ---------- */
     $('stat-total').textContent = DATA.length;

@@ -58,14 +58,19 @@ def tools():
 
 def directories():
     out = []
-    names = {"index": "RV Repair Directory by State",
-             "oregon": "RV Repair in Oregon",
-             "washington": "RV Repair in Washington",
-             "california": "RV Repair in California"}
+    # The name a state gets in search. This was a dict holding oregon, washington and
+    # california, so the other nine states fell through to their page title and the
+    # results read "RV Repair in Oregon" next to "RV Repair Directory by State | Arizona".
+    # site_constants.state_shards() is the one place that knows which states exist.
+    import site_constants as C
+    display = {"index": "RV Repair Directory by State"}
+    for _code, slug in C.state_shards().items():
+        data = json.loads((ROOT / "_data" / "listings" / ("%s.json" % slug)).read_text(encoding="utf-8"))
+        display[slug] = "RV Repair in %s" % data["name"]
     for p in sorted((ROOT / "directory").glob("*.html")):
         t, d = title_desc(p)
         out.append({
-            "t": names.get(p.stem, t), "u": "directory/%s" % p.name, "c": "Directory",
+            "t": display.get(p.stem, t), "u": "directory/%s" % p.name, "c": "Directory",
             "k": ("rv repair directory businesses find a tech near me " + p.stem).lower(),
             "d": (d[:120] if d else ""),
         })

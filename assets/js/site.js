@@ -161,8 +161,8 @@
  '<a href="' + R(rt.guideTires) + '">Tires Through Winter<span class="sm">Pressure, flat spots, covers</span></a>' +
  '<a href="' + R(rt.guideRoof) + '">Roof Under Snow Load<span class="sm">Seals, ice, weight</span></a></div></div>' +
  '<div class="nav-group"><a class="nav-link" href="' + R(rt.directory) + '">Directory</a>' +
- '<div class="drop"><a href="' + R(rt.directoryOregon) + '">Find a service<span class="sm">Mobile techs and repair centers in Oregon</span></a>' +
- '<a href="' + R(rt.directoryOregon) + '#claim">Claim your business<span class="sm">Free listing, you control it</span></a></div></div>' +
+ '<div class="drop"><a href="' + R(rt.directory) + '">Find a service<span class="sm">Mobile techs and repair centers by state</span></a>' +
+ '<a href="' + R(rt.directory) + '#claim">Claim your business<span class="sm">Free listing, you control it</span></a></div></div>' +
  '<div class="nav-group"><a class="nav-link" href="' + R(rt.manuals) + '">Manuals</a>' +
  '<div class="drop"><a href="' + R(rt.manualsPower) + '">Electrical<span class="sm">Converters, inverters, solar, generators</span></a>' +
  '<a href="' + R(rt.manualsTowing) + '">Towing and running gear<span class="sm">Hitches, axles, brakes, tires</span></a>' +
@@ -181,8 +181,8 @@
  mmGroup('Guides', rt.guides, [['Winterize plumbing', rt.guideWinterize],
    ['Battery cold storage', rt.guideBattery], ['Tires through winter', rt.guideTires],
    ['Roof snow load', rt.guideRoof]]) +
- mmGroup('Directory', rt.directory, [['Find a service', rt.directoryOregon],
-   ['Claim your business', rt.directoryOregon + '#claim']]) +
+ mmGroup('Directory', rt.directory, [['Find a service', rt.directory],
+   ['Claim your business', rt.directory + '#claim']]) +
  mmGroup('Manuals', rt.manuals, [['Electrical', rt.manualsPower],
    ['Towing and running gear', rt.manualsTowing], ['Owner manuals by brand', rt.manualsBrands],
    ['Recalls and bulletins', rt.manualsRecalls]]) +
@@ -325,7 +325,7 @@
  var TABLE = [
  [rt.calculator, ['weight', 'tow', 'towing', 'towed', 'payload', 'tongue', 'pin weight',
  'hitch', 'gvwr', 'gcwr', 'cargo', 'axle', 'scale', 'overload']],
- [rt.directoryOregon, ['tech', 'technician', 'mechanic', 'mobile repair', 'repair shop']],
+ [rt.directory, ['tech', 'technician', 'mechanic', 'mobile repair', 'repair shop']],
  [rt.directory, ['directory', 'near me', 'find a service', 'service center', 'service', 'repair']],
  [rt.guideWinterize, ['winterize', 'winterizing', 'antifreeze', 'plumb', 'pipe', 'ptrap',
  'p-trap', 'drain', 'bypass']],
@@ -424,6 +424,50 @@
  .catch(fallback);
  }
 
+ /* ---------- the claim form's submit handler ----------
+   This lived in finder.js, which only the state directory pages load, so the card was
+   wired there and nowhere else. When the hub gained the same card on 2026-10-01 the form
+   rendered and did nothing: no handler, no error, a button that quietly reloaded the page.
+   The delivery half (claimSubmit) was already in this file; the wiring belongs beside it,
+   because this file is on every page and the card is now on thirteen of them. */
+ function initClaimForm() {
+ var form = document.querySelector('#claim-form');
+ if (!form || typeof form.addEventListener !== 'function') return;
+ function setErr(id, msg) {
+ var el = document.getElementById(id);
+ if (el) {
+ el.textContent = msg;
+ var fld = el.closest && el.closest('.fld');
+ if (fld) fld.classList.toggle('has-err', !!msg);
+ }
+ }
+ function toast(msg, bad) {
+ var out = document.createElement('div');
+ out.style.cssText = 'position:fixed;bottom:24px;left:50%;transform:translateX(-50%);'
+ + 'background:' + (bad ? '#8a1f2b' : '#0f7a45') + ';color:#fff;border-radius:999px;'
+ + 'padding:12px 22px;font-size:14.5px;font-weight:700;z-index:999;'
+ + 'box-shadow:0 14px 30px -12px rgba(16,24,40,.35)';
+ out.textContent = msg;
+ document.body.appendChild(out);
+ setTimeout(function () { out.remove(); }, 4200);
+ }
+ form.addEventListener('submit', function (e) {
+ e.preventDefault();
+ var nameEl = form.querySelector('#cl-name'), cityEl = form.querySelector('#cl-city');
+ var n = nameEl ? nameEl.value.trim() : '', c = cityEl ? cityEl.value.trim() : '', ok = true;
+ if (n.length < 2) { setErr('cl-name-err', 'Add the business name'); ok = false; }
+ else setErr('cl-name-err', '');
+ if (c.length < 2) { setErr('cl-city-err', 'Add the city'); ok = false; }
+ else setErr('cl-city-err', '');
+ if (!ok) return;
+ claimSubmit(form).then(function (how) {
+ if (how === 'sent') { toast('Request sent. It is in our inbox now.'); form.reset(); }
+ else if (how === 'mailto') { toast('Your email app is opening with the details filled in. Send it and the request reaches us.'); form.reset(); }
+ else { toast('Nothing was sent: there is no contact route available right now.', true); }
+ });
+ });
+ }
+
  /* ---------- print: open every <details> so nothing is lost on paper ---------- */
 /*
    MEASURED 2026-09-28, and this is not a style preference. A closed <details> prints its
@@ -468,5 +512,6 @@ function initPrint() {
  initSearchScript();
  initEmbedMode();
  initTracking();
+ initClaimForm();
  initPrint();
 })();

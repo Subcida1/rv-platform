@@ -38,7 +38,15 @@ NS = "http://www.sitemaps.org/schemas/sitemap/0.9"
 # Reachable but deliberately unlisted. A 404 page carries noindex and must never
 # be submitted as a URL worth crawling; it only has to exist for the server to
 # serve it. Everything else on disk is expected in the sitemap.
-UNLISTED = {"404.html"}
+UNLISTED = {
+    "404.html",
+    # A placeholder for a feature that has not shipped. The nav door is already shut
+    # (CFG.showSignin), so nothing links to it, but it was still listed here at priority
+    # 0.2 - which asks Google to index a page whose only content is disabled inputs.
+    # Submitting it and then serving it noindex would be a contradiction, so it is
+    # neither submitted nor reachable. Remove this line the day sign-in works.
+    "signin.html",
+}
 
 
 def published_pages():

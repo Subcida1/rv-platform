@@ -66,6 +66,51 @@ HUB_LIST = "SCHEMA:STATES"
 TAGS_START, TAGS_END = "<!-- LISTINGS:SCRIPTS-START -->", "<!-- LISTINGS:SCRIPTS-END -->"
 SCHEMA_START, SCHEMA_END = "<!-- SCHEMA:PROVIDERS-START -->", "<!-- SCHEMA:PROVIDERS-END -->"
 
+# The claim card. It was the same 38 lines hand-copied into all twelve state pages and
+# absent from the hub, which is why the footer link "/directory/index.html#claim" pointed
+# at an anchor that did not exist on any page it could reach. Written once, injected inside
+# markers the way the nav and the footer are, so the hub can take a claim and there is no
+# thirteenth copy to keep in step.
+CLAIM_START, CLAIM_END = "<!-- CLAIM:START -->", "<!-- CLAIM:END -->"
+CLAIM_CARD = """      <div class="form-card  sp-34" id="claim">
+        <div class="flex between gap">
+          <div>
+            <h3>Claim your listing</h3>
+            <p class="form-sub">Free, permanent, yours to control. No middleman, no commission.</p>
+          </div>
+          <span class="verified">Free forever</span>
+        </div>
+        <form id="claim-form" class="form-stack sp-16" novalidate>
+          <div class="fld">
+            <label for="cl-name">Business name<span class="req">*</span></label>
+            <input id="cl-name" type="text" placeholder="e.g. Cascade Mobile RV Repair" autocomplete="organization" required>
+            <span class="err" id="cl-name-err"></span>
+          </div>
+          <div class="form-row-2">
+            <div class="fld">
+              <label for="cl-city">City<span class="req">*</span></label>
+              <input id="cl-city" type="text" placeholder="e.g. Eugene" autocomplete="address-level2" required>
+              <span class="err" id="cl-city-err"></span>
+            </div>
+            <div class="fld">
+              <label for="cl-st">State<span class="req">*</span></label>
+              <input id="cl-st" type="text" placeholder="OR" maxlength="2" class="upper" required>
+            </div>
+          </div>
+          <div class="fld">
+            <label for="cl-phone">Phone<span class="req">*</span></label>
+            <input id="cl-phone" type="tel" placeholder="(541) 555-0123" autocomplete="tel" required>
+          </div>
+          <div class="fld">
+            <label for="cl-site">Website</label>
+            <input id="cl-site" type="url" placeholder="https://your-site.com" autocomplete="url">
+            <span class="hint">Optional. A working link helps more nearby RVers find you.</span>
+          </div>
+          <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" aria-hidden="true">
+          <button class="btn btn-gb btn-block sp-4" type="submit">Claim my listing</button>
+        </form>
+      </div>"""
+
 
 def read_state(slug):
     src = DATA / ("%s.json" % slug)
@@ -333,9 +378,11 @@ def replace_between(text, start, end, body, label):
 def build(kind):
     """kind: 'check' builds everything in memory, 'write' writes it."""
     out, changed = {}, []
+    state_name = {}
     for slug, st in sorted(PAGES.items()):
         data = read_state(slug)
         validate(data, slug)
+        state_name[slug] = data["name"]
         out[(slug, "shard")] = shard_text(data)
         out[(slug, "schema")] = schema_text(data, slug)
         out[(slug, "regions")] = regions_text(data, slug)
@@ -379,6 +426,7 @@ def build(kind):
         text = replace_between(text, TAGS_START, TAGS_END, out[(slug, "script-tags")], "scripts")
         text = replace_between(text, SCHEMA_START, SCHEMA_END, out[(slug, "schema")], "schema")
         text = replace_between(text, START, END, out[(slug, "regions")], "regions")
+        text = replace_between(text, CLAIM_START, CLAIM_END, CLAIM_CARD, "claim card")
 
         c = out[(slug, "counts")]
         for elem, value in (("stat-total", c["total"]), ("stat-mobile", c["mobile"]),
@@ -397,6 +445,7 @@ def build(kind):
             text, n = re.subn(r'(<b id="idx-%s-%s">)\d+(</b>)' % (st.lower(), key),
                               r"\g<1>%d\g<2>" % c[key], text)
             assert n == 1, "hub: idx-%s-%s marker not found" % (st.lower(), key)
+    text = replace_between(text, CLAIM_START, CLAIM_END, CLAIM_CARD, "hub claim")
     put(hub, text, old, "hub tiles")
 
     # The hub names each state page in structured data, and that block was written by
@@ -415,10 +464,9 @@ def build(kind):
             "mainEntity": {"@type": "ItemList", "numberOfItems": len(PAGES),
                            "itemListElement": [
                                {"@type": "ListItem", "position": i,
-                                "name": "RV Repair in %s" % name.title(),
+                                "name": "RV Repair in %s" % state_name[slug],
                                 "url": "%s/directory/%s.html" % (SITE, slug)}
-                               for i, (slug, name) in
-                               enumerate(sorted((sl, PAGES[sl]) for sl in PAGES), 1)]}}),
+                               for i, slug in enumerate(sorted(PAGES), 1)]}}),
         '<script type="application/ld+json">%s</script>' % jld({
             "@context": "https://schema.org", "@type": "BreadcrumbList",
             "itemListElement": [

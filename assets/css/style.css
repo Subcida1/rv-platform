@@ -2325,8 +2325,14 @@ body.is-embed .embed-credit a{font-weight:800;color:var(--b1)}
      what prints. Scoped to the state pages with body[data-state], which
      scripts/build-listings.py writes and scripts/verify.py asserts. */
   body[data-state] .finder,
-  body[data-state] #d-results,
-  body[data-state] .form-card{display:none !important}
+  body[data-state] #d-results{display:none !important}
+
+  /* ---- A form is not a document ----
+     This was scoped to body[data-state] until 2026-10-01, when the claim card moved onto
+     the hub as well. The hub carries no data-state, so a printed hub would have carried
+     empty input boxes and a submit button. No page prints a form: the fourteen that have
+     one are the directory pages and the sign-in placeholder. */
+  .form-card{display:none !important}
 
   /* ---- 1. navigation has no meaning on paper ---- */
   #site-nav,#site-footer,.mobile-menu,.nav-search,.js-search-form,

@@ -603,6 +603,107 @@ else:
     print("  all %d pages have a description between 140 and 160 chars"
           % len([1 for q in ROOT.rglob("*.html") if ".git" not in q.parts]))
 
+print("\n=== a state count in a description must match the directory ===")
+# A description is an ATTRIBUTE, and the data-claim machinery reads text runs, so a count
+# written inside one is invisible to every other gate here. That is how directory/index.html
+# shipped saying "live in six states today" with twelve live: the length check above saw the
+# string and could not read it, and no other check looks at an attribute at all.
+#
+# This was written to also fail a description that ENUMERATES states, on the theory that a
+# list of names is the same drift in a longer form. Run over the site it flagged 36
+# descriptions and every one of them was correct - a state page is supposed to name its own
+# state. An instrument that flags correct copy teaches the reader to ignore it, so the
+# enumeration half is gone and only the count is checked.
+NUMWORD = {C.number_word(n).lower() for n in range(1, 41)}
+REAL = C.number_word(len(C.state_shards())).lower()
+desc_re = re.compile(r'<meta (?:name="(?:description|twitter:description)"'
+                     r'|property="og:description") content="(.*?)">', re.S)
+count_re = re.compile(r'\b([A-Za-z]+(?:-[A-Za-z]+)?|\d+)\s+states?\b', re.I)
+bad, seen = [], 0
+for p in sorted(ROOT.rglob("*.html")):
+    if ".git" in p.parts:
+        continue
+    for m in desc_re.finditer(p.read_text(encoding="utf-8")):
+        seen += 1
+        for tok in count_re.findall(m.group(1)):
+            if not (tok.isdigit() or tok.lower() in NUMWORD):
+                continue  # "United States" is not a count
+            if tok.lower() != REAL and tok != str(len(C.state_shards())):
+                bad.append("%s: says %r states, the directory has %d"
+                           % (p.relative_to(ROOT), tok, len(C.state_shards())))
+for b in bad:
+    print("  FAIL " + b)
+if bad:
+    fails.append("state count in a description")
+else:
+    print("  %d descriptions, none stating a number of states other than %s" % (seen, REAL))
+
+print("\n=== a page with a claim form must load the script that wires it ===")
+# 2026-10-01: the claim card was hand-copied into twelve state pages and its submit handler
+# lived in finder.js, which only those pages load. The card was then put on the hub, where the
+# form rendered, submitted, and quietly reloaded - no handler, no error, nothing in any log.
+# The wiring is in site.js now, which is on every page, and this keeps the two facts together:
+# the hub or any future page can carry the card, and only a page that loads site.js can.
+claim_pages, bad = [], []
+site_js = (ROOT / "assets" / "js" / "site.js").read_text(encoding="utf-8")
+wires = "querySelector('#claim-form')" in site_js and "form.addEventListener('submit'" in site_js
+for p in sorted(ROOT.rglob("*.html")):
+    if ".git" in p.parts:
+        continue
+    text = p.read_text(encoding="utf-8")
+    if 'id="claim-form"' not in text:
+        continue
+    claim_pages.append(p)
+    if "assets/js/site.js" not in text:
+        bad.append("%s: carries the claim form but does not load site.js"
+                   % p.relative_to(ROOT))
+if not wires:
+    bad.append("assets/js/site.js no longer wires #claim-form's submit event")
+for b in bad:
+    print("  FAIL " + b)
+if bad:
+    fails.append("claim form wiring")
+else:
+    print("  %d page(s) carry the card, all load the script that handles it" % len(claim_pages))
+
+print("\n=== every in-site #anchor lands on an id that exists ===")
+# Found by hand on 2026-10-01 while chasing one dead anchor and finding two: the footer sent
+# 68 pages to /directory/index.html#claim and /directory/index.html#seed, and neither id
+# existed on the hub. A link to a missing fragment is not a 404 - it silently lands at the top
+# of the page, so no link checker, no status code and no log records it. 70 broken links, 0
+# symptoms.
+#
+# Two traps for whoever extends this:
+#   - every page carries <base href="/">, so a RELATIVE href resolves from the SITE ROOT, not
+#     from the page's own directory. Resolving it against the directory reports false positives
+#     on every tools/ and guides/ link (it did, on the first run).
+#   - only ids present in the served HTML are counted. An id a script injects at runtime would
+#     be reported here and is not a defect; if that ever happens, teach this check about it
+#     rather than deleting the check.
+anchors = {}
+for p in sorted(ROOT.rglob("*.html")):
+    if ".git" in p.parts:
+        continue
+    anchors[str(p.relative_to(ROOT))] = set(
+        re.findall(r'\sid="([^"]+)"', p.read_text(encoding="utf-8")))
+anchor_link = re.compile(r'href="([^"#]*)#([^"]+)"')
+bad = []
+for rel in anchors:
+    for target, frag in anchor_link.findall((ROOT / rel).read_text(encoding="utf-8")):
+        if target.startswith(("http", "//", "mailto:")):
+            continue
+        dest = rel if target == "" else target.lstrip("/")
+        if dest not in anchors:
+            bad.append("%s -> %s#%s (no such page)" % (rel, target, frag))
+        elif frag not in anchors[dest]:
+            bad.append("%s -> %s#%s (no such id)" % (rel, target, frag))
+for b in sorted(set(bad)):
+    print("  FAIL " + b)
+if bad:
+    fails.append("anchor targets")
+else:
+    print("  %d page(s), every #fragment resolves" % len(anchors))
+
 print("\n=== manuals manifest (schema, banned hosts, storable-URL rule) ===")
 r = subprocess.run([sys.executable, str(ROOT / "scripts/build-manuals.py"), "--check"],
                    capture_output=True, text=True)
