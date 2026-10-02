@@ -94,6 +94,19 @@ def main():
     # carried a JSON-LD description about sewer smell while their <title> and headline were correct, and
     # nothing caught it because every gate reads the HTML meta tags, not the structured data.
     head = re.sub(r'"description":\s*"[^"]*"', json.dumps("description") + ': ' + json.dumps(a.desc), head, count=1)
+    # The BreadcrumbList names THIS page in position 2, and nothing set it, so every guide built
+    # from a template inherited the template's page name. Found 2026-10-02 by an independent review
+    # of a brand-new page, which reported the breadcrumb of a toilet guide reading "RV Furnace Not
+    # Working": twelve published guides were telling Google their name was a furnace page.
+    #
+    # Exactly the same class as the description bug directly above, and it survived for exactly the
+    # same reason - every gate here reads meta tags and visible text, and nothing reads structured
+    # data. The name comes from --tile-title because that is the site's own short name for a page,
+    # the one already printed on its card.
+    _bc = re.search(r'("@type":"BreadcrumbList".*?"position":2,"name":")([^"]*)(")', head, re.S)
+    if not _bc:
+        sys.exit("breadcrumb block not found in template: " + a.template)
+    head = head[:_bc.start(2)] + a.tile_title.replace('"', "'") + head[_bc.end(2):]
     # These were HARDCODED to a literal date, so every guide built from this tool would carry the date
     # the tool was last edited rather than the date it was built. Correct tonight, wrong from tomorrow.
     _today = datetime.date.today().isoformat()
