@@ -122,6 +122,10 @@ def main():
     ap.add_argument("--guides", help="comma-separated slugs")
     ap.add_argument("--round", default="1")
     ap.add_argument("--status", action="store_true")
+    ap.add_argument("--lane", help="send to this lane instead of the rotation. Repeatable as a "
+                                  "comma-separated list. Use it when a lane is known to be "
+                                  "answering: the rotation cannot tell a working lane from one "
+                                  "that renders its page without an answer.")
     a = ap.parse_args()
 
     if a.status:
@@ -146,8 +150,16 @@ def main():
     stamp = datetime.datetime.now().strftime("%Y%m%d-%H%M")
     KEEP.mkdir(parents=True, exist_ok=True)
     made = []
+    # WHY THIS IS NOT JUST `LANES[i % len(LANES)]`. It was, and with a single slug i is always 0,
+    # so EVERY single-guide dispatch went to LANES[0] whatever state that lane was in. On
+    # 2026-10-02 that lane released the flight twice in a row -- "the reply container held only
+    # page chrome and footer text" -- while the lane that had delivered a full review forty
+    # minutes earlier sat idle, and there was no flag to say so. Heartbeat freshness is not the
+    # signal (the lane that worked had the stalest heartbeat of the six), so this does not try to
+    # guess health: it rotates by default and lets the caller name a lane when it knows one.
+    pick = [l.strip() for l in (a.lane or "").split(",") if l.strip()] or LANES
     for i, slug in enumerate(slugs):
-        lane = LANES[i % len(LANES)]
+        lane = pick[i % len(pick)]
         jobid = "%s-RV-%s-REVIEW%s" % (stamp, slug, a.round)
         text = "LANE: %s\n\nJOB ID: %s\n\n" % (lane, jobid) + BODY.format(
             staged="guides__%s.html" % slug, jobid=jobid)
