@@ -5,7 +5,7 @@ what we said they would.
 
 Composes the pieces built on 2026-09-22:
   - Search Console performance, this week against last week
-  - a 39 URL indexing sweep, diffed against the previous one
+  - every published URL's indexing state, swept in parallel and diffed against the previous one
   - sitemap and robots health
   - the change log, with each change's window before and after its deploy date
   - an expectation check, because the point of logging an expectation is to
@@ -256,9 +256,18 @@ def top_rows(gsc, token, site, dimension, start, end, limit=10):
     return payload.get("rows", [])
 
 
-def coverage(gsc, token, site, previous):
+def coverage(gsc, token, site, previous, workers=16):
+    """Inspect every published URL.
+
+    The URL Inspection API answers in about seven seconds per call, so this is the
+    whole cost of the run. At the old five workers a 67-URL sweep took ~90s and the
+    whole report took 123s - past the two-minute command timeout the Monday cron runs
+    under, which killed it mid-run and left a half-written coverage file. Sixteen
+    workers brings the sweep to ~30s. The API quota is 2,000/day and 600/minute, so
+    this is nowhere near a limit.
+    """
     urls = gsc.sitemap_urls(os.path.join(ROOT, "sitemap.xml"))
-    rows = gsc.sweep(token, site, urls)
+    rows = gsc.sweep(token, site, urls, workers=workers)
     counts = {}
     for row in rows:
         counts[row["coverageState"]] = counts.get(row["coverageState"], 0) + 1
@@ -584,7 +593,7 @@ def build(args):
         add("Skipped (--no-sweep).")
         add("")
     else:
-        rows, counts, changes = coverage(gsc, token, site, previous_sweep)
+        rows, counts, changes = coverage(gsc, token, site, previous_sweep, args.workers)
         indexed = counts.get("Submitted and indexed", 0)
         add("## 4. Indexing coverage")
         add("")
@@ -705,7 +714,9 @@ def main():
     parser.add_argument("--site", default="sc-domain:originrv.com")
     parser.add_argument("--lag", type=int, default=3, help="days of reporting lag to exclude")
     parser.add_argument("--window", type=int, default=14, help="days either side of a change")
-    parser.add_argument("--no-sweep", action="store_true", help="skip the 39 URL sweep")
+    parser.add_argument("--no-sweep", action="store_true", help="skip the URL coverage sweep")
+    parser.add_argument("--workers", type=int, default=16,
+                        help="parallel URL inspections; the sweep is the whole cost of the run")
     parser.add_argument("--ga4-property", default="555179873", help="GA4 property id")
     parser.add_argument("--cf-account", default="0e651a735455111c539444e89d846f1a",
                         help="Cloudflare account tag (from npx wrangler whoami)")
