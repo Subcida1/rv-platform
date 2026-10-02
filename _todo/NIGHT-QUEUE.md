@@ -1251,6 +1251,16 @@ fetch it.** That removes the tool dependency for a lane that lacks it and remove
 that has it. **This is a change to the dispatch path, not to a page, and it is the next thing to do on the bridge
 — not something to attempt at 9am while guessing.**
 
+**EXCEPT IT IS NOT THAT SIMPLE, AND THE TOOL SAYS WHY.** `bridge-review.py`'s own docstring records the reason a
+job copy is preserved: *"there is no way to tell a lane quoting the PAGE from a lane echoing the PROMPT -- and
+those are opposite diagnoses. Discovering that cost a round; this step stops it recurring."* **Inlining the text
+would collapse exactly that distinction**: a lane's quotations would come from the prompt by construction, and
+`validate-lane-replies.py` could no longer separate "this lane read the page" from "this lane repeated what we
+typed at it". So the lane's suggestion is the obvious fix and it breaks a safeguard, which means the real options
+are narrower: **fix the tool injection for lanes that lack it, or leave the file read in place and make the copy
+small enough to read in one call inside the capture window.** Whoever picks this up should not take the lane's
+advice without reading that docstring first.
+
 **So: four dispatches, one completed review of the corrected text — none.** The page's status is unchanged and
 should be read as such: **round 1 plus corrections, verified by the gates and a subagent pass, and NOT verified by
 a completed different-lane pass on the current text.**
