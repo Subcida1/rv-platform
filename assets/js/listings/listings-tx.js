@@ -1031,5 +1031,64 @@ window.RV_LISTINGS_TX = [
    "blanco",
    "canyon lake"
   ],  "region": "San Antonio and the I-35 corridor",  "reg": "san-antonio"
+ },
+ {  "n": "RGV RV Repair",  "c": "McAllen, TX",  "p": "(956) 420-6868",  "u": "https://rgvrvrepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "RGV RV Repair is a mobile service working across the Rio Grande Valley, from McAllen and Edinburg through Mission, Pharr, Weslaco, Harlingen and Brownsville. Its own site describes detail-focused mobile work covering diagnostics, appliance repair, roof leaks, slide-outs, electrical problems and inspections, so the technician comes to the coach rather than the coach going to a shop.",  "g": [
+   "Mobile only",
+   "Rio Grande Valley"
+  ],  "base": "mcallen",  "areas": [
+   "mcallen",
+   "edinburg",
+   "mission",
+   "pharr",
+   "weslaco",
+   "mercedes",
+   "harlingen",
+   "brownsville"
+  ],  "region": "McAllen, Harlingen and the Rio Grande Valley",  "reg": "rio-grande-valley"
+ },
+ {  "n": "Red's RV Repair",  "c": "Mission, TX",  "p": "(956) 309-0967",  "u": "https://www.redsrvrepair.com/",  "t": "center",  "e": false,  "r": false,  "d": "Red's RV Repair is a shop in Mission serving the Rio Grande Valley, describing itself as a bumper-to-bumper RV repair business. Its own site lists air conditioning, water damage, plumbing, electrical, roof, awning, slide-out and trailer work, and names Mission, McAllen and the wider Valley as its service area.",  "g": [
+   "Shop",
+   "20+ years",
+   "Rio Grande Valley"
+  ],  "base": "mission",  "areas": [
+   "mission",
+   "mcallen",
+   "rio grande valley"
+  ],  "region": "McAllen, Harlingen and the Rio Grande Valley",  "reg": "rio-grande-valley"
+ },
+ {  "n": "Sierra RV",  "c": "La Feria, TX",  "p": "(956) 266-3597",  "u": "https://sierramobilerv.com/",  "t": "both",  "e": false,  "r": false,  "d": "Sierra RV, also branded Sierra Mobile RV, has two Rio Grande Valley locations, at La Feria and Port Isabel, and describes 25 years serving the Valley. Its own site covers air conditioner repair, maintenance and replacement, refrigerator, awning, water heater and furnace repair, roof repair, resealing and replacement, satellite installation and preventative maintenance.",  "g": [
+   "Two locations",
+   "Mobile and shop",
+   "25 years",
+   "Rio Grande Valley"
+  ],  "base": "la feria",  "areas": [
+   "la feria",
+   "port isabel",
+   "harlingen",
+   "brownsville"
+  ],  "region": "McAllen, Harlingen and the Rio Grande Valley",  "reg": "rio-grande-valley"
+ },
+ {  "n": "Miller's Mobile RV Solutions",  "c": "Harlingen, TX",  "p": "(956) 410-9712",  "u": "https://www.millersmobilervsolutions.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Miller's Mobile RV Solutions is a mobile maintenance and repair service out of Harlingen covering South Texas, and its own site gives its service fee as covering work within 50 miles. It is a Lippert and NTP-Stag dealer, which means parts come through those distributors, and it also rents RVs.",  "g": [
+   "Mobile only",
+   "Lippert dealer",
+   "Rents RVs",
+   "South Texas"
+  ],  "base": "harlingen",  "areas": [
+   "harlingen",
+   "san benito",
+   "brownsville",
+   "weslaco",
+   "mercedes"
+  ],  "region": "McAllen, Harlingen and the Rio Grande Valley",  "reg": "rio-grande-valley"
+ },
+ {  "n": "New Beginnings RV",  "c": "Mission, TX",  "p": "720-341-9892",  "u": "https://newbeginningsrv.com/home",  "t": "mobile",  "e": false,  "r": false,  "d": "New Beginnings RV is a mobile repair and inspection service based in Mission, covering electrical, plumbing and appliance work, air conditioning and furnace repair, water heaters, leveling and awnings. Its own site says its technicians come to the customer's location and that the business moves between locations through the year.",  "g": [
+   "Mobile only",
+   "Inspection",
+   "Rio Grande Valley"
+  ],  "base": "mission",  "areas": [
+   "mission",
+   "mcallen",
+   "rio grande valley"
+  ],  "region": "McAllen, Harlingen and the Rio Grande Valley",  "reg": "rio-grande-valley"
  }
 ];
