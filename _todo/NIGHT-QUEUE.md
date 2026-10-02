@@ -987,6 +987,32 @@ accident of what the auditor's patterns happen to match.
 missing from its site; **the auditor found it there word for word** (`For over 15 years, Leale's RV has been the
 trusted choice for RV repair`). The probe was the defect, again.
 
+## W. Two red pushes on main, and the reason is a rule I already had but did not apply
+
+**CI is green again** (`3ac0e71`), but two pushes went red first, and Ty gets emailed about every one.
+
+**`verify.py` IS ONE GATE, NOT THE GATE.** I ran it after every change and called things done. `ci.sh` also runs
+`build-coords.py --check`, `build-search-index.py --check`, `cross-check.py --strict` and four node suites, none of
+which `verify.py` touches. **Run `bash scripts/ci.sh` before pushing.**
+
+**Both failures were mine, and both were the same kind of mistake:**
+
+1. **`cross-check.py --strict` on a vocabulary collision.** It paired my macerator page's *"0.1 to 0.7 gallons per
+   flush"* with the tank-sensor guide's *"40 gallon black tank"* — a per-flush rate and a tank capacity, two facts
+   that cannot contradict each other. The gate's own criterion is a pair that *cannot both be true*; its rule is
+   mechanical, so it paired them on the three words `flush`, `gallon`, `water`. **Fixed in the content, not the
+   gate:** the sentence now shares two words instead of three, reads slightly better, and both facts still stand.
+   A gate validated against the relief-valve bug stays as it is.
+2. **`build-coords.py --check`: three of my new listings could not be placed.** I had put **region** names
+   (`Bay Area`, `Peninsula`, `Rio Grande Valley`) into the `areas` field. **`areas` is the list of places the
+   finder must place on a map; a region is a presentation concept and is not a place the gazetteer knows.** Named
+   towns resolve. **And the fix took two passes: the check named one listing, I fixed that one, and the next run
+   failed on a second listing carrying the same label. When a gate reports an instance, grep for the class.**
+
+**The honest version of what this cost:** two red pushes, both discovered by looking at GitHub *after* pushing
+rather than by running the suite before. The rule was already in my memory in weaker form ("run verify.py before
+reporting prose") and it was not the right rule.
+
 ## Log
 
 - **00:5x** Queue opened. A1 and A2 confirmed by reading the stylesheet and counting element usage.
