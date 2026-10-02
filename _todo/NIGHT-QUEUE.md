@@ -816,6 +816,40 @@ those specific corrections**, not a third full review, and if it passes they can
 finds another class of defect, that is the moment to stop and hand the pattern to Ty rather than fix and
 re-review again** — three rounds of the same loop is evidence about the process, not about the page.
 
+## S. Directory batch one: four listings in, and a claim of mine that the measurement disproved
+
+**Committed `0aadea7`: four verified San Antonio listings**, taking the site from **402 to 406 businesses**
+(Texas 88 to 92). Every one passed `verify-candidates.py`, which grounds the record against the business's own
+site. Two evidence strings that were reconstructions rather than verbatim page text were removed rather than left
+sitting there as evidence.
+
+**The de-duplication tool built earlier earned its place.** Of fifteen San Antonio candidates the research pass
+produced, **three were already listed** — Southwest, Class A and Iron Horse, two of them verified businesses
+sitting in the very gap they were proposed to fill. Without that check this batch would have duplicated them.
+
+**AND THEN THE MEASUREMENT DISPROVED MY OWN COMMIT MESSAGE.** I wrote that the batch shrinks *"the biggest gap on
+the site"*. Re-running `coverage-gaps.py texas` afterwards shows **the gap is unchanged at 117 towns, nearest base
+138 mi.** The reason is a misreading of the instrument that I made and then built a research brief on:
+
+- **The flagged place is not the San Antonio neighbourhood I assumed.** It is **"Airport Heights CDP" in Starr
+  County, at 26.408735, -98.836695 — a 0.04 square mile census-designated place** in the Rio Grande Valley. Any
+  San Antonio base is roughly 140 miles from it, which is exactly what the instrument reported and what I failed
+  to read.
+- **So the brief I dispatched targeted the wrong place.** The four listings are still a real improvement to San
+  Antonio coverage and stand on their own merit, but they do not touch the flagged cluster and my commit message
+  said they did.
+
+**THE CLUSTER ITSELF IS PROBABLY REAL, WHICH IS THE USEFUL PART.** The 117 towns within 25 miles of that CDP are
+the dense small-place grid of the **Rio Grande Valley** — McAllen, Mission, Pharr, Edinburg, Harlingen,
+Brownsville — which is a genuinely populated area and one of the largest winter RV destinations in the country.
+Nearest listed base is Corpus Christi at 138 miles. **So the next directory batch should target the Valley
+directly, and the towns to name are the cities rather than the CDP.**
+
+**RULE THIS EARNS, and it is the same one my own memory already records under "test the hypothesis, not the
+symptoms": when an instrument names a place, READ ITS COORDINATES before building anything on the name.** A
+town called Airport Heights in Texas is not necessarily the one you have heard of, and `grep`ing the gazetteer
+for the name cost one command.
+
 ## Log
 
 - **00:5x** Queue opened. A1 and A2 confirmed by reading the stylesheet and counting element usage.
