@@ -1517,6 +1517,27 @@ item 8, the homepage guide count reading "33" against 38 URLs, is a **misread** 
 the heading *"Fixing it, in plain English"*, and the site total is 38. His item 5 (`signin.html` returning 200)
 is already handled: it is `noindex`, out of the sitemap, and linked from nowhere.
 
+## KK. Re-swept after tonight's changes, and it is clean
+
+**The earlier sweep did not cover tonight's work**, so it was re-run rather than assumed. Between the two sweeps
+the site gained **38 rewritten bylines**, **70 converted quotations across seven guides**, and **a new interactive
+tool page**.
+
+| instrument | result |
+|---|---|
+| `audit-render.mjs` | **140 of 140 renders clean** (70 pages, desktop and mobile) — up from 138, the new tool adds two |
+| `audit-mobile.mjs` 360 / 393 / 430 | **210 renders, 0 FAIL and 0 WARN in every category** |
+| `check-a11y.mjs --all` | **72 pages, no violations, 0 warnings** |
+| `verify.py` and `bash scripts/ci.sh` | green |
+
+**So none of tonight's changes introduced a layout or markup regression**, including the new tool page that failed
+the mobile audit twice while it was being built.
+
+**The a11y number still carries the caveat from section Y and I am not dropping it.** This tool reported two
+moderate landmark warnings on a two-page run, then no violations on the same site minutes later, and now reports
+72 pages clean. **A clean run is not evidence of a clean site**; the instrument disagrees with itself, and the
+right next step remains reproducing that warning deliberately rather than banking this zero. `NODE_OPTIONS=--dns-result-order=ipv4first` is still required to run it at all here.
+
 ## Log
 
 ## Log
