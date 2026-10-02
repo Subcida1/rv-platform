@@ -1193,6 +1193,22 @@ dispatcher's generated prompt is the thing to check before blaming the lane.
 
 **To collect:** `python3 scripts/validate-lane-replies.py` when the reply lands.
 
+**ROUND 2 FAILED, and it failed in a way worth naming.** The reply landed five minutes later and was not a
+review: *"NO ANSWER WAS CAPTURED FOR THIS JOB — THE BRIDGE HARNESS RELEASED THE FLIGHT. lane:
+aistudio.google.com | reason: capture-ceiling… No answer was captured in 20 attempts (160s in flight, last: no
+answer found in the container)."* **The lane was given 160 seconds and did not answer inside it.** The harness says
+to re-queue, so **round 3 is dispatched** (`20261002-0906-…-REVIEW3`, same lane — the dispatcher chooses, not me)
+and a watcher is armed.
+
+**And the distinction that matters: a failed flight is not a failed review.** The bridge replies are now three
+different shapes — a completed review (the macerator), a **stalled capture** holding the lane's own words (round
+1 bearings), and a **released flight** with no answer at all (round 2). Only the first is a review. **Reading the
+second and third as "the lane found nothing" is exactly the mistake this section exists to prevent.**
+
+**The bearing page is not unreviewed while this retries.** It has had **two subagent passes** (six confirmed
+defects each, all fixed), which the site's doctrine accepts when the bridge is unavailable. The bridge pass is
+being re-attempted for a *different* set of blind spots, not because the page is uncovered.
+
 ### The 54 stale staged copies are re-staged
 
 `stage-for-bridge.py --check` → the checker prints the stale set; `stage-for-bridge.py $(cat stale)` re-stages
