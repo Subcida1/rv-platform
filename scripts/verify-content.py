@@ -167,6 +167,13 @@ def visible_text(raw):
 
     body = re.search(r"<body\b[^>]*>(.*)</body>", txt, re.S | re.I)
     txt = head_txt + " " + (body.group(1) if body else txt)
+    # THE BYLINE IS EXCLUDED HERE FOR THE SAME REASON AS IN claim_text ABOVE (2026-10-02).
+    # This function feeds the page hash that decides whether a VERIFIED page has changed
+    # since it was verified. With the byline inside it, rewording the attribution line
+    # invalidated 14 verified pages at once and demanded a re-review of prose that had not
+    # moved by a word. What was verified is the page's content, not the line naming who
+    # wrote it and when.
+    txt = re.sub(r'<p class="reviewed">.*?</p>', " ", txt, flags=re.S)
     txt = re.sub(r"<[^>]+>", " ", txt)
     txt = html.unescape(txt)
     return re.sub(r"\s+", " ", txt).strip()
@@ -201,8 +208,19 @@ def byline_date(raw):
 
 
 def claim_text(raw):
-    """The page's prose, with navigation removed and spacing canonical."""
+    """The page's prose, with navigation and the byline removed, and spacing canonical.
+
+    THE BYLINE IS NOT A CLAIM AND ITS REMOVAL IS DELIBERATE (2026-10-02). This function
+    feeds claim_digest, which is what the gate compares to decide whether a page's prose
+    has moved since it was checked. The byline line sat inside that comparison, so
+    rewording `Written and checked against the sources below on <date>` to a factual
+    `Last updated on <date>` read as 38 pages of claim drift at once -- and the only ways
+    out were to re-verify 38 pages or to leave a phrase the site had ruled against. A
+    line about who wrote the page and when is metadata about the page, not a statement
+    about the subject, which is the same reason navigation is stripped above.
+    """
     s = re.sub(r"<(script|style)\b.*?</\1>", " ", raw, flags=re.S | re.I)
+    s = re.sub(r'<p class="reviewed">.*?</p>', " ", s, flags=re.S)
     s = INTERNAL_A.sub(" ", s)
     s = re.sub(r"<[^>]+>", " ", s)
     s = s.replace("&nbsp;", " ").replace("&#8594;", " ")
