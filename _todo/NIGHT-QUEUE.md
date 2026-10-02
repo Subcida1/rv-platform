@@ -1403,6 +1403,44 @@ pulled. Item 7 needs a real device, which is Ty's.
 schema recommendation is against a retired feature. **The rest of it (traffic first, then affiliates; no ads or
 sponsors yet) matches where the site actually is.**
 
+## GG. Seventy quotations became checkable, and the first check found a dead citation and an altered quote
+
+**On Ty's ruling, `13f878c` converted 62 `<i>` blocks across seven guides to the checkable `<b>"…"</b>`
+convention** — the format `check-quotes.py` reads and `<i>` is invisible to, which is why those quotations had
+never been machine-verified by anything:
+
+| guide | blocks |
+|---|---|
+| freeze-damage-triage | 16 |
+| rv-slide-out-not-working | 11 |
+| rv-leveling-jacks-not-working | 11 |
+| trailer-brakes-required | 7 |
+| rv-roof-leak-repair | 7 |
+| rv-toilet-not-flushing | 6 |
+| rv-battery-not-charging | 1 |
+
+**Three `<i>` blocks were deliberately left** as emphasis rather than quotation: `<i>air</i>` in "vehicles with air
+brake systems" (a technical term), `<i>greater</i>`, and `<i>approved replacement</i>`. **Length is not the
+discriminator** — *"prior to each use"*, *"at 3,000 mile intervals"* and *"very difficult to turn"* are the
+maker's words inside our sentences and were converted.
+
+**Proven markup-only before touching the manifest:** git shows 45 lines changed and **all 45 match their
+predecessor once bold/italic tags and quotation marks are ignored** — no word moved.
+
+### And it found two defects on the very first page it touched (`90db982`)
+
+`check-quotes.py` flagged one quotation on `freeze-damage-triage`, which had never been checked before:
+
+1. **The citation was a 404.** The KZ RV manual it pointed at does not exist, so **the reader could not check the
+   claim and neither could any instrument**. Replaced with a live KZ manual carrying the same passage.
+2. **The quotation had been altered.** KZ writes **"32 degree Fahrenheit"** and **"32 degree F"**; the page read
+   *"32 degrees Fahrenheit"* and *"32 degrees F"* — **silently correcting the maker's grammar in both places.**
+   That is exactly the defect class the checker exists for, and it could see none of it until the marks went in.
+
+**After the fix: 16 quotes against 11 sources, every one present.** Results on the other two checked so far:
+`rv-slide-out-not-working` 10 quotes, all present; `trailer-brakes-required` 7 quotes against 11 sources with
+**1 source unreachable** — a warning to verify by hand, not yet a finding.
+
 ## Log
 
 ## Log
