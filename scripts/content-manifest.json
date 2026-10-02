@@ -361,12 +361,12 @@
     "claims_date": "Oct 2, 2026"
   },
   "guides/rv-propane-furnace-wont-light.html": {
-    "hash": "a89eb1fa06d75ca0",
+    "hash": "35a222e099e87f23",
     "status": "unverified",
-    "verified_by": null,
+    "verified_by": " 2026-10-02: quotation markup repaired. Ten quotations were set as \"text with <b>a fragment</b> inside\", which put the bold inside the quotation and made the marks ambiguous to check-quotes.py; they now use the <b>\"whole quotation\"</b> convention. git confirms no word moved. Flagged quotes fell from 26 to 11, and the eleven that remain all rest on marshallexcelsior.com, which returns 403 to automated fetches, so they need a hand check rather than an edit.",
     "verified_at": null,
     "sources": [],
-    "claims": "6dd75595d0452123",
+    "claims": "7d2bbfd021656399",
     "claims_date": "Oct 2, 2026"
   },
   "guides/rv-refrigerator-not-cooling.html": {
