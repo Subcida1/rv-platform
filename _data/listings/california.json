@@ -903,7 +903,8 @@
       "d": "NRVIA-certified inspector and RVTAA-certified advanced RV technician. RV repairs, appliance repair, water heater and furnace work, and remodels and upgrades. Offers NRVIA pre-purchase inspections with a written report.",
       "evidence": {
         "checked": "https://www.alongfortheridervrepairs.com/",
-        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site"
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Don't see a service you need? Call us Inspection Services I carry comprehensive insurance coverage provided by RV Inspectors + Mobile RV Tech, ensuring complete protection for your peace of mind."
       }
     },
     {
@@ -929,7 +930,7 @@
       "evidence": {
         "checked": "https://unplugrv.com/",
         "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
-        "mobile_quote": "Unplug RV — RV Sales, Service & Mobile RV Repair | Lincoln & West Sacramento, CA Skip to content (916) 836-8602 Lincoln | W."
+        "mobile_quote": "Get my numbers Service Repair & maintenance All services RV repairs Mobile RV repair Maintenance Warranty repairs More Inspections Upgrades & installs RV orientations RV detailing Rates & area Published rates Service area Published rates $225/h"
       }
     },
     {
@@ -1072,7 +1073,7 @@
       "evidence": {
         "checked": "https://thervacademy.com/",
         "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
-        "mobile_quote": "Home - The RV Academy +916-714-3765 &#105;&#110;&#102;&#111;&#64;&#116;&#104;&#101;r&#118;a&#99;ad&#101;&#109;y&#46;&#99;&#111;m Mobile RV Repair Instruction &#038; Services Testimonials About Contact Mobile RV Repair Instruction &#038; Services Testimonials About Contact Repair Your Roadtrip We are a pr"
+        "mobile_quote": "Home - The RV Academy +916-714-3765 &#105;&#110;&#102;o&#64;&#116;&#104;e&#114;&#118;&#97;c&#97;&#100;e&#109;y&#46;co&#109; Mobile RV Repair Instruction &#038; Services Testimonials About Contact Mobile RV Repair Instruction &#038; Services Testimonials About Contact Repair Your Roadtrip We are a pr"
       }
     },
     {
@@ -1225,7 +1226,7 @@
         "emergency_quote": null,
         "roadside_quote": null,
         "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
-        "center_quote": "V INSURANCE RV Extended Warranty Insurance RV Extended Warranty Information CONTACT & APPOINTMNETS RV EXPERT WITNESS RV ARTICLES RV VIDEOS RV Extended Warranty In The RV Shop With Dustin RV Shop Talk Talkin' RV Tech What’s in the RV groups? What’s in the RV box? Cool RV Tools &#038; Gadgets RV OWNERS COMMUNITY AMAZON RV STORE DUSTIN IN THE ME"
+        "center_quote": "V INSURANCE RV Extended Warranty Insurance RV Extended Warranty Information CONTACT & APPOINTMENTS RV EXPERT WITNESS RV ARTICLES RV VIDEOS RV Extended Warranty In The RV Shop With Dustin RV Shop Talk Talkin' RV Tech What’s in the RV groups? What’s in the RV box? Cool RV Tools &#038; Gadgets RV OWNERS COMMUNITY AMAZON RV STORE DUSTIN IN THE ME"
       }
     },
     {
@@ -1579,7 +1580,7 @@
         "emergency_quote": null,
         "roadside_quote": "That's why we offer mobile RV repair and 24/7 roadside assistance services, bringing our expertise directly to you, wherever you may be.",
         "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
-        "r_quote": "“ Our trailer running lights and brake lights mysteriously stopped working while camping in Yosemite.",
+        "r_quote": "Center Madera RV Repair Services 10+ Reviews 8:00 AM - 5:00 PM | 14718 CA-41 Madera, CA 93636 CALL 559-822-4860 Home RV Repair Shop Mobile RV Repair Mobile RV Repair RV Roadside Assistance RV Parts & Accessories Reviews Reviews Add a Review Contact Us 559-822-4860 Trusted RV Repair Specialists Full-Service RV Repair Shop and Mobile RV Repair Locally Owned",
         "mobile_quote": "air Services in Madera, CA | Mikes RV Center Madera RV Repair Services 10+ Reviews 8:00 AM - 5:00 PM | 14718 CA-41 Madera, CA 93636 CALL 559-822-4860 Home RV Repair Shop Mobile RV Repair Mobile RV Repair RV Roadside Assistance RV Parts & Accessories Reviews Reviews Add a Review Contact Us 559-822-4860 Trusted RV Repair Specialists Full-Service",
         "center_quote": "V Repair Services in Madera, CA | Mikes RV Center Madera RV Repair Services 10+ Reviews 8:00 AM - 5:00 PM | 14718 CA-41 Madera, CA 93636 CALL 559-822-4860 Home RV Repair Shop Mobile RV Repair Mobile RV Repair RV Roadside Assistance RV Parts & Accessories Reviews Reviews Add a Review Contact Us 559-822-4860 Trusted RV Repair Specialists Full-S"
       }
@@ -2046,7 +2047,7 @@
         "emergency_quote": null,
         "roadside_quote": null,
         "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
-        "center_quote": "OME SERVICES AC REPAIR RV REFRIGERATOR REPAIRS RV REPAIR TRAILER REPAIR RV BODY REPAIR RV DAMAGE INSURANCE PARTS TIPS & TRICKS FAQ CONTACT US BLOG MONTEREY, CA RV REPAIR SHOP WE ARE HERE FOR YOU EVERY MILE OF THE WAY! REPAIRS FOR RECREATIONAL VEHICLES Since 1978, Santa Cruz has trusted RV Service Center Of Santa Cruz for quality repairs of mo"
+        "center_quote": "AIR RV REFRIGERATOR REPAIRS RV REPAIR TRAILER REPAIR RV BODY REPAIR RV Repair Services RV DAMAGE INSURANCE PARTS TIPS & TRICKS FAQ CONTACT US BLOG MONTEREY, CA RV REPAIR SHOP WE ARE HERE FOR YOU EVERY MILE OF THE WAY! REPAIRS FOR RECREATIONAL VEHICLES Since 1978, Santa Cruz has trusted RV Service Center Of Santa Cruz for quality repairs of mo"
       }
     },
     {
@@ -2273,7 +2274,7 @@
         "bar_number": null,
         "correction": "2026-09-28: 'Big Bear' was listed as an area. The Census calls the place Big Bear Lake, and a reader typing 'Big Bear' still resolves against it by prefix, but the table key is the Census name so the area now matches it exactly.",
         "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
-        "mobile_quote": "--> Mobile RV Repair Services | The Reliable Rv – Yucca Valley top of page Home Welcome Services About Us Gallery Blog More Use tab to navigate through the menu items."
+        "mobile_quote": "The Reliable RV | Mobile RV Roof Restoration and Metal Skirts Skip to content Mobile RV repair in the high desert +1 833-698-7196 Request a Quote Home About Services Service Areas Gallery Review"
       }
     },
     {
@@ -3239,7 +3240,7 @@
         "roadside_quote": "RV Frame Repair is a complex and timely process ... We specialize in all types of repairs, from basic RV maintenance and preventative measures to complex RV collision repairs.",
         "bar_number": "ARD00288521",
         "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
-        "r_quote": "n Repair Needs! From Van Dent Repair, Van Body Damage & Certified Van Collision Repair! Trailer Repair Our Shop Can Handle All Of Your Trailer Repair Needs! From Trailer Frame Repair, Aluminum Repairs & Even Horse Trailer Repair! RV Paint Shop Your One-Stop RV Paint Shop ! With Two Indoor Paint Booths, You Can Rest Assured Knowing Your RV Paint Will",
+        "r_quote": "Service RV Paint Shop RV Body Shop RV Roof Repair RV Remodeling RV Maintenance RV Collision Repair RV Slide Out Repair RV Fiberglass Repair Camper Repair Trailer Repair Truck Repair Van Repair More Testimonials About Us Careers Photos Videos Blog Contact Home RV Repair RV Service RV Paint Shop RV Body Shop RV Roof Repair RV Remodeling RV Maintenance",
         "center_quote": "The Best RV Repair Shop In Orange County - OCRV Center Skip to content Mon-Fri: 8AM-7PM 23281 La Palma Ave Yorba Linda CA 92887 Search Youtube Google Yelp Tiktok Facebook Instagram 714-909-1444"
       }
     },
@@ -3477,7 +3478,9 @@
         "checked": "https://almadenrv.com/",
         "coverage_quotes": [
           "South Bay, San Jose, Saratoga, Campbell, Cupertino, Mountain View, Palo Alto"
-        ]
+        ],
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "Almaden RV Service & Repairs | Motorhome, 5th Wheel & Trailer Experts Skip to content Almaden RV Service & Repair California, South Bay, San Jose Almaden RV Service & Repair | Autobody & Paint | Customizing & Fabrication Facebook Youtube Yelp Map-marker-alt Almaden RV Service & Repair | Autobody & Paint"
       }
     },
     {
@@ -3510,7 +3513,8 @@
       "evidence": {
         "checked": "https://sanjosemobilervrepair.com/",
         "type_quote": "We specialize in providing convenient, affordable, and dependable RV services",
-        "mobile_quote": "all delivered directly to your driveway, campground, or roadside location"
+        "mobile_quote": "Mobile RV Repair San Jose, CA | Expert On-Site RV Service Home About Services Utility Services RV Air Conditioner Repair RV Plumbing Repair RV Water Heater Repair RV Winterizat",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site"
       }
     },
     {
@@ -3541,7 +3545,9 @@
         "checked": "https://www.californiacamperrepair.com/",
         "coverage_quotes": [
           "From body work to coach repairs, California Camper Repair has the knowledge and experience to do it all."
-        ]
+        ],
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "7th Street, San Jose, CA 95112 BBB Accredited Business Click for Profile CALL TODAY! (510) 793-8157 Estimates for Body and Paint Work | Service Work Completed on Premises Home About Services Collision, Body & Paint Insurance Claims Reviews Contact Now Hiring Northern California&#x27;s Leading RV Collision Repair Facility Quality service a"
       }
     },
     {
@@ -3565,7 +3571,9 @@
       ],
       "region": "San Francisco, San Jose and the Bay Area",
       "evidence": {
-        "checked": "https://leales.com/"
+        "checked": "https://leales.com/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "center_quote": "intenance in San Jose, CA For over 15 years, Leale’s RV has been the trusted choice for RV repair, maintenance, collision work, storage, and upgrades in San Jose and the Bay Area."
       }
     },
     {
@@ -3591,7 +3599,9 @@
       ],
       "region": "San Francisco, San Jose and the Bay Area",
       "evidence": {
-        "checked": "https://artspeeds.com/"
+        "checked": "https://artspeeds.com/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "mobile_quote": "Mobile RV Repair in Fremont, CA | ArtSpeed RV Mobile Service Skip to content Home Services Vehicle Maintenance AC And Furnace Slide-Out Repairs Propane System Inspections Roof"
       }
     },
     {
@@ -3602,7 +3612,7 @@
       "t": "center",
       "e": false,
       "r": false,
-      "d": "V&V Bros RVs and Trailers is an RV and trailer parts and service business on Hansen Way in Redwood City, the town with the largest coverage gap on the Peninsula. Its own site advertises RV service and repairs alongside parts, including plumbing, electrical systems and solar, and takes repair appointments on Saturday mornings.",
+      "d": "V&V Bros RVs and Trailers is an RV and trailer parts and service business on Hansen Way in Redwood City, the town with the largest coverage gap on the Peninsula. Its own site advertises RV parts and service and takes repair appointments on Saturday mornings, and it carries parts for emergency and disaster preparedness.",
       "g": [
         "Shop",
         "Parts and service",
@@ -3616,7 +3626,10 @@
       ],
       "region": "San Francisco, San Jose and the Bay Area",
       "evidence": {
-        "checked": "https://vvrvtrailers.com/"
+        "checked": "https://vvrvtrailers.com/",
+        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "type_quote": "Saturdays from 8:00am-12:00pm for repairs, inquires, and appointments, please go to our contact page.",
+        "note": "The site reads as a parts and service business rather than a repair shop, and the audit flags it as a dealer that does not say in words that it takes outside work. Its own sentence about repair appointments is the evidence, and it is the same standing as seven other California listings the same test flags."
       }
     }
   ]

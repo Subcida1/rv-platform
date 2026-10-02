@@ -1174,7 +1174,7 @@ window.RV_LISTINGS_CA = [
    "hayward"
   ],  "region": "San Francisco, San Jose and the Bay Area",  "reg": "bay-area"
  },
- {  "n": "V&V Bros RVs and Trailers",  "c": "Redwood City, CA",  "p": "650-556-1096",  "u": "https://vvrvtrailers.com/",  "t": "center",  "e": false,  "r": false,  "d": "V&V Bros RVs and Trailers is an RV and trailer parts and service business on Hansen Way in Redwood City, the town with the largest coverage gap on the Peninsula. Its own site advertises RV service and repairs alongside parts, including plumbing, electrical systems and solar, and takes repair appointments on Saturday mornings.",  "g": [
+ {  "n": "V&V Bros RVs and Trailers",  "c": "Redwood City, CA",  "p": "650-556-1096",  "u": "https://vvrvtrailers.com/",  "t": "center",  "e": false,  "r": false,  "d": "V&V Bros RVs and Trailers is an RV and trailer parts and service business on Hansen Way in Redwood City, the town with the largest coverage gap on the Peninsula. Its own site advertises RV parts and service and takes repair appointments on Saturday mornings, and it carries parts for emergency and disaster preparedness.",  "g": [
    "Shop",
    "Parts and service",
    "Peninsula"
