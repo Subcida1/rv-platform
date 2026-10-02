@@ -13,11 +13,11 @@ catalogued in `_data/manuals.json`, and Bing's keyword API.
 
 ## 1. Where we stand
 
-**157 parts across 9 systems. 61 covered by a guide. 96 with nothing.**
+**157 parts across 9 systems. 62 covered by a guide. 95 with nothing.**
 
 | system | parts | covered | gaps |
 |---|---|---|---|
-| towing and running gear | 22 | 5 | 17 |
+| towing and running gear | 22 | 6 | 16 |
 | power and electrical | 23 | 10 | 13 |
 | kitchen and appliances | 16 | 5 | 11 |
 | chassis and drivetrain | 14 | 3 | 11 |
@@ -157,6 +157,12 @@ jack" are the same object and only one of them is in the reader's head.
   edits, and marks whether a number is RV-qualified.
 - `_data/manuals.json` — 110 component makers with verified archive URLs, which is the citation
   layer for whatever gets written.
+
+**COUNTS UPDATED 2026-10-02** as the guides land: `rv-trailer-wheel-bearings` covers **Wheel bearings**, which
+is an exact match and takes the covered count to 62. **`Toilet (vacuum or macerator)` is deliberately left a
+gap even though the macerator page now exists**, because the part as named includes the vacuum half and the
+page covers only the macerator half; assigning the guide there would tell a future session that both are done.
+The vacuum half waits on an RV-hosted Dometic VacuFlush manual rather than a marine one.
 
 **Next step when Ty says go:** Tier 2, starting with the tongue jack, because it is the one he hit
 himself, the documentation is already in hand, and it proves the shape on the smallest possible case.

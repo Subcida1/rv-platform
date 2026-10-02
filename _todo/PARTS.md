@@ -1,10 +1,10 @@
 # Every part in an RV
 
-157 parts across 9 systems. 61 covered by a guide, **96 with nothing**, and 21 of those have manufacturer documentation already catalogued, which makes them the cheapest to write.
+157 parts across 9 systems. 62 covered by a guide, **95 with nothing**, and 21 of those have manufacturer documentation already catalogued, which makes them the cheapest to write.
 
 Ordered by system. `covered` names the guide that already exists; a part with a maker listed and no guide is one where the research material is already in the manuals directory.
 
-## Towing and running gear — 5 of 22 covered
+## Towing and running gear — 6 of 22 covered
 
 _Everything between the tow vehicle and the road, which is where a breakdown strands you._
 
@@ -134,14 +134,6 @@ _Everything between the tow vehicle and the road, which is where a breakdown str
 - **Demand.** 88 a week for "equalizer hitch" (bare term, not RV-qualified)
 - **Searches.** weight distribution hitch setup; wd hitch noise; hitch bar weight
 
-### Wheel bearings
-
-- **What it does.** let the wheel spin freely on the spindle
-- **How it fails.** dry and scored; water intrusion; seal leak; over-greased and blown seal; burnt spindle
-- **On.** trailer, fifth-wheel, pop-up
-- **Demand.** 276 a week for "wheel bearings" (bare term, not RV-qualified)
-- **Searches.** trailer wheel bearing repack; bearing replacement rv; grease seal leaking trailer
-
 ### Wheel chocks and jack pads
 
 - **What it does.** stops the trailer rolling and keeps a jack off soft ground
@@ -187,6 +179,14 @@ _Everything between the tow vehicle and the road, which is where a breakdown str
 - **On.** trailer, fifth-wheel
 - **Demand.** 106 a week for "trailer brakes" (bare term, not RV-qualified)
 - **Searches.** trailer brakes not working; electric brake magnet replacement; surge brake problems
+
+### Wheel bearings  `rv-trailer-wheel-bearings`
+
+- **What it does.** let the wheel spin freely on the spindle
+- **How it fails.** dry and scored; water intrusion; seal leak; over-greased and blown seal; burnt spindle
+- **On.** trailer, fifth-wheel, pop-up
+- **Demand.** 276 a week for "wheel bearings" (bare term, not RV-qualified)
+- **Searches.** trailer wheel bearing repack; bearing replacement rv; grease seal leaking trailer
 
 ## Power and electrical — 10 of 23 covered
 
