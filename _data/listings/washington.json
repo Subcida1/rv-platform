@@ -106,7 +106,27 @@
     "Walla Walla": "eastern-wa",
     "Wenatchee": "eastern-wa",
     "Yakima": "eastern-wa",
-    "Yelm": "puget-sound"
+    "Yelm": "puget-sound",
+    "Hoquiam": "sw",
+    "Aberdeen": "sw",
+    "Ocean Shores": "sw",
+    "Cosmopolis": "sw",
+    "Westport": "sw",
+    "Montesano": "sw",
+    "Elma": "sw",
+    "Grayland": "sw",
+    "Tokeland": "sw",
+    "Raymond": "sw",
+    "South Bend": "sw",
+    "Moclips": "sw",
+    "Pacific Beach": "sw",
+    "Copalis Beach": "sw",
+    "Ocean City": "sw",
+    "Humptulips": "sw",
+    "Amanda Park": "sw",
+    "Oakville": "sw",
+    "Satsop": "sw",
+    "McCleary": "sw"
   },
   "listings": [
     {
@@ -956,6 +976,74 @@
         "roadside_quote": null,
         "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
         "mobile_quote": "7:00 pm Wed 09:00 am – 07:00 pm Thu 09:00 am – 07:00 pm Fri 09:00 am – 07:00 pm Sat 09:00 am – 07:00 pm Sun 12:00 pm – 07:00 pm Modern Pioneer RV Services LLC We&#x27;re mobile - we come to you! Give us a call today! + 1 (855) 516-6337 Copyright © 2026 Modern Pioneer RV Services LLC - All Rights Reserved."
+      }
+    },
+    {
+      "n": "North Beach RV",
+      "c": "Ocean Shores, WA",
+      "p": "(360) 289-3593",
+      "u": "https://www.northbeachrv.co/",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "North Beach RV is a family owned RV service, repair, parts and sales business in Grays Harbor County, and it says it runs the largest RV parts store in the county and the ones around it. Its own site offers service and mobile service alongside parts and sales, and it has been owned by the same family since 2015.",
+      "g": [
+        "Shop and mobile",
+        "Parts store",
+        "Family owned",
+        "Grays Harbor"
+      ],
+      "base": "Ocean Shores",
+      "areas": [
+        "Ocean Shores",
+        "Hoquiam",
+        "Aberdeen",
+        "Westport",
+        "Copalis Beach",
+        "Moclips"
+      ],
+      "region": "Southwest Washington",
+      "evidence": {
+        "checked": "https://www.northbeachrv.co/",
+        "type_quote": "North Beach RV is a family owned and operated Rv Service, Repair, Parts & Sales business in Grays Harbor County, WA.",
+        "mobile_quote": "Parts, Sales, Service & Mobile Service.",
+        "coverage_quotes": [
+          "We’re proud to be the largest RV parts store within Grays Harbor and the surrounding counties."
+        ]
+      }
+    },
+    {
+      "n": "Sun Country RV Service",
+      "c": "Hoquiam, WA",
+      "p": "(360) 580-9225",
+      "u": "https://sc-rv.com/",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "Sun Country RV Service is an RV repair business in Hoquiam whose own site says its technicians complete repairs on-site, without the coach being moved from where it is parked, and it works with extended warranty and insurance claims as well as doing electrical systems and upgrades. It covers the Grays Harbor towns around Hoquiam and Aberdeen.",
+      "g": [
+        "Shop and mobile",
+        "On-site repair",
+        "Warranty claims",
+        "Grays Harbor"
+      ],
+      "base": "Hoquiam",
+      "areas": [
+        "Hoquiam",
+        "Aberdeen",
+        "Cosmopolis",
+        "Montesano",
+        "Ocean Shores",
+        "Westport"
+      ],
+      "region": "Southwest Washington",
+      "evidence": {
+        "checked": "https://sc-rv.com/",
+        "type_quote": "We offer a wide range of services for your RV",
+        "mobile_quote": "Our Technicians Are Able To Complete Repairs On-Site Without The Hassle Of Moving Your Trailer Or Motorhome From Where It's Parked.",
+        "coverage_quotes": [
+          "We Can Also Help You With Both Extended Warranty And Insurance Claims."
+        ]
       }
     }
   ]
