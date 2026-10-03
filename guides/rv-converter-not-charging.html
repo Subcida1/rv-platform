@@ -92,6 +92,65 @@
  <figcaption>The converter is only the first link. Up to four break points sit between it and the battery, depending on how yours is wired, and every one of them leaves the converter testing perfectly. Original diagram, OriginRV.</figcaption>
  </figure>
 
+ <h2>The whole path, in one diagram</h2>
+ <p>Most converter diagrams show the charging half and stop, which is why a reader with an inverter cannot tell how the two fit together. This is both branches.</p>
+ <figure>
+ <svg viewBox="0 0 920 430" width="100%" role="img" aria-label="The whole 12 volt and 120 volt power path of an RV, from the shore pedestal through the converter to the battery and the twelve volt loads, and from the battery through the inverter to the 120 volt outlets">
+ <title>The RV power path, both branches</title>
+ <desc>Shore power arrives at the 120 volt panel. One branch feeds the outlets directly and the converter, which makes 12 volts DC. The converter charges the battery through its fuses and the disconnect. From the battery, 12 volt loads run directly, and an inverter turns 12 volts back into 120 volts for outlets that need power while unplugged. The two 120 volt sources never run the same circuit at once.</desc>
+
+ <rect x="16" y="30" width="150" height="62" rx="8" fill="#f1f5f9" stroke="#64748b" stroke-width="2.5"/>
+ <text x="91" y="55" font-family="Inter,sans-serif" font-size="15.5" font-weight="700" fill="#334155" text-anchor="middle">Shore pedestal</text>
+ <text x="91" y="75" font-family="Inter,sans-serif" font-size="13.5" fill="#64748b" text-anchor="middle">120 V AC</text>
+
+ <rect x="16" y="150" width="150" height="62" rx="8" fill="#f1f5f9" stroke="#64748b" stroke-width="2.5"/>
+ <text x="91" y="175" font-family="Inter,sans-serif" font-size="15.5" font-weight="700" fill="#334155" text-anchor="middle">120 V panel</text>
+ <text x="91" y="195" font-family="Inter,sans-serif" font-size="13.5" fill="#64748b" text-anchor="middle">breakers</text>
+
+ <line x1="91" y1="92" x2="91" y2="150" stroke="#94a3b8" stroke-width="3"/>
+ <line x1="166" y1="181" x2="248" y2="181" stroke="#94a3b8" stroke-width="3"/>
+ <line x1="166" y1="181" x2="166" y2="300" stroke="#94a3b8" stroke-width="3"/>
+ <line x1="166" y1="300" x2="248" y2="300" stroke="#94a3b8" stroke-width="3"/>
+
+ <rect x="248" y="258" width="150" height="84" rx="8" fill="#eef2ff" stroke="#6366f1" stroke-width="2.5"/>
+ <text x="323" y="283" font-family="Inter,sans-serif" font-size="15.5" font-weight="700" fill="#4338ca" text-anchor="middle">Converter</text>
+ <text x="323" y="302" font-family="Inter,sans-serif" font-size="13.5" fill="#6366f1" text-anchor="middle">120 V in</text>
+ <text x="323" y="320" font-family="Inter,sans-serif" font-size="13.5" font-weight="700" fill="#4338ca" text-anchor="middle">12 V out, 13.6 V</text>
+
+ <rect x="248" y="136" width="150" height="84" rx="8" fill="#f1f5f9" stroke="#64748b" stroke-width="2.5"/>
+ <text x="323" y="163" font-family="Inter,sans-serif" font-size="15.5" font-weight="700" fill="#334155" text-anchor="middle">120 V outlets</text>
+ <text x="323" y="183" font-family="Inter,sans-serif" font-size="13.5" fill="#64748b" text-anchor="middle">on shore only</text>
+ <text x="323" y="202" font-family="Inter,sans-serif" font-size="13.5" fill="#64748b" text-anchor="middle">unless an inverter</text>
+
+ <line x1="398" y1="300" x2="470" y2="300" stroke="#94a3b8" stroke-width="3"/>
+ <rect x="470" y="258" width="150" height="84" rx="8" fill="#ffffff" stroke="#0f172a" stroke-width="2.5"/>
+ <text x="545" y="283" font-family="Inter,sans-serif" font-size="15.5" font-weight="700" fill="#0f172a" text-anchor="middle">DC board</text>
+ <text x="545" y="302" font-family="Inter,sans-serif" font-size="13.5" fill="#67748e" text-anchor="middle">reverse polarity</text>
+ <text x="545" y="320" font-family="Inter,sans-serif" font-size="13.5" fill="#67748e" text-anchor="middle">and branch fuses</text>
+
+ <line x1="620" y1="300" x2="692" y2="300" stroke="#94a3b8" stroke-width="3"/>
+ <rect x="692" y="258" width="150" height="84" rx="8" fill="#ffffff" stroke="#0f172a" stroke-width="2.5"/>
+ <text x="767" y="283" font-family="Inter,sans-serif" font-size="15.5" font-weight="700" fill="#0f172a" text-anchor="middle">Battery</text>
+ <text x="767" y="302" font-family="Inter,sans-serif" font-size="13.5" fill="#67748e" text-anchor="middle">disconnect and</text>
+ <text x="767" y="320" font-family="Inter,sans-serif" font-size="13.5" fill="#67748e" text-anchor="middle">inline fuse</text>
+
+ <line x1="545" y1="258" x2="545" y2="196" stroke="#16a34a" stroke-width="3"/>
+ <rect x="470" y="136" width="150" height="60" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="2.5"/>
+ <text x="545" y="161" font-family="Inter,sans-serif" font-size="15.5" font-weight="700" fill="#15803d" text-anchor="middle">12 V loads</text>
+ <text x="545" y="181" font-family="Inter,sans-serif" font-size="13.5" fill="#16a34a" text-anchor="middle">lights, pump, fans</text>
+
+ <line x1="767" y1="258" x2="767" y2="196" stroke="#f59e0b" stroke-width="3"/>
+ <rect x="692" y="122" width="150" height="74" rx="8" fill="#fffbeb" stroke="#f59e0b" stroke-width="2.5"/>
+ <text x="767" y="147" font-family="Inter,sans-serif" font-size="15.5" font-weight="700" fill="#b45309" text-anchor="middle">Inverter</text>
+ <text x="767" y="167" font-family="Inter,sans-serif" font-size="13.5" fill="#b45309" text-anchor="middle">12 V in, 120 V out</text>
+ <text x="767" y="185" font-family="Inter,sans-serif" font-size="13.5" fill="#b45309" text-anchor="middle">only when unplugged</text>
+
+ <text x="460" y="392" font-family="Inter,sans-serif" font-size="15.4" fill="#67748e" text-anchor="middle">Two sources make 120 volts, and they never feed the same circuit at once.</text>
+ <text x="460" y="414" font-family="Inter,sans-serif" font-size="15.4" font-weight="700" fill="#4338ca" text-anchor="middle">That is what a transfer switch is for.</text>
+ </svg>
+ <figcaption>The whole path, not just the charging half. Shore power feeds the outlets and the converter; the converter charges the battery; the battery runs the 12 volt loads and, through an inverter, can run 120 volt outlets when there is no shore power. The converter and the inverter are different devices doing opposite jobs, and the two 120 volt sources are kept apart by a transfer switch. Original diagram, OriginRV.</figcaption>
+ </figure>
+
  <h2>Start here: What your symptom means</h2>
  <div class="card">
  <h3>Everything 12-volt dies as soon as you unplug</h3>

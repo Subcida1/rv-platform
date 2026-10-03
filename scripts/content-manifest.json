@@ -218,9 +218,9 @@
     "claims_date": "Oct 2, 2026"
   },
   "guides/rv-converter-not-charging.html": {
-    "hash": "0467a84f0033c794",
+    "hash": "e40c938ef5a29766",
     "status": "unverified",
-    "verified_by": null,
+    "verified_by": " 2026-10-03: a full power-path diagram was added, covering the converter AND the inverter branch because competitor research found no ranking page ships a usable diagram for either query. The text moved, so the page is recorded UNVERIFIED until a fresh independent pass covers the addition.",
     "verified_at": null,
     "sources": [
       "WFCO WF-8700-AD manual",
@@ -233,7 +233,7 @@
     ],
     "spec": "_specs/rv-converter-not-charging.md",
     "spec_waived": false,
-    "claims": "c8fb7c6fd14b1486",
+    "claims": "03faccd5c03052a4",
     "invalidated_by": "mechanical change",
     "invalidated_at": "2026-09-27",
     "claims_date": "Oct 2, 2026"
