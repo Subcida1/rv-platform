@@ -1895,6 +1895,36 @@ symptoms, and this evidence supersedes it: the failure is visible in the lane st
 mechanism rather than a wear-out. A refresh may still help, because a refresh clears the composer, but it would be
 treating the symptom.
 
+## WW. What the deadlock fix needs, and why I stopped short of writing it
+
+**I set out to write the fix in VV as an untested candidate for Ty to install. I stopped, for two reasons, and
+both are worth recording so the next attempt starts further along.**
+
+**1. THE RESULT LEG DOES NOT SUBMIT THROUGH `clickSendButton`.** That function has exactly two call sites in
+v0.7.33, lines 3502 and 5773, **and both are on the PROMPT leg** (the first is the ordinary send, the second is the
+`resubmit` recovery path that submits text already in the composer). The tool-RESULT leg builds its message in
+`runCall`, inserts it, and must submit by some other route — probably `trySubmit`/`submitByEffect` directly. **So the
+guard I identified in VV is not necessarily the guard that blocks the result.** It may still be, because
+`clickSendButton` is where the Stop-control wait lives and a shared helper may reach it, but I could not confirm
+which path the result actually takes without following the whole call chain, and **patching the wrong leg would be
+worse than not patching.**
+
+**2. AND A PATCH I CANNOT TEST, ON THE MECHANISM EVERYTHING DEPENDS ON, IS THE THING THIS NIGHT HAS ARGUED AGAINST
+FROM THE START.** The reasoning is sound and the change is probably small, but "probably" is doing real work in that
+sentence and the cost of being wrong is that Ty installs a build that breaks the lane that was still working.
+
+**WHAT THE NEXT SESSION SHOULD DO, IN ORDER:**
+1. Follow the tool-RESULT leg from `runCall` to the actual submit call, and find whether it passes through
+   `clickSendButton` at all. **That single answer decides where the fix goes.**
+2. With the browser open and one lane on screen, put a real tool call into a lane, then watch whether a send
+   control ever appears while the lane waits. **If it does not, the guard is the bug and the fix is to send anyway
+   when the lane's own last turn is a call.** If it does appear and the harness still does not send, the bug is
+   elsewhere and the deadlock theory is wrong.
+3. Only then write the patch, and test it on one lane before the other five.
+
+**THE VALUE DELIVERED IS THE DIAGNOSIS IN VV, NOT A PATCH.** `injected: []` plus a 12-second bounded wait for a
+condition that cannot end is a mechanism, not a guess, and it is where the next hour of bridge work should start.
+
 ## Log
 
 ## Log
