@@ -220,5 +220,21 @@ window.RV_LISTINGS_AZ = [
   ],  "base": "yuma",  "areas": [
    "yuma"
   ],  "region": null,  "reg": "colorado-river"
+ },
+ {  "n": "On The Road Again RV",  "c": "Payson, AZ",  "p": "928-492-6439",  "u": "http://www.ontheroadagainaz.com/",  "t": "both",  "e": false,  "r": false,  "d": "On The Road Again RV is an RV parts, service and repair business in Payson with both a shop and a mobile service covering a 30 mile radius. It works on newer coaches and older ones, does collision repair and restoration, takes warranty and insurance work, and is an authorized dealer and service centre for Dometic, Carefree of Colorado, Thetford, Norcold and Zip Dee Awnings. Its own site names the Rim Country towns it serves: Payson, Pine, Strawberry, Star Valley, Tonto Basin, Ox Bow, Forest Lakes, Roosevelt Lake and Happy Jack.",  "g": [
+   "Shop and mobile",
+   "Collision repair",
+   "Restoration",
+   "Authorized service centre",
+   "Rim Country"
+  ],  "base": "payson",  "areas": [
+   "payson",
+   "pine",
+   "strawberry",
+   "star valley",
+   "tonto basin",
+   "forest lakes",
+   "happy jack"
+  ],  "region": "Northern Arizona and the I-40 corridor",  "reg": "northern-az"
  }
 ];
