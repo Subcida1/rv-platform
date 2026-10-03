@@ -16,22 +16,26 @@ anywhere without a maker source. Every page edit runs `verify.py` before it is r
 
 ### The one thing that needs you, and it takes two minutes
 
-**REFRESH THE SIX BRIDGE LANE TABS, THEN RE-RUN THE REVIEWS.** The lane tabs have been open since about 18:00
-yesterday, eleven hours of a continuously-loaded single-page app, and the capture failures went from intermittent to
-near-total as the night went on. The same lane that gave a real 29-line review at 02:06 returned "no answer found in
-the container" at 05:00 on the same page. Every failure looks the same from the harness's side: it looks for the
-answer and finds chrome, an empty container, or an old turn.
+**THE REVIEWS ARE BLOCKED BY A DEADLOCK IN THE BRIDGE, AND IT NEEDS A SESSION WITH THE BROWSER OPEN.**
 
-```
-# after refreshing the tabs
-cd /home/user/Documents/rv-platform
-python3 scripts/bridge-review.py --guides rv-generator-not-charging --round 3 --lane grok.com
-python3 scripts/bridge-review.py --guides trailer-brakes-required   --round 3 --lane chat.qwen.ai
-python3 scripts/bridge-review.py --guides rv-water-heater-not-heating --round 4 --lane chat.deepseek.com
-python3 scripts/bridge-review.py --guides rv-converter-not-charging --round 7 --lane chat.deepseek.com
-```
-**If the capture still fails after a refresh, the fault is in the userscript and it needs a session with the live DOM
-in front of it.** I did not touch it on an untestable theory.
+A lane asks for the page, the harness runs the call, and **the result never reaches the lane** (`injected: []` in
+the lane state). The lane waits for it, so it never finishes, so the capture finds nothing but the call it already
+made. **The code says why**: `clickSendButton` (v0.7.33, line 3330 on) waits up to 12 seconds for a send control
+because a Stop control occupies the slot "while the model is streaming" — but **a lane waiting for a tool result
+reports itself as generating for as long as it waits**, so the wait can never end. Harness waits for the lane to
+stop talking, lane waits for the harness to speak.
+
+**It is intermittent because a lane that pauses between the call and the wait gives the injection a window**, which
+is why the same lane on the same page succeeded at 02:06 and failed at 05:00.
+
+**The fix is small and targeted: the return leg must not require the lane to be idle when the lane's own last turn
+is a tool call.** A lane holding an outstanding call is not "still generating" in the sense the guard means, it is
+blocked on us. **I did not write it**, because it is a userscript change needing a reinstall and the live DOM to
+test, and shipping an untested change to the mechanism the whole pipeline depends on is what this night has argued
+against from the start. Diagnosis in section VV with the code locations.
+
+**Refreshing the tabs may still help** (it clears the composer) but it treats the symptom, and I would not spend
+your morning on it before reading VV.
 
 ### The honest review position, which is further back than I claimed mid-night
 
