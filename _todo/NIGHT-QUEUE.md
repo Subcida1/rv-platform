@@ -2025,6 +2025,34 @@ redirect to a file and read `$?`, or let it fail loudly.**
 **AND IT CONFIRMS WHY THE GATE IS WORTH RUNNING EVEN WHEN I AM SURE.** I had just written a comment, a test name
 and a test body myself and would have sworn none of them said "rig". Four of them did.
 
+## BBB. `&& echo "(clean)"` PRINTS WHETHER OR NOT IT IS CLEAN, and it hid a modified file all night
+
+**This is the same defect as AAA, in my own habit, and it cost a red CI on GitHub.**
+
+I have ended status checks with `git status --short && echo "(clean)"` all night. **`echo` runs unconditionally**, so
+the line `(clean)` appeared whether the tree was clean or not. When `stamp_assets.py` rewrote
+`tools/weight-calculator.html` with the new `weight.js` hash, my commits shipped the JavaScript alone, the page kept
+pointing at the old hash, and **`stamp_assets.py --check` failed on the runner while I was reading "(clean)" off my
+own echo.**
+
+**WHAT BROKE, IN ORDER:** the calculator change went out with a stale asset stamp; GitHub CI failed with
+`FAILURES: manuals pages, asset stamps`; the "fix the banned word" commit failed the same way because the stamp was
+still uncommitted; and the runner stayed red for two commits while my local check said otherwise, because locally
+the stamper HAD updated the file and the difference was only that it was uncommitted.
+
+**FIXED AND VERIFIED ON THE RUNNER RATHER THAN LOCALLY:** the stamp is committed (`a8bb2d5`), and `gh run list`
+reports **success** for it and for the Pages deployment. Local `verify exit=0` and `ci exit=0` were read directly,
+without a pipe.
+
+**THE THREE HABITS THAT PRODUCED THIS, ALL THE SAME SHAPE:**
+1. `gate | tail -1` -- returns tail's exit code, so a failed gate looks passed (AAA).
+2. `git status && echo "(clean)"` -- the echo always runs, so the "verdict" is unconditional.
+3. piping an audit into `tail -12` -- captured 12 of 72 lines and read as a clean sweep (XX).
+
+**In each case the command was asking whether something PRINTED, when I needed to know whether it PASSED or was
+PRESENT.** And in each case the fix is one of two shapes: read `$?` directly, or let the command fail loudly with no
+decoration around it. **When a check is chained for convenience, the convenience is what you end up reading.**
+
 ## Log
 
 ## Log
