@@ -1737,6 +1737,25 @@ wiring fine on the strength of it (a corroded terminal passes full voltage with 
 **runs the converter with its battery load removed** without saying so. Both are now fixed. Four further findings
 and three gaps are listed in the manifest note and are not yet addressed.
 
+## SS. Judging a reply by its line count is not judging it by its content, and I made that error in the fix
+
+**I wrote in QQ that a reply should be judged by its CONTENT rather than its existence. Then I wrote a watcher that
+judged by LINE COUNT (>= 12 lines), and it called two failures "real review".**
+
+- **generator fault** — 14 lines, and the content is chrome: *"Read the bottom of the page / Write the review to the
+  file"*. No review.
+- **water heater, chatgpt lane** — 20 lines, and the content is **a stale tool call writing the MACERATOR review
+  from two fires earlier**: `write_file` to `outbox/REPLY-20261002-2216-...-macerator-toilet-REVIEW5.md`. The
+  polluted conversation re-emitted an old job's write, which is the third distinct way this lane has failed.
+
+**THE TEST THAT ACTUALLY WORKS IS A GREP FOR THE ANSWER'S STRUCTURE, not a length.** A real review carries
+`Part 1`, `Finding`, or `GAP` headings. Measured on the ones that worked tonight, they have several; the failures
+have none. **Check for the headings, not the bytes.**
+
+**AND THE STALE-WRITE FAILURE HAS A TELL THAT NEEDS NO JUDGEMENT AT ALL: the job id inside the file does not match
+the filename.** Every lane is told to write its job id as the first line. A reply whose first line names a
+different job is stale by definition, whatever else it contains, and that check is mechanical.
+
 ## Log
 
 ## Log
