@@ -2207,6 +2207,45 @@ for it and I used the room badly.
 late-arrival finding says a lane that finishes after the capture gives up still writes its file. **Waiting is the
 right move, not re-dispatching**, and a watcher is armed to catch them whenever they arrive.
 
+## HHH. ALL SIX LANES ARE PARKED ON A CONSUMED HASH THAT ONLY A RELOAD CLEARS
+
+**The reviews stopped for one reason, and it is not the capture and not the lanes.**
+
+```
+aistudio.google.com    idle     prompt already sent
+chat.deepseek.com      idle     prompt already sent
+chat.qwen.ai           idle     prompt already sent
+chatgpt.com            idle     prompt already sent
+gemini.google.com      idle     prompt already sent
+grok.com               stalled  the send never went after 4210s of retrying
+```
+
+**THE CODE.** The send decision in v0.7.33 is:
+
+```js
+if (!s.promptHash) return { action: 'idle', reason: 'no prompt queued' };
+if (s.consumed && s.consumed[s.promptHash]) return { action: 'idle', reason: 'prompt already sent' };
+```
+
+**AND THE STATE FILE DOES NOT CONTAIN EITHER FIELD.** `promptHash` and `consumed` are both absent from
+`queue/state-<host>.json`, so they live **in the page's memory rather than in the persisted state.** That is why
+sweeping `queue/jobs/` does not clear it and why the lanes stayed parked after I cleared the queue: **the harness is
+holding its own in-memory record that it already sent the prompt, and nothing I can do from the filesystem reaches
+it.**
+
+**SO THE FIX IS A TAB RELOAD, OR A NEW CHAT IN EACH LANE, AND IT IS TY'S SIDE.** This is the same conclusion I
+recorded earlier from symptom-reading and then superseded with the deadlock theory. **It is not superseded now: it
+has a mechanism, a line of code, and a reason the manual sweeps could not work.** Both things are true and they are
+different bugs: the deadlock is why a lane that DOES get a job sometimes fails to answer it, and this is why no lane
+gets a job at all.
+
+**WHAT I AM NOT DOING: touching the userscript to reset the set, or driving his browser.** The first would be an
+untested change to the pipeline for a condition a reload fixes, and the second is not mine to do.
+
+**WHAT TY NEEDS, IN ONE LINE:** reload the six lane tabs (or start a new chat in each), then re-run
+`scripts/bridge-review.py` for the five outstanding pages. **The four dispatched jobs are already in the queue and
+will go out on the first tick after the reload**, so nothing needs re-dispatching.
+
 ## Log
 
 ## Log
