@@ -2182,6 +2182,31 @@ observation: confirmed true, injected empty, pending zero.**
 **I have not written either.** The same reason as before, and it now costs less to be cautious: the mechanism is
 sound and shipped, so a wrong patch here would break something that works rather than fill a gap.
 
+## GGG. ONE JOB PER LANE, and I broke my own rule on the batch of five
+
+**Of the five re-dispatches, one produced a real review and four did not, and I can see one cause in my own
+dispatch command: two of the five went to `chat.deepseek.com` at the same time.**
+
+| page | lane | result |
+|---|---|---|
+| generator fault | qwen | **real review**, worked, two findings fixed |
+| generator sizing | deepseek | release note, 388 bytes |
+| water heater | deepseek | release note, 396 bytes |
+| bearings | grok | no reply |
+| converter | grok | no reply |
+
+**Every earlier batch tonight put one job on each lane, deliberately, because a lane works one conversation and a
+second job lands in the same composer as the first.** This batch put two on deepseek and two on grok, and every
+lane that got two produced nothing. That is not proof of cause and I am not going to state it as one, but it is the
+only variable that changed between the batches that worked and this one, and it costs nothing to keep the rule.
+
+**SO THE RULE STANDS AND IS RESTATED: one job per lane per batch.** With six lanes and five pages there was room
+for it and I used the room badly.
+
+**AND THE FOUR ARE STILL OPEN, WHICH IS FINE.** Three of them are release notes rather than answers, and the
+late-arrival finding says a lane that finishes after the capture gives up still writes its file. **Waiting is the
+right move, not re-dispatching**, and a watcher is armed to catch them whenever they arrive.
+
 ## Log
 
 ## Log
