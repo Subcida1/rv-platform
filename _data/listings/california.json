@@ -320,7 +320,27 @@
     "Pacifica": "bay-area",
     "Half Moon Bay": "bay-area",
     "Los Altos Hills": "bay-area",
-    "East Palo Alto": "bay-area"
+    "East Palo Alto": "bay-area",
+    "Sonora": "sierra-east",
+    "East Sonora": "sierra-east",
+    "Jamestown": "sierra-east",
+    "Columbia": "sierra-east",
+    "Twain Harte": "sierra-east",
+    "Groveland": "sierra-east",
+    "Tuolumne": "sierra-east",
+    "Mi Wuk Village": "sierra-east",
+    "Long Barn": "sierra-east",
+    "Pinecrest": "sierra-east",
+    "Arnold": "sierra-east",
+    "Murphys": "sierra-east",
+    "Angels Camp": "sierra-east",
+    "Copperopolis": "sierra-east",
+    "Soulsbyville": "sierra-east",
+    "Standard": "sierra-east",
+    "Chinese Camp": "sierra-east",
+    "Moccasin": "sierra-east",
+    "Big Oak Flat": "sierra-east",
+    "Cedar Ridge": "sierra-east"
   },
   "listings": [
     {
@@ -3634,6 +3654,40 @@
         "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
         "type_quote": "Saturdays from 8:00am-12:00pm for repairs, inquires, and appointments, please go to our contact page.",
         "note": "The site reads as a parts and service business rather than a repair shop, and the audit flags it as a dealer that does not say in words that it takes outside work. Its own sentence about repair appointments is the evidence, and it is the same standing as seven other California listings the same test flags."
+      }
+    },
+    {
+      "n": "Sierra Heavy Duty RV Center",
+      "c": "Sonora, CA",
+      "p": "(209) 532-7994",
+      "u": "https://sierraheavyduty.com/",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "Sierra Heavy Duty RV Center is an RV service shop on Waylon Way in Sonora, working on repairs, service, hitches, solar, batteries and collision repair, and it also carries parts and accessories in a showroom. Its own site advertises mobile repair as well as shop work, listing general maintenance, emergency mobile repairs excluding roadside, suspension repair, exterior and cosmetic repair, and interior appliance repair and replacement.",
+      "g": [
+        "Shop and mobile",
+        "Collision repair",
+        "Parts showroom",
+        "Sierra foothills"
+      ],
+      "base": "Sonora",
+      "areas": [
+        "Sonora",
+        "East Sonora",
+        "Jamestown",
+        "Columbia",
+        "Twain Harte",
+        "Groveland"
+      ],
+      "region": "The Sierra and the Eastern Sierra",
+      "evidence": {
+        "checked": "https://sierraheavyduty.com/",
+        "type_quote": "Sierra Heavy Duty RV Center is your one stop shop for all your RV Repairs, Service, Hitches, Solar, Batteries and Collision Repair.",
+        "mobile_quote": "Sierra Heavy Duty are the regional experts in RV repair.",
+        "coverage_quotes": [
+          "Emergency mobile repairs (excluding roadside)"
+        ]
       }
     }
   ]

@@ -1187,5 +1187,19 @@ window.RV_LISTINGS_CA = [
    "menlo park",
    "palo alto"
   ],  "region": "San Francisco, San Jose and the Bay Area",  "reg": "bay-area"
+ },
+ {  "n": "Sierra Heavy Duty RV Center",  "c": "Sonora, CA",  "p": "(209) 532-7994",  "u": "https://sierraheavyduty.com/",  "t": "both",  "e": false,  "r": false,  "d": "Sierra Heavy Duty RV Center is an RV service shop on Waylon Way in Sonora, working on repairs, service, hitches, solar, batteries and collision repair, and it also carries parts and accessories in a showroom. Its own site advertises mobile repair as well as shop work, listing general maintenance, emergency mobile repairs excluding roadside, suspension repair, exterior and cosmetic repair, and interior appliance repair and replacement.",  "g": [
+   "Shop and mobile",
+   "Collision repair",
+   "Parts showroom",
+   "Sierra foothills"
+  ],  "base": "sonora",  "areas": [
+   "sonora",
+   "east sonora",
+   "jamestown",
+   "columbia",
+   "twain harte",
+   "groveland"
+  ],  "region": "The Sierra and the Eastern Sierra",  "reg": "sierra-east"
  }
 ];
