@@ -36,23 +36,28 @@ LANES = ["aistudio.google.com", "chat.deepseek.com", "chatgpt.com",
 BODY = """You are reviewing one page from a website. No human is watching. Earlier jobs in this
 conversation are FINISHED and this one stands alone.
 
-A PAGE ARRIVES IN TWO CHUNKS. This is deliberate and it is not a workaround for a broken tool.
+A PAGE ARRIVES IN TWO CHUNKS. This is deliberate and it is not a workaround for a broken tool. THE TWO
+CHUNKS OVERLAP, so between them you are reading the WHOLE page and there is no unread middle.
 
 CALL 1 - call_id 7714, tool read_text_file, two parameters:
   path="staged/{staged}"
-  head=70
+  head=125
 That gives you the top of the page, in order.
 
 CALL 2 - call_id 7714, tool read_text_file, two parameters:
   path="staged/{staged}"
-  tail=80
+  tail=125
 That gives you the BOTTOM of the page, and the source list is in it. Read both before answering, and do
 not ask for the same path a third time with no head or tail: that exact call has already run and will be
 dropped as a duplicate.
 
 WHY TWO CALLS: a very large tool result cannot be typed back into this conversation - it goes into the
 message box and will not send, so the whole result is lost rather than cut. Two smaller slices always
-arrive. The page is roughly 13,000 to 19,000 characters and neither slice exceeds the limit.
+arrive. THE SIZE WAS RAISED FROM 70 AND 80 TO 125 AND 125 ON 2026-10-03, because a reviewing lane
+reported that the two slices did not meet on a 228-line page and the middle, where the test procedure
+lived, was in neither. 125 plus 125 covers two hundred and fifty lines, which is longer than the longest
+page this site ships. If you ever find the chunks do not meet, SAY SO AT THE TOP OF YOUR REVIEW rather
+than reviewing the part you were given.
 
 CALL 3 - call_id 7714, tool write_file, two parameters:
   path="/home/user/claude-bridge/outbox/REPLY-{jobid}.md"
