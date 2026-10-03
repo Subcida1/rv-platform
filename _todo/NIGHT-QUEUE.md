@@ -12,53 +12,66 @@ anywhere without a maker source. Every page edit runs `verify.py` before it is r
 
 ## MORNING BRIEF — read this first
 
-**73 commits, tree clean, CI green, live and serving.** Site went **402 to 417 businesses** and **36 to 38 guides**.
-The detail for every row is further down; this is the short version.
+**137 commits, tree clean, CI green, live and serving. 428 businesses, 38 guides, 2 live tools.**
 
-### The page-by-page sweep is finished, and it is clean
+### The one thing that needs you, and it takes two minutes
 
-| instrument | result |
-|---|---|
-| render audit | 138 of 138 renders clean (68 pages × desktop and mobile) |
-| mobile crowding at 360 / 393 / 430 | 0 failures, 0 warnings in every category |
-| accessibility, all 71 pages | no violations — **but see the caveat, the tool disagrees with itself** |
+**REFRESH THE SIX BRIDGE LANE TABS, THEN RE-RUN THE REVIEWS.** The lane tabs have been open since about 18:00
+yesterday, eleven hours of a continuously-loaded single-page app, and the capture failures went from intermittent to
+near-total as the night went on. The same lane that gave a real 29-line review at 02:06 returned "no answer found in
+the container" at 05:00 on the same page. Every failure looks the same from the harness's side: it looks for the
+answer and finds chrome, an empty container, or an old turn.
 
-**One instrument result I would not bank:** `check-a11y.mjs` reported moderate landmark warnings on a two-page
-run and then no violations at all on the same site minutes later, including the page that had just warned. **A
-clean a11y run is not evidence of a clean site**; the next step is to reproduce that warning deliberately. Section
-Y has the detail, and `NODE_OPTIONS="--dns-result-order=ipv4first"` is needed to run that tool at all on this
-machine.
+```
+# after refreshing the tabs
+cd /home/user/Documents/rv-platform
+python3 scripts/bridge-review.py --guides rv-generator-not-charging --round 3 --lane grok.com
+python3 scripts/bridge-review.py --guides trailer-brakes-required   --round 3 --lane chat.qwen.ai
+python3 scripts/bridge-review.py --guides rv-water-heater-not-heating --round 4 --lane chat.deepseek.com
+python3 scripts/bridge-review.py --guides rv-converter-not-charging --round 7 --lane chat.deepseek.com
+```
+**If the capture still fails after a refresh, the fault is in the userscript and it needs a session with the live DOM
+in front of it.** I did not touch it on an untestable theory.
 
-**The tools lane has not started, on purpose.** Guides have `new-guide.py` owning all five registration places;
-**tools have no equivalent and no gate that enforces one** (I checked: `verify.py` has no tools check at all).
-Building `new-tool.py`, the missing gate and a first tool in one go is where the omission gets in. Section X has
-the recommendation.
+### The honest review position, which is further back than I claimed mid-night
 
-### What shipped
+| page | lines | reviewed |
+|---|---|---|
+| rv-toilet-not-flushing | 121 | **fully** |
+| rv-macerator-toilet | 144 | **fully** |
+| rv-converter-not-charging | 296 | through round 6, its last 46 lines uncovered |
+| rv-generator-not-charging | 244 | partial |
+| trailer-brakes-required | 218 | partial |
+| rv-water-heater-not-heating | 202 | partial |
+| rv-generator-sizing | 167 | partial |
+| rv-trailer-wheel-bearings | 166 | partial |
 
-| | |
-|---|---|
-| **2 new guides** | `rv-trailer-wheel-bearings` and `rv-generator-sizing`, both built from sourcing passes, both live |
-| **15 new listings** | 4 San Antonio, 5 Rio Grande Valley, 6 Bay Area — every one verified against the business's own site |
-| **Directory coverage** | Texas towns within 30 mi of a provider **771 to 918**; California **914 to 943**. California's top-gap list is now **empty** |
-| **Your four UI complaints** | all fixed and proved with a real pointer event, not asserted: buttons move again, and 214 non-clickable cards stopped pretending |
-| **Hero map on mobile** | was a 409x230 strip in a 1051px hero; now sized per viewport |
+**The cause was mine: the review prompt asked for `head=70` and `tail=80`, which is 150 lines, and these pages are
+longer.** So for most of the night I was reporting "clean on sourcing and overclaiming" verdicts that covered the
+first 70 and last 80 lines. Fixed and now at 150 and 150, which covers 300 lines and therefore every page we ship.
 
-### What needs you, in the order I would take them
+### What actually landed overnight
 
-1. **Two region-taxonomy calls I made and flagged.** Texas had no region for the Rio Grande Valley and California none for the Bay Area, so **verified businesses had nowhere to live**. I added `rio-grande-valley` and `bay-area`. Each adds a section to a state page, is one data file, and reverses in one commit.
-2. **Four spec decisions** across `_specs/rv-trailer-wheel-bearings.md` and `_specs/rv-generator-sizing.md` §12. Neither page can be drafted until those are settled — stage 1 is your gate.
-3. **The dealership question.** Eight California listings are dealer-type businesses whose own sites do not say they take outside work; **seven are pre-existing**. Your settled rules say nothing about dealers. I would leave them.
-4. **The sitewide byline.** *"Written and checked against the sources below"* on all 38 guides has now been flagged as selling authenticity by two independent reviewers. It is a convention call, not a page defect, which is why I left it.
-5. **Neo's full brief.** He typed it, the bridge truncated it at ~100 characters, and it is not on this machine. Pasting it in is the only route.
+- **A full SEO performance report** with GSC, GA4, Cloudflare field data and Bing all live, written to
+  `_log/reports/2026-10-03-weekly.md`. Its finding: **the constraint is indexing, not content** — 37 of 70 URLs are
+  unknown to Google.
+- **Then I acted on it, and the indexing mechanism was broken three ways.** The sitemap's `lastmod` was stale on 60
+  URLs, three of them naming a date before the page existed; `tools/index.html` was missing from the sitemap
+  entirely; and the stale dates had been silently disabling IndexNow, which submits URLs whose lastmod is today.
+  All fixed, verified live, sitemap resubmitted (HTTP 204, after the path-vs-full-URL trap).
+- **Two diagrams built from competitor research**, which found the diagram SERPs ship nothing usable: a
+  **power-path diagram** covering the converter and inverter branches, and a **water heater cutaway** with the
+  winterisation bypass. The research wrote up at `research/competitor-tools-and-diagrams.md`.
+- **Real defects fixed** from the reviews that did land, including a contradiction I introduced myself in round 5
+  (fixed the FAQ, left the short version saying the opposite) and a page that called wiring "fine" on a reading
+  that only proves an open circuit.
 
-### What I got wrong, kept visible
+### The pattern worth carrying, four occurrences in one night
 
-- **Two red pushes on `main`.** `verify.py` is one gate, not the gate — `ci.sh` runs two more checks and four node suites it never touches. Now a memory correction.
-- **One misattributed safety quotation.** I put Lippert's jacking words in quotation marks and attributed them to Dexter, by grepping a document cache without checking which file I was reading.
-- **A batch of mine that did not shrink the gap I claimed it did.** I had misread the instrument's town and dispatched research at the wrong place entirely.
-
----
+**A green signal is not the same as the thing being right.** The gate passed, the audits passed, the reviews came
+back clean, and the reviews were reading half the page. `check-a11y` disagrees with itself. The sitemap check
+validates structure, not freshness, so 60 wrong dates passed it for a week. Every instrument was answering a
+narrower question than the one I was reporting.
 
 ## A. The UI/UX defects Ty named (his words, verbatim)
 
