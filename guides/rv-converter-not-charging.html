@@ -52,7 +52,7 @@
 
  <div class="sec prose">
  <div class="wrap narrow">
- <div class="callout"><b>The short version:</b> take a reading at the converter, then take a second reading at the battery cables with them disconnected from the battery, which means the converter is running with its battery load removed for as long as the meter is on it, so keep it brief and expect the coach 12 volt loads to behave oddly while it is. If both read the same, the converter and the wiring are fine and your problem is the battery. If the converter reads correct and the battery cables read nothing, the converter is fine and something between them is open. Progressive Dynamics says outright not to replace the converter until these checks have been run.</div>
+ <div class="callout"><b>The short version:</b> take a reading at the converter output terminals themselves, which is the only point that makes the comparison meaningful, then take a second reading at the battery cables with them disconnected from the battery, which means the converter is running with its battery load removed for as long as the meter is on it, so keep it brief and expect the coach 12 volt loads to behave oddly while it is. If both read the same, the converter is delivering and the cable run is not open, so look at the battery and at the connections themselves rather than at the cable. If the converter reads correct and the battery cables read nothing, the converter is fine and something between them is open. Progressive Dynamics says outright not to replace the converter until these checks have been run.</div>
 
  <figure>
  <svg viewBox="0 0 880 300" width="100%" role="img" aria-label="The charging path from an RV converter to the battery, showing four break points where charging can be interrupted while the converter still works correctly" >
@@ -244,10 +244,10 @@
  <p>The wire can be the limit rather than the rating. Before deciding you need a bigger converter, measure the actual charge current at the battery and see whether it matches what the unit is rated to deliver. If it does not, the fault is the wire, not the rating.</p>
  </div>
 
- <h2>What fails, in the order the makers check it</h2>
+ <h2>What fails, in the order worth checking</h2>
  <div class="card">
- <p><b>Documented failure points, in the order to check them:</b></p>
- <p>One, blown reverse polarity fuses, caused by a battery connected backwards even momentarily. Two, the battery branch fuse on the DC board, which the panel's own labelling identifies per model. Three, an open inline fuse or breaker in the battery positive lead. Four, the battery disconnect switch open, or the charger wired on the wrong side of it. Five, a bad or shorted battery cell. Six, loose, corroded or undersized battery wiring and grounds. Seven, a failed converter with no output while AC is present. Eight, a converter that is undersized or loaded out. Nine, a problem with the AC supply, including a tripped breaker or an over-voltage shutdown above 132 volts. Ten, converter overheating with poor ventilation. Eleven, storage mode being mistaken for a fault.</p>
+ <p><b>Documented failure points, in a workable order (your own manual may start elsewhere):</b></p>
+ <p>One, blown reverse polarity fuses, caused by a battery connected backwards even momentarily. Two, the battery branch fuse on the DC board, which the panel's own labelling identifies per model. Three, an open inline fuse or breaker in the battery positive lead. Four, the battery disconnect switch open, or the charger wired on the wrong side of it. Five, a bad or shorted battery cell. Six, loose, corroded or undersized battery wiring and grounds. Seven, a failed converter with no output while AC is present. Eight, a converter that is undersized or loaded out. Nine, a problem with the AC supply, including a tripped breaker or an over-voltage shutdown, where your particular model has one and names its own threshold. Ten, converter overheating with poor ventilation. Eleven, storage mode being mistaken for a fault.</p>
  </div>
 
  <h2 id="costs">What it costs</h2>
@@ -276,13 +276,13 @@
  <div class="card srcs">
  <h3>Sources</h3>
  <ul>
-  <li><a href="https://www.wfcotech.com/support/faq/" target="_blank" rel="noopener">WFCO converter support FAQ</a></li>
-  <li><a href="https://www.progressivedyn.com/service/troubleshooting-guides/power-converters/" target="_blank" rel="noopener">Progressive Dynamics converter troubleshooting guide</a></li>
-  <li><a href="https://www.wfcotech.com/wp-content/uploads/2024/08/NEW_8700_AD_SERIES_Manual_7-24.pdf" target="_blank" rel="noopener">WFCO WF-8700-AD series manual (PDF)</a></li>
-  <li><a href="https://www.wfcotech.com/wp-content/uploads/2023/01/9800-Series-Manual.pdf" target="_blank" rel="noopener">WFCO WF-9800 series converter manual (PDF)</a></li>
-   <li><a href="https://www.cummins.com/sites/default/files/2018-08/f-1362-rv-generator-load-management-basics.pdf" target="_blank" rel="noopener">Cummins Onan, RV generator load management basics, F-1362 (PDF)</a></li>
-  <li><a href="https://xantrex.com/wp-content/uploads/2023/02/TruechargeRVconverter_804-0220_DS.pdf" target="_blank" rel="noopener">Xantrex, TRUECHARGE RV converter datasheet (PDF)</a></li>
- <li><a href="https://www.trojanbattery.com/resources/battery-maintenance" target="_blank" rel="noopener">Trojan Battery, battery maintenance (specific gravity and open-circuit voltage by state of charge)</a></li>
+  <li><a href="https://www.wfcotech.com/support/faq/" target="_blank" rel="noopener">WFCO converter support FAQ</a>: the converter-first diagnostic rule, the AC-supply and reverse-polarity fault points, and the charging-profile figures.</li>
+  <li><a href="https://www.progressivedyn.com/service/troubleshooting-guides/power-converters/" target="_blank" rel="noopener">Progressive Dynamics converter troubleshooting guide</a>: the battery-size floor relative to converter size, and the test-order guidance.</li>
+  <li><a href="https://www.wfcotech.com/wp-content/uploads/2024/08/NEW_8700_AD_SERIES_Manual_7-24.pdf" target="_blank" rel="noopener">WFCO WF-8700-AD series manual (PDF)</a>: the auto-detect charging profiles for lead-acid and lithium.</li>
+  <li><a href="https://www.wfcotech.com/wp-content/uploads/2023/01/9800-Series-Manual.pdf" target="_blank" rel="noopener">WFCO WF-9800 series converter manual (PDF)</a>: terminal ratings and the output-voltage figures.</li>
+   <li><a href="https://www.cummins.com/sites/default/files/2018-08/f-1362-rv-generator-load-management-basics.pdf" target="_blank" rel="noopener">Cummins Onan, RV generator load management basics, F-1362 (PDF)</a>: how a charger load competes with other loads on a generator.</li>
+  <li><a href="https://xantrex.com/wp-content/uploads/2023/02/TruechargeRVconverter_804-0220_DS.pdf" target="_blank" rel="noopener">Xantrex, TRUECHARGE RV converter datasheet (PDF)</a>: maximum battery bank sizes for the TRUECHARGE units.</li>
+ <li><a href="https://www.trojanbattery.com/resources/battery-maintenance" target="_blank" rel="noopener">Trojan Battery, battery maintenance (specific gravity and open-circuit voltage by state of charge)</a>: the specific gravity table for a fully charged cell and the state-of-charge steps.</li>
 </ul>
  </div>
  </div>
