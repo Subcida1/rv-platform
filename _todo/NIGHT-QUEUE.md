@@ -1554,6 +1554,43 @@ coverage rather than for a sentence on the page, which is why I agree with the r
 statement is ever wanted, the honest form is a coverage statement rather than a per-area one, and it should wait
 until the gaps are actually closed.**
 
+## MM. I was wrong about sibling links, and the link work has a real cost I did not see
+
+**TWO CORRECTIONS, one of them to something I told Ty.**
+
+**1. The site does have in-body sibling links. 139 of them.** I reported *"zero in-body sibling links sitewide"*
+and it was my probe, not the site: I searched for `href="/guides/…"` **with a leading slash** while the pages write
+`href="guides/…"` relatively. That is the **third** time tonight a wrong pattern produced a wrong statement about
+the site, after Neo's "33 guides" and the generator page's fault-guide link. **Every guide ends with a "Related
+guides" card, and 139 links live in those cards.** So linking the new guides is a normal convention rather than a
+new one, which is the opposite of what I said.
+
+**2. The three newest guides are genuine ORPHANS, and that part stands.** Each is linked from **only**
+`guides/index.html` — no other guide links them:
+
+| guide | inbound links from other guides |
+|---|---|
+| `rv-trailer-wheel-bearings` | **0** |
+| `rv-generator-sizing` | **0** |
+| `rv-macerator-toilet` | **0** |
+
+**AND ADDING THE LINKS IS NOT FREE, WHICH IS THE FINDING.** I started with the obvious one — link the bearings
+guide from `trailer-brakes-required`, a page whose own adjustment section discusses the spindle nut. **`verify.py`
+failed immediately**, correctly: `adding link prose is a real content change`, and the content gate requires the
+check date to move when a page's words move. On a page already dated today the date cannot move, so the only
+honest outcomes are a review pass or a de-verification.
+
+**I reverted rather than bend the rule**, which is the precedent from `rv-sewer-smell` on 2026-09-27: I added one
+sentence there, the gate caught it, and I reverted rather than falsify the date. **The tempting shortcut here was
+to re-record the manifest by hand, as I did for the byline rewrite — but that was justified because I could PROVE
+from the diff that no word moved. Here words move, so the same move would be a lie with a good excuse.**
+
+**So the real trade-off, for Ty rather than for me:** three orphaned guides and a handful of de-verifications, or
+a review pass over three pages to add nine words of navigation. **My recommendation: do the links and accept the
+de-verification**, because a verified page nobody can find is worth less than an unverified page a reader reaches
+from the guide that answers their question — but the site counts verified pages, so flipping three of them is his
+call, not a bookkeeping detail I should absorb silently.
+
 ## Log
 
 ## Log
