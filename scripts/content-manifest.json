@@ -283,9 +283,9 @@
     "claims_date": "Oct 2, 2026"
   },
   "guides/rv-generator-not-charging.html": {
-    "hash": "21316492cd80dcaf",
+    "hash": "a6951f9afdb58542",
     "status": "unverified",
-    "verified_by": " 2026-10-02: an inbound link to a neighbouring guide was added, which moved the text, so this page is recorded UNVERIFIED until a fresh independent pass covers the addition. The link itself carries no claim. Review round 2 on a fresh lane came back CLEAN on both halves, sourcing and overclaiming, and its one gap is closed: the four suspects for flat batteries now have a cheapest-first order, the fuse and the switch being free checks before a meter comes out. Review round 2 on a fresh lane came back CLEAN on both halves, sourcing and overclaiming, and its one gap is closed: the four suspects for flat batteries now have a cheapest-first order, the fuse and the switch being free checks before a meter comes out.",
+    "verified_by": " 2026-10-02: an inbound link to a neighbouring guide was added, which moved the text, so this page is recorded UNVERIFIED until a fresh independent pass covers the addition. The link itself carries no claim. Review round 2 on a fresh lane came back CLEAN on both halves, sourcing and overclaiming, and its one gap is closed: the four suspects for flat batteries now have a cheapest-first order, the fuse and the switch being free checks before a meter comes out. Review round 2 on a fresh lane came back CLEAN on both halves, sourcing and overclaiming, and its one gap is closed: the four suspects for flat batteries now have a cheapest-first order, the fuse and the switch being free checks before a meter comes out. 2026-10-03, review round 4 under the 150/150 window, the first pass able to see this page's middle. Two findings fixed and one recorded. FIXED: the page credited a definition of converter and inverter to Go Power's reference guide, and I FETCHED the cited Go Power document to check rather than assuming, finding it contains neither 'converter' nor 'DC', so it does not define them; no other cited document does either, so the definition now stands on the plain meaning of the two words without a false attribution. And the figure '500 to 1,000 watts, about 4 to 8 amps' now says it is the 120 volt AC input, since 500 to 1,000 watts at 120 volts is 4 to 8 amps and the DC side differs by a factor of about ten, which decides the arithmetic in the section directly below it. RECORDED NOT FIXED: how a reader tells a 3000 rpm generator from a 1500 rpm one, which no cited document states.",
     "verified_at": null,
     "sources": [
       "Cummins Onan RV generator handbook",
@@ -295,7 +295,7 @@
     ],
     "spec": "_specs/rv-generator-not-charging.md",
     "spec_waived": false,
-    "claims": "ec33c3d7262df54f",
+    "claims": "2d0a12c3fd3ed47b",
     "invalidated_by": "mechanical change",
     "invalidated_at": "2026-09-27",
     "claims_date": "Oct 2, 2026"
