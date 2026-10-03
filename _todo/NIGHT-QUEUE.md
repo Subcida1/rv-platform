@@ -2146,6 +2146,42 @@ why that leg stopped failing this way.
 **THE VALUE HERE IS STILL THE DIAGNOSIS, NOT A PATCH**, and it is a tighter one: three fields that should never
 agree are disagreeing, and they name the function to read.
 
+## FFF. The machinery for the fix ALREADY EXISTS, and that localises the bug to one check
+
+**v0.7.27 already built what I was about to propose, and its own comment says so in detail:**
+
+> *"`trySubmit` already knows the condition (a Stop control in the send slot means 'still generating') and already
+> waits for it, but only to a 12 s deadline, after which it fires the rest of the ladder at a lane that is STILL
+> GENERATING and returns false. ... This is that retry, made explicit and bounded."*
+>
+> *"**The queue below is what makes 'wait' safe: past the wait the result is HELD, nothing is typed, and the drain
+> tick picks it up when the lane is actually idle.**"*
+
+**So the harness has `pendingResults`, a `waitForSendSlot` that holds rather than types, and a drain tick that
+re-delivers when the lane goes idle.** That is the correct design, and it is already shipped.
+
+**WHICH MEANS THE BUG IS NOT A MISSING MECHANISM. IT IS ONE CHECK THAT DID NOT FIRE.** My probe showed
+`pending: 0`, so the result was never HELD, and `injected: []`, so it never ARRIVED, and `send.confirmed: true`, so
+the harness recorded a success. **The result went down the path that reports "inserted + sent" and the lane never
+got it.**
+
+**THE LIKELIEST SINGLE FAULT, AND IT IS NARROW:** `waitForSendSlot` holds a result only when `generationInFlight()`
+says the lane is busy — and that probe is described in the code as *"a deliberately conservative probe (any visible
+Stop-labelled button in the composer's scope)"*. **A lane whose Stop control the probe cannot see reads as IDLE
+while it is generating**, so the harness types into it, the app swallows the text, the composer still contains what
+was handed to it so the landing check passes, and the harness confirms a send that never happened. **That fits every
+observation: confirmed true, injected empty, pending zero.**
+
+**SO THE FIX IS ONE OF TWO SMALL THINGS, AND THE NEXT SESSION CAN PICK BY MEASURING:**
+1. **Confirm on the composer CLEARING rather than on the click.** The current proof is that the composer contained
+   the text; the proof that the app TOOK it is that the composer is empty afterwards. That is a strictly stronger
+   check and it fails loudly rather than silently.
+2. **Or fix `generationInFlight()` for the affected lanes**, if measuring shows the probe simply cannot see their
+   Stop control. That is a selector problem, per-lane, and the observed lanes would name themselves.
+
+**I have not written either.** The same reason as before, and it now costs less to be cautious: the mechanism is
+sound and shipped, so a wrong patch here would break something that works rather than fill a gap.
+
 ## Log
 
 ## Log
