@@ -16,26 +16,25 @@ anywhere without a maker source. Every page edit runs `verify.py` before it is r
 
 ### The one thing that needs you, and it takes two minutes
 
-**THE REVIEWS ARE BLOCKED BY A DEADLOCK IN THE BRIDGE, AND IT NEEDS A SESSION WITH THE BROWSER OPEN.**
+**RELOAD THE SIX LANE TABS, THEN THE REVIEWS GO OUT ON THE NEXT TICK. That is the whole ask.**
 
-A lane asks for the page, the harness runs the call, and **the result never reaches the lane** (`injected: []` in
-the lane state). The lane waits for it, so it never finishes, so the capture finds nothing but the call it already
-made. **The code says why**: `clickSendButton` (v0.7.33, line 3330 on) waits up to 12 seconds for a send control
-because a Stop control occupies the slot "while the model is streaming" — but **a lane waiting for a tool result
-reports itself as generating for as long as it waits**, so the wait can never end. Harness waits for the lane to
-stop talking, lane waits for the harness to speak.
+**All six lanes are parked**, five on `prompt already sent` and grok on `stalled: the send never went after 4210s`.
+The send decision refuses when the prompt's hash is in the harness's **consumed** set:
 
-**It is intermittent because a lane that pauses between the call and the wait gives the injection a window**, which
-is why the same lane on the same page succeeded at 02:06 and failed at 05:00.
+```js
+if (s.consumed && s.consumed[s.promptHash]) return { action: 'idle', reason: 'prompt already sent' };
+```
 
-**The fix is small and targeted: the return leg must not require the lane to be idle when the lane's own last turn
-is a tool call.** A lane holding an outstanding call is not "still generating" in the sense the guard means, it is
-blocked on us. **I did not write it**, because it is a userscript change needing a reinstall and the live DOM to
-test, and shipping an untested change to the mechanism the whole pipeline depends on is what this night has argued
-against from the start. Diagnosis in section VV with the code locations.
+**And `promptHash` and `consumed` are not in `queue/state-<host>.json` at all** — they live in the page's memory,
+so clearing `queue/jobs/` does not touch them. **A tab reload, or a new chat in each lane, clears it.** The four
+outstanding jobs are already queued and go out on the first tick after that; nothing needs re-dispatching.
 
-**Refreshing the tabs may still help** (it clears the composer) but it treats the symptom, and I would not spend
-your morning on it before reading VV.
+**This is why no lane is getting work. There is a second, different bug for when a lane DOES get work**, and it is
+in section VV and EEE: a tool result the harness confirms as sent but which never reaches the lane
+(`send.confirmed: true`, `injected: []`, `pending: 0`). The likeliest cause is that `waitForSendSlot` only holds a
+result when its Stop-control probe sees the lane as busy, and that probe is documented as deliberately conservative.
+**Two candidate one-line fixes are named in FFF; neither is written, because the mechanism is sound and shipped and a
+wrong patch would break something that works.**
 
 ### The honest review position, which is further back than I claimed mid-night
 
