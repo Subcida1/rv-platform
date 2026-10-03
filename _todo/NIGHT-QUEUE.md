@@ -1620,6 +1620,39 @@ a completed pass on the current text.** Round 6 was meant to be that pass and wa
 verified through round 4's corrections plus round 5's fixes applied but unreviewed. **Do not count round 6 as
 coverage of anything.**
 
+## OO. The first fix driven by the analytics, and it was the indexing mechanism itself
+
+**Ty asked for a report, then said to act on it: "utilizing the analytics improve on the website".** The report said
+the constraint is **indexing, not content** — 29 of 70 URLs indexed, **37 unknown to Google**. So I went at the two
+things that do the indexing, and both were broken.
+
+**1. THE SITEMAP LASTMOD WAS STALE ACROSS 60 URLS, and three named a date BEFORE THE PAGE EXISTED.** Sixty entries
+said 2026-09-27, nine said 09-28, while the pages had changed many times since. The macerator, wheel bearing and
+generator sizing guides all claimed 09-27 and were **created on 10-02**. `lastmod` is the hint a search engine uses
+to decide whether re-fetching is worth a crawl, so a stale one tells Google there is nothing new at any of those
+addresses.
+
+**2. `tools/index.html` WAS PUBLISHED AND ABSENT FROM THE SITEMAP ENTIRELY.** The hub both live tools hang from had
+no route from the one file search engines read. The repo's own `build-sitemap.py --check` caught it the moment it
+was asked, which is the check doing exactly its job.
+
+**3. AND THE STALE DATES WERE DISABLING THE AUTOMATION BUILT TO SOLVE THE SAME PROBLEM.** `indexnow.py --changed`
+submits URLs whose `lastmod` is today. It found **nothing at all**, because no URL carried today's date. So the
+IndexNow lever had been silently switched off by the defect it exists to compensate for.
+
+**WHAT WAS DONE, end to end:** `build-sitemap.py --write` refreshed every date to 2026-10-02; the missing entry was
+added; parity now passes across **70 entries, none duplicated, every one dated, XML well-formed**; the live file was
+verified as valid XML with 70 entries; tonight's six changed pages were submitted to IndexNow by hand and **all six
+accepted HTTP 200**; and the sitemap was **resubmitted to Search Console, HTTP 204**.
+
+**AND THE RESUBMIT ITSELF FAILED FIRST TIME, with HTTP 400 "Could not process sitemap '/sitemap.xml'".** The fix is
+the trap already in memory: this is a **Domain property**, so it needs the **full URL** and not a path. With
+`https://originrv.com/sitemap.xml` it returned 204 immediately.
+
+**THE PATTERN WORTH KEEPING: the sitemap check validates STRUCTURE, not FRESHNESS**, so 60 wrong dates and one
+absent hub passed it for a week. That is the fourth time today a green check was green because it was measuring
+something narrower than the thing that was broken.
+
 ## Log
 
 ## Log
