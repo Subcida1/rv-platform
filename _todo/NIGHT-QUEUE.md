@@ -2113,6 +2113,39 @@ air-brake manual; the 3,000 pound exception described as requiring the trailer's
 the weight of the trailer, which is a misstatement of a federal condition; and the loaded-weight gap now routing to
 the scale locator we already ship.
 
+## EEE. The deadlock is really a FALSE CONFIRMATION, and that moves the fix
+
+**Reading further into the code changed the diagnosis in VV, and this is the sharper version.**
+
+The lane state on the failed probe carried three facts together, and the third is the one that matters:
+
+```
+send:     { tried: ["enter"], technique: "enter", confirmed: true }   <- the harness believed it sent
+injected: []                                                          <- nothing reached the lane
+pending:  0                                                           <- nothing queued for retry
+```
+
+**THE HARNESS CONFIRMED A SEND THAT DID NOT DELIVER.** And the code has the machinery to catch exactly this:
+`runCall` distinguishes *"inserted + sent"* from *"inserted (the send did not go - QUEUED and retried
+automatically; pending=N)"*, and there is a `pendingResults` queue behind it with automatic retry. **`pending: 0`
+means the result was never recognised as unsent**, so no retry ever happened, and the lane waited for a message the
+harness thought it had already delivered.
+
+**SO THIS IS NOT A WAIT THAT CANNOT END.** The 12-second Stop-control wait in `clickSendButton` is a real bound on
+one path, but the evidence says the send was *attempted and confirmed* rather than blocked. **The fault is in the
+PROOF that the result landed.** That is the same shape as the v0.7.17 fix for the prompt leg, which required the
+composer to actually CONTAIN a distinctive slice of what was handed to it before calling a send done, and it is
+why that leg stopped failing this way.
+
+**WHAT THE NEXT SESSION SHOULD DO, REVISED, AND IT IS NARROWER THAN VV SAID:**
+1. Read the result leg's landing check. Compare it against the prompt leg's, which is known good since v0.7.17.
+   **If the result leg confirms on the click rather than on the composer's contents, that is the bug.**
+2. `pending: 0` on a run where `injected: []` is the reproduction: a result that neither landed nor queued.
+3. Only then patch, and test on one lane.
+
+**THE VALUE HERE IS STILL THE DIAGNOSIS, NOT A PATCH**, and it is a tighter one: three fields that should never
+agree are disagreeing, and they name the function to read.
+
 ## Log
 
 ## Log
