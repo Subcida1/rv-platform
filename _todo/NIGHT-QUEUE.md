@@ -2075,6 +2075,44 @@ would have had.
 not is that I read the line back. **That is the fifth time tonight.** The drift is persistent enough that the rule
 belongs at the level of "read every sentence back that I write about these vehicles", not "remember not to".
 
+## DDD. THE LANES FINISH AFTER THE CAPTURE GIVES UP, so a "failed" reply must be re-read before it is believed
+
+**Ty sent a screenshot of the six lanes and asked "bridge seems fine?" He was right, and it is the most useful
+correction of the day.**
+
+**WHAT THE SCREENSHOT SHOWED:** DeepSeek emitting a call with **`head=150`**, so it had my new window. Qwen holding
+*"The review has been successfully written to the specified file."* ChatGPT showing a `[Tool inject: read_text_file]`
+block, so injection worked there. Grok under **heavy-usage rate limiting**. AI Studio with the prompt sitting unsent.
+
+**AND THE CHECK THAT FOLLOWED:** `REPLY-20261003-0701-RV-trailer-brakes-required-REVIEW4.md` is **1429 bytes, last
+modified 10:35**, and contains **three real findings**. My capture released that job at 07:01 after 285 seconds and I
+recorded it as a failure. **The lane wrote the review hours later, after the harness had stopped listening.**
+
+**SO THE FAILURE MODES ARE NOT ALL FAILURES.** Of today's replies:
+
+| file | size | actually |
+|---|---|---|
+| brakes REVIEW4 | 1429 | **REAL** - three findings, written hours after the capture gave up |
+| converter REVIEW6 | 5141 | **REAL** - ten headings, already worked |
+| converter REVIEW5 | 5887 | **REAL** - already worked |
+| water heater REVIEW4 | 3945 | failure - the chatgpt stale write of the macerator review |
+| the rest | 394-667 | failures - chrome, or the harness's own release note |
+
+**THE PRACTICAL FIX: RE-READ THE REPLY FILE BEFORE TREATING A JOB AS FAILED.** The capture has a ceiling because it
+cannot wait forever, but the file is the durable artifact and a lane that finishes late still writes it. **A
+`sweep-late-replies` pass that re-reads every outbox file with no matching "worked" marker would recover these
+without a single re-dispatch.** That is the same shape as the spent-job sweeper: stop relying on a transient signal
+when a durable one exists.
+
+**AND MY OWN GREP WAS CASE-SENSITIVE.** I classified these with `grep -E "Finding|GAP|PART"`, which does not match
+`## Part 1 - the sourcing rule`. **Case-insensitive `part [0-9]|finding|gap [0-9]|sourcing`, minimum two matches** is
+the test that separates them, and it would have found the brakes review the first time.
+
+**THE THREE FINDINGS IT CARRIED ARE FIXED:** an unsourced claim that a circulating figure comes from Dexter's
+air-brake manual; the 3,000 pound exception described as requiring the trailer's AXLE weight where 49 CFR 393.42 says
+the weight of the trailer, which is a misstatement of a federal condition; and the loaded-weight gap now routing to
+the scale locator we already ship.
+
 ## Log
 
 ## Log
