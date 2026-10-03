@@ -1925,6 +1925,32 @@ sentence and the cost of being wrong is that Ty installs a build that breaks the
 **THE VALUE DELIVERED IS THE DIAGNOSIS IN VV, NOT A PATCH.** `injected: []` plus a 12-second bounded wait for a
 condition that cannot end is a mechanism, not a guess, and it is where the next hour of bridge work should start.
 
+## XX. The accessibility tool disagreed with itself again, and I checked rather than picking the convenient answer
+
+**Two runs of the same tool, minutes apart, on the same day:**
+
+| run | result |
+|---|---|
+| `check-a11y.mjs --port 9341` (representative pages) | **`landmark-one-main x1`** and **`region x4`** — "Document should have one main landmark", first: `html` |
+| `check-a11y.mjs --port 9341 --all` (every page) | **zero** landmark violations across 72 pages, no serious or critical issues |
+
+**This is the caveat already recorded in memory** -- the tool reported moderate landmark warnings on a two-page run
+and then not on a full run -- and tonight's pair reproduces it exactly. So the entry in the quality-gates reference
+is accurate and this is a second sighting rather than a new fault.
+
+**WHAT I ALMOST DID WRONG, AND IT IS THE FOURTH TIME TONIGHT.** The first `--all` run was piped through `tail -12`,
+so I captured twelve lines of a seventy-two-line report and briefly concluded "zero landmark warnings across the
+population" **from a log that could not have shown them.** The fix was to re-run with the whole output redirected to
+a file, which is when the real answer (still zero) became trustworthy rather than lucky. **A truncated instrument
+and a clean instrument look identical when you only read the tail.**
+
+**AND THE HONEST CONCLUSION ABOUT THE PAGE MARKUP IS NARROWER THAN THE TOOL SUGGESTS.** Zero violations on the
+full sweep, and one run that says otherwise. My memory carries a related false claim from a reflection agent that
+said `<main>` landmarks were missing when they were not, so **I am not acting on either result**: the markup is
+either fine or the instrument is unreliable, and **one of those means the other cannot be used as evidence either
+way.** The next person should settle it by reading one built page's markup directly rather than by trusting a third
+run of axe.
+
 ## Log
 
 ## Log
