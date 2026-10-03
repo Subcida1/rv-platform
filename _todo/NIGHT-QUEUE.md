@@ -1794,6 +1794,40 @@ reviewed and green" claim, which was made before I knew the window was cutting t
 right.** The gate passed, the audits passed, the reviews came back "clean", and the reviews were reading half the
 page. Every one of those instruments was answering a narrower question than the one I was reporting.
 
+## UU. The lanes have been up for eleven hours, and that may be the whole story
+
+**The capture failures have gone from intermittent to near-total, and the same lane is now failing on the same
+job it completed earlier.**
+
+| when | lane | same page | outcome |
+|---|---|---|---|
+| 02:06 | deepseek | converter | **real review**, 29 lines, four findings |
+| 04:05 | grok, qwen, chatgpt | three pages | chrome, chrome, stale write |
+| 05:00 | deepseek | converter | `no answer found in the container` |
+
+**The lanes have been open in the browser since about 18:00 the previous evening. That is eleven hours of a
+continuously-loaded single-page app.** Every failure tonight has the same shape from the harness's side: it looks
+for the answer and finds chrome, an empty container, or an old turn. That is what a long-lived conversation view
+degrades into, and it is the one variable that has changed steadily all night while everything else has been held
+constant.
+
+**THIS IS A HYPOTHESIS WITH A CHEAP TEST, AND IT IS TY'S SIDE.** Refreshing the six lane tabs (or starting a fresh
+conversation in each) should restore them, and if it does, the capture never needed a code fix at all. **I am not
+touching the userscript on the strength of a theory I cannot test**, and I am not re-queueing the same job on
+another lane all night either: seven failures against three successes is a finding about the harness and the tabs,
+not about the pages.
+
+**WHAT I DID DO: the window is now 150 and 150, covering 300 lines.** The longest staged page is 296 lines and
+25,191 characters, so this covers every page the site ships. That change is committed and is independent of the
+capture problem.
+
+**THE PAGES' HONEST STATE IS UNCHANGED FROM TT**: two fully reviewed, six partial, converter reviewed through
+round 6 with 46 lines at its middle read for the first time only if round 7 had landed, which it did not.
+
+**Recommendation for Ty, one line:** refresh the six lane tabs, then re-run `scripts/bridge-review.py` for the six
+partial pages; if the capture still fails after a refresh, the fault is in the userscript and it needs a session
+with the live DOM in front of it.
+
 ## Log
 
 ## Log
