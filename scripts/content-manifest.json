@@ -332,12 +332,12 @@
     "claims_date": "Oct 2, 2026"
   },
   "guides/rv-macerator-toilet.html": {
-    "hash": "155396c99f6bd24a",
+    "hash": "74f642fdff32ff88",
     "status": "unverified",
-    "verified_by": null,
+    "verified_by": " 2026-10-02, independent review round 5 on the corrected page, five findings, all fixed: the voltage section claimed the manual's test decides who pays, which it does not; the absolute wet-wipe rule is the iNDUS manual's and is now scoped to it; the safety instruction was rewritten to one unambiguous prohibition with obstruction removal handed to a competent person; the replacement-cost sentence implied every replacement needs both the discharge line and the circuit when it may need either; and a model-identification step was added for a reader whose manual is missing, since choosing the wrong circuit rating is what the maker's own fire warning is about.",
     "verified_at": null,
     "sources": [],
-    "claims": "cf1945e1494e0ff8",
+    "claims": "43dc9f1594a7a36a",
     "claims_date": "Oct 2, 2026"
   },
   "guides/rv-outlets-not-working.html": {
