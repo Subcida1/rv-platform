@@ -301,12 +301,12 @@
     "claims_date": "Oct 2, 2026"
   },
   "guides/rv-generator-sizing.html": {
-    "hash": "486c905b839a1996",
+    "hash": "22dd146169b7e253",
     "status": "unverified",
-    "verified_by": null,
+    "verified_by": " 2026-10-02, review round 3 on a fresh lane, and it came back clean on both halves: no claims stronger than the sources, and no sentences overstating certainty. Two practical gaps closed. The page now says what its arithmetic is against, running figures and the makers' startup multipliers, and leaves which of a generator's two published ratings a surge figure covers to that generator's own documentation rather than asserting it, because no cited source states it. And the load-management advice now links the converter guide at the point a reader meets it.",
     "verified_at": null,
     "sources": [],
-    "claims": "d6adac7690d34f32",
+    "claims": "fa0e512e93d16641",
     "claims_date": "Oct 2, 2026"
   },
   "guides/rv-leveling-jacks-not-working.html": {
