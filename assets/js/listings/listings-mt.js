@@ -151,5 +151,14 @@ window.RV_LISTINGS_MT = [
    "florence",
    "darby"
   ],  "region": "Bitterroot Valley",  "spec": "Primarily a parts and do it yourself help center; in-shop repair is limited to electrical systems in most RVs.",  "reg": "northwest-mt"
+ },
+ {  "n": "Western Trailer & Marine",  "c": "Havre, MT",  "p": "(406) 265-4572",  "u": "https://www.westerntrailersales.com/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "Western Trailer and Marine is a family owned RV dealership in Havre with its own service department, and it has been in the same business for over sixty years. Its service page says the department is staffed with highly trained technicians and that it has the equipment and experience to keep a motorhome or trailer in working order, alongside a parts department that takes requests.",  "g": [
+   "Shop",
+   "Dealer service department",
+   "Parts department",
+   "Hi-Line"
+  ],  "base": "havre",  "areas": [
+   "havre"
+  ],  "region": "Great Falls and the Hi-Line",  "reg": "north-central-mt"
  }
 ];

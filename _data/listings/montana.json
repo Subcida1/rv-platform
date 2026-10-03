@@ -743,6 +743,34 @@
         "emergency_quote": null,
         "roadside_quote": null
       }
+    },
+    {
+      "n": "Western Trailer & Marine",
+      "c": "Havre, MT",
+      "p": "(406) 265-4572",
+      "u": "https://www.westerntrailersales.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Western Trailer and Marine is a family owned RV dealership in Havre with its own service department, and it has been in the same business for over sixty years. Its service page says the department is staffed with highly trained technicians and that it has the equipment and experience to keep a motorhome or trailer in working order, alongside a parts department that takes requests.",
+      "g": [
+        "Shop",
+        "Dealer service department",
+        "Parts department",
+        "Hi-Line"
+      ],
+      "base": "Havre",
+      "areas": [
+        "Havre"
+      ],
+      "region": "Great Falls and the Hi-Line",
+      "evidence": {
+        "checked": "https://www.westerntrailersales.com/rv-service",
+        "type_quote": "Our service department is staffed with highly trained technicians dedicated to making sure your RV stays in great working order for years to come.",
+        "coverage_quotes": [
+          "We have the equipment and experience to get your motorhome and trailer in prime shape"
+        ]
+      }
     }
   ]
 }
