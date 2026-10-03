@@ -1756,6 +1756,44 @@ have none. **Check for the headings, not the bytes.**
 the filename.** Every lane is told to write its job id as the first line. A reply whose first line names a
 different job is stale by definition, whatever else it contains, and that check is mechanical.
 
+## TT. The capture is now the dominant failure, and the honest page-by-page state
+
+**Four re-reviews went out under the corrected 125/125 window. One came back as a real review, three failed, and
+all three failures are the CAPTURE rather than the lane:**
+
+| page | lane | outcome |
+|---|---|---|
+| converter | deepseek | **REAL REVIEW**, 29 lines, four findings, all fixed |
+| generator fault | grok | chrome: *"Read the bottom of the page / Write the review to the file"* |
+| water heater | chatgpt | a stale write of the MACERATOR review from two fires ago |
+| trailer brakes | qwen | capture-ceiling after 285 s |
+
+**Three of the four lanes answered and the harness did not read the answer.** The lanes are not the problem; the
+capture anchor is, and it fails often enough now that it is the main thing between us and a reviewed site. **This
+needs a proper fix in the userscript, not more re-dispatches.** I am not going to keep re-queueing the same job on
+a different lane all night, because that is the retry loop the whole night has argued against.
+
+**THE HONEST PAGE-BY-PAGE STATE, so the next session does not have to rediscover it:**
+
+| page | staged length | reviewed under the old window? | current |
+|---|---|---|---|
+| rv-converter-not-charging | 296 | no, 146-line hole | **round 6 real, 4 findings fixed, 46 lines still outside the window** |
+| rv-generator-not-charging | 244 | no, 94-line hole | partial only |
+| trailer-brakes-required | 218 | no, 68-line hole | partial only |
+| rv-water-heater-not-heating | 202 | no, 52-line hole | partial only |
+| rv-generator-sizing | 167 | no, 17-line hole | partial only |
+| rv-trailer-wheel-bearings | 166 | no, 16-line hole | partial only |
+| rv-toilet-not-flushing | 121 | **yes, fully** | good |
+| rv-macerator-toilet | 144 | **yes, fully** | good |
+
+**So two pages are genuinely reviewed and six are not**, and one of the six (the converter) is now short by 46 lines
+rather than half a page. That is the truthful position, and it is further back than my earlier "everything is
+reviewed and green" claim, which was made before I knew the window was cutting the middle out of every long page.
+
+**AND THE LESSON THAT KEEPS REPEATING, now four times tonight: a green signal is not the same as the thing being
+right.** The gate passed, the audits passed, the reviews came back "clean", and the reviews were reading half the
+page. Every one of those instruments was answering a narrower question than the one I was reporting.
+
 ## Log
 
 ## Log
