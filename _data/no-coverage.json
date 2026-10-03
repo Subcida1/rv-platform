@@ -4,14 +4,45 @@
     {
       "area": "Zapata County and Starr County, the western Rio Grande Valley",
       "searched": "2026-10-02",
-      "towns": ["Zapata", "Falcon Heights", "Falcon", "San Ygnacio", "Roma", "Rio Grande City",
-                "Escobares", "La Grulla", "Garciasville", "Salineno", "Santa Elena", "Los Ebanos"],
+      "towns": [
+        "Zapata",
+        "Falcon Heights",
+        "Falcon",
+        "San Ygnacio",
+        "Roma",
+        "Rio Grande City",
+        "Escobares",
+        "La Grulla",
+        "Garciasville",
+        "Salineno",
+        "Santa Elena",
+        "Los Ebanos"
+      ],
       "qualified_found": 0,
       "cost": "one research pass, about 1.6 million tokens, for a null result",
       "what_was_found": "No business in either county has a live own website carrying RV-repair evidence, which is the site's standard. Roughly forty others were rejected across five reasons: general auto, collision, tyre and muffler shops; RV and mobile-home PARKS that directories miscategorise as RV repair; truck and diesel; dispatch networks; and providers out of the area.",
       "the_one_near_miss": "Falcon RV Repair, Rio Grande City, is a genuine dedicated RV repair business, and its own site was a Google-hosted page that now returns 404. If it gets a live site it is this area's one real listing.",
       "nearest_real_capacity": "Ron Hoover RV and Marine, Laredo, about 50 miles west of Zapata, plus the listed Hidalgo County mobile technicians.",
       "conclusion": "This area has no RV repair coverage because it has no provider, which is a different fact from a missing listing, and the directory cannot fix it by adding rows."
+    }
+  ],
+  "california": [
+    {
+      "area": "Plumas County, the Quincy and East Quincy corridor",
+      "searched": "2026-10-02",
+      "towns": [
+        "Quincy",
+        "East Quincy",
+        "Plumas Eureka",
+        "Portola",
+        "Chester",
+        "Westwood",
+        "Greenville"
+      ],
+      "qualified_found": 0,
+      "cost": "one reconnaissance search, not a full research pass",
+      "what_was_found": "No RV repair business with its own website. The results are RV PARKS (Pioneer RV Park and River Ranch RV Park), which the repair-only rule excludes; six general automotive shops (Dan The Mobile Man, Hi-Tech Frame & Finish, Les Schwab, Curran Tire Center, Frank's Garage, John's Automotive Electrical), which are not RV-specific; and two dispatch networks (Interstate Fleet Services and Road Rescue Network) that dominate the results for every town and are excluded as lead-generation rather than a real business.",
+      "conclusion": "No admissible provider. This is a genuine absence of RV repair coverage rather than a missing listing, and unlike the western Rio Grande Valley it was established in one search rather than a full pass, which is the argument for reconnaissance before commissioning research."
     }
   ]
 }
