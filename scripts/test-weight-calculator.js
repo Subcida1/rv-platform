@@ -63,10 +63,10 @@ check('a combination over the GCWR is verdict bad', /v-row bad[\s\S]*?Combined w
 check('the over-GCWR note names the GCWR', /OVER the GCWR/.test(html));
 
 /* THE NAMED CONSTRAINT. Every competing calculator checks these same limits and never says
-   which one is doing the limiting. These two pin the behaviour: an overloaded rig names the
-   limit to fix, and a clean rig does not invent one. */
+   which one is doing the limiting. These two pin the behaviour: an overloaded RV names the
+   limit to fix, and a clean setup does not invent one. */
 html = run(Object.assign({}, BASE, { 'payload': 300 }));   // BASE as the source, not the target: it HAS a payload key and would otherwise overwrite the override
-check('an overloaded rig names the binding limit', /Over on Truck payload/.test(html));
+check('an overloaded RV names the binding limit', /Over on Truck payload/.test(html));
 check('the named limit is the payload, not a generic word',
   !/Over on something/i.test(html) && !/Something is overloaded/.test(html));
 
