@@ -1951,6 +1951,26 @@ either fine or the instrument is unreliable, and **one of those means the other 
 way.** The next person should settle it by reading one built page's markup directly rather than by trusting a third
 run of axe.
 
+## YY. Production verified, not assumed: tonight's work is live and correct
+
+**A 200 response is not evidence that a change deployed, so I checked the content rather than the status code.**
+
+| check | result |
+|---|---|
+| the eight pages tonight's work touched, plus the homepage and sitemap | all **200** |
+| power-path diagram on the converter page | **live** |
+| water heater cutaway | **live** |
+| the open-circuit correction from review round 5 | **present** |
+| the lithium caveat from round 6 | **present** |
+
+**This is the closure the rest of the night has been missing**: the two competitor-driven diagrams and both
+review-driven corrections are on the deployed site, so the work is real rather than only committed.
+
+**AND IT IS THE RIGHT SHAPE FOR A CHECK, AFTER A NIGHT OF LEARNING THE HARD WAY.** Not the exit code, not the file
+existing, not the reply arriving: the actual string on the actual live page. Every failure tonight was an
+instrument answering a narrower question than the one being reported, and this one asks exactly the question that
+matters, which is whether a reader can see the thing.
+
 ## Log
 
 ## Log
