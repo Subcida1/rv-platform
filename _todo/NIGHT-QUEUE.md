@@ -1653,6 +1653,34 @@ the trap already in memory: this is a **Domain property**, so it needs the **ful
 absent hub passed it for a week. That is the fourth time today a green check was green because it was measuring
 something narrower than the thing that was broken.
 
+## PP. The recurring bridge blocker is spent jobs piling up, and it makes good lanes look broken
+
+**This is the second time tonight the same thing stopped every review**, and the second time I nearly diagnosed
+it as lane failure.
+
+**WHAT HAPPENS.** Jobs are written to `claude-bridge/queue/jobs/`. When a lane answers, its reply appears in
+`outbox/` — **but the spent job file stays in the queue.** The harness has a pruner for exactly this and it is not
+working. Once spent files accumulate, `pickJobFromDir` walks them, finds them already consumed, and the lane's
+state parks at **`prompt already sent`** — which means *the harness refused to send a new job*, not that the lane
+failed to answer.
+
+**MEASURED TWICE:**
+- **Fire #22** blocked the macerator review the same way. Clearing two spent files fixed it immediately.
+- **Fire #26** had **8 spent job files** and both lanes parked at `prompt already sent`. **The symptom was
+  indistinguishable from a lane failure:** grok's reply held only UI chrome ("Worked for 6s / Read 1 file"), and
+  qwen released at `capture-ceiling` with "the reply container held only page chrome and footer text." Both read
+  as broken lanes. **Both lanes were fine.** With the queue cleared, the same two jobs went straight back to the
+  same two lanes.
+
+**THE RULE THIS EARNS: when a lane looks like it failed, check `queue/jobs/` before believing it.** A capture that
+returns page chrome means the harness could not find an answer *because it never asked a question*, and a queue
+full of spent files is what causes it. **`prompt already sent` in a lane state is the tell.**
+
+**AND THE REAL FIX IS THE PRUNER, NOT THE MANUAL ARCHIVE.** Archiving by hand works and it is what I did both
+times, but it means every review depends on me noticing. **Recommendation: either repair `pruneConsumedJob`, or add
+a small sweeper that moves any `queue/jobs/*.md` with a matching `outbox/REPLY-<same name>` into
+`queue/jobs/archive/`.** The same shape as every other fix tonight: an instrument that hides its own failure.
+
 ## Log
 
 ## Log
