@@ -1681,6 +1681,33 @@ times, but it means every review depends on me noticing. **Recommendation: eithe
 a small sweeper that moves any `queue/jobs/*.md` with a matching `outbox/REPLY-<same name>` into
 `queue/jobs/archive/`.** The same shape as every other fix tonight: an instrument that hides its own failure.
 
+## QQ. A second, different bridge failure: the capture returns the lane's own UI chrome
+
+**Distinct from the spent-jobs blocker in PP, and it looks identical from the outside.**
+
+With the queue cleared, the converter review went straight back to grok and came back with **18 lines that
+contain no review at all**:
+
+```
+Worked for 8s / Read 1 file / Thinking / Worked for 8s / Read the tail of the page /
+Write the review file / Call read_text_file with tail=80 / Fast
+```
+
+**That is grok's own activity panel, not the answer.** The lane was doing exactly the right thing, the harness
+captured the wrong element. `settle: settled`, so the capture believed it had finished.
+
+**AND THE SAME LANE PRODUCED THREE GOOD REVIEWS EARLIER TONIGHT** (the bearings, the generator fault guide and the
+toilet guide), so this is **intermittent rather than broken**: the capture anchor finds the real answer sometimes
+and the activity chrome other times, depending on the state the page is in when it settles.
+
+**So there are now two failure modes that both read as "the lane did not answer":**
+1. **Spent jobs in the queue** — the harness never sends the job. Tell: `prompt already sent` in the lane state.
+2. **The capture grabbing chrome** — the job was sent and answered, and the wrong element was read. Tell: the reply
+   file contains strings like "Worked for", "Thinking", "Read 1 file".
+
+**Both leave the same artifact, so the tell is the file's CONTENT rather than its existence.** A reply under about
+500 bytes containing no finding headings is not a review.
+
 ## Log
 
 ## Log
