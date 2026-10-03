@@ -44,5 +44,25 @@
       "what_was_found": "No RV repair business with its own website. The results are RV PARKS (Pioneer RV Park and River Ranch RV Park), which the repair-only rule excludes; six general automotive shops (Dan The Mobile Man, Hi-Tech Frame & Finish, Les Schwab, Curran Tire Center, Frank's Garage, John's Automotive Electrical), which are not RV-specific; and two dispatch networks (Interstate Fleet Services and Road Rescue Network) that dominate the results for every town and are excluded as lead-generation rather than a real business.",
       "conclusion": "No admissible provider. This is a genuine absence of RV repair coverage rather than a missing listing, and unlike the western Rio Grande Valley it was established in one search rather than a full pass, which is the argument for reconnaissance before commissioning research."
     }
+  ],
+  "newmexico": [
+    {
+      "area": "Cibola County, the Grants and Mount Taylor corridor on I-40",
+      "searched": "2026-10-02",
+      "towns": [
+        "Grants",
+        "Milan",
+        "San Rafael",
+        "Bluewater",
+        "Prewitt",
+        "Thoreau",
+        "Laguna",
+        "Acoma Pueblo"
+      ],
+      "qualified_found": 0,
+      "cost": "one reconnaissance search, not a full research pass",
+      "what_was_found": "No RV repair business with its own website. The results are general automotive shops (Angelo's Mobile Mechanic, Route 66 Towing, Grants Safety Lane, A-Z Garage, Spencer's Automotive Repair, Jake's Custom Paint & Body), which are not RV-specific; two dispatch networks (Interstate Fleet Services and Road Rescue Network) that dominate the results for every town and are excluded as lead-generation; and one mobile mechanic advertising RV, truck and auto work whose own URL is redacted on the aggregator that lists it and which could not be found by name.",
+      "conclusion": "No admissible provider in Grants itself. The nearest real coverage is the Albuquerque mobile technicians, who are already listed and about 90 miles east, which is what the coverage instrument is measuring when it reports this gap."
+    }
   ]
 }
