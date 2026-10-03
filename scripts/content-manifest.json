@@ -516,9 +516,9 @@
     "claims_date": "Oct 2, 2026"
   },
   "guides/rv-water-heater-not-heating.html": {
-    "hash": "3aea9513d59a8bc0",
+    "hash": "3da156a3c575a5d0",
     "status": "unverified",
-    "verified_by": null,
+    "verified_by": " 2026-10-03: a labelled cutaway was added, which is the second diagram built from the competitor research. The SERP for this query ships no usable figure at all, so the addition is the answer the query was missing. The text moved, so the page is recorded UNVERIFIED until a fresh pass covers it.",
     "verified_at": null,
     "sources": [
       "inbox/REVIEW-REQUEST-20260923-0354-rv-water-heater-not-heating.md",
@@ -529,7 +529,7 @@
     ],
     "spec": "_specs/rv-water-heater-not-heating.md",
     "spec_waived": false,
-    "claims": "8d41622f23cb0668",
+    "claims": "4ead368e596981cc",
     "invalidated_by": "mechanical change",
     "invalidated_at": "2026-09-27",
     "claims_date": "Oct 2, 2026"
