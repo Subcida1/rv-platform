@@ -68,7 +68,26 @@
     "Roosevelt": "southeast-parks",
     "Duchesne": "southeast-parks",
     "Richfield": "southeast-parks",
-    "Salina": "southeast-parks"
+    "Salina": "southeast-parks",
+    "North Logan": "wasatch",
+    "Smithfield": "wasatch",
+    "Richmond": "wasatch",
+    "Lewiston": "wasatch",
+    "Hyrum": "wasatch",
+    "Providence": "wasatch",
+    "Nibley": "wasatch",
+    "Millville": "wasatch",
+    "River Heights": "wasatch",
+    "Wellsville": "wasatch",
+    "Mendon": "wasatch",
+    "Newton": "wasatch",
+    "Clarkston": "wasatch",
+    "Cornish": "wasatch",
+    "Trenton": "wasatch",
+    "Amalga": "wasatch",
+    "Paradise": "wasatch",
+    "Avon": "wasatch",
+    "Cache Valley": "wasatch"
   },
   "listings": [
     {
@@ -770,6 +789,71 @@
         "licence": null,
         "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
         "mobile_quote": "Mobile Maintenance & Repair – On-site service for all major RV systems."
+      }
+    },
+    {
+      "n": "Blue Fox RV",
+      "c": "North Logan, UT",
+      "p": "(435) 317-3625",
+      "u": "https://foxrv.com/rv-service/",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "Blue Fox RV is an RV dealer in North Logan with a service department behind the sales floor, serving Cache Valley. Its own site lists annual inspections, dewinterisations, axle and wheel bearing service, solar upgrades, roof and seal repair, appliance and electrical work, and slide-out, awning and suspension repair, and says its certified technicians work on the major classes and brands it sells and plenty it does not.",
+      "g": [
+        "Shop",
+        "Dealer service department",
+        "Cache Valley"
+      ],
+      "base": "North Logan",
+      "areas": [
+        "North Logan",
+        "Logan",
+        "Smithfield",
+        "Hyrum",
+        "Providence",
+        "Richmond"
+      ],
+      "region": "The Wasatch Front",
+      "evidence": {
+        "checked": "https://foxrv.com/rv-service/",
+        "type_quote": "From annual inspections to emergency repairs, our certified techs get you back on the road",
+        "coverage_quotes": [
+          "RV Service, Logan, Utah"
+        ]
+      }
+    },
+    {
+      "n": "Mountainland RV",
+      "c": "North Logan, UT",
+      "p": "435-752-0054",
+      "u": "https://www.mountainlandrv.com/service-repair-rvs-dealership--service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Mountainland RV is an RV dealer in North Logan with a service department that its own site says is staffed with RV trained technicians, and it takes warranty work as well as general repair. It names the Cache Valley towns it serves, including Smithfield, Providence and Tremonton.",
+      "g": [
+        "Shop",
+        "Dealer service department",
+        "Warranty work",
+        "Cache Valley"
+      ],
+      "base": "North Logan",
+      "areas": [
+        "North Logan",
+        "Logan",
+        "Smithfield",
+        "Providence",
+        "Hyrum",
+        "Richmond"
+      ],
+      "region": "The Wasatch Front",
+      "evidence": {
+        "checked": "https://www.mountainlandrv.com/service-repair-rvs-dealership--service",
+        "type_quote": "Our service department is staffed with RV trained technicians dedicated to making sure your RV stays in great working order for years to come.",
+        "coverage_quotes": [
+          "We are proud to provide quality service in the Cache Valley area."
+        ]
       }
     }
   ]
