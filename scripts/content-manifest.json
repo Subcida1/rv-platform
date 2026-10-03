@@ -283,9 +283,9 @@
     "claims_date": "Oct 2, 2026"
   },
   "guides/rv-generator-not-charging.html": {
-    "hash": "00c8b276546a4308",
+    "hash": "2e9625ef0edc5ff6",
     "status": "unverified",
-    "verified_by": null,
+    "verified_by": " 2026-10-02: an inbound link to a neighbouring guide was added, which moved the text, so this page is recorded UNVERIFIED until a fresh independent pass covers the addition. The link itself carries no claim.",
     "verified_at": null,
     "sources": [
       "Cummins Onan RV generator handbook",
@@ -295,7 +295,7 @@
     ],
     "spec": "_specs/rv-generator-not-charging.md",
     "spec_waived": false,
-    "claims": "05d3de9062875c8a",
+    "claims": "2c9d1caf63c493fc",
     "invalidated_by": "mechanical change",
     "invalidated_at": "2026-09-27",
     "claims_date": "Oct 2, 2026"
@@ -474,14 +474,14 @@
     "claims_date": "Oct 2, 2026"
   },
   "guides/rv-toilet-not-flushing.html": {
-    "hash": "4d957135f76baec5",
-    "status": "verified",
-    "verified_by": "Cloud 2026-09-26, FIRST independent pass on record: Qwen, job 20260926-2252-RV-TOILET-R2, VERDICT CORRECTIONS APPLIED. All three corrections from the 09-24 review are confirmed FIXED, each quoted, and all four of its quotations are on the live page mechanically (4 on the page, 0 staged-only, 0 nowhere): the pump-off and pressure-bleed step now precedes the supply-line instruction in both the body and the FAQ, the tank-and-vent first step is in place and the claim about a blocked vent is confirmed as written, and the Thetford attribution reads as fact. Nothing the corrections touched was broken. Since that verdict the only further change to this page's visible text is the site-wide check line, applied on Ty's instruction: it now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' rather than 'Last reviewed: <date> ...', because the old wording implied a review cycle that had not happened and named no author. No claim text changed in that pass. CHANGED AGAIN 2026-09-28 on Ty's instruction: the check line now reads 'By OriginRV. Written and checked against the sources below on <date>.' rather than a person's name, and the Article schema author is an Organization rather than a Person. His name appears only on the About page, as Ty B. No claim text changed in that pass either. The only change since is the site-wide byline rewrite of 2026-10-02 on Ty's instruction, which removed the 'written and checked against the sources' claim; git confirms the diff is byline lines only and no claim text moved. The italic quotation marks were converted to the checkable <b>\"...\"</b> convention on 2026-10-02, on Ty's ruling: git confirms all 45 changed lines are identical once bold/italic tags and quotation marks are ignored, so no words moved. The quotations became visible to check-quotes.py for the first time, which is the point of the change.",
+    "hash": "3539e4797c13974a",
+    "status": "unverified",
+    "verified_by": "Cloud 2026-09-26, FIRST independent pass on record: Qwen, job 20260926-2252-RV-TOILET-R2, VERDICT CORRECTIONS APPLIED. All three corrections from the 09-24 review are confirmed FIXED, each quoted, and all four of its quotations are on the live page mechanically (4 on the page, 0 staged-only, 0 nowhere): the pump-off and pressure-bleed step now precedes the supply-line instruction in both the body and the FAQ, the tank-and-vent first step is in place and the claim about a blocked vent is confirmed as written, and the Thetford attribution reads as fact. Nothing the corrections touched was broken. Since that verdict the only further change to this page's visible text is the site-wide check line, applied on Ty's instruction: it now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' rather than 'Last reviewed: <date> ...', because the old wording implied a review cycle that had not happened and named no author. No claim text changed in that pass. CHANGED AGAIN 2026-09-28 on Ty's instruction: the check line now reads 'By OriginRV. Written and checked against the sources below on <date>.' rather than a person's name, and the Article schema author is an Organization rather than a Person. His name appears only on the About page, as Ty B. No claim text changed in that pass either. The only change since is the site-wide byline rewrite of 2026-10-02 on Ty's instruction, which removed the 'written and checked against the sources' claim; git confirms the diff is byline lines only and no claim text moved. The italic quotation marks were converted to the checkable <b>\"...\"</b> convention on 2026-10-02, on Ty's ruling: git confirms all 45 changed lines are identical once bold/italic tags and quotation marks are ignored, so no words moved. The quotations became visible to check-quotes.py for the first time, which is the point of the change. 2026-10-02: an inbound link to a neighbouring guide was added, which moved the text, so this page is recorded UNVERIFIED until a fresh independent pass covers the addition. The link itself carries no claim.",
     "verified_at": "2026-09-28",
     "sources": [],
     "spec": "_specs/rv-toilet-not-flushing.md",
     "spec_waived": false,
-    "claims": "9b980e863512c101",
+    "claims": "5993f19fa60817b4",
     "claims_date": "Oct 2, 2026"
   },
   "guides/rv-towing-capacity.html": {
@@ -555,14 +555,14 @@
     "claims_date": "Oct 2, 2026"
   },
   "guides/trailer-brakes-required.html": {
-    "hash": "5e5a47b76e063211",
-    "status": "verified",
-    "verified_by": "Cloud 2026-09-28, external-review correction pass plus a fresh-context confirm round. An external review flagged the descent advice as dangerous and it was: the page told readers to hold the controller's manual override ahead of the truck's pedal on a descent, which no authoritative source teaches and which controller makers warn against (Redarc: 'Manual override should not be used in place of the regular vehicle brakes'; Elecbrakes: 'Never use Manual Override to slow the vehicle and trailer during normal driving'). The same sentence also had the hot-drum diagnosis inverted. Rewritten to engine braking first, snub braking, gain sets how much and boost sets how early, with the override reserved for gain-setting, warming and a brief sway correction. The confirm round verified every citation against ORS 815.125(7), the ODOT towing brochure, CDL downgrade guidance and the Hayes and Tekonsha controller manuals, and prescribed five further fixes, all applied: 'four state codes' to three, the CMV definition to 49 CFR 390.5, the snub sentence's self-contradiction, 'the trailer's brochure', and the qualifier that a little extra trailer heat is the lead the page asks for. Those five are the only changes made after the confirm verdict. Since that verdict the only further change to this page's visible text is the site-wide check line, applied on Ty's instruction: it now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' rather than 'Last reviewed: <date> ...', because the old wording implied a review cycle that had not happened and named no author. No claim text changed in that pass. CHANGED AGAIN 2026-09-28 on Ty's instruction: the check line now reads 'By OriginRV. Written and checked against the sources below on <date>.' rather than a person's name, and the Article schema author is an Organization rather than a Person. His name appears only on the About page, as Ty B. No claim text changed in that pass either. The only change since is the site-wide byline rewrite of 2026-10-02 on Ty's instruction, which removed the 'written and checked against the sources' claim; git confirms the diff is byline lines only and no claim text moved. The italic quotation marks were converted to the checkable <b>\"...\"</b> convention on 2026-10-02, on Ty's ruling: git confirms all 45 changed lines are identical once bold/italic tags and quotation marks are ignored, so no words moved. The quotations became visible to check-quotes.py for the first time, which is the point of the change.",
+    "hash": "707594a5b674ab79",
+    "status": "unverified",
+    "verified_by": "Cloud 2026-09-28, external-review correction pass plus a fresh-context confirm round. An external review flagged the descent advice as dangerous and it was: the page told readers to hold the controller's manual override ahead of the truck's pedal on a descent, which no authoritative source teaches and which controller makers warn against (Redarc: 'Manual override should not be used in place of the regular vehicle brakes'; Elecbrakes: 'Never use Manual Override to slow the vehicle and trailer during normal driving'). The same sentence also had the hot-drum diagnosis inverted. Rewritten to engine braking first, snub braking, gain sets how much and boost sets how early, with the override reserved for gain-setting, warming and a brief sway correction. The confirm round verified every citation against ORS 815.125(7), the ODOT towing brochure, CDL downgrade guidance and the Hayes and Tekonsha controller manuals, and prescribed five further fixes, all applied: 'four state codes' to three, the CMV definition to 49 CFR 390.5, the snub sentence's self-contradiction, 'the trailer's brochure', and the qualifier that a little extra trailer heat is the lead the page asks for. Those five are the only changes made after the confirm verdict. Since that verdict the only further change to this page's visible text is the site-wide check line, applied on Ty's instruction: it now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' rather than 'Last reviewed: <date> ...', because the old wording implied a review cycle that had not happened and named no author. No claim text changed in that pass. CHANGED AGAIN 2026-09-28 on Ty's instruction: the check line now reads 'By OriginRV. Written and checked against the sources below on <date>.' rather than a person's name, and the Article schema author is an Organization rather than a Person. His name appears only on the About page, as Ty B. No claim text changed in that pass either. The only change since is the site-wide byline rewrite of 2026-10-02 on Ty's instruction, which removed the 'written and checked against the sources' claim; git confirms the diff is byline lines only and no claim text moved. The italic quotation marks were converted to the checkable <b>\"...\"</b> convention on 2026-10-02, on Ty's ruling: git confirms all 45 changed lines are identical once bold/italic tags and quotation marks are ignored, so no words moved. The quotations became visible to check-quotes.py for the first time, which is the point of the change. 2026-10-02: an inbound link to a neighbouring guide was added, which moved the text, so this page is recorded UNVERIFIED until a fresh independent pass covers the addition. The link itself carries no claim.",
     "verified_at": "2026-09-28",
     "sources": [],
     "spec": "_specs/trailer-brakes-required.md",
     "spec_waived": false,
-    "claims": "a60fdb3c5d615837",
+    "claims": "d9c5c36e0aa55bb0",
     "claims_date": "Oct 2, 2026"
   },
   "guides/winterize-plumbing.html": {
