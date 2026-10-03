@@ -305,5 +305,22 @@ window.RV_LISTINGS_CO = [
   ],  "base": "",  "areas": [
    "idaho springs"
   ],  "region": "the Front Range / Denver area; Denver metro area",  "reg": "front-range"
+ },
+ {  "n": "RV2GO",  "c": "Gypsum, CO",  "p": "(970) 431-0560",  "u": "https://www.rv2goservice.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "RV2GO is a mobile RV service working out of Gypsum with a 50 mile standard service area, which reaches the Roaring Fork Valley towns of Carbondale, Basalt and Glenwood Springs as well as Vail, Avon, Edwards, Eagle and New Castle. Its own site covers repairs, upgrades and consultation for motorhomes, travel trailers and camper vans, and its technicians hold training recognised by the RV Technical Institute. It also keeps workspace in Gypsum for work that cannot be done where the coach is parked.",  "g": [
+   "Mobile only",
+   "RVIA recognised training",
+   "50 mile service area",
+   "I-70 corridor"
+  ],  "base": "gypsum",  "areas": [
+   "gypsum",
+   "eagle",
+   "vail",
+   "avon",
+   "edwards",
+   "carbondale",
+   "basalt",
+   "glenwood springs",
+   "new castle"
+  ],  "region": "The mountains and the I-70 corridor",  "reg": "mountains-co"
  }
 ];

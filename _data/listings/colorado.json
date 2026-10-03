@@ -1129,6 +1129,44 @@
         "mobile_quote": "ization, De-winterization, and Pre-Trip Inspections RV Blog Photo Gallery Get an estimate Contact us Hi-Tech RV Service, RV Inspections & Solar Specialists Our Certified Mobile RV Service Techs and Solar Specialists come to you."
       },
       "reg": "front-range"
+    },
+    {
+      "n": "RV2GO",
+      "c": "Gypsum, CO",
+      "p": "(970) 431-0560",
+      "u": "https://www.rv2goservice.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "RV2GO is a mobile RV service working out of Gypsum with a 50 mile standard service area, which reaches the Roaring Fork Valley towns of Carbondale, Basalt and Glenwood Springs as well as Vail, Avon, Edwards, Eagle and New Castle. Its own site covers repairs, upgrades and consultation for motorhomes, travel trailers and camper vans, and its technicians hold training recognised by the RV Technical Institute. It also keeps workspace in Gypsum for work that cannot be done where the coach is parked.",
+      "g": [
+        "Mobile only",
+        "RVIA recognised training",
+        "50 mile service area",
+        "I-70 corridor"
+      ],
+      "base": "Gypsum",
+      "areas": [
+        "Gypsum",
+        "Eagle",
+        "Vail",
+        "Avon",
+        "Edwards",
+        "Carbondale",
+        "Basalt",
+        "Glenwood Springs",
+        "New Castle"
+      ],
+      "region": "The mountains and the I-70 corridor",
+      "evidence": {
+        "checked": "https://www.rv2goservice.com/",
+        "type_quote": "RV2GO provides the expertise you need for motorhome, travel trailer, and camper van repairs, upgrades, and consultation.",
+        "mobile_quote": "We are based out of Gypsum, CO and we have a 50 mile standard service area.",
+        "coverage_quotes": [
+          "Major areas serviced include Vail, Avon, Edwards, Minturn, Red Cliff, Wolcott, State Bridge, Eagle, Gypsum, Glenwood Springs, Carbondale, Basalt, New Castle, Silt"
+        ],
+        "phone_note": "The phone is published on the contact page rather than the home page, and for a mobile-only service that is the page a reader wants: you call them to come out. It is the only page of their site that carries the number."
+      }
     }
   ]
 }

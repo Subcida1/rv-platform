@@ -20,6 +20,7 @@ import re
 import socket
 import sys
 import urllib.error
+import urllib.parse
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
@@ -100,6 +101,18 @@ def excluded(rec):
     return None
 
 
+def bare_host(value):
+    """The host, with any scheme and any www stripped, so two spellings compare equal.
+
+    WRITTEN AFTER MY OWN BUG. The first version of the site-level fetch stripped www from the
+    resolved URL and not from the bare host it was compared against, so every same-host link
+    read as a different host and the extra pages were never fetched. The check then failed
+    with exactly the message it was meant to clear.
+    """
+    h = re.sub(r"^https?://", "", value or "").split("/")[0].lower()
+    return h[4:] if h.startswith("www.") else h
+
+
 def check(rec):
     out = {"n": rec.get("n"), "ok": True, "bad": [], "warn": [], "site": None,
            "excluded": excluded(rec)}
@@ -124,8 +137,43 @@ def check(rec):
         out["bad"].append("UNVERIFIED: could not fetch (bot wall or TLS): %s" % last)
         return out
     page = text_of(html)
-    low = page.lower()
     out["site"] = page[:150]
+
+    # ONE PAGE IS NOT THE SITE, AND THE RULE IS ABOUT THE SITE. The phone check and the RV
+    # check both ran against this single fetch, so a business whose home page names RVs and
+    # whose contact page carries the number failed BOTH ways at once -- each page on its own
+    # was missing one of the two facts, and the standard is about the business, not about one
+    # of its pages. Found 2026-10-02 on RV2GO (Gypsum, Colorado), rejected first for a phone
+    # that is on its contact page and then, pointed at that page, for RV words that are on
+    # its home page. The two checks now run against the fetched page PLUS up to two more of
+    # the same host, which is what a reader would do and what audit-tags.py already does.
+    extra = []
+    try:
+        links = re.findall(r'href="([^"#?]+)"', html)
+        # CONTACT FIRST, because that is the page a phone number lives on, and only two
+        # extras are fetched: the first version matched contact|service|about in document
+        # order, so a site whose nav lists four service pages before Contact never read the
+        # page carrying the number.
+        want = ([l for l in links if re.search(r'contact', l, re.I)] +
+                [l for l in links if re.search(r'about|service|repair', l, re.I)])
+        seen = set()
+        for l in want + links:
+            if len(extra) >= 2:
+                break
+            full = urllib.parse.urljoin(url, l)
+            if bare_host(full) != bare_host(host):
+                continue
+            if full in seen or full.rstrip("/") == url.rstrip("/"):
+                continue
+            seen.add(full)
+            try:
+                extra.append(text_of(fetch(full)))
+            except Exception:
+                pass
+    except Exception:
+        pass
+    page = page + " " + " ".join(extra)
+    low = page.lower()
     if PARKED.search(page):
         out["ok"] = False
         out["bad"].append("parked page")
