@@ -14,7 +14,14 @@
  function num(id) { var v = parseFloat($(id).value); return isNaN(v) || v < 0 ? 0 : v; }
  function fmt(n) { return Math.round(n).toLocaleString('en-US'); }
 
+ /* Names the limit that actually binds. Competitor calculators check the same numbers and
+    never say WHICH one is doing the limiting, so the reader is left to work it out from five
+    rows and one word. verdictRow is the single choke point every check goes through, so the
+    collection happens here rather than at a dozen call sites.
+    Reset in update() before the rows are rebuilt. */
+ var rowFlags = [];
  function verdictRow(cls, label, val, note) {
+ try { rowFlags.push({ cls: cls, label: label }); } catch (e) {}
  return '<div class="v-row ' + cls + '"><div class="v-dot"></div>' +
  '<div class="v-txt"><b>' + esc(label) + '</b><span>' + esc(note || '') + '</span></div>' +
  '<div class="v-val">' + val + '</div></div>';
@@ -74,6 +81,7 @@
 
  /* ---- verdicts ---- */
  var rows = [];
+ rowFlags = [];   /* rebuilt on every pass, so the named constraint never goes stale */
 
  if (towRating > 0) {
  var cls = towPct <= 80 ? 'ok' : (towPct <= 100 ? 'warn' : 'bad');
@@ -170,8 +178,25 @@
  } else {
  var hasBad = rows.some(function (r) { return r.indexOf('v-row bad') >= 0; });
  var hasWarn = rows.some(function (r) { return r.indexOf('v-row warn') >= 0; });
- var ov = hasBad ? ['bad', 'NOT SAFE', 'Something is overloaded. Fix it before you tow.'] :
- hasWarn ? ['warn', 'CAREFUL', 'You are close to a limit. Read the yellow items below.'] :
+ /* Name the constraint rather than saying "something". The binding limit is the first bad
+    row if there is one, otherwise the first warning. Ties take the topmost, which is the
+    order the checks are written in: payload, truck GVWR, GCWR, trailer GVWR. */
+ var worst = null, worstCls = null;
+ ['bad', 'warn'].some(function (level) {
+   var hit = rowFlags.filter(function (f) { return f.cls === level; })[0];
+   if (hit) { worst = hit.label; worstCls = level; return true; }
+   return false;
+ });
+ var others = worst
+   ? rowFlags.filter(function (f) { return f.label !== worst && f.cls !== 'ok'; })
+       .map(function (f) { return f.label; })
+   : [];
+ var ov = hasBad ? ['bad', 'NOT SAFE',
+   worst ? 'Over on ' + worst + '. That is the one to fix first.' + (others.length ? ' Also over or close on ' + others.slice(0, 3).join(', ') + '.' : '')
+         : 'Something is overloaded. Fix it before you tow.'] :
+ hasWarn ? ['warn', 'CAREFUL',
+   worst ? 'Closest to the limit on ' + worst + '.' + (others.length ? ' Watch ' + others.slice(0, 3).join(', ') + ' as well.' : ' Read the yellow items below.')
+         : 'You are close to a limit. Read the yellow items below.'] :
  ['ok', 'SAFE', 'Everything checks out. Keep the load this light or lighter.'];
  html = '<div class="w-overall ' + ov[0] + '"><span>Can your truck tow it?</span><b>' + ov[1] + '</b><small>' + ov[2] + '</small></div>' +
  '<div class="w-total"><span>Loaded trailer</span><b>' + fmt(loaded) + ' lb</b>' +
