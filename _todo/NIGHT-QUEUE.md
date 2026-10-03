@@ -2053,6 +2053,28 @@ without a pipe.
 PRESENT.** And in each case the fix is one of two shapes: read `$?` directly, or let the command fail loudly with no
 decoration around it. **When a check is chained for convenience, the convenience is what you end up reading.**
 
+## CCC. The new calculator feature verified ON PRODUCTION, both directions
+
+**A green CI and a passing unit suite are verdicts about a repository, not about the tool a reader uses.** The
+calculator is client-side javascript, so the only thing that proves it works is a browser driving the live page.
+
+**WHAT I DID:** headless Chrome over CDP, live `https://originrv.com/tools/weight-calculator.html`, set the fields
+through the real DOM with real `input` events, then read the rendered verdict out of `.w-overall`.
+
+| case | verdict | text |
+|---|---|---|
+| over payload (`payload: 300`) | **NOT SAFE** / `w-overall bad` | *"Over on Truck payload. That is the one to fix first. Also over or close on Truck gross weight."* |
+| clean setup (generous limits) | **SAFE** / `w-overall ok` | *"Everything checks out. Keep this load light or lighter."* |
+
+**BOTH DIRECTIONS, because a one-sided test proves half of it.** The feature names the constraint when there is
+one, and **does not invent one when there is not**, which is the failure mode a "always name something" change
+would have had.
+
+**AND THE BANNED WORD AGAIN, IN A SCRATCH FILE THIS TIME.** While fixing a shell-quoting slip in the test I typed
+*rig* into the check label. It never reached the repository, so no gate could catch it, and the only reason it did
+not is that I read the line back. **That is the fifth time tonight.** The drift is persistent enough that the rule
+belongs at the level of "read every sentence back that I write about these vehicles", not "remember not to".
+
 ## Log
 
 ## Log
