@@ -1999,6 +1999,32 @@ that readers use** is the exact failure mode this night has argued against from 
 but a shipped one that is wrong. **The next session can do this in one pass** with the file, the function, and the
 target string all named above.
 
+## AAA. `gate | tail -1` DOES NOT FAIL THE CHAIN, and that put main red for one commit
+
+**I chained the gate through a pipe and the pipe swallowed its verdict.**
+
+```
+python3 scripts/verify.py 2>&1 | tail -1 && printf ... | git commit ...
+```
+
+**A pipeline returns the exit code of its LAST stage.** `verify.py` exited non-zero, `tail` exited zero, so `&&`
+kept going and **a commit that failed the gate was pushed to main.** The output said `FAILURES: banned words`
+directly above the commit line, and I did not look because the chain had already told me it was fine.
+
+**AND THE BANNED WORD WAS MINE, FOR THE FOURTH TIME.** I wrote **"rig"** four times in the new calculator test file
+and its comment. The site rule is **RVs, never rigs**, it is a hard rule that has been swept sitewide twice, and my
+own memory names *rig* as **my recurring drift word** with a standing instruction to read new prose back for it.
+The gate caught it exactly as designed. **Fixed in the next commit and main is green again, verified by reading
+the exit codes directly rather than through a pipe: `verify exit=0`, `ci exit=0`, every check passed.**
+
+**THE LESSON IS THE SAME ONE AS EVERY OTHER TONIGHT, ONE LEVEL UP.** What I was checking was *"did verify print
+something"* and what I needed to know was *"did verify pass"* -- a narrower question standing in for the real one,
+in the command I use to run every other check. **Rule: never pipe a gate into `tail` on the success path. Either
+redirect to a file and read `$?`, or let it fail loudly.**
+
+**AND IT CONFIRMS WHY THE GATE IS WORTH RUNNING EVEN WHEN I AM SURE.** I had just written a comment, a test name
+and a test body myself and would have sworn none of them said "rig". Four of them did.
+
 ## Log
 
 ## Log
