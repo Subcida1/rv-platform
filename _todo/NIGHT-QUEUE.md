@@ -1591,6 +1591,35 @@ de-verification**, because a verified page nobody can find is worth less than an
 from the guide that answers their question — but the site counts verified pages, so flipping three of them is his
 call, not a bookkeeping detail I should absorb silently.
 
+## NN. v0.7.33 confirmed, and round 6 failed a NEW way: a stale resend
+
+**THE CEILING FIX IS CONFIRMED BY THE THING IT WAS SUPPOSED TO FIX.** `REVIEW5` — the same macerator re-review
+job that failed **three times** on the old 20-attempt ceiling (160 s, then 130 s, then a released flight) —
+**completed on v0.7.33** with five findings, all fixed (`0959ec0`). That is the diagnosis validated by the
+outcome rather than believed because the reasoning sounded right.
+
+### Then round 6 came back as a stale resend, which is a different failure
+
+**`REVIEW6` produced no new review.** It re-wrote **round 5's answer to round 5's file path**, with round 5's
+content and round 5's job id, and the harness captured that call into `REPLY-…REVIEW6.md`.
+
+- **The dispatched prompt was correct** — it named `REPLY-…REVIEW6.md` and job id `…REVIEW6`. So this is not a
+  dispatcher path bug, which was my first suspicion.
+- **Nothing was lost**: `REPLY-…REVIEW5.md` still holds the round-5 review, 19 lines, unchanged.
+- **It is a stale composer in that lane**, not a ceiling. The lane had its previous answer still in the reply
+  container and re-executed the write against the old path.
+
+**Worth watching, because it is the shape the deleted repeat breaker used to guess at.** v0.7.32 removed that
+breaker on the finding that *"the scanner is handed the whole thread every 2 seconds, and the thread is
+permanent"* so every counter in that path measured screen time rather than lane activity. This is the first time
+the *actual* version of that problem has shown up in the logs: a lane answering the previous job. **The fix is
+probably a fresh conversation in that lane's tab rather than anything in the userscript**, and that is Ty's side.
+
+**AND THE HONEST STATE OF THE MACERATOR PAGE:** it has had five rounds, and **round 5's fixes are not verified by
+a completed pass on the current text.** Round 6 was meant to be that pass and was a null, so the page stands as
+verified through round 4's corrections plus round 5's fixes applied but unreviewed. **Do not count round 6 as
+coverage of anything.**
+
 ## Log
 
 ## Log
