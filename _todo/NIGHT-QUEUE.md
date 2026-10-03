@@ -1841,6 +1841,56 @@ round 6 with 46 lines at its middle read for the first time only if round 7 had 
 partial pages; if the capture still fails after a refresh, the fault is in the userscript and it needs a session
 with the live DOM in front of it.
 
+## VV. THE PROBABLE ROOT CAUSE OF THE CAPTURE FAILURES: a deadlock, not a slow lane
+
+**Evidence from a single probe, and it is the tightest of the night.**
+
+The brakes review on qwen settled with **11 lines containing nothing but the lane's own `read_text_file` tool
+call**, and the lane state says:
+
+```
+injected: []          <- NOTHING was ever put back into the conversation
+injections: 0
+captureIo: {"answerPath": "newest-lane-message", "result": "absent", "wrote": true, "bytes": 606}
+```
+
+**So the sequence is: the lane asks for the page, the harness runs the call, and the RESULT NEVER REACHES THE
+LANE.** The lane is waiting for it, so it never finishes, so the capture finds nothing but the call it already
+made and the chrome around it.
+
+**AND THE CODE SAYS WHY.** `clickSendButton` in v0.7.33 (line 3330 onward) contains this:
+
+> *"v0.5.26: WAIT FOR THE LANE TO FINISH TALKING. The send slot holds a Stop control while the model is streaming,
+> and a Stop control is not a send, so the right move is to wait for the real send control to come back, not to
+> give up. This is the return leg: a tool result that never reaches the conversation ends the loop, which is exactly
+> what happened at 21:41 when the result was left in the composer while the model was still generating. **Bounded**,
+> and it says what it is waiting for."*
+
+**The bound is 12 seconds, and 12 seconds cannot be enough, because the condition is not a delay. A lane that is
+waiting for a tool result reports itself as generating FOR AS LONG AS IT IS WAITING.** The harness waits for the
+lane to stop talking, the lane waits for the harness to speak, and neither can move. **That is a deadlock, and
+"bounded wait" is the wrong shape for it.**
+
+**WHY IT IS INTERMITTENT, WHICH IS THE PART THAT FITS EVERYTHING ELSE:** if the lane pauses between emitting the
+call and settling into its wait, a send control is briefly present and the injection lands. If it does not pause,
+the result stays in the composer and the job dies. That is exactly the flapping behaviour seen all night, and it
+explains how the same lane and the same page can succeed at 02:06 and fail at 05:00.
+
+**THE FIX IS TARGETED AND SMALL: the return leg must not require the lane to be idle when the lane's own last turn
+is a tool call.** A lane holding an outstanding call is not "still generating" in the sense the guard means; it is
+blocked on us. Detect the outstanding call and send then, or drop the idle requirement on the result leg entirely
+and rely on the existing proof-of-landing check to confirm the text arrived.
+
+**I HAVE NOT WRITTEN THAT FIX.** It is a userscript change, it needs a reinstall, and it can only be tested against
+the live app with the lane DOM in front of it. Shipping an untested change to the mechanism the whole review
+pipeline depends on is the one thing this night has argued against from the start. **The diagnosis is the
+deliverable; the patch needs a session with the browser open.**
+
+**AND THE TAB-LIFETIME THEORY FROM UU IS PROBABLY WRONG, OR AT MOST SECONDARY.** It was a reasonable read of the
+symptoms, and this evidence supersedes it: the failure is visible in the lane state as `injected: []`, which is a
+mechanism rather than a wear-out. A refresh may still help, because a refresh clears the composer, but it would be
+treating the symptom.
+
 ## Log
 
 ## Log
