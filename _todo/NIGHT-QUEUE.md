@@ -1708,6 +1708,35 @@ and the activity chrome other times, depending on the state the page is in when 
 **Both leave the same artifact, so the tell is the file's CONTENT rather than its existence.** A reply under about
 500 bytes containing no finding headings is not a review.
 
+## RR. THE REVIEW PROTOCOL DOES NOT COVER THE MIDDLE OF A LONG PAGE, and that is bigger than any finding
+
+**A reviewing lane said so itself, unprompted, at the top of its reply:**
+
+> *"Note on coverage: the two slices do not meet. Head 70 ends inside the diagram section and the tail begins at
+> 'The wiring matters as much as the rating', so the middle of the page - which is where the two-reading test
+> procedure itself appears to live - was in neither slice and is not reviewed below."*
+
+**THE JOB PROMPT ASKS FOR `head=70` AND `tail=80`, which is 150 lines. THE GUIDES ARE LONGER THAN 150 LINES.**
+So on any page over that length, **the middle is never read by any reviewer** — and the middle is where the
+procedures live, while the top and the tail are where the summary, the sources and the related block live.
+
+**THIS CHANGES HOW EVERY "CLEAN" VERDICT TONIGHT SHOULD BE READ.** Six pages came back clean on sourcing and
+overclaiming, and every one of those verdicts covers **the first seventy lines and the last eighty, not the page.**
+They are still real verdicts about what was read. They are not verdicts about the page, and I reported them as if
+they were.
+
+**THE FIX IS THE PROMPT, NOT THE LANES.** The two-slice read exists for a real reason — a very large tool result
+goes into the message box and will not send, so two slices always arrive — but 70 and 80 were sized for shorter
+pages. **Either raise both slices so they meet, or make them proportional to the staged copy's length and say in
+the prompt that the slices must overlap.** That is a `bridge-review.py` change and it should be made before any
+further page is called reviewed.
+
+**AND THE FINDINGS THE LANE DID MAKE ARE WORTH HAVING**, which is the argument for fixing this rather than
+abandoning it: it caught that the page's **central test proves only an open circuit** while the page called the
+wiring fine on the strength of it (a corroded terminal passes full voltage with no load), and that the instruction
+**runs the converter with its battery load removed** without saying so. Both are now fixed. Four further findings
+and three gaps are listed in the manifest note and are not yet addressed.
+
 ## Log
 
 ## Log

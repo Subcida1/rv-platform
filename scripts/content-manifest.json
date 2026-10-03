@@ -218,9 +218,9 @@
     "claims_date": "Oct 2, 2026"
   },
   "guides/rv-converter-not-charging.html": {
-    "hash": "e40c938ef5a29766",
+    "hash": "68c7fa6a6734e1a1",
     "status": "unverified",
-    "verified_by": " 2026-10-03: a full power-path diagram was added, covering the converter AND the inverter branch because competitor research found no ranking page ships a usable diagram for either query. The text moved, so the page is recorded UNVERIFIED until a fresh independent pass covers the addition.",
+    "verified_by": " 2026-10-03: a full power-path diagram was added, covering the converter AND the inverter branch because competitor research found no ranking page ships a usable diagram for either query. The text moved, so the page is recorded UNVERIFIED until a fresh independent pass covers the addition. 2026-10-03, review round 5 on deepseek. TWO FINDINGS FIXED, both about the page's central test: it stated that a matching voltage at unloaded battery cables means the wiring is fine, when that reading only proves an OPEN CIRCUIT and a corroded terminal passes full voltage unloaded, so the sentence now says what the result does and does not clear; and the second-reading instruction now says the converter runs with its battery load removed while the meter is on it. THE REVIEW ALSO DISCLOSED ITS OWN COVERAGE GAP: the two-slice read does not meet on a page this long, so the middle of the page was in neither slice and was not reviewed. Four further findings and three gaps are unaddressed and listed in the queue.",
     "verified_at": null,
     "sources": [
       "WFCO WF-8700-AD manual",
@@ -233,7 +233,7 @@
     ],
     "spec": "_specs/rv-converter-not-charging.md",
     "spec_waived": false,
-    "claims": "03faccd5c03052a4",
+    "claims": "ae119c7ec3b5b070",
     "invalidated_by": "mechanical change",
     "invalidated_at": "2026-09-27",
     "claims_date": "Oct 2, 2026"
