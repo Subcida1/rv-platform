@@ -146,6 +146,17 @@ def main():
     print("staging %d page(s)" % len(pages))
     subprocess.run([sys.executable, str(ROOT / "scripts" / "stage-for-bridge.py")] + pages, cwd=ROOT)
 
+    # 1b. CLEAR ANSWERED JOBS FIRST, because the bridge does not and the queue fills up.
+    # A spent job left in queue/jobs parks the lane at `prompt already sent`, which reads exactly
+    # like a dead lane: on 2026-10-03 eight spent files produced one lane whose reply held only
+    # its own UI chrome and another that released at capture-ceiling with chrome in the container.
+    # Both lanes were healthy. Measured twice, so the sweep runs here rather than by hand.
+    try:
+        subprocess.run([sys.executable, '/home/user/claude-bridge/tools/sweep-spent-jobs.py'],
+                       capture_output=True, timeout=30)
+    except Exception:
+        pass
+
     # 2. dispatch
     stamp = datetime.datetime.now().strftime("%Y%m%d-%H%M")
     KEEP.mkdir(parents=True, exist_ok=True)
