@@ -1971,6 +1971,34 @@ existing, not the reply arriving: the actual string on the actual live page. Eve
 instrument answering a narrower question than the one being reported, and this one asks exactly the question that
 matters, which is whether a reader can see the thing.
 
+## ZZ. The towing calculator upgrade is located and scoped, and I stopped short of starting it
+
+**THE RESEARCH'S TOP-RANKED BUILDABLE, AND WHERE THE CODE ACTUALLY IS.** I could not find the calculator's logic
+last fire and wrongly suspected it was not in the repo. It is: **`assets/js/weight.js`, 237 lines.** `scales.js` is a
+42-line scale-locator data module and the inline scripts in `tools/weight-calculator.html` are JSON-LD, which is why
+two searches came up empty.
+
+**WHAT IT ALREADY DOES:** computes payload, payload capacity, tow rating, GCWR, GVWR, payload used, payload
+remaining, and a per-axle estimate, and renders each as a `verdictRow(cls, label, value, note)` with an `ok`,
+`warn` or `bad` class, then rolls them up into one of three overall verdicts: **NOT SAFE**, **CAREFUL**, **SAFE**.
+
+**WHAT IT DOES NOT DO, WHICH IS THE WHOLE FEATURE: it never names which limit binds.** There is no `binding`, no
+`constraint`, no `limiting` anywhere in the file. A reader is told "Something is overloaded" and has to work out
+which of five numbers did it.
+
+**THAT IS EXACTLY WHAT THE COMPETITORS MISS TOO.** whetstonetools checks payload, tow, GCWR and rear axle but never
+names the binding one; rigcalc requires a measured pin weight and gives no tow-vehicle inputs at all; towcheck's
+sources are Ford only. **So this is a real gap with real demand and no clean competitor answer.**
+
+**THE CHANGE IS SMALL AND I KNOW WHERE IT GOES:** collect the offending rows as they are pushed, then replace the
+overall verdict's small text with the constraint by name, e.g. *"You are over on payload, and that is the one to
+fix: tow rating and GCWR still have room."* One pass over the rows, one changed string, no new inputs.
+
+**WHY I DID NOT START IT.** My budget for this session is close to spent, and a half-finished edit to a **live tool
+that readers use** is the exact failure mode this night has argued against from the start: not a missing feature,
+but a shipped one that is wrong. **The next session can do this in one pass** with the file, the function, and the
+target string all named above.
+
 ## Log
 
 ## Log
