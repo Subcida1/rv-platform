@@ -498,12 +498,12 @@
     "claims_date": "Oct 2, 2026"
   },
   "guides/rv-trailer-wheel-bearings.html": {
-    "hash": "730823eddf3bcc82",
+    "hash": "5de118109ba60003",
     "status": "unverified",
-    "verified_by": null,
+    "verified_by": " 2026-10-02, review round 6 on a fresh lane. Sourcing came back CLEAN, the source list mapping every major statement to its document, with one overclaim fixed: the page said grease reaches the brake linings where the maker says only that the chance is greatly increased, so it now uses the maker's strength. The reviewer's one gap, a reader with an ordinary greased hub lacking the removal and repack sequence, is answered by stating the boundary explicitly rather than by adding a sequence the spec deliberately stops short of.",
     "verified_at": null,
     "sources": [],
-    "claims": "9ae583064a9cf89f",
+    "claims": "1ce58e21088cbe64",
     "claims_date": "Oct 2, 2026"
   },
   "guides/rv-two-appliances-stopped.html": {
