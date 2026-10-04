@@ -959,6 +959,11 @@ css_src = (ROOT / "assets" / "css" / "style.css").read_text(encoding="utf-8")
 token_start = css_src.index(":root{")
 token_end = css_src.index("\n}\n", css_src.index("/* ---- LEGACY ALIASES.")) + 3
 token_block, rest = css_src[:token_end], css_src[token_end:]
+# COMMENTS ARE STRIPPED BEFORE SCANNING, because a hex in a comment cannot paint anything. Found
+# 2026-10-04: a comment explaining the breadcrumb contrast fix named the two colours it replaced,
+# and the check failed the build for a sentence rather than a colour. An instrument that flags
+# correct behaviour is worse than none -- it teaches the reader to ignore the output.
+rest_for_colour = re.sub(r"/\*.*?\*/", " ", rest, flags=re.S)
 # Line numbers must point at the FILE, not at the slice. Both loops below used to count
 # newlines in `rest`, so every line they printed was short by the token block's own height --
 # the check reported #fff at line 350 and line 350 was an empty rule. Found 2026-10-03.
@@ -979,9 +984,9 @@ leaked = []
 # "#fff" matches inside "#fff7ed". That produced two false positives in the first run of this check
 # (2026-10-03). The lookahead says what is actually meant: this value must not continue as hex.
 for lit in PALETTE:
-    for m in re.finditer(re.escape(lit) + r'(?![0-9a-fA-F])', rest, re.I):
-        line = slice_line_offset + rest[:m.start()].count("\n") + 1
-        head = rest[rest.rfind("{", 0, m.start()):m.start()]
+    for m in re.finditer(re.escape(lit) + r'(?![0-9a-fA-F])', rest_for_colour, re.I):
+        line = slice_line_offset + rest_for_colour[:m.start()].count("\n") + 1
+        head = rest_for_colour[rest_for_colour.rfind("{", 0, m.start()):m.start()]
         leaked.append("style.css:%d uses %s outside the token layer, in %s"
                       % (line, lit, head.split("}")[-1].strip()[:44]))
 # AND A COLOUR THAT IS NOT IN THE PALETTE IS THE SAME DEFECT. The list above catches a
@@ -990,12 +995,12 @@ for lit in PALETTE:
 # token block failed the check, #ff00ff outside it did not. So any hex used INSIDE a rule below
 # the token layer is now reported too, which is what the docstring always claimed to be testing.
 rogue = []
-for m in re.finditer(r"#[0-9a-fA-F]{3,8}\b", rest):
-    before = rest[:m.start()]
+for m in re.finditer(r"#[0-9a-fA-F]{3,8}\b", rest_for_colour):
+    before = rest_for_colour[:m.start()]
     if before.rfind("{") < before.rfind("}"):
-        continue                      # a hex sitting outside any rule, e.g. in a comment
+        continue
     line = slice_line_offset + before.count("\n") + 1
-    head = rest[rest.rfind("{", 0, m.start()):m.start()]
+    head = rest_for_colour[rest_for_colour.rfind("{", 0, m.start()):m.start()]
     rogue.append("style.css:%d uses %s inside a rule outside the token layer, in %s"
                  % (line, m.group(0), head.split("}")[-1].strip()[:44]))
 if leaked:
