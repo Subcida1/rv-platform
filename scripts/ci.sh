@@ -40,7 +40,11 @@ step "build-coords.py --check: every listing name resolves in its own state" \
                                                python3 scripts/build-coords.py --check
 step "build-search-index.py --check: the site search index is current" \
                                                python3 scripts/build-search-index.py --check
-
+# The parts hub is generated from _data/parts.json by scripts/build-parts-pages.py, the same
+# contract the manuals pages have: the page on disk has to be what the generator produces, or a
+# hand-edit has quietly forked it from its source.
+step "build-parts-pages.py --check: the parts hub matches _data/parts.json" \
+                                               python3 scripts/build-parts-pages.py --check
 # ---------------------------------------------------------------- 2. behaviour
 step "weight calculator"                       node scripts/test-weight-calculator.js
 step "tire date decoder"                      node scripts/test-tire-date.js
@@ -49,6 +53,7 @@ python3 scripts/test-link-opportunities.py
 step "directory rendering"                     node scripts/test-directory.js
 step "every state page wires its own data"    node scripts/test-state-pages.js
 step "manuals"                                 python3 scripts/test-manuals.py
+step "parts hub"                               python3 scripts/test-parts.py
 step "smoke test"                              node scripts/smoke-test.js
 
 # ---------------------------------------------------------------- 3. structure

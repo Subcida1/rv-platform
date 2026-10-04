@@ -9,10 +9,22 @@ const fs = require('fs'), path = require('path'), vm = require('vm');
 const ROOT = path.resolve(__dirname, '..');
 const finder = fs.readFileSync(path.join(ROOT, 'assets/js/finder.js'), 'utf8');
 
-const STATES = [['arizona','AZ','Phoenix'],['california','CA','Redding'],['colorado','CO','Denver'],
-  ['idaho','ID','Boise'],['montana','MT','Missoula'],['nevada','NV','Reno'],
-  ['oregon','OR','Portland'],['utah','UT','Provo'],['washington','WA','Spokane'],
-  ['wyoming','WY','Cheyenne']];
+// The list is DERIVED, not typed. It was a hardcoded ten and had already fallen two states
+// behind (Texas and New Mexico were never driven), which is the sample-versus-population trap:
+// this file's whole job is that a page loads its OWN state's files, and a fixed list silently
+// stops covering the pages added after it was written. Every state with a listings file is
+// driven now, so adding a state cannot leave it untested.
+// The town a reader would type, where one is known; otherwise the state's first base town,
+// which always resolves because build-coords.py pulls every listing name in by construction.
+const TOWN = { arizona: 'Phoenix', california: 'Redding', colorado: 'Denver', idaho: 'Boise',
+  montana: 'Missoula', nevada: 'Reno', oregon: 'Portland', utah: 'Provo',
+  washington: 'Spokane', wyoming: 'Cheyenne', texas: 'Houston', newmexico: 'Albuquerque' };
+const STATES = fs.readdirSync(path.join(ROOT, '_data/listings'))
+  .filter(f => f.endsWith('.json')).map(f => f.replace(/\.json$/, '')).sort()
+  .map(slug => {
+    const d = JSON.parse(fs.readFileSync(path.join(ROOT, '_data/listings', slug + '.json'), 'utf8'));
+    return [slug, d.state, TOWN[slug] || (d.listings[0] || {}).base];
+  }).filter(s => s[2]);
 
 function El(id) {
   return { id, style: {}, value: '', textContent: '', innerHTML: '', _attrs: {}, _handlers: {},

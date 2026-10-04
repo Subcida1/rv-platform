@@ -68,6 +68,17 @@ def guides():
     return data["groups"]
 
 
+def parts():
+    """The parts index from _data/parts.json: the list of systems, each carrying its parts.
+
+    Added 2026-10-03 with the parts hub. The hub states a count beside every system heading and a
+    total under the H1, and every one of them is a data-claim marker, because a number typed into
+    a sentence is invisible to every check that reads attributes.
+    """
+    data = json.loads((ROOT / "_data" / "parts.json").read_text(encoding="utf-8"))
+    return data["systems"]
+
+
 def claim_values():
     """Every count the site states, as the exact string to put on the page.
 
@@ -103,6 +114,17 @@ def claim_values():
                                  if p.name != "index.html"]))
     tools_index = (ROOT / "tools" / "index.html").read_text(encoding="utf-8")
     out["tools-building"] = str(len(re.findall(r'class="cat-card"', tools_index)))
+
+    # Parts (added 2026-10-03, with the hub at parts/index.html). The hub states a total, a system
+    # count and a "covered by a guide" count under the H1, and a count beside every system heading.
+    # 157 is a number a person will re-type by hand the first time a part is added, which is exactly
+    # how "8 live" ended up beside "17 Free guides" on one page.
+    psys = parts()
+    out["parts-total"] = str(sum(len(s["parts"]) for s in psys))
+    out["parts-systems"] = str(len(psys))
+    out["parts-covered"] = str(sum(1 for s in psys for p in s["parts"] if p.get("guide")))
+    for s in psys:
+        out["parts-%s" % s["key"]] = str(len(s["parts"]))
     return out
 
 

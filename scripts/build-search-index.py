@@ -115,6 +115,9 @@ def pages():
         # CFG.showSignin keeps it out of the nav too. Add it back with the flag.
         ("guides/index.html", "All RV guides", "all guides index list"),
         ("tools/index.html", "All RV tools", "all tools index list"),
+        # The parts reference. Added 2026-10-03 with the hub: the index is a hand-kept list,
+        # so a new section page is invisible to site search until it is named here.
+        ("parts/index.html", "Every RV part", "all parts index reference list every component"),
     ]:
         p = ROOT / name
         if not p.exists():
