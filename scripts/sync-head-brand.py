@@ -15,6 +15,16 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import site_constants as C  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
+
+SKIP_PARTS = {'.git', '.letta', 'node_modules'}
+
+
+# .letta IS A CHECKOUT BOUNDARY. Letta keeps agent worktrees under .letta/worktrees/, each a
+# full copy of this repository, so an unbounded walk reads -- and for a writer, REWRITES --
+# another agent's checkout. Added 2026-10-04 across every instrument that walks the tree.
+def walked(pattern):
+    """Paths matching the pattern inside THIS checkout, and nothing outside it."""
+    return sorted(p for p in ROOT.rglob(pattern) if not (SKIP_PARTS & set(p.parts)))
 CANON = "https://originrv.com"
 
 # theme-color and the analytics beacon are shared with build-manuals-pages.py,
@@ -47,7 +57,7 @@ OG_BLOCK = """<meta property="og:image" content="{c}/assets/img/brand/og-default
 {ind}<meta name="twitter:image" content="{c}/assets/img/brand/og-default.png">
 {ind}<meta name="twitter:image:alt" content="OriginRV">"""
 
-pages = sorted(p for p in ROOT.rglob("*.html") if ".git" not in p.parts)
+pages = sorted(p for p in walked("*.html") if ".git" not in p.parts)
 patched, skipped = [], []
 
 # The beacon goes last in the body, which is where Cloudflare's own setup

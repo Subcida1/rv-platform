@@ -27,6 +27,16 @@ import site_constants as C  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 
+SKIP_PARTS = {'.git', '.letta', 'node_modules'}
+
+
+# .letta IS A CHECKOUT BOUNDARY. Letta keeps agent worktrees under .letta/worktrees/, each a
+# full copy of this repository, so an unbounded walk reads -- and for a writer, REWRITES --
+# another agent's checkout. Added 2026-10-04 across every instrument that walks the tree.
+def walked(pattern):
+    """Paths matching the pattern inside THIS checkout, and nothing outside it."""
+    return sorted(p for p in ROOT.rglob(pattern) if not (SKIP_PARTS & set(p.parts)))
+
 
 
 
@@ -46,7 +56,7 @@ def sync_claims():
     """
     want = C.claim_values()
     touched, seen, bad = 0, {}, []
-    for page in sorted(p for p in ROOT.rglob("*.html") if ".git" not in p.parts):
+    for page in sorted(p for p in walked("*.html") if ".git" not in p.parts):
         rel = page.relative_to(ROOT)
         html = before = page.read_text(encoding="utf-8")
         n_markers = len(re.findall(r'\sdata-claim="', html))

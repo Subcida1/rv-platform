@@ -15,6 +15,16 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+
+SKIP_PARTS = {'.git', '.letta', 'node_modules'}
+
+
+# .letta IS A CHECKOUT BOUNDARY. Letta keeps agent worktrees under .letta/worktrees/, each a
+# full copy of this repository, so an unbounded walk reads -- and for a writer, REWRITES --
+# another agent's checkout. Added 2026-10-04 across every instrument that walks the tree.
+def walked(pattern):
+    """Paths matching the pattern inside THIS checkout, and nothing outside it."""
+    return sorted(p for p in ROOT.rglob(pattern) if not (SKIP_PARTS & set(p.parts)))
 KEEP = ("h1", "h2", "h3", "h4", "h5", "h6", "p", "li", "ul", "ol",
         "a", "strong", "em", "table", "tr", "td", "th", "blockquote")
 
@@ -43,7 +53,7 @@ def main():
         out_dir = Path(args[i + 1])
         args = args[:i] + args[i + 2:]
     if "--all" in args:
-        pages = sorted(p for p in ROOT.rglob("*.html") if ".git" not in p.parts)
+        pages = sorted(p for p in walked("*.html") if ".git" not in p.parts)
     elif args:
         pages = [Path(a) if Path(a).is_absolute() else ROOT / a for a in args]
     else:

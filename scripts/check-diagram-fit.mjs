@@ -29,6 +29,10 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
+// .letta IS A CHECKOUT BOUNDARY. Letta keeps agent worktrees under .letta/worktrees/, each a
+// full copy of this repository, so a recursive read of ROOT audits another agent's checkout as
+// if it were the site. Added 2026-10-04 across every instrument that walks the tree.
+const SKIP_PARTS = ['.git', '.letta', 'node_modules'];
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const argv = process.argv.slice(2);
 const minIdx = argv.indexOf('--min');
@@ -43,6 +47,7 @@ const sleep = ms => new Promise(r => setTimeout(r, ms));
 
 // pages that actually contain a diagram
 const pages = (explicit.length ? explicit : fs.readdirSync(ROOT, { recursive: true })
+      .filter((f) => !SKIP_PARTS.some((d) => String(f).split(path.sep).includes(d)))
   .filter(f => f.endsWith('.html'))
   .map(f => path.relative(ROOT, path.resolve(ROOT, f)))
   .filter(f => !f.startsWith('..'))
