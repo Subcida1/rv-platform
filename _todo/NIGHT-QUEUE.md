@@ -2790,3 +2790,28 @@ candidates stay unreachable until the tool takes an occurrence index.
 3. **The 30 pages that cite a manual** could each link the specific maker manual we hold, which is a different
    job from the four that needed our index.
 4. **The three remaining mobile tap warnings**, a long crumb name rather than a layout fault.
+
+---
+
+## VVV. AUDITING THE TOOLS BY TESTING WHAT THEIR DOCSTRINGS PROMISE, NOT WHAT THEY DO
+
+**Ty asked two nights ago that every tool be checked for actually catching what it intends. The gate-level
+audit (RRR) did that for verify.py's rules. This is the same idea applied to the SCRIPTS: read what each
+docstring claims it refuses or guarantees, and test the testable ones.**
+
+**METHOD: grep for the promise words -- "refuses", "will not", "never writes" -- then check each claim against
+the code or against a planted case.**
+
+| tool | the claim | result |
+|---|---|---|
+| `site_constants.py` | "refuses to touch anything with markup inside it: a claim is one text run" | **HOLDS.** Tested with five cases: a plain claim matches, and a claim containing a nested tag, a nested link, or a nested empty tag all correctly fail to match. True by construction -- the `[^<]*` in `CLAIM_RE` cannot span a tag. |
+| `import-models.py` | "--write refuses to run until every expected report exists, so a partial corpus cannot be shipped" | **HOLDS.** The guard is real (`missing = [f for f in EXPECTED if not ...]`, and `--write` refuses). **But it has a `--partial` escape hatch the docstring never mentions**, which is a documented refusal with an undocumented override. Worth a line in the docstring rather than a change. |
+| `insert-link.py` | "refuses to insert inside `<script>`, `<style>`, the nav or the footer, or an attribute" | **DID NOT HOLD** and cost a bad insertion tonight. Only script and style were implemented; the nav and footer cases were not, and the breadcrumb made it worse because the trail lives INSIDE the nav region. Fixed, with the three marked shell regions now tested. |
+
+**TWO HELD AND ONE DID NOT, WHICH IS THE RIGHT RATIO FOR A REAL AUDIT.** The useful part is not that one tool was
+broken; it is that the promises are now checked against the code rather than assumed, and the two that hold can be
+trusted for that reason instead of by habit.
+
+**STILL UNTESTED, and worth the same treatment next:** `add-state.py` (refuses for a state), `build-manuals.py`
+(two documented refusals), `indexnow.py` (refuses to submit until the page is live), `weekly-report.py` (refuses
+to ping unpushed work).
