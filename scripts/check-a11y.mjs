@@ -47,6 +47,9 @@ const freePort = () => new Promise((res, rej) => {
 const REPRESENTATIVE = [
   'index.html', 'guides/rv-towing-capacity.html', 'directory/oregon.html',
   'manuals/index.html', 'tools/weight-calculator.html', 'about.html',
+  // The parts hub is a page kind of its own (a 157-item reference with a filter bar), so a defect
+  // in its shape reaches nobody's audit if it is not named here. Added with parts/index.html.
+  'parts/index.html',
 ];
 const args = process.argv.slice(2);
 const named = args.filter(a => !a.startsWith('--'));

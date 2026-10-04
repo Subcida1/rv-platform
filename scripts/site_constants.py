@@ -123,6 +123,10 @@ def claim_values():
     out["parts-total"] = str(sum(len(s["parts"]) for s in psys))
     out["parts-systems"] = str(len(psys))
     out["parts-covered"] = str(sum(1 for s in psys for p in s["parts"] if p.get("guide")))
+    # Parts that link somewhere: a guide or a maker, counting each part once. NOT covered + makers,
+    # because fifteen parts have both and the sum would double-count them.
+    out["parts-linked"] = str(sum(1 for s in psys for p in s["parts"]
+                                 if p.get("guide") or p.get("makers")))
     for s in psys:
         out["parts-%s" % s["key"]] = str(len(s["parts"]))
     return out

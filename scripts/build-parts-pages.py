@@ -129,7 +129,11 @@ def part_html(p):
     """One part. Name, the other names, what it does, which RVs have it, and what to read next."""
     out = ['      <li class="part" data-system="%s" data-types="%s" data-search="%s">'
            % (esc(p.get("_system", "")), esc(" ".join(p.get("types") or [])),
-              esc(" ".join([p["n"]] + (p.get("aka") or "").split("|") + (p.get("types") or [])).lower()))]
+              # `does` is included because the placeholder promises "a part, or what it does".
+              # Without it, searching "clamps" (a word from Hitch coupler's description) returned
+              # nothing while the words sat on the page. Found by an independent review.
+              esc(" ".join([p["n"]] + (p.get("aka") or "").split("|")
+                           + [p.get("does") or ""] + (p.get("types") or [])).lower()))]
     out.append('        <h3 class="part-h">%s</h3>' % esc(p["n"]))
 
     aka = [a.strip() for a in (p.get("aka") or "").split("|") if a.strip()]
@@ -167,6 +171,12 @@ def build():
     total = sum(len(s["parts"]) for s in systems)
     n_systems = len(systems)
     covered = sum(1 for s in systems for p in s["parts"] if p.get("guide"))
+    # PARTS THAT LINK SOMEWHERE, which is NOT covered + makers. Fifteen parts have both, so adding
+    # the two counts double-counts them, and the first version of the lede said "the rest link to the
+    # maker's own documentation" when only 21 of the 95 guide-less parts carry a maker link: 74 parts
+    # have no link at all. An independent review caught it. It was a claim the data did not support,
+    # which is the one thing this site is not allowed to publish.
+    linked = sum(1 for s in systems for p in s["parts"] if p.get("guide") or p.get("makers"))
 
     title = "Every part of an RV"
     desc = ("All %d parts an RV is made of, across %d systems, with what each one does, the names "
@@ -187,12 +197,12 @@ def build():
     out.append('''<div class="wrap page-intro w-820">
 <div class="sec-eyebrow">Reference</div>
 <h1>Every part of an RV</h1>
-<p class="lede">An RV is <span data-claim="parts-total">%d</span> parts across <span data-claim="parts-systems">%d</span> systems, and this is all of them. Each line says what the part does, the other names people use for it, which RVs have one, and where to go next: <span data-claim="parts-covered">%d</span> of them already have a repair guide here, and the rest link to the maker's own documentation.</p>
+<p class="lede">An RV is <span data-claim="parts-total">%d</span> parts across <span data-claim="parts-systems">%d</span> systems, and this is all of them. Each line says what the part does, the other names people use for it, which RVs have one, and where to go next. <span data-claim="parts-covered">%d</span> of them already have a repair guide here, <span data-claim="parts-linked">%d</span> link to a guide or the maker's own documentation, and the other 74 are here so you can put a name to the thing that broke.</p>
 </div>
 
 <div class="sec">
 <div class="wrap">
-''' % (total, n_systems, covered))
+''' % (total, n_systems, covered, linked))
 
     # The filter. Everything below is already on the page; this only narrows it.
     out.append('''  <div class="filter-row parts-filter" role="search">
@@ -207,8 +217,8 @@ def build():
       <select id="parts-type"><option value="">Any RV</option>%s</select>
     </label>
   </div>
-  <p class="parts-count"><span id="parts-shown">%d</span> parts shown</p>
-  <p class="parts-empty" id="parts-empty" hidden>Nothing on the list matches that. Try fewer words, or set the filters back to all.</p>
+  <p class="parts-count" role="status"><span id="parts-shown">%d</span> parts shown</p>
+  <p class="parts-empty" id="parts-empty" role="status" hidden>Nothing on the list matches that. Try fewer words, or set the filters back to all.</p>
 ''' % (C.ROAD_ICON,
        "".join('<option value="%s">%s</option>' % (esc(s["key"]), esc(s["label"]))
                for s in systems),
@@ -229,8 +239,11 @@ def build():
         for p in s["parts"]:
             p = dict(p, _system=s["key"])
             out.append(part_html(p) + "\n")
-        out.append('    </ul>\n  </section>\n')
-        out.append('  <p class="parts-top"><a class="link" href="#main">Back to the top</a></p>\n')
+        out.append('    </ul>\n')
+        # Inside the section, not after it: parts.js hides whole sections, so a link left outside
+        # stayed visible under a system the reader had filtered away. Nine of them, in fact.
+        out.append('    <p class="parts-top"><a class="link" href="#main">Back to the top</a></p>\n')
+        out.append('  </section>\n')
 
     out.append('</div>\n</div>\n')
     out.append(foot("assets/js/parts.js"))
@@ -251,6 +264,12 @@ def skeleton(text):
 def main():
     check = "--check" in sys.argv
     html = stamp_html(build())
+    # Rule #11 covers everything we ship, generated pages included. verify.py enforces it site-wide,
+    # so this is defence in depth: it fails here, next to the string that caused it.
+    for ch, name in (("\u2014", "em dash"), ("\u2013", "en dash"), ("\u00b7", "middot")):
+        if ch in html:
+            print("FAIL  the generated page contains an %s" % name)
+            return 1
     if check:
         if not OUT.exists():
             print("  parts: %s does not exist; run the generator" % OUT.relative_to(ROOT))

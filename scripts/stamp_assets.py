@@ -56,26 +56,40 @@ def stamp_html(html, stats=None):
     return ''.join(out)
 
 
-stamped = changed = stale = 0
-SKIP_PARTS = {'.git', '.letta', 'node_modules'}
-# THE CHECKOUT BOUNDARY. Letta keeps agent worktrees under .letta/worktrees/, each a full copy
-# of this repository, so an unbounded rglob stamped 149 pages instead of 74 -- it was rewriting
-# another agent's checkout. Found 2026-10-04.
-for page in sorted(p for p in ROOT.rglob('*.html') if not (SKIP_PARTS & set(p.parts))):
-    if '.git' in page.parts:
-        continue
-    html = page.read_text(encoding='utf-8')
-    stats = {'refs': 0, 'stale': 0}
-    new = stamp_html(html, stats)
-    stamped += stats['refs']
-    stale += stats['stale']
-    if new != html:
-        changed += 1
-        if not CHECK:
-            page.write_text(new, encoding='utf-8')
+def main():
+    """Stamp every page, or report what would change under --check.
 
-verb = 'would change' if CHECK else 'updated'
-print("%s %d reference(s); %d page(s) %s; %d reference(s) were stale"
-      % ('checked' if CHECK else 'stamped', stamped, changed, verb, stale))
-if CHECK and stale:
-    sys.exit(1)
+    UNDER A __main__ GUARD, and that matters more than it looks. This module-level loop used to run
+    on IMPORT, and two generators import `stamp_html` from here: scripts/build-manuals-pages.py and
+    scripts/build-parts-pages.py. So `python3 scripts/build-parts-pages.py` was silently re-stamping
+    every HTML page in the repo rather than writing its own, and `--check` on either generator could
+    exit 1 because of an unrelated page's stale stamp before it ever compared its own output. Found
+    2026-10-04 by a fresh-context review of the parts hub, which ran into it directly. Running this
+    file as a script behaves exactly as before.
+    """
+    stamped = changed = stale = 0
+    SKIP_PARTS = {'.git', '.letta', 'node_modules'}
+    # THE CHECKOUT BOUNDARY. Letta keeps agent worktrees under .letta/worktrees/, each a full copy
+    # of this repository, so an unbounded rglob stamped 149 pages instead of 74 -- it was rewriting
+    # another agent's checkout. Found 2026-10-04.
+    for page in sorted(p for p in ROOT.rglob('*.html') if not (SKIP_PARTS & set(p.parts))):
+        if '.git' in page.parts:
+            continue
+        html = page.read_text(encoding='utf-8')
+        stats = {'refs': 0, 'stale': 0}
+        new = stamp_html(html, stats)
+        stamped += stats['refs']
+        stale += stats['stale']
+        if new != html:
+            changed += 1
+            if not CHECK:
+                page.write_text(new, encoding='utf-8')
+
+    verb = 'would change' if CHECK else 'updated'
+    print("%s %d reference(s); %d page(s) %s; %d reference(s) were stale"
+          % ('checked' if CHECK else 'stamped', stamped, changed, verb, stale))
+    return 1 if (CHECK and stale) else 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

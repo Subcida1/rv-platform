@@ -2579,6 +2579,11 @@ a.tchip:focus-visible{outline:2px solid var(--b1,var(--brand));outline-offset:2p
 .part-types{justify-content:flex-start;margin-top:2px;gap:7px}
 .part-types .chip{font-size:12px;padding-top:4px;padding-bottom:4px;padding-left:11px;
   padding-right:11px;cursor:default}
+/* .chip is the same pill used as a CLICKABLE facet on the manuals and directory pages, where
+   .chip:hover lights it up. These ones are labels on a card that goes nowhere, so the hover has to
+   be turned off explicitly: cursor:default alone left them still changing colour under the pointer,
+   which reads as "this is a control". */
+.part-types .chip:hover{color:var(--text-2);border-color:var(--border-2)}
 .part-links{margin-top:auto;padding-top:12px;border-top:1px solid var(--border);
   display:flex;flex-wrap:wrap;gap:14px;font-size:14px}
 .parts-top{margin-top:14px;font-size:13.5px}

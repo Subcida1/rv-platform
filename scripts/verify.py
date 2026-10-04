@@ -641,7 +641,7 @@ if bad:
     fails.append("meta description length")
 else:
     print("  all %d pages have a description between 140 and 160 chars"
-          % len([1 for q in ROOT.rglob("*.html") if ".git" not in q.parts]))
+          % len(pages))
 
 print("\n=== a state count in a description must match the directory ===")
 # A description is an ATTRIBUTE, and the data-claim machinery reads text runs, so a count
@@ -660,7 +660,7 @@ desc_re = re.compile(r'<meta (?:name="(?:description|twitter:description)"'
                      r'|property="og:description") content="(.*?)">', re.S)
 count_re = re.compile(r'\b([A-Za-z]+(?:-[A-Za-z]+)?|\d+)\s+states?\b', re.I)
 bad, seen = [], 0
-for p in sorted(ROOT.rglob("*.html")):
+for p in pages:
     if ".git" in p.parts:
         continue
     for m in desc_re.finditer(p.read_text(encoding="utf-8")):
@@ -687,7 +687,7 @@ print("\n=== a page with a claim form must load the script that wires it ===")
 claim_pages, bad = [], []
 site_js = (ROOT / "assets" / "js" / "site.js").read_text(encoding="utf-8")
 wires = "querySelector('#claim-form')" in site_js and "form.addEventListener('submit'" in site_js
-for p in sorted(ROOT.rglob("*.html")):
+for p in pages:
     if ".git" in p.parts:
         continue
     text = p.read_text(encoding="utf-8")
@@ -721,7 +721,7 @@ print("\n=== every in-site #anchor lands on an id that exists ===")
 #     be reported here and is not a defect; if that ever happens, teach this check about it
 #     rather than deleting the check.
 anchors = {}
-for p in sorted(ROOT.rglob("*.html")):
+for p in pages:
     if ".git" in p.parts:
         continue
     anchors[str(p.relative_to(ROOT))] = set(
@@ -1175,7 +1175,7 @@ else:
 
 print("\n=== no tag is left unterminated, and no spare angle bracket renders as text ===")
 _bracket_bad = []
-for _p in sorted(p for p in ROOT.rglob("*.html") if ".git" not in p.parts):
+for _p in pages:
     _raw = re.sub(r"<(script|style)\b.*?</\1>", "", _p.read_text(encoding="utf-8"), flags=re.S | re.I)
     for _m in re.finditer(r">[ \t\r\n]*>", _raw):
         _line = _raw.count("\n", 0, _m.start()) + 1
