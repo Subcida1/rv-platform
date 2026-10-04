@@ -1003,14 +1003,14 @@ if leaked:
         print("  " + l)
     fails.append("palette in one place")
 if rogue:
-    # REPORTED, NOT FAILING, UNTIL THE EXISTING TEN ARE CLEANED UP. Making this a hard fail today
-    # would leave main red, and a red main is a notice Ty learns to ignore. The instances are real
-    # and are listed in the night queue; when they are gone, move this into `fails` and it becomes
-    # the gate the docstring always described.
+    # NOW A HARD FAIL, because the 35 literals this reported are gone (2026-10-04). They were named
+    # as tokens with the exact values they already had, so nothing moved on screen; the layer just
+    # owns every colour now. The check reported rather than failed while they existed, because a
+    # red main is a notice people learn to ignore -- which is the same reason it is worth making
+    # it fail now that it can.
     for l in rogue[:14]:
         print("  " + l)
-    print("  %d hex literal(s) in rules below the token layer. Reported rather than failing while "
-          "the existing ones are cleaned up." % len(rogue))
+    fails.append("hex colour in a rule below the token layer")
 if not leaked and not rogue:
     print("  %d palette values, none restated outside the token layer, and no hex used in any rule below it"
           % len(PALETTE))

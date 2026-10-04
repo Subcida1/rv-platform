@@ -183,6 +183,28 @@
   --sp-2:#14b8a6;
   --sp-3:#f2a63b;
   --sp-4:#e8503a;
+
+  /* ---- COLOURS THE LAYER DID NOT OWN YET (2026-10-04) ----
+     Each of these was a hex literal used inside a rule BELOW the layer. They keep the exact
+     value they had, so naming them changes nothing on screen: it only puts the site's own name
+     on a colour it was already using, which is the point of the layer. */
+  --ink-black:#000;
+  --paper-warm:#fdfbfa;
+  --text-on-dark-2:#8fa0b5;
+  --tint-rose:#fdf2f8;
+  --tint-cream:#fff7ed;
+  --border-3:#cbd5e1;
+  --tint-blue-soft:#eaf3fd;
+  --tint-blue-2:#bcd8f2;
+  --grey-mid:#bbb;
+  --grey-dark:#555;
+  --border-hover:#c3cad6;
+  --ok-green:#4ade80;
+  --bg-dark:#0e1420;
+  --text-on-dark:#cdd5e0;
+  --text-on-dark-soft:#e7ecf3;
+  --tint-blue-faint:#eff6ff;
+  --border-soft:#e2e8f0;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -208,7 +230,7 @@ input,select,textarea{font-family:inherit}
 .btn-primary{background:var(--grad);color:var(--text-inv);box-shadow:0 12px 26px -12px var(--glow)}
 .btn-primary:hover{transform:translateY(-1px);box-shadow:0 16px 32px -12px var(--glow)}
 .btn-secondary{background:var(--surface);border-color:var(--border-2);color:var(--text)}
-.btn-secondary:hover{border-color:#c3cad6;background:var(--surface-2)}
+.btn-secondary:hover{border-color:var(--border-hover);background:var(--surface-2)}
 .btn-ghost{background:transparent;border-color:transparent;color:var(--text-2)}
 .btn-ghost:hover{color:var(--text);background:var(--bg-2)}
 .btn-outline{border-color:var(--border-2);color:var(--text-2);background:transparent}
@@ -355,8 +377,8 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
 
 /* ================= HERO (HOME) ================= */
 .hero{position:relative;overflow:hidden;background:var(--bg)}
-.hero-bg{position:absolute;inset:0;background:radial-gradient(900px 480px at 82% -8%,rgba(61,127,194,.16),transparent 60%),radial-gradient(800px 460px at 12% 8%,rgba(86,143,211,.14),transparent 58%),radial-gradient(700px 420px at 50% 120%,rgba(91,150,216,.12),transparent 60%),linear-gradient(180deg,#fdfbfa 0%,var(--surface) 40%)}
-.hero-grid{position:absolute;inset:0;opacity:.5;background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(ellipse 70% 60% at 50% 0%,#000 20%,transparent 75%)}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(900px 480px at 82% -8%,rgba(61,127,194,.16),transparent 60%),radial-gradient(800px 460px at 12% 8%,rgba(86,143,211,.14),transparent 58%),radial-gradient(700px 420px at 50% 120%,rgba(91,150,216,.12),transparent 60%),linear-gradient(180deg,var(--paper-warm) 0%,var(--surface) 40%)}
+.hero-grid{position:absolute;inset:0;opacity:.5;background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(ellipse 70% 60% at 50% 0%,var(--ink-black) 20%,transparent 75%)}
 /* Vertical padding only: this is <div class="wrap hero-inner">, and the shorthand
    zeroed the gutter. Below 520px a separate rule used to patch it back to 18px,
    which left the hero on a different margin from every other section (measured at
@@ -533,7 +555,7 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
 .tool .ic{width:46px;height:46px;flex:none;border-radius:50%;display:grid;place-items:center;font-size:22px;background:var(--surface)}
 .tool h4{font-size:16.5px;font-weight:700}
 .tool p{margin-top:4px;font-size:14px;color:var(--text-2)}
-.route-card{position:relative;border-radius:var(--radius);overflow:hidden;background:linear-gradient(160deg,var(--tint-bg),#fdf2f8 55%,#fff7ed);border:1px solid var(--border);padding:26px;min-height:420px}
+.route-card{position:relative;border-radius:var(--radius);overflow:hidden;background:linear-gradient(160deg,var(--tint-bg),var(--tint-rose) 55%,var(--tint-cream));border:1px solid var(--border);padding:26px;min-height:420px}
 .route-card svg{width:100%;height:auto}
 
 /* ================= PRESS ================= */
@@ -558,7 +580,7 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
 .com-card .stat{margin-left:auto;font-size:13px;font-weight:800;white-space:nowrap;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 
 /* ================= PAGE HEADER ================= */
-.page-head{padding:56px 0 34px;position:relative;overflow:hidden;border-bottom:1px solid var(--border);background:linear-gradient(180deg,#fdfbfa,var(--bg))}
+.page-head{padding:56px 0 34px;position:relative;overflow:hidden;border-bottom:1px solid var(--border);background:linear-gradient(180deg,var(--paper-warm),var(--bg))}
 .crumbs{font-size:13px;color:var(--text-3);background:var(--bg-2);border-bottom:1px solid var(--border)}
 .crumbs .wrap{display:flex;gap:8px;align-items:center;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}
 /* The links need a finger-sized target. At 13px text they were 18px tall, which the mobile audit
@@ -646,7 +668,7 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
 .modal-close:hover{color:var(--text)}
 #toasts{position:fixed;bottom:22px;right:22px;z-index:500;display:flex;flex-direction:column;gap:10px}
 .toast{background:var(--text);color:var(--text-inv);padding:13px 18px;border-radius:12px;font-size:14px;font-weight:500;box-shadow:var(--shadow-lg);display:flex;gap:10px;align-items:center;animation:slideIn .25s ease}
-.toast.ok::before{content:"✓";color:#4ade80;font-weight:800}
+.toast.ok::before{content:"✓";color:var(--ok-green);font-weight:800}
 @keyframes slideIn{from{transform:translateY(12px);opacity:0}to{transform:none;opacity:1}}
 
 /* ================= ACCOUNT ================= */
@@ -661,8 +683,8 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
 .list-item .s{font-size:13px;color:var(--text-3)}
 
 /* ================= FOOTER ================= */
-footer{background:#0e1420;color:#cdd5e0;margin-top:0}
-footer a{color:#8fa0b5}
+footer{background:var(--bg-dark);color:var(--text-on-dark);margin-top:0}
+footer a{color:var(--text-on-dark-2)}
 footer a:hover{color:var(--text-inv)}
 .foot-top{padding:72px 0 20px}
 .foot-grid{display:grid;grid-template-columns:1.7fr 1fr 1fr 1fr 1fr 1fr;gap:40px}
@@ -671,15 +693,15 @@ footer a:hover{color:var(--text-inv)}
 .foot-brand .logo-name span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;padding:0 1px}
 .newsletter{margin-top:22px;display:flex;gap:8px;max-width:360px}
 .newsletter input{flex:1;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:11px 16px;color:var(--text-inv);font-size:14px;outline:none}
-.newsletter input::placeholder{color:#8fa0b5}
-.foot-col .foot-h{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#e7ecf3;margin:1.67em 0 16px}
+.newsletter input::placeholder{color:var(--text-on-dark-2)}
+.foot-col .foot-h{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--text-on-dark-soft);margin:1.67em 0 16px}
 .foot-col a{display:block;font-size:14px;padding:5px 0}
 /* padding-top/bottom, never the `24px 0` shorthand. This element is
    <div class="wrap foot-bottom">, and `.wrap` owns the page gutter: a shorthand
    sets the horizontal sides to 0 and the row lands flush against the screen edge,
    which is what it did on all 39 pages until 2026-09-22. Same trap as
    .page-intro and .hero-inner. verify.py now fails the build on it. */
-.foot-bottom{margin-top:48px;padding-top:24px;padding-bottom:24px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:#8fa0b5;font-size:13px}
+.foot-bottom{margin-top:48px;padding-top:24px;padding-bottom:24px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:var(--text-on-dark-2);font-size:13px}
 .foot-bottom .legal{display:flex;gap:22px}
 
 /* ================= REVEAL ================= */
@@ -888,7 +910,7 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 /* ---------- app / phone ---------- */
 .phone{width:236px;height:476px;border-radius:36px;background:var(--surface);border:1px solid var(--border-2);box-shadow:0 40px 90px -30px rgba(15,23,42,.4);padding:14px;position:relative;margin:0 auto}
 .phone::before{content:"";position:absolute;top:9px;left:50%;transform:translateX(-50%);width:82px;height:5px;border-radius:5px;background:var(--border-2)}
-.phone-screen{border-radius:24px;height:100%;overflow:hidden;background:linear-gradient(170deg,#fdf2f8,#eff6ff 55%,#fff7ed);padding:28px 16px;display:flex;flex-direction:column;gap:11px}
+.phone-screen{border-radius:24px;height:100%;overflow:hidden;background:linear-gradient(170deg,var(--tint-rose),var(--tint-blue-faint) 55%,var(--tint-cream));padding:28px 16px;display:flex;flex-direction:column;gap:11px}
 .phone-top{display:flex;align-items:center;justify-content:space-between;font-size:11px;color:var(--text-2);font-weight:700}
 .phone-top .dot{width:8px;height:8px;border-radius:50%;background:var(--brand);box-shadow:0 0 0 4px var(--glow)}
 .phone-route{border-radius:14px;background:var(--surface);border:1px solid var(--border);padding:13px;box-shadow:var(--shadow-sm)}
@@ -902,7 +924,7 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 .phone-bar{height:6px;border-radius:6px;background:var(--surface);overflow:hidden}
 .phone-bar i{display:block;height:100%;width:72%;border-radius:6px;background:var(--grad-2)}
 .dog-grid{background:linear-gradient(135deg,var(--text),var(--asphalt));border-radius:var(--radius-lg);padding:8px}
-.dog-inner{background:rgba(255,255,255,.05);border-radius:calc(var(--radius-lg) - 6px);padding:48px 44px;display:grid;grid-template-columns:1.2fr 1fr;gap:44px;align-items:center;color:#e2e8f0}
+.dog-inner{background:rgba(255,255,255,.05);border-radius:calc(var(--radius-lg) - 6px);padding:48px 44px;display:grid;grid-template-columns:1.2fr 1fr;gap:44px;align-items:center;color:var(--border-soft)}
 
 /* ---------- misc used pages ---------- */
 .trip-nums{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
@@ -1055,7 +1077,7 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
    route shields. Keeps the clean light + sunset gradient.
    ============================================================ */
 /* mile marker eyebrow: replaces the generic uppercase label */
-.sec-eyebrow.mile{display:inline-flex;align-items:center;gap:9px;background:var(--sign);color:var(--text-inv);font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:none;padding:5px 13px;border-radius:6px;border:1px solid #cbd5e1;box-shadow:0 1px 0 rgba(255,255,255,.35) inset}
+.sec-eyebrow.mile{display:inline-flex;align-items:center;gap:9px;background:var(--sign);color:var(--text-inv);font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:none;padding:5px 13px;border-radius:6px;border:1px solid var(--border-3);box-shadow:0 1px 0 rgba(255,255,255,.35) inset}
 .sec-eyebrow.mile::before{content:"MP";display:inline-grid;place-items:center;width:26px;height:20px;background:var(--cl-mark);color:var(--sign);font-weight:800;border-radius:4px;font-size:10.5px}
 .sec-eyebrow.mile .mile-num{color:var(--cl-mark);font-weight:800}
 /* centerline divider: two-tone dashed highway line */
@@ -1071,7 +1093,7 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 .btn .route-arrow{width:0;height:0;border-top:7px solid transparent;border-bottom:7px solid transparent;border-left:10px solid currentColor;margin-left:10px;display:inline-block}
 /* kicker: small-town signpost */
 .kicker.signpost{position:relative;padding-left:34px}
-.kicker.signpost::before{content:"";position:absolute;left:0;top:-6px;width:24px;height:34px;background:var(--sign);border-radius:2px;border:1px solid #cbd5e1}
+.kicker.signpost::before{content:"";position:absolute;left:0;top:-6px;width:24px;height:34px;background:var(--sign);border-radius:2px;border:1px solid var(--border-3)}
 .kicker.signpost::after{content:"\25CF";position:absolute;left:8px;top:8px;color:var(--cl-mark);font-size:12px}
 /* stat/card accent: exit-sign numbers */
 .hstat .num.exit-sign{font-family:ui-monospace,Menlo,Consolas,monospace}
@@ -1253,7 +1275,7 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 /* deck-go meta arrows: keep gradient ONLY as leading affordance, on a solid base */
 .deck-go{font-size:12.5px;font-weight:800;color:var(--text-2)}
 /* hero grid + background: keep pleasant but tone the color patches down */
-.hero-bg{background:radial-gradient(900px 480px at 82% -8%,rgba(61,127,194,.10),transparent 60%),radial-gradient(800px 460px at 12% 8%,rgba(86,143,211,.09),transparent 58%),radial-gradient(700px 420px at 50% 120%,rgba(91,150,216,.08),transparent 60%),linear-gradient(180deg,#fdfbfa 0%,var(--surface) 40%)}
+.hero-bg{background:radial-gradient(900px 480px at 82% -8%,rgba(61,127,194,.10),transparent 60%),radial-gradient(800px 460px at 12% 8%,rgba(86,143,211,.09),transparent 58%),radial-gradient(700px 420px at 50% 120%,rgba(91,150,216,.08),transparent 60%),linear-gradient(180deg,var(--paper-warm) 0%,var(--surface) 40%)}
 /* card action links: readable over gradient, gradient stays for the arrow accent only */
 .cta{color:var(--text-2)}
 .cat-card .meta{color:var(--text-2)}
@@ -1676,9 +1698,9 @@ figure:has(svg[role="img"]){overflow-x:auto;overflow-y:hidden}
 .finder-routes{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
 .finder-route{display:grid;grid-template-columns:auto 1fr;align-items:center;gap:12px;text-align:left;cursor:pointer;background:var(--surface);border:2px solid var(--border);border-radius:var(--radius);padding:13px 15px;font-family:inherit;transition:border-color .16s,background .16s,box-shadow .16s}
 .finder-route:hover{border-color:var(--border-2);background:var(--surface)}
-.finder-route.on{border-color:var(--b1, var(--brand));background:#eaf3fd;box-shadow:0 10px 24px -16px var(--glow, rgba(61,127,194,.32))}
+.finder-route.on{border-color:var(--b1, var(--brand));background:var(--tint-blue-soft);box-shadow:0 10px 24px -16px var(--glow, rgba(61,127,194,.32))}
 .finder-ic{width:38px;height:38px;border-radius:50%;background:var(--surface);border:1px solid var(--border-2);display:grid;place-items:center;font-size:19px;line-height:1}
-.finder-route.on .finder-ic{background:var(--surface);border-color:#bcd8f2}
+.finder-route.on .finder-ic{background:var(--surface);border-color:var(--tint-blue-2)}
 .finder-txt{display:block;min-width:0}
 .finder-t{display:block;font-size:14.5px;font-weight:800;color:var(--text);letter-spacing:-.01em}
 .finder-s{display:block;font-size:12.5px;color:var(--text-2);line-height:1.35;margin-top:2px}
@@ -1697,7 +1719,7 @@ figure:has(svg[role="img"]){overflow-x:auto;overflow-y:hidden}
 .listing-name a:hover{text-decoration:underline}
 /* Distance or coverage badge. "Serves your area" is the one that matters. */
 .listing-dist{font-size:12px;font-weight:700;color:var(--text-2);background:var(--surface);border:1px solid var(--border);border-radius:999px;padding:5px 11px;white-space:nowrap;flex:none;align-self:flex-start}
-.listing-dist.serves{color:var(--brand-deep);background:#eaf3fd;border-color:#bcd8f2}
+.listing-dist.serves{color:var(--brand-deep);background:var(--tint-blue-soft);border-color:var(--tint-blue-2)}
 .listing-dist.region{color:var(--text-3);font-style:italic;font-weight:600;white-space:normal;text-align:right;max-width:44%;line-height:1.35;background:none;border:none;padding:0}
 /* Call is the action that matters for someone broken down, so it leads. */
 .listing-call{gap:7px;padding:10px 16px;font-size:13.5px;font-weight:800;text-decoration:none}
@@ -1938,8 +1960,8 @@ figure:has(svg[role="img"]){overflow-x:auto;overflow-y:hidden}
      pixel 0, so the frame is snowing from its very top edge.
      The opacity transition is what makes the snow fade OUT over the same slow
      return trip when the pointer leaves, rather than blinking off. */
-  -webkit-mask-image:linear-gradient(180deg,#000 0,#000 58%,transparent 100%);
-  mask-image:linear-gradient(180deg,#000 0,#000 58%,transparent 100%);
+  -webkit-mask-image:linear-gradient(180deg,var(--ink-black) 0,var(--ink-black) 58%,transparent 100%);
+  mask-image:linear-gradient(180deg,var(--ink-black) 0,var(--ink-black) 58%,transparent 100%);
   animation:snow-fall 5s linear infinite;
   animation-play-state:paused;
   transition:opacity .95s ease;
@@ -2365,7 +2387,7 @@ body.is-embed .embed-credit a{font-weight:800;color:var(--b1)}
   .btn,.burger,.guide-ic,.tool-btns,.back,.to-top,.skip-link{display:none !important}
 
   /* ---- 2. the page becomes a document: full width, black on white ---- */
-  html,body{background:var(--surface) !important;color:#000}
+  html,body{background:var(--surface) !important;color:var(--ink-black)}
   .wrap,.wrap.wide,.wrap.narrow,.wrap.page-intro,
   .wrap.w-520,.wrap.w-680,.wrap.w-720,.wrap.w-820,
   .prose .narrow,.w-820,.w-720,.page-intro.narrow{
@@ -2376,7 +2398,7 @@ body.is-embed .embed-credit a{font-weight:800;color:var(--b1)}
 
   /* A printed card is a box, not a tinted panel. */
   .card,.callout,details.faq,.table-scroll,.man-table,.tool-viz,.w-total{
-    background:var(--surface) !important;border-color:#bbb !important;box-shadow:none !important}
+    background:var(--surface) !important;border-color:var(--grey-mid) !important;box-shadow:none !important}
   .card,.callout,details.faq{padding:9pt 11pt}
 
   /* ---- 3. gradient text back to solid ink (see note 2 above) ---- */
@@ -2386,7 +2408,7 @@ body.is-embed .embed-credit a{font-weight:800;color:var(--b1)}
   .tool-strip .tchip b,.sec-eyebrow,.card-h,.card-h-sm{
     background:none !important;
     -webkit-background-clip:border-box !important;background-clip:border-box !important;
-    color:#000 !important}
+    color:var(--ink-black) !important}
 
   /* ---- 4. type ---- */
   body{font-size:10.5pt;line-height:1.5}
@@ -2394,7 +2416,7 @@ body.is-embed .embed-credit a{font-weight:800;color:var(--b1)}
   h2{font-size:14pt;margin-top:15pt}
   h3{font-size:12pt;margin-top:11pt}
   .lede{font-size:11.5pt}
-  .reviewed{font-size:8.5pt;color:#555}
+  .reviewed{font-size:8.5pt;color:var(--grey-dark)}
   p,li{orphans:3;widows:3}
 
   /* ---- 5. keep a heading with what it introduces, and a SHORT block whole ---- */
@@ -2411,14 +2433,14 @@ body.is-embed .embed-credit a{font-weight:800;color:var(--b1)}
   table{break-inside:auto;page-break-inside:auto}
   tr{break-inside:avoid;page-break-inside:avoid}
   img,svg{max-width:100% !important;height:auto}
-  a{color:#000;text-decoration:none}
+  a{color:var(--ink-black);text-decoration:none}
 
   /* ---- 6. the sources are the point: print where they are ---- */
   /* `overflow-wrap:anywhere` rather than `word-break:break-all`: a short URL stays on one
      line and only a long one breaks, and a broken URL is still joinable by eye. Verified
      on the live render: 10 URLs across an 11-page guide, none of them lost. */
   a[href^="http"]::after{
-    content:" (" attr(href) ")";font-size:8pt;color:#555;overflow-wrap:anywhere}
+    content:" (" attr(href) ")";font-size:8pt;color:var(--grey-dark);overflow-wrap:anywhere}
 
   /* ---- 7. the FAQ, once site.js has opened it ---- */
   details.faq>summary{font-weight:700;padding:5pt 0}
@@ -2430,7 +2452,7 @@ body.is-embed .embed-credit a{font-weight:800;color:var(--b1)}
   /* ---- 8. tables keep their columns instead of scrolling ---- */
   .table-scroll{overflow:visible !important}
   table{width:100%;border-collapse:collapse;font-size:9.5pt}
-  th,td{border:1px solid #bbb;padding:4pt 6pt;text-align:left}
+  th,td{border:1px solid var(--grey-mid);padding:4pt 6pt;text-align:left}
   /* The screen rule `.man-table td:last-child{text-align:right}` outranks a bare `td`,
      and right-aligned prose in the last column of the threshold table is unreadable on
      paper. Match its specificity. */
