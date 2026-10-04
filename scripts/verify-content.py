@@ -221,6 +221,11 @@ def claim_text(raw):
     """
     s = re.sub(r"<(script|style)\b.*?</\1>", " ", raw, flags=re.S | re.I)
     s = re.sub(r'<p class="reviewed">.*?</p>', " ", s, flags=re.S)
+    # THE BREADCRUMB IS NAVIGATION AND GOES WITH THE NAV. visible_text already strips the nav and
+    # footer regions; this function did not, and the generated trail carries the page's own heading,
+    # so without this every page reads as claim drift the moment a breadcrumb is added. Found
+    # 2026-10-03 on the first run after breadcrumbs shipped.
+    s = re.sub(r"<!--\s*crumbs:start\s*-->.*?<!--\s*crumbs:end\s*-->", " ", s, flags=re.S | re.I)
     s = INTERNAL_A.sub(" ", s)
     s = re.sub(r"<[^>]+>", " ", s)
     s = s.replace("&nbsp;", " ").replace("&#8594;", " ")

@@ -127,6 +127,77 @@ function fill(page, startTag, endTag, html) {
   return page.slice(0, start + startTag.length) + html + page.slice(end);
 }
 
+// ---- BREADCRUMBS, generated rather than hand-added to 52 pages ----
+// LOCATION breadcrumbs, which is what search engines and readers both expect: the trail says where
+// this page sits in the site, not where the reader came from. The system names are the ones the
+// manuals directory already uses, so a reader meets the same words in both places.
+//
+// THEY GO INSIDE THE nav:start/nav:end REGION ON PURPOSE. verify-content.py strips that region
+// before digesting a page, precisely so a shell change does not alarm every page at once. A
+// breadcrumb is navigation, so it belongs there, and that is why this whole change costs no
+// re-reviews.
+const systemsPath = path.join(ROOT, '_data', 'guide-systems.json');
+let systems = null;
+try { systems = JSON.parse(fs.readFileSync(systemsPath, 'utf8')); } catch (e) { systems = null; }
+
+function esc(t) {
+  return String(t == null ? '' : t).replace(/&/g, '&amp;').replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
+function headingOf(html) {
+  const m = /<h1[^>]*>([\s\S]*?)<\/h1>/.exec(html);
+  if (!m) return null;
+  return m[1].replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+}
+
+function breadcrumbFor(rel, html) {
+  const crumbs = [{ name: 'Home', href: '/' }];
+  if (rel === 'index.html' || rel === '404.html') return '';
+  const slug = rel.replace(/^guides\//, '').replace(/\.html$/, '');
+  const isGuide = rel.startsWith('guides/') && rel !== 'guides/index.html';
+
+  if (isGuide) crumbs.push({ name: 'Guides', href: '/guides/index.html' });
+  else if (rel.startsWith('manuals/') && rel !== 'manuals/index.html') crumbs.push({ name: 'Manuals', href: '/manuals/index.html' });
+  else if (rel.startsWith('directory/') && rel !== 'directory/index.html') crumbs.push({ name: 'Directory', href: '/directory/index.html' });
+  else if (rel.startsWith('tools/') && rel !== 'tools/index.html') crumbs.push({ name: 'Tools', href: '/tools/index.html' });
+
+  const sys = systems && isGuide ? systems.guides[slug] : null;
+  if (sys && systems.systems[sys]) {
+    // No system hub page exists yet, so the middle crumb is plain text rather than a link to
+    // nowhere. A breadcrumb that links to a 404 is worse than one that does not link.
+    crumbs.push({ name: systems.systems[sys], href: null });
+  }
+
+  const head = headingOf(html);
+  if (head && (isGuide || rel.startsWith('manuals/') || rel.startsWith('tools/'))) {
+    crumbs.push({ name: head, href: null });
+  }
+  if (crumbs.length < 2) return '';
+
+  const htmlTrail = crumbs.map((c) => c.href
+    ? '<a href="' + esc(c.href) + '">' + esc(c.name) + '</a>'
+    : '<span>' + esc(c.name) + '</span>').join('<i aria-hidden="true">/</i>');
+
+  const base = 'https://originrv.com/';
+  // A crumb with no page of its own (the system heading, and the current page) carries no `item`.
+  // The schema wants the item to be that crumb's own URL, and pointing two crumbs at the same page
+  // describes a trail that is not there.
+  const ldCrumbs = crumbs.map((c, i) => {
+    const entry = { '@type': 'ListItem', position: i + 1, name: c.name };
+    if (c.href) entry.item = base + c.href.replace(/^\//, '');
+    else if (i === crumbs.length - 1) entry.item = base + rel;
+    return entry;
+  });
+  const ld = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: ldCrumbs };
+
+  // The markers let verify-content strip the trail before digesting a page. Navigation is not a
+  // claim, and without them the breadcrumb's own text -- which includes the page heading -- reads
+  // as claim drift on every page at once.
+  return '<!-- crumbs:start --><nav class="crumbs" aria-label="Breadcrumb"><div class="wrap">' + htmlTrail + '</div></nav>'
+    + '<script type="application/ld+json">' + JSON.stringify(ld) + '</script><!-- crumbs:end -->';
+}
+
 const pages = fs.readdirSync(ROOT, { recursive: true })
   .filter((f) => String(f).endsWith('.html'))
   .map((f) => String(f))
@@ -137,7 +208,7 @@ const problems = [];
 for (const rel of pages) {
   const file = path.join(ROOT, rel);
   const before = fs.readFileSync(file, 'utf8');
-  let after = fill(before, '<!-- nav:start -->', '<!-- nav:end -->', nav);
+  let after = fill(before, '<!-- nav:start -->', '<!-- nav:end -->', nav + breadcrumbFor(rel, before));
   if (after === null) { problems.push(rel + ': no nav:start/nav:end markers'); continue; }
   after = fill(after, '<!-- footer:start -->', '<!-- footer:end -->', footer);
   if (after === null) { problems.push(rel + ': no footer:start/footer:end markers'); continue; }
