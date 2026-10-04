@@ -32,7 +32,22 @@ VOID = {"area", "base", "br", "col", "embed", "hr", "img", "input",
         "link", "meta", "param", "source", "track", "wbr"}
 fails = []
 
-pages = sorted(p for p in ROOT.rglob("*.html") if ".git" not in p.parts)
+# THE TREE HAS A NESTED CHECKOUT IN IT, AND THE SCANNERS WERE WALKING INTO IT.
+# Letta keeps agent worktrees under .letta/worktrees/<name>/, and each one is a full copy of this
+# repository. `ROOT.rglob("*.html")` therefore found the worktree's pages as well, and checked them
+# as if they were the site: the worktree's own verify.py tripped the banned-words rule on its own
+# rule definitions, its in-progress pages tripped the link and photo-credit rules, and the local gate
+# went red for hours while CI stayed green -- because CI has no .letta directory at all.
+# Found 2026-10-04 after attributing the red to "a parallel session's edits", which was half right:
+# another agent's work was in there, but the defect was that nothing told the scanner where to stop.
+SKIP_PARTS = {".git", ".letta", "node_modules"}
+
+
+def walked(pattern):
+    """Every path matching the pattern inside THIS checkout, and nothing outside it."""
+    return sorted(p for p in ROOT.rglob(pattern) if not (SKIP_PARTS & set(p.parts)))
+
+pages = walked("*.html")
 
 
 def strip_bodies(txt):
@@ -73,7 +88,7 @@ def without_provenance(p, txt):
 def published_files(include_python=False):
     out = []
     for pat in PUBLISHED + (("*.py",) if include_python else ()):
-        out += [p for p in ROOT.rglob(pat) if ".git" not in p.parts]
+        out += walked(pat)
     return sorted(set(out))
 
 
@@ -203,7 +218,7 @@ if bad:
     fails.append("json-ld")
 
 print("\n=== page script syntax (node --check) ===")
-for p in sorted(x for x in ROOT.rglob("*.js") if ".git" not in x.parts):
+for p in walked("*.js"):
     r = subprocess.run(["node", "--check", str(p)], capture_output=True)
     print(("  ok   " if not r.returncode else "  FAIL ") + str(p.relative_to(ROOT)))
     if r.returncode:
@@ -610,7 +625,7 @@ else:
 
 print("\n=== meta description length (140-160 chars, or Google rewrites it) ===")
 bad = []
-for p in sorted(ROOT.rglob("*.html")):
+for p in walked("*.html"):
     if ".git" in p.parts:
         continue
     m = re.search(r'<meta name="description" content="(.*?)">', p.read_text(encoding="utf-8"), re.S)

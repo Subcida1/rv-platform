@@ -161,6 +161,7 @@ function breadcrumbFor(rel, html) {
   else if (rel.startsWith('manuals/') && rel !== 'manuals/index.html') crumbs.push({ name: 'Manuals', href: '/manuals/index.html' });
   else if (rel.startsWith('directory/') && rel !== 'directory/index.html') crumbs.push({ name: 'Directory', href: '/directory/index.html' });
   else if (rel.startsWith('tools/') && rel !== 'tools/index.html') crumbs.push({ name: 'Tools', href: '/tools/index.html' });
+  else if (rel.startsWith('parts/') && rel !== 'parts/index.html') crumbs.push({ name: 'Parts', href: '/parts/index.html' });
 
   const sys = systems && isGuide ? systems.guides[slug] : null;
   if (sys && systems.systems[sys]) {
@@ -170,7 +171,7 @@ function breadcrumbFor(rel, html) {
   }
 
   const head = headingOf(html);
-  if (head && (isGuide || rel.startsWith('manuals/') || rel.startsWith('tools/'))) {
+  if (head && (isGuide || rel.startsWith('manuals/') || rel.startsWith('tools/') || rel.startsWith('parts/'))) {
     crumbs.push({ name: head, href: null });
   }
   if (crumbs.length < 2) return '';
@@ -208,9 +209,15 @@ function breadcrumbFor(rel, html) {
     + '<script type="application/ld+json">' + JSON.stringify(ld) + '</script><!-- crumbs:end -->';
 }
 
+// THE CHECKOUT BOUNDARY. Letta keeps agent worktrees under .letta/worktrees/, each a full copy of
+// this repository, so a recursive read of ROOT finds their pages too and stamps a nested checkout
+// as if it were the site. Found 2026-10-04: the local gate was red for hours with manuals pages,
+// static shell and asset stamps while CI stayed green, because CI has no .letta directory.
+const SKIP_PARTS = ['.git', '.letta', 'node_modules'];
 const pages = fs.readdirSync(ROOT, { recursive: true })
   .filter((f) => String(f).endsWith('.html'))
   .map((f) => String(f))
+  .filter((f) => !SKIP_PARTS.some((s) => f.split(path.sep).includes(s)))
   .sort();
 
 let written = 0, already = 0;
