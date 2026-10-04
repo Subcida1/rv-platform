@@ -1,0 +1,1006 @@
+{
+  "state": "IL",
+  "name": "Illinois",
+  "regions": [
+    {
+      "key": "chicago-il",
+      "label": "Chicago and the northern suburbs"
+    },
+    {
+      "key": "north-il",
+      "label": "Rockford, Peoria and the north"
+    },
+    {
+      "key": "central-il",
+      "label": "Springfield and central Illinois"
+    },
+    {
+      "key": "south-il",
+      "label": "Marion, Carbondale and the south"
+    }
+  ],
+  "region_of": {
+    "Crystal Lake": "chicago-il",
+    "Glen Ellyn": "chicago-il",
+    "Maple Park": "chicago-il",
+    "Naperville": "chicago-il",
+    "Waukegan": "chicago-il",
+    "Yorkville": "chicago-il",
+    "Bourbonnais": "chicago-il",
+    "East Moline": "north-il",
+    "Macomb": "north-il",
+    "Peoria": "north-il",
+    "Rockford": "north-il",
+    "Sublette": "north-il",
+    "Lexington": "north-il",
+    "Maroa": "central-il",
+    "Springfield": "central-il",
+    "Bethalto": "central-il",
+    "Greenville": "central-il",
+    "Pierron": "central-il",
+    "Belleville": "south-il",
+    "Carmi": "south-il",
+    "Eldorado": "south-il",
+    "Marion": "south-il",
+    "Vandalia": "south-il"
+  },
+  "listings": [
+    {
+      "n": "RoamRight RV Service",
+      "c": "Crystal Lake, IL",
+      "p": "(815) 276-6827",
+      "u": "https://roamrightrv.com/",
+      "t": "both",
+      "e": true,
+      "r": false,
+      "d": "RoamRight RV Service is a hybrid RV repair shop: it brings certified mobile service to a driveway, storage lot, or campsite, backed by a fixed shop for bigger jobs. Based out of Crystal Lake, the shop serves much of McHenry County and nearby communities, listing towns from McHenry and Woodstock to Grayslake and Wauconda. Work covers electrical and power systems, roof sealant and leak repair, plumbing and waste systems, slides and leveling, and comfort systems and appliances. Hours are Monday to Friday 8:00am to 4:30pm, Saturdays by appointment, with limited emergency slots at extra charge.",
+      "g": [
+        "mobile",
+        "shop",
+        "roof",
+        "slide-out",
+        "electrical"
+      ],
+      "base": "Crystal Lake",
+      "areas": [
+        "Crystal Lake",
+        "McHenry",
+        "Johnsburg",
+        "Spring Grove",
+        "Richmond",
+        "Woodstock",
+        "Cary",
+        "Fox Lake",
+        "Round Lake",
+        "Grayslake",
+        "Lake in the Hills",
+        "Algonquin",
+        "Huntley",
+        "Island Lake",
+        "Wauconda"
+      ],
+      "region": "McHenry County",
+      "spec": null,
+      "evidence": {
+        "checked": "https://roamrightrv.com/",
+        "phone_quote": "Call or text:(815) 276-6827 (18152766827)",
+        "coverage_quotes": [
+          "Based out of Crystal Lake, IL and serving much of McHenry County plus nearby communities.",
+          "McHenry Crystal Lake Johnsburg Spring Grove Richmond Woodstock Cary Fox Lake Round Lake Grayslake Lake in the Hills Algonquin Huntley Island Lake Wauconda"
+        ],
+        "type_quote": "RoamRight RV Service is a hybrid RV repair shop: we bring certified mobile service to your driveway, storage lot, or campsite — backed by a fixed shop for bigger jobs.",
+        "emergency_quote": "Limited emergency slots. Extra charges apply.",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "D&H RV and Trailer Repair",
+      "c": "Peoria, IL",
+      "p": "309-270-7110",
+      "u": "https://www.dnhrv.com/",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "D&H RV and Trailer Repair is a family owned and operated RV service center in Peoria, more than 30 years in business. It has four full-time RV service technicians including an RVIA/RVDA master certified RV Technician, qualified on motorhomes, 5th wheels, travel trailers and utility trailers. The shop also makes service calls, bringing parts and service to a customer's campground. Hours are Monday to Friday 8:30am to 5pm, Saturday by appointment.",
+      "g": [
+        "center",
+        "mobile"
+      ],
+      "base": "Peoria",
+      "areas": [
+        "Peoria"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.dnhrv.com/",
+        "phone_quote": "309-270-7110 (3092707110)",
+        "coverage_quotes": [
+          "7610 West Plank Rd Peoria, IL 61604",
+          "We have technicians qualified to work on all makes and models of motorhomes, 5th wheels, travel trailers and utility trailers."
+        ],
+        "type_quote": "D&H RV and Trailer Repair is a family owned and operated RV service center located in Peoria, Illinois.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Richards Rollin RV Repair",
+      "c": "Macomb, IL",
+      "p": "+1 417-380-8696",
+      "u": "https://www.richardsrvrepair.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "Richards Rollin RV Repair is a mobile RV repair service based in Macomb, IL, serving the surrounding area and travelling to the customer. The owner is a certified RV technician with over four years of hands-on experience diagnosing and repairing all types and models of RVs. Services include air conditioning, water heater and refrigerator repair, slide mechanism repair, roof resealing, furnace repair and general maintenance. Emergency call outs are offered, with an extra charge for after-hours service calls.",
+      "g": [
+        "mobile",
+        "roof",
+        "slide-out"
+      ],
+      "base": "Macomb",
+      "areas": [
+        "Macomb",
+        "Georgetown",
+        "Bardolph",
+        "Colchester",
+        "Good Hope",
+        "Sciota",
+        "Adair",
+        "Industry",
+        "Monmouth",
+        "Beardstown",
+        "Camp Point",
+        "Carthage",
+        "Galesburg",
+        "Canton",
+        "Havana",
+        "Farmington",
+        "Bushnell",
+        "Quincy",
+        "Keithsburg"
+      ],
+      "region": null,
+      "spec": "Sorry I do not work on motors or any other mechanism transmission brakes of that sort",
+      "evidence": {
+        "checked": "https://www.richardsrvrepair.com/",
+        "phone_quote": "+1 417-380-8696 (+14173808696)",
+        "coverage_quotes": [
+          "I am based in Macomb, IL, and serve the surrounding areas. I'm happy to travel to your location.",
+          "Macomb Georgetown Bardolph Colchester Good Hope Sciota Fandon Adair Industry Monmouth Beardstown Camp Point Carthage Galesburg Canton Carthage Lake Argyle lake state park Havana,IL Farmington,IL Bushnell,IL Burlington,IA Waverly,IA Ft Madison,IA Quincy,IL Hannibal, Mo Keithsburg, IL"
+        ],
+        "type_quote": "Yes! We specialize in mobile RV repairs, so I can come to your campsite and take care of any issues on-site, minimizing disruptions to your trip.",
+        "emergency_quote": "I do EMERGENCY call outs. Extra charge For them",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Walker RV Repair",
+      "c": "Yorkville, IL",
+      "p": "331-234-0407",
+      "u": "https://walkerrvrepair.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Walker RV Repair is a mobile RV service based in Yorkville, IL, offering RVTI certified, insured technicians. The shop travels to the customer's campsite, driveway, or storage lot to service motorhomes, travel trailers, and fifth wheels. Work includes electrical diagnostics, appliance servicing, roof repairs, and seasonal maintenance. Hours are listed as 9:00am to 5:00pm.",
+      "g": [
+        "mobile",
+        "roof"
+      ],
+      "base": "Yorkville",
+      "areas": [
+        "Yorkville"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://walkerrvrepair.com/",
+        "phone_quote": "331-234-0407 (3312340407)",
+        "coverage_quotes": [
+          "Walker RV Repair is Yorkville’s premier mobile RV service, providing expert craftsmanship and unparalleled convenience right at your campsite, driveway, or storage lot.",
+          "Yorkville IL 60560"
+        ],
+        "type_quote": "Skilled, insured, and RVTI certified, we offer top-notch mobile RV service and comprehensive RV maintenance services, including expert Yorkville RV repair.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Holt RV Service",
+      "c": "Marion, IL",
+      "p": "618-440-0022",
+      "u": "https://holtrvservice.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Holt RV Service is a mobile RV repair service out of Marion, Illinois, covering Southern Illinois, Southern Indiana and Western Kentucky. The business performs RV livability, function and safety checks and provides a 7-page checklist with pictures and video. It also inspects and reseals roofs and can add sealant product across an entire roof, and it represents owners in insurance claims on camper damage. Hours are Monday to Saturday 8AM to 6PM.",
+      "g": [
+        "mobile",
+        "roof"
+      ],
+      "base": "Marion",
+      "areas": [
+        "Marion"
+      ],
+      "region": "Southern Illinois",
+      "spec": null,
+      "evidence": {
+        "checked": "https://holtrvservice.com/",
+        "phone_quote": "618-440-0022 (+16184400022)",
+        "coverage_quotes": [
+          "Mobile RV Repair Serving Southern Illinois, Southern Indiana, and Western Kentucky",
+          "Marion Illinois"
+        ],
+        "type_quote": "Get peace of mind by having your roof inspected and resealed.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Hale’s Automotive",
+      "c": "Marion, IL",
+      "p": "618-993-2287",
+      "u": "https://halesautomotive.com/rv-bus-repair-marion/",
+      "t": "center",
+      "e": false,
+      "r": true,
+      "d": "Hale’s Automotive in Marion, IL services RVs and buses with ASE master technicians, backed by a state-of-the-art facility. Engine, transmission and drivetrain work includes in-depth inspection and repair using digital vehicle inspection tools, plus drivetrain maintenance for long trips and heavy usage. The shop also handles brake overhauls, tire services and wheel alignments, and electrical, HVAC and plumbing work for RVs. It is AAA Approved and NAPA Auto Care Gold Certified and offers a 5-year, unlimited mileage nationwide warranty.",
+      "g": [
+        "center",
+        "chassis",
+        "engine",
+        "drivetrain"
+      ],
+      "base": "Marion",
+      "areas": [
+        "Marion"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://halesautomotive.com/rv-bus-repair-marion/",
+        "phone_quote": "618-993-2287 (6189932287)",
+        "coverage_quotes": [
+          "At Hale’s Automotive in Marion, IL, we understand the unique needs of RV and bus owners.",
+          "408 North Court Street Marion, IL 62959"
+        ],
+        "type_quote": "Our skilled team of ASE master technicians, backed by our state-of-the-art facility, is equipped to handle a wide range of repair and maintenance services for your RVs and buses.",
+        "emergency_quote": null,
+        "roadside_quote": "24/7 Towing Service",
+        "licence": null
+      }
+    },
+    {
+      "n": "RM RV Service Inc.",
+      "c": "Glen Ellyn, IL",
+      "p": "(331) 642-0031",
+      "u": "https://rmrvservice.com/about-us/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "RM RV Service Inc. is an Illinois based mobile RV repair company serving campground and private locations in Illinois, Indiana and Wisconsin. Its RVDA/RVIA Master technician works on all makes, years and models of RVs, along with authorized warranty work for most RV manufacturers. It handles awning, furnace and water heater installs and repairs, single and multi-axle trailer brakes, plumbing and electrical problems including hydraulic leveling systems and slide-out rooms, and roof leaks and rubber roof replacement.",
+      "g": [
+        "mobile",
+        "roof",
+        "slide-out"
+      ],
+      "base": "Glen Ellyn",
+      "areas": [
+        "Joliet",
+        "Morris",
+        "Marengo"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://rmrvservice.com/about-us/",
+        "phone_quote": "Call us (+13316420031)",
+        "coverage_quotes": [
+          "RM RV Service is Illinois based mobile RV repair company serving campground and private locations in Illinois, Indiana, and Wisconsin.",
+          "Our RVDA/RVIA Master technician have extensive knowledge and experience in all aspect of RV, travel trailers, fifth wheel trailers and motor homes."
+        ],
+        "type_quote": "We repair plumbing or electrical problems that you might have including hydraulic leveling systems and slide-out rooms. We also repair roof leaks, replace your RV Rubber roof or any other aspect of repairs.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Camp-Land RV Repair",
+      "c": "Carmi, IL",
+      "p": "618-384-0173",
+      "u": "https://camp-landrv.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Camp-Land RV Repair is a mobile RV service with over 25 years in the RV industry and a team of Master RVIA-certified technicians, working within a 75-mile radius of Carmi, Illinois. It provides on-site diagnostics, repairs and maintenance throughout Southern Indiana, Southern Illinois and nearby Kentucky, naming Evansville, IN and Marion, IL. The service comes to the customer at home, a campground, storage lot, or on the road.",
+      "g": [
+        "mobile",
+        "collision"
+      ],
+      "base": "Carmi",
+      "areas": [
+        "Carmi",
+        "Marion"
+      ],
+      "region": "Southern Illinois",
+      "spec": null,
+      "evidence": {
+        "checked": "https://camp-landrv.com/",
+        "phone_quote": "(6183840173)",
+        "coverage_quotes": [
+          "Camp-Land RV is the premier destination for all RV repair and collision needs. With over 25 years of experience in the RV industry, our team of Master RVIA-certified technicians is dedicated to providing top-quality Mobile RV service to customers within a 75-mile radius of Carmi, Illinois.",
+          "Looking for mobile RV repair in Evansville, IN or Marion, IL? Camp-Land RV Repair provides expert, on-site service throughout Southern Indiana, Southern Illinois, and nearby Kentucky."
+        ],
+        "type_quote": "We specialize in RV repair near Evansville Indiana and Marion Illinois, delivering fast diagnostics, repairs, and maintenance directly to your location — whether you’re at home, a campground, storage lot, or on the road.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "TNT RV & Generator Services",
+      "c": "Greenville, IL",
+      "p": "(618) 664-4868",
+      "u": "https://www.tntrvandgenerator.com/index.html",
+      "t": "center",
+      "e": true,
+      "r": false,
+      "d": "TNT RV & Generator Services in Greenville, Illinois, offers non-automotive repairs and maintenance for all makes and models of motorized and towable RVs, by appointment or walk-in. The service repair facility sits at I-70 Exit 45 and is within a 30 mile radius of I-70, I-55, I-57 and I-64. It services RV, portable and whole house generators and stocks Honda engines and Cummins Onan brand generator parts. It welcomes walk-in customers with non-automotive emergencies.",
+      "g": [
+        "center",
+        "generator"
+      ],
+      "base": "Greenville",
+      "areas": [
+        "Greenville"
+      ],
+      "region": "Southern Illinois",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.tntrvandgenerator.com/index.html",
+        "phone_quote": "(618) 664-4868",
+        "coverage_quotes": [
+          "Conveniently located within a 30 mile radius of 4 interstates: I-70, I-55, I-57, and I-64.",
+          "874 IL Route 127 Greenville, IL 62246-3536"
+        ],
+        "type_quote": "TNT RV & Generator Services offers non-automotive repairs and maintenance for all makes and models of motorized and towable RVs. By appointment or walk-in.",
+        "emergency_quote": "TNT RV & Generator Services welcomes walk-in customers with non-automotive emergencies.",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "RV & Camper Services, LLC",
+      "c": "Eldorado, IL",
+      "p": "(618) 591-1071",
+      "u": "https://rvandcamperservices.com/services/rv-repairs/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "RV & Camper Services, LLC is based in Eldorado, IL and offers mobile RV repair, driving up to an hour from its home base to assist. Repairs include awning repair, refrigerator repair, motorhome and RV plumbing services, flooring repair and RV air conditioning repair. Hours are Monday to Friday 9:00 AM to 5:00 PM.",
+      "g": [
+        "mobile"
+      ],
+      "base": "Eldorado",
+      "areas": [
+        "Eldorado"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://rvandcamperservices.com/services/rv-repairs/",
+        "phone_quote": "(618) 591-1071",
+        "coverage_quotes": [
+          "RV not movable? RV & Camper Services, LLC is based in Eldorado, IL. We’ll drive up to an hour from our home base to assist you.",
+          "2388 Greenhill Rd Eldorado, IL 62930"
+        ],
+        "type_quote": "If RV troubles are keeping you from doing what you love, get in touch with RV & Camper Services, LLC in Eldorado, IL. We offer fast RV repair services so you can get back on the road in no time.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Helmkamp Auto Service",
+      "c": "Bethalto, IL",
+      "p": "618-377-6821",
+      "u": "https://www.helmkampauto.com/rv-repair",
+      "t": "center",
+      "e": true,
+      "r": true,
+      "d": "Helmkamp Auto Service in Bethalto, IL repairs and maintains RVs and motorhomes, gas or diesel. Work covers brake systems, engines, transmissions, tires, suspensions, pumps and electronics, plus engine diagnostics and inspections, with chassis repair and maintenance for engines, transmissions, brakes and suspension. It also handles RV appliances, plumbing, electrical systems, HVAC, bodywork and collision repair, roof leaks, awnings and slide-outs. The site lists emergency repairs for issues while travelling.",
+      "g": [
+        "center",
+        "chassis",
+        "engine",
+        "body"
+      ],
+      "base": "Bethalto",
+      "areas": [
+        "Bethalto"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.helmkampauto.com/rv-repair",
+        "phone_quote": "618-377-6821",
+        "coverage_quotes": [
+          "At Helmkamp Auto Service, we understand the importance of keeping your RV reliable and road-ready at all times.",
+          "Chassis repair and maintenance for engines, transmissions, brakes, suspension, and tires."
+        ],
+        "type_quote": "Gas or diesel, big or small, we repair and maintain brake systems, engines, transmissions, tires, suspensions, pumps, and electronics on all RVs.",
+        "emergency_quote": "Emergency Repairs: Have an issue while traveling? Count on our team to get you back on the road quickly and safely.",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Wandering Star Mobile RV Services LLC",
+      "c": "Pierron, IL",
+      "p": "(618) 420-4273",
+      "u": "https://wanderingstar-rv.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Wandering Star Mobile RV Services LLC is a family-owned mobile RV maintenance and repair business that comes to a customer's home, campground, or storage. Services include roof maintenance, sealant and repairs, air conditioner service and repair, generator service and repair, appliance service and repair, propane systems, wheel bearing and brake service, plumbing, awnings and slideouts. The owners have been RVTAA and NRVIA certified since 2024.",
+      "g": [
+        "mobile",
+        "roof",
+        "generator"
+      ],
+      "base": "Pierron",
+      "areas": [
+        "Pierron"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://wanderingstar-rv.com/",
+        "phone_quote": "((618) 420-4273)",
+        "coverage_quotes": [
+          "We come to your home, campground, or storage",
+          "Certified Inspections & Professional Assessments Roof Maintenance/Sealant/Repairs Detailing and Pressure Washing Air Conditioner service & repair Generator service/repair Appliance service & repair Propane Systems Wheel Bearing/Brake Service Plumbing Awnings Slideouts More..."
+        ],
+        "type_quote": "At Wandering Star RV Services LLC, we are dedicated to providing professional MOBILE RV maintenance and repair services.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Scott’s RV Truck and Auto Repair",
+      "c": "Rockford, IL",
+      "p": "(815) 874-0800",
+      "u": "https://www.scottstruckandauto.com/services/rv-repair-maintenance",
+      "t": "center",
+      "e": false,
+      "r": true,
+      "d": "Scott’s RV Truck and Auto Repair in Rockford, IL provides RV engine repairs, structural inspections, generator work, electrical systems and chassis maintenance. The shop is factory-authorized to repair Onan generators, using manufacturer-approved parts and diagnostic procedures, and performs wheel alignments for RVs. Work is performed at the Rockford facility on 3301 American Rd, serving South Beloit, Machesney Park and Belvidere. Hours are Monday to Friday 7:00 am to 5:00 pm.",
+      "g": [
+        "center",
+        "chassis",
+        "engine",
+        "generator"
+      ],
+      "base": "Rockford",
+      "areas": [
+        "Rockford",
+        "South Beloit",
+        "Machesney Park",
+        "Belvidere"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.scottstruckandauto.com/services/rv-repair-maintenance",
+        "phone_quote": "(815) 874-0800",
+        "coverage_quotes": [
+          "Scott's RV Truck and Auto Repair provides engine repairs, structural inspections, generator work, electrical systems, and chassis maintenance, all performed with care and precision in Rockford, IL, serving customers from South Beloit, IL.",
+          "3301 American Rd"
+        ],
+        "type_quote": "Yes, the shop is factory-authorized to repair Onan generators. Technicians use manufacturer-approved parts and diagnostic procedures to restore reliable power output for your RV's electrical systems.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Sunny Island RV Sales & Service, LLC",
+      "c": "Rockford, IL",
+      "p": "(815) 874-7226",
+      "u": "https://www.sunnyislandrv.com/service-repair-rvs-dealership--service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Sunny Island RV Sales & Service, LLC in Rockford, IL provides professional RV service and repair for motorhomes, travel trailers and fifth wheels. Services include RV inspections and preventative maintenance, oil changes and engine service, tire replacement and wheel bearing service, brake inspections and repairs, collision repair and bodywork, roof repairs and sealant and leak inspections, slide-out service, water heater and furnace service, generator service and diagnostics, and winterization. The shop serves Rockford, Loves Park, Roscoe, Belvidere and the greater Chicago area.",
+      "g": [
+        "center",
+        "body",
+        "roof",
+        "slide-out",
+        "generator"
+      ],
+      "base": "Rockford",
+      "areas": [
+        "Rockford",
+        "Loves Park",
+        "Roscoe",
+        "Belvidere"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.sunnyislandrv.com/service-repair-rvs-dealership--service",
+        "phone_quote": "(815) 874-7226",
+        "coverage_quotes": [
+          "We proudly serve RV owners throughout Rockford, Loves Park, Roscoe, Belvidere, and the greater Chicago area with dependable maintenance, repairs, and seasonal service.",
+          "Our RV repair shop is conveniently located in Rockford, IL, just a short drive from Chicago."
+        ],
+        "type_quote": "At Sunny Island RV Sales & Service, LLC in Rockford, IL, we provide professional RV service and repair to keep your motorhome, travel trailer, or fifth wheel performing at its best.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Winnebago Motor Homes",
+      "c": "Rockford, IL",
+      "p": "(866) 964-5591",
+      "u": "https://winnebagomotorhomes.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Winnebago Motor Homes is a family-owned Rockford, IL dealership, in business since 1967, that offers regular RV maintenance and repairs and body work. It has seven Winnebago-certified service technicians with 76 combined years of experience, certified in Air Conditioning, Furnace, Water Heater, Generator, Refrigerator and Body Repair, working from two service buildings with eight service bays. It specializes in Winnebago and Itasca but services other brands, including a full body shop for reskinning and fiberglass repair.",
+      "g": [
+        "center",
+        "body"
+      ],
+      "base": "Rockford",
+      "areas": [
+        "Rockford"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://winnebagomotorhomes.com/",
+        "phone_quote": "(866) 964-5591 (8669645591)",
+        "coverage_quotes": [
+          "6841 Auburn Street, Rockford, Illinois 61101"
+        ],
+        "type_quote": "Winnebago Motor Homes offers regular RV maintenance and can also help you with repairs and body work. We have 7 service technicians (76 combined years of experience!) that are Winnebago certified. We have 2 service buildings with 8 service bays.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Fourwinds RV",
+      "c": "Maroa, IL",
+      "p": "(217) 794-2292",
+      "u": "https://www.fourwindsrv.com/rv-parts-service-in-illinois",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Fourwinds RV operates an RV service department with Certified RV Technicians factory trained to service travel trailers, fifth wheels, motorhomes and toy haulers, with locations in Maroa and East Peoria, Illinois. The service department handles installations and repairs including hitches, power awnings, entrance steps and tow bar systems, and can take on major insurance repair jobs such as reskinning, rebuilding structure, and roof repair and replacement. Hours at both locations are Monday to Friday 9am to 5pm and Saturday 9am to 4pm.",
+      "g": [
+        "center",
+        "roof"
+      ],
+      "base": "Maroa",
+      "areas": [
+        "Maroa",
+        "East Peoria"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.fourwindsrv.com/rv-parts-service-in-illinois",
+        "phone_quote": "(217) 794-2292 (+12177942292)",
+        "coverage_quotes": [
+          "Stop in today at either location in Maroa and East Peoria to find the RV parts you need or camping accessories for your next trip.",
+          "15277 N. Wood Street Maroa, IL 61756 Phone: (217) 794-2292"
+        ],
+        "type_quote": "Fourwinds can handle major insurance repair jobs such as reskinning, rebuilding structure, and roof repair and replacement.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Black Diamond RV",
+      "c": "Marion, IL",
+      "p": "(618) 899-5043",
+      "u": "https://www.blackdiamondrv.com/service-repair-rvs-dealership--service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Black Diamond RV in Marion, Illinois runs an RV service department staffed with highly-trained technicians to keep motorhomes and trailers in working order. It operates a 28 bay service department open Monday to Saturday, with the equipment and experience to service motorhomes and trailers. Service appointments are available by phone.",
+      "g": [
+        "center"
+      ],
+      "base": "Marion",
+      "areas": [
+        "Marion"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.blackdiamondrv.com/service-repair-rvs-dealership--service",
+        "phone_quote": "(618) 899-5043",
+        "coverage_quotes": [
+          "The Black Diamond RV Service Department is staffed with highly-trained technicians dedicated to making sure your RV stays in great working order for years to come.",
+          "Our huge, 28 bay, service department is open Monday-Saturday."
+        ],
+        "type_quote": "We have the equipment and experience to get your motorhome and trailer in prime shape, and that means more road time for you.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "J & J Camper Sales",
+      "c": "East Moline, IL",
+      "p": "(309) 792-2795",
+      "u": "https://jjcamper.com/service-department/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "J & J Camper Sales in East Moline, IL runs a full-service RV repair and maintenance department, working on campers regardless of where they were bought. Experienced technicians handle routine maintenance to full repairs, warranty work with manufacturers, maintenance and inspections, diagnostics and troubleshooting, part installation and restoration work. The service team is led by a service manager and service tech, and hours are Monday to Friday 8:30am to 5:00pm and Saturday 8:30am to 3:00pm.",
+      "g": [
+        "center"
+      ],
+      "base": "East Moline",
+      "areas": [
+        "East Moline"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://jjcamper.com/service-department/",
+        "phone_quote": "(309) 792-2795",
+        "coverage_quotes": [
+          "Full-service repair and maintenance—no matter where you bought your camper.",
+          "1501 IL-5, East Moline, IL 61244"
+        ],
+        "type_quote": "Our experienced technicians handle everything from routine maintenance to full repairs. Whether you purchased from us or somewhere else, we're here to help get you back on the road with confidence.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Colman's RV",
+      "c": "Springfield, IL",
+      "p": "(217) 793-7300",
+      "u": "https://www.colmansrv.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Colman's RV in Springfield, Illinois runs an RV service department with six service bays, which the site calls the largest service facility between Chicago and St. Louis. Certified technicians bring an RV in for inspection and handle diagnostics and repairs, routine maintenance, winterization and spring startups, fiberglass and gel coat repairs, roof maintenance and repair, generator service and repair, tire work, electrical, slideouts, awning repair, propane refills, plumbing and window repairs. The shop also offers on-site calls at a customer's location and pickup and delivery for a fee.",
+      "g": [
+        "center",
+        "roof",
+        "slide-out",
+        "generator"
+      ],
+      "base": "Springfield",
+      "areas": [
+        "Springfield"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.colmansrv.com/rv-service",
+        "phone_quote": "(217) 793-7300",
+        "coverage_quotes": [
+          "With six service bays, we are the largest service facility between Chicago and St. Louis.",
+          "Our nearly 15,000 square feet of space dedicated to servicing new and used RVs makes us the largest service facility in Central Illinois, if not the entire state."
+        ],
+        "type_quote": "Bring your RV in for an inspection before you hit the road, and our certified technicians will make sure everything is perfect.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Collier RV",
+      "c": "Rockford, IL",
+      "p": "(815) 317-3507",
+      "u": "https://www.collierrv.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Collier RV runs a service department from two Illinois locations in Rockford and Wadsworth, with over 60 years in the RV industry and a team of certified technicians. It has 24 combined service bays including a wash bay with a rain booth to test for leaks, and services any type of RV from pop-up campers to diesel pushers, even if it was not bought from them. Additional services include windshield replacement, body damage repairs, solar upgrades, tankless water heater upgrades, tire and suspension upgrades, hitch installation and weight distribution and sway control. The site states Collier RV does not offer mobile RV service.",
+      "g": [
+        "center",
+        "body"
+      ],
+      "base": "Rockford",
+      "areas": [
+        "Rockford",
+        "Wadsworth"
+      ],
+      "region": null,
+      "spec": "While we do not offer mobile RV service at Collier RV",
+      "evidence": {
+        "checked": "https://www.collierrv.com/rv-service",
+        "phone_quote": "Service: (815) 317-3507 (815-317-3507)",
+        "coverage_quotes": [
+          "Welcome to Collier RV’s Service Department, proudly serving you from our two convenient locations in Rockford and Wadsworth, Illinois.",
+          "If your RV needs service, we’ll work on it – even if you didn’t buy it from us!"
+        ],
+        "type_quote": "Our service departments at both locations are fully equipped to service any type of RV from pop-up campers to diesel pushers and everything in between, including travel trailers, fifth wheels, toy haulers, class A motorhomes, class B motorhomes, and class C motorhomes.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Phillips RV Sales",
+      "c": "Bourbonnais, IL",
+      "p": "815-933-2251",
+      "u": "https://www.phillipsrvsales.com/rv-service-champaign",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Phillips RV Sales, based in Bourbonnais, IL, runs a state-of-the-art RV service center that can house a recreational vehicle for repairs. Its factory trained and certified technicians service motorhomes and travel trailers, and the dealership also sells RV parts with online ordering. The service page targets RV owners in Champaign and the surrounding area.",
+      "g": [
+        "center"
+      ],
+      "base": "Bourbonnais",
+      "areas": [
+        "Champaign"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.phillipsrvsales.com/rv-service-champaign",
+        "phone_quote": "815-933-2251",
+        "coverage_quotes": [
+          "1400 Locke Dr\nBourbonnais, IL",
+          "When you own anRVin Champaign you have to maintain it."
+        ],
+        "type_quote": "Our dealership has a state-of-the-art service center that can house your recreational vehicle for repairs.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Airstream of Chicago",
+      "c": "Naperville, IL",
+      "p": "815-726-1900",
+      "u": "https://www.airstreamchicago.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Airstream of Chicago, at 9740 South Route 59 in Naperville, runs an RV service department with factory trained technicians, many holding RVIA certification, and will service any make or model. Services include RV express items, roof inspections, cleaning, repair, sealing and replacement, a free courtesy inspection, a body shop with fiberglass and structure repair, metal fabricating and painting, and general RV service such as winterizations, generator service, A/C service, appliance service and LP inspection. The shop offers a shuttle service or RV pickup for customers who cannot wait.",
+      "g": [
+        "center",
+        "body",
+        "roof"
+      ],
+      "base": "Naperville",
+      "areas": [
+        "Naperville"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.airstreamchicago.com/rv-service",
+        "phone_quote": "815-726-1900",
+        "coverage_quotes": [
+          "9740 South Route 59 Naperville, IL 60564",
+          "the capable team at Airstream of Chicago is here for you and able to service any make or model."
+        ],
+        "type_quote": "Our techs are factory trained and many have earned the prestigious RVIA certification.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Cliff's Auto Body & RV",
+      "c": "Maple Park, IL",
+      "p": "(630) 608-2712",
+      "u": "https://www.cliffsbodyshop.net/rv-repair",
+      "t": "center",
+      "e": true,
+      "r": false,
+      "d": "Cliff's Auto Body & RV in Maple Park, IL is a locally owned, family-run, women-owned business specializing in RV repair, boat repair and auto body repair. The team handles RV collision and fiberglass repair, gelcoat restoration and custom painting, and works with insurance companies on the paperwork. It offers a lifetime warranty on parts, labor and materials for the original owner and same-day service for emergencies. Hours are Monday to Friday 8:00 am to 5:00 pm.",
+      "g": [
+        "body",
+        "collision"
+      ],
+      "base": "Maple Park",
+      "areas": [
+        "Maple Park"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.cliffsbodyshop.net/rv-repair",
+        "phone_quote": "(630) 608-2712",
+        "coverage_quotes": [
+          "We're located in Maple Park, IL and ready to repair your RV.",
+          "Located in Maple Park, IL. Cliff's Auto Body & RV specializes in RV repair, boat repair, auto body repair and more."
+        ],
+        "type_quote": "Our team is ready to assist you with all your repair needs, from collision and fiberglass repair to gelcoat restoration and custom painting.",
+        "emergency_quote": "Same-Day Service for Emergencies",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Kelso Auto & RV Collision Center",
+      "c": "Belleville, IL",
+      "p": "618-277-0710",
+      "u": "https://kelsoautobody.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Kelso Auto & RV Collision Center in Belleville, IL is a collision repair shop with more than 75 years serving the Belleville area, offering full-service RV, auto body and boat repair. For RVs and campers it does body repair, water damage, roof replacement and blowout repairs. It handles auto body collision repair, paint repair, paintless dent removal and hail damage, and works as an insurance claims specialist. Hours are Monday to Friday 8AM to 5PM.",
+      "g": [
+        "body",
+        "collision",
+        "roof"
+      ],
+      "base": "Belleville",
+      "areas": [
+        "Belleville"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://kelsoautobody.com/",
+        "phone_quote": "618-277-0710 (+16182770710)",
+        "coverage_quotes": [
+          "Our team are the ones to call for full-service RV, auto body, & boat repair services in Belleville, IL",
+          "700 Sherman St Belleville, IL 62221"
+        ],
+        "type_quote": "At Kelso Auto & RV Collision Center, our team of expert technicians is fully equipped with the latest tools and knowledge to address all types of collision damage, guaranteeing top-quality care for your vehicle.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Mid-State Camper Sales",
+      "c": "Vandalia, IL",
+      "p": "(618) 283-4396",
+      "u": "https://www.midstatecampersales.com/parts-rvs-dealership--parts",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Mid-State Camper Sales is a family-owned RV dealer in Vandalia, Illinois, carrying new and used RVs with parts and service departments. It stocks a large selection of appliance repair parts and maintenance parts, and its service technicians provide professional installation of the parts and accessories it offers. The dealership serves Vandalia and nearby towns including St. Elmo, Centralia, Salem and Ramsey.",
+      "g": [
+        "center"
+      ],
+      "base": "Vandalia",
+      "areas": [
+        "Vandalia",
+        "St. Elmo",
+        "Centralia",
+        "Salem",
+        "Ramsey"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.midstatecampersales.com/parts-rvs-dealership--parts",
+        "phone_quote": "(618) 283-4396",
+        "coverage_quotes": [
+          "1103 US 40 Vandalia, IL 62471",
+          "Mid-State Camper Sales - New & Used RVs Sales, Service, and Parts in Vandalia, IL, near St. Elmo, Centralia, Salem and Ramsey"
+        ],
+        "type_quote": "We stock a good selection of appliance repair parts. Our service technicians can provide professional installation of the parts and accessories we offer.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Meyers Auto Body",
+      "c": "Waukegan, IL",
+      "p": "1-847-263-6577",
+      "u": "https://www.meyersautobody.com/page-1",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Meyers Auto Body, also called Meyers RV Body and Paint, is a local family-owned repair facility in Waukegan, IL serving Lake and surrounding counties for 35 years. Founded in 1984, it began taking in RVs for minor repairs and in 2010 decided to become an RV repair facility; today its work consists primarily of RVs and coach buses. Its primary service is body and paint repair on fiberglass, aluminum, steel and plastic, and it repairs, reseals and replaces EPDM, TPO, fiberglass and aluminum roofs, and works on awnings and air conditioners. It is Aquahot certified.",
+      "g": [
+        "body",
+        "roof",
+        "collision"
+      ],
+      "base": "Waukegan",
+      "areas": [
+        "Waukegan"
+      ],
+      "region": "Lake and surrounding counties",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.meyersautobody.com/page-1",
+        "phone_quote": "1-847-263-6577",
+        "coverage_quotes": [
+          "Local family owned repair facility serving Lake and surrounding counties (and then some) for 35 years.",
+          "64 Noll St. Waukegan, IL. 60085"
+        ],
+        "type_quote": "We started to be referred for motorhome repairs and in 2010, we decided to morph into an RV repair facility. While we still repair daily drivers and commercial equipment, our work these days consists primarily of RV's and Coach Buses.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "The RV Doctor",
+      "c": "Sublette, IL",
+      "p": "(815) 849-5924",
+      "u": "http://rvdoctor.net/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "The RV Doctor is an RV repair business at 1914 Tower Rd. in Sublette, IL, with a mailing address of P.O. Box 197. The site publishes its phone and fax numbers and email, and the business is listed as a warranty repair station offering mobile RV service. Hours are weekdays 9:00 a.m. to 6:00 p.m.",
+      "g": [
+        "center",
+        "mobile"
+      ],
+      "base": "Sublette",
+      "areas": [
+        "Sublette"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "http://rvdoctor.net/",
+        "phone_quote": "(815)-849-5924",
+        "coverage_quotes": [
+          "RV DOCTOR P.O. Box 197 1914 Tower Rd. Sublette, IL 61367",
+          "Email: rvdoctor@rvdoctor.net (rvdoctor@starband.net)"
+        ],
+        "type_quote": "THE RV DOCTOR HOMEPAGE",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "John's Paint & Body",
+      "c": "Lexington, IL",
+      "p": "309.365.2221",
+      "u": "https://www.johnsbodyshop.com/rv/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "John's Paint & Body in Lexington, IL has over 40 years of experience providing repairs, maintenance and painting for fleets and individually owned RVs, buses and semis. It is an authorized warranty center for all makes and models and guarantees its work. RV repairs include complete refinishing, fiberglass repair, luan/filon replacements and re-seam sealing and caulking. RV painting uses one of the only factory replicated 50-foot paint booths in McLean County.",
+      "g": [
+        "body",
+        "roof"
+      ],
+      "base": "Lexington",
+      "areas": [
+        "Lexington"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.johnsbodyshop.com/rv/",
+        "phone_quote": "309.365.2221",
+        "coverage_quotes": [
+          "John’s has over 40 years of experience providing repairs, maintenance, and painting for fleets and individually owned RVs, buses, and semis.",
+          "310 S. Grove St. Lexington, IL 61753"
+        ],
+        "type_quote": "No shop can take care of your RV like John’s Paint and Body.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    }
+  ]
+}

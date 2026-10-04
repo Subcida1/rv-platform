@@ -60,6 +60,16 @@ def census_keys(name, lsad=None):
         alt = canonical(m.group(1), census_name=True, lsad=lsad)
         if alt and alt not in out:
             out.append(alt)
+    # A PARENTHETICAL IS NOT ALWAYS AN ALTERNATIVE NAME. The Census writes a consolidated
+    # city as "Indianapolis city (balance)", and there "(balance)" is a census term, not
+    # another name for the place -- so the rule above produced only "balance" as the
+    # alternative and the largest city in Indiana resolved to nothing. Found 2026-10-04 by
+    # the coordinate check on the first Indiana records. Strip the term and keep the name.
+    bare = re.sub(r"\s*\(balance\)\s*", " ", name, flags=re.I)
+    if bare != name:
+        k = canonical(bare, census_name=True, lsad=lsad)
+        if k and k not in out:
+            out.append(k)
     if "-" in name:
         head = canonical(name.split("-")[0], census_name=True, lsad=None)
         if len(head) >= 4 and head not in out:

@@ -232,6 +232,37 @@ PHOTOS += [
 ]
 
 
+# Added 2026-10-04 with the Great Lakes expansion. Licences read off each file's own
+# Commons description page.
+PHOTOS += [
+    ("michigan",
+     "Sleeping Bear Dune Aerial View.jpg",
+     "Public domain (National Park Service)", "National Park Service",
+     "https://commons.wikimedia.org/wiki/File:Sleeping_Bear_Dune_Aerial_View.jpg",
+     "An aerial view of Sleeping Bear Dunes, Michigan"),
+    ("ohio",
+     "HockingHillsAshCave.jpg",
+     "Public domain (released by the author)", "Ramseybuckeye",
+     "https://commons.wikimedia.org/wiki/File:HockingHillsAshCave.jpg",
+     "Ash Cave in Hocking Hills, Ohio"),
+    ("indiana",
+     "Gfp-indiana-dunes-national-lakeshore-hilly-landscape.jpg",
+     "Public domain (released by the author)", "Yinan Chen",
+     "https://commons.wikimedia.org/wiki/File:Gfp-indiana-dunes-national-lakeshore-hilly-landscape.jpg",
+     "The Indiana Dunes along Lake Michigan, Indiana"),
+    ("illinois",
+     "Garden of the gods southern Illinois panorama.jpg",
+     "Public domain (released by the author)", "Melvin Spence",
+     "https://commons.wikimedia.org/wiki/File:Garden_of_the_gods_southern_Illinois_panorama.jpg",
+     "The Garden of the Gods in Shawnee National Forest, Illinois"),
+    ("wisconsin",
+     "Apostle Islands-Raspberry Island.jpg",
+     "Public domain (Wisconsin Division of Tourism)", "Wisconsin Division of Tourism",
+     "https://commons.wikimedia.org/wiki/File:Apostle_Islands-Raspberry_Island.jpg",
+     "Raspberry Island in the Apostle Islands, Wisconsin"),
+]
+
+
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     credits = ["# State tile photo credits", "",

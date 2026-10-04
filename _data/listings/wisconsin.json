@@ -1,0 +1,867 @@
+{
+  "state": "WI",
+  "name": "Wisconsin",
+  "regions": [
+    {
+      "key": "southeast-wi",
+      "label": "Milwaukee and the southeast"
+    },
+    {
+      "key": "south-central-wi",
+      "label": "Madison and the south central"
+    },
+    {
+      "key": "west-wi",
+      "label": "Eau Claire and the west"
+    },
+    {
+      "key": "central-wi",
+      "label": "Wausau, Wisconsin Rapids and the middle"
+    },
+    {
+      "key": "northwoods-wi",
+      "label": "The northwoods and Door County"
+    }
+  ],
+  "region_of": {
+    "Hales Corners": "southeast-wi",
+    "Sturtevant": "southeast-wi",
+    "West Bend": "southeast-wi",
+    "Baraboo": "south-central-wi",
+    "DeForest": "south-central-wi",
+    "Arkansaw": "west-wi",
+    "Chippewa Falls": "west-wi",
+    "Eau Claire": "west-wi",
+    "Menomonie": "west-wi",
+    "New Richmond": "west-wi",
+    "West Salem": "west-wi",
+    "Antigo": "central-wi",
+    "Wausau": "central-wi",
+    "Wisconsin Rapids": "central-wi",
+    "New Auburn": "central-wi",
+    "Greenleaf": "central-wi",
+    "Eagle River": "northwoods-wi",
+    "Minong": "northwoods-wi",
+    "Rhinelander": "northwoods-wi",
+    "Washburn": "northwoods-wi",
+    "Woodruff": "northwoods-wi",
+    "Egg Harbor": "northwoods-wi"
+  },
+  "listings": [
+    {
+      "n": "Elite RV",
+      "c": "Central Wisconsin, WI",
+      "p": "(920) 979-2313",
+      "u": "https://www.elitervwi.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Elite RV describes itself as Central Wisconsin's premiere on-location camper repair service, with over 10 years of experience in camper repair and service. It works on travel trailers, park models, fifth wheels, toy haulers and RVs, and offers RV roof repair and replacement as well as custom repair, done on-site or in its shop when larger projects require it. It states that it provides professional mobile RV repairs, maintenance and inspections throughout central Wisconsin.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": null,
+      "areas": [],
+      "region": "Central Wisconsin",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.elitervwi.com/",
+        "phone_quote": "(920) 979-2313",
+        "coverage_quotes": [
+          "Professional mobile RV repairs, maintenance and inspections throughout central Wisconsin."
+        ],
+        "type_quote": "Elite RV is Central Wisconsin’s premiere on-location camper repair service.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      },
+      "reg": "central-wi"
+    },
+    {
+      "n": "On Scene RV Service Llc",
+      "c": "Egg Harbor, WI",
+      "p": "1-888-606-7301",
+      "u": "https://www.onscenerv.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "On Scene RV Service LLC is a mobile RV service based in Egg Harbor that serves Door County and northeastern Kewaunee County, Wisconsin. It services and repairs fifth wheels, travel trailers, toy haulers and pop up campers, and can also repair and service non-motorized parts of motorhomes. It offers preventative maintenance, mobile RV washing and RV orientation walk-throughs, and says it is certified through the National RV Training Academy.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Egg Harbor",
+      "areas": [
+        "Egg Harbor"
+      ],
+      "region": "Door County",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.onscenerv.com/",
+        "phone_quote": "1-888-606-7301",
+        "coverage_quotes": [
+          "Currently serving Door County and North Eastern Kewaunee County, Wisconsin"
+        ],
+        "type_quote": "We service and repair fifth wheels, travel trailers, toy haulers, and pop up campers. We can also repair and service non-motorized parts of motorhomes.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Mobile Mike's RV Service & Repair",
+      "c": "Central/Southern Wisconsin, WI",
+      "p": "(608) 494-0516",
+      "u": "https://www.mobilemikesllc.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Mobile Mike's RV Service & Repair is a family-owned mobile RV service whose certified technicians travel to the customer, with a service area it lists across central and southern Wisconsin. Its listed communities include Baraboo, Portage, Wisconsin Dells, Mauston, Montello, Nekoosa and Wautoma, among many others. It says it is fully insured and a BBB Accredited Business, and asks customers to call or text.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": null,
+      "areas": [
+        "Baraboo",
+        "Portage",
+        "Wisconsin Dells",
+        "Mauston",
+        "Montello",
+        "Nekoosa",
+        "Wautoma"
+      ],
+      "region": "central/southern Wisconsin",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.mobilemikesllc.com/",
+        "phone_quote": "(608) 494-0516",
+        "coverage_quotes": [
+          "Our certified technicians are ready to serve you...wherever you may be! Our current, central/southern Wisconsin service area:"
+        ],
+        "type_quote": "Keep doing what you love. We'll come to you!",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      },
+      "reg": [
+        "central-wi",
+        "south-central-wi"
+      ]
+    },
+    {
+      "n": "Mobile RV Rescue",
+      "c": "New Richmond, WI",
+      "p": "715-203-5102",
+      "u": "https://www.mobilervrescue.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Mobile RV Rescue provides professional on-site RV repair and inspection services for travel trailers, fifth wheels and motorhomes, with no towing and no shop drop-offs. It operates primarily in Western Wisconsin and Eastern Minnesota from April to December, and seasonally in Apache Junction, Arizona from January to March. Services include electrical and battery systems, air conditioners and furnaces, plumbing and water heaters, slideouts and awnings, and solar consultations and installations.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "New Richmond",
+      "areas": [
+        "New Richmond"
+      ],
+      "region": "Western Wisconsin & Eastern Minnesota",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.mobilervrescue.com/",
+        "phone_quote": "715-203-5102",
+        "coverage_quotes": [
+          "Serving Western Wisconsin & Eastern Minnesota (April – December)"
+        ],
+        "type_quote": "Mobile RV Rescue provides professional on-site RV repair and inspection services for travel trailers, fifth wheels, and motorhomes.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Integrity 1st RV Service",
+      "c": "Madison, WI",
+      "p": "(608) 925-2076",
+      "u": "https://integrity1strvservice.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Integrity 1st RV Service is a veteran-owned mobile RV repair business that serves the greater Madison area. It brings the technician to the customer's home or campsite and offers testing, cleaning, repairs and replacement of A/C, furnace, generator, water heater, plumbing, leveling and stabilization systems, refrigeration and awnings, plus winterization and de-winterization. It works on Class A, B and C motorhomes, fifth wheels, travel trailers and horse trailers with living quarters.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": null,
+      "areas": [
+        "Madison"
+      ],
+      "region": "greater Madison area",
+      "spec": null,
+      "evidence": {
+        "checked": "https://integrity1strvservice.com/",
+        "phone_quote": "Text: (608) 925-2076",
+        "coverage_quotes": [
+          "After discovering firsthand the lack of Mobile RV Repair and Services in the greater Madison area"
+        ],
+        "type_quote": "We offer Mobile RV Repair and Services for your motorhome or travel trailer wherever you might be - at home or at your campsite!",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      },
+      "reg": "south-central-wi"
+    },
+    {
+      "n": "Amundson RV Onsite Service and Repair",
+      "c": "Menomonie, WI",
+      "p": "715-556-9669",
+      "u": "https://amundsonrv.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Amundson RV Onsite Service and Repair provides on-site RV repair and service in Northwestern Wisconsin, working at the customer's home or campground. It lists repairs for leaks and sealant, LP systems, AC, refrigeration, furnace, water heater, roof inspection and sealing, roof replacements, electrical, plumbing and slide outs. It says it is an authorized service center for brands including Dometic, Coleman, Suburban, Solera, LCI, Norcold, Carefree, Atwood, Schwintek slides and Power Gear.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Menomonie",
+      "areas": [
+        "Menomonie"
+      ],
+      "region": "Northwestern Wisconsin",
+      "spec": "We are not able to transport campers from one campground to another.",
+      "evidence": {
+        "checked": "https://amundsonrv.com/",
+        "phone_quote": "Cory Amundson 715-556-9669",
+        "coverage_quotes": [
+          "Serving Northwestern Wisconsin for all RV repair"
+        ],
+        "type_quote": "Providing onsite service and RV repair",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "White Dogs RV Service",
+      "c": "Washburn, WI",
+      "p": "715-979-1204",
+      "u": "https://whitedogs.us/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "White Dogs RV Service is a mobile RV service based in Washburn, Wisconsin, offering maintenance and repair, walk-throughs and education, consultations and RV inspections. It is run by Jim Park, who holds Certified NRVIA RV Inspector and Certified RVTAA RV Technician credentials. The site lists maintenance and repair among its services and notes the technician is an Aqua-Hot Service Technician.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Washburn",
+      "areas": [
+        "Washburn"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://whitedogs.us/contact",
+        "phone_quote": "715-979-1204",
+        "coverage_quotes": [
+          "25500 Wannebo Road, Washburn WI 54891"
+        ],
+        "type_quote": "We offer: Maintenance and Repair",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Circle B RV and Trailer",
+      "c": "West Bend, WI",
+      "p": "262-208-5112",
+      "u": "https://www.circlebrv.com/",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "Circle B RV and Trailer, formerly The RV Guy LLC, is a family-owned RV and trailer repair business in West Bend serving southeastern Wisconsin. It offers in-shop services year round as well as mobile services, and lists roof maintenance and replacements, storm and accident repairs, electrical diagnosis and repair, slide system maintenance, awning repair, brakes, suspension, axles and bearings, appliance repair and plumbing. It says it works with the customer, insurance or warranty company.",
+      "g": [
+        "mobile tech",
+        "service center"
+      ],
+      "base": "West Bend",
+      "areas": [
+        "West Bend"
+      ],
+      "region": "SE Wisconsin",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.circlebrv.com/",
+        "phone_quote": "262-208-5112",
+        "coverage_quotes": [
+          "We here at Circle B Rv and Trailer are a Family Owned and Operated company in SE Wisconsin."
+        ],
+        "type_quote": "In shop services offered year round as well as mobile services (Weather Permitting)",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Pauls Trailer and RV Center",
+      "c": "Greenleaf, WI",
+      "p": "920-864-3400",
+      "u": "https://www.ptrv.net/rv-dealer/repair",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "Pauls Trailer and RV Center describes itself as one of the largest and most trusted RV service centers in Northeast Wisconsin, delivering repairs, maintenance and diagnostics for all makes and models. Its technicians service travel trailers, campers, motorhomes and toy haulers, and it also offers mobile RV repair at a campground, storage facility or roadside. It serves Northeast Wisconsin and asks customers to complete a repair form or call to schedule.",
+      "g": [
+        "mobile tech",
+        "service center"
+      ],
+      "base": "Greenleaf",
+      "areas": [
+        "Greenleaf"
+      ],
+      "region": "Northeast Wisconsin",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.ptrv.net/rv-dealer/repair",
+        "phone_quote": "920-864-3400",
+        "coverage_quotes": [
+          "RV and Trailer Repair Services in Northeast Wisconsin"
+        ],
+        "type_quote": "Pauls Trailer and RV Center operates one of the largest and most trusted RV service centers in Northeast Wisconsin, delivering professional repairs, maintenance, and diagnostics for all makes and models.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Murphy's On-Site RV Repair",
+      "c": "Wisconsin Rapids, WI",
+      "p": "715-325-2950",
+      "u": "https://murphysonsite.com/",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "Murphy's On-Site RV Repair has served Central Wisconsin RV owners since 2006 with both shop service and field service from Wisconsin Rapids. It provides electrical and plumbing repairs, appliance troubleshooting, HVAC service, slide-out and leveling system fixes, roof maintenance and awning service, and offers spring start-up and winterization. It says it has 6 or more expert technicians and works on campers and travel trailers.",
+      "g": [
+        "mobile tech",
+        "service center"
+      ],
+      "base": "Wisconsin Rapids",
+      "areas": [
+        "Wisconsin Rapids"
+      ],
+      "region": "Central Wisconsin",
+      "spec": null,
+      "evidence": {
+        "checked": "https://murphysonsite.com/",
+        "phone_quote": "715-325-2950",
+        "coverage_quotes": [
+          "Serving Central Wisconsin since 2006, Murphy's On-Site supports RV owners in the shop and in the field"
+        ],
+        "type_quote": "We provide a full range of shop and field RV repair services, including electrical and plumbing repairs, appliance troubleshooting, HVAC service, slide-out and leveling system fixes, roof maintenance, and more.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Link RV",
+      "c": "Minong, WI",
+      "p": "715-719-0829",
+      "u": "https://www.linkrvdirect.com/wisconsin-rvs/our-services",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "Link RV, also called Link RV Center in Minong, operates what it calls the largest RV service facility in Northern Wisconsin, with a 17,500 square foot work space that can lift motorhomes, travel trailers and fifth wheels. It works on diesel motorhomes and offers bumper-to-bumper service including diesel engine repair, appliances, electrical, heating and cooling, plumbing and roof work. It also runs a mobile service department with two work vans.",
+      "g": [
+        "mobile tech",
+        "service center"
+      ],
+      "base": "Minong",
+      "areas": [
+        "Minong"
+      ],
+      "region": "Northern Wisconsin",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.linkrvdirect.com/wisconsin-rvs/our-services",
+        "phone_quote": "715-719-0829",
+        "coverage_quotes": [
+          "Link RV is the largest RV Service facility in Northern WI"
+        ],
+        "type_quote": "Link RV is also the only RV Dealer in northern Wisconsin with the ability to lift Fifth Wheels, Travel Trailers, and Motorhomes.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Greeneway RV",
+      "c": "Wisconsin Rapids, WI",
+      "p": "715-325-5170",
+      "u": "https://www.greenewayrv.com/wisconsin-rv-sales/service--repair",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "Greeneway RV is a family-owned Wisconsin Rapids RV dealer whose service and repair center is staffed by RVTI Certified Technicians. It offers a full range of repairs for campers, fifth-wheels, motorhomes, toy haulers and travel trailers, including work with insurance companies, warranty coverage and pre-trip inspections. It says it offers mobile repair service anywhere in the state of Wisconsin and has the most RVTI Certified Technicians under a single roof in Wisconsin.",
+      "g": [
+        "mobile tech",
+        "service center"
+      ],
+      "base": "Wisconsin Rapids",
+      "areas": [
+        "Wisconsin Rapids"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.greenewayrv.com/wisconsin-rv-sales/service--repair",
+        "phone_quote": "715-325-5170",
+        "coverage_quotes": [
+          "Offering mobile repair service anywhere in the state of Wisconsin."
+        ],
+        "type_quote": "We offer a full range of services at our RV maintenance and repair center.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Custom RV Services",
+      "c": "DeForest, WI",
+      "p": "(608) 241-1412",
+      "u": "https://www.customrvservices.com/body-repair-work",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Custom RV Services is a full-service RV body work and repair company in DeForest, Wisconsin, that restores RVs after accidents or weather damage. It repairs hail damage, roofs, awnings, windows, windshields and glass, slide-outs and fiberglass, and can fabricate metal and compartment doors and door frames. It offers custom color matching, custom paint, decals and striping, and works with customers and their insurance companies.",
+      "g": [
+        "body shop"
+      ],
+      "base": "DeForest",
+      "areas": [
+        "DeForest"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.customrvservices.com/body-repair-work",
+        "phone_quote": "(608) 241-1412",
+        "coverage_quotes": [
+          "Located in DeForest, Wisconsin, our shop can fabricate anything missing"
+        ],
+        "type_quote": "At Custom RV Services, we are a fully-service body work and repair company that goes to great length to bring your RV back to life after accidents happen or mother nature strikes.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Kings Campers",
+      "c": "Wausau, WI",
+      "p": "715-355-5556",
+      "u": "https://www.kingscampers.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Kings Campers is an RV dealer in Wausau whose service department provides RV service and repairs, from minor fixes to major repairs. Its technicians are certified to complete warranty service for brands including Alliance, Coachmen, Forest River, KZ, Thor Motor Coach, Tiffin, Winnebago, Grand Design and ModBug. It is also certified to service and install Aqua-Hot/Hydro-Hot systems, Lippert, Schwintec, Truma and other components, and installs fifth wheel hitches, brake controls and sway bars.",
+      "g": [
+        "service center"
+      ],
+      "base": "Wausau",
+      "areas": [
+        "Wausau"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.kingscampers.com/rv-service",
+        "phone_quote": "715-355-5556",
+        "coverage_quotes": [
+          "RV Service & Repairs near Wausau, WI"
+        ],
+        "type_quote": "Kings Campers provides top-quality RV service to get you back on the road.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Ewald's Airstream of Wisconsin",
+      "c": "Hales Corners, WI",
+      "p": "414-376-8438",
+      "u": "https://www.ewaldsairstream.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Ewald's Airstream of Wisconsin runs a service center in Hales Corners staffed by RVIA-certified technicians. Its services include winterizations and spring openings, brake and axle work, lighting repairs, electrical system maintenance, appliance servicing, water system checks, furnace and generator maintenance and A/C services, plus body shop repairs, flooring restoration, roof inspections and collision services. It serves drivers throughout Milwaukee and the surrounding area.",
+      "g": [
+        "service center",
+        "body shop"
+      ],
+      "base": "Hales Corners",
+      "areas": [
+        "Hales Corners",
+        "Milwaukee",
+        "Greenfield",
+        "Greendale",
+        "Franklin"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.ewaldsairstream.com/rv-service",
+        "phone_quote": "Phone: 414-376-8438",
+        "coverage_quotes": [
+          "We proudly serve drivers throughout Milwaukee and beyond"
+        ],
+        "type_quote": "For structural and cosmetic needs, we provide body shop repairs, flooring restoration, roof inspections, and collision services—all completed with careful attention to detail and long-term durability in mind.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "J & J RV Maintenance & Repair Services",
+      "c": "Eau Claire, WI",
+      "p": "715-720-8720",
+      "u": "https://www.jandjrv.com/repair.php",
+      "t": "center",
+      "e": false,
+      "r": true,
+      "d": "J & J RV Maintenance & Repair Services is an RV repair shop serving the Chippewa Falls and Eau Claire area, with quality, experienced and factory trained technicians. Its stated scope runs from engines, transmissions and drive lines to heating and air conditioning systems, generators and electrical work. It also lists trailer hitches, fifth wheel mounts, brake controls, sway control, refrigeration, plumbing, appliances, winterizing and roof repair and replacement.",
+      "g": [
+        "service center",
+        "chassis"
+      ],
+      "base": "Eau Claire",
+      "areas": [
+        "Eau Claire",
+        "Chippewa Falls"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.jandjrv.com/repair.php",
+        "phone_quote": "715-720-8720",
+        "coverage_quotes": [
+          "J & J RV Maintenance & Repair Services is your first choice in the Chippewa Falls & Eau Claire Wisconsin Area"
+        ],
+        "type_quote": "From engines, transmissions, & drive lines to heating / air conditioning systems, generators & electrical we can provide these services and more to maintain your RV and make your family outings trouble free and fun.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Eagle Country RV",
+      "c": "Eagle River, WI",
+      "p": "715-479-4401",
+      "u": "https://www.eaglecountryrv.com/service-department",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Eagle Country RV is an RV dealership in Eagle River whose service department is staffed with trained technicians who keep motorhomes and trailers in working order. It says it has the equipment and experience to get a motorhome and trailer in prime shape, and serves the Eagle River area with travel trailers, fifth wheels and motorhomes. It asks customers to call 715-337-2437 to schedule service.",
+      "g": [
+        "service center"
+      ],
+      "base": "Eagle River",
+      "areas": [
+        "Eagle River"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.eaglecountryrv.com/service-department",
+        "phone_quote": "715-479-4401",
+        "coverage_quotes": [
+          "We are proud to provide quality service in the Eagle River area."
+        ],
+        "type_quote": "Our service department is staffed with highly trained technicians dedicated to making sure your RV stays in great working order for years to come.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Brickner's of Antigo RV Center",
+      "c": "Antigo, WI",
+      "p": "715-623-3935",
+      "u": "https://www.bricknersofantigorvcenter.com/rv-service",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "Brickner's of Antigo RV Center has a service department that services all makes and models and offers mobile service for convenience. Its listed work includes wheel bearing repacking, resealing of roof or body, appliance repair, electrical and plumbing repairs, extensive body repair with roofs, floors, walls and windows, awnings and hardware, flooring and cabinetry, winterization and de-winterization, roof repair and replacement, and A/C repair. It also notes Saturday repairs by appointment and that it is an authorized Blue Ox tow accessory dealer.",
+      "g": [
+        "mobile tech",
+        "service center",
+        "body shop"
+      ],
+      "base": "Antigo",
+      "areas": [
+        "Antigo"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.bricknersofantigorvcenter.com/rv-service",
+        "phone_quote": "715-623-3935",
+        "coverage_quotes": [
+          "Brickner's Full RV Service & Repair will get you back on the road in no-time."
+        ],
+        "type_quote": "Service for all makes and models",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "PleasureLand RV Center",
+      "c": "West Salem, WI",
+      "p": "608-786-2244",
+      "u": "https://www.pleasurelandrv.com/locations/west-salem-wi",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "PleasureLand RV Center's La Crosse location in West Salem has a full RV service center with multiple service bays and RVIA-certified technicians. Common services include maintenance, inspections, diagnostics, appliance repair, electrical repair, plumbing repair, hitch and towing equipment installation, and trailer tire mounting and balancing. It serves customers from La Crosse, Onalaska, Holmen, Sparta, Tomah, Winona, Rochester and Eau Claire.",
+      "g": [
+        "service center"
+      ],
+      "base": "West Salem",
+      "areas": [
+        "West Salem",
+        "La Crosse",
+        "Onalaska",
+        "Holmen",
+        "Sparta",
+        "Tomah"
+      ],
+      "region": "Coulee Region",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.pleasurelandrv.com/locations/west-salem-wi",
+        "phone_quote": "608-786-2244",
+        "coverage_quotes": [
+          "PleasureLand RV Center in La Crosse serves customers throughout western Wisconsin, southeastern Minnesota, and northeastern Iowa."
+        ],
+        "type_quote": "This dealership is equipped with a full RV service center and multiple service bays to handle routine maintenance and more advanced repairs.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Markquart RV - Hallie",
+      "c": "Chippewa Falls, WI",
+      "p": "(715) 723-5380",
+      "u": "https://www.markquartrvhallie.com/rv-service",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "Markquart RV - Hallie is an RV dealership in Chippewa Falls whose service department repairs campers and motorhomes in the Eau Claire area, with RVTI-certified technicians who have manufacturer-specific training. It services travel trailers, fifth wheels, toy haulers and motorhomes, and offers mobile RV repair at campgrounds, private land and homes. It states it does not complete chassis work on motorized RVs but can refer customers to a maintenance center that does.",
+      "g": [
+        "mobile tech",
+        "service center"
+      ],
+      "base": "Chippewa Falls",
+      "areas": [
+        "Chippewa Falls",
+        "Eau Claire"
+      ],
+      "region": "Chippewa Valley",
+      "spec": "Markquart RV at Hallie does not complete chassis work on motorized RVs, but can refer customers to a maintenance center that does.",
+      "evidence": {
+        "checked": "https://www.markquartrvhallie.com/rv-service",
+        "phone_quote": "(715) 723-5380",
+        "coverage_quotes": [
+          "This dedication has made the Markquart RV – Hallie Service Department a trusted destination for RV service near Eau Claire, the Chippewa Valley, and beyond."
+        ],
+        "type_quote": "Mobile RV Repair is offered at campgrounds, private land, and homes.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Mr Fixit RV",
+      "c": "New Auburn, WI",
+      "p": "(715) 967-2266",
+      "u": "http://mrfixit-rv.com/",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "Mr Fixit RV is a family-owned and operated RV business in New Auburn, in business for over 44 years. It offers complete interior and exterior rebuilds, a complete parts department with new and used parts, mobile service, and pick up and delivery. It also sells and rents used RVs and transports pontoons.",
+      "g": [
+        "mobile tech",
+        "service center"
+      ],
+      "base": "New Auburn",
+      "areas": [
+        "New Auburn"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "http://mrfixit-rv.com/",
+        "phone_quote": "(715) 967-2266",
+        "coverage_quotes": [
+          "27535 117th Street New Auburn. Wisconsin 54757"
+        ],
+        "type_quote": "Complete Rebuilds Interior-Exterior Rentals Buy and Sell Used RV's Complete Parts Department, New and Used Mobile Service Pick Up and Delivery Pontoon Transporting",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Baraboo RV Repair",
+      "c": "Baraboo, WI",
+      "p": "608-432-8642",
+      "u": "https://baraboorvrepair.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Baraboo RV Repair is an RV repair and trailer service business serving Baraboo, Wisconsin and the surrounding areas. Its site presents it as a local RV service option for the Baraboo area near Wisconsin Dells, with a phone number and a call-to-action to request service.",
+      "g": [
+        "service center"
+      ],
+      "base": "Baraboo",
+      "areas": [
+        "Baraboo"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://baraboorvrepair.com/",
+        "phone_quote": "608-432-8642",
+        "coverage_quotes": [
+          "Serving Baraboo, WI and Surrounding Areas"
+        ],
+        "type_quote": "Baraboo RV Repair and Trailer Service",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Dick's RV",
+      "c": "Arkansaw, WI",
+      "p": "715-672-4218",
+      "u": "https://www.dicksrv.com/rv-service",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "Dick's RV in Arkansaw, near Durand, runs an RV service department whose technicians are RVTI certified with the RV Dealer's Association and have manufacturer-specific training. It performs maintenance and repairs and is certified to complete warranty repairs for Grand Design, Keystone, Winnebago, KZ and Forest River. It offers mobile RV repair for warranty work and customer repair work at campgrounds and private property sites within 80 miles, and notes it does not complete chassis work for motorized RVs.",
+      "g": [
+        "mobile tech",
+        "service center"
+      ],
+      "base": "Arkansaw",
+      "areas": [
+        "Arkansaw",
+        "Durand"
+      ],
+      "region": null,
+      "spec": "Dick’s RV does not complete chassis work for motorized RVs, but can refer customers to a maintenance center.",
+      "evidence": {
+        "checked": "https://www.dicksrv.com/rv-service",
+        "phone_quote": "715-672-4218",
+        "coverage_quotes": [
+          "Mobile RV Repair is currently only available for warranty work and customer repair work at campgrounds and private property sites within 80 miles of Dick’s RV."
+        ],
+        "type_quote": "When your RV is due for maintenance work or repairs, turn to the experts at Dick’s RV in Durand, WI.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Indian Shores RV, LLC",
+      "c": "Woodruff, WI",
+      "p": "715-356-2267",
+      "u": "https://www.indianshoresrv.com/contact-us",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Indian Shores RV is an RV dealer in Woodruff, in the Minocqua area, with sales, service and parts departments. Its site offers new and used RVs and a service department, and it says it looks forward to helping customers maintain their RV. Its contact page lists the same number for sales and service at 715-356-2267.",
+      "g": [
+        "service center"
+      ],
+      "base": "Woodruff",
+      "areas": [
+        "Woodruff"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.indianshoresrv.com/contact-us",
+        "phone_quote": "715-356-2267",
+        "coverage_quotes": [
+          "7880 Indian Shores Road, Woodruff, WI 54568"
+        ],
+        "type_quote": "1. Sales: 715-356-2267\n2. Service: 715-356-2267",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Shoeder's RV & Marine",
+      "c": "Rhinelander, WI",
+      "p": "(715) 365-7722",
+      "u": "https://www.shoedersmarine.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Shoeder's RV & Marine is a family-owned RV and marine dealership just north of Rhinelander in the Northwoods of Wisconsin. Its service department has seven technicians who carry what it calls some of the most elite certifications in the industry, and it offers regularly scheduled maintenance, full customization and tire or oil changes. It serves the Rhinelander area near Sugar Camp, Starks, Monico, Jeffris and Newbold.",
+      "g": [
+        "service center"
+      ],
+      "base": "Rhinelander",
+      "areas": [
+        "Rhinelander"
+      ],
+      "region": "Northern Wisconsin",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.shoedersmarine.com/",
+        "phone_quote": "(715) 365-7722",
+        "coverage_quotes": [
+          "Shoeder's RV & Marine is located just north of Rhinelander in the heart of the Northwoods of Wisconsin."
+        ],
+        "type_quote": "Our service department has seven technicians and they carry some of the most elite certifications in the industry.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Lazydays RV of Milwaukee",
+      "c": "Sturtevant, WI",
+      "p": "800-306-4016",
+      "u": "https://www.lazydays.com/wisconsin/sturtevant/rv-service/rv-chassis-shop",
+      "t": "center",
+      "e": false,
+      "r": true,
+      "d": "Lazydays RV of Milwaukee at Sturtevant runs a chassis shop that works on motorhome engine repairs, tire alignment and balancing, engine oil changes, tire replacement and trailer brake repair. It says its scope of service extends to all chassis components, from RV tires to engine parts, for gas, diesel or towable coaches. It is a certified warranty repair center for chassis manufacturers including Spartan, Freightliner, Workhorse and Roadmaster.",
+      "g": [
+        "service center",
+        "chassis"
+      ],
+      "base": "Sturtevant",
+      "areas": [
+        "Sturtevant"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.lazydays.com/wisconsin/sturtevant/rv-service/rv-chassis-shop",
+        "phone_quote": "800-306-4016",
+        "coverage_quotes": [
+          "Our scope of service extends to all chassis components, encompassing everything from RV tires to engine parts."
+        ],
+        "type_quote": "From tackling complex motorhome engine repairs to aligning and balancing RV tires, we ensure the good times keep rolling.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    }
+  ]
+}

@@ -177,3 +177,38 @@ Recorded anyway, because the source should be traceable.
 - Author: Carol M. Highsmith
 - Licence: Public domain (no known restrictions) <https://commons.wikimedia.org/wiki/File:The_New_River_Gorge_Bridge,_a_steel_arch_bridge_3,030_feet_long_over_the_New_River_Gorge_near_Fayetteville_in_Fayette_County,_West_Virginia_LCCN2015634240.tif>
 - Tile alt text: The New River Gorge Bridge over the New River Gorge, West Virginia
+
+## michigan
+
+- File: [Sleeping Bear Dune Aerial View.jpg](https://commons.wikimedia.org/wiki/File:Sleeping_Bear_Dune_Aerial_View.jpg)
+- Author: National Park Service
+- Licence: Public domain (National Park Service) <https://commons.wikimedia.org/wiki/File:Sleeping_Bear_Dune_Aerial_View.jpg>
+- Tile alt text: An aerial view of Sleeping Bear Dunes, Michigan
+
+## ohio
+
+- File: [HockingHillsAshCave.jpg](https://commons.wikimedia.org/wiki/File:HockingHillsAshCave.jpg)
+- Author: Ramseybuckeye
+- Licence: Public domain (released by the author) <https://commons.wikimedia.org/wiki/File:HockingHillsAshCave.jpg>
+- Tile alt text: Ash Cave in Hocking Hills, Ohio
+
+## indiana
+
+- File: [Gfp-indiana-dunes-national-lakeshore-hilly-landscape.jpg](https://commons.wikimedia.org/wiki/File:Gfp-indiana-dunes-national-lakeshore-hilly-landscape.jpg)
+- Author: Yinan Chen
+- Licence: Public domain (released by the author) <https://commons.wikimedia.org/wiki/File:Gfp-indiana-dunes-national-lakeshore-hilly-landscape.jpg>
+- Tile alt text: The Indiana Dunes along Lake Michigan, Indiana
+
+## illinois
+
+- File: [Garden of the gods southern Illinois panorama.jpg](https://commons.wikimedia.org/wiki/File:Garden_of_the_gods_southern_Illinois_panorama.jpg)
+- Author: Melvin Spence
+- Licence: Public domain (released by the author) <https://commons.wikimedia.org/wiki/File:Garden_of_the_gods_southern_Illinois_panorama.jpg>
+- Tile alt text: The Garden of the Gods in Shawnee National Forest, Illinois
+
+## wisconsin
+
+- File: [Apostle Islands-Raspberry Island.jpg](https://commons.wikimedia.org/wiki/File:Apostle_Islands-Raspberry_Island.jpg)
+- Author: Wisconsin Division of Tourism
+- Licence: Public domain (Wisconsin Division of Tourism) <https://commons.wikimedia.org/wiki/File:Apostle_Islands-Raspberry_Island.jpg>
+- Tile alt text: Raspberry Island in the Apostle Islands, Wisconsin
