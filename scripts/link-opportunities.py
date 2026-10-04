@@ -29,6 +29,7 @@ from a paragraph that should carry the link.
 
 import html
 import json
+import math
 import re
 import sys
 from collections import Counter, defaultdict
@@ -106,6 +107,61 @@ def subject_words(title, df, n_pages):
     return [w for w in dict.fromkeys(words) if df[w] <= max(3, n_pages // 5)]
 
 
+def tokenize(text):
+    """Words worth scoring. Same shape as the page's other word lists: length 4 and up."""
+    return [w for w in re.findall(r"[a-z][a-z-]{3,}", text.lower()) if w not in STOP]
+
+
+def build_index(docs):
+    """BM25's two statistics over the corpus, plus each document's own term counts.
+
+    INVERSE DOCUMENT FREQUENCY IS THE WHOLE POINT OF THIS REWRITE. A word on many pages -- "cooling",
+    "snow", "battery" -- carries almost no signal about which page a sentence belongs to, and the old
+    matcher could not tell that from a word like "macerator" that lives on one page. IDF makes the
+    difference explicit: a rare term scores high, a common one scores near zero, with no word list to
+    maintain.
+    """
+    df = Counter()
+    counts, lengths = {}, {}
+    for path, text in docs.items():
+        toks = tokenize(text)
+        counts[path] = Counter(toks)
+        lengths[path] = max(1, len(toks))
+        for w in set(toks):
+            df[w] += 1
+    n = max(1, len(docs))
+    idf = {w: math.log(1.0 + (n - c + 0.5) / (c + 0.5)) for w, c in df.items()}
+    avgdl = sum(lengths.values()) / n
+    return idf, counts, lengths, avgdl, df
+
+
+def bm25(qterms, tcounts, tlen, idf, avgdl, k1=1.5, b=0.75):
+    """BM25 of a sentence's terms against ONE target document's own term frequencies."""
+    score = 0.0
+    for w in set(qterms):
+        f = tcounts.get(w, 0)
+        if not f or w not in idf:
+            continue
+        score += idf[w] * (f * (k1 + 1.0)) / (f + k1 * (1.0 - b + b * tlen / avgdl))
+    return score
+
+
+def doc_similarity(a_counts, b_counts, idf):
+    """Cosine over IDF-weighted term counts, for the document-level gate.
+
+    A link belongs between pages that are RELATED but not the same page. Too low and the sentence
+    has nothing to do with the target; too high and the two pages are near-duplicates, where a link
+    helps nobody. This is the band the research described and the old matcher had no equivalent of.
+    """
+    common = set(a_counts) & set(b_counts)
+    if not common:
+        return 0.0
+    num = sum((a_counts[w] * idf.get(w, 0.0)) * (b_counts[w] * idf.get(w, 0.0)) for w in common)
+    na = math.sqrt(sum((a_counts[w] * idf.get(w, 0.0)) ** 2 for w in a_counts))
+    nb = math.sqrt(sum((b_counts[w] * idf.get(w, 0.0)) ** 2 for w in b_counts))
+    return num / (na * nb) if na and nb else 0.0
+
+
 def main():
     files = page_files()
     rel = {p: str(p.relative_to(ROOT)).replace("\\", "/") for p in files}
@@ -153,59 +209,65 @@ def main():
         if not targets:
             sys.exit("no such target: %s" % want)
 
-    strong, weak = [], []
+    # ---- BM25 SCORING, REPLACING THE TITLE-WORD MATCH ----
+    # The old trigger was "two of the target's title words appear in this sentence", which fired on
+    # the word "cooling" (shared by the fridge and air conditioner titles) and on passing mentions.
+    # The research named the replacement: score the sentence against the TARGET'S OWN TEXT with
+    # IDF weighting, and gate the whole pair on document-level relatedness. Measured 2026-10-03.
+    docs = {p: text_plain[p] for p in files}
+    idf, counts, lengths, avgdl, df = build_index(docs)
+
+    # A relatedness band, not a floor: related enough to be worth a link, not so close that the two
+    # pages are duplicates of each other.
+    RELATED_MIN, RELATED_MAX = 0.06, 0.72
+    # A sentence scores the sum of the IDF of its terms that the target actually uses. Tuned by
+    # running against the two known failures rather than picked.
+    SENTENCE_MIN = 6.0
+
+    results = []
     for t in targets:
-        words = subject_words(titles[t], df, len(files))
-        if len(words) < 2:
-            continue
-        for s in files:
-            if s == t or rel[s] == rel[t]:
+        t_terms = set(counts[t])
+        for src in files:
+            if src == t or rel[src] == rel[t]:
                 continue
-            if rel[t] in links[s]:
-                continue                      # already links to it: nothing to do
-            for sent in sentences(frag[s]):
-                low = sent.lower()
-                hits = [w for w in words if re.search(r"\b%s" % re.escape(w), low)]
-                # Two subject words at opposite ends of a long sentence are two unrelated
-                # mentions, not a reference. Require them within 90 characters of each other.
-                pos = sorted(low.find(h) for h in hits)
-                if len(pos) >= 2 and pos[-1] - pos[0] > 90:
+            if rel[t] in links[src]:
+                continue
+            sim = doc_similarity(counts[src], counts[t], idf)
+            if not (RELATED_MIN <= sim <= RELATED_MAX):
+                continue
+            best = None
+            for sent in sentences(frag[src]):
+                toks = tokenize(sent)
+                if len(toks) < 4:
                     continue
-                if len(hits) >= 2:
-                    strong.append((len(hits), rel[s], rel[t], ", ".join(hits), sent))
-                elif len(hits) == 1 and len(words) <= 3:
-                    weak.append((1, rel[s], rel[t], hits[0], sent))
+                score = bm25(toks, counts[t], lengths[t], idf, avgdl)
+                if score < SENTENCE_MIN:
+                    continue
+                carried = sorted({w for w in toks if w in t_terms and df.get(w, 0) <= 12},
+                                 key=lambda w: -idf.get(w, 0))
+                if not carried:
+                    continue
+                if best is None or score > best[0]:
+                    best = (score, carried[:4], sent)
+            if best:
+                results.append((best[0], rel[src], rel[t], sim, best[1], best[2]))
 
-    strong.sort(key=lambda r: (-r[0], r[1], r[2]))
-    print("\n%d sentence(s) mention two or more subject words of another page and do not link to it:"
-          % len(strong))
-    seen = set()
-    for n, src, tgt, hits, sent in strong:
-        key = (src, tgt)
-        if key in seen:
+    results.sort(key=lambda r: (-r[0], r[1], r[2]))
+    print("\n%d candidate(s), scored by BM25 against the target page's own text:" % len(results))
+    seen_pairs = set()
+    shown = 0
+    for score, src, tgt, sim, carried, sent in results:
+        if (src, tgt) in seen_pairs:
             continue
-        seen.add(key)
-        print("\n  %s  ->  %s   [%s]" % (src, tgt, hits))
-        print("     %s" % sent[:200])
-    # A SINGLE SHARED WORD IS NOT A REFERENCE, AND ONE PAIR IS ENOUGH TO JUDGE.
-    # Measured 2026-10-03: this list ran to dozens of entries on one pair, every one of them the
-    # refrigerator page and the air conditioner page meeting on the word "cooling", which appears
-    # on both titles and is not what either page is about. Nobody can triage that. So the list is
-    # capped at ONE candidate per source-to-target pair, and ordered by how RARE the shared word is,
-    # because a word that appears on two pages sitewide ("macerator") is a real subject and a word
-    # that appears on twenty is a word the site uses everywhere.
-    weak.sort(key=lambda r: (df.get(r[3], 999), r[1], r[2]))
-    weak_seen, weak_kept = set(), []
-    for row in weak:
-        key = (row[1], row[2])
-        if key in weak_seen:
+        seen_pairs.add((src, tgt))
+        shown += 1
+        if shown > 40:
             continue
-        weak_seen.add(key)
-        weak_kept.append(row)
-    print("\n%d single-word candidates, one per page pair, rarest shared word first:" % len(weak_kept))
-    for n, src, tgt, hit, sent in weak_kept[:30]:
-        print("  %-46s -> %-44s [%s on %d page(s)]" % (src, tgt, hit, df.get(hit, 0)))
-
+        print("\n  %.1f  %s  ->  %s   [relatedness %.2f]" % (score, src, tgt, sim))
+        print("     carries: %s" % ", ".join(carried))
+        print("     %s" % sent[:180])
+    if shown > 40:
+        print("\n  ... and %d more pair(s) below the cut" % (shown - 41))
 
 if __name__ == "__main__":
     main()

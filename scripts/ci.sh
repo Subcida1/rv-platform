@@ -45,6 +45,7 @@ step "build-search-index.py --check: the site search index is current" \
 step "weight calculator"                       node scripts/test-weight-calculator.js
 step "tire date decoder"                      node scripts/test-tire-date.js
 node scripts/test-snow-load.js
+python3 scripts/test-link-opportunities.py
 step "directory rendering"                     node scripts/test-directory.js
 step "every state page wires its own data"    node scripts/test-state-pages.js
 step "manuals"                                 python3 scripts/test-manuals.py
