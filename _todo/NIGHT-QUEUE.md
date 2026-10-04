@@ -2395,6 +2395,23 @@ and a coverage bug is worse than no review at all** - because it produces confid
 **Recommendation: any future review change gets tested by having a lane report on a page with a known defect planted
 in the middle, not by trusting that the fix worked.**
 
+## MMM. TY RULE, FOR EVERY TOOL ON THE SITE: EVERY NUMBER WE ASK FOR CARRIES A HOW-TO-GET-IT PATH
+
+**Stated 2026-10-03 while reviewing the snow calculator, and it came from two corrections in a row on the same tool:**
+
+> *"for any hard to source number, or any number at all really we should be providing alongside our request a 'how to get this info' path."*
+
+**THE TWO CORRECTIONS THAT EARNED IT.** The first version of the snow calculator asked for the **water equivalent** of the snow and nothing else. The second asked for **roof pitch in degrees**. Neither exists in the reader's world: nobody under a foot of snow knows its water equivalent, and nobody standing in front of a rounded or sloped RV roof knows its angle. **Both inputs were defensible and unusable, which is the wrong answer with good citations.**
+
+**THE RULE, AS IT APPLIES FROM NOW ON:**
+1. **An input must be a number the reader can actually hold.** If we cannot answer *"what do they have in their hand when they open this"* in one sentence, the input is wrong.
+2. **Every number we ask for gets a how-to-get-it path beside it**, not a bare field. How to measure it, or where it is published.
+3. **Where the number may not exist, say that plainly** rather than leaving an empty box. For a roof rating: most makers publish nothing, that is normal rather than an omission, and a silent manual is not the maker endorsing the figure.
+4. **Where figures exist for other units, show them as landmarks with the kind of number each one is**, and say that they are not the reader's. That gives scale, which is what most readers actually want, without pretending to be a rating.
+5. **NEVER ESTIMATE A LIMIT.** Ty suggested estimating the roof rating and I pushed back, because the guide already answers it: *"a roof with no published limit may be built to carry less than either."* An estimated **load** that is 10 per cent low means someone shovels late; an estimated **limit** that is 10 per cent high means someone trusts a roof that goes down under snow. Ty agreed, and the landmarks are the honest version of what he was reaching for.
+
+**WHERE IT APPLIES BEYOND THIS TOOL:** the weight calculator asks for a pin weight and a payload capacity, the tire decoder asks for a DOT code. Each of those should be checked against this rule the next time it is touched.
+
 ## Log
 
 ## Log
