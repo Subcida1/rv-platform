@@ -52,7 +52,15 @@ UNLISTED = {
 def published_pages():
     """Every page on the site, as sitemap-relative paths."""
     pages = []
+    # THE CHECKOUT BOUNDARY. Letta keeps agent worktrees under .letta/worktrees/, each a full copy
+    # of this repository, so an unpruned walk reports their pages as published but not in the
+    # sitemap. os.walk prunes by mutating dirnames, which is what this line is for. Found
+    # 2026-10-04 with the same defect in verify.py, build-shell.mjs and stamp_assets.py.
     for dirpath, dirnames, filenames in os.walk(ROOT):
+        # THE CHECKOUT BOUNDARY, INSIDE THE LOOP THAT BINDS dirnames. Letta keeps agent
+        # worktrees under .letta/worktrees/, each a full copy of this repository, so an
+        # unpruned walk reports their pages as published but not in the sitemap.
+        dirnames[:] = [d for d in dirnames if d not in ('.git', '.letta', 'node_modules')]
         dirnames[:] = [d for d in dirnames if d not in {".git", "workers", "_todo", "_log", "node_modules"}]
         for name in filenames:
             if name.endswith(".html"):

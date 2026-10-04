@@ -57,7 +57,11 @@ def stamp_html(html, stats=None):
 
 
 stamped = changed = stale = 0
-for page in sorted(ROOT.rglob('*.html')):
+SKIP_PARTS = {'.git', '.letta', 'node_modules'}
+# THE CHECKOUT BOUNDARY. Letta keeps agent worktrees under .letta/worktrees/, each a full copy
+# of this repository, so an unbounded rglob stamped 149 pages instead of 74 -- it was rewriting
+# another agent's checkout. Found 2026-10-04.
+for page in sorted(p for p in ROOT.rglob('*.html') if not (SKIP_PARTS & set(p.parts))):
     if '.git' in page.parts:
         continue
     html = page.read_text(encoding='utf-8')

@@ -160,6 +160,10 @@
  '<a href="' + R(rt.guideBattery) + '">Battery Care in Cold<span class="sm">Lead-acid vs lithium rules</span></a>' +
  '<a href="' + R(rt.guideTires) + '">Tires Through Winter<span class="sm">Pressure, flat spots, covers</span></a>' +
  '<a href="' + R(rt.guideRoof) + '">Roof Under Snow Load<span class="sm">Seals, ice, weight</span></a></div></div>' +
+ '<div class="nav-group"><a class="nav-link" href="' + R(rt.parts) + '">Parts</a>' +
+ '<div class="drop"><a href="' + R(rt.parts) + '">Every RV part<span class="sm">All 157, by system, with what each one does</span></a>' +
+ '<a href="' + R(rt.guides) + '">Guides<span class="sm">How to fix what is broken</span></a>' +
+ '<a href="' + R(rt.manuals) + '">Manuals<span class="sm">The maker documents behind each part</span></a></div></div>' +
  '<div class="nav-group"><a class="nav-link" href="' + R(rt.directory) + '">Directory</a>' +
  '<div class="drop"><a href="' + R(rt.directory) + '">Find a service<span class="sm">Mobile techs and repair centers by state</span></a>' +
  '<a href="' + R(rt.directory) + '#claim">Claim your business<span class="sm">Free listing, you control it</span></a></div></div>' +
@@ -172,7 +176,7 @@
  '<a href="' + R(rt.manuals) + '">All manuals<span class="sm">Every system, linked at the maker</span></a></div></div>' +
  '</div>' +
  searchFieldHTML('nav-search', 'Search') +
- '<div class="nav-actions">' + signinLink('btn btn-outline btn-sm') + '<a class="btn btn-primary btn-sm" href="' + R(rt.calculator) + '">Free Tool</a>' +
+ '<div class="nav-actions">' + signinLink('btn btn-outline btn-sm') + '<a class="btn btn-primary btn-sm" href="' + R(rt.tools) + '">Tools</a>' +
  '<button type="button" class="burger" aria-label="Menu" onclick="RV.toggleMenu()"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h12M4 10h12M4 14h12"/></svg></button></div>' +
  '</div>' +
  '<div class="mobile-menu">' + searchFieldHTML('mm-search', 'Search the site') +
@@ -181,6 +185,8 @@
  mmGroup('Guides', rt.guides, [['Winterize plumbing', rt.guideWinterize],
    ['Battery cold storage', rt.guideBattery], ['Tires through winter', rt.guideTires],
    ['Roof snow load', rt.guideRoof]]) +
+ mmGroup('Parts', rt.parts, [['Every RV part', rt.parts],
+   ['Guides', rt.guides]]) +
  mmGroup('Directory', rt.directory, [['Find a service', rt.directory],
    ['Claim your business', rt.directory + '#claim']]) +
  mmGroup('Manuals', rt.manuals, [['Electrical', rt.manualsPower],
