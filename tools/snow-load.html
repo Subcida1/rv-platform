@@ -58,11 +58,6 @@
      <p id="depth-help" class="muted">Measure it on the roof if you can. Snow depth varies a lot over a short distance, and the roof is the number that matters.</p>
     </div>
     <div class="field">
-     <label for="pitch">Roof pitch, in degrees (leave blank for a flat roof)</label>
-     <input id="pitch" name="pitch" type="text" inputmode="decimal" placeholder="0" aria-describedby="pitch-help snow-result">
-     <p id="pitch-help" class="muted">The angle of the roof up from horizontal. A flat RV roof is 0. If you know your pitch as rise over run, the table below converts it.</p>
-    </div>
-    <div class="field">
      <label for="rating">Your roof's rated load, in lb/ft&#178; (if your maker publishes one)</label>
      <input id="rating" name="rating" type="text" inputmode="decimal" placeholder="30" aria-describedby="rating-help snow-result">
      <p id="rating-help" class="muted">Optional. With a figure from your maker this compares the two and says whether you are over it.</p>
@@ -91,6 +86,10 @@
   <h2>Where the number comes from</h2>
   <p>Depth alone cannot give a weight, because a foot of dry powder and a foot of wet snow are not the same load. So the depth here is bridged to a weight by a figure a maker publishes: <b>Keystone rates the roofs on its towables at 30 pounds per square foot, and states that as about two feet of snow.</b> Thirty divided by twenty-four is <b>1.25 pounds per square foot for every inch of snow</b>, and that is what the depth is multiplied by.</p>
   <p>Two things about that figure, because it is one maker&#8217;s and not a law. It describes snow that has <b>settled</b>, so fresh powder weighs less and wet snow weighs more, which is why the result is the middle of a range rather than the top of it. And it is a rating for Keystone&#8217;s own roofs, so it tells you the weight on yours, not what yours is built to carry. That is what the rating box is for.</p>
+  <h2>Why it does not ask for your roof pitch</h2>
+  <p>Because on an RV it barely changes the answer, and almost nobody knows it. Roofs run from dead flat to a gentle crown, and some fifth wheels slope to one side, but all of those are shallow angles. The correction a pitch makes is the cosine of the angle, and at ten degrees that is <b>1.5 per cent off the flat figure</b>, at fifteen degrees <b>3.4 per cent</b>. The National Weather Service example that does use a correction is pitched at 35 degrees, which is a house roof and eighteen per cent.</p>
+  <p>So the figure here is the flat one, and leaving the pitch out errs in the safe direction: a sloped roof carries slightly <b>less</b> than a flat one, not more.</p>
+
   <p>If you would rather not rely on the bridge, the water equivalent is the exact input and you can measure it yourself. The National Weather Service sets out the method, and it turns on one measurement: water weighs 62.4 pounds per cubic foot, which is <b>5.2 pounds per square foot for every inch of water</b>. Their worked example uses a water equivalent of 2.0 inches on a roof pitched at 35 degrees: 10.4 pounds per square foot flat, and that figure multiplied by the cosine of the pitch, which they give as 8.5.</p>
 
   <h2>If you have to measure it yourself</h2>
@@ -99,22 +98,6 @@
 
   <h2>What it will not tell you</h2>
   <p>Two things, and both are the note's own cautions rather than ours. It assumes the snow has aged the same way across the area, which is not always true, and it calls the result a rough estimate that should be used with care. Neither this tool nor the method behind it is a structural assessment of your roof, and if the number is close to a rating you have, the answer is to clear the snow rather than to keep measuring it.</p>
-
-  <div class="card">
-   <h3>Pitch, if you know it as rise over run</h3>
-   <p>RV makers usually describe roof pitch as inches of rise per foot of run, so a "2 in 12" roof rises two inches for every foot across. This is the same thing as an angle, and a flat roof is 0 degrees.</p>
-   <table class="man-table">
-    <thead><tr><th>Rise per foot</th><th>Degrees</th></tr></thead>
-    <tbody>
-     <tr><td>Flat</td><td>0</td></tr>
-     <tr><td>1 in 12</td><td>4.8</td></tr>
-     <tr><td>2 in 12</td><td>9.5</td></tr>
-     <tr><td>3 in 12</td><td>14.0</td></tr>
-     <tr><td>4 in 12</td><td>18.4</td></tr>
-     <tr><td>6 in 12</td><td>26.6</td></tr>
-    </tbody>
-   </table>
-  </div>
 
   <h2>Where to go next</h2>
   <p><a href="/guides/roof-snow-load.html">The roof snow load guide</a> covers what snow does to an RV roof beyond the weight of it, and what the makers rate their roofs at. <a href="/guides/winterize-plumbing.html">The winterising guide</a> is the plumbing half of the same season.</p>
@@ -134,6 +117,6 @@
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "3727183603b6402b9249de33fa381acd"}'></script><!-- End Cloudflare Web Analytics -->
 <script src="assets/js/config.js?v=cb50ee67"></script>
 <script src="assets/js/site.js?v=da53bf0b"></script>
-<script src="assets/js/snowload.js?v=63ae0b96"></script>
+<script src="assets/js/snowload.js?v=a1dd9215"></script>
 </body>
 </html>

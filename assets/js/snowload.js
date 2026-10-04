@@ -51,7 +51,6 @@
    if (!host) return;
    var depth = num('depth');
    var we = num('we');
-   var pitch = num('pitch');
    var rating = num('rating');
 
    if ((depth === null || depth <= 0) && (we === null || we <= 0)) {
@@ -59,9 +58,6 @@
        '<span>Everything recomputes as you type. No button.</span></div>';
      return;
    }
-   if (pitch === null) pitch = 0;
-   if (pitch < 0) pitch = 0;
-   if (pitch > 85) pitch = 85;
 
    // Water equivalent wins when it is given, because it is measured rather than inferred. Otherwise
    // the depth is bridged to a weight by Keystone's published equivalence.
@@ -76,24 +72,16 @@
      basisNote = 'Depth bridged to weight by Keystone, which rates its towable roofs at 30 pounds per square foot and states that as about two feet of snow. 30 over 24 is 1.25 pounds per square foot for every inch.';
    }
 
-   var rad = pitch * Math.PI / 180;
-   var sloped = flat * Math.cos(rad);
-   var carried = sloped;
+   var carried = flat;   // the flat figure, which is the conservative one
    var rows = '';
 
    rows += '<div class="v-row ok"><div class="v-dot"></div><div class="v-txt"><b>What you entered</b>' +
      '<span>' + esc(basisNote) + '</span></div>' +
      '<div class="v-val">' + esc(basis) + '</div></div>';
 
-   rows += '<div class="v-row ok"><div class="v-dot"></div><div class="v-txt"><b>Load on a flat roof</b>' +
-     '<span>Before any correction for the pitch of your roof.</span></div>' +
+   rows += '<div class="v-row ok"><div class="v-dot"></div><div class="v-txt"><b>The load</b>' +
+     '<span>Carried as a flat figure. A sloped RV roof carries slightly less, so errs toward safety.</span></div>' +
      '<div class="v-val">' + fmt(flat) + ' lb/ft&#178;</div></div>';
-
-   if (pitch > 0) {
-     rows += '<div class="v-row ok"><div class="v-dot"></div><div class="v-txt"><b>Load on your roof, at ' + fmt(pitch) + '&#176;</b>' +
-       '<span>The flat figure multiplied by the cosine of the pitch, because only part of the load presses straight into a sloped surface.</span></div>' +
-       '<div class="v-val">' + fmt(sloped) + ' lb/ft&#178;</div></div>';
-   }
 
    var cls, verdict, note;
    if (rating !== null && rating > 0) {
@@ -117,13 +105,13 @@
    host.innerHTML =
      '<div class="w-overall ' + cls + '"><span>What is on your roof</span><b>' + esc(verdict) + '</b><small>' + note + '</small></div>' +
      '<div class="w-total"><span>Load carried</span><b>' + fmt(carried) + ' lb/ft&#178;</b>' +
-     '<small>' + esc(basis) + (pitch > 0 ? ', corrected for a ' + fmt(pitch) + '&#176; pitch' : ', on a flat roof') + '</small></div>' +
+     '<small>' + esc(basis) + ', on the flat figure' + '</small></div>' +
      rows +
      '<div class="w-disclaimer">A rough estimate in the Weather Service\'s own words. The depth figure assumes settled snow: fresh powder weighs less and wet snow weighs more, so treat this as the middle of the range rather than the top of it.</div>';
  }
 
  function init() {
-   var ids = ['depth', 'we', 'pitch', 'rating'];
+   var ids = ['depth', 'we', 'rating'];
    ids.forEach(function (id) {
      var el = $(id);
      if (el) el.addEventListener('input', update);
