@@ -93,12 +93,21 @@ Then:
     python3 scripts/build-listings.py
     python3 scripts/build-search-index.py
     node scripts/build-shell.mjs
-    python3 scripts/sync-counts.py
-    python3 scripts/stamp_assets.py          # always last
+    python3 scripts/stamp_assets.py
+    python3 scripts/sync-counts.py           # AFTER stamping; see the note below
+    grep -o 'states-total">[^<]*<' index.html   # read the number, do not assume it
     git add <the new files>                  # vnu only checks git ls-files, so stage first
     bash scripts/ci.sh
 
 11. **Commit** by explicit path. Never `git commit -a`.
+
+**ORDERING TRAP, WAVE 1.** On the first wave the homepage's `data-claim="states-total"`
+spans were written correctly by `sync-counts.py` (16 / sixteen), and then read **12 / twelve**
+again in the commit, even though the gate had passed on the same working tree minutes earlier.
+`stamp_assets.py` was the only writer in between, and re-testing it directly did not reproduce
+it, so the trigger is not established. What IS established is the consequence: a green gate is
+not evidence about the artifact you commit if anything writes files after the gate ran. Run
+`sync-counts.py` after stamping, read the number out of `index.html`, and only then commit.
 
 ## The discovery brief
 

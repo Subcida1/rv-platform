@@ -184,7 +184,7 @@ def crop_to(im, ratio, bias):
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     credits = ["# State tile photo credits", "",
-               "All three are public domain or CC0, so no attribution is required.",
+               "Every tile is public domain or CC0, so no attribution is required.",
                "Recorded anyway, because the source should be traceable.", ""]
 
     for slug, title, lic, author, lic_url, alt in PHOTOS:
