@@ -13,3 +13,9 @@ data/gsc/
 
 # Census Gazetteer source files (about 20 MB, public domain, refetched with --fetch).
 _data/source/
+
+# Letta agent worktrees. Each one under .letta/worktrees/ is a FULL COPY of this repository, so
+# anything that walks the tree -- git, or the site scanners -- has to be told where the checkout
+# ends. The scanners were fixed to skip it on 2026-10-04; this is the other half of the same
+# boundary, so no git operation can sweep a nested checkout into a commit.
+.letta/
