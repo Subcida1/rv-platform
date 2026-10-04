@@ -36,22 +36,29 @@ result when its Stop-control probe sees the lane as busy, and that probe is docu
 **Two candidate one-line fixes are named in FFF; neither is written, because the mechanism is sound and shipped and a
 wrong patch would break something that works.**
 
-### The honest review position, which is further back than I claimed mid-night
+### The review position, now cleared
 
-| page | lines | reviewed |
+**Seven pages have had an independent pass on their current text, and FOUR came back clean on both halves** -- the
+converter, the bearings, the generator sizing and the tank sensors. Every finding from every completed review is
+either fixed or recorded with the reason it was not.
+
+| page | latest | outcome |
 |---|---|---|
-| rv-toilet-not-flushing | 121 | **fully** |
-| rv-macerator-toilet | 144 | **fully** |
-| rv-converter-not-charging | 296 | through round 6, its last 46 lines uncovered |
-| rv-generator-not-charging | 244 | partial |
-| trailer-brakes-required | 218 | partial |
-| rv-water-heater-not-heating | 202 | partial |
-| rv-generator-sizing | 167 | partial |
-| rv-trailer-wheel-bearings | 166 | partial |
+| rv-trailer-wheel-bearings | round 7 | **clean**, and it verifies the round 6 fix by name |
+| rv-converter-not-charging | round 8 | **clean**, crediting the per-source mapping added at round 6 |
+| rv-generator-sizing | round 5 | **clean** on sourcing, three findings fixed |
+| rv-tank-sensors-reading-wrong | earlier pass | clean, then a decision tree added |
+| rv-water-heater-not-heating | round 6 | four findings fixed, **one a safety contradiction** |
+| rv-generator-not-charging | round 4 | two fixed, one false attribution removed after checking the document |
+| trailer-brakes-required | round 4 | three fixed, one a misstatement of 49 CFR 393.42 |
+| rv-macerator-toilet | round 7 | four fixed |
 
-**The cause was mine: the review prompt asked for `head=70` and `tail=80`, which is 150 lines, and these pages are
-longer.** So for most of the night I was reporting "clean on sourcing and overclaiming" verdicts that covered the
-first 70 and last 80 lines. Fixed and now at 150 and 150, which covers 300 lines and therefore every page we ship.
+**HOW THAT CHANGED, AND THE CORRECTION THAT EARNED IT.** Earlier I reported "everything reviewed and green" when
+the review prompt asked for `head=70` and `tail=80` against pages of 166 to 296 lines, so six "clean" verdicts
+covered only the top and bottom of each page. A reviewing lane volunteered its own coverage gap and that is the only
+reason it was caught. **Then the fix used the wrong lever**: raising the slices to 150 did not widen the window,
+because both slices are **truncated at 12,000 characters**. The prompt now says a third read is expected rather than
+exceptional.
 
 ### What actually landed overnight
 
