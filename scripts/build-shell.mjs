@@ -175,9 +175,14 @@ function breadcrumbFor(rel, html) {
   }
   if (crumbs.length < 2) return '';
 
+  // THE MARKUP MATCHES THE STYLESHEET THAT WAS ALREADY THERE. `.crumbs` is already `display:flex`
+  // with a gap, and it expects its children DIRECTLY inside the nav, with separators carrying
+  // `.sep`. The first version of this added a `.wrap` div and used `<i>` for the slash, which broke
+  // the flex (one child, so no gap) and rendered as `Home/Guides/...` with no spacing. Found by
+  // screenshotting the page rather than trusting that it passed the gates.
   const htmlTrail = crumbs.map((c) => c.href
     ? '<a href="' + esc(c.href) + '">' + esc(c.name) + '</a>'
-    : '<span>' + esc(c.name) + '</span>').join('<i aria-hidden="true">/</i>');
+    : '<span>' + esc(c.name) + '</span>').join('<span class="sep" aria-hidden="true">/</span>');
 
   const base = 'https://originrv.com/';
   // A crumb with no page of its own (the system heading, and the current page) carries no `item`.
@@ -194,6 +199,11 @@ function breadcrumbFor(rel, html) {
   // The markers let verify-content strip the trail before digesting a page. Navigation is not a
   // claim, and without them the breadcrumb's own text -- which includes the page heading -- reads
   // as claim drift on every page at once.
+  // THE WRAP PROVIDES THE GUTTER AND THE FLEX LIVES ON IT. The first attempt had the children
+  // directly in the nav, which matched the old stylesheet and lost the page gutter: the trail ran
+  // flush to the screen edge. The second had the wrap with no flex rule of its own, so the gap did
+  // not apply and the separators closed up. Both, correctly: the wrap carries the gutter, and
+  // `.crumbs .wrap` carries the flex.
   return '<!-- crumbs:start --><nav class="crumbs" aria-label="Breadcrumb"><div class="wrap">' + htmlTrail + '</div></nav>'
     + '<script type="application/ld+json">' + JSON.stringify(ld) + '</script><!-- crumbs:end -->';
 }
