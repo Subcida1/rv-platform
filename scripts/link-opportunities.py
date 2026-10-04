@@ -184,7 +184,12 @@ def doc_similarity(a_counts, b_counts, idf):
 # failing rather than the pages. The filename is descriptive by construction.
 SUBJECT_STOP = re.compile(
     r"^(rv|the|a|an|how|when|why|what|where|and|or|of|to|in|on|for|with|from|not|no|"
-    r"working|wont|will|keeps|reading|wrong|guide|troubleshooting|replacement|repair)$", re.I)
+    r"working|wont|will|keeps|reading|wrong|guide|troubleshooting|replacement|repair|"
+    # PAGE-ROLE WORDS ARE NOT SUBJECTS. A filename like start-here.html yields the phrase "start
+    # here", which reads as an anchor to the matcher and is navigation to a reader: it names where a
+    # page sits, not what it is about. Five candidates in one run pointed at manuals/start-here.html
+    # on that phrase. Found 2026-10-04.
+    r"start|here|index|about|contact|home|more|all|new|main|first)$", re.I)
 
 
 def subject_names(rel_path):
