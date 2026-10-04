@@ -340,5 +340,37 @@ window.RV_LISTINGS_FL = [
  {  "n": "Central Florida RV",  "c": "Apopka, FL",  "p": "(407) 241-2886",  "u": "https://www.cflrv.com/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "Central Florida RV is an RV service, maintenance, and repair shop in Apopka, Florida. It provides roof AC service, RV appliance service, Aquahot service, RV battery service, RV generator service, plumbing and hydraulic repairs, slide out repair, leveler service, and annual RV inspections. It is an Aqua-Hot Factory Authorized Service Center, accepts all RV insurance, and handles extended warranty repairs, with Saturday and Sunday service by appointment only.",  "g": [
    "service center"
   ],  "base": "apopka",  "areas": [],  "region": "Central Florida",  "spec": "Sat - Sun: By Appointment Only",  "reg": "orlando-fl"
+ },
+ {  "n": "Rig Rite RV",  "c": "Clermont, FL",  "p": "(352) 414-1066",  "u": "https://rigriterv.com/contact-us",  "t": "mobile",  "e": false,  "r": false,  "d": "Rig Rite RV is a mobile RV repair and service business that brings repairs to the customer and skips the hassle of towing. It offers easy online booking with priority scheduling, and same-day service requests can be made by phone. The service area spans Clermont, Wildwood, The Villages, Celebration, Lake Buena Vista, Kissimmee, Orlando, Winter Garden, Ocoee, Leesburg, Tavares, Mount Dora, Eustis, Apopka, Groveland, Minneola, Davenport, Haines City, Polk City, Bushnell, Sumterville, Oxford, Belleview, Lady Lake, Fruitland Park, Howey-in-the-Hills, Montverde, and Mascotte.",  "g": [
+   "mobile tech"
+  ],  "base": null,  "areas": [
+   "clermont",
+   "wildwood",
+   "the villages",
+   "celebration",
+   "lake buena vista",
+   "kissimmee",
+   "orlando",
+   "winter garden",
+   "ocoee",
+   "leesburg",
+   "tavares",
+   "mount dora",
+   "eustis",
+   "apopka",
+   "groveland",
+   "minneola",
+   "davenport",
+   "haines city",
+   "polk city",
+   "bushnell",
+   "oxford",
+   "belleview",
+   "lady lake",
+   "fruitland park",
+   "howey-in-the-hills",
+   "montverde",
+   "mascotte"
+  ],  "region": "Central Florida",  "spec": null,  "reg": "orlando-fl"
  }
 ];

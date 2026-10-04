@@ -1188,6 +1188,63 @@
         "roadside_quote": null,
         "licence": null
       }
+    },
+    {
+      "n": "Rig Rite RV",
+      "c": "Clermont, FL",
+      "p": "(352) 414-1066",
+      "u": "https://rigriterv.com/contact-us",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Rig Rite RV is a mobile RV repair and service business that brings repairs to the customer and skips the hassle of towing. It offers easy online booking with priority scheduling, and same-day service requests can be made by phone. The service area spans Clermont, Wildwood, The Villages, Celebration, Lake Buena Vista, Kissimmee, Orlando, Winter Garden, Ocoee, Leesburg, Tavares, Mount Dora, Eustis, Apopka, Groveland, Minneola, Davenport, Haines City, Polk City, Bushnell, Sumterville, Oxford, Belleview, Lady Lake, Fruitland Park, Howey-in-the-Hills, Montverde, and Mascotte.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": null,
+      "areas": [
+        "Clermont",
+        "Wildwood",
+        "The Villages",
+        "Celebration",
+        "Lake Buena Vista",
+        "Kissimmee",
+        "Orlando",
+        "Winter Garden",
+        "Ocoee",
+        "Leesburg",
+        "Tavares",
+        "Mount Dora",
+        "Eustis",
+        "Apopka",
+        "Groveland",
+        "Minneola",
+        "Davenport",
+        "Haines City",
+        "Polk City",
+        "Bushnell",
+        "Oxford",
+        "Belleview",
+        "Lady Lake",
+        "Fruitland Park",
+        "Howey-in-the-Hills",
+        "Montverde",
+        "Mascotte"
+      ],
+      "region": "Central Florida",
+      "spec": null,
+      "evidence": {
+        "checked": "https://rigriterv.com/contact-us",
+        "phone_quote": "(352) 414-1066",
+        "coverage_quotes": [
+          "Clermont, FL, Wildwood, FL, The Villages, FL, Celebration, FL, Lake Buena Vista, FL, Kissimmee, FL, Orlando, FL, Winter Garden, FL, Ocoee, FL, Leesburg, FL, Tavares, FL, Mount Dora, FL, Eustis, FL, Apopka, FL, Groveland, FL, Minneola, FL, Davenport, FL, Haines City, FL, Polk City, FL, Bushnell, FL, Sumterville, FL, Oxford, FL, Belleview, FL, Lady Lake, FL, Fruitland Park, FL, Howey-in-the-Hills, FL, Montverde, FL, Mascotte, FL"
+        ],
+        "type_quote": "Reliable RV Repairs, Right Where You Need Them!",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      },
+      "reg": "orlando-fl"
     }
   ]
 }

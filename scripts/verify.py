@@ -48,25 +48,75 @@ BANNED = ((r"\brigs?\b", "rig (they are RVs)"),
 
 
 def without_provenance(p, txt):
-    """Drop the provenance block before the style rules read a listings source.
+    """Drop the parts of a listings source that are NOT our words, before the style rules.
 
-    _data/listings/*.json keeps an `evidence` object per record: the sentences copied from
-    the business's own site, which is the directory's whole claim to being checkable. The
-    dash rule and the banned-word rule govern copy WE write. A quotation is somebody
-    else's words, and rewording it to suit our house style would corrupt the record that
-    makes the listing verifiable. Quoted material is checked against its source instead,
-    by check-quotes.py. What ships to a page is the shard, which carries no evidence, and
-    that is still read in full.
+    Two things in this directory belong to somebody else:
+
+    **The evidence block.** `_data/listings/*.json` keeps an `evidence` object per record: the
+    sentences copied from the business's own site, which is the directory's whole claim to
+    being checkable. A quotation is somebody else's words, and rewording it to suit our house
+    style would corrupt the record that makes the listing verifiable. Quoted material is
+    checked against its source instead, by check-quotes.py.
+
+    **The business's own name.** Ty ruled on 2026-10-04, when a real Florida business turned out
+    to be called "Rig Rite RV": *"Business names should be allowed to use rig, and we should
+    categorize them as 'not our content' so to speak, this is a listing not us speaking."* The
+    banned-word rule governs copy WE write. A trading name is the business's, we do not rename
+    a business to suit our house style, and a reader seeing "Rig Rite RV" on a listing page is
+    reading that company's name rather than our vocabulary. So `n` is stripped for the style
+    rules exactly as `evidence` is.
+
+    What ships to a page is the shard, which carries no evidence, so the shard's `n` values are
+    neutralised the same way here -- otherwise the name would trip the rule on the generated
+    file even though the source JSON passed.
     """
     if p.parent.name == "listings" and p.suffix == ".json":
         try:
             data = json.loads(txt)
         except ValueError:
             return txt
+        rows = []
         for row in data.get("listings", []):
-            if isinstance(row, dict):
-                row.pop("evidence", None)
+            if not isinstance(row, dict):
+                rows.append(row); continue
+            row.pop("evidence", None)
+            # The name is not only in `n`. Our own house style opens a description with it
+            # ("Rig Rite RV is a mobile RV repair business..."), so the name appears inside
+            # copy we wrote. It is still the BUSINESS's name rather than our vocabulary, so
+            # every occurrence in the record's own fields goes, not just the `n` key.
+            name = row.get("n") or ""
+            clean = {}
+            for k, v in row.items():
+                if isinstance(v, str):
+                    v = v.replace(name, "(business name)") if name else v
+                elif isinstance(v, list):
+                    v = [x.replace(name, "(business name)") if isinstance(x, str) else x for x in v]
+                clean[k] = v
+            clean["n"] = "(business name)"
+            rows.append(clean)
+        data["listings"] = rows
         return json.dumps(data, ensure_ascii=False)
+    if p.parent.name == "listings" and p.suffix == ".js":
+        names = re.findall(r'"n"\s*:\s*"((?:[^"\\]|\\.)*)"', txt)
+        out = re.sub(r'("n"\s*:\s*)"(?:[^"\\]|\\.)*"', r'\1"(business name)"', txt)
+        for nm in names:
+            if nm and nm != "(business name)":
+                out = out.replace(nm, "(business name)")
+        return out
+    # THE NAME TRAVELS. It is also written into the site search index (as the entry title AND
+    # as its lowercased search key) and into each directory page's JSON-LD, both as the
+    # AutoRepair `name` and inside its `description`. Exempting only the source and the shard
+    # left "Rig Rite RV" tripping the rule on three generated carriers.
+    if p.name == "search-index.js":
+        return re.sub(r'("t":")(?:[^"\\]|\\.)*(",\s*"u":"(?:[^"\\]|\\.)*",\s*"c":"Business",\s*"k":")(?:[^"\\]|\\.)*(")',
+                      r'\1(business name)\2(business name)\3', txt)
+    if p.parent.name == "directory" and p.suffix == ".html":
+        names = re.findall(r'"@type":"AutoRepair","name":"((?:[^"\\]|\\.)*)"', txt)
+        out = re.sub(r'("@type":"AutoRepair","name":")(?:[^"\\]|\\.)*(")', r'\1(business name)\2', txt)
+        for nm in set(names):
+            if nm:
+                out = out.replace(nm, "(business name)")
+        return out
     return txt
 
 

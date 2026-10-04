@@ -86,6 +86,9 @@
   <url><loc>https://originrv.com/directory/nebraska.html</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://originrv.com/directory/northdakota.html</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://originrv.com/directory/southdakota.html</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://originrv.com/directory/minnesota.html</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://originrv.com/directory/iowa.html</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://originrv.com/directory/missouri.html</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
 
   <!-- The manuals directory: the hub, then one page per system -->
   <url><loc>https://originrv.com/manuals/index.html</loc><lastmod>2026-10-03</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>

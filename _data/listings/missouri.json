@@ -1,0 +1,1371 @@
+{
+  "state": "MO",
+  "name": "Missouri",
+  "regions": [
+    {
+      "key": "st-louis-mo",
+      "label": "St. Louis and the eastern metro"
+    },
+    {
+      "key": "kansas-city-mo",
+      "label": "Kansas City and the western suburbs"
+    },
+    {
+      "key": "central-mo",
+      "label": "Columbia and central Missouri"
+    },
+    {
+      "key": "ozarks-mo",
+      "label": "Springfield, Branson and the Ozarks"
+    },
+    {
+      "key": "lake-ozarks-mo",
+      "label": "The Lake of the Ozarks"
+    },
+    {
+      "key": "southeast-mo",
+      "label": "Cape Girardeau, Jackson and the southeast"
+    },
+    {
+      "key": "southwest-mo",
+      "label": "Joplin and the southwest"
+    }
+  ],
+  "region_of": {
+    "St. Louis": "st-louis-mo",
+    "St. Charles": "st-louis-mo",
+    "O'Fallon": "st-louis-mo",
+    "Wentzville": "st-louis-mo",
+    "Troy": "st-louis-mo",
+    "Festus": "st-louis-mo",
+    "Union": "st-louis-mo",
+    "Kansas City": "kansas-city-mo",
+    "Independence": "kansas-city-mo",
+    "Blue Springs": "kansas-city-mo",
+    "Grain Valley": "kansas-city-mo",
+    "Oak Grove": "kansas-city-mo",
+    "Raytown": "kansas-city-mo",
+    "Smithville": "kansas-city-mo",
+    "Columbia": "central-mo",
+    "Springfield": "ozarks-mo",
+    "Branson": "ozarks-mo",
+    "Forsyth": "ozarks-mo",
+    "Nixa": "ozarks-mo",
+    "Ozark": "ozarks-mo",
+    "Strafford": "ozarks-mo",
+    "Phillipsburg": "ozarks-mo",
+    "Lebanon": "ozarks-mo",
+    "Waynesville": "ozarks-mo",
+    "Warsaw": "lake-ozarks-mo",
+    "Osage Beach": "lake-ozarks-mo",
+    "Camdenton": "lake-ozarks-mo",
+    "Versailles": "lake-ozarks-mo",
+    "Eldon": "lake-ozarks-mo",
+    "Jackson": "southeast-mo",
+    "Fredericktown": "southeast-mo",
+    "Joplin": "southwest-mo"
+  },
+  "listings": [
+    {
+      "n": "STL Mobile RV Repair",
+      "c": "St. Louis, MO",
+      "p": "314-449-8157",
+      "u": "https://stlmobilervrepair.com/",
+      "t": "mobile",
+      "e": true,
+      "r": true,
+      "d": "STL Mobile RV Repair sends RVTAA, NRVIA and Aqua-Hot certified technicians directly to the customer's home, campground, storage facility or roadside location throughout the St. Louis metro and surrounding Missouri and Illinois communities. It diagnoses and repairs RV air conditioning, electrical issues, plumbing leaks, slide-outs, roof leaks and Aqua-Hot hydronic heating on site, with most repairs completed in a single visit and no towing required. It also advertises brake, axle and suspension service and generator repair. The business states same-day availability and 24/7 emergency RV service with after-hours coverage.",
+      "g": [
+        "mobile",
+        "emergency",
+        "chassis"
+      ],
+      "base": "St. Louis",
+      "areas": [
+        "St. Louis",
+        "Chesterfield",
+        "Maryland Heights",
+        "Fenton",
+        "Kirkwood",
+        "Arnold",
+        "St. Charles",
+        "O'Fallon",
+        "Wentzville",
+        "Lake St. Louis",
+        "Wildwood",
+        "Eureka"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://stlmobilervrepair.com/",
+        "phone_quote": "314-449-8157",
+        "coverage_quotes": [
+          "STL Mobile RV Repair sends RVTAA, NRVIA, and Aqua-Hot certified technicians directly to your home, campground, storage facility, or roadside location throughout the St. Louis metro area and surrounding Missouri and Illinois communities.",
+          "Missouri – Core Areas: St. Louis (City & County), Chesterfield, Maryland Heights, Fenton, Kirkwood and Arnold.",
+          "Missouri – Suburbs & Beyond: St. Charles, O’Fallon, Wentzville, Lake St. Louis, Wildwood and Eureka."
+        ],
+        "type_quote": "No towing, no shop appointment, and no unnecessary waiting.",
+        "emergency_quote": "24/7 Emergency RV Service",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Prime RV Services",
+      "c": "Festus, MO",
+      "p": "314-714-8308",
+      "u": "https://primervservice.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Prime RV Services is a licensed and insured mobile RV repair business based in Festus. Its NRVIA-certified mechanics travel up to 50 miles for on-site repair in the Greater St. Louis area. Services include A/C, refrigerators, furnaces, water heaters, slide-outs, plumbing, electrical, roofs, hydraulics and generator service. It also performs NRVIA-certified RV inspections.",
+      "g": [
+        "mobile"
+      ],
+      "base": "Festus",
+      "areas": [
+        "Festus"
+      ],
+      "region": "Greater St. Louis",
+      "spec": "Brake and Axle Service (Travel Trailer and 5th Wheels Only)",
+      "evidence": {
+        "checked": "https://primervservice.com/",
+        "phone_quote": "314-714-8308",
+        "coverage_quotes": [
+          "Prime RV Services offers mobile RV repair in the Greater St. Louis, MO area. Our NRVIA Certified Mechanics will travel up to 50 miles for mobile RV repair.",
+          "Service Area Within 50 Miles of Festus, MO"
+        ],
+        "type_quote": "Prime RV Service is a fully licensed and insured mobile RV repair service.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Midwest Mobile RV Repair",
+      "c": "St. Louis, MO",
+      "p": "314-974-0299",
+      "u": "https://www.midwestmobilerv.com/",
+      "t": "mobile",
+      "e": true,
+      "r": true,
+      "d": "Midwest Mobile RV Repair provides exclusively mobile RV and motor home repair, servicing and parts in St. Louis and surrounding communities, bringing the work to the customer's location instead of the RV going to a shop. It states its technicians handle engine repairs as well as electrical system fixes, plus routine checks, fluid replacements and brake inspections. It advertises 24/7 emergency services for roadside crises.",
+      "g": [
+        "mobile",
+        "emergency",
+        "chassis"
+      ],
+      "base": "St. Louis",
+      "areas": [
+        "St. Louis"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.midwestmobilerv.com/",
+        "phone_quote": "314-974-0299",
+        "coverage_quotes": [
+          "Here at Midwest Mobile RV Repair we provide comprehensive rv repair services to homeowners and business owners across St. Louis, Missouri and the surrounding communities.",
+          "From engine repairs to electrical system fixes, we ensure your RV is in top condition."
+        ],
+        "type_quote": "Experience the convenience of our exclusively mobile service. No need to navigate the complexities of transporting your RV to a shop.",
+        "emergency_quote": "Our commitment extends to 24/7 emergency services, ensuring that whenever a roadside crisis strikes, Midwest Mobile RV Repair is just a call away.",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Bloods Mobile RV & Boat Services",
+      "c": "Branson, MO",
+      "p": "417.337.4292",
+      "u": "https://bloodsmobilervservices.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "Bloods Mobile RV & Boat Services is a mobile repair business run by full-time RVers, bringing service to wherever the RV is parked rather than having it hauled to a shop. It serves Taney and Stone County in Missouri and handles RV electrical and plumbing work, full-system checks, wash and wax and exterior detailing. It advertises emergency service availability and certified technicians.",
+      "g": [
+        "mobile",
+        "emergency"
+      ],
+      "base": "Branson",
+      "areas": [
+        "Branson"
+      ],
+      "region": "Taney & Stone County Missouri",
+      "spec": null,
+      "evidence": {
+        "checked": "https://bloodsmobilervservices.com/",
+        "phone_quote": "Phone For RV Repairs: 417.337.4292 (4173374292)",
+        "coverage_quotes": [
+          "Serving Taney & Stone County Missouri",
+          "2362 STATE HWY 265 BRANSON, MO 65616"
+        ],
+        "type_quote": "Convenient Mobile Service: No shops. No towing. No downtime.",
+        "emergency_quote": "Emergency Service Available",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Hope Home Services",
+      "c": "Wentzville, MO",
+      "p": "(636) 445-4511",
+      "u": "https://hopehomerv.com/services/mobile-rv-repair-maintenance",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "Hope Home Services provides mobile RV repair and maintenance delivered to the customer's driveway in Wentzville and throughout Missouri, without the RV being hauled anywhere. It handles electrical, plumbing, appliance service, roof work and structural repairs on site. It states its mobile setup is equipped for everything except major engine overhauls, which it can arrange with partners, and it prioritises emergency calls for roof leaks and electrical problems.",
+      "g": [
+        "mobile",
+        "emergency"
+      ],
+      "base": "Wentzville",
+      "areas": [
+        "Wentzville",
+        "St. Peters",
+        "O'Fallon",
+        "Chesterfield",
+        "St. Charles"
+      ],
+      "region": null,
+      "spec": "Our mobile setup is equipped for everything except major engine overhauls, which we can arrange with trusted partners.",
+      "evidence": {
+        "checked": "https://hopehomerv.com/services/mobile-rv-repair-maintenance",
+        "phone_quote": "Phone: (636) 445- 4511 (+16364454511)",
+        "coverage_quotes": [
+          "We serve Wentzville, St. Peters, O'Fallon, Chesterfield, St. Charles, and surrounding Missouri communities."
+        ],
+        "type_quote": "Brian Hope brings professional RV repair and maintenance directly to your driveway in Wentzville and throughout Missouri.",
+        "emergency_quote": "Yes, we prioritize emergency calls for issues like roof leaks, electrical problems, or anything that could cause damage if not addressed quickly.",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Weekender RV",
+      "c": "Warsaw, MO",
+      "p": "(660) 723-3534",
+      "u": "https://weekenders-rv.com/services",
+      "t": "both",
+      "e": true,
+      "r": false,
+      "d": "Weekender RV offers two modes of service in Missouri: mobile campsite repair that comes to the customer, and in-shop full service for major repairs and overhauls at its Warsaw facility. It handles electrical systems, plumbing, HVAC and heating, appliances, slide-outs, leveling systems, roof and sealing, and winterization. It advertises emergency service availability and handles warranty and insurance claims.",
+      "g": [
+        "mobile",
+        "center",
+        "emergency"
+      ],
+      "base": "Warsaw",
+      "areas": [
+        "Warsaw"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://weekenders-rv.com/services",
+        "phone_quote": "(660) 723-3534 (+16607233534)",
+        "coverage_quotes": [
+          "19157 Irish Rd Warsaw, MO 65355",
+          "Missouri's trusted RV repair, sales, and rental experts. Serving the region for over 20 years."
+        ],
+        "type_quote": "Stuck at a campground? We come to you! Our mobile repair service brings expert technicians and parts directly to your location.",
+        "emergency_quote": "Emergency service available",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "On The Trail Again LLC",
+      "c": "Lake of the Ozarks, MO",
+      "p": "913-710-8688",
+      "u": "https://onthetrailagainllc.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "On The Trail Again LLC is a mobile certified RV technician serving the Lake of the Ozarks. It handles maintenance and repair such as winterization, wheel bearing repacks, roof sealant, inspections and propane leak tests, plus water systems, plumbing, furnace and AC work. It offers off-hour emergency service for slide extraction or retraction, water leaks and power outages, with a surcharge and limited availability. The site lists what it cannot do, including generators, Aqua-Hot, roof replacements, body damage and large multi-day projects.",
+      "g": [
+        "mobile",
+        "emergency"
+      ],
+      "base": null,
+      "areas": [],
+      "region": "Lake of the Ozarks",
+      "spec": "As a mobile RV technician, there are some things that I cannot help with or don't have training on. List includes: generators, Aqua-Hot, replacing floors/carpentry, rebuilding slides, roof replacements, body damage, insurance quotes, any large multi-day projects.",
+      "evidence": {
+        "checked": "https://onthetrailagainllc.com/",
+        "phone_quote": "913-710-8688",
+        "coverage_quotes": [
+          "Your Local Mobile Certified RV Technician Serving the Lake of the Ozarks!"
+        ],
+        "type_quote": "Your Local Mobile ***Certified ***RV Technician Serving the Lake of the Ozarks!",
+        "emergency_quote": "Off Hour Services",
+        "roadside_quote": null,
+        "licence": null
+      },
+      "reg": "lake-ozarks-mo"
+    },
+    {
+      "n": "RV Mobile Repair LLC",
+      "c": "Raytown, MO",
+      "p": "816-699-9825",
+      "u": "https://rv-mobilerepair.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "RV Mobile Repair LLC is a mobile RV repair business based in Raytown. Its technicians are trained as Registered Technicians through the National RV Academy and endorsed by the RV Technicians Association of America. Services include preventive maintenance, winterization and de-winterization, black and grey tank cleaning, A/C, furnace and water heater servicing, plumbing, weather sealing and awning replacement.",
+      "g": [
+        "mobile"
+      ],
+      "base": "Raytown",
+      "areas": [
+        "Raytown"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://rv-mobilerepair.com/",
+        "phone_quote": "816-699-9825",
+        "coverage_quotes": [
+          "Raytown, Missouri 64138, United States"
+        ],
+        "type_quote": "Choose RV Mobile Repair LLC in Raytown, and we'll bring the last three decades of professional RV repair services right to your doorstep, including winterization services to keep your RV in top shape.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "RV Repair Near Me",
+      "c": "Phillipsburg, MO",
+      "p": "(417) 533-7530",
+      "u": "https://rvrepairgroup.com/mobile-repair/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "RV Repair Near Me runs a mobile RV repair service from Phillipsburg, bringing certified technicians to the customer's driveway, campsite, storage lot or wherever the RV is parked. On-site work covers air conditioners, furnaces, water heaters, plumbing, electrical systems, batteries, converters, lighting, refrigerators, stoves, slide-outs, awnings, jacks, leveling systems and roof inspections. It states it serves RV owners throughout Missouri and is RVDA/RVIA certified.",
+      "g": [
+        "mobile"
+      ],
+      "base": "Phillipsburg",
+      "areas": [
+        "Phillipsburg"
+      ],
+      "region": "Missouri",
+      "spec": null,
+      "evidence": {
+        "checked": "https://rvrepairgroup.com/mobile-repair/",
+        "phone_quote": "(417) 533-7530 (+14175337530)",
+        "coverage_quotes": [
+          "Trusted locally — Proudly serving RV owners throughout Missouri.",
+          "18256 Campground Road Phillipsburg, MO 65722"
+        ],
+        "type_quote": "Our mobile RV repair service brings certified, reliable technicians directly to your driveway, campsite, storage lot, or wherever your home‑on‑wheels is parked.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Reliable RV",
+      "c": "Springfield, MO",
+      "p": "866-589-8582",
+      "u": "https://www.reliablerv.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Reliable RV runs an RV service and repair center in Springfield with factory-trained, ASE and I-CAR certified technicians. Its service center handles motorhomes, campers and fifth wheels, including RV glass repair, battery replacement, brake repair, AC repair and air filter replacement. It also operates Reliable Imports & RV Collision Center, a body shop with 20 service bays, a frame machine and a paint booth, factory authorized for Airstream, Coachmen, Fleetwood, Winnebago, Itasca and Forest River repairs.",
+      "g": [
+        "center",
+        "collision"
+      ],
+      "base": "Springfield",
+      "areas": [
+        "Springfield"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.reliablerv.com/rv-service",
+        "phone_quote": "866-589-8582",
+        "coverage_quotes": [
+          "438 S Ingram Mill Avenue • Springfield, MO 65802"
+        ],
+        "type_quote": "At Reliable RV's Service Center, factory-trained technicians will handle all your service needs.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Thomas and Sons RV Sales and Service",
+      "c": "Springfield, MO",
+      "p": "417-865-6125",
+      "u": "https://www.thomassonsrv.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Thomas and Sons RV Sales and Service is an RV sales and service business on North Glenstone Avenue in Springfield. It publishes separate service hours and a parts department covering awnings and coverings, electrical, fresh water and plumbing, LP gas, hardware and maintenance, jacks and levelers, sanitation, and towing and hitches.",
+      "g": [
+        "center"
+      ],
+      "base": "Springfield",
+      "areas": [
+        "Springfield"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.thomassonsrv.com/",
+        "phone_quote": "Tel: 417.865.6125 (417-865-6125)",
+        "coverage_quotes": [
+          "1930 N. Glenstone Ave.",
+          "Springfield, MO 65803"
+        ],
+        "type_quote": "RV Service | Thomas and Sons RV Sales and Service | United States",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Royal RV Repair",
+      "c": "Blue Springs, MO",
+      "p": "816-255-8905",
+      "u": "https://royalrvkc.com/",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "Royal RV Repair provides full-service RV repair for the Kansas City metro from a secure facility in Blue Springs and also travels to the customer for most repairs. Its services include chassis maintenance, slide-out repairs, hydraulics, hitch installation, hail and storm damage, roof replacement, winterization, insurance estimates and collision repair. It states its technicians are RVIA certified with over 20 years of experience. It also advertises towing and delivery for extensive jobs.",
+      "g": [
+        "mobile",
+        "center",
+        "collision"
+      ],
+      "base": "Blue Springs",
+      "areas": [
+        "Kansas City",
+        "Independence",
+        "Lee's Summit",
+        "Liberty",
+        "Blue Springs",
+        "Raytown",
+        "Grandview",
+        "Belton",
+        "Gladstone",
+        "Raymore"
+      ],
+      "region": "Kansas City metro",
+      "spec": null,
+      "evidence": {
+        "checked": "https://royalrvkc.com/",
+        "phone_quote": "816-255-8905 (+8162558905)",
+        "coverage_quotes": [
+          "We provide mobile RV repair in Kansas City, Independence, Lee’s Summit, Liberty, Blue Springs, Raytown, Grandview, Belton, Gladstone, Raymore, Kearny, Overland Park, Shawnee, Lenexa, Olathe, Leawood, Prairie Village, Mission, Merrian, Roeland Park, Bonner Springs, and all other surrounding areas.",
+          "661 Ne Jefferson St, Ste. 12 Blue Springs, MO 64014"
+        ],
+        "type_quote": "We bring our expertise to you! Royal RV Repair travels to your location for most repairs, making it convenient for you.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "KC RV There Yet, LLC",
+      "c": "Rocky Mount, MO",
+      "p": "(816) 745-9618",
+      "u": "https://kcrvthereyet.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "KC RV There Yet is located in Rocky Mount and services the north side of the Lake of the Ozarks, including Rocky Mount, Versailles and Osage Beach. It offers winterization, heating and air repair, roof sealing and general RV service. The site states emergency service is available and publishes a business license number.",
+      "g": [
+        "mobile",
+        "emergency"
+      ],
+      "base": null,
+      "areas": [
+        "Versailles",
+        "Osage Beach"
+      ],
+      "region": "Lake of the Ozarks",
+      "spec": null,
+      "evidence": {
+        "checked": "https://kcrvthereyet.com/",
+        "phone_quote": "(816) 745-9618 (+18167459618)",
+        "coverage_quotes": [
+          "Located in Rocky Mount servicing the North side of the Lake of the Ozarks or Rocky Mount, Versailles, Osage Beach areas.",
+          "Rocky Mount, MO 65072"
+        ],
+        "type_quote": "We offer winterization, heating and air repair, roof sealing, and much more.",
+        "emergency_quote": "Emergency Service Available",
+        "roadside_quote": null,
+        "licence": null
+      },
+      "reg": "lake-ozarks-mo"
+    },
+    {
+      "n": "Abe Thompson RV Service Center",
+      "c": "Oak Grove, MO",
+      "p": "816-690-2163",
+      "u": "https://www.abesrv.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Abe Thompson RV Service Center is a family-owned RV service and repair business on North Broadway in Oak Grove, along I-70 in the Kansas City metro. It specializes in RV collision repair, roof and slide floor replacement, insurance work and preventative maintenance for RVs, fifth wheels, travel trailers and motorhomes.",
+      "g": [
+        "center",
+        "collision"
+      ],
+      "base": "Oak Grove",
+      "areas": [
+        "Oak Grove"
+      ],
+      "region": "Kansas City metro",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.abesrv.com/",
+        "phone_quote": "Tel: 816-690-2163",
+        "coverage_quotes": [
+          "From our shop conveniently located along I-70 in the Kansas City metro",
+          "510 N Broadway",
+          "Oak Grove, MO 64075"
+        ],
+        "type_quote": "Abe Thompson RV Service Center is the Midwest leader in service and repair for RVs, fifth wheels, travel trailers and motorhomes.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Shoreline Boat & RV",
+      "c": "Smithville, MO",
+      "p": "(816) 532-8670",
+      "u": "https://shorelineboatandrv.com/kansas-city/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Shoreline Boat & RV provides boat, RV and trailer repair for the Kansas City area from its Smithville facility. Its technicians handle RV collision and roof repair, electrical and plumbing service, slide-outs and awnings, generator repair and trailer repair, and it works with insurance and warranty companies. It states it does not have in-house mechanics for boat or RV engine repairs.",
+      "g": [
+        "center",
+        "collision"
+      ],
+      "base": "Smithville",
+      "areas": [
+        "Smithville",
+        "Liberty"
+      ],
+      "region": "Kansas City area",
+      "spec": "No. Shoreline does not have in-house mechanics for boat or RV engine repairs.",
+      "evidence": {
+        "checked": "https://shorelineboatandrv.com/kansas-city/",
+        "phone_quote": "Kansas city (816) 532-8670 (8165328670)",
+        "coverage_quotes": [
+          "14804 Shamrock Way, Smithville, Missouri 64089"
+        ],
+        "type_quote": "Shoreline Boat & RV provides professional boat, RV, and trailer repair for customers throughout the Kansas City area from our Smithville, Missouri facility.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Central Body Company",
+      "c": "Kansas City, MO",
+      "p": "(816) 455-7852",
+      "u": "https://centralbody.com/rv-repair-in-kansas-city/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Central Body Company, formerly KC Custom Coach, offers RV repair, painting and customization for recreational and commercial vehicles at its Kansas City location. It handles complete body work, fiberglass repair, paint and refinishing, roof repair and water intrusion, windshield and window replacement, cosmetic and collision restoration, and sliding and awning repair. It is a Coach-Net partner and works with all insurance carriers.",
+      "g": [
+        "center",
+        "collision"
+      ],
+      "base": "Kansas City",
+      "areas": [
+        "Kansas City"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://centralbody.com/rv-repair-in-kansas-city/",
+        "phone_quote": "Call (816) 455-7852 to schedule your estimate or speak to our Kansas City team today.",
+        "coverage_quotes": [
+          "Formerly known as KC Custom Coach, our Kansas City location continues a legacy of quality, accountability, and honest service."
+        ],
+        "type_quote": "At Central Body Company, we offer expert RV repair, painting, and customization for all types of recreational and commercial vehicles.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Complete RV Service & Body Shop",
+      "c": "St. Charles, MO",
+      "p": "636-724-2232",
+      "u": "https://www.stlouisrvrepair.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Complete RV Service & Body Shop is a family-owned RV repair and collision center in St. Charles, in business since 1975. Its shop has 15 service bays and two oversized paint booths that fit motorhomes up to 45 feet, and it handles body work, collision repair, interior restoration, maintenance, storage and parts. It works directly with major insurance carriers on RV collision claims and serves St. Charles, St. Peters, O'Fallon and the greater St. Louis area.",
+      "g": [
+        "center",
+        "collision"
+      ],
+      "base": "St. Charles",
+      "areas": [
+        "St. Charles",
+        "St. Louis",
+        "St. Peters",
+        "O'Fallon",
+        "Wentzville",
+        "Lake St. Louis"
+      ],
+      "region": "Greater St. Louis",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.stlouisrvrepair.com/",
+        "phone_quote": "Call 636-724-2232 (+16367242232)",
+        "coverage_quotes": [
+          "3309 New Town Blvd",
+          "St. Charles, MO 63301",
+          "Serving St. Charles, St. Peters, O’Fallon & Greater St. Louis."
+        ],
+        "type_quote": "For over 50 years, Complete RV has been the go-to RV repair shop for families across St. Charles, St. Louis, and all of Missouri",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Byerly RV",
+      "c": "Troy, MO",
+      "p": "(636) 938-2002",
+      "u": "https://www.byerlyrv.com/rv-body-shop/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Byerly RV operates an RV body shop and collision repair facility in Troy, serving St. Louis, Eureka, Troy and RV owners across Missouri. Its technicians handle collision repair, storm and weather damage, cosmetic and exterior repairs, body panel repair and replacement, and routine maintenance while the RV is in the shop. It works directly with insurance providers and helps guide customers through the claims process.",
+      "g": [
+        "center",
+        "collision"
+      ],
+      "base": "Troy",
+      "areas": [
+        "St. Louis",
+        "Eureka",
+        "Troy"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.byerlyrv.com/rv-body-shop/",
+        "phone_quote": "Phone: (636) 938-2002",
+        "coverage_quotes": [
+          "Serving St. Louis, Eureka, Troy, and RV owners across Missouri",
+          "110 Francis Dr. Troy, MO 63379"
+        ],
+        "type_quote": "Our Troy, Missouri RV body shop is equipped to handle a wide range of repairs and restoration services.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "RV Incidents",
+      "c": "Nixa, MO",
+      "p": "(417) 725-2900",
+      "u": "https://rvincidents.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "RV Incidents is an RV body shop serving the Springfield and Branson area since 2003 from its Nixa facility. It specializes in collision repairs, complete renovations, systems diagnostics and repairs, and general RV maintenance, with a 16,000 square foot shop and a 55 foot self-contained paint booth. Its technicians repair motorhomes, fifth wheels and travel trailers and work with insurance companies on claims.",
+      "g": [
+        "center",
+        "collision"
+      ],
+      "base": "Nixa",
+      "areas": [
+        "Nixa"
+      ],
+      "region": "Springfield/Branson area",
+      "spec": null,
+      "evidence": {
+        "checked": "https://rvincidents.com/",
+        "phone_quote": "(417) 725-2900",
+        "coverage_quotes": [
+          "RV Incidents has been serving the Springfield/Branson area since 2003.",
+          "2061 James River Court, Nixa, Missouri 65714, United States"
+        ],
+        "type_quote": "We specialize in collision repairs, complete renovations, systems diagnostics and repairs, as well as, general RV maintenance.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Travers STL RV Service",
+      "c": "O'Fallon, MO",
+      "p": "(636) 542-4567",
+      "u": "https://stlouisrvservice.com/services/rv-collision-repair/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Travers STL RV Service in O'Fallon handles RV collision repair for Class A, B and C motorhomes, travel trailers, fifth wheels and toy haulers. Its master technicians run diagnostics and inspections, draft repair plans, and handle fiberglass and aluminum body repair, roof and door repair, glass repair and replacement, appliance repair and exterior painting. It works on brands including Dutchmen, Heartland, Lance, Starcraft and Winnebago.",
+      "g": [
+        "center",
+        "collision"
+      ],
+      "base": "O'Fallon",
+      "areas": [
+        "O'Fallon"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://stlouisrvservice.com/services/rv-collision-repair/",
+        "phone_quote": "Call our team at(636) 542-4567",
+        "coverage_quotes": [
+          "1156 West Terra Ln. O'Fallon, MO 63366"
+        ],
+        "type_quote": "the pros at Travers STL RV Service in O’Fallon, MO, will be here to help with all RV collision repair",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Perry Legend Collision Repair Center",
+      "c": "Columbia, MO",
+      "p": "573-442-7883",
+      "u": "https://perrylegendcollision.com/general/perry-legend-collision-repair-center-your-go-to-destination-for-top-quality-rv-repairs",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Perry Legend Collision Repair Center in Columbia specializes in repairing recreational vehicles including motorhomes, campers and travel trailers. Its technicians handle body repairs and paint jobs, frame straightening, and repairs from minor scratches to major collision damage. It serves central Missouri and can arrange towing services to haul in an RV that cannot drive.",
+      "g": [
+        "center",
+        "collision"
+      ],
+      "base": "Columbia",
+      "areas": [
+        "Columbia"
+      ],
+      "region": "central Missouri",
+      "spec": null,
+      "evidence": {
+        "checked": "https://perrylegendcollision.com/general/perry-legend-collision-repair-center-your-go-to-destination-for-top-quality-rv-repairs",
+        "phone_quote": "1.573.442.7883 (5734427883)",
+        "coverage_quotes": [
+          "3101 Lemone Industrial Blvd. Columbia, MO 65201"
+        ],
+        "type_quote": "At Perry Legend Collision Repair Center, we specialize in repairing all types of recreational vehicles, including motorhomes, campers, travel trailers, and more.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Carefree RV Service LLC",
+      "c": "Forsyth, MO",
+      "p": "936.707.9977",
+      "u": "https://www.carefreervservice.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "Carefree RV Service LLC is a certified mobile RV technician service based in the Branson and Forsyth areas, coming to the customer's location rather than the RV going to a shop. It diagnoses, adjusts and repairs recreational vehicles and lists RV absorption refrigerators and RV air conditioners and heat pumps among its specialties. It advertises 24-hour service availability.",
+      "g": [
+        "mobile",
+        "emergency"
+      ],
+      "base": "Forsyth",
+      "areas": [
+        "Branson",
+        "Forsyth"
+      ],
+      "region": "Branson and Forsyth areas",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.carefreervservice.com/",
+        "phone_quote": "936.707.9977",
+        "coverage_quotes": [
+          "Based in the scenic Branson and Forsyth areas",
+          "276 Fowler Road",
+          "Forsyth, Missouri 65653"
+        ],
+        "type_quote": "Experience the ultimate convenience with our certified mobile RV technician service!",
+        "emergency_quote": "24-hour service available",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "417RVService",
+      "c": "Ozark, MO",
+      "p": "(417) 840-0194",
+      "u": "https://www.417rvservice.com/contact",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "417RVService provides motorhome and RV services and repair in Ozark, serving Southwest Missouri. It offers a broad range of services and specialties for campers, with common services including windshield repair, furniture upgrades and air conditioning repair. The business takes service requests and quotes through its contact page.",
+      "g": [
+        "center"
+      ],
+      "base": "Ozark",
+      "areas": [
+        "Ozark"
+      ],
+      "region": "Southwest Missouri",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.417rvservice.com/contact",
+        "phone_quote": "Or, give us a call now! (417) 840-0194",
+        "coverage_quotes": [
+          "1620 W Skyline Ave, Ozark Missouri 65721"
+        ],
+        "type_quote": "Contact 417RVService",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Columbia RV Service Center and Small Engine Repair",
+      "c": "Columbia, MO",
+      "p": "573-442-1654",
+      "u": "https://columbiarvservicecenter.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Columbia RV Service Center and Small Engine Repair repairs and services all types of RVs and small engines in Columbia. Roy Klenke has over 30 years of RV and small engine experience and holds RVIA Master Certification. Appointments are required for all service work and the business asks customers to request a bid on all service work.",
+      "g": [
+        "center"
+      ],
+      "base": "Columbia",
+      "areas": [
+        "Columbia"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://columbiarvservicecenter.com/",
+        "phone_quote": "Phone: 573-442-1654",
+        "coverage_quotes": [
+          "4307B Interstate 70 Drive Southeast, Columbia, Missouri 65201, United States"
+        ],
+        "type_quote": "We repair and service all types of RVs and Small Engines.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Good News RV",
+      "c": "Labadie, MO",
+      "p": "636-221-0507",
+      "u": "https://goodnewsrvrepair.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "Good News RV is a family-owned mobile RV repair business serving the Greater St. Louis area, bringing service to the customer within 25 miles of Labadie. Services include brake service and repair, maintenance and inspection, suspension on fifth wheels and travel trailers, tire service, HVAC, awnings and slide toppers, water heater repairs, plumbing, sealants, slide-out repairs and winterizing. It states it does not perform chassis-side work but can refer customers to someone.",
+      "g": [
+        "mobile",
+        "emergency"
+      ],
+      "base": null,
+      "areas": [],
+      "region": "Greater St. Louis",
+      "spec": "Diagnostic to RV Systems (we do not perform chassis side work but can refer you to someone)",
+      "evidence": {
+        "checked": "https://goodnewsrvrepair.com/",
+        "phone_quote": "Call/Text: 636-221-0507",
+        "coverage_quotes": [
+          "We are a family-owned business offering mobile RV repair to the Greater St. Louis area.",
+          "Our service fee includes anywhere within 25 miles from Labadie, MO."
+        ],
+        "type_quote": "We are willing to do most service and repair jobs on-site.",
+        "emergency_quote": "Emergency calls after 5 p.m. and all day Saturday and Sunday",
+        "roadside_quote": null,
+        "licence": null
+      },
+      "reg": "st-louis-mo"
+    },
+    {
+      "n": "Pull Through Sites Mobile RV",
+      "c": "St. Louis, MO",
+      "p": "(314) 907-0937",
+      "u": "https://pullthroughsites.com/services/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Pull Through Sites Mobile RV offers mobile RV service within a 60 mile radius of St. Louis, coming to wherever the RV is. It offers packaged services such as a spring spruce up, brakes and bearings, and roof care, plus customised work covering electrical, plumbing, water, frame, slides and jacks, and general maintenance. It states all its technicians are RVTI trained.",
+      "g": [
+        "mobile"
+      ],
+      "base": "St. Louis",
+      "areas": [
+        "St. Louis"
+      ],
+      "region": "St. Louis",
+      "spec": null,
+      "evidence": {
+        "checked": "https://pullthroughsites.com/services/",
+        "phone_quote": "tel: (314) 907-0937",
+        "coverage_quotes": [
+          "We serve those within 60 mile radius of St. Louis, MO.",
+          "Servicing 60 mile radius of St. Louis, MO"
+        ],
+        "type_quote": "We offer mobile RV service which means we come to wherever your RV is within sixty miles of St. Louis, Missouri.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Hawk Engineering",
+      "c": "Jackson, MO",
+      "p": "(573) 579-8295",
+      "u": "https://hawkengineering.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Hawk Engineering is a family-owned camper and RV repair shop in Jackson, serving Southeast Missouri. It services all types of campers and RVs including towables, Class A and Class C, handling water damage repair, fiberglass and paint repair, roof repairs and replacements, floor repairs, awning installation, plumbing repairs, electrical troubleshooting and appliance repair. It offers free quotes and can assist with warranty and insurance claims.",
+      "g": [
+        "center",
+        "collision"
+      ],
+      "base": "Jackson",
+      "areas": [
+        "Jackson"
+      ],
+      "region": "Southeast Missouri",
+      "spec": null,
+      "evidence": {
+        "checked": "https://hawkengineering.com/",
+        "phone_quote": "(573) 579-8295 (5735798295)",
+        "coverage_quotes": [
+          "296 Country Estates Lane, Jackson, MO 63755, US",
+          "We’re located in Southeast Missouri, and while most of our customers are within an hour’s drive, we often serve out-of-state clients who value our expertise."
+        ],
+        "type_quote": "At Hawk Engineering, we understand how important your camper or RV is to your family’s adventures.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Joplin RV & Marine",
+      "c": "Joplin, MO",
+      "p": "417-768-4440",
+      "u": "https://www.joplinrvmarine.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Joplin RV & Marine is a family-operated RV dealership in Joplin with a service department that serves any brand, stating it will never turn a customer away because they did not buy from it. Service hours run Monday to Friday and Saturday. It advertises a large service facility with factory-trained technicians and a parts department.",
+      "g": [
+        "center"
+      ],
+      "base": "Joplin",
+      "areas": [
+        "Joplin"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.joplinrvmarine.com/rv-service",
+        "phone_quote": "417-768-4440",
+        "coverage_quotes": [
+          "Joplin RV & Marine will never turn you away just because we didn't sell you that travel trailer, motorhome or fifth wheel.",
+          "3535 Hammons Blvd Joplin, MO 64804"
+        ],
+        "type_quote": "Joplin RV & Marine will never turn you away just because we didn't sell you that travel trailer, motorhome or fifth wheel.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Griffon’s RV Repair",
+      "c": "Fredericktown, MO",
+      "p": "573-760-5909",
+      "u": "https://griffonsrvrepair.com/contact/",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "Griffon's RV Repair offers in-shop and mobile RV repair and maintenance for travel trailers and fifth wheels, based in Fredericktown. It provides comprehensive repair and inspection services, routine maintenance and emergency repairs, and can bring its services to the customer. The site lists its service area as Bollinger, Iron, Madison, Reynolds, St. Francois and Wayne counties.",
+      "g": [
+        "mobile",
+        "center"
+      ],
+      "base": "Fredericktown",
+      "areas": [
+        "Fredericktown"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://griffonsrvrepair.com/contact/",
+        "phone_quote": "Call: 573-760-5909",
+        "coverage_quotes": [
+          "1150 Madison 505, Fredericktown, MO 63645",
+          "We serve the following Missouri areas: Bollinger, Iron, Madison, Reynolds, St. Francois, and Wayne counties."
+        ],
+        "type_quote": "Keep your RV in peak condition for your next adventure. Reach out to us for prompt and professional repair services.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "72 West Motors & RVs",
+      "c": "Fredericktown, MO",
+      "p": "573-783-6500",
+      "u": "https://www.72westmotorsandrvs.com/rv-repair-maintenance",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "72 West Motors & RVs runs an RV service center in Fredericktown. Its full-service shop handles appliance repairs, electrical issues, trailer wiring, awning installation and repair, winterizing and de-winterizing, metal and sidewall replacement, rubber roof replacement, resealing roofs and windows, and plumbing leaks. It also performs insurance repair and honours warranty work for the products it sells.",
+      "g": [
+        "center"
+      ],
+      "base": "Fredericktown",
+      "areas": [
+        "Fredericktown"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.72westmotorsandrvs.com/rv-repair-maintenance",
+        "phone_quote": "573-783-6500 (5737836500)",
+        "coverage_quotes": [
+          "1743 W. Highway 72, Fredericktown, MO 63645"
+        ],
+        "type_quote": "With competitive rates and fast service, 72 West RVs will give you the best value for your time and money.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Route 66 Mobile RV Repair",
+      "c": "Lebanon, MO",
+      "p": "(417) 322-2707",
+      "u": "https://route66mobilerv.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Route 66 Mobile RV Repair is a mobile RV repair service based in Lebanon, servicing a 65 mile radius from Lebanon and Bennett Spring. Its technician has 20 years of experience as an RV technician and 12 years specialising in RV mobile repair, and it provides RV repairs and upgrades on site with quotes given for price and availability.",
+      "g": [
+        "mobile"
+      ],
+      "base": "Lebanon",
+      "areas": [
+        "Lebanon"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://route66mobilerv.com/",
+        "phone_quote": "(417)322-2707 (4173222707)",
+        "coverage_quotes": [
+          "we are a mobile rv service servicing 65 mile radious FROM Lebanon,MO/Bennett spring,mo"
+        ],
+        "type_quote": "We come to you with 20 years of experience as an RV technician and 12 years specializing in RV mobile repair service.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Checkpoint RV",
+      "c": "Waynesville, MO",
+      "p": "(573) 433-0747",
+      "u": "https://checkpointrv.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "Checkpoint RV is an NRVTA-certified, veteran-owned mobile RV technician serving Waynesville and a 100 mile radius. It handles routine maintenance and complex repair, inspections, electrical and plumbing repair, winterization, roof repair, AC repair, slide-out repair, battery installation and water heater repair. It also offers roadside assistance including jump starts, tire changes and fuel delivery, and states it is open 24 hours.",
+      "g": [
+        "mobile",
+        "emergency"
+      ],
+      "base": "Waynesville",
+      "areas": [
+        "Waynesville",
+        "Fort Leonard Wood",
+        "Bennett Springs"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://checkpointrv.com/",
+        "phone_quote": "(573) 433-0747",
+        "coverage_quotes": [
+          "I am your trusted partner for comprehensive RV care in Waynesville, MO, and the surrounding areas.",
+          "Waynesville, MO 100-Mile Radius Fort Leonard Wood, MO Lake of the Ozarks, MO Bennett Springs, MO"
+        ],
+        "type_quote": "Checkpoint RV is dedicated to keeping your vehicle safe, comfortable, and ready for every journey.",
+        "emergency_quote": "OPEN 24 HOURS",
+        "roadside_quote": "I also offer dependable RV roadside assistance.",
+        "licence": null
+      }
+    },
+    {
+      "n": "That RV Guy",
+      "c": "Southwest Missouri",
+      "p": "(417) 413-4326",
+      "u": "https://thatrvguy.repair/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "That RV Guy is a mobile RV repair service company serving Southwest Missouri, bringing the workshop to the customer. It is RVIA certified and handles a wide range of RV repair and maintenance, from minor tweaks to major overhauls, and specialises in solar power systems and coach batteries including LiFePO4 lithium. It also inspects for water leaks and seals existing leaks.",
+      "g": [
+        "mobile"
+      ],
+      "base": null,
+      "areas": [],
+      "region": "Southwest Missouri",
+      "spec": null,
+      "evidence": {
+        "checked": "https://thatrvguy.repair/",
+        "phone_quote": "call/text:(417) 413 – 4326",
+        "coverage_quotes": [
+          "Serving Southwest Missouri"
+        ],
+        "type_quote": "That RV Guy is a mobile RV repair service company.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      },
+      "reg": "southwest-mo"
+    },
+    {
+      "n": "Victory RV",
+      "c": "St. Louis, MO",
+      "p": "314-856-8590",
+      "u": "https://victoryrvrepair.wixsite.com/victory-rv/about-us",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "Victory RV is a mobile RV repair business based in St. Louis, offering interior and exterior repair services for all types of RVs, including extended and manufacturer warranty work. Its RVTI certified technician comes to the customer's location to provide on-the-go repairs. The site states the technician is dealership trained, Level 3 RVTI certified and Lippert certified, and lists 24 hour, 7 day availability.",
+      "g": [
+        "mobile",
+        "emergency"
+      ],
+      "base": "St. Louis",
+      "areas": [
+        "St. Louis"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://victoryrvrepair.wixsite.com/victory-rv/about-us",
+        "phone_quote": "Phone: 314-856-8590",
+        "coverage_quotes": [
+          "Victory RV is a mobile RV repair business based in St. Louis, Missouri.",
+          "Offering Mobile RV Repair Services in Missouri/Illinois"
+        ],
+        "type_quote": "Our RVTI certified RV technician will come to your location to provide on-the-go repairs, so you can get back on the road as soon and as cost effective as possible.",
+        "emergency_quote": "24 Hours - 7 Days/Week",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "RV Support Services",
+      "c": "St. Louis, MO",
+      "p": "314-369-2751",
+      "u": "http://rvsupport.net/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "RV Support Services provides mobile service and repair of most RVs, focusing on the St. Louis area with year-round service. It works on Class A and C motorhomes and Class B van conversions, plus fifth wheels, travel trailers, toy haulers, horse trailers, cargo trailers and pop-up campers. The business states it has been servicing recreational vehicles since 1988.",
+      "g": [
+        "mobile"
+      ],
+      "base": "St. Louis",
+      "areas": [
+        "St. Louis"
+      ],
+      "region": "St. Louis",
+      "spec": null,
+      "evidence": {
+        "checked": "http://rvsupport.net/",
+        "phone_quote": "Technician: 314-369-2751",
+        "coverage_quotes": [
+          "We focus on the ST Louis, MO area.",
+          "We provide service and repair of most RVs such as Class A and C Motor Homes, Class B Van Conversions."
+        ],
+        "type_quote": "We offer Year Round RV service to our clients.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Blue Compass RV Springfield Service Center",
+      "c": "Strafford, MO",
+      "p": "(417) 512-7595",
+      "u": "https://www.bluecompassrv.com/locations/missouri/Springfield/service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Blue Compass RV Springfield Service Center is an RV service and repair facility in Strafford, at the edge of Springfield along I-44. Its certified technicians handle routine maintenance, roof repairs and resealing, collision and body work, electrical and plumbing, appliance and HVAC service, winterization, solar installation and warranty work. Every unit gets a free multi-point inspection.",
+      "g": [
+        "center",
+        "collision"
+      ],
+      "base": "Strafford",
+      "areas": [
+        "Strafford",
+        "Springfield",
+        "Branson",
+        "Joplin",
+        "Nixa"
+      ],
+      "region": "Southwest Missouri",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.bluecompassrv.com/locations/missouri/Springfield/service",
+        "phone_quote": "(417) 512-7595 (+14175127595)",
+        "coverage_quotes": [
+          "1099 E Evergreen St, Strafford, MO 65757",
+          "RV owners from Branson, Joplin, Nixa, and across Southwest Missouri come to us for everything from routine oil changes and roof reseals to warranty repairs and slideout work."
+        ],
+        "type_quote": "Strafford sits right at the edge of Springfield along I-44, which means our service center is easy to reach whether you're a local or you've been rolling through the Ozarks and something needs attention before you go further.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Blue Compass RV Kansas City",
+      "c": "Grain Valley, MO",
+      "p": "(816) 847-1699",
+      "u": "https://www.bluecompassrv.com/locations/missouri/Kansas-City",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Blue Compass RV Kansas City is an RV dealership, service center and parts store in Grain Valley, off I-70. Its certified technicians handle routine maintenance and complex repairs for campers and motorhomes, including collision work and body repairs, appliance service, oil and lube changes, roof repairs, electrical and plumbing repairs, generator maintenance, slide-out repairs and winterization. It includes a free multi-point inspection with every visit.",
+      "g": [
+        "center",
+        "collision"
+      ],
+      "base": "Grain Valley",
+      "areas": [
+        "Grain Valley",
+        "Independence",
+        "Lee's Summit",
+        "Blue Springs",
+        "Odessa"
+      ],
+      "region": "Greater Kansas City",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.bluecompassrv.com/locations/missouri/Kansas-City",
+        "phone_quote": "(816) 847-1699 (+18168471699)",
+        "coverage_quotes": [
+          "1100 NW Pamela Blvd, Grain Valley, MO 64029"
+        ],
+        "type_quote": "Already own a camper? Our certified technicians handle everything from routine maintenance to complex repairs, and our Kansas City RV service center is staffed by people who know these rigs inside and out.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Airstream of Springfield",
+      "c": "Springfield, MO",
+      "p": "833-851-5990",
+      "u": "https://www.airstreamofspringfield.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Airstream of Springfield is an RV dealership on South Ingram Mill Road in Springfield with a service department. Its store hours run Monday to Saturday for sales and Monday to Friday plus Saturday morning for service. It services Airstream and non-Airstream RVs alike.",
+      "g": [
+        "center"
+      ],
+      "base": "Springfield",
+      "areas": [
+        "Springfield"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.airstreamofspringfield.com/",
+        "phone_quote": "(833) 851-5990 (833-851-5990)",
+        "coverage_quotes": [
+          "438 S Ingram Mill Rd Springfield, MO 65802"
+        ],
+        "type_quote": "Service Mon - Fri: 7 AM - 5 PM Saturday: 8 AM - 3 PM Sunday: Closed",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Unlimited RV",
+      "c": "Independence, MO",
+      "p": "816-579-0463",
+      "u": "https://www.unlimitedrv.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Unlimited RV is a family-owned dealership offering RV service in Independence and Eldon, also serving Kansas City and Osage Beach. Its mechanics specialise in campers including Forest River models and handle warranty work and non-warranty repairs, and it is a Grand Design and Forest River preferred service partner. Routine maintenance includes roof preventive maintenance, slide and sidewall care, refrigerator maintenance, furnace service, water system checks and winterization.",
+      "g": [
+        "center"
+      ],
+      "base": "Independence",
+      "areas": [
+        "Independence",
+        "Eldon",
+        "Kansas City",
+        "Osage Beach"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.unlimitedrv.com/rv-service",
+        "phone_quote": "Contact us at 816-579-0463 Ext: 101 (8165790463) for appointments",
+        "coverage_quotes": [
+          "Unlimited RV, a family-owned and operated dealership, offers fast, reliable, educated, and friendly RV servicing in Independence and Eldon, Missouri, also serving Kansas City and Osage Beach."
+        ],
+        "type_quote": "Unlimited RV, a family-owned and operated dealership, offers fast, reliable, educated, and friendly RV servicing in Independence and Eldon, Missouri, also serving Kansas City and Osage Beach.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Trailside RV",
+      "c": "Grain Valley, MO",
+      "p": "(816) 229-2257",
+      "u": "https://www.trailsiderv.com/service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Trailside RV operates an RV service department in Grain Valley, serving Missouri and Kansas with RVIA-certified technicians and 12 modern service bays. It works on roof and seal maintenance, slide-out repair, electrical systems, plumbing and water, appliances and HVAC, axles, brakes and hitches, awnings and exterior, and warranty and insurance work. It provides itemised estimates before starting work.",
+      "g": [
+        "center"
+      ],
+      "base": "Grain Valley",
+      "areas": [
+        "Grain Valley"
+      ],
+      "region": "East Metro Kansas City",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.trailsiderv.com/service",
+        "phone_quote": "(816) 229-2257 (8162292257)",
+        "coverage_quotes": [
+          "Grain Valley, MO (East Metro Kansas City)"
+        ],
+        "type_quote": "High-quality service for your RV across Missouri and Kansas — RVIA-certified technicians, 12 modern service bays, and a 96%+ customer satisfaction record that we work hard to keep.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    }
+  ]
+}

@@ -240,3 +240,24 @@ Recorded anyway, because the source should be traceable.
 - Author: DimiTalen
 - Licence: CC0 1.0 (public domain dedication) <https://creativecommons.org/publicdomain/zero/1.0/>
 - Tile alt text: The Badlands along Highway 44 in Badlands National Park, South Dakota
+
+## minnesota
+
+- File: [Boundary Waters Canoe Area.jpg](https://commons.wikimedia.org/wiki/File:Boundary_Waters_Canoe_Area.jpg)
+- Author: United States Forest Service
+- Licence: Public domain (US Forest Service) <https://commons.wikimedia.org/wiki/File:Boundary_Waters_Canoe_Area.jpg>
+- Tile alt text: The Boundary Waters Canoe Area in northern Minnesota
+
+## iowa
+
+- File: [Loess Hills Scenic Byway - Loess Hills State Forest - NARA - 7720117.jpg](https://commons.wikimedia.org/wiki/File:Loess_Hills_Scenic_Byway_-_Loess_Hills_State_Forest_-_NARA_-_7720117.jpg)
+- Author: National Archives
+- Licence: Public domain (no known restrictions) <https://commons.wikimedia.org/wiki/File:Loess_Hills_Scenic_Byway_-_Loess_Hills_State_Forest_-_NARA_-_7720117.jpg>
+- Tile alt text: The Loess Hills in western Iowa
+
+## missouri
+
+- File: [Views at Ozark National Scenic Riverways, Missouri (00a1043e-3653-43ae-a1e6-f21a12e1e446).jpg](https://commons.wikimedia.org/wiki/File:Views_at_Ozark_National_Scenic_Riverways%2C_Missouri_%2800a1043e-3653-43ae-a1e6-f21a12e1e446%29.jpg)
+- Author: NPS staff
+- Licence: Public domain (National Park Service) <https://commons.wikimedia.org/wiki/File:Views_at_Ozark_National_Scenic_Riverways,_Missouri_(00a1043e-3653-43ae-a1e6-f21a12e1e446).jpg>
+- Tile alt text: The Ozark National Scenic Riverways in Missouri
