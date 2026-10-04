@@ -2815,3 +2815,31 @@ trusted for that reason instead of by habit.
 **STILL UNTESTED, and worth the same treatment next:** `add-state.py` (refuses for a state), `build-manuals.py`
 (two documented refusals), `indexnow.py` (refuses to submit until the page is live), `weekly-report.py` (refuses
 to ping unpushed work).
+
+---
+
+## WWW. THE DOCSTRING AUDIT IS COMPLETE, AND SIX OF SEVEN PROMISES HOLD
+
+**VVV audited three tools. These are the last four, and every one holds.**
+
+| tool | the claim | result |
+|---|---|---|
+| `add-state.py` | "refuses to run for a state whose listings file does not exist: a page with nothing on it is worse than no page" | **HOLDS.** Ran it against a state with no listings file and it refused: *"a page with nothing on it is a broken promise, not a placeholder."* |
+| `build-manuals.py` | "two things it refuses to do: a row cannot claim a URL is stable when it carries a revision token, a date or a dated upload folder; and no banned host" | **HOLDS.** The rules are functions in `manuals_rules.py` -- `check_components`, `check_brands`, `check_models` -- which the builder CALLS, the auditor re-runs, and `test-manuals.py` covers. **One definition, three callers, which is the right shape.** |
+| `indexnow.py` | "refuses to submit until it is live" | **HOLDS.** It fetches the key file and exits unless it returns 200 with the expected body. |
+| `weekly-report.py` | "refuses to ping unpushed work" | **HOLDS, but it is attributed to the wrong tool.** The sentence is report TEXT describing `log-change.py --ping`, and that is where the refusal actually lives: it prints "IndexNow skipped: the change is not pushed, so the pages are not live yet." |
+
+### And the honest part: I nearly reported a gap that was not there
+
+**`build-manuals.py` looked unguarded for three greps running.** I searched for `revision`, `stable`,
+`dated`, `upload` and `banned host`, found those words only in the docstring and in help text, and was one
+step from writing it up as a promise the code does not keep.
+
+**The rules are functions named `check_components`, `check_brands` and `check_models`, living in a shared
+module the builder imports.** My pattern could not have matched them, and a grep that returns nothing is
+evidence about my pattern rather than about the code.
+
+**This is the same failure as the zero-of-forty anchor filter two fires ago**, where the filter derived
+subjects from `<h1>` when the filenames were the right source. Both times the instrument was wrong and the
+system was fine. The rule that keeps saving me: **when a check reports something surprising, suspect the
+check first** -- and this time I did, which is the only reason the finding did not go in the queue.
