@@ -114,3 +114,66 @@ Recorded anyway, because the source should be traceable.
 - Author: Carol M. Highsmith
 - Licence: Public domain (no known restrictions) <https://commons.wikimedia.org/wiki/File:Mississippi_River_in_Natchez,_Mississippi_LCCN2010630373.tif>
 - Tile alt text: The Mississippi River at Natchez with a paddlewheeler and the bridge at dusk, Mississippi
+
+## alabama
+
+- File: [Pulpit Rock in the Fall.jpg](https://commons.wikimedia.org/wiki/File:Pulpit_Rock_in_the_Fall.jpg)
+- Author: Amann09 at English Wikipedia
+- Licence: Public domain (released by the author) <https://commons.wikimedia.org/wiki/File:Pulpit_Rock_in_the_Fall.jpg>
+- Tile alt text: Pulpit Rock in autumn, Cheaha State Park, Alabama
+
+## tennessee
+
+- File: [Mountain Stream, Great Smoky Mountains National Park.jpg](https://commons.wikimedia.org/wiki/File:Mountain_Stream%2C_Great_Smoky_Mountains_National_Park.jpg)
+- Author: Northern-Virginia-Photographer
+- Licence: CC0 1.0 (public domain dedication) <https://creativecommons.org/publicdomain/zero/1.0/>
+- Tile alt text: A mountain stream in Great Smoky Mountains National Park, Tennessee
+
+## kentucky
+
+- File: [Red River Gorge, Daniel Boone National Forest, Kentucky LOC 2002626210.jpg](https://commons.wikimedia.org/wiki/File:Red_River_Gorge%2C_Daniel_Boone_National_Forest%2C_Kentucky_LOC_2002626210.jpg)
+- Author: United States Forest Service
+- Licence: Public domain (no known restrictions) <https://commons.wikimedia.org/wiki/File:Red_River_Gorge,_Daniel_Boone_National_Forest,_Kentucky_LOC_2002626210.jpg>
+- Tile alt text: The Red River Gorge in Daniel Boone National Forest, Kentucky
+
+## georgia
+
+- File: [Tallulah Gorge view from an overlook, May 2017 1.jpg](https://commons.wikimedia.org/wiki/File:Tallulah_Gorge_view_from_an_overlook%2C_May_2017_1.jpg)
+- Author: Thomson200
+- Licence: CC0 1.0 (public domain dedication) <https://creativecommons.org/publicdomain/zero/1.0/>
+- Tile alt text: Tallulah Gorge from an overlook, Georgia
+
+## florida
+
+- File: [Cape Florida Light, a lighthouse on Cape Florida at the south end of Key Biscayne in Miami-Dade County, Florida LCCN2011630335.tif](https://commons.wikimedia.org/wiki/File:Cape_Florida_Light%2C_a_lighthouse_on_Cape_Florida_at_the_south_end_of_Key_Biscayne_in_Miami-Dade_County%2C_Florida_LCCN2011630335.tif)
+- Author: Carol M. Highsmith
+- Licence: Public domain (no known restrictions) <https://commons.wikimedia.org/wiki/File:Cape_Florida_Light,_a_lighthouse_on_Cape_Florida_at_the_south_end_of_Key_Biscayne_in_Miami-Dade_County,_Florida_LCCN2011630335.tif>
+- Tile alt text: The Cape Florida lighthouse on Key Biscayne, Florida
+
+## southcarolina
+
+- File: [Aerial view of Charleston, South Carolina Harbor, May 2017.jpg](https://commons.wikimedia.org/wiki/File:Aerial_view_of_Charleston%2C_South_Carolina_Harbor%2C_May_2017.jpg)
+- Author: Carol M. Highsmith
+- Licence: Public domain (no known restrictions) <https://commons.wikimedia.org/wiki/File:Aerial_view_of_Charleston,_South_Carolina_Harbor,_May_2017.jpg>
+- Tile alt text: Charleston Harbor from the air, South Carolina
+
+## northcarolina
+
+- File: [Autumn on the Blue Ridge Parkway in North Carolina LCCN2011630620.tif](https://commons.wikimedia.org/wiki/File:Autumn_on_the_Blue_Ridge_Parkway_in_North_Carolina_LCCN2011630620.tif)
+- Author: Carol M. Highsmith
+- Licence: Public domain (no known restrictions) <https://commons.wikimedia.org/wiki/File:Autumn_on_the_Blue_Ridge_Parkway_in_North_Carolina_LCCN2011630620.tif>
+- Tile alt text: Autumn colour along the Blue Ridge Parkway, North Carolina
+
+## virginia
+
+- File: [Shenandoah National Park banner Fall colors.jpg](https://commons.wikimedia.org/wiki/File:Shenandoah_National_Park_banner_Fall_colors.jpg)
+- Author: Shenandoah National Park
+- Licence: Public domain (National Park Service) <https://commons.wikimedia.org/wiki/File:Shenandoah_National_Park_banner_Fall_colors.jpg>
+- Tile alt text: Fall colour in Shenandoah National Park, Virginia
+
+## westvirginia
+
+- File: [The New River Gorge Bridge, a steel arch bridge 3,030 feet long over the New River Gorge near Fayetteville in Fayette County, West Virginia LCCN2015634240.tif](https://commons.wikimedia.org/wiki/File:The_New_River_Gorge_Bridge%2C_a_steel_arch_bridge_3%2C030_feet_long_over_the_New_River_Gorge_near_Fayetteville_in_Fayette_County%2C_West_Virginia_LCCN2015634240.tif)
+- Author: Carol M. Highsmith
+- Licence: Public domain (no known restrictions) <https://commons.wikimedia.org/wiki/File:The_New_River_Gorge_Bridge,_a_steel_arch_bridge_3,030_feet_long_over_the_New_River_Gorge_near_Fayetteville_in_Fayette_County,_West_Virginia_LCCN2015634240.tif>
+- Tile alt text: The New River Gorge Bridge over the New River Gorge, West Virginia

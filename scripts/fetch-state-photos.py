@@ -181,6 +181,57 @@ def crop_to(im, ratio, bias):
     return im.crop((0, top, w, top + nh))
 
 
+# Added 2026-10-04 with the South and Southeast expansion. All public domain or CC0, sourced
+# through the Commons search API and each licence read off the file's own description page.
+PHOTOS += [
+    ("alabama",
+     "Pulpit Rock in the Fall.jpg",
+     "Public domain (released by the author)", "Amann09 at English Wikipedia",
+     "https://commons.wikimedia.org/wiki/File:Pulpit_Rock_in_the_Fall.jpg",
+     "Pulpit Rock in autumn, Cheaha State Park, Alabama"),
+    ("tennessee",
+     "Mountain Stream, Great Smoky Mountains National Park.jpg",
+     "CC0 1.0 (public domain dedication)", "Northern-Virginia-Photographer",
+     "https://creativecommons.org/publicdomain/zero/1.0/",
+     "A mountain stream in Great Smoky Mountains National Park, Tennessee"),
+    ("kentucky",
+     "Red River Gorge, Daniel Boone National Forest, Kentucky LOC 2002626210.jpg",
+     "Public domain (no known restrictions)", "United States Forest Service",
+     "https://commons.wikimedia.org/wiki/File:Red_River_Gorge,_Daniel_Boone_National_Forest,_Kentucky_LOC_2002626210.jpg",
+     "The Red River Gorge in Daniel Boone National Forest, Kentucky"),
+    ("georgia",
+     "Tallulah Gorge view from an overlook, May 2017 1.jpg",
+     "CC0 1.0 (public domain dedication)", "Thomson200",
+     "https://creativecommons.org/publicdomain/zero/1.0/",
+     "Tallulah Gorge from an overlook, Georgia"),
+    ("florida",
+     "Cape Florida Light, a lighthouse on Cape Florida at the south end of Key Biscayne in Miami-Dade County, Florida LCCN2011630335.tif",
+     "Public domain (no known restrictions)", "Carol M. Highsmith",
+     "https://commons.wikimedia.org/wiki/File:Cape_Florida_Light,_a_lighthouse_on_Cape_Florida_at_the_south_end_of_Key_Biscayne_in_Miami-Dade_County,_Florida_LCCN2011630335.tif",
+     "The Cape Florida lighthouse on Key Biscayne, Florida"),
+    ("southcarolina",
+     "Aerial view of Charleston, South Carolina Harbor, May 2017.jpg",
+     "Public domain (no known restrictions)", "Carol M. Highsmith",
+     "https://commons.wikimedia.org/wiki/File:Aerial_view_of_Charleston,_South_Carolina_Harbor,_May_2017.jpg",
+     "Charleston Harbor from the air, South Carolina"),
+    ("northcarolina",
+     "Autumn on the Blue Ridge Parkway in North Carolina LCCN2011630620.tif",
+     "Public domain (no known restrictions)", "Carol M. Highsmith",
+     "https://commons.wikimedia.org/wiki/File:Autumn_on_the_Blue_Ridge_Parkway_in_North_Carolina_LCCN2011630620.tif",
+     "Autumn colour along the Blue Ridge Parkway, North Carolina"),
+    ("virginia",
+     "Shenandoah National Park banner Fall colors.jpg",
+     "Public domain (National Park Service)", "Shenandoah National Park",
+     "https://commons.wikimedia.org/wiki/File:Shenandoah_National_Park_banner_Fall_colors.jpg",
+     "Fall colour in Shenandoah National Park, Virginia"),
+    ("westvirginia",
+     "The New River Gorge Bridge, a steel arch bridge 3,030 feet long over the New River Gorge near Fayetteville in Fayette County, West Virginia LCCN2015634240.tif",
+     "Public domain (no known restrictions)", "Carol M. Highsmith",
+     "https://commons.wikimedia.org/wiki/File:The_New_River_Gorge_Bridge,_a_steel_arch_bridge_3,030_feet_long_over_the_New_River_Gorge_near_Fayetteville_in_Fayette_County,_West_Virginia_LCCN2015634240.tif",
+     "The New River Gorge Bridge over the New River Gorge, West Virginia"),
+]
+
+
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     credits = ["# State tile photo credits", "",

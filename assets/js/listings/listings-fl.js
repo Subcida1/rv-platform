@@ -189,38 +189,6 @@ window.RV_LISTINGS_FL = [
    "tavernier"
   ],  "region": "Upper Florida Keys",  "spec": null,  "reg": "keys-fl"
  },
- {  "n": "Rig Rite RV",  "c": "Clermont, FL",  "p": "(352) 414-1066",  "u": "https://rigriterv.com/contact-us",  "t": "mobile",  "e": false,  "r": false,  "d": "Rig Rite RV is a mobile RV repair and service business that brings repairs to the customer and skips the hassle of towing. It offers easy online booking with priority scheduling, and same-day service requests can be made by phone. The service area spans Clermont, Wildwood, The Villages, Celebration, Lake Buena Vista, Kissimmee, Orlando, Winter Garden, Ocoee, Leesburg, Tavares, Mount Dora, Eustis, Apopka, Groveland, Minneola, Davenport, Haines City, Polk City, Bushnell, Sumterville, Oxford, Belleview, Lady Lake, Fruitland Park, Howey-in-the-Hills, Montverde, and Mascotte.",  "g": [
-   "mobile tech"
-  ],  "base": null,  "areas": [
-   "clermont",
-   "wildwood",
-   "the villages",
-   "celebration",
-   "lake buena vista",
-   "kissimmee",
-   "orlando",
-   "winter garden",
-   "ocoee",
-   "leesburg",
-   "tavares",
-   "mount dora",
-   "eustis",
-   "apopka",
-   "groveland",
-   "minneola",
-   "davenport",
-   "haines city",
-   "polk city",
-   "bushnell",
-   "oxford",
-   "belleview",
-   "lady lake",
-   "fruitland park",
-   "howey-in-the-hills",
-   "montverde",
-   "mascotte"
-  ],  "region": "Central Florida",  "spec": null,  "reg": "orlando-fl"
- },
  {  "n": "CTS RV Mobile Mechanic",  "c": "Orlando, FL",  "p": "(407) 562-4100",  "u": "https://rvrepairboss.com/rv-inspections/",  "t": "mobile",  "e": true,  "r": false,  "d": "CTS RV Mobile Mechanic provides mobile RV inspection and maintenance services across Central Florida, and it is a full-service mobile RV mechanic that can inspect, fix, or upgrade at the customer's location. It assesses roof conditions and potential leaks, leveling systems, slide-out operation and seals, and window, door, and exterior panel integrity, and also does appliance diagnostics and installation, interior repairs, electrical system repairs, plumbing and gas services, and generator services. The service area covers the I-4 corridor, the I-95 corridor from Daytona Beach to Melbourne Beach, and all of Lake County and Marion County.",  "g": [
    "mobile tech"
   ],  "base": null,  "areas": [
