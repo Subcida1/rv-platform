@@ -55,6 +55,22 @@ first 70 and last 80 lines. Fixed and now at 150 and 150, which covers 300 lines
 
 ### What actually landed overnight
 
+**Three builds from competitor research, and the research itself:**
+
+- **`research/competitor-tools-and-diagrams.md`** -- the written-up research. Its finding that mattered: the diagram
+  SERPs ship nothing usable, and the tool SERPs all refuse the question the reader arrived with.
+- **A power-path diagram** on the converter guide, covering the converter AND inverter branches. Competitor finding:
+  a content farm titled after a converter diagram with no diagram, a page whose diagram is an empty image slot, and
+  every inverter diagram a UK 230V campervan build.
+- **A water heater cutaway** with the winterisation bypass. Competitor finding: Winnebago answers that query with a
+  part-number callout sheet, a forum page is an empty stub, and the rest are farms.
+- **The towing calculator now names the limiting factor** -- *"Over on Truck payload. That is the one to fix first."*
+  No competitor does this: whetstonetools checks four limits and names none, rigcalc takes no tow-vehicle inputs,
+  Camping World never takes a trailer weight at all. Verified on production with headless Chrome in both directions.
+- **A tank-sensor decision tree** on the sensor guide. Competitor finding: every result converges on "clean it" and
+  nobody publishes a pass or fail test before you spend money on probes.
+
+
 - **A full SEO performance report** with GSC, GA4, Cloudflare field data and Bing all live, written to
   `_log/reports/2026-10-03-weekly.md`. Its finding: **the constraint is indexing, not content** — 37 of 70 URLs are
   unknown to Google.
