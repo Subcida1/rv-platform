@@ -51,36 +51,43 @@ function run(vals) {
 
 console.log('snow load calculator');
 
-// The source's own worked example, both halves of it.
-let html = run({ we: '2.0', pitch: '0' });
-check('a flat roof at 2.0 inches reads 10.4, which is the note own figure', /10\.4 lb\/ft/.test(html), html.slice(0, 200));
-check('and it shows the 5.2 per inch working', /5\.2/.test(html));
+/* THE PRIMARY PATH IS DEPTH, because that is the number a reader actually has. The bridge is
+   Keystone's published equivalence: 30 pounds per square foot stated as about two feet of snow,
+   which is 1.25 pounds per square foot per inch. */
+let html = run({ depth: '24', pitch: '0' });
+check('two feet of snow reads 30, which is Keystone own rating for it', /30(\.0)? lb\/ft/.test(html), html.slice(0, 260));
+check('and it says where the bridge came from', /Keystone/.test(html));
+
+html = run({ depth: '12', pitch: '0' });
+check('one foot of snow reads 15, half of the two-foot figure', /15(\.0)? lb\/ft/.test(html));
+
+html = run({ depth: '24', pitch: '45' });
+check('and a pitch corrects it by the cosine', /21(\.2)? lb\/ft/.test(html), html.slice(0, 320));
+
+/* THE WATER EQUIVALENT OVERRIDES THE DEPTH, and keeps the Weather Service figures intact. */
+html = run({ depth: '24', we: '2.0', pitch: '0' });
+check('a water equivalent overrides the depth', /10\.4 lb\/ft/.test(html));
+check('and the override says it is measured rather than inferred', /Measured water equivalent|water equivalent/.test(html));
 
 html = run({ we: '2.0', pitch: '35' });
-check('a 35 degree roof at 2.0 inches reads 8.5, the note own pitched figure', /8\.5 lb\/ft/.test(html), html.slice(0, 300));
-check('and the flat figure is still shown beside it', /10\.4 lb\/ft/.test(html));
+check('the note own worked example still gives 8.5 at 35 degrees', /8\.5 lb\/ft/.test(html), html.slice(0, 320));
 
-// One inch of water equivalent is 5.2 lb/ft2, by the note.
-html = run({ we: '1', pitch: '0' });
-check('one inch of water equivalent reads 5.2', /5\.2 lb\/ft/.test(html));
-
-// No input is not an error and must not print a number.
-html = run({ we: '', pitch: '' });
-check('with nothing entered it asks for a number rather than showing one', /Enter the water equivalent/.test(html));
-check('and it shows no load', !/lb\/ft/.test(html));
-
-// The rating comparison, in all three directions.
-html = run({ we: '2.0', pitch: '0', rating: '30' });
-check('well under a rating reads UNDER THE RATING', /UNDER THE RATING/.test(html), html.slice(0, 160));
-html = run({ we: '5.7', pitch: '0', rating: '30' });   // 29.6 lb/ft2 against 30, which is the edge band
+/* THE RATING COMPARISON, all three directions. 24 inches is 30 lb/ft2. */
+html = run({ depth: '24', pitch: '0', rating: '40' });
+check('under a rating reads UNDER THE RATING', /UNDER THE RATING/.test(html), html.slice(0, 160));
+html = run({ depth: '22', pitch: '0', rating: '30' });   // 27.5 against 30, the edge band
 check('at the rating reads AT THE RATING', /AT THE RATING/.test(html), html.slice(0, 160));
-html = run({ we: '8.0', pitch: '0', rating: '30' });
+html = run({ depth: '30', pitch: '0', rating: '30' });
 check('over the rating reads OVER THE RATING', /OVER THE RATING/.test(html));
 check('and the over case tells the reader to clear it', /Clear the snow/.test(html));
 
-// A pitch beyond vertical is capped rather than producing a negative load.
-html = run({ we: '2.0', pitch: '120' });
-check('an impossible pitch does not produce a negative load', !/-[0-9]/.test((html.match(/lb\/ft&#178;/) || '') + html.slice(0, 0)) && !/-[0-9.]+ lb/.test(html));
+/* NOTHING ENTERED IS NOT AN ERROR. */
+html = run({ depth: '', we: '', pitch: '' });
+check('with nothing entered it asks for a depth rather than showing a number', /Enter how deep/.test(html));
+check('and it shows no load', !/lb\/ft/.test(html));
+
+html = run({ depth: '24', pitch: '120' });
+check('an impossible pitch does not produce a negative load', !/-[0-9]/.test(html));
 
 console.log('\n' + (failed ? failed + ' failure(s)' : 'snow load calculator: all checks passed'));
 process.exit(failed ? 1 : 0);

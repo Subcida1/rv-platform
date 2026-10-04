@@ -1,28 +1,34 @@
 /* ============================================================
  OriginRV . RV Roof Snow Load Calculator
- ONE job: turn a water equivalent and a roof pitch into a load in
- pounds per square foot, by the National Weather Service's own method.
+ ONE job: turn the snow depth on a roof into a load in pounds per
+ square foot, and correct it for the pitch.
 
- WHY WATER EQUIVALENT AND NOT SNOW DEPTH. Snow depth alone cannot
- give a weight, because a foot of cold dry snow and a foot of wet
- snow are not the same load, and no document we hold publishes a
- density per snow type to bridge them. The Weather Service note
- sidesteps the problem entirely: it asks for the water equivalent,
- which is the thing that actually weighs, and gives a method to
- measure it with a capped pipe if no weather office is handy.
- Guessing a density would mean inventing the number this tool exists
- to avoid inventing.
+ WHY DEPTH AND NOT WATER EQUIVALENT. A water equivalent is the more
+ precise input and this tool still takes one if you have it, but the
+ FIRST version of this page asked for it and nothing else, and a
+ reader pointed out the obvious: nobody standing under a foot of
+ snow knows its water equivalent. A tool that needs a number the
+ reader does not have is a tool for a weather office.
 
- THE TWO FIGURES FROM THE SOURCE, both in the note:
-   62.4 pounds per cubic foot of water
-   = 5.2 pounds per square foot for each inch of water equivalent
- And the pitched-roof correction: the flat load multiplied by the
- cosine of the pitch.
+ SO THE PRIMARY INPUT IS DEPTH, AND THE BRIDGE COMES FROM A MAKER.
+ Keystone rates the roofs on its towables at 30 pounds per square
+ foot, and states that as about two feet of snow. That is a
+ published equivalence rather than a guessed density: 30 divided by
+ 24 is 1.25 pounds per square foot for every inch of settled snow.
+ It is ONE maker's figure for ONE class of roof, it describes snow
+ that has settled rather than fresh powder, and the page says both.
+
+ THE TWO FIGURES, EACH FROM ITS OWN SOURCE:
+   1.25 lb/sq ft per inch of snow   Keystone's 30 lb/sq ft at about two feet
+   5.2  lb/sq ft per inch of water  the Weather Service's 62.4 lb/cu ft
+ And the pitched-roof correction, from the same Weather Service note:
+ the flat load multiplied by the cosine of the pitch.
  ============================================================ */
 (function () {
  'use strict';
 
- var LB_PER_SQFT_PER_INCH = 5.2;   // 62.4 lb/ft3 divided by 12, as the note states it
+ var LB_PER_SQFT_PER_INCH_OF_WATER = 5.2;   // 62.4 lb/ft3 divided by 12, as the Weather Service states it
+ var LB_PER_SQFT_PER_INCH_OF_SNOW = 1.25;   // Keystone's 30 lb/sq ft, stated as about two feet of snow
 
  function $(id) { return document.getElementById(id); }
  function num(id) {
@@ -43,12 +49,13 @@
  function update() {
    var host = $('snow-result');
    if (!host) return;
+   var depth = num('depth');
    var we = num('we');
    var pitch = num('pitch');
    var rating = num('rating');
 
-   if (we === null || we <= 0) {
-     host.innerHTML = '<div class="w-idle">Enter the water equivalent above, in inches, and the load appears here.<br>' +
+   if ((depth === null || depth <= 0) && (we === null || we <= 0)) {
+     host.innerHTML = '<div class="w-idle">Enter how deep the snow is on the roof and the load appears here.<br>' +
        '<span>Everything recomputes as you type. No button.</span></div>';
      return;
    }
@@ -56,21 +63,30 @@
    if (pitch < 0) pitch = 0;
    if (pitch > 85) pitch = 85;
 
-   var flat = we * LB_PER_SQFT_PER_INCH;
+   // Water equivalent wins when it is given, because it is measured rather than inferred. Otherwise
+   // the depth is bridged to a weight by Keystone's published equivalence.
+   var flat, basis, basisNote;
+   if (we !== null && we > 0) {
+     flat = we * LB_PER_SQFT_PER_INCH_OF_WATER;
+     basis = fmt(we, 2) + ' inches of water equivalent';
+     basisNote = 'Measured water equivalent, at the Weather Service figure of 5.2 pounds per square foot for each inch of water.';
+   } else {
+     flat = depth * LB_PER_SQFT_PER_INCH_OF_SNOW;
+     basis = fmt(depth, 1) + ' inches of snow';
+     basisNote = 'Depth bridged to weight by Keystone, which rates its towable roofs at 30 pounds per square foot and states that as about two feet of snow. 30 over 24 is 1.25 pounds per square foot for every inch.';
+   }
+
    var rad = pitch * Math.PI / 180;
    var sloped = flat * Math.cos(rad);
-
-   // The load the roof actually carries is the one normal to its surface, which is the
-   // corrected figure. For a flat roof the two are the same, because cos(0) is 1.
    var carried = sloped;
    var rows = '';
 
-   rows += '<div class="v-row ok"><div class="v-dot"></div><div class="v-txt"><b>Water equivalent</b>' +
-     '<span>' + fmt(we, 2) + ' inches of water, which is what the snow weighs once it melts.</span></div>' +
-     '<div class="v-val">' + fmt(we, 2) + ' in</div></div>';
+   rows += '<div class="v-row ok"><div class="v-dot"></div><div class="v-txt"><b>What you entered</b>' +
+     '<span>' + esc(basisNote) + '</span></div>' +
+     '<div class="v-val">' + esc(basis) + '</div></div>';
 
    rows += '<div class="v-row ok"><div class="v-dot"></div><div class="v-txt"><b>Load on a flat roof</b>' +
-     '<span>' + fmt(we, 2) + ' inches times 5.2 pounds per square foot per inch.</span></div>' +
+     '<span>Before any correction for the pitch of your roof.</span></div>' +
      '<div class="v-val">' + fmt(flat) + ' lb/ft&#178;</div></div>';
 
    if (pitch > 0) {
@@ -79,16 +95,16 @@
        '<div class="v-val">' + fmt(sloped) + ' lb/ft&#178;</div></div>';
    }
 
-   var verdict, cls, note;
+   var cls, verdict, note;
    if (rating !== null && rating > 0) {
      var pct = (carried / rating) * 100;
      cls = pct <= 90 ? 'ok' : (pct <= 100 ? 'warn' : 'bad');
      verdict = pct <= 90 ? 'UNDER THE RATING' : (pct <= 100 ? 'AT THE RATING' : 'OVER THE RATING');
      note = pct <= 90
-       ? 'The load is ' + fmt(pct, 0) + ' per cent of the ' + fmt(rating) + ' lb/ft&#178; you entered. Keep an eye on it if more snow is forecast.'
+       ? 'That is ' + fmt(pct, 0) + ' per cent of the ' + fmt(rating) + ' lb/ft&#178; you entered. Watch it if more snow is forecast.'
        : pct <= 100
-         ? 'The load is ' + fmt(pct, 0) + ' per cent of the rating you entered, at the edge of it rather than safely inside it.'
-         : 'The load is ' + fmt(pct, 0) + ' per cent of the ' + fmt(rating) + ' lb/ft&#178; you entered. Clear the snow.';
+         ? 'That is ' + fmt(pct, 0) + ' per cent of the rating you entered, at the edge of it rather than safely inside it.'
+         : 'That is ' + fmt(pct, 0) + ' per cent of the ' + fmt(rating) + ' lb/ft&#178; you entered. Clear the snow.';
      rows = '<div class="v-row ' + cls + '"><div class="v-dot"></div><div class="v-txt"><b>Against your rating</b>' +
        '<span>' + fmt(rating) + ' lb/ft&#178; from your maker.</span></div>' +
        '<div class="v-val">' + fmt(pct, 0) + '%</div></div>' + rows;
@@ -101,20 +117,20 @@
    host.innerHTML =
      '<div class="w-overall ' + cls + '"><span>What is on your roof</span><b>' + esc(verdict) + '</b><small>' + note + '</small></div>' +
      '<div class="w-total"><span>Load carried</span><b>' + fmt(carried) + ' lb/ft&#178;</b>' +
-     '<small>' + fmt(we, 2) + ' inches of water equivalent' + (pitch > 0 ? ', corrected for a ' + fmt(pitch) + '&#176; pitch' : ', on a flat roof') + '</small></div>' +
+     '<small>' + esc(basis) + (pitch > 0 ? ', corrected for a ' + fmt(pitch) + '&#176; pitch' : ', on a flat roof') + '</small></div>' +
      rows +
-     '<div class="w-disclaimer">The Weather Service calls this a rough estimate and says to use it with care. It is not a structural assessment, and if the number is near a rating you have, clear the snow rather than measure again.</div>';
+     '<div class="w-disclaimer">A rough estimate in the Weather Service\'s own words. The depth figure assumes settled snow: fresh powder weighs less and wet snow weighs more, so treat this as the middle of the range rather than the top of it.</div>';
  }
 
  function init() {
-   var ids = ['we', 'pitch', 'rating'];
+   var ids = ['depth', 'we', 'pitch', 'rating'];
    ids.forEach(function (id) {
      var el = $(id);
      if (el) el.addEventListener('input', update);
    });
    var form = $('snow-form');
    if (form) form.addEventListener('submit', function (e) { e.preventDefault(); update(); });
-   window.RVSnow = { update: update, lbPerSqftPerInch: LB_PER_SQFT_PER_INCH };
+   window.RVSnow = { update: update, perInchSnow: LB_PER_SQFT_PER_INCH_OF_SNOW, perInchWater: LB_PER_SQFT_PER_INCH_OF_WATER };
    update();
  }
 
