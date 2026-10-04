@@ -109,13 +109,22 @@ def insert(page, phrase, dest, dry_run=False):
     if 'href="%s"' % dest in html:
         sys.exit("%s already links to %s" % (page, dest))
 
+    tried_bad = False
     for m in re.finditer(re.escape(phrase), html):
         i = m.start()
         if in_script(html, i) or inside_tag(html, i) or inside_link(html, i) or in_shell(html, i):
             continue
         new = html[:i] + '<a href="%s">%s</a>' % (dest, phrase) + html[i + len(phrase):]
+        # TRY THE NEXT OCCURRENCE, DO NOT STOP AT THE FIRST THAT FAILS.
+        # The words check is right and must stay: verify-content's extractor reads a tag as a space,
+        # so wrapping a phrase that ends a sentence puts a space before the full stop and the page's
+        # visible text really does change. But a phrase usually appears several times, and only ONE
+        # of them sits badly. Exiting on the first failure made every later occurrence unreachable,
+        # which is why the refrigerator and macerator guides could not be linked on "12 volt" while
+        # a perfectly good occurrence sat further down the page. Found 2026-10-04.
         if words_only(new) != words_only(html):
-            sys.exit("refusing: wrapping %r there would change the words on the page" % phrase)
+            tried_bad = True
+            continue
         if dry_run:
             print("would link %r in %s -> %s (at char %d)" % (phrase, page, dest, i))
             return
