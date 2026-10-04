@@ -2448,6 +2448,36 @@ The worst are `guides/rv-macerator-toilet.html` (21 mentions), `rv-toilet-not-fl
 
 **AND THIS IS THE SECOND TIME TONIGHT THAT A PAGE-LEVEL LINK COST A VERIFICATION.** That is worth a standing decision rather than a case-by-case one: **a link to our own index is not a claim about the world, so it arguably should not move the check date at all.** If Ty agrees, the gate is what changes and the sweep afterwards is free of re-reviews.
 
+## PPP. THE INTERNAL-LINK TOOL ALREADY EXISTS, AND ITS OUTPUT IS TOO NOISY TO SWEEP WITH
+
+**Ty asked for a tool that finds mentions sitewide and correlates them to our content. IT ALREADY EXISTS, built
+from his own earlier instruction:** `scripts/link-opportunities.py`, whose docstring quotes him -- *"relevant guides
+should be linked when talked about in other sections, we should be doing extensive inner linking of our own content
+in a logical and SEO best practice way"* -- plus `scripts/insert-link.py`, which inserts one link safely **and records
+the de-verification decision**, which is the answer to the trade-off I was about to put to him in OOO.
+
+**SO THE WORK IS NOT BUILDING IT. IT IS MAKING IT USABLE, BECAUSE THE OUTPUT AS IT STANDS CANNOT BE JUDGED.**
+
+**THE NOISE, measured on a real run:** the tool paired `guides/rv-refrigerator-not-cooling.html` with
+`guides/rv-air-conditioner-not-cooling.html` **on every paragraph of the page**, because the shared term is the word
+**"cooling"**. Two unrelated subjects, joined by a common word. It also pairs `roof-snow-load` with the air
+conditioner guide on *"the air conditioner adds a little"*, which is a passing mention rather than a reader looking
+for a fault guide. **Eighty entries of one false pairing is not a candidate list a human can triage**, and the
+docstring's own framing -- *"a candidate list, not a defect list"* -- only holds if the candidates are plausible.
+
+**WHAT A PRECISION PASS NEEDS, in order of how much it would cut:**
+1. **Match on the SUBJECT, not a shared word.** "Cooling" appears on both pages; "refrigerator" appears on one. A
+   term that appears on many pages carries no signal, so weight by how exclusive the term is to the target page.
+2. **Require the mention to be about the target's subject.** The snow guide mentioning an air conditioner is a load
+   figure, not a fault; a link there sends a reader to a page that does not answer them.
+3. **Cap per page.** One candidate per target per page, not one per paragraph. The fridge page produced dozens.
+
+**AND THE GAP FOR THE CASE TY ACTUALLY RAISED.** The tool matches page topics to page topics; it does not know that
+**"consult your manual" is itself an instruction that should route to our manuals section.** That check is a
+different, narrower one and I wrote it by hand tonight: *mention of a manual in the prose, and no link to `/manuals/`
+in the prose.* **It found 30 pages (OOO). That rule should become part of the same tool**, so one command reports
+both kinds of missing link.
+
 ## Log
 
 ## Log
