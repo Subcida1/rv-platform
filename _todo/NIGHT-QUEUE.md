@@ -2606,3 +2606,20 @@ enough to work from, which it was not this morning, and that was the blocker. **
   and never of facts.
 - **Next:** keep working B (page-by-page mobile and interactive-element pass), then C (draft the macerator page),
   then F, then D.
+
+---
+
+## SHARED TREE WARNING, 2026-10-04 00:20
+
+**A PARALLEL SESSION IS MID-BUILD IN THIS CHECKOUT.** At this timestamp there is a commit of theirs
+(`6867abd`, the parts reference and the business side) plus **83 modified files and four untracked paths**
+(`parts/`, `assets/js/parts.js`, `scripts/build-parts-pages.py`, `scripts/merge-candidates.py`,
+`_todo/DIRECTORY-EXPANSION.md`).
+
+**`manuals pages, static shell, asset stamps` ARE BEHIND THEIR EDITS**, so the full gate is red for their
+reasons rather than mine. **Do not run `build-shell.mjs` or `stamp_assets.py` while their edits are in
+flight, and do not stage their files** -- either would fold a dozen of their in-progress paths into someone
+else's commit, which is the exact failure the explicit-path rule exists to prevent.
+
+**Committed but NOT pushed:** `5fd83b7` (the palette check line numbers). It will go up with their push
+once their work is green, since we share the branch.
