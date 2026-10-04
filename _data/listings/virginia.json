@@ -1,0 +1,820 @@
+{
+  "state": "VA",
+  "name": "Virginia",
+  "regions": [
+    {
+      "key": "northern-va",
+      "label": "Northern Virginia and the Piedmont"
+    },
+    {
+      "key": "richmond-va",
+      "label": "Richmond and central Virginia"
+    },
+    {
+      "key": "hampton-roads-va",
+      "label": "Hampton Roads and the coast"
+    },
+    {
+      "key": "shenandoah-va",
+      "label": "The Shenandoah Valley"
+    },
+    {
+      "key": "southwest-va",
+      "label": "Roanoke, Christiansburg and the southwest"
+    }
+  ],
+  "region_of": {
+    "Herndon": "northern-va",
+    "Manassas": "northern-va",
+    "Culpeper": "northern-va",
+    "Fredericksburg": "northern-va",
+    "Stafford": "northern-va",
+    "Locust Grove": "northern-va",
+    "Ashland": "northern-va",
+    "Richmond": "richmond-va",
+    "Williamsburg": "richmond-va",
+    "Ringgold": "richmond-va",
+    "Virginia Beach": "hampton-roads-va",
+    "Norfolk": "hampton-roads-va",
+    "Chesapeake": "hampton-roads-va",
+    "Newport News": "hampton-roads-va",
+    "Staunton": "shenandoah-va",
+    "Roanoke": "southwest-va",
+    "Salem": "southwest-va",
+    "Christiansburg": "southwest-va",
+    "Woodlawn": "southwest-va"
+  },
+  "listings": [
+    {
+      "n": "Radius Mobile RV Repair",
+      "c": "Charlottesville, VA",
+      "p": "(804) 920-7063",
+      "u": "https://www.radiusmobilerepair.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Radius Mobile RV Repair sends RVIA and RVDA certified technicians to the customer's location for house side work. It services air conditioners, water heaters, furnaces, refrigerators, lights and electrical, plumbing, slide mechanisms and water pumps, plus roof and window leaks. It also does general and preventative maintenance such as roof and sidewall inspections and sealant, winterization and de-winterization. It states it does not service generators, engines, transmissions, tires, brakes or other chassis related components.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": null,
+      "areas": [
+        "Charlottesville",
+        "Richmond"
+      ],
+      "region": null,
+      "spec": "we do not service generators, engines, transmissions, tires, brakes or other chassis related components",
+      "evidence": {
+        "checked": "https://www.radiusmobilerepair.com/contact",
+        "phone_quote": "(804) 920-7063",
+        "coverage_quotes": [],
+        "type_quote": "Call or email RADIUS Mobile RV Repair today for your service and repair needs!",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      },
+      "reg": "northern-va"
+    },
+    {
+      "n": "Harv's Mobile RV Service",
+      "c": "Roanoke, VA",
+      "p": "540-814-2052",
+      "u": "https://www.harvsrv.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Harv's Mobile RV Service is a family-owned and operated business that travels to the customer for non-engine RV repairs and system replacements. It works on all makes and models and handles plumbing, electrical, HVAC, air conditioners, furnaces, refrigerators and cooktops, awnings, slide outs, water heaters, leveling jacks and hydraulics. Its technicians are certified by the RV Technician Association of America. It services southern Virginia and northern North Carolina year-round.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": null,
+      "areas": [
+        "Roanoke",
+        "Lynchburg"
+      ],
+      "region": null,
+      "spec": "specializing in non-engine repairs and system replacements",
+      "evidence": {
+        "checked": "https://www.harvsrv.com/",
+        "phone_quote": "540-814-2052",
+        "coverage_quotes": [
+          "We service the southern Virginia and northern North Carolina areas year-round.",
+          "Smith Mtn. Lake, Roanoke, Lynchburg, etc."
+        ],
+        "type_quote": "Harv's Mobile RV Service is a family-owned and operated RV Repair business specializing in non-engine repairs and system replacements, including plumbing, electrical, HVAC, and more.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      },
+      "reg": "southwest-va"
+    },
+    {
+      "n": "Pitt Mobile RV Service",
+      "c": "Hampton Roads, VA",
+      "p": "757-604-3991",
+      "u": "https://www.pittmobilervservice.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "Pitt Mobile RV Service specializes in on-site RV maintenance, inspections and repair, coming to the customer's home, campground or storage unit. Because it is mobile, owners do not have to take the RV to a shop. The technician is certified by the RV Technician Association of America and works on RV systems and components, including air conditioners and heat pumps, refrigerators, water heaters, furnaces, generators, solar and exterior systems. It also offers emergency departure services when a slide out or jacks are stuck.",
+      "g": [
+        "mobile tech",
+        "emergency"
+      ],
+      "base": null,
+      "areas": [],
+      "region": "Hampton Roads Area",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.pittmobilervservice.com/",
+        "phone_quote": "757-604-3991",
+        "coverage_quotes": [
+          "Hampton Roads Area"
+        ],
+        "type_quote": "RV Maintenance, Inspections, and Repair.",
+        "emergency_quote": "Emergency Departure Services",
+        "roadside_quote": null,
+        "licence": null
+      },
+      "reg": "hampton-roads-va"
+    },
+    {
+      "n": "Road Ready Mobile RV Services, LLC",
+      "c": "Hampton Roads, VA",
+      "p": "(757) 756-0640",
+      "u": "https://www.rrmobilervservices.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Road Ready Mobile RV Services is a veteran-owned mobile business that brings RV repair and maintenance to wherever the RV is parked, whether at home, in storage, on the road or at a military campground. It handles electrical troubleshooting and appliance repair and performs maintenance checks including brakes, suspension and wheel bearings. It also offers detailing such as exterior wash, roof cleaning and waxing.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": null,
+      "areas": [],
+      "region": "Hampton Roads",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.rrmobilervservices.com/",
+        "phone_quote": "(757) 756-0640",
+        "coverage_quotes": [
+          "Road Ready Mobile RV Services proudly serves the Hampton Roads area, providing expert RV repair and maintenance wherever your RV is parked."
+        ],
+        "type_quote": "From electrical troubleshooting to appliance repair, we have the expertise to handle all types of RV repairs, big or small.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      },
+      "reg": "hampton-roads-va"
+    },
+    {
+      "n": "Tidewater RV & Trailer Services",
+      "c": "Chesapeake, VA",
+      "p": "757-705-6970",
+      "u": "https://tidewaterrvservices.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Tidewater RV & Trailer Services is a veteran-owned mobile service based in Chesapeake, Virginia. It comes to the customer anywhere in Hampton Roads and Tidewater to repair and maintain RVs and trailers. Its service list covers slide out seals, furnaces, LP and electric systems, air conditioning, converters, appliances, batteries, jacks, water systems and roof inspection with sealant. It services most of the Tidewater area including Virginia Beach, Norfolk, Chesapeake, Portsmouth and Suffolk.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Chesapeake",
+      "areas": [
+        "Virginia Beach",
+        "Norfolk",
+        "Chesapeake",
+        "Portsmouth",
+        "Suffolk"
+      ],
+      "region": "Tidewater",
+      "spec": null,
+      "evidence": {
+        "checked": "https://tidewaterrvservices.com/",
+        "phone_quote": "757-705-6970",
+        "coverage_quotes": [
+          "We are a mobile service based in Chesapeake, VA. We service most of the Tidewater area: Virginia Beach, Norfolk, Chesapeake, Portsmouth, Suffolk, and more."
+        ],
+        "type_quote": "WE ARE MOBILE! Anywhere in Hampton Roads/Tidewater: we come to you to repair and maintain your RV!",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Scooter's Mobile RV Repair",
+      "c": "Newport News, VA",
+      "p": "757-250-2609",
+      "u": "https://www.scootersrvrepair.com/",
+      "t": "mobile",
+      "e": true,
+      "r": true,
+      "d": "Scooter's Mobile RV Repair is a mobile service that comes to the customer, whether stranded on the roadside or parked at a campground. It works on RV air conditioners, diesel engine diagnostics and repair for Class A and Class C RVs, 12 volt and 30/50 amp electrical systems, water leak detection and sealing, Onan generator service, slide out and leveling systems, and solar installations. It serves Virginia's Tidewater Region, the Middle Peninsula and the Northern Neck.",
+      "g": [
+        "mobile tech",
+        "roadside",
+        "emergency"
+      ],
+      "base": "Newport News",
+      "areas": [],
+      "region": "Virginia's Tidewater Region, the Middle Peninsula, and the Northern Neck",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.scootersrvrepair.com/",
+        "phone_quote": "Call Now! 757-250-2609",
+        "coverage_quotes": [
+          "We proudly serve Virginia’s Tidewater Region, the Middle Peninsula, and the Northern Neck, delivering professional RV diagnostics and repair on-site with affordable pricing and zero fluff."
+        ],
+        "type_quote": "With over 20 years of hands-on experience in RV repair, diesel systems, and RV engineering",
+        "emergency_quote": "24/7 Emergency RV Repair",
+        "roadside_quote": "Whether you're stranded on the roadside or parked at your favorite campground, we bring the fix to you.",
+        "licence": null
+      }
+    },
+    {
+      "n": "Chasing Sunsets Mobile RV Repair, Inc.",
+      "c": "Richmond, VA",
+      "p": "(540) 797-5382",
+      "u": "https://www.chasingsunsetsmobilervservices.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Chasing Sunsets Mobile RV Repair, Inc. is a mobile service that comes to the customer's home, campground or location with a well stocked service vehicle. It handles a wide range of repairs and upkeep including electrical, plumbing and appliance repairs, regular maintenance checks and roof and vent work. It serves Richmond, Virginia and the surrounding areas and also offers solar packages.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Richmond",
+      "areas": [
+        "Richmond"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.chasingsunsetsmobilervservices.com/",
+        "phone_quote": "(540) 797-5382",
+        "coverage_quotes": [
+          "Richmond, VA & surrounding areas"
+        ],
+        "type_quote": "we offer convenient and reliable Mobile RV Repair and Maintenance Services.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "H3RV Mobile RV Services",
+      "c": "Stafford, VA",
+      "p": "540-386-7944",
+      "u": "https://h3rv.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "H3RV Mobile RV Services is a veteran-owned, family-operated mobile business that brings RV repairs, maintenance and inspections to the customer's location. It works on most systems inside the house of the RV. It serves RV owners throughout Stafford County, Virginia and surrounding areas. It states it does not perform structural repairs such as roof replacements, large roof repairs, outer wall repairs, wash and wax or flooring repairs, and does not work on chassis-related systems including brakes, engines, or vehicle wiring due to insurance restrictions.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Stafford",
+      "areas": [],
+      "region": "Stafford County, VA, and surrounding areas",
+      "spec": "We also do not work on chassis-related systems including brakes, engines, or vehicle wiring due to insurance restrictions.",
+      "evidence": {
+        "checked": "https://h3rv.com/",
+        "phone_quote": "540-386-7944",
+        "coverage_quotes": [
+          "we serve RV owners throughout Stafford County, VA, and surrounding areas."
+        ],
+        "type_quote": "We specialize in on-site RV repairs, maintenance, and inspections, bringing professional service directly to your location.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Johnson RV Mobile Service and Repair",
+      "c": "Norfolk, VA",
+      "p": "757-461-3173",
+      "u": "https://www.johnsonsrvservicecenter.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Johnson RV Mobile Service and Repair has provided RV and camper service and repair in Norfolk, Virginia and the Hampton Roads area since 1974. It repairs all makes and models and guarantees its parts and labor for 90 days. Its work includes RV service and repair such as wiring and plastic tank welding, plus upgrades including carpet and appliance repairs. It offers a free estimate.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Norfolk",
+      "areas": [
+        "Norfolk"
+      ],
+      "region": "Hampton Roads area",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.johnsonsrvservicecenter.com/",
+        "phone_quote": "Contact Johnson RV Mobile Service and Repair today at 757-461-3173 for a free estimate",
+        "coverage_quotes": [
+          "Johnson RV Mobile Service and Repair has been providing high quality RV and Camper service and repair in Norfolk, VA and Hampton Roads area since 1974."
+        ],
+        "type_quote": "We can repair all makes and models, no matter how major or minor the problem.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "B Mobile RV Repair",
+      "c": "Roanoke, VA",
+      "p": "540-797-4203",
+      "u": "http://www.bmrvrepair.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "B Mobile RV Repair is a mobile service near Roanoke, Virginia that comes to the customer rather than having them leave the RV at a shop. It provides mobile RV repairs and services typically anywhere within a 90 minute drive of Roanoke. Its work includes RV electrical, plumbing, air conditioner, roof seals, water heater, fridge, slides, levelers, steps and awnings. The owner states he is licensed, insured, experienced and certified by the RVIA's RV Technical Institute and major RV equipment manufacturers.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Roanoke",
+      "areas": [
+        "Roanoke"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "http://www.bmrvrepair.com/",
+        "phone_quote": "TEXT OR CALL JOHNNY AT 540-797-4203",
+        "coverage_quotes": [
+          "typically anywhere within 90 minutes drive of Roanoke, VA."
+        ],
+        "type_quote": "RV electrical, plumbing, air conditioner, roof seals, water heater, fridge, slides, levelers, steps, awnings - and more.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Elite RV Services, LLC",
+      "c": "Locust Grove, VA",
+      "p": "(540) 216.2107",
+      "u": "https://www.elite-rv-services.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Elite RV Services, LLC is a mobile only RV repair service serving the Fredericksburg area and surrounding areas. It brings the shop to the RV owner with over 15 years of RV and auto repair experience. Its services include minor roofing repairs and inspections with cleaning, condition checks and resealing, appliance service and general maintenance, and accessory installs such as slide toppers, hitches and generator racks. It does not perform warranty or insurance work.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Locust Grove",
+      "areas": [
+        "Fredericksburg",
+        "Orange",
+        "Locust Grove"
+      ],
+      "region": null,
+      "spec": "We do not perform warranty or insurance work",
+      "evidence": {
+        "checked": "https://www.elite-rv-services.com/",
+        "phone_quote": "(540) 216.2107",
+        "coverage_quotes": [
+          "Elite RV Services, LLC is a mobile only RV repair service, serving the Fredericksburg Area and the surrounding areas (Spotsylvania, Orange, Fredericksburg, Locust Grove, and Lake Anna)."
+        ],
+        "type_quote": "With over 15 years of RV and auto repair experience",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Dynamic RV Mobile Repair",
+      "c": "Hayes, VA",
+      "p": "(804) 210-0176",
+      "u": "https://www.dynamicrvrepair.com/",
+      "t": "mobile",
+      "e": true,
+      "r": true,
+      "d": "Dynamic RV Mobile Repair provides mobile RV repair throughout Hayes and the surrounding Hampton Roads communities, serving campgrounds and residential setups. It handles roofing and plumbing, electrical diagnostics, engine repair, fiberglass repair and detailing, and offers emergency RV repair. Repairs are performed at the customer's location so there is no need to coordinate towing or wait for a shop appointment.",
+      "g": [
+        "mobile tech",
+        "roadside",
+        "emergency"
+      ],
+      "base": null,
+      "areas": [],
+      "region": "Hampton Roads",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.dynamicrvrepair.com/",
+        "phone_quote": "(804) 210-0176",
+        "coverage_quotes": [
+          "Dynamic RV Mobile Repair provides mobile RV repair throughout Hayes and the surrounding Hampton Roads communities, serving campgrounds and residential setups."
+        ],
+        "type_quote": "Dynamic RV Mobile Repair handles everything from roofing and plumbing to electrical diagnostics and fiberglass repair.",
+        "emergency_quote": "Reliable emergency RV repair anytime, anywhere you travel",
+        "roadside_quote": null,
+        "licence": null
+      },
+      "reg": "hampton-roads-va"
+    },
+    {
+      "n": "RV Repair Bear",
+      "c": "Manassas, VA",
+      "p": "571-379-5327",
+      "u": "https://rvrepairbear.com/",
+      "t": "both",
+      "e": false,
+      "r": true,
+      "d": "RV Repair Bear is an RV repair, maintenance and customization shop based in Manassas, Virginia. It services all types of RV campers from small pop-up campers and travel trailers to motor homes, and also comes to the customer for mobile service. Its work includes roof repair, water damage repair, awnings and slide toppers, water heater, AC, refrigerator, axle services, jacks, brakes, plumbing, electrical, hitches, floor repair, winterizing, and body and paint. It is a fully licensed and insured repair shop that accepts insurance and warranty claims.",
+      "g": [
+        "service center",
+        "mobile tech",
+        "roadside"
+      ],
+      "base": "Manassas",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://rvrepairbear.com/",
+        "phone_quote": "Call Now! 571-379-5327 (5713795327)",
+        "coverage_quotes": [
+          "RV Repair Bear, based in Manassas, VA, is here for your Recreational Vehicle repairs, preventive maintenance, customization, and pre-purchase inspection needs"
+        ],
+        "type_quote": "RV Repair Bear provides preventive maintenance for class A and C motorhomes.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Williamsburg RV Service",
+      "c": "Williamsburg, VA",
+      "p": "(757)-258-0232",
+      "u": "https://williamsburgrvservice.com/",
+      "t": "center",
+      "e": true,
+      "r": true,
+      "d": "Williamsburg RV Service provides complete RV service from bumper to bumper at its shop in Williamsburg, Virginia. Its service list covers the generator and power plant, steering and brakes, leveling jacks, fuel delivery, transmission, drive axle, air conditioning, heating and cooling, range and oven, electrical, LP gas, refrigerator, suspension, chassis frame, engine, water heater, waste system and fresh water system. It offers 24-hour emergency services and state inspections, and works with insurance or extended warranty providers. It services Class A, Class C, toy haulers, diesel pushers, travel trailers and fifth wheels.",
+      "g": [
+        "service center",
+        "roadside",
+        "emergency"
+      ],
+      "base": "Williamsburg",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://williamsburgrvservice.com/",
+        "phone_quote": "(757)-258-0232",
+        "coverage_quotes": [],
+        "type_quote": "Complete RV Service from bumper to bumper.",
+        "emergency_quote": "We offer 24-hour Emergency Services to keep you safe.",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Nomadic Camper & RV Repair",
+      "c": "Christiansburg, VA",
+      "p": "540-239-1085",
+      "u": "https://nomadiccamperrepair.com/",
+      "t": "both",
+      "e": false,
+      "r": true,
+      "d": "Nomadic Camper & RV Repair is a family-owned shop in Christiansburg, Virginia in the New River Valley. It offers full service on campers, food trucks, bumper pulls, fifth wheels, utility trailers, recreational vehicles and livestock trailers, and also offers mobile service within 20 miles of its shop. Its work includes air conditioning, electrical repair, brakes, winterizing, seal replacements, hub rebuilds, roof replacements, slide out rebuilds, hitch installation, plumbing, self leveling systems, skirt installation, water damage repair and axle replacing. It installs the FlexArmor spray-on RV roof.",
+      "g": [
+        "service center",
+        "mobile tech",
+        "roadside"
+      ],
+      "base": "Christiansburg",
+      "areas": [],
+      "region": "New River Valley",
+      "spec": "We also offer mobile service within 20 miles of our shop.",
+      "evidence": {
+        "checked": "https://nomadiccamperrepair.com/",
+        "phone_quote": "Call us: 540-239-1085",
+        "coverage_quotes": [
+          "We are located in the heart of the New River Valley, right in Christiansburg."
+        ],
+        "type_quote": "We service air conditioning units, electrical repair, brakes, winterizing, seal replacements, hub rebuilds, roof replacements, slide out rebuilds, hitch installation, plumbing, self leveling systems, skirt installation, water damage repair, axle replacing, and much more!",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "RV Service of Virginia",
+      "c": "Ashland, VA",
+      "p": "804-798-1433",
+      "u": "https://www.rvserviceofva.com/",
+      "t": "center",
+      "e": false,
+      "r": true,
+      "d": "RV Service of Virginia is an independent RV service center in Ashland, Virginia that has operated since 1984. It describes itself as a full service center that works on everything including body repair, chassis work, appliance repair and replacement, government work and state inspections. It keeps over 1000 hard parts on site to speed repairs. It is also a Class A inspection station.",
+      "g": [
+        "service center",
+        "roadside"
+      ],
+      "base": "Ashland",
+      "areas": [],
+      "region": "Central Virginia",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.rvserviceofva.com/",
+        "phone_quote": "give us a call at 804-798-1433",
+        "coverage_quotes": [
+          "We're proud to be the longest-running independent RV Service provider in Central Virginia, now celebrating over 36 years in business."
+        ],
+        "type_quote": "We are a full service center, which means we work on everything including body repair, chassis work, appliance repair & replacement, municipalities/ government work, state inspections and more.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Atlantic RV",
+      "c": "Culpeper, VA",
+      "p": "540-825-8820",
+      "u": "https://www.atlanticrvservice.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Atlantic RV is a locally owned RV repair, refurbish and service shop in Culpeper, Virginia. It specializes in house side repairs, insurance claims, roofs and water damage. It has no sales department, so service and repair is its only priority, and it welcomes customers regardless of where they purchased their RV once the factory warranty is complete. It says it repairs the coach when disaster strikes.",
+      "g": [
+        "service center"
+      ],
+      "base": "Culpeper",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.atlanticrvservice.com/",
+        "phone_quote": "540-825-8820",
+        "coverage_quotes": [],
+        "type_quote": "Locally owned and operated, Atlantic RV is backed by RV specific repair, service, and parts experience.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "3 Guns Customs",
+      "c": "Chesapeake, VA",
+      "p": "(757) 241-8277",
+      "u": "https://3gunscustomsva.hibuwebsites.com/services/rv-and-camper-body-repair",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "3 Guns Customs is a veteran-owned, family-owned shop in Chesapeake, Virginia that has restored recreational vehicles for 40 years. It handles RV and camper body repair including collision and accident damage, panel replacement and refinishing, rust removal and prevention, fiberglass crack repair, dent removal, paint matching and full repaints, structural body repairs and water damage restoration. Its facility has a 65-foot paint booth that accommodates even the largest RVs and campers. It serves Chesapeake and surrounding areas including Hampton, Norfolk, Suffolk, Portsmouth, Newport News and Virginia Beach.",
+      "g": [
+        "service center"
+      ],
+      "base": "Chesapeake",
+      "areas": [
+        "Hampton",
+        "Norfolk",
+        "Suffolk",
+        "Portsmouth",
+        "Newport News",
+        "Virginia Beach"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://3gunscustomsva.hibuwebsites.com/services/rv-and-camper-body-repair",
+        "phone_quote": "(757) 241-8277",
+        "coverage_quotes": [
+          "Serving Chesapeake, VA and surrounding areas, we're equipped to repair all major brands with premium materials from 3M and PPG."
+        ],
+        "type_quote": "At 3 Guns Customs in Chesapeake, VA, we've been restoring recreational vehicles for 40 years.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "RV-Fam",
+      "c": "Virginia Beach, VA",
+      "p": "(757)447-9777",
+      "u": "https://rv-fam.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "RV-Fam is an RV repair, service and maintenance shop in Virginia Beach, Virginia. It specializes in keeping RVs road-ready all year and storing them safely for winter, and works with insurance companies, warranties and service contracts. It offers expert mobile RV repair and maintenance and comes to the customer for routine check-ups and emergency fixes. It also handles pre-trip inspections.",
+      "g": [
+        "service center",
+        "mobile tech"
+      ],
+      "base": "Virginia Beach",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://rv-fam.com/contact-us",
+        "phone_quote": "(757)447-9777 (7574479777)",
+        "coverage_quotes": [
+          "619 London Bridge Road Unit A, Virginia Beach, Virginia 23454, United States"
+        ],
+        "type_quote": "RV-Fam",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Charlie Obaugh RV Center",
+      "c": "Staunton, VA",
+      "p": "(540) 324-4449",
+      "u": "https://www.charlieobaughrv.com/service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Charlie Obaugh RV Center is an RV dealership in Staunton, Virginia with a service department. Its certified technicians handle everything from routine maintenance to major repairs, keeping motorhomes and travel trailers safe, reliable and adventure-ready. Customers can schedule an appointment online or visit the service center. The service page notes it will take care of the RV on the customer's schedule.",
+      "g": [
+        "service center"
+      ],
+      "base": "Staunton",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.charlieobaughrv.com/service",
+        "phone_quote": "(540) 324-4449",
+        "coverage_quotes": [
+          "213 Rolling Thunder Lane Staunton, VA 24401"
+        ],
+        "type_quote": "Our certified technicians handle everything from routine maintenance to major repairs, ensuring your motorhome or travel trailer stays safe, reliable, and adventure-ready.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Pete's RV Center - Mid-Atlantic",
+      "c": "Salem, VA",
+      "p": "(540) 443-2017",
+      "u": "https://www.petesrvmidatlantic.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Pete's RV Center - Mid-Atlantic has a service department in Salem, Virginia. It services everything from a pop-up to a 40 diesel pusher and is authorized to complete regular maintenance and warranty work. It accommodates problems with fifth wheels, motorhomes, park trailers, pop up campers, toy haulers and travel trailers, and services campers bought elsewhere. Its service list includes winterization, summerization, hitch and braking system installation, state inspection, roof sealing and leak repair, and axle and bearing repair.",
+      "g": [
+        "service center"
+      ],
+      "base": "Salem",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.petesrvmidatlantic.com/rv-service",
+        "phone_quote": "Salem, VA 1259 E Main St Call Us: (540) 443-2017",
+        "coverage_quotes": [],
+        "type_quote": "We specialize in servicing everything from a pop-up to a 40 diesel pusher.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Tonie's RV",
+      "c": "Roanoke, VA",
+      "p": "(540) 375-5060",
+      "u": "https://www.toniesrv.com/virginia-rv-dealer/rv-truck-van-service-repairs",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Tonie's RV is an RV dealer in Roanoke, Virginia that services and repairs all makes and models of recreational vehicles, from the pop-up camper to the class A motorhome, including horse trailers and cargo and utility trailers. It is an authorized repair and warranty center for many popular brands and honors most extended warranty contracts. It offers a free roof inspection.",
+      "g": [
+        "service center"
+      ],
+      "base": "Roanoke",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.toniesrv.com/virginia-rv-dealer/rv-truck-van-service-repairs",
+        "phone_quote": "Stop by or call (540) 375-5060",
+        "coverage_quotes": [
+          "4529 Plantation Rd Roanoke, VA 24012"
+        ],
+        "type_quote": "At Tonie's we service and repair all makes and models of recreational vehicles, from the pop-up camper to the class A motorhome, including horse trailers and cargo/utility trailers.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Johnson Family RV",
+      "c": "Woodlawn, VA",
+      "p": "276-779-4444",
+      "u": "https://www.johnsonrvs.com/service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Johnson Family RV is an RV dealer in Woodlawn, Virginia with a service department that handles RV service, repair and maintenance. It works on motorhomes and travel trailers, from minor interior fixes to major structural repairs. Its services include slide seal repairs, water damage restoration, roof and sidewall repairs, floor repairs, winterization, roof inspections, state inspections, upgrades and Seal Tech leak testing. It also installs hitches and RV accessories.",
+      "g": [
+        "service center"
+      ],
+      "base": "Woodlawn",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.johnsonrvs.com/service",
+        "phone_quote": "276-779-4444 (2767794444)",
+        "coverage_quotes": [
+          "2798 Carrollton Pike Woodlawn, VA 24381"
+        ],
+        "type_quote": "The Johnson Family RV Service Department is fully equipped to handle all your RV service, repair, and maintenance needs",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Blue Compass RV Danville",
+      "c": "Ringgold, VA",
+      "p": "434-799-8721",
+      "u": "https://new.bluecompassrv.com/locations/virginia/danville/service",
+      "t": "center",
+      "e": false,
+      "r": true,
+      "d": "Blue Compass RV Danville is an RV dealer and service center at Ringgold, Virginia, just outside Danville. Its service department offers a wide range of services from major repairs to minor maintenance, performed by factory-trained and certified technicians. Its work includes paint and body work, preventive maintenance, parts and accessories installations, and everything from annual services and tune-ups to complete engine rebuilds. It also offers Fast Lane same-day RV service on select services.",
+      "g": [
+        "service center",
+        "roadside"
+      ],
+      "base": "Ringgold",
+      "areas": [
+        "Danville",
+        "Lynchburg",
+        "Martinsville",
+        "South Boston"
+      ],
+      "region": "South Central Virginia",
+      "spec": null,
+      "evidence": {
+        "checked": "https://new.bluecompassrv.com/locations/virginia/danville/service",
+        "phone_quote": "434-799-8721 (4347998721)",
+        "coverage_quotes": [],
+        "type_quote": "We offer a wide range of services from major repairs to minor maintenance, all performed by our factory-trained and certified technicians.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Campers Inn RV of Fredericksburg",
+      "c": "Fredericksburg, VA",
+      "p": "540-602-2030",
+      "u": "https://www.campersinn.com/fredericksburg",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Campers Inn RV of Fredericksburg is a full-service RV dealership in Fredericksburg, Virginia. Its RV Repair and Service Center supports all maintenance and repair needs with professionally certified technicians, and its Parts and Accessories Store is stocked for on-the-road needs. It is a member of the Priority RV Network, which gives priority emergency service and nationwide support. Service hours are Monday through Saturday.",
+      "g": [
+        "service center"
+      ],
+      "base": "Fredericksburg",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.campersinn.com/fredericksburg",
+        "phone_quote": "1132 Richmond Hwy. | Fredericksburg, VA 22405 540-602-2030",
+        "coverage_quotes": [],
+        "type_quote": "Our RV Repair and Service Center is ready to support all your maintenance and repair needs with our highly trained and professionally certified technicians.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Ace RV",
+      "c": "Herndon, VA",
+      "p": "703-945-5000",
+      "u": "https://www.acervrentals.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": true,
+      "d": "Ace RV is an RV service and repair department in Herndon, Virginia staffed by trained RVTI certified technicians. It handles repairs, routine maintenance and appliance upgrades, with service ideas including RV customization, preventive maintenance and systems checks for HVAC, generator, propane, plumbing and seals, engine and generator oil changes, tire rotation, slide room track installation and greasing, front-end alignment, tank sanitization, winterization, and battery service. Repair work includes body work, insurance claims, windshield replacements, roof and awning repairs, brakes replacement and appliance repairs.",
+      "g": [
+        "service center",
+        "roadside"
+      ],
+      "base": "Herndon",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.acervrentals.com/rv-service",
+        "phone_quote": "Rentals: 571-367-9223 Sales: 202-739-1947 Service: 703-945-5000",
+        "coverage_quotes": [
+          "2875 Towerview Road Herndon, VA 20171"
+        ],
+        "type_quote": "Your RV is in the best of care with our skilled team of trained RVTI Certified technicians.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    }
+  ]
+}

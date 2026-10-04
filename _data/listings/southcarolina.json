@@ -1,0 +1,1121 @@
+{
+  "state": "SC",
+  "name": "South Carolina",
+  "regions": [
+    {
+      "key": "upstate-sc",
+      "label": "Greenville, Spartanburg and the Upstate"
+    },
+    {
+      "key": "midlands-sc",
+      "label": "Columbia and the Midlands"
+    },
+    {
+      "key": "lowcountry-sc",
+      "label": "Charleston and the Lowcountry"
+    },
+    {
+      "key": "grand-strand-sc",
+      "label": "Myrtle Beach and the Grand Strand"
+    },
+    {
+      "key": "savannah-river-sc",
+      "label": "Aiken and the Savannah River"
+    }
+  ],
+  "region_of": {
+    "Greenville": "upstate-sc",
+    "Taylors": "upstate-sc",
+    "Duncan": "upstate-sc",
+    "Cowpens": "upstate-sc",
+    "Pendleton": "upstate-sc",
+    "Anderson": "upstate-sc",
+    "Gaffney": "upstate-sc",
+    "Rock Hill": "upstate-sc",
+    "Irmo": "midlands-sc",
+    "Lexington": "midlands-sc",
+    "Newberry": "midlands-sc",
+    "Sumter": "midlands-sc",
+    "Charleston": "lowcountry-sc",
+    "North Charleston": "lowcountry-sc",
+    "Summerville": "lowcountry-sc",
+    "Ladson": "lowcountry-sc",
+    "Hilton Head Island": "lowcountry-sc",
+    "Myrtle Beach": "grand-strand-sc",
+    "North Myrtle Beach": "grand-strand-sc",
+    "Murrells Inlet": "grand-strand-sc",
+    "Gadsden": "grand-strand-sc",
+    "Aiken": "savannah-river-sc"
+  },
+  "listings": [
+    {
+      "n": "Mobile RV Medics",
+      "c": "Myrtle Beach, SC",
+      "p": "843-945-9477",
+      "u": "https://www.mobilervmedics.com/",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "Mobile RV Medics is a mobile RV service provider for Myrtle Beach and the Grand Strand, performing repair and maintenance tasks at the customer's campsite. It runs a fleet of fully equipped mobile vans and also has a facility and a stocked RV parts and accessories center. The team says it will gladly service most campgrounds along the Grand Strand from North Myrtle Beach to Litchfield Beach.",
+      "g": [
+        "mobile tech",
+        "service center"
+      ],
+      "base": "Myrtle Beach",
+      "areas": [
+        "North Myrtle Beach",
+        "Litchfield Beach"
+      ],
+      "region": "Grand Strand",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.mobilervmedics.com/",
+        "phone_quote": "give us a call at 843-945-9477",
+        "coverage_quotes": [
+          "We will gladly service most campgrounds along the Grand Strand from North Myrtle Beach to Litchfield Beach."
+        ],
+        "type_quote": "Our team of industry-certified technicians are available to perform a variety of repair and maintenance tasks right at your campsite.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Mobile RV Repair in Myrtle Beach",
+      "c": "Myrtle Beach, SC",
+      "p": "843-962-1002",
+      "u": "https://myrtlebeachmobilervrepair.com/",
+      "t": "mobile",
+      "e": true,
+      "r": true,
+      "d": "This is a mobile-only RV repair service that comes to campgrounds, driveways and roadside locations across Myrtle Beach and the Grand Strand. It handles air conditioning, electrical, plumbing, appliance, roof, water heater, awning, slide-out and generator repairs, along with brakes, axles and suspension. The company says it works on motorized RVs and towables of every size and style.",
+      "g": [
+        "mobile tech",
+        "roadside / chassis"
+      ],
+      "base": "Myrtle Beach",
+      "areas": [
+        "Myrtle Beach",
+        "North Myrtle Beach",
+        "Surfside Beach",
+        "Murrells Inlet",
+        "Carolina Forest",
+        "Socastee",
+        "Conway",
+        "Little River",
+        "Atlantic Beach"
+      ],
+      "region": "Grand Strand",
+      "spec": null,
+      "evidence": {
+        "checked": "https://myrtlebeachmobilervrepair.com/",
+        "phone_quote": "843-962-1002",
+        "coverage_quotes": [
+          "Our service area includes Myrtle Beach, North Myrtle Beach, Surfside Beach, Garden City Beach, Murrells Inlet, Carolina Forest, Socastee, Conway, Little River, and Atlantic Beach."
+        ],
+        "type_quote": "With 100% mobile RV repair in Myrtle Beach, SC, we meet you wherever you’re parked",
+        "emergency_quote": "Absolutely. We provide emergency RV repair in Myrtle Beach for roadside breakdowns, urgent campground issues, and unexpected failures that can ruin a trip.",
+        "roadside_quote": "RV Brake, Axle & Suspension Repair",
+        "licence": null
+      }
+    },
+    {
+      "n": "RV Rescue Inc.",
+      "c": "Myrtle Beach, SC",
+      "p": "(843) 267-6129",
+      "u": "https://rvrescuemb.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "RV Rescue Inc. is a mobile based RV company with over 20 years of experience on all makes and models of travel trailers, fifth wheels and motorhomes. It offers on-site service, maintenance and installation, and comes to the customer's house or storage facility. The company says it will come to the rescue no matter what time of day or night.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Myrtle Beach",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://rvrescuemb.com/",
+        "phone_quote": "call us at (843) 267-6129",
+        "coverage_quotes": [],
+        "type_quote": "RV Rescue Inc. is a mobile based RV company with over 20 years experience on all makes and models of travel trailers, 5th wheels and motorhomes.",
+        "emergency_quote": "No matter what time of day or night we will come to your rescue.",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "1ST CHOICE RV",
+      "c": "Charleston, SC",
+      "p": "(843) 532-2120",
+      "u": "https://1choicerv.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "1st Choice RV offers mobile RV maintenance, installation and repairs, and provides manufacturer and warranty services. Its mobile RV repair service meets customers anywhere within a wide RV service area, including at their home or storage yard. The company serves the Charleston and Myrtle Beach greater area.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Charleston",
+      "areas": [
+        "James Island",
+        "North Charleston",
+        "Summerville",
+        "Georgetown",
+        "Ravenel",
+        "Hollywood"
+      ],
+      "region": "Charleston & Myrtle Beach Greater Area",
+      "spec": null,
+      "evidence": {
+        "checked": "https://1choicerv.com/",
+        "phone_quote": "(843) 532-2120",
+        "coverage_quotes": [
+          "Serving the Charleston & Myrtle Beach Greater Area: Including James Island, Surfside, North Charleston, Summerville, Georgetown, West Ashley, Cross, Ravenel, Hollywood, etc."
+        ],
+        "type_quote": "Let us come to YOU with our Mobile RV Service! We offer mobile RV maintenance, installation, and repairs.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "RV Rehab",
+      "c": "North Myrtle Beach, SC",
+      "p": "843-337-8911",
+      "u": "https://www.rvrehabllc.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "RV Rehab is a family owned and operated business with over 20 years of experience in construction, remodeling, and RV repair and restoration. It offers mobile onsite repair and maintenance to campgrounds in North Myrtle Beach. Services include electrical, plumbing, appliances, furnaces, air conditioners, roofs, and a winterization program.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "North Myrtle Beach",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.rvrehabllc.com/",
+        "phone_quote": "843-337-8911",
+        "coverage_quotes": [
+          "We offer mobile onsite repair and maintenance services to the campgrounds in North Myrtle Beach, SC, listed on the Mobile Service Area page."
+        ],
+        "type_quote": "RV Rehab is a family owned and operated business with over 20 years' experience in construction, remodeling, and RV repair & restoration.",
+        "emergency_quote": "We have skilled technicians ready to protect your investment with quality service, emergency repairs, preventive maintenance, and inspections.",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Bish's RV Mobile RV Service",
+      "c": "Myrtle Beach, SC",
+      "p": "843-286-5921",
+      "u": "https://www.bishs.com/mobile-rv-service-myrtle-beach-south-carolina",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "Bish's RV operates an exclusively mobile RV repair fleet serving Myrtle Beach and the Grand Strand, coming to the customer's home or campsite. The team specializes in warranty repairs and handles A/C and furnace, appliances, maintenance, electrical and hydraulics, and water leaks and plumbing. Same-day appointments are available and the company says to call if a repair emergency comes up.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Myrtle Beach",
+      "areas": [
+        "Myrtle Beach",
+        "North Myrtle Beach",
+        "Conway",
+        "Garden City",
+        "Little River",
+        "Loris",
+        "Murrells Inlet"
+      ],
+      "region": "Grand Strand",
+      "spec": "Bish's RV Mobile Service is not approved to submit manufacturer warranty work for the customer and maybe deny warranty repairs because of this.",
+      "evidence": {
+        "checked": "https://www.bishs.com/mobile-rv-service-myrtle-beach-south-carolina",
+        "phone_quote": "give us a call at 843-286-5921",
+        "coverage_quotes": [
+          "We are now serving the Myrtle Beach, South Carolina, and surrounding areas, or better known as the Grand Strand."
+        ],
+        "type_quote": "We're an exclusive mobile RV repair fleet in the Myrtle Beach area which means better and faster service.",
+        "emergency_quote": "If a repair emergency comes up, call us to help!",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Blue Compass RV North Myrtle Beach Service Center",
+      "c": "Longs, SC",
+      "p": "(843) 756-2222",
+      "u": "https://www.bluecompassrv.com/locations/south-carolina/north-myrtle-beach/service",
+      "t": "center",
+      "e": false,
+      "r": true,
+      "d": "Blue Compass RV North Myrtle Beach Service Center is a full-service RV shop on Highway 9 West in Longs. Its certified technicians handle warranty work, collision repairs, appliance service, electrical and plumbing repairs, and full system diagnostics. The service department also performs engine and transmission diagnostics and chassis service, and has driven out to campgrounds to inspect and repair customer RVs.",
+      "g": [
+        "service center",
+        "roadside / chassis"
+      ],
+      "base": null,
+      "areas": [],
+      "region": "Grand Strand",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.bluecompassrv.com/locations/south-carolina/north-myrtle-beach/service",
+        "phone_quote": "2049 Hwy 9 West, Longs, SC 29568 (843) 756-2222",
+        "coverage_quotes": [
+          "Highway 9 West through Longs puts our service center right in the path of one of the busiest RV corridors on the South Carolina coast."
+        ],
+        "type_quote": "We handle warranty work, collision repairs, appliance service, electrical and plumbing repairs, and full system diagnostics.",
+        "emergency_quote": null,
+        "roadside_quote": "Expert diagnostics and repairs for all RV engine types and transmission systems.",
+        "licence": null
+      },
+      "reg": "grand-strand-sc"
+    },
+    {
+      "n": "Blue Compass RV Charleston Service Center",
+      "c": "Ladson, SC",
+      "p": "(843) 900-2140",
+      "u": "https://www.bluecompassrv.com/locations/south-carolina/charleston/service",
+      "t": "center",
+      "e": false,
+      "r": true,
+      "d": "Blue Compass RV Charleston Service Center is a full-service RV shop on Treeland Drive in Ladson, just off I-26. Its certified technicians handle warranty work, collision repairs, appliance service, roof maintenance, electrical and plumbing, generator work, and slide-out adjustments. The service department also performs engine and transmission diagnostics and chassis service.",
+      "g": [
+        "service center",
+        "roadside / chassis"
+      ],
+      "base": "Ladson",
+      "areas": [],
+      "region": "Lowcountry",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.bluecompassrv.com/locations/south-carolina/charleston/service",
+        "phone_quote": "691 Treeland Dr, Ladson, SC 29456 (843) 900-2140",
+        "coverage_quotes": [
+          "Customers come in from across the greater Charleston metro, from Summerville to Goose Creek, North Charleston, and Mount Pleasant, and from Savannah, Beaufort, and Hilton Head to the south."
+        ],
+        "type_quote": "Our team handles the full range: warranty work, collision repairs, appliance service, roof maintenance, electrical and plumbing, generator work, and slide-out adjustments.",
+        "emergency_quote": null,
+        "roadside_quote": "Expert diagnostics and repairs for all RV engine types and transmission systems.",
+        "licence": null
+      }
+    },
+    {
+      "n": "Blue Compass RV Columbia Service Center",
+      "c": "Lexington, SC",
+      "p": "(800) 779-2957",
+      "u": "https://www.bluecompassrv.com/locations/south-carolina/columbia/service",
+      "t": "center",
+      "e": false,
+      "r": true,
+      "d": "Blue Compass RV Columbia Service Center is on Business Park Road in Lexington, off I-20 west of the capital. Its certified technicians handle warranty repairs, collision work, electrical and plumbing, generator service, roof maintenance, slide-out adjustments, and appliance replacement. The service department also performs engine and transmission diagnostics and chassis service.",
+      "g": [
+        "service center",
+        "roadside / chassis"
+      ],
+      "base": "Lexington",
+      "areas": [
+        "Columbia",
+        "Augusta",
+        "Florence",
+        "Sumter",
+        "Camden"
+      ],
+      "region": "Midlands",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.bluecompassrv.com/locations/south-carolina/columbia/service",
+        "phone_quote": "165 Business Park Rd., Lexington, SC 29072 (800) 779-2957",
+        "coverage_quotes": [
+          "Customers come in from Columbia, Augusta, Florence, Sumter, Camden, and throughout central South Carolina, all connecting through the same I-20 corridor that runs right past our door."
+        ],
+        "type_quote": "Our certified technicians handle the full range of RV service work: warranty repairs, collision work, electrical and plumbing, generator service, roof maintenance, slide-out adjustments, and appliance replacement.",
+        "emergency_quote": null,
+        "roadside_quote": "Expert diagnostics and repairs for all RV engine types and transmission systems.",
+        "licence": null
+      }
+    },
+    {
+      "n": "Blue Compass RV Spartanburg Service Center",
+      "c": "Duncan, SC",
+      "p": "(864) 433-0887",
+      "u": "https://www.bluecompassrv.com/locations/south-carolina/spartanburg/service",
+      "t": "center",
+      "e": false,
+      "r": true,
+      "d": "Blue Compass RV Spartanburg Service Center is on South Main Street in Duncan, on I-85 between Spartanburg and Greenville. Its certified technicians handle everything from pre-trip inspections to full system overhauls, and every RV gets a free multi-point inspection. The service department also performs engine and transmission diagnostics and chassis service.",
+      "g": [
+        "service center",
+        "roadside / chassis"
+      ],
+      "base": "Duncan",
+      "areas": [
+        "Spartanburg",
+        "Greenville"
+      ],
+      "region": "Upstate",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.bluecompassrv.com/locations/south-carolina/spartanburg/service",
+        "phone_quote": "302 South Main Street, Duncan, SC 29334 (864) 433-0887",
+        "coverage_quotes": [
+          "We're also a regular destination for local owners from Spartanburg, Greenville, and Cherokee counties who trust our team for everything from annual maintenance to warranty work and full repairs."
+        ],
+        "type_quote": "Our certified technicians know these patterns, and every RV that comes in gets a free multi-point inspection so nothing gets missed.",
+        "emergency_quote": null,
+        "roadside_quote": "Expert diagnostics and repairs for all RV engine types and transmission systems.",
+        "licence": null
+      }
+    },
+    {
+      "n": "Dependable RV Repair",
+      "c": "Summerville, SC",
+      "p": "(843) 996-9822",
+      "u": "https://dependablervrepair.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "Dependable RV Repair is a mobile, on-site RV repair service serving Summerville and surrounding Lowcountry communities within about 100 miles. It handles electrical and appliances, plumbing and water systems, A/C, slide-outs, awnings, water heaters, and winterization. The company travels to the customer, with no towing or waiting room, and says it is available 24/7.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Summerville",
+      "areas": [],
+      "region": "Lowcountry",
+      "spec": null,
+      "evidence": {
+        "checked": "https://dependablervrepair.com/",
+        "phone_quote": "(843) 996-9822",
+        "coverage_quotes": [
+          "Serving Summerville and surrounding Lowcountry communities."
+        ],
+        "type_quote": "From quick diagnostics to complete component replacement, we come to you and get you back to camping sooner.",
+        "emergency_quote": "available 24/7",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "RV Tech Pro LLC",
+      "c": "Gadsden, SC",
+      "p": "803-543-2464",
+      "u": "https://rv-techpro.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "RV Tech Pro LLC provides mobile RV services and camper repairs across Columbia and the greater Midlands. Led by a Level 3 certified technician, the team brings factory-grade diagnostic equipment to the customer's driveway, campsite or storage yard. It services Richland County and Lexington, and works on fifth wheels, travel trailers, toy haulers, and Class A, B or C motorhomes.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Gadsden",
+      "areas": [
+        "West Columbia",
+        "Cayce",
+        "Irmo",
+        "Chapin",
+        "Blythewood"
+      ],
+      "region": "the Midlands",
+      "spec": null,
+      "evidence": {
+        "checked": "https://rv-techpro.com/",
+        "phone_quote": "Call us 803-543-2464",
+        "coverage_quotes": [
+          "Our certified technicians actively service Richland County, West Columbia, Cayce, Irmo, Chapin, and Blythewood."
+        ],
+        "type_quote": "That is why RV Tech Pro LLC provides rapid-deployment mobile RV services and comprehensive camper repairs across Columbia, SC, and the greater Midlands region.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Tony's RV Parts and Service, Inc.",
+      "c": "Lexington, SC",
+      "p": "(803) 894-3071",
+      "u": "https://tonysrv.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Tony's RV Parts and Service is an RV repair and service center in Lexington with a large parts inventory. Its technicians handle mechanical repairs, electrical work, plumbing, general maintenance, and installation of parts and accessories. The shop also does warranty work for major brand appliances and RV manufacturers, plus insurance repairs, paint and body work, and renovations.",
+      "g": [
+        "service center"
+      ],
+      "base": "Lexington",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://tonysrv.com/",
+        "phone_quote": "(803) 894-3071",
+        "coverage_quotes": [],
+        "type_quote": "We specialize in providing a wide range of services and parts for recreational vehicles (RVs).",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Universa RV Solutions",
+      "c": "Greenville, SC",
+      "p": "(864) 209-1189",
+      "u": "https://universarv.com/",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "Universa RV Solutions offers mobile RV service and repair, coming to the customer's location, plus shop repairs for issues that need specialized equipment. The team has 18 years of experience in the RV industry and offers basic and premium maintenance plans. It also works with insurance companies and manufacturers to manage claims.",
+      "g": [
+        "mobile tech",
+        "service center"
+      ],
+      "base": "Greenville",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://universarv.com/",
+        "phone_quote": "(864) 209-1189",
+        "coverage_quotes": [],
+        "type_quote": "URVS mobile technicians can handle many repairs on-site, but some issues require specialized equipment and facilities.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Double K RV Repair & Maintenance",
+      "c": "Sumter, SC",
+      "p": "803-513-1466",
+      "u": "https://doublekrvrepair.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Double K RV Repair and Maintenance brings professional mobile RV repair directly to the customer's campsite, home or storage facility. Its expertise includes RV air conditioning repair, RV refrigerator repair, plumbing, electrical systems, and tank hydro-jetting. The company serves Sumter and surrounding areas during the summer and travels with the RV community from September through April.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Sumter",
+      "areas": [],
+      "region": "South Carolina",
+      "spec": "Serving South Carolina in the summer and addressing RV air conditioning issues while traveling nationwide from September through April.",
+      "evidence": {
+        "checked": "https://doublekrvrepair.com/",
+        "phone_quote": "Call or text 803-513-1466",
+        "coverage_quotes": [
+          "We proudly serve Sumter and the surrounding areas during the summer and travel with the RV community from September through April."
+        ],
+        "type_quote": "We bring professional RV repair directly to your campsite, home, storage facility, or wherever your RV is parked.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Carolina RV Pros",
+      "c": "Greenville, SC",
+      "p": "864-966-2251",
+      "u": "https://carolinarvpros.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "Carolina RV Pros is a certified mobile RV technician team based out of Greenville County, serving all surrounding counties. Its expertise covers electrical, heating and air conditioning, solar installation, appliances, roof repair, water damage restoration, and slide-outs. The company also provides RV inspections and preventive maintenance, and is available for emergency services after hours.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Greenville",
+      "areas": [],
+      "region": "Greenville County",
+      "spec": null,
+      "evidence": {
+        "checked": "https://carolinarvpros.com/",
+        "phone_quote": "864-966-2251",
+        "coverage_quotes": [
+          "We are based out of Greenville County, South Carolina, we also proudly service all surrounding counties."
+        ],
+        "type_quote": "Carolina RV Pros is a certified mobile RV technician team of RV experts with over 30 years of Service & Repair experience on RV campers.",
+        "emergency_quote": "We are also available for emergency services after hours, please call for availability.",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "CAVU RV",
+      "c": "Greenville, SC",
+      "p": "864-823-9369",
+      "u": "https://cavurv.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "CAVU RV is a veteran-owned mobile RV service based in Upstate South Carolina. The team handles electrical, plumbing, HVAC, and roof issues on-site, along with awnings, slide-outs, propane and diagnostics. It services Class A, B and C motorhomes, fifth wheels and travel trailers, at home, the campsite or roadside.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Greenville",
+      "areas": [],
+      "region": "Upstate South Carolina",
+      "spec": null,
+      "evidence": {
+        "checked": "https://cavurv.com/",
+        "phone_quote": "CALL (8648239369)",
+        "coverage_quotes": [
+          "Mobile RV repair throughout the Upstate."
+        ],
+        "type_quote": "CAVU RV (pronounced “KAH-voo”) is a veteran-owned mobile RV service covering everything from leaks to no-starts.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Mountain Valley Mobile RV Solutions",
+      "c": "Townville, SC",
+      "p": "(864) 539-2166",
+      "u": "https://mtnvalleyrvsolutions.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "Mountain Valley Mobile RV Solutions is a veteran-owned mobile RV service based in Townville, about 15 minutes from the Georgia border. It provides RVTAA certified diagnostics, repairs, solar installs, generator service, and horse trailer living quarters work. Every service call includes a one-hour system diagnostic, and after-hours emergency requests are reviewed based on urgency and availability.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": null,
+      "areas": [
+        "Greenville",
+        "Spartanburg",
+        "Seneca",
+        "Easley",
+        "Gaffney"
+      ],
+      "region": "Upstate South Carolina",
+      "spec": "After-hours emergency calls are dispatched at our discretion based on urgency and availability. Submission does not guarantee same-night response.",
+      "evidence": {
+        "checked": "https://mtnvalleyrvsolutions.com/",
+        "phone_quote": "(864) 539-2166",
+        "coverage_quotes": [
+          "Mobile RV repair technician serving Upstate South Carolina including Anderson County, Greenville, Spartanburg, Pickens County, Oconee County and North Georgia."
+        ],
+        "type_quote": "RVTAA certified diagnostics, repairs, solar installs, generator service, and horse trailer living quarters work across Upstate SC and North Georgia.",
+        "emergency_quote": "For RV emergencies outside normal business hours, submit this form and we will review it promptly and contact you directly to confirm availability.",
+        "roadside_quote": null,
+        "licence": null
+      },
+      "reg": "upstate-sc"
+    },
+    {
+      "n": "Hands-On RV Repair",
+      "c": "Cowpens, SC",
+      "p": "(864) 680-1895",
+      "u": "https://handsonrvrepair.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Hands-On RV Repair is a family-owned RV and camper repair shop in Cowpens serving all of Spartanburg County. It handles slide-out repair, roof and leak repair, RV and camper body work, electrical and plumbing, and collision damage repair. The shop services all makes and models including Class A, B and C, fifth wheels, travel trailers, toy haulers and pop-ups.",
+      "g": [
+        "service center",
+        "body / collision"
+      ],
+      "base": "Cowpens",
+      "areas": [
+        "Spartanburg",
+        "Inman",
+        "Chesnee",
+        "Boiling Springs",
+        "Duncan"
+      ],
+      "region": "Spartanburg County",
+      "spec": null,
+      "evidence": {
+        "checked": "https://handsonrvrepair.com/",
+        "phone_quote": "(864) 680-1895",
+        "coverage_quotes": [
+          "Expert RV & camper repair with same-day service. Serving Cowpens, SC and all of Spartanburg County."
+        ],
+        "type_quote": "Hands-On RV Repair is a family-owned RV and camper repair shop serving Cowpens, SC and all of Spartanburg County.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Upstate RV Solutions LLC",
+      "c": "Pendleton, SC",
+      "p": "(864) 502-0000",
+      "u": "https://upstatervsolutions.com/",
+      "t": "both",
+      "e": true,
+      "r": false,
+      "d": "Upstate RV Solutions is a family-owned RV service, parts and storage business in Pendleton. It offers comprehensive RV care including on-site repairs and mobile service, plus diagnostics, electrical, appliance servicing, plumbing, awning and slide-out repairs, tire services, and roof repair and replacement. It also services horse trailers, food trucks, medical buses and utility trailers.",
+      "g": [
+        "mobile tech",
+        "service center"
+      ],
+      "base": "Pendleton",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://upstatervsolutions.com/",
+        "phone_quote": "(864) 502-0000",
+        "coverage_quotes": [
+          "Our spacious facility in Pendleton, SC, provides peace of mind, ensuring your RV is safe and ready for your next adventure."
+        ],
+        "type_quote": "We offer comprehensive RV care, including on-site repairs and mobile service.",
+        "emergency_quote": "Available for after hour emergence service.",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Ohana RV Service",
+      "c": "Pendleton, SC",
+      "p": "864-430-4106",
+      "u": "https://www.ohanarvservice.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Ohana RV Service is a veteran-owned mobile RV service that performs on-site RV repairs rather than requiring the customer to haul their RV to a shop. It provides maintenance and repair for RV owners and says it services most of Upstate South Carolina. The company comes to the customer's location.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Pendleton",
+      "areas": [],
+      "region": "Upstate South Carolina",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.ohanarvservice.com/",
+        "phone_quote": "Call/Text or Email to book an appointment: 864-430-4106",
+        "coverage_quotes": [
+          "We service most of Upstate South Carolina!"
+        ],
+        "type_quote": "Professional ON SITE RV REPAIRS! No hauling your RV to a shop, we come to you!",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Rampant RV Repair",
+      "c": "Lexington, SC",
+      "p": "(803) 797-0951",
+      "u": "https://www.rampantrv.com/services",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "Rampant RV Repair is a mobile RV repair service based in Lexington with no shop location for walk-ins. It offers diagnostics and estimates, warranty work, emergency mobile repairs, periodic maintenance, RV inspections, and awning repair. The company states it is unable to work on engine or powertrain components on motor homes.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Lexington",
+      "areas": [],
+      "region": null,
+      "spec": "We are unable to work on engine/power train components on motor homes; you will need a mechanic or RV repair shop for these issues.",
+      "evidence": {
+        "checked": "https://www.rampantrv.com/services",
+        "phone_quote": "(803) 797-0951",
+        "coverage_quotes": [
+          "Service calls start at $85 within 35 miles of our office, then increase based on $3 per mile distance past that."
+        ],
+        "type_quote": "RV Repairs",
+        "emergency_quote": "Emergency/after-hour repairs & diagnostics will have a $175 immediate response service call fee",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Mid-State RV Service, LLC",
+      "c": "Rock Hill, SC",
+      "p": "803-558-5590",
+      "u": "https://www.midstatervservice.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Mid-State RV Service is a locally owned mobile RV service based in Rock Hill, run by a Certified RV Master Technician with 22 years of experience. It travels within a 75 mile radius of downtown Rock Hill and works with extended warranty and insurance companies. Services include RV roof maintenance and repair, appliance maintenance, A/C service, awning repair, electrical and battery service, and generator maintenance.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Rock Hill",
+      "areas": [],
+      "region": "Mid-State SC & Charlotte, NC Areas",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.midstatervservice.com/contact",
+        "phone_quote": "service@midstatervservice.com ( (service@midstatervservice.com) 803-558-5590)",
+        "coverage_quotes": [],
+        "type_quote": "the RV service or repair you are requesting",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Gregory's Marine & RV, LLC",
+      "c": "Rock Hill, SC",
+      "p": "(803) 329-5333",
+      "u": "https://gregorysmarineandrv.com/rv-services/",
+      "t": "center",
+      "e": false,
+      "r": true,
+      "d": "Gregory's Marine and RV services all makes and models of recreational vehicles in Rock Hill. It works on tow-behind trailers, fifth wheels and motorhomes, including motor home engines, transmissions and drive trains, and motor home generators. The shop also services camper wheel bearings and tires and offers winterization and pre-season tune-ups.",
+      "g": [
+        "service center",
+        "roadside / chassis"
+      ],
+      "base": "Rock Hill",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://gregorysmarineandrv.com/rv-services/",
+        "phone_quote": "Phone(803) 329-5333",
+        "coverage_quotes": [],
+        "type_quote": "We service all makes and models of Recreational Vehicles.",
+        "emergency_quote": null,
+        "roadside_quote": "Service motor home transmissions & drive trains",
+        "licence": null
+      }
+    },
+    {
+      "n": "Pro RV & Truck Center",
+      "c": "North Charleston, SC",
+      "p": "(843) 270-2800",
+      "u": "https://www.prorvcenter.com/rv-collision-and-refinishing",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Pro RV and Truck Center specializes in professional RV damage repair, from minor cosmetic issues to major collision repairs. Its facility works on Class A, B and C motorhomes, fifth wheels and travel trailers, doing structural and exterior body work, panel replacement, fiberglass repair, roof, sidewall and rear cap repairs, and delamination repair. The team also handles insurance claims from estimate to final inspection.",
+      "g": [
+        "body / collision"
+      ],
+      "base": "North Charleston",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.prorvcenter.com/rv-collision-and-refinishing",
+        "phone_quote": "843) 270-2800",
+        "coverage_quotes": [],
+        "type_quote": "At Pro RV & Truck Center, we specialize in professional RV damage repair, handling everything from minor cosmetic issues to major collision repairs.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "MPT Autobody",
+      "c": "Murrells Inlet, SC",
+      "p": "(843) 353-2659",
+      "u": "https://mptpaintanddetailing.com/rvs/rv-repair/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "MPT Autobody provides RV repair and body work near Murrells Inlet, specializing in RV collision repair. Its facility handles paint, fiberglass, frame and fabrication repair, with a paint booth and a lifetime warranty on paintwork. The shop works on many RV makes and models and offers free estimates on RV collision repairs.",
+      "g": [
+        "body / collision"
+      ],
+      "base": "Murrells Inlet",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://mptpaintanddetailing.com/rvs/rv-repair/",
+        "phone_quote": "(843) 353-2659",
+        "coverage_quotes": [],
+        "type_quote": "MPT Autobody provides top-notch RV repair services and stands behind our paintwork with a lifetime warranty.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Colors on Parade",
+      "c": "Irmo, SC",
+      "p": "(803) 590-8396",
+      "u": "https://colorscolumbia.com/rv-body-paint-repair/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Colors on Parade in Columbia specializes in fiberglass RV body and paint repair. Its technicians repair damaged fiberglass RVs, match existing finishes, and apply decals, working on RVs from six-foot teardrops to sixty-foot motorhomes. The company works out of two shops in Irmo and also works on-site at several dealerships around Columbia.",
+      "g": [
+        "body / collision"
+      ],
+      "base": "Irmo",
+      "areas": [
+        "Columbia"
+      ],
+      "region": "the Midlands",
+      "spec": "we are not able to repair damage to aluminum skinned RVs",
+      "evidence": {
+        "checked": "https://colorscolumbia.com/rv-body-paint-repair/",
+        "phone_quote": "Call Us (803) 590-8396",
+        "coverage_quotes": [
+          "We also work on-site at several dealerships around Columbia, including the Jim Hudson group."
+        ],
+        "type_quote": "Colors on Parade is able to repair most RV body damage to a like-new condition in as little as 48 hours for minor repairs or slightly longer for major fiberglass repair work.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Lakeside RV Sales, LLC",
+      "c": "Anderson, SC",
+      "p": "864-231-7258",
+      "u": "https://www.lakesidervsales.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Lakeside RV Sales has an RV service department in Anderson staffed with technicians who keep motorhomes and trailers in working order. Services include body work, full appliance repair and installations, replacement of rotted wood, reconstruction of wrecked units, hitch installations, rubber roof repair and replacement, and awning repair. The shop also does insurance work for major carriers.",
+      "g": [
+        "service center",
+        "body / collision"
+      ],
+      "base": "Anderson",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.lakesidervsales.com/rv-service",
+        "phone_quote": "feel free to call us at (864) 231-7258",
+        "coverage_quotes": [],
+        "type_quote": "Our RV service department is staffed with highly trained technicians dedicated to making sure your vehicle stays in great working order for years to come.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Vacation To Go RVs LLC",
+      "c": "Pendleton, SC",
+      "p": "(864) 965-8965",
+      "u": "https://v2grv.com/service/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Vacation To Go RVs specializes in high-quality service for Newmar, Tiffin, Winnebago, Itasca and other major Class A gas and diesel brands. Its services include AquaHot Oasis repair, backup camera repair and replacement, electrical diagnostics, refrigeration and cooling repair, furnace repair, and awning repair or replacement. The shop serves RV owners in the Pendleton, Clemson, Greenville and Anderson area.",
+      "g": [
+        "service center"
+      ],
+      "base": "Pendleton",
+      "areas": [
+        "Clemson",
+        "Greenville",
+        "Anderson"
+      ],
+      "region": "upstate SC",
+      "spec": null,
+      "evidence": {
+        "checked": "https://v2grv.com/service/",
+        "phone_quote": "(864) 965-8965 (+18649658965)",
+        "coverage_quotes": [
+          "We specialize in high-quality service for Newmar, Tiffin, Winnebago, Itasca, and other major Class A gas and diesel brands, Professional RV Systems Walkthrough for New Owners Proudly serving RV owners in Pendleton, Clemson, Greenville, Anderson area"
+        ],
+        "type_quote": "We can perform the following services and many many more.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "VLRV Services",
+      "c": "Taylors, SC",
+      "p": "(864) 301-4200",
+      "u": "https://versatilelinks.com/",
+      "t": "both",
+      "e": true,
+      "r": false,
+      "d": "VLRV Services has a service center in Taylors and provides mobile service to the upstate of South Carolina and western North Carolina. Its technicians handle on-site repairs for any RV issue including emergencies, and the shop handles routine maintenance to complex repairs. Services include AC and furnace, appliances, slide-outs, leveling, awnings, electrical and plumbing, and Apex Armor roof systems.",
+      "g": [
+        "mobile tech",
+        "service center"
+      ],
+      "base": "Taylors",
+      "areas": [],
+      "region": "upstate of South Carolina",
+      "spec": "We do not work on the drive train.",
+      "evidence": {
+        "checked": "https://versatilelinks.com/",
+        "phone_quote": "(864) 301-4200",
+        "coverage_quotes": [
+          "We have a new service center in Taylors, SC and we provide Mobile service to the upstate of South Carolina and western North Carolina."
+        ],
+        "type_quote": "We provide all repair services including Basement and Rooftop ACs, Furnace, all appliances,Slide-out, Leveling,awnings, Electrical, Plumbing and much more.",
+        "emergency_quote": "Our skilled technicians come to you, providing on-site repairs for any RV issue including emergencies, ensuring you’re back on the road in no time.",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "American Freedom RV Mobile Services LLC",
+      "c": "Aiken, SC",
+      "p": "(803) 662-5133",
+      "u": "https://www.afmrvs.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "American Freedom RV Mobile Services is a veteran-owned mobile RV repair business that brings repairs and maintenance to the customer's driveway, campsite or storage location. Its services cover RV A/C, water heaters, furnaces, refrigerators and appliances, plus roofing maintenance, awning repair, leveling systems, inverters, brake light systems, leaf springs, wheel repack and tire changes. It also provides RV inspections and annual maintenance.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Aiken",
+      "areas": [
+        "Aiken",
+        "Walterboro"
+      ],
+      "region": "GA & SC",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.afmrvs.com/",
+        "phone_quote": "Phone : (803) 662-5133",
+        "coverage_quotes": [
+          "Veteran-Owned • Serving GA & SC"
+        ],
+        "type_quote": "At American Freedom RV Mobile Services LLC, we bring professional, trustworthy RV repair and maintenance directly to your driveway, campsite, or storage location.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "RV & Camper Repair",
+      "c": "Aiken County, SC",
+      "p": "864-378-0122",
+      "u": "http://www.rvcamperrepair.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "RV and Camper Repair is a mobile RV and camper repair business that comes to the customer for repair, service and upgrade needs. Its services include appliance and equipment repair, gas and electric water heaters, absorption refrigerators, furnaces, air conditioners, winterization and de-winterization, and air conditioner performance checks. The business is home based in Aiken County, South Carolina.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": null,
+      "areas": [],
+      "region": "Aiken County",
+      "spec": null,
+      "evidence": {
+        "checked": "http://www.rvcamperrepair.com/",
+        "phone_quote": "864-378-0122",
+        "coverage_quotes": [
+          "We are home based in Aiken County South Carolina you may see us at a campground near you."
+        ],
+        "type_quote": "We will come to you for all your RV & Camper repair and service needs.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      },
+      "reg": "savannah-river-sc"
+    },
+    {
+      "n": "Hitch Itch Mobile RV Tech",
+      "c": "Hilton Head Island, SC",
+      "p": "772-251-8630",
+      "u": "https://hitchitchmobilervtech.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Hitch Itch Mobile RV Tech is a mobile RV service serving Hilton Head and Savannah. It offers repairs on RVs, mobile RV tech services, roadside hazard help, and generator troubleshooting. Common services include AC cleaning and servicing, roof sealant check and reseal, scheduled maintenance, leveling, plumbing, awnings and slides.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Hilton Head Island",
+      "areas": [],
+      "region": "Hilton Head / Savannah",
+      "spec": null,
+      "evidence": {
+        "checked": "https://hitchitchmobilervtech.com/",
+        "phone_quote": "772-251-8630",
+        "coverage_quotes": [
+          "Hitch Itch Mobile RV Tech - Hilton Head / Savannah"
+        ],
+        "type_quote": "Jason is dedicated to providing the highest quality RV service and repair to customers.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "RV Repair Pros",
+      "c": "Newberry, SC",
+      "p": "(864) 494-9900",
+      "u": "https://screpairpros.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "RV Repair Pros is a mobile RV repair business based in Newberry, serving the Upstate, Lakelands and Midland areas of South Carolina. It provides mobile RV and camper repair, coming to the customer's location. The business is the mobile RV repair operation behind RepairPros Mobile RV and Camper Repair.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Newberry",
+      "areas": [],
+      "region": "Upstate, Lakelands, and Midland areas of South Carolina",
+      "spec": null,
+      "evidence": {
+        "checked": "https://screpairpros.com/",
+        "phone_quote": "Contact (864) 494-9900",
+        "coverage_quotes": [
+          "Proudly serving the Upstate, Lakelands, and Midland areas of South Carolina!"
+        ],
+        "type_quote": "the upstate’s MOBILE RV Repair Professionals.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Lester's RV",
+      "c": "Newberry, SC",
+      "p": "803.276.8201",
+      "u": "https://www.lestersrv.com/repair-your-rv-travel-fifth-wheel-motorhome-with-certified-technicians--service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Lester's RV has a service department in Newberry that cares for RVs, travel trailers, fifth wheels and motorhomes. Its work covers roofs and appliances, slide-outs and awnings, and it has a shop large enough for anything from a rubber roof replacement to a complete body repair. The shop says it has over 40 years of experience in RV collision and repair.",
+      "g": [
+        "service center",
+        "body / collision"
+      ],
+      "base": "Newberry",
+      "areas": [],
+      "region": null,
+      "spec": "We honor all warranty work for the products we sell.",
+      "evidence": {
+        "checked": "https://www.lestersrv.com/repair-your-rv-travel-fifth-wheel-motorhome-with-certified-technicians--service",
+        "phone_quote": "Call our service department at (803) 276-8201.",
+        "coverage_quotes": [],
+        "type_quote": "Your RV, travel trailer, fifth wheel, or motorhome. will always receive the best of care by our Master Craftsmen here at Lester's RV .",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Freightliner Custom Chassis Factory Service Center",
+      "c": "Gaffney, SC",
+      "p": "855-253-0421",
+      "u": "https://www.fcccrv.com/owners/factory-service/",
+      "t": "center",
+      "e": false,
+      "r": true,
+      "d": "The Freightliner Custom Chassis Factory Service Center in Gaffney houses a dedicated motorhome facility with six service bays and factory-trained technicians. It has 20 RV electrical hookups and dump stations and provides secure parking for motorhome customers. The factory-trained technicians service premium chassis at the plant in Gaffney.",
+      "g": [
+        "service center",
+        "roadside / chassis"
+      ],
+      "base": "Gaffney",
+      "areas": [],
+      "region": null,
+      "spec": "Sorry, we do not accept cash payments at this facility.",
+      "evidence": {
+        "checked": "https://www.fcccrv.com/owners/factory-service/",
+        "phone_quote": "103 Campus Drive Gaffney, SC 29341 855-253-0421",
+        "coverage_quotes": [],
+        "type_quote": "The Freightliner Custom Chassis Factory Service Center houses our premier Oasis dealer with 6 service bays, 20 RV electrical hookups and dump stations, and factory-trained technicians.",
+        "emergency_quote": null,
+        "roadside_quote": "see how we build premium chassis right here in Gaffney.",
+        "licence": null
+      }
+    }
+  ]
+}

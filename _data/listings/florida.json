@@ -1,0 +1,1250 @@
+{
+  "state": "FL",
+  "name": "Florida",
+  "regions": [
+    {
+      "key": "panhandle-fl",
+      "label": "Pensacola and the Emerald Coast"
+    },
+    {
+      "key": "north-fl",
+      "label": "Gainesville, Ocala and north central Florida"
+    },
+    {
+      "key": "orlando-fl",
+      "label": "Orlando and central Florida"
+    },
+    {
+      "key": "tampa-fl",
+      "label": "Tampa, Sarasota and the Gulf coast"
+    },
+    {
+      "key": "southwest-fl",
+      "label": "Fort Myers, Naples and the southwest"
+    },
+    {
+      "key": "treasure-coast-fl",
+      "label": "The Treasure Coast and Palm Beach"
+    },
+    {
+      "key": "keys-fl",
+      "label": "The Florida Keys"
+    }
+  ],
+  "region_of": {
+    "Pensacola": "panhandle-fl",
+    "Pace": "panhandle-fl",
+    "Niceville": "panhandle-fl",
+    "DeFuniak Springs": "panhandle-fl",
+    "Gainesville": "north-fl",
+    "Ocala": "north-fl",
+    "DeBary": "north-fl",
+    "Orlando": "orlando-fl",
+    "Apopka": "orlando-fl",
+    "Minneola": "orlando-fl",
+    "Melbourne": "orlando-fl",
+    "Tampa": "tampa-fl",
+    "Sarasota": "tampa-fl",
+    "Port Charlotte": "tampa-fl",
+    "Palmetto": "tampa-fl",
+    "Fort Myers": "southwest-fl",
+    "Fort Pierce": "treasure-coast-fl",
+    "Port St. Lucie": "treasure-coast-fl",
+    "Pompano Beach": "treasure-coast-fl"
+  },
+  "listings": [
+    {
+      "n": "Ed's RV Solutions",
+      "c": "Port Charlotte, FL",
+      "p": "(833) 783-4948",
+      "u": "https://www.edsrvsolutions.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Ed's RV Solutions is a mobile RV repair service based in Port Charlotte that comes to the customer for onsite service and repair. The owner is a Master Certified RV Technician who specializes in solar installation, RV appliances, electrical issues, and heating and cooling. The shop is a preferred technician for Airstream, Entegra, Grand Design, REV, Tiffin, and Newmar, and a direct dealer for Carefree, Coleman, Dometic, GE RV Appliances, Girard, Lippert, Norcold, Thetford, Suburban, Splendide, Victron Energy, and Aqua-hot.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Port Charlotte",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.edsrvsolutions.com/",
+        "phone_quote": "(833) 783-4948",
+        "coverage_quotes": [
+          "Port Charlotte Florida 33952"
+        ],
+        "type_quote": "Mobile RV repair only - we come to you!",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Interstate Mobile RV Service, LLC",
+      "c": "Orlando, FL",
+      "p": "407-861-6380",
+      "u": "https://imrvs.net/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "Interstate Mobile RV Service is a mobile RV repair company based in Orlando that comes directly to the customer. It handles air conditioning, refrigerators, plumbing systems, electrical components, and holding tank cleaning. The service area covers the Orlando Metro including Clermont, Kissimmee, Lake Buena Vista, Winter Garden, St. Cloud, Windermere, Apopka, Celebration, Winter Springs, Winter Park, and Oviedo. Emergency service is available, and the technician is NRVTA and RVTAA certified.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Orlando",
+      "areas": [
+        "Clermont",
+        "Kissimmee",
+        "Lake Buena Vista",
+        "Winter Garden",
+        "St. Cloud",
+        "Windermere",
+        "Apopka",
+        "Celebration",
+        "Winter Springs",
+        "Winter Park",
+        "Oviedo"
+      ],
+      "region": "Orlando Metro",
+      "spec": null,
+      "evidence": {
+        "checked": "https://imrvs.net/",
+        "phone_quote": "407-861-6380",
+        "coverage_quotes": [
+          "our service area covers the Orlando Metro area to include the cities of Clermont, Kissimmee, Lake Buena Vista, Winter Garden, St. Cloud, Windermere, Apopka, Celebration, Winter Springs, Winter Park, Oviedo, and areas in between."
+        ],
+        "type_quote": "We proudly offer mobile RV repair near Orlando Florida, including maintenance and holding tank cleanings.",
+        "emergency_quote": "Emergency Service Available",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Flash RV Mobile Repair",
+      "c": "Melbourne, FL",
+      "p": "(206) 504-6067",
+      "u": "https://flashrvrepair.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Flash RV Mobile Repair is a veteran-owned, RVTI Master Certified mobile RV repair service covering Brevard, Indian River, and Osceola Counties. The technician comes to the driveway, storage lot, campground, or roadside, and repairs air conditioners, plumbing, electrical systems, appliances, roof and leak sealing, awnings, leveling and slide-out systems, generators, and trailer wheel bearings. The business states plainly that it does not service residential appliances, motorized chassis components, waste tanks, or detailing.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Melbourne",
+      "areas": [
+        "Melbourne",
+        "Palm Bay",
+        "Titusville",
+        "Cocoa Beach",
+        "Merritt Island",
+        "Vero Beach",
+        "Sebastian",
+        "St. Cloud",
+        "Celebration",
+        "Poinciana"
+      ],
+      "region": "Brevard, Indian River & Osceola Counties",
+      "spec": "Please note: We do not service Residential appliances, Motorized chassis components, Waste tanks, or Detailing.",
+      "evidence": {
+        "checked": "https://flashrvrepair.com/",
+        "phone_quote": "(206) 504-6067",
+        "coverage_quotes": [],
+        "type_quote": null,
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Elite Mobile RV Care",
+      "c": "Port St. Lucie, FL",
+      "p": "772-206-0897",
+      "u": "https://elitemobilervcare.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Elite Mobile RV Care is a family-owned mobile RV repair team based in Port St. Lucie serving Florida's Treasure Coast. Alex, a certified RV technician, comes to homes, campgrounds, RV parks, storage lots, and driveways for on-site diagnostics and repairs, and writes an independent pre-purchase Walk-Away Report. On-site work commonly includes rooftop A/C, electrical, plumbing and water heaters, appliances, generators, roof sealant, and maintenance checks.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Port St. Lucie",
+      "areas": [
+        "Port St. Lucie",
+        "Fort Pierce",
+        "Stuart",
+        "Jensen Beach",
+        "Vero Beach",
+        "Palm City",
+        "Hobe Sound"
+      ],
+      "region": "Florida's Treasure Coast",
+      "spec": "Interior detailing is not offered.",
+      "evidence": {
+        "checked": "https://elitemobilervcare.com/",
+        "phone_quote": "772-206-0897",
+        "coverage_quotes": [
+          "Regular routes include Port St. Lucie, Fort Pierce, Stuart, Jensen Beach, Vero Beach, Palm City, and Hobe Sound, plus St. Lucie, Martin, and Indian River counties."
+        ],
+        "type_quote": "Elite Mobile RV Care is a family-owned mobile RV repair team based in Port St. Lucie.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Treasure Coast RV Repair",
+      "c": "Port St. Lucie, FL",
+      "p": "772-677-1583",
+      "u": "https://treasurecoastrvrepair.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Treasure Coast RV Repair is a mobile RV service that fixes RVs where they are parked, across St. Lucie, Martin, and Indian River counties. It covers eleven service categories including electrical, plumbing, AC, solar, roofing, slideouts, appliances, generator maintenance, inspections, exterior work, and water damage. The company states it handles the living-space side and does not work on engines, transmissions, or drivetrains.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Port St. Lucie",
+      "areas": [
+        "Port St. Lucie",
+        "Fort Pierce",
+        "Stuart",
+        "Vero Beach",
+        "Jensen Beach",
+        "Palm City",
+        "Hobe Sound",
+        "Sebastian",
+        "Port Salerno",
+        "Indiantown",
+        "Sewalls Point",
+        "Fellsmere",
+        "Indian River Shores",
+        "Wabasso"
+      ],
+      "region": "the Treasure Coast",
+      "spec": "We don't work on engines, transmissions, or drivetrains.",
+      "evidence": {
+        "checked": "https://treasurecoastrvrepair.com/",
+        "phone_quote": "772-677-1583",
+        "coverage_quotes": [
+          "Three counties, 16 cities, roughly a 40-mile radius from our Port St. Lucie base."
+        ],
+        "type_quote": "We fix RVs where you park them.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Farley's Mobile RV Repair",
+      "c": "Sarasota, FL",
+      "p": "+1 941-549-1111",
+      "u": "https://www.farleysrvrepair.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Farley's Mobile RV Repair is a family-owned mobile service that brings certified technicians to the campsite, driveway, or storage lot in Sarasota, Manatee, and Hillsborough counties. The technicians are RVSA master certified and handle electrical systems, air conditioning and heating, plumbing and appliances, roofing and seal repair, windows, doors, and slide-outs, plus preventive maintenance. The business emphasizes rapid diagnostics, clear estimates, and same-day service.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Sarasota",
+      "areas": [],
+      "region": "Sarasota, Manatee, and Hillsborough counties",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.farleysrvrepair.com/",
+        "phone_quote": "+1 941-549-1111",
+        "coverage_quotes": [
+          "Top RV Repair Services in Sarasota, Manatee, and Hillsborough"
+        ],
+        "type_quote": "we bring expert mobile RV service right to your campsite, storage lot, or driveway.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Mobile RV Repair Florida",
+      "c": "Fort Myers, FL",
+      "p": "239-778-1727",
+      "u": "https://www.mobilervrepairflorida.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Mobile RV Repair Florida is a strictly mobile RV repair service covering Southwest Florida from Fort Myers. The certified RV mechanic comes to the customer for cosmetic repairs, electrical, plumbing, HVAC, appliances, roofs, windows, slide outs, and floors, and also does inspections and a new buyer program. The company performs routine engine maintenance and keeps records of previous work.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Fort Myers",
+      "areas": [],
+      "region": "Southwest Florida",
+      "spec": "We are strictly a mobile repair service right now.",
+      "evidence": {
+        "checked": "https://www.mobilervrepairflorida.com/",
+        "phone_quote": "239-778-1727",
+        "coverage_quotes": [
+          "We service Southwest Florida."
+        ],
+        "type_quote": "Mobile RV repair Fort Myers is a repair company you can trust.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Next Level RV",
+      "c": "Ocala, FL",
+      "p": "352-274-8008",
+      "u": "https://www.nextlevelrv.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Next Level RV is a family-owned, on-call mobile RV repair business that meets customers at their home, an RV park, or the side of the road. It provides mobile RV maintenance, repairs, and installation for Central Florida RV owners. The service area covers Ocala, Gainesville, The Villages, Belleview, and Lake, Sumter, Marion, and Alachua Counties.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Ocala",
+      "areas": [
+        "Ocala",
+        "Gainesville",
+        "The Villages",
+        "Belleview"
+      ],
+      "region": "Lake, Sumter, Marion and Alachua Counties",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.nextlevelrv.com/",
+        "phone_quote": "352-274-8008",
+        "coverage_quotes": [
+          "Serving Ocala, Gainesville, The Villages, Belleview, Lake, Sumter, Marion and Alachua Counties"
+        ],
+        "type_quote": "On-Call Mobile RV Repair We meet you where you are.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Honest RV Mobile Repair",
+      "c": "Gainesville, FL",
+      "p": "(352) 213-8376",
+      "u": "https://www.honestrvrepair.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Honest RV Mobile Repair is a certified, licensed, and insured mobile RV service covering Gainesville, Alachua, High Springs, Archer, Newberry, Reddick, Ocala, and other north central Florida cities. It provides general repairs, preventive maintenance, inspections, solar panel installations and off-grid power upgrades, electrical diagnostics, and complex system repairs for motorhomes, fifth wheels, travel trailers, horse trailers, and buses. The technician holds RVTI and RVTAA certification plus manufacturer certifications from Onan, Firefly, Coleman-Mach, Suburban, Lippert, and Victron, and is state licensed in LP gas.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Gainesville",
+      "areas": [
+        "Gainesville",
+        "Alachua",
+        "High Springs",
+        "Archer",
+        "Newberry",
+        "Reddick",
+        "Ocala"
+      ],
+      "region": "north central Florida",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.honestrvrepair.com/",
+        "phone_quote": "(352) 213-8376",
+        "coverage_quotes": [
+          "Providing a professional and reliable Mobile Repair Service to Gainesville, Alachua, High Springs, Archer, Newberry, Reddick, Ocala, and the other north central Florida cities"
+        ],
+        "type_quote": "We provide comprehensive repair solutions, services and installations for all classes of motorhomes, fifth wheels, travel trailers, horse trailers, and buses.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "MobilePro RV Service & Repair",
+      "c": "Gainesville, FL",
+      "p": "(352) 642-2702",
+      "u": "https://mobileprorvrepair.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "MobilePro RV Service & Repair is a mobile RV service based in Gainesville. Mark, the owner, holds a Level 4 Master Technician Certification and handles heating, air conditioning, hot water systems, refrigerators, furnaces, heaters, generators, tanks and plumbing, tow vehicle control, and towed vehicle gear. The business keeps long-term relationships with RV parks and campgrounds around Gainesville for on-site service during extended stays.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Gainesville",
+      "areas": [
+        "Gainesville",
+        "Newberry"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://mobileprorvrepair.com/",
+        "phone_quote": "(352) 642-2702",
+        "coverage_quotes": [
+          "We are happy to service your needs in Gainesville."
+        ],
+        "type_quote": "when I started my own business providing mobile RV services to the Gainesville area.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Happy Trails RV Service, LLC",
+      "c": "Ocala, FL",
+      "p": "352-577-2212",
+      "u": "https://www.happytrailsrvservice.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "Happy Trails RV Service is an on-call mobile RV repair service based in Ocala that completes all work at the customer's site or home across North and Central Florida. It repairs and services all classes of RVs including Class A and C motorhomes, travel trailers, fifth wheels, and horse trailer living quarters, with LP appliance specialization, refrigerators, water heaters, furnaces, roof air conditioning, generators, electrical, plumbing, awnings, and inspections. The business focuses on the RV specialties rather than what is under the hood and vehicle mechanics, and offers 24 hour on-call service seven days a week.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Ocala",
+      "areas": [
+        "Altoona",
+        "Astatula",
+        "Astor",
+        "Beverly Hills",
+        "Bushnell",
+        "Crystal River",
+        "Dunnellon",
+        "Eustis",
+        "Fruitland Park",
+        "Georgetown",
+        "Hawthorne",
+        "Homosassa",
+        "Inglis",
+        "Inverness",
+        "Lady Lake",
+        "The Villages",
+        "Lake Panasoffkee",
+        "Lecanto",
+        "Leesburg",
+        "McIntosh",
+        "Mount Dora",
+        "Ocala",
+        "Okahumpka",
+        "Reddick",
+        "Silver Springs",
+        "Tavares",
+        "Umatilla",
+        "Wildwood",
+        "Williston",
+        "Yankeetown"
+      ],
+      "region": "North & Central Florida",
+      "spec": "Our troubleshooting and RV repair service focuses on the Recreational Vehicle specialties rather than what is under the hood and vehicle mechanics.",
+      "evidence": {
+        "checked": "https://www.happytrailsrvservice.com/",
+        "phone_quote": "352-577-2212",
+        "coverage_quotes": [
+          "Mobile RV Repair Service Ocala, Florida and Surrounding Areas:"
+        ],
+        "type_quote": "Happy Trails RV Service, LLC offers on-site affordable and mobile RV repair service.",
+        "emergency_quote": "24 Hr On-Call Mobile RV Repair and Service with Certified Technicians North & Central Florida, Ocala FL Call 352-577-2212",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Midway Mobile RV Service LLC",
+      "c": "Pensacola, FL",
+      "p": "(850) 332-1345",
+      "u": "http://yourmobilerv.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Midway Mobile RV Service is a certified, fully insured mobile RV technician that comes to the customer for service and repair in Pensacola, Gulf Breeze, Navarre, Fort Walton, Destine, Pace, and surrounding areas. Repairs include furnaces, roof top A/C units, water heaters, converters and inverters, refrigerators, ice makers, vents, ceiling fans, slide-out units, transfer switches, winterizing, roof repair, and collision repair.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Pensacola",
+      "areas": [
+        "Pensacola",
+        "Gulf Breeze",
+        "Navarre",
+        "Pace"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "http://yourmobilerv.com/",
+        "phone_quote": "(850) 332-1345",
+        "coverage_quotes": [
+          "comes to you when you need service and repair in Pensacola, Gulf Breeze, Navarre, Fort Walton, Destine, Pace, and surrounding areas!"
+        ],
+        "type_quote": "A Certified RV Technician You Can Trust.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Bill Rawlins Mobile RV Service",
+      "c": "Pensacola, FL",
+      "p": "(850) 384-9353",
+      "u": "http://billrawlinsmobilervservice.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Bill Rawlins Mobile RV Service is owned and operated by Bill Rawlins, who has over thirty years of experience and RVIA and RVTI certifications. The mobile service comes to homes and local campgrounds and works on pop-up campers, travel trailers, fifth-wheels, and motorhomes. Repairs include air conditioners, awnings, furnaces, LP leaks, water heaters, water leaks, generator maintenance, slide room maintenance, and roof maintenance.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Pensacola",
+      "areas": [],
+      "region": "Pensacola and Escambia County, Florida",
+      "spec": null,
+      "evidence": {
+        "checked": "http://billrawlinsmobilervservice.com/",
+        "phone_quote": "(850) 384-9353",
+        "coverage_quotes": [
+          "Our primary service area is Pensacola and Escambia County, Florida."
+        ],
+        "type_quote": "Honest, Quality RV Service Where & When You Need It",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Patriot 360",
+      "c": "Pace, FL",
+      "p": "(850) 822-3992",
+      "u": "https://www.patriot360.net/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "Patriot 360 is a veteran-owned, fully mobile RV service operating out of Pace, Florida that travels directly to the customer. It offers full-service mobile RV repair, certified inspections, and ongoing maintenance across the Northwest Florida Panhandle from Pensacola to Panama City along the Emerald Coast, and also into Eastern and Southern Alabama. Core services include plumbing, roof leaks, electrical, slide-outs, appliances, furnace and water heater fixes, A/C repair and installation, and generator care, with 24/7 availability for emergencies and on-the-go repairs.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Pace",
+      "areas": [
+        "Destin",
+        "Fort Walton Beach",
+        "Navarre",
+        "Pensacola",
+        "Niceville",
+        "DeFuniak Springs",
+        "Milton",
+        "Panama City",
+        "Pace"
+      ],
+      "region": "Northwest Florida Panhandle",
+      "spec": "Service requests beyond 50 miles roundtrip incur a mileage fee",
+      "evidence": {
+        "checked": "https://www.patriot360.net/",
+        "phone_quote": "(850) 822-3992",
+        "coverage_quotes": [
+          "Operating out of Pace, FL, we are a fully mobile service",
+          "We dispatch fast to:"
+        ],
+        "type_quote": "we’re proud to offer full-service mobile RV repair, certified inspections, and ongoing maintenance designed to keep your RV safe, road-ready, and running smoothly.",
+        "emergency_quote": "24/7 Availability for Emergencies & On-the-Go Repairs",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "D-RV Mobile Repair LLC",
+      "c": "DeFuniak Springs, FL",
+      "p": "(850) 951-2252",
+      "u": "https://drvmobilerepair.com/",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "D-RV Mobile Repair is a licensed and insured mobile RV repair business established in August 2019 with over 20 years of collective RV repair experience. It provides mobile RV services, extended warranty claims, RV insurance claims, and mobile Warranty Forever inspections. The shop address at 191 Lucas Rd in DeFuniak Springs is appointment only.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "DeFuniak Springs",
+      "areas": [],
+      "region": null,
+      "spec": "Shop is Appointment Only",
+      "evidence": {
+        "checked": "https://drvmobilerepair.com/",
+        "phone_quote": "(850) 951-2252",
+        "coverage_quotes": [
+          "191 Lucas Rd, DeFuniak Springs, FL 32433 - Shop is Appointment Only"
+        ],
+        "type_quote": "Mobile RV Services: Bringing Solutions To You",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "4rvsolutions.com",
+      "c": "Niceville, FL",
+      "p": "850-699-1622",
+      "u": "https://www.4rvsolutions.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "4rvsolutions.com is a mobile RV repair service based in Niceville, Florida with 14 years of experience. The certified technicians serve all makes and models with on-site service across Okaloosa, Walton, and Santa Rosa Counties. Work includes slide rooms and awnings, electrical and plumbing, jack and leveling systems, and roof and exterior care such as sealant, leaks, and wear.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Niceville",
+      "areas": [],
+      "region": "Okaloosa, Walton, and Santa Rosa Counties",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.4rvsolutions.com/",
+        "phone_quote": "850-699-1622",
+        "coverage_quotes": [
+          "Serving Okaloosa, Walton, and Santa Rosa Counties from our Niceville, Florida base."
+        ],
+        "type_quote": "your premier mobile RV repair service based in Niceville, Florida",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Four Points Mobile RV Services",
+      "c": "Marathon, FL",
+      "p": "321 - 426 - 0246",
+      "u": "https://www.fourpointsrvrepair.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Four Points Mobile RV Services provides professional mobile RV repair, maintenance, diagnostics, and systems replacement throughout the Florida Keys. The RVTI certified and insured technicians come directly to the RV, campground, RV resort, or property so the owner does not have to move the motorhome, fifth wheel, travel trailer, or camper to a repair shop. They diagnose and repair RV air conditioners, refrigerators, water heaters, electrical systems, plumbing, awnings, slide-outs, leveling systems, roof leaks, and other non-engine RV systems.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": null,
+      "areas": [
+        "Key Largo",
+        "Marathon",
+        "Big Pine Key"
+      ],
+      "region": "the Florida Keys",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.fourpointsrvrepair.com/",
+        "phone_quote": "321 - 426 - 0246",
+        "coverage_quotes": [
+          "Our mobile RV service area extends from Key Largo to Key West, including Islamorada, Marathon, Big Pine Key and surrounding Florida Keys communities."
+        ],
+        "type_quote": "Four Points Mobile RV Services provides professional mobile RV repair, maintenance, diagnostic and systems replacement throughout the Florida Keys.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      },
+      "reg": "keys-fl"
+    },
+    {
+      "n": "Easy Breezy Mobile RV Repair",
+      "c": "Key Largo, FL",
+      "p": "(305) 345-9119",
+      "u": "https://easybreezyrvrepair.com/rvservice",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Easy Breezy Mobile RV Repair is a mobile-only RV service that comes to the RV owner in the Upper Florida Keys. It services all types of RVs and the systems that make them work. The service area covers Key Largo, Tavernier, Islamorada, and Fiesta Key.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": null,
+      "areas": [
+        "Key Largo",
+        "Tavernier"
+      ],
+      "region": "Upper Florida Keys",
+      "spec": null,
+      "evidence": {
+        "checked": "https://easybreezyrvrepair.com/rvservice",
+        "phone_quote": "(305) 345-9119",
+        "coverage_quotes": [
+          "Servicing the Upper Florida Keys of Key Largo, Tavernier, Islamorada, and Fiesta Key!"
+        ],
+        "type_quote": "We service all types of RVs and the systems that make them work!",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      },
+      "reg": "keys-fl"
+    },
+    {
+      "n": "Rig Rite RV",
+      "c": "Clermont, FL",
+      "p": "(352) 414-1066",
+      "u": "https://rigriterv.com/contact-us",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Rig Rite RV is a mobile RV repair and service business that brings repairs to the customer and skips the hassle of towing. It offers easy online booking with priority scheduling, and same-day service requests can be made by phone. The service area spans Clermont, Wildwood, The Villages, Celebration, Lake Buena Vista, Kissimmee, Orlando, Winter Garden, Ocoee, Leesburg, Tavares, Mount Dora, Eustis, Apopka, Groveland, Minneola, Davenport, Haines City, Polk City, Bushnell, Sumterville, Oxford, Belleview, Lady Lake, Fruitland Park, Howey-in-the-Hills, Montverde, and Mascotte.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": null,
+      "areas": [
+        "Clermont",
+        "Wildwood",
+        "The Villages",
+        "Celebration",
+        "Lake Buena Vista",
+        "Kissimmee",
+        "Orlando",
+        "Winter Garden",
+        "Ocoee",
+        "Leesburg",
+        "Tavares",
+        "Mount Dora",
+        "Eustis",
+        "Apopka",
+        "Groveland",
+        "Minneola",
+        "Davenport",
+        "Haines City",
+        "Polk City",
+        "Bushnell",
+        "Oxford",
+        "Belleview",
+        "Lady Lake",
+        "Fruitland Park",
+        "Howey-in-the-Hills",
+        "Montverde",
+        "Mascotte"
+      ],
+      "region": "Central Florida",
+      "spec": null,
+      "evidence": {
+        "checked": "https://rigriterv.com/contact-us",
+        "phone_quote": "(352) 414-1066",
+        "coverage_quotes": [
+          "Clermont, FL, Wildwood, FL, The Villages, FL, Celebration, FL, Lake Buena Vista, FL, Kissimmee, FL, Orlando, FL, Winter Garden, FL, Ocoee, FL, Leesburg, FL, Tavares, FL, Mount Dora, FL, Eustis, FL, Apopka, FL, Groveland, FL, Minneola, FL, Davenport, FL, Haines City, FL, Polk City, FL, Bushnell, FL, Sumterville, FL, Oxford, FL, Belleview, FL, Lady Lake, FL, Fruitland Park, FL, Howey-in-the-Hills, FL, Montverde, FL, Mascotte, FL"
+        ],
+        "type_quote": "Reliable RV Repairs, Right Where You Need Them!",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      },
+      "reg": "orlando-fl"
+    },
+    {
+      "n": "CTS RV Mobile Mechanic",
+      "c": "Orlando, FL",
+      "p": "(407) 562-4100",
+      "u": "https://rvrepairboss.com/rv-inspections/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "CTS RV Mobile Mechanic provides mobile RV inspection and maintenance services across Central Florida, and it is a full-service mobile RV mechanic that can inspect, fix, or upgrade at the customer's location. It assesses roof conditions and potential leaks, leveling systems, slide-out operation and seals, and window, door, and exterior panel integrity, and also does appliance diagnostics and installation, interior repairs, electrical system repairs, plumbing and gas services, and generator services. The service area covers the I-4 corridor, the I-95 corridor from Daytona Beach to Melbourne Beach, and all of Lake County and Marion County.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": null,
+      "areas": [
+        "Orlando",
+        "Daytona Beach",
+        "Melbourne",
+        "Gainesville",
+        "Clermont",
+        "Tampa",
+        "St. Petersburg"
+      ],
+      "region": "Central Florida",
+      "spec": null,
+      "evidence": {
+        "checked": "https://rvrepairboss.com/rv-inspections/",
+        "phone_quote": "(407) 562-4100",
+        "coverage_quotes": [
+          "CTS RV Mobile Mechanic proudly provides mobile RV inspection and maintenance services throughout:"
+        ],
+        "type_quote": "As a full-service mobile RV mechanic, we also look for signs of damage or wear in key exterior and interior systems.",
+        "emergency_quote": "Mobile Service You Can Count On, Day or Night",
+        "roadside_quote": null,
+        "licence": null
+      },
+      "reg": "orlando-fl"
+    },
+    {
+      "n": "JCRVs Mobile RV Service",
+      "c": "Minneola, FL",
+      "p": "(352) 207-6056",
+      "u": "https://www.thejcrv.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "JCRVs Mobile RV Service is an owner-operated mobile RV company serving the Minneola, Winter Garden, and Clermont area. With over ten years of experience it handles professional RV repair, full RV renovation, and thorough RV inspection, and it comes to the customer. Service calls start at $100 for those within a 35-mile radius, with an additional $2-per-mile charge further out.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Minneola",
+      "areas": [
+        "Minneola",
+        "Winter Garden",
+        "Clermont"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.thejcrv.com/",
+        "phone_quote": "(352) 207-6056",
+        "coverage_quotes": [
+          "Serving the Minneola, Winter Garden, and Clermont, FL Area"
+        ],
+        "type_quote": "we have the skills and expertise needed to handle professional RV repair, renovation and inspection work",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Campbell RV",
+      "c": "Sarasota, FL",
+      "p": "(941) 342-4330",
+      "u": "https://www.campbellrv.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": true,
+      "d": "Campbell RV operates a full-service RV repair center in Sarasota that it says is the only one in the city. The service center handles chassis and driveline service for gas and diesel RVs, generator service, engine repairs, roof repairs, leak detection, body and collision repair, water damage restoration, A/C and heating, and winterization. Technicians are factory-trained and RVDA certified, and the shop is a Florida RV Trade Association Certified RV Service Center authorized for Workhorse, Ford, Cummins/Onan, and Forest River.",
+      "g": [
+        "service center",
+        "chassis"
+      ],
+      "base": "Sarasota",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.campbellrv.com/rv-service",
+        "phone_quote": "(941) 342-4330",
+        "coverage_quotes": [
+          "As the only full-service RV repair center in Sarasota"
+        ],
+        "type_quote": "We repair gas and diesel engines - if you need drive-line or generator repairs and maintenance, we do all of that too!",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "American Pro RV Service Center",
+      "c": "Summerfield, FL",
+      "p": "352-307-0321",
+      "u": "https://americanprorvservice.com/",
+      "t": "center",
+      "e": false,
+      "r": true,
+      "d": "American Pro RV Service Center is an RV and camper repair and maintenance shop in Summerfield with over 30 years of experience. It handles repairs from appliances to plumbing and dry rot, RV restoration of body panels, roofing, and slides, and maintenance that includes completely servicing all parts of the motorhome engine and transmission plus plumbing, hydraulics, and AC. The shop works on all makes and models of RVs and motorhomes, including Keystone, Forest River, Fleetwood, and Coachman, and offers free quotes and a one-year warranty on parts.",
+      "g": [
+        "service center",
+        "chassis"
+      ],
+      "base": null,
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://americanprorvservice.com/",
+        "phone_quote": "352-307-0321",
+        "coverage_quotes": [
+          "15265 S US Highway 441 Summerfield, FL 34491"
+        ],
+        "type_quote": "In addition to completely servicing all parts of your motorhome’s engine and transmission, we also offer maintenance on your plumbing, hydraulics, AC, and more.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      },
+      "reg": "north-fl"
+    },
+    {
+      "n": "Airstream of South Florida",
+      "c": "Fort Myers, FL",
+      "p": "(239) 693-8200",
+      "u": "https://www.airstreamofsouthflorida.com/parts-service/service/",
+      "t": "center",
+      "e": false,
+      "r": true,
+      "d": "Airstream of South Florida is a full service Airstream dealer in Fort Myers with Airstream and RVDA/RVIA certified technicians. Its service and collision center specializes in RV service, maintenance, and body repairs with 100 service bays, and it is an authorized Spartan and Freightliner Chassis Service Center as well as an authorized service center for Newmar, Tiffin, Thor, Airstream, Jayco, Winnebago, Renegade RV, Dynamax, and Pleasure Way. The body shop handles paint and body repair, fiberglass repair and metalwork, part fabrication, suspension repair, roof repairs, and window repair, and it is a direct repair facility for several major insurers.",
+      "g": [
+        "service center",
+        "chassis",
+        "collision"
+      ],
+      "base": "Fort Myers",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.airstreamofsouthflorida.com/parts-service/service/",
+        "phone_quote": "(239) 693-8200",
+        "coverage_quotes": [
+          "5237 Orange River Blvd. Fort Myers, FL 33905"
+        ],
+        "type_quote": "Airstream of South Florida is a full service Airstream Dealer with Airstream and RVDA/RVIA Certified Technicians located in beautiful Fort Myers, Florida.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "EliteRV",
+      "c": "Palmetto, FL",
+      "p": "(941) 981-5366",
+      "u": "https://eliterv.com/florida-rv-repair",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "EliteRV is a fixed-location, full-service RV repair facility in Palmetto, Florida serving motorhome, fifth-wheel, travel-trailer, and camper owners throughout Manatee, Sarasota, Hillsborough, and Pinellas Counties. The shop handles electrical, plumbing, HVAC, generator, appliance, slide-out, roof-leak, and diagnostic problems, and offers specialized services including FlexArmor roof installation, paint and collision repair, and Lippert-authorized slide-out service. It is Cummins certified, Lippert authorized, Aqua Hot certified, and BraunAbility authorized, and all service is by appointment.",
+      "g": [
+        "service center"
+      ],
+      "base": "Palmetto",
+      "areas": [
+        "Palmetto",
+        "Bradenton",
+        "Sarasota",
+        "St. Petersburg",
+        "Tampa",
+        "Venice",
+        "Port Charlotte",
+        "Fort Myers",
+        "Clearwater",
+        "Lakeland",
+        "Naples",
+        "Punta Gorda"
+      ],
+      "region": "Tampa Bay and the Suncoast",
+      "spec": "All service is by appointment.",
+      "evidence": {
+        "checked": "https://eliterv.com/florida-rv-repair",
+        "phone_quote": "(941) 981-5366",
+        "coverage_quotes": [
+          "Customers bring their RVs to us from Bradenton, Ellenton, Lakewood Ranch, Sarasota, Venice, Tampa, Riverview, Brandon, Ruskin, Apollo Beach, St. Petersburg, Clearwater, Largo, Pinellas Park, and surrounding communities."
+        ],
+        "type_quote": "EliteRV is a fixed-location, full-service RV repair facility in Palmetto, Florida.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Sun Camper RV",
+      "c": "Fort Pierce, FL",
+      "p": "(772) 468-1166",
+      "u": "https://www.suncamperrvs.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Sun Camper RV offers a full-service RV repair and maintenance department at locations in Fort Pierce and Okeechobee. The service team handles original equipment and extended warranty repair, maintenance services, product installation, and RV repair covering appliances, levelers, awnings, electrical, plumbing, HVAC, generators, and roof seals. Common maintenance includes oil changes, winterization, wheel bearing service, slide-out service, and generator service and repair.",
+      "g": [
+        "service center"
+      ],
+      "base": "Fort Pierce",
+      "areas": [
+        "Fort Pierce",
+        "Okeechobee"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.suncamperrvs.com/rv-service",
+        "phone_quote": "(772) 468-1166",
+        "coverage_quotes": [
+          "3462 N. US Highway 1 Fort Pierce, FL 34946",
+          "4558 US Highway 441 SE Okeechobee, FL 34974"
+        ],
+        "type_quote": "Sun Camper RV offers a full-service RV repair and maintenance department dedicated to keeping your RV safe and road-ready.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Optimum RV",
+      "c": "Ocala, FL",
+      "p": "352.477.8377",
+      "u": "https://www.optimumrv.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": true,
+      "d": "Optimum RV operates RV service centers in Ocala and Tallahassee, among other locations. The experienced technicians address issues with roofs, appliances, slide-outs, chassis, and tires, and the Ocala location offers tires and chassis service. It is an authorized factory warranty center for many brands including Coachmen, Dutchmen, Forest River, Heartland, Keystone, KZ, Palomino, Redwood, Thor, and Venture, with same-day appointments and Saturday service.",
+      "g": [
+        "service center",
+        "chassis"
+      ],
+      "base": "Ocala",
+      "areas": [
+        "Ocala",
+        "Tallahassee",
+        "Zephyrhills",
+        "Bushnell",
+        "Titusville"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.optimumrv.com/rv-service",
+        "phone_quote": "352.477.8377",
+        "coverage_quotes": [
+          "Optimum RV is your premier RV service center in Ocala, FL."
+        ],
+        "type_quote": "Whether it’s addressing issues with roofs, appliances, slide-outs, chassis, or tires, we’re committed to meeting all your service needs.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Central State RV Mobile Repair",
+      "c": "Ocala, FL",
+      "p": "(352) 484-5276",
+      "u": "https://www.ocalarvrepair.com/",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "Central State RV Mobile Repair is a full service RV repair center in Ocala that offers both mobile and shop repairs. It works on RVs, motor homes, fifth wheels, travel trailers, toy haulers, horse trailers, cargo trailers, and Onan generators, and its certified technicians cover water heaters, refrigerators, air conditioners, electrical and electronic issues, stoves and ovens, awnings and slide toppers, roof maintenance and leak prevention, plumbing, hydraulic levelers, and LP appliances. It also performs pre-purchase and post-purchase inspections, works with insurance and extended warranties, and offers relocation services.",
+      "g": [
+        "mobile tech",
+        "service center"
+      ],
+      "base": "Ocala",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.ocalarvrepair.com/",
+        "phone_quote": "(352) 484-5276",
+        "coverage_quotes": [
+          "Mobile RV Repair Service Ocala, Florida and Surrounding Areas"
+        ],
+        "type_quote": "We are a full service RV repair center. We offer mobile and shop repairs.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "ALMECHANICAL",
+      "c": "Fort Myers, FL",
+      "p": "(728) 206-2662",
+      "u": "https://mobilervrepairsfl.com/",
+      "t": "mobile",
+      "e": false,
+      "r": true,
+      "d": "ALMECHANICAL provides certified mobile RV technicians for gas and diesel RVs across South Florida, coming to campgrounds, RV resorts, storage lots, dealerships, driveways, and the roadside. The team handles engine service and repair, leveling jacks, air suspension, air and hydraulic brakes, generator and solar service, electrical and computer diagnostics, A/C, water heaters, slide-outs, roofs, and awnings. The coverage area includes Fort Myers, Cape Coral, Naples, Punta Gorda, Fort Lauderdale, West Palm Beach, Miami, Port Charlotte, Bonita Springs, and Estero.",
+      "g": [
+        "mobile tech",
+        "chassis"
+      ],
+      "base": null,
+      "areas": [
+        "Fort Myers",
+        "Cape Coral",
+        "Naples",
+        "Punta Gorda",
+        "Fort Lauderdale",
+        "West Palm Beach",
+        "Miami",
+        "Port Charlotte",
+        "Bonita Springs",
+        "Estero"
+      ],
+      "region": "South Florida",
+      "spec": null,
+      "evidence": {
+        "checked": "https://mobilervrepairsfl.com/",
+        "phone_quote": "(728) 206-2662",
+        "coverage_quotes": [
+          "Fort Myers Cape Coral Naples Punta Gorda Fort Lauderdale West Palm Beach Miami Port Charlotte Bonita Springs Estero"
+        ],
+        "type_quote": "Certified mobile techs for gas & diesel RVs across South Florida.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      },
+      "reg": "southwest-fl"
+    },
+    {
+      "n": "No Worries Mobile RV Service",
+      "c": "Tampa, FL",
+      "p": "813-245-1931",
+      "u": "https://noworriesrv.com/rv-generator-repair",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "No Worries Mobile RV Service is an independent mobile RV service company that brings RV generator diagnostics and repair to the customer within roughly 50 miles of Tampa. It focuses on Cummins Onan 4000, 5500, and 7000 gasoline generators, working through fuel delivery, ignition or injection, the start circuit and battery, the control board and sensors, and electrical output. The service area spans Hillsborough, Pasco, Pinellas, Hernando, Polk, Manatee, and Sarasota counties, and the business also handles the rest of its mobile RV services.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Tampa",
+      "areas": [
+        "Tampa",
+        "Brandon",
+        "Riverview",
+        "Valrico",
+        "Plant City",
+        "Temple Terrace",
+        "Apollo Beach",
+        "Ruskin",
+        "Sun City Center",
+        "Lutz",
+        "Wesley Chapel",
+        "Land O' Lakes",
+        "Zephyrhills",
+        "New Port Richey",
+        "Clearwater",
+        "St. Petersburg",
+        "Largo",
+        "Palm Harbor",
+        "Oldsmar",
+        "Safety Harbor",
+        "Dunedin",
+        "Tarpon Springs",
+        "Brooksville",
+        "Spring Hill",
+        "Lakeland",
+        "Winter Haven",
+        "Bartow",
+        "Bradenton",
+        "Palmetto",
+        "Lakewood Ranch",
+        "Sarasota",
+        "Venice"
+      ],
+      "region": "Tampa Bay",
+      "spec": "Some repairs, such as major engine internal work or a full generator replacement, may need additional parts, lead time, or a shop environment.",
+      "evidence": {
+        "checked": "https://noworriesrv.com/rv-generator-repair",
+        "phone_quote": "813-245-1931",
+        "coverage_quotes": [
+          "We cover roughly a 50-mile radius of Tampa, including Hillsborough, Pasco, Pinellas, Hernando, Polk, Manatee and Sarasota counties."
+        ],
+        "type_quote": "No Worries RV is a mobile RV service company, and we perform repairs at your RV whenever the job can reasonably be completed in the field.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Planet RV",
+      "c": "Pompano Beach, FL",
+      "p": "(954) 583-3382",
+      "u": "https://www.myplanetrv.com/",
+      "t": "both",
+      "e": true,
+      "r": false,
+      "d": "Planet RV is a complete RV repair specialist based in Pompano Beach serving Broward and Palm Beach counties, with 39 years of expertise and an insurance approved facility. It handles collision repair, body work, windshield services, AC and cooling systems, water damage repair, roof and sealing, electrical systems, plumbing systems, slide room and floor repair, pre-purchase inspections, and jacks and leveling systems. Mobile emergency service is available seven days a week with 24/7 emergency support.",
+      "g": [
+        "collision",
+        "mobile tech"
+      ],
+      "base": "Pompano Beach",
+      "areas": [],
+      "region": "Broward & Palm Beach County",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.myplanetrv.com/",
+        "phone_quote": "(954) 583-3382",
+        "coverage_quotes": [
+          "Serving Broward & Palm Beach County"
+        ],
+        "type_quote": "Complete repair facility for all RV systems.",
+        "emergency_quote": "24/7 Emergency Support",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "North Trail RV Center",
+      "c": "Fort Myers, FL",
+      "p": "877.753.6678",
+      "u": "https://www.northtrailrv.com/services/collision/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "North Trail RV Center runs a factory authorized RV collision center and body shop in Fort Myers. The complete motorhome and RV repair facility has full RV paint and body shop departments and handles structural repairs, fiberglass repair, steel and aluminum repair, paint and decal repair, suspension repair, roof repairs, window repair, and precision in-house fiberglass and metal part fabrication. It is a Factory Authorized service and repair center for Newmar, Tiffin, Renegade RV, Airstream, Thor, Jayco, Dynamax, Winnebago, Pleasure Way, Onan, Spartan, and Freightliner, and is authorized to perform collision repairs for leading insurers.",
+      "g": [
+        "collision",
+        "service center"
+      ],
+      "base": "Fort Myers",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.northtrailrv.com/services/collision/",
+        "phone_quote": "877.753.6678",
+        "coverage_quotes": [
+          "5270 Orange River Boulevard, Fort Myers, Florida 33905"
+        ],
+        "type_quote": "North Trail RV Collision Center is a complete state-of-the-art motorhome and RV repair facility with full RV paint and body shop departments.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "KA RV Repair & Sales",
+      "c": "DeBary, FL",
+      "p": "+1 (888) 422-5445",
+      "u": "https://www.karvrepair.com/",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "KA RV Repair & Sales is a service-first RV company in Central Florida offering collision and precision restorations, everyday RV service, mobile RV repair, Airstream repair, and parts support. The DeBary facility has indoor work bays for consistent results, while the Fruitland Park dealership adds service and sales. Services include general RV repair and maintenance, a collision center for structural work and paint refinishing, Airstream aluminum skin work, mobile on-site diagnostics and repairs, roof and leak work, wheel bearing service, and inspections.",
+      "g": [
+        "collision",
+        "service center",
+        "mobile tech"
+      ],
+      "base": "DeBary",
+      "areas": [
+        "DeBary",
+        "Fruitland Park"
+      ],
+      "region": "Central Florida",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.karvrepair.com/",
+        "phone_quote": "+1 (888) 422-5445",
+        "coverage_quotes": [
+          "Our DeBary facility features indoor work bays for consistent results, while our Fruitland Park dealership expands access to both rv service and sales."
+        ],
+        "type_quote": "From collision and precision restorations to everyday RV service, mobile RV repair, Airstream repair, and parts support, our team prioritizes quality and speed so you can get back on the road.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Central Florida RV",
+      "c": "Apopka, FL",
+      "p": "(407) 241-2886",
+      "u": "https://www.cflrv.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Central Florida RV is an RV service, maintenance, and repair shop in Apopka, Florida. It provides roof AC service, RV appliance service, Aquahot service, RV battery service, RV generator service, plumbing and hydraulic repairs, slide out repair, leveler service, and annual RV inspections. It is an Aqua-Hot Factory Authorized Service Center, accepts all RV insurance, and handles extended warranty repairs, with Saturday and Sunday service by appointment only.",
+      "g": [
+        "service center"
+      ],
+      "base": "Apopka",
+      "areas": [],
+      "region": "Central Florida",
+      "spec": "Sat - Sun: By Appointment Only",
+      "evidence": {
+        "checked": "https://www.cflrv.com/rv-service",
+        "phone_quote": "(407) 241-2886",
+        "coverage_quotes": [
+          "RV Service in Central Florida You Can Trust!"
+        ],
+        "type_quote": "Central Florida RV is your one stop shop for all of your RV service repairs and maintenance needs",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    }
+  ]
+}

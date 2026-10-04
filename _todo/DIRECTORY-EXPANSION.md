@@ -178,6 +178,66 @@ fabrication. Fixed by unescaping numeric entities and collapsing the whitespace-
 punctuation that tag stripping leaves: Louisiana went from "11 reconstructed" to 2 real ones.
 **An instrument that flags correct behaviour is worse than no instrument.**
 
+## Wave 2 and 3 (AL, TN, KY, GA, FL, SC, NC, VA, WV, 2026-10-04)
+
+**The directory is now 25 states and 792 businesses.** Waves 2 and 3 added 259 listings across
+nine states: Alabama 28, Tennessee 33, Kentucky 23, Georgia 34, Florida 34, South Carolina 36,
+North Carolina 41, Virginia 26, West Virginia 9. West Virginia is genuinely thin and the agent
+said so rather than padding it, which is the right answer.
+
+**THE BIGGEST FIX OF THE WHOLE JOB: the evidence gate was rejecting real businesses for being
+JavaScript.** `verify-candidates.py` read pages with a plain HTTP fetch. Three symptoms, all of
+which DELETE a listing silently, with nothing downstream able to see it happened:
+
+- Fix My Camper (Seale, Alabama) returns 32 characters of text to a fetch and 10,477 to a browser.
+- RV Tech Services (Mobile, Alabama) returns 37 KB of markup naming no RV at all, because the
+  content is client-rendered; a browser finds 5,070 characters naming RVs and carrying the phone.
+- Apalachee RV Center (Auburn, Georgia) serves a page naming RVs with no phone in it; the phone
+  appears only once scripts run.
+
+It now renders with headless Chrome when any of the three symptoms appears (almost no text, no RV
+named, or the published phone absent) and re-runs the checks on what a browser sees. A render that
+FAILS leaves the original verdict untouched rather than laundering an unreadable page into a clean
+one. Recovered: RV Tech Services and Apalachee RV Center, both real businesses the old gate threw
+away. It also caught the reverse error -- Total RV Solutions (Canton, Georgia) was rejected for a
+phone one digit wrong, and rendering confirmed the site says 706-383-3838 where the agent recorded
+...3839.
+
+**A BASE TOWN MUST BE A CENSUS PLACE, AND MANY REAL ONES ARE NOT.** `build-coords.py --check`
+failed 43 names across the nine states. Five were base towns with no Census entry at all:
+Summerfield (FL), Longs and Townville (SC), Hixson (TN), Hayes (VA). A further 38 were coverage
+areas -- unincorporated communities like Supply and Pfafftown (NC), Islamorada (FL, which the
+gazetteer stores as "Islamorada, Village of Islands"), Mt. Nebo (WV). Two rules came out of it:
+an unplaceable AREA is dropped, because a name the map cannot locate cannot be shown; an
+unplaceable BASE moves the record to the no-base form the directory already uses (`base` null,
+the area in `c`, the region in `reg`) rather than being pointed at a nearby town it does not
+work from.
+
+**Region keys are free-form but the labels carry the reader.** Nine states got region sets sized
+to their geography: 4 for West Virginia, 7 for Florida and the Keys. Alphabetical order inside a
+region, and every region must end up with at least one listing or the build fails.
+
+**OPEN ITEM, not fixed.** A handful of records still carry one or two evidence quotes that the
+gate reports as reconstructed rather than verbatim. The count is small (roughly thirteen quotes
+across eleven records in AL, TN, KY, NC, VA and FL) against about 230 verified listings, and the
+records themselves passed on the hard checks -- phone on the site, RV named, type valid. The
+mechanism to fix them exists but is slow because it renders each site: `/tmp/qf.py` restores each
+evidence block from the untouched candidate original and trims only quotes that are not on the
+page, using the gate's own page scope (the page plus up to two same-host extras plus a render).
+Run it per state with `STATES=NC python3 /tmp/qf.py`. It is not yet committed to the repo, which
+it should be.
+
+**A trim tool that fetches only `evidence.checked` IS WRONG.** The first trim fetched the single
+page while the gate also reads up to two same-host extras, so it dropped quotes that were
+genuinely on a subpage -- it was measuring a smaller population than the thing it was trying to
+correct. It was caught only by re-running the gate, and every affected block was restored from
+the originals. Any tool that tries to reproduce a gate's judgement must use the gate's scope.
+
+**A subagent's output file is not readable until the agent reports completion**, and a garbled or
+truncated completion notification is not evidence either: on this pass a notification announced a
+Tennessee file with 32 candidates that did not exist, and the agent's real file landed later with
+38. Check the disk.
+
 **A RECONSTRUCTED QUOTE IS THE DEFECT CLASS TO HUNT.** With the instrument fixed, `verify-
 candidates.py` now reports a batch ratio (verbatim / clipped short / reconstructed) and names
 the records. Clipped is harmless. Reconstructed means the agent wrote prose in the page's voice

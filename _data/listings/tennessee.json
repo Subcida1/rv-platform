@@ -1,0 +1,1101 @@
+{
+  "state": "TN",
+  "name": "Tennessee",
+  "regions": [
+    {
+      "key": "knoxville-east-tn",
+      "label": "Knoxville, the Smokies and east Tennessee"
+    },
+    {
+      "key": "chattanooga-tn",
+      "label": "Chattanooga and the southeast"
+    },
+    {
+      "key": "nashville-tn",
+      "label": "Nashville and middle Tennessee"
+    },
+    {
+      "key": "plateau-tn",
+      "label": "Cookeville, Crossville and the plateau"
+    },
+    {
+      "key": "memphis-tn",
+      "label": "Memphis and the west"
+    },
+    {
+      "key": "tricities-tn",
+      "label": "Johnson City, Kingsport and the Tri-Cities"
+    }
+  ],
+  "region_of": {
+    "Knoxville": "knoxville-east-tn",
+    "Sevierville": "knoxville-east-tn",
+    "Pigeon Forge": "knoxville-east-tn",
+    "Newport": "knoxville-east-tn",
+    "Dandridge": "knoxville-east-tn",
+    "Strawberry Plains": "knoxville-east-tn",
+    "Chattanooga": "chattanooga-tn",
+    "Cleveland": "chattanooga-tn",
+    "Collegedale": "chattanooga-tn",
+    "Dayton": "chattanooga-tn",
+    "Nashville": "nashville-tn",
+    "Franklin": "nashville-tn",
+    "Hendersonville": "nashville-tn",
+    "Lebanon": "nashville-tn",
+    "Portland": "nashville-tn",
+    "Lyles": "nashville-tn",
+    "Cookeville": "plateau-tn",
+    "Crossville": "plateau-tn",
+    "McMinnville": "plateau-tn",
+    "Jackson": "memphis-tn",
+    "Munford": "memphis-tn",
+    "Johnson City": "tricities-tn",
+    "Kingsport": "tricities-tn"
+  },
+  "listings": [
+    {
+      "n": "Cookeville RV and Marine",
+      "c": "Cookeville, TN",
+      "p": "931-646-4678",
+      "u": "https://www.cookevillerv.com/service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Cookeville RV and Marine provides RV and marine repair and maintenance in Cookeville, TN, with a service department staffed with highly trained technicians. The dealership says it has the professional equipment and experience to keep a boat or RV in prime condition, and that it will get customers in and out of the shop in an efficient and timely manner. Service runs Monday through Friday, 8am to 5pm.",
+      "g": [
+        "service center",
+        "rv repair"
+      ],
+      "base": "Cookeville",
+      "areas": [
+        "Smithville",
+        "Sparta",
+        "Crossville",
+        "Nashville",
+        "Livingston"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.cookevillerv.com/service",
+        "phone_quote": "931-646-4678",
+        "coverage_quotes": [
+          "Cookeville RV and Marine is proud to provide quality repair services to the areas of Smithville, Sparta, Crossville, Nashville, and Livingston, TN."
+        ],
+        "type_quote": "RV and Marine Repairs and Maintenance Services in Cookeville, TN",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "C&S Mobile RV Services",
+      "c": "Crossville, TN",
+      "p": "931-248-3090",
+      "u": "https://csrvservices.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "C&S Mobile RV Services is a mobile RV repair and maintenance business. Its service technician is certified through the RVTAA and is a graduate of the NRVTA. The company says it has been offering quality RV repairs and maintenance since 2020 and that its team is well-versed in RV parts and accessories.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Crossville",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://csrvservices.com/",
+        "phone_quote": "931-248-3090",
+        "coverage_quotes": [],
+        "type_quote": "We have been offering quality RV repairs and maintenance since 2020.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Ricky's RV Repair",
+      "c": "Sevierville, TN",
+      "p": "(865) 908-3245",
+      "u": "https://www.rickysrv.com/",
+      "t": "both",
+      "e": true,
+      "r": false,
+      "d": "Ricky's RV Repair serves Sevierville with three roomy service bays and three bright-yellow mobile repair trucks. The shop performs RV repairs and also stocks the area's biggest selection of RV parts, accessories, and appliances. It offers after-hours repairs and will store a vehicle in a secure fenced lot if overnight repairs are necessary.",
+      "g": [
+        "mobile tech",
+        "service center"
+      ],
+      "base": "Sevierville",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.rickysrv.com/",
+        "phone_quote": "(865) 908-3245",
+        "coverage_quotes": [
+          "1742 Veterans Blvd, Sevierville, TN 37862"
+        ],
+        "type_quote": "performing after-hours repairs on your RV via one of our 3 bright-yellow mobile repair trucks",
+        "emergency_quote": "performing after-hours repairs on your RV via one of our 3 bright-yellow mobile repair trucks",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Unlimited RV",
+      "c": "Knoxville, TN",
+      "p": "(865) 200-4162",
+      "u": "https://www.unlimitedrvtn.com/repair-and-parts/",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "Unlimited RV is an RV repair shop in Knoxville with mobile service available in Sevier County. Its certified technicians repair RV roofs, appliances, electrical systems, cabinetry, and advanced solar systems. The shop says it honors most extended warranties and works on camper vans, travel trailers, motorhomes, fifth wheels, and toy haulers.",
+      "g": [
+        "mobile tech",
+        "service center"
+      ],
+      "base": "Knoxville",
+      "areas": [
+        "Knoxville",
+        "Sevierville",
+        "Pigeon Forge",
+        "Gatlinburg"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.unlimitedrvtn.com/repair-and-parts/",
+        "phone_quote": "(865) 200-4162",
+        "coverage_quotes": [
+          "Our RV and motorhome repair services are available in Knoxville, Sevierville, Pigeon Forge, Gatlinburg, the Smoky Mountains, and all surrounding TN communities."
+        ],
+        "type_quote": "our certified technicians perform a wide range of RV repairs for camper vans, travel trailers, motorhomes, fifth wheels, toy haulers, and more",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "RV Lifeline Mobile Repair",
+      "c": "Sevierville, TN",
+      "p": "(865) 809-2626",
+      "u": "https://www.rvlifeline.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "RV Lifeline Mobile Repair is a retired-military, veteran-owned mobile RV repair service that comes to the customer. Its service area is an hour radius around Sevierville, Tennessee. The technician works on most of the major systems of an RV, including plumbing, electrical, heating and air, leveling, slides, axles, wheels, and brakes.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Sevierville",
+      "areas": [],
+      "region": "an hour radius around Sevierville, Tennessee",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.rvlifeline.com/",
+        "phone_quote": "(865) 809-2626",
+        "coverage_quotes": [
+          "Our service area is an hour radius around Sevierville, Tennessee."
+        ],
+        "type_quote": "We work on most of the major systems of your RV, including: Plumbing, Electrical, Heating and Air, Leveling, Slides, Axles, Wheels and Brakes",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Adams' RV Repair",
+      "c": "Strawberry Plains, TN",
+      "p": "(865) 307-5521",
+      "u": "https://adamsrvrepair.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Adams' RV Repair is a family owned and operated mobile RV service covering Knoxville and surrounding areas. It repairs AC and furnace, roofing, electrical, and plumbing systems, and services any type of RV, motor home, travel trailer, 5th wheel, horse trailer, and toy hauler. Technicians come to the customer, and the business is based in Strawberry Plains.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Strawberry Plains",
+      "areas": [
+        "Knoxville",
+        "Seymour",
+        "Sevierville",
+        "Townsend",
+        "Powell",
+        "Maryville",
+        "Dandridge",
+        "Jefferson City"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://adamsrvrepair.com/",
+        "phone_quote": "(865) 307-5521",
+        "coverage_quotes": [
+          "We provide the best mobile RV service in the Knoxville and surrounding areas."
+        ],
+        "type_quote": "We service any type of RV, Motor Home, Travel Trailer, 5th Wheel, Horse Trailer, Toy Hauler, etc.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Shelburne RV",
+      "c": "Cleveland, TN",
+      "p": "(423) 479-3627",
+      "u": "https://shelburnerv.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Shelburne RV is a repair facility located in Cleveland, TN. It offers repairs in plumbing, HVAC, refrigeration, roofing, flooring, slide-out, and basement a/c, and it also carries RV supplies, accessories, and parts. Customers can drop off their unit Monday through Friday from 8 am to 5 pm without an appointment.",
+      "g": [
+        "service center"
+      ],
+      "base": "Cleveland",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://shelburnerv.com/",
+        "phone_quote": "Office/Parts (423) 479-3627",
+        "coverage_quotes": [
+          "We are a repair facility located in beautiful Cleveland, TN."
+        ],
+        "type_quote": "We offer repairs in plumbing, HVAC, refrigeration, roofing, flooring, slide-out, basement a/c and much more.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "On-Seitz RV Repair",
+      "c": "Cleveland, TN",
+      "p": "(423) 504-8340",
+      "u": "https://onseitzrvrepair.wixsite.com/onsite",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "On-Seitz RV Repair provides mobile RV and camper repair services, proudly serving Cleveland, TN and surrounding areas. Its on-site specialists handle awnings, HVAC, electrical systems, and water and filtration work. The company says it does not repair engines, transmissions, or other drivetrain issues outside of regular maintenance or fluid changes, and it offers 24 hour emergency service.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Cleveland",
+      "areas": [],
+      "region": null,
+      "spec": "we do not repair engines, transmissions, or other drivetrain issues outside of regular maintenance, or fluid changes",
+      "evidence": {
+        "checked": "https://onseitzrvrepair.wixsite.com/onsite",
+        "phone_quote": "(423) 504-8340",
+        "coverage_quotes": [
+          "Proudly Serving Cleveland TN. & Surrounding Areas"
+        ],
+        "type_quote": "Mobile RV/Camper Repair Services",
+        "emergency_quote": "We Offer 24 Hour Emergency Service!",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Millard Mobile RV Service",
+      "c": "Dayton, TN",
+      "p": "423-285-3333",
+      "u": "https://www.millardmobilervservice.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "Millard Mobile RV Service is a mobile RV repair service that comes to the customer, serving Eastern and Middle Tennessee. It offers air conditioning repair, electrical repair, and plumbing repair. The business is run by James Millard, an RVTI Certified RV Tech, and it offers 24 Hour Emergency Service rates.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Dayton",
+      "areas": [],
+      "region": "Eastern and Middle Tennessee",
+      "spec": "We do not do warranty or insurance work.",
+      "evidence": {
+        "checked": "https://www.millardmobilervservice.com/",
+        "phone_quote": "423-285-3333",
+        "coverage_quotes": [
+          "We service Eastern and Middle Tennessee"
+        ],
+        "type_quote": "Our Mobile RV repair service will come to you!",
+        "emergency_quote": "24 Hour Emergency Service Rates",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Mountain Man Mobile RV Services",
+      "c": "Chattanooga, TN",
+      "p": "(423) 584-4177",
+      "u": "https://www.mountainmanmobilervservices.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Mountain Man Mobile RV Services provides on-site mobile RV repair for owners within 125 miles of Chattanooga, Tennessee. The business focuses on RV roof repair and RV AC repair, and also handles mechanical and electrical issues at the campsite or driveway. Service is by appointment.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Chattanooga",
+      "areas": [],
+      "region": "within a 125-mile radius of Chattanooga, Tennessee",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.mountainmanmobilervservices.com/",
+        "phone_quote": "(423) 584-4177",
+        "coverage_quotes": [
+          "We proudly serve customers within a 125-mile radius of Chattanooga, Tennessee."
+        ],
+        "type_quote": "Mountain Man Mobile RV Services is proud to serve the Chattanooga area with dedicated, high-quality mobile care for your home on wheels.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Camper John's RV Service & Repairs",
+      "c": "McMinnville, TN",
+      "p": "(615) 489-9065",
+      "u": "https://camperjohnsrv.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Camper John's RV Service & Repairs is a 100% mobile RV repair service based in McMinnville, TN, serving 35+ counties across Middle and East Tennessee. The technician handles roof leaks, AC and heating, electrical, plumbing and water heaters, slide-out repair, winterization, and pre-purchase or pre-trip inspections. Repairs are done at the customer's home, campsite, or roadside.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "McMinnville",
+      "areas": [
+        "Nashville",
+        "Knoxville",
+        "Murfreesboro",
+        "Hendersonville",
+        "Clarksville",
+        "Crossville"
+      ],
+      "region": "Middle and East Tennessee",
+      "spec": null,
+      "evidence": {
+        "checked": "https://camperjohnsrv.com/",
+        "phone_quote": "(615) 489-9065",
+        "coverage_quotes": [
+          "We're based in McMinnville and serve 35+ counties across Middle and East Tennessee, including Nashville, Knoxville, Murfreesboro, Clarksville, Hendersonville, and the greater Smoky Mountains area."
+        ],
+        "type_quote": "Roof leaks, AC and heating, electrical, plumbing and water heaters, slide-out repair, winterization, and pre-purchase or pre-trip inspections",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Northgate Parts",
+      "c": "Hixson, TN",
+      "p": "423-870-1515",
+      "u": "https://www.northgateparts.com/rv-service-center",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Northgate Parts runs an RV service center in Hixson, TN, serving Chattanooga. Its team of trained RV service and repair technicians handles warranty repair, maintenance, parts installation, and repair of appliances, electrical, plumbing, HVAC, generators, and roof seals. The shop also offers RV collision repair including fiberglass damage, roof repair and replacement, and windshield replacement.",
+      "g": [
+        "service center",
+        "body shop"
+      ],
+      "base": null,
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.northgateparts.com/rv-service-center",
+        "phone_quote": "Chattanooga: 423-870-1515",
+        "coverage_quotes": [
+          "Our location in Chattanooga allows us to serve the surrounding area with unmatched speed and convenience."
+        ],
+        "type_quote": "Our team of trained RV service and repair technicians can help you make sure your RV in excellent condition and ready for your next adventure.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      },
+      "reg": "chattanooga-tn"
+    },
+    {
+      "n": "Full Time RV Repair",
+      "c": "Nashville, TN",
+      "p": "(629) 239-3881",
+      "u": "https://fulltimervrepair.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Full Time RV Repair provides certified, insured, and professional mobile RV repair and upgrade services in Nashville and surrounding areas. The business serves Nashville, Hermitage, and Goodlettsville and says it is dedicated to serving the Nashville area for the long haul. Its rate is a trip charge plus an hourly rate with a one hour minimum.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": null,
+      "areas": [
+        "Nashville",
+        "Hermitage",
+        "Goodlettsville"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://fulltimervrepair.com/",
+        "phone_quote": "(629) 239-3881",
+        "coverage_quotes": [
+          "Serving Nashville, Hermitage, and Goodlettsville, we provide expert repairs and upgrades you can rely on."
+        ],
+        "type_quote": "Full Time RV Repair provides certified, insured, and professional mobile RV repair and upgrade services in Nashville and surrounding areas.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      },
+      "reg": "nashville-tn"
+    },
+    {
+      "n": "ASAP Mobile RV & Marine Repair",
+      "c": "Nashville, TN",
+      "p": "(615) 600-2081",
+      "u": "https://nashvillervservice.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "ASAP Mobile RV & Marine Repair provides RV and marine repair, serving Nashville, TN and the surrounding areas. Featured services include RV service, camper repair, and emergency roadside service. Other specializations include water damage repair, electrical troubleshooting, awning service, RV winterizing, RV installation, and RV generator service.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Nashville",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://nashvillervservice.com/",
+        "phone_quote": "(615) 600-2081",
+        "coverage_quotes": [
+          "Serving Nashville, TN and the Surrounding Areas"
+        ],
+        "type_quote": "Water Damage Repair • Electrical Troubleshooting • Awning Service • Boat Oil Changes • Carburetor Rebuilding • Wood Floor Service • RV Winterizing • RV Installation • RV Repair • RV Generator Service",
+        "emergency_quote": "EMERGENCY ROADSIDE SERVICE",
+        "roadside_quote": "EMERGENCY ROADSIDE SERVICE",
+        "licence": null
+      }
+    },
+    {
+      "n": "Moses RV Repair, LLC",
+      "c": "Munford, TN",
+      "p": "(901) 825-8786",
+      "u": "https://www.mosesrvrepair.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Moses RV Repair, LLC provides mobile RV repairs in Munford, TN, by appointment only. Customer reviews on the site describe last-minute RV repairs and the installation of a new awning on a horse trailer. Hours are Monday through Friday, 8:30am to 5:30pm.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Munford",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.mosesrvrepair.com/",
+        "phone_quote": "(901) 825-8786",
+        "coverage_quotes": [],
+        "type_quote": "Mobile RV Repairs",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Your RV Remedy",
+      "c": "Newport, TN",
+      "p": "423.688.9404",
+      "u": "https://www.yourrvremedy.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Your RV Remedy provides professional services that diagnose, repair, and prevent the most common RV problems right at the campsite. It provides mobile RV services to Newport, Dandridge, Sevierville, Pigeon Forge, and Gatlinburg, Tennessee. The mobile service truck handles slide-out malfunctions and tank clogs and does maintenance and tank cleanings.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Newport",
+      "areas": [
+        "Newport",
+        "Dandridge",
+        "Sevierville",
+        "Pigeon Forge",
+        "Gatlinburg"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.yourrvremedy.com/",
+        "phone_quote": "423.688.9404",
+        "coverage_quotes": [
+          "Providing mobile RV services to Newport, Dandridge, Sevierville, Pigeon Forge, and Gatlinburg, Tennessee."
+        ],
+        "type_quote": "At Your RV Remedy, we provide professional services that diagnose, repair, and prevent the most common RV problems right at your campsite.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Sunset Mobile RV Repair",
+      "c": "Johnson City, TN",
+      "p": "281-789-8901",
+      "u": "https://www.mobilervrepairservices.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Sunset Mobile RV Repair is a family-owned mobile RV repair business serving Johnson City, Kingsport, Bristol, and surrounding areas. It diagnoses, repairs, replaces, or modifies RV electrical, plumbing, air conditioning, furnace, water heater, refrigerator, awning, slide-out, roof, brakes, and bearing components. The company says it honors most RV extended warranties.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": null,
+      "areas": [
+        "Johnson City",
+        "Kingsport",
+        "Bristol"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.mobilervrepairservices.com/",
+        "phone_quote": "281-789-8901",
+        "coverage_quotes": [
+          "If you're located in Johnson City, Kingsport, Bristol or surrounding areas, and need help with your RV, give us a call!"
+        ],
+        "type_quote": "Here is a list of components that we can diagnose, repair, replace or modify.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      },
+      "reg": "tricities-tn"
+    },
+    {
+      "n": "Crowder RV",
+      "c": "Johnson City, TN",
+      "p": "423.282.5011",
+      "u": "https://www.crowderrv.com/we-repair-your-travel-trailer-fifth-wheel-rv--service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Crowder RV runs a service department in Johnson City, TN with a staff of 5 full time technicians. It services and repairs most major brands of RV appliances, and its body shop handles most major accident rebuilds along with complete rubber roof installation. The department says it accommodates any problem with a travel trailer, fifth wheel, or motorhome except chassis work.",
+      "g": [
+        "service center",
+        "body shop"
+      ],
+      "base": "Johnson City",
+      "areas": [],
+      "region": null,
+      "spec": "We accommodate any type of problem that may arise with your travel trailer, fifth wheel, or motorhome (except chassis work) in an efficient, precise, and timely manner.",
+      "evidence": {
+        "checked": "https://www.crowderrv.com/we-repair-your-travel-trailer-fifth-wheel-rv--service",
+        "phone_quote": "423.282.5011",
+        "coverage_quotes": [],
+        "type_quote": "Crowder RV Service Department is here to serve your RV needs with a staff of 5 full time technicians, Monday - Friday, 8:00 a.m. - 5:00 p.m.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Tri-Cities RV Services",
+      "c": "Kingsport, TN",
+      "p": "423-276-8891",
+      "u": "https://www.tri-citiesrvservices.com/repair",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "Tri-Cities RV Services is a mobile RV repair service that comes to the customer, based in Kingsport, TN and serving the Tri-Cities TN/VA region. It handles furnaces, air conditioning, water heaters, refrigerators, roofs, electrical and generators, plumbing, winterization, and pre-delivery inspections. The business says it is available 24/7 via email or telephone and offers emergency repairs.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Kingsport",
+      "areas": [
+        "Abingdon",
+        "Bristol",
+        "Kingsport",
+        "Johnson City",
+        "Blountville"
+      ],
+      "region": "Tri-Cities TN/VA region",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.tri-citiesrvservices.com/repair",
+        "phone_quote": "Call us 423-276-8891",
+        "coverage_quotes": [
+          "Service Area Includes: Abingdon, Bristol, Kingsport, Johnson City, Blountville, & Surrounding Areas"
+        ],
+        "type_quote": "Tri-Cities RV Services is a mobile RV repair service that comes to you.",
+        "emergency_quote": "-24/7 Emergency Service Available-",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "RVNurse",
+      "c": "Kingsport, TN",
+      "p": "423-397-2266",
+      "u": "https://rvnurse.godaddysites.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "RVNurse offers on-the-spot RV repairs completed by NRVTA Certified Repair Technicians, as well as RV parts and accessories. It serves the Tri-Cities TN and surrounding areas from Kingsport, and also serves Lake County, Florida from November through March. The business also helps with RV repairs, remodeling, and upgrades.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Kingsport",
+      "areas": [],
+      "region": "Tri-Cities TN and Surrounding Areas",
+      "spec": null,
+      "evidence": {
+        "checked": "https://rvnurse.godaddysites.com/",
+        "phone_quote": "423-397-2266",
+        "coverage_quotes": [
+          "Tri-Cities TN and Surrounding Areas - NOW SERVING"
+        ],
+        "type_quote": "We offer \"on-the-spot\" RV Repairs, completed by NRVTA Certified Repair Technicans!",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Rocky Valley RV",
+      "c": "Dandridge, TN",
+      "p": "865-205-5784",
+      "u": "https://www.rockyvalleyrv.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Rocky Valley RV is a full service shop in Dandridge, TN, servicing A/C's to full roof rebuilds. Its service center offers comprehensive in-shop diagnostics, structural repairs, and specialized maintenance for all classes of RV's. The business says it serves Douglas Lake, Jefferson County, and the Lakeway Area, and it offers Saturday drop-off and pick-up hours.",
+      "g": [
+        "service center"
+      ],
+      "base": "Dandridge",
+      "areas": [],
+      "region": "Douglas Lake, Jefferson County, and the Lakeway Area",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.rockyvalleyrv.com/",
+        "phone_quote": "865-205-5784",
+        "coverage_quotes": [
+          "Professional RV Care Serving Douglas Lake, Jefferson County, and the Lakeway Area"
+        ],
+        "type_quote": "A Full Service Shop Servicing A/C's to Full Roof Rebuilds.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Creighton Mobile RV Repair",
+      "c": "Morristown, TN",
+      "p": "865-333-9791",
+      "u": "http://creightonmobilervrepair.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Creighton Mobile RV Repair brings camper and RV appliance repair to the customer's location in the Great Smoky Mountains corridor. It serves Southwestern NC and Southeastern TN and says it is authorized for service work on popular camper brands and appliances. The certified Master RV Tech handles air conditioning, bathroom fixtures, and interior updates.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": null,
+      "areas": [],
+      "region": "Southwestern NC and Southeastern TN",
+      "spec": null,
+      "evidence": {
+        "checked": "http://creightonmobilervrepair.com/",
+        "phone_quote": "865-333-9791",
+        "coverage_quotes": [
+          "Serving Southwestern NC and Southeastern TN"
+        ],
+        "type_quote": "Creighton Mobile RV Repair brings camper and RV appliance repair to your location in the Great Smoky Mountains corridor.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      },
+      "reg": "knoxville-east-tn"
+    },
+    {
+      "n": "Cedar City RV",
+      "c": "Lebanon, TN",
+      "p": "615-815-8650",
+      "u": "https://www.cedarcityrv.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Cedar City RV runs a service department in Lebanon, TN with highly-trained technicians dedicated to RVs, trailers, and campers. Services include roof repairs, floor repair, accident damage, electrical, appliances, plumbing, heating, and cooling. The shop handles retail or warranty work and serves Middle Tennessee.",
+      "g": [
+        "service center"
+      ],
+      "base": "Lebanon",
+      "areas": [
+        "Lebanon",
+        "Nashville",
+        "Mt Juliet",
+        "Murfreesboro",
+        "Smyrna",
+        "Cookeville",
+        "Hermitage",
+        "Carthage",
+        "Hartsville",
+        "Gallatin",
+        "Hendersonville"
+      ],
+      "region": "Middle Tennessee",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.cedarcityrv.com/rv-service",
+        "phone_quote": "(615) 815-8650",
+        "coverage_quotes": [
+          "Serving Middle Tennessee, Lebanon, Nashville, Mt Juliet, Murfreesboro, Smyrna, Cookeville, Hermitage, Carthage, Hartsville, Gallatin, Hendersonville, etc."
+        ],
+        "type_quote": "Our service department is staffed with highly-trained technicians dedicated to making sure your RV, trailer, or camper stays in great working order for years to come.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Nashville RV",
+      "c": "Franklin, TN",
+      "p": "615-488-7054",
+      "u": "https://www.nashvillerv.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Nashville RV operates an RV service department in Franklin, TN for motorhomes, travel trailers, toy haulers, and adventure vans. Its services cover repairs and restoration, appliances and accessories, electrical, heating, air conditioning, plumbing, holding tanks, LP gas, and generator sets. The department handles routine maintenance checks and complex mechanical repairs.",
+      "g": [
+        "service center"
+      ],
+      "base": "Franklin",
+      "areas": [
+        "Nashville",
+        "Franklin",
+        "Brentwood",
+        "Murfreesboro",
+        "Hendersonville",
+        "Gallatin",
+        "Mt. Juliet",
+        "Lebanon",
+        "Smyrna",
+        "La Vergne",
+        "Spring Hill",
+        "Clarksville",
+        "Goodlettsville",
+        "Springfield",
+        "Cookeville",
+        "Dickson",
+        "Columbia",
+        "Lewisburg",
+        "Shelbyville",
+        "Manchester",
+        "McMinnville"
+      ],
+      "region": "Middle Tennessee",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.nashvillerv.com/rv-service",
+        "phone_quote": "615-488-7054",
+        "coverage_quotes": [
+          "Premier RV, Motorhome, & Travel Trailer Maintenance and Repair Service Provider in Middle Tennessee"
+        ],
+        "type_quote": "Our service department is fully equipped and capable of handling all types of repairs and maintenance on a wide range of recreational vehicles.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Ralphs Mobile RV Repair",
+      "c": "Jackson, TN",
+      "p": "731-467-3049",
+      "u": "https://ralphsmobilervrepair.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "Ralphs Mobile RV Repair provides mobile RV repairs in Jackson, TN, and nearby areas in West Tennessee. The business says it is committed to ensuring the RV is fixed the first time and running smoothly before leaving. It says it can do emergencies, and it does not work on generators.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Jackson",
+      "areas": [],
+      "region": "West Tennessee",
+      "spec": "I do NOT work on Generators!",
+      "evidence": {
+        "checked": "https://ralphsmobilervrepair.com/",
+        "phone_quote": "731-467-3049",
+        "coverage_quotes": [
+          "Jackson, TN, & nearby areas!"
+        ],
+        "type_quote": "Fast & Reliable MOBILE RV REPAIRS in West Tennessee",
+        "emergency_quote": "I can do Emergencies!",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Nashville Mobile RV Repair and Service",
+      "c": "Nashville, TN",
+      "p": "(629) 266-7377",
+      "u": "https://nashvillemobilervrepairandservice.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "Nashville Mobile RV Repair and Service delivers on-site RV repairs in Nashville, TN and surrounding Middle Tennessee areas. The business repairs AC problems, electrical faults, water leaks, generator failures, slide-out issues, water heaters, roof leaks, and appliances, and it also does winterization and inspections. It offers emergency and same-day mobile RV repair and is open 24/7.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Nashville",
+      "areas": [
+        "Nashville",
+        "Mount Juliet",
+        "Hendersonville",
+        "Brentwood",
+        "Franklin",
+        "La Vergne",
+        "Gallatin",
+        "Murfreesboro",
+        "Lebanon"
+      ],
+      "region": "Middle Tennessee",
+      "spec": null,
+      "evidence": {
+        "checked": "https://nashvillemobilervrepairandservice.com/",
+        "phone_quote": "(629) 266-7377",
+        "coverage_quotes": [
+          "We provide mobile RV repair service throughout Nashville and surrounding cities including Mount Juliet, Hendersonville, Brentwood, Franklin, La Vergne, Gallatin, Murfreesboro, and Lebanon."
+        ],
+        "type_quote": "We diagnose and fix common RV issues like AC problems, electrical faults, water leaks, generator failures, and slide-out issues at your location.",
+        "emergency_quote": "we offer emergency and same-day mobile RV repair throughout Nashville and Middle Tennessee.",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Nashville Mobile RV Repair",
+      "c": "Nashville, TN",
+      "p": "(629) 302-4948",
+      "u": "https://nashvillemobilervrepair.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Nashville Mobile RV Repair provides mobile RV repair around Nashville and Middle Tennessee, coming to the driveway, campsite, or storage lot. The business covers exterior and water protection, comfort and appliances, and mechanical and electrical systems. It diagnoses the problem and makes a repair plan without requiring a tow.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Nashville",
+      "areas": [],
+      "region": "Nashville and Middle Tennessee",
+      "spec": null,
+      "evidence": {
+        "checked": "https://nashvillemobilervrepair.com/",
+        "phone_quote": "(629) 302-4948",
+        "coverage_quotes": [
+          "RV repair around Nashville and Middle Tennessee."
+        ],
+        "type_quote": "Your motorhome, camper, or travel trailer does not need a tow to a crowded dealer.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Interstate Repair Service",
+      "c": "Knoxville, TN",
+      "p": "(865) 637-4986",
+      "u": "https://interstaterepairservice.com/emergency-roadside-service-knoxville-tn/mobile-repair-service/mobile-rv-repair/",
+      "t": "both",
+      "e": false,
+      "r": true,
+      "d": "Interstate Repair Service provides mobile RV repair in Knoxville and surrounding counties, with a shop at 2208 Thorngrove Pike. The team says it can handle electrical troubles, brake issues, and a problem with the engine, and it can tow a vehicle to its shop for more extensive care. It serves Knox, Sevier, Grainger, Blount, Loudon, Cocke, Hamblen, Campbell, Anderson, and Jefferson counties.",
+      "g": [
+        "mobile tech",
+        "service center"
+      ],
+      "base": "Knoxville",
+      "areas": [
+        "Knoxville",
+        "Pigeon Forge",
+        "Gatlinburg",
+        "Sevierville",
+        "Maryville",
+        "Townsend",
+        "Lenoir City",
+        "Loudon",
+        "Newport",
+        "Morristown",
+        "Clinton",
+        "Oak Ridge",
+        "Jefferson City",
+        "Dandridge",
+        "Rocky Top"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://interstaterepairservice.com/emergency-roadside-service-knoxville-tn/mobile-repair-service/mobile-rv-repair/",
+        "phone_quote": "(865) 637-4986",
+        "coverage_quotes": [
+          "we offer mobile RV repair services in Knoxville, Tennessee and the rest of Knox County, as well as in Sevier County, including Cosby, Kodak, Pigeon Forge, Gatlinburg, and Sevierville"
+        ],
+        "type_quote": "Whether you're facing electrical troubles, brake issues, or a problem with the engine, we can perform extensive mobile RV repair services.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Steadfast RV Service",
+      "c": "Hendersonville, TN",
+      "p": "615-415-5757",
+      "u": "https://steadfastrvservice.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Steadfast RV Service provides certified RV inspections and mobile RV repair in Hendersonville, TN and Middle Tennessee. Its mobile technician service handles appliance repair, A/C repair or replacement, electrical and plumbing repair, furnace, wheel bearing repacking, winterization, roof resealing, windows and doors, and awnings. It offers pre-purchase and annual RV inspections.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Hendersonville",
+      "areas": [
+        "Nashville",
+        "Hendersonville",
+        "Gallatin",
+        "Mt. Juliet",
+        "Lebanon",
+        "Franklin"
+      ],
+      "region": "Middle Tennessee",
+      "spec": null,
+      "evidence": {
+        "checked": "https://steadfastrvservice.com/",
+        "phone_quote": "615-415-5757",
+        "coverage_quotes": [
+          "We proudly serve RV owners in Hendersonville, Nashville, Gallatin, Mt. Juliet, Lebanon, and surrounding areas with professional, reliable, and honest service."
+        ],
+        "type_quote": "We also offer a mobile repair technician service.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Mobile RV Tech Chattanooga",
+      "c": "Collegedale, TN",
+      "p": "(423) 653-6860",
+      "u": "https://mobilervtechchattanooga.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Mobile RV Tech Chattanooga provides on-site mobile RV repair, maintenance, and diagnostics in Chattanooga, TN and surrounding areas. It works on most RV makes and models, including travel trailers, fifth wheels, and motorhomes. Services include electrical repair, HVAC system checks, roof inspections and resealing, water heaters and plumbing repairs, furnace repair, slide-out system repairs, awning replacements, and winterizations.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Collegedale",
+      "areas": [
+        "Chattanooga"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://mobilervtechchattanooga.com/",
+        "phone_quote": "(423) 653-6860",
+        "coverage_quotes": [
+          "Your Trusted Mobile RV Technician in Chattanooga, TN, and surrounding areas"
+        ],
+        "type_quote": "We specialize in on-site RV repair, maintenance, and diagnostics - all directly with professionalism, integrity, and utmost care.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "At Your Camper Mobile RV Service",
+      "c": "Pigeon Forge, TN",
+      "p": "(980) 292 - 0210",
+      "u": "https://atyourcamper.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "At Your Camper Mobile RV Service is a mobile RV repair business in Pigeon Forge, TN, run by Aric, a certified RV technician. It comes directly to the customer's campsite, home, or storage and handles fifth wheels, travel trailers, motorhomes, and camper vans. Services include repair and maintenance of air conditioners, refrigerators, water heaters, cooking appliances, plumbing, electrical, leveling systems, and batteries.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Pigeon Forge",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://atyourcamper.com/",
+        "phone_quote": "(980) 292 - 0210",
+        "coverage_quotes": [
+          "Pigeon Forge, TN"
+        ],
+        "type_quote": "Whether you own a fifth wheel, travel trailer, motorhome, or camper van, we can handle your repair and service needs!",
+        "emergency_quote": "*After hours, weekends and holiday service is subject to an increased hourly rate. Please contact us for availability.*",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Mister RV Service",
+      "c": "Portland, TN",
+      "p": "(615) 504-0641",
+      "u": "https://www.misterrvservice.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Mister RV Service offers mobile RV repair and installation services in and around Nashville, Tennessee. It provides maintenance and repair service for all RV systems on every make and model, and it welcomes warranty repairs and insurance claims. The family owned business also offers restoration services and RV storage from its Portland, TN location.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Portland",
+      "areas": [],
+      "region": "Greater Nashville Area",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.misterrvservice.com/",
+        "phone_quote": "(615) 504-0641",
+        "coverage_quotes": [
+          "Proudly Serving The Greater Nashville Area Since 2008"
+        ],
+        "type_quote": "We provide maintenance and repair service for all RV systems on every make and model.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Nations RV",
+      "c": "Lyles, TN",
+      "p": "(615) 627-2323",
+      "u": "https://www.nationsrvtn.com/services/rv-collision-repair",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Nations RV handles all types of RV and camper body repair in Middle Tennessee, from minor dents to full collision rebuilds. Its services include structural damage repair, roof, sidewall and floor replacement, paint and fiberglass restoration, awning, seal and trim replacement, and aluminum and gelcoat repairs. The shop says it works directly with all insurance companies.",
+      "g": [
+        "body shop"
+      ],
+      "base": "Lyles",
+      "areas": [],
+      "region": "Middle Tennessee",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.nationsrvtn.com/services/rv-collision-repair",
+        "phone_quote": "(615) 627-2323",
+        "coverage_quotes": [
+          "RV Collision and Body Repair in Middle Tennessee"
+        ],
+        "type_quote": "Nations RV handles all types of RV and camper body repair, from minor dents to full collision rebuilds.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    }
+  ]
+}
