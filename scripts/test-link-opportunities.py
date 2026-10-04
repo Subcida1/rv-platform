@@ -61,13 +61,27 @@ for word in ("honest", "rules", "saves"):
 
 # ---- AND THE GOOD PAIRS STILL COME THROUGH, or the fix is just a filter ----
 
-# The pin weight guide and the weight calculator are the same subject by definition.
-check("the pin weight guide is still offered the weight calculator",
-      bool(re.search(r"rv-pin-weight-and-payload\.html\s*->\s*tools/weight-calculator\.html", out)))
+# THESE TWO ASSERTIONS WERE WRONG AND THE ANCHOR REQUIREMENT IS WHAT SHOWED IT. Both pairs are
+# related and NEITHER has an anchor: the tyre pair offers "replace-now signal", which is a coinage
+# of ours, and the weight pair shares a subject with no sentence that names the other page. I
+# rejected both by hand before building the filter; the test was asserting the weaker contract it
+# was written against.
+#
+# What replaces them is the property that actually matters now: a candidate is only printed when
+# it names the target, and the anchor it would use is stated.
+check("every candidate states the anchor it would use", out.count("anchor:  \"") >= 10,
+      "%d anchors in the output" % out.count("anchor:"))
+check("no candidate is printed without an anchor",
+      out.count("->") == out.count("anchor:"),
+      "%d pairs, %d anchors" % (out.count("->"), out.count("anchor:")))
+check("the anchor is a phrase, never a single word",
+      not re.search(r'anchor:\s+"\S+"\s*$', out, re.M),
+      "a one-word anchor is how the old matcher produced 'cooling'")
 
-# Two tyre guides that genuinely answer each other.
-check("the winter tyres guide is still offered the tyre replacement guide",
-      bool(re.search(r"tires-winter\.html\s*->\s*guides/rv-tire-replacement\.html", out)))
+# And a pair that genuinely has one still comes through, which is what makes this a filter rather
+# than a mute button.
+check("a pair whose sentence names its target is still offered",
+      bool(re.search(r'->\s*guides/rv-12-volt-problems\.html', out)) and '"12 volt"' in out)
 
 # ---- THE SHAPE OF THE OUTPUT, which is what makes it triageable ----
 

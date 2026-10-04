@@ -167,6 +167,51 @@ def doc_similarity(a_counts, b_counts, idf):
     return num / (na * nb) if na and nb else 0.0
 
 
+# ---- ANCHOR PROPOSAL, WHICH IS THE TEST THAT DECIDES WHETHER A CANDIDATE IS USABLE ----
+# The research listed five parts to a good internal link, and the BM25 rewrite built two: sentence
+# relevance and document-level relatedness. This is the third, and it is the one that decides
+# whether a human can act on the output at all.
+#
+# WHY IT IS NEEDED, MEASURED 2026-10-04: of the top forty candidate pairs, exactly ONE had a
+# sentence containing a phrase that names the target's subject. BM25 scores SUBJECT SIMILARITY and
+# a link needs a QUESTION -- two pages can share a subject all day with no sentence in either that
+# raises something the other answers. The worst case was the carbon monoxide guide's "a fault can
+# kill" pointing at the fault-finding guide, where "fault" means the opposite thing.
+#
+# THE SUBJECT COMES FROM THE FILENAME, NOT THE h1. The h1s are written for people -- "How much can
+# I tow? The honest math", "When to replace RV tires: The age rule that saves your trip" -- and
+# deriving a subject from one produced zero hits on the first attempt, which was the filter
+# failing rather than the pages. The filename is descriptive by construction.
+SUBJECT_STOP = re.compile(
+    r"^(rv|the|a|an|how|when|why|what|where|and|or|of|to|in|on|for|with|from|not|no|"
+    r"working|wont|will|keeps|reading|wrong|guide|troubleshooting|replacement|repair)$", re.I)
+
+
+def subject_names(rel_path):
+    """Phrases that name this page's subject, longest first."""
+    words = [w for w in Path(rel_path).stem.split("-") if not SUBJECT_STOP.match(w)]
+    if not words:
+        return []
+    out = []
+    for n in (3, 2, 1):
+        if len(words) >= n:
+            out.append(" ".join(words[:n]).lower())
+    return out
+
+
+def anchor_in(sentence, rel_target):
+    """The phrase in this sentence that names the target's subject, or None.
+
+    A single word is deliberately excluded: matching one common noun is how the old title-word
+    matcher produced "cooling" and paired the refrigerator guide with the air conditioner guide.
+    """
+    low = sentence.lower()
+    for name in subject_names(rel_target):
+        if len(name.split()) >= 2 and name in low:
+            return name
+    return None
+
+
 def main():
     files = page_files()
     rel = {p: str(p.relative_to(ROOT)).replace("\\", "/") for p in files}
@@ -252,16 +297,22 @@ def main():
                                  key=lambda w: -idf.get(w, 0))
                 if not carried:
                     continue
+                # NO ANCHOR, NO CANDIDATE. A pair whose sentence never names the target cannot be
+                # linked without inventing a phrase, and inventing one is how a reader gets sent
+                # somewhere that does not answer them.
+                anchor = anchor_in(sent, rel[t])
+                if not anchor:
+                    continue
                 if best is None or score > best[0]:
-                    best = (score, carried[:4], sent)
+                    best = (score, carried[:4], sent, anchor)
             if best:
-                results.append((best[0], rel[src], rel[t], sim, best[1], best[2]))
+                results.append((best[0], rel[src], rel[t], sim, best[1], best[2], best[3]))
 
     results.sort(key=lambda r: (-r[0], r[1], r[2]))
     print("\n%d candidate(s), scored by BM25 against the target page's own text:" % len(results))
     seen_pairs = set()
     shown = 0
-    for score, src, tgt, sim, carried, sent in results:
+    for score, src, tgt, sim, carried, sent, anchor in results:
         if (src, tgt) in seen_pairs:
             continue
         seen_pairs.add((src, tgt))
@@ -269,6 +320,7 @@ def main():
         if shown > 40:
             continue
         print("\n  %.1f  %s  ->  %s   [relatedness %.2f]" % (score, src, tgt, sim))
+        print("     anchor:  \"%s\"" % anchor)
         print("     carries: %s" % ", ".join(carried))
         print("     %s" % sent[:180])
     if shown > 40:
