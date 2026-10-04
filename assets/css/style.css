@@ -1653,7 +1653,7 @@ figure:has(svg[role="img"]){overflow-x:auto;overflow-y:hidden}
    on the page. The modifier class was dropped in a later repaint along with this rule,
    which is why the roadside badge had stopped reading differently at all -- and why
    scripts/test-directory.js had been failing. Restored 2026-09-26. */
-.listing-emerg.roadside{background:var(--brand-deep);border-color:var(--brand-deep);color:#fff}
+.listing-emerg.roadside{background:var(--brand-deep);border-color:var(--brand-deep);color:var(--surface)}
 /* Scope label: says plainly when a business only does part of the job. */
 .listing-flags{display:flex;gap:6px;flex-wrap:wrap}
 .listing-spec{display:inline-block;font-size:11.5px;font-weight:700;color:var(--text-2);background:var(--surface);border:1px solid var(--border);border-radius:999px;padding:4px 10px}
@@ -2352,7 +2352,7 @@ body.is-embed .embed-credit a{font-weight:800;color:var(--b1)}
   .btn,.burger,.guide-ic,.tool-btns,.back,.to-top,.skip-link{display:none !important}
 
   /* ---- 2. the page becomes a document: full width, black on white ---- */
-  html,body{background:#fff !important;color:#000}
+  html,body{background:var(--surface) !important;color:#000}
   .wrap,.wrap.wide,.wrap.narrow,.wrap.page-intro,
   .wrap.w-520,.wrap.w-680,.wrap.w-720,.wrap.w-820,
   .prose .narrow,.w-820,.w-720,.page-intro.narrow{
@@ -2363,7 +2363,7 @@ body.is-embed .embed-credit a{font-weight:800;color:var(--b1)}
 
   /* A printed card is a box, not a tinted panel. */
   .card,.callout,details.faq,.table-scroll,.man-table,.tool-viz,.w-total{
-    background:#fff !important;border-color:#bbb !important;box-shadow:none !important}
+    background:var(--surface) !important;border-color:#bbb !important;box-shadow:none !important}
   .card,.callout,details.faq{padding:9pt 11pt}
 
   /* ---- 3. gradient text back to solid ink (see note 2 above) ---- */

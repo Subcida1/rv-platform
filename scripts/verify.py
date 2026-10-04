@@ -944,14 +944,23 @@ css_src = (ROOT / "assets" / "css" / "style.css").read_text(encoding="utf-8")
 token_start = css_src.index(":root{")
 token_end = css_src.index("\n}\n", css_src.index("/* ---- LEGACY ALIASES.")) + 3
 token_block, rest = css_src[:token_end], css_src[token_end:]
+# A NON-RAW "\b" IS A BACKSPACE, NOT A WORD BOUNDARY. The last entry here was "#fff\b", which in a
+# plain Python string is #fff followed by a backspace character, so that entry never matched
+# anything and the check silently had one fewer value than it looked like it had. Found 2026-10-03
+# by the widened check reporting a #fff the old list was supposed to cover.
 PALETTE = ["#3d7fc2", "#568fd3", "#5b96d8", "#1e6fc4", "#2f7fd6", "#3f8fe8",
            "#eef5fc", "#e9f1fa", "#f3f9ff", "#dce8f4", "#c9dcee",
            "#eaf1fa", "#cfe0f2", "#2a6aad", "#0f172a", "#55627a", "#67748e",
            "#f43f5e", "#b42338", "#fdeeee", "#f2b8be", "#0ea5e9", "#6366f1",
-           "#1e293b", "#d0d5dd", "#ffffff", "#fff\b"]
+           "#1e293b", "#d0d5dd", "#ffffff", "#fff"]
 leaked = []
+# A HEX-AWARE BOUNDARY, NOT \b AND NOT NOTHING. \b is wrong here twice over: in a non-raw string
+# it is a backspace character, and even as a real word boundary it is the wrong test, because "#fff"
+# and "#fff7ed" are both hex and both word characters, so the boundary falls BETWEEN them and
+# "#fff" matches inside "#fff7ed". That produced two false positives in the first run of this check
+# (2026-10-03). The lookahead says what is actually meant: this value must not continue as hex.
 for lit in PALETTE:
-    for m in re.finditer(lit, rest, re.I):
+    for m in re.finditer(re.escape(lit) + r'(?![0-9a-fA-F])', rest, re.I):
         line = rest[:m.start()].count("\n") + 1
         head = rest[rest.rfind("{", 0, m.start()):m.start()]
         leaked.append("style.css:%d uses %s outside the token layer, in %s"
