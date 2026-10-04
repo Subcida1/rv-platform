@@ -370,9 +370,9 @@
     "claims_date": "Oct 2, 2026"
   },
   "guides/rv-refrigerator-not-cooling.html": {
-    "hash": "325158b4376881fb",
+    "hash": "25ba825bdd8aea04",
     "status": "unverified",
-    "verified_by": null,
+    "verified_by": " 2026-10-03, review round 2 under the corrected window. FIXED: (1) SAFETY, the page told the reader to feel the back of a fridge that had been running for hours, with the boiler at the top to check by touch and only 'use care' as a condition, on a boiler hot enough to burn and still hot after switch-off; the check now says to read it with an infrared thermometer and keep hands clear of the flue. (2) A Dometic ambient range was stated as the brand's when the source list credits it to the RM 85xx family manual, so it is now scoped to that family with a pointer to the reader's own model. RECORDED NOT FIXED: the thermistor test still gives no baseline resistance in ohms, because no cited document states one.",
     "verified_at": null,
     "sources": [
       "inbox/REVIEW-REQUEST-20260923-0840-rv-refrigerator-not-cooling.md",
@@ -383,7 +383,7 @@
     ],
     "spec": "_specs/rv-refrigerator-not-cooling.md",
     "spec_waived": false,
-    "claims": "fa82bbdc8aa412c0",
+    "claims": "73873b3a23a1ebc5",
     "invalidated_by": "mechanical change",
     "invalidated_at": "2026-09-27",
     "claims_date": "Oct 2, 2026"
