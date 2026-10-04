@@ -2680,3 +2680,31 @@ found the dangling index entry immediately.
 - **`git commit -m` with an apostrophe in the message** split the argument and failed with pathspec errors.
   The rule is `-F` with a file. It was written down and not followed.
 - **`python3 scripts/ci.sh`** is not running the CI. It is a shell script.
+
+---
+
+## TTT. THE MANUALS-LINK WORKLIST WAS WRONG BY SEVEN TIMES, AND THE RULE WAS THE REASON
+
+**OOO said 30 pages told a reader to consult a manual without linking ours. The real number is FOUR.**
+The audit's regex could not tell a CITATION from an INSTRUCTION, and those are opposite cases:
+
+| shape | example | link ours? |
+|---|---|---|
+| **Citation to a named maker** | "Thetford's owner manual for its RV toilets gives two instructions" | **NO.** The reader wants that maker's manual, which the page already cites. Our directory answers a question they did not ask. |
+| **Instruction to the reader** | "The figure that binds yours is the one in your own manual" | **YES.** This is the case Ty named. |
+
+**The narrowed rule is `your own manual` / `your manual`, and it finds four pages**, of which three
+now link `manuals/` (roof-snow-load, rv-water-pump-wont-prime, winterize-plumbing). **The fourth,
+`rv-converter-not-charging`, refuses legitimately** -- its mention sits inside a parenthetical and
+wrapping it would change what a reader sees. Eight further pages only ever cite a named maker and
+correctly get nothing.
+
+**AND A USEFUL MECHANIC, from the same pass:** a link that adds no visible characters does NOT move
+the claim digest. `winterize-plumbing` came back with the same digest before and after, while the
+other two moved because the extractor reads a tag as a space and a space landed before a comma. So
+de-verification depends on whether the insert changes the text, not on whether a link was added.
+
+**AND THE CHECK DATE MUST MOVE WITH THE WORDS.** verify-content's rule is that a page claiming
+"Last updated on Oct 2" whose words have changed since is a claim that is not true. Bumping the date
+is the fix; marking the page unverified is not, because the claim set was untouched and the tool said
+so itself. All three pages now read Oct 4.
