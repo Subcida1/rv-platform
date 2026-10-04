@@ -2509,6 +2509,57 @@ generating them from `_data/guides.json` in `build-shell.mjs` outside its scope,
 proposal and budgeted ranking, which turns the output into a review queue rather than a list; (3) breadcrumbs and
 hub links from the guides manifest.
 
+## RRR. NEGATIVE-TESTED TEN GATES, NINE PROVED, AND ONE WAS NARROWER THAN ITS OWN HEADING
+
+**Ty: "we should go through all of our tools and make sure they're actually working to catch the issues we intend them to
+catch." Method: plant a known defect, run the gate, confirm it fails WITH THE RIGHT NAME, revert. All ten reverted and the
+tree verified clean.**
+
+| gate | defect planted | result |
+|---|---|---|
+| internal links | a link to a page that does not exist | **fails**, right name |
+| json-ld | malformed JSON in a structured-data block | **fails**, right name |
+| tag balance | a removed closing tag | **fails**, right name |
+| anchor targets | a `#anchor` with no matching id | **fails**, right name |
+| rehost citations | a manualslib URL | **fails**, right name |
+| orphan classes | a class used in a page with no CSS rule | **fails**, right name |
+| gutter clobbered | the padding shorthand on a `.wrap` class | **fails**, right name |
+| palette in one place | a known palette value restated below the token layer | **fails**, right name |
+| **rogue colour** | **a NEW hex colour below the token layer** | **did not fail.** See below. |
+| content gate | a page whose words moved past its check date | fires on every page edit, as designed |
+
+**THE ONE REAL FINDING: THE PALETTE GATE TESTS A LIST, NOT THE PROPERTY.** It scans for the 27 known palette values and
+catches a restatement of any of them. **It cannot see a brand new hex colour**, which is how a rogue colour gets in and
+how the token layer erodes. Its docstring has always said *"anything that needs a colour names a token"* -- the intent was
+the property, the implementation was a list. **Widened on 2026-10-03** to report any hex used inside a rule below the
+token layer. **It reports rather than fails for now, because it found TEN real instances and making it a hard fail today
+would leave main red:**
+
+  - `style.css:25 uses #c3cad6 inside a rule outside the token layer, in {border-color:`
+  - `style.css:172 uses #fdfbfa inside a rule outside the token layer, in {position:absolute;inset:0;background:radial`
+  - `style.css:173 uses #000 inside a rule outside the token layer, in {position:absolute;inset:0;opacity:.5;backgr`
+  - `style.css:350 uses #fdf2f8 inside a rule outside the token layer, in {position:relative;border-radius:var(--radiu`
+  - `style.css:350 uses #fff7ed inside a rule outside the token layer, in {position:relative;border-radius:var(--radiu`
+  - `style.css:375 uses #fdfbfa inside a rule outside the token layer, in {padding:56px 0 34px;position:relative;overf`
+  - `style.css:457 uses #4ade80 inside a rule outside the token layer, in {content:"✓";color:`
+  - `style.css:472 uses #0e1420 inside a rule outside the token layer, in {background:`
+  - `style.css:472 uses #cdd5e0 inside a rule outside the token layer, in {background:#0e1420;color:`
+  - `style.css:473 uses #8fa0b5 inside a rule outside the token layer, in {color:`
+  - `style.css:482 uses #8fa0b5 inside a rule outside the token layer, in {color:`
+  - `style.css:483 uses #e7ecf3 inside a rule outside the token layer, in {font-size:13px;font-weight:700;letter-spaci`
+  - `style.css:490 uses #8fa0b5 inside a rule outside the token layer, in {margin-top:48px;padding-top:24px;padding-bo`
+  - `style.css:699 uses #fdf2f8 inside a rule outside the token layer, in {border-radius:24px;height:100%;overflow:hid`
+
+**WHEN THOSE TEN ARE CLEANED UP, MOVE THE CHECK INTO `fails`** and it becomes the gate its docstring described. Recorded
+rather than done, because cleaning ten CSS colour literals into tokens is a real edit with a visual risk on every page,
+and it wants a session with the browser audits in front of it.
+
+**AND THREE OF MY OWN PLANTS WERE WRONG BEFORE THE GATES WERE.** The first gutter test put the shorthand on a class no
+page uses, so the check could not fire; the first palette test planted a `:root` redefinition when the check looks for
+literals; the second planted `#ff0000`, which is not a palette value. **Each time the gate was fine and the test was
+bad**, which is the same lesson as everything else tonight, and it is why the table above records the defect planted
+rather than only the result.
+
 ## Log
 
 ## Log

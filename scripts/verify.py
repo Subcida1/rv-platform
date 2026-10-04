@@ -956,12 +956,36 @@ for lit in PALETTE:
         head = rest[rest.rfind("{", 0, m.start()):m.start()]
         leaked.append("style.css:%d uses %s outside the token layer, in %s"
                       % (line, lit, head.split("}")[-1].strip()[:44]))
+# AND A COLOUR THAT IS NOT IN THE PALETTE IS THE SAME DEFECT. The list above catches a
+# restatement of a KNOWN token; it cannot see a brand new hex literal, which is how a rogue
+# colour gets in and how the layer erodes. Found 2026-10-03 by planting both: #3d7fc2 outside the
+# token block failed the check, #ff00ff outside it did not. So any hex used INSIDE a rule below
+# the token layer is now reported too, which is what the docstring always claimed to be testing.
+rogue = []
+for m in re.finditer(r"#[0-9a-fA-F]{3,8}\b", rest):
+    before = rest[:m.start()]
+    if before.rfind("{") < before.rfind("}"):
+        continue                      # a hex sitting outside any rule, e.g. in a comment
+    line = before.count("\n") + 1
+    head = rest[rest.rfind("{", 0, m.start()):m.start()]
+    rogue.append("style.css:%d uses %s inside a rule outside the token layer, in %s"
+                 % (line, m.group(0), head.split("}")[-1].strip()[:44]))
 if leaked:
     for l in leaked[:10]:
         print("  " + l)
     fails.append("palette in one place")
-else:
-    print("  %d palette values, none restated outside the token layer" % len(PALETTE))
+if rogue:
+    # REPORTED, NOT FAILING, UNTIL THE EXISTING TEN ARE CLEANED UP. Making this a hard fail today
+    # would leave main red, and a red main is a notice Ty learns to ignore. The instances are real
+    # and are listed in the night queue; when they are gone, move this into `fails` and it becomes
+    # the gate the docstring always described.
+    for l in rogue[:14]:
+        print("  " + l)
+    print("  %d hex literal(s) in rules below the token layer. Reported rather than failing while "
+          "the existing ones are cleaned up." % len(rogue))
+if not leaked and not rogue:
+    print("  %d palette values, none restated outside the token layer, and no hex used in any rule below it"
+          % len(PALETTE))
 
 print("\n=== the tinted surfaces are blue tinted, visibly ===")
 # #f7f8fa is cool by three points, which reads as cream against a pure white card. A
