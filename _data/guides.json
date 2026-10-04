@@ -41,7 +41,8 @@
       "rv-battery-disconnect",
       "rv-macerator-toilet",
       "rv-trailer-wheel-bearings",
-      "rv-generator-sizing"
+      "rv-generator-sizing",
+      "rv-trip-planner"
     ]
   }
 }

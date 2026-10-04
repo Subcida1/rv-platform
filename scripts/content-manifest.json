@@ -26,21 +26,21 @@
     "invalidated_at": "2026-09-23"
   },
   "directory/arizona.html": {
-    "hash": "c081c6478799a4c4",
+    "hash": "a4a08a7eb4e3e59a",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/california.html": {
-    "hash": "278481af508afc81",
+    "hash": "54acab96afb6526b",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/colorado.html": {
-    "hash": "e5c14a73dc439221",
+    "hash": "580dcb982a5e29aa",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -54,14 +54,14 @@
     "sources": []
   },
   "directory/index.html": {
-    "hash": "dc12f7201e6c4574",
+    "hash": "b314eceab5571923",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/montana.html": {
-    "hash": "933dfa9204f04911",
+    "hash": "660f2e8970cc67dc",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -89,21 +89,21 @@
     "sources": []
   },
   "directory/texas.html": {
-    "hash": "ee04161405200fd0",
+    "hash": "c7f61ea99866bf00",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/utah.html": {
-    "hash": "9e7e752ab4867ccd",
+    "hash": "ce101ab245504f79",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/washington.html": {
-    "hash": "cec356d993d1f0af",
+    "hash": "2e05d5acb23c18b4",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -139,7 +139,7 @@
     "claims_date": "Oct 2, 2026"
   },
   "guides/index.html": {
-    "hash": "f2ab227e6c369462",
+    "hash": "e8da22f178fda336",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -506,6 +506,13 @@
     "claims": "1ce58e21088cbe64",
     "claims_date": "Oct 2, 2026"
   },
+  "guides/rv-trip-planner.html": {
+    "hash": "970d53975c895cb3",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
+  },
   "guides/rv-two-appliances-stopped.html": {
     "hash": "0d18cea9db2668d0",
     "status": "unverified",
@@ -577,7 +584,7 @@
     "claims_date": "Oct 2, 2026"
   },
   "index.html": {
-    "hash": "57e21ed1f465141c",
+    "hash": "320657ce4864fe93",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -761,7 +768,14 @@
     "sources": []
   },
   "tools/index.html": {
-    "hash": "8dc04733dbeea2ba",
+    "hash": "e3e7fbc3bb9b6473",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
+  },
+  "tools/snow-load.html": {
+    "hash": "6848015eece5704a",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
