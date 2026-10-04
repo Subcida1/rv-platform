@@ -23,7 +23,12 @@ const STATES = fs.readdirSync(path.join(ROOT, '_data/listings'))
   .filter(f => f.endsWith('.json')).map(f => f.replace(/\.json$/, '')).sort()
   .map(slug => {
     const d = JSON.parse(fs.readFileSync(path.join(ROOT, '_data/listings', slug + '.json'), 'utf8'));
-    return [slug, d.state, TOWN[slug] || (d.listings[0] || {}).base];
+    // The FIRST listing that names a base, not listings[0]. A state whose first record is a
+    // mobile technician with no base town would otherwise be dropped by the filter below and
+    // silently go untested -- which is the same sample-versus-population fault this list was
+    // made dynamic to fix. Found 2026-10-04: five of thirty-seven states were being skipped.
+    const withBase = d.listings.find(r => r.base);
+    return [slug, d.state, TOWN[slug] || (withBase || {}).base];
   }).filter(s => s[2]);
 
 function El(id) {
@@ -63,7 +68,16 @@ let bad = 0;
 for (const [slug, code, town] of STATES) {
   try {
     const r = drive(slug, code, town);
-    const ok = /Sorted for/.test(r.note) && r.note.includes(town);
+    // COMPARE CANONICALISED, because the finder echoes what it matched rather than what was
+    // typed. A reader typing "St. Louis" is answered "Sorted for Saint Louis" -- finder.js's
+    // canon() folds St. to saint and Mt. to mount, which is the same rule scripts/place_names.py
+    // documents on the Python side. Comparing the raw strings failed on Missouri the first time
+    // the directory covered a state whose base town begins with St., which is a test defect and
+    // not a page defect: the page had resolved the town correctly.
+    const canon = s => String(s).toLowerCase()
+      .replace(/^st\.?\s+/, 'saint ').replace(/^mt\.?\s+/, 'mount ')
+      .replace(/\./g, '').replace(/\s+/g, ' ').trim();
+    const ok = /Sorted for/.test(r.note) && canon(r.note).includes(canon(town));
     if (!ok) bad++;
     console.log('  ' + slug.padEnd(12) + (ok ? 'ok  ' : 'FAIL') + '  "' + town + '" -> ' +
       (r.note.slice(0, 52) || '(no note)') + '  | ' + r.count + ' listings, ' + r.regions.length + ' regions');

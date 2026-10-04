@@ -1,0 +1,1378 @@
+{
+  "state": "MI",
+  "name": "Michigan",
+  "regions": [
+    {
+      "key": "southeast-mi",
+      "label": "Detroit, Ann Arbor and the southeast"
+    },
+    {
+      "key": "west-mi",
+      "label": "Grand Rapids, Kalamazoo and the west"
+    },
+    {
+      "key": "north-mi",
+      "label": "Traverse City, Petoskey and the north"
+    },
+    {
+      "key": "thumb-mi",
+      "label": "Bay City, Saginaw and the Thumb"
+    },
+    {
+      "key": "up-mi",
+      "label": "The Upper Peninsula"
+    }
+  ],
+  "region_of": {
+    "Belleville": "southeast-mi",
+    "Brighton": "southeast-mi",
+    "Fenton": "southeast-mi",
+    "Howell": "southeast-mi",
+    "Novi": "southeast-mi",
+    "Sterling Heights": "southeast-mi",
+    "Taylor": "southeast-mi",
+    "Waterford": "southeast-mi",
+    "Albion": "west-mi",
+    "Allen": "west-mi",
+    "Coloma": "west-mi",
+    "Coopersville": "west-mi",
+    "Grand Rapids": "west-mi",
+    "Holland": "west-mi",
+    "Hudsonville": "west-mi",
+    "Muskegon": "west-mi",
+    "White Pigeon": "west-mi",
+    "Sturgis": "west-mi",
+    "East Tawas": "north-mi",
+    "Gaylord": "north-mi",
+    "Kalkaska": "north-mi",
+    "Linwood": "north-mi",
+    "Ludington": "north-mi",
+    "Mount Pleasant": "north-mi",
+    "Pentwater": "north-mi",
+    "Petoskey": "north-mi",
+    "Traverse City": "north-mi",
+    "Bay City": "thumb-mi",
+    "Saginaw": "thumb-mi",
+    "Baraga": "up-mi",
+    "Iron Mountain": "up-mi",
+    "Quinnesec": "up-mi",
+    "Sault Ste. Marie": "up-mi"
+  },
+  "listings": [
+    {
+      "n": "Mobile RV Tech Services",
+      "c": "East Tawas, MI",
+      "p": "(989) 820-7373",
+      "u": "https://www.mobilervtechservices.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Mobile RV Tech Services specializes in onsite RV repair, maintenance, and inspections and is based in East Tawas, Michigan. It services East Tawas, Tawas City, Oscoda, and up to 20 miles from its location in Iosco County from April 15 to December 15, and serves the south Houston, Texas area from January 1 to April 1. All service calls are performed by Master Certified RV Technician Steve Puvalowski, and the business is 100% mobile, servicing RVs at a house, campground, or storage unit.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "East Tawas",
+      "areas": [
+        "East Tawas",
+        "Tawas City",
+        "Oscoda"
+      ],
+      "region": "Iosco County",
+      "spec": "Seasonal in Michigan: April 15 - December 15 annually; serves south Houston, Texas January 1 - April 1.",
+      "evidence": {
+        "checked": "https://www.mobilervtechservices.com/",
+        "phone_quote": "(989) 820-7373",
+        "coverage_quotes": [
+          "Mobile RV Tech Services is based in East Tawas, Michigan, servicing East Tawas, Tawas City, Oscoda, and up to 20 miles from our location in Iosco County from April 15 - December 15."
+        ],
+        "type_quote": "Mobile RV Tech Services specializes in onsite RV repair, maintenance, and inspections",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Southwest Michigan RV Repair",
+      "c": "Kalamazoo, MI",
+      "p": "(269) 783-5558",
+      "u": "https://swmrvrepair.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Southwest Michigan RV Repair is a mobile RV repair service that sends a certified tech to a campsite, storage lot, or driveway. It lists RV roof repair, water damage repair, slide-out repair, awning repair, leveling and jack repair, air conditioner repair, furnace and heater repair, water heater repair, and electrical and plumbing repair. Mobile service calls in its area typically run $150 to $200 and most common repairs land between $300 and $900, with a full quote before work starts. Its techs cover Kalamazoo, Portage, Battle Creek, Grand Rapids, St. Joseph, Benton Harbor, South Haven, Niles, Sturgis, Three Rivers, Coldwater, and the campgrounds, lakes, and storage facilities in between.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": null,
+      "areas": [
+        "Kalamazoo",
+        "Portage",
+        "Battle Creek",
+        "Grand Rapids",
+        "St. Joseph",
+        "Benton Harbor",
+        "South Haven",
+        "Niles",
+        "Sturgis",
+        "Three Rivers",
+        "Coldwater"
+      ],
+      "region": "Southwest Michigan",
+      "spec": null,
+      "evidence": {
+        "checked": "https://swmrvrepair.com/",
+        "phone_quote": "(269) 783-5558",
+        "coverage_quotes": [
+          "Our techs cover Kalamazoo, Portage, Battle Creek, Grand Rapids, St. Joseph, Benton Harbor, South Haven, Niles, Sturgis, Three Rivers, Coldwater, and the campgrounds, lakes, and storage facilities in between."
+        ],
+        "type_quote": "Mobile RV Repair in Southwest Michigan — We Come to You",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      },
+      "reg": "west-mi"
+    },
+    {
+      "n": "Michigan Mobile RV Repair",
+      "c": "Linwood, MI",
+      "p": "(989) 239-0486",
+      "u": "https://michiganmobilervrepair.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "Michigan Mobile RV Repair (MMRR) provides on-site RV repair, bringing services directly to a customer's home, campsite, or storage facility. It offers air conditioner, furnace, and electrical repairs, roof and awning installations, appliance repairs such as refrigerators and hot water heaters, winterization, de-winterization, and spring prep, and pre-trip prep and inspections. It also offers emergency repair services to address unexpected issues promptly. The business is located at 526 North Garfield Road, Linwood, Michigan.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Linwood",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://michiganmobilervrepair.com/",
+        "phone_quote": "(989) 239-0486",
+        "coverage_quotes": [],
+        "type_quote": "Michigan Mobile RV Repair offers a comprehensive range of services, including air conditioner, furnace, and electrical repairs, as well as roof and awning installations.",
+        "emergency_quote": "We offer emergency repair services to address unexpected issues promptly, minimizing disruption to your trip.",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "RV Tech To Go LLC",
+      "c": "Waterford, MI",
+      "p": "248-517-5165",
+      "u": "https://rvtechtogo.com/",
+      "t": "mobile",
+      "e": true,
+      "r": true,
+      "d": "RV Tech To Go LLC is a mobile RV repair and maintenance service centered in Waterford that comes to a driveway, campground, or storage lot anywhere in Southeast Michigan. It performs RV repair on appliances, electrical, plumbing, slide-outs, and axles, and seasonal service on roof seals, A/C, water heater, wheel bearings, and generator. It is RVTAA certified, an NRVTA member, and a factory authorized Aqua-Hot service center, and it handles OEM and third-party warranty repairs on-site. Its service area extends within a 30-mile radius of Waterford across Oakland, Macomb, Wayne, Livingston, Genesee, and Lapeer counties.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Waterford",
+      "areas": [],
+      "region": "Southeast Michigan",
+      "spec": null,
+      "evidence": {
+        "checked": "https://rvtechtogo.com/",
+        "phone_quote": "248-517-5165",
+        "coverage_quotes": [
+          "Our service area extends throughout Southeast Michigan, centered in Waterford. We provide comprehensive mobile RV repair services within a 30-mile radius to ensure prompt and reliable service to our customers.",
+          "Oakland County Macomb County Wayne County Livingston County Genesee County Lapeer County"
+        ],
+        "type_quote": "Certified technicians who come to your driveway, campground, or storage lot anywhere in Southeast Michigan.",
+        "emergency_quote": "Monday - Friday: 8am - 6pm Emergency Service Available",
+        "roadside_quote": "Wheel, bearing, and brake service done on the shoulder so a breakdown does not end the trip.",
+        "licence": null
+      }
+    },
+    {
+      "n": "Eagle Eye RV Mobile Repair",
+      "c": "Muskegon, MI",
+      "p": "231.303.1776",
+      "u": "https://eagleeyerv.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "Eagle Eye RV Mobile Repair is a mobile RV repair, service, and rental business in Muskegon serving West Michigan. It fixes RVs, trailers, motorhomes, and caravans and lists mobile RV electrical repair, slide-out repair, roof repair, and appliance repair. Its Master Certified RV Service Technician gives a one-hour arrival window and calls 30 minutes before arrival, and the techs hold manufacturer certifications including Truma, Lippert, NPS, Aqua-Hot, Dish, Dexter, and Dometic. Rentals are available throughout Michigan, including Muskegon, Grand Rapids, and Holland.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Muskegon",
+      "areas": [
+        "Muskegon",
+        "Grand Rapids",
+        "Holland"
+      ],
+      "region": "West Michigan",
+      "spec": null,
+      "evidence": {
+        "checked": "https://eagleeyerv.com/",
+        "phone_quote": "231.303.1776",
+        "coverage_quotes": [
+          "We fix RVs, trailers, motorhomes, and caravans all across Muskegon and West Michigan.",
+          "Our fully inspected, well-maintained RV rentals are available throughout Michigan, including Muskegon, Grand Rapids, Holland, and the surrounding West Michigan area."
+        ],
+        "type_quote": "WEST MICHIGAN'S ONLY RV MOBILE REPAIR AND RENTAL SERVICE",
+        "emergency_quote": "Service Hours Mon-Sat 9-5pm Emergency Service 5pm-10pm Every Day",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Gilley Mobile RV Service LLC",
+      "c": "Sault Ste. Marie, MI",
+      "p": "512-574-1901",
+      "u": "https://gilleymobilervservice.com/michigan",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "Gilley Mobile RV Service LLC offers premium mobile RV service and repair in the eastern part of the Upper Peninsula of Michigan, working weekends and coming to the customer. Its mobile RV service area includes Sault Ste. Marie, St. Ignace, Mackinaw City, Newberry, Barbeau, Brimley, Carp Lake, Cedarville, Dafter, Hessel, Kinross, Neebish Island, Pickford, Rudyard, and Sugar Island. It does mobile RV repair on Class A, Class B, and Class C motorhomes (RV portion only) and towables including fifth wheels and travel trailers. The site states it will not service the eastern Upper Peninsula for the 2026 season.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Sault Ste. Marie",
+      "areas": [
+        "Sault Ste. Marie",
+        "St. Ignace",
+        "Mackinaw City",
+        "Newberry",
+        "Brimley",
+        "Carp Lake",
+        "Cedarville"
+      ],
+      "region": "eastern Upper Peninsula",
+      "spec": "Located in the eastern Upper Peninsula May through October annually; site states it will not service the eastern Upper Peninsula of Michigan for the 2026 season. Does not service solar systems, brakes on motorized equipment, transmissions, engines, tires, generators, or major body repairs.",
+      "evidence": {
+        "checked": "https://gilleymobilervservice.com/michigan",
+        "phone_quote": "CALL TODAY FOR YOUR APPOINTMENT: 512-574-1901",
+        "coverage_quotes": [
+          "We are located in the eastern part of the Upper Peninsula of Michigan from",
+          "May through October (annually). Our mobile RV service area includes:",
+          "Serving Sault Ste. Marie, St. Ignace, Mackinaw City, Newberry, & Surrounding Areas:"
+        ],
+        "type_quote": "As mobile RV technicians, we do mobile RV repair on Class A, Class B, and Class C motorhomes (RV portion only) and towables including fifth wheels and travel trailers.",
+        "emergency_quote": "Michigan After Hours Labor Rate:",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Roaming RV Services",
+      "c": "Novi, MI",
+      "p": "(586) 248-3669",
+      "u": "https://roamingrvrepair.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Roaming RV Services is a mobile RV and trailer repair provider based in Novi, Michigan, serving Oakland County and 20 miles around. All service calls are performed by certified RV technician Kyle Haskell, and the business is 100% mobile, servicing an RV at a house, office, campground, or storage unit. It specializes in RV and trailer maintenance, repair, wheel bearing service, weight distribution hitch setups, and insurance or warranty claims, and repairs most makes and models of tow-behind trailers including utility, dump, and enclosed trailers.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Novi",
+      "areas": [
+        "Novi"
+      ],
+      "region": "Oakland County",
+      "spec": null,
+      "evidence": {
+        "checked": "https://roamingrvrepair.com/",
+        "phone_quote": "Call Now (5862483669)",
+        "coverage_quotes": [
+          "Roaming RV Services is Oakland County, Michigan's go-to mobile RV & trailer repair service provider for local, reliable on-site repairs and maintenance.",
+          "Serving Novi, MI - 48375 and 20 miles around, we specialize in RV & trailer maintenance, RV & trailer repair, wheel bearing service, weight distribution hitch setups, and insurance or warranty claims"
+        ],
+        "type_quote": "Roaming RV Services can fix and service most of your RV needs right at the convenience of your RV's location, within two visits. We are 100% mobile and service your RV at your house, office, campground or storage unit.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Fireside RV Services LLC",
+      "c": "Fenton, MI",
+      "p": "810.214.2648",
+      "u": "https://www.firesidervrepair.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Fireside RV Services LLC is an RV service and repair business located in Fenton, Michigan, that describes itself as committed to keeping customers out of the shop and by the fireside. Service is performed by a Master Certified RV Technician who is factory trained in Newmar, Lippert, Truma, Fleetwood, Rev RV, Aquahot and Oasis. Service call rates depend on the distance traveled from Fenton, MI, and pricing or estimates are available by phone, text or email.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Fenton",
+      "areas": [
+        "Fenton"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.firesidervrepair.com/",
+        "phone_quote": "Phone: 810.214.2648",
+        "coverage_quotes": [
+          "Service call rates depend on the distance traveled from Fenton, MI"
+        ],
+        "type_quote": "RV Service and Repair",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Sojourn RV Service",
+      "c": "Traverse City, MI",
+      "p": "(231) 492-0715",
+      "u": "https://sojournservice.com/services",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Sojourn RV Service is a mobile RV repair and maintenance business serving Traverse City, Michigan. It offers professional, on-site maintenance and repairs and states that its Advanced Certified Technician handles electrical and power systems, plumbing and water systems, absorption and residential refrigerators, air conditioners, furnaces, roof sealant, slideouts and awnings, electric and hydraulic leveling systems, and wheel bearings and brakes. It also offers generator services, roof maintenance, appliance repair, and seasonal de-winterization and winterization packages.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Traverse City",
+      "areas": [
+        "Traverse City"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://sojournservice.com/services",
+        "phone_quote": "Call Us For Mobile RV Service: (231) 492-0715",
+        "coverage_quotes": [
+          "Traverse City, MI"
+        ],
+        "type_quote": "Our Advanced Certified Technician handles a full range of RV repairs, including:",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Red Wrench Mobile RV Repair",
+      "c": "Traverse City, MI",
+      "p": "231-632-4150",
+      "u": "https://redwrenchrv.com/mobile-rv-repair/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Red Wrench Mobile RV Repair is located in Traverse City, Michigan, and serves the surrounding area. Customers call or text Pete at (231) 632-4150 for mobile RV repair needs, and for RV inspections they call or email for a quote and to schedule an appointment. The business is based at Traverse City, MI 49686.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Traverse City",
+      "areas": [
+        "Traverse City"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://redwrenchrv.com/mobile-rv-repair/",
+        "phone_quote": "231-632-4150",
+        "coverage_quotes": [
+          "We are currently located in Traverse City, Michigan and serve the surrounding area."
+        ],
+        "type_quote": "Call or text Pete at (231) 632-4150 for your mobile RV repair needs.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Alpine 45 Mobile RV Tech",
+      "c": "Kalkaska, MI",
+      "p": "989.256.2416",
+      "u": "https://alpine45mobilervtech.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Alpine 45 Mobile RV Tech is based in Kalkaska, Michigan, and provides mobile RV repair and service throughout Northern Michigan within a 50-mile service area. Services are performed by RV Technical Institute Certified RV Technician Ron Ellerman, and it is partnered with Forest River as a warranty service provider. It services and repairs areas that include the kitchen, bathroom, sleeping areas, and other interior amenities, plus coach electrical systems, HVAC units, generators, leveling systems, and converters. It does not service or repair powertrain or drivetrain components of drivable coaches.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Kalkaska",
+      "areas": [
+        "Kalkaska",
+        "Traverse City"
+      ],
+      "region": "Northern Michigan",
+      "spec": "We do not service or repair any type of powertrain or drivetrain components of drivable coaches which directly contribute to the vehicle's propulsion. Serving the Traverse City area from May to November.",
+      "evidence": {
+        "checked": "https://alpine45mobilervtech.com/",
+        "phone_quote": "989.256.2416",
+        "coverage_quotes": [
+          "Alpine 45 Mobile RV Tech is based in Kalkaska, Michigan and provides mobile RV repair and service throughout Northern Michigan within a 50-mile service area.",
+          "Serving Traverse City, Michigan area from May to November."
+        ],
+        "type_quote": "Alpine 45 Mobile RV Tech provides a wide range of RV services, including repair, diagnostics, inspections, relocations, and maintenance.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Superior Mobile RV Repair",
+      "c": "Baraga, MI",
+      "p": "(970) 415-3306",
+      "u": "https://superiormobilervrepair.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Superior Mobile RV Repair provides 100% mobile RV repair servicing the Western Upper Peninsula of Michigan and is based out of Baraga, MI. It provides services within a 50 mile area of its location and comes to the customer, and it has no shop, so an RV cannot be brought to it. It works on most parts of RVs including heaters, ACs, water heaters, awnings, RV refrigerators, slides, interior lighting, plumbing, and tank replacements, and it cannot work on anything drive train related.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Baraga",
+      "areas": [],
+      "region": "Western Upper Peninsula of Michigan",
+      "spec": "We will only be providing services within a 50 mile area of our location. We can't work on anything drive train related which includes brakes, towing functions, tires, and operating lights.",
+      "evidence": {
+        "checked": "https://superiormobilervrepair.com/",
+        "phone_quote": "Call or Text: (970) 415-3306",
+        "coverage_quotes": [
+          "Servicing the Western Upper Peninsula of Michigan.",
+          "We are based out of Baraga MI.",
+          "We will only be providing services within a 50 mile area of our location."
+        ],
+        "type_quote": "100% mobile rv repair",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "906 RV Services",
+      "c": "Iron Mountain, MI",
+      "p": "906-828-1411",
+      "u": "https://906rvservices.com/contact",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "906 RV Services is a mobile RV repair business run by Bryan, an RVTAA certified technician trained in air conditioners, water heaters, furnaces, refrigerators, hydraulics and electric leveling jacks, hydraulics and electric slideouts, and exterior maintenance. It services an RV at a customer's home, campground, or storage unit, and services Michigan's Upper Peninsula and Northeast Wisconsin from May to December 2026, with its home location in Iron Mountain, Michigan.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Iron Mountain",
+      "areas": [],
+      "region": "Michigan's Upper Peninsula",
+      "spec": "Servicing Michigan’s Upper Peninsula & Northeast Wisconsin from May to December 2026, and Florida’s Emerald Coast from January to April 2027.",
+      "evidence": {
+        "checked": "https://906rvservices.com/contact",
+        "phone_quote": "906-828-1411 (9068281411)",
+        "coverage_quotes": [
+          "Michigan's Upper Peninsula: May 2026 - December 2026",
+          "Iron Mountain, Michigan 49801, United States"
+        ],
+        "type_quote": "Mobile RV Repair Services | 906 RV Services",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Veurink's RV Center",
+      "c": "Grand Rapids, MI",
+      "p": "(616) 965-9631",
+      "u": "https://www.veurinksrv.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Veurink's RV Center offers RV service and repair through a dedicated service department at physical locations in Grand Rapids and Newaygo, Michigan. It services motorhomes, fifth wheels, and travel trailers and asks customers to book a service appointment by phone or service request form. It also names Rockford and Grand Haven among the areas it serves. The Grand Rapids location is at 7144 Division Ave S.",
+      "g": [
+        "service center"
+      ],
+      "base": "Grand Rapids",
+      "areas": [
+        "Grand Rapids",
+        "Newaygo",
+        "Grand Haven",
+        "Rockford"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.veurinksrv.com/rv-service",
+        "phone_quote": "Book a service appointment with us by dialing (616) 965-9631",
+        "coverage_quotes": [
+          "Contact Veurink’s RV Center in one of our physical locations in Grand Rapids or Newaygo, MI. We proudly serve Grand Haven and Rockford, so reach out today!"
+        ],
+        "type_quote": "We are your trusted camper dealer in the Grand Rapids and Newaygo, MI, areas and are happy to offer top-notch RV service and repair through our dedicated service department.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Speed Wrench",
+      "c": "Hudsonville, MI",
+      "p": "616-669-8700",
+      "u": "https://www.speedwrench.com/rv-repair/",
+      "t": "center",
+      "e": false,
+      "r": true,
+      "d": "Speed Wrench is a certified full-service RV and motorhome repair company in Hudsonville serving West Michigan. Its state-of-the-art motorhome repair facility has eighteen bays including two full-service alignment bays and services all makes and models of motorized and towable RVs. Services include major repairs and regular motorhome maintenance, collision repairs, water damage repair, full body paint, slide-outs, plumbing, electrical, heating and cooling, and interior or exterior issues. Its listed service items include alignments, axle service, brakes, driveline, engines, generator service, steering, and suspension.",
+      "g": [
+        "service center"
+      ],
+      "base": "Hudsonville",
+      "areas": [],
+      "region": "West Michigan",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.speedwrench.com/rv-repair/",
+        "phone_quote": "Phone: 616-669-8700",
+        "coverage_quotes": [
+          "Are you looking for RV or motorhome repair in West Michigan? Speed Wrench is a certified full-service RV repair company that can help you!"
+        ],
+        "type_quote": "Our state-of-the-art motorhome repair facility is equipped to service all makes and models of motorized and towable RVs.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Lynden RV Center",
+      "c": "Coopersville, MI",
+      "p": "616-402-9470",
+      "u": "https://lyndenrvcenter.com/service/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Lynden RV Center runs an RV service department in Coopersville, Michigan, just off I-96, serving all of West Michigan including Coopersville, Grand Rapids, and Muskegon. Its certified staff handles travel trailer, motorhome, and fifth wheel service needs, with roof repair and replacement, metal side wall repair and replacement, awning repair and replacement, winterizing, insurance claims, and warranty repair. It is a certified repair facility for major RV manufacturers like Forest River and handles major repairs and warranty work from start to finish.",
+      "g": [
+        "service center"
+      ],
+      "base": "Coopersville",
+      "areas": [
+        "Coopersville",
+        "Grand Rapids",
+        "Muskegon"
+      ],
+      "region": "West Michigan",
+      "spec": null,
+      "evidence": {
+        "checked": "https://lyndenrvcenter.com/service/",
+        "phone_quote": "616.402.9470",
+        "coverage_quotes": [
+          "Serving all of West Michigan: Coopersville, Grand Rapids, Muskegon, Michigan."
+        ],
+        "type_quote": "Our certified staff is here for all of your travel trailer, motorhome, or fifth wheel service needs.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "JTS RV Inc",
+      "c": "Pentwater, MI",
+      "p": "(231) 869-5033",
+      "u": "https://www.jtsrvrepair.com/repairs",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "JTS RV Inc is an RV and motorhome repair business in Pentwater, Michigan, with over 62 years of experience. It has a three-bay repair shop where experienced technicians perform a full range of interior and exterior repairs, and on-site service and same-day service may be available. It offers structural, interior, and exterior repairs, insurance work, state-of-the-art computer diagnostics for RV appliances, on-site repair and mobile service, leveling and blocking, appliance repair and replacement, awning repair or replacement, and propane fill.",
+      "g": [
+        "service center"
+      ],
+      "base": "Pentwater",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.jtsrvrepair.com/repairs",
+        "phone_quote": "(231) 869-5033",
+        "coverage_quotes": [],
+        "type_quote": "At JTS RV Inc, you can get your motorhome repairs taken care of in one of the three bays in our repair shop.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Evergreen RV Collision",
+      "c": "Albion, MI",
+      "p": "269-558-8127",
+      "u": "https://evergreenrvcollision.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Evergreen RV Collision in Albion, Michigan repairs anything from a scratch to major structural damage on recreational vehicles. Whether a customer drives a Motor Coach or pulls a fifth wheel or traditional trailer, the shop says it has what it takes to put it back to its original condition, and it describes itself as a paint match specialist for all brands of RVs large and small. It works with most insurance companies and has 48 years of experience in collision repairs. The shop is at 404 North Albion Street and appointments are recommended.",
+      "g": [
+        "body shop"
+      ],
+      "base": "Albion",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://evergreenrvcollision.com/",
+        "phone_quote": "Telephone: 269-558-8127",
+        "coverage_quotes": [],
+        "type_quote": "Evergreen RV Collision in Albion, Michigan, is here to repair anything from a scratch to major structural damage.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Motor City RV",
+      "c": "Brighton, MI",
+      "p": "(248) 986-8000",
+      "u": "https://www.motorcityrv.com/",
+      "t": "center",
+      "e": false,
+      "r": true,
+      "d": "Motor City RV is a full service RV repair center in Brighton, Michigan, and is a service provided by Motor City Truck Collision. It states it is capable of any and all mechanical repairs, electrical repairs, chassis repair, engine, transmission, steering, gear boxes, maintenance, fabrication, body restoration, and interior restoration, and works on all makes and models of RVs, campers, horse trailers, motorhomes, and motor coaches. It performs oil changes on all generators and motorhomes, performs chassis work on motorhomes, and runs a complete body shop for paint issues and insurance repairs.",
+      "g": [
+        "body shop"
+      ],
+      "base": "Brighton",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.motorcityrv.com/",
+        "phone_quote": "Full Service RV Shop Call(248) 986-8000 (2489868000)",
+        "coverage_quotes": [],
+        "type_quote": "We are a full service RV Repair Center capable of any and all mechanical repairs, electrical repairs, chassis repair, engine, transmission, steering, gear boxes, maintence, fabrication, body restoration, and interior restoration.",
+        "emergency_quote": null,
+        "roadside_quote": "We DO perform chassis work on Motorhomes.",
+        "licence": null
+      }
+    },
+    {
+      "n": "Schroeder's Auto & RV",
+      "c": "Howell, MI",
+      "p": "(517) 548-0144",
+      "u": "https://www.schroedersbodyshop.com/rv-repair-in-howell-mi/",
+      "t": "center",
+      "e": false,
+      "r": true,
+      "d": "Schroeder's Auto & RV in Howell, Michigan, is a family-owned business that has been serving RV drivers in Southeast Michigan for over 50 years. It repairs mechanical issues for road going recreational vehicles, listing chassis, engine tune ups and internal repairs and replacements, exhausts, tires, transmission service, and wheel bearings and brake service, and does RV body work along the I-96 corridor including body repair, expert color matching, glass and siding, roofing, and water damage. It also handles RV house repairs such as appliances, electrical, heating and cooling, hitches, hydraulics and slide out issues, plumbing, and winterizing, and offers Supersteer F53 Performance Package suspension upgrades.",
+      "g": [
+        "body shop"
+      ],
+      "base": "Howell",
+      "areas": [
+        "Howell",
+        "Brighton",
+        "Hartland",
+        "Fowlerville"
+      ],
+      "region": "Southeast Michigan",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.schroedersbodyshop.com/rv-repair-in-howell-mi/",
+        "phone_quote": "Call (517) 548-0144 (517-548-0144)",
+        "coverage_quotes": [
+          "Schroeder’s has been serving RV drivers in Southeast Michigan for over 50 years.",
+          "Schroeders provides the ultimate RV maintenance and is located in Howell, MI."
+        ],
+        "type_quote": "We repair any mechanical issues for all road going recreational vehicles. Services include but are not limited to: • Chassis • Engine, tune ups, internal repairs, replacements • Exhausts • Tires, rotating and balancing • Transmission Service • Wheel Bearings and Brake Service",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Metal Works Body Shop",
+      "c": "Coopersville, MI",
+      "p": "616-997-4004",
+      "u": "https://www.metalworksbodyshop.com/rv-collision-repair.html",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Metal Works Body Shop in Coopersville, Michigan, runs an RV Collision Center providing collision repair and restoration services for RVs of all makes and models. It states that whether it is a minor scratch or major collision, its experienced technicians use state-of-the-art equipment and premium materials to restore an RV to its original condition or better. The shop is at 342 River Street, Coopersville, and is open Monday to Friday 8:30AM to 5PM with Saturday by appointment only.",
+      "g": [
+        "body shop"
+      ],
+      "base": "Coopersville",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.metalworksbodyshop.com/rv-collision-repair.html",
+        "phone_quote": "616-997-4004",
+        "coverage_quotes": [],
+        "type_quote": "At Your RV Collision Center, we take pride in providing top-notch collision repair and restoration services for RVs of all makes and models.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Lakeside Collision",
+      "c": "Shelby Township, MI",
+      "p": "(586) 532-8690",
+      "u": "https://www.lakesidecollisioninc.com/rv-marine-repair",
+      "t": "center",
+      "e": false,
+      "r": true,
+      "d": "Lakeside Collision handles RV and marine vehicle repairs at locations in Clinton Township and Shelby Township, Michigan. Its comprehensive RV and boat services include straightening an RV's frame, RV body repairs, RV chassis repairs, unibody repairs, restoring structural integrity, chip and crack repairs, windshield replacements, glass tinting, scratch repair, spot painting, and paint matching. It offers free estimates with same-day estimates available, carries a lifetime warranty on all repairs, and offers senior and military discounts. The Shelby Township shop is at 14665 23 Mile Road.",
+      "g": [
+        "body shop"
+      ],
+      "base": null,
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.lakesidecollisioninc.com/rv-marine-repair",
+        "phone_quote": "(586) 532-8690",
+        "coverage_quotes": [
+          "SHELBY TOWNSHIP",
+          "14665 23 Mile Road Shelby Township, MI 48315"
+        ],
+        "type_quote": "Comprehensive RV and Boat Services Include",
+        "emergency_quote": null,
+        "roadside_quote": "RV chassis repairs",
+        "licence": null
+      },
+      "reg": "southeast-mi"
+    },
+    {
+      "n": "Michigan MD Alignment",
+      "c": "Allen, MI",
+      "p": "517-795-4298",
+      "u": "https://www.mimdalignment.com/services/rv-repair",
+      "t": "center",
+      "e": false,
+      "r": true,
+      "d": "Michigan MD Alignment offers comprehensive recreational vehicle service for all makes and models of RVs, motorhomes, campers, and trailers from Allen, Michigan, just outside Coldwater. Its common RV services include brake inspection and suspension repair, slide-out adjustments and mechanical alignments, electrical diagnostics and electrical systems repair, HVAC service and interior plumbing repairs, and chassis, steering, and undercarriage inspection. It specializes in working on large Class A and diesel pusher motorhomes, as well as towable RVs, fifth wheels, and travel trailers, and provides RV service in Coldwater, MI, and the surrounding area of Allen, MI.",
+      "g": [
+        "service center"
+      ],
+      "base": "Allen",
+      "areas": [
+        "Allen",
+        "Coldwater"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.mimdalignment.com/services/rv-repair",
+        "phone_quote": "Call Michigan MD Alignment at 517-795-4298.",
+        "coverage_quotes": [
+          "We’re located at 130 West Chicago Road, Suite C, Allen, Michigan, 49227—just outside Coldwater. We provide RV service in Coldwater, MI, and also serve the surrounding area of Allen, MI."
+        ],
+        "type_quote": "Michigan MD Alignment offers comprehensive recreational vehicle service for all makes and models of RVs, motorhomes, campers, and trailers.",
+        "emergency_quote": null,
+        "roadside_quote": "Chassis, steering, and undercarriage inspection",
+        "licence": null
+      }
+    },
+    {
+      "n": "Vicars Trailer Sales",
+      "c": "Taylor, MI",
+      "p": "(313) 291-9000",
+      "u": "https://www.vicarstrailersales.com/our-services",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Vicars Trailer Sales is a full-service dealership in Taylor, Michigan, that handles storage, warranty and maintenance service needs for RV users throughout Michigan, Ohio and Wisconsin. Its RV Service Department's most popular services are roof washing, roof inspections, bearing packs, and winterizing and de-winterizing, and its certified service technicians specialize in wiring brake controllers, hitch packages, and sway controls. It is an authorized service center for Dometic, Lippert, Dexter, Norcold, Carefree of Colorado, Atwood, Suburban, HydroFlame, and Thetford, and works with all insurance companies as a Premier Provider with Progressive Insurance Company.",
+      "g": [
+        "service center"
+      ],
+      "base": "Taylor",
+      "areas": [
+        "Taylor"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.vicarstrailersales.com/our-services",
+        "phone_quote": "(313) 291-9000",
+        "coverage_quotes": [
+          "We are close to those in the Metro-Detroit area, but also convenient to many RV users throughout Michigan and even some folks in Ohio and Wisconsin."
+        ],
+        "type_quote": "Our RV Service Department helps you maintain and service your RV.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "National RV Detroit",
+      "c": "Belleville, MI",
+      "p": "(734) 704-1331",
+      "u": "https://www.nationalrvdetroit.com/services",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "National RV Detroit is a full-service RV dealership in Belleville, Michigan, with a service department staffed by factory-trained, certified technicians. Its RV Service and Repair covers routine maintenance to major repairs on all makes and models, and it is an authorized warranty service center for all major RV manufacturers, handling claims start to finish. The service department is at 44700 N I-94 Service Dr, Belleville, MI 48111, and is open Monday to Friday 9:00 AM to 5:00 PM.",
+      "g": [
+        "service center"
+      ],
+      "base": "Belleville",
+      "areas": [
+        "Belleville"
+      ],
+      "region": "Metro Detroit",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.nationalrvdetroit.com/services",
+        "phone_quote": "(734) 704-1331 (7347041331)",
+        "coverage_quotes": [
+          "44700 N I-94 Service Dr, Belleville, MI 48111"
+        ],
+        "type_quote": "Full-service facility with factory-trained, certified technicians.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Price Right RV",
+      "c": "Sterling Heights, MI",
+      "p": "586-446-6000",
+      "u": "https://www.pricerightrv.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Price Right RV performs RV service and repairs at two Michigan locations, one in DeWitt serving Lansing and Mid-Michigan and one in Sterling Heights serving Metro Detroit. Its service team handles RV maintenance, diagnostics, repairs, seasonal service, and selected accessory installations, and it inspects and services common RV systems including roof and seals, slide-outs, electrical, appliances, awnings, and winterization and spring preparation. Service is performed at the DeWitt and Sterling Heights shops. The Sterling Heights shop is at 35235 Mound Rd.",
+      "g": [
+        "service center"
+      ],
+      "base": "Sterling Heights",
+      "areas": [
+        "Sterling Heights",
+        "DeWitt",
+        "Lansing"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.pricerightrv.com/rv-service",
+        "phone_quote": "Metro Detroit, MI Call: 586-446-6000",
+        "coverage_quotes": [
+          "Serving Metro Detroit",
+          "Serving Lansing and Mid-Michigan"
+        ],
+        "type_quote": "Price Right RV handles a range of RV maintenance, diagnostics, repairs, seasonal service, and selected accessory installations.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Northern RV Center",
+      "c": "Quinnesec, MI",
+      "p": "(906) 774-1052",
+      "u": "https://www.northernrvs.com/service-repair-rvs-dealership--service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Northern RV Center runs a service department in Quinnesec, Michigan, staffed by factory-trained service technicians available to help with recreational vehicle repair needs. It handles appliance repairs, accident damage, and installing new accessories, and asks customers to call, visit, or contact it to make an appointment. It is proud to provide quality service in the Quinnesec area.",
+      "g": [
+        "service center"
+      ],
+      "base": "Quinnesec",
+      "areas": [
+        "Quinnesec"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.northernrvs.com/service-repair-rvs-dealership--service",
+        "phone_quote": "Phone: (906) 774-1052",
+        "coverage_quotes": [
+          "We are proud to provide quality service in the Quinnesec area."
+        ],
+        "type_quote": "The Northern RV Center service department, staffed by factory-trained service technicians, is available to help with all your recreational vehicle repair needs.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Tri City RV",
+      "c": "Bay City, MI",
+      "p": "989.671.9050",
+      "u": "https://tricityrv.com/rv-service-center/insurance-repair",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Tri City RV in Bay City, Michigan, runs an RV insurance and collision repair center recognized by major RV insurance companies as a premier service provider. Its skilled technicians specialize in fiberglass repair, siding replacement, painting, roof damage, fire damage, electrical issues, rodent infestation, awning wind damage, collision damage, tree damage, and tire blowout repair. Its wider camper repair work includes glass repair, wiring, trailer brakes, air conditioning repairs, brake controls, hitching, awning replacement, aluminum siding replacement, roof repair and replacement, and slideout repair and replacement. It is at 4501 E. Wilder Road, Bay City.",
+      "g": [
+        "body shop"
+      ],
+      "base": "Bay City",
+      "areas": [
+        "Bay City"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://tricityrv.com/rv-service-center/insurance-repair",
+        "phone_quote": "989.671.9050 (9896719050)",
+        "coverage_quotes": [
+          "4501 E. Wilder Road Bay City, MI 48706"
+        ],
+        "type_quote": "Rated as a top-quality RV insurance repair facility in Michigan",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Airstream of Northern Michigan",
+      "c": "Traverse City, MI",
+      "p": "(231) 486-5853",
+      "u": "https://www.airstreamofnorthernmichigan.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Airstream of Northern Michigan offers RV service and repair at locations in Traverse City and Marquette, Michigan. Its experts at RV service are outfitted to help fix any issue, and customers can fill out a form or bring their RV by for a check. The Traverse City location is at 855 W. Blue Star Dr., and the Marquette location is at 1015 W Baraga Ave.",
+      "g": [
+        "service center"
+      ],
+      "base": "Traverse City",
+      "areas": [
+        "Traverse City",
+        "Marquette"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.airstreamofnorthernmichigan.com/rv-service",
+        "phone_quote": "Sales 231-486-5848 Service(231) 486-5853 (231-486-5853)",
+        "coverage_quotes": [
+          "855 W. Blue Star Dr., Traverse City, MI 49685",
+          "1015 W Baraga Ave, Marquette, MI 49855"
+        ],
+        "type_quote": "We have experts at RV service that are outfitted to help fix any issue that you might be having.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Nature & Me RV",
+      "c": "Traverse City, MI",
+      "p": "(231) 498-3019",
+      "u": "https://www.natureandmerv.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Nature & Me RV runs a service department in Traverse City, Michigan, staffed with highly trained technicians dedicated to keeping an RV in great working order. It has the equipment and experience to get a motorhome and travel trailer in prime shape and works to get customers in and out of the shop efficiently. It is proud to provide quality service in the Traverse City area.",
+      "g": [
+        "service center"
+      ],
+      "base": "Traverse City",
+      "areas": [
+        "Traverse City"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.natureandmerv.com/rv-service",
+        "phone_quote": "Call (231) 498-3019 (2314983019)",
+        "coverage_quotes": [
+          "We are proud to provide quality service in the Traverse City area"
+        ],
+        "type_quote": "Our service department is staffed with highly trained technicians dedicated to making sure your RV stays in great working order for years to come.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Double Eagle RV Repair",
+      "c": "White Pigeon, MI",
+      "p": "(269) 503-9733",
+      "u": "https://www.doubleeaglerv.com/rv-repair",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "Double Eagle RV Repair is a local shop with mobile capability based in White Pigeon, Michigan, that can serve customers up to 100 miles away. Its RV Repair service focuses on accurate diagnostics, durable repairs, and restoring an RV to road-ready condition, and it handles generator failures and charging system malfunctions, appliance repairs including refrigerators and furnaces, electrical system faults, propane system troubleshooting, and damage repair after collisions or impacts. It services travel trailers, fifth wheels, motorhomes, camper vans, and pop-ups, and advises whether mobile service is viable or if the RV should be brought to its shop for heavier work.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "White Pigeon",
+      "areas": [],
+      "region": null,
+      "spec": "Client can serve customers up to 100 miles.",
+      "evidence": {
+        "checked": "https://www.doubleeaglerv.com/rv-repair",
+        "phone_quote": "(269) 503-9733",
+        "coverage_quotes": [
+          "White Pigeon, MI (Client can serve customers up to 100 miles)"
+        ],
+        "type_quote": "At Double Eagle Rv Repair, our RV Repair service focuses on accurate diagnostics, durable repairs, and restoring your RV to road-ready condition using the right parts and proven procedures.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Lee's Collision Center & Body Shop",
+      "c": "Muskegon, MI",
+      "p": "231-737-5266",
+      "u": "https://www.leescollisionmuskegon.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Lee's Collision Center & Body Shop is a locally owned family business in Muskegon, Michigan, that specializes in quality work and above average service. It repairs automobiles, trucks, motorcycles, boats, RVs, campers, and personal watercraft, and helps customers through insurance claims. It has served the West Michigan area for over 75 years and offers lifetime warranties on collision repair work. The shop is at 3471 S Getty St, Muskegon.",
+      "g": [
+        "body shop"
+      ],
+      "base": "Muskegon",
+      "areas": [
+        "Muskegon"
+      ],
+      "region": "West Michigan",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.leescollisionmuskegon.com/",
+        "phone_quote": "Call us at 231-737-5266",
+        "coverage_quotes": [
+          "3471 S Getty St - Muskegon",
+          "Lee's has been serving the West Michigan area with integrity and distinction for over 75 years."
+        ],
+        "type_quote": "Auto, Boats, Cycles, RV's -Professional Quality Repairs",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Krenek RV Super Center",
+      "c": "Coloma, MI",
+      "p": "269-468-9819",
+      "u": "https://www.krenekrv.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Krenek RV Super Center runs an RV and camper service department in Coloma, Michigan, near Kalamazoo, MI and La Porte, IN. It has top factory-trained technicians on duty during all business hours and honors all warranty work and favors any recalls. It accommodates any type of problem with Class A, Class B, and Class C motorhomes, fifth wheels, travel trailers, toy haulers, pop up campers, or park trailers. It is located at 6542 Ryno Road, Exit 39 off of I-94.",
+      "g": [
+        "service center"
+      ],
+      "base": "Coloma",
+      "areas": [
+        "Coloma",
+        "Kalamazoo"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.krenekrv.com/rv-service",
+        "phone_quote": "269-468-9819",
+        "coverage_quotes": [
+          "Get the job done right when you service your RV or camper at Krenek RV Super Center in Coloma near Kalamazoo, MI and La Porte, IN."
+        ],
+        "type_quote": "We accommodate any type of problem that may arise with your Class A, Class B, and Class C motorhomes, fifth wheels, travel trailers, toy haulers, pop up campers or park trailers in an efficient, precise, and timely manner.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Hamilton's RV",
+      "c": "Saginaw, MI",
+      "p": "(989) 272-9323",
+      "u": "https://hamiltonsrv.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Hamilton's RV is a family-owned dealership in Saginaw, Michigan, that has served Saginaw, Bay City, Midland, and Flint for over 30 years. Its full-service center has certified technicians who handle everything from routine maintenance to major repairs on all makes and models, and warranty work is welcome. It also has a parts department and offers RV delivery options. The showroom is at 1580 Tittabawassee Rd, Saginaw.",
+      "g": [
+        "service center"
+      ],
+      "base": "Saginaw",
+      "areas": [
+        "Saginaw",
+        "Bay City",
+        "Midland",
+        "Flint"
+      ],
+      "region": "central Michigan",
+      "spec": null,
+      "evidence": {
+        "checked": "https://hamiltonsrv.com/",
+        "phone_quote": "(989) 272-9323 (9892729323)",
+        "coverage_quotes": [
+          "Located in Saginaw, Michigan — conveniently serving Bay City, Midland, Flint, and all of central Michigan."
+        ],
+        "type_quote": "Certified technicians handle everything from routine maintenance to major repairs on all makes and models.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Krapohl Body Shop",
+      "c": "Mount Pleasant, MI",
+      "p": "989-773-3105",
+      "u": "https://www.krapohlford.com/body-shop.html",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Krapohl Body Shop in Mount Pleasant, Michigan, has served mid and northern Michigan with collision repair for more than 70 years. It welcomes any make or model including RVs, trailers, and off-road vehicles, and its services include auto body repair and collision repair, RV body and camper repair, commercial vehicle repair, vehicle painting, hassle-free insurance coordination, and classic car restoration. It provides quality loaners when a vehicle is in the shop. It is at 1415 E Pickard, Mount Pleasant.",
+      "g": [
+        "body shop"
+      ],
+      "base": "Mount Pleasant",
+      "areas": [],
+      "region": "mid and northern Michigan",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.krapohlford.com/body-shop.html",
+        "phone_quote": "Give us a call at 989-773-3105",
+        "coverage_quotes": [
+          "The Krapohl Body Shop has served mid and northern Michigan with customer-friendly collision repair for more than 70 years."
+        ],
+        "type_quote": "RV body and camper repair",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Petoskey RV USA",
+      "c": "Petoskey, MI",
+      "p": "(231) 347-3200",
+      "u": "https://www.petoskeyrvusa.com/service-department",
+      "t": "center",
+      "e": false,
+      "r": true,
+      "d": "Petoskey RV USA runs a full-service RV and trailer shop in Petoskey, Michigan, describing itself as Northern Michigan's full-service shop with experienced technicians and fully equipped bays. Its shop handles everything from routine service to heavy rebuilds including roof replacement, wall and floor repair, underbelly work, axle and brake service, and electrical diagnostics. It gives a fair quote before starting and a real diagnosis instead of a parts-swap gamble. It is at 2215 North U.S. 31, Petoskey.",
+      "g": [
+        "service center"
+      ],
+      "base": "Petoskey",
+      "areas": [
+        "Petoskey"
+      ],
+      "region": "Northern Michigan",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.petoskeyrvusa.com/service-department",
+        "phone_quote": "Call (231) 347-3200 (2313473200)",
+        "coverage_quotes": [
+          "2215 North U.S. 31 Petoskey, MI 49770"
+        ],
+        "type_quote": "Northern Michigan's Full-Service Shop",
+        "emergency_quote": null,
+        "roadside_quote": "axle and brake service",
+        "licence": null
+      }
+    },
+    {
+      "n": "Northern Michigan RV",
+      "c": "Gaylord, MI",
+      "p": "989-448-8700",
+      "u": "https://www.northernmichiganrv.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Northern Michigan RV is a family owned and operated dealership in Gaylord, Michigan, whose expert technicians specialize in RV maintenance and repairs, from routine check-ups to major repairs. It provides service of all makes and models of travel trailers, fifth wheels, toy haulers, and truck campers, and its service associates help with troubleshooting an issue, recalls, insurance estimates, and service contracts. It also offers annual service specials covering winterization, water proofing, and inspections. It is at 277 Expressway Court, Gaylord.",
+      "g": [
+        "service center"
+      ],
+      "base": "Gaylord",
+      "areas": [
+        "Gaylord"
+      ],
+      "region": "Northern Michigan",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.northernmichiganrv.com/rv-service",
+        "phone_quote": "989-448-8700",
+        "coverage_quotes": [
+          "277 Expressway Court Gaylord, Michigan 49735"
+        ],
+        "type_quote": "Our expert technicians specialize in RV maintenance and repairs to keep your vehicle in top condition.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Meier Mobile RV Repair LLC",
+      "c": "Sturgis, MI",
+      "p": "269-318-9969",
+      "u": "https://www.meiermobilerv.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "Meier Mobile RV Repair LLC brings mobile RV repair and maintenance services directly to customers in Sturgis, Michigan, and surrounding areas, with seven years of experience. It specializes in everything from routine maintenance and appliance repairs to roof sealing, electrical diagnostics, and emergency service calls, and it performs full pre-trip, seasonal, and pre-purchase RV inspections. Its service areas include White Pigeon, Colon, Bronson, Coldwater, and Marcellus in Michigan, and LaGrange, Angola, Kendallville, and Goshen in Indiana, plus Portage, MI.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Sturgis",
+      "areas": [
+        "Sturgis",
+        "White Pigeon",
+        "Colon",
+        "Bronson",
+        "Coldwater",
+        "Marcellus",
+        "Portage"
+      ],
+      "region": "St. Joseph County",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.meiermobilerv.com/",
+        "phone_quote": "Sturgis, Michigan 269-318-9969",
+        "coverage_quotes": [
+          "Proudly Serving St. Joseph County, MI with Expert Mobile RV Repair and Maintenance—Keeping Your Home on Wheels Road-Ready and Reliable.",
+          "White Pigeon, MI"
+        ],
+        "type_quote": "At Meier Mobile RV Repair LLC, we bring top-quality RV repair and maintenance services directly to you in Sturgis, MI and surrounding areas.",
+        "emergency_quote": "Yes, we offer flexible scheduling for urgent repairs. Call us for immediate assistance.",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Blue Star RV",
+      "c": "Holland, MI",
+      "p": "616-499-3439",
+      "u": "https://www.bluestarrv.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Blue Star RV runs a certified RV service and repair department in Holland, Michigan. Its certified RV technicians work on travel trailers, fifth wheels, toy haulers, and motorhomes and it describes itself as a full-service RV repair facility. It handles RV roof leaks and water damage, slide-out malfunctions, electrical troubleshooting, plumbing repairs, furnace and air conditioning issues, generator service, awning repairs and replacement, and structural or exterior body repairs, and it also does brake inspections and bearing packs, roof inspections and reseals, and seasonal de-winterization and winterization. It is at 5755 143rd Ave, Holland.",
+      "g": [
+        "service center"
+      ],
+      "base": "Holland",
+      "areas": [
+        "Holland"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.bluestarrv.com/rv-service",
+        "phone_quote": "616-499-3439",
+        "coverage_quotes": [
+          "RV Service & Repair in Holland, MI",
+          "5755 143rd Ave, Holland, MI 49423"
+        ],
+        "type_quote": "We are a full-service RV repair facility focused on doing the job right and getting you back to camping as quickly as possible.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Paul's Auto & RV",
+      "c": "Northern Michigan, MI",
+      "p": "(231) 263-7511",
+      "u": "https://www.paulsautoandrv.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Paul's Auto & RV services northern Michigan and LaBelle, Florida, and states that it now only services RVs. It offers repairs for RVs such as any type of trailer, appliances, awnings, batteries, A/C repairs or replacements (rooftop or basement models only), plumbing, and updates, and it specializes in Oasis and Aqua-Hot water systems. The site states that Paul's no longer does auto, drivetrain or engine work.",
+      "g": [
+        "service center"
+      ],
+      "base": null,
+      "areas": [],
+      "region": "northern Michigan",
+      "spec": "Paul’s No Longer Does Auto, Drivetrain or Engine Work.",
+      "evidence": {
+        "checked": "https://www.paulsautoandrv.com/",
+        "phone_quote": "(231) 263-7511 (12312637511)",
+        "coverage_quotes": [],
+        "type_quote": "We offer repairs for RVs such as:",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      },
+      "reg": "north-mi"
+    },
+    {
+      "n": "Fix My RV",
+      "c": "Shaftsburg, MI",
+      "p": "810-399-9530",
+      "u": "https://fixmyrv.biz/",
+      "t": "mobile",
+      "e": false,
+      "r": true,
+      "d": "Fix My RV offers all RV service and repair and provides onsite RV service, asking customers to call anytime for onsite repairs. With two mechanics it states it services all of mid Michigan and beyond, and its message is to quit hauling an RV back and forth for service because it comes to the customer. Its listed services include 110V and 12V wiring, brakes and bearings, carpet and flooring, water damage, insurance repair, awnings, appliances, and rubber roof repair, and it describes itself as roof repair specialists. It is based at 13239 Shaftsburg Rd, Shaftsburg.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": null,
+      "areas": [],
+      "region": "mid Michigan",
+      "spec": null,
+      "evidence": {
+        "checked": "https://fixmyrv.biz/",
+        "phone_quote": "ph: 810-399-9530",
+        "coverage_quotes": [
+          "With 2 mechanics we service all mid Michigan and beyond."
+        ],
+        "type_quote": "We offer all RV service and repair. You can call anytime for onsite repairs and save time and money.",
+        "emergency_quote": null,
+        "roadside_quote": "Brakes & Bearings",
+        "licence": null
+      },
+      "reg": "southeast-mi"
+    },
+    {
+      "n": "Point North RV",
+      "c": "Ludington, MI",
+      "p": "(231) 239-6001",
+      "u": "https://www.pointnorthrv.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Point North RV offers on-site RV service in Ludington, Michigan, letting its certified, experienced team get a unit season ready. Its services include inspections, interior and exterior repairs and updates, exterior body work, roof repairs, roof wash and treatment, awning repair or replacement, winterizations, and mechanical repairs. It asks customers to call for an appointment or estimate, and it is at 3389 W US 10, Ludington.",
+      "g": [
+        "service center"
+      ],
+      "base": "Ludington",
+      "areas": [
+        "Ludington"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.pointnorthrv.com/rv-service",
+        "phone_quote": "(231)239-6001",
+        "coverage_quotes": [
+          "3389 W US 10 Ludington, MI 49431"
+        ],
+        "type_quote": "Let our certified, experienced team get your unit season ready!",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Michigan RV FlexArmor LLC",
+      "c": "Fenwick, MI",
+      "p": "(616) 207-0175",
+      "u": "https://www.michiganrvflexarmor.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Michigan RV FlexArmor LLC is a family-owned RV roof repair and replacement business located in Fenwick, Michigan, and describes itself as Michigan's only certified FlexArmor applicator. It specializes in RV roofing solutions including RV roof inspections, roof restoration, roof coating applications, leak prevention, roof repairs, and complete FlexArmor roofing systems, and it serves RV owners throughout Grand Rapids, MI and surrounding areas. It states it is licensed and insured and offers a lifetime no-leak guarantee.",
+      "g": [
+        "service center"
+      ],
+      "base": null,
+      "areas": [
+        "Grand Rapids"
+      ],
+      "region": "Grand Rapids, MI and surrounding areas",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.michiganrvflexarmor.com/",
+        "phone_quote": "(616) 207-0175",
+        "coverage_quotes": [
+          "Located in Fenwick, MI",
+          "We proudly serve RV owners throughout Grand Rapids, MI and surrounding areas, helping them maintain their vehicles for years of travel and enjoyment."
+        ],
+        "type_quote": "Michigan's Only Certified FlexArmor Applicator",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      },
+      "reg": "west-mi"
+    }
+  ]
+}

@@ -64,11 +64,34 @@
   <url><loc>https://originrv.com/directory/nevada.html</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://originrv.com/directory/utah.html</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://originrv.com/directory/california.html</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-
-  <!-- The parts reference: every part an RV is made of, by system -->
-  <url><loc>https://originrv.com/parts/index.html</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://originrv.com/directory/louisiana.html</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://originrv.com/directory/arkansas.html</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://originrv.com/directory/oklahoma.html</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://originrv.com/directory/mississippi.html</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://originrv.com/directory/alabama.html</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://originrv.com/directory/tennessee.html</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://originrv.com/directory/kentucky.html</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://originrv.com/directory/georgia.html</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://originrv.com/directory/florida.html</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://originrv.com/directory/southcarolina.html</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://originrv.com/directory/northcarolina.html</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://originrv.com/directory/virginia.html</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://originrv.com/directory/westvirginia.html</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://originrv.com/directory/michigan.html</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://originrv.com/directory/ohio.html</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://originrv.com/directory/indiana.html</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://originrv.com/directory/illinois.html</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://originrv.com/directory/wisconsin.html</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://originrv.com/directory/kansas.html</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://originrv.com/directory/nebraska.html</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://originrv.com/directory/northdakota.html</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://originrv.com/directory/southdakota.html</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://originrv.com/directory/minnesota.html</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://originrv.com/directory/iowa.html</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://originrv.com/directory/missouri.html</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
 
   <!-- The manuals directory: the hub, then one page per system -->
+  <url><loc>https://originrv.com/parts/index.html</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://originrv.com/manuals/index.html</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://originrv.com/manuals/brands.html</loc><lastmod>2026-10-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://originrv.com/manuals/start-here.html</loc><lastmod>2026-10-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>

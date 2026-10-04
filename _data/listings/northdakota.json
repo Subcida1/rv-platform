@@ -1,0 +1,639 @@
+{
+  "state": "ND",
+  "name": "North Dakota",
+  "regions": [
+    {
+      "key": "east-nd",
+      "label": "Fargo, Grand Forks and the Red River"
+    },
+    {
+      "key": "central-nd",
+      "label": "Bismarck, Jamestown and the middle"
+    },
+    {
+      "key": "west-nd",
+      "label": "Minot, Williston and the oil country"
+    }
+  ],
+  "region_of": {
+    "Fargo": "east-nd",
+    "West Fargo": "east-nd",
+    "Grand Forks": "east-nd",
+    "Davenport": "east-nd",
+    "Bismarck": "central-nd",
+    "Mandan": "central-nd",
+    "Jamestown": "central-nd",
+    "Devils Lake": "central-nd",
+    "Rugby": "central-nd",
+    "Minot": "west-nd",
+    "Williston": "west-nd",
+    "Dickinson": "west-nd"
+  },
+  "listings": [
+    {
+      "n": "Cory's Mobile RV Service",
+      "c": "Bismarck, ND",
+      "p": "701-214-7011",
+      "u": "https://www.corysrvservice.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Cory's Mobile RV Service is a mobile RV repair business based in Bismarck, North Dakota, and it travels statewide to bring the shop to the customer. The site lists electrical and appliance diagnostics, heating, cooling and water heater service, plumbing repairs, and leveling jack and hydraulic system maintenance.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Bismarck",
+      "areas": [
+        "Bismarck",
+        "Minot",
+        "Williston"
+      ],
+      "region": "ND & Surrounding Areas",
+      "spec": "Travel mileage applies for long-distance service.",
+      "evidence": {
+        "checked": "https://www.corysrvservice.com/",
+        "phone_quote": "Phone 701-214-7011",
+        "coverage_quotes": [
+          "With over 33 years of experience, I provide professional on-site RV repair services serving all of North Dakota and surrounding areas.",
+          "From Bismarck and Minot to Williston and beyond — I bring the shop to you.",
+          "I travel statewide! While I am based in Bismarck, I provide expert service throughout the state of North Dakota and surrounding areas.* Travel mileage applies for long-distance service."
+        ],
+        "type_quote": "Mobile RV Repair — North Dakota & Surrounding Areas",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Dakota Recreation Repair",
+      "c": "Bismarck, ND",
+      "p": "701-319-1280",
+      "u": "https://www.dakotarecreationrepair.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Dakota Recreation Repair is a boat, camper and trailer repair centre in Bismarck, North Dakota. The site describes restoring boats, pontoons, personal watercraft, campers, RVs and trailers, and it lists collision repair, storm damage, warranty work and restoration projects.",
+      "g": [
+        "body and collision",
+        "service center"
+      ],
+      "base": "Bismarck",
+      "areas": [
+        "Bismarck"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.dakotarecreationrepair.com/",
+        "phone_quote": "Tel: 701-319-1280",
+        "coverage_quotes": [
+          "Welcome to Dakota Recreation Repair, North Dakota's leading Boat, Camper, and Trailer Repair Center.",
+          "We specialize in restoring your boat, pontoon, personal watercraft, camper, RV, or trailer to like new condition.",
+          "Whatever has your product sideline...Collision Repair, Storm Damage, Warranty Work, or a Restoration Project, we can help!"
+        ],
+        "type_quote": "Camper / RV Repair",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Roaming Rassier's RV Services",
+      "c": "Williston, ND",
+      "p": "(218) 242-1863",
+      "u": "https://roamingrassiersrvservices.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Roaming Rassier's RV Services is a mobile RV service that works in Williston, North Dakota and brings assistance to the customer's location. The site lists roof reseal and inspection, AC cleaning and inspection, tank cleaning, and awning repair and replacement, and it offers evening and weekend appointments.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Williston",
+      "areas": [
+        "Williston"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://roamingrassiersrvservices.com/",
+        "phone_quote": "(218) 242-1863 (218-242-1863)",
+        "coverage_quotes": [
+          "We are back in Williston, ND",
+          "We provide unparalleled convenience and assurance to RV owners. By bringing professional assistance directly to your location, we eliminate the need for transportation to a service center, saving time and reducing hassle."
+        ],
+        "type_quote": "We provide unparalleled convenience and assurance to RV owners. By bringing professional assistance directly to your location, we eliminate the need for transportation to a service center, saving time and reducing hassle.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Rugby Homes & RV Center",
+      "c": "Rugby, ND",
+      "p": "(701) 776-5878",
+      "u": "https://www.rugbyhomesandrvcenter.com/rv-repair-rugby-williston-fargo-north-dakota-service/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Rugby Homes & RV Center has an RV service department in Rugby, North Dakota, with a second service location in Williston. The site says its factory-trained technicians work on all makes and models regardless of where they were purchased and lists appliance repair, rubber roof installation, fiberglass repair, electrical diagnosis, metal replacement and hitch installation.",
+      "g": [
+        "service center"
+      ],
+      "base": "Rugby",
+      "areas": [
+        "Rugby",
+        "Williston"
+      ],
+      "region": null,
+      "spec": "Will honor all manufacturer warranties with manufacturer approval.",
+      "evidence": {
+        "checked": "https://www.rugbyhomesandrvcenter.com/rv-repair-rugby-williston-fargo-north-dakota-service/",
+        "phone_quote": "Rugby: (701) 776-5878 (7017765878) Williston: (701) 572-2250 (7015722250)",
+        "coverage_quotes": [
+          "We work on all makes and models regardless of where you purchased them and will honor all manufacturer warranties with manufacturer approval."
+        ],
+        "type_quote": "With nearly five decades of RV service expertise, our factory-trained technicians will diagnose your problem and fix it right the first time.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Thurn's Sales",
+      "c": "Bismarck, ND",
+      "p": "(701) 240-3030",
+      "u": "https://www.thurns.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Thurn's Sales is a family-owned dealership in Bismarck, North Dakota that runs a certified RV service centre. The site says the service team works on travel trailers, fifth wheels and motorhomes and handles pre-season inspections, appliance repairs and warranty work for most RV brands.",
+      "g": [
+        "service center"
+      ],
+      "base": "Bismarck",
+      "areas": [
+        "Bismarck"
+      ],
+      "region": "central North Dakota",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.thurns.com/rv-service",
+        "phone_quote": "Call Thurn's Sales LLC at (701) 240-3030 to discuss your RV service needs and schedule an appointment in Bismarck.",
+        "coverage_quotes": [
+          "The service team works on travel trailers, fifth wheels, and motorhomes, addressing mechanical issues, plumbing leaks, electrical faults, and appliance failures that prevent safe or comfortable travel.",
+          "Thurn's Sales LLC provides RV service in Bismarck with experienced technicians, warranty support, and local availability for owners throughout central North Dakota."
+        ],
+        "type_quote": "Thurn's Sales LLC provides RV service in Bismarck with experienced technicians and warranty support for most brands.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Capital RV",
+      "c": "Bismarck, ND",
+      "p": "800.930.2267",
+      "u": "https://www.capitalrv.com/bismarck/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Capital RV is a full-service RV dealership with service locations in Bismarck and Minot, North Dakota. The site says its RVDA-RVIA certified technicians handle complete RV service and maintenance and lists generator service, axle bearing packs, rubber roof maintenance, winterization and appliance checks.",
+      "g": [
+        "service center"
+      ],
+      "base": "Bismarck",
+      "areas": [
+        "Bismarck",
+        "Minot"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.capitalrv.com/bismarck/rv-service",
+        "phone_quote": "800.930.2267 (800-930-2267)",
+        "coverage_quotes": [
+          "Capital RV of Bismarck is a full-service RV dealership. We offer complete RV service and maintenance capabilities from roofs to tires and everything in between.",
+          "Our technicians are fully trained and RVDA-RVIA certified, and we take pride in our workmanship and commitment to customer satisfaction."
+        ],
+        "type_quote": "Capital RV of Bismarck is a full-service RV dealership. We offer complete RV service and maintenance capabilities from roofs to tires and everything in between.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Corral Sales RV Superstore",
+      "c": "Mandan, ND",
+      "p": "1-800-578-2267",
+      "u": "https://corralsales.com/service/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Corral Sales RV Superstore is a family-owned RV dealership in Mandan, North Dakota with a dedicated RV service centre. The service page says its factory-trained experts work only on RV maintenance and repair, and it says the shop can raise an RV on one of its two specially designed hoists.",
+      "g": [
+        "service center"
+      ],
+      "base": "Mandan",
+      "areas": [
+        "Mandan"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://corralsales.com/service/",
+        "phone_quote": "Phone: 1-800-578-2267 (18005782267)",
+        "coverage_quotes": [
+          "The highly trained motivated staff in the Corral Sales RV Service Department are skilled in keeping you and your RV on the road.",
+          "That special equipment is backed up with factory trained service experts whose only business is RV maintenance and repair.",
+          "From the smallest screw to complete repair and rebuilding services, Corral Sales RV service department can cure all your repair problems."
+        ],
+        "type_quote": "Corral Sales RV is the only RV center in North Dakota that can raise your RV on one of its two specially designed hoists.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Riverwood RV",
+      "c": "Mandan, ND",
+      "p": "701-663-0050",
+      "u": "https://www.riverwoodrvs.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Riverwood RV is an RV dealership in Mandan, North Dakota with an RV service department. The service page says it has experts at RV service and invites owners to bring their RV by so the shop can check it.",
+      "g": [
+        "service center"
+      ],
+      "base": "Mandan",
+      "areas": [
+        "Mandan"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.riverwoodrvs.com/rv-service",
+        "phone_quote": "Phone: 701-663-0050",
+        "coverage_quotes": [
+          "If you need some work done on your RV, we at Riverwood RV are able to help get it back into working order so you can get back on the road.",
+          "We have experts at RV service that are outfitted to help fix any issue that you might be having."
+        ],
+        "type_quote": "If you need some work done on your RV, we at Riverwood RV are able to help get it back into working order so you can get back on the road.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Budget RV, Inc.",
+      "c": "Grand Forks, ND",
+      "p": "701-772-7233",
+      "u": "https://www.budgetrvgf.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Budget RV, Inc. is an RV dealership in Grand Forks, North Dakota whose service department repairs travel trailers and fifth wheels. The site says service is by appointment only and warns that the North Dakota camping season is very short.",
+      "g": [
+        "service center"
+      ],
+      "base": "Grand Forks",
+      "areas": [
+        "Grand Forks"
+      ],
+      "region": null,
+      "spec": "Service is available by appointment only.",
+      "evidence": {
+        "checked": "https://www.budgetrvgf.com/rv-service",
+        "phone_quote": "701-772-7233",
+        "coverage_quotes": [
+          "At Budget RV, our service department repairs travel trailers and fifth wheels.",
+          "Service is available by appointment only.",
+          "Please keep in mind that camping season is very short in North Dakota."
+        ],
+        "type_quote": "At Budget RV, our service department repairs travel trailers and fifth wheels.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Lake Region RV",
+      "c": "Devils Lake, ND",
+      "p": "(701) 662-4000",
+      "u": "https://www.lakeregionrv.com/rv-service-repair-grand-forks-nd-service/",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "Lake Region RV is a family-owned RV dealership in Devils Lake, North Dakota whose service department also runs a mobile service that drives to the customer. The site says the team services all makes and models and lists appliance repair, fiberglass repair, window replacement, rubber roof installation and electrical diagnosis.",
+      "g": [
+        "mobile tech",
+        "service center"
+      ],
+      "base": "Devils Lake",
+      "areas": [
+        "Devils Lake",
+        "Grand Forks",
+        "Fargo",
+        "Bismarck",
+        "Minot"
+      ],
+      "region": "all of North Dakota",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.lakeregionrv.com/rv-service-repair-grand-forks-nd-service/",
+        "phone_quote": "(701) 662-4000 (7016624000)",
+        "coverage_quotes": [
+          "What makes our service department special is our mobile services. That’s right, if you’re having trouble with your RV or camper, we will drive to you!",
+          "Lake Region RV is proud to provide quality RV service and winterization to the areas of Devils Lake, Grand Forks, Fargo, Bismarck, and Minot, and all of North Dakota!"
+        ],
+        "type_quote": "What makes our service department special is our mobile services. That’s right, if you’re having trouble with your RV or camper, we will drive to you!",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Roughrider RVs",
+      "c": "Dickinson, ND",
+      "p": "(701) 483-9844",
+      "u": "https://www.roughriderrvs.net/rv-sales-service-parts",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Roughrider RVs is a towable RV dealership in Dickinson, North Dakota with an in-house service department of three service bays. The site says it handles Forest River warranties, component warranties and customer-pay repairs on most towable RV brands.",
+      "g": [
+        "service center"
+      ],
+      "base": "Dickinson",
+      "areas": [
+        "Dickinson"
+      ],
+      "region": null,
+      "spec": "We can submit factory warranty claims only for Forest River brands we represent.",
+      "evidence": {
+        "checked": "https://www.roughriderrvs.net/rv-sales-service-parts",
+        "phone_quote": "Contact Us (701) 483-9844 (+17014839844)",
+        "coverage_quotes": [
+          "We handle Forest River warranties, component warranties (Lippert, Dometic, etc.), extended service contracts, and all customer-pay repairs.",
+          "3 service bays",
+          "Experienced technicians"
+        ],
+        "type_quote": "We handle Forest River warranties, component warranties (Lippert, Dometic, etc.), extended service contracts, and all customer-pay repairs.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Country Side RV",
+      "c": "Jamestown, ND",
+      "p": "701-252-3444",
+      "u": "https://www.countrysidervnd.com/home",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Country Side RV is a family-owned and operated RV dealership in Jamestown, North Dakota. The site says its facility has a six-bay shop and a showroom, and it lists service technician and parts department roles.",
+      "g": [
+        "service center"
+      ],
+      "base": "Jamestown",
+      "areas": [
+        "Jamestown"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.countrysidervnd.com/home",
+        "phone_quote": "CALL JEFF: 701-252-3444",
+        "coverage_quotes": [
+          "Country Side RV is a family-owned and operated business located in Jamestown, North Dakota.",
+          "Our facility, built in 2005, will handle all of your needs, from our 6-bay shop to our spacious showroom."
+        ],
+        "type_quote": "Our facility, built in 2005, will handle all of your needs, from our 6-bay shop to our spacious showroom.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Adventure RV Center",
+      "c": "West Fargo, ND",
+      "p": "(701) 277-1165",
+      "u": "https://adventurervsales.com/rv-service/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Adventure RV Center is an RV dealership in West Fargo, North Dakota with a certified service department. The site says its registered technicians service all makes and models and lists full body repair, suspension systems, wheel bearing packs, rubber roof maintenance, appliance service and an RV insurance repair shop.",
+      "g": [
+        "service center",
+        "body and collision"
+      ],
+      "base": "West Fargo",
+      "areas": [
+        "West Fargo"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://adventurervsales.com/rv-service/",
+        "phone_quote": "(701) 277-1165 call/text (+1-701-277-1165)",
+        "coverage_quotes": [
+          "At Adventure RV, our team of registered technicians is ready to service your RV.",
+          "We service all makes and models of RVs including Pop-Ups, Fifth Wheels, Travel Trailers, Toy Haulers, Park Models, Truck Campers, Class A, Class C & B Motor Homes, Horse Trailers and Fish Houses."
+        ],
+        "type_quote": "At Adventure RV, our team of registered technicians is ready to service your RV.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Outlet Recreation",
+      "c": "Fargo, ND",
+      "p": "(701) 532-2120",
+      "u": "https://outletrecreation.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Outlet Recreation is a locally owned RV, boat and fish house dealership in Fargo, North Dakota. The site says its 32-bay service facility welcomes all makes and models and provides maintenance, repairs, winterization, warranty work and parts installation.",
+      "g": [
+        "service center"
+      ],
+      "base": "Fargo",
+      "areas": [
+        "Fargo"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://outletrecreation.com/",
+        "phone_quote": "(701) 532-2120 (7015322120)",
+        "coverage_quotes": [
+          "Absolutely! Our 32-bay service facility welcomes all makes and models, regardless of where you purchased.",
+          "Our experienced, factory-trained technicians provide maintenance, repairs, winterization, warranty work, and parts installation for RVs, boats, and fish houses."
+        ],
+        "type_quote": "Our 32-bay service facility welcomes all makes and models, regardless of where you purchased.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Camping World RV Service",
+      "c": "West Fargo, ND",
+      "p": "(844) 964-3100",
+      "u": "https://rv.campingworld.com/dealer/west-fargo-north-dakota/rv-service-repair",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Camping World runs an RV service and repair centre in West Fargo, North Dakota. The site says it provides complete service and repair for all RV types, including diagnostics, repairs, routine maintenance and warranty work.",
+      "g": [
+        "service center"
+      ],
+      "base": "West Fargo",
+      "areas": [
+        "West Fargo"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://rv.campingworld.com/dealer/west-fargo-north-dakota/rv-service-repair",
+        "phone_quote": "(844) 964-3100 (8449643100)",
+        "coverage_quotes": [
+          "We provide complete service and repair for all RV types.",
+          "Diagnostics, repairs, routine maintenance, warranty, and more"
+        ],
+        "type_quote": "We provide complete service and repair for all RV types.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "McLaughlin's RV & Marine",
+      "c": "Fargo, ND",
+      "p": "(701) 237-6046",
+      "u": "https://www.fundealer.com/about-us",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "McLaughlin's RV & Marine is a family-owned camper and boat dealership in Fargo, North Dakota. The site invites service, parts and how-to questions and offers winterization and storage arrangements for campers.",
+      "g": [
+        "service center"
+      ],
+      "base": "Fargo",
+      "areas": [
+        "Fargo"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.fundealer.com/about-us",
+        "phone_quote": "(701) 237-6046",
+        "coverage_quotes": [
+          "Have a service, parts or how-to question? Share your model and what you need help with so we can point you in the right direction.",
+          "Talk with us about winterization and storage arrangements, or about trading or consigning when you are ready for something different."
+        ],
+        "type_quote": "Have a service, parts or how-to question? Share your model and what you need help with so we can point you in the right direction.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Jay R's Auto Body",
+      "c": "Dickinson, ND",
+      "p": "(701) 483-6778",
+      "u": "https://www.jayrsautobody.com/trailer-and-rv-restoration",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Jay R's Auto Body & Truck Collision is a body and collision shop in Dickinson, North Dakota that advertises trailer and RV restoration. The site says its technicians handle structural, cosmetic and water damage and lists fiberglass repair, aluminum panel repair, siding and trim repair and window and seal replacement.",
+      "g": [
+        "body and collision"
+      ],
+      "base": "Dickinson",
+      "areas": [
+        "Dickinson"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.jayrsautobody.com/trailer-and-rv-restoration",
+        "phone_quote": "(701) 483-6778",
+        "coverage_quotes": [
+          "At Jay R's Auto Body & Truck Collision, we specialize in comprehensive trailer and RV restoration services in Dickinson, ND.",
+          "We focus on inspecting and repairing structural, cosmetic, and water damage across large surfaces and complex components.",
+          "Fiberglass repair and restoration"
+        ],
+        "type_quote": "At Jay R's Auto Body & Truck Collision, we specialize in comprehensive trailer and RV restoration services in Dickinson, ND.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Jerome's Collision Center",
+      "c": "Minot, ND",
+      "p": "(701) 852-5126",
+      "u": "https://www.jeromescollision.com/boat-rv-repair/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Jerome's Collision Center is a collision repair shop in Minot, North Dakota with a boat, fiberglass and RV section. The site says it repairs cracks and holes in fiberglass and RV and specializes in gel coat.",
+      "g": [
+        "body and collision"
+      ],
+      "base": "Minot",
+      "areas": [
+        "Minot"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.jeromescollision.com/boat-rv-repair/",
+        "phone_quote": "#### Phone (701) 852-5126",
+        "coverage_quotes": [
+          "#### Boat, Fiberglass & RV\n\nDo you have cracks or holes in your fiberglass or RV? We can fix that too!",
+          "We also specialize in gel coat, from small touch ups to overall repaints in the original gel coat your boat received from its manufacturer!"
+        ],
+        "type_quote": "Do you have cracks or holes in your fiberglass or RV? We can fix that too!",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Lakeside Mobile RV Repair LLC",
+      "c": "Davenport, ND",
+      "p": "701.566.1067",
+      "u": "https://lakesidemobilervrepairllc.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Lakeside Mobile RV Repair LLC is a mobile RV and camper repair business based in Davenport, North Dakota that serves the Fargo-Moorhead area within a 100-mile radius. The site lists heating and cooling service, appliance repair, plumbing and electrical repairs and complete camper system inspections.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Davenport",
+      "areas": [
+        "Fargo"
+      ],
+      "region": "Fargo-Moorhead area",
+      "spec": null,
+      "evidence": {
+        "checked": "https://lakesidemobilervrepairllc.com/",
+        "phone_quote": "Jeremy Lequire | 701.566.1067",
+        "coverage_quotes": [
+          "Serving the Fargo-Moorhead area and surrounding communities within a 100-mile radius, Lakeside Mobile RV Repair LLC is your go-to source for fast, reliable, and professional on-site service.",
+          "100% mobile service – we come to your location"
+        ],
+        "type_quote": "Your Trusted Mobile RV & Camper Repair Experts",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    }
+  ]
+}

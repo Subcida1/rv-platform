@@ -1,0 +1,456 @@
+{
+  "state": "MS",
+  "name": "Mississippi",
+  "regions": [
+    {
+      "key": "north-ms",
+      "label": "Southaven, Olive Branch and the north"
+    },
+    {
+      "key": "northeast-ms",
+      "label": "Tishomingo County and the northeast"
+    },
+    {
+      "key": "central-ms",
+      "label": "Jackson and the middle"
+    },
+    {
+      "key": "south-ms",
+      "label": "Hattiesburg, Columbia and the south"
+    },
+    {
+      "key": "coast-ms",
+      "label": "Gulfport, Biloxi and the coast"
+    }
+  ],
+  "region_of": {
+    "Olive Branch": "north-ms",
+    "Belmont": "northeast-ms",
+    "Golden": "northeast-ms",
+    "Iuka": "northeast-ms",
+    "Jackson": "central-ms",
+    "Hattiesburg": "south-ms",
+    "Columbia": "south-ms",
+    "Picayune": "south-ms",
+    "Gulfport": "coast-ms",
+    "Ocean Springs": "coast-ms"
+  },
+  "listings": [
+    {
+      "n": "Mobile RV Repair Tech L.L.C.",
+      "c": "Hattiesburg, MS",
+      "p": "769-399-4388",
+      "u": "https://mobilervrepairtech.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Mobile RV Repair Tech is a mobile RV repair service company based in Hattiesburg, run by Keith White, a veteran and certified RV service technician. It travels to the customer and works on all types of RVs and the systems that make them work, covering inspections, preventive maintenance, plumbing, winterizing, water heaters, RV refrigerators, rooftop air conditioners, furnaces, stoves, propane leak detection and on-board water pumps. Besides Hattiesburg it will travel to Jackson, Meridian and Gulfport.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Hattiesburg",
+      "areas": [
+        "Hattiesburg",
+        "Jackson",
+        "Meridian",
+        "Gulfport"
+      ],
+      "region": null,
+      "spec": "RV Refrigerators repair and service (no residential refrigerators)",
+      "evidence": {
+        "checked": "https://mobilervrepairtech.com/",
+        "phone_quote": "769-399-4388 (7693994388)",
+        "coverage_quotes": [
+          "Jackson, MS - Meridian, MS - Gulfport, MS",
+          "Mobile RV Repair Tech is a mobile RV repair service company serving",
+          "Hattiesburg, MS"
+        ],
+        "type_quote": "I work on all types of RVs and the systems that make them work.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Fixin’ to RV LLC",
+      "c": "Gulfport, MS",
+      "p": "228-234-1775",
+      "u": "https://fixintorv.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Fixin' to RV LLC is a certified, insured, veteran-owned mobile RV technician service based in Gulfport. It provides RV repairs, inspections, maintenance and training for all types of recreational vehicles, including motor homes and travel trailers, and reports having access to all military bases and campgrounds in the area. It lists Gulfport, D'Iberville, Biloxi, Ocean Springs, Long Beach, Pass Christian, Bay St Louis, Waveland, Diamondhead and Wortham as its coverage towns.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Gulfport",
+      "areas": [
+        "Gulfport",
+        "D'Iberville",
+        "Biloxi",
+        "Ocean Springs",
+        "Long Beach",
+        "Pass Christian",
+        "Bay St Louis",
+        "Waveland",
+        "Diamondhead",
+        "Wortham"
+      ],
+      "region": "Gulf Coast",
+      "spec": null,
+      "evidence": {
+        "checked": "https://fixintorv.com/",
+        "phone_quote": "228-234-1775",
+        "coverage_quotes": [
+          "Gulfport, D'Iberville, Biloxi, Ocean Springs, Long Beach, Pass Christian, Bay St Louis, Waveland, Diamondhead, Wortham",
+          "we service all types of RV's along the Gulf Coast"
+        ],
+        "type_quote": "Fixin’ to RV is a certified, insured mobile RV technician service based in Gulfport, MS. We provide professional RV repairs, inspections, maintenance, training, and general support for all types of recreational vehicles.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Nomad Mobile RV Repair",
+      "c": "Ocean Springs, MS",
+      "p": "228-327-1489",
+      "u": "https://www.nomadmobilervrepair.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "Nomad Mobile RV Repair brings service to the customer's location rather than a shop. It specializes in troubleshooting and repairing air conditioners, refrigerators, slide-outs, awnings, leveling gear, water heaters and AC/DC electrical systems, using an NRVTA-certified technician. It charges a $75 service call, $150 per hour, and a $300 per hour after-hours emergency rate. It serves Ocean Springs, Biloxi and Gulfport and surrounding areas.",
+      "g": [
+        "mobile tech",
+        "emergency"
+      ],
+      "base": "Ocean Springs",
+      "areas": [
+        "Ocean Springs",
+        "Biloxi",
+        "Gulfport"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.nomadmobilervrepair.com/",
+        "phone_quote": "228-327-1489",
+        "coverage_quotes": [
+          "Providing service to Ocean Springs, Biloxi, Gulfport and surrounding areas."
+        ],
+        "type_quote": "We specialize in troubleshooting and repairing air conditioners, refrigerators, slide-outs, awnings, and leveling gear, along with water heaters and AC/DC electrical systems.",
+        "emergency_quote": "Our after-hours rate is $300 per hour. This ensures that, if available, a certified RV technician can respond to your emergency on-site outside of normal business hours.",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Anthony's Mobile RV Repair Service",
+      "c": "Jackson, MS",
+      "p": "225-328-9329",
+      "u": "https://www.anthonysrvrepair.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Anthony's Mobile RV Repair Service is an independent mobile RV repair business serving Jackson and the surrounding area. It comes to the customer and handles mechanics, oil and filter service, breakdown service, tire and battery changes, electrical, hydraulics, slides, satellite, A/C and heating, water pumps, plumbing, sanitation, fresh and hot water, faucets and showers. It describes itself as locally owned and operated, carrying liability insurance, workers comp and bonding.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Jackson",
+      "areas": [
+        "Jackson"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.anthonysrvrepair.com/",
+        "phone_quote": "Tel: 225-328-9329 (+1-225-328-9329)",
+        "coverage_quotes": [
+          "Serving the Greater Jackson Mississippi Area",
+          "We're an independent mobile RV repair business servicing Jackson, Mississippi, and the surrounding areas."
+        ],
+        "type_quote": "We're an independent mobile RV repair business servicing Jackson, Mississippi, and the surrounding areas.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Town and Country Mobile RV Service",
+      "c": "Olive Branch, MS",
+      "p": "662-890-1623",
+      "u": "https://townandcountryrvservice.com/about-us/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Town and Country Mobile RV Service has been operating since 2004 out of Olive Branch and brings mobile RV service to the customer's doorstep with no shop visits required. Founders Barry and Claudia Smith have over 40 years of hands-on RV experience, and the business uses RVIA/RVDA certified technicians factory-trained on Dometic, Norcold, Coleman and Atwood. It is fully licensed and insured in Mississippi and serves Northern Mississippi.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Olive Branch",
+      "areas": [],
+      "region": "Northern Mississippi",
+      "spec": null,
+      "evidence": {
+        "checked": "https://townandcountryrvservice.com/about-us/",
+        "phone_quote": "CALL US 662-890-1623 (6628901623)",
+        "coverage_quotes": [
+          "Serving Northern Mississippi, we provide the same care and precision trusted by dealerships, delivered on your schedule."
+        ],
+        "type_quote": "Barry and Claudia Smith bring professional mobile RV service directly to your doorstep",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": "We’re fully licensed & insured in Mississippi, coordinate with every major warranty provider, and hold an A+ BBB rating since day one."
+      }
+    },
+    {
+      "n": "Paw Paw's",
+      "c": "Picayune, MS",
+      "p": "800-728-2267",
+      "u": "https://www.pawpawsrvs.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": true,
+      "d": "Paw Paw's runs an RV service center in Picayune with 8 RV service bays, computerized diagnostic equipment and the Sealtech 430R rain leak detection system. It offers a wide variety of RV chassis and coach service work, including exterior and interior repair and replacement, mechanical, warranty and collision repairs, routine maintenance, electrical and plumbing, and warranty service for most major RV manufacturers. It explicitly serves customers regardless of where they bought their RV.",
+      "g": [
+        "service center",
+        "chassis"
+      ],
+      "base": "Picayune",
+      "areas": [],
+      "region": "Mississippi",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.pawpawsrvs.com/rv-service",
+        "phone_quote": "1-800-728-CAMP (2267) (800-728-2267)",
+        "coverage_quotes": [
+          "Regardless if you live in Mississippi, or are just passing through, stop in and visit our RV Service center."
+        ],
+        "type_quote": "Paw Paw's offers a wide variety of RV chassis and coach service work including exterior and interior repair and replacement.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "County Line Campers",
+      "c": "Gulfport, MS",
+      "p": "(228) 299-8898",
+      "u": "https://www.countylinecampers.com/service-department",
+      "t": "center",
+      "e": false,
+      "r": true,
+      "d": "County Line Campers operates an RV service center in Gulfport that works on motorhomes, travel trailers, fifth wheels and campers of all major brands. Its listed services include routine maintenance and inspections, brake inspection and repair, wheel bearings, system diagnostics, generator service, appliance repair, 12V and 120V electrical, plumbing and tanks, LP systems, slide-outs and awnings, roof repairs and sealing, and roof and exterior body repairs. It offers same-day service when available, accepts multi-brand warranty work, and says walk-ins are welcome.",
+      "g": [
+        "service center",
+        "chassis"
+      ],
+      "base": "Gulfport",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.countylinecampers.com/service-department",
+        "phone_quote": "Service: (228) 299-8898",
+        "coverage_quotes": [
+          "We service all major RV brands and models, from Class A motorhomes to lightweight travel trailers."
+        ],
+        "type_quote": "Whether you own a motorhome, travel trailer, fifth wheel, or camper, our service center delivers trusted expertise with a personal touch.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "S&S Apache",
+      "c": "Jackson, MS",
+      "p": "601-372-6426",
+      "u": "https://www.ssapache.com/service-department/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "S&S Apache is an RV dealership in Jackson whose service department works on any style of RV and specialises in baseplate and towbar installation, fifth wheel hitches and major collision damage. It has a full-service paint and body shop and 20 service bays, and lists RV maintenance, collision repair, custom paint, roof repair, slide-out repair and awning repair and installation. It reports customers from all over Mississippi and into neighbouring states.",
+      "g": [
+        "service center",
+        "body"
+      ],
+      "base": "Jackson",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.ssapache.com/service-department/",
+        "phone_quote": "(601) 372-6426 (6013726426)",
+        "coverage_quotes": [
+          "Over the years we have established a solid base of highly satisfied customers ranging from all over Mississippi and into neighboring states."
+        ],
+        "type_quote": "We specialize in the installation of baseplates and towbars for tow vehicles, fifth wheel hitches, and major collision damage, just to name a few.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Lakeshore Custom RV",
+      "c": "Iuka, MS",
+      "p": "662-273-1003",
+      "u": "https://lakeshorecustomrv.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Lakeshore Custom RV is a customisation and repair shop in Iuka working on RVs. Its services page lists RV maintenance and service at $75 an hour, on-site pickup and return from Short Coleman Storage, and spring cleanup packages for campers and motorhomes that include electrical, battery, A/C, water and tire-pressure checks. It is an authorised Tiffin Motorhomes supplier and an authorised Safe-T-Plus and Sumo Springs dealer.",
+      "g": [
+        "service center"
+      ],
+      "base": "Iuka",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://lakeshorecustomrv.com/",
+        "phone_quote": "6622731003",
+        "coverage_quotes": [],
+        "type_quote": "Whether you're coming in for a new Safe T Plus, or new lights, we promise that you will be completely satisfied with your customization and repair work.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Pro Finishes",
+      "c": "Belmont, MS",
+      "p": "256.224.8447",
+      "u": "https://rvprofinishes.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Pro Finishes is an RV body shop in Belmont owned by Ricky McGee, with 15 or more years of experience. It specialises in RV collision repair, paint repair and scratch removal, plus paint correction, paint upgrades and ceramic coating, and it paints the topside of the roof and stripes inside slideout endwalls. It is an authorised True Toppers installer and a Bob Moses Ceramic Coating franchise location.",
+      "g": [
+        "body"
+      ],
+      "base": "Belmont",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://rvprofinishes.com/",
+        "phone_quote": "256.224.8447 (2562248447)",
+        "coverage_quotes": [],
+        "type_quote": "Welcome to Pro Finishes, your premier body shop in Belmont, MS, specializing in RVs.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Raper RV Shop, LLC",
+      "c": "Golden, MS",
+      "p": "256-668-6070",
+      "u": "https://www.raperrvshop.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Raper RV Shop is an RV repair and customisation shop in Golden with over 17 years of experience, serving the Golden, Red Bay and Tennessee Valley area. It specialises in custom modifications and repairs on Class A motorhomes such as Tiffin, Newmar, Thor and Damon coaches, and also works on trailers. Its listed work includes paint and body work, full body paint, awning installation and repair, window and ladder replacement, roof resealing and coating, and insurance claims.",
+      "g": [
+        "body"
+      ],
+      "base": "Golden",
+      "areas": [],
+      "region": "Tennessee Valley",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.raperrvshop.com/",
+        "phone_quote": "(256) 668-6070 (2566686070)",
+        "coverage_quotes": [
+          "Serving the Golden, Red Bay & the Tennessee Valley area with over 17 years experience!"
+        ],
+        "type_quote": "We specialize in custom modifications and repairs on Class A Motorhomes such as Tiffin Motorhome coaches, Zephyr, Allegro Bus, Phaeton, Allegro open Road, Allegro RED, Allegro Bay and Breeze, Newmar, American Tradition, Thor and Damon Damon Intruder.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Davidson RV",
+      "c": "Belmont, MS",
+      "p": "256-436-7858",
+      "u": "https://davidsonrv.com/",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "Davidson RV is an RV repair and customisation business in Belmont whose staff have over 30 years of combined RV experience. It offers both a shop to bring the RV to and a mobile repair service that comes to the customer. Its listed work includes exterior, flooring, plumbing, awning, bathroom, appliance, electronics and electrical repairs, plus custom lighting, woodworking and interior design.",
+      "g": [
+        "mobile tech",
+        "service center"
+      ],
+      "base": "Belmont",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://davidsonrv.com/",
+        "phone_quote": "256-436-7858 (2564367858)",
+        "coverage_quotes": [],
+        "type_quote": "Davidson RV provides a wide array of services to repair and customize your RV including, exterior, flooring, plumbing, awning, bathroom, appliance, electronics, and electrical repairs!",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Freedom Mobile RV Service LLC.",
+      "c": "Belmont, MS",
+      "p": "662-424-0792",
+      "u": "https://www.freedomrvpower.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Freedom Mobile RV Service is a mobile RV service based in Belmont that comes to the customer. It works on AC and DC electrical systems, electrical upgrades, solar panels, lithium batteries, water heaters and furnaces, and reports vast knowledge of the Spyder Multiplex System with design, implementation and troubleshooting experience on Tiffin and Vanleigh product lines. It lists its service focus as Red Bay, Alabama, the RV capital of the South.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Belmont",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.freedomrvpower.com/",
+        "phone_quote": "6624240792",
+        "coverage_quotes": [
+          "Servicing Red Bay, Al the Capital for RVs in the South.",
+          "We Will Come To You"
+        ],
+        "type_quote": "Vast knowledge of the Spyder Multiplex System. Design, implementation, and troubleshooting related experience with Tiffin and Vanleigh product lines.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "MICHAEL'S RV CENTER, INC",
+      "c": "Columbia, MS",
+      "p": "601-736-0468",
+      "u": "https://michaelsrvcenter.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Michael's RV Center has operated at the same location in Columbia since 2001 and describes itself as having top notch service technicians and a full line of parts. It began as mobile service from the owner's home and grew into a full service RV facility. It invites customers to come see the facility for RV service and to check out its used RVs.",
+      "g": [
+        "service center"
+      ],
+      "base": "Columbia",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://michaelsrvcenter.com/",
+        "phone_quote": "Call us at 601-736-0468",
+        "coverage_quotes": [],
+        "type_quote": "We have a full line of parts and we provide top of the line service.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    }
+  ]
+}

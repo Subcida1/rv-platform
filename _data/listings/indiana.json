@@ -1,0 +1,1393 @@
+{
+  "state": "IN",
+  "name": "Indiana",
+  "regions": [
+    {
+      "key": "northern-in",
+      "label": "South Bend, Elkhart and the RV belt"
+    },
+    {
+      "key": "northeast-in",
+      "label": "Fort Wayne and the northeast"
+    },
+    {
+      "key": "central-in",
+      "label": "Indianapolis and central Indiana"
+    },
+    {
+      "key": "southern-in",
+      "label": "Evansville, Terre Haute and the south"
+    }
+  ],
+  "region_of": {
+    "Atwood": "northern-in",
+    "Elkhart": "northern-in",
+    "Goshen": "northern-in",
+    "Middlebury": "northern-in",
+    "Mishawaka": "northern-in",
+    "Nappanee": "northern-in",
+    "Osceola": "northern-in",
+    "Plymouth": "northern-in",
+    "Shipshewana": "northern-in",
+    "Wakarusa": "northern-in",
+    "Angola": "northeast-in",
+    "Auburn": "northeast-in",
+    "Bluffton": "northeast-in",
+    "Peru": "northeast-in",
+    "Anderson": "central-in",
+    "Clinton": "central-in",
+    "Greenfield": "central-in",
+    "Indianapolis": "central-in",
+    "Kokomo": "central-in",
+    "Lafayette": "central-in",
+    "Muncie": "central-in",
+    "Aurora": "southern-in",
+    "Evansville": "southern-in",
+    "Seymour": "southern-in",
+    "Terre Haute": "southern-in",
+    "Warsaw": "northern-in",
+    "Fort Wayne": "northeast-in"
+  },
+  "listings": [
+    {
+      "n": "Elkhart Sales and Service Inc.",
+      "c": "Elkhart, IN",
+      "p": "574-262-9499",
+      "u": "https://elkhartssi.com/",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "Elkhart Sales and Service Inc. is an RV repair center in Elkhart, Indiana, which it calls the RV Capital of the World. It offers service at its shop and at a number of local campgrounds. It works on everything from large diesel pushers to smaller pop up campers, with an emphasis on preventative maintenance and quality service.",
+      "g": [
+        "service center",
+        "mobile tech"
+      ],
+      "base": "Elkhart",
+      "areas": [
+        "Elkhart"
+      ],
+      "region": "Elkhart County",
+      "spec": null,
+      "evidence": {
+        "checked": "https://elkhartssi.com/",
+        "phone_quote": "Phone: 574-262-9499",
+        "coverage_quotes": [
+          "We are located in Elkhart county. We can be found at:",
+          "Located in Elkhart, Indiana, the RV Capital of the World, we offer service at our shop and at a number of local campgrounds.",
+          "From your large diesel pusher to your smaller pop up camper."
+        ],
+        "type_quote": "RV Repair Center",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Master Tech RV",
+      "c": "Elkhart, IN",
+      "p": "866-895-4556",
+      "u": "https://mastertechrv.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Master Tech RV is based in Elkhart, Indiana and services RVs across America and Canada. It describes itself as a bumper to bumper service, collision and renovation center and a full service facility and warranty center for Newmar and Tiffin motorhomes. It handles insurance and warranty claims, full RV renovation and remodeling, and states it does any service to any RV.",
+      "g": [
+        "service center",
+        "collision"
+      ],
+      "base": "Elkhart",
+      "areas": [
+        "Elkhart"
+      ],
+      "region": "America",
+      "spec": null,
+      "evidence": {
+        "checked": "https://mastertechrv.com/",
+        "phone_quote": "Phone 866-895-4556",
+        "coverage_quotes": [
+          "We are based in Elkhart, Indiana and service RV's across America (and Canada)",
+          "Yes, we do any service to any RV. If your RV needs something done, we can do it for you."
+        ],
+        "type_quote": "We are America's #1 Bumper to Bumper Service, Collision & Renovation Center",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Rv Rescue",
+      "c": "Elkhart, IN",
+      "p": "574-612-2997",
+      "u": "https://www.myrvrescue.com/",
+      "t": "both",
+      "e": false,
+      "r": true,
+      "d": "RV Rescue is an RV service and repair shop in Elkhart, Indiana with over 25 years in RV service and manufacturing. It specializes in Cummins Onan generators and Cummins engines, and offers service and repair on gasoline and diesel engines, servicing all chassis including Spartan, Freightliner and Ford. It also does general RV service such as water heaters, refrigerators, awnings, slide outs, winterization and roof, window and door replacements, and offers both in-shop and mobile service.",
+      "g": [
+        "service center",
+        "mobile tech",
+        "roadside/chassis"
+      ],
+      "base": "Elkhart",
+      "areas": [
+        "Elkhart"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.myrvrescue.com/",
+        "phone_quote": "574-612-2997",
+        "coverage_quotes": [
+          "specializing in Cummins Onan generators and Cummins engines",
+          "We offer service and repair on gasoline and diesel engines.",
+          "servicing all chassis",
+          "Mobile service call fee $150"
+        ],
+        "type_quote": "### Engine & Chassis Service",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Hobson RV Service, Inc",
+      "c": "Elkhart, IN",
+      "p": "(574)295-5893",
+      "u": "https://hobsonrv.com/contact-us-%2Fhours",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Hobson RV Service is an authorized RV appliance sales and service center in Elkhart, Indiana, with a technician on site. It specializes in Dometic, Norcold, Suburban, Atwood, A&E Awnings and Coleman appliances and focuses on finding hard-to-find RV appliance parts. It also operates an RV parts and accessories store, and service work is by appointment.",
+      "g": [
+        "service center"
+      ],
+      "base": "Elkhart",
+      "areas": [
+        "Elkhart"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://hobsonrv.com/contact-us-%2Fhours",
+        "phone_quote": "(574)295-5893 (5742955893) / Hobsonrv.com",
+        "coverage_quotes": [
+          "Hobson RV Service - Your Authorized RV Service Center. Technician on site.",
+          "25250 County Road 4, Elkhart, Indiana 46514, United States",
+          "Service work by Appointment"
+        ],
+        "type_quote": "Authorized RV Appliance Sales and Service Center Technician at Hobson RV Service Elkhart Indiana",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Hoosier Custom Cruiser RV",
+      "c": "Elkhart, IN",
+      "p": "574-238-6909",
+      "u": "https://hoosiercruiserrv.com/dreams/rv-service/",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "Hoosier Custom Cruiser RV is a full-service RV repair and service facility in Elkhart, Indiana. It handles routine maintenance, major repairs and custom upgrades, with mobile service available for select repairs and larger jobs done at its Elkhart facility. Its on-site team includes cabinetmakers, electricians and RV craftsmen, and it services Class B and Class B+ motorhomes.",
+      "g": [
+        "service center",
+        "mobile tech"
+      ],
+      "base": "Elkhart",
+      "areas": [
+        "Elkhart"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://hoosiercruiserrv.com/dreams/rv-service/",
+        "phone_quote": "574-238-6909 - Parts/Service",
+        "coverage_quotes": [
+          "We are a full-service RV repair and service facility in Elkhart, Indiana.",
+          "Mobile services are available for select repairs. Larger jobs performed in our facility in Elkhart, Indiana."
+        ],
+        "type_quote": "RV Service & Motorhome Repair",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Stuart's RV Leveling & Roofing",
+      "c": "Elkhart, IN",
+      "p": "(574) 262-0225",
+      "u": "https://rvleveling.com/pages/contact",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Stuart's RV Leveling & Roofing is an HWH Master Service Center in Elkhart, Indiana, also trading as Stuarts Service. It works on RV leveling systems, including leveling cylinders, and on RV roofing.",
+      "g": [
+        "service center"
+      ],
+      "base": "Elkhart",
+      "areas": [
+        "Elkhart"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://rvleveling.com/pages/contact",
+        "phone_quote": "CALL or TEXT (574) 262-0225 (+15742620225)",
+        "coverage_quotes": [
+          "Home of STUARTS SERVICE - HWH Master Service Center in Elkhart, Indiana.",
+          "2990 County Road 6 W Elkhart, IN 46514"
+        ],
+        "type_quote": "Stuart's RV Leveling & Roofing",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "RV Specialist",
+      "c": "Goshen, IN",
+      "p": "574-538-3700",
+      "u": "https://www.rvspecialistgoshen.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "RV Specialist is a full service RV dealership in Goshen, Indiana in the heart of the RV Capital of the world. It offers RV service and repairs, RV parts and general RV maintenance, and will work with your insurance company to get repairs done. Its facility has six full service bays and RV hookups available.",
+      "g": [
+        "service center"
+      ],
+      "base": "Goshen",
+      "areas": [
+        "Goshen",
+        "Middlebury",
+        "Shipshewana"
+      ],
+      "region": "Elkhart County",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.rvspecialistgoshen.com/",
+        "phone_quote": "574-538-3700",
+        "coverage_quotes": [
+          "We are a full service RV dealership located in the Elkhart area right in Goshen Indiana in the heart of the RV Capital of the world.",
+          "Need RV service or repairs? We offer RV service and repairs as well as RV parts and general RV maintenance",
+          "With a new state of the art facility and 6 full service bays, we are able to meet your RV service needs."
+        ],
+        "type_quote": "Welcome to RV Specialist!",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Tiara RV Sales",
+      "c": "Elkhart, IN",
+      "p": "574-266-2136",
+      "u": "https://tiararvsales.com/service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Tiara RV Service Department provides professional RV service, maintenance and repairs in Elkhart, Indiana. It services all types of RV products and is an authorized warranty facility for Keystone RV, Forest River RV and DRV, covering travel trailers, fifth wheels and toy haulers. It welcomes retail, commercial and insurance repairs, and states it does not currently offer mobile service.",
+      "g": [
+        "service center"
+      ],
+      "base": "Elkhart",
+      "areas": [
+        "Elkhart"
+      ],
+      "region": null,
+      "spec": "We do not currently offer a form of mobile service.",
+      "evidence": {
+        "checked": "https://tiararvsales.com/service",
+        "phone_quote": "Call or Text Us: 574-266-2136 (+1-574-266-2136)",
+        "coverage_quotes": [
+          "In addition to our retail customers, we welcome commercial and insurance repairs.",
+          "We service all types of RV products and are an authorized warranty facility for Keystone RV, Forest River RV, and DRV."
+        ],
+        "type_quote": "Professional RV service, maintenance and repairs",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "S & S Automotive Restoration & Collision, LLC",
+      "c": "Wakarusa, IN",
+      "p": "(574)-862-7924",
+      "u": "https://ssautowaky.com/contact/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "S & S Automotive is an automotive and RV repair facility in Wakarusa, Indiana, just miles outside of Elkhart. Its 12,000 square foot facility has multiple service bays and a down draft 60 ft paint booth, and it handles warranty, insurance and retail repairs. RV services include collision, paint, fiberglass, body, sidewall and cap repairs, roof replacements and welding.",
+      "g": [
+        "collision",
+        "service center"
+      ],
+      "base": "Wakarusa",
+      "areas": [
+        "Wakarusa",
+        "Elkhart"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://ssautowaky.com/contact/",
+        "phone_quote": "Phone: (574)-862-7924; Option 2 for RV",
+        "coverage_quotes": [
+          "RV Department: rvassist@ssautowaky.com"
+        ],
+        "type_quote": "Contact Us",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Collision Repair Systems",
+      "c": "Osceola, IN",
+      "p": "(574) 674-6821",
+      "u": "https://crscustom.com/professional-collision-repair/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Collision Repair Systems (CRS Custom) is an auto body collision shop in Osceola, Indiana, nationally recognized for specialized services catering to RVs, buses and semi-trucks. It handles major collision repair and bodywork, fiberglass repair, MIG welding and custom paint and graphics, from minor dents to a million-dollar Prevost. Its 33,000 square foot facility has two dedicated RV and truck paint booths.",
+      "g": [
+        "collision",
+        "service center"
+      ],
+      "base": "Osceola",
+      "areas": [
+        "Osceola"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://crscustom.com/professional-collision-repair/",
+        "phone_quote": "Phone: (574) 674-6821",
+        "coverage_quotes": [
+          "We are nationally recognized for our specialized services catering to RVs, buses, and semi-trucks.",
+          "Benefit from our expansive 33,000 square foot facility featuring two dedicated RV and truck paint booths."
+        ],
+        "type_quote": "Expert Commercial & Recreational Vehicle Repairs",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Midwest Custom Painting & Service Center",
+      "c": "Elkhart, IN",
+      "p": "(574) 564-6506",
+      "u": "https://midwestcustompainting.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Midwest Custom Painting & Service Center is an RV restoration and paint shop in Elkhart, Indiana, the RV Capital of the World. It does complete RV transformation services including exterior paint, interior customization and full restorations, and offers RV collision repair with full restoration after accidents covering frame, panels and paint. It handles insurance claims and states all repairs come with a written warranty.",
+      "g": [
+        "collision",
+        "service center"
+      ],
+      "base": "Elkhart",
+      "areas": [
+        "Elkhart"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://midwestcustompainting.com/",
+        "phone_quote": "Phone: (574) 564-6506",
+        "coverage_quotes": [
+          "Complete RV Restoration & Custom Paint — Done Right in Elkhart, Indiana...the RV Capital of the World.",
+          "RV Collision RepairFull restoration after accidents — frame, panels, and paint."
+        ],
+        "type_quote": "RV Painting & Restoration Experts",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Allegiant RV Service & Sales",
+      "c": "Middlebury, IN",
+      "p": "574-825-3303",
+      "u": "https://allegiantrv.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Allegiant RV Service & Sales is an independent RV repair facility in Middlebury, Indiana, located on Indiana 13 south of Interstates 80 and 90. Founded in 2016, it services motor homes, fifth wheels, campers, travel trailers, toy haulers, horse trailers and Toterhomes. Its services include exterior RV paint and bodywork, collision repair, water damage repair, rodent proofing and brake adjustment.",
+      "g": [
+        "service center",
+        "collision"
+      ],
+      "base": "Middlebury",
+      "areas": [
+        "Middlebury"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://allegiantrv.com/",
+        "phone_quote": "Call us at 574-825-3303",
+        "coverage_quotes": [
+          "As an independent RV repair facility, we aren’t limited to only working with certain manufacturers.",
+          "We’re located right in Middlebury, Indiana. You can find us on Indiana 13, south of Interstates 80 and 90 at exit 107!"
+        ],
+        "type_quote": "DOES YOUR COACH NEED SERVICE? ALLEGIANT RV IS HERE TO HELP!",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "The Outpost RV",
+      "c": "Middlebury, IN",
+      "p": "574-825-4611",
+      "u": "https://www.theoutpostrv.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "The Outpost RV offers RV service and repair in Middlebury, Indiana. It invites customers to bring the RV in for an inspection or submit a service form. Parts and service reach 574-825-4611, with year-round service hours Monday to Friday.",
+      "g": [
+        "service center"
+      ],
+      "base": "Middlebury",
+      "areas": [
+        "Middlebury"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.theoutpostrv.com/rv-service",
+        "phone_quote": "Sales 866.338.9845 (8663389845) Parts & Service 574.825.4611 (5748254611)",
+        "coverage_quotes": [
+          "The Outpost RV 57756 Co Rd 37 IN 46540",
+          "Or, you can bring your RV by today and let us check it out ourselves."
+        ],
+        "type_quote": "RV Service in Middlebury, Indiana",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "TriStar RV Service",
+      "c": "Shipshewana, IN",
+      "p": "260-768-7873",
+      "u": "https://tristarrvservice.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "TriStar RV Service is an RV repair shop in Shipshewana, Indiana. It offers full-service repair and maintenance including pre-purchase RV inspection, annual maintenance programs, repairs, upgrades and rebuilds. Its work includes roof replacement, floor replacement, water damage repairs and wall repair, and it is an RVIA Master certified Technician Seal Tech leak testing facility.",
+      "g": [
+        "service center"
+      ],
+      "base": "Shipshewana",
+      "areas": [
+        "Shipshewana"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://tristarrvservice.com/",
+        "phone_quote": "260-768-7873 (2607687873)",
+        "coverage_quotes": [
+          "We offer full-service repair and maintenance solutions, including pre-purchase RV inspection, annual maintenance programs, repairs, upgrades and rebuild.",
+          "7715 N 900 W Shipshewana, IN 46565"
+        ],
+        "type_quote": "RV Repair Shop in Shipshewana",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Adventure RV",
+      "c": "Shipshewana, IN",
+      "p": "260-336-0540",
+      "u": "https://adventure-rv.net/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Adventure RV is an RV repair and upgrade shop in Shipshewana, Indiana, in the heart of the RV capital of the world. It is a factory install site for JC Refrigeration cooling system replacements and Dutch Aire HVAC refrigerators, and specializes in high efficiency refrigerator cooling system replacements and full fridge replacements alongside battery bank and solar systems. It is a certified Lippert products dealer and offers additional repairs.",
+      "g": [
+        "service center"
+      ],
+      "base": "Shipshewana",
+      "areas": [
+        "Shipshewana"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://adventure-rv.net/",
+        "phone_quote": "CALL US 260-336 0540",
+        "coverage_quotes": [
+          "615 N Van Buren St Shipshewana, IN 46565",
+          "We are the factory install Site for JC Refrigeration cooling system replacements and Dutch Aire Hvac Refrigerators ."
+        ],
+        "type_quote": "Your destination for RV upgrades , Repairs and custom installations",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Creech RV Service & Repair",
+      "c": "Plymouth, IN",
+      "p": "574-350-9249",
+      "u": "https://www.creechrv.com/",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "Creech RV Service and Repair is a family-owned RV repair shop in Plymouth, Indiana. It works on motorhomes, travel trailers, fifth wheels and campers across Plymouth and Marshall County. Its services include RV electrical repair, plumbing, appliance repair, slide out repair, solar installation, awning repair and inspections, and it provides mobile repair for certain repairs.",
+      "g": [
+        "service center",
+        "mobile tech"
+      ],
+      "base": "Plymouth",
+      "areas": [
+        "Plymouth",
+        "Bremen",
+        "Culver",
+        "Argos",
+        "Warsaw",
+        "South Bend"
+      ],
+      "region": "Marshall County",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.creechrv.com/",
+        "phone_quote": "574-350-9249",
+        "coverage_quotes": [
+          "We work on motorhomes, travel trailers, fifth wheels, and campers across Plymouth and Marshall County.",
+          "Yes, we provide mobile repair services for certain types of repairs to assist you when you're unable to bring your RV to our shop."
+        ],
+        "type_quote": "Reliable and Affordable RV Repair & Maintenance Services",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Joey's RV Service LLC",
+      "c": "Atwood, IN",
+      "p": "(574) 858-6067",
+      "u": "https://www.joeysrv.com/",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "Joey's RV Service LLC is a full service shop, supply store and mobile service facility in Atwood, Indiana. It specializes in RV trailers, motor homes, horse trailers, cargo trailers and food trucks, and welcomes warranty and insurance claim repairs. It is a generator specialist for all types and brands of generators and offers mobile service.",
+      "g": [
+        "service center",
+        "mobile tech"
+      ],
+      "base": "Atwood",
+      "areas": [
+        "Atwood"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.joeysrv.com/",
+        "phone_quote": "(574) 858-6067",
+        "coverage_quotes": [
+          "Joey's RV is a full service shop specializing in RV trailers, motor homes, horse trailers, cargo trailers, and food trucks.",
+          "We will come to you! If you are unable to come to our shop, Joey's RV offers mobile service and repair."
+        ],
+        "type_quote": "Joey's RV Service is a full service shop, supply store, and mobile service facility.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Rick's Auto Body Shop",
+      "c": "Mishawaka, IN",
+      "p": "574-287-3955",
+      "u": "https://ricksautobodyshop.com/auto-body-services/estimates/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Rick's Auto Body Shop is an auto body shop in Mishawaka, Indiana that specializes in RV cosmetic and collision repair. It repairs Class A, B and C motorhomes, travel trailers, folding trailers and fifth wheels, using AkzoNobel refinish systems and a professional painting booth. It serves the Michiana area including South Bend, Mishawaka and Elkhart.",
+      "g": [
+        "collision"
+      ],
+      "base": "Mishawaka",
+      "areas": [
+        "Mishawaka",
+        "South Bend"
+      ],
+      "region": "Michiana",
+      "spec": null,
+      "evidence": {
+        "checked": "https://ricksautobodyshop.com/auto-body-services/estimates/",
+        "phone_quote": "To request an in person estimate, call us at 574-287-3955.",
+        "coverage_quotes": [
+          "MISHAWAKA",
+          "1714 E 12th St. Mishawaka, IN 46545",
+          "SOUTH BEND"
+        ],
+        "type_quote": "Estimates",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Midwest RV",
+      "c": "Terre Haute, IN",
+      "p": "(812) 299-5432",
+      "u": "https://www.midwestrvonline.com/repair-your-motorhome-travel-trailer-fifth-wheel-or-fold-out-with-certified-technicians--service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Midwest RV is an RV dealership with a service department in Terre Haute, Indiana. Its technicians service motorhomes, travel trailers, fifth wheels, toy haulers and fold-outs, from roofs and appliances to slide-outs and awnings. It honors most extended service contracts and schedules service work by phone.",
+      "g": [
+        "service center"
+      ],
+      "base": "Terre Haute",
+      "areas": [
+        "Terre Haute"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.midwestrvonline.com/repair-your-motorhome-travel-trailer-fifth-wheel-or-fold-out-with-certified-technicians--service",
+        "phone_quote": "Please call our Service Department at (812) 299-5432 to schedule your service work.",
+        "coverage_quotes": [
+          "Your motorhome, travel trailer, fifth wheel, toy hauler or fold out will always receive the best of care by our technicians here at Midwest RV.",
+          "We DO honor most extended service contracts."
+        ],
+        "type_quote": "Midwest RV Service Department",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Blackburn Collision Center",
+      "c": "Terre Haute, IN",
+      "p": "812-232-6258",
+      "u": "https://blackburncollisioncenter.com/services/rv-and-boat-repair/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Blackburn Collision Center is a collision shop in Terre Haute, Indiana that services and repairs RVs and boats of all sizes. Its technicians specialize in fiberglass repair, paint repair and custom paint. It is open Monday to Friday.",
+      "g": [
+        "collision"
+      ],
+      "base": "Terre Haute",
+      "areas": [
+        "Terre Haute"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://blackburncollisioncenter.com/services/rv-and-boat-repair/",
+        "phone_quote": "Blackburn Collision Center 1245 North Eighth St Terre Haute, Indiana 47807 812-232-6258",
+        "coverage_quotes": [
+          "Bring it to Blackburn Collision Center, where we have a team of trained technicians who can service and repair RVs and boats of all sizes.",
+          "1245 North Eighth St Terre Haute , Indiana 47807"
+        ],
+        "type_quote": "Complete RV and Boat Repair Solutions",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Dylon's Garage LLC",
+      "c": "Aurora, IN",
+      "p": "812-907-0243",
+      "u": "https://dylonsgarage.com/services/rv-service-repairs",
+      "t": "center",
+      "e": false,
+      "r": true,
+      "d": "Dylon's Garage LLC is a repair shop in Aurora, Indiana that services and maintains RVs and motorhomes. It repairs brake systems, engines, transmissions, tires, suspensions, pumps and electronics on all RVs, gas or diesel, and provides engine diagnostics and inspections. It also does heavy duty RV work including clutch repair and replacement, suspension adjustment and diesel engine repair and replacements.",
+      "g": [
+        "service center",
+        "roadside/chassis"
+      ],
+      "base": "Aurora",
+      "areas": [
+        "Aurora"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://dylonsgarage.com/services/rv-service-repairs",
+        "phone_quote": "812-907-0243 12485 North Hogan Rd Aurora, IN 47001",
+        "coverage_quotes": [
+          "Gas or diesel, big or small, we repair and maintain brake systems, engines, transmissions, tires, suspensions, pumps, and electronics on all RVs.",
+          "Heavy Duty RV Service Repairs: Clutch Repair & Replacement, Suspension Adjustment, Pump Replacement, Valve & Piston Maintenence, Diesel Engine Repair & Replacements"
+        ],
+        "type_quote": "RV - Motorhome Repairs & Service by Experienced Mechanics",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "American RV Service",
+      "c": "Evansville, IN",
+      "p": "812-867-5200",
+      "u": "https://www.americanrvcenter.com/tri-state-rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "American RV Service is a full-service RV repair center in Evansville, Indiana, part of American RV Center. Its climate-controlled 18-bay indoor facility handles collision repair and wreck rebuilds, roof repair and full replacements, slide room diagnostics and repair, and leak detection. It services what it does not sell and lets transient customers camp on-site for free during repairs.",
+      "g": [
+        "service center",
+        "collision"
+      ],
+      "base": "Evansville",
+      "areas": [
+        "Evansville"
+      ],
+      "region": "Tri-State",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.americanrvcenter.com/tri-state-rv-service",
+        "phone_quote": "812-867-5200",
+        "coverage_quotes": [
+          "18-Bay Indoor Facility Climate-controlled, full-service repair center designed for year-round service.",
+          "We Service What We Don't Sell No matter where you bought it-we'll take care of it.",
+          "Transient customers can camp on-site for free during repairs"
+        ],
+        "type_quote": "Expert RV Service-Done Right, Done Fast",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Mobile RV Repair Solutions",
+      "c": "Southern Indiana",
+      "p": "(772) 788-3242",
+      "u": "https://www.mobilervrepairsolutions.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Mobile RV Repair Solutions brings nationally certified mobile RV repair to campsites, driveways and roadside across Southern Indiana. It services air conditioners, furnaces, refrigerators, water heaters and generators. The owner is NRVTA trained and certified and has over 20 years in sales and service.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": null,
+      "areas": [],
+      "region": "Southern Indiana",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.mobilervrepairsolutions.com/",
+        "phone_quote": "(772) RVTECH-2 (+17727883242)",
+        "coverage_quotes": [
+          "We bring NATIONALLY CERTIFIED RV repair services directly to your campsite, driveway, or wherever you're stranded across Southern Indiana.",
+          "National Certification: Backed by NRVTA training and certification for reliable, professional repairs."
+        ],
+        "type_quote": "Certified Mobile RV Service Southern Indiana",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      },
+      "reg": "southern-in"
+    },
+    {
+      "n": "SRT Mobile RV Repair",
+      "c": "Clinton, IN",
+      "p": "(812) 241-8369",
+      "u": "https://shaun1penland.wixsite.com/srtmobilervrepair",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "SRT Mobile RV Repair is an on-site RV repair company based in Clinton, Indiana, serving Wabash and surrounding areas. It specializes in RV slide out floor replacements, roofing repairs and replacements, and welding. Depending on the weather and time of year, almost every service it offers can be done at the customer's driveway.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Clinton",
+      "areas": [
+        "Clinton",
+        "Wabash"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://shaun1penland.wixsite.com/srtmobilervrepair",
+        "phone_quote": "(812) 241-8369",
+        "coverage_quotes": [
+          "SRT Mobile is a company specializing in RV slide out floor replacements, roofing repairs and replacements, and welding.",
+          "With 6 years of experience, SRT Mobile RV Repair is happy to serve Wabash, IN and its surrounding areas."
+        ],
+        "type_quote": "SRT Mobile RV Repair",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Rapid RV Repair",
+      "c": "Indianapolis, IN",
+      "p": "317-762-4454",
+      "u": "https://www.rapidrvrepairs.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Rapid RV Repair is a mobile RV repair company serving the greater Indianapolis, IN area and beyond. It comes to the customer's location for routine maintenance, major repairs or emergency service. Its RVTAA certified technician works on absorption refrigerators, water heaters, furnaces, AC units, slides, landing gear, 120 volt AC and 12 volt DC systems, plumbing and generators.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Indianapolis",
+      "areas": [
+        "Indianapolis"
+      ],
+      "region": "greater Indianapolis",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.rapidrvrepairs.com/",
+        "phone_quote": "317-762-4454",
+        "coverage_quotes": [
+          "Serving the greater Indianapolis, IN area",
+          "Rapid RV Repair is a mobile RV repair company that services the Indianapolis, IN area and beyond."
+        ],
+        "type_quote": "We Come to You!",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Ask Ms. Lynn, LLC",
+      "c": "Indianapolis, IN",
+      "p": "(317)879-9414",
+      "u": "https://askmslynn.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "Ask Ms. Lynn, LLC is a mobile RV technician based in Indianapolis, Indiana, and certified by RVTAA and RVTI. She repairs anything in the house section of an RV, whether a motorhome, 5th wheel or travel trailer, and comes to the customer. She charges a small upcharge for Sunday and after hour emergency calls.",
+      "g": [
+        "mobile tech",
+        "emergency"
+      ],
+      "base": "Indianapolis",
+      "areas": [
+        "Indianapolis"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://askmslynn.com/",
+        "phone_quote": "(317)879-9414",
+        "coverage_quotes": [
+          "Will repair anything in the house section of your RV be it motorhome, 5th wheel, or travel trailer.",
+          "I come to you, so you do not have to"
+        ],
+        "type_quote": "RVTAA and RVTI Certified Mobile RV Technician",
+        "emergency_quote": "for Sunday and after hour emergency calls",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Express RV Repair",
+      "c": "Indianapolis, IN",
+      "p": "317-991-4922",
+      "u": "https://expressrvrepair.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Express RV Repair provides RV repair to residents of Indianapolis and its surrounding counties. Its RVDA and RVIA certified technicians have over 30 years of combined experience in heating, air-conditioning, plumbing and electrical repair. It also performs pre-purchase inspections, noting that transmissions and engines are not included in its inspection service.",
+      "g": [
+        "service center"
+      ],
+      "base": "Indianapolis",
+      "areas": [
+        "Indianapolis"
+      ],
+      "region": null,
+      "spec": "Transmissions and engines are not included in our inspection service; therefore, you will need to have a mechanic take a closer look.",
+      "evidence": {
+        "checked": "https://expressrvrepair.com/",
+        "phone_quote": "317-991-4922 (+13179914922)",
+        "coverage_quotes": [
+          "Express RV provides residents of Indianapolis and its surrounding counties with RV repair.",
+          "Experience Our RVDA and RVIA certified technicians have over 30 years of combined experience in the Heating, Air-conditioning, Plumbing, and Electrical repair."
+        ],
+        "type_quote": "RV REPAIR IN INDIANAPOLIS",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "RV Geek",
+      "c": "Greenfield, IN",
+      "p": "(888) 385-3882",
+      "u": "https://www.rvgeek.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "RV Geek provides mobile RV repair and maintenance, bringing technicians to the customer at home or at a campsite. It serves Greenfield and Central Indiana, including Indianapolis, Noblesville, Carmel and Fishers. Its services cover most RV repairs, maintenance, plumbing and electrical issues.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Greenfield",
+      "areas": [
+        "Anderson",
+        "Cambridge City",
+        "Carthage",
+        "Fishers",
+        "Franklin",
+        "Greensburg",
+        "Greenwood",
+        "Indianapolis",
+        "Knightstown",
+        "Lawrence",
+        "Martinsville",
+        "Morristown",
+        "New Palestine",
+        "Noblesville",
+        "Rushville",
+        "Shelbyville",
+        "Zionsville"
+      ],
+      "region": "Central Indiana",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.rvgeek.com/",
+        "phone_quote": "(888) 385-3882",
+        "coverage_quotes": [
+          "New Serving - Greenfield and Central Indiana",
+          "Anderson Cambridge City Carthage Fishers Franklin Greensburg Greenwood Indianapolis Knightstown"
+        ],
+        "type_quote": "RV Geek Mobile RV Services answer that! We bring expert repair and maintenance directly to you, at home or at a campsite.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Goodwin RV Repair and Service",
+      "c": "Bluffton, IN",
+      "p": "260-273-8007",
+      "u": "https://www.goodwinrv.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "Goodwin RV provides professional mobile RV repair and RV service in Bluffton, Indiana and surrounding areas including Fort Wayne, Decatur, Huntington, Markle and Berne. It services travel trailers, fifth wheels, motorhomes, and horse trailers with living quarters. Lead technician Justin Goodwin is a Master RVTI Certified Technician, and the business offers after-hours and emergency service.",
+      "g": [
+        "mobile tech",
+        "emergency"
+      ],
+      "base": "Bluffton",
+      "areas": [
+        "Bluffton",
+        "Fort Wayne",
+        "Decatur",
+        "Huntington",
+        "Markle",
+        "Berne"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.goodwinrv.com/",
+        "phone_quote": "Tel: 260-273-8007",
+        "coverage_quotes": [
+          "Goodwin RV provides professional mobile RV repair and RV service in Bluffton, Indiana and surrounding areas, including but not limited too, Fort Wayne, Decatur, Huntington, Markle, and Berne.",
+          "We service travel trailers, fifth wheels, motorhomes, and horse trailers with living quarters."
+        ],
+        "type_quote": "Mobile RV Repair in Bluffton & Fort Wayne, Indiana",
+        "emergency_quote": "After-Hours & Emergency Service",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Victory RV",
+      "c": "Anderson, IN",
+      "p": "765-201-0056",
+      "u": "https://www.victoryrvservicerepair.com/",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "Victory RV is a full-service RV repair company in Anderson, Indiana, working on all major brands of recreational vehicles. It provides in-shop repair at its Anderson location and mobile service, driving out to the customer's location and fixing the problem on the spot. It services motor homes, fifth wheels, toy haulers and travel trailers, everything except engine and chassis.",
+      "g": [
+        "service center",
+        "mobile tech"
+      ],
+      "base": "Anderson",
+      "areas": [
+        "Anderson"
+      ],
+      "region": null,
+      "spec": "We service all camper makes and models from small to large, everything except engine and chassis.",
+      "evidence": {
+        "checked": "https://www.victoryrvservicerepair.com/",
+        "phone_quote": "765-201-0056",
+        "coverage_quotes": [
+          "We provide the service of driving out to your location and fixing your problem on the spot!",
+          "We provide repairs in shop at our location based in Anderson, Indiana."
+        ],
+        "type_quote": "victory RV is a full-service RV repair company that specializes in working on all major brands of recreational vehicles.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Stellhorn RV and Camping Center",
+      "c": "Kokomo, IN",
+      "p": "765-878-2267",
+      "u": "https://www.stellhornrv.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Stellhorn RV and Camping Center is an RV dealership and service center in Kokomo, Indiana. Its certified technicians handle routine maintenance and warranty work along with appliance repairs, roof service, electrical diagnostics and major RV repairs. It services most travel trailers, fifth wheels, toy haulers and motorhomes and works with insurance companies on claim repairs.",
+      "g": [
+        "service center"
+      ],
+      "base": "Kokomo",
+      "areas": [
+        "Kokomo"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.stellhornrv.com/rv-service",
+        "phone_quote": "765-878-2267",
+        "coverage_quotes": [
+          "From routine maintenance and warranty work to appliance repairs, roof service, electrical diagnostics, and major RV repairs, our certified technicians help keep you camping with confidence.",
+          "Yes, we service most travel trailers, fifth wheels, toy haulers, and motorhomes."
+        ],
+        "type_quote": "RV Service & Repair in Kokomo, Indiana",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "York RV Service",
+      "c": "Muncie, IN",
+      "p": "765-634-8652",
+      "u": "https://www.yorkrvservice.com",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "York RV Service is an RV parts and repair shop in Muncie, Indiana. It has the equipment and experience to locate, repair and replace camper problems, and offers preventative maintenance.",
+      "g": [
+        "service center"
+      ],
+      "base": "Muncie",
+      "areas": [
+        "Muncie"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.yorkrvservice.com",
+        "phone_quote": "Ph:765-634-8652",
+        "coverage_quotes": [
+          "YORK RV SERVICE has the proper equipment and experience to locate, repair and/or replace the issue quickly and effectively.",
+          "Call us to take care of your Preventative Maintenance needs today."
+        ],
+        "type_quote": "Rv Parts & Repair",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Sunrise RV Service LLC",
+      "c": "Indiana",
+      "p": "765-393-5335",
+      "u": "https://www.sunriservindy.com/home",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "Sunrise RV Service LLC offers mobile appointments for quick service as well as its own property to bring a motorhome, 5th wheel or camper trailer for major repairs. Chad Agre brings over two decades in the auto and RV service industry and is certified by RVTI and trained by major appliance, mechanical and electrical manufacturers. It offers a winterization special and posts an hourly labor rate.",
+      "g": [
+        "service center",
+        "mobile tech"
+      ],
+      "base": null,
+      "areas": [],
+      "region": "Indiana",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.sunriservindy.com/home",
+        "phone_quote": "To schedule an appointment call or text 765-393-5335",
+        "coverage_quotes": [
+          "We offer mobile appointments for quick service, as well as our own property to bring your motorhome, 5th wheel, or camper trailer for major repairs.",
+          "With over two decades in the auto and RV service industry, Chad brings a vast knowledge of mechanical and RV coach repair to Indiana."
+        ],
+        "type_quote": "Sunrise RV Service LLC",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      },
+      "reg": [
+        "northern-in",
+        "northeast-in",
+        "central-in",
+        "southern-in"
+      ]
+    },
+    {
+      "n": "Stagecoach RV Sales",
+      "c": "Peru, IN",
+      "p": "765-460-5635",
+      "u": "https://www.stagecoachrvsales.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Stagecoach RV Sales is an RV dealership and service center in Peru, Indiana, which it calls its Indiana RV service headquarters, serving Lafayette and Fort Wayne. Its service department handles small and large problems on all kinds of makes and models of RVs, both travel trailers and motorhomes. It performs inspections and seasonal maintenance and has plenty of service bays.",
+      "g": [
+        "service center"
+      ],
+      "base": "Peru",
+      "areas": [
+        "Peru",
+        "Lafayette",
+        "Fort Wayne"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.stagecoachrvsales.com/rv-service",
+        "phone_quote": "765-460-5635",
+        "coverage_quotes": [
+          "Stagecoach RV Sales is proud to be your Indiana RV service headquarters in Peru, serving Lafayette and Fort Wayne.",
+          "Whether you own a travel trailer or a motorhome, our technicians will be able to handle whatever it is that needs to be done."
+        ],
+        "type_quote": "RV Service in Peru, IN",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Keiser and Son's",
+      "c": "Lafayette, IN",
+      "p": "765-447-6060",
+      "u": "https://keiserandsons.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Keiser and Son's, formerly JKB Campers, is a third-generation RV repair and service business in Lafayette, Indiana. It offers RV parts and service, awning installation and repair, appliance parts and service, RV collision and damage repair for campers, hitch and tow-bar installation, and trailer wheel bearing and brake service. It has been part of a family RV repair tradition since the early 1960s.",
+      "g": [
+        "service center",
+        "collision"
+      ],
+      "base": "Lafayette",
+      "areas": [
+        "Lafayette"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://keiserandsons.com/",
+        "phone_quote": "765-447-6060 (7654476060)",
+        "coverage_quotes": [
+          "RV repair has been part of our family tradition since the early 1960s.",
+          "RV Collision & Damage Repair for Campers in Lafayette, Indiana"
+        ],
+        "type_quote": "Keiser And Sons - RV Repair in Lafayette, Indiana Formerly JKB Campers",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Quick-N-Out RV Services",
+      "c": "Auburn, IN",
+      "p": "(260) 333-2084",
+      "u": "https://www.quicknoutrvservices.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Quick-N-Out RV Services is a mobile RV service company based in Auburn, Indiana. It brings professional RV service directly to the customer for on-site diagnostics, repairs and maintenance, specializing in RV electrical systems, appliances, slide-outs, leveling systems and general mechanical troubleshooting. Its technicians are licensed through NRVTAA and RVIA, and it works seven days a week.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Auburn",
+      "areas": [
+        "Auburn",
+        "Fort Wayne",
+        "Angola",
+        "Kendallville"
+      ],
+      "region": "Greater Northeast Indiana Area",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.quicknoutrvservices.com/",
+        "phone_quote": "(260) 333-2084 (+12603332084)",
+        "coverage_quotes": [
+          "Quick-N-Out RV Services is a trusted mobile RV service company dedicated to keeping your RV safe, reliable, and road-ready",
+          "2309 Laforge Ln Auburn, IN 46706 United States",
+          "Auburn & DeKalb County, IN"
+        ],
+        "type_quote": "Expert RV Repair & Maintenance in Auburn, IN",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Daves Mobile RV Repair",
+      "c": "Angola, IN",
+      "p": "260-316-6924",
+      "u": "http://www.daves-mobile-rv.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "Daves Mobile RV Repair is a mobile RV repair service based in Angola, Indiana, serving all of Steuben County and a 50-mile radius. It does on-site repairs and maintenance for motorhomes, travel trailers and campers, covering electrical, plumbing, appliance servicing, brake and tire work, bearing repacks, roof maintenance and roof replacement. It also offers emergency RV services across Angola and nearby areas.",
+      "g": [
+        "mobile tech",
+        "emergency"
+      ],
+      "base": "Angola",
+      "areas": [
+        "Angola",
+        "Fremont",
+        "Orland",
+        "Hamilton",
+        "Clear Lake"
+      ],
+      "region": "Steuben County",
+      "spec": null,
+      "evidence": {
+        "checked": "http://www.daves-mobile-rv.com/",
+        "phone_quote": "260-316-6924",
+        "coverage_quotes": [
+          "Daves Mobile RV Repair is your trusted mobile RV repair service serving Angola, IN, and nearby areas.",
+          "Yes, we provide mobile RV repair services within a 50-mile radius of Angola, including nearby campgrounds and parks."
+        ],
+        "type_quote": "Trusted and Convenient Mobile RV Repair Services Proudly Serving All of Steuben County, IN",
+        "emergency_quote": "Our emergency RV services respond quickly across Angola and nearby areas",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Williamson RV",
+      "c": "Seymour, IN",
+      "p": "812-216-5640",
+      "u": "https://www.williamsonrv.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Williamson RV is a family owned and operated RV dealership in Seymour, Indiana, offering sales, service and rentals. Its service department handles general RV repair, bearing repack, brake inspection and replacement, AC and refrigerator repair, awning and roof repairs, and winterizing. It is an authorized service facility for Open Range and the Jayco family, Brinkley RVs, Keystone and Alliance, among others.",
+      "g": [
+        "service center"
+      ],
+      "base": "Seymour",
+      "areas": [
+        "Seymour"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.williamsonrv.com/",
+        "phone_quote": "812-216-5640",
+        "coverage_quotes": [
+          "At Williamson RV we can help you with any stage of your RV experience as we offer Sales, Service, and Rentals.",
+          "2706 N US 31, Seymour, IN 47274"
+        ],
+        "type_quote": "Sales, Service, and Rentals",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Showalter RV",
+      "c": "Nappanee, IN",
+      "p": "574.773.2670",
+      "u": "https://www.showalterrv.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Showalter RV is a family owned RV dealership in Nappanee, Indiana, offering sales, service, parts and rentals. Its service department helps get an RV back into working order and invites customers to bring the RV in for inspection. It is located at 2581 E Market Street.",
+      "g": [
+        "service center"
+      ],
+      "base": "Nappanee",
+      "areas": [
+        "Nappanee"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.showalterrv.com/rv-service",
+        "phone_quote": "574.773.2670 (574-773-2670)",
+        "coverage_quotes": [
+          "If you need some work done on your RV, we at Showalter RV are able to help get it back into working order so you can get back on the road.",
+          "Sales: 2581 E Market Street Nappanee, IN 46550"
+        ],
+        "type_quote": "RV Service in Nappanee, IN",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Five Star RV and Trailer Repair",
+      "c": "Wakarusa, IN",
+      "p": "+1 (574) 238-1456",
+      "u": "https://fivestarrvrepair.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Five Star RV and Trailer Repair is an RV repair shop in Wakarusa, Indiana with over 35 years of experience. Its services include RV repair, Airstream RV repair, RV restoration and complete industrial truck bed welding. It offers free repair and welding estimates.",
+      "g": [
+        "service center"
+      ],
+      "base": "Wakarusa",
+      "areas": [
+        "Wakarusa"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://fivestarrvrepair.com/",
+        "phone_quote": "+1 (574) 238-1456",
+        "coverage_quotes": [
+          "Located in Wakarusa, Indiana",
+          "Truck Bed Lifts, RV Repair, Airstream RV Repair, and RV Restoration."
+        ],
+        "type_quote": "5 Star RV and Trailer Repair",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "G Man RV Service LLC",
+      "c": "Fort Wayne, IN",
+      "p": "(260) 557-6935",
+      "u": "https://gmanrv.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "G Man RV Service LLC is a mobile RV repair service based in Fort Wayne, Indiana, serving the Fort Wayne area. It comes to the customer at a campsite, house or storage facility, and repairs electrical and plumbing systems, appliances and air conditioners, reseals roofs and replaces vents and skylights. It states it does not service the chassis on motorhomes.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Fort Wayne",
+      "areas": [
+        "Fort Wayne"
+      ],
+      "region": null,
+      "spec": "We do not service the chassis's on motorhomes.",
+      "evidence": {
+        "checked": "https://gmanrv.com/",
+        "phone_quote": "(260) 557-6935",
+        "coverage_quotes": [
+          "Do to the economic problems I will be serving the Fort Wayne area only.",
+          "We travel to your location whether the unit is at a campground, at the house, or at a storage facility."
+        ],
+        "type_quote": "Professional repair service that comes to you at your campsite or your home!",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    }
+  ]
+}

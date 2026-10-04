@@ -16,8 +16,12 @@ check out, so a rejection can be argued with rather than guessed at.
 """
 
 import json
+import html as html_mod
+import os
 import re
+import shutil
 import socket
+import subprocess
 import sys
 import urllib.error
 import urllib.parse
@@ -56,13 +60,51 @@ def attrs_of(html):
 def text_of(html):
     t = re.sub(r"<(script|style)\b.*?</\1>", " ", html, flags=re.S | re.I)
     t = re.sub(r"<[^>]+>", " ", t)
-    t = re.sub(r"&nbsp;?", " ", t)
-    t = re.sub(r"&amp;", "&", t)
+    # DECODE, AND UNDO WHAT STRIPPING TAGS LEAVES BEHIND. This used to unescape only
+    # &nbsp; and &amp;, which made a genuinely verbatim quote read as fabricated whenever
+    # the page used a numeric entity: Jake's Mobile RV's own sentence contains
+    # `Jake&#8217;s` and the agent wrote `Jake's`, so the quote failed a check it should
+    # have passed. Stripping tags also leaves a space where the tag was, so the page reads
+    # "RV , we specialize" and the agent's "RV, we specialize" missed by one space. Both
+    # are artifacts of reading the source rather than the rendered page, and neither is a
+    # difference a reader would ever see. Found 2026-10-04 on the Louisiana pass, where it
+    # accounted for most of what the new fidelity metric first called "reconstructed".
+    t = html_mod.unescape(t)
+    t = re.sub(r"\s+([,.;:!?])", r"\1", t)
     return re.sub(r"\s+", " ", t).strip()
+
+
+def fold(s):
+    """Comparison form: the differences a reader cannot see, removed.
+
+    Typographic quotes and dashes versus their ASCII twins is a typesetting difference,
+    never a difference in what the page says. Folding them keeps a verbatim quote from
+    failing because the page used a curly apostrophe.
+    """
+    s = (s or "").lower()
+    for a, b in (("\u2019", "'"), ("\u2018", "'"), ("\u201c", '"'), ("\u201d", '"'),
+                 ("\u2013", "-"), ("\u2014", "-"), ("\u00a0", " "), ("\u2026", "...")):
+        s = s.replace(a, b)
+    return re.sub(r"\s+", " ", s).strip()
 
 
 def digits(s):
     return re.sub(r"\D", "", s or "")
+
+
+def longest_verbatim_prefix(quote, page):
+    """How much of a quote, in words, is actually on the page.
+
+    Returns (words_that_matched, words_total). A quote whose first 80% is on the page was
+    CLIPPED: a real sentence, cut short. A quote whose first two words are not on the page
+    was RECONSTRUCTED: written in the page's voice, not copied from it. The distinction is
+    the whole point, because only one of the two is a defect.
+    """
+    words = quote.split()
+    for n in range(len(words), 1, -1):
+        if " ".join(words[:n]) in page:
+            return n, len(words)
+    return 0, len(words)
 
 
 def resolves(host):
@@ -101,6 +143,46 @@ def excluded(rec):
     return None
 
 
+CHROME = ["flatpak", "run", "com.google.Chrome"]
+
+# How long a single browser render may take. The default suits one state. On a batch of
+# JavaScript-heavy states it does not: the plains pass on 2026-10-04 had three states'
+# gates still cycling after thirty minutes, because one slow site holds a worker for the
+# whole timeout and there are only four workers. Lower it when re-running a large or
+# already-known-slow batch; a render that times out leaves the original verdict in place,
+# so the cost of a premature timeout is a page that stays UNJUDGED rather than one that
+# passes wrongly.
+RENDER_TIMEOUT = int(os.environ.get("ORIGINRV_RENDER_TIMEOUT") or 90)
+
+
+def render(url, timeout=None):
+    """What a real browser sees on a JavaScript-rendered page.
+
+    WHY THIS EXISTS. Fix My Camper (Seale, Alabama) returns 32 characters of visible text to a
+    plain fetch and 10,477 to a browser; RV Tech Services (Mobile, Alabama) renders to 5,070
+    characters, names RVs, and carries its published phone number. Both are JS apps. Without
+    this, the gate read a shell and reported "nothing on the page names an RV" and "phone not
+    on their site" -- and REJECTED a real business for being built in a way the checker cannot
+    read. That is the worst failure this tool can have: a false rejection silently deletes a
+    listing, and nothing downstream can see that it happened.
+
+    Returns the visible text, or None when Chrome is unavailable or the render produced
+    nothing.
+    """
+    if timeout is None:
+        timeout = RENDER_TIMEOUT
+    if not shutil.which("flatpak"):
+        return None
+    try:
+        p = subprocess.run(
+            CHROME + ["--headless=new", "--disable-gpu", "--no-sandbox",
+                      "--virtual-time-budget=12000", "--dump-dom", url],
+            capture_output=True, text=True, timeout=timeout)
+    except Exception:
+        return None
+    return text_of(p.stdout) if p.stdout else None
+
+
 def bare_host(value):
     """The host, with any scheme and any www stripped, so two spellings compare equal.
 
@@ -114,8 +196,8 @@ def bare_host(value):
 
 
 def check(rec):
-    out = {"n": rec.get("n"), "ok": True, "bad": [], "warn": [], "site": None,
-           "excluded": excluded(rec)}
+    out = {"n": rec.get("n"), "ok": True, "bad": [], "warn": [], "clip": [],
+           "needsbrowser": [], "site": None, "excluded": excluded(rec)}
     url = rec.get("u") or ""
     host = re.sub(r"^https?://", "", url).split("/")[0]
     if not host or not resolves(host):
@@ -173,7 +255,28 @@ def check(rec):
     except Exception:
         pass
     page = page + " " + " ".join(extra)
-    low = page.lower()
+    low = fold(page)
+    # A JAVASCRIPT PAGE IS NOT A PAGE A PLAIN FETCH CAN JUDGE. Fix My Camper (Seale, Alabama)
+    # returns 32 characters of visible text to a plain fetch and 10,477 to a browser. RV Tech
+    # Services (Mobile, Alabama) returns 37 KB of markup that names no RV at all, because the
+    # content is client-rendered; a browser finds 5,070 characters naming RVs, with its
+    # published phone number. Apalachee RV Center (Auburn, Georgia) serves a page naming RVs
+    # with no phone in it, and the phone appears only once scripts run. All three were REJECTED
+    # before this fallback existed -- and a false rejection silently deletes a listing, with
+    # nothing downstream able to see that it happened. So it triggers on ANY of the three
+    # symptoms: almost no text, no RV named, or the published phone absent.
+    ph0 = digits(rec.get("p"))
+    phone_absent = bool(ph0) and ph0 not in digits(page) and ph0 not in digits(attrs_of(html))
+    if len(page) < 400 or not RV.search(page) or phone_absent:
+        seen = render(url)
+        if seen:
+            extra.append(seen)
+            page = page + " " + seen
+            low = fold(page)
+            out["rendered"] = True
+    # After the render attempt: below this much text there is nothing to compare against, and
+    # the honest answer is "this needs a browser render", not "this agent invented a quote".
+    thin = len(page) < 400
     if PARKED.search(page):
         out["ok"] = False
         out["bad"].append("parked page")
@@ -196,12 +299,28 @@ def check(rec):
         q2 = re.sub(r"\s+", " ", str(q)).strip()
         if len(q2) < 12:
             continue
-        if q2.lower() not in low:
+        out["quotes_n"] = out.get("quotes_n", 0) + 1
+        fq = fold(q2)
+        if fq not in low:
+            if thin:
+                # Cannot judge: the page is a JS shell. Recorded, not counted as a defect.
+                out["needsbrowser"].append(q2[:80])
+                continue
             # A report, not a rejection. The agent's evidence strings are often a
             # reconstruction of what a page said rather than a verbatim copy, and this
             # gate cannot tell a paraphrase from an invention. What does reject is the
             # hard layer above: the phone, the RV words, the parked-page test.
+            #
+            # Say WHICH it is, because the two need different responses. A CLIPPED quote is
+            # the agent taking a real sentence and cutting it short, which is harmless and
+            # usually just a length limit. A RECONSTRUCTED quote is the agent writing
+            # plausible prose in the page's voice and presenting it as the page's words,
+            # which is the defect class that shipped 7 of 11 records in the 2026-10-02 Bay
+            # Area batch. Measured on the Louisiana pass, 2026-10-04: 106 of 119 quotes
+            # verbatim, 3 clipped, 10 reconstructed, and every reconstructed one was a
+            # whole descriptive sentence rather than a coverage or phone line.
             out["warn"].append("evidence not verbatim on the page: %r" % q2[:80])
+            out["clip"].append(longest_verbatim_prefix(fq, low))
     # e and r are independent and a business may hold both (build-listings stopped forbidding
     # it on 2026-09-28); this gate kept rejecting the combination for a while after.
     if (rec.get("t") or "") not in ("mobile", "center", "both"):
@@ -214,7 +333,14 @@ def main():
     path = Path(sys.argv[1])
     recs = json.loads(path.read_text(encoding="utf-8"))
     print("%d candidate(s) in %s\n" % (len(recs), path.name))
-    with ThreadPoolExecutor(max_workers=4) as ex:
+    # HOW MANY RECORDS AT ONCE, AND WHY ONE IS OFTEN FASTER. Four is right for a state of
+    # ordinary sites. It is wrong when many of them are JavaScript: each render is a
+    # `flatpak run` of Chrome, and four of those at once contend, so the batch takes far
+    # longer than the same work done one at a time. Measured on Nebraska 2026-10-04 --
+    # twenty records ran sequentially in well under a minute while the four-worker pool on
+    # the same twenty sat for four minutes without finishing. Set this to 1 for a
+    # JavaScript-heavy batch.
+    with ThreadPoolExecutor(max_workers=int(os.environ.get("ORIGINRV_GATE_WORKERS") or 4)) as ex:
         results = list(ex.map(check, recs))
     for r in results:
         ex = r.get("excluded")
@@ -230,6 +356,39 @@ def main():
             print("          %s" % b)
         for w in r["warn"]:
             print("          note: %s" % w)
+    # The batch's evidence health in one line, because a ratio is what decides whether this
+    # batch is shippable. A handful of clipped quotes is normal. A batch that is a third
+    # reconstructed is a batch to redo, not to ship, and reading 30 individual `note:` lines
+    # is not how anyone notices that.
+    #
+    # ONLY LONG QUOTES ARE CLASSIFIED. A phone number or an address that differs by a bracket
+    # or a missing space is a formatting difference, not a fabricated sentence, and counting
+    # it as "reconstructed" would make the ratio cry wolf on every batch -- which is how a
+    # real signal gets ignored. Eight words is about where a quote is prose rather than a
+    # datum.
+    nq = sum(r.get("quotes_n", 0) for r in results)
+    nb = sum(len(r.get("needsbrowser", [])) for r in results)
+    clips = [c for r in results for c in r.get("clip", [])]
+    prose = [c for c in clips if c[1] >= 8]
+    cut = [c for c in prose if c[0] / c[1] >= 0.6]
+    recon = [c for c in prose if c not in cut]
+    print("\nevidence fidelity: %d quote(s) checked, %d verbatim, %d clipped short, "
+          "%d reconstructed, %d too short to judge, %d needing a browser render"
+          % (nq, nq - len(clips) - nb, len(cut), len(recon), len(clips) - len(prose), nb))
+    for r in results:
+        if r.get("needsbrowser"):
+            print("  NEEDS A BROWSER: %s is a JavaScript page; %d quote(s) could not be judged"
+                  % (r["n"], len(r["needsbrowser"])))
+    rendered = [r["n"] for r in results if r.get("rendered")]
+    if rendered:
+        print("  RENDERED IN A BROWSER (a plain fetch saw a shell): %s" % ", ".join(rendered))
+    if recon:
+        print("  %d reconstructed quote(s) read as the page's own voice but are not on it:"
+              % len(recon))
+        for r in results:
+            bad = [c for c in r.get("clip", []) if c in recon]
+            if bad:
+                print("     %s (%d)" % (r["n"], len(bad)))
     print("\n%d pass, %d rejected, %d unverified (need a browser or a human)"
           % (len(good), len(results) - len(good) - len(unknown), len(unknown)))
     out = path.with_name(path.stem + "-verified.json")

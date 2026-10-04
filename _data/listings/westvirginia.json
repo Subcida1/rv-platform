@@ -1,0 +1,306 @@
+{
+  "state": "WV",
+  "name": "West Virginia",
+  "regions": [
+    {
+      "key": "eastern-panhandle-wv",
+      "label": "Martinsburg and the Eastern Panhandle"
+    },
+    {
+      "key": "north-central-wv",
+      "label": "Morgantown, Fairmont and the north"
+    },
+    {
+      "key": "central-wv",
+      "label": "Huntington and the western middle"
+    },
+    {
+      "key": "highlands-wv",
+      "label": "Elkins and the highlands"
+    }
+  ],
+  "region_of": {
+    "Martinsburg": "eastern-panhandle-wv",
+    "Falling Waters": "eastern-panhandle-wv",
+    "Morgantown": "north-central-wv",
+    "Fairmont": "north-central-wv",
+    "Huntington": "central-wv",
+    "Elkins": "highlands-wv",
+    "Jane Lew": "highlands-wv",
+    "Moorefield": "highlands-wv"
+  },
+  "listings": [
+    {
+      "n": "RV Road Tech",
+      "c": "Martinsburg, WV",
+      "p": "304-207-8189",
+      "u": "https://rvroadtech.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "RV Road Tech is a mobile RV repair service working the Martinsburg and Winchester area. It travels to the customer and services solar installations, AC repairs, furnace repairs, fresh water plumbing, 12v/120v electrical, winterization, interior lights and refrigeration. It performs service work on travel trailers, fifth wheels and most Class A and C house components. It is open Monday to Saturday April through October with limited service November through March.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Martinsburg",
+      "areas": [
+        "Martinsburg"
+      ],
+      "region": null,
+      "spec": "No warranty repairs, and no residential refrigerators or AquaHot.",
+      "evidence": {
+        "checked": "https://rvroadtech.com/",
+        "phone_quote": "Text or call 304-207-8189",
+        "coverage_quotes": [
+          "RV Road tech mobile rv repair Serving the MARTINSBURG, WINCHESTER Area"
+        ],
+        "type_quote": "RV Road Tech performs service work on:",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Roy's RV Supercenter",
+      "c": "Elkins, WV",
+      "p": "304-636-1690",
+      "u": "https://www.roysrv.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Roy's RV Supercenter runs a full-service recreational vehicle service center in Elkins. Its service department covers maintenance and repair from roofs and appliances to slide-outs and awnings, and it offers complete removal and replacement of RV slideout floors. The 10,000 square foot facility is staffed with at least 12 full-time Master Service Technicians. It serves Morgantown, Fairmont and surrounding areas.",
+      "g": [
+        "service center"
+      ],
+      "base": "Elkins",
+      "areas": [
+        "Morgantown",
+        "Fairmont"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.roysrv.com/rv-service",
+        "phone_quote": "feel free to call us at (304) 636-1690",
+        "coverage_quotes": [
+          "Roy’s RV Supercenter Serves Morgantown, Fairmont & Surrounding Areas"
+        ],
+        "type_quote": "Your fifth wheel, motor home, pop up camper, toy hauler, or travel trailer will always receive exceptional care from the certified Master Craftsmen here at Roy’s RV Supercenter in Elkins.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Mountaineer RV & Outdoor Center",
+      "c": "Jane Lew, WV",
+      "p": "(304) 997-8533",
+      "u": "https://www.mymountaineerrv.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Mountaineer RV & Outdoor Center offers professional RV service at both its Jane Lew and Mt. Nebo locations. Its service centers handle routine maintenance and major repairs with Level 1 Certified RV Technicians, and every unit serviced receives a free 27-Point Multi-Inspection. It also runs a dedicated RV collision center for fiberglass, metal, sidewall and body-panel work.",
+      "g": [
+        "service center"
+      ],
+      "base": "Jane Lew",
+      "areas": [
+        "Jane Lew"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.mymountaineerrv.com/rv-service",
+        "phone_quote": "(304) 997-8533",
+        "coverage_quotes": [
+          "Mountaineer RV & Outdoor Center offers trusted, professional RV service at both of our Jane Lew and Mt. Nebo, WVlocations."
+        ],
+        "type_quote": "Whether you're coming in for routine maintenance or a major repair, you can count on Mountaineer RV to deliver expert service backed by industry certifications and a commitment to excellence.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Setzer's RV",
+      "c": "Huntington, WV",
+      "p": "(304) 736-5287",
+      "u": "https://www.setzersrv.com/service-department",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Setzer's RV Service Department in Huntington has certified RV service technicians with over 30 years of industry experience. It handles routine RV maintenance and seasonal inspections through to major repairs, appliance service, electrical work, plumbing repairs, roof maintenance and custom upgrades, with a fully stocked parts department on site. It services travel trailers, fifth wheels, toy haulers and motorhomes.",
+      "g": [
+        "service center"
+      ],
+      "base": "Huntington",
+      "areas": [
+        "Huntington"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.setzersrv.com/service-department",
+        "phone_quote": "(304) 736-5287 (+1-304-736-5287)",
+        "coverage_quotes": [
+          "530 Cherry Lawn Rd • Huntington, WV 25705 (304) 736-5287 (+1-304-736-5287) Contact Us"
+        ],
+        "type_quote": "From routine RV maintenance and seasonal inspections to major repairs, appliance service, electrical work, plumbing repairs, roof maintenance, and custom upgrades, our team is equipped to handle a wide range of RV service needs.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Wagner's Outdoor Express RV",
+      "c": "Falling Waters, WV",
+      "p": "304-274-9114",
+      "u": "https://www.oerv.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Wagner's Outdoor Express RV runs a service department in Falling Waters staffed with trained technicians. Its work covers AC service, awning repair, LP inspections and refilling, wheel bearing repack with brake and tire inspection, roof spot reseal and complete roof reseal, de-winterization, winterization and water heater service. It services Forest River, Keystone, Lance, Sunset and Palomino RVs.",
+      "g": [
+        "service center"
+      ],
+      "base": "Falling Waters",
+      "areas": [
+        "Falling Waters"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.oerv.com/rv-service",
+        "phone_quote": "304-274-9114 (Wagner's Outdoor Express RV)",
+        "coverage_quotes": [
+          "We are proud to provide quality service in the Falling Waters area."
+        ],
+        "type_quote": "We have the equipment and experience to get your motorhome and trailer in prime shape, and that means more road time for you.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Just Plane Adventures",
+      "c": "Medley, WV",
+      "p": "304.703.4477",
+      "u": "https://justplaneadventures.com/rv-repairs",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "Just Plane Adventures runs RV service and repairs from its campground and shop in Medley. It services travel trailers, fifth wheels, motor homes and toy haulers, repairing and replacing air conditioners, roofs, slide outs, furnaces, refrigerators, plumbing, hot water heaters, inverters and converters, awnings and batteries. It will come to the customer for mobile RV repair or take the camper in at its own park.",
+      "g": [
+        "mobile tech",
+        "service center"
+      ],
+      "base": null,
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://justplaneadventures.com/rv-repairs",
+        "phone_quote": "CALL OR TEXT RYAN @ 304.703.4477",
+        "coverage_quotes": [],
+        "type_quote": "We will come to you for your RV camper repairs",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      },
+      "reg": "highlands-wv"
+    },
+    {
+      "n": "Mountain High RV Shine and Repair LLC",
+      "c": "Morgantown, WV",
+      "p": "1-681-327-4463",
+      "u": "https://www.mountainhighrvshineandrepair.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Mountain High RV Shine and Repair LLC is a 100 percent mobile RV service based in Morgantown. It travels to the customer's driveway or campsite to provide mobile RV detailing and maintenance, roof sealing and essential repairs. It works throughout Morgantown, Star City, Westover and Cheat Lake.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Morgantown",
+      "areas": [
+        "Morgantown",
+        "Star City",
+        "Westover",
+        "Cheat Lake"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.mountainhighrvshineandrepair.com/",
+        "phone_quote": "1-681-327-4463",
+        "coverage_quotes": [
+          "We specialize in premium mobile RV detailing and maintenance throughout Morgantown, Star City, Westover, and Cheat Lake."
+        ],
+        "type_quote": "pulling up to your driveway for expert mobile RV repair",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Camping World RV Service - Fairmont",
+      "c": "Fairmont, WV",
+      "p": "(855) 695-0704",
+      "u": "https://rv.campingworld.com/dealer/fairmont-west-virginia/rv-service-repair",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Camping World RV Service in Fairmont provides complete service and repair for all RV types. Its shop handles diagnostics, repairs, routine maintenance and warranty work, plus preventative maintenance such as oil and fluid changes and winterization. A 45-point inspection checks the inverter and converter, electrical outlets, generators, plumbing, LP systems and appliances.",
+      "g": [
+        "service center"
+      ],
+      "base": "Fairmont",
+      "areas": [
+        "Fairmont"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://rv.campingworld.com/dealer/fairmont-west-virginia/rv-service-repair",
+        "phone_quote": "(855) 695-0704 (8556950704)",
+        "coverage_quotes": [
+          "RV Service & Repair in Fairmont, WV"
+        ],
+        "type_quote": "We provide complete service and repair for all RV types.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Weimer Camper Sales",
+      "c": "Moorefield, WV",
+      "p": "(888) 757-1805",
+      "u": "https://www.weimeroutdoors.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Weimer Camper Sales runs an RV service department in Moorefield staffed with highly trained technicians. It keeps motorhomes and trailers in working order, offering service for all makes and models with certified technicians, genuine parts and diagnostic equipment. It services Jayco RVs and takes appointments for motorhomes and trailers.",
+      "g": [
+        "service center"
+      ],
+      "base": "Moorefield",
+      "areas": [
+        "Moorefield"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.weimeroutdoors.com/rv-service",
+        "phone_quote": "feel free to call us at (888) 757-1805",
+        "coverage_quotes": [
+          "We are proud to provide quality service in the Moorefield area."
+        ],
+        "type_quote": "Our service department is staffed with highly trained technicians dedicated to making sure your RV stays in great working order for years to come.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,946 @@
+{
+  "state": "KS",
+  "name": "Kansas",
+  "regions": [
+    {
+      "key": "northeast-ks",
+      "label": "Kansas City, Lawrence and the northeast"
+    },
+    {
+      "key": "north-central-ks",
+      "label": "Topeka, Junction City and the north central"
+    },
+    {
+      "key": "south-central-ks",
+      "label": "Wichita, Hutchinson and the Flint Hills"
+    },
+    {
+      "key": "western-ks",
+      "label": "Hays, Garden City and the west"
+    },
+    {
+      "key": "southeast-ks",
+      "label": "Chanute and the southeast"
+    }
+  ],
+  "region_of": {
+    "Basehor": "northeast-ks",
+    "Kansas City": "northeast-ks",
+    "Lawrence": "northeast-ks",
+    "Lenexa": "northeast-ks",
+    "Shawnee": "northeast-ks",
+    "Tonganoxie": "northeast-ks",
+    "Spring Hill": "northeast-ks",
+    "Paola": "northeast-ks",
+    "Topeka": "north-central-ks",
+    "Carbondale": "north-central-ks",
+    "Richmond": "north-central-ks",
+    "Abilene": "north-central-ks",
+    "Junction City": "north-central-ks",
+    "Glen Elder": "north-central-ks",
+    "Salina": "north-central-ks",
+    "Wichita": "south-central-ks",
+    "Andover": "south-central-ks",
+    "Derby": "south-central-ks",
+    "El Dorado": "south-central-ks",
+    "Hutchinson": "south-central-ks",
+    "Arkansas City": "south-central-ks",
+    "Sylvia": "south-central-ks",
+    "Garden City": "western-ks",
+    "Hays": "western-ks",
+    "Chanute": "southeast-ks",
+    "Park City": "south-central-ks"
+  },
+  "listings": [
+    {
+      "n": "Kansas RV Service Center",
+      "c": "Chanute, KS",
+      "p": "800-835-0676",
+      "u": "https://kansasrvcenter.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Kansas RV Service Center is a dedicated RV repair facility at 3939 South Ross Lane in the Chanute Industrial Park, Chanute. Its site says the shop specializes in fifth wheels to pop-ups, motor homes and horse and travel trailers and, though no longer an RV dealer, still services the HitchHiker line after more than 40 years. The facility is described as having 15 service bays and skilled RV service technicians for repairs, service or maintenance on towable or motorized RVs, with a service line at 800-835-0676 and parts at 620-431-2088.",
+      "g": [
+        "service center"
+      ],
+      "base": "Chanute",
+      "areas": [
+        "Chanute"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://kansasrvcenter.com/contact-us",
+        "phone_quote": "Service: 800-835-0676 (8008350676) Parts: 620-431-2088 (6204312088)",
+        "coverage_quotes": [
+          "3939 South Ross Lane, Chanute, Kansas 66720, United States"
+        ],
+        "type_quote": "Kansas RV Service Center",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Harts RV Center",
+      "c": "Topeka, KS",
+      "p": "(785) 260-7799",
+      "u": "https://www.hartsrvcenter.com/",
+      "t": "both",
+      "e": false,
+      "r": true,
+      "d": "Harts RV Center in Topeka runs both a mobile RV repair service and an in-shop bench, listing mobile labor at $165 per hour with a service call-out fee and in-shop labor at $185 per hour. The site lists camper and RV services including mobile RV repair, camper inspection and pre-purchase inspection, generator service, appliance service, winterization and de-winterization. It also lists transmission, engine and filter service and states that from tires to brakes, engines to interiors, Harts RV Center in Topeka has you covered, serving the Topeka area.",
+      "g": [
+        "mobile tech",
+        "service center"
+      ],
+      "base": "Topeka",
+      "areas": [
+        "Topeka"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.hartsrvcenter.com/",
+        "phone_quote": "(785) 260-7799",
+        "coverage_quotes": [
+          "Serving the Topeka Area"
+        ],
+        "type_quote": "From tires to brakes, engines to interiors, inspections to sales, Harts RV Center in Topeka has you covered.",
+        "emergency_quote": null,
+        "roadside_quote": "Transmission, engine and filter service",
+        "licence": null
+      }
+    },
+    {
+      "n": "Heartland RV",
+      "c": "Tonganoxie, KS",
+      "p": "(913) 845-3154",
+      "u": "https://heartlandrvinc.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Heartland RV is an on-site mobile repair service that has operated since 1996 and calls itself the oldest mobile RV repair company in its area. The site says its mobile technician is an RVIA-certified technician and the owner of the business, and that it is based in Leavenworth county serving Douglas, Jefferson, Leavenworth, Johnson and Wyandotte counties. It repairs appliances, plumbing, electrical, roof sealant and LP and water systems for most RVs, horse trailers with living quarters and emergency service vehicles, and states plainly that it does not do any chassis work on motorized units.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Tonganoxie",
+      "areas": [],
+      "region": "Leavenworth county",
+      "spec": "We do not do any chassis work on motorized units",
+      "evidence": {
+        "checked": "https://heartlandrvinc.com/",
+        "phone_quote": "(913) 845-3154",
+        "coverage_quotes": [
+          "We are based in Leavenworth county serving Douglas, Jefferson, Leavenworth, Johnson, and Wyandotte counties."
+        ],
+        "type_quote": "We are a mobile repair service",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "The Guys RV",
+      "c": "Sylvia, KS",
+      "p": "(316) 469-9840",
+      "u": "https://theguysrv.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "The Guys RV is a veteran- and family-owned mobile RV repair business based at 104 East Ave E in Sylvia, with over 25 years of experience. The site says its mobile RV technicians come directly to the customer's location, whether at home, in a campground or on the road, and handle complete RV repair, winterization, maintenance and restoration. It states that based in Sylvia, KS, it provides reliable mobile RV repairs throughout Hutchinson, Wichita, Great Bend, McPherson and Pratt, traveling to campgrounds, homes and roadside locations within a 100-mile radius.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Sylvia",
+      "areas": [
+        "Sylvia",
+        "Hutchinson",
+        "Wichita",
+        "Great Bend",
+        "McPherson",
+        "Pratt"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://theguysrv.com/",
+        "phone_quote": "(316) 469-9840",
+        "coverage_quotes": [
+          "Based in Sylvia, KS, The Guys RV provides reliable mobile RV repairs throughout Hutchinson, Wichita, Great Bend, McPherson, and Pratt. We happily travel to campgrounds, homes, and roadside locations within a 100-mile radius."
+        ],
+        "type_quote": "Our mobile RV technicians will come directly to your location, assess the problem, and create a customized solution to get your RV operating smoothly again.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "MBS Mobile RV Repair",
+      "c": "Basehor, KS",
+      "p": "785-748-1444",
+      "u": "https://www.mobilervserviceks.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "MBS Mobile RV Repair is a division of MBS Electrical Service LLC based in Valley Falls, with a mailing address in Basehor. The site says it offers 24 hour emergency service across Wyandotte, Johnson, Shawnee, Leavenworth, Douglas, Jefferson and Atchison counties. It lists RV technicians for HVAC, plumbing and electrical, plus mechanics for oil and brake checks, breakdown services, tire changes and battery changes.",
+      "g": [
+        "mobile tech",
+        "emergency"
+      ],
+      "base": "Basehor",
+      "areas": [],
+      "region": "Wyandotte, Johnson, Shawnee, Leavenworth, Douglas, Jefferson and Atchison counties",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.mobilervserviceks.com/",
+        "phone_quote": "785-748-1444",
+        "coverage_quotes": [
+          "We offer 24 hour emergency service in Wyandotte, Johnson, Shawnee, Leavenworth, Douglas, Jefferson and Atchison counties."
+        ],
+        "type_quote": "MOBILE RV REPAIR YOU CAN TRUST",
+        "emergency_quote": "We offer 24 hour emergency service in Wyandotte, Johnson, Shawnee, Leavenworth, Douglas, Jefferson and Atchison counties.",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "rVrepairMD.com",
+      "c": "Lawrence, KS",
+      "p": "785-764-4928",
+      "u": "https://rvrepairmd.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "rVrepairMD.com is a mobile RV tech service in the Lawrence area run by an NRVTA-certified technician. The site charges a $125 diagnostic fee and $95 per hour with a one hour minimum for RV repair, and says it offers its services in the Lawrence, KS area and while traveling about the US. It notes additional fees for after hour visits.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Lawrence",
+      "areas": [
+        "Lawrence"
+      ],
+      "region": null,
+      "spec": "Additional fees for after hour visits.",
+      "evidence": {
+        "checked": "https://rvrepairmd.com/",
+        "phone_quote": "785-764-4928",
+        "coverage_quotes": [
+          "We offer our services In the Lawrence, Ks area and while traveling about the US."
+        ],
+        "type_quote": "we now offer Mobile RV Tech Services for most of your RV repair needs",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Flint Hills Mobile RV Service",
+      "c": "Flint Hills, KS",
+      "p": "785-712-0820",
+      "u": "https://flinthillsmobilerv.net/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Flint Hills Mobile RV Service describes itself as a reliable mobile RV tech for service needs anywhere, providing RV maintenance and repair at the customer's doorstep. The site is branded Flint Hills RV and lists weekday hours of 9:00 am to 5:00 pm, closed Saturday and Sunday. It publishes the phone number 785-712-0820 for booking.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": null,
+      "areas": [],
+      "region": "Flint Hills",
+      "spec": null,
+      "evidence": {
+        "checked": "https://flinthillsmobilerv.net/",
+        "phone_quote": "785-712-0820",
+        "coverage_quotes": [
+          "Reliable mobile RV tech for your service needs anywhere."
+        ],
+        "type_quote": "Expert RV Repair and Maintenance Services",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      },
+      "reg": "south-central-ks"
+    },
+    {
+      "n": "Brandon's RV Repair Plus, LLC",
+      "c": "Carbondale, KS",
+      "p": "1 (785) 925-5833",
+      "u": "https://www.brandonsrvrepairplus.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Brandon's RV Repair Plus, LLC offers mobile repair for a home or RV, based in Carbondale, KS. The site says it travels to surrounding areas to the customer's home or campground, and lists RV repair and maintenance at $95 per hour plus a $25 fee. It also offers water filtration and softeners and says solar installation is coming soon.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Carbondale",
+      "areas": [
+        "Carbondale"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.brandonsrvrepairplus.com/",
+        "phone_quote": "1 (785) 925-5833",
+        "coverage_quotes": [
+          "Based in Carbondale, KS, I travel to surrounding areas to your home or campground."
+        ],
+        "type_quote": "Brandon's RV Repair Plus offers mobile repair for your home or RV",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Noller RV Service & Commercial Collision",
+      "c": "Topeka, KS",
+      "p": "(785) 435-8761",
+      "u": "https://www.nollerservicecenter.com/rv-service-and-commercial-collision-in-topeka-ks",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Noller RV Service & Commercial Collision is a third-generation family-owned RV service and collision shop at 5335 NW 25th St in North Topeka, minutes from Highway 75 and I-70. The site says the team handles body and collision repair, custom paint and structural work, with a commercial paint booth, frame machine and heavy-duty lifts built to accommodate large vehicles many area shops cannot handle. It names North Topeka, Elmont, Grantville, Menoken, Meriden, Hoyt and the Seaman District as areas it serves across Northeast Kansas.",
+      "g": [
+        "service center",
+        "body shop"
+      ],
+      "base": "Topeka",
+      "areas": [
+        "Topeka",
+        "Grantville",
+        "Meriden",
+        "Hoyt"
+      ],
+      "region": "Northeast Kansas",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.nollerservicecenter.com/rv-service-and-commercial-collision-in-topeka-ks",
+        "phone_quote": "(785) 435-8761",
+        "coverage_quotes": [
+          "The Noller RV Service & Commercial Collision location is ideal for those in:",
+          "And all of Northeast Kansas!"
+        ],
+        "type_quote": "From body and collision repair to custom paint and structural work, we have the tools and training to bring your vehicle back to life.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Central Body Company",
+      "c": "Shawnee, KS",
+      "p": "(913) 444-2318",
+      "u": "https://centralbody.com/shawnee-ks-rv-repair/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Central Body Company's Shawnee location at 24105 W 43rd St, just off Shawnee Mission Parkway, is an RV collision and body repair shop. The site says the family-owned business has served the Midwest for over 45 years and specializes in RV body repair, paint and roof replacement. It lists RV services including collision repair, fiberglass repair, painting, roof reseals and membrane replacement, generator service, roof air conditioner replacement, slide-out repair and trailer brake service.",
+      "g": [
+        "body shop",
+        "service center"
+      ],
+      "base": "Shawnee",
+      "areas": [
+        "Shawnee"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://centralbody.com/shawnee-ks-rv-repair/",
+        "phone_quote": "(913) 444-2318",
+        "coverage_quotes": [
+          "Our new Shawnee shop is conveniently located at 24105 W 43rd St, just off Shawnee Mission Parkway."
+        ],
+        "type_quote": "We specialize in collision repair, fiberglass repair, painting, roof resealing, tire replacement, battery replacement, oil changes, generator service, light electrical repairs, trailer bearing re-packing and replacement, trailer brake repair and service, camper and RV roof a/c replacement, camper and RV slide-out repair and much more.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "ICS Collision Center",
+      "c": "Derby, KS",
+      "p": "316-217-8115",
+      "u": "https://www.icscollisioncenter.com/rv-and-tour-bus",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "ICS Collision Center is a locally owned, family-operated collision shop at 920 N River St in Derby. The site says it specializes in restoring RVs, motorhomes and buses after accidents, covering Class A, B and C motorhomes, camp trailers and fifth wheels, plus exterior bodywork, roof repairs and paint restoration. It lists the areas serviced as Derby, Andover, Goddard, Haysville, Mulvane and Wichita, and describes a 10,000+ square-foot facility with frame measuring systems and refinish booths built for the height and length of large RVs.",
+      "g": [
+        "body shop",
+        "service center"
+      ],
+      "base": "Derby",
+      "areas": [
+        "Derby",
+        "Andover",
+        "Goddard",
+        "Haysville",
+        "Mulvane",
+        "Wichita"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.icscollisioncenter.com/rv-and-tour-bus",
+        "phone_quote": "316-217-8115",
+        "coverage_quotes": [
+          "Areas Serviced",
+          "Derby, Andover, Goddard, Haysville, Mulvane & Wichita"
+        ],
+        "type_quote": "At ICS Collision Center, we specialize in restoring RVs, motorhomes, and buses to their prime condition following accidents, no matter the extent of the damage.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Lorenson Industries",
+      "c": "Salina, KS",
+      "p": "(785) 823-6036",
+      "u": "https://www.lorensonind.com/repair-and-major-body-work",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Lorenson Industries in Salina is a family-owned business, road-tested since 1948, that offers RV and camper insurance repairs and body restoration. The site says it specializes in major body repairs, roof replacements and complete restorations, working directly with insurance companies from filing paperwork to coordinating repairs. It lists RV repair and major body work for campers damaged by collision, deer strike or hail, along with cosmetic repair of dents and scratches.",
+      "g": [
+        "body shop",
+        "service center"
+      ],
+      "base": "Salina",
+      "areas": [
+        "Salina"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.lorensonind.com/repair-and-major-body-work",
+        "phone_quote": "(785) 823-6036",
+        "coverage_quotes": [
+          "RV Insurance Repairs & Body Work in Salina, KS"
+        ],
+        "type_quote": "We specialize in major body repairs, roof replacements, and complete restorations that ensure your vehicle returns to its former glory.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Shoemaker Collision Repair and Paint",
+      "c": "Spring Hill, KS",
+      "p": "913-592-0095",
+      "u": "https://www.shoemakercollision.com/rv-repair-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Shoemaker Collision Repair and Paint at 19022 N Madison Street in Spring Hill is an on-site RV repair shop handling collision repair, paint and detail in-house. The site says it repairs RVs, motor homes, fifth wheels, travel trailers, truck campers and camper wagons, with RV body work, hail damage repair, fiberglass repair and restoration, glass replacement, awning replacement and paint matching. It says it serves a nine-county area in Kansas and Missouri, and that its phone is answered 24/7.",
+      "g": [
+        "body shop",
+        "service center"
+      ],
+      "base": "Spring Hill",
+      "areas": [
+        "Spring Hill"
+      ],
+      "region": "nine-county area including Anderson, Franklin, Miami, Douglas, Johnson, Leavenworth, and Wyandotte counties in Kansas, and Jackson and Cass counties in Missouri",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.shoemakercollision.com/rv-repair-service",
+        "phone_quote": "913-592-0095",
+        "coverage_quotes": [
+          "We are Kansas City's premier auto collision and paint repair center, serving customers in a nine-county area including Anderson, Franklin, Miami, Douglas, Johnson, Leavenworth, and Wyandotte counties in Kansas, and Jackson and Cass counties in Missouri."
+        ],
+        "type_quote": "We're also your one-stop shop for RV collision repair, handling everything from body damage to glass replacement and tinting.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Faithful RV",
+      "c": "Lenexa, KS",
+      "p": "(913) 717-8444",
+      "u": "https://faithfulrv.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "Faithful RV is a mobile RV repair service at 14100 Santa Fe Trail Dr Suite 108 in Lenexa, described as based in Kansas City. The site says its certified technicians handle RV AC and heat pump, refrigeration, plumbing, electrical, water heater and furnace, exterior repairs, winterizing and de-winterizing, certified inspections and tank cleaning. It states it provides emergency services beyond its regular 7-5 hours from Monday to Friday and tells customers to call for after hours service.",
+      "g": [
+        "mobile tech",
+        "emergency"
+      ],
+      "base": "Lenexa",
+      "areas": [
+        "Lenexa",
+        "Kansas City"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://faithfulrv.com/",
+        "phone_quote": "(913) 717-8444",
+        "coverage_quotes": [
+          "Welcome to Faithful RV, your dependable, mobile RV repair service based in Kansas City."
+        ],
+        "type_quote": "We specialize in the following RV repair services:",
+        "emergency_quote": "We also provide emergency services beyond our regular 7-5 hours from Monday to Friday.",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "24/7 Mobile Rv Repair",
+      "c": "Richmond, KS",
+      "p": "785-521-8730",
+      "u": "https://247mobilervrepair.godaddysites.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "24/7 Mobile Rv Repair describes itself as a full service mobile RV repair shop offering exceptional service and high-quality RV repairs at affordable prices. The site lists cracked roof caps and skylights, roof peel and reseal, new roofs, wheel bearings, remodels, new component install and water damage. It names a service list spanning Lenexa, Topeka, Lawrence, Kansas City, Ottawa, Paola, Emporia, Melvern, Bonner Springs and Baldwin City among surrounding areas and counties.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Richmond",
+      "areas": [
+        "Lenexa",
+        "Topeka",
+        "Lawrence",
+        "Kansas City",
+        "Ottawa",
+        "Paola",
+        "Emporia",
+        "Melvern",
+        "Bonner Springs",
+        "Baldwin City"
+      ],
+      "region": "Lyon County, Osage County, Coffey County, Douglas County, Johnson County, Shawnee County, Franklin County, Jefferson County",
+      "spec": null,
+      "evidence": {
+        "checked": "https://247mobilervrepair.godaddysites.com/",
+        "phone_quote": "785-521-8730",
+        "coverage_quotes": [
+          "Lenexa, KS, USA",
+          "Topeka, KS, USA",
+          "Lawrence, KS, USA",
+          "And all other surrounding areas!"
+        ],
+        "type_quote": "We are a full service mobile Rv repair shop",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Salina RV",
+      "c": "Salina, KS",
+      "p": "(785) 515-2110",
+      "u": "https://salinarv.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Salina RV is a small, family-owned RV shop created in October 2021 that calls itself a complete RV service and specialty RV body shop. The site says that when a customer brings an RV for body shop services they get expert and specialized repairs by a shop dedicated solely to RVs, and that it works with the customer and their insurance to make the claims process go smoothly. It is located at 1100 W. Grand Ave. Building E in Salina, with other times by appointment.",
+      "g": [
+        "body shop",
+        "service center"
+      ],
+      "base": "Salina",
+      "areas": [
+        "Salina"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://salinarv.com/",
+        "phone_quote": "(785) 515-2110",
+        "coverage_quotes": [
+          "1100 W. Grand Ave.",
+          "Building E",
+          "Salina, KS 67401"
+        ],
+        "type_quote": "Complete RV Service and Specialty RV Body Shop!",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Four Seasons RV",
+      "c": "Abilene, KS",
+      "p": "785-598-2221",
+      "u": "https://www.4seasonsrv.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Four Seasons RV runs RV service and repair centres in Abilene and the Wichita area in Andover, at 2502 Mink Rd in Abilene (Exit 281 on I-70) and 1523 W Ledgerwood Rd in Andover. The site says the experienced team helps Kansas RV owners handle routine maintenance, diagnose problems and complete repairs, from plumbing and electrical issues to appliance repairs, roof inspections, winterization and general camper maintenance. It states it proudly serves campers from Abilene, Wichita, Andover, Salina, Junction City and surrounding communities throughout Central Kansas.",
+      "g": [
+        "service center"
+      ],
+      "base": "Abilene",
+      "areas": [
+        "Abilene",
+        "Wichita",
+        "Andover",
+        "Salina",
+        "Junction City"
+      ],
+      "region": "Central Kansas",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.4seasonsrv.com/rv-service",
+        "phone_quote": "785-598-2221",
+        "coverage_quotes": [
+          "We proudly serve campers from Abilene, Wichita, Andover, Salina, Junction City, and surrounding communities throughout Central Kansas.",
+          "2502 Mink Rd Abilene, KS 67410 (Exit 281 on I-70)"
+        ],
+        "type_quote": "Keep your RV ready for every journey with professional RV service and repair from Four Seasons RV.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Discount RV Parts and Service",
+      "c": "Hutchinson, KS",
+      "p": "620-663-5077",
+      "u": "https://rvpartsks.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Discount RV Parts and Service is located at 1000 Scott Blvd in Hutchinson and has been at this location for 35 years. The site says it specializes in the sale of parts and service for RVs and welcomes all customers regardless of where they purchased their RV. A separate services page lists rubber roof repairs, awning installation and repair, winterizing and de-winterizing, AC installation, hitch installation, wheel bearing and brake service, appliance installation and repair, body work and water damage repair.",
+      "g": [
+        "service center"
+      ],
+      "base": "Hutchinson",
+      "areas": [
+        "Hutchinson"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://rvpartsks.com/",
+        "phone_quote": "620-663-5077",
+        "coverage_quotes": [
+          "Discount RV Parts and Service is located in Hutchinson, KS and has been at this location for 35 years.",
+          "Discount RV Parts and Service 1000 Scott Blvd. Hutchinson, KS 67501"
+        ],
+        "type_quote": "We specialize in the sale of parts and service for RVs.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "American Ag & Auto",
+      "c": "Glen Elder, KS",
+      "p": "(785) 545-3266",
+      "u": "https://www.americanagandauto.com/commercial-rv-repair",
+      "t": "center",
+      "e": false,
+      "r": true,
+      "d": "American Ag & Auto at 612 N Center St in Glen Elder offers RV service and repair, and its site states that gas or diesel, big or small, it repairs and maintains brake systems, engines, transmissions, tires, suspensions, pumps and electronics on all RVs, with engine diagnostics and inspections. The listed RV repair services include comprehensive diagnostics, appliance repair, plumbing, electrical, HVAC, chassis repair and maintenance for engines, transmissions, brakes, suspension and tires, and bodywork and collision repair. It also lists emergency repairs and heavy-duty RV service such as clutch repair, suspension adjustment and diesel engine repair and replacements.",
+      "g": [
+        "service center"
+      ],
+      "base": "Glen Elder",
+      "areas": [
+        "Glen Elder"
+      ],
+      "region": "North Central Kansas",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.americanagandauto.com/commercial-rv-repair",
+        "phone_quote": "(785) 545-3266",
+        "coverage_quotes": [
+          "American AG & Auto, LLC (American AG & Auto), 612 N Center St Glen Elder, KS 67446 USA"
+        ],
+        "type_quote": "Chassis repair and maintenance for engines, transmissions, brakes, suspension, and tires.",
+        "emergency_quote": "Emergency Repairs: Have an issue while traveling? Count on our team to get you back on the road quickly and safely.",
+        "roadside_quote": "Chassis repair and maintenance for engines, transmissions, brakes, suspension, and tires.",
+        "licence": null
+      }
+    },
+    {
+      "n": "Toppers Plus Truck & RV",
+      "c": "Wichita, KS",
+      "p": "(316) 942-2864",
+      "u": "https://www.toppersplusks.com/RV/RV-Service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Toppers Plus Truck & RV at 333 N West St in Wichita runs an RV service department. The site lists RV awning repair and replacement, RV air conditioner repair and replacement, RV roof repair and replacement with a Rhino roof coating, minor RV electrical repair and RV TV antenna replacement and upgrade. It says the store is open Monday to Friday 8:00AM to 5:00PM and Saturday 9:00AM to 2:00PM.",
+      "g": [
+        "service center"
+      ],
+      "base": "Wichita",
+      "areas": [
+        "Wichita"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.toppersplusks.com/RV/RV-Service",
+        "phone_quote": "(316) 942-2864",
+        "coverage_quotes": [
+          "333 N West St. Wichita, KS 67203"
+        ],
+        "type_quote": "We specialize in top-notch RV air conditioner repair and replacement services to keep you comfortable no matter where your travels take you.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Robert Brogden Garden City RV Center",
+      "c": "Garden City, KS",
+      "p": "620-765-4483",
+      "u": "https://www.brogdenrv.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Robert Brogden Garden City RV Center at 411 East Fulton Street in Garden City describes itself as a leading destination in Western Kansas for new and used RVs, a short drive from Dodge City, Hays and even Colorado Springs. It lists a service department open Monday to Friday 8am to 6pm and Saturday 8am to 12pm, separate from its sales hours. It carries motorhomes, fifth wheels, toy haulers and travel trailers.",
+      "g": [
+        "service center"
+      ],
+      "base": "Garden City",
+      "areas": [
+        "Garden City"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.brogdenrv.com/",
+        "phone_quote": "620-765-4483",
+        "coverage_quotes": [
+          "411 East Fulton Street, Garden City, KS 67846",
+          "we're proud to be a leading destination in Western Kansas for new and used RVs"
+        ],
+        "type_quote": "Service",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Gridline Mobile RV Services",
+      "c": "Junction City, KS",
+      "p": "785-410-3377",
+      "u": "https://www.gridlinerv.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Gridline Mobile RV Services is a small veteran owned business based out of Junction City, Kansas. The site says its mission is to deliver reliable, professional, customer-focused RV repairs at the customer's location, and it provides preventative maintenance, diagnostics and inspections and repairs on RV air conditioners, furnaces, water heaters, refrigerators, generators and solar. It is located near Milford Lake and serves Junction City and surrounding areas.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Junction City",
+      "areas": [
+        "Junction City"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.gridlinerv.com/",
+        "phone_quote": "785-410-3377",
+        "coverage_quotes": [
+          "Junction City, Kansas & Surrounding Areas, Located Near Milford Lake"
+        ],
+        "type_quote": "We provide preventative maintenance, diagnostics, and cost effective Inspections and Repairs on RV Air Conditioners, Furnaces, Water Heaters, Refrigerators, Generators, Solar, and many more.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "A-Z Mobile RV Repair",
+      "c": "Paola, KS",
+      "p": "(913) 294-2733",
+      "u": "https://www.azmobilerv.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "A-Z Mobile RV Repair is based at 32747 Lone Star Rd in Paola and was founded in 2001. The site says it employs RVIA certified technicians in fully stocked service vehicles, ready to be dispatched to the customer's location, whether home, storage lot or campsite, to handle most any job large or small. It operates a showroom with service, parts and sales Monday to Friday 8:00am to 5:00pm and parts and sales only on Saturday 8:00am to 12:00pm.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Paola",
+      "areas": [
+        "Paola"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.azmobilerv.com/",
+        "phone_quote": "(913) 294-2733",
+        "coverage_quotes": [
+          "32747 Lone Star Rd, Paola, KS, 66071"
+        ],
+        "type_quote": "We employ RVIA certified technicians, in fully stocked service vehicles, ready to be dispatched to your location for any kind of service.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Camper and RV Center",
+      "c": "Hays, KS",
+      "p": "785-628-6123",
+      "u": "https://5fd0faf1d7ee7.site123.me/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Camper and RV Center in Hays, known as Herrman the Germans since 1972, is a family-owned and operated business that has served the Hays and surrounding communities for over 50 years. The site states it offers sales, parts and service, and asks customers who need a camper or RV serviced if they can help, along with new and used camper and RV sales. It is located at 709 Canterbury Drive in Hays.",
+      "g": [
+        "service center"
+      ],
+      "base": "Hays",
+      "areas": [
+        "Hays"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://5fd0faf1d7ee7.site123.me/",
+        "phone_quote": "785-628-6123",
+        "coverage_quotes": [
+          "709 Canterbury Drive, Hays, Kansas, United States",
+          "Camper & RV Center has been serving the Hays and surrounding communities for over 50 years now as a Family Owned and Operated Business."
+        ],
+        "type_quote": "You need a Camper or RV serviced? We can help with that!!",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "RV Roof of Kansas",
+      "c": "Junction City, KS",
+      "p": "(785) 434-9847",
+      "u": "https://rvroof.com/locations/junction-city-new-horizon-rv-corp/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "RV Roof of Kansas operates an RV roof repair and replacement location at 2401 Lacy Drive in Junction City. The site says it specializes in the FlexArmor Polyurea RV Roof system, engineered to bond to any substrate for a water-tight seal, and offers full RV roof replacement, leak detection and RV roof repair, camper roof sealant applications and preventative camper roof coating services. It says it serves Junction City and surrounding areas including Manhattan, Fort Riley and Abilene, and works on Class A motorhomes, travel trailers and fifth wheels.",
+      "g": [
+        "roof"
+      ],
+      "base": "Junction City",
+      "areas": [
+        "Junction City",
+        "Manhattan",
+        "Abilene"
+      ],
+      "region": "Central Kansas",
+      "spec": null,
+      "evidence": {
+        "checked": "https://rvroof.com/locations/junction-city-new-horizon-rv-corp/",
+        "phone_quote": "(785) 434-9847",
+        "coverage_quotes": [
+          "Address: 2401 Lacy Drive",
+          "Junction City,",
+          "Our Junction City location proudly serves RV owners in Manhattan, KS, Fort Riley, KS, Abilene, KS, and throughout Central Kansas."
+        ],
+        "type_quote": "We offer a full range of RV roofing solutions, including:",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Bears Camper and RV Service LLC",
+      "c": "El Dorado, KS",
+      "p": "316-881-2702",
+      "u": "http://bearscamperandrvservices.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Bears Camper and RV Service LLC at 2771 SE Hwy 54 in El Dorado offers camper and RV service, maintenance, repairs and detailing for the Kansas area. The site says it is veteran and first responder owned, with a commitment to safety, and that its team of experienced professionals provides exceptional work and insightful advice to keep customers safe on the road. It says it offers local services so customers will not have to wait for weeks to get their RV serviced, at competitive prices.",
+      "g": [
+        "service center"
+      ],
+      "base": "El Dorado",
+      "areas": [
+        "El Dorado"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "http://bearscamperandrvservices.com/",
+        "phone_quote": "316-881-2702",
+        "coverage_quotes": [
+          "2771 SE Hwy 54",
+          "El Dorado, KS 67042"
+        ],
+        "type_quote": "Trust the experts at Bears Camper and RV Service LLC to provide top-quality repair services at an affordable price.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "LOL RV",
+      "c": "Kansas City, KS",
+      "p": "+1 (785) 224-7279",
+      "u": "https://lolrvkc.com/rv-service-maintenance-and-repair-kansas-city/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "LOL RV in Kansas City offers mobile RV repair, bringing its expertise to the customer's doorstep and handling a wide range of RV repairs on-site. The site lists RV air conditioning service, maintenance and repair, RV water heater service, repair and replacement, RV furnace inspection, maintenance and repair, and RV winterization, and says it follows the standards set by the RV Technicians Association of America. It describes its technicians as registered RV technicians and serves Kansas City.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Kansas City",
+      "areas": [
+        "Kansas City"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://lolrvkc.com/rv-service-maintenance-and-repair-kansas-city/",
+        "phone_quote": "+1 (785) 224-7279",
+        "coverage_quotes": [
+          "Trust us for prompt and efficient RV Mobile Repair in Kansas City."
+        ],
+        "type_quote": "we offer reliable RV Mobile Repair services, bringing our expertise right to your doorstep",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Blue Compass RV",
+      "c": "Park City, KS",
+      "p": "(316) 358-0008",
+      "u": "https://www.bluecompassrv.com/locations/kansas/park-city/service",
+      "t": "center",
+      "e": false,
+      "r": true,
+      "d": "Blue Compass RV Park City Service Center at 8550 N Hartman Arena Drive in Park City is an RV dealership service department open Monday to Saturday 8am to 5pm and serving Wichita-area and travelling RV owners. The site lists routine maintenance, an engine and transmission section covering chassis service, sway bars, air suspension and shock absorbers, electrical systems, plumbing, roof and exterior, pre-purchase inspections and HVAC work. It also lists collision repair and body work, and says every RV gets a free multi-point inspection.",
+      "g": [
+        "service center",
+        "body shop"
+      ],
+      "base": "Park City",
+      "areas": [
+        "Park City",
+        "Wichita"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.bluecompassrv.com/locations/kansas/park-city/service",
+        "phone_quote": "(316) 358-0008",
+        "coverage_quotes": [
+          "8550 N Hartman Arena Drive, Park City, KS 67147",
+          "We're open Monday through Saturday. Call us at (316) 358-0008 or stop by Hartman Arena Drive and we'll get you on the schedule."
+        ],
+        "type_quote": "Expert RV Service & Repair in Park City, Kansas",
+        "emergency_quote": null,
+        "roadside_quote": "Expert diagnostics and repairs for all RV engine types and transmission systems.",
+        "licence": null
+      }
+    }
+  ]
+}

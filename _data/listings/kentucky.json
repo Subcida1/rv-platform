@@ -1,0 +1,737 @@
+{
+  "state": "KY",
+  "name": "Kentucky",
+  "regions": [
+    {
+      "key": "louisville-ky",
+      "label": "Louisville and the north"
+    },
+    {
+      "key": "bluegrass-ky",
+      "label": "Lexington and the Bluegrass"
+    },
+    {
+      "key": "caves-ky",
+      "label": "Bowling Green, Elizabethtown and the caves"
+    },
+    {
+      "key": "western-ky",
+      "label": "Paducah, Owensboro and the west"
+    },
+    {
+      "key": "eastern-ky",
+      "label": "Ashland, London and the east"
+    }
+  ],
+  "region_of": {
+    "Louisville": "louisville-ky",
+    "La Grange": "louisville-ky",
+    "Walton": "louisville-ky",
+    "Florence": "louisville-ky",
+    "Lexington": "bluegrass-ky",
+    "Georgetown": "bluegrass-ky",
+    "Richmond": "bluegrass-ky",
+    "Bowling Green": "caves-ky",
+    "Elizabethtown": "caves-ky",
+    "Cadiz": "caves-ky",
+    "Paducah": "western-ky",
+    "Mayfield": "western-ky",
+    "Owensboro": "western-ky",
+    "Central City": "western-ky",
+    "Ashland": "eastern-ky",
+    "London": "eastern-ky",
+    "Corbin": "eastern-ky"
+  },
+  "listings": [
+    {
+      "n": "RV Done Yet",
+      "c": "Louisville, KY",
+      "p": "502-365-4032",
+      "u": "https://www.rvdoneyet.com/rv-repair-and-maintenance",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "RV Done Yet is a family-owned and -operated RV repair and maintenance shop in Louisville, owned and operated by Kevin Sanders, who came from the service side of the dealership level. It handles repair and maintenance work for RV owners in and around Louisville, and can do warranty work for Jayco products, Forest River products, Showhauler Motorhomes and aluminum trailer components, and will work with a customer's extended warranty company. Published service prices include basic winterization at $125.00, a gas motorhome oil change at $129.99 and a diesel motorhome oil change at $179.99.",
+      "g": [
+        "service center"
+      ],
+      "base": "Louisville",
+      "areas": [
+        "Louisville"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.rvdoneyet.com/rv-repair-and-maintenance",
+        "phone_quote": "Phone: 502-365-4032",
+        "coverage_quotes": [
+          "Our services are open to residents in Louisville, Kentucky and the surrounding areas."
+        ],
+        "type_quote": "We can handle any repair or maintenance work your camper needs.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Trusted RV Services, LLC",
+      "c": "Louisville, KY",
+      "p": "502-386-9754",
+      "u": "https://www.trustedrvservices.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Trusted RV Services is run by Perry and Lynn Thomas and describes itself as a mobile, certified technician RV resource. It lists RV repairs, RV maintenance and warranty work, gray and black tank cleaning, slide-out repair, and appliance repair and service. The site asks customers to text 502-386-9754 for immediate help and offers a service request form.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Louisville",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.trustedrvservices.com/",
+        "phone_quote": "502-386-9754",
+        "coverage_quotes": [],
+        "type_quote": "Your Trusted RV Resource for MOBILE, CERTIFIED Technician Repairs and Services",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Bluegrass Mobile RV Service",
+      "c": "Taylor County, KY",
+      "p": "270-405-6017",
+      "u": "https://www.mobilervserviceky.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Bluegrass Mobile RV Service provides on-site mobile RV repair and service in Central Kentucky, based near Green River Lake in Taylor County. It markets itself as professional, on-site and on-time mobile service and asks customers to text 270-405-6017 for the fastest response. The site's stated aim is to keep a traveller's trip uninterrupted.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": null,
+      "areas": [],
+      "region": "Central Kentucky",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.mobilervserviceky.com/",
+        "phone_quote": "270-405-6017 text/cell",
+        "coverage_quotes": [
+          "Located near Green River Lake in Taylor County",
+          "Mobile RV Repair and Service in Southern Kentucky"
+        ],
+        "type_quote": "Professional Mobile RV Service: On-Site, On-Time.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      },
+      "reg": "bluegrass-ky"
+    },
+    {
+      "n": "Baxter Pro Services",
+      "c": "Central City, KY",
+      "p": "270-883-1265",
+      "u": "https://www.baxterproservices.com/services/rv-repairs",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Baxter Pro Services is based in Central City and offers mobile RV, camper and fifth wheel repairs, travelling to the customer's location rather than requiring the unit to be transported. The owner is a registered RV technician through the RVTAA and trained at the National RV Training Academy in Athens, Texas. It repairs and maintains air conditioning and heating, electrical components, water pumps and plumbing, window and awning replacement, roof coating and sealing and appliances, and also offers mobile pressure washing and soft washing. It lists Bowling Green, Central City, Eddyville, Greenville, Henderson, Hopkinsville, Madisonville, Owensboro, Princeton and Russellville as service areas.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Central City",
+      "areas": [
+        "Bowling Green",
+        "Central City",
+        "Eddyville",
+        "Greenville",
+        "Henderson",
+        "Hopkinsville",
+        "Madisonville",
+        "Owensboro",
+        "Princeton",
+        "Russellville"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.baxterproservices.com/services/rv-repairs",
+        "phone_quote": "Phone: 270-883-1265 (+1-270-883-1265)",
+        "coverage_quotes": [
+          "Bowling Green, KY Central City, KY Eddyville, KY Greenville, KY Henderson, KY Hopkinsville, KY Madisonville, KY Owensboro, KY Princeton, KY Russellville, KY"
+        ],
+        "type_quote": "Baxter Pro Services offers mobile RV and camper repairs, traveling to your location to get the job done.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Camper Bill's RV Repair",
+      "c": "Lexington, KY",
+      "p": "(859) 592-2677",
+      "u": "https://www.camperbills.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Camper Bill's RV Repair is a mobile RV service run by Bill, a Master Certified RV Technician with over 25 years of hands-on experience, serving Central and Eastern Kentucky. It specializes in advanced diagnostics and repairs of electrical and plumbing systems, HVAC and LP systems, and offers upgrades and modifications such as solar and Starlink installations, food truck, horse trailer and van conversions. It brings repairs to the customer and says there is no need to tow, and lists Lexington, Georgetown, Winchester, Paris, Mount Sterling, Camargo, Frenchburg, Owingsville, Stanton and Means among its areas.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Lexington",
+      "areas": [
+        "Lexington",
+        "Georgetown",
+        "Winchester",
+        "Paris",
+        "Mount Sterling",
+        "Camargo",
+        "Frenchburg",
+        "Owingsville",
+        "Stanton"
+      ],
+      "region": "Central and Eastern Kentucky",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.camperbills.com/",
+        "phone_quote": "Phone: (859) 592-2677",
+        "coverage_quotes": [
+          "serving Lexington, Georgetown, Winchester, Paris, Mount Sterling, Camargo, Frenchburg, Owingsville, Stanton, Means and surrounding areas."
+        ],
+        "type_quote": "We bring expert RV, horse trailer, and food truck repairs directly to you.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Premier Mobile RV Service & Repair",
+      "c": "Walton, KY",
+      "p": "(859) 380-4513",
+      "u": "https://www.premierrvrepair.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Premier Mobile RV Service & Repair is based in Walton and its RVTAA-certified technicians come to the customer at home, on the road or at the campground. It specializes in troubleshooting and repairing air conditioners, water heaters, furnaces and refrigerators, and also offers winterization and de-winterization, A/C coil cleaning, A/C soft start installation and RV roof sealant inspection and repair. It serves the Cincinnati Tri-State area, naming Cincinnati, Ohio, Florence, Kentucky and Lawrenceburg, Indiana.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Walton",
+      "areas": [
+        "Florence"
+      ],
+      "region": "Cincinnati Tri-State Area",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.premierrvrepair.com/",
+        "phone_quote": "(859) 380-4513‪landin@premierrvrepair.com",
+        "coverage_quotes": [
+          "We service the whole Cincinnati Tri-State Area and more, including Cincinnati, Ohio, Florence, Kentucky, and Lawrenceburg, Indiana, just to name a few."
+        ],
+        "type_quote": "We are RVTAA Certified RV Technicians based in Walton, KY, who bring you honest, affordable, and fully mobile RV services and repairs.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Redline Mobile RV Service",
+      "c": "Cadiz, KY",
+      "p": "270-206-1468",
+      "u": "https://redlinemobilerv.wixsite.com/redlinemobilervservi",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "Redline Mobile RV Service provides mobile RV repairs and maintenance, travelling to the customer around Cadiz and the surrounding area, including campgrounds in and around the Land Between the Lakes. It offers seasonal maintenance and minor to major repairs and says it is open Sunday through Saturday from 7:00am to 9:00pm, with emergency after-hours service available.",
+      "g": [
+        "mobile tech",
+        "emergency"
+      ],
+      "base": "Cadiz",
+      "areas": [
+        "Cadiz"
+      ],
+      "region": "Land Between the Lakes",
+      "spec": null,
+      "evidence": {
+        "checked": "https://redlinemobilerv.wixsite.com/redlinemobilervservi",
+        "phone_quote": "270-206-1468",
+        "coverage_quotes": [
+          "We travel to you servicing Cadiz, KY and the local areas including campgrounds in and around the Land Between the Lakes."
+        ],
+        "type_quote": "Servicing the Cadiz Kentucky and local surrounding areas with mobile RV repairs.",
+        "emergency_quote": "Emergency After Hours Service Available",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Open Roads RV Center",
+      "c": "Paducah, KY",
+      "p": "(270) 442-6477",
+      "u": "https://openroadsrvcenter.com/rv-service/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Open Roads RV Center is an RV dealership and service center at 7020 Benton Road in Paducah, near Exit 16 off I-24. Its RVTI-trained technicians service motorhomes, fifth wheels, travel trailers, campers and utility trailers whether or not the RV was bought there. Services include roof repair, air conditioning and heating, appliance repair, electrical systems, plumbing and water heaters, slides and leveling, awnings, hitching and towing, brakes, bearings and suspension, solar and lithium systems and annual maintenance.",
+      "g": [
+        "service center"
+      ],
+      "base": "Paducah",
+      "areas": [
+        "Paducah"
+      ],
+      "region": "Western Kentucky",
+      "spec": null,
+      "evidence": {
+        "checked": "https://openroadsrvcenter.com/rv-service/",
+        "phone_quote": "(270) 442-6477 (2704426477)",
+        "coverage_quotes": [
+          "Proudly serving RV owners across Paducah, Western Kentucky, Southern Illinois, and Southeast Missouri."
+        ],
+        "type_quote": "our RVTI-trained technicians service motorhomes, fifth wheels, travel trailers, and campers—whether you bought your RV from us or somewhere else.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Skaggs Family RV",
+      "c": "Elizabethtown, KY",
+      "p": "270-765-7245",
+      "u": "https://www.skaggsrv.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Skaggs Family RV is an RV dealership with service departments in Elizabethtown and Corbin. Its service department states it services all RVs and is an authorized repair center for brands including Forest River, Keystone, Coachmen, Flagstaff, Ford, Gulfstream, Heartland, Dometic, Norcold, Cummins Onan, LCI/Lippert and Dexter. It offers roof inspections and leak repairs with PVC, TPO and EPDM roof replacements, and a full-service body shop doing fiberglass repair, custom paint matching and full-body paint restoration, and works with insurance companies on estimates and claims.",
+      "g": [
+        "service center"
+      ],
+      "base": "Elizabethtown",
+      "areas": [
+        "Elizabethtown",
+        "Corbin"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.skaggsrv.com/rv-service",
+        "phone_quote": null,
+        "coverage_quotes": [
+          "We proudly service all RVs and are an authorized Repair Center for trusted names like Forest River, Keystone, Coachmen, Flagstaff, Ford, Gulfstream, Heartland, Universal Trailers, Atwood, Dometic, Norcold, Cummins Onan, LCI/Lippert, Furrion, GE, and Dexter, among others."
+        ],
+        "type_quote": "We proudly service all RVs!",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Youngblood's RV & Outdoor",
+      "c": "Paducah, KY",
+      "p": "270-247-8591",
+      "u": "https://www.youngbloodrv.com/rv-service",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "Youngblood's RV & Outdoor has RV service departments and parts departments in Paducah and Mayfield. Its factory-trained technicians handle everything from small fixes to a major rebuild of a damaged unit, covering Class A and Class C motorhomes, fifth wheels, toy haulers and travel trailers, and it honours warranty work and recalls. It offers both a full-service center and mobile service to local parks, and customers can call or text 270-247-8591.",
+      "g": [
+        "service center",
+        "mobile tech"
+      ],
+      "base": "Paducah",
+      "areas": [
+        "Paducah",
+        "Mayfield"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.youngbloodrv.com/rv-service",
+        "phone_quote": "Mayfield, KY and Paducah, KY Call Now (+12702478591)",
+        "coverage_quotes": [
+          "Mayfield, KY and Paducah, KY"
+        ],
+        "type_quote": "Youngblood’s RV & Outdoor offers a full-service center and mobile service to local parks for the repair, maintenance, and enhancement of your recreational vehicle.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Owensboro RV",
+      "c": "Owensboro, KY",
+      "p": "270-316-0661",
+      "u": "https://www.owensbororv.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Owensboro RV is an RV dealership at 3810 W Parrish Ave. in Owensboro with a full-time service department handling basic to major repairs. It services fifth wheels, toy haulers and travel trailers and describes itself as providing quality service to Southern Indiana and Western Kentucky.",
+      "g": [
+        "service center"
+      ],
+      "base": "Owensboro",
+      "areas": [],
+      "region": "Western Kentucky",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.owensbororv.com/rv-service",
+        "phone_quote": "270-316-0661 270-316-0661 www.owensbororv.com 3810 W Parrish Ave., Owensboro, KY 42301",
+        "coverage_quotes": [
+          "Owensboro RV is proud to provide quality service to the areas of all Southern Indiana and Western Kentucky."
+        ],
+        "type_quote": "Our highly trained technicians are dedicated to maintaining and servicing your RV so you can get the most miles out of your purchase.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Cambron Body Shop",
+      "c": "Owensboro, KY",
+      "p": "270-684-1465",
+      "u": "https://www.cambronbodyshop.com/rv-body-repair",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Cambron Body Shop is a fifth-generation, family-owned body shop in Owensboro that has operated since 1922 and specialises in RV body repair. It handles post-collision and bodywork needs including repairs, dent removal, repainting and refinishing, and works on RV-specific materials such as fiberglass and sheet metal. Its mechanics are certified by Automotive Service Excellence and I-CAR, and it offers free estimates.",
+      "g": [
+        "service center"
+      ],
+      "base": "Owensboro",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.cambronbodyshop.com/rv-body-repair",
+        "phone_quote": "Phone: 270-684-1465| Email: cambronnet2@aol.com| Address: 1720 SWEENEY ST, Owensboro, KY 42303",
+        "coverage_quotes": [
+          "RV Body Repairs in Owensboro, Kentucky"
+        ],
+        "type_quote": "No matter how your favorite camper was harmed, our team specializes in RVs’ unique body repair requirements, trailers, and other recreational vehicles.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "i75 RV",
+      "c": "Florence, KY",
+      "p": "859-392-0439",
+      "u": "http://www.i75rv.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "i75 RV is a full-service RV repair shop in Florence. It offers roof repair and resealing, brakes and bearing replacement, all 12-volt and 120-volt electrical repair, awning hardware repair and replacement, LP repairs and installations, appliance repair and replacement, window and windshield replacement and RV air conditioning repair, and works with insurance companies on repairs.",
+      "g": [
+        "service center"
+      ],
+      "base": "Florence",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "http://www.i75rv.com/",
+        "phone_quote": "Send us a message, or phone 859-392-0439 between 08:00am and 05:00pm Monday to Friday.",
+        "coverage_quotes": [],
+        "type_quote": "I75 RV is a full-service RV Repair Shop. We offer a wide variety of services to keep your RV operating smoothly.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "RV PhD Mobile RV Services LLC",
+      "c": "Richmond, KY",
+      "p": "(859) 582-9702",
+      "u": "https://www.rvphd.com/contact",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "RV PhD Mobile RV Services is a mobile RV service based in Richmond that comes to the customer's location and also offers on-site service by appointment. It lists inspections, leak detection and repair, roof sealing and preventative maintenance, winterization and de-winterization, electrical diagnostics and repair, plumbing services, generator service and repair, jack systems and leveling, slide repair, flooring repair, air conditioners and warranty and insurance jobs.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Richmond",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.rvphd.com/contact",
+        "phone_quote": "Email: rv.phd.ky@gmail.com Phone: (859) 582-9702 Address: 3503 Irvine Rd Richmond KY 40475",
+        "coverage_quotes": [],
+        "type_quote": "We offer mobile service at your location as well as on-site service by appointment.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Blue Compass RV Lexington",
+      "c": "Georgetown, KY",
+      "p": "(859) 299-8386",
+      "u": "https://www.bluecompassrv.com/locations/kentucky/lexington/service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Blue Compass RV Lexington is a full-service RV dealership and service center at 3034 Paris Pike in Georgetown, just north of Lexington off I-75. Its certified technicians handle cooling system maintenance, roof reseals, full electrical diagnostics, generator work and slide-out repairs, and offer engine and transmission diagnostics, chassis service and collision repair and body work. Every RV that comes through the service bay gets a free multi-point inspection, and the shop serves customers whether or not they bought the RV there.",
+      "g": [
+        "service center"
+      ],
+      "base": "Georgetown",
+      "areas": [],
+      "region": "Central Kentucky",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.bluecompassrv.com/locations/kentucky/lexington/service",
+        "phone_quote": "3034 Paris Pike, Georgetown, KY 40324 (859) 299-8386 (+18592998386)",
+        "coverage_quotes": [
+          "Our shop sits on Paris Pike in Georgetown, easy to reach from Lexington, Louisville, Frankfort, and Richmond."
+        ],
+        "type_quote": "Our certified technicians handle everything from cooling system maintenance and roof reseals to full electrical diagnostics, generator work, and slide-out repairs.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Camping World RV Service - Bowling Green",
+      "c": "Bowling Green, KY",
+      "p": "(855) 666-4472",
+      "u": "https://rv.campingworld.com/dealer/bowling-green-kentucky/rv-service-repair",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Camping World of Bowling Green is a full-service RV dealership and service center at 725 Bluegrass Farms Blvd, off Exit 22 on I-65. Its service location provides complete service and repair for all RV types, including diagnostics, routine maintenance, warranty repairs, leak checks, roof repairs, appliance service, oil and lube changes and winterization and de-winterization, and it offers mobile service as well as a collision center and a parts and accessories store.",
+      "g": [
+        "service center"
+      ],
+      "base": "Bowling Green",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://rv.campingworld.com/dealer/bowling-green-kentucky/rv-service-repair",
+        "phone_quote": "(855) 666-4472 (8556664472)",
+        "coverage_quotes": [
+          "725 Bluegrass Farms Blvd",
+          "Bowling Green, KY 42104-7932"
+        ],
+        "type_quote": "We provide complete service and repair for all RV types.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "BluCat RV Services",
+      "c": "Louisville, KY",
+      "p": "(502) 689-9582",
+      "u": "https://www.blucatrvservices.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "BluCat RV Services is a mobile RV repair, maintenance and inspection business run by David and Cindy Gahafer, founded in Louisville. David is an RVTAA-certified RV service technician and an NRVIA-certified RV inspector, and the business works on all RVs from small towables to Class A diesel pushers, offering mobile repair, maintenance and inspections including 150-point inspections with 90-100 photos. It says it is based wherever it is parked.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": null,
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.blucatrvservices.com/",
+        "phone_quote": "Give us a call today at (502) 689-9582 (5026899582) or click below to schedule an appointment.",
+        "coverage_quotes": [
+          "Founded in Louisville, KY | Based wherever we’re parked"
+        ],
+        "type_quote": "Whether you’re in need of a repair, maintenance, or an inspection conducted by a certified professional, BluCat is here to help.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      },
+      "reg": "louisville-ky"
+    },
+    {
+      "n": "Elkins Mobile RV",
+      "c": "Land Between the Lakes, KY",
+      "p": "(270) 703-5434",
+      "u": "https://www.elkinsmobilerv.com/about",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Elkins Mobile RV is a mobile RV repair and maintenance company that travels to customers' locations and handles routine servicing, electrical repairs, plumbing issues and mechanical troubleshooting for all types of RVs. It has operated since December 2023 and during the spring, summer and fall can be found near Land Between the Lakes at the Kentucky/Tennessee border. Its phone is 270-703-5434.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": null,
+      "areas": [],
+      "region": "Land Between the Lakes",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.elkinsmobilerv.com/about",
+        "phone_quote": null,
+        "coverage_quotes": [
+          "During the spring, summer, and fall, find us near Land Between the Lakes at the Kentucky/Tennessee border."
+        ],
+        "type_quote": "Specializing in convenient mobile repairs and maintenance services for all types of RVs, we bring our expertise and dedication to excellence right to our valued customers' locations.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      },
+      "reg": "western-ky"
+    },
+    {
+      "n": "Day Bros RV",
+      "c": "London, KY",
+      "p": "606-877-1530",
+      "u": "https://www.daybrosrvsales.com/mobile-rv-service/",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "Day Bros RV is a family-owned dealership that has operated since 1995 and offers mobile RV service with technicians who come to the customer. It works on all RV makes and models and stocks parts for common repairs, covering 12-volt and 120-volt electrical systems, awnings, roof, window, plumbing and slide leaks, LP gas, appliances, axle bearings and brakes, converters and inverters, levelers, slide rooms and jacks, air conditioning and furnaces, water heaters, refrigerators and winterizing and de-winterizing. It serves the London and Somerset areas from locations in London and Monticello, and notes that large repairs may require the unit to be brought to the shop.",
+      "g": [
+        "mobile tech",
+        "service center"
+      ],
+      "base": "London",
+      "areas": [
+        "London",
+        "Monticello",
+        "Somerset"
+      ],
+      "region": null,
+      "spec": "Large Repairs may require the unit to be brought to the shop.",
+      "evidence": {
+        "checked": "https://www.daybrosrvsales.com/mobile-rv-service/",
+        "phone_quote": "London, KY 606-877-1530 (6068771530)",
+        "coverage_quotes": [
+          "London, KY 606-877-1530 (6068771530)",
+          "Somerset, KY 606-561-6889 (6065616889)"
+        ],
+        "type_quote": "Our service repair technicians will come to you with the experience and training to take care of your RV repair needs.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Summit RV",
+      "c": "Ashland, KY",
+      "p": "(606) 928-6795",
+      "u": "https://www.summitrv.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Summit RV is an RV dealership at 6611 US-60 in Ashland with RVIA and RVDA certified technicians and 20 service bays. It is authorized to perform warranty repairs on travel trailers, fifth wheels, motorhomes, campers and toy haulers from Jayco, Keystone, Coachmen and Winnebago, and is certified to repair and install major RV appliances, awnings and satellites.",
+      "g": [
+        "service center"
+      ],
+      "base": "Ashland",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.summitrv.com/rv-service",
+        "phone_quote": "(606) 928-6795 (606-928-6795)",
+        "coverage_quotes": [
+          "6611 US-60 Ashland, KY 41102"
+        ],
+        "type_quote": "Summit RV is committed to providing quality service to our customers. Our RVIA and RVDA certified technicians have extensive and on-going training.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Riley's RV World",
+      "c": "Mayfield, KY",
+      "p": "(270) 247-0333",
+      "u": "https://www.rileysrvworld.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Riley's RV World is an RV dealership at 2093 KY 121 in Mayfield with an RV service department staffed by factory-trained technicians. It services travel trailers, destination trailers, fifth wheels, camping trailers, toy haulers and motorhomes, and lists Paducah, Hopkinsville, Owensboro and Jackson, Tennessee as the areas it serves.",
+      "g": [
+        "service center"
+      ],
+      "base": "Mayfield",
+      "areas": [
+        "Paducah",
+        "Hopkinsville",
+        "Owensboro"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.rileysrvworld.com/rv-service",
+        "phone_quote": "2093 ky 121 , Mayfield, KY 42066 270-247-0333 (2702470333) 270-247-0333 www.rileysrvworld.com",
+        "coverage_quotes": [
+          "Riley's RV World is proud to provide quality service to the areas of Paducah, Hopkinsville, Owensboro, and Jackson, TN."
+        ],
+        "type_quote": "Our RV service department at our Kentucky dealership is staffed by factory trained technicians.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Rivertown RV",
+      "c": "La Grange, KY",
+      "p": "(502) 269-1301",
+      "u": "https://rivertownrv.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Rivertown RV is a locally owned RV salvage and repair business in La Grange. It carries a large supply of new, used and salvage RV parts and repairable trailers, and offers service and repairs for camper components including roof coatings, awnings, bearings, window replacements, appliance repairs and A/C installation. Its phone is 502-269-1301.",
+      "g": [
+        "service center"
+      ],
+      "base": "La Grange",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://rivertownrv.com/",
+        "phone_quote": null,
+        "coverage_quotes": [
+          "Rivertown RV is a locally owned and operated RV salvage located in La Grange, KY."
+        ],
+        "type_quote": "We also offer service and repairs for all camper components including roof coatings, awnings, bearings, window replacements, appliance repairs, A/C installation, and more.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "CountrySide RV Sales",
+      "c": "Corbin, KY",
+      "p": "(606) 280-4333",
+      "u": "https://countrysiderv.us/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "CountrySide RV Sales is a family-owned dealership in Corbin selling quality used RVs and travel trailers with low-pressure sales. It also lists RV maintenance as one of its services to keep an RV road-ready.",
+      "g": [
+        "service center"
+      ],
+      "base": "Corbin",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://countrysiderv.us/",
+        "phone_quote": "(606) 280-4333",
+        "coverage_quotes": [
+          "1202 HWY 770 Corbin, KY 40701"
+        ],
+        "type_quote": "Expert maintenance services to keep your RV road-ready.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    }
+  ]
+}

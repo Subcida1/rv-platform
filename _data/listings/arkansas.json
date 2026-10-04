@@ -1,0 +1,731 @@
+{
+  "state": "AR",
+  "name": "Arkansas",
+  "regions": [
+    {
+      "key": "nw-arkansas",
+      "label": "Fayetteville, Rogers and the Ozarks"
+    },
+    {
+      "key": "river-valley",
+      "label": "Fort Smith, Russellville and the Arkansas River valley"
+    },
+    {
+      "key": "central-ar",
+      "label": "Little Rock, Conway, Hot Springs and the middle"
+    },
+    {
+      "key": "northeast-ar",
+      "label": "Searcy, Jonesboro and the delta"
+    },
+    {
+      "key": "southwest-ar",
+      "label": "Texarkana and the southwest"
+    },
+    {
+      "key": "southeast-ar",
+      "label": "Pine Bluff and the southeast"
+    }
+  ],
+  "region_of": {
+    "Rogers": "nw-arkansas",
+    "Springdale": "nw-arkansas",
+    "Hindsville": "nw-arkansas",
+    "Alma": "river-valley",
+    "Van Buren": "river-valley",
+    "Russellville": "river-valley",
+    "Atkins": "river-valley",
+    "Little Rock": "central-ar",
+    "Conway": "central-ar",
+    "Cabot": "central-ar",
+    "Hot Springs": "central-ar",
+    "Lincoln": "central-ar",
+    "Searcy": "northeast-ar",
+    "Texarkana": "southwest-ar",
+    "Pine Bluff": "southeast-ar"
+  },
+  "listings": [
+    {
+      "n": "Wilcox RV and Repair",
+      "c": "Russellville, AR",
+      "p": "(479) 280-9136",
+      "u": "https://wilcoxrv.com/",
+      "t": "both",
+      "e": true,
+      "r": true,
+      "d": "Wilcox RV Repair is a full-service RV maintenance and repair company in Russellville. It advertises 24/7 mobile emergency service alongside its shop at 2703 South Boulder Ave. Work ranges from routine servicing to complex repairs, with a 55-point inspection, roof inspections, RV brakes and bearings, hitch installation and OEM parts. It handles all insurance work and warranty work and also offers mobile repairs.",
+      "g": [
+        "mobile",
+        "center",
+        "chassis"
+      ],
+      "base": "Russellville",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://wilcoxrv.com/",
+        "phone_quote": "Call : (479) 280-9136",
+        "coverage_quotes": [],
+        "type_quote": "We're a Full-Service RV Maintenance & Repair Company",
+        "emergency_quote": "24/7 Mobile Emergency Service",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Morgan's RV Service and Repair",
+      "c": "Atkins, AR",
+      "p": "(479) 567-5860",
+      "u": "https://www.morgansrvserviceandrepair.com/",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "Morgan's RV Service and Repair is based in Atkins and offers mobile and in-shop services. It handles RV repairs and seasonal work such as winterizing and de-winterizing, plus electrical, plumbing, framing and exterior work. All professional maintenance and PDI services include a 2-page Technical Diagnostic Report covering LP gas pressure-drop data, electrical readings and running gear. It also performs pre-purchase inspections and precision axle service.",
+      "g": [
+        "mobile",
+        "center"
+      ],
+      "base": "Atkins",
+      "areas": [],
+      "region": "River Valley",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.morgansrvserviceandrepair.com/",
+        "phone_quote": "(479) 567-5860",
+        "coverage_quotes": [
+          "To ensure the highest safety standards for the River Valley, all professional maintenance and PDI services now include our 2-Page Technical Diagnostic Report."
+        ],
+        "type_quote": "We'll handle all your RV repairs and Seasonal needs such as Winterizing and De-winterizing.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Custom RV Services",
+      "c": "Conway, AR",
+      "p": "501-273-1880",
+      "u": "https://www.arcustomrv.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Custom RV Services is an RV and horse trailer repair shop at 352 Highway 65 N in Conway. Its team inspects, services, fixes, paints and repairs RVs and camper components, with warranty service for most brands. A separate collision page lists RV door repair, finish buffing, OEM paint matching, decal replacement, fiberglass repair and roof replacement. Work is done at the shop, Monday through Friday.",
+      "g": [
+        "center",
+        "collision"
+      ],
+      "base": "Conway",
+      "areas": [],
+      "region": "Central Arkansas",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.arcustomrv.com/",
+        "phone_quote": "Call: 501-273-1880",
+        "coverage_quotes": [
+          "Custom RV Services is the leading provider of RV, utility, cargo, and horse trailer repair services in Conway, Arkansas."
+        ],
+        "type_quote": "RV REPAIRS & MAINTENANCE",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "RV Tech Near Me",
+      "c": "Hindsville, AR",
+      "p": "479-789-0610",
+      "u": "https://rvtechnearme.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "RV Tech Near Me is a family-owned mobile RV repair and maintenance business serving the Northwest Arkansas area. It travels to the customer at home, campground or storage unit and works on all makes and models, covering air conditioners, furnaces, water heaters, refrigerators, electrical, awnings and roofs. Technicians studied with the National RV Training Academy and are RVTAA certified. Emergency calls are accepted 24/7.",
+      "g": [
+        "mobile"
+      ],
+      "base": "Hindsville",
+      "areas": [
+        "Springdale",
+        "Fayetteville",
+        "Rogers",
+        "Bentonville",
+        "Bella Vista",
+        "Garfield",
+        "Eureka Springs",
+        "Huntsville"
+      ],
+      "region": null,
+      "spec": "Sunday: By Appt only",
+      "evidence": {
+        "checked": "https://rvtechnearme.com/",
+        "phone_quote": "479-789-0610",
+        "coverage_quotes": [
+          "This includes the cities of Springdale, Fayetteville, Rogers, Bentonville, Bella Vista, Garfield, Eureka Springs, Huntsville and the surrounding areas."
+        ],
+        "type_quote": "RV Tech Near Me specializes in on-site RV repair and maintenance.",
+        "emergency_quote": "EMERGENCY CALL 24/7",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Freeman's RV Service & Repair",
+      "c": "Lincoln, AR",
+      "p": "(479) 824-3900",
+      "u": "https://freemansrvservice.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Freeman's RV Service & Repair is a locally owned, family operated RV service and repair shop at 10992 South Wedington Blacktop Road in Lincoln, serving all of NWA. Founded in 2020, it performs RV service, repair and inspections for buyers and sellers. It is an authorized dealer for Lippert, Dometic, Thetford, Carefree, RecPro, eTrailer and Battery Outfitters, and installs trailer tires.",
+      "g": [
+        "center"
+      ],
+      "base": "Lincoln",
+      "areas": [],
+      "region": "NWA",
+      "spec": null,
+      "evidence": {
+        "checked": "https://freemansrvservice.com/",
+        "phone_quote": "(479) 824-3900",
+        "coverage_quotes": [
+          "Serving all of NWA"
+        ],
+        "type_quote": "Founded in 2020, Freeman's RV Service has quickly become a trusted name in the RV service and repair in NWA.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Ron's RV Service Shop and Storage",
+      "c": "Springdale, AR",
+      "p": "(479) 365-7299",
+      "u": "https://www.ronsrvrepairnwa.com/service",
+      "t": "center",
+      "e": false,
+      "r": true,
+      "d": "Ron's RV Service Shop and Storage is at 4026 Wagon Wheel Road in Springdale, offering RV service for Northwest Arkansas. Its master certified RV service technician (RVIA/RVDA) lists body and collision repair, slide room repair or replace, roof repair or replace, chassis service for gas and diesel, electrical and electronic diagnostics, awning repair and winterizing. It welcomes insurance work and certain warranty work, and offers secure on-site storage.",
+      "g": [
+        "center",
+        "collision",
+        "chassis"
+      ],
+      "base": "Springdale",
+      "areas": [],
+      "region": "NW Arkansas",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.ronsrvrepairnwa.com/service",
+        "phone_quote": "(479) 365-7299",
+        "coverage_quotes": [
+          "RV Service|NW Arkansas"
+        ],
+        "type_quote": "MASTER CERTIFIED RV SERVICE TECHNICIAN RVIA/RVDA",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Livingston Camper Sales",
+      "c": "Hot Springs, AR",
+      "p": "(501) 760-6647",
+      "u": "https://www.livingstoncampersales.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Livingston Camper Sales runs an RV service department in Hot Springs for fifth wheels, travel trailers and toy haulers, and also works on living-quarters issues with motorhomes. Listed work includes HVAC and appliance repair, water heaters, body and window repair, roof replacement, slide-out repairs and stabilizer jack service. It services any travel trailer or fifth wheel and also does wheel bearing packing, brake control and hitch installation.",
+      "g": [
+        "center"
+      ],
+      "base": "Hot Springs",
+      "areas": [
+        "Hot Springs",
+        "Little Rock",
+        "Texarkana",
+        "Benton",
+        "Bryant",
+        "Mena",
+        "El Dorado"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.livingstoncampersales.com/rv-service",
+        "phone_quote": "(501) 760-6647",
+        "coverage_quotes": [
+          "Livingston Camper Sales is proud to provide quality service to the areas of Hot Springs, Little Rock, Texarkana, Benton/Bryant, Mena and El Dorado."
+        ],
+        "type_quote": "Our Service Department is staffed with highly trained technicians dedicated to making sure your fifth wheel, travel trailer, or toy hauler stays in great working order for years to come.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Razorback Camper Sales",
+      "c": "Hot Springs, AR",
+      "p": "(501) 767-3486",
+      "u": "https://www.razorbackcampersales.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Razorback Camper Sales operates an RV service department at 2320 Albert Pike in Hot Springs, staffed by technicians with over 100 years of combined experience in the RV industry. It accommodates any type of problem that arises with an RV and honors warranty work and recalls on units purchased there. Customers get direct access to technicians to answer questions or troubleshoot. The service department works by appointment only.",
+      "g": [
+        "center"
+      ],
+      "base": "Hot Springs",
+      "areas": [
+        "Hot Springs",
+        "Little Rock",
+        "Conway",
+        "Cabot",
+        "Mena",
+        "Fort Smith",
+        "Texarkana",
+        "Benton",
+        "Pine Bluff",
+        "Malvern",
+        "Arkadelphia",
+        "Searcy",
+        "Russellville"
+      ],
+      "region": null,
+      "spec": "The service department works by appointment only",
+      "evidence": {
+        "checked": "https://www.razorbackcampersales.com/rv-service",
+        "phone_quote": "(501) 767-3486",
+        "coverage_quotes": [
+          "Come see why our service department continues to set Razorback Camper Sales apart from the competition in all of Arkansas including Hot Springs, Little Rock, Conway, Cabot, Mena, Fort Smith, Texarkana, Benton, Pine Bluff, Malvern, Arkadelphia, Searcy, Russellville and everywhere in between!"
+        ],
+        "type_quote": "The credibility of our service department at Razorback Camper Sales is absolutely astounding.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Taylor Mobile RV Repair",
+      "c": "Texarkana, AR",
+      "p": "870-648-6468",
+      "u": "https://www.taylor-rv-repair.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Taylor Mobile RV Repair is a family run, completely mobile service company based in Texarkana with multiple trucks, operating within a 150 mile radius into the four-state area of Arkansas, Texas, Louisiana and Oklahoma. Owner Brad Taylor and family come to the campsite so customers do not have to leave. Services include air conditioner and furnace repair, water heater repair, slide outs, electrical, plumbing, awnings and slide toppers, roof recoat and repairs and leveling systems. It is certified to work with manufacturer warranties such as Forest River, Keystone, Lippert, Coleman and Dometic.",
+      "g": [
+        "mobile"
+      ],
+      "base": "Texarkana",
+      "areas": [
+        "Texarkana"
+      ],
+      "region": "4-States Area",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.taylor-rv-repair.com/",
+        "phone_quote": "870-648-6468",
+        "coverage_quotes": [
+          "This family ran business operates in Texarkana and a 150 mile radius into the surrounding 4-States area of Arkansas, Texas, Louisiana, and Oklahoma."
+        ],
+        "type_quote": "Taylor Mobile RV Repair is a completely mobile service company with multiple trucks at the ready.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Nick's RV Center",
+      "c": "Texarkana, AR",
+      "p": "(870) 772-6194",
+      "u": "https://www.nicksrv.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Nick's RV Center at 4813 Parkway Dr in Texarkana has serviced RVs and trucks since 1979. Its technicians do fully certified repairs, winterizing and maintenance on most models of RVs and trucks, and it also does warranty and insurance repair. It installs upgrades and systems and carries hitches, winches, furnaces, water pumps and other parts. The shop is open Monday to Friday.",
+      "g": [
+        "center"
+      ],
+      "base": "Texarkana",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.nicksrv.com/",
+        "phone_quote": "Call us: (870) 772-6194",
+        "coverage_quotes": [],
+        "type_quote": "We offer top quality, fully certified repairs, winterizing and maintenance on most models of RVs and trucks.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Roetzel RV & Parts Sales",
+      "c": "Searcy, AR",
+      "p": "501-268-7694",
+      "u": "https://www.roetzelrv.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Roetzel RV & Parts Sales is a locally owned RV parts and repair facility at 550 Truman Baker Dr in Searcy, operating since 2000. It delivers repair service on motorhomes, fifth wheels and travel trailers, including insurance claims, general maintenance, roof replacement and appliance repair. It has an on-site parts department and diagnosis equipment, and gives an honest assessment and quote before work begins. Its parts department carries appliances, awnings, generators, furniture and satellites.",
+      "g": [
+        "center"
+      ],
+      "base": "Searcy",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.roetzelrv.com/",
+        "phone_quote": "Call us at 501-268-7694.",
+        "coverage_quotes": [],
+        "type_quote": "Additionally, Roetzel RV takes pride in delivering excellent quality repair service on your motorhomes, 5th wheels and travel trailers, including insurance claims, general maintenance, roof replacement, appliance repair, and so much more.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Titan Camper Sales",
+      "c": "Searcy, AR",
+      "p": "501-254-0839",
+      "u": "https://www.rvdealerarkansas.com/rv-mobile-service-repair",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Titan Camper Sales provides professional mobile RV service in Searcy and surrounding areas, coming to the customer without the RV going to the dealership. It offers RV repair, camper maintenance, A/C repair, RV refrigerator repair, water heater repair, upgrades and installations, and third-party RV inspections for travel trailers, fifth wheels and campers. Mobile service starts at $179 to get on the schedule, which includes travel and initial service time.",
+      "g": [
+        "mobile"
+      ],
+      "base": "Searcy",
+      "areas": [
+        "Searcy",
+        "Cabot",
+        "Beebe",
+        "Conway",
+        "Jacksonville",
+        "Bald Knob",
+        "Heber Springs",
+        "Batesville"
+      ],
+      "region": "Central Arkansas",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.rvdealerarkansas.com/rv-mobile-service-repair",
+        "phone_quote": "Please call 501-254-0839 to get an estimate or fill out the form on the right to receive a callback and schedule your service.",
+        "coverage_quotes": [
+          "We proudly serve customers throughout Searcy, Cabot, Beebe, Conway, Jacksonville, Bald Knob, Heber Springs, Batesville, and the greater Central Arkansas area."
+        ],
+        "type_quote": "Titan Camper Sales provides professional mobile RV service in Searcy, Arkansas and surrounding areas, making it easy to keep your camper road-ready without bringing it to the dealership.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Dale's Camping Center",
+      "c": "Pine Bluff, AR",
+      "p": "(870) 536-8300",
+      "u": "https://www.dalescampingcenter.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Dale's Camping Center runs an RV service department at 3000 W. Pullen St. in Pine Bluff, servicing all makes and models of RVs and utility trailers. Its technicians provide pre-delivery inspections, customer training, hitch installations, brake control and lighting work, cosmetic repair, warranty repair and satellite installs. The shop stocks many parts and popular accessories and serves Pine Bluff and much of South Arkansas.",
+      "g": [
+        "center"
+      ],
+      "base": "Pine Bluff",
+      "areas": [
+        "Pine Bluff",
+        "White Hall",
+        "Redfield",
+        "Sheridan",
+        "Rison",
+        "Monticello",
+        "Star City",
+        "Stuttgart",
+        "Warren",
+        "Fordyce",
+        "Woodlawn",
+        "Dumas",
+        "McGehee",
+        "Crossett",
+        "El Dorado",
+        "Lake Village"
+      ],
+      "region": "South Arkansas",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.dalescampingcenter.com/rv-service",
+        "phone_quote": "call us at (870) 536-8300",
+        "coverage_quotes": [
+          "Dale's Camping Center is proud to provide quality service to the areas of Pine Bluff, White Hall, Redfield, Sheridan, Rison, Monticello, Star City, Stuttgart, Warren, Fordyce, Woodlawn, Dumas, McGehee, Crossett, El Dorado, Lake Village and all of South Arkansas."
+        ],
+        "type_quote": "Our service department services all makes and models of RVs and our store is stocked with many parts and popular accessories.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "H & J Mobile RV Repair",
+      "c": "Cabot, AR",
+      "p": "(501) 413-4350",
+      "u": "https://hjmrvr.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "H & J Mobile RV Repair is a veteran-owned mobile RV repair business based at 22 Gettysburg N in Cabot. It provides emergency repairs, routine maintenance, parts replacement, appliance repair and electrical service, and now also services RV generators. It comes to the customer, with a service call of $200 plus a trip fee and one hour minimum labor. The team is focused on family journeys and keeping RVs road-ready.",
+      "g": [
+        "mobile"
+      ],
+      "base": "Cabot",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://hjmrvr.com/",
+        "phone_quote": "(501) 413-4350",
+        "coverage_quotes": [],
+        "type_quote": "Expert mobile RV repair services focused on family journeys and adventure awaits you.",
+        "emergency_quote": "Emergency Repairs",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "RV Collision Center of Arkansas",
+      "c": "Conway, AR",
+      "p": "501.301.4451",
+      "u": "https://rvcollisioncenterar.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "RV Collision Center of Arkansas is an RV body shop at 16 Drillers Dr. in Conway that has specialized in RV collision repair and custom painting since 1998. Its team has over 100 years of combined experience and restores RVs after minor repairs or major restorations. Expert services include body work, painting, decal replacement and structural repairs. It serves RV owners across the region and works on major RV brands.",
+      "g": [
+        "center",
+        "collision"
+      ],
+      "base": "Conway",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://rvcollisioncenterar.com/",
+        "phone_quote": "501.301.4451",
+        "coverage_quotes": [
+          "Located in Conway, Arkansas, we’re proud to serve RV owners across the region."
+        ],
+        "type_quote": "Since 1998, we’ve specialized in RV collision repair, custom painting, and more.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Mid America Collision",
+      "c": "Hot Springs, AR",
+      "p": "501-276-0563",
+      "u": "https://midamericacollision.com/campers-and-rvs",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Mid America Collision at 778 Mid America Blvd in Hot Springs repairs campers and RVs damaged in a storm or accident. It has dedicated service techs with over 10 years of experience in camper and RV repair. Work includes repairing fiberglass panels, window, roof and sealant inspection and repair, and glass and windshield repair or replacement. It assists customers in filing insurance claims and offers free estimates.",
+      "g": [
+        "center",
+        "collision"
+      ],
+      "base": "Hot Springs",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://midamericacollision.com/campers-and-rvs",
+        "phone_quote": "501-276-0563",
+        "coverage_quotes": [],
+        "type_quote": "We have dedicated service techs with over 10 years of experience in camper and RV repair",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Crabtree RV Center",
+      "c": "Alma, AR",
+      "p": "(479) 632-0829",
+      "u": "https://www.crabtreerv.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Crabtree RV Center runs an RV service department at 225 Collum Lane West in Alma, separate from its sales lot. It services motorhomes, travel trailers, fifth wheels, folding campers and toy haulers, covering roofs, appliances, slide-outs and awnings. The state-of-the-art service center has large indoor service bays and motorhome lifts, staffed by Master RV Certified Technicians with certifications in RVIA, KVH and BLUE OX. It serves Fort Smith, Mulberry, Charleston and Van Buren.",
+      "g": [
+        "center"
+      ],
+      "base": "Alma",
+      "areas": [
+        "Fort Smith",
+        "Mulberry",
+        "Charleston",
+        "Van Buren"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.crabtreerv.com/rv-service",
+        "phone_quote": "call us at (479) 632-0829",
+        "coverage_quotes": [
+          "Crabtree RV Center is proud to provide quality service to the areas of Fort Smith, Mulberry, Charleston, and Van Buren."
+        ],
+        "type_quote": "Your RV, motorhome, travel trailer, fifth wheel, folding camper or toy hauler will always receive the best of care by our Master Craftsmen here at Crabtree RV Center.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Rocky Ridge RV",
+      "c": "Van Buren, AR",
+      "p": "(479) 339-3958",
+      "u": "https://rockyridgerv.com/service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Rocky Ridge RV operates a 16-bay service center in Van Buren, Arkansas, staffed with certified RV technicians. It handles routine maintenance and comprehensive repairs, from slide-out service, battery service and wheel bearing service to propane, furnace, roof, water heater, refrigerator and air conditioner service. Common repairs include tire blowouts, awning repair, water leaks, brake replacement and slideout malfunctions. As a ROUTE 66 RV Network member it offers reciprocal service at 80+ partner dealerships.",
+      "g": [
+        "center"
+      ],
+      "base": "Van Buren",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://rockyridgerv.com/service",
+        "phone_quote": "AR Van Buren (479) 339-3958 (4793393958)",
+        "coverage_quotes": [],
+        "type_quote": "Rocky Ridge RV's Service Department is staffed with certified RV technicians who are dedicated to making sure your camper is ready for your next adventure.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Wheels RV",
+      "c": "Springdale, AR",
+      "p": "(479) 306-5555",
+      "u": "https://www.wheelsrv.net/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Wheels RV at 1358 W Henri De Tonti Blvd in Springdale has a full service department with 8 bays and 10 service technicians, each with a different specialty. It describes itself as the only full-body repair facility within 100 miles and handles RV roof, flooring, generator and refrigeration issues. It does roof repair and replacement, metal siding and body repair, and hitch installation and fabrication for fifth wheels and travel trailers. It also helps arrange insurance claims.",
+      "g": [
+        "center",
+        "collision"
+      ],
+      "base": "Springdale",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.wheelsrv.net/rv-service",
+        "phone_quote": "(479) 306-5555",
+        "coverage_quotes": [],
+        "type_quote": "Wheels RV has a full service department with 8 bays and 10 service technicians, each with a different specialty.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Happy Days RV Sales",
+      "c": "Russellville, AR",
+      "p": "479-968-6759",
+      "u": "https://happydaysrvsales.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Happy Days RV Sales & Service at 3030 S. Arkansas Avenue in Russellville started in 1989 as a full-line RV sales and service facility. Its service department describes itself as a full-service RV maintenance and repair shop that can replace broken parts or upgrade an RV from its parts department. Its service technicians are certified on all Dometic products. It is an authorized dealer for Gulfstream Coach.",
+      "g": [
+        "center"
+      ],
+      "base": "Russellville",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://happydaysrvsales.com/",
+        "phone_quote": "Call Us 479-968-6759",
+        "coverage_quotes": [],
+        "type_quote": "Our Service RV Department can fix most anything! We are a full-service RV maintenance and repair shop.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "OZ RVS",
+      "c": "Rogers, AR",
+      "p": "(479) 633-7844",
+      "u": "https://ozrvs.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "OZ RVS is an RV inspection and mobile service business based in Rogers, run by owner Brad Tomlin, an NRVIA certified inspector and RVTAA registered technician. It brings repair and inspection service directly to the RV with no hauling or dealership wait times. Technician services include repairs and diagnostics, winterization and de-winterization, heating and AC service, roof sealant, electrical and plumbing, and new owner walk-throughs. It serves Rogers, Bentonville, Bella Vista, Fayetteville, Springdale, Siloam Springs and surrounding areas.",
+      "g": [
+        "mobile",
+        "inspection"
+      ],
+      "base": "Rogers",
+      "areas": [
+        "Rogers",
+        "Bentonville",
+        "Bella Vista",
+        "Fayetteville",
+        "Springdale",
+        "Siloam Springs"
+      ],
+      "region": null,
+      "spec": "Saturday: Appointment Only",
+      "evidence": {
+        "checked": "https://ozrvs.com/",
+        "phone_quote": "Call Now (479) 633-7844",
+        "coverage_quotes": [
+          "Serving Rogers, Bentonville, Bella Vista, Fayetteville, Springdale, Siloam Springs and Surrounding Areas."
+        ],
+        "type_quote": "NRVIA certified inspections and RVTAA registered mobile service: expert care for your RV wherever the road takes you.",
+        "emergency_quote": "Emergency Service Available",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Little Rock Coaches",
+      "c": "Little Rock, AR",
+      "p": "501-248-1022",
+      "u": "https://www.littlerockcoaches.com/coach-rv-services/",
+      "t": "both",
+      "e": false,
+      "r": true,
+      "d": "Little Rock Coaches provides coach and RV repair services from its Little Rock location at 3100 Interstate 30, with certified mechanics specializing in RVs, campers and coaches. Its listed services include preventive maintenance, A/C repair, electrical, plumbing, engine work, and paint and collision repair. A well-equipped work van also allows the team to travel to the customer. It also operates a dumping station minutes from downtown Little Rock.",
+      "g": [
+        "mobile",
+        "center",
+        "collision",
+        "chassis"
+      ],
+      "base": "Little Rock",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.littlerockcoaches.com/coach-rv-services/",
+        "phone_quote": "Call: 501-248-1022",
+        "coverage_quotes": [],
+        "type_quote": "We specialize in taking care of RVs, Campers, and Coaches.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    }
+  ]
+}

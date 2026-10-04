@@ -1,0 +1,976 @@
+{
+  "state": "AL",
+  "name": "Alabama",
+  "regions": [
+    {
+      "key": "north-al",
+      "label": "Huntsville, the Tennessee Valley and the northeast"
+    },
+    {
+      "key": "birmingham-al",
+      "label": "Birmingham, Tuscaloosa and central Alabama"
+    },
+    {
+      "key": "montgomery-al",
+      "label": "Montgomery, Prattville and the river region"
+    },
+    {
+      "key": "gulf-coast-al",
+      "label": "Mobile, Foley and the Gulf Coast"
+    },
+    {
+      "key": "wiregrass-al",
+      "label": "Dothan and the Wiregrass"
+    }
+  ],
+  "region_of": {
+    "Huntsville": "north-al",
+    "Madison": "north-al",
+    "Albertville": "north-al",
+    "Guntersville": "north-al",
+    "Muscle Shoals": "north-al",
+    "Red Bay": "north-al",
+    "Vina": "north-al",
+    "Gadsden": "north-al",
+    "Cullman": "north-al",
+    "Birmingham": "birmingham-al",
+    "Calera": "birmingham-al",
+    "Thorsby": "birmingham-al",
+    "Tuscaloosa": "birmingham-al",
+    "Montgomery": "montgomery-al",
+    "Millbrook": "montgomery-al",
+    "Prattville": "montgomery-al",
+    "Mobile": "gulf-coast-al",
+    "Foley": "gulf-coast-al",
+    "Gulf Shores": "gulf-coast-al",
+    "Orange Beach": "gulf-coast-al",
+    "Irvington": "gulf-coast-al",
+    "Dothan": "wiregrass-al",
+    "Level Plains": "wiregrass-al"
+  },
+  "listings": [
+    {
+      "n": "RV Tech Services",
+      "c": "Mobile, AL",
+      "p": "(567) 349-6978",
+      "u": "https://mobile-rvtech.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "RV Tech Services LLC is a mobile RV repair and inspection company that comes to the customer. The owner, Clay Buckley, trained at the National RV Training Academy and returned a Certified RVTAA Technician and NRVIA Inspector. The business services A/C and refrigeration, electrical, furnaces and heat, plumbing, slides, awning, roof, and water heater systems on site. It is based in Mobile and serves RV owners across Mobile and Baldwin counties.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Mobile",
+      "areas": [
+        "Mobile",
+        "Daphne",
+        "Fairhope",
+        "Spanish Fort",
+        "Foley",
+        "Gulf Shores",
+        "Orange Beach",
+        "Robertsdale",
+        "Bay Minette",
+        "Saraland",
+        "Theodore",
+        "Loxley"
+      ],
+      "region": "the surrounding Gulf Coast",
+      "spec": null,
+      "evidence": {
+        "checked": "https://mobile-rvtech.com/",
+        "phone_quote": "(567) 349-6978 (+15673496978)",
+        "coverage_quotes": [
+          "Based in Mobile, Alabama, I serve RV owners across Mobile and Baldwin counties and the surrounding Gulf Coast.",
+          "Mobile Daphne Fairhope Spanish Fort Foley Gulf Shores Orange Beach Robertsdale Bay Minette Saraland Theodore Loxley"
+        ],
+        "type_quote": "I troubleshoot and repair RVs on-site, which eliminates hauling your rig to a shop and leaving it for days or weeks.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Quick Pro RV",
+      "c": "Birmingham, AL",
+      "p": "(205) 299-9423",
+      "u": "https://quickprorv.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "Quick Pro RV is a mobile RV repair company based in Birmingham that serves Central Alabama. Its certified technicians travel to campgrounds, driveways, and roadside spots so the RV does not have to be towed to a shop. The business repairs electrical, plumbing, HVAC, and appliances, and performs pre-trip and pre-purchase inspections plus winterization and de-winterization.",
+      "g": [
+        "mobile tech",
+        "emergency"
+      ],
+      "base": "Birmingham",
+      "areas": [],
+      "region": "Central Alabama",
+      "spec": null,
+      "evidence": {
+        "checked": "https://quickprorv.com/",
+        "phone_quote": "(205) 299-9423 (2052999423)",
+        "coverage_quotes": [
+          "Welcome to Quick Pro RV, your trusted source for mobile RV repair services and RV inspections in Birmingham and throughout Central Alabama.",
+          "Quick Pro RV is a mobile RV repair company based in Birmingham, Alabama, serving all of Central Alabama."
+        ],
+        "type_quote": "From minor fixes to major issues, we repair electrical, plumbing, HVAC, and appliances",
+        "emergency_quote": "Hours: Available 24/7",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "D&N RV Service",
+      "c": "Guntersville, AL",
+      "p": "(256) 571-9399",
+      "u": "https://alabamarvservice.com/",
+      "t": "both",
+      "e": false,
+      "r": true,
+      "d": "D&N RV Service is a family-owned RV repair shop in Guntersville serving North Central Alabama since 1993. It is an Authorized Forest River Warranty Service Center and a Truma Service Partner with RVTI Master Certified technicians on staff. The shop repairs air conditioning, furnaces, hydronic heating, refrigeration, water heaters, propane systems, plumbing, electrical, generators, slide-outs, leveling systems, roof and structural work, and suspension and brakes on towables. Mobile RV service is available within Marshall County.",
+      "g": [
+        "service center",
+        "mobile tech",
+        "roadside / chassis"
+      ],
+      "base": "Guntersville",
+      "areas": [
+        "Albertville",
+        "Boaz",
+        "Arab",
+        "Scottsboro",
+        "Fort Payne",
+        "Cullman",
+        "Huntsville",
+        "Decatur",
+        "Gadsden",
+        "Attalla",
+        "Oneonta",
+        "Grant",
+        "Owens Cross Roads",
+        "New Hope",
+        "Madison",
+        "Athens"
+      ],
+      "region": "North Central Alabama",
+      "spec": null,
+      "evidence": {
+        "checked": "https://alabamarvservice.com/",
+        "phone_quote": "Phone: (256) 571-9399 (+12565719399)",
+        "coverage_quotes": [
+          "D&N RV Service is a family-owned RV repair shop in Guntersville, Alabama, serving North Central Alabama since 1993.",
+          "Albertville Boaz Arab Scottsboro Fort Payne Cullman Huntsville Decatur Gadsden Attalla Oneonta Grant Hampton Cove Owens Cross Roads New Hope Madison Athens"
+        ],
+        "type_quote": "The shop services RV air conditioning (roof, basement, and under-bunk), furnaces, Truma combi systems, Aqua-Hot and hydronic heating, refrigeration (LP absorption and compressor), tank-type and tankless RV water heaters, propane systems, plumbing, electrical, generators, slide-outs, leveling systems, roof, floor and wall structural work, suspension and brakes on towables, and solar and lithium battery integration.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Birmingham Mobile RV Repair",
+      "c": "Birmingham, AL",
+      "p": "205-855-0510",
+      "u": "https://mobilervrepairbirmingham.com/",
+      "t": "mobile",
+      "e": true,
+      "r": true,
+      "d": "Birmingham Mobile RV Repair brings diagnostics and repairs to the customer across the Greater Birmingham Metro Area and Central Alabama. The owner has more than a decade of RV experience, including years as a lead tech at a major Alabama dealership. The business repairs brakes, axles, and suspension on site, and also handles AC, electrical, plumbing, appliances, generators, water heaters, awnings, and slide-outs. It advertises 24/7 emergency mobile service.",
+      "g": [
+        "mobile tech",
+        "emergency",
+        "roadside / chassis"
+      ],
+      "base": "Birmingham",
+      "areas": [
+        "Birmingham",
+        "Hoover",
+        "Vestavia Hills",
+        "Pelham",
+        "Trussville",
+        "Alabaster",
+        "Helena",
+        "Calera",
+        "Leeds",
+        "Gardendale",
+        "Chelsea",
+        "Mountain Brook",
+        "Homewood",
+        "Bessemer",
+        "Fultondale",
+        "Moody",
+        "Irondale",
+        "Center Point",
+        "Pinson"
+      ],
+      "region": "Central Alabama",
+      "spec": null,
+      "evidence": {
+        "checked": "https://mobilervrepairbirmingham.com/",
+        "phone_quote": "205-855-0510",
+        "coverage_quotes": [
+          "We proudly serve the entire Greater Birmingham Metro Area, providing fast, on-site mobile RV repair to homes, campgrounds, storage lots, and roadside locations across Central Alabama."
+        ],
+        "type_quote": "We repair RV brakes, axles, and suspension systems on-site for smooth, secure travel.",
+        "emergency_quote": "Open 24/7; Emergency Service Available",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Ewing RV Enterprises, LLC",
+      "c": "South Baldwin, AL",
+      "p": "(251) 508-3102",
+      "u": "https://ewingrvrepair.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Ewing RV Enterprises, LLC provides mobile RV repair and maintenance in South Baldwin, Alabama. Its technicians travel to the customer's home, campsite, or storage location. On-site work covers A/C units, water heaters, furnace diagnostics, refrigerators, propane systems, plumbing, electrical, roof repair and replacement, slide-outs, and hydraulic systems. The business also works with extended warranty and insurance companies.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": null,
+      "areas": [],
+      "region": "South Baldwin",
+      "spec": null,
+      "evidence": {
+        "checked": "https://ewingrvrepair.com/",
+        "phone_quote": "(251) 508-3102 (+12515083102)",
+        "coverage_quotes": [
+          "Trusted RV Solutions in South Baldwin",
+          "Whether you need service at your home, campsite, or storage location, we bring expert mobile RV repair directly to you"
+        ],
+        "type_quote": "Our experienced technicians handle everything from electrical and plumbing repairs to roof sealing, appliance servicing, and preventative maintenance.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      },
+      "reg": "gulf-coast-al"
+    },
+    {
+      "n": "Hall's RV",
+      "c": "Albertville, AL",
+      "p": "256-894-6235",
+      "u": "https://www.hallsrvsales.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Hall's RV is a family owned and operated RV dealership on US Highway 431 in Albertville, Alabama. Its service department works on roofing, appliances, slide-outs, awnings, plumbing, and electrical systems, and it also runs a stocked parts and accessories department. The business says it will service a unit whether or not it was purchased there.",
+      "g": [
+        "service center"
+      ],
+      "base": "Albertville",
+      "areas": [],
+      "region": "Northern Alabama",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.hallsrvsales.com/",
+        "phone_quote": "Local 256.894.6235 (+12568946235)",
+        "coverage_quotes": [
+          "We are a family owned and operated RV dealership serving the Birmingham, Atlanta and Chattanooga areas.",
+          "9184 US Hwy 431 Albertville, AL 35950"
+        ],
+        "type_quote": "We are proudly a full-service RV dealership offering RV sales, RV parts, RV service and RV financing.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "RV Roadway",
+      "c": "Calera, AL",
+      "p": "205-663-0046",
+      "u": "https://www.rvroadway.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": true,
+      "d": "RV Roadway operates RV service centers in Calera and Opelika, Alabama. Its certified service department handles annual and pre-trip inspections, appliance repair, slide-out service, electrical systems, plumbing, roof and exterior work, and hitch and tow systems. The listing includes a Chassis and Towing category covering brakes, suspension, hitch setup, and alignment, and the department is open to all RV owners regardless of where they purchased.",
+      "g": [
+        "service center",
+        "roadside / chassis"
+      ],
+      "base": "Calera",
+      "areas": [
+        "Calera",
+        "Opelika"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.rvroadway.com/rv-service",
+        "phone_quote": "205-663-0046 (2056630046)",
+        "coverage_quotes": [
+          "Calera, AL",
+          "Opelika, AL"
+        ],
+        "type_quote": "Our certified service department is your local partner for all RV maintenance and repair needs.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Bama RV",
+      "c": "Dothan, AL",
+      "p": "(334) 784-0644",
+      "u": "https://www.bamarv.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Bama RV has RV service locations in Dothan and Opelika, Alabama, with over 35 years of combined technician experience. The service teams handle roof repairs and replacements, plumbing and appliance service, collision and body work including fiberglass repairs, and slide-out and awning adjustments. It extends service to Ashford, Headland, Abbeville, Midland City, Fort Rucker, Enterprise, and Ozark. It does not offer on-site service calls.",
+      "g": [
+        "service center",
+        "body / collision"
+      ],
+      "base": "Dothan",
+      "areas": [
+        "Dothan",
+        "Opelika",
+        "Ashford",
+        "Headland",
+        "Abbeville",
+        "Midland City",
+        "Enterprise",
+        "Ozark"
+      ],
+      "region": null,
+      "spec": "Q: Do you offer on-site service calls? A: No, we don't.",
+      "evidence": {
+        "checked": "https://www.bamarv.com/rv-service",
+        "phone_quote": "Dothan Location:(334) 784-0644 (3347840644)",
+        "coverage_quotes": [
+          "With two convenient locations in Dothan and Opelika, we’re proud to extend our service to Ashford, Headland, Abbeville, Midland City, Fort Rucker, Enterprise, Ozark, and beyond."
+        ],
+        "type_quote": "We handle just about everything RV-related, including:",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Motor Home Specialist Alabama Service Center",
+      "c": "Montgomery, AL",
+      "p": "(334) 288-0331",
+      "u": "https://www.bluecompassrv.com/locations/alabama/montgomery/service",
+      "t": "center",
+      "e": false,
+      "r": true,
+      "d": "Motor Home Specialist Alabama Service Center is an RV service and repair center on Troy Highway in Montgomery, Alabama. It has diesel engine specialists on staff and a team that has worked on motorhomes since the dealership opened in 1982. Service includes engine and transmission diagnostics and repairs, chassis service, air suspension, shock absorbers, hitches and tow bars, electrical systems, plumbing, roof and exterior work, and collision repair and body work. It advertises Fast Lane service for select same-day jobs.",
+      "g": [
+        "service center",
+        "roadside / chassis",
+        "body / collision"
+      ],
+      "base": "Montgomery",
+      "areas": [],
+      "region": "Central Alabama",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.bluecompassrv.com/locations/alabama/montgomery/service",
+        "phone_quote": "4504 Troy Hwy, Montgomery, AL 36116 (334) 288-0331 (+13342880331)",
+        "coverage_quotes": [
+          "Central Alabama's RV community brings a specific kind of work to our service bay."
+        ],
+        "type_quote": "We have diesel engine specialists on staff, genuine Tiffin parts in stock, and a team that has been working on motorhomes since this dealership opened in 1982.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Clark's RV Center",
+      "c": "Millbrook, AL",
+      "p": "(334) 290-2606",
+      "u": "https://www.clarksrvcenter.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Clark's RV Center runs an RV service department in Millbrook, Alabama, staffed with highly trained technicians. It works on roofs, appliances, slide-outs, and awnings to keep motorhomes and trailers in working order. Customers can call to make an appointment or get help over the phone.",
+      "g": [
+        "service center"
+      ],
+      "base": "Millbrook",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.clarksrvcenter.com/rv-service",
+        "phone_quote": "call us at (334) 290-2606",
+        "coverage_quotes": [
+          "From roofs and appliances to slide-outs and awnings, we are here to help you with all your service needs."
+        ],
+        "type_quote": "Our service department is staffed with highly trained technicians dedicated to making sure your Coachmen,Dutchmen, and Forest River stay in great working order for years to come.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Bankston Motor Homes",
+      "c": "Huntsville, AL",
+      "p": "256-533-3100",
+      "u": "https://www.bankstonmotorhomes.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Bankston Motor Homes has provided RV service in Alabama and Tennessee since 1970, with Alabama service locations in Huntsville and Gadsden. It services motorhomes, travel trailers, fifth wheels, and towable RVs, covering roof repair and leak repair, appliance repair, plumbing repair, and electrical repair. The company describes itself as a trusted RV body shop and RV collision repair center and a preferred repair center for most major RV insurance companies.",
+      "g": [
+        "service center",
+        "body / collision"
+      ],
+      "base": "Huntsville",
+      "areas": [
+        "Huntsville",
+        "Gadsden"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.bankstonmotorhomes.com/rv-service",
+        "phone_quote": "256-533-3100 (2565333100)",
+        "coverage_quotes": [
+          "Visit us for RV service in Huntsville AL, RV service in Gadsden AL, and RV service in Ardmore TN."
+        ],
+        "type_quote": "We service motorhomes, travel trailers, fifth wheels, and towable RVs.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "PDC Body Works",
+      "c": "Level Plains, AL",
+      "p": "334-598-1800",
+      "u": "https://www.pdcbodyworks.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "PDC Body Works is a family-owned auto and RV collision repair shop in Level Plains, Alabama, with over 75 years of collective experience in the auto, RV, and motorhome repair industry. It handles RV body repair on all types of motorhomes, campers, and travel trailers, including fiberglass, gel coat, and structural repair, roof repair, custom painting, and paint matching. It also offers RV pressurized leak checks with Sealtech and handles insurance claims and customer pay repairs.",
+      "g": [
+        "body / collision"
+      ],
+      "base": "Level Plains",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.pdcbodyworks.com/",
+        "phone_quote": "334-598-1800",
+        "coverage_quotes": [
+          "We are a family-owned and operated auto and RV collision repair shop located in Level Plains, AL."
+        ],
+        "type_quote": "Collectively we have over 75 years of experience in the auto, RV, and motorhome repair industry.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Double-B RV",
+      "c": "Red Bay, AL",
+      "p": "1-(256)-412-0853",
+      "u": "https://doublebrv.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Double-B RV is an RV paint and body repair shop at 905 Gate Street NW in Red Bay, Alabama. It has over 27 years in paint and body repair and specializes in RV body, fender, and paint repair. Services include body, paint, buff, full body buff, wash, wax, and headlight refinishing. The shop offers free estimates and a veterans discount.",
+      "g": [
+        "body / collision"
+      ],
+      "base": "Red Bay",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://doublebrv.com/",
+        "phone_quote": "Beau 1-(662)-279-3181 | Brad 1-(256)-412-0853",
+        "coverage_quotes": [
+          "905 Gate St. NW Red Bay, AL 35582"
+        ],
+        "type_quote": "We specialize in RV body, fender, and paint repair.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Kimbrough's RV Repair",
+      "c": "Muscle Shoals, AL",
+      "p": "256-381-0797",
+      "u": "https://www.kimbroughsrvrepair.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Kimbrough's RV Repair is an RV service business with a centralized location in Muscle Shoals, Alabama, serving Northwestern Alabama. It says it is well equipped to handle the newest models of RV as well as the older generation. The business lists multiple bays so it can handle several projects at once and covers Florence, Decatur, Huntsville, Muscle Shoals, Tuscumbia, and Sheffield.",
+      "g": [
+        "service center"
+      ],
+      "base": "Muscle Shoals",
+      "areas": [
+        "Florence",
+        "Decatur",
+        "Huntsville",
+        "Tuscumbia",
+        "Sheffield"
+      ],
+      "region": "all of North Alabama",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.kimbroughsrvrepair.com/",
+        "phone_quote": "256 - 381 - 0797",
+        "coverage_quotes": [
+          "Florence - Decatur - Huntsville - Muscle Shoals - Tuscumbia - Sheffield and all of North Alabama",
+          "Our centralized location in Muscle Shoals, AL makes us accessible to all of Northwestern Alabama and its surrounding areas."
+        ],
+        "type_quote": "We are well equipped to handle the newest models of RV at Kimbroughs RV Repair.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Tennessee Valley RV",
+      "c": "Madison, AL",
+      "p": "(256) 257-0001",
+      "u": "https://www.tnvalleyrv.com/chassis-services",
+      "t": "center",
+      "e": false,
+      "r": true,
+      "d": "Tennessee Valley RV runs an RV service center off I-565 in Madison, Alabama, specializing in same-day and express RV service and repair as well as collision damage and custom upgrades. It offers a full range of chassis services for Class A, B, and C motorhomes, including oil changes and engine maintenance, suspension checks, axle and wheel maintenance, and brake inspections. It stocks and sources OEM parts and accepts major insurance and extended warranty policies.",
+      "g": [
+        "service center",
+        "roadside / chassis"
+      ],
+      "base": "Madison",
+      "areas": [
+        "Madison"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.tnvalleyrv.com/chassis-services",
+        "phone_quote": "(256) 257-0001",
+        "coverage_quotes": [
+          "Tennessee Valley RV's state-of-the-art service center is located conveniently off I-565 in Madison, AL."
+        ],
+        "type_quote": "At Tennessee Valley RV, we offer a full range of chassis services designed to keep your motor home running smoothly.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Prattville Auto & RV Repair Center LLC",
+      "c": "Prattville, AL",
+      "p": "334-365-5085",
+      "u": "https://www.prattvillerv.com/Prattville-chassis-coach-systems.html",
+      "t": "center",
+      "e": false,
+      "r": true,
+      "d": "Prattville Auto & RV Repair Center LLC is an auto and RV repair shop at 1259-C South Memorial Dr in Prattville, Alabama. Its chassis systems work includes brakes and brake controls, tires and alignments, tune ups, cooling system and radiator service, fuel injection service, and clutch service. Coach systems work covers electrical, plumbing, furnace, hydraulic, jack and leveling, refrigerator, roof-top air conditioning, roof repair and sealing, and slide-out repairs.",
+      "g": [
+        "service center",
+        "roadside / chassis"
+      ],
+      "base": "Prattville",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.prattvillerv.com/Prattville-chassis-coach-systems.html",
+        "phone_quote": "334-365-5085 (3343655085)",
+        "coverage_quotes": [
+          "1259-C South Memorial Dr Prattville, AL 36067"
+        ],
+        "type_quote": "Brakes - New Brakes, Brake Controls, Towed Vehicle Braking Systems",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Vina RV Service Center",
+      "c": "Vina, AL",
+      "p": "(256) 668-0224",
+      "u": "https://www.vinarvservicecenter.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Vina RV Service Center is an RV service business in Vina, Alabama. Its stated mission is to provide quality service to its customers, and it says it is ready to schedule an appointment. The business provides warranty work in addition to its other services.",
+      "g": [
+        "service center"
+      ],
+      "base": "Vina",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.vinarvservicecenter.com/",
+        "phone_quote": "Michael Stone - (256)668-0224 (2566680224)",
+        "coverage_quotes": [
+          "Welcome to Vina RV Service Center. Our mission is to provide quality service to our customers."
+        ],
+        "type_quote": "We provide warranty work, in addition to our other services.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Wheels Up Mobile RV Repair LLC",
+      "c": "Cullman, AL",
+      "p": "(256) 636-7759",
+      "u": "https://wheelsupmobilervrepairllc.jobbersites.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Wheels Up Mobile RV Repair LLC is a veteran-owned mobile RV repair business serving Cullman, Alabama, and the surrounding area. Its services include mobile RV repair, furnace repair, water heater replacement and repair, awning repair, roof inspection and re-sealant, A/C replacement, plumbing repair, electrical work, and refrigerator repair. It also inspects used campers and offers a military and first responder discount.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Cullman",
+      "areas": [
+        "Cullman"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://wheelsupmobilervrepairllc.jobbersites.com/",
+        "phone_quote": "(256) 636-7759",
+        "coverage_quotes": [
+          "Serving Cullman and the surrounding area"
+        ],
+        "type_quote": "Mobile Rv Repair",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Certified RV Repair & Inspection",
+      "c": "Foley, AL",
+      "p": "850-320-8290",
+      "u": "https://www.certifiedrv.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Certified RV Repair & Inspection is a husband-and-wife mobile RV repair and inspection team serving Foley, Gulf Shores, Orange Beach, and Alabama's Gulf Coast. It provides mobile repair for common and urgent issues including AC, electrical, plumbing, appliances, cooling systems, refrigerators, roof repairs, water heaters, and slide-outs. The business also performs pre-purchase RV inspections and is NRVIA certified and insured.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Foley",
+      "areas": [
+        "Foley",
+        "Gulf Shores",
+        "Orange Beach",
+        "Summerdale",
+        "Robertsdale",
+        "Elberta"
+      ],
+      "region": "Alabama's Gulf Coast",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.certifiedrv.com/",
+        "phone_quote": "service@certifiedrv.com 850-320-8290",
+        "coverage_quotes": [
+          "Serving Foley, Gulf Shores, Orange Beach & Alabama's Gulf Coast"
+        ],
+        "type_quote": "Fast, reliable mobile RV repair for common and urgent issues including AC, electrical, plumbing, appliances, and more.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Hacketts Mobile RV Repair",
+      "c": "Gulf Shores, AL",
+      "p": "251.504.0263",
+      "u": "https://hackettsmobilervrepair.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "Hacketts Mobile RV Repair is a locally owned mobile RV repair business based in Gulf Shores, Alabama. It comes directly to the customer anywhere in Gulf Shores and Baldwin County. Services include comprehensive RV maintenance and repair, winterizing and de-winterizing, awning repairs, annual inspections, and roof sealant work. It advertises 24 hour emergency service.",
+      "g": [
+        "mobile tech",
+        "emergency"
+      ],
+      "base": "Gulf Shores",
+      "areas": [
+        "Gulf Shores"
+      ],
+      "region": "Baldwin County",
+      "spec": null,
+      "evidence": {
+        "checked": "https://hackettsmobilervrepair.com/",
+        "phone_quote": "251.504.0263",
+        "coverage_quotes": [
+          "We come directly to you anywhere in Gulf Shores and Baldwin County",
+          "We proudly serve the Alabama gulf coast region"
+        ],
+        "type_quote": "Hacketts Mobile RV Repair, based in Gulf Shores, specializes in providing comprehensive RV maintenance and repair services.",
+        "emergency_quote": "24 Hour Emergency Service",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Capt Pete's Mobile RV Repair",
+      "c": "Orange Beach, AL",
+      "p": "305-699-5199",
+      "u": "https://captpetesmobilerv.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Capt Pete's Mobile RV Repair provides mobile RV diagnostics and repair on electrical, plumbing, A/C, slides, awnings, water heaters, steps, leveling, and appliances. It is run by a Certified NRVTA RV Technician and is certified and insured. The business services Gulf Shores, Foley, Orange Beach, Fort Morgan, Perdido Key, and surrounding areas and works with manufacturer warranty departments and extended warranty companies.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Orange Beach",
+      "areas": [
+        "Gulf Shores",
+        "Foley",
+        "Orange Beach"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://captpetesmobilerv.com/",
+        "phone_quote": "CALL NOW! (+13056995199)",
+        "coverage_quotes": [
+          "Servicing Gulf Shores, Foley, Orange Beach, Ft Morgan, Perdido key, and surrounding areas"
+        ],
+        "type_quote": "Have your RV diagnosed and repaired by a CERTIFIED NRVTA RV TECHNICIAN.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Veteran RV Repair",
+      "c": "Birmingham, AL",
+      "p": "(205) 937-4689",
+      "u": "https://veteran-rv-repair.net/all-services",
+      "t": "both",
+      "e": false,
+      "r": true,
+      "d": "Veteran RV Repair is a veteran-owned RV repair business with both mobile and in-shop service based in Birmingham and covering Central Alabama. It is NRVTA certified, licensed, and insured and works on all makes and models of motorhomes, campers, and trailers. It specializes in Cummins and Cummins Onan generators as an authorized Cummins dealer, installs FlexArmor roof systems, and services Aqua-Hot hydronic heating. Its service list includes tires and brakes, hydraulic systems, and general electrical and plumbing repairs.",
+      "g": [
+        "mobile tech",
+        "service center",
+        "roadside / chassis"
+      ],
+      "base": "Birmingham",
+      "areas": [
+        "Hoover",
+        "Bessemer",
+        "Pelham",
+        "Alabaster",
+        "Calera",
+        "Clanton",
+        "Trussville",
+        "Springville",
+        "Tuscaloosa"
+      ],
+      "region": "Central Alabama",
+      "spec": null,
+      "evidence": {
+        "checked": "https://veteran-rv-repair.net/all-services",
+        "phone_quote": "(205) 937-4689",
+        "coverage_quotes": [
+          "We proudly serve RV owners across Birmingham and surrounding areas, covering all of Central Alabama. Our mobile and in-shop services reach customers throughout Jefferson, Shelby, Tuscaloosa, Chilton, Bibb, St. Clair, and Blount counties, and beyond. We regularly work in cities like Hoover, Bessemer, Pelham, Alabaster, Calera, Clanton, Trussville, Springville, and Tuscaloosa."
+        ],
+        "type_quote": "We offer comprehensive inspections and replacements for RV tires and braking systems, ensuring you have the stopping power and traction needed for the long haul.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Alabama Campers",
+      "c": "Tuscaloosa, AL",
+      "p": "205-409-9016",
+      "u": "https://www.alabamacampers.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Alabama Campers provides RV service and repair in Tuscaloosa, Alabama. It says it has experts at RV service outfitted to help fix any issue and invites customers to bring their RV by for a check. Sales and service hours are Monday through Saturday.",
+      "g": [
+        "service center"
+      ],
+      "base": "Tuscaloosa",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.alabamacampers.com/rv-service",
+        "phone_quote": "205-409-9016 (2054099016)",
+        "coverage_quotes": [
+          "5126 McFarland Blvd E Tuscaloosa, AL 35405"
+        ],
+        "type_quote": "We have experts at RV service that are outfitted to help fix any issue that you might be having.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "251 Solutions",
+      "c": "Irvington, AL",
+      "p": "1-866-832-6251",
+      "u": "https://www.251-solutions.com/services/slide-outs",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "251 Solutions provides RV slide-out maintenance and repair in the Mobile, Alabama area, operating from Irvington. Its technicians diagnose electrical and mechanical components, seals, and alignment issues. The business also handles RV electrical systems, plumbing, appliances, general maintenance, and non-structural roof repair.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Irvington",
+      "areas": [
+        "Mobile"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.251-solutions.com/services/slide-outs",
+        "phone_quote": "call us at 866-TEAM-251 (+1-866-832-6251)",
+        "coverage_quotes": [
+          "RV Slide-Out Repair in Mobile",
+          "Our Mobile RV repair team can inspect slide-out systems for a variety of common concerns."
+        ],
+        "type_quote": "Our experienced technicians provide professional RV slide-out maintenance and repair in Mobile to help keep this important system operating safely and reliably.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "South Eastern Campers LLC",
+      "c": "Thorsby, AL",
+      "p": "205-955-3054",
+      "u": "https://www.southeasterncampers.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "South Eastern Campers LLC is a fully mobile RV and camper repair business based in Thorsby, Alabama. It brings its workshop to the customer's driveway or campsite and handles routine fixes as well as insurance and warranty claims. Services include A/C repair and installation, refrigerator, water heater, and furnace service, preventative maintenance such as winterization and oil changes, roof and awning repair and replacement, interior upgrades, appliance repair, and plumbing and LP system work.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Thorsby",
+      "areas": [
+        "Selma",
+        "Prattville",
+        "Pelham",
+        "Chelsea",
+        "Jemison"
+      ],
+      "region": "Alabama",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.southeasterncampers.com/",
+        "phone_quote": "205-955-3054 Contact Email (Southeasterncampers@gmail.com)",
+        "coverage_quotes": [
+          "Located in Thorsby, we proudly extend our services across Alabama, including Selma, Prattville, and surrounding areas.",
+          "Based in Thorsby, we proudly serve Alabama, including areas like Pelham, Chelsea, and beyond."
+        ],
+        "type_quote": "We understand the importance of keeping your RV roadworthy, especially when adventure calls. That’s why we offer fully mobile repair services, bringing our workshop right to your driveway or campsite.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "RV Connections",
+      "c": "Dothan, AL",
+      "p": "(334) 678-5194",
+      "u": "https://www.rvconnections.com/rv-service-department-in-florida2",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "RV Connections operates an RV service department in Dothan, Alabama, with certified and master certified RV technicians. It provides routine maintenance, upgrades, and repairs and offers express RV service with a same-day inspection and repair plan during weekday business hours. The business also does collision work and states it provides outside service to the general drive-in public and non-warranty customers. It is a Cummins Onan Certified Warranty Repair Facility.",
+      "g": [
+        "service center",
+        "body / collision"
+      ],
+      "base": "Dothan",
+      "areas": [],
+      "region": null,
+      "spec": "Express RV service is available for all customers other than for customer seeking warranty work that purchased outside the RV Connections group of dealers.",
+      "evidence": {
+        "checked": "https://www.rvconnections.com/rv-service-department-in-florida2",
+        "phone_quote": " (334) 678-5194 (+13346785194)",
+        "coverage_quotes": [
+          "4218 South Oates St. Dothan, AL 36301",
+          "Provide outside service to general drive-in public and non-warranty customers."
+        ],
+        "type_quote": "Whether you need routine maintenance, upgrades or repairs, you can trust our certified specialists to get you back on the road as soon as possible.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Waymark RV Service",
+      "c": "Cullman, AL",
+      "p": "(659) 226-9811",
+      "u": "https://waymarkrvservice.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "Waymark RV Service provides mobile RV repair in Cullman, Alabama and surrounding areas. With over 20 years of experience, it handles electrical, plumbing, roof, and appliance repairs. The business comes to the customer at home, a campground, or on the road, and offers 24-hour emergency calls.",
+      "g": [
+        "mobile tech",
+        "emergency"
+      ],
+      "base": "Cullman",
+      "areas": [
+        "Cullman"
+      ],
+      "region": "Surrounding Areas",
+      "spec": null,
+      "evidence": {
+        "checked": "https://waymarkrvservice.com/",
+        "phone_quote": "(659)-226-9811 (6592269811)",
+        "coverage_quotes": [
+          "RV Repair in Cullman, Alabama and Surrounding Areas"
+        ],
+        "type_quote": "Waymark RV Service provides expert mobile RV repair you can count on.",
+        "emergency_quote": "even for 24-hour emergency calls",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Tony's RV Solutions",
+      "c": "Gadsden, AL",
+      "p": "(256) 312-5974",
+      "u": "https://tonysrvsolutions.com/northeast-alabama/mobile-rv-repair-cullman",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Tony's RV Solutions offers convenient on-site mobile RV maintenance and repairs in the Northeast Alabama area, including Cullman, working out of Gadsden. The business operates daily from 8:00 AM to 8:00 PM.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Gadsden",
+      "areas": [
+        "Cullman"
+      ],
+      "region": "Northeast Alabama",
+      "spec": null,
+      "evidence": {
+        "checked": "https://tonysrvsolutions.com/northeast-alabama/mobile-rv-repair-cullman",
+        "phone_quote": "(256) 312-5974",
+        "coverage_quotes": [
+          "1039 Lay Springs Road Gadsden, Alabama 35904"
+        ],
+        "type_quote": "Convenient on-site maintenance and repairs for your RV wherever you are.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    }
+  ]
+}

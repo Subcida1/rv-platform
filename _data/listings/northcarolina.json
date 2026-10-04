@@ -1,0 +1,1406 @@
+{
+  "state": "NC",
+  "name": "North Carolina",
+  "regions": [
+    {
+      "key": "mountains-nc",
+      "label": "Asheville, Boone and the mountains"
+    },
+    {
+      "key": "piedmont-nc",
+      "label": "Charlotte, Greensboro and the Piedmont"
+    },
+    {
+      "key": "triangle-nc",
+      "label": "Raleigh, Durham and the Triangle"
+    },
+    {
+      "key": "sandhills-nc",
+      "label": "Fayetteville and the Sandhills"
+    },
+    {
+      "key": "coast-nc",
+      "label": "Wilmington and the southern coast"
+    },
+    {
+      "key": "outer-banks-nc",
+      "label": "The Outer Banks and the northeast"
+    }
+  ],
+  "region_of": {
+    "Asheville": "mountains-nc",
+    "Candler": "mountains-nc",
+    "Canton": "mountains-nc",
+    "Hendersonville": "mountains-nc",
+    "Maggie Valley": "mountains-nc",
+    "Boone": "mountains-nc",
+    "Murphy": "mountains-nc",
+    "Hickory": "mountains-nc",
+    "Charlotte": "piedmont-nc",
+    "Concord": "piedmont-nc",
+    "Belmont": "piedmont-nc",
+    "Indian Trail": "piedmont-nc",
+    "Monroe": "piedmont-nc",
+    "Salisbury": "piedmont-nc",
+    "Statesville": "piedmont-nc",
+    "Pilot Mountain": "piedmont-nc",
+    "Winston-Salem": "piedmont-nc",
+    "Raleigh": "triangle-nc",
+    "Durham": "triangle-nc",
+    "Chapel Hill": "triangle-nc",
+    "Creedmoor": "triangle-nc",
+    "Sanford": "triangle-nc",
+    "Fayetteville": "sandhills-nc",
+    "Lilesville": "sandhills-nc",
+    "Wilmington": "coast-nc",
+    "Castle Hayne": "coast-nc",
+    "Goldsboro": "coast-nc",
+    "Smithfield": "coast-nc",
+    "Kitty Hawk": "outer-banks-nc",
+    "Edenton": "outer-banks-nc",
+    "Greensboro": "piedmont-nc",
+    "Lexington": "piedmont-nc"
+  },
+  "listings": [
+    {
+      "n": "Link's RV SERVICES LLC",
+      "c": "Smithfield, NC",
+      "p": "443-859-5333",
+      "u": "https://linksrvservices.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Link's RV Services LLC is a mobile RV repair business whose technician travels to the customer. It presents mobile RV repair done right by an RV technician with professional training and experience. The site lists a service area across eastern North Carolina.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Smithfield",
+      "areas": [
+        "Smithfield",
+        "Selma",
+        "Kenly",
+        "Wilson",
+        "Goldsboro",
+        "Kinston",
+        "Mt Olive",
+        "Benson",
+        "Four Oaks",
+        "Clayton",
+        "Zebulon"
+      ],
+      "region": "Eastern North Carolina",
+      "spec": null,
+      "evidence": {
+        "checked": "https://linksrvservices.com/",
+        "phone_quote": "443-859-5333",
+        "coverage_quotes": [
+          "Smithfield, Selma, Kenly, Wilson, Goldsboro, Kinston, Mt Olive, Benson, Four Oaks, Clayton, Zebulon, and other surrounding areas."
+        ],
+        "type_quote": "Mobile RV Repair done right.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Select RV Service",
+      "c": "Fayetteville, NC",
+      "p": "910-304-5665",
+      "u": "https://selectrvservice.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Select RV Service is a Fayetteville mobile RV repair and service business. Its site says it offers mobile RV repair and mobile RV service, coming directly to the customer. It is based in Fayetteville, North Carolina.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Fayetteville",
+      "areas": [
+        "Fayetteville"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://selectrvservice.com/",
+        "phone_quote": "Give us a call! 910-304-5665",
+        "coverage_quotes": [
+          "Select RV Service",
+          "Fayetteville, NC"
+        ],
+        "type_quote": "We offer mobile RV repair and mobile RV service, coming directly to you.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Harrell's Tire & Auto Service",
+      "c": "Fayetteville, NC",
+      "p": "(910) 483-7074",
+      "u": "https://harrellsauto.com/rv-repair-and-tires/",
+      "t": "center",
+      "e": false,
+      "r": true,
+      "d": "Harrell's Tire & Auto Service provides RV maintenance, repairs and tire service at its Gillespie Street facility in Fayetteville. The site lists RV and trailer repair including engines, transmission services, brakes and electrical systems. It also offers RV winterization and de-winterization.",
+      "g": [
+        "service center",
+        "roadside / chassis"
+      ],
+      "base": "Fayetteville",
+      "areas": [
+        "Fayetteville"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://harrellsauto.com/rv-repair-and-tires/",
+        "phone_quote": "Call (910) 483-7074 (9104837074) to plan maintenance",
+        "coverage_quotes": [
+          "visit our RV and Fleet Repair Service Center at 1128 Gillespie St., Fayetteville, NC 28306"
+        ],
+        "type_quote": "Harrell’s Tire & Auto Service provides RV maintenance, repairs and tire service at our Gillespie Street facility in Fayetteville, NC.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "RV & Camper Refrigeration, Inc.",
+      "c": "Monroe, NC",
+      "p": "(704) 821-9119",
+      "u": "https://rvcrcarolina.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "RV & Camper Refrigeration, Inc. is a family owned and operated RV repair shop in Monroe with over 40 years of experience. Its site says it repairs camper-oriented systems including air conditioners, awnings, furnaces, plumbing, refrigerators and roofs. It is a certified Dometic and Norcold warranty center.",
+      "g": [
+        "service center"
+      ],
+      "base": "Monroe",
+      "areas": [
+        "Monroe"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://rvcrcarolina.com/",
+        "phone_quote": "(704) 821-9119 (7048219119)",
+        "coverage_quotes": [
+          "5808 Stockbridge Drive, Monroe, NC 28110, USA"
+        ],
+        "type_quote": "If it is camper oriented, then we repair it!",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Guardians of the Journey",
+      "c": "Indian Trail, NC",
+      "p": "(980) 399-4375",
+      "u": "https://www.guardiansofthejourney.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Guardians of the Journey is a veteran-owned, certified mobile RV repair service based in Indian Trail. It brings repairs to the customer's home, campground or storage facility with no towing. The site lists service across the greater Charlotte region in North Carolina and South Carolina.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Indian Trail",
+      "areas": [
+        "Charlotte",
+        "Concord",
+        "Monroe",
+        "Indian Trail",
+        "Matthews",
+        "Mint Hill",
+        "Harrisburg",
+        "Huntersville",
+        "Waxhaw",
+        "Kannapolis"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.guardiansofthejourney.com/",
+        "phone_quote": "Call or text (980) 399-4375 and we'll confirm right away.",
+        "coverage_quotes": [
+          "Charlotte · Concord · Monroe · Indian Trail · Matthews · Mint Hill · Harrisburg · Huntersville · Waxhaw · Kannapolis"
+        ],
+        "type_quote": "We're a veteran-owned, certified mobile RV repair service based in Indian Trail, NC",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Mobile RV Repair of Charlotte",
+      "c": "Charlotte, NC",
+      "p": "704-970-6275",
+      "u": "https://mobilervrepaircharlotte.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "Mobile RV Repair of Charlotte is a mobile RV repair company serving North Carolina and South Carolina. Technicians travel to the customer's location and handle systems such as air conditioning, electrical, plumbing, appliances and slide-outs. The site offers emergency RV repair for problems such as electrical failures and stuck slide-outs.",
+      "g": [
+        "mobile tech",
+        "emergency"
+      ],
+      "base": "Charlotte",
+      "areas": [
+        "Matthews",
+        "Mint Hill",
+        "Huntersville",
+        "Pineville",
+        "Concord",
+        "Indian Trail",
+        "Gastonia"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://mobilervrepaircharlotte.com/",
+        "phone_quote": "704-970-6275",
+        "coverage_quotes": [
+          "covering key cities and towns like Matthews, Mint Hill, Huntersville, Pineville, Concord, Indian Trail, and Gastonia in NC"
+        ],
+        "type_quote": "We're a mobile RV repair company based in Charlotte, proudly serving both North Carolina and South Carolina.",
+        "emergency_quote": "When your RV breaks down unexpectedly, we provide fast, on-site emergency repairs to get you back on the road without delay.",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Quality RV",
+      "c": "Belmont, NC",
+      "p": "704-827-9299",
+      "u": "https://qualityrvnc.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Quality RV is a family owned and operated RV service and repair business in Belmont, serving the Charlotte area since 1995. The site says it offers complete repair and maintenance for all RV types, including roof repair, plumbing, electrical and appliances. It is located off I-85 between Charlotte and Gastonia.",
+      "g": [
+        "service center"
+      ],
+      "base": "Belmont",
+      "areas": [
+        "Belmont"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://qualityrvnc.com/",
+        "phone_quote": "704-827-9299 (7048279299)",
+        "coverage_quotes": [
+          "719 Cason St, Belmont, NC 28012. Right off I-85, Exit 26"
+        ],
+        "type_quote": "Complete repair and maintenance for all RV types. Roof repair, plumbing, electrical, appliances, and more.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Robert's RV Repair",
+      "c": "Chapel Hill, NC",
+      "p": "(919) 704 6082",
+      "u": "https://www.robertsrvrepairnc.com/",
+      "t": "both",
+      "e": true,
+      "r": false,
+      "d": "Robert's RV Repair runs a drop-off RV repair shop in Chapel Hill and also charges a mobile service fee to come to the customer. The site lists repairs and maintenance including roof, flooring, plumbing, refrigerators, A/C, electrical, slide-outs and axles and bearings. It states that all weekend calls are subject to unscheduled emergency service rates.",
+      "g": [
+        "service center",
+        "mobile tech",
+        "emergency"
+      ],
+      "base": "Chapel Hill",
+      "areas": [
+        "Chapel Hill"
+      ],
+      "region": null,
+      "spec": "our shop operates on a drop-off only basis",
+      "evidence": {
+        "checked": "https://www.robertsrvrepairnc.com/",
+        "phone_quote": "(919) 704 6082",
+        "coverage_quotes": [
+          "1712 Farrington Point Rd, Unit 2 Chapel Hill, NC 27517"
+        ],
+        "type_quote": "From small fixes to major repairs, we’re here to take care of you like neighbors should.",
+        "emergency_quote": "All weekend calls are subject to unscheduled emergence service rates.",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Tarheel Mobile RV Service, LLC",
+      "c": "Pilot Mountain, NC",
+      "p": "336-368-0190",
+      "u": "https://tarheelmobilervservice.com/",
+      "t": "both",
+      "e": true,
+      "r": false,
+      "d": "Tarheel Mobile RV Service, LLC brings RV repair and maintenance to the customer or works from its Pilot Mountain service center. The site says it provides all types of RV repair and lists air conditioning, heating, electrical, plumbing, appliances, LP systems, generators and inverters. It offers 24-hour emergency service and has served owners since 1996.",
+      "g": [
+        "mobile tech",
+        "service center",
+        "emergency"
+      ],
+      "base": "Pilot Mountain",
+      "areas": [
+        "Boonville",
+        "Dobson",
+        "East Bend",
+        "King",
+        "Mt Airy",
+        "Pilot Mountain",
+        "Pinnacle",
+        "Rural Hall",
+        "Tobaccoville"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://tarheelmobilervservice.com/",
+        "phone_quote": "Phone: 336-368-0190 Emergency: 336-403-0134",
+        "coverage_quotes": [
+          "Serving Ararat, NC, Boonville, Dobson, East Bend, King, Mt Airy, Pilot Mountain, Pinnacle, Rural Hall, Tobaccoville, Westfield, Ararat, VA, Cana, and Claudville."
+        ],
+        "type_quote": "We provide all types of RV repair. No job is too little or too big!",
+        "emergency_quote": "24-Hour Emergency Service is Available",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "CentralNCRV",
+      "c": "Salisbury, NC",
+      "p": "(704) 798-3474",
+      "u": "https://www.centralncrvrepair.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "CentralNCRV specializes in mobile RV repair designed for the customer's convenience. It lists interior and exterior repairs, electrical and plumbing services, pre and post-trip inspections, winterizing and general maintenance. The site states it services areas within a 50 mile radius of Salisbury.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Salisbury",
+      "areas": [],
+      "region": "areas within a 50 mile radius from Salisbury, NC",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.centralncrvrepair.com/",
+        "phone_quote": "adam.overcash@centralncrvrepair.com (704) 798-3474 (7047983474)",
+        "coverage_quotes": [
+          "WE SERVICE AREAS WITHIN A 50 MILE RADIUS FROM SALISBURY, NC."
+        ],
+        "type_quote": "Here at CentralNCRV we specialize in Mobile RV Repair designed for your convivence.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Piedmont RV Center",
+      "c": "Salisbury, NC",
+      "p": "+1 704-286-6985",
+      "u": "https://piedmontrvcenter.com/mobile/",
+      "t": "both",
+      "e": true,
+      "r": true,
+      "d": "Piedmont RV Center runs a Salisbury shop and a mobile RV service that comes to the customer's home, campsite or storage facility. Its site offers electrical, plumbing, appliance and slide-out work on the road, and a dedicated chassis service covering engine, drivetrain, brake and suspension systems on Freightliner, Spartan, Ford, Workhorse and Mercedes chassis. Mobile service is available for scheduled maintenance and emergency repairs.",
+      "g": [
+        "service center",
+        "mobile tech",
+        "roadside / chassis",
+        "emergency"
+      ],
+      "base": "Salisbury",
+      "areas": [],
+      "region": "Piedmont region of North Carolina",
+      "spec": null,
+      "evidence": {
+        "checked": "https://piedmontrvcenter.com/mobile/",
+        "phone_quote": "Call Us Now +1 704-286-6985",
+        "coverage_quotes": [
+          "we are fully set up for mobile RV service throughout the Salisbury area and surrounding regions"
+        ],
+        "type_quote": "At Piedmont RV Center, we are fully set up for mobile RV service throughout the Salisbury area and surrounding regions.",
+        "emergency_quote": "Available for both scheduled maintenance and emergency repairs",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "RRR Custom RV Services",
+      "c": "Salisbury, NC",
+      "p": "(704) 267-3330",
+      "u": "https://www.triple-r-rv.com/mobile-service",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "RRR Custom RV Services is a mobile RV service based in Salisbury. The site describes it as the most affordable mobile RV service in the area and says appointments must be scheduled in advance unless paying the Emergency/After-Hours Labor Rate. It carries common electrical, plumbing and hardware parts on the service call.",
+      "g": [
+        "mobile tech",
+        "emergency"
+      ],
+      "base": "Salisbury",
+      "areas": [
+        "Salisbury"
+      ],
+      "region": null,
+      "spec": "there are instances where the specific part needed for your service may not be immediately available",
+      "evidence": {
+        "checked": "https://www.triple-r-rv.com/mobile-service",
+        "phone_quote": "support@triple-r-rv.com? (704) 267-3330 (7042673330)",
+        "coverage_quotes": [
+          "255 Rock Hump Rd Salisbury, NC 28147"
+        ],
+        "type_quote": "We pride ourselves on being the most affordable mobile RV service in the area.",
+        "emergency_quote": "All appointments must be scheduled at least 72 hours in advance unless paying for the Emergency/After-Hours Labor Rate.",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Reliant RV Services LLC",
+      "c": "Winston-Salem, NC",
+      "p": "336-257-4180",
+      "u": "http://reliantrvservices.net/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Reliant RV Services LLC provides RV repair and maintenance in Winston-Salem and surrounding areas. Its site says it specializes in repair and maintenance services for all types of RVs. Listed work includes hydraulic leveling and slide systems repair and A/C maintenance.",
+      "g": [
+        "service center"
+      ],
+      "base": "Winston-Salem",
+      "areas": [
+        "Winston-Salem"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "http://reliantrvservices.net/",
+        "phone_quote": "Reliant RV Services LLC\n\n336-257-4180",
+        "coverage_quotes": [
+          "Winston-Salem and surrounding areas."
+        ],
+        "type_quote": "We specialize in providing top-notch repair and maintenance services for all types of RVs.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Worldwide Auto Body 2",
+      "c": "Winston-Salem, NC",
+      "p": "336.992.5678",
+      "u": "https://www.worldwideautobodync.com/recreational-vehicles/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Worldwide Auto Body 2 provides collision repair and restoration for recreational vehicles including RVs, campers, buses and motorcoaches. The site lists painting, panel replacements, decals and striping, roof replacements, fiberglass repairs and detailing. It works with all insurance claims from its Winston Salem location.",
+      "g": [
+        "service center"
+      ],
+      "base": "Winston-Salem",
+      "areas": [
+        "Winston-Salem"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.worldwideautobodync.com/recreational-vehicles/",
+        "phone_quote": "Phone 336.992.5678",
+        "coverage_quotes": [
+          "2995 Starlight Dr. Winston Salem, NC 27107"
+        ],
+        "type_quote": "we also provide collision repair for just about any type of recreational vehicle?",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Nomad Mobile RV Services",
+      "c": "Sanford, NC",
+      "p": "(919-285-1403)",
+      "u": "https://www.nomadmobilervservices.com/sanford-nc",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Nomad Mobile RV Services is a veteran-owned mobile RV repair service that travels to the customer instead of the customer towing to a shop. The Sanford page says it takes care of campers in and around the Sanford area. Its listed services include RV warranty inspections, pre-trip inspections, AC repair, appliance repair, accessory installation, battery change and winterization.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Sanford",
+      "areas": [
+        "Sanford"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.nomadmobilervservices.com/sanford-nc",
+        "phone_quote": "Call Us (919-285-1403)",
+        "coverage_quotes": [
+          "Nomad Mobile RV Services takes care of campers in and around the Sanford, NC area."
+        ],
+        "type_quote": "Our mobile RV repair service near Sanford, NC may be what you're looking for.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Pathway RV Services",
+      "c": "Durham, NC",
+      "p": "919-899-5578",
+      "u": "https://pathwayrvservices.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Pathway RV Services is a fully mobile RV repair, inspection and maintenance business working from Durham. Its site says the master certified technician comes to the customer's location within a 30 mile service radius of Durham, with extended service available for a fee. It handles diagnostics and repairs of electrical, plumbing, appliances and LP/propane systems.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Durham",
+      "areas": [],
+      "region": "30-mile service radius of Durham",
+      "spec": null,
+      "evidence": {
+        "checked": "https://pathwayrvservices.com/",
+        "phone_quote": "Call or Text: 919-899-5578",
+        "coverage_quotes": [
+          "our master certified technician comes to your location within a 30-mile service radius of Durham (6910 Fayetteville Rd, Durham, NC 27713), with extended service available for an additional fee"
+        ],
+        "type_quote": "We specialize in on-site RV repairs, inspections, and maintenance to ensure your RV stays safe, comfortable, and road-ready.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Stream RV",
+      "c": "Creedmoor, NC",
+      "p": "919-891-9577",
+      "u": "https://www.streamrv.com/service/rv-roof-repair/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Stream RV is an RV repair shop in Creedmoor that inspects, reseals, repairs and replaces RV roofs of every type, including rubber, fiberglass and aluminum. The site says its shop is about 25 minutes north of Raleigh and Durham and that most roof work comes from Raleigh, Durham, Wake Forest, Cary and Chapel Hill. It works on motorhomes, travel trailers, fifth wheels and camper vans.",
+      "g": [
+        "service center"
+      ],
+      "base": "Creedmoor",
+      "areas": [
+        "Raleigh",
+        "Durham",
+        "Wake Forest",
+        "Cary",
+        "Chapel Hill",
+        "Oxford",
+        "Henderson",
+        "Butner",
+        "Youngsville",
+        "Louisburg"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.streamrv.com/service/rv-roof-repair/",
+        "phone_quote": "or call or text 919-891-9577 (+19198919577)",
+        "coverage_quotes": [
+          "Our shop is in Creedmoor, NC, and most of our roof work comes from Raleigh, Durham, Wake Forest, Cary, and Chapel Hill."
+        ],
+        "type_quote": "We inspect, reseal, repair, and replace RV roofs of every type — rubber, fiberglass, and aluminum — from our shop in Creedmoor, NC, about 25 minutes north of Raleigh and Durham.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Brisbon Automotive",
+      "c": "Raleigh, NC",
+      "p": "(984) 209-4595",
+      "u": "https://www.brisbonauto.com/airstream-repair-raleigh/",
+      "t": "center",
+      "e": false,
+      "r": true,
+      "d": "Brisbon Automotive provides expert chassis repair and maintenance for motorized RVs in North Raleigh. The site says it handles drivetrain, suspension, braking and chassis electrical systems on platforms including Mercedes-Benz Sprinter, Ram ProMaster, Ford and Chevrolet/Workhorse. It states that its services cover the chassis only and it does not service the house components.",
+      "g": [
+        "roadside / chassis"
+      ],
+      "base": "Raleigh",
+      "areas": [
+        "Raleigh"
+      ],
+      "region": null,
+      "spec": "Our services cover the chassis only; we do not service the “house” components (appliances, plumbing, living quarters, etc.).",
+      "evidence": {
+        "checked": "https://www.brisbonauto.com/airstream-repair-raleigh/",
+        "phone_quote": "6508 Mt Herman Road Raleigh, North Carolina 27617 | (984) 209-4595 (9842094595)",
+        "coverage_quotes": [
+          "6508 Mt Herman Road Raleigh, North Carolina 27617"
+        ],
+        "type_quote": "Brisbon Automotive provides expert chassis repair and maintenance for all Airstream motorized RVs.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "RV SERVICES",
+      "c": "Asheville, NC",
+      "p": "(828) 553-7111",
+      "u": "https://rvservices.net/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "RV SERVICES is an RV repair and maintenance business in Asheville that says it services rather than sells RVs. The site says it offers a full range of services for Class A, B and C motorhomes, slide-ins, travel trailers, horse trailers and fifth wheels. It operates by appointment and offers pre-trip inspections and special-order parts.",
+      "g": [
+        "service center"
+      ],
+      "base": "Asheville",
+      "areas": [
+        "Asheville"
+      ],
+      "region": null,
+      "spec": "We do operate by appointment",
+      "evidence": {
+        "checked": "https://rvservices.net/",
+        "phone_quote": "(828) 553-7111 (8285537111)",
+        "coverage_quotes": [
+          "120 Highland Center Blvd. Asheville, NC 28806"
+        ],
+        "type_quote": "We offer a full range of services for your RV. Whether its a Class A, Class B, Class C or a slide in, travel trailer, horse trailer, or fifth Wheel.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Carolina RV Sales and Service",
+      "c": "Asheville, NC",
+      "p": "(828) 778-0000",
+      "u": "https://www.carolinarvnc.com/service.aspx",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Carolina RV Sales and Service is a family owned and operated RV repair shop on Brevard Road in Asheville. The site says it is a one-stop RV repair specialist for Hendersonville, Asheville and all of Western North Carolina. Listed work includes roof replacement, storm and collision damage repair, appliance repair, winterization, water damage repair and roof reseal.",
+      "g": [
+        "service center"
+      ],
+      "base": "Asheville",
+      "areas": [
+        "Hendersonville",
+        "Asheville"
+      ],
+      "region": "Western North Carolina",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.carolinarvnc.com/service.aspx",
+        "phone_quote": "Phone: (828) 778-0000",
+        "coverage_quotes": [
+          "we're your family owned and operated, one-stop RV repair specialists for Hendersonville, Asheville and all of Western North Carolina"
+        ],
+        "type_quote": "Whether your motor home, camper or towable needs roof replacement, major storm and collision damage repairs, winterization or just a simple tire or windshield fix",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "On Site RV Repair LLC",
+      "c": "Hendersonville, NC",
+      "p": "(828) 337-9236",
+      "u": "https://www.onsitervrepairllc.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "On Site RV Repair LLC is a mobile RV repair service based in Hendersonville. Its site says the repair comes to the customer's campsite, driveway or storage lot across Western North Carolina. Listed work includes roof, seals and leak repair, plumbing and tanks, electrical and power systems, appliances and climate control.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Hendersonville",
+      "areas": [],
+      "region": "Western North Carolina",
+      "spec": "Some jobs need a lift or specialty equipment.",
+      "evidence": {
+        "checked": "https://www.onsitervrepairllc.com/",
+        "phone_quote": "(828) 337-9236 (+18283379236)",
+        "coverage_quotes": [
+          "RV repair that comes to you: maintenance, inspections, and repairs at your campsite, driveway, or storage lot across Western North Carolina."
+        ],
+        "type_quote": "On Site RV Repair LLC is a mobile RV repair service based in Hendersonville, North Carolina.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "M & R RV Repair",
+      "c": "Hickory, NC",
+      "p": "(828) 855-1037",
+      "u": "https://www.mandrrvrepair.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "M & R RV Repair is a family owned and operated shop in Hickory, serving the community since 1991. The site says it is a one-stop shop for RV repair and that it services campers, RVs, boats, ATVs and other recreational vehicles. It is licensed and insured.",
+      "g": [
+        "service center"
+      ],
+      "base": "Hickory",
+      "areas": [
+        "Hickory"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.mandrrvrepair.com/",
+        "phone_quote": "Office/Shop Line: (828) 855-1037 (8288551037)",
+        "coverage_quotes": [
+          "Address 1530 16th St. NE Hickory, NC 28601"
+        ],
+        "type_quote": "We service EVERYTHING: From campers and RVs to boats, ATVs, jet skis, side-by-sides, four wheelers – you name it, we can fix it!",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Sunrise Camping Center",
+      "c": "Hickory, NC",
+      "p": "828-855-9446",
+      "u": "https://www.sunrisecampingcenter.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Sunrise Camping Center is an RV dealership and service center in Hickory. The site says it specializes in all types of RV maintenance, including RV trailer and travel trailer repair. It provides service in the greater Hickory area and accepts service appointments by phone.",
+      "g": [
+        "service center"
+      ],
+      "base": "Hickory",
+      "areas": [
+        "Hickory"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.sunrisecampingcenter.com/rv-service",
+        "phone_quote": "1555 US-321, Hickory, NC 28601\n828-855-9446 (8288559446)",
+        "coverage_quotes": [
+          "We are proud to provide quality RV service in the greater Hickory, NC area."
+        ],
+        "type_quote": "Sunrise Camping Center specializes in all types of RV maintenance, including RV trailer and travel trailer repair.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Jason Templin RV Service",
+      "c": "Statesville, NC",
+      "p": "980-253-1721",
+      "u": "https://jasontemplinrvservice.com/",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "Jason Templin RV Service offers mobile and in-shop RV repair and maintenance at the crossroads of I-40 and I-77 in Statesville. The site says it provides expert repair and maintenance services to keep every RV system working. It is an authorized Aqua-Hot dealer offering Aqua-Hot and Oasis heating system service and warranty repair.",
+      "g": [
+        "mobile tech",
+        "service center"
+      ],
+      "base": "Statesville",
+      "areas": [
+        "Statesville"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://jasontemplinrvservice.com/",
+        "phone_quote": "980-253-1721 jasontemplinrvservice@gmail.com",
+        "coverage_quotes": [
+          "Enjoy the convenience of mobile service or visit us at the crossroads of I-40 and I-77 in Statesville, NC."
+        ],
+        "type_quote": "Jason Templin RV Service is ready to help with your RV needs via mobile and in-shop service options.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "BPL RV Service & Repairs",
+      "c": "Candler, NC",
+      "p": "(910) 465-2119",
+      "u": "https://bplrv.services/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "BPL RV Service & Repairs is a mobile RV tech business based in Candler. The site says it is mobile only with no store front or shop and that it comes to the customer. It lists solar installations, electronic repairs, inverters, converters and power centers, and serves Waynesville, Maggie Valley, Canton, Candler, Franklin and Asheville.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Candler",
+      "areas": [
+        "Waynesville",
+        "Maggie Valley",
+        "Canton",
+        "Candler",
+        "Franklin",
+        "Asheville"
+      ],
+      "region": null,
+      "spec": "Local and trusted! RV Mobile only, no store front, or shop!",
+      "evidence": {
+        "checked": "https://bplrv.services/",
+        "phone_quote": "Candler,NC\n\n(910) 465-2119 (9104652119)",
+        "coverage_quotes": [
+          "Mobile RV Tech serving, ,Waynesville, Maggie Valley, Canton, Candler, Franklin, Ashevill Dependable, great prices on parts!"
+        ],
+        "type_quote": "# BPL RV Service & Repairs Mobile RV Tech Electronic repairs",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Owens Mobile RV Repair & Maintenance",
+      "c": "Maggie Valley, NC",
+      "p": "828-332-1523",
+      "u": "https://www.owensrvandmarine.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Owens Mobile RV Repair & Maintenance is a mobile RV repair service run by Master RV Technician Randy Owens. The site says it serves Maggie Valley, Cherokee, Whittier, Sylva, Franklin, Bryson City and Waynesville. It states it does not do awnings, drive train or engine work, tires or axles, or structural repairs.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Maggie Valley",
+      "areas": [
+        "Maggie Valley",
+        "Cherokee",
+        "Whittier",
+        "Sylva",
+        "Franklin",
+        "Bryson City",
+        "Waynesville"
+      ],
+      "region": null,
+      "spec": "I do not do awnings, drive train/engine work, tires/axels or structural repairs.",
+      "evidence": {
+        "checked": "https://www.owensrvandmarine.com/",
+        "phone_quote": "Randy Owens, Master RV Technician 828-332-1523",
+        "coverage_quotes": [
+          "Serving Maggie Valley-Cherokee-Whittier-Sylva-Franklin-Bryson City-and Waynesville."
+        ],
+        "type_quote": "Owens Mobile RV Repair & Maintenance",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Travel Tech Mobile RV Repair & Campground",
+      "c": "Murphy, NC",
+      "p": "(833) 434-9787",
+      "u": "https://www.traveltechrv.com/",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "Travel Tech Mobile RV Repair & Campground is an RV repair business and campground in Murphy. The site says it is mobile and can do repairs at the customer's site, or the customer can stay at its campground while repairs are done. It states all repairs are performed by an RVDA/RVIA certified technician.",
+      "g": [
+        "mobile tech",
+        "service center"
+      ],
+      "base": "Murphy",
+      "areas": [
+        "Murphy"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.traveltechrv.com/",
+        "phone_quote": "Call us today! (833) 434-9787 (8334349787)",
+        "coverage_quotes": [
+          "17946 US-64, Murphy, NC 28906"
+        ],
+        "type_quote": "Already have a trip booked in our coverage area? Great! We’re mobile and can get your repair done right, at your site!",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Leonard's RV",
+      "c": "Canton, NC",
+      "p": "(828) 548-1933",
+      "u": "https://www.leonardsrv.com/rv-roof-repairs",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "Leonard's RV in Canton specializes in RV roof repairs and other RV repair, storage, rentals and supplies. The site says it offers on-site repairs with its mobile service and can repair an RV at the customer's campsite or home. Listed roof work includes fixing leaks, applying coatings and sealants, replacing rubber roofs and repairing fiberglass roofs.",
+      "g": [
+        "service center",
+        "mobile tech"
+      ],
+      "base": "Canton",
+      "areas": [
+        "Canton"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.leonardsrv.com/rv-roof-repairs",
+        "phone_quote": "(828) 548-1933",
+        "coverage_quotes": [
+          "Located in Canton, NC. Leonard's RV specializes in RV repairs, storage, rentals, and supplies."
+        ],
+        "type_quote": "Leonard's RV in Canton, NC, specializes in RV roof repairs to keep your travels on track.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "New River Tire",
+      "c": "Boone, NC",
+      "p": "(828) 262-3700",
+      "u": "https://www.newrivertire.com/Auto-Repair/RV-Services",
+      "t": "center",
+      "e": false,
+      "r": true,
+      "d": "New River Tire is an RV service center in Boone. The site says its RV and motorhome technicians keep the vehicle rolling as the manufacturer intended and lists tire repair, A/C service, alignments, brake repair, engine diagnostics and repairs, oil change, preventive maintenance and suspension work. It serves Boone, Rutherwood and Bamboo.",
+      "g": [
+        "service center",
+        "roadside / chassis"
+      ],
+      "base": "Boone",
+      "areas": [
+        "Boone"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.newrivertire.com/Auto-Repair/RV-Services",
+        "phone_quote": "(828) 262-3700 (+1(828) 262-3700)",
+        "coverage_quotes": [
+          "We serve Boone, NC, Rutherwood, NC, Bamboo, NC, and surrounding areas."
+        ],
+        "type_quote": "At New River Tire, we specilaize in RV services.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "OBX RV Repair",
+      "c": "Kitty Hawk, NC",
+      "p": "(252) 573-5556",
+      "u": "https://obxrvrepair.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "OBX RV Repair is a mobile RV repair business based in Kitty Hawk serving the northern Outer Banks. The site says it comes to the RV and fixes appliances, slides, water, electrical, roof and tires on-site. It serves Kitty Hawk, Nags Head, Kill Devil Hills, Manteo, Wanchese, Manns Harbor and Rodanthe, and welcomes emergency calls.",
+      "g": [
+        "mobile tech",
+        "emergency"
+      ],
+      "base": "Kitty Hawk",
+      "areas": [
+        "Kitty Hawk",
+        "Nags Head",
+        "Kill Devil Hills",
+        "Manteo",
+        "Wanchese",
+        "Manns Harbor",
+        "Rodanthe"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://obxrvrepair.com/",
+        "phone_quote": "(252) 573-5556 (+12525735556)",
+        "coverage_quotes": [
+          "Serving Kitty Hawk, Nags Head, Kill Devil Hills, Manteo, Wanchese, Manns Harbor, Rodanthe · Free phone estimates · Emergency calls welcome"
+        ],
+        "type_quote": "We come to your RV — appliances, slides, water, electrical, roof, and tires fixed on-site across the northern Outer Banks.",
+        "emergency_quote": "Emergency calls welcome, in season and out.",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Route 12 Mobile RV Repair",
+      "c": "Kitty Hawk, NC",
+      "p": "252-599-0808",
+      "u": "https://www.route12rvrepair.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Route 12 Mobile RV Repair is a mobile RV, camper and travel trailer service on the Outer Banks. The site says it is mobile and comes to the customer and that its technician is a Master Certified Technician. It lists annual maintenance, winterizing, pre-trip inspections, water heater, refrigerator, air conditioner, electrical, furnace and water system repairs.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": null,
+      "areas": [
+        "Kitty Hawk",
+        "Salvo",
+        "Rodanthe",
+        "Waves",
+        "Buxton"
+      ],
+      "region": "the Outer Banks",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.route12rvrepair.com/",
+        "phone_quote": "Call 252-599-0808",
+        "coverage_quotes": [
+          "Kitty Hawk, Salvo, Rodanthe, Waves, Buxton, Hatteras Island and Lower Currituck Mainland."
+        ],
+        "type_quote": "We offer RV repair, RV service, RV maintenance, mobile RV repair.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      },
+      "reg": "outer-banks-nc"
+    },
+    {
+      "n": "RVRX Mobile RV Repair LLC",
+      "c": "Holden Beach, NC",
+      "p": "(910) 712-6623",
+      "u": "https://rvrx.net/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "RVRX Mobile RV Repair LLC is a mobile RV repair business serving coastal Brunswick County. The site says the repair comes to the customer at campgrounds, RV resorts, vacation rentals and homes with no towing. Listed services include electrical diagnostics, plumbing repairs, air conditioning, water heaters, refrigerators, generator service and roof leak diagnostics.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": null,
+      "areas": [
+        "Holden Beach",
+        "Ocean Isle Beach",
+        "Shallotte",
+        "Sunset Beach",
+        "Calabash",
+        "Oak Island",
+        "Southport"
+      ],
+      "region": "Coastal Brunswick County",
+      "spec": null,
+      "evidence": {
+        "checked": "https://rvrx.net/",
+        "phone_quote": "(910) 712-6623 (9107126623)",
+        "coverage_quotes": [
+          "Mobile RV Repair Throughout Coastal Brunswick County",
+          "Holden Beach",
+          "Ocean Isle Beach",
+          "Shallotte",
+          "Sunset Beach",
+          "Calabash",
+          "Supply",
+          "Oak Island",
+          "Southport",
+          "Sunset Harbor"
+        ],
+        "type_quote": "Mobile RV repair that comes to you. Campgrounds • RV Resorts • Vacation Rentals • Homes",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      },
+      "reg": "coast-nc"
+    },
+    {
+      "n": "Rex & Sons RVs",
+      "c": "Castle Hayne, NC",
+      "p": "910-793-2894",
+      "u": "https://www.rexandsonsrvs.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Rex & Sons RVs is a family owned and operated RV dealer and service center in Castle Hayne. The site says certified technicians keep the RV road-ready and lists service packages for roof inspection, A/C, generator, slide-out, wheel bearings, water heater, furnace and black and grey tank service. It is a member of the Route 66 RV Network.",
+      "g": [
+        "service center"
+      ],
+      "base": "Castle Hayne",
+      "areas": [
+        "Castle Hayne"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.rexandsonsrvs.com/rv-service",
+        "phone_quote": "5625 Barbados Blvd, Castle Hayne, NC 28429\n\n910-793-2894 or Text Us",
+        "coverage_quotes": [
+          "5625 Barbados Blvd, Castle Hayne, NC 28429"
+        ],
+        "type_quote": "Certified technicians keeping your RV road-ready",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Howard RV Center",
+      "c": "Wilmington, NC",
+      "p": "910-791-5371",
+      "u": "https://www.hrvc.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Howard RV Center is an RV dealership in Wilmington with a large RV service center. The site says its service center can service any type of RV, even large high-end luxury bus style RVs, and that most technicians are RVIA/RVDA certified and factory trained. It has a stocked RV parts and accessories store.",
+      "g": [
+        "service center"
+      ],
+      "base": "Wilmington",
+      "areas": [
+        "Wilmington"
+      ],
+      "region": "SE North Carolina",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.hrvc.com/",
+        "phone_quote": "6811 Market Street, Wilmington NC\n\n 910-791-5371 (9107915371)",
+        "coverage_quotes": [
+          "Howard RV Center is the largest RV dealership in SE North Carolina."
+        ],
+        "type_quote": "We have a great service center that can service any type of RV, even the large high-end Luxury bus style RVs.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Daly RV",
+      "c": "Goldsboro, NC",
+      "p": "919-734-4616",
+      "u": "https://dalyrv.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Daly RV is an RV dealer in Goldsboro opened in 1997 by Alan and Marie Daly. The site says the dealership is backed by a fully equipped Service Department with experienced technicians. It offers travel trailers, fifth wheels and destination trailers supported by a parts and accessories department.",
+      "g": [
+        "service center"
+      ],
+      "base": "Goldsboro",
+      "areas": [
+        "Goldsboro"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://dalyrv.com/",
+        "phone_quote": "| Phone Fax | 919-734-4616 919-580-7202 |",
+        "coverage_quotes": [
+          "| Address | 678 Isaac Smith Road Goldsboro, NC 27530 |"
+        ],
+        "type_quote": "all supported by a complete Parts & Accessories Department and backed by a fully equipped Service Department with experienced technicians.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "SunlitMobileRV",
+      "c": "Edenton, NC",
+      "p": "919-670-5505",
+      "u": "https://sunlitmobilerv.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "SunlitMobileRV is an RVTAA certified mobile RV repair and solar installation business serving Edenton and surrounding areas. The site says it has the technical knowledge and skills to build, test, inspect, repair, service and maintain recreational vehicles and their systems. It handles RV propane, electrical, water systems, water heaters and furnaces, air conditioning and refrigerators.",
+      "g": [
+        "mobile tech",
+        "emergency"
+      ],
+      "base": "Edenton",
+      "areas": [
+        "Edenton"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://sunlitmobilerv.com/",
+        "phone_quote": "919-670-5505 (9196705505)",
+        "coverage_quotes": [
+          "Serving Edenton and surrounding areas."
+        ],
+        "type_quote": "The technical knowledge and skills to build, test, inspect, repair, service and maintain recreational vehicles, systems, interior and exterior components.",
+        "emergency_quote": "Available Sundays Emergencies Only Please",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "KG'S MOBILE RV SERVICE AND REPAIR LLC",
+      "c": "Lilesville, NC",
+      "p": "(843) 910-2162",
+      "u": "https://www.kgmobilerv.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "KG'S Mobile RV Service and Repair LLC is a mobile RV service based in Lilesville. The site says it offers a wide range of mobile services and comes to the customer with no long waits at a dealership. Listed work includes air conditioning, refrigerators, electrical, generators, furnaces, water heaters, plumbing and wheel bearings.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Lilesville",
+      "areas": [
+        "Lilesville"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.kgmobilerv.com/",
+        "phone_quote": "(843) 910-2162 kgmobilerv@gmail.com",
+        "coverage_quotes": [
+          "KG’S Mobile RV Service and Repair LLC is based in Lilesvile North Carolina."
+        ],
+        "type_quote": "We offer a wide range of mobile services to keep your RV ready so your family can enjoy that long needed vacation, or that Equine event you have been training so hard for.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "TJs Quality RV Storage & Repair, Inc.",
+      "c": "Concord, NC",
+      "p": "(704) 960-4399",
+      "u": "https://www.tjsrv.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "TJs Quality RV Storage & Repair, Inc. is an RV storage and repair business in Concord, founded in 2015 by Thomas Chapman. The site says its technicians have extensive knowledge in motorhomes, fifth wheels and travel trailers and will handle anything from a light bulb change to a complete RV renovation. It also offers indoor and outdoor RV storage.",
+      "g": [
+        "service center"
+      ],
+      "base": "Concord",
+      "areas": [
+        "Concord"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.tjsrv.com/",
+        "phone_quote": "CALL 704-960-4399 AND RESERVE YOUR STORAGE SPOT",
+        "coverage_quotes": [
+          "Storage & Repairs 379 Central Dr. NW Concord, NC 28027"
+        ],
+        "type_quote": "Whether it’s a light bulb that needs changing or a complete renovation of your RV; Let TJ’s put our experienced technicians to work for you!",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "GSO Mobile RV Repair",
+      "c": "Greensboro, NC",
+      "p": "336-736-4480",
+      "u": "https://gsorv.repair/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "GSO Mobile RV Repair is a fully mobile RV repair service that comes to the customer's house, campsite, parking lot or storage center. It provides on-site trailer, horse trailer, RV, fifth wheel and camper repair by a Master Certified technician. The site names Alamance and Guilford counties and the stretch from Greensboro to Mebane and Siler City.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Greensboro",
+      "areas": [
+        "Greensboro",
+        "Mebane",
+        "Siler City"
+      ],
+      "region": "Alamance, Guilford counties",
+      "spec": null,
+      "evidence": {
+        "checked": "https://gsorv.repair/",
+        "phone_quote": "336-736-4480",
+        "coverage_quotes": [
+          "Serving Alamance, Guilford counties and surrounding areas from Greensboro to Mebane all the way down to Siler City and everywhere in between."
+        ],
+        "type_quote": "We provide on-site trailer, horse trailer, RV, fifth wheel & camper repair",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Triad RV Repair LLC",
+      "c": "Lexington, NC",
+      "p": "(336) 619-0034",
+      "u": "https://triadrvrepair.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Triad RV Repair LLC is an RV repair, maintenance, customization and restoration shop in Lexington, serving the region since 2009. The site offers full-service RV repair and states that the shop is conveniently located in Lexington. Its listed service area runs a 50 to 60 mile radius around Lexington.",
+      "g": [
+        "service center"
+      ],
+      "base": "Lexington",
+      "areas": [
+        "Winston-Salem",
+        "Greensboro",
+        "High Point",
+        "Salisbury",
+        "Statesville",
+        "Mocksville",
+        "Yadkinville",
+        "King",
+        "Rural Hall",
+        "Germanton",
+        "Jamestown",
+        "Clemmons",
+        "Lewisville",
+        "Thomasville",
+        "Asheboro",
+        "Advance",
+        "Bermuda Run",
+        "Madison"
+      ],
+      "region": "50-60 miles radius of Lexington, NC",
+      "spec": null,
+      "evidence": {
+        "checked": "https://triadrvrepair.com/",
+        "phone_quote": "(336) 619-0034 (+1-336-619-0034)",
+        "coverage_quotes": [
+          "Winston-Salem Lexington, Greensboro, High Point, Salisbury, Statesville, Mocksville, Yadkinville, King, Rural Hall, Germanton, Brown Summit, Jamestown, Clemmons, Lewisville, Colfax, Thomasville, Asheboro, Advance, Bermuda Run, Pfafftown, Madison 50-60 miles radius of Lexington, NC"
+        ],
+        "type_quote": "We offer full-service RV repair so you can get back on your adventure.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Blue Compass RV",
+      "c": "Greensboro, NC",
+      "p": "(336) 993-4518",
+      "u": "https://www.bluecompassrv.com/locations/north-carolina/greensboro/service",
+      "t": "center",
+      "e": false,
+      "r": true,
+      "d": "Blue Compass RV runs an RV service center in Greensboro, described as one of the few Airstream-authorized service facilities in central Carolina. The site offers routine maintenance, engine and transmission work, chassis service, electrical systems, plumbing, roof and exterior, and collision repair and body work. It states it is open Monday through Saturday.",
+      "g": [
+        "service center",
+        "roadside / chassis"
+      ],
+      "base": "Greensboro",
+      "areas": [
+        "Greensboro"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.bluecompassrv.com/locations/north-carolina/greensboro/service",
+        "phone_quote": "8510 Norcross Rd, Greensboro, NC 27235 (336) 993-4518 (+13369934518)",
+        "coverage_quotes": [
+          "8510 Norcross Rd, Greensboro, NC 27235"
+        ],
+        "type_quote": "Expert RV Service & Repair in Greensboro, North Carolina",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    }
+  ]
+}

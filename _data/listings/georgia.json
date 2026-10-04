@@ -1,0 +1,1100 @@
+{
+  "state": "GA",
+  "name": "Georgia",
+  "regions": [
+    {
+      "key": "atlanta-ga",
+      "label": "Atlanta and the northern suburbs"
+    },
+    {
+      "key": "north-ga",
+      "label": "The north Georgia mountains"
+    },
+    {
+      "key": "savannah-ga",
+      "label": "Savannah and the coast"
+    },
+    {
+      "key": "middle-ga",
+      "label": "Macon, Warner Robins and middle Georgia"
+    },
+    {
+      "key": "southwest-ga",
+      "label": "Columbus, Albany and the southwest"
+    },
+    {
+      "key": "augusta-ga",
+      "label": "Augusta and the east"
+    }
+  ],
+  "region_of": {
+    "Atlanta": "atlanta-ga",
+    "Marietta": "atlanta-ga",
+    "Roswell": "atlanta-ga",
+    "Buford": "atlanta-ga",
+    "Cumming": "atlanta-ga",
+    "Flowery Branch": "atlanta-ga",
+    "Oakwood": "atlanta-ga",
+    "Pendergrass": "atlanta-ga",
+    "Canton": "atlanta-ga",
+    "McDonough": "atlanta-ga",
+    "Ellijay": "north-ga",
+    "Blairsville": "north-ga",
+    "Cleveland": "north-ga",
+    "Dalton": "north-ga",
+    "Winston": "north-ga",
+    "Brunswick": "savannah-ga",
+    "Savannah": "savannah-ga",
+    "Statesboro": "savannah-ga",
+    "Warner Robins": "middle-ga",
+    "Musella": "middle-ga",
+    "Cairo": "southwest-ga",
+    "Hahira": "southwest-ga",
+    "Sylvester": "southwest-ga",
+    "Evans": "augusta-ga",
+    "Martinez": "augusta-ga",
+    "Auburn": "augusta-ga",
+    "Gainesville": "north-ga"
+  },
+  "listings": [
+    {
+      "n": "Certified RV Solutions",
+      "c": "Ellijay, GA",
+      "p": "706-502-3365",
+      "u": "https://certifiedrvsolutions.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "Certified RV Solutions is a mobile RV repair business based in Ellijay, Georgia. It provides mobile RV repair, maintenance, troubleshooting, and inspections and comes to the customer at a home, campground, storage lot, or campsite. The site lists electrical, plumbing, appliance, roof leak, slide out, awning, and AC work along with general maintenance. It also provides mobile RV inspections for buyers and sellers.",
+      "g": [
+        "mobile tech",
+        "emergency"
+      ],
+      "base": "Ellijay",
+      "areas": [
+        "Ellijay",
+        "Calhoun",
+        "Dalton",
+        "Blue Ridge",
+        "Blairsville"
+      ],
+      "region": "North Georgia and the Chattanooga area",
+      "spec": null,
+      "evidence": {
+        "checked": "https://certifiedrvsolutions.com/",
+        "phone_quote": "706-502-3365",
+        "coverage_quotes": [
+          "Based in Ellijay, Georgia, we serve RV owners across North Georgia, including Ellijay GA, Calhoun GA, Chattanooga TN, Dalton GA, Blue Ridge GA, Blairsville GA, and surrounding areas."
+        ],
+        "type_quote": "Certified RV Solutions provides professional mobile RV repair, maintenance, troubleshooting, and inspections throughout North Georgia and the Chattanooga area.",
+        "emergency_quote": "Emergency Service Available 24/7",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "J Hope RV",
+      "c": "Flowery Branch, GA",
+      "p": "678-858-3447",
+      "u": "https://www.jhoperv.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "J Hope RV is a mobile RV repair service based in Flowery Branch, Georgia. It travels to the customer within roughly a 45-minute radius of Flowery Branch. The site states the technicians are RVSA certified and that the business provides quality parts and service across North Georgia.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Flowery Branch",
+      "areas": [
+        "Duluth",
+        "Suwanee",
+        "Buford",
+        "Norcross",
+        "Johns Creek",
+        "Lawrenceville"
+      ],
+      "region": "North Georgia",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.jhoperv.com/",
+        "phone_quote": "678-858-3447",
+        "coverage_quotes": [
+          "We are a mobile repair service serving the area of North Georgia within approximately a 45-minute radius of Flowery Branch, North Georgia which includes Duluth, Suwanee, Buford, Norcross, Johns Creek, Lawrenceville and other areas in Georgia."
+        ],
+        "type_quote": "We are a mobile repair service serving the area of North Georgia within approximately a 45-minute radius of Flowery Branch, North Georgia",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "RV Repair Anywhere",
+      "c": "Roswell, GA",
+      "p": "404-590-8203",
+      "u": "https://rvrepairanywhere.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "RV Repair Anywhere is a mobile RV repair business based out of Roswell, Georgia. It brings certified and professional mobile RV repair services to the customer at a campsite, driveway, or wherever the trip has taken them. The site lists preventative maintenance and emergency fixes, including AC inspection, water heater service, leak checks, battery inspection, and winterization.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Roswell",
+      "areas": [
+        "Cumming",
+        "Dawsonville",
+        "Gainesville",
+        "Dahlonega",
+        "Buford",
+        "Ball Ground",
+        "Marietta"
+      ],
+      "region": "Atlanta Metro and Surrounding Areas",
+      "spec": null,
+      "evidence": {
+        "checked": "https://rvrepairanywhere.com/",
+        "phone_quote": "404-590-8203",
+        "coverage_quotes": [
+          "Based out of Roswell, Georgia, our trip fee is $3.50 per mile to bring our mobile shop to you. Our service area includes: Atlanta Metro and Surrounding Areas, North Fulton County, Cumming, Dawsonville, Gainesville, Dahlonega, Buford, Ball Ground, Marietta, Gwinnett County, Dekalb County, Lumpkin County, Forsyth County, Lake Lanier and surrounding areas"
+        ],
+        "type_quote": "we bring certified and professional mobile RV repair services directly to you",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Total RV Solutions",
+      "c": "Canton, GA",
+      "p": "706-383-3838",
+      "u": "https://www.totalrvsolutions.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "Total RV Solutions is a locally owned mobile RV repair business serving Canton, Metro Atlanta, and North Georgia. It brings the shop to the customer at a home, campground, or storage location. The owners are Jason and Meg Brunette, and Jason holds RVTAA and RVTI certifications. The site states that most repairs can be completed same day.",
+      "g": [
+        "mobile tech",
+        "emergency"
+      ],
+      "base": "Canton",
+      "areas": [
+        "Canton"
+      ],
+      "region": "North Georgia",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.totalrvsolutions.com/",
+        "phone_quote": "CALL US AT 706-383-3838",
+        "coverage_quotes": [
+          "Serving Canton, Metro Atlanta & North Georgia"
+        ],
+        "type_quote": "Total RV Solutions is a locally owned mobile RV repair business operated by Jason and Meg Brunette.",
+        "emergency_quote": "Emergency Services Available * After hours rates will apply",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "RV Mobile Masters",
+      "c": "Atlanta, GA",
+      "p": "470-382-0154",
+      "u": "https://rvmobilemasters.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "RV Mobile Masters is a mobile RV repair business serving Atlanta and surrounding areas within a 75-mile radius. Its technicians bring repairs and maintenance to the customer at a campsite, home, or storage facility. The site lists electrical and plumbing diagnostics, appliance service, roof sealing and leak repair, slide-out and awning work, and inspections and tune-ups.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Atlanta",
+      "areas": [],
+      "region": "Atlanta and surrounding areas within a 75-mile radius",
+      "spec": null,
+      "evidence": {
+        "checked": "https://rvmobilemasters.com/",
+        "phone_quote": "470-382-0154",
+        "coverage_quotes": [
+          "Atlanta and surrounding areas within a 75-mile radius"
+        ],
+        "type_quote": "We bring professional RV repairs and maintenance directly to your campsite, home, or storage facility.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Full Hookup Mobile RV Services",
+      "c": "Cumming, GA",
+      "p": "678-200-2154",
+      "u": "https://fullhookupmobilervservices.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "Full Hookup Mobile RV Services is a mobile service based out of Cumming, Georgia that serves the North Georgia area. It delivers RV repair, maintenance, and upgrades directly to the customer. The site lists air conditioner, furnace, water heater, absorption refrigerator, plumbing, awning, roof, leveling system, slide room, and electrical work.",
+      "g": [
+        "mobile tech",
+        "emergency"
+      ],
+      "base": "Cumming",
+      "areas": [],
+      "region": "North Georgia",
+      "spec": null,
+      "evidence": {
+        "checked": "https://fullhookupmobilervservices.com/",
+        "phone_quote": "678-200-2154",
+        "coverage_quotes": [
+          "We are a mobile service based out of Cumming Georgia and service the North Georgia area."
+        ],
+        "type_quote": "RV Repair, Maintenance, and Upgrades are services offered from Full Hookup Mobile RV Services.",
+        "emergency_quote": "24 Hour Emergency Services Available",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "RV Mobile Tech",
+      "c": "Pendergrass, GA",
+      "p": "404-536-6928",
+      "u": "https://rvmobiletech.net/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "RV Mobile Tech is a mobile RV repair and inspection service based in Pendergrass, Georgia that serves the northeast Georgia area. It comes to the customer's location to evaluate, repair, or inspect an RV. The technician is a certified RV technician and certified RV inspector trained through the National RV Training Academy.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Pendergrass",
+      "areas": [],
+      "region": "northeast Georgia",
+      "spec": null,
+      "evidence": {
+        "checked": "https://rvmobiletech.net/",
+        "phone_quote": "404-536-6928",
+        "coverage_quotes": [
+          "We service the northeast Georgia area."
+        ],
+        "type_quote": "RV Mobile Tech will come to your location to evaluate and repair or inspect your RV.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Journey RV Mobile Services",
+      "c": "Cleveland, GA",
+      "p": "(678) 936-5905",
+      "u": "https://journeyrvservice.com/home",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Journey RV Mobile Services is a mobile RV service and inspection business based in Cleveland, Georgia. It brings RV service to the customer in North Georgia. The owners are Bobby and Danette Driggers, and the site lists repair work on air conditioners and heat pumps, refrigerators, furnaces, water heaters, roof repair and sealant, and awnings and slideout toppers.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Cleveland",
+      "areas": [],
+      "region": "North Georgia",
+      "spec": null,
+      "evidence": {
+        "checked": "https://journeyrvservice.com/home",
+        "phone_quote": "(678) 936-5905",
+        "coverage_quotes": [
+          "Proudly serving North Georgia"
+        ],
+        "type_quote": "Journey RV Mobile Services - Serving North Georgia",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "RV Tech & Inspect",
+      "c": "Blairsville, GA",
+      "p": "(706) 897-0002",
+      "u": "https://www.rvtechandinspect.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "RV Tech & Inspect is a mobile RV repair and inspection service based in Blairsville, Georgia. It brings certified service to the customer at a campground, home, or storage lot in North Georgia and Western North Carolina. The site lists refrigerator, air conditioner, furnace, water heater, bearing repack, electrical, plumbing, exterior, winterizing, and roof reseal work.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Blairsville",
+      "areas": [
+        "Blairsville",
+        "Blue Ridge",
+        "Hiawassee",
+        "Young Harris",
+        "Ellijay",
+        "Jasper",
+        "Morganton",
+        "Mineral Bluff"
+      ],
+      "region": "North Georgia & Western NC",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.rvtechandinspect.com/",
+        "phone_quote": "(706) 897-0002",
+        "coverage_quotes": [
+          "Blairsville, GA | Blue Ridge, GA | Hiawassee, GA | Young Harris, GA | Ellijay, GA | East Ellijay, GA",
+          "Our standard service area is 45 minutes from Blairsville or further out for an additional fee."
+        ],
+        "type_quote": "your trusted mobile RV repair and inspection service in Blairsville, GA",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "ATL Mobile RV Repair",
+      "c": "Atlanta, GA",
+      "p": "404-678-8545",
+      "u": "https://atlmobilervrepair.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "ATL Mobile RV Repair is a mobile RV repair business based in Atlanta, Georgia. It provides on-site repair across Metro Atlanta and North Georgia, coming to a driveway, campground, or roadside location. The site lists air conditioner, electrical, plumbing, appliance, roof leak, water heater, awning, slide-out, and generator work, plus inspections and winterization.",
+      "g": [
+        "mobile tech",
+        "emergency"
+      ],
+      "base": "Atlanta",
+      "areas": [
+        "Marietta",
+        "Sandy Springs",
+        "Roswell",
+        "Smyrna",
+        "Decatur",
+        "Brookhaven",
+        "Dunwoody",
+        "College Park",
+        "Stone Mountain"
+      ],
+      "region": "Metro Atlanta and North Georgia",
+      "spec": null,
+      "evidence": {
+        "checked": "https://atlmobilervrepair.com/",
+        "phone_quote": "404-678-8545",
+        "coverage_quotes": [
+          "We provide on-site RV repair across Metro Atlanta and North Georgia, covering major cities, neighborhoods, and travel corridors including I-75, I-85, I-20, and I-285."
+        ],
+        "type_quote": "ATL Mobile RV Repair provides affordable, on-site RV repair services in Atlanta and North Georgia.",
+        "emergency_quote": "Open 24/7; Emergency Service Available",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "OnPoint RV LLC",
+      "c": "North Georgia, GA",
+      "p": "(678)789-4460",
+      "u": "https://onpointrv.org/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "OnPoint RV LLC is a mobile RV repair and maintenance business serving North Georgia. It brings service directly to the customer at a home, campsite, or storage lot. The site lists electrical system diagnostics, roof inspection and repair, slide-out maintenance, pre-trip inspections, and preventive maintenance.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": null,
+      "areas": [],
+      "region": "North Georgia",
+      "spec": null,
+      "evidence": {
+        "checked": "https://onpointrv.org/",
+        "phone_quote": "(678)789-4460",
+        "coverage_quotes": [
+          "OnPoint RV provides expert mobile RV repair and maintenance services throughout North Georgia."
+        ],
+        "type_quote": "OnPoint RV provides expert mobile RV repair and maintenance services throughout North Georgia.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      },
+      "reg": "north-ga"
+    },
+    {
+      "n": "North Georgia Mobile RV Repair",
+      "c": "North Georgia, GA",
+      "p": "706-264-7711",
+      "u": "https://www.northgamobilervrepair.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "North Georgia Mobile RV Repair is a mobile RV repair business serving North Georgia. It brings service to the customer and accepts service calls daily. The site lists roof repair and reseal, roof replacement, plumbing, winterization, appliance repair, electrical, HVAC, awnings, slide-outs, wheel bearing service, LP inspection, and floor replacement.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": null,
+      "areas": [],
+      "region": "North Georgia",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.northgamobilervrepair.com/",
+        "phone_quote": "706-264-7711",
+        "coverage_quotes": [
+          "Serving North Georgia with Top Quality RV Service wherever you are!"
+        ],
+        "type_quote": "With over 14 years of experience in the RV industry, we are ready to bring service to you.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      },
+      "reg": "north-ga"
+    },
+    {
+      "n": "RV & Trailer Services, LLC",
+      "c": "Musella, GA",
+      "p": "(478) 808-6069",
+      "u": "https://rvtrailerservices.net/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "RV & Trailer Services, LLC is a mobile RV and trailer repair business based in Musella, Georgia. It brings 40 years of combined expertise directly to a campsite, driveway, or storage yard across Middle Georgia. The site lists subfloor rebuilding, roof replacements, electrical, plumbing, siding, and water heater work, along with trailer service and pre-purchase inspections.",
+      "g": [
+        "mobile tech",
+        "emergency"
+      ],
+      "base": "Musella",
+      "areas": [],
+      "region": "Middle Georgia",
+      "spec": null,
+      "evidence": {
+        "checked": "https://rvtrailerservices.net/",
+        "phone_quote": "(478) 808-6069",
+        "coverage_quotes": [
+          "RV & Trailer Services, LLC brings 40 years of combined expertise directly to your campsite, driveway, or storage yard across Middle Georgia."
+        ],
+        "type_quote": "Subfloor rebuilding, roof replacements, electrical, plumbing, siding, water heaters",
+        "emergency_quote": "Emergency & Mobile Dispatch",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Diversified RV Service",
+      "c": "Savannah, GA",
+      "p": "706-308-4341",
+      "u": "https://www.diversifiedrvservice.com/",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "Diversified RV Service is a mobile RV repair and maintenance business serving Savannah, Georgia and surrounding areas. It comes to the customer or the customer can come to it. The site lists interior and exterior repairs, plumbing, electrical, and black and gray tank cleaning, and states it is factory-authorized for brands including Grand Design, Zip Dee, Tiffin, and Jayco.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Savannah",
+      "areas": [],
+      "region": "Savannah & Surrounding Areas",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.diversifiedrvservice.com/",
+        "phone_quote": "706-308-4341",
+        "coverage_quotes": [
+          "Fast, Reliable Mobile RV Repair in Savannah & Surrounding Areas"
+        ],
+        "type_quote": "At Diversified RV, we provide professional on-site RV repair and maintenance.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Reliable R.V Repair",
+      "c": "Brunswick, GA",
+      "p": "(678) 873-5810",
+      "u": "https://reliablervrepairga.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Reliable R.V Repair is a mobile RV repair and washing business based in Brunswick, Georgia. It brings mobile repair and washing services directly to RV owners across Brantley, Glynn, McIntosh, and Camden counties. The site says it specializes in campers, 5th wheels, and motorhomes, and lists repairs and roof reseals.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Brunswick",
+      "areas": [],
+      "region": "Brantley, Glynn, McIntosh, and Camden counties",
+      "spec": null,
+      "evidence": {
+        "checked": "https://reliablervrepairga.com/",
+        "phone_quote": "(678) 873-5810",
+        "coverage_quotes": [
+          "Based in Brunswick, GA, we bring top-tier mobile repair and washing services directly to RV owners across Brantley, Glynn, McIntosh, and Camden counties."
+        ],
+        "type_quote": "we bring top-tier mobile repair and washing services directly to RV owners",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "American Freedom RV Mobile Services",
+      "c": "Statesboro, GA",
+      "p": "(803) 662-5133",
+      "u": "https://www.afmrvs.com/rv-repair-statesboro-ga",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "American Freedom RV Mobile Services is a mobile RV repair business serving Statesboro, Georgia and surrounding areas. It brings diagnostics and repairs directly to the customer at a campground, RV park, storage facility, or home. The site lists RV repair diagnostics, air conditioner repair, water heater repair, furnace repair, leveling system troubleshooting, awning repair, annual maintenance, and inspections.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Statesboro",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.afmrvs.com/rv-repair-statesboro-ga",
+        "phone_quote": "(803) 662-5133",
+        "coverage_quotes": [
+          "American Freedom RV Mobile Services LL provides dependable mobile RV repair services throughout Statesboro and surrounding areas."
+        ],
+        "type_quote": "American Freedom RV Mobile Services LL provides dependable mobile RV repair services throughout Statesboro and surrounding areas.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Hitch Itch Mobile RV Tech",
+      "c": "Savannah, GA",
+      "p": "772-251-8630",
+      "u": "https://hitchitchmobilervtech.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Hitch Itch Mobile RV Tech is a mobile RV repair business serving the Hilton Head and Savannah area. It offers repairs, mobile RV tech service, roadside hazard help, and generator troubleshooting. The technician is a certified RV technician trained at the NRVTA and RVTI, and the site lists AC cleaning and servicing, roof sealant check and reseal, scheduled maintenance, leveling, plumbing, awnings, and slides.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": null,
+      "areas": [],
+      "region": "Hilton Head / Savannah",
+      "spec": null,
+      "evidence": {
+        "checked": "https://hitchitchmobilervtech.com/",
+        "phone_quote": "772-251-8630",
+        "coverage_quotes": [
+          "Hitch Itch Mobile RV Tech - Hilton Head / Savannah"
+        ],
+        "type_quote": "We offer a wide range of RV services, including repairs on your rig, mobile rv tech, roadside hazard help, and generator troubleshooting.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      },
+      "reg": "savannah-ga"
+    },
+    {
+      "n": "Apalachee RV Center",
+      "c": "Auburn, GA",
+      "p": "(770) 868-0999",
+      "u": "https://apalacheerv.com/",
+      "t": "center",
+      "e": false,
+      "r": true,
+      "d": "Apalachee RV Center is an RV and commercial vehicle maintenance, repair, and collision facility in Auburn, Georgia. It offers diagnosis and repair, from routine maintenance to major collision repair, and is factory authorized for routine services, maintenance, engine and generator repairs, and full engine replacements. The site also lists chassis and suspension repair and a collision center.",
+      "g": [
+        "service center",
+        "roadside / chassis",
+        "collision"
+      ],
+      "base": "Auburn",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://apalacheerv.com/",
+        "phone_quote": "(770) 868-0999",
+        "coverage_quotes": [
+          "It is located between Atlanta and Athens off Highway 316 near Winder."
+        ],
+        "type_quote": "Apalachee RV Center is Metro Atlanta's premier recreational and commercial vehicle maintenance, repair, and collision facility.",
+        "emergency_quote": null,
+        "roadside_quote": "Factory authorized for routine services, maintenance, engine/generator repairs, and full engine replacements.",
+        "licence": null
+      }
+    },
+    {
+      "n": "Southern RV",
+      "c": "McDonough, GA",
+      "p": "770.477.0552",
+      "u": "https://www.southernrv.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Southern RV is an RV service and repair business with locations in McDonough and Cumming, Georgia. It services motorhomes, campervans, travel trailers, fifth wheels, slide-in truck campers, pop-up campers, and toy haulers. The site lists AC repair, roof repair and leak detection, slide-out repair, electrical diagnostics, plumbing and water systems, generator service, and collision and body work, and states it has served Georgia's RV community since 1980.",
+      "g": [
+        "service center",
+        "collision"
+      ],
+      "base": "McDonough",
+      "areas": [
+        "Atlanta",
+        "McDonough",
+        "Cumming",
+        "Athens",
+        "Alpharetta",
+        "Gainesville",
+        "Marietta",
+        "Macon"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.southernrv.com/rv-service",
+        "phone_quote": "770.477.0552",
+        "coverage_quotes": [
+          "324 Industrial Blvd McDonough, GA 30253",
+          "Many customers come from Atlanta, McDonough, Cumming, Athens, Alpharetta, Gainesville, Marietta, Macon and the I-75 / I-85 corridors."
+        ],
+        "type_quote": "At Southern RV we service all classes of motorhomes, all campervans, travel trailers, fifth wheels, slide-in truck campers, pop-up folding campers and toy haulers.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Highway RV Georgia",
+      "c": "Cairo, GA",
+      "p": "229-397-0311",
+      "u": "https://highwayrvgeorgia.com/services/rv-service/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Highway RV Georgia is an RV service and repair center in Cairo, Georgia that serves Southwest Georgia and North Florida. It works on all RV types and brands, including Class A, B, and C motorhomes, fifth wheels, travel trailers, toy haulers, and pop-ups. The site lists electrical and diagnostics, slide and leveling systems, HVAC and appliances, plumbing and water systems, preventive maintenance, and structural and interior repairs.",
+      "g": [
+        "service center"
+      ],
+      "base": "Cairo",
+      "areas": [],
+      "region": "Southwest Georgia and North Florida",
+      "spec": null,
+      "evidence": {
+        "checked": "https://highwayrvgeorgia.com/services/rv-service/",
+        "phone_quote": "229-397-0311",
+        "coverage_quotes": [
+          "Highway RV Georgia is Southwest Georgia and North Florida's go-to RV service center."
+        ],
+        "type_quote": "if it's an RV, we service it",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "ParcRV",
+      "c": "Buford, GA",
+      "p": "770.271.2799",
+      "u": "https://parcrv.com/services/",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "ParcRV provides certified on-site and mobile service for RVs, boats, and trailers, operating within a 50-mile radius of Lake Lanier. Mobile technicians handle pre-season prep, electrical systems, leaks, slide-outs, and appliances, and the site also lists awnings, 12V and 110V electrical systems, hitch and towing systems, sealant and exterior care, plumbing, and appliance servicing.",
+      "g": [
+        "mobile tech",
+        "service center"
+      ],
+      "base": "Buford",
+      "areas": [],
+      "region": "within a 50-mile radius of Lake Lanier",
+      "spec": null,
+      "evidence": {
+        "checked": "https://parcrv.com/services/",
+        "phone_quote": "770.271.2799",
+        "coverage_quotes": [
+          "Operating within a 50-mile radius of Lake Lanier, our mobile technicians handle everything from pre-season prep and electrical systems to leaks, slide-outs, and appliances."
+        ],
+        "type_quote": "ParcRV provides certified on-site and mobile service for RVs, boats, and trailers",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "RCI XL",
+      "c": "Warner Robins, GA",
+      "p": "(478) 293-4444",
+      "u": "https://www.rcixl.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "RCI XL is an RV, bus, and heavy-duty paint and body shop in Warner Robins, Georgia. It performs bodywork, collision repair, and paint refinishing on RVs and travel trailers, and the site lists full body custom paint, storm damage repair, fiberglass repair, glass repair and replacement, electrical repair, alignments, and complete renovations.",
+      "g": [
+        "service center",
+        "collision"
+      ],
+      "base": "Warner Robins",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.rcixl.com/",
+        "phone_quote": "(478) 293-4444",
+        "coverage_quotes": [
+          "Visit Us: 807 Corder Rd, Warner Robins, GA 31088"
+        ],
+        "type_quote": "We provide collision repair and maintenance services for RVs, fire trucks, HD trucks, busses, motorcoaches, trailers, utility vans and more!",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Airdream RV Repairs & Restorations",
+      "c": "Oakwood, GA",
+      "p": "706-224-1224",
+      "u": "https://www.airdreamrvrepair.com/",
+      "t": "center",
+      "e": false,
+      "r": true,
+      "d": "Airdream RV Repairs & Restorations is an RV repair and restoration shop in Oakwood, Georgia, northeast of Atlanta. The site states it performs RV repairs of all kinds, including PEX plumbing systems, electrical systems, HVAC repairs and replacements, LP gas systems, collision repairs, appliance installation, frame welding repair, new axles, water damage restoration, flooring, and cabinetry. It also performs complete remodeling and shell-off restorations.",
+      "g": [
+        "service center",
+        "collision",
+        "roadside / chassis"
+      ],
+      "base": "Oakwood",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.airdreamrvrepair.com/",
+        "phone_quote": "706-224-1224",
+        "coverage_quotes": [
+          "Nestled in NE Atlanta"
+        ],
+        "type_quote": "We truly believe we are the best at RV repairs and perform them all",
+        "emergency_quote": null,
+        "roadside_quote": "frame welding repair, new axles",
+        "licence": null
+      }
+    },
+    {
+      "n": "Reyes RV Repair & Service",
+      "c": "Winston, GA",
+      "p": "(855)739-3700",
+      "u": "https://reyesrvrepair.com/rv-repairs/",
+      "t": "center",
+      "e": false,
+      "r": true,
+      "d": "Reyes RV Repair & Service is an RV repair business in Winston, Georgia, in the Atlanta area. Its RVIA and RVDA certified technicians are trained in both diesel and gas engines. The site lists engine repairs, full brake systems, chassis repairs, generators, hydraulics, roof, AC, plumbing, electrical, and slide out work.",
+      "g": [
+        "service center",
+        "roadside / chassis"
+      ],
+      "base": "Winston",
+      "areas": [],
+      "region": "Atlanta Georgia Area",
+      "spec": null,
+      "evidence": {
+        "checked": "https://reyesrvrepair.com/rv-repairs/",
+        "phone_quote": "(855)739-3700",
+        "coverage_quotes": [
+          "2190 Jason Industrial Parkway Winston, GA 30134"
+        ],
+        "type_quote": "Our RVIA/RVDA certified technicians are trained in both diesel & gas engines.",
+        "emergency_quote": null,
+        "roadside_quote": "Our RVIA/RVDA certified technicians are trained in both diesel & gas engines.",
+        "licence": null
+      }
+    },
+    {
+      "n": "RV South",
+      "c": "Sylvester, GA",
+      "p": "229 206 1344",
+      "u": "https://www.rvsouth.com/rv-chassis-repair-in-georgia",
+      "t": "center",
+      "e": false,
+      "r": true,
+      "d": "RV South is an RV chassis service and repair business in Sylvester, Georgia. It provides comprehensive chassis diagnostics and repairs, including suspension checks, steering alignment, brake system inspections, and tire maintenance. The site states the team is experienced in servicing Class A, B, and C motorhomes, travel trailers, and fifth wheels.",
+      "g": [
+        "service center",
+        "roadside / chassis"
+      ],
+      "base": "Sylvester",
+      "areas": [],
+      "region": "Georgia",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.rvsouth.com/rv-chassis-repair-in-georgia",
+        "phone_quote": "229 206 1344",
+        "coverage_quotes": [
+          "401 W Franklin St, Sylvester, GA 31791"
+        ],
+        "type_quote": "we specialize in RV chassis service and repair",
+        "emergency_quote": null,
+        "roadside_quote": "we specialize in RV chassis service and repair",
+        "licence": null
+      }
+    },
+    {
+      "n": "Augusta RV",
+      "c": "Evans, GA",
+      "p": "(706) 855-5220",
+      "u": "https://augustarv.net/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Augusta RV is an RV service and storage center in Evans, Georgia, on the west side of Augusta. It specializes in camper repairs, listing water leaks, roof replacements, awnings, satellites, air conditioners, refrigerators, furnaces, body repair, rotten wood, and slides. The site states it does not do engine, transmission, or drive train repairs.",
+      "g": [
+        "service center"
+      ],
+      "base": "Evans",
+      "areas": [],
+      "region": null,
+      "spec": "do engine, transmission, or drive train repairs.",
+      "evidence": {
+        "checked": "https://augustarv.net/",
+        "phone_quote": "(706) 855-5220",
+        "coverage_quotes": [
+          "located on the west side of Augusta, Georgia in Evans"
+        ],
+        "type_quote": "Augusta RV specializes in all types of camper repairs",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "CSRA Camperland",
+      "c": "Martinez, GA",
+      "p": "(706) 863-6294",
+      "u": "https://www.csracamperland.com/rv-service-department",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "CSRA Camperland is an RV repair and maintenance business in Martinez, Georgia, serving the Augusta and Evans area. It provides repair, maintenance, and upgrades for travel trailers, fifth wheels, motorhomes, and campers. The site states the service facility has five service bays and certified technicians, and that it is an Aqua-Hot Factory Authorized Service Center.",
+      "g": [
+        "service center"
+      ],
+      "base": "Martinez",
+      "areas": [
+        "Augusta",
+        "Evans"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.csracamperland.com/rv-service-department",
+        "phone_quote": "(706) 863-6294",
+        "coverage_quotes": [
+          "throughout the Augusta and Evans area"
+        ],
+        "type_quote": "CSRA Camperland provides professional RV repair, maintenance, and upgrades for travel trailers, fifth wheels, motorhomes, and campers",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Newcastle RV",
+      "c": "Brunswick, GA",
+      "p": "912-264-5187",
+      "u": "https://www.newcastlerv.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Newcastle RV is an RV dealership and service center in Brunswick, Georgia. Its service department states that its technicians are certified and cover refrigerators, plumbing, heating and cooling systems, awnings, slide outs, leveling systems, trailer hitches, body and damage repair, and gas and electrical systems. It also employs Master Certified Technicians.",
+      "g": [
+        "service center"
+      ],
+      "base": "Brunswick",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.newcastlerv.com/rv-service",
+        "phone_quote": "912-264-5187",
+        "coverage_quotes": [
+          "4718 New Jesup Highway, Brunswick, GA 31520"
+        ],
+        "type_quote": "The Service Department at Newcastle RV strives to only provide you with the success in knowing you came to the best place for the job.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Dalton RV",
+      "c": "Dalton, GA",
+      "p": "706.529.3300",
+      "u": "https://www.daltonrv.net/service-repair-rvs-dealership--service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Dalton RV is an RV dealership and service center in Dalton, Georgia. Its service department states it is staffed with highly trained technicians and has the equipment and experience to get motorhomes and trailers in prime shape. Service is by appointment only.",
+      "g": [
+        "service center"
+      ],
+      "base": "Dalton",
+      "areas": [],
+      "region": null,
+      "spec": "Service by appointment only.",
+      "evidence": {
+        "checked": "https://www.daltonrv.net/service-repair-rvs-dealership--service",
+        "phone_quote": "706.529.3300",
+        "coverage_quotes": [
+          "801A East Walnut Ave. Dalton, GA 30721"
+        ],
+        "type_quote": "Our service department is staffed with highly trained technicians dedicated to making sure your RV stays in great working order for years to come.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Valdosta RV",
+      "c": "Hahira, GA",
+      "p": "(229) 561-9591",
+      "u": "https://www.valdostarv.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Valdosta RV is an RV storage and repair business in Hahira, Georgia. It specializes in RV repair, storage, recreational vehicle roof repair, maintenance, and transport. The site states it handles body repairs resulting from accidents and collision and offers pre-purchase inspections.",
+      "g": [
+        "service center"
+      ],
+      "base": "Hahira",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.valdostarv.com/",
+        "phone_quote": "(229) 561-9591",
+        "coverage_quotes": [
+          "201 B J Miley Street, Hahira, GA"
+        ],
+        "type_quote": "We specialize in RV repair, storage, recreational vehicle roof repair, maintenance, and transport.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Three Way Campers",
+      "c": "Marietta, GA",
+      "p": "770.422.9300",
+      "u": "https://www.threewaycampers.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Three Way Campers is a family-owned RV dealership in Marietta, Georgia that has operated since 1952. It is a full-service dealership with sales, parts, and service, and the site states it sells travel trailers, fifth wheels, pop up campers, Class A motorhomes, and Class C motorhomes.",
+      "g": [
+        "service center"
+      ],
+      "base": "Marietta",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.threewaycampers.com/",
+        "phone_quote": "770.422.9300",
+        "coverage_quotes": [
+          "1400 Cobb Parkway N. Marietta, GA 30062"
+        ],
+        "type_quote": "Three Way Campers is a full-service RV Dealership that has been Family Owned and Operated since 1952.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "North Georgia RV Rentals, Inc",
+      "c": "Cumming, GA",
+      "p": "(678) 250-9277",
+      "u": "https://www.northgarvrentals.com/rv-repairs",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "North Georgia RV Rentals is a family-owned RV repair business in Cumming, Georgia. It offers repair services for fifth wheels and campers, listing electrical system repairs, plumbing and water system repairs, appliance repairs, roof and exterior repairs, slide-out repairs, brake and suspension repairs, and interior and exterior upgrades.",
+      "g": [
+        "service center"
+      ],
+      "base": "Cumming",
+      "areas": [],
+      "region": "North Georgia",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.northgarvrentals.com/rv-repairs",
+        "phone_quote": "(678) 250-9277",
+        "coverage_quotes": [
+          "North Georgia RV Rentals is a family-owned and operated company located in the heart of the beautiful North Georgia Mountains."
+        ],
+        "type_quote": "North Georgia RV Rentals, your premier destination for top-notch RV repair services for all fifth wheels and campers",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "\"Bella\" RV Mobile Tech-Repair & Maintenance",
+      "c": "Gainesville, GA",
+      "p": "770-276-6717",
+      "u": "https://www.rvmobiletechnear.me/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "\"Bella\" RV Mobile Tech is a mobile RV repair and maintenance business located in Gainesville, Georgia. The technician is NRVTA certified. The site lists RV water heaters and furnace, absorption refrigerators, exteriors including awning, sliding and leveling system, air conditioners, brakes, solar panel system, and welding.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Gainesville",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.rvmobiletechnear.me/",
+        "phone_quote": "770-276-6717",
+        "coverage_quotes": [
+          "We are located in Gainesville, Georgia. 30501."
+        ],
+        "type_quote": "We will be happy to help you with any problem you have with your RV.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Triumphant RV Solutions",
+      "c": "Gainesville, GA",
+      "p": "(770) 519-2828",
+      "u": "https://triumphantrv.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "Triumphant RV Solutions is a veteran-owned mobile RV repair business based in Gainesville, Georgia. Its technicians come to the customer at a campsite, storage lot, or driveway within about an hour of Gainesville. The site lists air conditioning and heating, water heaters, tank services, roof resealing, slide-out emergencies, electrical systems, and preventive maintenance.",
+      "g": [
+        "mobile tech",
+        "emergency"
+      ],
+      "base": "Gainesville",
+      "areas": [
+        "Gainesville",
+        "Buford",
+        "Flowery Branch",
+        "Cumming",
+        "Dawsonville",
+        "Dahlonega",
+        "Cleveland",
+        "Helen",
+        "Jefferson",
+        "Braselton",
+        "Commerce",
+        "Athens"
+      ],
+      "region": "North Georgia",
+      "spec": null,
+      "evidence": {
+        "checked": "https://triumphantrv.com/",
+        "phone_quote": "(770) 519-2828",
+        "coverage_quotes": [
+          "Certified, veteran-owned RV service for Gainesville, Lake Lanier, and all of North Georgia."
+        ],
+        "type_quote": "Mobile RV repair and maintenance that comes to you",
+        "emergency_quote": "Triumphant offers 24/7 emergency RV service across North Georgia",
+        "roadside_quote": null,
+        "licence": null
+      }
+    }
+  ]
+}
