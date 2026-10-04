@@ -944,6 +944,10 @@ css_src = (ROOT / "assets" / "css" / "style.css").read_text(encoding="utf-8")
 token_start = css_src.index(":root{")
 token_end = css_src.index("\n}\n", css_src.index("/* ---- LEGACY ALIASES.")) + 3
 token_block, rest = css_src[:token_end], css_src[token_end:]
+# Line numbers must point at the FILE, not at the slice. Both loops below used to count
+# newlines in `rest`, so every line they printed was short by the token block's own height --
+# the check reported #fff at line 350 and line 350 was an empty rule. Found 2026-10-03.
+slice_line_offset = css_src[:token_end].count("\n")
 # A NON-RAW "\b" IS A BACKSPACE, NOT A WORD BOUNDARY. The last entry here was "#fff\b", which in a
 # plain Python string is #fff followed by a backspace character, so that entry never matched
 # anything and the check silently had one fewer value than it looked like it had. Found 2026-10-03
@@ -961,7 +965,7 @@ leaked = []
 # (2026-10-03). The lookahead says what is actually meant: this value must not continue as hex.
 for lit in PALETTE:
     for m in re.finditer(re.escape(lit) + r'(?![0-9a-fA-F])', rest, re.I):
-        line = rest[:m.start()].count("\n") + 1
+        line = slice_line_offset + rest[:m.start()].count("\n") + 1
         head = rest[rest.rfind("{", 0, m.start()):m.start()]
         leaked.append("style.css:%d uses %s outside the token layer, in %s"
                       % (line, lit, head.split("}")[-1].strip()[:44]))
@@ -975,7 +979,7 @@ for m in re.finditer(r"#[0-9a-fA-F]{3,8}\b", rest):
     before = rest[:m.start()]
     if before.rfind("{") < before.rfind("}"):
         continue                      # a hex sitting outside any rule, e.g. in a comment
-    line = before.count("\n") + 1
+    line = slice_line_offset + before.count("\n") + 1
     head = rest[rest.rfind("{", 0, m.start()):m.start()]
     rogue.append("style.css:%d uses %s inside a rule outside the token layer, in %s"
                  % (line, m.group(0), head.split("}")[-1].strip()[:44]))
