@@ -2739,3 +2739,54 @@ inside the sentence window. **A pair with no such phrase is not a link opportuni
 
 **AND UNTIL THAT EXISTS, DO NOT SWEEP FROM THIS LIST.** Every link it has offered by hand has either had no anchor
 or a wrong one. The list is a good map of which pages are related and a bad list of what to link.
+
+---
+
+## FIRES 49 TO 55, AND WHAT TY SHOULD KNOW FIRST
+
+**Written 08:00 Sunday. Main is green on both workflows. The tree holds five paths that are not mine.**
+
+### The tooling changed more than the site, and it needed to
+
+**1. THE TOKEN LAYER NOW OWNS EVERY COLOUR.** 35 hex literals across 17 values were sitting in rules below
+the layer. Each is now a named token keeping the exact value it had, so nothing moved on screen. **The palette
+check is now a HARD FAIL rather than a report**: "27 palette values, none restated outside the token layer, and
+no hex used in any rule below it."
+
+**2. A WHOLE CLASS OF INSTRUMENT BUG IS CLOSED, AND IT WAS MAKING MY LOCAL GATE LIE.** Letta keeps agent
+worktrees under `.letta/worktrees/`, each a FULL COPY of the repo. **Eleven instruments were walking into it** --
+`verify.py`, `build-shell.mjs`, `stamp_assets.py`, `build-sitemap.py`, `link-opportunities.py`, and seven more,
+three of which WRITE. The banned-words rule was firing on the worktree's own `verify.py`, which contains "rig"
+and "RVVerse" as rule definitions. **CI stayed green the whole time because the runner has no `.letta`
+directory**, and that red-local/green-remote split is what made it invisible. All bounded, and `.letta/` is now
+gitignored so git cannot sweep it either.
+
+**3. THE MANUALS-LINK WORKLIST WAS WRONG BY SEVEN TIMES.** It said 30 pages tell a reader to consult a manual
+without linking ours. The real number is FOUR, because the rule could not tell **a citation to a named maker**
+("Atwood's own manual puts its 79 series furnace at 3.4 amps") from **an instruction to the reader** ("the figure
+that binds yours is the one in your own manual"). Three now link; the fourth sits inside a parenthetical.
+
+**4. THE INTERNAL-LINK FINDER WORKS NOW, AND THAT WAS THE NIGHT'S REAL PRIZE.** Three separate attempts at the
+sweep failed for one reason, and the last fire measured it: **of the top forty candidate pairs, exactly ONE had a
+sentence naming the target's subject.** BM25 scores subject similarity and a link needs a question. With an
+anchor requirement added, **667 candidates became 38, each stating the phrase it would use**, and the first batch
+of four links is live: water heater, battery disconnect, leveling jacks.
+
+### Things that cost time and are written down
+
+**Four red mains, all mine, all the same shape**: a generated file and the pages referencing it going out of step.
+Fixed by generating in a `git archive` extraction -- where the tree IS the commit -- and running the checks there.
+**Two clean pushes since.** The honest limit: the extraction cannot run the server-dependent steps (the W3C
+checker reports "0 pages" against it).
+
+**`insert-link.py` takes the FIRST occurrence of a phrase**, so a candidate whose phrase first appears somewhere
+unsuitable is declined even when a later occurrence would work. Correct behaviour, and it means some real
+candidates stay unreachable until the tool takes an occurrence index.
+
+### What is still open, in the order I would do it
+
+1. **The sweep continues from 38 candidates.** Four are in; the rest are the same shape of work.
+2. **`insert-link.py` occurrence index**, which unblocks the ones that declined on their first match.
+3. **The 30 pages that cite a manual** could each link the specific maker manual we hold, which is a different
+   job from the four that needed our index.
+4. **The three remaining mobile tap warnings**, a long crumb name rather than a layout fault.
