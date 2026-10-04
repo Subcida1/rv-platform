@@ -36,7 +36,12 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-SKIP = (".git", "_", "workers", "assets", "data")
+# .letta AND node_modules ARE CHECKOUT BOUNDARIES, NOT CONTENT. Letta keeps agent worktrees
+# under .letta/worktrees/, each a full copy of this repository, so leaving it out doubled every
+# candidate: the tool scored the worktree copy of a page against the same targets and printed
+# the pair twice. 1298 candidates instead of 649. Found 2026-10-04, one fire after the same
+# boundary was fixed in verify.py, build-shell.mjs, stamp_assets.py and build-sitemap.py.
+SKIP = (".git", ".letta", "node_modules", "_", "workers", "assets", "data")
 # Words that carry no subject on this site, on top of a general stopword list.
 STOP = set("""a an the and or but if then than that this these those of in on at to for from by with
 without is are was were be been being it its it's you your we our us they their there here what
