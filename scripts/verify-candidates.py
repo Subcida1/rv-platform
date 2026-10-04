@@ -18,7 +18,9 @@ check out, so a rejection can be argued with rather than guessed at.
 import json
 import html as html_mod
 import re
+import shutil
 import socket
+import subprocess
 import sys
 import urllib.error
 import urllib.parse
@@ -140,6 +142,35 @@ def excluded(rec):
     return None
 
 
+CHROME = ["flatpak", "run", "com.google.Chrome"]
+
+
+def render(url, timeout=90):
+    """What a real browser sees on a JavaScript-rendered page.
+
+    WHY THIS EXISTS. Fix My Camper (Seale, Alabama) returns 32 characters of visible text to a
+    plain fetch and 10,477 to a browser; RV Tech Services (Mobile, Alabama) renders to 5,070
+    characters, names RVs, and carries its published phone number. Both are JS apps. Without
+    this, the gate read a shell and reported "nothing on the page names an RV" and "phone not
+    on their site" -- and REJECTED a real business for being built in a way the checker cannot
+    read. That is the worst failure this tool can have: a false rejection silently deletes a
+    listing, and nothing downstream can see that it happened.
+
+    Returns the visible text, or None when Chrome is unavailable or the render produced
+    nothing.
+    """
+    if not shutil.which("flatpak"):
+        return None
+    try:
+        p = subprocess.run(
+            CHROME + ["--headless=new", "--disable-gpu", "--no-sandbox",
+                      "--virtual-time-budget=12000", "--dump-dom", url],
+            capture_output=True, text=True, timeout=timeout)
+    except Exception:
+        return None
+    return text_of(p.stdout) if p.stdout else None
+
+
 def bare_host(value):
     """The host, with any scheme and any www stripped, so two spellings compare equal.
 
@@ -153,8 +184,8 @@ def bare_host(value):
 
 
 def check(rec):
-    out = {"n": rec.get("n"), "ok": True, "bad": [], "warn": [], "clip": [], "site": None,
-           "excluded": excluded(rec)}
+    out = {"n": rec.get("n"), "ok": True, "bad": [], "warn": [], "clip": [],
+           "needsbrowser": [], "site": None, "excluded": excluded(rec)}
     url = rec.get("u") or ""
     host = re.sub(r"^https?://", "", url).split("/")[0]
     if not host or not resolves(host):
@@ -213,6 +244,27 @@ def check(rec):
         pass
     page = page + " " + " ".join(extra)
     low = fold(page)
+    # A JAVASCRIPT PAGE IS NOT A PAGE A PLAIN FETCH CAN JUDGE. Fix My Camper (Seale, Alabama)
+    # returns 32 characters of visible text to a plain fetch and 10,477 to a browser. RV Tech
+    # Services (Mobile, Alabama) returns 37 KB of markup that names no RV at all, because the
+    # content is client-rendered; a browser finds 5,070 characters naming RVs, with its
+    # published phone number. Apalachee RV Center (Auburn, Georgia) serves a page naming RVs
+    # with no phone in it, and the phone appears only once scripts run. All three were REJECTED
+    # before this fallback existed -- and a false rejection silently deletes a listing, with
+    # nothing downstream able to see that it happened. So it triggers on ANY of the three
+    # symptoms: almost no text, no RV named, or the published phone absent.
+    ph0 = digits(rec.get("p"))
+    phone_absent = bool(ph0) and ph0 not in digits(page) and ph0 not in digits(attrs_of(html))
+    if len(page) < 400 or not RV.search(page) or phone_absent:
+        seen = render(url)
+        if seen:
+            extra.append(seen)
+            page = page + " " + seen
+            low = fold(page)
+            out["rendered"] = True
+    # After the render attempt: below this much text there is nothing to compare against, and
+    # the honest answer is "this needs a browser render", not "this agent invented a quote".
+    thin = len(page) < 400
     if PARKED.search(page):
         out["ok"] = False
         out["bad"].append("parked page")
@@ -238,6 +290,10 @@ def check(rec):
         out["quotes_n"] = out.get("quotes_n", 0) + 1
         fq = fold(q2)
         if fq not in low:
+            if thin:
+                # Cannot judge: the page is a JS shell. Recorded, not counted as a defect.
+                out["needsbrowser"].append(q2[:80])
+                continue
             # A report, not a rejection. The agent's evidence strings are often a
             # reconstruction of what a page said rather than a verbatim copy, and this
             # gate cannot tell a paraphrase from an invention. What does reject is the
@@ -292,13 +348,21 @@ def main():
     # real signal gets ignored. Eight words is about where a quote is prose rather than a
     # datum.
     nq = sum(r.get("quotes_n", 0) for r in results)
+    nb = sum(len(r.get("needsbrowser", [])) for r in results)
     clips = [c for r in results for c in r.get("clip", [])]
     prose = [c for c in clips if c[1] >= 8]
     cut = [c for c in prose if c[0] / c[1] >= 0.6]
     recon = [c for c in prose if c not in cut]
     print("\nevidence fidelity: %d quote(s) checked, %d verbatim, %d clipped short, "
-          "%d reconstructed, %d too short to judge"
-          % (nq, nq - len(clips), len(cut), len(recon), len(clips) - len(prose)))
+          "%d reconstructed, %d too short to judge, %d needing a browser render"
+          % (nq, nq - len(clips) - nb, len(cut), len(recon), len(clips) - len(prose), nb))
+    for r in results:
+        if r.get("needsbrowser"):
+            print("  NEEDS A BROWSER: %s is a JavaScript page; %d quote(s) could not be judged"
+                  % (r["n"], len(r["needsbrowser"])))
+    rendered = [r["n"] for r in results if r.get("rendered")]
+    if rendered:
+        print("  RENDERED IN A BROWSER (a plain fetch saw a shell): %s" % ", ".join(rendered))
     if recon:
         print("  %d reconstructed quote(s) read as the page's own voice but are not on it:"
               % len(recon))
