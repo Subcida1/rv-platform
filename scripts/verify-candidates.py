@@ -333,7 +333,14 @@ def main():
     path = Path(sys.argv[1])
     recs = json.loads(path.read_text(encoding="utf-8"))
     print("%d candidate(s) in %s\n" % (len(recs), path.name))
-    with ThreadPoolExecutor(max_workers=4) as ex:
+    # HOW MANY RECORDS AT ONCE, AND WHY ONE IS OFTEN FASTER. Four is right for a state of
+    # ordinary sites. It is wrong when many of them are JavaScript: each render is a
+    # `flatpak run` of Chrome, and four of those at once contend, so the batch takes far
+    # longer than the same work done one at a time. Measured on Nebraska 2026-10-04 --
+    # twenty records ran sequentially in well under a minute while the four-worker pool on
+    # the same twenty sat for four minutes without finishing. Set this to 1 for a
+    # JavaScript-heavy batch.
+    with ThreadPoolExecutor(max_workers=int(os.environ.get("ORIGINRV_GATE_WORKERS") or 4)) as ex:
         results = list(ex.map(check, recs))
     for r in results:
         ex = r.get("excluded")

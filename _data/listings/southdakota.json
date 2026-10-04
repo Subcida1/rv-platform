@@ -1,0 +1,1004 @@
+{
+  "state": "SD",
+  "name": "South Dakota",
+  "regions": [
+    {
+      "key": "black-hills-sd",
+      "label": "Rapid City and the Black Hills"
+    },
+    {
+      "key": "east-river-sd",
+      "label": "Sioux Falls and the east river"
+    },
+    {
+      "key": "central-sd",
+      "label": "Pierre and the Missouri"
+    }
+  ],
+  "region_of": {
+    "Rapid City": "black-hills-sd",
+    "Black Hawk": "black-hills-sd",
+    "Custer": "black-hills-sd",
+    "Hill City": "black-hills-sd",
+    "Lead": "black-hills-sd",
+    "Spearfish": "black-hills-sd",
+    "Belle Fourche": "black-hills-sd",
+    "Piedmont": "black-hills-sd",
+    "Sioux Falls": "east-river-sd",
+    "Lennox": "east-river-sd",
+    "Flandreau": "east-river-sd",
+    "Brookings": "east-river-sd",
+    "Watertown": "east-river-sd",
+    "Aberdeen": "east-river-sd",
+    "Mitchell": "east-river-sd",
+    "Yankton": "east-river-sd",
+    "Pierre": "central-sd"
+  },
+  "listings": [
+    {
+      "n": "True North RV Service LLC",
+      "c": "Rapid City, SD",
+      "p": "605-777-0035",
+      "u": "https://truenorthrvservice.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "True North RV Service LLC is an on-site mobile RV repair and maintenance business serving Rapid City and the Black Hills of South Dakota. It provides service and diagnostics for travel trailers, fifth wheels, toy haulers, truck campers, Sprinter vans, camper vans and Class A, B and C motorhomes. Interior work covers plumbing, lighting and electrical, cooling and heating, appliances and trim, cabinet and drawer repair, while exterior work covers water heaters, slides, leveling systems, roof repair and brakes.",
+      "g": [
+        "mobile rv technician"
+      ],
+      "base": "Rapid City",
+      "areas": [
+        "Rapid City"
+      ],
+      "region": "Black Hills",
+      "spec": "All Systems Except Truma & AquaHot",
+      "evidence": {
+        "checked": "https://truenorthrvservice.com/",
+        "phone_quote": "South Dakota 605-777-0035",
+        "coverage_quotes": [
+          "Currently Serving Rapid City, Black Hills, South Dakota & Surrounding Areas",
+          "Currently serving Rapid City and the Black Hills of South Dakota"
+        ],
+        "type_quote": "On-Site Mobile RV Repair & Maintenance",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "West River RV Services",
+      "c": "Black Hawk, SD",
+      "p": "605-863-2735",
+      "u": "https://westriverrvservices.com/",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "West River RV Services is an RV repair and service business at 7655 Black Hawk Rd in Black Hawk, South Dakota. It describes over 13 years of experience repairing campers and handles roofing, appliance repair, solar, plumbing, electrical and body repair as well as winterizations. It also offers mobile service and takes on hail damage estimates.",
+      "g": [
+        "rv service center",
+        "mobile rv technician"
+      ],
+      "base": "Black Hawk",
+      "areas": [
+        "Black Hawk"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://westriverrvservices.com/",
+        "phone_quote": "605-863-2735 (6058632735)",
+        "coverage_quotes": [
+          "7655 Black Hawk Rd, Black Hawk, SD 57718"
+        ],
+        "type_quote": "We are an RV repair service with experience in a variety of jobs.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Miles Mobile RV Service",
+      "c": "Rapid City, SD",
+      "p": "605-391-8840",
+      "u": "https://milesmobilervservice.com/camper-slide-out-repair/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Miles Mobile RV Service provides professional mobile RV and camper repair throughout South Dakota, based in Rapid City. It advertises on-site service to motorhomes, travel trailers and campers so owners can stay at their campsite while repairs are completed. It lists coverage across the Black Hills including Deadwood, Sturgis, Spearfish, Hill City, Rapid City and Wall.",
+      "g": [
+        "mobile rv technician"
+      ],
+      "base": "Rapid City",
+      "areas": [
+        "Rapid City",
+        "Deadwood",
+        "Sturgis",
+        "Spearfish",
+        "Hill City",
+        "Wall"
+      ],
+      "region": "Black Hills",
+      "spec": null,
+      "evidence": {
+        "checked": "https://milesmobilervservice.com/camper-slide-out-repair/",
+        "phone_quote": "Call Today! 605-391-8840 (6053918840)",
+        "coverage_quotes": [
+          "We proudly provide mobile RV and camper repair across South Dakota, including:",
+          "Location: Rapid City, SD 57701"
+        ],
+        "type_quote": "Miles Mobile RV Service provides professional mobile RV and camper repair throughout South Dakota, delivering expert service directly to your location.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Marty's Mobile RV Repair",
+      "c": "Black Hills, SD",
+      "p": "(605) 858-5168",
+      "u": "https://www.martysmobilervrepair.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Marty's Mobile RV Repair is a mobile RV service that travels to customers across the Black Hills of South Dakota. It performs annual maintenance and repairs to stoves and ovens, refrigerators, water heaters, BAL and Schwintek slides, air conditioners, vents and skylights, heaters and furnaces and plumbing, plus winterization. It describes itself as a certified RV technician business that is licensed and insured and veteran owned and operated.",
+      "g": [
+        "mobile rv technician"
+      ],
+      "base": null,
+      "areas": [],
+      "region": "Black Hills",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.martysmobilervrepair.com/",
+        "phone_quote": "(605) 858-5168",
+        "coverage_quotes": [
+          "Serving the Black Hills, SD"
+        ],
+        "type_quote": "We come to you!",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      },
+      "reg": "black-hills-sd"
+    },
+    {
+      "n": "Black Hills RV Service",
+      "c": "Rapid City, SD",
+      "p": "(605) 342-7304",
+      "u": "https://www.blackhillsrvservice.com/",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "Black Hills RV Service is a family-owned RV dealer and repair business in Rapid City, South Dakota, with more than 16 years of experience. Its certified technicians handle roof, electrical, plumbing and appliance repair plus A/C and furnace service and winterization. The site also lists pre-owned RVs, trade-ins and consignment.",
+      "g": [
+        "rv service center"
+      ],
+      "base": "Rapid City",
+      "areas": [
+        "Rapid City"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.blackhillsrvservice.com/",
+        "phone_quote": "(605) 342-7304",
+        "coverage_quotes": [
+          "Rapid City, South Dakota"
+        ],
+        "type_quote": "Expert Service & Repairs",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Great Adventure Mobile RV Repair & Inspections",
+      "c": "Black Hills, SD",
+      "p": "570-994-5638",
+      "u": "https://greatadventurervri.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Great Adventure Mobile RV Repair & Inspections provides mobile, on-site RV repair, maintenance and inspections in the Black Hills of South Dakota in summer. It names service to Custer, Hill City, Hot Springs, Keystone, Rapid City, Sturgis, Wall, Deadwood and Spearfish. Work includes A/C, plumbing and water heaters, furnace and generator service, appliance repairs, roof maintenance, electrical, leveling systems, solar and tank cleaning.",
+      "g": [
+        "mobile rv technician"
+      ],
+      "base": null,
+      "areas": [
+        "Custer",
+        "Hill City",
+        "Hot Springs",
+        "Keystone",
+        "Rapid City",
+        "Sturgis",
+        "Wall",
+        "Deadwood",
+        "Spearfish"
+      ],
+      "region": "Black Hills",
+      "spec": "SUMMER - South Dakota; WINTER - North Carolina (Raleigh area).",
+      "evidence": {
+        "checked": "https://greatadventurervri.com/",
+        "phone_quote": "CALL US: 570-994-5638",
+        "coverage_quotes": [
+          "We provide mobile, on-site service in the Black Hills of South Dakota and Raleigh, North Carolina.",
+          "Custer, Hill City, Hot Springs, Keystone, Rapid City, Sturgis, Wall, Deadwood, Spearfish"
+        ],
+        "type_quote": "Mobile RV Repairs, Maintenance, Inspections & Support - Done Right, On Site",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      },
+      "reg": "black-hills-sd"
+    },
+    {
+      "n": "Progress RV",
+      "c": "Belle Fourche, SD",
+      "p": "605.723.1132",
+      "u": "https://www.progressrv.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Progress RV is an RV, horse trailer and utility trailer repair shop at 18731 US Hwy 85 in Belle Fourche, South Dakota. It describes itself as RV repair specialists doing structural repairs, complete overhauls and modernizations, and works on Class A, B and C motorhomes. It is an authorized repair and service center for Dometic, Norcold, Winegard, King, Lippert and Lakota Trailer Corporation and services Cummins-Onan, ECI Fuel Systems and Renogy systems.",
+      "g": [
+        "rv service center",
+        "rv body shop"
+      ],
+      "base": "Belle Fourche",
+      "areas": [
+        "Belle Fourche"
+      ],
+      "region": "Black Hills",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.progressrv.com/",
+        "phone_quote": "605.723.1132",
+        "coverage_quotes": [
+          "18731 US Hwy 85 Belle Fourche, SD 57717"
+        ],
+        "type_quote": "We are RV repair specialists.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Phil's RV Service",
+      "c": "Hill City, SD",
+      "p": "817-301-2808",
+      "u": "https://philsrv.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Phil's RV Service is a one-man mobile RV repair, upgrade and inspection business based in the Heart of the Hills near Hill City, South Dakota. In summer it serves the Black Hills and surrounding areas, doing appliance, exterior and electronics repairs, solar and battery upgrades, tankless water heaters and warranty work. It is a trained and certified inspector for travel trailers, fifth wheels and motor coaches.",
+      "g": [
+        "mobile rv technician"
+      ],
+      "base": "Hill City",
+      "areas": [
+        "Hill City"
+      ],
+      "region": "Black Hills",
+      "spec": "Summer: Serving the Black Hills and surrounding areas. Winter: Serving North Central Texas from the Metroplex to Waco.",
+      "evidence": {
+        "checked": "https://philsrv.com/",
+        "phone_quote": "call or text 817-301-2808 (8173012808)",
+        "coverage_quotes": [
+          "Serving the Black Hills and surrounding areas. Conveniently located in the Heart of the Hills near Hill City."
+        ],
+        "type_quote": "We can do all sorts of repairs to your appliances, exterior, electronics and more.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "B&B RV Storage & Service, LLC",
+      "c": "Flandreau, SD",
+      "p": "605-864-6258",
+      "u": "https://bbrv.services/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "B&B RV Storage & Service, LLC is an RV service and repair business at 609 Sutton St in Flandreau, South Dakota, between Sioux Falls and Brookings. It services campers and trailers with a certified technician who spent over 14 years in RV service at the former Spader's RV in Sioux Falls. It also offers storage for RVs, boats and other recreational vehicles up to 46 feet long.",
+      "g": [
+        "rv service center"
+      ],
+      "base": "Flandreau",
+      "areas": [
+        "Flandreau"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://bbrv.services/",
+        "phone_quote": "609 Sutton St. Flandreau, SD 57028 605-864-6258",
+        "coverage_quotes": [
+          "We are conveniently located between Sioux Falls, SD and Brookings, SD."
+        ],
+        "type_quote": "We offer quality service on your campers and trailers.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Northstar Mobile RV Services",
+      "c": "Spearfish, SD",
+      "p": "1-605-705-3335",
+      "u": "https://northstarmobilervservices.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "Northstar Mobile RV Services is a 100 percent mobile RV repair and maintenance business that served the Spearfish and Black Hills area of South Dakota in summer before travelling to a winter location. It diagnoses and repairs on site, working on RV refrigerators, air conditioners, leveling systems, water heaters and more, and serves most major RV manufacturers. It offers seasonal service, new owner orientation, emergency service and warranty repair.",
+      "g": [
+        "mobile rv technician"
+      ],
+      "base": "Spearfish",
+      "areas": [
+        "Spearfish"
+      ],
+      "region": "Black Hills",
+      "spec": "We are currently traveling to our winter location and will begin serving the Tucson, Arizona area beginning December 5, 2026.",
+      "evidence": {
+        "checked": "https://northstarmobilervservices.com/",
+        "phone_quote": "(605) 705-3335 (6057053335)",
+        "coverage_quotes": [
+          "Thank you to everyone in the Spearfish and Black Hills area who trusted Northstar Mobile RV Services with your RV repairs this summer."
+        ],
+        "type_quote": "100% Mobile - We come to you to Diagnose and Repair your RV at your convenience.",
+        "emergency_quote": "We are there during those after hour emergencies or last minute RV issues.",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "GK RV Service and Repair",
+      "c": "Custer, SD",
+      "p": "(224) 944 4418",
+      "u": "https://gkrvservice.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "GK RV Service and Repair is a mobile RV service and repair business based in Custer and serving the Black Hills of South Dakota. It comes to the customer and handles battery and converter replacements, plumbing, brakes and wheel bearings, winterizing, upgrades, propane and water leak testing and predelivery inspections. It also does maintenance such as wheel bearing repacking, water heater flushing and brake checks.",
+      "g": [
+        "mobile rv technician"
+      ],
+      "base": "Custer",
+      "areas": [
+        "Custer"
+      ],
+      "region": "Black Hills",
+      "spec": null,
+      "evidence": {
+        "checked": "https://gkrvservice.com/",
+        "phone_quote": "(224) 944 4418",
+        "coverage_quotes": [
+          "Mobile RV service and repairs, based in Custer and serving the Black Hills of South Dakota.",
+          "Mobile RV repair technician serving Custer and the Black Hills of South Dakota."
+        ],
+        "type_quote": "Mobile RV service that comes to you.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Chad's Mobile RV Services",
+      "c": "Lead, SD",
+      "p": "(605) 228-3760",
+      "u": "https://chadsmobilervservices.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Chad's Mobile RV Services is a mobile RV maintenance and repair business whose technician is certified by the National RV Training Academy. It currently provides services to Lead, South Dakota and the Northern Black Hills area. Customers book RV service and reach the technician by phone.",
+      "g": [
+        "mobile rv technician"
+      ],
+      "base": "Lead",
+      "areas": [
+        "Lead"
+      ],
+      "region": "Northern Black Hills",
+      "spec": null,
+      "evidence": {
+        "checked": "https://chadsmobilervservices.com/",
+        "phone_quote": "(605) 228-3760",
+        "coverage_quotes": [
+          "Currently providing services to the Lead, SD and Northern Black Hills areas."
+        ],
+        "type_quote": "Expert RV Maintenance Services",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Don's Mobile RV Repair, LLC",
+      "c": "Yankton, SD",
+      "p": "605-660-8135",
+      "u": "https://donsmobilerv.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Don's Mobile RV Repair, LLC provides mobile RV repair services for campers in and around the Yankton, South Dakota area. It handles electrical and plumbing repairs as well as appliance, slide-out and roof repairs, and most services can be provided while the customer is camping. The business is veteran owned and operated.",
+      "g": [
+        "mobile rv technician"
+      ],
+      "base": "Yankton",
+      "areas": [
+        "Yankton"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://donsmobilerv.com/",
+        "phone_quote": "605-660-8135 (606-660-8135)",
+        "coverage_quotes": [
+          "We are dedicated to providing top-notch repair services for campers in and around the Yankton, SD area."
+        ],
+        "type_quote": "We offer a wide range of repair services for campers in the Yankton, SD area.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Gavins Point Recreational Center",
+      "c": "Yankton, SD",
+      "p": "605-689-3333",
+      "u": "https://www.midwestcampers.com/mobile-rv-service",
+      "t": "both",
+      "e": false,
+      "r": true,
+      "d": "Gavins Point Recreational Center is an RV and trailer dealer in Yankton, South Dakota with a service facility and two mobile RV service units driven by certified mobile RV technicians. Its technicians inspect and repair electrical systems, chassis and tire, water systems, appliances, slide outs and warranty work, and can be dispatched to a home, storage lot or campsite. Customers can also bring their camper into the service facility at 3311 Debra Blvd in Yankton.",
+      "g": [
+        "rv service center",
+        "chassis/engine repair"
+      ],
+      "base": "Yankton",
+      "areas": [
+        "Yankton"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.midwestcampers.com/mobile-rv-service",
+        "phone_quote": "LET US COME TO YOU! CALL 605-689-3333",
+        "coverage_quotes": [
+          "Gavin's Point Mobile RV Service offers not one, but TWO fully-stocked mobile RV service units, driven by certified mobile RV technicians, ready to be dispatched to your location for any kind of service.",
+          "feel free to bring your camper into our service facility at 3311 Debra Blvd. Yankton, SD."
+        ],
+        "type_quote": "We'll inspect and repair the following and then some: electrical systems, chassis/tire repair, water systems, appliance repair, slide out service, warranty repair, and more.",
+        "emergency_quote": null,
+        "roadside_quote": "electrical systems, chassis/tire repair, water systems, appliance repair, slide out service, warranty repair, and more",
+        "licence": null
+      }
+    },
+    {
+      "n": "RV Mobile Doc",
+      "c": "Rapid City, SD",
+      "p": "910-998-3600",
+      "u": "https://rvmobiledoc.com/contact/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "RV Mobile Doc is a mobile RV maintenance and repair service based at 23756 Arena Drive in Rapid City, South Dakota. It brings its expertise directly to the customer and offers routine maintenance and emergency repairs. Its site describes a team of certified and experienced technicians serving the South Dakota RV community.",
+      "g": [
+        "mobile rv technician"
+      ],
+      "base": "Rapid City",
+      "areas": [
+        "Rapid City"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://rvmobiledoc.com/contact/",
+        "phone_quote": "910-998-3600 or 910-859-5808",
+        "coverage_quotes": [
+          "23756 Arena Drive",
+          "Rapid City, SD 57702"
+        ],
+        "type_quote": "write or call us with your questions or comments",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Freedomtek Mobile RV Services",
+      "c": "South Dakota",
+      "p": "605-646-3225",
+      "u": "https://freedomtekrv.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Freedomtek Mobile RV Services is a mobile RV repair business that brings repairs and maintenance directly to the customer at their location, so the RV does not have to be relocated. It describes certified professional RV repair services and handles repairs, services, upgrades and replacements on RV equipment including propane systems, plumbing and pumps, roof repair and sealing and tank cleaning. Booking is by phone, text or the website contact page, and it says it can typically reach an RV within a day or two.",
+      "g": [
+        "mobile rv technician"
+      ],
+      "base": null,
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://freedomtekrv.com/",
+        "phone_quote": "Call or Text: 605-646-3225",
+        "coverage_quotes": [],
+        "type_quote": "Mobile Repairs, Services, and Education for RV Owners",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      },
+      "reg": [
+        "black-hills-sd",
+        "east-river-sd",
+        "central-sd"
+      ]
+    },
+    {
+      "n": "Anywhere RV Repair & Inspection LLC",
+      "c": "Rapid City, SD",
+      "p": "(605) 877-5004",
+      "u": "https://www.anywhererv.net/about",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Anywhere RV Repair & Inspection LLC is a mobile RV repair and inspection business run by owner Dan (Danno) Rezac, an RVTAA Certified RV Technician and NRVIA Certified RV Inspector. It offers RV repair and maintenance services and travels to the customer. The owner attended the National RV Training Academy for certification in RV repair and inspection in 2020.",
+      "g": [
+        "mobile rv technician"
+      ],
+      "base": "Rapid City",
+      "areas": [
+        "Rapid City"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.anywhererv.net/about",
+        "phone_quote": "(605) 877-5004 (6058775004)",
+        "coverage_quotes": [],
+        "type_quote": "I am a RVTAA Certified RV Technician, and a NRVIA Certified RV Inspector, offering exceptional RV repair and maintenance services.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Jerry's Camper & RV Center",
+      "c": "Lennox, SD",
+      "p": "(605) 647-4142",
+      "u": "https://www.jerrysrvs.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Jerry's Camper & RV Center is an RV dealer with a service department in Lennox, South Dakota, serving the state since 1979. Its factory-trained and certified technicians provide routine maintenance, inspections, major repairs and warranty work for motorhomes and trailers. It uses manufacturer-approved parts and offers transparent estimates and up-front pricing.",
+      "g": [
+        "rv service center"
+      ],
+      "base": "Lennox",
+      "areas": [
+        "Lennox"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.jerrysrvs.com/rv-service",
+        "phone_quote": "Give us a call at (605) 647-4142 to discuss your RV's needs.",
+        "coverage_quotes": [
+          "Visit our service department in Lennox, SD and meet our friendly technicians."
+        ],
+        "type_quote": "At Jerry's Camper & RV Center, our mission is to keep your RV adventure running smoothly for years to come.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Pickles RV",
+      "c": "Piedmont, SD",
+      "p": "605-645-3604",
+      "u": "https://www.picklesrv.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Pickles RV is a small, local family-run RV service business at 21390 State Street in Piedmont, South Dakota. It offers all RV services, describes itself as a roof replacement specialist and does full RV wash, wax and buff jobs. It is an authorized service center for Keystone RV, handling warranty work and recalls, and also offers RV inspections.",
+      "g": [
+        "rv service center"
+      ],
+      "base": "Piedmont",
+      "areas": [
+        "Piedmont"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.picklesrv.com/",
+        "phone_quote": "605-645-3604",
+        "coverage_quotes": [
+          "21390 State Street Piedmont SD 57769"
+        ],
+        "type_quote": "We are small, local family run business and not afraid of hard work.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Liebelt RV",
+      "c": "Aberdeen, SD",
+      "p": "605-225-8400",
+      "u": "https://liebeltrv.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Liebelt RV is a family-owned RV dealer offering sales, parts and service at 2821 West Hwy 12 in Aberdeen, South Dakota. It has been an Aberdeen business for over 60 years. Its service shop is open Monday through Friday with Saturday hours, and its office hours are listed separately from the service shop.",
+      "g": [
+        "rv service center"
+      ],
+      "base": "Aberdeen",
+      "areas": [
+        "Aberdeen"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://liebeltrv.com/",
+        "phone_quote": "605-225-8400",
+        "coverage_quotes": [
+          "Come See Us At 2821 West Hwy 12, Aberdeen, South Dakota!"
+        ],
+        "type_quote": "SALES - PARTS - SERVICE",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Team Lodge",
+      "c": "Watertown, SD",
+      "p": "(605) 695-8841",
+      "u": "https://www.teamlodge.com/service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Team Lodge offers RV and wheelhouse service at its shop in Watertown, South Dakota. It services all types of campers, RVs, wheel houses, toy haulers and trailers. Its service menu includes an extreme service package, siding and roof repair and full axle replacement, priced at $120 per hour plus service costs.",
+      "g": [
+        "rv service center"
+      ],
+      "base": "Watertown",
+      "areas": [
+        "Watertown"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.teamlodge.com/service",
+        "phone_quote": "call us at (605) 695-8841 ((605)695-8841)",
+        "coverage_quotes": [
+          "we now offer a full range of RV and wheel house services right here at our shop in Watertown, SD."
+        ],
+        "type_quote": "We will service ALL types of campers, RVs, wheel houses, toy haulers and trailers!",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Advantage RVs & Trailers",
+      "c": "Watertown, SD",
+      "p": "(605) 753-5022",
+      "u": "https://www.advantagervs.com/schedule-service/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Advantage RVs & Trailers is a camper and trailer dealer at 922 23rd St SW in Watertown, South Dakota, with a service department. Its service department handles roofs, appliances, slide-outs and awnings, and honors warranty work for the products it sells. Service is scheduled through the service department, which it describes as staffed by Master Craftsmen.",
+      "g": [
+        "rv service center"
+      ],
+      "base": "Watertown",
+      "areas": [
+        "Watertown"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.advantagervs.com/schedule-service/",
+        "phone_quote": "(605) 753-5022 (+16057535022)",
+        "coverage_quotes": [
+          "922 23rd St. SW Watertown, SD 57201"
+        ],
+        "type_quote": "From roofs and appliances, to slide-outs and awnings, we are here to help you with all your service needs.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Jack's Campers",
+      "c": "Mitchell, SD",
+      "p": "(605) 996-3268",
+      "u": "https://www.jackscampers.com/service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Jack's Campers is a South Dakota RV dealer with a service department in Mitchell. Its RV maintenance and service menu includes A/C repair, appliance service, axle repairs, electrical systems, furnace repair, hail damage repair, hitch installation, roof repair, interior updates and restorations, warranty repairs, water systems and winterization. Appointments are made through the Mitchell service department.",
+      "g": [
+        "rv service center"
+      ],
+      "base": "Mitchell",
+      "areas": [
+        "Mitchell"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.jackscampers.com/service",
+        "phone_quote": "Mitchell (mitchellservice@jackscampers.com)(605) 996-3268 (6059963268)",
+        "coverage_quotes": [
+          "RV Maintenance & RV Service Repairs | South Dakota RV Dealer"
+        ],
+        "type_quote": "Our friendly and knowledgeable RV service staff is waiting to service all your RV needs",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "R & R Mobile Home and RV Repair",
+      "c": "Pierre, SD",
+      "p": "605-280-5919",
+      "u": "https://www.randrmobilehomeandrvrepair.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "R & R Mobile Home and RV Repair provides mobile RV and motorhome repair and maintenance serving Pierre, South Dakota and the surrounding areas. It handles electrical and plumbing as well as skirting and leveling, and also provides mobile home appliance repair. It states over 10 years of experience in camper and motorhome repair.",
+      "g": [
+        "mobile rv technician"
+      ],
+      "base": "Pierre",
+      "areas": [
+        "Pierre"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.randrmobilehomeandrvrepair.com/",
+        "phone_quote": "Tel: 605-280-5919",
+        "coverage_quotes": [
+          "Serving Pierre, SD and the Surrounding Areas 605-280-5919",
+          "Service Area: Pierre, SD and the surrounding areas"
+        ],
+        "type_quote": "We Fix It All on RVs and Motorhomes",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Boxy's Paint & Body, Inc.",
+      "c": "Sioux Falls, SD",
+      "p": "(605) 543-5568",
+      "u": "https://boxys.net/specialty-vehicle-repair/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Boxy's Paint & Body, Inc. is a body shop at 25731 Cottonwood Ave in Sioux Falls, South Dakota, serving the area since 1989. It handles complete RV and camper body restoration including aluminum and fiberglass sidewall repair and replacement, roof damage from hail, tree impact and weather, custom color matching for factory RV paint schemes and decal replacement. It also assists with insurance claims for storm-damaged RVs.",
+      "g": [
+        "rv body shop",
+        "rv collision"
+      ],
+      "base": "Sioux Falls",
+      "areas": [
+        "Sioux Falls",
+        "Harrisburg",
+        "Brandon",
+        "Tea"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://boxys.net/specialty-vehicle-repair/",
+        "phone_quote": "(605) 543-5568 (6055435568)",
+        "coverage_quotes": [
+          "Boxy's Paint & Body has served Sioux Falls, Harrisburg, Brandon, Tea, and surrounding South Dakota communities since 1989."
+        ],
+        "type_quote": "Boxy's handles complete RV body restoration",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Mack's Auto Body",
+      "c": "Aberdeen, SD",
+      "p": "(605) 225-0480",
+      "u": "https://www.macksautobodyinc.com/boat-rv-and-truck-repair-services",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Mack's Auto Body is an Aberdeen, South Dakota body shop that has served the area since 1977 and works on boats, RVs and trucks as well as cars. Its RV work includes fiberglass work, aluminum work and camper repairs. It offers same-day estimates, free loaner cars, warranties and works with all insurance companies.",
+      "g": [
+        "rv body shop",
+        "rv collision"
+      ],
+      "base": "Aberdeen",
+      "areas": [
+        "Aberdeen"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.macksautobodyinc.com/boat-rv-and-truck-repair-services",
+        "phone_quote": "(605) 225-0480",
+        "coverage_quotes": [
+          "Repairs for All Your Vehicles in Aberdeen, SD"
+        ],
+        "type_quote": "Beyond cars, we work with boats, RVs, and trucks.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Schaaps RV Traveland",
+      "c": "Sioux Falls, SD",
+      "p": "605-332-6241",
+      "u": "https://www.rvtraveland.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Schaaps RV Traveland is an RV dealer in Sioux Falls, South Dakota with a certified RV service department. Its staff of certified RV technicians is ready to service nearly any brand of RV. The service department is at 3100 West Russell Street in Sioux Falls and is open Monday to Thursday, Friday and Saturday, closing on Sundays.",
+      "g": [
+        "rv service center"
+      ],
+      "base": "Sioux Falls",
+      "areas": [
+        "Sioux Falls"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.rvtraveland.com/rv-service",
+        "phone_quote": "605-332-6241 (6053326241)",
+        "coverage_quotes": [
+          "3100 West Russell Street Sioux Falls, SD 57107"
+        ],
+        "type_quote": "Our staff of highly trained certified RV technicians is ready to service nearly any brand of RV.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "PleasureLand RV Center - Sioux Falls",
+      "c": "Sioux Falls, SD",
+      "p": "605-339-0436",
+      "u": "https://www.pleasurelandrv.com/locations/sioux-falls-sd",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "PleasureLand RV Center is an RV dealer at 4705 N. Northview Ave in Sioux Falls, South Dakota, near Interstate 29 Exit 83. Its Sioux Falls location includes five dedicated service bays staffed by experienced technicians who handle routine maintenance and more involved repairs. The service department includes RVIA-certified technicians and a Master Certified Technician.",
+      "g": [
+        "rv service center"
+      ],
+      "base": "Sioux Falls",
+      "areas": [
+        "Sioux Falls",
+        "Brandon",
+        "Harrisburg",
+        "Tea",
+        "Canton"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.pleasurelandrv.com/locations/sioux-falls-sd",
+        "phone_quote": "Sioux Falls Northview Ave 4705 N. Northview Ave Sioux Falls, SD 57107 605-339-0436",
+        "coverage_quotes": [
+          "This location includes five dedicated service bays staffed by experienced technicians who can handle everything from routine maintenance to more involved repairs."
+        ],
+        "type_quote": "Yes, our Sioux Falls dealership has a full RV service department with five service bays and experienced technicians.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Camping World - Sioux Falls",
+      "c": "Sioux Falls, SD",
+      "p": "(888) 796-8743",
+      "u": "https://rv.campingworld.com/dealer/sioux-falls-south-dakota/rv-service-repair",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Camping World operates an RV service and repair location at 1601 E Robur Drive in Sioux Falls, South Dakota. It provides complete service and repair for all RV types, including diagnostics, repairs, routine maintenance and warranty work, plus maintenance services such as oil and fluid changes, lube, winterization and de-winterization. Its diagnostics include a 45-point inspection covering the inverter and converter, electrical outlets, generators, plumbing, LP systems and appliances.",
+      "g": [
+        "rv service center"
+      ],
+      "base": "Sioux Falls",
+      "areas": [
+        "Sioux Falls"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://rv.campingworld.com/dealer/sioux-falls-south-dakota/rv-service-repair",
+        "phone_quote": "(888) 796-8743 (8887968743)",
+        "coverage_quotes": [
+          "1601 E Robur Drive",
+          "Sioux Falls, SD 57104-0500"
+        ],
+        "type_quote": "We provide complete service and repair for all RV types.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "A and D Campers",
+      "c": "Brookings, SD",
+      "p": "(605) 697-7859",
+      "u": "https://www.gpautorepair.com/About/A-and-D-Campers",
+      "t": "center",
+      "e": false,
+      "r": true,
+      "d": "A and D Campers is an RV service and repair business at 515 32nd Ave in Brookings, South Dakota. It has a hoist capable of lifting 25,000 pounds and can service RVs up to 40 feet long. Its services include pre-purchase inspections, exhaust repairs, service of engine and transmission fluids, plumbing repairs, tire rotations and undercarriage work covering driveshafts, U-joints, fuel systems and spring failures.",
+      "g": [
+        "rv service center",
+        "chassis/engine repair"
+      ],
+      "base": "Brookings",
+      "areas": [
+        "Brookings"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.gpautorepair.com/About/A-and-D-Campers",
+        "phone_quote": "Phone: (605) 697-7859",
+        "coverage_quotes": [
+          "515 32nd Ave Brookings, SD 57006"
+        ],
+        "type_quote": "We have the equipment necessary, including a hoist, to service and repair your RV!",
+        "emergency_quote": null,
+        "roadside_quote": "Service of engine fluids",
+        "licence": null
+      }
+    },
+    {
+      "n": "Kustomz Truck & Auto",
+      "c": "Rapid City, SD",
+      "p": "605-787-4179",
+      "u": "https://www.kustomztruckandauto.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Kustomz Truck & Auto is a locally owned body shop at 2660 Haines Avenue in Rapid City, South Dakota. Under its Marine & RV Services it lists gel coat, fiberglass and aluminum repair, and RV exterior repair and paint. It does body work on RVs and campers alongside cars, trucks and boats, and is a PPG Certified Collision Repair shop.",
+      "g": [
+        "rv body shop",
+        "rv collision"
+      ],
+      "base": "Rapid City",
+      "areas": [
+        "Rapid City"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.kustomztruckandauto.com/",
+        "phone_quote": "Tel: 605-787-4179",
+        "coverage_quotes": [
+          "2660 Haines Avenue",
+          "Rapid City, SD 57701"
+        ],
+        "type_quote": "RV Exterior Repair & Paint",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    }
+  ]
+}

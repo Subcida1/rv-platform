@@ -263,6 +263,32 @@ PHOTOS += [
 ]
 
 
+# Added 2026-10-04 with the plains expansion. Licences read off each file's own
+# Commons description page.
+PHOTOS += [
+    ("kansas",
+     "Classic Kansas field of waving wheat LCCN2011632245.tif",
+     "Public domain (no known restrictions)", "Carol M. Highsmith",
+     "https://commons.wikimedia.org/wiki/File:Classic_Kansas_field_of_waving_wheat_LCCN2011632245.tif",
+     "A field of wheat in Kansas"),
+    ("nebraska",
+     "Sand Hills Grassland Near Seneca, Nebraska 01.jpg",
+     "CC0 1.0 (public domain dedication)", "Z3lvs",
+     "https://creativecommons.org/publicdomain/zero/1.0/",
+     "Sand hills grassland near Seneca, Nebraska"),
+    ("northdakota",
+     "Rolling Prairie View, Dakota Prairie Grasslands, North Dakota (51916292984).jpg",
+     "Public domain (US Forest Service)", "Forest Service, Northern Region",
+     "https://commons.wikimedia.org/wiki/File:Rolling_Prairie_View,_Dakota_Prairie_Grasslands,_North_Dakota_(51916292984).jpg",
+     "Rolling prairie in the Dakota Prairie Grasslands, North Dakota"),
+    ("southdakota",
+     "Badlands along South Dakota Highway 44 in Badlands National Park, near Scenic Pass, 2009 (1).jpg",
+     "CC0 1.0 (public domain dedication)", "DimiTalen",
+     "https://creativecommons.org/publicdomain/zero/1.0/",
+     "The Badlands along Highway 44 in Badlands National Park, South Dakota"),
+]
+
+
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     credits = ["# State tile photo credits", "",

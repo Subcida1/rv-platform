@@ -212,3 +212,31 @@ Recorded anyway, because the source should be traceable.
 - Author: Wisconsin Division of Tourism
 - Licence: Public domain (Wisconsin Division of Tourism) <https://commons.wikimedia.org/wiki/File:Apostle_Islands-Raspberry_Island.jpg>
 - Tile alt text: Raspberry Island in the Apostle Islands, Wisconsin
+
+## kansas
+
+- File: [Classic Kansas field of waving wheat LCCN2011632245.tif](https://commons.wikimedia.org/wiki/File:Classic_Kansas_field_of_waving_wheat_LCCN2011632245.tif)
+- Author: Carol M. Highsmith
+- Licence: Public domain (no known restrictions) <https://commons.wikimedia.org/wiki/File:Classic_Kansas_field_of_waving_wheat_LCCN2011632245.tif>
+- Tile alt text: A field of wheat in Kansas
+
+## nebraska
+
+- File: [Sand Hills Grassland Near Seneca, Nebraska 01.jpg](https://commons.wikimedia.org/wiki/File:Sand_Hills_Grassland_Near_Seneca%2C_Nebraska_01.jpg)
+- Author: Z3lvs
+- Licence: CC0 1.0 (public domain dedication) <https://creativecommons.org/publicdomain/zero/1.0/>
+- Tile alt text: Sand hills grassland near Seneca, Nebraska
+
+## northdakota
+
+- File: [Rolling Prairie View, Dakota Prairie Grasslands, North Dakota (51916292984).jpg](https://commons.wikimedia.org/wiki/File:Rolling_Prairie_View%2C_Dakota_Prairie_Grasslands%2C_North_Dakota_%2851916292984%29.jpg)
+- Author: Forest Service, Northern Region
+- Licence: Public domain (US Forest Service) <https://commons.wikimedia.org/wiki/File:Rolling_Prairie_View,_Dakota_Prairie_Grasslands,_North_Dakota_(51916292984).jpg>
+- Tile alt text: Rolling prairie in the Dakota Prairie Grasslands, North Dakota
+
+## southdakota
+
+- File: [Badlands along South Dakota Highway 44 in Badlands National Park, near Scenic Pass, 2009 (1).jpg](https://commons.wikimedia.org/wiki/File:Badlands_along_South_Dakota_Highway_44_in_Badlands_National_Park%2C_near_Scenic_Pass%2C_2009_%281%29.jpg)
+- Author: DimiTalen
+- Licence: CC0 1.0 (public domain dedication) <https://creativecommons.org/publicdomain/zero/1.0/>
+- Tile alt text: The Badlands along Highway 44 in Badlands National Park, South Dakota

@@ -1,0 +1,504 @@
+{
+  "state": "NE",
+  "name": "Nebraska",
+  "regions": [
+    {
+      "key": "omaha-ne",
+      "label": "Omaha and the east"
+    },
+    {
+      "key": "lincoln-ne",
+      "label": "Lincoln and the southeast"
+    },
+    {
+      "key": "central-ne",
+      "label": "Grand Island, Kearney and the middle"
+    },
+    {
+      "key": "west-ne",
+      "label": "North Platte, Ogallala and the west"
+    }
+  ],
+  "region_of": {
+    "Omaha": "omaha-ne",
+    "Blair": "omaha-ne",
+    "Lincoln": "lincoln-ne",
+    "Grand Island": "central-ne",
+    "Kearney": "central-ne",
+    "Saint Paul": "central-ne",
+    "Red Cloud": "central-ne",
+    "Columbus": "central-ne",
+    "Norfolk": "central-ne",
+    "North Platte": "west-ne",
+    "Ogallala": "west-ne"
+  },
+  "listings": [
+    {
+      "n": "Powers Mobile RV",
+      "c": "Omaha, NE",
+      "p": "402-204-3875",
+      "u": "https://powersmobilerv.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "Powers Mobile RV is a veteran-owned mobile RV repair and inspection business based in Omaha, Nebraska, licensed and insured to operate in Nebraska and Iowa. The site says it is certified to repair all major RV systems including electrical, air conditioning, propane and water, and that it comes to the customer. It also offers preventative maintenance, 600-point RV inspections, and RV owner bootcamp sessions.",
+      "g": [
+        "mobile tech",
+        "emergency"
+      ],
+      "base": "Omaha",
+      "areas": [
+        "Omaha"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://powersmobilerv.com/",
+        "phone_quote": "402-204-3875",
+        "coverage_quotes": [
+          "Omaha, Nebraska, United States"
+        ],
+        "type_quote": "We are certified to repair all major RV systems. From electrical, air conditioning, propane, water and anything else our customers may need help with. We will come to you and help you get your RV back in working order so you can get back to making memories!",
+        "emergency_quote": "After hours or emergency services are available.",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Omaha RV Repair",
+      "c": "Omaha, NE",
+      "p": "402-517-0149",
+      "u": "https://omaharvrepair.com/",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "Omaha RV Repair is a locally owned mobile RV repair service with an indoor shop in Nickerson, Nebraska, serving the Omaha Metro. The site says it repairs RV appliances, roofs and sealant, electrical systems, plumbing, and slide-outs and awnings. It offers mobile service to the customer's campsite, driveway or storage facility as well as in-shop work for more extensive repairs.",
+      "g": [
+        "mobile tech",
+        "service center"
+      ],
+      "base": "Omaha",
+      "areas": [
+        "Omaha",
+        "Nickerson"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://omaharvrepair.com/",
+        "phone_quote": "402-517-0149 (4025170149)",
+        "coverage_quotes": [
+          "We proudly serve the Omaha Metro and surrounding communities.",
+          "For more extensive repairs, we have a fully equipped shop located in Nickerson, NE, ready to handle all your RV needs."
+        ],
+        "type_quote": "We come to your location — campsite, driveway, or storage facility.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Rolling Rabbit RV Repair",
+      "c": "Omaha, NE",
+      "p": "(531) 395 - 9135",
+      "u": "https://www.rollingrabbitrvrepairs.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Rolling Rabbit RV Repair provides mobile RV repair, maintenance, and inspections within a 30 to 60 mile radius of Omaha, Nebraska. The site says it performs inspections, roof care, seasonal maintenance, winterization and de-winterization, and routine one-visit repairs at the customer's home, storage lot or campsite. It lists Omaha, La Vista, Papillion, Bellevue, Plattsmouth, Gretna, Millard, Elkhorn, and Ashland as Nebraska service areas.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Omaha",
+      "areas": [
+        "Omaha",
+        "La Vista",
+        "Papillion",
+        "Bellevue",
+        "Plattsmouth",
+        "Gretna",
+        "Millard",
+        "Ashland"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.rollingrabbitrvrepairs.com/",
+        "phone_quote": "(531) 395 - 9135",
+        "coverage_quotes": [
+          "Nebraska Service Areas: Omaha, La Vista, Papillion, Bellevue, Plattsmouth, Gretna, Millard, Elkhorn, and Ashland."
+        ],
+        "type_quote": "Need a small repair while we're there? We handle common maintenance items like vent covers, roof vents, faucets, toilets, marker lights, water pumps, and other routine one-visit repairs.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Floyds Mobile RV Service & Inspection",
+      "c": "Blair, NE",
+      "p": "531-800-2873",
+      "u": "https://floydsrvservice.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Floyds Mobile RV Service & Inspection is a certified RV technician providing on-site diagnostics, repairs and inspections, based in Blair, Nebraska. The site says the mobile RV service is done right the first time and is delivered on-site with precision and integrity.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Blair",
+      "areas": [
+        "Blair"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://floydsrvservice.com/",
+        "phone_quote": "531-800-2873 (+1-531-800-2873)",
+        "coverage_quotes": [
+          "594 S. 17th St.",
+          "Blair, NE 68008"
+        ],
+        "type_quote": "Certified RV technician providing professional diagnostics, repairs, and inspections — delivered on-site with precision and integrity.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Sunrise RV Solar and Repair",
+      "c": "North Platte, NE",
+      "p": "(308) 520-1562",
+      "u": "https://sunriservsolar.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Sunrise RV Solar and Repair is a veteran-owned, fully mobile RV repair service based in North Platte, Nebraska, serving the surrounding areas. The site says it performs appliance repairs, minor roof fixes, electrical and plumbing work on site at the customer's doorstep, campsite or wherever they are parked, along with custom solar installations. The technician is certified through the RV Training Institute.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "North Platte",
+      "areas": [
+        "North Platte"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://sunriservsolar.com/",
+        "phone_quote": "(308) 520-1562 (3085201562)",
+        "coverage_quotes": [
+          "We are a fully mobile RV repair service based in North Platte, Nebraska, proudly serving the surrounding areas."
+        ],
+        "type_quote": "From appliance repairs and minor roof fixes to electrical and plumbing work, we come to you with the tools, parts, and expertise to get you back on the road quickly and safely.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Rich & Sons RV Headquarters",
+      "c": "Grand Island, NE",
+      "p": "308-223-3586",
+      "u": "https://www.richsonsrv.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Rich & Sons RV Headquarters is an RV dealership and service operation in Grand Island, Nebraska. Its service page says it staffs 25 service technicians and customer service representatives with 21 service bays and a fully stocked parts department. It offers maintenance, factory warranty repairs, insurance estimates and repairs, and major interior and exterior repairs, with waiting, drop-off and pick-up appointment types.",
+      "g": [
+        "service center"
+      ],
+      "base": "Grand Island",
+      "areas": [
+        "Grand Island"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.richsonsrv.com/rv-service",
+        "phone_quote": "Parts & Service (308) 223-3586",
+        "coverage_quotes": [
+          "Grand Island, NE 5112 S. Antelope Drive Grand Island, NE 68803 (800) 439-2040 (800-439-2040)"
+        ],
+        "type_quote": "Rich & Sons is proud to staff 25 service technicians and customer service representatives to help with all your parts and service needs. We proudly boast 21 service bays and a fully stocked parts department.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Expert RV Service Center",
+      "c": "Grand Island, NE",
+      "p": "308-244-1789",
+      "u": "https://www.expertrvservice.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Expert RV Service Center is a new RV service centre in central Nebraska, booking appointments for camper repairs and upgrades. The site names itself as the newest RV service in the Midwest and publishes a call line. Its published address is 3333 W Stolley Park Rd, Grand Island.",
+      "g": [
+        "service center"
+      ],
+      "base": "Grand Island",
+      "areas": [
+        "Grand Island"
+      ],
+      "region": "Midwest",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.expertrvservice.com/",
+        "phone_quote": "CALL (308)-244-1789",
+        "coverage_quotes": [
+          "The Newest RV Service In The Midwest,"
+        ],
+        "type_quote": "The Newest RV Service In The Midwest,",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Larry's RV Sales & Service",
+      "c": "North Platte, NE",
+      "p": "308.532.5474",
+      "u": "https://www.larrysrvsales.com/service.htm",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Larry's RV Sales & Service is a complete RV dealer in North Platte, Nebraska, with a service department whose technicians have over 50 years of combined experience. The site says the service department does all appliance repair, plumbing and electrical repair, installs hitches, brake controls and wiring, and reskins and rebuilds damaged RVs.",
+      "g": [
+        "service center"
+      ],
+      "base": "North Platte",
+      "areas": [
+        "North Platte"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.larrysrvsales.com/service.htm",
+        "phone_quote": "308.532.5474",
+        "coverage_quotes": [
+          "1802 E 4th Street North Platte, Nebraska 69101"
+        ],
+        "type_quote": "The service department at Larry's RV does all appliance repair, plumbing and electrical repair. We also install hitches, brake controls, wiring, etc... Plus we reskin and rebuild damaged RVs.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Classy Camper RV & Trailer Repair",
+      "c": "Lincoln, NE",
+      "p": "402-840-2439",
+      "u": "https://www.classycamperrepair.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Classy Camper RV & Trailer Repair is a locally owned shop in Lincoln, Nebraska, offering general RV repairs, trailer repairs, parts and installations, and seasonal maintenance. The site says it treats every job like it matters and handles prep for road trips or fixing up a family camper.",
+      "g": [
+        "service center"
+      ],
+      "base": "Lincoln",
+      "areas": [
+        "Lincoln"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.classycamperrepair.com/",
+        "phone_quote": "402-840-2439",
+        "coverage_quotes": [
+          "222 SW 31st St. Lincoln, NE 68522 (402) 840-2439 info@classycamperrepair.com"
+        ],
+        "type_quote": "We’re proud to be a locally-owned shop offering honest, high-quality repairs for RVs, trailers, and more.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Leach Camper Sales of Lincoln",
+      "c": "Lincoln, NE",
+      "p": "402-466-8581",
+      "u": "https://www.leachrv.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Leach Camper Sales of Lincoln is an RV dealer in Lincoln, Nebraska, with a service department of service writers and certified technicians. The site says it services motorhomes, fifth wheels and travel trailers with pre-season inspection, winterization and de-winterization, brake and wheel inspection, A/C install, hitch installation, insurance estimates and roof inspection and spot reseal. It names Omaha, Bellevue, Falls City, Fairbury and Norfolk as areas it serves.",
+      "g": [
+        "service center"
+      ],
+      "base": "Lincoln",
+      "areas": [
+        "Lincoln",
+        "Omaha",
+        "Bellevue",
+        "Falls City",
+        "Fairbury",
+        "Norfolk"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.leachrv.com/rv-service",
+        "phone_quote": "CALL OR TEXT 402-466-8581",
+        "coverage_quotes": [
+          "Leach Camper Sales of Lincoln is proud to provide quality service to the areas of Omaha, Bellevue, Falls City, Fairbury, Norfolk and beyond."
+        ],
+        "type_quote": "Leach Camper Sales of Lincoln has an outstanding team of service writers and certified service technicians.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Central Body Company",
+      "c": "Omaha, NE",
+      "p": "(402) 551-3177",
+      "u": "https://centralbody.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Central Body Company is a family-owned auto body and collision shop in Omaha, Nebraska, with more than 45 years of experience. The site says it provides high-quality auto repair services on RVs, trucks and SUVs, and can handle repairs to motor homes, boats, jet skis and semis. It handles RV insurance claims and offers immediate appointments, extended hours and weekend and holiday openings.",
+      "g": [
+        "service center"
+      ],
+      "base": "Omaha",
+      "areas": [
+        "Omaha",
+        "Gretna"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://centralbody.com/",
+        "phone_quote": "(402) 551-3177",
+        "coverage_quotes": [
+          "4682 Leavenworth St Omaha, NE 68106"
+        ],
+        "type_quote": "For more than 45 years, the trained technicians at Central Body Company have provided high-quality auto repairs services on RV's, trucks, and SUVs in Omaha, Grenta, Kansas City, Shawnee, and Council Bluffs.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Precision RV & Auto",
+      "c": "Columbus, NE",
+      "p": "402-564-4111",
+      "u": "https://www.precisionunibody.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Precision RV & Auto is an RV dealership and repair shop in Columbus, Nebraska. The site says it offers travel trailers, fifth wheel campers and Class A, B and C motorhomes, with dedicated repair services for all campers to keep them ready for the road. Its published address is 5319 29th Street Ste 400, Columbus.",
+      "g": [
+        "service center"
+      ],
+      "base": "Columbus",
+      "areas": [
+        "Columbus"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.precisionunibody.com/",
+        "phone_quote": "Office (402)-564-4111",
+        "coverage_quotes": [
+          "Address: 5319 29th. Street STE 400 Columbus, Nebraska 68601"
+        ],
+        "type_quote": "At Precision RV & Auto, we pride ourselves on offering top-notch travel trailers, 5th wheel campers, and motorized RVs. Our dedicated repair services ensure that every camper is ready for the road.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "RVEng LLC",
+      "c": "Ogallala, NE",
+      "p": "308-224-1006",
+      "u": "https://www.rveng.org/",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "RVEng LLC is an RV service center in Ogallala, Nebraska, offering both mobile and shop based repairs. The site says its technicians have over five years of experience fixing all types of RVs and campers, with a three-step process of scheduling a service, bringing the RV to the shop, and getting back on the road. Its published address is 1049 Keystone-Roscoe Rd, Ogallala.",
+      "g": [
+        "mobile tech",
+        "service center"
+      ],
+      "base": "Ogallala",
+      "areas": [
+        "Ogallala"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.rveng.org/",
+        "phone_quote": "308-224-1006",
+        "coverage_quotes": [
+          "We are located at 1049 keystone-roscoe RD Ogallala NE If you are having trouble finding our shop just give us a call, and we will guide you to our location +1-308-224-1006"
+        ],
+        "type_quote": "Our technicians have over 5 years of experience fixing all types of Rv's and campers We provide both mobile and shop based repairs",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "SMT Mobile RV Repair and Service",
+      "c": "Southeast Nebraska",
+      "p": "402-417-6415",
+      "u": "https://www.smtrv.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "SMT Mobile RV Repair and Service is a family-owned mobile RV repair business led by an RVTAA certified and insured RV technician based in Southeast Nebraska. The site says it comes to the customer at their house, campground or storage unit to diagnose, repair and service most RV needs, including electrical and plumbing issues and appliance repairs. It is 100% mobile.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": null,
+      "areas": [],
+      "region": "Southeast Nebraska",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.smtrv.com/",
+        "phone_quote": "CALL or TEXT 402-417-6415",
+        "coverage_quotes": [
+          "We primarily service Southeast Nebraska. SMT Mobile RV can diagnose, repair and service most of your RV needs right where your RV is located."
+        ],
+        "type_quote": "I am a professional RVTAA Certified RV Technician based in Southeast Nebraska. I offer expert mobile RV repair, top-notch maintenance and comprehensive services. I come to your location to efficiently repair your camper and get you back on the road quickly.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      },
+      "reg": "lincoln-ne"
+    },
+    {
+      "n": "24 HR RV",
+      "c": "Central-eastern Nebraska",
+      "p": "888-855-2465",
+      "u": "https://24hrrv.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "24 HR RV is a mobile RV repair service covering central-eastern Nebraska and surrounding areas. The site says its goal is to provide convenient and reliable repair services at the customer's doorstep, and that its service trucks carry a fully stocked parts supply so most jobs can be fixed on the spot. It is authorized to perform repairs and services for insurance companies and warranty companies.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": null,
+      "areas": [],
+      "region": "central-eastern Nebraska",
+      "spec": null,
+      "evidence": {
+        "checked": "https://24hrrv.com/",
+        "phone_quote": "888-855-2465 (8888552465)",
+        "coverage_quotes": [
+          "Our service area covers central-eastern Nebraska and surrounding areas"
+        ],
+        "type_quote": "At 24 Hour RV, our goal is to provide convenient and reliable repair services right at your doorstep.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      },
+      "reg": "central-ne"
+    }
+  ]
+}
