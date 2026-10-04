@@ -2623,3 +2623,60 @@ else's commit, which is the exact failure the explicit-path rule exists to preve
 
 **Committed but NOT pushed:** `5fd83b7` (the palette check line numbers). It will go up with their push
 once their work is green, since we share the branch.
+
+---
+
+## THE SCANNERS WERE WALKING INTO A NESTED CHECKOUT, AND TWO RED MAINS CAME FROM VERIFYING THE WRONG TREE
+
+**Two lessons from 2026-10-04 that outlive the commits that earned them.**
+
+### 1. `ROOT.rglob`, `os.walk` and `readdirSync` do not stop at the checkout
+
+**Letta keeps agent worktrees under `.letta/worktrees/<name>/`, and each one is a FULL COPY of this
+repository.** Four instruments were walking into that copy and treating its files as the site:
+
+| file | walk |
+|---|---|
+| `scripts/verify.py` | `ROOT.rglob(...)` with only a `.git` filter |
+| `scripts/build-shell.mjs` | `fs.readdirSync(ROOT, { recursive: true })` |
+| `scripts/stamp_assets.py` | `ROOT.rglob('*.html')` |
+| `scripts/build-sitemap.py` | `os.walk(ROOT)` with no `dirnames[:]` prune |
+
+**The symptoms were bizarre and all had the same cause.** The banned-words rule fired on the worktree's
+OWN `verify.py`, because that file contains the words "rig" and "RVVerse" as rule definitions. The link
+and photo-credit checks fired on its in-progress pages. The shell and stamp checks reported 149 pages
+out of date instead of 74, and were **rewriting another agent's checkout.**
+
+**AND CI STAYED GREEN THE WHOLE TIME, because the runner has no `.letta` directory.** That divergence is
+what made this hard to see: a red local gate and a green remote one looked like a content problem.
+
+**THE FIX, in all four: an explicit `SKIP_PARTS = {'.git', '.letta', 'node_modules'}` filter, or, for
+`os.walk`, `dirnames[:] = [d for d in dirnames if d not in ...]` INSIDE the loop that binds `dirnames`.**
+That last one has a trap: putting the prune before the loop raises `UnboundLocalError`, which is how the
+first attempt at it failed.
+
+### 2. VERIFY THE COMMIT, NOT THE WORKING TREE — `git archive HEAD` into a temp dir
+
+**Main went red twice tonight on checks that passed locally, and both times the working tree was the
+reason.** It held the parallel session's uncommitted CSS and JS, so my committed pages referenced asset
+hashes the runner could not reproduce; and it held their `parts/` page, so the committed
+`search-index.js` pointed at a page that was not in the commit.
+
+**Both were invisible locally and obvious from a clean extraction:**
+
+```
+rm -rf /tmp/cicheck && mkdir -p /tmp/cicheck
+git archive HEAD | tar -x -C /tmp/cicheck
+cd /tmp/cicheck && python3 scripts/verify.py
+```
+
+**That is the check that predicts the runner, and it should run before any push to a shared tree.** It
+found the dangling index entry immediately.
+
+### 3. And the smaller ones, all mine, all already in my own notes
+
+- **Stamping decides what the commit CONTAINS, not what precedes it.** If the stamp touches a file, that
+  file belongs in the same push, mine or not.
+- **`git commit -m` with an apostrophe in the message** split the argument and failed with pathspec errors.
+  The rule is `-F` with a file. It was written down and not followed.
+- **`python3 scripts/ci.sh`** is not running the CI. It is a shell script.
