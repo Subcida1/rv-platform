@@ -17,6 +17,7 @@ check out, so a rejection can be argued with rather than guessed at.
 
 import json
 import html as html_mod
+import os
 import re
 import shutil
 import socket
@@ -144,8 +145,17 @@ def excluded(rec):
 
 CHROME = ["flatpak", "run", "com.google.Chrome"]
 
+# How long a single browser render may take. The default suits one state. On a batch of
+# JavaScript-heavy states it does not: the plains pass on 2026-10-04 had three states'
+# gates still cycling after thirty minutes, because one slow site holds a worker for the
+# whole timeout and there are only four workers. Lower it when re-running a large or
+# already-known-slow batch; a render that times out leaves the original verdict in place,
+# so the cost of a premature timeout is a page that stays UNJUDGED rather than one that
+# passes wrongly.
+RENDER_TIMEOUT = int(os.environ.get("ORIGINRV_RENDER_TIMEOUT") or 90)
 
-def render(url, timeout=90):
+
+def render(url, timeout=None):
     """What a real browser sees on a JavaScript-rendered page.
 
     WHY THIS EXISTS. Fix My Camper (Seale, Alabama) returns 32 characters of visible text to a
@@ -159,6 +169,8 @@ def render(url, timeout=90):
     Returns the visible text, or None when Chrome is unavailable or the render produced
     nothing.
     """
+    if timeout is None:
+        timeout = RENDER_TIMEOUT
     if not shutil.which("flatpak"):
         return None
     try:
