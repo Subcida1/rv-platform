@@ -2428,6 +2428,26 @@ tool that failed was the one built tonight, built by me, by asking for a water e
 **The existing tools were written with the reader in mind and the new one was written from the documents, which is
 the opposite of the order they should happen in.**
 
+## OOO. EVERY PAGE THAT SENDS A READER TO A MANUAL SHOULD ROUTE THEM TO OURS, and 30 of them do not
+
+**Ty spotted the inconsistency in the tool I had just fixed**: *"IF we're saying to look in your owners manual shouldn't we be linking to our manuals section? This should be a site wide practice for any relevant contextual content."*
+
+**AUDITED, AND MY FIRST AUDIT WAS WORTHLESS.** I checked whether pages mentioning a manual link `/manuals/`, got zero offenders, and nearly reported that. **The nav links `/manuals/` on every page, so the test could never fail.** Stripping the shell first gave the real number:
+
+| | pages |
+|---|---|
+| tell the reader to consult a manual | **31** |
+| link our manuals section IN THE PROSE | **1** (the snow calculator, built tonight) |
+| **do not** | **30** |
+
+The worst are `guides/rv-macerator-toilet.html` (21 mentions), `rv-toilet-not-flushing` (17), `rv-slide-out-not-working` (13), `rv-leveling-jacks-not-working` (11), `trailer-brakes-required` (11).
+
+**AND THERE IS A REAL COST, WHICH TY SHOULD SEE BEFORE THE SWEEP HAPPENS.** Adding a link to a page moves its text, and this repo treats that as a content change, so **every page that gains a manuals link is de-verified until a review covers it again.** For 30 pages that is 30 re-reviews. The same trade-off applied to the three orphan guides earlier tonight, where the answer was to add the links and re-run the reviews, because the bridge works now. **Recommendation: sweep in batches of six, one per lane, and re-review each batch as it lands, rather than editing 30 pages and leaving all of them unverified at once.**
+
+**ONE PAGE IS DONE AS THE PATTERN** (`guides/rv-toilet-not-flushing.html`, marked unverified in the manifest with the reason). The line to copy is short and sits where the page already mentions the manual: *"and the manuals section links the official copy if yours is missing."*
+
+**AND THIS IS THE SECOND TIME TONIGHT THAT A PAGE-LEVEL LINK COST A VERIFICATION.** That is worth a standing decision rather than a case-by-case one: **a link to our own index is not a claim about the world, so it arguably should not move the check date at all.** If Ty agrees, the gate is what changes and the sweep afterwards is free of re-reviews.
+
 ## Log
 
 ## Log
