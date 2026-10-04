@@ -187,9 +187,24 @@ def main():
         seen.add(key)
         print("\n  %s  ->  %s   [%s]" % (src, tgt, hits))
         print("     %s" % sent[:200])
-    print("\n%d weaker single-word candidates, for the sweep:" % len(weak))
-    for n, src, tgt, hit, sent in weak[:40]:
-        print("  %-46s -> %-44s %s" % (src, tgt, sent[:80]))
+    # A SINGLE SHARED WORD IS NOT A REFERENCE, AND ONE PAIR IS ENOUGH TO JUDGE.
+    # Measured 2026-10-03: this list ran to dozens of entries on one pair, every one of them the
+    # refrigerator page and the air conditioner page meeting on the word "cooling", which appears
+    # on both titles and is not what either page is about. Nobody can triage that. So the list is
+    # capped at ONE candidate per source-to-target pair, and ordered by how RARE the shared word is,
+    # because a word that appears on two pages sitewide ("macerator") is a real subject and a word
+    # that appears on twenty is a word the site uses everywhere.
+    weak.sort(key=lambda r: (df.get(r[3], 999), r[1], r[2]))
+    weak_seen, weak_kept = set(), []
+    for row in weak:
+        key = (row[1], row[2])
+        if key in weak_seen:
+            continue
+        weak_seen.add(key)
+        weak_kept.append(row)
+    print("\n%d single-word candidates, one per page pair, rarest shared word first:" % len(weak_kept))
+    for n, src, tgt, hit, sent in weak_kept[:30]:
+        print("  %-46s -> %-44s [%s on %d page(s)]" % (src, tgt, hit, df.get(hit, 0)))
 
 
 if __name__ == "__main__":
