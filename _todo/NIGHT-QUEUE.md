@@ -2372,6 +2372,29 @@ capture reports no answer captured.** That is the late-arrival pattern, and this
 the bridge would have to learn per lane, and the wrong click could pick a preference or close something else. **Recorded as
 a finding with the evidence, which is what the screenshot is for.**
 
+## LLL. THE WINDOW BUG WAS HIDING SAFETY DEFECTS, and two came back in consecutive reviews
+
+**The furnace review and the refrigerator review both found a physical-injury defect, in guides that had been through
+a review before.** That is not a coincidence and it is the most consequential thing the coverage bug did.
+
+| page | defect the corrected window found |
+|---|---|
+| rv-furnace-not-working | the FAQ gave an electrical test that would condemn a GOOD sail switch, and contradicted the page's own body |
+| rv-refrigerator-not-cooling | the reader was told to **feel the back of a fridge that had been running for hours** and check the boiler by touch, with *"use care"* as the only condition |
+
+**A boiler on a running absorption fridge is hot enough to burn and stays hot after switch-off.** The check itself is
+worth keeping, so it now says to read it with an infrared thermometer and keep hands clear of the flue.
+
+**WHY THIS MATTERS BEYOND THE TWO FIXES.** These pages had earlier passes. Those passes read the first 70 lines and
+the last 80, so **a defect in the middle of a page was invisible to them and stayed invisible for weeks** while the
+pages were reported as reviewed. The gate never covered prose claims, the audits cover layout and accessibility, and
+the one instrument that could have caught a wrong sentence was reading around it.
+
+**THE GENERAL LESSON, AND IT IS THE FIFTH TIME TONIGHT: a review that reports CLEAN is only as good as its coverage,
+and a coverage bug is worse than no review at all** - because it produces confidence where there should be suspicion.
+**Recommendation: any future review change gets tested by having a lane report on a page with a known defect planted
+in the middle, not by trusting that the fix worked.**
+
 ## Log
 
 ## Log
