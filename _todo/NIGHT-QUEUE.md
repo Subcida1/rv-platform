@@ -2412,6 +2412,22 @@ in the middle, not by trusting that the fix worked.**
 
 **WHERE IT APPLIES BEYOND THIS TOOL:** the weight calculator asks for a pin weight and a payload capacity, the tire decoder asks for a DOT code. Each of those should be checked against this rule the next time it is touched.
 
+## NNN. TY RULE AUDITED ACROSS ALL THREE TOOLS, and two of the three already satisfied it
+
+**Rule NNN's predecessor (MMM) says every number we ask for carries a how-to-get-it path. I audited all three
+tools field by field rather than assuming, and the result is better than I expected:**
+
+| tool | result |
+|---|---|
+| **weight calculator** | **passes.** Thirteen field blocks; the nine that ask for a DOCUMENT figure (tow rating, payload, curb, both GVWRs, GCWR, dry weight, fresh tank, propane) all carry a path: door jamb, sticker, placard, certification label, manual, brochure, or a scale. The four without guidance are **trailer type, axles, people and gear, cargo**, and every one of those is something the reader simply knows rather than looks up, so a path would be padding. |
+| **tire decoder** | **passes.** It has a whole *"Where the four digits are"* section: the code is moulded into the sidewall and starts with DOT, the NHTSA quotation for the whole number, the two traps that catch people out (the code may be on only ONE side, and the date digits are the LAST four, not the first four which are the plant code). |
+| **snow load calculator** | **was the offender**, and is now fixed: depth says to measure at three or four points and average with a safe fallback for anyone who should not be on the roof; the rating says it lives in the owner manual and links the manuals directory; and both figures published for other RVs are shown as landmarks with the kind of number each one is. |
+
+**WHAT THIS MEANS FOR THE RULE: it is not a repair, it is a standard the site was already mostly meeting.** The
+tool that failed was the one built tonight, built by me, by asking for a water equivalent and then a roof pitch.
+**The existing tools were written with the reader in mind and the new one was written from the documents, which is
+the opposite of the order they should happen in.**
+
 ## Log
 
 ## Log
