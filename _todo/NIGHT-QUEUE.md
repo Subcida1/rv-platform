@@ -2348,6 +2348,30 @@ failed, so on a healthy lane nothing new happens at all.
 room to be careful in this session, and the risk in step 3 is real. **Ty asked to close both open items; this one is
 closed as a design with a named trigger, a named location and a named risk, and it needs one pass with a lane open.**
 
+## KKK. A FIFTH BRIDGE FAILURE MODE, AND ONLY A SCREENSHOT FOUND IT: the lane blocks on a feedback dialog
+
+**Ty sent a screenshot of the Qwen lane at 18:27 and it shows the lane is not stuck on the capture at all.**
+
+> *"This feedback will help us evaluate and improve Qwen's performance. Which response do you prefer? **Select one to continue.**"*
+
+Two response cards offered, and the composer showing a **STOP control rather than a send control**. **The lane completed its task
+wrote the review file** - the `[Tool result: write_file] Successfully wrote to .../REPLY-...-generator-sizing-REVIEW5.md`
+line is right above the dialog - **and then the app blocked it on a preference choice no one is there to make.**
+
+**WHY THIS MATTERS MORE THAN IT LOOKS.** From the harness's side, a lane parked on a feedback dialog is indistinguishable
+from a lane that is thinking: the composer has a Stop control, so `generationInFlight()` returns true, the result leg holds,
+the capture finds no answer and eventually releases. **Every instrument reports "the lane did not answer" and the actual
+state is "the lane cannot proceed".** This is the fifth distinct failure mode of the night and the first one that no log
+revealed.
+
+**AND IT GIVES A PLAUSIBLE EXPLANATION FOR SOME OF THE "RELEASE NOTE" REPLIES.** A lane that hits this dialog after
+writing its file produces exactly the artifact seen repeatedly today: **the file exists and holds the real answer, while the
+capture reports no answer captured.** That is the late-arrival pattern, and this is a mechanism for it rather than a guess.
+
+**WHAT TO DO ABOUT IT IS NOT OBVIOUS AND I AM NOT PATCHING BLIND.** Dismissing a feedback dialog is a click on a control
+the bridge would have to learn per lane, and the wrong click could pick a preference or close something else. **Recorded as
+a finding with the evidence, which is what the screenshot is for.**
+
 ## Log
 
 ## Log
