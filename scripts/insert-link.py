@@ -72,6 +72,29 @@ def inside_tag(text, index):
     return text.rfind(">", 0, index) < text.rfind("<", 0, index)
 
 
+# THE SHELL IS MORE THAN THE NAV NOW, AND THE DOCSTRING ALREADY CLAIMED TO REFUSE IT.
+# build-shell.mjs injects the breadcrumb INSIDE the nav:start and nav:end region, so a page whose
+# heading carries another page's subject has that phrase first appearing in navigation rather than
+# prose. That is exactly what happened on 2026-10-04: the slide-out guide's heading is "RV slide out
+# not working", a "slide out" link went into its own breadcrumb, and the shell check caught it
+# because the generated nav stopped matching its generator.
+#
+# The docstring has claimed since it was written that the tool refuses "the nav" and the footer.
+# Only the script and style cases were implemented. The markers below are how the shell identifies
+# itself in a page, so they are what the refusal has to test.
+SHELL_SPANS = (("<!-- nav:start -->", "<!-- nav:end -->"),
+               ("<!-- crumbs:start -->", "<!-- crumbs:end -->"),
+               ("<!-- footer:start -->", "<!-- footer:end -->"))
+
+
+def in_shell(text, index):
+    """True when this position is inside the generated shell rather than the page's own prose."""
+    for start, end in SHELL_SPANS:
+        if text.rfind(start, 0, index) > text.rfind(end, 0, index):
+            return True
+    return False
+
+
 def inside_link(text, index):
     return text.rfind("<a ", 0, index) > text.rfind("</a>", 0, index)
 
@@ -88,7 +111,7 @@ def insert(page, phrase, dest, dry_run=False):
 
     for m in re.finditer(re.escape(phrase), html):
         i = m.start()
-        if in_script(html, i) or inside_tag(html, i) or inside_link(html, i):
+        if in_script(html, i) or inside_tag(html, i) or inside_link(html, i) or in_shell(html, i):
             continue
         new = html[:i] + '<a href="%s">%s</a>' % (dest, phrase) + html[i + len(phrase):]
         if words_only(new) != words_only(html):
