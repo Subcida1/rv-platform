@@ -86,3 +86,31 @@ Recorded anyway, because the source should be traceable.
 - Author: National Park Service
 - Licence: Public domain (National Park Service) <https://commons.wikimedia.org/wiki/File:Gfp-texas-big-bend-national-park-plants-on-the-desert-horizon.jpg>
 - Tile alt text: Desert horizon in Big Bend National Park, Texas
+
+## louisiana
+
+- File: [Skyline, New Orleans, Louisiana LCCN2011630536.tif](https://commons.wikimedia.org/wiki/File:Skyline%2C_New_Orleans%2C_Louisiana_LCCN2011630536.tif)
+- Author: Carol M. Highsmith
+- Licence: Public domain (no known restrictions) <https://commons.wikimedia.org/wiki/File:Skyline,_New_Orleans,_Louisiana_LCCN2011630536.tif>
+- Tile alt text: New Orleans skyline seen across the treetops, Louisiana
+
+## arkansas
+
+- File: [Buffalo River at Steel Creek Campground 001.jpg](https://commons.wikimedia.org/wiki/File:Buffalo_River_at_Steel_Creek_Campground_001.jpg)
+- Author: Brandonrush
+- Licence: CC0 1.0 (public domain dedication) <https://creativecommons.org/publicdomain/zero/1.0/>
+- Tile alt text: Buffalo National River below the bluffs at Steel Creek Campground, Arkansas
+
+## oklahoma
+
+- File: [Gloss Mountains.jpg](https://commons.wikimedia.org/wiki/File:Gloss_Mountains.jpg)
+- Author: Okiefromokla
+- Licence: Public domain (released into the public domain by the author) <https://commons.wikimedia.org/wiki/File:Gloss_Mountains.jpg>
+- Tile alt text: Red buttes of the Gloss Mountains seen from Gloss Mountain State Park, Oklahoma
+
+## mississippi
+
+- File: [Mississippi River in Natchez, Mississippi LCCN2010630373.tif](https://commons.wikimedia.org/wiki/File:Mississippi_River_in_Natchez%2C_Mississippi_LCCN2010630373.tif)
+- Author: Carol M. Highsmith
+- Licence: Public domain (no known restrictions) <https://commons.wikimedia.org/wiki/File:Mississippi_River_in_Natchez,_Mississippi_LCCN2010630373.tif>
+- Tile alt text: The Mississippi River at Natchez with a paddlewheeler and the bridge at dusk, Mississippi

@@ -122,6 +122,35 @@ PHOTOS += [
 ]
 
 
+# Added 2026-10-04 for the South/Southeast directory expansion (Louisiana, Arkansas,
+# Oklahoma, Mississippi). Licences were read on each file's Commons page: the two
+# Highsmith images carry the Library of Congress "no known restrictions" public-domain
+# statement, the Gloss Mountains photo was released into the public domain by its author,
+# and the Buffalo River photo is CC0. No attribution burden, per the house rule.
+PHOTOS += [
+    ("louisiana",
+     "Skyline, New Orleans, Louisiana LCCN2011630536.tif",
+     "Public domain (no known restrictions)", "Carol M. Highsmith",
+     "https://commons.wikimedia.org/wiki/File:Skyline,_New_Orleans,_Louisiana_LCCN2011630536.tif",
+     "New Orleans skyline seen across the treetops, Louisiana"),
+    ("arkansas",
+     "Buffalo River at Steel Creek Campground 001.jpg",
+     "CC0 1.0 (public domain dedication)", "Brandonrush",
+     "https://creativecommons.org/publicdomain/zero/1.0/",
+     "Buffalo National River below the bluffs at Steel Creek Campground, Arkansas"),
+    ("oklahoma",
+     "Gloss Mountains.jpg",
+     "Public domain (released into the public domain by the author)", "Okiefromokla",
+     "https://commons.wikimedia.org/wiki/File:Gloss_Mountains.jpg",
+     "Red buttes of the Gloss Mountains seen from Gloss Mountain State Park, Oklahoma"),
+    ("mississippi",
+     "Mississippi River in Natchez, Mississippi LCCN2010630373.tif",
+     "Public domain (no known restrictions)", "Carol M. Highsmith",
+     "https://commons.wikimedia.org/wiki/File:Mississippi_River_in_Natchez,_Mississippi_LCCN2010630373.tif",
+     "The Mississippi River at Natchez with a paddlewheeler and the bridge at dusk, Mississippi"),
+]
+
+
 def commons_page(title):
     return "https://commons.wikimedia.org/wiki/File:" + urllib.parse.quote(title.replace(" ", "_"))
 

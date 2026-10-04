@@ -16,6 +16,7 @@ check out, so a rejection can be argued with rather than guessed at.
 """
 
 import json
+import html as html_mod
 import re
 import socket
 import sys
@@ -56,13 +57,51 @@ def attrs_of(html):
 def text_of(html):
     t = re.sub(r"<(script|style)\b.*?</\1>", " ", html, flags=re.S | re.I)
     t = re.sub(r"<[^>]+>", " ", t)
-    t = re.sub(r"&nbsp;?", " ", t)
-    t = re.sub(r"&amp;", "&", t)
+    # DECODE, AND UNDO WHAT STRIPPING TAGS LEAVES BEHIND. This used to unescape only
+    # &nbsp; and &amp;, which made a genuinely verbatim quote read as fabricated whenever
+    # the page used a numeric entity: Jake's Mobile RV's own sentence contains
+    # `Jake&#8217;s` and the agent wrote `Jake's`, so the quote failed a check it should
+    # have passed. Stripping tags also leaves a space where the tag was, so the page reads
+    # "RV , we specialize" and the agent's "RV, we specialize" missed by one space. Both
+    # are artifacts of reading the source rather than the rendered page, and neither is a
+    # difference a reader would ever see. Found 2026-10-04 on the Louisiana pass, where it
+    # accounted for most of what the new fidelity metric first called "reconstructed".
+    t = html_mod.unescape(t)
+    t = re.sub(r"\s+([,.;:!?])", r"\1", t)
     return re.sub(r"\s+", " ", t).strip()
+
+
+def fold(s):
+    """Comparison form: the differences a reader cannot see, removed.
+
+    Typographic quotes and dashes versus their ASCII twins is a typesetting difference,
+    never a difference in what the page says. Folding them keeps a verbatim quote from
+    failing because the page used a curly apostrophe.
+    """
+    s = (s or "").lower()
+    for a, b in (("\u2019", "'"), ("\u2018", "'"), ("\u201c", '"'), ("\u201d", '"'),
+                 ("\u2013", "-"), ("\u2014", "-"), ("\u00a0", " "), ("\u2026", "...")):
+        s = s.replace(a, b)
+    return re.sub(r"\s+", " ", s).strip()
 
 
 def digits(s):
     return re.sub(r"\D", "", s or "")
+
+
+def longest_verbatim_prefix(quote, page):
+    """How much of a quote, in words, is actually on the page.
+
+    Returns (words_that_matched, words_total). A quote whose first 80% is on the page was
+    CLIPPED: a real sentence, cut short. A quote whose first two words are not on the page
+    was RECONSTRUCTED: written in the page's voice, not copied from it. The distinction is
+    the whole point, because only one of the two is a defect.
+    """
+    words = quote.split()
+    for n in range(len(words), 1, -1):
+        if " ".join(words[:n]) in page:
+            return n, len(words)
+    return 0, len(words)
 
 
 def resolves(host):
@@ -114,7 +153,7 @@ def bare_host(value):
 
 
 def check(rec):
-    out = {"n": rec.get("n"), "ok": True, "bad": [], "warn": [], "site": None,
+    out = {"n": rec.get("n"), "ok": True, "bad": [], "warn": [], "clip": [], "site": None,
            "excluded": excluded(rec)}
     url = rec.get("u") or ""
     host = re.sub(r"^https?://", "", url).split("/")[0]
@@ -173,7 +212,7 @@ def check(rec):
     except Exception:
         pass
     page = page + " " + " ".join(extra)
-    low = page.lower()
+    low = fold(page)
     if PARKED.search(page):
         out["ok"] = False
         out["bad"].append("parked page")
@@ -196,12 +235,24 @@ def check(rec):
         q2 = re.sub(r"\s+", " ", str(q)).strip()
         if len(q2) < 12:
             continue
-        if q2.lower() not in low:
+        out["quotes_n"] = out.get("quotes_n", 0) + 1
+        fq = fold(q2)
+        if fq not in low:
             # A report, not a rejection. The agent's evidence strings are often a
             # reconstruction of what a page said rather than a verbatim copy, and this
             # gate cannot tell a paraphrase from an invention. What does reject is the
             # hard layer above: the phone, the RV words, the parked-page test.
+            #
+            # Say WHICH it is, because the two need different responses. A CLIPPED quote is
+            # the agent taking a real sentence and cutting it short, which is harmless and
+            # usually just a length limit. A RECONSTRUCTED quote is the agent writing
+            # plausible prose in the page's voice and presenting it as the page's words,
+            # which is the defect class that shipped 7 of 11 records in the 2026-10-02 Bay
+            # Area batch. Measured on the Louisiana pass, 2026-10-04: 106 of 119 quotes
+            # verbatim, 3 clipped, 10 reconstructed, and every reconstructed one was a
+            # whole descriptive sentence rather than a coverage or phone line.
             out["warn"].append("evidence not verbatim on the page: %r" % q2[:80])
+            out["clip"].append(longest_verbatim_prefix(fq, low))
     # e and r are independent and a business may hold both (build-listings stopped forbidding
     # it on 2026-09-28); this gate kept rejecting the combination for a while after.
     if (rec.get("t") or "") not in ("mobile", "center", "both"):
@@ -230,6 +281,31 @@ def main():
             print("          %s" % b)
         for w in r["warn"]:
             print("          note: %s" % w)
+    # The batch's evidence health in one line, because a ratio is what decides whether this
+    # batch is shippable. A handful of clipped quotes is normal. A batch that is a third
+    # reconstructed is a batch to redo, not to ship, and reading 30 individual `note:` lines
+    # is not how anyone notices that.
+    #
+    # ONLY LONG QUOTES ARE CLASSIFIED. A phone number or an address that differs by a bracket
+    # or a missing space is a formatting difference, not a fabricated sentence, and counting
+    # it as "reconstructed" would make the ratio cry wolf on every batch -- which is how a
+    # real signal gets ignored. Eight words is about where a quote is prose rather than a
+    # datum.
+    nq = sum(r.get("quotes_n", 0) for r in results)
+    clips = [c for r in results for c in r.get("clip", [])]
+    prose = [c for c in clips if c[1] >= 8]
+    cut = [c for c in prose if c[0] / c[1] >= 0.6]
+    recon = [c for c in prose if c not in cut]
+    print("\nevidence fidelity: %d quote(s) checked, %d verbatim, %d clipped short, "
+          "%d reconstructed, %d too short to judge"
+          % (nq, nq - len(clips), len(cut), len(recon), len(clips) - len(prose)))
+    if recon:
+        print("  %d reconstructed quote(s) read as the page's own voice but are not on it:"
+              % len(recon))
+        for r in results:
+            bad = [c for c in r.get("clip", []) if c in recon]
+            if bad:
+                print("     %s (%d)" % (r["n"], len(bad)))
     print("\n%d pass, %d rejected, %d unverified (need a browser or a human)"
           % (len(good), len(results) - len(good) - len(unknown), len(unknown)))
     out = path.with_name(path.stem + "-verified.json")

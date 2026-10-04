@@ -1,0 +1,1117 @@
+{
+  "state": "LA",
+  "name": "Louisiana",
+  "regions": [
+    {
+      "key": "northwest-la",
+      "label": "Shreveport, Bossier City and the Ark-La-Tex"
+    },
+    {
+      "key": "central-la",
+      "label": "Alexandria, Leesville and the middle"
+    },
+    {
+      "key": "southwest-la",
+      "label": "Lake Charles and the Calcasieu"
+    },
+    {
+      "key": "acadiana-la",
+      "label": "Lafayette, Opelousas and Acadiana"
+    },
+    {
+      "key": "baton-rouge-la",
+      "label": "Baton Rouge, Houma and the river parishes"
+    },
+    {
+      "key": "northshore-la",
+      "label": "Hammond, Ponchatoula and the north shore"
+    }
+  ],
+  "region_of": {
+    "Bossier City": "northwest-la",
+    "Alexandria": "central-la",
+    "Ball": "central-la",
+    "Glenmora": "central-la",
+    "Woodworth": "central-la",
+    "Lake Charles": "southwest-la",
+    "Sulphur": "southwest-la",
+    "Westlake": "southwest-la",
+    "Lafayette": "acadiana-la",
+    "Scott": "acadiana-la",
+    "Duson": "acadiana-la",
+    "Carencro": "acadiana-la",
+    "Maurice": "acadiana-la",
+    "Eunice": "acadiana-la",
+    "Opelousas": "acadiana-la",
+    "Baton Rouge": "baton-rouge-la",
+    "Norco": "baton-rouge-la",
+    "Boutte": "baton-rouge-la",
+    "LaPlace": "baton-rouge-la",
+    "Harvey": "baton-rouge-la",
+    "Houma": "baton-rouge-la",
+    "Hammond": "northshore-la",
+    "Ponchatoula": "northshore-la"
+  },
+  "listings": [
+    {
+      "n": "ATeam Mobile RV Repair",
+      "c": "Southern Louisiana, LA",
+      "p": "(504) 417-0098",
+      "u": "https://www.ateammobilervrepair.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "ATeam Mobile RV Repair is a family-run and family-owned mobile RV repair shop located in Southern Louisiana that comes to your RV for repairs, maintenance and service. It repairs RVs, campers, fifth wheels, motorhomes, motorcoaches and Class A and Class C units. Work covers plumbing and water damage, HVAC repair or replacement, electrical systems, maintenance of roofs, windows, doors, refrigeration, slide toppers, appliances and awnings. Its technicians are described as certified RVIA-RVDA RV service technicians, EPA certified for HVAC and an NCCER certified electrician.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": null,
+      "areas": [],
+      "region": "South LA & MS Gulf Coast",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.ateammobilervrepair.com/",
+        "phone_quote": "(504) 417-0098",
+        "coverage_quotes": [
+          "Servicing South LA & MS Gulf Coast"
+        ],
+        "type_quote": "We’re a Mobile RV Repair Shop that comes to your RV for repairs, maintenance, & service.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      },
+      "reg": [
+        "acadiana-la",
+        "baton-rouge-la"
+      ]
+    },
+    {
+      "n": "En Route RV Services",
+      "c": "Sulphur, LA",
+      "p": "(337) 381-2024",
+      "u": "https://enroutervservices.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "En Route RV Services is a mobile RV repair business in Sulphur whose certified technicians travel to your home, campground or storage location in Southwest Louisiana. It brings certified mobile RV repair techs straight to your location with no towing and no waiting in long repair shops. Work includes A/C cleanings, electrical diagnostics, plumbing, battery checks and slide-out repairs, along with refrigerators, water heaters, furnaces, leveling jacks and steps. Garth is described as a Master Certified RV Technician.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Sulphur",
+      "areas": [],
+      "region": "Southwest Louisiana",
+      "spec": null,
+      "evidence": {
+        "checked": "https://enroutervservices.com/",
+        "phone_quote": "(337) 381-2024",
+        "coverage_quotes": [
+          "We’ll dispatch to your driveway, campground site, or storage lot anywhere in Southwest Louisiana"
+        ],
+        "type_quote": "En Route RV Services is a family-owned mobile RV repair company serving Southwest Louisiana from a base in Sulphur, LA.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Refuge RV Repair & Care",
+      "c": "Glenmora, LA",
+      "p": "(318) 491-6365",
+      "u": "https://refugerv.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "Refuge RV Repair & Care is a 100% veteran-owned mobile RV repair service based in Glenmora that brings certified mobile service to Central and South Louisiana. It completes basic repairs and preventative maintenance on critical components, including A/C tune-ups, slide-out and seal inspection, water heater maintenance and repair, winterizing and dewinterizing, wheel bearing repacking, black and grey tank clean out, and fridge and electrical system support. The owner, Kenneth Paul, travels a 100 mile radius of Glenmora with emergency service up to 150 miles.",
+      "g": [
+        "mobile tech",
+        "emergency"
+      ],
+      "base": "Glenmora",
+      "areas": [
+        "Alexandria",
+        "Pineville",
+        "Baton Rouge",
+        "Lake Charles",
+        "Lafayette",
+        "Oakdale",
+        "Ville Platte",
+        "Mamou",
+        "Eunice",
+        "Opelousas"
+      ],
+      "region": "Central and South Louisiana",
+      "spec": null,
+      "evidence": {
+        "checked": "https://refugerv.com/",
+        "phone_quote": "(318) 491-6365",
+        "coverage_quotes": [
+          "Based in Glenmora, Louisiana, Refuge RV Repair & Care proudly serves RV owners across Central and South Louisiana.",
+          "Alexandria, Louisiana",
+          "Pineville, Louisiana",
+          "Baton Rouge, Louisiana",
+          "Lake Charles, Louisiana",
+          "Lafayette, Louisiana",
+          "Oakdale, Louisiana",
+          "Ville Platte, Louisiana",
+          "Mamou, Louisiana",
+          "Eunice, Louisiana",
+          "Opelousas, Louisiana"
+        ],
+        "type_quote": "We are a mobile RV repair service company, that is 100% Veteran Owned.",
+        "emergency_quote": "📍 100-Mile Radius of Glenmora, LA (Emergency Service up to 150 miles)",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Expert RV Solutions and Repair, LLC",
+      "c": "Maurice, LA",
+      "p": "(337) 400-1988",
+      "u": "https://expertrvs.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Expert RV Solutions and Repair, LLC is a mobile RV service team based in Maurice that comes to your location. The owner Ed is a Certified RV Technician of the RVTAA with over 30 years of service experience ranging from electrical, mechanical, plumbing and refrigeration. Its mission is to provide RV owners in Acadiana and the surrounding area quality RV repairs at their preferred location.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Maurice",
+      "areas": [],
+      "region": "Acadiana",
+      "spec": null,
+      "evidence": {
+        "checked": "https://expertrvs.com/",
+        "phone_quote": "(337)400-1988",
+        "coverage_quotes": [
+          "Our mission is to provide RV owners in Acadiana and surrounding area top quality RV repairs on their preferred location for a hassle free experience."
+        ],
+        "type_quote": "Enjoy quality RV repairs without the hassle. We come to your location, any time, anywhere! Mobile RV Repair",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Tech RV",
+      "c": "Maurice, LA",
+      "p": "337-288-4501",
+      "u": "https://www.techrvllc.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Tech RV is an RV repair shop located in Maurice serving Acadiana and surrounding areas, started in 2007. Its services include towing system installation, suspension upgrades, repairs and installation on all appliances including Oasis and Aqua-Hot, Onan generators, roof and floor rebuilds, and Starlink. It also offers covered and open-air RV storage and installs the Vroom slide system as an upgrade for Schwintek slides.",
+      "g": [
+        "service center"
+      ],
+      "base": "Maurice",
+      "areas": [],
+      "region": "Acadiana",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.techrvllc.com/",
+        "phone_quote": "337-288-4501",
+        "coverage_quotes": [
+          "Serving Acadiana & Surrounding Areas - Located in Maurice, LA"
+        ],
+        "type_quote": "Complete Repair Services for Your Recreational Vehicles",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "RV Repair Guy",
+      "c": "Union Springs, LA",
+      "p": "(318) 317-1725",
+      "u": "https://www.rvrepairguy.com/about",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "RV Repair Guy is a locally owned mobile RV repair service based in Union Springs, Louisiana, serving the Toledo Bend Reservoir area and surrounding communities in Louisiana and East Texas. Founded by Craig, an NRVTA certified RV technician, it works on the systems RV owners rely on most, including climate control, water, power, safety and comfort. Listed services include AC service, inspection and cleaning, roof reseal and inspections, black and gray tank cleaning, appliances, plumbing, leveling systems, electrical and awnings.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": null,
+      "areas": [],
+      "region": "Toledo Bend Reservoir area",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.rvrepairguy.com/about",
+        "phone_quote": "Call or text (318-317-1725)",
+        "coverage_quotes": [
+          "serving the Toledo Bend Reservoir area and surrounding communities in Louisiana and East Texas"
+        ],
+        "type_quote": "RV Repair Guy is a locally owned mobile RV repair service based in Union Springs, Louisiana",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      },
+      "reg": "central-la"
+    },
+    {
+      "n": "Jake's Mobile RV",
+      "c": "Ponchatoula, LA",
+      "p": "(985) 510-0930",
+      "u": "https://rvrepairshopla.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Jake's Mobile RV is a mobile RV repair business based in Ponchatoula with over 13 years of experience that keeps recreational vehicles road-ready with dependable mobile services. It handles urgent issues such as electrical malfunctions and routine maintenance checks, plus AC repair, water damage repair and restoration, RV maintenance, RV inspection, and hitch and base plate installation. Its mobile services cover areas up to 1 hour away from its base.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Ponchatoula",
+      "areas": [
+        "Hammond",
+        "Covington",
+        "Slidell",
+        "Mandeville",
+        "Denham Springs",
+        "Zachary",
+        "Baker",
+        "Walker",
+        "Amite City",
+        "Folsom",
+        "Tickfaw",
+        "Roseland",
+        "Madisonville",
+        "Port Vincent"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://rvrepairshopla.com/",
+        "phone_quote": "Phone: (985) 510-0930",
+        "coverage_quotes": [
+          "Hammond, LA",
+          "Covington, LA",
+          "Slidell, LA",
+          "Mandeville, LA",
+          "Denham Springs, LA",
+          "Zachary, LA",
+          "Baker, LA",
+          "Walker, LA",
+          "Amite, LA",
+          "Folsom, LA",
+          "Tickfaw, LA",
+          "Roseland, LA",
+          "Madisonville, LA",
+          "Port Vincent, LA"
+        ],
+        "type_quote": "At Jake's Mobile RV, we specialize in keeping your recreational vehicles road-ready with dependable, mobile services.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "On-Site RV Repair & Maintenance",
+      "c": "Calcasieu Parish, LA",
+      "p": "337-313-2766",
+      "u": "https://onsitervguy.com/",
+      "t": "mobile",
+      "e": true,
+      "r": true,
+      "d": "On-Site RV Repair & Maintenance is a mobile RV repair business serving all of Calcasieu Parish and the surrounding areas, with 20 years of experience. It comes to you for routine maintenance and unexpected repairs, including roof replacement and repair, slide-out repair, electrical systems, plumbing, generators and engine repairs. It states that it offers after-hours services specifically for emergency-related issues.",
+      "g": [
+        "mobile tech",
+        "emergency",
+        "roadside"
+      ],
+      "base": null,
+      "areas": [],
+      "region": "Calcasieu Parish",
+      "spec": null,
+      "evidence": {
+        "checked": "https://onsitervguy.com/",
+        "phone_quote": "337-313-2766",
+        "coverage_quotes": [
+          "Serving all of Calcasieu Parish and the surrounding areas"
+        ],
+        "type_quote": "This includes repairs of engines and generators to ensure optimal performance on the road.",
+        "emergency_quote": "That's why we offer after-hours services specifically for emergency-related issues.",
+        "roadside_quote": null,
+        "licence": null
+      },
+      "reg": "southwest-la"
+    },
+    {
+      "n": "Twins RV Repair",
+      "c": "Louisiana, LA",
+      "p": "832-960-8175",
+      "u": "https://www.twinsrvrepair.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Twins RV Repair is a 100% family-owned and operated mobile RV repair company serving the entire state of Louisiana, with over 10 years of hands-on experience. It brings its expertise directly to you for RV, mobile home and trailer repair and maintenance. Services include flooring installation, interior and exterior painting, roofing, electrical work, plumbing, structural repairs and full restorations.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": null,
+      "areas": [],
+      "region": "Louisiana",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.twinsrvrepair.com/",
+        "phone_quote": "832-960-8175",
+        "coverage_quotes": [
+          "Proudly serving all state of Louisiana"
+        ],
+        "type_quote": "No matter where you are in Louisiana, we bring our expertise directly to you.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      },
+      "reg": [
+        "northwest-la",
+        "central-la",
+        "southwest-la",
+        "acadiana-la",
+        "baton-rouge-la",
+        "northshore-la"
+      ]
+    },
+    {
+      "n": "Rv Rebuild Specialist",
+      "c": "Eunice, LA",
+      "p": "(337) 466-7042",
+      "u": "https://www.rvrebuildspecialist.com/",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "Rv Rebuild Specialist is a full-service RV repair and restoration partner located in Eunice, operating since 2007, serving Class B camper vans, Class C motorhomes, fifth wheels and travel trailers. Its work covers mechanical systems, electrical, plumbing, body and roof repairs, interior remodels and parts replacement, including roof repair and leak detection, water damage restoration, HVAC and appliance repair, and slide-out repair and gasket replacement. For minor to medium repairs, its mobile RV technicians come to your location.",
+      "g": [
+        "service center",
+        "mobile tech",
+        "body/collision"
+      ],
+      "base": "Eunice",
+      "areas": [],
+      "region": "Acadia Parish, Evangeline Parish, and neighboring communities",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.rvrebuildspecialist.com/",
+        "phone_quote": "Call (337) 466-7042 to schedule an inspection or request mobile RV repair.",
+        "coverage_quotes": [
+          "we serve RV owners across Acadia Parish, Evangeline Parish, and neighboring communities"
+        ],
+        "type_quote": "Located at 4509 US-190, Eunice, LA 70535, Rv Rebuild Specialist is your full-service RV repair and restoration partner.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Leo's RV Service, LLC",
+      "c": "Louisiana, LA",
+      "p": "225-772-4305",
+      "u": "https://leosrvservice.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Leo's RV Service, LLC is a mobile RV service company whose motto is WE COME TO YOU, and it will come to your location. It handles the vast majority of service and maintenance needs for Class A, fifth wheel and pull campers, with service personnel who have over 25 years of experience. The company is an LLC partnership owned by Leo Johnson and Clyde P Roy Sr and is described as fully insured and licensed to do business in Louisiana.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": null,
+      "areas": [],
+      "region": "Louisiana",
+      "spec": "Rates are a $150.00 service call plus $150 per hour, one hour minimum.",
+      "evidence": {
+        "checked": "https://leosrvservice.com/",
+        "phone_quote": "225-772-4305",
+        "coverage_quotes": [
+          "Leo's RV Service, LLC is a fully insured, local company, licensed to do business in Louisiana."
+        ],
+        "type_quote": "Leo’s RV Service, LLC not only offers competent and timely service but also convenience. Our motto is “WE COME TO YOU”",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      },
+      "reg": [
+        "northwest-la",
+        "central-la",
+        "southwest-la",
+        "acadiana-la",
+        "baton-rouge-la",
+        "northshore-la"
+      ]
+    },
+    {
+      "n": "ALM RV LLC",
+      "c": "Norco, LA",
+      "p": "504-457-7518",
+      "u": "https://www.almrv.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "ALM RV LLC is a mobile RV service and parts business in Norco that is completely mobile and comes to you for your RV service needs. It services all makes and models and diagnoses, repairs and maintains your RV, employing RVDA/RVIA Certified Professionals. It is an authorized dealer and installer for Superior RV Roof Coating and handles extended warranty or insurance related repairs.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Norco",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.almrv.com/",
+        "phone_quote": "504-457-7518",
+        "coverage_quotes": [
+          "Mobile service within about an hour of Norco."
+        ],
+        "type_quote": "Certified mobile RV repair. We come to you.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Diaz RV and Auto Body Repairs",
+      "c": "Hammond, LA",
+      "p": "504-669-6125",
+      "u": "https://diazbodywork.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Diaz RV and Auto Body Repairs is located in the heart of Hammond and has been a standard of reliability for over two decades. It specializes in repairs, painting and maintenance with certified mechanics who have over 20 years of experience, and it offers a comprehensive warranty on all services. Customer testimonials on the site describe RV body work and full body paint on campers and RVs.",
+      "g": [
+        "body/collision",
+        "service center"
+      ],
+      "base": "Hammond",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://diazbodywork.com/",
+        "phone_quote": "26540 Hwy 43 Hammond, LA 70403 504-669-6125",
+        "coverage_quotes": [
+          "26540 Hwy 43 Hammond, LA 70403"
+        ],
+        "type_quote": "Located in the heart of Hammond, Diaz RV and Auto Body Repairs has been a standard of reliability for over two decades.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Magnolia Camper Repair",
+      "c": "Houma, LA",
+      "p": "985-858-5000",
+      "u": "https://magnoliacamperrepair.com/mcr-home",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Magnolia Camper Repair is locally owned and operated in Houma, Louisiana, and is licensed and insured. It performs repairs on all makes and models of campers, RVs and 5th wheels, along with routine maintenance. The business positions itself as the local and affordable option for camper, RV or 5th wheel repairs.",
+      "g": [
+        "service center"
+      ],
+      "base": "Houma",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://magnoliacamperrepair.com/mcr-home",
+        "phone_quote": "985-858-5000",
+        "coverage_quotes": [
+          "Locally owned and Operated in Houma, LA"
+        ],
+        "type_quote": "Whether you are looking for camper, RV, or 5th Wheel repairs or routine maintenance, Magnolia Camper Repair is the local and affordable option!",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "A All About RV's",
+      "c": "Lake Charles, LA",
+      "p": "(337) 853-0638",
+      "u": "http://aallaboutrvs.com/",
+      "t": "mobile",
+      "e": true,
+      "r": true,
+      "d": "A All About RV's is a mobile RV mechanic serving Lake Charles, Louisiana and the surrounding areas, with four years of expertise. Its mobile RV technicians bring repair and maintenance services to your doorstep, and featured services include RV maintenance, RV repair and mobile RV repair. Other specializations listed are RV electrical repair, RV roof leak repair, RV engine repair and emergency RV repair, with emergency repairs handled promptly.",
+      "g": [
+        "mobile tech",
+        "emergency",
+        "roadside"
+      ],
+      "base": "Lake Charles",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "http://aallaboutrvs.com/",
+        "phone_quote": "(337) 853-0638",
+        "coverage_quotes": [
+          "Serving Lake Charles, LA and the Surrounding Areas"
+        ],
+        "type_quote": "RV Electrical Repair • RV Roof Leak Repair • RV Engine Repair • Emergency RV Repair",
+        "emergency_quote": "Emergency RV repairs are handled promptly to get you back on the road quickly.",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Gulfgate RV",
+      "c": "Sulphur, LA",
+      "p": "337-433-8967",
+      "u": "https://gulfgaterv.net/",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "Gulfgate RV is a family-owned and operated RV repair and diagnostics shop in Sulphur, serving Southwest Louisiana since 2006. Its services include roof repair and replacement, slideout repair, A/C and furnace diagnostics, water damage repair, electrical and plumbing repair, awning repair, general RV repair and mobile RV service. It states that it is insurance and warranty friendly and works with insurance companies on storm, water and structural damage claims.",
+      "g": [
+        "service center",
+        "mobile tech"
+      ],
+      "base": "Sulphur",
+      "areas": [
+        "Sulphur",
+        "Lake Charles",
+        "Westlake",
+        "Moss Bluff",
+        "Carlyss",
+        "Vinton",
+        "Hackberry"
+      ],
+      "region": "SWLA",
+      "spec": null,
+      "evidence": {
+        "checked": "https://gulfgaterv.net/",
+        "phone_quote": "337-433-8967",
+        "coverage_quotes": [
+          "Sulphur, LA Lake Charles Westlake Moss Bluff Carlyss Vinton Hackberry",
+          "Trusted RV Parts & Service Proudly Serving SWLA Since 2006"
+        ],
+        "type_quote": "Roof Repair & Replacement Slideout Repair A/C & Furnace Diagnostics Water Damage Repair Electrical & Plumbing Repair Awning Repair General RV Repair Mobile RV Service",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Primeaux RV",
+      "c": "Carencro, LA",
+      "p": "(337) 886-3330",
+      "u": "https://www.primeauxrv.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": true,
+      "d": "Primeaux RV operates RV service centers in Carencro and Alexandria, Louisiana. Its service team handles repairs from minor to major, including appliance repairs, generators, collision repairs, roof repairs, cabinetry and upholstery, brake and axle, wheel and tire replacement, and window and screen repair, plus minor paint and body repairs. It also accepts outside service on all travel trailers and fifth wheels, and provides insurance estimates.",
+      "g": [
+        "service center",
+        "body/collision",
+        "roadside"
+      ],
+      "base": "Carencro",
+      "areas": [
+        "Carencro",
+        "Alexandria"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.primeauxrv.com/rv-service",
+        "phone_quote": "(337) 886-3330",
+        "coverage_quotes": [
+          "We also accept outside service on all travel trailers and fifth wheels"
+        ],
+        "type_quote": "- Brake and axle",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Gauthiers' RV Center",
+      "c": "Lafayette, LA",
+      "p": "337-235-8547",
+      "u": "https://www.gauthiersrv.com/service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Gauthiers' RV Center runs an RV repair and service department in Lafayette with 11 service bays and a skilled team, handling fifth wheels, travel trailers, toy haulers and destination trailers. Work includes trailer hitch and 5th wheel hitch installation and adjustments, brake controller installation, collision and body repair, metal replacement and structure repair, roof replacement and maintenance, appliance and air conditioner repair, and 12V/110V wiring. It states plainly that it repairs Class C motorhomes coach only with no powertrain.",
+      "g": [
+        "service center",
+        "body/collision"
+      ],
+      "base": "Lafayette",
+      "areas": [],
+      "region": null,
+      "spec": "We repair Class C Motorhomes (no powertrain/coach only), Fifth Wheels, Travel Trailers, Toy Haulers, Horse Trailers and Destination Trailers.",
+      "evidence": {
+        "checked": "https://www.gauthiersrv.com/service",
+        "phone_quote": "Call or Text: 337-235-8547",
+        "coverage_quotes": [
+          "With 11 service bays and a highly skilled team, our Service Shop is well equipped to handle a variety of RV types, including fifth wheels, travel trailers, toy haulers, destination trailers and more."
+        ],
+        "type_quote": "We repair Class C Motorhomes (no powertrain/coach only), Fifth Wheels, Travel Trailers, Toy Haulers, Horse Trailers and Destination Trailers.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Courvelle's RV",
+      "c": "Opelousas, LA",
+      "p": "337-678-6044",
+      "u": "https://www.courvellesrv.com/service",
+      "t": "center",
+      "e": true,
+      "r": false,
+      "d": "Courvelle's RV has a fully equipped RV service center in Opelousas at 3629 I-49 S. Service Rd. that handles maintenance repairs, interior or exterior upgrades, warranty work and insurance claims such as an untimely blowout. It reseals roofs and replaces seals, maintains appliances and can add a slide topper or upgrade an awning, and it works with warranty companies including Dometic, Atwood, Airxcel, Lippert, Easycare and RvCare. After hours appointments are available by calling to schedule.",
+      "g": [
+        "service center",
+        "emergency"
+      ],
+      "base": "Opelousas",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.courvellesrv.com/service",
+        "phone_quote": "Parts & Service: 337-678-6044",
+        "coverage_quotes": [
+          "3629 I-49 S. Service Rd. | Opelousas, LA 70570"
+        ],
+        "type_quote": "We have a fully equipped service center to handle your job big or small.",
+        "emergency_quote": "After hours appointments available NOW! Call to schedule.",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Bent's RV",
+      "c": "Boutte, LA",
+      "p": "985-200-8292",
+      "u": "https://www.bentsrv.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Bent's RV operates an RV service department with nearly 30 service bays and a team of 20 repair professionals at its Boutte and Albany locations, staffed with factory RVDA certified technicians and installers. It specializes in rubber roof and metal replacement, satellite systems, RV awnings, tow bars and braking systems, appliance installations and repairs, fifth wheel hitch installations and RV generator repairs. It also has a body shop for serious body damage and states that it serves customers whether or not they purchased their RV from Bent's.",
+      "g": [
+        "service center",
+        "body/collision"
+      ],
+      "base": "Boutte",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.bentsrv.com/rv-service",
+        "phone_quote": "BENT'S RV BOUTTE 14412 US-90 Boutte, LA 70039 985-200-8292",
+        "coverage_quotes": [
+          "Whether you purchased your RV from us or not, we are here to serve you."
+        ],
+        "type_quote": "We’re proud to offer nearly 30 service bays and a team of 20 repair professionals. Have serious body damage? We also have a body shop!",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Berryland Campers",
+      "c": "Ponchatoula, LA",
+      "p": "(985) 370-7001",
+      "u": "https://berrylandcampers.com/collision-rv-repair",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Berryland Campers operates an RV collision and body shop in Ponchatoula that specializes in comprehensive motorhome collision repair, restoring a unit to its pre-collision state or better. Its body repair work addresses dents, scratches and rust, and it happily accepts major insurances. Its RV repair experts service Ponchatoula, New Orleans, Baton Rouge, South Louisiana, Mississippi and Gulf Coast areas, and a separate page states it has 25 service bays.",
+      "g": [
+        "body/collision",
+        "service center"
+      ],
+      "base": "Ponchatoula",
+      "areas": [
+        "Ponchatoula",
+        "New Orleans",
+        "Baton Rouge"
+      ],
+      "region": "South Louisiana",
+      "spec": null,
+      "evidence": {
+        "checked": "https://berrylandcampers.com/collision-rv-repair",
+        "phone_quote": "(985) 370-7001",
+        "coverage_quotes": [
+          "Berryland Campers’ team of RV repair experts service Ponchatoula, New Orleans, Baton Rouge, South Louisiana, Mississippi, and Gulf Coast areas, and more."
+        ],
+        "type_quote": "Berryland Campers specializes in comprehensive motorhome collision repair services.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Thib's Trailers",
+      "c": "Duson, LA",
+      "p": "337-873-4906",
+      "u": "https://thibstrailers.com/services/rv-service",
+      "t": "both",
+      "e": true,
+      "r": false,
+      "d": "Thib's Trailers runs a shop and mobile RV repair service out of Duson that works on trailers, RVs, truck campers and motorhomes. Its RV service includes engine and brake work, roof repair, RV AC repair and furnace repairs, and it stocks parts including axles, hubs, bearings, brake systems, jacks, hitches and suspension parts. Its shop and mobile service cover Lafayette, Baton Rouge, Lake Charles, Alexandria, New Iberia and Opelousas, and it states its mobile service addresses urgent issues promptly.",
+      "g": [
+        "service center",
+        "mobile tech"
+      ],
+      "base": "Duson",
+      "areas": [
+        "Lafayette",
+        "Baton Rouge",
+        "Lake Charles",
+        "Alexandria",
+        "New Iberia",
+        "Opelousas"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://thibstrailers.com/services/rv-service",
+        "phone_quote": "337-873-4906",
+        "coverage_quotes": [
+          "Lafayette Baton Rouge Lake Charles Alexandria New Iberia Opelousas Surrounding Areas"
+        ],
+        "type_quote": "At Thibs, we work on trailers, RVs, truck campers, and motorhome repair, whatever keeps your world moving.",
+        "emergency_quote": "Absolutely. Our mobile RV service is designed to address urgent issues promptly.",
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Stepper RV Services",
+      "c": "Harvey, LA",
+      "p": "(504) 361-7744",
+      "u": "https://www.stepperrv.com/",
+      "t": "center",
+      "e": false,
+      "r": true,
+      "d": "Stepper RV Services is a complete RV and trailer accessories, maintenance, parts and repair resource located in the Greater New Orleans area at Harvey, Louisiana. Its 90,000 lbs lifting system gives mechanics stand-up under-coach access so drivetrain and axles, steering and suspension systems, and all chassis components can be checked. Its specialties include maintenance and repair for all RV makes and models and service of major components including engine, generator and transmission, and it handles warranty and extended warranty work. All RV and trailer repairs are performed by appointment only.",
+      "g": [
+        "service center",
+        "roadside"
+      ],
+      "base": "Harvey",
+      "areas": [],
+      "region": "Greater New Orleans Area",
+      "spec": "All RV and Trailer Repairs are performed - By Appointment Only.",
+      "evidence": {
+        "checked": "https://www.stepperrv.com/",
+        "phone_quote": "(504) 361-7744",
+        "coverage_quotes": [
+          "located in the Greater New Orleans Area"
+        ],
+        "type_quote": "Service of all Major Components: Engine, Generator, and Transmission.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "RV Masters",
+      "c": "LaPlace, LA",
+      "p": "(504) 466-3431",
+      "u": "https://rv-masters.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "RV Masters is an RV repair shop at 1041 E. Airline Hwy in LaPlace, Louisiana, whose staff and RV mechanics are RVDA/RVIA certified. Its facility includes lifts, scaffolding, welding and fiberglass equipment, a computerized paint mixing system and a large paint booth that accommodates larger coaches and trailers. It performs a wide variety of RV repair services and collision work, and it is a licensed FlexArmor roof installer with a second location in Kenner.",
+      "g": [
+        "service center",
+        "body/collision"
+      ],
+      "base": "LaPlace",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://rv-masters.com/",
+        "phone_quote": "Phone: (504) 466-3431",
+        "coverage_quotes": [
+          "1041 E. Airline Hwy.Laplace, LA 70068"
+        ],
+        "type_quote": "At RV Masters, our certified technicians perform a wide variety of RV repair services.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "RV Collision of Louisiana",
+      "c": "Scott, LA",
+      "p": "(337) 210-5333",
+      "u": "https://www.rvcollisionla.com/contact",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "RV Collision of Louisiana operates an RV paint and body repair facility at 128 N Ambassador Caffery Pkwy in Scott, Louisiana. It offers complete RV collision and body repair, with capabilities that include fiberglass repair, metalwork, delamination and aluminum repairs, and it can fabricate parts that are no longer available. Its team, including Cory and Jay Abshire, brings over 40 combined years of paint and body experience and training with Axalta Coating Systems, and the shop works on anything from a small travel trailer to a large bus.",
+      "g": [
+        "body/collision",
+        "service center"
+      ],
+      "base": "Scott",
+      "areas": [],
+      "region": "Gulf South",
+      "spec": "We do not offer towing, this service will be handled through your insurance company.",
+      "evidence": {
+        "checked": "https://www.rvcollisionla.com/contact",
+        "phone_quote": "(337) 210-5333",
+        "coverage_quotes": [
+          "128 N Ambassador Caffery Pkwy"
+        ],
+        "type_quote": "Cory and Jay Abshire come to RV Collision of Louisiana's management team with over 40 combined years of paint and body experience.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "RV Collision Repair LLC.",
+      "c": "Bossier City, LA",
+      "p": "(318) 675-9699",
+      "u": "https://bossierrvcollisionrepair.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "RV Collision Repair LLC. is a family owned and operated RV collision repair facility in Bossier City, Louisiana, in business since 2006. It handles water damage, blowout repairs and complete body painting, installs 3M clear paint protective film in-house, and builds most compartment doors and lower J-Metal in-house to speed repairs. It offers free roof inspections and roof coatings, accepts all insurance, and lists Bossier City, Alexandria, Keithville, Springhill, Minden, Monroe, Ruston and Shreveport among the places it serves.",
+      "g": [
+        "body/collision"
+      ],
+      "base": "Bossier City",
+      "areas": [
+        "Bossier City",
+        "Alexandria",
+        "Springhill",
+        "Minden",
+        "Monroe",
+        "Ruston",
+        "Shreveport"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://bossierrvcollisionrepair.com/",
+        "phone_quote": "Call Us Phone: (318) 675-9699",
+        "coverage_quotes": [
+          "Bossier City, LA",
+          "Alexandria, LA",
+          "Shreveport, LA",
+          "Ruston, LA"
+        ],
+        "type_quote": "Here at RV Collision Repair in Bossier City, LA, we are committed to helping you with all your RV repair needs.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Billy Thibodeaux's Premiere RV, Inc.",
+      "c": "Scott, LA",
+      "p": "(337) 233-7494",
+      "u": "https://billyt.com/",
+      "t": "center",
+      "e": false,
+      "r": true,
+      "d": "Billy Thibodeaux's Premiere RV, Inc. is an RV service and repair company in Scott, Louisiana that serves Scott and all surrounding areas, with over fifty years of experience working on recreational vehicles. Its listed work includes RV repair services, RV chassis upgrades, shock absorbers for RVs, dinghy towing services, custom RV generator installation, RV refrigerator conversions and RV satellite antenna installation. A separate page states it provides factory trained and certified service on Workhorse, Tiffin PowerGlide and Spartan motorhome chassis, and maintenance on all other chassis.",
+      "g": [
+        "service center",
+        "roadside"
+      ],
+      "base": "Scott",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://billyt.com/",
+        "phone_quote": "Phone: (337) 233-7494",
+        "coverage_quotes": [
+          "We serve Scott, LA, and all surrounding areas."
+        ],
+        "type_quote": "RV repair services | RV chassis upgrades | Shock absorbers for RVs",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Select RV & Bus Repair",
+      "c": "Ball, LA",
+      "p": "(318) 641-8610",
+      "u": "https://selectrvandbusrepair.net/",
+      "t": "center",
+      "e": false,
+      "r": true,
+      "d": "Select RV & Bus Repair is a trusted division of Select Motor Co., Inc. located in Ball, Louisiana, about 15 miles north of Alexandria, providing expert repair services since 1991 for all makes and models of buses, recreational vehicles and motorhomes. Its services include mechanical, cosmetic and structural repairs, and it gladly accepts insurance claims, warranties and service contracts. A separate services page lists slideout repair and replacement, electrical diagnostics, HVAC repair, appliances, plumbing, leveling jacks, hydraulic systems, aluminum skin and frame repair, fabrication and welding, and engine lube, oil and filter service.",
+      "g": [
+        "service center",
+        "body/collision"
+      ],
+      "base": "Ball",
+      "areas": [
+        "Alexandria",
+        "Pineville",
+        "Ball"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://selectrvandbusrepair.net/",
+        "phone_quote": "(318) 641-8610",
+        "coverage_quotes": [
+          "we proudly serve Alexandria, Pineville, Ball, and the surrounding areas."
+        ],
+        "type_quote": "Since 1991, we’ve been proud to provide expert repair services for all makes and models of buses, recreational vehicles, and motorhomes.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Cenla RV Center",
+      "c": "Alexandria, LA",
+      "p": "(318) 445-6981",
+      "u": "https://www.cenlarv.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Cenla RV Center is a family-owned RV dealership that has served Central Louisiana from its Alexandria location since 1978 and also has a Monroe location, each with a service and parts department. Its service covers slides and awnings, roof and seals, electrical and 12V systems, HVAC systems, plumbing and water systems, and interior repairs. Its online scheduler lets owners reserve a time for appliance service, battery maintenance, tire pressure checks, brake service, AC repairs or any repair.",
+      "g": [
+        "service center"
+      ],
+      "base": "Alexandria",
+      "areas": [
+        "Alexandria",
+        "Monroe"
+      ],
+      "region": "Central Louisiana",
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.cenlarv.com/rv-service",
+        "phone_quote": "Cenla RV Center - Alexandria 1916 North Bolton Avenue Alexandria, LA 71303 (318) 445-6981",
+        "coverage_quotes": [
+          "Schedule service at Cenla RV Center in Alexandria and Monroe, LA"
+        ],
+        "type_quote": "Our online scheduler lets you reserve a convenient time for appliance service, battery maintenance, tire pressure checks, brake service, AC repairs, or any repair.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Miller's RV",
+      "c": "Baton Rouge, LA",
+      "p": "(225) 275-2940",
+      "u": "https://www.millersrv.com/service-dept",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Miller's RV is a family-owned RV service, repair and maintenance business at 12912 Florida Blvd in Baton Rouge, Louisiana. Its certified and factory trained technicians keep RVs running with maintenance such as roof inspections and resealing, sealant checks, wheel bearings, generator service and maintenance, A/C cleaning and servicing, and slide seal lubrication. Repairs include roof replacement, 12V and 120V troubleshooting, water heater, leak detection, plumbing, roof A/C, appliances, slide outs and awnings, and it also does insurance and collision work.",
+      "g": [
+        "service center",
+        "body/collision"
+      ],
+      "base": "Baton Rouge",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://www.millersrv.com/service-dept",
+        "phone_quote": "(225) 275-2940",
+        "coverage_quotes": [
+          "12912 Florida Blvd Baton Rouge, LA 70815"
+        ],
+        "type_quote": "Keep your RV running smoothly with our comprehensive maintenance and repair services.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Great American RV SuperStores",
+      "c": "Hammond, LA",
+      "p": "(844) 642-4944",
+      "u": "https://greatamericanrv.com/locations/hammond-la",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Great American RV SuperStores operates a flagship RV dealership in Hammond, Louisiana, off I-12 at Exit 35, with a 54-bay service center staffed by RVTI-certified technicians and a dedicated RV Collision Center. Its service department handles warranty work, routine service and major repairs for all makes and models, and it offers service across its Louisiana locations including Breaux Bridge. The business is family owned and operated and has served Louisiana since 1984.",
+      "g": [
+        "service center",
+        "body/collision"
+      ],
+      "base": "Hammond",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://greatamericanrv.com/locations/hammond-la",
+        "phone_quote": "Service: (844) 642-4944",
+        "coverage_quotes": [
+          "10241 Destination Drive, Hammond, LA 70403"
+        ],
+        "type_quote": "a 54-bay service center staffed by RVTI-certified technicians",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Openroad RV Services, LLC",
+      "c": "Westlake, LA",
+      "p": "(337) 794-4610",
+      "u": "https://openroadrvservices.com/",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "Openroad RV Services, LLC is a locally owned and operated RV repair company in Westlake, Louisiana, serving Westlake and surrounding areas. It handles RV furnace repair, AC installation, plumbing, electrical diagnostics, roof repair and full maintenance services, along with water heater installations and system upgrades. Its mobile repair service comes directly to your location, saving time, towing costs and hassle.",
+      "g": [
+        "mobile tech",
+        "service center"
+      ],
+      "base": "Westlake",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://openroadrvservices.com/",
+        "phone_quote": "(337) 794-4610",
+        "coverage_quotes": [
+          "Openroad RV Services, LLC is a locally owned and operated RV repair company proudly serving Westlake, LA and surrounding areas."
+        ],
+        "type_quote": "From RV furnace repair and AC installation to plumbing, electrical diagnostics, roof repair, and full maintenance services, we handle every job with precision and attention to detail.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "All Things RV LLC",
+      "c": "Woodworth, LA",
+      "p": "(318) 321-3322",
+      "u": "https://atrv.net/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "All Things RV LLC is a mobile RV repair and inspection business based in Woodworth, Louisiana. It schedules appointments to come to you rather than requiring you to bring the RV in, and it invites customers to leave contact information or call to arrange service.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Woodworth",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://atrv.net/",
+        "phone_quote": "(318) 321-3322",
+        "coverage_quotes": [
+          "All Things RV is a MOBILE RV Repair and Inspection Business in Woodworth, Louisiana."
+        ],
+        "type_quote": "All Things RV is a MOBILE RV Repair and Inspection Business in Woodworth, Louisiana.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    }
+  ]
+}
