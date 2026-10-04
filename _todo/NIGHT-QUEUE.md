@@ -2560,6 +2560,37 @@ literals; the second planted `#ff0000`, which is not a palette value. **Each tim
 bad**, which is the same lesson as everything else tonight, and it is why the table above records the defect planted
 rather than only the result.
 
+## SSS. THE INTERLINK SWEEP IS A READING JOB, AND THE TOOLS NOW SAY SO RATHER THAN HIDING IT
+
+**Ty: "lets interlink everything if you havent already." Ran the pipeline end to end on the top candidates to find
+out what that actually involves. Three findings, and the third changes the plan.**
+
+**1. THE CANDIDATE FINDER IS NOW USABLE.** BM25 against the target's own text, gated on document relatedness. The
+top candidates are real pairs: `tires-winter -> tire-replacement` (0.71), `pin-weight -> weight-calculator` (0.54),
+`slide-out -> leveling-jacks` (0.26), `sewer-smell -> macerator-toilet` (0.34). **618 candidates in total, ranked, one
+per pair.**
+
+**2. THE INSERTION TOOL'S GUARDS EARNED THEIR KEEP IMMEDIATELY, BOTH ON MY OWN ANCHORS:**
+- `insert-link.py guides/rv-pin-weight-and-payload.html "max tow rating" ...` -> **"refusing: wrapping that there
+  would change the words on the page."** The phrase is inside a quotation, and a link inside a quoted sentence
+  changes what a reader sees in a quotation.
+- `... "the converter and charger" ...` -> **"refusing: does not appear in prose."** It is a heading.
+
+**3. AND THE THIRD FINDING IS THE ONE THAT MATTERS: THERE IS OFTEN NO GOOD ANCHOR TO USE.** I searched the top five
+pairs for a clean 2-to-5-word phrase in the prose that names the target's subject. What I found was: the phrase inside
+quotation marks, the phrase as a heading, or **the same word used about a different thing** -- `battery-winter-storage`
+says "converter" about an **MPPT solar converter**, not the shore-power converter the target guide is about. Linking
+that would send a reader somewhere that does not answer them.
+
+**SO THE SWEEP CANNOT BE AUTOMATED, AND IT SHOULD NOT BE.** The tool's own docstring said it first -- *"the ranking
+puts the strongest matches first; the reading is the work"* -- and that turns out to be literally true. **The correct
+shape is a page at a time: read the candidate sentence, decide whether the target actually answers the question the
+sentence raises, choose an anchor that reads as prose, insert, then re-review.** That is one page per pass, not 618
+links in a batch.
+
+**RECOMMENDATION: a batched sweep, six pages at a time, one lane each, using the ranked list.** The list is now good
+enough to work from, which it was not this morning, and that was the blocker. **Do not mass-insert from the list.**
+
 ## Log
 
 ## Log
