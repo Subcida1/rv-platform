@@ -2261,6 +2261,49 @@ untested change to the pipeline for a condition a reload fixes, and the second i
 `scripts/bridge-review.py` for the five outstanding pages. **The four dispatched jobs are already in the queue and
 will go out on the first tick after the reload**, so nothing needs re-dispatching.
 
+## III. Both of my candidate fixes were wrong. The mechanism is found, and the right fix is neither
+
+**I traced it properly instead of patching, and it killed both of my guesses.**
+
+**GUESS 1, "confirm on the composer clearing rather than on the click", IS ALREADY DONE.** The file's own summary
+says it: *"A CONFIRMED SEND IS FINAL. The moment the composer clears, `trySubmit()` returns true"*. So the composer
+DID clear. The app took the text and discarded it, and **no check on the composer can tell that apart from delivery.**
+
+**GUESS 2, "fix generationInFlight() per lane", IS RIGHT ABOUT THE LOCATION AND WRONG ABOUT THE FIX.** Here it is:
+
+```js
+function generationInFlight() {
+  const input = resolveComposer();
+  if (!input) return false;
+  for (const b of deepElements(sendCandidateScope(input, 4), 'button, [role="button"]')) {
+    if (isVis(b) && STOP_RE.test(labels(b))) return true;
+  }
+  return false;
+}
+```
+
+**It returns true only for a VISIBLE `button`/`[role="button"]` WITH A STOP-LIKE LABEL WITHIN FOUR LEVELS OF THE
+COMPOSER.** A lane whose Stop control is a `div`, or labelled differently, or further away **reads as idle while it
+is generating.** The result is typed into it, the app clears the box without delivering, `trySubmit` confirms on the
+clearing, and the lane waits forever for a message the harness believes it sent. **That is `confirmed: true`,
+`injected: []`, `pending: 0`, exactly.**
+
+**SO THE FIX IS NOT TO WIDEN THAT PROBE, AND HERE IS WHY.** Holding every result by default would deadlock the lanes
+where the app DOES accept input while generating, which is at least some of them today. **The distinction that
+matters is not "is the lane busy" but "did the app ACT on what we sent", and the composer cannot answer it because
+it clears either way.**
+
+**THE FIX THAT FOLLOWS FROM THE EVIDENCE: A CONFIRMED SEND THAT PRODUCES NOTHING IS NOT A DELIVERY.** The harness
+already has a `pendingResults` queue and a drain tick that re-delivers when the lane is idle. **Feed this case into
+it: after a confirmed result send, if the lane produces no response and no change in its reply container within a
+bounded window, treat the result as undelivered and queue it.** That reuses machinery v0.7.27 already shipped
+rather than inventing a second mechanism, and it fails in the safe direction, since a re-delivered result is
+idempotent from the lane's point of view and a lost one is not.
+
+**I AM NOT WRITING IT YET.** It is a userscript change, it needs a reinstall, and it needs a lane in front of it to
+prove the window is right. **But it is now a specific change with a named location, a named mechanism and a named
+reuse, and my previous two proposals are withdrawn.**
+
 ## Log
 
 ## Log
