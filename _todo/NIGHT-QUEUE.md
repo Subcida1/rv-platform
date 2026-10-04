@@ -2478,6 +2478,37 @@ different, narrower one and I wrote it by hand tonight: *mention of a manual in 
 in the prose.* **It found 30 pages (OOO). That rule should become part of the same tool**, so one command reports
 both kinds of missing link.
 
+## QQQ. THE RESEARCH CAME BACK WITH A METHOD, AND IT NAMES THE ONE CHANGE THAT FIXES BOTH FAILURES
+
+**Report: `/home/user/Documents/research/internal-linking-tools.md` (~32 KB). Read that for the detail; this is what
+matters and what to do.**
+
+**THE HIGHEST-VALUE SINGLE CHANGE, in the report's own words: replace the "two title words present" trigger with
+IDF-WEIGHTED (BM25) SCORING OF THE SENTENCE AGAINST THE TARGET PAGE'S OWN TEXT, gated by a document-level
+relatedness band.** That is ~120 lines of standard library, no model, no network, no service. **And it kills both
+of our reported failures by construction**: "cooling" is a high-document-frequency word so its IDF is near zero,
+and the air conditioner passing-mention contains no rare central term, so it scores low against that target.
+
+**THE CLOSEST PUBLISHED ANALOGUE IS A SMALL SELF-HOSTED TOOL, not a corporation.** Yoast does top-20 prominent-word
+overlap; DNG does TF-IDF cosine on titles plus normalised PageRank; **JnK Linkweave does TF-IDF moving to BM25, in
+PHP, self-hosted, with no external service** -- which is the shape our script should take. The embedding-based
+tools (BGE-small with a 0.55 threshold, SBERT hybrids, Loom with GPT-4o anchors) are named but **not the lazy
+option**: they need `sentence-transformers` and `torch`, neither installed here, or a paid API.
+
+**AND THE PREDICATE FOR A GOOD LINK, which our tool checks almost none of:** sentence-level relevance to the
+target, document-level related-but-not-duplicate, not already linked, a **2 to 5 word anchor that stands alone**,
+and within a **per-page link budget**. Our script tests one of those five.
+
+**A SEPARATE FINDING, MEASURED ON OUR OWN SITE, AND IT IS A NAVIGATION GAP RATHER THAN A LINK ONE:**
+**zero of 52 content pages carry a visible breadcrumb.** Average in-body links per page is about 6.5 and heavily
+skewed. Top-tier navigation in the report's terms means location breadcrumbs, hub and pillar pages, curated related
+blocks, a table of contents, search, and no orphans -- and we have no breadcrumbs at all. **The report puts
+generating them from `_data/guides.json` in `build-shell.mjs` outside its scope, which means it is ours to do.**
+
+**NEXT, IN ORDER:** (1) BM25 sentence scoring plus the relatedness gate plus the href and regex fixes; (2) anchor
+proposal and budgeted ranking, which turns the output into a review queue rather than a list; (3) breadcrumbs and
+hub links from the guides manifest.
+
 ## Log
 
 ## Log
