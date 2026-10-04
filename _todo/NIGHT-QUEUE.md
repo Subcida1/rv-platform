@@ -2708,3 +2708,34 @@ de-verification depends on whether the insert changes the text, not on whether a
 "Last updated on Oct 2" whose words have changed since is a claim that is not true. Bumping the date
 is the fix; marking the page unverified is not, because the claim set was untouched and the tool said
 so itself. All three pages now read Oct 4.
+
+---
+
+## UUU. THE SWEEP KEEPS FAILING FOR THE SAME REASON, AND IT IS THE MATCHER RATHER THAN THE PAGES
+
+**Third attempt at the internal-link sweep, third time the same wall. Worked the top of the ranked list by hand
+and the anchors are not there:**
+
+| pair | phrase the matcher surfaces | why it is not an anchor |
+|---|---|---|
+| tires-winter -> tire-replacement | "replace-now signal" | a coinage of our own, not a phrase that reads as prose |
+| furnace-carbon-monoxide -> furnace-not-working | "a fault can kill" | **"fault" in a different sense.** A hazard, not the fault-finding guide. **Linking it would mislead.** |
+| pin-weight -> towing-capacity | none | the two pages share a subject and no sentence names the other |
+| water-pump-wont-prime -> freeze-damage-triage | none | same |
+
+**THE MECHANISM, which is the useful part: BM25 SCORES SUBJECT SIMILARITY AND A LINK NEEDS A QUESTION.**
+Two pages can be about the same thing all day and have no sentence in either that raises a question the other
+answers. That is a PHRASAL property, and no document-level or sentence-level relevance score can see it.
+
+**The research already named the missing half and I built only the other half.** Its "good link" predicate is five
+tests: sentence-level relevance to the target, related-but-not-duplicate at document level, not already linked,
+**an anchor that stands alone**, and a per-page budget. **The BM25 rewrite implemented the first two. The third is
+trivial. The fourth is the one that decides whether a candidate is usable, and it is not implemented at all.**
+
+**SO THE NEXT BUILD IS ANCHOR PROPOSAL, NOT MORE RANKING.** For each candidate, find the noun phrase in the
+candidate sentence that names the target's subject, and **only surface the pair if one exists.** That is a
+dictionary of subject names per page, which `_data/guide-systems.json` already half-provides, plus a phrase match
+inside the sentence window. **A pair with no such phrase is not a link opportunity and should not be printed.**
+
+**AND UNTIL THAT EXISTS, DO NOT SWEEP FROM THIS LIST.** Every link it has offered by hand has either had no anchor
+or a wrong one. The list is a good map of which pages are related and a bad list of what to link.
