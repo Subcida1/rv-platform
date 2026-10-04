@@ -53,7 +53,11 @@ dropped as a duplicate.
 
 WHY TWO CALLS: a very large tool result cannot be typed back into this conversation - it goes into the
 message box and will not send, so the whole result is lost rather than cut. Two smaller slices always
-arrive. THE SIZE WAS RAISED FROM 70 AND 80 TO 125 AND 125 ON 2026-10-03, and then to 150 AND 150 the same
+arrive. A THIRD READ IS EXPECTED, NOT EXCEPTIONAL. A reviewing lane reported on 2026-10-03 that BOTH 150-line
+slices were TRUNCATED AT 12,000 CHARACTERS, so on a dense page neither reaches where it says it does and a
+middle portion is in none of them. If the two slices do not meet, MAKE A THIRD READ - a smaller tail, or a
+smaller head - and close the gap rather than reviewing the part you were given. Say so at the top either way.
+THE SIZE WAS RAISED FROM 70 AND 80 TO 125 AND 125 ON 2026-10-03, and then to 150 AND 150 the same
 night. The first raise came because a reviewing lane reported that the two slices did not meet and the
 middle of the page was in neither. The second came from measuring rather than guessing: the longest
 staged page is 296 lines and 25,191 characters, so 125 plus 125 still left 46 lines unread. 150 plus
