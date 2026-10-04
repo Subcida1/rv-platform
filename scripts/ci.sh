@@ -49,6 +49,7 @@ step "build-parts-pages.py --check: the parts hub matches _data/parts.json" \
 step "weight calculator"                       node scripts/test-weight-calculator.js
 step "tire date decoder"                      node scripts/test-tire-date.js
 node scripts/test-snow-load.js
+step "accessibility (axe)"                    node scripts/check-a11y.mjs
 python3 scripts/test-link-opportunities.py
 step "directory rendering"                     node scripts/test-directory.js
 step "every state page wires its own data"    node scripts/test-state-pages.js

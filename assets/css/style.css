@@ -581,15 +581,19 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
 
 /* ================= PAGE HEADER ================= */
 .page-head{padding:56px 0 34px;position:relative;overflow:hidden;border-bottom:1px solid var(--border);background:linear-gradient(180deg,var(--paper-warm),var(--bg))}
-.crumbs{font-size:13px;color:var(--text-3);background:var(--bg-2);border-bottom:1px solid var(--border)}
+/* --text-2, NOT --text-3. The trail sits on the tinted band, and --text-2 is #55627a against
+   #eef5fc for 5.6:1 while --text-3 is #67748e for 4.27:1, just under the 4.5 AA floor. axe
+   flagged it as serious on every page that has a breadcrumb and on no page that does not.
+   Found 2026-10-04, and it had been shipping because check-a11y is not in ci.sh. */
+.crumbs{font-size:13px;color:var(--text-2);background:var(--bg-2);border-bottom:1px solid var(--border)}
 .crumbs .wrap{display:flex;gap:8px;align-items:center;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}
 /* The links need a finger-sized target. At 13px text they were 18px tall, which the mobile audit
    flagged 396 times across the three widths. Padding on the LINKS, not the row, so the band does
    not grow taller than it needs to. */
 .crumbs a{padding:13px 6px;display:inline-block}
-.crumbs span{color:var(--text-3)}
+.crumbs span{color:var(--text-2)}
 .crumbs a:hover{color:var(--b1)}
-.crumbs .sep{color:var(--text-3)}
+.crumbs .sep{color:var(--text-2)}
 .page-head h1{font-size:clamp(30px,4.4vw,46px);font-weight:800;letter-spacing:-.03em;line-height:1.08}
 .page-head p{margin-top:12px;color:var(--text-2);font-size:16.5px;max-width:620px}
 
