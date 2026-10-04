@@ -233,6 +233,18 @@ genuinely on a subpage -- it was measuring a smaller population than the thing i
 correct. It was caught only by re-running the gate, and every affected block was restored from
 the originals. Any tool that tries to reproduce a gate's judgement must use the gate's scope.
 
+**"WRITE EARLY" MANUFACTURES PARTIAL FILES, SO EXTRACT FROM THE FINAL ONE.** The discovery
+brief now tells an agent to write its file after the first sweep and improve it, because a
+previous attempt ran fifteen minutes and produced nothing. That instruction works, and it has
+a cost: the file grows while the agent works, so a copy taken from it before the agent's
+completion report is a snapshot. On the plains pass Kansas was extracted at 17 candidates and
+finished at 30, and South Dakota went 35 then 34. Neither error reached a commit, because the
+plains were parked rather than merged -- but the rule is general: extract from the durable
+original only after every agent for that state has reported, and if you must take an early
+copy, re-check its count against the original before using it. The same trap in the other
+direction is already recorded above: a file read mid-write can fail to parse or report a
+nonsense count.
+
 **A subagent's output file is not readable until the agent reports completion**, and a garbled or
 truncated completion notification is not evidence either: on this pass a notification announced a
 Tennessee file with 32 candidates that did not exist, and the agent's real file landed later with
