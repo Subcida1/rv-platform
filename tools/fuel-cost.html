@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <base href="/"> <!-- must stay first: every other URL on the page resolves against it -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="canonical" href="https://originrv.com/tools/fuel-cost">
+  <title>RV Fuel Cost Calculator: What the Trip Costs at the Pump</title>
+  <meta name="description" content="What a trip costs in fuel, from the miles, the MPG, and the price at the pump, priced across your RV type range with a planning cushion added.">
+  <link rel="stylesheet" href="assets/css/style.css?v=839902dd">
+<link rel="icon" type="image/svg+xml" href="assets/img/brand/favicon.svg?v=dd9ff106">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/brand/favicon-32.png?v=d9338088">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/brand/favicon-16.png?v=f67f4631">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/brand/apple-touch-icon.png?v=c0518cb6">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#3d7fc2">
+<meta property="og:type" content="article">
+<meta property="og:title" content="RV Fuel Cost Calculator: What the Trip Costs at the Pump">
+<meta property="og:description" content="What a trip costs in fuel, from the miles, the MPG, and the price at the pump, priced across your RV type range with a planning cushion added.">
+<meta property="og:url" content="https://originrv.com/tools/fuel-cost">
+<meta property="og:site_name" content="OriginRV">
+<meta property="og:image" content="https://originrv.com/assets/img/brand/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="OriginRV">
+<meta name="twitter:image" content="https://originrv.com/assets/img/brand/og-default.png">
+<meta name="twitter:image:alt" content="OriginRV">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="RV Fuel Cost Calculator: What the Trip Costs at the Pump">
+<meta name="twitter:description" content="What a trip costs in fuel, from the miles, the MPG, and the price at the pump, priced across your RV type range with a planning cushion added.">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "RV Fuel Cost Calculator", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "url": "https://originrv.com/tools/fuel-cost", "description": "Work out what a trip costs at the pump from the distance, your miles per gallon, and the price at your next fill.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "OriginRV", "url": "https://originrv.com/"}}</script>
+<!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G8X4MQ0P3X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-G8X4MQ0P3X');
+  </script>
+</head>
+<body class="g-theme-mist">
+  <div id="site-nav"><!-- nav:start --><div class="util" role="navigation" aria-label="Utility"><div class="wrap"><div class="util-l"><span class="dot"></span><a href="/directory/">Find a tech</a><a href="/guides/">Winter guides</a></div><div class="util-r"><a href="/contact">Contact</a><span class="muted">Free tools, No paywall, Built for RVers</span></div></div></div><nav class="main" aria-label="Main"><div class="wrap"><a class="logo" href="/"><span class="logo-mark"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><polygon points="4 1.6 5.7 6.8 5 6.8 6.6 11.4 5.8 11.4 7.6 16 5.2 16 5.2 19.4 2.8 19.4 2.8 16 0.4 16 2.2 11.4 1.4 11.4 3 6.8 2.3 6.8"/><path fill-rule="evenodd" d="M8.2 16L8.2 13.6L9 13.2L11.6 10.4L8.6 10.4L8.9 8.2L23.6 8.2L23.6 16.6L9.6 16.6ZM13.6 10H16.4A0.4 0.4 0 0 1 16.8 10.4V12.2A0.4 0.4 0 0 1 16.4 12.6H13.6A0.4 0.4 0 0 1 13.2 12.2V10.4A0.4 0.4 0 0 1 13.6 10ZM18.4 10H20.8A0.4 0.4 0 0 1 21.2 10.4V12.2A0.4 0.4 0 0 1 20.8 12.6H18.4A0.4 0.4 0 0 1 18 12.2V10.4A0.4 0.4 0 0 1 18.4 10Z"/><circle cx="11.6" cy="18" r="1.4"/><circle cx="20.4" cy="18" r="1.4"/></svg></span><span class="logo-name"><span>OriginRV</span></span></a><div class="nav-links"><a class="nav-link" href="/">Home</a><div class="nav-group"><a class="nav-link" href="/tools/">Tools</a><div class="drop"><a href="/tools/weight-calculator">Weight Calculator<span class="sm">Live, free</span></a><a href="/tools/">More tools<span class="sm">Campgrounds, stops, GPS, building</span></a></div></div><div class="nav-group"><a class="nav-link" href="/guides/">Guides</a><div class="drop"><a href="/guides/winterize-plumbing">Winterize Your Plumbing<span class="sm">Tanks, lines, antifreeze, bypass</span></a><a href="/guides/battery-winter-storage">Battery Care in Cold<span class="sm">Lead-acid vs lithium rules</span></a><a href="/guides/tires-winter">Tires Through Winter<span class="sm">Pressure, flat spots, covers</span></a><a href="/guides/roof-snow-load">Roof Under Snow Load<span class="sm">Seals, ice, weight</span></a></div></div><div class="nav-group"><a class="nav-link" href="/parts/">Parts</a><div class="drop"><a href="/parts/">Every RV part<span class="sm">All 157, by system, with what each one does</span></a><a href="/guides/">Guides<span class="sm">How to fix what is broken</span></a><a href="/manuals/">Manuals<span class="sm">The maker documents behind each part</span></a></div></div><div class="nav-group"><a class="nav-link" href="/directory/">Directory</a><div class="drop"><a href="/directory/">Find a service<span class="sm">Mobile techs and repair centers by state</span></a><a href="/directory/#claim">Claim your business<span class="sm">Free listing, you control it</span></a></div></div><div class="nav-group"><a class="nav-link" href="/manuals/">Manuals</a><div class="drop"><a href="/manuals/power-and-electrical">Electrical<span class="sm">Converters, inverters, solar, generators</span></a><a href="/manuals/towing-and-running-gear">Towing and running gear<span class="sm">Hitches, axles, brakes, tires</span></a><a href="/manuals/kitchen-and-appliances">Kitchen and appliances<span class="sm">Fridges, ranges, microwaves</span></a><a href="/manuals/brands">Owner manuals by brand<span class="sm">44 makers, 1973 to 2027</span></a><a href="/manuals/recalls">Recalls and bulletins<span class="sm">Check a unit, and the federal bulletin file</span></a><a href="/manuals/">All manuals<span class="sm">Every system, linked at the maker</span></a></div></div></div><form class="nav-search js-search-form" role="search"><div class="search-bar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 21.5 9.2 3.5"/><path d="M20 21.5 14.8 3.5"/><path d="M12 20.6v-4" stroke-width="2.4"/><path d="M12 12.2v-3" stroke-width="1.7"/><path d="M12 5.5v-2" stroke-width="1.1"/></svg><input type="search" autocomplete="off" name="q" aria-label="Search OriginRV" placeholder="Search"></div></form><div class="nav-actions"><a class="btn btn-primary btn-sm" href="/tools/">Tools</a><button type="button" class="burger" aria-label="Menu" onclick="RV.toggleMenu()"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h12M4 10h12M4 14h12"/></svg></button></div></div><div class="mobile-menu"><form class="mm-search js-search-form" role="search"><div class="search-bar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 21.5 9.2 3.5"/><path d="M20 21.5 14.8 3.5"/><path d="M12 20.6v-4" stroke-width="2.4"/><path d="M12 12.2v-3" stroke-width="1.7"/><path d="M12 5.5v-2" stroke-width="1.1"/></svg><input type="search" autocomplete="off" name="q" aria-label="Search OriginRV" placeholder="Search the site"></div></form><a class="mm-top" href="/">Home</a><div class="mm-group"><a class="mm-head" href="/tools/">Tools</a><a class="mm-sub" href="/tools/weight-calculator">Weight calculator</a></div><div class="mm-group"><a class="mm-head" href="/guides/">Guides</a><a class="mm-sub" href="/guides/winterize-plumbing">Winterize plumbing</a><a class="mm-sub" href="/guides/battery-winter-storage">Battery cold storage</a><a class="mm-sub" href="/guides/tires-winter">Tires through winter</a><a class="mm-sub" href="/guides/roof-snow-load">Roof snow load</a></div><div class="mm-group"><a class="mm-head" href="/parts/">Parts</a><a class="mm-sub" href="/parts/">Every RV part</a><a class="mm-sub" href="/guides/">Guides</a></div><div class="mm-group"><a class="mm-head" href="/directory/">Directory</a><a class="mm-sub" href="/directory/">Find a service</a><a class="mm-sub" href="/directory/#claim">Claim your business</a></div><div class="mm-group"><a class="mm-head" href="/manuals/">Manuals</a><a class="mm-sub" href="/manuals/power-and-electrical">Electrical</a><a class="mm-sub" href="/manuals/towing-and-running-gear">Towing and running gear</a><a class="mm-sub" href="/manuals/brands">Owner manuals by brand</a><a class="mm-sub" href="/manuals/recalls">Recalls and bulletins</a></div><a class="mm-top" href="/about">About</a><a class="mm-top" href="/contact">Contact</a></div></nav><!-- crumbs:start --><nav class="crumbs" aria-label="Breadcrumb"><div class="wrap"><a href="/">Home</a><span class="sep" aria-hidden="true">/</span><a href="/tools/">Tools</a><span class="sep" aria-hidden="true">/</span><span>RV fuel cost calculator</span></div></nav><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://originrv.com/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://originrv.com/tools/"},{"@type":"ListItem","position":3,"name":"RV fuel cost calculator","item":"https://originrv.com/tools/fuel-cost"}]}</script><!-- crumbs:end --><!-- nav:end --></div>
+
+<main id="main">
+ <div class="wrap page-intro">
+  <div class="sec-eyebrow">Free tool</div>
+  <h1 class="lg">RV fuel cost calculator</h1>
+  <p class="lede wide">The math is simple: miles divided by your miles per gallon, times the price of fuel. What is hard is knowing the numbers to put in it, so every box below says where its number comes from, and the RV type presets carry real-world MPG ranges rather than figures nobody publishes.</p>
+ </div>
+
+ <div class="sec pad-30">
+  <div class="wrap">
+   <div class="wc-layout">
+    <div class="wc-form">
+     <p class="note-sm mb-10">Fields marked with a star are required. The answer updates as you type.</p>
+     <div class="panel panel-24">
+      <h2 class="form-legend">Your trip</h2>
+      <div class="field">
+       <label for="f-distance">Total miles you will drive<span class="req">*</span></label>
+       <input id="f-distance" type="text" inputmode="decimal" placeholder="1200">
+       <span class="hint">How to get it: put your route into Google Maps and read the total, or add up the legs yourself. If the trip is there and back, enter the round-trip total, since that is the fuel you will buy.</span>
+      </div>
+      <div class="field">
+       <label for="f-type">Your RV type<span class="req">*</span></label>
+       <select id="f-type">
+        <option value="classa-gas">Class A, gasoline</option>
+        <option value="classa-diesel">Class A, diesel</option>
+        <option value="classc-gas" selected>Class C, gasoline</option>
+        <option value="classc-diesel">Class C, diesel</option>
+        <option value="classb">Class B camper van</option>
+        <option value="trailer">Travel trailer, towed</option>
+        <option value="fifth">Fifth wheel, towed</option>
+       </select>
+       <span class="hint">Sets a real-world MPG range for the estimate. Your own measured MPG below always wins over the range.</span>
+      </div>
+     </div>
+     <div class="panel panel-24">
+      <h2 class="form-legend">Your numbers</h2>
+      <div class="field">
+       <label for="f-mpg">Your own MPG, if you know it</label>
+       <input id="f-mpg" type="text" inputmode="decimal" placeholder="9.5">
+       <span class="hint">How to get it: fill the tank, note the odometer, drive a normal stretch, fill again. Miles driven divided by gallons on the second fill. One tank is a rough answer, three tanks is a good one, and the number moves with wind, weight, and mountains, so measure on roads like the trip you are pricing.</span>
+      </div>
+      <div class="field">
+       <label for="f-price">Fuel price, dollars per gallon<span class="req">*</span></label>
+       <input id="f-price" type="text" inputmode="decimal" placeholder="4.37">
+       <span class="hint">How to get it: the price at your last fill is the best one. Otherwise AAA posts the daily national average for regular and diesel, and GasBuddy shows station prices along your route. Diesel is running well above regular this year, so use the diesel figure if that is what you burn.</span>
+      </div>
+      <div class="field">
+       <label for="f-gen-hours">Generator hours, if the generator is part of the trip</label>
+       <input id="f-gen-hours" type="text" inputmode="decimal" placeholder="10">
+       <span class="hint">Optional. Most gasoline motorhome generators burn roughly half a gallon to one gallon per hour under load, so the total is shown as a range. Leave empty to skip.</span>
+      </div>
+     </div>
+    </div>
+    <div class="wc-out" id="fuel-result" aria-live="polite"></div>
+   </div>
+  </div>
+ </div>
+</main>
+
+<div class="wrap">
+ <div class="prose">
+  <h2>Where the MPG ranges come from</h2>
+  <p>There are no official fuel economy ratings for RVs. The EPA does not test motorhomes, because their chassis exceed the weight limits of the EPA's fuel economy testing, and towable RVs have no MPG figure at all because the fuel economy belongs to the tow vehicle. So the ranges here come from trade sources that gathered owner reports and dealer figures: <b>Class A gasoline 6 to 8 MPG, Class A diesel 7 to 10, Class C gasoline 8 to 11, Class C diesel 12 to 16, Class B vans 14 to 20, travel trailers 8 to 14, and fifth wheels 8 to 12</b>.</p>
+  <p>Two of those ranges deserve a second look. The towable numbers are the tow vehicle's fuel economy while pulling, not a property of the trailer: a half-ton gasoline truck that does 18 MPG empty might do 12 to 14 pulling a travel trailer, and a three-quarter-ton diesel pulling a fifth wheel might do 8 to 12. And the Class B spread is wide because it spans gasoline and diesel vans, where a diesel Sprinter runs near the top of the range and a gasoline ProMaster near the bottom. Your own measured MPG, entered in the box, is better than any of it.</p>
+
+  <h2>What the answer means</h2>
+  <p>The estimate is the middle of the road, not a promise. Wind, elevation, speed, and how heavy the coach is loaded all move the real number, which is why the result shows what the trip costs at both ends of your MPG range as well as the middle. Camper Smarts, whose method and figures this tool follows, recommends carrying a cushion of 10 to 15 percent over the estimate, and the result applies that for you as the planning figure. Motorhomes and tow vehicles also run most efficiently somewhere in the 55 to 65 MPH band, so a trip planned at 75 burns measurably more than the same trip at 60.</p>
+
+  <h2>Where to go next</h2>
+  <p><a href="/guides/rv-trip-planner">The trip planner guide</a> covers the whole job of planning a route: where to stop, where to book, and where to fill. <a href="/tools/weight-calculator">The weight calculator</a> answers the other question that decides what a trip costs, which is how heavy the load is.</p>
+
+  <div class="card srcs">
+   <h3>Sources</h3>
+   <ul>
+    <li><a href="https://campersmarts.com/how-to-improve-rv-gas-mileage" target="_blank" rel="noopener">Camper Smarts, RV gas mileage (updated February 2026)</a>: the MPG ranges by RV type used for the presets, the distance divided by MPG times price method, the 10 to 15 percent cushion, the 0.5 to 1 gallon per hour generator figure, and the 55 to 65 MPH efficiency band.</li>
+    <li><a href="https://www.rvingknowhow.com/best-mpg-rvs/" target="_blank" rel="noopener">RVing Know How, best MPG RVs (updated September 2026)</a>: chassis-level MPG figures, which are the reason the Class B range spans gasoline and diesel vans.</li>
+    <li><a href="https://www.coumbsrv.com/blog/94875-motorhome-fuel-economy-guide-which-rv-chassis-gets-the-best-gas-mileage" target="_blank" rel="noopener">Coumbs RV, motorhome fuel economy guide</a>: the statement that motorhome chassis exceed EPA testing weight limits, and chassis MPG figures that corroborate the ranges above.</li>
+    <li><a href="https://gasprices.aaa.com/" target="_blank" rel="noopener">AAA fuel prices</a>: the daily national average for regular and diesel, which is where the price box sends you.</li>
+    <li><a href="https://www.eia.gov/petroleum/gasdiesel/" target="_blank" rel="noopener">US Energy Information Administration, gasoline and diesel fuel update</a>: the weekly national benchmark average.</li>
+   </ul>
+  </div>
+ </div>
+</div>
+
+<div id="site-footer"><!-- footer:start --><div class="foot-top"><div class="wrap"><div class="foot-grid"><div class="foot-brand"><a class="logo" href="/"><span class="logo-mark"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><polygon points="4 1.6 5.7 6.8 5 6.8 6.6 11.4 5.8 11.4 7.6 16 5.2 16 5.2 19.4 2.8 19.4 2.8 16 0.4 16 2.2 11.4 1.4 11.4 3 6.8 2.3 6.8"/><path fill-rule="evenodd" d="M8.2 16L8.2 13.6L9 13.2L11.6 10.4L8.6 10.4L8.9 8.2L23.6 8.2L23.6 16.6L9.6 16.6ZM13.6 10H16.4A0.4 0.4 0 0 1 16.8 10.4V12.2A0.4 0.4 0 0 1 16.4 12.6H13.6A0.4 0.4 0 0 1 13.2 12.2V10.4A0.4 0.4 0 0 1 13.6 10ZM18.4 10H20.8A0.4 0.4 0 0 1 21.2 10.4V12.2A0.4 0.4 0 0 1 20.8 12.6H18.4A0.4 0.4 0 0 1 18 12.2V10.4A0.4 0.4 0 0 1 18.4 10Z"/><circle cx="11.6" cy="18" r="1.4"/><circle cx="20.4" cy="18" r="1.4"/></svg></span><span class="logo-name"><span>OriginRV</span></span></a><p>Every mile of the RV life, one toolkit.</p></div><div class="foot-col"><p class="foot-h">Tools</p><a href="/tools/weight-calculator">Weight calculator</a><a href="/tools/weight-calculator#why">Why it matters</a><a href="/tools/weight-calculator#embed">Embed on your site</a></div><div class="foot-col"><p class="foot-h">Guides</p><a href="/guides/winterize-plumbing">Winterize plumbing</a><a href="/guides/battery-winter-storage">Battery cold storage</a><a href="/guides/tires-winter">Tires through winter</a><a href="/guides/roof-snow-load">Roof snow load</a></div><div class="foot-col"><p class="foot-h">Directory</p><a href="/directory/">Find a service</a><a href="/directory/#claim">Claim your business</a><a href="/directory/#seed">What a listing carries</a></div><div class="foot-col"><p class="foot-h">Manuals</p><a href="/manuals/">All RV manuals</a><a href="/manuals/brands">Owner manuals by brand</a><a href="/manuals/recalls">Recalls and bulletins</a><a href="/manuals/power-and-electrical">Electrical manuals</a><a href="/manuals/towing-and-running-gear">Towing manuals</a></div><div class="foot-col"><p class="foot-h">Company</p><a href="/about">About</a><a href="/contact">Contact</a><a href="/tools/">All tools</a></div></div></div><div class="wrap foot-bottom"><span>© 2026 OriginRV. Built for the open road.</span><span class="foot-credit">Third-party photographs appear under the licences credited beside each one, resized for display.</span><span class="legal"><a href="/">Home</a><a href="/directory/">Directory</a><a href="/guides/">Guides</a></span></div></div><!-- footer:end --></div>
+
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "3727183603b6402b9249de33fa381acd"}'></script><!-- End Cloudflare Web Analytics -->
+<script src="assets/js/config.js?v=f769b084"></script>
+<script src="assets/js/site.js?v=4e792d7c"></script>
+<script src="assets/js/fuelcost.js?v=49e51be6"></script>
+</body>
+</html>
