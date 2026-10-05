@@ -331,7 +331,20 @@ def check(rec):
 
 def main():
     path = Path(sys.argv[1])
-    recs = json.loads(path.read_text(encoding="utf-8"))
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    # BOTH SHAPES. A research pass hands back {"candidates": [...], "unverified": [...]} while
+    # this gate has only ever read a bare array. Handed the object it reported "2 candidates"
+    # and verified the dictionary's two keys -- silently, because a dict has a length and the
+    # output LOOKS like a normal run over two records. Hit twice: on the Northeast pass and
+    # again on Alaska. Accepting both removes the trap rather than documenting it.
+    if isinstance(payload, dict):
+        recs = payload.get("candidates") or []
+        held = payload.get("unverified") or []
+        if held:
+            print("  (%d record(s) marked unverified in the file are not checked here; they "
+                  "were set aside by the researcher)" % len(held))
+    else:
+        recs = payload
     print("%d candidate(s) in %s\n" % (len(recs), path.name))
     # HOW MANY RECORDS AT ONCE, AND WHY ONE IS OFTEN FASTER. Four is right for a state of
     # ordinary sites. It is wrong when many of them are JavaScript: each render is a
