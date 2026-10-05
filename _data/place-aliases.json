@@ -245,5 +245,13 @@
   "Honolulu": {
     "to": "Urban Honolulu",
     "why": "The Census place file carries Hawaii's capital as 'Urban Honolulu CDP' (there is also an 'East Honolulu CDP'), so the name every listing, business and reader actually uses does not resolve. Same place."
+  },
+  "Barnstable": {
+    "to": "Barnstable Town",
+    "why": "Massachusetts is carried by the Census place file as 'Barnstable Town city' (LSAD 25), so the name a listing and a reader use does not resolve. Same place."
+  },
+  "West Springfield": {
+    "to": "West Springfield Town",
+    "why": "Massachusetts is carried by the Census place file as 'West Springfield Town city' (LSAD 25), so the name a listing and a reader use does not resolve. Same place."
   }
 }

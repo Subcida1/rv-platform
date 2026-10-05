@@ -9,6 +9,14 @@
     {
       "key": "downeast-maine",
       "label": "Bar Harbor and Downeast"
+    },
+    {
+      "key": "central-maine",
+      "label": "Augusta, Waterville and the western mountains"
+    },
+    {
+      "key": "north-maine",
+      "label": "Bangor, Aroostook and the north"
     }
   ],
   "region_of": {
@@ -17,7 +25,57 @@
     "Chelsea": "southern-maine",
     "Topsham": "southern-maine",
     "Bar Harbor": "downeast-maine",
-    "Sabattus": "southern-maine"
+    "Sabattus": "southern-maine",
+    "Portland": "southern-maine",
+    "South Portland": "southern-maine",
+    "Saco": "southern-maine",
+    "Biddeford": "southern-maine",
+    "Scarborough": "southern-maine",
+    "Westbrook": "southern-maine",
+    "Falmouth": "southern-maine",
+    "Gorham": "southern-maine",
+    "Windham": "southern-maine",
+    "Sanford": "southern-maine",
+    "Kennebunk": "southern-maine",
+    "Wells": "southern-maine",
+    "Alfred": "southern-maine",
+    "Waterboro": "southern-maine",
+    "Lewiston": "southern-maine",
+    "Auburn": "southern-maine",
+    "Lebanon": "southern-maine",
+    "Augusta": "central-maine",
+    "Gardiner": "central-maine",
+    "Hallowell": "central-maine",
+    "Waterville": "central-maine",
+    "Winslow": "central-maine",
+    "Skowhegan": "central-maine",
+    "Farmington": "central-maine",
+    "Wilton": "central-maine",
+    "Norway": "central-maine",
+    "Paris": "central-maine",
+    "Turner": "central-maine",
+    "Oxford": "central-maine",
+    "Bangor": "north-maine",
+    "Brewer": "north-maine",
+    "Holden": "north-maine",
+    "Orono": "north-maine",
+    "Old Town": "north-maine",
+    "Hampden": "north-maine",
+    "Lincoln": "north-maine",
+    "Millinocket": "north-maine",
+    "Dover-Foxcroft": "north-maine",
+    "Newport": "north-maine",
+    "Pittsfield": "north-maine",
+    "Presque Isle": "north-maine",
+    "Caribou": "north-maine",
+    "Houlton": "north-maine",
+    "Fort Kent": "north-maine",
+    "Madawaska": "north-maine",
+    "Greenville": "north-maine",
+    "Ellsworth": "downeast-maine",
+    "Trenton": "downeast-maine",
+    "Machias": "downeast-maine",
+    "Calais": "downeast-maine"
   },
   "listings": [
     {
@@ -211,6 +269,398 @@
         "emergency_quote": null,
         "roadside_quote": null,
         "licence": null
+      }
+    },
+    {
+      "n": "GiddyUp Mobile RV Services",
+      "c": "Portland, ME",
+      "p": "(207) 210-8655",
+      "u": "https://giddyuprv.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Mobile RV, motorhome and camper repair run by certified RV service technician Erik Boucher out of Portland. The site advertises mobile repair and installation of roof, awning, slideout, water-tank, air-conditioner, refrigerator, furnace, water-heater, plumbing, propane and electrical systems, positioning itself as a faster alternative to waiting weeks for a service-center appointment.",
+      "g": [
+        "mobile tech",
+        "appliances",
+        "roof",
+        "plumbing",
+        "electrical"
+      ],
+      "base": "Portland",
+      "areas": [],
+      "region": "Greater Portland / Cumberland County",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "Call Erik Boucher Now ((207) 210-8655)",
+        "type_quote": "RV Motorhome Camper Repair",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": []
+      }
+    },
+    {
+      "n": "Seacoast RVs Inc",
+      "c": "Saco, ME",
+      "p": "(207) 282-3511",
+      "u": "https://www.seacoastrv.com/rv-service",
+      "t": "center",
+      "e": true,
+      "r": false,
+      "d": "Maine RV dealer in Saco (established 1996) whose factory-trained technicians run a full service department for motor homes, travel trailers and fifth wheels, from preventative maintenance to emergency service at the shop or at the campsite. It offers pickup and delivery of the RV to and from the service center, including long-distance moves.",
+      "g": [
+        "service center",
+        "dealer service",
+        "collision and body",
+        "plumbing",
+        "electrical"
+      ],
+      "base": "Saco",
+      "areas": [
+        "Biddeford"
+      ],
+      "region": "Southern Maine / York County",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "(207) 282-3511",
+        "type_quote": "RV Service Department In Saco, Maine",
+        "emergency_quote": "Our factory-trained recreational vehicle technicians are here to service any problems or repairs from preventative maintenance to emergency service at our location or at your campsite.",
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Whether you live 25 miles or 125 miles away, we can pick up and deliver your RV for service safely, securely, and on schedule."
+        ]
+      }
+    },
+    {
+      "n": "Trailhead RV Services",
+      "c": "Bar Harbor, ME",
+      "p": "(314) 435-7414",
+      "u": "https://www.trailheadrvservices.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "Seasonal mobile RV repair business serving Mount Desert Island and the surrounding Downeast area (June 1 to October 31) with NRVTA/RVTAA-certified technicians who come to the customer's location. Services include electrical, plumbing, appliance repair and roof maintenance, with emergency response available.",
+      "g": [
+        "mobile tech",
+        "emergency",
+        "appliances",
+        "roof",
+        "plumbing"
+      ],
+      "base": null,
+      "areas": [],
+      "region": "Mount Desert Island / Downeast",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "(314) 435-7414",
+        "type_quote": "Expert Mobile RV Repair – Service You Can Trust, Wherever You Are",
+        "emergency_quote": "Emergency Response Available",
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Servicing MDI and surrounding area of Maine, June 1st to October 31st."
+        ]
+      },
+      "reg": "downeast-maine"
+    },
+    {
+      "n": "Helping Hand RV Repair",
+      "c": "Bar Harbor, ME",
+      "p": "740-604-0810",
+      "u": "https://www.helpinghandrvrepair.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "Mobile RV repair run by Steven Dixon, an electrical technician of 12+ years, stationed in Bar Harbor and surrounding areas May 21 to October 1, 2026. Services include preventative maintenance (ACs, water heaters, bearings), black/grey tank jetting, plumbing and electrical issues, emergency repairs, slide and awning work, and installations and replacements.",
+      "g": [
+        "mobile tech",
+        "emergency",
+        "plumbing",
+        "electrical",
+        "appliances"
+      ],
+      "base": null,
+      "areas": [],
+      "region": "Mount Desert Island / Downeast",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "Call or Text Steven Dixon 740-604-0810",
+        "type_quote": "RV Repairs Where You Are, So Your Adventure Doesn't Stop.",
+        "emergency_quote": "Emergency Repairs",
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "MOBILE RV TECH ON DUTY: Bar Harbor, Maine & Surrounding Areas May 21, 2026 - Oct 1, 2026"
+        ]
+      },
+      "reg": "downeast-maine"
+    },
+    {
+      "n": "Stay Happy Mobile RV Repair, LLC",
+      "c": "Statewide, ME",
+      "p": "775-241-3399",
+      "u": "https://stayhappyrv.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "Family-owned mobile RV repair business offering service throughout Maine, staffed by NRVTA/RVTAA-certified tech Joshua Lappin. Services cover electrical, plumbing, propane, roof repair and inspection, appliance checks and repairs, and awning repair, plus pre-season and pre-vacation inspections, winterization and emergency help.",
+      "g": [
+        "mobile tech",
+        "emergency",
+        "electrical",
+        "plumbing",
+        "roof"
+      ],
+      "base": null,
+      "areas": [],
+      "region": "Statewide Maine",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "Call Now! 775-241-3399",
+        "type_quote": "Stay Happy Mobile RV Repair, LLC",
+        "emergency_quote": "Whether you're looking for routine maintenance options or find yourself in a pinch and need emergency help we've got you covered so you can spend more time enjoying your RV and less time stressing over it!",
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Currently Offering Service throughout Maine"
+        ]
+      },
+      "reg": "southern-maine"
+    },
+    {
+      "n": "Good Times Unlimited",
+      "c": "Farmington, ME",
+      "p": "207-778-3482",
+      "u": "https://goodtimesrvsales.com/rv-service-center",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Family-run RV parts, accessory store and service department in Farmington (since 1978) with a drive-thru service bay. It handles most towable RV maintenance, aftermarket accessory installation and repairs (appliance, awning, axle, floor, metal siding, roof, electrical, hitch/brake, plumbing, winterizing), with motorhome service limited to appliances, roof and exterior sealants.",
+      "g": [
+        "service center",
+        "appliances",
+        "roof",
+        "electrical",
+        "winterizing"
+      ],
+      "base": null,
+      "areas": [],
+      "region": "Western Maine / Franklin County (Farmington)",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "Call 207-778-3482 or CONTACT US HERE",
+        "type_quote": "RV Service Center | Farmington, ME | Parts, Accessories, Repairs",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Good Times Unlimited operates an RV service center at our new location at 165 Wilton Rd, Rts 2 & 4 in Farmington."
+        ]
+      },
+      "reg": "central-maine"
+    },
+    {
+      "n": "Holden Family RV",
+      "c": "Holden, ME",
+      "p": "(207) 989-3851",
+      "u": "https://www.holdenfamilyrv.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Family-owned RV dealership on Route 1A in Holden, between Bangor and Ellsworth, with the in-house RecTech service department in the same building. RecTech repairs every brand of RV, from winterization to major rebuilds, six days a week, and the store stocks parts and accessories.",
+      "g": [
+        "service center",
+        "dealer service",
+        "appliances",
+        "winterizing"
+      ],
+      "base": null,
+      "areas": [],
+      "region": "Bangor area / Penobscot County (Holden)",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "(207) 989-3851",
+        "type_quote": "RecTech, our in-house service department, repairs every brand of RV — from winterization to major rebuilds, six days a week.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Family-owned RV dealership and full-service repair center on Route 1A in Holden, Maine — the gateway to Downeast Maine, Bar Harbor and Acadia National Park."
+        ]
+      },
+      "reg": "north-maine"
+    },
+    {
+      "n": "SR1 RV",
+      "c": "Turner, ME",
+      "p": "(207) 224-8444",
+      "u": "https://www.sr1rv.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Employee-owned Maine RV dealership group (a division of SR1 Companies, formerly Scott's Recreation) with RV service at its Turner and Manchester stores. It staffs expert RV technicians and several indoor bays outfitted to fix most any issue, and takes service appointments through an online request form or by phone.",
+      "g": [
+        "service center",
+        "dealer service",
+        "appliances",
+        "roof"
+      ],
+      "base": null,
+      "areas": [],
+      "region": "Central Maine / Kennebec County (Turner & Manchester)",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "(207) 224-8444",
+        "type_quote": "We offer RV Service!",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "We have many expert RV technicians and several indoor bays that are outfitted to fix most any issue that you might be having."
+        ]
+      },
+      "reg": "central-maine"
+    },
+    {
+      "n": "Call of the Wild RV Center",
+      "c": "Oxford, ME",
+      "p": "(207) 539-4410",
+      "u": "https://callofthewildrv.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Family-owned RV dealership in Oxford (since 1965) with a parts and service team that performs routine maintenance, seasonal service support and RV repairs, plus replacement parts. Its Customer for Life program includes priority service and annual inspection items performed at the dealership.",
+      "g": [
+        "service center",
+        "dealer service",
+        "appliances",
+        "roof"
+      ],
+      "base": null,
+      "areas": [],
+      "region": "Western Maine / Oxford County",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "(207) 539-4410",
+        "type_quote": "Family-Owned • Oxford, Maine • Parts & Service Available",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Our parts and service team helps you protect your investment and keep your camper road-ready throughout the seasons."
+        ]
+      },
+      "reg": "central-maine"
+    },
+    {
+      "n": "McCluskey's RV Center",
+      "c": "Presque Isle, ME",
+      "p": "(207) 762-1721",
+      "u": "http://www.mccluskeys.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Northern Maine's family-owned RV center on Houlton Road in Presque Isle (established 1946), selling a full line of RVs and supplying expert parts and service for a wide range of leading RV brands including Columbus, Cruise Lite, Sabre, Salem, Sierra, Vibe and Villa Estate.",
+      "g": [
+        "service center",
+        "dealer service",
+        "parts",
+        "appliances"
+      ],
+      "base": "Presque Isle",
+      "areas": [],
+      "region": "Northern Maine / Aroostook County",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "Phone: (207) 762-1721",
+        "type_quote": "We provide expert parts and service for a wide range of leading RV brands",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "For over 75 years, McCluskey's RV Center has proudly been Northern Maine's leading choice for recreational vehicles."
+        ]
+      }
+    },
+    {
+      "n": "Airstream of Maine",
+      "c": "Lebanon, ME",
+      "p": "207-339-0032",
+      "u": "https://www.airstreammaine.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Airstream dealership in Lebanon with a service department built specifically around Airstream owners and a Five Rivet service award. The Lebanon service center handles roof and seam resealing, axle/brake/bearing/tire service, appliance diagnosis and repair, electrical, plumbing and LP system service, aluminum body repair, annual maintenance, winterizing and pre-trip inspections, plus warranty work and recalls.",
+      "g": [
+        "service center",
+        "dealer service",
+        "roof",
+        "appliances",
+        "electrical"
+      ],
+      "base": null,
+      "areas": [],
+      "region": "Southern Maine / York County (Lebanon)",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "Please call our service department at 207-339-0032 (2073390032) to schedule your service work or fill out the form provided.",
+        "type_quote": "Airstream Service & Repair in Maine",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Airstream of Maine is conveniently located in Lebanon, serving Airstream owners throughout Maine and surrounding areas."
+        ]
+      },
+      "reg": "southern-maine"
+    },
+    {
+      "n": "Airstream of Scarborough",
+      "c": "Scarborough, ME",
+      "p": "207-510-2250",
+      "u": "https://www.airstreamofscarborough.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Airstream, Mercedes-Benz and Sprinter dealership on US Route 1 in Scarborough with a full service department. As an authorized Mercedes-Benz dealership it can service the RV portion of an Airstream as well as the chassis, electronics and powertrain, including warranty items.",
+      "g": [
+        "service center",
+        "dealer service",
+        "chassis",
+        "appliances"
+      ],
+      "base": null,
+      "areas": [],
+      "region": "Greater Portland / Cumberland County (Scarborough)",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "207-510-2250",
+        "type_quote": "New England's exclusive Airstream sales and full service dealership.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "We are a Mercedes- Benz, Sprinter and Airstream dealership conveniently located in southern Maine, approximately 90 minutes north of Boston."
+        ]
+      },
+      "reg": "southern-maine"
+    },
+    {
+      "n": "Northeast Transmission",
+      "c": "Biddeford, ME",
+      "p": "(207) 282-4039",
+      "u": "https://www.northeasttransmission.net/rv-repair",
+      "t": "center",
+      "e": true,
+      "r": false,
+      "d": "Biddeford repair shop with a dedicated RV repair line covering slide-out repair, awning repair and replacement, roof inspection and repair, RV bodywork and collision repair, chassis work (engines, transmissions, brakes, suspension, tires), HVAC, electrical diagnostics, plumbing and appliances. It advertises emergency repairs, heavy-duty RV service repairs and routine pre-trip maintenance on gas or diesel motorhomes.",
+      "g": [
+        "service center",
+        "emergency",
+        "chassis",
+        "collision and body",
+        "appliances"
+      ],
+      "base": "Biddeford",
+      "areas": [],
+      "region": "Southern Maine / York County (Biddeford)",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "(207) 282-4039",
+        "type_quote": "RV REPAIR",
+        "emergency_quote": "Emergency Repairs: Have an issue while traveling? Count on our team to get you back on the road quickly and safely.",
+        "roadside_quote": null,
+        "coverage_quotes": []
       }
     }
   ]

@@ -37,7 +37,15 @@ DESIGNATIONS = ("city and borough", "city-county", "unified government",
 # writes "Baker City city", so stripping the trailing token blindly is right FOR THE
 # CENSUS NAME and wrong for anything else: applied to a reader's "Baker City" it
 # yields "baker" and loses the town. That mistake was made once here.
-LSAD_WORDS = {"city", "town", "village", "borough", "cdp"}
+#
+# "corporation" added 2026-10-04. West Virginia carries Ranson as "Ranson corporation"
+# (LSAD CN), and without this the plain name a listing and a reader use did not resolve --
+# the same shape as Massachusetts carrying every city as "<Name> Town" (LSAD 25), which
+# needed two aliases earlier the same evening. **The general fault is that this set is a
+# hand-kept list of Census designations, and a state using one it does not hold produces a
+# name that silently cannot be placed.** Add the word here when the coordinate check reports
+# a name that IS a place but does not resolve.
+LSAD_WORDS = {"city", "town", "village", "borough", "cdp", "corporation"}
 
 
 def census_keys(name, lsad=None):
@@ -93,7 +101,11 @@ def canonical(name, census_name=False, lsad=None):
                 n = n[: -len(des) - 1]
                 break
         else:
-            for des in {LSAD.get(lsad or "", ""), "cdp", "city", "town", "village", "borough"}:
+            # ONE LIST. This loop used to hold its own hardcoded set -- "cdp", "city", "town",
+            # "village", "borough" -- and never consulted LSAD_WORDS above, so adding a word
+            # there did nothing at all. Found 2026-10-04 when West Virginia's "Ranson
+            # corporation" still would not resolve after LSAD_WORDS was extended.
+            for des in LSAD_WORDS | {LSAD.get(lsad or "", "")}:
                 if des and n.endswith(" " + des):
                     n = n[: -len(des) - 1]
                     break

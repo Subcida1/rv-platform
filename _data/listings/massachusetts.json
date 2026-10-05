@@ -17,13 +17,63 @@
     {
       "key": "central-ma",
       "label": "Worcester and central Massachusetts"
+    },
+    {
+      "key": "western-ma",
+      "label": "Springfield and western Massachusetts"
     }
   ],
   "region_of": {
     "Carver": "southeastern-ma",
     "Lakeville": "southeastern-ma",
     "New Bedford": "southeastern-ma",
-    "South Yarmouth": "cape-cod-ma"
+    "South Yarmouth": "cape-cod-ma",
+    "Bourne": "cape-cod-ma",
+    "Barnstable": "cape-cod-ma",
+    "Yarmouth": "cape-cod-ma",
+    "Falmouth": "cape-cod-ma",
+    "Hyannis": "cape-cod-ma",
+    "Dennis": "cape-cod-ma",
+    "Orleans": "cape-cod-ma",
+    "Marstons Mills": "cape-cod-ma",
+    "Sandwich": "cape-cod-ma",
+    "East Bridgewater": "southeastern-ma",
+    "Foxborough": "southeastern-ma",
+    "Rochester": "southeastern-ma",
+    "Wareham": "southeastern-ma",
+    "Marion": "southeastern-ma",
+    "Mattapoisett": "southeastern-ma",
+    "Fall River": "southeastern-ma",
+    "Taunton": "southeastern-ma",
+    "Attleboro": "southeastern-ma",
+    "Brockton": "southeastern-ma",
+    "Plymouth": "southeastern-ma",
+    "Middleborough": "southeastern-ma",
+    "Worcester": "central-ma",
+    "Leominster": "central-ma",
+    "Fitchburg": "central-ma",
+    "Gardner": "central-ma",
+    "Milford": "central-ma",
+    "Marlborough": "central-ma",
+    "Springfield": "western-ma",
+    "Chicopee": "western-ma",
+    "Holyoke": "western-ma",
+    "West Springfield": "western-ma",
+    "Westfield": "western-ma",
+    "Northampton": "western-ma",
+    "Amherst": "western-ma",
+    "Greenfield": "western-ma",
+    "Pittsfield": "western-ma",
+    "Boston": "greater-boston-ma",
+    "Cambridge": "greater-boston-ma",
+    "Quincy": "greater-boston-ma",
+    "Newton": "greater-boston-ma",
+    "Waltham": "greater-boston-ma",
+    "Framingham": "greater-boston-ma",
+    "Lowell": "greater-boston-ma",
+    "Salem": "greater-boston-ma",
+    "Peabody": "greater-boston-ma",
+    "Woburn": "greater-boston-ma"
   },
   "listings": [
     {
@@ -233,6 +283,259 @@
         "emergency_quote": null,
         "roadside_quote": null,
         "licence": null
+      }
+    },
+    {
+      "n": "Majors RV",
+      "c": "Bourne, MA",
+      "p": "(508) 759-2833",
+      "u": "https://www.majorsrv.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Major's RV is an RV parts, accessories and service center on MacArthur Boulevard in Bourne that has operated since 1974. Master certified technicians service most makes and models, including Class A, B and C motorhomes, and the shop accepts most RV insurance and extended warranty service plans. Its showroom stocks manufacturer-specific and special-order parts, hitches, lights, covers, plumbing, HVAC, electrical, bath, awnings and generators.",
+      "g": [
+        "service center",
+        "parts",
+        "warranty work"
+      ],
+      "base": "Bourne",
+      "areas": [
+        "Sandwich",
+        "Falmouth",
+        "Wareham"
+      ],
+      "region": "Cape Cod / Upper Cape",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "Info@MajorsRV.com | (508)759-2833",
+        "type_quote": "Your RV Parts & Service Experts!",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Located in Bourne, MA, Major’s RV’s showroom offers a huge selection of parts & accessories.",
+          "Since 1974, Major’s RV has provided parts, accessories and service for most makes and models of RVs, Class A, B & C motorhomes and more!"
+        ]
+      }
+    },
+    {
+      "n": "Camping USA RV Service Center",
+      "c": "East Bridgewater, MA",
+      "p": "(508) 378-3640",
+      "u": "https://campingusasuperstore.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Camping USA RV Service Center is a family-owned RV repair shop in East Bridgewater with more than 25 years in business. Seasoned technicians handle maintenance, upgrades and repairs, including slide-out motors and roof patching, and the shop works with warranty companies. It was named the Best of 2026 Plymouth County winner in the RV repair shop category.",
+      "g": [
+        "service center",
+        "warranty work",
+        "parts"
+      ],
+      "base": "East Bridgewater",
+      "areas": [
+        "Brockton",
+        "Bridgewater"
+      ],
+      "region": "Southeast Massachusetts / Plymouth County",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "For Service Call 508-378-3640",
+        "type_quote": "Expert RV Repairs and Service at Camping USA",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Explore our roots and discover how our family-owned shop in East Bridgewater has become a trusted haven for RV owners."
+        ]
+      }
+    },
+    {
+      "n": "Pete's RV Center",
+      "c": "Foxborough, MA",
+      "p": "(508) 936-5763",
+      "u": "https://www.petesrv.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Pete's RV Center is a New England RV dealership whose Massachusetts service operation is based in Foxborough, with master certified and factory trained technicians and state of the art service bays. The department services everything from pop-ups to 40-foot diesel pushers, performs regular maintenance and warranty work for major brands, and will service campers bought elsewhere. Listed work includes winterization, hitch and braking system installation, state inspection, roof sealing and leak repair, and axle and bearing repair.",
+      "g": [
+        "service center",
+        "dealer",
+        "warranty work"
+      ],
+      "base": "Foxborough",
+      "areas": [
+        "Plainville",
+        "Wrentham",
+        "Mansfield"
+      ],
+      "region": "Greater Boston / Foxborough area",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "Foxborough, MA 95 Washington St Call Us: (508) 936-5763",
+        "type_quote": "Pete's RV Center is at Your Service!",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "We specialize in servicing everything from a pop-up to a 40 diesel pusher.",
+          "We service and provide warranty work for all brands and models!"
+        ]
+      }
+    },
+    {
+      "n": "Rousseau's RV Center",
+      "c": "Lakeville, MA",
+      "p": "508-947-7700",
+      "u": "https://www.rousseausrv.com/service-department",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Rousseau's RV Center Service Department is an RV dealership service shop on Bedford Street in Lakeville serving the Lakeville-Middleboro area. Work includes 5th wheel hitch and weight distribution installation, brake control installation, winterizations, wheel bearings, air conditioner installs, roof reseal and coat, awning repair and replacement, slideroom adjustment, appliance installation, LP testing and tires. The lot also offers propane refills, a dump station and secure storage.",
+      "g": [
+        "service center",
+        "dealer",
+        "parts"
+      ],
+      "base": null,
+      "areas": [],
+      "region": "Southeast Massachusetts / Plymouth County",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "508-947-7700 (5089477700) 150 Bedford St, Lakeville, MA 02347",
+        "type_quote": "Rousseau's RV Center Service Department",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "We are proud to provide quality service in the Lakeville-Middleboro area."
+        ]
+      },
+      "reg": "southeastern-ma"
+    },
+    {
+      "n": "Timbucktu RV",
+      "c": "Worcester, MA",
+      "p": "(508) 459-1132",
+      "u": "https://timbuckturv.com/repairs/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Timbucktu RV is a locally owned RV dealership and repair shop on Southbridge Street in Worcester that offers a full range of RV repair backed by an on-site parts inventory. It services motorhomes, travel trailers, pop-up tent trailers, toy haulers and generators, and handles tires, brakes, appliance repair, roof replacement and winterizing. The shop says it offers year-round service with staff who have more than 25 years of experience.",
+      "g": [
+        "service center",
+        "dealer",
+        "parts"
+      ],
+      "base": "Worcester",
+      "areas": [
+        "Auburn",
+        "Shrewsbury",
+        "Millbury"
+      ],
+      "region": "Central Massachusetts / Worcester",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "(508) 459-1132 (508-459-1132)",
+        "type_quote": "Camper / RV Repair in Worcester, MA",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "We offer a full range of RV repair solutions, made possible by our wide variety of parts available to us right in our Worcester, MA location."
+        ]
+      }
+    },
+    {
+      "n": "Cape Cod RV Medic",
+      "c": "Marstons Mills (Barnstable), MA",
+      "p": "508-776-6109",
+      "u": "https://www.ccrvmedic.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "Cape Cod RV Medic is a veteran-owned, fully mobile RV repair service based in Marstons Mills, a village within Barnstable. It brings on-site repair and maintenance to the customer's home, campground or storage unit, and services all 15 towns on Cape Cod. The company says its technician is certified, licensed and insured, and that it never charges more for emergencies, weekends, nights or holidays.",
+      "g": [
+        "mobile tech",
+        "emergency"
+      ],
+      "base": "Barnstable",
+      "areas": [
+        "Yarmouth",
+        "Falmouth",
+        "Dennis"
+      ],
+      "region": "Cape Cod",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "508-776-6109",
+        "type_quote": "We bring the RV Repair shop to you!",
+        "emergency_quote": "We never charge more for emergencies, weekends, nights or holidays.",
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Cape Cod RV Medic is a veteran owned and operated company based out of Marston's Mills, a village within Barnstable. We bring the RV repair shop to all 15 towns on Cape Cod."
+        ]
+      }
+    },
+    {
+      "n": "ALLSHOW RV Services",
+      "c": "Rochester, MA",
+      "p": "904-922-4711",
+      "u": "https://allshowrvservices.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "ALLSHOW RV Services LLC is a family-run mobile RV repair and inspection business. Its service call fee includes the first 20 miles and it charges a published hourly labor rate, performing repairs and inspections on site and following NRVIA standards of practice. Listed work includes clearing tank clogs, build-up, sediment and odors, restoring tank sensor function, cabinetry and trim work, and spring and winter preparation.",
+      "g": [
+        "mobile tech",
+        "inspections"
+      ],
+      "base": null,
+      "areas": [
+        "Wareham",
+        "Marion",
+        "Mattapoisett"
+      ],
+      "region": "South Coast / Wareham area",
+      "spec": "NRVIA-aligned inspections",
+      "evidence": {
+        "phone_quote": "904-922-4711 (9049224711)",
+        "type_quote": "ALLSHOW RV Services",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "At ALLSHOW RV Services, we proudly uphold NRVIA’s High Standards of Practice and Code of Ethics.",
+          "Prepare your RV for Spring or Winter"
+        ]
+      },
+      "reg": "southeastern-ma"
+    },
+    {
+      "n": "Beaulieu Mobile RV Repair & Inspections LLC",
+      "c": "Springfield, MA",
+      "p": "413-426-4696",
+      "u": "https://davidjb73.wixsite.com/beaulieu-mobile-rv-1",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Beaulieu Mobile RV Repair & Inspections LLC is a Springfield-based mobile RV service that performs pre-purchase, safety and maintenance inspections along with repairs at the customer's location. Its listed work covers internal repairs such as AC, refrigerator and heater repair, and external repairs including roof repair. The company states it services Western Massachusetts, Northern Connecticut and Southern New Hampshire.",
+      "g": [
+        "mobile tech",
+        "inspections"
+      ],
+      "base": "Springfield",
+      "areas": [
+        "Chicopee",
+        "Holyoke",
+        "West Springfield"
+      ],
+      "region": "Pioneer Valley / Western Massachusetts",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "413-426-4696",
+        "type_quote": "Reliable RV services for every need",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Servicing Western MA, Northern CT, and Southern NH"
+        ]
       }
     }
   ]

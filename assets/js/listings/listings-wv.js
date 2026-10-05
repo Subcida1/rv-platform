@@ -58,5 +58,70 @@ window.RV_LISTINGS_WV = [
   ],  "base": "moorefield",  "areas": [
    "moorefield"
   ],  "region": null,  "spec": null,  "reg": "highlands-wv"
+ },
+ {  "n": "Steve & Stacy's Servicenter",  "c": "Charleston and the Kanawha Valley, WV",  "p": "(304) 343-4611",  "u": "https://www.steveandstacysservicenter.com/services/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "Steve & Stacy's Servicenter is a Charleston automotive servicenter that also runs a dedicated RV service bay, and it advertises RV pre-trip inspection, preventative maintenance, oil and filter changes, suspension and steering repair, and electrical service and repair. It tells RV owners they can call or visit the shop at 130 Virginia Street W in Charleston to book RV maintenance and repair.",  "g": [
+   "service center",
+   "brakes",
+   "electrical",
+   "maintenance"
+  ],  "base": "charleston",  "areas": [
+   "south charleston",
+   "dunbar",
+   "nitro",
+   "saint albans"
+  ],  "region": "Kanawha Valley",  "spec": "General automotive servicenter that also services RVs.",  "reg": "central-wv"
+ },
+ {  "n": "Burdette Camping Center",  "c": "Winfield and the Teays Valley, WV",  "p": "304-586-3084",  "u": "https://www.burdettecamping.com/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "Burdette Camping Center is a family-owned RV dealer in Winfield with an RV service department that takes in fifth wheels, travel trailers, cargo trailers and horse trailers. It says it honors most service plans, favors recalls on its units, does manufacturer warranty work on units it sold, and is an authorized service center for Suburban, Dometic, A&E, Carefree, Norcold and Thetford.",  "g": [
+   "service center",
+   "dealer",
+   "warranty work"
+  ],  "base": "winfield",  "areas": [
+   "hurricane",
+   "teays valley",
+   "nitro"
+  ],  "region": "Putnam County / Teays Valley",  "spec": null,  "reg": "central-wv"
+ },
+ {  "n": "Jennings RV Sales",  "c": "Princeton and the southern coalfields, WV",  "p": "(304) 487-0495",  "u": "https://www.jenningsrvsales.com/service-repair-rvs-dealership--service",  "t": "center",  "e": false,  "r": false,  "d": "Jennings RV Sales is an RV and motorhome dealership in Princeton with a service department that handles parts and warranty claims, ordering parts and submitting Forest River or component-manufacturer warranty claims for units it has sold. It states normal hours are Tuesday through Friday 9 to 6 and Saturday 9 to 4.",  "g": [
+   "service center",
+   "dealer",
+   "warranty work"
+  ],  "base": "princeton",  "areas": [
+   "bluefield",
+   "athens",
+   "bluewell",
+   "brush fork"
+  ],  "region": "Southern coalfields / Mercer County",  "spec": null,  "reg": "south-wv"
+ },
+ {  "n": "Tom's Family Fun, LLC",  "c": "Weirton and the northern panhandle, WV",  "p": "(304)-723-0052",  "u": "http://www.tomsfamilyfunrv.com/home.html",  "t": "center",  "e": false,  "r": false,  "d": "Tom's Family Fun, LLC is a family-owned RV sales and service business in Weirton that has operated since 1971. It completely installs and repairs RV roofs, RV AC units and awnings, welcomes insurance repairs, and also fills propane and rents RV storage.",  "g": [
+   "service center",
+   "dealer",
+   "awning and roof"
+  ],  "base": "weirton",  "areas": [
+   "wheeling",
+   "moundsville"
+  ],  "region": "Northern Panhandle",  "spec": null,  "reg": "north-central-wv"
+ },
+ {  "n": "Mission RV Mobile Services",  "c": "Harpers Ferry and the eastern panhandle, WV",  "p": "(304) 616-9830",  "u": "https://www.mission-rv.com/contact",  "t": "mobile",  "e": true,  "r": false,  "d": "Mission RV Mobile Services is a mobile RV service based in Harpers Ferry, owned by a Registered RV Technician and Certified RV Inspector. It travels to homes, storage facilities, RV parks and state parks to perform mobile RV repair, maintenance and NRVIA-level inspections, and it offers emergency service for traveling RVers at an after-hours call-out rate.",  "g": [
+   "mobile tech",
+   "inspection",
+   "emergency",
+   "maintenance"
+  ],  "base": "harpers ferry",  "areas": [
+   "charles town",
+   "ranson",
+   "martinsburg",
+   "bolivar"
+  ],  "region": "Eastern Panhandle",  "spec": "NRVIA inspections and mobile RV repair; serves WV, MD, PA and VA.",  "reg": "eastern-panhandle-wv"
+ },
+ {  "n": "Meyer's RV Superstores",  "c": "Ripley and the mid-Ohio Valley, WV",  "p": "(304) 372-1323",  "u": "https://www.meyersrvsuperstores.com/ripley-wv",  "t": "center",  "e": false,  "r": false,  "d": "Meyer's RV Superstores runs a full-service RV dealership in Ripley with both a sales lot and a service department. Its RV service arm handles engine repairs, routine maintenance, towing setups, generator issues, roof inspections and appliance installations, and the Ripley location lists a dedicated service phone number.",  "g": [
+   "service center",
+   "dealer",
+   "engine",
+   "generator"
+  ],  "base": "ripley",  "areas": [
+   "ravenswood",
+   "spencer",
+   "point pleasant"
+  ],  "region": "Mid-Ohio Valley",  "spec": null,  "reg": "central-wv"
  }
 ];

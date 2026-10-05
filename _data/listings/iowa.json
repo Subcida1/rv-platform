@@ -45,7 +45,25 @@
     "Sibley": "west-ia",
     "Okoboji": "north-ia",
     "Forest City": "north-ia",
-    "Hazleton": "north-ia"
+    "Hazleton": "north-ia",
+    "Spirit Lake": "north-ia",
+    "Arnolds Park": "north-ia",
+    "Milford": "north-ia",
+    "Spencer": "north-ia",
+    "Estherville": "north-ia",
+    "Emmetsburg": "north-ia",
+    "Sheldon": "north-ia",
+    "George": "north-ia",
+    "Cherokee": "north-ia",
+    "Le Mars": "north-ia",
+    "Algona": "north-ia",
+    "Humboldt": "north-ia",
+    "Webster City": "north-ia",
+    "Fort Dodge": "north-ia",
+    "Pocahontas": "north-ia",
+    "Storm Lake": "north-ia",
+    "Sioux Center": "north-ia",
+    "Orange City": "north-ia"
   },
   "listings": [
     {
@@ -963,6 +981,106 @@
         "emergency_quote": null,
         "roadside_quote": null,
         "licence": null
+      }
+    },
+    {
+      "n": "Buscher Bros RV",
+      "c": "Algona and north-central Iowa, IA",
+      "p": "515-295-3588",
+      "u": "https://www.buscherbrosrv.com/parts-and-service",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "Buscher Bros RV is a family-owned RV dealership in Algona, Iowa, in business since 1955. Its parts and service department handles RV repairs and has added a mobile RV repair van stocked with parts and tools to complete most common repairs at the campsite. The dealership sells travel trailers, fifth wheels, destination trailers and toy haulers.",
+      "g": [
+        "rv dealer",
+        "rv service center",
+        "mobile tech"
+      ],
+      "base": "Algona",
+      "areas": [
+        "Emmetsburg",
+        "Humboldt",
+        "Britt",
+        "Bancroft"
+      ],
+      "region": "Algona, Iowa",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "515.295.3588 (515-295-3588)",
+        "type_quote": "Recently expanded Services include our new Mobile RV Repair Van fully stocked with parts and tool to get most common repairs done right at the Campsite.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": []
+      }
+    },
+    {
+      "n": "Southwest Wholesale RV",
+      "c": "Sheldon and northwest Iowa, IA",
+      "p": "712-324-4218",
+      "u": "https://www.swrv.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Southwest Wholesale RV is an RV dealer in Sheldon, Iowa, with a service department that repairs RVs and campers of all types. Customers can call or text, submit an online form describing the problem, or bring the RV in for the shop to inspect. It is open Monday to Friday with Saturday morning hours.",
+      "g": [
+        "rv dealer",
+        "rv service center",
+        "camper repair"
+      ],
+      "base": "Sheldon",
+      "areas": [
+        "Sanborn",
+        "Hartley",
+        "Primghar",
+        "Paullina",
+        "Sibley"
+      ],
+      "region": "Sheldon, Iowa",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "712-324-4218",
+        "type_quote": "If you need some work done on your RV, we at Southwest Wholesale RV are able to help get it back into working order so you can get back on the road.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "RV Service in Sheldon, Iowa"
+        ]
+      }
+    },
+    {
+      "n": "Tri State Mobile RV Repair",
+      "c": "George and the Iowa Great Lakes, IA",
+      "p": "7125782574",
+      "u": "https://tristatemobilervrepair.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Tri State Mobile RV Repair LLC is a mobile RV repair and inspection service based in George, Iowa, that travels to the customer. It serves residents of Sioux Falls and the Iowa Great Lakes area with a certified and insured technician and inspector, handling minor maintenance through more intricate repairs and mobile RV inspections. It emphasizes quality workmanship, honesty, integrity and transparency.",
+      "g": [
+        "mobile tech",
+        "inspections",
+        "certified"
+      ],
+      "base": "George",
+      "areas": [
+        "Spirit Lake",
+        "Okoboji",
+        "Arnolds Park",
+        "Milford",
+        "Sibley",
+        "Sheldon"
+      ],
+      "region": "the Iowa Great Lakes area",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "7125782574",
+        "type_quote": "By choosing Tri State Mobile RV Repair, residents of Sioux Falls and the Iowa Great Lakes area can rely on our Certified and Insured Technician and Inspector to efficiently handle a range of repairs, including mobile RV inspections.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "At Tri State Mobile RV Repair, our vision is to become the top choice for mobile RV repair services and mobile RV inspections in the Sioux Falls area."
+        ]
       }
     }
   ]

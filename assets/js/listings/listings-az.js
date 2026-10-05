@@ -436,5 +436,110 @@ window.RV_LISTINGS_AZ = [
    "litchfield park",
    "tolleson"
   ],  "region": "Avondale, AZ",  "spec": "RV dealer service center",  "reg": "phoenix-valley"
+ },
+ {  "n": "Merrigan's Arizona RoadRunner RV Repair & Solar Specialists",  "c": "Tucson, AZ",  "p": "1-520-887-2992",  "u": "https://azroadrunnerrv.com/",  "t": "both",  "e": false,  "r": true,  "d": "Merrigan's Arizona RoadRunner RV is a family-owned RV service shop at 4324 Flowing Wells Road in Tucson that has operated since 1967. The site says it diagnoses and repairs RV needs and offers both in-shop and mobile service for Tucson and the surrounding area, specializing in bus conversions, tow vehicles, toy haulers, race car haulers, motor homes and campers. It is an authorized service center for many RV and appliance manufacturers, insurance companies and extended warranties, and also does RV solar.",  "g": [
+   "rv service center",
+   "mobile tech",
+   "warranty work",
+   "solar"
+  ],  "base": "tucson",  "areas": [],  "region": "Tucson, AZ",  "spec": "RV service & repair",  "reg": "tucson-south"
+ },
+ {  "n": "Sandy's West RV Center",  "c": "Tucson, AZ",  "p": "(520) 884-8866",  "u": "https://rvservicetucson.com/",  "t": "center",  "e": false,  "r": true,  "d": "Sandy's West RV Center is an RV parts and repair shop at 1451 W Miracle Mile in Tucson, just off the freeway. The site says it does exterior, interior, drivetrain and electrical service and repair, carries new, NOS and used parts from 35 years of stock, and handles maintenance, winterizing and long-term storage. It also advises on manufacturer and extended warranties and RV insurance claims.",  "g": [
+   "rv service center",
+   "parts",
+   "chassis"
+  ],  "base": "tucson",  "areas": [],  "region": "Tucson, AZ",  "spec": "RV parts & service",  "reg": "tucson-south"
+ },
+ {  "n": "RVMD LLC",  "c": "Tucson and Southern Arizona, AZ",  "p": "520-270-9922",  "u": "https://www.rvmdarizona.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "RVMD LLC is a mobile RV repair business based in Tucson whose technicians come to the customer's location. The site says it repairs RV appliances, plumbing, fresh/grey/black water tanks, 110V and 12V electrical systems, inverters and converters, and does maintenance on awnings, slide-outs, roofs and batteries; it does not work on the engine, drive shaft or transmission. It is a Magnum Authorized Service Center and lists Tucson, Show Low, Benson and Safford as its covered areas.",  "g": [
+   "mobile tech",
+   "rv repair",
+   "electrical",
+   "appliances"
+  ],  "base": "tucson",  "areas": [
+   "benson",
+   "safford",
+   "show low"
+  ],  "region": "Tucson, AZ",  "spec": "mobile RV repair",  "reg": "tucson-south"
+ },
+ {  "n": "Rolling Homes RV Repair",  "c": "Tucson and Southern Arizona, AZ",  "p": "520-222-6541",  "u": "https://rollinghomesrvrepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Rolling Homes RV Repair is a mobile RV repair business based at 3600 W Orange Grove Rd in Tucson, run by full-time RVers. The site says it comes to the customer for on-site mobile RV repair and offers general RV repair of the AC, furnace, water heater, refrigeration, generator, awnings and roofs, plus annual preventative maintenance packages, basic inspections and new-owner walk-throughs. It also advertises mobile service in Oro Valley, Marana and Sahuarita.",  "g": [
+   "mobile tech",
+   "rv repair",
+   "inspections"
+  ],  "base": "tucson",  "areas": [
+   "oro valley",
+   "marana",
+   "sahuarita"
+  ],  "region": "Tucson, AZ",  "spec": "mobile RV repair",  "reg": "tucson-south"
+ },
+ {  "n": "RV Repair Hero",  "c": "Tucson and Southern Arizona, AZ",  "p": "520-779-7333",  "u": "https://rvrepairhero.com/",  "t": "mobile",  "e": false,  "r": true,  "d": "RV Repair Hero is a Tucson-based mobile RV repair business staffed by RVTI Certified Technicians. The site says it brings the shop to the customer and handles RV appliance repair, propane system repair, water systems, electrical systems, chassis repair (brakes, suspension and structural components) and general maintenance, including oil changes and system inspections. It serves Tucson and the surrounding area and markets city pages for Marana, Oro Valley, Sahuarita, Vail, Picture Rocks and Catalina Foothills.",  "g": [
+   "mobile tech",
+   "rv repair",
+   "chassis",
+   "appliances"
+  ],  "base": "tucson",  "areas": [],  "region": "Tucson, AZ",  "spec": "mobile RV repair",  "reg": "tucson-south"
+ },
+ {  "n": "Old Pueblo RV LLC",  "c": "Southern Arizona, AZ",  "p": "(520) 481-8883",  "u": "https://www.oldpueblorvmobile.com/",  "t": "mobile",  "e": true,  "r": false,  "d": "Old Pueblo RV LLC is a 100% mobile RV repair business serving Southern Arizona. The site says its technicians bring a fully equipped service center to the customer's location for first-time-owner inspections, general maintenance, roof care and RV HVAC and appliance repair, and that it handles everything from routine maintenance to complex repairs wherever the RV is parked. It advertises an emergency call line.",  "g": [
+   "mobile tech",
+   "rv repair",
+   "inspections",
+   "appliances"
+  ],  "base": null,  "areas": [],  "region": "Southern Arizona",  "spec": "mobile RV repair",  "reg": "tucson-south"
+ },
+ {  "n": "Tucson Mobile RV Repair Pros",  "c": "Tucson and Southern Arizona, AZ",  "p": "520-448-4277",  "u": "https://tucsonmobilervrepairpros.com/",  "t": "mobile",  "e": true,  "r": false,  "d": "Tucson Mobile RV Repair Pros is a locally owned mobile RV repair business that brings service to the customer's location across Tucson and Southern Arizona. The site says it handles AC repair, plumbing, water heaters, winterization, awning and slide-out repair, roof leak repair, electrical system and generator repair, appliance repair, and pre-trip and pre-purchase inspections. It lists coverage including Marana, Oro Valley, Vail, Sahuarita, Green Valley, Catalina Foothills, Drexel Heights, Casa Grande and Sierra Vista, with emergency service available after hours.",  "g": [
+   "mobile tech",
+   "rv repair",
+   "inspections",
+   "emergency"
+  ],  "base": "tucson",  "areas": [
+   "marana",
+   "oro valley",
+   "vail",
+   "sahuarita",
+   "green valley",
+   "catalina foothills",
+   "drexel heights",
+   "casa grande",
+   "sierra vista"
+  ],  "region": "Tucson, AZ",  "spec": "mobile RV repair",  "reg": "tucson-south"
+ },
+ {  "n": "Precision RV",  "c": "Tucson, AZ",  "p": "520-500-6692",  "u": "https://www.prvtucson.com/",  "t": "mobile",  "e": false,  "r": true,  "d": "Precision RV is a mobile RV diagnostics and repair business serving NW Tucson and the surrounding area. The site says it provides general maintenance, roof care and seamless roof coating, wheel bearing repack service, repair and upgrades of appliances, electrical components, plumbing, axles and suspension (plus solar and lithium upgrades), and comprehensive inspections of systems and chassis. Appointments, estimates and invoices are handled through its online hub.",  "g": [
+   "mobile tech",
+   "rv repair",
+   "chassis",
+   "solar"
+  ],  "base": "tucson",  "areas": [],  "region": "Tucson, AZ",  "spec": "mobile RV diagnostics & repair",  "reg": "tucson-south"
+ },
+ {  "n": "Blue Compass RV Tucson",  "c": "Tucson, AZ",  "p": "(520) 408-5000",  "u": "https://www.bluecompassrv.com/locations/arizona/tucson/service",  "t": "center",  "e": false,  "r": true,  "d": "Blue Compass RV Tucson is the service center of the Blue Compass RV dealership at 5101 N La Cañada Dr in Tucson, open Monday through Saturday. The site says its certified technicians handle routine maintenance, engine and transmission diagnostics and repairs, chassis service, electrical systems including batteries, inverters and solar, plumbing and water systems, roof and exterior work, HVAC, appliances and collision/body work, and that every RV gets a free multi-point inspection.",  "g": [
+   "rv dealer",
+   "service center",
+   "chassis",
+   "collision"
+  ],  "base": "tucson",  "areas": [],  "region": "Tucson, AZ",  "spec": "RV dealer service center",  "reg": "tucson-south"
+ },
+ {  "n": "Norris RV",  "c": "Casa Grande, AZ",  "p": "(520) 836-7921",  "u": "https://www.norrisrv.com/service",  "t": "both",  "e": false,  "r": true,  "d": "Norris RV is a family RV repair and service business at 973 W Gila Bend Hwy in Casa Grande, in the same location for over 50 years. The site says its technicians specialize in electrical, A/C, plumbing, water heaters, awnings and most mechanical RV systems, with an 1800 sq ft parts store, a 6650 sq ft shop and warehouse and a 25,000 lb lift for motorhome and trailer undercarriage work, and it also offers mobile service to the customer's door.",  "g": [
+   "rv service center",
+   "mobile tech",
+   "parts",
+   "brakes"
+  ],  "base": "casa grande",  "areas": [],  "region": "Casa Grande, AZ",  "spec": "RV parts & service",  "reg": "tucson-south"
+ },
+ {  "n": "Hwy 238 Auto Repair",  "c": "Maricopa, AZ",  "p": "(520) 424-1271",  "u": "https://hwy238autorepair.com/rv-services-maricopa-az/",  "t": "center",  "e": false,  "r": true,  "d": "Hwy 238 Auto Repair is a family-owned shop at 22111 N White Rd in Maricopa, in business since 2019, that services RVs alongside cars and trucks. The site says it handles RV engine diagnostics and repairs, transmission service, brake, suspension and steering repairs, electrical system diagnostics, AC service, exhaust and fuel system work, drive train inspections and trailer axle and bearing service, and it works with most extended warranty providers and does direct insurance billing.",  "g": [
+   "auto repair",
+   "rv repair",
+   "chassis",
+   "brakes"
+  ],  "base": "maricopa",  "areas": [],  "region": "Maricopa, AZ",  "spec": "auto & RV repair",  "reg": "phoenix-valley"
+ },
+ {  "n": "Casa Grande RV Sales",  "c": "Casa Grande, AZ",  "p": "520-423-0404",  "u": "https://www.casagranderv.com/rv-service-appointments",  "t": "center",  "e": false,  "r": false,  "d": "Casa Grande RV Sales is an RV dealership at 5944 North Pinal Avenue in Casa Grande with an open service department. The site says its RV service experts are outfitted to fix any issue and that customers can request service through its form or bring the RV by the shop to be checked out, selling and servicing travel trailers, fifth wheels, toy haulers, motorhomes and campers.",  "g": [
+   "rv dealer",
+   "service center"
+  ],  "base": "casa grande",  "areas": [],  "region": "Casa Grande, AZ",  "spec": "RV dealer service center",  "reg": "tucson-south"
+ },
+ {  "n": "Arizona Mobile Pro Service",  "c": "Maricopa, AZ",  "p": "(520) 705-2683",  "u": "http://arizonamobileproservice.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Arizona Mobile Pro Service LLC is a mobile RV repair business based in Maricopa that sends a Master Certified Technician to the customer's location. The site says it does installations such as solar, inverters, satellites and batteries, diagnostics including pre-purchase inspections, AC/DC voltage, CAN BUS, converters/inverters, air conditioning, LP components and plumbing, and repair of RV components with manufacturer parts. It charges a statewide road call fee and a mobile labor rate.",  "g": [
+   "mobile tech",
+   "rv repair",
+   "solar",
+   "inspections"
+  ],  "base": "maricopa",  "areas": [],  "region": "Maricopa, AZ",  "spec": "mobile RV repair",  "reg": "phoenix-valley"
  }
 ];
