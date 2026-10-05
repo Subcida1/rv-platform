@@ -87,6 +87,83 @@ Recorded anyway, because the source should be traceable.
 - Licence: Public domain (National Park Service) <https://commons.wikimedia.org/wiki/File:Gfp-texas-big-bend-national-park-plants-on-the-desert-horizon.jpg>
 - Tile alt text: Desert horizon in Big Bend National Park, Texas
 
+## connecticut
+
+- File: [Connecticut River - Windsor Locks Canal State Park Trail - Suffield, Connecticut - DSC04337.jpg](https://commons.wikimedia.org/wiki/File:Connecticut_River_-_Windsor_Locks_Canal_State_Park_Trail_-_Suffield%2C_Connecticut_-_DSC04337.jpg)
+- Author: Daderot
+- Licence: CC0 1.0 (public domain dedication) <https://creativecommons.org/publicdomain/zero/1.0/>
+- Tile alt text: The Connecticut River along the Windsor Locks Canal State Park Trail at Suffield
+
+## delaware
+
+- File: [Sand dunes along the beach at prime hook national wildlife refuge.jpg](https://commons.wikimedia.org/wiki/File:Sand_dunes_along_the_beach_at_prime_hook_national_wildlife_refuge.jpg)
+- Author: Butcher Bill, U.S. Fish and Wildlife Service
+- Licence: Public domain (released by the author) <https://commons.wikimedia.org/wiki/File:Sand_dunes_along_the_beach_at_prime_hook_national_wildlife_refuge.jpg>
+- Tile alt text: Sand dunes along the beach at Prime Hook National Wildlife Refuge, Delaware
+
+## maine
+
+- File: [Bass Harbor Head Light Station Day.jpg](https://commons.wikimedia.org/wiki/File:Bass_Harbor_Head_Light_Station_Day.jpg)
+- Author: Kent Miller, National Park Service
+- Licence: Public domain (National Park Service) <https://commons.wikimedia.org/wiki/File:Bass_Harbor_Head_Light_Station_Day.jpg>
+- Tile alt text: Bass Harbor Head Light in Acadia National Park, Maine
+
+## maryland
+
+- File: [Assateague Island ASIS4992.jpg](https://commons.wikimedia.org/wiki/File:Assateague_Island_ASIS4992.jpg)
+- Author: National Park Service
+- Licence: Public domain (National Park Service) <https://commons.wikimedia.org/wiki/File:Assateague_Island_ASIS4992.jpg>
+- Tile alt text: The beach at Assateague Island National Seashore, Maryland
+
+## massachusetts
+
+- File: [Cape Cod, Massachusetts coastal skyline.jpg](https://commons.wikimedia.org/wiki/File:Cape_Cod%2C_Massachusetts_coastal_skyline.jpg)
+- Author: Walesjl
+- Licence: CC0 1.0 (public domain dedication) <https://creativecommons.org/publicdomain/zero/1.0/>
+- Tile alt text: The Cape Cod coastline, Massachusetts
+
+## newhampshire
+
+- File: [Kancamagus Scenic Byway - Sugar Hill Overlook on the Kancamagus Highway - NARA - 7719833.jpg](https://commons.wikimedia.org/wiki/File:Kancamagus_Scenic_Byway_-_Sugar_Hill_Overlook_on_the_Kancamagus_Highway_-_NARA_-_7719833.jpg)
+- Author: Dennis Adams, Federal Highway Administration
+- Licence: Public domain (Federal Highway Administration) <https://commons.wikimedia.org/wiki/File:Kancamagus_Scenic_Byway_-_Sugar_Hill_Overlook_on_the_Kancamagus_Highway_-_NARA_-_7719833.jpg>
+- Tile alt text: The White Mountains from Sugar Hill Overlook on the Kancamagus Highway, New Hampshire
+
+## newjersey
+
+- File: [Cape May Point State Park view.jpg](https://commons.wikimedia.org/wiki/File:Cape_May_Point_State_Park_view.jpg)
+- Author: WhisperToMe
+- Licence: CC0 1.0 (public domain dedication) <https://creativecommons.org/publicdomain/zero/1.0/>
+- Tile alt text: Cape May Point State Park and its lighthouse, New Jersey
+
+## newyork
+
+- File: [Niagara Falls seen from Skylon tower.jpg](https://commons.wikimedia.org/wiki/File:Niagara_Falls_seen_from_Skylon_tower.jpg)
+- Author: Tenryuu1919
+- Licence: CC0 1.0 (public domain dedication) <https://creativecommons.org/publicdomain/zero/1.0/>
+- Tile alt text: Niagara Falls seen from the Skylon Tower, New York
+
+## pennsylvania
+
+- File: [Downtown Pittsburgh skyline from North Shore, 2023-09-20, 01.jpg](https://commons.wikimedia.org/wiki/File:Downtown_Pittsburgh_skyline_from_North_Shore%2C_2023-09-20%2C_01.jpg)
+- Author: Cbaile19
+- Licence: CC0 1.0 (public domain dedication) <https://creativecommons.org/publicdomain/zero/1.0/>
+- Tile alt text: The Pittsburgh skyline from the North Shore, Pennsylvania
+
+## rhodeisland
+
+- File: [Narragansett Bay Rhode Island June 2021.jpg](https://commons.wikimedia.org/wiki/File:Narragansett_Bay_Rhode_Island_June_2021.jpg)
+- Author: Jstuby
+- Licence: CC0 1.0 (public domain dedication) <https://creativecommons.org/publicdomain/zero/1.0/>
+- Tile alt text: Narragansett Bay from Aquidneck Island, Rhode Island
+
+## vermont
+
+- File: [Green Mountain National Forest (20241002-FS-GM-BAG-FallFoliage-017).jpg](https://commons.wikimedia.org/wiki/File:Green_Mountain_National_Forest_%2820241002-FS-GM-BAG-FallFoliage-017%29.jpg)
+- Author: Forest Service Photography
+- Licence: Public domain (US Forest Service) <https://commons.wikimedia.org/wiki/File:Green_Mountain_National_Forest_(20241002-FS-GM-BAG-FallFoliage-017).jpg>
+- Tile alt text: Fall foliage in the Green Mountain National Forest, Vermont
+
 ## louisiana
 
 - File: [Skyline, New Orleans, Louisiana LCCN2011630536.tif](https://commons.wikimedia.org/wiki/File:Skyline%2C_New_Orleans%2C_Louisiana_LCCN2011630536.tif)

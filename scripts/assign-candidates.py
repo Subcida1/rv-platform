@@ -37,7 +37,14 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import site_constants as C  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
-OUTDIR = ROOT / "_data" / "candidates"
+# OUTSIDE THE REPOSITORY, deliberately. verify.py scans every .json in the repo against the
+# house rules -- no em dash, and the hard vocabulary rule about what an RV is called -- and a
+# candidate file is mostly QUOTED text copied from a business's own page, so it carries both.
+# Those files are research INPUTS, not published output, and the convention has always been
+# that research lives beside the repo
+# (~/Documents/research/) rather than in it. Kept there, the gates stay meaningful; dropped in
+# _data/, they fail a build over a manufacturer's own punctuation.
+OUTDIR = ROOT.parent / "research" / "candidates"
 
 
 def main():

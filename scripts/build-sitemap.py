@@ -84,8 +84,13 @@ def page_for_loc(loc):
     if not loc.startswith(BASE):
         return None
     rel = loc[len(BASE):]
+    # isfile, NOT exists. "tools/" is a real directory in the repo, so os.path.exists said
+    # yes and page_for_loc returned the DIRECTORY, which is not a page -- the parity check
+    # then reported "/tools/" as "in the sitemap but not on disk" and failed the build.
+    # Found 2026-10-04 on the first run after the site went extensionless and its directory
+    # indexes became "/tools/" and "/parts/" instead of ".../index.html".
     for candidate in (rel, rel + ".html", rel.rstrip("/") + "/index.html"):
-        if candidate and os.path.exists(os.path.join(ROOT, candidate)):
+        if candidate and os.path.isfile(os.path.join(ROOT, candidate)):
             return candidate
     return rel
 

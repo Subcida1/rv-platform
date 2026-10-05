@@ -122,6 +122,71 @@ PHOTOS += [
 ]
 
 
+# Added 2026-10-04 for the Northeast expansion (the last region). Same rule as every other
+# tile: public domain or CC0, so there is no attribution burden on a commercial site, and the
+# credit is recorded in CREDITS.md anyway. Every licence below was re-read off the file's own
+# Commons page with the API rather than taken from a search result -- ten came back PD or CC0
+# on the first pass and the eleventh (New Hampshire) only after a typo in the file title was
+# corrected, which is the reason to check each one rather than trust a list.
+PHOTOS += [
+    ("connecticut",
+     "Connecticut River - Windsor Locks Canal State Park Trail - Suffield, Connecticut - DSC04337.jpg",
+     "CC0 1.0 (public domain dedication)", "Daderot",
+     "https://creativecommons.org/publicdomain/zero/1.0/",
+     "The Connecticut River along the Windsor Locks Canal State Park Trail at Suffield"),
+    ("delaware",
+     "Sand dunes along the beach at prime hook national wildlife refuge.jpg",
+     "Public domain (released by the author)", "Butcher Bill, U.S. Fish and Wildlife Service",
+     "https://commons.wikimedia.org/wiki/File:Sand_dunes_along_the_beach_at_prime_hook_national_wildlife_refuge.jpg",
+     "Sand dunes along the beach at Prime Hook National Wildlife Refuge, Delaware"),
+    ("maine",
+     "Bass Harbor Head Light Station Day.jpg",
+     "Public domain (National Park Service)", "Kent Miller, National Park Service",
+     "https://commons.wikimedia.org/wiki/File:Bass_Harbor_Head_Light_Station_Day.jpg",
+     "Bass Harbor Head Light in Acadia National Park, Maine"),
+    ("maryland",
+     "Assateague Island ASIS4992.jpg",
+     "Public domain (National Park Service)", "National Park Service",
+     "https://commons.wikimedia.org/wiki/File:Assateague_Island_ASIS4992.jpg",
+     "The beach at Assateague Island National Seashore, Maryland"),
+    ("massachusetts",
+     "Cape Cod, Massachusetts coastal skyline.jpg",
+     "CC0 1.0 (public domain dedication)", "Walesjl",
+     "https://creativecommons.org/publicdomain/zero/1.0/",
+     "The Cape Cod coastline, Massachusetts"),
+    ("newhampshire",
+     "Kancamagus Scenic Byway - Sugar Hill Overlook on the Kancamagus Highway - NARA - 7719833.jpg",
+     "Public domain (Federal Highway Administration)", "Dennis Adams, Federal Highway Administration",
+     "https://commons.wikimedia.org/wiki/File:Kancamagus_Scenic_Byway_-_Sugar_Hill_Overlook_on_the_Kancamagus_Highway_-_NARA_-_7719833.jpg",
+     "The White Mountains from Sugar Hill Overlook on the Kancamagus Highway, New Hampshire"),
+    ("newjersey",
+     "Cape May Point State Park view.jpg",
+     "CC0 1.0 (public domain dedication)", "WhisperToMe",
+     "https://creativecommons.org/publicdomain/zero/1.0/",
+     "Cape May Point State Park and its lighthouse, New Jersey"),
+    ("newyork",
+     "Niagara Falls seen from Skylon tower.jpg",
+     "CC0 1.0 (public domain dedication)", "Tenryuu1919",
+     "https://creativecommons.org/publicdomain/zero/1.0/",
+     "Niagara Falls seen from the Skylon Tower, New York"),
+    ("pennsylvania",
+     "Downtown Pittsburgh skyline from North Shore, 2023-09-20, 01.jpg",
+     "CC0 1.0 (public domain dedication)", "Cbaile19",
+     "https://creativecommons.org/publicdomain/zero/1.0/",
+     "The Pittsburgh skyline from the North Shore, Pennsylvania"),
+    ("rhodeisland",
+     "Narragansett Bay Rhode Island June 2021.jpg",
+     "CC0 1.0 (public domain dedication)", "Jstuby",
+     "https://creativecommons.org/publicdomain/zero/1.0/",
+     "Narragansett Bay from Aquidneck Island, Rhode Island"),
+    ("vermont",
+     "Green Mountain National Forest (20241002-FS-GM-BAG-FallFoliage-017).jpg",
+     "Public domain (US Forest Service)", "Forest Service Photography",
+     "https://commons.wikimedia.org/wiki/File:Green_Mountain_National_Forest_(20241002-FS-GM-BAG-FallFoliage-017).jpg",
+     "Fall foliage in the Green Mountain National Forest, Vermont"),
+]
+
+
 # Added 2026-10-04 for the South/Southeast directory expansion (Louisiana, Arkansas,
 # Oklahoma, Mississippi). Licences were read on each file's Commons page: the two
 # Highsmith images carry the Library of Congress "no known restrictions" public-domain

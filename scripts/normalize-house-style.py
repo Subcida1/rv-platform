@@ -36,7 +36,13 @@ SKIP_PARTS = {'.git', '.letta', 'node_modules'}
 # another agent's checkout. Added 2026-10-04 across every instrument that walks the tree.
 def walked(pattern):
     """Paths matching the pattern inside THIS checkout, and nothing outside it."""
-    return sorted(p for p in ROOT.rglob(pattern) if not (SKIP_PARTS & set(p.parts)))
+    # RELATIVE parts, not absolute (2026-10-04). Letta worktrees live at
+    # <repo>/.letta/worktrees/<name>/, so inside one ".letta" is in the ABSOLUTE path of every
+    # file: this filter matched all of them and the scan covered ZERO pages while reporting
+    # success. Measured on sync-counts.py, which silently left the homepage saying "37 states"
+    # while the data said 48 -- a whole-page-wide edit that did nothing and said it was fine.
+    return sorted(p for p in ROOT.rglob(pattern)
+                  if not (SKIP_PARTS & set(p.relative_to(ROOT).parts)))
 APPLY = "--apply" in sys.argv
 
 # The diligence sentence, in the forms it appears. Left intentionally literal: this is a
