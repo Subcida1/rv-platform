@@ -8,7 +8,7 @@
  apples-to-apples representation of power). The one number people
  get wrong is 50-amp service: the cord is rated at 240 V across
  two 50-amp legs, so it is 12,000 W, not 6,000 (Cummins; Sokol's
- two-leg explanation; Heartland's receptacle figures).
+ two-leg explanation).
 
  THE APPLIANCE FIGURES come from Cummins' "common power
  requirements" chart and Ask The RV Engineer's amp-draw tables,

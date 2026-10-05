@@ -10,7 +10,7 @@
      "the standard DoD is 50%"
    lithium (LiFePO4): 80% usable, the conservative default
      Battle Born: "80-100% usable" / Renogy: "DoD is 80%-100%"
-     and their cycle ratings assume 80.
+     the conservative end of the 80-100 range they publish.
 
  THE VOLTAGE CONVENTION: a "12V" LiFePO4 battery is 12.8V
  nominal, so 100Ah = 1,280Wh (Dakota Lithium prints exactly
@@ -69,7 +69,7 @@
      '<div class="v-val">' + fmt(whTotal, 0) + ' Wh</div></div>';
 
    var chemNote = chem === 'lifepo4'
-     ? 'Lithium at 80 percent usable, the conservative end of what the makers publish and the figure cycle-life ratings assume'
+     ? 'Lithium at 80 percent usable, the conservative end of the 80-100 range the makers publish'
      : 'Lead-acid at 50 percent usable, the recommended recharge point for decent cycle life';
    rows += '<div class="v-row ok"><div class="v-dot"></div><div class="v-txt"><b>Usable share</b>' +
      '<span>' + esc(chemNote) + '</span></div>' +
