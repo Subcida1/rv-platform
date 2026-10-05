@@ -4,11 +4,9 @@
  monthly payment and the total interest, using the standard
  amortization formula.
 
- THE FORMULA (Investopedia, fetch-confirmed 2026-10-05):
+ THE FORMULA (Investopedia):
    M = P * i * (1+i)^n / ((1+i)^n - 1)
    i = APR / 12, n = term in months.
- Verified against Bankrate's own worked table: $50,000 at
- 7.99% for 60 months -> $1,013.58/mo.
 
  NOT A LOAN OFFER. The page says so, the result says so.
  ============================================================ */
