@@ -140,3 +140,50 @@ neighbourhood, not the address.**
 
 Also closed on the way: New York gained a **Long Island** region, because seven of its eleven new
 listings work from Nassau and Suffolk and the state had no region for them at all.
+
+## THE STANDING PER-STATE CENSUS (Ty, 2026-10-04: "keep doing that for every state now")
+
+Run this for one state at a time. It is the loop that took Arizona from 20 listings to 43 in a
+single bounded pass.
+
+**1. Pick the unit. A STATE WITH ONE DOMINANT METRO MUST BE SURVEYED BY METRO.** Arizona worked
+by town and missed a metro of five million. Illinois worked by corridor. New Jersey worked by
+county group. Ask what the state's population actually looks like and scope the pass to that.
+
+**2. SCOPE THE PASS TO WHAT FINISHES.** Two research agents were lost to a 15-minute listener
+timeout because their briefs asked for seven metro areas or sixty towns. One bounded pass, one
+metro or region, then write the file. Three or four bounded passes beat one that dies, and they
+can run in parallel.
+
+**3. Every brief carries these, or the result is not usable:**
+- the directory's inclusion rules — exclude truck/diesel/fleet shops whose TRADE leads (an RV
+  shop that also does trucks is fine), sell-only dealers, cleaning/detailing/tank-service only,
+  dispatch and lead-gen networks
+- **no own website = EXCLUDE, and NAME it in the report** (Ty, 2026-10-04: a business with no web
+  presence cannot be verified; it is excluded and can add itself). Those names go in
+  `_data/no-coverage.json`, which is what stops the next pass re-searching them
+- evidence as an OBJECT with `phone_quote`/`type_quote`/`emergency_quote`/`roadside_quote`/
+  `coverage_quotes`, every value COPIED VERBATIM. A reconstructed quote is the defect class.
+- `base` and `areas` as CENSUS PLACE names. New England towns, Pennsylvania and New Jersey
+  townships, and unincorporated communities are NOT places — null and leave the name in `c`.
+- a work-rate line: one page per business, skip a business as soon as it fails a rule, finish
+  rather than be exhaustive
+- the list of what is ALREADY LISTED in that state, so the pass does not spend itself re-finding
+  what we have
+
+**4. The cycle after it lands:** `verify-candidates.py <file>` (both shapes now accepted) →
+place any base with no region in `region_of`, adding a REGION if the state has none for that
+area → `merge-candidates.py <verified> --state <slug>` → `build-coords.py` → `build-listings.py`
+→ `build-search-index.py` → `build-shell.mjs` → `stamp_assets.py` → `build-sitemap.py --write`
+→ `build-coords.py --check` → `bash scripts/ci.sh` → commit explicit paths → push.
+
+**5. If a state needs a region it does not have, that is usually WHY the hole was invisible.**
+Long Island, northern New Jersey and Phoenix each needed one. Fix the region first.
+
+### Standing order, thinnest first (listings per 100 ZIP areas)
+
+WV 1.2 · MA 1.3 · NY 1.4 · ME 1.4 · PA 1.6 · AK 2.0 · HI 2.1 · IL 2.4 · RI 2.5 · NE 2.6 ·
+OH 2.8 · VA 2.9 · KY 3.0 · NJ 3.0 · IA 3.0 · NH 3.2 · MS 3.3 · WI 3.3 · FL 3.4 · VT 3.4 ·
+then the rest, median 4.0.
+
+**Done so far:** NY, PA, NJ, IL, NE, AZ. **In flight:** AZ-Tucson, IA-lakes.
