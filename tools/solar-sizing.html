@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <base href="/"> <!-- must stay first: every other URL on the page resolves against it -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="canonical" href="https://originrv.com/tools/solar-sizing">
+  <title>RV Solar Panel Calculator: How Many Watts You Need</title>
+  <meta name="description" content="Daily watt-hours and peak sun hours give the solar panel watts you need, with the NREL derate applied and the maker-recommended margin shown too.">
+  <link rel="stylesheet" href="assets/css/style.css?v=839902dd">
+<link rel="icon" type="image/svg+xml" href="assets/img/brand/favicon.svg?v=dd9ff106">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/brand/favicon-32.png?v=d9338088">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/brand/favicon-16.png?v=f67f4631">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/brand/apple-touch-icon.png?v=c0518cb6">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#3d7fc2">
+<meta property="og:type" content="article">
+<meta property="og:title" content="RV Solar Panel Calculator: How Many Watts You Need">
+<meta property="og:description" content="Daily watt-hours and peak sun hours give the solar panel watts you need, with the NREL derate applied and the maker-recommended margin shown too.">
+<meta property="og:url" content="https://originrv.com/tools/solar-sizing">
+<meta property="og:site_name" content="OriginRV">
+<meta property="og:image" content="https://originrv.com/assets/img/brand/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="OriginRV">
+<meta name="twitter:image" content="https://originrv.com/assets/img/brand/og-default.png">
+<meta name="twitter:image:alt" content="OriginRV">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="RV Solar Panel Calculator: How Many Watts You Need">
+<meta name="twitter:description" content="Daily watt-hours and peak sun hours give the solar panel watts you need, with the NREL derate applied and the maker-recommended margin shown too.">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "RV Solar Sizing Calculator", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "url": "https://originrv.com/tools/solar-sizing", "description": "Size RV solar from your daily watt-hours and your location's peak sun hours.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "OriginRV", "url": "https://originrv.com/"}}</script>
+<!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G8X4MQ0P3X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-G8X4MQ0P3X');
+  </script>
+</head>
+<body class="g-theme-mist">
+  <div id="site-nav"><!-- nav:start --><div class="util" role="navigation" aria-label="Utility"><div class="wrap"><div class="util-l"><span class="dot"></span><a href="/directory/">Find a tech</a><a href="/guides/">Winter guides</a></div><div class="util-r"><a href="/contact">Contact</a><span class="muted">Free tools, No paywall, Built for RVers</span></div></div></div><nav class="main" aria-label="Main"><div class="wrap"><a class="logo" href="/"><span class="logo-mark"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><polygon points="4 1.6 5.7 6.8 5 6.8 6.6 11.4 5.8 11.4 7.6 16 5.2 16 5.2 19.4 2.8 19.4 2.8 16 0.4 16 2.2 11.4 1.4 11.4 3 6.8 2.3 6.8"/><path fill-rule="evenodd" d="M8.2 16L8.2 13.6L9 13.2L11.6 10.4L8.6 10.4L8.9 8.2L23.6 8.2L23.6 16.6L9.6 16.6ZM13.6 10H16.4A0.4 0.4 0 0 1 16.8 10.4V12.2A0.4 0.4 0 0 1 16.4 12.6H13.6A0.4 0.4 0 0 1 13.2 12.2V10.4A0.4 0.4 0 0 1 13.6 10ZM18.4 10H20.8A0.4 0.4 0 0 1 21.2 10.4V12.2A0.4 0.4 0 0 1 20.8 12.6H18.4A0.4 0.4 0 0 1 18 12.2V10.4A0.4 0.4 0 0 1 18.4 10Z"/><circle cx="11.6" cy="18" r="1.4"/><circle cx="20.4" cy="18" r="1.4"/></svg></span><span class="logo-name"><span>OriginRV</span></span></a><div class="nav-links"><a class="nav-link" href="/">Home</a><div class="nav-group"><a class="nav-link" href="/tools/">Tools</a><div class="drop"><a href="/tools/weight-calculator">Weight Calculator<span class="sm">Live, free</span></a><a href="/tools/">More tools<span class="sm">Campgrounds, stops, GPS, building</span></a></div></div><div class="nav-group"><a class="nav-link" href="/guides/">Guides</a><div class="drop"><a href="/guides/winterize-plumbing">Winterize Your Plumbing<span class="sm">Tanks, lines, antifreeze, bypass</span></a><a href="/guides/battery-winter-storage">Battery Care in Cold<span class="sm">Lead-acid vs lithium rules</span></a><a href="/guides/tires-winter">Tires Through Winter<span class="sm">Pressure, flat spots, covers</span></a><a href="/guides/roof-snow-load">Roof Under Snow Load<span class="sm">Seals, ice, weight</span></a></div></div><div class="nav-group"><a class="nav-link" href="/parts/">Parts</a><div class="drop"><a href="/parts/">Every RV part<span class="sm">All 157, by system, with what each one does</span></a><a href="/guides/">Guides<span class="sm">How to fix what is broken</span></a><a href="/manuals/">Manuals<span class="sm">The maker documents behind each part</span></a></div></div><div class="nav-group"><a class="nav-link" href="/directory/">Directory</a><div class="drop"><a href="/directory/">Find a service<span class="sm">Mobile techs and repair centers by state</span></a><a href="/directory/#claim">Claim your business<span class="sm">Free listing, you control it</span></a></div></div><div class="nav-group"><a class="nav-link" href="/manuals/">Manuals</a><div class="drop"><a href="/manuals/power-and-electrical">Electrical<span class="sm">Converters, inverters, solar, generators</span></a><a href="/manuals/towing-and-running-gear">Towing and running gear<span class="sm">Hitches, axles, brakes, tires</span></a><a href="/manuals/kitchen-and-appliances">Kitchen and appliances<span class="sm">Fridges, ranges, microwaves</span></a><a href="/manuals/brands">Owner manuals by brand<span class="sm">44 makers, 1973 to 2027</span></a><a href="/manuals/recalls">Recalls and bulletins<span class="sm">Check a unit, and the federal bulletin file</span></a><a href="/manuals/">All manuals<span class="sm">Every system, linked at the maker</span></a></div></div></div><form class="nav-search js-search-form" role="search"><div class="search-bar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 21.5 9.2 3.5"/><path d="M20 21.5 14.8 3.5"/><path d="M12 20.6v-4" stroke-width="2.4"/><path d="M12 12.2v-3" stroke-width="1.7"/><path d="M12 5.5v-2" stroke-width="1.1"/></svg><input type="search" autocomplete="off" name="q" aria-label="Search OriginRV" placeholder="Search"></div></form><div class="nav-actions"><a class="btn btn-primary btn-sm" href="/tools/">Tools</a><button type="button" class="burger" aria-label="Menu" onclick="RV.toggleMenu()"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h12M4 10h12M4 14h12"/></svg></button></div></div><div class="mobile-menu"><form class="mm-search js-search-form" role="search"><div class="search-bar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 21.5 9.2 3.5"/><path d="M20 21.5 14.8 3.5"/><path d="M12 20.6v-4" stroke-width="2.4"/><path d="M12 12.2v-3" stroke-width="1.7"/><path d="M12 5.5v-2" stroke-width="1.1"/></svg><input type="search" autocomplete="off" name="q" aria-label="Search OriginRV" placeholder="Search the site"></div></form><a class="mm-top" href="/">Home</a><div class="mm-group"><a class="mm-head" href="/tools/">Tools</a><a class="mm-sub" href="/tools/weight-calculator">Weight calculator</a></div><div class="mm-group"><a class="mm-head" href="/guides/">Guides</a><a class="mm-sub" href="/guides/winterize-plumbing">Winterize plumbing</a><a class="mm-sub" href="/guides/battery-winter-storage">Battery cold storage</a><a class="mm-sub" href="/guides/tires-winter">Tires through winter</a><a class="mm-sub" href="/guides/roof-snow-load">Roof snow load</a></div><div class="mm-group"><a class="mm-head" href="/parts/">Parts</a><a class="mm-sub" href="/parts/">Every RV part</a><a class="mm-sub" href="/guides/">Guides</a></div><div class="mm-group"><a class="mm-head" href="/directory/">Directory</a><a class="mm-sub" href="/directory/">Find a service</a><a class="mm-sub" href="/directory/#claim">Claim your business</a></div><div class="mm-group"><a class="mm-head" href="/manuals/">Manuals</a><a class="mm-sub" href="/manuals/power-and-electrical">Electrical</a><a class="mm-sub" href="/manuals/towing-and-running-gear">Towing and running gear</a><a class="mm-sub" href="/manuals/brands">Owner manuals by brand</a><a class="mm-sub" href="/manuals/recalls">Recalls and bulletins</a></div><a class="mm-top" href="/about">About</a><a class="mm-top" href="/contact">Contact</a></div></nav><!-- crumbs:start --><nav class="crumbs" aria-label="Breadcrumb"><div class="wrap"><a href="/">Home</a><span class="sep" aria-hidden="true">/</span><a href="/tools/">Tools</a><span class="sep" aria-hidden="true">/</span><span>RV solar sizing calculator</span></div></nav><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://originrv.com/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://originrv.com/tools/"},{"@type":"ListItem","position":3,"name":"RV solar sizing calculator","item":"https://originrv.com/tools/solar-sizing"}]}</script><!-- crumbs:end --><!-- nav:end --></div>
+
+<main id="main">
+ <div class="wrap page-intro">
+  <div class="sec-eyebrow">Free tool</div>
+  <h1 class="lg">RV solar sizing calculator</h1>
+  <p class="lede wide">The formula the makers publish: daily watt-hours divided by peak sun hours, corrected for real-world losses. The hard part is knowing your daily watt-hours, so the tool walks you through it, and the peak sun hours come with the numbers for your part of the country.</p>
+ </div>
+
+ <div class="sec pad-30">
+  <div class="wrap">
+   <div class="wc-layout">
+    <div class="wc-form">
+     <p class="note-sm mb-10">The answer updates as you type. Nothing is sent anywhere.</p>
+
+     <div class="panel panel-24">
+      <h2 class="form-legend">What you use in a day</h2>
+      <div class="field">
+       <label for="s-wh">Daily watt-hours you use<span class="req">*</span></label>
+       <input id="s-wh" type="text" inputmode="decimal" placeholder="1200">
+       <span class="hint">How to get it: multiply each item's label watts by the hours you run it, and add them up. A few LED lights all evening is about 30, the furnace fan is 45 to 60 watts while it runs, the water pump 50 to 110 while it runs, a 12-volt television 35 to 50. If you run 120-volt gear through an inverter, the inverter's own draw adds to the total. A battery monitor that counts amp-hours is the best source: its daily amp-hours times 12.8 is your watt-hours.</span>
+      </div>
+     </div>
+
+     <div class="panel panel-24">
+      <h2 class="form-legend">Where you camp</h2>
+      <div class="field">
+       <label for="s-region">Region you camp in<span class="req">*</span></label>
+       <select id="s-region">
+        <option value="6.5">Southwest desert: AZ, NM, NV (about 6.5 peak sun hours)</option>
+        <option value="6.1">California (about 6.1)</option>
+        <option value="5.5" selected>Colorado, Florida, and the southern tier (about 5.5)</option>
+        <option value="5.0">Most of the country, the US average (about 5.0)</option>
+        <option value="4.5">Midwest and Northeast: OH, NY, MI (about 4.5)</option>
+        <option value="4.0">Northwest: OR, WA (about 4.0)</option>
+       </select>
+       <span class="hint">Peak sun hours are not hours of sunshine: they are the equivalent hours per day at full panel output, and the whole country runs from about 3 to 6.5 of them. The US average is 4.98. If you want your exact location, NREL's PVWatts calculator gives it free.</span>
+      </div>
+     </div>
+    </div>
+
+    <div class="wc-out" id="s-result" aria-live="polite"></div>
+   </div>
+  </div>
+ </div>
+</main>
+
+<div class="wrap">
+ <div class="prose">
+  <h2>Where the formula comes from</h2>
+  <p>The sizing method is the one the panel and battery makers publish: daily watt-hours divided by peak sun hours gives the panel watts. Renogy states it as total solar wattage needed equals daily watt-hours divided by peak sun hours, and Battle Born states the same formula with a 2,400 watt-hour example that yields 600 watts at 4 peak sun hours. The derate factor, the share of nameplate power that actually reaches the batteries, is NREL's: the PVWatts method defaults to a 0.77 derate, and this tool applies it rather than pretending nameplate watts arrive at the battery.</p>
+  <p>On top of the derate, the makers recommend margin for imperfect days. Battle Born recommends adding 20 to 30 percent solar capacity when space allows, and Renogy rounds its worked example up from 200 to 250 or 300 watts. The tool shows the raw answer and the margined one.</p>
+
+  <h2>What the answer means</h2>
+  <p>The result is a starting point for shopping, not a guarantee. Panels flat on an RV roof face the sky rather than the sun, so winter and northern latitudes cut the harvest below the rated hours. Shade, dirt on the panels, and a partially drained battery all cut it further. If the answer says 400 watts, buying 400 watts of panel and expecting a full recharge every day in Oregon in December will disappoint you; the same array in Arizona will mostly not.</p>
+  <p>The rule of thumb worth knowing: Battle Born's guideline of roughly 200 watts of solar per 100 amp-hours of lithium battery capacity, which is a sanity check on the sizing answer rather than a substitute for it.</p>
+
+  <h2>Where to go next</h2>
+  <p><a href="/tools/battery-runtime">The battery runtime calculator</a> answers the other half: how long the bank carries you between charges. <a href="/tools/watts-to-amps">The watts to amps calculator</a> converts any appliance label into the draw it becomes on the battery.</p>
+
+  <div class="card srcs">
+   <h3>Sources</h3>
+   <ul>
+    <li><a href="https://www.renogy.com/pages/outdoor-solar-buy-guide-power-for-camping-rv-offgrid-living" target="_blank" rel="noopener">Renogy, outdoor solar buying guide</a>: the daily watt-hours divided by peak sun hours formula, the worked example, and the round-up advice.</li>
+    <li><a href="https://battlebornbatteries.com/blogs/academy/how-to-size-solar-panels-for-a-deep-cycle-battery-system-the-battle-born-educational-series" target="_blank" rel="noopener">Battle Born Batteries, how to size solar panels</a>: the same sizing formula, the 20 to 30 percent margin, and the 200 watts per 100 amp-hours guideline.</li>
+    <li><a href="https://www.osti.gov/servlets/purl/1096689" target="_blank" rel="noopener">NREL, PVWatts technical reference (PDF via OSTI)</a>: the 0.77 default derate factor this tool applies.</li>
+    <li><a href="https://www.thegreenwatt.com/peak-sun-hours-calculator/" target="_blank" rel="noopener">The Green Watt, peak sun hours</a>: the definition of peak sun hours and the state figures, derived from NREL PVWatts data, that the region presets carry.</li>
+   </ul>
+  </div>
+ </div>
+</div>
+
+<div id="site-footer"><!-- footer:start --><div class="foot-top"><div class="wrap"><div class="foot-grid"><div class="foot-brand"><a class="logo" href="/"><span class="logo-mark"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><polygon points="4 1.6 5.7 6.8 5 6.8 6.6 11.4 5.8 11.4 7.6 16 5.2 16 5.2 19.4 2.8 19.4 2.8 16 0.4 16 2.2 11.4 1.4 11.4 3 6.8 2.3 6.8"/><path fill-rule="evenodd" d="M8.2 16L8.2 13.6L9 13.2L11.6 10.4L8.6 10.4L8.9 8.2L23.6 8.2L23.6 16.6L9.6 16.6ZM13.6 10H16.4A0.4 0.4 0 0 1 16.8 10.4V12.2A0.4 0.4 0 0 1 16.4 12.6H13.6A0.4 0.4 0 0 1 13.2 12.2V10.4A0.4 0.4 0 0 1 13.6 10ZM18.4 10H20.8A0.4 0.4 0 0 1 21.2 10.4V12.2A0.4 0.4 0 0 1 20.8 12.6H18.4A0.4 0.4 0 0 1 18 12.2V10.4A0.4 0.4 0 0 1 18.4 10Z"/><circle cx="11.6" cy="18" r="1.4"/><circle cx="20.4" cy="18" r="1.4"/></svg></span><span class="logo-name"><span>OriginRV</span></span></a><p>Every mile of the RV life, one toolkit.</p></div><div class="foot-col"><p class="foot-h">Tools</p><a href="/tools/weight-calculator">Weight calculator</a><a href="/tools/weight-calculator#why">Why it matters</a><a href="/tools/weight-calculator#embed">Embed on your site</a></div><div class="foot-col"><p class="foot-h">Guides</p><a href="/guides/winterize-plumbing">Winterize plumbing</a><a href="/guides/battery-winter-storage">Battery cold storage</a><a href="/guides/tires-winter">Tires through winter</a><a href="/guides/roof-snow-load">Roof snow load</a></div><div class="foot-col"><p class="foot-h">Directory</p><a href="/directory/">Find a service</a><a href="/directory/#claim">Claim your business</a><a href="/directory/#seed">What a listing carries</a></div><div class="foot-col"><p class="foot-h">Manuals</p><a href="/manuals/">All RV manuals</a><a href="/manuals/brands">Owner manuals by brand</a><a href="/manuals/recalls">Recalls and bulletins</a><a href="/manuals/power-and-electrical">Electrical manuals</a><a href="/manuals/towing-and-running-gear">Towing manuals</a></div><div class="foot-col"><p class="foot-h">Company</p><a href="/about">About</a><a href="/contact">Contact</a><a href="/tools/">All tools</a></div></div></div><div class="wrap foot-bottom"><span>© 2026 OriginRV. Built for the open road.</span><span class="foot-credit">Third-party photographs appear under the licences credited beside each one, resized for display.</span><span class="legal"><a href="/">Home</a><a href="/directory/">Directory</a><a href="/guides/">Guides</a></span></div></div><!-- footer:end --></div>
+
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "3727183603b6402b9249de33fa381acd"}'></script><!-- End Cloudflare Web Analytics -->
+<script src="assets/js/config.js?v=f769b084"></script>
+<script src="assets/js/site.js?v=4e792d7c"></script>
+<script src="assets/js/solarsizing.js?v=841e4d4b"></script>
+</body>
+</html>
