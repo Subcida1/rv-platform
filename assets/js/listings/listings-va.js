@@ -202,5 +202,54 @@ window.RV_LISTINGS_VA = [
    "service center",
    "parts"
   ],  "base": "carrollton",  "areas": [],  "region": "Hampton Roads",  "spec": null,  "reg": "hampton-roads-va"
+ },
+ {  "n": "RV Service LLC",  "c": "Strasburg, VA",  "p": "540-533-0718",  "u": "http://www.rvservicellc.com/",  "t": "center",  "e": false,  "r": false,  "d": "RV Service LLC is an RV repair and maintenance shop in Strasburg with 24 years of experience. It offers free estimates, processes extended warranties and honors labor warranties.",  "g": [
+   "rv repair",
+   "service center"
+  ],  "base": "strasburg",  "areas": [
+   "strasburg"
+  ],  "region": "The Shenandoah Valley",  "spec": "RV repair and maintenance",  "reg": "shenandoah-va"
+ },
+ {  "n": "Corbin's RV of Virginia",  "c": "Fredericksburg, VA",  "p": "540-940-2140",  "u": "https://corbinsrvofvirginia.com/",  "t": "center",  "e": false,  "r": false,  "d": "Corbin's RV of Virginia is a locally owned full service automotive, truck and RV repair garage on Kings Highway in Fredericksburg. Its technicians handle RV and travel trailer repairs, RV parts and accessories, winterization, liquid propane tank filling, generator repairs and roof sealing and replacement.",  "g": [
+   "rv repair",
+   "service center",
+   "parts"
+  ],  "base": "fredericksburg",  "areas": [
+   "fredericksburg"
+  ],  "region": "Richmond and central Virginia",  "spec": "RV and trailer service",  "reg": "northern-va"
+ },
+ {  "n": "Blue Ridge RV",  "c": "Luray, VA",  "p": "540-908-0152",  "u": "https://www.blueridgerv.net/",  "t": "mobile",  "e": false,  "r": false,  "d": "Blue Ridge RV is a mobile RV service based in Page County that performs service and repairs at the customer's residence or campground instead of a dealership service center. Its technicians are certified by the RV Technical Institute, and it also offers third party pre-delivery inspections.",  "g": [
+   "mobile tech",
+   "rv repair"
+  ],  "base": "luray",  "areas": [
+   "luray",
+   "front royal",
+   "new market",
+   "woodstock"
+  ],  "region": "The Shenandoah Valley",  "spec": "on-site RV service and repairs",  "reg": "shenandoah-va"
+ },
+ {  "n": "Dove's Camper Sales",  "c": "Harrisonburg, VA",  "p": "(540) 434-1505",  "u": "https://www.dovescampersales.com/",  "t": "center",  "e": false,  "r": false,  "d": "Dove's Camper Sales is a family-owned RV sales and service business on Rawley Pike in the Harrisonburg area that has worked on recreational vehicles since 1970. Its service shop handles small problems to major rebuilds and performs Virginia state inspections on trailers, and it also sells camping supplies.",  "g": [
+   "rv dealer",
+   "service center",
+   "parts"
+  ],  "base": "harrisonburg",  "areas": [
+   "harrisonburg"
+  ],  "region": "The Shenandoah Valley",  "spec": "RV sales and service",  "reg": "shenandoah-va"
+ },
+ {  "n": "Ventro's Auto-Diesel Repair",  "c": "Norton, VA",  "p": "(276) 325-4901",  "u": "https://www.ventrosauto.com/rv-repair",  "t": "center",  "e": false,  "r": false,  "d": "Ventro's Auto-Diesel Repair on Trent Street in Norton runs a dedicated RV service with diagnostics for mechanical, electrical, plumbing and structural issues. It repairs RV appliances, plumbing, electrical systems, HVAC, chassis, bodywork and collision damage, and also installs solar, satellite TV and generator upgrades.",  "g": [
+   "rv repair",
+   "service center",
+   "body shop"
+  ],  "base": "norton",  "areas": [
+   "norton"
+  ],  "region": "Roanoke, Christiansburg and the southwest",  "spec": "RV diagnostics, chassis, body and collision repair",  "reg": "southwest-va"
+ },
+ {  "n": "5 Star RV Service, LLC",  "c": "Bristol, VA",  "p": "866-578-2778",  "u": "https://www.5starrvservice.com/",  "t": "both",  "e": false,  "r": false,  "d": "5 Star RV Service is an RV repair and inspection business in Bristol whose diagnosing and repairs are done by RVTAA Registered and Lippert Certified technicians. It installs and repairs refrigerators, water heaters, Aqua Hot systems, electrical, propane, air conditioners, heat pumps, water filter systems, awnings, batteries and solar, and it does not work on black tanks, motor home engines or body and chassis work.",  "g": [
+   "rv repair",
+   "service center"
+  ],  "base": "bristol",  "areas": [
+   "bristol",
+   "abingdon"
+  ],  "region": "Bristol, Abingdon and the far southwest",  "spec": "RV diagnostics and repair",  "reg": "southwest-va"
  }
 ];

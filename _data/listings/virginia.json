@@ -53,7 +53,56 @@
     "Smithfield": "hampton-roads-va",
     "Carrollton": "hampton-roads-va",
     "Franklin": "hampton-roads-va",
-    "Isle of Wight": "hampton-roads-va"
+    "Isle of Wight": "hampton-roads-va",
+    "Henrico": "richmond-va",
+    "Chesterfield": "richmond-va",
+    "Midlothian": "richmond-va",
+    "Glen Allen": "richmond-va",
+    "Mechanicsville": "richmond-va",
+    "Petersburg": "richmond-va",
+    "Colonial Heights": "richmond-va",
+    "Hopewell": "richmond-va",
+    "Chester": "richmond-va",
+    "Powhatan": "richmond-va",
+    "Goochland": "richmond-va",
+    "Louisa": "richmond-va",
+    "Lynchburg": "richmond-va",
+    "Amherst": "richmond-va",
+    "Bedford": "richmond-va",
+    "Appomattox": "richmond-va",
+    "Farmville": "richmond-va",
+    "Charlottesville": "richmond-va",
+    "Spotsylvania": "northern-va",
+    "Warrenton": "northern-va",
+    "Strasburg": "shenandoah-va",
+    "Luray": "shenandoah-va",
+    "Front Royal": "shenandoah-va",
+    "Winchester": "shenandoah-va",
+    "Woodstock": "shenandoah-va",
+    "New Market": "shenandoah-va",
+    "Harrisonburg": "shenandoah-va",
+    "Waynesboro": "shenandoah-va",
+    "Lexington": "shenandoah-va",
+    "Buena Vista": "shenandoah-va",
+    "Vinton": "southwest-va",
+    "Blacksburg": "southwest-va",
+    "Radford": "southwest-va",
+    "Pulaski": "southwest-va",
+    "Dublin": "southwest-va",
+    "Wytheville": "southwest-va",
+    "Galax": "southwest-va",
+    "Hillsville": "southwest-va",
+    "Abingdon": "southwest-va",
+    "Bristol": "southwest-va",
+    "Marion": "southwest-va",
+    "Norton": "southwest-va",
+    "Big Stone Gap": "southwest-va",
+    "Wise": "southwest-va",
+    "Grundy": "southwest-va",
+    "Tazewell": "southwest-va",
+    "Covington": "southwest-va",
+    "Clifton Forge": "southwest-va",
+    "Floyd": "southwest-va"
   },
   "listings": [
     {
@@ -1056,6 +1105,188 @@
         "roadside_quote": null,
         "coverage_quotes": [
           "Coastal RV is a full service RV dealership located in Carrollton, Virginia (in close proximity to Hampton, Newport News, Suffolk, Chesapeake, Norfolk, Portsmouth and Richmond)."
+        ]
+      }
+    },
+    {
+      "n": "RV Service LLC",
+      "c": "Strasburg, VA",
+      "p": "540-533-0718",
+      "u": "http://www.rvservicellc.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "RV Service LLC is an RV repair and maintenance shop in Strasburg with 24 years of experience. It offers free estimates, processes extended warranties and honors labor warranties.",
+      "g": [
+        "rv repair",
+        "service center"
+      ],
+      "base": "Strasburg",
+      "areas": [
+        "Strasburg"
+      ],
+      "region": "The Shenandoah Valley",
+      "spec": "RV repair and maintenance",
+      "evidence": {
+        "phone_quote": "Contact RV Service LLC | Strasburg, VA | 540-533-0718",
+        "type_quote": "The Number One Choice for RV Repair and Maintenance Services in Strasburg, VA",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Process Extended Warranties | Free Estimates | 24 Years of Experience"
+        ]
+      }
+    },
+    {
+      "n": "Corbin's RV of Virginia",
+      "c": "Fredericksburg, VA",
+      "p": "540-940-2140",
+      "u": "https://corbinsrvofvirginia.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Corbin's RV of Virginia is a locally owned full service automotive, truck and RV repair garage on Kings Highway in Fredericksburg. Its technicians handle RV and travel trailer repairs, RV parts and accessories, winterization, liquid propane tank filling, generator repairs and roof sealing and replacement.",
+      "g": [
+        "rv repair",
+        "service center",
+        "parts"
+      ],
+      "base": "Fredericksburg",
+      "areas": [
+        "Fredericksburg"
+      ],
+      "region": "Richmond and central Virginia",
+      "spec": "RV and trailer service",
+      "evidence": {
+        "phone_quote": "348 Kings Hwy Fredericksburg, VA 22405 (540) 940-2140",
+        "type_quote": "Our facility is a full service automotive, truck, and RV service garage, and we provide a broad range of services which include:",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Welcome to Corbin's RV, we are a small locally owned business here to serve all of your automotive and motorhome needs in Fredericksburg, VA."
+        ]
+      }
+    },
+    {
+      "n": "Blue Ridge RV",
+      "c": "Luray, VA",
+      "p": "540-908-0152",
+      "u": "https://www.blueridgerv.net/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Blue Ridge RV is a mobile RV service based in Page County that performs service and repairs at the customer's residence or campground instead of a dealership service center. Its technicians are certified by the RV Technical Institute, and it also offers third party pre-delivery inspections.",
+      "g": [
+        "mobile tech",
+        "rv repair"
+      ],
+      "base": "Luray",
+      "areas": [
+        "Luray",
+        "Front Royal",
+        "New Market",
+        "Woodstock"
+      ],
+      "region": "The Shenandoah Valley",
+      "spec": "on-site RV service and repairs",
+      "evidence": {
+        "phone_quote": "Call or Text: 540-908-0152 (+1540-908-0152)",
+        "type_quote": "Blue Ridge RV was designed with one simple concept; to give the residents and visitors of the Shenandoah Valley the ability to have service and repairs done at their residence or campground without the hassle of waiting on a dealership service center.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Based out of beautiful Page County, Virginia."
+        ]
+      }
+    },
+    {
+      "n": "Dove's Camper Sales",
+      "c": "Harrisonburg, VA",
+      "p": "(540) 434-1505",
+      "u": "https://www.dovescampersales.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Dove's Camper Sales is a family-owned RV sales and service business on Rawley Pike in the Harrisonburg area that has worked on recreational vehicles since 1970. Its service shop handles small problems to major rebuilds and performs Virginia state inspections on trailers, and it also sells camping supplies.",
+      "g": [
+        "rv dealer",
+        "service center",
+        "parts"
+      ],
+      "base": "Harrisonburg",
+      "areas": [
+        "Harrisonburg"
+      ],
+      "region": "The Shenandoah Valley",
+      "spec": "RV sales and service",
+      "evidence": {
+        "phone_quote": "Phone:(540) 434-1505",
+        "type_quote": "With over 50 years of experience working on recreational vehicles, we can handle anything, from small problems to major rebuilds.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "We also do Virginia state inspections on trailers.",
+          "Started in 1970, we are family owned business that seeks to give you the personal service and care that you need."
+        ]
+      }
+    },
+    {
+      "n": "Ventro's Auto-Diesel Repair",
+      "c": "Norton, VA",
+      "p": "(276) 325-4901",
+      "u": "https://www.ventrosauto.com/rv-repair",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Ventro's Auto-Diesel Repair on Trent Street in Norton runs a dedicated RV service with diagnostics for mechanical, electrical, plumbing and structural issues. It repairs RV appliances, plumbing, electrical systems, HVAC, chassis, bodywork and collision damage, and also installs solar, satellite TV and generator upgrades.",
+      "g": [
+        "rv repair",
+        "service center",
+        "body shop"
+      ],
+      "base": "Norton",
+      "areas": [
+        "Norton"
+      ],
+      "region": "Roanoke, Christiansburg and the southwest",
+      "spec": "RV diagnostics, chassis, body and collision repair",
+      "evidence": {
+        "phone_quote": "(276) 325-4901",
+        "type_quote": "Gas or diesel, big or small, we repair and maintain brake systems, engines, transmissions, tires, suspensions, pumps, and electronics on all RVs.",
+        "emergency_quote": "Emergency Repairs: Have an issue while traveling? Count on our team to get you back on the road quickly and safely.",
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "605 Trent Street NE, Norton, VA 24273"
+        ]
+      }
+    },
+    {
+      "n": "5 Star RV Service, LLC",
+      "c": "Bristol, VA",
+      "p": "866-578-2778",
+      "u": "https://www.5starrvservice.com/",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "5 Star RV Service is an RV repair and inspection business in Bristol whose diagnosing and repairs are done by RVTAA Registered and Lippert Certified technicians. It installs and repairs refrigerators, water heaters, Aqua Hot systems, electrical, propane, air conditioners, heat pumps, water filter systems, awnings, batteries and solar, and it does not work on black tanks, motor home engines or body and chassis work.",
+      "g": [
+        "rv repair",
+        "service center"
+      ],
+      "base": "Bristol",
+      "areas": [
+        "Bristol",
+        "Abingdon"
+      ],
+      "region": "Bristol, Abingdon and the far southwest",
+      "spec": "RV diagnostics and repair",
+      "evidence": {
+        "phone_quote": "Phone: 866-578-2778",
+        "type_quote": "All diagnosing and repairs are done by Technicians that are RVTAA Registered and Lippert Certified!",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Support before, during, and through the life of your RV!"
         ]
       }
     }

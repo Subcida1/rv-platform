@@ -274,5 +274,188 @@ window.RV_LISTINGS_MI = [
   ],  "base": null,  "areas": [
    "grand rapids"
   ],  "region": "Grand Rapids, MI and surrounding areas",  "spec": null,  "reg": "west-mi"
+ },
+ {  "n": "Kline's RV Center",  "c": "Warren, MI",  "p": "586-977-2324",  "u": "https://www.klinesrv.com/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "Kline's RV Center is a family RV dealership and full-service center in Warren, Michigan, at 2001 East Thirteen Mile Road. Its service department handles bearing repacks, roof seals, mechanical and electrical work, plumbing, carpentry, bodywork, collision repair, and appliance repairs, and it employs certified technicians with access to OEM parts. Customers can schedule a service appointment online or by phone.",  "g": [
+   "rv service center",
+   "collision",
+   "bodywork",
+   "appliances"
+  ],  "base": "warren",  "areas": [
+   "warren"
+  ],  "region": "Metro Detroit",  "spec": "RV service, bodywork and collision",  "reg": "southeast-mi"
+ },
+ {  "n": "Mike's RV Services LLC",  "c": "Ira, MI",  "p": "(586) 321-7141",  "u": "https://www.mikesrvservicellc.com/",  "t": "both",  "e": true,  "r": false,  "d": "Mike's RV Services LLC is an RV repair shop and mobile service based in Ira, Michigan, at 9439 Marine City Highway. It fixes motor homes, travel trailers, and fifth wheels, specializing in water damage repair, and also handles appliances, trailer axles, upgrades, and winterizing and summerizing. It is Southeast Michigan's authorized Aqua-Hot service center. On-site service runs spring through fall, and the shop accepts insurance work. It only services 2006 and newer units.",  "g": [
+   "rv service center",
+   "mobile tech",
+   "water damage",
+   "appliances"
+  ],  "base": null,  "areas": [
+   "new baltimore",
+   "chesterfield",
+   "marysville",
+   "port huron",
+   "armada",
+   "sterling heights",
+   "warren",
+   "shelby"
+  ],  "region": "Macomb and St. Clair Counties",  "spec": "Water damage repair and general RV repair, 2006 and newer",  "reg": "thumb-mi"
+ },
+ {  "n": "Independent Camper RV Repair",  "c": "Flint, MI",  "p": "(810) 640-5925",  "u": "https://independentcamperrvrepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Independent Camper RV Repair is an RVTI certified mobile RV repair service based in Flint, Michigan. It repairs and installs appliances, awnings, air conditioners, and slide rooms and offers same-day RV repair across Flint Township and surrounding Genesee County communities. Its technicians hold additional certifications from Dometic, Suburban, Coleman-Mach, and Lippert.",  "g": [
+   "mobile tech",
+   "appliances",
+   "awnings",
+   "air conditioning"
+  ],  "base": "flint",  "areas": [
+   "flint",
+   "burton",
+   "davison",
+   "fenton",
+   "flushing",
+   "clio",
+   "swartz creek",
+   "durand",
+   "linden"
+  ],  "region": "Genesee County",  "spec": "Mobile RV repair, roof, AC and awning repair",  "reg": "southeast-mi"
+ },
+ {  "n": "Scott RV Repair",  "c": "Millington, MI",  "p": "(810) 214 4639",  "u": "https://www.scottrv.com/",  "t": "mobile",  "e": true,  "r": true,  "d": "Scott RV Repair is a mobile RV repair business based in Millington, Michigan, with over 15 years of experience. It offers pre-trip prep and inspections, routine maintenance such as generator oil changes and roof inspection, repairs including brake and leak repair, accessory and upgrade installation, roadside assistance, and winterization. It serves RV owners from its Millington location and takes emergency calls on Sundays.",  "g": [
+   "mobile tech",
+   "roadside",
+   "winterization",
+   "maintenance"
+  ],  "base": "millington",  "areas": [],  "region": "Genesee County",  "spec": "Mobile RV repair and roadside assistance",  "reg": "southeast-mi"
+ },
+ {  "n": "TradeWinds RV Center",  "c": "Clio, MI",  "p": "(810) 547-4475",  "u": "https://tradewindsrvcenter.com/",  "t": "center",  "e": false,  "r": false,  "d": "TradeWinds RV Center is a family-owned RV dealership and full-service supercenter in Clio, Michigan, near Flint. Its state-of-the-art service facility employs certified technicians who service most makes and models, from routine maintenance to major repairs, and it welcomes warranty work. It has served the area for over 30 years.",  "g": [
+   "rv service center",
+   "dealership service"
+  ],  "base": "clio",  "areas": [
+   "clio",
+   "flint"
+  ],  "region": "Genesee County",  "spec": "Dealership service and repair",  "reg": "southeast-mi"
+ },
+ {  "n": "M53 RV & Trailer",  "c": "Imlay City, MI",  "p": "586.567.4910",  "u": "https://www.m53rv.com/",  "t": "center",  "e": false,  "r": false,  "d": "M53 RV & Trailer is a small privately owned RV and trailer dealership with a service department and parts store in Imlay City, Michigan, at 7582 East Imlay City Road. Its certified staff handles repairs and maintenance on RVs and trailers and helps source parts for repairs and customization.",  "g": [
+   "rv service center",
+   "dealership service",
+   "parts"
+  ],  "base": "imlay city",  "areas": [
+   "imlay city",
+   "lapeer"
+  ],  "region": "Lapeer County",  "spec": "RV and trailer service and repair",  "reg": "southeast-mi"
+ },
+ {  "n": "Hills Garage",  "c": "Port Huron, MI",  "p": "(810) 364-8008",  "u": "https://hgautocare.com/",  "t": "center",  "e": false,  "r": false,  "d": "Hills Garage is a family auto and truck repair garage in Port Huron, Michigan, at 1284 Range Road near I-94. Alongside cars and trucks it runs a dedicated RV motorhome repair service for Class A, Class B, and Class C motorhomes, covering RV engines, transmissions, brakes, electrical repair, and RV warranty repair. It has served the Port Huron area since 1946.",  "g": [
+   "rv service center",
+   "chassis",
+   "engine",
+   "transmission"
+  ],  "base": "port huron",  "areas": [
+   "port huron",
+   "yale",
+   "capac",
+   "marine city",
+   "saint clair",
+   "marysville"
+  ],  "region": "St. Clair County",  "spec": "RV motorhome engine, transmission and brake repair",  "reg": "thumb-mi"
+ },
+ {  "n": "Bob's RV Service & Repair LLC",  "c": "Ray, MI",  "p": "(586) 646-5777",  "u": "https://bobsrvllc.com/",  "t": "both",  "e": false,  "r": false,  "d": "Bob's RV Service & Repair LLC is an RV service center, parts store, and mobile RV repair business in Ray Township, Michigan, at 61060 North Avenue. Its certified RV technicians service all makes and models of RVs, travel trailers, and motorhomes plus horse, boat, and cargo trailers. It is open for the camping season each April 1 to December 1 with limited winter hours.",  "g": [
+   "rv service center",
+   "mobile tech",
+   "parts"
+  ],  "base": null,  "areas": [
+   "ray",
+   "mount clemens",
+   "new baltimore"
+  ],  "region": "Macomb County",  "spec": "RV service, repair and parts",  "reg": "southeast-mi"
+ },
+ {  "n": "Home & Park RV Service",  "c": "Fenton, MI",  "p": "1-810-750-2020",  "u": "https://www.homeandparkrv.com/contact/",  "t": "center",  "e": true,  "r": false,  "d": "Home & Park RV Service is an RV sales, service, and parts business in Fenton, Michigan, at 15168 North Road. It provides service, parts, installation, and supplies for motor homes, fifth wheels, pop-ups, conventional RVs, and trailers, and works with local dealerships on hitch and accessory installation. It serves Fenton, Flint, Grand Blanc, Howell, Brighton, and Greater Detroit, and lists an emergency line.",  "g": [
+   "rv service center",
+   "parts",
+   "installation"
+  ],  "base": "fenton",  "areas": [
+   "fenton",
+   "flint",
+   "flushing",
+   "howell",
+   "linden",
+   "swartz creek",
+   "durand",
+   "grand blanc",
+   "holly",
+   "brighton"
+  ],  "region": "Genesee and Livingston Counties",  "spec": "RV service, parts and installation",  "reg": "southeast-mi"
+ },
+ {  "n": "Dave's Mobile RV Repair",  "c": "Flint, MI",  "p": "8102524135",  "u": "https://www.davesmobilerv.com/",  "t": "mobile",  "e": true,  "r": false,  "d": "Dave's Mobile RV Repair provides mobile RV services in Genesee County, Michigan, and the surrounding areas. It works around the clock and offers a personalized, on-site repair experience for RV owners, with 24/7 phone support.",  "g": [
+   "mobile tech"
+  ],  "base": null,  "areas": [
+   "flint",
+   "fenton",
+   "grand blanc",
+   "burton",
+   "davison"
+  ],  "region": "Genesee County",  "spec": "Mobile RV repair",  "reg": "southeast-mi"
+ },
+ {  "n": "Clyde's Frame & Wheel Service",  "c": "Pontiac, MI",  "p": "(248) 338-0323",  "u": "https://www.clydesbigtex.com/rvs-trailers",  "t": "center",  "e": false,  "r": false,  "d": "Clyde's Frame & Wheel Service is a third-generation, family-owned RV and trailer service center in Pontiac, Michigan, established in 1939. Its certified mechanics perform alignments and tire balancing, complete brake service, maintenance inspections, steering and suspension work, RV suspension upgrades, trailer axle alignment, trailer wiring and brakes, and wheel bearing service.",  "g": [
+   "alignment",
+   "suspension",
+   "brakes",
+   "wheel bearings"
+  ],  "base": "pontiac",  "areas": [
+   "pontiac"
+  ],  "region": "Oakland County",  "spec": "RV and trailer alignment, suspension and brake service",  "reg": "southeast-mi"
+ },
+ {  "n": "Mobile RV Workbench",  "c": "Ann Arbor, MI",  "p": "734-276-4349",  "u": "https://mobilervworkbench.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Mobile RV Workbench is a mobile and remote RV service operated by RVTI certified technician Mike Masserant in Washtenaw County, Michigan. It offers on-site troubleshooting, maintenance such as exterior leak detection and rooftop inspection, winterizing and de-winterizing, battery replacement, freshwater tank sanitizing, alarm inspection, and recall and warranty service, plus remote phone and video support.",  "g": [
+   "mobile tech",
+   "leak detection",
+   "winterization"
+  ],  "base": null,  "areas": [
+   "ann arbor",
+   "ypsilanti"
+  ],  "region": "Washtenaw County",  "spec": "Mobile and remote RV repair and maintenance",  "reg": "southeast-mi"
+ },
+ {  "n": "Mazur's Total Automotive of Howell",  "c": "Howell, MI",  "p": "517-548-1600",  "u": "https://www.totalautomotive.net/howell/rv-repair",  "t": "center",  "e": true,  "r": false,  "d": "Mazur's Total Automotive of Howell is an auto and RV repair shop in Howell, Michigan, at 520 Victory Drive. Its technicians handle RV brake inspections and repairs, generator service, tire inspection and replacement, electrical and mechanical repairs, cooling and heating checks, and pre-season inspections, and it offers emergency RV repair with transport arranged to the shop.",  "g": [
+   "rv service center",
+   "brakes",
+   "generators",
+   "electrical"
+  ],  "base": "howell",  "areas": [
+   "howell"
+  ],  "region": "Livingston County",  "spec": "RV repair and maintenance",  "reg": "southeast-mi"
+ },
+ {  "n": "Blue Compass RV Auburn Hills",  "c": "Auburn Hills, MI",  "p": "(248) 373-5811",  "u": "https://www.bluecompassrv.com/locations/michigan/auburn-hills/service",  "t": "center",  "e": false,  "r": false,  "d": "Blue Compass RV Auburn Hills is an RV dealership and service center at 2375 North Opdyke Road in Auburn Hills, Michigan. Its service bay handles routine maintenance, engine and transmission work, electrical systems, plumbing and water systems, roof and exterior repair, HVAC, appliances, and structural and remodel work, and every RV gets a free multi-point inspection. It is open Monday through Saturday.",  "g": [
+   "rv service center",
+   "chassis",
+   "electrical",
+   "appliances"
+  ],  "base": "auburn hills",  "areas": [
+   "auburn hills",
+   "pontiac",
+   "rochester hills",
+   "troy"
+  ],  "region": "Oakland County",  "spec": "Dealership service and repair",  "reg": "southeast-mi"
+ },
+ {  "n": "Mobile Mayer RV Repair",  "c": "Clyde, MI",  "p": "1-(810)-288-4985",  "u": "https://www.mobilemayerrvrepair.com/mobile-rv-repair-services",  "t": "mobile",  "e": true,  "r": false,  "d": "Mobile Mayer RV Repair is a mobile RV repair service based in Clyde Township, Michigan, serving St. Clair and Macomb counties. It provides 24/7 on-site service for Class A and Class C motorhomes, fifth wheels, travel trailers, truck campers, and campervans, covering roof and AC repair, refrigerator and appliance repair, solar and battery repair, water systems, and plumbing and tank system repair.",  "g": [
+   "mobile tech",
+   "air conditioning",
+   "solar",
+   "appliances"
+  ],  "base": null,  "areas": [
+   "port huron",
+   "marine city",
+   "mount clemens",
+   "new baltimore",
+   "sterling heights",
+   "warren",
+   "saint clair shores",
+   "roseville",
+   "eastpointe"
+  ],  "region": "St. Clair and Macomb Counties",  "spec": "24/7 mobile RV repair",  "reg": "thumb-mi"
+ },
+ {  "n": "Epic RV",  "c": "Saint Clair, MI",  "p": "(734) 341-3242",  "u": "https://epic-rv.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Epic RV is a mobile RV repair specialist for towables based in Saint Clair, Michigan. It works on travel trailers, fifth wheels, and toy haulers and handles roof repair and resealing, plumbing, electrical, chassis, brakes, axles and suspension, and awning and window repairs, along with seasonal prep and solar upgrades.",  "g": [
+   "mobile tech",
+   "roofing",
+   "chassis",
+   "plumbing"
+  ],  "base": "saint clair",  "areas": [
+   "saint clair",
+   "port huron"
+  ],  "region": "St. Clair County",  "spec": "Mobile RV repair for towables",  "reg": "thumb-mi"
  }
 ];

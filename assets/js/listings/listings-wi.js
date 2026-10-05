@@ -249,5 +249,103 @@ window.RV_LISTINGS_WI = [
    "maintenance",
    "parts"
   ],  "base": null,  "areas": [],  "region": "Wisconsin",  "spec": "Mobile RV repair and maintenance",  "reg": "south-central-wi"
+ },
+ {  "n": "Bayside Outdoors",  "c": "Green Bay, WI",  "p": "(920) 661-9500",  "u": "https://www.baysideoutdoorsgb.com/service-repair-rvs-powersports-boats-dealership--service",  "t": "center",  "e": false,  "r": false,  "d": "Bayside Outdoors is an RV, boat and powersports dealer in Green Bay, Wisconsin with a dedicated service department. Its trained technicians service RV brands including Shasta RV, Lance, NuCamp and InTech RV alongside marine products, and the shop keeps customers in and out of the service bay efficiently. It provides service in the Green Bay area.",  "g": [
+   "rv dealer",
+   "service department",
+   "rv repair"
+  ],  "base": "green bay",  "areas": [],  "region": "Green Bay area",  "spec": "RV service department at an RV, boat and powersports dealership",  "reg": "northeast-wi"
+ },
+ {  "n": "Markquart RV Appleton",  "c": "Appleton, WI",  "p": "(920) 757-6112",  "u": "https://www.markquartrvappleton.com/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "Markquart RV Appleton is an RV dealer at 2100 N. McCarthy Rd. in Appleton, Wisconsin with a service department for campers and motorhomes. Its RVTI certified technicians handle routine camper maintenance and more extensive repairs for travel trailers, fifth wheels, toy haulers and pop up campers. The location does not complete chassis work on motorized RVs but can refer customers to a maintenance center that does.",  "g": [
+   "rv dealer",
+   "service department",
+   "rv repair"
+  ],  "base": "appleton",  "areas": [],  "region": "Fox Valley",  "spec": "RV service department for towables and campers (no chassis work)",  "reg": "northeast-wi"
+ },
+ {  "n": "Schieks RV",  "c": "Fond du Lac, WI",  "p": "920-933-5545",  "u": "https://www.schieksrv.com/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "Schieks RV is an RV dealer with on-site repair centers at 465 S Pioneer Rd in Fond du Lac, Wisconsin and at 8010 County Rd CR in Newton near Manitowoc. Its RV service departments handle maintenance and repairs for fifth wheels, toy haulers and travel trailers, with on-site parts departments to source replacement parts. Customers can schedule service by phone or web form.",  "g": [
+   "rv dealer",
+   "service department",
+   "rv repair",
+   "parts"
+  ],  "base": "fond du lac",  "areas": [
+   "manitowoc",
+   "newton"
+  ],  "region": "Fond du Lac and Manitowoc",  "spec": "RV service and repair centers in Fond du Lac and near Manitowoc",  "reg": "northeast-wi"
+ },
+ {  "n": "MC RV Service",  "c": "Two Rivers, WI",  "p": "920-905-2800",  "u": "https://mcrvservice.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "MC RV Service is a mobile RV maintenance, repair and inspection business based at 3208 Mishicot Rd in Two Rivers, Wisconsin. It specializes in RV maintenance, repairs and inspections and comes to the customer at a campground or driveway, with a travel radius that reaches the Manitowoc and Sheboygan area. The business states that it aims to be available around the clock for unforeseen incidents.",  "g": [
+   "mobile rv",
+   "rv repair",
+   "inspections"
+  ],  "base": "two rivers",  "areas": [
+   "manitowoc",
+   "sheboygan",
+   "mishicot"
+  ],  "region": "Manitowoc County lakeshore",  "spec": "Mobile RV maintenance, repairs and inspections",  "reg": "northeast-wi"
+ },
+ {  "n": "Chippewa Valley Outdoors",  "c": "Chippewa Falls, WI",  "p": "715-833-0066",  "u": "https://www.chippewavalleyoutdoors.com/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "Chippewa Valley Outdoors is an RV dealer at 990 118th St. in Chippewa Falls, Wisconsin with a service department for fifth wheels, pop up campers, tear drops, toy haulers, travel trailers and truck campers. It services brands including Forest River, KZ RV, Little Guy and nuCamp. The business states that it provides service to Eau Claire, Stanley and Ladysmith.",  "g": [
+   "rv dealer",
+   "service department",
+   "rv repair"
+  ],  "base": "chippewa falls",  "areas": [
+   "eau claire",
+   "stanley",
+   "ladysmith"
+  ],  "region": "Chippewa Valley",  "spec": "RV service department for towables and campers",  "reg": "west-wi"
+ },
+ {  "n": "Country RV",  "c": "Chippewa Falls, WI",  "p": "715-288-6996",  "u": "https://countryrvwi.com/rv_parts.php",  "t": "both",  "e": false,  "r": false,  "d": "Country RV is a full service RV dealership at 12665 County Hwy B north of Chippewa Falls, Wisconsin. Its service department has a 10 bay shop and repair facility, provides mobile service, winterizing by the blow out method, fifth wheel hitch installation and LP filling service for all size tanks and motorhomes. The parts department stocks and special orders RV parts and accessories.",  "g": [
+   "rv dealer",
+   "service department",
+   "mobile rv",
+   "parts"
+  ],  "base": "chippewa falls",  "areas": [],  "region": "Chippewa Valley",  "spec": "RV dealer with a 10 bay service shop and mobile RV service",  "reg": "west-wi"
+ },
+ {  "n": "Wisco RV & Marine",  "c": "Cumberland, WI",  "p": "(715) 822-8714",  "u": "https://www.wiscorvandmarine.com/blank-1",  "t": "both",  "e": false,  "r": false,  "d": "Wisco RV & Marine is an RV and marine repair business at 2236 US-63 N in Cumberland, Wisconsin. It provides RV and camper repair covering roof, seal and exterior repairs, appliance and system repair for refrigerators, furnaces, water heaters, air conditioners and electrical systems, plus routine maintenance and winterization. Mobile service calls are available within a 10 mile radius for winterization or general RV service needs, excluding chassis work.",  "g": [
+   "rv repair",
+   "mobile rv",
+   "appliances",
+   "roof"
+  ],  "base": "cumberland",  "areas": [],  "region": "Northwest Wisconsin",  "spec": "RV repair and maintenance shop with mobile service within a 10 mile radius",  "reg": "west-wi"
+ },
+ {  "n": "DNL Recreation",  "c": "Wisconsin Rapids, WI",  "p": "715-424-2526",  "u": "https://www.dnlrec.com/rv-service-wisconsin-rapids/",  "t": "center",  "e": false,  "r": false,  "d": "DNL Recreation is an RV dealer at 3731 8th Street South in Wisconsin Rapids, Wisconsin with a service department. It specializes in towable recreational vehicles such as travel trailers, fifth wheels, park trailers and truck campers and performs winterization and de-winterization, roof and caulking inspection, appliance service repair, brake adjustments, collision repair and restoration and repair from water intrusion. Service is open to customers even if they did not buy from the dealership.",  "g": [
+   "rv dealer",
+   "service department",
+   "rv repair"
+  ],  "base": "wisconsin rapids",  "areas": [],  "region": "Central Wisconsin",  "spec": "RV dealer service department for towables",  "reg": "central-wi"
+ },
+ {  "n": "Heritage RV",  "c": "Tomahawk, WI",  "p": "715.436.5120",  "u": "https://www.heritagerv.com/",  "t": "center",  "e": false,  "r": false,  "d": "Heritage RV is an RV dealership at 1227 N Fourth St in Tomahawk, Wisconsin. It is a Roadtrek Class B motorhome dealer and also sells Thor Motor Coach brands, and it employs a factory trained service technician who returns annually for factory conducted product update training. The dealership states that buying at Heritage RV includes professional service so a motorhome gives years of dependable use.",  "g": [
+   "rv dealer",
+   "service department",
+   "rv repair"
+  ],  "base": "tomahawk",  "areas": [],  "region": "North Central Wisconsin",  "spec": "RV dealer with a factory trained service technician",  "reg": "northwoods-wi"
+ },
+ {  "n": "Rolling Horizons RV",  "c": "Reedsburg, WI",  "p": "608.393.3911",  "u": "https://www.rollinghorizonsrv.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Rolling Horizons RV is a mobile RV repair, maintenance and inspection business at E7989A Swan Court in Reedsburg, Wisconsin. It handles RV repair needs including plumbing, electrical, gas, solar and appliances, performs preventative maintenance, and offers certified inspections for buyers of new RVs or campers. The owner is a certified RV Technician with over 30 years of contractor experience.",  "g": [
+   "mobile rv",
+   "rv repair",
+   "inspections"
+  ],  "base": "reedsburg",  "areas": [
+   "wisconsin dells",
+   "baraboo"
+  ],  "region": "Sauk County",  "spec": "Mobile RV repair, maintenance and certified inspections",  "reg": "south-central-wi"
+ },
+ {  "n": "Camping World RV Service - Rothschild",  "c": "Rothschild, WI",  "p": "(877) 878-8102",  "u": "https://rv.campingworld.com/dealer/rothschild-wisconsin/rv-service-repair",  "t": "center",  "e": false,  "r": false,  "d": "Camping World RV Service in Rothschild, Wisconsin is a local RV service and repair center at 1560 County Road Xx. It provides complete service and repair for all RV types including diagnostics, routine maintenance, oil and fluid changes, winterization and de-winterization, OEM warranty and extended warranty work, roof repairs, and 22 point and 45 point inspections covering the inverter, electrical outlets, generators, plumbing, LP systems and appliances.",  "g": [
+   "rv service",
+   "rv repair",
+   "service center",
+   "roof"
+  ],  "base": "rothschild",  "areas": [
+   "wausau",
+   "weston",
+   "schofield"
+  ],  "region": "Wausau area",  "spec": "RV service and repair center (diagnostics, maintenance, warranty work, inspections, roof repairs)",  "reg": "central-wi"
+ },
+ {  "n": "Camping World RV Service - Onalaska",  "c": "Onalaska, WI",  "p": "(888) 608-4125",  "u": "https://rv.campingworld.com/dealer/onalaska-wisconsin/rv-service-repair",  "t": "center",  "e": false,  "r": false,  "d": "Camping World RV Service in Onalaska, Wisconsin is a local RV service and repair center at 1200 Crossing Meadows Drive. It provides complete service and repair for all RV types including diagnostics, routine maintenance, oil and fluid changes, winterization and de-winterization, OEM warranty and extended warranty work, and 22 point and 45 point inspections covering the inverter, electrical outlets, generators, plumbing, LP systems and appliances.",  "g": [
+   "rv service",
+   "rv repair",
+   "service center",
+   "appliances"
+  ],  "base": "onalaska",  "areas": [
+   "la crosse",
+   "holmen"
+  ],  "region": "La Crosse area",  "spec": "RV service and repair center (diagnostics, maintenance, warranty work, inspections)",  "reg": "west-wi"
  }
 ];
