@@ -82,7 +82,17 @@ def report(slug, radius, limit):
         for a in row.get("areas") or []:
             claimed.add(canonical(a))
     if not bases:
-        sys.exit("%s: no listing base resolves to a coordinate" % slug)
+        # SKIP, DO NOT ABORT (2026-10-04). This was sys.exit(), which is right for one state
+        # named on the command line and wrong for --all: Hawaii's two listings are both
+        # no-base (Maui and Oahu are islands, not Census places, so they are placed by `reg`),
+        # and that single state killed a national run at the tenth state -- the other forty
+        # were never measured and the tool looked like it had finished. A state this tool
+        # cannot measure is a result to report, not a reason to stop measuring the rest.
+        print("%s (%s): %d listing(s), NONE of them states a base this tool can place, so "
+              "there is no origin to measure distance from. Not a gap and not a clean bill: "
+              "unmeasured. Coverage for it has to be judged from its served areas."
+              % (data.get("name", slug), state, len(data["listings"])))
+        return
 
     region_of = data.get("region_of", {})
     labels = {r["key"]: r["label"] for r in data.get("regions", [])}
