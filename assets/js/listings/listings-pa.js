@@ -86,7 +86,7 @@ window.RV_LISTINGS_PA = [
  {  "n": "Pop's Mobile RV Service",  "c": "York, PA",  "p": "(717) 553-4550",  "u": "https://popsmobilervservice.com/",  "t": "both",  "e": true,  "r": false,  "d": "Pop's Mobile RV Service is an on-site RV repair provider based in York, Pennsylvania. It services all of South-Central PA and Northern Maryland within a 75 mile radius of York, offering A/C services, tank cleaning, slide out and awning repair, leveling systems and jacks, and electrical repairs. In addition to on-site mobile service it also has a permanent shop, and it offers on-site emergency services.",  "g": [
    "mobile tech",
    "emergency"
-  ],  "base": "york",  "areas": [],  "region": "South-Central PA; 75 mile radius of York",  "spec": null,  "reg": "southcentral-pa"
+  ],  "base": "york",  "areas": [],  "region": "South-Central PA; 75 mile radius of York",  "spec": null,  "reg": "southeast-pa"
  },
  {  "n": "One Call RV Repair",  "c": "Nanticoke, PA",  "p": "(570) 331-6391",  "u": "https://onecallrv570.com/",  "t": "mobile",  "e": true,  "r": false,  "d": "One Call RV Repair is a mobile, on-site RV repair service serving Luzerne County and surrounding areas from Nanticoke. Certified by the RV Technical Institute, it covers a 50-mile radius of Wilkes-Barre including Luzerne, Lackawanna, Wyoming, Wayne, Schuylkill, Carbon, and parts of Pike County. It focuses on roofing, heating and electrical repairs, warranty repairs, maintenance and upgrades, and offers emergency RV repairs. It does not service chassis, drivetrains and motors, body or paint, or select water heaters.",  "g": [
    "mobile tech",
@@ -186,7 +186,7 @@ window.RV_LISTINGS_PA = [
    "service center",
    "chassis",
    "trailer repair"
-  ],  "base": "bloomsburg",  "areas": [],  "region": null,  "spec": null,  "reg": "southcentral-pa"
+  ],  "base": "bloomsburg",  "areas": [],  "region": null,  "spec": null,  "reg": "northeast-pa"
  },
  {  "n": "Immaculate Kinetics",  "c": "Danville and Montour County, PA",  "p": "(570) 293-1966",  "u": "https://immaculatekinetics.com/Services/RV-and-Motorhome-Repair-and-Maintenance",  "t": "center",  "e": false,  "r": true,  "d": "Immaculate Kinetics is a locally owned Danville shop with ASE-certified technicians that advertises RV and motorhome repair across Central Pennsylvania. Its RV service covers engine, transmission, brake, cooling and suspension work on motorhome chassis and drivetrains, and it says its RV offering is growing with demand. The company also specializes in Roush CleanTech alternative fuel systems and Safety Vision surveillance for commercial vehicles.",  "g": [
    "service center",
@@ -199,5 +199,86 @@ window.RV_LISTINGS_PA = [
    "chassis",
    "tires"
   ],  "base": "mifflinburg",  "areas": [],  "region": "Union County",  "spec": null,  "reg": "southcentral-pa"
+ },
+ {  "n": "Indian Valley Camping Center",  "c": "Souderton, PA",  "p": "800-774-8330",  "u": "https://www.ivccrv.com/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "Indian Valley Camping Center is a family-owned RV dealer and service center in Souderton with nine service bays. Its technicians repair all types of RVs and handle PA state inspections of trailers and motorhomes, insurance estimates and repairs, collision repairs, roof replacements and conditioning, awning and slide topper work, slide-out repairs, generator service, appliance repairs, winterizing, wheel bearing packing, solar and lithium installs, and hitch installation. It offers manufacturer warranty work for Keystone, Alliance, NuCamp and Travel Lite plus extended service contract repairs.",  "g": [
+   "service center",
+   "body",
+   "roof",
+   "chassis"
+  ],  "base": "souderton",  "areas": [],  "region": "Souderton and the Philadelphia region",  "spec": null,  "reg": "southeast-pa"
+ },
+ {  "n": "Venture On Mobile RV Repair",  "c": "Ambler, PA",  "p": "215-470-5300",  "u": "https://ventureonrvrepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Venture On Mobile RV Repair is a mobile RV repair service based in Ambler that travels to the customer with a fully equipped service truck. It covers a large service area within Eastern Pennsylvania, central and Southern New Jersey, and Northern Delaware, running to any driveway, parking lot, or campground within a two hour radius of Ambler. The owner is an RVTI technician trainer and the team performs mobile repairs, parts and accessory installation and RV service on site.",  "g": [
+   "mobile tech"
+  ],  "base": "ambler",  "areas": [],  "region": "Eastern Pennsylvania within about 50 miles of the Philadelphia region",  "spec": "RVTI certified technicians",  "reg": "southeast-pa"
+ },
+ {  "n": "RV House Calls",  "c": "Southeastern Pennsylvania, PA",  "p": "610-890-8090",  "u": "https://www.rvhousecalls.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "RV House Calls is a mobile RV repair service centrally located in southeastern Pennsylvania. It comes to the customer so they can remain in their RV during repairs and performs mobile RV repair and preventive maintenance, plus on-site RV owner education such as complete walk-arounds and setup demonstrations. Within roughly a 90-minute radius it services Berks, Lancaster, Lebanon, Lehigh, Schuylkill, Montgomery, Chester, Bucks, Northampton and York counties.",  "g": [
+   "mobile tech"
+  ],  "base": null,  "areas": [],  "region": "Southeastern Pennsylvania",  "spec": null,  "reg": "southeast-pa"
+ },
+ {  "n": "Carefree RV",  "c": "Exton, PA",  "p": "(610) 890-7007",  "u": "https://justgorv.com/rv-service-repair/",  "t": "center",  "e": false,  "r": false,  "d": "Carefree RV runs an RV service department at its Exton location that provides maintenance and repairs on all types of RVs, travel trailers and motorhomes. It offers three levels of RV maintenance, including oil changes, generator service, routine roof maintenance, winterizing and de-winterizing, and repairs to meet Pennsylvania State RV Inspection requirements, plus parts replacement and internal system repairs. It has served Philadelphia and Chester County since 2017 and works within a two-hour radius covering nearby areas and states.",  "g": [
+   "service center"
+  ],  "base": "exton",  "areas": [],  "region": "Philadelphia and Chester County",  "spec": null,  "reg": "southeast-pa"
+ },
+ {  "n": "Pineforge RV",  "c": "Boyertown, PA",  "p": "445-306-0002",  "u": "https://www.pineforgerv.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Pineforge RV is a mobile RV repair and service business based in the Boyertown and Pottstown area. Its technicians come to the campsite, storage lot or home to handle RV water systems and plumbing, appliances and propane, electrical systems, and preventative maintenance and upgrades such as sealant inspection, Starlink installation, tankless water heater upgrades and backup cameras. It provides RV repair and service throughout Montgomery, Berks, Bucks, Chester and Lehigh Counties.",  "g": [
+   "mobile tech"
+  ],  "base": "boyertown",  "areas": [],  "region": "Montgomery, Berks, Bucks, Chester and Lehigh Counties",  "spec": null,  "reg": "southeast-pa"
+ },
+ {  "n": "Campers Inn RV of Philadelphia",  "c": "Hatfield, PA",  "p": "215-822-1345",  "u": "https://www.campersinn.com/philadelphia",  "t": "center",  "e": false,  "r": false,  "d": "Campers Inn RV of Philadelphia is a full-service RV dealership at Hatfield with an RV Repair and Service Center staffed by certified technicians. It supports maintenance and repair needs, carries a stocked parts and accessories store, and operates as part of the Priority RV Network, which provides priority emergency service and nationwide support. Sales, parts and service hours run Monday through Saturday.",  "g": [
+   "service center"
+  ],  "base": "hatfield",  "areas": [],  "region": "Philadelphia and the Lehigh Valley",  "spec": null,  "reg": "southeast-pa"
+ },
+ {  "n": "Readinger Mobile RV Services",  "c": "Reading, PA",  "p": "484-245-0578",  "u": "https://www.readingerrv.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Readinger Mobile RV Services is a mobile RV repair, maintenance and upgrade service that comes to the customer. It specializes in the systems that make an RV function and is located in the Reading area, working mostly in Berks, Lancaster, Lebanon, Schuylkill, Montgomery and Chester Counties. Services include repairs, upgrades and routine maintenance performed at the customer's location.",  "g": [
+   "mobile tech"
+  ],  "base": "reading",  "areas": [],  "region": "Berks and the surrounding southeastern Pennsylvania counties",  "spec": null,  "reg": "southeast-pa"
+ },
+ {  "n": "All Seasons Family RV",  "c": "Easton, PA",  "p": "610-253-7700",  "u": "https://www.allseasonsfamilyrv.com/",  "t": "center",  "e": false,  "r": false,  "d": "All Seasons Family RV is an RV dealer and service center in Easton in the Lehigh Valley. It offers complete service ranging from routine maintenance and repair work to winterizing, PA State Inspections and hitch installations, and its parts department can order aftermarket and most manufacturer parts and accessories. The site also has an LP gas and propane filling station for bottles and RVs.",  "g": [
+   "service center"
+  ],  "base": "easton",  "areas": [],  "region": "Lehigh Valley",  "spec": null,  "reg": "southeast-pa"
+ },
+ {  "n": "PMR Mobile RV Service",  "c": "Nazareth, PA",  "p": "610-440-0160",  "u": "https://rvrepairprolv.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "PMR Mobile RV Service, trading as rvrepairprolv.com, is a mobile RV repair business in the Lehigh Valley based in Nazareth. It brings the repair shop to the customer at their location and repairs all makes and models of RVs, with over 28 years of RV service and parts experience. Services include RV awning repair, appliance repair, electrical repairs, solar panel installation, hitch installation, pre-purchase inspections, roof repairs, generator service, yearly maintenance and body repairs, plus on-site trailer axle service.",  "g": [
+   "mobile tech",
+   "body",
+   "roof"
+  ],  "base": "nazareth",  "areas": [],  "region": "Lehigh Valley",  "spec": null,  "reg": "southeast-pa"
+ },
+ {  "n": "Luke's Mobile RV",  "c": "Nazareth, PA",  "p": "(610) 730-2770",  "u": "http://www.lukesmobilervpa.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Luke's Mobile RV is an on-site RV and travel trailer service and repair business based in Nazareth with more than 15 years of professional experience. It works on motor homes and coaches, travel trailers and fifth wheels, truck campers and tent trailers, handling hitches, brake controls and towing accessories, appliances, awnings, converters and electrical problems, and interior and exterior water damage repair. It is onsite factory authorized for Dometic, Duo Therm, A&E and Norcold Draw-tite and does warrantied repairs for several component brands.",  "g": [
+   "mobile tech",
+   "roof"
+  ],  "base": "nazareth",  "areas": [],  "region": "Lehigh Valley",  "spec": null,  "reg": "southeast-pa"
+ },
+ {  "n": "RV Value Mart",  "c": "Bethlehem, PA",  "p": "(610) 837-9880",  "u": "https://rvvaluemart.net/rv-service/",  "t": "center",  "e": false,  "r": false,  "d": "RV Value Mart operates an RV service department at its Bethlehem location, one of three service locations. It specializes in travel trailers and fifth wheels and can also service Class A, B and C motorhomes, pop-ups, destination trailers and truck campers. Work includes winterizing, sealant maintenance, state and undercarriage inspection, tire replacement, awning and roof work, appliance and fresh water system repairs, slide-out and hydraulic repairs, hitch installs, solar upgrades and propane filling, plus warranty and extended service contract repairs.",  "g": [
+   "service center"
+  ],  "base": "bethlehem",  "areas": [],  "region": "Lehigh Valley",  "spec": null,  "reg": "southeast-pa"
+ },
+ {  "n": "Colton RV",  "c": "Wind Gap, PA",  "p": "(610) 863-5239",  "u": "https://www.coltonrv.com/locations/lehigh-valley",  "t": "center",  "e": false,  "r": false,  "d": "Colton RV & Marine operates an RV sales and service location in the Lehigh Valley at Wind Gap. The dealership, part of a family business of more than 60 years, sells new and used motorhomes, fifth wheels and travel trailers and provides RV service alongside sales. Sales and service at the Lehigh Valley location share the same phone line and are open Monday through Saturday.",  "g": [
+   "service center"
+  ],  "base": "wind gap",  "areas": [],  "region": "Lehigh Valley and the Poconos",  "spec": null,  "reg": "southeast-pa"
+ },
+ {  "n": "Lehigh Gorge RV Center",  "c": "White Haven, PA",  "p": "(570) 443-9876",  "u": "https://www.lehighgorgerv.com/service-center",  "t": "center",  "e": false,  "r": false,  "d": "Lehigh Gorge RV Center runs an 8,500-square-foot RV service facility in White Haven with five drive-through service bays, lift systems including a motorhome lift, and a fully stocked parts department. Certified technicians service travel trailers, fifth wheels, toy haulers and motorhomes of all major brands and perform full RV repairs, maintenance, full winterizing, PA state inspections, accessory installation and propane refills. The family-owned business has served the Poconos since 1985 and serves customers throughout the region including Hazleton and Jim Thorpe.",  "g": [
+   "service center",
+   "chassis"
+  ],  "base": "white haven",  "areas": [
+   "hazleton",
+   "jim thorpe"
+  ],  "region": "Poconos and the Lehigh Valley",  "spec": null,  "reg": "southeast-pa"
+ },
+ {  "n": "Kresgeville Auto & RV Repair",  "c": "Kresgeville, PA",  "p": "(610) 681-7898",  "u": "https://kresgevilleautoservice.com/services/",  "t": "center",  "e": false,  "r": false,  "d": "Kresgeville Auto & RV Repair provides complete RV repair and service for Carbon County and Monroe County in the Poconos. Its technicians perform routine maintenance including oil changes, tire checks and brake services, engine repair for motorhomes, electrical system service for batteries, wiring and lighting, plumbing repairs for leaks, water heaters and pumps, and interior and exterior repairs to flooring, cabinetry, appliances, siding, roofs and awnings. It is licensed to perform PA state inspections for Class C motorhomes up to 17,000 pounds and pull-behind trailers up to 10,000 pounds.",  "g": [
+   "service center",
+   "chassis",
+   "body"
+  ],  "base": null,  "areas": [
+   "brodheadsville",
+   "east stroudsburg",
+   "stroudsburg",
+   "pocono pines",
+   "jim thorpe",
+   "palmerton",
+   "lehighton"
+  ],  "region": "Poconos, Carbon and Monroe Counties",  "spec": null,  "reg": "northeast-pa"
+ },
+ {  "n": "HDP Mobile RV Tech",  "c": "East Stroudsburg, PA",  "p": "267.271.8600",  "u": "https://hdpmobilerv.tech/",  "t": "mobile",  "e": false,  "r": false,  "d": "HDP Mobile RV Tech is an RVIA-certified, insured and bonded mobile RV repair and maintenance business serving the Pocono Mountains and surrounding area. It delivers repair and maintenance to the customer's door or campsite, covering electrical, plumbing, HVAC, roofing, tank cleaning, winterization, seasonal maintenance and RV orientations and setup. The business does not perform mobile body or chassis work, engine or transmission work, oil changes, or Class A, B and C tire or brake services.",  "g": [
+   "mobile tech",
+   "roof"
+  ],  "base": "east stroudsburg",  "areas": [],  "region": "Pocono Mountains and the Poconos",  "spec": "RVIA certified technician",  "reg": "northeast-pa"
  }
 ];

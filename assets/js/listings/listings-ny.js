@@ -288,5 +288,154 @@ window.RV_LISTINGS_NY = [
    "appliance repair",
    "roof service"
   ],  "base": null,  "areas": [],  "region": "the Southern Tier",  "spec": null,  "reg": "southern-tier-ny"
+ },
+ {  "n": "G-Fab Mechanical",  "c": "North Tonawanda, NY",  "p": "(716) 262-8445",  "u": "https://www.gfabmechanicalwny.com/rv-repair",  "t": "center",  "e": true,  "r": true,  "d": "G-Fab Mechanical is an RV repair and maintenance shop at 35 Industrial Drive in North Tonawanda, New York, near Buffalo. It services all types of RVs, including Class A, B and C motorhomes, travel trailers, fifth wheels, toy haulers and camper vans, doing engine and transmission diagnostics, brake and suspension work, electrical and wiring, plumbing and water systems, roof and exterior sealing, and air conditioning, heating and appliance repair. It also does generator maintenance, repairs and replacements and offers emergency and after-hours service, plus on-site mobile repair for major issues depending on the size of the job.",  "g": [
+   "rv repair shop",
+   "emergency",
+   "mobile tech"
+  ],  "base": "north tonawanda",  "areas": [
+   "buffalo",
+   "grand island",
+   "amherst",
+   "north tonawanda"
+  ],  "region": "Buffalo and western New York",  "spec": null,  "reg": "western-ny"
+ },
+ {  "n": "Colton RV & Marine",  "c": "North Tonawanda, NY",  "p": "(716) 694-0188",  "u": "https://www.coltonrv.com/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "Colton RV & Marine is an RV and marine dealer with a full service department at 3122 Niagara Falls Boulevard in North Tonawanda, New York, plus a southtowns service location in Blasdell and a dealership in Orchard Park. Certified RV technicians do a full range of maintenance and repair, from motorhome work to tire and axle service, and collision repair is handled through a dedicated body shop. The shop works on travel trailers, fifth wheels, toy haulers, motorhomes and boats.",  "g": [
+   "dealer service dept",
+   "rv service center",
+   "collision"
+  ],  "base": "north tonawanda",  "areas": [
+   "buffalo",
+   "orchard park",
+   "blasdell",
+   "north tonawanda"
+  ],  "region": "Buffalo and western New York",  "spec": null,  "reg": "western-ny"
+ },
+ {  "n": "Blue Compass RV Buffalo",  "c": "West Seneca, NY",  "p": "(716) 652-4500",  "u": "https://www.bluecompassrv.com/locations/new-york/buffalo/service",  "t": "center",  "e": false,  "r": false,  "d": "Blue Compass RV Buffalo operates an RV service center at 1200 Southwestern Blvd in West Seneca, New York, south of Buffalo. Certified technicians work on all major brands and handle warranty repairs, slide-out adjustments, electrical diagnostics, appliance service, plumbing and water systems, roof and exterior work, HVAC, engine and transmission service and collision repair. It serves RVers from across Western New York including Niagara Falls, Rochester, Jamestown and Batavia.",  "g": [
+   "dealer service dept",
+   "rv service center",
+   "maintenance"
+  ],  "base": "west seneca",  "areas": [
+   "buffalo",
+   "niagara falls",
+   "rochester",
+   "jamestown",
+   "batavia"
+  ],  "region": "Buffalo and western New York",  "spec": null,  "reg": "western-ny"
+ },
+ {  "n": "All Cars and Recreation",  "c": "Lockport, NY",  "p": "716-389-0146",  "u": "https://www.allcarsandrecreationwny.com/services/rv-collision",  "t": "center",  "e": false,  "r": false,  "d": "All Cars and Recreation runs an RV collision and fiberglass repair shop in Lockport, New York. It handles major collision work from frame damage to complete exterior repair, minor collision work such as scrapes, dents and bumper damage, and fiberglass RV repair that restores both appearance and structural integrity. It works with all insurance companies and serves Lockport, Niagara Falls, Buffalo and all of Western New York.",  "g": [
+   "collision",
+   "fiberglass repair",
+   "rv body shop"
+  ],  "base": "lockport",  "areas": [
+   "lockport",
+   "niagara falls",
+   "buffalo"
+  ],  "region": "Buffalo and western New York",  "spec": null,  "reg": "western-ny"
+ },
+ {  "n": "Mantelli RV",  "c": "Lockport, NY",  "p": "716-625-8877",  "u": "https://www.mantellirv.com/mts-service.php",  "t": "center",  "e": false,  "r": false,  "d": "Mantelli RV (Mantelli Trailer Sales, Inc.) is an RV dealership with a service department at 6865 South Transit Road in Lockport, New York, between Buffalo and Niagara Falls. Its trained technicians do electrical systems, appliance and accessory checks, refrigerator service, A/C service, furnace and water heater service, LP inspections, water system checks, winterization and de-winterization, annual maintenance inspections, wheel bearing packs and rubber roof preventative service. The family-owned dealership was founded in 1965 and focuses primarily on towables.",  "g": [
+   "dealer service dept",
+   "rv service center",
+   "maintenance"
+  ],  "base": "lockport",  "areas": [
+   "lockport",
+   "buffalo",
+   "niagara falls"
+  ],  "region": "Buffalo and western New York",  "spec": null,  "reg": "western-ny"
+ },
+ {  "n": "FLX RV Group",  "c": "Canandaigua, NY",  "p": "585-394-1985",  "u": "https://www.flxrvgroup.com/rv-service",  "t": "both",  "e": false,  "r": false,  "d": "FLX RV Group is an RV dealer and full-service repair shop at 3452 State Route 247 in Canandaigua, New York, in the Finger Lakes. The shop does chassis and diesel RV maintenance, trailer frame and axle repair, appliance diagnosis and repair, solar and lithium battery upgrades, electrical and plumbing repairs, furnace and air conditioning service, roof repair and replacement, water damage, tires, hitch and base plate installation and NYS inspections. It also offers mobile RV repair to Canandaigua, Geneva, Penn Yan, Victor and Waterloo with technicians traveling up to an hour from the shop.",  "g": [
+   "dealer service dept",
+   "rv service center",
+   "mobile tech"
+  ],  "base": "canandaigua",  "areas": [
+   "canandaigua",
+   "geneva",
+   "penn yan",
+   "victor",
+   "waterloo"
+  ],  "region": "the Finger Lakes",  "spec": null,  "reg": "western-ny"
+ },
+ {  "n": "Finger Lakes Mobile RV Repair",  "c": "Penn Yan, NY",  "p": "585-877-2131",  "u": "https://www.flmobilerv.com/about",  "t": "mobile",  "e": false,  "r": false,  "d": "Finger Lakes Mobile RV Repair is a mobile RV repair business based in Penn Yan, New York, owned by Phil Vollmer, that comes to the customer for repairs, upgrades and general maintenance. It specializes in diagnosing and repairing water leaks, the biggest threat to an RV, and serves the Finger Lakes region. Standard service-call rates cover Penn Yan, Geneva, Waterloo, Seneca Falls, Phelps, Canandaigua, Gorham, Potter, Dundee, Dresden, Reading, Watkins Glen, Hector, Ovid, Lodi, Burdette and Odessa.",  "g": [
+   "mobile tech",
+   "water leak repair"
+  ],  "base": "penn yan",  "areas": [
+   "penn yan",
+   "geneva",
+   "waterloo",
+   "canandaigua",
+   "seneca falls",
+   "watkins glen"
+  ],  "region": "the Finger Lakes",  "spec": null,  "reg": "western-ny"
+ },
+ {  "n": "RV Specialist Group LLC",  "c": "Avon, NY",  "p": "(585) 294-3023",  "u": "https://www.rvspecialistgroup.com/",  "t": "both",  "e": false,  "r": false,  "d": "RV Specialist Group LLC is an RV repair service center with mobile repair available, located at 5665 Tec Dr. Bldg 4 Suite 5 in Avon, New York, near Rochester. The family-owned shop offers general repair and maintenance, yearly maintenance and system checks, water damage repair of floors, walls and roofs, roof repair and replacement, remodeling and winterizing. It was founded after ten years in the RV industry to ease the service overload on dealerships.",  "g": [
+   "rv repair shop",
+   "water damage repair",
+   "mobile tech"
+  ],  "base": "avon",  "areas": [
+   "avon",
+   "rochester",
+   "geneseo"
+  ],  "region": "the Finger Lakes",  "spec": null,  "reg": "western-ny"
+ },
+ {  "n": "Wilkins RV - Churchville",  "c": "Churchville, NY",  "p": "855-713-3396",  "u": "https://www.wilkinsrv.com/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "Wilkins RV operates a 40,000-square-foot RV service center with 16 service bays at 111 S. Main St. in Churchville, New York, near Rochester and the Finger Lakes. Certified technicians do electrical system repairs, refrigerator and appliance service, seasonal winterization and de-winterization, annual and 45-point inspections, water heater, furnace and water system service, LP inspections, generator service and oil changes, rubber roof maintenance and full roof replacements, A/C and oven service and wheel bearing packs. It prioritizes same-day service for urgent issues such as air conditioning, generator, electrical and refrigerator failures.",  "g": [
+   "dealer service dept",
+   "rv service center",
+   "same-day service"
+  ],  "base": "churchville",  "areas": [
+   "churchville",
+   "rochester",
+   "brockport"
+  ],  "region": "Rochester and the Finger Lakes",  "spec": null,  "reg": "western-ny"
+ },
+ {  "n": "Wilkins RV - Bath",  "c": "Bath, NY",  "p": "800-724-2105",  "u": "https://www.wilkinsrv.com/rv-service-bath-ny",  "t": "center",  "e": false,  "r": false,  "d": "Wilkins RV operates a 50,000-square-foot RV service facility with 20 service bays at 7520 State Route 415 in Bath, New York, just off Interstate 86 in the Southern Tier. The dealership's service shop does inspections, repairs and replacements including gas and diesel oil changes, A/C service, oven and range service, gas generator service, refrigerator service, appliance checks, winterization and summer preparation, annual maintenance and 45-point inspections, water heater and furnace checks, propane system inspections, rubber roof preventative treatment and wheel bearing replacement. It serves Bath, Elmira, Corning, Hornell and the surrounding Southern Tier.",  "g": [
+   "dealer service dept",
+   "rv service center",
+   "maintenance"
+  ],  "base": "bath",  "areas": [
+   "bath",
+   "corning",
+   "elmira",
+   "hornell"
+  ],  "region": "the Southern Tier",  "spec": null,  "reg": "southern-tier-ny"
+ },
+ {  "n": "Meyer's RV of Rochester",  "c": "Caledonia, NY",  "p": "(585) 293-3000",  "u": "https://www.meyersrvsuperstores.com/rochester-ny",  "t": "center",  "e": false,  "r": false,  "d": "Meyer's RV of Rochester is a large RV dealership and service center at 3342 State Rd. in Caledonia, New York, south of Rochester toward Avon. Its service department has 10 service bays and handles roof repairs, engine repairs, routine maintenance, towing setups, generator issues and more on RVs and campers. The Caledonia location also carries hundreds of new and used RVs and a large parts and accessories retail shop.",  "g": [
+   "dealer service dept",
+   "rv service center",
+   "parts"
+  ],  "base": "caledonia",  "areas": [
+   "caledonia",
+   "rochester",
+   "avon"
+  ],  "region": "Rochester and the Finger Lakes",  "spec": null,  "reg": "western-ny"
+ },
+ {  "n": "Family RV Center",  "c": "Newark, NY",  "p": "315-331-0800",  "u": "https://www.familyrvnewark.com/service-department",  "t": "center",  "e": false,  "r": false,  "d": "Family RV Center is a family-owned RV dealership and full-service repair shop at 5140 Route 31 West in Newark, New York, east of Rochester in the Finger Lakes. Its service department is staffed with trained technicians who keep motorhomes and trailers in working order, and it carries an extensive inventory of parts and accessories and can order items not in stock. It has been family owned and operated since 1986.",  "g": [
+   "dealer service dept",
+   "rv service center",
+   "parts"
+  ],  "base": "newark",  "areas": [
+   "newark",
+   "rochester",
+   "webster",
+   "palmyra"
+  ],  "region": "the Finger Lakes",  "spec": null,  "reg": "western-ny"
+ },
+ {  "n": "Camping World - Churchville",  "c": "Churchville, NY",  "p": "(844) 739-2117",  "u": "https://rv.campingworld.com/dealer/churchville-new-york",  "t": "center",  "e": false,  "r": false,  "d": "Camping World - Churchville is an RV dealership with an on-site service center and RV collision repair at 1000 Sanford Road North in Churchville, New York, just off Interstate 490 about 15 miles from Rochester. The SuperCenter has 10 service bays and offers RV maintenance, repair and collision work, along with a retail location for camping supplies and RV parts. It is a full-service facility serving the greater Rochester market.",  "g": [
+   "dealer service dept",
+   "rv service center",
+   "collision"
+  ],  "base": "churchville",  "areas": [
+   "churchville",
+   "rochester"
+  ],  "region": "Rochester and the Finger Lakes",  "spec": null,  "reg": "western-ny"
+ },
+ {  "n": "Accurate Repair Center",  "c": "Rochester, NY",  "p": "585-507-9200",  "u": "https://arcroc.com/services/rv-and-bus-repair/",  "t": "center",  "e": true,  "r": false,  "d": "Accurate Repair Center (ARC) is an RV and bus repair shop at 35 Deep Rock Rd in Rochester, New York. It provides comprehensive diagnostics, maintenance and repairs for RVs as well as school, shuttle and charter buses, with advanced tools and heavy-duty bays for work from engine overhauls to brake system diagnostics and air conditioning repair. It offers emergency and same-day repair for critical issues and free estimates with clear pricing before any work begins.",  "g": [
+   "rv repair shop",
+   "emergency",
+   "diagnostics"
+  ],  "base": "rochester",  "areas": [
+   "rochester",
+   "henrietta",
+   "greece"
+  ],  "region": "Rochester and the Finger Lakes",  "spec": null,  "reg": "western-ny"
  }
 ];

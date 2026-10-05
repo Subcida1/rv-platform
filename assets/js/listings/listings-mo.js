@@ -369,5 +369,82 @@ window.RV_LISTINGS_MO = [
    "maintenance",
    "collision"
   ],  "base": "columbia",  "areas": [],  "region": "Kansas City metro",  "spec": null,  "reg": "central-mo"
+ },
+ {  "n": "RV RenoVations",  "c": "Springfield, MO",  "p": "(417) 986-6562",  "u": "https://rvrenovationsllc.com/",  "t": "center",  "e": false,  "r": false,  "d": "RV RenoVations is a family-owned RV repair business in Springfield, Missouri, run by owner Jason Randles, a technician certified by RVIA-RVDA with 14 years in the RV industry. The shop handles body and collision work, water damage repair, roof replacement, slide diagnosis and repair, plumbing, wiring, awning and appliance work, and works with major insurance companies and extended warranty policies. It positions itself against large corporate dealerships by promising personal service and quick turnaround on damaged RVs.",  "g": [
+   "rv repair shop",
+   "collision",
+   "roofing",
+   "warranty work"
+  ],  "base": "springfield",  "areas": [],  "region": "Southwest Missouri",  "spec": "RV repair & collision",  "reg": "ozarks-mo"
+ },
+ {  "n": "Coachlight RV Sales & Service",  "c": "Carthage, MO",  "p": "(800) 799-7444",  "u": "https://www.coachlightrv.com/service",  "t": "center",  "e": false,  "r": false,  "d": "Coachlight RV Sales & Service is an award-winning RV dealership and service center at 5327 S Garrison Ave in Carthage, Missouri, at the intersection of Interstate 44 and Interstate 49 in the Joplin area. Its service department employs RVIA Master Certified and RVIA Certified technicians and performs minor and major repairs on Class A and B motorhomes, travel trailers, fifth wheels and toy haulers, and it is a Newmar Platinum Service Dealer. Service appointments are scheduled through the service manager.",  "g": [
+   "rv service center",
+   "rv dealer with service",
+   "warranty work"
+  ],  "base": "carthage",  "areas": [
+   "joplin",
+   "neosho",
+   "webb city"
+  ],  "region": "Southwest Missouri / I-44 & I-49",  "spec": "RV sales, service & repair",  "reg": "southwest-mo"
+ },
+ {  "n": "Happy Camper Mobile RV Repair",  "c": "Mountain Grove, MO",  "p": "(417) 349-0183",  "u": "https://happycampermobilervrepairmo.com/",  "t": "mobile",  "e": true,  "r": false,  "d": "Happy Camper Mobile RV Repair is a mobile RV repair and maintenance business based in Mountain Grove, Missouri, run by Brad Rhodes, a veteran and retired law enforcement officer who is an NRVTA Certified RV Technician. He holds certifications in air conditioners and heat pumps, water heaters and furnaces, refrigerators, exteriors including slide-outs, roofs, awnings and leveling systems, plus solar and generators. The business travels to the customer, charges no mileage fees within 50 miles, and does not add after-hours or emergency fees.",  "g": [
+   "mobile tech",
+   "repair",
+   "maintenance"
+  ],  "base": "mountain grove",  "areas": [],  "region": "South Central Missouri",  "spec": null,  "reg": "ozarks-mo"
+ },
+ {  "n": "The RV Roof Guys",  "c": "Carthage, MO",  "p": "(417) 310-9162",  "u": "https://rvroofguysmo.com/",  "t": "center",  "e": false,  "r": false,  "d": "The RV Roof Guys is a locally owned FlexArmor RV roofing shop at 16520 CR 138 in Carthage, Missouri, operated by Darren Adams. It spray-applies a seamless polyurea FlexArmor roof encapsulation to travel trailers, fifth wheels and Class A, B and C motorhomes, backed by a lifetime no-leak guarantee, and also performs roof replacement and repair. The shop covers Southwest Missouri and Northwest Arkansas within roughly a 100-mile radius, including Joplin, Springfield, Neosho and Webb City.",  "g": [
+   "rv roof repair",
+   "roof replacement"
+  ],  "base": "carthage",  "areas": [
+   "joplin",
+   "springfield",
+   "neosho",
+   "webb city"
+  ],  "region": "Southwest Missouri",  "spec": "RV roof repair & replacement",  "reg": "southwest-mo"
+ },
+ {  "n": "RV P.I.",  "c": "Joplin, MO",  "p": "833-246-3350",  "u": "https://rvpillc.com/",  "t": "mobile",  "e": true,  "r": false,  "d": "RV P.I. (Missouri RV Inspections) is a mobile RV repair and inspection business located near Joplin, Missouri, that comes to the customer's home, campground or wherever the RV is parked. Alongside its inspection reports it specializes in mobile RV repair covering roofing, electrical, furnaces, air conditioners, RV refrigerators, exterior systems and plumbing, and it offers annual maintenance plans. It serves the four-state area of Missouri, Arkansas, Oklahoma and Kansas, and charges extra for after-hours and emergency calls.",  "g": [
+   "mobile tech",
+   "repair",
+   "maintenance",
+   "inspections"
+  ],  "base": "joplin",  "areas": [
+   "joplin",
+   "carthage",
+   "neosho"
+  ],  "region": "Four-state area / Southwest Missouri",  "spec": "Mobile RV repair & inspections",  "reg": "southwest-mo"
+ },
+ {  "n": "Wehr RV",  "c": "Springfield, MO",  "p": "888-587-9344",  "u": "https://www.wehrrvs.com/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "Wehr RV is an RV dealership with a service department at 2765 S. Kansas Expressway in Springfield, Missouri. Its service team repairs, services and tunes up RVs, and customers can submit an online form describing the problem to schedule work. The dealership also has a second location in Mountain Grove, Missouri, and the Springfield service department is open Monday through Friday.",  "g": [
+   "rv dealer with service",
+   "rv service center"
+  ],  "base": "springfield",  "areas": [
+   "mountain grove"
+  ],  "region": "Southwest Missouri",  "spec": "RV sales & service",  "reg": "ozarks-mo"
+ },
+ {  "n": "EJ's RV Sales",  "c": "West Plains, MO",  "p": "417-256-8444",  "u": "https://www.ejsrvsales.com/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "EJ's RV Sales is an RV dealership with a service department at 3852 N US Highway 63 in West Plains, Missouri, serving the south-central Missouri Ozarks. Its RV service department handles repair work for customers and will check out a RV brought in, with service offered Monday through Friday and Saturday mornings. The dealership also sells new and used RVs, parts and accessories.",  "g": [
+   "rv dealer with service",
+   "rv service center"
+  ],  "base": "west plains",  "areas": [],  "region": "South Central Missouri / West Plains",  "spec": "RV sales, service & repair",  "reg": "ozarks-mo"
+ },
+ {  "n": "Keith Harp's RV and Mobile Home Service, LLC",  "c": "Nixa, MO",  "p": "417-849-8485",  "u": "https://harpsrvmh.com/",  "t": "center",  "e": false,  "r": false,  "d": "Keith Harp's RV and Mobile Home Service, LLC is an RV repair business at 607 E. Mt. Vernon in Nixa, Missouri, just south of Springfield. Owner Keith Harp holds an Associate of Applied Science degree in heating, air conditioning and refrigeration and has 26 years of experience in the RV industry, handling HVAC, plumbing, electrical, leak repair, slides and other non-chassis repairs. The business has been owned and operated by Harp for 17 years and also does mobile home repair work.",  "g": [
+   "rv repair shop",
+   "hvac",
+   "plumbing",
+   "electrical"
+  ],  "base": "nixa",  "areas": [
+   "springfield",
+   "ozark"
+  ],  "region": "Southwest Missouri / Nixa",  "spec": "RV service & repair",  "reg": "ozarks-mo"
+ },
+ {  "n": "Wade's RV Joplin",  "c": "Joplin, MO",  "p": "417-623-3110",  "u": "https://www.wadesrv.com/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "Wade's RV Joplin is an RV dealership with a full-service repair department at 4301 S Range Line Rd in Joplin, Missouri, in the southwest corner of the state where I-44 meets the Kansas and Oklahoma borders. The company's service department does roof replacement and repairs, interior reconstruction and remodeling, exterior body work and paint, plus air conditioning and heating, warranty repairs, hitch installation, flooring, structural and frame repair, plumbing, electrical and appliance work. It services Forest River, Coachmen and Dutchmen RVs among others.",  "g": [
+   "rv dealer with service",
+   "rv service center",
+   "body shop",
+   "warranty work"
+  ],  "base": "joplin",  "areas": [
+   "carthage",
+   "neosho",
+   "webb city"
+  ],  "region": "Southwest Missouri / Joplin",  "spec": "RV sales, service & repair",  "reg": "southwest-mo"
  }
 ];
