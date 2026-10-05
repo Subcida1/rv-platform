@@ -1,0 +1,14 @@
+{
+  "source": "VisitTheUSA.com (Brand USA, the official U.S. tourism site). Its region-to-state map is printed in the global nav flyout on every page: https://www.visittheusa.com/travel-spotlights-midwest-region . Adopted 2026-10-04 because it is the only scheme that is simultaneously official, complete (all 50 states + DC, no orphan), published (copied rather than invented) and simple (6 groups, largest 13). Full research: /home/user/Documents/research/us-region-schemes-proven-2026-10-04.md",
+  "why_not_the_others": "Census 4 regions are lopsided (South 17, West 13). Literal Census division labels are unreadable to a reader ('East North Central'). KOA is the RV-native alternative with 10 regions, but it leaves Hawaii unassigned and omits DC from its lists, and we are adding both.",
+  "disagreements_kept_as_published": "Two placements are VisitTheUSA's and are not what Census, BEA, NPS or KOA say: MISSOURI is in Southeast (they all say Midwest) and NORTH and SOUTH DAKOTA are in West (they all say Midwest/Plains). Kept because the brief was to copy a proven high-traffic scheme rather than invent one. Moving any of them is an edit to a `states` list below; then python3 scripts/build-listings.py and build-shell.mjs, and check-regions.py --check will hold the hub to it.",
+  "order": "Pacific to Northeast reads west-to-east, which is how someone planning a crossing thinks about the map. States are alphabetical inside each region.",
+  "regions": [
+    { "key": "pacific",   "label": "Pacific",   "states": ["AK", "CA", "HI", "OR", "WA"] },
+    { "key": "west",      "label": "West",      "states": ["CO", "ID", "MT", "NV", "ND", "SD", "UT", "WY"] },
+    { "key": "southwest", "label": "Southwest", "states": ["AZ", "NM", "OK", "TX"] },
+    { "key": "midwest",   "label": "Midwest",   "states": ["IA", "IL", "IN", "KS", "MI", "MN", "NE", "OH", "WI"] },
+    { "key": "southeast", "label": "Southeast", "states": ["AL", "AR", "FL", "GA", "KY", "LA", "MS", "MO", "NC", "SC", "TN", "VA", "WV"] },
+    { "key": "northeast", "label": "Northeast", "states": ["CT", "DE", "MA", "MD", "ME", "NH", "NJ", "NY", "PA", "RI", "VT", "DC"] }
+  ]
+}

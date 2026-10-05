@@ -51,6 +51,13 @@ step "clean-urls.py --check: every published URL is extensionless" \
 # The gate reads the coverage text; build-coords.py --check covers the geography side.
 step "check-state-assignment.py: every listing belongs to its own state" \
                                                python3 scripts/check-state-assignment.py
+# The hub is grouped into the six regions in _data/regions.json (2026-10-04), so a reader who
+# knows their state can find it and a reader browsing a corridor can browse a region. The cards
+# stay hand-written because each carries a hand-picked state photo, alt text and a geography
+# line; this checks the things a hand edit gets wrong -- a card under the wrong heading, a state
+# with no card, a region the file does not declare, and order.
+step "check-regions.py: the hub is grouped by region, completely and in order" \
+                                               python3 scripts/check-regions.py
 # The parts hub is generated from _data/parts.json by scripts/build-parts-pages.py, the same
 # contract the manuals pages have: the page on disk has to be what the generator produces, or a
 # hand-edit has quietly forked it from its source.
