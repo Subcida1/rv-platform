@@ -73,6 +73,7 @@ SOURCES = {
     "place": BASE + "gazetteer/2024_Gazetteer/2024_Gaz_place_national.zip",
     "zcta": BASE + "gazetteer/2024_Gazetteer/2024_Gaz_zcta_national.zip",
     "county": BASE + "gazetteer/2024_Gazetteer/2024_Gaz_counties_national.zip",
+    "cousubs": BASE + "gazetteer/2024_Gazetteer/2024_Gaz_cousubs_national.zip",
     "zcta_county": BASE + "rel2020/zcta520/tab20_zcta520_county20_natl.txt",
 }
 SOURCE_NOTE = "US Census Bureau 2024 Gazetteer files (public domain)"
@@ -127,7 +128,8 @@ def fetch():
 
 def load_sources():
     need = ["2024_Gaz_place_national.txt", "2024_Gaz_zcta_national.txt",
-            "2024_Gaz_counties_national.txt", "tab20_zcta520_county20_natl.txt"]
+            "2024_Gaz_counties_national.txt", "tab20_zcta520_county20_natl.txt",
+            "2024_Gaz_cousubs_national.txt"]
     missing = [n for n in need if not (SRC / n).exists()]
     if missing:
         sys.exit("missing source files: %s\nrun: python3 scripts/build-coords.py --fetch"
@@ -181,6 +183,39 @@ def load_sources():
         if st:
             zips[st][r["GEOID"]] = [round(float(r["INTPTLAT"]), 3),
                                     round(float(r["INTPTLONG"]), 3)]
+
+    # COUNTY SUBDIVISIONS, AS A FALLBACK ONLY. New England governs by TOWN, and a New England
+    # town is a county subdivision, not a Census PLACE -- so the place file does not carry it
+    # at all. Measured 2026-10-04 on the Northeast pass: fifteen names were unresolvable, all
+    # of them real towns (Southington and Plainville CT, Wareham, Carver and Middleborough MA,
+    # Merrimack, Weare and Northwood NH, Queensbury NY), and the naive fix -- the runbook's
+    # "drop the area" -- would have silently deleted a served area from ten listings that are
+    # correct. This file carries every one of them.
+    #
+    # setdefault, deliberately: a real Census place always wins, so this can only ever ADD a
+    # name the place file does not have.
+    #
+    # FUNCSTAT 'A' ONLY -- functioning governmental units. The same file carries 'S', census
+    # statistical divisions ("Autaugaville CCD"), which are lines drawn for counting and are
+    # not places anyone works FROM, and 'N'/'F'/'G' nonfunctioning ones. Without the filter
+    # this fallback promoted 19,094 names and grew West Virginia's coordinate file by 24%,
+    # because it was answering for statistical geography as if it were a town.
+    mcd = defaultdict(dict)
+    for r in rows(SRC / need[4]):
+        if r["USPS"] not in STATES or r["FUNCSTAT"] != "A":
+            continue
+        ll = [round(float(r["INTPTLAT"]), 3), round(float(r["INTPTLONG"]), 3)]
+        # No LSAD column in this file; the suffix is in NAME itself ("Southington town",
+        # "Wareham town") and canonical() strips it with its default rules.
+        for key in census_keys(r["NAME"]):
+            mcd[r["USPS"]].setdefault(key, ll)
+    promoted = 0
+    for st, table in mcd.items():
+        for key, ll in table.items():
+            if key not in places[st]:
+                places[st][key] = ll
+                promoted += 1
+    print("  county subdivisions added %d name(s) the place file does not carry" % promoted)
     return places, zips
 
 

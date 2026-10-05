@@ -237,5 +237,9 @@
   "The Grove": {
     "to": "Temple",
     "why": "A small community in Bell County that the Census place file does not carry and whose ZIP area is not in the table, so the coordinate used is Temple, the city the listing also names."
+  },
+  "White River Jct.": {
+    "to": "White River Junction",
+    "why": "One Vermont listing spells the town the way a business would on a card, with the abbreviation; the Census place file carries only 'White River Junction'. Same place, and the other listing in the file already uses the full name."
   }
 }

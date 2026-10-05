@@ -1,0 +1,556 @@
+[
+  {
+    "n": "Shore Thing RV Repair",
+    "c": "Eastern Shore, MD",
+    "p": "(443) 477-2728",
+    "u": "https://shorethingrvrepair.com/",
+    "t": "mobile",
+    "e": false,
+    "r": false,
+    "d": "Shore Thing RV Repair is a mobile RV repair business serving the Delmarva region. It comes to the customer's home or campground rather than having the RV left at a shop or dealer. It says it is fully insured and will be there when it says it will, and it accepts all major credit cards. Its stated service area runs to most of the Eastern Shore, from the Bay Bridge to the beaches and from Dover to Cape Charles.",
+    "g": [
+      "mobile tech"
+    ],
+    "base": null,
+    "areas": [
+      "Dover"
+    ],
+    "region": "the Eastern Shore",
+    "spec": null,
+    "evidence": {
+      "checked": "https://shorethingrvrepair.com/",
+      "phone_quote": "(443) 477-2728",
+      "coverage_quotes": [
+        "We offer mobile RV service to most of the Eastern Shore, from the Bay Bridge to the beaches, and from Dover to Cape Charles."
+      ],
+      "type_quote": "We come to you! Why deal with the hassle of leaving your RV at a shop or dealer only to be ignored?",
+      "emergency_quote": null,
+      "roadside_quote": null,
+      "licence": null
+    },
+    "_assigned_from": "candidates-delmarva-2026-10-04.json"
+  },
+  {
+    "n": "ARC Mobile RV Service & Repair LLC",
+    "c": "Delmarva Peninsula, MD",
+    "p": "(667) 266-0547",
+    "u": "https://arcmobilervservice.com/",
+    "t": "mobile",
+    "e": false,
+    "r": false,
+    "d": "ARC Mobile RV Service & Repair LLC is a mobile RV service and repair business now servicing the Delmarva Peninsula. Its technician is registered and certified through NRVTA with over 10 years of electrical experience. It works on propane, water systems, heating, A/C, electrical, mechanical and solar systems and everyday maintenance. It offers a 90-day labour guarantee and sources parts only from reputable brands.",
+    "g": [
+      "mobile tech"
+    ],
+    "base": null,
+    "areas": [],
+    "region": "Delmarva Peninsula",
+    "spec": null,
+    "evidence": {
+      "checked": "https://arcmobilervservice.com/",
+      "phone_quote": "(667) 266-0547",
+      "coverage_quotes": [
+        "Now Servicing Delmarva Peninsula!"
+      ],
+      "type_quote": "Our technician is registered and certified through NRVTA with over 10 years of electrical experience.",
+      "emergency_quote": null,
+      "roadside_quote": null,
+      "licence": null
+    },
+    "_assigned_from": "candidates-delmarva-2026-10-04.json"
+  },
+  {
+    "n": "Jim Donnies RV Service Center",
+    "c": "Glen Burnie, MD",
+    "p": "(410) 766-5509",
+    "u": "http://www.jimdonnies.com/",
+    "t": "center",
+    "e": false,
+    "r": false,
+    "d": "Jim Donnies RV Service Center is an RV and trailer service shop at 1223 Dorsey Rd, Glen Burnie, Maryland, in business over 40 years. It provides trailer and RV service, quality installation, van customization and snow plow sales and service. It performs Maryland State Trailer Inspection and custom commercial conversions and custom RV work. It is also an El Monte RV Rental Center.",
+    "g": [
+      "service center"
+    ],
+    "base": "Glen Burnie",
+    "areas": [],
+    "region": null,
+    "spec": null,
+    "evidence": {
+      "checked": "http://www.jimdonnies.com/",
+      "phone_quote": "(410) 766-5509",
+      "coverage_quotes": [],
+      "type_quote": "....with a reputation of professional and quality, trailer and RV Service, quality installation as well as van customization and snow plow sales and service.",
+      "emergency_quote": null,
+      "roadside_quote": null,
+      "licence": null
+    },
+    "_assigned_from": "candidates-delmarva-2026-10-04.json"
+  },
+  {
+    "n": "Annapolis RV Center",
+    "c": "Grasonville, MD",
+    "p": "(410) 280-0800",
+    "u": "https://www.annapolisrv.com/rv-parts/",
+    "t": "center",
+    "e": false,
+    "r": true,
+    "d": "Annapolis RV Center is an RV repair and parts business at 117 Rental Lane in Grasonville, Maryland. It has mechanics and technicians who perform routine RV maintenance through to complete RV repairs. Its service list includes servicing a coach chassis, repairing engines, working on brakes and wheel bearings, body repairs, propane system testing and air conditioning, heating, plumbing and electrical work. It serves the Washington DC, Annapolis and Baltimore areas.",
+    "g": [
+      "service center",
+      "chassis"
+    ],
+    "base": "Grasonville",
+    "areas": [
+      "Annapolis",
+      "Baltimore"
+    ],
+    "region": null,
+    "spec": null,
+    "evidence": {
+      "checked": "https://www.annapolisrv.com/rv-parts/",
+      "phone_quote": "(410) 280-0800",
+      "coverage_quotes": [
+        "We serve the Washington DC, Annapolis and Baltimore, MD areas."
+      ],
+      "type_quote": "At Annapolis RV Center, we have expert mechanics and technicians that perform everything from routine RV maintenance to complete RV repairs.",
+      "emergency_quote": null,
+      "roadside_quote": null,
+      "licence": null
+    },
+    "_assigned_from": "candidates-delmarva-2026-10-04.json"
+  },
+  {
+    "n": "Leo's Vacation Center",
+    "c": "Gambrills, MD",
+    "p": "(800) 559-4793",
+    "u": "https://www.leosrv.com/rv-service",
+    "t": "center",
+    "e": false,
+    "r": false,
+    "d": "Leo's Vacation Center is an RV dealer service and repair facility at 729 State Route 3 N, Gambrills, Maryland, serving as a service-minded dealer for over 40 years. Its service department offers full service on all RVs, travel trailers and campers, including Maryland State RV inspections, and it services most major brand appliances. It does full body work and works directly with insurance companies, from general maintenance to major repairs including reconstructive work for accident, water and wind damage. Its 20,000-square-foot service and prep area handles parts and accessories installation, hitches, tow bars, wiring, LP systems, electrical, plumbing, brakes and winterizing.",
+    "g": [
+      "service center",
+      "body shop"
+    ],
+    "base": "Gambrills",
+    "areas": [],
+    "region": null,
+    "spec": null,
+    "evidence": {
+      "checked": "https://www.leosrv.com/rv-service",
+      "phone_quote": "(800) 559-4793",
+      "coverage_quotes": [],
+      "type_quote": "Service / Repair Facility for RV's, Motorhomes and Trailers — Your service minded dealer for over 40 years",
+      "emergency_quote": null,
+      "roadside_quote": null,
+      "licence": null
+    },
+    "_assigned_from": "candidates-delmarva-2026-10-04.json"
+  },
+  {
+    "n": "Eyre Heavy Duty",
+    "c": "Glenelg, MD",
+    "p": "410-442-7418",
+    "u": "https://eyrehd.com/rv-motorhome-repair/",
+    "t": "center",
+    "e": false,
+    "r": true,
+    "d": "Eyre Heavy Duty provides RV and motorhome repair from its facility at 13600 Triadelphia Rd, Glenelg, Maryland, serving all of Maryland and Washington DC. It offers routine maintenance, mechanical repairs, paint and dent repair, exterior restoration and upgrades. Its service list includes full engine diagnostics, RV brake repair and transmission services for diesel and gasoline engines, chassis problems, and generator repair including Onan and Cummins. It is a SuperSteer installer for RV suspension upgrades and does fiberglass and body repairs. Its RV work is performed at the Glenelg shop, not mobile.",
+    "g": [
+      "service center",
+      "chassis",
+      "body shop"
+    ],
+    "base": "Glenelg",
+    "areas": [
+      "Columbia",
+      "Annapolis",
+      "Glen Burnie",
+      "Frederick",
+      "Bel Air"
+    ],
+    "region": "Maryland",
+    "spec": "No. Currently, our primary RV repair services are performed at our state-of-the-art facility in Glenelg, MD.",
+    "evidence": {
+      "checked": "https://eyrehd.com/rv-motorhome-repair/",
+      "phone_quote": "410-442-7418",
+      "coverage_quotes": [
+        "We service all of Maryland. Our RV service center in Glenelg Maryland is a few minutes from other places of Howard County MD and Baltimore MD, including: Columbia, West Friendship, Annapolis, Glen Burnie, Westminster, Frederick, Bel Air, and more."
+      ],
+      "type_quote": "When it comes to your RV or motorhome, you need more than just a repair shop—you need a trusted expert for maintenance, repairs, and auto body services throughout Maryland and the DC area.",
+      "emergency_quote": null,
+      "roadside_quote": null,
+      "licence": null
+    },
+    "_assigned_from": "candidates-delmarva-2026-10-04.json"
+  },
+  {
+    "n": "IC Services LLC",
+    "c": "Huntingtown, MD",
+    "p": "443-432-0323",
+    "u": "https://www.icsrvrepair.com/",
+    "t": "center",
+    "e": false,
+    "r": false,
+    "d": "IC Services LLC is a full-service Maryland RV, camper and trailer maintenance and repair business at 2055 Solomons Island Road, Huntingtown, Maryland. Its owner, Rusty Helwig, started the company to meet a need for quality RV, camper, truck and trailer maintenance in the Southern Maryland area. It offers full-service RV and camper maintenance and repair and full-service trailer maintenance and repair.",
+    "g": [
+      "service center"
+    ],
+    "base": "Huntingtown",
+    "areas": [],
+    "region": "Southern Maryland",
+    "spec": null,
+    "evidence": {
+      "checked": "https://www.icsrvrepair.com/",
+      "phone_quote": "443-432-0323",
+      "coverage_quotes": [
+        "Rusty Helwig, the owner, started this company because he saw there was a need for a quality RV, Camper, Truck and Trailer maintenance in the Southern Maryland area."
+      ],
+      "type_quote": "Full service Maryland RV and camper maintenance and repair.",
+      "emergency_quote": null,
+      "roadside_quote": null,
+      "licence": null
+    },
+    "_assigned_from": "candidates-delmarva-2026-10-04.json"
+  },
+  {
+    "n": "Ken-Do's RV Repair Service",
+    "c": "Pocomoke City, MD",
+    "p": "410-957-2500",
+    "u": "https://www.kendosrv.com/",
+    "t": "both",
+    "e": false,
+    "r": false,
+    "d": "Ken-Do's RV Repair Service is a family-owned RV and camper repair, restoration and parts business at 513 Ocean Highway, Pocomoke City, Maryland. It works at its location or the customer's and describes itself as the leading RV roof and fiberglass delamination repair company for the Eastern Shore and surrounding area. With more than 50 years of experience, its certified tech crew handles anything from a lightbulb replacement to a full roof replacement, and it is certified with warranty and insurance companies.",
+    "g": [
+      "service center",
+      "body shop"
+    ],
+    "base": "Pocomoke City",
+    "areas": [],
+    "region": "the Eastern Shore",
+    "spec": null,
+    "evidence": {
+      "checked": "https://www.kendosrv.com/",
+      "phone_quote": "410-957-2500",
+      "coverage_quotes": [
+        "We are the leading RV roof and fiberglass delamination repair company for the Eastern Shore and surrounding area."
+      ],
+      "type_quote": "Ken-Do's RV Repair Service is your friendly one-stop shop for any RV and camper maintenance, repairs, restoration and parts at their location or yours.",
+      "emergency_quote": null,
+      "roadside_quote": null,
+      "licence": null
+    },
+    "_assigned_from": "candidates-delmarva-2026-10-04.json"
+  },
+  {
+    "n": "Potomac Mobile RV Services LLC",
+    "c": "La Plata, MD",
+    "p": "(301) 246-2082",
+    "u": "https://www.potomacmobilerv.com/",
+    "t": "mobile",
+    "e": false,
+    "r": false,
+    "d": "Potomac Mobile RV Services LLC is a mobile RV repair and maintenance business based in La Plata, Maryland. Its mobile RV technicians come to the customer instead of the customer bringing the RV to a service centre. Its service menu includes annual RV check-ups, AC/DC electrical system service, jacks and leveling systems, refrigerator service, air conditioner service, exterior service, LPG and propane systems, roof inspection, water heaters, batteries, furnaces and plumbing systems. It states its technicians are certified and that pricing is honest with no hidden fees.",
+    "g": [
+      "mobile tech"
+    ],
+    "base": "La Plata",
+    "areas": [],
+    "region": null,
+    "spec": null,
+    "evidence": {
+      "checked": "https://www.potomacmobilerv.com/",
+      "phone_quote": "(301) 246-2082",
+      "coverage_quotes": [
+        "Instead of bringing your RV to a service center, we bring the service to you—whether you’re at home, a campground, or another location."
+      ],
+      "type_quote": "Potomac Mobile RV Services specializes in providing convenient mobile repair and maintenance solutions for recreational vehicles.",
+      "emergency_quote": null,
+      "roadside_quote": null,
+      "licence": null
+    },
+    "_assigned_from": "candidates-delmarva-2026-10-04.json"
+  },
+  {
+    "n": "Fixed It! Mobile RV Services LLC",
+    "c": "Frederick, MD",
+    "p": "301-471-2254",
+    "u": "https://fixeditrv.com/",
+    "t": "mobile",
+    "e": true,
+    "r": false,
+    "d": "Fixed It! Mobile RV Services LLC is a mobile RV repair business owned and managed by lead repair technician Matt Young, serving Frederick, Maryland and the surrounding area within a 35-mile radius. It specializes in repairing most housing components for campers and RVs, including HVAC, plumbing, electrical, furnace, propane, roof, awning, slide out, lighting and appliances. It also provides winterization, de-winterization and general maintenance, and it is licensed and insured. It offers 24/7 emergency services and is on call on major holidays.",
+    "g": [
+      "mobile tech"
+    ],
+    "base": "Frederick",
+    "areas": [
+      "Frederick"
+    ],
+    "region": null,
+    "spec": null,
+    "evidence": {
+      "checked": "https://fixeditrv.com/",
+      "phone_quote": "301-471-2254",
+      "coverage_quotes": [
+        "Proudly serving Frederick, Maryland and the surrounding area."
+      ],
+      "type_quote": "Welcome to Fixed It! Mobile RV Services! We specialize in repairing most housing components for campers & RVs.",
+      "emergency_quote": "Call 24/7 for Emergency Services",
+      "roadside_quote": null,
+      "licence": null
+    },
+    "_assigned_from": "candidates-delmarva-2026-10-04.json"
+  },
+  {
+    "n": "Wayfare Mobile RV Repair",
+    "c": "Harford County, MD",
+    "p": "(443) 222-1141",
+    "u": "https://wayfaremobile.com/",
+    "t": "mobile",
+    "e": false,
+    "r": false,
+    "d": "Wayfare Mobile RV Repair provides on-site RV diagnostics, repair and maintenance throughout Harford County, Maryland, coming to the RV at a home, campground, storage lot or job site. It diagnoses and repairs common RV problems including roof leaks, electrical issues, water heaters, furnaces, air conditioners and plumbing systems. It uses flat-rate pricing for most diagnostic, maintenance and repair services, with a written quote showing what the flat rate includes. Its normal hours are Monday to Friday, 9:00 AM to 5:00 PM, and the phone is not monitored after 5:00 PM on weekdays or on weekends.",
+    "g": [
+      "mobile tech"
+    ],
+    "base": null,
+    "areas": [
+      "Bel Air",
+      "Aberdeen",
+      "Havre de Grace",
+      "Fallston",
+      "Forest Hill",
+      "Jarrettsville",
+      "Edgewood",
+      "Abingdon",
+      "Churchville"
+    ],
+    "region": "Harford County",
+    "spec": "Phone is not monitored After 5:00pm on weekdays On weekends or Major Holidays",
+    "evidence": {
+      "checked": "https://wayfaremobile.com/",
+      "phone_quote": "(443) 222-1141",
+      "coverage_quotes": [
+        "We serve RV owners throughout Harford County including: Bel Air • Aberdeen • Havre de Grace • Fallston • Forest Hill • Jarrettsville • Edgewood • Abingdon • Churchville, and more."
+      ],
+      "type_quote": "Wayfare Mobile RV Repair provides professional on-site RV diagnostics, repair, and maintenance throughout Harford County, Maryland.",
+      "emergency_quote": null,
+      "roadside_quote": null,
+      "licence": null
+    },
+    "_assigned_from": "candidates-delmarva-2026-10-04.json"
+  },
+  {
+    "n": "On the Spot RV Service",
+    "c": "Maryland",
+    "p": "(301) 710-7366",
+    "u": "https://onthespotrvservice.com/",
+    "t": "mobile",
+    "e": false,
+    "r": false,
+    "d": "On the Spot RV Service is a mobile RV repair business whose tagline is Service where you need it. It comes to the customer with mobile RV repair and services all makes and models. It offers mobile RV service to the Maryland, Delaware and Southern Pennsylvania areas. It advises customers to contact their manufacturer for warranty repair options.",
+    "g": [
+      "mobile tech"
+    ],
+    "base": null,
+    "areas": [],
+    "region": "Maryland, Delaware and Southern Pennsylvania",
+    "spec": null,
+    "evidence": {
+      "checked": "https://onthespotrvservice.com/",
+      "phone_quote": "(301) 710-7366",
+      "coverage_quotes": [
+        "On the Spot RV offers mobile RV service to the Maryland, Delaware and Southern Pennsylvania areas."
+      ],
+      "type_quote": "With our mobile RV repair, we'll come to you! Trust us with all your RV repair service needs.",
+      "emergency_quote": null,
+      "roadside_quote": null,
+      "licence": null
+    },
+    "_assigned_from": "candidates-delmarva-2026-10-04.json"
+  },
+  {
+    "n": "Avenue Mobile Services",
+    "c": "Avenue, MD",
+    "p": "301-768-4511",
+    "u": "https://amsrvrepair.com/",
+    "t": "mobile",
+    "e": false,
+    "r": false,
+    "d": "Avenue Mobile Services is a family-owned and operated RV and camper maintenance and repair business in St. Mary's County, Maryland. It offers on-site service within its service area and describes itself as a one-stop shop for RV maintenance needs, using state-of-the-art tools and equipment. It handles RV or camper service and repairs including air conditioning, water heating and leaks, and has experience with most makes and models. It serves Maryland, Virginia and Washington DC.",
+    "g": [
+      "mobile tech"
+    ],
+    "base": "Avenue",
+    "areas": [],
+    "region": "Maryland, Virginia, and Washington DC",
+    "spec": null,
+    "evidence": {
+      "checked": "https://amsrvrepair.com/",
+      "phone_quote": "301-768-4511",
+      "coverage_quotes": [
+        "Avenue Mobile Services is proud to serve its community of friends and neighbors throughout Maryland, Virginia, and Washington DC."
+      ],
+      "type_quote": "Avenue Mobile Services is your premier maintenance expert for your recreational vehicle.",
+      "emergency_quote": null,
+      "roadside_quote": null,
+      "licence": null
+    },
+    "_assigned_from": "candidates-delmarva-2026-10-04.json"
+  },
+  {
+    "n": "RV Repair Solutions, LLC",
+    "c": "Aberdeen, MD",
+    "p": "(443) 316-0028",
+    "u": "http://www.rvrepairsolutionsllc.com/",
+    "t": "mobile",
+    "e": true,
+    "r": false,
+    "d": "RV Repair Solutions, LLC is a locally owned RV and van repair business in Aberdeen, Maryland, founded in 2024. It offers mobile repair so it can come to the customer or transport the RV if necessary, and provides comprehensive repair and maintenance from routine check-ups to major repairs. Its listed specialties include water heaters, plumbing, air conditioners and heat pumps, furnaces, van life solutions and RV and van solar services. It offers free estimates, a 10% discount, price matching and emergency services.",
+    "g": [
+      "mobile tech"
+    ],
+    "base": "Aberdeen",
+    "areas": [
+      "Aberdeen"
+    ],
+    "region": "Maryland",
+    "spec": null,
+    "evidence": {
+      "checked": "http://www.rvrepairsolutionsllc.com/",
+      "phone_quote": "(443) 316-0028",
+      "coverage_quotes": [
+        "Located in Aberdeen, MD, and serving various areas throughout Maryland, we offer a comprehensive range of repair and maintenance services tailored to meet the unique needs of RV owners."
+      ],
+      "type_quote": "Located in Aberdeen, MD, RV Repair Solutions, LLC specializes in RV and van maintenance and repair services.",
+      "emergency_quote": "Emergency Services Available",
+      "roadside_quote": null,
+      "licence": null
+    },
+    "_assigned_from": "candidates-delmarva-2026-10-04.json"
+  },
+  {
+    "n": "Glenn's Camper & RV Service",
+    "c": "Port Deposit, MD",
+    "p": "410-378-5556",
+    "u": "https://www.glennscamper.com/",
+    "t": "center",
+    "e": false,
+    "r": false,
+    "d": "Glenn's Camper & RV Service is a locally veteran-owned Camper and RV maintenance and repair business at 100 Waibel Road, Port Deposit, Maryland, off I-95 exit 93. It is a collision repair specialist that works with all insurance companies and handles accident and collision repairs including frame repairs and laser axle alignment, with carpentry, fabrication, welding, plumbing and electrical shops on site. Its service list also covers air conditioning, generators, solar, water heaters, slide-outs, roofs, brakes and suspension. It states it does not offer mobile RV service and does not perform engine, transmission or chassis repairs.",
+    "g": [
+      "service center",
+      "body shop"
+    ],
+    "base": "Port Deposit",
+    "areas": [],
+    "region": "Maryland & Delaware",
+    "spec": "We do not offer mobile RV service. We do not perform engine, transmission or chassis repairs.",
+    "evidence": {
+      "checked": "https://www.glennscamper.com/",
+      "phone_quote": "410-378-5556",
+      "coverage_quotes": [
+        "Weve been serving as one of the trusted shops for Camper & RV repairs in Maryland & Delaware."
+      ],
+      "type_quote": "Glenns Camper & RV Service is a locally veteran owned and operated business. Offering complete Camper & RV maintenance and repair services in Port Deposit Maryland.",
+      "emergency_quote": null,
+      "roadside_quote": null,
+      "licence": null
+    },
+    "_assigned_from": "candidates-delmarva-2026-10-04.json"
+  },
+  {
+    "n": "Ray's Body Works, Inc.",
+    "c": "Joppa, MD",
+    "p": "410-679-2442",
+    "u": "https://www.raysbodyworks.com/about_rays_body_works.html",
+    "t": "center",
+    "e": false,
+    "r": false,
+    "d": "Ray's Body Works, Inc. is a collision repair facility at 1113 S. Mountain Rd. in Joppa, Maryland, in Harford County, in business since 1990. It performs quality collision and mechanical repairs to late model automobiles, commercial vehicles and RVs, and can repair any size recreational vehicle from pop-up and travel trailers and fifth wheels to Class A, B and C motor homes and luxury coaches. It specializes in insurance collision repairs, handles factory warranty repairs and offers free written estimates. Its shop has a 40-foot semi downdraft paint booth and a computerized paint spectrometer.",
+    "g": [
+      "body shop"
+    ],
+    "base": "Joppa",
+    "areas": [],
+    "region": "Harford County",
+    "spec": null,
+    "evidence": {
+      "checked": "https://www.raysbodyworks.com/about_rays_body_works.html",
+      "phone_quote": "410-679-2442",
+      "coverage_quotes": [],
+      "type_quote": "The main objective at Ray's Body Work's Inc is to perform Quality Collision and Mechanical repairs to late model automobiles, commercial vehicles and R.V.'s with a guarantee for life, to the original owner",
+      "emergency_quote": null,
+      "roadside_quote": null,
+      "licence": null
+    },
+    "_assigned_from": "candidates-delmarva-2026-10-04.json"
+  },
+  {
+    "n": "Chesaco RV",
+    "c": "Joppa, MD",
+    "p": "(410) 679-0000",
+    "u": "https://www.chesacorv.com/locations/joppa",
+    "t": "center",
+    "e": false,
+    "r": false,
+    "d": "Chesaco RV is a family-owned RV dealer at 911 Pulaski Hwy, Joppa, Maryland, with additional Maryland locations in Frederick and Gambrills. Its service departments handle RV repairs, winterization, roof repairs, interior renovations, plumbing, HVAC, electrical, collision repairs, painting and accessory installation. It is factory-authorized to service nearly 50 RV brands including Jayco, Forest River, Coachmen and Winnebago, and works with all major insurance companies. Its parts and service departments are open Monday to Friday from 8:30 AM to 5:00 PM.",
+    "g": [
+      "service center",
+      "body shop"
+    ],
+    "base": "Joppa",
+    "areas": [
+      "Joppa",
+      "Frederick",
+      "Gambrills"
+    ],
+    "region": null,
+    "spec": null,
+    "evidence": {
+      "checked": "https://www.chesacorv.com/locations/joppa",
+      "phone_quote": "(410) 679-0000",
+      "coverage_quotes": [
+        "911 Pulaski Hwy Joppa, MD 21085"
+      ],
+      "type_quote": "New & Used RV Dealership in Joppa, MD",
+      "emergency_quote": null,
+      "roadside_quote": null,
+      "licence": null
+    },
+    "_assigned_from": "candidates-delmarva-2026-10-04.json"
+  },
+  {
+    "n": "Beckley's RVs",
+    "c": "Thurmont, MD",
+    "p": "800-424-2267",
+    "u": "https://www.beckleysrvs.com/rv-service",
+    "t": "center",
+    "e": false,
+    "r": false,
+    "d": "Beckley's RVs is an RV dealer with a service department at 11110 Angleberger Rd, Thurmont, Maryland, and a second location in New Oxford, Pennsylvania. Its service team handles routine maintenance and inspections, appliance repairs, roof care, electrical diagnostics, plumbing, hitch installations and seasonal winterization. It performs warranty work on the RV brands it sells and welcomes out-of-warranty service for all makes and models. Its service options also include RV prep, reconstructive bodywork, automotive repair, specialised accessory installation and RV customisation. Its Maryland service department hours are Monday to Friday 9am to 7pm and Saturday 9am to 12pm.",
+    "g": [
+      "service center",
+      "body shop"
+    ],
+    "base": "Thurmont",
+    "areas": [
+      "Thurmont",
+      "Frederick"
+    ],
+    "region": "Maryland & Pennsylvania",
+    "spec": null,
+    "evidence": {
+      "checked": "https://www.beckleysrvs.com/rv-service",
+      "phone_quote": "800-424-2267",
+      "coverage_quotes": [],
+      "type_quote": "Whether you're preparing for your next camping trip or maintaining your RV between adventures, Beckley's RVs provides professional service, repairs, and maintenance to help keep you on the road.",
+      "emergency_quote": null,
+      "roadside_quote": null,
+      "licence": null
+    },
+    "_assigned_from": "candidates-delmarva-2026-10-04.json"
+  }
+]

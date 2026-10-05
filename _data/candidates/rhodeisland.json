@@ -1,0 +1,61 @@
+[
+  {
+    "n": "Matt's Mobile RV Repair",
+    "c": "Rhode Island, RI",
+    "p": "401-443-6184",
+    "u": "https://mattsmobilervrepair.com/",
+    "t": "mobile",
+    "e": false,
+    "r": false,
+    "d": "Matt's Mobile RV Repair is a certified and registered RV mechanic offering mobile RV repairs for all makes and models in Rhode Island, Eastern Connecticut and Southern Massachusetts. Repairs include electrical, plumbing, appliances, roofing, exteriors and air conditioning, and it also handles leveling jacks, emergency slideout repairs, battery replacements, doors and windows. The site states it is closed for the season and will reopen in June of 2026.",
+    "g": [
+      "mobile tech"
+    ],
+    "base": null,
+    "areas": [],
+    "region": "Rhode Island, Eastern Connecticut, and Southern Massachusetts",
+    "spec": "Closed for the season. Will Re-open in June of 2026",
+    "evidence": {
+      "checked": "https://mattsmobilervrepair.com/",
+      "phone_quote": "401-443-6184",
+      "coverage_quotes": [
+        "Matt's Mobile RV Repair offers certified and registered RV mechanic services in Rhode Island, Eastern Connecticut, and Southern Massachusetts."
+      ],
+      "type_quote": "Certified and registered RV mechanic offering RV Repairs for all Makes and Models.",
+      "emergency_quote": null,
+      "roadside_quote": null,
+      "licence": null
+    },
+    "_assigned_from": "candidates-newengland-2026-10-04.json"
+  },
+  {
+    "n": "Can Do RV Rescue, LLC",
+    "c": "Portsmouth, RI",
+    "p": "1(888) 694-8182",
+    "u": "https://candorvrescue.com/",
+    "t": "mobile",
+    "e": true,
+    "r": false,
+    "d": "Can Do RV Rescue, LLC is a mobile RV repair company based in Portsmouth, Rhode Island, run by U.S. Navy Seabees veterans who are RVTAA Advanced Certified Technicians and NRVIA Advanced Certified Inspectors. It offers a wide range of RV repairs on most systems, including air conditioner, furnace and refrigerator maintenance and repair, plumbing, electrical and awnings, plus inspection services for those planning to purchase an RV. It is available 24 hours for emergency service calls.",
+    "g": [
+      "mobile tech",
+      "emergency"
+    ],
+    "base": "Portsmouth",
+    "areas": [],
+    "region": null,
+    "spec": null,
+    "evidence": {
+      "checked": "https://candorvrescue.com/",
+      "phone_quote": "1(888) 694-8182",
+      "coverage_quotes": [
+        "We offer a wide range of RV repairs on most systems."
+      ],
+      "type_quote": "At Can Do RV Rescue, LLC, we are driven to provide fair pricing, timely and thorough maintenance and repair services you need, when and where you need them.",
+      "emergency_quote": "Available 24 hours for emergency service calls",
+      "roadside_quote": null,
+      "licence": null
+    },
+    "_assigned_from": "candidates-newengland-2026-10-04.json"
+  }
+]

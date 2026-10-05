@@ -1,0 +1,428 @@
+[
+  {
+    "n": "NYCRV",
+    "c": "Brooklyn, NY",
+    "p": "(347) 549-9877",
+    "u": "https://nycrv.com/",
+    "t": "mobile",
+    "e": true,
+    "r": false,
+    "d": "NYCRV is a mobile RV repair service based in Brooklyn with no shop that comes to you. It services New York City, Nassau and part of Suffolk counties, doing RV appliance repair, electrical troubleshooting and upgrades of 12V and 120V components, and plumbing repairs. It offers same-day (4-hour) or next day (24-hour) emergency service and specializes in custom solar power solutions for RVs. It does not work on engine or auto mechanics, generators, body work, windows or glass, awnings, full roof replacements, slide rooms, or leveler systems and hydraulics.",
+    "g": [
+      "mobile tech",
+      "emergency"
+    ],
+    "base": null,
+    "areas": [],
+    "region": "New York City",
+    "spec": "Does not work on engine or auto mechanics, generators, body work, windows or glass, awnings, full roof replacements, slide rooms, or leveler systems and hydraulics.",
+    "evidence": {
+      "checked": "https://nycrv.com/",
+      "phone_quote": "(347) 549-9877",
+      "coverage_quotes": [
+        "We service New York City, Nassau and part of Suffolk counties."
+      ],
+      "type_quote": "We're a Mobile Service. There's no shop. We come to you.",
+      "emergency_quote": "Emergency Service We offer same-day (4-hour) or next day (24 hours) emergency service.",
+      "roadside_quote": null,
+      "licence": null
+    },
+    "reg": "new-york-city-ny"
+  },
+  {
+    "n": "Linny's Mobile RV Repair",
+    "c": "Lake George, NY",
+    "p": "518-538-3674",
+    "u": "https://www.linnysmobilerv.com/",
+    "t": "mobile",
+    "e": false,
+    "r": false,
+    "d": "Linny's Mobile RV Repair is a family-owned mobile RV repair service that comes to your campground, driveway, or RV park. It offers A/C cleaning, repairs and full replacements, refrigerator, furnace and water heater service, and awning, slide topper and slide system repairs. It also does electrical and battery system diagnostics and general RV maintenance and troubleshooting. It is based in Lake George and books the 2026 season from May.",
+    "g": [
+      "mobile tech"
+    ],
+    "base": "Lake George",
+    "areas": [
+      "Lake George"
+    ],
+    "region": null,
+    "spec": "No towing.",
+    "evidence": {
+      "checked": "https://www.linnysmobilerv.com/",
+      "phone_quote": "518-538-3674",
+      "coverage_quotes": [
+        "Now booking Lake George, NY",
+        "Linny’s Mobile RV Repair comes directly to you"
+      ],
+      "type_quote": "Fast, reliable RV repair at your location",
+      "emergency_quote": null,
+      "roadside_quote": null,
+      "licence": null
+    }
+  },
+  {
+    "n": "That RV Guy Craig",
+    "c": "Lake George, NY",
+    "p": "903-681-4718",
+    "u": "https://thatrvguycraig.com/",
+    "t": "mobile",
+    "e": false,
+    "r": false,
+    "d": "That RV Guy Craig is a mobile RV repair service run by Craig Cobb, an RVDA / RVIA certified mobile RV tech with more than 15 years of RV repair experience. He comes directly to your campground, seasonal site, home, or storage location, and diagnoses and repairs RV air conditioners, furnaces, water heaters, refrigerators, electrical systems, plumbing, awnings, slide-outs and appliances. He is based in Lake George and works within a 25 mile radius, including Queensbury, Glens Falls and Warrensburg. He is mobile only and does not work on generators, anything under the hood, tires or wheels, black tanks, windshields, suspension, or oil changes.",
+    "g": [
+      "mobile tech"
+    ],
+    "base": "Lake George",
+    "areas": [
+      "Lake George",
+      "Queensbury",
+      "Glens Falls",
+      "Warrensburg"
+    ],
+    "region": "Adirondack",
+    "spec": "Mobile only; does not work on generators, anything under the hood (motorhomes), tires/wheels, black tanks, windshields, suspension, or oil changes.",
+    "evidence": {
+      "checked": "https://thatrvguycraig.com/",
+      "phone_quote": "903-681-4718",
+      "coverage_quotes": [
+        "I am based in Lake George, New York and provide mobile RV repair within a 25 mile radius throughout the surrounding area, including Queensbury, Glens Falls, Warrensburg, and other nearby Adirondack communities."
+      ],
+      "type_quote": "Yes! That RV Guy Craig is a mobile RV repair service, which means I come directly to your RV at your campground, seasonal site, or home.",
+      "emergency_quote": null,
+      "roadside_quote": null,
+      "licence": null
+    }
+  },
+  {
+    "n": "518 Mobile RV Repair",
+    "c": "North Country, NY",
+    "p": "(518) 420-7358",
+    "u": "https://www.518mobilervrepair.com/",
+    "t": "mobile",
+    "e": false,
+    "r": false,
+    "d": "518 Mobile RV Repair is a mobile RV repair business serving the North Country. Its technicians diagnose and repair RV appliances, heating and air conditioning, hot water heaters and slide outs, and service 12V and 120V electrical and plumbing. It also handles roof repairs and body sealing, awnings and slide toppers, spring opening, winterizing and Aqua-Hot service. Hours are Monday to Friday 8:00am to 5:00pm.",
+    "g": [
+      "mobile tech"
+    ],
+    "base": null,
+    "areas": [],
+    "region": "North Country",
+    "spec": null,
+    "evidence": {
+      "checked": "https://www.518mobilervrepair.com/",
+      "phone_quote": "(518) 420-7358",
+      "coverage_quotes": [
+        "delivering outstanding repair services to the people of the North Country",
+        "As a leading Mobile RV Repair business in the North Country"
+      ],
+      "type_quote": "We started our Mobile RV Repair business",
+      "emergency_quote": null,
+      "roadside_quote": null,
+      "licence": null
+    },
+    "reg": "north-country-ny"
+  },
+  {
+    "n": "RV Care Mobile Repair",
+    "c": "Port Crane, NY",
+    "p": "607-349-3486",
+    "u": "https://rvcaremobilerepair.com/",
+    "t": "mobile",
+    "e": false,
+    "r": false,
+    "d": "RV Care Mobile Repair is a family-owned mobile RV repair business based in Port Crane. Jason started in the RV industry in Denver teaching new owners how each system worked, went to a technical school for RV repair and roof replacement in 2015, and after ten years on the road settled back home in Port Crane. The business works at the customer's pace to teach each step of RV ownership and lets customers source their own parts.",
+    "g": [
+      "mobile tech"
+    ],
+    "base": "Port Crane",
+    "areas": [
+      "Port Crane"
+    ],
+    "region": null,
+    "spec": null,
+    "evidence": {
+      "checked": "https://rvcaremobilerepair.com/",
+      "phone_quote": "607-349-3486",
+      "coverage_quotes": [
+        "RV Care Mobile Repair settled back home in Port Crane"
+      ],
+      "type_quote": "RV Care mobile Repair is a family-owned mobile RV repair business built on experience.",
+      "emergency_quote": null,
+      "roadside_quote": null,
+      "licence": null
+    }
+  },
+  {
+    "n": "RV There Yet Mobile Camper Repair",
+    "c": "Sullivan County, NY",
+    "p": "(845) 239-9746",
+    "u": "https://www.rvthereyetmobilecamperrepair.com/",
+    "t": "mobile",
+    "e": false,
+    "r": false,
+    "d": "RV There Yet Mobile Camper Repair is a mobile camper and RV repair service that comes to you. It serves the greater Sullivan County area and will also go to Orange and Ulster Counties, and travels outside those areas for added fees. It services RV air conditioner units and water heaters, performs winterization, and does general repair of appliances like refrigerators and furnaces, plus broken slides, slide motors and landing gear.",
+    "g": [
+      "mobile tech"
+    ],
+    "base": null,
+    "areas": [],
+    "region": "greater Sullivan County",
+    "spec": null,
+    "evidence": {
+      "checked": "https://www.rvthereyetmobilecamperrepair.com/",
+      "phone_quote": "(845) 239-9746",
+      "coverage_quotes": [
+        "We service the greater Sullivan County NY area and also will go to Orange and Ulster Counties."
+      ],
+      "type_quote": "We are a mobile camper and RV repair service. We come to you!",
+      "emergency_quote": null,
+      "roadside_quote": null,
+      "licence": null
+    },
+    "reg": "hudson-valley-ny"
+  },
+  {
+    "n": "River Mobile RV Repair",
+    "c": "Glen Spey, NY",
+    "p": "(845) 807- 3443",
+    "u": "https://www.riverrvrepair.com/",
+    "t": "mobile",
+    "e": true,
+    "r": false,
+    "d": "River Mobile RV Repair is a mobile RV service and repair business based along the Delaware River where the tri-states meet. Its technician comes to your home, on the road, or at a campsite, and handles RV emergency services, repairs and maintenance including AC, heat, hot water, slides and wiring. It is certified at the National Recreational Vehicle Training Academy and offers 24 hour emergency services.",
+    "g": [
+      "mobile tech",
+      "emergency"
+    ],
+    "base": "Glen Spey",
+    "areas": [
+      "Glen Spey"
+    ],
+    "region": "Along The Delaware, Where NY, NJ & PA Meet",
+    "spec": null,
+    "evidence": {
+      "checked": "https://www.riverrvrepair.com/contact",
+      "phone_quote": "(845) 807- 3443",
+      "coverage_quotes": [],
+      "type_quote": "Contact Info",
+      "emergency_quote": "24 Hour Emergency Services",
+      "roadside_quote": null,
+      "licence": null
+    }
+  },
+  {
+    "n": "Capital Area RV LLC",
+    "c": "Upstate New York",
+    "p": "518-698-5329",
+    "u": "https://capitalarearv.com/",
+    "t": "mobile",
+    "e": false,
+    "r": false,
+    "d": "Capital Area RV LLC is a mobile RV repair business serving Upstate New York and Southern Vermont. Owned and operated by a certified RV technician, it diagnoses and repairs RV issues on-site. Services include appliance repair, heating and A/C service, awning replacement, ceiling and roof repair, roof vent replacement, plumbing repair, and routine maintenance.",
+    "g": [
+      "mobile tech"
+    ],
+    "base": null,
+    "areas": [],
+    "region": "Upstate New York",
+    "spec": null,
+    "evidence": {
+      "checked": "https://capitalarearv.com/",
+      "phone_quote": "518-698-5329",
+      "coverage_quotes": [
+        "Serving Upstate New York",
+        "& Southern Vermont"
+      ],
+      "type_quote": "Our certified RV technician can diagnose & repair your RV issue on-site",
+      "emergency_quote": null,
+      "roadside_quote": null,
+      "licence": null
+    },
+    "reg": "hudson-valley-ny"
+  },
+  {
+    "n": "DPOC Repair",
+    "c": "Western New York",
+    "p": "(716) 339-7374",
+    "u": "https://dpocrepair.com/",
+    "t": "mobile",
+    "e": false,
+    "r": false,
+    "d": "DPOC Repair is an expert mobile RV repair service working across all of Western New York, founded in 2022. It offers repair, customization, warranty and insurance work and keeps a full stock of new parts and a rotating stock of used parts for older units. It has been a trusted service and RV parts supplier in several local campgrounds.",
+    "g": [
+      "mobile tech"
+    ],
+    "base": null,
+    "areas": [],
+    "region": "Western New York",
+    "spec": null,
+    "evidence": {
+      "checked": "https://dpocrepair.com/",
+      "phone_quote": "(716) 339-7374",
+      "coverage_quotes": [
+        "Service across all of Western New York"
+      ],
+      "type_quote": "Expert Mobile RV Repair Services",
+      "emergency_quote": null,
+      "roadside_quote": null,
+      "licence": null
+    },
+    "reg": "western-ny"
+  },
+  {
+    "n": "Jeff's RV Service",
+    "c": "Waverly, NY",
+    "p": "(607) 565-4590",
+    "u": "https://jeffsrvservice.com/",
+    "t": "both",
+    "e": false,
+    "r": false,
+    "d": "Jeff's RV Service is an RV repair, sales and parts business in Waverly. Its mobile service came first and it provides mobile service 50 miles in any direction from Waverly, NY, with a shop you can also visit. Its technicians have more than 35 years of experience in the industry and it aims for quick response and on-time delivery.",
+    "g": [
+      "service center",
+      "mobile tech"
+    ],
+    "base": "Waverly",
+    "areas": [
+      "Waverly"
+    ],
+    "region": null,
+    "spec": null,
+    "evidence": {
+      "checked": "https://jeffsrvservice.com/",
+      "phone_quote": "(607) 565-4590",
+      "coverage_quotes": [
+        "We provide mobile service 50 miles in any direction from Waverly, NY.",
+        "119 William Donnelly Industrial Pkwy Waverly, NY 14892"
+      ],
+      "type_quote": "Our mobile service came first because of the customers great need for it.",
+      "emergency_quote": null,
+      "roadside_quote": null,
+      "licence": null
+    }
+  },
+  {
+    "n": "Right There RV Repair",
+    "c": "Upstate New York",
+    "p": "607-244-1989",
+    "u": "https://www.rightthererv.com/",
+    "t": "mobile",
+    "e": false,
+    "r": false,
+    "d": "Right There RV Repair provides mobile RV repair and maintenance delivered directly to your RV in Upstate New York. With over 20 years of hands-on repair and maintenance experience, Kory is NRVTA-trained, RVTAA certified and fully insured. It comes to you so there is no need for towing, and repairs your RV where it sits.",
+    "g": [
+      "mobile tech"
+    ],
+    "base": null,
+    "areas": [],
+    "region": "Upstate NY",
+    "spec": "No need for towing.",
+    "evidence": {
+      "checked": "https://www.rightthererv.com/",
+      "phone_quote": "607-244-1989",
+      "coverage_quotes": [
+        "No need for towing-- we come to you!"
+      ],
+      "type_quote": "Professional mobile RV repair and maintenance delivered directly to your RV",
+      "emergency_quote": null,
+      "roadside_quote": null,
+      "licence": null
+    },
+    "reg": "north-country-ny"
+  },
+  {
+    "n": "RV Unlimited",
+    "c": "Buffalo, NY",
+    "p": "716-218-4033",
+    "u": "https://www.rv-unlimited.com/services-rv-repairs/rv-generator-repair-buffalo-ny/",
+    "t": "both",
+    "e": false,
+    "r": false,
+    "d": "RV Unlimited does mobile Onan and Cummins generator repair across Buffalo and surrounding areas. It offers two options, sending a mobile technician to your location or having you bring the generator or coach to its Buffalo shop. A fully stocked service van comes to your driveway, storage lot, or campsite, and most diagnostics and repairs are handled on-site with no towing and no shop queue. It is based in Buffalo and rolls across Erie and Niagara County and the surrounding communities.",
+    "g": [
+      "mobile tech",
+      "generator"
+    ],
+    "base": "Buffalo",
+    "areas": [
+      "Buffalo",
+      "Tonawanda"
+    ],
+    "region": "Western New York",
+    "spec": null,
+    "evidence": {
+      "checked": "https://www.rv-unlimited.com/services-rv-repairs/rv-generator-repair-buffalo-ny/",
+      "phone_quote": "716-218-4033",
+      "coverage_quotes": [
+        "Based in Buffalo, rolling across Erie & Niagara County and the surrounding communities."
+      ],
+      "type_quote": "Mobile Onan & Cummins generator repair across Buffalo & surrounding areas.",
+      "emergency_quote": null,
+      "roadside_quote": null,
+      "licence": null
+    }
+  },
+  {
+    "n": "Plattsburgh Trailer Sales",
+    "c": "Plattsburgh, NY",
+    "p": "518-563-1983",
+    "u": "https://www.plattsburghrvstore.com/rv-service",
+    "t": "center",
+    "e": false,
+    "r": false,
+    "d": "Plattsburgh Trailer Sales runs an RV Service Center in Plattsburgh. Its service department handles inspection and safety, maintenance, and roof, seal and structural work, plus detailing and accessory installation. Listed work includes advanced roof inspection with moisture readings, wheel bearing repack, de-winterization, furnace, water heater and refrigerator service, LP gas pressure testing and slide-out inspection.",
+    "g": [
+      "service center"
+    ],
+    "base": "Plattsburgh",
+    "areas": [
+      "Plattsburgh"
+    ],
+    "region": null,
+    "spec": null,
+    "evidence": {
+      "checked": "https://www.plattsburghrvstore.com/rv-service",
+      "phone_quote": "518-563-1983",
+      "coverage_quotes": [
+        "240 Tom Miller Rd. Plattsburgh, NY 12901"
+      ],
+      "type_quote": "RV Service Center in New York",
+      "emergency_quote": null,
+      "roadside_quote": null,
+      "licence": null
+    }
+  },
+  {
+    "n": "Hudson Valley RV",
+    "c": "Kingston, NY",
+    "p": "(845) 532-0800",
+    "u": "https://hudsonvalleyrvrepairs.com/",
+    "t": "mobile",
+    "e": true,
+    "r": true,
+    "d": "Hudson Valley RV is a recreational vehicle repair business nestled in the heart of the Hudson Valley, based in Kingston. It offers appliance repair, plumbing, electrical, heating and A/C unit service, brakes, slide outs, awnings, satellite systems, leveling systems, roof repair and maintenance, all chassis issues, LP systems, emergency repairs and winterizations. It aims to resolve customer issues in a timely fashion with quality work at a fair price.",
+    "g": [
+      "mobile tech",
+      "chassis",
+      "emergency"
+    ],
+    "base": "Kingston",
+    "areas": [
+      "Kingston"
+    ],
+    "region": "Hudson Valley",
+    "spec": null,
+    "evidence": {
+      "checked": "https://hudsonvalleyrvrepairs.com/",
+      "phone_quote": "(845) 532-0800",
+      "coverage_quotes": [
+        "We are a recreational vehicle repair business nestled in the heart of the Hudson Valley."
+      ],
+      "type_quote": "We are a recreational vehicle repair business nestled in the heart of the Hudson Valley. We offer a wide variety of services to suit all your repair wants and needs.",
+      "emergency_quote": "*emergency repairs",
+      "roadside_quote": "*all chassis issues",
+      "licence": null
+    }
+  }
+]

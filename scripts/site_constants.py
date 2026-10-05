@@ -329,3 +329,39 @@ def pretty_urls_in_html(text):
         return m.group("pre") + pretty_url(head) + url[len(head):] + m.group("post")
 
     return _URL_SPOTS.sub(one, text)
+
+
+# ---------------------------------------------------------------- states, by name and code
+#
+# TWO SCRIPTS NEED THIS (2026-10-04): check-state-assignment.py, the gate that a listing belongs
+# to the state whose file it is in, and assign-candidates.py, which sorts region-level research
+# into per-state files before anything is merged. The first version had the table inline in the
+# gate; two copies of "which words mean Vermont" is exactly how one of them gets a state wrong.
+STATE_NAMES = {
+    "alabama": "AL", "alaska": "AK", "arizona": "AZ", "arkansas": "AR", "california": "CA",
+    "colorado": "CO", "connecticut": "CT", "delaware": "DE", "district of columbia": "DC",
+    "florida": "FL", "georgia": "GA", "hawaii": "HI", "idaho": "ID", "illinois": "IL",
+    "indiana": "IN", "iowa": "IA", "kansas": "KS", "kentucky": "KY", "louisiana": "LA",
+    "maine": "ME", "maryland": "MD", "massachusetts": "MA", "michigan": "MI",
+    "minnesota": "MN", "mississippi": "MS", "missouri": "MO", "montana": "MT",
+    "nebraska": "NE", "nevada": "NV", "new hampshire": "NH", "new jersey": "NJ",
+    "new mexico": "NM", "new york": "NY", "north carolina": "NC", "north dakota": "ND",
+    "ohio": "OH", "oklahoma": "OK", "oregon": "OR", "pennsylvania": "PA",
+    "rhode island": "RI", "south carolina": "SC", "south dakota": "SD", "tennessee": "TN",
+    "texas": "TX", "utah": "UT", "vermont": "VT", "virginia": "VA", "washington": "WA",
+    "west virginia": "WV", "wisconsin": "WI", "wyoming": "WY",
+}
+STATE_CODES = set(STATE_NAMES.values())
+# Longest first, so "west virginia" wins over "virginia" and "new york" over "york".
+_STATE_NAME_RE = re.compile(r"\b(" + "|".join(sorted(STATE_NAMES, key=len, reverse=True)) + r")\b")
+
+
+def codes_in(text):
+    """USPS codes the text names. Cheap and exact -- this is the signal that can fail a build."""
+    return set(re.findall(r"\b([A-Z]{2})\b", text or "")) & STATE_CODES
+
+
+def names_in(text):
+    """States the text names in words. Weaker: 'Idaho Springs' is a town in Colorado and
+    'Washington' is a county in Oregon, so a name on its own is reported, never fatal."""
+    return {STATE_NAMES[n] for n in _STATE_NAME_RE.findall((text or "").lower())}

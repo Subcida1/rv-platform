@@ -49,34 +49,12 @@ import site_constants as C  # noqa: E402
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "_data" / "listings"
 
-# Full names, because half the misfiled records named a state in words and never wrote a code
-# ("Upstate New York", "Southern New Jersey"). Codes alone would have passed all seven of them.
-NAMES = {
-    "alabama": "AL", "alaska": "AK", "arizona": "AZ", "arkansas": "AR", "california": "CA",
-    "colorado": "CO", "connecticut": "CT", "delaware": "DE", "district of columbia": "DC",
-    "florida": "FL", "georgia": "GA", "hawaii": "HI", "idaho": "ID", "illinois": "IL",
-    "indiana": "IN", "iowa": "IA", "kansas": "KS", "kentucky": "KY", "louisiana": "LA",
-    "maine": "ME", "maryland": "MD", "massachusetts": "MA", "michigan": "MI",
-    "minnesota": "MN", "mississippi": "MS", "missouri": "MO", "montana": "MT",
-    "nebraska": "NE", "nevada": "NV", "new hampshire": "NH", "new jersey": "NJ",
-    "new mexico": "NM", "new york": "NY", "north carolina": "NC", "north dakota": "ND",
-    "ohio": "OH", "oklahoma": "OK", "oregon": "OR", "pennsylvania": "PA",
-    "rhode island": "RI", "south carolina": "SC", "south dakota": "SD", "tennessee": "TN",
-    "texas": "TX", "utah": "UT", "vermont": "VT", "virginia": "VA", "washington": "WA",
-    "west virginia": "WV", "wisconsin": "WI", "wyoming": "WY",
-}
-CODES = set(NAMES.values())
-
-# Longest first, so "west virginia" wins over "virginia" and "new york" over "york".
-NAME_RE = re.compile(r"\b(" + "|".join(sorted(NAMES, key=len, reverse=True)) + r")\b")
-
-
-def codes_in(text):
-    return set(re.findall(r"\b([A-Z]{2})\b", text or "")) & CODES
-
-
-def names_in(text):
-    return {NAMES[n] for n in NAME_RE.findall((text or "").lower())}
+# The state table moved to site_constants.py on 2026-10-04, because assign-candidates.py needs
+# the same one: two copies of "which words mean Vermont" is how one of them gets a state wrong.
+NAMES = C.STATE_NAMES
+CODES = C.STATE_CODES
+codes_in = C.codes_in
+names_in = C.names_in
 
 
 def judge(records, own_code):
