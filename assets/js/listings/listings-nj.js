@@ -69,5 +69,53 @@ window.RV_LISTINGS_NJ = [
  {  "n": "Weldon Mobile RV Service",  "c": "NY-NJ-PA Tri-State Area",  "p": "(918) 649-7210",  "u": "https://weldonrvservice.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Weldon Mobile RV Service is a mobile RV repair business serving the NY-NJ-PA tri-state area. It charges an hourly rate plus a service fee that covers travel to your location inside of one hour drive, and offers a 90 day labor warranty. The site is new and is still being expanded.",  "g": [
    "mobile tech"
   ],  "base": null,  "areas": [],  "region": "NY-NJ-PA Tri-State Area",  "spec": null,  "reg": "central-jersey"
+ },
+ {  "n": "Bordonaro's RV Life Service & Repair",  "c": "Morris, Warren, Hunterdon, Sussex and Somerset counties, NJ",  "p": "347-633-4407",  "u": "https://bordonarosrvlife.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Bordonaro's RV Life Service & Repair is a mobile RV repair and maintenance business that travels to the customer and works on Class A and Class C motorhomes, Class B camping vans, fifth wheels, tow-behind trailers and pop-up campers. It handles appliances, plumbing, electrical, heating and cooling, doors, roof vents, winterising and de-winterising, roof seal inspection and maintenance, and pre-delivery inspections. It is an insured, family- and veteran-owned business whose service area covers parts of Morris, Warren, Hunterdon, Sussex and Somerset counties.",  "g": [
+   "mobile tech",
+   "winterizing",
+   "inspections"
+  ],  "base": null,  "areas": [],  "region": "Morris, Warren, Hunterdon, Sussex and Sommerset Counties",  "spec": null,  "reg": "north-jersey"
+ },
+ {  "n": "84 RV Rentals & Service",  "c": "Sussex and Sussex County, NJ",  "p": "(973) 875-4961",  "u": "https://www.84rv.com/rv-service/",  "t": "center",  "e": false,  "r": false,  "d": "84 RV Rentals & Service is an RV dealer, rental and service business in Sussex, New Jersey, whose service department repairs and maintains RVs regardless of where they were bought. It is an approved warranty service centre for Forest River, Thor and more than 30 other manufacturers and is authorised for Norcold and Dometic refrigerator recalls. Its RVDA-RVIA certified technicians pack wheel bearings, reseal and replace roofs, service propane systems, and repair slide-outs, hydraulic jacks and plumbing.",  "g": [
+   "rv service center",
+   "warranty",
+   "parts"
+  ],  "base": "sussex",  "areas": [],  "region": "Sussex County",  "spec": "Approved warranty service center for Forest River, Thor and over 30 manufacturers",  "reg": "north-jersey"
+ },
+ {  "n": "Hampton RV Trailer Sales & Service",  "c": "Newton and Sussex County, NJ",  "p": "(973) 300-0774",  "u": "https://www.hamptonrv.com/service/",  "t": "center",  "e": false,  "r": false,  "d": "Hampton RV Trailer Sales & Service is a trailer and RV sales and service business on Hampton House Road in Newton, New Jersey. Its service department works on roofs, appliances, slide-outs, awnings, bearings and roof leaks for trailers, campers and RVs, and does body work with more than 32 years in the auto body industry. It sells and services Diamond C, Maxx-D and Felling trailers and offers Fluid Film corrosion protection.",  "g": [
+   "rv service center",
+   "trailer",
+   "body shop"
+  ],  "base": "newton",  "areas": [],  "region": "Newton, NJ",  "spec": null,  "reg": "north-jersey"
+ },
+ {  "n": "Hayden's Service Center",  "c": "Sparta and Sussex County, NJ",  "p": "(973) 729-3938- Call or Text",  "u": "https://www.haydensservicecenter.com/motorhome-services",  "t": "center",  "e": false,  "r": true,  "d": "Hayden's Service Center is a motorhome and RV repair shop on Demarest Road in Sparta, New Jersey. It does engine diagnostics and engine repair and rebuild for gas and diesel motorhomes, transmission repair, complete chassis inspection and repair, suspension and steering repair, brake service, drivetrain and axle repair and cooling system service. It also performs oil changes, tyre rotations, radiator flushes and pre-trip checks.",  "g": [
+   "rv service center",
+   "chassis",
+   "engine"
+  ],  "base": null,  "areas": [],  "region": "Sparta, NJ",  "spec": null,  "reg": "north-jersey"
+ },
+ {  "n": "Gerber RV Truck & Bus",  "c": "Hackensack and Bergen County, NJ",  "p": "(201) 880-7124",  "u": "https://gerberrvtruckandbus.com/appliance",  "t": "center",  "e": false,  "r": true,  "d": "Gerber RV Truck & Bus is a family-owned RV, truck and bus repair business that has operated since 1973 at a 22,000-square-foot service centre on Burlews Court in Hackensack, New Jersey. It repairs RV appliances including Dometic and Norcold refrigerators, Atwood water heaters and Onan generators, and it works on Ford and Spartan chassis. It also does RV body and collision repair, roof repair and hitch and tow-bar installation.",  "g": [
+   "rv service center",
+   "appliances",
+   "body shop"
+  ],  "base": "hackensack",  "areas": [],  "region": "Hackensack, NJ",  "spec": null,  "reg": "north-jersey"
+ },
+ {  "n": "Country Classic Auto Body",  "c": "Wantage and Sussex County, NJ",  "p": "(973)-702-3333",  "u": "https://www.countryclassicautobody.com/",  "t": "center",  "e": false,  "r": true,  "d": "Country Classic Auto Body is a collision and RV repair centre on County Road 628 in Wantage, New Jersey, in business since 1981. It repairs all types of RV units from pop-up trailers to bus-style motorhomes, along with fire trucks, emergency service vehicles, DPW vehicles and buses. It operates a large-vehicle repair shop and is a registered New Jersey licensed truck repair facility.",  "g": [
+   "body shop",
+   "rv service center",
+   "collision"
+  ],  "base": null,  "areas": [],  "region": "Sussex County, NJ",  "spec": null,  "reg": "north-jersey"
+ },
+ {  "n": "Keep Them Rolling Trailer Repair",  "c": "Morris, Sussex, Warren and Hunterdon counties, NJ",  "p": "973-651-1045",  "u": "https://keepthemrollingtrailer.com/",  "t": "mobile",  "e": false,  "r": true,  "d": "Keep Them Rolling Trailer Repair is a mobile trailer repair business owned by Brad Smith that brings its service truck to the customer across Morris, Sussex, Warren and Hunterdon counties in New Jersey. It repairs brakes, wheel bearings, axles, suspension, electrical and lighting, frames and welding, hydraulics, doors and panels, wheels and tyres, and couplers and hitches. On campers and travel trailers it works on the running gear and chassis only, not the living space.",  "g": [
+   "mobile tech",
+   "trailer",
+   "roadside"
+  ],  "base": null,  "areas": [],  "region": "Morris County, NJ and Surrounding Areas",  "spec": null,  "reg": "north-jersey"
+ },
+ {  "n": "White Horse RV Center",  "c": "Williamstown and southern New Jersey, NJ",  "p": "856.262.1717",  "u": "https://www.whitehorserv.com/service",  "t": "center",  "e": false,  "r": true,  "d": "White Horse RV Center is an RV dealer with service departments in Williamstown and Galloway, New Jersey. Its Williamstown service department does complete roof replacements and repairs, exterior metal replacement, interior walls and ceilings, awnings and toppers, tow bars and wiring, fifth wheel hitches, winterisation, slide-out repairs, LP and electrical systems, and wheel bearings, axles and electric brakes. It provides factory-trained warranty service for brands including Jayco, Forest River and Coachmen.",  "g": [
+   "rv service center",
+   "warranty",
+   "parts"
+  ],  "base": "williamstown",  "areas": [],  "region": "NJ",  "spec": null,  "reg": "south-jersey"
  }
 ];

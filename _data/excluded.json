@@ -87,6 +87,26 @@
         "n": "Blue Mountain Mobile RV Services",
         "u": null,
         "why": "Walla Walla, Washington. RV-specific mobile but publishes no phone on its own site."
+      },
+      {
+        "n": "J & J Truck Repair and Parts",
+        "u": "https://jjtruckrepairandparts.com/",
+        "why": "Describes itself as 'a truck and RV repair shop' and tags itself a truck shop. A truck business that also takes RVs is not an RV business (Ty, 2026-09-28)."
+      },
+      {
+        "n": "D&J Truck and RV Repair",
+        "u": "https://djtruckrv.com/",
+        "why": "A diesel truck and RV repair shop whose mechanics have 'over 70 years of diesel truck repair experience'. Diesel-first, RV offered alongside. Same rule."
+      },
+      {
+        "n": "HMI Auto Care",
+        "u": "https://hmiautocare.net/",
+        "why": "An auto repair shop that 'also advertises RV service'. General auto first, RV as an add-on, which is not what the directory lists."
+      },
+      {
+        "n": "Coffman's Truck Service & Towing",
+        "u": "https://coffmanstruck.com/",
+        "why": "A truck service and towing business in Danville that 'repairs and maintains motorhomes and RVs as well as trucks'. Truck-first, RV as an addition, which is the shape Ty's rule excludes however good the RV page is."
       }
     ]
   },

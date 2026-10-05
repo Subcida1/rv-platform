@@ -259,5 +259,56 @@ window.RV_LISTINGS_IL = [
   ],  "base": "lexington",  "areas": [
    "lexington"
   ],  "region": null,  "spec": null,  "reg": "north-il"
+ },
+ {  "n": "Commercial Collision of Champaign Inc",  "c": "Champaign and east-central Illinois, IL",  "p": "(217) 352-9074",  "u": "https://www.commercialcollisionchampaign.com/motorhomes-and-campers",  "t": "center",  "e": false,  "r": false,  "d": "Commercial Collision of Champaign Inc is a collision and body shop in Champaign, Illinois, that advertises motorhome and camper repair. It does exterior collision work in steel, aluminium or fibreglass, patches holes, reseals roofs and windows for waterproofing, and also does light mechanical work, auto glass repair and fabrication. It employs PPG Evolution-certified painters and ASE-certified mechanics and backs repairs with a one-year labour warranty.",  "g": [
+   "rv body shop",
+   "collision",
+   "roof reseal"
+  ],  "base": "champaign",  "areas": [],  "region": "Champaign, IL",  "spec": null,  "reg": "central-il"
+ },
+ {  "n": "Sundog Mobile RV Inspection, Maintenance and Repair",  "c": "Mobile RV service, IL",  "p": "(217) 652-1722",  "u": "https://sundogmobilerv.com/",  "t": "mobile",  "e": true,  "r": false,  "d": "Sundog Mobile RV Inspection, Maintenance and Repair is a mobile RV service that travels to the customer for inspections, repairs and maintenance. It handles electrical, plumbing and appliance work, slide-out systems and levelling, roof sealing and winterising. It advertises emergency assistance and describes itself as keeping an RV road-ready, reliable and safe.",  "g": [
+   "mobile tech",
+   "emergency",
+   "maintenance"
+  ],  "base": null,  "areas": [],  "region": null,  "spec": null,  "reg": "central-il"
+ },
+ {  "n": "Pontiac RV",  "c": "Pontiac and the Illinois Valley, IL",  "p": "800-729-5419",  "u": "https://www.pontiacrv.com/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "Pontiac RV is a family-owned RV dealership in Pontiac, Illinois, in business more than 40 years, with a service department of 38 bays. It says 17 bays are used for customer orientations and another 21 for service, staffed by factory-trained technicians. It sells travel trailers, fifth wheels and motorhomes and services them after the sale.",  "g": [
+   "rv dealer",
+   "rv service center"
+  ],  "base": "pontiac",  "areas": [],  "region": "the Midwest",  "spec": null,  "reg": "north-il"
+ },
+ {  "n": "Pros On Point Services LLC",  "c": "Peoria and central Illinois, IL",  "p": "(309) 340-4334",  "u": "https://pros-on-point-services-llc.quoteiq.site/",  "t": "mobile",  "e": false,  "r": false,  "d": "Pros On Point Services LLC is a mobile RV repair and maintenance provider based in Peoria, Illinois. Its certified technicians do diagnosis, repair, inspection, fabrication and welding, plus winterisation, hydronic heating and de-icing. It works on Class A motorhomes and tow-behinds and also offers snow removal.",  "g": [
+   "mobile tech",
+   "fabrication",
+   "winterisation"
+  ],  "base": "peoria",  "areas": [],  "region": "Peoria, IL and surrounding areas",  "spec": null,  "reg": "north-il"
+ },
+ {  "n": "Bentley Mobile RV Repair",  "c": "Amboy and northern Illinois, IL",  "p": "630-247-7231",  "u": "https://bentleymobilervrepair.com/",  "t": "mobile",  "e": false,  "r": true,  "d": "Bentley Mobile RV Repair is a mobile RV repair business run by an RVTAA-certified technician, working out of Amboy, Illinois. It comes to the customer for electrical work, slide-outs, plumbing, water systems, appliances, roof and sealant repairs and awning replacement. It also handles bolt-on hitch work, weight distribution, electrical and surge brakes, bearings, axles, suspension and levelling systems, along with horse and talent trailer repairs.",  "g": [
+   "mobile tech",
+   "brakes",
+   "axles",
+   "hitches"
+  ],  "base": "amboy",  "areas": [],  "region": null,  "spec": "electrical assembly and slide-outs",  "reg": "north-il"
+ },
+ {  "n": "Kendall County Repair",  "c": "Newark and the I-80 corridor, IL",  "p": "(815) 695-5200",  "u": "https://kendallcountyrepair.com/",  "t": "center",  "e": false,  "r": false,  "d": "Kendall County Repair is a full-service RV repair facility at 599 Fennel Rd in Newark, Illinois, in business since 2008. It handles routine maintenance and drivability concerns, electrical and plumbing diagnostics, generator repair, water damage and leak repair, body work, and custom remodelling and rebuilds. All work is done in-shop, and it serves the I-80 corridor including Ottawa, LaSalle and Peru.",  "g": [
+   "rv service center",
+   "generator",
+   "body shop"
+  ],  "base": "newark",  "areas": [
+   "plainfield",
+   "joliet",
+   "shorewood",
+   "yorkville",
+   "oswego",
+   "plano",
+   "morris",
+   "minooka",
+   "ottawa",
+   "lasalle",
+   "peru",
+   "utica",
+   "oglesby",
+   "sandwich"
+  ],  "region": "northern Illinois and beyond",  "spec": null,  "reg": "north-il"
  }
 ];

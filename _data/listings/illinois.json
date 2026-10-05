@@ -42,7 +42,31 @@
     "Carmi": "south-il",
     "Eldorado": "south-il",
     "Marion": "south-il",
-    "Vandalia": "south-il"
+    "Vandalia": "south-il",
+    "Champaign": "central-il",
+    "Urbana": "central-il",
+    "Danville": "central-il",
+    "Rantoul": "central-il",
+    "Mahomet": "central-il",
+    "Savoy": "central-il",
+    "Tuscola": "central-il",
+    "Monticello": "central-il",
+    "Paxton": "central-il",
+    "Pontiac": "north-il",
+    "Amboy": "north-il",
+    "Newark": "north-il",
+    "Ottawa": "north-il",
+    "LaSalle": "north-il",
+    "Peru": "north-il",
+    "Streator": "north-il",
+    "Oswego": "north-il",
+    "Joliet": "north-il",
+    "Belvidere": "north-il",
+    "Rochelle": "north-il",
+    "DeKalb": "north-il",
+    "Sycamore": "north-il",
+    "Kankakee": "north-il",
+    "Bloomington": "central-il"
   },
   "listings": [
     {
@@ -1000,6 +1024,188 @@
         "emergency_quote": null,
         "roadside_quote": null,
         "licence": null
+      }
+    },
+    {
+      "n": "Commercial Collision of Champaign Inc",
+      "c": "Champaign and east-central Illinois, IL",
+      "p": "(217) 352-9074",
+      "u": "https://www.commercialcollisionchampaign.com/motorhomes-and-campers",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Commercial Collision of Champaign Inc is a collision and body shop in Champaign, Illinois, that advertises motorhome and camper repair. It does exterior collision work in steel, aluminium or fibreglass, patches holes, reseals roofs and windows for waterproofing, and also does light mechanical work, auto glass repair and fabrication. It employs PPG Evolution-certified painters and ASE-certified mechanics and backs repairs with a one-year labour warranty.",
+      "g": [
+        "rv body shop",
+        "collision",
+        "roof reseal"
+      ],
+      "base": "Champaign",
+      "areas": [],
+      "region": "Champaign, IL",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "(217) 352-9074",
+        "type_quote": "Do you have a motorhome or camper that needs repair services? Commercial Collision of Champaign Inc provides exceptional motorhome and camper repair services and more.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Motorhome and Camper Collision Repair | Champaign, IL"
+        ]
+      }
+    },
+    {
+      "n": "Sundog Mobile RV Inspection, Maintenance and Repair",
+      "c": "Mobile RV service, IL",
+      "p": "(217) 652-1722",
+      "u": "https://sundogmobilerv.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "Sundog Mobile RV Inspection, Maintenance and Repair is a mobile RV service that travels to the customer for inspections, repairs and maintenance. It handles electrical, plumbing and appliance work, slide-out systems and levelling, roof sealing and winterising. It advertises emergency assistance and describes itself as keeping an RV road-ready, reliable and safe.",
+      "g": [
+        "mobile tech",
+        "emergency",
+        "maintenance"
+      ],
+      "base": null,
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "phone_quote": "(217) 652-1722",
+        "type_quote": "At Sundog Mobile RV Inspection, Maintenance, and Repair, we are dedicated to keeping your RV in top condition.",
+        "emergency_quote": "Whether you’re preparing for a trip or in need of emergency repairs, we ensure your RV is always road-ready, reliable, and safe for your next adventure.",
+        "roadside_quote": null,
+        "coverage_quotes": []
+      },
+      "reg": "central-il"
+    },
+    {
+      "n": "Pontiac RV",
+      "c": "Pontiac and the Illinois Valley, IL",
+      "p": "800-729-5419",
+      "u": "https://www.pontiacrv.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Pontiac RV is a family-owned RV dealership in Pontiac, Illinois, in business more than 40 years, with a service department of 38 bays. It says 17 bays are used for customer orientations and another 21 for service, staffed by factory-trained technicians. It sells travel trailers, fifth wheels and motorhomes and services them after the sale.",
+      "g": [
+        "rv dealer",
+        "rv service center"
+      ],
+      "base": "Pontiac",
+      "areas": [],
+      "region": "the Midwest",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "800-729-5419",
+        "type_quote": "We have 17 service bays used strictly for customer orientations, and another 21 bays for service.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "15481 East 2000 N Rd Pontiac, IL 61764 800-729-5419 Map & Directions"
+        ]
+      }
+    },
+    {
+      "n": "Pros On Point Services LLC",
+      "c": "Peoria and central Illinois, IL",
+      "p": "(309) 340-4334",
+      "u": "https://pros-on-point-services-llc.quoteiq.site/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Pros On Point Services LLC is a mobile RV repair and maintenance provider based in Peoria, Illinois. Its certified technicians do diagnosis, repair, inspection, fabrication and welding, plus winterisation, hydronic heating and de-icing. It works on Class A motorhomes and tow-behinds and also offers snow removal.",
+      "g": [
+        "mobile tech",
+        "fabrication",
+        "winterisation"
+      ],
+      "base": "Peoria",
+      "areas": [],
+      "region": "Peoria, IL and surrounding areas",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "(309) 340-4334",
+        "type_quote": "At Pros On Point Services LLC, we specialize in comprehensive RV repair, inspection, fabrication, welding, and maintenance services.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Serving Peoria, IL, and surrounding areas, our certified technicians are dedicated to ensuring your RV is safe, reliable, and ready for your next adventure."
+        ]
+      }
+    },
+    {
+      "n": "Bentley Mobile RV Repair",
+      "c": "Amboy and northern Illinois, IL",
+      "p": "630-247-7231",
+      "u": "https://bentleymobilervrepair.com/",
+      "t": "mobile",
+      "e": false,
+      "r": true,
+      "d": "Bentley Mobile RV Repair is a mobile RV repair business run by an RVTAA-certified technician, working out of Amboy, Illinois. It comes to the customer for electrical work, slide-outs, plumbing, water systems, appliances, roof and sealant repairs and awning replacement. It also handles bolt-on hitch work, weight distribution, electrical and surge brakes, bearings, axles, suspension and levelling systems, along with horse and talent trailer repairs.",
+      "g": [
+        "mobile tech",
+        "brakes",
+        "axles",
+        "hitches"
+      ],
+      "base": "Amboy",
+      "areas": [],
+      "region": null,
+      "spec": "electrical assembly and slide-outs",
+      "evidence": {
+        "phone_quote": "630-247-7231",
+        "type_quote": "As a certified RVTAA technician, we come directly to you, whether you're on vacation or on the road, to get your RV back in top shape quickly.",
+        "emergency_quote": null,
+        "roadside_quote": "Electrical and Surge brakes",
+        "coverage_quotes": [
+          "1273 Sleepy Hollow Rd, Amboy, IL, 61310"
+        ]
+      }
+    },
+    {
+      "n": "Kendall County Repair",
+      "c": "Newark and the I-80 corridor, IL",
+      "p": "(815) 695-5200",
+      "u": "https://kendallcountyrepair.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Kendall County Repair is a full-service RV repair facility at 599 Fennel Rd in Newark, Illinois, in business since 2008. It handles routine maintenance and drivability concerns, electrical and plumbing diagnostics, generator repair, water damage and leak repair, body work, and custom remodelling and rebuilds. All work is done in-shop, and it serves the I-80 corridor including Ottawa, LaSalle and Peru.",
+      "g": [
+        "rv service center",
+        "generator",
+        "body shop"
+      ],
+      "base": "Newark",
+      "areas": [
+        "Plainfield",
+        "Joliet",
+        "Shorewood",
+        "Yorkville",
+        "Oswego",
+        "Plano",
+        "Morris",
+        "Minooka",
+        "Ottawa",
+        "LaSalle",
+        "Peru",
+        "Utica",
+        "Oglesby",
+        "Sandwich"
+      ],
+      "region": "northern Illinois and beyond",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "(8156955200)",
+        "type_quote": "We are a full service R/V repair facility. Providing the highest quality of service around.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "We proudly serve local RV owners and travelers from communities all around Newark and the I‑80 corridor."
+        ]
       }
     }
   ]
