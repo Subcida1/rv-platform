@@ -33,7 +33,42 @@
     "Columbia": "south-ms",
     "Picayune": "south-ms",
     "Gulfport": "coast-ms",
-    "Ocean Springs": "coast-ms"
+    "Ocean Springs": "coast-ms",
+    "Biloxi": "coast-ms",
+    "D'Iberville": "coast-ms",
+    "Pascagoula": "coast-ms",
+    "Moss Point": "coast-ms",
+    "Bay St. Louis": "coast-ms",
+    "Waveland": "coast-ms",
+    "Long Beach": "coast-ms",
+    "Pass Christian": "coast-ms",
+    "Petal": "south-ms",
+    "Laurel": "south-ms",
+    "Ellisville": "south-ms",
+    "McComb": "south-ms",
+    "Brookhaven": "south-ms",
+    "Natchez": "south-ms",
+    "Quitman": "south-ms",
+    "Meridian": "south-ms",
+    "Flowood": "central-ms",
+    "Pearl": "central-ms",
+    "Brandon": "central-ms",
+    "Clinton": "central-ms",
+    "Madison": "central-ms",
+    "Ridgeland": "central-ms",
+    "Vicksburg": "central-ms",
+    "Tupelo": "north-ms",
+    "Oxford": "north-ms",
+    "Grenada": "north-ms",
+    "Winona": "north-ms",
+    "Clarksdale": "north-ms",
+    "Cleveland": "north-ms",
+    "Greenville": "north-ms",
+    "Corinth": "northeast-ms",
+    "Booneville": "northeast-ms",
+    "Columbus": "northeast-ms",
+    "Starkville": "northeast-ms",
+    "Tishomingo": "northeast-ms"
   },
   "listings": [
     {
@@ -450,6 +485,301 @@
         "emergency_quote": null,
         "roadside_quote": null,
         "licence": null
+      }
+    },
+    {
+      "n": "Gray-Daniels Chevrolet",
+      "c": "Jackson, MS",
+      "p": "601-500-7521",
+      "u": "https://www.graydanielschevy.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Gray-Daniels Chevrolet runs a dedicated RV repair and service center at its Jackson dealership on I-55 North. The RV service department handles roof, appliance, mechanical, autobody, suspension, electrical and generator repairs, oil changes, refrigerator replacement, battery service, slide-outs, leveling systems and window repair, plus under-the-hood work such as diesel service, fuel injection, transmissions, cooling-system service and factory-scheduled maintenance.",
+      "g": [
+        "service center",
+        "dealer",
+        "engine",
+        "electrical",
+        "maintenance"
+      ],
+      "base": "Jackson",
+      "areas": [
+        "Jackson"
+      ],
+      "region": "Jackson Metro",
+      "spec": "Auto dealership with a dedicated RV repair and service center.",
+      "evidence": {
+        "phone_quote": "Service 601-500-7521 (6015007521)",
+        "type_quote": "As your portable home, your RV deserves regular service and repair to keep you and your family safe on the road!",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Gray-Daniels Chevrolet 6060 I-55 NORTH JACKSON, MS 39211",
+          "Your Gray-Daniels Chevrolet RV Repair & Service Specialists"
+        ]
+      }
+    },
+    {
+      "n": "Camping World RV Service - Jackson",
+      "c": "Jackson, MS",
+      "p": "(888) 627-2952",
+      "u": "https://rv.campingworld.com/dealer/jackson-mississippi/rv-service-repair",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Camping World's Jackson location on the I-55 South Frontage Road is a full RV service and repair center handling all RV types. It offers diagnostics, repairs, routine maintenance, warranty work, leak checks, oil and lube changes, winterization, a collision center and mobile service.",
+      "g": [
+        "service center",
+        "chain",
+        "collision",
+        "maintenance"
+      ],
+      "base": "Jackson",
+      "areas": [
+        "Jackson"
+      ],
+      "region": "Jackson Metro",
+      "spec": "National RV retailer with a local Jackson service center.",
+      "evidence": {
+        "phone_quote": "(888) 627-2952 (8886272952)",
+        "type_quote": "We provide complete service and repair for all RV types.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "4601 I-55 South Frontage Road Jackson, MS 39212-5530",
+          "Our service location can handle virtually any RV repair you need."
+        ]
+      }
+    },
+    {
+      "n": "Foley RV Center & Airstream of Mississippi",
+      "c": "Gulfport, MS",
+      "p": "228-832-7544",
+      "u": "https://www.airstreamofmississippi.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Foley RV Center & Airstream of Mississippi is an RV dealership in Gulfport whose service and body shop is staffed by factory-trained technicians. It specializes in Airstream service, honors all warranty work, favors recalls and handles motorhome and trailer problems, with a dedicated service phone line.",
+      "g": [
+        "service center",
+        "dealer",
+        "body",
+        "warranty work"
+      ],
+      "base": "Gulfport",
+      "areas": [
+        "Gulfport"
+      ],
+      "region": "Gulf Coast",
+      "spec": "Airstream-focused RV dealer service and body shop.",
+      "evidence": {
+        "phone_quote": "228-832-7544 228-832-7544 www.airstreamofmississippi.com 11063 Highway 49, Gulfport, MS 39503",
+        "type_quote": "The credibility of our Service Department is absolutely astounding.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "11063 Highway 49 Gulfport, MS 39503",
+          "We honor all warranty work and favor any recalls."
+        ]
+      }
+    },
+    {
+      "n": "Tanked Services",
+      "c": "Biloxi, MS",
+      "p": "(228) 334-1248",
+      "u": "https://www.tankedservices.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Tanked Services is a fully mobile RV service on the Mississippi Gulf Coast run by Patrick, providing on-site RV repair alongside washes and holding-tank cleaning. It advertises certified, insured mobile RV repair with extended-warranty support and diagnostics-to-full-system repairs, and travels across the coast including Biloxi, Gulfport, Ocean Springs, D'Iberville, Pascagoula, Bay St. Louis and Waveland.",
+      "g": [
+        "mobile tech",
+        "repair",
+        "warranty work"
+      ],
+      "base": "Biloxi",
+      "areas": [
+        "Biloxi",
+        "Gulfport",
+        "Ocean Springs",
+        "D'Iberville",
+        "Pascagoula",
+        "Bay St. Louis",
+        "Waveland",
+        "Long Beach",
+        "Pass Christian"
+      ],
+      "region": "Gulf Coast",
+      "spec": "Mobile RV repair plus RV wash and holding-tank cleaning.",
+      "evidence": {
+        "phone_quote": "(228) 334 -1248",
+        "type_quote": "Tanked Services provides expert mobile RV repair, RV wash, and RV tank cleaning services throughout the Mississippi Gulf Coast, including Biloxi, Gulfport, and Ocean Springs.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Professional, on-site RV services designed to keep your rig clean, functional, and road-ready, without the hassle of leaving your site.",
+          "We provide professional mobile RV services throughout the Mississippi Gulf Coast, including:"
+        ]
+      }
+    },
+    {
+      "n": "Magnolia State RV Services",
+      "c": "Quitman, MS",
+      "p": "601-678-6395",
+      "u": "https://magnoliastrv.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Magnolia State RV Services is a mobile RV service based in Quitman, owned by Andy Smith, a NRVIA-certified RV inspector and RVTAA-registered RV technician. It serves East Central and South Mississippi, coming to the customer for RV inspections, RV service and holding-tank cleaning, and is fully insured.",
+      "g": [
+        "mobile tech",
+        "inspection",
+        "tank cleaning",
+        "repair"
+      ],
+      "base": "Quitman",
+      "areas": [
+        "Quitman",
+        "Meridian",
+        "Laurel"
+      ],
+      "region": "East Central Mississippi",
+      "spec": "Mobile RV technician offering inspections, holding-tank cleaning and RV service.",
+      "evidence": {
+        "phone_quote": "601-678-6395",
+        "type_quote": "As mobile RV inspectors and technicians, you do not have to bring your RV to us, we come to you.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Serving East Central and South Mississippi",
+          "We are Certified and active member of NRVIA as a Professional RV Inspector."
+        ]
+      }
+    },
+    {
+      "n": "Great American RV SuperStores - Hattiesburg",
+      "c": "Hattiesburg, MS",
+      "p": "(844) 231-9992",
+      "u": "https://greatamericanrv.com/locations/hattiesburg-ms",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Great American RV SuperStores' Hattiesburg location off I-59 is a family-owned RV dealer with a 16-bay service center staffed by RVTI-certified technicians. The service department handles warranty work, routine service and major repairs for all makes, and the dealership serves South Mississippi, the Gulf Coast and the Pine Belt.",
+      "g": [
+        "service center",
+        "dealer",
+        "warranty work"
+      ],
+      "base": "Hattiesburg",
+      "areas": [
+        "Hattiesburg"
+      ],
+      "region": "Pine Belt",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "Sales: (844) 231-6199. Service: (844) 231-9992.",
+        "type_quote": "RVTI-certified technicians for warranty work, routine service, and major repairs.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "7696 US 49, Hattiesburg, MS 39402. We're located off I-59, Exit 67.",
+          "Mississippi's #1 RV dealer  -  ranked by Stat Survey 2025  -  Great American RV SuperStores in Hattiesburg serves South Mississippi, the Gulf Coast, and the Pine Belt from our location off I-59 at Exit 67."
+        ]
+      }
+    },
+    {
+      "n": "Great American RV SuperStores - Tupelo",
+      "c": "Tupelo, MS",
+      "p": "(844) 270-3204",
+      "u": "https://greatamericanrv.com/locations/tupelo-ms",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Great American RV SuperStores' Tupelo-area location at Belden off I-22 is a family-owned RV dealer with a 10-bay RVTI-certified service center. Its service department handles warranty work, routine service and major repairs, and it serves North and Northeast Mississippi.",
+      "g": [
+        "service center",
+        "dealer",
+        "warranty work"
+      ],
+      "base": null,
+      "areas": [
+        "Tupelo"
+      ],
+      "region": "North Mississippi",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "Sales: (844) 270-3204. Service: (844) 270-3204.",
+        "type_quote": "RVTI-certified technicians for warranty work, routine service, and major repairs.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "55 Wallace Drive, Belden, MS 38826. We're located off I-22, Exit 76.",
+          "Great American RV SuperStores in Tupelo is the RV dealer North Mississippi and Northeast Mississippi have counted on for years."
+        ]
+      },
+      "reg": "north-ms"
+    },
+    {
+      "n": "Corinth RV Center",
+      "c": "Corinth, MS",
+      "p": "662-284-9996",
+      "u": "https://www.corinthrv.com/call-make-appointment-department-certified-rv-technician--service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Corinth RV Center is a family-owned full-service RV dealership in Corinth with more than 65 years in the RV business. Its service department is staffed by factory-trained technicians who handle class A, B and C motorhomes, fifth wheels, travel trailers, toy haulers, pop-ups and destination trailers, with services from batteries, winterizing and towing systems to plumbing, electrical, appliance and LP systems, insurance repairs and estimates.",
+      "g": [
+        "service center",
+        "dealer",
+        "warranty work"
+      ],
+      "base": "Corinth",
+      "areas": [
+        "Corinth"
+      ],
+      "region": "Northeast Mississippi",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "Phone: 662.284.9996",
+        "type_quote": "As a full service dealer, we have technicians fully trained and experienced to handle all of your RV needs.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "1511 HWY 72 W Corinth, MS 38834",
+          "Corinth RV Center is conveniently located near the areas of Booneville, Tupelo, Amory, Jackson, Columbus."
+        ]
+      }
+    },
+    {
+      "n": "Camper Kingdom",
+      "c": "Meridian, MS",
+      "p": "601-693-3356",
+      "u": "https://www.camperkingdom.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Camper Kingdom is an RV dealer in Meridian with a service department staffed by highly trained technicians. It services Forest River, Gulf Stream, Keystone RV, Palomino and Prime Time vehicles and takes appointments for maintenance and repair at its two Meridian locations on South Frontage Road and Highway 45 North.",
+      "g": [
+        "service center",
+        "dealer",
+        "warranty work"
+      ],
+      "base": "Meridian",
+      "areas": [
+        "Meridian"
+      ],
+      "region": "East Mississippi",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "If you have any questions or concerns about your RV, feel free to call us at 601-693-3356 and we'll be happy to help you over the phone or assist you in making an appointment.",
+        "type_quote": "Our service department is staffed with highly trained technicians dedicated to making sure your RV stays in great working order for years to come.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "2615 S Frontage Rd Meridian, MS 39301",
+          "2310 Hwy 45 N Meridian, MS 39301"
+        ]
       }
     }
   ]

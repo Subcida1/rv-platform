@@ -84,5 +84,92 @@ window.RV_LISTINGS_MS = [
  {  "n": "MICHAEL'S RV CENTER, INC",  "c": "Columbia, MS",  "p": "601-736-0468",  "u": "https://michaelsrvcenter.com/",  "t": "center",  "e": false,  "r": false,  "d": "Michael's RV Center has operated at the same location in Columbia since 2001 and describes itself as having top notch service technicians and a full line of parts. It began as mobile service from the owner's home and grew into a full service RV facility. It invites customers to come see the facility for RV service and to check out its used RVs.",  "g": [
    "service center"
   ],  "base": "columbia",  "areas": [],  "region": null,  "spec": null,  "reg": "south-ms"
+ },
+ {  "n": "Gray-Daniels Chevrolet",  "c": "Jackson, MS",  "p": "601-500-7521",  "u": "https://www.graydanielschevy.com/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "Gray-Daniels Chevrolet runs a dedicated RV repair and service center at its Jackson dealership on I-55 North. The RV service department handles roof, appliance, mechanical, autobody, suspension, electrical and generator repairs, oil changes, refrigerator replacement, battery service, slide-outs, leveling systems and window repair, plus under-the-hood work such as diesel service, fuel injection, transmissions, cooling-system service and factory-scheduled maintenance.",  "g": [
+   "service center",
+   "dealer",
+   "engine",
+   "electrical",
+   "maintenance"
+  ],  "base": "jackson",  "areas": [
+   "jackson"
+  ],  "region": "Jackson Metro",  "spec": "Auto dealership with a dedicated RV repair and service center.",  "reg": "central-ms"
+ },
+ {  "n": "Camping World RV Service - Jackson",  "c": "Jackson, MS",  "p": "(888) 627-2952",  "u": "https://rv.campingworld.com/dealer/jackson-mississippi/rv-service-repair",  "t": "center",  "e": false,  "r": false,  "d": "Camping World's Jackson location on the I-55 South Frontage Road is a full RV service and repair center handling all RV types. It offers diagnostics, repairs, routine maintenance, warranty work, leak checks, oil and lube changes, winterization, a collision center and mobile service.",  "g": [
+   "service center",
+   "chain",
+   "collision",
+   "maintenance"
+  ],  "base": "jackson",  "areas": [
+   "jackson"
+  ],  "region": "Jackson Metro",  "spec": "National RV retailer with a local Jackson service center.",  "reg": "central-ms"
+ },
+ {  "n": "Foley RV Center & Airstream of Mississippi",  "c": "Gulfport, MS",  "p": "228-832-7544",  "u": "https://www.airstreamofmississippi.com/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "Foley RV Center & Airstream of Mississippi is an RV dealership in Gulfport whose service and body shop is staffed by factory-trained technicians. It specializes in Airstream service, honors all warranty work, favors recalls and handles motorhome and trailer problems, with a dedicated service phone line.",  "g": [
+   "service center",
+   "dealer",
+   "body",
+   "warranty work"
+  ],  "base": "gulfport",  "areas": [
+   "gulfport"
+  ],  "region": "Gulf Coast",  "spec": "Airstream-focused RV dealer service and body shop.",  "reg": "coast-ms"
+ },
+ {  "n": "Tanked Services",  "c": "Biloxi, MS",  "p": "(228) 334-1248",  "u": "https://www.tankedservices.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Tanked Services is a fully mobile RV service on the Mississippi Gulf Coast run by Patrick, providing on-site RV repair alongside washes and holding-tank cleaning. It advertises certified, insured mobile RV repair with extended-warranty support and diagnostics-to-full-system repairs, and travels across the coast including Biloxi, Gulfport, Ocean Springs, D'Iberville, Pascagoula, Bay St. Louis and Waveland.",  "g": [
+   "mobile tech",
+   "repair",
+   "warranty work"
+  ],  "base": "biloxi",  "areas": [
+   "biloxi",
+   "gulfport",
+   "ocean springs",
+   "diberville",
+   "pascagoula",
+   "bay st louis",
+   "waveland",
+   "long beach",
+   "pass christian"
+  ],  "region": "Gulf Coast",  "spec": "Mobile RV repair plus RV wash and holding-tank cleaning.",  "reg": "coast-ms"
+ },
+ {  "n": "Magnolia State RV Services",  "c": "Quitman, MS",  "p": "601-678-6395",  "u": "https://magnoliastrv.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Magnolia State RV Services is a mobile RV service based in Quitman, owned by Andy Smith, a NRVIA-certified RV inspector and RVTAA-registered RV technician. It serves East Central and South Mississippi, coming to the customer for RV inspections, RV service and holding-tank cleaning, and is fully insured.",  "g": [
+   "mobile tech",
+   "inspection",
+   "tank cleaning",
+   "repair"
+  ],  "base": "quitman",  "areas": [
+   "quitman",
+   "meridian",
+   "laurel"
+  ],  "region": "East Central Mississippi",  "spec": "Mobile RV technician offering inspections, holding-tank cleaning and RV service.",  "reg": "south-ms"
+ },
+ {  "n": "Great American RV SuperStores - Hattiesburg",  "c": "Hattiesburg, MS",  "p": "(844) 231-9992",  "u": "https://greatamericanrv.com/locations/hattiesburg-ms",  "t": "center",  "e": false,  "r": false,  "d": "Great American RV SuperStores' Hattiesburg location off I-59 is a family-owned RV dealer with a 16-bay service center staffed by RVTI-certified technicians. The service department handles warranty work, routine service and major repairs for all makes, and the dealership serves South Mississippi, the Gulf Coast and the Pine Belt.",  "g": [
+   "service center",
+   "dealer",
+   "warranty work"
+  ],  "base": "hattiesburg",  "areas": [
+   "hattiesburg"
+  ],  "region": "Pine Belt",  "spec": null,  "reg": "south-ms"
+ },
+ {  "n": "Great American RV SuperStores - Tupelo",  "c": "Tupelo, MS",  "p": "(844) 270-3204",  "u": "https://greatamericanrv.com/locations/tupelo-ms",  "t": "center",  "e": false,  "r": false,  "d": "Great American RV SuperStores' Tupelo-area location at Belden off I-22 is a family-owned RV dealer with a 10-bay RVTI-certified service center. Its service department handles warranty work, routine service and major repairs, and it serves North and Northeast Mississippi.",  "g": [
+   "service center",
+   "dealer",
+   "warranty work"
+  ],  "base": null,  "areas": [
+   "tupelo"
+  ],  "region": "North Mississippi",  "spec": null,  "reg": "north-ms"
+ },
+ {  "n": "Corinth RV Center",  "c": "Corinth, MS",  "p": "662-284-9996",  "u": "https://www.corinthrv.com/call-make-appointment-department-certified-rv-technician--service",  "t": "center",  "e": false,  "r": false,  "d": "Corinth RV Center is a family-owned full-service RV dealership in Corinth with more than 65 years in the RV business. Its service department is staffed by factory-trained technicians who handle class A, B and C motorhomes, fifth wheels, travel trailers, toy haulers, pop-ups and destination trailers, with services from batteries, winterizing and towing systems to plumbing, electrical, appliance and LP systems, insurance repairs and estimates.",  "g": [
+   "service center",
+   "dealer",
+   "warranty work"
+  ],  "base": "corinth",  "areas": [
+   "corinth"
+  ],  "region": "Northeast Mississippi",  "spec": null,  "reg": "northeast-ms"
+ },
+ {  "n": "Camper Kingdom",  "c": "Meridian, MS",  "p": "601-693-3356",  "u": "https://www.camperkingdom.com/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "Camper Kingdom is an RV dealer in Meridian with a service department staffed by highly trained technicians. It services Forest River, Gulf Stream, Keystone RV, Palomino and Prime Time vehicles and takes appointments for maintenance and repair at its two Meridian locations on South Frontage Road and Highway 45 North.",  "g": [
+   "service center",
+   "dealer",
+   "warranty work"
+  ],  "base": "meridian",  "areas": [
+   "meridian"
+  ],  "region": "East Mississippi",  "spec": null,  "reg": "south-ms"
  }
 ];

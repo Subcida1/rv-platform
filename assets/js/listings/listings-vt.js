@@ -46,5 +46,13 @@ window.RV_LISTINGS_VT = [
  {  "n": "Mekkelsen RV",  "c": "East Montpelier, VT",  "p": "(802) 779-0897",  "u": "https://www.vtrv.com/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "Mekkelsen RV operates an 8-bay RV service center in the East Montpelier, Vermont area. Its technicians are factory trained, one holding RVDA-RVIA Certification, and it is a factory-authorized warranty station for several brands. It handles any size job from changing a light bulb to replacing an entire sidewall, does hitch and brake control installation, and installs aftermarket accessories including awnings, air conditioners, solar panels, weight distribution bars and sway control.",  "g": [
    "service center"
   ],  "base": "east montpelier",  "areas": [],  "region": null,  "spec": null,  "reg": "central-vt"
+ },
+ {  "n": "Airstream of Vermont",  "c": "South Burlington; Burlington and Chittenden County, VT",  "p": "(802) 213-2947",  "u": "https://www.airstreamvermont.com/",  "t": "center",  "e": false,  "r": true,  "d": "Airstream of Vermont has a full-service RV department in South Burlington and explicitly services both Airstream and non-Airstream RVs.",  "g": [
+   "RV service center"
+  ],  "base": "south burlington",  "areas": [],  "region": "South Burlington, Burlington and Chittenden County",  "spec": null,  "reg": "northern-vt"
+ },
+ {  "n": "Camping World - Saint Albans",  "c": "St. Albans; Franklin County and northwestern Vermont, VT",  "p": "(888) 802-1541",  "u": "https://rv.campingworld.com/dealer/saint-albans-vermont",  "t": "center",  "e": false,  "r": true,  "d": "Camping World operates an RV dealership and service department at 457 Swanton Road in St. Albans.",  "g": [
+   "RV service center"
+  ],  "base": null,  "areas": [],  "region": "Franklin County and northwestern Vermont",  "spec": null,  "reg": "northern-vt"
  }
 ];

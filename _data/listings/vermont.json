@@ -23,7 +23,36 @@
     "West Windsor": "central-vt",
     "White River Junction": "central-vt",
     "Fair Haven": "southern-vt",
-    "Center Rutland": "southern-vt"
+    "Center Rutland": "southern-vt",
+    "Winooski": "northern-vt",
+    "Essex": "northern-vt",
+    "Essex Junction": "northern-vt",
+    "Colchester": "northern-vt",
+    "Williston": "northern-vt",
+    "Shelburne": "northern-vt",
+    "Milton": "northern-vt",
+    "St. Albans": "northern-vt",
+    "Georgia": "northern-vt",
+    "Fairfax": "northern-vt",
+    "Jericho": "northern-vt",
+    "Richmond": "northern-vt",
+    "Hinesburg": "northern-vt",
+    "Bristol": "northern-vt",
+    "South Hero": "northern-vt",
+    "Grand Isle": "northern-vt",
+    "North Hero": "northern-vt",
+    "South Burlington city": "northern-vt",
+    "Burlington city": "northern-vt",
+    "St. Albans city": "northern-vt",
+    "Winooski city": "northern-vt",
+    "Essex Junction village": "northern-vt",
+    "Essex town": "northern-vt",
+    "Colchester town": "northern-vt",
+    "Milton town": "northern-vt",
+    "Shelburne town": "northern-vt",
+    "Williston town": "northern-vt",
+    "Richmond town": "northern-vt",
+    "Hinesburg town": "northern-vt"
   },
   "listings": [
     {
@@ -57,7 +86,7 @@
           "spending summers in Southern Vermont and seeking warmer destinations during the winter months with my two golden retrievers.",
           "Repair Service Area"
         ],
-        "type_quote": "As a mobile technician, I come to you for repairs and maintenance—so you can spend more time exploring.",
+        "type_quote": "As a mobile technician, I come to you for repairs and maintenance - so you can spend more time exploring.",
         "emergency_quote": null,
         "roadside_quote": null,
         "licence": null
@@ -290,6 +319,59 @@
         "roadside_quote": null,
         "licence": null
       }
+    },
+    {
+      "n": "Airstream of Vermont",
+      "c": "South Burlington; Burlington and Chittenden County, VT",
+      "p": "(802) 213-2947",
+      "u": "https://www.airstreamvermont.com/",
+      "t": "center",
+      "e": false,
+      "r": true,
+      "d": "Airstream of Vermont has a full-service RV department in South Burlington and explicitly services both Airstream and non-Airstream RVs.",
+      "g": [
+        "RV service center"
+      ],
+      "base": "South Burlington",
+      "areas": [],
+      "region": "South Burlington, Burlington and Chittenden County",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "You can contact Airstream of Vermont by calling (802) 990-0770 or scheduling an appointment online.",
+        "type_quote": "We Service Airstream and Non-Airstream RVs Alike",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "You can also visit our service department in South Burlington, Vermont. We also proudly serve those in Burlington and Chittenden County, Vermont."
+        ]
+      }
+    },
+    {
+      "n": "Camping World - Saint Albans",
+      "c": "St. Albans; Franklin County and northwestern Vermont, VT",
+      "p": "(888) 802-1541",
+      "u": "https://rv.campingworld.com/dealer/saint-albans-vermont",
+      "t": "center",
+      "e": false,
+      "r": true,
+      "d": "Camping World operates an RV dealership and service department at 457 Swanton Road in St. Albans.",
+      "g": [
+        "RV service center"
+      ],
+      "base": null,
+      "areas": [],
+      "region": "Franklin County and northwestern Vermont",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "Call Us: (888) 802-1541",
+        "type_quote": "Our experts work to service, restore, and repair vehicles to perform their best.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "We proudly serve campers throughout the region, including St. Albans Town, Swanton, Georgia, Fairfax, Highgate, and Enosburg Falls, as well as travelers coming up from Milton and Colchester or over from the Lake Champlain islands."
+        ]
+      },
+      "reg": "northern-vt"
     }
   ]
 }

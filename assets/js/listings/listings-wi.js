@@ -189,5 +189,65 @@ window.RV_LISTINGS_WI = [
   ],  "base": "sturtevant",  "areas": [
    "sturtevant"
   ],  "region": null,  "spec": null,  "reg": "southeast-wi"
+ },
+ {  "n": "Hanna Trailer Supply",  "c": "Oak Creek, WI",  "p": "414-762-7950",  "u": "https://www.hannarv.com/MilwaukeeTrailerSupply/ServicesMilwaukeeTrailerSupply",  "t": "center",  "e": false,  "r": false,  "d": "Hanna Trailer Supply is an RV and trailer parts and service business at 7575 S Howell Ave in Oak Creek, Wisconsin, serving the Milwaukee area and greater Chicagoland. Its service department runs an RV service center (Class A/B/C motorhomes, fifth wheels, travel trailers, pop-ups, truck campers) plus a full trailer department, covering coach systems, chassis service, body/glass work, fiberglass repair, appliance service (refrigerators, furnaces, water heaters, stoves, A/C), LP gas, axle realignment and inspections. It is an in-shop service center with certified technicians and a large parts inventory.",  "g": [
+   "rv repair shop",
+   "trailer repair",
+   "parts",
+   "appliances",
+   "chassis"
+  ],  "base": "oak creek",  "areas": [],  "region": "Milwaukee metro",  "spec": "RV service center and full-service trailer department (coach, chassis, body, appliances)",  "reg": "southeast-wi"
+ },
+ {  "n": "Prosser's Premium RV Outlet",  "c": "Sturtevant, WI",  "p": "262-898-2610",  "u": "https://www.prosserrv.com/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "Prosser's Premium RV Outlet is an RV dealer with a service department at 13815 Leetsbir Rd in Sturtevant, Wisconsin. Its RV service handles roofs, appliances, slide-outs and awnings, offers RV sanitization and antimicrobial interior treatment, and honors warranty work on units it has sold. It does not perform chassis work on motor vehicles.",  "g": [
+   "rv dealer",
+   "service department",
+   "roof",
+   "appliances",
+   "slide-outs"
+  ],  "base": "sturtevant",  "areas": [],  "region": "Racine County",  "spec": "RV service and repair (roofs, appliances, slide-outs, awnings; no chassis work)",  "reg": "southeast-wi"
+ },
+ {  "n": "Markquart RV - Burlington",  "c": "Burlington, WI",  "p": "262-539-3600",  "u": "https://www.markquartrvburlington.com/rv-service",  "t": "both",  "e": false,  "r": false,  "d": "Markquart RV - Burlington is an RV dealership with a service center at 5712 392nd Ave in Burlington, Wisconsin. Its RVTI-trained, manufacturer-trained technicians service travel trailers, fifth wheels and toy haulers, doing routine maintenance, warranty work and major repairs, and it offers mobile RV repair at campgrounds, private land and homes. It does not complete engine or chassis work on motorized RVs and refers that out.",  "g": [
+   "rv dealer",
+   "service department",
+   "mobile",
+   "warranty"
+  ],  "base": "burlington",  "areas": [],  "region": "Racine/Walworth counties",  "spec": "RV service center for towables plus mobile RV repair (no motorized engine/chassis work)",  "reg": "southeast-wi"
+ },
+ {  "n": "DeHaan RV Center",  "c": "Elkhorn, WI",  "p": "(262) 723-2260",  "u": "https://www.dehaanrv.com/",  "t": "center",  "e": false,  "r": false,  "d": "DeHaan RV Center is a family-owned RV dealership at 9 Deere Road in Elkhorn, Wisconsin, serving Wisconsin and northern Illinois within 50 miles of Chicago and Milwaukee. Alongside sales and rentals of motorhomes, travel trailers, fifth wheels and toy haulers, it runs a service department staffed by factory-trained technicians for RV appliances, plumbing and electrical work and works with all major manufacturers and insurance companies.",  "g": [
+   "rv dealer",
+   "service department",
+   "appliances",
+   "plumbing",
+   "electrical"
+  ],  "base": "elkhorn",  "areas": [],  "region": "Walworth County",  "spec": "RV dealer service department (appliances, plumbing, electrical)",  "reg": "southeast-wi"
+ },
+ {  "n": "A New Leaf RV Tech",  "c": "Waterford, WI",  "p": "(262) 278-0129",  "u": "https://anewleafrvtech.com/contact",  "t": "mobile",  "e": false,  "r": false,  "d": "A New Leaf RV Tech is a family-owned mobile RV repair business based at 107 N 5th St in Waterford, Wisconsin. It performs on-site RV and camper repairs and maintenance  -  appliances, electrical, plumbing, water heaters, leveling systems, HVAC, refrigeration, winterization and preventive maintenance  -  within a 25-mile radius of Waterford (Wisconsin only, excluding Illinois). It states it does not offer emergency services or weekend service, and some larger structural repairs may need a service center.",  "g": [
+   "mobile tech",
+   "appliances",
+   "hvac",
+   "winterization"
+  ],  "base": "waterford",  "areas": [],  "region": "Racine County",  "spec": "Mobile RV repair and maintenance (25-mile radius of Waterford)",  "reg": "southeast-wi"
+ },
+ {  "n": "Camping World RV Service - Sturtevant",  "c": "Sturtevant, WI",  "p": "(888) 262-4923",  "u": "https://rv.campingworld.com/dealer/sturtevant-wisconsin/rv-service-repair",  "t": "center",  "e": false,  "r": false,  "d": "Camping World RV Service - Sturtevant is the local service location of the national Camping World chain at 390 South Sylvania Avenue in Sturtevant, Wisconsin, just off I-94 Exit 334. It provides diagnostics, repairs, routine maintenance, OE and extended warranty work, oil and fluid changes, winterization/de-winterization, RV detailing, and free 22-point inspections and collision estimates, with a 45-point inspection covering inverter/converter, electrical outlets, generators, plumbing, LP systems and appliances. The site also has parts, propane/LP gas, RV sales and a collision center.",  "g": [
+   "service center",
+   "chain",
+   "warranty",
+   "collision",
+   "parts"
+  ],  "base": "sturtevant",  "areas": [],  "region": "Racine County",  "spec": "RV service center (national chain, local shop)",  "reg": "southeast-wi"
+ },
+ {  "n": "Camping World RV Service - DeForest",  "c": "DeForest, WI",  "p": "(888) 264-6191",  "u": "https://rv.campingworld.com/dealer/deforest-wisconsin/rv-service-repair",  "t": "center",  "e": false,  "r": false,  "d": "Camping World RV Service - DeForest is the local service location of the national Camping World chain at 6199 East Metro Drive in DeForest, Wisconsin, about 18 miles from downtown Madison. It provides complete RV service and repair, diagnostics, routine maintenance, OE and extended warranty work, oil and lube changes, winterization/de-winterization, propane/LP gas, appliance service, dump station, and free 22-point inspections and collision estimates, with a 45-point inspection covering the inverter/converter, electrical outlets, generators, plumbing, LP systems and all appliances.",  "g": [
+   "service center",
+   "chain",
+   "warranty",
+   "appliances",
+   "parts"
+  ],  "base": "deforest",  "areas": [],  "region": "Madison area",  "spec": "RV service center (national chain, local shop)",  "reg": "south-central-wi"
+ },
+ {  "n": "K and R Mobile RV Repair, LLC",  "c": "Wisconsin, WI",  "p": "608-547-4494",  "u": "https://krmobilervrepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "K and R Mobile RV Repair, LLC is a mobile RV repair and maintenance business in Wisconsin. Its operator, who has camped for over 45 years, offers on-site maintenance and repair including parts replacement (from fuses to air conditioners). The website is a work in progress and does not publish a street address, so the base place is unconfirmed; the phone number is published on the site.",  "g": [
+   "mobile tech",
+   "maintenance",
+   "parts"
+  ],  "base": null,  "areas": [],  "region": "Wisconsin",  "spec": "Mobile RV repair and maintenance",  "reg": "south-central-wi"
  }
 ];

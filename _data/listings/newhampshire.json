@@ -13,6 +13,10 @@
     {
       "key": "lakes-nh",
       "label": "The Lakes Region"
+    },
+    {
+      "key": "north-nh",
+      "label": "The White Mountains and the north country"
     }
   ],
   "region_of": {
@@ -22,7 +26,49 @@
     "Hudson": "southern-nh",
     "Windham": "southern-nh",
     "Weare": "southern-nh",
-    "Belmont": "lakes-nh"
+    "Belmont": "lakes-nh",
+    "Litchfield": "southern-nh",
+    "Nashua": "southern-nh",
+    "Merrimack": "southern-nh",
+    "Henniker": "southern-nh",
+    "Chichester": "southern-nh",
+    "Epsom": "southern-nh",
+    "Concord": "southern-nh",
+    "West Hopkinton": "southern-nh",
+    "Winchester": "southern-nh",
+    "Manchester": "southern-nh",
+    "Derry": "southern-nh",
+    "Salem": "southern-nh",
+    "Bedford": "southern-nh",
+    "Hooksett": "southern-nh",
+    "Keene": "southern-nh",
+    "Peterborough": "southern-nh",
+    "Claremont": "southern-nh",
+    "Kingston": "seacoast-nh",
+    "Dover": "seacoast-nh",
+    "Portsmouth": "seacoast-nh",
+    "Exeter": "seacoast-nh",
+    "Hampton": "seacoast-nh",
+    "Durham": "seacoast-nh",
+    "Somersworth": "seacoast-nh",
+    "Epping": "seacoast-nh",
+    "Plymouth": "lakes-nh",
+    "Laconia": "lakes-nh",
+    "Gilford": "lakes-nh",
+    "Meredith": "lakes-nh",
+    "Wolfeboro": "lakes-nh",
+    "Tilton": "lakes-nh",
+    "Franklin": "lakes-nh",
+    "Bristol": "lakes-nh",
+    "Gorham": "north-nh",
+    "Center Conway": "north-nh",
+    "Conway": "north-nh",
+    "North Conway": "north-nh",
+    "Berlin": "north-nh",
+    "Littleton": "north-nh",
+    "Lincoln": "north-nh",
+    "Colebrook": "north-nh",
+    "Whitefield": "north-nh"
   },
   "listings": [
     {
@@ -261,6 +307,559 @@
         "roadside_quote": null,
         "licence": null
       }
+    },
+    {
+      "n": "RV Evolution",
+      "c": "Litchfield, NH",
+      "p": "603.305.7773",
+      "u": "https://www.rvevolution.net/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "RV Evolution is an NRVIA-certified mobile RV repair and inspection business based in Litchfield, just west of Manchester, run by technician Ron. It performs on-site repair of electrical systems, appliances and plumbing at the customer's location, plus pre-purchase, pre-sale and forever-warranty inspections, new-owner walk-throughs and routine seasonal maintenance such as water-heater and air-conditioner service and winterizing.",
+      "g": [
+        "mobile tech",
+        "electrical",
+        "appliances",
+        "plumbing",
+        "inspections"
+      ],
+      "base": null,
+      "areas": [
+        "Manchester",
+        "Nashua",
+        "Concord",
+        "Derry",
+        "Hooksett"
+      ],
+      "region": "Southern New Hampshire / Greater Manchester",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "603.305.7773",
+        "type_quote": "RV Repair Services",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Litchfield NH"
+        ]
+      },
+      "reg": "southern-nh"
+    },
+    {
+      "n": "Airstream of New Hampshire",
+      "c": "Nashua, NH",
+      "p": "603-880-0032",
+      "u": "https://www.airstreamofnewhampshire.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Airstream of New Hampshire is a Nashua Airstream dealership whose service department is staffed by factory-trained technicians who work exclusively on Airstream travel trailers and touring coaches. The shop handles warranty work and recalls and does roof and seam resealing, axle, brake, bearing and tire service, appliance diagnosis and repair, electrical, plumbing and LP system service, aluminum body and panel repair, and annual maintenance, winterizing and pre-trip inspections.",
+      "g": [
+        "dealer",
+        "service center",
+        "warranty work"
+      ],
+      "base": "Nashua",
+      "areas": [
+        "Manchester",
+        "Merrimack",
+        "Milford"
+      ],
+      "region": "Southern New Hampshire / Nashua area",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "Please call our service department at 603-880-0032 to schedule your service work or fill out the form provided.",
+        "type_quote": "New Hampshire's Airstream Service Specialists",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Airstream of New Hampshire is located in Nashua, making us a convenient destination for Airstream owners throughout the state and surrounding areas."
+        ]
+      }
+    },
+    {
+      "n": "Rte. 125 RV & Marine, Inc.",
+      "c": "Rochester, NH",
+      "p": "603-335-0112",
+      "u": "https://www.theroadiscalling.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Rte. 125 RV & Marine is an RV and marine dealership on Gonic Road in Rochester whose service department repairs campers, travel trailers, motorhomes and fifth wheels. The shop markets itself as an RV repair shop serving the Manchester and Nashua areas and keeps a service department open Tuesday through Saturday.",
+      "g": [
+        "dealer",
+        "service center"
+      ],
+      "base": "Rochester",
+      "areas": [
+        "Dover",
+        "Somersworth",
+        "Portsmouth",
+        "Exeter",
+        "Hampton"
+      ],
+      "region": "Seacoast / Strafford County",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "343 Gonic Rd. | Rochester, NH 03839 603-335-0112 603-335-0112 www.theroadiscalling.com",
+        "type_quote": "RV Repair & Service near Manchester, NH",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Rte. 125 RV & Marine's RV service department can fix your camper and get you back to having fun."
+        ]
+      }
+    },
+    {
+      "n": "Repair My RV Now",
+      "c": "Rochester, NH",
+      "p": "603-818-1171",
+      "u": "https://repairmyrvnow.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "Repair My RV Now is an RVTAA-certified mobile RV repair business based in Rochester that brings on-site service to campgrounds, homes and storage lots within a 100-mile radius across the Seacoast and Lakes Region. It repairs air conditioners, furnaces and heating, water heaters, electrical and batteries, plumbing, slide-outs, leveling systems, roofs, seals, awnings and solar, and offers emergency repair seven days a week plus warranty-friendly work with extended-warranty providers.",
+      "g": [
+        "mobile tech",
+        "appliances",
+        "electrical",
+        "plumbing",
+        "roof",
+        "solar"
+      ],
+      "base": "Rochester",
+      "areas": [
+        "Dover",
+        "Somersworth",
+        "Portsmouth",
+        "Exeter",
+        "Laconia",
+        "Wolfeboro"
+      ],
+      "region": "Seacoast & Lakes Region",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "Phone 603-818-1171",
+        "type_quote": "Professional Mobile RV Repair In Rochester NH",
+        "emergency_quote": "Emergency RV Repair 7 Days A Week!",
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Based in Rochester, New Hampshire, we proudly serve RV owners across the Seacoast and Lakes Region."
+        ]
+      }
+    },
+    {
+      "n": "Campers Inn RV of Kingston",
+      "c": "Kingston, NH",
+      "p": "603-642-5555",
+      "u": "https://www.campersinn.com/kingston/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Campers Inn RV of Kingston is a full-service RV dealership on Route 125 whose service department is staffed by RVDA-RVIA certified technicians. Work includes oil changes for gas and diesel RVs, diesel trucks and diesel generators, gas generator service, single, double and triple axle bearing packs, rubber roof maintenance, complete winterization, RV orientation, and system and appliance checks covering electrical, water, LP gas, air conditioning, water heater, furnace and refrigerator service.",
+      "g": [
+        "dealer",
+        "service center",
+        "warranty work"
+      ],
+      "base": null,
+      "areas": [
+        "Exeter",
+        "Hampton",
+        "Epping",
+        "Brentwood"
+      ],
+      "region": "Seacoast / Rockingham County",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "603-642-5555 www.campersinn.com",
+        "type_quote": "RV Service at Campers Inn RV of Kingston, NH",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": []
+      },
+      "reg": "seacoast-nh"
+    },
+    {
+      "n": "Campers Inn RV of Merrimack",
+      "c": "Merrimack, NH",
+      "p": "603-642-5555",
+      "u": "https://www.campersinn.com/merrimack/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Campers Inn RV of Merrimack is an RV dealership service department run by RVDA-RVIA certified technicians. The shop performs the full range of RV service including roofs, brakes, inspections, warranty work and wheel and tire maintenance, plus oil changes for gas and diesel RVs, diesel trucks and diesel generators, bearing packs, rubber roof maintenance, winterization, orientation, and electrical, water, LP gas and appliance system checks.",
+      "g": [
+        "dealer",
+        "service center",
+        "warranty work"
+      ],
+      "base": null,
+      "areas": [
+        "Nashua",
+        "Bedford",
+        "Milford",
+        "Amherst"
+      ],
+      "region": "Southern New Hampshire / Merrimack area",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "603-642-5555 www.campersinn.com",
+        "type_quote": "RV Service at Campers Inn RV of Merrimack, NH",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": []
+      },
+      "reg": "southern-nh"
+    },
+    {
+      "n": "All American RV Repair, LLC",
+      "c": "Henniker, NH",
+      "p": "603-717-4519",
+      "u": "https://www.allamericanrvnh.com/services-4",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "All American RV Repair is a family-owned RV repair shop in Henniker, west of Concord, run by owners Joe and Bri with more than 15 years in the trade. The shop does regular maintenance, storm and accident damage repair with insurance-carrier coordination, upgrades and replacements, flat-tow base-plate and braking-system setup and Liquid Rubber roof coating, and it also offers on-site service that comes to the customer during a trip.",
+      "g": [
+        "service center",
+        "mobile tech",
+        "body work",
+        "roof",
+        "warranty work"
+      ],
+      "base": null,
+      "areas": [
+        "Concord",
+        "Hillsborough",
+        "Weare",
+        "Keene"
+      ],
+      "region": "Central New Hampshire / Henniker area",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "603-717-4519",
+        "type_quote": "Trust our experts to provide high-quality repair service for your motorhome or camper.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "On-Site Service"
+        ]
+      },
+      "reg": "southern-nh"
+    },
+    {
+      "n": "Bill's RV Service Inc.",
+      "c": "Chichester, NH",
+      "p": "603-798-3000",
+      "u": "https://billsrvserviceinc.com/",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "Bill's RV Service is a used-RV dealer and repair shop on Dover Road in Chichester that has been buying, selling and servicing RVs since 1978. Its technicians handle all types of RV repairs and maintenance, from routine inspections to major overhauls, and the business also advertises on-site and mobile service for campers.",
+      "g": [
+        "dealer",
+        "service center",
+        "mobile tech",
+        "used rv"
+      ],
+      "base": null,
+      "areas": [
+        "Concord",
+        "Epsom",
+        "Pittsfield",
+        "Loudon"
+      ],
+      "region": "Central New Hampshire / Chichester area",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "CALL : 603-798-3000",
+        "type_quote": "BILL'S RV SERVICE INC For Used RV's and Service",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "27 Dover Road Chichester, NH 03258"
+        ]
+      },
+      "reg": "southern-nh"
+    },
+    {
+      "n": "Blue Compass RV New Hampshire",
+      "c": "Epsom, NH",
+      "p": "(603) 736-8363",
+      "u": "https://www.bluecompassrv.com/locations/new-hampshire/epsom/service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Blue Compass RV New Hampshire is an RV dealership and service center on Dover Road in Epsom that serves central New Hampshire from Concord to Manchester and the Lakes Region. Its certified technicians handle pre-season de-winterization, post-trip repairs, warranty work, appliance service and slide-out adjustments along with routine maintenance, engine and transmission service, electrical, plumbing, roof, HVAC, appliance and collision repair, and every visit includes a free multi-point inspection.",
+      "g": [
+        "dealer",
+        "service center",
+        "warranty work",
+        "collision",
+        "appliances"
+      ],
+      "base": null,
+      "areas": [
+        "Concord",
+        "Manchester",
+        "Derry",
+        "Laconia"
+      ],
+      "region": "Central New Hampshire / Epsom area",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "2060 Dover Road, Epsom, NH 03234 (603) 736-8363 (+16037368363)",
+        "type_quote": "Blue Compass RV New Hampshire Service Center",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "We handle everything from pre-season de-winterization to post-trip repairs, warranty work, appliance service, and slide-out adjustments."
+        ]
+      },
+      "reg": "southern-nh"
+    },
+    {
+      "n": "Cold Springs RV",
+      "c": "Weare, NH",
+      "p": "603-529-2222",
+      "u": "https://www.coldspringsrv.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Cold Springs RV is an RV dealership on South Stark Highway in Weare that describes itself as New Hampshire's top RV sales, service and RV body shop. Alongside new and pre-owned sales it runs a service department and body shop, with service hours Monday through Friday.",
+      "g": [
+        "dealer",
+        "service center",
+        "body work"
+      ],
+      "base": null,
+      "areas": [
+        "Manchester",
+        "Concord",
+        "Henniker",
+        "Bedford"
+      ],
+      "region": "Southern New Hampshire / Weare area",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "603-529-2222 (+16035292222) 530 S Stark Hwy, Weare, NH 03281",
+        "type_quote": "New Hampshire's Top RV Sales, Service and RV Body Shop",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "530 S Stark Hwy, Weare NH 03281"
+        ]
+      },
+      "reg": "southern-nh"
+    },
+    {
+      "n": "Outdoor Sports Center, Inc.",
+      "c": "Concord, NH",
+      "p": "(603) 228-8600",
+      "u": "https://www.outdoorsportscenter.net/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Outdoor Sports Center is a family-owned RV dealer on Manchester Street in Concord that has operated since 1965. Its service department does general repair on travel trailers and pop-ups and also services motorhomes, and the store keeps a stocked parts and supply department for RV maintenance.",
+      "g": [
+        "dealer",
+        "service center",
+        "parts"
+      ],
+      "base": "Concord",
+      "areas": [
+        "Bow",
+        "Pembroke",
+        "Loudon",
+        "Boscawen"
+      ],
+      "region": "Central New Hampshire / Concord area",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "Outdoor Sports Center 79 Manchester St. Concord, NH 03301 Phone: (603) 228-8600",
+        "type_quote": "General repair, but not mechanical work, is available on all travel trailers and pop-ups-even on motorhomes.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Outdoor Sports Center 79 Manchester St. Concord, NH 03301 Phone: (603) 228-8600"
+        ]
+      }
+    },
+    {
+      "n": "Wandering Days Mobile RV Maintenance & Repair",
+      "c": "West Hopkinton, NH",
+      "p": "603-583-1584",
+      "u": "https://wanderingdaysmobilervmaintenance-repair.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Wandering Days Mobile RV Maintenance & Repair is an NRVTA-certified mobile RV technician service run by Aaron Day out of West Hopkinton, in the Concord area, that travels to customers. It services axles, bearings and drums, leaf springs, flooring, water heaters, air conditioners, generators, heaters, leveling systems, refrigerators, roofs, slide-outs and winter prep.",
+      "g": [
+        "mobile tech",
+        "appliances",
+        "roof",
+        "slide-outs",
+        "generators"
+      ],
+      "base": null,
+      "areas": [
+        "Henniker",
+        "Concord",
+        "Hillsborough",
+        "Warner"
+      ],
+      "region": "Central New Hampshire / Hopkinton area",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "Contact me at 603-583-1584",
+        "type_quote": "Wandering Days Mobile Rv Maintenance & Repair",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": []
+      },
+      "reg": "southern-nh"
+    },
+    {
+      "n": "RV Doctor",
+      "c": "Gorham, NH",
+      "p": "603-723-4200",
+      "u": "https://rvdoctornh.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "RV Doctor is a mobile RV and camper repair business based in Gorham that comes to the customer's location in the northern White Mountains. The registered RV technician, with almost thirty years of RV experience and a fire and EMS background, handles RV and camper repair, emergency light installation, replacement parts and winterization.",
+      "g": [
+        "mobile tech",
+        "parts",
+        "winterization"
+      ],
+      "base": null,
+      "areas": [
+        "Berlin",
+        "Lancaster",
+        "Littleton",
+        "Conway"
+      ],
+      "region": "North Country / Coos County",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "Call 603-723-4200 today to speak with a reputable camper repair company based in Gorham, NH and serving surrounding areas.",
+        "type_quote": "Rely on RV Doctor for your mobile camper repair services in Gorham, NH",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Gorham, NH 03581 (603) 723-4200"
+        ]
+      },
+      "reg": "north-nh"
+    },
+    {
+      "n": "Road to Freedom RV, LLC",
+      "c": "Plymouth, NH",
+      "p": "603-726-6053",
+      "u": "https://www.roadtofreedomrv.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Road to Freedom RV is an NRVIA-certified inspector and RVTAA-registered technician mobile RV business currently located in Plymouth. It offers mobile RV inspection, repair and maintenance, including annual Life and Safety inspections, AC, water-heater, fresh-water sanitizing, roof and seal checks, tire and propane inspections, hitch and jack maintenance and generator tests, plus campsite set-up and walk-through sessions and pre-purchase consultation.",
+      "g": [
+        "mobile tech",
+        "inspections",
+        "maintenance",
+        "appliances"
+      ],
+      "base": null,
+      "areas": [
+        "Plymouth",
+        "Rumney",
+        "Campton",
+        "Ashland"
+      ],
+      "region": "Lakes Region / Plymouth area",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "603-726-6053",
+        "type_quote": "RV Inspection ~ Repair ~ Service Consulting",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Currently Located in Plymouth NH"
+        ]
+      },
+      "reg": "lakes-nh"
+    },
+    {
+      "n": "Camping World Center Conway",
+      "c": "Center Conway, NH",
+      "p": "(888) 841-9646",
+      "u": "https://rv.campingworld.com/dealer/center-conway-new-hampshire/rv-service-repair",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Camping World's Center Conway location is a full RV dealership and service center on East Main Street in the Mount Washington Valley. Its service department performs complete diagnostics and repair for all RV types, routine maintenance such as oil and fluid changes, lube and winterization, appliance and roof repair, warranty and extended-warranty work, leak checks, propane service and tire installation, and offers mobile service.",
+      "g": [
+        "dealer",
+        "service center",
+        "warranty work",
+        "appliances",
+        "roof"
+      ],
+      "base": null,
+      "areas": [
+        "North Conway",
+        "Conway",
+        "Bartlett",
+        "Albany"
+      ],
+      "region": "Mount Washington Valley / Carroll County",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "(888) 841-9646 (8888419646)",
+        "type_quote": "RV Service, Maintenance, & Repair at Camping World",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "1571 East Main StreetCenter Conway, NH 03813-6520"
+        ]
+      },
+      "reg": "north-nh"
+    },
+    {
+      "n": "Big Daddy's RV Sales & Services",
+      "c": "Winchester, NH",
+      "p": "(603) 239-7444",
+      "u": "http://bigdaddysrv.com/",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "Big Daddy's RV Sales & Service is a family-owned RV sales and service facility on Main Street in Winchester, in the Connecticut River Valley, operating since 2010. The shop works on all makes and models of RVs and also concession trailers, food trucks, horse trailers and utility trailers, doing insurance and warranty jobs, restorations, refrigeration, heating and cooling, fresh water and holding-tank work, slide-out and awning maintenance, roof replacement and canvas replacement, and it runs a seasonal mobile repair service to local campgrounds.",
+      "g": [
+        "dealer",
+        "service center",
+        "mobile tech",
+        "warranty work",
+        "body work"
+      ],
+      "base": null,
+      "areas": [
+        "Keene",
+        "Hinsdale",
+        "Swanzey",
+        "Charlestown"
+      ],
+      "region": "Southwest New Hampshire / Cheshire County",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "15 Main Street, Winchester, NH 03470-3153 (603) 239-7444",
+        "type_quote": "Shop Work- Service on all Makes & Models!",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "We offer a Mobile Repair Service right to your Campsite during the Summer!"
+        ]
+      },
+      "reg": "southern-nh"
     }
   ]
 }
