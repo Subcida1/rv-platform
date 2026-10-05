@@ -1201,5 +1201,90 @@ window.RV_LISTINGS_CA = [
    "twain harte",
    "groveland"
   ],  "region": "The Sierra and the Eastern Sierra",  "reg": "sierra-east"
+ },
+ {  "n": "Tru-Line Automotive",  "c": "Los Angeles, CA",  "p": "818-780-1288",  "u": "https://trulineautomotive.com/rv-repair/",  "t": "center",  "e": false,  "r": false,  "d": "Tru-Line Automotive is an RV repair, maintenance and restoration shop at 14920 Delano Street in Van Nuys. It performs chassis-related repairs on motorhomes, travel trailers, truck campers and tent trailers, plus wheel alignment, collision repair, frame repair, brakes, paint and body, A/C, generators, oil changes and van/RV conversions. It works with all major insurers and handles extended factory maintenance.",  "g": [
+   "shop"
+  ],  "base": "los angeles",  "areas": [
+   "van nuys"
+  ],  "region": "Los Angeles and Orange County",  "spec": "RV repair, collision and frame shop",  "reg": "la-county"
+ },
+ {  "n": "Snells RV",  "c": "El Monte, CA",  "p": "909-300-5409",  "u": "https://snellsrv.com/",  "t": "center",  "e": false,  "r": false,  "d": "Snells RV Repair is an RV collision repair, service and maintenance shop in El Monte (91731). It handles frame straightening, bodywork and paint, fiberglass patching, RV electrical (12V/120V), HVAC, plumbing, roof repair, slide-out repair and preventive maintenance, and offers free no-obligation estimates for RVs, motorhomes and trailers.",  "g": [
+   "shop"
+  ],  "base": "el monte",  "areas": [],  "region": "Los Angeles and Orange County",  "spec": "RV collision and service shop",  "reg": "la-county"
+ },
+ {  "n": "Liebsack Auto Services",  "c": "Gardena, CA",  "p": "(310) 324-0463",  "u": "https://www.liebsackautogardena.com/auto-services-gardena/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "Liebsack Auto Services is an auto and RV repair shop at 1928 Redondo Beach Blvd in Gardena. It provides RV pre-trip inspections, preventive maintenance, oil and filter changes, suspension and steering repair, and RV electrical service and repair for RVs in Gardena and the surrounding South Bay area.",  "g": [
+   "shop"
+  ],  "base": "gardena",  "areas": [],  "region": "Los Angeles and Orange County",  "spec": "Auto and RV service shop",  "reg": "la-county"
+ },
+ {  "n": "Penske RV & Truck Service Center",  "c": "Cerritos, CA",  "p": "877-772-3022",  "u": "https://www.penskechevroletofcerritos.com/Penske-RV-and-Truck-Service-Center",  "t": "center",  "e": false,  "r": false,  "d": "Penske RV & Truck Service Center is the RV service department at Penske Chevrolet of Cerritos, 18605 Studebaker Rd in the Cerritos Auto Square. It is the official RV Workhorse warranty dealer and services all makes and models of motorhomes, including diesel pusher coaches, with appliance and refrigeration repair, motorhome reseals, roof and water heater service, generator service, chassis, brakes and shocks, and RV alignments. The location is also a Chevrolet dealership.",  "g": [
+   "dealer service",
+   "shop"
+  ],  "base": "cerritos",  "areas": [],  "region": "Los Angeles and Orange County",  "spec": "RV dealer with service department",  "reg": "la-county"
+ },
+ {  "n": "Nick's Mobile RV & Trailer Repair",  "c": "West Covina, CA",  "p": "(800) 577-6110",  "u": "https://nicksmobilerepair.com/",  "t": "mobile",  "e": true,  "r": false,  "d": "Nick's Mobile RV & Trailer Repair is a mobile RV and trailer repair service based in West Covina covering the San Gabriel Valley and greater Los Angeles and Orange County. Its certified technician handles electrical and generators, plumbing and water systems, appliance repair, awnings and slide-outs, roof and sealant repair, and trailer brakes and axles, with same-day and emergency service available.",  "g": [
+   "mobile"
+  ],  "base": "west covina",  "areas": [],  "region": "Los Angeles and Orange County",  "spec": "Mobile RV and trailer repair",  "reg": "la-county"
+ },
+ {  "n": "Exclusive RV Services",  "c": "Pomona, CA",  "p": "(909) 465-9492",  "u": "https://indoorrvstorage.com/rv-repair-pomona/",  "t": "center",  "e": false,  "r": false,  "d": "Exclusive RV Services, Inc. is a full-service RV repair, maintenance and remodeling facility at 1353 Philadelphia Street, Unit 100 in Pomona. It services Class A, B and C motorhomes, fifth wheels and travel trailers with general RV repair, engine and transmission service, oil and lube, body work and collision repair, exterior painting and interior remodeling, alongside on-site indoor storage and detailing.",  "g": [
+   "shop"
+  ],  "base": "pomona",  "areas": [],  "region": "Los Angeles and Orange County",  "spec": "Full-service RV repair and storage facility",  "reg": "inland-empire"
+ },
+ {  "n": "Rich's RV Care and Inspection",  "c": "Palmdale, CA",  "p": "(661) 499-4746",  "u": "https://rv-pdi.com/services",  "t": "mobile",  "e": false,  "r": false,  "d": "Rich's RV Care and Inspection LLC is a mobile RV repair and preventative maintenance service based in Palmdale serving the Antelope Valley. It performs appliance and system service, generator diagnostics and tune-ups, roof and exterior caulking, suspension, wheel bearing repack and brake inspection, slide-out adjustment and plumbing work at the customer's location.",  "g": [
+   "mobile"
+  ],  "base": "palmdale",  "areas": [],  "region": "Los Angeles and Orange County",  "spec": "Mobile RV repair and maintenance",  "reg": "la-county"
+ },
+ {  "n": "RV Rescue",  "c": "Santa Clarita, CA",  "p": "(858) 255-4464",  "u": "https://rvrescue.org/",  "t": "mobile",  "e": true,  "r": false,  "d": "RV Rescue is a mobile RV repair service based at 24307 Magic Mountain Parkway, #324 in Valencia (Santa Clarita), serving Los Angeles and Ventura Counties. Its certified mobile RV technicians handle A/C, furnaces, electrical systems, generators, leveling systems, water heaters, refrigerators, appliances, slideouts, awnings and solar, with emergency service available.",  "g": [
+   "mobile"
+  ],  "base": "santa clarita",  "areas": [
+   "valencia"
+  ],  "region": "Los Angeles and Orange County",  "spec": "Mobile RV repair service",  "reg": "la-county"
+ },
+ {  "n": "Conner Auto Inc.",  "c": "Santa Clarita, CA",  "p": "661-290-2596",  "u": "https://www.connerautoinc.com/Santa-Clarita-rv-repair.html",  "t": "center",  "e": false,  "r": false,  "d": "Conner Auto Inc. is an auto and RV repair shop at 25835 Railroad Avenue #24-25 in Santa Clarita that has served the area since 1999. Its qualified mechanics service and repair RVs in the Santa Clarita area alongside general automotive work, including brakes, A/C, electrical, engine and transmission service, and it offers a 2-year/24,000-mile warranty with roadside assistance.",  "g": [
+   "shop"
+  ],  "base": "santa clarita",  "areas": [],  "region": "Los Angeles and Orange County",  "spec": "Auto and RV repair shop",  "reg": "la-county"
+ },
+ {  "n": "Giant RV Downey",  "c": "Downey, CA",  "p": "(562) 516-1773",  "u": "https://giantrv.com/locations/downey-ca",  "t": "center",  "e": false,  "r": false,  "d": "Giant RV Downey is an RV dealership with a full service and parts department at 11111 Florence Ave in Downey, serving Downey, Long Beach, Los Angeles and Orange County. Its service department handles RV repair, maintenance and warranty repair, roof repair and inspection, electrical and plumbing repair, A/C repair, generator service, water leak repair and slide-out repair.",  "g": [
+   "dealer service",
+   "shop"
+  ],  "base": "downey",  "areas": [],  "region": "Los Angeles and Orange County",  "spec": "RV dealer with service department",  "reg": "la-county"
+ },
+ {  "n": "Malibu Mobile Mechanic",  "c": "Culver City, CA",  "p": "310-651-8020",  "u": "https://malibumobilemechanic.com/rv-repairs-in-culver-city/",  "t": "mobile",  "e": false,  "r": false,  "d": "Malibu Mobile Mechanic provides mobile RV mechanical repair in Culver City and nearby areas, coming to the customer's driveway, campground or storage facility. Its mobile RV team handles engine diagnostics and repair, cooling systems, brakes, suspension, electrical troubleshooting and wiring, generator tune-ups and exhaust repair, plus preventive maintenance.",  "g": [
+   "mobile"
+  ],  "base": "culver city",  "areas": [],  "region": "Los Angeles and Orange County",  "spec": "Mobile RV mechanical repair",  "reg": "la-county"
+ },
+ {  "n": "Infinite RV Mobile Service & Repair",  "c": "Anaheim, CA",  "p": "(714) 248-7855",  "u": "https://infinitervserviceandrepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Infinite RV Mobile Service & Repair is a mobile RV repair business in Anaheim serving Orange County. It specializes in motorhome and trailer mobile service and repair, covering electrical systems, water heater and plumbing repairs, roof and leak repair, tank services, battery and solar upgrades, and routine maintenance like roof reseals, and works with warranties and extended service contracts.",  "g": [
+   "mobile"
+  ],  "base": "anaheim",  "areas": [],  "region": "Los Angeles and Orange County",  "spec": "Mobile RV repair service",  "reg": "la-county"
+ },
+ {  "n": "Premier Motorcoach Innovations",  "c": "Santa Ana, CA",  "p": "714-252-4455",  "u": "https://www.premiermotorcoach.com/contact",  "t": "center",  "e": false,  "r": false,  "d": "Premier Motorcoach Innovations is an RV and commercial truck collision repair shop at 1946 E. Occidental Street in Santa Ana. It handles RV collision repair, RV house and RV interior work and remodels, and positions itself as an alternative to big RV dealers for Orange County owners. It is open 7am to 4pm Monday through Friday near John Wayne Airport.",  "g": [
+   "shop"
+  ],  "base": "santa ana",  "areas": [],  "region": "Los Angeles and Orange County",  "spec": "RV and truck collision repair shop",  "reg": "la-county"
+ },
+ {  "n": "Farace's Automotive",  "c": "Huntington Beach, CA",  "p": "(714) 847-0352",  "u": "https://faracerv.com/",  "t": "center",  "e": false,  "r": false,  "d": "Farace's Automotive (Farace RV) is a veteran-family-owned RV repair and restoration shop at 18262 Gothard St. in Huntington Beach, serving Orange County since 1976. It handles mechanical and systems work, exterior and collision repair, interior repair and upgrades, trailer and fifth wheel repair, generator and electrical systems, and windshield, awning and topper service, and coordinates with insurers and extended warranties.",  "g": [
+   "shop"
+  ],  "base": "huntington beach",  "areas": [],  "region": "Los Angeles and Orange County",  "spec": "RV repair and restoration shop",  "reg": "la-county"
+ },
+ {  "n": "We Go 2 U Mobile Mechanic",  "c": "Irvine, CA",  "p": "(949) 288-3506",  "u": "https://wego2umobilemechanic.com/rv-repair-in-irvine/",  "t": "mobile",  "e": false,  "r": false,  "d": "We Go 2 U Mobile Mechanic is a mobile RV repair service based in Irvine covering Orange County. It provides on-site RV repair and maintenance at the customer's home, storage facility, campground or approved location, covering engine diagnostics, electrical systems, batteries, brakes, cooling systems, generators, suspension, plumbing and appliances.",  "g": [
+   "mobile"
+  ],  "base": "irvine",  "areas": [],  "region": "Los Angeles and Orange County",  "spec": "Mobile RV repair service",  "reg": "la-county"
+ },
+ {  "n": "RV Repair Huntington Beach",  "c": "Huntington Beach, CA",  "p": "714-465-5199",  "u": "https://www.rvrepairshuntingtonbeach.com/",  "t": "center",  "e": false,  "r": false,  "d": "RV Repair Huntington Beach is a family-owned and operated RV repair shop at 7662 Slater Ave., Unit A in Huntington Beach, in the same location for over 25 years. Its ASE Master Certified technicians handle A/C, brakes, diagnostics, driveline, electrical, suspension and transmission repair, scheduled and seasonal maintenance and oil changes for Class A, B and C motorhomes, with a 3-Year/36,000 Mile warranty on many repairs.",  "g": [
+   "shop"
+  ],  "base": "huntington beach",  "areas": [],  "region": "Los Angeles and Orange County",  "spec": "RV repair shop",  "reg": "la-county"
+ },
+ {  "n": "Jack's Mobile Mastery",  "c": "Garden Grove, CA",  "p": "714-394-1084",  "u": "https://www.jacksmobilerv.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Jack's Mobile Mastery (Jacks Mobile RV Services) is a locally owned and operated mobile RV repair business in Garden Grove, operating for over 9 years. Owner-operator Jack handles electrical, slideouts, propane/LP systems, leveling, appliance repairs, heating and air conditioning, towing, plumbing, roofing, preventative maintenance, awnings and slide toppers, and warranty and insurance repair support.",  "g": [
+   "mobile"
+  ],  "base": "garden grove",  "areas": [],  "region": "Los Angeles and Orange County",  "spec": "Mobile RV repair service",  "reg": "la-county"
+ },
+ {  "n": "Orange County Mobile Auto Repair",  "c": "Anaheim, CA",  "p": "714-709-4594",  "u": "https://orangecountymobileautorepair.com/rv-repairs-in-anaheim/",  "t": "mobile",  "e": false,  "r": false,  "d": "Orange County Mobile Auto Repair is a mobile mechanic service that provides on-site RV repairs in Anaheim and across Orange County. Its mobile technicians handle HVAC and cooling diagnostics, brake maintenance, exterior lighting, roof and side panel sealant repairs, electrical troubleshooting and fuse replacement, batteries and charging systems, generator diagnostics and repair, and water system leaks and pump replacements for Class A, B and C motorhomes, travel trailers and fifth wheels.",  "g": [
+   "mobile"
+  ],  "base": "anaheim",  "areas": [],  "region": "Los Angeles and Orange County",  "spec": "Mobile RV repair service",  "reg": "la-county"
+ },
+ {  "n": "Airstream Orange County",  "c": "Midway City, CA",  "p": "714-650-8595",  "u": "https://www.airstreamorangecounty.com/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "Airstream Orange County is a family-owned Airstream dealership with an authorized service department at 15086 Beach Boulevard in Midway City, near Westminster. Its factory-trained master technicians service and repair all Airstream models as well as all makes and models of recreational vehicles, and the dealership also sells new and pre-owned units and offers RV storage.",  "g": [
+   "dealer service",
+   "shop"
+  ],  "base": "midway city",  "areas": [
+   "westminster"
+  ],  "region": "Los Angeles and Orange County",  "spec": "RV dealer with authorized service department",  "reg": "la-county"
  }
 ];

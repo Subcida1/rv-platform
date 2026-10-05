@@ -140,5 +140,153 @@ window.RV_LISTINGS_NY = [
    "parts",
    "body shop"
   ],  "base": "peekskill",  "areas": [],  "region": "Peekskill, New York",  "spec": null,  "reg": "hudson-valley-ny"
+ },
+ {  "n": "Alpin Haus RV",  "c": "Amsterdam, NY",  "p": "518-655-1621",  "u": "https://www.alpinhausrv.com/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "Alpin Haus RV runs a full RV service and repair department at its Amsterdam, New York location, servicing Class A and Class C motorhomes, travel trailers, fifth wheels, camper vans and toy haulers of all major brands. Work includes roofs, appliances, slide-outs, awnings, engine and chassis service, generators, LP gas systems, water systems and annual maintenance inspections.",  "g": [
+   "dealer service dept",
+   "rv service center",
+   "maintenance"
+  ],  "base": "amsterdam",  "areas": [
+   "albany",
+   "schenectady",
+   "troy",
+   "saratoga springs"
+  ],  "region": "the Greater Capital District of New York",  "spec": null,  "reg": "hudson-valley-ny"
+ },
+ {  "n": "Rowland Street Garage",  "c": "Ballston Spa, NY",  "p": "(518) 885-9882",  "u": "https://www.rowlandstreetgarage.com/Auto-Repair/RV-Repairs",  "t": "center",  "e": false,  "r": false,  "d": "Rowland Street Garage at 325 Rowland St. in Ballston Spa, New York operates an RV repair service for Class A and Class C motorhomes, campers, travel trailers and coaches, and is a one-stop RV tire shop. It handles exhaust, engine, cooling system and driveshaft repairs, dashboard lights and engine electrical components, wheel alignments and tire repairs.",  "g": [
+   "rv repair shop",
+   "tires",
+   "chassis service"
+  ],  "base": "ballston spa",  "areas": [
+   "saratoga springs",
+   "clifton park"
+  ],  "region": "Ballston Spa, Saratoga Springs and Clifton Park",  "spec": null,  "reg": "hudson-valley-ny"
+ },
+ {  "n": "Brian's RV Repair & Service",  "c": "Fultonville, NY",  "p": "(518) 922-6990",  "u": "https://briansrvrepair.com/",  "t": "both",  "e": false,  "r": false,  "d": "Brian's RV Repair & Service is a certified RV repair business based in Fultonville, New York with more than 25 years in the industry, working on-site or mobile. It handles comprehensive RV repair from roof repairs to appliance fixes, including furnace, refrigerator, plumbing, heating and flooring service, and provides free estimates before work begins.",  "g": [
+   "rv repair shop",
+   "mobile tech",
+   "appliance repair"
+  ],  "base": "fultonville",  "areas": [
+   "montgomery",
+   "fulton",
+   "schenectady",
+   "otsego",
+   "rensselaer"
+  ],  "region": "a 40-mile radius of Fultonville",  "spec": null,  "reg": "hudson-valley-ny"
+ },
+ {  "n": "Blue Compass RV Albany",  "c": "Latham, NY",  "p": "(518) 459-4695",  "u": "https://www.bluecompassrv.com/locations/new-york/albany/service",  "t": "center",  "e": false,  "r": false,  "d": "Blue Compass RV Albany operates a service center at 48 Rensselaer Ave in Latham, New York, serving the Capital Region. Certified technicians work on all major brands and cover routine oil changes, roof resealing, warranty repairs, appliance service, slide-out adjustments, full electrical diagnostics, engine and transmission work, plumbing, HVAC and collision/body work. Every RV gets a free multi-point inspection.",  "g": [
+   "dealer service dept",
+   "rv service center",
+   "collision repair"
+  ],  "base": "latham",  "areas": [
+   "albany",
+   "troy",
+   "schenectady",
+   "saratoga springs"
+  ],  "region": "the Capital Region",  "spec": null,  "reg": "hudson-valley-ny"
+ },
+ {  "n": "Albany Light Truck & Car Repair",  "c": "Albany, NY",  "p": "518-437-0304",  "u": "https://www.autorepairalbany.com/Albany-rv-repair-service.html",  "t": "center",  "e": false,  "r": false,  "d": "Albany Light Truck & Car Repair runs an RV repair and service center at 6 Anderson Drive in Albany, New York, just off I-90 at the Everett Road Exit 5. It is equipped to repair most makes and models of motorhome or travel trailer and specialises in OEM service, oil changes, tires, emission, electronic and electrical systems, engines, transmissions, chassis, brakes, steering, suspension, exhaust, air conditioning and tow hitches.",  "g": [
+   "rv chassis repair",
+   "tires",
+   "engine and transmission"
+  ],  "base": "albany",  "areas": [],  "region": "Albany",  "spec": null,  "reg": "hudson-valley-ny"
+ },
+ {  "n": "Diederich's RV Mart",  "c": "West Coxsackie, NY",  "p": "(518) 731-6492",  "u": "https://thervmart.com/",  "t": "both",  "e": false,  "r": false,  "d": "Diederich's RV Mart is a family-owned RV dealer at 12319 Rt. 9W in West Coxsackie, New York, in business since 1981, offering RV sales, parts and services. It runs a mobile repair service that comes to the customer's campsite or home, and keeps a full parts and accessories store with a propane filling station.",  "g": [
+   "dealer service dept",
+   "mobile tech",
+   "parts and propane"
+  ],  "base": null,  "areas": [],  "region": "Greene County and the upper Hudson Valley",  "spec": null,  "reg": "hudson-valley-ny"
+ },
+ {  "n": "Camping World - West Coxsackie",  "c": "West Coxsackie, NY",  "p": "(833) 583-1660",  "u": "https://rv.campingworld.com/dealer/west-coxsackie-new-york/rv-service-repair",  "t": "center",  "e": false,  "r": false,  "d": "Camping World of West Coxsackie operates an RV service and repair center at 12634 State Route 9W in West Coxsackie, New York, just off the New York State Thruway south of Albany. Services include annual maintenance, OE and extended warranty work, RV repair, appliance repair, multi-point diagnostics, winterization and de-winterization, and performance installation of upgrades such as power and leveling systems.",  "g": [
+   "dealer service dept",
+   "rv service center",
+   "warranty work"
+  ],  "base": null,  "areas": [],  "region": "the Hudson Valley and the I-87 corridor",  "spec": null,  "reg": "hudson-valley-ny"
+ },
+ {  "n": "Leatherstocking RV",  "c": "Oneonta, NY",  "p": "607-433-2366",  "u": "https://www.leatherstockingrv.org/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "Leatherstocking RV is an RV dealership at 5244 State Highway 23 in Oneonta, New York with a service department staffed by RV service experts. Customers can bring an RV in for inspection and repair or submit a service request for work to get the RV back on the road.",  "g": [
+   "dealer service dept",
+   "rv service center"
+  ],  "base": "oneonta",  "areas": [],  "region": "Oneonta and the Leatherstocking region",  "spec": null,  "reg": "southern-tier-ny"
+ },
+ {  "n": "Oliver's Campers",  "c": "Norwich, NY",  "p": "607-334-3400",  "u": "https://www.oliverscampers.com/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "Oliver's Campers operates an RV service department at 6460 State Highway 12 in Norwich, New York, staffed with trained technicians who service motorhomes and trailers, and is a Winnebago dealer. A second service location operates at 2843 US Route 11 in LaFayette near Syracuse.",  "g": [
+   "dealer service dept",
+   "rv service center"
+  ],  "base": "norwich",  "areas": [
+   "lafayette",
+   "syracuse"
+  ],  "region": "Norwich and the Syracuse area",  "spec": null,  "reg": "southern-tier-ny"
+ },
+ {  "n": "King of Spades Mobile RV Repair",  "c": "Windsor, NY",  "p": "(607) 201-2110",  "u": "https://www.kingofspadesmobilervrepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "King of Spades Mobile RV Repair is based in Windsor, New York and offers year-round mobile RV and trailer system repair. The owner is an NRVTA-certified RV technician, and services include diagnostics and repairs, winterization and de-winterization, roof inspection and sealing, water heater upgrades and AC coil cleaning.",  "g": [
+   "mobile tech",
+   "rv repair"
+  ],  "base": "windsor",  "areas": [],  "region": "Broome County and the Southern Tier",  "spec": null,  "reg": "southern-tier-ny"
+ },
+ {  "n": "Hartleys Auto & RV Center",  "c": "Munsons Corners, NY",  "p": "(607) 756-5302",  "u": "https://www.cortlandrv.com/rv-dealer/service",  "t": "center",  "e": false,  "r": false,  "d": "Hartleys Auto & RV Center (Cortland RV) operates an RV service department at 882 NY-13 in Munsons Corners, New York, servicing all makes and models of RVs. It handles RV roofs, appliances, slide-outs and awnings plus manufacturer recalls and warranty work, along with suspension, wheel bearing, axle and brake service.",  "g": [
+   "dealer service dept",
+   "rv service center",
+   "warranty work"
+  ],  "base": "munsons corners",  "areas": [],  "region": "Cortland and central New York",  "spec": null,  "reg": "southern-tier-ny"
+ },
+ {  "n": "Autoworks",  "c": "Ithaca, NY",  "p": "(607) 277-9989",  "u": "https://autoworksithaca.com/services/rv-service-repairs",  "t": "center",  "e": true,  "r": false,  "d": "Autoworks in Ithaca, New York, at 1278 Dryden Rd, repairs and maintains gas and diesel RVs and motorhomes of any size. It handles brake systems, engines, transmissions, tires, suspensions, pumps and electronics, provides engine diagnostics and inspections, and offers emergency repairs for travellers.",  "g": [
+   "rv repair shop",
+   "engine and chassis",
+   "emergency"
+  ],  "base": "ithaca",  "areas": [],  "region": "Ithaca and the Finger Lakes",  "spec": null,  "reg": "southern-tier-ny"
+ },
+ {  "n": "JB's RV Service Plus",  "c": "Bath, NY",  "p": "(607) 794-0110",  "u": "https://www.t-rexyrvcustoms.com/",  "t": "both",  "e": false,  "r": false,  "d": "JB's RV Service Plus is based in Bath, New York and offers mobile RV service across a large portion of New York State, plus limited shop scheduling for larger jobs and transportation/towing services. It accommodates fifth wheels, motorhomes, travel trailers, pop-ups, truck campers, toy haulers and park models, and specialises in AC/DC electrical, plumbing, LP and natural gas, HVAC, appliances, solar, hydraulics, roof repairs and replacements, flooring and axles, bearings and brakes.",  "g": [
+   "mobile tech",
+   "rv repair shop",
+   "roof service"
+  ],  "base": "bath",  "areas": [],  "region": "Western NY, Finger Lakes, Southern Tier and Central NY",  "spec": null,  "reg": "southern-tier-ny"
+ },
+ {  "n": "All Points Mobile RV Repair",  "c": "Auburn, NY",  "p": "315-729-6974",  "u": "https://allpointsrvrepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "All Points Mobile RV Repair LLC is a small family-owned mobile RV repair business located in Auburn, New York, serving Syracuse and the surrounding areas since 2021. Its RVSA-certified technicians handle maintenance and repair of appliances, roof inspection and sealing, LP inspections, stabilizers and jacks, air conditioners, furnaces, water heaters, electrical, plumbing, winterization and de-winterization.",  "g": [
+   "mobile tech",
+   "maintenance",
+   "appliance repair"
+  ],  "base": "auburn",  "areas": [],  "region": "Syracuse and the surrounding areas",  "spec": null,  "reg": "north-country-ny"
+ },
+ {  "n": "Seven O's RV",  "c": "Kirkville, NY",  "p": "315-687-7777",  "u": "https://www.sevenos.com/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "Seven O's RV operates an RV service department with two central New York locations in Kirkville and Cicero, near Syracuse. Its technicians service fifth wheels, motorhomes, folding campers, park models and travel trailers, keeping them in working order and providing parts and accessories.",  "g": [
+   "dealer service dept",
+   "rv service center"
+  ],  "base": null,  "areas": [
+   "cicero",
+   "syracuse"
+  ],  "region": "central New York",  "spec": null,  "reg": "north-country-ny"
+ },
+ {  "n": "Camping World - Cicero",  "c": "Cicero, NY",  "p": "(855) 917-0869",  "u": "https://rv.campingworld.com/dealer/cicero-new-york/rv-service-repair",  "t": "center",  "e": false,  "r": false,  "d": "Camping World of Cicero operates an RV service and repair center at 5864 Carmenica Dr in Cicero, New York, serving Onondaga County and the Syracuse area. Certified technicians handle annual maintenance, OE and extended warranty work, RV repair, appliance repair, multi-point diagnostics, and winterization and de-winterization, with free 22-point inspections and 45-point inspections.",  "g": [
+   "dealer service dept",
+   "rv service center",
+   "warranty work"
+  ],  "base": "cicero",  "areas": [
+   "syracuse"
+  ],  "region": "Central New York and the Syracuse area",  "spec": null,  "reg": "north-country-ny"
+ },
+ {  "n": "Wilkins RV - Syracuse",  "c": "Cicero, NY",  "p": "315-695-1130",  "u": "https://www.wilkinsrv.com/new-york/syracuse",  "t": "center",  "e": false,  "r": false,  "d": "Wilkins RV operates an RV dealership and service center at 8010 Brewerton Road in Cicero, New York, serving Syracuse. Trained RV technicians provide routine maintenance and complex repairs as well as paint and body work, covering body work, fibreglass repair, paint, electrical systems, winterization, LP inspections, refrigerator and A/C service, generators, water heaters, oil changes and rubber roof maintenance, with an RV collision repair center that works with all major insurance carriers.",  "g": [
+   "dealer service dept",
+   "collision repair",
+   "rv service center"
+  ],  "base": "cicero",  "areas": [
+   "syracuse"
+  ],  "region": "Syracuse and central New York",  "spec": null,  "reg": "north-country-ny"
+ },
+ {  "n": "Twin Tech Auto & RV",  "c": "Oswego, NY",  "p": "(315) 289-3057",  "u": "http://www.twintechautorv.com/services-products.html",  "t": "center",  "e": false,  "r": false,  "d": "Twin Tech Auto & RV at 21 Leavitt Road in Oswego, New York provides RV repair alongside auto and truck service. RV work includes refrigerators, furnaces, water heaters, awnings, roof repair and reseal, converters, winterizations, preventative maintenance, hitches and air conditioners.",  "g": [
+   "rv repair shop",
+   "appliance repair",
+   "roof and awning"
+  ],  "base": "oswego",  "areas": [],  "region": "Oswego",  "spec": null,  "reg": "north-country-ny"
+ },
+ {  "n": "Premier RV Services and Inspections, LLC",  "c": "Syracuse, NY",  "p": "315-525-5737",  "u": "https://premierrvservicesandinspections.com/services/",  "t": "mobile",  "e": false,  "r": false,  "d": "Premier RV Services and Inspections, LLC is a mobile RV repair and diagnostics business serving the Syracuse, Utica and Rome area, run by co-owner Patrick with more than 30 years of RV and automotive repair experience. It offers on-site electrical, mechanical and plumbing diagnostics, warranty work, roof and seal repairs including full roof replacement, appliance repair, preventative maintenance and RV towing, plus pre- and post-purchase inspections.",  "g": [
+   "mobile tech",
+   "inspections",
+   "roof service"
+  ],  "base": null,  "areas": [
+   "utica",
+   "rome"
+  ],  "region": "Syracuse, Utica and Rome",  "spec": null,  "reg": "north-country-ny"
+ },
+ {  "n": "Dr. Dave's RV & Trailer Repair",  "c": "Southern Tier, NY",  "p": "607-373-0262",  "u": "https://drdavesrvrepair.wixsite.com/mysite-2",  "t": "mobile",  "e": true,  "r": false,  "d": "Dr. Dave's RV & Trailer Repair is a mobile RV and camper repair service that comes to the customer, doing preventative, scheduled and emergency services from the roof to the floor. It specialises in RV appliances, refrigerators, air conditioners, furnaces and water heaters, pre-purchase inspections, walk-throughs, roof repair and roof coats, and is available from 8:00AM to 7PM.",  "g": [
+   "mobile tech",
+   "appliance repair",
+   "roof service"
+  ],  "base": null,  "areas": [],  "region": "the Southern Tier",  "spec": null,  "reg": "southern-tier-ny"
  }
 ];

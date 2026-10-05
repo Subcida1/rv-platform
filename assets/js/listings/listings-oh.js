@@ -409,5 +409,71 @@ window.RV_LISTINGS_OH = [
    "service center",
    "parts"
   ],  "base": "north canton",  "areas": [],  "region": "North Canton, OH",  "spec": "RV dealer service",  "reg": "northeast-oh"
+ },
+ {  "n": "Post's Traveland",  "c": "Columbus, OH",  "p": "614-471-0550",  "u": "https://www.postrv.com/",  "t": "center",  "e": false,  "r": false,  "d": "Post's Traveland is an RV service, parts and storage shop at 4145 Westerville Road in Columbus, family-run in Central Ohio since 1956. Its staff work on vintage trailers, fifth wheels and Class A motorhomes, and the shop keeps a parts inventory that includes hard-to-find and vintage items. Service, parts and storage are all handled in one location.",  "g": [
+   "rv service center",
+   "parts",
+   "storage"
+  ],  "base": "columbus",  "areas": [],  "region": "Columbus, OH",  "spec": "RV repair, parts & storage",  "reg": "central-oh"
+ },
+ {  "n": "Blue Compass RV Columbus",  "c": "Delaware, OH",  "p": "(740) 548-4068",  "u": "https://www.bluecompassrv.com/locations/ohio/columbus/service",  "t": "center",  "e": false,  "r": false,  "d": "Blue Compass RV Columbus is an RV dealership and service center at 5742 OH-37 in Delaware, at the north end of the Columbus metro. The service center handles routine maintenance and major repairs including engine/transmission and chassis, electrical and solar, plumbing and water systems, HVAC, appliances, roof and exterior, slide-outs, collision/body work and warranty/recall assistance, and every vehicle gets a free multi-point inspection. It serves Columbus, Delaware County and surrounding Central Ohio.",  "g": [
+   "rv service center",
+   "parts",
+   "collision",
+   "warranty work"
+  ],  "base": "delaware",  "areas": [
+   "columbus"
+  ],  "region": "Columbus, OH",  "spec": "RV service & repair",  "reg": "central-oh"
+ },
+ {  "n": "Wendell's Garage",  "c": "Delaware, OH",  "p": "740-362-0818",  "u": "https://wendellsgarage.com/rv-service/",  "t": "center",  "e": false,  "r": false,  "d": "Wendell's Garage is a motorhome and RV repair shop in Delaware, Ohio, staffed by ASE-certified technicians. It offers bumper-to-bumper motorhome repairs including chassis and house systems, engine and transmission work, cooling system repairs and suspensions, along with winterization and computer diagnostics. It serves motorhome owners throughout Delaware and surrounding counties.",  "g": [
+   "motorhome repair",
+   "chassis",
+   "diagnostics"
+  ],  "base": "delaware",  "areas": [],  "region": "Columbus, OH",  "spec": "Motorhome & RV repair",  "reg": "central-oh"
+ },
+ {  "n": "All State RV Repair",  "c": "Columbus, OH",  "p": "(304) 276-8887",  "u": "https://www.allstatervrepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "All State RV Repair is a mobile RV repair business operating out of Columbus, Ohio, bringing repairs and maintenance to the customer's location. It services air conditioning, furnace, refrigerator, water heater, roof, plumbing, propane and electrical systems, and works with most insurance companies for insurance claims. It also sells a selection of camping and outdoor products.",  "g": [
+   "mobile rv repair",
+   "appliances",
+   "roof"
+  ],  "base": "columbus",  "areas": [],  "region": "Columbus, OH",  "spec": "Mobile RV repair",  "reg": "central-oh"
+ },
+ {  "n": "Specialty RV Sales",  "c": "Lancaster, OH",  "p": "(740) 652-1918",  "u": "https://specialtyrvsales.com/service",  "t": "center",  "e": false,  "r": false,  "d": "Specialty RV Sales is a family-owned RV dealer and service center at 509 South Broad Street in Lancaster, Ohio. Its service department is staffed by RVIA-certified technicians and handles all RV repair types plus parts and accessory installation, including roof seal, appliances and HVAC, electrical and plumbing, awnings, levelers and towing, plus warranty and insurance work.",  "g": [
+   "rv service center",
+   "parts",
+   "warranty work"
+  ],  "base": "lancaster",  "areas": [],  "region": "Columbus, OH",  "spec": "RV service & repair",  "reg": "central-oh"
+ },
+ {  "n": "Suburban RV Center",  "c": "Mansfield, OH",  "p": "419-525-0000",  "u": "https://suburbanrvcenter.com/",  "t": "center",  "e": false,  "r": false,  "d": "Suburban RV Center is a family-owned RV dealership at 1878 Ashland Rd. in Mansfield, established in 1964. It has assisted customers with sales, service, parts and accessories, carrying Rockwood and Cherokee travel trailers and fifth wheels and backing them with a service department and parts department.",  "g": [
+   "rv dealer service",
+   "parts"
+  ],  "base": "mansfield",  "areas": [],  "region": "North Central Ohio",  "spec": "RV sales & service",  "reg": "central-oh"
+ },
+ {  "n": "Sparks Auto and RV",  "c": "Findlay, OH",  "p": "(419) 423-8322",  "u": "https://www.sparksarv.com/Automotive-Services/RV-Service",  "t": "center",  "e": false,  "r": false,  "d": "Sparks Auto and RV is a full RV service center at 16764 State Rt 12 East in Findlay, Ohio. It handles work from flat tires to complete engine and transmission replacement, including alignment and drivability issues, towing systems, generator repair, inverters, tank repair/replacement, hot water heaters, awnings, jacks, refrigerator repair and A/C repair. It also performs motorhome alignment, truck repair and trailer repair.",  "g": [
+   "rv service center",
+   "alignment",
+   "generators",
+   "tires"
+  ],  "base": "findlay",  "areas": [],  "region": "Northwest Ohio",  "spec": "RV & auto service",  "reg": "northwest-oh"
+ },
+ {  "n": "Bayshore RV Sales LLC",  "c": "Port Clinton, OH",  "p": "419-967-5847",  "u": "https://bayshorervsales.com/service",  "t": "center",  "e": false,  "r": false,  "d": "Bayshore RV Sales LLC is an RV dealership in Port Clinton, Ohio, with a service department that takes online appointment requests. The service department is equipped with current diagnostic and repair equipment and staffed by technicians delivering vehicle care for RV owners in the Port Clinton area.",  "g": [
+   "rv dealer service"
+  ],  "base": "port clinton",  "areas": [],  "region": "Northwest Ohio",  "spec": "RV service",  "reg": "northwest-oh"
+ },
+ {  "n": "Cruising America RV Service Co.",  "c": "Celina, OH",  "p": "419-852-0791",  "u": "https://cruisingamericarvservices.com/",  "t": "both",  "e": false,  "r": false,  "d": "Cruising America RV Service Co. is a motor coach repair shop at 715 South Sugar Street in Celina, Ohio, in business since 2002. Work includes roof repair and replacement, residential refrigerator installs, AC work, electrical, plumbing and some chassis work, and the shop also does insurance work. It travels to local campgrounds for work and offers spaces to stay for full-timers.",  "g": [
+   "rv service shop",
+   "mobile rv repair",
+   "roof",
+   "refrigerator"
+  ],  "base": "celina",  "areas": [],  "region": "Northwest Ohio",  "spec": "RV repair & service",  "reg": "southwest-oh"
+ },
+ {  "n": "Longship RV",  "c": "Sandusky, OH",  "p": "(865) 304-2247",  "u": "https://longshiprv.com/areas-we-serve",  "t": "mobile",  "e": false,  "r": false,  "d": "Longship RV is a locally owned mobile RV repair business serving Ohio's Vacationland, prioritizing the greater Sandusky/Erie County area. Its certified technicians bring diagnostic tools and common replacement parts directly to the campsite or driveway, handling appliance fixes, hydronic system diagnostics, seasonal A/C tune-ups, slide-out maintenance and exterior/HVAC care suited to the Lake Erie shore climate.",  "g": [
+   "mobile rv repair",
+   "appliances",
+   "slide-outs"
+  ],  "base": null,  "areas": [
+   "sandusky",
+   "port clinton",
+   "marblehead"
+  ],  "region": "Erie County, OH",  "spec": "Mobile RV repair",  "reg": "northwest-oh"
  }
 ];
