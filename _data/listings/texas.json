@@ -5186,6 +5186,784 @@
         ]
       },
       "reg": "dfw"
+    },
+    {
+      "n": "Boerne RV",
+      "c": "Boerne, TX",
+      "p": "830-816-3883",
+      "u": "https://www.boernerv.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Independent family-owned RV repair shop at 125 Industrial Drive in Boerne, opened in 2003 by Ron and Deborah Zinsmeister and run by a certified Master Technician with more than 20 years in the RV industry. The complete recreational vehicle repair facility handles insurance estimates, fiberglass repair, rubber roofs, appliance repair, awning repair, air conditioning, parts and extended warranty and insurance claim work in-house, with a one-year warranty on service. It services vendors such as Norcold, Dometic and Atwood.",
+      "g": [
+        "rv repair",
+        "bodywork",
+        "appliances"
+      ],
+      "base": "Boerne",
+      "areas": [],
+      "region": "San Antonio, TX",
+      "spec": "RV repair and service",
+      "evidence": {
+        "phone_quote": "GET BACK ON THE ROAD, FASTER! Call us 830-816-3883",
+        "type_quote": "Our complete recreational vehicle repair facility handles extended warranty and insurance claim work in-house.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Don't put your Motorhome or RV repairs into just anyone's hands. Trust Boerne RV to to do the job right the first time.",
+          "Contact Boerne RV for all of your next RV needs:"
+        ]
+      }
+    },
+    {
+      "n": "Hill Country Mobile RV Service",
+      "c": "Boerne, TX",
+      "p": "210.879.2246",
+      "u": "https://hcmrvs.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Family-owned mobile RV repair business run by Michael and Krystal Ortega, based in Boerne and serving the Texas Hill Country and San Antonio area. Technicians come to the customer with 10+ years of experience and factory-certified training through the Thor Motor Coach program, covering plumbing and water systems, electrical AC/DC wiring and batteries, AC and heater repairs, generator service, slide-out and floor repairs, roof and sidewall repairs, hydraulic leveling, seasonal maintenance and winterizing, solar installation and appliance installs. It offers pre-purchase inspections and a 90-day guarantee.",
+      "g": [
+        "mobile",
+        "rv repair"
+      ],
+      "base": "Boerne",
+      "areas": [],
+      "region": "San Antonio, TX",
+      "spec": "mobile RV repair",
+      "evidence": {
+        "phone_quote": "210.879.2246",
+        "type_quote": "Proudly serving Boerne, San Antonio, and the surrounding Hill Country area.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Located in Boerne, Texas",
+          "Servicing most of the Texas Hill Country and San Antonio area"
+        ]
+      }
+    },
+    {
+      "n": "Cody's RV Repair",
+      "c": "New Braunfels, TX",
+      "p": "(830) 865-6209",
+      "u": "https://codysrvrepair.com/",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "Mobile and shop RV repair and diagnostics business at 6775 Wegner Road in New Braunfels, open 24 hours and serving New Braunfels and surrounding areas. It handles warranty repairs, RV AC service, appliances, electrical, plumbing, roofing, suspension, solar, propane systems and winterization, and works directly with RV warranty companies to handle claims and approvals. Mobile service calls run within 30 miles of New Braunfels starting at $100.",
+      "g": [
+        "rv repair",
+        "mobile",
+        "warranty"
+      ],
+      "base": "New Braunfels",
+      "areas": [],
+      "region": "San Antonio, TX",
+      "spec": "RV repair and maintenance",
+      "evidence": {
+        "phone_quote": "(830) 865-6209",
+        "type_quote": "Mobile RV repair, diagnostics, warranty repairs, RV AC service, appliances, electrical, plumbing, roofing and more throughout New Braunfels and surrounding areas.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "New Braunfels, Canyon Lake, Spring Branch, Seguin, Schertz, Austin, San Antonio, Marion, Wimberley, Bulverde",
+          "Within 30 Miles of New Braunfels, TX"
+        ]
+      }
+    },
+    {
+      "n": "Doc's Mobile RV Services",
+      "c": "New Braunfels, TX",
+      "p": "(830) 660-5807",
+      "u": "https://docsmobilervservices.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Veteran-founded mobile RV repair, maintenance, inspection and consulting business serving New Braunfels and surrounding areas. A team of certified RV inspectors and technicians comes to the customer at home, in camp or on the move, providing routine maintenance, urgent repairs, certified RV inspections and walkthrough consultations. It was founded by a US Navy Veteran and avid RV owner to spare owners the dealership drop-off and wait.",
+      "g": [
+        "mobile",
+        "rv repair",
+        "inspection"
+      ],
+      "base": "New Braunfels",
+      "areas": [],
+      "region": "San Antonio, TX",
+      "spec": "mobile RV repair and inspection",
+      "evidence": {
+        "phone_quote": "(830) 660-5807",
+        "type_quote": "Convenience: Mobile services let us come to you at home or on the move.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Our passion is to provide high-quality RV services in the New Braunfels, TX and surrounding areas.",
+          "We offer the full range of RV Services in the New Braunfels, TX, and surrounding areas, which include repairs, maintenance, and consultations, ensuring that all aspects of your RV are taken care of."
+        ]
+      }
+    },
+    {
+      "n": "RV Rescue Rangers LLC",
+      "c": "New Braunfels, TX",
+      "p": "(830) 387-9572",
+      "u": "https://thervrescuerangers.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Veteran-owned and operated mobile RV repair company based in New Braunfels and run by Army and Marine Corps veterans. It brings repair services directly to the customer at a campground, home or storage facility, handling air conditioning diagnostics and installations, furnace diagnostics and installations, refrigerator services and water heater services. It serves San Antonio, Austin and surrounding areas.",
+      "g": [
+        "mobile",
+        "rv repair"
+      ],
+      "base": "New Braunfels",
+      "areas": [],
+      "region": "San Antonio, TX",
+      "spec": "mobile RV repair",
+      "evidence": {
+        "phone_quote": "Call Us: (830) 387-9572",
+        "type_quote": "At RV Rescue Rangers, we bring our expert repair services directly to your location.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Serving San Antonio, Austin & Surrounding Areas",
+          "RV Rescue Rangers is a proud veteran-owned and operated company based in New Braunfels, TX."
+        ]
+      }
+    },
+    {
+      "n": "Carver RV Repair and Service",
+      "c": "Canyon Lake, TX",
+      "p": "(210) 912-6261",
+      "u": "https://www.carver-rv.com/",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "Locally owned, family-operated and fully licensed and insured RV repair and service business at 22017 FM 306 in Canyon Lake, offering both mobile and drop-off service. It handles plumbing, electrical, appliances, interior and exterior repairs and rebuilds, comprehensive inspections, AC installation and winterization and de-winterization, serving Canyon Lake, Fischer, Bulverde, Spring Branch, New Braunfels, Blanco and Wimberley.",
+      "g": [
+        "rv repair",
+        "mobile"
+      ],
+      "base": "Canyon Lake",
+      "areas": [],
+      "region": "San Antonio, TX",
+      "spec": "RV repair and service",
+      "evidence": {
+        "phone_quote": "(210) 912-6261",
+        "type_quote": "We offer mobile and drop-off services.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Serving the Texas hill country's repair and service needs, including Canyon Lake, Fischer, Bulverde, Spring Branch, New Braunfels, Blanco, Wimberley, and the surrounding areas.",
+          "We are fully licensed and insured to offer you on-site service wherever you are in the regions where we operate."
+        ]
+      }
+    },
+    {
+      "n": "San Antonio RVs",
+      "c": "Seguin, TX",
+      "p": "(830) 386-2900",
+      "u": "https://www.sanantoniorvs.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "RV dealership in Seguin with a state-of-the-art service department at 4144 I-10 West. Its technicians specialize in Class A, B and C motorhomes including diesel, fifth wheels, toy haulers, travel trailers and folding campers, and perform generator service, roof and awning care, wheel bearing packing, cosmetic maintenance and A/C and furnace maintenance, repair and replacement. The service department is open Monday through Friday 8:30am to 5pm.",
+      "g": [
+        "rv service center",
+        "dealership"
+      ],
+      "base": "Seguin",
+      "areas": [],
+      "region": "San Antonio, TX",
+      "spec": "RV dealer with service department",
+      "evidence": {
+        "phone_quote": "Please call our Service Department at (830) 386-2900 or (830) 885-6565.",
+        "type_quote": "Visit our state-of-the-art Service Department at San Antonio RVs today and experience why we're recognized as the best RV Service Centers in Seguin , TX.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Seguin, TX 4144 1-10 West Seguin, TX 78155"
+        ]
+      }
+    },
+    {
+      "n": "Seguin RV",
+      "c": "Seguin, TX",
+      "p": "830-372-0003",
+      "u": "https://www.seguinrv.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "RV dealership in Seguin with a full service department at 4040 IH 10 West focused only on RVs, travel trailers, toy haulers, fifth wheels and destination trailers. Its highly trained technicians handle routine maintenance and complex repairs including slide-out maintenance, 50-point inspections, wheel bearing packing, roof reseal and preventative maintenance, furnace and air conditioner service and winterization. Service hours are Monday through Friday 9am to 5pm and Saturday 9am to 12pm.",
+      "g": [
+        "rv service center",
+        "dealership"
+      ],
+      "base": "Seguin",
+      "areas": [],
+      "region": "San Antonio, TX",
+      "spec": "RV dealer with service department",
+      "evidence": {
+        "phone_quote": "feel free to call us at 830-372-0003 (8303720003) and we’ll be happy to help you over the phone or assist you in making an appointment.",
+        "type_quote": "The service department at Seguin RV has you covered!",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Seguin RV is proud to provide quality service to the areas of San Antonio, Victoria, Corpus Christi, Austin and McAllen."
+        ]
+      }
+    },
+    {
+      "n": "South Texas RV SuperStore",
+      "c": "Seguin, TX",
+      "p": "1-888-372-7571",
+      "u": "http://www.southtexasrv.com/NewService.htm",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "RV superstore with a complete service center in Seguin and a store in Selma, offering repairs, paint and body and warranty work on a 40,000 pound drive-on lift. Factory-trained technicians certified by the Recreational Vehicle Dealers Association service air conditioners, furnaces, appliances, generators, awnings, brakes, chassis, alignments, electrical and heating and cooling systems, plus collision, fiberglass and lamination repair, sidewall replacement and roof repairs or replacement. The paint and body shop includes a 60 foot Kayco paint booth and PPG refinish center.",
+      "g": [
+        "rv service center",
+        "bodywork",
+        "paint"
+      ],
+      "base": "Seguin",
+      "areas": [],
+      "region": "San Antonio, TX",
+      "spec": "RV service center and body shop",
+      "evidence": {
+        "phone_quote": "Seguin 1-888-372-7571 3637 W. U.S. Hwy 90, Seguin, TX 78155",
+        "type_quote": "Service – Complete RV Service Center",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Visit Our Huge SuperStore in Seguin or Our Store on I-35 in Selma"
+        ]
+      }
+    },
+    {
+      "n": "RVs of Texas Service",
+      "c": "San Marcos, TX",
+      "p": "830-305-2040",
+      "u": "https://www.rvsoftexasservice.com/services.html",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Mobile RV repair service covering Central Texas from San Marcos to Karnes City and the Texas Hill Country, led by owner and lead technician Ron Baker. It specializes in rubber roof repair and maintenance, from leak and seam repair to full roof replacement, and also provides RV appliance repair and installation for refrigerators, water heaters and rooftop air conditioners, plus propane system service, winterization and de-winterization and insurance and warranty claim assistance. It works with companies including Foremost, Geico, State Farm, Farmers and Good Sam.",
+      "g": [
+        "mobile",
+        "roofing",
+        "appliances"
+      ],
+      "base": "San Marcos",
+      "areas": [],
+      "region": "San Antonio, TX",
+      "spec": "mobile RV repair and roof service",
+      "evidence": {
+        "phone_quote": "830-305-2040",
+        "type_quote": "RVs of Texas Mobile Service offers expert RV appliance repair & installation services.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Mobile RV Appliance Repair & Installation Services Available in the Texas Hill Country including San Antonio, New Braunfels, Seguin, San Marcos & South Austin."
+        ]
+      }
+    },
+    {
+      "n": "RV Service and Repair Pro's",
+      "c": "Fredericksburg, TX",
+      "p": "(830) 998-4109",
+      "u": "https://www.rvserviceandrepairpros.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "Family-owned mobile RV repair business based in Fredericksburg offering trailer repair, RV repair and mobile RV repair, including roof leak repair. The owner-operator with seven years of experience provides transparent pricing with no hidden fees, next-day and same-day service, and a satisfaction guarantee, and accepts cash, check, credit and debit cards.",
+      "g": [
+        "mobile",
+        "rv repair"
+      ],
+      "base": "Fredericksburg",
+      "areas": [],
+      "region": "San Antonio, TX",
+      "spec": "mobile RV repair",
+      "evidence": {
+        "phone_quote": "Call Us: (830) 998-4109",
+        "type_quote": "I provide Trailer Repair, RV Repair, and Mobile RV Repair services.",
+        "emergency_quote": "You can schedule an appointment for repair on the same day or by emergency help.",
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Based in Fredericksburg, Texas, I offer top-notch services in RV repairs and maintenance to ensure your vehicle is always road-ready."
+        ]
+      }
+    },
+    {
+      "n": "RV EMT",
+      "c": "Fredericksburg, TX",
+      "p": "(830) 251-2272",
+      "u": "https://www.rvemt.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Mobile RV repair, maintenance and education business whose NRVTA-certified and RVTAA-member technicians meet customers at their campsite, driveway or storage lot with no towing. It diagnoses and repairs AC systems, stuck slides, electrical, plumbing, appliances and roof or leak problems on site, provides routine maintenance for tanks, air conditioners, roof resealing and winterization, and serves Fredericksburg, Johnson City, Kerrville, Dripping Springs and the greater Texas Hill Country.",
+      "g": [
+        "mobile",
+        "rv repair"
+      ],
+      "base": "Fredericksburg",
+      "areas": [],
+      "region": "San Antonio, TX",
+      "spec": "mobile RV repair",
+      "evidence": {
+        "phone_quote": "(830) 251-2272",
+        "type_quote": "A certified mobile technician meets you at your campsite, driveway, or storage lot — no towing.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "We serve Fredericksburg, Johnson City, Kerrville, Dripping Springs, and the greater Texas Hill Country — plus Sherwood Forest Faire in McDade, TX."
+        ]
+      }
+    },
+    {
+      "n": "Mobile RV Solutions",
+      "c": "Fredericksburg, TX",
+      "p": "(830) 282-1191",
+      "u": "https://mobilervsolutions.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "NRVIA-certified mobile RV repair service covering Fredericksburg, Kerrville, Bandera and the surrounding Texas Hill Country, working on Class A and C motorhomes, fifth wheels, travel trailers, toy haulers and truck campers. It diagnoses and repairs rooftop and basement air conditioning, absorption and compressor refrigerators, propane furnaces, tank and tankless water heaters, 120V and 12V electrical systems, plumbing and holding tanks, roofs, generators and LP gas systems, and installs lithium batteries and solar. Diagnosis comes first and work is guaranteed.",
+      "g": [
+        "mobile",
+        "rv repair",
+        "solar"
+      ],
+      "base": "Fredericksburg",
+      "areas": [],
+      "region": "San Antonio, TX",
+      "spec": "mobile RV repair",
+      "evidence": {
+        "phone_quote": "Get in Touch Call: (830) 282-1191",
+        "type_quote": "We come to your location across the Texas Hill Country.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "We offer mobile RV repair services to your location across Fredericksburg, Kerrville, Bandera, and the surrounding Hill Country."
+        ]
+      }
+    },
+    {
+      "n": "Kerrville RV Mobile Repair LLC",
+      "c": "Kerrville, TX",
+      "p": "830-285-5894",
+      "u": "https://kerrvillervmobilerepair.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Mobile RV repair and maintenance business owned and operated by master technician Kelley Hanks, serving Kerrville and the Texas Hill Country with over 31 years of experience. It brings repairs to the customer's campsite, driveway or property, specializing in Lithionics batteries and voltage power systems, Aqua-Hot heating systems, tow vehicle braking systems, slide-out systems, roof repairs, full electrical and plumbing work, and hitches and base plates.",
+      "g": [
+        "mobile",
+        "rv repair"
+      ],
+      "base": "Kerrville",
+      "areas": [],
+      "region": "San Antonio, TX",
+      "spec": "mobile RV repair",
+      "evidence": {
+        "phone_quote": "CALL OR TEXT (830-285-5894)",
+        "type_quote": "At Kerrville RV Mobile Repair LLC, we bring top-tier RV maintenance and repair services directly to your campsite, driveway, or property.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Serving Kerrville and the Texas Hill Country for Over 31 Years"
+        ]
+      }
+    },
+    {
+      "n": "Texas RV Service and Repair LLC",
+      "c": "Georgetown, TX",
+      "p": "(737) 773-2050",
+      "u": "https://www.txrvservice.com/",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "RV repair and maintenance business with a full-service shop at 8810 N I-35 in Georgetown and mobile service across the Greater Austin area. Its technicians specialize in RV air conditioning repair, heating repair, roof repair and replacement, diagnostics and preventative maintenance for motorhomes, travel trailers and fifth wheels, and mobile technicians come to the customer when the RV won't start or time is short. Hours are Monday through Friday 8:00 to 5:00.",
+      "g": [
+        "rv repair",
+        "mobile"
+      ],
+      "base": "Georgetown",
+      "areas": [],
+      "region": "Austin, TX",
+      "spec": "RV repair and mobile service",
+      "evidence": {
+        "phone_quote": "(737) 773-2050",
+        "type_quote": "Mobile RV Repair at Your Location. When your RV won't start or you're short on time, our expert technicians come to you.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "8810 N I-35, Georgetown, TX 78626",
+          "The Greater Austin, TX Area"
+        ]
+      }
+    },
+    {
+      "n": "Auer's RV",
+      "c": "Georgetown, TX",
+      "p": "512-863-2030",
+      "u": "https://auersrv.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Full-service RV repair shop at 6540 West State Hwy 29 in Georgetown with over 35 years of RV service experience and a 4.9-star Google rating. It offers full-service repairs to keep a RV in top shape, including paint, body and collision work, and will work on any RV of any age. Office hours are Monday through Friday 9am to 5pm.",
+      "g": [
+        "rv repair",
+        "bodywork",
+        "paint"
+      ],
+      "base": "Georgetown",
+      "areas": [],
+      "region": "Austin, TX",
+      "spec": "full service RV repairs",
+      "evidence": {
+        "phone_quote": "Phone: 512-863-2030 (15128632030)",
+        "type_quote": "FULL SERVICE RV REPAIRS TO KEEP YOUR RIG IN TIP TOP SHAPE",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "6540 West State Hwy 29 Georgetown, TX 78628"
+        ]
+      }
+    },
+    {
+      "n": "Overland RVs",
+      "c": "Hutto, TX",
+      "p": "512-886-9040",
+      "u": "https://overlandrvs.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "RV service and repair shop at 533 Private Rd 908 in Hutto serving Central Texas, with certified technicians handling slide-outs, electrical, appliances, diagnostics and repairs, plus remodels and restorations, solar and lithium upgrades and inverter/chargers. Customers from Austin, Round Rock, Cedar Park, Hutto and Georgetown bring their RV to the location. Hours are Monday through Friday 7:30am to 4:30pm.",
+      "g": [
+        "rv repair",
+        "solar",
+        "remodels"
+      ],
+      "base": "Hutto",
+      "areas": [],
+      "region": "Austin, TX",
+      "spec": "RV service and repair",
+      "evidence": {
+        "phone_quote": "512 886 9040 (512.886.9040)",
+        "type_quote": "If it is on your RV, we can fix it.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Serving customers from Austin, Round Rock, Cedar Park, Hutto, and Georgetown; we're proud to be central Texas #1 RV service & repair shop.."
+        ]
+      }
+    },
+    {
+      "n": "Impact RV Repair",
+      "c": "Kyle, TX",
+      "p": "512-968-5258",
+      "u": "https://www.impactrvrepair.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "Mobile RV repair business based in Kyle and owned by technician James, who has 12 years of hands-on experience including dealership work. Every service is mobile within 50 miles of Kyle, covering AC repair, roof repair and resealing, 12V and 120V electrical, plumbing, water heaters, appliances, slide-outs, awnings, leveling and jacks, preventive maintenance and inspections, and solar and battery installation. Emergency calls are always prioritized.",
+      "g": [
+        "mobile",
+        "rv repair",
+        "solar"
+      ],
+      "base": "Kyle",
+      "areas": [],
+      "region": "Austin, TX",
+      "spec": "mobile RV repair",
+      "evidence": {
+        "phone_quote": "Reach him at 512-968-5258 or james@impactrvrepair.com.",
+        "type_quote": "Every service is mobile — we come to you",
+        "emergency_quote": "Emergency calls are always prioritized.",
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "On-site within 50 miles of Kyle, TX"
+        ]
+      }
+    },
+    {
+      "n": "Drifters RV Rescue",
+      "c": "Kyle, TX",
+      "p": "737-703-7114",
+      "u": "https://www.driftersrvrescue.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "Family-owned husband-and-wife mobile RV repair business based in Kyle with ten years of experience and a 4.9 Google rating. It specializes in mobile repair for RVs, travel trailers and fifth wheels, covering A/C and heating, 12V and 110V electrical, plumbing and water systems, appliances, roof repair and sealant, water leak detection, slide-out and awning repair and wheel bearing repack, plus winterization and pre-purchase inspections. It serves Williamson, Travis, Bastrop, Hays, Burnet and Caldwell counties.",
+      "g": [
+        "mobile",
+        "rv repair"
+      ],
+      "base": "Kyle",
+      "areas": [],
+      "region": "Austin, TX",
+      "spec": "mobile RV repair",
+      "evidence": {
+        "phone_quote": "Call us at 737-703-7114 for current lead times.",
+        "type_quote": "Drifters RV Rescue, a family-owned Husband and Wife duo specializes in mobile repair services for RVs, travel trailers, and fifth wheels.",
+        "emergency_quote": "We know that a broken A/C in the Texas heat is an emergency.",
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "We serve Williamson, Travis, Bastrop, Hays, Burnet, and Caldwell counties."
+        ]
+      }
+    },
+    {
+      "n": "Round Rock RV Repair",
+      "c": "Round Rock, TX",
+      "p": "(512) 765-2855",
+      "u": "https://www.roundrockrvrepair.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Mobile RV repair business bringing repair services to the customer's doorstep in Round Rock, Austin and surrounding areas, with no need to take the RV to a shop. It works with extended warranty companies and insurance providers and handles repairs without a dealer visit, providing detailed estimates, invoices and photos to support first-year manufacturer warranty reimbursement. It serves Round Rock, Pflugerville, Hutto, Georgetown, Austin, Cedar Park, Taylor, Elgin, Bastrop and Lakeway.",
+      "g": [
+        "mobile",
+        "rv repair",
+        "warranty"
+      ],
+      "base": "Round Rock",
+      "areas": [],
+      "region": "Austin, TX",
+      "spec": "mobile RV repair",
+      "evidence": {
+        "phone_quote": "(512) 765-2855",
+        "type_quote": "Our expert repair services come straight to your doorstep in Round Rock, Austin, or the surrounding areas, eliminating the hassle of taking your RV to a shop.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Round Rock RV Mobile Repair is a reliable partner for extended service contracts and insurance providers, working closely with extended warranty companies and parts manufacturers to provide top-notch repairs without the need for a dealer visit."
+        ]
+      }
+    },
+    {
+      "n": "Outbound RV Services",
+      "c": "Round Rock, TX",
+      "p": "512.766.6339",
+      "u": "https://outboundrvservices.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Mobile RV repair business that began as Outbound RV Rentals in 2015 and moved into mobile RV repair in 2017, having serviced over 3,000 RVs. It offers on-site repair and preventative maintenance across Lago Vista, Cedar Park, Leander, Liberty Hill, Florence, Georgetown, Jarrell, Circleville, Hutto, Taylor, Round Rock and North Austin, covering rooftop air conditioners, furnaces, appliances, refrigerators, 12V and 120V systems, inverter and converter chargers, water heaters, plumbing, leveling and slides and roof maintenance. It does not service generators, engines, axles or suspension.",
+      "g": [
+        "mobile",
+        "rv repair"
+      ],
+      "base": "Round Rock",
+      "areas": [],
+      "region": "Austin, TX",
+      "spec": "mobile RV repair",
+      "evidence": {
+        "phone_quote": "512.766.6339",
+        "type_quote": "We understand that your RV is more than just a vehicle; it's your ticket to adventure or your home.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "That's why we offer on-site repair and preventative maintenance services across Lago Vista, Cedar Park, Leander, Liberty Hill, Florence, Georgetown, Jarrell, Circleville, Hutto, Taylor, Round Rock, and North Austin."
+        ]
+      }
+    },
+    {
+      "n": "Mobile RV Repair of Austin",
+      "c": "Austin, TX",
+      "p": "512-617-0801",
+      "u": "https://mobilervrepairofaustin.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Family-owned mobile RV repair company rooted in Austin and led by a veteran NRVTA-certified technician with specialized training in Aqua Hot hydronic heating systems and propane generator service. It sends technicians to the campground, driveway, RV park or roadside across Greater Austin to diagnose and fix AC systems, electrical faults, plumbing leaks, slide-outs, roof seals, water heaters, generators and more, and also handles chassis work, roadside service and tire changes. It offers same-day availability and 24/7 emergency service.",
+      "g": [
+        "mobile",
+        "rv repair",
+        "roadside"
+      ],
+      "base": "Austin",
+      "areas": [],
+      "region": "Austin, TX",
+      "spec": "mobile RV repair",
+      "evidence": {
+        "phone_quote": "Call 512-617-0801 and we’ll confirm.",
+        "type_quote": "100% Mobile RV Repair Without Towing",
+        "emergency_quote": "Yes — we offer same-day availability and 24/7 emergency service across the Greater Austin area.",
+        "roadside_quote": "We serve the entire Greater Austin metro and respond to roadside breakdowns along I-35, Highway 290, Highway 71, and surrounding roads throughout Central Texas.",
+        "coverage_quotes": [
+          "We serve all of Greater Austin, including Round Rock, Cedar Park, Leander, Georgetown, and the Texas Hill Country."
+        ]
+      }
+    },
+    {
+      "n": "By The Way Mobile RV Service",
+      "c": "Bastrop, TX",
+      "p": "(512) 718-2043",
+      "u": "https://bythewayrv.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Family-owned mobile RV service and repair business based in Bastrop offering service within a 60 mile radius, bringing full-service-shop quality to wherever the customer is. It works on Class A, B and C motor coaches, diesel pushers, fifth wheels and travel trailers of all sizes, handling air conditioning systems, heater repair, converters and inverters, 110 and 12V DC electrical, leveling systems, preventive maintenance, underbelly repair and roof repair. The technician is an NRVTA certified advanced RV technician and RVTAA member.",
+      "g": [
+        "mobile",
+        "rv repair"
+      ],
+      "base": "Bastrop",
+      "areas": [],
+      "region": "Austin, TX",
+      "spec": "mobile RV repair",
+      "evidence": {
+        "phone_quote": "(512) 718-2043 (512-718-2043)",
+        "type_quote": "By The Way is proud to offer mobile RV service and repair.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Bastrop, Cedar Creek, Elgin, Smithville, Austin, Round Rock, Cedar Park, Schulenburg, San Marcos, Lockhart and more.",
+          "By The Way Mobile RV Service offers mobile RV services and repairs in a 60 mile radius of Bastrop."
+        ]
+      }
+    },
+    {
+      "n": "RV Tech Time, LLC",
+      "c": "Liberty Hill, TX",
+      "p": "(512)905-6903",
+      "u": "https://www.rvtechtime.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Mobile RV repair business serving the Austin metroplex within 50 miles of Liberty Hill. Its certified and insured technicians come to the customer's location to diagnose, repair and service the components and systems in a travel trailer or fifth wheel. Service hours are Monday through Friday 9:00am to 6:00pm.",
+      "g": [
+        "mobile",
+        "rv repair"
+      ],
+      "base": "Liberty Hill",
+      "areas": [],
+      "region": "Austin, TX",
+      "spec": "mobile RV repair",
+      "evidence": {
+        "phone_quote": "(512)905-6903",
+        "type_quote": "WE COME TO YOUR LOCATION",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Currently Serving the Austin, Texas Metroplex",
+          "Within 50 miles of Liberty Hill, Texas"
+        ]
+      }
+    },
+    {
+      "n": "Stache Wagon Mobile RV Service",
+      "c": "Kyle, TX",
+      "p": "737-265-3555",
+      "u": "https://stachewagon.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Licensed, insured and bonded mobile RV repair business based in Hays County and run by certified techs, serving a 60 mile radius around Kyle and travelling farther for an additional fee. It brings repairs to the customer's site with no towing, covering AC, water heaters, electrical, slide-outs, appliances and roof work, and performs warranty repair and insurance claim work. After-hours emergency appointments are available including holidays.",
+      "g": [
+        "mobile",
+        "rv repair",
+        "warranty"
+      ],
+      "base": "Kyle",
+      "areas": [],
+      "region": "Austin, TX",
+      "spec": "mobile RV repair",
+      "evidence": {
+        "phone_quote": "737-265-3555",
+        "type_quote": "At Stache Wagon Mobile RV Service, we bring expert RV repairs straight to your site—no towing, no hassle.",
+        "emergency_quote": "After hours appointments available for emergencies even on holidays",
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "We proudly serve Hays County and areas within a 60-mile radius — and we’re happy to go beyond that for an additional travel fee."
+        ]
+      }
+    },
+    {
+      "n": "1 Call RV Services, LLC",
+      "c": "Temple, TX",
+      "p": "254-727-7171",
+      "u": "https://1callrvservices.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Mobile RV repair and maintenance business at 9157 E FM436 Bldg J in Temple serving Bell County and beyond. It provides fast and affordable mobile repair for all types of recreational vehicles, campers, fifth wheel trailers and even horse trailers, with technicians who diagnose the problem and explain the process and cost, using high-quality parts and offering prompt service and affordable rates. Major credit cards are accepted.",
+      "g": [
+        "mobile",
+        "rv repair"
+      ],
+      "base": "Temple",
+      "areas": [],
+      "region": "Waco, TX",
+      "spec": "mobile RV repair",
+      "evidence": {
+        "phone_quote": "Call: 254-727-7171",
+        "type_quote": "1 Call RV Services provides fast and affordable mobile repair and maintenance for all types of recreational vehicles, campers, 5th wheel trailers and even horse trailers.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "We Serve Communities Throughout Bell County & Beyond!"
+        ]
+      }
+    },
+    {
+      "n": "Lone Star RV Service Center",
+      "c": "Harker Heights, TX",
+      "p": "254-953-4360",
+      "u": "https://www.lonestarrvs.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "RV service, parts and body repair shop at 704A Edwards Dr in Harker Heights, located about 13 minutes west of I-35 on Highway 190, and run by active RVers and campers. It services Killeen, Fort Cavazos, Harker Heights, Copperas Cove, Lampasas, Belton and Temple, doing warranty work for major manufacturers of refrigerators, furnaces, AC units, awnings and hot water tanks plus extended service companies, and as a full factory warranty center handles Onan gas and diesel generator service. Technicians receive ongoing RVIA and manufacturer training.",
+      "g": [
+        "rv service center",
+        "bodywork",
+        "generators"
+      ],
+      "base": "Harker Heights",
+      "areas": [],
+      "region": "Waco, TX",
+      "spec": "RV service, parts and body repair",
+      "evidence": {
+        "phone_quote": "Phone - 254-953-4360",
+        "type_quote": "Lone Star RV Service Center services Killeen, Ft. Cavazos, Harker Heights, Copperas Cove, Lampasas, Belton, Temple and all of Central Texas with great Service, Parts and Body Repair.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Lone Star RV Service Center is located just 13 minutes west of I-35 on Highway 190 (I-14) at Harker Heights, TX."
+        ]
+      }
+    },
+    {
+      "n": "Gilley Mobile RV Service LLC",
+      "c": "Bastrop, TX",
+      "p": "512-574-1901",
+      "u": "https://gilleymobilervservice.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Mobile RV repair business offering premium on-site service to customers who would rather not bring their RV in, working weekends and covering Michigan and Texas. As mobile RV technicians it repairs Class A, B and C motorhomes (RV portion only) and towables including fifth wheels and travel trailers. It does not service solar systems, motorized brakes, transmissions, engines, tires, generators or major body repairs, nor roof, wall, floor or holding tank replacements.",
+      "g": [
+        "mobile",
+        "rv repair"
+      ],
+      "base": "Bastrop",
+      "areas": [],
+      "region": "Austin, TX",
+      "spec": "mobile RV repair",
+      "evidence": {
+        "phone_quote": "for Mobile RV Repair Services - call 512-574-1901",
+        "type_quote": "As mobile RV technicians, we do mobile RV repair on Class A, Class B, and Class C motorhomes (RV portion only) and towables including fifth wheels and travel trailers.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "We offer a premium mobile RV service."
+        ]
+      }
     }
   ]
 }

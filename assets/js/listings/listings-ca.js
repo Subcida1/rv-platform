@@ -1286,5 +1286,112 @@ window.RV_LISTINGS_CA = [
   ],  "base": "midway city",  "areas": [
    "westminster"
   ],  "region": "Los Angeles and Orange County",  "spec": "RV dealer with authorized service department",  "reg": "la-county"
+ },
+ {  "n": "South Coast RV",  "c": "Chula Vista, CA",  "p": "(619) 476-7195",  "u": "https://www.scrv.com/service",  "t": "center",  "e": false,  "r": false,  "d": "South Coast RV is an RV sales and service business at 801 Broadway & K Street in Chula Vista, operating since 1995. Its service department repairs RVs and trailers and handles body and collision work, appliance repair, brakes, electrical, oil changes, tune-ups, plumbing, toilets, shocks and springs, air conditioning, Onan generator service, welding, awnings, solar panels, hitches, tow bars and propane, and works with most extended warranty and insurance companies.",  "g": [
+   "shop"
+  ],  "base": "chula vista",  "areas": [],  "region": "San Diego County",  "spec": "RV service and repair shop",  "reg": "san-diego"
+ },
+ {  "n": "San Diego Trailer Supply",  "c": "San Diego, CA",  "p": "(619) 466-1337",  "u": "https://sandiegotrailer.com/",  "t": "center",  "e": false,  "r": false,  "d": "San Diego Trailer Supply is an RV parts, accessories and service business at 6881 El Cajon Blvd in San Diego, locally owned since 1948. Its RV Service Department repairs motor homes and trailers and does parts and accessory installation, appliance repair and warranty work, towing equipment, awnings, electrical and plumbing repair and leveling jacks.",  "g": [
+   "shop"
+  ],  "base": "san diego",  "areas": [],  "region": "San Diego County",  "spec": "RV parts and service center",  "reg": "san-diego"
+ },
+ {  "n": "Holt Brothers Mobile RV",  "c": "Oceanside, CA",  "p": "(760) 715-1637",  "u": "https://holtbrothersmobilerv.com/",  "t": "mobile",  "e": true,  "r": false,  "d": "Holt Brothers Mobile RV is a family-run mobile RV service based in Oceanside that travels to campers across Southern California. It performs AC and furnace, water heater, exterior, slide-out and roof repair, propane system and electrical and generator work, refrigerator repair, solar and lithium upgrades, warranty work, roof repair and replacement and emergency recovery for stuck slides and landing gear.",  "g": [
+   "mobile"
+  ],  "base": "oceanside",  "areas": [],  "region": "San Diego County",  "spec": "Mobile RV repair and service",  "reg": "san-diego"
+ },
+ {  "n": "Gary's Auto, RV and Brake Inc.",  "c": "Oceanside, CA",  "p": "760-722-4800",  "u": "https://www.garysautoandbrake.com/",  "t": "center",  "e": false,  "r": false,  "d": "Gary's Auto, RV Service & Brake Inc. is an auto and RV repair shop at 1540 S Coast Hwy Ste B in Oceanside with a 12-bay shop large enough for big RVs. It performs general auto and RV repairs including brakes, A/C, engine diagnostics, oil changes, suspension and shock and strut repair, exhaust and radiator repair for cars, trucks and RVs.",  "g": [
+   "shop"
+  ],  "base": "oceanside",  "areas": [],  "region": "San Diego County",  "spec": "Auto and RV repair shop",  "reg": "san-diego"
+ },
+ {  "n": "RV Revivals",  "c": "Alpine, CA",  "p": "(619)784-4631",  "u": "https://rvrevivals.com/services-1",  "t": "both",  "e": false,  "r": false,  "d": "RV Revivals is a family-run RV repair, installation and remodeling business based near Alpine in San Diego County. It repairs and remodels campers, motorhomes, trailers, fifth wheels, toy haulers and van conversions, handling air conditioning, appliances, awnings, bodywork and exterior paint, brakes, plumbing, flooring, grey and black water systems, HVAC, leveling jacks and lighting, and offers mobile service and same-day while-you-wait repair.",  "g": [
+   "shop",
+   "mobile"
+  ],  "base": "alpine",  "areas": [],  "region": "San Diego County",  "spec": "RV repair and remodeling shop",  "reg": "san-diego"
+ },
+ {  "n": "Blue Compass RV San Marcos",  "c": "San Marcos, CA",  "p": "(800) 961-4464",  "u": "https://www.bluecompassrv.com/locations/california/san-marcos/service",  "t": "center",  "e": false,  "r": false,  "d": "Blue Compass RV San Marcos is the RV service center at 251 Travelers Way in San Marcos. It performs routine maintenance and major repairs, chassis and engine and transmission service, electrical, plumbing and water systems, roof and exterior repair, HVAC, appliances and collision repair and body work, and handles warranty work for all major brands regardless of where the RV was purchased.",  "g": [
+   "shop"
+  ],  "base": "san marcos",  "areas": [],  "region": "San Diego County",  "spec": "RV dealer service center",  "reg": "san-diego"
+ },
+ {  "n": "911 RV Repair",  "c": "Riverside, CA",  "p": "(951) 299-9924",  "u": "https://www.911rvrepair.com/",  "t": "both",  "e": true,  "r": false,  "d": "911 RV Repair is an RV repair business serving the Inland Empire from Riverside, offering both mobile and drop-off service. It handles electrical, wiring and battery issues, generator diagnostics and repair, A/C repair and replacement, water leaks, solar system installation, fridge repair, trailer wheels and brakes, roof leak repair and resealing, and extended and factory warranty claims.",  "g": [
+   "shop",
+   "mobile"
+  ],  "base": "riverside",  "areas": [],  "region": "The Inland Empire",  "spec": "RV repair and mobile RV service",  "reg": "inland-empire"
+ },
+ {  "n": "Crest RV & Trailer Supply",  "c": "Riverside, CA",  "p": "951-776-4776",  "u": "https://www.crestrvriverside.com/",  "t": "center",  "e": false,  "r": false,  "d": "Crest RV & Trailer Supply is a family-owned RV and trailer parts and repair business at 2822 Main St. in Riverside, in business since 1999. It performs RV and trailer repairs, installations and routine maintenance including appliance service, roof treatments and resealing, weatherproofing, axle and brake service and inspections, and offers free estimates.",  "g": [
+   "shop"
+  ],  "base": "riverside",  "areas": [],  "region": "The Inland Empire",  "spec": "RV and trailer parts and repair shop",  "reg": "inland-empire"
+ },
+ {  "n": "Five Rivers RV",  "c": "Hemet, CA",  "p": "(626)663-0057",  "u": "https://www.fiveriversrv.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Five Rivers RV Repair is a mobile RV repair business based in Hemet serving Riverside County and surrounding Southern California areas. It performs on-site electrical, plumbing and appliance repairs, RV oil changes, body and collision repair, trailer bearing repacking, and pre-trip and pre-purchase inspections.",  "g": [
+   "mobile"
+  ],  "base": "hemet",  "areas": [],  "region": "The Inland Empire",  "spec": "Mobile RV repair service",  "reg": "inland-empire"
+ },
+ {  "n": "Riverside RV Repair",  "c": "Corona, CA",  "p": "714-791-4338",  "u": "https://www.riversidervrepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Riverside RV Repair is an RV repair and restoration business at 1492 W 6th St in Corona, serving Riverside County. It handles roof resealing and coating, roof dry rot repair, new roof installation, front cap delamination repair, flooring replacement and siding delamination repair, and offers mobile service and free estimates.",  "g": [
+   "mobile"
+  ],  "base": "corona",  "areas": [],  "region": "The Inland Empire",  "spec": "Mobile RV repair and restoration",  "reg": "inland-empire"
+ },
+ {  "n": "Blue Compass RV Palm Desert",  "c": "Palm Desert, CA",  "p": "(800) 610-3934",  "u": "https://www.bluecompassrv.com/locations/california/palm-desert/service",  "t": "center",  "e": false,  "r": false,  "d": "Blue Compass RV Palm Desert is the RV service center at 77840 Varner Road in Palm Desert. It handles routine maintenance and major repairs and warranty work for all major brands, with Fast Lane same-day turnaround on select jobs, serving Coachella Valley RV owners including snowbirds, full-timers and travelers on I-10.",  "g": [
+   "shop"
+  ],  "base": "palm desert",  "areas": [],  "region": "The Coachella Valley",  "spec": "RV dealer service center",  "reg": "coachella"
+ },
+ {  "n": "EZ RV Repair",  "c": "Redlands, CA",  "p": "(909) 307-4754",  "u": "https://www.ezrvrepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "EZ RV Repair is a mobile RV repair business serving the San Bernardino Mountains and Inland Empire regions from Redlands. It brings the repair shop to the customer's location for RV and trailer repairs and maintenance with transparent pricing and fast service.",  "g": [
+   "mobile"
+  ],  "base": "redlands",  "areas": [],  "region": "The Inland Empire",  "spec": "Mobile RV repair service",  "reg": "inland-empire"
+ },
+ {  "n": "Eze Mobile RV Service",  "c": "Hesperia, CA",  "p": "(909) 641-2467",  "u": "http://www.ezemobilerv.com",  "t": "mobile",  "e": false,  "r": false,  "d": "EZE Mobile RV Service is a family-run mobile RV repair and maintenance business in Hesperia serving the High Desert, Inland Empire and Big Bear area. It works on RVs and trailers 1995 or newer, handling awnings, generators, satellites, trailer hitches, roofing, slide-out toppers, hydraulics, brakes, electrical, plumbing, A/C and heating, inverters and converters and appliances.",  "g": [
+   "mobile"
+  ],  "base": "hesperia",  "areas": [],  "region": "The high desert",  "spec": "Mobile RV repair and maintenance",  "reg": "desert-high"
+ },
+ {  "n": "RV Collision Center of Redlands",  "c": "Redlands, CA",  "p": "(909) 747-0441",  "u": "https://rvccr.com/rv-repair/",  "t": "center",  "e": false,  "r": false,  "d": "RV Collision Center of Redlands (RVCCR) is an RVDA-certified RV repair and collision shop at 1976 Essex Court, Suite B in Redlands with 21 years of RV-specific experience. It repairs Class A, B and C motorhomes, fifth wheels, travel trailers, toy haulers, popups and truck campers, handling collision repair, full repaints, overlays and graphics, awnings, roof and sidewall and moulding repair and interior repair and upholstery, and works with major RV insurance carriers.",  "g": [
+   "shop"
+  ],  "base": "redlands",  "areas": [],  "region": "The Inland Empire",  "spec": "RV collision and repair shop",  "reg": "inland-empire"
+ },
+ {  "n": "J & L RV Repair",  "c": "Fontana, CA",  "p": "909-429-2194",  "u": "https://www.jandlrvrepair.com/index.htm",  "t": "center",  "e": false,  "r": false,  "d": "J & L RV Repair is a family-owned and operated full-service RV and motor coach repair business at 8364 Sultana Ave in Fontana, in business since 1984. It performs full-service RV and motor coach repairs and maintenance, body and collision repair and paint, fiberglass and cap work, interior remodeling, electrical, slide maintenance and roof repair, and works with most major manufacturers for warranty work.",  "g": [
+   "shop"
+  ],  "base": "fontana",  "areas": [],  "region": "The Inland Empire",  "spec": "RV and motor coach repair shop",  "reg": "inland-empire"
+ },
+ {  "n": "Inland Valley RV",  "c": "Rancho Cucamonga, CA",  "p": "(909) 980-1746",  "u": "https://inlandvalleyrv.com/",  "t": "center",  "e": false,  "r": false,  "d": "Inland Valley RV is a family-owned RV collision, body and roof repair shop at 9211 Charles Smith Ave in Rancho Cucamonga, in business since 1992. It services travel trailers, fifth wheels, motorhomes, toy haulers and campers, handling collision and body repair, roof repair and replacement, paint and refinishing, generators, A/C, awnings, plumbing, electrical and hitches, with 12 enclosed service bays and manufacturer authorization.",  "g": [
+   "shop"
+  ],  "base": "rancho cucamonga",  "areas": [],  "region": "The Inland Empire",  "spec": "RV collision, body and roof repair shop",  "reg": "inland-empire"
+ },
+ {  "n": "CD Mobile RV",  "c": "Murrieta, CA",  "p": "(951) 837-8982",  "u": "https://cdmobilerv.com/",  "t": "mobile",  "e": true,  "r": false,  "d": "CD Mobile RV is a mobile RV repair business based in Murrieta, founded in 2010, serving the Inland Empire. It performs on-site electrical repair, plumbing and water systems repair, appliance and climate control repair, exterior repairs including roof leak detection and resealing and awning and slide-out work, holding tank cleaning and HVAC service, and offers emergency RV repair.",  "g": [
+   "mobile"
+  ],  "base": "murrieta",  "areas": [],  "region": "The Inland Empire",  "spec": "Mobile RV repair service",  "reg": "inland-empire"
+ },
+ {  "n": "Miller Mobile RV Service",  "c": "Temecula, CA",  "p": "(951) 816-1190",  "u": "https://millersmobilervservice.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Miller Mobile RV Service is a mobile RV and motorhome repair business serving Temecula, Murrieta, Canyon Lake, Lake Elsinore and surrounding areas. It performs motorhome and RV repairs, rubber roof installation and insurance claim work for travel trailers, fifth wheels and toy haulers.",  "g": [
+   "mobile"
+  ],  "base": "temecula",  "areas": [],  "region": "The Inland Empire",  "spec": "Mobile motorhome and RV repair",  "reg": "inland-empire"
+ },
+ {  "n": "Temecula Valley RV",  "c": "Murrieta, CA",  "p": "(951) 894-2347",  "u": "http://temeculavalleyrvrepair.com/",  "t": "center",  "e": false,  "r": false,  "d": "Temecula Valley RV is an RV remodel, repair, service and parts business at 26240 Jackson Ave in Murrieta. It services Class A, B and C gas and diesel motorhomes, fifth wheels, travel trailers, toy haulers, horse trailers, pop-up trailers, truck campers and specialty vehicles, welcomes warranty, extended warranty and insurance work, and has a large retail RV parts department.",  "g": [
+   "shop"
+  ],  "base": "murrieta",  "areas": [],  "region": "The Inland Empire",  "spec": "RV service, parts and repair shop",  "reg": "inland-empire"
+ },
+ {  "n": "Jason Junge's Mobile RV Service",  "c": "San Jacinto, CA",  "p": "(951) 492-8982",  "u": "https://www.jjmrv.com/",  "t": "both",  "e": false,  "r": false,  "d": "Jason Junge's Mobile RV Service is a family-owned mobile RV repair business serving San Jacinto and surrounding areas from a base in Winchester. It handles roof maintenance, RV appliances, solar systems, awning repairs, slide-out service, hydraulics, leak repairs, exterior sealing, Onan generator service and extended warranty services, and also offers in-shop work.",  "g": [
+   "shop",
+   "mobile"
+  ],  "base": "san jacinto",  "areas": [],  "region": "The Inland Empire",  "spec": "Mobile and in-shop RV repair",  "reg": "inland-empire"
+ },
+ {  "n": "Black Cactus RV Services",  "c": "Temecula, CA",  "p": "951-587-5807",  "u": "https://www.blackcactusrvservices.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Black Cactus RV Services is a veteran-owned and operated mobile RV repair and maintenance business serving Temecula, Murrieta and Menifee. It provides on-site repairs and diagnostics covering electrical systems including 12V and 110V and solar, HVAC and appliances, plumbing and water systems and annual inspections.",  "g": [
+   "mobile"
+  ],  "base": "temecula",  "areas": [],  "region": "The Inland Empire",  "spec": "Mobile RV repair and maintenance",  "reg": "inland-empire"
+ },
+ {  "n": "Quality Auto Body & Paint",  "c": "Hesperia, CA",  "p": "(760) 947-8777",  "u": "https://quality-autobody.com/rv-repair-shop/",  "t": "center",  "e": false,  "r": false,  "d": "Quality Auto Body & Paint is a family-owned auto body and collision repair shop at 16701 Walnut St #G in Hesperia that also runs a dedicated RV repair shop serving the High Desert. It performs RV collision repair, motorhome body repair, fiberglass repair, frame and unibody repair, color matching, painting, suspension and alignment work and dent removal, and works with all insurance companies.",  "g": [
+   "shop"
+  ],  "base": "hesperia",  "areas": [],  "region": "The high desert",  "spec": "RV collision and body repair shop",  "reg": "desert-high"
+ },
+ {  "n": "I 15 RV",  "c": "Hesperia, CA",  "p": "760-947-8200",  "u": "https://www.i15rv.com/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "I 15 RV is an RV dealership at 11854 Mariposa Road in Hesperia with an RV service department. It delivers maintenance and repair for travel trailers, fifth wheels, toy haulers and motorhomes, including oil changes, inspections, electrical and tire repairs and diagnostics, with factory-certified service and pickup and delivery within 25 to 50 miles.",  "g": [
+   "shop"
+  ],  "base": "hesperia",  "areas": [],  "region": "The high desert",  "spec": "RV dealer service department",  "reg": "desert-high"
+ },
+ {  "n": "SoCal RV Doctor",  "c": "Lake Elsinore, CA",  "p": "(951) 471-3840",  "u": "https://socalrvdoctor.com/",  "t": "center",  "e": false,  "r": false,  "d": "SoCal RV Doctor is an RV service, parts and storage business at 29910 Ohana Circle in Lake Elsinore, off the 15 freeway at Main Street. Factory-trained technicians handle everything from oil changes to full roof replacements on all brands, makes and models, including body and paint repairs and renovations, along with an on-site parts store.",  "g": [
+   "shop"
+  ],  "base": "lake elsinore",  "areas": [],  "region": "The Inland Empire",  "spec": "RV service, parts and repair shop",  "reg": "inland-empire"
+ },
+ {  "n": "RV Ready",  "c": "Lake Elsinore, CA",  "p": "866-383-1409",  "u": "https://www.rvready4u.com/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "RV Ready is an RV dealership at 17999 Collier Ave in Lake Elsinore with a state-of-the-art service department. Its experienced technicians handle motorhome and towable trailer maintenance and repairs including coach and chassis equipment, wiring, awning repair, plumbing, solar panels, satellite systems, roof repair, slide-out repair and appliances, and work with RV insurance providers and manufacturer warranties.",  "g": [
+   "shop"
+  ],  "base": "lake elsinore",  "areas": [],  "region": "The Inland Empire",  "spec": "RV dealer service center",  "reg": "inland-empire"
+ },
+ {  "n": "Redlands Truck & RV",  "c": "Redlands, CA",  "p": "909-792-0314",  "u": "https://www.redlandstruckservice.com/",  "t": "center",  "e": false,  "r": false,  "d": "Redlands Truck & RV is a family-owned and operated RV service center at 510 Amigos Drive in Redlands, in business since 1972. It performs chassis services, engine and generator services, tires and Hunter laser alignment, batteries, inverters and solar, ride and handling upgrades, paint and body, roof and vent work, awnings and slide toppers, appliances and tow car setup on all RV makes and models, and is a Spartan and Tiffin Powerglide chassis service center.",  "g": [
+   "shop"
+  ],  "base": "redlands",  "areas": [],  "region": "The Inland Empire",  "spec": "RV chassis and coach service center",  "reg": "inland-empire"
  }
 ];

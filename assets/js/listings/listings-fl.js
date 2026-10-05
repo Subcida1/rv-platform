@@ -464,5 +464,63 @@ window.RV_LISTINGS_FL = [
  {  "n": "D & L Mobile RV Repair",  "c": "Riverview, FL",  "p": "(813) 340-4391",  "u": "https://www.dandlmobilervrepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "D & L Mobile RV Repair is a mobile RV repair business located in Riverview that has provided RV maintenance and repair throughout West Central Florida for over 25 years. It specializes in bumper to bumper repairs on motorhomes, coaches, and trailers, covering RV plumbing, appliances, electrical, awning services, and rubber roof replacement, and works with major insurance companies.",  "g": [
    "mobile tech"
   ],  "base": "riverview",  "areas": [],  "region": "Tampa Bay",  "spec": null,  "reg": "tampa-fl"
+ },
+ {  "n": "RV Specialist, Inc",  "c": "Orlando, FL",  "p": "(407) 797-4916",  "u": "https://www.rvspecialistinc.com/",  "t": "mobile",  "e": true,  "r": false,  "d": "RV Specialist, Inc is a veteran-owned, family-operated RV sales and service business that has worked in Central Florida since 1996. The owner is a master-certified RV technician and a master liquid propane qualifier, and the team is licensed and insured. Service is mobile, with fully stocked service trucks handling LP gas systems, plumbing, electrical, roof coating, appliances, air conditioning and heating, slide-outs, generators, solar, awnings, and interior repairs on all makes and models.",  "g": [
+   "mobile tech"
+  ],  "base": "orlando",  "areas": [],  "region": "Orlando Metro",  "spec": null,  "reg": "orlando-fl"
+ },
+ {  "n": "Accurate Mobile RV Service",  "c": "Winter Park, FL",  "p": "(321) 400-3614",  "u": "https://www.accuratemobilervservice.com/",  "t": "mobile",  "e": true,  "r": false,  "d": "Accurate Mobile RV Service is a mobile RV repair and maintenance business that has served Central Florida for over 15 years. The owner performs roof and Dicor seal maintenance for several hundred local RVers across Orange, Seminole, Lake, and Osceola Counties, and repairs or replaces all types of RV appliances including AC units, refrigerators, water heaters, furnaces, converters, inverters, water pumps, awnings, slide-out systems, and leveling systems. Pre-purchase and trip inspections are also offered.",  "g": [
+   "mobile tech"
+  ],  "base": "winter park",  "areas": [],  "region": "Orlando Metro",  "spec": null,  "reg": "orlando-fl"
+ },
+ {  "n": "Traveling RV Technicians",  "c": "Oviedo, FL",  "p": "(407) 392-3252",  "u": "https://www.travelingrvtechnicians.com/",  "t": "mobile",  "e": true,  "r": false,  "d": "Traveling RV Technicians is a certified mobile RV repair business based in Oviedo that comes to driveways, campgrounds, and storage spots. The RVIA-trained team handles air conditioning, refrigerator, plumbing, roof resealing and replacement, slide floors, electrical, converters and inverters, leveling jacks, awnings, water heaters and furnaces, and Airstream bodywork on travel trailers, fifth wheels, and Class A, B, C, and Super C motorhomes, with a large parts stock carried on the trucks.",  "g": [
+   "mobile tech"
+  ],  "base": "oviedo",  "areas": [],  "region": "Orlando Metro",  "spec": null,  "reg": "orlando-fl"
+ },
+ {  "n": "Blue Compass RV Orlando",  "c": "Casselberry, FL",  "p": "(407) 409-7707",  "u": "https://www.bluecompassrv.com/locations/florida/orlando/service",  "t": "center",  "e": false,  "r": false,  "d": "Blue Compass RV Orlando is the service center for the dealership on FL-436 in Casselberry. Certified technicians service all RV makes and models and the brands the store carries, including Airstream, Grand Design, Jayco, Forest River, and Entegra Coach. Work ranges from routine maintenance and engine, transmission, electrical, plumbing, roof, HVAC, and appliance service to slide-out repair, structural and remodel work, and collision and body work.",  "g": [
+   "service center"
+  ],  "base": "casselberry",  "areas": [],  "region": "Orlando Metro",  "spec": "Mon - Sat: 8am - 5pm | Sun: Closed",  "reg": "orlando-fl"
+ },
+ {  "n": "Excalibur Coach",  "c": "Sanford, FL",  "p": "(407) 302-9139",  "u": "https://www.excaliburservice.com/",  "t": "center",  "e": false,  "r": false,  "d": "Excalibur Coach is a Prevost and Class A motorhome sales and service center in Sanford operating since 2004. The 15,000 square foot facility handles routine Prevost maintenance, major mechanical and electrical repairs, generator repair and replacement, collision and insurance work, fiberglass and body repair, and custom interior and exterior upgrades for Prevost H3-45, XL, and XL II coaches and other Class A motorhomes.",  "g": [
+   "service center"
+  ],  "base": "sanford",  "areas": [],  "region": "Orlando Metro",  "spec": "Monday through Friday from 7:00 AM to 4:00 PM",  "reg": "orlando-fl"
+ },
+ {  "n": "Nichols RV & Truck Center",  "c": "Eustis, FL",  "p": "(352) 589-4422",  "u": "https://nichols-rv.com/",  "t": "both",  "e": false,  "r": false,  "d": "Nichols RV & Truck Center is a family-owned RV repair and service facility that has served Lake County and Central Florida for more than 35 years from its shop on Kurt Street in Eustis, just off Highway 441. The shop services the whole vehicle bumper to bumper, including engine (gas or diesel), transmission, electrical, body and frame, air conditioning, custom painting, collision damage, upholstery, appliance repair, and generator repair, and also offers mobile service, parts, paint and body, storage, and RV consignment.",  "g": [
+   "repair shop",
+   "mobile tech"
+  ],  "base": "eustis",  "areas": [],  "region": "Lake County",  "spec": null,  "reg": "orlando-fl"
+ },
+ {  "n": "Goldsmiths RV Repair",  "c": "Tavares, FL",  "p": "(407) 394-2658",  "u": "https://goldsmithsrvrepairs.com/",  "t": "both",  "e": false,  "r": false,  "d": "Goldsmiths RV Repair is a family-owned RV repair shop in Tavares with RVTI-certified technicians that works both in-shop and mobile to homes or campsites. The team handles roof repairs and resealing, interior carpentry and cabinetry, electrical work, plumbing, floor replacement, and 45-point inspections, and processes warranty and insurance claims directly.",  "g": [
+   "repair shop",
+   "mobile tech"
+  ],  "base": "tavares",  "areas": [],  "region": "Lake County",  "spec": null,  "reg": "orlando-fl"
+ },
+ {  "n": "Repair RV Ocala",  "c": "Ocala, FL",  "p": "(352) 707-5172",  "u": "https://repairrvocala.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Repair RV Ocala is a mobile RV repair service covering Ocala, The Villages, and all of Marion County. Its technicians handle roof repair and restoration, appliance and air conditioner repair, plumbing and black tank work, awning repair and installation, generator service, electrical repair, and pre-purchase and pre-delivery inspections on motorhomes, fifth wheels, travel trailers, toy haulers, and campers.",  "g": [
+   "mobile tech"
+  ],  "base": "ocala",  "areas": [
+   "the villages"
+  ],  "region": "Marion County",  "spec": null,  "reg": "north-fl"
+ },
+ {  "n": "Dan The RV Man INC",  "c": "Ormond Beach, FL",  "p": "(386) 481-3300",  "u": "https://danthervman.com/",  "t": "both",  "e": true,  "r": false,  "d": "Dan The RV Man INC is a licensed and insured RV maintenance and repair business based in Ormond Beach with a shop on Tower Circle East and mobile service across the Daytona Beach area. The team provides certified maintenance and repair, inspection services, system diagnostics and troubleshooting, preventative maintenance, emergency repair, and custom upgrades and modifications.",  "g": [
+   "mobile tech",
+   "repair shop"
+  ],  "base": "ormond beach",  "areas": [
+   "daytona beach",
+   "new smyrna beach",
+   "deland",
+   "deltona",
+   "orange city"
+  ],  "region": "Volusia County",  "spec": null,  "reg": "orlando-fl"
+ },
+ {  "n": "Atlantic Mobile RV Service, Inc.",  "c": "Daytona Beach, FL",  "p": "(386) 439-7378",  "u": "https://www.atlanticmobilervservice.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Atlantic Mobile RV Service, Inc. is a mobile, on-site RV repair business led by RV Tim, who has more than 40 years in the RV industry. The company offers general repairs on all types of RVs, buses, and towables, including slide topper fabric replacement, battery replacement, Aqua-Hot heating and hot water systems, plumbing, electrical, LP gas systems, satellite systems, and components from Atwood, Dometic, Norcold, Lippert, Thetford, and other major brands.",  "g": [
+   "mobile tech"
+  ],  "base": "daytona beach",  "areas": [
+   "ormond beach",
+   "new smyrna beach"
+  ],  "region": "Volusia County",  "spec": null,  "reg": "orlando-fl"
+ },
+ {  "n": "Viking RV Services",  "c": "Port Orange, FL",  "p": "(406) 607-7396",  "u": "https://vikingrvservices.com/",  "t": "mobile",  "e": true,  "r": false,  "d": "Viking RV Services is a family-owned mobile RV repair business that has served Port Orange and Central Florida since 2014. Technicians come to the customer at home, an RV park, campground, or storage facility, and service air conditioning, appliances, electrical, plumbing, awnings, slide-outs, hydraulic systems, roof repairs, inspections, and maintenance, with after-hours and emergency service available.",  "g": [
+   "mobile tech"
+  ],  "base": "port orange",  "areas": [],  "region": "Volusia County",  "spec": null,  "reg": "orlando-fl"
  }
 ];
