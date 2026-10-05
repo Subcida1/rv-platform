@@ -173,5 +173,74 @@ window.RV_LISTINGS_AR = [
    "collision",
    "chassis"
   ],  "base": "little rock",  "areas": [],  "region": null,  "spec": null,  "reg": "central-ar"
+ },
+ {  "n": "Little Rock Mobile RV Repair",  "c": "Little Rock, AR",  "p": "501-399-4801",  "u": "https://littlerockmobilervrepair.com/",  "t": "mobile",  "e": true,  "r": true,  "d": "Little Rock Mobile RV Repair is a mobile RV repair service based in Little Rock that travels to homes, campgrounds, storage lots and roadsides across Central Arkansas. Technicians handle RV air conditioners, electrical systems, plumbing and water leaks, appliances, roofs, water heaters, awnings, slide-outs and generators. The company also performs pre-trip and pre-purchase RV inspections and seasonal winterization. It advertises emergency and same-day RV service during business hours.",  "g": [
+   "mobile"
+  ],  "base": "little rock",  "areas": [
+   "north little rock",
+   "maumelle",
+   "sherwood",
+   "jacksonville",
+   "bryant",
+   "benton",
+   "alexander",
+   "scott",
+   "wrightsville"
+  ],  "region": "Central Arkansas",  "spec": null,  "reg": "central-ar"
+ },
+ {  "n": "Precision RV",  "c": "Harrison, AR",  "p": "870-743-6628",  "u": "https://precisionrvharrison.com/",  "t": "center",  "e": false,  "r": false,  "d": "Precision RV is an RV repair shop at 118 Younes Drive in Harrison. It handles RV plumbing and water heaters, electrical repair and installation, inverters and converters, solar installs, batteries, air conditioning and furnace service, water damage repair, axles and bearing repack, brakes, roof repair and resealing, refrigerators, slide-outs and awnings. It brings over 20 years of hands-on RV experience.",  "g": [
+   "center"
+  ],  "base": "harrison",  "areas": [],  "region": "Northwest Arkansas",  "spec": null,  "reg": "nw-arkansas"
+ },
+ {  "n": "Clay's Mobile RV Service",  "c": "Perryville, AR",  "p": "501.231.0765",  "u": "https://www.claysmobilervs.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Clay's Mobile RV Service is a mobile RV repair business based in Perryville that repairs and maintains recreational vehicles at the customer's location. The owner emphasizes transparency and professionalism and performs RV servicing as quickly and efficiently as possible. It operates as an Arkansas mobile RV service.",  "g": [
+   "mobile"
+  ],  "base": "perryville",  "areas": [],  "region": "Central Arkansas",  "spec": null,  "reg": "central-ar"
+ },
+ {  "n": "Todd's Mobile RV Repair",  "c": "Amity, AR",  "p": "501-547-1273",  "u": "https://toddsmobilervrepair.com/",  "t": "mobile",  "e": true,  "r": true,  "d": "Todd's Mobile RV Repair is a mobile RV and camper repair business at 2590 Shouse Ford Road in Amity serving Hot Springs and surrounding areas. It offers 24/7 emergency RV repair and works on all makes and models of RV. Services include RV and camper repair and maintenance, RV collision repair and cargo, utility and horse trailer repair. Technicians are certified and licensed.",  "g": [
+   "mobile",
+   "collision"
+  ],  "base": "amity",  "areas": [
+   "hot springs"
+  ],  "region": "Central Arkansas",  "spec": null,  "reg": "southwest-ar"
+ },
+ {  "n": "Ideal RV Center",  "c": "Mountain Home, AR",  "p": "870-481-5400",  "u": "https://www.idealrv.com/",  "t": "center",  "e": false,  "r": false,  "d": "Ideal RV Center is a full service RV dealership at 4764 Highway 5 North in Mountain Home, family owned since 1971. Its parts and service department works on most models of RVs and truck campers, covering rubber roof replacement, fiberglass repair, slide-out floor replacement, floor repair, roof resealing, hitch installation and body damage repair. Repairs exclude drive train work.",  "g": [
+   "center"
+  ],  "base": "mountain home",  "areas": [],  "region": "North Central Arkansas",  "spec": null,  "reg": "nw-arkansas"
+ },
+ {  "n": "Springdale RV Center",  "c": "Tontitown, AR",  "p": "479-361-2077",  "u": "https://www.springdalervcenter.com/",  "t": "both",  "e": true,  "r": false,  "d": "Springdale RV Center is a family owned RV dealer and service center at 3063 West Henri De Tonti Boulevard in Tontitown. It began in 1983 as an RV repair facility and calls itself the oldest RV repair center in Northwest Arkansas. Its mobile service handles air conditioning and heat repair, refrigerator repair, plumbing, electrical, roof repair, roof resealing and awning repair for the Springdale, Fayetteville, Rogers and Bentonville areas.",  "g": [
+   "mobile",
+   "center"
+  ],  "base": "tontitown",  "areas": [
+   "springdale",
+   "fayetteville",
+   "rogers",
+   "bentonville",
+   "siloam springs",
+   "tontitown"
+  ],  "region": "Northwest Arkansas",  "spec": null,  "reg": "nw-arkansas"
+ },
+ {  "n": "Moix RV",  "c": "Conway, AR",  "p": "(501) 327-2255",  "u": "https://www.moixrv.com/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "Moix RV is an Arkansas RV dealer with a large service department based in Conway and additional service locations in Springdale, Hot Springs and Jonesboro. Its RVIA certified and master technicians service RV cabinetry, flooring, roofs, LP systems, accessories, hydraulic jacks, hitches, wiring, appliances, plumbing and slide-outs. Service is offered to Little Rock, Sherwood, Jacksonville and Conway among other areas.",  "g": [
+   "center"
+  ],  "base": "conway",  "areas": [
+   "little rock",
+   "sherwood",
+   "jacksonville",
+   "conway",
+   "springdale",
+   "hot springs",
+   "jonesboro"
+  ],  "region": "Central Arkansas",  "spec": null,  "reg": "central-ar"
+ },
+ {  "n": "Airstream of Arkansas",  "c": "Conway, AR",  "p": "501-667-4838",  "u": "https://www.airstreamofarkansas.com/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "Airstream of Arkansas is an RV dealership at 800 North Creek Drive in Conway with a service department. Its RV service team helps get RVs back into working order and accepts service appointments for any issue. It is part of the Moix RV group of Arkansas dealerships.",  "g": [
+   "center"
+  ],  "base": "conway",  "areas": [],  "region": "Central Arkansas",  "spec": null,  "reg": "central-ar"
+ },
+ {  "n": "JMSB Mobile RV Repair",  "c": "Heber Springs, AR",  "p": "(501) 691-3197",  "u": "https://www.jmsbmobilervrepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "JMSB Mobile RV Repair is a mobile RV repair business based in Heber Springs. It travels to customers to solve RV repair needs and serves the Greers Ferry Lake area. The business is family owned and offers a full line of RV parts along with its mobile repair service.",  "g": [
+   "mobile"
+  ],  "base": "heber springs",  "areas": [],  "region": "North Central Arkansas",  "spec": null,  "reg": "central-ar"
+ },
+ {  "n": "NiceCampers",  "c": "Russellville, AR",  "p": "479.229.1499",  "u": "https://www.nicecampers.com/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "NiceCampers is an RV dealership at 3814 South Arkansas Avenue in Russellville with an RV service and repair department. It provides RV service and repairs to customers in the Russellville area. The service department is open Monday through Saturday.",  "g": [
+   "center"
+  ],  "base": "russellville",  "areas": [],  "region": "River Valley",  "spec": null,  "reg": "river-valley"
  }
 ];

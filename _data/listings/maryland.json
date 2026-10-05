@@ -32,7 +32,116 @@
     "Huntingtown": "southern-md",
     "Avenue": "southern-md",
     "Grasonville": "eastern-shore-md",
-    "Pocomoke City": "eastern-shore-md"
+    "Pocomoke City": "eastern-shore-md",
+    "Baltimore": "baltimore-md",
+    "Rosedale": "baltimore-md",
+    "Linthicum": "baltimore-md",
+    "Linthicum Heights": "baltimore-md",
+    "Westminster": "baltimore-md",
+    "Annapolis": "baltimore-md",
+    "Beltsville": "baltimore-md",
+    "Rockville": "baltimore-md",
+    "Capitol Heights": "baltimore-md",
+    "Dundalk": "baltimore-md",
+    "Essex": "baltimore-md",
+    "Towson": "baltimore-md",
+    "Catonsville": "baltimore-md",
+    "Owings Mills": "baltimore-md",
+    "Pikesville": "baltimore-md",
+    "Parkville": "baltimore-md",
+    "Randallstown": "baltimore-md",
+    "Nottingham": "baltimore-md",
+    "Perry Hall": "baltimore-md",
+    "White Marsh": "baltimore-md",
+    "Middle River": "baltimore-md",
+    "Brooklyn Park": "baltimore-md",
+    "Ferndale": "baltimore-md",
+    "Jessup": "baltimore-md",
+    "Elkridge": "baltimore-md",
+    "Severn": "baltimore-md",
+    "Odenton": "baltimore-md",
+    "Crofton": "baltimore-md",
+    "Bowie": "baltimore-md",
+    "Laurel": "baltimore-md",
+    "Columbia": "baltimore-md",
+    "Ellicott City": "baltimore-md",
+    "Eldersburg": "baltimore-md",
+    "Reisterstown": "baltimore-md",
+    "Bel Air": "baltimore-md",
+    "Havre de Grace": "baltimore-md",
+    "Edgewood": "baltimore-md",
+    "Gaithersburg": "baltimore-md",
+    "Germantown": "baltimore-md",
+    "Silver Spring": "baltimore-md",
+    "Bethesda": "baltimore-md",
+    "College Park": "baltimore-md",
+    "Greenbelt": "baltimore-md",
+    "Hyattsville": "baltimore-md",
+    "Millersville": "baltimore-md",
+    "Severna Park": "baltimore-md",
+    "Pasadena": "baltimore-md",
+    "Brooklyn": "baltimore-md",
+    "Timonium": "baltimore-md",
+    "Cockeysville": "baltimore-md",
+    "Hunt Valley": "baltimore-md",
+    "Sparks": "baltimore-md",
+    "Hereford": "baltimore-md",
+    "Monkton": "baltimore-md",
+    "Middletown": "western-md",
+    "Hagerstown": "western-md",
+    "Smithsburg": "western-md",
+    "Boonsboro": "western-md",
+    "Cumberland": "western-md",
+    "Frostburg": "western-md",
+    "Oakland": "western-md",
+    "Emmitsburg": "western-md",
+    "Brunswick": "western-md",
+    "Walkersville": "western-md",
+    "Mount Airy": "western-md",
+    "Taneytown": "western-md",
+    "Waldorf": "southern-md",
+    "Mechanicsville": "southern-md",
+    "Charlotte Hall": "southern-md",
+    "Prince Frederick": "southern-md",
+    "Dunkirk": "southern-md",
+    "Owings": "southern-md",
+    "Lusby": "southern-md",
+    "Leonardtown": "southern-md",
+    "California": "southern-md",
+    "St. Marys City": "southern-md",
+    "Clinton": "southern-md",
+    "Upper Marlboro": "southern-md",
+    "Fort Washington": "southern-md",
+    "Oxon Hill": "southern-md",
+    "Suitland": "southern-md",
+    "Brandywine": "southern-md",
+    "Accokeek": "southern-md",
+    "Indian Head": "southern-md",
+    "Hughesville": "southern-md",
+    "White Plains": "southern-md",
+    "Bishopville": "eastern-shore-md",
+    "Salisbury": "eastern-shore-md",
+    "Ocean City": "eastern-shore-md",
+    "Berlin": "eastern-shore-md",
+    "Cambridge": "eastern-shore-md",
+    "Easton": "eastern-shore-md",
+    "Denton": "eastern-shore-md",
+    "Chestertown": "eastern-shore-md",
+    "Centreville": "eastern-shore-md",
+    "Elkton": "eastern-shore-md",
+    "North East": "eastern-shore-md",
+    "Rising Sun": "eastern-shore-md",
+    "Snow Hill": "eastern-shore-md",
+    "Princess Anne": "eastern-shore-md",
+    "Crisfield": "eastern-shore-md",
+    "Fruitland": "eastern-shore-md",
+    "Federalsburg": "eastern-shore-md",
+    "Greensboro": "eastern-shore-md",
+    "Millington": "eastern-shore-md",
+    "Sudlersville": "eastern-shore-md",
+    "Queenstown": "eastern-shore-md",
+    "Stevensville": "eastern-shore-md",
+    "Chester": "eastern-shore-md"
   },
   "listings": [
     {
@@ -575,6 +684,521 @@
         "emergency_quote": null,
         "roadside_quote": null,
         "licence": null
+      }
+    },
+    {
+      "n": "Custom Coach Company",
+      "c": "Rosedale, MD",
+      "p": "(410) 687-7200",
+      "u": "https://www.customcoachonline.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Custom Coach Company is an RV service and repair shop at 8332 Pulaski Hwy in Rosedale, Maryland, in business since 1946. It provides RV service and repair, customization and parts, and also rents out trailers. Its parts department stocks over 3,500 items from appliance parts to camping supplies.",
+      "g": [
+        "service center",
+        "parts",
+        "customization"
+      ],
+      "base": "Rosedale",
+      "areas": [
+        "Rosedale",
+        "Baltimore"
+      ],
+      "region": "Baltimore and the northeast",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "Call or Text: (410) 687-7200 (4106877200)",
+        "type_quote": "Since 1946, The Custom Coach Company has been providing high quality RV Service and Repair to customers in and around Baltimore, Maryland.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Serving the Baltimore Area with reliable RV Service, Repair, Customization, Parts and Trailer Rentals - WE DO IT ALL!"
+        ]
+      }
+    },
+    {
+      "n": "Maryland Auto & Truck Repair",
+      "c": "Glen Burnie, MD",
+      "p": "(410) 760-8123",
+      "u": "https://www.mdauto.com/glen-burnie-auto-services/rv-repair-and-services-in-glen-burnie-md",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Maryland Auto & Truck Repair is a repair shop at 512 Crain Hwy #B in Glen Burnie, Maryland, fixing RVs, trucks and diesel engines since the 1970s. It services all RV types and trailers and lists RV air conditioning repair, RV electrical and diagnostic work and RV safety inspections. It can issue a Maryland Vehicle Inspection certificate and handle title transfers at the Glen Burnie location.",
+      "g": [
+        "service center",
+        "diesel"
+      ],
+      "base": "Glen Burnie",
+      "areas": [
+        "Glen Burnie"
+      ],
+      "region": "Baltimore and the northeast",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "Maryland Auto & Truck Repair, 512 Crain Hwy #B Glen Burnie, MD 21061(410) 760-8123",
+        "type_quote": "We perform RV repair services.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Serving Glen Burnie and servicing all RV types and trailers."
+        ]
+      }
+    },
+    {
+      "n": "Linthicum-Ferndale Truck Repair",
+      "c": "Linthicum Heights, MD",
+      "p": "(443) 524-3100",
+      "u": "https://lftruckrepair.com/services/rv-motor-home-repair/baltimore-md/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Linthicum-Ferndale Truck Repair is a family-owned shop at 703 Nursery Rd in Linthicum Heights, Maryland, established in 1979. It focuses on RV and motorhome body and collision repair, including fiberglass and aluminum body damage, roof and leak repair, sidewall replacement and paint work. It works with major insurers through the Nationwide On Your Side network.",
+      "g": [
+        "body shop",
+        "collision repair"
+      ],
+      "base": "Linthicum",
+      "areas": [
+        "Baltimore"
+      ],
+      "region": "Baltimore and the northeast",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "Call(443) 524-3100 or contact us online to get an estimate.",
+        "type_quote": "We specialize in body repairs and specialty services for large vehicles including camper vans, motor coaches, and various sizes of RVs.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Located in Linthicum Heights and convenient to all the highways in the area, our shop makes it easy to get motorhome and RV repairs in Baltimore."
+        ]
+      }
+    },
+    {
+      "n": "Wastler Auto Service",
+      "c": "Westminster, MD",
+      "p": "410-635-8375",
+      "u": "https://wastlerautoservice.com/services/motorhome-repair",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Wastler Auto Service is a family shop at 4174 Ridge Road in Westminster, Maryland, led by Dave Wastler and serving Carroll County since 1999. It handles Class A, B and C motorhome repairs including engine and transmission service, brakes, suspension, roof and seal checks, generators, slide-outs, plumbing and exterior lighting.",
+      "g": [
+        "service center"
+      ],
+      "base": "Westminster",
+      "areas": [
+        "Westminster"
+      ],
+      "region": "Central Maryland",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "Contact Wastler Auto Service at 410-635-8375 or book your appointment online at https://wastlerautoservice.com/ for expert motor home repair in Westminster, MD.",
+        "type_quote": "At Wastler Auto Service in Westminster, MD, we specialize in comprehensive motor home repair services, helping RV owners across Carroll County keep their vehicles safe, functional, and ready for the next journey.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Serving RV owners throughout 21157 and surrounding areas, our team, led by Dave Wastler, has the knowledge and hands-on experience to tackle even the most complex RV repairs."
+        ]
+      }
+    },
+    {
+      "n": "Cranberry Auto Service Center",
+      "c": "Westminster, MD",
+      "p": "(443) 487-4058",
+      "u": "https://cranberryautoservice.com/rv-repair",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Cranberry Auto Service Center is an auto and RV repair shop at 404 Lucabaugh Mill Road in Westminster, Maryland. Its ASE certified technicians provide comprehensive RV repair, including water leak and electrical system work.",
+      "g": [
+        "service center"
+      ],
+      "base": "Westminster",
+      "areas": [
+        "Westminster"
+      ],
+      "region": "Central Maryland",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "Call Us(443) 487-4058 (4434874058)",
+        "type_quote": "We want to help make the process easier at Cranberry Auto Service Center, and we do that through our comprehensive RV repair service.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": []
+      }
+    },
+    {
+      "n": "John Kent Auto and Truck Service",
+      "c": "Annapolis, MD",
+      "p": "(410) 841-5579",
+      "u": "https://johnkentautoandtruck.com/services/rv-service-repairs",
+      "t": "center",
+      "e": true,
+      "r": false,
+      "d": "John Kent Auto and Truck Service is a family-owned full-service auto and truck shop at 1861 Crownsville Rd in Annapolis, Maryland, since 1981. It repairs and maintains gas and diesel RVs, covering brakes, engines, transmissions, tires, suspensions, pumps and electronics, and offers engine diagnostics and inspections.",
+      "g": [
+        "service center",
+        "chassis"
+      ],
+      "base": "Annapolis",
+      "areas": [
+        "Annapolis"
+      ],
+      "region": "Annapolis and Anne Arundel County",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "(410) 841-5579 Email the Shop (johnkent.autotruck@gmail.com)",
+        "type_quote": "Gas or diesel, big or small, we repair and maintain brake systems, engines, transmissions, tires, suspensions, pumps, and electronics on all RVs.",
+        "emergency_quote": "Emergency Repairs: Have an issue while traveling? Count on our team to get you back on the road quickly and safely.",
+        "roadside_quote": null,
+        "coverage_quotes": []
+      }
+    },
+    {
+      "n": "ATEL",
+      "c": "Beltsville, MD",
+      "p": "(301) 210-5100",
+      "u": "https://atelbus.com/vehicles/rv-motorhome-repair",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "ATEL is a heavy-duty collision, body and paint repair facility at 12120 Conway Rd in Beltsville, Maryland. It handles Class A, B, C and Super C motorhomes, diesel pusher coaches and high-end RVs up to 45 feet, with collision repair, body work, full refinish, custom paint, decal restoration and chassis service in a facility built for coach-length vehicles.",
+      "g": [
+        "body shop",
+        "collision repair",
+        "chassis"
+      ],
+      "base": "Beltsville",
+      "areas": [],
+      "region": "Washington suburbs",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "Or call fleet desk (301) 210-5100 (+13012105100)",
+        "type_quote": "ATEL handles collision repair, body work, full refinish, custom paint, decal restoration and chassis service in a facility built for coach-length vehicles.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Our primary service area is the DMV: Washington DC, Maryland and Virginia."
+        ]
+      }
+    },
+    {
+      "n": "Butler Collision Center",
+      "c": "Rockville, MD",
+      "p": "(301) 637-9793",
+      "u": "https://butler-collisioncenter.com/services/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Butler Collision Center is a large body and collision repair shop at 14720-A Southlawn Lane in Rockville, Maryland. It repairs trucks, buses and RVs and is an authorized Maryland State Inspection Station for heavy trucks, RVs and buses. It also does motorhome body work, painting, glass repair and ADAS calibration.",
+      "g": [
+        "body shop",
+        "collision repair"
+      ],
+      "base": "Rockville",
+      "areas": [
+        "Rockville",
+        "Gaithersburg",
+        "Silver Spring",
+        "Bethesda",
+        "Germantown",
+        "Clarksburg",
+        "Chevy Chase",
+        "Takoma Park",
+        "Wheaton",
+        "Damascus",
+        "Derwood",
+        "Darnestown",
+        "Laytonsville",
+        "Poolesville",
+        "Ashton",
+        "Montgomery Village",
+        "Aspen Hill",
+        "Olney",
+        "Potomac"
+      ],
+      "region": "Washington suburbs",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "Phone: (301) 637-9793 Fax: (301) 339-8980 Email Us",
+        "type_quote": "Our Rockville Maryland facility is one of the largest in the area and we can accomodate large vehicles like Truck, Buses, RV’s and more that other body shops can’t handle.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Butler Collision Center in Rockville, MD is conveniently accessible from all areas of Montgomery County including Clarksburg, Chevy Chase, Takoma Park, Wheaton, Silver Spring, Damascus, Derwood, Darnestown, Laytonsville, Poolesville, Ashton, Montgomery Village, Bethesda, Aspen Hill, Germantown, Olney, Gaithersburg, and Potomac."
+        ]
+      }
+    },
+    {
+      "n": "Miller Automotive Services",
+      "c": "Beltsville, MD",
+      "p": "(301) 937-8101",
+      "u": "https://millerfleetservice.com/services/rv-service-repairs",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Miller Automotive Services is a repair shop at 12300 Old Baltimore Pike in Beltsville, Maryland. It repairs and maintains gas and diesel RVs of all sizes, covering brakes, engines, transmissions, tires, suspensions, pumps and electronics, plus engine diagnostics and inspections, and it handles winterizing.",
+      "g": [
+        "service center"
+      ],
+      "base": "Beltsville",
+      "areas": [
+        "Beltsville"
+      ],
+      "region": "Washington suburbs",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "12300 Old Baltimore Pike Beltsville, MD 20705 (301) 937-8101",
+        "type_quote": "Gas or diesel, big or small, we repair and maintain brake systems, engines, transmissions, tires, suspensions, pumps, and electronics on all RVs.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": []
+      }
+    },
+    {
+      "n": "K & K Automotive",
+      "c": "Frederick, MD",
+      "p": "301-663-5258",
+      "u": "https://www.knkauto.com/rv-repair",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "K & K Automotive is a family repair shop at 5850 Urbana Pike in Frederick, Maryland, serving drivers since 1970. It provides RV repair and service for eligible RVs, including brake and tire service, battery testing, charging and starting system checks, engine diagnostics and general maintenance.",
+      "g": [
+        "service center"
+      ],
+      "base": "Frederick",
+      "areas": [
+        "Frederick"
+      ],
+      "region": "Frederick and western Maryland",
+      "spec": "K & K Automotive does not service 5th wheels and does not work on vehicles with air brakes.",
+      "evidence": {
+        "phone_quote": "301-663-5258",
+        "type_quote": "K & K Automotive provides RV repair and service for eligible RVs in Frederick, MD.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": []
+      }
+    },
+    {
+      "n": "Fountaindale Auto Center",
+      "c": "Middletown, MD",
+      "p": "301-371-5080",
+      "u": "https://www.fountaindaleautocenter.com/recreational-vehicle-rv-repair-frederick-md/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Fountaindale Auto Center is an auto and RV repair shop at 19 East Green Street in Middletown, Maryland. It offers comprehensive RV repair and inspection including RV Maryland inspection, brake, engine, transmission, heating, radiator, electrical and steering repairs and wheel alignments.",
+      "g": [
+        "service center"
+      ],
+      "base": "Middletown",
+      "areas": [
+        "Frederick",
+        "Middletown",
+        "Myersville",
+        "Hagerstown",
+        "Thurmont",
+        "Walkersville",
+        "Urbana",
+        "New Market",
+        "Brunswick"
+      ],
+      "region": "Frederick and western Maryland",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "Give us a call @ 301-371-5080 for more information on our RV repair services or to schedule your RV repair service today!",
+        "type_quote": "Fountaindale Auto Center offers comprehensive RV repair and inspection services to motorists in Frederick, MD and surrounding areas including: Middletown, Myersville, Hagerstown, Thurmont, Walkersville, Urbana, New Market, and Brunswick.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Fountaindale Auto Center offers comprehensive RV repair and inspection services to motorists in Frederick, MD and surrounding areas including: Middletown, Myersville, Hagerstown, Thurmont, Walkersville, Urbana, New Market, and Brunswick."
+        ]
+      }
+    },
+    {
+      "n": "Big Red's RV Repair",
+      "c": "Southern Maryland, MD",
+      "p": "240-496-4754",
+      "u": "https://www.bigredsrv.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Big Red's RV Repair is a Southern Maryland RV repair business. It describes itself as an honest and transparent source for RV repairs for the Southern Maryland area and takes appointments.",
+      "g": [
+        "RV repair"
+      ],
+      "base": null,
+      "areas": [],
+      "region": "La Plata and southern Maryland",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "240-496-4754 BigRedsRV@gmail.com",
+        "type_quote": "We started with the simple idea of providing Southern Maryland with an honest and transparent source for RV Repairs.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": []
+      },
+      "reg": "southern-md"
+    },
+    {
+      "n": "Economy RVs",
+      "c": "Mechanicsville, MD",
+      "p": "301-241-7596",
+      "u": "https://www.economyrvs.com/service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Economy RVs is an RV dealer and service center at 29020 Three Notch Rd (Route 5) in Mechanicsville, Maryland, in business over 13 years. Its service department handles plumbing, heating, electrical, appliance repair, hitches and tow bars, and insurance estimates and repairs, and it includes a roof inspection on all service.",
+      "g": [
+        "service center",
+        "dealer with service"
+      ],
+      "base": "Mechanicsville",
+      "areas": [
+        "Mechanicsville"
+      ],
+      "region": "La Plata and southern Maryland",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "29020 Three Notch Rd (Route 5) Mechanicsville, MD 20659 301-241-7596 (3012417596)",
+        "type_quote": "ECONOMY RVS offers the products and services you'll need to make your camping experience a positive one.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": []
+      }
+    },
+    {
+      "n": "Beltway Truck and Tire, Inc.",
+      "c": "Waldorf, MD",
+      "p": "301-870-5115",
+      "u": "http://www.beltwaytruckandtire.biz/motor-home---rv-repair-services.html",
+      "t": "both",
+      "e": false,
+      "r": true,
+      "d": "Beltway Truck and Tire, Inc. is a repair shop at 12099 Action Lane in Waldorf, Maryland, established in 1996. It specializes in motor home, fifth wheel, RV and travel trailer maintenance and repair, from engine and transmission repair to welding and fabrication, and it offers 24hr roadside assistance.",
+      "g": [
+        "service center",
+        "roadside"
+      ],
+      "base": "Waldorf",
+      "areas": [
+        "Waldorf",
+        "White Plains",
+        "La Plata",
+        "Prince Frederick",
+        "Clinton",
+        "Chesapeake Beach",
+        "Charlotte Hall",
+        "St. Leonard",
+        "Upper Marlboro",
+        "Accokeek",
+        "Solomons",
+        "Lusby",
+        "Mechanicsville",
+        "Hughesville"
+      ],
+      "region": "La Plata and southern Maryland",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "Phone: 301-870-5115 | Fax: 301-932-5706 beltwaytruckandtire@gmail.com",
+        "type_quote": "With over 20 years of experience, we specialize in motor home, 5th wheel, RV, and travel trailer maintenance and repair.",
+        "emergency_quote": null,
+        "roadside_quote": "24hr Roadside Assistance: 240-299-0258",
+        "coverage_quotes": [
+          "Beltway Truck and Tire provides the best in motor home, RV, 5th wheel and travel trailer maintenance & repair on the mid-Atlantic coast."
+        ]
+      }
+    },
+    {
+      "n": "Ashten's Total Auto Care",
+      "c": "Waldorf, MD",
+      "p": "(240) 518-8937",
+      "u": "https://www.ashtentotalauto.com/services/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Ashten's Total Auto Care is an auto and RV repair shop at 11725 Bad Dog Alley in Waldorf, Maryland. It services and repairs RVs in Waldorf and the surrounding area, including pre-trip inspections, preventative maintenance, oil and filter changes, suspension and steering repair and electrical service and repair.",
+      "g": [
+        "service center"
+      ],
+      "base": "Waldorf",
+      "areas": [
+        "Waldorf"
+      ],
+      "region": "La Plata and southern Maryland",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "(240) 518-8937",
+        "type_quote": "There’s no better choice than Ashten's Total Auto Care for RV services and repairs in Waldorf and surrounding area(s).",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": []
+      }
+    },
+    {
+      "n": "Q3 Car and Truck Repair",
+      "c": "Capitol Heights, MD",
+      "p": "888-320-0766",
+      "u": "https://q3repair.com/services/rv-repair",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Q3 Car and Truck Repair is an auto, truck and RV repair shop in Capitol Heights, Maryland, in business since 2020. Its certified technicians handle engine rebuilds and replacements, transmission rebuilding and RV repair including winterization, water system work, toilet repairs and tire inspections and replacements.",
+      "g": [
+        "service center"
+      ],
+      "base": "Capitol Heights",
+      "areas": [
+        "Capitol Heights",
+        "Waldorf",
+        "Upper Marlboro",
+        "Kettering",
+        "District Heights"
+      ],
+      "region": "Washington suburbs",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "888-320-0766 Car and Truck Repair, LLC",
+        "type_quote": "At Q3 Car and Truck Repair - Capitol Heights, we understand that your RV is more than just a vehicle; it's your home on wheels, your gateway to adventure, and a significant investment.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Serving Capitol Heights and Waldorf Areas, Upper Marlboro, MD, Kettering, MD, District Heights, MD, and beyond."
+        ]
+      }
+    },
+    {
+      "n": "Century RV Repair",
+      "c": "Bishopville, MD",
+      "p": "(443) 235-5664",
+      "u": "https://centuryrvrepair.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Century RV Repair is an RV repair shop at 12747 Old Stage Road in Bishopville, Maryland, about 10 minutes from Ocean City. It repairs all types of RVs, from roof repair and reseals to steps, fridges, gas and electrical systems, tires, brakes and suspension, and it stays open late.",
+      "g": [
+        "service center"
+      ],
+      "base": "Bishopville",
+      "areas": [
+        "Bishopville",
+        "Ocean City",
+        "Berlin"
+      ],
+      "region": "The Eastern Shore",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "(443) 235-5664",
+        "type_quote": "We service and repair all types of RV's and their systems.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "located 10 min from ocean city"
+        ]
       }
     }
   ]

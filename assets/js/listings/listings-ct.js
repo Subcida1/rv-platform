@@ -42,5 +42,158 @@ window.RV_LISTINGS_CT = [
  {  "n": "Airstream of Southern New England",  "c": "Union, CT",  "p": "860-851-9133",  "u": "https://www.airstreamsouthernne.com/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "Airstream of Southern New England runs an 8-bay RV service center at 2 Mashapaug Rd, Union, Connecticut, with RVIA certified technicians and Airstream rebuilders. It is a factory certified regional RV repair center with a body, collision and paint center. Services include RV Express checks and oil changes, roof inspections, cleaning, repair, sealing and replacement, fiberglass and structure repair, metal fabricating and painting, and general RV service such as winterizations, electrical and generator service, A/C service and wheel bearing packs.",  "g": [
    "service center"
   ],  "base": "union",  "areas": [],  "region": null,  "spec": null,  "reg": "hartford-ct"
+ },
+ {  "n": "Long View RV Superstores",  "c": "Windsor Locks, CT",  "p": "860-623-3326",  "u": "https://www.longviewrv.com/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "Long View RV Superstores is a family RV dealership and service center in Windsor Locks, Connecticut, that has serviced RVs since 1959. Its service department handles routine maintenance and major repairs on all makes and models, including RVs bought elsewhere, and works on roof resealing, slide-out systems, appliances, plumbing and water systems, 12-volt and 120-volt electrical, solar, and winterization. The shop also does custom installs and upgrades and performs warranty and insurance work.",  "g": [
+   "RV repair",
+   "RV service",
+   "winterization",
+   "roof repair",
+   "slide-out repair",
+   "RV dealer"
+  ],  "base": null,  "areas": [],  "region": "Hartford and the center",  "spec": null,  "reg": "hartford-ct"
+ },
+ {  "n": "Pete's RV Center",  "c": "South Windsor, CT",  "p": "(860) 967-3663",  "u": "https://www.petesrv.com/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "Pete's RV Center is an RV dealership with a Connecticut service department in South Windsor that services everything from a pop-up to a 40 foot diesel pusher. It performs maintenance, repairs and warranty work on all major brands, including campers bought elsewhere, and handles winterization, roof sealing and leak repair, hitch and braking system installation, and axle and bearing repair. The service department employs master certified technicians and factory trained service advisors.",  "g": [
+   "RV repair",
+   "RV service",
+   "warranty work",
+   "roof sealing",
+   "axle and bearing repair",
+   "RV dealer"
+  ],  "base": null,  "areas": [],  "region": "Hartford and the center",  "spec": null,  "reg": "hartford-ct"
+ },
+ {  "n": "Ray's Automotive Inc",  "c": "Waterbury, CT",  "p": "203-527-4116",  "u": "https://www.raysautoinc.com/rv-collision-repair-waterbury-ct",  "t": "center",  "e": false,  "r": false,  "d": "Ray's Automotive Inc is a family owned auto body and RV collision repair shop in the Hopeville section of Waterbury, Connecticut, operating since 1988. It repairs and replaces RV body panels, sidewall skins, rear caps and fiberglass on motorhomes, travel trailers and campers, performs structural repair, matches paint, replaces RV windshields in the shop, and handles insurance claims. The shop is I-CAR Gold Class and Platinum certified.",  "g": [
+   "RV collision repair",
+   "RV body work",
+   "fiberglass repair",
+   "RV windshield replacement",
+   "insurance claims"
+  ],  "base": "waterbury",  "areas": [],  "region": "Naugatuck Valley",  "spec": null,  "reg": "western-ct"
+ },
+ {  "n": "Dave's RV Center",  "c": "Danbury, CT",  "p": "1-877-483-3866",  "u": "https://www.davesrvcenter.com/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "Dave's RV Center is an RV dealership and service department in Danbury, Connecticut, that keeps motorhomes and trailers in working order. Its service department is staffed with trained technicians and works on Newmar RVs and other motorhomes and trailers, and customers can schedule service by phone or in person.",  "g": [
+   "RV service",
+   "RV repair",
+   "RV dealer",
+   "motorhome service"
+  ],  "base": "danbury",  "areas": [],  "region": "Fairfield County",  "spec": null,  "reg": "western-ct"
+ },
+ {  "n": "Blue Compass RV Newtown",  "c": "Newtown, CT",  "p": "(475) 445-8600",  "u": "https://www.bluecompassrv.com/locations/connecticut/newtown/service",  "t": "center",  "e": false,  "r": false,  "d": "Blue Compass RV Newtown is an RV dealership service center at 201 South Main Street in Newtown, Connecticut, and is the only Winnebago-authorized service dealer in the state. Its certified technicians perform routine maintenance and major repairs for all RV brands, including engine and transmission work, electrical and solar systems, plumbing, roof and exterior repair, appliances and collision work, and every RV gets a free multi-point inspection.",  "g": [
+   "RV repair",
+   "RV service",
+   "warranty work",
+   "collision repair",
+   "RV dealer"
+  ],  "base": null,  "areas": [],  "region": "Fairfield County",  "spec": null,  "reg": "western-ct"
+ },
+ {  "n": "Country Club Garage",  "c": "Wallingford, CT",  "p": "203-269-5403",  "u": "https://countryclubgarage.com/rv-repair/",  "t": "center",  "e": false,  "r": false,  "d": "Country Club Garage is a repair shop at 1 Gaylord Farm Road in Wallingford, Connecticut, with more than 40 years of experience that handles RV repairs and servicing. It offers engine repair, wheel bearing re-packing for pre-1997 RVs, AC and DC repair and slide-out repairs, and has large grounds to store campers and motorhomes while they are repaired.",  "g": [
+   "RV repair",
+   "RV service",
+   "engine repair",
+   "slide-out repair",
+   "AC and DC repair"
+  ],  "base": null,  "areas": [],  "region": "South Central Connecticut",  "spec": null,  "reg": "southern-ct"
+ },
+ {  "n": "Premier RV Inspections and Repair",  "c": "Thomaston, CT",  "p": "860-484-9731",  "u": "https://www.premierrvct.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Premier RV Inspections and Repair is a mobile RV inspection, maintenance and repair business based in Thomaston, Connecticut, serving all of New England. Its NRVTA-certified technician inspects and repairs all types of RVs, including Class A motorhomes, travel trailers and fifth wheels, and performs mechanical, electrical, plumbing and cosmetic repairs.",  "g": [
+   "RV repair",
+   "RV inspection",
+   "RV maintenance",
+   "mobile tech"
+  ],  "base": null,  "areas": [],  "region": "Litchfield County",  "spec": null,  "reg": "western-ct"
+ },
+ {  "n": "A-1 Auto Center LLC",  "c": "Niantic, CT",  "p": "(860) 691-3090",  "u": "https://www.a1autollc.com/rv-repair-services.aspx",  "t": "center",  "e": false,  "r": false,  "d": "A-1 Auto Center LLC is an auto and RV repair shop at 208 Flanders Road in Niantic, Connecticut, with mechanics experienced in repairing and servicing recreational vehicles. Its RV mechanical repair services include engine maintenance, shocks, batteries, starters, and oil, lube and filter changes.",  "g": [
+   "RV repair",
+   "RV mechanical repair",
+   "engine maintenance",
+   "battery service"
+  ],  "base": "niantic",  "areas": [],  "region": "Southeastern Connecticut",  "spec": null,  "reg": "eastern-ct"
+ },
+ {  "n": "TRIC Mobile RV Repair",  "c": "Connecticut, CT",  "p": "(508) 479-1144",  "u": "https://tricmobilervrepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "TRIC Mobile RV Repair is a family owned mobile RV repair and maintenance business that serves Central Massachusetts, Northern Rhode Island and Northern Connecticut. Its RVTI-certified technicians come to the customer's location and handle appliance repair, roof repair, awning repair, plumbing, winterizing, bearing and brake service, leak detection, inspections and emergency RV repair.",  "g": [
+   "mobile tech",
+   "RV repair",
+   "appliance repair",
+   "roof repair",
+   "winterization"
+  ],  "base": null,  "areas": [],  "region": "Northern Connecticut",  "spec": null,  "reg": "hartford-ct"
+ },
+ {  "n": "Rick's RV Care Center, LLC",  "c": "Columbia, CT",  "p": "(860) 228-2298",  "u": "http://www.ricksrvcarecenter.com/",  "t": "center",  "e": false,  "r": false,  "d": "Rick's RV Care Center, LLC is a licensed RV repair shop at 103 Route 6 in Columbia, Connecticut, with more than 35 years of experience. It offers full service and repairs for travel trailers, Class A and Class C motorhomes, fifth wheels and horse trailers, and also provides campground services by appointment.",  "g": [
+   "RV repair",
+   "RV service",
+   "travel trailer repair",
+   "motorhome repair"
+  ],  "base": null,  "areas": [],  "region": "Northeast Connecticut",  "spec": null,  "reg": "eastern-ct"
+ },
+ {  "n": "R & R General Repair, Inc.",  "c": "Canterbury, CT",  "p": "(860) 546-6305",  "u": "https://www.randrgeneralrepair.com/Auto-Repairs/RV-Repairs",  "t": "center",  "e": false,  "r": false,  "d": "R & R General Repair, Inc. is a one-stop RV repair shop at 16 Old Plainfield Road in Canterbury, Connecticut, with more than 35 years of service. It repairs Class A and Class C motorhomes, RVs, campers and horse trailers, covering drivetrain, engines, transmissions, brakes, tires, air conditioning, appliances, generators, electrical, plumbing, holding tanks, body work, windshield and window replacement, floor and roof replacement and custom paint.",  "g": [
+   "RV repair",
+   "motorhome repair",
+   "body work",
+   "appliance repair",
+   "insurance claims"
+  ],  "base": null,  "areas": [],  "region": "Northeast Connecticut",  "spec": null,  "reg": "eastern-ct"
+ },
+ {  "n": "ERV Service LLC",  "c": "Ashford, CT",  "p": "860-414-0088",  "u": "https://ervservice.net/",  "t": "center",  "e": false,  "r": false,  "d": "ERV Service LLC is a family owned RV and trailer repair shop at 121 Chatey Road in Ashford, Connecticut. It offers general maintenance, insurance work, extended warranty repairs and manufacturer warranty repairs for all types of RVs, and offers a discount for military and first responders.",  "g": [
+   "RV repair",
+   "RV service",
+   "warranty work",
+   "insurance work"
+  ],  "base": null,  "areas": [],  "region": "Northeast Connecticut",  "spec": null,  "reg": "eastern-ct"
+ },
+ {  "n": "P&B Auto Body",  "c": "Bristol, CT",  "p": "860-584-8115",  "u": "http://www.pbautobody.com/",  "t": "center",  "e": false,  "r": false,  "d": "P&B Auto Body is an auto and RV body shop in Bristol, Connecticut, serving the area since 1979. It provides automotive and RV body shop repair, including RV collision repair, in a facility with modern collision repair equipment.",  "g": [
+   "RV body work",
+   "RV collision repair",
+   "auto body"
+  ],  "base": "bristol",  "areas": [],  "region": "Hartford and the center",  "spec": null,  "reg": "western-ct"
+ },
+ {  "n": "Top of the Hill RV",  "c": "Wolcott, CT",  "p": "(203) 879-4533",  "u": "https://topofthehillrv.com/",  "t": "center",  "e": false,  "r": false,  "d": "Top of the Hill RV is a family run, full service RV dealership at 1623 Wolcott Road in Wolcott, Connecticut, established in 1987. It sells new and used campers and travel trailers and also works on them, servicing units without age restrictions.",  "g": [
+   "RV service",
+   "RV repair",
+   "RV dealer",
+   "camper repair"
+  ],  "base": null,  "areas": [],  "region": "Naugatuck Valley",  "spec": null,  "reg": "western-ct"
+ },
+ {  "n": "Hi-Way Campers",  "c": "Plainfield, CT",  "p": "860-932-2474",  "u": "https://www.hiwaycampers.com/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "Hi-Way Campers is a family owned RV dealership at 992 Norwich Road in Plainfield, Connecticut, with a service department for fifth wheels, travel trailers, toy haulers and destination trailers. Its trained technicians keep RVs in working order and it offers service appointments for the Connecticut area.",  "g": [
+   "RV service",
+   "RV repair",
+   "RV dealer",
+   "travel trailer repair"
+  ],  "base": null,  "areas": [],  "region": "Northeast Connecticut",  "spec": null,  "reg": "eastern-ct"
+ },
+ {  "n": "Hudson Valley RV Medic",  "c": "Danbury, CT",  "p": "914-406-6791",  "u": "https://www.hvrvmedic.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Hudson Valley RV Medic is a mobile RV repair business that serves Danbury, Connecticut and Patterson, New York. Its RVTAA-certified technician handles RV electrical, plumbing and appliance work and preventive maintenance, services all RV makes and models, handles domestic warranties and is available 24 hours a day.",  "g": [
+   "mobile tech",
+   "RV repair",
+   "RV electrical",
+   "RV plumbing",
+   "preventive maintenance"
+  ],  "base": "danbury",  "areas": [],  "region": "Fairfield County",  "spec": null,  "reg": "western-ct"
+ },
+ {  "n": "Matt's Mobile RV Repair",  "c": "Connecticut, CT",  "p": "401-443-6184",  "u": "https://mattsmobilervrepair.com/",  "t": "mobile",  "e": false,  "r": true,  "d": "Matt's Mobile RV Repair is a certified and registered mobile RV mechanic serving Rhode Island, Eastern Connecticut and Southern Massachusetts. It repairs all makes and models and handles electrical, plumbing, appliance, air conditioning, water heater and roofing work, plus leveling jacks, emergency slideout repairs, roadside assistance, battery replacements, doors and windows.",  "g": [
+   "mobile tech",
+   "RV repair",
+   "RV electrical",
+   "RV plumbing",
+   "roadside assistance"
+  ],  "base": null,  "areas": [],  "region": "Eastern Connecticut",  "spec": null,  "reg": "eastern-ct"
+ },
+ {  "n": "Hudson Automotive Repair & Service",  "c": "Danbury, CT",  "p": "(845) 834-2118",  "u": "https://hudson-automotive.com/danbury/",  "t": "mobile",  "e": false,  "r": false,  "d": "Hudson Automotive Repair & Service is a mobile RV repair and restoration business that serves Danbury, Connecticut. It handles RV repairs inside and outside the coach, water damage repair, subfloor replacement, trailer repairs and van conversions, with more than 10 years of experience in RV repair, restoration and custom modifications.",  "g": [
+   "mobile tech",
+   "RV repair",
+   "water damage repair",
+   "subfloor replacement",
+   "trailer repair"
+  ],  "base": "danbury",  "areas": [],  "region": "Fairfield County",  "spec": null,  "reg": "western-ct"
+ },
+ {  "n": "Lee's Auto and RV Ranch",  "c": "Ellington, CT",  "p": "(833) 429-9397",  "u": "https://www.leesautoandrv.com/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "Lee's Auto and RV Ranch is an RV dealership and service department in Ellington, Connecticut, that services trailers and RVs. It handles RV parts, hitches, air conditioning installation, generators, awning repair, body work and fiberglass repair, leak and floor repair, roof coating and sealing, remodeling, refrigeration, electrical and warranty work, and insurance claims.",  "g": [
+   "RV repair",
+   "RV service",
+   "body work",
+   "awning repair",
+   "warranty work",
+   "RV dealer"
+  ],  "base": null,  "areas": [],  "region": "Northeast Connecticut",  "spec": null,  "reg": "hartford-ct"
+ },
+ {  "n": "Turnpike Motors Auto Body",  "c": "Newington, CT",  "p": "860-666-3319",  "u": "https://turnpikemotors.com/rv-repair/",  "t": "center",  "e": false,  "r": false,  "d": "Turnpike Motors Auto Body is a collision repair center at 2550 Berlin Turnpike in Newington, Connecticut, that repairs luxury coaches, Class A, B and C motorhomes, fifth wheels and travel trailers. It performs RV interior and exterior repairs and painting in a downdraft paint booth, works on generators, window seals and slide-outs, and handles insurance claims with free estimates and a lifetime warranty.",  "g": [
+   "RV collision repair",
+   "RV body work",
+   "painting",
+   "insurance claims"
+  ],  "base": null,  "areas": [],  "region": "Hartford and the center",  "spec": null,  "reg": "hartford-ct"
  }
 ];
