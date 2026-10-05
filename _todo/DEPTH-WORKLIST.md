@@ -119,3 +119,24 @@ Missouri is dense in listings but large in area so it still shows 387 towns unco
   coverage edit**: a name that does not resolve fails the build, and the two ways out are a
   stated alias in `_data/place-aliases.json` or the runbook's no-base form.
 - `scripts/check-regions.py`, `scripts/check-state-assignment.py` — the region and state gates.
+
+## Progress since this table was measured (2026-10-04)
+
+**New York and Pennsylvania have been worked, and the two parts of the job behaved differently —
+which is the useful lesson.**
+
+- **Coverage completion did not close gaps.** Rebuilding their served areas from the businesses'
+  own sites left the numbers almost exactly where they were: New York 577 -> 577, Pennsylvania
+  464 -> 462. The old values were inflated by records repeating their own base town in `areas`.
+- **Candidate research did close them.** Aimed at the measured holes:
+  **New York 577 -> 457 towns (-120), 14 -> 25 listings. Pennsylvania 464 -> 261 (-203), 22 -> 30.**
+  Total directory 1,279 -> 1,298.
+
+So the fix for a thin state is businesses, not data. And a targeting note worth keeping: the
+New York researcher found NOTHING in the specific towns the gap list named (Oyster Bay, Babylon,
+Brookhaven, Riverhead, Southampton) — those are marine, auto, truck and glass shops, or RV
+businesses with dead sites. The candidates came from the towns next door. **A gap list names the
+neighbourhood, not the address.**
+
+Also closed on the way: New York gained a **Long Island** region, because seven of its eleven new
+listings work from Nassau and Suffolk and the state had no region for them at all.
