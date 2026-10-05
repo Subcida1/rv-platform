@@ -59,7 +59,48 @@
     "Kitty Hawk": "outer-banks-nc",
     "Edenton": "outer-banks-nc",
     "Greensboro": "piedmont-nc",
-    "Lexington": "piedmont-nc"
+    "Lexington": "piedmont-nc",
+    "Kannapolis": "piedmont-nc",
+    "Gastonia": "piedmont-nc",
+    "Huntersville": "piedmont-nc",
+    "Cornelius": "piedmont-nc",
+    "Davidson": "piedmont-nc",
+    "Mooresville": "piedmont-nc",
+    "Matthews": "piedmont-nc",
+    "Mint Hill": "piedmont-nc",
+    "Pineville": "piedmont-nc",
+    "Shelby": "piedmont-nc",
+    "Lincolnton": "piedmont-nc",
+    "Newton": "piedmont-nc",
+    "Kings Mountain": "piedmont-nc",
+    "Denver": "piedmont-nc",
+    "Rockwell": "piedmont-nc",
+    "Hudson": "piedmont-nc",
+    "Mount Holly": "piedmont-nc",
+    "High Point": "piedmont-nc",
+    "Burlington": "piedmont-nc",
+    "Kernersville": "piedmont-nc",
+    "Clemmons": "piedmont-nc",
+    "Thomasville": "piedmont-nc",
+    "Asheboro": "piedmont-nc",
+    "Mount Airy": "piedmont-nc",
+    "Advance": "piedmont-nc",
+    "Trinity": "piedmont-nc",
+    "Albemarle": "piedmont-nc",
+    "Cary": "triangle-nc",
+    "Apex": "triangle-nc",
+    "Wake Forest": "triangle-nc",
+    "Garner": "triangle-nc",
+    "Clayton": "triangle-nc",
+    "Carrboro": "triangle-nc",
+    "Hillsborough": "triangle-nc",
+    "Fuquay-Varina": "triangle-nc",
+    "Holly Springs": "triangle-nc",
+    "Morrisville": "triangle-nc",
+    "Zebulon": "triangle-nc",
+    "Wendell": "triangle-nc",
+    "Knightdale": "triangle-nc",
+    "Rolesville": "triangle-nc"
   },
   "listings": [
     {
@@ -1400,6 +1441,429 @@
         "emergency_quote": null,
         "roadside_quote": null,
         "licence": null
+      }
+    },
+    {
+      "n": "Complete RV",
+      "c": "Denver, NC",
+      "p": "704-489-1515",
+      "u": "https://completervnc.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Complete RV is a family owned and operated RV repair shop in Denver, on the Lake Norman side of the Charlotte metro. The site says the shop works exclusively on RVs and offers full-service interior and exterior maintenance, routine service, repair, paint and refurbishing as well as renovations and custom upgrades. It has 35-plus years of experience and serves Charlotte, Huntersville, Mooresville, Gastonia, Lincolnton and Hickory.",
+      "g": [
+        "service center"
+      ],
+      "base": "Denver",
+      "areas": [
+        "Charlotte",
+        "Huntersville",
+        "Mooresville",
+        "Gastonia",
+        "Lincolnton",
+        "Hickory"
+      ],
+      "region": "Charlotte metro",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "704-489-1515",
+        "type_quote": "At Complete RV, we work exclusively on RVs, and we give every customer VIP treatment, no matter the age of the RV or where you bought it.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "7632 Townsend Drive, Denver, NC 28037"
+        ]
+      }
+    },
+    {
+      "n": "Airstream Charlotte",
+      "c": "Monroe, NC",
+      "p": "704-764-1643",
+      "u": "https://www.airstreamcharlotte.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Airstream Charlotte is an RV dealership in Monroe with a service department that works on Airstream and non-Airstream RVs. The site says its service staff and Airstream Certified Technicians can diagnose and repair any RV issue, and it also specializes in hitch work, lift kits, solar and battery upgrades. It offers an inspection package plus propane fill, winterization and generator service.",
+      "g": [
+        "dealer",
+        "service center"
+      ],
+      "base": "Monroe",
+      "areas": [
+        "Monroe",
+        "Charlotte"
+      ],
+      "region": "Charlotte metro",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "704-764-1643 (7047641643)",
+        "type_quote": "Our expert service staff and Airstream Certified Technicians can diagnose and repair any RV issue you run into.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "1107 Airport RdMonroe, NC 28110"
+        ]
+      }
+    },
+    {
+      "n": "Temple RV Repair",
+      "c": "Rockwell, NC",
+      "p": "704-471-4949",
+      "u": "https://templervrepair.com/",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "Temple RV Repair is a full-service RV repair business in Rockwell, near Salisbury, that serves the Concord and Charlotte area with a shop and a mobile service that comes to the customer. The site lists solar install and repair, 12V electric, brake and hub service, slide-out and slide topper work, awning fabric, Aqua-Hot and winterization for campers, fifth wheels and motorhomes.",
+      "g": [
+        "service center",
+        "mobile tech"
+      ],
+      "base": "Rockwell",
+      "areas": [
+        "Rockwell",
+        "Concord",
+        "Charlotte"
+      ],
+      "region": "Charlotte metro",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "CALL 704-471-4949 (7044714949) or 843-738-0672 (8437380672)",
+        "type_quote": "TEMPLE RV REPAIR in Rockwell, NC Now servicing Concord / Charlotte NC area and Myrtle Beach SC Area Full-service RV Repair! We Come to YOU!!!!",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "TEMPLE RV REPAIR in Rockwell, NC Now servicing Concord / Charlotte NC area and Myrtle Beach SC Area"
+        ]
+      }
+    },
+    {
+      "n": "Lake Norman Tire & Auto Center",
+      "c": "Mooresville, NC",
+      "p": "(704) 664-8473",
+      "u": "https://lakenormantire.com/rv-service-repair.php",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Lake Norman Tire & Auto Center is a Mooresville repair shop that specializes in RV and trailer repairs alongside truck service. The site says it is certified to perform RV state inspections and handles RV maintenance, engine, hydraulic and brake work, using parts from makers like Lippert Components. It is on River Highway in Mooresville.",
+      "g": [
+        "service center"
+      ],
+      "base": "Mooresville",
+      "areas": [
+        "Mooresville"
+      ],
+      "region": "Charlotte metro",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "(704) 664-8473",
+        "type_quote": "Fortunately, Lake Norman Tire & Auto Center specializes in RV and trailer repairs, so we can get your vehicle ready for adventure.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "889 River Hwy Mooresville, NC 28117"
+        ]
+      }
+    },
+    {
+      "n": "Martin RV Specialists",
+      "c": "Hudson, NC",
+      "p": "(828) 759-9500",
+      "u": "https://www.martinrvspecialists.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Martin RV Specialists is an RV repair shop on Hickory Boulevard in Hudson, in the Catawba Valley near Hickory. The site presents the business as RV repair specialists that also hire and train RV repair technicians. It is open Monday through Thursday and Friday mornings.",
+      "g": [
+        "service center"
+      ],
+      "base": "Hudson",
+      "areas": [
+        "Hudson",
+        "Hickory"
+      ],
+      "region": "Charlotte metro",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "(828) 759-9500",
+        "type_quote": "Here we are like family! If you are interested in learning the trade of RV repair or have been in the industry and are looking to make a move let us know!",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "2638 Hickory Boulevard, Hudson, NC, USA"
+        ]
+      }
+    },
+    {
+      "n": "Country Camping Corner",
+      "c": "Kings Mountain, NC",
+      "p": "704-734-0595",
+      "u": "https://www.countrycamping.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Country Camping Corner is an RV dealer in Kings Mountain with a service department. The site says certified and factory trained technicians handle everything from routine maintenance to major RV repairs on travel trailers, fifth wheels and pop-up campers. It keeps separate store and service hours.",
+      "g": [
+        "dealer",
+        "service center"
+      ],
+      "base": "Kings Mountain",
+      "areas": [
+        "Kings Mountain"
+      ],
+      "region": "Charlotte metro",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "704-734-0595",
+        "type_quote": "Our certified and factory trained technicians are available to help get your RV back on the road!",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "109 Oak Grove Rd Kings Mountain, NC 28086"
+        ]
+      }
+    },
+    {
+      "n": "Campers Inn RV of Kings Mountain",
+      "c": "Kings Mountain, NC",
+      "p": "704-750-7295",
+      "u": "https://www.campersinn.com/kings-mountain",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Campers Inn RV of Kings Mountain is an RV dealership and service center near I-85 in Kings Mountain. The site says its RV Repair and Service Center is staffed by professionally certified technicians, and its RVDA-RVIA certified techs perform the full range of RV service including roofs, brakes, inspections, warranty work and wheel and tire maintenance. Service hours run Monday through Saturday.",
+      "g": [
+        "dealer",
+        "service center"
+      ],
+      "base": "Kings Mountain",
+      "areas": [
+        "Kings Mountain"
+      ],
+      "region": "Charlotte metro",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "704-750-7295",
+        "type_quote": "Our RV Repair and Service Center is ready to support all your maintenance and repair needs with our highly trained and professionally certified technicians.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "615 Broadview Dr | Kings Mountain, NC 28086 • Exit 8 on Interstate 85"
+        ]
+      }
+    },
+    {
+      "n": "Mr. Nobody Tire & Auto",
+      "c": "Gastonia, NC",
+      "p": "704-866-9441",
+      "u": "https://www.mrnobodystire.com/services/rv-services/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Mr. Nobody is a Gastonia tire and auto repair business with a dedicated RV services page. The site says it performs RV repairs and maintenance such as oil changes, tire rotations, brake checks and tune-ups, and diagnoses engine and radiator problems. It has two Gastonia locations, on Long Avenue and Union Road.",
+      "g": [
+        "service center"
+      ],
+      "base": "Gastonia",
+      "areas": [
+        "Gastonia"
+      ],
+      "region": "Charlotte metro",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "704-866-9441 (7048669441)",
+        "type_quote": "Mr. Nobody offers Gastonia, NC exceptional RV services to restore and maintain your vehicle’s tires, engine, and other parts.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "501 E. Long Avenue Gastonia, NC 28054"
+        ]
+      }
+    },
+    {
+      "n": "Camping World Concord",
+      "c": "Concord, NC",
+      "p": "(877) 784-9173",
+      "u": "https://rv.campingworld.com/dealer/concord-north-carolina",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Camping World Concord is an RV dealership and service center next to Charlotte Motor Speedway, formerly Tom Johnson Camping. The site says the location provides full camper service including RV service and maintenance plus a collision and renovation center. It also offers parts, propane, tire installation, inspections and mobile service.",
+      "g": [
+        "dealer",
+        "service center"
+      ],
+      "base": "Concord",
+      "areas": [
+        "Concord"
+      ],
+      "region": "Charlotte metro",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "(877) 784-9173 (8777849173)",
+        "type_quote": "Our Concord RV sales location also provides full camper service including RV service & maintenance and RV collision & renovation centers.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "6700 Bruton Smith Blvd"
+        ]
+      }
+    },
+    {
+      "n": "Camping World Garner",
+      "c": "Garner, NC",
+      "p": "(888) 795-3805",
+      "u": "https://rv.campingworld.com/dealer/garner-north-carolina/rv-service-repair",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Camping World Garner is an RV dealership and service center on U.S. Highway 70 in Garner, just off I-40 near Raleigh. The site says it provides complete service and repair for all RV types, including diagnostics, routine maintenance and warranty work. It also handles winterization, appliances, roof repairs and propane.",
+      "g": [
+        "dealer",
+        "service center"
+      ],
+      "base": "Garner",
+      "areas": [
+        "Garner",
+        "Raleigh"
+      ],
+      "region": "Triangle",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "(888) 795-3805",
+        "type_quote": "We provide complete service and repair for all RV types.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "2300 U.s. Hwy. 70 E."
+        ]
+      }
+    },
+    {
+      "n": "Advance RV Service",
+      "c": "Advance, NC",
+      "p": "336-203-9055",
+      "u": "https://www.advancervservice.com/",
+      "t": "both",
+      "e": true,
+      "r": false,
+      "d": "Advance RV Service is a locally owned RV and trailer repair shop in Advance, in the Winston-Salem area, serving central and western North Carolina. The site says it handles complete RV repair and maintenance from everyday issues to complex mechanical, electrical, plumbing and appliance work, plus roof replacement, solar and lithium upgrades. It offers emergency and mobile service.",
+      "g": [
+        "service center",
+        "mobile tech",
+        "emergency"
+      ],
+      "base": "Advance",
+      "areas": [
+        "Advance"
+      ],
+      "region": "Piedmont Triad",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "Tel: 336-203-9055 Email: service@advancervservice.com",
+        "type_quote": "Complete RV repair and maintenance, from everyday issues to complex mechanical, electrical, plumbing, appliance and system repairs.",
+        "emergency_quote": "Mon – Fri: 8:00am – 6:00pm Emergency & Mobile Service",
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Proudly Servicing Central & Western NC",
+          "1781 Peoples Creek Rd Advance, NC 27006"
+        ]
+      }
+    },
+    {
+      "n": "Fatherree & Sons Mobile RV Repair",
+      "c": "Winston-Salem, NC",
+      "p": "336-777-6911",
+      "u": "https://www.fatherreeandsonsrvrepair.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Fatherree & Sons Mobile RV Repair is a mobile RV repair business covering 30 miles around Winston-Salem and the Piedmont Triad. The site says the business comes to the customer and also operates in Nashville, Tennessee. It lists a Winston-Salem phone number and a Nashville number.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Winston-Salem",
+      "areas": [
+        "Winston-Salem"
+      ],
+      "region": "Piedmont Triad",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "Winston Salem, NC Location 336-777-6911",
+        "type_quote": "We come to you!",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Proudly serving the piedmont triad area Covering 30 miles around winston salem and now in nashville, tennessee"
+        ]
+      }
+    },
+    {
+      "n": "First Response RV Service",
+      "c": "Trinity, NC",
+      "p": "336-685-1514",
+      "u": "https://firstresponserv.com/about",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "First Response RV Service is a mobile RV repair and inspection business based in Trinity, serving the Piedmont Triad. The site says it is a totally mobile service for RV repair, maintenance and pre-buy inspections, with certified technicians and NRVIA-certified inspectors. Its service list covers furnaces, refrigerators, air conditioners, slide-outs, awnings, hydraulics, water heaters, electrical and plumbing.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Trinity",
+      "areas": [
+        "Greensboro",
+        "High Point",
+        "Thomasville",
+        "Kernersville",
+        "Winston-Salem",
+        "Asheboro",
+        "Burlington"
+      ],
+      "region": "Piedmont Triad",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "Our goal is to get you camping. 336-685-1514.",
+        "type_quote": "Totally mobile RV repair, RV maintenance, and pre-buy inspections.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "We service the following areas in NC: Greensboro, High Point, Thomasville, Wallburg, Kernersville, Winston-Salem, Trinity, Asheboro, Randleman, Reidsville, Eden, Summerfield, Oak Ridge, Gibsonville, Burlington, and Mebane."
+        ]
+      }
+    },
+    {
+      "n": "Pit Stop Trailers",
+      "c": "Cary, NC",
+      "p": "+1 (916) 582 2144",
+      "u": "https://pitstoptrailers.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Pit Stop Trailers is a mobile RV and trailer repair business based in Cary, serving a 20-mile radius. The site says it services or repairs RVs and trailers and carries out preventative maintenance inspections using a mobile servicing vehicle. Its service area covers Cary, Raleigh, Durham, Chapel Hill, Apex, Garner, Holly Springs and Wake Forest.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Cary",
+      "areas": [
+        "Cary",
+        "Raleigh",
+        "Durham",
+        "Chapel Hill",
+        "Apex",
+        "Garner",
+        "Wake Forest"
+      ],
+      "region": "Triangle",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "+1 (916) 582 2144",
+        "type_quote": "Pitstop Trailers will service or repair your RV or trailer and carry out preventative maintenance inspections on your trailer.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Cary, Raleigh, Durham, Chapel Hill, Morrisville, Apex, Fuquay Varina, Garner, Holly Springs, Knightdale, Wake Forest..."
+        ]
       }
     }
   ]

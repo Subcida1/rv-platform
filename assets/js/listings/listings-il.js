@@ -310,5 +310,52 @@ window.RV_LISTINGS_IL = [
    "oglesby",
    "sandwich"
   ],  "region": "northern Illinois and beyond",  "spec": null,  "reg": "north-il"
+ },
+ {  "n": "Art's RV Sales & Service",  "c": "Glen Ellyn, IL",  "p": "(630) 469-1936",  "u": "https://www.artsrv.com/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "Art's RV Sales & Service is a family-owned RV dealership and service center on West North Avenue in Glen Ellyn, west of Chicago. It runs a service department that repairs RVs and gets them back on the road, alongside new and used RV sales, rentals and storage. The business dates to 1959 and trades as Art's RV.",  "g": [
+   "rv dealer",
+   "rv service center",
+   "repair"
+  ],  "base": "glen ellyn",  "areas": [],  "region": "DuPage County",  "spec": null,  "reg": "chicago-il"
+ },
+ {  "n": "Ehrhardt's Trailer Sales",  "c": "Des Plaines, IL",  "p": "847-437-3421",  "u": "https://etstrailers.com/service-repair",  "t": "center",  "e": true,  "r": false,  "d": "Ehrhardt's Trailer Sales is a full-service RV and utility trailer repair and service centre on West Oakton Street in Des Plaines, minutes from O'Hare and the I-90/I-294 interchange. Its service department handles 50-point RV inspections, appraisals, winterising, insurance work, roof repairs, water damage and awning repairs, staffed by RVIA master certified, factory-trained technicians. It also sells trailers, parts and snow plows.",  "g": [
+   "rv service center",
+   "trailer repair",
+   "roof"
+  ],  "base": "des plaines",  "areas": [],  "region": "Cook County",  "spec": null,  "reg": "chicago-il"
+ },
+ {  "n": "Solar Van Man",  "c": "Crystal Lake, IL",  "p": "(224) 310-9847",  "u": "https://solarvanman.com/",  "t": "center",  "e": false,  "r": false,  "d": "Solar Van Man is an RV electrical repair and energy-system specialist with a climate-controlled three-bay shop on State Route 31 in Crystal Lake. It repairs RV electrical wiring and generator problems and corrects failed inverter/charger, lithium, solar and DC-DC charging installations, handling RVs up to 50 feet. It serves the greater Chicago and Milwaukee areas and is an authorised Victron installer.",  "g": [
+   "rv electrical",
+   "generator",
+   "solar"
+  ],  "base": "crystal lake",  "areas": [],  "region": "McHenry County",  "spec": null,  "reg": "chicago-il"
+ },
+ {  "n": "LandCraft Fiberglass",  "c": "Lockport, IL",  "p": "(708) 385-0717",  "u": "https://www.land-craft.com/rv-truck-fiberglass",  "t": "center",  "e": false,  "r": false,  "d": "LandCraft Fiberglass is a fibreglass repair and refinishing facility in Lockport, south of Chicago, that markets RV, motor coach, bus and trailer fibreglass and refinishing services. It specialises in structural fibreglass repair and custom gel coat colour matching, with large bays and a semi-truck sized spray booth, and works with dealers and manufacturers. The company has operated since 1978.",  "g": [
+   "fiberglass",
+   "body shop",
+   "gel coat"
+  ],  "base": "lockport",  "areas": [],  "region": "Will County",  "spec": null,  "reg": "chicago-il"
+ },
+ {  "n": "Camping World of Wauconda",  "c": "Wauconda, IL",  "p": "(866) 885-7621",  "u": "https://rv.campingworld.com/dealer/wauconda-illinois/rv-service-repair",  "t": "center",  "e": false,  "r": false,  "d": "Camping World of Wauconda is a full-service RV dealership and service centre on North Darrell Road in Wauconda, in the northwest Chicago suburbs. Its service department handles annual maintenance, warranty work, general RV repair, appliance repair, multi-point diagnostics, winterisation and collision repairs for motorhomes, travel trailers and fifth wheels. It also sells RVs, parts and camping supplies.",  "g": [
+   "rv dealer",
+   "rv service center",
+   "collision"
+  ],  "base": "wauconda",  "areas": [],  "region": "Lake County",  "spec": null,  "reg": "chicago-il"
+ },
+ {  "n": "Tommy The RV Medic",  "c": "Sugar Grove, IL",  "p": "(847) 226-3674",  "u": "https://tommythervmedic.com/",  "t": "mobile",  "e": true,  "r": false,  "d": "Tommy The RV Medic is a mobile RV repair service based in Sugar Grove, in Kane County west of Chicago. The technician travels to customers' homes, storage lots or RV parks so the RV does not have to be moved, repairing air conditioning, water heaters, furnaces, slide-outs, levelling and plumbing. It advertises seven-day service with after-hours availability.",  "g": [
+   "mobile tech",
+   "rv repair"
+  ],  "base": "sugar grove",  "areas": [],  "region": "Kane County",  "spec": null,  "reg": "chicago-il"
+ },
+ {  "n": "Cooper Service",  "c": "Orland Park, IL",  "p": "(708) 349-7455",  "u": "http://cooperservice.com/2023/10/30/visit-cooper-service-in-orland-park-il-for-services-on-your-rv-or-motor-home/",  "t": "center",  "e": false,  "r": false,  "d": "Cooper Service is a family-owned auto, truck and RV repair shop on South 104th Avenue in Orland Park, serving Chicago's southwest suburbs since 1956. It advertises RV and motor home repair alongside transmission, brake, engine, suspension and tyre work, with advanced diagnostics for large vehicles. The shop also offers RV storage.",  "g": [
+   "rv repair",
+   "auto repair",
+   "transmission"
+  ],  "base": "orland park",  "areas": [],  "region": "Cook County",  "spec": null,  "reg": "chicago-il"
+ },
+ {  "n": "Transomatic",  "c": "Des Plaines, IL",  "p": "(847) 868-3289",  "u": "https://www.transomatic-il.com/rv-repairs.html",  "t": "center",  "e": false,  "r": false,  "d": "Transomatic is a family-owned auto and RV repair shop on Rand Road in Des Plaines, northwest of Chicago, operating since 1965. It advertises comprehensive RV repair for all makes and models, specialising in RV transmission repair and rebuilding, with free diagnostics and a lift to the shop if needed. It serves Des Plaines, Chicago, Arlington Heights and Elk Grove Village.",  "g": [
+   "rv repair",
+   "transmission",
+   "auto repair"
+  ],  "base": "des plaines",  "areas": [],  "region": "Cook County",  "spec": null,  "reg": "chicago-il"
  }
 ];

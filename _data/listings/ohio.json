@@ -82,7 +82,46 @@
     "Mount Orab": "southwest-oh",
     "Georgetown": "southwest-oh",
     "Carlisle": "southwest-oh",
-    "Germantown": "southwest-oh"
+    "Germantown": "southwest-oh",
+    "Cleveland": "northeast-oh",
+    "Parma": "northeast-oh",
+    "Lakewood": "northeast-oh",
+    "Euclid": "northeast-oh",
+    "Strongsville": "northeast-oh",
+    "North Royalton": "northeast-oh",
+    "Brook Park": "northeast-oh",
+    "Middleburg Heights": "northeast-oh",
+    "Berea": "northeast-oh",
+    "Westlake": "northeast-oh",
+    "Avon": "northeast-oh",
+    "Lorain": "northeast-oh",
+    "Elyria": "northeast-oh",
+    "Mentor": "northeast-oh",
+    "Willoughby": "northeast-oh",
+    "Painesville": "northeast-oh",
+    "Chardon": "northeast-oh",
+    "Akron": "northeast-oh",
+    "Cuyahoga Falls": "northeast-oh",
+    "Stow": "northeast-oh",
+    "Hudson": "northeast-oh",
+    "Kent": "northeast-oh",
+    "Ravenna": "northeast-oh",
+    "Tallmadge": "northeast-oh",
+    "Barberton": "northeast-oh",
+    "Wadsworth": "northeast-oh",
+    "Medina": "northeast-oh",
+    "Brunswick": "northeast-oh",
+    "Canton": "northeast-oh",
+    "Massillon": "northeast-oh",
+    "Wooster": "northeast-oh",
+    "Ashland": "northeast-oh",
+    "Sandusky": "northeast-oh",
+    "Norwalk": "northeast-oh",
+    "Olmsted Falls": "northeast-oh",
+    "Mantua": "northeast-oh",
+    "Vermilion": "northeast-oh",
+    "Youngstown": "northeast-oh",
+    "North Canton": "northeast-oh"
   },
   "listings": [
     {
@@ -1460,6 +1499,351 @@
         "roadside_quote": null,
         "coverage_quotes": [
           "8001 Old Troy Pike Huber Heights, OH 45424-1037"
+        ]
+      }
+    },
+    {
+      "n": "Mainline RV & Truck Service",
+      "c": "Cleveland, OH",
+      "p": "440-439-7777",
+      "u": "https://www.mainlinetruck.com/rv-motorhome-repair",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "Mainline RV & Truck Service is a Cleveland repair shop at 360 Solon Road that has served RV and motorhome owners since 1982 and also works on trucks and trailers. The RV page describes a shop equipped for motorhomes, travel trailers, fifth wheels, toy haulers and cargo trailers, with ASE- and MSSI-certified, factory-trained technicians. Work covers engine and chassis repair, brakes, steering and suspension upgrades, computerized wheel alignment, electrical troubleshooting, Onan generator service, slide-out adjustment and winterizing, and the shop is a certified service center for brands including Spartan, Tiffin, Newmar, Entegra and Lippert. It serves Cleveland, Akron and the surrounding counties and also offers mobile on-site repair.",
+      "g": [
+        "rv service center",
+        "chassis",
+        "alignment",
+        "generators",
+        "mobile tech"
+      ],
+      "base": "Cleveland",
+      "areas": [],
+      "region": "Cleveland, OH",
+      "spec": "RV & motorhome repair",
+      "evidence": {
+        "phone_quote": "440-439-7777",
+        "type_quote": "Mainline is your one-stop-shop to keep your RV functioning as designed along with a comfortable ride.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Mainline Truck Repair is based in Cleveland, Ohio, and serves surrounding regions.",
+          "We also offer mobile repair services, extending our reach to clients who require on-site assistance, ensuring that help is available wherever you are within our operational range"
+        ]
+      }
+    },
+    {
+      "n": "Mark Wahlberg Airstream & RV of Cleveland",
+      "c": "Lorain, OH",
+      "p": "440-282-5600",
+      "u": "https://www.markwahlbergrvcleveland.com/service-repair-rvs-dealership--service",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "Mark Wahlberg Airstream & RV of Cleveland is an Airstream and RV dealership with a full service department at 4500 Grove Ave. in Lorain, the former Neff Bros. RV location. The service department handles routine maintenance, tune-ups, accessory installation, winterization, collision repair (windshield, aluminum skin, roof and fiberglass caps) and a fully stocked parts department, staffed by RV-system specialists. It also runs a mobile RV service and supports owners in Lorain, Elyria and Cleveland.",
+      "g": [
+        "rv service center",
+        "mobile tech",
+        "collision",
+        "parts",
+        "warranty work"
+      ],
+      "base": "Lorain",
+      "areas": [],
+      "region": "Lorain, OH",
+      "spec": "RV service & repair",
+      "evidence": {
+        "phone_quote": "440-282-5600",
+        "type_quote": "At Mark Wahlberg Airstream & RV of Cleveland, service is the part that proves everything else.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "If you’re looking for a reliable RV service center, our team supports Lorain, Elyria, and Cleveland, Ohio, owners with practical care that keeps your trips on track, season after season."
+        ]
+      }
+    },
+    {
+      "n": "VanDevere Truck & RV Service Center",
+      "c": "Akron, OH",
+      "p": "330-476-2034",
+      "u": "https://www.chevyvandevere.com/rv-service-akron-oh.html",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "VanDevere Truck & RV Service Center is an RV and medium-duty truck service center at 1490 Vernon Odom Blvd in Akron. Staffed by ASE-certified gas and diesel mechanics, it services all major RV brands including Airstream, Winnebago, Tiffin, Fleetwood and Newmar, doing motorhome maintenance, brake repair, engine diagnostics, oil changes and complete overhauls. It serves Akron plus Cleveland, Canton, Medina, Strongsville and Barberton.",
+      "g": [
+        "rv service center",
+        "chassis",
+        "medium duty truck"
+      ],
+      "base": "Akron",
+      "areas": [],
+      "region": "Akron, OH",
+      "spec": "RV & medium-duty truck service",
+      "evidence": {
+        "phone_quote": "330-476-2034",
+        "type_quote": "VanDevere Truck & RV Service Center is now Akron's premier RV, motorhome, and medium-duty truck service center.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Conveniently located just off I-77 in Akron, OH, VanDevere Truck & RV Service Center is proud to serve not only Akron but also nearby areas including Cleveland, Canton, Medina, Strongsville, Barberton, and more."
+        ]
+      }
+    },
+    {
+      "n": "The B Shop Complete Automotive Repair",
+      "c": "Elyria, OH",
+      "p": "(440) 822-3855",
+      "u": "https://www.elyriaautoshop.com/rv_repair",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "The B Shop Complete Automotive Repair is a repair shop at 411 Huron St in Elyria that runs a dedicated RV repair line alongside automotive, truck and trailer work. Its RV page positions it as an RV repair center offering maintenance programs and repair, and its service area is Elyria.",
+      "g": [
+        "rv repair",
+        "trailer repair",
+        "auto repair"
+      ],
+      "base": "Elyria",
+      "areas": [],
+      "region": "Elyria, OH",
+      "spec": "RV repair",
+      "evidence": {
+        "phone_quote": "(440) 822-3855",
+        "type_quote": "We take great pride in our workmanship and offer only the highest-quality RV repairs you can trust.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "The B Shop Complete Automotive Repair is an RV repair center in Elyria, OH, focused on offering industry-leading maintenance programs and excellent customer service."
+        ]
+      }
+    },
+    {
+      "n": "10Yes RV Solutions",
+      "c": "Medina, OH",
+      "p": "216-372-3744",
+      "u": "https://10yesrvsolutions.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "10Yes RV Solutions is a mobile RV service based in Medina, Ohio, running a roughly 100-mile radius that includes Cleveland and Akron. It handles Schwintek slides, hydraulic and electric leveling systems, AC units, furnaces, water heaters and RV refrigerators, plus electrical upgrades, solar, inverters, battery systems and accurate tank level systems. It also does spring wheel bearing and brake service and suspension upgrades, and is an authorized SeeLevel Tank Sensors dealer and installer.",
+      "g": [
+        "mobile tech",
+        "solar",
+        "tank sensors"
+      ],
+      "base": "Medina",
+      "areas": [],
+      "region": "Medina, OH",
+      "spec": "mobile RV service",
+      "evidence": {
+        "phone_quote": "216-372-3744",
+        "type_quote": "We Come to You!!",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "We are located in Medina Ohio and service ≈ 100 mile radius, including Cleveland, Akron and surrounding areas."
+        ]
+      }
+    },
+    {
+      "n": "Switching Lane's RV Services",
+      "c": "Northeast Ohio, OH",
+      "p": "(330) 329-5638",
+      "u": "https://switchinglanesrv.com/services",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "Switching Lane's RV Services is a one-man mobile RV repair business based on the northeast side of Ohio. The owner is a certified RV technician (National RV Training Academy) who comes to the customer's home or campsite to diagnose and repair RV systems, covering Summit, Stark, Wayne, Medina, Portage, Geauga, Cuyahoga, Mahoning and Trumbull counties. He does campsite temporary emergency repairs and orders special-order parts with pre-payment.",
+      "g": [
+        "mobile tech",
+        "emergency"
+      ],
+      "base": null,
+      "areas": [],
+      "region": "Northeast Ohio",
+      "spec": "mobile RV repair",
+      "evidence": {
+        "phone_quote": "(330) 329-5638",
+        "type_quote": "I Specialize in mobile RV repairs.",
+        "emergency_quote": "I also do campsite temporary emergency repairs, to help get you back home safely.",
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "When I'm not travelling across this great country of ours, I can be found in the Northeast side of Ohio.",
+          "Serving Summit, Stark, Wayne, Medina, Portage, Geauga, Cuyahoga, Mahoning, Trumbull counties."
+        ]
+      },
+      "reg": "northeast-oh"
+    },
+    {
+      "n": "Northern Mobile Electric",
+      "c": "Canton, OH",
+      "p": "330-477-9009",
+      "u": "https://www.northernmobile.com/rv-motor-home-camper---bus-services",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Northern Mobile Electric is a Canton shop at 1818 Hopple Ave. SW that does camper, motorhome, RV and bus repair on both the house side and the chassis. House-side work includes rooftop and other air conditioning, heaters, appliances, lights, transfer switches, power centers, solar panels, inverters, batteries, steps, awnings, slide toppers and generators. Chassis work includes engine service and repair, brakes, lighting and charging-system repair. The business has operated since 1980 and is a member of the Electrical Rebuilders Association.",
+      "g": [
+        "rv repair",
+        "electrical",
+        "generators",
+        "chassis"
+      ],
+      "base": "Canton",
+      "areas": [],
+      "region": "Canton, OH",
+      "spec": "RV & camper repair",
+      "evidence": {
+        "phone_quote": "330-477-9009",
+        "type_quote": "Camper, motorhome, RV and Bus - House side services, repairs and/or replacement",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Trailer, Motorhome, RV, and Bus Chassis Repairs"
+        ]
+      }
+    },
+    {
+      "n": "A&M Mobile Repair",
+      "c": "Youngstown, OH",
+      "p": "+1 (330) 503-1372",
+      "u": "https://www.ammobilerepair.com/services/rv-repair",
+      "t": "mobile",
+      "e": true,
+      "r": true,
+      "d": "A&M Mobile Repair is a mobile-only RV and motorhome repair service based in Youngstown, Ohio, working within a 120-mile radius that reaches Akron, Cleveland and Canton. It handles roof, plumbing and seal leaks, electrical failures with batteries, alternators and wiring, brake and suspension problems, engine performance and overheating, and exterior or body repair. The owner holds a Master ASE certification and speaks with customers directly.",
+      "g": [
+        "mobile tech",
+        "roadside",
+        "emergency",
+        "body"
+      ],
+      "base": "Youngstown",
+      "areas": [],
+      "region": "Youngstown, OH",
+      "spec": "mobile RV repair",
+      "evidence": {
+        "phone_quote": "+1 (330) 503-1372",
+        "type_quote": "When you need reliable RV repair, A&M Mobile Repair brings professional service directly to you—anytime, anywhere.",
+        "emergency_quote": "Call 330-503-1372 today for trusted mobile RV repair service you can count on, available 24/7.",
+        "roadside_quote": "This includes roadside assistance for breakdowns and scheduled service at your yard or jobsite.",
+        "coverage_quotes": [
+          "As well as Youngstown, OH, we also proudly service Akron, OH; Cleveland, OH; Canton, OH; Wheeling, OH; Pittsburgh, PA; Erie, PA; Johnstown, PA; Jamestown, NY; Morgantown, OH; Greensburg, PA; and Indiana, PA."
+        ]
+      }
+    },
+    {
+      "n": "Sabetti Body Shop",
+      "c": "Kent, OH",
+      "p": "(330) 678-3443",
+      "u": "https://www.sabettibodyshop.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Sabetti Body Shop is a collision and body repair facility at 358 North Francis Street in Kent that has operated for over 45 years. Alongside auto collision work it lists truck and RV/motorhome damage among its services, and it does computerized wheel alignment and frame correction. It serves Kent and the surrounding Summit and Portage County communities of Stow, Hudson, Cuyahoga Falls, Munroe Falls, Tallmadge, Streetsboro and Ravenna.",
+      "g": [
+        "collision",
+        "body"
+      ],
+      "base": "Kent",
+      "areas": [],
+      "region": "Kent, OH",
+      "spec": "RV & motorhome collision repair",
+      "evidence": {
+        "phone_quote": "(330) 678-3443",
+        "type_quote": "We repair ALL makes and models, offer FREE estimates, work with ALL insurance companies, and offer LIFETIME warranty on repairs as long as you own the vehicle (excluding rust repairs).",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Sabetti Body Shop is a locally owned and operated facility that has been repairing cars in Kent and surrounding Summit and Portage County communities of Stow, Hudson, Cuyahoga Falls, Munroe Falls, Tallmadge, Streetsboro and Ravenna for over 45 years."
+        ]
+      }
+    },
+    {
+      "n": "Ruff's RV Center",
+      "c": "Painesville, OH",
+      "p": "(216) 812-3820",
+      "u": "https://www.ruffsrvcenter.com/learn-more-about-us--info",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Ruff's RV Center is an RV dealership with full sales, service and parts departments located at 140 Blackbrook Rd in Painesville Township. It carries new and pre-owned motorhomes and trailers from brands including Heritage Glen, Wildwood, Rockwood, Wildwood X-Lite and Roo, and its service department handles ongoing maintenance and customization. It serves the Cleveland area, including Euclid, Willoughby, Mentor and surrounding Lake County communities.",
+      "g": [
+        "rv dealer",
+        "service center",
+        "parts"
+      ],
+      "base": "Painesville",
+      "areas": [],
+      "region": "Painesville, OH",
+      "spec": "RV dealer service",
+      "evidence": {
+        "phone_quote": "(216) 812-3820",
+        "type_quote": "Ruff's RV Center has full sales, service and parts departments with knowledgeable and experienced staff to accommodate your needs.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Ruff's RV Center is conveniently located near the areas of Cleveland, Pittsburgh, Erie and Akron."
+        ]
+      }
+    },
+    {
+      "n": "Camping World RV Service - Akron",
+      "c": "Akron, OH",
+      "p": "(888) 586-5558",
+      "u": "https://rv.campingworld.com/dealer/akron-ohio/rv-service-repair",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "Camping World RV Service - Akron is the service center of the Camping World dealership at 1005 Interstate Pkwy in Akron. It performs annual maintenance and multi-point inspections, OE and extended warranty work, appliance service (AC, furnaces, water heaters, refrigerators), electrical and plumbing diagnostics, roof inspection/resealing/replacement, winterization and de-winterization, plus performance installations and collision repair. It also offers a mobile service that travels to the customer's location for diagnostics and on-site repairs.",
+      "g": [
+        "rv service center",
+        "parts",
+        "collision",
+        "mobile tech",
+        "warranty work"
+      ],
+      "base": "Akron",
+      "areas": [],
+      "region": "Akron, OH",
+      "spec": "RV service & repair",
+      "evidence": {
+        "phone_quote": "(888) 586-5558",
+        "type_quote": "Your RV deserves expert care, and at Camping World of Akron we deliver exactly that.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Situated in the heart of the Ohio & Erie Canalway region, just south of Cleveland, our service center is easily reachable via I-76 and I-77 for RV owners from Cleveland, Canton, Youngstown, and Medina."
+        ]
+      }
+    },
+    {
+      "n": "General RV Center North Canton",
+      "c": "North Canton, OH",
+      "p": "330-896-6657",
+      "u": "https://generalrv.com/rv-dealer/north-canton-ohio",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "General RV Center North Canton is an RV dealership at 3063 Greensburg Rd in North Canton with a dedicated service department (Service: 330-896-6657) in addition to sales and a parts and accessories department. The service department operates six days a week, including Saturdays, for RV repair and maintenance.",
+      "g": [
+        "rv dealer",
+        "service center",
+        "parts"
+      ],
+      "base": "North Canton",
+      "areas": [],
+      "region": "North Canton, OH",
+      "spec": "RV dealer service",
+      "evidence": {
+        "phone_quote": "330-896-6657",
+        "type_quote": "Schedule RV Repair & Service in North Canton, OH",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Welcome to General RV North Canton. Get directions, get in contact with us, or take a look at our current inventory of RVs for sale."
         ]
       }
     }

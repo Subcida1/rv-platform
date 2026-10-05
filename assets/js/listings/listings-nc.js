@@ -345,5 +345,119 @@ window.RV_LISTINGS_NC = [
   ],  "base": "greensboro",  "areas": [
    "greensboro"
   ],  "region": null,  "spec": null,  "reg": "piedmont-nc"
+ },
+ {  "n": "Complete RV",  "c": "Denver, NC",  "p": "704-489-1515",  "u": "https://completervnc.com/",  "t": "center",  "e": false,  "r": false,  "d": "Complete RV is a family owned and operated RV repair shop in Denver, on the Lake Norman side of the Charlotte metro. The site says the shop works exclusively on RVs and offers full-service interior and exterior maintenance, routine service, repair, paint and refurbishing as well as renovations and custom upgrades. It has 35-plus years of experience and serves Charlotte, Huntersville, Mooresville, Gastonia, Lincolnton and Hickory.",  "g": [
+   "service center"
+  ],  "base": "denver",  "areas": [
+   "charlotte",
+   "huntersville",
+   "mooresville",
+   "gastonia",
+   "lincolnton",
+   "hickory"
+  ],  "region": "Charlotte metro",  "spec": null,  "reg": "piedmont-nc"
+ },
+ {  "n": "Airstream Charlotte",  "c": "Monroe, NC",  "p": "704-764-1643",  "u": "https://www.airstreamcharlotte.com/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "Airstream Charlotte is an RV dealership in Monroe with a service department that works on Airstream and non-Airstream RVs. The site says its service staff and Airstream Certified Technicians can diagnose and repair any RV issue, and it also specializes in hitch work, lift kits, solar and battery upgrades. It offers an inspection package plus propane fill, winterization and generator service.",  "g": [
+   "dealer",
+   "service center"
+  ],  "base": "monroe",  "areas": [
+   "monroe",
+   "charlotte"
+  ],  "region": "Charlotte metro",  "spec": null,  "reg": "piedmont-nc"
+ },
+ {  "n": "Temple RV Repair",  "c": "Rockwell, NC",  "p": "704-471-4949",  "u": "https://templervrepair.com/",  "t": "both",  "e": false,  "r": false,  "d": "Temple RV Repair is a full-service RV repair business in Rockwell, near Salisbury, that serves the Concord and Charlotte area with a shop and a mobile service that comes to the customer. The site lists solar install and repair, 12V electric, brake and hub service, slide-out and slide topper work, awning fabric, Aqua-Hot and winterization for campers, fifth wheels and motorhomes.",  "g": [
+   "service center",
+   "mobile tech"
+  ],  "base": "rockwell",  "areas": [
+   "rockwell",
+   "concord",
+   "charlotte"
+  ],  "region": "Charlotte metro",  "spec": null,  "reg": "piedmont-nc"
+ },
+ {  "n": "Lake Norman Tire & Auto Center",  "c": "Mooresville, NC",  "p": "(704) 664-8473",  "u": "https://lakenormantire.com/rv-service-repair.php",  "t": "center",  "e": false,  "r": false,  "d": "Lake Norman Tire & Auto Center is a Mooresville repair shop that specializes in RV and trailer repairs alongside truck service. The site says it is certified to perform RV state inspections and handles RV maintenance, engine, hydraulic and brake work, using parts from makers like Lippert Components. It is on River Highway in Mooresville.",  "g": [
+   "service center"
+  ],  "base": "mooresville",  "areas": [
+   "mooresville"
+  ],  "region": "Charlotte metro",  "spec": null,  "reg": "piedmont-nc"
+ },
+ {  "n": "Martin RV Specialists",  "c": "Hudson, NC",  "p": "(828) 759-9500",  "u": "https://www.martinrvspecialists.com/",  "t": "center",  "e": false,  "r": false,  "d": "Martin RV Specialists is an RV repair shop on Hickory Boulevard in Hudson, in the Catawba Valley near Hickory. The site presents the business as RV repair specialists that also hire and train RV repair technicians. It is open Monday through Thursday and Friday mornings.",  "g": [
+   "service center"
+  ],  "base": "hudson",  "areas": [
+   "hudson",
+   "hickory"
+  ],  "region": "Charlotte metro",  "spec": null,  "reg": "piedmont-nc"
+ },
+ {  "n": "Country Camping Corner",  "c": "Kings Mountain, NC",  "p": "704-734-0595",  "u": "https://www.countrycamping.com/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "Country Camping Corner is an RV dealer in Kings Mountain with a service department. The site says certified and factory trained technicians handle everything from routine maintenance to major RV repairs on travel trailers, fifth wheels and pop-up campers. It keeps separate store and service hours.",  "g": [
+   "dealer",
+   "service center"
+  ],  "base": "kings mountain",  "areas": [
+   "kings mountain"
+  ],  "region": "Charlotte metro",  "spec": null,  "reg": "piedmont-nc"
+ },
+ {  "n": "Campers Inn RV of Kings Mountain",  "c": "Kings Mountain, NC",  "p": "704-750-7295",  "u": "https://www.campersinn.com/kings-mountain",  "t": "center",  "e": false,  "r": false,  "d": "Campers Inn RV of Kings Mountain is an RV dealership and service center near I-85 in Kings Mountain. The site says its RV Repair and Service Center is staffed by professionally certified technicians, and its RVDA-RVIA certified techs perform the full range of RV service including roofs, brakes, inspections, warranty work and wheel and tire maintenance. Service hours run Monday through Saturday.",  "g": [
+   "dealer",
+   "service center"
+  ],  "base": "kings mountain",  "areas": [
+   "kings mountain"
+  ],  "region": "Charlotte metro",  "spec": null,  "reg": "piedmont-nc"
+ },
+ {  "n": "Mr. Nobody Tire & Auto",  "c": "Gastonia, NC",  "p": "704-866-9441",  "u": "https://www.mrnobodystire.com/services/rv-services/",  "t": "center",  "e": false,  "r": false,  "d": "Mr. Nobody is a Gastonia tire and auto repair business with a dedicated RV services page. The site says it performs RV repairs and maintenance such as oil changes, tire rotations, brake checks and tune-ups, and diagnoses engine and radiator problems. It has two Gastonia locations, on Long Avenue and Union Road.",  "g": [
+   "service center"
+  ],  "base": "gastonia",  "areas": [
+   "gastonia"
+  ],  "region": "Charlotte metro",  "spec": null,  "reg": "piedmont-nc"
+ },
+ {  "n": "Camping World Concord",  "c": "Concord, NC",  "p": "(877) 784-9173",  "u": "https://rv.campingworld.com/dealer/concord-north-carolina",  "t": "center",  "e": false,  "r": false,  "d": "Camping World Concord is an RV dealership and service center next to Charlotte Motor Speedway, formerly Tom Johnson Camping. The site says the location provides full camper service including RV service and maintenance plus a collision and renovation center. It also offers parts, propane, tire installation, inspections and mobile service.",  "g": [
+   "dealer",
+   "service center"
+  ],  "base": "concord",  "areas": [
+   "concord"
+  ],  "region": "Charlotte metro",  "spec": null,  "reg": "piedmont-nc"
+ },
+ {  "n": "Camping World Garner",  "c": "Garner, NC",  "p": "(888) 795-3805",  "u": "https://rv.campingworld.com/dealer/garner-north-carolina/rv-service-repair",  "t": "center",  "e": false,  "r": false,  "d": "Camping World Garner is an RV dealership and service center on U.S. Highway 70 in Garner, just off I-40 near Raleigh. The site says it provides complete service and repair for all RV types, including diagnostics, routine maintenance and warranty work. It also handles winterization, appliances, roof repairs and propane.",  "g": [
+   "dealer",
+   "service center"
+  ],  "base": "garner",  "areas": [
+   "garner",
+   "raleigh"
+  ],  "region": "Triangle",  "spec": null,  "reg": "triangle-nc"
+ },
+ {  "n": "Advance RV Service",  "c": "Advance, NC",  "p": "336-203-9055",  "u": "https://www.advancervservice.com/",  "t": "both",  "e": true,  "r": false,  "d": "Advance RV Service is a locally owned RV and trailer repair shop in Advance, in the Winston-Salem area, serving central and western North Carolina. The site says it handles complete RV repair and maintenance from everyday issues to complex mechanical, electrical, plumbing and appliance work, plus roof replacement, solar and lithium upgrades. It offers emergency and mobile service.",  "g": [
+   "service center",
+   "mobile tech",
+   "emergency"
+  ],  "base": "advance",  "areas": [
+   "advance"
+  ],  "region": "Piedmont Triad",  "spec": null,  "reg": "piedmont-nc"
+ },
+ {  "n": "Fatherree & Sons Mobile RV Repair",  "c": "Winston-Salem, NC",  "p": "336-777-6911",  "u": "https://www.fatherreeandsonsrvrepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Fatherree & Sons Mobile RV Repair is a mobile RV repair business covering 30 miles around Winston-Salem and the Piedmont Triad. The site says the business comes to the customer and also operates in Nashville, Tennessee. It lists a Winston-Salem phone number and a Nashville number.",  "g": [
+   "mobile tech"
+  ],  "base": "winston-salem",  "areas": [
+   "winston-salem"
+  ],  "region": "Piedmont Triad",  "spec": null,  "reg": "piedmont-nc"
+ },
+ {  "n": "First Response RV Service",  "c": "Trinity, NC",  "p": "336-685-1514",  "u": "https://firstresponserv.com/about",  "t": "mobile",  "e": false,  "r": false,  "d": "First Response RV Service is a mobile RV repair and inspection business based in Trinity, serving the Piedmont Triad. The site says it is a totally mobile service for RV repair, maintenance and pre-buy inspections, with certified technicians and NRVIA-certified inspectors. Its service list covers furnaces, refrigerators, air conditioners, slide-outs, awnings, hydraulics, water heaters, electrical and plumbing.",  "g": [
+   "mobile tech"
+  ],  "base": "trinity",  "areas": [
+   "greensboro",
+   "high point",
+   "thomasville",
+   "kernersville",
+   "winston-salem",
+   "asheboro",
+   "burlington"
+  ],  "region": "Piedmont Triad",  "spec": null,  "reg": "piedmont-nc"
+ },
+ {  "n": "Pit Stop Trailers",  "c": "Cary, NC",  "p": "+1 (916) 582 2144",  "u": "https://pitstoptrailers.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Pit Stop Trailers is a mobile RV and trailer repair business based in Cary, serving a 20-mile radius. The site says it services or repairs RVs and trailers and carries out preventative maintenance inspections using a mobile servicing vehicle. Its service area covers Cary, Raleigh, Durham, Chapel Hill, Apex, Garner, Holly Springs and Wake Forest.",  "g": [
+   "mobile tech"
+  ],  "base": "cary",  "areas": [
+   "cary",
+   "raleigh",
+   "durham",
+   "chapel hill",
+   "apex",
+   "garner",
+   "wake forest"
+  ],  "region": "Triangle",  "spec": null,  "reg": "triangle-nc"
  }
 ];
