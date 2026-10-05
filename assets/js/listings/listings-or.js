@@ -127,12 +127,6 @@ window.RV_LISTINGS_OR = [
    "lincoln city"
   ],  "reg": "north-coast"
  },
- {  "n": "BAM Mobile RV Service and Repair",  "c": "Salem",  "p": "971-701-5971",  "u": "https://bammobilerv.com/",  "t": "mobile",  "e": true,  "d": "Mobile RV repair, maintenance, and detailing in Salem. Flooring and roof repairs, A/C, plumbing, electrical, and trailer service. From emergency repairs to scheduled maintenance, all at your location.",  "g": [
-   "Emergency repairs",
-   "Detailing",
-   "Est. 2023"
-  ],  "base": "salem",  "reg": "portland-valley"
- },
  {  "n": "Family RV Mobile Repairs",  "c": "Salem",  "p": "503-385-8443",  "u": "https://www.familyrvoregon.com/mobile-rv-repairs",  "t": "mobile",  "e": false,  "d": "RV dealer with a mobile service side. Winterization, appliance repair including refrigerator, water heater, furnace, safety inspections, charging and LP systems, and sealant repair, at your home or storage.",  "g": [
    "Mobile service",
    "LP system",

@@ -138,7 +138,7 @@ window.RV_LISTINGS_IA = [
    "forest city"
   ],  "region": null,  "spec": null,  "reg": "north-ia"
  },
- {  "n": "Couler Valley RV",  "c": "Dubuque, IA",  "p": "563-583-5730",  "u": "https://www.coulervalleyrv.net/service/",  "t": "center",  "e": false,  "r": false,  "d": "Couler Valley RV is a family owned Dubuque, Iowa dealership in business for more than 35 years that takes care of RV service needs in a first class facility. It can accommodate problems with travel trailers, fifth wheels, folding campers, truck campers and motorhomes, from the smallest problem to a complete new roof. It honors all warranty work for the RVs it sells and provides insurance estimates at no charge.",  "g": [
+ {  "n": "Couler Valley RV",  "c": "Dubuque, IA",  "p": "563-583-5730",  "u": "https://www.coulervalleyrv.net/",  "t": "center",  "e": false,  "r": false,  "d": "Couler Valley RV is a family owned Dubuque, Iowa dealership in business for more than 35 years that takes care of RV service needs in a first class facility. It can accommodate problems with travel trailers, fifth wheels, folding campers, truck campers and motorhomes, from the smallest problem to a complete new roof. It honors all warranty work for the RVs it sells and provides insurance estimates at no charge.",  "g": [
    "service center"
   ],  "base": "dubuque",  "areas": [
    "dubuque"

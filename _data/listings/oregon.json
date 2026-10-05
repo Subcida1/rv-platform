@@ -411,27 +411,6 @@
       }
     },
     {
-      "n": "BAM Mobile RV Service and Repair",
-      "c": "Salem",
-      "p": "971-701-5971",
-      "u": "https://bammobilerv.com/",
-      "t": "mobile",
-      "e": true,
-      "d": "Mobile RV repair, maintenance, and detailing in Salem. Flooring and roof repairs, A/C, plumbing, electrical, and trailer service. From emergency repairs to scheduled maintenance, all at your location.",
-      "g": [
-        "Emergency repairs",
-        "Detailing",
-        "Est. 2023"
-      ],
-      "base": "Salem",
-      "evidence": {
-        "checked": "https://bammobilerv.com/",
-        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
-        "e_quote": "From emergency repairs to scheduled maintenance, we take pride in offering reliable service backed by skill, experience, and customer-focused care.",
-        "mobile_quote": "Service Salem OR: Expert Care for Your RV Skip to content Menu Menu Home About Us Services Complete RV Tank Cleaning Solution Gallery Contact Us GET A FREE ESTIMATE BAM Mobile RV Service & Repair | RV inspection service Salem, OR Need Your RV Repaired? We Are There."
-      }
-    },
-    {
       "n": "Family RV Mobile Repairs",
       "c": "Salem",
       "p": "503-385-8443",

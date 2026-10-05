@@ -24,7 +24,7 @@ window.RV_LISTINGS_IN = [
    "elkhart"
   ],  "region": null,  "spec": null,  "reg": "northern-in"
  },
- {  "n": "Hobson RV Service, Inc",  "c": "Elkhart, IN",  "p": "(574)295-5893",  "u": "https://hobsonrv.com/contact-us-%2Fhours",  "t": "center",  "e": false,  "r": false,  "d": "Hobson RV Service is an authorized RV appliance sales and service center in Elkhart, Indiana, with a technician on site. It specializes in Dometic, Norcold, Suburban, Atwood, A&E Awnings and Coleman appliances and focuses on finding hard-to-find RV appliance parts. It also operates an RV parts and accessories store, and service work is by appointment.",  "g": [
+ {  "n": "Hobson RV Service, Inc",  "c": "Elkhart, IN",  "p": "(574)295-5893",  "u": "https://hobsonrv.com/",  "t": "center",  "e": false,  "r": false,  "d": "Hobson RV Service is an authorized RV appliance sales and service center in Elkhart, Indiana, with a technician on site. It specializes in Dometic, Norcold, Suburban, Atwood, A&E Awnings and Coleman appliances and focuses on finding hard-to-find RV appliance parts. It also operates an RV parts and accessories store, and service work is by appointment.",  "g": [
    "service center"
   ],  "base": "elkhart",  "areas": [
    "elkhart"

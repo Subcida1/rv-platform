@@ -164,5 +164,15 @@
         "why": "Placeholder site: phone (111) 222-3333, address on RV Repair Road, DUNS 000000000, coordinates 0,0."
       }
     ]
+  },
+  "dead-websites": {
+    "rule": "The business's own website no longer exists (404 on the root and on www). A listing rests on the site being checkable, so it cannot be verified. Re-add if the site returns.",
+    "businesses": [
+      {
+        "n": "BAM Mobile RV Service and Repair",
+        "u": "https://bammobilerv.com/",
+        "why": "Site returned 404 on both the root and www when checked 2026-10-05. Phone was 971-701-5971, base Salem, Oregon."
+      }
+    ]
   }
 }

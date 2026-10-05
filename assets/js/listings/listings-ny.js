@@ -333,7 +333,7 @@ window.RV_LISTINGS_NY = [
    "buffalo"
   ],  "region": "Buffalo and western New York",  "spec": null,  "reg": "western-ny"
  },
- {  "n": "Mantelli RV",  "c": "Lockport, NY",  "p": "716-625-8877",  "u": "https://www.mantellirv.com/mts-service.php",  "t": "center",  "e": false,  "r": false,  "d": "Mantelli RV (Mantelli Trailer Sales, Inc.) is an RV dealership with a service department at 6865 South Transit Road in Lockport, New York, between Buffalo and Niagara Falls. Its trained technicians do electrical systems, appliance and accessory checks, refrigerator service, A/C service, furnace and water heater service, LP inspections, water system checks, winterization and de-winterization, annual maintenance inspections, wheel bearing packs and rubber roof preventative service. The family-owned dealership was founded in 1965 and focuses primarily on towables.",  "g": [
+ {  "n": "Mantelli RV",  "c": "Lockport, NY",  "p": "716-625-8877",  "u": "https://www.mantellirv.com/",  "t": "center",  "e": false,  "r": false,  "d": "Mantelli RV (Mantelli Trailer Sales, Inc.) is an RV dealership with a service department at 6865 South Transit Road in Lockport, New York, between Buffalo and Niagara Falls. Its trained technicians do electrical systems, appliance and accessory checks, refrigerator service, A/C service, furnace and water heater service, LP inspections, water system checks, winterization and de-winterization, annual maintenance inspections, wheel bearing packs and rubber roof preventative service. The family-owned dealership was founded in 1965 and focuses primarily on towables.",  "g": [
    "dealer service dept",
    "rv service center",
    "maintenance"
