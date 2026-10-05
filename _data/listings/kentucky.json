@@ -40,7 +40,23 @@
     "Central City": "western-ky",
     "Ashland": "eastern-ky",
     "London": "eastern-ky",
-    "Corbin": "eastern-ky"
+    "Corbin": "eastern-ky",
+    "Nicholasville": "bluegrass-ky",
+    "Versailles": "bluegrass-ky",
+    "Paris": "bluegrass-ky",
+    "Winchester": "bluegrass-ky",
+    "Danville": "bluegrass-ky",
+    "Harrodsburg": "bluegrass-ky",
+    "Frankfort": "bluegrass-ky",
+    "Jeffersontown": "louisville-ky",
+    "Saint Matthews": "louisville-ky",
+    "Shively": "louisville-ky",
+    "Shepherdsville": "louisville-ky",
+    "Mount Washington": "louisville-ky",
+    "Radcliff": "louisville-ky",
+    "Shelbyville": "louisville-ky",
+    "Lebanon Junction": "louisville-ky",
+    "Bardstown": "louisville-ky"
   },
   "listings": [
     {
@@ -731,6 +747,145 @@
         "emergency_quote": null,
         "roadside_quote": null,
         "licence": null
+      }
+    },
+    {
+      "n": "Take a Journey RV Inspections & Services",
+      "c": "Georgetown, KY",
+      "p": "(502) 735-8034",
+      "u": "https://www.takeajourneyrv.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Take a Journey RV Inspections & Services is a mobile RV business based at 115 Citation Ct in Georgetown, Kentucky, run by Lance Franklin (mobile inspector and technician) with Maureen Franklin handling office and administrative work. It performs mobile RV inspections, walkthroughs, repairs, generator service and other on-site work, traveling to the customer's location, and markets quick, high-integrity service to full-time RVers, weekenders and seasonal campers.",
+      "g": [
+        "mobile tech",
+        "inspections",
+        "repair"
+      ],
+      "base": "Georgetown",
+      "areas": [],
+      "region": "Bluegrass",
+      "spec": "Mobile RV repair, inspections and maintenance",
+      "evidence": {
+        "phone_quote": "+1 (502) 735-8034",
+        "type_quote": "Take a Journey RV offers mobile RV Inspection, Walkthrough, Repairs and other services.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "We will conduct our service at YOUR LOCATION."
+        ]
+      }
+    },
+    {
+      "n": "Asher Luxury RV Repair & Detailing",
+      "c": "Danville, KY",
+      "p": "859-325-5868",
+      "u": "https://www.asherluxuryrv.com/blank",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Asher Luxury RV Repair & Detailing is an RV repair shop at 1921 Quirks Run Road in Danville, Kentucky. It offers diagnostics and repair, motorhome inspections, engine service, mobile oil changes, Oasis/AquaHot/HydroHot service, tire replacement, roof inspection and winterizing/de-winterizing, and describes itself as a repair shop delivering transparent, fairly priced work to RVers across Kentucky.",
+      "g": [
+        "repair shop",
+        "detailing",
+        "chassis"
+      ],
+      "base": "Danville",
+      "areas": [],
+      "region": "Bluegrass",
+      "spec": "RV repair shop (engine, appliances, roof, winterizing)",
+      "evidence": {
+        "phone_quote": "859-325-5868",
+        "type_quote": "Get your RV back on the road with our expert repair services.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "We started our RV Repair Shop with one goal in mind—delivering outstanding repair services to the people of Kentucky."
+        ]
+      }
+    },
+    {
+      "n": "Camping World RV Service - Georgetown",
+      "c": "Georgetown, KY",
+      "p": "(877) 870-0342",
+      "u": "https://rv.campingworld.com/dealer/georgetown-kentucky/rv-service-repair",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Camping World RV Service - Georgetown is the service location of the national Camping World chain at 151 Wahland Hall Path in Georgetown, Kentucky. It provides diagnostics, repairs, routine maintenance, OE and extended warranty work, oil and fluid changes, winterization and de-winterization, roof repairs, propane/LP service and inspections for all RV types, with a parts and accessories store on site.",
+      "g": [
+        "service center",
+        "chain"
+      ],
+      "base": "Georgetown",
+      "areas": [],
+      "region": "Bluegrass",
+      "spec": "RV service center (national chain, local shop)",
+      "evidence": {
+        "phone_quote": "(877) 870-0342 (8778700342)",
+        "type_quote": "We provide complete service and repair for all RV types.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "151 Wahland Hall Path"
+        ]
+      }
+    },
+    {
+      "n": "Midwest Campside RV Repair",
+      "c": "Louisville, KY",
+      "p": "216-219-6659",
+      "u": "https://www.midwestcampsidervrepair.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "Midwest Campside RV Repair is a mobile RV repair, inspection and maintenance outfit whose current location is listed as Louisville, Kentucky (Shepherdsville). It performs RV repairs, certified pre-purchase inspections, seal lubrication, winterization and roof cleaning, and travels to customers at campgrounds, rest stops and other locations; it lists an emergency-only contact number.",
+      "g": [
+        "mobile tech",
+        "inspections"
+      ],
+      "base": "Louisville",
+      "areas": [
+        "Shepherdsville"
+      ],
+      "region": "Louisville Metro",
+      "spec": "Mobile RV repair, inspection and maintenance",
+      "evidence": {
+        "phone_quote": "Phone: 216-219-6659",
+        "type_quote": "Your one-stop shop for all your RV repair, inspection and maintenance needs.",
+        "emergency_quote": "Contact for e mergency only",
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "LOUISVILLE, KY* (Shepherdsville)"
+        ]
+      }
+    },
+    {
+      "n": "A May Services LLC",
+      "c": "Elizabethtown, KY",
+      "p": "(270) 401-1920",
+      "u": "https://www.amayservicesllc.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "A May Service LLC is a veteran-owned and operated mobile RV maintenance company based in Elizabethtown, Kentucky, that comes to the customer. It offers RV winterization (with a free spring dewinterization) and mobile preventive maintenance for all types of RVs.",
+      "g": [
+        "mobile tech",
+        "maintenance"
+      ],
+      "base": "Elizabethtown",
+      "areas": [],
+      "region": "Louisville Metro",
+      "spec": "Mobile RV maintenance and winterization",
+      "evidence": {
+        "phone_quote": "(270) 401-1920",
+        "type_quote": "A May Service LLC is a veteran owned and operated RV maintenance company based in Elizabethtown, KY.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Your Elizabethtown KY based RV maintenance service that comes to you!"
+        ]
       }
     }
   ]

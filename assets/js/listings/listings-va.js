@@ -154,5 +154,53 @@ window.RV_LISTINGS_VA = [
    "service center",
    "roadside"
   ],  "base": "herndon",  "areas": [],  "region": null,  "spec": null,  "reg": "northern-va"
+ },
+ {  "n": "Gloucester RV",  "c": "Hayes, VA",  "p": "804-642-3331",  "u": "https://www.gloucesterrv.net/",  "t": "center",  "e": false,  "r": false,  "d": "Gloucester RV is a family-owned RV sales and service dealership in the Hayes section of Gloucester County, Virginia, selling new and pre-owned RVs since 1978. Its parts and service department diagnoses and repairs RVs and campers with factory parts, and its pre-owned inventory is inspected by the service department. It carries brands including Sun Lite, R-Pod, Kodiak and Wildwood.",  "g": [
+   "rv dealer",
+   "service center",
+   "parts"
+  ],  "base": null,  "areas": [],  "region": "Gloucester County",  "spec": null,  "reg": "hampton-roads-va"
+ },
+ {  "n": "Dodd RV & Marine",  "c": "Portsmouth, VA",  "p": "(757) 488-2721",  "u": "https://www.doddrv.com/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "Dodd RV & Marine operates RV service departments in Portsmouth and Yorktown, Virginia. Its factory-trained technicians perform routine maintenance, warranty repair and service, aftermarket parts and accessory installation, minor to major service work and collision repair for towables and motorhomes, including Class A and Class B motorhomes and fifth wheels. It services brands such as Forest River, Grand Design, Keystone and Thor Motor Coach and offers four service packages.",  "g": [
+   "rv dealer",
+   "service center",
+   "collision repair"
+  ],  "base": "portsmouth",  "areas": [
+   "yorktown"
+  ],  "region": "Hampton Roads",  "spec": null,  "reg": "hampton-roads-va"
+ },
+ {  "n": "Chesapeake RV Solutions",  "c": "Chesapeake, VA",  "p": "757-432-0222",  "u": "https://www.chesapeakervsolutions.com/service-repair-rvs-dealership--service",  "t": "center",  "e": false,  "r": false,  "d": "Chesapeake RV Solutions is a family-founded RV dealership and service center on South Battlefield Boulevard in Chesapeake, Virginia. Its service department is staffed by RVDA Master, Registered and Certified technicians who handle everything from new and pre-owned camper tune-ups to complex repairs, and it also offers RV parts and financing.",  "g": [
+   "rv dealer",
+   "service center",
+   "parts"
+  ],  "base": "chesapeake",  "areas": [],  "region": "Hampton Roads",  "spec": "RVDA Master, Registered and Certified technicians",  "reg": "hampton-roads-va"
+ },
+ {  "n": "West Service Center",  "c": "Chesapeake, VA",  "p": "(757) 487-4420",  "u": "https://www.westservicecenterinc.com/services/rv-generator-service-repair/",  "t": "center",  "e": false,  "r": false,  "d": "West Service Center is a repair shop on Cavalier Boulevard in Chesapeake, Virginia that runs a dedicated RV and generator service program. It services motorhomes and towables, including slide-outs, water heaters, refrigerators, inverters, house HVAC, winterization, and engine, transmission and chassis work, plus generator maintenance and repair and DOT and state inspections.",  "g": [
+   "service center",
+   "rv repair",
+   "generator service"
+  ],  "base": "chesapeake",  "areas": [],  "region": "Hampton Roads",  "spec": null,  "reg": "hampton-roads-va"
+ },
+ {  "n": "CarStruction",  "c": "Chesapeake, VA",  "p": "757-523-2495",  "u": "https://carstruction.com/",  "t": "center",  "e": false,  "r": false,  "d": "CarStruction, Inc. is an independently owned collision and auto body repair center on Woodlake Drive in the Greenbrier section of Chesapeake, Virginia, established in 1989. Its 28,000-square-foot facility offers RV fiberglass repair and four paint booths including an oversized booth for trucks, boats and RVs, along with frame measuring, paintless dent removal, wheel repair, glass replacement and a lifetime warranty on paint and repairs.",  "g": [
+   "collision repair",
+   "body and fiberglass"
+  ],  "base": "chesapeake",  "areas": [],  "region": "Hampton Roads",  "spec": null,  "reg": "hampton-roads-va"
+ },
+ {  "n": "Camping World of Hampton Roads",  "c": "Newport News, VA",  "p": "(877) 815-9589",  "u": "https://rv.campingworld.com/dealer/newport-news-virginia/rv-service-repair",  "t": "center",  "e": false,  "r": false,  "d": "Camping World of Hampton Roads is an RV dealership and service center on Jefferson Avenue in Newport News, Virginia. Its service department provides complete diagnostics, repair, routine maintenance and warranty work for all RV types, with a 45-point inspection covering inverters and converters, electrical outlets, generators, plumbing, LP systems and appliances, plus parts, accessories and collision estimates.",  "g": [
+   "rv dealer",
+   "service center",
+   "parts"
+  ],  "base": "newport news",  "areas": [],  "region": "Hampton Roads",  "spec": null,  "reg": "hampton-roads-va"
+ },
+ {  "n": "Your RV Tech, LLC",  "c": "Virginia Beach, VA",  "p": "(757) 270-1795",  "u": "https://www.yourrvtech.net/",  "t": "mobile",  "e": true,  "r": false,  "d": "Your RV Tech, LLC is a mobile RV repair service based in Virginia Beach, Virginia. It offers maintenance and repair, consultation and inspections, camping-season preparation and winterization, and upgrades and customizations, and it makes emergency hours and services available.",  "g": [
+   "mobile tech",
+   "maintenance"
+  ],  "base": "virginia beach",  "areas": [],  "region": "Hampton Roads",  "spec": null,  "reg": "hampton-roads-va"
+ },
+ {  "n": "Coastal RV",  "c": "Carrollton, VA",  "p": "(757) 238-9651",  "u": "https://www.coastalrv.net/",  "t": "center",  "e": false,  "r": false,  "d": "Coastal RV is a full-service RV dealership on Brewers Neck Boulevard in Carrollton, Virginia, near Hampton, Newport News, Suffolk, Chesapeake, Norfolk and Portsmouth. It sells new and used Forest River fifth wheels, toy haulers and travel trailers and operates a service center, offering free Virginia state inspections and yearly roof inspections for life and 10% off parts for life.",  "g": [
+   "rv dealer",
+   "service center",
+   "parts"
+  ],  "base": "carrollton",  "areas": [],  "region": "Hampton Roads",  "spec": null,  "reg": "hampton-roads-va"
  }
 ];

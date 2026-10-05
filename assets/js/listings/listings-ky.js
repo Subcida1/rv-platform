@@ -139,5 +139,34 @@ window.RV_LISTINGS_KY = [
  {  "n": "CountrySide RV Sales",  "c": "Corbin, KY",  "p": "(606) 280-4333",  "u": "https://countrysiderv.us/",  "t": "center",  "e": false,  "r": false,  "d": "CountrySide RV Sales is a family-owned dealership in Corbin selling quality used RVs and travel trailers with low-pressure sales. It also lists RV maintenance as one of its services to keep an RV road-ready.",  "g": [
    "service center"
   ],  "base": "corbin",  "areas": [],  "region": null,  "spec": null,  "reg": "eastern-ky"
+ },
+ {  "n": "Take a Journey RV Inspections & Services",  "c": "Georgetown, KY",  "p": "(502) 735-8034",  "u": "https://www.takeajourneyrv.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Take a Journey RV Inspections & Services is a mobile RV business based at 115 Citation Ct in Georgetown, Kentucky, run by Lance Franklin (mobile inspector and technician) with Maureen Franklin handling office and administrative work. It performs mobile RV inspections, walkthroughs, repairs, generator service and other on-site work, traveling to the customer's location, and markets quick, high-integrity service to full-time RVers, weekenders and seasonal campers.",  "g": [
+   "mobile tech",
+   "inspections",
+   "repair"
+  ],  "base": "georgetown",  "areas": [],  "region": "Bluegrass",  "spec": "Mobile RV repair, inspections and maintenance",  "reg": "bluegrass-ky"
+ },
+ {  "n": "Asher Luxury RV Repair & Detailing",  "c": "Danville, KY",  "p": "859-325-5868",  "u": "https://www.asherluxuryrv.com/blank",  "t": "center",  "e": false,  "r": false,  "d": "Asher Luxury RV Repair & Detailing is an RV repair shop at 1921 Quirks Run Road in Danville, Kentucky. It offers diagnostics and repair, motorhome inspections, engine service, mobile oil changes, Oasis/AquaHot/HydroHot service, tire replacement, roof inspection and winterizing/de-winterizing, and describes itself as a repair shop delivering transparent, fairly priced work to RVers across Kentucky.",  "g": [
+   "repair shop",
+   "detailing",
+   "chassis"
+  ],  "base": "danville",  "areas": [],  "region": "Bluegrass",  "spec": "RV repair shop (engine, appliances, roof, winterizing)",  "reg": "bluegrass-ky"
+ },
+ {  "n": "Camping World RV Service - Georgetown",  "c": "Georgetown, KY",  "p": "(877) 870-0342",  "u": "https://rv.campingworld.com/dealer/georgetown-kentucky/rv-service-repair",  "t": "center",  "e": false,  "r": false,  "d": "Camping World RV Service - Georgetown is the service location of the national Camping World chain at 151 Wahland Hall Path in Georgetown, Kentucky. It provides diagnostics, repairs, routine maintenance, OE and extended warranty work, oil and fluid changes, winterization and de-winterization, roof repairs, propane/LP service and inspections for all RV types, with a parts and accessories store on site.",  "g": [
+   "service center",
+   "chain"
+  ],  "base": "georgetown",  "areas": [],  "region": "Bluegrass",  "spec": "RV service center (national chain, local shop)",  "reg": "bluegrass-ky"
+ },
+ {  "n": "Midwest Campside RV Repair",  "c": "Louisville, KY",  "p": "216-219-6659",  "u": "https://www.midwestcampsidervrepair.com/",  "t": "mobile",  "e": true,  "r": false,  "d": "Midwest Campside RV Repair is a mobile RV repair, inspection and maintenance outfit whose current location is listed as Louisville, Kentucky (Shepherdsville). It performs RV repairs, certified pre-purchase inspections, seal lubrication, winterization and roof cleaning, and travels to customers at campgrounds, rest stops and other locations; it lists an emergency-only contact number.",  "g": [
+   "mobile tech",
+   "inspections"
+  ],  "base": "louisville",  "areas": [
+   "shepherdsville"
+  ],  "region": "Louisville Metro",  "spec": "Mobile RV repair, inspection and maintenance",  "reg": "louisville-ky"
+ },
+ {  "n": "A May Services LLC",  "c": "Elizabethtown, KY",  "p": "(270) 401-1920",  "u": "https://www.amayservicesllc.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "A May Service LLC is a veteran-owned and operated mobile RV maintenance company based in Elizabethtown, Kentucky, that comes to the customer. It offers RV winterization (with a free spring dewinterization) and mobile preventive maintenance for all types of RVs.",  "g": [
+   "mobile tech",
+   "maintenance"
+  ],  "base": "elizabethtown",  "areas": [],  "region": "Louisville Metro",  "spec": "Mobile RV maintenance and winterization",  "reg": "caves-ky"
  }
 ];

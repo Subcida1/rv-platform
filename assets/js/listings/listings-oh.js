@@ -270,5 +270,66 @@ window.RV_LISTINGS_OH = [
    "tiffin",
    "lima"
   ],  "region": null,  "spec": null,  "reg": "northwest-oh"
+ },
+ {  "n": "Blue Compass RV Cincinnati",  "c": "Cincinnati, OH",  "p": "(513) 923-3600",  "u": "https://www.bluecompassrv.com/locations/ohio/cincinnati/service",  "t": "center",  "e": false,  "r": false,  "d": "Blue Compass RV Cincinnati is an RV dealership with an on-site service center at 3491 Struble Rd in Cincinnati. The service page says certified technicians handle routine maintenance and major repairs, including engine/transmission, electrical, plumbing, roof and exterior, HVAC, appliances, slide-outs and collision/body work, and every vehicle gets a free multi-point inspection. It also runs a collision center and body shop on the same property and serves the Tri-State area.",  "g": [
+   "rv service center",
+   "parts",
+   "collision",
+   "warranty work"
+  ],  "base": "cincinnati",  "areas": [],  "region": "Cincinnati, OH",  "spec": "RV service & repair",  "reg": "southwest-oh"
+ },
+ {  "n": "Southwest RV Service & Storage",  "c": "Fairfield, OH",  "p": "513-738-4588",  "u": "https://www.southwestrvservice.com/",  "t": "center",  "e": false,  "r": false,  "d": "Southwest RV Service & Storage is an RV service, parts and storage shop at 4287 Wade Mill Road in Fairfield, Ohio. The site says it has served the Cincinnati area since 1998 and is owned and operated by certified RV technicians, doing engine and generator oil changes, bodywork, customization, and electrical and appliance repairs, and honoring extended warranties from many manufacturers.",  "g": [
+   "rv service center",
+   "parts",
+   "storage"
+  ],  "base": "fairfield",  "areas": [],  "region": "Cincinnati, OH",  "spec": "RV service & repair",  "reg": "southwest-oh"
+ },
+ {  "n": "North to South Mobile RV Repair LLC",  "c": "Cincinnati, OH",  "p": "(513)309-7271",  "u": "https://northtosouthmobilervrepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "North to South Mobile RV Repair LLC is a mobile RV repair business whose own site says it comes to the customer. The single-page site lists only the business name, the promise of reliable service at a fair price, and the direct phone number for John.",  "g": [
+   "mobile tech",
+   "rv repair"
+  ],  "base": null,  "areas": [],  "region": "Cincinnati, OH",  "spec": "mobile RV repair",  "reg": "southwest-oh"
+ },
+ {  "n": "RVs R Us",  "c": "Higginsport, OH",  "p": "937-375-1116",  "u": "https://rvsrusohio.com/mobile-rv-and-boat-repair/",  "t": "both",  "e": false,  "r": false,  "d": "RV's \"R\" Us is a family-owned RV sales and service business at 608 Columbia Street in Higginsport, Ohio, off US 52. It runs a mobile RV service unit across southwestern Ohio and northern Kentucky and, for larger jobs, a full service repair and maintenance center in Higginsport handling body panels, major interior work, water damage, rubber roof repair, collision repair and overhauls.",  "g": [
+   "mobile tech",
+   "rv service center",
+   "collision",
+   "roof"
+  ],  "base": "higginsport",  "areas": [],  "region": "Southwest Ohio",  "spec": "mobile RV & boat repair",  "reg": "southwest-oh"
+ },
+ {  "n": "Holman RV",  "c": "Batavia, OH",  "p": "513-401-8073",  "u": "https://www.holmanrv.com/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "Holman RV is an RV dealership at 4387 Elick Ln in Batavia, Ohio, with a dedicated service department. The service page says its trained technicians keep RVs in working order and get them in and out of the shop efficiently; the service department phone is separate from sales.",  "g": [
+   "rv service center",
+   "rv dealer"
+  ],  "base": "batavia",  "areas": [],  "region": "Cincinnati, OH",  "spec": "RV sales & service",  "reg": "southwest-oh"
+ },
+ {  "n": "Campers Inn RV of Troy",  "c": "Troy, OH",  "p": "937-440-5821",  "u": "https://www.campersinn.com/troy",  "t": "center",  "e": false,  "r": false,  "d": "Campers Inn RV of Troy is an RV dealership at 3500 S Co Rd 25A in Troy, Ohio, with a full RV service and parts center. The site says its RVDA-RVIA certified technicians handle the full range of RV service including roofs, brakes, inspections, warranty work and wheel and tire maintenance, plus gas, diesel and generator services and system and appliance checks.",  "g": [
+   "rv service center",
+   "rv dealer",
+   "parts"
+  ],  "base": "troy",  "areas": [],  "region": "Dayton, OH",  "spec": "RV sales & service",  "reg": "southwest-oh"
+ },
+ {  "n": "The RV Clinic",  "c": "Franklin, OH",  "p": "937.550.0078",  "u": "https://thervclinic.com/",  "t": "center",  "e": false,  "r": false,  "d": "The RV Clinic is a full-service RV repair shop in the Cincinnati-Dayton corridor (Franklin/Springboro area). Its site lists heat and air, floor repair, paint and body, satellite systems, hail damage, vintage rehab, roof replacement and repair, basic maintenance, appliance and plumbing repair, jack systems, awning replacement, and trailer/fifth-wheel/gooseneck hitches, and says it is RVDA and RVIA certified with 15+ years of experience.",  "g": [
+   "rv service center",
+   "body shop",
+   "appliances"
+  ],  "base": "franklin",  "areas": [],  "region": "Cincinnati-Dayton, OH",  "spec": "RV service & repair",  "reg": "southwest-oh"
+ },
+ {  "n": "Dick Lumpkin's Auto Body",  "c": "Piqua, OH",  "p": "(937) 778-9792",  "u": "https://dicklumpkinsautobody.com/auto-body-paint/rv-repair-and-towing/",  "t": "center",  "e": true,  "r": true,  "d": "Dick Lumpkin's Auto Body Inc. is an auto body, collision and mechanical shop at 150 Robert M Davis Pkwy in Piqua, Ohio, with a dedicated RV repair and towing page. It says it does complete RV collision repair, bodywork, painting and towing across the Western and North-Western Miami Valley, with extended bays, advanced lifts and industrial paint systems for large-frame RVs, plus 24/7 emergency towing and heavy-duty transport.",  "g": [
+   "collision",
+   "body shop",
+   "towing",
+   "rv repair"
+  ],  "base": "piqua",  "areas": [],  "region": "Dayton, OH",  "spec": "RV collision repair & towing",  "reg": "southwest-oh"
+ },
+ {  "n": "Camping World RV Service - Piqua",  "c": "Piqua, OH",  "p": "(833) 924-2577",  "u": "https://rv.campingworld.com/dealer/forestriver-piqua-ohio/rv-service-repair",  "t": "center",  "e": false,  "r": false,  "d": "Camping World RV Service - Piqua (Forest River RV Dayton) is an RV service location at 8793 N County Road 25a in Piqua, Ohio. The site says it provides complete service and repair for all RV types, including diagnostics, routine maintenance, OEM and extended warranty work, preventative maintenance, and RV detailing.",  "g": [
+   "rv service center",
+   "warranty work",
+   "parts"
+  ],  "base": "piqua",  "areas": [],  "region": "Dayton, OH",  "spec": "RV service & repair",  "reg": "southwest-oh"
+ },
+ {  "n": "Camping World RV Service - Huber Heights",  "c": "Huber Heights, OH",  "p": "(833) 231-8340",  "u": "https://rv.campingworld.com/dealer/huber-heights-ohio/rv-service-repair",  "t": "center",  "e": false,  "r": false,  "d": "Camping World RV Service - Huber Heights is an RV service location at 8001 Old Troy Pike in Huber Heights, Ohio. The location page lists RV service and repair plus amenities including overnight parking, parts and accessories, propane/LP gas, a dump station, RV sales, and a winterization/de-winterization program.",  "g": [
+   "rv service center",
+   "parts",
+   "winterization"
+  ],  "base": "huber heights",  "areas": [],  "region": "Dayton, OH",  "spec": "RV service & repair",  "reg": "southwest-oh"
  }
 ];
