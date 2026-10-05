@@ -372,5 +372,97 @@ window.RV_LISTINGS_FL = [
    "montverde",
    "mascotte"
   ],  "region": "Central Florida",  "spec": null,  "reg": "orlando-fl"
+ },
+ {  "n": "Tampa Mobile RV Repair",  "c": "Tampa, FL",  "p": "(813) 412-6707",  "u": "https://mobilervrepairtampa.com/",  "t": "mobile",  "e": true,  "r": false,  "d": "Tampa Mobile RV Repair is a mobile RV repair company with over 25 years of experience serving Tampa and the surrounding bay area. Technicians come to the customer for on-site repairs on motorhomes, fifth wheels, campers, and park models, covering roof and awning repair, camper A/C and furnace repair, hydraulics, wiring, plumbing, and water leaks. Work is backed by a full parts-and-labor warranty.",  "g": [
+   "mobile tech"
+  ],  "base": "tampa",  "areas": [],  "region": "Tampa Bay",  "spec": null,  "reg": "tampa-fl"
+ },
+ {  "n": "A&A Mobile RV Service",  "c": "Plant City, FL",  "p": "(813) 967-6459",  "u": "https://aamobilervservice.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "A&A Mobile RV Service is a full-service mobile RV repair and maintenance company that has served the Tampa Bay area for over 30 years. Technicians come to the customer at their location with no towing, handling repairs of all sizes as well as RV roof repair and replacement with a lifetime-warranty TPO roofing system. The business services all RV makes and models.",  "g": [
+   "mobile tech"
+  ],  "base": "plant city",  "areas": [],  "region": "Tampa Bay",  "spec": null,  "reg": "tampa-fl"
+ },
+ {  "n": "Westcoast RV LLC",  "c": "Hudson, FL",  "p": "727-857-0040",  "u": "https://www.westcoastrvllc.com/",  "t": "both",  "e": false,  "r": true,  "d": "Westcoast RV LLC is a Tampa Bay RV repair shop founded in Hudson in 1998 that offers both mobile and in-shop service. It fixes everything except the engine and chassis, including roofs, slide-outs, A/C, electrical, plumbing, appliances, generators, hydraulic jacks, exterior sealing, and remodels, and accepts insurance, manufacturer, and extended warranties.",  "g": [
+   "mobile tech",
+   "repair shop"
+  ],  "base": "hudson",  "areas": [],  "region": "Tampa Bay",  "spec": "We Fix Everything. But the engine & chassis.",  "reg": "tampa-fl"
+ },
+ {  "n": "Dan The Man RV Repair",  "c": "Clearwater, FL",  "p": "727-275-0858",  "u": "https://danthemanrvrepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Dan The Man RV Repair is a licensed, insured, and certified mobile RV repair company based in Clearwater. Dan is a Certified RV Technician with over 25 years of experience who handles mechanical services, interior repairs, and exterior repairs including A/C, furnace, awnings, slides, levels and lifts, generators, and leaks.",  "g": [
+   "mobile tech"
+  ],  "base": "clearwater",  "areas": [],  "region": "Tampa Bay",  "spec": null,  "reg": "tampa-fl"
+ },
+ {  "n": "Freedom Mobile RV Services",  "c": "Land O' Lakes, FL",  "p": "203-887-3144",  "u": "https://freedommobilervservices.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Freedom Mobile RV Services is a family-owned mobile RV repair business based in Land O' Lakes that services Central Florida year round. The owner is a master electrician and master RVDA/RVIA certified technician, and the team repairs all RV makes and models, covering roof inspection and repair, A/C, leveling systems, awnings, slideouts, water heaters, furnaces, plumbing, electrical, propane, and Aqua-Hot systems.",  "g": [
+   "mobile tech"
+  ],  "base": "land o lakes",  "areas": [],  "region": "Tampa Bay",  "spec": null,  "reg": "tampa-fl"
+ },
+ {  "n": "Top Notch RV Maintenance & Repair",  "c": "St. Petersburg, FL",  "p": "727-396-0027",  "u": "https://topnotchrvservices.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Top Notch RV Maintenance & Repair is a mobile RV service based in St. Petersburg covering St. Petersburg, Tampa, and Clearwater. The owner is an NRVIA-certified RV inspector and RVTAA-certified RV technician who performs on-site RV repairs and maintenance including furnaces and air conditioners, water heaters and refrigerators, plumbing and electrical systems, roof repairs, slide-outs and awnings, generators, and solar.",  "g": [
+   "mobile tech"
+  ],  "base": "saint petersburg",  "areas": [],  "region": "Tampa Bay",  "spec": null,  "reg": "tampa-fl"
+ },
+ {  "n": "Sharp RV Services",  "c": "Clearwater, FL",  "p": "727-804-9554",  "u": "https://www.sharprvservices.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Sharp RV Services is a mobile RV repair business based in Clearwater that comes to the customer for repairs and maintenance. It handles air conditioning, appliances, gas, water lines, black and gray tank repairs, refrigeration, awnings, slides, steps, roof leaks, hydraulics, minor body work, and yearly maintenance, and states it does not do engine and transmission repairs.",  "g": [
+   "mobile tech"
+  ],  "base": "clearwater",  "areas": [],  "region": "Tampa Bay",  "spec": "We do not do engine and transmission repairs.",  "reg": "tampa-fl"
+ },
+ {  "n": "D Tin Can RV Tech LLC",  "c": "Clearwater, FL",  "p": "(727) 558-3310",  "u": "https://www.dtincanrvtech.com/",  "t": "mobile",  "e": true,  "r": true,  "d": "D Tin Can RV Tech LLC is a mobile RV repair company based in Clearwater whose certified, licensed, and insured technician dispatches to RV parks, private homes, roadside, or off-grid sites within roughly a 60-mile radius. It services and repairs all types of RVs, including air conditioning, heating and furnace, electrical, awnings, hydraulics, roofing and sealing, refrigeration, levelers and jacks, and slide outs.",  "g": [
+   "mobile tech"
+  ],  "base": "clearwater",  "areas": [],  "region": "Tampa Bay",  "spec": null,  "reg": "tampa-fl"
+ },
+ {  "n": "Gulf to Bay RV Repair",  "c": "Palm Harbor, FL",  "p": "727-218-9534",  "u": "https://www.gulftobayrv.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Gulf to Bay RV Repair is a locally owned mobile RV repair service run by Dennis Dunne, an RVIAA Certified RV Technician and 2022 National RV Training Academy graduate. The business services Pinellas, Pasco, and Hillsborough counties and handles plumbing and electrical systems, coach batteries, inverters, converters, solar, air conditioners, water heaters, refrigerators, furnaces, water pumps, toilets, leaks, awnings, slide toppers, and steps.",  "g": [
+   "mobile tech"
+  ],  "base": "palm harbor",  "areas": [],  "region": "Tampa Bay",  "spec": null,  "reg": "tampa-fl"
+ },
+ {  "n": "Same Day RV Repair",  "c": "Clearwater, FL",  "p": "(727) 248-0207",  "u": "https://sameday-rvrepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Same Day RV Repair is a family-owned and operated mobile RV repair company based in Clearwater offering same-day service throughout Tampa Bay. It focuses on major RV appliances including RV air conditioner, refrigerator, water heater, furnace, electrical, and leak repairs with over 10 years of professional repair experience.",  "g": [
+   "mobile tech"
+  ],  "base": "clearwater",  "areas": [],  "region": "Tampa Bay",  "spec": null,  "reg": "tampa-fl"
+ },
+ {  "n": "Cr Thomas RV, Bus, and Trailer Repair",  "c": "Port Richey, FL",  "p": "561-314-8754",  "u": "https://www.crthomasrv.com/",  "t": "both",  "e": false,  "r": false,  "d": "Cr Thomas RV, Bus, and Trailer Repair is a Certified RVIA technician business with 30 years of experience based in the Port Richey area. It provides mobile service or in-shop service and handles bumper-to-bumper repairs including Aqua-Hot heating systems, generator diagnostics and repair, chassis and drivetrain repair, slide out repairs, roof and water damage, battery banks, 110 and 12 volt troubleshooting, and paint and body work.",  "g": [
+   "mobile tech",
+   "repair shop"
+  ],  "base": "port richey",  "areas": [],  "region": "Tampa Bay",  "spec": null,  "reg": "tampa-fl"
+ },
+ {  "n": "Stringer Enterprises of Florida LLC",  "c": "Zephyrhills, FL",  "p": "352-834-5975",  "u": "https://www.rvserviceinzephyrhillsflorida.com/",  "t": "center",  "e": false,  "r": false,  "d": "Stringer Enterprises of Florida LLC is a locally owned, licensed, and insured RV service and repair business in Zephyrhills operating in-shop only with no mobile service. Its Dometic-trained authorized service technicians handle air conditioning, electrical systems, plumbing, and flooring repairs, and the business states it does not service motor-home engines, drive-trains, or LP gas appliances.",  "g": [
+   "repair shop"
+  ],  "base": "zephyrhills",  "areas": [],  "region": "Tampa Bay",  "spec": "IN SHOP SERVICE ONLY NO MOBILE SERVICE",  "reg": "tampa-fl"
+ },
+ {  "n": "RV Platinum Mobile Service",  "c": "Wesley Chapel, FL",  "p": "(813) 843-4797",  "u": "https://rvplatinummobilesvc.com/",  "t": "mobile",  "e": false,  "r": true,  "d": "RV Platinum Mobile Service brings certified mobile RV repair and maintenance directly to the customer throughout the Tampa Bay area. Services include electrical systems, plumbing, appliances, slide-outs, maintenance, and Gaco silicone roof coating, and the business states it can help at home, a campground, or roadside.",  "g": [
+   "mobile tech"
+  ],  "base": "wesley chapel",  "areas": [],  "region": "Tampa Bay",  "spec": null,  "reg": "tampa-fl"
+ },
+ {  "n": "Ed's Mobile RV Service & Repair LLC",  "c": "Brooksville, FL",  "p": "(352) 232-9888",  "u": "https://www.edsmobilervserviceandrepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Ed's Mobile RV Service & Repair LLC is a family-owned mobile RV repair business based in Brooksville with RVSA-certified technicians and 30 years of experience. It comes to the customer and handles interior systems and appliances, structural and exterior repairs, plumbing and tank management, roofs, floor redo, and certified Aqua-Hot service, and states it does not repair motors or generators.",  "g": [
+   "mobile tech"
+  ],  "base": "brooksville",  "areas": [],  "region": "Tampa Bay",  "spec": "As a family-owned crew with RVSA-certified skills, we fix everything but the motor and generators, so you can hit the road worry-free.",  "reg": "tampa-fl"
+ },
+ {  "n": "RV Rescue",  "c": "Spring Hill, FL",  "p": "251-379-6117",  "u": "https://www.rvrescues.net/",  "t": "mobile",  "e": false,  "r": false,  "d": "RV Rescue is a mobile RV service and repair business based in Spring Hill. The NRVTA-certified, RVTAA member, and Aqua-Hot certified business offers full RV services including furnaces and takes on jobs of any size.",  "g": [
+   "mobile tech"
+  ],  "base": "spring hill",  "areas": [],  "region": "Tampa Bay",  "spec": null,  "reg": "tampa-fl"
+ },
+ {  "n": "The RV Squad",  "c": "Winter Haven, FL",  "p": "863-353-6600",  "u": "https://thervsquad.com/",  "t": "mobile",  "e": true,  "r": false,  "d": "The RV Squad is a mobile RV repair and service business whose Mobile RV Certified technician comes to the customer in Winter Haven, Lake Wales, Haines City, Frostproof, Dundee, Lake Alfred, and the Central Florida region. It brings its shop to the campsite, home, or wherever the customer is, and helps with extended warranty and private insurance claims.",  "g": [
+   "mobile tech"
+  ],  "base": "winter haven",  "areas": [],  "region": "Polk County",  "spec": null,  "reg": "tampa-fl"
+ },
+ {  "n": "Nationwide Haul - RV & Bus Repair",  "c": "Lakeland, FL",  "p": "(863) 434-8893",  "u": "https://nhrvrepair.com/",  "t": "both",  "e": false,  "r": true,  "d": "Nationwide Haul - RV & Bus Repair is an RV and bus service and repair shop in Lakeland with ASE Master Certified technicians that handles both the chassis and the living space. Services include roof and slide-out repair, diesel pusher maintenance, Onan generator service, bus safety inspections, and RV A/C and appliance repair, with mobile RV technicians and RV roadside assistance available throughout Central Florida.",  "g": [
+   "repair shop",
+   "mobile tech"
+  ],  "base": "lakeland",  "areas": [],  "region": "Polk County",  "spec": null,  "reg": "tampa-fl"
+ },
+ {  "n": "Matt's Mobile RV Repair",  "c": "Lakeland, FL",  "p": "863-608-2223",  "u": "https://mattsmobilervrepairfl.com/",  "t": "mobile",  "e": true,  "r": false,  "d": "Matt's Mobile RV Repair is a veteran-owned and NRVTA certified mobile RV repair service located in Lakeland and servicing Central Florida from Lakeland to Tampa, Orlando to Zephyrhills. It repairs and maintains all RV types and brands, including electrical, plumbing, heating and cooling, appliances, slideouts, emergency repairs, and air conditioner cleaning.",  "g": [
+   "mobile tech"
+  ],  "base": "lakeland",  "areas": [],  "region": "Polk County",  "spec": null,  "reg": "tampa-fl"
+ },
+ {  "n": "Shaffer's Certified Mobile RV Service, LLC",  "c": "Sarasota, FL",  "p": "(727) 900-5001",  "u": "https://scmobilerv.com/home",  "t": "mobile",  "e": false,  "r": false,  "d": "Shaffer's Certified Mobile RV Service, LLC is a licensed and insured mobile RV repair business based in Sarasota serving Sarasota, Bradenton, Venice, Palmetto, St. Petersburg, and Largo. With 21 years of experience and an FDACS LP Master Qualifier license, it handles roof replacement and repair, AC service, sealants, awnings and slide toppers, electrical diagnostics, propane systems, bearings and suspension, and appliance repairs.",  "g": [
+   "mobile tech"
+  ],  "base": "sarasota",  "areas": [],  "region": "Sarasota & Manatee Counties",  "spec": null,  "reg": "tampa-fl"
+ },
+ {  "n": "Patriot RV Repair",  "c": "Venice, FL",  "p": "941-451-6960",  "u": "https://patriotrvrepair.com/",  "t": "both",  "e": false,  "r": false,  "d": "Patriot RV Repair is a family-owned, RVIA-certified business with 30+ years of experience providing mobile and shop RV service throughout Venice, Sarasota, and surrounding areas. It handles routine maintenance and major repairs, engine work, electrical, plumbing, HVAC, appliances, roof and exterior work, solar, custom work, and RV inspections, and works with insurance and extended warranty companies.",  "g": [
+   "mobile tech",
+   "repair shop"
+  ],  "base": "venice",  "areas": [],  "region": "Sarasota & Manatee Counties",  "spec": null,  "reg": "tampa-fl"
+ },
+ {  "n": "By The Bay RV",  "c": "Bradenton, FL",  "p": "(941) 725-5557",  "u": "https://bythebayrv.online/",  "t": "mobile",  "e": false,  "r": false,  "d": "By The Bay RV is a licensed and certified mobile RV repair and inspection service local to Manatee and Sarasota counties. A Florida RV Trade Association certified mobile RV repair service, it repairs all types of RVs, travel trailers, fifth-wheels, and motor homes and works with all warranty companies, offering a 90-day warranty on labor.",  "g": [
+   "mobile tech"
+  ],  "base": "bradenton",  "areas": [],  "region": "Sarasota & Manatee Counties",  "spec": null,  "reg": "tampa-fl"
+ },
+ {  "n": "D & L Mobile RV Repair",  "c": "Riverview, FL",  "p": "(813) 340-4391",  "u": "https://www.dandlmobilervrepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "D & L Mobile RV Repair is a mobile RV repair business located in Riverview that has provided RV maintenance and repair throughout West Central Florida for over 25 years. It specializes in bumper to bumper repairs on motorhomes, coaches, and trailers, covering RV plumbing, appliances, electrical, awning services, and rubber roof replacement, and works with major insurance companies.",  "g": [
+   "mobile tech"
+  ],  "base": "riverview",  "areas": [],  "region": "Tampa Bay",  "spec": null,  "reg": "tampa-fl"
  }
 ];

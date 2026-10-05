@@ -311,5 +311,63 @@ window.RV_LISTINGS_MO = [
   ],  "base": "grain valley",  "areas": [
    "grain valley"
   ],  "region": "East Metro Kansas City",  "spec": null,  "reg": "kansas-city-mo"
+ },
+ {  "n": "St Peters RV Service",  "c": "St. Peters, MO",  "p": "1-314-384-2755",  "u": "https://www.stprvservice.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "St Peters RV Service is a mobile RV repair business based in St. Peters, Missouri, that comes to the customer's location instead of the RV going to a shop. Its crew works on towable, fifth wheel, gooseneck and toy hauler units plus Class A, B and C motorhomes, handling maintenance and repair of RV systems. Staff have worked in the RV repair industry for more than seven years and continue to pursue training and certifications.",  "g": [
+   "mobile tech",
+   "repair",
+   "maintenance"
+  ],  "base": "saint peters",  "areas": [],  "region": "St. Louis metro",  "spec": null,  "reg": "st-louis-mo"
+ },
+ {  "n": "Adventure Ready Services",  "c": "Wentzville, MO",  "p": "314.325.4805",  "u": "https://www.advreadyservices.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Adventure Ready Services is a mobile RV service based in Wentzville, Missouri, whose technicians bring repairs and maintenance to the customer's campsite or driveway rather than requiring a trip to a shop or dealer. It markets clear communication, transparency and a 60 day guarantee, and works on RV systems on location. It serves St. Charles, Lincoln and Warren counties in Missouri.",  "g": [
+   "mobile tech",
+   "repair",
+   "maintenance"
+  ],  "base": "wentzville",  "areas": [
+   "wentzville",
+   "saint charles",
+   "saint peters",
+   "ofallon"
+  ],  "region": "St. Louis metro",  "spec": null,  "reg": "st-louis-mo"
+ },
+ {  "n": "Sparkle Travel & RV Services",  "c": "St. Louis, MO",  "p": "314-319-1533",  "u": "https://sparkle-adventures.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Sparkle Travel & RV Services is a family-owned St. Louis business led by Teresa Willis, a certified RV inspector and registered mobile RV technician who travels to where the RV is located. Alongside inspections, consulting and training it offers RV maintenance and repair performed on site, and it is Aqua-Hot certified. Its territory centers on the St. Louis area and surrounding Missouri and Midwest communities.",  "g": [
+   "mobile tech",
+   "repair",
+   "maintenance",
+   "inspections"
+  ],  "base": "saint louis",  "areas": [
+   "saint louis",
+   "ofallon",
+   "wentzville",
+   "eureka"
+  ],  "region": "St. Louis metro",  "spec": null,  "reg": "st-louis-mo"
+ },
+ {  "n": "Camping World RV Service - Wentzville",  "c": "Wentzville, MO",  "p": "(888) 892-2439",  "u": "https://rv.campingworld.com/dealer/wentzville-missouri/rv-service-repair",  "t": "center",  "e": false,  "r": false,  "d": "Camping World RV Service - Wentzville is the service center of the Camping World dealership at 2200 E Pitman Ave in Wentzville, Missouri, and is equipped as a collision center. It provides diagnostics, repairs, routine maintenance, warranty and recall assistance, and winterization/de-winterization for all RV types, along with a parts and accessories store. The location also performs oil and lube changes and leak checks.",  "g": [
+   "rv service center",
+   "dealer service dept",
+   "maintenance",
+   "collision"
+  ],  "base": "wentzville",  "areas": [],  "region": "St. Louis metro",  "spec": null,  "reg": "st-louis-mo"
+ },
+ {  "n": "A1 RV Services",  "c": "Raytown, MO",  "p": "816-694-6254",  "u": "https://a1rvservices.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "A1 RV Services is an RV repair and maintenance business at 6204b Raytown Road in Raytown, Missouri, offering mobile service in addition to its shop. It repairs and services RV air conditioning, furnaces, water heaters, appliances, electrical and plumbing systems, holding tanks, awnings and slide-out toppers, and also performs exterior caulking and sealing and preventative maintenance. After-hours calls are handled by message.",  "g": [
+   "mobile tech",
+   "repair shop",
+   "maintenance"
+  ],  "base": "raytown",  "areas": [],  "region": "Kansas City metro",  "spec": null,  "reg": "kansas-city-mo"
+ },
+ {  "n": "Bucks Mobile RV Services",  "c": "Harrisonville, MO",  "p": "(816) 955-2280",  "u": "http://www.bucksmobilervservices.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Bucks Mobile RV Services is an RVTI-certified mobile RV and horse trailer repair business at 26605 South Brush College Road in Harrisonville, Missouri, that comes to the customer. It fixes RV air conditioning and furnaces, plumbing leaks, tank replacements, appliance faults, roof leaks and electrical problems, and performs winterizing/de-winterizing plus brake and bearing service. It advertises a 200 mile service coverage area around Harrisonville.",  "g": [
+   "mobile tech",
+   "repair",
+   "maintenance"
+  ],  "base": "harrisonville",  "areas": [
+   "harrisonville",
+   "kansas city"
+  ],  "region": "Kansas City metro",  "spec": null,  "reg": "kansas-city-mo"
+ },
+ {  "n": "Camping World RV Service - Columbia",  "c": "Columbia, MO",  "p": "(866) 405-0786",  "u": "https://rv.campingworld.com/dealer/columbia-missouri/rv-service-repair",  "t": "center",  "e": false,  "r": false,  "d": "Camping World RV Service - Columbia is the service center of the Camping World location at 8877 Interstate 70 Dr Ne in Columbia, Missouri. It offers complete service and repair for all RV types, including diagnostics, routine maintenance, oil and lube changes, winterization/de-winterization, and warranty and extended-warranty work. The location also runs a collision center and provides parts and accessories.",  "g": [
+   "rv service center",
+   "dealer service dept",
+   "maintenance",
+   "collision"
+  ],  "base": "columbia",  "areas": [],  "region": "Kansas City metro",  "spec": null,  "reg": "central-mo"
  }
 ];

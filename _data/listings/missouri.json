@@ -63,7 +63,32 @@
     "Eldon": "lake-ozarks-mo",
     "Jackson": "southeast-mo",
     "Fredericktown": "southeast-mo",
-    "Joplin": "southwest-mo"
+    "Joplin": "southwest-mo",
+    "Florissant": "st-louis-mo",
+    "Chesterfield": "st-louis-mo",
+    "Ballwin": "st-louis-mo",
+    "Kirkwood": "st-louis-mo",
+    "Webster Groves": "st-louis-mo",
+    "Mehlville": "st-louis-mo",
+    "Creve Coeur": "st-louis-mo",
+    "Maryland Heights": "st-louis-mo",
+    "Bridgeton": "st-louis-mo",
+    "Hazelwood": "st-louis-mo",
+    "Arnold": "st-louis-mo",
+    "Fenton": "st-louis-mo",
+    "Eureka": "st-louis-mo",
+    "Washington": "st-louis-mo",
+    "St. Peters": "st-louis-mo",
+    "Lee's Summit": "kansas-city-mo",
+    "Grandview": "kansas-city-mo",
+    "Belton": "kansas-city-mo",
+    "Liberty": "kansas-city-mo",
+    "Gladstone": "kansas-city-mo",
+    "North Kansas City": "kansas-city-mo",
+    "Excelsior Springs": "kansas-city-mo",
+    "Harrisonville": "kansas-city-mo",
+    "Warrensburg": "kansas-city-mo",
+    "Sedalia": "kansas-city-mo"
   },
   "listings": [
     {
@@ -1365,6 +1390,212 @@
         "emergency_quote": null,
         "roadside_quote": null,
         "licence": null
+      }
+    },
+    {
+      "n": "St Peters RV Service",
+      "c": "St. Peters, MO",
+      "p": "1-314-384-2755",
+      "u": "https://www.stprvservice.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "St Peters RV Service is a mobile RV repair business based in St. Peters, Missouri, that comes to the customer's location instead of the RV going to a shop. Its crew works on towable, fifth wheel, gooseneck and toy hauler units plus Class A, B and C motorhomes, handling maintenance and repair of RV systems. Staff have worked in the RV repair industry for more than seven years and continue to pursue training and certifications.",
+      "g": [
+        "mobile tech",
+        "repair",
+        "maintenance"
+      ],
+      "base": "St. Peters",
+      "areas": [],
+      "region": "St. Louis metro",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "1-314-384-2755",
+        "type_quote": "St Peters Mobile RV Service specializes in providing reliable and efficient mobile RV repair services.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "No need to drive your RV we will come to you."
+        ]
+      }
+    },
+    {
+      "n": "Adventure Ready Services",
+      "c": "Wentzville, MO",
+      "p": "314.325.4805",
+      "u": "https://www.advreadyservices.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Adventure Ready Services is a mobile RV service based in Wentzville, Missouri, whose technicians bring repairs and maintenance to the customer's campsite or driveway rather than requiring a trip to a shop or dealer. It markets clear communication, transparency and a 60 day guarantee, and works on RV systems on location. It serves St. Charles, Lincoln and Warren counties in Missouri.",
+      "g": [
+        "mobile tech",
+        "repair",
+        "maintenance"
+      ],
+      "base": "Wentzville",
+      "areas": [
+        "Wentzville",
+        "St. Charles",
+        "St. Peters",
+        "O'Fallon"
+      ],
+      "region": "St. Louis metro",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "314.325.4805",
+        "type_quote": "Welcome to Adventure Ready Services—your trusted mobile RV tech team, bringing expert service right to your campsite or driveway.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "We proudly serve St. Charles, Lincoln, and Warren counties in Missouri, with a focus on convenience, value, and customer satisfaction."
+        ]
+      }
+    },
+    {
+      "n": "Sparkle Travel & RV Services",
+      "c": "St. Louis, MO",
+      "p": "314-319-1533",
+      "u": "https://sparkle-adventures.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Sparkle Travel & RV Services is a family-owned St. Louis business led by Teresa Willis, a certified RV inspector and registered mobile RV technician who travels to where the RV is located. Alongside inspections, consulting and training it offers RV maintenance and repair performed on site, and it is Aqua-Hot certified. Its territory centers on the St. Louis area and surrounding Missouri and Midwest communities.",
+      "g": [
+        "mobile tech",
+        "repair",
+        "maintenance",
+        "inspections"
+      ],
+      "base": "St. Louis",
+      "areas": [
+        "St. Louis",
+        "O'Fallon",
+        "Wentzville",
+        "Eureka"
+      ],
+      "region": "St. Louis metro",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "Text/Call: 314-319-1533",
+        "type_quote": "Teresa is a certified RV inspector, registered mobile RV technician, and most recently, Aquahot certified.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "We primarily serve St. Louis, O’Fallon, Wentzville, Festus, Bon Terre, and Eureka."
+        ]
+      }
+    },
+    {
+      "n": "Camping World RV Service - Wentzville",
+      "c": "Wentzville, MO",
+      "p": "(888) 892-2439",
+      "u": "https://rv.campingworld.com/dealer/wentzville-missouri/rv-service-repair",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Camping World RV Service - Wentzville is the service center of the Camping World dealership at 2200 E Pitman Ave in Wentzville, Missouri, and is equipped as a collision center. It provides diagnostics, repairs, routine maintenance, warranty and recall assistance, and winterization/de-winterization for all RV types, along with a parts and accessories store. The location also performs oil and lube changes and leak checks.",
+      "g": [
+        "rv service center",
+        "dealer service dept",
+        "maintenance",
+        "collision"
+      ],
+      "base": "Wentzville",
+      "areas": [],
+      "region": "St. Louis metro",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "(888) 892-2439",
+        "type_quote": "We provide complete service and repair for all RV types.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": []
+      }
+    },
+    {
+      "n": "A1 RV Services",
+      "c": "Raytown, MO",
+      "p": "816-694-6254",
+      "u": "https://a1rvservices.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "A1 RV Services is an RV repair and maintenance business at 6204b Raytown Road in Raytown, Missouri, offering mobile service in addition to its shop. It repairs and services RV air conditioning, furnaces, water heaters, appliances, electrical and plumbing systems, holding tanks, awnings and slide-out toppers, and also performs exterior caulking and sealing and preventative maintenance. After-hours calls are handled by message.",
+      "g": [
+        "mobile tech",
+        "repair shop",
+        "maintenance"
+      ],
+      "base": "Raytown",
+      "areas": [],
+      "region": "Kansas City metro",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "816-694-6254",
+        "type_quote": "We offer a wide range of services and repairs for AC, Furnace, Water Heater, Appliances, Electrical, Plumbing, Holding Tanks and more.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": []
+      }
+    },
+    {
+      "n": "Bucks Mobile RV Services",
+      "c": "Harrisonville, MO",
+      "p": "(816) 955-2280",
+      "u": "http://www.bucksmobilervservices.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Bucks Mobile RV Services is an RVTI-certified mobile RV and horse trailer repair business at 26605 South Brush College Road in Harrisonville, Missouri, that comes to the customer. It fixes RV air conditioning and furnaces, plumbing leaks, tank replacements, appliance faults, roof leaks and electrical problems, and performs winterizing/de-winterizing plus brake and bearing service. It advertises a 200 mile service coverage area around Harrisonville.",
+      "g": [
+        "mobile tech",
+        "repair",
+        "maintenance"
+      ],
+      "base": "Harrisonville",
+      "areas": [
+        "Harrisonville",
+        "Kansas City"
+      ],
+      "region": "Kansas City metro",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "(816) 955-2280",
+        "type_quote": "RVTI Certified Mobile RV Repair in Kansas City & Surrounding Areas — We Come to You",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Serving Harrisonville, MO with a 200 mile service coverage!"
+        ]
+      }
+    },
+    {
+      "n": "Camping World RV Service - Columbia",
+      "c": "Columbia, MO",
+      "p": "(866) 405-0786",
+      "u": "https://rv.campingworld.com/dealer/columbia-missouri/rv-service-repair",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Camping World RV Service - Columbia is the service center of the Camping World location at 8877 Interstate 70 Dr Ne in Columbia, Missouri. It offers complete service and repair for all RV types, including diagnostics, routine maintenance, oil and lube changes, winterization/de-winterization, and warranty and extended-warranty work. The location also runs a collision center and provides parts and accessories.",
+      "g": [
+        "rv service center",
+        "dealer service dept",
+        "maintenance",
+        "collision"
+      ],
+      "base": "Columbia",
+      "areas": [],
+      "region": "Kansas City metro",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "(866) 405-0786",
+        "type_quote": "We provide complete service and repair for all RV types.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": []
       }
     }
   ]

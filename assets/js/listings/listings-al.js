@@ -240,5 +240,36 @@ window.RV_LISTINGS_AL = [
   ],  "base": "gadsden",  "areas": [
    "cullman"
   ],  "region": "Northeast Alabama",  "spec": null,  "reg": "north-al"
+ },
+ {  "n": "Camping World of Anniston",  "c": "Anniston, AL",  "p": "(888) 473-0038",  "u": "https://rv.campingworld.com/dealer/anniston-alabama/rv-service-repair",  "t": "center",  "e": false,  "r": false,  "d": "Camping World of Anniston is the RV service and repair center at 2772 US Highway 78 E in Anniston, in Calhoun County. It handles annual maintenance, OEM and extended warranty work, RV repair, appliance repair for A/C, furnaces and refrigerators, multi-point diagnostics, winterization and de-winterization, performance installations and collision repair for motorhomes, travel trailers and fifth wheels. The location also runs an RV dealership and parts counter.",  "g": [
+   "shop",
+   "dealer service"
+  ],  "base": "anniston",  "areas": [],  "region": "Northeast Alabama",  "spec": "RV service center (national chain, local shop)",  "reg": "birmingham-al"
+ },
+ {  "n": "Campers Unlimited",  "c": "Gadsden, AL",  "p": "256-344-2084",  "u": "https://www.campersunlimited.net/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "Campers Unlimited is an RV dealer with a full-service maintenance center at 4315 Old Pump Station Rd in Gadsden and a second Alabama location at 2029 Oxford Exchange Blvd in Oxford. Its mechanics handle routine maintenance, oil changes, appliance installation and complex RV repairs for motorhomes and towables, and the parts department stocks RV parts and components. It serves Gadsden, Oxford and the surrounding northeast Alabama area.",  "g": [
+   "dealer service",
+   "shop"
+  ],  "base": "gadsden",  "areas": [
+   "oxford"
+  ],  "region": "Northeast Alabama",  "spec": "RV dealer with full service department",  "reg": "north-al"
+ },
+ {  "n": "Daugherty Auto & RV",  "c": "Cullman, AL",  "p": "256-590-1884",  "u": "https://daughertyauto.com/rv-repair/",  "t": "center",  "e": false,  "r": false,  "d": "Daugherty Auto & RV is a family-owned RV repair shop and dealer at 5158 US Highway 278 West in Cullman. Its certified, factory-trained technicians handle general RV repairs from brakes and electrical systems to leaks and appliance issues, preventative maintenance with inspections and oil changes, and specialized gooseneck and fifth-wheel hitch, brake and frame work. The business also sells RVs and propane and stocks parts.",  "g": [
+   "shop",
+   "dealer service"
+  ],  "base": "cullman",  "areas": [],  "region": "North Central Alabama",  "spec": "RV repair shop and dealer",  "reg": "north-al"
+ },
+ {  "n": "New Paths RV Tech",  "c": "Coker, AL",  "p": "205-792-7242",  "u": "https://newpathsrvtech.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "New Paths RV Tech is a mobile RV repair business based at 14326 Bone Camp Rd in Coker, outside Tuscaloosa, owned and operated by RVTAA Certified Technician Stuart Malone. It brings repair and maintenance directly to the customer's campsite, home or storage location, covering water heater replacement, plumbing repairs, electrical and converter diagnosis, awning replacement, solar installation and general RV systems work. It serves Tuscaloosa, Fayette and Pickens counties.",  "g": [
+   "mobile tech"
+  ],  "base": "coker",  "areas": [
+   "tuscaloosa",
+   "northport"
+  ],  "region": "Central Alabama",  "spec": "Mobile RV repair and maintenance",  "reg": "birmingham-al"
+ },
+ {  "n": "Anytime Mobile RV Repair, LLC",  "c": "McCalla, AL",  "p": "(205) 421-0709",  "u": "https://www.anytimemobilerv.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Anytime Mobile RV Repair, LLC is a mobile RV repair business based in McCalla that serves West and Central Alabama and parts of East Mississippi, and will also take drop-offs by appointment. Its technicians handle roof sealant and full roof repairs, water heater replacements, leveling and landing jack work, propane and furnace repair, window replacement, slide-out repairs, remodeling and wall replacement, electrical rewiring, plumbing, flooring, A/C repair and replacement, awning repairs, weatherization and gas and diesel generator repair.",  "g": [
+   "mobile tech"
+  ],  "base": "mccalla",  "areas": [
+   "birmingham",
+   "tuscaloosa"
+  ],  "region": "Central Alabama",  "spec": "Mobile RV repair and remodeling",  "reg": "birmingham-al"
  }
 ];

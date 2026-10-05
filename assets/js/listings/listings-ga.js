@@ -219,5 +219,117 @@ window.RV_LISTINGS_GA = [
    "commerce",
    "athens"
   ],  "region": "North Georgia",  "spec": null,  "reg": "north-ga"
+ },
+ {  "n": "Rebel RV Repair",  "c": "North Atlanta, GA",  "p": "(470) 592-0008",  "u": "https://www.rebelrvrepair.com/",  "t": "mobile",  "e": true,  "r": true,  "d": "Rebel RV Repair is a mobile RV maintenance and repair company serving the North Atlanta area, including Acworth, Woodstock, Marietta, Canton, Holly Springs and Alpharetta. The site says technicians come to the RV at the customer's location and handle routine maintenance, parts replacement, emergency breakdown repairs, on-the-go tire changes and battery maintenance.",  "g": [
+   "mobile tech",
+   "rv repair",
+   "emergency",
+   "tires"
+  ],  "base": null,  "areas": [
+   "acworth",
+   "woodstock",
+   "marietta",
+   "canton",
+   "holly springs",
+   "alpharetta"
+  ],  "region": "Atlanta and the northern suburbs",  "spec": "mobile RV repair & maintenance",  "reg": "atlanta-ga"
+ },
+ {  "n": "RV Country",  "c": "Marietta, GA",  "p": "(770) 977-2090",  "u": "https://www.rvcountryga.com/service-repair-rvs-dealership--service",  "t": "center",  "e": false,  "r": false,  "d": "RV Country is an RV dealership on Canton Road in Marietta, Georgia, with its own service department. The site says trained technicians keep motorhomes and trailers in working order and perform maintenance and repairs, and invites owners to call or visit to schedule service.",  "g": [
+   "rv service center",
+   "rv repair",
+   "maintenance"
+  ],  "base": "marietta",  "areas": [],  "region": "Atlanta and the northern suburbs",  "spec": "RV dealership service department",  "reg": "atlanta-ga"
+ },
+ {  "n": "Open Roads Complete RV",  "c": "Acworth, GA",  "p": "(470) 524-1523",  "u": "https://www.openroads.us/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "Open Roads Complete RV runs an RV sales and service operation with a service center in Acworth, Georgia (and a second in Jasper). The site lists warranty and customer-pay repairs including body repairs, roof inspections and replacement, axle swaps, water-leak repairs, electrical, propane, plumbing, appliance and component work, hitches, brake control, solar, generators and inverters.",  "g": [
+   "rv service center",
+   "rv repair",
+   "body",
+   "roofing"
+  ],  "base": "acworth",  "areas": [
+   "jasper"
+  ],  "region": "Atlanta and the northern suburbs",  "spec": "RV service center & dealership",  "reg": "atlanta-ga"
+ },
+ {  "n": "Lightnin RV Rental and Sales",  "c": "Lawrenceville, GA",  "p": "(770) 963-9889",  "u": "https://www.lightninrv.com/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "Lightnin RV Rental and Sales is an RV dealer on University Parkway in Lawrenceville, Georgia, with its own service department. The site advertises a service shop for motorhomes, travel trailers and fifth wheels and lists repair pricing for awning canvas, air conditioners, axle bearing repacks, and winterization/de-winterization.",  "g": [
+   "rv service center",
+   "rv repair",
+   "appliances",
+   "winterization"
+  ],  "base": "lawrenceville",  "areas": [],  "region": "Atlanta and the northern suburbs",  "spec": "RV dealer service department",  "reg": "atlanta-ga"
+ },
+ {  "n": "GA RV Pros",  "c": "Tyrone, GA",  "p": "678-519-2687",  "u": "https://www.garvpros.com/",  "t": "center",  "e": false,  "r": false,  "d": "GA RV Pros is a full-service RV repair center on Shamrock Industrial Boulevard in Tyrone, Georgia, southwest of Atlanta, serving Peachtree City. The site lists repairs and preventative maintenance for motorcoaches, Class A/B/C motorhomes, toterhomes, travel trailers, fifth wheels and toy haulers, covering electrical, inverters, batteries, A/C, appliances, LP, plumbing, solar, roof service, slides and leveling jacks, awnings, generators, bearing packs and brake service.",  "g": [
+   "rv service center",
+   "rv repair",
+   "chassis",
+   "solar"
+  ],  "base": "tyrone",  "areas": [
+   "peachtree city",
+   "atlanta"
+  ],  "region": "Atlanta and the northern suburbs",  "spec": "RV repair & maintenance service center",  "reg": "atlanta-ga"
+ },
+ {  "n": "Atlanta RV Center",  "c": "Winder, GA",  "p": "855-462-8578",  "u": "https://atlanta-rv.com/",  "t": "center",  "e": false,  "r": false,  "d": "Atlanta RV Center is a privately owned RV repair shop on Tucker Court in Winder, Georgia. The site says it specializes in Airstream repair and upgrades, RV electronics for off-grid power, solar, lithium batteries, inverters and Airstream axle replacement, with an owner who has 36 years of electrical, electronic and mechanical troubleshooting experience.",  "g": [
+   "rv repair",
+   "airstream",
+   "solar",
+   "electrical"
+  ],  "base": "winder",  "areas": [],  "region": "Atlanta and the northern suburbs",  "spec": "RV & Airstream repair shop",  "reg": "atlanta-ga"
+ },
+ {  "n": "DT Mobile RV Tech",  "c": "Conyers, GA",  "p": "404.240.3234",  "u": "https://www.dtmobilervtech.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "DT Mobile RV Tech is a mobile RV repair business based in Conyers, Georgia, serving Northeast Georgia and surrounding cities. The site says it brings service to the customer with over 15 years of experience and handles awnings, air conditioners, converters and inverters, electrical issues, furnaces and fans, refrigerators, remodeling, water heaters and water leaks.",  "g": [
+   "mobile tech",
+   "rv repair",
+   "appliances",
+   "electrical"
+  ],  "base": "conyers",  "areas": [],  "region": "Atlanta and the northern suburbs",  "spec": "mobile RV repair",  "reg": "atlanta-ga"
+ },
+ {  "n": "APC RV Service",  "c": "Northeast Georgia, GA",  "p": "678-887-2818",  "u": "https://www.apcrvservice.com/",  "t": "both",  "e": false,  "r": false,  "d": "APC RV Service is an RV repair business offering mobile and shop-based service for Northeast Georgia. Its site states it provides both mobile and shop-based RV service.",  "g": [
+   "mobile tech",
+   "rv repair"
+  ],  "base": null,  "areas": [],  "region": "Atlanta and the northern suburbs",  "spec": "mobile & shop RV repair",  "reg": "atlanta-ga"
+ },
+ {  "n": "Rob's Performance",  "c": "Conyers, GA",  "p": "(770) 388-9545",  "u": "https://robsperformance.net/index.php/services/rv-service-repairs",  "t": "center",  "e": true,  "r": false,  "d": "Rob's Performance is an auto and RV repair shop on Old Covington Road in Conyers, Georgia, that advertises dedicated RV and motorhome service. The site says it repairs and maintains brake systems, engines, transmissions, tires, suspensions, pumps and electronics on all RVs, provides engine diagnostics and inspections, and offers heavy-duty RV work and emergency repairs.",  "g": [
+   "rv repair",
+   "chassis",
+   "emergency"
+  ],  "base": "conyers",  "areas": [],  "region": "Atlanta and the northern suburbs",  "spec": "auto & RV repair shop",  "reg": "atlanta-ga"
+ },
+ {  "n": "RV Trek Inspections and Repairs",  "c": "Atlanta, GA",  "p": "(770) 296-5325",  "u": "https://www.rvtrek.biz/rv-repair-services",  "t": "mobile",  "e": true,  "r": false,  "d": "RV Trek Inspections and Repairs is a mobile RV service for the Atlanta Metropolitan Area and North Georgia that travels to the customer. The site says it performs general maintenance, electrical, air conditioning, furnace, plumbing, fluid analysis and refrigerator work and emergency services such as slide-out, landing gear and electric step override and retraction, and is RVTAA certified.",  "g": [
+   "mobile tech",
+   "rv repair",
+   "emergency",
+   "inspections"
+  ],  "base": null,  "areas": [],  "region": "Atlanta and the northern suburbs",  "spec": "mobile RV repairs & inspections",  "reg": "atlanta-ga"
+ },
+ {  "n": "Georgia Campers",  "c": "Newnan, GA",  "p": "770-740-5006",  "u": "https://www.georgiacampers.com/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "Georgia Campers is a family-owned RV dealership on Herring Road in Newnan, Georgia, with an RV service department. The site says its experts fix any issue an RV owner may have and invites customers to bring the RV by for inspection and repair.",  "g": [
+   "rv service center",
+   "rv repair",
+   "dealer"
+  ],  "base": "newnan",  "areas": [],  "region": "Atlanta and the northern suburbs",  "spec": "RV dealership service department",  "reg": "atlanta-ga"
+ },
+ {  "n": "BlackHawk Boat & RV",  "c": "Acworth, GA",  "p": "(770) 975-0250",  "u": "https://blackhawkboatandrv.net/",  "t": "both",  "e": true,  "r": true,  "d": "BlackHawk Boat & RV is a boat and RV repair shop on Woodstock Road in Acworth, Georgia. The site says it offers pickup and delivery, mobile boat, RV and generator repair, 24-hour roadside and dockside assistance, towing and recovery, and full service for boats and RVs of all sizes from minor repair to complete overhaul, electrical to engine replacement.",  "g": [
+   "mobile tech",
+   "rv repair",
+   "generators",
+   "roadside"
+  ],  "base": "acworth",  "areas": [],  "region": "Atlanta and the northern suburbs",  "spec": "boat & RV repair",  "reg": "atlanta-ga"
+ },
+ {  "n": "Campers Inn RV of Acworth",  "c": "Acworth, GA",  "p": "678-322-1552",  "u": "https://www.campersinn.com/atlanta-acworth",  "t": "center",  "e": true,  "r": false,  "d": "Campers Inn RV of Acworth is an RV dealership on Woodstock Road in Acworth, Georgia, with an on-site RV repair and service center. The site says its certified technicians support maintenance and repair needs and lists gas, diesel and RV services plus system checks and appliance service.",  "g": [
+   "rv service center",
+   "rv repair",
+   "dealer",
+   "appliances"
+  ],  "base": "acworth",  "areas": [],  "region": "Atlanta and the northern suburbs",  "spec": "RV dealer service center",  "reg": "atlanta-ga"
+ },
+ {  "n": "Campers Inn RV of Atlanta",  "c": "Tucker, GA",  "p": "404-377-8000",  "u": "https://www.campersinn.com/atlanta",  "t": "center",  "e": true,  "r": false,  "d": "Campers Inn RV of Atlanta is an RV dealership on Tucker Industrial Road in Tucker, Georgia, with an on-site RV repair and service center. The site says its certified technicians support maintenance and repair needs and that it provides sales, RV service and maintenance and parts for Tucker and Atlanta RVers.",  "g": [
+   "rv service center",
+   "rv repair",
+   "dealer",
+   "appliances"
+  ],  "base": "tucker",  "areas": [],  "region": "Atlanta and the northern suburbs",  "spec": "RV dealer service center",  "reg": "atlanta-ga"
+ },
+ {  "n": "Camping World of Woodstock",  "c": "Woodstock, GA",  "p": "(888) 380-0095",  "u": "https://rv.campingworld.com/dealer/woodstock-georgia/rv-service-repair",  "t": "center",  "e": false,  "r": false,  "d": "Camping World of Woodstock is an RV dealership and service center on Parkway 575 in Woodstock, Georgia. The site says the location provides complete service and repair for all RV types with diagnostics, routine maintenance and warranty work, and lists amenities including appliance service, leak checks, oil and lube change, roof repairs, propane, winterization and a collision center.",  "g": [
+   "rv service center",
+   "rv repair",
+   "collision",
+   "appliances"
+  ],  "base": "woodstock",  "areas": [],  "region": "Atlanta and the northern suburbs",  "spec": "RV dealer service center",  "reg": "atlanta-ga"
  }
 ];

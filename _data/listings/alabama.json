@@ -46,7 +46,32 @@
     "Orange Beach": "gulf-coast-al",
     "Irvington": "gulf-coast-al",
     "Dothan": "wiregrass-al",
-    "Level Plains": "wiregrass-al"
+    "Level Plains": "wiregrass-al",
+    "Anniston": "birmingham-al",
+    "Oxford": "birmingham-al",
+    "Jacksonville": "birmingham-al",
+    "Attalla": "birmingham-al",
+    "Decatur": "birmingham-al",
+    "Coker": "birmingham-al",
+    "Northport": "birmingham-al",
+    "McCalla": "birmingham-al",
+    "Bessemer": "birmingham-al",
+    "Hoover": "birmingham-al",
+    "Vestavia Hills": "birmingham-al",
+    "Homewood": "birmingham-al",
+    "Trussville": "birmingham-al",
+    "Gardendale": "birmingham-al",
+    "Fultondale": "birmingham-al",
+    "Pelham": "birmingham-al",
+    "Alabaster": "birmingham-al",
+    "Helena": "birmingham-al",
+    "Jasper": "birmingham-al",
+    "Oneonta": "birmingham-al",
+    "Talladega": "birmingham-al",
+    "Pell City": "birmingham-al",
+    "Midfield": "birmingham-al",
+    "Fairfield": "birmingham-al",
+    "Center Point": "birmingham-al"
   },
   "listings": [
     {
@@ -970,6 +995,149 @@
         "emergency_quote": null,
         "roadside_quote": null,
         "licence": null
+      }
+    },
+    {
+      "n": "Camping World of Anniston",
+      "c": "Anniston, AL",
+      "p": "(888) 473-0038",
+      "u": "https://rv.campingworld.com/dealer/anniston-alabama/rv-service-repair",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Camping World of Anniston is the RV service and repair center at 2772 US Highway 78 E in Anniston, in Calhoun County. It handles annual maintenance, OEM and extended warranty work, RV repair, appliance repair for A/C, furnaces and refrigerators, multi-point diagnostics, winterization and de-winterization, performance installations and collision repair for motorhomes, travel trailers and fifth wheels. The location also runs an RV dealership and parts counter.",
+      "g": [
+        "shop",
+        "dealer service"
+      ],
+      "base": "Anniston",
+      "areas": [],
+      "region": "Northeast Alabama",
+      "spec": "RV service center (national chain, local shop)",
+      "evidence": {
+        "phone_quote": "(888) 473-0038 (8884730038)",
+        "type_quote": "At Camping World of Anniston, we provide comprehensive RV service and repair designed to keep your motorhome, travel trailer, or fifth wheel road-ready for every Alabama season.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Our service center is strategically positioned for easy access in the heart of Calhoun County.",
+          "We also serve many RVers heading toward the Talladega Superspeedway or traveling across the state who need reliable, professional maintenance to ensure their travels remain uninterrupted."
+        ]
+      }
+    },
+    {
+      "n": "Campers Unlimited",
+      "c": "Gadsden, AL",
+      "p": "256-344-2084",
+      "u": "https://www.campersunlimited.net/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Campers Unlimited is an RV dealer with a full-service maintenance center at 4315 Old Pump Station Rd in Gadsden and a second Alabama location at 2029 Oxford Exchange Blvd in Oxford. Its mechanics handle routine maintenance, oil changes, appliance installation and complex RV repairs for motorhomes and towables, and the parts department stocks RV parts and components. It serves Gadsden, Oxford and the surrounding northeast Alabama area.",
+      "g": [
+        "dealer service",
+        "shop"
+      ],
+      "base": "Gadsden",
+      "areas": [
+        "Oxford"
+      ],
+      "region": "Northeast Alabama",
+      "spec": "RV dealer with full service department",
+      "evidence": {
+        "phone_quote": "256-344-2084",
+        "type_quote": "Thankfully, we here at Campers Unlimited offer a full-service maintenance center to take care of all of your RV upkeep for you!",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "To set up an appointment with our amazing technicians here at Campers Unlimited, feel free to stop by any of our locations in Gadsden, Oxford and Chattanooga or fill out the short form on our website."
+        ]
+      }
+    },
+    {
+      "n": "Daugherty Auto & RV",
+      "c": "Cullman, AL",
+      "p": "256-590-1884",
+      "u": "https://daughertyauto.com/rv-repair/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Daugherty Auto & RV is a family-owned RV repair shop and dealer at 5158 US Highway 278 West in Cullman. Its certified, factory-trained technicians handle general RV repairs from brakes and electrical systems to leaks and appliance issues, preventative maintenance with inspections and oil changes, and specialized gooseneck and fifth-wheel hitch, brake and frame work. The business also sells RVs and propane and stocks parts.",
+      "g": [
+        "shop",
+        "dealer service"
+      ],
+      "base": "Cullman",
+      "areas": [],
+      "region": "North Central Alabama",
+      "spec": "RV repair shop and dealer",
+      "evidence": {
+        "phone_quote": "256-590-1884",
+        "type_quote": "We handle all types of RV repairs from brakes and electrical systems to leaks and appliance issues.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Get back on the road quickly with expert repairs, maintenance, and specialty RV work—right here in Cullman, AL.",
+          "As a Cullman-based business, we offer personalized service and support to our community and travelers alike."
+        ]
+      }
+    },
+    {
+      "n": "New Paths RV Tech",
+      "c": "Coker, AL",
+      "p": "205-792-7242",
+      "u": "https://newpathsrvtech.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "New Paths RV Tech is a mobile RV repair business based at 14326 Bone Camp Rd in Coker, outside Tuscaloosa, owned and operated by RVTAA Certified Technician Stuart Malone. It brings repair and maintenance directly to the customer's campsite, home or storage location, covering water heater replacement, plumbing repairs, electrical and converter diagnosis, awning replacement, solar installation and general RV systems work. It serves Tuscaloosa, Fayette and Pickens counties.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Coker",
+      "areas": [
+        "Tuscaloosa",
+        "Northport"
+      ],
+      "region": "Central Alabama",
+      "spec": "Mobile RV repair and maintenance",
+      "evidence": {
+        "phone_quote": "205-792-7242",
+        "type_quote": "Professional mobile RV repair services delivered right to your location.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Proudly serving Tuscaloosa, Fayette, and Pickens Counties with expert repairs and maintenance."
+        ]
+      }
+    },
+    {
+      "n": "Anytime Mobile RV Repair, LLC",
+      "c": "McCalla, AL",
+      "p": "(205) 421-0709",
+      "u": "https://www.anytimemobilerv.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Anytime Mobile RV Repair, LLC is a mobile RV repair business based in McCalla that serves West and Central Alabama and parts of East Mississippi, and will also take drop-offs by appointment. Its technicians handle roof sealant and full roof repairs, water heater replacements, leveling and landing jack work, propane and furnace repair, window replacement, slide-out repairs, remodeling and wall replacement, electrical rewiring, plumbing, flooring, A/C repair and replacement, awning repairs, weatherization and gas and diesel generator repair.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "McCalla",
+      "areas": [
+        "Birmingham",
+        "Tuscaloosa"
+      ],
+      "region": "Central Alabama",
+      "spec": "Mobile RV repair and remodeling",
+      "evidence": {
+        "phone_quote": "(205) 421-0709",
+        "type_quote": "We Come To You! Serving West And Central Alabama.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "We Come To You! Serving West And Central Alabama. Also Serving Parts Of East Mississippi."
+        ]
       }
     }
   ]
