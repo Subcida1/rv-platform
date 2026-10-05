@@ -25,8 +25,14 @@ step "axe-core WCAG checks on the rendered page" node scripts/check-a11y.mjs
 # Needs a served copy. The server is started here and killed by the EXACT PID we captured --
 # never by name. (A `pgrep -x chrome` cleanup once killed the renderers inside six live browser
 # tabs; the same rule applies to python.)
+#
+# serve-static.py, NOT `python3 -m http.server`. The plain server answers only exact file paths,
+# and this site uses EXTENSIONLESS urls -- Pages serves /guides/x from guides/x.html. With the
+# plain server every internal link 404'd here, and the crawl reported 234 broken links of 461
+# while the site was perfectly fine. Red from 2026-10-04 (the day URLs went extensionless) until
+# it was traced on 2026-10-05.
 PORT=8177
-python3 -m http.server "$PORT" --bind 127.0.0.1 >/dev/null 2>&1 &
+python3 scripts/serve-static.py "$PORT" >/dev/null 2>&1 &
 SERVER_PID=$!
 trap 'kill "$SERVER_PID" 2>/dev/null' EXIT
 for _ in $(seq 1 20); do

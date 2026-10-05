@@ -27,6 +27,20 @@ jobs:
 
       # flatpak is not available on the runner, so check-a11y.mjs is told to use the Chrome the
       # runner already has rather than the flatpak build it looks for locally.
+      #
+      # VALE IS NOT ON THE RUNNER and nothing installed it. ci-full.sh looks for it at
+      # ~/.local/bin/vale, its guard returns 1 when the binary is missing, and that guard was the
+      # ONLY thing failing this workflow -- week after week it reported "vale not installed" and
+      # the step name ("prose style and weasel words") sent the reader looking at the prose.
+      # Found 2026-10-05 after the weekly red was traced. Pinned to the version the local config
+      # was tuned against, not `latest`, so a style-package change cannot alter the findings.
+      - name: install vale
+        run: |
+          mkdir -p ~/.local/bin
+          curl -fsSL "https://github.com/errata-ai/vale/releases/download/v3.23.0/vale_3.23.0_Linux_64-bit.tar.gz" \
+            | tar xz -C ~/.local/bin vale
+          ~/.local/bin/vale --version
+
       - name: accessibility and links
         env:
           CHROME_BIN: /usr/bin/google-chrome
