@@ -30,7 +30,41 @@
     "Columbus": "central-ne",
     "Norfolk": "central-ne",
     "North Platte": "west-ne",
-    "Ogallala": "west-ne"
+    "Ogallala": "west-ne",
+    "Alma": "central-ne",
+    "Republican City": "central-ne",
+    "Holdrege": "central-ne",
+    "Minden": "central-ne",
+    "Hastings": "central-ne",
+    "Aurora": "central-ne",
+    "York": "central-ne",
+    "Central City": "central-ne",
+    "Geneva": "central-ne",
+    "Hebron": "central-ne",
+    "Lexington": "central-ne",
+    "Cozad": "central-ne",
+    "Gothenburg": "central-ne",
+    "Broken Bow": "central-ne",
+    "McCook": "central-ne",
+    "Ainsworth": "central-ne",
+    "Fremont": "omaha-ne",
+    "South Sioux City": "omaha-ne",
+    "Wayne": "omaha-ne",
+    "West Point": "omaha-ne",
+    "Schuyler": "omaha-ne",
+    "David City": "omaha-ne",
+    "Battle Creek": "omaha-ne",
+    "Stanton": "omaha-ne",
+    "Pierce": "omaha-ne",
+    "Plainview": "omaha-ne",
+    "O'Neill": "omaha-ne",
+    "Neligh": "omaha-ne",
+    "Papillion": "omaha-ne",
+    "Bellevue": "omaha-ne",
+    "La Vista": "omaha-ne",
+    "Council Bluffs": "omaha-ne",
+    "Gretna": "omaha-ne",
+    "Elkhorn": "omaha-ne"
   },
   "listings": [
     {
@@ -499,6 +533,159 @@
         "licence": null
       },
       "reg": "central-ne"
+    },
+    {
+      "n": "Mason RV",
+      "c": "Kearney and central Nebraska, NE",
+      "p": "(308) 234-3306",
+      "u": "https://www.masonrv.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Mason RV is a family-run RV dealership in Kearney, Nebraska, selling new and used travel trailers and fifth wheels. The site says sales, service and parts are all under one roof on 25th Street and that every unit gets a documented, system-by-system inspection. It advertises fair posted prices with no doc or prep fees.",
+      "g": [
+        "rv dealer",
+        "service center",
+        "parts"
+      ],
+      "base": "Kearney",
+      "areas": [],
+      "region": "Kearney, NE",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "(308) 234-3306",
+        "type_quote": "You'll deal with the same family before and after the sale — sales, service, and parts under one roof on 25th Street.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Fair posted prices on every RV. Kearney, Nebraska."
+        ]
+      }
+    },
+    {
+      "n": "Red 10 RV Sales",
+      "c": "Norfolk and northeast Nebraska, NE",
+      "p": "402-371-1818",
+      "u": "https://www.midwestcampers.com/red-ten",
+      "t": "both",
+      "e": false,
+      "r": true,
+      "d": "Red 10 RV Sales is a family-owned RV dealership in Norfolk, Nebraska, part of the Midwest Campers group. It runs one of the largest service facilities in the Norfolk area with certified RV and trailer technicians, handling electrical systems, chassis and tire repair, water systems, appliances, slide-outs and warranty work. It also offers on-site and mobile RV service and is located near O'Neill, Columbus, Sioux City and Yankton.",
+      "g": [
+        "rv dealer",
+        "service center",
+        "mobile tech",
+        "chassis"
+      ],
+      "base": "Norfolk",
+      "areas": [
+        "Columbus",
+        "Sioux City",
+        "O'Neill"
+      ],
+      "region": "Norfolk, NE",
+      "spec": "certified RV and trailer repair",
+      "evidence": {
+        "phone_quote": "402-371-1818",
+        "type_quote": "We take pride in operating two of the largest service facilities in the Yankton, SD and Norfolk, NE areas, featuring certified RV and trailer repair technicians with extensive education and industry experience.",
+        "emergency_quote": null,
+        "roadside_quote": "Winterizations, spring dewinterizations, inspection and repairs of the following: electrical systems, chassis/tire repair, water systems, appliance repair, slide out service, warranty repair, and more.",
+        "coverage_quotes": [
+          "Located in Norfolk, Nebraska",
+          "Red 10 RV is conveniently located near the areas of O'Neill, Columbus, Sioux City, and Yankton.",
+          "Do you need your RV serviced? We provide both on-site RV Service as well as a Mobile RV Service where we come to you!"
+        ]
+      }
+    },
+    {
+      "n": "Lakeside RV Service.LLC",
+      "c": "Alma and the Harlan County Lake area, NE",
+      "p": "308-920-2683",
+      "u": "https://lakesidervservice.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Lakeside RV Service.LLC is a locally owned family mobile RV repair business based in Alma, Nebraska. The site says it serves the Harlan County Lake region and surrounding areas and that its RVTAA-certified technicians diagnose and repair all systems including AC and refrigeration, exteriors and slide-outs, water heaters and furnaces, plumbing and electrical. It also performs warranty work.",
+      "g": [
+        "mobile tech",
+        "rv repair",
+        "warranty work"
+      ],
+      "base": "Alma",
+      "areas": [],
+      "region": "the Harlan County Lake region and the surrounding areas",
+      "spec": "mobile RV service",
+      "evidence": {
+        "phone_quote": "Call or text Now (+1308-920-2683)",
+        "type_quote": "We can diagnose and repair all systems -",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "We are a locally owned family business out of Alma, NE.",
+          "We wanted to bring a much needed mobile service to our community, the Harlan County Lake region and the surrounding areas."
+        ]
+      }
+    },
+    {
+      "n": "Bob Stahla Homes",
+      "c": "Grand Island and central Nebraska, NE",
+      "p": "(308)384-8514",
+      "u": "https://www.bobstahlahomes.net/rv-sales--service.html",
+      "t": "center",
+      "e": false,
+      "r": true,
+      "d": "Bob Stahla Homes is an RV sales and service business in Grand Island, Nebraska, with more than 40 years of RV repair experience. The site says it repairs all makes and models of RVs, covering heating and air conditioning, plumbing, appliances, exterior and roof work, collision and structural repairs, and hitch, axle, brake and wheel service. It also does winterization and de-winterization and offers free repair estimates.",
+      "g": [
+        "rv service center",
+        "rv dealer",
+        "brakes",
+        "collision"
+      ],
+      "base": "Grand Island",
+      "areas": [],
+      "region": "Grand Island, NE",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "B: (308)384-8514",
+        "type_quote": "With over 40 years of experience, we specialize in RV repair and maintenance, offering a wide range of services and products to keep your investment in top shape.",
+        "emergency_quote": null,
+        "roadside_quote": "Hitch and Trailer Services: Installation and repair of hitches, along with axle, brake, and wheel inspections.",
+        "coverage_quotes": [
+          "Bob Stahla Homes 4030 E Us Hwy 30 Grand Island, NE 68801"
+        ]
+      }
+    },
+    {
+      "n": "Trusty RV Repair",
+      "c": "Lincoln and Omaha area, NE",
+      "p": "402-929-4422",
+      "u": "http://trustyrvrepair.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Trusty RV Repair is a mobile RV repair business serving Lincoln, Omaha and surrounding areas within a 60-mile radius. It is operated by Dave, a certified NRTVA RV repair technician, and provides repair services plus winterizing and spring de-winterizing and readiness inspections. It travels to the customer for RV electrical, plumbing and appliance work.",
+      "g": [
+        "mobile tech",
+        "rv repair",
+        "maintenance"
+      ],
+      "base": null,
+      "areas": [
+        "Lincoln",
+        "Omaha"
+      ],
+      "region": "Lincoln, Omaha, and surrounding areas within a 60-mile radius",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "402-929-4422",
+        "type_quote": "We provide expert repair services for those camp inconveniences.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Serving Lincoln, Omaha, and surrounding areas within a 60-mile radius"
+        ]
+      },
+      "reg": "lincoln-ne"
     }
   ]
 }

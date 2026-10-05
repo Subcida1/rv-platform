@@ -104,5 +104,44 @@ window.RV_LISTINGS_NE = [
  {  "n": "24 HR RV",  "c": "Central-eastern Nebraska",  "p": "888-855-2465",  "u": "https://24hrrv.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "24 HR RV is a mobile RV repair service covering central-eastern Nebraska and surrounding areas. The site says its goal is to provide convenient and reliable repair services at the customer's doorstep, and that its service trucks carry a fully stocked parts supply so most jobs can be fixed on the spot. It is authorized to perform repairs and services for insurance companies and warranty companies.",  "g": [
    "mobile tech"
   ],  "base": null,  "areas": [],  "region": "central-eastern Nebraska",  "spec": null,  "reg": "central-ne"
+ },
+ {  "n": "Mason RV",  "c": "Kearney and central Nebraska, NE",  "p": "(308) 234-3306",  "u": "https://www.masonrv.com/",  "t": "center",  "e": false,  "r": false,  "d": "Mason RV is a family-run RV dealership in Kearney, Nebraska, selling new and used travel trailers and fifth wheels. The site says sales, service and parts are all under one roof on 25th Street and that every unit gets a documented, system-by-system inspection. It advertises fair posted prices with no doc or prep fees.",  "g": [
+   "rv dealer",
+   "service center",
+   "parts"
+  ],  "base": "kearney",  "areas": [],  "region": "Kearney, NE",  "spec": null,  "reg": "central-ne"
+ },
+ {  "n": "Red 10 RV Sales",  "c": "Norfolk and northeast Nebraska, NE",  "p": "402-371-1818",  "u": "https://www.midwestcampers.com/red-ten",  "t": "both",  "e": false,  "r": true,  "d": "Red 10 RV Sales is a family-owned RV dealership in Norfolk, Nebraska, part of the Midwest Campers group. It runs one of the largest service facilities in the Norfolk area with certified RV and trailer technicians, handling electrical systems, chassis and tire repair, water systems, appliances, slide-outs and warranty work. It also offers on-site and mobile RV service and is located near O'Neill, Columbus, Sioux City and Yankton.",  "g": [
+   "rv dealer",
+   "service center",
+   "mobile tech",
+   "chassis"
+  ],  "base": "norfolk",  "areas": [
+   "columbus",
+   "sioux city",
+   "oneill"
+  ],  "region": "Norfolk, NE",  "spec": "certified RV and trailer repair",  "reg": "central-ne"
+ },
+ {  "n": "Lakeside RV Service.LLC",  "c": "Alma and the Harlan County Lake area, NE",  "p": "308-920-2683",  "u": "https://lakesidervservice.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Lakeside RV Service.LLC is a locally owned family mobile RV repair business based in Alma, Nebraska. The site says it serves the Harlan County Lake region and surrounding areas and that its RVTAA-certified technicians diagnose and repair all systems including AC and refrigeration, exteriors and slide-outs, water heaters and furnaces, plumbing and electrical. It also performs warranty work.",  "g": [
+   "mobile tech",
+   "rv repair",
+   "warranty work"
+  ],  "base": "alma",  "areas": [],  "region": "the Harlan County Lake region and the surrounding areas",  "spec": "mobile RV service",  "reg": "central-ne"
+ },
+ {  "n": "Bob Stahla Homes",  "c": "Grand Island and central Nebraska, NE",  "p": "(308)384-8514",  "u": "https://www.bobstahlahomes.net/rv-sales--service.html",  "t": "center",  "e": false,  "r": true,  "d": "Bob Stahla Homes is an RV sales and service business in Grand Island, Nebraska, with more than 40 years of RV repair experience. The site says it repairs all makes and models of RVs, covering heating and air conditioning, plumbing, appliances, exterior and roof work, collision and structural repairs, and hitch, axle, brake and wheel service. It also does winterization and de-winterization and offers free repair estimates.",  "g": [
+   "rv service center",
+   "rv dealer",
+   "brakes",
+   "collision"
+  ],  "base": "grand island",  "areas": [],  "region": "Grand Island, NE",  "spec": null,  "reg": "central-ne"
+ },
+ {  "n": "Trusty RV Repair",  "c": "Lincoln and Omaha area, NE",  "p": "402-929-4422",  "u": "http://trustyrvrepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Trusty RV Repair is a mobile RV repair business serving Lincoln, Omaha and surrounding areas within a 60-mile radius. It is operated by Dave, a certified NRTVA RV repair technician, and provides repair services plus winterizing and spring de-winterizing and readiness inspections. It travels to the customer for RV electrical, plumbing and appliance work.",  "g": [
+   "mobile tech",
+   "rv repair",
+   "maintenance"
+  ],  "base": null,  "areas": [
+   "lincoln",
+   "omaha"
+  ],  "region": "Lincoln, Omaha, and surrounding areas within a 60-mile radius",  "spec": null,  "reg": "lincoln-ne"
  }
 ];

@@ -236,5 +236,205 @@ window.RV_LISTINGS_AZ = [
    "forest lakes",
    "happy jack"
   ],  "region": "Northern Arizona and the I-40 corridor",  "reg": "northern-az"
+ },
+ {  "n": "RV Wise Mobile RV Services",  "c": "Sun City, Peoria and the West Valley, AZ",  "p": "623-301-3423",  "u": "https://www.rvwisemobileservices.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "RV Wise Mobile RV Services is a mobile RV and camper repair business based in Sun City, Arizona, owned by Master Certified RV Technician and solar installer Melvin Haynes. The site says it comes to the customer at their home, RV resort, driveway or storage lot so the coach never has to be moved, and it repairs air conditioners, Aqua-Hot systems, water heaters, refrigerators, plumbing, slide-outs, leveling systems and roof leaks. It also offers pre-trip, seasonal and pre-purchase inspections.",  "g": [
+   "mobile tech",
+   "rv repair",
+   "inspections"
+  ],  "base": "sun city",  "areas": [
+   "surprise",
+   "peoria"
+  ],  "region": "Sun City, AZ",  "spec": "mobile RV service",  "reg": "phoenix-valley"
+ },
+ {  "n": "Streamline Mobile RV Repair",  "c": "the East and West Valley, AZ",  "p": "(480) 424-5385",  "u": "https://www.streamlinemobilervrepair.com/",  "t": "mobile",  "e": true,  "r": false,  "d": "Streamline Mobile RV Repair is a mobile RV repair business in the Phoenix area that brings service and repairs to wherever the RV is parked. The site says it handles RV maintenance, appliance repair and system repairs, covering electrical diagnostics and rewiring, water leaks, fresh/gray/black tank repair, leveling jacks, roof resealing, AC, furnace and water heater work. It lists emergency RV leveling assistance among its services.",  "g": [
+   "mobile tech",
+   "rv repair",
+   "electrical",
+   "appliances"
+  ],  "base": null,  "areas": [],  "region": "the East & West Valley",  "spec": "mobile RV electrical & appliance repair",  "reg": "phoenix-valley"
+ },
+ {  "n": "Top Notch RV",  "c": "the greater Phoenix metro area, AZ",  "p": "602-831-7475",  "u": "https://topnotchrvrepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Top Notch RV Repairs & Inspections is a mobile RV repair business serving the Phoenix metro area. The site lists technicians with RTVI, Aqua Hot, Spartan Chassis and Winegard certifications plus factory training from Winnebago, Fleetwood, Tiffin, Thor, Jayco/Entegra and others, and says it works on everything from travel trailers to Class A diesel motorhomes. It gives a straight-forward assessment and an accurate estimate before any work begins, with a service call/trip charge starting at $100.",  "g": [
+   "mobile tech",
+   "rv repair",
+   "inspections"
+  ],  "base": null,  "areas": [],  "region": "the Great Phoenix Metro Area",  "spec": "mobile RV repairs & inspections",  "reg": "phoenix-valley"
+ },
+ {  "n": "Auto Boss RV",  "c": "Mesa, Gilbert and Chandler, AZ",  "p": "(480) 986-1049",  "u": "https://autobossrv.com/rv-service-mesa-az/",  "t": "center",  "e": false,  "r": true,  "d": "Auto Boss RV is a family-owned RV repair shop on East Main Street in Mesa, Arizona, in business since 1996. The site says it services coach, chassis and comfort systems and specializes in flat tow installations, solar and lithium, roof A/C, Onan generator repair, suspension upgrades and leveling jacks, and it also performs brake service, wheel bearings, pre-trip safety inspections and fluid services. It is shop-based for full diagnostics and tooling.",  "g": [
+   "rv service center",
+   "chassis",
+   "generators",
+   "solar"
+  ],  "base": "mesa",  "areas": [
+   "gilbert",
+   "chandler"
+  ],  "region": "Mesa, AZ",  "spec": "RV service & repair",  "reg": "phoenix-valley"
+ },
+ {  "n": "Autobird Mobile RV Repair",  "c": "Gilbert and the greater Phoenix metro area, AZ",  "p": "720-432-5588",  "u": "https://goautobirdrv.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Autobird Mobile RV Repair is a veteran-owned, family-operated mobile RV repair service based in Gilbert, Arizona. The site says its certified and insured technicians diagnose and repair RVs on site and handle repair, installation, routine service, winterization, warranty repair and recall and service bulletins. It lists Mesa, Gilbert, Apache Junction, Gold Canyon, Chandler, Tempe, Casa Grande, Arizona City and the greater Phoenix metro area as its service area.",  "g": [
+   "mobile tech",
+   "rv repair",
+   "warranty work"
+  ],  "base": "gilbert",  "areas": [
+   "mesa",
+   "apache junction",
+   "chandler",
+   "tempe"
+  ],  "region": "the greater Phoenix Metro area",  "spec": "mobile RV repair",  "reg": "phoenix-valley"
+ },
+ {  "n": "Gene's RV",  "c": "Mesa and the Valley of the Sun, AZ",  "p": "480-833-7210",  "u": "https://www.genesrv.com/workstuf/",  "t": "both",  "e": false,  "r": true,  "d": "Gene's RV is a full-service RV repair shop, body shop and parts store at 9624 E. Main St. in Mesa, Arizona. The site says its Master Certified technicians handle regular, warranty, extended warranty and insurance repairs and provide collision repair, paint and body work and limited engine repairs at the shop. It also lists RV air conditioning, furnaces, refrigerators, LP systems, plumbing, electrical, lithium conversions, solar, slide-outs, leveling jacks and generators.",  "g": [
+   "rv service center",
+   "body shop",
+   "collision",
+   "mobile tech"
+  ],  "base": "mesa",  "areas": [],  "region": "the valley",  "spec": "RV repair & body shop",  "reg": "phoenix-valley"
+ },
+ {  "n": "Cassone's RV",  "c": "Mesa and the Phoenix metro, AZ",  "p": "480-357-5200",  "u": "https://cassonesrv.com/service/",  "t": "center",  "e": false,  "r": true,  "d": "Cassone's RV is a full-service RV dealership and repair center in Mesa, Arizona, with a service department for diesel motorhomes and towables. The site says its certified technicians handle roof repair and replacement, slide-out repairs, solar installations, HVAC, plumbing, electrical, leveling systems, generator maintenance and brakes, and that warranty work and insurance claims can be handled. It also does collision and bodywork.",  "g": [
+   "rv dealer",
+   "service center",
+   "collision"
+  ],  "base": "mesa",  "areas": [],  "region": "Mesa, AZ",  "spec": "RV dealer service center",  "reg": "phoenix-valley"
+ },
+ {  "n": "World Wide RV",  "c": "Mesa and the East Valley, AZ",  "p": "480-418-8400",  "u": "https://www.worldwiderv.com/rv-service",  "t": "center",  "e": false,  "r": true,  "d": "World Wide RV is an RV dealership in Mesa, Arizona, whose service and repair facility is staffed with RVDA/RVIA Certified and Master Certified technicians. The site says it handles rubber roof repair and replacement, trailer axle brakes, repairs and alignments, electrical and appliance repairs, bodywork and custom installations, and it performs motorhome chassis service including dash A/C, belts and hoses, jack systems, air bags and steering stabilizers. It is a factory-authorized warranty facility for Jayco, Starcraft and Onan generators.",  "g": [
+   "rv dealer",
+   "service center",
+   "chassis"
+  ],  "base": "mesa",  "areas": [],  "region": "Mesa, AZ",  "spec": "RV dealer service center",  "reg": "phoenix-valley"
+ },
+ {  "n": "RV Renovators",  "c": "Mesa and the Phoenix metro, AZ",  "p": "480-962-6789",  "u": "https://rvrenovators.com/",  "t": "center",  "e": false,  "r": true,  "d": "RV Renovators is a dedicated RV collision, body paint and repair facility on a 3-acre campus at 2145 E Main St in Mesa, Arizona, in business since 1978. The site says its technicians handle fiberglass reconstruction, metal fabrication, frame straightening, body panel replacement and structural restoration, plus roof and awning repair, water damage restoration and generator service. It works directly with insurance companies as a preferred RV collision repair facility.",  "g": [
+   "collision",
+   "body shop",
+   "rv repair"
+  ],  "base": "mesa",  "areas": [],  "region": "Mesa, AZ",  "spec": "RV collision & body",  "reg": "phoenix-valley"
+ },
+ {  "n": "Unlimited Collision & RV",  "c": "Glendale, Peoria and the Phoenix Valley, AZ",  "p": "(623) 979-7565",  "u": "https://www.unlimitedcollisionaz.com/rv-collision-repair/",  "t": "center",  "e": false,  "r": true,  "d": "Unlimited Collision & RV is an RV collision repair and body shop at 6030 N Litchfield Rd in Glendale, Arizona, repairing RV collision damage since 2012. The site says it does full RV collision damage, structural and siding repair, fiberglass and gel-coat repair, roof and slide-out repair, custom paint and interiors, and DOT-certified RV air conditioning repair. It also sets up complimentary towing arrangements and works directly with insurance companies.",  "g": [
+   "collision",
+   "body shop",
+   "rv repair"
+  ],  "base": "glendale",  "areas": [
+   "peoria",
+   "scottsdale"
+  ],  "region": "Glendale, AZ",  "spec": "RV collision & body",  "reg": "phoenix-valley"
+ },
+ {  "n": "All Pro Truck Body Shop",  "c": "Glendale and the Phoenix Valley, AZ",  "p": "602.544.4444",  "u": "https://allprotruck.com/truck-body-work/rv-repair/",  "t": "center",  "e": false,  "r": false,  "d": "All Pro Truck Body Shop is an auto body and paint shop at 6502 W Myrtle Ave in Glendale, Arizona, with a dedicated RV division. The site says it is a one-stop RV collision, RV body shop and RV paint shop handling insurance claim repair, fiberglass repair, complete RV paint jobs, custom coach painting, decal removal and replacement and vehicle wraps. It also does aluminum repair and welding, cap repair, siding replacement and sidewall delamination repair.",  "g": [
+   "collision",
+   "body shop",
+   "paint",
+   "rv repair"
+  ],  "base": "glendale",  "areas": [],  "region": "Glendale, AZ",  "spec": "RV collision & paint",  "reg": "phoenix-valley"
+ },
+ {  "n": "JC Mobile RV Service",  "c": "Peoria and the Phoenix metro, AZ",  "p": "602-284-8492",  "u": "https://www.jcmobilervservice.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "JC Mobile RV Service is a mobile RV repair business based in Peoria, Arizona, that comes to the customer in a 16-foot box truck stocked with parts. The site says it specializes in electrical, plumbing and appliance repairs plus routine maintenance and upgrades, and that most calls are fixed in one trip. It serves Peoria, Anthem, Goodyear, Glendale, Surprise, Scottsdale, Cave Creek, Wittman and Wickenburg.",  "g": [
+   "mobile tech",
+   "rv repair",
+   "warranty work"
+  ],  "base": "peoria",  "areas": [
+   "anthem",
+   "goodyear",
+   "glendale",
+   "surprise",
+   "scottsdale",
+   "cave creek"
+  ],  "region": "the Phoenix metro area",  "spec": "mobile RV repair",  "reg": "phoenix-valley"
+ },
+ {  "n": "Holt Brothers Certified RV Technicians",  "c": "Glendale, Surprise and the Phoenix metro, AZ",  "p": "623-738-9771",  "u": "https://www.azrvtechs.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Holt Brothers Certified RV Technicians is a family-owned, RVTAA-certified mobile RV repair business serving the Phoenix metro area. The site says the technicians drive to the customer and provide certified repair and maintenance including RV AC, electrical, furnace, generator, plumbing, propane system and rooftop replacement/sealing work. It advertises service to cities including Goodyear, Surprise, Buckeye, Avondale and Glendale.",  "g": [
+   "mobile tech",
+   "rv repair",
+   "certified"
+  ],  "base": "glendale",  "areas": [
+   "phoenix",
+   "surprise",
+   "goodyear",
+   "buckeye",
+   "avondale"
+  ],  "region": "Arizona",  "spec": "mobile certified RV repair",  "reg": "phoenix-valley"
+ },
+ {  "n": "RV Mobile Tek LLC",  "c": "Surprise and the West Valley, AZ",  "p": "(623) 244-2232",  "u": "https://www.rvmobiletek.com/",  "t": "mobile",  "e": true,  "r": false,  "d": "RV Mobile Tek LLC is a locally owned mobile RV repair business based in Surprise, Arizona, serving a 35-mile radius since 1993. The site says it is fully mobile and comes to the customer at home, a campground or roadside, handling electrical, plumbing, appliance, roof leak, HVAC and generator repairs plus maintenance. It advertises 24/7 emergency service including weekends and holidays.",  "g": [
+   "mobile tech",
+   "rv repair",
+   "emergency"
+  ],  "base": "surprise",  "areas": [],  "region": "Surprise, AZ",  "spec": "mobile RV repair",  "reg": "phoenix-valley"
+ },
+ {  "n": "Happy Camper RV Repair",  "c": "Buckeye and the West Valley, AZ",  "p": "(619) 550-9293",  "u": "https://happycamperrvaz.com/",  "t": "both",  "e": false,  "r": false,  "d": "Happy Camper RV Repair is an RV service and repair business at 22342 W Hilton Avenue in Buckeye, Arizona, run by an NRVTA/RVTAA Certified Advanced RV Technician who is a local Buckeye resident. The site says it works at the customer's place or its own and handles air conditioning, refrigerator, water heater/furnace and slide-out repair, electrical and plumbing repair/installation, trailer wiring and battery/converter/inverter work. It also does roof repair/maintenance and tank cleaning and sanitization.",  "g": [
+   "rv repair",
+   "mobile tech",
+   "tanks"
+  ],  "base": "buckeye",  "areas": [],  "region": "Buckeye, AZ",  "spec": "mobile RV repair",  "reg": "phoenix-valley"
+ },
+ {  "n": "Desert RV Parts & Service LLC",  "c": "Apache Junction and the East Valley, AZ",  "p": "(480) 986-5140",  "u": "https://www.desertrvaz.com/recreational-vehicle-services",  "t": "both",  "e": false,  "r": true,  "d": "Desert RV Parts & Service LLC is an RVIA and RVAA-certified RV parts and service business at 11325 E Apache Trail in Apache Junction, Arizona, in business since 1986. The site says it offers both mobile and in-house service with a 90-day labor guarantee, covering travel trailer and fifth-wheel brakes and suspensions, refrigerators, plumbing, generators, appliances, 12V/120V electrical, heating, roof air conditioning and holding tanks. It works with all major extended warranty companies and also opened a Mesa location.",  "g": [
+   "rv service center",
+   "mobile tech",
+   "brakes",
+   "parts"
+  ],  "base": "apache junction",  "areas": [
+   "mesa"
+  ],  "region": "Apache Junction, AZ",  "spec": "RV parts & service",  "reg": "phoenix-valley"
+ },
+ {  "n": "ASAP Mobile RV Service LLC",  "c": "Apache Junction and the East Valley, AZ",  "p": "(480) 703-6571",  "u": "https://asapmobilervservice.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "ASAP Mobile RV Service LLC is a mobile RV repair business serving Apache Junction and the East Valley since 2008. The site says its fully mobile technicians provide on-site service and handle heating and air conditioning, electrical, plumbing, appliances, LP systems, generators, inverters, storage preparation, start-up service and winterizing. It also works with extended manufacturer's warranties and aftermarket warranties.",  "g": [
+   "mobile tech",
+   "rv repair",
+   "warranty work"
+  ],  "base": "apache junction",  "areas": [],  "region": "the East Valley",  "spec": "mobile RV repair",  "reg": "phoenix-valley"
+ },
+ {  "n": "Cruz RV",  "c": "Apache Junction and the East Valley, AZ",  "p": "(480) 295-5612",  "u": "https://cruzrv.com/",  "t": "both",  "e": false,  "r": false,  "d": "Cruz RV is an RV repair and maintenance business at 11503 E. 6th Avenue in Apache Junction, Arizona, that positions itself as a cost-effective alternative to traditional RV dealerships. The site says its technicians provide on-site repair for a wide range of vehicles including Class A, B and C motorhomes, fifth wheels, travel trailers, toy haulers, pop-up campers, van conversions, horse trailers and cargo and flatbed trailers. It comes to the customer's location to diagnose and repair.",  "g": [
+   "mobile tech",
+   "rv repair",
+   "specialty vehicles"
+  ],  "base": "apache junction",  "areas": [],  "region": "Apache Junction, AZ",  "spec": "mobile RV repair",  "reg": "phoenix-valley"
+ },
+ {  "n": "Five Star RV & Trailer Services LLC",  "c": "Phoenix and the Valley of the Sun, AZ",  "p": "(602) 596-2399",  "u": "https://fivestarrvservices.com/",  "t": "mobile",  "e": false,  "r": true,  "d": "Five Star RV & Trailer Services LLC is a mobile RV and trailer repair business serving the greater Phoenix area with fully equipped mobile units. The site says its RVIA-certified technicians handle diagnostics, roof leak repair and EPDM/TPO roof replacement, electrical systems, appliance and plumbing work, brake and hub service, axle and bearing service and generator service. It advertises same-day scheduling and a 100% satisfaction guarantee.",  "g": [
+   "mobile tech",
+   "rv repair",
+   "brakes",
+   "trailer repair"
+  ],  "base": "phoenix",  "areas": [
+   "scottsdale",
+   "mesa",
+   "chandler",
+   "gilbert",
+   "glendale",
+   "tempe",
+   "peoria",
+   "surprise",
+   "avondale"
+  ],  "region": "the Valley of the Sun",  "spec": "mobile RV & trailer repair",  "reg": "phoenix-valley"
+ },
+ {  "n": "Champs Family Automotive",  "c": "Surprise and Goodyear, AZ",  "p": "(623) 376-6791",  "u": "https://champsfamilyautomotive.com/rv-trailer-repair/",  "t": "center",  "e": false,  "r": true,  "d": "Champs Family Automotive is a family-owned auto and RV repair shop with locations at 17141 N Dysart Road in Surprise and 14030 W Van Buren St in Goodyear, Arizona. The site says it is a full-service RV and motorhome repair and maintenance shop that handles oil and filter changes, brake inspection and repair, transmission service and rebuilds, generator maintenance, RV air conditioner inspection and repair, batteries and fuel systems. For fifth wheels it also services generators, air conditioners, bearings, brakes and suspension, fuel stations, hydraulic lines and pumps and lighting.",  "g": [
+   "auto repair",
+   "rv repair",
+   "brakes",
+   "diesel"
+  ],  "base": "surprise",  "areas": [
+   "goodyear"
+  ],  "region": "Surprise & Goodyear, AZ",  "spec": "auto & RV repair",  "reg": "phoenix-valley"
+ },
+ {  "n": "Straight Line RV & Boat",  "c": "Buckeye and the West Valley, AZ",  "p": "(541) 505-9732",  "u": "https://www.straightline-rv.com/",  "t": "center",  "e": false,  "r": false,  "d": "Straight Line RV & Boat is an RV and boat body shop with an Arizona location at 431 N. 1st St. in Buckeye and headquarters in Springfield, Oregon. The site says it does fiberglass, gel coat and aluminum repair, roof replacements, full wall replacements, delamination repair, awning and structural repairs and paint matching for motorhomes, travel trailers and toy haulers. It has over 30 years of experience and helps customers through the insurance process.",  "g": [
+   "collision",
+   "body shop",
+   "fiberglass",
+   "rv repair"
+  ],  "base": "buckeye",  "areas": [],  "region": "Buckeye, AZ",  "spec": "RV collision & body",  "reg": "phoenix-valley"
+ },
+ {  "n": "Blue Compass RV Mesa",  "c": "Mesa and the East Valley, AZ",  "p": "(480) 894-1267",  "u": "https://www.bluecompassrv.com/locations/arizona/mesa/service",  "t": "center",  "e": false,  "r": true,  "d": "Blue Compass RV Mesa is the service center of the Blue Compass RV dealership at 1301 W Broadway Rd in Mesa, Arizona. The site says its certified technicians handle cooling system maintenance, roof reseals, full electrical diagnostics, generator work and slide-out repairs, and that every RV gets a free multi-point inspection. It is open Monday through Saturday with same-day Fast Lane service on select jobs and also offers chassis service, brakes, engine and transmission diagnostics, plumbing, HVAC and collision/body work.",  "g": [
+   "rv dealer",
+   "service center",
+   "chassis",
+   "collision"
+  ],  "base": "mesa",  "areas": [
+   "phoenix",
+   "scottsdale",
+   "tempe",
+   "chandler",
+   "gilbert"
+  ],  "region": "Mesa, AZ",  "spec": "RV dealer service center",  "reg": "phoenix-valley"
+ },
+ {  "n": "Blue Compass RV Avondale",  "c": "Avondale and the West Valley, AZ",  "p": "(602) 258-3663",  "u": "https://www.bluecompassrv.com/locations/arizona/avondale/service",  "t": "center",  "e": false,  "r": true,  "d": "Blue Compass RV Avondale is the service center of the Blue Compass RV dealership at 10501 Papago Fwy in Avondale, Arizona. The site says its certified technicians handle cooling system maintenance, roof reseals, full electrical diagnostics, generator work and slide-out repairs, and that every RV gets a free multi-point inspection. It is open Monday through Saturday with same-day Fast Lane service on select jobs and also offers chassis service, brakes, engine and transmission diagnostics, plumbing, HVAC and collision/body work.",  "g": [
+   "rv dealer",
+   "service center",
+   "chassis",
+   "collision"
+  ],  "base": "avondale",  "areas": [
+   "phoenix",
+   "goodyear",
+   "litchfield park",
+   "tolleson"
+  ],  "region": "Avondale, AZ",  "spec": "RV dealer service center",  "reg": "phoenix-valley"
  }
 ];

@@ -76,5 +76,69 @@
       "cost": "one research pass, for a null result",
       "what_was_found": "No DC-based business repairs RVs. DC Mobile Truck Repair is a semi-truck service that mentions RV only in one boilerplate line; Mobile Mechanic Washington DC describes cars, trucks and vans and never an RV; RV Associates resolves to a business-consulting site; RV General Auto Repair and RV Standifer have no website to check. Every other candidate was either a truck or auto shop, or a Maryland or Virginia business that merely serves DC and belongs to its own state's file (Avenue Mobile Services, Road Ready RV & Trailer Services, Eyre HD, Fixed It! and others). The directory lists repair businesses a reader can take a coach to, so DC carries no page rather than an empty one. Revisit if a DC-based RV repair business appears."
     }
+  ],
+  "illinois": [
+    {
+      "area": "Champaign, Urbana and the east-central corridor, IL",
+      "searched": "2026-10-04",
+      "towns": [
+        "Champaign",
+        "Urbana",
+        "Rantoul",
+        "Savoy",
+        "Mahomet",
+        "Tolono",
+        "Danville",
+        "Paxton",
+        "Gibson City",
+        "Hoopeston",
+        "Watseka"
+      ],
+      "qualified_found": 0,
+      "cost": "one research pass, for a null result",
+      "why_empty": "no web presence, so unverifiable",
+      "what_was_found": "Real RV businesses exist here and cannot be listed, because none has its own website: Greg's Truck Tire & Auto (Champaign), R and S RV (Mahomet), Down To Earth Mobile RV (Mahomet). The 'mobile RV repair in Champaign' pages that search returns are lead-gen and dispatch networks (Road Rescue Network, Interstate Fleet Services, RV Help, stevethemechanic), which the directory excludes. Ty's ruling, 2026-10-04: a business with no web presence cannot be verified, so it is excluded and can add itself through the claim form. This area is therefore a gap BY RULE, not an unfinished search, and should not be re-researched."
+    }
+  ],
+  "nebraska": [
+    {
+      "area": "Nebraska, statewide, outside Omaha and Lincoln",
+      "searched": "2026-10-04",
+      "towns": [
+        "Holdrege",
+        "Minden",
+        "Aurora",
+        "York",
+        "Central City",
+        "Geneva",
+        "Hebron",
+        "Red Cloud",
+        "Lexington",
+        "Cozad",
+        "Gothenburg",
+        "Broken Bow",
+        "Schuyler",
+        "David City",
+        "West Point",
+        "Wakefield",
+        "Wayne",
+        "Pierce",
+        "Plainview",
+        "O'Neill",
+        "Neligh",
+        "Battle Creek",
+        "Stanton",
+        "South Sioux City",
+        "Scottsbluff",
+        "Gering",
+        "Alliance",
+        "Sidney",
+        "Chadron"
+      ],
+      "qualified_found": 0,
+      "cost": "one thorough research pass, for a null result",
+      "why_empty": "no web presence, so unverifiable",
+      "what_was_found": "Real RV businesses exist across Nebraska and cannot be listed, because none has a working own website: Fremont RV Center (South Sioux City, domain dead), Connely's Camper Corner (Broken Bow), Twisted Nick's Camper Service (Norfolk), Countryside RV Repair (Minden), Al's Quality RV Services (Grand Island), Beck RV Services (Greenwood), Republican Valley RV Service (McCook), Merrill's Mobile Home-RV Repair (Ainsworth), Grandpa Doug's Mobile RV Repair (Lincoln), Butch's RV (Gering, dead domain), RV's 4U (Scottsbluff), Maddox Motor Co (Sidney), R & L RV Center (Columbus), Darrel's Camper and Trailers (O'Neill), Apache Camper Center (Grand Island), Blankenship RV Repair (Lincoln), Seberger Repairs (Lexington). Ty's ruling, 2026-10-04: a business with no web presence cannot be verified, so it is excluded and can add itself through the claim form. This area is a gap BY RULE, not an unfinished search, and should not be re-researched by web search."
+    }
   ]
 }
