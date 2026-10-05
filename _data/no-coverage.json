@@ -140,5 +140,56 @@
       "why_empty": "no web presence, so unverifiable",
       "what_was_found": "Real RV businesses exist across Nebraska and cannot be listed, because none has a working own website: Fremont RV Center (South Sioux City, domain dead), Connely's Camper Corner (Broken Bow), Twisted Nick's Camper Service (Norfolk), Countryside RV Repair (Minden), Al's Quality RV Services (Grand Island), Beck RV Services (Greenwood), Republican Valley RV Service (McCook), Merrill's Mobile Home-RV Repair (Ainsworth), Grandpa Doug's Mobile RV Repair (Lincoln), Butch's RV (Gering, dead domain), RV's 4U (Scottsbluff), Maddox Motor Co (Sidney), R & L RV Center (Columbus), Darrel's Camper and Trailers (O'Neill), Apache Camper Center (Grand Island), Blankenship RV Repair (Lincoln), Seberger Repairs (Lexington). Ty's ruling, 2026-10-04: a business with no web presence cannot be verified, so it is excluded and can add itself through the claim form. This area is a gap BY RULE, not an unfinished search, and should not be re-researched by web search."
     }
+  ],
+  "hawaii": [
+    {
+      "area": "Hawaii, statewide (Oahu, Maui, the Big Island, Kauai, Molokai, Lanai)",
+      "searched": "2026-10-05",
+      "towns": [
+        "Honolulu",
+        "Kailua",
+        "Kaneohe",
+        "Pearl City",
+        "Aiea",
+        "Waipahu",
+        "Mililani",
+        "Kapolei",
+        "Ewa Beach",
+        "Waianae",
+        "Wahiawa",
+        "Haleiwa",
+        "Kahului",
+        "Wailuku",
+        "Kihei",
+        "Lahaina",
+        "Paia",
+        "Makawao",
+        "Pukalani",
+        "Haiku",
+        "Hana",
+        "Hilo",
+        "Kailua-Kona",
+        "Waimea",
+        "Waikoloa",
+        "Captain Cook",
+        "Keaau",
+        "Pahoa",
+        "Ocean View",
+        "Honokaa",
+        "Lihue",
+        "Kapaa",
+        "Hanalei",
+        "Princeville",
+        "Poipu",
+        "Koloa",
+        "Eleele",
+        "Kaunakakai",
+        "Lanai City"
+      ],
+      "qualified_found": 0,
+      "cost": "one thorough research pass across all six islands, for a null result",
+      "why_empty": "no qualifying business with its own website",
+      "what_was_found": "Hawaii has almost no dedicated RV repair. The entire search space is national mobile-dispatch networks (Road Rescue Network, Interstate Fleet Services, A1 RV Repair, Coast to Coast) and directory pages, all excluded by rule. The near-misses, each failing a stated rule rather than being absent: R V Tech Automotive (Pearl City) and Recreational Vehicles of HI (Kailua-Kona) are real RV-sounding businesses with NO OWN WEBSITE; Mobile Mechanic Honolulu's advertised domain does not resolve; Hawaii Surf Campers (Wahiawa) repairs campervans but publishes no phone; Trailers By Sam (Kaneohe) is marine trailer; 808 Diesel Doc is diesel-led; Island RV is dealer-only; Fibrenew Hawaii is interior restoration only; Sunmasters Hawaii is window tinting, mis-tagged as RV service by a directory. Ty's ruling, 2026-10-04: a business with no web presence cannot be verified, so it is excluded and can add itself through the claim form. **This state is a gap BY RULE, not an unfinished search.** The one thing that would change it is a phone-vetting pass, which is a human task, not a search."
+    }
   ]
 }

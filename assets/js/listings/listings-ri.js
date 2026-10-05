@@ -10,5 +10,54 @@ window.RV_LISTINGS_RI = [
    "mobile tech",
    "emergency"
   ],  "base": "portsmouth",  "areas": [],  "region": null,  "spec": null,  "reg": "rhode-island-ri"
+ },
+ {  "n": "Arlington RV Supercenter, Inc.",  "c": "East Greenwich, RI",  "p": "833-745-3622",  "u": "https://www.arlingtonrv.com/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "Arlington RV Supercenter, Inc. is a family owned RV dealership and service center in East Greenwich, Rhode Island, and has been Rhode Island's leading RV dealer since 1948. Its service department handles body repair, carpentry, appliance repair, heating and air conditioning, major and minor engine and drive train repair, generator repair, electrical work and general RV maintenance, along with trailer hitch, fifth wheel and base plate installation and warranty work for 60 component manufacturers. The shop is factory trained, employs five service advisers and offers six day per week service availability.",  "g": [
+   "RV repair",
+   "RV service",
+   "RV dealer",
+   "warranty work",
+   "appliance repair",
+   "generator repair"
+  ],  "base": null,  "areas": [],  "region": "Kent County",  "spec": null,  "reg": "rhode-island-ri"
+ },
+ {  "n": "Open Road Mobile RV Repair",  "c": "Portsmouth, RI",  "p": "1-800-708-1976",  "u": "https://camper-repair.com/",  "t": "both",  "e": false,  "r": false,  "d": "Open Road Mobile RV Repair is an RV repair company based in Portsmouth, Rhode Island, that brings professional mobile RV repair, inspection and maintenance to motorhomes, travel trailers, fifth wheels and campers. Its technicians handle RV air conditioning, LP and propane furnaces, hydronic heating, electrical systems, plumbing and water heaters, roof leaks and resealing, slide-outs, appliances, extended warranty repair, winterization and annual maintenance. The company is an authorized repair facility for Aqua-Hot and Oasis heating systems and for Splendide washer and dryer units, and serves Rhode Island and Southern New England.",  "g": [
+   "RV repair",
+   "RV service",
+   "mobile tech",
+   "appliance repair",
+   "roof repair",
+   "slide-out repair"
+  ],  "base": null,  "areas": [],  "region": "Newport County and Aquidneck Island",  "spec": null,  "reg": "rhode-island-ri"
+ },
+ {  "n": "SBerry RV Camper Restorations",  "c": "North Kingstown, RI",  "p": "401-667-2531",  "u": "https://www.sberryrvcamper.com/",  "t": "center",  "e": false,  "r": false,  "d": "SBerry RV Camper Restorations is a camper and RV repair and restoration shop in North Kingstown, Rhode Island, run by Stephen Berry, and has worked on campers since 2008. It focuses on camper roof repair, having repaired over 1,700 camper roofs, and also performs structural repair, insurance repairs, roof coatings, Dicor roof sealant replacement, vinyl flooring, custom builds and vintage camper restorations. The shop states that it does not service appliances.",  "g": [
+   "RV repair",
+   "camper roof repair",
+   "structural repair",
+   "roof coating",
+   "vintage restoration"
+  ],  "base": null,  "areas": [],  "region": "South County",  "spec": "Does not service appliances",  "reg": "rhode-island-ri"
+ },
+ {  "n": "C & C Garage",  "c": "Chepachet, RI",  "p": "401-371-2791",  "u": "https://www.candcgarageri.com/motor-home-repair/4486048",  "t": "center",  "e": false,  "r": false,  "d": "C & C Garage is a family owned auto and motor home repair shop in Chepachet, Rhode Island, that describes itself as Rhode Island's leading motor home repair specialist. It repairs motor homes, campers, RVs and pop up campers, handling engine repair, suspension service, brake service and motor home inspection, and its work carries a one year warranty on all parts. The shop serves Rhode Island, Massachusetts and Connecticut, and its mechanics have 37 years of experience.",  "g": [
+   "RV repair",
+   "motorhome repair",
+   "engine repair",
+   "brake service",
+   "suspension repair"
+  ],  "base": null,  "areas": [],  "region": "Northwest Rhode Island",  "spec": null,  "reg": "rhode-island-ri"
+ },
+ {  "n": "Carl's Collision Center",  "c": "Newport, RI",  "p": "(800) 624-4051",  "u": "https://carlscollision.com/locations/newport-ri",  "t": "center",  "e": false,  "r": false,  "d": "Carl's Collision Center is an auto body and collision repair shop at 166 JT Connell Highway in Newport, Rhode Island, and is the only body shop located within the city itself. Alongside collision repair, painting and color match, LINE-X coatings, and classic and custom restoration, it provides fleet, commercial and RV and camper repair. The shop holds more than 20 manufacturer certifications, is I-CAR Gold Class, offers a lifetime warranty on its repairs, and works with every insurance company from the first call to the final detail.",  "g": [
+   "RV repair",
+   "RV collision repair",
+   "RV body work",
+   "camper repair",
+   "insurance claims"
+  ],  "base": "newport",  "areas": [],  "region": "Newport County and Aquidneck Island",  "spec": null,  "reg": "rhode-island-ri"
+ },
+ {  "n": "Fibrenew Ocean State",  "c": "Bristol, RI",  "p": "401.410.4599",  "u": "https://www.fibrenew.com/oceanstate-bristol-warwick/rv-motorhome-camper-interior-repair-restoration/",  "t": "mobile",  "e": false,  "r": false,  "d": "Fibrenew Ocean State is a mobile RV interior repair and restoration business in the Bristol area of Rhode Island, run by Bryan Tierney. It services the interiors of motorhomes, camping trailers, vans, fifth wheels, fold downs, expandables and toy haulers, specializing in the repair and restoration of leather furniture, vinyl lino floors, plastic molding and trim, and fabric instead of replacement. The business travels to homes and businesses, and also performs on-lot repairs and warranty work for RV dealers.",  "g": [
+   "RV interior repair",
+   "RV upholstery repair",
+   "vinyl floor repair",
+   "mobile tech"
+  ],  "base": null,  "areas": [],  "region": "East Bay",  "spec": null,  "reg": "rhode-island-ri"
  }
 ];

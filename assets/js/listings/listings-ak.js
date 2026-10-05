@@ -48,5 +48,109 @@ window.RV_LISTINGS_AK = [
   ],  "base": "anchorage",  "areas": [
    "anchorage"
   ],  "region": null,  "spec": null,  "reg": "anchorage-ak"
+ },
+ {  "n": "Alaska Performance RV & Marine",  "c": "Anchorage, AK",  "p": "(907) 522-8965",  "u": "https://alaskaperformancerv.com/",  "t": "center",  "e": false,  "r": false,  "d": "Alaska Performance RV and Marine is an Anchorage RV service center that has served Alaskans since 1997. It provides RV repair and maintenance plus parts and accessories, and it is a preferred repair center for multiple insurance companies. The RV service list covers accessory installations, air bags, appliance repair, awnings, body repairs, custom work, de-winterize and winterize, electrical repairs, fresh water systems, heating and cooling, interior and exterior fit and finish repairs, jack and levelers, lighting, LP repairs, roof racks and ladders, roofing, RV electronics, sealants, slide outs, steps, toilet repairs, towing products, trailer bearings and brakes, trailer wiring and water heaters. It is also Alaska's only factory outlet for Bigfoot RV truck campers and trailers.",  "g": [
+   "service center",
+   "parts",
+   "maintenance"
+  ],  "base": "anchorage",  "areas": [
+   "anchorage"
+  ],  "region": "Anchorage",  "spec": null,  "reg": "anchorage-ak"
+ },
+ {  "n": "Dependable RV",  "c": "Anchorage, AK",  "p": "(907) 344-4337",  "u": "https://www.dependableakrv.com/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "Dependable RV is an Anchorage RV dealer with a service department that repairs and maintains motorhomes and travel trailers. The service page invites customers to bring an RV in for evaluation or request a service appointment, and the dealer also lists locations in Soldotna and Wasilla. It prioritizes service appointments for customers who purchased a motorhome or travel trailer from Dependable Used Cars LLC.",  "g": [
+   "service center",
+   "dealer",
+   "maintenance"
+  ],  "base": "anchorage",  "areas": [
+   "anchorage",
+   "soldotna",
+   "wasilla"
+  ],  "region": "Anchorage with the Kenai Peninsula and the Mat-Su Valley",  "spec": null,  "reg": "anchorage-ak"
+ },
+ {  "n": "Great Alaskan Holidays",  "c": "Anchorage, AK",  "p": "907-248-7777",  "u": "https://www.greatalaskanholidays.com/pages/rv-parts-service",  "t": "center",  "e": false,  "r": false,  "d": "Great Alaskan Holidays is an Anchorage motorhome dealership and rental company that also runs a large RV parts and service center. It describes itself as the only motorhome dealership and rental company in Alaska that is a certified Winnebago Warranty Center. The service department inspects and tests chassis and coach components, runs a preventive maintenance program, and prioritizes service appointments for customers who purchased a motorhome or trailer from the company.",  "g": [
+   "service center",
+   "dealer",
+   "parts",
+   "maintenance"
+  ],  "base": "anchorage",  "areas": [
+   "anchorage"
+  ],  "region": "Anchorage",  "spec": null,  "reg": "anchorage-ak"
+ },
+ {  "n": "Valley RV Center",  "c": "Palmer, AK",  "p": "(907) 745-7747",  "u": "https://www.valleyrvcenter.com/service-department/",  "t": "center",  "e": false,  "r": false,  "d": "Valley RV Center is a Palmer RV dealer with a service department staffed by professional RV technicians who repair all makes and models of recreational vehicles. The shop performs warranty work on Keystone, Northwood and Forest River models and honors most extended service contracts. Services include winterization and de-winterization, wheel bearing repack and brake inspection, roof and seam inspections, battery service, major systems checks and appliance servicing.",  "g": [
+   "service center",
+   "dealer",
+   "maintenance"
+  ],  "base": "palmer",  "areas": [
+   "palmer",
+   "wasilla"
+  ],  "region": "Anchorage and the Mat-Su Valley",  "spec": null,  "reg": "anchorage-ak"
+ },
+ {  "n": "Camper Valley RV",  "c": "Wasilla, AK",  "p": "(907) 376-8100",  "u": "https://campervalleyrv.com/parts-service/",  "t": "center",  "e": false,  "r": false,  "d": "Camper Valley RV is a Wasilla RV dealer with a five bay RV service and parts center staffed by certified RV technicians. It runs a winterization drive-through for customers and performs RV repair and maintenance work at its Wasilla location. It is also the Alaska dealer for Outdoors RV trailers.",  "g": [
+   "service center",
+   "dealer",
+   "parts"
+  ],  "base": "wasilla",  "areas": [
+   "wasilla",
+   "palmer"
+  ],  "region": "Anchorage and the Mat-Su Valley",  "spec": null,  "reg": "anchorage-ak"
+ },
+ {  "n": "Kenai Peninsula RV Parts",  "c": "Soldotna, AK",  "p": "907-262-2700",  "u": "https://www.kprvparts.com/",  "t": "center",  "e": false,  "r": false,  "d": "Kenai Peninsula RV Parts is a Soldotna RV parts and service business on the Kenai Peninsula. It sells RV parts including awnings, steps, water heaters, furnaces, toilets and appliances, and offers RV service performed by its master technician. It also works with a mobile RV repair service at the store and on the road.",  "g": [
+   "parts",
+   "service center"
+  ],  "base": "soldotna",  "areas": [
+   "soldotna",
+   "kenai",
+   "sterling"
+  ],  "region": "The Kenai Peninsula",  "spec": "RV parts and repair",  "reg": "kenai-ak"
+ },
+ {  "n": "Arctic Mobile RV Service and Repair LLC",  "c": "Fairbanks, AK",  "p": "907-460-7888",  "u": "https://arctic-rv.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Arctic Mobile RV Service and Repair LLC is a mobile RV repair business based in Fairbanks that comes to the customer for service. It specializes in affordable winterization, dewinterization, inspections and RV system repairs. Work includes battery testing, replacement and upgrades, solar panel installation, roof and vent sealing, water heater flush and anode replacement, appliance repair and replacement, and pre-purchase sale inspections.",  "g": [
+   "mobile tech",
+   "maintenance"
+  ],  "base": "fairbanks",  "areas": [
+   "fairbanks",
+   "north pole"
+  ],  "region": "Fairbanks and the Interior",  "spec": null,  "reg": "interior-ak"
+ },
+ {  "n": "Campside RV Repair LLC",  "c": "Fairbanks, AK",  "p": "907-978-8700",  "u": "https://campside-rv.com/",  "t": "mobile",  "e": true,  "r": false,  "d": "Campside RV Repair LLC is a mobile RV repair business in Fairbanks owned and operated by an NRVTA-trained, RVTAA-certified technician. It travels to the customer to perform RV maintenance and repair rather than requiring the RV to be brought to a shop. Services cover air conditioners, awnings, absorption refrigerators, battery service, brakes, bearings and suspension on towable RVs, DOT lighting, electrical systems 12vDC and 120vAC, exterior sealants, furnace, leveling systems and stabilizers, propane systems, roof membrane and sealants, slide seals, water heaters, and winterization and de-winterization. It also offers an emergency departure service for stuck slides or leveling systems.",  "g": [
+   "mobile tech",
+   "maintenance",
+   "emergency"
+  ],  "base": "fairbanks",  "areas": [
+   "fairbanks",
+   "north pole"
+  ],  "region": "Fairbanks and the Interior",  "spec": null,  "reg": "interior-ak"
+ },
+ {  "n": "H & H Service",  "c": "Fairbanks, AK",  "p": "(907) 479-0834",  "u": "https://h-hservice.com/rv-repair/",  "t": "center",  "e": false,  "r": false,  "d": "H & H Service is a Fairbanks shop with an RV department and is fully stocked for RV work. The RV department performs winterization and de-winterization, fresh water tank service and sanitation, full coach inspections, and coach electrical diagnosis and repair. It also does RV coach front rebuilds, flooring and furniture work and roof resealing.",  "g": [
+   "service center",
+   "maintenance"
+  ],  "base": "fairbanks",  "areas": [
+   "fairbanks"
+  ],  "region": "Fairbanks and the Interior",  "spec": "RV department",  "reg": "interior-ak"
+ },
+ {  "n": "Freedom Adrift RV Tech",  "c": "Fairbanks, AK",  "p": "(907) 888-7370",  "u": "https://www.freedomadriftrvtech.com/",  "t": "mobile",  "e": true,  "r": false,  "d": "Freedom Adrift RV Tech is a mobile RV repair service run by an advanced certified RV technician and solar specialist who spends summers in Alaska. The business performs repairs on appliances, air conditioners, electrical systems, hydraulics and leveling, plumbing and water systems, propane systems and solar systems. It also offers tank cleaning, tank sensor restore, water heater flush, anode rod replacement and fresh water tank sanitation.",  "g": [
+   "mobile tech",
+   "solar",
+   "maintenance"
+  ],  "base": "fairbanks",  "areas": [
+   "fairbanks"
+  ],  "region": "Fairbanks and the Interior",  "spec": "Seasonal Alaska coverage",  "reg": "interior-ak"
+ },
+ {  "n": "Price RV Repair",  "c": "North Pole, AK",  "p": "907-651-6626",  "u": "https://www.pricervrepair.com/",  "t": "both",  "e": false,  "r": false,  "d": "Price RV Repair is a dedicated RV repair business in North Pole near Badger. It performs appliance repairs on water heaters, refrigerators, furnaces and air conditioners, roof repairs from resealing to roof rebuilds, water system work including winterization, de-winterization, leaks and pump replacements, slide out diagnosis and repair, and full RV inspections. It also offers mobile callouts to come to the customer for diagnosis and repair.",  "g": [
+   "mobile tech",
+   "service center",
+   "maintenance"
+  ],  "base": "north pole",  "areas": [
+   "north pole",
+   "fairbanks"
+  ],  "region": "Fairbanks and the Interior",  "spec": null,  "reg": "interior-ak"
+ },
+ {  "n": "Alcan Legends Auto & Towing",  "c": "Tok, AK",  "p": "(907) 883-5508",  "u": "https://www.alcanlegendsautoandtowing.com/RV-Repair",  "t": "center",  "e": true,  "r": true,  "d": "Alcan Legends Auto and Towing is an auto and towing shop in Tok that advertises motorhome and RV repair. Its RV repair services include leaf spring replacement, welding and general repair, and it serves Tok, Delta Junction and the surrounding area with 24 hour towing and roadside assistance.",  "g": [
+   "service center",
+   "towing",
+   "welding"
+  ],  "base": "tok",  "areas": [
+   "tok",
+   "delta junction"
+  ],  "region": "Fairbanks and the Interior",  "spec": "RV repair at an auto and towing shop",  "reg": "interior-ak"
  }
 ];
