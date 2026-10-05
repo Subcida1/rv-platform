@@ -21,6 +21,10 @@
     {
       "key": "southern-tier-ny",
       "label": "Binghamton and the southern tier"
+    },
+    {
+      "key": "long-island-ny",
+      "label": "Long Island"
     }
   ],
   "region_of": {
@@ -31,7 +35,46 @@
     "Buffalo": "western-ny",
     "Port Crane": "southern-tier-ny",
     "Waverly": "southern-tier-ny",
-    "Schenectady": "hudson-valley-ny"
+    "Schenectady": "hudson-valley-ny",
+    "Copiague": "long-island-ny",
+    "Coram": "long-island-ny",
+    "Mastic Beach": "long-island-ny",
+    "Mastic": "long-island-ny",
+    "Islip": "long-island-ny",
+    "Sayville": "long-island-ny",
+    "Huntington": "long-island-ny",
+    "Amityville": "long-island-ny",
+    "Babylon": "long-island-ny",
+    "Bay Shore": "long-island-ny",
+    "Brentwood": "long-island-ny",
+    "Centereach": "long-island-ny",
+    "Commack": "long-island-ny",
+    "Deer Park": "long-island-ny",
+    "Farmingdale": "long-island-ny",
+    "Greenport": "long-island-ny",
+    "Hicksville": "long-island-ny",
+    "Lindenhurst": "long-island-ny",
+    "Manorville": "long-island-ny",
+    "Mattituck": "long-island-ny",
+    "Mineola": "long-island-ny",
+    "Patchogue": "long-island-ny",
+    "Riverhead": "long-island-ny",
+    "Shirley": "long-island-ny",
+    "Smithtown": "long-island-ny",
+    "Southampton": "long-island-ny",
+    "West Babylon": "long-island-ny",
+    "North Babylon": "long-island-ny",
+    "East Islip": "long-island-ny",
+    "Bohemia": "long-island-ny",
+    "Patterson": "hudson-valley-ny",
+    "Highland": "hudson-valley-ny",
+    "Fishkill": "hudson-valley-ny",
+    "Peekskill": "hudson-valley-ny",
+    "Beacon": "hudson-valley-ny",
+    "Cold Spring": "hudson-valley-ny",
+    "Wappingers Falls": "hudson-valley-ny",
+    "Carmel": "hudson-valley-ny",
+    "Mahopac": "hudson-valley-ny"
   },
   "listings": [
     {
@@ -446,6 +489,318 @@
         "emergency_quote": "*emergency repairs",
         "roadside_quote": "*all chassis issues",
         "licence": null
+      }
+    },
+    {
+      "n": "Tristate RV Repair",
+      "c": "Copiague and western Suffolk County, NY",
+      "p": "516-826-4040",
+      "u": "https://www.tristatervrepair.com/",
+      "t": "center",
+      "e": false,
+      "r": true,
+      "d": "Tristate RV Repair is an RV service center on Lambert Avenue in Copiague, New York, operating a full repair facility and body shop for motorhomes and travel trailers. Work includes warranty and insurance repairs, fibreglass and body repair, windshield replacement, electrical and structural repairs including frame damage, and generator repair. The shop lists chassis and suspension work, engine and transmission electronic diagnostics, and 24-hour roadside assistance.",
+      "g": [
+        "rv service center",
+        "body shop",
+        "roadside assistance"
+      ],
+      "base": "Copiague",
+      "areas": [],
+      "region": "Long Island",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "516-826-4040",
+        "type_quote": "We are an RV service center located in Copiague, New York.",
+        "emergency_quote": null,
+        "roadside_quote": "24-hour Roadside Assistance",
+        "coverage_quotes": [
+          "Serving Long Island and surrounding New York areas, we help RV owners bring new life to their vehicles with functional, stylish, and durable renovation solutions."
+        ]
+      }
+    },
+    {
+      "n": "Long Island RVs (LIRVs)",
+      "c": "Coram and central Suffolk County, NY",
+      "p": "(516) 350-1353",
+      "u": "https://lirvs.com/repairs",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Long Island RVs (LIRVs) is a mobile RV repair, maintenance and upgrade business based in Coram, New York, whose NRVTA-certified technicians travel to the customer on Long Island. It handles maintenance and winterizing, roof resealing, slide-out, window and vent, awning and exterior trim repairs, plus interior work such as flooring, appliances, cabinetry and upholstery. It also does systems work on plumbing, electrical and water heaters, along with interior and exterior upgrades and exterior detailing.",
+      "g": [
+        "mobile tech",
+        "maintenance",
+        "upgrades"
+      ],
+      "base": "Coram",
+      "areas": [],
+      "region": "Long Island",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "(516) 350-1353",
+        "type_quote": "At LIRVs, we make taking care of your RV simple by bringing our mobile service directly to you, eliminating the hassle of transportation and saving valuable time.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": []
+      }
+    },
+    {
+      "n": "Grand AM Recreational Vehicles",
+      "c": "Mastic Beach and eastern Suffolk County, NY",
+      "p": "(631) 395-3377",
+      "u": "https://grandamrv.com/service/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Grand AM Recreational Vehicles is a family-run RV service and parts department at 147 Mastic Road in Mastic Beach, New York, in business since 1978. The service department handles jobs from interior plumbing leaks to full roof replacement and offers courtesy inspections during New York state safety inspections. It recommends and performs regular roof inspection and resealing.",
+      "g": [
+        "rv service center",
+        "roof service",
+        "parts"
+      ],
+      "base": "Mastic Beach",
+      "areas": [],
+      "region": "Long Island",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "(631) 395-3377",
+        "type_quote": "Please give our service and parts department a try!",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": []
+      }
+    },
+    {
+      "n": "RV Roof Doctor",
+      "c": "Mastic and eastern Long Island, NY",
+      "p": "(631) 504-8618",
+      "u": "https://www.thervroofdoctor.net/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "RV Roof Doctor is a mobile RV repair service based in Mastic, New York, that covers eastern Long Island. It offers air conditioning service, electrical troubleshooting and rewiring, plumbing, furnace installation and roof replacement, along with pre-purchase inspections. It advertises 24/7 emergency availability.",
+      "g": [
+        "mobile tech",
+        "emergency",
+        "roof"
+      ],
+      "base": "Mastic",
+      "areas": [],
+      "region": "Eastern Long Island",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "(631) 504-8618",
+        "type_quote": "We are a mobile service dedicated to repairing, restoring, and beautifying your RV.",
+        "emergency_quote": "Sometimes we run into Emergencies and the RV isn't turning on at 8pm, not a problem.",
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Servicing All of Eastern Long Island",
+          "*Emergency Services",
+          "24 hours, 7 days a week"
+        ]
+      }
+    },
+    {
+      "n": "Blue Line Mobile RV Repair",
+      "c": "Islip and across Nassau and Suffolk counties, NY",
+      "p": "631 233-9733",
+      "u": "https://sites.google.com/view/www-bluelinemobilervrepair-com/home",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Blue Line Mobile RV Repair is a mobile RV repair business based in Islip, New York, that travels to customers across Nassau and Suffolk counties. It describes itself as certified, licensed and insured.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Islip",
+      "areas": [],
+      "region": "Nassau & Suffolk Counties",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "631 233-9733",
+        "type_quote": "Mobile RV Repair",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Serving Nassau & Suffolk Counties"
+        ]
+      }
+    },
+    {
+      "n": "Deangelis Equipment Rentals",
+      "c": "Sayville and central Suffolk County, NY",
+      "p": "(631) 563-1311",
+      "u": "https://deangelisrentals.com/repairs-and-service",
+      "t": "both",
+      "e": false,
+      "r": true,
+      "d": "Deangelis Equipment Rentals, at 5260 Sunrise Highway in Sayville, New York, runs an RV and camper parts, service and repair department alongside its equipment rental business. It offers in-shop and now mobile service and stocks and installs undercarriage parts such as bearings, seals, electric brakes and drums, plus hitches and weight distribution. It also repairs roofs, floors, furnaces, air conditioners, refrigerators, water heaters, generators and electrical systems.",
+      "g": [
+        "rv service center",
+        "mobile tech",
+        "parts"
+      ],
+      "base": "Sayville",
+      "areas": [],
+      "region": "Long Island",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "(631) 563-1311",
+        "type_quote": "Now offering Mobile Service! Our team of trained technicians will come to your location for any RV/Camper Services or Repair Needs!",
+        "emergency_quote": null,
+        "roadside_quote": "Undercarriage parts- Bearings, seals, electric brakes, drums, etc.",
+        "coverage_quotes": []
+      }
+    },
+    {
+      "n": "Stallion Bus & Transit",
+      "c": "Huntington and western Suffolk County, NY",
+      "p": "(631) 270-3800",
+      "u": "https://stallionbus.com/parts-service/rv-services-departments",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Stallion Bus & Transit, based in Huntington, New York, runs a parts and service department that includes an RV and motorhome service line. Its RV service covers cooling and heating, electrical and wiring diagnostics, appliances, water heater service, oil changes, roof resealing and leak checks, door and window repairs, winterization, annual inspections and holding tank service.",
+      "g": [
+        "rv service center",
+        "bus dealer"
+      ],
+      "base": "Huntington",
+      "areas": [],
+      "region": "Huntington, NY",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "(631) 270-3800",
+        "type_quote": "Keep your RV ready for the road.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Shipping & service support available from:",
+          "Huntington, NY"
+        ]
+      }
+    },
+    {
+      "n": "Hudson Valley RV Medic",
+      "c": "Patterson and the lower Hudson Valley, NY",
+      "p": "914-406-6791",
+      "u": "https://www.hvrvmedic.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "Hudson Valley RV Medic is a mobile RV repair business based in Patterson, New York, whose RVTAA-certified technician travels to the customer. It does electrical troubleshooting and repair, plumbing, appliance service and preventive maintenance, and handles domestic warranties on all makes and models. It advertises 24/7 availability.",
+      "g": [
+        "mobile tech",
+        "emergency"
+      ],
+      "base": "Patterson",
+      "areas": [
+        "White Plains",
+        "Middletown"
+      ],
+      "region": "Putnam, Westchester, Dutchess counties and surrounding areas",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "914-406-6791",
+        "type_quote": "Count on us for mobile RV services in Danbury, CT or Patterson, NY",
+        "emergency_quote": "We're also available 24/7 for all our mobile RV services.",
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "WE SERVE THE PUTNAM, WESTCHESTER, DUTCHESS COUNTIES AND SURROUNDING AREAS",
+          "We serve Danbury, CT and White Plains, Middletown and Patterson, NY."
+        ]
+      }
+    },
+    {
+      "n": "Hudson Automotive Repair & Service",
+      "c": "Highland and the Hudson Valley, NY",
+      "p": "(845)834-2118 (8458342118)",
+      "u": "https://hudson-automotive.com/",
+      "t": "both",
+      "e": true,
+      "r": true,
+      "d": "Hudson Automotive Repair & Service is an RV, Airstream and conversion van shop at 3441 US-9W in Highland, New York, that also runs a 24/7 mobile service. It offers mechanical and electrical repairs, SealTech leak testing, four-wheel alignment, road-force tire balancing, bodywork and paint, and frame and subfloor structural repair. It advertises structural repair service throughout Westchester.",
+      "g": [
+        "rv service center",
+        "mobile tech",
+        "emergency",
+        "airstream"
+      ],
+      "base": "Highland",
+      "areas": [
+        "Kingston",
+        "Saugerties",
+        "Woodstock",
+        "Middletown"
+      ],
+      "region": "Hudson Valley",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "(845)834-2118 (8458342118)",
+        "type_quote": "We offer 24/7 mobile service for RVs, trailers, and other service repairs",
+        "emergency_quote": "We offer 24/7 mobile service for RVs, trailers, and other service repairs",
+        "roadside_quote": "Fixing RV electrical problems, leaks, brake issues, and damaged parts to keep owners safe and avoid unexpected road breakdowns.",
+        "coverage_quotes": [
+          "An RV sitting broken in a driveway helps nobody. Hudson Automotive brings professional, shop-grade RV repairs directly to your location in Westchester.",
+          "We do. Our mobile team travels throughout Westchester, NY to perform complex structural repairs on-site, ensuring your rig remains stable and safe for all your road travels and campsite camping needs."
+        ]
+      }
+    },
+    {
+      "n": "Classic RV Repair & Restorations, LLC",
+      "c": "Fishkill and the Hudson Valley, NY",
+      "p": "(914) 523 - 8310",
+      "u": "http://www.classicrvrepairrestorations.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Classic RV Repair & Restorations LLC is an RV repair and restoration shop at 73 Route 9 in Fishkill, New York, specialising in vintage Airstreams. Owner and master technician George Hernandez has more than 30 years on Airstreams and does aluminium body repair, electrical, plumbing, interior repair, fabrication and solar installation. It also works on other brands of RV and trailer.",
+      "g": [
+        "rv service center",
+        "airstream",
+        "restoration"
+      ],
+      "base": "Fishkill",
+      "areas": [],
+      "region": "Hudson Valley",
+      "spec": "vintage Airstream repair and restoration",
+      "evidence": {
+        "phone_quote": "Cell: (914) 523 - 8310 Office: (845) 319 - 6007",
+        "type_quote": "Here at Classic RV Repair & Restorations, LLC. we have the knowledge and skills to repair or restore your vintage Airstream to its original glory.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "73 Route 9 Fishkill NY 12524"
+        ]
+      }
+    },
+    {
+      "n": "TransAtlantic Auto & RV Center",
+      "c": "Peekskill and northern Westchester County, NY",
+      "p": "914-739-8314",
+      "u": "http://www.transatlantic-rv.com/en/parts-and-services",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "TransAtlantic Auto & RV Center at 1245 Park Street in Peekskill, New York, has operated as an RV sales, rental and service centre since 1975. Its parts and service department repairs RVs regardless of make and model and services LP gas, electrical and plumbing components, and it is authorised to perform Dometic and Norcold refrigerator recalls. It also does RV bodywork, restoration, winterizing, NYS inspections and Onan generator service.",
+      "g": [
+        "rv service center",
+        "parts",
+        "body shop"
+      ],
+      "base": "Peekskill",
+      "areas": [],
+      "region": "Peekskill, New York",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "International: 001-914-739-8314",
+        "type_quote": "Transatlantic provides Rv Repairs and Service regardless of vehicle make & model.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "TransAtlantic Auto & RV Center 1245 Park Street Peekskill, New York 10566 USA"
+        ]
       }
     }
   ]

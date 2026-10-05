@@ -128,5 +128,76 @@ window.RV_LISTINGS_PA = [
    "service center",
    "chassis"
   ],  "base": "adamsburg",  "areas": [],  "region": null,  "spec": "SERVICE BY APPOINTMENT ONLY",  "reg": "pittsburgh-pa"
+ },
+ {  "n": "BWT Repair",  "c": "St. Benedict, Cambria County and the Johnstown area, PA",  "p": "(814) 344-8500",  "u": "https://bwtrepair.com/",  "t": "center",  "e": false,  "r": true,  "d": "BWT Repair is a general auto, truck and trailer repair shop on Route 219 at St. Benedict in Cambria County. It performs Pennsylvania state inspections, air conditioning repair and general auto repair, and states its mechanics can fix motorhomes, travel trailers and camping trailers as well as medium- and heavy-duty trucks. It lists Cambria, Blair, Somerset, Clearfield and Indiana county towns in its service area.",  "g": [
+   "service center",
+   "trailer repair",
+   "motorhome",
+   "chassis"
+  ],  "base": "saint benedict",  "areas": [
+   "carrolltown",
+   "northern cambria",
+   "patton",
+   "ebensburg",
+   "johnstown",
+   "altoona",
+   "tyrone",
+   "hollidaysburg",
+   "somerset",
+   "windber",
+   "central city",
+   "clearfield",
+   "indiana"
+  ],  "region": "Cambria County and surrounding counties",  "spec": null,  "reg": "pittsburgh-pa"
+ },
+ {  "n": "Happy Camp Enterprises",  "c": "Rockwood and Somerset County, PA",  "p": "814-352-3778",  "u": "http://www.happycampenterprises.com/",  "t": "both",  "e": false,  "r": false,  "d": "Happy Camp Enterprises is a full RV service center based in Somerset County that offers camping trailer repairs and custom projects of almost any size. Its work includes all minor and major RV repairs done onsite or off, roof inspection and conditioning, insurance jobs and quotes, state inspections, indoor and outdoor storage, and rebuilding weather-damaged units. It also upgrades flooring, appliances, awnings and slide toppers and can custom-build RVs.",  "g": [
+   "service center",
+   "mobile tech",
+   "body",
+   "roof"
+  ],  "base": "rockwood",  "areas": [],  "region": "Somerset County",  "spec": null,  "reg": "pittsburgh-pa"
+ },
+ {  "n": "Laurel Highlands RV Services",  "c": "Hopwood and the Laurel Highlands, PA",  "p": "+17242133514",  "u": "https://rvwaterdamagehopwood.com/",  "t": "both",  "e": true,  "r": true,  "d": "Laurel Highlands RV Services is an RV repair shop at Hopwood in Fayette County that also runs a truck repair shop and fleet service. It advertises RV water damage repair, mechanical repair, electrical repair and brake repair, along with remodeling and RV or boat storage, and says it services all classes, makes and models of motorcoaches for complete powertrain care. It publishes a $125/hour mobile repair rate and 24/7 customer support.",  "g": [
+   "service center",
+   "mobile tech",
+   "chassis",
+   "body",
+   "emergency"
+  ],  "base": "hopwood",  "areas": [
+   "lemont furnace"
+  ],  "region": null,  "spec": null,  "reg": "pittsburgh-pa"
+ },
+ {  "n": "Susquehanna RV",  "c": "Selinsgrove, Bloomsburg and the Susquehanna Valley, PA",  "p": "570-374-2267",  "u": "https://www.susqrv.com/rv-service-1/service-information",  "t": "center",  "e": false,  "r": true,  "d": "Susquehanna RV runs full-service RV service departments at its Selinsgrove and Bloomsburg dealership locations. Its listed services include PA state RV inspections, appliance repair, roof and sealant inspection and full roof replacement, water damage repair, metal siding replacement, brake and axle service, bearing repack, tire replacement, electrical repair and hitch installation. It states it services both towable and motorized RVs.",  "g": [
+   "service center",
+   "chassis",
+   "body",
+   "roof"
+  ],  "base": "selinsgrove",  "areas": [
+   "bloomsburg"
+  ],  "region": "Serving PA and the Northeast",  "spec": null,  "reg": "southcentral-pa"
+ },
+ {  "n": "Farnsworth Camping Center",  "c": "Elysburg and Northumberland County, PA",  "p": "570-672-2332",  "u": "https://www.farnsworthrv.com/we-repair-your-class-a",  "t": "center",  "e": false,  "r": false,  "d": "Farnsworth Camping Center's service department is on North Market Street in Elysburg. Its factory-trained technicians do PA trailer inspections, awning installation, base plates and tow bars, appliance repair, body work and painting, and major collision repairs, and it is an authorized warranty center for Fleetwood, Palomino Travel Trailers and Coleman Folding Trailers. It works on Class A and Class C motorhomes, fifth wheels, destination trailers and travel trailers.",  "g": [
+   "service center",
+   "body",
+   "parts"
+  ],  "base": "elysburg",  "areas": [],  "region": "Northumberland County",  "spec": null,  "reg": "southcentral-pa"
+ },
+ {  "n": "Bloomsburg Truck & Trailer",  "c": "Bloomsburg and Columbia County, PA",  "p": "570-784-1514",  "u": "https://bloomsburgtruck.com/rv-service-repair-bloomsburg-pa/",  "t": "center",  "e": false,  "r": true,  "d": "Bloomsburg Truck & Trailer is a truck, trailer, RV and motorhome repair facility on Hock Road in Bloomsburg. Its RV services cover engine maintenance and repair, tires and brake systems, transmission and drivetrain, electrical and generator repair, suspension and steering, HVAC, and travel trailer lighting, brake and suspension work. It also offers PA state inspections and preventive maintenance programs.",  "g": [
+   "service center",
+   "chassis",
+   "trailer repair"
+  ],  "base": "bloomsburg",  "areas": [],  "region": null,  "spec": null,  "reg": "southcentral-pa"
+ },
+ {  "n": "Immaculate Kinetics",  "c": "Danville and Montour County, PA",  "p": "(570) 293-1966",  "u": "https://immaculatekinetics.com/Services/RV-and-Motorhome-Repair-and-Maintenance",  "t": "center",  "e": false,  "r": true,  "d": "Immaculate Kinetics is a locally owned Danville shop with ASE-certified technicians that advertises RV and motorhome repair across Central Pennsylvania. Its RV service covers engine, transmission, brake, cooling and suspension work on motorhome chassis and drivetrains, and it says its RV offering is growing with demand. The company also specializes in Roush CleanTech alternative fuel systems and Safety Vision surveillance for commercial vehicles.",  "g": [
+   "service center",
+   "chassis",
+   "drivetrain"
+  ],  "base": "danville",  "areas": [],  "region": "Central Pennsylvania",  "spec": "Roush CleanTech alternative fuel systems and Safety Vision surveillance",  "reg": "southcentral-pa"
+ },
+ {  "n": "Ritz-Trans Corporation of PA, Inc.",  "c": "Mifflinburg and Union County, PA",  "p": "570-966-5140",  "u": "https://ritz-transperformance.com/rvs-and-campers/",  "t": "center",  "e": false,  "r": true,  "d": "Ritz-Trans Corporation of PA runs a trucking and auto service shop on Chestnut Street in Mifflinburg. Its RV and camper service includes brake inspection and replacement, tire mounting, balancing and inspection, PA state inspections, oil changes for gas and diesel motorhomes, and diagnostics. It advertises keeping RVs serviced rather than stranded.",  "g": [
+   "service center",
+   "chassis",
+   "tires"
+  ],  "base": "mifflinburg",  "areas": [],  "region": "Union County",  "spec": null,  "reg": "southcentral-pa"
  }
 ];

@@ -39,7 +39,31 @@
     "Transfer": "northeast-pa",
     "Milroy": "northeast-pa",
     "Tyrone": "northeast-pa",
-    "West Milton": "southcentral-pa"
+    "West Milton": "southcentral-pa",
+    "St. Benedict": "pittsburgh-pa",
+    "Rockwood": "pittsburgh-pa",
+    "Hopwood": "pittsburgh-pa",
+    "Jeannette": "pittsburgh-pa",
+    "Latrobe": "pittsburgh-pa",
+    "Ligonier": "pittsburgh-pa",
+    "Somerset": "pittsburgh-pa",
+    "Windber": "pittsburgh-pa",
+    "Ebensburg": "pittsburgh-pa",
+    "Greensburg": "pittsburgh-pa",
+    "Connellsville": "pittsburgh-pa",
+    "Uniontown": "pittsburgh-pa",
+    "Selinsgrove": "southcentral-pa",
+    "Elysburg": "southcentral-pa",
+    "Bloomsburg": "southcentral-pa",
+    "Danville": "southcentral-pa",
+    "Mifflinburg": "southcentral-pa",
+    "Sunbury": "southcentral-pa",
+    "Shamokin": "southcentral-pa",
+    "Lewisburg": "southcentral-pa",
+    "Milton": "southcentral-pa",
+    "Northumberland": "southcentral-pa",
+    "Mount Carmel": "southcentral-pa",
+    "Berwick": "southcentral-pa"
   },
   "listings": [
     {
@@ -714,6 +738,269 @@
         "emergency_quote": null,
         "roadside_quote": "Brake repair and replacement",
         "licence": "State inspection"
+      }
+    },
+    {
+      "n": "BWT Repair",
+      "c": "St. Benedict, Cambria County and the Johnstown area, PA",
+      "p": "(814) 344-8500",
+      "u": "https://bwtrepair.com/",
+      "t": "center",
+      "e": false,
+      "r": true,
+      "d": "BWT Repair is a general auto, truck and trailer repair shop on Route 219 at St. Benedict in Cambria County. It performs Pennsylvania state inspections, air conditioning repair and general auto repair, and states its mechanics can fix motorhomes, travel trailers and camping trailers as well as medium- and heavy-duty trucks. It lists Cambria, Blair, Somerset, Clearfield and Indiana county towns in its service area.",
+      "g": [
+        "service center",
+        "trailer repair",
+        "motorhome",
+        "chassis"
+      ],
+      "base": "St. Benedict",
+      "areas": [
+        "Carrolltown",
+        "Northern Cambria",
+        "Patton",
+        "Ebensburg",
+        "Johnstown",
+        "Altoona",
+        "Tyrone",
+        "Hollidaysburg",
+        "Somerset",
+        "Windber",
+        "Central City",
+        "Clearfield",
+        "Indiana"
+      ],
+      "region": "Cambria County and surrounding counties",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "(814) 344-8500",
+        "type_quote": "Trust BWT Repair for quality general auto, truck, and trailer repair in St. Benedict, PA.",
+        "emergency_quote": null,
+        "roadside_quote": "We take care of vehicles of all sizes, and that includes your heavy trucks. Our certified mechanics can handle everything from your engines to your tires.",
+        "coverage_quotes": [
+          "Cambria County, PA St. Benedict Carrolltown Northern Cambria Patton Ebensburg Johnstown",
+          "Blair County, PA Altoona Tyrone Hollidaysburg",
+          "Somerset County, PA Somerset Windber Central City",
+          "Clearfield County, PA Clearfield Westover Irvona Coalport",
+          "Indiana County, PA Indiana Penn Run Clymer"
+        ]
+      }
+    },
+    {
+      "n": "Happy Camp Enterprises",
+      "c": "Rockwood and Somerset County, PA",
+      "p": "814-352-3778",
+      "u": "http://www.happycampenterprises.com/",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "Happy Camp Enterprises is a full RV service center based in Somerset County that offers camping trailer repairs and custom projects of almost any size. Its work includes all minor and major RV repairs done onsite or off, roof inspection and conditioning, insurance jobs and quotes, state inspections, indoor and outdoor storage, and rebuilding weather-damaged units. It also upgrades flooring, appliances, awnings and slide toppers and can custom-build RVs.",
+      "g": [
+        "service center",
+        "mobile tech",
+        "body",
+        "roof"
+      ],
+      "base": "Rockwood",
+      "areas": [],
+      "region": "Somerset County",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "814-352-3778",
+        "type_quote": "full rv service center: call (814)352-3778",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Based in Somerset County, Pennsylvania, Happy Camp Enterprises offers services in camping trailer repairs and custom projects of almost any size.",
+          "All minor and major RV repairs, onsite or off",
+          "Indoor/ outdoor storage"
+        ]
+      }
+    },
+    {
+      "n": "Laurel Highlands RV Services",
+      "c": "Hopwood and the Laurel Highlands, PA",
+      "p": "+17242133514",
+      "u": "https://rvwaterdamagehopwood.com/",
+      "t": "both",
+      "e": true,
+      "r": true,
+      "d": "Laurel Highlands RV Services is an RV repair shop at Hopwood in Fayette County that also runs a truck repair shop and fleet service. It advertises RV water damage repair, mechanical repair, electrical repair and brake repair, along with remodeling and RV or boat storage, and says it services all classes, makes and models of motorcoaches for complete powertrain care. It publishes a $125/hour mobile repair rate and 24/7 customer support.",
+      "g": [
+        "service center",
+        "mobile tech",
+        "chassis",
+        "body",
+        "emergency"
+      ],
+      "base": "Hopwood",
+      "areas": [
+        "Lemont Furnace"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "phone_quote": "+17242133514",
+        "type_quote": "We are your premier destination for all your RV repair needs in Hopwood, PA.",
+        "emergency_quote": "Find support whenever you need it with our 24/7 customer service, ready to assist you at any hour of the day or night.",
+        "roadside_quote": "Our technicians are trained in all aspects of brake repairs and replacements so you can hit the road with confidence.",
+        "coverage_quotes": [
+          "Choose Laurel Highlands RV Services for all your RV repair and remodeling needs in Lemont Furnace, PA.",
+          "210 Coolspring Jumonvill Rd, Hopwood, PA 15445",
+          "We service all classes, makes, and models of motorcoaches for complete powertrain care."
+        ]
+      }
+    },
+    {
+      "n": "Susquehanna RV",
+      "c": "Selinsgrove, Bloomsburg and the Susquehanna Valley, PA",
+      "p": "570-374-2267",
+      "u": "https://www.susqrv.com/rv-service-1/service-information",
+      "t": "center",
+      "e": false,
+      "r": true,
+      "d": "Susquehanna RV runs full-service RV service departments at its Selinsgrove and Bloomsburg dealership locations. Its listed services include PA state RV inspections, appliance repair, roof and sealant inspection and full roof replacement, water damage repair, metal siding replacement, brake and axle service, bearing repack, tire replacement, electrical repair and hitch installation. It states it services both towable and motorized RVs.",
+      "g": [
+        "service center",
+        "chassis",
+        "body",
+        "roof"
+      ],
+      "base": "Selinsgrove",
+      "areas": [
+        "Bloomsburg"
+      ],
+      "region": "Serving PA and the Northeast",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "570-374-2267",
+        "type_quote": "Keep your RV in top shape with professional service and maintenance from the trusted team at Susquehanna RV.",
+        "emergency_quote": null,
+        "roadside_quote": "Brake & Axle Service",
+        "coverage_quotes": [
+          "With full-service locations in both Selinsgrove and Bloomsburg, our certified technicians are here to handle everything from PA state inspections and roof and sealant checks to winterization, de-winterization, hitch work, and more.",
+          "Visit us at 2084 Route 522, Selinsgrove, PA 17870 or 560 Montour Blvd., Bloomsburg, PA 17815",
+          "We specialize in towable and motorized RV service"
+        ]
+      }
+    },
+    {
+      "n": "Farnsworth Camping Center",
+      "c": "Elysburg and Northumberland County, PA",
+      "p": "570-672-2332",
+      "u": "https://www.farnsworthrv.com/we-repair-your-class-a",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Farnsworth Camping Center's service department is on North Market Street in Elysburg. Its factory-trained technicians do PA trailer inspections, awning installation, base plates and tow bars, appliance repair, body work and painting, and major collision repairs, and it is an authorized warranty center for Fleetwood, Palomino Travel Trailers and Coleman Folding Trailers. It works on Class A and Class C motorhomes, fifth wheels, destination trailers and travel trailers.",
+      "g": [
+        "service center",
+        "body",
+        "parts"
+      ],
+      "base": "Elysburg",
+      "areas": [],
+      "region": "Northumberland County",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "570-672-2332",
+        "type_quote": "With over 50 years of total experience, our factory trained technicians can handle all your RV service needs.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "279 North Market St. Elysburg, PA 17824",
+          "we are equipped to make your class A motorhome, class C motorhome, fifth wheel, destination trailer or travel trailer suit your taste."
+        ]
+      }
+    },
+    {
+      "n": "Bloomsburg Truck & Trailer",
+      "c": "Bloomsburg and Columbia County, PA",
+      "p": "570-784-1514",
+      "u": "https://bloomsburgtruck.com/rv-service-repair-bloomsburg-pa/",
+      "t": "center",
+      "e": false,
+      "r": true,
+      "d": "Bloomsburg Truck & Trailer is a truck, trailer, RV and motorhome repair facility on Hock Road in Bloomsburg. Its RV services cover engine maintenance and repair, tires and brake systems, transmission and drivetrain, electrical and generator repair, suspension and steering, HVAC, and travel trailer lighting, brake and suspension work. It also offers PA state inspections and preventive maintenance programs.",
+      "g": [
+        "service center",
+        "chassis",
+        "trailer repair"
+      ],
+      "base": "Bloomsburg",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "phone_quote": "570-784-1514",
+        "type_quote": "Your one stop resource for all your RV/travel trailer service and repair needs",
+        "emergency_quote": null,
+        "roadside_quote": "Tires & Brake Systems",
+        "coverage_quotes": [
+          "Our experienced technicians provide comprehensive repair and maintenance services to quickly repair your RV and get you back on the road or to provide comprehensive maintenance to prevent issues.",
+          "11 Hock Rd, Bloomsburg, PA 17815",
+          "Our certified RV motorhome technicians are equipped to handle all major engine brands and models"
+        ]
+      }
+    },
+    {
+      "n": "Immaculate Kinetics",
+      "c": "Danville and Montour County, PA",
+      "p": "(570) 293-1966",
+      "u": "https://immaculatekinetics.com/Services/RV-and-Motorhome-Repair-and-Maintenance",
+      "t": "center",
+      "e": false,
+      "r": true,
+      "d": "Immaculate Kinetics is a locally owned Danville shop with ASE-certified technicians that advertises RV and motorhome repair across Central Pennsylvania. Its RV service covers engine, transmission, brake, cooling and suspension work on motorhome chassis and drivetrains, and it says its RV offering is growing with demand. The company also specializes in Roush CleanTech alternative fuel systems and Safety Vision surveillance for commercial vehicles.",
+      "g": [
+        "service center",
+        "chassis",
+        "drivetrain"
+      ],
+      "base": "Danville",
+      "areas": [],
+      "region": "Central Pennsylvania",
+      "spec": "Roush CleanTech alternative fuel systems and Safety Vision surveillance",
+      "evidence": {
+        "phone_quote": "(570) 293-1966",
+        "type_quote": "Immaculate Kinetics provides RV and motorhome repair for customers throughout Central Pennsylvania.",
+        "emergency_quote": null,
+        "roadside_quote": "Our ASE-certified technicians handle the mechanical systems RV owners depend on most, including engine, transmission, brake, cooling, suspension, and other core service needs that keep coaches safe and road-ready.",
+        "coverage_quotes": [
+          "Immaculate Kinetics provides RV and motorhome repair for customers throughout Central Pennsylvania.",
+          "1966 Montour Blvd, Danville , PA 17821",
+          "Immaculate Kinetics is a locally owned Danville PA company that offers ASE Certified technicians in central PA and a wide range of commercial vehicle repair services"
+        ]
+      }
+    },
+    {
+      "n": "Ritz-Trans Corporation of PA, Inc.",
+      "c": "Mifflinburg and Union County, PA",
+      "p": "570-966-5140",
+      "u": "https://ritz-transperformance.com/rvs-and-campers/",
+      "t": "center",
+      "e": false,
+      "r": true,
+      "d": "Ritz-Trans Corporation of PA runs a trucking and auto service shop on Chestnut Street in Mifflinburg. Its RV and camper service includes brake inspection and replacement, tire mounting, balancing and inspection, PA state inspections, oil changes for gas and diesel motorhomes, and diagnostics. It advertises keeping RVs serviced rather than stranded.",
+      "g": [
+        "service center",
+        "chassis",
+        "tires"
+      ],
+      "base": "Mifflinburg",
+      "areas": [],
+      "region": "Union County",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "570-966-5140",
+        "type_quote": "RV & Camper Repair | Ritz Trans Mifflinburg, PA",
+        "emergency_quote": null,
+        "roadside_quote": "We inspect, service, and replace brake components to give you full stopping power and peace of mind.",
+        "coverage_quotes": [
+          "Ritz-Trans Corporation of PA, Inc. Trucking and Auto Service 1001 Chestnut Street Mifflinburg, PA 17844",
+          "We handle both gas and diesel RVs with the proper fluids and filters."
+        ]
       }
     }
   ]
