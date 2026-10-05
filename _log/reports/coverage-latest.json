@@ -1,288 +1,27 @@
 {
   "site": "sc-domain:originrv.com",
-  "generated": "2026-10-03T00:11:07",
+  "generated": "2026-10-05T09:10:37",
   "urls": [
     {
       "url": "https://originrv.com/",
       "coverageState": "Submitted and indexed",
       "verdict": "PASS",
-      "lastCrawlTime": "2026-09-23T21:25:21Z",
+      "lastCrawlTime": "2026-10-04T11:50:51Z",
       "googleCanonical": "https://originrv.com/",
       "userCanonical": "https://originrv.com/",
       "robotsTxtState": "ALLOWED"
     },
     {
-      "url": "https://originrv.com/about.html",
+      "url": "https://originrv.com/about",
       "coverageState": "Submitted and indexed",
       "verdict": "PASS",
-      "lastCrawlTime": "2026-09-22T09:22:50Z",
-      "googleCanonical": "https://originrv.com/about.html",
-      "userCanonical": "https://originrv.com/about.html",
+      "lastCrawlTime": "2026-10-05T13:53:53Z",
+      "googleCanonical": "https://originrv.com/about",
+      "userCanonical": "https://originrv.com/about",
       "robotsTxtState": "ALLOWED"
     },
     {
-      "url": "https://originrv.com/contact.html",
-      "coverageState": "Submitted and indexed",
-      "verdict": "PASS",
-      "lastCrawlTime": "2026-09-23T18:28:47Z",
-      "googleCanonical": "https://originrv.com/contact.html",
-      "userCanonical": "https://originrv.com/contact.html",
-      "robotsTxtState": "ALLOWED"
-    },
-    {
-      "url": "https://originrv.com/directory/arizona.html",
-      "coverageState": "URL is unknown to Google",
-      "verdict": "NEUTRAL",
-      "lastCrawlTime": "",
-      "googleCanonical": "",
-      "userCanonical": "",
-      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
-    },
-    {
-      "url": "https://originrv.com/directory/california.html",
-      "coverageState": "URL is unknown to Google",
-      "verdict": "NEUTRAL",
-      "lastCrawlTime": "",
-      "googleCanonical": "",
-      "userCanonical": "",
-      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
-    },
-    {
-      "url": "https://originrv.com/directory/colorado.html",
-      "coverageState": "URL is unknown to Google",
-      "verdict": "NEUTRAL",
-      "lastCrawlTime": "",
-      "googleCanonical": "",
-      "userCanonical": "",
-      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
-    },
-    {
-      "url": "https://originrv.com/directory/idaho.html",
-      "coverageState": "URL is unknown to Google",
-      "verdict": "NEUTRAL",
-      "lastCrawlTime": "",
-      "googleCanonical": "",
-      "userCanonical": "",
-      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
-    },
-    {
-      "url": "https://originrv.com/directory/index.html",
-      "coverageState": "URL is unknown to Google",
-      "verdict": "NEUTRAL",
-      "lastCrawlTime": "",
-      "googleCanonical": "",
-      "userCanonical": "",
-      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
-    },
-    {
-      "url": "https://originrv.com/directory/montana.html",
-      "coverageState": "URL is unknown to Google",
-      "verdict": "NEUTRAL",
-      "lastCrawlTime": "",
-      "googleCanonical": "",
-      "userCanonical": "",
-      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
-    },
-    {
-      "url": "https://originrv.com/directory/nevada.html",
-      "coverageState": "URL is unknown to Google",
-      "verdict": "NEUTRAL",
-      "lastCrawlTime": "",
-      "googleCanonical": "",
-      "userCanonical": "",
-      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
-    },
-    {
-      "url": "https://originrv.com/directory/newmexico.html",
-      "coverageState": "URL is unknown to Google",
-      "verdict": "NEUTRAL",
-      "lastCrawlTime": "",
-      "googleCanonical": "",
-      "userCanonical": "",
-      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
-    },
-    {
-      "url": "https://originrv.com/directory/oregon.html",
-      "coverageState": "Submitted and indexed",
-      "verdict": "PASS",
-      "lastCrawlTime": "2026-09-22T00:52:13Z",
-      "googleCanonical": "https://originrv.com/directory/oregon.html",
-      "userCanonical": "https://originrv.com/directory/oregon.html",
-      "robotsTxtState": "ALLOWED"
-    },
-    {
-      "url": "https://originrv.com/directory/texas.html",
-      "coverageState": "URL is unknown to Google",
-      "verdict": "NEUTRAL",
-      "lastCrawlTime": "",
-      "googleCanonical": "",
-      "userCanonical": "",
-      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
-    },
-    {
-      "url": "https://originrv.com/directory/utah.html",
-      "coverageState": "URL is unknown to Google",
-      "verdict": "NEUTRAL",
-      "lastCrawlTime": "",
-      "googleCanonical": "",
-      "userCanonical": "",
-      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
-    },
-    {
-      "url": "https://originrv.com/directory/washington.html",
-      "coverageState": "Submitted and indexed",
-      "verdict": "PASS",
-      "lastCrawlTime": "2026-09-21T23:08:50Z",
-      "googleCanonical": "https://originrv.com/directory/washington.html",
-      "userCanonical": "https://originrv.com/directory/washington.html",
-      "robotsTxtState": "ALLOWED"
-    },
-    {
-      "url": "https://originrv.com/directory/wyoming.html",
-      "coverageState": "URL is unknown to Google",
-      "verdict": "NEUTRAL",
-      "lastCrawlTime": "",
-      "googleCanonical": "",
-      "userCanonical": "",
-      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
-    },
-    {
-      "url": "https://originrv.com/guides/battery-winter-storage.html",
-      "coverageState": "Submitted and indexed",
-      "verdict": "PASS",
-      "lastCrawlTime": "2026-09-23T15:43:55Z",
-      "googleCanonical": "https://originrv.com/guides/battery-winter-storage.html",
-      "userCanonical": "https://originrv.com/guides/battery-winter-storage.html",
-      "robotsTxtState": "ALLOWED"
-    },
-    {
-      "url": "https://originrv.com/guides/freeze-damage-triage.html",
-      "coverageState": "URL is unknown to Google",
-      "verdict": "NEUTRAL",
-      "lastCrawlTime": "",
-      "googleCanonical": "",
-      "userCanonical": "",
-      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
-    },
-    {
-      "url": "https://originrv.com/guides/index.html",
-      "coverageState": "URL is unknown to Google",
-      "verdict": "NEUTRAL",
-      "lastCrawlTime": "",
-      "googleCanonical": "",
-      "userCanonical": "",
-      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
-    },
-    {
-      "url": "https://originrv.com/guides/roof-snow-load.html",
-      "coverageState": "Submitted and indexed",
-      "verdict": "PASS",
-      "lastCrawlTime": "2026-09-22T05:34:16Z",
-      "googleCanonical": "https://originrv.com/guides/roof-snow-load.html",
-      "userCanonical": "https://originrv.com/guides/roof-snow-load.html",
-      "robotsTxtState": "ALLOWED"
-    },
-    {
-      "url": "https://originrv.com/guides/rv-12-volt-problems.html",
-      "coverageState": "Submitted and indexed",
-      "verdict": "PASS",
-      "lastCrawlTime": "2026-09-23T20:05:15Z",
-      "googleCanonical": "https://originrv.com/guides/rv-12-volt-problems.html",
-      "userCanonical": "https://originrv.com/guides/rv-12-volt-problems.html",
-      "robotsTxtState": "ALLOWED"
-    },
-    {
-      "url": "https://originrv.com/guides/rv-air-conditioner-not-cooling.html",
-      "coverageState": "URL is unknown to Google",
-      "verdict": "NEUTRAL",
-      "lastCrawlTime": "",
-      "googleCanonical": "",
-      "userCanonical": "",
-      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
-    },
-    {
-      "url": "https://originrv.com/guides/rv-battery-disconnect.html",
-      "coverageState": "URL is unknown to Google",
-      "verdict": "NEUTRAL",
-      "lastCrawlTime": "",
-      "googleCanonical": "",
-      "userCanonical": "",
-      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
-    },
-    {
-      "url": "https://originrv.com/guides/rv-battery-not-charging.html",
-      "coverageState": "URL is unknown to Google",
-      "verdict": "NEUTRAL",
-      "lastCrawlTime": "",
-      "googleCanonical": "",
-      "userCanonical": "",
-      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
-    },
-    {
-      "url": "https://originrv.com/guides/rv-condensation-inside.html",
-      "coverageState": "URL is unknown to Google",
-      "verdict": "NEUTRAL",
-      "lastCrawlTime": "",
-      "googleCanonical": "",
-      "userCanonical": "",
-      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
-    },
-    {
-      "url": "https://originrv.com/guides/rv-converter-not-charging.html",
-      "coverageState": "Submitted and indexed",
-      "verdict": "PASS",
-      "lastCrawlTime": "2026-09-23T03:37:33Z",
-      "googleCanonical": "https://originrv.com/guides/rv-converter-not-charging.html",
-      "userCanonical": "https://originrv.com/guides/rv-converter-not-charging.html",
-      "robotsTxtState": "ALLOWED"
-    },
-    {
-      "url": "https://originrv.com/guides/rv-delamination.html",
-      "coverageState": "URL is unknown to Google",
-      "verdict": "NEUTRAL",
-      "lastCrawlTime": "",
-      "googleCanonical": "",
-      "userCanonical": "",
-      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
-    },
-    {
-      "url": "https://originrv.com/guides/rv-furnace-carbon-monoxide.html",
-      "coverageState": "Submitted and indexed",
-      "verdict": "PASS",
-      "lastCrawlTime": "2026-09-29T12:34:29Z",
-      "googleCanonical": "https://originrv.com/guides/rv-furnace-carbon-monoxide.html",
-      "userCanonical": "https://originrv.com/guides/rv-furnace-carbon-monoxide.html",
-      "robotsTxtState": "ALLOWED"
-    },
-    {
-      "url": "https://originrv.com/guides/rv-furnace-not-working.html",
-      "coverageState": "Submitted and indexed",
-      "verdict": "PASS",
-      "lastCrawlTime": "2026-09-23T05:45:25Z",
-      "googleCanonical": "https://originrv.com/guides/rv-furnace-not-working.html",
-      "userCanonical": "https://originrv.com/guides/rv-furnace-not-working.html",
-      "robotsTxtState": "ALLOWED"
-    },
-    {
-      "url": "https://originrv.com/guides/rv-fuse-keeps-blowing.html",
-      "coverageState": "URL is unknown to Google",
-      "verdict": "NEUTRAL",
-      "lastCrawlTime": "",
-      "googleCanonical": "",
-      "userCanonical": "",
-      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
-    },
-    {
-      "url": "https://originrv.com/guides/rv-generator-not-charging.html",
-      "coverageState": "Submitted and indexed",
-      "verdict": "PASS",
-      "lastCrawlTime": "2026-09-23T16:08:18Z",
-      "googleCanonical": "https://originrv.com/guides/rv-generator-not-charging.html",
-      "userCanonical": "https://originrv.com/guides/rv-generator-not-charging.html",
-      "robotsTxtState": "ALLOWED"
-    },
-    {
-      "url": "https://originrv.com/guides/rv-generator-sizing.html",
+      "url": "https://originrv.com/contact",
       "coverageState": "Discovered - currently not indexed",
       "verdict": "NEUTRAL",
       "lastCrawlTime": "",
@@ -291,25 +30,16 @@
       "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
     },
     {
-      "url": "https://originrv.com/guides/rv-leveling-jacks-not-working.html",
-      "coverageState": "URL is unknown to Google",
-      "verdict": "NEUTRAL",
-      "lastCrawlTime": "",
-      "googleCanonical": "",
-      "userCanonical": "",
-      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
-    },
-    {
-      "url": "https://originrv.com/guides/rv-lights-not-working.html",
+      "url": "https://originrv.com/directory/",
       "coverageState": "Submitted and indexed",
       "verdict": "PASS",
-      "lastCrawlTime": "2026-09-23T06:45:57Z",
-      "googleCanonical": "https://originrv.com/guides/rv-lights-not-working.html",
-      "userCanonical": "https://originrv.com/guides/rv-lights-not-working.html",
+      "lastCrawlTime": "2026-09-22T01:45:34Z",
+      "googleCanonical": "https://originrv.com/directory/",
+      "userCanonical": "https://originrv.com/directory/index.html",
       "robotsTxtState": "ALLOWED"
     },
     {
-      "url": "https://originrv.com/guides/rv-macerator-toilet.html",
+      "url": "https://originrv.com/directory/alabama",
       "coverageState": "Discovered - currently not indexed",
       "verdict": "NEUTRAL",
       "lastCrawlTime": "",
@@ -318,7 +48,7 @@
       "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
     },
     {
-      "url": "https://originrv.com/guides/rv-outlets-not-working.html",
+      "url": "https://originrv.com/directory/alaska",
       "coverageState": "URL is unknown to Google",
       "verdict": "NEUTRAL",
       "lastCrawlTime": "",
@@ -327,88 +57,7 @@
       "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
     },
     {
-      "url": "https://originrv.com/guides/rv-pin-weight-and-payload.html",
-      "coverageState": "URL is unknown to Google",
-      "verdict": "NEUTRAL",
-      "lastCrawlTime": "",
-      "googleCanonical": "",
-      "userCanonical": "",
-      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
-    },
-    {
-      "url": "https://originrv.com/guides/rv-propane-furnace-wont-light.html",
-      "coverageState": "Submitted and indexed",
-      "verdict": "PASS",
-      "lastCrawlTime": "2026-09-29T17:20:37Z",
-      "googleCanonical": "https://originrv.com/guides/rv-propane-furnace-wont-light.html",
-      "userCanonical": "https://originrv.com/guides/rv-propane-furnace-wont-light.html",
-      "robotsTxtState": "ALLOWED"
-    },
-    {
-      "url": "https://originrv.com/guides/rv-refrigerator-not-cooling.html",
-      "coverageState": "URL is unknown to Google",
-      "verdict": "NEUTRAL",
-      "lastCrawlTime": "",
-      "googleCanonical": "",
-      "userCanonical": "",
-      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
-    },
-    {
-      "url": "https://originrv.com/guides/rv-roof-leak-repair.html",
-      "coverageState": "URL is unknown to Google",
-      "verdict": "NEUTRAL",
-      "lastCrawlTime": "",
-      "googleCanonical": "",
-      "userCanonical": "",
-      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
-    },
-    {
-      "url": "https://originrv.com/guides/rv-sewer-smell.html",
-      "coverageState": "URL is unknown to Google",
-      "verdict": "NEUTRAL",
-      "lastCrawlTime": "",
-      "googleCanonical": "",
-      "userCanonical": "",
-      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
-    },
-    {
-      "url": "https://originrv.com/guides/rv-slide-out-leaking.html",
-      "coverageState": "URL is unknown to Google",
-      "verdict": "NEUTRAL",
-      "lastCrawlTime": "",
-      "googleCanonical": "",
-      "userCanonical": "",
-      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
-    },
-    {
-      "url": "https://originrv.com/guides/rv-slide-out-not-working.html",
-      "coverageState": "URL is unknown to Google",
-      "verdict": "NEUTRAL",
-      "lastCrawlTime": "",
-      "googleCanonical": "",
-      "userCanonical": "",
-      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
-    },
-    {
-      "url": "https://originrv.com/guides/rv-solar-not-charging.html",
-      "coverageState": "Submitted and indexed",
-      "verdict": "PASS",
-      "lastCrawlTime": "2026-09-23T05:43:42Z",
-      "googleCanonical": "https://originrv.com/guides/rv-solar-not-charging.html",
-      "userCanonical": "https://originrv.com/guides/rv-solar-not-charging.html",
-      "robotsTxtState": "ALLOWED"
-    },
-    {
-      "url": "https://originrv.com/guides/rv-tank-sensors-reading-wrong.html",
-      "coverageState": "Submitted and indexed",
-      "verdict": "PASS",
-      "lastCrawlTime": "2026-09-23T07:30:46Z",
-      "googleCanonical": "https://originrv.com/guides/rv-tank-sensors-reading-wrong.html",
-      "userCanonical": "https://originrv.com/guides/rv-tank-sensors-reading-wrong.html",
-      "robotsTxtState": "ALLOWED"
-    },
-    {
-      "url": "https://originrv.com/guides/rv-tire-replacement.html",
+      "url": "https://originrv.com/directory/arizona",
       "coverageState": "Discovered - currently not indexed",
       "verdict": "NEUTRAL",
       "lastCrawlTime": "",
@@ -417,25 +66,7 @@
       "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
     },
     {
-      "url": "https://originrv.com/guides/rv-toilet-not-flushing.html",
-      "coverageState": "URL is unknown to Google",
-      "verdict": "NEUTRAL",
-      "lastCrawlTime": "",
-      "googleCanonical": "",
-      "userCanonical": "",
-      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
-    },
-    {
-      "url": "https://originrv.com/guides/rv-towing-capacity.html",
-      "coverageState": "URL is unknown to Google",
-      "verdict": "NEUTRAL",
-      "lastCrawlTime": "",
-      "googleCanonical": "",
-      "userCanonical": "",
-      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
-    },
-    {
-      "url": "https://originrv.com/guides/rv-trailer-wheel-bearings.html",
+      "url": "https://originrv.com/directory/arkansas",
       "coverageState": "Discovered - currently not indexed",
       "verdict": "NEUTRAL",
       "lastCrawlTime": "",
@@ -444,25 +75,25 @@
       "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
     },
     {
-      "url": "https://originrv.com/guides/rv-two-appliances-stopped.html",
-      "coverageState": "Submitted and indexed",
-      "verdict": "PASS",
-      "lastCrawlTime": "2026-09-29T13:34:48Z",
-      "googleCanonical": "https://originrv.com/guides/rv-two-appliances-stopped.html",
-      "userCanonical": "https://originrv.com/guides/rv-two-appliances-stopped.html",
-      "robotsTxtState": "ALLOWED"
+      "url": "https://originrv.com/directory/california",
+      "coverageState": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
     },
     {
-      "url": "https://originrv.com/guides/rv-water-heater-not-heating.html",
-      "coverageState": "Submitted and indexed",
-      "verdict": "PASS",
-      "lastCrawlTime": "2026-09-29T05:53:11Z",
-      "googleCanonical": "https://originrv.com/guides/rv-water-heater-not-heating.html",
-      "userCanonical": "https://originrv.com/guides/rv-water-heater-not-heating.html",
-      "robotsTxtState": "ALLOWED"
+      "url": "https://originrv.com/directory/colorado",
+      "coverageState": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
     },
     {
-      "url": "https://originrv.com/guides/rv-water-pump-wont-prime.html",
+      "url": "https://originrv.com/directory/connecticut",
       "coverageState": "URL is unknown to Google",
       "verdict": "NEUTRAL",
       "lastCrawlTime": "",
@@ -471,16 +102,7 @@
       "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
     },
     {
-      "url": "https://originrv.com/guides/tires-winter.html",
-      "coverageState": "Submitted and indexed",
-      "verdict": "PASS",
-      "lastCrawlTime": "2026-09-22T08:39:51Z",
-      "googleCanonical": "https://originrv.com/guides/tires-winter.html",
-      "userCanonical": "https://originrv.com/guides/tires-winter.html",
-      "robotsTxtState": "ALLOWED"
-    },
-    {
-      "url": "https://originrv.com/guides/trailer-brakes-required.html",
+      "url": "https://originrv.com/directory/delaware",
       "coverageState": "URL is unknown to Google",
       "verdict": "NEUTRAL",
       "lastCrawlTime": "",
@@ -489,25 +111,34 @@
       "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
     },
     {
-      "url": "https://originrv.com/guides/winterize-plumbing.html",
-      "coverageState": "Submitted and indexed",
-      "verdict": "PASS",
-      "lastCrawlTime": "2026-09-22T01:02:21Z",
-      "googleCanonical": "https://originrv.com/guides/winterize-plumbing.html",
-      "userCanonical": "https://originrv.com/guides/winterize-plumbing.html",
-      "robotsTxtState": "ALLOWED"
+      "url": "https://originrv.com/directory/florida",
+      "coverageState": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
     },
     {
-      "url": "https://originrv.com/manuals/brands.html",
-      "coverageState": "Submitted and indexed",
-      "verdict": "PASS",
-      "lastCrawlTime": "2026-09-23T06:40:20Z",
-      "googleCanonical": "https://originrv.com/manuals/brands.html",
-      "userCanonical": "https://originrv.com/manuals/brands.html",
-      "robotsTxtState": "ALLOWED"
+      "url": "https://originrv.com/directory/georgia",
+      "coverageState": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
     },
     {
-      "url": "https://originrv.com/manuals/chassis-and-drivetrain.html",
+      "url": "https://originrv.com/directory/hawaii",
+      "coverageState": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/directory/idaho",
       "coverageState": "URL is unknown to Google",
       "verdict": "NEUTRAL",
       "lastCrawlTime": "",
@@ -516,16 +147,16 @@
       "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
     },
     {
-      "url": "https://originrv.com/manuals/exterior-and-body.html",
-      "coverageState": "Submitted and indexed",
-      "verdict": "PASS",
-      "lastCrawlTime": "2026-09-23T21:51:44Z",
-      "googleCanonical": "https://originrv.com/manuals/exterior-and-body.html",
-      "userCanonical": "https://originrv.com/manuals/exterior-and-body.html",
-      "robotsTxtState": "ALLOWED"
+      "url": "https://originrv.com/directory/illinois",
+      "coverageState": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
     },
     {
-      "url": "https://originrv.com/manuals/heating-and-cooling.html",
+      "url": "https://originrv.com/directory/indiana",
       "coverageState": "URL is unknown to Google",
       "verdict": "NEUTRAL",
       "lastCrawlTime": "",
@@ -534,16 +165,43 @@
       "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
     },
     {
-      "url": "https://originrv.com/manuals/index.html",
+      "url": "https://originrv.com/directory/iowa",
       "coverageState": "Submitted and indexed",
       "verdict": "PASS",
-      "lastCrawlTime": "2026-09-23T16:14:24Z",
-      "googleCanonical": "https://originrv.com/manuals/index.html",
-      "userCanonical": "https://originrv.com/manuals/index.html",
+      "lastCrawlTime": "2026-10-05T13:59:52Z",
+      "googleCanonical": "https://originrv.com/directory/iowa",
+      "userCanonical": "https://originrv.com/directory/iowa",
       "robotsTxtState": "ALLOWED"
     },
     {
-      "url": "https://originrv.com/manuals/kitchen-and-appliances.html",
+      "url": "https://originrv.com/directory/kansas",
+      "coverageState": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/directory/kentucky",
+      "coverageState": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/directory/louisiana",
+      "coverageState": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/directory/maine",
       "coverageState": "URL is unknown to Google",
       "verdict": "NEUTRAL",
       "lastCrawlTime": "",
@@ -552,34 +210,43 @@
       "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
     },
     {
-      "url": "https://originrv.com/manuals/power-and-electrical.html",
-      "coverageState": "Submitted and indexed",
-      "verdict": "PASS",
-      "lastCrawlTime": "2026-09-23T07:22:54Z",
-      "googleCanonical": "https://originrv.com/manuals/power-and-electrical.html",
-      "userCanonical": "https://originrv.com/manuals/power-and-electrical.html",
-      "robotsTxtState": "ALLOWED"
+      "url": "https://originrv.com/directory/maryland",
+      "coverageState": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
     },
     {
-      "url": "https://originrv.com/manuals/recalls.html",
-      "coverageState": "Submitted and indexed",
-      "verdict": "PASS",
-      "lastCrawlTime": "2026-09-23T07:17:25Z",
-      "googleCanonical": "https://originrv.com/manuals/recalls.html",
-      "userCanonical": "https://originrv.com/manuals/recalls.html",
-      "robotsTxtState": "ALLOWED"
+      "url": "https://originrv.com/directory/massachusetts",
+      "coverageState": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
     },
     {
-      "url": "https://originrv.com/manuals/sanitation-and-tanks.html",
-      "coverageState": "Submitted and indexed",
-      "verdict": "PASS",
-      "lastCrawlTime": "2026-09-23T18:29:54Z",
-      "googleCanonical": "https://originrv.com/manuals/sanitation-and-tanks.html",
-      "userCanonical": "https://originrv.com/manuals/sanitation-and-tanks.html",
-      "robotsTxtState": "ALLOWED"
+      "url": "https://originrv.com/directory/michigan",
+      "coverageState": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
     },
     {
-      "url": "https://originrv.com/manuals/start-here.html",
+      "url": "https://originrv.com/directory/minnesota",
+      "coverageState": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/directory/mississippi",
       "coverageState": "URL is unknown to Google",
       "verdict": "NEUTRAL",
       "lastCrawlTime": "",
@@ -588,25 +255,43 @@
       "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
     },
     {
-      "url": "https://originrv.com/manuals/towing-and-running-gear.html",
-      "coverageState": "Submitted and indexed",
-      "verdict": "PASS",
-      "lastCrawlTime": "2026-09-23T06:48:42Z",
-      "googleCanonical": "https://originrv.com/manuals/towing-and-running-gear.html",
-      "userCanonical": "https://originrv.com/manuals/towing-and-running-gear.html",
-      "robotsTxtState": "ALLOWED"
+      "url": "https://originrv.com/directory/missouri",
+      "coverageState": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
     },
     {
-      "url": "https://originrv.com/manuals/water-and-plumbing.html",
-      "coverageState": "Submitted and indexed",
-      "verdict": "PASS",
-      "lastCrawlTime": "2026-09-23T18:31:38Z",
-      "googleCanonical": "https://originrv.com/manuals/water-and-plumbing.html",
-      "userCanonical": "https://originrv.com/manuals/water-and-plumbing.html",
-      "robotsTxtState": "ALLOWED"
+      "url": "https://originrv.com/directory/montana",
+      "coverageState": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
     },
     {
-      "url": "https://originrv.com/tools/index.html",
+      "url": "https://originrv.com/directory/nebraska",
+      "coverageState": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/directory/nevada",
+      "coverageState": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/directory/newhampshire",
       "coverageState": "URL is unknown to Google",
       "verdict": "NEUTRAL",
       "lastCrawlTime": "",
@@ -615,7 +300,34 @@
       "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
     },
     {
-      "url": "https://originrv.com/tools/tire-date-code.html",
+      "url": "https://originrv.com/directory/newjersey",
+      "coverageState": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/directory/newmexico",
+      "coverageState": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/directory/newyork",
+      "coverageState": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/directory/northcarolina",
       "coverageState": "URL is unknown to Google",
       "verdict": "NEUTRAL",
       "lastCrawlTime": "",
@@ -624,13 +336,724 @@
       "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
     },
     {
-      "url": "https://originrv.com/tools/weight-calculator.html",
+      "url": "https://originrv.com/directory/northdakota",
+      "coverageState": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/directory/ohio",
+      "coverageState": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/directory/oklahoma",
+      "coverageState": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/directory/oregon",
+      "coverageState": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/directory/pennsylvania",
+      "coverageState": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/directory/rhodeisland",
+      "coverageState": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/directory/southcarolina",
+      "coverageState": "URL is unknown to Google",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/directory/southdakota",
+      "coverageState": "URL is unknown to Google",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/directory/tennessee",
       "coverageState": "Submitted and indexed",
       "verdict": "PASS",
-      "lastCrawlTime": "2026-09-22T00:27:32Z",
-      "googleCanonical": "https://originrv.com/tools/weight-calculator.html",
-      "userCanonical": "https://originrv.com/tools/weight-calculator.html",
+      "lastCrawlTime": "2026-10-05T13:53:35Z",
+      "googleCanonical": "https://originrv.com/directory/tennessee",
+      "userCanonical": "https://originrv.com/directory/tennessee",
       "robotsTxtState": "ALLOWED"
+    },
+    {
+      "url": "https://originrv.com/directory/texas",
+      "coverageState": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/directory/utah",
+      "coverageState": "URL is unknown to Google",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/directory/vermont",
+      "coverageState": "URL is unknown to Google",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/directory/virginia",
+      "coverageState": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/directory/washington",
+      "coverageState": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/directory/westvirginia",
+      "coverageState": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/directory/wisconsin",
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-10-05T13:45:08Z",
+      "googleCanonical": "https://originrv.com/directory/wisconsin",
+      "userCanonical": "https://originrv.com/directory/wisconsin",
+      "robotsTxtState": "ALLOWED"
+    },
+    {
+      "url": "https://originrv.com/directory/wyoming",
+      "coverageState": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/guides/",
+      "coverageState": "URL is unknown to Google",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/guides/battery-winter-storage",
+      "coverageState": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/guides/freeze-damage-triage",
+      "coverageState": "URL is unknown to Google",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/guides/roof-snow-load",
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-10-05T14:18:07Z",
+      "googleCanonical": "https://originrv.com/guides/roof-snow-load",
+      "userCanonical": "https://originrv.com/guides/roof-snow-load",
+      "robotsTxtState": "ALLOWED"
+    },
+    {
+      "url": "https://originrv.com/guides/rv-12-volt-problems",
+      "coverageState": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/guides/rv-air-conditioner-not-cooling",
+      "coverageState": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/guides/rv-battery-disconnect",
+      "coverageState": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/guides/rv-battery-not-charging",
+      "coverageState": "URL is unknown to Google",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/guides/rv-condensation-inside",
+      "coverageState": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/guides/rv-converter-not-charging",
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-10-05T13:31:56Z",
+      "googleCanonical": "https://originrv.com/guides/rv-converter-not-charging",
+      "userCanonical": "https://originrv.com/guides/rv-converter-not-charging",
+      "robotsTxtState": "ALLOWED"
+    },
+    {
+      "url": "https://originrv.com/guides/rv-delamination",
+      "coverageState": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/guides/rv-furnace-carbon-monoxide",
+      "coverageState": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/guides/rv-furnace-not-working",
+      "coverageState": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/guides/rv-fuse-keeps-blowing",
+      "coverageState": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/guides/rv-generator-not-charging",
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-10-05T15:00:37Z",
+      "googleCanonical": "https://originrv.com/guides/rv-generator-not-charging",
+      "userCanonical": "https://originrv.com/guides/rv-generator-not-charging",
+      "robotsTxtState": "ALLOWED"
+    },
+    {
+      "url": "https://originrv.com/guides/rv-generator-sizing",
+      "coverageState": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/guides/rv-leveling-jacks-not-working",
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-10-05T13:56:22Z",
+      "googleCanonical": "https://originrv.com/guides/rv-leveling-jacks-not-working",
+      "userCanonical": "https://originrv.com/guides/rv-leveling-jacks-not-working",
+      "robotsTxtState": "ALLOWED"
+    },
+    {
+      "url": "https://originrv.com/guides/rv-lights-not-working",
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-10-05T13:32:10Z",
+      "googleCanonical": "https://originrv.com/guides/rv-lights-not-working",
+      "userCanonical": "https://originrv.com/guides/rv-lights-not-working",
+      "robotsTxtState": "ALLOWED"
+    },
+    {
+      "url": "https://originrv.com/guides/rv-macerator-toilet",
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-10-05T13:49:46Z",
+      "googleCanonical": "https://originrv.com/guides/rv-macerator-toilet",
+      "userCanonical": "https://originrv.com/guides/rv-macerator-toilet",
+      "robotsTxtState": "ALLOWED"
+    },
+    {
+      "url": "https://originrv.com/guides/rv-outlets-not-working",
+      "coverageState": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/guides/rv-pin-weight-and-payload",
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-10-05T15:03:26Z",
+      "googleCanonical": "https://originrv.com/guides/rv-pin-weight-and-payload",
+      "userCanonical": "",
+      "robotsTxtState": "ALLOWED"
+    },
+    {
+      "url": "https://originrv.com/guides/rv-propane-furnace-wont-light",
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-10-05T13:24:13Z",
+      "googleCanonical": "https://originrv.com/guides/rv-propane-furnace-wont-light",
+      "userCanonical": "https://originrv.com/guides/rv-propane-furnace-wont-light",
+      "robotsTxtState": "ALLOWED"
+    },
+    {
+      "url": "https://originrv.com/guides/rv-refrigerator-not-cooling",
+      "coverageState": "URL is unknown to Google",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/guides/rv-roof-leak-repair",
+      "coverageState": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/guides/rv-sewer-smell",
+      "coverageState": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/guides/rv-slide-out-leaking",
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-10-05T13:33:45Z",
+      "googleCanonical": "https://originrv.com/guides/rv-slide-out-leaking",
+      "userCanonical": "https://originrv.com/guides/rv-slide-out-leaking",
+      "robotsTxtState": "ALLOWED"
+    },
+    {
+      "url": "https://originrv.com/guides/rv-slide-out-not-working",
+      "coverageState": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/guides/rv-solar-not-charging",
+      "coverageState": "URL is unknown to Google",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/guides/rv-tank-sensors-reading-wrong",
+      "coverageState": "URL is unknown to Google",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/guides/rv-tire-replacement",
+      "coverageState": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/guides/rv-toilet-not-flushing",
+      "coverageState": "URL is unknown to Google",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/guides/rv-towing-capacity",
+      "coverageState": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/guides/rv-trailer-wheel-bearings",
+      "coverageState": "URL is unknown to Google",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/guides/rv-trip-planner",
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-10-05T13:29:03Z",
+      "googleCanonical": "https://originrv.com/guides/rv-trip-planner",
+      "userCanonical": "https://originrv.com/guides/rv-trip-planner",
+      "robotsTxtState": "ALLOWED"
+    },
+    {
+      "url": "https://originrv.com/guides/rv-two-appliances-stopped",
+      "coverageState": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/guides/rv-water-heater-not-heating",
+      "coverageState": "URL is unknown to Google",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/guides/rv-water-pump-wont-prime",
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-10-05T13:51:00Z",
+      "googleCanonical": "https://originrv.com/guides/rv-water-pump-wont-prime",
+      "userCanonical": "https://originrv.com/guides/rv-water-pump-wont-prime",
+      "robotsTxtState": "ALLOWED"
+    },
+    {
+      "url": "https://originrv.com/guides/tires-winter",
+      "coverageState": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/guides/trailer-brakes-required",
+      "coverageState": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/guides/winterize-plumbing",
+      "coverageState": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/manuals/",
+      "coverageState": "URL is unknown to Google",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/manuals/brands",
+      "coverageState": "URL is unknown to Google",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/manuals/chassis-and-drivetrain",
+      "coverageState": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/manuals/exterior-and-body",
+      "coverageState": "URL is unknown to Google",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/manuals/heating-and-cooling",
+      "coverageState": "URL is unknown to Google",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/manuals/kitchen-and-appliances",
+      "coverageState": "URL is unknown to Google",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/manuals/power-and-electrical",
+      "coverageState": "URL is unknown to Google",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/manuals/recalls",
+      "coverageState": "URL is unknown to Google",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/manuals/sanitation-and-tanks",
+      "coverageState": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/manuals/start-here",
+      "coverageState": "URL is unknown to Google",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/manuals/towing-and-running-gear",
+      "coverageState": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/manuals/water-and-plumbing",
+      "coverageState": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/parts/",
+      "coverageState": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/tools/",
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-10-05T13:54:55Z",
+      "googleCanonical": "https://originrv.com/tools/",
+      "userCanonical": "https://originrv.com/tools/",
+      "robotsTxtState": "ALLOWED"
+    },
+    {
+      "url": "https://originrv.com/tools/",
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-10-05T13:54:55Z",
+      "googleCanonical": "https://originrv.com/tools/",
+      "userCanonical": "https://originrv.com/tools/",
+      "robotsTxtState": "ALLOWED"
+    },
+    {
+      "url": "https://originrv.com/tools/battery-runtime",
+      "coverageState": "URL is unknown to Google",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/tools/fuel-cost",
+      "coverageState": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/tools/rv-loan",
+      "coverageState": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/tools/snow-load",
+      "coverageState": "URL is unknown to Google",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/tools/solar-sizing",
+      "coverageState": "URL is unknown to Google",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/tools/tire-date-code",
+      "coverageState": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/tools/watts-to-amps",
+      "coverageState": "URL is unknown to Google",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/tools/weight-calculator",
+      "coverageState": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
     }
   ]
 }
