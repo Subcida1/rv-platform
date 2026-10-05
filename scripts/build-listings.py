@@ -255,7 +255,7 @@ def schema_text(data, slug):
             "name": "RV Repair in %s" % state,
             "description": ("Find RV repair in %s: mobile technicians, service centers and "
                             "roadside help." % state),
-            "url": "%s/directory/%s.html" % (SITE, slug),
+            "url": "%s/directory/%s" % (SITE, slug),
             "isPartOf": {"@type": "WebSite", "name": "OriginRV", "url": SITE + "/"},
             "about": {"@type": "Thing", "name": about},
             "mainEntity": {"@type": "ItemList", "numberOfItems": len(elements),
@@ -266,7 +266,7 @@ def schema_text(data, slug):
                  {"@type": "ListItem", "position": 2, "name": "RV Repair Directory",
                   "item": SITE + "/directory/"},
                  {"@type": "ListItem", "position": 3, "name": state,
-                  "item": "%s/directory/%s.html" % (SITE, slug)}]}
+                  "item": "%s/directory/%s" % (SITE, slug)}]}
     return "\n".join('<script type="application/ld+json">%s</script>' % jld(b)
                      for b in (page, crumb))
 
@@ -458,14 +458,14 @@ def build(kind):
             "name": "RV Repair Directory by State",
             "description": ("RV repair directory organized by state: mobile technicians, "
                             "service centers, and emergency roadside help."),
-            "url": "%s/directory/index.html" % SITE,
+            "url": "%s/directory/" % SITE,
             "isPartOf": {"@type": "WebSite", "name": "OriginRV", "url": SITE + "/"},
             "about": {"@type": "Thing", "name": "RV repair directory"},
             "mainEntity": {"@type": "ItemList", "numberOfItems": len(PAGES),
                            "itemListElement": [
                                {"@type": "ListItem", "position": i,
                                 "name": "RV Repair in %s" % state_name[slug],
-                                "url": "%s/directory/%s.html" % (SITE, slug)}
+                                "url": "%s/directory/%s" % (SITE, slug)}
                                for i, slug in enumerate(sorted(PAGES), 1)]}}),
         '<script type="application/ld+json">%s</script>' % jld({
             "@context": "https://schema.org", "@type": "BreadcrumbList",

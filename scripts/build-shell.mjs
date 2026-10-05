@@ -157,11 +157,11 @@ function breadcrumbFor(rel, html) {
   const slug = rel.replace(/^guides\//, '').replace(/\.html$/, '');
   const isGuide = rel.startsWith('guides/') && rel !== 'guides/index.html';
 
-  if (isGuide) crumbs.push({ name: 'Guides', href: '/guides/index.html' });
-  else if (rel.startsWith('manuals/') && rel !== 'manuals/index.html') crumbs.push({ name: 'Manuals', href: '/manuals/index.html' });
-  else if (rel.startsWith('directory/') && rel !== 'directory/index.html') crumbs.push({ name: 'Directory', href: '/directory/index.html' });
-  else if (rel.startsWith('tools/') && rel !== 'tools/index.html') crumbs.push({ name: 'Tools', href: '/tools/index.html' });
-  else if (rel.startsWith('parts/') && rel !== 'parts/index.html') crumbs.push({ name: 'Parts', href: '/parts/index.html' });
+  if (isGuide) crumbs.push({ name: 'Guides', href: '/guides/' });
+  else if (rel.startsWith('manuals/') && rel !== 'manuals/index.html') crumbs.push({ name: 'Manuals', href: '/manuals/' });
+  else if (rel.startsWith('directory/') && rel !== 'directory/index.html') crumbs.push({ name: 'Directory', href: '/directory/' });
+  else if (rel.startsWith('tools/') && rel !== 'tools/index.html') crumbs.push({ name: 'Tools', href: '/tools/' });
+  else if (rel.startsWith('parts/') && rel !== 'parts/index.html') crumbs.push({ name: 'Parts', href: '/parts/' });
 
   const sys = systems && isGuide ? systems.guides[slug] : null;
   if (sys && systems.systems[sys]) {
@@ -186,13 +186,19 @@ function breadcrumbFor(rel, html) {
     : '<span>' + esc(c.name) + '</span>').join('<span class="sep" aria-hidden="true">/</span>');
 
   const base = 'https://originrv.com/';
+  // The page's own published URL, not its file name (2026-10-04). `rel` is the file on disk --
+  // guides/battery-winter-storage.html -- and the breadcrumb JSON-LD was emitting it verbatim,
+  // so 43 guide pages carried a .html URL in their structured data after the site went
+  // extensionless. Same rule as scripts/site_constants.py:pretty_url, in JS because this runs
+  // in node; the gate that would have caught it is clean-urls.py --check.
+  const pretty = (p) => String(p).replace(/\/index\.html$/, '/').replace(/\.html$/, '');
   // A crumb with no page of its own (the system heading, and the current page) carries no `item`.
   // The schema wants the item to be that crumb's own URL, and pointing two crumbs at the same page
   // describes a trail that is not there.
   const ldCrumbs = crumbs.map((c, i) => {
     const entry = { '@type': 'ListItem', position: i + 1, name: c.name };
-    if (c.href) entry.item = base + c.href.replace(/^\//, '');
-    else if (i === crumbs.length - 1) entry.item = base + rel;
+    if (c.href) entry.item = base + pretty(c.href).replace(/^\//, '');
+    else if (i === crumbs.length - 1) entry.item = base + pretty(rel);
     return entry;
   });
   const ld = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: ldCrumbs };

@@ -268,3 +268,64 @@ def state_shards():
         if code:
             out[code.lower()] = f.stem
     return out
+
+
+def pretty_url(path):
+    """The published form of one of our own paths.
+
+        'directory/index.html'  -> 'directory/'
+        'directory/montana.html' -> 'directory/montana'
+        'index.html'             -> '/'
+
+    GitHub Pages serves /directory/montana from montana.html and /directory/ from
+    directory/index.html, so the extension was never required in the address and naming it
+    published the uglier form as canonical. Generators build URLs from file names, which is
+    exactly why the .html kept coming back; they call this instead of writing the name out.
+    Sweep and gate: scripts/clean-urls.py.
+    """
+    if path.endswith("/index.html"):
+        return path[: -len("index.html")]
+    if path == "index.html":
+        return "/"
+    if path.endswith(".html"):
+        return path[:-5]
+    return path
+
+
+# Every place a URL we own appears in generated markup: an attribute, a JSON-LD key, or a
+# sitemap <loc>. The url is the named group; whatever surrounds it is put back untouched.
+_SITE = "https://originrv.com"
+_URL_SPOTS = re.compile(
+    r'(?P<pre>(?:href|content)="|"(?:url|item|@id)"\s*:\s*"|<loc>)'
+    r'(?P<url>[^"<>\s]+)(?P<post>"|</loc>)')
+
+# Pages whose file name IS their address, so the .html stays.
+_URL_KEEP = {"404.html", "signin.html"}
+
+
+def pretty_urls_in_html(text):
+    """Rewrite every URL we own in generated markup to its published form.
+
+    Generators build pages by string formatting FROM FILE NAMES -- `href="/guides/%s.html"` --
+    which is why the .html form kept coming back after the site went extensionless on
+    2026-10-04. Three of them (the manuals pages, the parts hub, the guides index) carried a
+    dozen such literals each; correcting the literals one at a time leaves the next template to
+    whoever writes it. Applying the transform once, at the write, means a generator added
+    tomorrow is right by default. Outbound links, 404.html and signin.html are left alone.
+    The sweep and the gate for hand-written pages are in scripts/clean-urls.py.
+    """
+    def one(m):
+        url = m.group("url")
+        if ".html" not in url:
+            return m.group(0)
+        head = url.split("#")[0].split("?")[0]
+        if head.startswith(("http://", "https://")):
+            if not head.startswith(_SITE + "/"):
+                return m.group(0)
+        elif head.startswith(("//", "mailto:", "tel:", "data:", "javascript:")):
+            return m.group(0)
+        if head.rsplit("/", 1)[-1] in _URL_KEEP:
+            return m.group(0)
+        return m.group("pre") + pretty_url(head) + url[len(head):] + m.group("post")
+
+    return _URL_SPOTS.sub(one, text)

@@ -72,7 +72,14 @@ def main():
     # THE CHECKOUT BOUNDARY. Letta keeps agent worktrees under .letta/worktrees/, each a full copy
     # of this repository, so an unbounded rglob stamped 149 pages instead of 74 -- it was rewriting
     # another agent's checkout. Found 2026-10-04.
-    for page in sorted(p for p in ROOT.rglob('*.html') if not (SKIP_PARTS & set(p.parts))):
+    #
+    # THE TEST IS ON RELATIVE PARTS (same day, second pass). Against the absolute path, this
+    # filter also matched the worktree's OWN files, because the worktree's absolute path
+    # contains ".letta" -- so inside an agent worktree the stamp silently processed ZERO pages
+    # and reported success. A boundary test that can exclude the entire tree is the same class
+    # of defect as no boundary at all: a clean report over nothing.
+    for page in sorted(p for p in ROOT.rglob('*.html')
+                       if not (SKIP_PARTS & set(p.relative_to(ROOT).parts))):
         if '.git' in page.parts:
             continue
         html = page.read_text(encoding='utf-8')

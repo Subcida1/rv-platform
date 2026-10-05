@@ -96,16 +96,21 @@ def main():
     print("\nwritten. Three structural edits are yours, and then the builders:")
     print("""
   1. directory/index.html  add a state card beside the others:
-       <a href="/directory/%s.html">Find a service<span class="sm">Mobile techs and repair centers in %s</span></a>
+       <a href="/directory/%s">Find a service<span class="sm">Mobile techs and repair centers in %s</span></a>
   2. sitemap.xml           add after the other directory entries:
-       <url><loc>%s/directory/%s.html</loc><lastmod>2026-09-28</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+       <url><loc>%s/directory/%s</loc><lastmod>2026-09-28</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   3. assets/js/config.js   add beside the other directory routes:
-       directory%s: 'directory/%s.html',
+       directory%s: 'directory/%s',
      and add "%s" to the routes the nav/footer use, if the state belongs there.
+
+  URLs are extensionless everywhere (2026-10-04): GitHub Pages serves /directory/x from
+  x.html, so the .html form is not the published address and must not appear in a canonical,
+  a sitemap entry or a link. scripts/clean-urls.py --check fails the build if one does.
 
   Then: python3 scripts/build-coords.py && python3 scripts/build-listings.py
         python3 scripts/build-search-index.py && node scripts/build-shell.mjs
-        python3 scripts/stamp_assets.py && bash scripts/ci.sh
+        python3 scripts/stamp_assets.py && python3 scripts/build-sitemap.py --write
+        bash scripts/ci.sh
 """ % (slug, name, SITE, slug, name.title().replace(" ", ""), slug, name))
 
 

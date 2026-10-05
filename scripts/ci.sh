@@ -40,6 +40,17 @@ step "build-coords.py --check: every listing name resolves in its own state" \
                                                python3 scripts/build-coords.py --check
 step "build-search-index.py --check: the site search index is current" \
                                                python3 scripts/build-search-index.py --check
+# Every URL we publish is extensionless (2026-10-04). GitHub Pages serves /directory/montana
+# from montana.html, so the .html form was never required and naming it published the uglier
+# address as canonical. The sweep rewrote 7,877 of them; this step is what stops them coming
+# back, because generators build URLs from file names and there are a lot of generators.
+step "clean-urls.py --check: every published URL is extensionless" \
+                                               python3 scripts/clean-urls.py --check
+# Does every record belong to the state whose file it is in? Nothing asked this before
+# 2026-10-04, when a Northeast harvest wrote its whole candidate pool into all 11 state files.
+# The gate reads the coverage text; build-coords.py --check covers the geography side.
+step "check-state-assignment.py: every listing belongs to its own state" \
+                                               python3 scripts/check-state-assignment.py
 # The parts hub is generated from _data/parts.json by scripts/build-parts-pages.py, the same
 # contract the manuals pages have: the page on disk has to be what the generator produces, or a
 # hand-edit has quietly forked it from its source.

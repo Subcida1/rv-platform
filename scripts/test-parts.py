@@ -55,8 +55,12 @@ def main():
 
     # 2. links
     guide_parts = [(s["key"], p) for s in systems for p in s["parts"] if p.get("guide")]
+    # Accept either form: the part links its guide extensionless since 2026-10-04, and demanding
+    # the .html spelling reported five correct links (jack, brake and wheel-bearing parts) as
+    # missing. Same class as the three tool links verify.py called absent.
     missing_guide = [p["n"] for _, p in guide_parts
-                     if '/guides/%s.html' % p["guide"] not in html]
+                     if not any('/guides/%s%s' % (p["guide"], ext) in html
+                                for ext in ("", ".html"))]
     check(not missing_guide,
           "every part with a guide links to it (%d parts)" % len(guide_parts)
           + (": missing %s" % missing_guide[:5] if missing_guide else ""))

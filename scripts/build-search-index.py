@@ -167,6 +167,13 @@ def main():
     """
     check = "--check" in sys.argv
     items = pages() + tools() + directories() + guides() + businesses()
+    # EXACTLY ONE PLACE PRETTIFIES A URL (2026-10-04). Seven emission sites up there build
+    # "u" from a file name, which is why the .html form kept creeping back into the search
+    # results after the site went extensionless. Normalising here instead of at each one means
+    # a new source added tomorrow cannot reintroduce it, and the rule lives in one function.
+    import site_constants as C
+    for i in items:
+        i["u"] = C.pretty_url(i["u"])
     # stable order within a category, businesses after editorial content
     order = {"Tool": 0, "Guide": 1, "Directory": 2, "Manual": 3, "Page": 4, "Business": 5}
     items.sort(key=lambda x: (order.get(x["c"], 9), x["t"].lower()))

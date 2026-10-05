@@ -108,7 +108,9 @@ def sync_itemlist():
 
     items = []
     for i, slug in enumerate(order, 1):
-        m = re.search(r'href="guides/%s\.html">.*?<div class="guide-title">([^<]+)</div>'
+        # The card href is extensionless since 2026-10-04; accept the old .html form too, so
+        # the check reads the page rather than the URL convention of the day.
+        m = re.search(r'href="guides/%s(?:\.html)?">.*?<div class="guide-title">([^<]+)</div>'
                       % re.escape(slug), html, re.S)
         if not m:
             raise SystemExit("FAIL  guides/index.html has no card for %s, so the ItemList "
@@ -119,7 +121,7 @@ def sync_itemlist():
     block = json.dumps({"@context": "https://schema.org", "@type": "ItemList",
                         "name": "RV Guides", "numberOfItems": len(items),
                         "itemListElement": items}, separators=(",", ":"))
-    new = '<script type="application/ld+json">%s</script>' % block
+    new = C.pretty_urls_in_html('<script type="application/ld+json">%s</script>' % block)
     old = re.search(r'<script type="application/ld\+json">\{"@context":"https://schema\.org",'
                     r'"@type":"ItemList","name":"RV Guides".*?</script>', html, re.S)
     if not old:

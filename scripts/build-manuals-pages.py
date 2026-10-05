@@ -1367,7 +1367,11 @@ def main():
     # Rule #11 covers everything we ship, generated pages included.
     # stamp before anything compares or writes: the asset hash belongs to the page,
     # and verify.py fails the build when a stamp is stale
-    pages = {path: pill_search(stamp_html(text)) for path, text in pages.items()}
+    # ONE CHOKE POINT for every manuals page: the URL transform runs here rather than at the
+    # ~30 href literals above, and here rather than at the write, so the --check comparison at
+    # line 1390 sees exactly what the write produces. Two places would have been one too many.
+    pages = {path: C.pretty_urls_in_html(pill_search(stamp_html(text)))
+             for path, text in pages.items()}
     for path, text in pages.items():
         for ch, name in (("\u2014", "em dash"), ("\u2013", "en dash"),
                          ("\u00b7", "middot")):

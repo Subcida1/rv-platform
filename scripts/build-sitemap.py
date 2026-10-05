@@ -71,11 +71,23 @@ def published_pages():
 
 
 def page_for_loc(loc):
-    if loc == BASE:
+    """The file on disk a sitemap loc names.
+
+    A loc is a URL, not a path (2026-10-04). GitHub Pages serves /directory/montana from
+    directory/montana.html and /directory/ from directory/index.html, so comparing the loc
+    text to a file name reported every entry as "in the sitemap but not on disk" the moment
+    the site went extensionless. Resolve to the real file when one exists; return the raw
+    text when none does, so a genuinely wrong entry is still reported.
+    """
+    if loc == BASE or loc == BASE.rstrip("/"):
         return "index.html"
     if not loc.startswith(BASE):
         return None
-    return loc[len(BASE):]
+    rel = loc[len(BASE):]
+    for candidate in (rel, rel + ".html", rel.rstrip("/") + "/index.html"):
+        if candidate and os.path.exists(os.path.join(ROOT, candidate)):
+            return candidate
+    return rel
 
 
 def last_commit_date(path):

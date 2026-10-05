@@ -44,8 +44,19 @@ SKIP_PARTS = {".git", ".letta", "node_modules"}
 
 
 def walked(pattern):
-    """Every path matching the pattern inside THIS checkout, and nothing outside it."""
-    return sorted(p for p in ROOT.rglob(pattern) if not (SKIP_PARTS & set(p.parts)))
+    """Every path matching the pattern inside THIS checkout, and nothing outside it.
+
+    THE TEST IS ON THE PATH RELATIVE TO ROOT, NOT THE ABSOLUTE PATH (2026-10-04). The
+    prune above was written against the absolute path, which works in a normal checkout --
+    `set(p.parts)` there holds no ".letta". But Letta's worktrees live at
+    <repo>/.letta/worktrees/<name>/, so in an agent worktree ".letta" is in the ABSOLUTE
+    path of every single file. The filter matched everything, `pages` came back empty, and
+    every gate below passed over nothing at all: the same vacuous PASS as a scan that
+    silently found no pages, which is the failure mode the prune was added to fix. Relative
+    parts cannot contain ".letta" unless a ".letta" directory sits UNDER the root.
+    """
+    return sorted(p for p in ROOT.rglob(pattern)
+                  if not (SKIP_PARTS & set(p.relative_to(ROOT).parts)))
 
 pages = walked("*.html")
 
@@ -239,6 +250,28 @@ if bad:
     fails.append("tag balance")
 
 print("\n=== internal links resolve ===")
+
+
+def resolves(target):
+    """Does a site-root-relative URL name something on disk?
+
+    GitHub Pages serves /directory/montana from montana.html and /directory/ from
+    directory/index.html, so BOTH the extensionless form and the literal file name are
+    live URLs. The gate has to accept both or every link on the site fails the moment the
+    published form stops naming .html -- which is what happened on 2026-10-04 when the
+    site went extensionless. Accepting both is also what keeps this gate honest during the
+    transition, rather than a flag flip that has to land in the same commit as the sweep.
+    """
+    if not target:
+        return True
+    base = ROOT / target
+    if base.exists():
+        return True
+    if base.with_suffix(".html").exists():
+        return True
+    return (base / "index.html").exists()
+
+
 bad = []
 for p in pages:
     txt = strip_bodies(p.read_text(encoding="utf-8"))
@@ -248,7 +281,7 @@ for p in pages:
         target = href.split("#")[0].split("?")[0].lstrip("/")
         while target.startswith("../"):
             target = target[3:]
-        if target and not (ROOT / target).exists():
+        if not resolves(target):
             bad.append("%s -> %s" % (p.relative_to(ROOT), href))
 print("  clean" if not bad else "\n".join("  " + b for b in bad))
 if bad:
@@ -398,7 +431,7 @@ if catalogue != on_disk:
                    % ", ".join(sorted(catalogue - on_disk)))
 
 # 3. every guide reachable from the homepage
-linked = set(re.findall(r'href="guides/([a-z0-9-]+)\.html"', idx_html))
+linked = set(re.findall(r'href="(?:/)?guides/([a-z0-9-]+?)(?:\.html)?"', idx_html))
 missing = sorted(on_disk - linked)
 if missing:
     bad.append("index.html links %d of %d guides, missing: %s"
@@ -422,12 +455,19 @@ for slug in tool_slugs:
     # which is the omission it was written to catch. Found 2026-10-02 when the second tool's
     # card was written the way the first card is written, and the check called a correct link
     # missing.
-    if ('href="/%s"' % rel) not in tools_idx and ('href="%s"' % rel) not in tools_idx:
+    # EXTENSION AND NO EXTENSION (2026-10-04). Since the site went extensionless, the disk form
+    # is "tools/weight-calculator" and this check called three correct, live tool pages missing
+    # -- on three surfaces at once -- because it still looked for ".html". Accepting both is the
+    # same tolerance verify.py's link resolver uses, and for the same reason: a URL and a file
+    # name are not the same string.
+    rel_bare = rel[:-5]
+    forms = ("/tools/%s" % slug, "tools/%s" % slug)
+    if not any(('href="%s"' % f) in tools_idx for f in forms):
         bad.append("tools/index.html does not link %s" % rel)
-    if "https://originrv.com/%s" % rel not in sitemap_xml:
+    if not any(("https://originrv.com/%s" % f) in sitemap_xml for f in forms):
         bad.append("sitemap.xml is missing %s" % rel)
-    if ('"%s"' % rel) not in search_js:
-        bad.append("the search index is missing %s (run build-search-index.py)" % rel)
+    if not any(('"%s"' % f) in search_js for f in forms):
+        bad.append("the search index is missing %s (run build-search-index.py)" % rel_bare)
 
 # 4. a spelled-out count left in prose still has to match the grid below it, so
 #    a hand-typed number that never gets a marker is still caught
@@ -498,7 +538,10 @@ else:
         data = None
         bad.append("guides/index.html: the ItemList does not parse (%s)" % exc)
     if data:
-        listed = {e["url"].rsplit("/", 1)[-1][:-5] for e in data.get("itemListElement", [])}
+        # The url is extensionless since 2026-10-04; slicing a fixed 5 characters off the tail
+        # turned every slug into garbage ("battery-winter-st"), which read as 39 omitted guides.
+        listed = {re.sub(r"\.html$", "", e["url"].rsplit("/", 1)[-1])
+                  for e in data.get("itemListElement", [])}
         if data.get("numberOfItems") != len(listed):
             bad.append("guides/index.html: ItemList claims %s items and lists %d"
                        % (data.get("numberOfItems"), len(listed)))
@@ -772,10 +815,26 @@ print("\n=== every in-site #anchor lands on an id that exists ===")
 #     rather than deleting the check.
 anchors = {}
 for p in pages:
-    if ".git" in p.parts:
+    if ".git" in p.relative_to(ROOT).parts:
         continue
     anchors[str(p.relative_to(ROOT))] = set(
         re.findall(r'\sid="([^"]+)"', p.read_text(encoding="utf-8")))
+
+
+def anchor_key(dest):
+    """The page key a fragment target names, or None.
+
+    The link is an address, the key is a file name (2026-10-04). /directory/ is
+    directory/index.html and /guides/tires-winter is guides/tires-winter.html, so
+    comparing the two textually reported every in-site anchor on the site as "no such
+    page" the moment URLs went extensionless -- which is how this was found.
+    """
+    if dest in anchors:
+        return dest
+    cand = (dest + "index.html") if dest.endswith("/") else (dest + ".html")
+    return cand if cand in anchors else None
+
+
 anchor_link = re.compile(r'href="([^"#]*)#([^"]+)"')
 bad = []
 for rel in anchors:
@@ -783,9 +842,10 @@ for rel in anchors:
         if target.startswith(("http", "//", "mailto:")):
             continue
         dest = rel if target == "" else target.lstrip("/")
-        if dest not in anchors:
+        key = anchor_key(dest)
+        if key is None:
             bad.append("%s -> %s#%s (no such page)" % (rel, target, frag))
-        elif frag not in anchors[dest]:
+        elif frag not in anchors[key]:
             bad.append("%s -> %s#%s (no such id)" % (rel, target, frag))
 for b in sorted(set(bad)):
     print("  FAIL " + b)

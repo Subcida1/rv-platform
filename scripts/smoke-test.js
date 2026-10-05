@@ -173,7 +173,7 @@ if (sb.window.RV && sb.__form && sb.__form._ev && typeof sb.__form._ev.submit ==
   let prevented = false;
   sb.__form.fire('submit', { preventDefault() { prevented = true; } });
   const dest = String(sb.location.href);
-  if (prevented && /tools\/weight-calculator\.html/.test(dest)) {
+  if (prevented && /tools\/weight-calculator(\.html)?([?#]|$)/.test(dest)) {
     console.log('  ok   submitting "can my truck tow it" navigates to ' + dest.replace(/^https?:\/\/[^/]+\//, ''));
   } else {
     console.log('  FAIL submit handler did not navigate correctly (prevented=' + prevented + ', href=' + dest + ')');
@@ -287,24 +287,37 @@ try {
   failed++;
 }
 
+// A routed URL is an address, not a file name (2026-10-04). GitHub Pages serves
+// /directory/ from directory/index.html and /tools/weight-calculator from
+// weight-calculator.html, so `fs.existsSync(path.join(ROOT, url))` reported every
+// extensionless route as "[file missing]" the moment the site stopped naming .html.
+// Resolving through the real files, the same way verify.py now does.
+function pageExists(u) {
+  const rel = String(u).replace(/^https?:\/\/[^/]+\//, '').replace(/^\//, '');
+  if (!rel) return fs.existsSync(path.join(ROOT, 'index.html'));
+  if (fs.existsSync(path.join(ROOT, rel))) return true;
+  if (fs.existsSync(path.join(ROOT, rel + '.html'))) return true;
+  return fs.existsSync(path.join(ROOT, rel, 'index.html'));
+}
+
 // 3. every search entry must reach a page that exists
 const ROUTES = [
-  ['can my truck tow it', 'tools/weight-calculator.html'],
-  ['how much can i tow', 'tools/weight-calculator.html'],
-  ['winterize my RV', 'guides/winterize-plumbing.html'],
-  ['antifreeze in the lines', 'guides/winterize-plumbing.html'],
-  ['find a tech near me', 'directory/index.html'],
-  ['rv mechanic', 'directory/index.html'],
-  ['battery storage', 'guides/battery-winter-storage.html'],
-  ['lithium charging', 'guides/battery-winter-storage.html'],
-  ['fridge not cooling', 'guides/rv-refrigerator-not-cooling.html'],
-  ['flat spot on my tires', 'guides/tires-winter.html'],
-  ['tire pressure', 'guides/tires-winter.html'],
-  ['roof snow load', 'guides/roof-snow-load.html'],
-  ['water heater not heating', 'guides/rv-water-heater-not-heating.html'],
-  ['how much can i tow this', 'tools/weight-calculator.html'],
-  ['', 'guides/index.html'],
-  ['qqqzzz', 'guides/index.html'],
+  ['can my truck tow it', 'tools/weight-calculator'],
+  ['how much can i tow', 'tools/weight-calculator'],
+  ['winterize my RV', 'guides/winterize-plumbing'],
+  ['antifreeze in the lines', 'guides/winterize-plumbing'],
+  ['find a tech near me', 'directory/'],
+  ['rv mechanic', 'directory/'],
+  ['battery storage', 'guides/battery-winter-storage'],
+  ['lithium charging', 'guides/battery-winter-storage'],
+  ['fridge not cooling', 'guides/rv-refrigerator-not-cooling'],
+  ['flat spot on my tires', 'guides/tires-winter'],
+  ['tire pressure', 'guides/tires-winter'],
+  ['roof snow load', 'guides/roof-snow-load'],
+  ['water heater not heating', 'guides/rv-water-heater-not-heating'],
+  ['how much can i tow this', 'tools/weight-calculator'],
+  ['', 'guides/'],
+  ['qqqzzz', 'guides/'],
 ];
 if (sb.window.RV && typeof sb.window.RV.searchRoute === 'function') {
   for (const [q, want] of ROUTES) {
@@ -315,7 +328,7 @@ if (sb.window.RV && typeof sb.window.RV.searchRoute === 'function') {
     } catch (e) { threw = e.message; }
     const label = ('"' + q + '"').padEnd(30);
     if (threw) { console.log('  FAIL ' + label + ' threw: ' + threw); failed++; continue; }
-    const exists = fs.existsSync(path.join(ROOT, got));
+    const exists = pageExists(got);
     if (got === want && exists) console.log('  ok   ' + label + ' -> ' + got);
     else { console.log('  FAIL ' + label + ' -> ' + got + ' (want ' + want + ')' + (exists ? '' : ' [file missing]')); failed++; }
   }
@@ -364,7 +377,7 @@ if (sb.window.RV && typeof sb.window.RV.searchRoute === 'function') {
     else { console.log('  FAIL unlabelled categories: ' + unlabelled.join(', ')); failed++; }
     if (/Directorys|Pages?s\+|Guides?s\+/.test(src)) { console.log('  FAIL naive pluraliser still present'); failed++; }
 
-    const every = IDX.every(x => x.t && x.u && fs.existsSync(path.join(ROOT, x.u)));
+    const every = IDX.every(x => x.t && x.u && pageExists(x.u));
     if (every) console.log('  ok   every index entry points at a real page');
     else { console.log('  FAIL an index entry points at a missing page'); failed++; }
   }

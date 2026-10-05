@@ -263,7 +263,13 @@ def skeleton(text):
 
 def main():
     check = "--check" in sys.argv
-    html = stamp_html(build())
+    # THE ONE PLACE the URL transform runs, and it has to be here rather than at the write:
+    # --check compares this string against the file on disk, so prettifying only on the write
+    # path made the comparison fail forever against a page that was in fact correct. Applying
+    # it before the branch means check and write see the same bytes. Same arrangement as
+    # build-manuals-pages.py. Cost of getting it wrong: a red build that reports the parts hub
+    # as stale no matter how many times it is regenerated.
+    html = C.pretty_urls_in_html(stamp_html(build()))
     # Rule #11 covers everything we ship, generated pages included. verify.py enforces it site-wide,
     # so this is defence in depth: it fails here, next to the string that caused it.
     for ch, name in (("\u2014", "em dash"), ("\u2013", "en dash"), ("\u00b7", "middot")):
