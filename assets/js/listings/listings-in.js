@@ -307,5 +307,194 @@ window.RV_LISTINGS_IN = [
   ],  "base": "fort wayne",  "areas": [
    "fort wayne"
   ],  "region": null,  "spec": "We do not service the chassis's on motorhomes.",  "reg": "northeast-in"
+ },
+ {  "n": "In-Motion RV Service",  "c": "Indianapolis, IN",  "p": "(317) 503-0844",  "u": "https://inmotionrvservice.com/",  "t": "center",  "e": false,  "r": false,  "d": "In-Motion RV Service is an RV repair and service shop in Indianapolis, Indiana run by Robbie and Valerie. It handles most RV repairs and also does new installs, paint protection, winterizing and de-winterizing, and RV washing at its facility.",  "g": [
+   "service center"
+  ],  "base": "indianapolis",  "areas": [
+   "indianapolis"
+  ],  "region": "Marion County",  "spec": null,  "reg": "central-in"
+ },
+ {  "n": "Smitty's Auto & RV",  "c": "Greenwood, IN",  "p": "317-881-1584",  "u": "https://www.smittys-autorv.com/rv-service-and-repair",  "t": "center",  "e": false,  "r": false,  "d": "Smitty's Auto & RV is an RV repair shop in Greenwood, Indiana serving Indianapolis and surrounding areas. It does roof replacement, re-sealing, winterizing and opening, collision fiberglass repairs, water intrusion repairs, HVAC and canvas replacement on RVs.",  "g": [
+   "service center",
+   "collision"
+  ],  "base": "greenwood",  "areas": [
+   "greenwood",
+   "indianapolis",
+   "shelbyville",
+   "franklin",
+   "columbus",
+   "martinsville",
+   "whiteland"
+  ],  "region": "Johnson County",  "spec": null,  "reg": "central-in"
+ },
+ {  "n": "Touchdown RV",  "c": "Zionsville, IN",  "p": "(317) 662-0414",  "u": "https://touchdownrv.com/rv-service-and-repair/",  "t": "both",  "e": false,  "r": false,  "d": "Touchdown RV is an RV service and repair shop in Zionsville, Indiana serving Indianapolis and Zionsville. It offers diagnostics, electrical and plumbing repairs, appliance repair, roof and body repairs, slide-out maintenance and annual inspections, with mobile service options.",  "g": [
+   "service center",
+   "mobile tech"
+  ],  "base": "zionsville",  "areas": [
+   "zionsville",
+   "indianapolis"
+  ],  "region": "Boone County",  "spec": null,  "reg": "central-in"
+ },
+ {  "n": "Matt in the Hat RV Inspection and Services",  "c": "Indianapolis, IN",  "p": "317-250-4347",  "u": "https://mattinthehatrv.com/rv-repair-services-2",  "t": "mobile",  "e": true,  "r": false,  "d": "Matt in the Hat RV Inspection and Services is a mobile RV repair business based in Indianapolis, Indiana. It brings certified technicians to the RV for appliance repair, electrical and plumbing work, roof and sealant repair, and emergency RV repairs across Central Indiana.",  "g": [
+   "mobile tech"
+  ],  "base": "indianapolis",  "areas": [
+   "indianapolis"
+  ],  "region": "Central Indiana",  "spec": null,  "reg": "central-in"
+ },
+ {  "n": "Wild Hare RV Repair LLC",  "c": "Franklin, IN",  "p": "(812) 621-0872",  "u": "https://www.wildharervrepairllc.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Wild Hare RV Repair LLC is a family owned mobile RV repair business in Franklin, Indiana. Its NRVTA registered technician does plumbing, electrical and mechanical work plus winterizing, dewinterizing, towing and preventive maintenance on RVs.",  "g": [
+   "mobile tech"
+  ],  "base": "franklin",  "areas": [
+   "franklin"
+  ],  "region": "Johnson County",  "spec": null,  "reg": "central-in"
+ },
+ {  "n": "Cindy RV",  "c": "Whiteland, IN",  "p": "(317) 458-0120",  "u": "https://cindyrv.com/service/",  "t": "center",  "e": false,  "r": false,  "d": "Cindy RV is a full service RV repair and sales shop in Whiteland, Indiana serving Central Indiana. It repairs and replaces air conditioners, awnings, refrigerators, slide-outs, siding, jacks and leveling systems, and does roof repair and resealing, winterizing, water damage repair and insurance estimates on all RV makes and models.",  "g": [
+   "service center",
+   "dealer"
+  ],  "base": "whiteland",  "areas": [
+   "whiteland",
+   "greenwood",
+   "franklin",
+   "martinsville",
+   "indianapolis"
+  ],  "region": "Johnson County",  "spec": null,  "reg": "central-in"
+ },
+ {  "n": "Alexander's RV & Trailer Parts & Service",  "c": "Bloomington, IN",  "p": "(812) 332-7442",  "u": "https://alexandersllc.com/",  "t": "center",  "e": false,  "r": false,  "d": "Alexander's RV & Trailer Parts & Service is a family owned RV and trailer repair shop in Bloomington, Indiana. It services motorhomes, fifth wheels, travel trailers and toy haulers with preventive maintenance, repair, troubleshooting, brake and electrical inspections, and upgrade installations.",  "g": [
+   "service center"
+  ],  "base": "bloomington",  "areas": [
+   "bloomington"
+  ],  "region": "Monroe County",  "spec": null,  "reg": "central-in"
+ },
+ {  "n": "Braun's Fun Time Campers",  "c": "Indianapolis, IN",  "p": "317-890-0791",  "u": "https://www.funtimecampers.com/service/",  "t": "center",  "e": false,  "r": false,  "d": "Braun's Fun Time Campers is an RV dealer in Indianapolis, Indiana with a service department. It services tent campers, hybrids, travel trailers and fifth wheels, handling major collision repairs, appliances, awnings, warranty repairs, electrical repairs, gas leaks and winterizing.",  "g": [
+   "dealer",
+   "service center"
+  ],  "base": "indianapolis",  "areas": [
+   "indianapolis"
+  ],  "region": "Marion County",  "spec": null,  "reg": "central-in"
+ },
+ {  "n": "Blue Compass RV Indianapolis",  "c": "Indianapolis, IN",  "p": "(317) 786-6102",  "u": "https://www.bluecompassrv.com/locations/indiana/indianapolis/service",  "t": "center",  "e": false,  "r": false,  "d": "Blue Compass RV Indianapolis is an RV dealer and service center in Indianapolis, Indiana. Its service department works on all major brands and does routine maintenance, warranty repairs, roof repair, appliance service, frame inspections and complex structural work.",  "g": [
+   "dealer",
+   "service center"
+  ],  "base": "indianapolis",  "areas": [
+   "indianapolis",
+   "carmel",
+   "fishers",
+   "greenwood",
+   "franklin",
+   "shelbyville"
+  ],  "region": "Marion County",  "spec": null,  "reg": "central-in"
+ },
+ {  "n": "S&H Campground RV Service",  "c": "Greenfield, IN",  "p": "(317) 326-3208",  "u": "https://www.sandhcampground.com/rv-service/",  "t": "both",  "e": true,  "r": false,  "d": "S&H Campground RV Service is an RV service center and campground in Greenfield, Indiana, near Indianapolis. Its fully insured master technicians perform mobile and on-site RV service, including preventative maintenance, emergency repairs, and inspections across central Indiana.",  "g": [
+   "service center",
+   "mobile tech"
+  ],  "base": "greenfield",  "areas": [
+   "greenfield",
+   "indianapolis"
+  ],  "region": "Hancock County",  "spec": null,  "reg": "central-in"
+ },
+ {  "n": "Off Map RV Service",  "c": "LaGrange, IN",  "p": "(260) 350-1072",  "u": "https://www.offmaprv.com/services",  "t": "both",  "e": false,  "r": false,  "d": "Off Map RV Service is an RV repair shop in LaGrange, Indiana with both in-shop and mobile service. It handles electrical and power systems, roof restoration, fiberglass collision repair, brakes and bearings, leveling systems, slide-outs, appliances and comfort systems, plus insurance and warranty work.",  "g": [
+   "service center",
+   "mobile tech",
+   "collision"
+  ],  "base": "lagrange",  "areas": [
+   "lagrange"
+  ],  "region": "LaGrange County",  "spec": null,  "reg": "northern-in"
+ },
+ {  "n": "Affinity RV Group",  "c": "Goshen, IN",  "p": "574-971-5543",  "u": "https://affinityrvgroup.com/",  "t": "center",  "e": false,  "r": false,  "d": "Affinity RV Group is an RV and trailer repair business in Goshen, Indiana with over 60 years of RV experience. It does RV repair and restoration including sidewall replacements, floors and roofs, and sells RV parts and accessories.",  "g": [
+   "service center"
+  ],  "base": "goshen",  "areas": [
+   "goshen"
+  ],  "region": "Elkhart County",  "spec": null,  "reg": "northern-in"
+ },
+ {  "n": "Phoenix USA RV",  "c": "Elkhart, IN",  "p": "877-754-8535",  "u": "https://www.phoenixusarv.com/service-rvs-dealership--service",  "t": "center",  "e": false,  "r": false,  "d": "Phoenix USA RV operates an RV service center in Elkhart, Indiana. It provides factory trained maintenance and repair for Phoenix Cruiser and Phoenix TRX motorhomes and select Class B+ and Class C RVs, including preventative maintenance, roof and exterior service, leak detection and winterizing.",  "g": [
+   "service center"
+  ],  "base": "elkhart",  "areas": [
+   "elkhart"
+  ],  "region": "Elkhart County",  "spec": "Phoenix Cruiser and Phoenix TRX motorhomes",  "reg": "northern-in"
+ },
+ {  "n": "Ben Davis RV",  "c": "Auburn, IN",  "p": "800-425-2438",  "u": "https://www.bendavisrv.com/",  "t": "center",  "e": false,  "r": false,  "d": "Ben Davis RV is an RV dealer with a full service department in Auburn, Indiana. The service department is authorized for RV appliances, wiring, plumbing, carpentry, exterior repair and drivability on most makes and models, and it is an authorized Winnebago and Starcraft service center.",  "g": [
+   "dealer",
+   "service center"
+  ],  "base": "auburn",  "areas": [
+   "auburn",
+   "fort wayne",
+   "kendallville",
+   "columbia city",
+   "angola",
+   "decatur"
+  ],  "region": "DeKalb County",  "spec": null,  "reg": "northeast-in"
+ },
+ {  "n": "4ZS RVS",  "c": "Peru, IN",  "p": "765-472-7156",  "u": "https://www.4zsrvs.com/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "4ZS RVS is an RV dealer and service department in Peru, Indiana. Its technicians service travel trailers, fifth wheels, toy haulers, and Class A and Class C motorhomes, and it serves Northern and Central Indiana including Wabash, Fort Wayne, Kokomo and Indianapolis.",  "g": [
+   "dealer",
+   "service center"
+  ],  "base": "peru",  "areas": [
+   "peru",
+   "wabash",
+   "fort wayne",
+   "kokomo",
+   "indianapolis"
+  ],  "region": "Miami County",  "spec": null,  "reg": "northeast-in"
+ },
+ {  "n": "Wild Harvest RV Sales, Service, and Rentals",  "c": "Ligonier, IN",  "p": "574-407-0835",  "u": "https://wildharvestrv.com/",  "t": "center",  "e": false,  "r": false,  "d": "Wild Harvest RV Sales, Service, and Rentals is a family owned RV repair, sales and rental shop in Ligonier, Indiana. It handles repairs, maintenance, warranty work, slide-out rebuilding and renovation, including awning repair, appliance service, plumbing, electrical and roof preventative maintenance on all makes and models.",  "g": [
+   "service center",
+   "dealer"
+  ],  "base": "ligonier",  "areas": [
+   "ligonier"
+  ],  "region": "Noble County",  "spec": null,  "reg": "northern-in"
+ },
+ {  "n": "RV Renovations and Repairs",  "c": "Michigan City, IN",  "p": "(219) 262-4016",  "u": "https://rvrenovationsandrepair.com/",  "t": "center",  "e": false,  "r": false,  "d": "RV Renovations and Repairs is an RV repair and renovation shop in Michigan City, Indiana run by owner Michael Whalen. It does water rot, rubber roof, flooring, plumbing, electrical, cabinetry, appliance, reseal, winterizing and dewinterizing work along with interior renovations.",  "g": [
+   "service center"
+  ],  "base": "michigan city",  "areas": [
+   "michigan city"
+  ],  "region": "LaPorte County",  "spec": null,  "reg": "northern-in"
+ },
+ {  "n": "Lee's Country RV",  "c": "Batesville, IN",  "p": "812-934-3210",  "u": "https://www.leescountryrv.com/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "Lee's Country RV is an RV dealer and service department in Batesville, Indiana. Its RVIA certified technicians service motorhomes, travel trailers, fifth wheels, toy haulers, truck campers and park trailers, from winterizing and LP tank filling to major rebuilds.",  "g": [
+   "dealer",
+   "service center"
+  ],  "base": "batesville",  "areas": [
+   "batesville",
+   "madison",
+   "indianapolis"
+  ],  "region": "Ripley County",  "spec": null,  "reg": "central-in"
+ },
+ {  "n": "Blue Compass RV Fort Wayne",  "c": "Columbia City, IN",  "p": "(260) 244-3414",  "u": "https://www.bluecompassrv.com/locations/indiana/fort-wayne/service",  "t": "center",  "e": false,  "r": false,  "d": "Blue Compass RV Fort Wayne is an RV dealer and service center in Columbia City, Indiana serving Fort Wayne and Northeast Indiana. Its service department works on all major brands and does routine maintenance, complex repairs, warranty and recall work, winterization and collision repair.",  "g": [
+   "dealer",
+   "service center"
+  ],  "base": "columbia city",  "areas": [
+   "columbia city",
+   "fort wayne",
+   "auburn",
+   "angola",
+   "huntington",
+   "wabash",
+   "warsaw"
+  ],  "region": "Whitley County",  "spec": null,  "reg": "northern-in"
+ },
+ {  "n": "Ward's RV Service",  "c": "Indianapolis, IN",  "p": "317-412-4272",  "u": "https://www.wardsrv.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Ward's RV Service is a mobile RV repair business in Central Indiana serving the Indianapolis area within 100 miles. It makes on-site RV repairs at homes and campsites, covering air conditioning, water heaters, furnaces and other RV systems, with almost 25 years of experience on motor homes, travel trailers and fifth wheels.",  "g": [
+   "mobile tech"
+  ],  "base": "indianapolis",  "areas": [
+   "indianapolis",
+   "greenwood"
+  ],  "region": "Central Indiana",  "spec": null,  "reg": "central-in"
+ },
+ {  "n": "The RV Tech",  "c": "Indianapolis, IN",  "p": "877-788-3241",  "u": "https://thervtech.com/services",  "t": "mobile",  "e": false,  "r": false,  "d": "The RV Tech is a mobile RV repair and maintenance business serving Indianapolis, Bloomington, Evansville and Central Indiana. It inspects and repairs fifth wheels, travel trailers and Class A, B and C RVs, covering appliances, electrical and plumbing systems, roof repair, Aqua-Hot hydronic heating, and custom installations.",  "g": [
+   "mobile tech"
+  ],  "base": "indianapolis",  "areas": [
+   "indianapolis",
+   "bloomington",
+   "evansville"
+  ],  "region": "Indiana",  "spec": "Aqua-Hot hydronic heating",  "reg": "central-in"
+ },
+ {  "n": "Great Lakes RV Service",  "c": "Michigan City, IN",  "p": "269-816-3507",  "u": "https://www.greatlakesrvservice.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Great Lakes RV Service is a licensed and insured mobile RV repair business serving Northwest Indiana and Southwest Michigan. Its certified technicians perform on-site RV repair and service on Class A, B and C motorhomes, fifth wheels and travel trailers.",  "g": [
+   "mobile tech"
+  ],  "base": "michigan city",  "areas": [
+   "gary",
+   "hammond",
+   "merrillville",
+   "schererville",
+   "portage",
+   "michigan city",
+   "valparaiso",
+   "crown point"
+  ],  "region": "Northwest Indiana",  "spec": null,  "reg": "northern-in"
  }
 ];

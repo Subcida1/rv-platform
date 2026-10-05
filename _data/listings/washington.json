@@ -126,7 +126,30 @@
     "Amanda Park": "sw",
     "Oakville": "sw",
     "Satsop": "sw",
-    "McCleary": "sw"
+    "McCleary": "sw",
+    "Redmond": "puget-sound",
+    "Woodinville": "puget-sound",
+    "Issaquah": "puget-sound",
+    "Sammamish": "puget-sound",
+    "Tukwila": "puget-sound",
+    "SeaTac": "puget-sound",
+    "Des Moines": "puget-sound",
+    "Maple Valley": "puget-sound",
+    "Covington": "puget-sound",
+    "University Place": "puget-sound",
+    "Gig Harbor": "puget-sound",
+    "Silverdale": "puget-sound",
+    "Poulsbo": "puget-sound",
+    "Port Orchard": "puget-sound",
+    "Bainbridge Island": "puget-sound",
+    "Arlington": "puget-sound",
+    "Mill Creek": "puget-sound",
+    "Chehalis": "sw",
+    "Centralia": "sw",
+    "Kelso": "sw",
+    "Napavine": "sw",
+    "Camas": "sw",
+    "Washougal": "sw"
   },
   "listings": [
     {
@@ -1045,6 +1068,1158 @@
           "We Can Also Help You With Both Extended Warranty And Insurance Claims."
         ]
       }
+    },
+    {
+      "n": "Pacific RV",
+      "c": "Redmond, WA",
+      "p": "(206) 210-1662",
+      "u": "https://pacific-rv.com/",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "Full-service RV repair shop and rebuild center at 16618 NE 107th St in Redmond, serving the Seattle metro with both shop and mobile work. Pacific RV handles heating and air conditioning, electrical and mechanical repair, roof and body work, gel coat and fiberglass, collision damage, water damage and mold remediation, slide-outs, appliances and plumbing.",
+      "g": [
+        "rv repair shop",
+        "mobile service",
+        "body repair",
+        "roof repair"
+      ],
+      "base": "Redmond",
+      "areas": [
+        "Bellevue",
+        "Auburn",
+        "Bothell",
+        "Federal Way",
+        "Duvall",
+        "Enumclaw",
+        "Lake Stevens",
+        "Black Diamond",
+        "Fall City"
+      ],
+      "region": "Seattle and Puget Sound",
+      "spec": "RV repair, body and rebuild",
+      "evidence": {
+        "phone_quote": "To schedule service, call us today at (206) 210-1662",
+        "type_quote": "For years Pacific RV has been offering a full suite of services to both new RV owners and enthusiasts alike.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Pacific RV Repair & Service in Seattle, Bellevue, Everett",
+          "16618 NE 107th St. Redmond, WA 98052",
+          "Complete Repairs, Rebuilds and Renovations"
+        ]
+      }
+    },
+    {
+      "n": "Top Tech RV",
+      "c": "Snohomish, WA",
+      "p": "206-693-8586",
+      "u": "https://www.toptechrv.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Family-owned mobile RV repair working out of Snohomish within a 35-mile radius of the greater Seattle area. Top Tech RV repairs travel trailers through Class A luxury coaches, focusing on house systems only and not chassis work, with electrical, plumbing, appliances, roof and slide service.",
+      "g": [
+        "mobile rv repair",
+        "house systems",
+        "appliances",
+        "electrical"
+      ],
+      "base": "Snohomish",
+      "areas": [
+        "Snohomish",
+        "Everett",
+        "Lynnwood",
+        "Marysville",
+        "Monroe",
+        "Seattle"
+      ],
+      "region": "Seattle and Puget Sound",
+      "spec": "Mobile RV repair",
+      "evidence": {
+        "phone_quote": "206-693-8586",
+        "type_quote": "Top Tech RV Repair Service is a family - owned business with over a decade of experience and a true passion for RV care.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Proudly serving the Greater Seattle Area (within a 35-mile radius of our Snohomish, WA location), we offer a wide range of mobile RV services.",
+          "From Travel Trailers to Class A Luxury Coaches, our expert technicians bring advanced knowledge and training to diagnose and resolve your RV needs."
+        ]
+      }
+    },
+    {
+      "n": "Urban RV",
+      "c": "Seattle, WA",
+      "p": "(206) 999-1243",
+      "u": "https://theurbanrv.com/rv-repair/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Family-owned mobile RV repair company based in North Seattle and traveling to the customer within a 15-mile radius. Urban RV has 30 years of experience, is bonded and insured, and aims to complete most of the work in a single visit.",
+      "g": [
+        "mobile rv repair",
+        "family owned",
+        "bonded and insured"
+      ],
+      "base": "Seattle",
+      "areas": [
+        "Seattle"
+      ],
+      "region": "Seattle and Puget Sound",
+      "spec": "Mobile RV repair",
+      "evidence": {
+        "phone_quote": "(206) 999-1243 (+12069991243)",
+        "type_quote": "Our goal is to complete 70% of the work your RV needs done in a single visit, which saves you time as well as the headache of finding a longer-term lodging option for while your RV is in the shop.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "At Urban RV, we are proud to have 30 years of experience under our belts.",
+          "Our family-owned company has always operated a risk-free operation with full bonding and insurance, so if something unforeseen happens, the cost won't come out of your pocket."
+        ]
+      }
+    },
+    {
+      "n": "Adventure Technicians",
+      "c": "Issaquah, WA",
+      "p": "207-329-3672",
+      "u": "https://www.adventuretechnicians.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Mobile RV repair serving Issaquah and the greater Seattle region, with the technician traveling to homes, campgrounds and storage lots. Adventure Technicians handles inspections, maintenance and repairs across electrical, plumbing, appliances, slides and leveling, HVAC and propane, roof and structural work.",
+      "g": [
+        "mobile rv repair",
+        "inspections",
+        "appliances",
+        "hvac"
+      ],
+      "base": "Issaquah",
+      "areas": [
+        "Issaquah",
+        "Sammamish",
+        "North Bend",
+        "Seattle"
+      ],
+      "region": "Seattle and Puget Sound",
+      "spec": "Mobile RV repair and inspection",
+      "evidence": {
+        "phone_quote": "Call or Text: 207-329-3672 (2073293672)",
+        "type_quote": "We handle a full range of repairs for all makes and models",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "We bring certified, professional RV service directly to you - whether you're parked at home in the Issaquah Highlands, camping at Lake Sammamish State Park, enjoying the trails around Cougar Mountain, exploring the Cascades, Eastern Washington or beyond.",
+          "No towing, no hassle, no downtime!"
+        ]
+      }
+    },
+    {
+      "n": "Tacoma Mobile RV Repair",
+      "c": "Tacoma, WA",
+      "p": "253-201-9915",
+      "u": "https://www.tacomamobilervrepair.com/",
+      "t": "mobile",
+      "e": true,
+      "r": true,
+      "d": "Mobile RV repair serving Tacoma and greater Pierce County at the campground, driveway, storage lot or roadside. Tacoma Mobile RV Repair diagnoses and fixes air conditioning, electrical faults, plumbing leaks, slide-outs, roof leaks, water heaters, appliances and more, with most repairs completed on-site in a single visit.",
+      "g": [
+        "mobile rv repair",
+        "emergency",
+        "roadside",
+        "appliances"
+      ],
+      "base": "Tacoma",
+      "areas": [
+        "Tacoma",
+        "Lakewood",
+        "Puyallup",
+        "Federal Way",
+        "Gig Harbor",
+        "Auburn"
+      ],
+      "region": "Tacoma, South Sound and the Peninsula",
+      "spec": "Mobile RV repair",
+      "evidence": {
+        "phone_quote": "Call 253-201-9915 or fill out the request form.",
+        "type_quote": "We diagnose and fix AC systems, electrical faults, plumbing leaks, slide-out failures, roof leaks, water heaters, and more wherever your RV is parked - no towing required, no shop appointment needed.",
+        "emergency_quote": "Yes - we offer emergency mobile RV repair across Tacoma and Pierce County for urgent breakdowns and unexpected failures.",
+        "roadside_quote": "Our mobile RV repair service drives directly to your location - campground, driveway, storage facility, or roadside anywhere in the Tacoma area.",
+        "coverage_quotes": [
+          "We provide mobile RV repair throughout Tacoma and the surrounding Pierce County area - and in most cases, your RV is repaired on-site in a single visit without ever leaving the spot it's parked.",
+          "Our service area includes Lakewood, Puyallup, Federal Way, Gig Harbor, Auburn, and more - anywhere along I-5 or Highway 16."
+        ]
+      }
+    },
+    {
+      "n": "Genesis Automotive & RV Repair",
+      "c": "Tacoma, WA",
+      "p": "(253) 473-2336",
+      "u": "https://www.genesisautorv.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Automotive and RV repair shop at 6220 South Tacoma Way in Tacoma, serving the area since 1993 with ASE and RVIA certified technicians. Genesis covers RV siding and roof repair, window replacement, mechanical work, propane system service and custom upgrades alongside general auto service.",
+      "g": [
+        "rv repair shop",
+        "auto repair",
+        "propane",
+        "roof repair"
+      ],
+      "base": "Tacoma",
+      "areas": [
+        "Tacoma"
+      ],
+      "region": "Tacoma, South Sound and the Peninsula",
+      "spec": "RV and auto repair",
+      "evidence": {
+        "phone_quote": "(253) 473-2336 6220 South Tacoma Way, Tacoma, WA 98409",
+        "type_quote": "Our RV expertise covers siding and roof repairs, window replacement, mechanical work, propane system service, and custom upgrades - handling both small fixes and major projects with the same level of care.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Since 1993, we've proudly served our community with dependable repair and maintenance for cars, trucks, SUVs, RVs, fleets, and trailers.",
+          "Our 10,000 sq. ft. facility is equipped with advanced tools and staffed by a highly skilled team of ASE and RVIA certified technicians."
+        ]
+      }
+    },
+    {
+      "n": "Good Guys RV",
+      "c": "Puyallup, WA",
+      "p": "(253) 604-1022",
+      "u": "https://goodguysrv.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "RV repair shop in Puyallup, also known as Orting RV Repair, with 40 years of experience. Good Guys RV handles RV structural and collision repair and appliance repair and is a certified Aqua-Hot warranty center.",
+      "g": [
+        "rv repair shop",
+        "collision repair",
+        "appliance repair",
+        "aqua-hot"
+      ],
+      "base": "Puyallup",
+      "areas": [
+        "Puyallup",
+        "Orting"
+      ],
+      "region": "Tacoma, South Sound and the Peninsula",
+      "spec": "RV collision and structural repair",
+      "evidence": {
+        "phone_quote": "Main: (253) 604-1022",
+        "type_quote": "You can rely on our technicians to handle all your RV structural and collision repairs.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Turn to the experts at Good Guys @ Orting RV Repair for exceptional RV repairs and services.",
+          "Apart from RV repairs, we also offer appliance repairs for your convenience."
+        ]
+      }
+    },
+    {
+      "n": "Valley RV Supercenter",
+      "c": "Kent, WA",
+      "p": "(800) 465-2926",
+      "u": "https://www.valleyrvsupercenter.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "RV dealership at 619 Washington Avenue North in Kent with a service department staffed by RVTI-trained technicians. Valley RV Supercenter services motorhomes, travel trailers, fifth wheels and toy haulers for owners across the Puget Sound region, and also offers RV collision repair.",
+      "g": [
+        "rv dealer",
+        "service department",
+        "repair",
+        "collision"
+      ],
+      "base": "Kent",
+      "areas": [
+        "Kent",
+        "Auburn",
+        "Renton",
+        "Federal Way",
+        "Tacoma",
+        "Puyallup",
+        "Bellevue",
+        "Seattle",
+        "Issaquah"
+      ],
+      "region": "Seattle and Puget Sound",
+      "spec": "RV dealer service department",
+      "evidence": {
+        "phone_quote": "Service: (800) 465-2926",
+        "type_quote": "We at Valley RV Supercenter offer services to fix and maintain motorhomes, travel trailers, fifth wheels and other RVs.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "We proudly serve RV owners from Auburn, Renton, Federal Way, Tacoma, Puyallup, Bellevue, Seattle, Issaquah, and communities throughout the Puget Sound region.",
+          "From weekend getaways near Mt. Rainier to longer adventures across the Pacific Northwest, our team can help keep your travel trailer, fifth-wheel, motorhome, or toy hauler ready for the road."
+        ]
+      }
+    },
+    {
+      "n": "Gary's RV Repair",
+      "c": "Marysville, WA",
+      "p": "(360) 939-7544",
+      "u": "https://www.garysrvrepairs.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Mobile-only RV repair based in Marysville, bringing the service to the customer rather than the customer to a shop. Gary's RV Repair works on RV repairs on-site.",
+      "g": [
+        "mobile rv repair"
+      ],
+      "base": "Marysville",
+      "areas": [
+        "Marysville"
+      ],
+      "region": "North Sound, Snohomish and Skagit",
+      "spec": "Mobile RV repair",
+      "evidence": {
+        "phone_quote": "(360) 939-7544",
+        "type_quote": "We know repairs can be kind of daunting at times, especially with the task of getting your RV to your local service provider.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "So we've designed a business model where we come to you.",
+          "Mobile RV Repair to the rescue. mobile repairs only"
+        ]
+      }
+    },
+    {
+      "n": "J&L Mobile RV Repair",
+      "c": "Arlington, WA",
+      "p": "425-551-8008",
+      "u": "https://www.jlmobilervrepair.net/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "Locally owned mobile RV repair based in Arlington since 2023, serving Snohomish, Skagit and Whatcom counties. J&L Mobile RV Repair offers on-site repairs, maintenance, appliance installations, electrical system repair, awning and roof repair, and 24/7 emergency service.",
+      "g": [
+        "mobile rv repair",
+        "emergency",
+        "electrical",
+        "appliances"
+      ],
+      "base": "Arlington",
+      "areas": [
+        "Arlington",
+        "Marysville",
+        "Mount Vernon",
+        "Bellingham"
+      ],
+      "region": "North Sound, Snohomish and Skagit",
+      "spec": "Mobile RV repair",
+      "evidence": {
+        "phone_quote": "Call: 425-551-8008 (4255518008)",
+        "type_quote": "We specialize in on-site RV repair services, covering everything from routine maintenance to emergency repairs.",
+        "emergency_quote": "That's why we offer 24/7 emergency RV repair services to address urgent issues promptly.",
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "We are a leading provider of mobile RV repair services based in Arlington, WA, serving the surrounding counties of Snohomish, Skagit, and Whatcom.",
+          "We understand that RV issues can occur at any time."
+        ]
+      }
+    },
+    {
+      "n": "Everything RV",
+      "c": "Lake Stevens, WA",
+      "p": "(360) 863-8888",
+      "u": "https://www.everythingrv4u.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Full-service RV repair and service center in Lake Stevens with over 60 years of combined experience, also handling trailer repair and sales. Everything RV is a preferred insurance and warranty repair facility for most makes and models and offers custom additions and renovations.",
+      "g": [
+        "rv repair shop",
+        "insurance repair",
+        "renovations",
+        "trailer repair"
+      ],
+      "base": "Lake Stevens",
+      "areas": [
+        "Lake Stevens",
+        "Monroe",
+        "Snohomish"
+      ],
+      "region": "North Sound, Snohomish and Skagit",
+      "spec": "RV repair and service",
+      "evidence": {
+        "phone_quote": "(360) 863-8888 (425) 485-1177",
+        "type_quote": "From maintenance, repairs, inspections, sales, and everything in between, we've got you covered!",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "The great service you have come to rely on is now located in Lake Stevens; now offering you even more services, parts & Trailers!",
+          "With over 60 years combined experience, we do it all!"
+        ]
+      }
+    },
+    {
+      "n": "Clearview RV",
+      "c": "Snohomish, WA",
+      "p": "(360) 668-9595",
+      "u": "https://www.clearviewrv.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "RV dealership in Snohomish with a full-service repair and body shop and a large parts inventory. Clearview RV repairs all makes and models except motor and chassis work, handles appliance warranties directly, and covers collision repair, roof, plumbing, electrical and more.",
+      "g": [
+        "rv dealer",
+        "service department",
+        "collision repair",
+        "body shop"
+      ],
+      "base": "Snohomish",
+      "areas": [
+        "Snohomish"
+      ],
+      "region": "North Sound, Snohomish and Skagit",
+      "spec": "RV dealer service department",
+      "evidence": {
+        "phone_quote": "Call our service department at (360) 668-9595 or email us for assistance.",
+        "type_quote": "We repair all makes and models of RVs (excluding motor and chassis work) and pride ourselves in giving our customers the best service possible.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Clearview RV is a full-service dealership in Snohomish, WA.",
+          "Our service technicians have a combined experience of over 50 years in the RV industry."
+        ]
+      }
+    },
+    {
+      "n": "Speedway RV Center",
+      "c": "Monroe, WA",
+      "p": "360-794-1155",
+      "u": "https://www.speedwayrvcenter.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "RV dealership in Monroe with a service department that also offers mobile RV service. Speedway RV Center services camping trailers, toy haulers, fifth wheels, destination trailers, truck campers and motorhomes, along with horse, dump, car and utility trailers.",
+      "g": [
+        "rv dealer",
+        "service department",
+        "mobile service",
+        "repair"
+      ],
+      "base": "Monroe",
+      "areas": [
+        "Monroe"
+      ],
+      "region": "North Sound, Snohomish and Skagit",
+      "spec": "RV dealer service department",
+      "evidence": {
+        "phone_quote": "Service: 360-794-1155",
+        "type_quote": "We service most camping trailers (including toy haulers, fifth wheels, destination trailers), truck campers and motorhomes, as well as horse/stock trailers, dump trailers, car trailers and utility trailers.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "If you need maintenance or repairs done on your RV, we at Speedway RV Center are able to help get it back into working order so you can get back on the road.",
+          "WE ALSO OFFER MOBILE RV SERVICE!"
+        ]
+      }
+    },
+    {
+      "n": "Maple Grove RV",
+      "c": "Everett, WA",
+      "p": "425-249-0382",
+      "u": "https://www.maplegroverv.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "RV dealer in Everett at 13000 Highway 99 with a state-of-the-art service center staffed by RVIA certified technicians. Maple Grove RV services any towable or motorized RV, is factory-certified for AquaHot systems, and handles roof, window, appliance, generator and slide work plus remodels.",
+      "g": [
+        "rv dealer",
+        "service department",
+        "aquahot",
+        "roof repair"
+      ],
+      "base": "Everett",
+      "areas": [
+        "Everett"
+      ],
+      "region": "North Sound, Snohomish and Skagit",
+      "spec": "RV dealer service department",
+      "evidence": {
+        "phone_quote": "425-249-0382",
+        "type_quote": "Our new state-of-the-art Service Center has the latest diagnostic equipment to service or repair your RV with confidence effectively.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "We can provide service on any towable or motorized RV and are factory-certified to provide service on AquaHot systems found in higher-end diesel coaches.",
+          "13000 Highway 99 Everett, WA 98204 425-249-0382"
+        ]
+      }
+    },
+    {
+      "n": "Uncharted Mobile RV Service & Repair",
+      "c": "Mill Creek, WA",
+      "p": "(425) 900-9878",
+      "u": "https://www.unchartedmobilervservice.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "Small family-owned mobile RV repair based in Mill Creek and traveling across the Pacific Northwest. Uncharted Mobile RV Service & Repair handles furnace and air conditioning repair, awning repair, electrical diagnostics, winterization, plumbing and water damage, window repair and 24/7 emergency service.",
+      "g": [
+        "mobile rv repair",
+        "emergency",
+        "appliances",
+        "electrical"
+      ],
+      "base": "Mill Creek",
+      "areas": [
+        "Mill Creek",
+        "Everett",
+        "Snohomish"
+      ],
+      "region": "North Sound, Snohomish and Skagit",
+      "spec": "Mobile RV repair",
+      "evidence": {
+        "phone_quote": "(425) 900-9878",
+        "type_quote": "At Uncharted Mobile RV Service & Repair, we focus on quality repairs and excellent service.",
+        "emergency_quote": "24/7 emergency services",
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Uncharted Mobile RV Service & Repair LLC was born from grit, heart, and a deep respect for the road.",
+          "Every repair, every call, every mile we drive is fueled by our belief that quality care shouldn't be hard to find."
+        ]
+      }
+    },
+    {
+      "n": "Blade RV Center",
+      "c": "Mount Vernon, WA",
+      "p": "360-707-7979",
+      "u": "https://www.bladerv.com/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "RV dealership at 1100 Freeway Drive in Mount Vernon with a service department and a state-of-the-art body shop. Blade RV Center handles RV collision repair, fiberglass cap replacement, windshield replacement, interior remodels, roof repair and custom paint.",
+      "g": [
+        "rv dealer",
+        "service department",
+        "collision repair",
+        "body shop"
+      ],
+      "base": "Mount Vernon",
+      "areas": [
+        "Mount Vernon"
+      ],
+      "region": "North Sound, Snohomish and Skagit",
+      "spec": "RV dealer service department",
+      "evidence": {
+        "phone_quote": "Parts & Service | (360) 707-7979",
+        "type_quote": "Our service department is staffed with highly trained technicians dedicated to making sure your RV stays in great working order for years to come.",
+        "emergency_quote": null,
+        "roadside_quote": "Towing and rental car assistance",
+        "coverage_quotes": [
+          "We are proud to provide quality service in the Mt. Vernon area.",
+          "We Service: All recreational vehicles"
+        ]
+      }
+    },
+    {
+      "n": "NW RV & Auto",
+      "c": "Bellingham, WA",
+      "p": "(360) 746-4478",
+      "u": "https://nwrvauto.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Full-service RV repair and detail shop in Bellingham serving Whatcom and Skagit counties. NW RV & Auto handles roof, window and seam seals, fiberglass and metal repair, water damage repair, appliance maintenance, collision repair and re-roofing.",
+      "g": [
+        "rv repair shop",
+        "collision repair",
+        "roofing",
+        "appliances"
+      ],
+      "base": "Bellingham",
+      "areas": [
+        "Bellingham",
+        "Ferndale",
+        "Blaine",
+        "Mount Vernon",
+        "Everson",
+        "Burlington",
+        "Birch Bay",
+        "Lynden"
+      ],
+      "region": "North Sound, Snohomish and Skagit",
+      "spec": "RV repair and body work",
+      "evidence": {
+        "phone_quote": "Phone (360) 746-4478",
+        "type_quote": "We are full-service RV repair and detail specialists.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "We've had the privelege of serving happy customers in both Whatcom and Skagit Counties.",
+          "Service Area Bellingham, WA | Ferndale, WA | Blaine, WA | Mount Vernon, WA | Everson, WA | Burlington, WA |Birch Bay, WA | Lynden, WA"
+        ]
+      }
+    },
+    {
+      "n": "Al's RV",
+      "c": "Bellingham, WA",
+      "p": "(360) 676-1515",
+      "u": "https://www.alsrvrepair.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "RV repair, parts and service shop at 4063 Irongate Road in Bellingham, open Monday through Friday.",
+      "g": [
+        "rv repair shop",
+        "parts"
+      ],
+      "base": "Bellingham",
+      "areas": [
+        "Bellingham"
+      ],
+      "region": "North Sound, Snohomish and Skagit",
+      "spec": "RV repair, parts and service",
+      "evidence": {
+        "phone_quote": "Phone: (360) 676-1515",
+        "type_quote": "Al's RV | Repairs | Parts | Service | Bellingham, WA",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Contact us Monday thru Friday, 8am- 5pm",
+          "4063 Irongate Road, Bellingham, WA 98226"
+        ]
+      }
+    },
+    {
+      "n": "OceanWest RV & Marine",
+      "c": "Lynden, WA",
+      "p": "(360) 354-5538",
+      "u": "https://oceanwestrvm.com/services/",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "RV and marine service shop at 7324 Guide Meridian in Lynden with both in-shop and mobile service. OceanWest RV & Marine handles RV repair and maintenance, electrical and plumbing, HVAC and appliance troubleshooting, slide-outs, solar and power systems, winterization, roof restoration and storage.",
+      "g": [
+        "rv repair shop",
+        "mobile service",
+        "solar",
+        "winterization"
+      ],
+      "base": "Lynden",
+      "areas": [
+        "Lynden",
+        "Bellingham"
+      ],
+      "region": "North Sound, Snohomish and Skagit",
+      "spec": "RV repair and service",
+      "evidence": {
+        "phone_quote": "360-354-5538",
+        "type_quote": "From routine maintenance to complex troubleshooting, we help keep your RV safe, reliable, and ready for the road.",
+        "emergency_quote": "Sun & Holidays Flat Fee - Emergency calls only",
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "OceanWest RV & Marine supports RV and boat owners across the Pacific Northwest with dependable service, clear communication, and a one-stop approach: repairs, mobile service, winterization, storage, parts, and inventory.",
+          "Lynden Shop & Store (Main) 7324 Guide Meridian, Lynden, WA 98264, United States"
+        ]
+      }
+    },
+    {
+      "n": "NorWest Mobile RV Service",
+      "c": "Oak Harbor, WA",
+      "p": "360-720-2593",
+      "u": "http://www.norwestrv.comcastbiz.net/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Mobile RV repair and service serving Whidbey and Fidalgo islands, with the San Juan Islands and mainland by appointment. NorWest is an authorized warranty service center for Atwood, Dometic, NorCold and Suburban appliances and repairs water systems, electrical, propane, generators, slides, trailer axles and brakes and roofs.",
+      "g": [
+        "mobile rv repair",
+        "appliances",
+        "generators",
+        "roof repair"
+      ],
+      "base": "Oak Harbor",
+      "areas": [
+        "Oak Harbor",
+        "Coupeville",
+        "Anacortes"
+      ],
+      "region": "North Sound, Snohomish and Skagit",
+      "spec": "Mobile RV repair and service",
+      "evidence": {
+        "phone_quote": "Chris Brady @ 360-720-2593",
+        "type_quote": "Authorized Warranty Service and Repair of Atwood, Dometic, NorCold and Suburban Appliances.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Serving Whidbey and Fidalgo Islands.",
+          "Also the San Jaun Islands and the mainland by appointment."
+        ]
+      }
+    },
+    {
+      "n": "Poulsbo RV",
+      "c": "Everett, WA",
+      "p": "1-888-960-9629",
+      "u": "https://www.poulsborv.com/rv-service/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "RV dealer with multiple Washington locations and large service departments. Poulsbo RV provides RV service and repair for motorhomes and towables across hundreds of service categories and operates RV collision repair centers, with more certified RV technicians than any other dealer in the state.",
+      "g": [
+        "rv dealer",
+        "service department",
+        "collision repair"
+      ],
+      "base": "Everett",
+      "areas": [
+        "Everett",
+        "Sumner",
+        "Mount Vernon",
+        "Kent"
+      ],
+      "region": "Seattle and Puget Sound",
+      "spec": "RV dealer service department",
+      "evidence": {
+        "phone_quote": "12218 Highway 99 S Everett, WA 98204 1-888-960-9629",
+        "type_quote": "We provide RV service for all types of Motorhomes & Towables.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "With our experienced technicians, and our continuing training programs, you can rest assured that your RV will be given the best possible care.",
+          "Poulsbo RV boasts more RV Technicians than any other RV dealer in the State of Washington."
+        ]
+      }
+    },
+    {
+      "n": "Tacoma RV",
+      "c": "Tacoma, WA",
+      "p": "(253) 455-7837",
+      "u": "https://tacomarv.com/service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Towable RV dealer in Tacoma at 8507 Pacific Hwy E with one of the largest service operations in the Pacific Northwest. Tacoma RV runs 21 service bays with certified technicians and covers roofing, leak detection, maintenance, solar, electrical, appliances, slide-outs, awnings and warranty work.",
+      "g": [
+        "rv dealer",
+        "service department",
+        "roofing",
+        "solar"
+      ],
+      "base": "Tacoma",
+      "areas": [
+        "Tacoma",
+        "Lakewood"
+      ],
+      "region": "Tacoma, South Sound and the Peninsula",
+      "spec": "RV dealer service department",
+      "evidence": {
+        "phone_quote": "(253) 455-7837 (2534557837) Schedule Service",
+        "type_quote": "We're Washington's number one towable dealer and run one of the largest service operations in the Pacific Northwest.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "21 bays, certified technicians, and 5 advisors - your RV is in expert hands.",
+          "We specialize in towables - travel trailers, fifth wheels, and toy haulers."
+        ]
+      }
+    },
+    {
+      "n": "Ernie's RV & Trailer Repair",
+      "c": "Olympia, WA",
+      "p": "(360) 456-6100",
+      "u": "https://erniesinc.net/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "RV and trailer repair shop at 2600 21st Avenue SW in Olympia, established in 2013. Ernie's RV & Trailer Repair services RVs, motor homes, travel and fifth wheel trailers, horse trailers and boat trailers and sells and installs accessories, hitches and tow bars.",
+      "g": [
+        "rv repair shop",
+        "trailer repair",
+        "accessories"
+      ],
+      "base": "Olympia",
+      "areas": [
+        "Olympia",
+        "Lacey",
+        "Tumwater"
+      ],
+      "region": "Tacoma, South Sound and the Peninsula",
+      "spec": "RV and trailer repair",
+      "evidence": {
+        "phone_quote": "Call Us: (360) 456-6100 (3604566100)",
+        "type_quote": "We service and repair RVs, Motor Homes, Travel/5th Wheel Trailers, Horse Trailers, Boat Trailers and more!",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Your Premier Destination for RV and Trailer Services in Olympia, Washington",
+          "As the go-to facility in the area, Ernie's takes pride in being more than just a repair shop; we are a family-oriented, community-focused establishment dedicated to providing top-notch services with a touch of genuine care."
+        ]
+      }
+    },
+    {
+      "n": "Coumbs RV Center",
+      "c": "Olympia, WA",
+      "p": "360-357-6506",
+      "u": "https://www.coumbsrv.com/pages/rv-service",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "RV dealer at 3052 Pacific Ave SE in Olympia with RVIA-registered technicians serving the South Puget Sound. Coumbs RV Center covers travel trailers, fifth wheels, motorhomes, truck campers, pop-ups and toy haulers, including roofs, water damage, slide-outs, electrical, plumbing, appliances and solar. It does not service engines or chassis.",
+      "g": [
+        "rv dealer",
+        "service department",
+        "roofing",
+        "solar"
+      ],
+      "base": "Olympia",
+      "areas": [
+        "Olympia",
+        "Lacey",
+        "Tumwater"
+      ],
+      "region": "Tacoma, South Sound and the Peninsula",
+      "spec": "RV dealer service department",
+      "evidence": {
+        "phone_quote": "We have a night drop box. Call 360-357-6506 for details.",
+        "type_quote": "RVIA-registered technicians serving the South Puget Sound. From minor repairs to major restorations, we keep your RV adventure-ready.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Expert RV Service & Repair You Can Trust",
+          "We handle Insurance Claims and Warranty Coverage work."
+        ]
+      }
+    },
+    {
+      "n": "Roving RV Repair",
+      "c": "Olympia, WA",
+      "p": "(209) 256-1953",
+      "u": "https://rovingrvrepairs.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "Mobile RV repair serving Olympia and surrounding areas, run by an Army veteran and certified RV technician. Roving RV Repair handles emergency fixes, routine maintenance, slide-out repair, roof repair, air conditioning and heating, water heaters and plumbing, and does not cover engine or brake service.",
+      "g": [
+        "mobile rv repair",
+        "emergency",
+        "roofing",
+        "plumbing"
+      ],
+      "base": "Olympia",
+      "areas": [
+        "Olympia",
+        "Lacey",
+        "Tumwater"
+      ],
+      "region": "Tacoma, South Sound and the Peninsula",
+      "spec": "Mobile RV repair",
+      "evidence": {
+        "phone_quote": "Phone (209) 256-1953 (209-256-1953)",
+        "type_quote": "At Roving RV Repairs, we offer expert mobile RV repair and maintenance services designed to keep your vehicle in top condition.",
+        "emergency_quote": "From emergency fixes and routine maintenance to specialized repairs, we bring certified, reliable service directly to you.",
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Proudly Serving Olympia, Washington, and Surrounding Areas with Trusted Mobile RV Repair Services",
+          "We come to you, so you can avoid the hassle of driving to a service center."
+        ]
+      }
+    },
+    {
+      "n": "Affordable RV Repair Shop",
+      "c": "Bremerton, WA",
+      "p": "(360) 479-2620",
+      "u": "https://www.affordablervrepair.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "RV repair shop at 3663 Chico Way Northwest in Bremerton, family-owned in Kitsap County for over 15 years with more than 75 years of collective experience. Affordable RV Repair Shop completes repairs correctly the first time and accepts all insurance providers and extended warranties.",
+      "g": [
+        "rv repair shop",
+        "insurance repair",
+        "family owned"
+      ],
+      "base": "Bremerton",
+      "areas": [
+        "Bremerton"
+      ],
+      "region": "Kitsap and the Olympic Peninsula",
+      "spec": "RV repair shop",
+      "evidence": {
+        "phone_quote": "info@affordablervrepair.com Tel. 360-479-2620 Address: 3663 Chico Way Northwest Bremerton, WA 98312",
+        "type_quote": "Our approach to RV repair is getting the work done completely and correctly the first time.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Affordable RV Repair in Kitsap, WA",
+          "Living our dream for over 15 years in Kitsap County."
+        ]
+      }
+    },
+    {
+      "n": "20/20 RV",
+      "c": "Bremerton, WA",
+      "p": "(360) 271-7177",
+      "u": "https://20-20rv.com/contact-us",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Mobile RV repair and maintenance service based out of Bremerton for Kitsap County and the Puget Sound region, covering the Kitsap-Mason Peninsula.",
+      "g": [
+        "mobile rv repair",
+        "maintenance"
+      ],
+      "base": "Bremerton",
+      "areas": [
+        "Bremerton",
+        "Silverdale",
+        "Shelton"
+      ],
+      "region": "Kitsap and the Olympic Peninsula",
+      "spec": "Mobile RV repair",
+      "evidence": {
+        "phone_quote": "(360) 271-7177 (3602717177)",
+        "type_quote": "I provide Mobile RV Repair/Service to the Kitsap-Mason Peninsula Region",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Based Out of Bremerton Mobile Service for Kitsap County and the Puget Sound region",
+          "I am looking out for your RV"
+        ]
+      }
+    },
+    {
+      "n": "Kitsap RV",
+      "c": "Bremerton, WA",
+      "p": "360-377-0490",
+      "u": "https://www.kitsaprvs.com/rv-service-department",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "RV dealership at 4303 State Hwy 3 W in Bremerton with a service department and on-site parts. Kitsap RV services motorhomes, fifth wheels, toy haulers, travel trailers and campers across all four seasons, including maintenance, roof sealing, inspections and LPG checks.",
+      "g": [
+        "rv dealer",
+        "service department",
+        "maintenance",
+        "parts"
+      ],
+      "base": "Bremerton",
+      "areas": [
+        "Bremerton",
+        "Silverdale",
+        "Poulsbo",
+        "Port Orchard"
+      ],
+      "region": "Kitsap and the Olympic Peninsula",
+      "spec": "RV dealer service department",
+      "evidence": {
+        "phone_quote": "360-377-0490 (3603770490) 360-377-0490 www.kitsaprvs.com",
+        "type_quote": "Not only are we the fastest growing RV Dealership in Kitsap RV county, but we also offer service & repair work for your RV, Motorhome, 5th Wheel, Toy Hauler, Travel Trailer & Camper.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "We are proud to provide quality service in the Seattle, Purdy, Belfair, and Silverdale.",
+          "4303 State Hwy 3 W Bremerton, WA 98312"
+        ]
+      }
+    },
+    {
+      "n": "Quimper Fixit Services",
+      "c": "Port Townsend, WA",
+      "p": "(360) 643-4948",
+      "u": "https://quimperfixit.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Mobile auto and RV repair based in Port Townsend, serving the surrounding area within 100 miles. Quimper Fixit Services handles all RV systems inside and out for Class A, B and C motorhomes, travel trailers, fifth wheels, pop-ups and cab-overs, and offers 50-point vehicle and 200-plus point RV inspections.",
+      "g": [
+        "mobile rv repair",
+        "inspections",
+        "motorhomes"
+      ],
+      "base": "Port Townsend",
+      "areas": [
+        "Port Townsend"
+      ],
+      "region": "Kitsap and the Olympic Peninsula",
+      "spec": "Mobile RV repair",
+      "evidence": {
+        "phone_quote": "Port Townsend, Washington(360) 643-4948 (+1 360-643-4948)",
+        "type_quote": "We can help you with issues with any system on your RV.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Quimper Fixit Services LLC serves Port Townsend, WA and surrounding areas within 100 miles.",
+          "We offer a 50 point vehicle & a 200+ point RV inspection."
+        ]
+      }
+    },
+    {
+      "n": "A1 RV Recycling and Sales",
+      "c": "Centralia, WA",
+      "p": "(360) 807-4064",
+      "u": "https://a1rvrecyclingandsales.com/rv-repair",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Family-owned RV repair and parts shop at 1103 W Reynolds Ave in Centralia that also handles RV recycling and salvage. A1 RV Recycling and Sales repairs refrigerators, water heaters, furnaces, stoves and ovens, slide-outs, water pumps and lines, axles, brakes and bearings, awnings, windows, toilets and electrical.",
+      "g": [
+        "rv repair shop",
+        "parts",
+        "salvage",
+        "appliances"
+      ],
+      "base": "Centralia",
+      "areas": [
+        "Centralia",
+        "Chehalis"
+      ],
+      "region": "Southwest Washington",
+      "spec": "RV repair, parts and salvage",
+      "evidence": {
+        "phone_quote": "Call (360) 807-4064 (360-807-4064)",
+        "type_quote": "We specialize in RV repairs, new and reconditioned RV parts sales, RV recycling, and RV salvage.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "1103 W Reynolds Ave, Centralia, WA 98531",
+          "We Provide Skilled Repairs On Many Different Systems Of Your RV"
+        ]
+      }
+    },
+    {
+      "n": "Camper's Choice RV",
+      "c": "Napavine, WA",
+      "p": "360-545-9442",
+      "u": "https://www.camperschoicerv.com/rv-service-and-repair-washington",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "RV dealer at 165 Hamilton Rd in Napavine, near Chehalis, with an authorized warranty repair and service center staffed by RVIA certified technicians. Camper's Choice RV is locally owned since 1976 and services motorhomes and trailers with appliance service, insurance claims and free estimates.",
+      "g": [
+        "rv dealer",
+        "service department",
+        "warranty repair",
+        "appliances"
+      ],
+      "base": "Napavine",
+      "areas": [
+        "Napavine",
+        "Chehalis",
+        "Centralia"
+      ],
+      "region": "Southwest Washington",
+      "spec": "RV dealer service department",
+      "evidence": {
+        "phone_quote": "CHEHALIS 360.545.9442 (+13605459442)",
+        "type_quote": "Our service department is staffed with highly trained technicians dedicated to making sure your RV stays in great working order for years to come.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "We are proud to provide quality service in Chehalis, WA.",
+          "Locally Owned & Operated, Providing Excellent Service since 1976."
+        ]
+      }
+    },
+    {
+      "n": "Rob the RV Guy",
+      "c": "Issaquah, WA",
+      "p": "(251) 373-7888",
+      "u": "https://www.robthervguy.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Mobile RV repair and solar installation serving Issaquah, North Bend and the I-90 corridor in western Washington. Rob the RV Guy holds a Level 4 Master Certification from RVTI along with RVTAA, Dometic, Lippert, Victron and Truma certifications, and covers HVAC, solar, plumbing, electrical and appliance repairs.",
+      "g": [
+        "mobile rv repair",
+        "solar",
+        "hvac",
+        "appliances"
+      ],
+      "base": "Issaquah",
+      "areas": [
+        "Issaquah",
+        "North Bend",
+        "Sammamish",
+        "Renton",
+        "Maple Valley"
+      ],
+      "region": "Seattle and Puget Sound",
+      "spec": "Mobile RV repair and solar",
+      "evidence": {
+        "phone_quote": "rob@robthervguy.com (251) 373-7888",
+        "type_quote": "I bring expert RV repair, maintenance, and custom RV solar installation services to the eastern Seattle-Tacoma area of the PNW.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Now based in the Issaquah area of Western Washington",
+          "This includes Issaquah, Preston, North Bend, Sammamish, Renton, Maple Valley, and nearby spots along the I-90 corridor."
+        ]
+      }
+    },
+    {
+      "n": "Olympic RV",
+      "c": "Kitsap County, WA",
+      "p": "360-516-8146",
+      "u": "https://www.olympic-rv.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Mobile RV repair and upgrade service in Kitsap County with RVIA and RVDA certified technicians. Olympic RV handles diagnostics, service repairs, and RV system upgrades from carpentry to chassis, plumbing, lighting and electrical.",
+      "g": [
+        "mobile rv repair",
+        "upgrades",
+        "rvda certified"
+      ],
+      "base": null,
+      "areas": [
+        "Bremerton",
+        "Silverdale",
+        "Poulsbo",
+        "Port Orchard"
+      ],
+      "region": "Kitsap and the Olympic Peninsula",
+      "spec": "Mobile RV repair and upgrades",
+      "evidence": {
+        "phone_quote": "Call us at: 360-516-8146",
+        "type_quote": "Our RVIA/RVDA Certified Technicians and expertise will put your mind at ease by keeping you out of the shop and on the road with our punctual mobile servicing.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Mobile RV Repair and Upgrade Services",
+          "Location: Kitsap County"
+        ]
+      },
+      "reg": "puget-sound"
+    },
+    {
+      "n": "DRs Mobile RV",
+      "c": "Olympic Peninsula, WA",
+      "p": "(360) 797-4337",
+      "u": "https://www.drsmobilerv.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Mobile RV repair company serving the Olympic Peninsula with more than two decades of experience. DRs Mobile RV travels to the customer for air conditioning, batteries, electrical systems, furnaces, gas generators, jacks, levelers, plumbing, slide-outs, vents and water heaters, and does not service chassis, engines, brakes or axles.",
+      "g": [
+        "mobile rv repair",
+        "appliances",
+        "electrical",
+        "plumbing"
+      ],
+      "base": null,
+      "areas": [
+        "Port Angeles",
+        "Sequim",
+        "Forks"
+      ],
+      "region": "Kitsap and the Olympic Peninsula",
+      "spec": "Mobile RV repair",
+      "evidence": {
+        "phone_quote": "(360) 797-4337 (+13607974337)",
+        "type_quote": "As a mobile RV repair company on the Olympic Peninsula, DRs Mobile RV brings the services you need directly to you.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "An Experienced Mobile RV Repair Company Serving the Olympic Peninsula",
+          "We have more than two decades of experience and are passionate about delivering exceptional repair services and even better customer service to the people who depend on us."
+        ]
+      },
+      "reg": "olympic-north"
     }
   ]
 }
