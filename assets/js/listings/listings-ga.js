@@ -331,5 +331,94 @@ window.RV_LISTINGS_GA = [
    "collision",
    "appliances"
   ],  "base": "woodstock",  "areas": [],  "region": "Atlanta and the northern suburbs",  "spec": "RV dealer service center",  "reg": "atlanta-ga"
+ },
+ {  "n": "Holland RV Repair",  "c": "Richmond Hill, GA",  "p": "(912) 660-9055",  "u": "https://hollandrvrepair.com/",  "t": "both",  "e": true,  "r": true,  "d": "Holland RV Repair is an RV repair and restoration shop on Longwood Drive in Richmond Hill, serving Savannah and the surrounding area. The site says the RVIA-certified team handles collision and body repair, fiberglass and metal work, roof and water damage repair, 110/12V electrical work, new installs and routine maintenance, and it accepts insurance claims and extended warranty work. It notes that drivetrain work such as motors and transmissions is not offered.",  "g": [
+   "rv repair",
+   "body shop",
+   "roof repair",
+   "mobile tech"
+  ],  "base": "richmond hill",  "areas": [
+   "savannah",
+   "pooler",
+   "garden city",
+   "port wentworth",
+   "richmond hill"
+  ],  "region": "Savannah and the coast",  "spec": "RV collision, body & roof repair",  "reg": "savannah-ga"
+ },
+ {  "n": "Camping World of Pooler",  "c": "Pooler, GA",  "p": "(866) 886-7694",  "u": "https://rv.campingworld.com/dealer/pooler-georgia/rv-service-repair",  "t": "center",  "e": false,  "r": false,  "d": "Camping World of Pooler is the service and repair center of the Camping World store on Continental Boulevard in Pooler, serving the Savannah area. The site says the location provides complete service and repair for all RV types, including diagnostics, routine maintenance and warranty work, and can handle virtually any RV repair.",  "g": [
+   "rv repair",
+   "rv service",
+   "warranty"
+  ],  "base": "pooler",  "areas": [
+   "pooler",
+   "savannah"
+  ],  "region": "Savannah and the coast",  "spec": "RV service & repair center",  "reg": "savannah-ga"
+ },
+ {  "n": "Campers Inn RV of Richmond Hill",  "c": "Richmond Hill, GA",  "p": "603-642-5555",  "u": "https://www.campersinn.com/richmond-hill/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "Campers Inn RV of Richmond Hill is a full-service RV dealership on Longwood Drive whose service department works on RVs in the Richmond Hill and Savannah area. The site says its RVDA-RVIA certified technicians handle roof work, tires, oil changes for gas and diesel RVs and generators, axle bearing packs, winterization, RV orientation and system and appliance checks.",  "g": [
+   "rv dealer",
+   "rv service",
+   "rv repair"
+  ],  "base": "richmond hill",  "areas": [
+   "richmond hill",
+   "savannah"
+  ],  "region": "Savannah and the coast",  "spec": "RV dealership service department",  "reg": "savannah-ga"
+ },
+ {  "n": "Florida RVs LLC",  "c": "Dublin, GA",  "p": "(478) 272-3972",  "u": "https://www.floridarvsgeorgia.com/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "Florida RVs LLC is an RV service and repair business on US Highway 441 South in Dublin, serving Central Georgia. The site says its service team handles roof inspections and resealing, appliance repairs, awning repairs and replacement, slide and slide floor repairs, exterior and metal damage, water damage and insurance repair work.",  "g": [
+   "rv repair",
+   "rv service",
+   "roof repair"
+  ],  "base": "dublin",  "areas": [
+   "dublin"
+  ],  "region": "Macon, Warner Robins and middle Georgia",  "spec": "RV service & repair",  "reg": "middle-ga"
+ },
+ {  "n": "Steve's RVs",  "c": "Dublin, GA",  "p": "(478) 272-0491",  "u": "https://www.stevesrvs.com/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "Steve's RVs is an RV dealership and service shop on US 441 in Dublin, serving Central Georgia. The site says its service team is equipped to diagnose and fix RV problems and invites owners to bring their RV by the shop.",  "g": [
+   "rv dealer",
+   "rv service",
+   "rv repair"
+  ],  "base": "dublin",  "areas": [
+   "dublin"
+  ],  "region": "Macon, Warner Robins and middle Georgia",  "spec": "RV dealership service department",  "reg": "middle-ga"
+ },
+ {  "n": "Coachcraft by MacDonald",  "c": "Columbus, GA",  "p": "(706) 562-0510",  "u": "https://www.coachcraftbymacdonald.com/",  "t": "center",  "e": false,  "r": false,  "d": "Coachcraft by MacDonald is an RV maintenance, customization and repair shop on Belinda Drive in Columbus. The site says it is the last certified Wanderlodge repair center in the USA and works on premium brands such as Wanderlodge, Country Coach, Newmar, Foretravel, Prevost and Newell, handling mechanical and chassis repairs, slide room repairs, fuel tank work, electrical repair, generator and air conditioning service, interior renovation and body and insurance work.",  "g": [
+   "rv repair",
+   "rv restoration",
+   "chassis",
+   "body shop"
+  ],  "base": "columbus",  "areas": [
+   "columbus"
+  ],  "region": "Columbus, Albany and the southwest",  "spec": "RV maintenance, restoration & collision repair",  "reg": "southwest-ga"
+ },
+ {  "n": "Little River Mobile RV Repair",  "c": "Tifton, GA",  "p": "(229) 546-5973",  "u": "https://lrmobilerv.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Little River Mobile RV Repair is a mobile RV repair and maintenance business based just outside Tifton, owned and operated by RVTAA-certified technician Trey Metzger. The site says it covers the Central South Georgia area, including Tifton, Valdosta, Adel, Ashburn, Moultrie, Fitzgerald, Ocilla and Lake Park, and comes to the customer for RV repair and maintenance.",  "g": [
+   "mobile tech",
+   "rv repair",
+   "rv maintenance"
+  ],  "base": "tifton",  "areas": [
+   "tifton",
+   "valdosta",
+   "adel",
+   "ashburn",
+   "moultrie",
+   "fitzgerald",
+   "ocilla",
+   "lake park"
+  ],  "region": "Columbus, Albany and the southwest",  "spec": "mobile RV repair & maintenance",  "reg": "southwest-ga"
+ },
+ {  "n": "Jake's Mobile RV Service",  "c": "LaGrange, GA",  "p": "(706) 938-7478",  "u": "https://jakesmobilervservice.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Jake's Mobile RV Service is a mobile RV repair and maintenance business serving LaGrange and the surrounding area. The site says the technician comes to the customer's location, whether a campground, storage lot or home, and handles general repairs, preventive maintenance, electrical systems, plumbing, HVAC and pre-purchase and annual safety inspections.",  "g": [
+   "mobile tech",
+   "rv repair",
+   "rv maintenance",
+   "inspections"
+  ],  "base": "lagrange",  "areas": [
+   "lagrange",
+   "newnan"
+  ],  "region": "Columbus, Albany and the southwest",  "spec": "mobile RV repair & maintenance",  "reg": "southwest-ga"
+ },
+ {  "n": "Factory Direct Marine & RV",  "c": "Americus, GA",  "p": "(229) 410-2134",  "u": "https://factorydirectmarine.com/",  "t": "center",  "e": false,  "r": false,  "d": "Factory Direct Marine & RV is a boat and RV dealership on US Highway 280 in Americus with on-site service and parts. The site says the dealership sells new and used RVs and boats and has certified technicians who service both.",  "g": [
+   "rv dealer",
+   "rv service",
+   "parts"
+  ],  "base": "americus",  "areas": [
+   "americus"
+  ],  "region": "Columbus, Albany and the southwest",  "spec": "RV dealership service department",  "reg": "southwest-ga"
  }
 ];

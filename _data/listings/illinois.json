@@ -122,7 +122,53 @@
     "Elburn": "chicago-il",
     "Sugar Grove": "chicago-il",
     "Wauconda": "chicago-il",
-    "Johnsburg": "chicago-il"
+    "Johnsburg": "chicago-il",
+    "Collinsville": "south-il",
+    "Edwardsville": "south-il",
+    "O'Fallon": "south-il",
+    "Fairview Heights": "south-il",
+    "Granite City": "south-il",
+    "Alton": "south-il",
+    "Godfrey": "south-il",
+    "East Alton": "south-il",
+    "Wood River": "south-il",
+    "Troy": "south-il",
+    "Highland": "south-il",
+    "Mascoutah": "south-il",
+    "Waterloo": "south-il",
+    "Columbia": "south-il",
+    "Cahokia": "south-il",
+    "Carbondale": "south-il",
+    "Herrin": "south-il",
+    "Carterville": "south-il",
+    "Murphysboro": "south-il",
+    "Du Quoin": "south-il",
+    "West Frankfort": "south-il",
+    "Benton": "south-il",
+    "Mount Vernon": "south-il",
+    "Centralia": "south-il",
+    "Salem": "south-il",
+    "Effingham": "south-il",
+    "Olney": "south-il",
+    "Flora": "south-il",
+    "Harrisburg": "south-il",
+    "McLeansboro": "south-il",
+    "Metropolis": "south-il",
+    "Anna": "south-il",
+    "Jonesboro": "south-il",
+    "Vienna": "south-il",
+    "Cairo": "south-il",
+    "Chester": "south-il",
+    "Sparta": "south-il",
+    "Nashville": "south-il",
+    "Pinckneyville": "south-il",
+    "Litchfield": "south-il",
+    "Carlinville": "south-il",
+    "Jacksonville": "south-il",
+    "Quincy": "south-il",
+    "Pittsfield": "south-il",
+    "Steeleville": "south-il",
+    "Greenfield": "south-il"
   },
   "listings": [
     {
@@ -1484,6 +1530,255 @@
         "roadside_quote": null,
         "coverage_quotes": [
           "We serve drivers in Des Plaines, Chicago, Arlington Heights, and Elk Grove Village, Illinois."
+        ]
+      }
+    },
+    {
+      "n": "Edwards Trailers",
+      "c": "Belleville, IL",
+      "p": "618-233-2185",
+      "u": "https://edwardstrailers.com/service/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Edwards Trailers is a trailer and camper sales and service business on Mascoutah Avenue in Belleville, Illinois, trading locally as Edwards RV and Campers. Its service department does warranty and insurance work on any make or model RV, camper or trailer, covering inspections, slide-out repair, awning replacement, roof maintenance and replacement, electrical and plumbing repair, HVAC service and winterisation. It also sells trailer parts and stock trailers, and is open Monday to Friday.",
+      "g": [
+        "rv service center",
+        "trailer repair",
+        "roof"
+      ],
+      "base": "Belleville",
+      "areas": [
+        "Belleville"
+      ],
+      "region": "Metro East",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "Ph: 618-233-2185",
+        "type_quote": "We do warrantee work and insurance work on any make and model RV, camper or trailer.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "3169 Mascoutah AvenueBelleville, IL 62221",
+          "Inspections, slide out repair, awning replacement, Roof maintenance and replacement, electrical and plumbing repair, HVAC service, Winterization."
+        ]
+      }
+    },
+    {
+      "n": "Campers Inn RV of Collinsville",
+      "c": "Collinsville, IL",
+      "p": "618-491-5465",
+      "u": "https://www.campersinn.com/collinsville",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Campers Inn RV of Collinsville is a full-service RV dealership on Mall Street in Collinsville, Illinois, in the Metro East part of the St. Louis region. Its RV Repair and Service Center is staffed by RVDA-RVIA certified technicians and handles oil changes for gas and diesel RVs, diesel generator service, axle bearing packs, rubber roof maintenance, complete winterisation, 24-point inspections, and electrical, appliance, water, LP gas, air conditioner, water heater, furnace and refrigerator service. It also sells new and used RVs, parts and accessories.",
+      "g": [
+        "rv dealer",
+        "rv service center",
+        "maintenance"
+      ],
+      "base": "Collinsville",
+      "areas": [
+        "Collinsville"
+      ],
+      "region": "Metro East",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "Call 618-491-5465 or Email us",
+        "type_quote": "Our RV Repair and Service Center is ready to support all your maintenance and repair needs with our highly trained and professionally certified technicians.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "2020 Mall Street | Collinsville, IL 62234",
+          "Campers Inn RV of Collinsville, IL, is the RVer’s Trusted Resource for campers living in and visiting the St. Louis area."
+        ]
+      }
+    },
+    {
+      "n": "618 Fix My RV",
+      "c": "Benton, IL",
+      "p": "618-349-6978",
+      "u": "https://618fixmyrv.com/",
+      "t": "both",
+      "e": true,
+      "r": false,
+      "d": "618 Fix My RV is an RV dealer and repair shop on Skylane Drive in Benton, Illinois, founded in 2019 and based in a 5,000 square foot, three-bay facility near Rend Lake. It repairs roofs, appliances, slide-outs, awnings, suspension, flooring and hydraulic and electric levelling systems, and it also runs a mobile service across southern Illinois. Mobile work is billed at $145 per hour plus parts and it prioritises campground and emergency calls during peak season.",
+      "g": [
+        "rv dealer",
+        "rv service center",
+        "mobile"
+      ],
+      "base": "Benton",
+      "areas": [
+        "Benton",
+        "Mount Vernon"
+      ],
+      "region": "Southern Illinois",
+      "spec": "Mobile work excludes black and grey tank repairs, window replacement, awning fabric, generator service, and chassis or drivetrain work on motorised units.",
+      "evidence": {
+        "phone_quote": "618-349-6978",
+        "type_quote": "Whether you're in need of repairs on your current camper, or you're in the market for a new RV, let us be your one-stop shop for all your family's camping needs.",
+        "emergency_quote": "We typically prioritize campgrounds/emergency work during peak season from May through September.",
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "11368 Sky Lane Drive, Benton, Illinois 62812, United States",
+          "618 Fix My Rv performs a variety of mobile services to most locations in southern Illinois."
+        ]
+      }
+    },
+    {
+      "n": "Mobile RV Repair",
+      "c": "Effingham, IL",
+      "p": "(217) 821-5473",
+      "u": "https://mobile-rvrepair.com/",
+      "t": "both",
+      "e": true,
+      "r": false,
+      "d": "Mobile RV Repair is an RV parts, service and accessory business in Effingham, Illinois, offering on-site service. It provides RV repair, service and parts, and is on call on Sundays. It is open Monday to Friday 7:30am to 6pm and Saturday 8am to 3pm.",
+      "g": [
+        "mobile tech",
+        "rv repair",
+        "parts"
+      ],
+      "base": "Effingham",
+      "areas": [
+        "Effingham"
+      ],
+      "region": "Effingham County",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "(217) 821-5473 (2178215473)",
+        "type_quote": "PARTS - SERVICE - ACCESSORIES",
+        "emergency_quote": "Sunday: ON CALL",
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "P.O. Box 582 Effingham, IL 62401, US"
+        ]
+      }
+    },
+    {
+      "n": "Mevert Automotive & Tire Center",
+      "c": "Steeleville, IL",
+      "p": "(618) 965-9609",
+      "u": "https://mevertauto.com/rv-service-repair/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Mevert Automotive & Tire Center is an automotive and tire shop on West Broadway in Steeleville, Illinois, that advertises RV service and repair. It handles oil and filter changes, tune-ups, transmission and brake fluid flushes, batteries and charging systems, and checks tires, suspension, steering, cooling, air conditioning, brakes, belts and hoses. Its technicians are ASE certified and it offers a 5-year, unlimited mileage warranty on qualifying repairs. Its RV work is limited to the chassis and mechanical systems, not the coach portion.",
+      "g": [
+        "rv chassis",
+        "engine",
+        "tires"
+      ],
+      "base": "Steeleville",
+      "areas": [
+        "Steeleville"
+      ],
+      "region": "Randolph County",
+      "spec": "RV chassis and mechanical systems only; does not service the coach portion such as plumbing, HVAC, electrical house systems or slide-outs.",
+      "evidence": {
+        "phone_quote": "618-965-9609 (6189659609)",
+        "type_quote": "Mevert Automotive & Tire Center provides RV service and repair, including de-winterizing.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "1014 West Broadway, Steeleville, IL 62288",
+          "Because RVs are heavy, they put more strain on everything, including the engine."
+        ]
+      }
+    },
+    {
+      "n": "Landers Towing & Collision",
+      "c": "Salem, IL",
+      "p": "1-888-526-3377",
+      "u": "https://landersauto.com/services/rv-collision-repair/",
+      "t": "both",
+      "e": true,
+      "r": true,
+      "d": "Landers Towing & Collision is a collision repair and towing business on Mills Cart Road in Salem, Illinois, that repairs RVs. It handles fibreglass and rubber roof repair, siding, side panels, floors, doors, slide-outs, lighting and wiring, plus seam re-caulking, repainting and glass repair and replacement. It works directly with insurance carriers and RV manufacturers, offers mobile RV repair for smaller jobs, and provides 24-hour roadside service for heavy-duty towing.",
+      "g": [
+        "collision",
+        "body shop",
+        "roof",
+        "mobile"
+      ],
+      "base": "Salem",
+      "areas": [
+        "Salem"
+      ],
+      "region": "Southern Illinois",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "1-888-526-3377 (18885263377)",
+        "type_quote": "If you need RV repair after yours has suffered damage, it’s best to come to the professionals at Landers Towing & Collision to get the quality workmanship you deserve.",
+        "emergency_quote": null,
+        "roadside_quote": "Plus, we provide 24-hour roadside service for heavy-duty towing.",
+        "coverage_quotes": [
+          "2 Mills Cart Road Salem, Illinois 62881",
+          "From fiberglass and rubber roof repairs to siding, side panels, floors, doors, slide-outs, lighting, and wiring—we handle it all."
+        ]
+      }
+    },
+    {
+      "n": "Victory Lane Outdoors",
+      "c": "Litchfield, IL",
+      "p": "217.324.3965",
+      "u": "https://www.victorylaneoutdoors.com/pages/services",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Victory Lane Outdoors is a locally owned recreational dealership on Old Route 66 North in Litchfield, Illinois. Its in-house service department is staffed by factory-certified technicians with more than 30 years of experience, and handles RV winterisation, warranty repairs and custom installations, along with trailer axle and bearing service, brake inspection, lights and wiring, tires and hitch and coupler service. It sells Keystone and Dutchmen RVs, boats and trailers and keeps a stocked parts counter.",
+      "g": [
+        "rv dealer",
+        "rv service center",
+        "trailer repair"
+      ],
+      "base": "Litchfield",
+      "areas": [
+        "Litchfield"
+      ],
+      "region": "central Illinois",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "217.324.3965 (2173243965)",
+        "type_quote": "Our factory-certified technicians handle everything from pre-season boat tune-ups and RV winterization to warranty repairs and custom installations — all at our Litchfield, IL facility.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "903 Old Rte 66 N, Litchfield IL 62056, USA",
+          "Victory Lane Outdoors proudly serves customers throughout Litchfield and the greater central Illinois area."
+        ]
+      }
+    },
+    {
+      "n": "Fun Town RV Anna",
+      "c": "Anna, IL",
+      "p": "(833) 386-8696",
+      "u": "https://www.funtownrv.com/locations/anna",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Fun Town RV Anna is a dealership on East Vienna Street in Anna, Illinois, with an on-site service department. Its certified RV technicians service all major makes and models, covering preventive maintenance and inspections, engine, transmission and powertrain work, electrical and solar systems, HVAC, plumbing and waste systems, exterior and roofing, appliances, safety checks, and tow and chassis work. It also sells new and used RVs and runs a paint booth for collision and custom work.",
+      "g": [
+        "rv dealer",
+        "rv service center",
+        "collision"
+      ],
+      "base": "Anna",
+      "areas": [
+        "Anna"
+      ],
+      "region": "Southern Illinois",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "(833) 386-8696 (833-386-8696)",
+        "type_quote": "Expert Technicians - Our certified RV technicians have deep training and experience with all major RV makes and models.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Anna, IL 1450 East Vienna Street Anna, IL 62906",
+          "Service (833) 386-8696"
         ]
       }
     }

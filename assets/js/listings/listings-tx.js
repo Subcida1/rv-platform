@@ -1464,5 +1464,78 @@ window.RV_LISTINGS_TX = [
    "mobile",
    "rv repair"
   ],  "base": "bastrop",  "areas": [],  "region": "Austin, TX",  "spec": "mobile RV repair",  "reg": "central-tx"
+ },
+ {  "n": "Double T RV Service",  "c": "El Paso, TX",  "p": "915-637-9031",  "u": "https://doubletrvservice.com/",  "t": "both",  "e": false,  "r": false,  "d": "Independent RV repair shop in El Paso that has served RV owners for over 20 years, located near the Sunland Park Casino and Racetrack with mobile service also available. Double T RV Service works on the comfort systems of a coach  -  appliances, plumbing, electrical, hydraulics, jacks, slides, roof and vents  -  and is an authorized service provider for major RV product manufacturers, working with manufacturers and extended warranty companies. Labor is backed by a 90-day guarantee.",  "g": [
+   "rv repair shop",
+   "mobile service",
+   "appliances",
+   "electrical"
+  ],  "base": "el paso",  "areas": [],  "region": "El Paso and the far west",  "spec": "RV repair and service",  "reg": "el-paso"
+ },
+ {  "n": "Busy Bee Mobile RV Repair",  "c": "El Paso, TX",  "p": "(915) 600-9750",  "u": "https://busybeemobilervrepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Small, dedicated mobile RV repair crew based in the El Paso area, serving greater El Paso and southern New Mexico at driveways, RV parks, storage lots and campgrounds. Busy Bee focuses on the living side of an RV  -  HVAC, plumbing, electrical, showers, doors, slides, appliances, roof and exterior  -  and does not repair engines, transmissions or chassis. It offers same-day calls, on-site diagnostics and flat estimates, and serves travel trailers, fifth wheels and Class A/B/C motorhomes.",  "g": [
+   "mobile tech",
+   "rv repair",
+   "hvac",
+   "appliances"
+  ],  "base": "el paso",  "areas": [
+   "el paso",
+   "horizon city",
+   "socorro",
+   "canutillo",
+   "anthony",
+   "fort bliss"
+  ],  "region": "El Paso and the far west",  "spec": "Mobile RV repair",  "reg": "el-paso"
+ },
+ {  "n": "Century Auto & RV",  "c": "Amarillo, TX",  "p": "806-622-1900",  "u": "https://www.centuryrvamarillo.com/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "Amarillo dealership with a dedicated RV service department at 12221 Interstate 27 Canyon Drive, providing RV service and repair for motorhomes and trailers. Century Auto & RV offers scheduled maintenance, repairs and parts support for RV owners in the Texas Panhandle.",  "g": [
+   "rv dealer",
+   "service department",
+   "repair"
+  ],  "base": "amarillo",  "areas": [],  "region": "Amarillo, Lubbock and the Panhandle",  "spec": "RV dealer service department",  "reg": "panhandle"
+ },
+ {  "n": "San Angelo RV Repair",  "c": "San Angelo, TX",  "p": "325-653-1978",  "u": "https://sanangelorvrepair.com/",  "t": "both",  "e": true,  "r": true,  "d": "RV repair and service business in the heart of San Angelo with 50 years of combined experience and certified technicians. San Angelo RV Repair handles full systems checks, winterization, air conditioning and heating, appliance repair, general maintenance, electrical and plumbing work, plus insurance claims and warranty work, and offers mobile on-site service with emergency roadside assistance.",  "g": [
+   "rv repair shop",
+   "mobile service",
+   "insurance claims",
+   "emergency"
+  ],  "base": "san angelo",  "areas": [],  "region": "San Angelo, Abilene and the Concho valley",  "spec": "RV repair and service",  "reg": "concho"
+ },
+ {  "n": "Roamin' RV Repairs of Texas LLC",  "c": "Early, TX",  "p": "325-998-7796",  "u": "https://www.roaminrvrepairstx.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Veteran-owned, fully mobile RV repair service based in Early, Texas, and traveling across the region. Owner Raymond Jacobson is a National RV Training Academy certified RV technician, and the business provides on-site diagnostics, maintenance and repair for all major RV systems including AC, furnace, water heaters, electrical, plumbing, landing gear, slides, awnings and refrigerators.",  "g": [
+   "mobile tech",
+   "rv repair",
+   "veteran owned",
+   "appliances"
+  ],  "base": "early",  "areas": [],  "region": "San Angelo, Abilene and the Concho valley",  "spec": "Mobile RV repair",  "reg": "concho"
+ },
+ {  "n": "RV Repair On Demand",  "c": "McAllen, TX",  "p": "956-821-4852",  "u": "https://rvrepairondemandtx.com/services",  "t": "mobile",  "e": false,  "r": false,  "d": "Mobile RV repair business based in McAllen and serving the Rio Grande Valley, providing on-site repair and maintenance for RV owners. RV Repair On Demand handles HVAC, water heaters, plumbing, electrical, hydraulic jacks, black and gray tanks, awnings and roofs, plus preventative maintenance and pre-purchase inspections, and works with insurance companies and extended policies.",  "g": [
+   "mobile tech",
+   "rv repair",
+   "hvac",
+   "inspections"
+  ],  "base": "mcallen",  "areas": [
+   "mcallen",
+   "alamo",
+   "mission",
+   "la joya",
+   "weslaco",
+   "harlingen",
+   "donna",
+   "san benito",
+   "mercedes",
+   "la feria",
+   "port isabel",
+   "pharr"
+  ],  "region": "McAllen, Harlingen and the Rio Grande Valley",  "spec": "Mobile RV repair",  "reg": "rio-grande-valley"
+ },
+ {  "n": "Calvary RV Solutions",  "c": "Henderson, TX",  "p": "903-969-3239",  "u": "https://calvaryrv.com/",  "t": "both",  "e": false,  "r": false,  "d": "Full-service mobile RV repair company that also works from its shop, run by an RVTAA advanced certified technician who is licensed and bonded and works with manufacturer warranties, extended warranties and insurance companies. Calvary RV Solutions repairs and services most makes and models and lists a Rio Grande Valley service area covering Brownsville, Harlingen, Los Fresnos and South Padre Island alongside its East Texas coverage.",  "g": [
+   "mobile tech",
+   "rv repair",
+   "RVTAA certified",
+   "warranty work"
+  ],  "base": "henderson",  "areas": [
+   "brownsville",
+   "harlingen",
+   "los fresnos",
+   "south padre island"
+  ],  "region": "McAllen, Harlingen and the Rio Grande Valley",  "spec": "Mobile and shop RV repair",  "reg": "east-tx"
  }
 ];
