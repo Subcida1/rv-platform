@@ -1092,5 +1092,224 @@ window.RV_LISTINGS_TX = [
    "rio grande city",
    "edinburg"
   ],  "region": "McAllen, Harlingen and the Rio Grande Valley",  "reg": "rio-grande-valley"
+ },
+ {  "n": "Houston RV Repair",  "c": "Houston, TX",  "p": "832-957-3970",  "u": "https://www.houstonrvrepair.com/",  "t": "both",  "e": false,  "r": false,  "d": "RV repair and body shop at 16712 North Freeway, Suite B in north Houston that has operated since 2006. It services motorhomes and travel trailers bumper to bumper, with an in-house shop and a mobile option, covering roof replacement, generators, floors, air conditioning, awnings, leveling jacks, brakes, engine diagnostics, water heaters and slide-outs. It is a Norcold dealer, a Crazy Roof Seal dealer and an Onan certified repair facility, and it handles warranty and insurance work.",  "g": [
+   "rv service center",
+   "bodywork",
+   "generators"
+  ],  "base": "houston",  "areas": [],  "region": "Houston, TX",  "spec": "RV repair and bodywork",  "reg": "gulf-coast"
+ },
+ {  "n": "Houston Mobile RV",  "c": "Houston, TX",  "p": "281-756-7551",  "u": "https://www.houstonmobilerv.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "On-site mobile RV repair business serving South Houston. It performs air conditioning, plumbing, awning and electrical repair, checks for plumbing water leaks, and handles routine maintenance as well as extensive repairs on fifth wheels and other RVs. It markets to cross-country travelers, oil field and plant workers living on site, and full-time retirees parked at RV parks.",  "g": [
+   "mobile tech"
+  ],  "base": "houston",  "areas": [],  "region": "Houston, TX",  "spec": "mobile RV repair",  "reg": "gulf-coast"
+ },
+ {  "n": "Big Star RVs",  "c": "Houston, TX",  "p": "(346) 320-4995",  "u": "https://bigstarrvs.com/",  "t": "center",  "e": false,  "r": false,  "d": "RV repair, restoration and consignment business at 11103 Telephone Road in Houston. It handles roof repair and replacement, water damage restoration, mechanical repairs such as brakes, leveling systems, LP systems and awnings, electrical services, remodeling, washing and detailing, and clear coat restoration, alongside buying, selling and consignment. It serves Greater Houston and surrounding communities.",  "g": [
+   "rv service center",
+   "roof"
+  ],  "base": "houston",  "areas": [],  "region": "Houston, TX",  "spec": "RV repair and roof and water damage restoration",  "reg": "gulf-coast"
+ },
+ {  "n": "Grace & Gears Automotive",  "c": "Alvin, TX",  "p": "346-302-3684",  "u": "https://www.graceandgearsautomotive.com/medium-heavy-duty-service/rv-repair",  "t": "center",  "e": false,  "r": false,  "d": "Veteran-owned, family-operated repair shop at 310 County Rd 296A in Alvin that services RVs within a 50-mile radius. It performs drivetrain repairs, slideout installation and repair, AC unit installation and repair, water heater replacement and general mechanical repairs, with ASE-certified technicians who have more than 25 years of diesel and automotive experience. It serves Houston, Pearland, League City, Pasadena, Sugar Land, Galveston, Missouri City, Friendswood, Texas City, Baytown, Deer Park, Lake Jackson, Angleton, Dickinson, La Porte, Rosenberg, Richmond, Santa Fe and Clute.",  "g": [
+   "rv service center",
+   "chassis"
+  ],  "base": "alvin",  "areas": [],  "region": "Houston, TX",  "spec": "RV mechanical repair",  "reg": "gulf-coast"
+ },
+ {  "n": "Top Choice RV Service & Maintenance",  "c": "Spring, TX",  "p": "832-492-1075",  "u": "https://www.houstonrvservice.com/",  "t": "center",  "e": false,  "r": false,  "d": "RV dealership founded in 2009 at 4611 Spring Cypress Rd in Spring that operates a service department and a body shop department. It has worked in the RV industry for over a decade on motorhomes, travel trailers and fifth wheels, and its site lists a single service and parts phone number. It also runs a paint and body operation under the Top Choice RV Paint & Body name at the same address.",  "g": [
+   "rv service center",
+   "bodywork"
+  ],  "base": "spring",  "areas": [],  "region": "Houston, TX",  "spec": "RV service and body shop",  "reg": "gulf-coast"
+ },
+ {  "n": "Reynolds Mobile RV Repair",  "c": "Houston, TX",  "p": "832-278-3850",  "u": "http://www.rvrepairinhoustontx.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Family-owned mobile RV repair business based in Houston that has been in business about 25 years. It performs RV repair, camper repair and maintenance, is licensed and certified, and works with most insurance providers and handles insurance claims. The site publishes one Houston phone number and an address in the 77082 area.",  "g": [
+   "mobile tech"
+  ],  "base": "houston",  "areas": [],  "region": "Houston, TX",  "spec": "mobile RV repair",  "reg": "gulf-coast"
+ },
+ {  "n": "O'Daniel's Garage & RV",  "c": "Baytown, TX",  "p": "281-422-9110",  "u": "https://odanielsgarageandrv.com/",  "t": "both",  "e": false,  "r": false,  "d": "Auto and RV repair shop in Baytown operating since 1989. It repairs broken-down RVs, performs maintenance and tuneups, furnace and heating repair, generator repair, and travels to the RV site with mobile services. It also services cars and SUVs, and its site gives a single Baytown phone number.",  "g": [
+   "rv service center",
+   "mobile tech"
+  ],  "base": "baytown",  "areas": [],  "region": "Houston, TX",  "spec": "auto and RV repair",  "reg": "gulf-coast"
+ },
+ {  "n": "South Texas RV",  "c": "Pasadena, TX",  "p": "713-473-0993",  "u": "https://www.southtexasrvpasadena.com/",  "t": "center",  "e": false,  "r": false,  "d": "RV dealership at 502 E Southmore Ave in Pasadena that runs a dedicated service department and also offers sales and storage. Its site describes a service and repair center staffed by certified technicians doing precision maintenance, engine diagnostics and specialized body work, and lists office and cell numbers.",  "g": [
+   "rv service center"
+  ],  "base": "pasadena",  "areas": [],  "region": "Houston, TX",  "spec": "RV sales, service and storage",  "reg": "gulf-coast"
+ },
+ {  "n": "Quality 1st RV LLC",  "c": "Pearland, TX",  "p": "281-412-2600",  "u": "https://quality1strv.com/",  "t": "center",  "e": false,  "r": false,  "d": "Family-owned RV repair shop in Pearland that presents itself as an RV repair specialist. Its site gives a call number and a separate text number for reaching the shop.",  "g": [
+   "rv service center"
+  ],  "base": "pearland",  "areas": [],  "region": "Houston, TX",  "spec": "RV repair",  "reg": "gulf-coast"
+ },
+ {  "n": "Certified RV Repair",  "c": "Waller, TX",  "p": "281-770-5325",  "u": "https://www.certifiedrvrepair.com/",  "t": "mobile",  "e": true,  "r": false,  "d": "Family-owned mobile RV repair business operating in Waller County and surrounding areas since 2005. It provides on-site repairs at the customer's location, from emergency repairs to routine maintenance, with certified technicians. The site lists a call or text number for appointments.",  "g": [
+   "mobile tech"
+  ],  "base": "waller",  "areas": [],  "region": "Houston, TX",  "spec": "mobile RV repair",  "reg": "gulf-coast"
+ },
+ {  "n": "Overall Outfitting",  "c": "Fort Bend County, TX",  "p": "(346)-840-4367",  "u": "https://www.overalloutfitting.com/",  "t": "center",  "e": false,  "r": false,  "d": "Owner-operated RV repair and upgrade shop serving Fort Bend County. Work is by appointment only, with the owner doing the job from first conversation to final detail, and the shop describes RV repairs and upgrades built on honesty, quality workmanship and clear communication. The site lists one phone number and an email.",  "g": [
+   "rv service center"
+  ],  "base": null,  "areas": [],  "region": "Houston, TX",  "spec": "RV repair and upgrades",  "reg": "gulf-coast"
+ },
+ {  "n": "Katy RV Repair",  "c": "Houston, TX",  "p": "(713)819-6000",  "u": "https://katyrvrepair.com/",  "t": "center",  "e": false,  "r": false,  "d": "Small family-owned RV repair business serving the Katy area of west Houston. It handles air conditioning, roof replacements and reseals, heating systems, awning repair, electrical, converters and inverters, plumbing, water systems and water heaters, steps, windows, refrigerators, LP gas systems, holding tanks, Aqua-Hot, leveling systems, batteries, winterizing and floor repair, and offers scheduled services and safety checks.",  "g": [
+   "rv service center"
+  ],  "base": "houston",  "areas": [],  "region": "Houston, TX",  "spec": "RV repair",  "reg": "gulf-coast"
+ },
+ {  "n": "Atascocita RV Sales & Service",  "c": "Humble, TX",  "p": "(281) 570-6322",  "u": "https://atascocitarvsales.com/",  "t": "center",  "e": false,  "r": false,  "d": "Used RV dealer at 3010 Atascocita Road in Humble that also runs an RV service operation for travel trailers and Class B+ RVs. It sells new and pre-owned RVs, motorhomes and fifth wheels, and publishes a single phone number and address for both sales and service.",  "g": [
+   "rv service center"
+  ],  "base": "humble",  "areas": [],  "region": "Houston, TX",  "spec": "RV sales and service",  "reg": "gulf-coast"
+ },
+ {  "n": "Serenity Pines RV Repair",  "c": "Cleveland, TX",  "p": "(936) 641-4622",  "u": "https://www.serenitypinesrvrepair.com/",  "t": "mobile",  "e": true,  "r": false,  "d": "Mobile RV repair and maintenance business based in Cleveland that covers Liberty County and beyond, coming to the customer's campsite or home with no towing required. It handles roof repairs and resealing, electrical systems, air conditioning and furnaces, slide-out systems, plumbing and water systems, and awnings and exterior work, with same-day service and 24/7 emergency availability. Its service area includes Cleveland, Liberty County, Livingston, Splendora and Dayton.",  "g": [
+   "mobile tech"
+  ],  "base": "cleveland",  "areas": [],  "region": "Houston, TX",  "spec": "mobile RV repair",  "reg": "gulf-coast"
+ },
+ {  "n": "Ron Hoover RV",  "c": "Katy, TX",  "p": "281-947-5723",  "u": "https://www.ronhooverrvs.com/rv-service-parts-in-west-houston-tx",  "t": "center",  "e": false,  "r": false,  "d": "RV dealership service department and body shop at 29029 Katy Freeway in Katy, on the west side of Houston. Its service department works on fifth wheels, toy haulers, travel trailers and motorhomes, and its body shop handles collision repair, full-body paint and color matching, fiberglass repair and panel replacement, scratch and dent removal, hail damage and insurance repair estimates. It carries parts and accessories for several major brands.",  "g": [
+   "rv service center",
+   "bodywork"
+  ],  "base": "katy",  "areas": [],  "region": "Houston, TX",  "spec": "RV service and body shop",  "reg": "gulf-coast"
+ },
+ {  "n": "Vogt RV Centers",  "c": "Fort Worth, TX",  "p": "817-831-4222",  "u": "https://www.vogtrv.com/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "RV dealership on Airport Freeway in Fort Worth whose service department repairs motorhomes, travel trailers and fifth wheels. It advertises over 50 years of combined RV service experience, master-certified technicians, and specialties in insurance, storm damage and warranty repairs, with many repairs done while the customer waits.",  "g": [
+   "rv service center",
+   "warranty",
+   "insurance"
+  ],  "base": "fort worth",  "areas": [],  "region": "Dallas-Fort Worth, TX",  "spec": "RV dealer service department",  "reg": "dfw"
+ },
+ {  "n": "United RV Center",  "c": "Fort Worth, TX",  "p": "817-834-7141",  "u": "https://www.unitedrv.com/rv-services",  "t": "center",  "e": false,  "r": false,  "d": "RV dealer and service center on Airport Freeway in Fort Worth with a large service department of 20 climate-controlled bays and RVDA-certified technicians. It services all makes and models, not just units it sells, and handles roof and metal replacement, awnings, generator repairs, electrical, water and waste systems, paint and body work, and pre-purchase inspections.",  "g": [
+   "rv service center",
+   "bodywork",
+   "generators"
+  ],  "base": "fort worth",  "areas": [],  "region": "Dallas-Fort Worth, TX",  "spec": "RV dealer service department",  "reg": "dfw"
+ },
+ {  "n": "DFW RV Center",  "c": "Alvarado, TX",  "p": "817-386-0667",  "u": "https://www.dfwrvcenter.com/",  "t": "both",  "e": false,  "r": false,  "d": "RV repair shop with two locations in Alvarado and Midlothian south of Fort Worth, plus a mobile team. Master-certified technicians handle roof repair and replacement, awning, hydraulic and slide repair, appliance and generator work, water and propane systems, paint and fiberglass repair, plus inspections. The site also offers year-round RV storage.",  "g": [
+   "rv service center",
+   "mobile tech",
+   "bodywork"
+  ],  "base": "alvarado",  "areas": [],  "region": "Dallas-Fort Worth, TX",  "spec": "RV repair and mobile service",  "reg": "dfw"
+ },
+ {  "n": "Texas RV Guys",  "c": "Haslet, TX",  "p": "833-200-4380",  "u": "https://www.texasrvguys.com/",  "t": "center",  "e": false,  "r": false,  "d": "RV dealer and repair shop on Blue Mound Road in Haslet, northwest of Fort Worth. Alongside sales it runs a service and repair operation covering roof replacement, appliance repair, annual maintenance, collision repair, renovation, paint and restoration.",  "g": [
+   "rv service center",
+   "bodywork"
+  ],  "base": "haslet",  "areas": [],  "region": "Dallas-Fort Worth, TX",  "spec": "RV dealer with repair shop",  "reg": "dfw"
+ },
+ {  "n": "Mobile RV Repair of Dallas",  "c": "Dallas, TX",  "p": "214-716-7223",  "u": "https://mobilervrepairofdallas.com/",  "t": "mobile",  "e": true,  "r": true,  "d": "Mobile RV repair business serving the Dallas-Fort Worth Metroplex and North Texas. Certified technicians travel to the customer's home, campground or roadside to handle air conditioning, plumbing, water heaters, winterization, awning and slide-out repair, roof leak repair, electrical, generator and appliance work, plus pre-trip and pre-purchase inspections.",  "g": [
+   "mobile tech",
+   "rv repair",
+   "inspections"
+  ],  "base": "dallas",  "areas": [],  "region": "Dallas-Fort Worth, TX",  "spec": "mobile RV repair",  "reg": "dfw"
+ },
+ {  "n": "P&D's Mobile RV Service",  "c": "Garland, TX",  "p": "469-560-4305",  "u": "https://www.pdsmobilervservice.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Mobile RV repair business based on South Jupiter Road in Garland serving the DFW Metroplex. It brings service to full-timers, stored units and units parked at home, handling electrical, air conditioning, inspections, water systems, RV oil changes and fiberglass repair, and typically responds to schedule an appointment within 24 hours.",  "g": [
+   "mobile tech",
+   "rv repair"
+  ],  "base": "garland",  "areas": [],  "region": "Dallas-Fort Worth, TX",  "spec": "mobile RV repair",  "reg": "dfw"
+ },
+ {  "n": "Ratliff Mobile RV Repair",  "c": "Burleson, TX",  "p": "817-357-8462",  "u": "https://ratliffsmobilervrepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Locally owned mobile RV repair business based in Burleson serving an 80-mile radius. It uses transparent menu-based pricing for air conditioning, refrigerator, furnace and water heater service, Seal Tech leak tests, roof reseals, electrical and propane inspections, wheel bearing packs, slide-out service and winterization.",  "g": [
+   "mobile tech",
+   "rv repair",
+   "inspections"
+  ],  "base": "burleson",  "areas": [],  "region": "Dallas-Fort Worth, TX",  "spec": "mobile RV repair and maintenance",  "reg": "dfw"
+ },
+ {  "n": "First Call Mobile RV Repair",  "c": "Mansfield, TX",  "p": "972-996-4600",  "u": "https://firstcallmobilervrepair.com/",  "t": "both",  "e": false,  "r": false,  "d": "RV repair business with a shop and a mobile fleet of technicians based in Mansfield. It handles preventive maintenance, roof and flooring repair and sealing, air conditioning, appliance repair and replacement, awning work, upgrades and pre-purchase checks.",  "g": [
+   "rv service center",
+   "mobile tech"
+  ],  "base": "mansfield",  "areas": [],  "region": "Dallas-Fort Worth, TX",  "spec": "RV repair shop and mobile service",  "reg": "dfw"
+ },
+ {  "n": "RV World",  "c": "Weatherford, TX",  "p": "817-594-0091",  "u": "https://www.rvworldweatherfordtx.com/",  "t": "center",  "e": false,  "r": false,  "d": "Family-owned RV repair shop on Tin Top Road in Weatherford, west of Fort Worth. It provides full-service RV repair including appliance, water heater, electrical and roof replacement work plus travel trailer inspection and parts replacement.",  "g": [
+   "rv service center"
+  ],  "base": "weatherford",  "areas": [],  "region": "Dallas-Fort Worth, TX",  "spec": "RV repair shop",  "reg": "dfw"
+ },
+ {  "n": "Blue Skies Mobile RV Repair",  "c": "Weatherford, TX",  "p": "682-294-2267",  "u": "https://blueskiesrvrepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Mobile RV repair business serving the Weatherford area west of Fort Worth. It handles general RV repair covering air conditioning and heating, leveling systems, slide-outs, absorption refrigerators, water heaters, electrical systems and plumbing.",  "g": [
+   "mobile tech",
+   "rv repair"
+  ],  "base": "weatherford",  "areas": [],  "region": "Dallas-Fort Worth, TX",  "spec": "mobile RV repair",  "reg": "dfw"
+ },
+ {  "n": "Wampler's RV Repair",  "c": "Terrell, TX",  "p": "469-595-9590",  "u": "https://wamplersrvrepair.com/",  "t": "center",  "e": false,  "r": false,  "d": "Family-owned RV repair shop on Amelia Way in Terrell, east of Dallas. With over 35 years of collision repair experience it handles collision repair, water damage, roof replacement, general maintenance, manufacturer-authorized appliance repair, electrical, plumbing, hydraulic leveling, slide-outs and awnings.",  "g": [
+   "rv service center",
+   "bodywork"
+  ],  "base": "terrell",  "areas": [],  "region": "Dallas-Fort Worth, TX",  "spec": "RV collision and general repair",  "reg": "dfw"
+ },
+ {  "n": "BlueBonnet RV & Trailer Repair",  "c": "Rice, TX",  "p": "903-804-6600",  "u": "https://bluebonnetrvandtrailerrepair.com/",  "t": "both",  "e": false,  "r": true,  "d": "Locally owned mobile RV and trailer repair service working out of Rice south of Dallas with a shop option for larger roof, floor and structural jobs. It covers brake and bearing service, electrical and lighting, leaks and seals, hitches, HVAC and appliances, plus roadside assistance across the greater Dallas-Fort Worth area.",  "g": [
+   "mobile tech",
+   "roadside",
+   "rv repair"
+  ],  "base": "rice",  "areas": [],  "region": "Dallas-Fort Worth, TX",  "spec": "mobile RV and trailer repair",  "reg": "dfw"
+ },
+ {  "n": "A-Action Mobile RV Service",  "c": "Kennedale, TX",  "p": "817-341-5156",  "u": "https://aactionrvrepairs.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Mobile RV appliance and repair service based in Kennedale, south of Fort Worth, with over 15 years in business. It fixes and installs motorhome appliances such as water heaters, refrigerators and toilets and also repairs awnings, roof leaks, delamination and day-night shades across the Dallas-Fort Worth area.",  "g": [
+   "mobile tech",
+   "appliances"
+  ],  "base": "kennedale",  "areas": [],  "region": "Dallas-Fort Worth, TX",  "spec": "mobile RV appliance and repair",  "reg": "dfw"
+ },
+ {  "n": "Cross Country RV Solutions",  "c": "Alvarado, TX",  "p": "817-917-0092",  "u": "https://www.crosscountryrvsolutions.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Mobile RV repair business off I-35 near Alvarado serving the Dallas-Fort Worth Metroplex. With over ten years of RV repair experience it handles Airstreams and other RVs, covering air conditioning, water heaters, furnaces, refrigerators, awnings, electrical, axles and brakes, roof repair, hydronic heating and solar systems.",  "g": [
+   "mobile tech",
+   "rv repair",
+   "solar"
+  ],  "base": "alvarado",  "areas": [],  "region": "Dallas-Fort Worth, TX",  "spec": "mobile RV repair",  "reg": "dfw"
+ },
+ {  "n": "Quality RV Solutions",  "c": "Alvarado, TX",  "p": "817-764-1363",  "u": "https://www.qualityrvsolutions.com/",  "t": "both",  "e": false,  "r": false,  "d": "Family-owned RV repair shop on FM2738 in Alvarado, south of Fort Worth, operating since 2013. It repairs and replaces roofs, generators, electrical and plumbing systems and flooring for all makes and models, and offers mobile service for major situations.",  "g": [
+   "rv service center",
+   "mobile tech"
+  ],  "base": "alvarado",  "areas": [],  "region": "Dallas-Fort Worth, TX",  "spec": "RV repair shop",  "reg": "dfw"
+ },
+ {  "n": "SwiftFix RV Services",  "c": "McKinney, TX",  "p": "972-277-1230",  "u": "https://www.swiftfixrv.com/",  "t": "mobile",  "e": true,  "r": false,  "d": "Certified mobile RV technician based in McKinney serving the DFW area. It performs on-site repair, maintenance and inspections at the customer's home, campground or storage unit, specializing in RV repair, maintenance, underlighting and 24/7 emergency service, and covers Collin, Cooke, Dallas, Denton, Fannin, Grayson, Hunt, Kaufman, Rockwall and Tarrant Counties.",  "g": [
+   "mobile tech",
+   "inspections",
+   "rv repair"
+  ],  "base": "mckinney",  "areas": [],  "region": "Dallas-Fort Worth, TX",  "spec": "mobile RV repair",  "reg": "dfw"
+ },
+ {  "n": "Patriots RV Services",  "c": "Krum, TX",  "p": "940-488-5047",  "u": "https://patriotsrvservices.com/",  "t": "center",  "e": false,  "r": false,  "d": "Veteran-owned RV repair and upgrade center on US-380 in Krum, just outside Denton, serving Denton County and the Dallas-Fort Worth area. It handles diagnostics, emergency repairs, routine service, air conditioning, roof repair, diesel chassis work, slide systems, solar and lithium upgrades, and paint and body repairs.",  "g": [
+   "rv service center",
+   "rv repair",
+   "solar"
+  ],  "base": "krum",  "areas": [],  "region": "Dallas-Fort Worth, TX",  "spec": "RV repair and upgrade center",  "reg": "dfw"
+ },
+ {  "n": "DFW RV Roof",  "c": "Denton, TX",  "p": "817-692-2696",  "u": "https://dfwrvroof.com/",  "t": "center",  "e": false,  "r": false,  "d": "RV roof repair shop on Worthington Drive in Denton, north of Fort Worth, that installs the FlexArmor spray-on polyurea roof system. It strips and replaces failing RV roofs and does roof-related repair, working with insurance on hail and storm claims, and has been protecting RVs since 2005.",  "g": [
+   "roofing",
+   "rv repair"
+  ],  "base": "denton",  "areas": [],  "region": "Dallas-Fort Worth, TX",  "spec": "RV roof repair and replacement",  "reg": "dfw"
+ },
+ {  "n": "Quality Collision Repair Center",  "c": "Garland, TX",  "p": "972-494-0224",  "u": "https://www.qualitycollisionrepaircenter.com/motor-coach-repair.html",  "t": "center",  "e": false,  "r": false,  "d": "Collision repair center in Garland that specializes in RV, motor home, fifth wheel and travel trailer body work. It performs fiberglass and metal repair, sidewall repair and replacement, roof replacement, paint and graphics, delamination and water damage repair, and fabrication of parts no longer available from manufacturers.",  "g": [
+   "bodywork",
+   "rv repair"
+  ],  "base": "garland",  "areas": [],  "region": "Dallas-Fort Worth, TX",  "spec": "RV collision and body repair",  "reg": "dfw"
+ },
+ {  "n": "Texas RV Service",  "c": "Cumby, TX",  "p": "469-532-2267",  "u": "https://texasrvservice.com/",  "t": "center",  "e": false,  "r": false,  "d": "RV repair shop and parts supplier on Interstate 30 in Cumby, northeast of Dallas, with over 15 years of RV repair experience. It services fresh and waste water systems, 12V and 120V systems and appliances, propane systems, pop-up mechanics, window resealing, roof patching, hail repair, solar and entertainment systems, tires and axles.",  "g": [
+   "rv service center",
+   "parts"
+  ],  "base": "cumby",  "areas": [],  "region": "Dallas-Fort Worth, TX",  "spec": "RV repair shop and parts",  "reg": "dfw"
+ },
+ {  "n": "Texoma Classics",  "c": "Sherman, TX",  "p": "903-819-1452",  "u": "https://texomaclassics.com/services/rv-restoration",  "t": "center",  "e": false,  "r": false,  "d": "RV restoration and repair shop on Industrial Drive in Sherman, north of Dallas, serving the Texoma region and DFW metroplex. It handles complete RV renovations and targeted repairs for Class A, Class C and travel trailers, including roof replacement, water damage repair, interior remodels, solar and electrical upgrades, and mechanical and drivetrain service.",  "g": [
+   "rv repair",
+   "bodywork",
+   "solar"
+  ],  "base": "sherman",  "areas": [],  "region": "Dallas-Fort Worth, TX",  "spec": "RV restoration and repair",  "reg": "dfw"
+ },
+ {  "n": "Elite RV Roof & Collision",  "c": "Fort Worth, TX",  "p": "682-802-9619",  "u": "https://elitervpros.com/",  "t": "center",  "e": false,  "r": false,  "d": "RV roof and collision repair company with a service center on Frontier Park Circle in the Fort Worth Alliance area. It handles roof repair and replacement, collision repair, paint and body repair, awning replacements and RV roof seal protection plans, and also offers mobile RV repair and free on-site damage inspections.",  "g": [
+   "bodywork",
+   "roofing",
+   "rv repair"
+  ],  "base": "fort worth",  "areas": [],  "region": "Dallas-Fort Worth, TX",  "spec": "RV roof and collision repair",  "reg": "dfw"
+ },
+ {  "n": "Good Ol' Boys RV Repair",  "c": "Benbrook, TX",  "p": "817-381-6394",  "u": "https://goodolboysrv.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Mobile RV repair business in the Benbrook and Burleson area southwest of Fort Worth. Trained technicians travel to the customer's location to perform on-site RV repairs.",  "g": [
+   "mobile tech",
+   "rv repair"
+  ],  "base": "benbrook",  "areas": [],  "region": "Dallas-Fort Worth, TX",  "spec": "mobile RV repair",  "reg": "dfw"
+ },
+ {  "n": "Mobile Repair Specialists",  "c": "Dallas, TX",  "p": "817-297-3639",  "u": "https://mobilerepairspecialists.com/",  "t": "mobile",  "e": true,  "r": true,  "d": "Veteran-owned mobile RV repair shop serving the Dallas-Fort Worth Metroplex with RVIA/RVDA certified technicians. It offers repair and maintenance, pre-buy inspections, insurance repair quotes, warranty work and roadside assistance, covering dozens of Metroplex cities.",  "g": [
+   "mobile tech",
+   "inspections",
+   "roadside"
+  ],  "base": null,  "areas": [],  "region": "Dallas-Fort Worth, TX",  "spec": "mobile RV repair and inspections",  "reg": "dfw"
+ },
+ {  "n": "Complete RV Mobile Services, LLC",  "c": "Dallas, TX",  "p": "469-843-1669",  "u": "https://completervservices.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Mobile RV repair business serving North Texas and south-central Oklahoma. It comes to the customer for repair, maintenance, inspection and detailing, with plumbing, electrical, tank cleaning and general RV maintenance among its services, and books appointments online or by phone.",  "g": [
+   "mobile tech",
+   "rv repair"
+  ],  "base": null,  "areas": [],  "region": "Dallas-Fort Worth, TX",  "spec": "mobile RV repair",  "reg": "dfw"
+ },
+ {  "n": "Repair Vigorously",  "c": "Sherman, TX",  "p": "580-434-2670",  "u": "https://www.repairvigorously.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Mobile RV repair business with over 20 years of RV experience serving Lake Texoma and the Sherman, Denison and Durant area across North Texas and Oklahoma. It brings the repair to the customer's location and sells RV parts and accessories online.",  "g": [
+   "mobile tech",
+   "rv repair"
+  ],  "base": null,  "areas": [],  "region": "Dallas-Fort Worth, TX",  "spec": "mobile RV repair",  "reg": "dfw"
+ },
+ {  "n": "All RV Texas",  "c": "Fort Worth, TX",  "p": "817-426-5661",  "u": "https://allrvtexas.com/",  "t": "both",  "e": false,  "r": false,  "d": "RV repair business serving the greater Dallas-Fort Worth area since 2005. It offers mobile service or shop repairs and handles collision repair, general service, roof repair and customization, working directly with insurance companies.",  "g": [
+   "rv service center",
+   "mobile tech",
+   "bodywork"
+  ],  "base": null,  "areas": [],  "region": "Dallas-Fort Worth, TX",  "spec": "RV repair and collision",  "reg": "dfw"
+ },
+ {  "n": "RV FIXIN",  "c": "Denton, TX",  "p": "1-833-783-4946",  "u": "https://www.rvfixin.com/",  "t": "mobile",  "e": true,  "r": false,  "d": "Mobile RV repair service serving Dallas, Fort Worth, Denton and surrounding North Texas. It brings certified technicians on site for emergency diagnostics and repairs of all camper types including travel trailers, fifth wheels, toy haulers, motorhomes and pop-ups, covering air conditioning, electrical, plumbing and leak checks.",  "g": [
+   "mobile tech",
+   "rv repair"
+  ],  "base": null,  "areas": [],  "region": "Dallas-Fort Worth, TX",  "spec": "mobile RV repair",  "reg": "dfw"
  }
 ];

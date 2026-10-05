@@ -255,5 +255,84 @@ window.RV_LISTINGS_TN = [
  {  "n": "Nations RV",  "c": "Lyles, TN",  "p": "(615) 627-2323",  "u": "https://www.nationsrvtn.com/services/rv-collision-repair",  "t": "center",  "e": false,  "r": false,  "d": "Nations RV handles all types of RV and camper body repair in Middle Tennessee, from minor dents to full collision rebuilds. Its services include structural damage repair, roof, sidewall and floor replacement, paint and fiberglass restoration, awning, seal and trim replacement, and aluminum and gelcoat repairs. The shop says it works directly with all insurance companies.",  "g": [
    "body shop"
   ],  "base": "lyles",  "areas": [],  "region": "Middle Tennessee",  "spec": null,  "reg": "nashville-tn"
+ },
+ {  "n": "Lindsey RV Repair & Mobile Services",  "c": "White House, TN",  "p": "(618) 387-2229",  "u": "https://lindseyrvrepair.com/",  "t": "mobile",  "e": false,  "r": true,  "d": "Lindsey RV Repair & Mobile Services is a family-run, insured mobile RV and trailer repair business based at 120 Auxley Ct in White House, north of Nashville. Owner Gene Lindsey brings more than four decades of hands-on experience and comes to the customer's home, campground, storage lot or roadside. Work covers electrical troubleshooting and rewiring, brake systems and axles, hitch and towing components, plumbing leaks, appliance repair, slide-outs, awnings and leveling systems, tire repair, general maintenance and safety inspections.",  "g": [
+   "mobile tech"
+  ],  "base": "white house",  "areas": [],  "region": "Nashville and middle Tennessee",  "spec": null,  "reg": "nashville-tn"
+ },
+ {  "n": "Triple R RV Mobile Repair",  "c": "Clarksville, TN",  "p": "931-209-6553",  "u": "https://www.triplerrvrepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Triple R RV Mobile Repair is a mobile RV maintenance and repair business serving Clarksville, Tennessee, run by a registered RV technician, Robin Saine. The business advertises reliable service and promises to return a call if it is missed, and it travels to the customer to handle RV maintenance and repair needs.",  "g": [
+   "mobile tech"
+  ],  "base": "clarksville",  "areas": [],  "region": "Nashville and middle Tennessee",  "spec": null,  "reg": "nashville-tn"
+ },
+ {  "n": "Up And Running RV",  "c": "Franklin, TN",  "p": "615.830.4063",  "u": "https://uarrv.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Up And Running RV is a mobile RV service business based in middle Tennessee and run by Chris and Julie, doing on-site service calls throughout the region by appointment. It focuses on troubleshooting, RV electrical and battery upgrades, and the design and installation of solar systems on RVs and converted trailers, and it also helps owners understand how their RV's systems work.",  "g": [
+   "mobile tech"
+  ],  "base": "franklin",  "areas": [],  "region": "Nashville and middle Tennessee",  "spec": null,  "reg": "nashville-tn"
+ },
+ {  "n": "Blue Compass RV Nashville",  "c": "Lebanon, TN",  "p": "(615) 444-6161",  "u": "https://www.bluecompassrv.com/locations/tennessee/nashville/service",  "t": "center",  "e": false,  "r": false,  "d": "Blue Compass RV Nashville runs a full-service RV service center at 1010 Safari Camp Rd. in Lebanon, on the I-40 corridor east of Nashville, open Monday through Saturday. Certified technicians handle routine maintenance, engine and transmission work, electrical systems, plumbing and water systems, roof and exterior repairs, HVAC, appliances, structural work and collision repair. Every RV that comes in receives a free multi-point inspection.",  "g": [
+   "service center",
+   "dealer service"
+  ],  "base": "lebanon",  "areas": [],  "region": "Nashville and middle Tennessee",  "spec": "RV service center at a Blue Compass dealership",  "reg": "nashville-tn"
+ },
+ {  "n": "Camping World of Nashville",  "c": "Nashville, TN",  "p": "(877) 827-2398",  "u": "https://rv.campingworld.com/dealer/nashville-tennessee/rv-service-repair",  "t": "center",  "e": false,  "r": false,  "d": "Camping World of Nashville is the RV service and repair center at 2618 Music Valley Dr in Nashville. It provides complete service and repair for all RV types, including diagnostics, routine maintenance, OEM and extended warranty work, appliance service, oil and lube changes, roof repairs and propane service. The location also runs an RV dealership, parts counter and free 22-point and 45-point inspections.",  "g": [
+   "service center",
+   "dealer service"
+  ],  "base": "nashville",  "areas": [],  "region": "Nashville and middle Tennessee",  "spec": "RV service center (national chain, local shop)",  "reg": "nashville-tn"
+ },
+ {  "n": "Camping World of Murfreesboro",  "c": "Murfreesboro, TN",  "p": "(877) 629-8105",  "u": "https://rv.campingworld.com/dealer/murfreesboro-tennessee/rv-service-repair",  "t": "center",  "e": false,  "r": false,  "d": "Camping World of Murfreesboro is the RV service and repair center at 1005 Beasie Road in Murfreesboro. It provides complete service and repair for all RV types, including diagnostics, routine maintenance, warranty work, appliance service, leak checks, seal tech, oil and lube changes and propane service, along with free 22-point and 45-point inspections.",  "g": [
+   "service center",
+   "dealer service"
+  ],  "base": "murfreesboro",  "areas": [],  "region": "Nashville and middle Tennessee",  "spec": "RV service center (national chain, local shop)",  "reg": "nashville-tn"
+ },
+ {  "n": "Coyote View RV Park & RV Repair",  "c": "Union City, TN",  "p": "(731) 599-9898",  "u": "https://coyoteview.com/",  "t": "both",  "e": false,  "r": false,  "d": "Coyote View RV Park & RV Repair is a family-owned, big-RV-friendly campground at 2029 Phebus Lane on the edge of Union City that also operates a certified RV repair service. Since new ownership in 2021 it has added a certified RV repair technician who handles on-site repairs for guests and provides a mobile RV repair service to the wider Northwest Tennessee community.",  "g": [
+   "service center",
+   "mobile tech"
+  ],  "base": "union city",  "areas": [],  "region": "Memphis and the west",  "spec": "Campground with an on-site and mobile certified RV repair technician",  "reg": "memphis-tn"
+ },
+ {  "n": "Rocky Top Mobile RV Service, LLC",  "c": "Knoxville, TN",  "p": "865-244-6680",  "u": "https://www.rockytopmobilervservice.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Rocky Top Mobile RV Service, LLC is a Tennessee-based, family- and veteran-owned mobile RV repair company serving East Tennessee by appointment. It brings repairs to the customer's location and handles towable axle inspection, A/C and furnace work, roof repair, electrical repair, plumbing, structural repair, appliance repair, winterization and de-winterization.",  "g": [
+   "mobile tech"
+  ],  "base": "knoxville",  "areas": [],  "region": "Knoxville, the Smokies and east Tennessee",  "spec": null,  "reg": "knoxville-east-tn"
+ },
+ {  "n": "Jenkins RV Repair and Service",  "c": "Knoxville, TN",  "p": "865-804-4708",  "u": "https://jenkinsrv.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Jenkins RV Repair and Service is a mobile RV repair and maintenance business with a 50-mile service radius from its Knoxville base. It comes to the customer's campsite, driveway or storage lot to handle roof leaks and water damage, A/C, slide-outs, water heaters, plumbing, electrical and battery issues, brakes and wheel bearings, appliances, HVAC, propane, holding tanks, delamination and generator service, plus winterization. It also does local RV moving, custom renovations, site setup and RV training and inspections.",  "g": [
+   "mobile tech"
+  ],  "base": "knoxville",  "areas": [
+   "knoxville",
+   "maryville",
+   "sevierville"
+  ],  "region": "Knoxville, the Smokies and east Tennessee",  "spec": null,  "reg": "knoxville-east-tn"
+ },
+ {  "n": "Blue Compass RV Knoxville",  "c": "Louisville, TN",  "p": "(865) 681-3030",  "u": "https://www.bluecompassrv.com/locations/tennessee/knoxville/service",  "t": "center",  "e": false,  "r": false,  "d": "Blue Compass RV Knoxville runs a full-service RV service center at 3332 Wrights Ferry Rd. in Louisville, between Knoxville and the Smoky Mountain foothills, open Monday through Saturday. Certified technicians handle routine maintenance, engine and transmission work, electrical systems, plumbing, roof and exterior repairs, HVAC, appliances, structural work and collision repair, and every RV gets a free multi-point inspection.",  "g": [
+   "service center",
+   "dealer service"
+  ],  "base": "louisville",  "areas": [
+   "knoxville",
+   "maryville"
+  ],  "region": "Knoxville, the Smokies and east Tennessee",  "spec": "RV service center at a Blue Compass dealership",  "reg": "knoxville-east-tn"
+ },
+ {  "n": "Campers Inn RV of Knoxville",  "c": "Knoxville, TN",  "p": "(865) 933-7213",  "u": "https://www.campersinn.com/knoxville",  "t": "center",  "e": false,  "r": false,  "d": "Campers Inn RV of Knoxville is a full-service RV dealership and repair center at 835 Huckleberry Springs Road in Knoxville. Its service center is equipped to provide expert repairs and maintenance for RVs, backed by professionally certified technicians, and the location also includes a parts and accessories store. Service runs Monday through Saturday.",  "g": [
+   "service center",
+   "dealer service"
+  ],  "base": "knoxville",  "areas": [],  "region": "Knoxville, the Smokies and east Tennessee",  "spec": "RV service center at a Campers Inn dealership",  "reg": "knoxville-east-tn"
+ },
+ {  "n": "Roving Handyman",  "c": "Chattanooga, TN",  "p": "423-352-7339",  "u": "https://www.rovinghandyman.com/",  "t": "mobile",  "e": true,  "r": false,  "d": "Roving Handyman is a certified and insured mobile RV service and repair business based in Harrison and serving the greater Chattanooga region, traveling to campers for on-site work. It services all major brands and is an Aqua-Hot factory authorized service center, handling A/C and furnace service and repair, water heaters, generators, Aqua-Hot hydronics, tires and wheels, and roof, sealant and slide-out exterior service. It provides 24/7 emergency service for a higher hourly rate.",  "g": [
+   "mobile tech"
+  ],  "base": "chattanooga",  "areas": [],  "region": "Chattanooga and the southeast",  "spec": null,  "reg": "chattanooga-tn"
+ },
+ {  "n": "Dave's Mobile RV Service and Repair",  "c": "Dunlap, TN",  "p": "(423) 777-1896",  "u": "https://www.davesrvservice.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Dave's Mobile RV Service and Repair is a one-man mobile RV repair service based in Dunlap and serving the Sequatchie Valley. It brings repairs to motorhomes, fifth wheels, travel trailers and toy haulers at the customer's location, covering minor damage and dent repair, Diamond Shield removal, paint matching and blending, slide-out topper and awning replacement, AC diagnosis and repair, flooring, fireplaces, MORryde suspension and roof cleaning and resealing.",  "g": [
+   "mobile tech"
+  ],  "base": "dunlap",  "areas": [
+   "dunlap",
+   "pikeville",
+   "whitwell",
+   "soddy-daisy"
+  ],  "region": "Chattanooga and the southeast",  "spec": null,  "reg": "chattanooga-tn"
+ },
+ {  "n": "Camping World of Jackson",  "c": "Jackson, TN",  "p": "(877) 510-7785",  "u": "https://rv.campingworld.com/dealer/jackson-tennessee/rv-service-repair",  "t": "center",  "e": false,  "r": false,  "d": "Camping World of Jackson is the RV service and repair center at 1523 Vann Drive in Jackson. It provides complete service and repair for all RV types, including diagnostics, routine maintenance, OEM and extended warranty work, propane service, and free 22-point and 45-point inspections. The location also offers an on-site collision center and mobile service.",  "g": [
+   "service center",
+   "dealer service"
+  ],  "base": "jackson",  "areas": [],  "region": "Memphis and the west",  "spec": "RV service center (national chain, local shop)",  "reg": "memphis-tn"
+ },
+ {  "n": "Shelby's RV, LLC",  "c": "Savannah, TN",  "p": "(731) 925-2955",  "u": "https://shelbysrv.com/",  "t": "center",  "e": false,  "r": false,  "d": "Shelby's RV, LLC is an RV maintenance and repair shop at 9230 Highway 128 in Savannah, in West Tennessee. Its staff have more than 20 years of combined RV service experience, and the shop handles service and parts such as air conditioners, hitches and batteries, sourcing parts from reputable brands and working with manufacturers to process warranty claims.",  "g": [
+   "service center"
+  ],  "base": "savannah",  "areas": [],  "region": "Memphis and the west",  "spec": null,  "reg": "memphis-tn"
  }
 ];
