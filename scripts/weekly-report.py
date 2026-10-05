@@ -26,8 +26,11 @@ import argparse
 import importlib.util
 import json
 import os
+import re
 import sys
 from datetime import date, datetime, timedelta
+
+import subprocess
 
 import requests
 
@@ -48,6 +51,37 @@ def load_gsc():
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     return module
+
+
+def expected_window_days(text):
+    """How long the author said to wait before judging this change, or None.
+
+    The first version flagged "no movement yet" for every entry with no movement,
+    so entries whose own expectation said "No search effect" were listed as
+    failures. That is how an alarm list gets ignored, and this project already has
+    a rule about checks that fire for the wrong reason. An entry is now flagged
+    only once the window it named has actually elapsed; an entry that names no
+    window is not judged at all, because there is nothing to judge it against.
+    """
+    text = (text or "").lower()
+    m = re.search(r"within\s+(\d+)\s*(?:-|to)\s*(\d+)\s*week", text)
+    if m:
+        return int(m.group(2)) * 7          # the outer bound, so nothing is called early
+    m = re.search(r"within\s+(\d+)\s*week", text)
+    if m:
+        return int(m.group(1)) * 7
+    m = re.search(r"(\d+)\s*(?:-|to)\s*(\d+)\s*week", text)
+    if m:
+        return int(m.group(2)) * 7
+    m = re.search(r"within\s+(\d+)\s*day", text)
+    if m:
+        return int(m.group(1))
+    if re.search(r"(?:within|in)\s+a\s+month", text):
+        return 30
+    m = re.search(r"within\s+(\d+)\s*month", text)
+    if m:
+        return int(m.group(1)) * 30
+    return None
 
 
 def is_indexed(state):
@@ -256,6 +290,21 @@ def top_rows(gsc, token, site, dimension, start, end, limit=10):
     return payload.get("rows", [])
 
 
+def still_served(url):
+    """Does the old URL still answer? That distinguishes a rename from a loss.
+
+    On 2026-10-05 tools and guides moved to extensionless URLs. Every old .html URL
+    still returned 200 and declared the new form canonical, so the move was clean,
+    but this report called it "left the index" and listed it as a regression. A URL
+    dropping out of the sweep is a fact about the sitemap, not about the index, so
+    ask the live site before calling anything lost.
+    """
+    try:
+        return requests.get(url, timeout=(8, 20), stream=True).status_code
+    except requests.RequestException:
+        return None
+
+
 def coverage(gsc, token, site, previous, workers=16):
     """Inspect every published URL.
 
@@ -281,7 +330,15 @@ def coverage(gsc, token, site, previous, workers=16):
                 changes.append((row["url"], was, row["coverageState"]))
         for url, was in before.items():
             if url not in {r["url"] for r in rows}:
-                changes.append((url, was, "no longer in the sitemap"))
+                # A 404 is a real removal; a timeout or any other code is not evidence of one.
+                code = still_served(url)
+                if code == 200:
+                    changes.append((url, was, "still served, dropped from the sitemap (renamed)"))
+                elif code == 404:
+                    changes.append((url, was, "gone: HTTP 404"))
+                else:
+                    changes.append((url, was, "unverified: the probe returned %s"
+                                    % (code if code else "no response")))
     return rows, counts, changes
 
 
@@ -604,12 +661,28 @@ def build(args):
         add("")
         add("**%d of %d published URLs are indexed.**" % (indexed, len(rows)))
         add("")
+        # A URL convention change resets this count without losing anything, because
+        # the sweep measures whichever URLs the sitemap lists today. On 2026-10-05 the
+        # site moved to extensionless URLs and the count fell from 29 of 70 to 19 of
+        # 117 while every old .html URL stayed indexed. Say so rather than let the two
+        # weeks be compared as though they measured the same thing.
+        if previous_sweep:
+            prev_urls = {r["url"] for r in previous_sweep.get("urls", [])}
+            now_urls = {r["url"] for r in rows}
+            absent = prev_urls - now_urls
+            if prev_urls and len(absent) * 10 > len(prev_urls):
+                add("**Careful: %d of the %d URLs in the last sweep are not in this one.** The sitemap"
+                    % (len(absent), len(prev_urls)))
+                add("names different URLs than it did, which usually means a convention changed rather")
+                add("than pages being lost. Check whether the old URLs still return 200 before reading")
+                add("this as a fall, because the two weeks are then measuring different things.")
+                add("")
         if changes:
             add("Changed since the last sweep:")
             add("")
             for url, was, now in changes:
                 add("- %s: %s -> **%s**" % (url.replace(gsc.BASE_URL, ""), was, now))
-                if is_indexed(was) and not is_indexed(now):
+                if is_indexed(was) and not is_indexed(now) and now.startswith("gone:"):
                     flags.append("regression: %s left the index (%s)" % (url, now))
             add("")
         elif previous_sweep:
@@ -628,6 +701,22 @@ def build(args):
     # ---------- 4. change log against effects ----------
     entries = change_entries(args.window, today)
     add("## 5. Changes, and what they did")
+    add("")
+    # A log nobody writes to stops being evidence. Showing the ratio every week is
+    # how the drift becomes visible without anyone being told off for it.
+    logged_7d = sum(1 for it in entries
+                    if it["entry"]["date"] >= (today - timedelta(days=7)).isoformat())
+    try:
+        commits_7d = subprocess.run(["git", "log", "--since=7 days ago", "--oneline"],
+                                    cwd=ROOT, capture_output=True, text=True,
+                                    timeout=20).stdout.count("\n")
+    except (OSError, subprocess.SubprocessError):
+        commits_7d = 0
+    add("- logged in the last 7 days: **%d change(s)**, against %d commit(s) in the repo."
+        % (logged_7d, commits_7d))
+    if commits_7d and logged_7d * 10 < commits_7d:
+        add("  At that ratio the log describes almost none of the work, so this section can say")
+        add("  what the numbers did but not what caused it. Either log the changes or retire the log.")
     add("")
     if not entries:
         add("The change log is empty.")
@@ -651,11 +740,16 @@ def build(args):
         if after:
             add("- after (%d of %d days elapsed): %.0f impressions, %.0f clicks"
                 % (after_days, args.window, after["impressions"], after["clicks"]))
+            window_days = expected_window_days(entry.get("expect"))
             if after_days == 0:
                 add("- not measurable yet")
-                flags.append("expectation pending: %s has no measurable window yet" % entry["summary"][:50])
+            elif not window_days:
+                add("- no window stated, so nothing here to judge it against")
+            elif item["age"] < window_days:
+                add("- due in %d day(s); the expectation named %d" % (window_days - item["age"], window_days))
             elif after["impressions"] <= (before["impressions"] if before else 0):
-                flags.append("no movement yet: %s" % entry["summary"][:50])
+                add("- **due and not met**: the expectation named %d days" % window_days)
+                flags.append("expectation due and not met: %s" % entry["summary"][:60])
         if entry.get("expect"):
             add("- expected: %s" % entry["expect"])
         add("")
