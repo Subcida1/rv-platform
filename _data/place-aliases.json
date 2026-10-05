@@ -241,5 +241,9 @@
   "White River Jct.": {
     "to": "White River Junction",
     "why": "One Vermont listing spells the town the way a business would on a card, with the abbreviation; the Census place file carries only 'White River Junction'. Same place, and the other listing in the file already uses the full name."
+  },
+  "Honolulu": {
+    "to": "Urban Honolulu",
+    "why": "The Census place file carries Hawaii's capital as 'Urban Honolulu CDP' (there is also an 'East Honolulu CDP'), so the name every listing, business and reader actually uses does not resolve. Same place."
   }
 }

@@ -100,6 +100,8 @@
   <url><loc>https://originrv.com/directory/pennsylvania</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://originrv.com/directory/rhodeisland</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://originrv.com/directory/vermont</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://originrv.com/directory/alaska</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://originrv.com/directory/hawaii</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
 
   <!-- The manuals directory: the hub, then one page per system -->
   <url><loc>https://originrv.com/parts/</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>

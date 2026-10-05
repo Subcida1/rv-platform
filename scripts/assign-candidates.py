@@ -44,7 +44,29 @@ ROOT = Path(__file__).resolve().parent.parent
 # that research lives beside the repo
 # (~/Documents/research/) rather than in it. Kept there, the gates stay meaningful; dropped in
 # _data/, they fail a build over a manufacturer's own punctuation.
-OUTDIR = ROOT.parent / "research" / "candidates"
+def _repo_home():
+    """The main repository root, even from inside a worktree.
+
+    A worktree lives at <repo>/.letta/worktrees/<name>/, so ROOT.parent is ".letta/worktrees"
+    there and not the repo's home -- the first version wrote its output into the worktrees
+    directory. git's common dir is the main repository's .git in both cases, so its parent is
+    the answer wherever this runs.
+    """
+    import subprocess  # noqa: PLC0415
+    try:
+        out = subprocess.run(["git", "-C", str(ROOT), "rev-parse", "--git-common-dir"],
+                             capture_output=True, text=True, timeout=20)
+        common = Path(out.stdout.strip())
+        if common and not common.is_absolute():
+            common = (ROOT / common).resolve()
+        if common:
+            return common.parent
+    except (OSError, subprocess.SubprocessError):
+        pass
+    return ROOT
+
+
+OUTDIR = _repo_home().parent / "research" / "candidates"
 
 
 def main():

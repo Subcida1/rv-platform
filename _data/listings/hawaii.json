@@ -1,0 +1,96 @@
+{
+  "state": "HI",
+  "name": "Hawaii",
+  "regions": [
+    {
+      "key": "oahu-hi",
+      "label": "Oahu"
+    },
+    {
+      "key": "maui-hi",
+      "label": "Maui and the other islands"
+    }
+  ],
+  "region_of": {
+    "Honolulu": "oahu-hi",
+    "Kailua": "oahu-hi",
+    "Kaneohe": "oahu-hi",
+    "Pearl City": "oahu-hi",
+    "Kapolei": "oahu-hi",
+    "Waipahu": "oahu-hi",
+    "Kahului": "maui-hi",
+    "Kihei": "maui-hi",
+    "Lahaina": "maui-hi"
+  },
+  "listings": [
+    {
+      "n": "Maui Mobile RV Service LLC",
+      "c": "Maui, HI",
+      "p": "(772) 242-8383",
+      "u": "https://mauimobilerv.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Maui Mobile RV Service LLC is a mobile RV service that comes to the customer's location on Maui. The site lists 12-volt and 120-volt electric work, plumbing, batteries, dash and roof air conditioners, all appliances, accessory upgrades, solar panels, leveling systems, slide-outs, Aqua Hot and Truma service. It states the technician is RVDA-RVIA certified as an RV service technician and certified service advisor.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": null,
+      "areas": [],
+      "region": "Maui",
+      "spec": "RVDA - RVIA Certified RV Service Technician and Certified Service Advisor",
+      "evidence": {
+        "phone_quote": "Call (772) 242-8383",
+        "type_quote": null,
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "We can help with all of your RV service needs!!",
+          "120 12 volt electric",
+          "Plumbing",
+          "Air Conditioners Dash and Roof",
+          "RVDA - RVIA Certified"
+        ]
+      },
+      "reg": "maui-hi"
+    },
+    {
+      "n": "Colors on Parade",
+      "c": "Oahu, HI",
+      "p": "(808) 478-3382",
+      "u": "https://colorsonparade.com/locations/oahu/oahu-hi-scratch-rv-paint-and-fiberglass-repair/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Colors on Parade provides mobile RV body repair on Oahu, focusing on fiberglass repair, gel coat and paint restoration, and scratch and chip repair for RVs, campers, travel trailers and motorhomes. Technicians come to the customer's location with a stocked mobile unit and use the company's EcoSMART small-to-medium area repair technique. It names Kailua, Honolulu, Pearl City, Waipahu, Kapolei, Kaneohe, Haleiwa and the rest of Honolulu County as its service area.",
+      "g": [
+        "mobile tech",
+        "body and fiberglass"
+      ],
+      "base": null,
+      "areas": [
+        "Kailua",
+        "Honolulu",
+        "Pearl City",
+        "Waipahu",
+        "Kapolei",
+        "Kaneohe",
+        "Haleiwa"
+      ],
+      "region": "Oahu",
+      "spec": "Mobile RV paint, gel coat and fiberglass repair",
+      "evidence": {
+        "phone_quote": "(808) 478-3382",
+        "type_quote": null,
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Colors on Parade is your premier choice for efficient fiberglass repair solutions for your RV, camper, travel trailer, or motorhome.",
+          "Our skilled technicians come directly to you, wherever you are!",
+          "Colors on Parade is proud to serve a wide range of clients throughout the Oahu, HI area, encompassing cities like Kailua, Honolulu, Pearl City, Waipahu, Kapolei, Kaneohe, Haleiwa, and all of the cities and towns in Honolulu County."
+        ]
+      },
+      "reg": "oahu-hi"
+    }
+  ]
+}

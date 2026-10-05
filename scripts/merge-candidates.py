@@ -90,6 +90,14 @@ def main():
         if rec.get("t") not in ("mobile", "center", "both"):
             incomplete.append((rec["n"], "bad type %r" % rec.get("t")))
             continue
+        # THE WRITER OWNS THE SCHEMA. Upstream tools annotate records as they go --
+        # assign-candidates.py adds `_assigned_from` so a record can be traced back to the
+        # research file it came from -- and an underscore-prefixed key is bookkeeping, not a
+        # field of a listing. build-listings.py rejects ANY unknown field, so this reached it
+        # as "Ma's Way RV Rentals: unknown field(s) _assigned_from" and failed the build.
+        # Stripping here means no upstream annotation can ever leak into the published data,
+        # rather than each caller remembering to clean up. Found 2026-10-04 on Alaska.
+        rec = {k: v for k, v in rec.items() if not k.startswith("_")}
         added.append(rec)
         existing.add(norm(rec.get("n")))
 

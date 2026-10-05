@@ -64,5 +64,17 @@
       "what_was_found": "No RV repair business with its own website. The results are general automotive shops (Angelo's Mobile Mechanic, Route 66 Towing, Grants Safety Lane, A-Z Garage, Spencer's Automotive Repair, Jake's Custom Paint & Body), which are not RV-specific; two dispatch networks (Interstate Fleet Services and Road Rescue Network) that dominate the results for every town and are excluded as lead-generation; and one mobile mechanic advertising RV, truck and auto work whose own URL is redacted on the aggregator that lists it and which could not be found by name.",
       "conclusion": "No admissible provider in Grants itself. The nearest real coverage is the Albuquerque mobile technicians, who are already listed and about 90 miles east, which is what the coverage instrument is measuring when it reports this gap."
     }
+  ],
+  "districtofcolumbia": [
+    {
+      "area": "The District of Columbia, whole",
+      "searched": "2026-10-04",
+      "towns": [
+        "Washington"
+      ],
+      "qualified_found": 0,
+      "cost": "one research pass, for a null result",
+      "what_was_found": "No DC-based business repairs RVs. DC Mobile Truck Repair is a semi-truck service that mentions RV only in one boilerplate line; Mobile Mechanic Washington DC describes cars, trucks and vans and never an RV; RV Associates resolves to a business-consulting site; RV General Auto Repair and RV Standifer have no website to check. Every other candidate was either a truck or auto shop, or a Maryland or Virginia business that merely serves DC and belongs to its own state's file (Avenue Mobile Services, Road Ready RV & Trailer Services, Eyre HD, Fixed It! and others). The directory lists repair businesses a reader can take a coach to, so DC carries no page rather than an empty one. Revisit if a DC-based RV repair business appears."
+    }
   ]
 }

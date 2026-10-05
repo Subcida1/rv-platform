@@ -2617,3 +2617,25 @@ a.tchip:focus-visible{outline:2px solid var(--b1,var(--brand));outline-offset:2p
    filtered-out part needs these. Without them the filter appears to do nothing at all. */
 .part[hidden],.parts-sys[hidden],.parts-empty[hidden]{display:none}
 .parts-empty{margin-top:20px;font-size:14.5px;color:var(--text-2)}
+
+
+/* ============================================================
+   REGION SECTIONS ON THE DIRECTORY HUB (2026-10-04).
+   The hub is one column of 48 state cards. The region headings were 17px of bold text with
+   44px of space above: legible as you scroll past, invisible when you are looking for the
+   boundary. Each region now opens under a rule that runs the full content width, so the eye
+   lands on the break instead of on the next card, and the label is a size larger so it reads
+   as a section heading rather than as body text with a gap.
+
+   A plain --border-2 rule and ink text, deliberately. The house rule is that the gradient is
+   for things that lead somewhere and a section break leads nowhere; and no tint band behind
+   the cards, because the cards carry their own tint and a band would read as a heavier card.
+
+   padding-top, never the padding shorthand: this element sits on the vertical rhythm of the
+   page and padding:<x> 0 would zero its horizontal sides. Same class of bug as the .wrap
+   gutter shorthand that cost 231 blocks their gutter.
+   ============================================================ */
+.hub-page h2.region-h{font-size:20px;font-weight:800;letter-spacing:-.02em;color:var(--text);
+  border-top:2px solid var(--border-2);padding-top:20px;margin:48px 0 0}
+.hub-page h2.region-h:first-of-type{margin-top:6px;border-top:0;padding-top:0}
+.hub-page .region-h + .state-grid{margin-top:16px}

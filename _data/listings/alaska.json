@@ -1,0 +1,191 @@
+{
+  "state": "AK",
+  "name": "Alaska",
+  "regions": [
+    {
+      "key": "anchorage-ak",
+      "label": "Anchorage and Southcentral Alaska"
+    }
+  ],
+  "region_of": {
+    "Anchorage": "anchorage-ak",
+    "Chugiak": "anchorage-ak",
+    "Eagle River": "anchorage-ak",
+    "Palmer": "anchorage-ak",
+    "Wasilla": "anchorage-ak",
+    "Talkeetna": "anchorage-ak",
+    "Kenai": "anchorage-ak",
+    "Soldotna": "anchorage-ak",
+    "Seward": "anchorage-ak",
+    "Homer": "anchorage-ak"
+  },
+  "listings": [
+    {
+      "n": "Earl's Mobile RV Service LLC",
+      "c": "Anchorage, the Mat-Su Valley and the Kenai Peninsula, AK",
+      "p": "(907) 802-5800",
+      "u": "https://www.earlsmobilervservice.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "Earl's Mobile RV Service LLC is a mobile RV repair business that sends a certified RV technician to the customer's driveway or campsite for Class A, B and C motorhomes and travel trailers. The site lists electrical, plumbing, water heater, furnace, air conditioning, refrigerator, awning, slide, interior/exterior repair, and winterization/de-winterization work. It publishes separate emergency call rates for weekends, holidays and after-hours work, and states it does not service or repair the drivetrain portion of motorhomes or vans.",
+      "g": [
+        "mobile tech",
+        "emergency"
+      ],
+      "base": null,
+      "areas": [
+        "Anchorage",
+        "Kenai",
+        "Seward",
+        "Homer",
+        "Palmer",
+        "Wasilla",
+        "Talkeetna"
+      ],
+      "region": "Anchorage area, Mat-Su Valley and the Kenai Peninsula",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "(907) 802-5800",
+        "type_quote": "Have a Certified RV Technician from Earls Mobile RV Service LLC come and take care of your Class A, B, C motorhome or travel trailer.",
+        "emergency_quote": "EMERGENCY CALL RATES (WEEKEND, HOLIDAY, AND OUTSIDE REGULAR BUSINESS HOURS)",
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Call Earl's Mobile RV and we'll come to you in your driveway or even your campsite, to take care of business.",
+          "We'll travel to Kenai, Seward, Homer, Palmer, Wasilla, Talkeetna....well, anywhere."
+        ]
+      },
+      "reg": "anchorage-ak"
+    },
+    {
+      "n": "GoNorth Alaska",
+      "c": "Anchorage and Fairbanks, AK",
+      "p": "+1 907 245 0182",
+      "u": "https://gonorth-alaska.com/rv-service-repair/rv-service-repair-anchorage/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "GoNorth Alaska operates an RV service and parts branch in Anchorage and provides diagnostics, repair, seasonal service and inspections for recreational vehicles. The site describes diagnosing and repairing propane, heating, 12V and 120V electrical, water and sewage systems and appliances, plus winterizing, dewinterizing, seal and roof inspections, and trailer bearing and brake inspections. It also sells RV parts and prepares insurance damage estimates.",
+      "g": [
+        "service center",
+        "parts",
+        "maintenance"
+      ],
+      "base": "Anchorage",
+      "areas": [
+        "Fairbanks"
+      ],
+      "region": "Anchorage and Fairbanks, AK",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "+1 907 245 0182",
+        "type_quote": null,
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "We can diagnose and repair various types of problems with your RV including problems in your propane systems, heating systems, 12v & 120v electrical systems, water & sewage systems, appliances, and more.",
+          "Get your unit prepared for the Summer & Winter season! We do winterizing, dewinterizing, seal & roof inspections, trailer bearing & brake inspections, pre-purchase inspections and more.",
+          "GoNorth Alaska Car & RV Rental | RV Service & Parts 5011 Spenard Road, Bldg A Anchorage, AK 99517"
+        ]
+      }
+    },
+    {
+      "n": "Alignment Center and Alaska Car & Truck",
+      "c": "Anchorage, AK",
+      "p": "(907) 563-3773",
+      "u": "https://www.alignmentcenterak.com/Services/RV-Repair-Anchorage-AK",
+      "t": "center",
+      "e": false,
+      "r": true,
+      "d": "Alignment Center and Alaska Car & Truck is an Anchorage repair shop that advertises RV repair and maintenance for all types of recreational vehicles. Its RV service list includes auto-electrical repairs, brake system repair, suspension repair, heating and cooling, water heater repair and wheel alignments. It is a fixed shop location in Anchorage rather than a mobile service.",
+      "g": [
+        "service center",
+        "brakes",
+        "suspension",
+        "alignment"
+      ],
+      "base": "Anchorage",
+      "areas": [
+        "Anchorage"
+      ],
+      "region": "Anchorage",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "(907) 563-3773",
+        "type_quote": null,
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Your Trusted Partner for RV Repairs in Anchorage, Alaska",
+          "Our experienced team provides high-quality repairs and maintenance for all types of recreational vehicles.",
+          "Brake System Repair",
+          "Suspension Repair",
+          "Wheel Alignments"
+        ]
+      }
+    },
+    {
+      "n": "Ma's Way RV Rentals",
+      "c": "Anchorage, AK",
+      "p": "(907) 884-5350",
+      "u": "https://masrvalaska.com/rv-maintenance-repairs/",
+      "t": "both",
+      "e": false,
+      "r": true,
+      "d": "Ma's Way RV Rentals offers RV maintenance and repair in Anchorage through a dedicated repair page, with both mobile and in-shop options. The listed services include fresh-water system service, leak and roof-seal inspection, fluid top-offs, house battery and generator service, propane appliance service, and gas-engine lube, oil and filter changes. The shop rate is $145 per hour with a one-hour minimum.",
+      "g": [
+        "mobile tech",
+        "service center",
+        "maintenance"
+      ],
+      "base": "Anchorage",
+      "areas": [
+        "Anchorage"
+      ],
+      "region": null,
+      "spec": "Mobile or in-shop RV maintenance and repair",
+      "evidence": {
+        "phone_quote": "(907) 884-5350",
+        "type_quote": "Our team offers comprehensive services including mobile or in-shop repairs, winterization/de-winterization, and all other maintenance and repairs your RV may need.",
+        "emergency_quote": null,
+        "roadside_quote": "Welcome to our RV repair and maintenance website, where we specialize in keeping your home on the road running smoothly.",
+        "coverage_quotes": [
+          "Our shop rate is $145 per hour with a1 hour minimum."
+        ]
+      }
+    },
+    {
+      "n": "Alaska Family Details",
+      "c": "Anchorage, AK",
+      "p": "907-602-6604",
+      "u": "https://www.alaskafamilydetails.com/",
+      "t": "center",
+      "e": false,
+      "r": true,
+      "d": "Alaska Family Details is a family-owned Anchorage business that services and repairs motorhomes, camper vans and travel trailers, working by appointment at its shop and storage lots. Beyond detailing and winterization, the site lists coach battery systems, appliances, generators, inverters/converters, 110VAC systems, plumbing, propane appliance diagnostics, chassis repairs and automotive systems diagnostics and repair. It explicitly advertises vehicle chassis repairs and maintenance.",
+      "g": [
+        "service center",
+        "maintenance",
+        "chassis",
+        "electrical"
+      ],
+      "base": "Anchorage",
+      "areas": [
+        "Anchorage"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "phone_quote": "(907)-602-6604",
+        "type_quote": null,
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "With our team of qualified repair specialists, we offer repairs, preventive maintenance, and detailing on most all aspects of a motorhome or camper van.",
+          "Vehicle Chassis repairs and maintenance",
+          "Automotive systems diagnostics and repair"
+        ]
+      }
+    }
+  ]
+}

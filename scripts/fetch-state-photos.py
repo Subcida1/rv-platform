@@ -187,6 +187,22 @@ PHOTOS += [
 ]
 
 
+# Added 2026-10-04 with Alaska and Hawaii, the last two states. Both public domain, both
+# photographed by a federal agency or the Library of Congress collection the other tiles use.
+PHOTOS += [
+    ("alaska",
+     "Alpine lakes and forest, Denali National Park, Alaska, by Carol M. Highsmith.jpg",
+     "Public domain (no known restrictions)", "Carol M. Highsmith",
+     "https://commons.wikimedia.org/wiki/File:Alpine_lakes_and_forest,_Denali_National_Park,_Alaska,_by_Carol_M._Highsmith.jpg",
+     "Alpine lakes and forest in Denali National Park, Alaska"),
+    ("hawaii",
+     "Hawai'i Volcanoes National Park HAVO3171.jpg",
+     "Public domain (National Park Service)", "National Park Service",
+     "https://commons.wikimedia.org/wiki/File:Hawai%27i_Volcanoes_National_Park_HAVO3171.jpg",
+     "The volcanic landscape of Hawaii Volcanoes National Park, Hawaii"),
+]
+
+
 # Added 2026-10-04 for the South/Southeast directory expansion (Louisiana, Arkansas,
 # Oklahoma, Mississippi). Licences were read on each file's Commons page: the two
 # Highsmith images carry the Library of Congress "no known restrictions" public-domain
@@ -260,10 +276,10 @@ PHOTOS += [
      "https://creativecommons.org/publicdomain/zero/1.0/",
      "A mountain stream in Great Smoky Mountains National Park, Tennessee"),
     ("kentucky",
-     "Red River Gorge, Daniel Boone National Forest, Kentucky LOC 2002626210.jpg",
-     "Public domain (no known restrictions)", "United States Forest Service",
-     "https://commons.wikimedia.org/wiki/File:Red_River_Gorge,_Daniel_Boone_National_Forest,_Kentucky_LOC_2002626210.jpg",
-     "The Red River Gorge in Daniel Boone National Forest, Kentucky"),
+     "CumberlandFalls.jpg",
+     "Public domain (released by the author)", "ChrisKuehl",
+     "https://commons.wikimedia.org/wiki/File:CumberlandFalls.jpg",
+     "Cumberland Falls on the Cumberland River, Kentucky"),
     ("georgia",
      "Tallulah Gorge view from an overlook, May 2017 1.jpg",
      "CC0 1.0 (public domain dedication)", "Thomson200",

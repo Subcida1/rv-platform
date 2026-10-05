@@ -164,6 +164,20 @@ Recorded anyway, because the source should be traceable.
 - Licence: Public domain (US Forest Service) <https://commons.wikimedia.org/wiki/File:Green_Mountain_National_Forest_(20241002-FS-GM-BAG-FallFoliage-017).jpg>
 - Tile alt text: Fall foliage in the Green Mountain National Forest, Vermont
 
+## alaska
+
+- File: [Alpine lakes and forest, Denali National Park, Alaska, by Carol M. Highsmith.jpg](https://commons.wikimedia.org/wiki/File:Alpine_lakes_and_forest%2C_Denali_National_Park%2C_Alaska%2C_by_Carol_M._Highsmith.jpg)
+- Author: Carol M. Highsmith
+- Licence: Public domain (no known restrictions) <https://commons.wikimedia.org/wiki/File:Alpine_lakes_and_forest,_Denali_National_Park,_Alaska,_by_Carol_M._Highsmith.jpg>
+- Tile alt text: Alpine lakes and forest in Denali National Park, Alaska
+
+## hawaii
+
+- File: [Hawai'i Volcanoes National Park HAVO3171.jpg](https://commons.wikimedia.org/wiki/File:Hawai%27i_Volcanoes_National_Park_HAVO3171.jpg)
+- Author: National Park Service
+- Licence: Public domain (National Park Service) <https://commons.wikimedia.org/wiki/File:Hawai%27i_Volcanoes_National_Park_HAVO3171.jpg>
+- Tile alt text: The volcanic landscape of Hawaii Volcanoes National Park, Hawaii
+
 ## louisiana
 
 - File: [Skyline, New Orleans, Louisiana LCCN2011630536.tif](https://commons.wikimedia.org/wiki/File:Skyline%2C_New_Orleans%2C_Louisiana_LCCN2011630536.tif)
@@ -208,10 +222,10 @@ Recorded anyway, because the source should be traceable.
 
 ## kentucky
 
-- File: [Red River Gorge, Daniel Boone National Forest, Kentucky LOC 2002626210.jpg](https://commons.wikimedia.org/wiki/File:Red_River_Gorge%2C_Daniel_Boone_National_Forest%2C_Kentucky_LOC_2002626210.jpg)
-- Author: United States Forest Service
-- Licence: Public domain (no known restrictions) <https://commons.wikimedia.org/wiki/File:Red_River_Gorge,_Daniel_Boone_National_Forest,_Kentucky_LOC_2002626210.jpg>
-- Tile alt text: The Red River Gorge in Daniel Boone National Forest, Kentucky
+- File: [CumberlandFalls.jpg](https://commons.wikimedia.org/wiki/File:CumberlandFalls.jpg)
+- Author: ChrisKuehl
+- Licence: Public domain (released by the author) <https://commons.wikimedia.org/wiki/File:CumberlandFalls.jpg>
+- Tile alt text: Cumberland Falls on the Cumberland River, Kentucky
 
 ## georgia
 
