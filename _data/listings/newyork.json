@@ -36,7 +36,7 @@
   "listings": [
     {
       "n": "NYCRV",
-      "c": "Brooklyn, NY",
+      "c": "New York City, Nassau and part of Suffolk counties",
       "p": "(347) 549-9877",
       "u": "https://nycrv.com/",
       "t": "mobile",
@@ -49,7 +49,7 @@
       ],
       "base": null,
       "areas": [],
-      "region": "New York City",
+      "region": "New York City, Nassau and part of Suffolk counties",
       "spec": "Does not work on engine or auto mechanics, generators, body work, windows or glass, awnings, full roof replacements, slide rooms, or leveler systems and hydraulics.",
       "evidence": {
         "checked": "https://nycrv.com/",
@@ -77,9 +77,7 @@
         "mobile tech"
       ],
       "base": "Lake George",
-      "areas": [
-        "Lake George"
-      ],
+      "areas": [],
       "region": null,
       "spec": "No towing.",
       "evidence": {
@@ -97,7 +95,7 @@
     },
     {
       "n": "That RV Guy Craig",
-      "c": "Lake George, NY",
+      "c": "Lake George + 25 mi (Queensbury, Glens Falls, Warrensburg)",
       "p": "903-681-4718",
       "u": "https://thatrvguycraig.com/",
       "t": "mobile",
@@ -109,12 +107,11 @@
       ],
       "base": "Lake George",
       "areas": [
-        "Lake George",
         "Queensbury",
         "Glens Falls",
         "Warrensburg"
       ],
-      "region": "Adirondack",
+      "region": "Adirondack region; 25 mile radius",
       "spec": "Mobile only; does not work on generators, anything under the hood (motorhomes), tires/wheels, black tanks, windshields, suspension, or oil changes.",
       "evidence": {
         "checked": "https://thatrvguycraig.com/",
@@ -189,7 +186,7 @@
     },
     {
       "n": "RV There Yet Mobile Camper Repair",
-      "c": "Sullivan County, NY",
+      "c": "Sullivan, Orange and Ulster Counties",
       "p": "(845) 239-9746",
       "u": "https://www.rvthereyetmobilecamperrepair.com/",
       "t": "mobile",
@@ -201,7 +198,7 @@
       ],
       "base": null,
       "areas": [],
-      "region": "greater Sullivan County",
+      "region": "greater Sullivan County; Orange and Ulster Counties",
       "spec": null,
       "evidence": {
         "checked": "https://www.rvthereyetmobilecamperrepair.com/",
@@ -246,7 +243,7 @@
     },
     {
       "n": "Capital Area RV LLC",
-      "c": "Upstate New York",
+      "c": "Upstate New York & Southern Vermont",
       "p": "518-698-5329",
       "u": "https://capitalarearv.com/",
       "t": "mobile",
@@ -258,7 +255,7 @@
       ],
       "base": null,
       "areas": [],
-      "region": "Upstate New York",
+      "region": "Upstate New York; Southern Vermont",
       "spec": null,
       "evidence": {
         "checked": "https://capitalarearv.com/",
@@ -305,7 +302,7 @@
     },
     {
       "n": "Jeff's RV Service",
-      "c": "Waverly, NY",
+      "c": "Waverly, NY + 50 miles",
       "p": "(607) 565-4590",
       "u": "https://jeffsrvservice.com/",
       "t": "both",
@@ -317,10 +314,8 @@
         "mobile tech"
       ],
       "base": "Waverly",
-      "areas": [
-        "Waverly"
-      ],
-      "region": null,
+      "areas": [],
+      "region": "50 miles in any direction from Waverly, NY",
       "spec": null,
       "evidence": {
         "checked": "https://jeffsrvservice.com/",
@@ -366,7 +361,7 @@
     },
     {
       "n": "RV Unlimited",
-      "c": "Buffalo, NY",
+      "c": "Buffalo + Erie & Niagara County (Tonawanda)",
       "p": "716-218-4033",
       "u": "https://www.rv-unlimited.com/services-rv-repairs/rv-generator-repair-buffalo-ny/",
       "t": "both",
@@ -379,11 +374,10 @@
       ],
       "base": "Buffalo",
       "areas": [
-        "Buffalo",
         "Tonawanda"
       ],
-      "region": "Western New York",
-      "spec": null,
+      "region": "Erie & Niagara County; Western New York",
+      "spec": "Onan & Cummins RV generator repair.",
       "evidence": {
         "checked": "https://www.rv-unlimited.com/services-rv-repairs/rv-generator-repair-buffalo-ny/",
         "phone_quote": "716-218-4033",
@@ -409,9 +403,7 @@
         "service center"
       ],
       "base": "Plattsburgh",
-      "areas": [
-        "Plattsburgh"
-      ],
+      "areas": [],
       "region": null,
       "spec": null,
       "evidence": {
@@ -441,9 +433,7 @@
         "emergency"
       ],
       "base": "Kingston",
-      "areas": [
-        "Kingston"
-      ],
+      "areas": [],
       "region": "Hudson Valley",
       "spec": null,
       "evidence": {

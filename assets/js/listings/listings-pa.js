@@ -5,52 +5,38 @@ window.RV_LISTINGS_PA = [
  {  "n": "Fretz RV",  "c": "Souderton, PA",  "p": "215-660-3732",  "u": "https://www.fretzrv.com/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "Fretz RV runs a service department in Souderton with 25 fully equipped bays and RVIA-certified technicians. It repairs motorhome and towable RVs, handles appliance repairs, plumbing and electrical work, roof maintenance and structural rebuilds, generator service, slide topper installation, and collision repair for all makes and models. It also does state inspections and insurance estimates and is an authorized warranty center.",  "g": [
    "service center",
    "body"
-  ],  "base": "souderton",  "areas": [
-   "souderton"
-  ],  "region": "Pennsylvania",  "spec": null,  "reg": "southeast-pa"
+  ],  "base": "souderton",  "areas": [],  "region": "Pennsylvania",  "spec": null,  "reg": "southeast-pa"
  },
  {  "n": "Lerch RV",  "c": "Milroy, PA",  "p": "717.667.1400",  "u": "https://lerchrv.com/parts-service/rv-service/",  "t": "center",  "e": false,  "r": false,  "d": "Lerch RV is Central PA's premier RV service center in Milroy. Its service team has 32 large service bays and does leak damage rebuilds, major insurance repairs and free insurance estimates, plus regular routine maintenance. It serves Lerch RV customers and RV owners across the state and the Mid-Atlantic area.",  "g": [
    "service center"
-  ],  "base": "milroy",  "areas": [
-   "milroy"
-  ],  "region": "Central PA",  "spec": null,  "reg": "northeast-pa"
+  ],  "base": "milroy",  "areas": [],  "region": "Central PA; across the state and the Mid-Atlantic area",  "spec": null,  "reg": "northeast-pa"
  },
  {  "n": "Keystone RV Center",  "c": "Greencastle, PA",  "p": "717-550-8946",  "u": "https://www.keystonervcenter.com/rv-service",  "t": "center",  "e": false,  "r": true,  "d": "Keystone RV Center in Greencastle runs a 12 bay service department that accommodates motor homes or buses up to 45 feet. It does service and repair on all types of RVs, trailer chassis repair, body work including fiberglass, metal and plastic body refinishing, towing setup and hitch installation, and custom metal work. It is a PA State Inspection station for all motorhomes and towables and honors warranties regardless of where the RV was purchased.",  "g": [
    "service center",
    "body",
    "chassis"
-  ],  "base": "greencastle",  "areas": [
-   "greencastle"
-  ],  "region": null,  "spec": null,  "reg": "southcentral-pa"
+  ],  "base": "greencastle",  "areas": [],  "region": null,  "spec": null,  "reg": "southcentral-pa"
  },
  {  "n": "Stoltzfus RV",  "c": "Adamstown, PA",  "p": "(717) 484-4344",  "u": "https://www.stoltzfusrvs.com/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "Stoltzfus RV runs an RV Service Center in Adamstown. Its full line RV Service Department handles routine RV maintenance and repair, warranty work, winterizing, state inspections and insurance estimates. A parts department helps with manufacturer and aftermarket parts, and there is a customer lounge for waiting.",  "g": [
    "service center"
-  ],  "base": "adamstown",  "areas": [
-   "adamstown"
-  ],  "region": null,  "spec": null,  "reg": "southeast-pa"
+  ],  "base": "adamstown",  "areas": [],  "region": null,  "spec": null,  "reg": "southeast-pa"
  },
  {  "n": "Juniata Valley RV",  "c": "Mifflintown, PA",  "p": "(877) 714-0415",  "u": "https://www.juniatavalleyrv.com/rv-service",  "t": "both",  "e": false,  "r": true,  "d": "Juniata Valley RV is a Central Pennsylvania RV service provider in Mifflintown, serving since 2000 with RVIA-certified technicians. It offers full-service RV repair, maintenance and upgrades including structural repairs, fiberglass repair, collision repair, paint and body work, and mechanical and automotive work such as brakes, bearings, axles and suspension. A mobile service van travels to campgrounds in Juniata and surrounding counties.",  "g": [
    "service center",
    "mobile tech",
    "body",
    "chassis"
-  ],  "base": "mifflintown",  "areas": [
-   "mifflintown"
-  ],  "region": "Central Pennsylvania",  "spec": null,  "reg": "southcentral-pa"
+  ],  "base": "mifflintown",  "areas": [],  "region": "Central Pennsylvania; Juniata and surrounding counties",  "spec": null,  "reg": "southcentral-pa"
  },
  {  "n": "John's RV & Trailer Center",  "c": "Jacobus, PA",  "p": "717-428-0328",  "u": "https://www.johnsrvtc.com/",  "t": "both",  "e": false,  "r": true,  "d": "John's RV & Trailer Center in Jacobus is a full-service station that does all repairs on utility trailers, motor homes and travel trailers. From Class A motorhomes to utility trailers it handles electrical, solar, plumbing and structural issues, roof repairs and resealing, water systems, appliance maintenance, and chassis and running gear. It is an authorized State Inspection station and offers storage for motor homes and trailers.",  "g": [
    "service center",
    "chassis"
-  ],  "base": "jacobus",  "areas": [
-   "jacobus"
-  ],  "region": "York County",  "spec": null,  "reg": "southeast-pa"
+  ],  "base": "jacobus",  "areas": [],  "region": "York County",  "spec": null,  "reg": "southeast-pa"
  },
  {  "n": "RV EMTS",  "c": "Reading, PA",  "p": "484-978-3687",  "u": "https://www.rvemts.com/",  "t": "mobile",  "e": false,  "r": true,  "d": "RV EMTS is a mobile RV repair business based out of Reading, run by a Master Certified RV Technician with 40+ years in the RV industry. It does appliance, plumbing, electrical and propane system repairs, general repairs, upgrades and custom installs, and also offers brake and suspension service. It provides RV education covering maintenance from roof seals to bearings and towing and hitch procedures.",  "g": [
    "mobile tech",
    "chassis"
-  ],  "base": "reading",  "areas": [
-   "reading"
-  ],  "region": null,  "spec": null,  "reg": "southeast-pa"
+  ],  "base": "reading",  "areas": [],  "region": null,  "spec": null,  "reg": "southeast-pa"
  },
  {  "n": "Kerola's Campers",  "c": "Transfer, PA",  "p": "(724) 962-4561",  "u": "https://www.kerola.com/services/repair-services",  "t": "both",  "e": false,  "r": true,  "d": "Kerola's Campers provides camper and RV repair from a full-service garage in Transfer, Pennsylvania. It serves camper owners throughout Hermitage, Greenville, Sharon, Mercer County and surrounding Western Pennsylvania communities, and offers mobile repair within a 30 mile distance for an additional fee. Services include PA state inspection, brakes, bearings and tires, system checks, seal and roof inspection, appliance diagnostics, winterizing and leak repair.",  "g": [
    "service center",
@@ -60,29 +46,26 @@ window.RV_LISTINGS_PA = [
    "hermitage",
    "greenville",
    "sharon"
-  ],  "region": "Western Pennsylvania",  "spec": "Mobile repair available within a 30 mile distance for an additional fee.",  "reg": "pittsburgh-pa"
+  ],  "region": "Mercer County and surrounding Western Pennsylvania communities",  "spec": "Mobile repair available within a 30 mile distance for an additional fee.",  "reg": "pittsburgh-pa"
  },
  {  "n": "Wenner RV Service & Claims LLC",  "c": "Tyrone, PA",  "p": "(814) 937-0814",  "u": "https://www.wennerrv.com/",  "t": "both",  "e": false,  "r": false,  "d": "Wenner RV Service and Claims is located in Bellwood and Tyrone, PA and keeps all types of RVs adventure-ready. It offers a wide range of services from winterizing to roof replacement, sells parts and accessories, and is a Pennsylvania State DoT Inspection Station for all vehicles. It offers mobile service throughout central and western Pennsylvania for a service fee and serves Bellwood, Tyrone, Altoona, Holidaysburg, State College and beyond.",  "g": [
    "service center",
    "mobile tech"
   ],  "base": "tyrone",  "areas": [
-   "tyrone",
    "bellwood",
    "altoona",
-   "state college"
+   "state college",
+   "hollidaysburg"
   ],  "region": "central and western Pennsylvania",  "spec": null,  "reg": "northeast-pa"
  },
  {  "n": "Valleybrook RV",  "c": "Oxford, PA",  "p": "610-908-7124",  "u": "https://valleybrookrv.com/collision-repair/",  "t": "center",  "e": false,  "r": false,  "d": "Valleybrook RV Body & Paint has provided professional collision repair and paint services for motorhomes, fifth wheels, travel trailers and campers for over 30 years, located in Oxford, PA. Repairs include front and rear cap repairs, sidewall repairs, fiberglass repairs, compartment door repairs, roof damage repairs, structural repairs, paint refinishing and color matching, and decal and graphics replacement. It works directly with insurance companies and assists throughout the claims process.",  "g": [
    "body"
-  ],  "base": "oxford",  "areas": [
-   "oxford"
-  ],  "region": null,  "spec": null,  "reg": "southeast-pa"
+  ],  "base": "oxford",  "areas": [],  "region": null,  "spec": null,  "reg": "southeast-pa"
  },
  {  "n": "Precision RV Care",  "c": "Leesport, PA",  "p": "610-750-9929",  "u": "https://www.precisionrvcare.com/Harrisburg-Lancaster-York.htm",  "t": "center",  "e": false,  "r": true,  "d": "Precision RV Care is an RV repair and maintenance shop in Leesport that serves RV owners from Lancaster, Harrisburg, York and surrounding Central Pennsylvania communities. It handles tire and brake replacements, PA state inspections, oil changes and lubrication, battery replacements, electrical and plumbing repairs, heating and AC repairs, slide and awning repairs, appliance upgrades and repairs, water heater repairs, solar installations and leveling system repairs. It works on motorhomes and trailers for both full-time and seasonal campers.",  "g": [
    "service center",
    "chassis"
   ],  "base": "leesport",  "areas": [
-   "leesport",
    "lancaster",
    "harrisburg",
    "york"
@@ -90,71 +73,60 @@ window.RV_LISTINGS_PA = [
  },
  {  "n": "Ziegler's RV, Inc.",  "c": "Allentown, PA",  "p": "610-435-8100",  "u": "https://zieglersrv.com/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "Ziegler's RV, Inc. is an RV service and repair shop in Allentown. Its service department handles plumbing system repairs, awning repair and replacement, RV appliances, electrical system troubleshooting, propane system repairs, roof sealant maintenance, trailer tires, winterization, propane tank filling, and brake control sales and installation. It is an authorized service center for Forest River, Thor Motor Coach, Norcold, Dometic, Suburban and others, and states it does not do chassis work or state inspections.",  "g": [
    "service center"
-  ],  "base": "allentown",  "areas": [
-   "allentown"
-  ],  "region": null,  "spec": "Please note at this time we do not do any chassis work or state inspections.",  "reg": "southeast-pa"
+  ],  "base": "allentown",  "areas": [],  "region": null,  "spec": "Please note at this time we do not do any chassis work or state inspections.",  "reg": "southeast-pa"
  },
  {  "n": "Faith Adventure RV",  "c": "Ronks, PA",  "p": "717-778-4826",  "u": "https://www.faithadventurerv.com/",  "t": "both",  "e": false,  "r": false,  "d": "Faith Adventure RV offers RV repair, rental and service in Lancaster County, with shop locations in Ronks and Gordonville. Its experienced techs work on all kinds of RVs including motorhomes and travel trailers, doing AC repair, furnace repair, bodywork, RV generator repair, appliance repair and solar panel repair. Its repair facility can assist with more involved repairs after an accident and it works with most insurance companies, and it offers mobile RV repair within a one-hour radius of its shop.",  "g": [
    "service center",
    "mobile tech"
   ],  "base": "ronks",  "areas": [
-   "ronks",
    "gordonville",
-   "lancaster",
-   "york"
+   "lancaster"
   ],  "region": "Lancaster County",  "spec": null,  "reg": "southeast-pa"
  },
  {  "n": "Pop's Mobile RV Service",  "c": "York, PA",  "p": "(717) 553-4550",  "u": "https://popsmobilervservice.com/",  "t": "both",  "e": true,  "r": false,  "d": "Pop's Mobile RV Service is an on-site RV repair provider based in York, Pennsylvania. It services all of South-Central PA and Northern Maryland within a 75 mile radius of York, offering A/C services, tank cleaning, slide out and awning repair, leveling systems and jacks, and electrical repairs. In addition to on-site mobile service it also has a permanent shop, and it offers on-site emergency services.",  "g": [
    "mobile tech",
    "emergency"
-  ],  "base": "york",  "areas": [
-   "york"
-  ],  "region": "South-Central PA",  "spec": null,  "reg": "southcentral-pa"
+  ],  "base": "york",  "areas": [],  "region": "South-Central PA; 75 mile radius of York",  "spec": null,  "reg": "southcentral-pa"
  },
  {  "n": "One Call RV Repair",  "c": "Nanticoke, PA",  "p": "(570) 331-6391",  "u": "https://onecallrv570.com/",  "t": "mobile",  "e": true,  "r": false,  "d": "One Call RV Repair is a mobile, on-site RV repair service serving Luzerne County and surrounding areas from Nanticoke. Certified by the RV Technical Institute, it covers a 50-mile radius of Wilkes-Barre including Luzerne, Lackawanna, Wyoming, Wayne, Schuylkill, Carbon, and parts of Pike County. It focuses on roofing, heating and electrical repairs, warranty repairs, maintenance and upgrades, and offers emergency RV repairs. It does not service chassis, drivetrains and motors, body or paint, or select water heaters.",  "g": [
    "mobile tech",
    "emergency"
   ],  "base": "nanticoke",  "areas": [
-   "nanticoke"
-  ],  "region": "Luzerne County",  "spec": "Covers many aspects of RV care except chassis, drivetrains and motors, body or paint, and select water heaters.",  "reg": "northeast-pa"
+   "wilkes-barre",
+   "hop bottom",
+   "tunkhannock",
+   "honesdale"
+  ],  "region": "Luzerne County and surrounding areas; 50-mile radius of Wilkes-Barre covering Luzerne, Lackawanna, Wyoming, Wayne, Schuylkill, Carbon, and parts of Pike County",  "spec": "Covers many aspects of RV care except chassis, drivetrains and motors, body or paint, and select water heaters.",  "reg": "northeast-pa"
  },
- {  "n": "KRV",  "c": "Western Pennsylvania",  "p": "724-523-0545",  "u": "https://krvmedic.com/",  "t": "center",  "e": false,  "r": false,  "d": "KRV is an RV repair shop and parts supplier in Western Pennsylvania. Camping trailer repairs are performed by certified technicians with years of experience working on RVs and motor homes, using parts from the industry's best manufacturers. It also runs the largest RV part stocking dealer in Western Pennsylvania with quick delivery on special orders, sells pre-owned RVs, and offers an outdoor RV storage facility with 24-hour access.",  "g": [
+ {  "n": "KRV",  "c": "Western Pennsylvania, PA",  "p": "724-523-0545",  "u": "https://krvmedic.com/",  "t": "center",  "e": false,  "r": false,  "d": "KRV is an RV repair shop and parts supplier in Western Pennsylvania. Camping trailer repairs are performed by certified technicians with years of experience working on RVs and motor homes, using parts from the industry's best manufacturers. It also runs the largest RV part stocking dealer in Western Pennsylvania with quick delivery on special orders, sells pre-owned RVs, and offers an outdoor RV storage facility with 24-hour access.",  "g": [
    "service center"
   ],  "base": null,  "areas": [],  "region": "Western Pennsylvania",  "spec": null,  "reg": "pittsburgh-pa"
  },
  {  "n": "Becker RV Service",  "c": "Pittsburgh, PA",  "p": "412-882-6800",  "u": "https://beckerrvservice.com/",  "t": "center",  "e": false,  "r": false,  "d": "Becker RV Service is an RV repair and upgrade center in the Pleasant Hills / West Mifflin area of Pittsburgh, with over 15 years in the RV industry. Its services include generator service, winterization, water heater service, plumbing and water system repair, air conditioning repair and maintenance, inverter and converter repair, battery testing, and roof maintenance. It repairs, upgrades and services food trucks and states it does not perform chassis repair or maintenance, does not do state inspections, and performs all repairs on site by appointment only.",  "g": [
    "service center"
-  ],  "base": "pittsburgh",  "areas": [
-   "pittsburgh"
-  ],  "region": "Pleasant Hills / West Mifflin",  "spec": "We do not perform chassis repair or maintenance. All repairs and services are performed on site at Becker RV Service.",  "reg": "pittsburgh-pa"
+  ],  "base": "pittsburgh",  "areas": [],  "region": "Pleasant Hills / West Mifflin area",  "spec": "We do not perform chassis repair or maintenance. All repairs and services are performed on site at Becker RV Service.",  "reg": "pittsburgh-pa"
  },
  {  "n": "Butler RV Center",  "c": "Butler, PA",  "p": "724-282-4161",  "u": "https://www.butlerrvcenter.com/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "Butler RV Center's service department near Pittsburgh is staffed by certified RV technicians and services all types of RVs whether you bought it there or not. From seasonal tune-ups to roof replacements it works on travel trailers, fifth wheels, toy haulers and motorhomes, doing structural, mechanical and electrical repairs, maintenance, roof sealing, slide-out service, winterization, appliance and systems work, and plumbing. It has been serving RV owners since 1992 as a two-generation, family-owned dealership.",  "g": [
    "service center"
-  ],  "base": "butler",  "areas": [
-   "butler"
-  ],  "region": null,  "spec": null,  "reg": "pittsburgh-pa"
+  ],  "base": "butler",  "areas": [],  "region": "Near Pittsburgh, PA",  "spec": null,  "reg": "pittsburgh-pa"
  },
  {  "n": "Hanover Truck & RV Collision & Repair Center",  "c": "Hanover, PA",  "p": "717.637.4990",  "u": "https://www.hanovertruckrv.com/",  "t": "center",  "e": false,  "r": false,  "d": "Hanover Truck & RV Collision & Repair Center in Hanover is a collision repair and maintenance shop with over 30 years of experience. Its collision repair work covers fiberglass, body panel, roll-up door, awning, and roof repair and replacement, and it does painting and refinishing with precise color-matching, fleet painting and custom striping. It also does basic maintenance including oil and filter changes, ceramic coatings, detailing services and state inspections for trucks, RVs and trailers.",  "g": [
    "body"
-  ],  "base": "hanover",  "areas": [
-   "hanover"
-  ],  "region": null,  "spec": null,  "reg": "southcentral-pa"
+  ],  "base": "hanover",  "areas": [],  "region": null,  "spec": null,  "reg": "southcentral-pa"
  },
  {  "n": "Gerber's Repair Service",  "c": "Bedford County, PA",  "p": "814-285-0309",  "u": "https://www.gerbersrvrepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Gerber's Repair Service provides RV and camper repairs at your campsite or in your driveway, with the business coming to you. Its services include awning repair and replacements, slide topper installs, electrical service, plumbing repairs, furnace repairs, A/C repairs, refrigerator repairs, water heater repairs, roof sealing and patching, winterization, and interior wall and floor repairs. It also sells parts and accessories and serves Bedford County, the Raystown Lake Area and Altoona.",  "g": [
    "mobile tech"
   ],  "base": null,  "areas": [
    "altoona"
-  ],  "region": "Bedford County",  "spec": null,  "reg": "southcentral-pa"
+  ],  "region": "Bedford County, PA; Raystown Lake Area; others by appointment",  "spec": null,  "reg": "southcentral-pa"
  },
- {  "n": "Nick's RV Service LLC",  "c": "Western Pennsylvania",  "p": "724-900-6274",  "u": "https://www.nicksrvservice.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Nick's RV Service LLC is a mobile RV repair shop serving the greater Pittsburgh region and Western Pennsylvania. It provides expert mobile RV repairs, maintenance and service, coming to your camper so issues do not derail your travel plans. Hours are by appointment only.",  "g": [
+ {  "n": "Nick's RV Service LLC",  "c": "Western Pennsylvania, PA",  "p": "724-900-6274",  "u": "https://www.nicksrvservice.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Nick's RV Service LLC is a mobile RV repair shop serving the greater Pittsburgh region and Western Pennsylvania. It provides expert mobile RV repairs, maintenance and service, coming to your camper so issues do not derail your travel plans. Hours are by appointment only.",  "g": [
    "mobile tech"
-  ],  "base": null,  "areas": [],  "region": "Western Pennsylvania",  "spec": null,  "reg": "pittsburgh-pa"
+  ],  "base": null,  "areas": [],  "region": "greater Pittsburgh region; Western Pennsylvania",  "spec": null,  "reg": "pittsburgh-pa"
  },
  {  "n": "RV Leaders",  "c": "Adamsburg, PA",  "p": "724-523-0405",  "u": "https://www.rvleaders.com/rv-service-and-repairs",  "t": "center",  "e": false,  "r": true,  "d": "RV Leaders in Adamsburg offers RV service and repairs by appointment only. It repairs and services manufacturers such as Forest River, Keystone, Lance, nuCamp, Outdoors RV, Palomino and Soaring Eagle, covering winterizing, sealant maintenance, state inspection, undercarriage inspection and maintenance, roof repair and replacement, appliance repair, plumbing, hydraulic repairs, brake repair and replacement, and generator repair and replacement. It also installs fifth wheel and gooseneck hitches, weight distribution hitches and pin boxes.",  "g": [
    "service center",
    "chassis"
-  ],  "base": "adamsburg",  "areas": [
-   "adamsburg"
-  ],  "region": null,  "spec": "SERVICE BY APPOINTMENT ONLY",  "reg": "pittsburgh-pa"
+  ],  "base": "adamsburg",  "areas": [],  "region": null,  "spec": "SERVICE BY APPOINTMENT ONLY",  "reg": "pittsburgh-pa"
  }
 ];
