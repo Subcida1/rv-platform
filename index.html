@@ -6,7 +6,7 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="canonical" href="https://originrv.com/">
  <title>RV Tools &amp; RV Repair Directory | OriginRV</title>
  <meta name="description" content="Free RV tools for owners and full timers: a towing and weight calculator, plain-English winter and troubleshooting guides, and an RV repair directory.">
- <link rel="stylesheet" href="assets/css/style.css?v=965b5738">
+ <link rel="stylesheet" href="assets/css/style.css?v=ed0bbccb">
 <link rel="icon" type="image/svg+xml" href="assets/img/brand/favicon.svg?v=dd9ff106">
  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/brand/favicon-32.png?v=d9338088">
  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/brand/favicon-16.png?v=f67f4631">
@@ -50,27 +50,46 @@
  <div class="wrap hero-inner">
  <span class="kicker">Everything RV, one open road</span>
  <h1>Free <span class="grad">RV tools</span>, guides, and a repair directory</h1>
- <p class="sub">Calculators that answer the real questions, towing capacity, payload, tongue weight, axle loads, plus winter guides and a directory of people who fix what breaks.</p>
+ <p class="sub">Calculators that answer before you buy, winter and troubleshooting guides you can act on, and a directory of people who fix what breaks.</p>
  <form class="search js-search-form">
  <div class="search-bar">
  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 21.5 9.2 3.5"/><path d="M20 21.5 14.8 3.5"/><path d="M12 20.6v-4" stroke-width="2.4"/><path d="M12 12.2v-3" stroke-width="1.7"/><path d="M12 5.5v-2" stroke-width="1.1"/></svg>
  <input type="text" placeholder="Try: winterize my RV" aria-label="Search OriginRV" name="q">
- <button class="btn btn-gb" type="submit">Search</button>
+ <button class="btn btn-gb" type="submit"><span class="srch-ring" aria-hidden="true"></span><span class="btn-lbl">Search</span></button>
  </div>
  </form>
- <div class="chips">
- <a class="chip" href="tools/weight-calculator">⚖️ Weight calculator</a>
- <a class="chip" href="guides/winterize-plumbing">❄️ Winterize</a>
- <a class="chip" href="directory/">🔧 Find a tech</a>
- </div>
- <div class="hero-cta">
- <a class="btn btn-primary btn-lg" href="tools/weight-calculator">Check your RV's weight <span class="small-13">→ 30 seconds, free</span></a>
- <a class="btn btn-secondary btn-lg btn-snow" href="guides/">Read the winter guides</a>
+ <!-- EVERY tool, not one of them. Ty, 2026-10-05: "I still don't see many of the
+      other buttons other than the weight calculator... we can fit a lot more right
+      here". The old row was three chips and two large buttons, which spent the whole
+      band on the calculator and left the other seven tools invisible. Emoji come
+      from each tool page's own icon so the two cannot disagree. -->
+ <div class="chips chips-tools">
+ <a class="chip" href="tools/weight-calculator">⚖️ Weight and towing</a>
+ <a class="chip" href="tools/tire-date-code">🛞 Tire age</a>
+ <a class="chip" href="tools/snow-load">🏔️ Snow load</a>
+ <a class="chip" href="tools/fuel-cost">⛽ Fuel cost</a>
+ <a class="chip" href="tools/solar-sizing">☀️ Solar sizing</a>
+ <a class="chip" href="tools/battery-runtime">🔋 Battery runtime</a>
+ <a class="chip" href="tools/watts-to-amps">🔌 Watts to amps</a>
+ <a class="chip" href="tools/rv-loan">🏦 RV loan</a>
  </div>
  <div class="hero-stats">
- <a class="hstat" href="directory/"><div class="num" data-count="1944">0</div><div class="lbl">Repair businesses listed</div></a>
- <a class="hstat" href="guides/"><div class="num" data-count="39">0</div><div class="lbl">Free guides, live now</div></a>
- <a class="hstat" href="about"><div class="num" data-count="0">$0</div><div class="lbl">No paywall</div></a>
+ <a class="hstat" href="tools/">
+ <div class="num"><span data-claim="tools-live">8</span></div>
+ <div class="lbl">RV calculators, all free</div>
+ <div class="hstat-p">Weight and towing, tire age, snow load, fuel, solar, batteries, watts and loans.</div>
+ <div class="hstat-go">Open the tools →</div>
+ </a>
+ <a class="hstat" href="guides/">
+ <div class="num" data-count="39">0</div><div class="lbl">Free guides, live now</div>
+ <div class="hstat-p">Winter checklists and plain-English troubleshooting, grouped by system.</div>
+ <div class="hstat-go">Browse the guides →</div>
+ </a>
+ <a class="hstat" href="directory/">
+ <div class="num" data-count="1944">0</div><div class="lbl">Repair businesses listed</div>
+ <div class="hstat-p">Mobile techs and repair shops across fifty states, free to browse.</div>
+ <div class="hstat-go">Find a service →</div>
+ </a>
  </div>
  </div>
  </div>
@@ -80,63 +99,82 @@
  <div class="sec-head center">
  <div class="sec-eyebrow">Everything in one place</div>
  <h2>Your whole RV life, one toolkit</h2>
- <p>Tools that answer before you buy. Guides that keep you safe through the seasons. A directory that connects you to people who fix what breaks. All free, all under one roof.</p>
+ <p>Tools that answer before you buy. Guides that keep you safe through the seasons. The maker manuals behind every part. A directory that connects you to people who fix what breaks. All free, no account.</p>
  </div>
- <div class="deck">
- <div class="deck-pillars">
- <a class="deck-card live" href="tools/weight-calculator">
- <div class="deck-ic">⚖️</div><div class="deck-body"><b>Weight Calculator</b><span>Live, free, 30 seconds</span></div><div class="deck-go">Open →</div>
+ <div class="guide-grid">
+ <!-- Every tool AND every library, as one menu. This replaced four cards beside a
+      live weight-verdict panel, which turned the whole section into a showcase for
+      one calculator. Ty, 2026-10-05: "let's not focus so heavily on the calculator,
+      let's focus on the tools and the content that we have instead... make it a
+      little bit more spread out with everything". Twelve entries, three rows: the
+      eight calculators with what each answers, then the four libraries. -->
+ <a class="card guide-card" href="tools/weight-calculator">
+ <div class="guide-ic">⚖️</div>
+ <div class="guide-body"><div class="guide-title">Weight and towing</div><div class="guide-meta">Can your truck tow it? Payload, GCWR, and the 80% rule.</div></div>
  </a>
- <a class="deck-card live" href="guides/">
- <div class="deck-ic">❄️</div><div class="deck-body"><b>Guides</b><span><span data-claim="guides-total">39</span> live, winter and troubleshooting</span></div><div class="deck-go">Read →</div>
+ <a class="card guide-card" href="tools/tire-date-code">
+ <div class="guide-ic">🛞</div>
+ <div class="guide-body"><div class="guide-title">Tire age</div><div class="guide-meta">Read the DOT date code off the sidewall and know when to replace.</div></div>
  </a>
- <a class="deck-card live" href="directory/">
- <div class="deck-ic">🔧</div><div class="deck-body"><b>Service Directory</b><span>Live in <span data-claim="states-total">50</span> states, from the Pacific coast to the Rockies</span></div><div class="deck-go">Browse →</div>
+ <a class="card guide-card" href="tools/snow-load">
+ <div class="guide-ic">🏔️</div>
+ <div class="guide-body"><div class="guide-title">Snow load</div><div class="guide-meta">How much weight your roof is carrying right now.</div></div>
  </a>
- <a class="deck-card" href="tools/">
-      <div class="deck-ic">🗺️</div><div class="deck-body"><b>Campgrounds, water stops, RV-aware GPS</b><span>Building now</span></div><div class="deck-go">See the plan →</div>
-    </a>
- </div>
- <div class="deck-panel">
- <div class="deck-panel-head"><span class="dot"></span> Live right now, weight verdicts</div>
- <div class="deck-sim">
- <div class="deck-sim-row ok"><span>Loaded trailer</span><b>6,173 lb</b></div>
- <div class="deck-sim-row ok"><span>Towing capacity</span><b>67%, inside 80% rule</b></div>
- <div class="deck-sim-row ok"><span>Truck payload</span><b>68%, inside 80% rule</b></div>
- <div class="deck-sim-row ok"><span>Hitch / pin load</span><b>741 lb</b></div>
- </div>
- <a class="btn btn-gb btn-block" href="tools/weight-calculator">Open the calculator</a>
- <p class="deck-sim-note">Your numbers, your RV. Type once, no button needed.</p>
- </div>
+ <a class="card guide-card" href="tools/fuel-cost">
+ <div class="guide-ic">⛽</div>
+ <div class="guide-body"><div class="guide-title">Fuel cost</div><div class="guide-meta">What the trip costs at the pump, for any vehicle.</div></div>
+ </a>
+ <a class="card guide-card" href="tools/solar-sizing">
+ <div class="guide-ic">☀️</div>
+ <div class="guide-body"><div class="guide-title">Solar sizing</div><div class="guide-meta">How many watts of panel your battery bank needs.</div></div>
+ </a>
+ <a class="card guide-card" href="tools/battery-runtime">
+ <div class="guide-ic">🔋</div>
+ <div class="guide-body"><div class="guide-title">Battery runtime</div><div class="guide-meta">How long the house batteries last on a given load.</div></div>
+ </a>
+ <a class="card guide-card" href="tools/watts-to-amps">
+ <div class="guide-ic">🔌</div>
+ <div class="guide-body"><div class="guide-title">Watts to amps</div><div class="guide-meta">What your hook-up can actually run at once.</div></div>
+ </a>
+ <a class="card guide-card" href="tools/rv-loan">
+ <div class="guide-ic">🏦</div>
+ <div class="guide-body"><div class="guide-title">RV loan</div><div class="guide-meta">Monthly payment and total interest before you sign.</div></div>
+ </a>
+ <a class="card guide-card" href="guides/">
+ <div class="guide-ic">📘</div>
+ <div class="guide-body"><div class="guide-title">Guides</div><div class="guide-meta"><span data-claim="guides-total">39</span> plain-English fixes and winter checklists.</div></div>
+ </a>
+ <a class="card guide-card" href="directory/">
+ <div class="guide-ic">🔧</div>
+ <div class="guide-body"><div class="guide-title">Service directory</div><div class="guide-meta">Mobile techs and repair shops in <span data-claim="states-total">50</span> states.</div></div>
+ </a>
+ <a class="card guide-card" href="manuals/">
+ <div class="guide-ic">📚</div>
+ <div class="guide-body"><div class="guide-title">Manuals</div><div class="guide-meta">The maker documents behind every part, linked at the source.</div></div>
+ </a>
+ <a class="card guide-card" href="parts/">
+ <div class="guide-ic">🔩</div>
+ <div class="guide-body"><div class="guide-title">Parts</div><div class="guide-meta">Every RV part by system, and what each one does.</div></div>
+ </a>
  </div>
  </div>
  </div>
 
+ <!-- Its OWN section, and it used to be a ghost button tucked beside the winter
+      card. Ty, 2026-10-05: "that's a great idea to have that button, but I think it
+      should have its entire own element... and probably even elevated above these
+      two." The "Dry weight is a museum number" block it shared with is gone: it
+      existed to sell the weight calculator, and the calculator already has its own
+      card in the menu above. -->
  <div class="sec sec-alt">
  <div class="wrap">
- <div class="sec-head center">
- <div class="sec-eyebrow">Why we built it</div>
- <h2>Dry weight is a museum number</h2>
- <p>What matters is what the RV weighs loaded: water in the tanks, propane, gear, passengers. This calculator does that math and shows you the verdict in color.</p>
+ <div class="card start-here">
+ <div class="start-here-body">
+ <div class="sec-eyebrow">New to RVing</div>
+ <h2 class="h-lg">Just bought your first RV?</h2>
+ <p class="start-here-p">Start with what each system does, what to check before you tow, and the order to look at things when something stops working. It is the one page here written for someone who has never owned one.</p>
  </div>
- <div class="card block-center pad-box">
- <div class="flex between gap flex-wrap">
- <div>
- <h3 class="h-lg">⚖️ The 80% rule</h3>
- <p class="card-note w-480">Max tow ratings assume flat road, no wind, sea level. Real roads have hills, passes, and panic stops. Keeping loaded weight at or under 80% of rated capacity is the buffer experienced RVers respect.</p>
- </div>
- <a class="btn btn-gb" href="tools/weight-calculator">Check your RV</a>
- </div>
- </div>
- <div class="card block-center pad-box sp-18">
- <div class="flex between gap flex-wrap">
- <div>
- <h3 class="h-lg">❄️ Winter is when RVs are broken by accident</h3>
- <p class="card-note w-480">One hard freeze. One dead battery bank. One flat-spotted tire set. The <span data-claim="guides-winter-word-lc">five</span> winter guides cover exactly what storage kills.</p>
- </div>
- <a class="btn btn-secondary" href="guides/">Read the guides</a>
- <a class="btn btn-ghost" href="manuals/start-here">New to RVing? Start here</a>
- </div>
+ <a class="btn btn-primary btn-lg" href="manuals/start-here">Start here <span class="small-13">→ the first-timer's walkthrough</span></a>
  </div>
  </div>
  </div>
@@ -458,85 +496,40 @@
  <script src="assets/js/hero-map.js?v=5e2913ba"></script>
  <script>
  (function () {
- var els = document.querySelectorAll('.hstat .num');
- function setNum(el, text) { el.textContent = text; }
- function animate(el) {
+ /* These three tiles ARE the fold, so the count runs on load instead of on an
+    IntersectionObserver. The observer held them at "0" until 40% of a tile was on
+    screen, so a viewport shorter than about 900px showed "0 Free guides, live now"
+    until the reader scrolled -- a wrong number on the page, which is worse than no
+    animation. Found 2026-10-05 while screenshotting a 640px-tall viewport.
+    The markup still carries "0" as the start value because three generators match
+    that exact string -- scripts/build-listings.py writes the businesses counter,
+    scripts/sync-counts.py the guides one, and verify.py checks both -- so this
+    count-up is also the thing that puts the real number there at all. */
+ var els = document.querySelectorAll('.hstat .num[data-count]');
+ els.forEach(function (el) {
+ if (el.dataset.done) return;
+ el.dataset.done = '1';
  var t = parseInt(el.getAttribute('data-count'), 10);
         var from = parseInt(el.getAttribute('data-from') || '0', 10);
         var desc = from > t;
- if (el.dataset.done) return;
- el.dataset.done = '1';
- if (!('IntersectionObserver' in window)) { var p = el.textContent.indexOf('%') >= 0, d2 = el.textContent.indexOf('$') >= 0; setNum(el, (d2 ? '$' : '') + (desc ? from : t) + (p ? '%' : '')); return; }
- var io = new IntersectionObserver(function (es) {
- es.forEach(function (en) {
- if (!en.isIntersecting) return;
- var p = el.textContent.indexOf('%') >= 0;
+ var pct = el.textContent.indexOf('%') >= 0;
  var dg = el.textContent.indexOf('$') >= 0;
- var start = desc ? from : 0;
- var d = start;
- var tick = setInterval(function () { if (desc) { d -= Math.max(1, Math.round((from - t) / 30)); if (d <= t) { d = t; clearInterval(tick); } } else { d += Math.max(1, Math.round(t / 30)); if (d >= t) { d = t; clearInterval(tick); } } setNum(el, (dg ? '$' : '') + d + (p ? '%' : '')); }, 24);
- io.disconnect();
+ function paint(v) { el.textContent = (dg ? '$' : '') + v.toLocaleString('en-US') + (pct ? '%' : ''); }
+ if (!t || !('setInterval' in window)) { paint(t); return; }
+ var d = desc ? from : 0;
+ paint(d);
+ var tick = setInterval(function () {
+ if (desc) { d -= Math.max(1, Math.round((from - t) / 30)); if (d <= t) { d = t; clearInterval(tick); } }
+ else { d += Math.max(1, Math.round(t / 30)); if (d >= t) { d = t; clearInterval(tick); } }
+ paint(d);
+ }, 24);
  });
- }, { threshold: 0.4 });
- io.observe(el);
- }
- els.forEach(animate);
  })();
 
- /* The verdict panel cycles a set of readouts while it is on screen.
-    EVERY NUMBER HERE IS THE CALCULATOR'S OWN OUTPUT. These are not invented
-    figures: each scenario was entered into tools/weight-calculator.html and the
-    verdict rows were read back, and the loaded weights cross-check against the
-    calculator's own "Trailer payload" line to the pound (8,640 lb, 12,257 lb,
-    9,357 lb). The four thresholds it uses are the ones it applies live, so the
-    amber and red rows below are what the real tool returns for those RVs.
-    To re-derive after any change to the weight maths: load the calculator, set
-    the inputs, read #w-results.
-    Cycled only while visible and while the tab is in front, and not at all under
-    prefers-reduced-motion, where the panel keeps the first readout. */
- (function () {
- var panel = document.querySelector('.deck-sim');
- if (!panel) return;
- var rows = panel.querySelectorAll('.deck-sim-row');
- var scenarios = [
- /* Half-ton, 28 ft travel trailer: a well matched RV, everything green. */
- [['ok','6,173 lb'],['ok','67%, inside 80% rule'],['ok','68%, inside 80% rule'],['ok','741 lb']],
- /* Three-quarter ton, 32 ft travel trailer: payload is the thing that runs out
-    first, which is the most common real-world answer. */
- [['ok','8,640 lb'],['ok','79%, inside 80% rule'],['warn','90%, at the edge'],['ok','1,037 lb']],
- /* One-ton, 38 ft fifth wheel: the pin takes a fifth of the trailer. */
- [['ok','12,257 lb'],['ok','77%, inside 80% rule'],['warn','92%, at the edge'],['ok','2,451 lb']],
- /* Half-ton pushed past its rating. Real, and the reason the tool exists. */
- [['bad','9,357 lb'],['bad','102%, over rated capacity'],['bad','102%, over payload'],['ok','1,123 lb']]
- ];
- var i = 0, timer = null, onScreen = false;
- var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
- function apply(s) {
- for (var k = 0; k < rows.length && k < s.length; k++) {
- rows[k].className = 'deck-sim-row ' + s[k][0];
- rows[k].querySelector('b').textContent = s[k][1];
- }
- }
- function step() {
- panel.classList.add('swapping');
- setTimeout(function () {
- i = (i + 1) % scenarios.length;
- apply(scenarios[i]);
- panel.classList.remove('swapping');
- }, 240);
- }
- function start() { if (timer || reduce) return; timer = setInterval(step, 5200); }
- function stop() { if (timer) { clearInterval(timer); timer = null; } }
- if ('IntersectionObserver' in window) {
- new IntersectionObserver(function (es) {
- onScreen = es[0].isIntersecting;
- if (onScreen && !document.hidden) start(); else stop();
- }, { threshold: 0.35 }).observe(panel);
- } else { start(); }
- document.addEventListener('visibilitychange', function () {
- if (document.hidden) stop(); else if (onScreen) start();
- });
- })();
+ /* The weight-verdict panel that used to live here went with the deck it sat in
+    (2026-10-05). Its four scenarios existed only to keep that panel's numbers
+    honest against the real calculator; with the panel gone there is nothing left
+    for them to disagree with. The calculator itself is unchanged. */
  </script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "3727183603b6402b9249de33fa381acd"}'></script><!-- End Cloudflare Web Analytics -->
 </body>

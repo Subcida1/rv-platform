@@ -450,16 +450,35 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
    0deg frame: a static spectrum instead of a spinning one, which is the right way
    for this to degrade. Reduced motion does the same thing on purpose.
    The idle stroke is --grad, a blue, and --sp-1 is a blue too, so the button does
-   not jump when focus arrives -- the colour arrives by spreading rather than by
+   not jump when focus arrives -- the colour arrives by fading rather than by
    switching. */
 @property --sp-angle{syntax:"<angle>";initial-value:0deg;inherits:false}
-.search-bar:focus-within .btn-gb{
-  background-image:
-    linear-gradient(var(--surface),var(--surface)),
-    conic-gradient(from var(--sp-angle),
-      var(--sp-1),var(--sp-2),var(--sp-3),var(--sp-4),var(--sp-1));
-  animation:sp-scroll 2.8s linear infinite;
-}
+/* THE RING IS ITS OWN ELEMENT, AND THAT IS WHAT MAKES THE FADE POSSIBLE.
+   Ty, 2026-10-05: "the Rainbow Google effect just abruptly starts. I want that to
+   smoothly fade in so the colours roll out individually, and then it becomes the
+   rotating effect." The spectrum used to be a second background-image on the
+   button, swapped in on :focus-within -- and background-image is not animatable, so
+   it snapped. Two other routes were tried and both are unparseable by the W3C CSS
+   checker this repo gates on (verified with `vnu-jar --css`, 2026-10-05): a
+   registered custom property driving `color-mix()` (vnu rejects any var() inside
+   color-mix) and `transition: --sp-fade` (vnu rejects transitions of custom
+   properties). So the spectrum is a real span instead: a conic ring, with an inner
+   disc painted in the surface colour so only the 2px stroke shows, and a plain
+   `transition: opacity`, which is a standard animatable property. The label is
+   lifted above it. The angle still comes from the registered property, which is the
+   one @property use the checker already filters by name. */
+.search-bar .btn-gb{position:relative}
+/* inset:-2px, not 0. An absolutely positioned child is placed against the PARENT'S
+   PADDING box, and this button carries a 2px transparent border, so inset:0 would
+   sit the ring inside the stroke it is meant to be. Measured 2026-10-05: inset:0
+   gave a 96x40 ring on a 100x44 button. */
+.srch-ring{position:absolute;inset:-2px;border-radius:999px;pointer-events:none;z-index:0;
+  background:conic-gradient(from var(--sp-angle),
+    var(--sp-1),var(--sp-2),var(--sp-3),var(--sp-4),var(--sp-1));
+  opacity:0;transition:opacity .6s ease}
+.srch-ring::after{content:"";position:absolute;inset:2px;border-radius:998px;background:var(--surface)}
+.btn-lbl{position:relative;z-index:1}
+.search-bar:focus-within .srch-ring{opacity:1;animation:sp-scroll 2.8s linear infinite}
 @keyframes sp-scroll{to{--sp-angle:360deg}}
 /* live results, Google-style. Sits inside .search (already position:relative). */
 .srch-drop{position:absolute;left:0;right:0;top:calc(100% + 8px);background:var(--surface);border:1px solid var(--border-2);border-radius:18px;box-shadow:0 18px 44px rgba(15,23,42,.14);padding:8px;z-index:60;max-height:min(66vh,440px);overflow-y:auto;text-align:left}
@@ -478,10 +497,39 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
 .chips{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:18px}
 .chip{font-size:13px;font-weight:500;color:var(--text-2);border:1px solid var(--border-2);border-radius:999px;padding:7px 15px;background:var(--surface);transition:.16s;cursor:pointer}
 .chip:hover{color:var(--b1);border-color:var(--b2)}
-.hero-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:60px}
-.hstat{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:24px 12px;box-shadow:var(--shadow-sm)}
-.hstat .num{font-size:clamp(24px,3vw,34px);font-weight:800;letter-spacing:-.02em;color:var(--text)}
-.hstat .lbl{font-size:13px;color:var(--text-2);margin-top:2px}
+/* The tool row on the homepage. Every calculator is reachable from the fold, so
+   the band stops being a billboard for one of them. Ty, 2026-10-05: "I still
+   don't see many of the other buttons other than the weight calculator... we can
+   fit a lot more right here". Slightly tighter than a lone chip because eight of
+   them share the width. */
+.chips-tools{margin-top:20px;gap:9px}
+.chips-tools .chip{font-size:12.5px;padding:7px 13px}
+.hero-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:34px;align-items:stretch}
+/* The three figures are DOORS, not decoration. Ty, 2026-10-05: the "$0 No
+   paywall" tile was the one that "should be a more useful link", and the other
+   two were already links with nothing to say where they led. Each is now a
+   destination: the number stays the proof, and a line under it says what is
+   behind it. The num/lbl markup is unchanged because two generators own it --
+   scripts/build-listings.py writes the businesses counter and
+   scripts/sync-counts.py the guides one, both by matching that exact string. */
+.hstat{display:flex;flex-direction:column;align-items:center;text-align:center;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:22px 18px;box-shadow:var(--shadow-sm);transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}
+.hstat:hover{transform:translateY(-3px);border-color:var(--border-2);box-shadow:var(--shadow)}
+.hstat .num{font-size:clamp(26px,3vw,36px);font-weight:800;letter-spacing:-.02em;color:var(--text);line-height:1}
+.hstat .lbl{font-size:13.5px;font-weight:700;color:var(--text);margin-top:6px}
+.hstat-p{font-size:12.5px;color:var(--text-3);margin-top:7px;line-height:1.5;flex:1}
+.hstat-go{font-size:12.5px;font-weight:800;color:var(--b1);margin-top:10px}
+/* The first-timer's door, on its own. A wide card with the copy left and the action
+   right, so it does not read as one more entry in the menu above it. Ty, 2026-10-05:
+   "it should have its entire own element and probably even elevated above these two".
+   The tint is the one the site already uses for a highlighted surface. */
+.start-here{display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap;padding:32px 34px;border-color:var(--tint-edge);background:var(--tint-bg)}
+.start-here-body{flex:1;min-width:280px}
+.start-here .h-lg{margin:8px 0 0}
+.start-here-p{margin-top:10px;color:var(--text-2);font-size:15.5px;line-height:1.6;max-width:640px}
+@media(max-width:720px){
+  .start-here{padding:24px 20px}
+  .start-here .btn{width:100%;justify-content:center;white-space:normal}
+}
 
 /* ================= SECTIONS ================= */
 .sec{padding:88px 0}
@@ -2087,8 +2135,10 @@ figure:has(svg[role="img"]){overflow-x:auto;overflow-y:hidden}
   .btn-snow::before,.btn-snow::after{animation:none;opacity:0}
   .btn.btn-snow:hover{background:var(--brand-deep);border-color:var(--brand-deep);color:var(--text-inv)}
   /* The search ring keeps its spectrum and stops moving, which is the same
-     degradation as a browser without @property: colour stays, motion goes. */
-  .search-bar:focus-within .btn-gb{animation:none}
+     degradation as a browser without @property: colour stays, motion goes. The
+     fade is zeroed too, so the colours arrive at once rather than ramping. */
+  .search-bar:focus-within .srch-ring{animation:none}
+  .srch-ring{transition:none}
   /* The ring and the readout cross-fade are both purely decorative, so they go.
      The JS also stops cycling under this query, so the panel holds the first
      readout instead of swapping behind a motionless label. */
@@ -2548,7 +2598,10 @@ a.hstat{display:block;text-decoration:none;color:inherit;
   transition:border-color .16s,box-shadow .16s,transform .16s}
 a.hstat:hover{border-color:var(--border-2);box-shadow:var(--shadow);transform:translateY(-1px)}
 a.hstat:focus-visible{outline:2px solid var(--b1,var(--brand));outline-offset:2px}
-a.hstat .lbl::after{content:" \2192";color:var(--b1,var(--brand));font-weight:700}
+/* The label used to carry the arrow itself. Now that every tile ends with its own
+   "Open the tools ->" line, an arrow after the label pointed at nothing twice over.
+   Ty, 2026-10-05, on the tile redesign. */
+a.hstat .lbl{cursor:pointer}
 a.tchip{text-decoration:none}
 a.tchip:hover{border-color:var(--border-2);color:var(--text)}
 a.tchip:focus-visible{outline:2px solid var(--b1,var(--brand));outline-offset:2px}
