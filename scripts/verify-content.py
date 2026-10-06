@@ -272,6 +272,20 @@ def save(man):
                                    ensure_ascii=False) + "\n", encoding="utf-8")
 
 
+def claim_list(entry):
+    """The claim ledger as a list, whichever of its two shapes it is in.
+
+    `claims` is either a LIST of claim dicts (from seed_claims_from_spec) or a digest HASH
+    STRING (from --stamp-claims, which is what has actually been run on the guides). Every
+    site that iterated it assumed the list and crashed on the string -- four separate places
+    by 2026-10-06, each one found only by running the command that reached it, and one of
+    them being --verify, the command that re-earns a verdict for an edited page. The two
+    shapes are both legitimate; only the assumption was wrong.
+    """
+    c = entry.get("claims")
+    return c if isinstance(c, list) else []
+
+
 def arg(flag, default=None):
     return sys.argv[sys.argv.index(flag) + 1] if flag in sys.argv else default
 
@@ -347,7 +361,20 @@ def main():
         prev = man.get(rel, {})
         entry["claims"] = prev.get("claims") or seed_claims_from_spec(rel)
         # THE CLAIM FLOOR: refuse to verify with a claim still at OPEN or SOURCED.
-        blocked = [c["id"] for c in entry["claims"] if c["state"] in CLAIM_FLOOR]
+        #
+        # BUT `claims` HAS TWO SHAPES, and this line assumed one of them until 2026-10-06. The
+        # claim-floor branch was never reached in practice because --stamp-claims, which is what
+        # has actually been run on the guides, writes a digest HASH STRING into this key, while
+        # seed_claims_from_spec builds a LIST of claim dicts. Iterating the hash yields its
+        # characters, so `c["id"]` raised "string indices must be integers" and --verify died
+        # outright -- the one command that can re-earn a verdict for an edited page. Exactly the
+        # same trap the --status path documents further down; this is the second occurrence.
+        # A digest is not a list of claims below the floor, so the honest reading is that there
+        # are none to block on: a page whose claims are recorded as a digest has been stamped,
+        # not seeded, and has no ledger to check.
+        ledger = entry["claims"] if isinstance(entry["claims"], list) else []
+        blocked = [c["id"] for c in ledger
+                   if isinstance(c, dict) and c.get("state") in CLAIM_FLOOR]
         if blocked and "--no-claims" not in sys.argv:
             print("FAIL  %s has %d claim(s) below the floor: %s"
                   % (rel, len(blocked), ", ".join(blocked[:14])))
@@ -357,8 +384,8 @@ def main():
         save(man)
         print("verified %s by %s  (%d claims, %d at CONFIRMED)"
               % (rel, entry["verified_by"], len(entry["claims"]),
-                 len([c for c in entry["claims"] if c["state"] == "CONFIRMED"])))
-        wv = [c["id"] for c in entry["claims"] if c["state"] == "WAIVED"]
+                 len([c for c in claim_list(entry) if c.get("state") == "CONFIRMED"])))
+        wv = [c["id"] for c in claim_list(entry) if c.get("state") == "WAIVED"]
         if wv:
             print("  %d claim(s) waived, above the floor and on the record: %s"
                   % (len(wv), ", ".join(wv)))
@@ -405,7 +432,7 @@ def main():
             print("      A waiver with no reason is a claim nobody can audit.")
             return 1
         hit = None
-        for c in entry["claims"]:
+        for c in claim_list(entry):
             if c["id"] == cid:
                 hit = c
                 break
@@ -466,7 +493,7 @@ def main():
         n = len(entry["claims"])
         print("%s: %d claims seeded from %s" % (page, n, spec_path(page).relative_to(ROOT)))
         for st in CLAIM_STATES:
-            ids = [c["id"] for c in entry["claims"] if c["state"] == st]
+            ids = [c["id"] for c in claim_list(entry) if c.get("state") == st]
             if ids:
                 print("   %-10s %2d  %s" % (st, len(ids), " ".join(ids[:18])))
         return 0

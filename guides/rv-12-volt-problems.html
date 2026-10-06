@@ -46,7 +46,7 @@
  <div class="sec-eyebrow">Troubleshooting guide</div>
     <h1>RV electrical problems: How to find the fault</h1>
  <p class="lede">The 12-volt system is not complicated, it is a short chain of links, and a fault usually kills everything downstream of the link that failed. Learn the order and a symptom tells you where to look.</p>
- <p class="reviewed">By <a class="link" href="/about">OriginRV</a>. Last updated on Oct 4, 2026.</p>
+ <p class="reviewed">By <a class="link" href="/about">OriginRV</a>. Last updated on Oct 6, 2026.</p>
  </div>
 
  <div class="sec prose">
@@ -127,7 +127,7 @@
  <h3>Nothing works on 12 volts, plugged in or not</h3>
  <p>Look at the battery feed path: the disconnect, the main fuse, the battery terminals. If the converter is running, some 12-volt power should exist regardless of the battery.</p>
  <h3>Works plugged in, dies when you unplug</h3>
- <p>The converter is carrying everything and the battery is not contributing. Either the battery is finished, or it is not being charged. Those are different problems with the same symptom, and the next section separates them.</p>
+ <p>The converter is carrying everything and the battery is not contributing. Either the battery is finished, or it is not being charged. </p>
  <h3>Dim or weak even while plugged in</h3>
  <p>The converter or its 120 volt feed. On shore power a healthy converter carries the normal 12-volt loads and keeps the battery charged, which is why the lights work with no battery fitted at all. The battery is not out of the picture, though: the two sit in parallel on the same DC bus, and the converter is current-limited, so a load that asks for more than it can deliver pulls the converter's voltage down and the battery supplies the difference. That is why the heavy intermittent loads, a slide or a jack, are where a weak converter shows itself first.</p>
  <h3>One circuit dead, everything else fine</h3>
@@ -147,14 +147,14 @@
 
  <h2>The system, in order</h2>
  <div class="card">
- <p>Two things are worth understanding before you touch a meter, because both change how you search.</p>
+ <p></p>
  <h3>There are two sources, not one</h3>
  <p>The battery feeds the panel, and the converter feeds the same panel. They meet at the DC bus rather than sitting in a line, and the converter's charging path runs backwards up the battery's own wire. WFCO states this in its own manual: a battery is not required for converter operation, and the battery works in conjunction with the converter to supply DC power. That single fact explains why an RV with a completely dead battery still has working lights when it is plugged in.</p>
  <h3>Everything returns through the chassis</h3>
  <p>The frame of the RV is the return path for many circuits. Anywhere that return path is corroded, painted, or loose, current cannot get back to the battery and the device behaves as though it has no power at all. This is the fault that gets mistaken for a dead battery or a failed device more often than any other, because a bad ground presents as a fault in whatever device happens to be at the end of the circuit.</p>
  <p><b>It is not the return path for all of them.</b> A trailer commonly runs a dedicated negative wire back to a bus for the house circuits, with the frame carrying the vehicle lighting and brakes, and Progressive Dynamics' own wiring diagram says the chassis may or may not carry the DC negative. So a circuit with its own negative wire has its own set of connections to check, and a fault there will not show up as a frame problem at all. Where the frame is used, its joints are the corrosion sites, and that is the half of this section that catches people.</p>
  <h3>Working the chain</h3>
- <p>Start at the source and move outward. Battery voltage at the terminals, then at the disconnect, then at the main fuse, then at the bus, then at the branch fuse, then at the load. The first point where the reading stops being correct is where the fault is. Doing that in order is faster than testing anything at random, and it never leaves you replacing a part that was never broken.</p>
+ <p>Start at the source and move outward. Battery voltage at the terminals, then at the disconnect, then at the main fuse, then at the bus, then at the branch fuse, then at the load. The first point where the reading stops being correct is where the fault is. </p>
  <h3>Two things that differ between RVs</h3>
  <p>Not every RV has a battery disconnect, and many towables use a resettable breaker near the battery instead of a switch. Motorhomes add a second battery for the chassis and a device that decides which battery gets charged, so a motorhome can show a charging fault that is really that device not closing, not the converter.</p>
  <h3>One manufacturer warning worth taking literally</h3>
@@ -181,7 +181,7 @@
 
  <h2>The voltage-drop test: Find the link, not the part</h2>
  <div class="card">
- <p>This is the technique that separates a diagnosis from a guess.</p>
+ <p></p>
  <h3>The rule that makes it work</h3>
  <p>Voltage drop only appears under load. Victron states it plainly: the drop becomes larger when the current increases. A circuit that reads perfectly with everything switched off can fail badly the moment it has to carry real current. This is exactly why a light tests fine at the socket and still will not light.</p>
  <h3>How to measure it</h3>

@@ -198,15 +198,14 @@
     "claims_date": "Oct 2, 2026"
   },
   "guides/rv-battery-not-charging.html": {
-    "hash": "13885b8c20dadc29",
+    "hash": "46a405eca31ecf5a",
     "status": "verified",
-    "verified_by": "Cloud 2026-09-24, after the bridge lane's pass (JOB-20260924-1650, recorded in the spec's section 12; the reply arrived by Ty pasting it, because the lane answered in its tab and wrote nothing to disk). All three sources confirmed with quotes, and the lane independently checked the page's one piece of arithmetic as fair. Five fixes applied: the terminal-shorting and shore-power safety points the page lacked, a DC-to-DC charger as a fifth source where fitted, the smaller voltage lift on a nearly full battery, the converter maker's own troubleshooting entries for reverse-polarity fuses and no battery connection, and deep discharge in the sourced form rather than the asserted charger lockout the lane claimed but no document supports. Three of its class findings rejected with reasons, including the Last reviewed line which is deliberate fine print. Since that verdict the only further change to this page's visible text is the site-wide check line, applied on Ty's instruction: it now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' rather than 'Last reviewed: <date> ...', because the old wording implied a review cycle that had not happened and named no author. No claim text changed in that pass. CHANGED AGAIN 2026-09-28 on Ty's instruction: the check line now reads 'By OriginRV. Written and checked against the sources below on <date>.' rather than a person's name, and the Article schema author is an Organization rather than a Person. His name appears only on the About page, as Ty B. No claim text changed in that pass either. The only change since is the site-wide byline rewrite of 2026-10-02 on Ty's instruction, which removed the 'written and checked against the sources' claim; git confirms the diff is byline lines only and no claim text moved. The italic quotation marks were converted to the checkable <b>\"...\"</b> convention on 2026-10-02, on Ty's ruling: git confirms all 45 changed lines are identical once bold/italic tags and quotation marks are ignored, so no words moved. The quotations became visible to check-quotes.py for the first time, which is the point of the change. CHANGED 2026-09-28: a contextual internal link to guides/rv-battery-disconnect.html was added inside an existing sentence, in the internal-linking pass Ty asked for. Not one word of prose changed; the recorded digest moves because a tag now sits inside the sentence and the extractor reads a tag as a space, which puts a space before the following comma. The claim set is untouched.",
-    "verified_at": "2026-09-28",
+    "verified_by": "independent review on 2026-10-06, one of three batches covering eighteen guides that night. The reviewer read the page in full and named the sentences to cut; every edit applied was one of those cuts, so no text the reviewer did not read was added. What came out was the sourcing meta-tell and the sentences that told the reader how to read or argued the page's method was sound.",
+    "verified_at": "2026-10-06",
     "sources": [],
     "spec": "_specs/rv-battery-not-charging.md",
     "spec_waived": false,
-    "claims": "f2c9a068f6c16e27",
-    "claims_date": "Oct 4, 2026"
+    "claims": "f2c9a068f6c16e27"
   },
   "guides/rv-condensation-inside.html": {
     "hash": "483e0df75c1d997a",
@@ -310,26 +309,24 @@
     "claims_date": "Oct 4, 2026"
   },
   "guides/rv-leveling-jacks-not-working.html": {
-    "hash": "8a90e26752ca1c8a",
+    "hash": "4367a44903e95b47",
     "status": "verified",
-    "verified_by": "Cloud 2026-09-24, first independent pass by the bridge lane (JOB-20260924-1640, spec section 12). All eight document checks confirmed. Two content additions applied from the manual and better than the lane paraphrased them: the electric jack override procedures with the maker's own tools, including that a cordless screw gun is allowed on jacks and only impacts are banned, which is the opposite of the stabiliser rule; and the hydraulic fluid check with the 1/4 inch figure and the retract-before-filling trap. This pass also found six page self-references and two prevalence claims of mine that no gate checks, all fixed. Since that verdict the only further change to this page's visible text is the site-wide check line, applied on Ty's instruction: it now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' rather than 'Last reviewed: <date> ...', because the old wording implied a review cycle that had not happened and named no author. No claim text changed in that pass. CHANGED AGAIN 2026-09-28 on Ty's instruction: the check line now reads 'By OriginRV. Written and checked against the sources below on <date>.' rather than a person's name, and the Article schema author is an Organization rather than a Person. His name appears only on the About page, as Ty B. No claim text changed in that pass either. The only change since is the site-wide byline rewrite of 2026-10-02 on Ty's instruction, which removed the 'written and checked against the sources' claim; git confirms the diff is byline lines only and no claim text moved. The italic quotation marks were converted to the checkable <b>\"...\"</b> convention on 2026-10-02, on Ty's ruling: git confirms all 45 changed lines are identical once bold/italic tags and quotation marks are ignored, so no words moved. The quotations became visible to check-quotes.py for the first time, which is the point of the change. CHANGED 2026-09-28: a contextual internal link to guides/rv-pin-weight-and-payload.html was added inside an existing sentence, in the internal-linking pass Ty asked for. Not one word of prose changed; the recorded digest moves because a tag now sits inside the sentence and the extractor reads a tag as a space, which puts a space before the following comma. The claim set is untouched.",
-    "verified_at": "2026-09-28",
+    "verified_by": "independent review on 2026-10-06, one of three batches covering eighteen guides that night. The reviewer read the page in full and named the sentences to cut; every edit applied was one of those cuts, so no text the reviewer did not read was added. What came out was the sourcing meta-tell and the sentences that told the reader how to read or argued the page's method was sound.",
+    "verified_at": "2026-10-06",
     "sources": [],
     "spec": "_specs/rv-leveling-jacks-not-working.md",
     "spec_waived": false,
-    "claims": "1880dbae7019e467",
-    "claims_date": "Oct 4, 2026"
+    "claims": "1880dbae7019e467"
   },
   "guides/rv-lights-not-working.html": {
-    "hash": "48e50563fcd402b9",
+    "hash": "5df4f74d9043f2ef",
     "status": "verified",
-    "verified_by": "AI Studio lane, third round on 2026-09-24. Two late fixes, both found by asking the sweep for its working rather than accepting a bare zero: the spec had listed almost every RV light is LED now under prevalence and the draft pass never applied it, and the ground entry carried a positional self-reference. Both fixed, and the confirm round JOB-20260924-0900 returned PART 1: CONFIRMED on both edits, reading each with its neighbours. The miss is also what prompted scripts/check-spec-fragments.py, which pulls every quoted fragment out of a spec defect section and greps the page: nothing had been checking whether a spec decisions were actually applied, and the review and the sweep both judge the page as written. Since that verdict the only further change to this page's visible text is the site-wide check line, applied on Ty's instruction: it now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' rather than 'Last reviewed: <date> ...', because the old wording implied a review cycle that had not happened and named no author. No claim text changed in that pass. CHANGED AGAIN 2026-09-28 on Ty's instruction: the check line now reads 'By OriginRV. Written and checked against the sources below on <date>.' rather than a person's name, and the Article schema author is an Organization rather than a Person. His name appears only on the About page, as Ty B. No claim text changed in that pass either. CHANGED 2026-09-28: a contextual internal link to directory/index.html was added inside an existing sentence, in the internal-linking pass Ty asked for. Not one word of prose changed; the recorded digest moves because a tag now sits inside the sentence and the extractor reads a tag as a space, which puts a space before the following comma. The claim set is untouched. The only change since is the site-wide byline rewrite of 2026-10-02 on Ty's instruction, which removed the 'written and checked against the sources' claim; git confirms the diff is byline lines only and no claim text moved.",
-    "verified_at": "2026-09-28",
+    "verified_by": "independent review on 2026-10-06, one of three batches covering eighteen guides that night. The reviewer read the page in full and named the sentences to cut; every edit applied was one of those cuts, so no text the reviewer did not read was added. What came out was the sourcing meta-tell and the sentences that told the reader how to read or argued the page's method was sound.",
+    "verified_at": "2026-10-06",
     "sources": [],
     "spec": "_specs/rv-lights-not-working.md",
     "spec_waived": false,
-    "claims": "88a0fd90a5829273",
-    "claims_date": "Oct 2, 2026"
+    "claims": "88a0fd90a5829273"
   },
   "guides/rv-macerator-toilet.html": {
     "hash": "fa90cd5520d1177b",
@@ -341,15 +338,14 @@
     "claims_date": "Oct 4, 2026"
   },
   "guides/rv-outlets-not-working.html": {
-    "hash": "2f97fa6b8c420dda",
+    "hash": "97fc9abf364c2124",
     "status": "verified",
-    "verified_by": "Claude Desktop lane, third round on 2026-09-24. The class sweep (JOB-20260924-0715 PART 2) found six instances on a page that had already passed a full review and a confirm round: four applied, one declined with the reason (Usually not a fault is a claim about the situation rather than about what owners do, and the sweep own suggested fix would have made it worse). Applied: the breaker sentence that said the same thing twice, in the body and again in the FAQ answer and its schema copy; the unattributed frequency claim that closed the causes list; and the safety callout self-reference, reworded with its scope kept exactly. The sweep was given the raw HTML as well as the prose view, so it read the meta description, the social strings and both JSON-LD blocks and reported the other classes clean across all of them. Confirm round JOB-20260924-0735 returned PART 1: CONFIRMED on all four edits and confirmed the declined finding was left alone. Verdict re-earned: the text that is committed is now the text that was reviewed. Since that verdict the only further change to this page's visible text is the site-wide check line, applied on Ty's instruction: it now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' rather than 'Last reviewed: <date> ...', because the old wording implied a review cycle that had not happened and named no author. No claim text changed in that pass. CHANGED AGAIN 2026-09-28 on Ty's instruction: the check line now reads 'By OriginRV. Written and checked against the sources below on <date>.' rather than a person's name, and the Article schema author is an Organization rather than a Person. His name appears only on the About page, as Ty B. No claim text changed in that pass either. The only change since is the site-wide byline rewrite of 2026-10-02 on Ty's instruction, which removed the 'written and checked against the sources' claim; git confirms the diff is byline lines only and no claim text moved.",
-    "verified_at": "2026-09-28",
+    "verified_by": "independent review on 2026-10-06, one of three batches covering eighteen guides that night. The reviewer read the page in full and named the sentences to cut; every edit applied was one of those cuts, so no text the reviewer did not read was added. What came out was the sourcing meta-tell and the sentences that told the reader how to read or argued the page's method was sound.",
+    "verified_at": "2026-10-06",
     "sources": [],
     "spec": "_specs/rv-outlets-not-working.md",
     "spec_waived": false,
-    "claims": "1fe18dc8c794753f",
-    "claims_date": "Oct 2, 2026"
+    "claims": "1fe18dc8c794753f"
   },
   "guides/rv-pin-weight-and-payload.html": {
     "hash": "0e3b145a84bf0d64",
@@ -389,15 +385,14 @@
     "claims_date": "Oct 2, 2026"
   },
   "guides/rv-roof-leak-repair.html": {
-    "hash": "5a3880bfb8c6ec95",
+    "hash": "ffb09470220f14c6",
     "status": "verified",
-    "verified_by": "Cloud 2026-09-28, external-review correction pass plus a fresh-context confirm round. An external review noted that the page told readers to cut a small hole in a sagging wet ceiling with no mention of the wiring running through RV ceilings. The gap was real: RV ceiling runs carry 12-volt wiring to lights, vents, detectors and speakers, 120-volt wiring to the air conditioner and on some models a ceiling fixture, and ducting. The bullet now names what is in the cavity, requires the shore power, generator, inverter and 12-volt system to be killed with the feeding fuses and breakers pulled before anything goes through the panel, keeps the hole clear of visible fixtures, specifies a hand tool rather than a drill, adds eye and breathing protection, and defers to a technician where the cavity is unknown. The confirm round verified the ceiling contents against Airxcel's ceiling-assembly instructions ('The 115 VAC service for the roof top unit must be routed into the ceiling plenum') and the NHTSA service advisory showing the cavity contents, confirmed the ordering now puts isolation before the action, and prescribed one typo fix ('A hatches hinges' to 'A hatch hinges'), which is the only change made after the confirm verdict. Since that verdict the only further change to this page's visible text is the site-wide check line, applied on Ty's instruction: it now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' rather than 'Last reviewed: <date> ...', because the old wording implied a review cycle that had not happened and named no author. No claim text changed in that pass. CHANGED AGAIN 2026-09-28 on Ty's instruction: the check line now reads 'By OriginRV. Written and checked against the sources below on <date>.' rather than a person's name, and the Article schema author is an Organization rather than a Person. His name appears only on the About page, as Ty B. No claim text changed in that pass either. The only change since is the site-wide byline rewrite of 2026-10-02 on Ty's instruction, which removed the 'written and checked against the sources' claim; git confirms the diff is byline lines only and no claim text moved. The italic quotation marks were converted to the checkable <b>\"...\"</b> convention on 2026-10-02, on Ty's ruling: git confirms all 45 changed lines are identical once bold/italic tags and quotation marks are ignored, so no words moved. The quotations became visible to check-quotes.py for the first time, which is the point of the change.",
-    "verified_at": "2026-09-28",
+    "verified_by": "independent review on 2026-10-06, one of three batches covering eighteen guides that night. The reviewer read the page in full and named the sentences to cut; every edit applied was one of those cuts, so no text the reviewer did not read was added. What came out was the sourcing meta-tell and the sentences that told the reader how to read or argued the page's method was sound.",
+    "verified_at": "2026-10-06",
     "sources": [],
     "spec": "_specs/rv-roof-leak-repair.md",
     "spec_waived": false,
-    "claims": "39cbfa3d61716c6a",
-    "claims_date": "Oct 2, 2026"
+    "claims": "39cbfa3d61716c6a"
   },
   "guides/rv-sewer-smell.html": {
     "hash": "a882d069f1731d43",
@@ -431,15 +426,14 @@
     "claims_date": "Oct 4, 2026"
   },
   "guides/rv-solar-not-charging.html": {
-    "hash": "68ea9e2b4923525a",
+    "hash": "3ff49700d3d4d093",
     "status": "verified",
-    "verified_by": "Cloud 2026-09-28, external-review correction pass plus a fresh-context confirm round. The page explained the battery-first connection order with 'a panel connected to a controller with no battery on it has nowhere to put its current', which is bad physics: a panel is a current-limited source, so with an open input it simply rises to its open-circuit voltage and no current flows. The procedure was right and the explanation was not. The page now gives the real reasons: the controller sees the panel's full open-circuit voltage instead of a battery-clamped input, which is the cause Renogy names for the damage, and without a battery it can fail to establish or mis-detect the system voltage. The confirm round verified the replacement against Renogy's own manual language, Victron's MPPT manual ('In case the solar charger does not measure a battery voltage, it will default to 12V'), and Go Power's GP-PWM-10, and prescribed three further fixes, all applied: the Zamp attribution hedged to its current install guides, 'killed' softened to 'damaged' to match the body, and the Renogy source repointed at the article that actually carries the open-circuit-voltage claim. Those three are the only changes made after the confirm verdict. Since that verdict the only further change to this page's visible text is the site-wide check line, applied on Ty's instruction: it now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' rather than 'Last reviewed: <date> ...', because the old wording implied a review cycle that had not happened and named no author. No claim text changed in that pass. CHANGED AGAIN 2026-09-28 on Ty's instruction: the check line now reads 'By OriginRV. Written and checked against the sources below on <date>.' rather than a person's name, and the Article schema author is an Organization rather than a Person. His name appears only on the About page, as Ty B. No claim text changed in that pass either. The only change since is the site-wide byline rewrite of 2026-10-02 on Ty's instruction, which removed the 'written and checked against the sources' claim; git confirms the diff is byline lines only and no claim text moved.",
-    "verified_at": "2026-09-28",
+    "verified_by": "independent review on 2026-10-06, one of three batches covering eighteen guides that night. The reviewer read the page in full and named the sentences to cut; every edit applied was one of those cuts, so no text the reviewer did not read was added. What came out was the sourcing meta-tell and the sentences that told the reader how to read or argued the page's method was sound.",
+    "verified_at": "2026-10-06",
     "sources": [],
     "spec": "_specs/rv-solar-not-charging.md",
     "spec_waived": false,
-    "claims": "8bcd90bd498e17c5",
-    "claims_date": "Oct 2, 2026"
+    "claims": "8bcd90bd498e17c5"
   },
   "guides/rv-tank-sensors-reading-wrong.html": {
     "hash": "3214c341a918ef9c",
