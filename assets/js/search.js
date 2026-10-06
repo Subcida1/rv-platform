@@ -139,15 +139,16 @@
      This asks locate.js rather than deciding again here, so there is one answer to "where
      does this location go". The hub fallback is deliberately NOT offered: "RV service near
      somewhere we could not place" would be a promise the next page cannot keep. */
-  function locateItem(q) {
-    if (!window.RV_DIRECTORY_URL) return null;
-    var url = window.RV_DIRECTORY_URL(q);
-    if (!url || url === '/directory/') return null;
+  function locateItems(q) {
+    if (!window.RV_DIRECTORY_MATCHES) return [];
     var zip = /^\d{5}$/.test(q);
-    var label = zip ? q : q.replace(/\b[a-z]/g, function (c) { return c.toUpperCase(); });
-    return { t: 'RV service near ' + label, u: url, c: 'Directory',
-             d: zip ? 'Mobile techs and repair shops, nearest first'
-                    : 'Shops and mobile techs in this town' };
+    return window.RV_DIRECTORY_MATCHES(q).map(function (m) {
+      var where = m.label || (zip ? q
+        : q.replace(/\b[a-z]/g, function (c) { return c.toUpperCase(); }));
+      return { t: 'RV service near ' + where, u: m.url, c: 'Directory',
+               d: zip ? 'Mobile techs and repair shops, nearest first'
+                      : 'Shops and mobile techs in this town' };
+    });
   }
 
   function search(q, limit) {
@@ -164,8 +165,7 @@
     // number should reach the manual.
     var CAPS = { Business: 2, Manual: 2 }, used = {};
     var out = [];
-    var near = locateItem(q);
-    if (near) out.push(near);
+    locateItems(q).forEach(function (it) { out.push(it); });
     for (var j = 0; j < hits.length && out.length < (limit || MAX); j++) {
       var cat = hits[j].item.c;
       if (CAPS[cat]) {

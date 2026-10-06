@@ -319,7 +319,7 @@
     old branch that copied the version off the homepage's tag is gone with it: leaving it in
     would have appended a second ?v= to an already-versioned URL. `stamp_assets.py --check`
     fails the build if this string goes stale, which is why dropping the branch is safe. */
- s.src = 'assets/js/search.js?v=9066b621';
+ s.src = 'assets/js/search.js?v=7f93d332';
  s.async = true;
  document.head.appendChild(s);
  }

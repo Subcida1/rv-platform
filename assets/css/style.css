@@ -531,6 +531,14 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
 .hstat-form input::placeholder{color:var(--text-3)}
 .hstat-form input:focus{outline:none;border-color:var(--b1);box-shadow:0 0 0 3px var(--glow)}
 .hstat-form .btn{flex:0 0 auto;white-space:nowrap}
+/* The ambiguity chooser, under the location field. It appears only when a typed town matches
+   businesses in more than one state (Klamath is a real town in Oregon AND California), so the
+   common case never sees it. Ty, 2026-10-05: "we could just display every city named klamath
+   in a drop down for them to choose which one they mean." */
+.locate-choices{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center;margin-top:10px;width:100%}
+.locate-ask{font-size:12.5px;color:var(--text-3)}
+.locate-choices a{font-size:12.5px;font-weight:700;color:var(--b1);border:1px solid var(--border-2);border-radius:999px;padding:6px 12px;background:var(--surface);transition:.16s}
+.locate-choices a:hover,.locate-choices a:focus-visible{border-color:var(--b2);background:var(--surface-2);color:var(--text)}
 /* The first-timer's door, on its own. A wide card with the copy left and the action
    right, so it does not read as one more entry in the menu above it. Ty, 2026-10-05:
    "it should have its entire own element and probably even elevated above these two".
