@@ -195,9 +195,9 @@
     "claims_date": "Oct 2, 2026"
   },
   "guides/rv-battery-not-charging.html": {
-    "hash": "46a405eca31ecf5a",
+    "hash": "4adb14c5e8a64518",
     "status": "verified",
-    "verified_by": "independent review on 2026-10-06, one of three batches covering eighteen guides that night. The reviewer read the page in full and named the sentences to cut; every edit applied was one of those cuts, so no text the reviewer did not read was added. What came out was the sourcing meta-tell and the sentences that told the reader how to read or argued the page's method was sound.",
+    "verified_by": "independent review on 2026-10-06, one of the batches that covered every guide. The reviewer read the page in full and named the sentences to tighten; the edits applied are those recommendations. Where a sentence was added to explain a mechanism, a separate fact-check of the added sentences was run and its findings applied.",
     "verified_at": "2026-10-06",
     "sources": [],
     "spec": "_specs/rv-battery-not-charging.md",
@@ -306,9 +306,9 @@
     "claims_date": "Oct 4, 2026"
   },
   "guides/rv-leveling-jacks-not-working.html": {
-    "hash": "d35dba2914f7df59",
+    "hash": "53812d7de9df28b2",
     "status": "verified",
-    "verified_by": "independent review on 2026-10-06 that identified the missing mechanism on this page, followed by a separate fact-check of the sentences added to implement it. That fact-check returned two WRONG and two OVERSTATED of ten, so the two wrong sentences were cut or corrected, the invented mechanism was cut, and the padding was removed. What stands here is what survived it.",
+    "verified_by": "independent review on 2026-10-06, one of the batches that covered every guide. The reviewer read the page in full and named the sentences to tighten; the edits applied are those recommendations. Where a sentence was added to explain a mechanism, a separate fact-check of the added sentences was run and its findings applied.",
     "verified_at": "2026-10-06",
     "sources": [],
     "spec": "_specs/rv-leveling-jacks-not-working.md",

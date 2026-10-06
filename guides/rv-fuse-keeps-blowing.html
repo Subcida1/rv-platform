@@ -59,7 +59,7 @@
  <h3>A short</h3>
  <p>The fuse fails the instant you fit it, with the element vaporised or blackened. A short is a direct path to ground that does not need anything switched on.</p>
  <h3>An overload</h3>
- <p>The fuse lasts seconds to minutes before failing, and the load is near the fuse rating. The distinction matters, and it is easy to lose: an overload is too much legitimate load on the circuit, and a short circuit is a fault in the wire.</p>
+ <p>The fuse lasts seconds to minutes before failing, and the load is near the fuse rating. An overload is too much legitimate load on the circuit; a short circuit is a fault in the wire.</p>
  <p>Littelfuse publishes where the line between them sits. An overload is an overcurrent confined to the normal current paths, and happens "when too many devices are connected to the circuit, or when a device connected to the circuit malfunctions in a way that causes it to draw higher than normal current, usually in the range of one to six times normal current." A short circuit is current out of its normal path. Their overcurrent guide gives the threshold in numbers: "overcurrents less than 600% of the rated current of the device or application are termed as an overload fault current", and above that they are a short circuit fault current.</p>
  <p> A 15 amp fuse seeing 40 amps is an overload, roughly two and a half times its rating, and you are looking for a load or a device. The same fuse seeing 150 amps is at ten times its rating and you are looking for a fault in the wire.</p>
  <h3>An old fuse in a bad holder</h3>
@@ -79,7 +79,7 @@
 <tr><td>600 percent</td><td>0.02 to 0.1 seconds</td></tr>
 </tbody>
 </table>
-<p> A fuse that survives a minute of driving and then blows is seeing a modest multiple, which points at a load. One that blows the instant the circuit is switched on, or the instant you fit it, is seeing a multiple in the hundreds of percent and is looking at a dead short. OptiFuse publishes a comparable table, and the two agree closely enough that the shape is worth trusting even where the numbers differ.</p>
+<p> A fuse that survives a minute of driving and then blows is seeing a modest multiple, which points at a load. One that blows the instant the circuit is switched on, or the instant you fit it, is seeing a multiple in the hundreds of percent and is looking at a dead short. OptiFuse publishes a comparable table.</p>
 <p><b>A caution about the numbers themselves.</b> The published ranges are wide on purpose, because they cover manufacturing tolerance and temperature, so they tell you which class of fault you are looking at rather than exactly when a fuse will go. Eaton also notes its fuses derate about 0.15 percent per degree of ambient temperature above 23&deg;C, which matters little in a cool climate and not much more in a hot one.</p>
 
 <h2>Which fuse is which</h2>
@@ -112,7 +112,7 @@
  <p>The slowest of the four and the easiest to trust, and the only one that needs no tools. With every load on that circuit switched off or disconnected, fit a fresh fuse. If it holds, bring the loads back one at a time: the one that blows the fuse is where the problem is. If it blows with everything disconnected, the fault is in the wire run itself and nothing plugged into the circuit is responsible. The technique appears in a Volkswagen/Audi service bulletin on tracing excess current draw in almost exactly these words: disconnect the components from the circuit one by one, and if the values are now within the normal range, the component causing the excess draw has been identified.</p>
  <p><b>Switched off is not disconnected, and that difference decides this test.</b> A propane or carbon monoxide detector is hardwired to a fused circuit with no switch of its own, deliberately, so it stays live even with the <a href="guides/rv-battery-disconnect">battery disconnect</a> open. A refrigerator control board, a thermostat, a radio's clock memory, an inverter's logic and a powered vent all keep a board energised while the appliance is off. Any one of those with an internal fault blows the fuse with every switch in the coach off, and the result then sends you into the wire run after a fault that is inside a device. To make the test mean what it says, disconnect the loads physically: pull the feed or the inline fuse at each one, or unplug it, and count the always-powered devices as loads rather than as background. Only a fuse that still blows with every load genuinely off the circuit puts the fault in the wire.</p>
 <h3>What the load should be drawing</h3>
-<p>Manufacturers publish the current their equipment draws, so a measured reading can be compared against a real number rather than a guess. All of these are the maker's own figures:</p>
+<p>Manufacturers publish the current their equipment draws, so a measured reading can be compared against a real number:</p>
 <table>
 <tbody>
 <tr><th>Load</th><th>Published current</th></tr>
@@ -229,7 +229,7 @@
  <p>RVs use fuses on branch circuits and resettable breakers on the heavier things: slide and jack circuits, winches, and often the battery feed itself. Breakers reset after tripping, which is convenient, and frequent tripping can indicate a deeper electrical issue that needs professional attention.</p>
  <h3>The masking problem</h3>
  <p>An auto-resetting breaker does not stop at one attempt. It resets and sends current back into the fault, over and over. A fuse blows once and forces you to find the cause. The breaker keeps feeding the damage, and the damage accumulates somewhere you cannot see.</p>
- <p>The three types are defined by a standard rather than by RV practice. SAE J553 covers circuit breakers up to 200 amps on 12 and 24 volt DC systems and names them: <b>automatic reset</b>, <b>modified reset</b>, and <b>manually reset</b>. Knowing which one is on the circuit matters because only the automatic type keeps re-feeding the fault on its own. A manually reset breaker behaves much more like a fuse from a diagnostic point of view: it stops, and it stays stopped until somebody chooses to try again.</p>
+ <p> SAE J553 covers circuit breakers up to 200 amps on 12 and 24 volt DC systems and names them: <b>automatic reset</b>, <b>modified reset</b>, and <b>manually reset</b>. Knowing which one is on the circuit matters because only the automatic type keeps re-feeding the fault on its own. A manually reset breaker behaves much more like a fuse from a diagnostic point of view: it stops, and it stays stopped until somebody chooses to try again.</p>
  <h3>What to do about it</h3>
  <p>If a resettable breaker on a slide or jack circuit keeps tripping, treat that as a fault to find rather than a button to press. And if a circuit uses an auto-resetting type and something on it fails intermittently for no obvious reason, that breaker is a suspect rather than a cure.</p>
  </div>
