@@ -159,7 +159,7 @@ def sync_home_counters():
     page = ROOT / "index.html"
     html = page.read_text(encoding="utf-8")
     total = sum(len(v) for v in C.guides().values())
-    pat = re.compile(r'(data-count=")\d+(">0</div><div class="lbl">Free guides, live now</div>)')
+    pat = re.compile(r'(data-count=")\d+(">0</div><div class="lbl">RV troubleshooting guides</div>)')
     if not pat.search(html):
         raise SystemExit("FAIL  index.html: no guides counter to rewrite")
     new = pat.sub(lambda m: m.group(1) + str(total) + m.group(2), html, count=1)

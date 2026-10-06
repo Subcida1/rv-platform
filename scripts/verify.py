@@ -345,7 +345,7 @@ for suffix in sorted(C.state_shards()):
         (ROOT / "assets" / "js" / "listings" / ("listings-%s.js" % suffix)).read_text(encoding="utf-8"),
         re.S).group(1))
     businesses += len(rows)
-for label, actual in (("Free guides, live now", len(guide_files)),
+for label, actual in (("RV troubleshooting guides", len(guide_files)),
                       ("RV repair businesses listed", businesses)):
     m = re.search(r'data-count="(\d+)">0</div><div class="lbl">%s</div>' % re.escape(label), idx)
     if not m:
