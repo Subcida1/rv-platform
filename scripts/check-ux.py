@@ -128,22 +128,70 @@ def check_bare_outline() -> int:
     return len(flagged)
 
 
+
+def check_empty_headings() -> int:
+    """A heading with nothing under it promises an explanation that was never written.
+
+    FOUND BY HAND, ONCE. tools/snow-load.html carried "Why it does not ask for your roof pitch"
+    sitting directly above another <h2> with nothing between them. It looked like a section and
+    was a stub, and no gate could see it because a heading is not malformed, just empty.
+
+    THE FIRST VERSION OF THIS CHECK WAS WRONG AND REPORTED THREE FINDINGS, ALL FALSE. It flagged
+    any heading immediately followed by another, which catches the ordinary shape of a section
+    that HAS subsections: "<h2>Start here: match your symptom</h2>" followed by
+    "<h3>Runs, blows air, but the air is not cold</h3>" is correct and there were two of those.
+    The third matched inside a <meta name="description">, because the scan ran over the raw file
+    including <head>. So the rule is now: it only counts when the next heading is the SAME level
+    or HIGHER, which means the first one never got any content of its own, and the scan runs over
+    the body only.
+    """
+    fails = 0
+    # tracked() is the file's own convention and it uses git ls-files, which cannot see the
+    # .letta worktrees -- exactly the trap that has bitten the other scanners here.
+    for rel in tracked("*.html"):
+        path = ROOT / rel
+        raw = path.read_text(encoding="utf-8")
+        raw = re.sub(r"<(script|style)\b.*?</\1>", " ", raw, flags=re.S | re.I)
+        body = raw[raw.find("<body"):] if "<body" in raw else raw
+        for m in re.finditer(
+                r"<h([1-4])\b[^>]*>((?:(?!</h\1>).)*?)</h\1>\s*(?=<h([1-4])\b)", body, re.S):
+            level, inner, nxt = int(m.group(1)), m.group(2), int(m.group(3))
+            text = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", inner)).strip()
+            if not text or nxt > level:
+                continue          # a heading with subsections is a section, not a stub
+            print("  %s:  <h%d>%s</h%d> has nothing under it"
+                  % (path.relative_to(ROOT), level, text[:64], level))
+            fails += 1
+    return fails
+
+
 def main() -> int:
     print("=== check-ux.py: the UX doctrine gates ===")
-    print("\n[1/3] vague link labels (fails the build)")
+    print("\n[1/4] vague link labels (fails the build)")
     n_vague = check_vague_labels()
     if n_vague == 0:
         print("  none")
 
-    print("\n[2/3] guides with no end-of-content link block (reports)")
+    print("\n[2/4] guides with no end-of-content link block (reports)")
     n_missing = check_guide_next_blocks()
 
-    print("\n[3/3] bare outline:none (reports)")
+    print("\n[3/4] bare outline:none (reports)")
     n_outline = check_bare_outline()
 
+    print("\n[4/4] headings with nothing under them (fails)")
+    n_empty = check_empty_headings()
+    if n_empty == 0:
+        print("  none")
+
     print("\n" + "=" * 56)
-    if n_vague:
-        print(f"FAILED: {n_vague} vague link label(s) — give each link destination scent")
+    if n_empty:
+        print("%d heading(s) promise content that is not there." % n_empty)
+    if n_vague or n_empty:
+        if n_vague:
+            print(f"FAILED: {n_vague} vague link label(s) - give each link destination scent")
+        if n_empty:
+            print(f"FAILED: {n_empty} heading(s) with nothing under them - write the section or "
+                  f"drop the heading")
         return 1
     print(f"ok — no vague labels. ({n_missing} guides want a related block; "
           f"{n_outline} focus-ring selector(s) to eyeball.)")
