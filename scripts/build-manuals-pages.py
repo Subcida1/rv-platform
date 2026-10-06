@@ -173,9 +173,17 @@ def meta_desc(text):
     A base that cannot be made to fit fails loudly with its length.
     """
     text = re.sub(r"\s+", " ", text).strip()
-    for tail in ["", ", linked at the source", ", every link at the maker's own copy",
-                 ", every link goes to the source of the document",
-                 ", each one linked at the manufacturer's own copy"]:
+    # THE TAILS WERE ALL SOURCING TELLS and are gone. Each one was a variant of "linked at the
+    # source" or "at the maker's own copy": the site telling a reader how careful it had been,
+    # in the one string a search result shows. Only the count belongs here. Reviewed 2026-10-06.
+    # The tail has to land the description in its 140-160 target WITHOUT being a sourcing tell,
+    # because the tells that used to do this job are gone. Several variants, tried shortest
+    # first, so a short base still reaches the range honestly. If none fits the generator fails
+    # loudly rather than writing a description that is too long or too short.
+    for tail in ["", ", with what each one covers", ", described one by one",
+                 ", with what each one contains", ", each listed with what it covers",
+                 ", each with what it covers and who makes it",
+                 ", listed with what each one covers and from whom"]:
         if 140 <= len(text + tail) <= 160:
             return text + tail
     raise SystemExit("FAIL  description is %d chars and no tail fixes it: %s"
@@ -284,10 +292,11 @@ def row_html(r):
     # written for whoever maintains this corpus, and one of them, "an 18.3 MB PDF,
     # over the audit's 12 MB download cap, so its text is never read", was shipping
     # as visitor-facing copy.
-    if r.get("status") == "verified":
-        bits.append('<span class="man-note">link checked %s</span>' % esc(r["checked"]))
-    else:
-        bits.append('<span class="man-note">we could not check this link automatically</span>')
+    # NO "LINK CHECKED <date>". It is the meta-tell the house rules name, it sat in the reader's
+    # row 107 times, and it is about us rather than the document. What a reader needs is whether
+    # the link works, so an unchecked row says so and a checked one says nothing.
+    if r.get("status") != "verified":
+        bits.append('<span class="man-note">this link may not work</span>')
     needle = " ".join([r["brand"], r["host"], r["title"], r["key"], r["covers"],
                        " ".join(r["doc_types"])]).lower()
     return """      <li class="man-row" data-types="%s" data-search="%s">
@@ -309,8 +318,8 @@ def row_html(r):
 def hub(rows, oem_count, model_count=0):
     n_brands = len({r["brand"] for r in rows})
     desc = meta_desc("RV owner's manuals, service manuals, parts lists and wiring diagrams "
-                     "from the makers themselves. %d sources across %d makers, linked at "
-                     "the source" % (len(rows), n_brands))
+                     "from the makers themselves. %d sources across %d makers"
+                     % (len(rows), n_brands))
     counts = Counter(r["system"] for r in rows)
 
     tiles = []
@@ -463,8 +472,8 @@ START_TITLE = "New RV Owner: The Things to Get Right First"
 def start_here_page():
     """The new-owner walkthrough. Prose, one table and one diagram, all hand-authored here
     because this page is not a slice of the manuals manifest."""
-    desc = meta_desc("The expensive mistakes a new RV owner can avoid, each one a maker's own "
-                     "instruction, then the systems behind them and the order worth learning them in")
+    desc = meta_desc("The expensive mistakes a new RV owner can avoid, then the systems "
+                     "behind them and the order worth learning them in")
 
     rows = [
         ("Shore power and the 120-volt side",
@@ -811,9 +820,7 @@ def system_page(slug, title, desc, rows):
             links.append('<li><a href="guides/%s.html">%s</a></li>' % (stem, esc(t)))
     related = ("""
       <div class="card man-about">
-        <div class="man-about-h">Fixing rather than reading</div>
-        <p>If something has already failed, these guides walk the diagnosis and cite the
-        documents above:</p>
+        <div class="man-about-h">If something has already failed</div>
         <ul class="man-links">%s</ul>
       </div>""" % "".join(links)) if links else ""
 
@@ -903,7 +910,7 @@ def model_list(models):
         if not bits:
             bits.append('<span class="man-note">no document published online</span>')
         elif m.get("status") != "verified":
-            bits.append('<span class="man-note">link not machine-checked</span>')
+            bits.append('<span class="man-note">this link may not work</span>')
         items.append('            <li class="man-model"><span class="mm-name">%s</span>'
                      '<span class="mm-meta">%s</span>'
                      '<span class="mm-links">%s</span></li>'
@@ -936,8 +943,7 @@ def warranty_html(r):
         link = ('<a class="man-go" href="%s" target="_blank" rel="noopener">%s '
                 '&#8594;</a>' % (esc(r["warranty_url"]), WARRANTY_LABEL[kind]))
         if r.get("warranty_status") != "verified":
-            link += ('<span class="man-note">we could not check this link '
-                     'automatically</span>')
+            link += '<span class="man-note">this link may not work</span>'
         tail = '<span class="man-note">%s</span>' % esc(note) if note else ""
         return '        <div class="man-warranty">%s%s</div>\n' % (link, tail)
     return ('        <div class="man-warranty"><span class="man-note">%s%s</span></div>\n'
@@ -959,8 +965,7 @@ def brand_row(r, models=()):
         foot = ('<a class="man-go" href="%s" target="_blank" rel="noopener">Open the %s '
                 'archive &#8594;</a>' % (esc(r["url"]), esc(r["brand"])))
         if r.get("status") != "verified":
-            foot += ('<span class="man-note">we could not check this link '
-                     'automatically</span>')
+            foot += '<span class="man-note">this link may not work</span>'
     else:
         foot = '<span class="man-note">no manual published online</span>'
 
@@ -1079,9 +1084,9 @@ RECALL_SECTIONS = [
 
 
 def recall_row(r):
-    badge = ('<span class="man-note">link checked %s</span>' % esc(r["checked"])
+    badge = ('<span class="man-note"></span>%s' % esc("")
              if r.get("status") == "verified"
-             else '<span class="man-note">we could not check this link automatically</span>')
+             else '<span class="man-note">this link may not work</span>')
     return """        <li class="man-row" data-search="%s">
           <div class="man-row-top">
             <a class="man-doc" href="%s" target="_blank" rel="noopener">%s</a>
