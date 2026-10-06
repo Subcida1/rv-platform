@@ -153,12 +153,12 @@
     is in a weird spot". It now carries the two things a top strip is for -- fast
     paths to the busiest destinations on the left, and the secondary "company"
     pages paired together on the right.
-    The "Find a tech" label became "Find a service", which is the same phrase the
+    The "Find a tech" label became "Find RV service", which is the same phrase the
     homepage CTA already uses, so the directory is named one way everywhere. */
  function navHTML() {
  var rt = CFG.routes;
  return '<div class="util" role="navigation" aria-label="Utility"><div class="wrap">' +
- '<div class="util-l"><span class="dot"></span><a href="' + R(rt.directory) + '">Find a service</a><a href="' + R(rt.guides) + '">Winter guides</a><a href="' + R(rt.manuals) + '">Manuals</a></div>' +
+ '<div class="util-l"><span class="dot"></span><a href="' + R(rt.directory) + '">Find RV service</a><a href="' + R(rt.guides) + '">Winter guides</a><a href="' + R(rt.manuals) + '">Manuals</a></div>' +
  '<div class="util-r"><a href="' + R(rt.about) + '">About</a><a href="' + R(rt.contact) + '">Contact</a></div>' +
  '</div></div>' +
  '<nav class="main" aria-label="Main"><div class="wrap">' +
@@ -178,7 +178,7 @@
  '<a href="' + R(rt.guides) + '">Guides<span class="sm">How to fix what is broken</span></a>' +
  '<a href="' + R(rt.manuals) + '">Manuals<span class="sm">The maker documents behind each part</span></a></div></div>' +
  '<div class="nav-group"><a class="nav-link" href="' + R(rt.directory) + '">Directory</a>' +
- '<div class="drop"><a href="' + R(rt.directory) + '">Find a service<span class="sm">Mobile techs and repair centers by state</span></a>' +
+ '<div class="drop"><a href="' + R(rt.directory) + '">Find RV service<span class="sm">Mobile techs and repair centers by state</span></a>' +
  '<a href="' + R(rt.directory) + '#claim">Claim your business<span class="sm">Free listing, you control it</span></a></div></div>' +
  '<div class="nav-group"><a class="nav-link" href="' + R(rt.manuals) + '">Manuals</a>' +
  '<div class="drop"><a href="' + R(rt.manualsPower) + '">Electrical<span class="sm">Converters, inverters, solar, generators</span></a>' +
@@ -192,7 +192,7 @@
  '<div class="nav-actions">' + signinLink('btn btn-outline btn-sm') +
  /* The button says where it goes ("RV tools"); the caption above it carries the
     "free" promise that used to live in the utility strip. Ty, 2026-10-05. */
- '<span class="nav-cta"><span class="nav-cta-cap">Free tools</span><a class="btn btn-primary btn-sm" href="' + R(rt.tools) + '">RV tools</a></span>' +
+ '<span class="nav-cta"><span class="nav-cta-cap">Free tools</span><a class="btn btn-primary btn-sm btn-shine" href="' + R(rt.tools) + '">RV tools</a></span>' +
  '<button type="button" class="burger" aria-label="Menu" onclick="RV.toggleMenu()"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h12M4 10h12M4 14h12"/></svg></button></div>' +
  '</div>' +
  '<div class="mobile-menu">' + searchFieldHTML('mm-search', 'Search the site') +
@@ -203,7 +203,7 @@
    ['Roof snow load', rt.guideRoof]]) +
  mmGroup('Parts', rt.parts, [['Every RV part', rt.parts],
    ['Guides', rt.guides]]) +
- mmGroup('Directory', rt.directory, [['Find a service', rt.directory],
+ mmGroup('Directory', rt.directory, [['Find RV service', rt.directory],
    ['Claim your business', rt.directory + '#claim']]) +
  mmGroup('Manuals', rt.manuals, [['Electrical', rt.manualsPower],
    ['Towing and running gear', rt.manualsTowing], ['Owner manuals by brand', rt.manualsBrands],
@@ -234,7 +234,7 @@
  '</div>' +
  '<div class="foot-col"><p class="foot-h">Tools</p><a href="' + R(rt.calculator) + '">Weight calculator</a><a href="' + R(rt.calculator) + '#why">Why it matters</a><a href="' + R(rt.calculator) + '#embed">Embed on your site</a></div>' +
  '<div class="foot-col"><p class="foot-h">Guides</p><a href="' + R(rt.guideWinterize) + '">Winterize plumbing</a><a href="' + R(rt.guideBattery) + '">Battery cold storage</a><a href="' + R(rt.guideTires) + '">Tires through winter</a><a href="' + R(rt.guideRoof) + '">Roof snow load</a></div>' +
- '<div class="foot-col"><p class="foot-h">Directory</p><a href="' + R(rt.directory) + '">Find a service</a><a href="' + R(rt.directory) + '#claim">Claim your business</a><a href="' + R(rt.directory) + '#seed">What a listing carries</a></div>' +
+ '<div class="foot-col"><p class="foot-h">Directory</p><a href="' + R(rt.directory) + '">Find RV service</a><a href="' + R(rt.directory) + '#claim">Claim your business</a><a href="' + R(rt.directory) + '#seed">What a listing carries</a></div>' +
  '<div class="foot-col"><p class="foot-h">Manuals</p><a href="' + R(rt.manuals) + '">All RV manuals</a><a href="' + R(rt.manualsBrands) + '">Owner manuals by brand</a><a href="' + R(rt.manualsRecalls) + '">Recalls and bulletins</a><a href="' + R(rt.manualsPower) + '">Electrical manuals</a><a href="' + R(rt.manualsTowing) + '">Towing manuals</a></div>' +
  '<div class="foot-col"><p class="foot-h">Company</p><a href="' + R(rt.about) + '">About</a><a href="' + R(rt.contact) + '">Contact</a><a href="' + R(rt.tools) + '">All tools</a></div>' +
  '</div></div>' +

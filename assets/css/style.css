@@ -1407,6 +1407,40 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 .btn-gb:active{transform:translateY(1px)}
 .btn-gb.btn-sm{padding:10px 16px;font-size:13px}
 .btn-gb.btn-lg{padding:16px 30px;font-size:15.5px}
+/* A HIGHLIGHT THAT CROSSES A BLUE DOOR. Ty, 2026-10-05: "develop some type of
+   animated stroke outline or something for our blue gradient buttons like the RV
+   tools button or the start here ... make them stand out a little bit more, maybe
+   like a flash ... maybe a scan across the blue outline". Opt-in via .btn-shine, so
+   it lands on the few real doors -- the nav RV tools button, Start here, and the
+   directory pair -- and not on every button on the site.
+   The sheen is a TRANSFORM, not a background animation: transform is animatable,
+   cheap, and parses under the W3C CSS checker this repo gates on, whereas
+   animating background-position or a custom property does not (both were tested
+   against vnu-jar --css on 2026-10-05 and rejected). */
+.btn-shine{position:relative;overflow:hidden;isolation:isolate}
+.btn-shine::after{content:"";position:absolute;top:0;bottom:0;left:0;width:45%;pointer-events:none;
+  background:linear-gradient(105deg,transparent,rgba(255,255,255,.55),transparent);
+  transform:translateX(-170%) skewX(-18deg);
+  animation:btn-sheen 4.2s ease-in-out infinite}
+@keyframes btn-sheen{
+  0%{transform:translateX(-170%) skewX(-18deg)}
+  45%,100%{transform:translateX(330%) skewX(-18deg)}
+}
+/* .btn-gb wears a white face, so a white sheen on it is invisible. Its blue STROKE
+   carries the travelling highlight instead: a bright arc laid over the gradient in
+   the border box. Layer order matters -- the surface face is first so it paints on
+   top, then the arc, then the gradient underneath it. */
+.btn-gb.btn-shine::after{content:none}
+.btn-gb.btn-shine{
+  background:
+    linear-gradient(var(--surface),var(--surface)) padding-box,
+    conic-gradient(from var(--sp-angle),transparent 0deg,rgba(255,255,255,.9) 14deg,transparent 38deg) border-box,
+    var(--grad) border-box;
+  animation:sp-scroll 3.4s linear infinite}
+@media(prefers-reduced-motion:reduce){
+  .btn-shine::after{content:none;animation:none}
+  .btn-gb.btn-shine{animation:none;background:linear-gradient(var(--surface),var(--surface)) padding-box,var(--grad) border-box}
+}
 .btn-gb.btn-block{width:100%}
 .btn-gb .route-arrow{width:0;height:0;border-top:7px solid transparent;border-bottom:7px solid transparent;border-left:10px solid currentColor;margin-left:10px;display:inline-block}
 .btn-grad-bg{background:var(--btn-grad, var(--grad));color:var(--text-inv)}
@@ -1547,6 +1581,29 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 .guide-meta{font-size:13px;color:var(--text-3);line-height:1.55;flex:1}
 .guide-go{font-size:13.5px;font-weight:800;color:var(--tint-ink);margin-top:4px}
 .guide-card:hover .guide-go{color:var(--tint-ink);text-decoration:underline}
+/* UNIFORM CARD HEIGHTS. Ty, 2026-10-05: "I noticed some of them are like different
+   heights, so there's no visual uniformity with it, which is also kind of weird."
+   The cause is the description: one card's runs to one line, the next to two, so
+   every row is a different height. Research across long-list sites found the two
+   working answers -- drop the description entirely (wikiHow's list cards are
+   thumbnail + title, so nothing can wrap), or clamp it. Family Handyman and Bob
+   Vila, the closest analogues, normalise the thumbnail and leave the text free --
+   which is where the ragged rows come from.
+   We clamp. Both the title and the line under it are held to two lines with the
+   -webkit- trio, because the unprefixed `line-clamp` is still not Baseline (MDN,
+   checked 2026-10-05). The title also carries a fixed two-line box, so a one-word
+   title and a two-line title still produce the same card.
+   This applies to EVERY .guide-card, including the twelve in the toolkit menu
+   above, which is deliberate: one card template, one height, everywhere. */
+.guide-card .guide-title,
+.guide-card .guide-meta{display:-webkit-box;-webkit-box-orient:vertical;overflow:hidden}
+.guide-card .guide-title{-webkit-line-clamp:2;min-height:2.6em}
+/* A FLOOR, not just a cap. `-webkit-line-clamp:2` only stops text at two lines; it
+   does not reserve them, so a card whose description fits on one line still came
+   out 20px shorter than its neighbour -- measured 175px against 195px, which is
+   exactly one 12.5px line at this line-height. Reserving two lines makes every card
+   in every row the same height. */
+.guide-card .guide-meta{-webkit-line-clamp:2;min-height:3.1em}
 
 /* ============================================================
    Prose system (2026-09-22)

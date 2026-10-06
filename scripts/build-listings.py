@@ -11,7 +11,7 @@ anything derived from it:
                                              the region sections, the <body> state
                                              attributes, the two data script tags
     directory/index.html                     the per-state tiles
-    index.html                               "Repair businesses listed"
+    index.html                               "RV repair businesses listed"
 
 One derivation, one writer. Until 2026-09-27 the directory half of sync-counts.py and
 all of sync-directory-schema.py wrote into these same pages, which is how two numbers
@@ -490,7 +490,7 @@ def build(kind):
 
     home = ROOT / "index.html"
     text = old = home.read_text(encoding="utf-8")
-    text, n = re.subn(r'(data-count=")\d+(">0</div><div class="lbl">Repair businesses listed</div>)',
+    text, n = re.subn(r'(data-count=")\d+(">0</div><div class="lbl">RV repair businesses listed</div>)',
                       r"\g<1>%d\g<2>" % sum(totals.values()), text)
     assert n == 1, "homepage: the business count marker was not found exactly once"
     put(home, text, old, "homepage count")

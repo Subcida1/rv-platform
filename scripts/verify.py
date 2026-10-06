@@ -346,7 +346,7 @@ for suffix in sorted(C.state_shards()):
         re.S).group(1))
     businesses += len(rows)
 for label, actual in (("Free guides, live now", len(guide_files)),
-                      ("Repair businesses listed", businesses)):
+                      ("RV repair businesses listed", businesses)):
     m = re.search(r'data-count="(\d+)">0</div><div class="lbl">%s</div>' % re.escape(label), idx)
     if not m:
         bad.append("no stat on index.html for %r" % label)
