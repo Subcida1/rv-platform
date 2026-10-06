@@ -229,7 +229,14 @@ else:
 print("\n=== tag balance ===")
 bad = []
 for p in pages:
-    txt = strip_bodies(p.read_text(encoding="utf-8"))
+    # COMMENTS ARE NOT MARKUP. A comment saying "this is a <div> and not an <a>" describes
+    # the page; it does not open an element, and no browser parses it as one. Until
+    # 2026-10-05 this scan walked comments as though they were markup, so writing a tag
+    # name in prose failed the build -- an instrument flagging correct behaviour, which is
+    # the failure mode that teaches a reader to ignore it. Stripped HERE and not inside
+    # strip_bodies(), because the banned-word scan uses that and a comment IS published:
+    # a rule about words must still see what is written in one.
+    txt = re.sub(r"<!--.*?-->", " ", strip_bodies(p.read_text(encoding="utf-8")), flags=re.S)
     stack = []
     for m in re.finditer(r"<(/?)([a-zA-Z][a-zA-Z0-9]*)\b[^>]*?(/?)>", txt):
         close, name, selfclose = m.group(1), m.group(2).lower(), m.group(3)

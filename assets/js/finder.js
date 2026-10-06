@@ -316,6 +316,18 @@
     $('loc').addEventListener('keydown', function (e) { if (e.key === 'Enter') { e.preventDefault(); fromInput(); } });
     $('loc').addEventListener('change', fromInput);
 
+    /* A LOCATION CAN ARRIVE IN THE URL, so a link from anywhere on the site lands on the
+       right state with the reader's own town already applied:
+         /directory/or?loc=97401
+       Ty, 2026-10-05: "i envision you being able to put your zip or location into the
+       search bar and it brings up service centers near you." Without this the homepage
+       could only send someone to the hub and ask them to pick a state, which is the step
+       this exists to remove. Read on load and handed to fromInput(), so the arrival path
+       is the same code as the typed path and cannot drift from it. */
+    var pre = null;
+    try { pre = new URLSearchParams(window.location.search).get('loc'); } catch (e) { pre = null; }
+    if (pre) { $('loc').value = pre; fromInput(); }
+
     $('loc-use').addEventListener('click', function () {
       if (!navigator.geolocation) { note('This browser cannot share a location. Type a town or ZIP instead.', true); return; }
       note('Asking your device for a location...');

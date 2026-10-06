@@ -6,7 +6,7 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="canonical" href="https://originrv.com/">
  <title>RV Tools &amp; RV Repair Directory | OriginRV</title>
  <meta name="description" content="Free RV tools for owners and full timers: a towing and weight calculator, plain-English winter and troubleshooting guides, and an RV repair directory.">
- <link rel="stylesheet" href="assets/css/style.css?v=84b2efd1">
+ <link rel="stylesheet" href="assets/css/style.css?v=4398de9c">
 <link rel="icon" type="image/svg+xml" href="assets/img/brand/favicon.svg?v=dd9ff106">
  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/brand/favicon-32.png?v=d9338088">
  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/brand/favicon-16.png?v=f67f4631">
@@ -84,11 +84,21 @@
  <div class="hstat-p">Winter checklists and plain-English troubleshooting, grouped by system.</div>
  <div class="hstat-go">Browse the guides →</div>
  </a>
- <a class="hstat" href="directory/">
+ <!-- THE DIRECTORY IS THE ONE DOOR WITH A FIELD IN IT. Ty, 2026-10-05: "i envision you
+      being able to put your zip or location into the search bar and it brings up service
+      centers near you. Also we need to bring the directory into the fold."
+      It is a <div> and not an <a>, for a plain reason: a form cannot live inside an
+      anchor, and nesting one would make the two click targets fight. The form's action is
+      /directory/, so with JavaScript off it still lands somewhere useful rather than
+      doing nothing. -->
+ <div class="hstat">
  <div class="num" data-count="1944">0</div><div class="lbl">RV repair businesses listed</div>
- <div class="hstat-p">Mobile techs and repair shops across fifty states, free to browse.</div>
- <div class="hstat-go">Find RV service →</div>
- </a>
+ <div class="hstat-p">Mobile techs and repair shops across fifty states. Put in a ZIP or a town and go straight to the ones near you.</div>
+ <form class="hstat-form" action="directory/" method="get" onsubmit="return RV.findService(this)">
+ <input type="text" name="loc" aria-label="ZIP or town" placeholder="ZIP or town" autocomplete="postal-code" inputmode="text">
+ <button class="btn btn-primary btn-sm" type="submit">Find RV service</button>
+ </form>
+ </div>
  </div>
  </div>
  </div>
@@ -497,6 +507,8 @@
  <script src="assets/js/site.js?v=81e587d8"></script>
  <script src="assets/js/search-index.js?v=109da5a2"></script>
  <script src="assets/js/search.js?v=c5c238f2"></script>
+ <script src="assets/js/location-data.js?v=395afcf3"></script>
+ <script src="assets/js/locate.js?v=7de30d7f"></script>
  <script src="assets/js/map-data.js?v=59255487"></script>
  <script src="assets/js/hero-map.js?v=5e2913ba"></script>
  <script>
