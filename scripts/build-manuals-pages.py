@@ -47,6 +47,24 @@ BLURB = {
 # A short H1, and one niche keyword per page carried in the title tag.
 ACRONYMS = {"RV", "RVS", "AC", "DC", "GFCI", "NHTSA", "SAE", "DOT", "PDF"}
 
+# ONE GLYPH PER SYSTEM, in the vocabulary the guides and the parts pages already use, so the
+# same system is recognised by the same mark wherever it appears. Ty, 2026-10-06: "manuals we
+# should display what each system has a bit better visually represented." The tile carried a
+# name, a blurb and a count; a reader scanning eight of them had nothing to aim at but text.
+SYSTEM_ICON = {
+    "power-and-electrical": "\u26a1",
+    "water-and-plumbing": "\U0001f6b0",
+    "heating-and-cooling": "\U0001f525",
+    "kitchen-and-appliances": "\U0001f9ca",
+    "exterior-and-body": "\U0001f3e0",
+    "towing-and-running-gear": "\U0001f6de",
+    "sanitation-and-tanks": "\U0001f6bd",
+    "chassis-and-drivetrain": "\u2699\ufe0f",
+}
+# How many maker names a tile shows before it says "and N more". Three fits two lines at this
+# width and is enough to answer "does this system have the thing in my coach".
+MAKERS_SHOWN = 3
+
 
 def sentence(t):
     """Sentence case, the convention Ty settled on 2026-09-23 (mirror the big sites; Google's own
@@ -298,15 +316,25 @@ def hub(rows, oem_count, model_count=0):
     tiles = []
     for slug, title in R.SYSTEMS:
         n = counts.get(slug, 0)
-        b = len({r["brand"] for r in rows if r["system"] == slug})
+        makers = sorted({r["brand"] for r in rows if r["system"] == slug})
+        b = len(makers)
+        # WHAT IS ACTUALLY IN IT, NAMED. The count says how many; the names say which, and
+        # "does this system have the thing in my coach" is the question a reader is asking.
+        shown = ", ".join(makers[:MAKERS_SHOWN])
+        rest = b - min(MAKERS_SHOWN, b)
+        if rest:
+            shown += " and %d more" % rest
         tiles.append("""        <a class="card guide-card man-tile" href="manuals/%s.html">
+          <div class="guide-ic">%s</div>
           <div class="guide-body">
             <div class="guide-title">%s</div>
             <div class="guide-meta">%s</div>
             <div class="man-tile-count">%d documents from %d makers</div>
+            <div class="man-tile-makers">%s</div>
             <div class="guide-go">Open &#8594;</div>
           </div>
-        </a>""" % (slug, esc(title), esc(BLURB[slug]), n, b))
+        </a>""" % (slug, SYSTEM_ICON.get(slug, ""), esc(title), esc(BLURB[slug]), n, b,
+                    esc(shown)))
 
     collection = {
         "@context": "https://schema.org", "@type": "CollectionPage",

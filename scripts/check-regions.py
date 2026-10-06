@@ -55,7 +55,7 @@ NAMES = {}
 def sections(text):
     """region key -> the card hrefs inside its markers."""
     out = {}
-    for key in re.findall(r"<!-- REGION:([a-z]+):START -->", text):
+    for key in re.findall(r"<!-- REGION:([a-z-]+):START -->", text):
         m = re.search(r"<!-- REGION:%s:START -->(.*?)<!-- REGION:%s:END -->" % (key, key),
                       text, re.S)
         out[key] = re.findall(r'href="directory/([a-z]+)"', m.group(1)) if m else []
