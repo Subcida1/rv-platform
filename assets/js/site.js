@@ -291,16 +291,19 @@
  var already = document.querySelector('script[src*="assets/js/search.js"]');
  if (already) return;
  var s = document.createElement('script');
- /* THE STAMP IS NOT COSMETIC. Every other asset carries ?v=<hash> from stamp_assets.py, so a
-    deploy invalidates it in every browser. This one was injected with a bare URL, so a
-    returning visitor could keep running an OLD search.js until their cache expired -- which
-    is exactly what happened while debugging the ?q= work on 2026-09-27: three probes read a
-    stale script and reported a working feature broken. Read from the homepage's static tag,
-    which stamp_assets.py keeps current. */
- try {
- var ref = document.querySelector('script[src*="assets/js/search.js?v="]');
- s.src = 'assets/js/search.js' + (ref ? ref.src.slice(ref.src.indexOf('?v=')) : '');
- } catch (e) { s.src = 'assets/js/search.js'; }
+ /* THE STAMP IS NOT COSMETIC, AND IT IS NOW BAKED INTO THE STRING BELOW.
+    Every other asset carries ?v=<hash> from stamp_assets.py, so a deploy invalidates it in
+    every browser. This one used to be injected with a BARE url on the 117 pages that carry
+    no static tag for search.js, so a returning visitor could keep running an OLD search.js
+    until their cache expired. That is the defect recorded here from 2026-09-27, when three
+    probes read a stale script and reported a working feature broken -- and it happened again
+    on 2026-10-05, in exactly the same way, over a location lookup that was fine.
+    stamp_assets.py now writes the current search.js hash into this string, so the injected
+    URL is versioned on EVERY page rather than only where a static tag happens to exist. The
+    old branch that copied the version off the homepage's tag is gone with it: leaving it in
+    would have appended a second ?v= to an already-versioned URL. `stamp_assets.py --check`
+    fails the build if this string goes stale, which is why dropping the branch is safe. */
+ s.src = 'assets/js/search.js?v=9066b621';
  s.async = true;
  document.head.appendChild(s);
  }

@@ -56,6 +56,54 @@ def stamp_html(html, stats=None):
     return ''.join(out)
 
 
+SITE_JS = ROOT / 'assets' / 'js' / 'site.js'
+# Matches the JS STRING site.js builds its injected URL from. Deliberately anchored on the
+# leading quote, so the two querySelector('script[src*="assets/js/search.js..."]') probes in
+# the same file (which use a double quote) are not touched.
+SITE_REF = re.compile(r"('assets/js/search\.js)(?:\?v=[0-9a-f]+)?'")
+
+
+def stamp_site_js(stats):
+    """Put the current search.js hash into the URL site.js injects.
+
+    ONE JS FILE IS STAMPED, AND ONLY ONE, BECAUSE ONLY ONE BUILDS AN ASSET URL IN CODE.
+    site.js injects search.js on the 117 pages that carry no static tag for it, and it
+    builds that URL from a string. REF above only looks at href=" and src=" in HTML, so
+    the string was never stamped and those pages fetched a BARE url: a returning visitor
+    could run a stale search.js for as long as the CDN cache lasted. The loader's own
+    comment records this defect from 2026-09-27 and says the version is "read from the
+    homepage's static tag" -- which is true only ON the homepage, where the tag exists.
+    Found 2026-10-05, when a stale copy made a working location lookup look broken and
+    three probe runs reported a feature that was fine.
+
+    Fails loudly if the string is not found exactly once, because a silent no-op here is
+    indistinguishable from a stamp that worked.
+    """
+    h = digest('assets/js/search.js')
+    if not h or not SITE_JS.is_file():
+        return False
+    text = SITE_JS.read_text(encoding='utf-8')
+    hits = [0]
+
+    def repl(m):
+        hits[0] += 1
+        return m.group(1) + '?v=' + h + "'"
+
+    new = SITE_REF.sub(repl, text)
+    if hits[0] != 1:
+        raise SystemExit("FAIL  site.js: expected exactly one search.js URL string, found %d"
+                         % hits[0])
+    if stats is not None:
+        stats['refs'] += 1
+    if new == text:
+        return False
+    if stats is not None:
+        stats['stale'] += 1
+    if not CHECK:
+        SITE_JS.write_text(new, encoding='utf-8')
+    return True
+
+
 def main():
     """Stamp every page, or report what would change under --check.
 
@@ -69,6 +117,14 @@ def main():
     """
     stamped = changed = stale = 0
     SKIP_PARTS = {'.git', '.letta', 'node_modules'}
+    # SITE.JS FIRST, THEN THE PAGES. Its own content changes when it gains a version, and
+    # the pages reference site.js, so stamping it afterwards would leave every page's
+    # site.js?v= one build behind.
+    js_stats = {'refs': 0, 'stale': 0}
+    if stamp_site_js(js_stats):
+        changed += 1
+    stamped += js_stats['refs']
+    stale += js_stats['stale']
     # THE CHECKOUT BOUNDARY. Letta keeps agent worktrees under .letta/worktrees/, each a full copy
     # of this repository, so an unbounded rglob stamped 149 pages instead of 74 -- it was rewriting
     # another agent's checkout. Found 2026-10-04.

@@ -62,6 +62,36 @@
     document.head.appendChild(s);
   }
 
+  /* THE LOCATION TABLE ARRIVES THE SAME WAY, FOR THE SAME REASON. Mapping a ZIP to its
+     state is 17 KB and only a reader who types a location needs it, so it loads on the
+     first focus alongside the index rather than on every page view. locate.js holds the
+     single implementation of "where should this location go"; nothing here re-decides it.
+     Ty, 2026-10-05: "i envision you being able to put your zip or location into the search
+     bar and it brings up service centers near you." */
+  var LOC = false, locWaiting = [];
+  function loadLocate(then) {
+    if (window.RV_DIRECTORY_URL) { if (then) then(); return; }
+    if (then) locWaiting.push(then);
+    if (LOC) return;
+    LOC = true;
+    var data = document.createElement('script');
+    /* Relative on purpose, the same as the index above: <base href="/"> makes this
+       resolve from any depth. */
+    data.src = 'assets/js/location-data.js';
+    var impl = document.createElement('script');
+    impl.src = 'assets/js/locate.js';
+    var give = function () {
+      LOC = false;
+      var w = locWaiting; locWaiting = [];
+      for (var i = 0; i < w.length; i++) w[i]();
+    };
+    impl.onload = give;
+    impl.onerror = give;
+    data.onload = function () { document.head.appendChild(impl); };
+    data.onerror = give;
+    document.head.appendChild(data);
+  }
+
   function esc(s) {
     return String(s == null ? '' : s)
       .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
@@ -102,6 +132,24 @@
     return s;
   }
 
+  /* A LOCATION IS NOT A WORD IN THE INDEX, so typing a ZIP used to find nothing at all --
+     the same silent dead end the zero-result line was written for. When what was typed
+     really is a place, the directory result goes FIRST, because a reader who typed a place
+     wants the places near it, not a page about it.
+     This asks locate.js rather than deciding again here, so there is one answer to "where
+     does this location go". The hub fallback is deliberately NOT offered: "RV service near
+     somewhere we could not place" would be a promise the next page cannot keep. */
+  function locateItem(q) {
+    if (!window.RV_DIRECTORY_URL) return null;
+    var url = window.RV_DIRECTORY_URL(q);
+    if (!url || url === '/directory/') return null;
+    var zip = /^\d{5}$/.test(q);
+    var label = zip ? q : q.replace(/\b[a-z]/g, function (c) { return c.toUpperCase(); });
+    return { t: 'RV service near ' + label, u: url, c: 'Directory',
+             d: zip ? 'Mobile techs and repair shops, nearest first'
+                    : 'Shops and mobile techs in this town' };
+  }
+
   function search(q, limit) {
     q = norm(q);
     if (!q || !INDEX) return [];
@@ -116,6 +164,8 @@
     // number should reach the manual.
     var CAPS = { Business: 2, Manual: 2 }, used = {};
     var out = [];
+    var near = locateItem(q);
+    if (near) out.push(near);
     for (var j = 0; j < hits.length && out.length < (limit || MAX); j++) {
       var cat = hits[j].item.c;
       if (CAPS[cat]) {
@@ -276,18 +326,25 @@
     input.addEventListener('input', function () {
       clearTimeout(t);
       t = setTimeout(function () {
-        loadIndex(function () {
-          paint(search(input.value), input.value.trim().toLowerCase());
+        /* locate first, then the index, then paint. Both are usually already in hand from
+           the focus prefetch below, in which case both callbacks run straight away and
+           this costs nothing; when they are not, the paint waits rather than showing a
+           ZIP with no result under it. */
+        loadLocate(function () {
+          loadIndex(function () {
+            paint(search(input.value), input.value.trim().toLowerCase());
+          });
         });
       }, 60);
       report(input.value);
     });
-    /* Prefetch on focus, so the index is usually in hand before the first
-       character lands rather than after it. */
+    /* Prefetch BOTH on focus, together, so neither waits on the other and a location
+       typed straight after arriving still finds its result. */
     input.addEventListener('focus', function () {
       loadIndex(function () {
         if (input.value.trim()) paint(search(input.value), input.value.trim().toLowerCase());
       });
+      loadLocate();
     });
     input.addEventListener('keydown', function (e) {
       if (e.key === 'ArrowDown') { e.preventDefault(); if (box.hidden) paint(search(input.value), input.value.trim().toLowerCase()); else move(1); }
