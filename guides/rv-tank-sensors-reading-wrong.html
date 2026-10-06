@@ -46,7 +46,7 @@
  <div class="sec-eyebrow">Troubleshooting guide</div>
     <h1>RV tank sensors reading wrong: The troubleshooting guide</h1>
  <p class="lede">The panel says the black tank is full when you dumped it yesterday, or the gray tank shows a third when it is empty. That is usually not a broken sensor. It is residue inside the tank completing a circuit the sensor was never meant to complete, and knowing why it happens is what decides whether you clean, repair or replace.</p>
- <p class="reviewed">By <a class="link" href="/about">OriginRV</a>. Last updated on Oct 2, 2026.</p>
+ <p class="reviewed">By <a class="link" href="/about">OriginRV</a>. Last updated on Oct 6, 2026.</p>
  </div>
 
  <div class="sec prose">
@@ -127,12 +127,12 @@
  <h3>Reads correctly for a while after cleaning, then drifts back</h3>
  <p>The residue is returning, which means the root cause is how the tank is being used rather than a failed part. Go to prevention.</p>
  <h3>One tank is wrong and the others are fine</h3>
- <p>Very useful information. The panel and the wiring loom are common to all tanks, so a single bad tank points at that tank's probes or that tank's wiring, not at the display.</p>
+ <p> The panel and the wiring loom are common to all tanks, so a single bad tank points at that tank's probes or that tank's wiring, not at the display.</p>
  </div>
 
  <h2>Why the reading is wrong: It measures conductivity, not depth</h2>
  <div class="card">
- <p>This is the fact that makes everything else make sense, and it is stated directly by the companies that make the parts. Valterra, which manufactures the Horst replacement probes, describes the failure like this: the sludge acts like a conductor between the positive content level sensors down the tank to the negative probe located at the bottom, and this triggers the panel to show liquid even when there is none.</p>
+ <p> Valterra, which manufactures the Horst replacement probes, describes the failure like this: the sludge acts like a conductor between the positive content level sensors down the tank to the negative probe located at the bottom, and this triggers the panel to show liquid even when there is none.</p>
  <p>So a factory sensor is not a float and not a depth gauge. There is a ground probe, usually at the bottom, and a series of level probes at fixed heights. The panel sends a small current out and looks for it coming back. Anything that conducts gets counted as liquid. Clean water conducts a little. Sludge conducts more. That difference is the entire problem.</p>
  <h3>What the wiring looks like</h3>
  <p>Lippert's own documentation for its tank monitor spells out the standard layout: white is the ground connection at the empty level, yellow is the low or one third probe, green is the middle or two thirds probe, and red is the full probe. Once you know that, the panel is no longer a black box, it is four switches that should each be open until liquid or residue closes them.</p>
@@ -199,7 +199,7 @@
  <text x="440" y="436" font-family="Inter,sans-serif" font-size="15" font-weight="700" fill="#1e6fc4" text-anchor="middle">Fault follows the wire: that tank's wiring. Stays on the position: the panel board.</text>
  <text x="440" y="458" font-family="Inter,sans-serif" font-size="14.5" fill="#67748e" text-anchor="middle">Nothing here needs a part bought to get an answer.</text>
  </svg>
- <figcaption>Both tests as one tree. The useful thing about running them in this order is that the first one costs nothing and the third column is the only branch that points at hardware. A dry tank reading full is the one result that cannot decide on its own, which is why it routes to cleaning rather than to a part. Original diagram, OriginRV.</figcaption>
+ <figcaption>Both tests as one tree. The first test costs nothing, and only the third column points at hardware. A dry tank reading full is the one result that cannot decide on its own, which is why it routes to cleaning rather than to a part. Original diagram, OriginRV.</figcaption>
  </figure>
 
  <h3>Test one: The dry and wet test</h3>
@@ -223,7 +223,7 @@
 
  <h2>What the makers say to do</h2>
  <div class="card">
- <p>These are the companies that make the products, publishing their own instructions.</p>
+ <p></p>
  <h3>Thetford's cleaner, and how to use it</h3>
  <p>Thetford sells a <a href="https://www.thetford.com/us/thetford-support/level-gauge-cleaner/" target="_blank" rel="noopener">Level Gauge Cleaner</a> for this exact problem, and its instructions are specific: work on a warm day, above 75F, because the product's effectiveness doubles between 75 and 85F; pour half the bottle into a 40 gallon black tank through the toilet opening and half into the gray tank through a sink or shower drain; flush the drain with running water and fill the tank; mix by driving around and let it sit for 24 hours; drive again to loosen deposits; then empty and rinse. It must not go in the fresh water tank. Thetford is also straight about the limits of any cleaner, on its own support pages: <b>"Not all sensor issues can be corrected by using Level Gauge Cleaner"</b>, and what it does work on is sensors that fail from tissue and sludge buildup. So cleaning is the right first move when the fault is residue, and it is not a candidate at all when the fault is wiring.</p>
  <h3>A tank wand</h3>
@@ -260,7 +260,7 @@
  <div class="card">
  <p>If cleaning has not fixed it and you are replacing hardware anyway, the retrofit to look at is external capacitive sensors. They are flexible printed circuit boards stuck to the outside of the tank wall, and Garnet describes the SeeLevel system as scanning the water level through the tank wall using digital techniques in the sender's processor. They auto calibrate to a tank's height, and the same hardware covers fresh, gray, galley and black.</p>
  <h3>What the manual says it will not do</h3>
- <p>The limits come from the manufacturer's own <a href="https://www.garnetinstruments.com/wp-content/uploads/2025/11/SeeLeveL-709-Series-Manual-v2.0.pdf" target="_blank" rel="noopener">manual</a> rather than from the reviews. <b>If sludge buildup in the tank becomes extreme, the gauge will cease to operate properly</b>, so the company that makes it does not claim it is immune to a dirty tank. It is <b>not compatible with metal holding tanks.</b> The manual calls for <b>at least an inch</b> of clearance from anything metal on either side, the top and the bottom of a sender, and <b>at least two inches</b> from its face. Its own testing ran on a tank wall three eighths of an inch thick; a thicker wall reads zero regardless of the real level. Every sender and the display must share one ground circuit. And 120 volt wiring near a sender can interfere with the readings.</p>
+ <p>The limits come from the manufacturer's own <a href="https://www.garnetinstruments.com/wp-content/uploads/2025/11/SeeLeveL-709-Series-Manual-v2.0.pdf" target="_blank" rel="noopener">manual</a>. <b>If sludge buildup in the tank becomes extreme, the gauge will cease to operate properly</b>, so the company that makes it does not claim it is immune to a dirty tank. It is <b>not compatible with metal holding tanks.</b> The manual calls for <b>at least an inch</b> of clearance from anything metal on either side, the top and the bottom of a sender, and <b>at least two inches</b> from its face. Its own testing ran on a tank wall three eighths of an inch thick; a thicker wall reads zero regardless of the real level. Every sender and the display must share one ground circuit. And 120 volt wiring near a sender can interfere with the readings.</p>
  <h3>The built-in diagnostics</h3>
  <p>You can call up a signal strength figure on the display. The manual gives typical signal power of <b>50 to 60 percent</b>, says the gauge will still work down to about <b>20 percent</b>, and shows <b>P00, 100 percent</b>, as the ideal, with the extra headroom there to absorb buildup later. A low number points at a detached sender, heavy buildup inside the tank, bad wiring, low battery voltage, or a failed sender. There are also discrete error codes for an open circuit, a short circuit, signal corruption, mis-programmed stacked senders, a missing sender, and calibration failure. That is a real diagnostic story, where a factory panel only shows you a light that is wrong.</p>
  <h3>Replacement probes that fit the old holes</h3>
