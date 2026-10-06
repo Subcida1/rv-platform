@@ -162,7 +162,12 @@ def part_html(p):
         # A small button, not underlined prose. Ty: "I do think that should be maybe a little
         # button though instead of just a text blank". The maker links stay as links: they go
         # off-site, which is a different promise from a guide on this site.
-        links.append('<a class="btn btn-secondary btn-sm" href="/guides/%s.html">'
+        # btn-gb, the blue gradient stroke, so the guide reads as the primary action and is
+        # visually distinct from the grey-bordered maker buttons and the flat type pills.
+        # Ty, 2026-10-05: "make the how to fix it and the ... manuals buttons look a little bit
+        # different than the travel trailer ... and motorhome buttons so that they're visually
+        # distinct from each other."
+        links.append('<a class="btn btn-gb btn-sm" href="/guides/%s.html">'
                      'How to fix it</a>' % esc(p["guide"]))
     for m in (p.get("makers") or []):
         brand, url = m.get("brand"), m.get("url")

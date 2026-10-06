@@ -2837,7 +2837,11 @@ a.tchip:focus-visible{outline:2px solid var(--b1,var(--brand));outline-offset:2p
    under their own content rather than at the foot of somebody else's. */
 .part-list{list-style:none;margin:0;padding:0;column-count:2;column-gap:34px}
 .part{padding-top:14px;padding-bottom:14px;border-top:1px solid var(--border);
-  display:flex;flex-direction:column;gap:3px;break-inside:avoid}
+  display:flex;flex-direction:column;gap:3px;break-inside:avoid;
+  /* CENTRED, at Ty's request: "The content within the columns all looks aligned left, lets
+     center all of the content / text". align-items does the children, text-align does the
+     wrapped lines inside them -- one without the other leaves the text ragged. */
+  text-align:center;align-items:center}
 @media(max-width:760px){.part-list{column-count:1}}
 .part-h{font-size:16px;font-weight:700;color:var(--text);letter-spacing:-.01em}
 .part-aka{font-size:13px;color:var(--text-3)}
@@ -2845,26 +2849,33 @@ a.tchip:focus-visible{outline:2px solid var(--b1,var(--brand));outline-offset:2p
 /* A TYPE PILL IS A FILTER CONTROL NOW, and the two rules that made them look inert are gone.
    They existed because these were labels on a card that went nowhere. Ty asked for the
    opposite, 2026-10-05: "we should make those clickable filter options ... show that they're
-   enabled with a kind of like blue fill in". The active state reuses .chip.on, which the
-   manuals and directory facets already use, so every clickable chip on the site lights up the
-   same way instead of this page inventing a second look.
+   enabled with a kind of like blue fill in".
+   THEY ALSO HAVE TO LOOK DIFFERENT FROM THE ACTION BUTTONS BESIDE THEM. Ty: "make the how to
+   fix it and the ... manuals buttons look a little bit different than the travel trailer ...
+   and motorhome buttons so that they're visually distinct from each other." The three things in
+   a row are now three different treatments: a type pill is a FLAT TAG (soft tint, no visible
+   border, smaller, muted text), the guide is a blue gradient STROKE (btn-gb), and a maker link
+   is a grey-bordered white button (btn-secondary). Shape alone could not separate them, because
+   every button on this site is a pill -- the difference had to be colour and weight.
    CENTRED WITH FLEX, NOT PADDING. The old rule carried equal padding top and bottom, which
    still leaves the label sitting on its own line-height rather than in the middle of the pill
    -- the off-centre look Ty spotted. min-height plus align-items centres the line box, and
-   line-height:1 stops the font's leading pushing it down. (Browsers still add a little ghost
-   space from font ascent and descent, so pixel-perfect centring needs `text-box: trim-both
-   cap alphabetic`, which is too new to rely on.)
+   line-height:1 stops the font's leading pushing it down.
    font-family:inherit because this is a <button> now, and a button otherwise takes the
    browser's default control font rather than the page's. */
-.part-types{justify-content:flex-start;margin-top:2px;gap:7px}
-.part-types .chip{font-family:inherit;font-size:12px;line-height:1;padding:0 11px;min-height:27px;
-  display:inline-flex;align-items:center;cursor:pointer}
-.part-types .chip:hover{color:var(--b1);border-color:var(--b2)}
+.part-types{justify-content:center;margin-top:2px;gap:7px}
+/* --text-2, NOT --text-3. On --surface-2 the muted token measures 4.43:1, just under the 4.5
+   the contrast rule needs, and the accessible-name audit failed all 461 pills on it. --text-2
+   still reads as secondary against the part name above it. */
+.part-types .chip{font-family:inherit;font-size:11.5px;line-height:1;padding:0 10px;min-height:24px;
+  display:inline-flex;align-items:center;cursor:pointer;
+  background:var(--surface-2);border-color:transparent;color:var(--text-2)}
+.part-types .chip:hover{background:var(--surface);border-color:var(--border-2);color:var(--text)}
 .part-types .chip.on:hover{color:var(--b1)}
 /* The links used to be pinned to the bottom of the card with margin-top:auto and a rule above
    them. In a row that hugs its content there is nothing to pin them to, and the rule was
    separating a space that no longer exists. They are buttons now, so the font-size went too. */
-.part-links{margin-top:9px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.part-links{margin-top:9px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center}
 .parts-top{margin-top:14px;font-size:13.5px}
 /* The `hidden` attribute loses to any display rule, and .part is display:flex, so hiding a
    filtered-out part needs these. Without them the filter appears to do nothing at all. */
