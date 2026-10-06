@@ -2826,11 +2826,19 @@ a.tchip:focus-visible{outline:2px solid var(--b1,var(--brand));outline-offset:2p
 .parts-count{margin-top:14px;font-size:13.5px;color:var(--text-3)}
 .parts-sys{margin-top:46px}
 .parts-sys-count{margin-top:-12px;margin-bottom:20px;font-size:13px;color:var(--text-3)}
-.part-list{list-style:none;margin:0;padding:0;display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
-.part{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
-  padding-top:18px;padding-bottom:18px;padding-left:20px;padding-right:20px;
-  box-shadow:var(--shadow-sm);display:flex;flex-direction:column;gap:8px}
+/* TWO COLUMNS OF COMPACT ENTRIES, NOT A GRID OF CARDS.
+   Ty, 2026-10-05: "I'm going to agree with the two column ... let's go with your
+   recommendation." Measured BEFORE this change, so the number is real rather than a guess:
+   157 entries in three card columns, page 17821px, average card 254px for four short fields.
+   Almost all of that was chrome -- 36px of padding, 32px of gaps inside the card, and a
+   border-top pushed to the bottom of every card by margin-top:auto, which meant every card
+   in a row was as tall as the tallest one in it.
+   An entry is a ROW now: no box, no shadow, a hairline between entries, and the links sit
+   under their own content rather than at the foot of somebody else's. */
+.part-list{list-style:none;margin:0;padding:0;column-count:2;column-gap:34px}
+.part{padding-top:14px;padding-bottom:14px;border-top:1px solid var(--border);
+  display:flex;flex-direction:column;gap:3px;break-inside:avoid}
+@media(max-width:760px){.part-list{column-count:1}}
 .part-h{font-size:16px;font-weight:700;color:var(--text);letter-spacing:-.01em}
 .part-aka{font-size:13px;color:var(--text-3)}
 .part-does{font-size:14.5px;color:var(--text-2);line-height:1.55}
@@ -2853,8 +2861,10 @@ a.tchip:focus-visible{outline:2px solid var(--b1,var(--brand));outline-offset:2p
   display:inline-flex;align-items:center;cursor:pointer}
 .part-types .chip:hover{color:var(--b1);border-color:var(--b2)}
 .part-types .chip.on:hover{color:var(--b1)}
-.part-links{margin-top:auto;padding-top:12px;border-top:1px solid var(--border);
-  display:flex;flex-wrap:wrap;gap:14px;font-size:14px}
+/* The links used to be pinned to the bottom of the card with margin-top:auto and a rule above
+   them. In a row that hugs its content there is nothing to pin them to, and the rule was
+   separating a space that no longer exists. They are buttons now, so the font-size went too. */
+.part-links{margin-top:9px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
 .parts-top{margin-top:14px;font-size:13.5px}
 /* The `hidden` attribute loses to any display rule, and .part is display:flex, so hiding a
    filtered-out part needs these. Without them the filter appears to do nothing at all. */

@@ -167,8 +167,11 @@ def part_html(p):
     for m in (p.get("makers") or []):
         brand, url = m.get("brand"), m.get("url")
         if brand and url:
-            links.append('<a class="link" href="%s" target="_blank" rel="noopener">%s manuals</a>'
-                         % (esc(url), esc(brand)))
+            # A button like the guide link. Ty, 2026-10-05: "there are still text links like
+            # Carl Starr manual, TST ... manuals, EZ RV product manuals, Dometic manuals ... We
+            # should probably make those buttons if we're going to keep them."
+            links.append('<a class="btn btn-secondary btn-sm" href="%s" target="_blank" '
+                         'rel="noopener">%s manuals</a>' % (esc(url), esc(brand)))
     if links:
         out.append('        <p class="part-links">%s</p>' % " ".join(links))
 
