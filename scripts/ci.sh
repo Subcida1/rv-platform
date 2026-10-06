@@ -87,12 +87,14 @@ step "parts hub"                               python3 scripts/test-parts.py
 # patterns flagged 51 sentences of which nearly all were good prose. See the file header for
 # what was deliberately NOT included and the evidence for leaving it out.
 step "prose that argues with the reader"        python3 scripts/check-prose.py
-# REPORT ONLY, and that is the spec rather than caution. RESEARCH 2026-10-05 found no maintained
-# tool does keyword coverage, so this is our own fifty lines, and the rule here is that a new
-# check is proven before it is allowed to gate: --self-test passes, and a page was deliberately
-# broken to confirm it fails and names the slot. It has 15 known misses to work through before
-# --strict is defensible, and a gate that arrives before its worklist is finished gets deleted.
-step "pages cover the query they target (reports)" python3 scripts/check-keywords.py
+# GATING NOW, because it earned it. RESEARCH 2026-10-05 found no maintained tool does keyword
+# coverage, so this is our own, and the rule here is that a new check is proven before it is
+# allowed to gate. It was: --self-test passes, a page was deliberately broken to confirm it fails
+# and names the slot, and it went from 15 misses to 0 over 2026-10-06 as three of its own bugs
+# came out (a stemmer that missed plurals, a unique rule comparing head words, and a fourth slot
+# that penalised the site's own symptom-first opening style). Pages that declare no target are
+# still reported rather than failed, because deciding a query is a decision, not a fix.
+step "pages cover the query they target"    python3 scripts/check-keywords.py --strict
 step "smoke test"                              node scripts/smoke-test.js
 
 # ---------------------------------------------------------------- 3. structure

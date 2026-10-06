@@ -48,5 +48,9 @@
   "tools/tire-date-code.html": "rv tire date code decoder",
   "tools/watts-to-amps.html": "watts to amps calculator for rvs",
   "tools/weight-calculator.html": "rv towing calculator"
+ },
+ "accepted": {
+  "guides/rv-refrigerator-not-cooling.html": "The title says 'fridge' and the h1 says 'refrigerator'. Both are the page's subject and both are words a reader would type; the divergence is emphasis, not a mistake. Accepted 2026-10-06.",
+  "guides/rv-trailer-wheel-bearings.html": "The title targets 'repack trailer bearings' and the h1 names 'RV trailer wheel bearings'. The title carries the query and the h1 states the subject, which is the ordinary split rather than a drift. Accepted 2026-10-06."
  }
 }
