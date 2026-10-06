@@ -124,8 +124,8 @@
     "sources": [],
     "spec": "_specs/battery-winter-storage.md",
     "spec_waived": false,
-    "claims": "6b3a8b22fb08d530",
-    "claims_date": "Oct 2, 2026"
+    "claims": "178ec4da901263e8",
+    "claims_date": "Oct 4, 2026"
   },
   "guides/freeze-damage-triage.html": {
     "hash": "9d32644439a424e8",
@@ -135,8 +135,8 @@
     "sources": [],
     "spec": "_specs/freeze-damage-triage.md",
     "spec_waived": false,
-    "claims": "63c602ba45248945",
-    "claims_date": "Oct 2, 2026"
+    "claims": "ca780a6dbc99c4d8",
+    "claims_date": "Oct 4, 2026"
   },
   "guides/index.html": {
     "hash": "e8da22f178fda336",
@@ -144,7 +144,7 @@
     "verified_by": null,
     "verified_at": null,
     "sources": [],
-    "claims": "9b597480baafaa6f"
+    "claims": "a0146313ebc9d955"
   },
   "guides/roof-snow-load.html": {
     "hash": "a1b6f6372ca913ef",
@@ -154,8 +154,8 @@
     "sources": [],
     "spec": "_specs/roof-snow-load.md",
     "spec_waived": false,
-    "claims": "36e58d703766ee1d",
-    "claims_date": "Oct 2, 2026"
+    "claims": "d001e7423ee174b8",
+    "claims_date": "Oct 4, 2026"
   },
   "guides/rv-12-volt-problems.html": {
     "hash": "0b7b2d1d6cc3bbe6",
@@ -174,10 +174,10 @@
     ],
     "spec": "_specs/rv-12-volt-problems.md",
     "spec_waived": false,
-    "claims": "52218e79ec348b70",
+    "claims": "f82066e98fbddabb",
     "invalidated_by": "mechanical change",
     "invalidated_at": "2026-09-27",
-    "claims_date": "Oct 2, 2026"
+    "claims_date": "Oct 4, 2026"
   },
   "guides/rv-air-conditioner-not-cooling.html": {
     "hash": "48d5d2cea6f5c0d4",
@@ -185,7 +185,7 @@
     "verified_by": null,
     "verified_at": null,
     "sources": [],
-    "claims": "aec83faee6055ef9",
+    "claims": "e65464526c5af869",
     "claims_date": "Oct 2, 2026"
   },
   "guides/rv-battery-disconnect.html": {
@@ -194,7 +194,7 @@
     "verified_by": null,
     "verified_at": null,
     "sources": [],
-    "claims": "d0f65e120fd25271",
+    "claims": "74f9b7b4567ac58a",
     "claims_date": "Oct 2, 2026"
   },
   "guides/rv-battery-not-charging.html": {
@@ -205,8 +205,8 @@
     "sources": [],
     "spec": "_specs/rv-battery-not-charging.md",
     "spec_waived": false,
-    "claims": "1250e2c847e18975",
-    "claims_date": "Oct 2, 2026"
+    "claims": "f2c9a068f6c16e27",
+    "claims_date": "Oct 4, 2026"
   },
   "guides/rv-condensation-inside.html": {
     "hash": "483e0df75c1d997a",
@@ -214,7 +214,7 @@
     "verified_by": null,
     "verified_at": null,
     "sources": [],
-    "claims": "b4eda1bf1db47abb",
+    "claims": "823655868cc02382",
     "claims_date": "Oct 2, 2026"
   },
   "guides/rv-converter-not-charging.html": {
@@ -233,10 +233,10 @@
     ],
     "spec": "_specs/rv-converter-not-charging.md",
     "spec_waived": false,
-    "claims": "49c8c61cf8b82ec4",
+    "claims": "9e753c5476a782bd",
     "invalidated_by": "mechanical change",
     "invalidated_at": "2026-09-27",
-    "claims_date": "Oct 2, 2026"
+    "claims_date": "Oct 4, 2026"
   },
   "guides/rv-delamination.html": {
     "hash": "9bbc31832fdd3d41",
@@ -244,7 +244,7 @@
     "verified_by": null,
     "verified_at": null,
     "sources": [],
-    "claims": "bd225a89db94cbd8",
+    "claims": "d43bfcd7141b7c75",
     "claims_date": "Oct 2, 2026"
   },
   "guides/rv-furnace-carbon-monoxide.html": {
@@ -253,7 +253,7 @@
     "verified_by": null,
     "verified_at": null,
     "sources": [],
-    "claims": "a4430a641dc3df72",
+    "claims": "029e24133bf31376",
     "claims_date": "Oct 2, 2026"
   },
   "guides/rv-furnace-not-working.html": {
@@ -264,7 +264,7 @@
     "sources": [],
     "spec": "_specs/rv-furnace-not-working.md",
     "spec_waived": false,
-    "claims": "71e852104403b5f3",
+    "claims": "89a67693ba48f388",
     "invalidated_by": "mechanical change",
     "invalidated_at": "2026-09-27",
     "claims_date": "Oct 2, 2026"
@@ -277,10 +277,10 @@
     "sources": [],
     "spec": "_specs/rv-fuse-keeps-blowing.md",
     "spec_waived": false,
-    "claims": "ad5b3116102b2906",
+    "claims": "fdfcf4aee5a95536",
     "invalidated_by": "mechanical change",
     "invalidated_at": "2026-09-27",
-    "claims_date": "Oct 2, 2026"
+    "claims_date": "Oct 4, 2026"
   },
   "guides/rv-generator-not-charging.html": {
     "hash": "a6951f9afdb58542",
@@ -295,10 +295,10 @@
     ],
     "spec": "_specs/rv-generator-not-charging.md",
     "spec_waived": false,
-    "claims": "2d0a12c3fd3ed47b",
+    "claims": "ef934e187c559e6f",
     "invalidated_by": "mechanical change",
     "invalidated_at": "2026-09-27",
-    "claims_date": "Oct 2, 2026"
+    "claims_date": "Oct 4, 2026"
   },
   "guides/rv-generator-sizing.html": {
     "hash": "333b73de807ef618",
@@ -306,8 +306,8 @@
     "verified_by": " 2026-10-02, review round 3 on a fresh lane, and it came back clean on both halves: no claims stronger than the sources, and no sentences overstating certainty. Two practical gaps closed. The page now says what its arithmetic is against, running figures and the makers' startup multipliers, and leaves which of a generator's two published ratings a surge figure covers to that generator's own documentation rather than asserting it, because no cited source states it. And the load-management advice now links the converter guide at the point a reader meets it. 2026-10-03, review round 5 under the 150/150 window, the first pass able to see this page's middle. Three fixed. The appliance figures were called 'Cummins own appliance table' while the source list credits 'the appliance load table' to the Onan operator manual: same document, since Onan is Cummins, but a reader could not map one to the other, so the claim now names the manual as the source list does. An elevation inference stated as a universal now says the outcome depends on the generator, the real locked-rotor draw and the day's temperature rather than on elevation alone. And the charge-rate remedy now carries its condition, since many converters have no adjustable rate. The reviewer's other gap, what a generator's surge rating covers, stays open deliberately: no cited document states it.",
     "verified_at": null,
     "sources": [],
-    "claims": "9e00ebdcf1e1bcab",
-    "claims_date": "Oct 2, 2026"
+    "claims": "f0d8106fa63a816a",
+    "claims_date": "Oct 4, 2026"
   },
   "guides/rv-leveling-jacks-not-working.html": {
     "hash": "8a90e26752ca1c8a",
@@ -317,8 +317,8 @@
     "sources": [],
     "spec": "_specs/rv-leveling-jacks-not-working.md",
     "spec_waived": false,
-    "claims": "f5606dff29c8728f",
-    "claims_date": "Oct 2, 2026"
+    "claims": "1880dbae7019e467",
+    "claims_date": "Oct 4, 2026"
   },
   "guides/rv-lights-not-working.html": {
     "hash": "48e50563fcd402b9",
@@ -328,7 +328,7 @@
     "sources": [],
     "spec": "_specs/rv-lights-not-working.md",
     "spec_waived": false,
-    "claims": "a1d04c4db99e4e6f",
+    "claims": "88a0fd90a5829273",
     "claims_date": "Oct 2, 2026"
   },
   "guides/rv-macerator-toilet.html": {
@@ -337,8 +337,8 @@
     "verified_by": " 2026-10-02, independent review round 5 on the corrected page, five findings, all fixed: the voltage section claimed the manual's test decides who pays, which it does not; the absolute wet-wipe rule is the iNDUS manual's and is now scoped to it; the safety instruction was rewritten to one unambiguous prohibition with obstruction removal handed to a competent person; the replacement-cost sentence implied every replacement needs both the discharge line and the circuit when it may need either; and a model-identification step was added for a reader whose manual is missing, since choosing the wrong circuit rating is what the maker's own fire warning is about. 2026-10-02, review round 7 on a different lane after the chatgpt conversation went stale. Four findings fixed: the FAQ's safety instruction ended 'whichever order the manual prints', which made it negotiable and deferred to a printed order that is the opposite, so the clause is gone; and two source-list gaps where the body was RIGHT and the credit line was incomplete, the iNDUS entry now crediting the disabled-while-the-valve-is-open statement and its own tampon, hair and cotton swab list, both verified in the cached manual. The 120 foot figure now carries its condition, that it is total pumping distance rather than rise. Three gaps the reviewer found are not yet addressed. Round 7's three gaps are also addressed, each from a source already cited: the manual's own phrase identifies the reading as the toilet supply voltage rather than a battery-post figure; the Thetford support page says where the data tag is, on the back of the toilet or sometimes the base depending on model, so the model-identification step now says where to look; and the tank check points at the tank sensor guide for telling a full tank from a stuck sensor.",
     "verified_at": null,
     "sources": [],
-    "claims": "f4a66dbe0c3ea1a9",
-    "claims_date": "Oct 2, 2026"
+    "claims": "b42c5240ff3f3533",
+    "claims_date": "Oct 4, 2026"
   },
   "guides/rv-outlets-not-working.html": {
     "hash": "2f97fa6b8c420dda",
@@ -348,7 +348,7 @@
     "sources": [],
     "spec": "_specs/rv-outlets-not-working.md",
     "spec_waived": false,
-    "claims": "9d0dc2859c52745d",
+    "claims": "1fe18dc8c794753f",
     "claims_date": "Oct 2, 2026"
   },
   "guides/rv-pin-weight-and-payload.html": {
@@ -357,7 +357,7 @@
     "verified_by": null,
     "verified_at": null,
     "sources": [],
-    "claims": "18b03442fa470c2e",
+    "claims": "a44bf4a3d9403aa0",
     "claims_date": "Oct 2, 2026"
   },
   "guides/rv-propane-furnace-wont-light.html": {
@@ -366,7 +366,7 @@
     "verified_by": " 2026-10-02: quotation markup repaired. Ten quotations were set as \"text with <b>a fragment</b> inside\", which put the bold inside the quotation and made the marks ambiguous to check-quotes.py; they now use the <b>\"whole quotation\"</b> convention. git confirms no word moved. Flagged quotes fell from 26 to 11, and the eleven that remain all rest on marshallexcelsior.com, which returns 403 to automated fetches, so they need a hand check rather than an edit.",
     "verified_at": null,
     "sources": [],
-    "claims": "7d2bbfd021656399",
+    "claims": "7633b08b24580839",
     "claims_date": "Oct 2, 2026"
   },
   "guides/rv-refrigerator-not-cooling.html": {
@@ -383,7 +383,7 @@
     ],
     "spec": "_specs/rv-refrigerator-not-cooling.md",
     "spec_waived": false,
-    "claims": "73873b3a23a1ebc5",
+    "claims": "766d76473220c008",
     "invalidated_by": "mechanical change",
     "invalidated_at": "2026-09-27",
     "claims_date": "Oct 2, 2026"
@@ -396,7 +396,7 @@
     "sources": [],
     "spec": "_specs/rv-roof-leak-repair.md",
     "spec_waived": false,
-    "claims": "b62a25a5c63502a6",
+    "claims": "39cbfa3d61716c6a",
     "claims_date": "Oct 2, 2026"
   },
   "guides/rv-sewer-smell.html": {
@@ -405,7 +405,7 @@
     "verified_by": null,
     "verified_at": null,
     "sources": [],
-    "claims": "5d570096c8d6636d",
+    "claims": "ab37936352b3b705",
     "claims_date": "Oct 2, 2026"
   },
   "guides/rv-slide-out-leaking.html": {
@@ -414,7 +414,7 @@
     "verified_by": null,
     "verified_at": null,
     "sources": [],
-    "claims": "6597422964ab1e57",
+    "claims": "c78a8031f12fba7c",
     "claims_date": "Oct 2, 2026"
   },
   "guides/rv-slide-out-not-working.html": {
@@ -425,10 +425,10 @@
     "sources": [],
     "spec": "_specs/rv-slide-out-not-working.md",
     "spec_waived": false,
-    "claims": "3ac09fe0a6100f85",
+    "claims": "8557baaf9b567d43",
     "invalidated_by": "mechanical change",
     "invalidated_at": "2026-09-27",
-    "claims_date": "Oct 2, 2026"
+    "claims_date": "Oct 4, 2026"
   },
   "guides/rv-solar-not-charging.html": {
     "hash": "68ea9e2b4923525a",
@@ -438,7 +438,7 @@
     "sources": [],
     "spec": "_specs/rv-solar-not-charging.md",
     "spec_waived": false,
-    "claims": "f14a34ae42a55da0",
+    "claims": "8bcd90bd498e17c5",
     "claims_date": "Oct 2, 2026"
   },
   "guides/rv-tank-sensors-reading-wrong.html": {
@@ -449,7 +449,7 @@
     "sources": [],
     "spec": "_specs/rv-tank-sensors-reading-wrong.md",
     "spec_waived": false,
-    "claims": "47206fbe89ec9083",
+    "claims": "7d8c50b92e428a6c",
     "claims_date": "Oct 2, 2026"
   },
   "guides/rv-tire-replacement.html": {
@@ -468,7 +468,7 @@
     ],
     "spec": "_specs/rv-tire-replacement.md",
     "spec_waived": false,
-    "claims": "edeadcf80a7cb67e",
+    "claims": "12f7a8379a3ca6a4",
     "invalidated_by": "mechanical change",
     "invalidated_at": "2026-09-27",
     "claims_date": "Oct 2, 2026"
@@ -481,8 +481,8 @@
     "sources": [],
     "spec": "_specs/rv-toilet-not-flushing.md",
     "spec_waived": false,
-    "claims": "add4bf328a9bf49d",
-    "claims_date": "Oct 2, 2026"
+    "claims": "503f760523fe0f1b",
+    "claims_date": "Oct 4, 2026"
   },
   "guides/rv-towing-capacity.html": {
     "hash": "8b9254e7bc4f55b9",
@@ -492,10 +492,10 @@
     "sources": [],
     "spec": "_specs/rv-towing-capacity.md",
     "spec_waived": false,
-    "claims": "a864ecc62229ba8e",
+    "claims": "40a93ee5e783a93f",
     "invalidated_by": "mechanical change",
     "invalidated_at": "2026-09-27",
-    "claims_date": "Oct 2, 2026"
+    "claims_date": "Oct 4, 2026"
   },
   "guides/rv-trailer-wheel-bearings.html": {
     "hash": "5de118109ba60003",
@@ -503,7 +503,7 @@
     "verified_by": " 2026-10-02, review round 6 on a fresh lane. Sourcing came back CLEAN, the source list mapping every major statement to its document, with one overclaim fixed: the page said grease reaches the brake linings where the maker says only that the chance is greatly increased, so it now uses the maker's strength. The reviewer's one gap, a reader with an ordinary greased hub lacking the removal and repack sequence, is answered by stating the boundary explicitly rather than by adding a sequence the spec deliberately stops short of. 2026-10-03, review round 7 under the corrected window: CLEAN on both halves, the fourth page to come back so, and it VERIFIES THE ROUND 6 FIX BY NAME, quoting the corrected sentence back ('the maker's own words, greatly increased') and confirming the source list maps every major statement to its document. Its single gap is the boundary the spec deliberately draws, and the reviewer recognises it as stated rather than missing: the page stops at the spindle-nut torque steps and says the hub-off procedure is not summarised here. NO CHANGE MADE, because adding a repack sequence taught from a summary is the thing the page's own reasoning rules out. 2026-10-03, review round 7 under the corrected window: CLEAN on both halves, the fourth page to come back so, and it VERIFIES THE ROUND 6 FIX BY NAME, quoting the corrected sentence back and confirming the source list maps every major statement to its document. Its single gap is the boundary the spec deliberately draws, and the reviewer recognises it as stated rather than missing: the page stops at the spindle-nut torque steps and says the hub-off procedure is not summarised here. NO CHANGE MADE, because adding a repack sequence taught from a summary is the thing the page's own reasoning rules out.",
     "verified_at": null,
     "sources": [],
-    "claims": "1ce58e21088cbe64",
+    "claims": "c0dc7a196a84dde6",
     "claims_date": "Oct 2, 2026"
   },
   "guides/rv-trip-planner.html": {
@@ -519,8 +519,8 @@
     "verified_by": null,
     "verified_at": null,
     "sources": [],
-    "claims": "10dbc4e881ed22a6",
-    "claims_date": "Oct 2, 2026"
+    "claims": "31f22570b89ad0eb",
+    "claims_date": "Oct 4, 2026"
   },
   "guides/rv-water-heater-not-heating.html": {
     "hash": "f8f8ed3531b5580b",
@@ -536,7 +536,7 @@
     ],
     "spec": "_specs/rv-water-heater-not-heating.md",
     "spec_waived": false,
-    "claims": "04ff3e5b8fe6c130",
+    "claims": "18cbb61bba603005",
     "invalidated_by": "mechanical change",
     "invalidated_at": "2026-09-27",
     "claims_date": "Oct 2, 2026"
@@ -547,8 +547,8 @@
     "verified_by": null,
     "verified_at": null,
     "sources": [],
-    "claims": "361c199239917e5b",
-    "claims_date": "Oct 2, 2026"
+    "claims": "34c240b69b94c574",
+    "claims_date": "Oct 4, 2026"
   },
   "guides/tires-winter.html": {
     "hash": "2170b8925799d76e",
@@ -558,8 +558,8 @@
     "sources": [],
     "spec": "_specs/tires-winter.md",
     "spec_waived": false,
-    "claims": "df59820a6c474501",
-    "claims_date": "Oct 2, 2026"
+    "claims": "afdbfd340b1ab1f0",
+    "claims_date": "Oct 4, 2026"
   },
   "guides/trailer-brakes-required.html": {
     "hash": "5e2a7b30aa980496",
@@ -569,7 +569,7 @@
     "sources": [],
     "spec": "_specs/trailer-brakes-required.md",
     "spec_waived": false,
-    "claims": "015e4f116bffaa87",
+    "claims": "7475218f762ec723",
     "claims_date": "Oct 2, 2026"
   },
   "guides/winterize-plumbing.html": {
@@ -580,8 +580,8 @@
     "sources": [],
     "spec": "_specs/winterize-plumbing.md",
     "spec_waived": false,
-    "claims": "ff0c28ebb6b666e2",
-    "claims_date": "Oct 2, 2026"
+    "claims": "2c668bd9cf981fe7",
+    "claims_date": "Oct 4, 2026"
   },
   "index.html": {
     "hash": "320657ce4864fe93",
@@ -661,88 +661,7 @@
     "sources": [],
     "spec": "_specs/start-here.md",
     "spec_waived": false,
-    "claims": [
-      {
-        "id": "C1",
-        "text": "the coach has nine systems, and the list of them",
-        "source": "definitional; the systems are the ones the makers themselves enumerate",
-        "state": "CONFIRMED",
-        "by": null,
-        "at": null
-      },
-      {
-        "id": "C2",
-        "text": "what each system does when it is working",
-        "source": "definitional, and the descriptions come from the fault guides that already read their sources",
-        "state": "CONFIRMED",
-        "by": null,
-        "at": null
-      },
-      {
-        "id": "C3",
-        "text": "the order to learn them, and the reasoning for it",
-        "source": "our own instruction. This is the page's argument and it is honestly ours: no maker publishes a learning order",
-        "state": "CONFIRMED",
-        "by": null,
-        "at": null
-      },
-      {
-        "id": "C4",
-        "text": "which systems are safe to leave alone at first, and why",
-        "source": "our own instruction, with the reason stated",
-        "state": "CONFIRMED",
-        "by": null,
-        "at": null
-      },
-      {
-        "id": "C5",
-        "text": "SAFETY: shore power is connected before anything else, and polarity and surge protection are checked",
-        "source": "rv-outlets-not-working, which read the sources for hot skin and GFCI behaviour. Link, do not restate",
-        "state": "READ",
-        "by": null,
-        "at": null
-      },
-      {
-        "id": "C6",
-        "text": "SAFETY: propane and carbon monoxide, and what a new owner must not do",
-        "source": "rv-furnace-not-working, which read the maker's CO and ignition material. Link, do not restate",
-        "state": "READ",
-        "by": null,
-        "at": null
-      },
-      {
-        "id": "C7",
-        "text": "SAFETY: a water heater must have water in it before it is fired",
-        "source": "rv-water-heater-not-heating, which read the maker's drain-and-fire material. Link, do not restate",
-        "state": "READ",
-        "by": null,
-        "at": null
-      },
-      {
-        "id": "C8",
-        "text": "12-volt faults imitate other faults, which is why voltage is learned early",
-        "source": "rv-12-volt-problems, the hub page for that cluster",
-        "state": "READ",
-        "by": null,
-        "at": null
-      },
-      {
-        "id": "C9",
-        "text": "what a maker's owner manual typically contains and typically omits",
-        "source": "the manuals directory's own reading, and the site's existing finding that makers ship one document across many years. No prevalence claim",
-        "state": "CONFIRMED",
-        "by": "rests on the manuals directory's own finding: every row links the maker's document, and appliance makers publish their own separate documents",
-        "at": "2026-09-24"
-      },
-      {
-        "id": "C10",
-        "text": "anything a reader is told to do that carries a number or a risk",
-        "source": "the page it belongs to, linked",
-        "state": "CONFIRMED",
-        "by": "every instruction on the page is either the maker's own procedure or stated as ours, 2026-09-24",
-        "at": "2026-09-24"
-      }
-    ],
+    "claims": "a3bc13785a7ffbad",
     "invalidated_by": "mechanical change",
     "invalidated_at": "2026-09-26"
   },
@@ -789,7 +708,7 @@
     "sources": [],
     "spec": "",
     "spec_waived": true,
-    "claims": "9fc70179cb7e7cc6",
+    "claims": "0236e49d3d18ccd8",
     "claims_date": "Oct 2, 2026"
   },
   "tools/weight-calculator.html": {

@@ -221,6 +221,16 @@ def claim_text(raw):
     """
     s = re.sub(r"<(script|style)\b.*?</\1>", " ", raw, flags=re.S | re.I)
     s = re.sub(r'<p class="reviewed">.*?</p>', " ", s, flags=re.S)
+    # THE NAV AND FOOTER ARE THE SAME CASE AS THE CRUMB BELOW, AND WERE SIMPLY MISSED.
+    # visible_text -- which feeds the page hash -- has stripped both regions since it was
+    # written. This function, which feeds the CLAIM digest, never did, so rewording one
+    # line of the navbar read as claim drift on every dated page at once: 41 pages on
+    # 2026-10-05, from moving "Free tools, No paywall, Built for RVers" out of the utility
+    # strip. Navigation is not a statement about the subject, which is the same reasoning
+    # that already took the byline and the breadcrumb out of this digest. The markers are
+    # the ones build-shell.mjs writes around the whole shell, breadcrumb included.
+    s = re.sub(r"<!--\s*nav:start\s*-->.*?<!--\s*nav:end\s*-->", " ", s, flags=re.S | re.I)
+    s = re.sub(r"<!--\s*footer:start\s*-->.*?<!--\s*footer:end\s*-->", " ", s, flags=re.S | re.I)
     # THE BREADCRUMB IS NAVIGATION AND GOES WITH THE NAV. visible_text already strips the nav and
     # footer regions; this function did not, and the generated trail carries the page's own heading,
     # so without this every page reads as claim drift the moment a breadcrumb is added. Found

@@ -102,8 +102,13 @@
  function esc(s) { return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
 
  function logoHTML() {
+ /* "Origin" solid, "RV" in the brand gradient (Ty, 2026-10-05). The trailing RV
+    is split off the configured name so the brand string stays the single source
+    of truth rather than being re-typed here; if the name ever stops ending in RV
+    the whole thing simply inherits the surrounding colour. */
+ var name = esc(CFG.brand.name).replace(/RV$/, '<span class="rv">RV</span>');
  return '<a class="logo" href="' + R(CFG.routes.home) + '"><span class="logo-mark">' + CFG.brand.mark + '</span>' +
- '<span class="logo-name"><span>' + esc(CFG.brand.name) + '</span></span></a>';
+ '<span class="logo-name">' + name + '</span></a>';
  }
 
  function signinLink(cls) {
@@ -142,11 +147,19 @@
  '</div></form>';
  }
 
+ /* The utility strip. It used to read as an afterthought: two shortcuts on the
+    left, and on the right a Contact link wedged in front of the tagline with
+    nothing to keep it company. Ty, 2026-10-05: "better utilize it... the contact
+    is in a weird spot". It now carries the two things a top strip is for -- fast
+    paths to the busiest destinations on the left, and the secondary "company"
+    pages paired together on the right.
+    The "Find a tech" label became "Find a service", which is the same phrase the
+    homepage CTA already uses, so the directory is named one way everywhere. */
  function navHTML() {
  var rt = CFG.routes;
  return '<div class="util" role="navigation" aria-label="Utility"><div class="wrap">' +
- '<div class="util-l"><span class="dot"></span><a href="' + R(rt.directory) + '">Find a tech</a><a href="' + R(rt.guides) + '">Winter guides</a></div>' +
- '<div class="util-r"><a href="' + R(rt.contact) + '">Contact</a><span class="muted">Free tools, No paywall, Built for RVers</span></div>' +
+ '<div class="util-l"><span class="dot"></span><a href="' + R(rt.directory) + '">Find a service</a><a href="' + R(rt.guides) + '">Winter guides</a><a href="' + R(rt.manuals) + '">Manuals</a></div>' +
+ '<div class="util-r"><a href="' + R(rt.about) + '">About</a><a href="' + R(rt.contact) + '">Contact</a></div>' +
  '</div></div>' +
  '<nav class="main" aria-label="Main"><div class="wrap">' +
  logoHTML() +
@@ -176,7 +189,10 @@
  '<a href="' + R(rt.manuals) + '">All manuals<span class="sm">Every system, linked at the maker</span></a></div></div>' +
  '</div>' +
  searchFieldHTML('nav-search', 'Search') +
- '<div class="nav-actions">' + signinLink('btn btn-outline btn-sm') + '<a class="btn btn-primary btn-sm" href="' + R(rt.tools) + '">Tools</a>' +
+ '<div class="nav-actions">' + signinLink('btn btn-outline btn-sm') +
+ /* The button says where it goes ("RV tools"); the caption above it carries the
+    "free" promise that used to live in the utility strip. Ty, 2026-10-05. */
+ '<span class="nav-cta"><span class="nav-cta-cap">Free tools</span><a class="btn btn-primary btn-sm" href="' + R(rt.tools) + '">RV tools</a></span>' +
  '<button type="button" class="burger" aria-label="Menu" onclick="RV.toggleMenu()"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h12M4 10h12M4 14h12"/></svg></button></div>' +
  '</div>' +
  '<div class="mobile-menu">' + searchFieldHTML('mm-search', 'Search the site') +
