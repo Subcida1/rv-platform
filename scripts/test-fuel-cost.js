@@ -18,6 +18,7 @@ function makeEl(id) {
   return {
     id, value: '', text: '', innerHTML: '',
     options: [{ text: 'Class C, gasoline' }, { text: 'Class C, gasoline' }], selectedIndex: 0,
+    parentNode: { style: {} },
     addEventListener(ev, fn) { (listeners[ev] = listeners[ev] || []).push(fn); },
     fire(ev) { (listeners[ev] || []).forEach(fn => fn()); },
   };
@@ -62,9 +63,9 @@ check('gen high = hours*1.0*price', Math.abs(r.genHigh - 10 * 1.0 * 4.37) < 0.01
 r = RV.compute(1000, 5.0, null, 'classa-gas', null);
 check('classA gas mid = 7', Math.abs(r.mid - 1000 / 7 * 5.0) < 0.01);
 
-// unknown type falls back to classc-gas
+// unknown type falls back to the car fleet average
 r = RV.compute(1200, 4.37, null, 'nonexistent', null);
-check('unknown type falls back', Math.abs(r.mid - 1200 / 9.5 * 4.37) < 0.01);
+check('unknown type falls back to car average', Math.abs(r.mid - 1200 / 25.6 * 4.37) < 0.01);
 
 // live DOM path: empty inputs show idle message
 check('idle message on empty', elements['fuel-result'].innerHTML.indexOf('w-idle') !== -1);
@@ -83,6 +84,32 @@ check('renders disclaimer', html.indexOf('w-disclaimer') !== -1);
 // negative-test the hooks: compute() with zero miles must not divide to nonsense silently
 r = RV.compute(0, 4.37, null, 'classc-gas', null);
 check('zero miles yields 0/NaN not crash', r !== undefined);
+
+// car preset: DOE fleet average 25.6 -> single figure, not a range
+// 1200 mi, $4.37: cost = 1200/25.6*4.37 = 204.84
+r = RV.compute(1200, 4.37, null, 'car', null);
+check('car mid = fleet avg point', Math.abs(r.mid - 1200 / 25.6 * 4.37) < 0.01);
+check('car collapses range', Math.abs(r.low - r.high) < 0.01);
+check('car plan = mid * 1.15', Math.abs(r.plan - r.mid * 1.15) < 0.01);
+
+// light truck 18.5, motorcycle 44
+r = RV.compute(1200, 4.37, null, 'lighttruck', null);
+check('light truck = 18.5 point', Math.abs(r.mid - 1200 / 18.5 * 4.37) < 0.01);
+r = RV.compute(1200, 4.37, null, 'motorcycle', null);
+check('motorcycle = 44 point', Math.abs(r.mid - 1200 / 44 * 4.37) < 0.01);
+
+// generator ignored for non-RV types even if hours passed
+r = RV.compute(1200, 4.37, null, 'car', 10);
+check('gen ignored for car', r.genLow === undefined && r.genHigh === undefined);
+
+// RV type still gets generator
+r = RV.compute(1200, 4.37, null, 'classc-gas', 10);
+check('gen kept for RV', Math.abs(r.genLow - 10 * 0.5 * 4.37) < 0.01);
+
+// own MPG wins for a car too
+r = RV.compute(1200, 4.37, 32, 'car', null);
+check('own MPG wins for car', Math.abs(r.mid - 1200 / 32 * 4.37) < 0.01);
+
 
 console.log(`fuel-cost test: ${passed} passed, ${failed} failed`);
 process.exit(failed ? 1 : 0);

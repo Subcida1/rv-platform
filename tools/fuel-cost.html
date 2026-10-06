@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="canonical" href="https://originrv.com/tools/fuel-cost">
   <title>RV Fuel Cost Calculator: What the Trip Costs at the Pump</title>
-  <meta name="description" content="What a trip costs in fuel, from the miles, the MPG, and the price at the pump, priced across your RV type range with a planning cushion added.">
+  <meta name="description" content="What a trip costs in fuel, for an RV or any vehicle: enter the miles, the MPG, and the price at the pump, and the estimate arrives with a planning cushion.">
   <link rel="stylesheet" href="assets/css/style.css?v=839902dd">
 <link rel="icon" type="image/svg+xml" href="assets/img/brand/favicon.svg?v=dd9ff106">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/brand/favicon-32.png?v=d9338088">
@@ -15,7 +15,7 @@
   <meta name="theme-color" content="#3d7fc2">
 <meta property="og:type" content="article">
 <meta property="og:title" content="RV Fuel Cost Calculator: What the Trip Costs at the Pump">
-<meta property="og:description" content="What a trip costs in fuel, from the miles, the MPG, and the price at the pump, priced across your RV type range with a planning cushion added.">
+<meta property="og:description" content="What a trip costs in fuel, for an RV or any vehicle: enter the miles, the MPG, and the price at the pump, and the estimate arrives with a planning cushion.">
 <meta property="og:url" content="https://originrv.com/tools/fuel-cost">
 <meta property="og:site_name" content="OriginRV">
 <meta property="og:image" content="https://originrv.com/assets/img/brand/og-default.png">
@@ -26,7 +26,7 @@
 <meta name="twitter:image:alt" content="OriginRV">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="RV Fuel Cost Calculator: What the Trip Costs at the Pump">
-<meta name="twitter:description" content="What a trip costs in fuel, from the miles, the MPG, and the price at the pump, priced across your RV type range with a planning cushion added.">
+<meta name="twitter:description" content="What a trip costs in fuel, for an RV or any vehicle: enter the miles, the MPG, and the price at the pump, and the estimate arrives with a planning cushion.">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "RV Fuel Cost Calculator", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "url": "https://originrv.com/tools/fuel-cost", "description": "Work out what a trip costs at the pump from the distance, your miles per gallon, and the price at your next fill.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "OriginRV", "url": "https://originrv.com/"}}</script>
 <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-G8X4MQ0P3X"></script>
@@ -44,7 +44,7 @@
  <div class="wrap page-intro">
   <div class="sec-eyebrow">Free tool</div>
   <h1 class="lg">RV fuel cost calculator</h1>
-  <p class="lede wide">The math is simple: miles divided by your miles per gallon, times the price of fuel. What is hard is knowing the numbers to put in it, so every box below says where its number comes from, and the RV type presets carry real-world MPG ranges rather than figures nobody publishes.</p>
+  <p class="lede wide">The math is simple: miles divided by your miles per gallon, times the price of fuel. What is hard is knowing the numbers to put in it, so every box below says where its number comes from. Any vehicle works, RV or car: the RV presets carry real-world MPG ranges, and the car presets carry the average for that kind of vehicle on the road, with the exact figure for any specific model one lookup away.</p>
  </div>
 
  <div class="sec pad-30">
@@ -60,7 +60,7 @@
        <span class="hint">How to get it: put your route into Google Maps and read the total, or add up the legs yourself. If the trip is there and back, enter the round-trip total, since that is the fuel you will buy.</span>
       </div>
       <div class="field">
-       <label for="f-type">Your RV type<span class="req">*</span></label>
+       <label for="f-type">Your vehicle<span class="req">*</span></label>
        <select id="f-type">
         <option value="classa-gas">Class A, gasoline</option>
         <option value="classa-diesel">Class A, diesel</option>
@@ -69,8 +69,11 @@
         <option value="classb">Class B camper van</option>
         <option value="trailer">Travel trailer, towed</option>
         <option value="fifth">Fifth wheel, towed</option>
+        <option value="car">Car or crossover</option>
+        <option value="lighttruck">SUV, pickup or van</option>
+        <option value="motorcycle">Motorcycle</option>
        </select>
-       <span class="hint">Sets a real-world MPG range for the estimate. Your own measured MPG below always wins over the range.</span>
+       <span class="hint">Sets a real-world MPG range for RV types. Car, SUV, pickup, van and motorcycle use the average for that kind of vehicle actually on the road, since the exact figure for a specific model is published at fueleconomy.gov. Your own measured MPG below always wins over any preset.</span>
       </div>
      </div>
      <div class="panel panel-24">
@@ -88,7 +91,7 @@
       <div class="field">
        <label for="f-gen-hours">Generator hours, if the generator is part of the trip</label>
        <input id="f-gen-hours" type="text" inputmode="decimal" placeholder="10">
-       <span class="hint">Optional. Most gasoline motorhome generators burn roughly half a gallon to one gallon per hour under load, so the total is shown as a range. Leave empty to skip.</span>
+       <span class="hint">Optional, RVs only. Most gasoline motorhome generators burn roughly half a gallon to one gallon per hour under load, so the total is shown as a range. The box hides itself for car, SUV, pickup, van and motorcycle. Leave empty to skip.</span>
       </div>
      </div>
     </div>
@@ -100,9 +103,11 @@
 
 <div class="wrap">
  <div class="prose">
-  <h2>Where the MPG ranges come from</h2>
+  <h2>Where the MPG figures come from</h2>
   <p>There are no official fuel economy ratings for RVs. The EPA does not test motorhomes, because their chassis exceed the weight limits of the EPA's fuel economy testing, and towable RVs have no MPG figure at all because the fuel economy belongs to the tow vehicle. So the ranges here come from trade sources that gathered owner reports and dealer figures: <b>Class A gasoline 6 to 8 MPG, Class A diesel 7 to 10, Class C gasoline 8 to 11, Class C diesel 12 to 16, Class B vans 14 to 20, travel trailers 8 to 14, and fifth wheels 8 to 12</b>.</p>
   <p>Two of those ranges deserve a second look. The towable numbers are the tow vehicle's fuel economy while pulling, not a property of the trailer: a half-ton gasoline truck that does 18 MPG empty might do 12 to 14 pulling a travel trailer, and a three-quarter-ton diesel pulling a fifth wheel might do 8 to 12. And the Class B spread is wide because it spans gasoline and diesel vans, where a diesel Sprinter runs near the top of the range and a gasoline ProMaster near the bottom. Your own measured MPG, entered in the box, is better than any of it.</p>
+
+  <p>For cars, SUVs, pickups, vans and motorcycles the tool uses the average for that kind of vehicle actually on the road, from the US Department of Energy's fleet figures: <b>25.6 MPG for cars, 18.5 for light trucks and vans, and 44 for motorcycles</b>. Those are fleet averages across every age and model, not a promise about yours. The exact figure for any specific car, pickup or SUV is published at fueleconomy.gov, which lists the EPA estimate for every model year back to 1984, so one lookup beats the average every time.</p>
 
   <h2>What the answer means</h2>
   <p>The estimate is the middle of the road, not a promise. Wind, elevation, speed, and how heavy the coach is loaded all move the real number, which is why the result shows what the trip costs at both ends of your MPG range as well as the middle. Camper Smarts, whose method and figures this tool follows, recommends carrying a cushion of 10 to 15 percent over the estimate, and the result applies that for you as the planning figure. Motorhomes and tow vehicles also run most efficiently somewhere in the 55 to 65 MPH band, so a trip planned at 75 burns measurably more than the same trip at 60.</p>
@@ -116,6 +121,8 @@
     <li><a href="https://campersmarts.com/how-to-improve-rv-gas-mileage" target="_blank" rel="noopener">Camper Smarts, RV gas mileage (updated February 2026)</a>: the MPG ranges by RV type used for the presets, the distance divided by MPG times price method, the 10 to 15 percent cushion, the 0.5 to 1 gallon per hour generator figure, and the 55 to 65 MPH efficiency band.</li>
     <li><a href="https://www.rvingknowhow.com/best-mpg-rvs/" target="_blank" rel="noopener">RVing Know How, best MPG RVs (updated September 2026)</a>: chassis-level MPG figures, which are the reason the Class B range spans gasoline and diesel vans.</li>
     <li><a href="https://www.coumbsrv.com/blog/94875-motorhome-fuel-economy-guide-which-rv-chassis-gets-the-best-gas-mileage" target="_blank" rel="noopener">Coumbs RV, motorhome fuel economy guide</a>: the statement that motorhome chassis exceed EPA testing weight limits, and chassis MPG figures that corroborate the ranges above.</li>
+    <li><a href="https://afdc.energy.gov/data/10310" target="_blank" rel="noopener">US Department of Energy, Alternative Fuels Data Center: average fuel economy by vehicle category (updated May 2026)</a>: the on-road fleet averages used for the car, light truck and motorcycle presets.</li>
+    <li><a href="https://www.fueleconomy.gov/" target="_blank" rel="noopener">fueleconomy.gov</a>: the EPA fuel economy estimates for specific models, which is where the car presets send the reader who wants their own vehicle's exact figure.</li>
     <li><a href="https://gasprices.aaa.com/" target="_blank" rel="noopener">AAA fuel prices</a>: the daily national average for regular and diesel, which is where the price box sends you.</li>
     <li><a href="https://www.eia.gov/petroleum/gasdiesel/" target="_blank" rel="noopener">US Energy Information Administration, gasoline and diesel fuel update</a>: the weekly national benchmark average.</li>
    </ul>
@@ -128,6 +135,6 @@
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "3727183603b6402b9249de33fa381acd"}'></script><!-- End Cloudflare Web Analytics -->
 <script src="assets/js/config.js?v=f769b084"></script>
 <script src="assets/js/site.js?v=4e792d7c"></script>
-<script src="assets/js/fuelcost.js?v=49e51be6"></script>
+<script src="assets/js/fuelcost.js?v=1b3a3607"></script>
 </body>
 </html>
