@@ -63,6 +63,12 @@ step "check-regions.py: the hub is grouped by region, completely and in order" \
 # hand-edit has quietly forked it from its source.
 step "build-parts-pages.py --check: the parts hub matches _data/parts.json" \
                                                python3 scripts/build-parts-pages.py --check
+# The UX doctrine gate (_todo/UX.md). Fails only on the thing that is unambiguously wrong — a
+# link whose whole label is "Read more" and so carries no destination scent — and REPORTS the
+# page-level worklist (guides missing a related/next block, focus-ring selectors to eyeball).
+# A link a scanner cannot read the destination of is the cheapest way to lose a deep arrival.
+step "check-ux.py: vague link labels, related-block coverage, focus rings" \
+                                               python3 scripts/check-ux.py
 # ---------------------------------------------------------------- 2. behaviour
 step "weight calculator"                       node scripts/test-weight-calculator.js
 step "tire date decoder"                      node scripts/test-tire-date.js

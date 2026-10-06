@@ -1,5 +1,9 @@
 # Changing how the site looks
 
+**How the site should *behave* is a separate doctrine: `_todo/UX.md`.** This file is the
+look — colour, type, spacing. That one is the experience — scanning, links, first screenful,
+tap targets, speed — and it is what governs every new page and tool we build.
+
 One file, one block, at the top: `assets/css/style.css`.
 
 ```css

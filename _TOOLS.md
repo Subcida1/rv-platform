@@ -8,7 +8,7 @@ Run everything: `bash scripts/ci.sh` (seconds) and `bash scripts/ci-full.sh` (mi
 
 ---
 
-## 1. On every change — `scripts/ci.sh`, 11 steps
+## 1. On every change — `scripts/ci.sh`, 12 steps
 
 Fast enough to run on every push, which is the only reason it gets run.
 
@@ -22,6 +22,7 @@ Fast enough to run on every push, which is the only reason it gets run.
 | 9 | **W3C Nu Html Checker** | 48 pages against the HTML spec: content model, obsolete elements, misused ARIA, malformed inline CSS/SVG | says nothing about whether a link resolves, a layout works, or the words are true |
 | 10 | `html-validate` | second opinion, offline, adds the WCAG-technical markup rules | same boundary as above |
 | 11 | W3C checker, **CSS mode** | our stylesheet is parsed. A malformed rule is dropped SILENTLY by every browser, so the symptom is missing styling and no error anywhere | vnu's CSS mode predates `@property` and `var()` in a gradient angle; those two are filtered by name |
+| 12 | **`check-ux.py`** | the UX doctrine (`_todo/UX.md`): fails a link whose whole label is "Read more" (no destination scent, NN/g 2014), reports which guides lack a related/next block, and lists selectors that remove the focus ring | cannot judge whether a label is *good*, only whether it is a banned empty one; the related-block and focus checks report rather than fail, because both name real pages that need content work |
 
 ## 2. On a schedule — `scripts/ci-full.sh`, 4 steps
 
