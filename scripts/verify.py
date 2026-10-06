@@ -469,33 +469,51 @@ for slug in tool_slugs:
     if not any(('"%s"' % f) in search_js for f in forms):
         bad.append("the search index is missing %s (run build-search-index.py)" % rel_bare)
 
-# 4. a spelled-out count left in prose still has to match the grid below it, so
-#    a hand-typed number that never gets a marker is still caught
-text_bits = []
-prev = 0
-for s in re.finditer(r"<[^>]+>", idx_html):
-    if s.start() > prev:
-        text_bits.append((prev, idx_html[prev:s.start()]))
-    prev = s.end()
-
-grids = [(m.start(), None) for m in re.finditer(r'<div class="guide-grid">', idx_html)]
-for i, (pos, _) in enumerate(grids):
-    end = grids[i + 1][0] if i + 1 < len(grids) else len(idx_html)
-    grids[i] = (pos, len(re.findall(r'class="card guide-card"', idx_html[pos:end])))
-
+# 4. a count stated in the heading above a grid still has to match the cards in it.
+#
+#    THIS CHECK COULD NEVER FIRE, AND THAT IS WHY TWO WRONG HEADINGS SHIPPED.
+#    It scanned the text runs BETWEEN tags. But the claim markers are spans --
+#    `<span data-claim="guides-winter-word">Five</span> guides.` -- so the number and
+#    its noun sit in two different runs and the string "Five guides" never exists for
+#    the regex to match. Every marked claim on the site was therefore unverified, and
+#    the homepage carried two lies: the winter heading said five guides over a grid
+#    of EIGHT (three of them not winter guides at all), and the troubleshooting
+#    heading said thirty-four over a grid of thirty-one. Ty found it by counting the
+#    cards, 2026-10-05: "We need to verify that all of our claims like that are
+#    accurate to what content is underneath."
+#    The fix is to strip the tags OUT of the region above each grid rather than walk
+#    the text between them, so a span boundary is nothing but whitespace.
+grid_positions = [m.start() for m in re.finditer(r'<div class="guide-grid">', idx_html)]
+bounds = [0] + grid_positions + [len(idx_html)]
 claim_re = re.compile(r"\b(" + "|".join(WORDS) + r")\b(?:\s+[a-z]+){0,2}\s+guides?\b", re.I)
-for start, text in text_bits:
+# ONLY HEADINGS AND PARAGRAPHS, never the whole region. Stripping tags across a
+# region joins text that was never one sentence: the card reading "Every RV part by
+# system, and what each one does." sat directly before a card titled "Guides", and the
+# two together read as "one does Guides" -- a false alarm on a page that is correct.
+# A count claim lives in the heading or paragraph that introduces the grid, so that is
+# where this looks. Caught by running the new check before believing it, 2026-10-05.
+CLAIM_BLOCK_RE = re.compile(r"<(h1|h2|h3|p)\b[^>]*>(.*?)</\1>", re.S | re.I)
+
+
+def claim_blocks(fragment):
+    for b in CLAIM_BLOCK_RE.finditer(fragment):
+        yield re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", b.group(2)))
+
+
+for gi, gpos in enumerate(grid_positions):
+    cards = len(re.findall(r'class="card guide-card"', idx_html[gpos:bounds[gi + 2]]))
+    for text in claim_blocks(idx_html[bounds[gi]:gpos]):
+        for m in claim_re.finditer(text):
+            if WORDS[m.group(1).lower()] != cards:
+                bad.append("index.html says %r above a grid holding %d cards"
+                           % (m.group(0).strip(), cards))
+# a claim that is not followed by any grid at all cannot be checked, and an
+# unchecked claim is the thing this whole marker system exists to prevent
+tail = idx_html[grid_positions[-1]:] if grid_positions else idx_html
+for text in claim_blocks(tail):
     for m in claim_re.finditer(text):
-        n = WORDS[m.group(1).lower()]
-        after = [(p, c) for p, c in grids if p > start + m.end()]
-        if not after:
-            bad.append("index.html says %r with no guide grid under it to check against"
-                       % text[m.start() - 40:m.end() + 20].strip())
-            continue
-        cards = after[0][1]
-        if n != cards:
-            bad.append("index.html says %r but the grid under it holds %d cards"
-                       % (m.group(0), cards))
+        bad.append("index.html says %r with no guide grid under it to check against"
+                   % m.group(0).strip())
 
 # 5. the nav dropdown states a brand count and a year range in site.js, the one
 #    count that cannot take a marker because it is built in JS from the config
@@ -518,7 +536,7 @@ if bad:
 else:
     print("  %d guides in the catalogue, all linked from the homepage" % len(on_disk))
     print("  %d data-claim markers match the data on all %d pages; "
-          "%d grid count(s) matched to the cards under them" % (markers_ok, len(pages), len(grids)))
+          "%d grid count(s) matched to the cards under them" % (markers_ok, len(pages), len(grid_positions)))
 
 print("\n=== the guides index names every guide in its structured data ===")
 # The guides index carries an ItemList in JSON-LD, and it is the one place on the site that

@@ -1421,29 +1421,38 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
    cheap, and parses under the W3C CSS checker this repo gates on, whereas
    animating background-position or a custom property does not (both were tested
    against vnu-jar --css on 2026-10-05 and rejected). */
-/* ON HOVER ONLY. The first version ran the sweep on a loop all the time, which is
-   what it looked like it was doing. Ty, 2026-10-05: "it looks like you've just
-   animated the buttons to just have a continuous sheen effect. That should only
-   happen on hover." The resting state is now the plain button -- the highlight is
-   parked outside the clip until the pointer arrives -- and :focus-visible gets the
-   same treatment so a keyboard reader is not left out. The sweep is quicker on
-   hover (1.8s) than the old idle loop, because a pointer only rests there briefly
-   and a 4.2s pass could be missed entirely. */
+/* ON HOVER, ONCE. Two corrections from Ty in one evening. First it ran on a loop all
+   the time -- "it looks like you've just animated the buttons to just have a
+   continuous sheen effect. That should only happen on hover." Then, hover-only but
+   still repeating: "Let's make it so that sheen animation only happens one time."
+   So the FILLED buttons get one pass per hover entry, and re-entering re-arms it.
+   There is no fill mode, so the highlight parks back outside the clip when the pass
+   ends. :focus-visible gets the same treatment so a keyboard reader is not left out.
+   The keyframes now sweep across the whole duration instead of holding the second
+   half, which is what made a single pass look like it had stalled.
+   This rule does NOT touch the gradient-stroke button: its own ::after is disabled
+   below, and its outline arc stays on a loop because Ty asked for that explicitly --
+   "The only one that does make sense being on a loop is the one for find RV service.
+   How it just goes around the stroke edge on the outside, that one looks fine
+   looping." */
 .btn-shine{position:relative;overflow:hidden;isolation:isolate}
 .btn-shine::after{content:"";position:absolute;top:0;bottom:0;left:0;width:45%;pointer-events:none;
   background:linear-gradient(105deg,transparent,rgba(255,255,255,.55),transparent);
   transform:translateX(-170%) skewX(-18deg)}
 .btn-shine:hover::after,
-.btn-shine:focus-visible::after{animation:btn-sheen 1.8s ease-in-out infinite}
+.btn-shine:focus-visible::after{animation:btn-sheen .9s ease-out 1}
 @keyframes btn-sheen{
   0%{transform:translateX(-170%) skewX(-18deg)}
-  45%,100%{transform:translateX(330%) skewX(-18deg)}
+  100%{transform:translateX(330%) skewX(-18deg)}
 }
 /* .btn-gb wears a white face, so a white sheen on it is invisible. Its blue STROKE
    carries the travelling highlight instead: a bright arc laid over the gradient in
    the border box. Layer order matters -- the surface face is first so it paints on
-   top, then the arc, then the gradient underneath it. The arc layer exists only
-   while hovered; at rest this is an ordinary .btn-gb. */
+   top, then the arc, then the gradient underneath it.
+   THIS ONE LOOPS, and that is deliberate. Ty, 2026-10-05: "The only one that does
+   make sense being on a loop is the one for find RV service. How it just goes around
+   the stroke edge on the outside, that one looks fine looping." The arc layer exists
+   only while hovered; at rest this is an ordinary .btn-gb. */
 .btn-gb.btn-shine::after{content:none}
 .btn-gb.btn-shine:hover,
 .btn-gb.btn-shine:focus-visible{
