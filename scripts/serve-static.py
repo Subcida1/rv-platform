@@ -52,7 +52,16 @@ class Handler(http.server.SimpleHTTPRequestHandler):
 def main():
     port = int(sys.argv[1]) if len(sys.argv) > 1 else 8177
     socketserver.TCPServer.allow_reuse_address = True
-    with socketserver.TCPServer(("127.0.0.1", port), Handler) as httpd:
+    # THREADED, AND THAT IS NOT AN OPTIMISATION. A plain TCPServer answers one connection at a
+    # time and holds it for the life of that connection. A browser audit keeps a connection open
+    # between requests, so the audit's own second request -- or anyone else's first -- waits
+    # behind it until it closes, which looks exactly like the server being down: curl hangs with
+    # no output, and a crawler times out on a site that is serving fine. Found 2026-10-06 when a
+    # curl to this server sat for two minutes while a headless Chrome held the socket. The other
+    # audits had always run one client at a time, which is why it took this long to show.
+    class Server(socketserver.ThreadingTCPServer):
+        daemon_threads = True
+    with Server(("127.0.0.1", port), Handler) as httpd:
         httpd.serve_forever()
 
 

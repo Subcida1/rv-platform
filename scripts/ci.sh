@@ -79,6 +79,14 @@ step "directory rendering"                     node scripts/test-directory.js
 step "every state page wires its own data"    node scripts/test-state-pages.js
 step "manuals"                                 python3 scripts/test-manuals.py
 step "parts hub"                               python3 scripts/test-parts.py
+# Prose that explains itself instead of informing the reader. Ty, 2026-10-06, on two real
+# sentences from the tools index: "the content is trying to sell the reasoning, instead of
+# understanding the user is already there and there's nothing left to sell, just provide the
+# information." Four rules, all of them constructions about the TELLING rather than the
+# subject, and each carries a must-not-catch case in --self-test -- a first pass with broad
+# patterns flagged 51 sentences of which nearly all were good prose. See the file header for
+# what was deliberately NOT included and the evidence for leaving it out.
+step "prose that argues with the reader"        python3 scripts/check-prose.py
 step "smoke test"                              node scripts/smoke-test.js
 
 # ---------------------------------------------------------------- 3. structure
