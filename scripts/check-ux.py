@@ -9,11 +9,21 @@ Three checks, in the order they matter:
      so a label with no destination scent is a dead end. Scans published HTML and the
      generators that emit it.
 
-  2. GUIDES WITH NO RELATED/NEXT BLOCK (reports). Every guide should end with a
-     high-scent related or next link — it is what keeps a deep arrival from bouncing
-     (NN/g 2000, 2020). This REPORTS a worklist rather than failing, because the pages
-     it names are real and fixing them is content work, not a build fix. A prompt that
-     fails the build gets deleted (same reasoning as cross-check.py).
+  2. GUIDES WITH NO END-OF-CONTENT LINK BLOCK (reports). Every guide should end its
+     content with a block of two high-scent links ("<div class=\"flex between gap
+     spread\">") — it is what keeps a deep arrival from bouncing (NN/g 2000, 2020).
+     This REPORTS a worklist rather than failing, because the pages it names are real
+     and fixing them is content work, not a build fix. A prompt that fails the build
+     gets deleted (same reasoning as cross-check.py).
+
+     THE MARKER IS THE BLOCK CLASS, NOT THE LINK WORDING, and that distinction was
+     learned the hard way. The first version of this check keyed on the literal labels
+     "Related:" / "Next:" and therefore reported five guides that ALREADY had a good
+     block — theirs read "Generator not charging" / "Power and electrical manuals ->",
+     which is front-loaded and arguably better, but matched neither literal. The check
+     was flagging correct work, which is worse than no check: it sends the reader to
+     "fix" pages that are already right. Detect the structure; leave the wording to the
+     vague-label check above.
 
   3. BARE outline:none (reports). An element that removes the focus ring must replace
      it with a visible focus style (WCAG 2.4.7). This lists every selector that kills
@@ -78,14 +88,14 @@ def check_guide_next_blocks() -> int:
     missing = []
     for f in guides:
         text = (ROOT / f).read_text(encoding="utf-8", errors="replace")
-        if not re.search(r"(related:|>next:)", text, re.I):
+        if 'class="flex between gap spread"' not in text:
             missing.append(f)
     if missing:
-        print(f"  {len(missing)} of {len(guides)} guides have no related/next block:")
+        print(f"  {len(missing)} of {len(guides)} guides have no end-of-content link block:")
         for f in missing:
             print(f"    {f}")
     else:
-        print(f"  all {len(guides)} guides carry a related/next block")
+        print(f"  all {len(guides)} guides end with a link block")
     return len(missing)
 
 
@@ -125,7 +135,7 @@ def main() -> int:
     if n_vague == 0:
         print("  none")
 
-    print("\n[2/3] guides with no related/next block (reports)")
+    print("\n[2/3] guides with no end-of-content link block (reports)")
     n_missing = check_guide_next_blocks()
 
     print("\n[3/3] bare outline:none (reports)")
