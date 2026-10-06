@@ -2834,14 +2834,25 @@ a.tchip:focus-visible{outline:2px solid var(--b1,var(--brand));outline-offset:2p
 .part-h{font-size:16px;font-weight:700;color:var(--text);letter-spacing:-.01em}
 .part-aka{font-size:13px;color:var(--text-3)}
 .part-does{font-size:14.5px;color:var(--text-2);line-height:1.55}
+/* A TYPE PILL IS A FILTER CONTROL NOW, and the two rules that made them look inert are gone.
+   They existed because these were labels on a card that went nowhere. Ty asked for the
+   opposite, 2026-10-05: "we should make those clickable filter options ... show that they're
+   enabled with a kind of like blue fill in". The active state reuses .chip.on, which the
+   manuals and directory facets already use, so every clickable chip on the site lights up the
+   same way instead of this page inventing a second look.
+   CENTRED WITH FLEX, NOT PADDING. The old rule carried equal padding top and bottom, which
+   still leaves the label sitting on its own line-height rather than in the middle of the pill
+   -- the off-centre look Ty spotted. min-height plus align-items centres the line box, and
+   line-height:1 stops the font's leading pushing it down. (Browsers still add a little ghost
+   space from font ascent and descent, so pixel-perfect centring needs `text-box: trim-both
+   cap alphabetic`, which is too new to rely on.)
+   font-family:inherit because this is a <button> now, and a button otherwise takes the
+   browser's default control font rather than the page's. */
 .part-types{justify-content:flex-start;margin-top:2px;gap:7px}
-.part-types .chip{font-size:12px;padding-top:4px;padding-bottom:4px;padding-left:11px;
-  padding-right:11px;cursor:default}
-/* .chip is the same pill used as a CLICKABLE facet on the manuals and directory pages, where
-   .chip:hover lights it up. These ones are labels on a card that goes nowhere, so the hover has to
-   be turned off explicitly: cursor:default alone left them still changing colour under the pointer,
-   which reads as "this is a control". */
-.part-types .chip:hover{color:var(--text-2);border-color:var(--border-2)}
+.part-types .chip{font-family:inherit;font-size:12px;line-height:1;padding:0 11px;min-height:27px;
+  display:inline-flex;align-items:center;cursor:pointer}
+.part-types .chip:hover{color:var(--b1);border-color:var(--b2)}
+.part-types .chip.on:hover{color:var(--b1)}
 .part-links{margin-top:auto;padding-top:12px;border-top:1px solid var(--border);
   display:flex;flex-wrap:wrap;gap:14px;font-size:14px}
 .parts-top{margin-top:14px;font-size:13.5px}

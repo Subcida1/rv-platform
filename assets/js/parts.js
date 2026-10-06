@@ -20,6 +20,20 @@
   var empty = document.getElementById('parts-empty');
   var parts = Array.prototype.slice.call(document.querySelectorAll('.part'));
   var sections = Array.prototype.slice.call(document.querySelectorAll('.parts-sys'));
+  var pills = Array.prototype.slice.call(document.querySelectorAll('.js-part-type'));
+
+  /* THE PILLS ARE THE SAME FILTER AS THE DROPDOWN, NOT A SECOND ONE.
+     A pill sets #parts-type, which is what already narrows the list, so there is one
+     implementation and the two controls can never disagree. Painting runs inside apply() for
+     the same reason: change the dropdown by hand and the pills light up to match.
+     aria-pressed is the honest attribute here -- these are toggle buttons, not links. */
+  function paint() {
+    pills.forEach(function (b) {
+      var on = b.getAttribute('data-type') === typ.value;
+      b.classList.toggle('on', on);
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+  }
 
   function apply() {
     var term = q.value.trim().toLowerCase();
@@ -44,10 +58,21 @@
 
     if (shown) shown.textContent = n;
     if (empty) empty.hidden = n > 0;
+    paint();
   }
+
+  pills.forEach(function (b) {
+    b.addEventListener('click', function () {
+      var v = b.getAttribute('data-type') || '';
+      // Clicking the lit one clears it, which is what "click off" means to a reader.
+      typ.value = (typ.value === v) ? '' : v;
+      apply();
+    });
+  });
 
   [q, sys, typ].forEach(function (el) {
     el.addEventListener('input', apply);
     el.addEventListener('change', apply);
   });
+  paint();
 })();

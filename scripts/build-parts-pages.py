@@ -145,14 +145,25 @@ def part_html(p):
     if does:
         out.append('        <p class="part-does">%s</p>' % esc(does))
 
-    types = [type_label(t) for t in (p.get("types") or [])]
+    types = (p.get("types") or [])
     if types:
+        # A BUTTON, NOT A LABEL. Ty, 2026-10-05: "we should make those clickable filter options
+        # so basically if you click on travel trailer it enables only travel trailer stuff and
+        # then if you click off ... enables it". data-type carries the SLUG the dropdown already
+        # uses, so assets/js/parts.js sets the existing filter rather than a second one, and the
+        # pill and the dropdown cannot disagree.
         out.append('        <p class="chips part-types">%s</p>'
-                   % "".join('<span class="chip">%s</span>' % esc(t) for t in types))
+                   % "".join('<button type="button" class="chip js-part-type" data-type="%s"'
+                             ' aria-pressed="false">%s</button>'
+                             % (esc(t), esc(type_label(t))) for t in types))
 
     links = []
     if p.get("guide"):
-        links.append('<a class="link" href="/guides/%s.html">How to fix it</a>' % esc(p["guide"]))
+        # A small button, not underlined prose. Ty: "I do think that should be maybe a little
+        # button though instead of just a text blank". The maker links stay as links: they go
+        # off-site, which is a different promise from a guide on this site.
+        links.append('<a class="btn btn-secondary btn-sm" href="/guides/%s.html">'
+                     'How to fix it</a>' % esc(p["guide"]))
     for m in (p.get("makers") or []):
         brand, url = m.get("brand"), m.get("url")
         if brand and url:
