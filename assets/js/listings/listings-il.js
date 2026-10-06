@@ -290,7 +290,7 @@ window.RV_LISTINGS_IL = [
    "hitches"
   ],  "base": "amboy",  "areas": [],  "region": null,  "spec": "electrical assembly and slide-outs",  "reg": "north-il"
  },
- {  "n": "Kendall County Repair",  "c": "Newark and the I-80 corridor, IL",  "p": "(815) 695-5200",  "u": "https://kendallcountyrepair.com/",  "t": "center",  "e": false,  "r": false,  "d": "Kendall County Repair is a full-service RV repair facility at 599 Fennel Rd in Newark, Illinois, in business since 2008. It handles routine maintenance and drivability concerns, electrical and plumbing diagnostics, generator repair, water damage and leak repair, body work, and custom remodelling and rebuilds. All work is done in-shop, and it serves the I-80 corridor including Ottawa, LaSalle and Peru.",  "g": [
+ {  "n": "Kendall County Repair",  "c": "Newark and the I-80 corridor, IL",  "p": "(815) 695-5200",  "u": "https://kendallcountirepair.com/",  "t": "center",  "e": false,  "r": false,  "d": "Kendall County Repair is a full-service RV repair facility at 599 Fennel Rd in Newark, Illinois, in business since 2008. It handles routine maintenance and drivability concerns, electrical and plumbing diagnostics, generator repair, water damage and leak repair, body work, and custom remodelling and rebuilds. All work is done in-shop, and it serves the I-80 corridor including Ottawa, LaSalle and Peru.",  "g": [
    "rv service center",
    "generator",
    "body shop"
@@ -346,7 +346,7 @@ window.RV_LISTINGS_IL = [
    "rv repair"
   ],  "base": "sugar grove",  "areas": [],  "region": "Kane County",  "spec": null,  "reg": "chicago-il"
  },
- {  "n": "Cooper Service",  "c": "Orland Park, IL",  "p": "(708) 349-7455",  "u": "http://cooperservice.com/2023/10/30/visit-cooper-service-in-orland-park-il-for-services-on-your-rv-or-motor-home/",  "t": "center",  "e": false,  "r": false,  "d": "Cooper Service is a family-owned auto, truck and RV repair shop on South 104th Avenue in Orland Park, serving Chicago's southwest suburbs since 1956. It advertises RV and motor home repair alongside transmission, brake, engine, suspension and tyre work, with advanced diagnostics for large vehicles. The shop also offers RV storage.",  "g": [
+ {  "n": "Cooper Service",  "c": "Orland Park, IL",  "p": "(708) 349-7455",  "u": "http://cooperservice.com/2023/10/30/visit-cooper-service-in-orland-park-il-for-services-on-your-rv-or-motor-home/",  "t": "center",  "e": false,  "r": false,  "d": "Cooper Service is a family-owned auto, truck and RV repair shop on South 104th Avenue in Orland Park, serving Chicago's southwest suburbs since 1956. It advertises RV and motor home repair alongside transmission, brake, engine, suspension and tire work, with advanced diagnostics for large vehicles. The shop also offers RV storage.",  "g": [
    "rv repair",
    "auto repair",
    "transmission"

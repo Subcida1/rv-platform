@@ -2003,6 +2003,12 @@ figure:has(svg[role="img"]){overflow-x:auto;overflow-y:hidden}
    reach a sibling. Ty, 2026-10-06: "manuals we should display what each system has a bit better
    visually represented." Eight tiles of nothing but text gave a scanning reader nowhere to
    land; the icon is the anchor and the maker names are the answer to "is my thing in here". */
+/* A way to take the answer with you. Ty, 2026-10-06: "give people buttons to save the page
+   maybe". A calculator's result is the thing a reader wants at the counter or in the shop, and
+   the print stylesheet already hides the nav, the buttons and the form chrome, so window.print()
+   produces a clean sheet with the result on it. The button itself is hidden on paper by the
+   existing .btn rule, so it cannot print a picture of itself. */
+.tool-save{margin:14px 0 0;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
 .man-tile .guide-ic{margin:22px 22px 0}
 .man-tile-makers{font-size:12.5px;color:var(--text-3);line-height:1.5}
 

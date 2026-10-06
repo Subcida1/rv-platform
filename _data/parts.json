@@ -623,7 +623,7 @@
             "chocks lost",
             "blocks sinking in mud or hot asphalt",
             "pads crushing",
-            "chocks too small for the tyre"
+            "chocks too small for the tire"
           ],
           "types": [
             "trailer",
@@ -4433,7 +4433,7 @@
           "does": "keeps a heavy coach going straight",
           "fails": [
             "wander and push from trucks",
-            "uneven tyre wear",
+            "uneven tire wear",
             "steering stabiliser worn",
             "kingpin play"
           ],
@@ -4617,9 +4617,9 @@
           "makers": []
         },
         {
-          "id": "wheels,-tyres-and-tpms",
-          "n": "Wheels, tyres and TPMS",
-          "aka": "aluminium wheels|tyre pressure|load range|tpms",
+          "id": "wheels,-tires-and-tpms",
+          "n": "Wheels, tires and TPMS",
+          "aka": "aluminum wheels|tire pressure|load range|tpms",
           "does": "carry the load at highway speed",
           "fails": [
             "age cracking",
@@ -4633,12 +4633,12 @@
           "guide": "rv-tire-replacement",
           "kw": [
             "motorhome tire blowout",
-            "rv tyre age",
-            "aluminium wheel crack"
+            "rv tire age",
+            "aluminum wheel crack"
           ],
           "demand": {
             "weekly": 799,
-            "query": "tyre pressure",
+            "query": "tire pressure",
             "rv_qualified": false
           },
           "makers": []
