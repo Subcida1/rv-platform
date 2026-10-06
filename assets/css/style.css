@@ -400,7 +400,12 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
    did not: this site is about the road. Sized up to 23px from 20px because the
    three dashes need the extra millimetre to stay distinct. */
 .search-bar svg{width:23px;height:23px;stroke:var(--text-3);flex:none}
-.search-bar input{flex:1;background:none;border:none;outline:none;color:var(--text);font-size:16px;min-height:44px}
+/* min-width:0 is load-bearing, not tidiness. `flex:1` sets flex-basis 0 but leaves the
+   automatic minimum size in charge, and for an <input> that minimum is the width the
+   `size` attribute implies -- about 161px. In the 900px header the whole pill is 148px,
+   so the field could not shrink, ran 54px past its own rounded border and printed typed
+   text underneath the Tools button. Found by scripts/audit-layout.mjs, 2026-10-04. */
+.search-bar input{flex:1;min-width:0;background:none;border:none;outline:none;color:var(--text);font-size:16px;min-height:44px}
 .search-bar input::placeholder{color:var(--text-3)}
 .search-bar .btn{padding:11px 24px}
 /* Ty, 2026-09-22: "when you click up on the bar to input text, can we scroll
@@ -2309,7 +2314,22 @@ body.is-embed .embed-credit a{font-weight:800;color:var(--b1)}
 .finder-regions{margin-top:34px}
 .finder-region-h{font-size:19px;font-weight:800;letter-spacing:-.01em;color:var(--text)}
 .finder-region-list{list-style:none;margin:0;padding:0;border-top:1px solid var(--border)}
-.finder-region-row{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1.1fr) auto auto minmax(120px,1fr);align-items:baseline;gap:3px 14px;padding-top:11px;padding-bottom:11px;border-bottom:1px solid var(--border);font-size:14.5px}
+/* THE TRACKS MUST NOT DEPEND ON CONTENT, OR THE COLUMNS MOVE BETWEEN ROWS.
+   display:grid is on the <li>, so every row is its OWN grid and computes its own tracks.
+   With the type and flag columns as `auto`, each row sized them to its own content: a row
+   carrying a "Roadside and stuck" badge pushed its type column ~50px left of a row with no
+   badge, and every `fr` track moved with it, so the town and type columns stair-stepped down
+   the page. Reported by Ty 2026-10-04 from the Michigan page.
+   The fix is to take content out of the track arithmetic: the two badge-bearing columns get
+   fixed widths, which makes the remaining free space identical in every row, so the fr tracks
+   land in the same place every time. The widest badge is "Emergency mobile repair" (~150px at
+   12px type) and the widest type label is "Mobile technician" (~110px at 13px), so 168px and
+   124px hold them without wrapping. */
+.finder-region-row{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1.2fr) 124px 168px minmax(118px,1fr);align-items:baseline;gap:3px 14px;padding-top:11px;padding-bottom:11px;border-bottom:1px solid var(--border);font-size:14.5px}
+/* The spec is a sentence, not a badge, so it takes a full-width line of its own. Anything
+   longer than a couple of words in a fixed column would wrap into an unreadable ribbon, and
+   in the `auto` flag column it starved the name column instead. */
+.finder-region-spec{grid-column:1/-1;margin-top:7px;padding:8px 12px;border:1px solid var(--border-2);border-radius:8px;background:var(--surface);color:var(--text-2);font-size:13px;line-height:1.45}
 .finder-region-name{font-weight:700;color:var(--text)}
 .finder-region-name a{color:var(--b1,var(--brand));text-decoration:none}
 .finder-region-name a:hover{text-decoration:underline}
@@ -2324,6 +2344,7 @@ body.is-embed .embed-credit a{font-weight:800;color:var(--b1)}
 @media (max-width:640px){
  .finder-region-row{grid-template-columns:minmax(0,1fr);gap:2px}
  .finder-region-town,.finder-region-type,.finder-region-flags,.finder-region-call{grid-column:1}
+ .finder-region-spec{grid-column:1;margin-top:6px}
  .finder-region-call{margin-top:4px}
 }
 

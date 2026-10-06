@@ -28,6 +28,7 @@ import { createServer } from 'node:net';
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { removeProfile, warnIfRuntimeFull } from './lib/chrome-profile.mjs';
 
 // .letta IS A CHECKOUT BOUNDARY. Letta keeps agent worktrees under .letta/worktrees/, each a
 // full copy of this repository, so a recursive read of ROOT audits another agent's checkout as
@@ -58,13 +59,17 @@ if (!pages.length) { console.log('no pages with a diagram'); process.exit(0); }
 
 const HTTP = await freePort();
 const CDP = await freePort();
-const PROFILE = `/tmp/cdp-diagramfit-${process.pid}`;
+/* See scripts/lib/chrome-profile.mjs: flatpak hands Chrome a private /tmp, so
+   the path Chrome writes and the path we must delete are different. */
+const PROFILE_LEAF = `cdp-diagramfit-${process.pid}`;
+const PROFILE = `/tmp/${PROFILE_LEAF}`;
 
 const server = spawn('python3', ['-m', 'http.server', String(HTTP), '--bind', '127.0.0.1'],
   { cwd: ROOT, stdio: 'ignore', detached: true });
 server.unref();
 
-fs.rmSync(PROFILE, { recursive: true, force: true });
+warnIfRuntimeFull();
+removeProfile(PROFILE_LEAF);
 const chrome = spawn('flatpak', ['run', 'com.google.Chrome', '--headless=new',
   `--remote-debugging-port=${CDP}`, `--user-data-dir=${PROFILE}`, '--no-first-run',
   '--no-default-browser-check', '--disable-gpu', '--window-size=1400,1000', 'about:blank'],
@@ -75,7 +80,7 @@ function cleanup() {
   for (const p of [chrome.pid, server.pid]) {
     try { process.kill(-p, 'SIGKILL'); } catch { try { process.kill(p, 'SIGKILL'); } catch {} }
   }
-  fs.rmSync(PROFILE, { recursive: true, force: true });
+  removeProfile(PROFILE_LEAF);
 }
 process.on('exit', cleanup);
 

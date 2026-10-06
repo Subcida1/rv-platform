@@ -28,6 +28,7 @@
 import fs from 'node:fs';
 import net from 'node:net';
 import path from 'node:path';
+import { removeProfile, warnIfRuntimeFull } from './lib/chrome-profile.mjs';
 import { spawn } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 
@@ -78,12 +79,18 @@ async function axeSource() {
 
 const HTTP = await freePort();
 const CDP = await freePort();
-const PROFILE = `/tmp/cdp-a11y-${process.pid}`;
+/* The leaf is what Chrome is told to use; the HOST path it lands on is a
+   different string entirely under flatpak. removeProfile() owns that mapping --
+   reading the host path back as if it were the same one is what leaked 28
+   profiles into the runtime tmpfs. */
+const PROFILE_LEAF = `cdp-a11y-${process.pid}`;
+const PROFILE = `/tmp/${PROFILE_LEAF}`;
 
 const server = spawn('python3', ['-m', 'http.server', String(HTTP), '--bind', '127.0.0.1'],
   { cwd: ROOT, stdio: 'ignore', detached: true });
 server.unref();
-fs.rmSync(PROFILE, { recursive: true, force: true });
+warnIfRuntimeFull();
+removeProfile(PROFILE_LEAF);
 /* Locally Chrome is the flatpak build; a GitHub runner has neither flatpak nor that app id, so
    CHROME_BIN lets the pipeline point at the browser that is actually there. Honouring it is not
    optional: without this the scheduled run would fail on a browser it was never going to find. */
@@ -99,7 +106,7 @@ function cleanup() {
   for (const p of [chrome.pid, server.pid]) {
     try { process.kill(-p, 'SIGKILL'); } catch { try { process.kill(p, 'SIGKILL'); } catch {} }
   }
-  fs.rmSync(PROFILE, { recursive: true, force: true });
+  removeProfile(PROFILE_LEAF);
 }
 process.on('exit', cleanup);
 

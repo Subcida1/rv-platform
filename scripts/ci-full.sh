@@ -131,6 +131,26 @@ PYEOF
 }
 step "Lighthouse: Core Web Vitals, lab" lighthouse
 
+# ---------------------------------------------------------------- layout
+# The one thing the other browser instruments cannot see. audit-render.mjs asks "is anything
+# broken" and audit-mobile.mjs asks "does it breathe", and both work at phone width; neither
+# looks at a desktop width, and neither compares one row of a list against the next. That gap
+# is how a badge carrying a whole sentence collapsed the Michigan directory's name column to
+# 0px -- no exception, no sideways scroll, nothing for either instrument to notice, while the
+# page was visibly wrong. It reuses the Chrome and the server already running above.
+#
+# GATING, not reporting, and that is a claim about the instrument rather than optimism: it was
+# validated both ways before being wired in. Against the live, broken directory page it names
+# the column that moved and the 0px box; against this working tree it is silent. Two earlier
+# versions were not, and both were corrected rather than tolerated -- one flagged every wrapped
+# paragraph on the site (a 680px lede "needs" 2294px on one line), and one reported 239
+# overlaps that were all pairs of adjacent lines in quotations, because the bounding box of an
+# INLINE element is the union of every line box it spans. A check that flags correct layout
+# teaches the reader to ignore the output, which is worse than having no check.
+step "audit-layout.mjs: collapsed columns, column drift, overlap" \
+     node scripts/audit-layout.mjs --base "http://127.0.0.1:$PORT/" --port $LH_PORT \
+       --widths 1280,1024,900,393 --out /tmp/layout-ci.json
+
 # ---------------------------------------------------------------- prose
 # Vale. Styles are fetched rather than vendored (they are a dependency, not content), so sync first.
 #

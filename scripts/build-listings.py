@@ -323,12 +323,18 @@ def regions_text(data, slug):
                 bits.append('<span class="finder-flag roadside">Roadside and stuck</span>')
             elif r.get("e"):
                 bits.append('<span class="finder-flag">Emergency mobile repair</span>')
-            if r.get("spec"):
-                bits.append('<span class="finder-flag spec">%s</span>' % esc(r["spec"]))
             # wrapped, so the row grid has a fixed number of children however many
             # flags a listing carries
             flags = ('<span class="finder-region-flags">%s</span>' % "".join(bits)) if bits else \
                 '<span class="finder-region-flags"></span>'
+            # THE SPEC IS NOT A FLAG, AND PUTTING IT IN THE FLAG COLUMN SQUEEZED NAMES TO ZERO.
+            # A spec is a full sentence ("Located in the eastern Upper Peninsula May through
+            # October annually; ..."), and the flags column is an `auto` grid track. Because
+            # display:grid is on the <li>, every row computes its own tracks -- so a long spec
+            # made that one row's flag track ~800px, the `minmax(0,1.5fr)` name track was
+            # allowed to shrink to nothing, and the name overflowed on top of the type column.
+            # It gets its own element and its own full-width line (grid-column:1/-1).
+            spec = ('<span class="finder-region-spec">%s</span>' % esc(r["spec"])) if r.get("spec") else ""
             name = ('<a href="%s" target="_blank" rel="noopener">%s</a>' % (esc(r["u"]), esc(r["n"]))
                     if r.get("u") else esc(r["n"]))
             tel = re.sub(r"[^0-9+]", "", r["p"])
@@ -339,8 +345,9 @@ def regions_text(data, slug):
                 '<span class="finder-region-type">%s</span>'
                 '%s'
                 '<a class="finder-region-call" href="tel:%s">%s</a>'
+                '%s'
                 '</li>' % (name, esc(r["c"]), TYPE_LABEL[r["t"]], flags, esc(tel),
-                           tel_text(r["p"])))
+                           tel_text(r["p"]), spec))
         out.append("</ul>")
     out.append("</div>")
     return "\n".join(out)
