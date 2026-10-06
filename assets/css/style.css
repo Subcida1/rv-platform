@@ -410,9 +410,13 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
    which left the hero on a different margin from every other section (measured at
    360/393/430: hero 18px, everything else 24px). That patch is gone; the hero now
    takes the same 24px gutter as the rest of the page. */
-.hero-inner{position:relative;z-index:2;padding-top:92px;padding-bottom:30px;text-align:center}
-.kicker{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--tint-ink);border:1px solid var(--tint-edge);background:var(--surface);padding:7px 16px;border-radius:999px}
-.hero h1{margin:26px auto 0;max-width:880px;font-size:clamp(40px,6.4vw,76px);font-weight:800;letter-spacing:-.035em;line-height:1.04}
+.hero-inner{position:relative;z-index:2;padding-top:44px;padding-bottom:30px;text-align:center}
+/* The kicker pill that used to sit above this is gone (Ty, 2026-10-05: "it said
+   everything on one open road and a little button. We should remove that button and
+   move all of the content up"). Its <h1> top margin went with it, and .hero-inner's
+   padding-top came down from 92px to 44px. Measured before: 154px of dead space
+   between the bottom of the nav and the top of the heading. After: 44px. */
+.hero h1{margin:0 auto;max-width:880px;font-size:clamp(40px,6.4vw,76px);font-weight:800;letter-spacing:-.035em;line-height:1.04}
 .hero h1 .grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;padding:0 1px}
 .hero .sub{margin:22px auto 0;max-width:640px;font-size:clamp(16px,2vw,19px);color:var(--text-2)}
 .search{max-width:720px;margin:36px auto 0;position:relative}
@@ -1417,11 +1421,20 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
    cheap, and parses under the W3C CSS checker this repo gates on, whereas
    animating background-position or a custom property does not (both were tested
    against vnu-jar --css on 2026-10-05 and rejected). */
+/* ON HOVER ONLY. The first version ran the sweep on a loop all the time, which is
+   what it looked like it was doing. Ty, 2026-10-05: "it looks like you've just
+   animated the buttons to just have a continuous sheen effect. That should only
+   happen on hover." The resting state is now the plain button -- the highlight is
+   parked outside the clip until the pointer arrives -- and :focus-visible gets the
+   same treatment so a keyboard reader is not left out. The sweep is quicker on
+   hover (1.8s) than the old idle loop, because a pointer only rests there briefly
+   and a 4.2s pass could be missed entirely. */
 .btn-shine{position:relative;overflow:hidden;isolation:isolate}
 .btn-shine::after{content:"";position:absolute;top:0;bottom:0;left:0;width:45%;pointer-events:none;
   background:linear-gradient(105deg,transparent,rgba(255,255,255,.55),transparent);
-  transform:translateX(-170%) skewX(-18deg);
-  animation:btn-sheen 4.2s ease-in-out infinite}
+  transform:translateX(-170%) skewX(-18deg)}
+.btn-shine:hover::after,
+.btn-shine:focus-visible::after{animation:btn-sheen 1.8s ease-in-out infinite}
 @keyframes btn-sheen{
   0%{transform:translateX(-170%) skewX(-18deg)}
   45%,100%{transform:translateX(330%) skewX(-18deg)}
@@ -1429,17 +1442,21 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 /* .btn-gb wears a white face, so a white sheen on it is invisible. Its blue STROKE
    carries the travelling highlight instead: a bright arc laid over the gradient in
    the border box. Layer order matters -- the surface face is first so it paints on
-   top, then the arc, then the gradient underneath it. */
+   top, then the arc, then the gradient underneath it. The arc layer exists only
+   while hovered; at rest this is an ordinary .btn-gb. */
 .btn-gb.btn-shine::after{content:none}
-.btn-gb.btn-shine{
+.btn-gb.btn-shine:hover,
+.btn-gb.btn-shine:focus-visible{
   background:
     linear-gradient(var(--surface),var(--surface)) padding-box,
     conic-gradient(from var(--sp-angle),transparent 0deg,rgba(255,255,255,.9) 14deg,transparent 38deg) border-box,
     var(--grad) border-box;
-  animation:sp-scroll 3.4s linear infinite}
+  animation:sp-scroll 1.8s linear infinite}
 @media(prefers-reduced-motion:reduce){
   .btn-shine::after{content:none;animation:none}
-  .btn-gb.btn-shine{animation:none;background:linear-gradient(var(--surface),var(--surface)) padding-box,var(--grad) border-box}
+  .btn-gb.btn-shine:hover,
+  .btn-gb.btn-shine:focus-visible{animation:none;
+    background:linear-gradient(var(--surface),var(--surface)) padding-box,var(--grad) border-box}
 }
 .btn-gb.btn-block{width:100%}
 .btn-gb .route-arrow{width:0;height:0;border-top:7px solid transparent;border-bottom:7px solid transparent;border-left:10px solid currentColor;margin-left:10px;display:inline-block}
