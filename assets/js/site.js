@@ -188,14 +188,14 @@
  '<a href="' + R(rt.manualsRecalls) + '">Recalls and bulletins<span class="sm">Check a unit, and the federal bulletin file</span></a>' +
  '<a href="' + R(rt.manuals) + '">All manuals<span class="sm">Every system, linked at the maker</span></a></div></div>' +
  '</div>' +
- searchFieldHTML('nav-search', 'Search') +
+ searchFieldHTML('nav-search', 'Search or ZIP') +
  '<div class="nav-actions">' + signinLink('btn btn-outline btn-sm') +
  /* The button says where it goes ("RV tools"); the caption above it carries the
     "free" promise that used to live in the utility strip. Ty, 2026-10-05. */
  '<span class="nav-cta"><span class="nav-cta-cap">Free tools</span><a class="btn btn-primary btn-sm btn-shine" href="' + R(rt.tools) + '">RV tools</a></span>' +
  '<button type="button" class="burger" aria-label="Menu" onclick="RV.toggleMenu()"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h12M4 10h12M4 14h12"/></svg></button></div>' +
  '</div>' +
- '<div class="mobile-menu">' + searchFieldHTML('mm-search', 'Search the site') +
+ '<div class="mobile-menu">' + searchFieldHTML('mm-search', 'Search, or a ZIP or town') +
  '<a class="mm-top" href="' + R(rt.home) + '">Home</a>' +
  mmGroup('Tools', rt.tools, [['Weight calculator', rt.calculator]]) +
  mmGroup('Guides', rt.guides, [['Winterize plumbing', rt.guideWinterize],
@@ -226,9 +226,25 @@
  }).join('') + '</div>';
  }
 
+ /* ---------- back to top ----------
+    Ty, 2026-10-05: "can we throw a little 'back to top' button down in the footer as well?
+    basically like amazon does it?" It is a full-width band at the top of the footer rather
+    than a small floating circle: easier to hit, and it reads as the end of the page rather
+    than something sitting on top of it.
+    html{scroll-behavior:smooth} already animates a plain anchor, so this exists for the two
+    cases that does not cover: a reader who asked for reduced motion, and a browser that
+    ignores the property. The href is still there, so with JavaScript off it still jumps. */
+ function toTop() {
+ var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ try { window.scrollTo({ top: 0, left: 0, behavior: reduce ? 'auto' : 'smooth' }); }
+ catch (e) { window.scrollTo(0, 0); }
+ return false;
+ }
+
  function footerHTML() {
  var rt = CFG.routes;
- return '<div class="foot-top"><div class="wrap"><div class="foot-grid">' +
+ return '<a class="to-top" href="#" onclick="return RV.toTop()">Back to top</a>' +
+ '<div class="foot-top"><div class="wrap"><div class="foot-grid">' +
  '<div class="foot-brand">' + logoHTML() +
  '<p>' + esc(CFG.brand.tag) + '</p>' +
  '</div>' +
@@ -526,6 +542,7 @@ function initPrint() {
  brand: CFG.brand,
  contactEmail: CFG.contact ? CFG.contact.email : '',
  toggleMenu: toggleMenu,
+ toTop: toTop,
  searchRoute: searchRoute,
  track: track,
  claimMailto: claimMailto,

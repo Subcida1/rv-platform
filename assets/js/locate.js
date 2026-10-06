@@ -29,18 +29,14 @@
   function townToUrl(town) {
     var idx = window.RV_SEARCH;
     if (!idx || !idx.length) return null;
-    var needle = town.toLowerCase();
+    /* A WHOLE PHRASE, WITH SPACES ON BOTH SIDES, so "gene" cannot match "eugene" and "rv
+       repair" cannot match anything -- it is not a place. The field it reads is the one the
+       index builds for exactly this question: the towns a business names, itself. */
+    var needle = ' ' + town.toLowerCase().replace(/,/g, ' ').replace(/\s+/g, ' ').trim() + ' ';
     for (var i = 0; i < idx.length; i++) {
       var r = idx[i];
-      if (r.c !== 'Business') continue;
-      /* THE ENTRY'S DESCRIPTION OPENS WITH THE BUSINESS'S OWN CITY, so this matches a town
-         exactly rather than matching any word anywhere in its keywords. A loose match is
-         not a small problem: it turned a search for "rv repair" into "RV service near rv
-         repair", which is not a place, and lands the reader on a page that then says it
-         could not place them. Exact-city matching means the hit only appears when what was
-         typed really is a town the directory has a business in. */
-      var city = String(r.d || '').split(' . ')[0].trim().toLowerCase();
-      if (city !== needle) continue;
+      if (r.c !== 'Business' || !r.loc) continue;
+      if ((' ' + r.loc + ' ').indexOf(needle) < 0) continue;
       var slug = String(r.u || '').replace(/^directory\//, '').replace(/\.html$/, '');
       if (slug) return '/directory/' + slug + '?loc=' + encodeURIComponent(town);
     }

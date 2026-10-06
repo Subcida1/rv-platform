@@ -787,6 +787,14 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
 footer{background:var(--bg-dark);color:var(--text-on-dark);margin-top:0}
 footer a{color:var(--text-on-dark-2)}
 footer a:hover{color:var(--text-inv)}
+/* BACK TO TOP, as a full-width band at the top of the footer rather than a small floating
+   circle. Ty, 2026-10-05: "can we throw a little 'back to top' button down in the footer as
+   well? basically like amazon does it?" A band is easier to hit than a small circle and it
+   reads as the end of the page rather than something sitting on top of it. The print
+   stylesheet already lists .to-top among the chrome it hides. */
+.to-top{display:block;background:var(--surface-2);border-bottom:1px solid var(--border);color:var(--text-2);text-align:center;font-size:13px;font-weight:700;padding:18px 24px;transition:background .18s ease,color .18s ease}
+.to-top:hover,.to-top:focus-visible{background:var(--surface);color:var(--text)}
+.to-top::before{content:"\2191";margin-right:9px;font-weight:800}
 .foot-top{padding:72px 0 20px}
 .foot-grid{display:grid;grid-template-columns:1.7fr 1fr 1fr 1fr 1fr 1fr;gap:40px}
 .foot-brand p{margin-top:16px;color:var(--text-2);font-size:14px;max-width:300px}
