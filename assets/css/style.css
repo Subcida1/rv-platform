@@ -1959,6 +1959,20 @@ figure:has(svg[role="img"]){overflow-x:auto;overflow-y:hidden}
 .state-body{display:flex;flex-direction:column;gap:9px;padding:20px 22px 22px;flex:1;
   text-align:center;align-items:center}
 .state-title{font-size:18px;font-weight:800;letter-spacing:-.015em;line-height:1.3}
+/* EVEN LINE BREAKS ON SHORT BLOCKS, and one rule instead of ninety edits.
+   check-balance.mjs measured 131 ragged last lines across 22 pages -- a final line holding one
+   word, which is the ragged look. Four classes carry 114 of them: .guide-meta 42, .state-meta 41,
+   .lede 17, .part-does 14. Shortening 41 state blurbs by hand would have cost real geography
+   ("Denver and the Front Range, the mountains and the Western Slope" tells a reader where to
+   find service), so the browser evens the lines instead. Browsers cap balancing at a handful of
+   lines, which is exactly the size of block this is for.
+   IT DOES NOT REPLACE A DELIBERATE BREAK. Where a break must fall at a sentence boundary -- the
+   homepage directory lede -- that is a <br>, because balancing evens lines and does not care
+   where the sentences are. */
+.guide-meta,.state-meta,.part-does,.lede,.cardsub,.hstat-p,.man-tile-makers,.start-here-p,.note-sm,.p{text-wrap:balance}
+/* .p is in the list because the two blocks still ragged at desktop width after the first
+   pass were both 3-line .p paragraphs -- inside the range browsers will balance. Longer
+   paragraphs are ignored by the property, so it costs nothing to leave it on them. */
 .state-meta{font-size:13px;color:var(--text-3);line-height:1.55;flex:1}
 .state-counts{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;font-size:12.5px;color:var(--text-3)}
 .state-counts b{color:var(--text);font-weight:800}

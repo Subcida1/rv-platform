@@ -59,6 +59,33 @@ STRICT = (
     ("importance-assertion",
      r"\b(?:is|are|was|were) the only one (?:that|which) counts\b",
      "asserting that something matters instead of saying why it matters"),
+
+    # THE THREE BELOW CAME FROM A REVIEW OF THE GUIDES, 2026-10-06, and they are the highest
+    # yielding rules here because the reviewer named the root cause: the guides explain the
+    # mechanism well, and then narrate where the facts came from and why the page's own method
+    # is sound. "Read that as what it says" was the worst line in the set, and it appeared in
+    # two different files -- so it is a habit, not a slip, which is exactly what a rule is for.
+    ("reading-instruction",
+     r"\bRead (?:that|this|those) (?:slowly|carefully|as what it says|once more|again)\b",
+     "telling the reader how to read instead of saying the thing"),
+
+    ("source-theatre",
+     # NARROWED 2026-10-06 after hand-checking the first run. The broad version included
+     # "rather than relying on" and "rather than leaving you to guess", and both have honest
+     # uses: "a breakaway system carries its own battery rather than relying on the truck" is a
+     # real alternative, and "tankless units report what they think is wrong rather than leaving
+     # you to guess" is about the appliance, not about us. Four of twenty hits were that shape.
+     # What is left only fires when the subject is our own sourcing.
+     r"\brather than only in the field\b|"
+     r"\bthe one the (?:manufacturers|makers) do document\b|"
+     r"\bthe (?:makers|manufacturers)(?:'|’)? own (?:words|language|listing)\b",
+     "remarking on the quality of our sourcing rather than citing it"),
+
+    ("method-justification",
+     r"\bwhich is the only point that\b|\b(?:is|are) not arbitrary\b|"
+     r"\bthe (?:consistency|agreement|value of knowing) is the (?:useful|point|important)\b|"
+     r"\bit is worth keeping them apart\b",
+     "arguing that the page's method is sound to a reader who is already using it"),
 )
 
 # ---- rules that only report -------------------------------------------------
@@ -148,8 +175,12 @@ def scan(pages):
                          ", ".join(found)))
         for line in sentences(text):
             for name, rx, why in STRICT:
-                if re.search(rx, line, re.I):
-                    hits.append((str(rel), name, why, line[:190]))
+                m = re.search(rx, line, re.I)
+                if m:
+                    # THE MATCHED TEXT, NOT JUST THE SENTENCE. Without it, checking a hit by
+                    # hand means re-running the regex in my head, and the first run produced
+                    # four false positives I could only classify by doing exactly that.
+                    hits.append((str(rel), name, why, m.group(0)[:70], line[:190]))
             for name, rx, why in NOTED:
                 if re.search(rx, line, re.I):
                     noted.append((str(rel), name, why, line[:190]))
@@ -168,6 +199,18 @@ def self_test():
         "Not a loan offer.",
         "Measure at the battery, not at the converter, because the converter can be fine while "
         "the battery cannot charge.",
+        # must not fire on the rules added 2026-10-06
+        "Read the pressure at the regulator, then at the appliance.",
+        "That 15 minutes is the reason a breakaway system carries its own battery rather than "
+        "relying on the truck.",
+        "Tankless units fail differently, and they report what they think is wrong rather than "
+        "leaving you to guess.",
+        "The foam on the bearing block serves as a bearing and guide for system operation.",
+        "Read your own state's section, and read it again if you travel.",
+        "The order of the checks matters because each one removes a cause.",
+        "Suburban wants the blower turning at about 75 percent of normal rpm before ignition.",
+        "A limit switch that has tripped and stayed open breaks the circuit that starts the "
+        "blower.",
     ]
     bad = [
         ("source-meta", "A rough estimate by the Weather Service's own description."),
@@ -175,6 +218,17 @@ def self_test():
         ("caveat-then-justifies",
          "Not a loan offer. The rate a lender quotes you is the only one that counts."),
         ("importance-assertion", "The rate a lender quotes you is the only one that counts."),
+        # all three below are verbatim from the guides, found by review 2026-10-06
+        ("reading-instruction",
+         "Read that as what it says: the rod is not an accessory, the warranty turns on it being "
+         "fitted."),
+        # the first case for this rule was the "publish pass tests" sentence above. Narrowing the
+        # rule dropped it, and the self-test failed loudly rather than quietly -- which is the
+        # whole point of having must-catch cases. This is the verbatim sentence that replaced it.
+        ("source-theatre", "The mechanism is the one the manufacturers do document."),
+        ("method-justification",
+         "The sequence below is not arbitrary. It runs from the cheapest and most likely to the "
+         "most expensive and least likely."),
     ]
     failures = []
     for name, line in bad:
@@ -209,10 +263,11 @@ def main():
     print("scanned %d page(s)" % len(pages))
     print("STRICT  %d hit(s) across %d page(s)"
           % (len(hits), len(set(h[0] for h in hits))))
-    for rel, name, why, line in hits:
+    for rel, name, why, matched, line in hits:
         print("\n  %s" % rel)
-        print("    rule: %s -- %s" % (name, why))
-        print("    %s" % line)
+        print("    rule:    %s -- %s" % (name, why))
+        print("    matched: %r" % matched)
+        print("    line:    %s" % line)
     if a.noted:
         print("\nNOTED (report only) %d" % len(noted))
         for rel, name, why, line in noted[:40]:

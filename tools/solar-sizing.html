@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="canonical" href="https://originrv.com/tools/solar-sizing">
   <title>RV Solar Panel Calculator: How Many Watts You Need</title>
   <meta name="description" content="Daily watt-hours and peak sun hours give the solar panel watts you need, with the NREL derate applied and the maker-recommended margin shown too.">
-  <link rel="stylesheet" href="assets/css/style.css?v=3101154b">
+  <link rel="stylesheet" href="assets/css/style.css?v=f825dfae">
 <link rel="icon" type="image/svg+xml" href="assets/img/brand/favicon.svg?v=dd9ff106">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/brand/favicon-32.png?v=d9338088">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/img/brand/favicon-16.png?v=f67f4631">
@@ -88,12 +88,12 @@
 <div class="wrap">
  <div class="prose">
   <h2>Where the formula comes from</h2>
-  <p>The sizing method is the one the panel and battery makers publish: daily watt-hours divided by peak sun hours gives the panel watts. Renogy states it as total solar wattage needed equals daily watt-hours divided by peak sun hours, and Battle Born states the same formula with a 2,400 watt-hour example that yields 600 watts at 4 peak sun hours. The derate factor, the share of nameplate power that actually reaches the batteries, is NREL's: the PVWatts method defaults to a 0.77 derate, and this tool applies it rather than pretending nameplate watts arrive at the battery.</p>
+  <p>The sizing method is the one the panel and battery makers publish: daily watt-hours divided by peak sun hours gives the panel watts. Renogy states it as total solar wattage needed equals daily watt-hours divided by peak sun hours, and Battle Born states the same formula with a 2,400 watt-hour example that yields 600 watts at 4 peak sun hours. The derate factor, the share of nameplate power that actually reaches the batteries, is NREL's: the PVWatts method defaults to a 0.77 derate, and this tool applies the derate.</p>
   <p>On top of the derate, the makers recommend margin for imperfect days. Battle Born recommends adding 20 to 30 percent solar capacity when space allows, and Renogy rounds its worked example up from 200 to 250 or 300 watts. The tool shows the raw answer and the margined one.</p>
 
   <h2>What the answer means</h2>
   <p>The result is a starting point for shopping, not a guarantee. Panels flat on an RV roof face the sky rather than the sun, so winter and northern latitudes cut the harvest below the rated hours. Shade, dirt on the panels, and a partially drained battery all cut it further. If the answer says 400 watts, buying 400 watts of panel and expecting a full recharge every day in Oregon in December will disappoint you; the same array in Arizona will mostly not.</p>
-  <p>The rule of thumb worth knowing: Battle Born's guideline of roughly 200 watts of solar per 100 amp-hours of lithium battery capacity, which is a sanity check on the sizing answer rather than a substitute for it.</p>
+  <p>Battle Born's rule of thumb: about 200 watts of solar per 100 amp-hours of lithium battery capacity, which is a sanity check on the sizing answer rather than a substitute for it.</p>
 
   <h2>Where to go next</h2>
   <p><a href="/tools/battery-runtime">The battery runtime calculator</a> answers the other half: how long the bank carries you between charges. <a href="/tools/watts-to-amps">The watts to amps calculator</a> converts any appliance label into the draw it becomes on the battery.</p>
