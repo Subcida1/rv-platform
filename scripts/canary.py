@@ -85,7 +85,7 @@ CANARIES = [
     # it pass -- reported as BLIND. Recorded here because the rule has the same weakness the
     # canary had: a page carrying the right id once and a wrong one elsewhere is not caught.
     ("an analytics id that nobody else has", "GA4",
-     "id=G-G8X4MQ", "id=G-NOSUCHID", 99),
+     "G-G8X4MQ", "G-NOSUCHID", 99),
 
     ("a missing theme-color", "brand head tags",
      '<meta name="theme-color"', '<meta name="x-canary"', 1),
@@ -176,7 +176,7 @@ def main():
         blind += state == "BLIND"
         broken += state == "BROKEN"
 
-    print("\n%d caught, %d blind, %d broken out of %d" % (caught, blind, broken, len(CANARIES)))
+    print("\n%d caught, %d blind, %d broken out of %d" % (caught, blind, broken, len(chosen)))
     if blind:
         print("A BLIND check is one that stays green with the fault it exists to find. That is")
         print("worse than no check, because it is trusted.")
