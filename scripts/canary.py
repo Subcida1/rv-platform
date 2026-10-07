@@ -64,8 +64,11 @@ CANARIES = [
     ("a link to a page that does not exist", "internal links resolve",
      "href=\"guides/", "href=\"guides/no-such-page-canary.html\" x=\"", 1),
 
-    ("a stale asset hash", "every asset reference carries a current content hash",
-     ".css?v=", ".css?v=deadbeef00&x=", 1),
+    # RUNNER: stamp_assets.py --check, NOT the gate. verify.py REPORTS a stale hash and still
+    # exits 0; the failure comes from the --check step in ci.sh. A canary that only runs the gate
+    # can never see this rule, and that is a limit of the suite rather than a fault in the rule.
+    ("a stale asset hash", "stale",
+     ".css?v=", ".css?v=deadbeef00&", 1, ["python3", "scripts/stamp_assets.py", "--check"]),
 
     ("JSON-LD that does not parse", "JSON-LD parses",
      "{\"@context\"", "{ not json @context\"", 1),
@@ -104,6 +107,13 @@ def dirty() -> bool:
     return bool(out)
 
 
+def run_runner(cmd=None):
+    """The gate, or a specific checker when a canary names one."""
+    cmd = cmd or [sys.executable, "scripts/verify.py"]
+    p = subprocess.run(cmd, cwd=ROOT, capture_output=True, text=True)
+    return p.returncode, p.stdout + p.stderr
+
+
 def run_gate():
     """One full verify.py run. Returns (exit code, output)."""
     p = subprocess.run([sys.executable, "scripts/verify.py"], cwd=ROOT,
@@ -111,7 +121,7 @@ def run_gate():
     return p.returncode, p.stdout + p.stderr
 
 
-def canary(name, heading, find, repl, count=0):
+def canary(name, heading, find, repl, count=0, runner=None):
     """Inject, run, restore, and say what happened."""
     before = GATE.read_text(encoding="utf-8")
     if find not in before:
@@ -121,7 +131,7 @@ def canary(name, heading, find, repl, count=0):
         return "BROKEN", "the injection changed nothing, so the canary tested nothing"
     try:
         GATE.write_text(after, encoding="utf-8")
-        rc, out = run_gate()
+        rc, out = run_runner(runner)
     finally:
         GATE.write_text(before, encoding="utf-8")
 
@@ -169,7 +179,8 @@ def main():
     for name, heading, find, *rest in chosen:
         repl = rest[0] if rest else ""
         n = rest[1] if len(rest) > 1 else 0
-        state, why = canary(name, heading, find, repl, n)
+        runner = rest[2] if len(rest) > 2 else None
+        state, why = canary(name, heading, find, repl, n, runner)
         mark = {"CAUGHT": "ok   ", "BLIND": "BLIND", "BROKEN": "BROKE"}[state]
         print("  %s  %-38s %s" % (mark, name, why))
         caught += state == "CAUGHT"
