@@ -116,6 +116,18 @@ CANARIES = [
      "<title>RV Tools", "<title>RV Kit", 1,
      ["python3", "scripts/check-keywords.py", "--strict"]),
 
+    # check-ux: a heading with nothing under it. The rule only fires when the NEXT heading is the
+    # same level or higher, so the fault is an h1 immediately followed by another h1.
+    ("a heading with nothing under it", "headings with nothing under them",
+     "<h1", "<h1>Stub canary heading</h1>\n<h1", 1,
+     ["python3", "scripts/check-ux.py"]),
+
+    # check-generated.sh: a generated page edited by hand. Touching data-parts.html is the shape
+    # of the mistake made three times on 2026-10-06.
+    ("a generated page edited by hand", "disagree",
+     "<title>", "<title>Canary edited by hand: ", 1,
+     ["bash", "scripts/check-generated.sh"], "tools/index.html"),
+
     ("prose that argues with the reader", "STRICT",
      "<h1", "<h1>A rough estimate by the Weather Service\'s own description. </h1><h1", 1,
      ["python3", "scripts/check-prose.py"]),
