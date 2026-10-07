@@ -469,6 +469,27 @@ START_TITLE = "New RV Owner: The Things to Get Right First"
 # the homepage and the guides index.
 
 
+def new_owner_content():
+    """The new-owner guide's content, from _data/new-owner.json.
+
+    WHY A DATA FILE. The old page is 331 lines of hand-authored HTML inside this builder, and the
+    100x rewrite Ty asked for is several times that. Content that size does not belong in a Python
+    function: it cannot be reviewed as prose, it cannot be edited without risking the code around
+    it, and every check that reads the page has to read it through this file. The JSON is the
+    page, and this function is only how it becomes HTML.
+    """
+    d = json.loads((ROOT / "_data" / "new-owner.json").read_text(encoding="utf-8"))
+    out = []
+    op = d["opener"]
+    out.append('<h2 class="man-h2">%s</h2>' % op["title"])
+    out.append('<div class="callout"><b>%s</b></div>' % op["lede"])
+    for it in op["items"]:
+        out.append('<h3>%s</h3>' % it["n"])
+        out.append('<p>%s</p>' % it["html"])
+    out.append(d.get("migrated_sections_html", ""))
+    return "\n  ".join(out)
+
+
 def start_here_page():
     """The new-owner walkthrough. Prose, one table and one diagram, all hand-authored here
     because this page is not a slice of the manuals manifest."""
