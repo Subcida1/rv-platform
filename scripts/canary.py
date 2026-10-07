@@ -68,7 +68,7 @@ CANARIES = [
     # exits 0; the failure comes from the --check step in ci.sh. A canary that only runs the gate
     # can never see this rule, and that is a limit of the suite rather than a fault in the rule.
     ("a stale asset hash", "stale",
-     ".css?v=", ".css?v=deadbeef00&", 1, ["python3", "scripts/stamp_assets.py", "--check"]),
+     ".css?v=", ".css?v=deadbeef00", 1, ["python3", "scripts/stamp_assets.py", "--check"]),
 
     ("JSON-LD that does not parse", "JSON-LD parses",
      "{\"@context\"", "{ not json @context\"", 1),
