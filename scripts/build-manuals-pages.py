@@ -517,6 +517,24 @@ def render_new_owner(data):
             body.append('<details class="no-sec"%s><summary id="%s">%s</summary>%s</details>'
                         % (" open" if sec.get("open") else "", sec["id"], sec["title"],
                            render_new_owner_blocks(sec["blocks"])))
+    # THE SOURCES BLOCK, WITHOUT WHICH THE QUOTATIONS ARE UNVERIFIABLE.
+    # check-quotes.py reads the hrefs on a page and tests every quotation against all of them. Two
+    # of the three drafting agents independently reported that the content schema had nowhere to
+    # put a URL, which meant the guide would have been the one page on this site whose quotes the
+    # checker could not see -- the same defect the page had before the rewrite, relocated. Only
+    # fetch-confirmed sources are listed: a URL that merely appeared in a search result has not
+    # been read, and cannot verify anything.
+    src = ROOT / "_data" / "new-owner-sources.json"
+    if src.exists():
+        items = json.loads(src.read_text(encoding="utf-8")).get("sources", [])
+        if items:
+            nav.append('<a class="no-nav-part" href="#sources">Sources</a>')
+            body.append('<h2 class="man-h2" id="sources">Sources</h2>')
+            body.append('<p>The documents behind the figures and quotations in this guide.</p>')
+            body.append('<ul class="no-sources">%s</ul>' % "".join(
+                '<li><a href="%s" rel="nofollow noopener">%s</a></li>' % (i["url"], i["label"])
+                for i in items))
+
     return ('<nav class="no-nav" aria-label="On this page"><p class="no-nav-h">On this page</p>%s</nav>'
             % "\n".join(nav), "\n".join(body))
 

@@ -1,0 +1,161 @@
+{
+ "_why": "The documents behind the guide's quotations. check-quotes.py reads the hrefs on the page and tests every quotation against all of them, so this list is what makes the guide's quotes checkable at all. Only FETCH-CONFIRMED sources from the research ledgers are here: a URL that merely appeared in a search result has not been read and cannot verify anything.",
+ "sources": [
+  {
+   "label": "RVIA trailer brake requirements",
+   "url": "https://assets.interactcp.com/byerlyrv/pdf/maintenance_schedules/Keystone_RV_Maintenance_Schedule.pdf"
+  },
+  {
+   "label": "atsdr.cdc.gov",
+   "url": "https://www.atsdr.cdc.gov/ToxProfiles/tp189-c1-b.pdf"
+  },
+  {
+   "label": "Camping World",
+   "url": "https://blog.campingworld.com/learn-to-rv/when-to-winterize-an-rv/"
+  },
+  {
+   "label": "Camping World",
+   "url": "https://blog.campingworld.com/find-your-rv/4-season-rv/"
+  },
+  {
+   "label": "Michelin RV tire guide",
+   "url": "https://business.michelinman.com/people-transportation/rv/load-and-inflation-tables"
+  },
+  {
+   "label": "Leviton, electrical",
+   "url": "https://captaincode2023.leviton.com/node/352"
+  },
+  {
+   "label": "cdc.gov",
+   "url": "https://www.cdc.gov/healthywater/emergency/drinking/disinfection-cisterns.html"
+  },
+  {
+   "label": "doityourselfrv.com",
+   "url": "https://www.doityourselfrv.com/how-to-blow-out-rv-water-lines/"
+  },
+  {
+   "label": "dtsc.ca.gov",
+   "url": "https://dtsc.ca.gov/chemical-toilet-products-advisory-for-consumers-fact-sheet/"
+  },
+  {
+   "label": "equalizerhitch.com",
+   "url": "https://www.equalizerhitch.com/blog/troubleshooting-common-sway-issues/"
+  },
+  {
+   "label": "extension.arizona.edu",
+   "url": "https://extension.arizona.edu/sites/extension.arizona.edu/files/pubs/az1233-2018.pdf"
+  },
+  {
+   "label": "Federal Communications Commission",
+   "url": "https://www.fcc.gov/wireless/.../consumer-signal-boosters"
+  },
+  {
+   "label": "fmcsa.dot.gov",
+   "url": "https://www.fmcsa.dot.gov/safety/ss-39342b3-fmcsrs-states-any-full-trailer-any-semitrailer-or-any-pole-trailer-having-gross"
+  },
+  {
+   "label": "fourwheelcampers.com",
+   "url": "https://fourwheelcampers.com/wp-content/uploads/2026/04/2026-FWC-Owners-Manual_Project-M-3.17.26.pdf"
+  },
+  {
+   "label": "greenewayrv.com",
+   "url": "https://www.greenewayrv.com/wisconsin-rv-sales/winterization-step-by-step"
+  },
+  {
+   "label": "in.gov",
+   "url": "https://www.in.gov/health/eph/files/Interpretive_Guidelines_Holding_Tanks_Campgrounds.pdf"
+  },
+  {
+   "label": "keystonerv.com",
+   "url": "https://www.keystonerv.com/owners/managing-condensation-and-mold-in-your-rv"
+  },
+  {
+   "label": "kleentank.com",
+   "url": "https://kleentank.com/how-do-i-fix-my-rvs-tank-sensors/"
+  },
+  {
+   "label": "Tiffin owner manuals",
+   "url": "https://knowledge.tiffinmotorhomes.com/Owner_Hub/Tiffin_Motorhome_Units/Byway/Byway_Owner_Manuals/2027_Byway_Manual/13_2027_Byway_Plumbing_and_Bath_Features"
+  },
+  {
+   "label": "Tiffin owner manuals",
+   "url": "https://knowledge.tiffinmotorhomes.com/.../13_2027_Byway_Plumbing_and_Bath_Features"
+  },
+  {
+   "label": "Tiffin owner manuals",
+   "url": "https://knowledge.tiffinmotorhomes.com/Owner_Hub/Tiffin_Motorhome_Units/Allegro_Bay/Allegro_Bay_Owner_Manuals/2027_Allegro_Bay_Manual/13_2027_Allegro_Bay_Plumbing_and_Bath_Features"
+  },
+  {
+   "label": "Lance Camper owner manuals",
+   "url": "https://www.lancecamper.com/four-seasons/"
+  },
+  {
+   "label": "Lance Camper owner manuals",
+   "url": "https://www.lancecamper.com/docs/trailer-owners-manual.pdf"
+  },
+  {
+   "label": "lippert.com",
+   "url": "https://www.lippert.com/blog/leveling-jacks-versus-stabilizing-jacks"
+  },
+  {
+   "label": "Heartland owners manual library",
+   "url": "https://manuals.heartlandowners.org/.../Water%20Systems%20Guide%20V1.2.pdf"
+  },
+  {
+   "label": "Heartland owners manual library",
+   "url": "https://manuals.heartlandowners.org/manuals/Exterior/Tires/Goodyear/Goodyear%20tire-care-guide-1.pdf"
+  },
+  {
+   "label": "nfpa.org",
+   "url": "https://www.nfpa.org/product/nfpa-1192-standard/p1192code/nfpa-1192-standard-on-recreational-vehicles-2026/119226"
+  },
+  {
+   "label": "NFPA 1192, Standard on Recreational Vehicles",
+   "url": "https://nfpanorm.com/wp-content/preview/1192%202021.pdf"
+  },
+  {
+   "label": "NHTSA",
+   "url": "https://www.nhtsa.gov/vehicle-safety/tires"
+  },
+  {
+   "label": "outfittermfg.com",
+   "url": "https://outfittermfg.com/assets/pdf/Owners-Manual_v2023.1.pdf"
+  },
+  {
+   "label": "rventhusiast.com",
+   "url": "https://rventhusiast.com/rvexpert/stink-bombed/"
+  },
+  {
+   "label": "RV Industry Association",
+   "url": "https://www.rvia.org/standards-regulations/association-and-ansi-adopted-standards"
+  },
+  {
+   "label": "RV Industry Association",
+   "url": "https://www.rvia.org/system/files/media/file/Trailer%20Brake%20Requirements.pdf"
+  },
+  {
+   "label": "RV Technician Library",
+   "url": "https://www.rvtechlibrary.com/tires/rvtires.pdf"
+  },
+  {
+   "label": "RV Technician Library",
+   "url": "https://www.rvtechlibrary.com/plumbing/sanitizing.php"
+  },
+  {
+   "label": "RV Technician Library",
+   "url": "https://rvtechlibrary.com/plumbing/pressure.php"
+  },
+  {
+   "label": "NHTSA (document server)",
+   "url": "https://static.nhtsa.gov/odi/tsbs/2022/MC-10226806-0001.pdf"
+  },
+  {
+   "label": "Tire Review",
+   "url": "https://www.tirereview.com/wp-content/uploads/2014/07/U.S_DOT_NHTSA_-_Tire_Aging_A_Summary_of_NHTSAs_Work1.pdf"
+  },
+  {
+   "label": "winnebago.com",
+   "url": "https://www.winnebago.com/lifestyle/winnebagolife/education/rv-winterizing-guide-helpful-tips-special-considerations"
+  }
+ ]
+}
