@@ -149,6 +149,11 @@ CANARIES = [
      "A furnace that will not light is very often not a dead furnace at all.",
      1, None, "guides/rv-furnace-not-working.html"),
 
+    # every page with a .search-bar must carry the same road mark, and duplicated markup is how
+    # the Cloudflare beacon drifted. The fault nudges one page's copy of the mark.
+    ("a search bar carrying a different mark", "every search bar carries the same mark",
+     "M4 21.5 9.2 3.5", "M4 21.5 9.3 3.5", 1, None, "directory/index.html"),
+
     ("prose that argues with the reader", "STRICT",
      "<h1", "<h1>A rough estimate by the Weather Service\'s own description. </h1><h1", 1,
      ["python3", "scripts/check-prose.py"]),
