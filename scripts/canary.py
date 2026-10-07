@@ -34,8 +34,10 @@ weekly, or after editing any check, which is the moment its answer changes.
     python3 scripts/canary.py --list        what is covered, and what is not
 """
 import argparse
+import atexit
 import pathlib
 import re
+import signal
 import subprocess
 import sys
 
@@ -101,6 +103,35 @@ CANARIES = [
 ]
 
 
+# THE TREE MUST SURVIVE BEING KILLED. A finally block does not run on SIGTERM, and that is not
+# theoretical: a ten minute `timeout` around a suite run left a canary fault IN index.html, and
+# the next verify.py run failed on it. A canary that can corrupt the working tree is worse than no
+# canary, because it damages the thing it exists to protect.
+#
+# So the restore is registered three ways: the per-canary finally (the normal path), an atexit
+# hook (an exception or a normal exit), and signal handlers for SIGTERM, SIGINT and SIGHUP (being
+# killed). _ORIGINAL holds the file exactly as it was found, and restore() is idempotent.
+_ORIGINAL = None
+_RESTORED = False
+
+
+def restore() -> None:
+    global _RESTORED
+    if _RESTORED or _ORIGINAL is None:
+        return
+    try:
+        GATE.write_text(_ORIGINAL, encoding="utf-8")
+        _RESTORED = True
+    except Exception:
+        pass
+
+
+def _on_signal(signum, _frame):
+    restore()
+    print("\ninterrupted (signal %d): index.html restored before exit" % signum)
+    sys.exit(128 + signum)
+
+
 def dirty() -> bool:
     out = subprocess.run(["git", "status", "--porcelain"], cwd=ROOT,
                          capture_output=True, text=True).stdout.strip()
@@ -133,6 +164,8 @@ def canary(name, heading, find, repl, count=0, runner=None):
         GATE.write_text(after, encoding="utf-8")
         rc, out = run_runner(runner)
     finally:
+        # restored from the string read at the top of THIS canary, and the atexit/signal hooks
+        # restore from the one read at startup, so a kill mid-canary is covered too
         GATE.write_text(before, encoding="utf-8")
 
     if rc == 0:
@@ -170,6 +203,12 @@ def main():
         print("their own --self-test, which is a weaker instrument than a canary: it proves the")
         print("rule matches text it is handed, not that the rule is wired to the gate.")
         return 0
+
+    global _ORIGINAL
+    _ORIGINAL = GATE.read_text(encoding="utf-8")
+    atexit.register(restore)
+    for sig in (signal.SIGTERM, signal.SIGINT, signal.SIGHUP):
+        signal.signal(sig, _on_signal)
 
     if dirty():
         print("refusing to run: the working tree has uncommitted changes, and a canary edits and")
