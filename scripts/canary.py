@@ -100,6 +100,10 @@ CANARIES = [
 
     ("a homepage count that is not the real one", "homepage figures match reality",
      'data-count="39"', 'data-count="999"', 1),
+
+    # a data-claim marker whose value no longer matches the thing it claims
+    ("a claim the data disagrees with", "every stated count matches the data",
+     'data-claim="tools-live">8<', 'data-claim="tools-live">99<', 1),
 ]
 
 
@@ -152,21 +156,22 @@ def run_gate():
     return p.returncode, p.stdout + p.stderr
 
 
-def canary(name, heading, find, repl, count=0, runner=None):
+def canary(name, heading, find, repl, count=0, runner=None, target=None):
     """Inject, run, restore, and say what happened."""
-    before = GATE.read_text(encoding="utf-8")
+    path = ROOT / target if target else GATE
+    before = path.read_text(encoding="utf-8")
     if find not in before:
-        return "BROKEN", "the injection anchor %r is not in index.html any more" % find[:40]
+        return "BROKEN", "the injection anchor %r is not in %s any more" % (find[:40], target or "index.html")
     after = before.replace(find, repl, 1) if count == 0 else before.replace(find, repl, count)
     if after == before:
         return "BROKEN", "the injection changed nothing, so the canary tested nothing"
     try:
-        GATE.write_text(after, encoding="utf-8")
+        path.write_text(after, encoding="utf-8")
         rc, out = run_runner(runner)
     finally:
         # restored from the string read at the top of THIS canary, and the atexit/signal hooks
         # restore from the one read at startup, so a kill mid-canary is covered too
-        GATE.write_text(before, encoding="utf-8")
+        path.write_text(before, encoding="utf-8")
 
     if rc == 0:
         return "BLIND", "the gate stayed green with the fault in place"
@@ -227,7 +232,8 @@ def main():
         repl = rest[0] if rest else ""
         n = rest[1] if len(rest) > 1 else 0
         runner = rest[2] if len(rest) > 2 else None
-        state, why = canary(name, heading, find, repl, n, runner)
+        target = rest[3] if len(rest) > 3 else None
+        state, why = canary(name, heading, find, repl, n, runner, target)
         mark = {"CAUGHT": "ok   ", "BLIND": "BLIND", "BROKEN": "BROKE"}[state]
         print("  %s  %-38s %s" % (mark, name, why))
         caught += state == "CAUGHT"
