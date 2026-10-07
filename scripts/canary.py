@@ -137,7 +137,15 @@ def canary(name, heading, find, repl, count=0, runner=None):
 
     if rc == 0:
         return "BLIND", "the gate stayed green with the fault in place"
-    # the failure has to be THIS rule, or the canary proves the wrong thing
+    # THE FAILURE HAS TO BE THIS RULE, or the canary proves the wrong thing. But the `=== heading`
+    # shape is verify.py's alone: a canary with its own runner prints something else, and the
+    # stamp check says "1 reference(s) were stale" with no header at all. That mismatch reported a
+    # working rule as blind for the fifth time in this file. A custom runner therefore just has to
+    # mention the rule in its output somewhere.
+    if runner:
+        if heading.lower() not in out.lower():
+            return "BLIND", "the check failed, but never mentioned %r" % heading[:44]
+        return "CAUGHT", ""
     block = out.split("=== %s" % heading, 1)
     if len(block) < 2:
         return "BLIND", "the gate failed, but never mentioned %r" % heading[:44]
