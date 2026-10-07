@@ -1,0 +1,153 @@
+#!/usr/bin/env python3
+"""Does each check still FIRE when the thing it watches for is present?
+
+WHY THIS EXISTS. Ty, 2026-10-06, after a day in which nearly every defect was in an instrument
+rather than in the site: "make our instrumentation function without issue, or at least within a
+reasonable allowance." The checks here are mostly trusted because they have been green for weeks,
+and green is exactly what a check looks like when it is broken. This repository has already
+produced four of those:
+
+  - a count-claim gate that had NEVER ONCE RUN, because it scanned text between tags while the
+    numbers sat inside spans;
+  - a heading rule that printed its finding and exited 0;
+  - a word counter whose regex reached the page as /S+/g and found no words, reporting a clean
+    site;
+  - a keyword check whose multi-word term could never match, invisible while every term was one
+    word.
+
+None was visible by reading the check. Each was visible only by presenting the check with the
+fault it exists to catch and watching what it did.
+
+WHAT THIS DOES. For each canary: inject a known fault into a copy of the tree, run the check,
+assert that the check both FAILS and NAMES THE RULE, then restore. A check that stays green with
+its fault present is reported as BLIND, which is the finding this suite exists to produce.
+
+IT EDITS REAL FILES, and it restores them in a finally block per canary. It refuses to run on a
+dirty working tree, because a restore that races an uncommitted edit is how a canary eats
+somebody's work.
+
+COST AND WHERE IT BELONGS. One full verify.py run per canary, about 12 seconds each, so the whole
+suite is minutes rather than seconds. That makes it a SCHEDULED job and not a per-push one: run it
+weekly, or after editing any check, which is the moment its answer changes.
+
+    python3 scripts/canary.py               run every canary
+    python3 scripts/canary.py --list        what is covered, and what is not
+"""
+import argparse
+import pathlib
+import re
+import subprocess
+import sys
+
+ROOT = pathlib.Path(__file__).resolve().parent.parent
+GATE = ROOT / "index.html"
+
+# (name, the rule's heading in verify.py output, find, replace)
+# find -> replace is applied to index.html. Each pair is chosen so the fault is UNAMBIGUOUS: it
+# breaks exactly one rule and nothing else, or the canary would pass for the wrong reason.
+CANARIES = [
+    ("em dash", "dash rule",
+     "<h1", "<h1 data-canary=\"a \u2014 b\""),
+
+    ("the banned word rig", "banned words",
+     "<h1", "<h1 data-canary=\"RIG\""),
+
+    ("an unclosed tag", "tag balance",
+     "<p", "<div><p", 1),
+
+    ("a class with no rule", "every class used in a page has a rule",
+     "<h1", "<h1 class=\"no-such-class-canary\""),
+
+    ("an anchor to an id that is not there", "every in-site #anchor lands on an id",
+     "<a class=\"card", "<a class=\"card\" href=\"#no-such-id-canary\"", 1),
+
+    ("a link to a page that does not exist", "internal links resolve",
+     "href=\"guides/", "href=\"guides/no-such-page-canary.html\" x=\"", 1),
+
+    ("a stale asset hash", "every asset reference carries a current content hash",
+     ".css?v=", ".css?v=deadbeef00&x=", 1),
+
+    ("JSON-LD that does not parse", "JSON-LD parses",
+     "{\"@context\"", "{ not json @context\"", 1),
+]
+
+
+def dirty() -> bool:
+    out = subprocess.run(["git", "status", "--porcelain"], cwd=ROOT,
+                         capture_output=True, text=True).stdout.strip()
+    return bool(out)
+
+
+def run_gate():
+    """One full verify.py run. Returns (exit code, output)."""
+    p = subprocess.run([sys.executable, "scripts/verify.py"], cwd=ROOT,
+                       capture_output=True, text=True)
+    return p.returncode, p.stdout + p.stderr
+
+
+def canary(name, heading, find, repl, count=0):
+    """Inject, run, restore, and say what happened."""
+    before = GATE.read_text(encoding="utf-8")
+    if find not in before:
+        return "BROKEN", "the injection anchor %r is not in index.html any more" % find[:40]
+    after = before.replace(find, repl, 1) if count == 0 else before.replace(find, repl, count)
+    if after == before:
+        return "BROKEN", "the injection changed nothing, so the canary tested nothing"
+    try:
+        GATE.write_text(after, encoding="utf-8")
+        rc, out = run_gate()
+    finally:
+        GATE.write_text(before, encoding="utf-8")
+
+    if rc == 0:
+        return "BLIND", "the gate stayed green with the fault in place"
+    # the failure has to be THIS rule, or the canary proves the wrong thing
+    block = out.split("=== %s" % heading, 1)
+    if len(block) < 2:
+        return "BLIND", "the gate failed, but never mentioned %r" % heading[:44]
+    if "clean" in block[1].split("===")[0].lower() and "FAIL" not in block[1]:
+        return "BLIND", "the rule still reported clean with the fault in place"
+    return "CAUGHT", ""
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--list", action="store_true")
+    a = ap.parse_args()
+
+    if a.list:
+        print("canaries: %d" % len(CANARIES))
+        for c in CANARIES:
+            print("  %-38s -> %s" % (c[0], c[1][:52]))
+        print("\nNOT COVERED, and this list is the honest part: the other rules in verify.py, the")
+        print("browser audits (they need Chrome), and the checkers that live outside verify.py")
+        print("such as check-prose, check-keywords, check-ux and check-balance. Those each carry")
+        print("their own --self-test, which is a weaker instrument than a canary: it proves the")
+        print("rule matches text it is handed, not that the rule is wired to the gate.")
+        return 0
+
+    if dirty():
+        print("refusing to run: the working tree has uncommitted changes, and a canary edits and")
+        print("restores files. Commit or stash first so a restore cannot eat your work.")
+        return 1
+
+    caught = blind = broken = 0
+    for name, heading, find, *rest in CANARIES:
+        repl = rest[0] if rest else ""
+        n = rest[1] if len(rest) > 1 else 0
+        state, why = canary(name, heading, find, repl, n)
+        mark = {"CAUGHT": "ok   ", "BLIND": "BLIND", "BROKEN": "BROKE"}[state]
+        print("  %s  %-38s %s" % (mark, name, why))
+        caught += state == "CAUGHT"
+        blind += state == "BLIND"
+        broken += state == "BROKEN"
+
+    print("\n%d caught, %d blind, %d broken out of %d" % (caught, blind, broken, len(CANARIES)))
+    if blind:
+        print("A BLIND check is one that stays green with the fault it exists to find. That is")
+        print("worse than no check, because it is trusted.")
+    return 1 if (blind or broken) else 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
