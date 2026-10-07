@@ -19,6 +19,20 @@ which is the failure that matters and the one a human then resolves in seconds.
 A quote that passes is NOT proven correctly attributed. It is proven to exist somewhere in the page's
 sources, which is strictly weaker. Read the report as a filter, not a verdict.
 
+IT DOES NOT SCALE PAST ABOUT FORTY SOURCES, AND THE CAUSE IS KNOWN. Measured 2026-10-07 against
+manuals/start-here.html, which cites 187 sources and carries 404 quotations: a run exceeded 50
+minutes with --no-fetch and timed out with the cache warm, so the cost is not the network. It is
+near_miss(), the fuzzy fallback that runs for every quote that is not an exact match. It slides a
+window across EVERY word position in EVERY source and runs difflib.SequenceMatcher at each one.
+present(), the exact path, is 404 x 187 substring checks and is not the problem.
+
+THE FIX, for whoever picks this up: a genuine near-miss window must contain the quote's rarest word,
+so find that word's positions in the source first and slide only around those. That keeps the
+fallback's accuracy, because it can only remove comparisons that could never have matched, and it
+turns millions of SequenceMatcher calls into a few hundred. Do NOT simply cap the number of starts:
+that would turn a slow true answer into a fast false one, and a false "not in any cited source" is
+the failure this whole file exists to avoid.
+
 Run:
   python3 scripts/check-quotes.py                          # every guide
   python3 scripts/check-quotes.py guides/rv-delamination.html
