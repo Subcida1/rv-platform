@@ -20,3 +20,6 @@ _data/source/
 # boundary, so no git operation can sweep a nested checkout into a commit.
 .letta/
 .canary.lock
+
+# generated: scan state and reports, not source
+_log/

@@ -40,7 +40,19 @@ fails = []
 # went red for hours while CI stayed green -- because CI has no .letta directory at all.
 # Found 2026-10-04 after attributing the red to "a parallel session's edits", which was half right:
 # another agent's work was in there, but the defect was that nothing told the scanner where to stop.
-SKIP_PARTS = {".git", ".letta", "node_modules"}
+# _log IS GENERATED OUTPUT AND IS NOT PUBLISHED. Added 2026-10-07, when a new scan started
+# writing listing names into _log/listings-scan.json and the banned-word rule failed on it: the
+# directory contains a real business called "Rig Rite RV", and that file is not one of the types
+# without_provenance() knows how to strip, so a business's own name was read as our prose. The
+# rule was right and the file did not belong in its input. Same class as .letta: a directory that
+# is output, not source.
+#
+# ONE CHECK WAS LOST BY THIS, AND IT IS NAMED RATHER THAN LEFT TO BE FOUND LATER. Of the nine
+# tracked files in _log/, eight are .md or .jsonl and were never in PUBLISHED at all. The ninth,
+# _log/reports/coverage-latest.json, WAS being scanned, and this skip stops that. It is a
+# generated report, so it does not belong in the gate's input either -- but the honest record is
+# that the gate covers one file less than it did yesterday, and that file is this one.
+SKIP_PARTS = {".git", ".letta", ".canary.lock", "node_modules", "_log"}
 
 
 def walked(pattern):
