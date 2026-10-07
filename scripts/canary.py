@@ -126,7 +126,7 @@ CANARIES = [
     # of the mistake made three times on 2026-10-06.
     ("a generated page edited by hand", "disagree",
      "<title>", "<title>Canary edited by hand: ", 1,
-     ["bash", "scripts/check-generated.sh"], "tools/index.html"),
+     ["bash", "scripts/check-generated.sh"], "parts/index.html"),
 
     ("prose that argues with the reader", "STRICT",
      "<h1", "<h1>A rough estimate by the Weather Service\'s own description. </h1><h1", 1,
@@ -144,10 +144,24 @@ CANARIES = [
 # killed). _ORIGINAL holds the file exactly as it was found, and restore() is idempotent.
 _ORIGINAL = None
 _RESTORED = False
+_CURRENT = None          # (path, original text) for the canary in flight
 
 
 def restore() -> None:
+    """Restore whatever the canary in flight was editing, then the startup copy.
+
+    THE HANDLER USED TO RESTORE index.html ONLY, which was correct until canaries could name a
+    target file. A kill mid-run on a target-file canary would then have corrupted tools/index.html
+    or parts/index.html and left index.html alone -- the same flaw one level out, found by
+    extending the suite rather than by being caught by it.
+    """
     global _RESTORED
+    if _CURRENT is not None:
+        path, text = _CURRENT
+        try:
+            path.write_text(text, encoding="utf-8")
+        except Exception:
+            pass
     if _RESTORED or _ORIGINAL is None:
         return
     try:
@@ -192,13 +206,14 @@ def canary(name, heading, find, repl, count=0, runner=None, target=None):
     after = before.replace(find, repl, 1) if count == 0 else before.replace(find, repl, count)
     if after == before:
         return "BROKEN", "the injection changed nothing, so the canary tested nothing"
+    global _CURRENT
+    _CURRENT = (path, before)
     try:
         path.write_text(after, encoding="utf-8")
         rc, out = run_runner(runner)
     finally:
-        # restored from the string read at the top of THIS canary, and the atexit/signal hooks
-        # restore from the one read at startup, so a kill mid-canary is covered too
         path.write_text(before, encoding="utf-8")
+        _CURRENT = None
 
     if rc == 0:
         return "BLIND", "the gate stayed green with the fault in place"
