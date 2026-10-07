@@ -555,348 +555,61 @@ def new_owner_content():
     for extra in sorted((ROOT / "_data").glob("new-owner-part*.json")):
         d.setdefault("parts", []).extend(
             json.loads(extra.read_text(encoding="utf-8")).get("parts", []))
-    out = []
-    op = d["opener"]
-    out.append('<h2 class="man-h2">%s</h2>' % op["title"])
-    out.append('<div class="callout"><b>%s</b></div>' % op["lede"])
-    for it in op["items"]:
-        out.append('<h3>%s</h3>' % it["n"])
-        out.append('<p>%s</p>' % it["html"])
-    out.append(d.get("migrated_sections_html", ""))
-    return "\n  ".join(out)
+    # RETURNS THE DATA, NOT HTML. It used to return a rendered string, which meant
+    # render_new_owner() received a string where it expected the dict and died with
+    # "string indices must be integers". Two functions that disagree about what they pass each
+    # other is the seam this project keeps finding bugs in; the reader reads, the renderer renders.
+    return d
 
 
 def start_here_page():
-    """The new-owner walkthrough. Prose, one table and one diagram, all hand-authored here
-    because this page is not a slice of the manuals manifest."""
-    desc = meta_desc("The expensive mistakes a new RV owner can avoid, then the systems "
-                     "behind them and the order worth learning them in")
+    """The new-owner guide.
 
-    rows = [
-        ("Shore power and the 120-volt side",
-         "Brings 120 volts in from the pedestal and feeds the outlets, the air conditioner, the "
-         "microwave and the water heater's electric element.",
-         "guides/rv-outlets-not-working.html", "Outlets not working"),
-        ("The 12-volt house system",
-         "Runs the lights, the water pump, the furnace fan, the fridge's control board and the "
-         "slide-outs, all off the house battery.",
-         "guides/rv-12-volt-problems.html", "12-volt faults"),
-        ("The battery and its charging",
-         "Keeps the house battery full from shore power through the converter, and charges it "
-         "from the engine while you drive.",
-         "guides/rv-converter-not-charging.html", "Converter not charging"),
-        ("Fresh water",
-         "City water through the inlet, or the tank and its pump, out to every tap, the toilet "
-         "and the shower.",
-         "manuals/water-and-plumbing.html", "Water and plumbing documents"),
-        ("Waste",
-         "Holds what the sinks, the shower and the toilet send it, until you dump it into a "
-         "sewer connection.",
-         "manuals/sanitation-and-tanks.html", "Tank and sanitation documents"),
-        ("The water heater",
-         "Heats water on propane or on 120 volts, into a tank that has to be full before either "
-         "one is switched on.",
-         "guides/rv-water-heater-not-heating.html", "Water heater not heating"),
-        ("Propane and the fridge",
-         "Cooks, and runs the absorption fridge on propane when there is no hookup, though the fridge's board still needs 12 volts to decide anything.",
-         "guides/rv-refrigerator-not-cooling.html", "Fridge not cooling"),
-        ("Heat and cold",
-         "The furnace warms the coach in winter and the air conditioner cools it in summer. Both are the "
-         "largest draws on the coach, and the furnace will not light at all without enough 12-volt power to "
-         "spin its blower and close the sail switch.",
-         SITE + "/manuals/heating-and-cooling.html", "Heating and cooling documents"),
-        ("The extras",
-         "Solar, a generator and an inverter are three more ways to make or move power, none of "
-         "which a first trip depends on.",
-         "guides/rv-solar-not-charging.html", "Solar not charging"),
-    ]
-    table_rows = "\n".join(
-        '        <tr><td>%s</td><td>%s</td><td><a href="%s">%s</a></td></tr>' % row
-        for row in rows)
+    THE BODY IS DATA NOW. This function was 331 lines of hand-authored HTML; the guide Ty asked
+    for is several times that, and prose of that size cannot be reviewed or corrected inside a
+    Python function. The content lives in _data/new-owner.json and _data/new-owner-part*.json,
+    rendered by render_new_owner(), and this function is only the shell around it.
 
+    The guide is long enough that it is navigated rather than read end to end, so it carries a
+    generated jump-nav and collapsible sections. Both are anchors and <details>, so the whole thing
+    works with JavaScript off.
+    """
+    desc = meta_desc("What a first-time RV owner needs to know: the mistakes that cost money, "
+                     "how every system works, tanks and water, winter, maintenance and towing")
     crumb = breadcrumbs([("OriginRV", SITE + "/"),
                          ("RV Manuals", SITE + "/manuals/index.html"),
                          ("New RV owner", SITE + "/manuals/start-here.html")])
 
-    body = """
+    content = new_owner_content()
+    nav, body = render_new_owner(content)
+    op = content["opener"]
+
+    page = """
   <div class="wrap page-intro">
-    <div class="man-crumb"><a href="manuals/index.html">RV Manuals</a></div>
-    <h1 class="dir-title man-title">New RV owner: The things to get right first</h1>
-    <p class="man-lede">A coach punishes a small number of specific mistakes, and almost all of
-    them are cheap to avoid and expensive to make. These are the ones worth knowing before the
-    first trip, then the systems behind them, in the order worth learning.</p>
+    <div class="man-crumb">%s</div>
+    <h1 class="dir-title man-title">%s</h1>
+    <p class="man-lede">%s</p>
   </div>
 
   <div class="sec prose">
-    <div class="wrap narrow">
-
-  <div class="callout"><b>The short version:</b> never travel with full waste tanks, never plug
-  into a pedestal you have not tested, fill the water heater before you switch it on, never look
-  for a propane leak with a flame, and never move the coach with the slide motors disconnected.
-  Those five cover the expensive mistakes. The rest of this page is the systems behind them.</div>
-
-  <h2 class="man-h2">The ones that cost money</h2>
-  <p>Each of these is a maker's own instruction, quoted from the manual that came with the coach,
-  with the reason attached. None of them is difficult. All of them are the kind of thing that
-  turns a first season into a repair bill.</p>
-
-  <h3>1. Never travel with the waste tanks full</h3>
-  <p>Jayco's manual is blunt about it: <i>Never travel with full black or grey water holding
-  tanks</i>. A full tank is weight moving at the worst possible place in the coach, and the
-  structure and the tank mounts were not built for the load shifting. It is also the reason the
-  dump station is the last stop before the road rather than the first stop after it.</p>
-
-  <h3>2. Close the dump valves when the tanks are empty, and never leave the black valve open</h3>
-  <p>The dump procedure in the manual is a sequence, and the order matters: <i>Always drain the
-  black water holding tank first so the grey tank wastewater can help rinse any solids or debris
-  from the dump outlet and sewer hose.</i> Open the black valve, close it when the tank is empty,
-  then open the grey, then close that. <b>Leaving the black valve open at a full-hookup site is
-  the mistake</b>: the liquid drains away and the solids stay behind, which is how a tank becomes
-  a pile. And the tank wants water in it from the start, not just what the flushes add: the same
-  manual says to <i>add enough water to prevent solid waste buildup</i>, and gives the recipe as
-  one to two quarts in the bowl, the chemical your toilet maker specifies, then a flush that puts
-  at least two gallons into the tank.</p>
-
-  <h3>3. Never plug into a pedestal you have not tested</h3>
-  <p>This is the instruction that protects the most expensive thing in the coach, and the manual
-  gives it in three parts. First: <i>Always test the external power source with a ground monitor
-  before connecting your power cord to it. If the ground monitor indicates reverse polarity or an
-  open ground, DO NOT connect the power cord.</i> Then the specific cases: <i>DO NOT plug the
-  shore power cord into a campsite receptacle that has reverse polarity, with non-functioning
-  ground circuits, or that shows outward signs of heat damage.</i> And the consequence, in the
-  manual's own words: <i>Doing so may result in property damage or serious injury.</i> A ground
-  monitor, or a surge protector with one built in, is the cheapest thing you will ever buy for a
-  coach, and it is the only thing standing between a bad pedestal and your converter. The
-  <a href="guides/rv-outlets-not-working.html">outlets and GFCI guide</a> covers what to do when
-  the damage is already done.</p>
-
-  <h3>4. Fill the water heater before you switch it on</h3>
-  <p>Every year, somebody fires an empty water heater and buys a tank. Suburban states the rule as
-  an imperative: <i>It is imperative that the water heater tank be filled with water before
-  operating the water heater. Operation of the water heater without water in the tank may result
-  in damage to the tank and/or controls. This type of damage is not covered by the limited
-  warranty.</i> The practical version: fill the system, open a hot tap until water runs steadily
-  with no spitting, and only then switch the heater on. On a heater that has been drained for
-  storage, that hot tap is the confirmation, and it costs a minute.</p>
-
-  <h3>5. Never move the coach with the slide motors disconnected</h3>
-  <p>This is the sentence a new owner has never read and the one that matters most when a slide
-  will not retract and somebody has pushed the room in by hand. In capitals, in the manual:
-  <i>DO NOT MOVE THE RV UNLESS THE MOTORS ARE PLUGGED IN TO THE CONTROLLER AND THERE IS BATTERY
-  POWER TO THE RV. THIS SETS THE BRAKES ON THE SLIDEOUTS TO PREVENT THEM FROM MOVING DURING
-  TRANSIT.</i> A room pushed in with its motors out is held by nothing, and the
-  <a href="guides/rv-slide-out-not-working.html">slide-out guide</a> has the overrides and the
-  re-engagement step in full.</p>
-
-  <h3>6. Never test for a propane leak with a flame</h3>
-  <p>Also capitals, and worth reading twice: <i>Never use an open flame to test for a propane
-  leak. Do not check for leaks using products that contain ammonia or chlorine; these products can
-  cause cracks to form on the metal tubing and brass fittings.</i> Soapy water is the test, and the
-  ammonia and chlorine warning rules out a surprising number of household cleaners. The same
-  section gives the operating habit worth copying: close every burner valve first, then <i>open the
-  main valve in the propane tank slowly to avoid a rush of propane vapor</i>.</p>
-
-  <h3>7. Never fit a bigger fuse</h3>
-  <p><i>Never use a higher rated replacement fuse; doing so may cause a fire by overheating the RV
-  wiring.</i> The fuse is sized to protect the wire, not the gadget on the end of the circuit, so a
-  bigger fuse moves the failure into the wall where nobody can see it. The
-  <a href="guides/rv-fuse-keeps-blowing.html">fuse guide</a> is about finding the fault instead of
-  replacing the fuse.</p>
-
-  <h3>8. Do not reverse the battery cables</h3>
-  <p><i>Do not reverse the positive and negative battery cables. Doing so will blow the reverse
-  polarity fuses that protect the power converter.</i> If the coach is dead on 12 volts after a
-  battery change, those fuses are the first thing to check, and they are why the converter is often
-  blamed for a mistake made at the terminals.</p>
-
-  <h3>9. Never leave the coach while filling the fresh water tank</h3>
-  <p><i>Never leave the motor home unattended while filling the fresh water system</i>, and do not
-  overfill it: the manual warns that overfilling can pressurise the tank, cause leakage and water
-  damage, and void the warranty. It also says not to cap, block or modify the tank's overflow
-  tubes, because the pressure has to have somewhere to go.</p>
-
-  <h3>10. Do not remove or plug the water heater's relief valve</h3>
-  <p>Two instructions in one line, both absolute: <i>Do not place a valve between the pressure and
-  temperature (P&amp;T) valve and the tank. Do not remove or plug the relief valve under any
-  circumstances.</i> The valve is what opens if the tank reaches 210 degrees F or 150 pounds of
-  pressure, and it is the reason a heater that is misbehaving vents water rather than becoming a
-  projectile. Suburban publish both figures for their own valves, and 210 is the one that matters:
-  120 F is a thermostat setting on some models, not a relief temperature.</p>
-
-  <h3>11. Never blow the water lines out with a valve closed</h3>
-  <p>When the plumbing gets winterised with air rather than antifreeze: <i>Never apply air pressure
-  to the water system with any valves in the closed position.</i> Pressure against a closed faucet,
-  valve or low-point drain damages the seals and produces leaks you will find in spring. Jayco's
-  own manual caps its system at <b>30 PSI maximum</b>, and warns that anything higher can rupture
-  line couplings and void the warranty. Other makers publish a higher ceiling, so the figure is the
-  plumbing's rather than one number for every RV. The
-  <a href="guides/winterize-plumbing.html">winterising guide</a> works that job in order.</p>
-
-  <h3>12. Do not let the leveling system hold the coach while you work under it</h3>
-  <p>A leveling system is a leveling system. Lippert's own manual prohibits using one to
-  <i>provide service for any reason under the trailer such as changing tires</i>, and states the
-  consequence as <i>damage to the trailer and/or cause death or serious injury</i>. A jack that
-  holds a coach level is not a jack stand, and stabilisers are not jacks at all: they steady, they
-  do not lift. The <a href="guides/rv-leveling-jacks-not-working.html">leveling guide</a> has the
-  overrides and the fluid checks.</p>
-
-  <h2 class="man-h2">Your first night plugged in</h2>
-  <ol>
-    <li><b>Level and chock before anything else.</b> The slides, the water system and an absorption
-    fridge all want the coach level, and the fridge has a published limit: Norcold builds its
-    absorption units to run within 3 degrees off level side to side and 6 front to back, and past
-    that the cooling system can be damaged.</li>
-    <li><b>Look at the pedestal, then test it.</b> Breaker off, look for scorching or a loose fit,
-    and use a ground monitor before the cord goes in.</li>
-    <li><b>Connect, then switch the pedestal breaker on</b>, so nothing is arcing while you hold
-    the plug.</li>
-    <li><b>Check the coach's own breaker panel</b> for anything tripped, and switch the converter
-    on if it has its own switch.</li>
-    <li><b>Confirm the battery is charging</b> by watching its voltage rise over a few minutes.
-    The <a href="guides/rv-battery-not-charging.html">battery guide</a> gives the numbers to
-    expect.</li>
-    <li><b>Water next</b>, on city water with a pressure regulator, or off the tank and the pump.
-    Open a tap and let it run, and do not walk away from a filling tank.</li>
-    <li><b>Water heater last</b>, and only once a hot tap runs without spitting.</li>
-    <li><b>Propane after that</b>, opening the main valve slowly, and if you smell it, shut it off
-    and find out why before anything is lit.</li>
-  </ol>
-
-  <h2 class="man-h2">What you bought: The systems, and what each one is for</h2>
-  <p>Once the first trip is over, this is the map. Knowing what a system does when it is working is
-  what lets you read a symptom later, and it is the one thing a fault guide cannot supply, because
-  a fault guide starts from something that has already broken.</p>
-
-  <div class="table-scroll">
-  <table class="man-table">
-    <thead><tr><th>System</th><th>What it does when it is working</th><th>When it breaks</th></tr></thead>
-    <tbody>
-%s
-    </tbody>
-  </table>
-  </div>
-
-  <h2 class="man-h2">The order to learn them, and why</h2>
-  <p>The order below is not alphabetical and it is not the order a maker's manual lists them in.
-  It runs from the system that can injure you, through the one that imitates all the others, to
-  the ones you can safely leave until you have slept in the coach a few nights.</p>
-
-  <h3>First: shore power, because it is the one that hurts</h3>
-  <p>The 120-volt side is the only part of a coach that can kill you, and it is also the first
-  thing you connect, so it gets learned first. What to know before your first hookup: the pedestal
-  is somebody else's wiring, a breaker on the pedestal is what you switch rather than the plug, and
-  a coach with a wiring fault can put voltage on its own skin. The
-  <a href="guides/rv-outlets-not-working.html">outlets and GFCI guide</a> covers the chain from
-  the pedestal inward, including why a GFCI will not reset and what hot skin is.</p>
-
-  <h3>Second: 12 volts, because it imitates everything else</h3>
-  <p>Half the coach runs on 12 volts, and a battery that is low makes the pump weak, the furnace
-  fan slow and the fridge's board unhappy, so a voltage problem gets misread as three different
-  faults. Learning this system second means you stop chasing the wrong part before you start. The
-  <a href="guides/rv-12-volt-problems.html">12-volt guide</a> has the layout and the voltage drop
-  test, and the <a href="guides/rv-battery-not-charging.html">battery guide</a> works out which of
-  the four charging sources has failed when the battery will not hold charge.</p>
-
-  <h3>Third: water in, then water out</h3>
-  <p>Two systems that share a set of pipes and a set of habits. Water in is city water or the tank
-  and its pump, and water out is two tanks and a valve. Learn them in that order because the fresh
-  side is where you will first notice a leak, and because every fault on the waste side is a smell
-  or a reading rather than a flood. The <a href="guides/winterize-plumbing.html">winterising
-  guide</a> doubles as the map of where the water actually sits, and the
-  <a href="guides/rv-toilet-not-flushing.html">toilet guide</a> covers the three faults that
-  sound alike at the other end of it.</p>
-
-  <h3>Fourth: propane, heat and the fridge</h3>
-  <p>Propane is the one fuel you can learn by smell, and the furnace and the fridge are its two
-  biggest consumers. Two things are worth knowing before the first cold night: how the furnace
-  proves itself safe to light, and that an absorption fridge needs the coach close to level to
-  work at all. The <a href="guides/rv-furnace-not-working.html">furnace guide</a> carries the
-  carbon monoxide hard stop, and the
-  <a href="guides/rv-refrigerator-not-cooling.html">fridge guide</a> explains why level matters.</p>
-
-  <h3>Fifth: the extras, and what can wait</h3>
-  <p>Solar, a generator and an inverter are all ways of making or moving power, and none of them
-  is needed to spend a first weekend at a hookup. When one of them stops working,
-  <a href="guides/rv-solar-not-charging.html">solar</a> and
-  <a href="guides/rv-generator-not-charging.html">the generator</a> both have their own guide, and
-  both begin by checking two things before anything is tested.</p>
-
-  <h2 class="man-h2">Where the two electrical halves meet</h2>
-  <p>Two systems share one battery and one ground, and almost every confusing electrical symptom
-  comes from that arrangement. 120 volts arrives at the pedestal and goes to the outlets, the air
-  conditioner and any heating element. The converter turns some of that into 12 volts to charge
-  the battery. Everything else runs off the battery at 12 volts.</p>
-  <p><b>Several components touch both halves</b>, and that is where a fault crosses from one to the
-  other: the converter, which turns 120 into 12; an inverter, if one is fitted, which turns 12 back
-  into 120; and every appliance with a 120-volt element and a 12-volt board, which is the fridge in
-  its electric mode, a dual-fuel water heater, and the air conditioner's controls.</p>
-
-  <figure>
-    <svg viewBox="0 0 640 210" width="100%%" role="img" aria-label="The 120-volt side and the 12-volt side, and the converter that joins them">
-      <rect x="8" y="26" width="190" height="74" rx="8" fill="none" stroke="var(--border-2)" stroke-width="2"/>
-      <text x="103" y="52" text-anchor="middle" font-size="15" font-weight="700" fill="var(--text)">120 volts</text>
-      <text x="103" y="72" text-anchor="middle" font-size="12" fill="var(--text-2)">Pedestal, outlets,</text>
-      <text x="103" y="88" text-anchor="middle" font-size="12" fill="var(--text-2)">air conditioning</text>
-
-      <rect x="442" y="26" width="190" height="74" rx="8" fill="none" stroke="var(--border-2)" stroke-width="2"/>
-      <text x="537" y="52" text-anchor="middle" font-size="15" font-weight="700" fill="var(--text)">12 volts</text>
-      <text x="537" y="72" text-anchor="middle" font-size="12" fill="var(--text-2)">Lights, pump, furnace,</text>
-      <text x="537" y="88" text-anchor="middle" font-size="12" fill="var(--text-2)">slide-outs, fridge board</text>
-
-      <rect x="228" y="118" width="184" height="60" rx="8" fill="var(--tint-bg)" stroke="var(--tint-edge)" stroke-width="2"/>
-      <text x="320" y="142" text-anchor="middle" font-size="14" font-weight="700" fill="var(--text)">Converter</text>
-      <text x="320" y="161" text-anchor="middle" font-size="12" fill="var(--text-2)">120 in, 12 out. Appliances with</text>
-      <text x="320" y="175" text-anchor="middle" font-size="12" fill="var(--text-2)">both touch both halves too</text>
-
-      <path d="M103 100 L103 148 L222 148" fill="none" stroke="var(--border-2)" stroke-width="2"/>
-      <path d="M418 148 L537 148 L537 106" fill="none" stroke="var(--border-2)" stroke-width="2"/>
-      <path d="M537 106 L531 118 M537 106 L543 118" fill="none" stroke="var(--border-2)" stroke-width="2"/>
-    </svg>
-    <figcaption>The two halves of a coach's electrical system, and the components that touch both:
-    a converter, an inverter where one is fitted, and anything with a 120-volt element and a
-    12-volt board.</figcaption>
-  </figure>
-
-  <h2 class="man-h2">The manual you got, and the manual you need</h2>
-  <p>The manual in the drawer covers the coach. It rarely covers the appliances inside it well,
-  because those are other makers' equipment, and it often covers several model years at once.
-  Every appliance maker publishes its own document, and that is the one with the wiring diagram,
-  the fault codes and the part numbers: find the label inside or behind each appliance for its
-  model number, then open it in the <a href="manuals/index.html">manuals section</a>, which links
-  each document at the maker rather than rehosting it. If you do not know who made something,
-  <a href="manuals/brands.html">the brand list</a> covers 44 coach makers and how far back each
-  one's archive reaches.</p>
-
-  <h2 class="man-h2">What is safe to ignore for now</h2>
-  <ul>
-    <li><b>The inverter</b>, if you mostly camp with hookups. It matters when you start running
-    120-volt equipment off the battery.</li>
-    <li><b>The solar controller's settings</b>, until you have watched a full sunny day of
-    charging and know what normal looks like.</li>
-    <li><b>Tank sensor calibration.</b> The sensors read conductivity rather than depth, so a
-    reading that disagrees with the tank is normal rather than urgent.</li>
-    <li><b>Seals, slide wipers and roof caulking.</b> Servicing them is an annual job rather than a
-    first-week one, and looking at them is not: a wiper seal that has folded inward on a slide room
-    runs water into the room instead of off it, and it takes a glance while the room goes out.</li>
-    <li><b>The weight math</b>, once your combination is matched. It comes back into play the day
-    you change a truck, a trailer or how you load it.</li>
-  </ul>
-
-  <h2 class="man-h2">Go deeper</h2>
-  <p>Each system above has its own document set in the manuals section, and the fault guides are
-  organised the same way: one page per symptom, each one citing the documents it rests on, and
-  each one starting with the checks that cost nothing. The
-  <a href="guides/index.html">guide index</a> is the whole set in one place, including the
-  <a href="guides/rv-towing-capacity.html">weight and towing</a> material and the
-  <a href="guides/winterize-plumbing.html">winter set</a>.</p>
-
+    <div class="wrap">
+      <div class="no-layout">
+        %s
+        <div class="no-body">
+          <h2 class="man-h2">%s</h2>
+          <div class="callout"><b>%s</b></div>
+          %s
+          %s
+        </div>
+      </div>
     </div>
   </div>
-""" % table_rows
+""" % (crumb, START_TITLE, op["lede"], nav, op["title"], op["lede"],
+       "\n".join('<h3>%s</h3>\n<p>%s</p>' % (it["n"], it["html"]) for it in op["items"]),
+       content.get("migrated_sections_html", "") + "\n" + body)
 
     return (head(START_TITLE, desc, SITE + "/manuals/start-here.html", [crumb])
-            + body + foot(""))
-
+            + page + foot(""))
 
 def system_page(slug, title, desc, rows):
     n_brands = len({r["brand"] for r in rows})

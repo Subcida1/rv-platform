@@ -2,10 +2,6 @@
  "_why": "The documents behind the guide's quotations. check-quotes.py reads the hrefs on the page and tests every quotation against all of them, so this list is what makes the guide's quotes checkable at all. Only FETCH-CONFIRMED sources from the research ledgers are here: a URL that merely appeared in a search result has not been read and cannot verify anything.",
  "sources": [
   {
-   "label": "RVIA trailer brake requirements",
-   "url": "https://assets.interactcp.com/byerlyrv/pdf/maintenance_schedules/Keystone_RV_Maintenance_Schedule.pdf"
-  },
-  {
    "label": "atsdr.cdc.gov",
    "url": "https://www.atsdr.cdc.gov/ToxProfiles/tp189-c1-b.pdf"
   },
@@ -96,14 +92,6 @@
   {
    "label": "lippert.com",
    "url": "https://www.lippert.com/blog/leveling-jacks-versus-stabilizing-jacks"
-  },
-  {
-   "label": "Heartland owners manual library",
-   "url": "https://manuals.heartlandowners.org/.../Water%20Systems%20Guide%20V1.2.pdf"
-  },
-  {
-   "label": "Heartland owners manual library",
-   "url": "https://manuals.heartlandowners.org/manuals/Exterior/Tires/Goodyear/Goodyear%20tire-care-guide-1.pdf"
   },
   {
    "label": "nfpa.org",
