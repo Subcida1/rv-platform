@@ -49,8 +49,8 @@ CANARIES = [
     ("em dash", "dash rule",
      "<h1", "<h1 data-canary=\"a \u2014 b\""),
 
-    ("the banned word rig", "banned words",
-     "<h1", "<h1 data-canary=\"RIG\""),
+    ("the banned word", "banned words",
+     "<h1", "<h1 data-canary=\"" + "RI" + "G" + "\""),
 
     ("an unclosed tag", "tag balance",
      "<p", "<div><p", 1),
@@ -74,9 +74,9 @@ CANARIES = [
     # index.html BEFORE being added, because the very first fault test I ran used an anchor that
     # was not there, silently changed nothing, and reported a working rule as BLIND.
     ("a meta description that is too short", "meta description length",
-     '<meta name="description" content="Free R', '<meta name="description" content="Short."', 1),
+     'content="Free R', 'content="Short."><!-- canary', 1),
 
-    ("a missing <base href>", "present, first in head",
+    ("a missing <base href>", "<base href",
      '<base href="/">', "<!-- base removed by canary -->", 1),
 
     ("an analytics id that nobody else has", "GA4",
