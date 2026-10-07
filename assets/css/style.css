@@ -526,7 +526,12 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
    can go straight to nearby service centres instead of hunting for their state. Ty,
    2026-10-05. The tile is a div rather than an anchor because a form cannot live inside
    one; the button inside is the link. */
-.hstat-form{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;width:100%}
+/* MOBILE-ONLY, BY DEFAULT. The form was visible at every width until 2026-10-06, when Ty asked
+   for the directory tile to end in a text link on desktop like its two neighbours and keep the
+   field on mobile. It is hidden here and shown in the consolidated block at 720px, which is the
+   breakpoint where .hero-stats already stacks to one column -- the place the layout changes,
+   rather than a second number to keep in step. */
+.hstat-form{display:none;flex-wrap:wrap;gap:8px;margin-top:12px;width:100%}
 .hstat-form input{flex:1 1 84px;min-width:0;font:inherit;font-size:13px;padding:9px 13px;border:1px solid var(--border-2);border-radius:999px;background:var(--surface);color:var(--text)}
 .hstat-form input::placeholder{color:var(--text-3)}
 .hstat-form input:focus{outline:none;border-color:var(--b1);box-shadow:0 0 0 3px var(--glow)}
@@ -2312,6 +2317,12 @@ figure:has(svg[role="img"]){overflow-x:auto;overflow-y:hidden}
    3,400 tap targets between 32 and 43px, and footer link rows at 32px.
    ============================================================ */
 @media(max-width:720px){
+  /* ---- the directory tile trades its text link for the location field here. A field is what a
+     reader on a phone wants; a link is what one on a desktop wants. Both are in the markup and
+     this breakpoint decides which shows. ---- */
+  .hstat-form{display:flex}
+  .hstat .hstat-go{display:none}
+
   /* ---- touch targets. 44px is the Apple number and the one this site should
      hold itself to; WCAG 2.2's floor is 24px and the site already passed that,
      which is why the render audit stayed quiet about 32px rows. ---- */
