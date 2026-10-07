@@ -285,6 +285,22 @@ input,select,textarea{font-family:inherit}
    sticks for the whole page. Nothing else targets #site-nav, so there is no box
    left behind that needed its styles. */
 #site-nav{display:contents}
+/* AN ANCHOR JUMP LANDED UNDER THE STICKY NAV, SITE-WIDE, UNTIL 2026-10-07.
+
+   MEASURED, NOT SUSPECTED. Jumping to tools/weight-calculator.html#why put the heading at
+   y=0 in the viewport with the nav's bottom edge at y=67: `hidden_under_nav: true`. Every
+   in-site link with a fragment did this -- the calculator's own section links, the directory's
+   #claim and #seed, and any guide that links to a heading -- so a reader clicked, arrived, and
+   could not see the thing they had asked for.
+
+   THE FIX IS scroll-margin-top ON ANYTHING WITH AN ID, because anything with an id can be an
+   anchor target and there is no list of them to keep in step. The nav is 67px at desktop width;
+   90 leaves the heading clear of it with a little air below, which is the difference between
+   landing on a section and landing under its title.
+
+   Found while planning the jump-nav for the new-owner guide, where the same bug would have made
+   the navigation worse than nothing. */
+[id]{scroll-margin-top:90px}
 nav.main{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
 nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:66px}
 .logo{display:flex;align-items:center;gap:11px}
