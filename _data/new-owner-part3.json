@@ -1,0 +1,619 @@
+{
+ "parts": [
+  {
+   "id": "maintenance",
+   "title": "Maintenance",
+   "summary": "The maintenance schedule a new owner can follow, then tires, plumbing, seals and cleaning in depth.",
+   "sections": [
+    {
+     "id": "maintenance-schedule",
+     "title": "The maintenance schedule",
+     "open": true,
+     "blocks": [
+      {
+       "kind": "p",
+       "html": "A new RV needs a schedule. Most of the work is inspection and cleaning, and it runs on a calendar rather than on mileage. Your owner's manual is the authority: it lists what to check and when for your exact model, and it also lists what the warranty expects you to do."
+      },
+      {
+       "kind": "p",
+       "html": "Two manuals put the responsibility plainly. Winnebago writes that <b>\"it is still important to check your manual for the complete list and anything specific to your RV.\"</b> Grand Design writes that <b>\"You are responsible for the regular care and maintenance of your RV in accordance with this manual and the component manufacturer's instructions.\"</b> KZ-RV adds a warning that matters at claim time: <b>\"if proper maintenance is not performed the warranty coverage can be denied.\"</b>"
+      },
+      {
+       "kind": "p",
+       "html": "This is the working schedule, gathered from manufacturer charts. The intervals are the ones the charts actually print. Where your manual gives a different interval, follow the manual."
+      },
+      {
+       "kind": "table",
+       "head": [
+        "Interval",
+        "What to do",
+        "Who"
+       ],
+       "rows": [
+        [
+         "Before each trip",
+         "Tire pressures checked cold, lights and brakes tested, hitch and chains checked, breakaway switch connected, propane inspected, steps and antenna retracted, lug nuts torqued",
+         "Owner"
+        ],
+        [
+         "Each driving morning",
+         "Check tire pressures cold (\"check every morning before driving\")",
+         "Owner"
+        ],
+        [
+         "Weekly",
+         "Visual tire inspection; check battery condition and safety equipment",
+         "Owner"
+        ],
+        [
+         "Monthly",
+         "Tire inflation, tread and condition including the spare; LPG check and pressure check; battery water level; air conditioner filter",
+         "Owner"
+        ],
+        [
+         "Every 3 months",
+         "Inspect and clean slide-out seals; clean the roof; flush the underside",
+         "Owner or pro"
+        ],
+        [
+         "Every 6 months",
+         "Inspect all sealants and replace as needed; inspect roof seams and corner mouldings",
+         "Owner or pro"
+        ],
+        [
+         "Every 3 months or 3,000 miles",
+         "Test and adjust the brakes",
+         "Pro"
+        ],
+        [
+         "Annually",
+         "Wheel bearings, brake inspection, LPG pressure test, water heater flush and anode, sanitize the fresh water system, lubricate locks and hinges, full professional tire inspection",
+         "Pro"
+        ]
+       ]
+      },
+      {
+       "kind": "p",
+       "html": "Some of those intervals come straight from an owner's manual. Winnebago's chart lists sealants to be inspected every 6 months and replaced annually, slide-out seals to be cleaned every 3 months, and the roof cleaned and the underside flushed every 3 months. Keystone prints brakes at \"every 3 months or 3,000 miles\". Michelin adds the tire rule: <b>\"Your RV tires should be inspected thoroughly at least once a year.\"</b>"
+      },
+      {
+       "kind": "p",
+       "html": "Keystone prints the caveat that applies to every schedule: the intervals assume <b>\"typically recreational travel and family camping in typical climates and weather conditions\"</b>. The same chart says extended use, full-time living or hard conditions speed up wear and require more aggressive intervals."
+      },
+      {
+       "kind": "p",
+       "html": "Some jobs are not owner jobs, whatever the schedule implies."
+      },
+      {
+       "kind": "list",
+       "items": [
+        "Mounting or demounting a tire, and any puncture repair. Michelin's instruction is blunt: <b>\"Only tire professionals should mount tires, and they should never inflate beyond 40 psi to seat the beads. See Tire Dealer for proper mounting.\"</b> A puncture is also repaired from the inside, so the tire must come off the wheel.",
+        "Wheel alignment, wheel bearings and brake service.",
+        "The propane pressure test.",
+        "Winterizing the water system if the RV will see freezing temperatures.",
+        "Any water leak that is hidden inside a wall or close to wiring."
+       ]
+      },
+      {
+       "kind": "callout",
+       "html": "<b>The manual wins.</b> Where a general guide and your owner's manual disagree, follow the manual. It is written for your model, and it is the document a warranty claim is measured against."
+      }
+     ]
+    },
+    {
+     "id": "tires-why-and-markings",
+     "title": "Tires: why they fail and how to read them",
+     "open": true,
+     "blocks": [
+      {
+       "kind": "p",
+       "html": "RV tires are asked to do more than car tires. Goodyear's service bulletin explains why: <b>\"Tires used on RVs are typically subjected to a greater variety of service conditions than automobiles, light truck and truck applications - often at or near maximum loads and during hot weather.\"</b> Running near the maximum load means there is very little margin. A small drop in pressure, or a hot day, eats into that margin quickly."
+      },
+      {
+       "kind": "p",
+       "html": "A failure is expensive because the body above the tire is thin. Repair shops describe the same picture: <b>\"In seconds, a failing tire can damage underbelly materials, wiring, plumbing, propane lines, flooring, insulation, sidewalls, appliances, and even structural components.\"</b> The tread separates and flails at speed, so the damage lands on the wheel well and everything routed through it. Published repair costs, such as a few hundred to several thousand dollars, come from repair shops and trade press, not from tire makers or the government. They are estimates of what a blowout can cost, not measured data."
+      },
+      {
+       "kind": "p",
+       "html": "<b>Load range and load index</b> are the two numbers that describe how much a tire can carry."
+      },
+      {
+       "kind": "list",
+       "items": [
+        "<b>Load range</b> is a letter, such as Load Range E or G. <b>\"The load range identifies the tire's load and inflation limits.\"</b>",
+        "<b>Load index</b> is a number, such as 120. <b>\"the load index is a numerical code associated with the maximum load a tire can carry.\"</b>",
+        "Some light truck tires carry two load indices. The first applies to a single tire, the second to a tire used in a dual pair. Toyo warns that <b>\"When LT tires are fitted in dual assemblies, the load capacity is reduced by 9% of the single load capacity to account for the affect of road crown.\"</b>",
+        "A bigger number is not automatically a safe substitute. The industry guidance is that <b>\"The load index should not be used independently to determine replacement tire acceptability for load capacity.\"</b>"
+       ]
+      },
+      {
+       "kind": "p",
+       "html": "The sidewall also prints the maximum load and the cold pressure that matches it, for example a Load Range G tire rated to carry 4,675 lb at 110 psi in a single position. That printed figure is a ceiling, not a target. The pressure you actually run is set lower and is described below."
+      },
+      {
+       "kind": "p",
+       "html": "<b>The date code.</b> Every tire carries the week and year it was made, in the DOT code on the sidewall. Goodyear gives the format: <b>\"For example, a DOT code ending with '0921' indicates a tire made in the 9th week of 2021.\"</b> The full code is often printed on only one side of the tire, usually the inner wall, so you may have to look at the inside of each tire to read it."
+      },
+      {
+       "kind": "callout",
+       "html": "<b>Check all four, plus the spare.</b> Because the DOT code can be on the inner sidewall, a quick look at the outer walls can miss the oldest tire. The spare ages too, even though it never touches the road."
+      }
+     ]
+    },
+    {
+     "id": "tires-age",
+     "title": "The tire age question",
+     "open": false,
+     "blocks": [
+      {
+       "kind": "p",
+       "html": "Rubber ages whether or not the tread wears. That is why tire makers give an age, not just a tread depth, and why the tread can look new on a tire that should be replaced."
+      },
+      {
+       "kind": "p",
+       "html": "The sources do not agree on the number. Each maker publishes its own figure, and the range is wide."
+      },
+      {
+       "kind": "list",
+       "items": [
+        "<b>Goodyear says 6 years.</b> <b>\"Goodyear recommends that any tire in service (meaning inflated and mounted on a rim of your vehicle, including your spare tire regardless of whether that tire is in contact with the roadway) 6 years or more be replaced even if such tire appears serviceable and even if it has not reached the legal treadwear limit.\"</b> Goodyear also says a tire's replacement period should not exceed 6 years.",
+        "<b>Michelin says inspect from 5 years and replace at 10.</b> <b>\"Tires that have been in use for 5 years or more should continue to be inspected by a specialist at least annually.\"</b> and <b>\"any tires in service 10 years or more from the date of manufacture, including spare tires, be replaced with new tires as a simple precaution even if such tires appear serviceable and even if they have not reached the legal wear limit.\"</b>",
+        "<b>Hankook, in its trailer tire guide, gives 10 years.</b> <b>\"It is recommended that tires in service 10 years or more from the date of manufacture must be replaced even if it was never used.\"</b>",
+        "<b>NHTSA reports the range, not one number.</b> Winnebago repeats it: <b>\"Some vehicle and tire manufacturers recommend replacing tires that are six to ten years old, regardless of treadwear.\"</b> The range is attributed to the manufacturers, not set as a federal rule.",
+        "<b>The tire makers' trade body says no single service life exists.</b> The USTMA states: <b>\"USTMA is not aware of scientific or technical data that establishes or identifies a specific minimum or maximum service life for passenger and light truck tires.\"</b>"
+       ]
+      },
+      {
+       "kind": "p",
+       "html": "<b>The popular 5-7-10 rule is not published by RVIA or NHTSA.</b> A common rule of thumb on the internet says to inspect at 5 years, replace at 7 and never go past 10, and attributes it to a consensus of NHTSA, RVIA and the Tire Industry Association. No RVIA or NHTSA document that states this was found. RVIA publishes construction and inspection standards, not a consumer tire age rule, and NHTSA has never issued one. NHTSA's own research explains that it chose not to add an aging requirement to its tire standard: <b>\"At this time, the agency does not believe it is necessary for motor vehicle safety to add a tire aging requirement to its light vehicle tire standard…\"</b> Treat the 7 year figure in particular as unverified."
+      },
+      {
+       "kind": "callout",
+       "html": "<b>What to do with the disagreement.</b> Read the DOT date code on each tire. Replace any tire that reaches your tire maker's own number. Have the tires inspected by a specialist every year from year 5. Do not use tread depth alone as the test, and do not leave the spare out of the count."
+      },
+      {
+       "kind": "p",
+       "html": "Age matters because of what happens inside the tire. Michelin explains the mechanism: <b>\"an underinflated or overloaded tire will build up more heat that could go beyond the endurance limits of the rubber and radial cords. This could cause sudden tire failure.\"</b> The visible version, cracking in the sidewall from ozone and sunlight, is a separate age mechanism. Shallow cracking is normal. Cracking deeper than about 2/32 inch means the tire should be replaced. The dangerous part is that internal damage can be invisible: the cords and the rubber can degrade while the outside looks fine."
+      },
+      {
+       "kind": "p",
+       "html": "Tread still matters, and the legal minimum is low. Goodyear states both limits: <b>\"Tires should be removed from service if the tread wears down to 2/32nds of an inch. Also, federal regulations state that tires on the front axle of vehicles with a GVWR in excess of 10,000 pounds should be removed when worn to 4/32nds of an inch tread depth.\"</b>"
+      },
+      {
+       "kind": "p",
+       "html": "Used tires are not a shortcut. Goodyear's warning is that <b>\"consumers should never purchase or install used tires of any age on their RV as the service, maintenance and storage history of used tires is largely unknown.\"</b>"
+      }
+     ]
+    },
+    {
+     "id": "tires-inflation",
+     "title": "Inflating to the load table",
+     "open": false,
+     "blocks": [
+      {
+       "kind": "p",
+       "html": "The pressure printed on the sidewall is a ceiling, not the pressure you run. RV tires are inflated to match the actual weight the tire carries, and that pressure is read from a load and inflation table. Goodyear puts the rule simply: <b>\"The proper air inflation for your tires depends on how much your fully loaded RV or trailer weighs.\"</b>"
+      },
+      {
+       "kind": "p",
+       "html": "The method is the same at every maker. Goodyear: <b>\"actual air pressure required should be determined based on the actual load on each individual tire. Inflation pressure should be adjusted to handle the tire carrying the heaviest load, and all tires on the axle should be adjusted to this pressure.\"</b> Michelin gives the same instruction: <b>\"weigh each axle end separately and use the weight of the heaviest end to determine the pressure for all tires on that axle.\"</b>"
+      },
+      {
+       "kind": "list",
+       "items": [
+        "Find your exact tire size and its load and inflation table.",
+        "Weigh the RV fully loaded: fuel, water, propane and cargo, as it will travel.",
+        "Weigh each end of an axle separately. If you can, weigh each wheel position, the front left corner, front right corner and so on.",
+        "On each axle, take the heavier end and read across the table to the lowest cold pressure that supports that weight.",
+        "Set both tires on that axle to the same pressure.",
+        "Never go above the maximum pressure stamped on the wheel, not just the tire.",
+        "Check the pressures cold."
+       ]
+      },
+      {
+       "kind": "p",
+       "html": "Weighing each corner, not just each axle, matters because the weight is rarely even side to side. Michelin warns that <b>\"when you weigh one axle at a time, it's possible for one wheel position to be overloaded even though the G.A.W.R. has not been exceeded (we've seen as much as a 1200 pound difference between left and right front tires).\"</b>"
+      },
+      {
+       "kind": "p",
+       "html": "The pressure you choose must respect the wheel, not just the tire. Michelin is explicit that <b>\"the cold inflation pressure for the tire must never exceed the maximum inflation rating that is stamped on the wheel.\"</b> For control, both tires on an axle should run at the same pressure."
+      },
+      {
+       "kind": "p",
+       "html": "Underinflation is the main failure route. A soft tire flexes more, which builds heat, and heat damages the rubber and the cords from the inside. The damage threshold the industry uses is low: a Rubber Manufacturers Association figure quoted by Michelin says that <b>\"any tire that has been run at less than 80% of recommended air pressure for the load it is carrying should be inspected for possible damage.\"</b> Goodyear's consumer version is that <b>\"Tires that have lost more than 20% of their recommended inflation pressure should be considered flat.\"</b>"
+      },
+      {
+       "kind": "list",
+       "items": [
+        "<b>\"Tire pressure should be checked when your tires are cold and haven't been driven more than one mile.\"</b>",
+        "A hot tire can read as much as 10 to 15 psi higher than the same tire cold.",
+        "<b>\"Do NOT bleed air from hot tires.\"</b> The rise is normal and the tire is not overinflated.",
+        "A 10 F rise in outside temperature raises pressure by about 2%, and a 10 F fall lowers it by about the same.",
+        "<b>\"Tire inflation pressure increases approximately .48 psi for every 1,000 feet of altitude.\"</b>",
+        "Use a good truck tire gauge with a dual angled head."
+       ]
+      }
+     ]
+    },
+    {
+     "id": "tires-tpms-and-storage",
+     "title": "TPMS, valve stems and storage",
+     "open": false,
+     "blocks": [
+      {
+       "kind": "p",
+       "html": "<b>TPMS does not replace the hand check.</b> A tire pressure monitoring system shows the pressures while you drive, but it is not a substitute for measuring them. Goodyear states that <b>\"Tires should be inspected monthly for proper inflation pressure, tread wear and overall condition\"</b>, and that the monthly check should happen whether or not the vehicle has a monitoring system."
+      },
+      {
+       "kind": "p",
+       "html": "<b>Valve stems are a weak point with screw-on sensors.</b> A sensor screws onto the end of the stem and adds weight. Tire engineer commentary explains the result: <b>\"TPMS external sensors screw on the end of the stems, and while they are not very heavy, that extra bit of weight does result in vibration, which can result in the fatigue failure of the rubber stem.\"</b> Bolt-in metal stems are the fix, and flow-through sensors are designed for metal stems only. Valve caps should be plastic, not metal, because metal caps can corrode and fuse to the stem."
+      },
+      {
+       "kind": "p",
+       "html": "Other sensor details are worth knowing. Keystone notes that a common alert setting is a low warning at 10% below the recommended pressure and a high warning at 20% above it. Sensor batteries commonly last about five years. Whether a sensor is heavy enough to require re-balancing the wheel is disputed, and no manufacturer rule was found."
+      },
+      {
+       "kind": "p",
+       "html": "<b>Balancing and the spare.</b> Goodyear says to balance a tire when new tires are mounted, when a tire and wheel move to another position, after a flat repair, and any time a tire is dismounted. On the spare, Goodyear recommends that a matching full-size spare be rotated into service as part of the regular rotation, and repeats that the spare is subject to the same 6 year rule."
+      },
+      {
+       "kind": "p",
+       "html": "<b>Storage.</b> Tires age fastest when the RV sits. Michelin explains: <b>\"rubber tires age when not being used. So, if you must store your RV, a cool, dry, sealed garage is your best bet. Also, some storage surfaces can cause tires to age faster. That's why Michelin recommends placing a barrier (cardboard, plastic or plywood) between your tire and the storage surface.\"</b>"
+      },
+      {
+       "kind": "list",
+       "items": [
+        "Clean the tires with soap and water first, then cover them from sunlight and ultraviolet rays.",
+        "Store away from high ozone areas. Do not park next to electric generators, transformers or mercury vapor lamps.",
+        "Put a barrier between the tire and the ground.",
+        "Goodyear says to inflate to operating pressure plus 25%, but not above the wheel rating, and to move the RV at least every three months to prevent flat spotting. Michelin instead says to inflate to the pressure shown on the sidewall. These two instructions differ.",
+        "Do not use tire dressings that contain petroleum products, alcohol or silicones. Michelin states they will <b>\"cause deterioration or cracking and accelerate the aging process.\"</b>"
+       ]
+      },
+      {
+       "kind": "callout",
+       "html": "Store on a level surface. Michelin warns that if a tire is not evenly supported, <b>\"the sidewall cables can become fatigued and damaged, resulting in a sidewall rupture and a complete, sudden loss of air pressure.\"</b>"
+      }
+     ]
+    },
+    {
+     "id": "plumbing-fittings",
+     "title": "The factory-fresh plumbing problem",
+     "open": false,
+     "blocks": [
+      {
+       "kind": "p",
+       "html": "A new RV is not finished plumbing. A pattern reported widely by owners, dealers and repair shops is that factory water connections can be loose or wrong and start to leak after some miles of towing, once vibration has worked on them. The caveat is that no manufacturer or government document was found that states this generally. What does exist is specific manufacturer paperwork proving individual factory defects, plus a large body of owner and shop reports."
+      },
+      {
+       "kind": "p",
+       "html": "The mechanism is vibration. One repair source writes: <b>\"When you tow your RV, you're subjecting it to an earthquake-like experience. Even on a smooth highway, water lines will vibrate and shake, which can cause the fittings that connect the various water lines to come loose.\"</b> The same source describes the origin of many of these joints: <b>\"Sometimes workers hurry when putting together an RV's plumbing system and do poorly connecting the water lines. In an ideal world, the manufacturer or the RV dealer would catch these during pre-delivery inspections, but that's not always the case.\"</b>"
+      },
+      {
+       "kind": "p",
+       "html": "A specific defect recurs: flexible braided or vinyl hose clamped onto a fitting meant for rigid PEX pipe. One shop describes it as <b>\"Poor factory connections: Some newer RVs were built with flexible vinyl tubing on fittings made for rigid PEX, creating slow leaks at junctions.\"</b> The clamp cannot seal the softer, slightly larger hose as well as it seals pipe, so the joint weeps."
+      },
+      {
+       "kind": "p",
+       "html": "Manufacturer paperwork shows that factory water defects are real. In a customer satisfaction campaign, Brinkley said the <b>\"water supply line to the ice maker may pull loose (or out), creating a water leak.\"</b> Forest River issued a bulletin for a water heater that was not winterized correctly and could leak from cracked internal parts. Dometic, the toilet maker, notes a factory test that can disturb a seal: <b>\"After installation at the RV or other vehicle factory, the entire toilet and waste tank system is flood-tested for leaks by filling the system with water to the rim…\"</b> Holding the flush ball open for that test can distort the seal, so a slow drip into the tank can appear later."
+      },
+      {
+       "kind": "list",
+       "items": [
+        "<b>Pressure hold test.</b> One expert method: <b>\"Pressurise the system, switch the pump off at the panel, and see whether pressure holds for 15 minutes. If it holds, the pump's check valve is the suspect rather than the plumbing.\"</b> A typical 12 volt pump cuts off between 45 and 55 psi.",
+        "<b>Paper towel tracing.</b> Wrap a single layer of paper towel around the supply and drain lines under the sinks, around the toilet and by the water heater. The wet one points to the leak.",
+        "<b>Watch shore water pressure.</b> Keep the pressure at the hydrant below about 65 psi, and use a real pressure regulator rather than a cheap restrictor.",
+        "<b>Check the known spots.</b> Vinyl to PEX junctions in the wet bay, faucet supply connections, water heater lines, the pump and its check valve, and the low point drains.",
+        "<b>Fix clamps correctly.</b> A standard screw hose clamp does not compress a PEX joint evenly. Use the right clamp for the fitting, such as a stainless ear clamp or a copper crimp ring, and use a braided flex hose between the pump and the pipe to absorb vibration."
+       ]
+      },
+      {
+       "kind": "callout",
+       "html": "Warranty language often puts the fitting check on the owner. One owner's manual lists <b>\"including water leaks, related to misuse, mishandling, neglect or abuse\"</b> among the things not covered, and names tightening fittings as routine maintenance. A slow drip found early is a small job. One found after it has travelled through a floor is not."
+      }
+     ]
+    },
+    {
+     "id": "seals-roof-delamination",
+     "title": "Seals, roof and delamination",
+     "open": false,
+     "blocks": [
+      {
+       "kind": "p",
+       "html": "Sealant keeps water out of an RV, and water is the enemy. There are two kinds of lap sealant and they are not interchangeable. Dicor, which makes both, warns on the self leveling version: <b>\"DO NOT USE on vertical surfaces. DO NOT USE as splicing cement.\"</b> The other version is labeled <b>\"Non-Sag (for vertical surfaces)\"</b>. Self leveling sealant flows out flat and is for horizontal surfaces such as the roof. Non-sag sealant stays put and is for anything sloped or vertical, such as sidewalls and termination rails."
+      },
+      {
+       "kind": "p",
+       "html": "Sealant choice also depends on the roof material. On a rubber or TPO roof, do not use silicone. Alpha Systems, which makes roof membrane, states plainly: <b>\"Do not use silicone! Silicone will not adhere to the Superflex roof membrane.\"</b> There is also a two layer idea behind factory roofs: <b>\"Butyl tape provides the 'Primary Seal' against water infiltration or penetration in these membrane roof assemblies. The lap sealant is a secondary seal.\"</b> The tape under the molding is the real seal, and the lap sealant covers and protects it."
+      },
+      {
+       "kind": "p",
+       "html": "How often to inspect is a genuine disagreement, and no RVIA document fixes one."
+      },
+      {
+       "kind": "list",
+       "items": [
+        "<b>Every 90 days:</b> <b>\"Most manufacturers recommend inspecting your RV's exterior seams and seals every 90 days.\"</b>",
+        "<b>Three to four times a year:</b> a roof maker advises that <b>\"During routine cleaning (3-4 times a year), all caulk and sealants should be inspected for voids or cracking.\"</b>",
+        "<b>Every 6 months, reseal annually:</b> a practitioner source says to <b>\"inspect your RV roof seals carefully every six months (twice a year) and reseal it annually.\"</b>",
+        "<b>OEM:</b> Winnebago's chart lists sealants to be inspected every 6 months and replaced annually."
+       ]
+      },
+      {
+       "kind": "p",
+       "html": "The reason to inspect on a calendar rather than by mileage is that the sealant ages even when the RV does not move. As one repair source puts it, <b>\"UV dose, heat cycles and ozone break down sealant and rubber whether the unit rolls or sits\"</b>. Look for <b>\"Deep cracks or voids in the lap sealant; Loose or missing transition molding; Cracked, damaged, or worn areas around roof vents, A/C units, solar panels, and other roof-mounted accessories.\"</b>"
+      },
+      {
+       "kind": "p",
+       "html": "<b>Delamination</b> is what happens to a laminated sidewall when water gets in. The definition: <b>\"Most modern RV sidewalls are laminated: a fiberglass or aluminum outer skin glued to foam or a wooden lattice, with a thin inner panel. Delamination is the outer skin separating from what it was glued to, and it shows as bubbles, waves or ripples in the wall, soft spots and sometimes a hollow sound when tapped.\"</b> It is a failure of the glue, not of the fiberglass: <b>\"Sidewall delamination is an adhesive failure, not a fiberglass failure.\"</b> And the cause is usually water: <b>\"Water is the usual cause: it gets in through a failed seam, vent or window seal, softens the glue and the wood, and spreads.\"</b>"
+      },
+      {
+       "kind": "p",
+       "html": "The warning signs are easy to check once you know what to look for."
+      },
+      {
+       "kind": "list",
+       "items": [
+        "Bubbles, waves, ripples or creases along a sidewall.",
+        "Sight down the wall in low, raking light. One shop's test: <b>\"Stand at one end of the trailer and look down the wall until it turns into a mirror.\"</b>",
+        "Tap or press the wall. <b>\"A bonded panel rings. An unbonded panel thuds.\"</b> A skin that flexes and springs back means the glue has failed. A skin that sinks and stays sunk means the wood behind it has rotted.",
+        "Use a moisture meter if you have one. <b>\"Sound sidewall reads in the 8 to 12 percent range. Anything over 18 percent is actively wet.\"</b>",
+        "Check the usual entry points: roof to sidewall seams, window corners, awning rails, marker lights, storage door frames, slide-out openings and the front and rear caps."
+       ]
+      },
+      {
+       "kind": "p",
+       "html": "Not every RV can delaminate. Units built with corrugated aluminum siding over a framed wall, sometimes called hung wall construction, <b>\"don't use laminated fiberglass panels.\"</b> If your RV has that kind of siding, this particular failure mode does not apply."
+      }
+     ]
+    },
+    {
+     "id": "cleaning-and-care",
+     "title": "Cleaning and care",
+     "open": false,
+     "blocks": [
+      {
+       "kind": "p",
+       "html": "Exterior cleaning is mostly about protecting the surface. Wash with a pH neutral or RV and marine grade soap and a soft brush or microfiber mitt. Wash the roof first so the runoff does not streak down the clean sidewalls. A common recommendation is to wash the full exterior about once a month, and the roof every three to four months."
+      },
+      {
+       "kind": "list",
+       "items": [
+        "<b>\"Avoid solvents at all costs.\"</b>",
+        "<b>\"No pressure washing, period.\"</b>",
+        "<b>\"Avoid dish soaps and other household detergents that can dry out and strip wax.\"</b>",
+        "<b>\"Avoid using strong household solvents, undiluted bleach, or heavy rubbing compounds not labeled for gelcoat or fiberglass.\"</b>",
+        "Do not use silicone products on a rubber or TPO roof."
+       ]
+      },
+      {
+       "kind": "p",
+       "html": "Pressure washing is called out because of where the water goes. As one maker explains, <b>\"Excess pressure can force water behind seals and decals.\"</b> Water forced behind a seal is how a seal starts to fail, which leads to the delamination problem described above."
+      },
+      {
+       "kind": "p",
+       "html": "Wax helps, but it does not last on fiberglass gel coat. One detailer notes that <b>\"wax may last only one to three months.\"</b> Decals need their own care: use a UV protectant rather than an abrasive or solvent wax, because solvent and abrasive waxes wear the graphics. A ceramic coating is the longer lasting option."
+      },
+      {
+       "kind": "list",
+       "items": [
+        "Clean the roof and check the lap sealant for cracks and voids at each cleaning.",
+        "Do not use petroleum based or silicone products on a rubber or TPO roof.",
+        "Do not pressure wash an awning: <b>\"Do not use a pressure washer, which can delaminate vinyl fabric and damage seams.\"</b> Let it dry fully in the extended position before rolling it up.",
+        "On acrylic awning fabric: <b>\"Avoid bleach, which breaks down acrylic fibers over time, and avoid petroleum-based solvents.\"</b>"
+       ]
+      },
+      {
+       "kind": "p",
+       "html": "Black streaks are the dark lines that run down from the roof. A black streak cleaner will work, but a maker cautions that <b>\"these cleaners WILL strip wax from the surface. So, it is important to re-wax the area where you have used the cleaner.\"</b> The technique matters too: <b>\"The best way to use a black streak cleaner is to spray the product onto a towel and attack the streak directly.\"</b> If the streaks return after cleaning, the surface is oxidized and needs treatment rather than another wash."
+      },
+      {
+       "kind": "p",
+       "html": "Interior care is covered in a dedicated chapter of your owner's manual, which lists soft goods, cabinetry, vinyl wall paneling, flooring, bathroom and windows. Follow that chapter. No general product list for interior surfaces was found in the sources behind this guide, so the manual is the place to look."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "driving-and-towing",
+   "title": "Driving and towing",
+   "summary": "Driving a motorhome, towing a travel trailer, fifth wheel specifics, backing up and pop-up campers.",
+   "sections": [
+    {
+     "id": "driving-motorhome",
+     "title": "Driving a motorhome",
+     "open": true,
+     "blocks": [
+      {
+       "kind": "p",
+       "html": "A motorhome is longer than a car and it steers from the front, so the back end does not follow the front wheels exactly. The two ideas to learn are off-tracking and rear overhang. Off-tracking means <b>\"When the rear wheels follow a different path than the front wheels. The longer the wheelbase and the sharper the wheel cut, the greater the off-tracking.\"</b> Rear overhang means <b>\"The part of the RV that sticks out behind the drive axle.\"</b>"
+      },
+      {
+       "kind": "p",
+       "html": "Off-tracking is what makes a turn feel tighter than it looks. On a long coach the rear axle can cut several feet inside the path of the front wheels on a sharp campsite or driveway turn."
+      },
+      {
+       "kind": "p",
+       "html": "The practical turn advice is to plan ahead: <b>\"Set up further away from the obstruction and start to turn earlier\"</b>. Use the convex mirrors on the side you are turning toward, with the rule <b>\"Turn right, look right. Turn left, look left.\"</b>"
+      },
+      {
+       "kind": "p",
+       "html": "<b>Tail swing</b> is the other half of the same geometry. The overhang behind the rear axle swings the opposite way at the start of a turn, so the rear corner can clip something beside you. Newmar's rule of thumb is that <b>\"For every three feet behind your rear axle, you have the potential for one foot of tail swing heading in the opposite direction.\"</b> On some coaches it can be as much as 30 inches. You can measure yours by parking parallel to a straight line, making a full lock turn away from the line, and seeing how far the tail crosses it. A shortcut is to divide the overhang length by three."
+      },
+      {
+       "kind": "p",
+       "html": "<b>Braking.</b> More weight takes longer to stop, and a motorhome carries a lot of it. One thing that surprises new owners: the coach's service brakes are sized for the coach, not for whatever it is towing. One expert explains that <b>\"the brakes on their coach are rated for operation at the gross vehicle weight rating (GVWR)\"</b>, not for the combined weight of coach and towed vehicle, and that <b>\"It is NOT the amount of weight that can be stopped by the coach's brakes alone.\"</b> That is why a towed vehicle needs its own supplemental braking system, which is required above about 3,000 lb in most states."
+      },
+      {
+       "kind": "p",
+       "html": "Drive within a margin. Stopping distance grows with load, and a coach that is at its legal limit on a long downgrade has little reserve. Use the transmission and the exhaust brake or engine braking on long grades rather than riding the service brakes."
+      },
+      {
+       "kind": "list",
+       "items": [
+        "Start turns later and wider than you would in a car.",
+        "Watch the side you are turning toward, and remember the tail swings the other way.",
+        "Give a motorhome braking room, and expect to need more when descending.",
+        "Use a spotter and mirrors when parking (see the backing section).",
+        "Do not force a turn when the geometry is tight. Reposition and try again."
+       ]
+      }
+     ]
+    },
+    {
+     "id": "towing-trailer",
+     "title": "Towing a trailer",
+     "open": true,
+     "blocks": [
+      {
+       "kind": "p",
+       "html": "<b>Hitching, in order.</b> The sequence below is assembled from manufacturer manuals. The one rule that never changes is that the wheel chocks stay in place until the whole procedure is finished, because the trailer can roll the moment the coupler is not seated on the ball."
+      },
+      {
+       "kind": "list",
+       "items": [
+        "Chock the trailer wheels, and leave the chocks in until the end.",
+        "Open the coupler latch before backing up, not after.",
+        "Raise the tongue with the tongue jack so the coupler clears the ball, higher than you think you need.",
+        "Back the tow vehicle until the ball is under the coupler.",
+        "Lower the coupler onto the ball until it is fully seated, then close the coupler latch and fit the safety pin.",
+        "Install the weight distribution bars and sway control as the hitch maker directs, then lower the jack.",
+        "Retract the tongue jack fully, and be sure the stabilizer jacks are retracted.",
+        "Connect the breakaway cable to the tow vehicle.",
+        "Cross the safety chains under the coupler and attach them to the tow vehicle.",
+        "Plug in the trailer connector and test the lights, turn signals, brakes and running lights.",
+        "Remove the chocks, then do the tug test: with everything connected, pull forward gently against the chocked wheels."
+       ]
+      },
+      {
+       "kind": "p",
+       "html": "The manuals give the reason for each step. Lance requires that the trailer not move until <b>\"The coupler is secured and locked\"</b>, the chains are secured and the jacks are retracted. Winnebago states that <b>\"Leave your wheel chocks in place until you have completed the entire hitching procedure.\"</b>"
+      },
+      {
+       "kind": "p",
+       "html": "<b>Safety chains cross under the tongue.</b> Crossing them makes a cradle that catches the tongue if the coupler separates, instead of letting it drop to the pavement. Lance specifies that the chains <b>\"Fasten to frame of tow vehicle, not to hitch or ball.\"</b> Winnebago adds that <b>\"The chains should be crossed under the hitch in an 'X' pattern to keep the trailer from hitting the ground in case of a disconnection.\"</b> A retailer prints the rule in capitals: <b>\"NEVER ATTACH SAFETY CHAINS TO THE HITCH BALL OR ANY REMOVABLE PART OF THE HITCH!\"</b>"
+      },
+      {
+       "kind": "p",
+       "html": "<b>The breakaway cable is a separate connection.</b> Winnebago is explicit: <b>\"Attach the breakaway cable. This must be a separate connection, not hooked to the safety chains.\"</b> The breakaway switch pulls a pin and applies the trailer's own battery powered brakes if the trailer separates, so it only works if the cable is pulled, which it will not be if it is tied to the chains. Purdue Extension explains the same point: <b>\"the breakaway switch only works if the brake cable is attached to the towing truck's frame, not the safety chains. If the cable were attached to the safety chain, the cable would not be pulled when the chain is pulled.\"</b> The switch also needs a charged trailer battery. A bench test is described by the generic manual: <b>\"Simply pull the pin out of the switch by hand and then try to pull the trailer. If you feel a significant drag force the brakes are activated. Be sure to re-insert the pin in the breakaway switch.\"</b>"
+      },
+      {
+       "kind": "p",
+       "html": "<b>Unhitching is the reverse.</b> Level the trailer, chock the wheels, reduce any sway bar tension, disconnect the chains and cables, raise the tongue jack with the jack to lift the coupler off the ball, remove the pin and slide the latch open, double check, then pull the tow vehicle forward. On a new trailer, Lance also says to <b>\"Check coupler tightness after towing 50 miles.\"</b> and to <b>\"check to make sure they are tightened to the proper torque after the first 10, 25 and 50 miles of driving and before each tow thereafter.\"</b> for the lug nuts."
+      },
+      {
+       "kind": "p",
+       "html": "<b>Tongue weight.</b> Tongue weight is how much of the trailer's weight rests on the hitch. It controls stability, so it matters more than almost anything else about loading. Ford gives the targets: <b>\"For trailers up to 2,000 lbs., tongue load not to exceed 200 lbs. For conventional trailers over 2,000 lbs., tongue load is 10% of loaded trailer weight. For 5th-wheel trailers, king pin weight is 15% of loaded trailer weight.\"</b> Lance gives a range instead of one figure: <b>\"The hitch weight of a loaded trailer (including cargo) should be between 10-15% of the total weight of the trailer on a bumper pull trailer. The hitch weight of a loaded trailer (including cargo) should be between 20-25% of the total weight of the trailer on a 5th wheel trailer.\"</b> Note that the two 5th-wheel figures differ, 15% against 20 to 25%."
+      },
+      {
+       "kind": "p",
+       "html": "Too little or too much tongue weight both cause trouble. Ford warns that <b>\"Too much tongue load or king pin weight can cause suspension/drivetrain damage and can press the vehicle down in back causing the front wheels to lift to the point where traction, steering response and braking can be severely decreased. Too little tongue load or king pin weight can reduce rear-wheel traction and cause instability, which may result in tail wagging or jackknifing.\"</b>"
+      },
+      {
+       "kind": "p",
+       "html": "<b>Weight distribution.</b> A weight distribution hitch uses spring bars to spread the tongue weight across the tow vehicle's axles so the pair sits level. It does not raise any rating. One retail source states plainly: <b>\"A weight-distribution hitch does not increase the truck's GVWR, rear gross axle weight rating, tire capacity, receiver rating, trailer GVWR, or legal towing capacity. It also cannot make a tail-heavy or overloaded trailer safe.\"</b> Ratings are fixed at the factory, and adding parts does not change them: <b>\"Adding components such as air bags or overload springs does not allow these rating to be increased or exceeded.\"</b>"
+      },
+      {
+       "kind": "p",
+       "html": "<b>Loading.</b> Where the cargo sits sets the tongue weight. Common advice is <b>\"Load 60% of your cargo weight in front of the axle, 40% behind.\"</b> and <b>\"Put the heaviest items in first, centered and low.\"</b> The hitch maker Equal-i-zer publishes a different split: <b>\"About 85 percent of the trailer's total weight should be positioned forward of the axle or axles, with no more than 15 percent behind\"</b>, and says it should not be confused with the 60/40 rule. The two percentages disagree. The one point every source agrees on is the outcome: 10 to 15% tongue weight for a bumper pull, measured, not guessed. A general rule that both sides share is <b>\"Heavy items should be placed low and as close to the axle positions as reasonable.\"</b>"
+      },
+      {
+       "kind": "p",
+       "html": "<b>Sway.</b> Sway is the trailer swinging side to side behind the tow vehicle. Lance lists the triggers: <b>\"Anticipate the trailer 'swaying.' Swaying can be caused by excessive steering, wind gusts, roadway edges, or by the trailer reaction to the pressure wave created by passing trucks and buses.\"</b> The root cause is usually loading: too little tongue weight makes the trailer unstable, and the hitch maker Equal-i-zer says that <b>\"sway control is not a cure-all.\"</b> and that <b>\"Sway begins with weight placement, not hardware.\"</b>"
+      },
+      {
+       "kind": "p",
+       "html": "If sway starts, the manual's instruction is specific. Lance: <b>\"When encountering trailer sway, take your foot off the accelerator, and steer as little as possible in order to stay on the road. Use small 'trim like' steering adjustments.\"</b> And then: <b>\"Do not attempt to steer out of the sway; you'll only make it worse. Also, do not apply the tow vehicle brakes to correct trailer swaying. The application of the trailer brakes alone will tend to straighten out the combination, especially when going downhill.\"</b> So the correction is the manual trailer brake lever, not the brake pedal and not the accelerator. Do not speed up to try to pull out of it, and avoid sudden lane changes."
+      },
+      {
+       "kind": "p",
+       "html": "The trailer brake controller is the tool for this. California's DMV describes what it does: <b>\"Most conventional and fifth-wheel trailers have electric brakes, activated by a controller in the tow vehicle. The controller automatically coordinates the tow vehicle and trailer braking so the two systems work together when the brake pedal is applied. The controller can also be helpful in stabilizing a trailer that sways because of bad road conditions.\"</b> The same source adds that <b>\"Manually applying the trailer brakes by using the hand lever on the controller will stabilize a trailer that is likely to sway.\"</b> Two related rules: the sway control bar, if fitted, must be disengaged before backing up, because as Equal-i-zer warns, <b>\"the sway control must be disengaged before backing up. Leaving it engaged while reversing forces the system to fight the turn, which can lead to binding, premature wear, or outright damage.\"</b> And the hitch ratings must exceed the trailer: the ball, the spring bars and the sway control all have to be rated above the fully loaded trailer weight."
+      }
+     ]
+    },
+    {
+     "id": "fifth-wheel",
+     "title": "Fifth-wheel specifics",
+     "open": false,
+     "blocks": [
+      {
+       "kind": "p",
+       "html": "A fifth wheel carries part of its weight over the tow vehicle's rear axle, on a king pin that sits in a hitch in the bed. That placement is why a fifth wheel is steadier than a bumper pull: the pivot point is over the axle rather than behind it, so the trailer tracks behind the truck more predictably and sways less. The trade off is height, which raises the center of gravity and brings the trailer closer to the cab, so clearance has to be checked."
+      },
+      {
+       "kind": "p",
+       "html": "<b>The lube plate.</b> A fifth wheel hitch can be greased, or a plastic lube plate can be used instead to avoid the mess. The component maker gives the spec: <b>\"The plastic lube plate must not exceed 3/16 of an inch in thickness to ensure hitch will operate properly. Lube plate must be 12 inches in diameter or larger to properly distribute king pin weight.\"</b> Without a lube plate, the same manual says to grease the skid plate and pivot pin, and to add grease to the jaw fitting every 6 months."
+      },
+      {
+       "kind": "p",
+       "html": "<b>Hitch height and clearance.</b> The hitch and pin box are set so the trailer rides about level. The maker's figure is <b>\"Allow approximately 6 inches clearance between the top of the pickup walls and the underside of the front of the trailer for pitch and roll of the trailer.\"</b> For hitch placement, the distance from the back of the truck cab to the center of the rear axle <b>\"should be approximately 4 inches greater than one-half the trailer width.\"</b>"
+      },
+      {
+       "kind": "p",
+       "html": "<b>Cab strike when turning.</b> A fifth wheel can swing into the back of the truck cab on a sharp turn, which is why clearance is checked before driving. PullRite is the most explicit: <b>\"The distance between the cab and trailer should be greater than two inches at all points of the turn.\"</b> It warns that <b>\"if you make a turn greater than 90 degrees the trailer will contact your truck and you WILL damage various parts of the hitch\"</b>. The fix on short-bed trucks is a sliding hitch, which lets the pivot move back during a turn. A common mistake to avoid is called high hooking: <b>\"'High hooking' occurs when backing your hitch into a trailer that is set too high, resulting in the lower flange of the king pin to wedge itself against the metal edge of the lower horseshoe piece or against the Lock Jaw Assembly.\"</b> Set the trailer low enough that the pin enters the jaws cleanly."
+      }
+     ]
+    },
+    {
+     "id": "backing-up",
+     "title": "Backing up",
+     "open": false,
+     "blocks": [
+      {
+       "kind": "p",
+       "html": "Backing a trailer or a motorhome is where most damage happens, and it is a skill learned with practice rather than reading. The working method has three parts: properly adjusted side mirrors, a camera system if the RV has one, and a spotter on the ground at the rear corner who is working to agreed signals."
+      },
+      {
+       "kind": "p",
+       "html": "The mirrors are the main tool. Set them so you can see down both sides of the RV and the trailer or the rear corners. When you turn, look to the side you are turning toward. A camera helps but does not replace the mirrors: a single view can still hide the extreme rear corners when the RV is angled."
+      },
+      {
+       "kind": "p",
+       "html": "<b>Use a spotter, and agree on signals first.</b> Winnebago's setup guide states the rule as <b>\"Always use a spotter.\"</b> Before you move, decide what each signal means, and decide on a stop signal that means stop now. If you cannot see the spotter in a mirror, stop. When you are unsure, the safest instruction is the one from an experienced driver: <b>\"When in doubt while backing up, get out and look.\"</b> Getting out and looking is always faster than repairing a dent. No standard hand signal set for a recreational spotter was found in the sources behind this guide, so agree on your own before you start."
+      },
+      {
+       "kind": "p",
+       "html": "Two geometry points help. A trailer pivots opposite to the tow vehicle's steering: turn the truck left and the trailer's rear goes right. Make small corrections and let the trailer catch up rather than chasing it with big steering inputs. If you have a helper, walk the site first and identify the inside rear swing point before you position the RV."
+      }
+     ]
+    },
+    {
+     "id": "pop-ups",
+     "title": "Pop-ups and hybrids",
+     "open": false,
+     "blocks": [
+      {
+       "kind": "p",
+       "html": "A pop-up camper is a box with a lifting roof and folding beds. Setup runs in a fixed order, and the order protects the mechanism: level first, then lift, then stabilize. Leveling happens before anything is raised, because a tilted camper loads the lift arms unevenly. Stabilizers go down after the roof is up, and they only steady the camper, they do not lift it."
+      },
+      {
+       "kind": "p",
+       "html": "The roof is raised with a crank or a power lift. The maker is strict about what the roof will carry. Outfitter warns that <b>\"You should never raise or lower your roof if there is anything on top of it! The system was not designed to raise or hold any additional weight.\"</b> When cranking by hand, the caution is <b>\"Make sure the crank is pushed forward into the spur gear. (If the crank gears become free, the roof will fall.)\"</b> A widely repeated rule is never to raise or lower the roof with the stabilizers down, and never to go inside before the stabilizers are down. Model manuals vary, so check yours."
+      },
+      {
+       "kind": "p",
+       "html": "<b>Canvas care.</b> The cardinal rule is that a pop-up must never be closed wet. Outfitter and OPUS both state it. OPUS: <b>\"Please ensure canvas is dry before packing down.\"</b> and <b>\"A wet/damp canvas will develop mildew/mould very quickly and damage your canvas permanently.\"</b> If you have to close up in the rain, open it again and dry it out as soon as you can."
+      },
+      {
+       "kind": "p",
+       "html": "Cleaning the canvas is where the sources disagree, and the safest advice is the canvas maker's own manual. OPUS, a tent maker, forbids all cleaners: the tent can be cleaned only with fresh water and a damp cloth, and <b>\"UNDER NO CIRCUMSTANCES MUST DETERGENTS OR CHEMICAL CLEANERS be used\"</b>. Practitioner sources forbid bleach specifically: <b>\"Do NOT use household bleach. Bleach degrades canvas fibers at the molecular level, causes permanent discoloration\"</b>. Meanwhile a forum post attributed to a fabric maker recommends a dish soap, bleach and water mix. That directly contradicts the canvas makers, so follow the manual for your specific canvas. New canvas can seep at the seams the first few times it is wetted, and some makers say this is normal and will stop as the threads swell. Drying time estimates, such as three to five hours in strong sun and six to eight hours on a cloudy day, come from practitioner sources rather than manufacturers."
+      },
+      {
+       "kind": "p",
+       "html": "<b>The lift system.</b> The roof rides on telescoping posts and cables routed over pulleys. Forest River's lifter guide gives the maintenance: <b>\"Clean and recoat lifter posts externally, with a rust prohibitive, non-drying lubricant.\"</b>, <b>\"Annually grease zerks on front, bottom and top of master tube.\"</b>, and to lubricate the springs annually by raising the roof and oiling each segment of the post, with the caution <b>\"To help avoid tent damage, immediately remove any excess oil on the external portion of the post.\"</b> One parts supplier adds that the posts should get a light silicone spray rather than oil, because oil attracts dirt, and <b>\"Do not use oil/grease on posts (attracts dirt).\"</b>"
+      },
+      {
+       "kind": "p",
+       "html": "The system's weak point is the pulleys and cables. A service document explains why: <b>\"The pulley separator package is the first routing point of all four individual lift arm main cables. In essence, this pivot point is the most crucial, having the most pressure or strain put forth by raising the top assembly.\"</b> and <b>\"Total number of steel bearing pulleys in system: 24.\"</b> A binding roof when raising or lowering usually points to a camper that is not level, worn bushings, seized or broken pulleys, a bent lift arm or twisted cables. After any lift system part is replaced, the repair manual requires a test: <b>\"WHEN REPLACING ANY LIFT SYSTEM PART, YOU SHOULD ALWAYS RAISE AND LOWER THE UNIT 4 OR 5 TIMES TO MAKE SURE IT IS OPERATING PROPERLY.\"</b>"
+      },
+      {
+       "kind": "callout",
+       "html": "<b>Tank capacity is the honest gap.</b> No manufacturer owner's manual for a soft-sided tent trailer was found that states its fresh, gray and black tank sizes, so no figure is given here. What is known is adjacent rather than primary. Pop-ups are built lightly enough that some are exempt from trailer brake rules by weight, and small towables typically carry a cassette toilet or a porta-potty instead of a true black tank. Treat any tank number you read for a specific pop-up as unverified until you check that model's own manual. The practical effect is that pop-ups lean on campground bathhouses, dump stations and water spigots, but that is an inference, not a sourced figure."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
