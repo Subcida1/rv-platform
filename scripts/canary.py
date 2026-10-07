@@ -128,6 +128,15 @@ CANARIES = [
      "<title>", "<title>Canary edited by hand: ", 1,
      ["bash", "scripts/check-generated.sh"], "parts/index.html"),
 
+    # the nav and footer must be in the HTML rather than injected by script; emptying the shell
+    # is the fault
+    ("a page whose nav was emptied", "the nav and footer are in the HTML",
+     '<div id="site-nav">', '<div id="site-nav"><!-- emptied by canary -->', 1),
+
+    # the palette lives in the token layer only; a hex in a rule below it is the fault
+    ("a hex colour below the token layer", "the palette is defined in exactly one place",
+     "\n.wrap{", "\n.wrap{color:#123456;", 1, None, "assets/css/style.css"),
+
     ("prose that argues with the reader", "STRICT",
      "<h1", "<h1>A rough estimate by the Weather Service\'s own description. </h1><h1", 1,
      ["python3", "scripts/check-prose.py"]),
