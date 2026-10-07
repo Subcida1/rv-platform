@@ -154,6 +154,18 @@ CANARIES = [
     ("a search bar carrying a different mark", "every search bar carries the same mark",
      "M4 21.5 9.2 3.5", "M4 21.5 9.3 3.5", 1, None, "directory/index.html"),
 
+    # DESIGNED FROM THE RULE, NOT GUESSED. The surface rule requires every neutral surface token
+    # in :root to be at least ten points bluer than it is red; #faf4f2 has red 250 against blue
+    # 242, so it fails by that measure. Read from the rule before writing the fault, which is the
+    # process correction after eight canaries needed their anchor looked up.
+    ("a warm surface token", "tinted surfaces are blue tinted",
+     "--surface-2:#f3f9ff", "--surface-2:#faf4f2", 1, None, "assets/css/style.css"),
+
+    # The claim-form rule keeps two facts together: a page carrying the card must load the script
+    # that wires it. The hub carries the card, so pointing its script tag elsewhere is the fault.
+    ("a claim form with no wiring", "claim form must load the script",
+     "assets/js/site.js?v=d45b277e", "assets/js/not-site.js", 1, None, "directory/index.html"),
+
     ("prose that argues with the reader", "STRICT",
      "<h1", "<h1>A rough estimate by the Weather Service\'s own description. </h1><h1", 1,
      ["python3", "scripts/check-prose.py"]),
