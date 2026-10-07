@@ -1,178 +1,207 @@
 {
-  "_why": "Businesses found and deliberately left out, with the rule that excludes them. The search results do not forget them; this file is how the directory does not re-litigate a settled ruling. Consulted by verify-candidates.py.",
-  "truck-diesel-shops": {
-    "rule": "A truck, diesel or fleet business that also takes RVs is not an RV business. Ty, 2026-09-28: \"no truck stops itll get too confusing\".",
-    "businesses": [
-      {
-        "n": "Mor-Jon Inc.",
-        "u": "https://www.mor-jon.com/",
-        "why": "Heavy-duty truck shop and NAPA Truck Service Center that does RV oil changes. A truck shop with an RV service line."
-      },
-      {
-        "n": "Skinner's Truck Repair",
-        "u": "https://www.skinnerstruckrepair.com/",
-        "why": "Family diesel and truck repair shop. Its own site never claims RV work; the in-coach emergency tag it carried was wrong."
-      },
-      {
-        "n": "L & T Truck Repair",
-        "u": "https://www.lttruckrepair.com/",
-        "why": "Truck repair business with a diesel mechanic line. Its 24/7 is roadside TRUCK repair, and its mobile RV work is by appointment only."
-      },
-      {
-        "n": "Jeff's Truck Service",
-        "u": "https://www.jeffs-truckservice.com/",
-        "why": "Truck service and body shop. Its RV work is body and collision, and its only 24/7 claim is a roadside assistance line."
-      },
-      {
-        "n": "San Diego Pacific Crest Services",
-        "u": "https://www.pacificcrestservices.net/",
-        "why": "Heavy-duty class 6, 7 and 8 truck shop that also takes RVs. Its own page says so."
-      },
-      {
-        "n": "Ace Truck Service",
-        "u": "https://acetruckserviceinc.com/",
-        "why": "Gallup, New Mexico. Own site, phone and a 24-hour number, but plainly a truck and diesel shop."
-      },
-      {
-        "n": "Craig's Automotive",
-        "u": null,
-        "why": "Twin Falls, Idaho. General auto shop that also does RVs."
-      },
-      {
-        "n": "Eagle Eye Repair",
-        "u": null,
-        "why": "Idaho Falls. General auto shop that also does RVs."
-      },
-      {
-        "n": "Interstate Diesel of Idaho",
-        "u": null,
-        "why": "Garden City. Has a dedicated RV page but is a diesel truck shop."
-      },
-      {
-        "n": "Britt's Diesel",
-        "u": null,
-        "why": "Bishop, California. Diesel and commercial tyre shop with an RV page."
-      },
-      {
-        "n": "JAZ Services",
-        "u": null,
-        "why": "Midland, Texas. Oilfield and heavy-truck company with RV service pages."
-      },
-      {
-        "n": "Rapid Rescue",
-        "u": null,
-        "why": "Odessa, Texas. Heavy-truck company with an RV page."
-      },
-      {
-        "n": "Patriot Diesel",
-        "u": null,
-        "why": "Cheyenne, Wyoming. General diesel shop with an RV page."
-      },
-      {
-        "n": "P & V Diesel",
-        "u": null,
-        "why": "Indio, California. Diesel shop that also does RVs."
-      },
-      {
-        "n": "Thermal Truck & RV",
-        "u": null,
-        "why": "Thermal, California. Truck shop that publishes RVs as a category."
-      },
-      {
-        "n": "R G Truck Service",
-        "u": null,
-        "why": "Gallup, New Mexico. Truck service."
-      },
-      {
-        "n": "Blue Mountain Mobile RV Services",
-        "u": null,
-        "why": "Walla Walla, Washington. RV-specific mobile but publishes no phone on its own site."
-      },
-      {
-        "n": "J & J Truck Repair and Parts",
-        "u": "https://jjtruckrepairandparts.com/",
-        "why": "Describes itself as 'a truck and RV repair shop' and tags itself a truck shop. A truck business that also takes RVs is not an RV business (Ty, 2026-09-28)."
-      },
-      {
-        "n": "D&J Truck and RV Repair",
-        "u": "https://djtruckrv.com/",
-        "why": "A diesel truck and RV repair shop whose mechanics have 'over 70 years of diesel truck repair experience'. Diesel-first, RV offered alongside. Same rule."
-      },
-      {
-        "n": "HMI Auto Care",
-        "u": "https://hmiautocare.net/",
-        "why": "An auto repair shop that 'also advertises RV service'. General auto first, RV as an add-on, which is not what the directory lists."
-      },
-      {
-        "n": "Coffman's Truck Service & Towing",
-        "u": "https://coffmanstruck.com/",
-        "why": "A truck service and towing business in Danville that 'repairs and maintains motorhomes and RVs as well as trucks'. Truck-first, RV as an addition, which is the shape Ty's rule excludes however good the RV page is."
-      }
-    ]
-  },
-  "service-not-repair": {
-    "rule": "The directory is REPAIR. Cleaning, detailing, inspection and tank service stay out even when the business is RV-only and has its own site. Ty, 2026-09-28 on Park & Purge: \"Nah thats not the same and not really what people are looking for.\"",
-    "businesses": [
-      {
-        "n": "Park & Purge",
-        "u": "https://parkandpurge.com/",
-        "why": "Uvalde, Texas. RV-only and mobile, but does tank and water-heater cleaning rather than repair."
-      },
-      {
-        "n": "DNA RV Inspections & Tank Cleaning",
-        "u": null,
-        "why": "Colorado. Inspections and tank cleaning only."
-      },
-      {
-        "n": "Nomad Glass",
-        "u": null,
-        "why": "Arizona. RV glass only, not repair."
-      },
-      {
-        "n": "Wizard Windshield",
-        "u": null,
-        "why": "Arizona. RV glass only, not repair."
-      }
-    ]
-  },
-  "dispatch-networks": {
-    "rule": "A call centre with a page for every town is not a local business.",
-    "businesses": [
-      {
-        "n": "Road Rescue Network",
-        "u": "https://roadrescuenetwork.com/",
-        "why": "National dispatch network generating a page per town."
-      },
-      {
-        "n": "Interstate Fleet Services",
-        "u": "https://ifleetservices.com/",
-        "why": "National dispatch network."
-      },
-      {
-        "n": "A1 RV Repair",
-        "u": null,
-        "why": "National network with invented per-city staging points."
-      },
-      {
-        "n": "stevethemechanic.com",
-        "u": null,
-        "why": "Lead-generation page."
-      },
-      {
-        "n": "rvrepairnewmexico.com",
-        "u": "https://rvrepairnewmexico.com/",
-        "why": "Placeholder site: phone (111) 222-3333, address on RV Repair Road, DUNS 000000000, coordinates 0,0."
-      }
-    ]
-  },
-  "dead-websites": {
-    "rule": "The business's own website no longer exists (404 on the root and on www). A listing rests on the site being checkable, so it cannot be verified. Re-add if the site returns.",
-    "businesses": [
-      {
-        "n": "BAM Mobile RV Service and Repair",
-        "u": "https://bammobilerv.com/",
-        "why": "Site returned 404 on both the root and www when checked 2026-10-05. Phone was 971-701-5971, base Salem, Oregon."
-      }
-    ]
-  }
+ "_why": "Businesses found and deliberately left out, with the rule that excludes them. The search results do not forget them; this file is how the directory does not re-litigate a settled ruling. Consulted by verify-candidates.py. A ruling that KEEPS something in lives here too, so the reason survives with the businesses it applies to.",
+ "truck-diesel-shops": {
+  "rule": "A truck, diesel or fleet business that also takes RVs is not an RV business. Ty, 2026-09-28: \"no truck stops itll get too confusing\".",
+  "businesses": [
+   {
+    "n": "Mor-Jon Inc.",
+    "u": "https://www.mor-jon.com/",
+    "why": "Heavy-duty truck shop and NAPA Truck Service Center that does RV oil changes. A truck shop with an RV service line."
+   },
+   {
+    "n": "Skinner's Truck Repair",
+    "u": "https://www.skinnerstruckrepair.com/",
+    "why": "Family diesel and truck repair shop. Its own site never claims RV work; the in-coach emergency tag it carried was wrong."
+   },
+   {
+    "n": "L & T Truck Repair",
+    "u": "https://www.lttruckrepair.com/",
+    "why": "Truck repair business with a diesel mechanic line. Its 24/7 is roadside TRUCK repair, and its mobile RV work is by appointment only."
+   },
+   {
+    "n": "Jeff's Truck Service",
+    "u": "https://www.jeffs-truckservice.com/",
+    "why": "Truck service and body shop. Its RV work is body and collision, and its only 24/7 claim is a roadside assistance line."
+   },
+   {
+    "n": "San Diego Pacific Crest Services",
+    "u": "https://www.pacificcrestservices.net/",
+    "why": "Heavy-duty class 6, 7 and 8 truck shop that also takes RVs. Its own page says so."
+   },
+   {
+    "n": "Ace Truck Service",
+    "u": "https://acetruckserviceinc.com/",
+    "why": "Gallup, New Mexico. Own site, phone and a 24-hour number, but plainly a truck and diesel shop."
+   },
+   {
+    "n": "Craig's Automotive",
+    "u": null,
+    "why": "Twin Falls, Idaho. General auto shop that also does RVs."
+   },
+   {
+    "n": "Eagle Eye Repair",
+    "u": null,
+    "why": "Idaho Falls. General auto shop that also does RVs."
+   },
+   {
+    "n": "Interstate Diesel of Idaho",
+    "u": null,
+    "why": "Garden City. Has a dedicated RV page but is a diesel truck shop."
+   },
+   {
+    "n": "Britt's Diesel",
+    "u": null,
+    "why": "Bishop, California. Diesel and commercial tyre shop with an RV page."
+   },
+   {
+    "n": "JAZ Services",
+    "u": null,
+    "why": "Midland, Texas. Oilfield and heavy-truck company with RV service pages."
+   },
+   {
+    "n": "Rapid Rescue",
+    "u": null,
+    "why": "Odessa, Texas. Heavy-truck company with an RV page."
+   },
+   {
+    "n": "Patriot Diesel",
+    "u": null,
+    "why": "Cheyenne, Wyoming. General diesel shop with an RV page."
+   },
+   {
+    "n": "P & V Diesel",
+    "u": null,
+    "why": "Indio, California. Diesel shop that also does RVs."
+   },
+   {
+    "n": "Thermal Truck & RV",
+    "u": null,
+    "why": "Thermal, California. Truck shop that publishes RVs as a category."
+   },
+   {
+    "n": "R G Truck Service",
+    "u": null,
+    "why": "Gallup, New Mexico. Truck service."
+   },
+   {
+    "n": "Blue Mountain Mobile RV Services",
+    "u": null,
+    "why": "Walla Walla, Washington. RV-specific mobile but publishes no phone on its own site."
+   },
+   {
+    "n": "J & J Truck Repair and Parts",
+    "u": "https://jjtruckrepairandparts.com/",
+    "why": "Describes itself as 'a truck and RV repair shop' and tags itself a truck shop. A truck business that also takes RVs is not an RV business (Ty, 2026-09-28)."
+   },
+   {
+    "n": "D&J Truck and RV Repair",
+    "u": "https://djtruckrv.com/",
+    "why": "A diesel truck and RV repair shop whose mechanics have 'over 70 years of diesel truck repair experience'. Diesel-first, RV offered alongside. Same rule."
+   },
+   {
+    "n": "HMI Auto Care",
+    "u": "https://hmiautocare.net/",
+    "why": "An auto repair shop that 'also advertises RV service'. General auto first, RV as an add-on, which is not what the directory lists."
+   },
+   {
+    "n": "Coffman's Truck Service & Towing",
+    "u": "https://coffmanstruck.com/",
+    "why": "A truck service and towing business in Danville that 'repairs and maintains motorhomes and RVs as well as trucks'. Truck-first, RV as an addition, which is the shape Ty's rule excludes however good the RV page is."
+   }
+  ]
+ },
+ "service-not-repair": {
+  "rule": "The directory is REPAIR. Cleaning, detailing, inspection and tank service stay out even when the business is RV-only and has its own site. Ty, 2026-09-28 on Park & Purge: \"Nah thats not the same and not really what people are looking for.\"",
+  "businesses": [
+   {
+    "n": "Park & Purge",
+    "u": "https://parkandpurge.com/",
+    "why": "Uvalde, Texas. RV-only and mobile, but does tank and water-heater cleaning rather than repair."
+   },
+   {
+    "n": "DNA RV Inspections & Tank Cleaning",
+    "u": null,
+    "why": "Colorado. Inspections and tank cleaning only."
+   },
+   {
+    "n": "Nomad Glass",
+    "u": null,
+    "why": "Arizona. RV glass only, not repair."
+   },
+   {
+    "n": "Wizard Windshield",
+    "u": null,
+    "why": "Arizona. RV glass only, not repair."
+   }
+  ]
+ },
+ "dispatch-networks": {
+  "rule": "A call centre with a page for every town is not a local business.",
+  "businesses": [
+   {
+    "n": "Road Rescue Network",
+    "u": "https://roadrescuenetwork.com/",
+    "why": "National dispatch network generating a page per town."
+   },
+   {
+    "n": "Interstate Fleet Services",
+    "u": "https://ifleetservices.com/",
+    "why": "National dispatch network."
+   },
+   {
+    "n": "A1 RV Repair",
+    "u": null,
+    "why": "National network with invented per-city staging points."
+   },
+   {
+    "n": "stevethemechanic.com",
+    "u": null,
+    "why": "Lead-generation page."
+   },
+   {
+    "n": "rvrepairnewmexico.com",
+    "u": "https://rvrepairnewmexico.com/",
+    "why": "Placeholder site: phone (111) 222-3333, address on RV Repair Road, DUNS 000000000, coordinates 0,0."
+   }
+  ]
+ },
+ "dead-websites": {
+  "rule": "The business's own website no longer exists (404 on the root and on www). A listing rests on the site being checkable, so it cannot be verified. Re-add if the site returns.",
+  "businesses": [
+   {
+    "n": "BAM Mobile RV Service and Repair",
+    "u": "https://bammobilerv.com/",
+    "why": "Site returned 404 on both the root and www when checked 2026-10-05. Phone was 971-701-5971, base Salem, Oregon."
+   }
+  ]
+ },
+ "dealer-service-departments": {
+  "rule": "A DEALER'S SERVICE DEPARTMENT STAYS IN, even where its site does not say in so many words that it takes outside work. Ty, 2026-10-06: \"I agree leave them.\" The truck-shop and service-not-repair rules do not reach it, because a service bay is a real place to take a coach to, which is what this directory is for. Listed here so a future pass does not flag them again as unverified: eight were flagged by the California audit on 2026-10-02 and the ruling is to keep all eight.",
+  "businesses": [
+   {
+    "n": "Bakersfield RV Center"
+   },
+   {
+    "n": "Paso RV"
+   },
+   {
+    "n": "Overland RV"
+   },
+   {
+    "n": "760 RV"
+   },
+   {
+    "n": "San Diego RV Center"
+   },
+   {
+    "n": "Elite Coach Works"
+   },
+   {
+    "n": "Airstream Los Angeles"
+   },
+   {
+    "n": "V&V Bros RVs and Trailers"
+   }
+  ]
+ }
 }

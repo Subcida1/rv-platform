@@ -1184,3 +1184,22 @@ rather than manuals and should be treated as secondary sources.
 
 **Valterra was never needed, and the search that the earlier session described as "the route that worked twice"
 was not the route.** The route is the bucket listing.
+
+---
+
+## 18. The night queue of 2026-10-02 is deleted, and what became of its open items
+
+`_todo/NIGHT-QUEUE.md` was a transient planning doc, 2845 lines, and its own instruction was to
+fold what mattered into this file and delete it when the queue emptied. Checked item by item on
+2026-10-06 rather than assumed:
+
+  - **The seven guides that set maker text in `<i>` and were therefore invisible to
+    `check-quotes.py`.** CONVERTED. Twenty-three guides now use the checkable `<b>"..."</b>`
+    convention, which was Ty's ruling on 2026-10-02.
+  - **The macerator page needed an independent review.** DONE, twice: a subagent pass that could
+    read the cited PDFs and a bridge pass that could not. Seven distinct defects between them.
+  - **Neo's brief that the bridge truncated at ~100 characters.** Superseded; the relaying was
+    stopped at his request and a passive watcher replaced it.
+  - **The 30-amp against 40-amp conflict, left stated rather than resolved.** NOT RE-VERIFIED
+    here. It is the one item from that queue whose status is unknown, and it is a one-line change
+    if Ty wants the page to pick one.
