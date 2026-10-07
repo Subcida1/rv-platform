@@ -79,8 +79,13 @@ CANARIES = [
     ("a missing <base href>", "<base href",
      '<base href="/">', "<!-- base removed by canary -->", 1),
 
+    # COUNT 99 CHANGES EVERY OCCURRENCE, WHICH IS THE FAIR TEST. The id appears twice on a page
+    # (the gtag loader URL and the config call), and the first version of this canary changed
+    # only one. The rule asks whether the id is absent from the file, so the surviving copy made
+    # it pass -- reported as BLIND. Recorded here because the rule has the same weakness the
+    # canary had: a page carrying the right id once and a wrong one elsewhere is not caught.
     ("an analytics id that nobody else has", "GA4",
-     "id=G-G8X4MQ", "id=G-NOSUCHID", 1),
+     "id=G-G8X4MQ", "id=G-NOSUCHID", 99),
 
     ("a missing theme-color", "brand head tags",
      '<meta name="theme-color"', '<meta name="x-canary"', 1),
@@ -134,6 +139,7 @@ def canary(name, heading, find, repl, count=0):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--list", action="store_true")
+    ap.add_argument("--only", help="run canaries whose name contains this string")
     a = ap.parse_args()
 
     if a.list:
@@ -152,8 +158,15 @@ def main():
         print("restores files. Commit or stash first so a restore cannot eat your work.")
         return 1
 
+    chosen = CANARIES
+    if a.only:
+        chosen = [c for c in CANARIES if a.only.lower() in c[0].lower()]
+        if not chosen:
+            print("no canary matches %r. Try --list." % a.only)
+            return 1
+
     caught = blind = broken = 0
-    for name, heading, find, *rest in CANARIES:
+    for name, heading, find, *rest in chosen:
         repl = rest[0] if rest else ""
         n = rest[1] if len(rest) > 1 else 0
         state, why = canary(name, heading, find, repl, n)
