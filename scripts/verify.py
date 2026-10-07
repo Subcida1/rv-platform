@@ -352,8 +352,14 @@ for suffix in sorted(C.state_shards()):
         (ROOT / "assets" / "js" / "listings" / ("listings-%s.js" % suffix)).read_text(encoding="utf-8"),
         re.S).group(1))
     businesses += len(rows)
+# THE TOOLS STAT IS CHECKED TOO, added 2026-10-06. It was not in this list because it was not a
+# data-count at all -- it was a data-claim span, so the hero counter never picked it up and it was
+# stationary. Ty: "8 rv tools all free the number doesnt roll up like the other 2". A tile that is
+# not in this list is a tile nothing keeps honest.
+tools_live = len([p for p in (ROOT / "tools").glob("*.html") if p.name != "index.html"])
 for label, actual in (("RV troubleshooting guides", len(guide_files)),
-                      ("RV repair businesses listed", businesses)):
+                      ("RV repair businesses listed", businesses),
+                      ("RV tools, all free", tools_live)):
     m = re.search(r'data-count="(\d+)">0</div><div class="lbl">%s</div>' % re.escape(label), idx)
     if not m:
         bad.append("no stat on index.html for %r" % label)

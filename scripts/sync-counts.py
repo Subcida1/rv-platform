@@ -159,15 +159,26 @@ def sync_home_counters():
     page = ROOT / "index.html"
     html = page.read_text(encoding="utf-8")
     total = sum(len(v) for v in C.guides().values())
-    pat = re.compile(r'(data-count=")\d+(">0</div><div class="lbl">RV troubleshooting guides</div>)')
-    if not pat.search(html):
-        raise SystemExit("FAIL  index.html: no guides counter to rewrite")
-    new = pat.sub(lambda m: m.group(1) + str(total) + m.group(2), html, count=1)
-    if new != html:
-        page.write_text(new, encoding="utf-8")
-        print("  homepage: guides counter set to %d" % total)
-    else:
-        print("  homepage: guides counter already %d" % total)
+    def rewrite(rx, value, what):
+        nonlocal html
+        if not rx.search(html):
+            raise SystemExit("FAIL  index.html: no %s counter to rewrite" % what)
+        out = rx.sub(lambda m: m.group(1) + str(value) + m.group(2), html, count=1)
+        if out != html:
+            html = out
+            print("  homepage: %s counter set to %s" % (what, value))
+        else:
+            print("  homepage: %s counter already %s" % (what, value))
+
+    rewrite(re.compile(r'(data-count=")\d+(">0</div><div class="lbl">RV troubleshooting guides</div>)'),
+            total, "guides")
+    # THE TOOLS COUNTER, added 2026-10-06. Ty: "8 rv tools all free the number doesnt roll up
+    # like the other 2 its just stationary". It was a data-claim span rather than a data-count, so
+    # the hero counter never saw it. tools-live is derived in site_constants rather than from
+    # _data/listings, which is why this is its owner and build-listings is not.
+    rewrite(re.compile(r'(data-count=")\d+(">0</div><div class="lbl">RV tools, all free</div>)'),
+            int(C.claim_values()["tools-live"]), "tools")
+    page.write_text(html, encoding="utf-8")
 
 
 sync_claims()

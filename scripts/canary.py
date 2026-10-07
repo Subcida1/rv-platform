@@ -104,7 +104,7 @@ CANARIES = [
 
     # a data-claim marker whose value no longer matches the thing it claims
     ("a claim the data disagrees with", "every stated count matches the data",
-     'data-claim="tools-live">8<', 'data-claim="tools-live">99<', 1),
+     'data-claim="tools-live">8<', 'data-claim="tools-live">99<', 1, None, "tools/index.html"),
 
     # THE STANDALONE CHECKERS, which had no canary at all and only a --self-test. A self-test
     # proves a rule matches text it is handed; only a canary proves the rule is wired to something
