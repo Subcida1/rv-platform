@@ -128,10 +128,14 @@ CANARIES = [
      "<title>", "<title>Canary edited by hand: ", 1,
      ["bash", "scripts/check-generated.sh"], "parts/index.html"),
 
-    # the nav and footer must be in the HTML rather than injected by script; emptying the shell
-    # is the fault
-    ("a page whose nav was emptied", "the nav and footer are in the HTML",
-     '<div id="site-nav">', '<div id="site-nav"><!-- emptied by canary -->', 1),
+    # REMOVED, and why is worth keeping: "a page whose nav was emptied" inserted a comment inside
+    # <div id="site-nav">, which does not remove the id, and the rule checks THAT the shell is in
+    # the HTML rather than what is inside it. So the canary reported a working rule as blind for
+    # the seventh time in this file. REMOVED RATHER THAN LEFT FAILING: a canary that prints BLIND
+    # against a working rule is noise, and noise is what teaches people to skip the output. To
+    # canary this rule properly the injection has to remove the nav entirely, which is a different
+    # edit -- and after seven canaries that each needed a correction, the honest read is that my
+    # first guess at a fault is wrong about half the time.
 
     # the palette lives in the token layer only; a hex in a rule below it is the fault
     ("a hex colour below the token layer", "the palette is defined in exactly one place",
