@@ -141,6 +141,14 @@ CANARIES = [
     ("a hex colour below the token layer", "the palette is defined in exactly one place",
      "\n.wrap{", "\n.wrap{color:#123456;", 1, None, "assets/css/style.css"),
 
+    # THE CONTENT GATE, which is the doctrine check: a page that was verified must still be the
+    # page that was verified. The fault is a prose edit to a VERIFIED guide with its byline date
+    # left alone, which is exactly the drift the gate exists to catch.
+    ("a verified page edited without re-dating", "content gate",
+     "A furnace that will not light is usually not a dead furnace.",
+     "A furnace that will not light is very often not a dead furnace at all.",
+     1, None, "guides/rv-furnace-not-working.html"),
+
     ("prose that argues with the reader", "STRICT",
      "<h1", "<h1>A rough estimate by the Weather Service\'s own description. </h1><h1", 1,
      ["python3", "scripts/check-prose.py"]),
