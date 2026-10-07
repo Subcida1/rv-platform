@@ -469,6 +469,58 @@ START_TITLE = "New RV Owner: The Things to Get Right First"
 # the homepage and the guides index.
 
 
+def render_new_owner_blocks(blocks):
+    """One section's blocks as HTML. The block kinds are the vocabulary the content file may use,
+    and an unknown kind is a loud failure rather than a silent skip -- a section that renders
+    empty because its kind was misspelled is the exact defect this project keeps finding."""
+    out = []
+    for b in blocks:
+        k = b.get("kind")
+        if k == "p":
+            out.append("<p>%s</p>" % b["html"])
+        elif k == "list":
+            out.append("<ul>%s</ul>" % "".join("<li>%s</li>" % i for i in b["items"]))
+        elif k == "callout":
+            out.append('<div class="callout">%s</div>' % b["html"])
+        elif k == "table":
+            head = "".join("<th>%s</th>" % h for h in b["head"])
+            rows = "".join("<tr>%s</tr>" % "".join("<td>%s</td>" % c for c in r)
+                           for r in b["rows"])
+            out.append('<div class="table-scroll"><table class="man-table">'
+                       '<thead><tr>%s</tr></thead><tbody>%s</tbody></table></div>' % (head, rows))
+        else:
+            raise SystemExit("FAIL  new-owner content: unknown block kind %r" % k)
+    return "\n".join(out)
+
+
+def render_new_owner(data):
+    """The whole guide, plus the jump nav Ty asked for.
+
+    THE NAV IS GENERATED FROM THE SECTIONS, not written by hand, so it cannot drift from the page
+    it navigates. It is a plain list of anchors and it works with JavaScript off, because a guide
+    this size gets printed and read offline.
+
+    Sections render as <details> and the content file decides which start open: the site already
+    styles that element well and it needs no script, so the whole thing degrades to a page of
+    headings with everything visible if a browser does not honour it.
+    """
+    nav, body = [], []
+    for part in data["parts"]:
+        nav.append('<a class="no-nav-part" href="#%s">%s</a>' % (part["id"], part["title"]))
+        nav.append("<ul>%s</ul>" % "".join(
+            '<li><a href="#%s">%s</a></li>' % (sec["id"], sec["title"])
+            for sec in part["sections"]))
+        body.append('<h2 class="man-h2" id="%s">%s</h2>' % (part["id"], part["title"]))
+        if part.get("summary"):
+            body.append('<p class="man-lede">%s</p>' % part["summary"])
+        for sec in part["sections"]:
+            body.append('<details class="no-sec"%s><summary id="%s">%s</summary>%s</details>'
+                        % (" open" if sec.get("open") else "", sec["id"], sec["title"],
+                           render_new_owner_blocks(sec["blocks"])))
+    return ('<nav class="no-nav" aria-label="On this page"><p class="no-nav-h">On this page</p>%s</nav>'
+            % "\n".join(nav), "\n".join(body))
+
+
 def new_owner_content():
     """The new-owner guide's content, from _data/new-owner.json.
 

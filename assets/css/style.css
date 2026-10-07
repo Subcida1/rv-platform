@@ -285,6 +285,48 @@ input,select,textarea{font-family:inherit}
    sticks for the whole page. Nothing else targets #site-nav, so there is no box
    left behind that needed its styles. */
 #site-nav{display:contents}
+/* THE NEW-OWNER GUIDE'S NAVIGATION. Ty, 2026-10-07: "Utilize some type of organizational
+   feature so easily skim and browse the content as this will be a large guide."
+
+   A sticky list of the guide's own sections, on the left at desktop width and collapsed to a
+   plain list above the content on a phone. The list is GENERATED from the sections themselves,
+   so it cannot drift from the page it navigates, and it is anchors rather than script, so it
+   works with JavaScript off -- a guide this size gets printed and read offline.
+
+   top:86px matches .filters and .acct-nav, the two other sticky sidebars on this site, so the
+   header offset is one number in one place rather than three. */
+.no-nav{position:sticky;top:86px;align-self:start;background:var(--surface);
+  border:1px solid var(--border);border-radius:var(--radius);padding:16px 18px;
+  font-size:13.5px;line-height:1.5;max-height:calc(100vh - 110px);overflow:auto}
+.no-nav-h{font-weight:800;font-size:12px;text-transform:uppercase;letter-spacing:.06em;
+  color:var(--text-3);margin-bottom:10px}
+.no-nav a{color:var(--text-2);display:block;padding:3px 0}
+.no-nav a:hover{color:var(--b1)}
+.no-nav-part{font-weight:700;color:var(--text);margin-top:12px}
+.no-nav ul{list-style:none;margin:0 0 0 2px;padding:0}
+.no-nav ul li a{padding-left:10px}
+
+/* The guide's own sections. <details> is already styled for .faq and .man-models; this is the
+   same idea at a size that suits a long read, and it needs no script. */
+.no-sec{border-top:1px solid var(--border);padding:6px 0}
+.no-sec>summary{cursor:pointer;font-weight:700;font-size:17px;padding:14px 0 14px 26px;
+  list-style:none;position:relative}
+.no-sec>summary::-webkit-details-marker{display:none}
+.no-sec>summary::before{content:"+";position:absolute;left:0;color:var(--text-3);
+  font-weight:800;font-size:19px}
+.no-sec[open]>summary::before{content:"\2212"}
+.no-sec>summary:hover{color:var(--b1)}
+
+/* Desktop: nav beside the content. Below 1024 it goes above, because a 200px sidebar on a tablet
+   leaves the prose column too narrow to read comfortably. */
+@media(min-width:1024px){
+  .no-layout{display:grid;grid-template-columns:250px minmax(0,1fr);gap:34px;align-items:start}
+  .no-nav{position:sticky}
+}
+@media(max-width:1023px){
+  .no-nav{position:static;max-height:none;margin-bottom:24px}
+}
+
 /* AN ANCHOR JUMP LANDED UNDER THE STICKY NAV, SITE-WIDE, UNTIL 2026-10-07.
 
    MEASURED, NOT SUSPECTED. Jumping to tools/weight-calculator.html#why put the heading at
