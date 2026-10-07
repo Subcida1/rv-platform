@@ -187,7 +187,13 @@ await send('Emulation.setDeviceMetricsOverride', { width: w, height: 900, device
     await new Promise((r) => setTimeout(r, 250));
     const raw = await evalJs(PROBE);
     if (!raw || typeof raw !== 'string') {
-      console.error(`PROBE FAILED on ${rel} @${w}: ${JSON.stringify(raw).slice(0, 300)}`);
+      // `String(raw)`, NOT `JSON.stringify(raw).slice(...)`. When the probe throws, evalJs hands
+      // back undefined, JSON.stringify(undefined) is undefined, and `.slice` on it threw a
+      // TypeError FROM THIS LINE -- so the handler written to report a broken probe crashed
+      // instead, and the exit code I saw was Node's, not the tool's. Found 2026-10-06 by
+      // deliberately breaking the probe, which is the only way this was ever going to surface:
+      // the failure only happens on the path the handler exists to serve.
+      console.error(`PROBE FAILED on ${rel} @${w}: ${String(raw).slice(0, 300)}`);
       probeFailures += 1;
       continue;
     }

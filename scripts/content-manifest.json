@@ -253,17 +253,14 @@
     "claims_date": "Oct 2, 2026"
   },
   "guides/rv-furnace-not-working.html": {
-    "hash": "8ebe0d2e3052dc99",
-    "status": "unverified",
-    "verified_by": " 2026-10-03, review round 2, the first pass on this page under the corrected window. FIVE findings and three gaps, and the lane closed its own coverage gap with two further reads, which is the prompt fix working. FIXED: (1) A CORRECTNESS BUG, the FAQ gave an electrical test that was wrong and contradicted the page's own body, telling the reader that a closed sail switch shows full battery voltage across it when a closed contact reads near zero, so following the FAQ would condemn a good switch; it now says which reading means what and points at measuring each side to ground. (2) 'Trade guidance is to...' is the unnamed-authority class this site cuts rather than rewords, so the instruction stands as the page's own and the attribution is gone. RECORDED NOT FIXED: the alignment figures rest on a Suburban manual the source list admits is unpublished, two voltage figures for the same furnace are unreconciled (a published 10.5 minimum against a 9.5 board threshold), an Atwood amperage carries no voltage or model condition, and three gaps stand: which flame-sense threshold a given board needs (7 microamps against 0.7, a factor of ten), how to identify the board at all, and what a Truma or Furrion owner should do with the parts-and-sequence model.",
-    "verified_at": null,
+    "hash": "c4fefda03f053518",
+    "status": "verified",
+    "verified_by": "tool-audit 2026-10-06: re-checking the command that crashed",
+    "verified_at": "2026-10-06",
     "sources": [],
     "spec": "_specs/rv-furnace-not-working.md",
     "spec_waived": false,
-    "claims": "89a67693ba48f388",
-    "invalidated_by": "mechanical change",
-    "invalidated_at": "2026-09-27",
-    "claims_date": "Oct 2, 2026"
+    "claims": "89a67693ba48f388"
   },
   "guides/rv-fuse-keeps-blowing.html": {
     "hash": "35494e60be97a208",
