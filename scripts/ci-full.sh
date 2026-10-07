@@ -179,6 +179,21 @@ valeprose() {
   return 0
 }
 step "Vale: prose style and weasel words (reports, does not judge)" valeprose
+
+# DOES EACH CHECK STILL FIRE? This is the only step that tests the TESTS. It injects a known
+# fault per rule, runs the checker, and asserts the checker both fails and names the rule. A rule
+# that stays green with its fault present is reported as BLIND, which is worse than no rule
+# because it is trusted.
+#
+# WEEKLY, NOT PER PUSH, for a measured reason: one full gate run per canary is about twelve
+# seconds, so fourteen canaries is roughly three minutes on top of everything else here. That is
+# fine once a week and would be an irritation on every push.
+#
+# It also EDITS AND RESTORES the working tree, which is why it belongs here rather than in the
+# per-push job: a canary killed mid-run once left its fault in index.html, and while the restore
+# now survives SIGTERM, the safest place for a tool that touches the checkout is a job that owns
+# one.
+step "canaries: does each check fire on its own fault" python3 scripts/canary.py
 kill "$LH_PID" 2>/dev/null
 
 printf '\n================================================================\n'
