@@ -1,5 +1,5 @@
 {
- "note": "The query each page is written for. scripts/check-keywords.py asserts the query's HEAD TERM appears in four places: title, h1, meta description and the opening paragraph, and that no two pages claim the same term. SEEDED 2026-10-06 from each page's own title, for the 47 pages that exist to answer a query, which is why the title slot passes by construction and the OTHER THREE are what the check is really looking at. The hub, utility, state and manuals pages are deliberately absent: they do not target a query, and declaring one would manufacture a failure rather than find one. Review a target before trusting a pass on it, because the seed assumes the title states the subject and that assumption is the thing worth checking.",
+ "note": "The query each page is written for. scripts/check-keywords.py asserts the query's HEAD TERM appears in four places: title, h1, meta description and the opening paragraph, and that no two pages claim the same term. SEEDED 2026-10-06 from each page's own title, for the 47 pages that exist to answer a query, which is why the title slot passes by construction and the OTHER THREE are what the check is really looking at. The hub, utility, state and manuals pages are deliberately absent: they do not target a query, and declaring one would manufacture a failure rather than find one. Review a target before trusting a pass on it, because the seed assumes the title states the subject and that assumption is the thing worth checking. EXTENDED 2026-10-06 to the state, manuals and hub pages, which declare a term of their own because their distinctive word is the PLACE or the SYSTEM rather than the first noun: 'rv repair oregon' would otherwise head on 'repair', a word on all fifty state pages, and the check would pass everywhere and tell nobody anything. 404, about, contact and signin are NOT declared: they do not target a query, and declaring one would manufacture a failure.",
  "pages": {
   "guides/battery-winter-storage.html": "rv battery winter storage",
   "guides/freeze-damage-triage.html": "rv froze",
@@ -47,10 +47,267 @@
   "tools/solar-sizing.html": "rv solar panel calculator",
   "tools/tire-date-code.html": "rv tire date code decoder",
   "tools/watts-to-amps.html": "watts to amps calculator for rvs",
-  "tools/weight-calculator.html": "rv towing calculator"
+  "tools/weight-calculator.html": "rv towing calculator",
+  "directory/alabama.html": {
+   "q": "rv repair alabama",
+   "term": "alabama"
+  },
+  "directory/alaska.html": {
+   "q": "rv repair alaska",
+   "term": "alaska"
+  },
+  "directory/arizona.html": {
+   "q": "rv repair arizona",
+   "term": "arizona"
+  },
+  "directory/arkansas.html": {
+   "q": "rv repair arkansas",
+   "term": "arkansas"
+  },
+  "directory/california.html": {
+   "q": "rv repair california",
+   "term": "california"
+  },
+  "directory/colorado.html": {
+   "q": "rv repair colorado",
+   "term": "colorado"
+  },
+  "directory/connecticut.html": {
+   "q": "rv repair connecticut",
+   "term": "connecticut"
+  },
+  "directory/delaware.html": {
+   "q": "rv repair delaware",
+   "term": "delaware"
+  },
+  "directory/florida.html": {
+   "q": "rv repair florida",
+   "term": "florida"
+  },
+  "directory/georgia.html": {
+   "q": "rv repair georgia",
+   "term": "georgia"
+  },
+  "directory/hawaii.html": {
+   "q": "rv repair hawaii",
+   "term": "hawaii"
+  },
+  "directory/idaho.html": {
+   "q": "rv repair idaho",
+   "term": "idaho"
+  },
+  "directory/illinois.html": {
+   "q": "rv repair illinois",
+   "term": "illinois"
+  },
+  "directory/index.html": {
+   "q": "rv repair directory",
+   "term": "directory"
+  },
+  "directory/indiana.html": {
+   "q": "rv repair indiana",
+   "term": "indiana"
+  },
+  "directory/iowa.html": {
+   "q": "rv repair iowa",
+   "term": "iowa"
+  },
+  "directory/kansas.html": {
+   "q": "rv repair kansas",
+   "term": "kansas"
+  },
+  "directory/kentucky.html": {
+   "q": "rv repair kentucky",
+   "term": "kentucky"
+  },
+  "directory/louisiana.html": {
+   "q": "rv repair louisiana",
+   "term": "louisiana"
+  },
+  "directory/maine.html": {
+   "q": "rv repair maine",
+   "term": "maine"
+  },
+  "directory/maryland.html": {
+   "q": "rv repair maryland",
+   "term": "maryland"
+  },
+  "directory/massachusetts.html": {
+   "q": "rv repair massachusetts",
+   "term": "massachusetts"
+  },
+  "directory/michigan.html": {
+   "q": "rv repair michigan",
+   "term": "michigan"
+  },
+  "directory/minnesota.html": {
+   "q": "rv repair minnesota",
+   "term": "minnesota"
+  },
+  "directory/mississippi.html": {
+   "q": "rv repair mississippi",
+   "term": "mississippi"
+  },
+  "directory/missouri.html": {
+   "q": "rv repair missouri",
+   "term": "missouri"
+  },
+  "directory/montana.html": {
+   "q": "rv repair montana",
+   "term": "montana"
+  },
+  "directory/nebraska.html": {
+   "q": "rv repair nebraska",
+   "term": "nebraska"
+  },
+  "directory/nevada.html": {
+   "q": "rv repair nevada",
+   "term": "nevada"
+  },
+  "directory/newhampshire.html": {
+   "q": "rv repair new hampshire",
+   "term": "new hampshire"
+  },
+  "directory/newjersey.html": {
+   "q": "rv repair new jersey",
+   "term": "new jersey"
+  },
+  "directory/newmexico.html": {
+   "q": "rv repair new mexico",
+   "term": "new mexico"
+  },
+  "directory/newyork.html": {
+   "q": "rv repair new york",
+   "term": "new york"
+  },
+  "directory/northcarolina.html": {
+   "q": "rv repair north carolina",
+   "term": "north carolina"
+  },
+  "directory/northdakota.html": {
+   "q": "rv repair north dakota",
+   "term": "north dakota"
+  },
+  "directory/ohio.html": {
+   "q": "rv repair ohio",
+   "term": "ohio"
+  },
+  "directory/oklahoma.html": {
+   "q": "rv repair oklahoma",
+   "term": "oklahoma"
+  },
+  "directory/pennsylvania.html": {
+   "q": "rv repair pennsylvania",
+   "term": "pennsylvania"
+  },
+  "directory/rhodeisland.html": {
+   "q": "rv repair rhode island",
+   "term": "rhode island"
+  },
+  "directory/southcarolina.html": {
+   "q": "rv repair south carolina",
+   "term": "south carolina"
+  },
+  "directory/southdakota.html": {
+   "q": "rv repair south dakota",
+   "term": "south dakota"
+  },
+  "directory/tennessee.html": {
+   "q": "rv repair tennessee",
+   "term": "tennessee"
+  },
+  "directory/texas.html": {
+   "q": "rv repair texas",
+   "term": "texas"
+  },
+  "directory/utah.html": {
+   "q": "rv repair utah",
+   "term": "utah"
+  },
+  "directory/vermont.html": {
+   "q": "rv repair vermont",
+   "term": "vermont"
+  },
+  "directory/virginia.html": {
+   "q": "rv repair virginia",
+   "term": "virginia"
+  },
+  "directory/washington.html": {
+   "q": "rv repair washington",
+   "term": "washington"
+  },
+  "directory/westvirginia.html": {
+   "q": "rv repair west virginia",
+   "term": "west virginia"
+  },
+  "directory/wisconsin.html": {
+   "q": "rv repair wisconsin",
+   "term": "wisconsin"
+  },
+  "directory/wyoming.html": {
+   "q": "rv repair wyoming",
+   "term": "wyoming"
+  },
+  "manuals/index.html": {
+   "q": "rv owner's manuals and service manuals"
+  },
+  "index.html": {
+   "q": "rv tools and repair guides",
+   "term": "tools"
+  },
+  "guides/index.html": {
+   "q": "rv repair guides",
+   "term": "guides"
+  },
+  "tools/index.html": {
+   "q": "free rv tools"
+  },
+  "parts/index.html": {
+   "q": "rv parts list",
+   "term": "parts"
+  },
+  "manuals/brands.html": {
+   "q": "rv owner's manuals by brand"
+  },
+  "manuals/chassis-and-drivetrain.html": {
+   "q": "rv chassis and engine manuals"
+  },
+  "manuals/exterior-and-body.html": {
+   "q": "rv awning and slide-out manuals"
+  },
+  "manuals/heating-and-cooling.html": {
+   "q": "rv furnace and air conditioner manuals"
+  },
+  "manuals/kitchen-and-appliances.html": {
+   "q": "rv refrigerator and appliance manuals"
+  },
+  "manuals/power-and-electrical.html": {
+   "q": "rv electrical manuals",
+   "term": "electrical"
+  },
+  "manuals/recalls.html": {
+   "q": "rv recalls and service bulletins"
+  },
+  "manuals/sanitation-and-tanks.html": {
+   "q": "rv toilet and holding tank manuals"
+  },
+  "manuals/start-here.html": {
+   "q": "new rv owner"
+  },
+  "manuals/towing-and-running-gear.html": {
+   "q": "rv hitch, axle and tire manuals"
+  },
+  "manuals/water-and-plumbing.html": {
+   "q": "rv water heater and plumbing manuals"
+  }
  },
  "accepted": {
   "guides/rv-refrigerator-not-cooling.html": "The title says 'fridge' and the h1 says 'refrigerator'. Both are the page's subject and both are words a reader would type; the divergence is emphasis, not a mistake. Accepted 2026-10-06.",
-  "guides/rv-trailer-wheel-bearings.html": "The title targets 'repack trailer bearings' and the h1 names 'RV trailer wheel bearings'. The title carries the query and the h1 states the subject, which is the ordinary split rather than a drift. Accepted 2026-10-06."
+  "guides/rv-trailer-wheel-bearings.html": "The title targets 'repack trailer bearings' and the h1 names 'RV trailer wheel bearings'. The title carries the query and the h1 states the subject, which is the ordinary split rather than a drift. Accepted 2026-10-06.",
+  "manuals/brands.html": "The title carries the query and the h1 names the section, which is the ordinary split rather than a drift: the title targets \"rv furnace and air conditioner manuals\" while the h1 reads \"Heating and cooling manuals\". Accepted 2026-10-06, same reasoning as the guides recorded earlier.",
+  "manuals/heating-and-cooling.html": "The title carries the query and the h1 names the section, which is the ordinary split rather than a drift: the title targets \"rv furnace and air conditioner manuals\" while the h1 reads \"Heating and cooling manuals\". Accepted 2026-10-06, same reasoning as the guides recorded earlier.",
+  "manuals/index.html": "The title carries the query and the h1 names the section, which is the ordinary split rather than a drift: the title targets \"rv furnace and air conditioner manuals\" while the h1 reads \"Heating and cooling manuals\". Accepted 2026-10-06, same reasoning as the guides recorded earlier.",
+  "manuals/kitchen-and-appliances.html": "The title carries the query and the h1 names the section, which is the ordinary split rather than a drift: the title targets \"rv furnace and air conditioner manuals\" while the h1 reads \"Heating and cooling manuals\". Accepted 2026-10-06, same reasoning as the guides recorded earlier.",
+  "manuals/towing-and-running-gear.html": "The title carries the query and the h1 names the section, which is the ordinary split rather than a drift: the title targets \"rv furnace and air conditioner manuals\" while the h1 reads \"Heating and cooling manuals\". Accepted 2026-10-06, same reasoning as the guides recorded earlier."
  }
 }

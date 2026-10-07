@@ -94,8 +94,22 @@ def stem_set(word: str) -> set:
 
 
 def has_term(text: str, term: str) -> bool:
-    want = stem_set(term)
-    return any(stem_set(w) & want for w in re.findall(r"[a-z0-9]+", text.lower()))
+    """Is every word of the term present in the text, stemmed?
+
+    EVERY WORD, not the phrase as one token. A term like "new hampshire" was compared whole
+    against single words from the page, so it could never match a title that plainly contained
+    it -- and that went unnoticed until the state pages started declaring two-word places. Found
+    2026-10-06 by extending the check to them; the 47 single-word terms it shipped with could
+    never have surfaced it. Word order is still not checked, because word order is the writer's
+    business and exact-phrase matching is a thing this file refuses to do.
+    """
+    words = re.findall(r"[a-z0-9]+", term.lower())
+    if not words:
+        return False
+    have = set()
+    for w in re.findall(r"[a-z0-9]+", text.lower()):
+        have |= stem_set(w)
+    return all(stem_set(w) & have for w in words)
 
 
 def page_parts(path: pathlib.Path):
@@ -138,6 +152,14 @@ def self_test() -> int:
     for a, b in (("furnace", "furniture"), ("tow", "town"), ("tire", "tired")):
         if has_term("all about %s here" % b, a):
             bad.append("%r must NOT match %r" % (b, a))
+    # a multi-word term must match when every word is there, and not when one is missing
+    if not has_term("RV Repair in New Hampshire: Mobile & Service Centers", "new hampshire"):
+        bad.append("a two-word term must match a title containing both words")
+    if has_term("RV Repair in Hampshire", "new hampshire"):
+        bad.append("a two-word term must not match when one word is missing")
+    for a, b in []:
+        if has_term("all about %s here" % b, a):
+            bad.append("%r must NOT match %r" % (b, a))
     if bad:
         print("SELF-TEST FAILED")
         for b in bad:
@@ -159,7 +181,21 @@ def main() -> int:
     if not TARGETS.exists():
         print("no %s. Every content page declares the query it is written for there." % TARGETS.name)
         return 0
-    targets = json.loads(TARGETS.read_text(encoding="utf-8")).get("pages", {})
+    raw_targets = json.loads(TARGETS.read_text(encoding="utf-8")).get("pages", {})
+
+    # A TARGET MAY NAME ITS OWN HEAD TERM, and the state pages are why. The default takes the
+    # FIRST content word, which is right for "rv furnace not working" (furnace) and wrong for
+    # "rv repair oregon": it would pick "repair", a word on all fifty state pages, so the check
+    # would pass everywhere and tell nobody anything. Where a query's subject is its PLACE rather
+    # than its first noun, the declaration says so: {"q": "rv repair oregon", "term": "oregon"}.
+    targets = {}
+    for rel, spec in raw_targets.items():
+        if isinstance(spec, dict):
+            targets[rel] = spec.get("q", "")
+        else:
+            targets[rel] = spec
+    force = {rel: spec["term"] for rel, spec in raw_targets.items()
+             if isinstance(spec, dict) and spec.get("term")}
 
     accepted = json.loads(TARGETS.read_text(encoding="utf-8")).get("accepted", {})
     misses, seen = [], {}
@@ -170,7 +206,7 @@ def main() -> int:
         if not p.exists():
             misses.append((rel, query, "page does not exist", ""))
             continue
-        term = head_term(query)
+        term = force.get(rel) or head_term(query)
         if not term:
             misses.append((rel, query, "no head term in the query", ""))
             continue
