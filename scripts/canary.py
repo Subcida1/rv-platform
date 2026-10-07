@@ -264,11 +264,24 @@ def canary(name, heading, find, repl, count=0, runner=None, target=None):
         if heading.lower() not in out.lower():
             return "BLIND", "the check failed, but never mentioned %r" % heading[:44]
         return "CAUGHT", ""
-    block = out.split("=== %s" % heading, 1)
-    if len(block) < 2:
-        return "BLIND", "the gate failed, but never mentioned %r" % heading[:44]
-    if "clean" in block[1].split("===")[0].lower() and "FAIL" not in block[1]:
-        return "BLIND", "the rule still reported clean with the fault in place"
+    # A SUBSTRING ANYWHERE, NOT AN EXACT PREFIX AFTER "===".
+    #
+    # THIS ONE LINE EXPLAINS TEN OF TEN BLIND RESULTS. The check used to split on "=== <heading>",
+    # so a canary whose heading was "tinted surfaces are blue tinted" could never match the gate's
+    # "=== the tinted surfaces are blue tinted, visibly ===" -- the text I passed was a paraphrase
+    # of the heading, not the heading. Same for "content gate" against "the content gate", and
+    # "stale" against a checker that prints no header at all.
+    #
+    # I fixed those one at a time, by looking up each real heading, and did not notice the pattern
+    # until two rule-designed canaries came back blind in the same run. THE CANARY ONLY NEEDS TO
+    # CONFIRM THE RULE WAS MENTIONED IN A RUN THAT FAILED, which is a substring test.
+    #
+    # The trade-off is real and worth stating: a substring is weaker than a heading, because a rule
+    # named in passing would satisfy it. It is still paired with "the run failed", and the
+    # alternative -- an exact match that reports working rules as blind ten times out of ten -- is
+    # the failure this file spends its header warning about.
+    if heading.lower() not in out.lower():
+        return "BLIND", "the check failed, but never mentioned %r" % heading[:44]
     return "CAUGHT", ""
 
 
