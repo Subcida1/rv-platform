@@ -19,3 +19,4 @@ _data/source/
 # ends. The scanners were fixed to skip it on 2026-10-04; this is the other half of the same
 # boundary, so no git operation can sweep a nested checkout into a commit.
 .letta/
+.canary.lock

@@ -35,6 +35,7 @@ weekly, or after editing any check, which is the moment its answer changes.
 """
 import argparse
 import atexit
+import os
 import pathlib
 import re
 import signal
@@ -215,6 +216,45 @@ def _on_signal(signum, _frame):
     sys.exit(128 + signum)
 
 
+LOCK = ROOT / ".canary.lock"
+
+
+def take_lock() -> bool:
+    """Refuse to run if another canary already is.
+
+    TWO RUNS OVERLAP AND CORRUPT EACH OTHER, because both inject into the same files: one
+    restores while the other has a fault in place, and whichever finishes last decides what the
+    tree holds. That is not theoretical. It happened on 2026-10-06 while a suite run and three
+    single-canary re-tests were in flight together, and the cost was the thing the suite exists to
+    produce: I could not get a clean run to confirm a fix, so the fix shipped on reasoning rather
+    than on a measured before-and-after.
+
+    The lock holds a pid, and a lock whose pid is gone is stale and is taken over, so a killed run
+    does not wedge the next one. That matters because this suite is routinely killed -- by timeout,
+    by stopping a background task -- and a lock that survives a kill would be worse than none.
+    """
+    if LOCK.exists():
+        try:
+            pid = int(LOCK.read_text(encoding="utf-8").strip() or 0)
+        except ValueError:
+            pid = 0
+        if pid:
+            try:
+                os.kill(pid, 0)
+                return False                     # a live canary owns it
+            except OSError:
+                pass                             # stale: the owner is gone
+    LOCK.write_text(str(os.getpid()), encoding="utf-8")
+    return True
+
+
+def drop_lock() -> None:
+    try:
+        LOCK.unlink()
+    except FileNotFoundError:
+        pass
+
+
 def dirty() -> bool:
     out = subprocess.run(["git", "status", "--porcelain"], cwd=ROOT,
                          capture_output=True, text=True).stdout.strip()
@@ -308,9 +348,17 @@ def main():
     for sig in (signal.SIGTERM, signal.SIGINT, signal.SIGHUP):
         signal.signal(sig, _on_signal)
 
+    if not take_lock():
+        print("refusing to run: another canary already holds %s. Two runs inject into the same"
+              % LOCK.name)
+        print("files and restore over each other's faults, so neither result means anything.")
+        return 1
+    atexit.register(drop_lock)
+
     if dirty():
         print("refusing to run: the working tree has uncommitted changes, and a canary edits and")
         print("restores files. Commit or stash first so a restore cannot eat your work.")
+        drop_lock()
         return 1
 
     chosen = CANARIES
