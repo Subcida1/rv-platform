@@ -2916,22 +2916,26 @@ a.tchip:focus-visible{outline:2px solid var(--b1,var(--brand));outline-offset:2p
   display:inline-flex;align-items:center;cursor:pointer;
   background:var(--surface-2);border-color:transparent;color:var(--text-2)}
 .part-types .chip:hover{background:var(--surface);border-color:var(--border-2);color:var(--text)}
-/* THE SELECTED STATE, WHICH DID NOT EXIST FOR THESE PILLS UNTIL 2026-10-06.
-   Ty: "when you click on a type/ like travel trailer or motorhome, it should be visibly different
-   to showcase it is highlighted and selected as a filter option. right now it looks the same as
-   unselected buttons."
+/* A SELECTED PILL HOLDS THE HOVER STATE.
+   Ty, 2026-10-06: "for the travel trailer fifth wheel pop up motorhome pill buttons on each part
+   ... i want them to basically hold their hover animation state when their selected so the user
+   can visually see that they have selected travel trailer or fifth wheel."
 
-   TWO THINGS ATE IT, and neither was a missing rule. `.chip.on` existed at the top of this file,
-   but `.part-types .chip` further down has the same specificity and comes LATER, so it won and
-   reset the background; and `.part-types .chip:hover` reset it again on top of that, which is
-   why a selected pill looked unselected exactly when the pointer was on it.
+   So the selected values are the HOVER values, copied deliberately rather than reinvented: the
+   pill lifts off the tinted surface onto the card white and gains a border, which is the state a
+   reader already associates with "this one is live under my pointer". Holding it means the pill
+   keeps saying that after the pointer has gone, which is the whole point -- a reader needs to see
+   their choice at rest, not only while hovering it.
 
-   Matches .man-facets .chip.on, so a selected chip means the same thing everywhere on the site.
-   aria-pressed is already set on these buttons by parts.js; this is the visual half of a fact the
-   markup was already stating. */
+   `transition:.16s` comes from `.chip` above, so arriving at this state animates the same way the
+   hover does, which is what "hover animation state" asks for.
+
+   TWO THINGS ATE THE EARLIER `.chip.on`, and neither was a missing rule: `.part-types .chip`
+   further down has the same specificity and comes LATER, so it won and reset the background; and
+   `.part-types .chip:hover` reset it again on top. Both are covered here. */
 .part-types .chip.on,
 .part-types .chip.on:hover,
-.part-types .chip.on:focus-visible{background:var(--grad);border-color:transparent;color:var(--text-inv)}
+.part-types .chip.on:focus-visible{background:var(--surface);border-color:var(--border-2);color:var(--text)}
 /* The links used to be pinned to the bottom of the card with margin-top:auto and a rule above
    them. In a row that hugs its content there is nothing to pin them to, and the rule was
    separating a space that no longer exists. They are buttons now, so the font-size went too. */
