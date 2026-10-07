@@ -20,7 +20,7 @@
       },
       {
        "kind": "p",
-       "html": "Dump black first, then grey. The grey water rinses the hose, and the order is in the manual: <b>\"Drain the black-water tank first before draining the grey\"</b>"
+       "html": "Dump black first, then grey. The grey water rinses the hose, and the order is in the manual: <b>\"Drain the black-water tank first before draining the gray-water tank.\"</b>"
       }
      ]
     },
@@ -31,7 +31,7 @@
      "blocks": [
       {
        "kind": "p",
-       "html": "Yes, on city water. Campground supply pressure varies and the plumbing in an RV is built for less than a house system. The manual states the threshold: <b>\"NOTE: If city water pressure is more than 60 psi, Tiffin Motor Homes recommends to use a water pressure regulator.\"</b> It goes on the tap end of your drinking-water hose, not inside the compartment."
+       "html": "Yes, on city water. Campground supply pressure varies and the plumbing in an RV is built for less than a house system. The manual states the threshold: <b>\"NOTE: If city water pressure is more than 60 psi, Tiffin Motor Homes recommends to use a water pressure regulator to prevent damage to the motorhome.\"</b> It goes on the tap end of your drinking-water hose, not inside the compartment."
       }
      ]
     },
