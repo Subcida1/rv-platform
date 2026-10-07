@@ -144,7 +144,7 @@ CANARIES = [
     # THE CONTENT GATE, which is the doctrine check: a page that was verified must still be the
     # page that was verified. The fault is a prose edit to a VERIFIED guide with its byline date
     # left alone, which is exactly the drift the gate exists to catch.
-    ("a verified page edited without re-dating", "content gate",
+    ("a verified page edited without re-dating", "the content gate",
      "A furnace that will not light is usually not a dead furnace.",
      "A furnace that will not light is very often not a dead furnace at all.",
      1, None, "guides/rv-furnace-not-working.html"),

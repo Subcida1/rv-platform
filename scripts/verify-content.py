@@ -581,7 +581,15 @@ def main():
               % len(stale_date))
         return 1
     if drift and "--strict" in sys.argv:
-        print("\nFAIL  %d verified page(s) changed without re-verification" % len(drift))
+        # NAME THEM. This printed the count and nothing else until 2026-10-06, so the gate failed
+        # with "1 verified page(s) changed without re-verification" and no way to tell which one.
+        # Found by writing a canary that asserts the failure NAMES the page: the canary reported
+        # BLIND, the rule was working, and the grep for the page returned zero matches. A gate that
+        # fails without saying what to fix costs the next person exactly the time it exists to save.
+        print("\nFAIL  %d verified page(s) changed without re-verification:" % len(drift))
+        for rel in drift:
+            print("   %s" % rel)
+            print("      re-earn it: python3 scripts/verify-content.py --verify %s --by <note>" % rel)
         return 1
     print("\nOK" if not drift else "\nREPORT ONLY (add --strict to gate)")
     return 0
