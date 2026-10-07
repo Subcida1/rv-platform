@@ -69,6 +69,27 @@ CANARIES = [
 
     ("JSON-LD that does not parse", "JSON-LD parses",
      "{\"@context\"", "{ not json @context\"", 1),
+
+    # A SECOND BATCH, added after the first eight all fired. Each anchor was verified to exist in
+    # index.html BEFORE being added, because the very first fault test I ran used an anchor that
+    # was not there, silently changed nothing, and reported a working rule as BLIND.
+    ("a meta description that is too short", "meta description length",
+     '<meta name="description" content="Free R', '<meta name="description" content="Short."', 1),
+
+    ("a missing <base href>", "present, first in head",
+     '<base href="/">', "<!-- base removed by canary -->", 1),
+
+    ("an analytics id that nobody else has", "GA4",
+     "id=G-G8X4MQ", "id=G-NOSUCHID", 1),
+
+    ("a missing theme-color", "brand head tags",
+     '<meta name="theme-color"', '<meta name="x-canary"', 1),
+
+    ("an inline script that does not parse", "every inline script parses",
+     "window.dataLayer = window.d", "window.dataLayer = (;", 1),
+
+    ("a homepage count that is not the real one", "homepage figures match reality",
+     'data-count="39"', 'data-count="999"', 1),
 ]
 
 
