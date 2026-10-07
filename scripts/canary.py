@@ -104,6 +104,15 @@ CANARIES = [
     # a data-claim marker whose value no longer matches the thing it claims
     ("a claim the data disagrees with", "every stated count matches the data",
      'data-claim="tools-live">8<', 'data-claim="tools-live">99<', 1),
+
+    # THE STANDALONE CHECKERS, which had no canary at all and only a --self-test. A self-test
+    # proves a rule matches text it is handed; only a canary proves the rule is wired to something
+    # that runs. check-prose is first because its patterns are sentences, so the fault is a
+    # sentence: one of its own must-catch cases, placed in a heading where it strips tags and
+    # reads the words.
+    ("prose that argues with the reader", "STRICT",
+     "<h1", "<h1>A rough estimate by the Weather Service\'s own description. </h1><h1", 1,
+     ["python3", "scripts/check-prose.py"]),
 ]
 
 
