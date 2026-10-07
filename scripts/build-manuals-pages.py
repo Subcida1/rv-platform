@@ -531,9 +531,15 @@ def render_new_owner(data):
             nav.append('<a class="no-nav-part" href="#sources">Sources</a>')
             body.append('<h2 class="man-h2" id="sources">Sources</h2>')
             body.append('<p>The documents behind the figures and quotations in this guide.</p>')
-            body.append('<ul class="no-sources">%s</ul>' % "".join(
-                '<li><a href="%s" rel="nofollow noopener">%s</a></li>' % (i["url"], i["label"])
-                for i in items))
+            # COLLAPSED. The list is long because a guide this size rests on a lot of
+            # documents, and a reader does not need 187 links in their face. It is still in the
+            # HTML, which is what matters: check-quotes.py reads the hrefs from the page, so
+            # hiding it behind a disclosure keeps it checkable without making it furniture.
+            body.append('<details class="no-src-wrap"><summary>%d documents</summary>'
+                        '<ul class="no-sources">%s</ul></details>'
+                        % (len(items), "".join(
+                            '<li><a href="%s" rel="nofollow noopener">%s</a></li>'
+                            % (i["url"], i["label"]) for i in items)))
 
     return ('<nav class="no-nav" aria-label="On this page"><p class="no-nav-h">On this page</p>%s</nav>'
             % "\n".join(nav), "\n".join(body))
@@ -574,8 +580,8 @@ def start_here_page():
     generated jump-nav and collapsible sections. Both are anchors and <details>, so the whole thing
     works with JavaScript off.
     """
-    desc = meta_desc("What a first-time RV owner needs to know: the mistakes that cost money, "
-                     "how every system works, tanks and water, winter, maintenance and towing")
+    desc = meta_desc("New to RVing? What a first-time RV owner needs to know: the mistakes that "
+                     "cost money, how every system works, tanks and water, maintenance and towing")
     crumb_bar = ('<a href="manuals/index.html">RV Manuals</a> &rsaquo; New RV owner')
     crumb = breadcrumbs([("OriginRV", SITE + "/"),
                          ("RV Manuals", SITE + "/manuals/index.html"),

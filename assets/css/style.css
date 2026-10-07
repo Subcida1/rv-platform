@@ -364,7 +364,14 @@ input,select,textarea{font-family:inherit}
 .no-nav ul{margin-bottom:6px}
 .no-nav a{line-height:1.45;padding:4px 0}
 
-.no-sources{list-style:none;padding:0;margin:0 0 8px;font-size:13.5px;line-height:1.6}
+.no-src-wrap{margin:18px 0 8px;border:1px solid var(--border);border-radius:var(--radius);padding:14px 18px}
+.no-src-wrap>summary{cursor:pointer;font-weight:700;font-size:14.5px;list-style:none}
+.no-src-wrap>summary::-webkit-details-marker{display:none}
+.no-src-wrap>summary::before{content:"+ ";color:var(--text-3);font-weight:800}
+.no-src-wrap[open]>summary::before{content:"\2212 "}
+.no-sources{list-style:none;padding:0;margin:12px 0 4px;font-size:13px;line-height:1.6;
+  columns:2;column-gap:26px}
+@media(max-width:720px){.no-sources{columns:1}}
 .no-sources li{padding:3px 0;border-bottom:1px solid var(--border)}
 .no-sources a{color:var(--b1)}
 .no-sec{border-top:1px solid var(--border);padding:6px 0}

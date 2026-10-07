@@ -1,149 +1,940 @@
 {
- "_why": "The documents behind the guide's quotations. check-quotes.py reads the hrefs on the page and tests every quotation against all of them, so this list is what makes the guide's quotes checkable at all. Only FETCH-CONFIRMED sources from the research ledgers are here: a URL that merely appeared in a search result has not been read and cannot verify anything.",
+ "_why": "The documents behind the guide's quotations. check-quotes.py reads the hrefs on the page and fetches each one, testing every quotation against all of them, so this list is what makes the guide's quotes checkable at all. provenance says whether the research actually OPENED the document or only saw it in a search result; both are listed, and the checker is what settles which ones hold.",
  "sources": [
   {
-   "label": "atsdr.cdc.gov",
-   "url": "https://www.atsdr.cdc.gov/ToxProfiles/tp189-c1-b.pdf"
+   "label": "Camping World",
+   "url": "https://blog.campingworld.com/learn-to-rv/when-to-winterize-an-rv/",
+   "provenance": "fetch-confirmed"
   },
   {
    "label": "Camping World",
-   "url": "https://blog.campingworld.com/learn-to-rv/when-to-winterize-an-rv/"
-  },
-  {
-   "label": "Camping World",
-   "url": "https://blog.campingworld.com/find-your-rv/4-season-rv/"
-  },
-  {
-   "label": "Michelin RV tire guide",
-   "url": "https://business.michelinman.com/people-transportation/rv/load-and-inflation-tables"
-  },
-  {
-   "label": "Leviton, electrical",
-   "url": "https://captaincode2023.leviton.com/node/352"
-  },
-  {
-   "label": "cdc.gov",
-   "url": "https://www.cdc.gov/healthywater/emergency/drinking/disinfection-cisterns.html"
-  },
-  {
-   "label": "doityourselfrv.com",
-   "url": "https://www.doityourselfrv.com/how-to-blow-out-rv-water-lines/"
-  },
-  {
-   "label": "dtsc.ca.gov",
-   "url": "https://dtsc.ca.gov/chemical-toilet-products-advisory-for-consumers-fact-sheet/"
-  },
-  {
-   "label": "equalizerhitch.com",
-   "url": "https://www.equalizerhitch.com/blog/troubleshooting-common-sway-issues/"
-  },
-  {
-   "label": "extension.arizona.edu",
-   "url": "https://extension.arizona.edu/sites/extension.arizona.edu/files/pubs/az1233-2018.pdf"
+   "url": "https://blog.campingworld.com/find-your-rv/4-season-rv/",
+   "provenance": "fetch-confirmed"
   },
   {
    "label": "Federal Communications Commission",
-   "url": "https://www.fcc.gov/wireless/.../consumer-signal-boosters"
-  },
-  {
-   "label": "fmcsa.dot.gov",
-   "url": "https://www.fmcsa.dot.gov/safety/ss-39342b3-fmcsrs-states-any-full-trailer-any-semitrailer-or-any-pole-trailer-having-gross"
-  },
-  {
-   "label": "fourwheelcampers.com",
-   "url": "https://fourwheelcampers.com/wp-content/uploads/2026/04/2026-FWC-Owners-Manual_Project-M-3.17.26.pdf"
-  },
-  {
-   "label": "greenewayrv.com",
-   "url": "https://www.greenewayrv.com/wisconsin-rv-sales/winterization-step-by-step"
-  },
-  {
-   "label": "in.gov",
-   "url": "https://www.in.gov/health/eph/files/Interpretive_Guidelines_Holding_Tanks_Campgrounds.pdf"
-  },
-  {
-   "label": "keystonerv.com",
-   "url": "https://www.keystonerv.com/owners/managing-condensation-and-mold-in-your-rv"
-  },
-  {
-   "label": "kleentank.com",
-   "url": "https://kleentank.com/how-do-i-fix-my-rvs-tank-sensors/"
-  },
-  {
-   "label": "Tiffin owner manuals",
-   "url": "https://knowledge.tiffinmotorhomes.com/Owner_Hub/Tiffin_Motorhome_Units/Byway/Byway_Owner_Manuals/2027_Byway_Manual/13_2027_Byway_Plumbing_and_Bath_Features"
-  },
-  {
-   "label": "Tiffin owner manuals",
-   "url": "https://knowledge.tiffinmotorhomes.com/.../13_2027_Byway_Plumbing_and_Bath_Features"
-  },
-  {
-   "label": "Tiffin owner manuals",
-   "url": "https://knowledge.tiffinmotorhomes.com/Owner_Hub/Tiffin_Motorhome_Units/Allegro_Bay/Allegro_Bay_Owner_Manuals/2027_Allegro_Bay_Manual/13_2027_Allegro_Bay_Plumbing_and_Bath_Features"
+   "url": "https://www.fcc.gov/wireless/.../consumer-signal-boosters",
+   "provenance": "fetch-confirmed"
   },
   {
    "label": "Lance Camper owner manuals",
-   "url": "https://www.lancecamper.com/four-seasons/"
+   "url": "https://www.lancecamper.com/four-seasons/",
+   "provenance": "fetch-confirmed"
   },
   {
    "label": "Lance Camper owner manuals",
-   "url": "https://www.lancecamper.com/docs/trailer-owners-manual.pdf"
+   "url": "https://www.lancecamper.com/docs/trailer-owners-manual.pdf",
+   "provenance": "fetch-confirmed"
   },
   {
-   "label": "lippert.com",
-   "url": "https://www.lippert.com/blog/leveling-jacks-versus-stabilizing-jacks"
+   "label": "Leviton, electrical",
+   "url": "https://captaincode2023.leviton.com/node/352",
+   "provenance": "fetch-confirmed"
   },
   {
-   "label": "nfpa.org",
-   "url": "https://www.nfpa.org/product/nfpa-1192-standard/p1192code/nfpa-1192-standard-on-recreational-vehicles-2026/119226"
+   "label": "Michelin RV tire guide",
+   "url": "https://business.michelinman.com/people-transportation/rv/load-and-inflation-tables",
+   "provenance": "fetch-confirmed"
   },
   {
    "label": "NFPA 1192, Standard on Recreational Vehicles",
-   "url": "https://nfpanorm.com/wp-content/preview/1192%202021.pdf"
+   "url": "https://nfpanorm.com/wp-content/preview/1192%202021.pdf",
+   "provenance": "fetch-confirmed"
   },
   {
    "label": "NHTSA",
-   "url": "https://www.nhtsa.gov/vehicle-safety/tires"
-  },
-  {
-   "label": "outfittermfg.com",
-   "url": "https://outfittermfg.com/assets/pdf/Owners-Manual_v2023.1.pdf"
-  },
-  {
-   "label": "rventhusiast.com",
-   "url": "https://rventhusiast.com/rvexpert/stink-bombed/"
-  },
-  {
-   "label": "RV Industry Association",
-   "url": "https://www.rvia.org/standards-regulations/association-and-ansi-adopted-standards"
-  },
-  {
-   "label": "RV Industry Association",
-   "url": "https://www.rvia.org/system/files/media/file/Trailer%20Brake%20Requirements.pdf"
-  },
-  {
-   "label": "RV Technician Library",
-   "url": "https://www.rvtechlibrary.com/tires/rvtires.pdf"
-  },
-  {
-   "label": "RV Technician Library",
-   "url": "https://www.rvtechlibrary.com/plumbing/sanitizing.php"
-  },
-  {
-   "label": "RV Technician Library",
-   "url": "https://rvtechlibrary.com/plumbing/pressure.php"
+   "url": "https://www.nhtsa.gov/vehicle-safety/tires",
+   "provenance": "fetch-confirmed"
   },
   {
    "label": "NHTSA (document server)",
-   "url": "https://static.nhtsa.gov/odi/tsbs/2022/MC-10226806-0001.pdf"
+   "url": "https://static.nhtsa.gov/odi/tsbs/2022/MC-10226806-0001.pdf",
+   "provenance": "fetch-confirmed"
+  },
+  {
+   "label": "RV Industry Association",
+   "url": "https://www.rvia.org/standards-regulations/association-and-ansi-adopted-standards",
+   "provenance": "fetch-confirmed"
+  },
+  {
+   "label": "RV Industry Association",
+   "url": "https://www.rvia.org/system/files/media/file/Trailer%20Brake%20Requirements.pdf",
+   "provenance": "fetch-confirmed"
+  },
+  {
+   "label": "RV Technician Library",
+   "url": "https://www.rvtechlibrary.com/tires/rvtires.pdf",
+   "provenance": "fetch-confirmed"
+  },
+  {
+   "label": "RV Technician Library",
+   "url": "https://www.rvtechlibrary.com/plumbing/sanitizing.php",
+   "provenance": "fetch-confirmed"
+  },
+  {
+   "label": "RV Technician Library",
+   "url": "https://rvtechlibrary.com/plumbing/pressure.php",
+   "provenance": "fetch-confirmed"
+  },
+  {
+   "label": "Tiffin owner manuals",
+   "url": "https://knowledge.tiffinmotorhomes.com/Owner_Hub/Tiffin_Motorhome_Units/Byway/Byway_Owner_Manuals/2027_Byway_Manual/13_2027_Byway_Plumbing_and_Bath_Features",
+   "provenance": "fetch-confirmed"
+  },
+  {
+   "label": "Tiffin owner manuals",
+   "url": "https://knowledge.tiffinmotorhomes.com/.../13_2027_Byway_Plumbing_and_Bath_Features",
+   "provenance": "fetch-confirmed"
+  },
+  {
+   "label": "Tiffin owner manuals",
+   "url": "https://knowledge.tiffinmotorhomes.com/Owner_Hub/Tiffin_Motorhome_Units/Allegro_Bay/Allegro_Bay_Owner_Manuals/2027_Allegro_Bay_Manual/13_2027_Allegro_Bay_Plumbing_and_Bath_Features",
+   "provenance": "fetch-confirmed"
   },
   {
    "label": "Tire Review",
-   "url": "https://www.tirereview.com/wp-content/uploads/2014/07/U.S_DOT_NHTSA_-_Tire_Aging_A_Summary_of_NHTSAs_Work1.pdf"
+   "url": "https://www.tirereview.com/wp-content/uploads/2014/07/U.S_DOT_NHTSA_-_Tire_Aging_A_Summary_of_NHTSAs_Work1.pdf",
+   "provenance": "fetch-confirmed"
+  },
+  {
+   "label": "atsdr.cdc.gov",
+   "url": "https://www.atsdr.cdc.gov/ToxProfiles/tp189-c1-b.pdf",
+   "provenance": "fetch-confirmed"
+  },
+  {
+   "label": "cdc.gov",
+   "url": "https://www.cdc.gov/healthywater/emergency/drinking/disinfection-cisterns.html",
+   "provenance": "fetch-confirmed"
+  },
+  {
+   "label": "doityourselfrv.com",
+   "url": "https://www.doityourselfrv.com/how-to-blow-out-rv-water-lines/",
+   "provenance": "fetch-confirmed"
+  },
+  {
+   "label": "dtsc.ca.gov",
+   "url": "https://dtsc.ca.gov/chemical-toilet-products-advisory-for-consumers-fact-sheet/",
+   "provenance": "fetch-confirmed"
+  },
+  {
+   "label": "equalizerhitch.com",
+   "url": "https://www.equalizerhitch.com/blog/troubleshooting-common-sway-issues/",
+   "provenance": "fetch-confirmed"
+  },
+  {
+   "label": "extension.arizona.edu",
+   "url": "https://extension.arizona.edu/sites/extension.arizona.edu/files/pubs/az1233-2018.pdf",
+   "provenance": "fetch-confirmed"
+  },
+  {
+   "label": "fmcsa.dot.gov",
+   "url": "https://www.fmcsa.dot.gov/safety/ss-39342b3-fmcsrs-states-any-full-trailer-any-semitrailer-or-any-pole-trailer-having-gross",
+   "provenance": "fetch-confirmed"
+  },
+  {
+   "label": "fourwheelcampers.com",
+   "url": "https://fourwheelcampers.com/wp-content/uploads/2026/04/2026-FWC-Owners-Manual_Project-M-3.17.26.pdf",
+   "provenance": "fetch-confirmed"
+  },
+  {
+   "label": "greenewayrv.com",
+   "url": "https://www.greenewayrv.com/wisconsin-rv-sales/winterization-step-by-step",
+   "provenance": "fetch-confirmed"
+  },
+  {
+   "label": "in.gov",
+   "url": "https://www.in.gov/health/eph/files/Interpretive_Guidelines_Holding_Tanks_Campgrounds.pdf",
+   "provenance": "fetch-confirmed"
+  },
+  {
+   "label": "keystonerv.com",
+   "url": "https://www.keystonerv.com/owners/managing-condensation-and-mold-in-your-rv",
+   "provenance": "fetch-confirmed"
+  },
+  {
+   "label": "kleentank.com",
+   "url": "https://kleentank.com/how-do-i-fix-my-rvs-tank-sensors/",
+   "provenance": "fetch-confirmed"
+  },
+  {
+   "label": "lippert.com",
+   "url": "https://www.lippert.com/blog/leveling-jacks-versus-stabilizing-jacks",
+   "provenance": "fetch-confirmed"
+  },
+  {
+   "label": "nfpa.org",
+   "url": "https://www.nfpa.org/product/nfpa-1192-standard/p1192code/nfpa-1192-standard-on-recreational-vehicles-2026/119226",
+   "provenance": "fetch-confirmed"
+  },
+  {
+   "label": "outfittermfg.com",
+   "url": "https://outfittermfg.com/assets/pdf/Owners-Manual_v2023.1.pdf",
+   "provenance": "fetch-confirmed"
+  },
+  {
+   "label": "rventhusiast.com",
+   "url": "https://rventhusiast.com/rvexpert/stink-bombed/",
+   "provenance": "fetch-confirmed"
   },
   {
    "label": "winnebago.com",
-   "url": "https://www.winnebago.com/lifestyle/winnebagolife/education/rv-winterizing-guide-helpful-tips-special-considerations"
+   "url": "https://www.winnebago.com/lifestyle/winnebagolife/education/rv-winterizing-guide-helpful-tips-special-considerations",
+   "provenance": "fetch-confirmed"
+  },
+  {
+   "label": "aaatrailer.com",
+   "url": "https://aaatrailer.com/pages/how-to-load-a-trailer-correctly",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "airlockusa.com",
+   "url": "https://www.airlockusa.com/blogs/news/rv-carbon-monoxide-propane-safety",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "alphallc.us",
+   "url": "https://alphallc.us/product-care/",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "arprv.com",
+   "url": "https://www.arprv.com/norcold-troubleshoot-propane-tank-regulator.php",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "askthervengineer.com",
+   "url": "https://askthervengineer.com/all-your-rv-pex-faqs-answered-by-an-engineer/",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "askthervengineer.com",
+   "url": "https://askthervengineer.com/rv-fiberglass-delamination-when-the-worst-happens-to-you/",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "autouserguide.com",
+   "url": "https://www.autouserguide.com/winnebago/adventurer-winnebago/winnebago-adventurer-2023-maintenance-and-storage-user-manual/",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "autouserguide.com",
+   "url": "https://www.autouserguide.com/winnebago/winnebago-adventurer-2023-slideout-rooms-and-leveling-user-manual/",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "besttruckcamper.com",
+   "url": "https://www.besttruckcamper.com/campers/northstar-850sc",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "blog.campingworld.com",
+   "url": "https://blog.campingworld.com/learn-to-rv/everything-you-need-to-know-about-rv-antifreeze/",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "blog.campingworld.com",
+   "url": "https://blog.campingworld.com/learn-to-rv/everything-you-need-to-know-about-rv-seams-sealants/",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "blog.campingworld.com",
+   "url": "https://blog.campingworld.com/learn-to-rv/how-to-set-up-a-pop-up-camper/",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "blownfuse.co",
+   "url": "https://blownfuse.co/coachman/pursuit/2022-coachman-pursuit-class-a-gas-motorhomes-waste-water-system-owners-manual/",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "brianjamestrailers.com",
+   "url": "https://www.brianjamestrailers.com/uploads/194319/720c_brian_james_trailers_usa_manual.pdf",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "calrvspecialists.com",
+   "url": "https://calrvspecialists.com/tire-damage-rv-trailer-blowout-sidewall-undercarriage/",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "cdc.gov",
+   "url": "https://www.cdc.gov/water-emergency/media/pdfs/cistern-factsheet-eng-H.pdf",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "ckash.com",
+   "url": "https://ckash.com/2023/07/24/12-simple-tips-for-driving-large-rvs/",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "continental.com",
+   "url": "https://www.continental.com/en/press/press-releases/20240408-start-camping/",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "cxf-prod.azureedge.net",
+   "url": "https://cxf-prod.azureedge.net/.../rv-tires-brochure-e-may2025.pdf",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "daisyrv.com",
+   "url": "https://www.daisyrv.com/how-to-winterize-an-rv-the-right-way-without-missing-anything/",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "daisyrv.com",
+   "url": "https://www.daisyrv.com/why-is-my-rv-sewer-smell-coming-from-the-sink/",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "dicorproducts.com",
+   "url": "https://dicorproducts.com/product/epdm-self-leveling-sealant-for-manufacturers/",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "dicorproducts.com",
+   "url": "https://dicorproducts.com/product/non-leveling-lap-sealants/",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "dmv.ca.gov",
+   "url": "https://www.dmv.ca.gov/portal/uploads/2020/06/dl648.pdf",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "docinfofiles.nfpa.org",
+   "url": "https://docinfofiles.nfpa.org/files/AboutTheCodes/1192/1192_A2017_REC_AAA_SRReport.pdf",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "docs.fcc.gov",
+   "url": "https://docs.fcc.gov/public/attachments/DA-24-1186A1.pdf",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "docs.legis.wisconsin.gov",
+   "url": "https://docs.legis.wisconsin.gov/code/admin_code/atcp/055/79/16",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "dot.report",
+   "url": "https://dot.report/bulletins/11018951",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "dumpscout.com",
+   "url": "https://www.dumpscout.com/guides/how-to-empty-rv-black-and-gray-tanks",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "ecfr.gov",
+   "url": "https://www.ecfr.gov/current/title-47/chapter-I/subchapter-B/part-20/section-20.21",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "etrailer.com",
+   "url": "https://www.etrailer.com/faq-facts-about-rv-antifreeze.aspx",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "extension.purdue.edu",
+   "url": "https://www.extension.purdue.edu/extmedia/PPP/PPP-92.pdf",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "eyershitch.com",
+   "url": "https://www.eyershitch.com/hitching-and-unhitching-steps-for-conventional-trailers",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "findboatstorage.com",
+   "url": "https://findboatstorage.com/blog/rv-storage-preparation-tips/",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "flrules.elaws.us",
+   "url": "https://flrules.elaws.us/fac/64e-15.004",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "forestriverinc.com",
+   "url": "https://forestriverinc.com/files/Component-Manuals/Antenna%20-%20Satellite/Winegard%20-%20Antenna%20Model%20AIR%20360%20Plus%20AR-1035,%20AR-2035,%20AR-360J%20Operation%20Guide.pdf",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "forestriverinc.com",
+   "url": "https://forestriverinc.com/files/Component-Manuals/Antenna.../Winegard%20-%20Antenna%20Model%20AIR%20360%20Plus",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "forestriverinc.com",
+   "url": "https://forestriverinc.com/files/Component-Manuals/Slide%20Room/Lippert",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "forestriverinc.com",
+   "url": "https://forestriverinc.com/images/forestriverownersmanual-rockwood.pdf",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "hankooktire.com",
+   "url": "https://www.hankooktire.com/content/dam/hankooktire/local/pdf/special-trailer/2026_Hankook_Special_Trailer_Tire_Warranty_Guide.pdf",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "highlandridgerv.com",
+   "url": "https://www.highlandridgerv.com/uploads/rvs/manuals/1-2021-Highland-Ridge",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "irv2.com",
+   "url": "https://www.irv2.com/attachments/supplemental-braking-the-moment-of-truth-pdf.2210476/",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "irv2.com",
+   "url": "https://www.irv2.com/threads/owner-manual-waterproofing-on-pop-up.1766466/",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "irv2.com",
+   "url": "https://www.irv2.com/threads/when-to-put-slides-out-before-or-after-the-level-jacks-are-down.1976382/",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "keystonerv.com",
+   "url": "https://www.keystonerv.com/owners/commonly-asked-questions-about-tpms",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "kpt-bj.com",
+   "url": "https://kpt-bj.com/iapmo-ts-2-2021-waste-holding-tanks-for-recreational-vehicles-2013805174.html",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "kz-rv.com",
+   "url": "https://www.kz-rv.com/owners-manuals/images/2015-KZ-RV-Maintenance-Manual.pdf",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "law.cornell.edu",
+   "url": "https://www.law.cornell.edu/regulations/alabama/Ala-Admin-Code-r-420-3-1-.31",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "law.lis.virginia.gov",
+   "url": "https://law.lis.virginia.gov/admincode/title12/agency5/chapter450/section90/",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "leginfo.legislature.ca.gov",
+   "url": "https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?article=1.&chapter=3.&division=12.&lawCode=VEH&part=&title=",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "lesschwab.com",
+   "url": "https://www.lesschwab.com/article/tires/valve-stem-maintenance.html",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "letsrv.com",
+   "url": "https://letsrv.com/best-4-season-travel-trailer/",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "letsrv.com",
+   "url": "https://letsrv.com/rv-toilet-chemicals/",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "letsrv.com",
+   "url": "https://letsrv.com/truth-about-four-season-travel-trailers/",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "lippert.com",
+   "url": "https://www.lippert.com/blog/what-is-a-weight-distribution-hitch",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "liveworkdream.com",
+   "url": "https://liveworkdream.com/2020/09/09/metal-valve-stems/",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "loveyourrv.com",
+   "url": "https://www.loveyourrv.com/winegard-connect-rv-wifi-extender-review/",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "magazine.frva.com",
+   "url": "https://magazine.frva.com/2024/01/01/winter-rving/",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "manual.dot.report",
+   "url": "https://manual.dot.report/prime-time-rv/tracer/2022-prime-time-rv-tracer",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "manual.dot.report",
+   "url": "https://manual.dot.report/prime-time-rv/tracer/2022-prime-time-rv-tracer-travel-trailers-waste-water-system-owners-manual/",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "media.dometic.com",
+   "url": "https://media.dometic.com/externalassets/dometic-310_9108923941_78798.pdf",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "michelinb2b.com",
+   "url": "https://www.michelinb2b.com/wps/b2bcontent/PDF/RV_Tires_Brochure.pdf",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "michelinb2b.com",
+   "url": "https://www.michelinb2b.com/wps/b2bcontent/PDF/XRV_DataPg.pdf",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "michelinb2b.com",
+   "url": "https://www.michelinb2b.com/wps/b2bcontent/PDF/motorHome_weighing_pressure.pdf",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "mortonsonthemove.com",
+   "url": "https://www.mortonsonthemove.com/rv-water-leak-repair/",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "mrrvexpert.com",
+   "url": "https://mrrvexpert.com/best-rv-roof-sealant/",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "mrrvexpert.com",
+   "url": "https://mrrvexpert.com/best-rv-water-pressure-regulator/",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "mrrvexpert.com",
+   "url": "https://mrrvexpert.com/how-to-keep-moisture-out-of-rv/",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "mrrvexpert.com",
+   "url": "https://mrrvexpert.com/how-to-unclog-rv-black-tank/",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "mrrvexpert.com",
+   "url": "https://mrrvexpert.com/rv-water-line-repair/",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "mycamperfriend.com",
+   "url": "https://www.mycamperfriend.com/journal/rv-awning-care-tips",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "mygrandrv.com",
+   "url": "https://www.mygrandrv.com/threads/plumbing-straight-from-the-factory-leaks-and-why.1109849/",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "newpar.newmarcorp.com",
+   "url": "https://newpar.newmarcorp.com/instance1Env99NEWMAR/html/images/2019KGDBOG.pdf",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "nomadicneighborhood.com",
+   "url": "https://nomadicneighborhood.com/empty/",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "northwoodmfg.com",
+   "url": "https://northwoodmfg.com/wp-content/uploads/2025/08/2025-Owners-Manual-Complete-with-Diagrams-and-Cover.pdf",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "nucamprv.com",
+   "url": "https://nucamprv.com/tab-320-lite-2025/",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "ocrv.info",
+   "url": "https://ocrv.info/blog/catch-a-sidewall-bulge-while-it-is-flat",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "ocrv.info",
+   "url": "https://ocrv.info/blog/put-the-seal-inspection-on-a-calendar",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "ocrv.mobi",
+   "url": "https://ocrv.mobi/services/paint-body/body-repair/fender-quarter-panel-repair",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "opuscamper.co.uk",
+   "url": "https://www.opuscamper.co.uk/wp-content/uploads/2018/06/opus-air-tent-and-air-awning-manual.pdf",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "opusowners.com",
+   "url": "https://opusowners.com/wp-content/uploads/2020/09/OP4-User-Manual_0820-1.pdf",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "pickrv.com",
+   "url": "https://pickrv.com/wiki/backing-rv-into-tight-sites-offtracking-physics-cameras",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "pickrv.com",
+   "url": "https://pickrv.com/wiki/mega/winter-rv-survival",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "pickrv.com",
+   "url": "https://pickrv.com/wiki/rv-tire-age-replacement",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "popupparts.com",
+   "url": "https://www.popupparts.com/index.php?id=21&main_page=page",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "popupportal.com",
+   "url": "https://popupportal.com/threads/pop-up-set-up-instructions.26598/",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "pullrite.com",
+   "url": "https://pullrite.com/supershortbed_HIW",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "pullrite.com",
+   "url": "https://www.pullrite.com/sites/default/files/docs/products/3200%20Owner%27s%20Manual%20%281%29.pdf",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "rigcalc.com",
+   "url": "https://rigcalc.com/tools/state-trailer-brake-laws/",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "riparks.ri.gov",
+   "url": "https://riparks.ri.gov/media/1476/download?language=en",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "rollingrambles.com",
+   "url": "https://rollingrambles.com/i-installed-a-winegard-connect-20",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "rosap.ntl.bts.gov",
+   "url": "https://rosap.ntl.bts.gov/view/dot/32423",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "rrc.texas.gov",
+   "url": "https://www.rrc.texas.gov/media/f5dl40nd/38-aft-2012.pdf",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "rv101withmarkpolk.com",
+   "url": "https://rv101withmarkpolk.com/2021/09/27/rv-101-rv-antifreeze-what-you-need-to-know/",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "rv101withmarkpolk.com",
+   "url": "https://rv101withmarkpolk.com/2022/12/07/improve-your-rv-driving-skills/",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "rvcamperguides.com",
+   "url": "https://rvcamperguides.com/maintenance/delamination",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "rvcamperguides.com",
+   "url": "https://rvcamperguides.com/maintenance/schedule-and-checklist",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "rvia.org",
+   "url": "https://www.rvia.org/news-insights/chinook-rv-unveils-its-summit-class-b-motorhome",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "rvia.org",
+   "url": "https://www.rvia.org/standards-regulations",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "rvingtoolbox.com",
+   "url": "https://rvingtoolbox.com/calculators/sanitize-tank",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "rvingtrends.com",
+   "url": "https://www.rvingtrends.com/how-to-install-a-tpms-for-your-rv/",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "rvlife.com",
+   "url": "https://rvlife.com/wp-content/uploads/2026/06/Towing-Guide-2026_June2026.pdf",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "rvliving.com",
+   "url": "https://rvliving.com/faqs-about-rv-antifreeze/",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "rvmapper.com",
+   "url": "https://www.rvmapper.com/blog/rv-black-tank-dump-guide",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "rvmapper.com",
+   "url": "https://www.rvmapper.com/blog/rv-dry-rv-holding-tanks-guide",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "rvnews.com",
+   "url": "https://www.rvnews.com/exclusive-rv-damages-minimized-with-new-tire-blowout-protection/",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "rvrepairlab.com",
+   "url": "https://rvrepairlab.com/guides/how-to-winterize-an-rv/",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "rvtankspecialist.com",
+   "url": "https://www.rvtankspecialist.com/poop-pyramid",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "rvtechmag.com",
+   "url": "https://www.rvtechmag.com/docs/rvtirelife.pdf",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "rvtiresafety.net",
+   "url": "https://www.rvtiresafety.net/2025/08/how-to-avoid-tire-valve-stem-failures.html",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "rvtrader.com",
+   "url": "https://www.rvtrader.com/blog/2025/01/24/essential-elements-of-a-four-season-rv/",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "rvworkshop.com",
+   "url": "https://rvworkshop.com/sc_images/L_W_lift_system_repair_manual.pdf",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "rvworkshop.com",
+   "url": "https://rvworkshop.com/sc_images/products/Coleman_Lift_Systems.pdf",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "s19532.pcdn.co",
+   "url": "https://s19532.pcdn.co/.../U_S_DOT_NHTSA_-_Tire_Aging_A_Summary_of_NHTSAs_Work1.pdf",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "stage.newmarcorp.com",
+   "url": "https://stage.newmarcorp.com/lifestyle/blog/7-tips-on-driving-a-diesel-pusher-motorhome",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "standards.nsf.org",
+   "url": "https://standards.nsf.org/discussion/nsfansi-24-2024-plumbing-system-components-for-recreational-vehicles-uploaded",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "static.nhtsa.gov",
+   "url": "https://static.nhtsa.gov/odi/rcl/2006/RCONL-06V262-3223.pdf",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "static.nhtsa.gov",
+   "url": "https://static.nhtsa.gov/odi/tsbs/2018/MC-10138848-9999.pdf",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "tankauthority.com",
+   "url": "https://tankauthority.com/rv-water-tanks/black-water/",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "tankauthority.com",
+   "url": "https://tankauthority.com/rv-water-tanks/fresh-water/how-to-sanitize/",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "thefunoutdoors.com",
+   "url": "https://thefunoutdoors.com/rvs/rv-poop-pyramid/",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "thervgeeks.com",
+   "url": "https://www.thervgeeks.com/holding-tank-odor-control/",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "thervgeeks.com",
+   "url": "https://www.thervgeeks.com/how-to-drive-an-rv-off-tracking-and-rear-overhang/",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "thetford.com",
+   "url": "https://www.thetford.com/us/inspiration/black-streaks-cleaning-and-prevention/",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "tiffinmotorhomes.com",
+   "url": "https://tiffinmotorhomes.com/wp-content/uploads/2023/07/Phaeton_Manual-2023.pdf",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "tooltroopers.com",
+   "url": "https://tooltroopers.com/blogs/tooltroopers/when-to-reseal-rv-roof",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "towcapacitycalc.com",
+   "url": "https://towcapacitycalc.com/guides/how-to-hitch-a-trailer",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "towcapacitycalc.com",
+   "url": "https://towcapacitycalc.com/guides/trailer-brake-laws-by-state-chart",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "toyotires.com",
+   "url": "https://www.toyotires.com/media/2125/application_of_load_inflation_tables_20170203.pdf",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "tracanada.ca",
+   "url": "https://tracanada.ca/wp-content/uploads/2021/04/USTMA-Care-And-Service_Passenger-And-Light-Truck-Tires.pdf",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "trailerjacks.com",
+   "url": "https://www.trailerjacks.com/image/catalog/N30871.pdf",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "trailermantrailers.net",
+   "url": "https://trailermantrailers.net/wp-content/uploads/2021/12/Trailerman-Users-Manual-2022.pdf",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "trailertowcalc.com",
+   "url": "https://trailertowcalc.com/trailer-sway.html",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "transportation.alberta.ca",
+   "url": "https://www.transportation.alberta.ca/Content/docType41/Production/recvehtowguide.pdf",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "txrvrepairshop.com",
+   "url": "https://www.txrvrepairshop.com/rv-plumbing-leaks/",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "uniquecampingmarine.com",
+   "url": "https://uniquecampingmarine.com/blogs/rv-holding-tank-sensors-series/why-are-my-rv-sensors-not-working",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "ustires.org",
+   "url": "https://www.ustires.org/sites/default/files/RMA_TireCareSafetyGuide_2013.pdf",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "ustires.org",
+   "url": "https://www.ustires.org/system/files/files/2024-05/Care%20and%20Service",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "vdm.ford.com",
+   "url": "https://www.vdm.ford.com/content/dam/brand_ford/en_us/brand/towing/pdf/2025-Ford-RV-and-Trailer-Towing-Guide-V3.pdf",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "vtstateparks.com",
+   "url": "https://www.vtstateparks.com/sites/stateparks/files/documents/2026%20Rules%20and%20Regulations%20FPR%2004012026%20Annotated.pdf",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "walex.com",
+   "url": "https://www.walex.com/complete-guide-to-rv-tank-sensors/",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "webstore.ansi.org",
+   "url": "https://webstore.ansi.org/standards/nfpa/nfpa11922018",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "winegard.com",
+   "url": "https://winegard.com/content/pdf/2452013.pdf",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "winnebago.com",
+   "url": "https://www.winnebago.com/Files/.../2026%20-%20Winnebago%20Towables",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "winnebago.com",
+   "url": "https://www.winnebago.com/Files/Files/Winnebago/Resources/OperatorManuals/Operator%202026/2026%20-%20Winnebago%20Towables%20-%20Owner_s%20Manual%20%28Bound%20Documents%29.pdf",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "winnebago.com",
+   "url": "https://www.winnebago.com/lifestyle/winnebagolife/education/rv-tire-care-maintenance-replacement",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "winnebago.com",
+   "url": "https://www.winnebago.com/lifestyle/winnebagolife/education/take-care-of-your-investment-rv-maintenance-checklist",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "winnebago.com",
+   "url": "https://www.winnebago.com/lifestyle/winnebagolife/education/travel-trailer-setup-takedown-guide-with-checklists",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "winnieowners.com",
+   "url": "https://www.winnieowners.com/threads/city-water-intake-loose",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "winnieowners.com",
+   "url": "https://www.winnieowners.com/threads/city-water-intake-loose-water-leaking-from-near-rear-bumper.721759/",
+   "provenance": "seen-in-search"
+  },
+  {
+   "label": "winnieowners.com",
+   "url": "https://www.winnieowners.com/threads/leaks-at-vinyl-hose-on-pex-fitting.722018/",
+   "provenance": "seen-in-search"
   }
  ]
 }
