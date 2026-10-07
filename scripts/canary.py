@@ -110,6 +110,12 @@ CANARIES = [
     # that runs. check-prose is first because its patterns are sentences, so the fault is a
     # sentence: one of its own must-catch cases, placed in a heading where it strips tags and
     # reads the words.
+    # check-keywords: the homepage declares "rv tools and repair guides", so its head term is
+    # "tools". Taking that word out of the title is the fault the rule exists to catch.
+    ("a page that stopped covering its target", "head-term misses",
+     "<title>RV Tools", "<title>RV Kit", 1,
+     ["python3", "scripts/check-keywords.py", "--strict"]),
+
     ("prose that argues with the reader", "STRICT",
      "<h1", "<h1>A rough estimate by the Weather Service\'s own description. </h1><h1", 1,
      ["python3", "scripts/check-prose.py"]),
