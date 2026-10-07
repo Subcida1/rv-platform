@@ -531,6 +531,12 @@ def new_owner_content():
     page, and this function is only how it becomes HTML.
     """
     d = json.loads((ROOT / "_data" / "new-owner.json").read_text(encoding="utf-8"))
+    # The drafted parts live in their own files so each can be written, reviewed and corrected on
+    # its own. They are merged here rather than in one giant JSON because three writers working in
+    # one file is how a section gets silently clobbered.
+    for extra in sorted((ROOT / "_data").glob("new-owner-part*.json")):
+        d.setdefault("parts", []).extend(
+            json.loads(extra.read_text(encoding="utf-8")).get("parts", []))
     out = []
     op = d["opener"]
     out.append('<h2 class="man-h2">%s</h2>' % op["title"])
