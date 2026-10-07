@@ -308,7 +308,62 @@ input,select,textarea{font-family:inherit}
 
 /* The guide's own sections. <details> is already styled for .faq and .man-models; this is the
    same idea at a size that suits a long read, and it needs no script. */
-.no-body{min-width:0}
+/* THE GUIDE READS AS A WALL OF TEXT WITHOUT THESE. Ty, 2026-10-07: "i feel we should make it more
+   visually appealing now, space out the various sections better, wrap things in elements to
+   separate the guide ... right now its just a wall of text thats a bit too much."
+
+   Four things were doing the damage, and none of them was the amount of content. The twelve
+   money-losing mistakes ran together as twelve bold headings and twelve dense paragraphs with no
+   separation. Every quotation rendered as full bold, and with two or three per paragraph the bold
+   fought the prose for attention. The measure was about 1100px, roughly double a comfortable line
+   length. And nothing on the page carried more weight than anything else, so there was no way to
+   see where one idea stopped and the next started.
+
+   The quotations keep their <b> tags: check-quotes.py reads that shape, so it is the styling that
+   changes, not the markup. */
+
+.no-body{min-width:0;max-width:74ch}
+.no-body>p,.no-sec p{color:var(--text-2);line-height:1.75;margin:14px 0}
+.no-body h2.man-h2{margin-top:52px;padding-top:30px;border-top:1px solid var(--border)}
+.no-body h2.man-h2:first-child{margin-top:0;padding-top:0;border-top:0}
+
+/* Quotes sit on a tint rather than in bold. The bold version made a paragraph with three
+   quotations read as one continuous shout. */
+.no-body b,.no-sec b{font-weight:600;background:var(--tint-bg);box-shadow:0 0 0 1px var(--tint-edge);
+  border-radius:5px;padding:1px 5px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+
+/* THE TWELVE, AS CARDS. They are the most important thing on the page and they were the least
+   separated. The number is a counter rather than part of the heading text, so the heading can be
+   scanned by its words. */
+.no-mistakes{counter-reset:mistake;display:grid;gap:14px;margin:22px 0 8px}
+.no-mistake{counter-increment:mistake;position:relative;background:var(--surface);
+  border:1px solid var(--border);border-left:4px solid var(--b2);border-radius:var(--radius);
+  padding:18px 22px 18px 62px}
+.no-mistake h3{font-size:16.5px;font-weight:800;margin:0 0 8px;color:var(--text)}
+.no-mistake h3::before{content:counter(mistake);position:absolute;left:20px;top:17px;
+  width:26px;height:26px;border-radius:50%;background:var(--tint-bg);color:var(--b1);
+  font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center}
+.no-mistake p{margin:0;color:var(--text-2);line-height:1.7}
+
+/* Collapsible sections get room to breathe, and a body indent so an open section reads as
+   belonging to its own heading rather than floating between two rules. */
+.no-sec{margin:0}
+.no-sec>summary{font-size:17px;padding:18px 0 18px 30px}
+.no-sec[open]>summary{border-bottom:1px solid var(--border);margin-bottom:6px}
+.no-sec>summary::before{font-size:20px;left:2px}
+.no-sec .no-mistakes{margin-top:14px}
+
+/* The callouts and tables inside the guide. */
+.no-body .callout,.no-sec .callout{margin:20px 0;padding:16px 20px;border-radius:var(--radius);
+  background:var(--tint-bg);border:1px solid var(--tint-edge);color:var(--text-2);line-height:1.7}
+.no-body .man-table,.no-sec .man-table{margin:20px 0}
+.no-body .man-table th,.no-sec .man-table th{background:var(--tint-bg);text-align:left}
+
+/* The nav, with room for the longer section names. */
+.no-nav{width:100%;max-width:none;padding:18px 20px}
+.no-nav ul{margin-bottom:6px}
+.no-nav a{line-height:1.45;padding:4px 0}
+
 .no-sources{list-style:none;padding:0;margin:0 0 8px;font-size:13.5px;line-height:1.6}
 .no-sources li{padding:3px 0;border-bottom:1px solid var(--border)}
 .no-sources a{color:var(--b1)}

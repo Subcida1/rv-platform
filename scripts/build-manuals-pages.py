@@ -576,6 +576,7 @@ def start_here_page():
     """
     desc = meta_desc("What a first-time RV owner needs to know: the mistakes that cost money, "
                      "how every system works, tanks and water, winter, maintenance and towing")
+    crumb_bar = ('<a href="manuals/index.html">RV Manuals</a> &rsaquo; New RV owner')
     crumb = breadcrumbs([("OriginRV", SITE + "/"),
                          ("RV Manuals", SITE + "/manuals/index.html"),
                          ("New RV owner", SITE + "/manuals/start-here.html")])
@@ -597,15 +598,19 @@ def start_here_page():
         %s
         <div class="no-body">
           <h2 class="man-h2">%s</h2>
-          <div class="callout"><b>%s</b></div>
           %s
           %s
         </div>
       </div>
     </div>
   </div>
-""" % (crumb, START_TITLE, op["lede"], nav, op["title"], op["lede"],
-       "\n".join('<h3>%s</h3>\n<p>%s</p>' % (it["n"], it["html"]) for it in op["items"]),
+""" % (crumb_bar, START_TITLE, op["lede"], nav, op["title"],
+       '<div class="no-mistakes">%s</div>' % "\n".join(
+          '<article class="no-mistake"><h3>%s</h3><p>%s</p></article>'
+          # The counter draws the number, so the number must come out of the heading text
+          # or it prints twice, which is what the first render of this did.
+          % (re.sub(r'^\d+\.\s*', '', it["n"]), it["html"])
+          for it in op["items"]),
        content.get("migrated_sections_html", "") + "\n" + body)
 
     return (head(START_TITLE, desc, SITE + "/manuals/start-here.html", [crumb])
