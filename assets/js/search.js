@@ -119,14 +119,40 @@
     else if (t.indexOf(q) >= 0) s = 60;
     else if (k.indexOf(q) >= 0) s = 40;
     else if (d.indexOf(q) >= 0) s = 20;
-    if (!s) return 0;
-    // every extra query word that also appears is worth something
+    // A MULTI-WORD QUERY IS MATCHED WORD BY WORD, NOT AS A PHRASE.
+    // Until 2026-10-08 the whole query had to appear as a substring of the title, key or
+    // description, and a score of zero meant no result at all. So "winterize my rv" found nothing
+    // while "winterize" found the guide -- and the empty state told the reader to try "a symptom
+    // like winterize", which is the one word that worked. People type phrases; requiring the exact
+    // phrase inverts the commonest case into the failing one.
+    // FILLER WORDS ARE DROPPED, BUT ONLY WHILE REAL WORDS REMAIN.
+    // "winterize my rv" failed even after the per-word rule, because "my" appears in no title,
+    // key or description and every word was required. "how to winterize plumbing" only passed
+    // because that title happens to contain the words "How to". People write phrases with filler
+    // in them, and the filler is not part of what they are asking for.
+    // The guard matters as much as the list: dropping filler from "rv" alone would leave nothing,
+    // and a query that matches everything is worse than one that matches nothing.
+    var STOP = { my:1, a:1, an:1, the:1, in:1, on:1, of:1, for:1, to:1, is:1, it:1, do:1, i:1,
+                 and:1, with:1, at:1, me:1, can:1, how:1, what:1, when:1, where:1, why:1 };
+    var raw = q.split(/\s+/).filter(Boolean);
+    var kept = raw.filter(function (w) { return !STOP[w]; });
+    if (kept.length) q = kept.join(' ');
     var words = q.split(/\s+/).filter(Boolean);
-    if (words.length > 1) {
+    if (words.length > 1 && !s) {
       var hay = t + ' ' + k + ' ' + d, hits = 0;
-      for (var i = 0; i < words.length; i++) if (hay.indexOf(words[i]) >= 0) hits++;
-      if (hits === words.length) s += 25;
-      else if (hits > 1) s += 8;
+      for (var w = 0; w < words.length; w++) if (hay.indexOf(words[w]) >= 0) hits++;
+      // EVERY word must appear somewhere. Half a phrase is not a short phrase, it is a different
+      // question, and a search that answers a different question is worse than one that abstains.
+      if (hits === words.length) {
+        s = 55 + (t.indexOf(words[0]) >= 0 ? 20 : 0) + (k.indexOf(words[0]) >= 0 ? 10 : 0);
+      }
+    }
+    if (!s) return 0;
+    if (words.length > 1) {
+      var hay2 = t + ' ' + k + ' ' + d, h2 = 0;
+      for (var i2 = 0; i2 < words.length; i2++) if (hay2.indexOf(words[i2]) >= 0) h2++;
+      if (h2 === words.length) s += 25;
+      else if (h2 > 1) s += 8;
     }
     s -= Math.min(20, t.length / 4);
     return s;

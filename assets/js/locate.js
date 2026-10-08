@@ -58,7 +58,13 @@
      A ZIP is never ambiguous and always returns at most one. */
   window.RV_DIRECTORY_MATCHES = function (q) {
     q = String(q == null ? '' : q).trim();
-    if (!q) return [];
+    // ONE CHARACTER IS NOT A PLACE, AND NEITHER IS A FILLER WORD.
+    // Measured 2026-10-08: "a" returned businesses (any city containing the letter) and "the"
+    // returned "RV service near The, CA", because loc is a long areas string that reads
+    // "paso robles and the central coast". Neither is a location anybody typed on purpose, and a
+    // directory link that promises shops near a town that does not exist is worse than no link.
+    if (q.length < 2) return [];
+    if (/^(the|and|for|near|any|all|my|of|in|on|at|to|is|it|a|an)$/i.test(q)) return [];
     if (/^\d{5}$/.test(q)) {
       var zu = zipToUrl(q);
       return zu ? [{ label: q, url: zu }] : [];
