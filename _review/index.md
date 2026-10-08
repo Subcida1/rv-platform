@@ -15,3 +15,8 @@ Nothing here is a decision; it is what to read.
 - [Utah](utah.md) — 19 listings
 - [Washington](washington.md) — 26 listings
 - [Wyoming](wyoming.md) — 9 listings
+
+Not a state sheet, and not a list of businesses: the new-owner guide is the largest page
+on the site and the one that most needs a review, so it has its own sheet.
+
+- [New-owner guide](new-owner-guide.md) — 46 sections, 409 quotations
