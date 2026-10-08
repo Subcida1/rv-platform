@@ -43,7 +43,7 @@
    },
    {
     "n": "10. Do not remove or plug the water heater's relief valve",
-    "html": "Two instructions in one line, both absolute: <b>\"Do not place a valve between the pressure and\n  temperature (P&amp;T) valve and the tank. Do not remove or plug the relief valve under any\n  circumstances.\"</b> The valve is what opens if the tank reaches 210 degrees F or 150 pounds of\n  pressure, and it is the reason a heater that is misbehaving vents water rather than becoming a\n  projectile. Suburban publish both figures for their own valves, and 210 is the one that matters:\n  120 F is a thermostat setting on some models, not a relief temperature."
+    "html": "Two instructions in one line, both absolute: <b>\"Do not place a valve between the pressure and\n  temperature (P&amp;T) valve and the tank. Do not remove or plug the relief valve under any\n  circumstances.\"</b> It opens at 210 F or 150 psi, and it is the reason a heater that is misbehaving vents water rather than becoming a\n  projectile. Suburban publish both figures for their own valves, and 210 is the one that matters:\n  120 F is a thermostat setting on some models, not a relief temperature."
    },
    {
     "n": "11. Never blow the water lines out with a valve closed",
