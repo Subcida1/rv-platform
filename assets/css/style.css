@@ -302,7 +302,12 @@ input,select,textarea{font-family:inherit}
   color:var(--text-3);margin-bottom:10px}
 .no-nav a{color:var(--text-2);display:block;padding:3px 0}
 .no-nav a:hover{color:var(--b1)}
-.no-nav-part{font-weight:700;color:var(--text);margin-top:12px}
+/* THE PART LINKS ARE TOUCH TARGETS, NOT DECORATION. At 28px tall they failed the audit's 32px
+   floor; the site holds itself to 44px on touch, which is what a thumb actually needs. */
+/* .no-nav a IS MORE SPECIFIC THAN .no-nav-part -- one class and one element beats one class -- so
+   the padding:3px 0 in that rule was winning and these links measured 28px tall. Same cascade shape
+   as the selected part-type chip fixed earlier the same day: the rule existed, it just lost. */
+.no-nav a.no-nav-part{font-weight:700;color:var(--text);margin-top:12px;display:block;padding:12px 0}
 .no-nav ul{list-style:none;margin:0 0 0 2px;padding:0}
 .no-nav ul li a{padding-left:10px}
 
@@ -329,8 +334,16 @@ input,select,textarea{font-family:inherit}
 
 /* Quotes sit on a tint rather than in bold. The bold version made a paragraph with three
    quotations read as one continuous shout. */
+/* NO VERTICAL PADDING. The tinted quotation spans are inline, and vertical padding on an inline
+   box does not extend its line box -- it overflows it. Measured on 2026-10-08: 114 spans reported
+   "overflows its box by 1-4px" on the new-owner guide, all of them quotations. The horizontal
+   padding stays, because that is what separates the tint from the surrounding prose, and the
+   the line-height on the paragraph gives the tint the room it needs. HORIZONTAL PADDING GOES TOO:
+   a span that wraps at the end of a line pushed 2-3px past its container, so 95 spans still failed
+   after the vertical half was removed. The tint and the hairline ring carry the separation instead,
+   and neither of them touches layout.
 .no-body b,.no-sec b{font-weight:600;background:var(--tint-bg);box-shadow:0 0 0 1px var(--tint-edge);
-  border-radius:5px;padding:1px 5px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+  border-radius:3px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
 
 /* THE TWELVE, AS CARDS. They are the most important thing on the page and they were the least
    separated. The number is a counter rather than part of the heading text, so the heading can be
@@ -365,7 +378,7 @@ input,select,textarea{font-family:inherit}
 .no-nav a{line-height:1.45;padding:4px 0}
 
 .no-src-wrap{margin:18px 0 8px;border:1px solid var(--border);border-radius:var(--radius);padding:14px 18px}
-.no-src-wrap>summary{cursor:pointer;font-weight:700;font-size:14.5px;list-style:none}
+.no-src-wrap>summary{cursor:pointer;font-weight:700;font-size:14.5px;list-style:none;padding:11px 0}
 .no-src-wrap>summary::-webkit-details-marker{display:none}
 .no-src-wrap>summary::before{content:"+ ";color:var(--text-3);font-weight:800}
 .no-src-wrap[open]>summary::before{content:"\2212 "}
