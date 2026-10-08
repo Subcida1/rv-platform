@@ -178,6 +178,15 @@ valeprose() {
   ~/.local/bin/vale $written 2>&1 | tail -30
   return 0
 }
+# DO THE TOOLS ACTUALLY COMPUTE WHEN SOMEBODY TYPES INTO THEM? The unit tests prove the maths and
+# the smoke test proves the scripts parse. Neither proves the wire between an input and its output,
+# which is what breaks: an id renamed in the markup, a listener on the wrong node, a result element
+# that never gets written. This drives each tool in the browser that is already running here and
+# asserts the ANSWER, not merely that something appeared. Weekly, because it needs Chrome and a
+# server, both of which this file already starts.
+step "tools: does each one compute the right answer in a browser" \
+  node scripts/test-tools-in-browser.mjs --port $LH_PORT --base "http://127.0.0.1:$PORT/"
+
 step "Vale: prose style and weasel words (reports, does not judge)" valeprose
 
 # DOES EACH CHECK STILL FIRE? This is the only step that tests the TESTS. It injects a known
