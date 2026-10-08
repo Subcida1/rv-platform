@@ -432,8 +432,15 @@ for (const r of report) {
   if (touch) {
     for (const e of p.tiny || []) { tally.tiny++; note('WARN', 'tiny', e.sel + e.fs, { page: where, msg: e.sel + ' ' + e.fs + 'px "' + e.text + '"' }); }
     for (const e of p.taps || []) {
-      if (e.h >= 32 && e.w >= 32) { tally.tapWarn++; note('WARN', 'tap', e.sel + '|' + e.text, { page: where, msg: e.sel + ' ' + e.w + 'x' + e.h + ' "' + e.text + '"' }); }
-      else { tally.tapFail++; note('FAIL', 'tap', e.sel + '|' + e.text, { page: where, msg: e.sel + ' ' + e.w + 'x' + e.h + ' "' + e.text + '"' }); }
+      // THE BAND HAS AN UPPER BOUND. It was `>= 32` with none, so every target at or above 32
+      // was reported under a heading that says 32-43 -- including the 44px links this site holds
+      // itself to. Measured 2026-10-08: eight guide nav links at exactly 303x44 were flagged as
+      // warnings. An instrument that flags correct behaviour teaches its reader to ignore it.
+      if (e.h >= 32 && e.w >= 32 && (e.h < 44 || e.w < 44)) { tally.tapWarn++; note('WARN', 'tap', e.sel + '|' + e.text, { page: where, msg: e.sel + ' ' + e.w + 'x' + e.h + ' "' + e.text + '"' }); }
+      // AND THE FAIL BRANCH IS NOT `else`. With the warn band bounded, an else caught every good
+      // target as well -- eight 44px links reported as failures the moment the upper bound went
+      // in. A target fails only by being under the WCAG floor in one dimension.
+      else if (e.h < 32 || e.w < 32) { tally.tapFail++; note('FAIL', 'tap', e.sel + '|' + e.text, { page: where, msg: e.sel + ' ' + e.w + 'x' + e.h + ' "' + e.text + '"' }); }
     }
   }
 }
