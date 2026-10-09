@@ -347,7 +347,13 @@ input,select,textarea{font-family:inherit}
    The quotations keep their <b> tags: check-quotes.py reads that shape, so it is the styling that
    changes, not the markup. */
 
-.no-body{min-width:0;max-width:74ch}
+/* THE CONTENT FILLS THE PAGE, NOW THAT THE RAIL IS GONE. Ty, 2026-10-08: "the content is all still
+   sized the same? it should be taking up the entire area." He was right and the cause was here: the
+   250px sidebar was removed but the body stayed capped at 74ch, so measured at 1280px and again at
+   1920px the prose sat at 658px inside a 1152px container. 494px of the page was empty, and the
+   guide was the narrowest long-form page on the site (guides and parts run 772px at 16px). The cap
+   is gone and the font size matches the guides. */
+.no-body{min-width:0;max-width:none;font-size:16px}
 .no-body>p,.no-sec p{color:var(--text-2);line-height:1.75;margin:14px 0}
 /* LIST ITEMS RAN TOGETHER. Ty, 2026-10-08: "there's no space between the end of number one's text
    ... and the beginning of number two's text ... there should be like a line break there."
@@ -384,6 +390,16 @@ input,select,textarea{font-family:inherit}
    separated. The number is a counter rather than part of the heading text, so the heading can be
    scanned by its words. */
 .no-mistakes{counter-reset:mistake;display:grid;gap:14px;margin:22px 0 8px}
+/* Two columns once there is room for two. Twelve cards stacked in one column at 1152px would be
+   twelve very wide boxes with very wide lines; two columns use the width and keep each card's text
+   near 75 characters. minmax(0,1fr) rather than 1fr, because a 1fr track is floored at min-content
+   and one wide nowrap child drags the whole track wider than its container.
+   CARD ORDER: auto-flow is row-major, so the numbers pair across rather than down. Measured on the
+   built page: 1 and 2 share the first row, 3 and 4 the second. The counter reads DOM order, so
+   every number matches the heading it sits beside. */
+@media(min-width:1080px){
+  .no-mistakes{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
 .no-mistake{counter-increment:mistake;position:relative;background:var(--surface);
   border:1px solid var(--border);border-left:4px solid var(--b2);border-radius:var(--radius);
   padding:18px 22px 18px 62px}
