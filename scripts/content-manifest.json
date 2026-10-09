@@ -403,7 +403,7 @@
     "claims": "ca780a6dbc99c4d8"
   },
   "guides/index.html": {
-    "hash": "3fcd9afe147463c1",
+    "hash": "e257044456934a18",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -470,6 +470,13 @@
     "spec_waived": false,
     "claims": "f2c9a068f6c16e27"
   },
+  "guides/rv-black-tank.html": {
+    "hash": "189cb3cdeb599126",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
+  },
   "guides/rv-condensation-inside.html": {
     "hash": "70a2ad527524bb9b",
     "status": "unverified",
@@ -508,6 +515,20 @@
     "sources": [],
     "claims": "d43bfcd7141b7c75",
     "claims_date": "Oct 2, 2026"
+  },
+  "guides/rv-driving-motorhome.html": {
+    "hash": "2a81213486cbd93d",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
+  },
+  "guides/rv-fridge-leveling.html": {
+    "hash": "bb7b35d77cb9145b",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
   },
   "guides/rv-furnace-carbon-monoxide.html": {
     "hash": "bda653cf15cace22",
@@ -617,7 +638,7 @@
     "claims_date": "Oct 2, 2026"
   },
   "guides/rv-pre-trip-walkaround.html": {
-    "hash": "cf78c755efae95b1",
+    "hash": "fbdab5ab7e4fbf78",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -758,6 +779,13 @@
     "invalidated_at": "2026-09-27",
     "claims_date": "Oct 4, 2026"
   },
+  "guides/rv-towing-trailer.html": {
+    "hash": "b483a737e8ffd7cb",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
+  },
   "guides/rv-trailer-wheel-bearings.html": {
     "hash": "6611b8f9c3422215",
     "status": "unverified",
@@ -843,7 +871,7 @@
     "claims": "2c668bd9cf981fe7"
   },
   "index.html": {
-    "hash": "60a6ac20fc9e68c8",
+    "hash": "7b6157cc690c0df5",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -913,7 +941,7 @@
     "sources": []
   },
   "manuals/start-here.html": {
-    "hash": "7ae9076b268dad54",
+    "hash": "3ded48b40a5e35b4",
     "status": "unverified",
     "verified_by": " CHANGED 2026-09-28: one sentence was attributed. It read \"The manual's limit is 30 PSI maximum\", an unnamed authority for a specific number, and read against the Furrion figure on the water-heater guide it looked like a contradiction. The number is Jayco's, which the winterising guide already says ('Jayco caps its system at 30 psi ... while Winnebago publishes 35 to 50 psi'), and the sentence now names Jayco and says the ceiling is the plumbing's rather than one number for every RV. The change was made in the page's generator, scripts/build-manuals-pages.py, and the page regenerated. No other text changed.",
     "verified_at": null,

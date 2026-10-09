@@ -43,7 +43,11 @@
       "rv-trailer-wheel-bearings",
       "rv-generator-sizing",
       "rv-trip-planner",
-      "rv-pre-trip-walkaround"
+      "rv-pre-trip-walkaround",
+      "rv-fridge-leveling",
+      "rv-driving-motorhome",
+      "rv-towing-trailer",
+      "rv-black-tank"
     ]
   }
 }

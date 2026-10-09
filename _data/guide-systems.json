@@ -50,6 +50,10 @@
   "rv-slide-out-leaking": "roof-and-body",
   "rv-slide-out-not-working": "roof-and-body",
   "rv-trip-planner": "planning-and-travel",
-  "rv-pre-trip-walkaround": "planning-and-travel"
+  "rv-pre-trip-walkaround": "planning-and-travel",
+  "rv-fridge-leveling": "kitchen-and-appliances",
+  "rv-driving-motorhome": "planning-and-travel",
+  "rv-towing-trailer": "towing-and-running-gear",
+  "rv-black-tank": "sanitation-and-tanks"
  }
 }
