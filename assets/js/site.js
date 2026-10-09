@@ -256,7 +256,7 @@
  '</div></div>' +
  '<div class="wrap foot-bottom"><span>© 2026 ' + esc(CFG.brand.legal) + '. Built for the open road.</span>' +
  '<span class="foot-credit">Third-party photographs appear under the licences credited beside each one, resized for display.</span>' +
- '<span class="legal"><a href="' + R(rt.home) + '">Home</a><a href="' + R(rt.directory) + '">Directory</a><a href="' + R(rt.guides) + '">Guides</a></span></div></div>';
+ '<span class="legal"><a href="' + R(rt.home) + '">Home</a><a href="' + R(rt.directory) + '">Directory</a><a href="' + R(rt.guides) + '">Guides</a><a href="/privacy">Privacy</a></span></div></div>';
  }
 
  /* ---------- shell injection ---------- */

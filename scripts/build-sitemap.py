@@ -56,12 +56,15 @@ def published_pages():
     # of this repository, so an unpruned walk reports their pages as published but not in the
     # sitemap. os.walk prunes by mutating dirnames, which is what this line is for. Found
     # 2026-10-04 with the same defect in verify.py, build-shell.mjs and stamp_assets.py.
+    # ONE SKIP SET, NOT TWO. There were two dirnames[:] assignments here and the second silently
+    # overrode the first, so anything only in the first was pruned by accident rather than by
+    # intent. _data was in NEITHER, which is why _data/new-owner-sections.html was reported as
+    # published but not in the sitemap: it is a fragment of page content, not a page. The same
+    # omission was found in twelve other scripts on 2026-09-24 and this one was missed.
+    SKIP_DIRS = {".git", ".letta", "node_modules", "workers", "_todo", "_log", "_data", "_review",
+                 "assets", "scripts"}
     for dirpath, dirnames, filenames in os.walk(ROOT):
-        # THE CHECKOUT BOUNDARY, INSIDE THE LOOP THAT BINDS dirnames. Letta keeps agent
-        # worktrees under .letta/worktrees/, each a full copy of this repository, so an
-        # unpruned walk reports their pages as published but not in the sitemap.
-        dirnames[:] = [d for d in dirnames if d not in ('.git', '.letta', 'node_modules')]
-        dirnames[:] = [d for d in dirnames if d not in {".git", "workers", "_todo", "_log", "node_modules"}]
+        dirnames[:] = [d for d in dirnames if d not in SKIP_DIRS]
         for name in filenames:
             if name.endswith(".html"):
                 rel = os.path.relpath(os.path.join(dirpath, name), ROOT).replace(os.sep, "/")
