@@ -47,8 +47,13 @@
    "provenance": "fetch-confirmed"
   },
   {
-   "label": "NHTSA (document server)",
+   "label": "Goodyear tire service bulletin PSB 2022-16 (via the NHTSA document server)",
    "url": "https://static.nhtsa.gov/odi/tsbs/2022/MC-10226806-0001.pdf",
+   "provenance": "fetch-confirmed"
+  },
+  {
+   "label": "Dometic water heater FAQ, after-market anode rods",
+   "url": "https://support.dometic.com/en/waterheaters-gas/Using-After-Market-Anode-Rods-f270",
    "provenance": "fetch-confirmed"
   },
   {
@@ -935,6 +940,26 @@
    "label": "winnieowners.com",
    "url": "https://www.winnieowners.com/threads/leaks-at-vinyl-hose-on-pex-fitting.722018/",
    "provenance": "seen-in-search"
+  },
+  {
+   "label": "Jayco owner's manual",
+   "url": "https://www.jayco.com/uploads/rvs/manuals/555-2022-Jayco-Alante-OM.pdf",
+   "provenance": "fetch-confirmed"
+  },
+  {
+   "label": "Lippert leveling guide",
+   "url": "https://lci-support-doc.s3.amazonaws.com/manuals/leveling-and-stabilization/ccd_0001749.pdf",
+   "provenance": "fetch-confirmed"
+  },
+  {
+   "label": "Suburban water heater guide",
+   "url": "https://library.suburbanrv.com/wp-content/uploads/2023/04/206244_Suburban_Water_Heaters_RevA_03-22-2023.pdf",
+   "provenance": "fetch-confirmed"
+  },
+  {
+   "label": "Suburban water heater manual, all models",
+   "url": "https://forestriverinc.com/files/Component-Manuals/Appliance/Suburban%20-%20Water%20Heaters%20ALL%20MODELS%20Operation%20Manual.pdf",
+   "provenance": "fetch-confirmed"
   }
  ]
 }

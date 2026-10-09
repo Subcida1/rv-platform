@@ -219,7 +219,7 @@ function breadcrumbFor(rel, html) {
 // this repository, so a recursive read of ROOT finds their pages too and stamps a nested checkout
 // as if it were the site. Found 2026-10-04: the local gate was red for hours with manuals pages,
 // static shell and asset stamps while CI stayed green, because CI has no .letta directory.
-const SKIP_PARTS = ['.git', '.letta', 'node_modules'];
+const SKIP_PARTS = ['.git', '.letta', 'node_modules', '_data'];
 const pages = fs.readdirSync(ROOT, { recursive: true })
   .filter((f) => String(f).endsWith('.html'))
   .map((f) => String(f))

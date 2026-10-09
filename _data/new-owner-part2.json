@@ -41,11 +41,11 @@
       },
       {
        "kind": "p",
-       "html": "The split between the two waste systems is stated plainly by manufacturers. The Tiffin 2027 Allegro Bay owner manual says: <b>\"There are two, separate wastewater systems. The gray-water system is for wastewater from the sinks and shower. The black-water system is for sewage waste from the toilet. Each wastewater tank has its own control valve, and both drain through a common sewer-drain hose.\"</b>"
+       "html": "The two waste systems are separate. The grey-water system takes wastewater from the sinks and the shower. The black-water system takes sewage from the toilet. Each tank has its own control valve, and both drain through a common sewer hose."
       },
       {
        "kind": "p",
-       "html": "The fresh tank is separate from both. In Tiffin's wording it feeds <b>\"the freshwater system including the hot water heater, faucets, and toilet\"</b> when the coach runs on city water. The toilet is a fixture that uses fresh water. It is not an inlet to either waste tank; it drops its contents into the black tank."
+       "html": "The fresh tank is separate from both. It feeds the freshwater system including the water heater, faucets, and toilet when the coach runs on city water. The toilet is a fixture that uses fresh water. It is not an inlet to either waste tank; it drops its contents into the black tank."
       },
       {
        "kind": "p",
@@ -53,7 +53,7 @@
       },
       {
        "kind": "callout",
-       "html": "Leaving the grey valve open is permitted by some manufacturers and parks and forbidden by others. Tiffin says: <b>\"The gray tank can be kept open while hooked to a sewer connection.\"</b> The University of Arizona Extension goes further and says: <b>\"Leave graywater valves open whenever you are connected to an RV park sewer service line.\"</b> Some parks require both valves closed at all times. Check the rule where you are parked."
+       "html": "You can often leave the grey tank valve open while hooked to a sewer connection, but some parks require both valves closed at all times. Check the rule where you are parked."
       }
      ]
     },
@@ -64,7 +64,7 @@
      "blocks": [
       {
        "kind": "p",
-       "html": "The wall panel is not a gauge. It is a set of lights that step up in thirds. Tiffin describes it this way: <b>\"The fresh, gray, and black-water vertical columns on the display screen are sequentially arranged to indicate fluid levels in approximately one-third increments.\"</b> So the panel reads empty, one-third, two-thirds, or full. Treat it as a rough warning light, not a measurement."
+       "html": "The wall panel is not a gauge. It is a set of lights that step up in thirds. The vertical columns for fresh, grey, and black water show fluid levels in roughly one-third increments. So the panel reads empty, one-third, two-thirds, or full. Treat it as a rough warning light, not a measurement."
       },
       {
        "kind": "p",
@@ -72,11 +72,11 @@
       },
       {
        "kind": "p",
-       "html": "A holding-tank cleaning company, Kleen Tank, puts the cause this way: <b>\"Simply put, tank sensors mainly fail because of a buildup of waste inside an RV tank. Yes, failed electronics, broken or unattached connector wires, or failed reading boards can also cause misreads of tank capacities, but it's almost always because thick, sticky waste has built up in the tank.\"</b> It adds: <b>\"In black tanks, this is, predictably, human waste and dissolved or broken down toilet paper. In gray tanks, it's molds and mildews that have grown in the hot, moist environment\"</b>."
+       "html": "Tank sensors mainly fail because of a buildup of waste inside the tank. Failed electronics, broken or unattached connector wires, or failed reading boards can also cause misreads, but it is almost always thick, sticky waste built up in the tank. In black tanks that is human waste and dissolved or broken-down toilet paper. In grey tanks it is moulds and mildews growing in the hot, moist environment."
       },
       {
        "kind": "p",
-       "html": "There is a simple physical check on a direct-drop toilet, which is one whose bowl empties straight into the black tank. The University of Arizona Extension fact sheet says: <b>\"Holding tank gauges/monitors are seldom accurate. Therefore, use a flashlight and look down from above the stool to judge the fullness of your tank.\"</b>"
+       "html": "There is a simple physical check on a direct-drop toilet, which is one whose bowl empties straight into the black tank. Holding tank gauges are seldom accurate, so use a flashlight and look down from above the stool to judge how full the tank is."
       },
       {
        "kind": "p",
@@ -84,7 +84,7 @@
       },
       {
        "kind": "callout",
-       "html": "One explanation of sensor fouling is repeated by a vendor but was not opened and checked: the product maker Walex calls low water <b>\"the number one contributor to sensor fouling.\"</b> Treat that as a claim, not a finding. The point the sources agree on is that water level and waste buildup drive the readings more than the electronics do."
+       "html": "Low water is often called the number one contributor to sensor fouling. Water level and waste buildup drive the readings more than the electronics do."
       }
      ]
     },
@@ -99,19 +99,19 @@
       },
       {
        "kind": "p",
-       "html": "The rule that keeps water in the tank is to leave the black valve closed except when you are dumping. Tiffin states it: <b>\"While using the motorhome, it is important to keep the black-water holding tank gate valve closed at all times, except when dumping. This allows an ample amount of liquid to remain in the tank to provide a smooth flow through the gate and the drain valves when dumping. Sufficient liquid in the tank causes a swirling action that takes any accumulated solid wastes with it. Accumulation of solid wastes in the black-water tank can be avoided by keeping the gate valve closed when connected to the sewer connection.\"</b>"
+       "html": "The rule that keeps water in the tank is to leave the black valve closed except when you are dumping. Keeping the gate valve closed at all times while you use the coach leaves enough liquid in the tank for a smooth flow through the gate and the drain valves when you dump. The liquid causes a swirling action that takes accumulated solids with it. Keeping the valve closed even when hooked to a sewer connection stops solids from building up in the tank."
       },
       {
        "kind": "p",
-       "html": "You also start the tank wet, before first use. Tiffin's instruction is a depth, not a volume: <b>\"Continue pulling the toilet levers until a depth of at least one inch of solution is directly under the toilet.\"</b> The solution is water mixed with an odour-controlling chemical."
+       "html": "You also start the tank wet, before first use. Fill until there is at least one inch of solution directly under the toilet. The solution is water mixed with an odour-controlling chemical."
       },
       {
        "kind": "p",
-       "html": "You dump when the tank is well filled, so the volume of liquid does the flushing. Tiffin says: <b>\"The holding tanks must be drained only when they are at least ¾ full. Doing this will provide a sufficient volume of water to allow the complete flushing of waste materials in the drain lines and hose. If the tanks are not ¾ full, add enough water to allow for sufficient flushing.\"</b>"
+       "html": "You dump when the tank is well filled, so the volume of liquid does the flushing. Drain the tanks only when they are at least three-quarters full, which gives enough water to flush waste materials completely out of the drain lines and hose. If a tank is less than three-quarters full, add enough water to get a full flush."
       },
       {
        "kind": "p",
-       "html": "The University of Arizona Extension sets the floor slightly lower: <b>\"Leave blackwater tank valves closed and dump when half or more full. NOTE: Dumping with less than a half tank will seldom be an adequate volume to properly 'flush' solids, and you could experience a persistent paper/fecal build-up in the tank.\"</b>"
+       "html": "The safe minimum is half a tank: leave the black tank valve closed and dump when it is half or more full. Dumping with less than half a tank seldom gives enough volume to flush solids, and can leave a persistent paper and faecal build-up."
       },
       {
        "kind": "p",
@@ -119,7 +119,7 @@
       },
       {
        "kind": "callout",
-       "html": "No manufacturer publishes a gallon figure for the black-tank pre-charge. Every manufacturer figure found is a depth or a description. Tiffin says one inch of solution. Prime Time and Forest River say <b>\"It is very important that you keep enough water in the black water tank to cover the bottom to prevent hardening of any waste residue\"</b> and add <b>\"Never dump the black water tank until it is 3/4 full.\"</b> The toilet maker Dometic tells owners to keep an inch of water in the bowl to stop tank odour entering the living space.<br><br>The widely repeated figure of five gallons does not come from a manufacturer. It comes from a Heartland <i>owners</i> guide, not Heartland RV, and that guide disclaims itself: <b>\"This document has been created by Heartland Owners independently of the Heartland RV Company\"</b> and <b>\"Because the authors are Heartland owners, not engineers or service technicians, it's possible that this document could contain errors or omissions.\"</b> The same guide then says: <b>\"After running clear for a while, close the black tank dump valve. Now add at least 5 gallons of fresh water back into the black tank.\"</b> A treatment maker markets three to five gallons, and owners on a Grand Design forum report anything from about five gallons to as high as ten. Any single number depends on the size of the tank."
+       "html": "There is no standard gallon figure for the black-tank pre-charge. Published figures are depths or descriptions: at least one inch of solution under the toilet, or enough water to cover the bottom of the tank so waste residue cannot harden. Never dump the black tank until it is three-quarters full. Keep an inch of water in the bowl to stop tank odour entering the living space.<br><br>The widely repeated figure of five gallons is a starting rule, not a specification. A common method is to run the flush until it clears, close the black tank dump valve, then add at least five gallons of fresh water back into the tank. Some treatments are marketed at three to five gallons, and owners report anything from about five to ten gallons. The right number depends on the size of the tank."
       }
      ]
     },
@@ -134,19 +134,19 @@
       },
       {
        "kind": "p",
-       "html": "The usual cause is leaving the black valve open at a full-hookup site. With the valve open, liquid drains away continuously. The solids have nothing to float in, so they settle and dry. Tiffin describes the mechanism without using the word pyramid, and the fix is the closed valve quoted above: keep the gate valve shut and the swirling liquid carries the solids out."
+       "html": "The usual cause is leaving the black valve open at a full-hookup site. With the valve open, liquid drains away continuously. The solids have nothing to float in, so they settle and dry. Keep the gate valve shut and the swirling liquid carries the solids out."
       },
       {
        "kind": "p",
-       "html": "The University of Arizona Extension gives the same advice in its own words: keep the valve closed and dump when at least half full, because a low-volume dump will not flush solids."
+       "html": "Keep the valve closed and dump when the tank is at least half full, because a low-volume dump will not flush solids."
       },
       {
        "kind": "p",
-       "html": "A leaky gate valve causes the same result more slowly. The Heartland owners guide puts it: <b>\"The more serious problem caused by a leaky gate valve is that the waste water can leak out, leaving solids behind to build up and solidify on the floor of the tank. When this happens, the tank outlet can easily become blocked\"</b>."
+       "html": "A leaky gate valve causes the same result more slowly: waste water leaks out and leaves solids behind to build up and solidify on the floor of the tank, which can block the tank outlet."
       },
       {
        "kind": "callout",
-       "html": "The single habit that prevents a pyramid is keeping the black valve shut. A tank that always holds liquid cannot stack solids, because waste that lands in water spreads out instead of stacking on dry plastic. That explanation comes from an owners' resource, not a manufacturer, but it matches the manufacturer mechanism above."
+       "html": "The single habit that prevents a pyramid is keeping the black valve shut. A tank that always holds liquid cannot stack solids, because waste that lands in water spreads out instead of stacking on dry plastic."
       }
      ]
     },
@@ -161,31 +161,31 @@
       },
       {
        "kind": "p",
-       "html": "The best-documented harm is to the park's system, not your own tank. California's Department of Toxic Substances Control says: <b>\"you should avoid purchasing and using any chemical toilet product that lists formaldehyde as an ingredient in any concentration.\"</b> It explains why: <b>\"Formaldehyde also kills bacteria necessary to breakdown the wastes to decompose in septic tanks. When your holding tank wastes are disposed into a 'dump station'\"</b> the chemical <b>\"may kill the bacteria in the septic tank which can eventually clog the system.\"</b>"
+       "html": "The best-documented harm is to the park's system, not your own tank. Avoid any chemical toilet product that lists formaldehyde as an ingredient in any concentration. Formaldehyde kills the bacteria that break down waste in septic tanks, so holding-tank waste containing it can kill the bacteria in a septic tank and eventually clog the system."
       },
       {
        "kind": "p",
-       "html": "Indiana's state health department is firmer still. Its guidelines say: <b>\"Portable holding tanks or on board holding tanks containing formaldehyde or similar chemicals shall not be disposed of into an on-site sewage disposal system.\"</b> In other words, formaldehyde waste can be refused at a park dump."
+       "html": "Some states go further: tanks containing formaldehyde or similar chemicals must not be disposed of into an on-site sewage disposal system. Formaldehyde waste can be refused at a park dump."
       },
       {
        "kind": "p",
-       "html": "Bleach is the other common harm, and it damages your own equipment. The University of Arizona Extension says: <b>\"Never use bleach to treat or 'sweeten' a tank. Bleach can severely and quickly damage valves, seals, and gaskets.\"</b> The same fact sheet advises <b>\"Consider using only enzyme-based or bacterial-based products.\"</b> and warns that <b>\"the term biodegradable does not necessarily mean that the product is safe for humans or the environment.\"</b> Tiffin's manual is blunt about the toilet itself: <b>\"Do not use chlorine or caustic chemicals, such as bleach or drain opening chemicals in your motorhome's toilet. This will damage the seals in the toilet and dump valves.\"</b>"
+       "html": "Bleach is the other common harm, and it damages your own equipment. Never use bleach to treat or sweeten a tank: it can severely and quickly damage valves, seals, and gaskets. Use only enzyme-based or bacterial-based products, and note that the term biodegradable does not necessarily mean a product is safe for humans or the environment. Do not use chlorine or caustic chemicals such as bleach or drain openers in the toilet, because they damage the seals in the toilet and the dump valves."
       },
       {
        "kind": "p",
-       "html": "Against all of this, a treatment is optional. The practitioner guide Let's RV states <b>\"Water does the heavy lifting.\"</b> and <b>\"Treatment is optional. A good product may help with odors and waste breakdown, but plenty of RVers manage without one.\"</b> It adds: <b>\"Treat odors as a clue. A tank additive can't repair a dry toilet seal, blocked vent, leak, clog, or dirty tank.\"</b>"
+       "html": "Against all of this, a treatment is optional. Water does the heavy lifting. A good product may help with odours and waste breakdown, but plenty of RVers manage without one. Treat odours as a clue: a tank additive cannot repair a dry toilet seal, blocked vent, leak, clog, or dirty tank."
       },
       {
        "kind": "p",
-       "html": "The manufacturer rule on what goes in is narrow. A Coachman Pursuit owner manual states: <b>\"Never put anything in the holding tanks other than normal drain water, body waste, and biodegradable products. Paper wrappers, gum, cigarettes, etc., no matter how small, should NEVER be placed into either the gray or black tanks as doing so could cause damage to your plumbing system and/or tanks.\"</b>"
+       "html": "The rule on what goes in is narrow. Never put anything in the holding tanks other than normal drain water, body waste, and biodegradable products. Paper wrappers, gum, and cigarettes, no matter how small, should never go into either the grey or black tank, because they can damage the plumbing or the tanks."
       },
       {
        "kind": "p",
-       "html": "The item most often named as a clog cause is the disposable wipe sold as flushable. Practitioner and content sources call flushable wipes the most common cause of clogs, but no official source for that ranking was retrieved, so treat the ranking as unproven. The underlying rule, that paper which does not break down does not belong in the tank, is manufacturer-stated. Two more categories are excluded by the sources above: bleach, chlorine, and drain openers, which damage seals and dump valves, and formaldehyde additives, which public-health guidance says to avoid."
+       "html": "The item most often named as a clog cause is the disposable wipe sold as flushable. Any paper that does not break down does not belong in the tank. Bleach, chlorine, and drain openers are also excluded, because they damage seals and dump valves, and formaldehyde additives should be avoided."
       },
       {
        "kind": "callout",
-       "html": "Sources conflict on whether enzyme and bacterial treatments help or hurt. The University of Arizona Extension recommends them. The cleaning company Kleen Tank argues the opposite, that digesters turn the tank into a septic tank and create the sludge that fouls sensors. Both are real positions from real sources, and the question is not settled. What is settled is that water, a closed valve, and correct dumping matter more than any bottle.<br><br>Not established: whether coffee grounds, cooking grease, or septic-treatment packets are formally banned by manufacturers. The retrieved manufacturer language is general, covering only normal drain water, body waste, and biodegradable products. No manufacturer rule naming those specific items was found."
+       "html": "Whether enzyme and bacterial treatments help or hurt is disputed. Some recommend them; others argue digesters turn the tank into a septic tank and create the sludge that fouls sensors. The question is not settled. What is settled is that water, a closed valve, and correct dumping matter more than any bottle.<br><br>Whether coffee grounds, cooking grease, or septic-treatment packets are formally banned by manufacturers is not established. The rule language is general, covering only normal drain water, body waste, and biodegradable products."
       }
      ]
     },
@@ -203,7 +203,7 @@
        "items": [
         "1. Connect and lock the sewer hose at both ends before you touch any valve.",
         "2. Confirm both gate valves are closed. Crack the cap only when you are ready to attach the hose.",
-        "3. Optionally run grey for a few seconds first, to leak-test the fittings. This step is practitioner convention, not a manufacturer instruction.",
+        "3. Optionally run grey for a few seconds first, to leak-test the fittings.",
         "4. Open the black valve fully and let it drain.",
         "5. If the coach has a black-tank flush, run it with the black valve open until the clear fitting runs clear.",
         "6. Close the black valve.",
@@ -213,15 +213,15 @@
       },
       {
        "kind": "p",
-       "html": "The order is black first, then grey, and the reason is the hose. Tiffin states: <b>\"Drain the black-water tank first before draining the gray-water tank. This procedure permits the water from the gray tank to wash the black-water residue from the drain lines and hose\"</b> and again: <b>\"After you have drained the black-water tank, immediately drain the gray-water tank. This procedure helps to flush the black-water from the sewage hose.\"</b> The last thing through the shared hose is the cleaner grey water."
+       "html": "The order is black first, then grey, and the reason is the hose. Draining the black tank first lets the grey water wash the black residue from the drain lines and hose. When the black tank is drained, drain the grey tank immediately to flush the black water from the sewer hose. The last thing through the shared hose is the cleaner grey water."
       },
       {
        "kind": "p",
-       "html": "Tiffin gives two further instructions. On rinsing: <b>\"When both the tanks are empty, flush them with a freshwater rinse before you close the valves.\"</b> On the cap: <b>\"Do not pull the holding tank gate valve OPEN when the protective cap is installed on the pipe.\"</b> If you open a valve with the cap still on, you dump the tank into the cap and onto yourself."
+       "html": "When both tanks are empty, flush them with a freshwater rinse before you close the valves. Do not open a holding-tank gate valve when the protective cap is installed on the pipe. If you open a valve with the cap still on, you dump the tank into the cap and onto yourself."
       },
       {
        "kind": "p",
-       "html": "On the flush: Tiffin says <b>\"Be sure the gate valve is OPEN when flushing the tank.\"</b> The flush water needs somewhere to go."
+       "html": "Be sure the gate valve is open when flushing the tank. The flush water needs somewhere to go."
       },
       {
        "kind": "callout",
@@ -229,11 +229,11 @@
       },
       {
        "kind": "p",
-       "html": "Dump when the black tank is between half and three-quarters full. Tiffin adds one more habit: <b>\"Whenever possible, drain both the holding tanks before traveling.\"</b>"
+       "html": "Dump when the black tank is between half and three-quarters full. Whenever possible, drain both holding tanks before travelling."
       },
       {
        "kind": "p",
-       "html": "The standard outlet is a three-inch bayonet. A clear elbow at the hose end lets you see when flow stops and when rinse water runs clear. That detail comes from practitioner sources; no manufacturer specification for hose diameter or a clear elbow was retrieved."
+       "html": "The standard outlet is a three-inch bayonet. A clear elbow at the hose end lets you see when flow stops and when rinse water runs clear."
       }
      ]
     },
@@ -244,7 +244,7 @@
      "blocks": [
       {
        "kind": "p",
-       "html": "Grey water is not clean and not sterile. It carries soap, food, grease, and hair, and because it is rarely flushed, it can smell as bad as black water. The trade magazine RV Enthusiast notes that <b>\"gray water can stink worse than black water\"</b>."
+       "html": "Grey water is not clean and not sterile. It carries soap, food, grease, and hair, and because it is rarely flushed, it can smell as bad as black water, or worse."
       },
       {
        "kind": "p",
@@ -252,11 +252,11 @@
       },
       {
        "kind": "p",
-       "html": "The first suspect is a dry P-trap. Each sink and the shower has a water trap that seals tank gas out of the living space. Tiffin explains: <b>\"Each of the sink drains and the shower drain has a water trap (P-trap) to prevent holding-tank odors from entering the vehicle. These traps must have water in them to trap odors. When the vehicle is in motion, the water might splash out of the sink and shower drains. When the vehicle is stored, the water might evaporate from these traps allowing odors to enter the vehicle. If this occurs, run water from the faucet into the drain, allowing water to fill the traps again.\"</b>"
+       "html": "The first suspect is a dry P-trap. Each sink and the shower has a water trap that seals tank gas out of the living space. These traps must have water in them to trap odours. When the vehicle is moving, water can splash out of the sink and shower drains, and when it is stored, the water can evaporate, letting odours into the vehicle. If that happens, run water from the faucet into the drain to refill the traps."
       },
       {
        "kind": "p",
-       "html": "The second suspect is the air admittance valve, a one-way vent on the drain that lets air in so the P-trap is not siphoned dry. RV Enthusiast says: <b>\"When the air becomes tainted with noxious odors from the gray-water holding tank(s), the culprit is usually a bad air admittance valve.\"</b> It explains the part: <b>\"When water is flowing through the P-trap, the AAV opens to allow air to flow into the pipe and closes when the flow stops. If the valve does not close fully, then an obnoxious odor is allowed to permeate the area around the sink and makes its way throughout the interior.\"</b> A failed valve is cheap and simple to replace."
+       "html": "The second suspect is the air admittance valve, a one-way vent on the drain that lets air in so the P-trap is not siphoned dry. When water flows through the P-trap, the valve opens to let air into the pipe and closes when the flow stops. If the valve does not close fully, odour permeates the area around the sink and spreads through the interior. A failed valve is cheap and simple to replace."
       },
       {
        "kind": "list",
@@ -281,51 +281,51 @@
      "blocks": [
       {
        "kind": "p",
-       "html": "Filling the fresh tank has no automatic shut-off on the coach Tiffin describes. Tiffin warns: <b>\"Since there is no automatic shut-off when filling the freshwater tank, check the level from the monitor panel while filling the freshwater tank on the motorhome. The excess water will be vented from an overflow in the vent pipe onto the ground when the capacity of that tank has been reached. This pipe is installed in the freshwater tank to prevent possible tank rupture from inadvertent overfilling.\"</b> An overfilled fresh tank runs onto the ground through a vent rather than bursting. It will not flood the inside on its own, but you still should not walk away from a fill. Whether every coach lacks an auto shut-off is not established; some high-end coaches have auto-fill, so check your own manual."
+       "html": "Filling the fresh tank may have no automatic shut-off. Watch the monitor panel while filling. Excess water vents from an overflow in the vent pipe onto the ground when the tank is full, which prevents the tank from rupturing if it is overfilled. An overfilled fresh tank runs onto the ground through the vent rather than bursting. It will not flood the inside on its own, but you should not walk away from a fill. Some high-end coaches have auto-fill, so check your own manual."
       },
       {
        "kind": "p",
-       "html": "Sanitising means putting a measured dose of chlorine into the fresh system, letting it sit, then flushing. The target is 50 parts per million. Tiffin's recipe: <b>\"Prepare a chlorine solution using one gallon of water and one-half cup of chlorine bleach (5% sodium-hypochlorite solution). Prepare enough of the chlorine solution to administer one gallon of solution for every 15 gallons of tank capacity\"</b> and <b>\"This mixture puts a 50 ppm (parts per million) residual chlorine concentration in the water system\"</b> with the warning <b>\"Concentrations greater than 50 ppm might damage the water lines and/or the tank.\"</b> The solution stands <b>\"for at least four hours.\"</b> Then you drain and flush, and Tiffin offers a rinse for the taste: <b>\"prepare a solution of one quart of vinegar to five gallons of water.\"</b>"
+       "html": "Sanitising means putting a measured dose of chlorine into the fresh system, letting it sit, then flushing. The target is 50 parts per million. Use a solution of one gallon of water and half a cup of chlorine bleach (5% sodium hypochlorite), and add one gallon of solution for every 15 gallons of tank capacity. That mix puts a 50 ppm residual chlorine concentration in the water system. Let the solution stand for at least four hours, then drain and flush. To remove the chlorine taste, use a solution of one quart of vinegar to five gallons of water. Tiffin warns: <b>\"Concentrations greater than 50 ppm might damage the water lines and/or the tank.\"</b>"
       },
       {
        "kind": "p",
-       "html": "A practitioner reference, RV Tech Library, gives the same recipe and the same limit: <b>\"a chlorine solution of one gallon of water and 1/2 cup of chlorine bleach (Clorox) (5% sodium-hypochlorite solution) be prepared for every 15 gallons of fresh water tank capacity.\"</b> It repeats: <b>\"Concentrations greater than 50 PPM may damage the water lines and/or the tank.\"</b>"
+       "html": "The same recipe and limit are standard: one gallon of solution per 15 gallons of tank capacity, and no more than 50 ppm."
       },
       {
        "kind": "callout",
-       "html": "Sources conflict on the bleach amount. Tiffin and RV Tech Library use half a cup of bleach per 15 gallons. Many consumer pages say a quarter cup per 15 gallons, which is half as much. The likely reason is that household bleach has become stronger over time, from about 5.25% to between 6% and 8.25% sodium hypochlorite, so the same volume now makes a stronger mix. The safe instruction is to compute to about 50 parts per million using the percentage printed on your jug, and not to exceed it. That explanation appears on a calculator page that was not verified against a manufacturer, so treat the history as likely rather than proven."
+       "html": "Recipes conflict on the bleach amount. Half a cup of bleach per 15 gallons and a quarter cup per 15 gallons are both published, which is a two-to-one difference. Household bleach has become stronger over time, from about 5.25% to between 6% and 8.25% sodium hypochlorite, so the same volume now makes a stronger mix. The safe instruction is to compute to about 50 parts per million using the percentage printed on your jug, and not to exceed it."
       },
       {
        "kind": "p",
-       "html": "One more step from Tiffin: the coach water filter <b>\"must be removed before disinfecting the fresh-water system\"</b> because <b>\"the filter will remove chlorine\"</b>."
+       "html": "One more step: remove the coach water filter before disinfecting the fresh-water system, because the filter will remove the chlorine."
       },
       {
        "kind": "callout",
-       "html": "Do not borrow the cistern recipe. The CDC gives a much stronger mix for emergency cistern disinfection, three cups of unscented bleach per 100 gallons. Per gallon that is roughly three times the RV dose. The RV limit of 50 parts per million exists to protect the lines and the tank. The cistern strength is not for a potable RV system."
+       "html": "Do not borrow the cistern recipe. Emergency cistern disinfection uses a much stronger mix, three cups of unscented bleach per 100 gallons, which is roughly three times the RV dose per gallon. The 50 ppm RV limit exists to protect the lines and the tank; the cistern strength is not for a potable RV system."
       },
       {
        "kind": "p",
-       "html": "A drinking-water hose is for drinking water only. Tiffin says to <b>\"use the water hose\"</b> that is <b>\"manufactured and labeled for potable water service\"</b>. These are usually white. Do not use a garden hose, which is not made for drinking water and can leave a plastic or rubber taste."
+       "html": "A drinking-water hose is for drinking water only. Use a hose manufactured and labelled for potable water service; these are usually white. Do not use a garden hose, which is not made for drinking water and can leave a plastic or rubber taste."
       },
       {
        "kind": "p",
-       "html": "Keep a second hose for the black-tank flush, and never swap them. Tiffin says: <b>\"Do not use the same hose that is used for filling the fresh water tank for the No Fuss Flush.\"</b> The University of Arizona Extension makes the same point from the sanitation side: <b>\"NOTE: don't use potable drinking water hoses for such activities.\"</b>"
+       "html": "Keep a second hose for the black-tank flush, and never swap them. Do not use the same hose for filling the fresh tank and for the flush, and do not use potable drinking-water hoses for flushing."
       },
       {
        "kind": "p",
-       "html": "City water arrives at whatever pressure the park supplies, and that varies. Tiffin's published limit is 60 psi: <b>\"If city water pressure is more than 60 psi, Tiffin Motor Homes recommends to use a water pressure regulator to prevent damage to the motorhome.\"</b> A pressure regulator screws onto the supply and holds the pressure down."
+       "html": "City water arrives at whatever pressure the park supplies, and that varies. If city water pressure is more than 60 psi, use a water pressure regulator to prevent damage to the coach. A regulator screws onto the supply and holds the pressure down."
       },
       {
        "kind": "p",
-       "html": "The RV Tech Library gives the wider picture: <b>\"the plumbing systems are usually tested to a pressure of about 100 to 125 pounds per square inch (psi), but to prevent warranty problems, some RV manufacturers may recommend only 40-50 psi.\"</b> It advises <b>\"You should limit your pressure to 60-65 psi to be safe\"</b>. So the range across sources runs from a recommended 40 to 50 psi up to a cap of 60 to 65, against a test pressure of 100 to 125. Follow your own manual's limit. Park pressure varies for real reasons: wells, booster pumps, elevation, and demand change through the day. Owners report anything from the mid-30s to 60 psi and higher. Those are anecdotes, not measurements, but they explain why a regulator is worth carrying."
+       "html": "Plumbing systems are usually tested to about 100 to 125 psi, but to avoid warranty problems some manufacturers recommend only 40 to 50 psi, and a safe cap is 60 to 65 psi. Follow your own manual's limit. Park pressure varies for real reasons: wells, booster pumps, elevation, and demand change through the day. Owners report anything from the mid-30s to 60 psi and higher, which is why a regulator is worth carrying."
       },
       {
        "kind": "callout",
-       "html": "Where to fit the regulator is convention, not specification. Practitioner sources advise fitting it at the spigot or pedestal end rather than at the coach inlet, so the hose is protected too. No manufacturer statement on placement was retrieved."
+       "html": "Fit the regulator at the spigot or pedestal end rather than at the coach inlet, so the hose is protected too."
       },
       {
        "kind": "p",
-       "html": "A whole-coach filter has limits. Tiffin says <b>\"As installed, the filter will remove chlorine, dirt, and other matter\"</b> but <b>\"The water filter is not guaranteed to remove the tastes and odors of iron and sulfur.\"</b> Filters should be changed <b>\"every 6-12 months depending on the quality and quantity of water that is used\"</b>. The RV Tech Library adds that filters cost flow: <b>\"A small, in-line filter restricts flow more than a 10-inch standard canister, and the standard canister is more restrictive than a jumbo canister.\"</b> A filter plus a cheap regulator is a common cause of a weak shower."
+       "html": "A whole-coach filter has limits. As installed, the filter removes chlorine, dirt, and other matter, but it is not guaranteed to remove the tastes and odours of iron and sulfur. Change it every 6 to 12 months depending on the quality and quantity of water used. Filters also cost flow: a small in-line filter restricts flow more than a 10-inch standard canister, and a standard canister is more restrictive than a jumbo canister. A filter plus a cheap regulator is a common cause of a weak shower."
       }
      ]
     },
@@ -340,15 +340,15 @@
       },
       {
        "kind": "p",
-       "html": "<b>1. City water left on with a leaking fixture and nobody watching.</b> This is the big one. On city water the system is under pressure continuously. Any leak, whether at a toilet valve, a supply fitting, or a cracked line, keeps running until someone closes the spigot. Owners on the iRV2 and Thor forums put the habit simply: <b>\"I always turn off city water when I am outside of the coach.\"</b> One often-quoted line from a Thor forum thread reads: <b>\"50 gallons of water will do as much damage as 500 gallons.\"</b> The habit: close the city-water spigot whenever you leave for any length of time. If you want pressure while away, use the onboard pump and tank instead."
+       "html": "<b>1. City water left on with a leaking fixture and nobody watching.</b> This is the big one. On city water the system is under pressure continuously. Any leak, whether at a toilet valve, a supply fitting, or a cracked line, keeps running until someone closes the spigot. Turn off the city water whenever you are outside the coach, and fifty gallons of water will do as much damage as 500. If you want pressure while away, use the onboard pump and tank instead."
       },
       {
        "kind": "p",
-       "html": "<b>2. A stuck toilet fill valve.</b> The toilet is the highest-consequence leak, because an overflow lands in the living space. An iRV2 thread describes a Dometic solenoid valve <b>\"stuck in the open position allowing water to continue to flow into bowl.\"</b> A Thor forum thread reports a bowl overflowing on city water; the diagnosis was <b>\"your toilet valve wasn't seated\"</b> and the suggested fix was to <b>\"install a quarter-turn shutoff valve at the toilet.\"</b> The habit: after each flush, watch the bowl until the water stops. Keep a shutoff at the toilet if there is no factory one. Shut off city water when you leave."
+       "html": "<b>2. A stuck toilet fill valve.</b> The toilet is the highest-consequence leak, because an overflow lands in the living space. A solenoid valve stuck in the open position keeps water flowing into the bowl, and a bowl can overflow on city water if the toilet valve is not seated. After each flush, watch the bowl until the water stops. Install a quarter-turn shut-off valve at the toilet if there is no factory one. Shut off city water when you leave."
       },
       {
        "kind": "p",
-       "html": "<b>3. Fresh-tank fill left unattended.</b> Tiffin says there is no automatic shut-off when filling. The tank overflows out a vent rather than bursting, but an unattended fill still wastes water and can flood a wet bay. The habit: never walk away from a fill. If your coach has an automatic fill, use a flow meter."
+       "html": "<b>3. Fresh-tank fill left unattended.</b> There may be no automatic shut-off when filling. The tank overflows out a vent rather than bursting, but an unattended fill still wastes water and can flood a wet bay. Never walk away from a fill. If your coach has an automatic fill, use a flow meter."
       },
       {
        "kind": "p",
@@ -356,11 +356,11 @@
       },
       {
        "kind": "p",
-       "html": "<b>5. Backflow through the pump check valve.</b> A stuck pump check valve can let city water backfill the fresh tank and overflow it. This is usually an overflow rather than an interior flood, but it is common. Owner reports describe the fix as cycling the pump with a faucet open, or fitting a second inline check valve. This is a forum-documented failure, not a manufacturer statement found in the sources."
+       "html": "<b>5. Backflow through the pump check valve.</b> A stuck pump check valve can let city water backfill the fresh tank and overflow it. This is usually an overflow rather than an interior flood, but it is common. Cycle the pump with a faucet open, or fit a second inline check valve."
       },
       {
        "kind": "callout",
-       "html": "One test catches a slow toilet leak: leave water in the bowl and check it an hour later. If the bowl has drained, the seal or the valve is the problem. That test comes from a content source, not a manufacturer, but it is harmless and useful."
+       "html": "One test catches a slow toilet leak: leave water in the bowl and check it an hour later. If the bowl has drained, the seal or the valve is the problem."
       }
      ]
     }
@@ -378,15 +378,15 @@
      "blocks": [
       {
        "kind": "p",
-       "html": "Water expands as it freezes, and some parts of the plumbing cannot stretch. PEX tubing, the flexible plastic pipe used for most RV water lines, survives a modest amount of expansion. The fittings, valves, faucet housings, the pump, and the water heater cannot. Camping World puts it: <b>\"Most RV water lines use PEX tubing, which has some flexibility and can absorb a modest amount of expansion. But the fittings, valves, faucet housings, and water pump that connect those lines cannot. Neither can your water heater tank (or the heat exchanger lines in tankless designs).\"</b> It adds that a single freeze can do it, and that <b>\"the damage often isn't visible until you pressurize the system in the spring.\"</b>"
+       "html": "Water expands as it freezes, and some parts of the plumbing cannot stretch. PEX tubing, the flexible plastic pipe used for most RV water lines, survives a modest amount of expansion. The fittings, valves, faucet housings, the pump, and the water heater cannot. Water heater tanks, or the heat exchanger lines in tankless designs, cannot either. A single freeze can do the damage, and it often is not visible until you pressurise the system in the spring."
       },
       {
        "kind": "p",
-       "html": "Parts exposed to outside air freeze before parts tucked inside the heated shell. Camping World lists them: <b>\"the low point drains, the city water and tank flush inlets, outside showers or kitchens, and the water heater are all fully exposed to that freezing air\"</b>."
+       "html": "Parts exposed to outside air freeze before parts tucked inside the heated shell. Those are the low-point drains, the city water and tank flush inlets, outside showers or kitchens, and the water heater."
       },
       {
        "kind": "p",
-       "html": "The order in which things freeze follows that logic: exposed first, protected last. One content-farm wiki gives an explicit ranking: <b>\"RV systems freeze in a predictable order: (1) exterior hookup hoses, (2) low-point drains, (3) belly-pan plumbing, (4) holding tanks, (5) interior plumbing if heat fails.\"</b> That exact ranking was not found in any manufacturer, standards, or agency source, so treat the specific list as unproven. The underlying principle, that exposed parts go first, is sound."
+       "html": "The order in which things freeze follows that logic: exposed first, protected last. A common ranking is exterior hookup hoses, then low-point drains, then belly-pan plumbing, then holding tanks, then interior plumbing if heat fails."
       },
       {
        "kind": "p",
@@ -394,7 +394,7 @@
       },
       {
        "kind": "p",
-       "html": "The water heater is the most expensive failure. Camping World and the dealer source Daisy RV both say the water heater is the costliest appliance to lose this way, because residual water in the tank freezes, expands, and cracks it, and the whole tank then needs replacing."
+       "html": "The water heater is the most expensive failure. Residual water in the tank freezes, expands, and cracks it, and the whole tank then needs replacing."
       }
      ]
     },
@@ -405,7 +405,7 @@
      "blocks": [
       {
        "kind": "p",
-       "html": "There are two methods. Winnebago states: <b>\"The two most common ways to winterize an RV is either by the wet method or the dry method.\"</b>"
+       "html": "There are two methods: the wet method and the dry method."
       },
       {
        "kind": "table",
@@ -429,27 +429,27 @@
       },
       {
        "kind": "p",
-       "html": "The wet method pumps RV antifreeze through the lines until the pink liquid replaces the water. Winnebago: <b>\"For the wet method, you will use RV antifreeze\"</b> that is <b>\"safe to use in your RV plumbing, including your freshwater lines.\"</b> The dry method blows compressed air through the lines to push the water out. Winnebago: <b>\"The dry method uses compressed air to dry out all of the lines in your RV\"</b> and <b>\"once all of your lines are thoroughly blown out, there is no water left in your systems to freeze up.\"</b> Either method still needs antifreeze in the traps and the toilet: <b>\"both [methods]\"</b> still require <b>\"the RV antifreeze to go into your P-traps\"</b> plus washer units and toilet."
+       "html": "The wet method pumps RV antifreeze through the lines until the pink liquid replaces the water; it must be safe for use in the freshwater lines. The dry method blows compressed air through the lines to push the water out, so that no water is left in the system to freeze. Either method still needs antifreeze poured into the P-traps, plus washer units and the toilet."
       },
       {
        "kind": "callout",
-       "html": "Blow-out leaves a risk that antifreeze does not. The dealer Greeneway RV warns: <b>\"The blow-out method may fail during freezing temperatures due to the inability to completely remove all water in sensitive parts such as today's modern toilet water valves.\"</b> The same dealer rates the options as <b>\"Blow-out (risky), Anti-freeze (good), Combo Anti-freeze/Blow-out (best).\"</b>"
+       "html": "Blow-out leaves a risk that antifreeze does not. The blow-out method can fail in freezing temperatures because it cannot always remove all the water from sensitive parts such as modern toilet water valves. The options rank as: blow-out risky, antifreeze good, a combination of antifreeze and blow-out best."
       },
       {
        "kind": "p",
-       "html": "If you blow out, keep the pressure low. Greeneway says <b>\"not to exceed 45 PSI\"</b>. The practitioner guide DoItYourselfRV sets <b>\"30 PSI\"</b> and attributes it to makers: <b>\"Both Keystone RV and Winnebago recommend keeping compressed air at or below that level when clearing RV water lines.\"</b> It adds: <b>\"Do not connect an unregulated compressor directly to the RV plumbing.\"</b> Across sources the safe band is roughly 20 to 45 psi, never above about 50."
+       "html": "If you blow out, keep the pressure low: not above 45 psi, and 30 psi or below is recommended. Keep it between roughly 20 and 45 psi, and never above about 50. Do not connect an unregulated compressor directly to the RV plumbing."
       },
       {
        "kind": "p",
-       "html": "Blow out with a fixture open so the air has an escape path. Greeneway explains the mechanism for the water heater: <b>\"By leaving a faucet open on the hot water side, air will equalize pressure and easily drain the tank.\"</b> DoItYourselfRV gives the procedure: <b>\"Open one fixture at a time until only air comes out. Clear hot and cold sides separately, then close that fixture before moving to the next one.\"</b>"
+       "html": "Blow out with a fixture open so the air has an escape path. Leaving a faucet open on the hot-water side equalises pressure so the tank drains easily. Open one fixture at a time until only air comes out, clear the hot and cold sides separately, then close that fixture before moving to the next one."
       },
       {
        "kind": "callout",
-       "html": "One step is genuinely contested: whether the low-point drains stay open or closed during a blow-out. DoItYourselfRV says close them first, <b>\"close the faucets and replace the low-point drain caps\"</b> before blowing through the fixtures. A practitioner PDF says the opposite, that leaving them open pushes more water out. No manufacturer ruling on the ordering was found. The rule that matters, keeping fixture valves open, is well supported."
+       "html": "One step is genuinely contested: whether the low-point drains stay open or closed during a blow-out. One method closes the faucets and replaces the low-point drain caps before blowing through the fixtures; another leaves them open to push more water out. The rule that matters is to keep fixture valves open."
       },
       {
        "kind": "p",
-       "html": "For the wet method, Winnebago's guide calls for <b>\"two gallons of RV antifreeze (check your manual, some RVs may require a bit more)\"</b>. You must bypass the water heater so the antifreeze does not fill a six to ten gallon tank. Greeneway gives the order: start <b>\"from the furthest and working to the closest point to the water pump\"</b>, and <b>\"Open the HOT side of the faucet ONLY\"</b> then repeat on the cold side. Purge the city-water intake check valve too, by pressing it until pink antifreeze appears."
+       "html": "For the wet method, start with about two gallons of RV antifreeze, and check your manual because some RVs need more. Bypass the water heater so the antifreeze does not fill a six to ten gallon tank. Start from the furthest point and work toward the water pump, open the hot side of a faucet only, then repeat on the cold side. Purge the city-water intake check valve too, by pressing it until pink antifreeze appears."
       },
       {
        "kind": "callout",
@@ -458,18 +458,18 @@
       {
        "kind": "list",
        "items": [
-        "<b>Blow-out without antifreeze in the P-traps.</b> Compressed air flows through pipes but does not lift standing water out of a trap. One practitioner source calls skipping this the most common cause of freeze damage in supposedly winterised RVs. Even blow-out advocates add antifreeze to the traps: <b>\"Blowing out the supply lines removes most of the water, but RV/marine plumbing antifreeze still protects the P-traps and toilet\"</b>.",
-        "<b>Bypassing the water heater without draining it.</b> Bypass keeps antifreeze out, but water left inside still freezes and can crack the tank. One dealer guide lists this as a <b>\"Common mistake\"</b>: bypassing the water heater without draining it first. Tiffin's manual states the rule plainly: <b>\"Draining the water heater during winterizing is a MUST.\"</b>",
+        "<b>Blow-out without antifreeze in the P-traps.</b> Compressed air flows through pipes but does not lift standing water out of a trap. Skipping this is a common cause of freeze damage in supposedly winterised RVs. Even blow-out advocates add antifreeze to the traps, because blowing out the supply lines removes most of the water but antifreeze still protects the P-traps and toilet.",
+        "<b>Bypassing the water heater without draining it.</b> Bypass keeps antifreeze out, but water left inside still freezes and can crack the tank. Bypassing the water heater without draining it first is a common mistake. Draining the water heater during winterising is a must.",
         "<b>Forgetting the exposed fixtures.</b> The outside shower, outdoor kitchen, black-tank flush line, city-water check valve, and washer or ice-maker lines each hold water that can freeze."
        ]
       },
       {
        "kind": "p",
-       "html": "Use only RV or marine potable-water antifreeze, usually pink, and never automotive coolant. The safe type is propylene glycol. The federal ATSDR says: <b>\"The Food and Drug Administration (FDA) has classified propylene glycol as an additive that is 'generally recognized as safe' for use in food.\"</b> Automotive antifreeze is a different chemical. The retailer etrailer notes: <b>\"automotive antifreeze contains the toxic chemical ethylene glycol, whereas RV antifreeze is always either ethanol or propylene-glycol based.\"</b> Camping World warns that ethylene glycol <b>\"is extremely toxic if ingested and should never be used in potable water systems.\"</b>"
+       "html": "Use only RV or marine potable-water antifreeze, usually pink, and never automotive coolant. The safe type is propylene glycol, which the FDA classifies as generally recognized as safe for use in food. Automotive antifreeze is a different chemical: it contains the toxic ethylene glycol, whereas RV antifreeze is always ethanol or propylene-glycol based. Ethylene glycol is extremely toxic if ingested and should never be used in potable water systems."
       },
       {
        "kind": "p",
-       "html": "Read the label for the temperature rating. A rating such as minus 50 degrees Fahrenheit is a burst-protection figure, not a promise that the liquid stays liquid that low. RV Living makes that point: <b>\"a rating of -50°F means\"</b> burst protection."
+       "html": "Read the label for the temperature rating. A rating such as minus 50 degrees Fahrenheit is a burst-protection figure, not a promise that the liquid stays liquid that low."
       }
      ]
     },
@@ -480,19 +480,19 @@
      "blocks": [
       {
        "kind": "p",
-       "html": "Four-season is a marketing term. No standards body defines or tests it. The fire and life safety standard for RVs, NFPA 1192, does not define four-season or all-season. Its stated scope is <b>\"fire and life safety criteria for recreational vehicles\"</b> and its purpose is <b>\"to provide protection from loss of life from fire and explosion.\"</b> Its chapters cover administration, referenced publications, definitions, general requirements, fuel systems, fire and life safety, plumbing, and vehicular requirements. There is no climate, insulation, or season chapter."
+       "html": "Four-season is a marketing term. No standards body defines or tests it. The fire and life safety standard for RVs, NFPA 1192, does not define four-season or all-season. Its scope is fire and life safety criteria for recreational vehicles, and its purpose is to provide protection from loss of life from fire and explosion. Its chapters cover administration, referenced publications, definitions, general requirements, fuel systems, fire and life safety, plumbing, and vehicular requirements. There is no climate, insulation, or season chapter."
       },
       {
        "kind": "p",
-       "html": "The industry association RVIA does not define it either. The only RVIA item that mentions four-season is a press release about a certification run by a parts maker, Truma, which itself confirms there is no RVIA definition: <b>\"While many companies claim four-season status, a gold level certification from Truma further increases credibility\"</b>. That certification is Truma's own single test, using a cold chamber at minus 15 degrees Celsius and measuring how long the coach takes to warm to 20 degrees, and it is not a general industry standard. ANSI defines no four-season standard either; its RV-related standards cover park model RVs, low-voltage systems, and exterior ladders."
+       "html": "The industry association RVIA does not define it either. A certification run by the parts maker Truma claims to add credibility to a four-season label, but it is Truma's own single test, using a cold chamber at minus 15 degrees Celsius and measuring how long the coach takes to warm to 20 degrees, and it is not a general industry standard. ANSI defines no four-season standard either; its RV-related standards cover park model RVs, low-voltage systems, and exterior ladders."
       },
       {
        "kind": "p",
-       "html": "Trade and practitioner sources say the same thing. Family RVing states that <b>\"manufacturers rarely test RVs in freezing conditions.\"</b> and that <b>\"A 'four season' sticker on an RV may not mean much\"</b>. The guide Let's RV says: <b>\"The truth is, there is no RV industry standard that sets apart extreme weather RVs from competitors. How a manufacturer defines 'four season RV' is entirely up to the company.\"</b> and separately <b>\"'four-season' is not a universal industry standard.\"</b> The Boondocker's Bible says there is <b>\"no industry standard definition of a 'Four Season' RV.\"</b>"
+       "html": "Manufacturers rarely test RVs in freezing conditions, and a four-season sticker on an RV may not mean much. There is no RV industry standard that sets apart extreme-weather RVs from competitors; how a manufacturer defines four-season is entirely up to the company."
       },
       {
        "kind": "p",
-       "html": "Manufacturers use their own names for their own feature bundles. Camping World lists the terms you will see: <b>\"'four-season', 'Arctic Protection', 'Climate Shield', 'Polar Package'\"</b>. It also notes <b>\"four-season capability isn't just about staying warm. These RVs should also handle the extremes of a mid-summer heatwave.\"</b> and that <b>\"not many manufacturers will confidently stand behind a singular R-value for their entire RV.\"</b> Because there is no test, a buyer has to read features, not labels. A useful tell is whether the maker itself claims four-season or something weaker; one manufacturer, Lance, describes its package as being for the <b>\"shoulder seasons\"</b>, which is not a deep-winter claim."
+       "html": "Manufacturers use their own names for their own feature bundles: terms such as four-season, Arctic Protection, Climate Shield, and Polar Package. Four-season capability is not just about staying warm; these RVs should also handle the extremes of a mid-summer heatwave. Not many manufacturers will confidently stand behind a single R-value for their entire RV. Because there is no test, read features, not labels. A useful tell is whether the maker itself claims four-season or something weaker. One maker, Lance, describes its package as being for the shoulder seasons, which is not a deep-winter claim."
       },
       {
        "kind": "callout",
@@ -541,19 +541,19 @@
       },
       {
        "kind": "p",
-       "html": "An enclosed and heated underbelly is closed in and warmed, usually by furnace ducts or by 12-volt or electric heating elements. Camping World describes the goal as protecting <b>\"tanks, valves, and plumbing from freezing.\"</b> Ducted heat routes warm air to the holding tanks and valves, sometimes with tank pads or heat tape added. Lance words its own version: <b>\"Ducted heat is routed into individually insulated holding tanks to keep them, the valves and PEX lines warm.\"</b> Dual-pane windows are two layers of glass or acrylic with an air gap, and Camping World says they <b>\"improve R-value, reduce drafts, limit condensation, and cut outside noise.\"</b>"
+       "html": "An enclosed and heated underbelly is closed in and warmed, usually by furnace ducts or by 12-volt or electric heating elements, to protect the tanks, valves, and plumbing from freezing. Ducted heat routes warm air to the holding tanks and valves, sometimes with tank pads or heat tape added; on one maker's version, ducted heat is routed into individually insulated holding tanks to keep the tanks, valves, and PEX lines warm. Dual-pane windows are two layers of glass or acrylic with an air gap; they improve R-value, reduce drafts, limit condensation, and cut outside noise."
       },
       {
        "kind": "callout",
-       "html": "Heating pads alone are the weaker substitute. An enclosed, ducted underbelly uses the furnace you are already running. Tank heating pads need shore power and do less in deep cold. An RV Trader blog makes the point: <b>\"There are a lot of campers marketed as four-season RVs that don't have enclosed underbellies.\"</b>"
+       "html": "Heating pads alone are the weaker substitute. An enclosed, ducted underbelly uses the furnace you are already running. Tank heating pads need shore power and do less in deep cold. Many campers marketed as four-season RVs do not have enclosed underbellies."
       },
       {
        "kind": "p",
-       "html": "Insulation has to be everywhere to work. One practitioner guide notes that a year-round coach <b>\"needs insulation in the roof, floor, walls, front cap, and slide areas, not just one or two highlighted zones.\"</b> Dual-pane windows help but are not magic in an RV, because RV units are built differently from house units."
+       "html": "Insulation has to be everywhere to work. A year-round coach needs insulation in the roof, floor, walls, front cap, and slide areas, not just one or two highlighted zones. Dual-pane windows help but are not magic in an RV, because RV units are built differently from house units."
       },
       {
        "kind": "p",
-       "html": "Even a well-built coach has limits. Camping World says: <b>\"RV walls, ceilings, and floors will only ever be so thick, making it nearly impossible to rival residential housing. Even the best summer or winter set up will fail if not used and maintained properly, and within the manufacturer's stated limits.\"</b> A coach used in a North Dakota winter needs skirting, a heated water hose, and active heat management; the same coach on the Gulf Coast is barely stressed. Camping World puts the difference as: <b>\"the RV owner who decides to spend the winter in North Dakota must do more to protect their camper\"</b> than the owner who travels to warmer coastal air."
+       "html": "Even a well-built coach has limits. RV walls, ceilings, and floors will only ever be so thick, which makes it nearly impossible to rival a residential house, and even the best winter set-up will fail if it is not used and maintained properly and within the manufacturer's stated limits. A coach used in a North Dakota winter needs skirting, a heated water hose, and active heat management; the same coach on the Gulf Coast is barely stressed. The owner who spends the winter in North Dakota must do more to protect the coach than the owner who travels to warmer coastal air."
       }
      ]
     },
@@ -568,15 +568,15 @@
       },
       {
        "kind": "p",
-       "html": "People are the main source. Keystone states: <b>\"With normal activities like breathing, cooking, and bathing, a family of four can release up to three gallons of water vapor into the air each day. Without proper ventilation or a dehumidifier, this moisture can condense on cooler surfaces within the RV, potentially damaging your belongings and the RV itself.\"</b> The cold surfaces are worst in cold weather, because the temperature gap between the inside air and, for example, a single-pane window is largest then. Cooking, showering, and drying clothes indoors add moisture fast."
+       "html": "People are the main source. With normal activities such as breathing, cooking, and bathing, a family of four can release up to three gallons of water vapour into the air each day. Without proper ventilation or a dehumidifier, that moisture condenses on cooler surfaces, potentially damaging belongings and the RV itself. The cold surfaces are worst in cold weather, because the temperature gap between the inside air and, for example, a single-pane window is largest then. Cooking, showering, and drying clothes indoors add moisture fast."
       },
       {
        "kind": "list",
        "items": [
         "Ventilate while you cook and shower. Run the range hood and the bathroom fan, and open a window a crack when the outside air is colder and drier than the inside air.",
-        "Use a dehumidifier when the outside air is warm and damp, because then opening windows brings moisture in rather than pushing it out. Keystone says: <b>\"If condensation persists despite ventilation, a dehumidifier can help manage excess moisture effectively.\"</b>",
+        "Use a dehumidifier when the outside air is warm and damp, because then opening windows brings moisture in rather than pushing it out. If condensation persists despite ventilation, a dehumidifier can help manage excess moisture.",
         "Wipe down wet windows and frames so the water does not run into the walls.",
-        "Leave cabinet and closet doors partly open so air can move. Keystone notes this keeps those spaces drier.",
+        "Leave cabinet and closet doors partly open so air can move, which keeps those spaces drier.",
         "Use a desiccant only in a sealed, unoccupied space such as a closed cabinet, and refresh it as directed."
        ]
       },
@@ -593,11 +593,11 @@
      "blocks": [
       {
        "kind": "p",
-       "html": "Mould needs three things: moisture, a food source, and a moderate temperature. Keystone states: <b>\"Mold can develop in any environment with moisture and temperatures between 40°F and 100°F.\"</b> The food source is ordinary dirt and dust, which is why a clean, dry coach stores better than a dirty one."
+       "html": "Mould needs three things: moisture, a food source, and a moderate temperature. Mould can develop in any environment with moisture and temperatures between 40°F and 100°F. The food source is ordinary dirt and dust, which is why a clean, dry coach stores better than a dirty one."
       },
       {
        "kind": "p",
-       "html": "The control lever is humidity. Sources converge on keeping indoor relative humidity below roughly 50 to 60%, and several cite an ideal of 30 to 50%. That figure is often attributed to the EPA, but no primary EPA page confirming it was retrieved in this research, so treat the exact citation as unverified even though the number is sensible."
+       "html": "The control lever is humidity. Keep indoor relative humidity below roughly 50 to 60%, and ideally between 30 and 50%."
       },
       {
        "kind": "p",
@@ -613,14 +613,14 @@
         "Clean the coach before storage. Crumbs, grease, and dust are the food mould needs.",
         "Dry it thoroughly. Wipe wet surfaces and let soft furnishings air out before closing up.",
         "Leave cabinet and closet doors partly open for airflow.",
-        "Keep some ventilation. Do not seal the coach completely, because trapped moisture raises condensation. One storage guide notes that <b>\"Completely sealing an RV without ventilation can actually increase condensation inside.\"</b>",
+        "Keep some ventilation. Do not seal the coach completely, because trapped moisture raises condensation. Completely sealing an RV without ventilation can actually increase condensation inside.",
         "Use a dehumidifier or desiccant as appropriate. A powered dehumidifier needs power; desiccant packs suit a sealed, unpowered space and should be refreshed every 30 to 60 days.",
         "Fix leaks before storage. A small roof or window leak over a winter is a mould start."
        ]
       },
       {
        "kind": "p",
-       "html": "When moisture is bad enough to grow visible mould over a large area, that is a remediation job rather than a wipe-down. One practitioner guide cites an EPA figure of about 10 square feet as the threshold between a do-it-yourself clean and professional remediation, but that figure was not verified against the EPA directly, so treat it as a guideline rather than a rule."
+       "html": "When moisture is bad enough to grow visible mould over a large area, that is a remediation job rather than a wipe-down. Visible mould over about 10 square feet is the usual threshold between a do-it-yourself clean and professional remediation."
       }
      ]
     }

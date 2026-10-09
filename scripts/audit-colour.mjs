@@ -30,7 +30,7 @@ import { fileURLToPath } from 'node:url';
 // .letta IS A CHECKOUT BOUNDARY. Letta keeps agent worktrees under .letta/worktrees/, each a
 // full copy of this repository, so a recursive read of ROOT audits another agent's checkout as
 // if it were the site. Added 2026-10-04 across every instrument that walks the tree.
-const SKIP_PARTS = ['.git', '.letta', 'node_modules'];
+const SKIP_PARTS = ['.git', '.letta', 'node_modules', '_data'];
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const PORT = Number(process.argv[2] || 9380);
 const BASE = process.argv[3] || 'http://127.0.0.1:8170/';

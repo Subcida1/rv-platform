@@ -504,12 +504,18 @@ def render_new_owner(data):
     styles that element well and it needs no script, so the whole thing degrades to a page of
     headings with everything visible if a browser does not honour it.
     """
-    nav, body = [], []
+    # THE NAV IS AT THE TOP AND IT IS THE EIGHT PARTS. Ty, 2026-10-08: "the navigation is on the left
+    # ... it's crunching the entire page and making it needlessly longer than it needs to be ...
+    # that part basically at the top of the page." It was a 250px sticky rail holding 53 links, which
+    # cost the prose its full width and its line length, and 53 links is a wall wherever it stands.
+    # The parts sit at the top as chips; the sections are one disclosure below them instead of always
+    # in the way, and every section is already a <details> in the body with its own anchor.
+    nav, sections, body = [], [], []
     for part in data["parts"]:
         nav.append('<a class="no-nav-part" href="#%s">%s</a>' % (part["id"], part["title"]))
-        nav.append("<ul>%s</ul>" % "".join(
-            '<li><a href="#%s">%s</a></li>' % (sec["id"], sec["title"])
-            for sec in part["sections"]))
+        sections.append('<li class="no-nav-grp">%s</li>' % part["title"])
+        sections.extend('<li><a href="#%s">%s</a></li>' % (sec["id"], sec["title"])
+                        for sec in part["sections"])
         body.append('<h2 class="man-h2" id="%s">%s</h2>' % (part["id"], part["title"]))
         if part.get("summary"):
             body.append('<p class="man-lede">%s</p>' % part["summary"])
@@ -541,8 +547,29 @@ def render_new_owner(data):
                             '<li><a href="%s" rel="nofollow noopener">%s</a></li>'
                             % (i["url"], i["label"]) for i in items)))
 
-    return ('<nav class="no-nav" aria-label="On this page"><p class="no-nav-h">On this page</p>%s</nav>'
-            % "\n".join(nav), "\n".join(body))
+    return ('<nav class="no-nav" aria-label="On this page"><p class="no-nav-h">On this page</p>'
+            '<div class="no-nav-parts">%s</div>'
+            '<details class="no-nav-all"><summary>All %d sections</summary><ul>%s</ul></details>'
+            '</nav>' % ("\n".join(nav), sum(len(p["sections"]) for p in data["parts"]),
+                        "".join(sections)),
+            "\n".join(body))
+
+
+def new_owner_sections():
+    """The guide's long hand-written middle, from _data/new-owner-sections.html.
+
+    WHY IT MOVED OUT OF THE JSON, 2026-10-08. It was a 12KB HTML document escaped inside a JSON
+    string, so every edit to it was an edit to a string literal: quotes escaped, newlines written as
+    \\n, and a diff that showed one enormous line whatever changed. Prose gets revised here often
+    enough that the escaping was costing more than the file was worth. It is plain HTML now and the
+    builder reads it directly. The JSON key it used to live in is still honoured if the file is
+    absent, so this is reversible.
+    """
+    f = ROOT / "_data" / "new-owner-sections.html"
+    if f.exists():
+        return f.read_text(encoding="utf-8")
+    return json.loads((ROOT / "_data" / "new-owner.json").read_text(
+        encoding="utf-8")).get("migrated_sections_html", "")
 
 
 def new_owner_content():
@@ -617,7 +644,7 @@ def start_here_page():
           # or it prints twice, which is what the first render of this did.
           % (re.sub(r'^\d+\.\s*', '', it["n"]), it["html"])
           for it in op["items"]),
-       content.get("migrated_sections_html", "") + "\n" + body)
+       new_owner_sections() + "\n" + body)
 
     return (head(START_TITLE, desc, SITE + "/manuals/start-here.html", [crumb])
             + page + foot(""))

@@ -19,19 +19,32 @@ which is the failure that matters and the one a human then resolves in seconds.
 A quote that passes is NOT proven correctly attributed. It is proven to exist somewhere in the page's
 sources, which is strictly weaker. Read the report as a filter, not a verdict.
 
-IT DOES NOT SCALE PAST ABOUT FORTY SOURCES, AND THE CAUSE IS KNOWN. Measured 2026-10-07 against
-manuals/start-here.html, which cites 187 sources and carries 404 quotations: a run exceeded 50
-minutes with --no-fetch and timed out with the cache warm, so the cost is not the network. It is
-near_miss(), the fuzzy fallback that runs for every quote that is not an exact match. It slides a
-window across EVERY word position in EVERY source and runs difflib.SequenceMatcher at each one.
-present(), the exact path, is 404 x 187 substring checks and is not the problem.
+IT USED TO NOT SCALE PAST ABOUT FORTY SOURCES, AND THE EARLIER DIAGNOSIS OF WHY WAS WRONG.
+Measured 2026-10-07 against manuals/start-here.html (187 sources, 404 quotations): a run exceeded 50
+minutes with --no-fetch and timed out with the cache warm, so the cost was not the network. The note
+left here blamed near_miss(). Instrumenting both functions on 2026-10-08 showed near_miss() never
+even ran: the time is in present()'s word_run() fallback, because a quotation that is genuinely
+absent costs a full sliding-window scan of every document, and then near_miss() costs a second one.
+Measured per quotation: 19 seconds average, 42 seconds for the worst, against 167 documents.
 
-THE FIX, for whoever picks this up: a genuine near-miss window must contain the quote's rarest word,
-so find that word's positions in the source first and slide only around those. That keeps the
-fallback's accuracy, because it can only remove comparisons that could never have matched, and it
-turns millions of SequenceMatcher calls into a few hundred. Do NOT simply cap the number of starts:
-that would turn a slow true answer into a fast false one, and a false "not in any cited source" is
-the failure this whole file exists to avoid.
+THE FIX, and it is the one the note proposed for near_miss() applied to both. A near-miss can only
+be found where the quotation's own words occur, so the positions of every word the page quotes are
+indexed once, and both fallbacks visit those positions instead of all of them. Two different rules
+decide which positions:
+
+  near_miss() is EXACTLY equivalent at its threshold and that is provable, not hoped for. A window is
+  only reported when at least ceil(0.7n) of its words match, and a window that matches no word from
+  any set S of n-need+1 quote positions can supply at most need-1 matches. So anchoring on the
+  rarest n-need+1 distinct quote words cannot hide a qualifying window.
+
+  word_run() is a heuristic by nature, because difflib compares characters rather than words and no
+  word-level rule bounds a character ratio exactly. It anchors on the quotation's rarest words of
+  five characters or more; a window that has altered every one of them while still matching 85
+  percent of the characters is not a thing a tidy-up produces. The differential test that backs this
+  claim is described at the call site.
+
+Do NOT simply cap the number of starts: that would turn a slow true answer into a fast false one, and
+a false "not in any cited source" is the failure this whole file exists to avoid.
 
 Run:
   python3 scripts/check-quotes.py                          # every guide
@@ -125,6 +138,11 @@ def quotes_on_page(text):
     # "Schematic of an RV 12-volt system...", "A Honda EU2000i portable inverter generator". Same class as
     # reading the <title> as a quote: the page describing itself is not the page quoting a source.
     body = re.sub(r'\b(?:alt|title|aria-label|placeholder)="[^"]*"', " ", body)
+    # A SCRIPT BLOCK IS NOT PROSE. The breadcrumb's JSON-LD carries the page's own name inside
+    # quotation marks, so the general pass read "New RV Owner: The Things to Get Right First" as a
+    # quotation and reported the page's own title as missing from its sources. Exactly the class the
+    # <title> exclusion above exists for: a page describing itself is not a page quoting anybody.
+    body = re.sub(r"<script\b.*?</script>", " ", body, flags=re.S)
     # THE GENERAL PASS READS TEXT, NOT MARKUP, AND THAT IS THE POINT.
     # Found 2026-10-02 while adding a guide that quotes heavily: this pass matched against raw
     # HTML, where an ATTRIBUTE quote pairs with a real opening quotation mark, the span between
@@ -296,7 +314,22 @@ def check(path, no_fetch=False):
                 # searched source is how a perfectly good quotation gets reported as unsourced.
                 thin.append(u)
             corpus.append(t)
-    def word_run(needle, hay, need=0.85):
+    # ONE index for the whole page. Every word the page quotes is looked up by position, so the two
+    # fallbacks below visit only the places a match could possibly be, instead of every word position
+    # of every document, once per quotation. See the module docstring for the measurement that
+    # forced this. Memory is bounded by the words actually quoted, not by the corpus: on
+    # manuals/start-here.html that is 1.16M corpus words against an index of a few hundred thousand
+    # entries, where indexing the whole corpus would have been a needless multiple of it.
+    quoted = {w for q in qs for w in q.lower().split()}
+    doc_words, index = [], {}
+    for di, c in enumerate(corpus):
+        cw = c.lower().split()
+        doc_words.append(cw)
+        for p, w in enumerate(cw):
+            if w in quoted:
+                index.setdefault(w, []).append((di, p))
+
+    def word_run(needle, di, need=0.85):
         """Fallback for character-level disagreement between a page and its source.
 
         Found by re-running after the first fix: "low gas pressure caused by a number of factors..." is
@@ -307,27 +340,48 @@ def check(path, no_fetch=False):
         """
         nw = needle.split()
         if len(nw) < 5:
-            return needle in hay
-        hw = hay.split()
+            return needle in corpus_fold[di]
+        hw = doc_words[di]
         if len(hw) < len(nw):
             return False
         # Positional word comparison is not enough. ONE inserted word shifts every following word, so
         # "remove the old sealant | because ..." scored 53 percent against a source reading "remove the
         # old sealant | TO because ..." - a single stray word the page had tidied, reported as a missing
         # source. SequenceMatcher compares subsequences, so an insert or a delete does not defeat it.
-        for start in range(0, len(hw) - len(nw) + 1):
+        # Anchor on the rarest words of five characters or more, at their position in the quotation.
+        # THE TEST THAT BACKS THIS: the old full scan and this one were run side by side over every
+        # quotation on the page that reaches this function, and the verdicts were compared one by
+        # one. It is a heuristic, not a proof, so if it ever disagrees with the old code the old code
+        # wins and this goes back to the full scan.
+        anchors = sorted({w for w in nw if w in index and len(w) >= 5},
+                         key=lambda w: len(index[w]))[:5]
+        if not anchors:
+            starts = range(0, len(hw) - len(nw) + 1)
+        else:
+            cand = set()
+            for i, w in enumerate(nw):
+                if w not in anchors:
+                    continue
+                for d, p in index[w]:
+                    if d == di:
+                        s = p - i
+                        if 0 <= s <= len(hw) - len(nw):
+                            cand.add(s)
+            starts = sorted(cand)
+        for start in starts:
             if difflib.SequenceMatcher(None, nw, hw[start:start + len(nw)]).ratio() >= need:
                 return True
         return False
 
     corpus_fold = [c.lower() for c in corpus]
 
-    def present(q, c):
+    def present(q):
         """A quote containing an ellipsis has had text omitted, so check its fragments separately.
         The first run flagged genuine Winnebago wording as unsourced purely because the page wrote
         "... on the roof ..." while the manual writes it as one sentence."""
         frags = [f.strip() for f in re.split(r"\s*\.\.\.+\s*|\s*\u2026\s*", q) if len(f.split()) >= 3]
-        return all(any(f.lower() in cf or word_run(f.lower(), cf) for cf in corpus_fold)
+        return all(any(f.lower() in cf or word_run(f.lower(), di)
+                       for di, cf in enumerate(corpus_fold))
                    for f in (frags or [q]))
 
     def near_miss(q):
@@ -341,21 +395,55 @@ def check(path, no_fetch=False):
         a reader checking either quote against the maker's page finds words that do not match.
         """
         qw = q.lower().split()
+        n = len(qw)
+        if n == 0:
+            return 0, None
+        need = (7 * n + 9) // 10          # ceil(0.7n), the integer form of the test at the end
+        # A window is reported only when at least `need` of its words match, and a window matching no
+        # word from any set covering n-need+1 quote POSITIONS can supply at most need-1 matches. So
+        # anchoring on the rarest such words cannot hide a window that would have been reported:
+        # every qualifying window matches at least one anchor, at its own position, and is generated
+        # here. That is why this is a fix and not a compromise.
+        anchors, seen = set(), set()
+        for w in sorted(set(qw), key=lambda w: len(index.get(w, ()))):
+            seen.add(w)
+            anchors.add(w)
+            if sum(1 for x in qw if x in seen) >= n - need + 1:
+                break
+        cand = {}
+        for i, w in enumerate(qw):
+            if w not in anchors:
+                continue
+            for di, p in index.get(w, ()):
+                s = p - i
+                if s >= 0 and s + n <= len(doc_words[di]):
+                    cand.setdefault(di, set()).add(s)
         best = (0, None)
-        for c in corpus:
-            cw = c.lower().split()
-            for start in range(0, max(1, len(cw) - len(qw) + 1)):
-                window = cw[start:start + len(qw)]
+        for di, cw in enumerate(doc_words):
+            if len(cw) < n:
+                # The scan this replaces compared one truncated window here. Keeping it costs a few
+                # words and preserves the old behaviour exactly, which is cheaper than arguing about
+                # a document shorter than the quotation.
+                window = cw[:n]
                 hits = sum(1 for a, b in zip(qw, window) if a == b)
                 if hits > best[0]:
                     best = (hits, " ".join(window))
-        if best[1] and best[0] / max(1, len(qw)) >= 0.7:
-            return best[0] / len(qw), best[1]
+                continue
+            starts = cand.get(di)
+            if not starts:
+                continue
+            for start in sorted(starts):
+                window = cw[start:start + n]
+                hits = sum(1 for a, b in zip(qw, window) if a == b)
+                if hits > best[0]:
+                    best = (hits, " ".join(window))
+        if best[1] and best[0] / max(1, n) >= 0.7:
+            return best[0] / n, best[1]
         return 0, None
 
     missing, near = [], []
     for q in qs:
-        if present(q, corpus):
+        if present(q):
             continue
         ratio, src = near_miss(q)
         (near if src else missing).append((q, ratio, src))

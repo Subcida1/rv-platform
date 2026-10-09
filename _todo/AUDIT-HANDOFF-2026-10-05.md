@@ -63,7 +63,11 @@ main = 606ee5b   working tree empty   both workflows green
    two same-host subpages, so it drops quotes that were genuinely there.
 2. **`_todo/SITE-TODO.md` §1 — photographs still needed.** Free sources cannot fill these; several
    need Ty's phone because he lives in an RV.
-3. **`_todo/SITE-TODO.md` §4 — the eight original guides have no sources block.**
+3. ~~**`_todo/SITE-TODO.md` §4 — the eight original guides have no sources block.**~~ **WRONG, do not
+   chase it.** All 39 guides carry a linked Sources block and had done since 2026-09-21/22, days
+   before this handoff was written. §4 has been archived out of SITE-TODO (2026-10-08) precisely
+   because the claim was false. Left here struck through rather than deleted, because a handoff that
+   sends the next reader after finished work is worth remembering.
 4. **Vale now runs for the first time and reports 253 errors, 1,832 warnings across 55 files.**
    That is a triage list, not 1,832 defects — its own config says so, and the step is configured
    to report rather than judge. Worth a look, not a panic.

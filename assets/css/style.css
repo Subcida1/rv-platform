@@ -295,9 +295,25 @@ input,select,textarea{font-family:inherit}
 
    top:86px matches .filters and .acct-nav, the two other sticky sidebars on this site, so the
    header offset is one number in one place rather than three. */
-.no-nav{position:sticky;top:86px;align-self:start;background:var(--surface);
-  border:1px solid var(--border);border-radius:var(--radius);padding:16px 18px;
-  font-size:13.5px;line-height:1.5;max-height:calc(100vh - 110px);overflow:auto}
+/* AT THE TOP, NOT BESIDE THE PROSE. Ty, 2026-10-08: "the navigation is on the left ... it's
+   crunching the entire page and making it needlessly longer than it needs to be." It was a 250px
+   sticky rail, so the body paid for it in width and the page paid a full column of height for a
+   list nobody reads end to end. The parts are chips at the top; the 45 section links live behind
+   one disclosure instead of standing in the way of the first screen. */
+.no-nav{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+  padding:14px 16px;font-size:13.5px;line-height:1.5;margin-bottom:30px}
+.no-nav-parts{display:flex;flex-wrap:wrap;gap:8px}
+.no-nav-all{margin-top:12px}
+/* 12px of padding on the disclosure and on each section link, same reason as the chips: this site
+   holds itself to a 44px touch target and the first pass here measured 32px and 34px. Most of this
+   guide's readers are on a phone. */
+.no-nav-all>summary{cursor:pointer;font-weight:600;font-size:13px;color:var(--text-2);padding:13px 0}
+.no-nav-all>summary:hover{color:var(--b1)}
+.no-nav-all ul{list-style:none;margin:0;padding:0}
+.no-nav-all li a{display:block;padding:13px 0}
+.no-nav-grp{font-weight:800;color:var(--text);margin-top:14px;font-size:12.5px;
+  text-transform:uppercase;letter-spacing:.05em}
+.no-nav-grp:first-child{margin-top:0}
 .no-nav-h{font-weight:800;font-size:12px;text-transform:uppercase;letter-spacing:.06em;
   color:var(--text-3);margin-bottom:10px}
 .no-nav a{color:var(--text-2);display:block;padding:3px 0}
@@ -307,7 +323,11 @@ input,select,textarea{font-family:inherit}
 /* .no-nav a IS MORE SPECIFIC THAN .no-nav-part -- one class and one element beats one class -- so
    the padding:3px 0 in that rule was winning and these links measured 28px tall. Same cascade shape
    as the selected part-type chip fixed earlier the same day: the rule existed, it just lost. */
-.no-nav a.no-nav-part{font-weight:700;color:var(--text);margin-top:12px;display:block;padding:12px 0}
+/* 12px of vertical padding, not 9, so each chip clears the 44px touch floor this site holds itself
+   to: 13.5px at 1.5 line-height is 20.25px of text, plus 24px of padding. */
+.no-nav a.no-nav-part{font-weight:700;color:var(--text);display:inline-block;margin:0;
+  padding:12px 14px;border:1px solid var(--border);border-radius:999px;background:var(--bg)}
+.no-nav a.no-nav-part:hover{border-color:var(--b1);color:var(--b1)}
 .no-nav ul{list-style:none;margin:0 0 0 2px;padding:0}
 .no-nav ul li a{padding-left:10px}
 
@@ -329,6 +349,21 @@ input,select,textarea{font-family:inherit}
 
 .no-body{min-width:0;max-width:74ch}
 .no-body>p,.no-sec p{color:var(--text-2);line-height:1.75;margin:14px 0}
+/* LIST ITEMS RAN TOGETHER. Ty, 2026-10-08: "there's no space between the end of number one's text
+   ... and the beginning of number two's text ... there should be like a line break there."
+   A list inside the guide had browser defaults and nothing else -- the <ol> carried margins, its
+   <li>s carried none, so each item's last line sat directly on the next item's first line. The
+   ordered list had no rule anywhere in this file; .prose ul covered the unordered ones only. */
+.no-body ol,.no-sec ol{margin:18px 0;padding-left:26px}
+.no-body li,.no-sec li{margin:14px 0;line-height:1.75}
+.no-body li:first-child,.no-sec li:first-child{margin-top:0}
+/* THE SYMPTOM TABLE. .sym is emphasis WITHOUT the tint that .no-body b carries: a tinted symptom on
+   every row would read as though the whole first column were quotations. .tag is the system label,
+   kept as a chip rather than a fourth column so the table still fits a phone. */
+.no-body .sym,.no-sec .sym{font-weight:600;color:var(--text)}
+.no-body .tag,.no-sec .tag{display:inline-block;margin-left:8px;padding:3px 9px;border-radius:999px;
+  background:var(--tint-bg);box-shadow:0 0 0 1px var(--tint-edge);font-size:11.5px;font-weight:700;
+  text-transform:uppercase;letter-spacing:.04em;color:var(--text-2);white-space:nowrap}
 .no-body h2.man-h2{margin-top:52px;padding-top:30px;border-top:1px solid var(--border)}
 .no-body h2.man-h2:first-child{margin-top:0;padding-top:0;border-top:0}
 
@@ -396,15 +431,10 @@ input,select,textarea{font-family:inherit}
 .no-sec[open]>summary::before{content:"\2212"}
 .no-sec>summary:hover{color:var(--b1)}
 
-/* Desktop: nav beside the content. Below 1024 it goes above, because a 200px sidebar on a tablet
-   leaves the prose column too narrow to read comfortably. */
-@media(min-width:1024px){
-  .no-layout{display:grid;grid-template-columns:250px minmax(0,1fr);gap:34px;align-items:start}
-  .no-nav{position:sticky}
-}
-@media(max-width:1023px){
-  .no-nav{position:static;max-height:none;margin-bottom:24px}
-}
+/* THE NAV IS ABOVE THE CONTENT AT EVERY WIDTH, so .no-layout is not a grid any more and the prose
+   column takes the full measure (still capped by .no-body's 74ch, which is what keeps a line
+   readable). The two media queries that switched between a rail and a stacked list are gone with
+   the rail. Verified at 393px and 1280px 2026-10-08. */
 
 /* AN ANCHOR JUMP LANDED UNDER THE STICKY NAV, SITE-WIDE, UNTIL 2026-10-07.
 

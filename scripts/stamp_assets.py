@@ -116,7 +116,7 @@ def main():
     file as a script behaves exactly as before.
     """
     stamped = changed = stale = 0
-    SKIP_PARTS = {'.git', '.letta', 'node_modules'}
+    SKIP_PARTS = {'.git', '.letta', 'node_modules', '_data'};
     # SITE.JS FIRST, THEN THE PAGES. Its own content changes when it gains a version, and
     # the pages reference site.js, so stamping it afterwards would leave every page's
     # site.js?v= one build behind.

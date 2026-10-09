@@ -37,8 +37,7 @@ import re
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-SKIP = {'.git', '.letta', 'node_modules'}
-
+SKIP = {'.git', '.letta', 'node_modules', '_data'};
 # ---- rules that FAIL the run ------------------------------------------------
 # Each is a construction about how the page is being told, not about the subject.
 STRICT = (

@@ -28,9 +28,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 
-SKIP_PARTS = {'.git', '.letta', 'node_modules'}
-
-
+SKIP_PARTS = {'.git', '.letta', 'node_modules', '_data'};
 # .letta IS A CHECKOUT BOUNDARY. Letta keeps agent worktrees under .letta/worktrees/, each a
 # full copy of this repository, so an unbounded walk reads -- and for a writer, REWRITES --
 # another agent's checkout. Added 2026-10-04 across every instrument that walks the tree.

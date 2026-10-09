@@ -45,7 +45,7 @@ ROOT = Path(__file__).resolve().parent.parent
 # A worktree under .letta is a full copy of this repository. Scanning into it made every local
 # gate disagree with CI, which has no .letta directory at all -- the defect recorded in
 # verify.py, build-shell.mjs, stamp_assets.py and build-sitemap.py on 2026-10-04.
-SKIP_PARTS = {".git", ".letta", "node_modules", "_todo", "_log", "workers"}
+SKIP_PARTS = {".git", ".letta", "node_modules", "_todo", "_log", "workers", "_data"};
 SKIP_DIRS_TOP = {"scripts", "assets"}
 
 # Pages whose FILE name is part of their published contract and must keep the .html address.
