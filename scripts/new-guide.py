@@ -135,9 +135,17 @@ def main():
              '</div>\n' % (html.escape(a.eyebrow), html.escape(a.title),
                             html.escape(a.lede), _today))
 
+    # THE BODY NEEDS ITS WRAPPER OR IT RUNS EDGE TO EDGE ON A PHONE. Found 2026-10-09, by Ty
+    # looking at a guide on his phone: "the text goes straight from the edge of my screen to the
+    # other edge." The body was written straight into <main>, so no .wrap ever applied a gutter and
+    # every paragraph measured left=0 right=0 at 360px. The .sec prose / .wrap narrow pair is what
+    # every other guide in the repo carries; this tool was emitting the page without it. Same shape
+    # as the missing h1 found hours earlier: the tool omitting a structural layer the template owns.
     page = (head + '\n<body class="g-theme-mist">\n'
             '<div id="site-nav"><!-- nav:start --><!-- nav:end --></div>\n'
-            '<main id="main">' + intro + body.rstrip() + "\n</main>" + tail)
+            '<main id="main">' + intro
+            + '\n<div class="sec prose">\n<div class="wrap narrow">\n'
+            + body.rstrip() + '\n</div>\n</div>\n</main>' + tail)
     out = ROOT / "guides" / (a.slug + ".html")
     out.write_text(page, encoding="utf-8")
     print(f"  wrote {out.relative_to(ROOT)}  ({len(page):,} bytes)")
@@ -161,8 +169,13 @@ def main():
         tile = (f'<a class="card guide-card" href="guides/{a.slug}.html">\n'
                 f'  <div class="guide-ic">{a.icon}</div>\n  <div class="guide-body">\n'
                 f'  <div class="guide-title">{a.tile_title}</div>\n'
-                f'  <div class="guide-meta">{a.tile_meta}</div>\n'
-                f'  <div class="guide-go">Read the guide \u2192</div>\n  </div>\n  </a>\n')
+                f'  <div class="guide-meta">{a.tile_meta}</div>\n  </div>\n  </a>\n')
+        # NO .guide-go ON AN ORDINARY TILE. Ty, 2026-10-09: "the new guides have a read the guide
+        # link on their buttons in the guide index? consistency is key here for our visual
+        # structure." It is a real element and it belongs to the .man-pinned cards, which use it as
+        # "Open the walkthrough". An ordinary guide tile is the whole card as one link, and 38 of
+        # the 44 tiles carry no such line. This tool was the only thing adding it, so six tiles it
+        # built were the only six that had it.
         if a.hub_section:
             anchor = f'<h2 class="guide-group">{a.hub_section}</h2>'
             if anchor not in h:
