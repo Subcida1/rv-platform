@@ -3225,3 +3225,83 @@ a.tchip:focus-visible{outline:2px solid var(--b1,var(--brand));outline-offset:2p
   border-top:2px solid var(--border-2);padding-top:20px;margin:48px 0 0;text-align:center}
 .hub-page h2.region-h:first-of-type{margin-top:6px;border-top:0;padding-top:0}
 .hub-page .region-h + .state-grid{margin-top:16px}
+
+
+/* ============================================================
+   REPEATING ELEMENTS THAT HAD ALL TAKEN THE SAME SHAPE (2026-10-08).
+   Three things Ty called out in one pass, all of them about a block that is
+   repeated eight or twelve times and so is really about the pattern, not the
+   block: the tools page is one alignment running the whole way down, the
+   homepage tool chips were squeezed into a sideways scroller on a phone, and
+   a card at full width wastes more than half of itself.
+
+   1. The eight tool cards on tools/index.html all put the copy left and the
+      figure right. Alternating them gives the eye a reason to keep moving
+      (Ty: "stagger them back and forth... give our page a little bit more
+      life"). Desktop only -- below 1025px .tool-body is already one column,
+      so there is no side to alternate. The even rule swaps the TRACK WIDTHS
+      as well as the order, so the figure column stays the narrower one on
+      every card and the copy keeps the same width throughout.
+   2. Above 720px the hero chips wrap and centre as pills. Under 720px they
+      were nowrap plus overflow-x:auto, which put five of the eight off-screen
+      behind a sideways scroll, AND squeezed the five you could see: nowrap
+      means flex-shrink takes over, so each chip measured 51px to 74px wide by
+      96px tall with "Weight and towing" broken over three lines, and the row
+      measured 544px of content in a 345px box (Ty: "they're all very
+      compacted... I think we should do more like three on mobile"). A
+      three-wide grid instead: equal widths, two full rows and a short third,
+      nothing off-screen.
+   3. A .guide-card at full width is 345x195 on a phone for one title line
+      and two lines of meta. The icon sits alone on its own line with most of
+      the card empty beside it, and the 2.6em and 3.1em min-heights that keep
+      desktop rows level -- added when a one-line card came up 20px short
+      beside a two-line one -- become reserved blank space once the card is
+      the only column and there is nothing to line up with. Below 640px, the
+      width where .guide-grid stops being a grid and becomes one column, the
+      card turns on its side: icon left, text right, floors off. 195px -> 90px.
+
+   SCOPED DELIBERATELY, twice. The chips rules name .chips-tools and
+   .tool-strip instead of .chips, because a bare .chips rule here would also
+   reach parts/index.html, which carries 107 <p class="chips part-types"> pill
+   rows sized for a filter row of their own (.part-types .chip, further up).
+   And .man-tile is listed with its own three resets: it is a .guide-card on a
+   .guide-grid, but it carries its padding on its CHILDREN (.man-tile
+   .guide-body{padding:22px}, .man-tile .guide-ic{margin:22px 22px 0}) rather
+   than on the card, so the card padding and the zeroed icon margin have to be
+   set together or a manual tile ends up double-padded on a phone.
+
+   This block sits at the END of the file on purpose. .tool-strip's own display
+   rule is defined BELOW the 720px media block earlier in the file, so an
+   override written up there would lose the source-order tie and the strip
+   would stay a flex row.
+   ============================================================ */
+
+/* 1. alternate the sides, desktop only */
+@media(min-width:1025px){
+  .tool-card:nth-child(even) .tool-body{grid-template-columns:minmax(0,1fr) minmax(0,1.15fr)}
+  .tool-card:nth-child(even) .tool-copy{order:2}
+}
+
+/* 2. three chips across on a phone, not a sideways scroller */
+@media(max-width:720px){
+  .chips-tools,.tool-strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;overflow:visible}
+  .chips-tools .chip,.tool-strip .chip{display:flex;align-items:center;justify-content:center;text-align:center;padding:9px 8px}
+}
+
+/* 3. a full-width card turns on its side */
+@media(max-width:640px){
+  .guide-grid>.guide-card{flex-direction:row;align-items:center;gap:14px;padding:16px}
+  .guide-grid>.guide-card .guide-ic{width:40px;height:40px;font-size:19px}
+  .guide-grid>.guide-card .guide-body{gap:3px}
+  /* The 2-line clamp stays (it is what keeps a row of cards level), but the
+     row layout makes the text column 257px instead of 299px, which pushed one
+     manual tile's 103-character meta from 2 lines to 3 -- and line-clamp does
+     not grow, it hides the third line. Three lines here; a phone card is 99px
+     tall and has the room, and clipped prose is worse than a taller card. */
+  .guide-grid>.guide-card .guide-title,
+  .guide-grid>.guide-card .guide-meta{min-height:0;-webkit-line-clamp:3}
+  .guide-grid>.guide-card .guide-meta{flex:0 1 auto}
+  .guide-grid>.guide-card.man-tile .guide-ic{margin:0}
+  .guide-grid>.guide-card.man-tile .guide-body{padding:0}
+  .guide-grid>.guide-card.man-tile .guide-meta{flex:0 1 auto}
+}
