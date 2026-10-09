@@ -4,6 +4,34 @@ Ty: "work through the night... focus on website first, then bridge, then yoursel
 Written so the work continues when one session's context ends. **Read this file at the start of
 every night session**, do one item, commit it, tick it here, move to the next.
 
+## THE TWO WAYS THIS WENT RED ON GITHUB ON 2026-10-09, both while the local suite said green
+
+Both cost a red main, and Ty gets an email for each. Neither is a content problem.
+
+**1. THE LOCAL SUITE VALIDATES THE WORKING TREE. GITHUB VALIDATES THE COMMIT.** A change to
+`assets/js/site.js` (the nav search labels) made `build-shell.mjs` rewrite 124 pages. The two SOURCE
+files were committed and the 124 REGENERATED pages were left in the working tree. Locally everything
+passed, because the tree had them. On GitHub, `verify.py`, `build-shell --check`, `stamp_assets
+--check` and `build-parts-pages --check` all failed, because the commit did not.
+
+**Rule: when a change makes a generator rewrite pages, the regenerated pages ship in the SAME
+commit.** And before pushing, verify the commit rather than the tree:
+
+```
+rm -rf /tmp/cicheck && mkdir -p /tmp/cicheck
+git archive HEAD | tar -x -C /tmp/cicheck
+cd /tmp/cicheck && python3 scripts/verify.py
+```
+
+**2. A GATE WHOSE OUTPUT IS PRINTED BUT NOT ACTED ON IS NOT A GATE.** `scripts/ci.sh` piped
+`cross-check.py`'s report through `sed` to show an excerpt and never read its exit status, so the
+local suite passed while the same check failed on GitHub. It calls `--strict` and sets `fail=1` now.
+**Rule: every check in ci.sh must be invoked in a form that exits non-zero on failure.**
+
+And a third, mine rather than the harness: **reading an exit code off a pipeline reports the last
+command's status.** `cross-check.py --strict | tail` said nothing was wrong. Use
+`cmd > /tmp/out.txt 2>&1; echo "EXIT=$?"` whenever the exit code is the point.
+
 ## How to work this list
 
 - **One item at a time.** Finish and verify before starting the next. Ty's standing instruction.
