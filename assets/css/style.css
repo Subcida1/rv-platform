@@ -210,6 +210,21 @@
 html{scroll-behavior:smooth}
 body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{color:inherit;text-decoration:none}
+
+/* LINKS INSIDE PROSE WERE INVISIBLE, SITEWIDE. The reset above turns every anchor into plain text
+   and nothing restyled a bare link inside a paragraph, so a link read exactly like the sentence
+   around it. Measured 2026-10-08 on the new-owner guide: 233 content links at rgb(85,98,122) with
+   text-decoration none, which are also the paragraph's own values. The same on the guides. A reader
+   cannot tell there is anything to click, which costs the internal linking this site depends on.
+   Scoped to the content areas rather than applied to every anchor, so nav, footer, buttons and the
+   card components keep the treatment they were designed with. */
+.prose p a,.prose li a,.prose td a,
+.no-body p a,.no-body li a,.no-body td a,
+.no-sec p a,.no-sec li a,.no-sec td a{
+  color:var(--b1);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:2px}
+.prose p a:hover,.prose li a:hover,.prose td a:hover,
+.no-body p a:hover,.no-body li a:hover,.no-body td a:hover,
+.no-sec p a:hover,.no-sec li a:hover,.no-sec td a:hover{color:var(--brand)}
 img{max-width:100%;display:block}
 button{font-family:inherit;cursor:pointer}
 input,select,textarea{font-family:inherit}
@@ -420,7 +435,16 @@ input,select,textarea{font-family:inherit}
 /* The callouts and tables inside the guide. */
 .no-body .callout,.no-sec .callout{margin:20px 0;padding:16px 20px;border-radius:var(--radius);
   background:var(--tint-bg);border:1px solid var(--tint-edge);color:var(--text-2);line-height:1.7}
-.no-body .man-table,.no-sec .man-table{margin:20px 0}
+/* THE GUIDE'S TABLES FILL THE WIDTH AND READ LEFT TO RIGHT. Ty, 2026-10-08: "The table is still
+   skinny AF it looks odd." Two screen rules written for other pages were doing it. .man-table is
+   capped at max-width:520px, which is right for a narrow data table and wrong for a three-column
+   symptom table sitting in a 1152px column, and .man-table td:last-child is right-aligned and bold
+   because in a data table the last column is a VALUE. Here it is a paragraph of instruction, so
+   right-aligned bold prose reads as broken. Both are overridden here rather than at the source, so
+   the manual and tool pages keep the treatment they were designed around. */
+.no-body .man-table,.no-sec .man-table{margin:20px 0;max-width:none}
+.no-body .man-table td:last-child,.no-sec .man-table td:last-child{
+  text-align:left;font-weight:400;color:var(--text-2)}
 .no-body .man-table th,.no-sec .man-table th{background:var(--tint-bg);text-align:left}
 
 /* The nav, with room for the longer section names. */
