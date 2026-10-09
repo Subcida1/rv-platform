@@ -540,6 +540,20 @@ def render_new_owner(data):
     # The parts sit at the top as chips; the sections are one disclosure below them instead of always
     # in the way, and every section is already a <details> in the body with its own anchor.
     nav, sections, body = [], [], []
+    # START HERE IS A PART, AND IT WAS NOT ONE. These four sections live in
+    # _data/new-owner-sections.html rather than in the parts model, so they had no heading above
+    # them and no entry in this nav at all, which left the troubleshooting table, the page's front
+    # door for anyone arriving with a problem, unreachable from it. Ty, 2026-10-08: "give them a
+    # part of their own." The ids match the headings in that file.
+    START_HERE = [
+        ("troubleshooting", "RV troubleshooting: what to check when something stops working"),
+        ("system-order", "Which RV system to learn first, and why"),
+        ("systems-connect", "How the 12-volt and 120-volt systems connect"),
+        ("find-your-manual", "Finding your RV owner's manual and your appliance manuals"),
+    ]
+    nav.append('<a class="no-nav-part" href="#start-here">Start here</a>')
+    sections.append('<li class="no-nav-grp">Start here</li>')
+    sections.extend('<li><a href="#%s">%s</a></li>' % (sid, title) for sid, title in START_HERE)
     for part in data["parts"]:
         nav.append('<a class="no-nav-part" href="#%s">%s</a>' % (part["id"], part["title"]))
         sections.append('<li class="no-nav-grp">%s</li>' % part["title"])
@@ -586,7 +600,8 @@ def render_new_owner(data):
             '<div class="no-nav-foot">'
             '<details class="no-nav-all"><summary>All %d sections</summary><ul>%s</ul></details>'
             '%s</div></nav>'
-            % ("\n".join(nav), sum(len(p["sections"]) for p in data["parts"]),
+            % ("\n".join(nav),
+               sum(len(p["sections"]) for p in data["parts"]) + len(START_HERE),
                "".join(sections), src_link),
             "\n".join(body))
 
