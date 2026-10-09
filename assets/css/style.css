@@ -443,6 +443,25 @@ input,select,textarea{font-family:inherit}
 /* The callouts and tables inside the guide. */
 .no-body .callout,.no-sec .callout{margin:20px 0;padding:16px 20px;border-radius:var(--radius);
   background:var(--tint-bg);border:1px solid var(--tint-edge);color:var(--text-2);line-height:1.7}
+/* THE DAMAGE MARKER. NOTE THE DECLARATION ORDER: border-color is a shorthand that resets
+   all four sides, so it has to come BEFORE border-left-color or it silently overwrites the
+   strong left edge with the pale one. Measured wrong first, fixed 2026-10-08. Ty, 2026-10-08: "create some kind of uniform visual identifier that says, like,
+   hey, this is important. This may cause damage, read this section type thing, visually communicate
+   that and use it uniformly throughout the entire website." One component, three variants, and one
+   rule for which applies, so a reader learns what the colour means once and it holds on every page:
+     can injure you  -> --danger, the red already used for a failed verdict
+     may cause damage-> --warn, the amber already used for a caution
+     costs you money -> the brand tint, because it is a cost rather than a hazard
+   The label is text, not an icon, so it survives printing and reads aloud. */
+.callout.flag{border-left-width:5px;border-left-style:solid;padding-left:18px}
+.callout.flag .flag-h{display:block;font-weight:800;font-size:12px;letter-spacing:.06em;
+  text-transform:uppercase;margin:0 0 8px}
+.callout.flag-injury{background:var(--danger-bg);border-color:var(--danger-edge);border-left-color:var(--danger)}
+.callout.flag-injury .flag-h{color:var(--danger)}
+.callout.flag-damage{background:var(--warn-bg);border-color:var(--warn-edge);border-left-color:var(--warn-soft)}
+.callout.flag-damage .flag-h{color:var(--warn)}
+.callout.flag-money{background:var(--tint-bg);border-color:var(--tint-edge);border-left-color:var(--b1)}
+.callout.flag-money .flag-h{color:var(--b1)}
 /* THE GUIDE'S TABLES FILL THE WIDTH AND READ LEFT TO RIGHT. Ty, 2026-10-08: "The table is still
    skinny AF it looks odd." Two screen rules written for other pages were doing it. .man-table is
    capped at max-width:520px, which is right for a narrow data table and wrong for a three-column

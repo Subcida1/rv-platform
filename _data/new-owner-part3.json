@@ -277,7 +277,8 @@
       },
       {
        "kind": "callout",
-       "html": "Store on a level surface. If a tire is not evenly supported, the sidewall cables can become fatigued and damaged, which can result in a sidewall rupture and a complete, sudden loss of air pressure."
+       "html": "Store on a level surface. If a tire is not evenly supported, the sidewall cables can become fatigued and damaged, which can result in a sidewall rupture and a complete, sudden loss of air pressure.",
+       "flag": "damage"
       }
      ]
     },
@@ -314,7 +315,8 @@
       },
       {
        "kind": "callout",
-       "html": "Warranty language often puts the fitting check on the owner. Water leaks related to misuse, mishandling, neglect or abuse are not covered, and tightening fittings counts as routine maintenance. A slow drip found early is a small job. One found after it has travelled through a floor is not."
+       "html": "Warranty language often puts the fitting check on the owner. Water leaks related to misuse, mishandling, neglect or abuse are not covered, and tightening fittings counts as routine maintenance. A slow drip found early is a small job. One found after it has travelled through a floor is not.",
+       "flag": "money"
       }
      ]
     },

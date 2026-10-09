@@ -481,7 +481,22 @@ def render_new_owner_blocks(blocks):
         elif k == "list":
             out.append("<ul>%s</ul>" % "".join("<li>%s</li>" % i for i in b["items"]))
         elif k == "callout":
-            out.append('<div class="callout">%s</div>' % b["html"])
+            # A CALLOUT MAY DECLARE ITSELF A WARNING. Ty, 2026-10-08: "create some kind of uniform
+            # visual identifier that says, like, hey, this is important. This may cause damage, read
+            # this section type thing... and use it uniformly throughout the entire website." The
+            # block carries flag: injury, damage or money, and the renderer supplies the label so the
+            # wording cannot drift page to page. An unknown flag is a loud failure, not a silent
+            # plain callout, for the same reason an unknown block kind is.
+            flag = b.get("flag")
+            if flag:
+                label = {"injury": "Can injure you", "damage": "May cause damage",
+                         "money": "Costs you money"}.get(flag)
+                if not label:
+                    raise SystemExit("FAIL  new-owner content: unknown callout flag %r" % flag)
+                out.append('<div class="callout flag flag-%s"><span class="flag-h">%s</span>%s</div>'
+                           % (flag, label, b["html"]))
+            else:
+                out.append('<div class="callout">%s</div>' % b["html"])
         elif k == "table":
             head = "".join("<th>%s</th>" % h for h in b["head"])
             rows = "".join("<tr>%s</tr>" % "".join("<td>%s</td>" % c for c in r)

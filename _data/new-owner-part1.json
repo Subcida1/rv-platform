@@ -32,7 +32,8 @@
       },
       {
        "kind": "callout",
-       "html": "Two of these steps are the ones that cause damage when they are done out of order: the cord goes in with the pedestal breaker off, and the water heater stays off until a hot tap runs without sputtering. The rest are habits rather than a strict sequence."
+       "html": "Two of these steps are the ones that cause damage when they are done out of order: the cord goes in with the pedestal breaker off, and the water heater stays off until a hot tap runs without sputtering. The rest are habits rather than a strict sequence.",
+       "flag": "damage"
       }
      ]
     },
@@ -238,7 +239,8 @@
       },
       {
        "kind": "callout",
-       "html": "<b>More than one source can be live at once.</b> A coach may be energised by shore power, an inverter and the batteries at the same time, so verify every source before you touch any wiring. Shore power and the generator are the exception: those two are never run together, because they are separate supplies feeding one panel.\n  <b>De-energise before you open anything.</b> Disconnect the shore cord, shut the generator down, and switch the inverter off before going near the 120-volt breaker box or any of the 120-volt wiring.\n  To work out what any one appliance draws on either system, the <a href=\"tools/watts-to-amps\">watts to amps calculator</a> does the arithmetic."
+       "html": "<b>More than one source can be live at once.</b> A coach may be energised by shore power, an inverter and the batteries at the same time, so verify every source before you touch any wiring. Shore power and the generator are the exception: those two are never run together, because they are separate supplies feeding one panel.\n  <b>De-energise before you open anything.</b> Disconnect the shore cord, shut the generator down, and switch the inverter off before going near the 120-volt breaker box or any of the 120-volt wiring.\n  To work out what any one appliance draws on either system, the <a href=\"tools/watts-to-amps\">watts to amps calculator</a> does the arithmetic.",
+       "flag": "injury"
       }
      ]
     },
@@ -337,7 +339,8 @@
       },
       {
        "kind": "callout",
-       "html": "<b>One hazard no consumer device detects.</b> A reverse polarity bootleg ground is not discoverable by a standard meter test, a three-light outlet tester, or the most expensive EMS units on the market. Whether current protection units have closed that gap is not established."
+       "html": "<b>One hazard no consumer device detects.</b> A reverse polarity bootleg ground is not discoverable by a standard meter test, a three-light outlet tester, or the most expensive EMS units on the market. Whether current protection units have closed that gap is not established.",
+       "flag": "injury"
       },
       {
        "kind": "callout",
@@ -376,7 +379,8 @@
       },
       {
        "kind": "callout",
-       "html": "<b>Do not run the pump on city water.</b> The two systems are meant to be used one at a time. If a coach is hooked to city water with the pump accidentally left on, and a check valve has failed while park pressure is low, the pump can push its entire fresh tank back into the park's supply. The pump's job and the city connection's job overlap, and running both is how a tank empties itself overnight. Connect to city water and make sure the water pump is turned off. The corollary matters off-grid too: running the pump dry will burn it out."
+       "html": "<b>Do not run the pump on city water.</b> The two systems are meant to be used one at a time. If a coach is hooked to city water with the pump accidentally left on, and a check valve has failed while park pressure is low, the pump can push its entire fresh tank back into the park's supply. The pump's job and the city connection's job overlap, and running both is how a tank empties itself overnight. Connect to city water and make sure the water pump is turned off. The corollary matters off-grid too: running the pump dry will burn it out.",
+       "flag": "damage"
       }
      ]
     },
@@ -427,7 +431,8 @@
       },
       {
        "kind": "callout",
-       "html": "Check the brand before you buy or fit an anode rod. Suburban steel tanks use one, and it wants replacing about yearly. Atwood and Dometic aluminum tanks do not use one at all, and fitting one can damage the tank. In Dometic's own words: <b>\"Dometic &amp; Atwood Brand Water Heaters DO NOT use Anode Rods!\"</b> This brand split is the most useful single thing to know about RV water heaters."
+       "html": "Check the brand before you buy or fit an anode rod. Suburban steel tanks use one, and it wants replacing about yearly. Atwood and Dometic aluminum tanks do not use one at all, and fitting one can damage the tank. In Dometic's own words: <b>\"Dometic &amp; Atwood Brand Water Heaters DO NOT use Anode Rods!\"</b> This brand split is the most useful single thing to know about RV water heaters.",
+       "flag": "damage"
       },
       {
        "kind": "p",

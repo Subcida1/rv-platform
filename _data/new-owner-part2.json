@@ -463,7 +463,8 @@
       },
       {
        "kind": "callout",
-       "html": "Half-jobs that still freeze:"
+       "html": "Half-jobs that still freeze:",
+       "flag": "damage"
       },
       {
        "kind": "list",

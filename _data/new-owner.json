@@ -2,7 +2,7 @@
  "_why": "The new-owner guide's content, so the page is data rather than 331 lines inside a Python function. Built 2026-10-07 for the 100x rewrite Ty asked for. Quotations are in the checkable bold-quote convention, which the <i> they used before was not.",
  "title": "New RV owner: the things to get right first",
  "opener": {
-  "title": "The 12 mistakes that cost new RV owners money",
+  "title": "The 13 mistakes that cost new RV owners money",
   "lede": "A coach punishes a small number of specific mistakes, and almost all of them are cheap to avoid and expensive to make.",
   "items": [
    {
@@ -10,47 +10,51 @@
     "html": "<b>Test the pedestal before your cord goes anywhere near it.</b> Use a ground monitor, or a surge protector with one built in. If it shows reverse polarity or an open ground, do not connect. Do not plug into a receptacle that shows outward signs of heat damage, either: report it rather than use it. A ground monitor is the cheapest thing you will ever buy for a coach, and it is the only thing standing between a bad pedestal and your converter. The <a href=\"guides/rv-outlets-not-working.html\">outlets and GFCI guide</a> covers what to do when the damage is already done."
    },
    {
-    "n": "2. Fill the water heater before you switch it on",
+    "n": "2. Never run the generator while you are plugged in",
+    "html": "<b>Never run the generator while the coach is plugged into shore power.</b> One source or the other, never both: they are two separate supplies feeding one panel. Start the generator, check its own breaker, and switch the coach over to it, or plug in, but not both at once."
+   },
+   {
+    "n": "3. Fill the water heater before you switch it on",
     "html": "<b>An empty water heater burns out its tank the first time it is switched on, and that damage is not covered by warranty.</b> Fill the tank first. Open a hot tap and let it run until the flow is steady, with no spitting or sputtering. That is the confirmation the tank is full, and only then does the electric element or the burner get switched on."
    },
    {
-    "n": "3. Never leave the fridge running long in a coach that is badly out of level",
+    "n": "4. Never leave the fridge running long in a coach that is badly out of level",
     "html": "<b>Never leave the fridge running for long in a badly out-of-level coach.</b> Driving does not matter: the motion of the road keeps the coolant moving, so the coach does not need to be level while you travel. Parked is what counts. An absorption fridge has no pump and relies on gravity to circulate the coolant around a sealed loop, and sat at a slant for days with the fridge running, the circulation stalls and the boiler overheats. Norcold's limit is 3 degrees off level side to side and 6 front to back, and running past it \"can cause damage to the cooling system and create a risk of personal injury or property damage.\" A night or two slightly off is not the problem. Weeks at a slant is. If the coach is going to sit well out of level, level it or switch the fridge off. The <a href=\"guides/rv-refrigerator-not-cooling.html\">fridge guide</a> covers what to do when one stops cooling."
    },
    {
-    "n": "4. Fit a water pressure regulator before you hook up",
+    "n": "5. Fit a water pressure regulator before you hook up",
     "html": "<b>Campground water pressure varies, and some of it is high enough to split a line.</b> A regulator screws onto the tap end of your drinking-water hose and holds the pressure down. It costs very little and it is the difference between a quiet weekend and finding water running out from under the cabinets. If the park runs above about 60 psi you want one, and you cannot tell by looking at the tap."
    },
    {
-    "n": "5. Never leave the coach while filling the fresh water tank",
+    "n": "6. Never leave the coach while filling the fresh water tank",
     "html": "<b>Do not walk away from a tank that is filling, and do not overfill it.</b> Overfilling pressurises the tank, and that causes leakage and water damage. It also voids the warranty. Do not cap, block or modify the overflow tubes: they are what lets the pressure out."
    },
    {
-    "n": "6. Never leave the black tank valve open",
+    "n": "7. Never leave the black tank valve open",
     "html": "<b>Dump the black tank, then close it.</b> Leaving the valve open at a full-hookup site lets the liquid drain away and leaves the solids behind, and that is how a tank turns into a pile you have to dig out. So keep it shut, and dump when the tank is at least two thirds full so the rush of water carries the solids with it. The <a href=\"guides/rv-toilet-not-flushing.html\">toilet guide</a> covers what to do when it has already gone wrong."
    },
    {
-    "n": "7. Never leave the awning out in wind",
+    "n": "8. Never leave the awning out in wind",
     "html": "<b>An awning is a sail, and it does not have to be a storm to destroy one.</b> A gust that feels like nothing standing on the ground puts a load on an awning that its arms and its attachment to the wall were never built for. Roll it in before you leave the coach, before you sleep, and any time the forecast mentions gusts. The same goes for leaving it out in heavy rain, which pools on it and can bend the arms."
    },
    {
-    "n": "8. Know your height before you drive",
+    "n": "9. Know your height before you drive",
     "html": "<b>Write your clearance on a sticky note and put it where you will see it.</b> Height is the one number a new owner never knows and the one that does the most damage the fastest: a low bridge, a drive-through, a car-park barrier or a tree branch over a campsite road will take the roof, the air conditioner and the vent covers off before you can stop. Measure the coach yourself with it loaded rather than trusting the specification, and add the air conditioner if it was not factory fitted."
    },
    {
-    "n": "9. Never drive with a slide out",
+    "n": "10. Never drive with a slide out",
     "html": "<b>A slide room travels in.</b> There is no exception and there is no short move: the room is not built to carry load sideways, the seals will not survive it, and on the road it is a wall sticking out past your mirrors. If a room will not retract, and you have to move the coach, that is the one case where you read the <a href=\"guides/rv-slide-out-not-working.html\">slide-out guide</a> first: the room has to be secured by its own system, not by pushing it in."
    },
    {
-    "n": "10. Check your tire pressure before every trip",
+    "n": "11. Check your tire pressure before every trip",
     "html": "<b>Under-inflation is what kills trailer tires, and it does not look like anything from the outside.</b> Check all of them cold, against the pressure on the coach's own placard rather than the figure moulded into the sidewall, and check the spare while you are there. A tire that is visibly bulging or that has lost pressure between trips has a fault to find, not a pressure to top up. The <a href=\"guides/rv-tire-replacement.html\">tire guide</a> covers reading them and the <a href=\"tools/tire-date-code\">tire date decoder</a> tells you how old they are."
    },
    {
-    "n": "11. Never travel with full waste tanks",
+    "n": "12. Never travel with full waste tanks",
     "html": "<b>Never travel with full black or grey tanks.</b> A full tank is weight moving at the worst possible place in the coach, and the structure and the tank mounts were not built for that load shifting. Dump before you drive, not after you arrive."
    },
    {
-    "n": "12. Bring the stabilisers up before you change the coach's level",
+    "n": "13. Bring the stabilisers up before you change the coach's level",
     "html": "<b>Bring the stabilisers up before you change the coach's level.</b> Stabilisers steady a coach; they do not carry it. So before you touch the tongue jack, the landing gear or any levelling block, wind the stabilisers up. Leave them down and raise or lower the coach and you are putting its weight onto legs that were never built to take it, which bends them and stresses the frame around them. The order is always the same: stabilisers up, adjust the level, stabilisers back down."
    }
   ]
