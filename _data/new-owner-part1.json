@@ -240,7 +240,7 @@
       },
       {
        "kind": "callout",
-       "html": "An RV is not wired like a house, and the difference is a safety rule rather than a curiosity. In an RV the neutral and ground conductors are isolated; in a house they are bonded together at the service panel. Never connect neutral to ground, because that creates a ground fault, and a ground fault means shock and fire risk.\n  <b>More than one source can be live at once.</b> A coach may be energised by shore power, the generator, an inverter and the batteries at the same time, so verify every source before you touch any wiring.\n  <b>De-energise before you open anything.</b> Disconnect the shore cord, shut the generator down, and switch the inverter off before going near the 120-volt breaker box or any of the 120-volt wiring.\n  To work out what any one appliance draws on either system, the <a href=\"tools/watts-to-amps\">watts to amps calculator</a> does the arithmetic."
+       "html": "<b>More than one source can be live at once.</b> A coach may be energised by shore power, an inverter and the batteries at the same time, so verify every source before you touch any wiring. Shore power and the generator are the exception: those two are never run together, because they are separate supplies feeding one panel.\n  <b>De-energise before you open anything.</b> Disconnect the shore cord, shut the generator down, and switch the inverter off before going near the 120-volt breaker box or any of the 120-volt wiring.\n  To work out what any one appliance draws on either system, the <a href=\"tools/watts-to-amps\">watts to amps calculator</a> does the arithmetic."
       }
      ]
     },
