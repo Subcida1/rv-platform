@@ -14,8 +14,8 @@
     "html": "<b>An empty water heater burns out its tank the first time it is switched on, and that damage is not covered by warranty.</b> Fill the tank first. Open a hot tap and let it run until the flow is steady, with no spitting or sputtering. That is the confirmation the tank is full, and only then does the electric element or the burner get switched on."
    },
    {
-    "n": "3. Level the coach before the fridge runs",
-    "html": "<b>Level the coach before the fridge runs.</b> An absorption fridge has no pump: it relies on gravity to move the coolant around a sealed loop. Parked far enough off level, the circulation stalls, the boiler overheats and the cooling unit is damaged. Norcold publishes the limit, 3 degrees off level side to side and 6 front to back, and running past it \"can cause damage to the cooling system and create a risk of personal injury or property damage.\" Level the coach before you switch it on, and switch it off if you are parked out of level. Fridge fires are a real thing but a different fault: the recalls trace them to a crack in the boiler tube letting coolant out, not to levelling. The <a href=\"guides/rv-refrigerator-not-cooling.html\">fridge guide</a> covers both."
+    "n": "3. Never leave the fridge running long in a coach that is badly out of level",
+    "html": "<b>Never leave the fridge running for long in a badly out-of-level coach.</b> Driving does not matter: the motion of the road keeps the coolant moving, so the coach does not need to be level while you travel. Parked is what counts. An absorption fridge has no pump and relies on gravity to circulate the coolant around a sealed loop, and sat at a slant for days with the fridge running, the circulation stalls and the boiler overheats. Norcold's limit is 3 degrees off level side to side and 6 front to back, and running past it \"can cause damage to the cooling system and create a risk of personal injury or property damage.\" A night or two slightly off is not the problem. Weeks at a slant is. If the coach is going to sit well out of level, level it or switch the fridge off. The <a href=\"guides/rv-refrigerator-not-cooling.html\">fridge guide</a> covers what to do when one stops cooling."
    },
    {
     "n": "4. Fit a water pressure regulator before you hook up",
@@ -50,8 +50,8 @@
     "html": "<b>Never travel with full black or grey tanks.</b> A full tank is weight moving at the worst possible place in the coach, and the structure and the tank mounts were not built for that load shifting. Dump before you drive, not after you arrive."
    },
    {
-    "n": "12. Never tow with the stabilisers down",
-    "html": "<b>Stabilisers and jacks come up before the wheels turn.</b> They are not suspension and they are not rated to take a bump at speed; the first pothole bends a leg, and on some systems the damage runs back into the frame. Walk the coach and look at all four corners before you pull out, the same way you look at what is on the roof."
+    "n": "12. Bring the stabilisers up before you change the coach's level",
+    "html": "<b>Bring the stabilisers up before you change the coach's level.</b> Stabilisers steady a coach; they do not carry it. So before you touch the tongue jack, the landing gear or any levelling block, wind the stabilisers up. Leave them down and raise or lower the coach and you are putting its weight onto legs that were never built to take it, which bends them and stresses the frame around them. The order is always the same: stabilisers up, adjust the level, stabilisers back down."
    }
   ]
  }

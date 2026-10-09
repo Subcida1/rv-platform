@@ -20,10 +20,10 @@
        "items": [
         "<b>Park, then level.</b> Level side to side first, then front to back. The two corrections use different tools: side to side is set with blocks or ramps under the wheels, and front to back is the small adjustment made last, with the tongue jack or the landing gear.",
         "<b>Chock the wheels.</b> Chock them even on level ground, and put them in before the stabilisers rather than after.",
-        "<b>Look at the pedestal, then test it.</b> Test the outlet with a multimeter, or with a surge protector that has diagnostics built in, before the cord goes anywhere near it. A pedestal that is scorched, cracked or loose is one to report rather than use.",
+        "<b>Look at the pedestal, then test it.</b> Test the outlet with a surge protector that has diagnostics built in, before the cord goes anywhere near it. A pedestal that is scorched, cracked or loose is one to report rather than use.",
         "<b>Make the power connection with the pedestal breaker off.</b> The coach end of the cord goes in first, then the pedestal end, and the breaker goes on last. Running off a generator instead of a hookup: start the generator first, check the breaker on the generator itself, then switch the coach over to it.",
         "<b>Check the coach's own breaker panel</b> for anything tripped, and switch the converter on if it has its own switch.",
-        "<b>Confirm the battery is charging</b> by watching its voltage rise over a few minutes. The <a href=\"guides/rv-battery-not-charging.html\">battery guide</a> gives the numbers to expect.",
+        "<b>Confirm the battery is charging.</b> Watch the battery gauge on the monitor panel. If it read three quarters before you plugged in and it reads full a little later, the charger is working. The <a href=\"guides/rv-battery-not-charging.html\">battery guide</a> covers what to do when the reading does not move.",
         "<b>Water next.</b> Connect the drinking-water hose through a pressure regulator, then open a cold tap inside and let it run to push the air out of the lines. Do not walk away from a tank that is filling.",
         "<b>Fill the water heater before it is switched on.</b> Open a hot tap and let it run until the flow is steady, with no spitting or sputtering. That is what confirms the tank is full. Only then does the electric element or the burner get switched on.",
         "<b>Propane last.</b> Open the main valve slowly, and if you smell gas, stop and find out why before anything is lit.",
@@ -129,7 +129,7 @@
     },
     {
      "id": "arriving-at-a-campsite",
-     "title": "Arriving at a campsite: what to do in order",
+     "title": "Arriving at a campsite: what to do when you pull in",
      "open": false,
      "blocks": [
       {
@@ -141,7 +141,9 @@
        "items": [
         "<b>Check in, then look at the site on foot.</b> Walk the pad before you commit the coach to it, and note which side the pedestal and the sewer connection are on, so you park with the connections within reach.",
         "<b>Do not cut across your neighbour.</b> Do not cut through another occupied site to reach the bathroom, the lake, or a trail.",
+        "<b>If your vehicle is in somebody's way, move it before they ask.</b> A coach backing into a tight site has very little room, and the van parked opposite is often the thing making it hard. Offering costs you nothing and it is what everyone on a campground expects of everyone else.",
         "<b>Back or pull in with a spotter.</b> Use someone outside who can see what you cannot, and agree on the hand signals before you start.",
+        "<b>If you are backing in after dark, put lights on the ground.</b> A torch laid on the ground at each corner you are aiming for, or one at the far end of the pad, gives you something fixed to steer by. It is far easier than judging distance against the dark.",
         "<b>Level, then chock.</b> Side to side first, then front to back, as set out above.",
         "<b>Hook up water, power and sewer</b> in the order given earlier, keeping the black valve closed.",
         "<b>Keep the noise reasonable.</b> If you can hear it two sites away, it is too loud. Official quiet hours might end at 8 AM, but generators and slide motors before 8 AM are rude even if they are technically permitted."
@@ -300,7 +302,7 @@
       },
       {
        "kind": "p",
-       "html": "<b>Test it before the cord goes in.</b> The pedestal breaker goes off first, then the outlet is tested with a multimeter or with a surge protector that has diagnostics built in. Three green indicator lights is a pass. On a fail, do not connect: move the coach to another pedestal, or have the fault corrected. A pedestal that is scorched, cracked or loose is one to report rather than use."
+       "html": "<b>Test it before the cord goes in.</b> The pedestal breaker goes off first, then the outlet is tested with a surge protector that has diagnostics built in, or with a multimeter if you carry one. Three green indicator lights is a pass. On a fail, do not connect: move the coach to another pedestal, or have the fault corrected. A pedestal that is scorched, cracked or loose is one to report rather than use."
       },
       {
        "kind": "list",
@@ -506,11 +508,7 @@
      "blocks": [
       {
        "kind": "p",
-       "html": "Leveling corrects the slope the coach is parked on. Stabilising reduces the rocking that people and movement cause. The two are done by different hardware, and the most common warning is not to confuse them: while levelers can technically stabilize, stabilizers cannot level. The distinction matters because using stabilizers for leveling can result in ineffective performance and potential damage to your RV."
-      },
-      {
-       "kind": "p",
-       "html": "The two parts do different jobs. Leveling jacks are designed to support the weight of the RV and adjust its position as needed, while stabilizers, also known as stabilizer jacks, are not intended for leveling purposes. Stabilizers are designed solely for enhancing stability and should not be used for leveling."
+       "html": "<b>Jacks lift. Stabilisers stop the rocking.</b> A levelling jack, or the tongue jack on a trailer, carries the weight of the coach and changes its height. A stabiliser, which a lot of people call a stabiliser jack, does neither: it comes down to touch the ground and stops the coach moving when you walk around inside it. That is the whole difference, and it is worth holding on to, because both get called jacks and the mistake is expensive. <b>Level with a jack. Steady with a stabiliser. Never level with a stabiliser</b>, because you would be hanging the coach's weight on legs that were never built to take it."
       },
       {
        "kind": "list",
