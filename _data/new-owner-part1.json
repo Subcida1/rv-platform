@@ -22,6 +22,8 @@
         "<b>Chock the wheels.</b> Chock them even on level ground, and put them in before the stabilisers rather than after.",
         "<b>Look at the pedestal, then test it.</b> Test the outlet with a multimeter, or with a surge protector that has diagnostics built in, before the cord goes anywhere near it. A pedestal that is scorched, cracked or loose is one to report rather than use.",
         "<b>Make the power connection with the pedestal breaker off.</b> The coach end of the cord goes in first, then the pedestal end, and the breaker goes on last. Running off a generator instead of a hookup: start the generator first, check the breaker on the generator itself, then switch the coach over to it.",
+        "<b>Check the coach's own breaker panel</b> for anything tripped, and switch the converter on if it has its own switch.",
+        "<b>Confirm the battery is charging</b> by watching its voltage rise over a few minutes. The <a href=\"guides/rv-battery-not-charging.html\">battery guide</a> gives the numbers to expect.",
         "<b>Water next.</b> Connect the drinking-water hose through a pressure regulator, then open a cold tap inside and let it run to push the air out of the lines. Do not walk away from a tank that is filling.",
         "<b>Fill the water heater before it is switched on.</b> Open a hot tap and let it run until the flow is steady, with no spitting or sputtering. That is what confirms the tank is full. Only then does the electric element or the burner get switched on.",
         "<b>Propane last.</b> Open the main valve slowly, and if you smell gas, stop and find out why before anything is lit.",
