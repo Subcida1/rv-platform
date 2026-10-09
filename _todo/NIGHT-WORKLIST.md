@@ -17,6 +17,26 @@ every night session**, do one item, commit it, tick it here, move to the next.
 
 ## Website
 
+### 0. THE VISUAL RULES TY ASKED FOR (do this first, it is a standing instruction)
+Ty, 2026-10-09: "consistency is key here for our visual structure we should develop/enforce these
+visual rules." Two rules are now established by evidence rather than taste, and both were violations
+the tool introduced:
+
+- **Every page body sits inside `.sec prose` > `.wrap narrow`.** Without it a page measures left=0
+  right=0 at 360px and runs edge to edge. This is what Ty saw on his phone on 2026-10-08.
+- **An ordinary guide tile carries no `.guide-go` line.** That element belongs to `.man-pinned`
+  cards, where it reads "Open the walkthrough". 38 of 44 tiles had no such line and the tool was the
+  only thing adding it.
+
+Both came from `new-guide.py` omitting a structural layer the template owns. Before trusting any
+generator, compare its output against a page it did NOT write. The remaining rules to pin down, in
+Ty's words, are "centering, fading, sizing, spacing": measure them on a phone first, then write the
+rule into this file, then add a gate so it cannot drift.
+
+### 0b. The mobile audit has a port trap
+`scripts/audit-mobile.mjs` defaults to Chrome on 9340. The live browser is usually on 9341. Pass
+`--port 9341` or it dies with ECONNREFUSED and looks like the instrument is broken.
+
 ### 1. The native-English pass (Ty asked for this directly)
 "ensure our content is written to be english native, go through everything."
 
