@@ -2,12 +2,12 @@
  "parts": [
   {
    "id": "maintenance",
-   "title": "Maintenance",
+   "title": "Part 5: Maintenance and wear",
    "summary": "The maintenance schedule a new owner can follow, then tires, plumbing, seals and cleaning in depth.",
    "sections": [
     {
      "id": "maintenance-schedule",
-     "title": "The maintenance schedule",
+     "title": "RV maintenance schedule: what to do and when",
      "open": true,
      "blocks": [
       {
@@ -107,7 +107,7 @@
     },
     {
      "id": "tires-why-and-markings",
-     "title": "Tires: why they fail and how to read them",
+     "title": "RV tires: how to read them and why they fail",
      "open": true,
      "blocks": [
       {
@@ -147,7 +147,7 @@
     },
     {
      "id": "tires-age",
-     "title": "The tire age question",
+     "title": "How old are my RV tires? Reading the DOT date code",
      "open": false,
      "blocks": [
       {
@@ -192,7 +192,7 @@
     },
     {
      "id": "tires-inflation",
-     "title": "Inflating to the load table",
+     "title": "RV tire pressure: how to use the load and inflation table",
      "open": false,
      "blocks": [
       {
@@ -242,7 +242,7 @@
     },
     {
      "id": "tires-tpms-and-storage",
-     "title": "TPMS, valve stems and storage",
+     "title": "RV tire pressure monitoring, valve stems and storage",
      "open": false,
      "blocks": [
       {
@@ -283,7 +283,7 @@
     },
     {
      "id": "plumbing-fittings",
-     "title": "The factory-fresh plumbing problem",
+     "title": "RV plumbing leaks: the factory fittings that work loose",
      "open": false,
      "blocks": [
       {
@@ -320,7 +320,7 @@
     },
     {
      "id": "seals-roof-delamination",
-     "title": "Seals, roof and delamination",
+     "title": "RV roof sealant and delamination: what to look for",
      "open": false,
      "blocks": [
       {
@@ -374,7 +374,7 @@
     },
     {
      "id": "cleaning-and-care",
-     "title": "Cleaning and care",
+     "title": "How to clean and care for an RV",
      "open": false,
      "blocks": [
       {
@@ -422,12 +422,12 @@
   },
   {
    "id": "driving-and-towing",
-   "title": "Driving and towing",
+   "title": "Part 6: Driving and towing",
    "summary": "Driving a motorhome, towing a travel trailer, fifth wheel specifics, backing up and pop-up campers.",
    "sections": [
     {
      "id": "driving-motorhome",
-     "title": "Driving a motorhome",
+     "title": "How to drive a motorhome",
      "open": true,
      "blocks": [
       {
@@ -468,7 +468,7 @@
     },
     {
      "id": "towing-trailer",
-     "title": "Towing a trailer",
+     "title": "How to tow a travel trailer safely",
      "open": true,
      "blocks": [
       {
@@ -539,7 +539,7 @@
     },
     {
      "id": "fifth-wheel",
-     "title": "Fifth-wheel specifics",
+     "title": "Fifth wheel towing: what is different",
      "open": false,
      "blocks": [
       {
@@ -562,7 +562,7 @@
     },
     {
      "id": "backing-up",
-     "title": "Backing up",
+     "title": "How to back up a trailer",
      "open": false,
      "blocks": [
       {
@@ -585,7 +585,7 @@
     },
     {
      "id": "pop-ups",
-     "title": "Pop-ups and hybrids",
+     "title": "Pop-up campers and hybrids: setup and care",
      "open": false,
      "blocks": [
       {

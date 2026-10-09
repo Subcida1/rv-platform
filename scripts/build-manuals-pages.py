@@ -545,10 +545,11 @@ def render_new_owner(data):
     # fetch-confirmed sources are listed: a URL that merely appeared in a search result has not
     # been read, and cannot verify anything.
     src = ROOT / "_data" / "new-owner-sources.json"
+    sources_link = False
     if src.exists():
         items = json.loads(src.read_text(encoding="utf-8")).get("sources", [])
         if items:
-            nav.append('<a class="no-nav-part" href="#sources">Sources</a>')
+            sources_link = True
             body.append('<h2 class="man-h2" id="sources">Sources</h2>')
             body.append('<p>The documents behind the figures and quotations in this guide.</p>')
             # COLLAPSED. The list is long because a guide this size rests on a lot of
@@ -561,11 +562,17 @@ def render_new_owner(data):
                             '<li><a href="%s" rel="nofollow noopener">%s</a></li>'
                             % (i["url"], i["label"]) for i in items)))
 
+    # SOURCES IS NOT A PART, and as a ninth chip it wrapped onto a line of its own. Ty, 2026-10-08:
+    # "sources just adds an extra line and I feel like maybe we should just organize those buttons up
+    # top somehow better." It sits at the right of the disclosure row instead, which costs no line.
+    src_link = '<a class="no-nav-src" href="#sources">Sources</a>' if sources_link else ""
     return ('<nav class="no-nav" aria-label="On this page"><p class="no-nav-h">On this page</p>'
             '<div class="no-nav-parts">%s</div>'
+            '<div class="no-nav-foot">'
             '<details class="no-nav-all"><summary>All %d sections</summary><ul>%s</ul></details>'
-            '</nav>' % ("\n".join(nav), sum(len(p["sections"]) for p in data["parts"]),
-                        "".join(sections)),
+            '%s</div></nav>'
+            % ("\n".join(nav), sum(len(p["sections"]) for p in data["parts"]),
+               "".join(sections), src_link),
             "\n".join(body))
 
 

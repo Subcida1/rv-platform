@@ -3,12 +3,12 @@
  "parts": [
   {
    "id": "first-days",
-   "title": "Part 1: Your first days",
+   "title": "Part 1: Getting started",
    "summary": "The first night plugged in, the order to hook up water, power and sewer and to undo them, the walkaround before a trip, what to do on arrival, and the mistakes new owners make in the first week.",
    "sections": [
     {
      "id": "first-night",
-     "title": "The first night, in order",
+     "title": "How to plug in your RV on the first night",
      "open": true,
      "blocks": [
       {
@@ -36,7 +36,7 @@
     },
     {
      "id": "hookup-sequence",
-     "title": "Hookups: water, power, sewer, and the reverse",
+     "title": "How to hook up an RV at a campsite",
      "open": true,
      "blocks": [
       {
@@ -102,7 +102,7 @@
     },
     {
      "id": "pre-trip-walkaround",
-     "title": "The pre-trip walkaround",
+     "title": "The RV pre-trip walkaround checklist",
      "open": false,
      "blocks": [
       {
@@ -127,7 +127,7 @@
     },
     {
      "id": "arriving-at-a-campsite",
-     "title": "Arriving at a campsite",
+     "title": "Arriving at a campsite: what to do in order",
      "open": false,
      "blocks": [
       {
@@ -153,7 +153,7 @@
     },
     {
      "id": "first-week-mistakes",
-     "title": "The mistakes people make in the first week",
+     "title": "New RV owner mistakes to avoid in the first week",
      "open": false,
      "blocks": [
       {
@@ -179,12 +179,12 @@
   },
   {
    "id": "systems",
-   "title": "Part 2: The systems",
+   "title": "Part 2: How your RV works",
    "summary": "How the 12-volt and 120-volt systems divide the work, how shore power is tested and sized, how water and propane behave, what each appliance needs, and what is settled and what is not on slide-outs, leveling and electronics.",
    "sections": [
     {
      "id": "two-electrical-systems",
-     "title": "The two electrical systems, and the rule for each",
+     "title": "RV electrical systems: 12 volt and 120 volt explained",
      "open": true,
      "blocks": [
       {
@@ -244,7 +244,7 @@
     },
     {
      "id": "shore-power",
-     "title": "Shore power: the pedestal, 30 amps and 50 amps",
+     "title": "RV shore power: 30 amp vs 50 amp, and testing the pedestal",
      "open": false,
      "blocks": [
       {
@@ -347,7 +347,7 @@
     },
     {
      "id": "water-system",
-     "title": "The water system",
+     "title": "How the RV water system works",
      "open": false,
      "blocks": [
       {
@@ -382,7 +382,7 @@
     },
     {
      "id": "propane-system",
-     "title": "Propane and its safety drill",
+     "title": "RV propane: what to check and when",
      "open": false,
      "blocks": [
       {
@@ -410,7 +410,7 @@
     },
     {
      "id": "appliances",
-     "title": "The appliances: fridge, water heater, furnace, air conditioning",
+     "title": "RV appliances: fridge, water heater, furnace and air conditioning",
      "open": false,
      "blocks": [
       {
@@ -476,7 +476,7 @@
     },
     {
      "id": "slide-outs",
-     "title": "Slide-outs, and when to extend them",
+     "title": "RV slide-outs: when to extend them and what breaks",
      "open": false,
      "blocks": [
       {
@@ -499,7 +499,7 @@
     },
     {
      "id": "leveling-and-stabilising",
-     "title": "Leveling and stabilising are not the same job",
+     "title": "How to level an RV, and why stabilisers are not jacks",
      "open": false,
      "blocks": [
       {
@@ -531,7 +531,7 @@
     },
     {
      "id": "entertainment-and-electronics",
-     "title": "Entertainment and electronics: the reality check",
+     "title": "RV internet, TV and power: what actually works",
      "open": false,
      "blocks": [
       {

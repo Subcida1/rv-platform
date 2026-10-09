@@ -318,7 +318,15 @@ input,select,textarea{font-family:inherit}
 .no-nav{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
   padding:14px 16px;font-size:13.5px;line-height:1.5;margin-bottom:30px}
 .no-nav-parts{display:flex;flex-wrap:wrap;gap:8px}
-.no-nav-all{margin-top:12px}
+/* The disclosure and the Sources link share one row, so Sources stops costing a line of its own. */
+.no-nav-foot{display:flex;align-items:baseline;justify-content:space-between;gap:16px;
+  flex-wrap:wrap;margin-top:12px}
+/* .no-nav a IS MORE SPECIFIC THAN .no-nav-src, the same collision documented above for
+   .no-nav-part: one class plus one element beats one class, so the padding here was losing and the
+   link measured 27px against the 44px floor. Written as .no-nav a.no-nav-src to win. */
+.no-nav a.no-nav-src{font-weight:600;font-size:13px;color:var(--text-2);padding:13px 0;
+  text-decoration:none;display:inline-block}
+.no-nav a.no-nav-src:hover{color:var(--b1)}
 /* 12px of padding on the disclosure and on each section link, same reason as the chips: this site
    holds itself to a 44px touch target and the first pass here measured 32px and 34px. Most of this
    guide's readers are on a phone. */

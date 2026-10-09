@@ -2,7 +2,7 @@
  "parts": [
   {
    "id": "questions",
-   "title": "Questions people ask first",
+   "title": "Part 7: New owner questions",
    "summary": "The things a new owner searches for, answered from the sections above.",
    "sections": [
     {
@@ -56,7 +56,7 @@
     },
     {
      "id": "q-first-day",
-     "title": "What should I do on the very first day?",
+     "title": "What should I do on my very first day with an RV?",
      "open": false,
      "blocks": [
       {

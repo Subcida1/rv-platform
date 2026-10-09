@@ -2,12 +2,12 @@
  "parts": [
   {
    "id": "water-and-waste",
-   "title": "Water and waste",
+   "title": "Part 3: Water, waste and tanks",
    "summary": "How the fresh, grey and black tanks work, how to read the panel, how to dump without clogging, where a sewer smell really comes from, and how to keep clean water and dry floors.",
    "sections": [
     {
      "id": "three-tanks",
-     "title": "The three tanks and what each holds",
+     "title": "RV holding tanks: fresh, grey and black explained",
      "open": true,
      "blocks": [
       {
@@ -64,7 +64,7 @@
     },
     {
      "id": "monitor-panel",
-     "title": "Reading the monitor panel, and why it lies",
+     "title": "RV tank sensors reading wrong, and what to do",
      "open": true,
      "blocks": [
       {
@@ -95,7 +95,7 @@
     },
     {
      "id": "black-tank-water",
-     "title": "The black tank: why water goes in, and how much",
+     "title": "How much water to put in your RV black tank",
      "open": false,
      "blocks": [
       {
@@ -130,7 +130,7 @@
     },
     {
      "id": "black-tank-pyramid",
-     "title": "The pyramid problem",
+     "title": "The RV poop pyramid: how it forms and how to avoid it",
      "open": false,
      "blocks": [
       {
@@ -157,7 +157,7 @@
     },
     {
      "id": "black-tank-chemicals",
-     "title": "Chemicals, and what never goes in",
+     "title": "RV black tank chemicals: what to use and what never goes in",
      "open": false,
      "blocks": [
       {
@@ -196,7 +196,7 @@
     },
     {
      "id": "dumping-order",
-     "title": "Dumping in the right order",
+     "title": "How to dump your RV tanks in the right order",
      "open": false,
      "blocks": [
       {
@@ -244,7 +244,7 @@
     },
     {
      "id": "grey-tank-smells",
-     "title": "The grey tank, and why a sewer smell is usually not the tank",
+     "title": "RV sewer smell inside: why it is usually not the tank",
      "open": false,
      "blocks": [
       {
@@ -281,7 +281,7 @@
     },
     {
      "id": "fresh-water",
-     "title": "Fresh water: sanitising, hoses and pressure",
+     "title": "How to sanitise your RV fresh water tank",
      "open": false,
      "blocks": [
       {
@@ -336,7 +336,7 @@
     },
     {
      "id": "flooding",
-     "title": "The classic ways a new owner floods an RV",
+     "title": "How RV water damage happens, and how to avoid it",
      "open": false,
      "blocks": [
       {
@@ -373,12 +373,12 @@
   },
   {
    "id": "seasons",
-   "title": "Seasons",
+   "title": "Part 4: Cold, heat and storage",
    "summary": "What cold breaks and in what order, how to winterise and where half-jobs fail, what four-season really means, and how to stop condensation and mould.",
    "sections": [
     {
      "id": "freezing",
-     "title": "What freezing breaks, and in what order",
+     "title": "What freezing does to an RV, and in what order",
      "open": true,
      "blocks": [
       {
@@ -405,7 +405,7 @@
     },
     {
      "id": "winterising",
-     "title": "Winterising two ways, and the half-jobs that still freeze",
+     "title": "How to winterize an RV: the two methods, and the half-jobs that still freeze",
      "open": true,
      "blocks": [
       {
@@ -485,7 +485,7 @@
     },
     {
      "id": "four-season",
-     "title": "What four-season actually means",
+     "title": "What a four-season RV actually means",
      "open": false,
      "blocks": [
       {
@@ -512,7 +512,7 @@
     },
     {
      "id": "insulation-underbelly",
-     "title": "Insulation, underbelly and heated tanks",
+     "title": "RV underbelly insulation and heated tanks",
      "open": false,
      "blocks": [
       {
@@ -574,7 +574,7 @@
     },
     {
      "id": "condensation",
-     "title": "Condensation and why it forms",
+     "title": "RV condensation: why it forms and how to stop it",
      "open": false,
      "blocks": [
       {
@@ -603,7 +603,7 @@
     },
     {
      "id": "storage",
-     "title": "Storage, short and long term, and mould",
+     "title": "How to store an RV, short term and long term",
      "open": false,
      "blocks": [
       {
