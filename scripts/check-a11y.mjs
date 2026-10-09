@@ -160,7 +160,15 @@ for (const page of pages) {
   await send('Runtime.evaluate', { expression: axe });
 
   const out = await send('Runtime.evaluate', {
-    expression: `axe.run(document, { resultTypes: ['violations'] }).then(r => JSON.stringify({
+    // WCAG 2.2 TARGET SIZE IS OFF BY DEFAULT AND HAS TO BE ASKED FOR. Deque ships the target-size
+    // rule disabled "until WCAG 2.2 is more widely adopted", so a default axe run checks no touch
+    // targets at all: an accessibility gate that says nothing about whether a thumb can hit the
+    // button. Ty, 2026-10-09: "mobile should be our priority formatting." Turned on deliberately.
+    // Note the standard it applies: WCAG 2.5.8 (AA) is 24x24 CSS px and is met by spacing as well as
+    // size, with an inline-link exception. The 44px figure our own scripts use is 2.5.5 (AAA) and is
+    // a house standard for this audience, not the obligation.
+    expression: `axe.run(document, { resultTypes: ['violations'],
+      rules: { 'target-size': { enabled: true } } }).then(r => JSON.stringify({
       v: r.violations.map(x => ({ id: x.id, impact: x.impact, help: x.help, n: x.nodes.length,
         sample: (x.nodes[0] && x.nodes[0].target) || [],
         // axe's own measurement, so the report says WHY rather than only WHAT. For contrast it

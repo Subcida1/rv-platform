@@ -135,8 +135,13 @@
     it fits from roughly 860 up and there is real headroom at 900. Below that the
     burger and the menu carry it, and the menu already holds every nav link, so
     nothing is lost by reaching for it. */
- function searchFieldHTML(cls, placeholder) {
- return '<form class="' + cls + ' js-search-form" role="search">' +
+ /* THE FORM IS THE LANDMARK, NOT THE INPUT. Both the desktop search and the mobile-menu search
+    carry role="search", and the label was on the <input> rather than on the form, so a screen
+    reader met two unnamed search landmarks and axe's landmark-unique rule flagged the pair. Each
+    form now carries its own name. Found by scripts/check-a11y.mjs on 2026-10-09. */
+ function searchFieldHTML(cls, placeholder, landmark) {
+ return '<form class="' + cls + ' js-search-form" role="search" aria-label="' +
+   esc(landmark || 'Site search') + '">' +
  '<div class="search-bar">' + ROAD_ICON +
  /* name="q" is not decoration: search.js reads ?q= on load to honour the WebSite
        SearchAction the homepage declares, and without a name a real form submit carries no
@@ -188,14 +193,14 @@
  '<a href="' + R(rt.manualsRecalls) + '">Recalls and bulletins<span class="sm">Check a unit, and the federal bulletin file</span></a>' +
  '<a href="' + R(rt.manuals) + '">All manuals<span class="sm">Every system, linked at the maker</span></a></div></div>' +
  '</div>' +
- searchFieldHTML('nav-search', 'Search or ZIP') +
+ searchFieldHTML('nav-search', 'Search or ZIP', 'Site search') +
  '<div class="nav-actions">' + signinLink('btn btn-outline btn-sm') +
  /* The button says where it goes ("RV tools"); the caption above it carries the
     "free" promise that used to live in the utility strip. Ty, 2026-10-05. */
  '<span class="nav-cta"><span class="nav-cta-cap">Free tools</span><a class="btn btn-primary btn-sm btn-shine" href="' + R(rt.tools) + '">RV tools</a></span>' +
  '<button type="button" class="burger" aria-label="Menu" onclick="RV.toggleMenu()"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h12M4 10h12M4 14h12"/></svg></button></div>' +
  '</div>' +
- '<div class="mobile-menu">' + searchFieldHTML('mm-search', 'Search, or a ZIP or town') +
+ '<div class="mobile-menu">' + searchFieldHTML('mm-search', 'Search, or a ZIP or town', 'Site search, mobile menu') +
  '<a class="mm-top" href="' + R(rt.home) + '">Home</a>' +
  mmGroup('Tools', rt.tools, [['Weight calculator', rt.calculator]]) +
  mmGroup('Guides', rt.guides, [['Winterize plumbing', rt.guideWinterize],
