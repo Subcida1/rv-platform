@@ -35,6 +35,31 @@
      ]
     },
     {
+     "id": "pre-trip-walkaround",
+     "title": "The RV pre-trip walkaround checklist",
+     "open": false,
+     "blocks": [
+      {
+       "kind": "p",
+       "html": "A walkaround is a fixed loop around the coach before every departure, done in the same direction each time so that nothing is skipped. The point is not a detailed inspection. It is to catch the handful of things that are dangerous or expensive when they are left loose or left behind."
+      },
+      {
+       "kind": "list",
+       "items": [
+        "<b>Tires.</b> Check pressure against the figure on the coach's placard, not the number on the sidewall, and look for cuts and bulges. Two age facts matter. The build date is the last four digits of the DOT code: the first two digits are the week from 01 to 52, and the last two are the year. A tire can be too old while still looking new, so replace a tire that has been in service six years or more even if it looks serviceable and has not reached the treadwear limit. Check tread depth with a coin: a tire is unsafe when the minimum tread depth reaches 2/32 inch, the distance between the top of Lincoln's head and the edge on a penny.",
+        "<b>Height.</b> Know the tallest point of the coach before you drive anywhere, because an awning, an antenna and an air conditioner all add to it. Measure from the ground all the way to the top of the highest object on the RV, then post that number on your dashboard so you do not forget it.",
+        "<b>The hitch or the coupling.</b> For a trailer, the tongue weight wants to be roughly a tenth to a sixth of the loaded trailer weight, which is 10 to 15 percent. Load the heavy items low and forward, and keep them out of the back. Never load heavy items in the back of the trailer or on the back bumper.",
+        "<b>Everything that folds, slides or latches.</b> Awning in, antenna down, steps up, slide-outs in, roof vents closed, compartment doors latched. Use a checklist every time you arrive at or leave a campsite, because it is easy to forget simple things like unplugging power cords or lowering the TV antenna.",
+        "<b>Propane while moving.</b> Turn the propane supply off at the tank while driving."
+       ]
+      },
+      {
+       "kind": "callout",
+       "html": "A checklist is not a sign of inexperience. The failures it prevents are the familiar ones: an awning left out, a television antenna left up, or a cord still plugged in as the coach pulls away."
+      }
+     ]
+    },
+    {
      "id": "hookup-sequence",
      "title": "How to hook up an RV at a campsite",
      "open": true,
@@ -97,31 +122,6 @@
       {
        "kind": "callout",
        "html": "The single most expensive habit in the first week is leaving the black tank valve open at a full-hookup site. The liquid runs away and the solids stay behind, and the tank slowly builds a pile that no amount of flushing removes. Keep the valve closed until the tank is at least two-thirds full."
-      }
-     ]
-    },
-    {
-     "id": "pre-trip-walkaround",
-     "title": "The RV pre-trip walkaround checklist",
-     "open": false,
-     "blocks": [
-      {
-       "kind": "p",
-       "html": "A walkaround is a fixed loop around the coach before every departure, done in the same direction each time so that nothing is skipped. The point is not a detailed inspection. It is to catch the handful of things that are dangerous or expensive when they are left loose or left behind."
-      },
-      {
-       "kind": "list",
-       "items": [
-        "<b>Tires.</b> Check pressure against the figure on the coach's placard, not the number on the sidewall, and look for cuts and bulges. Two age facts matter. The build date is the last four digits of the DOT code: the first two digits are the week from 01 to 52, and the last two are the year. A tire can be too old while still looking new, so replace a tire that has been in service six years or more even if it looks serviceable and has not reached the treadwear limit. Check tread depth with a coin: a tire is unsafe when the minimum tread depth reaches 2/32 inch, the distance between the top of Lincoln's head and the edge on a penny.",
-        "<b>Height.</b> Know the tallest point of the coach before you drive anywhere, because an awning, an antenna and an air conditioner all add to it. Measure from the ground all the way to the top of the highest object on the RV, then post that number on your dashboard so you do not forget it.",
-        "<b>The hitch or the coupling.</b> For a trailer, the tongue weight wants to be roughly a tenth to a sixth of the loaded trailer weight, which is 10 to 15 percent. Load the heavy items low and forward, and keep them out of the back. Never load heavy items in the back of the trailer or on the back bumper.",
-        "<b>Everything that folds, slides or latches.</b> Awning in, antenna down, steps up, slide-outs in, roof vents closed, compartment doors latched. Use a checklist every time you arrive at or leave a campsite, because it is easy to forget simple things like unplugging power cords or lowering the TV antenna.",
-        "<b>Propane while moving.</b> Turn the propane supply off at the tank while driving."
-       ]
-      },
-      {
-       "kind": "callout",
-       "html": "A checklist is not a sign of inexperience. The failures it prevents are the familiar ones: an awning left out, a television antenna left up, or a cord still plugged in as the coach pulls away."
       }
      ]
     },
