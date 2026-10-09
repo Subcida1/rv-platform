@@ -12,7 +12,7 @@
      "blocks": [
       {
        "kind": "p",
-       "html": "A new RV needs a schedule. Most of the work is inspection and cleaning, and it runs on a calendar rather than on mileage. Your owner's manual is the authority: it lists what to check and when for your exact model, and it also lists what the warranty expects you to do."
+       "html": "A new RV needs a schedule. Most of the work is inspection and cleaning, and it runs on a calendar rather than on mileage. Your owner's manual is the authority: it lists what to check and when for your exact model, and it also lists what the warranty expects you to do. The <a href=\"guides/rv-maintenance-schedule\">maintenance schedule</a> sets all of this out by interval, from every trip to annually."
       },
       {
        "kind": "p",
@@ -434,7 +434,7 @@
      "blocks": [
       {
        "kind": "p",
-       "html": "A motorhome is longer than a car and it steers from the front, so the back end does not follow the front wheels exactly. The two ideas to learn are off-tracking and rear overhang. Off-tracking means the rear wheels follow a different path than the front wheels; the longer the wheelbase and the sharper the wheel cut, the greater the off-tracking. Rear overhang is the part of the RV that sticks out behind the drive axle."
+       "html": "A motorhome is longer than a car and it steers from the front, so the back end does not follow the front wheels exactly. The two ideas to learn are off-tracking and rear overhang. Off-tracking means the rear wheels follow a different path than the front wheels; the longer the wheelbase and the sharper the wheel cut, the greater the off-tracking. Rear overhang is the part of the RV that sticks out behind the drive axle. There is a full guide on <a href=\"guides/rv-driving-motorhome\">how to drive a motorhome</a>, including the height note and the tail swing."
       },
       {
        "kind": "p",
@@ -475,7 +475,7 @@
      "blocks": [
       {
        "kind": "p",
-       "html": "<b>Hitching, in order.</b> The one rule that never changes is that the wheel chocks stay in place until the whole procedure is finished, because the trailer can roll the moment the coupler is not seated on the ball."
+       "html": "<b>Hitching, in order.</b> The one rule that never changes is that the wheel chocks stay in place until the whole procedure is finished, because the trailer can roll the moment the coupler is not seated on the ball. The <a href=\"guides/rv-towing-trailer\">towing guide</a> takes the hitching procedure, sway and reversing step by step."
       },
       {
        "kind": "list",

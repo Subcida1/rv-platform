@@ -403,7 +403,7 @@
     "claims": "ca780a6dbc99c4d8"
   },
   "guides/index.html": {
-    "hash": "e257044456934a18",
+    "hash": "b76b5761bd78362c",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -617,6 +617,13 @@
     "sources": [],
     "claims": "b42c5240ff3f3533",
     "claims_date": "Oct 4, 2026"
+  },
+  "guides/rv-maintenance-schedule.html": {
+    "hash": "f21d895b1066f1d3",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
   },
   "guides/rv-outlets-not-working.html": {
     "hash": "97fc9abf364c2124",
@@ -871,7 +878,7 @@
     "claims": "2c668bd9cf981fe7"
   },
   "index.html": {
-    "hash": "7b6157cc690c0df5",
+    "hash": "826e37cd8e587677",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,

@@ -201,7 +201,7 @@
      "blocks": [
       {
        "kind": "p",
-       "html": "Dumping is a fixed sequence. Do it the same way every time and the hose stays clean and the valves keep working."
+       "html": "Dumping is a fixed sequence. Do it the same way every time and the hose stays clean and the valves keep working. The <a href=\"guides/rv-black-tank\">black tank guide</a> covers the whole job, including the chemicals and the flush."
       },
       {
        "kind": "list",
