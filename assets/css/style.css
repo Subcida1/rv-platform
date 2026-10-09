@@ -460,6 +460,22 @@ input,select,textarea{font-family:inherit}
 .no-sources{list-style:none;padding:0;margin:12px 0 4px;font-size:13px;line-height:1.6;
   columns:2;column-gap:26px}
 @media(max-width:720px){.no-sources{columns:1}}
+
+/* MOBILE, WHICH IS WHERE THIS PAGE IS ACTUALLY READ. Ty, 2026-10-08: "we're focusing on mobile
+   layout remember not 2k." Measured at 360px: the three-column symptom table needed 338px inside a
+   312px container, so it fell back to the sideways scroll the wide-table wrapper exists for, and the
+   standalone links in its third column measured 38px tall against the 44px floor this site holds
+   itself to. A link inside a sentence is exempt from that floor; a link standing alone in a table
+   cell is not. */
+@media(max-width:480px){
+  .man-table th,.man-table td{padding:8px 6px}
+  .no-body .man-table td a,.no-sec .man-table td a{display:inline-block;padding:14px 0}
+  /* THE CHIPS WERE WHAT THE TABLE COULD NOT SHRINK PAST. .tag is white-space:nowrap, so on the
+     narrowest phone "WATER HEATER" was a 100px unbreakable run flooring the first column, and the
+     three columns together needed 338px in a 312px container. Letting them wrap costs a line in one
+     cell and buys the table its fit. */
+  .no-body .tag,.no-sec .tag{white-space:normal;padding:3px 7px;font-size:11px}
+}
 .no-sources li{padding:3px 0;border-bottom:1px solid var(--border)}
 .no-sources a{color:var(--b1)}
 .no-sec{border-top:1px solid var(--border);padding:6px 0}
