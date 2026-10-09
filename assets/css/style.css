@@ -1284,7 +1284,10 @@ details.faq[open]{border-color:var(--border-2);box-shadow:var(--shadow-sm)}
 details.faq summary{cursor:pointer;font-weight:700;font-size:15.5px;padding:16px 0;list-style:none;position:relative;color:var(--text)}
 details.faq summary::after{content:"+";position:absolute;right:0;color:var(--text-3);font-size:20px;font-weight:500}
 details.faq[open] summary::after{content:"-"}
-details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-bottom:18px}
+/* 16px, matching .prose p. These are answers a reader actually reads, not a caption, and the
+   same audience argument applies. Found by scripts/check-reading.mjs picking a FAQ answer as
+   the median body paragraph on six guides and measuring it at 14.5px. */
+details.faq p{color:var(--text-2);font-size:16px;line-height:1.7;padding-bottom:18px}
 .callout{background:var(--grad-soft-2);border:1px solid var(--tint-edge);border-radius:var(--radius-sm);padding:18px 22px;margin-top:20px;color:var(--text);font-size:14.5px;line-height:1.65}
 
 /* ---------- app / phone ---------- */
@@ -1947,7 +1950,13 @@ details.faq p{color:var(--text-2);font-size:14.5px;line-height:1.7;padding-botto
 .prose h3{font-size:17px;font-weight:800}
 .prose h3.sm{font-size:16px}
 .prose h3.mt{margin-top:14px}
-.prose p{color:var(--text-2);font-size:14.5px;line-height:1.65;margin-top:8px}
+/* 16px, not 14.5px. Ty, 2026-10-09: "mobile should be our priority formatting... sizing".
+   Measured with scripts/check-reading.mjs: every guide rendered body text at 14.5px, below the
+   16px browser default, on a site whose readers are RV owners, older than the average web
+   audience, reading on a phone and often outdoors. WCAG sets no minimum body size, so this is a
+   judgement for this audience rather than a criterion. It costs about four characters per line
+   and buys legibility where it matters. */
+.prose p{color:var(--text-2);font-size:16px;line-height:1.65;margin-top:8px}
 .prose p.sm{font-size:14px}
 .prose p.flush{margin:0}
 .prose ul{color:var(--text-2);font-size:14.5px;line-height:1.75;margin-top:10px;padding-left:20px}
