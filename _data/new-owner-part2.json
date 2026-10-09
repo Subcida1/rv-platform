@@ -410,7 +410,7 @@
      "blocks": [
       {
        "kind": "p",
-       "html": "There are two methods: the wet method and the dry method."
+       "html": "There are two ways to winterise an RV, and both are in service of the same thing: getting every drop of water out of a system that will freeze and split. Which one suits your coach, how much antifreeze it takes, what pressure a blow-out runs at, and the order to work in are all in the <a href=\"guides/winterize-plumbing.html\">winterising guide</a>, which is the full job. What follows is the shape of it."
       },
       {
        "kind": "table",
@@ -438,28 +438,8 @@
        ]
       },
       {
-       "kind": "p",
-       "html": "The wet method pumps RV antifreeze through the lines until the pink liquid replaces the water; it must be safe for use in the freshwater lines. The dry method blows compressed air through the lines to push the water out, so that no water is left in the system to freeze. Either method still needs antifreeze poured into the P-traps, plus washer units and the toilet."
-      },
-      {
        "kind": "callout",
        "html": "Blow-out leaves a risk that antifreeze does not. The blow-out method can fail in freezing temperatures because it cannot always remove all the water from sensitive parts such as modern toilet water valves. The options rank as: blow-out risky, antifreeze good, a combination of antifreeze and blow-out best."
-      },
-      {
-       "kind": "p",
-       "html": "If you blow out, keep the pressure low: not above 45 psi, and 30 psi or below is recommended. Keep it between roughly 20 and 45 psi, and never above about 50. Do not connect an unregulated compressor directly to the RV plumbing."
-      },
-      {
-       "kind": "p",
-       "html": "Blow out with a fixture open so the air has an escape path. Leaving a faucet open on the hot-water side equalises pressure so the tank drains easily. Open one fixture at a time until only air comes out, clear the hot and cold sides separately, then close that fixture before moving to the next one."
-      },
-      {
-       "kind": "callout",
-       "html": "One step is genuinely contested: whether the low-point drains stay open or closed during a blow-out. One method closes the faucets and replaces the low-point drain caps before blowing through the fixtures; another leaves them open to push more water out. The rule that matters is to keep fixture valves open."
-      },
-      {
-       "kind": "p",
-       "html": "For the wet method, start with about two gallons of RV antifreeze, and check your manual because some RVs need more. Bypass the water heater so the antifreeze does not fill a six to ten gallon tank. Start from the furthest point and work toward the water pump, open the hot side of a faucet only, then repeat on the cold side. Purge the city-water intake check valve too, by pressing it until pink antifreeze appears."
       },
       {
        "kind": "callout",
@@ -473,14 +453,6 @@
         "<b>Bypassing the water heater without draining it.</b> Bypass keeps antifreeze out, but water left inside still freezes and can crack the tank. Bypassing the water heater without draining it first is a common mistake. Draining the water heater during winterising is a must.",
         "<b>Forgetting the exposed fixtures.</b> The outside shower, outdoor kitchen, black-tank flush line, city-water check valve, and washer or ice-maker lines each hold water that can freeze."
        ]
-      },
-      {
-       "kind": "p",
-       "html": "Use only RV or marine potable-water antifreeze, usually pink, and never automotive coolant. The safe type is propylene glycol, which the FDA classifies as generally recognized as safe for use in food. Automotive antifreeze is a different chemical: it contains the toxic ethylene glycol, whereas RV antifreeze is always ethanol or propylene-glycol based. Ethylene glycol is extremely toxic if ingested and should never be used in potable water systems."
-      },
-      {
-       "kind": "p",
-       "html": "Read the label for the temperature rating. A rating such as minus 50 degrees Fahrenheit is a burst-protection figure, not a promise that the liquid stays liquid that low."
       }
      ]
     },
