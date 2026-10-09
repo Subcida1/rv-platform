@@ -209,6 +209,11 @@
          "Shore power, a generator, or an inverter",
          "Air conditioning, microwave, the electric water-heater element, household outlets, a household-style television"
         ]
+       ],
+       "widths": [
+        12,
+        28,
+        60
        ]
       },
       {
@@ -279,6 +284,12 @@
          "None. It is built in",
          "Set by the generator: a small one is around 2,000 to 4,000 watts"
         ]
+       ],
+       "widths": [
+        18,
+        20,
+        18,
+        44
        ]
       },
       {
@@ -454,6 +465,11 @@
          "120 V only",
          "Shore power, a generator, or a large inverter"
         ]
+       ],
+       "widths": [
+        20,
+        40,
+        40
        ]
       }
      ]

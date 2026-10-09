@@ -37,6 +37,11 @@
          "Toilet waste: urine, faeces, toilet paper",
          "Holding sewage until you dump"
         ]
+       ],
+       "widths": [
+        12,
+        55,
+        33
        ]
       },
       {
@@ -425,6 +430,11 @@
          "Compressed air pushes the water out of the lines",
          "Can leave water in toilet valves and traps; still needs antifreeze in the traps"
         ]
+       ],
+       "widths": [
+        16,
+        42,
+        42
        ]
       },
       {
@@ -537,6 +547,11 @@
          "Two layers with an air gap",
          "Helps with heat loss and condensation, but not magic in an RV"
         ]
+       ],
+       "widths": [
+        22,
+        39,
+        39
        ]
       },
       {

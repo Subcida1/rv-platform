@@ -486,8 +486,22 @@ def render_new_owner_blocks(blocks):
             head = "".join("<th>%s</th>" % h for h in b["head"])
             rows = "".join("<tr>%s</tr>" % "".join("<td>%s</td>" % c for c in r)
                            for r in b["rows"])
-            out.append('<div class="table-scroll"><table class="man-table">'
-                       '<thead><tr>%s</tr></thead><tbody>%s</tbody></table></div>' % (head, rows))
+            # A TABLE DECLARES ITS OWN COLUMN PROPORTIONS. Left to auto layout the browser sizes each
+            # column to its content, which measured 78px for a "System" heading and 92px for "Who",
+            # and gave the symptom table's "what to do" column the least room of the three even
+            # though it holds a sentence and a link. widths is a list of percentages in the data
+            # file, one per column; a table without it lays out exactly as before.
+            widths = b.get("widths")
+            colgroup = ""
+            if widths:
+                if len(widths) != len(b["head"]):
+                    raise SystemExit("FAIL  new-owner content: %d widths for %d columns: %s"
+                                     % (len(widths), len(b["head"]), " | ".join(b["head"])))
+                colgroup = "<colgroup>%s</colgroup>" % "".join(
+                    '<col style="width:%s%%">' % w for w in widths)
+            out.append('<div class="table-scroll"><table class="man-table">%s'
+                       '<thead><tr>%s</tr></thead><tbody>%s</tbody></table></div>'
+                       % (colgroup, head, rows))
         else:
             raise SystemExit("FAIL  new-owner content: unknown block kind %r" % k)
     return "\n".join(out)

@@ -2198,11 +2198,16 @@ figure:has(svg[role="img"]){overflow-x:auto;overflow-y:hidden}
    round on the directory). .dir-title and .guide-grid are reused rather
    than cloned so the two sections cannot drift apart.
    ============================================================ */
-.man-title{max-width:920px}
+/* NO CAP ON THE TITLE OR THE DECK. Ty, 2026-10-08: "Make sure everything on the page isn't going to
+   be locked to some artificially smaller size." Both were arbitrary. Measured at a 2560 viewport
+   the caps stacked: container 1200, title 920, deck 760, so the three widest things on the page were
+   each narrower than the one above them for no reason a reader could see. The title also wrapped to
+   two lines with room to spare beside it. */
+.man-title{max-width:none}
 .man-crumb{font-size:13px;font-weight:600;margin-bottom:8px}
 .man-crumb a{color:var(--text-2)}
 .man-crumb a:hover{color:var(--b1)}
-.man-lede{margin-top:14px;color:var(--text-2);font-size:16px;max-width:760px}
+.man-lede{margin-top:14px;color:var(--text-2);font-size:16px;max-width:none}
 .man-h2{font-size:clamp(20px,2.6vw,26px);font-weight:800;letter-spacing:-.02em;margin-bottom:20px}
 .man-count{margin-left:12px;font-size:13px;font-weight:700;letter-spacing:0;text-transform:none;color:var(--text-3);white-space:nowrap}
 
