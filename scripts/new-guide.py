@@ -57,6 +57,8 @@ def main():
     ap.add_argument("--title", required=True, help="<title> and og:title")
     ap.add_argument("--desc", required=True, help="meta description, 140-160 chars")
     ap.add_argument("--lede", required=True, help="the intro paragraph, no <p> wrapper")
+    ap.add_argument("--eyebrow", default="Guide",
+                    help="the small label above the h1, e.g. 'Troubleshooting guide'")
     ap.add_argument("--body", required=True, help="file containing the <main> content")
     ap.add_argument("--tile-title", required=True)
     ap.add_argument("--tile-meta", required=True)
@@ -115,16 +117,27 @@ def main():
     head = re.sub(r'"dateModified":\s*"[^"]*"', '"dateModified": %s' % json.dumps(_today), head, count=1)
 
     body = pathlib.Path(a.body).read_text(encoding="utf-8")
-    # the lede paragraph under the H1 is part of the body file's first block; inject if the body
-    # does not already carry it
-    if a.lede and a.lede[:40] not in body:
-        m = re.search(r'</h1>\s*', body)
-        if m:
-            body = body[:m.end()] + f'<p class="lede">{html.escape(a.lede)}</p>\n' + body[m.end():]
+
+    # THE INTRO BLOCK WAS NEVER EMITTED, AND THAT IS WHY SIX GUIDES HAD NO H1.
+    # Found 2026-10-08, by the keyword gate rather than by eye: it reported "no h1" for every guide
+    # built this evening. The page was written as <main> followed by the body, so there was no
+    # .page-intro wrapper, no eyebrow, no <h1> and no lede, and because the lede injection below
+    # searched the BODY for a </h1> that never existed there, it did nothing silently. --lede was a
+    # required argument that had no effect on the page. An h1 carries the page's subject for a
+    # reader, for a search engine and for a screen reader, so its absence is not cosmetic.
+    intro = ('\n<div class="wrap page-intro w-820">\n'
+             '<a href="/" class="btn btn-ghost back">&#8592; All guides</a>\n'
+             '<div class="sec-eyebrow">%s</div>\n'
+             '<h1>%s</h1>\n'
+             '<p class="lede">%s</p>\n'
+             '<p class="reviewed">By <a class="link" href="/about">OriginRV</a>. '
+             'Last updated on %s.</p>\n'
+             '</div>\n' % (html.escape(a.eyebrow), html.escape(a.title),
+                            html.escape(a.lede), _today))
 
     page = (head + '\n<body class="g-theme-mist">\n'
             '<div id="site-nav"><!-- nav:start --><!-- nav:end --></div>\n'
-            '<main id="main">\n' + body.rstrip() + "\n</main>" + tail)
+            '<main id="main">' + intro + body.rstrip() + "\n</main>" + tail)
     out = ROOT / "guides" / (a.slug + ".html")
     out.write_text(page, encoding="utf-8")
     print(f"  wrote {out.relative_to(ROOT)}  ({len(page):,} bytes)")

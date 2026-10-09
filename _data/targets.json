@@ -299,7 +299,13 @@
   },
   "manuals/water-and-plumbing.html": {
    "q": "rv water heater and plumbing manuals"
-  }
+  },
+  "guides/rv-pre-trip-walkaround.html": "rv pre trip checklist",
+  "guides/rv-black-tank.html": "rv black tank",
+  "guides/rv-fridge-leveling.html": "rv fridge leveling",
+  "guides/rv-driving-motorhome.html": "how to drive a motorhome",
+  "guides/rv-towing-trailer.html": "how to tow a travel trailer",
+  "guides/rv-maintenance-schedule.html": "rv maintenance schedule"
  },
  "accepted": {
   "guides/rv-refrigerator-not-cooling.html": "The title says 'fridge' and the h1 says 'refrigerator'. Both are the page's subject and both are words a reader would type; the divergence is emphasis, not a mistake. Accepted 2026-10-06.",

@@ -471,7 +471,7 @@
     "claims": "f2c9a068f6c16e27"
   },
   "guides/rv-black-tank.html": {
-    "hash": "189cb3cdeb599126",
+    "hash": "d850e1de4004d5ab",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -517,14 +517,14 @@
     "claims_date": "Oct 2, 2026"
   },
   "guides/rv-driving-motorhome.html": {
-    "hash": "2a81213486cbd93d",
+    "hash": "0d1c2d851fc631b9",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "guides/rv-fridge-leveling.html": {
-    "hash": "bb7b35d77cb9145b",
+    "hash": "0c96fce77ddedb92",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -619,7 +619,7 @@
     "claims_date": "Oct 4, 2026"
   },
   "guides/rv-maintenance-schedule.html": {
-    "hash": "f21d895b1066f1d3",
+    "hash": "63be98ffd49420e2",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -645,7 +645,7 @@
     "claims_date": "Oct 2, 2026"
   },
   "guides/rv-pre-trip-walkaround.html": {
-    "hash": "fbdab5ab7e4fbf78",
+    "hash": "473d9bea9d538903",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -787,7 +787,7 @@
     "claims_date": "Oct 4, 2026"
   },
   "guides/rv-towing-trailer.html": {
-    "hash": "b483a737e8ffd7cb",
+    "hash": "360aaab22ccdf9bb",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -948,7 +948,7 @@
     "sources": []
   },
   "manuals/start-here.html": {
-    "hash": "3ded48b40a5e35b4",
+    "hash": "1d5ebc184e9d1365",
     "status": "unverified",
     "verified_by": " CHANGED 2026-09-28: one sentence was attributed. It read \"The manual's limit is 30 PSI maximum\", an unnamed authority for a specific number, and read against the Furrion figure on the water-heater guide it looked like a contradiction. The number is Jayco's, which the winterising guide already says ('Jayco caps its system at 30 psi ... while Winnebago publishes 35 to 50 psi'), and the sentence now names Jayco and says the ceiling is the plumbing's rather than one number for every RV. The change was made in the page's generator, scripts/build-manuals-pages.py, and the page regenerated. No other text changed.",
     "verified_at": null,
