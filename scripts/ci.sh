@@ -139,7 +139,18 @@ step "W3C Nu Html Checker, CSS mode (two documented limitations filtered)" cssch
 # because it is a prompt rather than a proof and a prompt that fails a build gets
 # deleted. Full report, including the subject index: python3 scripts/cross-check.py
 printf '\n=== cross-check.py: two pages naming one fact with different numbers ===\n'
-python3 scripts/cross-check.py --only same-fact | sed -n '9,60p'
+# THIS STEP USED TO PRINT AND NOT GATE. The report was piped through sed for the excerpt and
+# nothing read the exit status, so the local suite could pass while the GitHub workflow failed the
+# same check. Found 2026-10-09, after a push went red on GitHub with the local run reporting green.
+# --strict is what exits non-zero, so --strict is what runs here now.
+if python3 scripts/cross-check.py --strict --only same-fact > /tmp/cc-ci.txt 2>&1; then
+  sed -n '9,60p' /tmp/cc-ci.txt
+  printf '    ok\n'
+else
+  sed -n '9,60p' /tmp/cc-ci.txt
+  printf '    FAILED: cross-check.py: two pages naming one fact with different numbers\n'
+  fail=1
+fi
 
 printf '\n================================================================\n'
 if [ "$fail" -eq 0 ]; then
