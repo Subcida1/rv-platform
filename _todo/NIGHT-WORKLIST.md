@@ -37,6 +37,23 @@ rule into this file, then add a gate so it cannot drift.
 `scripts/audit-mobile.mjs` defaults to Chrome on 9340. The live browser is usually on 9341. Pass
 `--port 9341` or it dies with ECONNREFUSED and looks like the instrument is broken.
 
+### 0c. THE SITE AUDIT PLAN (read it before choosing any new instrument)
+`_todo/SITE-AUDIT-PLAN.md` is the answer to Ty's "run various scans and look up the best scans and
+checks to perform", from three research passes. It separates what is worth running from what is dead
+or cargo cult, and it carries the obligations: the privacy policy (done 2026-10-09), directory
+governance that never sells ranking, and a real About and contact layer.
+
+Two corrections in it that affect instruments already in this repo, both worth acting on early:
+
+- **axe's WCAG 2.2 `target-size` rule is disabled by default**, so `check-a11y.mjs` does not check
+  touch targets at all despite being the accessibility gate. Enable it deliberately.
+- **Our hand-written 44px target check applies the AAA threshold (WCAG 2.5.5) as if it were the AA
+  obligation (2.5.8, which is 24x24 and met by spacing, with an inline-link exception).** Keep it as
+  a house standard for this audience, but label it as one rather than as a WCAG requirement.
+
+Also in it: `check-a11y.mjs` runs on 7 pages only, Lighthouse is installed but not in the pipeline,
+and the CrUX field data will be empty at this traffic level, which is not the same as good.
+
 ### 1. The native-English pass (Ty asked for this directly)
 "ensure our content is written to be english native, go through everything."
 
