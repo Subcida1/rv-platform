@@ -96,6 +96,28 @@ someone if followed carelessly. Quote the sentence.
 You are an RV owner with this exact problem. Having read the page, what would you still be unsure about?
 Name the specific gap. If it helps, quote the part of the page that leaves you unsure.
 
+## Part 4 - does this read as native English
+
+Ty, 2026-10-09: "ensure our content is written to be english native, go through everything."
+
+Read the page as a native speaker of English would, and flag any sentence that makes you pause
+because it does not sound like something a person who grew up with the language would write. Look
+specifically for:
+
+- **an idiom that does not exist.** A phrase that is almost a real English idiom but is not one.
+  This has happened on this site before: "all one roof" and "Loaded is what's rolling" were both
+  written by us and both had to be cut. If a phrase would not appear in a published book, say so.
+- **translated-sounding construction.** Word order, collocation or article use that is grammatical
+  but foreign. "The reasons to level: the absorption fridge is the best-supported one" is the kind
+  of thing to watch for.
+- **a phrase that only means something to us.** Internal vocabulary a reader has never met.
+- **filler with no fact in it**, and sentences that talk about the page rather than about the RV.
+
+QUOTE THE EXACT SENTENCE, word for word, as with every other part. Then say in one line what a
+native writer would have written instead. Do not rewrite the page; name the sentence and the
+problem. If the page reads cleanly, say "reads as native English" and move on. That is a useful
+answer and it is the expected one for most pages.
+
 ## How to write it
 
 Short and concrete. Three real findings beat twelve invented ones. Do not pad. If a section has no
