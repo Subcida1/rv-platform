@@ -68,11 +68,11 @@
      "blocks": [
       {
        "kind": "p",
-       "html": "There are three hookups, and one habit covers the order of all of them: make and break each connection at the point that can arc or spill, and keep the power off while you do it. Water and power can be done in either order, whether the power comes from a pedestal or a generator. The sewer is always last to connect, because it is the one connection you do not want to disturb once it is made."
+       "html": "There are three hookups, and one habit sets the order for all of them: make and break each connection at the point that can arc or spill, with the power off while you do it. Water and power can be done in either order. The sewer goes last."
       },
       {
        "kind": "p",
-       "html": "<b>Water.</b> The order is spigot, regulator, hose, filter, coach. One arrangement connects the regulator to the city-water inlet on the RV and hooks the hose to the regulator; another puts the regulator between the hose bib at the site and the water filter, which then connects to the hose and to the trailer. Either way the regulator sits between the park's supply and everything of yours, so it takes the pressure before the pressure reaches your plumbing."
+       "html": "<b>Water.</b> The order is spigot, regulator, hose, filter, coach. Some coaches take the regulator at the tap and some at the inlet; the point is that it sits between the park's pressure and your plumbing."
       },
       {
        "kind": "list",
@@ -86,7 +86,7 @@
       },
       {
        "kind": "p",
-       "html": "<b>Power.</b> Turn off power to the RV before connecting or disconnecting the power cable. When connecting, connect the cable at the RV first and plug into the AC source second; when disconnecting, unplug from the AC source first. Turn off high-draw appliances and the coach's main breaker, make sure the pedestal breaker is off, inspect and test the pedestal, connect the coach end of a detachable cord first, connect the other end to the surge protector or pedestal, turn the pedestal breaker on, wait for the electrical management system to approve the power, then switch the coach's main breaker back on and bring appliances on one at a time. A generator feeds the same panel and the same outlets as a pedestal, so the same order applies: start it, check the breaker on the generator itself, and keep the heavy loads off while you switch the coach over."
+       "html": "<b>Power.</b> The coach end of the cord goes in first and comes out last, so the live end is always the one in your hand."
       },
       {
        "kind": "list",
@@ -104,7 +104,7 @@
       },
       {
        "kind": "p",
-       "html": "<b>Sewer.</b> Connect the hose at both ends before you open anything, and keep the black valve closed. Never open the black tank valve and leave it open throughout your stay. Dump the black tank when it is at least two-thirds full, then the gray tank. Dumping the black tank first and the gray second lets the gray water rinse the hose."
+       "html": "<b>Sewer.</b> Connect the hose at both ends before you open anything, and keep the black valve closed. Never leave it open through your stay. Dump when the black tank is at least two thirds full, black first and then grey, because the grey water rinses the hose."
       },
       {
        "kind": "list",
@@ -119,11 +119,7 @@
       },
       {
        "kind": "p",
-       "html": "<b>Disconnect, in reverse.</b> Switch the loads off, turn off the breakers, unplug from the pedestal, then disconnect the coach end of the cord. In shorthand: power off first, pedestal end first, coach end second. The same holds for every shore power connector: the pedestal breaker goes off before anything is plugged in or unplugged. A generator gets the same treatment: shut it down, or switch the coach off it, before the cord is plugged or unplugged."
-      },
-      {
-       "kind": "callout",
-       "html": "The single most expensive habit in the first week is leaving the black tank valve open at a full-hookup site. The liquid runs away and the solids stay behind, and the tank slowly builds a pile that no amount of flushing removes. Keep the valve closed until the tank is at least two-thirds full."
+       "html": "<b>Disconnecting is the reverse.</b> Loads off, breakers off, pedestal end first, then the coach end. A generator is the same: shut it down, or switch the coach off it, before the cord is touched."
       }
      ]
     },
@@ -490,6 +486,45 @@
       {
        "kind": "p",
        "html": "Extend and retract the room all the way, never part way, because a slide-out must be fully open or closed to maintain its seal and keep the interior waterproof. Keep people and objects clear of the inside and outside of the slideout room when operating: <b>\"Failure to comply could result in death or serious injury.\"</b> And never drive with a room extended."
+      },
+      {
+       "kind": "p",
+       "html": "<b>Which slide system you have decides what breaks and what you must not do.</b> They are not interchangeable, and the advice for one is wrong for another. The panel inside a compartment, or the maker's manual for the coach, will name yours."
+      },
+      {
+       "kind": "table",
+       "head": [
+        "Type",
+        "How it moves",
+        "What goes wrong, and what not to do"
+       ],
+       "widths": [
+        18,
+        34,
+        48
+       ],
+       "rows": [
+        [
+         "Rack and pinion (electric)",
+         "A motor on each side turns a gear along a toothed rack under the room.",
+         "The gears can jump a tooth and leave the room out of square. Do not push a room in by hand on this system."
+        ],
+        [
+         "In-wall (Schwintek and similar)",
+         "Tracks and pinions built into the room's side walls, one motor each side.",
+         "The two sides lose synchronisation, and then the room runs crooked and jams. Hold the switch for a few seconds after the room stops so the controller finishes its count."
+        ],
+        [
+         "Cable",
+         "A motor winds steel cables through corner blocks to pull the room in and out.",
+         "A cable frays or snaps and the room comes in crooked or not at all. The cables and the corner blocks are the parts to look at first."
+        ],
+        [
+         "Hydraulic",
+         "One pump drives rams on every room in the coach.",
+         "Fluid leaks and a pump that needs 12 volts. Otherwise the strongest and quickest of the four, and the only one that brings rooms in reliably when the battery is tired."
+        ]
+       ]
       },
       {
        "kind": "callout",
