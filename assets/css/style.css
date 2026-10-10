@@ -1627,7 +1627,10 @@ details.faq p{color:var(--text-2);font-size:16px;line-height:1.7;padding-bottom:
    clean example and nothing is hidden that a reader was promised. */
 .tool-viz .viz-shot{display:none}
 .tool-viz .viz-shot.is-on{display:block}
-.tool-viz .viz-stage{transition:opacity .16s ease}
+/* Ty, 2026-10-10: the change between examples should read as a slow dissolve, not a blink.
+   The duration lives HERE and in toolviz.js's FADE; change both together or the swap
+   lands mid-fade and it flickers. */
+.tool-viz .viz-stage{transition:opacity .5s cubic-bezier(.4,0,.2,1)}
 .tool-viz .viz-stage.is-fading{opacity:0}
 .tool-viz .viz-bar{display:flex;align-items:center;gap:2px;margin-top:6px}
 .tool-viz .viz-dot{width:32px;height:32px;padding:0;border:0;background:transparent;cursor:pointer;position:relative}

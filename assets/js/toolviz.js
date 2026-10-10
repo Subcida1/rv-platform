@@ -22,7 +22,7 @@
   'use strict';
 
   var HOLD = 4200;   // ms each example stays up
-  var FADE = 160;    // ms of the cross-fade; keep in step with .viz-stage in style.css
+  var FADE = 500;    // ms of the cross-fade; keep in step with .viz-stage in style.css (Ty, 2026-10-10: slower and smoother)
   var STAGGER = 700; // ms between cards, so the whole page is not flipping at once
   var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
