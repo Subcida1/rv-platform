@@ -152,6 +152,21 @@ def pages():
     for b in mf.get("brands", []):
         every.add(b["brand"])
     oem_names = sorted({b["brand"] for b in mf.get("brands", [])})
+    # WHAT THE READER TYPES, WHEN THE CORPUS SAYS SOMETHING ELSE.
+    # The every-word rule needs every word of a query in ONE entry, so a query whose noun the
+    # corpus never uses returns nothing at all -- not a worse answer, no answer. On 2026-10-10
+    # "dometic fridge" and "dometic thermostat" both returned zero: "dometic" is in the manual
+    # entry's brand keywords, and neither "fridge" nor "thermostat" appeared anywhere in that
+    # entry, because the corpus says refrigerator and the appliance entries are titled by
+    # system rather than by part. The guides say "fridge" and the manual pages do not, which is
+    # the whole gap.
+    # Only words a reader would actually type belong here, and only where the corpus uses a
+    # different one. This is a synonym list, not a keyword-stuffing list: a word added here
+    # that no reader types is a word that makes a bad match possible.
+    SYSTEM_ALIASES = {
+        "kitchen-and-appliances": "fridge",
+        "heating-and-cooling": "thermostat",
+    }
     for p in sorted((ROOT / "manuals").glob("*.html")):
         t, d = title_desc(p)
         if p.stem == "index":
@@ -164,7 +179,8 @@ def pages():
             "t": ("RV Manuals" if p.stem == "index" else t),
             "u": "manuals/%s" % p.name, "c": "Manual",
             "k": (" ".join(["rv manual manuals owners owner service repair parts wiring",
-                            "diagram pdf", p.stem.replace("-", " ")]
+                            "diagram pdf", p.stem.replace("-", " "),
+                            SYSTEM_ALIASES.get(p.stem, "")]
                            + [x for x in extra if x])).lower(),
             "d": d[:150],
         })

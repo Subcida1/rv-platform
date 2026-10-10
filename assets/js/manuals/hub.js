@@ -90,9 +90,17 @@
   }
 
   function render() {
-    var q = el('man-q').value.trim().toLowerCase();
+    /* THE SAME RULE THE SITE-WIDE SEARCH USES, from assets/js/search-match.js, which site.js
+       injects before anything can type into this box. Until 2026-10-10 this line was
+       `haystack(r).indexOf(q) >= 0` -- the whole query as one contiguous substring -- so
+       "dometic fridge" found nothing here while the dropdown in the navbar found it, and
+       "gibs" missed "Gib's" because nothing normalised the punctuation. One corpus, two
+       answers. The rule is not re-stated here on purpose: two copies is how they diverged. */
+    var M = window.RVSearchMatch;
+    var prep = M ? M.prepare(el('man-q').value) : null;
+    var shown = el('man-q').value.trim();
     var status = el('man-status'), ul = el('man-results');
-    if (!q && !type) {
+    if (!prep && !type) {
       ul.hidden = true;
       status.textContent = 'Start typing, or open a system below.';
       return;
@@ -103,12 +111,12 @@
            shape that carries doc_types. Everything else drops out while a facet
            is on, which is what filtering by document type should do. */
         if (type) return (r.doc_types || []).indexOf(type) >= 0;
-        if (!q) return true;
-        return haystack(r).indexOf(q) >= 0;
+        if (!prep) return true;
+        return M.matches(haystack(r), prep);
       });
       status.textContent = hits.length
         ? hits.length + ' match' + (hits.length === 1 ? '' : 'es') +
-          (q ? ' for "' + q + '"' : '')
+          (prep ? ' for "' + shown + '"' : '')
         : 'Nothing matches that. Try a maker like Dometic, a model line like Jay ' +
           'Flight, or open a system below.';
       ul.innerHTML = hits.slice(0, 60).map(rowHTML).join('');

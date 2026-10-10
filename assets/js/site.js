@@ -331,8 +331,20 @@
     old branch that copied the version off the homepage's tag is gone with it: leaving it in
     would have appended a second ?v= to an already-versioned URL. `stamp_assets.py --check`
     fails the build if this string goes stale, which is why dropping the branch is safe. */
- s.src = 'assets/js/search.js?v=f6091362';
- s.async = true;
+ /* THE MATCHING RULE GOES IN FIRST, AND BOTH ARE ORDERED. A script inserted through the
+    DOM runs as soon as it arrives unless async is false, so leaving the default on would
+    let search.js execute before the rule it calls and the first keystroke would find
+    nothing. The matcher is appended first and neither is async, so they run in order.
+    hub.js, on the manuals hub, calls the same rule; it is injected here rather than
+    tagged into 125 pages because this is the one script every page already loads, and
+    because a bare URL injected from a string is the stale-cache defect recorded above --
+    stamp_assets.py stamps this one too, and --check fails if it goes stale. */
+ var m = document.createElement('script');
+ m.src = 'assets/js/search-match.js?v=63bf3263';
+ m.async = false;
+ document.head.appendChild(m);
+ s.src = 'assets/js/search.js?v=e47c81a1';
+ s.async = false;
  document.head.appendChild(s);
  }
  if (document.readyState === 'loading')

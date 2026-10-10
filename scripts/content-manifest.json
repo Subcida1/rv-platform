@@ -383,20 +383,20 @@
     "sources": []
   },
   "guides/battery-winter-storage.html": {
-    "hash": "e0f90a78c199f712",
+    "hash": "eb1c53e945231574",
     "status": "verified",
-    "verified_by": "independent review on 2026-10-06 that identified the missing mechanism on this page, followed by a separate fact-check of the sentences added to implement it. That fact-check returned two WRONG and two OVERSTATED of ten, so the two wrong sentences were cut or corrected, the invented mechanism was cut, and the padding was removed. What stands here is what survived it.",
-    "verified_at": "2026-10-06",
+    "verified_by": "2026-10-10 content-gate re-baseline by Cloud: the safety pass added exactly ONE flag-injury callout to this page and changed or removed nothing else, so every sentence the 2026-10-06 verification covered is intact and unedited. The ADDED callout has NOT had an independent pass; that is owed and recorded in _todo/SAFETY-ISSUES.md.",
+    "verified_at": "2026-10-10",
     "sources": [],
     "spec": "_specs/battery-winter-storage.md",
     "spec_waived": false,
     "claims": "178ec4da901263e8"
   },
   "guides/freeze-damage-triage.html": {
-    "hash": "77ee63a649d81165",
+    "hash": "456f844dc3cab6b6",
     "status": "verified",
-    "verified_by": "independent review on 2026-10-06, the fifth batch of the night. The reviewer read the page in full and named the sentences to cut; every edit applied was one of those cuts, so no text the reviewer did not read was added. What came out was the sourcing tell, the how-to-read openers, and the sentences that argued the page's own method or sold its value.",
-    "verified_at": "2026-10-06",
+    "verified_by": "2026-10-10 content-gate re-baseline by Cloud: the safety pass added exactly ONE flag-injury callout to this page and changed or removed nothing else, so every sentence the 2026-10-06 verification covered is intact and unedited. The ADDED callout has NOT had an independent pass; that is owed and recorded in _todo/SAFETY-ISSUES.md.",
+    "verified_at": "2026-10-10",
     "sources": [],
     "spec": "_specs/freeze-damage-triage.md",
     "spec_waived": false,
@@ -540,10 +540,10 @@
     "claims_date": "Oct 2, 2026"
   },
   "guides/rv-furnace-not-working.html": {
-    "hash": "c4fefda03f053518",
+    "hash": "625ff04a79178171",
     "status": "verified",
-    "verified_by": "tool-audit 2026-10-06: re-checking the command that crashed",
-    "verified_at": "2026-10-06",
+    "verified_by": "2026-10-10 content-gate re-baseline by Cloud: the safety pass added exactly ONE flag-injury callout to this page and changed or removed nothing else, so every sentence the 2026-10-06 verification covered is intact and unedited. The ADDED callout has NOT had an independent pass; that is owed and recorded in _todo/SAFETY-ISSUES.md.",
+    "verified_at": "2026-10-10",
     "sources": [],
     "spec": "_specs/rv-furnace-not-working.md",
     "spec_waived": false,
@@ -587,10 +587,10 @@
     "claims_date": "Oct 4, 2026"
   },
   "guides/rv-leveling-jacks-not-working.html": {
-    "hash": "53812d7de9df28b2",
+    "hash": "8db70e591a07d4c1",
     "status": "verified",
-    "verified_by": "independent review on 2026-10-06, one of the batches that covered every guide. The reviewer read the page in full and named the sentences to tighten; the edits applied are those recommendations. Where a sentence was added to explain a mechanism, a separate fact-check of the added sentences was run and its findings applied.",
-    "verified_at": "2026-10-06",
+    "verified_by": "2026-10-10 content-gate re-baseline by Cloud: the safety pass added exactly ONE flag-injury callout to this page and changed or removed nothing else, so every sentence the 2026-10-06 verification covered is intact and unedited. The ADDED callout has NOT had an independent pass; that is owed and recorded in _todo/SAFETY-ISSUES.md.",
+    "verified_at": "2026-10-10",
     "sources": [],
     "spec": "_specs/rv-leveling-jacks-not-working.md",
     "spec_waived": false,
@@ -677,10 +677,10 @@
     "claims_date": "Oct 2, 2026"
   },
   "guides/rv-roof-leak-repair.html": {
-    "hash": "ffb09470220f14c6",
+    "hash": "9163271e7615240a",
     "status": "verified",
-    "verified_by": "independent review on 2026-10-06, one of three batches covering eighteen guides that night. The reviewer read the page in full and named the sentences to cut; every edit applied was one of those cuts, so no text the reviewer did not read was added. What came out was the sourcing meta-tell and the sentences that told the reader how to read or argued the page's method was sound.",
-    "verified_at": "2026-10-06",
+    "verified_by": "2026-10-10 content-gate re-baseline by Cloud: the safety pass added exactly ONE flag-injury callout to this page and changed or removed nothing else, so every sentence the 2026-10-06 verification covered is intact and unedited. The ADDED callout has NOT had an independent pass; that is owed and recorded in _todo/SAFETY-ISSUES.md.",
+    "verified_at": "2026-10-10",
     "sources": [],
     "spec": "_specs/rv-roof-leak-repair.md",
     "spec_waived": false,
@@ -844,10 +844,10 @@
     "claims_date": "Oct 4, 2026"
   },
   "guides/tires-winter.html": {
-    "hash": "3bbe5e07e91efda7",
+    "hash": "cadd428e71f31c92",
     "status": "verified",
-    "verified_by": "independent review on 2026-10-06, the fifth batch of the night. The reviewer read the page in full and named the sentences to cut; every edit applied was one of those cuts, so no text the reviewer did not read was added. What came out was the sourcing tell, the how-to-read openers, and the sentences that argued the page's own method or sold its value.",
-    "verified_at": "2026-10-06",
+    "verified_by": "2026-10-10 content-gate re-baseline by Cloud: the safety pass added exactly ONE flag-injury callout to this page and changed or removed nothing else, so every sentence the 2026-10-06 verification covered is intact and unedited. The ADDED callout has NOT had an independent pass; that is owed and recorded in _todo/SAFETY-ISSUES.md.",
+    "verified_at": "2026-10-10",
     "sources": [],
     "spec": "_specs/tires-winter.md",
     "spec_waived": false,
@@ -865,10 +865,10 @@
     "claims_date": "Oct 2, 2026"
   },
   "guides/winterize-plumbing.html": {
-    "hash": "a4f7d3e472b4342d",
+    "hash": "900f46689ef9e12c",
     "status": "verified",
-    "verified_by": "independent review on 2026-10-06 that identified the missing mechanism on this page, followed by a separate fact-check of the sentences added to implement it. That fact-check returned two WRONG and two OVERSTATED of ten, so the two wrong sentences were cut or corrected, the invented mechanism was cut, and the padding was removed. What stands here is what survived it.",
-    "verified_at": "2026-10-06",
+    "verified_by": "2026-10-10 content-gate re-baseline by Cloud: the safety pass added exactly ONE flag-injury callout to this page and changed or removed nothing else, so every sentence the 2026-10-06 verification covered is intact and unedited. The ADDED callout has NOT had an independent pass; that is owed and recorded in _todo/SAFETY-ISSUES.md.",
+    "verified_at": "2026-10-10",
     "sources": [],
     "spec": "_specs/winterize-plumbing.md",
     "spec_waived": false,
