@@ -835,6 +835,15 @@ recalls too.
 
 A live session owns `/home/user/claude-bridge`. As of 01:05: all six lanes healthy on v0.7.41, queue idle, `v0.7.42` staged in `outbox/` awaiting a paste into the **aistudio** lane by Ty (its own session knows the deploy path). **Work the bridge ONLY if:** the queue has jobs with no matching reply (spent jobs blocking a lane), or a heartbeat is stale. Sweep spent jobs with `tools/sweep-spent-jobs.py`. Do not deploy a userscript build yourself.
 
+**2026-10-10 13:26-14:41 — Cloud opened the bridge (Ty authorised it), ran reviews, and closed up.**
+The six lanes were all stale, so `bridge-up.sh open` brought them back. Three guide reviews were
+dispatched and applied (see the 13:45 and 14:20 blocks above). Teardown: **gemini, chatgpt, deepseek and
+chat.qwen.ai closed cleanly; aistudio had no window open; grok.com is STILL OPEN because its lane reads
+`stalled` and the guard refuses to close a non-idle lane.** Nothing was forced and no process was killed.
+Queue is idle (0 jobs pending), so grok's window is safe to close by hand, or a later fire can retry
+`bridge-up.sh close --lane grok.com` once it reads idle. aistudio is out of quota for the day, so do not
+dispatch to it until tomorrow.
+
 ## MYSELF (last)
 
 Anything learned tonight that would change tomorrow's behaviour belongs in a memory block or
