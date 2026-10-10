@@ -148,6 +148,11 @@ verdict. Then apply the findings yourself and re-baseline with
 `verify-content.py --verify <page> --by "<what happened>"`. Reviewing a page and NOT applying the
 findings is the failure mode: the pass is only worth anything when the text changes.
 
+**SUBAGENT DISPATCH WAS UNRELIABLE OVERNIGHT 2026-10-10** — three consecutive failures with three
+different errors (connection error; app-server socket closed; timed out waiting for
+runtime-start). If dispatch fails for you, do **W15** or **W14** instead (both need no subagent) and
+say so in your report, rather than retrying into a broken platform.
+
 **2026-10-10 ~01:23 PDT — rv-fuse-keeps-blowing review pass (Cloud, in-turn):** all six house rules
 checked with literal evidence. Rule 1 quoted claims verified verbatim against sources (Littelfuse
 Fuseology overload def; Littelfuse Overcurrent Protection Fundamentals 600% threshold; VW/Audi
@@ -168,6 +173,31 @@ amps on low" — neither appears in the cited MaxxAir instructions). Both fixed 
 lesson stands as written in the caveat: a same-model in-turn pass is NOT the doctrine pass, and
 "no defects found by me" was the wrong verdict. Do NOT mark this page as independent-reviewed off
 the strength of the 01:23 tick.
+
+### W15. The live-work-without-a-flag sweep — NO SUBAGENT NEEDED, and it found a real defect
+Every independent review tonight returned the same highest-severity defect: a page that instructs the
+reader to work on a live circuit while carrying no `flag-injury` callout. That class is greppable:
+
+```
+python3 - <<'PY'
+import pathlib, re
+RISK = {'mains': r'\b120[ -]?(?:volt|V\b)|shore (?:power|cord)|pedestal|main breaker|converter|inverter',
+        'live': r'\blive\b|\benergiz|while (?:the circuit|it) is (?:live|on)',
+        'battery': r'\bbattery (?:terminals|posts)\b|disconnect the (?:negative|positive)|bridge the',
+        'propane': r'\bpropane\b|gas leak|open flame', 'height': r'\b(?:ladder|roof)\b'}
+for p in sorted(pathlib.Path('guides').glob('*.html')):
+    s = p.read_text()
+    if p.name == 'index.html' or 'flag flag-injury' in s or 'flag flag-damage' in s: continue
+    hits = [k for k, r in RISK.items() if re.search(r, s, re.I)]
+    if hits: print(p.name, ','.join(hits))
+PY
+```
+
+**IT OVER-REPORTS — hand-check every hit before changing anything.** On 2026-10-10 it flagged 13 pages;
+the carbon monoxide guide was a false positive (it is a fully-warned protective page), and three others
+were already covered by the safety pass. Exactly one was a real unowned gap
+(`rv-solar-not-charging`, fixed in `df91514`). The rule this obeys is the site's own: **an instrument
+that flags correct behaviour teaches the reader to ignore it, so suspect the check first.**
 
 ### W13. Close the accessibility blind spot — AFTER W9 lands
 `check-a11y.mjs` is not in `ci.sh`, and its 6-page REPRESENTATIVE list has **no manuals section page**,
