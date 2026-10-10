@@ -2482,7 +2482,12 @@ figure:has(svg[role="img"]){overflow-x:auto;overflow-y:hidden}
 
 /* Recalls page: a two-column count of filings. Small, factual, no decoration. */
 .man-table{width:100%;max-width:520px;border-collapse:collapse;margin:6px 0 14px;font-size:14px}
-.man-table th{text-align:left;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--text-3);padding:8px 10px;border-bottom:1px solid var(--border-2)}
+/* --text-2, NOT --text-3. On .no-body / .no-sec this header sits on --tint-bg (#eaf1fa), where
+   --text-3 (#67748e) measures 4.13:1 -- under the 4.5 AA floor. The full-site sweep of every page
+   found it on manuals/start-here.html (15 header cells) and nowhere else, on 2026-10-10; the
+   six-page REPRESENTATIVE list in check-a11y.mjs never reaches that page. Same class, same fix as
+   the breadcrumb at the .crumbs rule above: on a tinted band the token is --text-2. */
+.man-table th{text-align:left;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--text-2);padding:8px 10px;border-bottom:1px solid var(--border-2)}
 .man-table td{padding:8px 10px;border-bottom:1px solid var(--border);color:var(--text-2)}
 .man-table td:last-child{text-align:right;font-weight:700;color:var(--text)}
 /* A wide data table on a phone. The towing guide's worked-example table is five
