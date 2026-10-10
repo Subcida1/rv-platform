@@ -21,8 +21,20 @@ move right now is to **prefer work that does not commit a page**: read, verify, 
 bridge, or update this file. If you do commit a page and the archive check fails on `asset stamps` /
 `static shell` / `manuals pages`, that is this, not your edit — use the recovery in rule 9.
 
-**Do not commit their staged `site.js` or their regenerated pages.** `git commit -- <paths>` uses
-`--only` semantics, so naming your own path does not sweep theirs; keep it that way.
+**2026-10-10 01:30 PDT — the in-flight regeneration LANDED.** The session that held `site.js` staged
+and 131 regenerated files committed them as `e310d0f` ("footer: back to top now works with JavaScript
+off, and honours reduced motion"), 129 files, and it is green. The tree dropped to 32 uncommitted
+files and `site.js` is clean, so **page commits are safe again** — a page committed now carries the
+stamp of the committed `site.js` and `style.css`.
+
+The history of this hazard is kept below because it recurs every time a session touches a shared
+asset. **Rule 9's archive check stays mandatory before every push**, and it is what caught the one
+occurrence that would have gone red.
+
+**Also of note:** a parallel session is running its own review pass and committed `2ccffe7`
+("worklist: W12 fuse-keeps-blowing review pass (six rules clean, quotes verified) — stronger-model
+pass still owed"). Before starting a W12 item, check whether it is already claimed in the last few
+commits, so two sessions do not review the same page.
 
 ---
 
