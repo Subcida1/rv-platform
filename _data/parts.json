@@ -4,7 +4,7 @@
     {
       "key": "towing-and-running-gear",
       "label": "Towing and running gear",
-      "note": "Everything between the tow vehicle and the road, which is where a breakdown strands you.",
+      "note": "Everything between the tow vehicle and the road: the gear that strands you when it breaks.",
       "parts": [
         {
           "id": "hitch-coupler",
@@ -39,7 +39,7 @@
           "id": "tongue-jack",
           "n": "Tongue jack",
           "aka": "trailer jack|A-frame jack|electric tongue jack|power jack",
-          "does": "raises and lowers the tongue so the trailer can be hitched and levelled",
+          "does": "raises and lowers the tongue so the trailer can be hitched and leveled",
           "fails": [
             "motor dies or grinds",
             "switch dead",
@@ -73,8 +73,8 @@
         {
           "id": "stabilizer-jacks",
           "n": "Stabilizer jacks",
-          "aka": "scissor jacks|stabilisers|stabilizing jacks",
-          "does": "hold the trailer steady once it is parked, they do not lift it",
+          "aka": "scissor jacks|stabilizers|stabilizing jacks",
+          "does": "hold the trailer steady once you're parked. They don't lift it",
           "fails": [
             "bent screw",
             "stripped nut",
@@ -336,7 +336,7 @@
           "id": "leaf-springs-and-shackles",
           "n": "Leaf springs and shackles",
           "aka": "suspension|equalizer|shackle kit|wet bolt kit",
-          "does": "spring the trailer over bumps",
+          "does": "cushion the trailer over bumps",
           "fails": [
             "flat springs",
             "broken leaf",
@@ -394,7 +394,7 @@
           "id": "tires",
           "n": "Tires",
           "aka": "ST tires|load range|speed rating",
-          "does": "carry the load and absorb the road",
+          "does": "carry the load and soak up road shock",
           "fails": [
             "sidewall blowout",
             "uneven wear",
@@ -618,7 +618,7 @@
           "id": "wheel-chocks-and-jack-pads",
           "n": "Wheel chocks and jack pads",
           "aka": "chocks|leveling blocks|jack pad|stabilizer pad",
-          "does": "stops the trailer rolling and keeps a jack off soft ground",
+          "does": "keep the trailer from rolling and the jack off soft ground",
           "fails": [
             "chocks lost",
             "blocks sinking in mud or hot asphalt",
@@ -861,7 +861,7 @@
           "id": "inverter",
           "n": "Inverter",
           "aka": "inverter|pure sine|modified sine",
-          "does": "makes 120 volts from the batteries for off grid use",
+          "does": "makes 120 volts from the batteries for off-grid use",
           "fails": [
             "alarm and shutdown",
             "overheat",
@@ -925,7 +925,7 @@
           "id": "inverter-charger",
           "n": "Inverter charger",
           "aka": "inverter/charger|Xantrex|Magnum",
-          "does": "combines inverting and charging in one unit",
+          "does": "inverter and charger in a single unit",
           "fails": [
             "fault codes",
             "will not pass through",
@@ -1001,7 +1001,7 @@
           "id": "battery-disconnect",
           "n": "Battery disconnect",
           "aka": "kill switch|battery switch|isolator switch",
-          "does": "cuts the house battery from the coach",
+          "does": "disconnects the house battery from the coach",
           "fails": [
             "left on and draining",
             "corroded lugs",
@@ -1030,7 +1030,7 @@
           "id": "battery-monitor-and-shunt",
           "n": "Battery monitor and shunt",
           "aka": "shunt|battery monitor|state of charge",
-          "does": "tells you what is really left in the bank",
+          "does": "tells you what's really left in the bank",
           "fails": [
             "wrong capacity setting",
             "reads 100 percent when empty",
@@ -1306,7 +1306,7 @@
           "id": "generator",
           "n": "Generator",
           "aka": "onan|genset|built in generator",
-          "does": "makes its own power when there is no pedestal",
+          "does": "makes its own power when there's no pedestal",
           "fails": [
             "will not start",
             "starts then dies",
@@ -1364,7 +1364,7 @@
           "id": "control-and-monitor-panel",
           "n": "Control and monitor panel",
           "aka": "monitor panel|control panel|touch panel",
-          "does": "shows tank levels, battery, and runs systems",
+          "does": "shows tank levels and battery status, and controls systems",
           "fails": [
             "dead display",
             "wrong readings",
@@ -1395,7 +1395,7 @@
           "id": "portable-generator",
           "n": "Portable generator",
           "aka": "inverter generator|Honda eu2200|Firman|Westinghouse",
-          "does": "power away from a pedestal without running the coach generator",
+          "does": "portable power for away from a pedestal: no need to fire up the coach's built-in generator",
           "fails": [
             "hard starting after storage",
             "carburettor gum",
@@ -1444,7 +1444,7 @@
           "id": "cell-and-wifi-booster",
           "n": "Cell and wifi booster",
           "aka": "cell booster|weboost|wifi booster|antenna",
-          "does": "pulls a usable signal where there is barely one",
+          "does": "pulls a usable signal where there's barely one",
           "fails": [
             "no gain outdoors",
             "wrong band",
@@ -1480,7 +1480,7 @@
           "does": "stores drinking and washing water on board",
           "fails": [
             "cracked from freezing",
-            "algae and odour",
+            "algae and odor",
             "sagging mounts",
             "sensor wrong",
             "drain valve leaking"
@@ -1508,7 +1508,7 @@
           "id": "gravity-fill-and-city-water-inlet",
           "n": "Gravity fill and city water inlet",
           "aka": "gravity fill|city water connection|fresh water inlet",
-          "does": "two ways to put water in the tank or run off park pressure",
+          "does": "fill the tank here, or hook up and run straight off park pressure",
           "fails": [
             "check valve leaking",
             "cap lost",
@@ -1534,7 +1534,7 @@
           "id": "water-pressure-regulator",
           "n": "Water pressure regulator",
           "aka": "pressure regulator|inline regulator",
-          "does": "protects the plumbing from park pressure that is too high",
+          "does": "protects the plumbing from excessive park water pressure",
           "fails": [
             "stuck open and blows a fitting",
             "stuck closed and no flow",
@@ -1562,7 +1562,7 @@
           "id": "inline-water-filter",
           "n": "Inline water filter",
           "aka": "water filter|sediment filter|carbon filter",
-          "does": "takes sediment and taste out of park water",
+          "does": "removes sediment and off-tastes from park water",
           "fails": [
             "clogged and drops pressure",
             "cartridge overdue",
@@ -1589,7 +1589,7 @@
           "id": "water-pump",
           "n": "Water pump",
           "aka": "12 volt pump|demand pump|Shurflo|Remco",
-          "does": "pressurises the system from the fresh tank",
+          "does": "pressurizes the system from the fresh tank",
           "fails": [
             "runs without stopping",
             "surges",
@@ -1860,7 +1860,7 @@
           "id": "water-heater-bypass",
           "n": "Water heater bypass",
           "aka": "bypass kit|winterizing bypass|three way valve",
-          "does": "lets you winterise without filling the heater",
+          "does": "lets you winterize without filling the heater",
           "fails": [
             "valve left in bypass and no hot water",
             "leaking",
@@ -1971,7 +1971,7 @@
         },
         {
           "id": "water-system-winterising",
-          "n": "Water system winterising",
+          "n": "Water system winterizing",
           "aka": "antifreeze|blow out|winterize",
           "does": "protects the plumbing from freezing",
           "fails": [
@@ -2003,7 +2003,7 @@
           "id": "water-softener-and-filtration",
           "n": "Water softener and filtration",
           "aka": "water softener|onboard filter|portable softener",
-          "does": "takes hardness and taste out of park water",
+          "does": "removes hardness and off-flavors from of park water",
           "fails": [
             "resin exhausted",
             "not regenerated",
@@ -2077,7 +2077,7 @@
           "id": "toilet-vacuum-or-macerator",
           "n": "Toilet (vacuum or macerator)",
           "aka": "vacuum toilet|macerating toilet|VacuFlush",
-          "does": "flushes with a vacuum or grinds waste to a tank remote from the toilet",
+          "does": "flushes with a vacuum or grinds waste and pumps it to a remotely located tank",
           "fails": [
             "loses vacuum",
             "pump runs constantly",
@@ -2253,7 +2253,7 @@
           "id": "gate-valves",
           "n": "Gate valves",
           "aka": "dump valves|black valve|grey valve|T handle",
-          "does": "let the tanks empty into the sewer hose",
+          "does": "empty the tanks into the sewer hose",
           "fails": [
             "hard to pull",
             "leaking when closed",
@@ -2284,7 +2284,7 @@
           "id": "cable-operated-valves",
           "n": "Cable-operated valves",
           "aka": "cable valve|remote dump valve",
-          "does": "lets a valve be operated from a compartment away from the tank",
+          "does": "lets you work a valve from a compartment away from the tank",
           "fails": [
             "cable stretching",
             "kinked",
@@ -2307,7 +2307,7 @@
           "id": "electric-dump-valves",
           "n": "Electric dump valves",
           "aka": "E-Valve|electric valve|auto dump",
-          "does": "dumps at the push of a switch",
+          "does": "empties the tank at the flip of a switch",
           "fails": [
             "motor failure",
             "switch dead",
@@ -2452,7 +2452,7 @@
           "id": "holding-tank-treatment",
           "n": "Holding tank treatment",
           "aka": "tank chemicals|digester|enzyme treatment",
-          "does": "breaks down waste and controls odour",
+          "does": "breaks down waste and controls odor",
           "fails": [
             "over-treatment",
             "wrong product killing the good bacteria",
@@ -2481,7 +2481,7 @@
           "id": "vent-stack-and-air-admittance-valve",
           "n": "Vent stack and air admittance valve",
           "aka": "tank vent|AAV|Studor vent|cheater valve",
-          "does": "lets air in so tanks drain and smells go out the roof",
+          "does": "lets air in so tanks drain and gases vent out through the roof",
           "fails": [
             "blocked vent",
             "AAV stuck and lets sewer gas in",
@@ -2798,7 +2798,7 @@
           "id": "heat-pump-and-heat-strip",
           "n": "Heat pump and heat strip",
           "aka": "heat pump|heat strip|reverse cycle",
-          "does": "heats as well as cools, down to a temperature limit",
+          "does": "heats as well as cools, down to a minimum outdoor temperature",
           "fails": [
             "no heat below about 40F",
             "reversing valve",
@@ -2960,7 +2960,7 @@
           "id": "dehumidifier-and-ventilation",
           "n": "Dehumidifier and ventilation",
           "aka": "dehumidifier|moisture control|damp rid",
-          "does": "keeps condensation and mould down",
+          "does": "keeps condensation and mold down",
           "fails": [
             "undersized",
             "runs off the inverter and flattens the battery",
@@ -3057,7 +3057,7 @@
           "id": "roof-coating",
           "n": "Roof coating",
           "aka": "rv roof coating|roof paint|henry's tropi-cool",
-          "does": "renews an aged roof",
+          "does": "recoats an aging roof",
           "fails": [
             "applied over a wet or dirty roof and blistered",
             "incompatible product",
@@ -3085,7 +3085,7 @@
           "id": "skylight",
           "n": "Skylight",
           "aka": "roof skylight|shower skylight|dome",
-          "does": "lets light into the shower or ceiling",
+          "does": "lets daylight into the shower and living space",
           "fails": [
             "cracked and leaking",
             "yellowed",
@@ -3634,7 +3634,7 @@
           "id": "exterior-lighting",
           "n": "Exterior lighting",
           "aka": "porch light|marker lights|tail lights|brake lights|clearance lights",
-          "does": "visibility and legal lighting",
+          "does": "exterior visibility and road-legal lighting",
           "fails": [
             "corroded sockets",
             "water in the lens",
@@ -3743,7 +3743,7 @@
     {
       "key": "kitchen-and-appliances",
       "label": "Kitchen and appliances",
-      "note": "The things that make a coach liveable: cold food, hot food, and somewhere to sit.",
+      "note": "The things that make a coach livable: cold food, hot food, and somewhere to sit.",
       "parts": [
         {
           "id": "refrigerator-absorption",
@@ -4224,7 +4224,7 @@
           "id": "fire-extinguisher",
           "n": "Fire extinguisher",
           "aka": "rv fire extinguisher|dry chemical|foam",
-          "does": "the first response to a galley or engine fire",
+          "does": "your first line of defense against a galley or engine fire",
           "fails": [
             "expired",
             "discharged",
@@ -4429,12 +4429,12 @@
         {
           "id": "steering-and-alignment",
           "n": "Steering and alignment",
-          "aka": "alignment|kingpins|tie rod|steering stabiliser|wander",
+          "aka": "alignment|kingpins|tie rod|steering stabilizer|wander",
           "does": "keeps a heavy coach going straight",
           "fails": [
             "wander and push from trucks",
             "uneven tire wear",
-            "steering stabiliser worn",
+            "steering stabilizer worn",
             "kingpin play"
           ],
           "types": [
@@ -4512,7 +4512,7 @@
           "id": "chassis-battery-and-isolator",
           "n": "Chassis battery and isolator",
           "aka": "starting battery|chassis battery|battery isolator|boost switch",
-          "does": "starts the engine and is meant to be kept separate from the house bank",
+          "does": "starts the engine and stays isolated from the house bank",
           "fails": [
             "drains the house",
             "isolator failure",
@@ -4707,7 +4707,7 @@
           "id": "auto-changeover-and-pigtail-hoses",
           "n": "Auto changeover and pigtail hoses",
           "aka": "changeover valve|pigtail|soft nose hose|acme nut",
-          "does": "switches and feeds from two tanks",
+          "does": "automatically switches between two tanks to keep the gas flowing",
           "fails": [
             "leaking at the acme nut",
             "check valve stuck",
