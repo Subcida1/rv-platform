@@ -359,6 +359,19 @@ verified — unverified is the honest state until a stronger model has read the 
 
 ---
 
+### W17. The voice package - relayed from Ty via Neo (ADDED 2026-10-10 03:55 PDT, by Cloud)
+
+`_todo/VOICE-PACKAGE-2026-10-10.md` holds 13 work-package sections Ty sent tonight: the six
+manuals/parts fixes, Neo's site-wide audit top 10, and the American-voice rewrite lists for
+manuals, parts, guides (a global find/replace plus two per-page batches), tools, and the hubs.
+They were dispatched as scheduled sessions but the-grid was offline when they fired, so every
+one fell back to a cloud sandbox and did nothing. NONE of it is done - the live site still
+shows "110 sources across 94 makers" and the parts "guide that shows how to fix it" line.
+
+Work it one section at a time, committing as you go. Where two sections overlap, the LATER one
+wins. Do not change text inside quotations - a quotation keeps its source's spelling. Tick this
+item only when every section is done.
+
 ## BRIDGE — do not duplicate
 
 A live session owns `/home/user/claude-bridge`. As of 01:05: all six lanes healthy on v0.7.41, queue idle, `v0.7.42` staged in `outbox/` awaiting a paste into the **aistudio** lane by Ty (its own session knows the deploy path). **Work the bridge ONLY if:** the queue has jobs with no matching reply (spent jobs blocking a lane), or a heartbeat is stale. Sweep spent jobs with `tools/sweep-spent-jobs.py`. Do not deploy a userscript build yourself.
