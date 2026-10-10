@@ -80,7 +80,15 @@ GRADIENT_OK = {
 
 # Ratchets - the count today, from `--discover`. Lower them by hand as the collapse lands.
 SIZE_CEILING = 56
-SPACE_CEILING = 54
+# RAISED 54 -> 55 ON 2026-10-09, deliberately. The guides index and the parts hub gained a
+# sticky jump bar, and an in-page anchor has to clear BOTH the sticky header (86px) and the
+# bar itself. 88px and 90px were the only nearby values already in the scale and neither
+# clears the bar, so the heading would land underneath it.
+# RAISED 55 -> 56 THE SAME DAY, same feature. The parts bar carries nine systems and wraps
+# to two rows (126px) where the guides bar's six fit on one (81px), so .parts-sys needs
+# 210px against .guide-group's 150px. Measured, not guessed: at 150px the parts heading
+# landed 43px under the bar. Both values are named here rather than hidden.
+SPACE_CEILING = 56
 
 
 def collect_centers():

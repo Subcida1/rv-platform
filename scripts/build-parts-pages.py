@@ -172,10 +172,14 @@ def part_html(p):
     for m in (p.get("makers") or []):
         brand, url = m.get("brand"), m.get("url")
         if brand and url:
-            # A button like the guide link. Ty, 2026-10-05: "there are still text links like
-            # Carl Starr manual, TST ... manuals, EZ RV product manuals, Dometic manuals ... We
-            # should probably make those buttons if we're going to keep them."
-            links.append('<a class="btn btn-secondary btn-sm" href="%s" target="_blank" '
+            # A maker's manual is a reference, not an action: it leaves the site for
+            # somebody else's document. It was a .btn-secondary pill until 2026-10-09,
+            # which made it look like the guide button next to it. Ty: "the how to fix
+            # it buttons and the manuals buttons look too similar ... make the manuals
+            # buttons look totally different somehow." Now it is a .doc-link -- squared,
+            # flat, smaller, with an off-site arrow -- so the guide keeps the gradient
+            # edge and is the only pressable-looking thing on the row.
+            links.append('<a class="doc-link" href="%s" target="_blank" '
                          'rel="noopener">%s manuals</a>' % (esc(url), esc(brand)))
     if links:
         out.append('        <p class="part-links">%s</p>' % " ".join(links))
@@ -245,6 +249,18 @@ def build():
                sorted({t for s in systems for p in s["parts"] for t in (p.get("types") or [])},
                       key=type_label)),
        total))
+
+    # A JUMP BAR OVER THE NINE SYSTEMS. 157 entries in nine sections is a long page,
+    # and until 2026-10-09 the only way to reach "Propane system" was to scroll past
+    # the eight sections above it. A table of contents is the one navigation fix the
+    # evidence supports for a long index (research/link-display/01-index-patterns.md,
+    # finding 9). The counts are read from the same list the section headings use, so
+    # a jump-bar count and the count over its own section cannot disagree.
+    out.append('  <nav class="hub-jump" aria-label="Jump to a system">\n')
+    out.append('   <ul>%s</ul>\n' % "".join(
+        '<li><a href="#%s">%s <span>%d</span></a></li>'
+        % (esc(s["key"]), esc(s["label"]), len(s["parts"])) for s in systems))
+    out.append('  </nav>\n')
 
     # Everything below is real HTML, grouped by system, so it reads without script.
     for s in systems:

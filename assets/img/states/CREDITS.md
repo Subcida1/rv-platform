@@ -26,17 +26,17 @@ Recorded anyway, because the source should be traceable.
 
 ## arizona
 
-- File: [Rural Desert, Arizona LCCN2010630926.tif](https://commons.wikimedia.org/wiki/File:Rural_Desert%2C_Arizona_LCCN2010630926.tif)
-- Author: Carol M. Highsmith
-- Licence: Public domain (no known restrictions) <https://www.loc.gov/item/2010630926/>
-- Tile alt text: Desert and distant mesas in rural Arizona
+- File: [Grand Canyon South Rim at Sunset.jpg](https://commons.wikimedia.org/wiki/File:Grand_Canyon_South_Rim_at_Sunset.jpg)
+- Author: Mgimelfarb
+- Licence: CC0 1.0 (public domain dedication) <https://creativecommons.org/publicdomain/zero/1.0/>
+- Tile alt text: The South Rim of the Grand Canyon at sunset, Arizona
 
 ## nevada
 
-- File: [Great Basin National Park, Nevada, seen from Wheeler Peak - 20040621.jpg](https://commons.wikimedia.org/wiki/File:Great_Basin_National_Park%2C_Nevada%2C_seen_from_Wheeler_Peak_-_20040621.jpg)
-- Author: National Park Service
-- Licence: Public domain (no known restrictions) <https://commons.wikimedia.org/wiki/File:Great_Basin_National_Park,_Nevada,_seen_from_Wheeler_Peak_-_20040621.jpg>
-- Tile alt text: Great Basin National Park seen from Wheeler Peak, Nevada
+- File: [Las Vegas skyline. (39596477442).jpg](https://commons.wikimedia.org/wiki/File:Las_Vegas_skyline._%2839596477442%29.jpg)
+- Author: Bernard Spragg. NZ
+- Licence: CC0 1.0 (public domain dedication) <https://creativecommons.org/publicdomain/zero/1.0/>
+- Tile alt text: The Las Vegas Strip skyline, Nevada
 
 ## utah
 
@@ -47,17 +47,17 @@ Recorded anyway, because the source should be traceable.
 
 ## wyoming
 
-- File: [Adams The Tetons and the Snake River.jpg](https://commons.wikimedia.org/wiki/File:Adams_The_Tetons_and_the_Snake_River.jpg)
-- Author: Ansel Adams
-- Licence: Public domain (US government commission, 1942) <https://commons.wikimedia.org/wiki/File:Adams_The_Tetons_and_the_Snake_River.jpg>
-- Tile alt text: The Tetons and the Snake River, Wyoming
+- File: [Grand Teton National Park Mountains.jpg](https://commons.wikimedia.org/wiki/File:Grand_Teton_National_Park_Mountains.jpg)
+- Author: The People’s Internet
+- Licence: CC0 1.0 (public domain dedication) <https://creativecommons.org/publicdomain/zero/1.0/>
+- Tile alt text: The Teton Range reflected in a lake, Grand Teton National Park, Wyoming
 
 ## idaho
 
-- File: [Idaho scene LCCN2011630880.tif](https://commons.wikimedia.org/wiki/File:Idaho_scene_LCCN2011630880.tif)
-- Author: Carol M. Highsmith
-- Licence: Public domain (no known restrictions) <https://www.loc.gov/item/2011630880/>
-- Tile alt text: Idaho landscape
+- File: [Sawtooth Mountains.JPG](https://commons.wikimedia.org/wiki/File:Sawtooth_Mountains.JPG)
+- Author: Coldenburg
+- Licence: Public domain (no known restrictions) <https://commons.wikimedia.org/wiki/File:Sawtooth_Mountains.JPG>
+- Tile alt text: The Sawtooth Mountains above a lake, Idaho
 
 ## montana
 
@@ -82,24 +82,24 @@ Recorded anyway, because the source should be traceable.
 
 ## westtexas
 
-- File: [Gfp-texas-big-bend-national-park-plants-on-the-desert-horizon.jpg](https://commons.wikimedia.org/wiki/File:Gfp-texas-big-bend-national-park-plants-on-the-desert-horizon.jpg)
-- Author: National Park Service
-- Licence: Public domain (National Park Service) <https://commons.wikimedia.org/wiki/File:Gfp-texas-big-bend-national-park-plants-on-the-desert-horizon.jpg>
-- Tile alt text: Desert horizon in Big Bend National Park, Texas
+- File: [Big Bend Santa Elena Canyon 2006.JPG](https://commons.wikimedia.org/wiki/File:Big_Bend_Santa_Elena_Canyon_2006.JPG)
+- Author: Leaflet
+- Licence: Public domain (no known restrictions) <https://commons.wikimedia.org/wiki/File:Big_Bend_Santa_Elena_Canyon_2006.JPG>
+- Tile alt text: Santa Elena Canyon on the Rio Grande, Big Bend National Park, Texas
 
 ## connecticut
 
-- File: [Connecticut River - Windsor Locks Canal State Park Trail - Suffield, Connecticut - DSC04337.jpg](https://commons.wikimedia.org/wiki/File:Connecticut_River_-_Windsor_Locks_Canal_State_Park_Trail_-_Suffield%2C_Connecticut_-_DSC04337.jpg)
-- Author: Daderot
-- Licence: CC0 1.0 (public domain dedication) <https://creativecommons.org/publicdomain/zero/1.0/>
-- Tile alt text: The Connecticut River along the Windsor Locks Canal State Park Trail at Suffield
+- File: [Cornwall covered bridge, Cornwall, Connecticut LCCN2012631589.tif](https://commons.wikimedia.org/wiki/File:Cornwall_covered_bridge%2C_Cornwall%2C_Connecticut_LCCN2012631589.tif)
+- Author: Carol M. Highsmith
+- Licence: Public domain (no known restrictions) <https://www.loc.gov/item/2012631589/>
+- Tile alt text: The Cornwall covered bridge over the Housatonic River, Connecticut
 
 ## delaware
 
-- File: [Sand dunes along the beach at prime hook national wildlife refuge.jpg](https://commons.wikimedia.org/wiki/File:Sand_dunes_along_the_beach_at_prime_hook_national_wildlife_refuge.jpg)
-- Author: Butcher Bill, U.S. Fish and Wildlife Service
-- Licence: Public domain (released by the author) <https://commons.wikimedia.org/wiki/File:Sand_dunes_along_the_beach_at_prime_hook_national_wildlife_refuge.jpg>
-- Tile alt text: Sand dunes along the beach at Prime Hook National Wildlife Refuge, Delaware
+- File: [Del Mem Br.jpg](https://commons.wikimedia.org/wiki/File:Del_Mem_Br.jpg)
+- Author: Crispy1995 at English Wikipedia
+- Licence: Public domain (no known restrictions) <https://commons.wikimedia.org/wiki/File:Del_Mem_Br.jpg>
+- Tile alt text: The Delaware Memorial Bridge over the Delaware River
 
 ## maine
 
@@ -110,10 +110,10 @@ Recorded anyway, because the source should be traceable.
 
 ## maryland
 
-- File: [Assateague Island ASIS4992.jpg](https://commons.wikimedia.org/wiki/File:Assateague_Island_ASIS4992.jpg)
-- Author: National Park Service
-- Licence: Public domain (National Park Service) <https://commons.wikimedia.org/wiki/File:Assateague_Island_ASIS4992.jpg>
-- Tile alt text: The beach at Assateague Island National Seashore, Maryland
+- File: [Wild pony or assateague pony equus caballus.jpg](https://commons.wikimedia.org/wiki/File:Wild_pony_or_assateague_pony_equus_caballus.jpg)
+- Author: Hillebrand Steve, U.S. Fish and Wildlife Service
+- Licence: Public domain (no known restrictions) <https://commons.wikimedia.org/wiki/File:Wild_pony_or_assateague_pony_equus_caballus.jpg>
+- Tile alt text: Wild ponies at Assateague Island, Maryland
 
 ## massachusetts
 
@@ -131,10 +131,10 @@ Recorded anyway, because the source should be traceable.
 
 ## newjersey
 
-- File: [Cape May Point State Park view.jpg](https://commons.wikimedia.org/wiki/File:Cape_May_Point_State_Park_view.jpg)
-- Author: WhisperToMe
+- File: [View of Cape May Lighthouse from the beach, near Cape May Point, 2007.jpg](https://commons.wikimedia.org/wiki/File:View_of_Cape_May_Lighthouse_from_the_beach%2C_near_Cape_May_Point%2C_2007.jpg)
+- Author: DimiTalen
 - Licence: CC0 1.0 (public domain dedication) <https://creativecommons.org/publicdomain/zero/1.0/>
-- Tile alt text: Cape May Point State Park and its lighthouse, New Jersey
+- Tile alt text: The Cape May lighthouse seen from the beach, Cape May Point, New Jersey
 
 ## newyork
 
@@ -152,17 +152,17 @@ Recorded anyway, because the source should be traceable.
 
 ## rhodeisland
 
-- File: [Narragansett Bay Rhode Island June 2021.jpg](https://commons.wikimedia.org/wiki/File:Narragansett_Bay_Rhode_Island_June_2021.jpg)
-- Author: Jstuby
-- Licence: CC0 1.0 (public domain dedication) <https://creativecommons.org/publicdomain/zero/1.0/>
-- Tile alt text: Narragansett Bay from Aquidneck Island, Rhode Island
+- File: [Newport Harbor Light in Newport, Rhode Island (2008).jpg](https://commons.wikimedia.org/wiki/File:Newport_Harbor_Light_in_Newport%2C_Rhode_Island_%282008%29.jpg)
+- Author: Swampyank at English Wikipedia
+- Licence: Public domain (no known restrictions) <https://commons.wikimedia.org/wiki/File:Newport_Harbor_Light_in_Newport,_Rhode_Island_(2008).jpg>
+- Tile alt text: The Newport Harbor Light and the Newport Bridge, Rhode Island
 
 ## vermont
 
-- File: [Green Mountain National Forest (20241002-FS-GM-BAG-FallFoliage-017).jpg](https://commons.wikimedia.org/wiki/File:Green_Mountain_National_Forest_%2820241002-FS-GM-BAG-FallFoliage-017%29.jpg)
-- Author: Forest Service Photography
-- Licence: Public domain (US Forest Service) <https://commons.wikimedia.org/wiki/File:Green_Mountain_National_Forest_(20241002-FS-GM-BAG-FallFoliage-017).jpg>
-- Tile alt text: Fall foliage in the Green Mountain National Forest, Vermont
+- File: [Fall scene in Vermont LCCN2011630153.tif](https://commons.wikimedia.org/wiki/File:Fall_scene_in_Vermont_LCCN2011630153.tif)
+- Author: Carol M. Highsmith
+- Licence: Public domain (no known restrictions) <https://www.loc.gov/item/2011630153/>
+- Tile alt text: Autumn colour on a hillside in Vermont
 
 ## alaska
 
@@ -180,17 +180,17 @@ Recorded anyway, because the source should be traceable.
 
 ## louisiana
 
-- File: [Skyline, New Orleans, Louisiana LCCN2011630536.tif](https://commons.wikimedia.org/wiki/File:Skyline%2C_New_Orleans%2C_Louisiana_LCCN2011630536.tif)
-- Author: Carol M. Highsmith
-- Licence: Public domain (no known restrictions) <https://commons.wikimedia.org/wiki/File:Skyline,_New_Orleans,_Louisiana_LCCN2011630536.tif>
-- Tile alt text: New Orleans skyline seen across the treetops, Louisiana
+- File: [Honey Island Swamp Tour, Louisiana July 2023 - 5.jpg](https://commons.wikimedia.org/wiki/File:Honey_Island_Swamp_Tour%2C_Louisiana_July_2023_-_5.jpg)
+- Author: Daniel Lobo
+- Licence: CC0 1.0 (public domain dedication) <https://creativecommons.org/publicdomain/zero/1.0/>
+- Tile alt text: Cypress swamp at Honey Island, Louisiana
 
 ## arkansas
 
-- File: [Buffalo River at Steel Creek Campground 001.jpg](https://commons.wikimedia.org/wiki/File:Buffalo_River_at_Steel_Creek_Campground_001.jpg)
-- Author: Brandonrush
-- Licence: CC0 1.0 (public domain dedication) <https://creativecommons.org/publicdomain/zero/1.0/>
-- Tile alt text: Buffalo National River below the bluffs at Steel Creek Campground, Arkansas
+- File: [Buffalo National River BUFF0628.jpg](https://commons.wikimedia.org/wiki/File:Buffalo_National_River_BUFF0628.jpg)
+- Author: National Park Service Digital Image Archives
+- Licence: Public domain (no known restrictions) <https://commons.wikimedia.org/wiki/File:Buffalo_National_River_BUFF0628.jpg>
+- Tile alt text: A bluff above the Buffalo National River, Arkansas
 
 ## oklahoma
 
@@ -250,10 +250,10 @@ Recorded anyway, because the source should be traceable.
 
 ## northcarolina
 
-- File: [Autumn on the Blue Ridge Parkway in North Carolina LCCN2011630620.tif](https://commons.wikimedia.org/wiki/File:Autumn_on_the_Blue_Ridge_Parkway_in_North_Carolina_LCCN2011630620.tif)
-- Author: Carol M. Highsmith
-- Licence: Public domain (no known restrictions) <https://commons.wikimedia.org/wiki/File:Autumn_on_the_Blue_Ridge_Parkway_in_North_Carolina_LCCN2011630620.tif>
-- Tile alt text: Autumn colour along the Blue Ridge Parkway, North Carolina
+- File: [Blue Ridge Parkway - Autumn Along the Blue Ridge Parkway - NARA - 7717434.jpg](https://commons.wikimedia.org/wiki/File:Blue_Ridge_Parkway_-_Autumn_Along_the_Blue_Ridge_Parkway_-_NARA_-_7717434.jpg)
+- Author: National Archives (NARA)
+- Licence: Public domain (no known restrictions) <https://commons.wikimedia.org/wiki/File:Blue_Ridge_Parkway_-_Autumn_Along_the_Blue_Ridge_Parkway_-_NARA_-_7717434.jpg>
+- Tile alt text: Autumn along the Blue Ridge Parkway, North Carolina
 
 ## virginia
 
@@ -320,10 +320,10 @@ Recorded anyway, because the source should be traceable.
 
 ## northdakota
 
-- File: [Rolling Prairie View, Dakota Prairie Grasslands, North Dakota (51916292984).jpg](https://commons.wikimedia.org/wiki/File:Rolling_Prairie_View%2C_Dakota_Prairie_Grasslands%2C_North_Dakota_%2851916292984%29.jpg)
-- Author: Forest Service, Northern Region
-- Licence: Public domain (US Forest Service) <https://commons.wikimedia.org/wiki/File:Rolling_Prairie_View,_Dakota_Prairie_Grasslands,_North_Dakota_(51916292984).jpg>
-- Tile alt text: Rolling prairie in the Dakota Prairie Grasslands, North Dakota
+- File: [View of Theodore Roosevelt National Park.jpg](https://commons.wikimedia.org/wiki/File:View_of_Theodore_Roosevelt_National_Park.jpg)
+- Author: NPS / Mark Hoffman
+- Licence: Public domain (no known restrictions) <https://commons.wikimedia.org/wiki/File:View_of_Theodore_Roosevelt_National_Park.jpg>
+- Tile alt text: Badlands in Theodore Roosevelt National Park, North Dakota
 
 ## southdakota
 

@@ -57,21 +57,27 @@ PHOTOS = [
 # Added 2026-09-28 with the state, from the same Library of Congress collection the
 # California tile uses. Public domain, so no attribution burden, which is the rule these
 # tiles follow.
+# REPLACED 2026-10-09 with a more state-identifiable photograph. Ty: "make sure that
+# we're using the best images for each location... Wyoming's black and white for some
+# reason, and it's the only black and white one." CC0 or public domain only, as above.
 PHOTOS += [
-    ("arizona",
-     "Rural Desert, Arizona LCCN2010630926.tif",
-     "Public domain (no known restrictions)", "Carol M. Highsmith",
-     "https://www.loc.gov/item/2010630926/",
-     "Desert and distant mesas in rural Arizona"),
+    ('arizona',
+     'Grand Canyon South Rim at Sunset.jpg',
+     'CC0 1.0 (public domain dedication)', 'Mgimelfarb',
+     'https://creativecommons.org/publicdomain/zero/1.0/',
+     'The South Rim of the Grand Canyon at sunset, Arizona'),
 ]
 
 
+# REPLACED 2026-10-09 with a more state-identifiable photograph. Ty: "make sure that
+# we're using the best images for each location... Wyoming's black and white for some
+# reason, and it's the only black and white one." CC0 or public domain only, as above.
 PHOTOS += [
-    ("nevada",
-     "Great Basin National Park, Nevada, seen from Wheeler Peak - 20040621.jpg",
-     "Public domain (no known restrictions)", "National Park Service",
-     "https://commons.wikimedia.org/wiki/File:Great_Basin_National_Park,_Nevada,_seen_from_Wheeler_Peak_-_20040621.jpg",
-     "Great Basin National Park seen from Wheeler Peak, Nevada"),
+    ('nevada',
+     'Las Vegas skyline. (39596477442).jpg',
+     'CC0 1.0 (public domain dedication)', 'Bernard Spragg. NZ',
+     'https://creativecommons.org/publicdomain/zero/1.0/',
+     'The Las Vegas Strip skyline, Nevada'),
     ("utah",
      "Delicate Arch in Arches National Park. NPS-Damon Joyce (18686376391).jpg",
      "Public domain (National Park Service)", "Damon Joyce, National Park Service",
@@ -80,21 +86,27 @@ PHOTOS += [
 ]
 
 
+# REPLACED 2026-10-09 with a more state-identifiable photograph. Ty: "make sure that
+# we're using the best images for each location... Wyoming's black and white for some
+# reason, and it's the only black and white one." CC0 or public domain only, as above.
 PHOTOS += [
-    ("wyoming",
-     "Adams The Tetons and the Snake River.jpg",
-     "Public domain (US government commission, 1942)", "Ansel Adams",
-     "https://commons.wikimedia.org/wiki/File:Adams_The_Tetons_and_the_Snake_River.jpg",
-     "The Tetons and the Snake River, Wyoming"),
+    ('wyoming',
+     'Grand Teton National Park Mountains.jpg',
+     'CC0 1.0 (public domain dedication)', 'The People’s Internet',
+     'https://creativecommons.org/publicdomain/zero/1.0/',
+     'The Teton Range reflected in a lake, Grand Teton National Park, Wyoming'),
 ]
 
 
+# REPLACED 2026-10-09 with a more state-identifiable photograph. Ty: "make sure that
+# we're using the best images for each location... Wyoming's black and white for some
+# reason, and it's the only black and white one." CC0 or public domain only, as above.
 PHOTOS += [
-    ("idaho",
-     "Idaho scene LCCN2011630880.tif",
-     "Public domain (no known restrictions)", "Carol M. Highsmith",
-     "https://www.loc.gov/item/2011630880/",
-     "Idaho landscape"),
+    ('idaho',
+     'Sawtooth Mountains.JPG',
+     'Public domain (no known restrictions)', 'Coldenburg',
+     'https://commons.wikimedia.org/wiki/File:Sawtooth_Mountains.JPG',
+     'The Sawtooth Mountains above a lake, Idaho'),
     ("montana",
      "Lake-sherburne-964855.jpg",
      "Public domain (National Park Service)", "National Park Service",
@@ -108,17 +120,20 @@ PHOTOS += [
 ]
 
 
+# REPLACED 2026-10-09 with a more state-identifiable photograph. Ty: "make sure that
+# we're using the best images for each location... Wyoming's black and white for some
+# reason, and it's the only black and white one." CC0 or public domain only, as above.
 PHOTOS += [
     ("newmexico",
      "Carlsbad Caverns National Park P1012859.jpg",
      "Public domain (National Park Service)", "National Park Service",
      "https://commons.wikimedia.org/wiki/File:Carlsbad_Caverns_National_Park_P1012859.jpg",
      "Carlsbad Caverns National Park, New Mexico"),
-    ("westtexas",
-     "Gfp-texas-big-bend-national-park-plants-on-the-desert-horizon.jpg",
-     "Public domain (National Park Service)", "National Park Service",
-     "https://commons.wikimedia.org/wiki/File:Gfp-texas-big-bend-national-park-plants-on-the-desert-horizon.jpg",
-     "Desert horizon in Big Bend National Park, Texas"),
+    ('westtexas',
+     'Big Bend Santa Elena Canyon 2006.JPG',
+     'Public domain (no known restrictions)', 'Leaflet',
+     'https://commons.wikimedia.org/wiki/File:Big_Bend_Santa_Elena_Canyon_2006.JPG',
+     'Santa Elena Canyon on the Rio Grande, Big Bend National Park, Texas'),
 ]
 
 
@@ -128,27 +143,30 @@ PHOTOS += [
 # Commons page with the API rather than taken from a search result -- ten came back PD or CC0
 # on the first pass and the eleventh (New Hampshire) only after a typo in the file title was
 # corrected, which is the reason to check each one rather than trust a list.
+# REPLACED 2026-10-09 with a more state-identifiable photograph. Ty: "make sure that
+# we're using the best images for each location... Wyoming's black and white for some
+# reason, and it's the only black and white one." CC0 or public domain only, as above.
 PHOTOS += [
-    ("connecticut",
-     "Connecticut River - Windsor Locks Canal State Park Trail - Suffield, Connecticut - DSC04337.jpg",
-     "CC0 1.0 (public domain dedication)", "Daderot",
-     "https://creativecommons.org/publicdomain/zero/1.0/",
-     "The Connecticut River along the Windsor Locks Canal State Park Trail at Suffield"),
-    ("delaware",
-     "Sand dunes along the beach at prime hook national wildlife refuge.jpg",
-     "Public domain (released by the author)", "Butcher Bill, U.S. Fish and Wildlife Service",
-     "https://commons.wikimedia.org/wiki/File:Sand_dunes_along_the_beach_at_prime_hook_national_wildlife_refuge.jpg",
-     "Sand dunes along the beach at Prime Hook National Wildlife Refuge, Delaware"),
+    ('connecticut',
+     'Cornwall covered bridge, Cornwall, Connecticut LCCN2012631589.tif',
+     'Public domain (no known restrictions)', 'Carol M. Highsmith',
+     'https://www.loc.gov/item/2012631589/',
+     'The Cornwall covered bridge over the Housatonic River, Connecticut'),
+    ('delaware',
+     'Del Mem Br.jpg',
+     'Public domain (no known restrictions)', 'Crispy1995 at English Wikipedia',
+     'https://commons.wikimedia.org/wiki/File:Del_Mem_Br.jpg',
+     'The Delaware Memorial Bridge over the Delaware River'),
     ("maine",
      "Bass Harbor Head Light Station Day.jpg",
      "Public domain (National Park Service)", "Kent Miller, National Park Service",
      "https://commons.wikimedia.org/wiki/File:Bass_Harbor_Head_Light_Station_Day.jpg",
      "Bass Harbor Head Light in Acadia National Park, Maine"),
-    ("maryland",
-     "Assateague Island ASIS4992.jpg",
-     "Public domain (National Park Service)", "National Park Service",
-     "https://commons.wikimedia.org/wiki/File:Assateague_Island_ASIS4992.jpg",
-     "The beach at Assateague Island National Seashore, Maryland"),
+    ('maryland',
+     'Wild pony or assateague pony equus caballus.jpg',
+     'Public domain (no known restrictions)', 'Hillebrand Steve, U.S. Fish and Wildlife Service',
+     'https://commons.wikimedia.org/wiki/File:Wild_pony_or_assateague_pony_equus_caballus.jpg',
+     'Wild ponies at Assateague Island, Maryland'),
     ("massachusetts",
      "Cape Cod, Massachusetts coastal skyline.jpg",
      "CC0 1.0 (public domain dedication)", "Walesjl",
@@ -159,11 +177,11 @@ PHOTOS += [
      "Public domain (Federal Highway Administration)", "Dennis Adams, Federal Highway Administration",
      "https://commons.wikimedia.org/wiki/File:Kancamagus_Scenic_Byway_-_Sugar_Hill_Overlook_on_the_Kancamagus_Highway_-_NARA_-_7719833.jpg",
      "The White Mountains from Sugar Hill Overlook on the Kancamagus Highway, New Hampshire"),
-    ("newjersey",
-     "Cape May Point State Park view.jpg",
-     "CC0 1.0 (public domain dedication)", "WhisperToMe",
-     "https://creativecommons.org/publicdomain/zero/1.0/",
-     "Cape May Point State Park and its lighthouse, New Jersey"),
+    ('newjersey',
+     'View of Cape May Lighthouse from the beach, near Cape May Point, 2007.jpg',
+     'CC0 1.0 (public domain dedication)', 'DimiTalen',
+     'https://creativecommons.org/publicdomain/zero/1.0/',
+     'The Cape May lighthouse seen from the beach, Cape May Point, New Jersey'),
     ("newyork",
      "Niagara Falls seen from Skylon tower.jpg",
      "CC0 1.0 (public domain dedication)", "Tenryuu1919",
@@ -174,16 +192,16 @@ PHOTOS += [
      "CC0 1.0 (public domain dedication)", "Cbaile19",
      "https://creativecommons.org/publicdomain/zero/1.0/",
      "The Pittsburgh skyline from the North Shore, Pennsylvania"),
-    ("rhodeisland",
-     "Narragansett Bay Rhode Island June 2021.jpg",
-     "CC0 1.0 (public domain dedication)", "Jstuby",
-     "https://creativecommons.org/publicdomain/zero/1.0/",
-     "Narragansett Bay from Aquidneck Island, Rhode Island"),
-    ("vermont",
-     "Green Mountain National Forest (20241002-FS-GM-BAG-FallFoliage-017).jpg",
-     "Public domain (US Forest Service)", "Forest Service Photography",
-     "https://commons.wikimedia.org/wiki/File:Green_Mountain_National_Forest_(20241002-FS-GM-BAG-FallFoliage-017).jpg",
-     "Fall foliage in the Green Mountain National Forest, Vermont"),
+    ('rhodeisland',
+     'Newport Harbor Light in Newport, Rhode Island (2008).jpg',
+     'Public domain (no known restrictions)', 'Swampyank at English Wikipedia',
+     'https://commons.wikimedia.org/wiki/File:Newport_Harbor_Light_in_Newport,_Rhode_Island_(2008).jpg',
+     'The Newport Harbor Light and the Newport Bridge, Rhode Island'),
+    ('vermont',
+     'Fall scene in Vermont LCCN2011630153.tif',
+     'Public domain (no known restrictions)', 'Carol M. Highsmith',
+     'https://www.loc.gov/item/2011630153/',
+     'Autumn colour on a hillside in Vermont'),
 ]
 
 
@@ -208,17 +226,20 @@ PHOTOS += [
 # Highsmith images carry the Library of Congress "no known restrictions" public-domain
 # statement, the Gloss Mountains photo was released into the public domain by its author,
 # and the Buffalo River photo is CC0. No attribution burden, per the house rule.
+# REPLACED 2026-10-09 with a more state-identifiable photograph. Ty: "make sure that
+# we're using the best images for each location... Wyoming's black and white for some
+# reason, and it's the only black and white one." CC0 or public domain only, as above.
 PHOTOS += [
-    ("louisiana",
-     "Skyline, New Orleans, Louisiana LCCN2011630536.tif",
-     "Public domain (no known restrictions)", "Carol M. Highsmith",
-     "https://commons.wikimedia.org/wiki/File:Skyline,_New_Orleans,_Louisiana_LCCN2011630536.tif",
-     "New Orleans skyline seen across the treetops, Louisiana"),
-    ("arkansas",
-     "Buffalo River at Steel Creek Campground 001.jpg",
-     "CC0 1.0 (public domain dedication)", "Brandonrush",
-     "https://creativecommons.org/publicdomain/zero/1.0/",
-     "Buffalo National River below the bluffs at Steel Creek Campground, Arkansas"),
+    ('louisiana',
+     'Honey Island Swamp Tour, Louisiana July 2023 - 5.jpg',
+     'CC0 1.0 (public domain dedication)', 'Daniel Lobo',
+     'https://creativecommons.org/publicdomain/zero/1.0/',
+     'Cypress swamp at Honey Island, Louisiana'),
+    ('arkansas',
+     'Buffalo National River BUFF0628.jpg',
+     'Public domain (no known restrictions)', 'National Park Service Digital Image Archives',
+     'https://commons.wikimedia.org/wiki/File:Buffalo_National_River_BUFF0628.jpg',
+     'A bluff above the Buffalo National River, Arkansas'),
     ("oklahoma",
      "Gloss Mountains.jpg",
      "Public domain (released into the public domain by the author)", "Okiefromokla",
@@ -264,6 +285,9 @@ def crop_to(im, ratio, bias):
 
 # Added 2026-10-04 with the South and Southeast expansion. All public domain or CC0, sourced
 # through the Commons search API and each licence read off the file's own description page.
+# REPLACED 2026-10-09 with a more state-identifiable photograph. Ty: "make sure that
+# we're using the best images for each location... Wyoming's black and white for some
+# reason, and it's the only black and white one." CC0 or public domain only, as above.
 PHOTOS += [
     ("alabama",
      "Pulpit Rock in the Fall.jpg",
@@ -295,11 +319,11 @@ PHOTOS += [
      "Public domain (no known restrictions)", "Carol M. Highsmith",
      "https://commons.wikimedia.org/wiki/File:Aerial_view_of_Charleston,_South_Carolina_Harbor,_May_2017.jpg",
      "Charleston Harbor from the air, South Carolina"),
-    ("northcarolina",
-     "Autumn on the Blue Ridge Parkway in North Carolina LCCN2011630620.tif",
-     "Public domain (no known restrictions)", "Carol M. Highsmith",
-     "https://commons.wikimedia.org/wiki/File:Autumn_on_the_Blue_Ridge_Parkway_in_North_Carolina_LCCN2011630620.tif",
-     "Autumn colour along the Blue Ridge Parkway, North Carolina"),
+    ('northcarolina',
+     'Blue Ridge Parkway - Autumn Along the Blue Ridge Parkway - NARA - 7717434.jpg',
+     'Public domain (no known restrictions)', 'National Archives (NARA)',
+     'https://commons.wikimedia.org/wiki/File:Blue_Ridge_Parkway_-_Autumn_Along_the_Blue_Ridge_Parkway_-_NARA_-_7717434.jpg',
+     'Autumn along the Blue Ridge Parkway, North Carolina'),
     ("virginia",
      "Shenandoah National Park banner Fall colors.jpg",
      "Public domain (National Park Service)", "Shenandoah National Park",
@@ -346,6 +370,9 @@ PHOTOS += [
 
 # Added 2026-10-04 with the plains expansion. Licences read off each file's own
 # Commons description page.
+# REPLACED 2026-10-09 with a more state-identifiable photograph. Ty: "make sure that
+# we're using the best images for each location... Wyoming's black and white for some
+# reason, and it's the only black and white one." CC0 or public domain only, as above.
 PHOTOS += [
     ("kansas",
      "Classic Kansas field of waving wheat LCCN2011632245.tif",
@@ -357,11 +384,11 @@ PHOTOS += [
      "CC0 1.0 (public domain dedication)", "Z3lvs",
      "https://creativecommons.org/publicdomain/zero/1.0/",
      "Sand hills grassland near Seneca, Nebraska"),
-    ("northdakota",
-     "Rolling Prairie View, Dakota Prairie Grasslands, North Dakota (51916292984).jpg",
-     "Public domain (US Forest Service)", "Forest Service, Northern Region",
-     "https://commons.wikimedia.org/wiki/File:Rolling_Prairie_View,_Dakota_Prairie_Grasslands,_North_Dakota_(51916292984).jpg",
-     "Rolling prairie in the Dakota Prairie Grasslands, North Dakota"),
+    ('northdakota',
+     'View of Theodore Roosevelt National Park.jpg',
+     'Public domain (no known restrictions)', 'NPS / Mark Hoffman',
+     'https://commons.wikimedia.org/wiki/File:View_of_Theodore_Roosevelt_National_Park.jpg',
+     'Badlands in Theodore Roosevelt National Park, North Dakota'),
     ("southdakota",
      "Badlands along South Dakota Highway 44 in Badlands National Park, near Scenic Pass, 2009 (1).jpg",
      "CC0 1.0 (public domain dedication)", "DimiTalen",

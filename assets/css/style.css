@@ -250,6 +250,18 @@ input,select,textarea{font-family:inherit}
 .btn-ghost:hover{color:var(--text);background:var(--bg-2)}
 .btn-outline{border-color:var(--border-2);color:var(--text-2);background:transparent}
 .btn-outline:hover{border-color:var(--text-3);color:var(--text)}
+/* Maker-manual links on the parts hub. NOT a button: it leaves the site for a
+   maker's own document, so it should read as a reference rather than an action.
+   Ty, 2026-10-09: "the how to fix it buttons and the manuals buttons look too
+   similar ... make the manuals buttons look totally different somehow." Until
+   now they were both pills with a surface fill, differing only in border weight
+   and a shadow, which is not a difference a reader can name. This drops the pill
+   entirely: squared, flat, smaller, quiet, with an off-site arrow. The guide
+   button keeps the gradient edge and stays the only pressable-looking thing. */
+.doc-link{display:inline-flex;align-items:center;gap:6px;padding:9px 12px;border-radius:8px;background:var(--bg-2);border:1px solid var(--border);color:var(--text-2);font-size:13px;font-weight:600;line-height:1;min-height:38px;transition:background .16s,border-color .16s,color .16s}
+.doc-link::after{content:"\2197";font-size:11px;opacity:.6}
+.doc-link:hover{background:var(--surface);border-color:var(--border-hover);color:var(--text)}
+.doc-link:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
 .btn-sm{padding:8px 15px;font-size:13px}
 .btn-lg{padding:16px 30px;font-size:15.5px}
 .btn-block{width:100%}
@@ -895,6 +907,35 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
 .guide-group{margin-top:46px;font-size:clamp(20px,2.4vw,26px);font-weight:800;letter-spacing:-.02em;color:var(--text)}
 .guide-group:first-of-type{margin-top:26px}
 .guide-group-note{margin-top:6px;margin-bottom:20px;font-size:14.5px;color:var(--text-2)}
+/* THE GUIDES INDEX JUMP BAR. 44 guides in six groups is four screens of scrolling,
+   and before 2026-10-09 the only way to reach "Winter storage" was to pass the five
+   groups above it. Ty: "there's a lot of tiles to look through ... make this easier
+   to navigate." This is a table of contents, the one navigation fix the evidence
+   supports for a long index. It sticks under nav.main, which is 86px tall -- the
+   same offset .filters and .sidebar already use. The groups themselves are left
+   alone: grouping is already the supported move, and the choice-overload evidence
+   does not support cutting guides. */
+.hub-jump{position:sticky;top:86px;z-index:120;margin-top:26px;background:var(--bg);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.hub-jump ul{display:flex;flex-wrap:wrap;gap:4px;list-style:none;margin:0;padding:9px 0}
+.hub-jump a{display:inline-flex;align-items:center;padding:9px 14px;border-radius:999px;font-size:13.5px;font-weight:600;color:var(--text-2);border:1px solid transparent;min-height:40px}
+.hub-jump a:hover{background:var(--surface);border-color:var(--border);color:var(--text)}
+.hub-jump a:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+.hub-jump a span{font-size:12px;font-weight:700;color:var(--text-3);margin-left:2px}
+.guide-group{scroll-margin-top:150px}
+/* The parts hub's bar carries nine systems, so it wraps to two rows (126px) where the
+   guides bar's six fit on one (81px). Measured in the browser: with a 150px offset the
+   propane heading landed 43px UNDERNEATH the bar. 210 clears 67px of header plus 126px
+   of bar plus 17px of air. The bar is static below 900px, and at every width where it
+   sticks it is two rows, so one fixed value is correct throughout. */
+.parts-sys{scroll-margin-top:210px}
+@media(max-width:900px){
+  /* A sticky bar on a phone eats a third of the screen, and its chips would have to
+     scroll sideways, which is the pattern Ty rejected for the tool chips. So on a
+     narrow screen it is a plain wrapped row of chips at the top of the page. */
+  .hub-jump{position:static}
+  .hub-jump ul{gap:6px}
+  .hub-jump a{padding:9px 12px;font-size:13px;background:var(--surface);border-color:var(--border);min-height:44px}
+}
 /* .guide-thumb is gone: it was a 130px-tall empty block holding a 46px emoji,
    which is the "floating emoji in a void" the guides index already dropped. The
    last user was the homepage, which now uses .guide-ic like everything else. */
@@ -1570,6 +1611,30 @@ details.faq p{color:var(--text-2);font-size:16px;line-height:1.7;padding-bottom:
 .tool-viz .viz-row.ok b{color:var(--text)}
 .tool-viz .viz-row.warn{background:var(--warn-bg);border:1px solid var(--warn-edge)}
 .tool-viz .viz-row.warn b{color:var(--warn)}
+/* .bad had no rule at all until 2026-10-09, so the rows that carry it (the loan
+   card's ten-year term, the watts card's tripped breaker) fell back to the bare
+   .viz-row box and read as ordinary rows. Same palette as .v-row.bad inside the
+   calculators themselves, so the index and the tool agree. */
+.tool-viz .viz-row.bad{background:var(--danger-bg);border:1px solid var(--danger-edge)}
+.tool-viz .viz-row.bad b{color:var(--c-rose)}
+/* THE EXAMPLE PANEL ROTATES. Each .viz-shot is one real answer the tool gives;
+   toolviz.js flips between them so the range is visible without opening the tool.
+   Only the first shot is in the document as displayed content -- the rest are
+   display:none until JS turns them on, so with script off the card still shows one
+   clean example and nothing is hidden that a reader was promised. */
+.tool-viz .viz-shot{display:none}
+.tool-viz .viz-shot.is-on{display:block}
+.tool-viz .viz-stage{transition:opacity .16s ease}
+.tool-viz .viz-stage.is-fading{opacity:0}
+.tool-viz .viz-bar{display:flex;align-items:center;gap:2px;margin-top:6px}
+.tool-viz .viz-dot{width:32px;height:32px;padding:0;border:0;background:transparent;cursor:pointer;position:relative}
+.tool-viz .viz-dot::after{content:"";position:absolute;inset:11px;border-radius:50%;background:var(--border-2);transition:background .18s,transform .18s}
+.tool-viz .viz-dot:hover::after{background:var(--text-3)}
+.tool-viz .viz-dot.is-on::after{background:var(--brand);transform:scale(1.4)}
+.tool-viz .viz-pause{margin-left:auto;border:0;background:transparent;color:var(--text-3);font:inherit;font-size:12px;font-weight:600;cursor:pointer;padding:8px 6px;border-radius:8px;min-height:32px}
+.tool-viz .viz-pause:hover{color:var(--text);background:var(--bg-2)}
+.tool-viz .viz-dot:focus-visible,.tool-viz .viz-pause:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+@media(prefers-reduced-motion:reduce){.tool-viz .viz-stage{transition:none}}
 .verified{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:var(--tint-ink);background:var(--tint-bg);border:1px solid var(--tint-edge);border-radius:999px;padding:6px 13px}
 .verified::before{content:"\2713";display:grid;place-items:center;width:19px;height:19px;border-radius:50%;background:var(--brand);color:var(--text-inv);font-size:11px;font-weight:900}
 /* quieter primary hover (the old pink glow bubble) */
@@ -2941,6 +3006,13 @@ body.is-embed .embed-credit a{font-weight:800;color:var(--b1)}
   /* ---- 1. navigation has no meaning on paper ---- */
   #site-nav,#site-footer,.mobile-menu,.nav-search,.js-search-form,
   .btn,.burger,.guide-ic,.tool-btns,.back,.to-top,.skip-link,.hstat-go{display:none !important}
+
+  /* ---- 1b. the rotating example panel: no controls on paper, and print the
+     FIRST example rather than whichever one the timer happened to be showing
+     when somebody hit Ctrl-P, so two printouts of the same page match. ---- */
+  .viz-bar{display:none !important}
+  .tool-viz .viz-shot{display:none !important}
+  .tool-viz .viz-shot:first-child{display:block !important}
 
   /* ---- 2. the page becomes a document: full width, black on white ---- */
   html,body{background:var(--surface) !important;color:var(--ink-black)}
