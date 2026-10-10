@@ -57,44 +57,59 @@ def stamp_html(html, stats=None):
 
 
 SITE_JS = ROOT / 'assets' / 'js' / 'site.js'
-# Matches the JS STRING site.js builds its injected URL from. Deliberately anchored on the
+# Matches the JS STRINGS site.js builds its injected URLs from. Deliberately anchored on the
 # leading quote, so the two querySelector('script[src*="assets/js/search.js..."]') probes in
-# the same file (which use a double quote) are not touched.
-SITE_REF = re.compile(r"('assets/js/search\.js)(?:\?v=[0-9a-f]+)?'")
+# the same file (which use a double quote) are not touched. TWO files are injected now -- the
+# shared search matcher and search.js itself -- so the pattern names both and the digest is
+# chosen per match rather than being fixed to one file.
+SITE_REF = re.compile(r"('assets/js/(search-match|search)\.js)(?:\?v=[0-9a-f]+)?'")
 
 
 def stamp_site_js(stats):
-    """Put the current search.js hash into the URL site.js injects.
+    """Put the current hash into every asset URL site.js builds in code.
 
-    ONE JS FILE IS STAMPED, AND ONLY ONE, BECAUSE ONLY ONE BUILDS AN ASSET URL IN CODE.
-    site.js injects search.js on the 117 pages that carry no static tag for it, and it
-    builds that URL from a string. REF above only looks at href=" and src=" in HTML, so
-    the string was never stamped and those pages fetched a BARE url: a returning visitor
-    could run a stale search.js for as long as the CDN cache lasted. The loader's own
-    comment records this defect from 2026-09-27 and says the version is "read from the
-    homepage's static tag" -- which is true only ON the homepage, where the tag exists.
-    Found 2026-10-05, when a stale copy made a working location lookup look broken and
-    three probe runs reported a feature that was fine.
+    ONLY THE FILES THAT BUILD AN ASSET URL IN CODE ARE STAMPED HERE. site.js injects
+    search.js on the 117 pages that carry no static tag for it, and it builds that URL from
+    a string. REF above only looks at href=" and src=" in HTML, so the string was never
+    stamped and those pages fetched a BARE url: a returning visitor could run a stale
+    search.js for as long as the CDN cache lasted. The loader's own comment records this
+    defect from 2026-09-27 and says the version is "read from the homepage's static tag" --
+    which is true only ON the homepage, where the tag exists. Found 2026-10-05, when a stale
+    copy made a working location lookup look broken and three probe runs reported a feature
+    that was fine.
 
-    Fails loudly if the string is not found exactly once, because a silent no-op here is
-    indistinguishable from a stamp that worked.
+    assets/js/search-match.js joined it on 2026-10-10, injected immediately before search.js
+    so the two searches on this site share one matching rule. It is stamped the same way and
+    for the same reason: an injected URL built from a string is invisible to REF.
+
+    Fails loudly if any expected string is missing or appears more than once, because a
+    silent no-op here is indistinguishable from a stamp that worked.
     """
-    h = digest('assets/js/search.js')
-    if not h or not SITE_JS.is_file():
+    if not SITE_JS.is_file():
         return False
     text = SITE_JS.read_text(encoding='utf-8')
-    hits = [0]
+    hits = {}
 
     def repl(m):
-        hits[0] += 1
-        return m.group(1) + '?v=' + h + "'"
+        # group(1) carries the leading quote, because the pattern is anchored on it so the
+        # script[src*=...] probes are not touched; group(2) is the bare path for the digest.
+        quoted = m.group(1)
+        rel = quoted[1:]          # drop the leading quote the pattern is anchored on
+        hits[rel] = hits.get(rel, 0) + 1
+        h = digest(rel)
+        if not h:
+            raise SystemExit("FAIL  site.js injects %s, which does not exist" % rel)
+        return quoted + '?v=' + h + "'"
 
     new = SITE_REF.sub(repl, text)
-    if hits[0] != 1:
-        raise SystemExit("FAIL  site.js: expected exactly one search.js URL string, found %d"
-                         % hits[0])
+    if not hits:
+        raise SystemExit("FAIL  site.js: no injected asset URL string found at all")
+    for rel, n in sorted(hits.items()):
+        if n != 1:
+            raise SystemExit("FAIL  site.js: expected exactly one %s URL string, found %d"
+                             % (rel, n))
     if stats is not None:
-        stats['refs'] += 1
+        stats['refs'] += len(hits)
     if new == text:
         return False
     if stats is not None:

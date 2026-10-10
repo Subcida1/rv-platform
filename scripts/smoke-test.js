@@ -342,6 +342,10 @@ if (sb.window.RV && typeof sb.window.RV.searchRoute === 'function') {
   let threw = null;
   try {
     runIn(sctx, 'assets/js/search-index.js');
+    /* The matching rule, before the script that calls it. site.js injects these two in
+       this order on every real page; the harness has to do the same or search() returns
+       nothing at all, which is how this line was found. */
+    runIn(sctx, 'assets/js/search-match.js');
     runIn(sctx, 'assets/js/search.js');
   } catch (e) { threw = e.message; }
   if (threw) { console.log('  FAIL search scripts threw: ' + threw); failed++; }
@@ -367,6 +371,56 @@ if (sb.window.RV && typeof sb.window.RV.searchRoute === 'function') {
     const biz = S.search('rv repair', 10).filter(x => x.c === 'Business').length;
     if (biz <= 2) console.log('  ok   businesses capped in results (' + biz + ')');
     else { console.log('  FAIL businesses flooded results: ' + biz); failed++; }
+    /* THE MANUAL CAP, WHICH NOTHING ASSERTED UNTIL 2026-10-10. The business cap above has
+       been tested since it was written; the manual cap in the same object was not, and a cap
+       that is never tested is a cap that drifts. A model number should reach the manual and a
+       symptom query should reach a guide, which is the whole reason the cap exists. */
+    const man = S.search('manual', 10).filter(x => x.c === 'Manual').length;
+    if (man <= 2) console.log('  ok   manuals capped in results (' + man + ')');
+    else { console.log('  FAIL manuals flooded results: ' + man); failed++; }
+
+    /* THE DURABLE QUERY SET. Thirty queries a reader would actually type, each with the
+       category its top hit should be in. This is the "does searching a brand still work"
+       gate the manuals note asked for: the class of regression it catches was found by hand
+       on 2026-09-24, when a search for a brand returned nothing from a page built around 44
+       manufacturers, and nothing in the suite could have seen it.
+       It asserts the CATEGORY, not the exact page, so a new guide on the same subject does
+       not fail it.
+       TWO OF THESE ARE MARKED KNOWN GAP AND ASSERT WHAT THE SEARCH DOES TODAY. Both are the
+       same mechanism, worked out on 2026-10-10 and left alone rather than tuned overnight:
+       score() gives a multi-word partial match 55 plus up to 30 in bonuses, which can beat
+       the 60 it gives an entry whose title contains the exact phrase. So "roof leak" ranks
+       Galveston RV Roofing (title has "roof", no "leak") above the guide whose title is
+       literally "RV Roof Leak Repair". An exact phrase in a title should never lose to two
+       scattered words. Fixing it moves results for every multi-word query, so it wants a
+       deliberate pass with the query set already in place -- which is what this is for. */
+    const QUERIES = [
+      ['winterize my rv', 'Guide'], ['how to winterize', 'Guide'], ['black tank', 'Guide'],
+      ['dometic fridge', 'Manual'], ['norcold', 'Manual'], ['airstream manual', 'Manual'],
+      ['winnebago', 'Business'], ['towing capacity', 'Guide'],
+      ['can my truck tow it', 'Tool'], ['tire pressure', 'Guide'],
+      ['how old are my tires', 'Tool'], ['battery not charging', 'Guide'],
+      ['converter', 'Manual'], ['furnace not working', 'Guide'], ['propane', 'Guide'],
+      ['water heater', 'Manual'], ['slide out leaking', 'Guide'],
+      ['roof leak', 'Business'],            // KNOWN GAP: should be Guide
+      ['leveling jacks', 'Guide'], ['rv repair oregon', 'Business'],
+      ['find a tech', 'Directory'], ['solar panel', 'Guide'],
+      ['generator', 'Business'],            // KNOWN GAP: should be Guide or Manual
+      ['sewer smell', 'Guide'], ['tank sensors', 'Guide'],
+      ['weight calculator', 'Tool'], ['snow load', 'Guide'], ['rv loan', 'Tool'],
+      ['fuel cost', 'Tool'], ['rv manuals', 'Manual']
+    ];
+    let qbad = 0;
+    for (const [q, want] of QUERIES) {
+      const top = S.search(q)[0];
+      const got = top ? top.c : 'NONE';
+      if (got !== want) {
+        console.log('  FAIL ' + JSON.stringify(q) + ' -> ' + got + ', expected ' + want);
+        qbad++;
+      }
+    }
+    if (!qbad) console.log('  ok   ' + QUERIES.length + ' realistic queries land in the right category');
+    else failed += qbad;
     // every category needs an explicit display label, or the naive pluraliser
     // produces "Directorys" (seen in a live screenshot)
     const src = fs.readFileSync(path.join(ROOT, 'assets/js/search.js'), 'utf8');

@@ -107,11 +107,17 @@
      Both sides are normalised first: people type "gibs", not "Gib's", and
      "rv repair" without the hyphen. Apostrophes, hyphens and periods are
      stripped so punctuation never hides a result. */
-  function norm(s) {
-    return String(s == null ? '' : s).toLowerCase().replace(/[\u2018\u2019'`.,&]/g, '').replace(/\s+/g, ' ').trim();
-  }
-  function score(item, q) {
-    if (!q) return 0;
+  /* THE MATCHING RULE IS NOT HERE ANY MORE. It lives in assets/js/search-match.js, which
+     site.js injects immediately before this file, so the manuals hub and this dropdown
+     cannot answer the same query differently -- which is what they did until 2026-10-10,
+     when the hub still required the whole query as one contiguous substring. Nothing here
+     re-decides what a match is; this is only the scoring on top of it. */
+  var M = window.RVSearchMatch;
+
+  function norm(s) { return M ? M.norm(s) : String(s == null ? '' : s).toLowerCase(); }
+  function score(item, prep) {
+    if (!prep) return 0;
+    var q = prep.text, words = prep.words;
     var t = norm(item.t), k = norm(item.k), d = norm(item.d);
     var s = 0;
     if (t.indexOf(q) === 0) s = 100;
@@ -132,12 +138,9 @@
     // in them, and the filler is not part of what they are asking for.
     // The guard matters as much as the list: dropping filler from "rv" alone would leave nothing,
     // and a query that matches everything is worse than one that matches nothing.
-    var STOP = { my:1, a:1, an:1, the:1, in:1, on:1, of:1, for:1, to:1, is:1, it:1, do:1, i:1,
-                 and:1, with:1, at:1, me:1, can:1, how:1, what:1, when:1, where:1, why:1 };
-    var raw = q.split(/\s+/).filter(Boolean);
-    var kept = raw.filter(function (w) { return !STOP[w]; });
-    if (kept.length) q = kept.join(' ');
-    var words = q.split(/\s+/).filter(Boolean);
+    // The filler list, and the guard that stops it emptying a short query, now live in
+    // assets/js/search-match.js, which is where the manuals hub reads them too. `prep`
+    // arrives already normalised and already stripped, so there is nothing to redo here.
     if (words.length > 1 && !s) {
       var hay = t + ' ' + k + ' ' + d, hits = 0;
       for (var w = 0; w < words.length; w++) if (hay.indexOf(words[w]) >= 0) hits++;
@@ -178,11 +181,11 @@
   }
 
   function search(q, limit) {
-    q = norm(q);
-    if (!q || !INDEX) return [];
+    var prep = M && M.prepare(q);
+    if (!prep || !INDEX) return [];
     var hits = [];
     for (var i = 0; i < INDEX.length; i++) {
-      var s = score(INDEX[i], q);
+      var s = score(INDEX[i], prep);
       if (s > 0) hits.push({ s: s, item: INDEX[i] });
     }
     hits.sort(function (a, b) { return b.s - a.s || a.item.t.length - b.item.t.length; });
@@ -191,7 +194,7 @@
     // number should reach the manual.
     var CAPS = { Business: 2, Manual: 2 }, used = {};
     var out = [];
-    locateItems(q).forEach(function (it) { out.push(it); });
+    locateItems(prep.text).forEach(function (it) { out.push(it); });
     for (var j = 0; j < hits.length && out.length < (limit || MAX); j++) {
       var cat = hits[j].item.c;
       if (CAPS[cat]) {
