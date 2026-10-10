@@ -461,10 +461,10 @@
     "claims_date": "Oct 2, 2026"
   },
   "guides/rv-battery-not-charging.html": {
-    "hash": "4adb14c5e8a64518",
+    "hash": "854b73cfd7fe8b0d",
     "status": "verified",
-    "verified_by": "independent review on 2026-10-06, one of the batches that covered every guide. The reviewer read the page in full and named the sentences to tighten; the edits applied are those recommendations. Where a sentence was added to explain a mechanism, a separate fact-check of the added sentences was run and its findings applied.",
-    "verified_at": "2026-10-06",
+    "verified_by": "Fresh-context independent review 2026-10-10: 7 findings (1 injury, 1 wrong fact, 2 sourcing, 1 voice, 2 style). All applied as recommended - the 12-volt charge pin corrected from pin 7 to the auxiliary pin, a flag-injury callout added at the converter and battery risk points, and a truncated sentence completed.",
+    "verified_at": "2026-10-10",
     "sources": [],
     "spec": "_specs/rv-battery-not-charging.md",
     "spec_waived": false,
@@ -600,10 +600,10 @@
     "claims": "1880dbae7019e467"
   },
   "guides/rv-lights-not-working.html": {
-    "hash": "5df4f74d9043f2ef",
+    "hash": "90678bd6aa208e3a",
     "status": "verified",
-    "verified_by": "independent review on 2026-10-06, one of three batches covering eighteen guides that night. The reviewer read the page in full and named the sentences to cut; every edit applied was one of those cuts, so no text the reviewer did not read was added. What came out was the sourcing meta-tell and the sentences that told the reader how to read or argued the page's method was sound.",
-    "verified_at": "2026-10-06",
+    "verified_by": "Fresh-context independent review 2026-10-10: 6 findings (1 injury, 2 sourcing, 1 voice, 2 style). All applied as recommended - a flag-injury callout at the live-probe step, the unsourced 12-14 volt test value replaced with the two cited ranges, the unnamed fixture named, and a truncated lede completed.",
+    "verified_at": "2026-10-10",
     "sources": [],
     "spec": "_specs/rv-lights-not-working.md",
     "spec_waived": false,
@@ -626,10 +626,10 @@
     "sources": []
   },
   "guides/rv-outlets-not-working.html": {
-    "hash": "97fc9abf364c2124",
+    "hash": "7ec1bc691f00f2ea",
     "status": "verified",
-    "verified_by": "independent review on 2026-10-06, one of three batches covering eighteen guides that night. The reviewer read the page in full and named the sentences to cut; every edit applied was one of those cuts, so no text the reviewer did not read was added. What came out was the sourcing meta-tell and the sentences that told the reader how to read or argued the page's method was sound.",
-    "verified_at": "2026-10-06",
+    "verified_by": "Fresh-context independent review 2026-10-10: 8 findings (1 injury, 1 wrong fact, 3 sourcing, 1 voice, 2 style). All applied as recommended - flag-injury callouts added, a paraphrase restored to Leviton's verbatim wording, the unsourced Xantrex 'failsafe' framing and breaker ratings removed, and the schema date reconciled with the byline.",
+    "verified_at": "2026-10-10",
     "sources": [],
     "spec": "_specs/rv-outlets-not-working.md",
     "spec_waived": false,
@@ -721,10 +721,10 @@
     "claims_date": "Oct 4, 2026"
   },
   "guides/rv-solar-not-charging.html": {
-    "hash": "3ff49700d3d4d093",
+    "hash": "f06251b27770b7e4",
     "status": "verified",
-    "verified_by": "independent review on 2026-10-06, one of three batches covering eighteen guides that night. The reviewer read the page in full and named the sentences to cut; every edit applied was one of those cuts, so no text the reviewer did not read was added. What came out was the sourcing meta-tell and the sentences that told the reader how to read or argued the page's method was sound.",
-    "verified_at": "2026-10-06",
+    "verified_by": "Punctuation only, 2026-10-10: a sentence left truncated at a comma by an earlier clause deletion was completed. No wording added or removed; the reviewed text is otherwise unchanged.",
+    "verified_at": "2026-10-10",
     "sources": [],
     "spec": "_specs/rv-solar-not-charging.md",
     "spec_waived": false,

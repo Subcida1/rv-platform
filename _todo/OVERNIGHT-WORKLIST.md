@@ -74,6 +74,22 @@ Do not "fix" the 111 unverified by mass-seeding them as verified. Unverified is 
 
 ---
 
+### W9. Accessibility: contrast + nested-interactive (FOUND + FIXED + REVERTED 2026-10-10 — redo when the tree is free)
+The full-site sweep (`node scripts/check-a11y.mjs --all`) found **2 pages failing at serious**, which the
+6-page REPRESENTATIVE list in `check-a11y.mjs` cannot reach:
+- `manuals/start-here.html` — **color-contrast x15** on `.no-body > .table-scroll > table > thead > tr > th`, `#67748e` on `#eaf1fa` = **4.13:1**, under the 4.5 AA floor. Cause: `.man-table th` in `assets/css/style.css` uses `var(--text-3)`; on `.no-body`/`.no-sec` the header sits on `var(--tint-bg)`. **Fix: change that one declaration to `var(--text-2)`** — the identical fix already documented above `.crumbs`, which had the same defect.
+- `guides/rv-converter-not-charging.html` — **nested-interactive x1** on the inline SVG: an `<a>` sat inside `<svg role="img">`'s `<desc>`. **Fix: the anchor was removed from the `desc` and the link moved into the visible prose.** This one is DONE and committed (it needs no stamp).
+**Why the contrast half was reverted:** editing `style.css` invalidates the content hash on **all 125 pages** (`stamp_assets.py --check` → 125 stale). Re-stamping rewrites the nine files the safety session has uncommitted, and sweeping another session's work is not acceptable. Apply the one-line `--text-2` change **and** re-stamp **once the safety pass has committed**, then re-run `node scripts/check-a11y.mjs manuals/start-here.html` to prove it (it passed clean when the change was in place — then the stylesheet was reverted).
+**Also worth doing:** `check-a11y.mjs` is not in `ci.sh`, so this class ships invisibly. Add it, at least on the representative list.
+
+### W10. Truncation class — one instance left, and it is the safety session's file
+Six published pages carried a sentence cut off at a comma, from a clause deletion with no read-back. Five are fixed (battery, lights, solar, furnace-carbon-monoxide, two-appliances-stopped). **The sixth is `guides/rv-macerator-toilet.html:129`**, which the safety session owns — hand it to them rather than editing their uncommitted file. Sitewide check for the class: `grep -rnE ",[[:space:]]*</(p|li|h1|h2|h3|figcaption|div)>" --include="*.html" .`
+
+### W11. The safety session's three em dashes
+`guides/rv-black-tank.html:73`, `guides/rv-macerator-toilet.html:69` and `guides/rv-slide-out-not-working.html:64` carry authored **em dashes** inside the new `flag-injury` callouts, which fails `verify.py`'s dash rule. Their own `ci.sh` run will catch it before they push. Leave the files alone; just do not let this reach `main`.
+
+---
+
 ## BRIDGE — do not duplicate
 
 A live session owns `/home/user/claude-bridge`. As of 01:05: all six lanes healthy on v0.7.41, queue idle, `v0.7.42` staged in `outbox/` awaiting a paste into the **aistudio** lane by Ty (its own session knows the deploy path). **Work the bridge ONLY if:** the queue has jobs with no matching reply (spent jobs blocking a lane), or a heartbeat is stale. Sweep spent jobs with `tools/sweep-spent-jobs.py`. Do not deploy a userscript build yourself.
