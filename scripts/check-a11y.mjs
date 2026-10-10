@@ -52,6 +52,10 @@ const freePort = () => new Promise((res, rej) => {
 const REPRESENTATIVE = [
   'index.html', 'guides/rv-towing-capacity.html', 'directory/oregon.html',
   'manuals/index.html', 'tools/weight-calculator.html', 'about.html',
+  // A manuals SECTION page carries the .no-body + .man-table template whose header threw the
+  // start-here contrast defect (4.13:1). The hub alone cannot catch it: manuals/index.html has no
+  // table. Name the template that actually regressed, so the gate closes the class. (W13.)
+  'manuals/start-here.html',
   // The parts hub is a page kind of its own (a 157-item reference with a filter bar), so a defect
   // in its shape reaches nobody's audit if it is not named here. Added with parts/index.html.
   'parts/index.html',
