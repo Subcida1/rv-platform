@@ -370,6 +370,28 @@ shows "110 sources across 94 makers" and the parts "guide that shows how to fix 
 
 **Priority note:** this is Ty's newest relayed package (2026-10-10 01:07-02:00 PDT) and it is what he asked for tonight - take it ahead of the older W-items if the choice is yours.
 
+**PROGRESS 2026-10-10 12:00 — THE VOICE PACKAGE IS APPLIED.** Sections 2, 3, 5, 6, 7, 8, 9, 10 and
+11 are done, and **section 4 — the "global find/replace" that W17.4 said could not be one — is done
+properly**, as a data-and-generator pass with `href`/`src` and quoted maker language protected, and
+"Grey Wolf" excluded from grey->gray. 287 occurrences; residue 0.
+
+**THREE MISTAKES WERE MADE AND ALL THREE ARE FIXED. Read this before doing a find/replace here:**
+1. **`verify.py` IS NOT THE GATE.** Rewriting page text invalidates `assets/js/search-index.js`, which
+   `ci.sh` checks and verify.py does not. Main was RED on GitHub for several commits while every local
+   check passed. **Run `bash scripts/ci.sh`, or at minimum `build-search-index.py --check`, before
+   pushing any content change.**
+2. **A placeholder-protection scheme left a literal U+0000** in `guides/rv-slide-out-leaking.html`; only
+   the W3C checker saw it. If you protect spans with sentinel characters, assert afterwards that none
+   survive.
+3. **A find/replace must NAME the directories it may touch, never walk them all.** Sweeping `_data/`
+   caught `_data/source/` - the raw US Census gazetteer, which is GITIGNORED, so `git checkout` could
+   not restore it. The coordinate check caught it; `build-coords.py --fetch` restored it.
+
+**Still open, and named rather than guessed:** six strings (two breadcrumb labels, the Allison line, the
+campaign-number line, "the ids are not guessable", the Thetford line) exist only in generated pages and
+in no data file or script - their source needs finding. `/contact` still has no working destination.
+The nav/footer clickability pass needs a live browser. Older items W2-W8, W10, W12, W14 remain.
+
 **PROGRESS 2026-10-10 11:05 — SECTIONS 3 AND 5 ARE COMPLETE.**
 
 - **Section 3 (GUIDES voice, batch 1): COMPLETE, all 10 pages.** Commits `2366952`, `e041a14`,
