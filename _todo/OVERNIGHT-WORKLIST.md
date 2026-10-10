@@ -216,7 +216,9 @@ The full-site sweep (`node scripts/check-a11y.mjs --all`) found **2 pages failin
 **Why the contrast half was reverted:** editing `style.css` invalidates the content hash on **all 125 pages** (`stamp_assets.py --check` → 125 stale). Re-stamping rewrites the nine files the safety session has uncommitted, and sweeping another session's work is not acceptable. Apply the one-line `--text-2` change **and** re-stamp **once the safety pass has committed**, then re-run `node scripts/check-a11y.mjs manuals/start-here.html` to prove it (it passed clean when the change was in place — then the stylesheet was reverted).
 **Also worth doing:** `check-a11y.mjs` is not in `ci.sh`, so this class ships invisibly. Add it, at least on the representative list.
 
-### W10. Truncation class — one instance left, and it is the safety session's file
+### W10. Truncation class — **DONE 2026-10-10 12:07, commit `4d38550`**
+
+**CLOSED.** The sixth instance, `guides/rv-macerator-toilet.html`, and `rv-two-appliances-stopped.html` were both fixed in `4d38550`. The sitewide grep for the class now returns nothing. Original note kept below for the method.
 Six published pages carried a sentence cut off at a comma, from a clause deletion with no read-back. Five are fixed (battery, lights, solar, furnace-carbon-monoxide, two-appliances-stopped). **The sixth is `guides/rv-macerator-toilet.html:129`**, which the safety session owns — hand it to them rather than editing their uncommitted file. Sitewide check for the class: `grep -rnE ",[[:space:]]*</(p|li|h1|h2|h3|figcaption|div)>" --include="*.html" .`
 
 ### W11. Authored em dashes in the safety session's new callouts — RESOLVED 2026-10-10 01:30
@@ -414,9 +416,10 @@ section 11. That is now SIX claims in this package that fail on measurement, and
 audit's blind spot is "rendered by script". **Anything this audit reports as missing must be loaded in a
 real browser before it is believed.**
 
-**Still open:** the nav/footer clickability pass needs a live browser, and older items W2-W8, W10, W12,
-W14 remain. **The six strings are RESOLVED** - see the 12:25 block below. (`/contact` is NOT broken; the
-12:10 correction above shows the email, form and mailto it has.)
+**Still open:** older items W3-W7, W12, W14. **W2, W10 and the nav/footer clickability pass are DONE**
+(W2 = `2bae9ec`, W10 = `4d38550`, and the clickability pass was verified 12:45 in a real browser with
+nothing to fix). **The six strings are RESOLVED** - see the 12:35 block below. (`/contact` is NOT broken;
+the 12:10 correction above shows the email, form and mailto it has.)
 
 **PROGRESS 2026-10-10 11:05 — SECTIONS 3 AND 5 ARE COMPLETE.**
 
@@ -476,6 +479,34 @@ evidence line above reads `CHROME_BIN="/usr/bin/chromium --no-sandbox" bash scri
 a11y step dies with `spawn /usr/bin/chromium ENOENT` and `ci.sh` exits 1 while every other check passes,
 which reads as a real regression and is not one. `check-a11y.mjs` starts `flatpak run com.google.Chrome`
 by itself when `CHROME_BIN` is UNSET. **Run `bash scripts/ci.sh` with no `CHROME_BIN`.**
+
+**PROGRESS 2026-10-10 12:45 — THE LIVE-BROWSER CLUSTER IS VERIFIED, AND NOTHING WAS BROKEN (no fix needed).**
+
+The package's section 11 notes said "Nav/footer links need a live-browser pass" and asked to verify
+`/tools/` card clickability, start-here's 59 inline refs, the parts "How to fix it" targets, and the
+`?embed=1` `.html` URL. Measured in a real headless Chrome (flatpak, driven over CDP, against a local
+`serve-static.py`), at 1400x1000, using `document.elementFromPoint` at each link's OWN centre:
+
+- **Nav and footer: every visible link is hit-testable.** Six page types (`/`, `/directory/`, `/tools/`,
+  `/parts/`, `/guides/`, `/manuals/`): 0 problems on any of them, 37 to 38 visible links each.
+- **Nav dropdown sublinks: 17 of 17 ok.** Opened with a REAL mouse event (`Input.dispatchMouseEvent`
+  `mouseMoved`), which is what works in headless; `CSS.forcePseudoState` does not. Every `.drop` reached
+  opacity 1 / pointer-events auto, and every sublink was hit-testable.
+- **`/tools/` card links: 9 of 9 ok. `/guides/` cards: 44 of 44 ok.**
+- **`?embed=1` works.** `/tools/weight-calculator.html?embed=1` sets `body.is-embed` and injects the
+  credit bar; the same URL with no query does neither (the control).
+- **start-here's in-page refs and the parts "How to fix it" targets were already fixed** by `2c7571b`
+  (the base-href fragment class), browser-proven in its own message. All 48 internal hrefs on the parts
+  hub resolve to files.
+
+**That is the SEVENTH claim in this package that fails on measurement.** Nothing here needed a fix.
+
+**Instrument lesson, recorded because it bit twice in ten minutes.** The first probe CLAMPED the hit-test
+point into the viewport; with `scroll-behavior:smooth` the target was often still off-screen when
+measured, so the point landed on whatever sat at the viewport edge and EVERY link read as
+"BLOCKED by <random element>" on every page. The second version forced `scrollBehavior='auto'` and
+required the point to be genuinely in the viewport, and returned 0 problems. **A probe that reports a
+defect on every page is describing itself.**
 
 **HOW TO DO A SECTION:** the pages are largely hand-written; only the nav/footer shell is generated
 (`build-shell.mjs --check` proves it). Replace the exact source string, assert it matched once, check
