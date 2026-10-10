@@ -1,0 +1,357 @@
+{
+ "parts": [
+  {
+   "id": "questions",
+   "title": "Quick answers: the questions new owners ask first",
+   "summary": "Short answers to the questions new owners ask first. Each one links to the section that covers it in full.",
+   "sections": [
+    {
+     "id": "q-dump-how-often",
+     "title": "How often should I dump the black tank?",
+     "open": true,
+     "blocks": [
+      {
+       "kind": "p",
+       "html": "When it is about two thirds full, and never by leaving the valve open at a full-hookup site. Leaving it open lets the liquid drain away and the solids stay, which is how a tank becomes a pile. Keep the black-water holding tank gate valve closed at all times, except when dumping."
+      },
+      {
+       "kind": "p",
+       "html": "Precharge it afterwards. After dumping, always put water back in before the tank is used again: start with one to two quarts in the bowl, then add about five gallons of water to the tank."
+      },
+      {
+       "kind": "p",
+       "html": "Dump the black tank first, then the grey, so the grey water rinses the hose."
+      }
+     ]
+    },
+    {
+     "id": "q-pressure-regulator",
+     "title": "Do I need a water pressure regulator?",
+     "open": false,
+     "blocks": [
+      {
+       "kind": "p",
+       "html": "Yes, on city water. Campground supply pressure varies and the plumbing in an RV is built for less than a house system. The manual states the threshold: <b>\"NOTE: If city water pressure is more than 60 psi, Tiffin Motor Homes recommends to use a water pressure regulator to prevent damage to the motorhome.\"</b> Fit it at the tap end where the RV allows it, and do not leave it out."
+      }
+     ]
+    },
+    {
+     "id": "q-tire-life",
+     "title": "How long do RV tires last?",
+     "open": false,
+     "blocks": [
+      {
+       "kind": "p",
+       "html": "The manufacturers disagree, and anybody who tells you there is one answer is repeating a rule nobody publishes. Goodyear's service bulletin says <b>\"6 years\"</b> from the date of manufacture. Michelin says inspect from five years and replace by ten. NHTSA describes manufacturer practice as six to ten."
+      },
+      {
+       "kind": "callout",
+       "html": "<b>The \"5-7-10 rule\" is not an RVIA or NHTSA rule.</b> It circulates widely and traces to no published document from either body. Tire age is decided by the maker of your tire, not by a rule of thumb."
+      },
+      {
+       "kind": "p",
+       "html": "Age is read from the DOT code on the sidewall, not from tread depth. A tire with plenty of tread and a 2016 date code is a ten-year-old tire."
+      }
+     ]
+    },
+    {
+     "id": "q-first-day",
+     "title": "What should I do on my very first day with an RV?",
+     "open": false,
+     "blocks": [
+      {
+       "kind": "p",
+       "html": "Level first, before the slide-outs move and before an absorption fridge runs. Fill the water heater before it is switched on. Keep the electrical load off while the shore cord goes in."
+      }
+     ]
+    },
+    {
+     "id": "q-plugged-in-winter",
+     "title": "Can I leave my RV plugged in all winter?",
+     "open": false,
+     "blocks": [
+      {
+       "kind": "p",
+       "html": "Plugged in is not the same as stored. Power keeps the battery charged and can run a dehumidifier, but the plumbing still has to be winterised and the inside still has to breathe, because a closed RV collects condensation all winter whether or not it has power. See <a href=\"#storage\">storing an RV</a> and <a href=\"#winterising\">winterising</a> for the two halves of it."
+      }
+     ]
+    },
+    {
+     "id": "q-battery-parked",
+     "title": "How long will the battery last when the RV is parked?",
+     "open": false,
+     "blocks": [
+      {
+       "kind": "p",
+       "html": "Weeks, not months. The detectors, the fridge control board, the radio memory and the thermostat all draw current continuously, and that is enough to flatten a parked battery in a few weeks. A battery disconnect switch or a trickle charger is the fix. See <a href=\"#two-electrical-systems\">the two electrical systems</a>."
+      }
+     ]
+    },
+    {
+     "id": "q-plastic-taste",
+     "title": "Why does the fresh water taste of plastic?",
+     "open": false,
+     "blocks": [
+      {
+       "kind": "p",
+       "html": "Almost always the hose. A garden hose is not made to carry drinking water and it leaves a plastic or rubber taste, so use a hose labelled for potable water, and keep a second hose for the black-tank flush. See <a href=\"#fresh-water\">fresh water</a>."
+      }
+     ]
+    },
+    {
+     "id": "q-fridge-propane-driving",
+     "title": "Can I run the fridge on propane while I drive?",
+     "open": false,
+     "blocks": [
+      {
+       "kind": "p",
+       "html": "The rule here is to shut the propane off at the tank while the RV is moving, and both the pre-trip walkaround and the propane section set it out. An absorption fridge holds its temperature for a few hours with the door kept shut, and the tank has to be off before a tunnel, a bridge, a ferry or a fuel stop in any case. See <a href=\"#propane-system\">propane</a>."
+      }
+     ]
+    },
+    {
+     "id": "q-ac-on-battery",
+     "title": "Can I run the air conditioner on battery power?",
+     "open": false,
+     "blocks": [
+      {
+       "kind": "p",
+       "html": "Not on a normal battery bank. Air conditioning is a 120-volt load that draws more than a realistic battery and inverter combination can supply for long, so it needs shore power, a generator, or a large inverter. See <a href=\"#appliances\">the appliances</a>."
+      }
+     ]
+    },
+    {
+     "id": "q-sanitise-how-often",
+     "title": "How often should I sanitise the fresh water tank?",
+     "open": false,
+     "blocks": [
+      {
+       "kind": "p",
+       "html": "Annually in the working schedule, and again after storage or any stretch when the system has sat unused. The recipe and the limit are in <a href=\"#fresh-water\">fresh water</a>."
+      }
+     ]
+    },
+    {
+     "id": "q-anode-rod",
+     "title": "Do RV water heaters need an anode rod?",
+     "open": false,
+     "blocks": [
+      {
+       "kind": "p",
+       "html": "It depends on the tank. Suburban steel tanks use one and want it replaced about yearly; Atwood and Dometic aluminium tanks do not use one at all, and fitting one can damage the tank. See <a href=\"#appliances\">the appliances</a>."
+      }
+     ]
+    },
+    {
+     "id": "q-generator-while-driving",
+     "title": "Can I run the generator while I drive?",
+     "open": false,
+     "blocks": [
+      {
+       "kind": "p",
+       "html": "On a motorhome, yes: the generator is built to run while the vehicle is moving. What you must never do is run the generator while the RV is plugged into shore power. See <a href=\"#shore-power\">shore power</a>."
+      }
+     ]
+    },
+    {
+     "id": "q-30-vs-50",
+     "title": "What is the difference between 30-amp and 50-amp service?",
+     "open": false,
+     "blocks": [
+      {
+       "kind": "p",
+       "html": "Capacity. A 30-amp supply gives about 3,600 watts and a 50-amp supply about 12,000, close to three times as much, which is why one air conditioner is comfortable on 30 amps and two are not. See <a href=\"#shore-power\">shore power</a>."
+      }
+     ]
+    },
+    {
+     "id": "q-fridge-level",
+     "title": "How level does an RV fridge need to be?",
+     "open": false,
+     "blocks": [
+      {
+       "kind": "p",
+       "html": "Norcold publishes the figure: within <b>\"3° off level side-to-side and 6° off level front-to-back\"</b>, and operating past it <b>\"can cause damage to the cooling system and create a risk of personal injury or property damage.\"</b> Other makers describe the same requirement as level enough to live in comfortably. It applies while parked, not while driving. See <a href=\"#appliances\">the appliances</a>."
+      }
+     ]
+    },
+    {
+     "id": "q-wheel-chocks",
+     "title": "Do I need wheel chocks?",
+     "open": false,
+     "blocks": [
+      {
+       "kind": "p",
+       "html": "Yes, every time, and even on level ground. They go in before the stabilisers or the levelers rather than after, and a motorhome on its jacks is still chocked. See <a href=\"#first-night\">the first night</a>."
+      }
+     ]
+    },
+    {
+     "id": "q-freezing-while-camping",
+     "title": "How do I keep the RV from freezing when camping in the cold?",
+     "open": false,
+     "blocks": [
+      {
+       "kind": "p",
+       "html": "Keep heat inside, leave the plumbing compartments open to it, and do not let the interior drop below freezing overnight. Underbelly insulation and heated tanks are what decide whether a given RV can do it at all. See the <a href=\"#freezing\">freezing</a> section, and <a href=\"#insulation-underbelly\">underbelly insulation and heated tanks</a>."
+      }
+     ]
+    },
+    {
+     "id": "q-how-to-winterise",
+     "title": "How do I winterise an RV?",
+     "open": false,
+     "blocks": [
+      {
+       "kind": "p",
+       "html": "Two ways, and both do the same job: getting every drop of water out of a system that will freeze and split. Either blow the lines out with air, or fill them with antifreeze. A winterising job that stops halfway is what still freezes. See <a href=\"#winterising\">winterising</a>."
+      }
+     ]
+    },
+    {
+     "id": "q-brake-controller",
+     "title": "Do I need a brake controller to tow a travel trailer?",
+     "open": false,
+     "blocks": [
+      {
+       "kind": "p",
+       "html": "If the trailer has electric brakes, yes. The controller is what coordinates trailer braking with the tow vehicle, and what lets you apply the trailer brakes alone when the combination starts to sway. Whether brakes are required at a given weight is its own guide: <a href=\"guides/trailer-brakes-required.html\">when trailer brakes are required</a>."
+      }
+     ]
+    },
+    {
+     "id": "q-dump-at-station",
+     "title": "How do I dump the tanks at a dump station?",
+     "open": false,
+     "blocks": [
+      {
+       "kind": "p",
+       "html": "Connect and lock the hose at both ends first. Then open the black valve and let it drain, open the grey to rinse the hose, and close both. Wear gloves, fit a clear elbow, and keep the sewer hose clear of anything that touches drinking water. See <a href=\"#dumping-order\">dumping in the right order</a>."
+      }
+     ]
+    },
+    {
+     "id": "q-toilet-paper",
+     "title": "Can I use regular toilet paper in an RV toilet?",
+     "open": false,
+     "blocks": [
+      {
+       "kind": "p",
+       "html": "Any paper that breaks down in water is fine. Failures come from paper that does not break down, and from using too little water. Paper wrappers, gum, cigarettes and the wipes sold as flushable do not belong in the tank. See <a href=\"#black-tank-chemicals\">black tank chemicals</a>."
+      }
+     ]
+    },
+    {
+     "id": "q-reseal-roof",
+     "title": "How often should the roof be resealed?",
+     "open": false,
+     "blocks": [
+      {
+       "kind": "p",
+       "html": "Inspect sealant every six months and replace what has failed, and clean the roof every three months. Do not wait for a leak, because the sealant is the only thing keeping water out of the structure. See <a href=\"#seals-roof-delamination\">seals, roof and delamination</a> and <a href=\"#maintenance-schedule\">the maintenance schedule</a>."
+      }
+     ]
+    },
+    {
+     "id": "q-internet",
+     "title": "How do I get internet in an RV?",
+     "open": false,
+     "blocks": [
+      {
+       "kind": "p",
+       "html": "A cellular plan with a hotspot or a router, or a satellite service, or both with a way to switch between them. Shop the coverage, not the marketing claims. See <a href=\"#entertainment-and-electronics\">internet, TV and power</a>."
+      }
+     ]
+    },
+    {
+     "id": "q-cover-for-storage",
+     "title": "Does an RV need a cover for winter storage?",
+     "open": false,
+     "blocks": [
+      {
+       "kind": "p",
+       "html": "A cover keeps sun, dirt and tree sap off it, and it does nothing at all about the moisture inside, which is what actually damages a stored RV. If you cover it, keep it ventilated as well. See <a href=\"#storage\">storing an RV</a>."
+      }
+     ]
+    },
+    {
+     "id": "q-camp-without-hookups",
+     "title": "How long can I camp without hookups?",
+     "open": false,
+     "blocks": [
+      {
+       "kind": "p",
+       "html": "There is no single number, because it depends on the battery bank, the fresh tank and how sparing you are. The furnace is usually what ends a dry camp first: its blower runs on 12 volts all night. See <a href=\"#two-electrical-systems\">the two electrical systems</a>."
+      }
+     ]
+    },
+    {
+     "id": "q-level-with-stabilisers",
+     "title": "Should I level the RV with the stabilisers?",
+     "open": false,
+     "blocks": [
+      {
+       "kind": "p",
+       "html": "No. Stabilisers steady the RV, they do not carry it. Level with a jack or the leveling system first, then bring the stabilisers down to stop the rocking. See <a href=\"#leveling-and-stabilising\">leveling and stabilising</a>."
+      }
+     ]
+    },
+    {
+     "id": "q-water-filter",
+     "title": "Do I need a water filter?",
+     "open": false,
+     "blocks": [
+      {
+       "kind": "p",
+       "html": "Not always. A filter helps with chlorine, dirt and taste, but a whole-RV filter is not guaranteed to remove the taste and odour of iron or sulfur, and it should be changed every 6 to 12 months. See <a href=\"#fresh-water\">fresh water</a>."
+      }
+     ]
+    },
+    {
+     "id": "q-gauge-reads-wrong",
+     "title": "Why does the tank gauge read wrong?",
+     "open": false,
+     "blocks": [
+      {
+       "kind": "p",
+       "html": "Because it is not a gauge. The panel steps in thirds and reads empty, one third, two thirds or full, and the sensors are the least reliable part of the system. Treat it as a rough warning light. See <a href=\"#monitor-panel\">reading the monitor panel</a>."
+      }
+     ]
+    },
+    {
+     "id": "q-sewer-smell-inside",
+     "title": "Why does the RV smell of sewer inside?",
+     "open": false,
+     "blocks": [
+      {
+       "kind": "p",
+       "html": "Usually not the tank. A dried-out P-trap or a black valve left open is the common cause. See <a href=\"#grey-tank-smells\">sewer smell inside</a>."
+      }
+     ]
+    },
+    {
+     "id": "q-grey-valve-open",
+     "title": "Can I leave the grey tank valve open?",
+     "open": false,
+     "blocks": [
+      {
+       "kind": "p",
+       "html": "Grey is a different case, and some makers and parks allow it to stay open. Black never does: leaving it open lets the liquid drain away and leaves the solids to dry and harden in the tank. See <a href=\"#dumping-order\">dumping in the right order</a>."
+      }
+     ]
+    },
+    {
+     "id": "q-job-not-to-skip",
+     "title": "What is the one maintenance job I should not skip?",
+     "open": false,
+     "blocks": [
+      {
+       "kind": "p",
+       "html": "Sealant, and the roof under it. Water getting in is what destroys an RV, and it is the cheapest failure to prevent and the most expensive one to find late. See <a href=\"#maintenance-schedule\">the maintenance schedule</a> and <a href=\"#seals-roof-delamination\">seals, roof and delamination</a>."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

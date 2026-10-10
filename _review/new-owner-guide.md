@@ -2,6 +2,13 @@
 
 Built 2026-10-07. `manuals/start-here.html`, live. **46 sections, about 23890 words, 409 quotations.**
 
+> **The section table below is the 2026-10-07 snapshot and is now out of date.** The guide was
+> revised on 2026-10-09 (Ty's review list: the coach-to-RV sweep, the hookup and electrical
+> rewrites, the expanded condensation section, the FAQ going from 4 questions to 30 and moving to
+> the top of the page, and a source audit that repaired or removed 17 dead URLs). The page is now
+> **71 sections and about 25,966 words**. Read the table as a record of where the review time went
+> on 10-07, not as the current shape of the page; regenerate it before using it to plan another pass.
+
 This sheet exists so a review can be spent where it matters rather than read top to bottom.
 Sections are listed with their size and their QUOTATION COUNT, because a section with ten
 quotations has ten chances to have reconstructed one, and a section with none has none.

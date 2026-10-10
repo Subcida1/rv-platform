@@ -50,7 +50,7 @@
       },
       {
        "kind": "p",
-       "html": "The fresh tank is separate from both. It feeds the freshwater system including the water heater, faucets, and toilet when the coach runs on city water. The toilet is a fixture that uses fresh water. It is not an inlet to either waste tank; it drops its contents into the black tank."
+       "html": "The fresh tank is separate from both. It feeds the freshwater system including the water heater, faucets, and toilet when the RV runs on city water. The toilet is a fixture that uses fresh water. It is not an inlet to either waste tank; it drops its contents into the black tank."
       },
       {
        "kind": "p",
@@ -104,7 +104,7 @@
       },
       {
        "kind": "p",
-       "html": "The rule that keeps water in the tank is to leave the black valve closed except when you are dumping. Keeping the gate valve closed at all times while you use the coach leaves enough liquid in the tank for a smooth flow through the gate and the drain valves when you dump. The liquid causes a swirling action that takes accumulated solids with it. Keeping the valve closed even when hooked to a sewer connection stops solids from building up in the tank."
+       "html": "The rule that keeps water in the tank is to leave the black valve closed except when you are dumping. Keeping the gate valve closed at all times while you use the RV leaves enough liquid in the tank for a smooth flow through the gate and the drain valves when you dump. The liquid causes a swirling action that takes accumulated solids with it. Keeping the valve closed even when hooked to a sewer connection stops solids from building up in the tank."
       },
       {
        "kind": "p",
@@ -112,19 +112,19 @@
       },
       {
        "kind": "p",
-       "html": "You dump when the tank is well filled, so the volume of liquid does the flushing. Drain the tanks only when they are at least three-quarters full, which gives enough water to flush waste materials completely out of the drain lines and hose. If a tank is less than three-quarters full, add enough water to get a full flush."
+       "html": "You dump when the tank is well filled, so the volume of liquid does the flushing. Drain the tanks only when they are at least two thirds full, which gives enough water to flush waste materials completely out of the drain lines and hose. If a tank is less than three-quarters full, add enough water to get a full flush."
       },
       {
        "kind": "p",
-       "html": "The safe minimum is half a tank: leave the black tank valve closed and dump when it is half or more full. Dumping with less than half a tank seldom gives enough volume to flush solids, and can leave a persistent paper and faecal build-up."
+       "html": "The safe minimum is two thirds of a tank: leave the black tank valve closed and dump when it is at least two thirds full. Dumping with less than half a tank seldom gives enough volume to flush solids, and can leave a persistent paper and faecal build-up."
       },
       {
        "kind": "p",
-       "html": "So the practical window is somewhere between half and three-quarters full, plus a wet start. The exact number is a habit, not a specification."
+       "html": "So the practical window is from two thirds of a tank upwards, plus a wet start. The exact number is a habit, not a specification."
       },
       {
        "kind": "callout",
-       "html": "There is no standard gallon figure for the black-tank pre-charge. Published figures are depths or descriptions: at least one inch of solution under the toilet, or enough water to cover the bottom of the tank so waste residue cannot harden. Never dump the black tank until it is three-quarters full. Keep an inch of water in the bowl to stop tank odour entering the living space.<br><br>The widely repeated figure of five gallons is a starting rule, not a specification. A common method is to run the flush until it clears, close the black tank dump valve, then add at least five gallons of fresh water back into the tank. Some treatments are marketed at three to five gallons, and owners report anything from about five to ten gallons. The right number depends on the size of the tank."
+       "html": "There is no standard gallon figure for the black-tank pre-charge. Published figures are depths or descriptions: at least one inch of solution under the toilet, or enough water to cover the bottom of the tank so waste residue cannot harden. Wait until the tank is at least two thirds full before dumping it. Keep an inch of water in the bowl to stop tank odour entering the living space.<br><br>The widely repeated figure of five gallons is a starting rule, not a specification. A common method is to run the flush until it clears, close the black tank dump valve, then add at least five gallons of fresh water back into the tank. Some treatments are marketed at three to five gallons, and owners report anything from about five to ten gallons. The right number depends on the size of the tank."
       }
      ]
     },
@@ -208,17 +208,17 @@
        "items": [
         "1. Connect and lock the sewer hose at both ends before you touch any valve.",
         "2. Confirm both gate valves are closed. Crack the cap only when you are ready to attach the hose.",
-        "3. Optionally run grey for a few seconds first, to leak-test the fittings.",
+        "3. Optional leak check before you start: crack the grey valve for a few seconds and close it, so a bad fitting shows up as grey water. The dump itself is always black first, then grey.",
         "4. Open the black valve fully and let it drain.",
-        "5. If the coach has a black-tank flush, run it with the black valve open until the clear fitting runs clear.",
+        "5. If the RV has a black-tank flush, run it with the black valve open until the clear fitting runs clear.",
         "6. Close the black valve.",
         "7. Open the grey valve and let it run. This scours the hose.",
-        "8. Close the grey valve, disconnect, cap, and rinse the hose."
+        "8. Close the grey valve, disconnect, cap, and rinse the hose, and rinse it well away from any fresh-water tap."
        ]
       },
       {
        "kind": "p",
-       "html": "The order is black first, then grey, and the reason is the hose. Draining the black tank first lets the grey water wash the black residue from the drain lines and hose. When the black tank is drained, drain the grey tank immediately to flush the black water from the sewer hose. The last thing through the shared hose is the cleaner grey water."
+       "html": "The order is black first, then grey, because the grey water is what rinses the black residue out of the shared hose. The last thing through it is the cleaner grey water."
       },
       {
        "kind": "p",
@@ -234,11 +234,16 @@
       },
       {
        "kind": "p",
-       "html": "Dump when the black tank is between half and three-quarters full. Whenever possible, drain both holding tanks before travelling."
+       "html": "Dump when the black tank is at least two thirds full. Whenever possible, drain both holding tanks before travelling."
       },
       {
        "kind": "p",
        "html": "The standard outlet is a three-inch bayonet. A clear elbow at the hose end lets you see when flow stops and when rinse water runs clear."
+      },
+      {
+       "kind": "callout",
+       "flag": "injury",
+       "html": "<b>The sewer hose never goes near a fresh-water source.</b> Rinse it, cap it and store it well away from any drinking-water tap, potable hose or hydrant, and never let it touch the hose you drink from. Cross-contamination is the one mistake in this section that can make you ill rather than simply cost you money."
       }
      ]
     },
@@ -286,7 +291,7 @@
      "blocks": [
       {
        "kind": "p",
-       "html": "Filling the fresh tank may have no automatic shut-off. Watch the monitor panel while filling. Excess water vents from an overflow in the vent pipe onto the ground when the tank is full, which prevents the tank from rupturing if it is overfilled. An overfilled fresh tank runs onto the ground through the vent rather than bursting. It will not flood the inside on its own, but you should not walk away from a fill. Some high-end coaches have auto-fill, so check your own manual."
+       "html": "Filling the fresh tank may have no automatic shut-off. Watch the monitor panel while filling. Excess water vents from an overflow in the vent pipe onto the ground when the tank is full, which prevents the tank from rupturing if it is overfilled. An overfilled fresh tank runs onto the ground through the vent rather than bursting. It will not flood the inside on its own, but you should not walk away from a fill. Some high-end RVs have auto-fill, so check your own manual."
       },
       {
        "kind": "p",
@@ -302,7 +307,7 @@
       },
       {
        "kind": "p",
-       "html": "One more step: remove the coach water filter before disinfecting the fresh-water system, because the filter will remove the chlorine."
+       "html": "One more step: remove the RV water filter before disinfecting the fresh-water system, because the filter will remove the chlorine."
       },
       {
        "kind": "callout",
@@ -318,7 +323,7 @@
       },
       {
        "kind": "p",
-       "html": "City water arrives at whatever pressure the park supplies, and that varies. If city water pressure is more than 60 psi, use a water pressure regulator to prevent damage to the coach. A regulator screws onto the supply and holds the pressure down."
+       "html": "City water arrives at whatever pressure the park supplies, and that varies. If city water pressure is more than 60 psi, use a water pressure regulator to prevent damage to the RV. A regulator screws onto the supply and holds the pressure down."
       },
       {
        "kind": "p",
@@ -326,11 +331,11 @@
       },
       {
        "kind": "callout",
-       "html": "Fit the regulator at the spigot or pedestal end rather than at the coach inlet, so the hose is protected too."
+       "html": "Fit the regulator at the spigot or pedestal end rather than at the RV inlet, so the hose is protected too."
       },
       {
        "kind": "p",
-       "html": "A whole-coach filter has limits. As installed, the filter removes chlorine, dirt, and other matter, but it is not guaranteed to remove the tastes and odours of iron and sulfur. Change it every 6 to 12 months depending on the quality and quantity of water used. Filters also cost flow: a small in-line filter restricts flow more than a 10-inch standard canister, and a standard canister is more restrictive than a jumbo canister. A filter plus a cheap regulator is a common cause of a weak shower."
+       "html": "A whole-RV filter has limits. As installed, the filter removes chlorine, dirt, and other matter, but it is not guaranteed to remove the tastes and odours of iron and sulfur. Change it every 6 to 12 months depending on the quality and quantity of water used. Filters also cost flow: a small in-line filter restricts flow more than a 10-inch standard canister, and a standard canister is more restrictive than a jumbo canister. A filter plus a cheap regulator is a common cause of a weak shower."
       }
      ]
     },
@@ -345,7 +350,7 @@
       },
       {
        "kind": "p",
-       "html": "<b>1. City water left on with a leaking fixture and nobody watching.</b> This is the big one. On city water the system is under pressure continuously. Any leak, whether at a toilet valve, a supply fitting, or a cracked line, keeps running until someone closes the spigot. Turn off the city water whenever you are outside the coach, and fifty gallons of water will do as much damage as 500. If you want pressure while away, use the onboard pump and tank instead."
+       "html": "<b>1. City water left on with a leaking fixture and nobody watching.</b> This is the big one. On city water the system is under pressure continuously. Any leak, whether at a toilet valve, a supply fitting, or a cracked line, keeps running until someone closes the spigot. Turn off the city water whenever you are outside the RV, and fifty gallons of water will do as much damage as 500. If you want pressure while away, use the onboard pump and tank instead."
       },
       {
        "kind": "p",
@@ -353,7 +358,7 @@
       },
       {
        "kind": "p",
-       "html": "<b>3. Fresh-tank fill left unattended.</b> There may be no automatic shut-off when filling. The tank overflows out a vent rather than bursting, but an unattended fill still wastes water and can flood a wet bay. Never walk away from a fill. If your coach has an automatic fill, use a flow meter."
+       "html": "<b>3. Fresh-tank fill left unattended.</b> There may be no automatic shut-off when filling. The tank overflows out a vent rather than bursting, but an unattended fill still wastes water and can flood a wet bay. Never walk away from a fill. If your RV has an automatic fill, use a flow meter."
       },
       {
        "kind": "p",
@@ -410,7 +415,7 @@
      "blocks": [
       {
        "kind": "p",
-       "html": "There are two ways to winterise an RV, and both are in service of the same thing: getting every drop of water out of a system that will freeze and split. Which one suits your coach, how much antifreeze it takes, what pressure a blow-out runs at, and the order to work in are all in the <a href=\"guides/winterize-plumbing.html\">winterising guide</a>, which is the full job. What follows is the shape of it."
+       "html": "There are two ways to winterise an RV, and both are in service of the same thing: getting every drop of water out of a system that will freeze and split. Which one suits your RV, how much antifreeze it takes, what pressure a blow-out runs at, and the order to work in are all in the <a href=\"guides/winterize-plumbing.html\">winterising guide</a>, which is the full job. What follows is the shape of it."
       },
       {
        "kind": "table",
@@ -467,7 +472,7 @@
       },
       {
        "kind": "p",
-       "html": "The industry association RVIA does not define it either. A certification run by the parts maker Truma claims to add credibility to a four-season label, but it is Truma's own single test, using a cold chamber at minus 15 degrees Celsius and measuring how long the coach takes to warm to 20 degrees, and it is not a general industry standard. ANSI defines no four-season standard either; its RV-related standards cover park model RVs, low-voltage systems, and exterior ladders."
+       "html": "The industry association RVIA does not define it either. A certification run by the parts maker Truma claims to add credibility to a four-season label, but it is Truma's own single test, using a cold chamber at minus 15 degrees Celsius and measuring how long the RV takes to warm to 20 degrees, and it is not a general industry standard. ANSI defines no four-season standard either; its RV-related standards cover park model RVs, low-voltage systems, and exterior ladders."
       },
       {
        "kind": "p",
@@ -479,7 +484,7 @@
       },
       {
        "kind": "callout",
-       "html": "There is no published pass or fail test a buyer can cite. If a seller says a coach is four-season, the question to ask is what the features are: an enclosed and heated underbelly, ducted furnace heat to the tanks, dual-pane windows, and insulation values for the roof, floor, and walls. A label is not a measurement."
+       "html": "There is no published pass or fail test a buyer can cite. If a seller says an RV is four-season, the question to ask is what the features are: an enclosed and heated underbelly, ducted furnace heat to the tanks, dual-pane windows, and insulation values for the roof, floor, and walls. A label is not a measurement."
       }
      ]
     },
@@ -537,11 +542,11 @@
       },
       {
        "kind": "p",
-       "html": "Insulation has to be everywhere to work. A year-round coach needs insulation in the roof, floor, walls, front cap, and slide areas, not just one or two highlighted zones. Dual-pane windows help but are not magic in an RV, because RV units are built differently from house units."
+       "html": "Insulation has to be everywhere to work. A year-round RV needs insulation in the roof, floor, walls, front cap, and slide areas, not just one or two highlighted zones. Dual-pane windows help but are not magic in an RV, because RV units are built differently from house units."
       },
       {
        "kind": "p",
-       "html": "Even a well-built coach has limits. RV walls, ceilings, and floors will only ever be so thick, which makes it nearly impossible to rival a residential house, and even the best winter set-up will fail if it is not used and maintained properly and within the manufacturer's stated limits. A coach used in a North Dakota winter needs skirting, a heated water hose, and active heat management; the same coach on the Gulf Coast is barely stressed. The owner who spends the winter in North Dakota must do more to protect the coach than the owner who travels to warmer coastal air."
+       "html": "Even a well-built RV has limits. RV walls, ceilings, and floors will only ever be so thick, which makes it nearly impossible to rival a residential house, and even the best winter set-up will fail if it is not used and maintained properly and within the manufacturer's stated limits. An RV used in a North Dakota winter needs skirting, a heated water hose, and active heat management; the same RV on the Gulf Coast is barely stressed. The owner who spends the winter in North Dakota must do more to protect the RV than the owner who travels to warmer coastal air."
       }
      ]
     },
@@ -552,25 +557,50 @@
      "blocks": [
       {
        "kind": "p",
-       "html": "Condensation forms when warm, moist air inside meets a cold surface, such as window glass, a thin wall, or a metal frame. The moisture in the air turns to liquid on the cold surface. RVs are small and tightly sealed, so the air inside loads up with moisture quickly."
+       "html": "Condensation forms when warm, moist air inside meets a cold surface, such as window glass, a thin wall or a metal frame, and the moisture in the air turns back into liquid on that surface. RVs are small and tightly sealed, so the air inside loads up with moisture quickly. Window glass is colder than the wall around it, which is why the windows are usually the first place it shows."
       },
       {
        "kind": "p",
-       "html": "People are the main source. With normal activities such as breathing, cooking, and bathing, a family of four can release up to three gallons of water vapour into the air each day. Without proper ventilation or a dehumidifier, that moisture condenses on cooler surfaces, potentially damaging belongings and the RV itself. The cold surfaces are worst in cold weather, because the temperature gap between the inside air and, for example, a single-pane window is largest then. Cooking, showering, and drying clothes indoors add moisture fast."
+       "html": "<b>Where it lands is where the cold is.</b> In a metal-framed RV the frame is itself a path for cold. As Winnebago's service guide puts it, <b>\"metal structure within the sidewalls and around openings conducts the cold into the vehicle where it condenses the moisture in the air.\"</b> That is why the worst places are the corners of exterior walls, the surrounds of openings, and any surface with a metal member behind it. Cold corners behind furniture and inside storage areas, cabinets and closets collect it too, because the air there sits still and slightly cooler. A side effect worth knowing: condensation on an interior wall traces the lines where the frame runs."
+      },
+      {
+       "kind": "p",
+       "html": "<b>Where the water comes from.</b> It is not a leak. It is you, and everything you do inside:"
       },
       {
        "kind": "list",
        "items": [
-        "Ventilate while you cook and shower. Run the range hood and the bathroom fan, and open a window a crack when the outside air is colder and drier than the inside air.",
-        "Use a dehumidifier when the outside air is warm and damp, because then opening windows brings moisture in rather than pushing it out. If condensation persists despite ventilation, a dehumidifier can help manage excess moisture.",
-        "Wipe down wet windows and frames so the water does not run into the walls.",
-        "Leave cabinet and closet doors partly open so air can move, which keeps those spaces drier.",
-        "Use a desiccant only in a sealed, unoccupied space such as a closed cabinet, and refresh it as directed."
+        "Breathing and perspiration. Winnebago's service guide quotes an estimate that breathing and perspiration alone can produce <b>\"as much as three pounds of vapor per person per day.\"</b> Keystone puts the household figure at up to three gallons of water a day for a family of four, once cooking, bathing and washing are counted.",
+        "Cooking and washing up, which put steam straight into the air.",
+        "Showers, the largest single source in a normal day.",
+        "Drying clothes or towels inside, which returns everything a vented dryer would have sent outside.",
+        "Unvented propane burners, such as a stovetop or a catalytic heater: Airstream's guidance is that <b>\"for every gallon of fuel consumed, approximately one gallon of water vapor is evaporated into the air.\"</b>"
        ]
       },
       {
+       "kind": "p",
+       "html": "<b>What actually works, roughly in order of how much it helps.</b>"
+      },
+      {
+       "kind": "list",
+       "items": [
+        "Ventilate while you cook and shower. Run the range hood when cooking and the bath fan when showering, and keep the bathroom door shut so the steam leaves instead of spreading. Keep the fan running after the shower ends rather than only during it. Fifteen minutes is the minimum, and an hour is better.",
+        "Crack a roof vent or a window even when it is cold outside. Sealing the RV up in cold weather is the instinct and it is backwards: it is the tightly closed RV that fills with moisture.",
+        "Move the air into the dead spaces. A small fan left running stops condensation pooling where the air does not move. Corners and the far ends of a slide-out are where air movement stops first, and they are where water collects.",
+        "Wipe windows and frames dry, and do not let the water run down into the wall.",
+        "Leave cabinet and closet doors partly open, so the air inside them is the same temperature as the rest of the room.",
+        "Keep things off the exterior walls. Airstream's guidance is to <b>\"allow an air space between stored items and the exterior wall to promote air circulation\"</b>. A few inches is enough, and it matters most in under-seat storage, wardrobes and the ends of slide-outs. A cushion or a box pressed against a cold wall is a place for water to form behind it.",
+        "Do not hang wet towels or clothes to dry inside. Damp things go outside, or into a vented dryer.",
+        "Do not wind the heat down at night to save propane. Airstream's rule is to <b>\"avoid nighttime setbacks of 10 degrees or more\"</b>: cooling the surfaces quickly is exactly what makes the moisture land on them."
+       ]
+      },
+      {
+       "kind": "p",
+       "html": "<b>The dehumidifier, and how big.</b> When ventilation cannot keep up, typically on a wet coast where the outside air is damp anyway, a dehumidifier is the next step, and bigger is better than smaller. ENERGY STAR's advice is simple: <b>\"it's better to oversize than undersize!\"</b> Its sizing table starts at 20 to 30 pints per day for a space under 2,000 square feet that is only slightly damp, and runs to 30 to 50 pints per day where the space is genuinely wet, and higher again for larger spaces. An RV is small, so the bottom of that scale is the starting point, and a unit at the top of its band runs less and lasts longer than one that never quite catches up. One caveat matters in winter: coils can frost below about 65°F, so a unit rated for low-temperature operation is the one to look for if it will run in the cold. A cheap hygrometer tells you there is a problem before you can see one; Winnebago puts the target at 60 percent relative humidity or less."
+      },
+      {
        "kind": "callout",
-       "html": "Sealing a coach completely does not stop condensation; it can make it worse, because trapped moisture has nowhere to go. The goal is to move moist air out or to dry it, not to lock it in."
+       "html": "Sealing an RV completely does not stop condensation. It makes it worse, because trapped moisture has nowhere to go. The goal is to move moist air out or to dry it, not to lock it in."
       }
      ]
     },
@@ -581,7 +611,7 @@
      "blocks": [
       {
        "kind": "p",
-       "html": "Mould needs three things: moisture, a food source, and a moderate temperature. Mould can develop in any environment with moisture and temperatures between 40°F and 100°F. The food source is ordinary dirt and dust, which is why a clean, dry coach stores better than a dirty one."
+       "html": "Mould needs three things: moisture, a food source, and a moderate temperature. Mould can develop in any environment with moisture and temperatures between 40°F and 100°F. The food source is ordinary dirt and dust, which is why a clean, dry RV stores better than a dirty one."
       },
       {
        "kind": "p",
@@ -589,7 +619,7 @@
       },
       {
        "kind": "p",
-       "html": "Short-term storage, meaning weeks between trips, is mostly about drying out. Empty and dry the black and grey tanks, run water into every P-trap, and leave a vent or window cracked for airflow. If the coach sits in sun, expect interior heat to drive moisture out of soft furnishings by day and condense it at night, so ventilation matters more than in a house."
+       "html": "Short-term storage, meaning weeks between trips, is mostly about drying out. Empty and dry the black and grey tanks, run water into every P-trap, and leave a vent or window cracked for airflow. If the RV sits in sun, expect interior heat to drive moisture out of soft furnishings by day and condense it at night, so ventilation matters more than in a house."
       },
       {
        "kind": "p",
@@ -598,10 +628,10 @@
       {
        "kind": "list",
        "items": [
-        "Clean the coach before storage. Crumbs, grease, and dust are the food mould needs.",
+        "Clean the RV before storage. Crumbs, grease, and dust are the food mould needs.",
         "Dry it thoroughly. Wipe wet surfaces and let soft furnishings air out before closing up.",
         "Leave cabinet and closet doors partly open for airflow.",
-        "Keep some ventilation. Do not seal the coach completely, because trapped moisture raises condensation. Completely sealing an RV without ventilation can actually increase condensation inside.",
+        "Keep some ventilation. Do not seal the RV completely, because trapped moisture raises condensation. Completely sealing an RV without ventilation can actually increase condensation inside.",
         "Use a dehumidifier or desiccant as appropriate. A powered dehumidifier needs power; desiccant packs suit a sealed, unpowered space and should be refreshed every 30 to 60 days.",
         "Fix leaks before storage. A small roof or window leak over a winter is a mould start."
        ]

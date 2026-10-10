@@ -13,21 +13,22 @@
      "blocks": [
       {
        "kind": "p",
-       "html": "The coach has to be level before the slide-outs move and before an absorption fridge runs, the water heater has to be full before it is switched on, and the electrical load should be off while the cord goes in. Work in this order and each step makes the next one safe."
+       "html": "The RV has to be level before the slide-outs move and before an absorption fridge runs, the water heater has to be full before it is switched on, and the electrical load should be off while the cord goes in. Work in this order and each step makes the next one safe."
       },
       {
        "kind": "list",
        "items": [
-        "<b>Park, then level.</b> Level side to side first, then front to back. The two corrections use different tools: side to side is set with blocks or ramps under the wheels, and front to back is the small adjustment made last, with the tongue jack or the landing gear.",
-        "<b>Chock the wheels.</b> Chock them even on level ground, and put them in before the stabilisers rather than after.",
+        "<b>Park, then level.</b> Level side to side first, then front to back. On a travel trailer, side to side is set with blocks or ramps under the wheels, and front to back is the small adjustment made last, with the tongue jack or the landing gear. On a motorhome it is the leveling system, hydraulic or air, and the order it runs in is the maker's, so read that page of the manual before the first time you use it. Either way, the RV is level before a slide-out moves.",
+        "<b>Parking brake, and the engine off, on a motorhome.</b> The engine goes off and the parking brake is set before the jacks go down or a slide moves. Some leveling systems will not operate otherwise, and the brake is what keeps the RV from rolling while the jacks are taking weight.",
+        "<b>Chock the wheels.</b> Chock them even on level ground, and put them in before the stabilisers or the levelers rather than after. A motorhome on its jacks is still chocked.",
         "<b>Look at the pedestal, then test it.</b> Test the outlet with a surge protector that has diagnostics built in, before the cord goes anywhere near it. A pedestal that is scorched, cracked or loose is one to report rather than use.",
-        "<b>Make the power connection with the pedestal breaker off.</b> The coach end of the cord goes in first, then the pedestal end, and the breaker goes on last. Running off a generator instead of a hookup: start the generator first, check the breaker on the generator itself, then switch the coach over to it.",
-        "<b>Check the coach's own breaker panel</b> for anything tripped, and switch the converter on if it has its own switch.",
+        "<b>Make the power connection with the pedestal breaker off.</b> The RV end of the cord goes in first, then the pedestal end, and the breaker goes on last. Running off a generator instead of a hookup: start the generator first, check the breaker on the generator itself, then switch the RV over to it.",
+        "<b>Check the RV's own breaker panel</b> for anything tripped, and switch the converter on if it has its own switch.",
         "<b>Confirm the battery is charging.</b> Watch the battery gauge on the monitor panel. If it read three quarters before you plugged in and it reads full a little later, the charger is working. The <a href=\"guides/rv-battery-not-charging.html\">battery guide</a> covers what to do when the reading does not move.",
         "<b>Water next.</b> Connect the drinking-water hose through a pressure regulator, then open a cold tap inside and let it run to push the air out of the lines. Do not walk away from a tank that is filling.",
         "<b>Fill the water heater before it is switched on.</b> Open a hot tap and let it run until the flow is steady, with no spitting or sputtering. That is what confirms the tank is full. Only then does the electric element or the burner get switched on.",
         "<b>Propane last.</b> Open the main valve slowly, and if you smell gas, stop and find out why before anything is lit.",
-        "<b>Check the detectors.</b> The propane and carbon-monoxide alarms run on the 12-volt system, so they should be working off the house battery from the moment you arrive, not only once the coach is plugged in."
+        "<b>Check the detectors.</b> The propane and carbon-monoxide alarms run on the 12-volt system, so they should be working off the house battery from the moment you arrive, not only once the RV is plugged in."
        ]
       },
       {
@@ -44,13 +45,13 @@
      "blocks": [
       {
        "kind": "p",
-       "html": "A walkaround is a fixed loop around the coach before every departure, done in the same direction each time so that nothing is skipped. The point is not a detailed inspection. It is to catch the handful of things that are dangerous or expensive when they are left loose or left behind."
+       "html": "A walkaround is a fixed loop around the RV before every departure, done in the same direction each time so that nothing is skipped. The point is not a detailed inspection. It is to catch the handful of things that are dangerous or expensive when they are left loose or left behind."
       },
       {
        "kind": "list",
        "items": [
-        "<b>Tires.</b> Check pressure against the figure on the coach's placard, not the number on the sidewall, and look for cuts and bulges. Two age facts matter. The build date is the last four digits of the DOT code: the first two digits are the week from 01 to 52, and the last two are the year. A tire can be too old while still looking new, so replace a tire that has been in service six years or more even if it looks serviceable and has not reached the treadwear limit. Check tread depth with a coin: a tire is unsafe when the minimum tread depth reaches 2/32 inch, the distance between the top of Lincoln's head and the edge on a penny.",
-        "<b>Height.</b> Know the tallest point of the coach before you drive anywhere, because an awning, an antenna and an air conditioner all add to it. Measure from the ground all the way to the top of the highest object on the RV, then post that number on your dashboard so you do not forget it.",
+        "<b>Tires.</b> Check pressure against the figure on the RV's placard, not the number on the sidewall, and look for cuts and bulges. Two age facts matter. The build date is the last four digits of the DOT code: the first two digits are the week from 01 to 52, and the last two are the year. A tire can be too old while still looking new, so replace a tire that has reached your tire maker's own age figure, even if it looks serviceable and has not reached the treadwear limit. Check tread depth with a coin: a tire is unsafe when the minimum tread depth reaches 2/32 inch, the distance between the top of Lincoln's head and the edge on a penny.",
+        "<b>Height.</b> Know the tallest point of the RV before you drive anywhere, because an awning, an antenna and an air conditioner all add to it. Measure from the ground all the way to the top of the highest object on the RV, then post that number on your dashboard so you do not forget it.",
         "<b>The hitch or the coupling.</b> For a trailer, the tongue weight wants to be roughly a tenth to a sixth of the loaded trailer weight, which is 10 to 15 percent. Load the heavy items low and forward, and keep them out of the back. Never load heavy items in the back of the trailer or on the back bumper.",
         "<b>Everything that folds, slides or latches.</b> Awning in, antenna down, steps up, slide-outs in, roof vents closed, compartment doors latched. Use a checklist every time you arrive at or leave a campsite, because it is easy to forget simple things like unplugging power cords or lowering the TV antenna.",
         "<b>Propane while moving.</b> Turn the propane supply off at the tank while driving."
@@ -58,7 +59,7 @@
       },
       {
        "kind": "callout",
-       "html": "A checklist is not a sign of inexperience. The failures it prevents are the familiar ones: an awning left out, a television antenna left up, or a cord still plugged in as the coach pulls away."
+       "html": "A checklist is not a sign of inexperience. The failures it prevents are the familiar ones: an awning left out, a television antenna left up, or a cord still plugged in as the RV pulls away."
       }
      ]
     },
@@ -73,54 +74,59 @@
       },
       {
        "kind": "p",
-       "html": "<b>Water.</b> The order is spigot, regulator, hose, filter, coach. Some coaches take the regulator at the tap and some at the inlet; the point is that it sits between the park's pressure and your plumbing."
+       "html": "<b>Water.</b> The order is spigot, regulator, hose, filter, RV. Some RVs take the regulator at the tap and some at the inlet; the point is that it sits between the park's pressure and your plumbing."
       },
       {
        "kind": "list",
        "items": [
         "Use a dedicated drinking-water hose. A garden hose is not made to carry water you drink.",
         "Fit the pressure regulator at the spigot end.",
-        "Add an inline filter if the coach does not already have one.",
-        "Connect to the city-water inlet. The fresh-tank fill and the city-water inlet are often two separate fittings, and on some coaches a single fitting and a diverter valve do both jobs, so find out which arrangement yours has.",
-        "Turn the tap on, then open a cold tap inside and let it run to clear the air out of the lines."
+        "Add an inline filter if the RV does not already have one.",
+        "Connect to the city-water inlet. The fresh-tank fill and the city-water inlet are often two separate fittings, and on some RVs a single fitting and a diverter valve do both jobs, so find out which arrangement yours has.",
+        "Turn the park tap on slowly, then crack a cold tap inside and let it run to push the air out of the lines. A line full of air lets go in a hard, spitting rush, so open the tap a little at a time rather than wide open, and stay with it while it runs."
        ]
       },
       {
        "kind": "p",
-       "html": "<b>Power.</b> The coach end of the cord goes in first and comes out last, so the live end is always the one in your hand."
+       "html": "<b>Power.</b> The RV end of the cord goes in first and comes out last, so the live end is always the one in your hand. Between the pedestal and the cord there is one more device, and it is yours: a surge protector or EMS goes into the pedestal outlet first, and the RV's cord goes into it."
       },
       {
        "kind": "list",
        "items": [
-        "Switch off the air conditioner, the water heater and other heavy loads, and switch off the coach's main breaker.",
+        "Switch off the air conditioner, the water heater and other heavy loads, and switch off the RV's main breaker.",
         "Turn the pedestal breaker off.",
-        "Inspect and test the pedestal.",
-        "If the shore cord is detachable, connect the coach end first.",
-        "Connect the pedestal end.",
-        "Turn the pedestal breaker on.",
-        "Let the surge protector or EMS run its check and approve the power.",
-        "Switch the coach's main breaker on, then bring appliances on one at a time.",
-        "Running off a generator instead of a pedestal: start the generator first and check the breaker on the generator itself, then switch the coach over to it."
+        "Inspect the pedestal outlet, and do not use one that is scorched, cracked or loose. Report it.",
+        "Plug your surge protector or EMS into the pedestal outlet, then turn the pedestal breaker on.",
+        "Let the EMS run its check and show a pass before the RV is connected to anything. If it does not pass, do not connect.",
+        "Connect the RV end of the shore cord to the RV first, so the live end is the last thing in your hand.",
+        "Plug the other end into the EMS, not into the pedestal.",
+        "Switch the RV's main breaker on, then bring appliances on one at a time.",
+        "Running off a generator instead of a pedestal: start the generator first and check the breaker on the generator itself, then switch the RV over to it."
        ]
       },
       {
        "kind": "p",
-       "html": "<b>Sewer.</b> Connect the hose at both ends before you open anything, and keep the black valve closed. Never leave it open through your stay. Dump when the black tank is at least two thirds full, black first and then grey, because the grey water rinses the hose."
+       "html": "<b>The protector is separate from the RV, and it sits in the middle.</b> A portable inline unit goes into the pedestal and the RV's cord goes into it, which is the arrangement to buy: a unit mounted behind the wall protects the outlet but not the cord, and the cord is what sits on the wet ground. What it is really doing is not absorbing lightning. It reads the pedestal's voltage and wiring and refuses to pass current when the ground is open, the neutral is open, the polarity is reversed, or the voltage is outside range. Those are the faults a campground pedestal actually develops, and none of them is visible by looking at it. Progressive Industries is one widely used maker of the portable kind. The <a href=\"#shore-power\">shore power section</a> below covers what each reading means."
+      },
+      {
+       "kind": "p",
+       "html": "<b>Sewer.</b> Connect the hose at both ends before you open anything, and keep the black valve closed. Never leave it open through your stay. <b>The order never changes: black first, then grey.</b> Drain the black tank first and let it empty, then open the grey, because the grey water is what rinses the black residue out of the shared hose. Dump when the black tank is at least two thirds full."
       },
       {
        "kind": "list",
        "items": [
         "Wear gloves. Fit a clear elbow at the outlet so you can see what is moving: it is the only window into the black tank.",
         "At a dump station with a smooth inlet, a rubber donut, sometimes called a sewer doughnut or hose adapter, makes the hose fit snugly against the station inlet. Some campgrounds require one.",
-        "Open the gray valve for a short burst and close it again, so that any leak shows up as gray water rather than black. Better to find a leak with gray water than with black tank fluid.",
+        "If you want a leak check before you start, crack the grey valve for a few seconds and close it again, so a bad fitting shows up as grey water rather than black. That is a check, not the dump: when you dump, black still goes first and grey follows it.",
         "Weight the elbow with a rock or a brick so the hose cannot kick loose. Most dump stations have a rock nearby for exactly this purpose.",
-        "Dump black, then gray, then close both valves.",
-        "Precharge the empty tank so it does not start dry. After dumping, add 5 to 10 gallons of water and treatment chemical before using it again."
+        "Dump black, then grey, then close both valves.",
+        "Precharge the empty tank so it does not start dry. After dumping, add 5 to 10 gallons of water and treatment chemical before using it again.",
+        "Never rinse, set down or store the sewer hose near a fresh-water tap, and never let it touch the hose you drink from. Cross-contamination is the one mistake on this list that can make you ill rather than just cost you money."
        ]
       },
       {
        "kind": "p",
-       "html": "<b>Disconnecting is the reverse.</b> Loads off, breakers off, pedestal end first, then the coach end. A generator is the same: shut it down, or switch the coach off it, before the cord is touched."
+       "html": "<b>Disconnecting is the reverse.</b> Loads off, breakers off, pedestal end first, then the RV end. A generator is the same: shut it down, or switch the RV off it, before the cord is touched."
       }
      ]
     },
@@ -136,9 +142,9 @@
       {
        "kind": "list",
        "items": [
-        "<b>Check in, then look at the site on foot.</b> Walk the pad before you commit the coach to it, and note which side the pedestal and the sewer connection are on, so you park with the connections within reach.",
+        "<b>Check in, then look at the site on foot.</b> Walk the pad before you commit the RV to it, and note which side the pedestal and the sewer connection are on, so you park with the connections within reach.",
         "<b>Do not cut across your neighbour.</b> Do not cut through another occupied site to reach the bathroom, the lake, or a trail.",
-        "<b>If your vehicle is in somebody's way, move it before they ask.</b> A coach backing into a tight site has very little room, and the van parked opposite is often the thing making it hard. Offering costs you nothing and it is what everyone on a campground expects of everyone else.",
+        "<b>If your vehicle is in somebody's way, move it before they ask.</b> An RV backing into a tight site has very little room, and the van parked opposite is often the thing making it hard. Offering costs you nothing and it is what everyone on a campground expects of everyone else.",
         "<b>Back or pull in with a spotter.</b> Use someone outside who can see what you cannot, and agree on the hand signals before you start.",
         "<b>If you are backing in after dark, put lights on the ground.</b> A torch laid on the ground at each corner you are aiming for, or one at the far end of the pad, gives you something fixed to steer by. It is far easier than judging distance against the dark.",
         "<b>Level, then chock.</b> Side to side first, then front to back, as set out above.",
@@ -167,7 +173,7 @@
         "<b>Going too far on the first day.</b> Most experienced RVers prefer traveling between 200 and 330 miles per day. A new owner who plans a long first day arrives tired, in the dark, at a site they have never seen.",
         "<b>Skipping the shakedown trip.</b> Take a short, close-to-home shakedown trip before venturing off on a longer one. A first trip that is also the first use of everything is a first trip with no margin.",
         "<b>Making the first trip hard.</b> Book somewhere forgiving, a full-hookup park with pull-through sites rather than a tight loop. Pick a destination within one to three hours from home and stay two or three nights.",
-        "<b>Not capturing the walkthrough.</b> The dealer handover is the one time someone who knows the coach shows you how it works. Record the orientation so you can refer to it later.",
+        "<b>Not capturing the walkthrough.</b> The dealer handover is the one time someone who knows the RV shows you how it works. Record the orientation so you can refer to it later.",
         "<b>Overpacking.</b> Every RV has weight limits, and staying under them is vital to a smooth trip.",
         "<b>Taking delivery with known faults.</b> Before you sign, the problems belong to the dealer. If your inspection finds significant issues, refuse to take delivery until they are resolved.",
         "<b>Missing the warranty window.</b> After 90 days, these items are no longer covered. The 90-day provision usually covers the small adjustment items a first season shakes loose, so write the list down as you find things rather than remembering at the end.",
@@ -181,7 +187,7 @@
   {
    "id": "systems",
    "title": "Part 2: How your RV works",
-   "summary": "How the 12-volt and 120-volt systems divide the work, how shore power is tested and sized, how water and propane behave, what each appliance needs, and what is settled and what is not on slide-outs, leveling and electronics.",
+   "summary": "How the 12-volt and 120-volt systems divide the work, what 30-amp and 50-amp shore power each actually give you and how to test a pedestal, how water and propane behave, what each appliance needs, and what is settled and what is not on slide-outs, leveling and electronics.",
    "sections": [
     {
      "id": "two-electrical-systems",
@@ -202,8 +208,8 @@
        "rows": [
         [
          "12 V DC",
-         "The house battery, kept charged by the converter",
-         "Lights, water pump, furnace blower and controls, vent fans, slide and jack motors, fridge control boards, propane and carbon-monoxide detectors, thermostats"
+         "The house battery, kept charged by the converter, the alternator, solar, the generator or the tow vehicle",
+         "Lights, water pump, furnace blower and controls, vent fans, slide and leveler motors, the electric tongue jack, fridge control boards, propane and carbon-monoxide detectors, thermostats"
         ],
         [
          "120 V AC",
@@ -223,7 +229,15 @@
       },
       {
        "kind": "p",
-       "html": "<b>Converter, inverter, battery.</b> The four words that confuse new owners are easier once the direction of travel is clear. A converter goes from AC to DC; an inverter goes from DC to AC; an inverter/charger does both; the battery stores DC. A converter converts 120-volt AC to 12-volt DC to power low-voltage DC loads, charges the battery, and distributes both 12-volt and 120-volt current to the various branch circuits in the RV. Almost every RV has a converter. Inverters are optional and are most often factory fitted on coaches with residential refrigerators or off-grid packages. A quick way to tell the two faults apart: flat batteries while plugged in is converter territory, while dead outlets while boondocking is inverter territory. An inverter only feeds the outlets wired to it, and circuits that are generally not included in inverter loads are air conditioners, refrigerators, washer-dryers, and other high-current-draw loads."
+       "html": "<b>What charges the 12-volt system.</b> The battery is not charged by one thing, and a battery that will not hold its charge usually means one of them has stopped. On shore power it is the converter, and the generator charges it the same way, because the generator feeds the converter. Solar is another source where it is fitted. On a motorhome the engine alternator charges the house battery while you drive on most models, through an isolator or a combiner. That is common but not universal, so check your own manual. On a travel trailer the 7-pin cord carries a charge line from the tow vehicle, and Scamp's owner's manual lists the tow vehicle as a charge source that will <b>\"begin charging your house battery.\"</b> Scamp's manual adds that the result depends on the tow vehicle's wiring and its output, so treat it as a trickle charge rather than a recharge: <b>\"the charging of the trailer batteries via this method is best considered trickle or maintenance.\"</b> An electric tongue jack runs on 12 volts as well, so a flat battery takes the jack with it."
+      },
+      {
+       "kind": "callout",
+       "html": "<b>The battery goes flat with everything switched off.</b> The propane and carbon-monoxide detectors, the fridge's control board, the radio's memory and the thermostat all draw a small current all the time, and over days parked that is enough to flatten a battery. It is why a stored RV wants a battery disconnect switch or a trickle charger. It is also the reason to think before you put a slide out: arrive with a low battery, extend the room, and by the morning there may not be enough charge left to bring it back in."
+      },
+      {
+       "kind": "p",
+       "html": "<b>Converter, inverter, battery.</b> The four words that confuse new owners are easier once the direction of travel is clear. A converter goes from AC to DC; an inverter goes from DC to AC; an inverter/charger does both; the battery stores DC. A converter converts 120-volt AC to 12-volt DC to power low-voltage DC loads, charges the battery, and distributes both 12-volt and 120-volt current to the various branch circuits in the RV. Almost every RV has a converter, because it is what charges the battery on shore power. An inverter is a different device and it is not universal: plenty of travel trailers have no inverter at all, and where one is fitted it is usually part of a package bought for a residential fridge or for running 120-volt loads off the battery. A quick way to tell the two faults apart: flat batteries while plugged in is converter territory, while dead outlets while boondocking is inverter territory. An inverter only feeds the outlets wired to it, and circuits that are generally not included in inverter loads are air conditioners, refrigerators, washer-dryers, and other high-current-draw loads."
       },
       {
        "kind": "callout",
@@ -235,11 +249,11 @@
       },
       {
        "kind": "p",
-       "html": "<b>Battery sizing is the one electrical question with no published universal answer.</b> The amp-hour capacity a coach needs depends on its loads and how it is used, and no manufacturer gives a formula. The sizing calculators that circulate are practitioner tools rather than specifications, so they can guide a choice but cannot settle one."
+       "html": "<b>Battery sizing is the one electrical question with no published universal answer.</b> The amp-hour capacity an RV needs depends on its loads and how it is used, and no manufacturer gives a formula. The sizing calculators that circulate are practitioner tools rather than specifications, so they can guide a choice but cannot settle one."
       },
       {
        "kind": "callout",
-       "html": "<b>More than one source can be live at once.</b> A coach may be energised by shore power, an inverter and the batteries at the same time, so verify every source before you touch any wiring. Shore power and the generator are the exception: those two are never run together, because they are separate supplies feeding one panel.\n  <b>De-energise before you open anything.</b> Disconnect the shore cord, shut the generator down, and switch the inverter off before going near the 120-volt breaker box or any of the 120-volt wiring.\n  To work out what any one appliance draws on either system, the <a href=\"tools/watts-to-amps\">watts to amps calculator</a> does the arithmetic.",
+       "html": "<b>More than one source can be live at once.</b> An RV may be energised by shore power, an inverter and the batteries at the same time, so every source has to be found before any wiring is touched. Shore power and the generator are the exception: those two are never run together. <b>De-energise before you open anything, and do not trust a switch.</b> A correct shutdown works through every source: turn the pedestal breaker off before the cord comes out, unplug the shore cord, shut the generator down, disconnect the negative battery cable, and then deal with the inverter. The inverter is the one that matters most, because it is the source that stays live after everything else is off: it turns battery power back into 120 volts, and it can keep selected outlets energised with no shore power and no generator running. Switching it off at the unit is not enough. Xantrex warns that <b>\"Turning off controls will not reduce this risk\"</b> and that the switch on an inverter/charger does not turn off the charger section. Disconnect the inverter's AC and DC inputs, which is what Xantrex calls for, and allow the several minutes its manual may ask for before the capacitors are safe to touch. Before working on anything, confirm the circuit is dead with a meter rather than by looking at a switch position, because an inverter usually feeds only the outlets that were wired to it, and you cannot guess which outlets those are. To work out what any one appliance draws on either system, the <a href=\"tools/watts-to-amps\">watts to amps calculator</a> does the arithmetic.",
        "flag": "injury"
       }
      ]
@@ -300,22 +314,22 @@
       },
       {
        "kind": "p",
-       "html": "<b>Test it before the cord goes in.</b> The pedestal breaker goes off first, then the outlet is tested with a surge protector that has diagnostics built in, or with a multimeter if you carry one. Three green indicator lights is a pass. On a fail, do not connect: move the coach to another pedestal, or have the fault corrected. A pedestal that is scorched, cracked or loose is one to report rather than use."
+       "html": "<b>Test it before the cord goes in.</b> The pedestal breaker goes off first, then the outlet is tested with a surge protector that has diagnostics built in, or with a multimeter if you carry one. Three green lights mean the tester found none of the faults it can see; they are not a clearance, because the fault described below is invisible to it. On a fail, do not connect: move the RV to another pedestal, or have the fault corrected. A pedestal that is scorched, cracked or loose is one to report rather than use."
       },
       {
        "kind": "list",
        "items": [
-        "Turn off high-draw appliances and the coach's main breaker.",
+        "Turn off high-draw appliances and the RV's main breaker.",
         "Turn the pedestal breaker off.",
         "Inspect and test the pedestal.",
-        "Connect the coach end of the cord first, then the pedestal end.",
+        "Connect the RV end of the cord first, then the pedestal end.",
         "Turn the pedestal breaker on.",
-        "Let the EMS approve the power, then switch the coach's main breaker on and bring appliances on gradually."
+        "Let the EMS approve the power, then switch the RV's main breaker on and bring appliances on gradually."
        ]
       },
       {
        "kind": "p",
-       "html": "<b>Adapters: stepping down is normal, combining is not.</b> A dogbone adapter changes the shape of a plug; it does not create power. Running a 30-amp coach on a 50-amp pedestal, or a 50-amp coach on a 30-amp pedestal, is routine. In the second case you are limited to 3,600 watts and will probably trip breakers if you run several heavy appliances at once, because the pedestal's 30-amp breaker is now the smallest thing protecting you."
+       "html": "<b>Adapters: stepping down is normal, combining is not.</b> A dogbone adapter changes the shape of a plug; it does not create power. Running a 30-amp RV on a 50-amp pedestal, or a 50-amp RV on a 30-amp pedestal, is routine. In the second case you are limited to 3,600 watts and will probably trip breakers if you run several heavy appliances at once, because the pedestal's 30-amp breaker is now the smallest thing protecting you."
       },
       {
        "kind": "p",
@@ -323,19 +337,19 @@
       },
       {
        "kind": "p",
-       "html": "<b>Do not chain a step down and back up.</b> Going from a 50-amp outlet down to a 30-amp extension cord and back up to a 50-amp inlet removes the protection: nothing stops you drawing more than 30 amps, and the pedestal will supply it. A 15-amp cord in that chain is worse, because 30 amps through it reaches the boiling point of water in about five minutes. Match the adapter to the difference in plug shape, and size the protection device to the coach's own shore cord, not to the pedestal."
+       "html": "<b>Do not chain a step down and back up.</b> Going from a 50-amp outlet down to a 30-amp extension cord and back up to a 50-amp inlet removes the protection: nothing stops you drawing more than 30 amps, and the pedestal will supply it. A 15-amp cord in that chain is worse, because 30 amps through it reaches the boiling point of water in about five minutes. Match the adapter to the difference in plug shape, and size the protection device to the RV's own shore cord, not to the pedestal."
       },
       {
        "kind": "callout",
-       "html": "<b>Surge protector or EMS: these are not the same device.</b> A basic surge protector absorbs power spikes and does nothing else. It does not check wiring faults, voltage or ground. An EMS monitors voltage continuously, protects against surges and spikes, and detects open ground, open neutral and reverse polarity. When it finds a problem it disconnects the coach before damage happens. The thresholds most units publish are a cut-out below 102 volts or above 132 volts, with power restored automatically once the voltage settles."
+       "html": "<b>Surge protector or EMS: these are not the same device.</b> A basic surge protector absorbs power spikes and does nothing else. It does not check wiring faults, voltage or ground. An EMS monitors voltage continuously, protects against surges and spikes, and detects open ground, open neutral and reverse polarity. When it finds a problem it disconnects the RV before damage happens. The thresholds most units publish are a cut-out below 102 volts or above 132 volts, with power restored automatically once the voltage settles."
       },
       {
        "kind": "callout",
-       "html": "<b>The fault most likely to cost you money is not lightning.</b> Sustained low voltage is. It makes motors draw more current, and it destroys air conditioner compressors, so a device that disconnects on low voltage is worth more than a plain surge protector. One device, sized to the coach, is enough: a 50-amp coach takes a 50-amp protector and a 30-amp coach takes a 30-amp one, with dogbone adapters to cover whatever the pedestal offers."
+       "html": "<b>The fault most likely to cost you money is not lightning.</b> Sustained low voltage is. It makes motors draw more current, and it destroys air conditioner compressors, so a device that disconnects on low voltage is worth more than a plain surge protector. One device, sized to the RV, is enough: a 50-amp RV takes a 50-amp protector and a 30-amp RV takes a 30-amp one, with dogbone adapters to cover whatever the pedestal offers."
       },
       {
        "kind": "p",
-       "html": "<b>The hazards behind the device.</b> On a 50-amp supply a broken neutral is the worst case, because the two 120-volt legs stop sharing the load evenly. One leg can see 80 volts while the other sees 160, and anything connected to the high leg can be destroyed almost instantly. Reverse polarity is more forgiving than it is usually described: modern appliances have isolation transformers and double insulation, and a coach's neutral and ground should be separated at the panel. It is still worth reporting, because a pedestal wired backwards was never tested after it was installed, and there is no telling what else is wrong with it."
+       "html": "<b>The hazards behind the device.</b> On a 50-amp supply a broken neutral is the worst case, because the two 120-volt legs stop sharing the load evenly. One leg can see 80 volts while the other sees 160, and anything connected to the high leg can be destroyed almost instantly. Reverse polarity is a wiring fault and a fail, and it is worth reporting rather than living with, because a pedestal wired backwards was never tested after it was installed, and there is no telling what else is wrong with it."
       },
       {
        "kind": "callout",
@@ -344,7 +358,7 @@
       },
       {
        "kind": "callout",
-       "html": "<b>Where the numbers get soft: the 80 percent rule.</b> The usual guidance is to keep a continuous draw under 80 percent of the breaker, which on a 30-amp circuit means about 24 amps. That figure comes from experienced owners rather than from a manufacturer or the electrical code, so treat it as good practice rather than a published limit."
+       "html": "<b>Where the numbers get soft: the 80 percent rule.</b> The usual guidance is to keep a continuous draw under 80 percent of the breaker, which on a 30-amp circuit means about 24 amps. That is the electrical code's own continuous-load rule, which limits a continuous draw to 80 percent of the breaker, applied here to a 30-amp service."
       }
      ]
     },
@@ -355,7 +369,7 @@
      "blocks": [
       {
        "kind": "p",
-       "html": "Water enters an RV in two different ways, and they do different jobs. A freshwater connection adds potable, safe to drink, water to fill the RV's freshwater tank. Most freshwater connections are gravity fill, meaning there is an opening in the side of the RV for filling the tank with fresh water. The other way is the city-water connection, which pressurizes the coach's plumbing directly from a tap. In many and even most RVs, the fresh-water and city-water connections are separate, so there are two connections. Some coaches use a single inlet and a diverter valve, so a new owner has to find out which arrangement the coach has before the first hookup."
+       "html": "Water enters an RV in two different ways, and they do different jobs. A freshwater connection adds potable, safe to drink, water to fill the RV's freshwater tank. Most freshwater connections are gravity fill, meaning there is an opening in the side of the RV for filling the tank with fresh water. The other way is the city-water connection, which pressurizes the RV's plumbing directly from a tap. In many and even most RVs, the fresh-water and city-water connections are separate, so there are two connections. Some RVs use a single inlet and a diverter valve, so a new owner has to find out which arrangement the RV has before the first hookup."
       },
       {
        "kind": "list",
@@ -373,13 +387,13 @@
        "items": [
         "Fit the regulator at the spigot.",
         "Then the drinking-water hose.",
-        "Then the inline filter, if the coach does not already have one. Many owners wisely add an inline water filter if their RV is not already equipped with a built-in whole-house filter.",
-        "Then the city-water inlet on the coach."
+        "Then the inline filter, if the RV does not already have one. Many owners wisely add an inline water filter if their RV is not already equipped with a built-in whole-house filter.",
+        "Then the city-water inlet on the RV."
        ]
       },
       {
        "kind": "callout",
-       "html": "<b>Do not run the pump on city water.</b> The two systems are meant to be used one at a time. If a coach is hooked to city water with the pump accidentally left on, and a check valve has failed while park pressure is low, the pump can push its entire fresh tank back into the park's supply. The pump's job and the city connection's job overlap, and running both is how a tank empties itself overnight. Connect to city water and make sure the water pump is turned off. The corollary matters off-grid too: running the pump dry will burn it out.",
+       "html": "<b>Do not run the pump on city water.</b> The two systems are meant to be used one at a time, and most maker manuals say the same thing: connected to city water, the pump stays off. It is not needed, because the park's pressure is already doing the work. One manual puts it as <b>\"Do not turn the pump on if you are connected to city water.\"</b> Another manual warns that switching the pump on with the pressure line still connected can damage it. If a check valve leaks, the city water backfills the fresh tank through the pump and can overflow it. Low park pressure is the common reason people want to run both. Do not: fill the fresh tank from the city connection first, then turn the city water off and run on the pump alone. The same warning applies off-grid: running the pump dry will burn it out.",
        "flag": "damage"
       }
      ]
@@ -404,7 +418,7 @@
       },
       {
        "kind": "p",
-       "html": "The reason to smell low is a property of the gas: propane vapor is heavier than air and may collect initially at floor levels, so a check of the coach means checking the low spots first. When the supply goes back on, open the main valve slowly, which lets the tank's excess-flow device settle rather than trip. While the coach is moving, turn the propane supply off at the tank."
+       "html": "The reason to smell low is a property of the gas: propane vapor is heavier than air and may collect initially at floor levels, so a check of the RV means checking the low spots first. When the supply goes back on, open the main valve slowly, which lets the tank's excess-flow device settle rather than trip. While the RV is moving, turn the propane supply off at the tank."
       },
       {
        "kind": "callout",
@@ -419,11 +433,11 @@
      "blocks": [
       {
        "kind": "p",
-       "html": "<b>The absorption fridge, and why level matters.</b> Most RV fridges of this kind cool by a gravity-fed process with no compressor, which is why the coach has to be level for one to work well. Because the absorption system uses no mechanical pumps or compressors to circulate the refrigerant, proper leveling is required to keep the refrigerant flowing in the gravity-feed system. Without proper leveling, refrigerant collects and stagnates in the cooling coils and the cooling process stops. The practical requirement is that the vehicle be leveled so it is comfortable to live in, with no noticeable sloping of the floor or walls, and any time the vehicle is parked for several hours with the refrigerator running it should be leveled to allow proper cooling. The fridge can run on two energy sources: an automatic energy selector control system chooses between 120 volts and propane. At altitude, use the electric source: always operate the refrigerator on electric power at altitudes higher than 5,500 feet. A compressor fridge is different: it does not care about level. Why the fridge cares about level, and how much it matters, is its own guide: <a href=\"guides/rv-fridge-leveling\">RV fridge leveling</a>."
+       "html": "<b>The absorption fridge, and why level matters.</b> Most RV fridges of this kind cool by a gravity-fed process with no compressor, which is why the RV has to be level for one to work well. Because the absorption system uses no mechanical pumps or compressors to circulate the refrigerant, proper leveling is required to keep the refrigerant flowing in the gravity-feed system. Without proper leveling, refrigerant collects and stagnates in the cooling coils and the cooling process stops. The practical requirement is that the vehicle be leveled so it is comfortable to live in, with no noticeable sloping of the floor or walls, and any time the vehicle is parked for several hours with the refrigerator running it should be leveled to allow proper cooling. The fridge can run on two energy sources: an automatic energy selector control system chooses between 120 volts and propane. At altitude, use the electric source: always operate the refrigerator on electric power at altitudes higher than 5,500 feet. A compressor fridge is different: it does not care about level. Why the fridge cares about level, and how much it matters, is its own guide: <a href=\"guides/rv-fridge-leveling\">RV fridge leveling</a>."
       },
       {
        "kind": "callout",
-       "html": "The fridge's tilt limit has no published number from the maker, only the requirement that the coach be level enough to live in with no noticeable sloping of the floor or walls. The widely repeated figures of three degrees side to side and six front to back appear only in secondary sources and are attributed inconsistently, so they are not a manufacturer specification. Treat 'no noticeable slope' as the requirement."
+       "html": "<b>The tilt limit is published, and it is a number.</b> Norcold's owner's manuals give it directly: the refrigerator is made to operate within <b>\"3° off level side-to-side and 6° off level front-to-back\"</b>, and operating it beyond those limits <b>\"can cause damage to the cooling system and create a risk of personal injury or property damage.\"</b> Other makers describe the same requirement without the numbers, as level enough to live in with no noticeable slope of the floor or walls. The limit applies while the RV is parked, not while it is being driven."
       },
       {
        "kind": "p",
@@ -436,7 +450,7 @@
       },
       {
        "kind": "p",
-       "html": "<b>The furnace.</b> A furnace is a good example of an appliance that uses two systems at once: the heater runs on propane, but the fan that blows hot air through the RV runs on the coach batteries, so the furnace uses both the propane and battery systems. To start it, open the LP gas tank valve by turning it fully counter-clockwise, then set the thermostat. The furnace fan should start to blow immediately after the thermostat is set, and the burner lights about 30 seconds later. A furnace with a low battery will often not light at all, because the blower has to spin before the burner will."
+       "html": "<b>The furnace.</b> A furnace is a good example of an appliance that uses two systems at once: the heater runs on propane, but the fan that blows hot air through the RV runs on the RV batteries, so the furnace uses both the propane and battery systems. To start it, open the LP gas tank valve by turning it fully counter-clockwise, then set the thermostat. The furnace fan should start to blow immediately after the thermostat is set, and the burner lights about 30 seconds later. A furnace with a low battery will often not light at all, because the blower has to spin before the burner will."
       },
       {
        "kind": "p",
@@ -453,7 +467,7 @@
         [
          "Absorption fridge",
          "Propane or 120 V, plus 12 V for its control board",
-         "A level coach for the absorption type"
+         "A level RV for the absorption type"
         ],
         [
          "Water heater",
@@ -494,7 +508,7 @@
       },
       {
        "kind": "p",
-       "html": "<b>Which slide system you have decides what breaks and what you must not do.</b> They are not interchangeable, and the advice for one is wrong for another. The panel inside a compartment, or the maker's manual for the coach, will name yours."
+       "html": "<b>Which slide system you have decides what breaks and what you must not do.</b> They are not interchangeable, and the advice for one is wrong for another. The panel inside a compartment, or the maker's manual for the RV, will name yours."
       },
       {
        "kind": "table",
@@ -526,18 +540,18 @@
         ],
         [
          "Hydraulic",
-         "One pump drives rams on every room in the coach.",
+         "One pump drives rams on every room in the RV.",
          "Fluid leaks and a pump that needs 12 volts. Otherwise the strongest and quickest of the four, and the only one that brings rooms in reliably when the battery is tired."
         ]
        ]
       },
       {
        "kind": "callout",
-       "html": "Where sources conflict: level first or slide first. Winnebago's manual for a motorhome says to level the coach and then extend the slide. Lippert's hydraulic fifth-wheel guidance says the unit must be leveled before the slideouts move: <b>\"Unit must be leveled prior to extending the slideouts to ensure coach will not move during operation of Slideout System and to provide the unit with a firm foundation.\"</b> Other makers have reportedly reversed their own published order between model years. There is no universal rule, so the only defensible instruction is to follow the manual for your own make and model."
+       "html": "Where sources conflict: level first or slide first. Winnebago's manual for a motorhome says to level the RV and then extend the slide. Lippert's hydraulic slide-out manual says the leveling or stabilizing system should be actuated first, <b>\"to ensure unit will not move during operation of slide-out system.\"</b> Other makers have reportedly reversed their own published order between model years. There is no universal rule, so the only defensible instruction is to follow the manual for your own make and model."
       },
       {
        "kind": "p",
-       "html": "Two smaller habits are worth knowing. A Schwintek-style slide wants the switch held after the room stops: hold the switch for 5 seconds once the room is fully open or closed so the control board can complete its calculations, or the room will go out of synchronization over time. And the outside corner of a slide sits at head height on many coaches, which is why owners fit a slit foam noodle over it: the corners can be sharp and pointy, and a lack of attention could put someone into one. Remove the noodle before you close the slides."
+       "html": "Two smaller habits are worth knowing. A Schwintek-style slide wants the switch held after the room stops: hold the switch for 5 seconds once the room is fully open or closed so the control board can complete its calculations, or the room will go out of synchronization over time. And the outside corner of a slide sits at head height on many RVs, which is why owners fit a slit foam noodle over it: the corners can be sharp and pointy, and a lack of attention could put someone into one. Remove the noodle before you close the slides."
       }
      ]
     },
@@ -548,7 +562,7 @@
      "blocks": [
       {
        "kind": "p",
-       "html": "<b>Jacks lift. Stabilisers stop the rocking.</b> A levelling jack, or the tongue jack on a trailer, carries the weight of the coach and changes its height. A stabiliser, which a lot of people call a stabiliser jack, does neither: it comes down to touch the ground and stops the coach moving when you walk around inside it. That is the whole difference, and it is worth holding on to, because both get called jacks and the mistake is expensive. <b>Level with a jack. Steady with a stabiliser. Never level with a stabiliser</b>, because you would be hanging the coach's weight on legs that were never built to take it."
+       "html": "<b>Jacks lift. Stabilisers stop the rocking.</b> A levelling jack, or the tongue jack on a trailer, carries the weight of the RV and changes its height. A stabiliser, which a lot of people call a stabiliser jack, does neither: it comes down to touch the ground and stops the RV moving when you walk around inside it. That is the whole difference, and it is worth holding on to, because both get called jacks and the mistake is expensive. <b>Level with a jack. Steady with a stabiliser. Never level with a stabiliser</b>, because you would be hanging the RV's weight on legs that were never built to take it."
       },
       {
        "kind": "list",
@@ -561,11 +575,11 @@
       },
       {
        "kind": "p",
-       "html": "A stabiliser that lifts the coach is doing a job it was not made for. If the stabilizer manual says contact only, stop when the foot is planted and the slack is removed. Chocks are separate again and are used whatever the ground is like: install the wheel chocks first and the wheel stabilizers second. And a leveler is never a parking brake, because levelers are not designed for any type of vehicle braking."
+       "html": "A stabiliser that lifts the RV is doing a job it was not made for. If the stabilizer manual says contact only, stop when the foot is planted and the slack is removed. Chocks are separate again and are used whatever the ground is like: install the wheel chocks first and the wheel stabilizers second. And a leveler is never a parking brake, because levelers are not designed for any type of vehicle braking."
       },
       {
        "kind": "callout",
-       "html": "The reasons to level: the absorption fridge is the best-supported one, and comfort is the other. The claims that a tilted coach drains its tanks badly or twists its frame are widely repeated but are not established."
+       "html": "The reasons to level: the absorption fridge is the best-supported one, and comfort is the other. The claims that a tilted RV drains its tanks badly or twists its frame are widely repeated but are not established."
       }
      ]
     },
@@ -585,7 +599,7 @@
       {
        "kind": "list",
        "items": [
-        "A booster helps with distance to the tower, with obstacles, and with a metal-bodied coach. It does not help when there is no signal, when the tower is congested, or when you are being throttled.",
+        "A booster helps with distance to the tower, with obstacles, and with a metal-bodied RV. It does not help when there is no signal, when the tower is congested, or when you are being throttled.",
         "It boosts cellular frequencies only. It cannot help with getting a better Wi-Fi signal.",
         "The bands a legal consumer booster may use are limited: the bands legally approved for mobile consumer boosters include Bands 2, 4, 5, 12, 13, and 25, but many cellular carriers use and depend on several bands that are not on this list. Some boosters sold online boost bands that are not permitted, and using them can result in a knock on your door by the FCC.",
         "Placement does as much work as the device: exterior pickup, interior router location, and cable runs can make or break real-world Wi-Fi performance."

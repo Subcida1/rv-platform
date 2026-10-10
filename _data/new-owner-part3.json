@@ -259,7 +259,7 @@
       },
       {
        "kind": "p",
-       "html": "<b>Balancing and the spare.</b> Balance a tire when new tires are mounted, when a tire and wheel move to another position, after a flat repair, and any time a tire is dismounted. A matching full-size spare should be rotated into service as part of the regular rotation, and the spare is subject to the same 6 year rule."
+       "html": "<b>Balancing and the spare.</b> Balance a tire when new tires are mounted, when a tire and wheel move to another position, after a flat repair, and any time a tire is dismounted. A matching full-size spare should be rotated into service as part of the regular rotation, and the spare is subject to the same age limit as the rest."
       },
       {
        "kind": "p",
@@ -438,7 +438,7 @@
       },
       {
        "kind": "p",
-       "html": "Off-tracking is what makes a turn feel tighter than it looks. On a long coach the rear axle can cut several feet inside the path of the front wheels on a sharp campsite or driveway turn."
+       "html": "Off-tracking is what makes a turn feel tighter than it looks. On a long RV the rear axle can cut several feet inside the path of the front wheels on a sharp campsite or driveway turn."
       },
       {
        "kind": "p",
@@ -446,15 +446,15 @@
       },
       {
        "kind": "p",
-       "html": "<b>Tail swing</b> is the other half of the same geometry. The overhang behind the rear axle swings the opposite way at the start of a turn, so the rear corner can clip something beside you. As a rule of thumb, for every three feet behind your rear axle you have the potential for one foot of tail swing heading in the opposite direction. On some coaches it can be as much as 30 inches. You can measure yours by parking parallel to a straight line, making a full lock turn away from the line, and seeing how far the tail crosses it. A shortcut is to divide the overhang length by three."
+       "html": "<b>Tail swing</b> is the other half of the same geometry. The overhang behind the rear axle swings the opposite way at the start of a turn, so the rear corner can clip something beside you. As a rule of thumb, for every three feet behind your rear axle you have the potential for one foot of tail swing heading in the opposite direction. On some RVs it can be as much as 30 inches. You can measure yours by parking parallel to a straight line, making a full lock turn away from the line, and seeing how far the tail crosses it. A shortcut is to divide the overhang length by three."
       },
       {
        "kind": "p",
-       "html": "<b>Braking.</b> More weight takes longer to stop, and a motorhome carries a lot of it. One thing that surprises new owners: the coach's service brakes are sized for the coach, not for whatever it is towing. The brakes are rated to operate at the gross vehicle weight rating (GVWR), not for the combined weight of coach and towed vehicle, and that figure is not the amount of weight the brakes alone can stop. That is why a towed vehicle needs its own supplemental braking system, which is required above about 3,000 lb in most states."
+       "html": "<b>Braking.</b> More weight takes longer to stop, and a motorhome carries a lot of it. One thing that surprises new owners: the RV's service brakes are sized for the RV, not for whatever it is towing. The brakes are rated to operate at the gross vehicle weight rating (GVWR), not for the combined weight of RV and towed vehicle, and that figure is not the amount of weight the brakes alone can stop. That is why a towed vehicle needs its own supplemental braking system, which is required above about 3,000 lb in most states."
       },
       {
        "kind": "p",
-       "html": "Drive within a margin. Stopping distance grows with load, and a coach that is at its legal limit on a long downgrade has little reserve. Use the transmission and the exhaust brake or engine braking on long grades rather than riding the service brakes."
+       "html": "Drive within a margin. Stopping distance grows with load, and an RV that is at its legal limit on a long downgrade has little reserve. Use the transmission and the exhaust brake or engine braking on long grades rather than riding the service brakes."
       },
       {
        "kind": "list",
@@ -465,6 +465,10 @@
         "Use a spotter and mirrors when parking (see the backing section).",
         "Do not force a turn when the geometry is tight. Reposition and try again."
        ]
+      },
+      {
+       "kind": "p",
+       "html": "<b>Where to go next.</b> The checks to make before a wheel turns are in the <a href=\"guides/rv-pre-trip-walkaround.html\">pre-trip walkaround</a>, and tires are the other half of driving something this heavy: <a href=\"guides/rv-tire-replacement.html\">when to replace RV tires</a> covers age, load and pressure."
       }
      ]
     },
@@ -490,7 +494,7 @@
         "Connect the breakaway cable to the tow vehicle.",
         "Cross the safety chains under the coupler and attach them to the tow vehicle.",
         "Plug in the trailer connector and test the lights, turn signals, brakes and running lights.",
-        "Remove the chocks, then do the tug test: with everything connected, pull forward gently against the chocked wheels."
+        "Do the tug test with the chocks still in place: with everything connected, pull forward gently, and the trailer must not move."
        ]
       },
       {
@@ -536,6 +540,10 @@
       {
        "kind": "p",
        "html": "The trailer brake controller is the tool for this. Most conventional and fifth-wheel trailers have electric brakes, activated by a controller in the tow vehicle. The controller automatically coordinates the tow vehicle and trailer braking so the two systems work together when the brake pedal is applied, and it can help stabilize a trailer that sways because of bad road conditions. Manually applying the trailer brakes with the hand lever on the controller will stabilize a trailer that is likely to sway. Two related rules: the sway control bar, if fitted, must be disengaged before backing up, because leaving it engaged while reversing forces the system to fight the turn, which can lead to binding, premature wear, or outright damage. And the hitch ratings must exceed the trailer: the ball, the spring bars and the sway control all have to be rated above the fully loaded trailer weight. For your own combination, the <a href=\"tools/weight-calculator\">weight calculator</a> works payload and pin weight out of the figures on your stickers."
+      },
+      {
+       "kind": "p",
+       "html": "<b>Where to go next.</b> Three numbers decide whether a tow is legal and safe before any of the rest matters: <a href=\"guides/rv-towing-capacity.html\">towing capacity and payload</a>, <a href=\"guides/rv-pin-weight-and-payload.html\">pin weight for a fifth wheel</a>, and <a href=\"guides/trailer-brakes-required.html\">when trailer brakes are required</a>. The mechanics of the hitch and of reversing are in the <a href=\"guides/rv-towing-trailer.html\">towing guide</a>, and the most common roadside failure of all is covered in <a href=\"guides/rv-trailer-wheel-bearings.html\">repacking trailer bearings</a>."
       }
      ]
     },
@@ -559,6 +567,10 @@
       {
        "kind": "p",
        "html": "<b>Cab strike when turning.</b> A fifth wheel can swing into the back of the truck cab on a sharp turn, which is why clearance is checked before driving. The distance between the cab and trailer should be greater than two inches at all points of the turn. If you make a turn greater than 90 degrees, the trailer will contact your truck and damage various parts of the hitch. The fix on short-bed trucks is a sliding hitch, which lets the pivot move back during a turn. A common mistake to avoid is called high hooking: backing your hitch into a trailer that is set too high, so the lower flange of the king pin wedges against the metal edge of the lower horseshoe piece or against the Lock Jaw Assembly. Set the trailer low enough that the pin enters the jaws cleanly."
+      },
+      {
+       "kind": "p",
+       "html": "<b>Where to go next.</b> What limits a fifth wheel is the pin weight rather than the trailer's total, and it is the number most often got wrong: <a href=\"guides/rv-pin-weight-and-payload.html\">pin weight and payload</a>. Total capacity is in <a href=\"guides/rv-towing-capacity.html\">towing capacity</a>, and hitching and reversing follow the same rules as any trailer in the <a href=\"guides/rv-towing-trailer.html\">towing guide</a>."
       }
      ]
     },
@@ -582,6 +594,10 @@
       {
        "kind": "p",
        "html": "Two geometry points help. A trailer pivots opposite to the tow vehicle's steering: turn the truck left and the trailer's rear goes right. Make small corrections and let the trailer catch up rather than chasing it with big steering inputs. If you have a helper, walk the site first and identify the inside rear swing point before you position the RV."
+      },
+      {
+       "kind": "p",
+       "html": "<b>Where to go next.</b> The <a href=\"guides/rv-towing-trailer.html\">towing guide</a> treats hitching, sway and reversing as one job, and the <a href=\"guides/rv-pre-trip-walkaround.html\">pre-trip walkaround</a> is the checklist for the moment before you pull out."
       }
      ]
     },
@@ -616,7 +632,11 @@
       },
       {
        "kind": "callout",
-       "html": "<b>Tank capacity is the honest gap.</b> Pop-ups are built lightly enough that some are exempt from trailer brake rules by weight, and small towables typically carry a cassette toilet or a porta-potty instead of a true black tank. No manufacturer owner's manual for a soft-sided tent trailer states its fresh, gray and black tank sizes, so check that model's own manual. The practical effect is that pop-ups lean on campground bathhouses, dump stations and water spigots."
+       "html": "<b>Tank capacity is the honest gap.</b> Pop-ups are built lightly enough that some are exempt from trailer brake rules by weight, and small towables typically carry a cassette toilet or a porta-potty instead of a true black tank. No manufacturer owner's manual for a soft-sided tent trailer states its fresh, grey and black tank sizes, so check that model's own manual. The practical effect is that pop-ups lean on campground bathhouses, dump stations and water spigots."
+      },
+      {
+       "kind": "p",
+       "html": "<b>Where to go next.</b> A pop-up is towed and stored like any other trailer, so the <a href=\"guides/rv-towing-trailer.html\">towing guide</a> and <a href=\"guides/trailer-brakes-required.html\">when trailer brakes are required</a> both apply. Its short season makes <a href=\"guides/winterize-plumbing.html\">winterising</a> and <a href=\"guides/battery-winter-storage.html\">battery storage</a> the two jobs that decide whether it survives the off-season."
       }
      ]
     }

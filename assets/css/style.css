@@ -393,6 +393,13 @@ input,select,textarea{font-family:inherit}
 .no-body .tag,.no-sec .tag{display:inline-block;margin-left:8px;padding:3px 9px;border-radius:999px;
   background:var(--tint-bg);box-shadow:0 0 0 1px var(--tint-edge);font-size:11.5px;font-weight:700;
   text-transform:uppercase;letter-spacing:.04em;color:var(--text-2);white-space:nowrap}
+/* THE SYSTEM CHIP SITS ABOVE ITS SYMPTOM, CENTRED. Ty, 2026-10-09: the chips look nice but "they
+   look like they're out of place sitting to the right of the text ... it's probably like above and
+   centered like a little bit of spacing." The tag is the cell's first child in the markup, so it
+   becomes a centred block over the symptom with a little air beneath it, and the symptom text stays
+   left-aligned where a sentence belongs. */
+.no-body .man-table td .tag,.no-sec .man-table td .tag{display:block;width:fit-content;
+  margin:0 auto 9px}
 .no-body h2.man-h2{margin-top:52px;padding-top:30px;border-top:1px solid var(--border)}
 .no-body h2.man-h2:first-child{margin-top:0;padding-top:0;border-top:0}
 
@@ -409,12 +416,12 @@ input,select,textarea{font-family:inherit}
 .no-body b,.no-sec b{font-weight:600;background:var(--tint-bg);box-shadow:0 0 0 1px var(--tint-edge);
   border-radius:3px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
 
-/* THE TWELVE, AS CARDS. They are the most important thing on the page and they were the least
+/* THE THIRTEEN, AS CARDS. They are the most important thing on the page and they were the least
    separated. The number is a counter rather than part of the heading text, so the heading can be
    scanned by its words. */
 .no-mistakes{counter-reset:mistake;display:grid;gap:14px;margin:22px 0 8px}
-/* Two columns once there is room for two. Twelve cards stacked in one column at 1152px would be
-   twelve very wide boxes with very wide lines; two columns use the width and keep each card's text
+/* Two columns once there is room for two. Thirteen cards stacked in one column at 1152px would be
+   thirteen very wide boxes with very wide lines; two columns use the width and keep each card's text
    near 75 characters. minmax(0,1fr) rather than 1fr, because a 1fr track is floored at min-content
    and one wide nowrap child drags the whole track wider than its container.
    CARD ORDER: auto-flow is row-major, so the numbers pair across rather than down. Measured on the
@@ -422,6 +429,13 @@ input,select,textarea{font-family:inherit}
    every number matches the heading it sits beside. */
 @media(min-width:1080px){
   .no-mistakes{grid-template-columns:repeat(2,minmax(0,1fr))}
+  /* AN ODD LAST CARD IS STRANDED IN THE LEFT COLUMN. Ty, 2026-10-09: the thirteenth card sat alone
+     in the left track and "it's just center off to the left ... it will be nicer to be visually
+     balancing stuff still." A two-column grid with thirteen items leaves the last row half empty.
+     The last card spans both tracks and is centred at one column's width, so the odd card reads as
+     the bottom of the list rather than as a mistake in the layout. Kept to one column's width
+     (half the grid minus half the gap) so its lines stay near 75 characters, not 150. */
+  .no-mistake:last-child:nth-child(odd){grid-column:1/-1;width:calc(50% - 7px);margin-inline:auto}
 }
 .no-mistake{counter-increment:mistake;position:relative;background:var(--surface);
   border:1px solid var(--border);border-left:4px solid var(--b2);border-radius:var(--radius);
