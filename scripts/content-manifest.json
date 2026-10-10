@@ -595,11 +595,14 @@
     "claims": "b42c5240ff3f3533"
   },
   "guides/rv-maintenance-schedule.html": {
-    "hash": "b0f3cfbc90250ab8",
-    "status": "unverified",
-    "verified_by": null,
-    "verified_at": null,
-    "sources": []
+    "hash": "d49051a3244abd57",
+    "status": "verified",
+    "verified_by": "Independent fresh-context review 2026-10-10; every cited source fetched except PHMSA 'Is Your Cylinder Safe to Fill' (HTTP 403, UNVERIFIED). 6 findings applied (1 injury, 1 wrong-fact, 1 sourcing, 2 voice, 1 style). Applied: the air pocket / relief valve procedure was attributed to the cited Suburban 206244 Rev A guide, which contains no relief valve, no air pocket and no 'never remove or plug' warning (grep: relief=0, pocket=0); the procedure is real and lives in Suburban's all-models installation, operation and maintenance manual, fetched and confirmed ('air pocket' x5, 'Do not remove or plug the relief valve.', 'it should snap closed'), which now replaces the mis-paired URL in Sources. 'Keystone applies the same cadence to the roof seams' cut: Keystone's own cited schedule inspects and reseals roof seams every six months, not the three months the sentence claimed. A flag-injury callout added at the head of 'When the coach sits', which carried the battery removal/disconnect and the 120 volt shore-power disconnect with no flag of any class. Two sentences about the page removed ('Where two makers publish different intervals, both are given rather than one being picked.' and 'This page gathers intervals that makers actually publish, so a new owner has something to work from on day one.'). 'moulding' Americanised to 'molding'. OWED AND UNVERIFIED: the PHMSA cylinder-fill PDF (HTTP 403); the shared-footer 'licences' is sitewide chrome, a template fix, not a page edit.",
+    "verified_at": "2026-10-10",
+    "sources": [],
+    "spec": null,
+    "spec_waived": true,
+    "claims": []
   },
   "guides/rv-outlets-not-working.html": {
     "hash": "2f5bda1fc623e10e",
