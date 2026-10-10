@@ -55,7 +55,7 @@
 
  <h2>Before you run it</h2>
  <div class="card">
- <p>A generator burns fuel a few feet from where you sleep, so these come first, before any diagnosis. The first five are Cummins Onan's own safety precautions, from its RV generator handbook. The last one is ours.</p>
+ <p>A generator burns fuel a few feet from where you sleep, so these come first, before any diagnosis. The first five are Cummins Onan's own, from its RV generator handbook.</p>
 <ul class="ticks">
  <li><b>Do not run or occupy the RV without a <a href="guides/rv-furnace-carbon-monoxide">working carbon monoxide detector</a></b>, and check the expiry date on it. Cummins puts it plainly: exhaust gas is deadly, and the generator must not be run with a faulty exhaust system.</li>
  <li><b>Check the exhaust for leaks and damage, and check it often.</b> The tail pipe has to extend past the edge of the vehicle, and if the RV bottoms out on a driveway or road debris, the exhaust system is what to inspect.</li>
@@ -119,34 +119,35 @@
  <h3>Everything works but the generator labors or bogs</h3>
  <p>The load is too big for it. A battery charger can pull up to 3,000 watts and arrives uninvited, so adding it to air conditioning can tip a small generator over.</p>
  <h3>Charger barely runs, or refuses</h3>
- <p>If you have a newer inverter charger, check its AC input current limit. Victron publishes settings for exactly this and describes the symptom as the charger hardly charging or not charging at all.</p>
+ <p>If you have a newer inverter charger, check its AC input current limit. Victron publishes settings for exactly this: a generator that runs smoothly while the system still will not charge, with its Weak AC setting as the adjustment.</p>
  <h3>Portable generator, plugged in with a 12-volt cable</h3>
- <p>Stop, and read Do not use the generator's 12-volt outlet.</p>
+ <p>Stop, and read the section below on the generator's 12-volt outlet.</p>
  </div>
 
  <h2>The generator is not the charger</h2>
  <div class="card">
  <p>Cummins Onan states it directly. Asked whether a generator can charge an RV house battery, the answer in the handbook is that it cannot, not directly, but that a generator provides power to operate your converter or charger, which charges the batteries.</p>
  <p>That single sentence explains a lot. It means the generator's job ends at producing 120 volts AC. It means the thing doing the charging is the same device that charges your batteries on shore power. And it means a generator that runs perfectly can be entirely innocent while your batteries sit flat.</p>
- <p><b>And Cummins Onan's own order of checks</b> is worth following exactly. Asked what to do when there is no AC at any outlet with the generator running, the handbook's answer begins with the circuit breakers at the generator being off or tripped, and says to check those first. Then it adds that if the breaker is on, there is AC at the generator, and there is still nothing at the outlets, the problem could be a faulty transfer relay, and notes specifically that this device is located in the coach and is not part of the generator.</p>
+ <p><b>And Cummins Onan's own order of checks</b> is worth following exactly. Asked what to do when there is no AC at any outlet with the generator running, the handbook's answer begins with the circuit breakers at the generator being off or tripped, and says to check those first. Then it adds that if the breaker is on, there is AC at the generator, and there is still nothing at the outlets, the fault is upstream of the generator: a transfer relay that has not closed, which sits in the coach rather than in the generator.</p>
  </div>
 
 <p>Cummins states the relationship in its own handbook, in one exchange: asked whether a generator can charge an RV house battery, the answer is <b>"Not directly. But a generator does provide power to operate your converter / charger, which charges batteries."</b> The maker's own load diagram then labels the order the power takes: generator, shore power, transfer switch, circuit breaker panel, charger or converter, coach batteries.</p>
 <p>Two words get used interchangeably and should not be. A converter takes AC power, from shore power or a generator, converts it to DC, and uses it to charge the RV batteries. An inverter does the opposite, turning battery DC into household AC. So the box that charges your batteries on a generator is a converter or a charger, and it is downstream of the transfer switch, which is why a generator fault and a charger fault can look identical from the driver's seat.</p>
 <h2>What each hop should read</h2>
-<p>This is the table that turns the chain into something you can measure. Every figure below is the manufacturer's own, and they describe different boxes, so read down it rather than across: you are checking one hop at a time.</p>
+<div class="callout flag flag-injury"><span class="flag-h">Can injure you</span><b>These readings are taken on live equipment.</b> A generator or shore feed puts 120 volts inside the transfer switch and the converter, and the battery cables carry a stored charge. Unplug from shore power and stop the generator before a cover comes off, take the live reading with the probes on the two meter points and touching nothing else, and disconnect the negative battery cable before any work on the DC side. If a live reading is not a job you are sure of, stop and hand the meter to a technician.</div>
+<p>Read one hop at a time rather than across. Each figure comes from the maker of that box, and they describe different boxes.</p>
 <table>
 <tbody>
 <tr><th>Where you measure</th><th>What it should read</th><th>Source</th></tr>
-<tr><td>Generator AC output</td><td>120 volts AC, 60 Hz nominal. Cummins quotes voltage regulation of 1.1 percent and frequency under 5 percent from no load to full load on the QG 5500, and on the QG7000i inverter set, 121 volts no-load within half a volt and 60 Hz within a quarter of a hertz</td><td>Cummins Onan specification and service manuals</td></tr>
+<tr><td>Generator AC output</td><td>120 volts AC, 60 Hz nominal. Cummins quotes voltage regulation of 1.1 percent and frequency under 5 percent from no load to full load on the QG 5500,</td><td>Cummins Onan specification and service manuals</td></tr>
 <tr><td>Transfer switch, shore side and generator side</td><td>Both should sit between <b>105 and 130 volts AC</b> and within a few volts of each other. If the two sides do not match, the contactor is the suspect rather than the generator</td><td>Progressive Dynamics PD52 transfer switch troubleshooting</td></tr>
-<tr><td>Converter or charger, DC output, lead-acid</td><td>Bulk 14.4 volts, absorption 13.6 volts, float 13.2 volts. As a field check on the converter alone, anything above <b>13 volts</b> means it is working</td><td>WFCO and Progressive Dynamics converter manuals</td></tr>
+<tr><td>Converter or charger, DC output, lead-acid</td><td>Bulk 14.4 volts, absorption 13.6 volts, float 13.2 volts.</td><td>WFCO and Progressive Dynamics converter manuals</td></tr>
 <tr><td>Converter or charger, DC output, lithium</td><td>Bulk 14.6 volts, absorption 13.6 volts</td><td>WFCO lithium-series converter manual</td></tr>
 <tr><td>Battery at rest, fully charged</td><td>About <b>12.73 volts</b> for a flooded lead-acid battery, 12.84 for AGM and gel. Half charged is nearer 12.1 to 12.4. A reading of 12.0 volts is not "a bit low", it is half empty</td><td>Trojan Battery user's guide</td></tr>
 </tbody>
 </table>
 <p>The order matters when you are hunting the fault. If the generator reads 120 volts and the transfer switch reads 120 volts on both sides, the generator and the switch are both doing their jobs and the fault is at the converter, the battery or the wiring between them. If the generator reads 120 and the switch reads nothing on the generator side, the switch never transferred. That single pair of readings splits the whole chain in half.</p>
-<p><b>One figure is deliberately missing.</b> A pass or fail window for generator AC output, commonly given online as 117 to 126 volts, is published by aftermarket control-board vendors rather than by Cummins, so it is not repeated here as the maker's own figure. Cummins publishes the nominal voltage and the regulation percentage, and those are what this page quotes.</p>
+<p>Cummins publishes the nominal voltage and the regulation percentage for generator AC output. It publishes no 117-to-126-volt pass window; that one comes from aftermarket control-board vendors.</p>
 
 <h3>Frequency, which most owners never check</h3>
 <p>A generator can hold its voltage and still be running at the wrong speed, and the charger does not care about voltage alone. Cummins gives both cases their own fault codes: <b>code 14</b> is an overfrequency fault and <b>code 15</b> an underfrequency fault, and the operator manual describes both the same way, that the engine governor is unable to maintain rated frequency. If your generator is running but the charger is behaving oddly and nothing else explains it, the frequency is worth checking with a meter that reads it.</p>
@@ -162,7 +163,7 @@
  <h3>Four, the battery disconnect or the inline fuse near the battery</h3>
  <p>Exactly the same break points as a shore power fault, because it is the same wire. If the disconnect is open, no charger can help.</p>
  <h3>Five, an inverter charger's AC input limit set wrong for the generator</h3>
- <p>Victron publishes a starting point of 80 percent of the generator's capacity in watts. They also publish a setting called WeakAC, described as being for when the charger is hardly charging or not charging at all, and its effect in their words is that the total charge current possible becomes less than the rated maximum charge current output of the charger. This is a settings problem that looks exactly like a hardware failure.</p>
+ <p>Victron publishes a starting point of 80 percent of the generator's capacity in watts. They also publish a setting called Weak AC, for a system that still will not charge while the generator runs smoothly, and its effect is to cut the charge current the inverter draws from the generator. This is a settings problem that looks exactly like a hardware failure.</p>
  <h3>Six, an undersized generator</h3>
  <p>Covered in the sizing section, where air conditioning is what tips it.</p>
  </div>
@@ -172,7 +173,7 @@
  <p>Cummins Onan calls battery chargers invisible loads, because the charger switches on when it wants to and it is not small.</p>
  <h3>What the loads draw</h3>
  <p>Cummins Onan lists a battery charger as drawing up to 3,000 watts, and notes that chargers come on automatically and can draw a large load. A converter is smaller at 500 to 1,000 watts, about 4 to 8 amps <i>at 120 volts</i>, which is the AC input side rather than the DC output it feeds the batteries with. The two differ by roughly a factor of ten, so which one a figure refers to matters. An air conditioner running draws 1,400 to 2,400 watts, and its start-up surge is three to four times that. For scale, a 30 amp shore connection delivers about 3,600 watts and a 50 amp connection about 12,000.</p>
- <p><b>Cummins Onan's recommended generator sizes by RV type,</b> which is a useful sanity check on your own setup: a Class B with one air conditioner, 2,000 to 3,600 watts. A Class C with one, 2,800 to 4,000. A Class A with two 15,000 BTU units, 5,500 to 8,000. A Class A with three, 10,000 to 12,500. A fifth wheel with two, 5,500 to 7,000.</p>
+ <p><b>Cummins Onan's recommended generator sizes by RV type,</b> from Cummins' generator-sizing page, which is a useful sanity check on your own setup: a Class B with one air conditioner, 2,000 to 3,600 watts. A Class C with one, 2,800 to 4,000. A Class A with two 15,000 BTU units, 5,500 to 8,000. A Class A with three, 10,000 to 12,500. A fifth wheel with two, 5,500 to 7,000.</p>
  <h3>Adding the loads up</h3>
  <p>Add the running watts of everything you want on, add the start-up surge of the largest appliance, add the charger's draw, and compare against the generator and the RV's own breaker. If the total is over, either manage the loads or slow the charging down. Many inverter chargers let you reduce charge current precisely so the generator can cope, which is a settings change rather than a repair.</p>
  </div>
@@ -184,7 +185,6 @@
 
 <h2>Do not use the generator's 12-volt outlet</h2>
  <div class="card">
- <p></p>
  <h3>That outlet is not a charger</h3>
  <p>The 12-volt DC outlet is not voltage or current regulated, so it will not properly charge RV batteries directly without an external charge controller. Honda rates the outlet on an EU2000i at a maximum charging output of 8 amps, about 96 watts, and its manual warns that the output does not fall as the battery fills, so the voltage has to be watched. The same generator's 120 volt outlet is rated at 1,600 watts, with 2,000 watts available briefly, and feeding your existing 40 or 80 amp charger through the shore cord puts that behind the charger instead.</p>
  <h3>What to do instead</h3>
@@ -216,11 +216,12 @@
  <details class="faq"><summary>Why do my outlets work on the generator but the batteries still don't charge?</summary><p>This means the generator and the transfer switch are both working and the fault is further along. It narrows to the charger itself, the battery disconnect, the inline fuse near the battery, or the battery. It is the same set of break points a shore power charging fault goes through.</p></details>
  <details class="faq"><summary>Can I charge my RV batteries from a portable generator's 12-volt outlet?</summary><p>You should not rely on it. That outlet is not voltage or current regulated, so it cannot properly charge a battery without an external charge controller, and its output is tiny. Honda rates the DC outlet on an EU2000i at 8 amps maximum, about 96 watts, against 1,600 watts from the same generator's 120 volt outlet. Use the 120 volt output into the shore inlet instead.</p></details>
  <details class="faq"><summary>How do I know if my generator is too small to run the air conditioner and charge the batteries at once?</summary><p>Add up the loads. A battery charger can draw up to 3000 watts and comes on automatically, while a 15,000 BTU air conditioner draws roughly 1,400 to 2,400 watts running, and starting it draws three to four times that. Those two alone can exceed a small generator, which is why Cummins Onan publishes recommended wattages by RV type, from around 2,000 watts for a Class B with one air conditioner up to 10,000 to 12,500 for a Class A with three.</p></details>
- <details class="faq"><summary>Why does an inverter charger sometimes refuse to charge from a generator?</summary><p>Because many units limit how much AC current they draw in order to protect the generator, and if that limit is set wrong the charger barely runs or does not run at all. Victron suggests starting at 80 percent of the generator's capacity in watts, and lower on a 3000 rpm generator than a 1500 rpm one. They also publish a WeakAC setting for exactly this symptom, described as being for when the charger is hardly charging or not charging at all.</p></details>
+ <details class="faq"><summary>Why does an inverter charger sometimes refuse to charge from a generator?</summary><p>Because many units limit how much AC current they draw in order to protect the generator, and if that limit is set wrong the charger barely runs or does not run at all. Victron suggests starting at 80 percent of the generator's capacity in watts. They also publish a WeakAC setting for exactly this symptom, described as being for when the charger is hardly charging or not charging at all.</p></details>
  <div class="card srcs">
  <h3>Sources</h3>
  <ul>
-  <li><a href="https://mart.cummins.com/imagelibrary/data/assetfiles/0056746.pdf" target="_blank" rel="noopener">Cummins Onan RV generator handbook (PDF)</a></li>
+  <li><a href="https://www.cummins.com/en-na/news/2021/04/12/what-size-generator-do-i-need-power-rv" target="_blank" rel="noopener">Cummins, what size generator do I need to power an RV</a>, for the recommended generator sizes by RV class.</li>
+<li><a href="https://mart.cummins.com/imagelibrary/data/assetfiles/0056746.pdf" target="_blank" rel="noopener">Cummins Onan RV generator handbook (PDF)</a></li>
   <li><a href="https://cdn.powerequipment.honda.com/pe/pdf/manuals/31Z07610.pdf" target="_blank" rel="noopener">Honda, EU2000i generator owner's manual (PDF, DC and AC output ratings)</a></li>
   <li><a href="https://www.victronenergy.com/live/multiplus_faq" target="_blank" rel="noopener">Victron Energy, MultiPlus generator FAQ</a></li>
    <li><a href="https://xantrex.com/wp-content/uploads/2023/03/Freedom_SW_2000_815-2000_OG.pdf" target="_blank" rel="noopener">Xantrex, Freedom SW 2000 owner's guide (PDF)</a></li>

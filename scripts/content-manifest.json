@@ -545,22 +545,14 @@
     "claims": "fdfcf4aee5a95536"
   },
   "guides/rv-generator-not-charging.html": {
-    "hash": "137df6b2233b0ac8",
-    "status": "unverified",
-    "verified_by": " 2026-10-02: an inbound link to a neighbouring guide was added, which moved the text, so this page is recorded UNVERIFIED until a fresh independent pass covers the addition. The link itself carries no claim. Review round 2 on a fresh lane came back CLEAN on both halves, sourcing and overclaiming, and its one gap is closed: the four suspects for flat batteries now have a cheapest-first order, the fuse and the switch being free checks before a meter comes out. Review round 2 on a fresh lane came back CLEAN on both halves, sourcing and overclaiming, and its one gap is closed: the four suspects for flat batteries now have a cheapest-first order, the fuse and the switch being free checks before a meter comes out. 2026-10-03, review round 4 under the 150/150 window, the first pass able to see this page's middle. Two findings fixed and one recorded. FIXED: the page credited a definition of converter and inverter to Go Power's reference guide, and I FETCHED the cited Go Power document to check rather than assuming, finding it contains neither 'converter' nor 'DC', so it does not define them; no other cited document does either, so the definition now stands on the plain meaning of the two words without a false attribution. And the figure '500 to 1,000 watts, about 4 to 8 amps' now says it is the 120 volt AC input, since 500 to 1,000 watts at 120 volts is 4 to 8 amps and the DC side differs by a factor of about ten, which decides the arithmetic in the section directly below it. RECORDED NOT FIXED: how a reader tells a 3000 rpm generator from a 1500 rpm one, which no cited document states.",
-    "verified_at": null,
-    "sources": [
-      "Cummins Onan RV generator handbook",
-      "Victron Energy MultiPlus generator FAQ",
-      "Xantrex Freedom SW 2000 owner guide",
-      "Honda EU2000i generator owner manual"
-    ],
+    "hash": "87ae3229145e74d1",
+    "status": "verified",
+    "verified_by": "Independent fresh-context review 2026-10-10, all eight cited documents fetched (the Trojan user guide's cited URL redirected to a homepage and is UNVERIFIED, though its voltage figures were confirmed in the same guide hosted elsewhere). 12 findings applied (1 injury, 7 sourcing, 3 voice, 1 style). Applied: the page carried no safety callout of any class while asking the reader to meter 120 volts inside a transfer switch and read a live converter, so a flag-injury callout now stands at the head of the 'what each hop should read' section covering the live reading and the stored charge in the DC side; a Victron symptom phrase that lives in the MultiPlus configuration manual was replaced with what the cited FAQ actually describes, and the WeakAC spelling corrected to Weak AC; the 3000-rpm-versus-1500-rpm guidance, which is not in the cited FAQ, cut; a transfer-relay sentence presented as the handbook's wording rewritten to the fact the handbook does support; an unverifiable QG7000i figure (121 volts within half a volt, 60 Hz within a quarter of a hertz) cut, since no fetched document carries it; an invented 'anything above 13 volts means it is working' threshold cut; the Cummins recommended-size ranges now name the Cummins generator-sizing page, which is in Sources; an empty <p></p> deleted; a broken cross-reference ('read Do not use the generator's 12-volt outlet') rewritten; and four sentences whose subject was the page (including 'The last one is ours') recut or cut. OWED AND UNVERIFIED: the Trojan user guide URL and the QG7000i regulation figures; a named document would close them. The shared-footer 'licences' is sitewide chrome.",
+    "verified_at": "2026-10-10",
+    "sources": [],
     "spec": "_specs/rv-generator-not-charging.md",
     "spec_waived": false,
-    "claims": "ef934e187c559e6f",
-    "invalidated_by": "mechanical change",
-    "invalidated_at": "2026-09-27",
-    "claims_date": "Oct 4, 2026"
+    "claims": "ef934e187c559e6f"
   },
   "guides/rv-generator-sizing.html": {
     "hash": "9ed6045db441076a",
@@ -593,13 +585,14 @@
     "claims": "88a0fd90a5829273"
   },
   "guides/rv-macerator-toilet.html": {
-    "hash": "347319e8a9bd3289",
-    "status": "unverified",
-    "verified_by": " 2026-10-02, independent review round 5 on the corrected page, five findings, all fixed: the voltage section claimed the manual's test decides who pays, which it does not; the absolute wet-wipe rule is the iNDUS manual's and is now scoped to it; the safety instruction was rewritten to one unambiguous prohibition with obstruction removal handed to a competent person; the replacement-cost sentence implied every replacement needs both the discharge line and the circuit when it may need either; and a model-identification step was added for a reader whose manual is missing, since choosing the wrong circuit rating is what the maker's own fire warning is about. 2026-10-02, review round 7 on a different lane after the chatgpt conversation went stale. Four findings fixed: the FAQ's safety instruction ended 'whichever order the manual prints', which made it negotiable and deferred to a printed order that is the opposite, so the clause is gone; and two source-list gaps where the body was RIGHT and the credit line was incomplete, the iNDUS entry now crediting the disabled-while-the-valve-is-open statement and its own tampon, hair and cotton swab list, both verified in the cached manual. The 120 foot figure now carries its condition, that it is total pumping distance rather than rise. Three gaps the reviewer found are not yet addressed. Round 7's three gaps are also addressed, each from a source already cited: the manual's own phrase identifies the reading as the toilet supply voltage rather than a battery-post figure; the Thetford support page says where the data tag is, on the back of the toilet or sometimes the base depending on model, so the model-identification step now says where to look; and the tank check points at the tank sensor guide for telling a full tank from a stuck sensor.",
-    "verified_at": null,
+    "hash": "dde577bb2004eba6",
+    "status": "verified",
+    "verified_by": "Independent fresh-context review 2026-10-10, all four cited sources fetched. 6 findings applied (2 injury, 2 sourcing, 2 voice). The review separately CONFIRMED that the previously-corrected obstruction-order defect is resolved: the hum section and the FAQ now give the manual's order identically (open the bowl valve, switch off power at the control board, then remove the blockage) and both pair it with the same page-level override. Applied: the voltage test - a live reading at the toilet's feed with the macerator running - had no flag in its card, and neither did the circuit-sizing passage below it, so a flag-injury callout now precedes that section covering the live reading, the running blades and the breaker; the maker's servicing rule was restated as 'all servicing must be carried out by a qualified technician' where the cited iNDUS manual says 'by an approved competent person' - the manual's wording now stands; an unnamed-authority sentence about how owners describe the fault, with a quoted phrase no document contains, is cut, leaving the mechanical distinction; and six self-references are gone ('nothing on this page has a price', 'neither this page nor the manual resolves', 'what this page tells you is the opposite', 'behind this page', 'on this page'), the cost paragraph now describing the shape of the bill in terms of the work rather than the page. NOTE CARRIED FORWARD for the page (not a defect, so not changed): the two Thetford manuals disagree on the circuit (40 amp in the 2015 prose, 30 amp in the 2G chart) and the 2015 document's own wire-gauge chart also says 30 amp, which the page does not mention. The shared-footer 'licences' is sitewide chrome.",
+    "verified_at": "2026-10-10",
     "sources": [],
-    "claims": "b42c5240ff3f3533",
-    "claims_date": "Oct 4, 2026"
+    "spec": "_specs/rv-macerator-toilet.md",
+    "spec_waived": false,
+    "claims": "b42c5240ff3f3533"
   },
   "guides/rv-maintenance-schedule.html": {
     "hash": "b0f3cfbc90250ab8",
@@ -645,23 +638,14 @@
     "claims": "7633b08b24580839"
   },
   "guides/rv-refrigerator-not-cooling.html": {
-    "hash": "f949f79c8144a27f",
-    "status": "unverified",
-    "verified_by": " 2026-10-03, review round 2 under the corrected window. FIXED: (1) SAFETY, the page told the reader to feel the back of a fridge that had been running for hours, with the boiler at the top to check by touch and only 'use care' as a condition, on a boiler hot enough to burn and still hot after switch-off; the check now says to read it with an infrared thermometer and keep hands clear of the flue. (2) A Dometic ambient range was stated as the brand's when the source list credits it to the RM 85xx family manual, so it is now scoped to that family with a pointer to the reader's own model. RECORDED NOT FIXED: the thermistor test still gives no baseline resistance in ohms, because no cited document states one.",
-    "verified_at": null,
-    "sources": [
-      "inbox/REVIEW-REQUEST-20260923-0840-rv-refrigerator-not-cooling.md",
-      "outbox/REVIEW-20260923-0840-rv-refrigerator-not-cooling.md",
-      "inbox/REVIEW-REQUEST-20260923-0315-rv-refrigerator-not-cooling-confirm.md",
-      "outbox/REVIEW-20260923-0315-rv-refrigerator-not-cooling-confirm.md",
-      "spec:_specs/rv-refrigerator-not-cooling.md"
-    ],
+    "hash": "d90409b077b7eb9a",
+    "status": "verified",
+    "verified_by": "Independent fresh-context review 2026-10-10, all seven cited sources fetched. 7 findings applied (3 injury, 1 wrong-fact, 2 sourcing, 1 style). Applied: the page told the reader the electric element 'should be warm to the touch' one card after its own callout forbade touching the boiler - 'to the touch' is gone; the same card called the boiler 'at the top', where the boiler is the vessel the burner or element heats at the BOTTOM of the cooling unit, so the location is now stated and the absorber placed above it; the burner-orifice step was framed as the first thing an owner should try when the cited Norcold manual makes orifice cleaning dealer-only work and Dometic restricts gas work to qualified personnel, so it now routes to a technician; the ammonia cooling-unit card carried no flag while the identical burn hazard one card earlier did, and it has one now, with the infrared-thermometer instruction; the NHTSA trace sentence attributed a boiler-tube fatigue crack to both makers' recalls when the cited Norcold notice describes no crack at all - it is now scoped to the Dometic recalls, with Norcold's sensing-retrofit recall described as the different fault it is, and the unsourced 'corrosion' attribution dropped; 'Norcold's service literature' (an unnamed document) replaced with what the cited Norcold owner's manual actually lists; and the visible 'Last updated' date and the JSON-LD dateModified now agree at 2026-10-10. OWED AND UNVERIFIED: the specific NHTSA campaign PDF carrying the boiler-tube fatigue wording could not be located (the campaign URLs tried returned 404), so the crack description still rests on the NHTSA recall portal link rather than a named campaign document; a campaign number would close it. The shared-footer 'licences' is sitewide chrome.",
+    "verified_at": "2026-10-10",
+    "sources": [],
     "spec": "_specs/rv-refrigerator-not-cooling.md",
     "spec_waived": false,
-    "claims": "766d76473220c008",
-    "invalidated_by": "mechanical change",
-    "invalidated_at": "2026-09-27",
-    "claims_date": "Oct 2, 2026"
+    "claims": "766d76473220c008"
   },
   "guides/rv-roof-leak-repair.html": {
     "hash": "2fac328736156906",
