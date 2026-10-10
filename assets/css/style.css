@@ -207,7 +207,16 @@
   --border-soft:#e2e8f0;
 }
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
+/* SMOOTH SCROLLING IS OPT-OUT FOR ANYONE WHO ASKED FOR LESS MOTION. It was unconditional, so
+   the browser animated every fragment jump -- including the footer's back-to-top -- for people
+   who have set "reduce motion" at the OS level. site.js already honours that setting for its own
+   handler (`reduce ? 'auto' : 'smooth'`); this is the CSS half of the same promise, and it is the
+   half that also covers navigation with scripting off, where no handler runs at all.
+   Found 2026-10-10 while proving the back-to-top fix: with motion reduced the jump is instant and
+   measurable, and that is how the fix was verified. */
+@media (prefers-reduced-motion: no-preference) {
+  html{scroll-behavior:smooth}
+}
 body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{color:inherit;text-decoration:none}
 

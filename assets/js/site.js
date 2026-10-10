@@ -162,7 +162,14 @@
     homepage CTA already uses, so the directory is named one way everywhere. */
  function navHTML() {
  var rt = CFG.routes;
- return '<div class="util" role="navigation" aria-label="Utility"><div class="wrap">' +
+ // THE TOP ANCHOR LIVES HERE, ONCE, FOR EVERY PAGE. Every page carries <base href="/">, so a
+ // fragment-only href resolves against the base and leaves the page rather than scrolling (see
+ // site_constants.qualify_fragments_in_html for the full account). That made the footer's
+ // back-to-top control, which was href="#", a link to the site root whenever JavaScript was off.
+ // It needs something real to point at, and the first thing injected into <body> is this nav, so
+ // the target belongs at its head. A span rather than an anchor because it is a target and not a
+ // link, and a bare <a> with no href is a lint complaint on 125 pages.
+ return '<span id="top"></span><div class="util" role="navigation" aria-label="Utility"><div class="wrap">' +
  '<div class="util-l"><span class="dot"></span><a href="' + R(rt.directory) + '">Find RV service</a><a href="' + R(rt.guides) + '">Winter guides</a><a href="' + R(rt.manuals) + '">Manuals</a></div>' +
  '<div class="util-r"><a href="' + R(rt.about) + '">About</a><a href="' + R(rt.contact) + '">Contact</a></div>' +
  '</div></div>' +
@@ -248,7 +255,7 @@
 
  function footerHTML() {
  var rt = CFG.routes;
- return '<a class="to-top" href="#" onclick="return RV.toTop()">Back to top</a>' +
+ return '<a class="to-top" href="#top" onclick="return RV.toTop()">Back to top</a>' +
  '<div class="foot-top"><div class="wrap"><div class="foot-grid">' +
  '<div class="foot-brand">' + logoHTML() +
  '<p>' + esc(CFG.brand.tag) + '</p>' +

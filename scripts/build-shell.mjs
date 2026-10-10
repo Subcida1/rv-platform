@@ -114,6 +114,22 @@ function toRootRelative(html) {
 const nav = toRootRelative(slots['#site-nav'].innerHTML);
 const footer = toRootRelative(slots['#site-footer'].innerHTML);
 
+// A PAGE'S PUBLISHED ADDRESS, and the prefix that makes its own fragments work. Same rule as
+// scripts/site_constants.py:pretty_url, in JS because this runs in node. Hoisted out of
+// breadcrumbFor() because the footer's back-to-top link needs it too now.
+const pretty = (p) => String(p).replace(/\/index\.html$/, '/').replace(/\.html$/, '');
+
+// THE BACK-TO-TOP LINK HAS TO NAME ITS OWN PAGE. site.js authors it once as href="#top", and a
+// bare fragment resolves against <base href="/">, which is the site root -- so without this the
+// control leaves the page instead of scrolling to the top. The anchor it points at is emitted by
+// site.js at the head of the nav, so every page has it. With JavaScript on, RV.toTop() still
+// intercepts the click and smooth-scrolls; this is what makes the control work without it.
+// The root index.html is served at "/", so its prefix is empty -- "/index#top" would be a
+// different address from the one the reader is on, and the browser would reload rather than
+// scroll. Same rule as site_constants.served_prefix().
+const footerFor = (rel) => footer.replace('href="#top"',
+  'href="/' + (rel === 'index.html' ? '' : pretty(rel)) + '#top"');
+
 if (!nav || !footer) {
   console.error('FAIL: site.js produced an empty shell');
   console.error('  nav bytes: ' + nav.length + ', footer bytes: ' + footer.length);
@@ -191,7 +207,6 @@ function breadcrumbFor(rel, html) {
   // so 43 guide pages carried a .html URL in their structured data after the site went
   // extensionless. Same rule as scripts/site_constants.py:pretty_url, in JS because this runs
   // in node; the gate that would have caught it is clean-urls.py --check.
-  const pretty = (p) => String(p).replace(/\/index\.html$/, '/').replace(/\.html$/, '');
   // A crumb with no page of its own (the system heading, and the current page) carries no `item`.
   // The schema wants the item to be that crumb's own URL, and pointing two crumbs at the same page
   // describes a trail that is not there.
@@ -233,7 +248,7 @@ for (const rel of pages) {
   const before = fs.readFileSync(file, 'utf8');
   let after = fill(before, '<!-- nav:start -->', '<!-- nav:end -->', nav + breadcrumbFor(rel, before));
   if (after === null) { problems.push(rel + ': no nav:start/nav:end markers'); continue; }
-  after = fill(after, '<!-- footer:start -->', '<!-- footer:end -->', footer);
+  after = fill(after, '<!-- footer:start -->', '<!-- footer:end -->', footerFor(rel));
   if (after === null) { problems.push(rel + ': no footer:start/footer:end markers'); continue; }
   if (after === before) { already++; continue; }
   if (!CHECK) fs.writeFileSync(file, after, 'utf8');

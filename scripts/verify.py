@@ -872,6 +872,12 @@ def anchor_key(dest):
     """
     if dest in anchors:
         return dest
+    if dest == "":
+        # "/" IS THE SITE ROOT, and the site root is index.html. Found 2026-10-10: the footer's
+        # back-to-top link is written as "/#top", and lstrip("/") reduces that target to "", which
+        # fell through to the ".html" branch and reported the homepage as a page that does not
+        # exist. A fragment link to the root is not a broken link.
+        return "index.html" if "index.html" in anchors else None
     cand = (dest + "index.html") if dest.endswith("/") else (dest + ".html")
     return cand if cand in anchors else None
 
