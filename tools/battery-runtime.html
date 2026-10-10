@@ -44,7 +44,7 @@
  <div class="wrap page-intro">
   <div class="sec-eyebrow">Free tool</div>
   <h1 class="lg">RV battery runtime calculator</h1>
-  <p class="lede wide">The math is battery watt-hours divided by the watts you draw. What is hard is knowing the usable part of a battery, which depends on its chemistry, so the tool asks for what is printed on the label and applies the right fraction.</p>
+  <p class="lede wide">The math is battery watt-hours divided by the watts you draw. The hard part is knowing the usable part of a battery, which depends on its chemistry, so the tool asks for what is printed on the label and applies the right fraction.</p>
  </div>
 
  <div class="sec pad-30">
@@ -98,8 +98,8 @@
 <div class="wrap">
  <div class="prose">
   <h2>Why chemistry decides the answer</h2>
-  <p>The amp-hours on the label are the whole tank. How much of the tank you may use depends on the chemistry, because discharging a lead-acid battery deeply costs it cycle life. Battle Born's comparison gives lead-acid chemistries roughly 50 percent usable capacity and lithium 80 to 100 percent, and Renogy states the same split as a sizing rule: for lead-acid, the standard depth of discharge is 50 percent, and for lithium it is 80 to 100 percent. This tool uses 50 percent for flooded and AGM, and 80 percent for lithium, which is the conservative end of the 80-to-100 range both makers publish.</p>
-  <p>The other half of the math is the watt-hours, A 12-volt lithium battery is 12.8 volts nominal, so 100 amp-hours is 1,280 watt-hours, not 1,200. Dakota Lithium prints exactly that on its 100 amp-hour battery. The tool uses 12.8 volts for lithium and 12.0 for lead-acid, and says so in the result.</p>
+  <p>The amp-hours on the label are the whole tank. How much of the tank you may use depends on the chemistry, because discharging a lead-acid battery deeply shortens its cycle life. Battle Born's comparison gives lead-acid chemistries roughly 50 percent usable capacity and lithium 80 to 100 percent, and Renogy states the same split as a sizing rule: for lead-acid, the standard depth of discharge is 50 percent, and for lithium it is 80 to 100 percent. This tool uses 50 percent for flooded and AGM, and 80 percent for lithium, which is the conservative end of the 80-to-100 range both makers publish.</p>
+  <p>The other half of the math is the watt-hours. A 12-volt lithium battery is 12.8 volts nominal, so 100 amp-hours is 1,280 watt-hours, not 1,200. Dakota Lithium prints exactly that on its 100 amp-hour battery. The tool uses 12.8 volts for lithium and 12.0 for lead-acid, and says so in the result.</p>
 
   <h2>What the answer means</h2>
   <p>The result is hours of runtime, not a promise. Cold weather cuts lead-acid capacity, high discharge rates cut it further, and an inverter running 120-volt gear from the batteries adds its own losses: Victron's datasheets put small 12-volt inverters at 87 to 92 percent at their best, and real-world average efficiency is lower than peak. If your gear runs through an inverter, take the answer as optimistic and add margin. The <a href="/tools/watts-to-amps">watts to amps calculator</a> converts any appliance label into the 12-volt draw it becomes through an inverter.</p>
