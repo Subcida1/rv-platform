@@ -374,6 +374,26 @@ Work it one section at a time, committing as you go. Where two sections overlap,
 wins. Do not change text inside quotations - a quotation keeps its source's spelling. Tick this
 item only when every section is done.
 
+### W17.3 — the site-wide find/replace: the method, and the ONE span that must be excluded
+
+Section 4 (and 9-11) is a global British→American replace. It is the highest-leverage part of the
+package and it is safe to apply — with one exception, measured 2026-10-10 04:45:
+
+- **32 files carry British spellings in OUR prose.** Those are the targets.
+- **Exactly ONE body quotation contains a British spelling**, in
+  `guides/rv-leveling-jacks-not-working.html` (a maker's own words). A blind replace would corrupt it.
+  **Exclude quoted spans** — the repo's rule, and the package says it too: *a quotation keeps its
+  source's spelling.* `grep -oE '<b>\s*"[^"]{15,600}"\s*</b>'` finds them; there is one hit.
+
+**Do not measure this with a regex over the whole file.** A first attempt here matched HTML
+*attributes* (`alt=`, `meta content=`) and reported 86 "at-risk quotations" — all of them our own
+directory descriptions, which are targets, not exceptions. Body quotations on this site are set in
+`<b>"…"</b>`; measure those.
+
+**Then the usual obligations:** the replace changes content on many pages, several of them verified,
+so re-baseline each changed verified page with `verify-content.py --verify <page> --by "<note>"` and an
+honest note, and run `bash scripts/ci.sh` before pushing.
+
 ### W17.2 — the three "genuinely broken" links: VERIFIED 2026-10-10 04:30. **All three work. Do not remove them.**
 
 Section 12 item (2) names `hwhcorp.com/ml54800_srvc.html` and two `lippert.com` blog links on
