@@ -802,13 +802,14 @@
     "sources": []
   },
   "guides/rv-two-appliances-stopped.html": {
-    "hash": "33cdae9a671cd1d6",
-    "status": "unverified",
-    "verified_by": null,
-    "verified_at": null,
+    "hash": "5872547b274dbf0c",
+    "status": "verified",
+    "verified_by": "Independent fresh-context review 2026-10-10, all eight cited documents fetched: 7 findings applied (1 injury, 1 wrong-fact, 2 sourcing, 3 style). Applied: a flag-injury callout added where the page surfaces the live LP pressure test as the next step, because the acceptance figures and the drop-pressure test are listed with no flag at that point (the page's other flag covers only the 120-volt transfer-switch reading); the E1 quotation recut to the individual-board definition the page's own scenario describes, since the all-boards E1 it quoted is a different fault that shuts the whole system down, and the 'whole system shuts down' conclusion is gone; an RV furnace BTU range with no document behind it cut; a frequency-of-report claim ('most often reported failing together') replaced with the mechanism; a Progressive Dynamics figure unquoted and reworded, because the source reads 'between 105 - 130 VAC' and the page had rendered the range dash as 'and' inside quotation marks; the Suburban furnace operation guide removed from Sources, since the body never uses it; and the shared-footer 'licences' recorded as a sitewide template item rather than fixed here. OWED: the footer spelling is one string in the site shell and touches every page, so it belongs in a sitewide pass, not in one guide's commit.",
+    "verified_at": "2026-10-10",
     "sources": [],
-    "claims": "31f22570b89ad0eb",
-    "claims_date": "Oct 4, 2026"
+    "spec": null,
+    "spec_waived": true,
+    "claims": "31f22570b89ad0eb"
   },
   "guides/rv-water-heater-not-heating.html": {
     "hash": "a331a4b43e312728",
