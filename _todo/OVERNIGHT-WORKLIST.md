@@ -54,8 +54,12 @@ Two Lippert documents were identified but never opened/read. Find them in `_todo
 ### W5. Parts beyond the index
 `/parts/` — the hub index exists; the entries beyond it are owed. See `_todo/PARTS-AND-BUSINESS-PLAN.md` and `_todo/PARTS.md`. **Do not change the centred layout** — it is Ty's own dated instruction (see CSS comment on `.part`).
 
-### W6. Guide reviews not yet completed
-The native-English pass covered the six 2026-10-08 guides. Anything since (and any guide whose content changed) needs a pass by a model strictly stronger than the drafter. Use the bridge lanes (deepseek / chatgpt / qwen are the reliable ones) or a fresh-context subagent. Verify the reply is a *completed review*, not one of the failure shapes in [[skills/claude-bridge/SKILL.md]].
+### W6. Guide reviews not yet completed — RUN THESE **AFTER** W7
+Three published guides still have no independent pass (`rv-leveling-jacks-not-working.html`,
+`rv-battery-not-charging.html`, `rv-roof-leak-repair.html`), and the native-English pass covered the
+six 2026-10-08 guides. **Sequence matters:** the safety pass is about to change those same pages
+(leveling jacks = its B5, roof leak = B11), and a content change voids a review. Reviewing them now
+wastes the pass. Do W6 only for pages the safety pass has finished with, or after it closes.
 
 ### W7. Safety pass — SUPPORT ONLY
 `_todo/SAFETY-ISSUES.md` is live and a session owns it. Do not take its pages. If its session goes quiet for more than ~2 hours with items still open, the sentinel will say so; only then pick up section C (wording fixes) which is low-risk.
