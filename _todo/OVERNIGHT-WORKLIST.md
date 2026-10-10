@@ -85,8 +85,39 @@ The full-site sweep (`node scripts/check-a11y.mjs --all`) found **2 pages failin
 ### W10. Truncation class — one instance left, and it is the safety session's file
 Six published pages carried a sentence cut off at a comma, from a clause deletion with no read-back. Five are fixed (battery, lights, solar, furnace-carbon-monoxide, two-appliances-stopped). **The sixth is `guides/rv-macerator-toilet.html:129`**, which the safety session owns — hand it to them rather than editing their uncommitted file. Sitewide check for the class: `grep -rnE ",[[:space:]]*</(p|li|h1|h2|h3|figcaption|div)>" --include="*.html" .`
 
-### W11. The safety session's three em dashes
-`guides/rv-black-tank.html:73`, `guides/rv-macerator-toilet.html:69` and `guides/rv-slide-out-not-working.html:64` carry authored **em dashes** inside the new `flag-injury` callouts, which fails `verify.py`'s dash rule. Their own `ci.sh` run will catch it before they push. Leave the files alone; just do not let this reach `main`.
+### W11. Authored em dashes in the safety session's new callouts
+Every `flag-injury` callout that session adds tends to carry an authored **em dash**, which fails
+`verify.py`'s dash rule ("no em dash, en dash, middot in anything we publish"). As of 01:14 the set was
+`rv-black-tank:73`, `rv-converter-not-charging:189`, `rv-macerator-toilet:69`,
+`rv-refrigerator-not-cooling:97`, `rv-slide-out-not-working:64`, `rv-two-appliances-stopped:86` — and it
+grows with each page they touch. Their own `ci.sh` run catches it before they push, so leave the files
+alone. **The fix is a comma or a colon, not a shorter dash.** Do not let this reach `main`: check
+`python3 scripts/verify.py` output for `em dash` right before any push that includes their files.
+
+### W12. Keep the independent-review pass going — UNOWNED, take one per fire
+The site's rule is that no page publishes without a pass by a model strictly stronger than the drafter,
+and `scripts/verify-content.py --status` reports **12 verified, 111 unverified**. The guides below have
+no independent pass and are NOT in the safety pass's scope, so they are free to take, one per fire:
+`rv-fuse-keeps-blowing`, `rv-condensation-inside`, `roof-snow-load`, `rv-delamination`, `rv-trip-planner`,
+`rv-water-pump-wont-prime`. (`rv-generator-sizing` and `rv-tank-sensors-reading-wrong` passed recent
+rounds; skip them.)
+Method that works: dispatch a fresh-context subagent with the page, the six house rules (quotation
+fidelity; every number sourced or cut; a `flag-injury`/`flag-damage` at every point of risk; voice;
+"RVs" never "rigs"; factual plausibility), and require literal evidence per finding, not a summary
+verdict. Then apply the findings yourself and re-baseline with
+`verify-content.py --verify <page> --by "<what happened>"`. Reviewing a page and NOT applying the
+findings is the failure mode: the pass is only worth anything when the text changes.
+
+### W13. Close the accessibility blind spot — AFTER W9 lands
+`check-a11y.mjs` is not in `ci.sh`, and its 6-page REPRESENTATIVE list has **no manuals section page**,
+which is exactly why the `start-here.html` contrast defect shipped. After W9's stylesheet fix is
+committed: add a manuals section page (e.g. `manuals/power-and-electrical.html`) to `REPRESENTATIVE`,
+and wire `node scripts/check-a11y.mjs` into `ci.sh`. Prove it fails on a deliberately broken page
+before trusting it.
+
+### W14. `privacy.html` is not in the content manifest
+`python3 scripts/verify-content.py --seed` adds it. Do not mass-seed the 111 unverified pages as
+verified — unverified is the honest state until a stronger model has read the page.
 
 ---
 
