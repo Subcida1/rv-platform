@@ -658,13 +658,14 @@
     "claims": "39cbfa3d61716c6a"
   },
   "guides/rv-sewer-smell.html": {
-    "hash": "ea11365f04d529e4",
-    "status": "unverified",
-    "verified_by": null,
-    "verified_at": null,
+    "hash": "0bac1c209464c9b6",
+    "status": "verified",
+    "verified_by": "Independent fresh-context review 2026-10-10. Six of the cited sources fetched clean; the Forest River owner manual fetched truncated before its plumbing section and was corroborated from the identical Forest River-family wording; Lippert CCD-0001584 returns no readable text and is marked UNVERIFIED. 15 findings applied (2 wrong-fact, 6 sourcing, 3 voice, 4 style). Applied: THE PAGE HAD THE FOREST RIVER RULE INVERTED - it presented 'normal drain water, wastes and biodegradable products' as the list of what must never go into the holding tanks, where that is the manual's list of what may go in; it now states the rule the way the manual does, with the prohibited items named separately. A 'never use petroleum jelly or vegetable oil' line from Thetford's portable-toilet manual was presented as coming from the cited permanent-toilet manual and is cut; a three-quarters-full travel rule that no cited Thetford document carries is cut; a quoted 3/4-full dump rule had dropped two articles and is verbatim now. An Oatey quotation read 'help[s] maintain' where the source says 'helping' and omitted an article. A Studor quotation had no citable document, so the Studor technical manual is in Sources. The Lippert 360 Siphon claim is now cited to the fetchable Lippert product page instead of an OEM manual that serves no text. A Jayco/Winnebago claim with no document behind it is cut. An empty section heading with no body under it is deleted, a sentence whose opening had been lost ('odor that appears during or after a dump') restored, 'Oatey answer' corrected, a troubleshooting table no longer described as a cell when the source uses rows, and three sentences about the page rather than the RV recut. The Thetford Sources annotation no longer claims a seal-conditioning procedure that manual does not contain. OWED AND UNVERIFIED: the Lippert OEM manual (viewer returns no text) and the Forest River plumbing section (PDF truncated on fetch); the shared-footer 'licences' is sitewide chrome.",
+    "verified_at": "2026-10-10",
     "sources": [],
-    "claims": "ab37936352b3b705",
-    "claims_date": "Oct 2, 2026"
+    "spec": null,
+    "spec_waived": true,
+    "claims": "ab37936352b3b705"
   },
   "guides/rv-slide-out-leaking.html": {
     "hash": "74e7e53c5d4c31ab",
