@@ -1021,10 +1021,38 @@ Progress ticked below as each page lands.
 
 | # | page | findings | state |
 |---|------|----------|-------|
-| 14 | rv-slide-out-leaking | | claimed |
-| 15 | rv-slide-out-not-working | | claimed |
-| 16 | rv-tire-replacement | | claimed |
-| 17 | rv-trailer-wheel-bearings | | claimed |
-| 18 | rv-towing-capacity | | claimed |
-| 19 | rv-towing-trailer | | claimed |
-| 20 | trailer-brakes-required | | claimed |
+| 14 | rv-slide-out-leaking | 5 (1 wrong-fact, 3 sourcing, 1 style) | **done, pushed** `b563d98` |
+| 15 | rv-slide-out-not-working | 10 (2 injury, 4 wrong-fact, 2 sourcing, 1 voice, 1 style) | **done, pushed** `b563d98` |
+| 16 | rv-tire-replacement | 8 (7 sourcing, 1 voice) | **done, pushed** `b563d98` |
+| 17 | rv-trailer-wheel-bearings | | review in flight |
+| 18 | rv-towing-capacity | | review in flight |
+| 19 | rv-towing-trailer | | review in flight |
+| 20 | trailer-brakes-required | | review in flight |
+
+**PROGRESS 2026-10-10 16:45 PDT — items 14-16 landed as `b563d98`** (4 files: the three guides +
+`scripts/content-manifest.json`), pushed, archive-checked green before the push.
+
+The two findings that mattered most were safety. `rv-slide-out-not-working` told the reader to jump
+the coach battery and to open the 12-volt breaker box with **no callout at either step**; both now carry
+one (`flag-injury` and `flag-damage`). That page also carried four claims its own cited manuals
+contradict, including a troubleshooting order it attributed to Lippert when Lippert's runs the other
+way, and a cable-system cause credited to Lippert when the document is BAL's. `rv-slide-out-leaking`
+had one quotation that had silently dropped a word and a 1/4-inch figure credited to the wrong manual.
+
+`rv-tire-replacement` was eight findings, seven of them sourcing, and one of them exposed a **gate the
+site already has**: I cited the Goodyear Endurance speed data through a third-party mirror, and
+`verify.py`'s rehost rule (`fifthwheelst.com` is on the ban list) failed the build immediately. Fixed
+by citing Goodyear's own launch announcement and speed-rating chart instead. Worth remembering: that
+check is real and it catches this.
+
+**SUBAGENT STARTUP IS FAILING ON THIS MACHINE (16:41-16:45).** Five consecutive dispatches for items
+17-20 returned 0 tool uses with `Timed out waiting for runtime-start-1` / `App-server socket closed` /
+`Listener connection closed`. The machine was at ~500-900 MiB free RAM with 8.1/8.3 GiB swap used, with
+three live sessions and their subagents competing. Retrying after the extra headless session exited.
+
+**A DUPLICATE SESSION WAS SPAWNED ON A FALSE PREMISE.** `conv-6991caed` believed `conv-078f4e09` was
+stopped and launched a headless replacement (`conv-81e990f0`, `letta -p --new`) telling it that
+`conv-078f4e09` is dead and that it owns items 14-20. `conv-078f4e09` was never stopped. Two stand-down
+messages were sent (the process has since exited); `conv-6991caed` was corrected directly. **Lesson for
+the next fire: a session that goes quiet is not a session that died — confirm before spawning a
+replacement, because two writers on one page range is the most expensive mistake this job makes.**
