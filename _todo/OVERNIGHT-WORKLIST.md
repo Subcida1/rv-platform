@@ -387,6 +387,17 @@ properly**, as a data-and-generator pass with `href`/`src` and quoted maker lang
    caught `_data/source/` - the raw US Census gazetteer, which is GITIGNORED, so `git checkout` could
    not restore it. The coordinate check caught it; `build-coords.py --fetch` restored it.
 
+**CORRECTION 2026-10-10 12:10 — `/contact` IS NOT BROKEN, and I repeated the package's wrong claim
+about it in my own report before checking.** Neo's audit says the page has no email, form or mailto.
+It has all three: `config.js` sets `contact.email = 'contact@originrv.com'` (Cloudflare Email Routing
+forwards it) and a live Worker endpoint at `originrv-claim.ty-g-brandes.workers.dev`; `site.js:567`
+exposes `contactEmail` from that config; and the page's own script renders
+`Replies fast, no bot: <a href="mailto:contact@originrv.com">contact@originrv.com</a>`. **A text
+extraction cannot see it because JavaScript builds it** - the same blind spot as the nav/footer items in
+section 11. That is now SIX claims in this package that fail on measurement, and the second where the
+audit's blind spot is "rendered by script". **Anything this audit reports as missing must be loaded in a
+real browser before it is believed.**
+
 **Still open, and named rather than guessed:** six strings (two breadcrumb labels, the Allison line, the
 campaign-number line, "the ids are not guessable", the Thetford line) exist only in generated pages and
 in no data file or script - their source needs finding. `/contact` still has no working destination.
