@@ -478,13 +478,14 @@
     "sources": []
   },
   "guides/rv-condensation-inside.html": {
-    "hash": "70a2ad527524bb9b",
-    "status": "unverified",
-    "verified_by": null,
-    "verified_at": null,
+    "hash": "51340a8b3f9ef5fc",
+    "status": "verified",
+    "verified_by": "2026-10-10 independent bridge-lane review (chatgpt.com, re-dispatched after aistudio returned a daily-quota refusal): applied its four sourcing findings (the 'you will not find a leak' opening now says condensation is one of the commonest explanations and to rule out a leak before stopping; the 45-degree window claim is a possibility rather than a prediction; the residential dehumidifier ranges are no longer turned into an RV sizing rule; the bleach passage now says the agencies share the moisture priority while differing on bleach) plus four English fixes (Department of Energy state, Airstream state, the 'order to spend in' fragment, 'publish the quantities') and five collective-noun fixes (Airstream add x2, Grand Design put/say). No fact, number or interval changed. Spec waived: no _specs/rv-condensation-inside.md exists.",
+    "verified_at": "2026-10-10",
     "sources": [],
-    "claims": "823655868cc02382",
-    "claims_date": "Oct 2, 2026"
+    "spec": null,
+    "spec_waived": true,
+    "claims": "823655868cc02382"
   },
   "guides/rv-converter-not-charging.html": {
     "hash": "169a4b434f317cb9",
@@ -508,9 +509,9 @@
     "claims_date": "Oct 4, 2026"
   },
   "guides/rv-delamination.html": {
-    "hash": "1f76c1925d19e24e",
+    "hash": "928fb7f296c0fc17",
     "status": "verified",
-    "verified_by": "2026-10-10 independent bridge-lane review (chatgpt.com): applied its three findings (the OSHA 48-hour rule is no longer presented as an RV repair standard; the OSHA and EPA 100-sq-ft passages are separated instead of merged into one 'require'; the hot-climate bubble diagnosis now says a bubble alone cannot settle the cause) plus five collective-noun agreement fixes. No fact, number or interval changed. Spec waived: no _specs/rv-delamination.md exists.",
+    "verified_by": "2026-10-10 independent bridge-lane review (chatgpt.com): applied its three findings (the OSHA 48-hour rule is no longer presented as an RV repair standard; the OSHA and EPA 100-sq-ft passages are separated instead of merged into one 'require'; the hot-climate bubble diagnosis now says a bubble alone cannot settle the cause) plus NINE collective-noun agreement fixes (Azdel go/describe, Jayco make, Keystone give, Crane Composites who/their, Tramex describe, Winnebago publish, Airstream name, Crane say). No fact, number or interval changed. Spec waived: no _specs/rv-delamination.md exists.",
     "verified_at": "2026-10-10",
     "sources": [],
     "spec": null,
