@@ -7,7 +7,7 @@
     "sources": []
   },
   "about.html": {
-    "hash": "b53da7573818b7e2",
+    "hash": "afc3e4137d424a50",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -403,7 +403,7 @@
     "claims": "ca780a6dbc99c4d8"
   },
   "guides/index.html": {
-    "hash": "b76b5761bd78362c",
+    "hash": "bc823cce14d13bef",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -421,7 +421,7 @@
     "claims": "d001e7423ee174b8"
   },
   "guides/rv-12-volt-problems.html": {
-    "hash": "c3ca4fe61d3d9ffc",
+    "hash": "4017265dcc6606e6",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -443,7 +443,7 @@
     "claims_date": "Oct 4, 2026"
   },
   "guides/rv-air-conditioner-not-cooling.html": {
-    "hash": "c3b4894742fc6e50",
+    "hash": "509c435a91c133a1",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -452,7 +452,7 @@
     "claims_date": "Oct 2, 2026"
   },
   "guides/rv-battery-disconnect.html": {
-    "hash": "9c70596e241cdc0a",
+    "hash": "1e7c90cdfb7898fa",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -471,7 +471,7 @@
     "claims": "f2c9a068f6c16e27"
   },
   "guides/rv-black-tank.html": {
-    "hash": "d850e1de4004d5ab",
+    "hash": "bc4b5a867b338ab6",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -487,7 +487,7 @@
     "claims_date": "Oct 2, 2026"
   },
   "guides/rv-converter-not-charging.html": {
-    "hash": "e73a661ed08762ad",
+    "hash": "169a4b434f317cb9",
     "status": "unverified",
     "verified_by": " 2026-10-03: a full power-path diagram was added, covering the converter AND the inverter branch because competitor research found no ranking page ships a usable diagram for either query. The text moved, so the page is recorded UNVERIFIED until a fresh independent pass covers the addition. 2026-10-03, review round 5 on deepseek. TWO FINDINGS FIXED, both about the page's central test: it stated that a matching voltage at unloaded battery cables means the wiring is fine, when that reading only proves an OPEN CIRCUIT and a corroded terminal passes full voltage unloaded, so the sentence now says what the result does and does not clear; and the second-reading instruction now says the converter runs with its battery load removed while the meter is on it. THE REVIEW ALSO DISCLOSED ITS OWN COVERAGE GAP: the two-slice read does not meet on a page this long, so the middle of the page was in neither slice and was not reviewed. Four further findings and three gaps are unaddressed and listed in the queue. Round 6 on deepseek under the corrected 125/125 window covered the page properly and found four things. FINDING 3 WAS MINE: round 5 corrected the FAQ and left the short version saying the opposite, so the page contradicted itself on its own central test, now fixed. The heading that presented a merged check order as the makers order is reworded, the 132 volt threshold is no longer stated as a general rule, the first voltage reading now has a specified point, and all seven source entries carry what each supports. NOTE: this page is 296 lines and the window covers 250, so 46 lines at the middle are STILL unreviewed and it needs a third slice or a per-page window. Round 6 gap 2 also closed: the 13.6 volt chain of reasoning now carries the lithium caveat, using WFCO's own published profiles that were already cited, so a reader with a lithium bank is not told a correct reading is a clean bill of health. Round 6 gap 3, temperature correction for the hydrometer reading, remains unaddressed because no cited document states it. Round 8 came back CLEAN on both halves, and the reviewer credited the per-source mapping added at round 6: voltage windows, fuse checks, charging profiles, battery-size guidance and state-of-charge tables all mapped to their documents. Its one gap is now closed: the page named the charge-current test without the method, so it now says a clamp meter goes around the positive cable at the battery with nothing disconnected, that the reading is a fraction of the converter's rating because the stages taper, and that a well-down bank taking almost nothing while the converter's voltage is right points at the wiring rather than the charger.",
     "verified_at": null,
@@ -517,21 +517,21 @@
     "claims_date": "Oct 2, 2026"
   },
   "guides/rv-driving-motorhome.html": {
-    "hash": "0d1c2d851fc631b9",
+    "hash": "3f60cb4561249d57",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "guides/rv-fridge-leveling.html": {
-    "hash": "0c96fce77ddedb92",
+    "hash": "185da4ca7f53cfdc",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "guides/rv-furnace-carbon-monoxide.html": {
-    "hash": "bda653cf15cace22",
+    "hash": "616727cb93ae8c0f",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -610,7 +610,7 @@
     "claims": "88a0fd90a5829273"
   },
   "guides/rv-macerator-toilet.html": {
-    "hash": "4e42e8edd72a3a40",
+    "hash": "347319e8a9bd3289",
     "status": "unverified",
     "verified_by": " 2026-10-02, independent review round 5 on the corrected page, five findings, all fixed: the voltage section claimed the manual's test decides who pays, which it does not; the absolute wet-wipe rule is the iNDUS manual's and is now scoped to it; the safety instruction was rewritten to one unambiguous prohibition with obstruction removal handed to a competent person; the replacement-cost sentence implied every replacement needs both the discharge line and the circuit when it may need either; and a model-identification step was added for a reader whose manual is missing, since choosing the wrong circuit rating is what the maker's own fire warning is about. 2026-10-02, review round 7 on a different lane after the chatgpt conversation went stale. Four findings fixed: the FAQ's safety instruction ended 'whichever order the manual prints', which made it negotiable and deferred to a printed order that is the opposite, so the clause is gone; and two source-list gaps where the body was RIGHT and the credit line was incomplete, the iNDUS entry now crediting the disabled-while-the-valve-is-open statement and its own tampon, hair and cotton swab list, both verified in the cached manual. The 120 foot figure now carries its condition, that it is total pumping distance rather than rise. Three gaps the reviewer found are not yet addressed. Round 7's three gaps are also addressed, each from a source already cited: the manual's own phrase identifies the reading as the toilet supply voltage rather than a battery-post figure; the Thetford support page says where the data tag is, on the back of the toilet or sometimes the base depending on model, so the model-identification step now says where to look; and the tank check points at the tank sensor guide for telling a full tank from a stuck sensor.",
     "verified_at": null,
@@ -619,7 +619,7 @@
     "claims_date": "Oct 4, 2026"
   },
   "guides/rv-maintenance-schedule.html": {
-    "hash": "63be98ffd49420e2",
+    "hash": "b0f3cfbc90250ab8",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -636,7 +636,7 @@
     "claims": "1fe18dc8c794753f"
   },
   "guides/rv-pin-weight-and-payload.html": {
-    "hash": "4e21bf64be6f24f3",
+    "hash": "c9a3b9613f4eaa8f",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -645,14 +645,14 @@
     "claims_date": "Oct 2, 2026"
   },
   "guides/rv-pre-trip-walkaround.html": {
-    "hash": "473d9bea9d538903",
+    "hash": "5662bf911927d912",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "guides/rv-propane-furnace-wont-light.html": {
-    "hash": "a5803f548fe74c03",
+    "hash": "b27a2aa29e44d2a3",
     "status": "unverified",
     "verified_by": " 2026-10-02: quotation markup repaired. Ten quotations were set as \"text with <b>a fragment</b> inside\", which put the bold inside the quotation and made the marks ambiguous to check-quotes.py; they now use the <b>\"whole quotation\"</b> convention. git confirms no word moved. Flagged quotes fell from 26 to 11, and the eleven that remain all rest on marshallexcelsior.com, which returns 403 to automated fetches, so they need a hand check rather than an edit.",
     "verified_at": null,
@@ -661,7 +661,7 @@
     "claims_date": "Oct 2, 2026"
   },
   "guides/rv-refrigerator-not-cooling.html": {
-    "hash": "2ed30029d7db72f6",
+    "hash": "f949f79c8144a27f",
     "status": "unverified",
     "verified_by": " 2026-10-03, review round 2 under the corrected window. FIXED: (1) SAFETY, the page told the reader to feel the back of a fridge that had been running for hours, with the boiler at the top to check by touch and only 'use care' as a condition, on a boiler hot enough to burn and still hot after switch-off; the check now says to read it with an infrared thermometer and keep hands clear of the flue. (2) A Dometic ambient range was stated as the brand's when the source list credits it to the RM 85xx family manual, so it is now scoped to that family with a pointer to the reader's own model. RECORDED NOT FIXED: the thermistor test still gives no baseline resistance in ohms, because no cited document states one.",
     "verified_at": null,
@@ -690,7 +690,7 @@
     "claims": "39cbfa3d61716c6a"
   },
   "guides/rv-sewer-smell.html": {
-    "hash": "1e28e85d462d8290",
+    "hash": "ea11365f04d529e4",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -708,7 +708,7 @@
     "claims_date": "Oct 2, 2026"
   },
   "guides/rv-slide-out-not-working.html": {
-    "hash": "3c8ff9e564e37611",
+    "hash": "5248729dbd09ab76",
     "status": "unverified",
     "verified_by": " The italic quotation marks were converted to the checkable <b>\"...\"</b> convention on 2026-10-02, on Ty's ruling: git confirms all 45 changed lines are identical once bold/italic tags and quotation marks are ignored, so no words moved. The quotations became visible to check-quotes.py for the first time, which is the point of the change.",
     "verified_at": null,
@@ -742,7 +742,7 @@
     "claims_date": "Oct 2, 2026"
   },
   "guides/rv-tire-replacement.html": {
-    "hash": "1091439790978d76",
+    "hash": "4e259a6786ef6d90",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -774,7 +774,7 @@
     "claims_date": "Oct 4, 2026"
   },
   "guides/rv-towing-capacity.html": {
-    "hash": "23fc47eb0475353d",
+    "hash": "3d30ac068e37fec6",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -787,14 +787,14 @@
     "claims_date": "Oct 4, 2026"
   },
   "guides/rv-towing-trailer.html": {
-    "hash": "360aaab22ccdf9bb",
+    "hash": "dac020dbd72dd491",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "guides/rv-trailer-wheel-bearings.html": {
-    "hash": "6611b8f9c3422215",
+    "hash": "2fa4e7228f463da7",
     "status": "unverified",
     "verified_by": " 2026-10-02, review round 6 on a fresh lane. Sourcing came back CLEAN, the source list mapping every major statement to its document, with one overclaim fixed: the page said grease reaches the brake linings where the maker says only that the chance is greatly increased, so it now uses the maker's strength. The reviewer's one gap, a reader with an ordinary greased hub lacking the removal and repack sequence, is answered by stating the boundary explicitly rather than by adding a sequence the spec deliberately stops short of. 2026-10-03, review round 7 under the corrected window: CLEAN on both halves, the fourth page to come back so, and it VERIFIES THE ROUND 6 FIX BY NAME, quoting the corrected sentence back ('the maker's own words, greatly increased') and confirming the source list maps every major statement to its document. Its single gap is the boundary the spec deliberately draws, and the reviewer recognises it as stated rather than missing: the page stops at the spindle-nut torque steps and says the hub-off procedure is not summarised here. NO CHANGE MADE, because adding a repack sequence taught from a summary is the thing the page's own reasoning rules out. 2026-10-03, review round 7 under the corrected window: CLEAN on both halves, the fourth page to come back so, and it VERIFIES THE ROUND 6 FIX BY NAME, quoting the corrected sentence back and confirming the source list maps every major statement to its document. Its single gap is the boundary the spec deliberately draws, and the reviewer recognises it as stated rather than missing: the page stops at the spindle-nut torque steps and says the hub-off procedure is not summarised here. NO CHANGE MADE, because adding a repack sequence taught from a summary is the thing the page's own reasoning rules out.",
     "verified_at": null,
@@ -810,7 +810,7 @@
     "sources": []
   },
   "guides/rv-two-appliances-stopped.html": {
-    "hash": "3d4c4a9d4c1f7b4f",
+    "hash": "33cdae9a671cd1d6",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -819,7 +819,7 @@
     "claims_date": "Oct 4, 2026"
   },
   "guides/rv-water-heater-not-heating.html": {
-    "hash": "ba1b84a85a88956f",
+    "hash": "fca642c8645984bf",
     "status": "unverified",
     "verified_by": " 2026-10-03: a labelled cutaway was added, which is the second diagram built from the competitor research. The SERP for this query ships no usable figure at all, so the addition is the answer the query was missing. The text moved, so the page is recorded UNVERIFIED until a fresh pass covers it. 2026-10-03, review round 6, the most substantive of the night: FIVE findings and three gaps. FIXED: (1) SAFETY, the body told the reader to open the temperature and pressure relief valve while the page's own diagram caption said opening it by hand is not routine maintenance, so the instruction now says to do it on a cooled heater and says why, near-boiling water and steam leaving the face the hand is at; (2) Suburban's 110 degree reset limit was generalised to every brand on a page that says the limits differ, now scoped to Suburban; (3) the dry-fired element's visual signs were presented as reliable when it often shows none, so a clean sheath is now explicitly not a pass; (4) the Furrion credit covered 'the relief valve test' unscoped, and the Furrion is a TANKLESS manual that cannot describe the tank-style check, so the credit is scoped. RECORDED NOT FIXED: two sources in the list are admitted unavailable and four published temperatures rest on them; and three gaps, which anode interval applies, how to identify the brand when the label is gone, and what a Suburban owner's warranty position is having run without the rod. And the Furrion credit is scoped in the same commit's follow-up: it said 'the relief valve test' with no qualifier while the Furrion manual is for TANKLESS units and cannot describe the tank-style check the page gives, so the entry now says the tankless unit's relief valve test and states what it does not cover. And all three of its gaps are closed. The anode interval gap now says which of the two Suburban figures an owner can act on without weighing the rod. The brand gap now says the brand is on the data plate and gives the tell on a unit whose label is gone, which is the drain fitting: a Suburban unscrews to a sacrificial rod and an Atwood or Dometic has a plain plug with none, which is the page's own distinction stated as a way to look. The warranty gap now says what the maker's sentence means without inventing a remedy, since only the maker can answer what an unfitted season does to a claim. Round 7 on the v0.7.34 build found two more. The element resistance had no number, so it now gives the arithmetic: ohms is volts squared over watts, and the 1,440 watt 120 volt element the page already quotes should read about 10 ohms, with 2 or 50 being a different element rather than a tolerance. And the Dometic aftermarket warning was attributed to a manual the source list does not credit for it, so the advice stays and the attribution is gone.",
     "verified_at": null,
@@ -857,7 +857,7 @@
     "claims": "afdbfd340b1ab1f0"
   },
   "guides/trailer-brakes-required.html": {
-    "hash": "f2813835dbe1ebd6",
+    "hash": "36a3e35b829118dc",
     "status": "unverified",
     "verified_by": "Cloud 2026-09-28, external-review correction pass plus a fresh-context confirm round. An external review flagged the descent advice as dangerous and it was: the page told readers to hold the controller's manual override ahead of the truck's pedal on a descent, which no authoritative source teaches and which controller makers warn against (Redarc: 'Manual override should not be used in place of the regular vehicle brakes'; Elecbrakes: 'Never use Manual Override to slow the vehicle and trailer during normal driving'). The same sentence also had the hot-drum diagnosis inverted. Rewritten to engine braking first, snub braking, gain sets how much and boost sets how early, with the override reserved for gain-setting, warming and a brief sway correction. The confirm round verified every citation against ORS 815.125(7), the ODOT towing brochure, CDL downgrade guidance and the Hayes and Tekonsha controller manuals, and prescribed five further fixes, all applied: 'four state codes' to three, the CMV definition to 49 CFR 390.5, the snub sentence's self-contradiction, 'the trailer's brochure', and the qualifier that a little extra trailer heat is the lead the page asks for. Those five are the only changes made after the confirm verdict. Since that verdict the only further change to this page's visible text is the site-wide check line, applied on Ty's instruction: it now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' rather than 'Last reviewed: <date> ...', because the old wording implied a review cycle that had not happened and named no author. No claim text changed in that pass. CHANGED AGAIN 2026-09-28 on Ty's instruction: the check line now reads 'By OriginRV. Written and checked against the sources below on <date>.' rather than a person's name, and the Article schema author is an Organization rather than a Person. His name appears only on the About page, as Ty B. No claim text changed in that pass either. The only change since is the site-wide byline rewrite of 2026-10-02 on Ty's instruction, which removed the 'written and checked against the sources' claim; git confirms the diff is byline lines only and no claim text moved. The italic quotation marks were converted to the checkable <b>\"...\"</b> convention on 2026-10-02, on Ty's ruling: git confirms all 45 changed lines are identical once bold/italic tags and quotation marks are ignored, so no words moved. The quotations became visible to check-quotes.py for the first time, which is the point of the change. 2026-10-02: an inbound link to a neighbouring guide was added, which moved the text, so this page is recorded UNVERIFIED until a fresh independent pass covers the addition. The link itself carries no claim. Review round 2 on a fresh lane came back CLEAN on both halves. Its star-wheel gap is closed from the maker: the adjuster is reached through the adjusting slot on the bottom of the brake backing plate with a screwdriver or standard adjusting tool, in the manual's words. TWO OF ITS THREE GAPS ARE NOT CLOSED and are recorded as such: no cited document gives an operating voltage figure for a breakaway battery, and none discusses a magnetic compass test or steel drums, so neither is invented here. 2026-10-03, review round 4 which I had recorded as FAILED and which in fact LANDED: the lane wrote it at 10:35, hours after the harness released the capture at 285 seconds. Three findings fixed. The claim that a circulating figure comes from Dexter's air-brake manual was unsourced and is now stated without the provenance. The 3,000 pound exception was described as requiring the trailer's AXLE weight to stay within 40 percent, where 49 CFR 393.42 says the weight of the trailer, a misstatement of the condition. And the loaded weight gap now routes to the scale locator we already ship. NOTE: still not reviewed under the 150/150 window, so the middle of this 218-line page remains uncovered.",
     "verified_at": "2026-09-28",
@@ -906,7 +906,7 @@
     "sources": []
   },
   "manuals/heating-and-cooling.html": {
-    "hash": "637c6fc5545d6509",
+    "hash": "e76a66743137cf57",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -920,14 +920,14 @@
     "sources": []
   },
   "manuals/kitchen-and-appliances.html": {
-    "hash": "0ad85a6a4bad1c90",
+    "hash": "aa059a6b32f55f6a",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "manuals/power-and-electrical.html": {
-    "hash": "24d327a450ccb27e",
+    "hash": "bbeb59c3d3269029",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -948,7 +948,7 @@
     "sources": []
   },
   "manuals/start-here.html": {
-    "hash": "1d5ebc184e9d1365",
+    "hash": "e2c21c68afa049aa",
     "status": "unverified",
     "verified_by": " CHANGED 2026-09-28: one sentence was attributed. It read \"The manual's limit is 30 PSI maximum\", an unnamed authority for a specific number, and read against the Furrion figure on the water-heater guide it looked like a contradiction. The number is Jayco's, which the winterising guide already says ('Jayco caps its system at 30 psi ... while Winnebago publishes 35 to 50 psi'), and the sentence now names Jayco and says the ceiling is the plumbing's rather than one number for every RV. The change was made in the page's generator, scripts/build-manuals-pages.py, and the page regenerated. No other text changed.",
     "verified_at": null,
@@ -973,6 +973,13 @@
     "verified_at": null,
     "sources": []
   },
+  "privacy.html": {
+    "hash": "1334940282564c3c",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
+  },
   "signin.html": {
     "hash": "3e0132fc1b97b389",
     "status": "unverified",
@@ -981,7 +988,7 @@
     "sources": []
   },
   "tools/battery-runtime.html": {
-    "hash": "1803731b5b2d0b0e",
+    "hash": "e3487335afad8b26",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -995,7 +1002,7 @@
     "sources": []
   },
   "tools/index.html": {
-    "hash": "ea6ba4a7030d3223",
+    "hash": "76e106ae386d0611",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
