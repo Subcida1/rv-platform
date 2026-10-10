@@ -374,6 +374,40 @@ Work it one section at a time, committing as you go. Where two sections overlap,
 wins. Do not change text inside quotations - a quotation keeps its source's spelling. Tick this
 item only when every section is done.
 
+### W17.4 — what the site-wide find/replace actually involves (MEASURED 2026-10-10 05:05)
+
+Section 4 is "GLOBAL FIND/REPLACE, highest leverage". **It cannot be a find/replace.** Measured:
+
+- **423** British-spelling occurrences in visible text — those are the targets.
+- **39 occurrences sit inside tags**, and they are not all prose: **11 are real URLs**
+  (`.../cherokee-grey-wolf/browse`, `.../2023-black-grey-water-holding-tanks-user-manual/`), **21 are
+  `class`/`id`/`data-search` attributes**, 6 are meta descriptions, 1 is inside an SVG. A blind replace
+  breaks the links.
+- Much of it is **generated**: `manuals/*` comes from `_data/manuals.json`,
+  `/manuals/start-here` from `_data/new-owner.json`, and the directory pages from `_data/listings/*`.
+  Editing the rendered HTML would be overwritten by the next build.
+**Method, for whoever takes it:** fix the **data and the guide sources**, regenerate, skip `href`/`src`
+entirely, keep `data-search` consistent with the visible row text it mirrors (or the search-index check
+fails), then re-baseline every changed verified page with an honest note and run `ci.sh`.
+
+### W17.5 — the two claimed factual errors on /manuals/start-here (CHECKED 2026-10-10 05:10)
+
+- **"Generator/shore-power says 'never both' and ignores automatic transfer switches" — NOT an error.**
+  The sentence is *"Never run the generator while the RV is plugged into shore power. One source or the
+  other, never both: they are two separate supplies feeding one panel. Start the generator, check its
+  own breaker, and switch the RV over to it, or plug in, but not both at once."* It already instructs the
+  owner to switch over, and the site's own `guides/rv-two-appliances-stopped.html` documents that *"the
+  transfer switch is fed by shore power, the generator, or the inverter"*. It is worth one clarifying
+  clause about automatic switches, but it is not the error described and **nothing was changed**.
+- **"Dry-firing kills the heating element, not the tank" — NOT ON THIS PAGE.** `grep -i 'dry.\?fir'` on
+  `manuals/start-here.html` returns nothing. The claim may be true, but the location in the request is
+  wrong; look for it on a water-heater guide before changing anything.
+
+**That is now FOUR of four factual claims in this package that do not hold as written** (the count, the
+broken links, this error pair). The voice and phrasing rewrites are unaffected and can proceed — but
+**every item that asserts something is broken, stale, or wrong must be measured first.** Each one checked
+so far would have caused damage: a wrong count, three deleted working links, an unnecessary edit.
+
 ### W17.3 — the site-wide find/replace: the method, and the ONE span that must be excluded
 
 Section 4 (and 9-11) is a global British→American replace. It is the highest-leverage part of the
