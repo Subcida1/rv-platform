@@ -185,7 +185,14 @@ Do not "fix" the 111 unverified by mass-seeding them as verified. Unverified is 
 
 ---
 
-### W9. Accessibility: contrast + nested-interactive (FOUND + FIXED + REVERTED 2026-10-10 — redo when the tree is free)
+### W9. Accessibility contrast — **DONE 2026-10-10 03:02, commit `fabf332`**
+
+`.man-table th` moved from `var(--text-3)` to `var(--text-2)`; all 125 pages re-stamped in the
+same commit; `node scripts/check-a11y.mjs manuals/start-here.html` reports **no violations**, having
+reported 15 serious contrast failures before. `main` is green. The nested-interactive half was
+already fixed and pushed earlier (the `<a>` inside `<svg role="img">`'s `<desc>`).
+
+### W9 (history). Accessibility: contrast + nested-interactive (FOUND + FIXED + REVERTED 2026-10-10 — redo when the tree is free)
 The full-site sweep (`node scripts/check-a11y.mjs --all`) found **2 pages failing at serious**, which the
 6-page REPRESENTATIVE list in `check-a11y.mjs` cannot reach:
 - `manuals/start-here.html` — **color-contrast x15** on `.no-body > .table-scroll > table > thead > tr > th`, `#67748e` on `#eaf1fa` = **4.13:1**, under the 4.5 AA floor. Cause: `.man-table th` in `assets/css/style.css` uses `var(--text-3)`; on `.no-body`/`.no-sec` the header sits on `var(--tint-bg)`. **Fix: change that one declaration to `var(--text-2)`** — the identical fix already documented above `.crumbs`, which had the same defect.
