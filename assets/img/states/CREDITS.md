@@ -124,17 +124,17 @@ Recorded anyway, because the source should be traceable.
 
 ## newhampshire
 
-- File: [Kancamagus Scenic Byway - Sugar Hill Overlook on the Kancamagus Highway - NARA - 7719833.jpg](https://commons.wikimedia.org/wiki/File:Kancamagus_Scenic_Byway_-_Sugar_Hill_Overlook_on_the_Kancamagus_Highway_-_NARA_-_7719833.jpg)
-- Author: Dennis Adams, Federal Highway Administration
-- Licence: Public domain (Federal Highway Administration) <https://commons.wikimedia.org/wiki/File:Kancamagus_Scenic_Byway_-_Sugar_Hill_Overlook_on_the_Kancamagus_Highway_-_NARA_-_7719833.jpg>
-- Tile alt text: The White Mountains from Sugar Hill Overlook on the Kancamagus Highway, New Hampshire
+- File: [Mount Chocorua.jpg](https://commons.wikimedia.org/wiki/File:Mount_Chocorua.jpg)
+- Author: MountainClimber2
+- Licence: Public domain (no known restrictions) <https://commons.wikimedia.org/wiki/File:Mount_Chocorua.jpg>
+- Tile alt text: Mount Chocorua above the forest, New Hampshire
 
 ## newjersey
 
-- File: [View of Cape May Lighthouse from the beach, near Cape May Point, 2007.jpg](https://commons.wikimedia.org/wiki/File:View_of_Cape_May_Lighthouse_from_the_beach%2C_near_Cape_May_Point%2C_2007.jpg)
-- Author: DimiTalen
-- Licence: CC0 1.0 (public domain dedication) <https://creativecommons.org/publicdomain/zero/1.0/>
-- Tile alt text: The Cape May lighthouse seen from the beach, Cape May Point, New Jersey
+- File: [Delaware Water Gap from I 80.jpg](https://commons.wikimedia.org/wiki/File:Delaware_Water_Gap_from_I_80.jpg)
+- Author: ChuckWalsh
+- Licence: Public domain (no known restrictions) <https://commons.wikimedia.org/wiki/File:Delaware_Water_Gap_from_I_80.jpg>
+- Tile alt text: The Delaware Water Gap from Interstate 80, New Jersey
 
 ## newyork
 
@@ -166,17 +166,17 @@ Recorded anyway, because the source should be traceable.
 
 ## alaska
 
-- File: [Alpine lakes and forest, Denali National Park, Alaska, by Carol M. Highsmith.jpg](https://commons.wikimedia.org/wiki/File:Alpine_lakes_and_forest%2C_Denali_National_Park%2C_Alaska%2C_by_Carol_M._Highsmith.jpg)
-- Author: Carol M. Highsmith
-- Licence: Public domain (no known restrictions) <https://commons.wikimedia.org/wiki/File:Alpine_lakes_and_forest,_Denali_National_Park,_Alaska,_by_Carol_M._Highsmith.jpg>
-- Tile alt text: Alpine lakes and forest in Denali National Park, Alaska
+- File: [Wonder Lake and Denali.jpg](https://commons.wikimedia.org/wiki/File:Wonder_Lake_and_Denali.jpg)
+- Author: Denali National Park and Preserve
+- Licence: Public domain (no known restrictions) <https://commons.wikimedia.org/wiki/File:Wonder_Lake_and_Denali.jpg>
+- Tile alt text: Denali above Wonder Lake, Denali National Park, Alaska
 
 ## hawaii
 
-- File: [Hawai'i Volcanoes National Park HAVO3171.jpg](https://commons.wikimedia.org/wiki/File:Hawai%27i_Volcanoes_National_Park_HAVO3171.jpg)
-- Author: National Park Service
-- Licence: Public domain (National Park Service) <https://commons.wikimedia.org/wiki/File:Hawai%27i_Volcanoes_National_Park_HAVO3171.jpg>
-- Tile alt text: The volcanic landscape of Hawaii Volcanoes National Park, Hawaii
+- File: [Kīlauea volcano eruption 20201220.jpg](https://commons.wikimedia.org/wiki/File:K%C4%ABlauea_volcano_eruption_20201220.jpg)
+- Author: Hawaii Volcanoes National Park
+- Licence: Public domain (no known restrictions) <https://commons.wikimedia.org/wiki/File:K%C4%ABlauea_volcano_eruption_20201220.jpg>
+- Tile alt text: The Kīlauea summit eruption at dusk, Hawaii Volcanoes National Park
 
 ## louisiana
 
@@ -292,10 +292,10 @@ Recorded anyway, because the source should be traceable.
 
 ## illinois
 
-- File: [Garden of the gods southern Illinois panorama.jpg](https://commons.wikimedia.org/wiki/File:Garden_of_the_gods_southern_Illinois_panorama.jpg)
-- Author: Melvin Spence
-- Licence: Public domain (released by the author) <https://commons.wikimedia.org/wiki/File:Garden_of_the_gods_southern_Illinois_panorama.jpg>
-- Tile alt text: The Garden of the Gods in Shawnee National Forest, Illinois
+- File: [Sunset at Garden of the Gods scenic area on the Shawnee National Forest 20240406.jpg](https://commons.wikimedia.org/wiki/File:Sunset_at_Garden_of_the_Gods_scenic_area_on_the_Shawnee_National_Forest_20240406.jpg)
+- Author: USFS Eastern Region
+- Licence: Public domain (no known restrictions) <https://commons.wikimedia.org/wiki/File:Sunset_at_Garden_of_the_Gods_scenic_area_on_the_Shawnee_National_Forest_20240406.jpg>
+- Tile alt text: The Garden of the Gods sandstone formations in Shawnee National Forest, Illinois
 
 ## wisconsin
 

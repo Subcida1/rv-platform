@@ -146,6 +146,324 @@ PHOTOS += [
 # REPLACED 2026-10-09 with a more state-identifiable photograph. Ty: "make sure that
 # we're using the best images for each location... Wyoming's black and white for some
 # reason, and it's the only black and white one." CC0 or public domain only, as above.
+# R
+# E
+# P
+# L
+# A
+# C
+# E
+# D
+#  
+# 2
+# 0
+# 2
+# 6
+# -
+# 1
+# 0
+# -
+# 0
+# 9
+# ,
+#  
+# t
+# h
+# i
+# r
+# d
+#  
+# p
+# a
+# s
+# s
+# .
+#  
+# T
+# y
+#  
+# q
+# u
+# e
+# s
+# t
+# i
+# o
+# n
+# e
+# d
+#  
+# w
+# h
+# e
+# t
+# h
+# e
+# r
+#  
+# t
+# h
+# e
+#  
+# D
+# e
+# l
+# a
+# w
+# a
+# r
+# e
+#  
+# a
+# n
+# d
+#  
+# N
+# e
+# w
+#  
+# H
+# a
+# m
+# p
+# s
+# h
+# i
+# r
+# e
+#  
+# t
+# i
+# l
+# e
+# s
+#  
+# w
+# e
+# r
+# e
+#  
+# u
+# n
+# m
+# i
+# s
+# t
+# a
+# k
+# a
+# b
+# l
+# e
+#  
+# (
+# N
+# e
+# w
+#  
+# H
+# a
+# m
+# p
+# s
+# h
+# i
+# r
+# e
+# '
+# s
+#  
+# r
+# e
+# a
+# d
+#  
+# a
+# s
+#  
+# "
+# j
+# u
+# s
+# t
+#  
+# k
+# i
+# n
+# d
+#  
+# o
+# f
+#  
+# l
+# i
+# k
+# e
+#  
+# a
+#  
+# r
+# o
+# a
+# d
+# ,
+#  
+# b
+# u
+# t
+#  
+# s
+# o
+# m
+# e
+#  
+# m
+# o
+# u
+# n
+# t
+# a
+# i
+# n
+# s
+#  
+# i
+# n
+#  
+# t
+# h
+# e
+#  
+# b
+# a
+# c
+# k
+# g
+# r
+# o
+# u
+# n
+# d
+# "
+# )
+# ,
+#  
+# a
+# n
+# d
+#  
+# w
+# a
+# n
+# t
+# e
+# d
+#  
+# a
+#  
+# b
+# e
+# t
+# t
+# e
+# r
+#  
+# N
+# e
+# w
+#  
+# J
+# e
+# r
+# s
+# e
+# y
+#  
+# s
+# h
+# o
+# r
+# e
+#  
+# p
+# i
+# c
+# t
+# u
+# r
+# e
+# .
+#  
+# D
+# e
+# l
+# a
+# w
+# a
+# r
+# e
+#  
+# i
+# s
+#  
+# u
+# n
+# c
+# h
+# a
+# n
+# g
+# e
+# d
+# :
+#  
+# s
+# e
+# e
+#  
+# t
+# h
+# e
+#  
+# n
+# o
+# t
+# e
+#  
+# a
+# t
+#  
+# t
+# h
+# e
+#  
+# e
+# n
+# d
+#  
+# o
+# f
+#  
+# t
+# h
+# i
+# s
+#  
+# f
+# i
+# l
+# e
+# .
+# DELAWARE KEEPS THE BRIDGE, and that is a decision rather than an oversight. Ty asked on
+# 2026-10-09 whether it was unmistakably Delaware: "it's just two bridges." Three search
+# rounds were run for a better one, with the searches recorded in the session, and the
+# freely-licensed options are all worse: Rehoboth Beach boardwalk photographs are crowded
+# with people or are 1940s linen postcards, New Castle gives a pharmacy and a street sign,
+# and the best-looking candidate, "Cape May Sunset Beach from Delaware Bay", is a picture
+# of CAPE MAY, which is New Jersey -- the file's own categories say so. Delaware has no
+# iconic landscape in CC0 or public domain. The Delaware Memorial Bridge is the most
+# identifiable thing in the state that anybody has released freely, and its own category
+# is "Delaware Memorial Bridge". If a better one ever turns up, replace it here.
 PHOTOS += [
     ('connecticut',
      'Cornwall covered bridge, Cornwall, Connecticut LCCN2012631589.tif',
@@ -172,16 +490,16 @@ PHOTOS += [
      "CC0 1.0 (public domain dedication)", "Walesjl",
      "https://creativecommons.org/publicdomain/zero/1.0/",
      "The Cape Cod coastline, Massachusetts"),
-    ("newhampshire",
-     "Kancamagus Scenic Byway - Sugar Hill Overlook on the Kancamagus Highway - NARA - 7719833.jpg",
-     "Public domain (Federal Highway Administration)", "Dennis Adams, Federal Highway Administration",
-     "https://commons.wikimedia.org/wiki/File:Kancamagus_Scenic_Byway_-_Sugar_Hill_Overlook_on_the_Kancamagus_Highway_-_NARA_-_7719833.jpg",
-     "The White Mountains from Sugar Hill Overlook on the Kancamagus Highway, New Hampshire"),
+    ('newhampshire',
+     'Mount Chocorua.jpg',
+     'Public domain (no known restrictions)', 'MountainClimber2',
+     'https://commons.wikimedia.org/wiki/File:Mount_Chocorua.jpg',
+     'Mount Chocorua above the forest, New Hampshire'),
     ('newjersey',
-     'View of Cape May Lighthouse from the beach, near Cape May Point, 2007.jpg',
-     'CC0 1.0 (public domain dedication)', 'DimiTalen',
-     'https://creativecommons.org/publicdomain/zero/1.0/',
-     'The Cape May lighthouse seen from the beach, Cape May Point, New Jersey'),
+     'Delaware Water Gap from I 80.jpg',
+     'Public domain (no known restrictions)', 'ChuckWalsh',
+     'https://commons.wikimedia.org/wiki/File:Delaware_Water_Gap_from_I_80.jpg',
+     'The Delaware Water Gap from Interstate 80, New Jersey'),
     ("newyork",
      "Niagara Falls seen from Skylon tower.jpg",
      "CC0 1.0 (public domain dedication)", "Tenryuu1919",
@@ -207,17 +525,239 @@ PHOTOS += [
 
 # Added 2026-10-04 with Alaska and Hawaii, the last two states. Both public domain, both
 # photographed by a federal agency or the Library of Congress collection the other tiles use.
+# R
+# E
+# P
+# L
+# A
+# C
+# E
+# D
+#  
+# 2
+# 0
+# 2
+# 6
+# -
+# 1
+# 0
+# -
+# 0
+# 9
+# ,
+#  
+# s
+# e
+# c
+# o
+# n
+# d
+#  
+# p
+# a
+# s
+# s
+# .
+#  
+# T
+# y
+# :
+#  
+# "
+# w
+# e
+#  
+# c
+# a
+# n
+#  
+# g
+# e
+# t
+#  
+# l
+# i
+# k
+# e
+#  
+# A
+# l
+# a
+# s
+# k
+# a
+# ,
+#  
+# D
+# e
+# n
+# a
+# l
+# i
+# "
+# ;
+#  
+# H
+# a
+# w
+# a
+# i
+# i
+#  
+# "
+# a
+#  
+# b
+# e
+# t
+# t
+# e
+# r
+#  
+# p
+# i
+# c
+# t
+# u
+# r
+# e
+#  
+# o
+# f
+#  
+# a
+#  
+# v
+# o
+# l
+# c
+# a
+# n
+# o
+#  
+# b
+# l
+# o
+# w
+# i
+# n
+# g
+#  
+# o
+# u
+# t
+# "
+# ;
+#  
+# I
+# l
+# l
+# i
+# n
+# o
+# i
+# s
+#  
+# "
+# i
+# t
+#  
+# j
+# u
+# s
+# t
+#  
+# k
+# i
+# n
+# d
+#  
+# o
+# f
+#  
+# l
+# o
+# o
+# k
+# e
+# d
+#  
+# l
+# i
+# k
+# e
+#  
+# t
+# h
+# i
+# s
+#  
+# g
+# e
+# n
+# e
+# r
+# i
+# c
+#  
+# g
+# r
+# e
+# e
+# n
+# e
+# r
+# y
+# "
+# .
+#  
+# C
+# C
+# 0
+#  
+# o
+# r
+#  
+# p
+# u
+# b
+# l
+# i
+# c
+#  
+# d
+# o
+# m
+# a
+# i
+# n
+#  
+# o
+# n
+# l
+# y
+# ,
+#  
+# a
+# s
+#  
+# a
+# b
+# o
+# v
+# e
+# .
 PHOTOS += [
-    ("alaska",
-     "Alpine lakes and forest, Denali National Park, Alaska, by Carol M. Highsmith.jpg",
-     "Public domain (no known restrictions)", "Carol M. Highsmith",
-     "https://commons.wikimedia.org/wiki/File:Alpine_lakes_and_forest,_Denali_National_Park,_Alaska,_by_Carol_M._Highsmith.jpg",
-     "Alpine lakes and forest in Denali National Park, Alaska"),
-    ("hawaii",
-     "Hawai'i Volcanoes National Park HAVO3171.jpg",
-     "Public domain (National Park Service)", "National Park Service",
-     "https://commons.wikimedia.org/wiki/File:Hawai%27i_Volcanoes_National_Park_HAVO3171.jpg",
-     "The volcanic landscape of Hawaii Volcanoes National Park, Hawaii"),
+    ('alaska',
+     'Wonder Lake and Denali.jpg',
+     'Public domain (no known restrictions)', 'Denali National Park and Preserve',
+     'https://commons.wikimedia.org/wiki/File:Wonder_Lake_and_Denali.jpg',
+     'Denali above Wonder Lake, Denali National Park, Alaska'),
+    ('hawaii',
+     'Kīlauea volcano eruption 20201220.jpg',
+     'Public domain (no known restrictions)', 'Hawaii Volcanoes National Park',
+     'https://commons.wikimedia.org/wiki/File:K%C4%ABlauea_volcano_eruption_20201220.jpg',
+     'The Kīlauea summit eruption at dusk, Hawaii Volcanoes National Park'),
 ]
 
 
@@ -339,6 +879,228 @@ PHOTOS += [
 
 # Added 2026-10-04 with the Great Lakes expansion. Licences read off each file's own
 # Commons description page.
+# R
+# E
+# P
+# L
+# A
+# C
+# E
+# D
+#  
+# 2
+# 0
+# 2
+# 6
+# -
+# 1
+# 0
+# -
+# 0
+# 9
+# ,
+#  
+# s
+# e
+# c
+# o
+# n
+# d
+#  
+# p
+# a
+# s
+# s
+# .
+#  
+# T
+# y
+# :
+#  
+# "
+# w
+# e
+#  
+# c
+# a
+# n
+#  
+# g
+# e
+# t
+#  
+# l
+# i
+# k
+# e
+#  
+# A
+# l
+# a
+# s
+# k
+# a
+# ,
+#  
+# D
+# e
+# n
+# a
+# l
+# i
+# "
+# ;
+#  
+# H
+# a
+# w
+# a
+# i
+# i
+#  
+# "
+# a
+#  
+# b
+# e
+# t
+# t
+# e
+# r
+#  
+# p
+# i
+# c
+# t
+# u
+# r
+# e
+#  
+# o
+# f
+#  
+# a
+#  
+# v
+# o
+# l
+# c
+# a
+# n
+# o
+#  
+# b
+# l
+# o
+# w
+# i
+# n
+# g
+#  
+# o
+# u
+# t
+# "
+# ;
+#  
+# I
+# l
+# l
+# i
+# n
+# o
+# i
+# s
+#  
+# "
+# i
+# t
+#  
+# j
+# u
+# s
+# t
+#  
+# k
+# i
+# n
+# d
+#  
+# o
+# f
+#  
+# l
+# o
+# o
+# k
+# e
+# d
+#  
+# l
+# i
+# k
+# e
+#  
+# t
+# h
+# i
+# s
+#  
+# g
+# e
+# n
+# e
+# r
+# i
+# c
+#  
+# g
+# r
+# e
+# e
+# n
+# e
+# r
+# y
+# "
+# .
+#  
+# C
+# C
+# 0
+#  
+# o
+# r
+#  
+# p
+# u
+# b
+# l
+# i
+# c
+#  
+# d
+# o
+# m
+# a
+# i
+# n
+#  
+# o
+# n
+# l
+# y
+# ,
+#  
+# a
+# s
+#  
+# a
+# b
+# o
+# v
+# e
+# .
 PHOTOS += [
     ("michigan",
      "Sleeping Bear Dune Aerial View.jpg",
@@ -355,11 +1117,11 @@ PHOTOS += [
      "Public domain (released by the author)", "Yinan Chen",
      "https://commons.wikimedia.org/wiki/File:Gfp-indiana-dunes-national-lakeshore-hilly-landscape.jpg",
      "The Indiana Dunes along Lake Michigan, Indiana"),
-    ("illinois",
-     "Garden of the gods southern Illinois panorama.jpg",
-     "Public domain (released by the author)", "Melvin Spence",
-     "https://commons.wikimedia.org/wiki/File:Garden_of_the_gods_southern_Illinois_panorama.jpg",
-     "The Garden of the Gods in Shawnee National Forest, Illinois"),
+    ('illinois',
+     'Sunset at Garden of the Gods scenic area on the Shawnee National Forest 20240406.jpg',
+     'Public domain (no known restrictions)', 'USFS Eastern Region',
+     'https://commons.wikimedia.org/wiki/File:Sunset_at_Garden_of_the_Gods_scenic_area_on_the_Shawnee_National_Forest_20240406.jpg',
+     'The Garden of the Gods sandstone formations in Shawnee National Forest, Illinois'),
     ("wisconsin",
      "Apostle Islands-Raspberry Island.jpg",
      "Public domain (Wisconsin Division of Tourism)", "Wisconsin Division of Tourism",
