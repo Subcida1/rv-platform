@@ -380,15 +380,17 @@ Section 4 (and 9-11) is a global British→American replace. It is the highest-l
 package and it is safe to apply — with one exception, measured 2026-10-10 04:45:
 
 - **32 files carry British spellings in OUR prose.** Those are the targets.
-- **Exactly ONE body quotation contains a British spelling**, in
-  `guides/rv-leveling-jacks-not-working.html` (a maker's own words). A blind replace would corrupt it.
-  **Exclude quoted spans** — the repo's rule, and the package says it too: *a quotation keeps its
-  source's spelling.* `grep -oE '<b>\s*"[^"]{15,600}"\s*</b>'` finds them; there is one hit.
+- **NO body quotation currently contains a British spelling** (measured 2026-10-10 04:50, word
+  boundaries applied). So there is no exception to carve out today — but the rule still governs:
+  **exclude quoted spans**, because a quotation keeps its source's spelling and the next maker quote
+  added may contain one.
 
-**Do not measure this with a regex over the whole file.** A first attempt here matched HTML
-*attributes* (`alt=`, `meta content=`) and reported 86 "at-risk quotations" — all of them our own
-directory descriptions, which are targets, not exceptions. Body quotations on this site are set in
-`<b>"…"</b>`; measure those.
+**MEASURE THIS CAREFULLY — IT WAS MEASURED WRONG TWICE HERE, IN TWO DIFFERENT WAYS.** First attempt:
+the regex ran over the whole file and matched HTML *attributes* (`alt=`, `meta content=`), reporting 86
+"at-risk quotations" that were all our own directory descriptions. Second attempt: the pattern had no
+**trailing** word boundary, so `programme` matched inside `programmed` and reported one at-risk quote
+that does not exist. Both numbers were plausible and both were wrong. Body quotations on this site are
+set in `<b>"…"</b>`; match only those, with `\b` on **both** ends of every word.
 
 **Then the usual obligations:** the replace changes content on many pages, several of them verified,
 so re-baseline each changed verified page with `verify-content.py --verify <page> --by "<note>"` and an
