@@ -1395,7 +1395,7 @@
           "id": "portable-generator",
           "n": "Portable generator",
           "aka": "inverter generator|Honda eu2200|Firman|Westinghouse",
-          "does": "portable power for away from a pedestal: no need to fire up the coach's built-in generator",
+          "does": "powers your gear away from a pedestal without running the coach's built-in generator",
           "fails": [
             "hard starting after storage",
             "carburettor gum",
@@ -1508,7 +1508,7 @@
           "id": "gravity-fill-and-city-water-inlet",
           "n": "Gravity fill and city water inlet",
           "aka": "gravity fill|city water connection|fresh water inlet",
-          "does": "fill the tank here, or hook up and run straight off park pressure",
+          "does": "fill the tank, or run the coach directly off park pressure",
           "fails": [
             "check valve leaking",
             "cap lost",
@@ -3085,7 +3085,7 @@
           "id": "skylight",
           "n": "Skylight",
           "aka": "roof skylight|shower skylight|dome",
-          "does": "lets daylight into the shower and living space",
+          "does": "lets daylight into the shower area",
           "fails": [
             "cracked and leaking",
             "yellowed",
@@ -4224,7 +4224,7 @@
           "id": "fire-extinguisher",
           "n": "Fire extinguisher",
           "aka": "rv fire extinguisher|dry chemical|foam",
-          "does": "your first line of defense against a galley or engine fire",
+          "does": "first line of defense against a galley or engine fire",
           "fails": [
             "expired",
             "discharged",
@@ -4707,7 +4707,7 @@
           "id": "auto-changeover-and-pigtail-hoses",
           "n": "Auto changeover and pigtail hoses",
           "aka": "changeover valve|pigtail|soft nose hose|acme nut",
-          "does": "automatically switches between two tanks to keep the gas flowing",
+          "does": "automatically switches between two tanks to keep gas flowing",
           "fails": [
             "leaking at the acme nut",
             "check valve stuck",
