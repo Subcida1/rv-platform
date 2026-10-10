@@ -38,6 +38,34 @@ commits, so two sessions do not review the same page.
 
 ---
 
+## CLAIM — the 27-guide independent-review pass, 2026-10-10 16:10 PDT
+
+**Owner: conversation `conv-cae364cc-c686-4911-b77c-f05cb3d5e2d1` (Cloud, live session, Ty's direct
+handoff 16:06).** This session takes the whole remaining set, one guide at a time, in the order below.
+Other sessions: **do not take these pages**; if you want review work, take one not on this list and
+record it here.
+
+The ledger read **19 verified / 105 unverified** at claim time; the 27 guides below are every
+`guides/*.html` whose manifest `status` is not `verified`. Order is safety-critical content first.
+
+1 `rv-furnace-carbon-monoxide` · 2 `rv-propane-furnace-wont-light` · 3 `rv-water-heater-not-heating`
+· 4 `rv-converter-not-charging` · 5 `rv-generator-not-charging` · 6 `rv-generator-sizing`
+· 7 `rv-two-appliances-stopped` · 8 `rv-tank-sensors-reading-wrong` · 9 `rv-refrigerator-not-cooling`
+· 10 `rv-fridge-leveling` · 11 `rv-toilet-not-flushing` · 12 `rv-macerator-toilet` · 13 `rv-sewer-smell`
+· 14 `rv-slide-out-leaking` · 15 `rv-slide-out-not-working` · 16 `rv-tire-replacement`
+· 17 `rv-trailer-wheel-bearings` · 18 `rv-towing-capacity` · 19 `rv-towing-trailer`
+· 20 `trailer-brakes-required` · 21 `rv-driving-motorhome` · 22 `rv-pin-weight-and-payload`
+· 23 `rv-pre-trip-walkaround` · 24 `rv-maintenance-schedule` · 25 `rv-black-tank`
+· 26 `rv-trip-planner` · 27 `guides/index.html` — all under `guides/`.
+
+Method per page: fresh-context `general-purpose` subagent given the page path and the six house rules
+verbatim, required to return LITERAL evidence per finding and the tally line; findings applied by this
+session; then `verify-content.py --verify <page> --no-spec --by "<findings applied / owed>"`; then
+`build-search-index.py`, `stamp_assets.py`, `bash scripts/ci.sh`, archive check, explicit-path commit,
+push. Progress is ticked below as each page lands.
+
+---
+
 ## INCIDENT LOG — 02:00-02:35 PDT, read this before trusting the engine
 
 **1. ROOT CAUSE FOUND 02:50 — THE-GRID IS OFFLINE, SO CLOUD CRONS TARGETING IT CANNOT RUN.**
