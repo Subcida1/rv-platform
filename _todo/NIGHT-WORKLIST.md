@@ -45,7 +45,14 @@ command's status.** `cross-check.py --strict | tail` said nothing was wrong. Use
 
 ## Website
 
-### 0. THE VISUAL RULES TY ASKED FOR (do this first, it is a standing instruction)
+### 0. THE VISUAL RULES TY ASKED FOR — DONE 2026-10-09
+
+**Landed:** the four rules are written in `_todo/STYLE.md` under "The four visual rules",
+measured on the rendered page at 360px by the new `scripts/audit-style.mjs`, and enforced by the
+new `scripts/check-style.py` (centering and gradient allowlists, plus ratchets on the literal
+type and space counts) — wired into `ci.sh` and negative-tested. **Still open:** the gradient set
+is frozen at 70 selectors but is wider than the rule intends, so narrowing it is a pass of its
+own; and the type/space collapse onto the scales remains the deliberate pass STYLE.md describes.
 Ty, 2026-10-09: "consistency is key here for our visual structure we should develop/enforce these
 visual rules." Two rules are now established by evidence rather than taste, and both were violations
 the tool introduced:

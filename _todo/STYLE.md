@@ -36,6 +36,41 @@ layer, and it also checks that the neutral surfaces stay at least ten points blu
 red, because a tint that is only nominally cool reads as cream against a white card and
 that is exactly how the site went gold once already.
 
+## The four visual rules (2026-10-09)
+
+Ty, 2026-10-09: *"consistency is key here for our visual structure we should develop/enforce
+these visual rules."* Four dimensions. Each was measured on the rendered page at 360px before the
+rule was written (`node scripts/audit-style.mjs`), and each is enforced by
+`python3 scripts/check-style.py`, which runs in `ci.sh`.
+
+**Centering is a decision, not a default.** Section heads and their ledes are centered; body
+prose, lists and table cells are left-aligned. Centering is allowed on the twenty selectors in
+`CENTER_OK` — section heads, the hero, utility tiles (state tiles, stat cards), empty states,
+buttons, and the parts rows. A new centered selector fails the gate.
+*Measured:* 30% of elements compute to centered at 360px, nearly all of it inherited from those
+twenty declarations rather than chosen element by element.
+
+**A gradient marks something that leads, or the brand.** Gradients belong on calls to action, the
+logo, hero accents, card and step icons, and the search ring. Never on text that has to be read.
+*Measured:* **70 selectors paint a gradient — wider than this rule intends**, grown one convenient
+`--grad-soft` at a time while nobody was measuring. The set is frozen in `GRADIENT_OK` so it
+cannot grow; narrowing it to the rule is a visual pass of its own. `.eyebrow` and `.big-card .num`
+are the first two to look at, because the earlier brand decision was that stats and eyebrows are
+solid ink so the eye rests.
+
+**Type comes from the scale.** `--fs-xs` 12 through `--fs-3xl`, plus the display clamps for the
+hero and the section heads. No half-pixel steps, and no new literal sizes.
+*Measured:* 56 distinct literal `font-size` values below the token block, against seven defined
+steps — including a pt family from the print stylesheet and fifteen one-off clamps.
+
+**Spacing comes from the 4px scale.** `--space-1` 4 through `--space-8` 64.
+*Measured:* 54 distinct literal `padding`/`margin` values below the token block; the scale covers
+a minority of them.
+
+The type and space counts are **ratchets, not targets**: they freeze today's numbers so neither
+can drift up while the collapse is pending, and they are lowered by hand each time it removes
+some. They are not a claim that today's numbers are right.
+
 ## What is not finished
 
 Two things are deliberately left, both because they move pixels and want an eye on them

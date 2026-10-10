@@ -69,6 +69,13 @@ step "build-parts-pages.py --check: the parts hub matches _data/parts.json" \
 # A link a scanner cannot read the destination of is the cheapest way to lose a deep arrival.
 step "check-ux.py: vague link labels, related-block coverage, focus rings" \
                                                python3 scripts/check-ux.py
+# The look's own gate (_todo/STYLE.md, "The four visual rules"). Centering and gradients may only
+# appear on selectors we have decided they belong on, and the literal type and space counts are
+# ratcheted so neither drifts up while the collapse onto the scales is pending. Seeded and
+# re-seeded by `python3 scripts/check-style.py --discover`; negative-tested before it was wired
+# here (forcing the ceiling to 40 fails the step and exits non-zero).
+step "check-style.py: centering, gradients, and the two scales" \
+                                               python3 scripts/check-style.py
 # ---------------------------------------------------------------- 2. behaviour
 step "weight calculator"                       node scripts/test-weight-calculator.js
 step "tire date decoder"                      node scripts/test-tire-date.js
