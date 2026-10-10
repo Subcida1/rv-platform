@@ -508,13 +508,14 @@
     "claims_date": "Oct 4, 2026"
   },
   "guides/rv-delamination.html": {
-    "hash": "dda6c837ba7f8935",
-    "status": "unverified",
-    "verified_by": null,
-    "verified_at": null,
+    "hash": "1f76c1925d19e24e",
+    "status": "verified",
+    "verified_by": "2026-10-10 independent bridge-lane review (chatgpt.com): applied its three findings (the OSHA 48-hour rule is no longer presented as an RV repair standard; the OSHA and EPA 100-sq-ft passages are separated instead of merged into one 'require'; the hot-climate bubble diagnosis now says a bubble alone cannot settle the cause) plus five collective-noun agreement fixes. No fact, number or interval changed. Spec waived: no _specs/rv-delamination.md exists.",
+    "verified_at": "2026-10-10",
     "sources": [],
-    "claims": "d43bfcd7141b7c75",
-    "claims_date": "Oct 2, 2026"
+    "spec": null,
+    "spec_waived": true,
+    "claims": "d43bfcd7141b7c75"
   },
   "guides/rv-driving-motorhome.html": {
     "hash": "3f60cb4561249d57",
@@ -835,13 +836,14 @@
     "claims_date": "Oct 2, 2026"
   },
   "guides/rv-water-pump-wont-prime.html": {
-    "hash": "bf5792448dd2ebf6",
-    "status": "unverified",
-    "verified_by": null,
-    "verified_at": null,
+    "hash": "5c21fdc29c817a4d",
+    "status": "verified",
+    "verified_by": "2026-10-10 independent bridge-lane review (chat.deepseek.com): applied its findings (the 'four makers agree' claims now match the page's own table, which credits a suction-side air leak to three of four; the suction-leak sentence no longer claims it cannot weep, since a joint under static head can; compressed air is named as a tank and line hazard rather than a pump hazard; the inlet-disconnect test now says to close the tank outlet and expect the spill; the sentence that began mid-clause with a lower-case 'the' is repaired; the 'The order to spend in:' fragment reads properly) plus its collective-noun agreement corrections. No fact, number or interval changed. Spec waived: no _specs/rv-water-pump-wont-prime.md exists.",
+    "verified_at": "2026-10-10",
     "sources": [],
-    "claims": "34c240b69b94c574",
-    "claims_date": "Oct 4, 2026"
+    "spec": null,
+    "spec_waived": true,
+    "claims": "34c240b69b94c574"
   },
   "guides/tires-winter.html": {
     "hash": "3696bfe12fa9ea71",
