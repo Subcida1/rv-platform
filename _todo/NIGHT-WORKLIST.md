@@ -133,12 +133,18 @@ Four sections sit between the opener and Part 1 under a "Start here" part headin
 ("Which RV system to learn first", "How the 12-volt and 120-volt systems connect") duplicate material
 in Part 2. Merging them is a content decision for Ty, not for a night session.
 
-### 5. The two structural rules have no gate
-`wrap narrow` and `guide-go` are referenced only by the generators that emit them
-(`scripts/new-guide.py`, `scripts/build-manuals-pages.py`); nothing CHECKS that a page carries the
-wrapper. `check-generated.sh` compares a generated page against its own generator, so a generator
-that omits the layer passes both sides of that comparison. Needs a structural check that does not
-false-fire across page types, which is why it is not written yet: design it before writing it.
+### 5. The two structural rules have no gate — DONE 2026-10-10
+
+**Landed:** `scripts/check-structure.py` gates both rules, wired into `ci.sh`. Rule A: every
+guide content page (not the hub) carries `.sec prose` > `.wrap narrow` as a DIRECT child, and the
+wrapper holds the body (measured 45/45 before pinning). Rule B: `.guide-go` may only sit inside a
+`.man-pinned`, `.man-tile` or `.card.promo` card -- never on an ordinary `.guide-card` tile.
+Scoped by card class, not page name, so the manuals hub's deliberate guide-go use cannot
+false-fire. Parser is stack-membership only (no end-tag propagation): the first prototype's
+endtag pairing silently failed on 9 of 45 real guides, so a latch-free membership design was
+chosen instead. The default run self-proves every failure mode before the sweep, so a structural
+check whose logic rotted cannot quietly report green. Negative-tested against real pages (stripped
+wrapper and stray tile guide-go both fail with the right message) before it was wired in.
 
 ### 6. The gradient set is wider than the rule — Ty's call
 70 selectors paint a gradient, frozen in `scripts/check-style.py` and recorded in STYLE.md. The

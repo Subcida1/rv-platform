@@ -76,6 +76,15 @@ step "check-ux.py: vague link labels, related-block coverage, focus rings" \
 # here (forcing the ceiling to 40 fails the step and exits non-zero).
 step "check-style.py: centering, gradients, and the two scales" \
                                                python3 scripts/check-style.py
+# The two STRUCTURAL rules of the guides (NIGHT-WORKLIST.md item 5). Every guide content
+# page sits inside `.sec prose` > `.wrap narrow` -- without it the page runs edge to edge
+# on a phone -- and `.guide-go` belongs only on the card types that use it by design
+# (.man-pinned, .man-tile, .promo), never on an ordinary guide tile. A generator that
+# omits the layer passes check-generated.sh on BOTH sides of its own comparison, so this
+# is the only thing that catches it. The default run proves its own failure modes first,
+# so a structural check whose logic rotted cannot quietly report green.
+step "check-structure.py: guide wrapper and guide-go placement" \
+                                               python3 scripts/check-structure.py
 # ---------------------------------------------------------------- 2. behaviour
 step "weight calculator"                       node scripts/test-weight-calculator.js
 step "tire date decoder"                      node scripts/test-tire-date.js
