@@ -73,7 +73,41 @@ If somebody's uncommitted work is in your way: pick a different item. Do not mer
 > its DONE tick here. Only take one of these if that session has been quiet for 2+ hours with the
 > item still unticked. Work W6/W7 or the BRIDGE section instead.
 
-### W1. Manuals-hub search workstream — OWNED by conv-ddc178a5
+### W1. Manuals-hub search workstream — DONE 2026-10-10, commit 21b9f164
+
+All three parts are in, and one of them was a real defect rather than a tidy-up.
+
+**The hub and the site-wide search disagreed, and the hub was the broken one.** The dropdown
+learned on 2026-10-08 that a multi-word query must be matched word by word; the hub still
+required the whole query as one contiguous substring. So "dometic fridge" found a manual in the
+navbar and nothing in the hub, and "gibs" missed "Gib's" because nothing normalised punctuation.
+The rule now lives in ONE place, `assets/js/search-match.js`, injected by site.js immediately
+before search.js; both callers use it and neither re-states it. **hub.js is generated**, so the
+change is in `build-manuals-pages.py`'s HUB_JS — a hand edit to `assets/js/manuals/hub.js` is
+reverted by the next build, and the file's own header says so.
+
+**The Manual cap is asserted in smoke-test.js.** Nothing tested it; the Business cap in the same
+object had been tested since it was written. A cap that is never tested drifts.
+
+**A durable 30-query set with the category each top hit should be in** — the "does searching a
+brand still work" gate this note asked for.
+
+**Two vocabulary gaps the set found, both fixed:** "dometic fridge" and "dometic thermostat"
+returned NOTHING, because "dometic" is in the manual entry's brand keywords while "fridge" and
+"thermostat" appeared nowhere in that entry — the corpus says refrigerator. `build-search-index.py`
+now carries a two-word synonym list. Under the every-word rule an absent word is not a worse
+answer, it is no answer.
+
+**Two ranking gaps are marked KNOWN GAP in the query set rather than tuned overnight.** "roof
+leak" ranks a roofing business above the guide titled "RV Roof Leak Repair", and "generator" does
+the same. Mechanism, written into the test: `score()` gives a multi-word partial match 55 plus up
+to 30 in bonuses, which can beat the 60 it gives an entry whose title contains the exact phrase.
+An exact phrase should never lose to two scattered words, but fixing it moves results for every
+multi-word query, so it wants a deliberate pass with the query set already in place.
+
+Evidence: `CHROME_BIN="/usr/bin/chromium --no-sandbox" bash scripts/ci.sh` green; the commit
+re-verified in a clean extraction with verify.py and all five generators; the hub driven in a real
+browser ("dometic fridge" 1 row, "norcold" 3, "zzzz" 0, no page errors).
 `manuals/` — the hub search. Read `_todo/SITE-TODO.md` §manuals for the specification before starting.
 
 ### W2. Directory pages — 201 inline `style=` attributes
