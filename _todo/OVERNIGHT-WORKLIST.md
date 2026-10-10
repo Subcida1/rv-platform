@@ -40,14 +40,28 @@ commits, so two sessions do not review the same page.
 
 ## CLAIM — the 27-guide independent-review pass, 2026-10-10 16:10 PDT
 
+> **SCOPE BOUNDARY SET 2026-10-10 16:37 — READ THIS BEFORE TAKING ANY ITEM.**
+> `conv-cae364cc` finished **items 1-13** (commits `a7694a5` … `67b7ba4`, ledger 19 -> 32 verified).
+> A continuation conversation, launched 16:36, holds **items 14-20**: `rv-slide-out-leaking`,
+> `rv-slide-out-not-working`, `rv-tire-replacement`, `rv-trailer-wheel-bearings`, `rv-towing-capacity`,
+> `rv-towing-trailer`, `trailer-brakes-required` — working TOP-DOWN.
+> `conv-6991caed` is **ALIVE** and holds **items 21-27**: `rv-driving-motorhome`, `rv-pin-weight-and-payload`,
+> `rv-pre-trip-walkaround`, `rv-maintenance-schedule`, `rv-black-tank`, `rv-trip-planner`, `guides/index.html`
+> — working bottom-up, with reviews already in flight for 23, 24 and 26 and a real defect already fixed on 27.
+> **Do not take an item above 20 unless the continuation says so here, and never touch `guides/index.html`
+> or `scripts/sync-counts.py` while `conv-6991caed` holds them.**
+
+
 **Owner: conversation `conv-cae364cc-c686-4911-b77c-f05cb3d5e2d1` (Cloud, live session, Ty's direct
 handoff 16:06).**
 
-**SPLIT AGREED 2026-10-10 16:09 with the second live session `conv-6991caed-4e74-451d-9862-4e7786631414`**
-(also handed the same 27-guide brief, by Ty, at 16:07). To avoid paying for two reviews of one page:
-**`conv-cae364cc` takes items 1-13 top-down; `conv-6991caed` takes items 14-27 working bottom-up
-(27 -> 14).** Neither session touches the other's half. Both are recorded here because two sessions on
-one queue is the most expensive mistake this job makes (W13 and the fuse guide were each done twice).
+**SPLIT — final, 2026-10-10 16:36.** Three sessions, one queue, no overlap. Recorded here because two
+sessions on one page is the most expensive mistake this job makes (W13 and the fuse guide were each
+done twice).
+- `conv-cae364cc` — items **1-13**, DONE 16:26, all pushed and green.
+- `conv-6991caed` (this session) — items **21-27**, bottom-up from 27.
+- `conv-078f4e09-4ac6-4fde-89fc-559b01f4d814` (new) — items **14-20**, top-down.
+The two remaining sessions meet at 20/21. Neither touches the other's half.
 
 **Shared-tree hazard both sessions must respect:** `build-search-index.py` is generated from every page
 in the *tree* and `stamp_assets.py` re-stamps every reference. If either session regenerates while the
@@ -78,6 +92,18 @@ unaffected and is what the rebaselines use. NOT fixed here — recorded rather t
 | 9 | rv-refrigerator-not-cooling | 7 (3 injury) | **done, pushed** `270790b` |
 | 12 | rv-macerator-toilet | 6 | **done, pushed** `270790b` |
 | 13 | rv-sewer-smell | 15 | applied + re-baselined, committing |
+
+**PROGRESS (conv-6991caed, items 21-27, bottom-up).**
+
+| # | page | findings | state |
+|---|------|----------|-------|
+| 27 | guides/index.html | 1 (ItemList name mismatch) | **done, pushed** `4ee85d9` |
+| 26 | rv-trip-planner | — | review in flight |
+| 25 | rv-black-tank | — | queued |
+| 24 | rv-maintenance-schedule | — | review in flight |
+| 23 | rv-pre-trip-walkaround | — | review in flight |
+| 22 | rv-pin-weight-and-payload | — | queued |
+| 21 | rv-driving-motorhome | — | queued |
 
 **W15 IS EFFECTIVELY CLOSED FOR ITEMS 1-13, and the class was the biggest single finding of the pass.** The
 live-work-without-a-flag sweep that W15 opened found one real gap when it ran; the independent reviews found
@@ -135,9 +161,18 @@ push. Progress is ticked below as each page lands.
 **SPLIT — 2026-10-10 16:15 PDT.** A SECOND live session, `conv-6991caed-4e74-451d-9862-4e7786631414`,
 was handed this same brief by Ty at 16:07 and is running concurrently with `conv-cae364cc`. To avoid the
 duplicate-review cost the rules warn about, the two sessions partition the ordered list:
-`conv-cae364cc` takes items **1-13** top-down (already in flight); `conv-6991caed` takes items **14-27**,
-working **bottom-up (27 -> 14)**. Neither takes a page the other has claimed. A third session should
-take nothing from this list. The split was also messaged to `conv-cae364cc` at 16:09.
+`conv-cae364cc` took items **1-13** top-down (DONE 16:26, all pushed and green). `conv-6991caed`
+(this session) takes items **21-27**, working bottom-up (27 -> 21). A new conversation,
+`conv-078f4e09-4ac6-4fde-89fc-559b01f4d814`, takes items **14-20** top-down; the two meet at 20/21.
+Neither takes a page the other has claimed. Boundary messaged to `conv-cae364cc` at 16:09 and to
+`conv-078f4e09` at 16:36.
+
+`conv-6991caed` holds: 27 `guides/index.html`, 26 `rv-trip-planner`, 25 `rv-black-tank`,
+24 `rv-maintenance-schedule`, 23 `rv-pre-trip-walkaround`, 22 `rv-pin-weight-and-payload`,
+21 `rv-driving-motorhome`.
+`conv-078f4e09` holds: 14 `rv-slide-out-leaking`, 15 `rv-slide-out-not-working`,
+16 `rv-tire-replacement`, 17 `rv-trailer-wheel-bearings`, 18 `rv-towing-capacity`,
+19 `rv-towing-trailer`, 20 `trailer-brakes-required`.
 
 ---
 
@@ -959,3 +994,37 @@ subagent; when memory IS the task, edit it directly and commit.
 
 When an item is finished: mark it here as DONE with the commit hash and one line of evidence, then
 move to the next. Keep this file committed (explicit path) so the next fire sees the real state.
+
+---
+
+## CLAIM — items 14-20 of the 27-guide pass, 2026-10-10 16:38 PDT
+
+**Owner: conversation `conv-078f4e09-4ac6-4fde-89fc-559b01f4d814` (Cloud, live session).**
+
+Boundary re-set by direct message with `conv-6991caed` at 16:38: items 1-13 are done by `conv-cae364cc`
+(commits a7694a5..67b7ba4); **`conv-6991caed` holds 21-27 working bottom-up** (its in-flight files are
+`guides/index.html` and `scripts/sync-counts.py` — leave both alone); **this session takes 14-20 TOP-DOWN.**
+
+14 `rv-slide-out-leaking` · 15 `rv-slide-out-not-working` · 16 `rv-tire-replacement`
+· 17 `rv-trailer-wheel-bearings` · 18 `rv-towing-capacity` · 19 `rv-towing-trailer`
+· 20 `trailer-brakes-required` — all under `guides/`.
+
+Method: fresh-context `general-purpose` subagent with the six house rules verbatim, LITERAL evidence
+per finding + tally line; findings applied by this session; `verify-content.py --verify <page> --no-spec
+--by "<applied / owed>"`; search index regenerated in an ISOLATED `git archive HEAD` extraction; explicit
+paths only; archive-check the COMMIT before push.
+
+**Priority class carried over from the 1-13 half:** a live-work instruction with NO `flag-injury`
+callout was the highest-severity finding seven times there. Check that class on every page here first.
+
+Progress ticked below as each page lands.
+
+| # | page | findings | state |
+|---|------|----------|-------|
+| 14 | rv-slide-out-leaking | | claimed |
+| 15 | rv-slide-out-not-working | | claimed |
+| 16 | rv-tire-replacement | | claimed |
+| 17 | rv-trailer-wheel-bearings | | claimed |
+| 18 | rv-towing-capacity | | claimed |
+| 19 | rv-towing-trailer | | claimed |
+| 20 | trailer-brakes-required | | claimed |
