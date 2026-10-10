@@ -624,10 +624,10 @@
       ],
       "g": [
         "Mobile only",
-        "Forest River authorised",
-        "Keystone authorised"
+        "Forest River authorized",
+        "Keystone authorized"
       ],
-      "d": "Mobile RV and trailer repairs, and an authorised mobile repair service for Forest River and Keystone, handling dealer recalls and most warranty companies. Do not work on bearings, brakes, chassis, engines or fibreglass. Monday to Friday 8:30 to 5.",
+      "d": "Mobile RV and trailer repairs, and an authorized mobile repair service for Forest River and Keystone, handling dealer recalls and most warranty companies. Do not work on bearings, brakes, chassis, engines or fiberglass. Monday to Friday 8:30 to 5.",
       "evidence": {
         "checked": "https://mrrvrepairs.com/",
         "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
@@ -651,7 +651,7 @@
         "Warranty facility",
         "Collision repair"
       ],
-      "d": "Roof air conditioning service and sales, appliance repair as an authorised warranty facility, awnings, extended warranty work, collision repair and structural maintenance on metal siding, rubber roofing, and satellite installation. Monday to Thursday 8 to 5, Friday 8 to 3.",
+      "d": "Roof air conditioning service and sales, appliance repair as an authorized warranty facility, awnings, extended warranty work, collision repair and structural maintenance on metal siding, rubber roofing, and satellite installation. Monday to Thursday 8 to 5, Friday 8 to 3.",
       "evidence": {
         "checked": "https://ronsrvservice.com/",
         "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
@@ -1006,7 +1006,7 @@
         "Seven days",
         "Pre-purchase inspections"
       ],
-      "d": "Mobile RV repair and maintenance: air conditioning, diagnostics, annual roof resealing and UV treatment, 12 and 115 volt electrical diagnosis and repair, solar and inverters, black, grey and fresh water plumbing, slides, roofing and awnings, leveling, axles and bearings, gas absorption refrigeration, furnace, cabinetry, and pre-purchase inspections. Open seven days 7 to 7.",
+      "d": "Mobile RV repair and maintenance: air conditioning, diagnostics, annual roof resealing and UV treatment, 12 and 115 volt electrical diagnosis and repair, solar and inverters, black, gray and fresh water plumbing, slides, roofing and awnings, leveling, axles and bearings, gas absorption refrigeration, furnace, cabinetry, and pre-purchase inspections. Open seven days 7 to 7.",
       "evidence": {
         "checked": "https://ryansmobilerv.com/",
         "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site"
@@ -1149,7 +1149,7 @@
         "RVDA certified",
         "Collision"
       ],
-      "d": "Complete RV repairs and collision services, RV appliances and RV plumbing. Authorised AAA repair facility with Onan, Dometic, Norcold and RVDA-certified technicians.",
+      "d": "Complete RV repairs and collision services, RV appliances and RV plumbing. authorized AAA repair facility with Onan, Dometic, Norcold and RVDA-certified technicians.",
       "evidence": {
         "checked": "https://www.americanrvservicecenter.com/",
         "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
@@ -4346,7 +4346,7 @@
       "t": "both",
       "e": false,
       "r": false,
-      "d": "RV Revivals is a family-run RV repair, installation and remodeling business based near Alpine in San Diego County. It repairs and remodels campers, motorhomes, trailers, fifth wheels, toy haulers and van conversions, handling air conditioning, appliances, awnings, bodywork and exterior paint, brakes, plumbing, flooring, grey and black water systems, HVAC, leveling jacks and lighting, and offers mobile service and same-day while-you-wait repair.",
+      "d": "RV Revivals is a family-run RV repair, installation and remodeling business based near Alpine in San Diego County. It repairs and remodels campers, motorhomes, trailers, fifth wheels, toy haulers and van conversions, handling air conditioning, appliances, awnings, bodywork and exterior paint, brakes, plumbing, flooring, gray and black water systems, HVAC, leveling jacks and lighting, and offers mobile service and same-day while-you-wait repair.",
       "g": [
         "shop",
         "mobile"

@@ -69,7 +69,7 @@ window.RV_LISTINGS_SD = [
    "flandreau"
   ],  "region": null,  "spec": null,  "reg": "east-river-sd"
  },
- {  "n": "Northstar Mobile RV Services",  "c": "Spearfish, SD",  "p": "1-605-705-3335",  "u": "https://northstarmobilervservices.com/",  "t": "mobile",  "e": true,  "r": false,  "d": "Northstar Mobile RV Services is a 100 percent mobile RV repair and maintenance business that served the Spearfish and Black Hills area of South Dakota in summer before travelling to a winter location. It diagnoses and repairs on site, working on RV refrigerators, air conditioners, leveling systems, water heaters and more, and serves most major RV manufacturers. It offers seasonal service, new owner orientation, emergency service and warranty repair.",  "g": [
+ {  "n": "Northstar Mobile RV Services",  "c": "Spearfish, SD",  "p": "1-605-705-3335",  "u": "https://northstarmobilervservices.com/",  "t": "mobile",  "e": true,  "r": false,  "d": "Northstar Mobile RV Services is a 100 percent mobile RV repair and maintenance business that served the Spearfish and Black Hills area of South Dakota in summer before traveling to a winter location. It diagnoses and repairs on site, working on RV refrigerators, air conditioners, leveling systems, water heaters and more, and serves most major RV manufacturers. It offers seasonal service, new owner orientation, emergency service and warranty repair.",  "g": [
    "mobile rv technician"
   ],  "base": "spearfish",  "areas": [
    "spearfish"

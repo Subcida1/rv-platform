@@ -48,7 +48,7 @@ window.RV_LISTINGS_NE = [
    "grand island"
   ],  "region": null,  "spec": null,  "reg": "central-ne"
  },
- {  "n": "Expert RV Service Center",  "c": "Grand Island, NE",  "p": "308-244-1789",  "u": "https://www.expertrvservice.com/",  "t": "center",  "e": false,  "r": false,  "d": "Expert RV Service Center is a new RV service centre in central Nebraska, booking appointments for camper repairs and upgrades. The site names itself as the newest RV service in the Midwest and publishes a call line. Its published address is 3333 W Stolley Park Rd, Grand Island.",  "g": [
+ {  "n": "Expert RV Service Center",  "c": "Grand Island, NE",  "p": "308-244-1789",  "u": "https://www.expertrvservice.com/",  "t": "center",  "e": false,  "r": false,  "d": "Expert RV Service Center is a new RV service center in central Nebraska, booking appointments for camper repairs and upgrades. The site names itself as the newest RV service in the Midwest and publishes a call line. Its published address is 3333 W Stolley Park Rd, Grand Island.",  "g": [
    "service center"
   ],  "base": "grand island",  "areas": [
    "grand island"

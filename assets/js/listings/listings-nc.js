@@ -271,7 +271,7 @@ window.RV_LISTINGS_NC = [
    "southport"
   ],  "region": "Coastal Brunswick County",  "spec": null,  "reg": "coast-nc"
  },
- {  "n": "Rex & Sons RVs",  "c": "Castle Hayne, NC",  "p": "910-793-2894",  "u": "https://www.rexandsonsrvs.com/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "Rex & Sons RVs is a family owned and operated RV dealer and service center in Castle Hayne. The site says certified technicians keep the RV road-ready and lists service packages for roof inspection, A/C, generator, slide-out, wheel bearings, water heater, furnace and black and grey tank service. It is a member of the Route 66 RV Network.",  "g": [
+ {  "n": "Rex & Sons RVs",  "c": "Castle Hayne, NC",  "p": "910-793-2894",  "u": "https://www.rexandsonsrvs.com/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "Rex & Sons RVs is a family owned and operated RV dealer and service center in Castle Hayne. The site says certified technicians keep the RV road-ready and lists service packages for roof inspection, A/C, generator, slide-out, wheel bearings, water heater, furnace and black and gray tank service. It is a member of the Route 66 RV Network.",  "g": [
    "service center"
   ],  "base": "castle hayne",  "areas": [
    "castle hayne"

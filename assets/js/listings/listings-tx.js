@@ -977,7 +977,7 @@ window.RV_LISTINGS_TX = [
    "cameron"
   ],  "region": "Central Texas",  "spec": "in-shop repairs only, no mobile or on-site service",  "reg": "waco"
  },
- {  "n": "RV Hero Service & Repair",  "c": "Elm Mott, TX",  "p": "(254) 495-5050",  "u": "https://www.rvhero.com/",  "t": "both",  "e": true,  "r": false,  "d": "RV Hero Service & Repair is a family owned RV shop at 1064 N McLennan Dr, Suite 101 in Elm Mott, Texas with an 8,000 square foot facility and a mobile fleet dispatched within a 50-mile radius of Waco. The Price family's four master technicians repair air conditioning, slide outs, leveling systems, water heaters, furnaces, water pumps, refrigerators, awnings, slide toppers, windows, toilets, grey and black tanks, electrical, converters, inverters, plumbing, roofs and floors, and the shop stocks new, used and obsolete RV parts. It works with insurance claims and lists 24 hour service every day with an emergency service number.",  "g": [
+ {  "n": "RV Hero Service & Repair",  "c": "Elm Mott, TX",  "p": "(254) 495-5050",  "u": "https://www.rvhero.com/",  "t": "both",  "e": true,  "r": false,  "d": "RV Hero Service & Repair is a family owned RV shop at 1064 N McLennan Dr, Suite 101 in Elm Mott, Texas with an 8,000 square foot facility and a mobile fleet dispatched within a 50-mile radius of Waco. The Price family's four master technicians repair air conditioning, slide outs, leveling systems, water heaters, furnaces, water pumps, refrigerators, awnings, slide toppers, windows, toilets, gray and black tanks, electrical, converters, inverters, plumbing, roofs and floors, and the shop stocks new, used and obsolete RV parts. It works with insurance claims and lists 24 hour service every day with an emergency service number.",  "g": [
    "RV-specific",
    "in shop service",
    "mobile service",
@@ -1443,7 +1443,7 @@ window.RV_LISTINGS_TX = [
    "rv repair"
   ],  "base": "liberty hill",  "areas": [],  "region": "Austin, TX",  "spec": "mobile RV repair",  "reg": "central-tx"
  },
- {  "n": "Stache Wagon Mobile RV Service",  "c": "Kyle, TX",  "p": "737-265-3555",  "u": "https://stachewagon.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Licensed, insured and bonded mobile RV repair business based in Hays County and run by certified techs, serving a 60 mile radius around Kyle and travelling farther for an additional fee. It brings repairs to the customer's site with no towing, covering AC, water heaters, electrical, slide-outs, appliances and roof work, and performs warranty repair and insurance claim work. After-hours emergency appointments are available including holidays.",  "g": [
+ {  "n": "Stache Wagon Mobile RV Service",  "c": "Kyle, TX",  "p": "737-265-3555",  "u": "https://stachewagon.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Licensed, insured and bonded mobile RV repair business based in Hays County and run by certified techs, serving a 60 mile radius around Kyle and traveling farther for an additional fee. It brings repairs to the customer's site with no towing, covering AC, water heaters, electrical, slide-outs, appliances and roof work, and performs warranty repair and insurance claim work. After-hours emergency appointments are available including holidays.",  "g": [
    "mobile",
    "rv repair",
    "warranty"

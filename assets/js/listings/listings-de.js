@@ -6,7 +6,7 @@ window.RV_LISTINGS_DE = [
    "mobile tech"
   ],  "base": "saint georges",  "areas": [],  "region": "Top Half of Delaware, North Eastern Maryland, and Southern New Jersey",  "spec": null,  "reg": "northern-de"
  },
- {  "n": "The RV Shop",  "c": "New Castle, DE",  "p": "(302) 656-5535",  "u": "https://thervshop.com/",  "t": "both",  "e": false,  "r": false,  "d": "The RV Shop is an RV repair centre in New Castle, Delaware, in business more than 30 years, with a second facility opened in Laurel, DE in 2026. It offers both in-shop and mobile RV repair across Delaware, Pennsylvania, Maryland and New Jersey. Its services include A/C and appliance repair, awning and roof repair, electrical and plumbing work, generator service, suspension repair, collision and paint services and warranty repairs. It runs an 80,000-square-foot facility staffed by certified technicians.",  "g": [
+ {  "n": "The RV Shop",  "c": "New Castle, DE",  "p": "(302) 656-5535",  "u": "https://thervshop.com/",  "t": "both",  "e": false,  "r": false,  "d": "The RV Shop is an RV repair center in New Castle, Delaware, in business more than 30 years, with a second facility opened in Laurel, DE in 2026. It offers both in-shop and mobile RV repair across Delaware, Pennsylvania, Maryland and New Jersey. Its services include A/C and appliance repair, awning and roof repair, electrical and plumbing work, generator service, suspension repair, collision and paint services and warranty repairs. It runs an 80,000-square-foot facility staffed by certified technicians.",  "g": [
    "service center",
    "mobile tech",
    "body shop"
@@ -15,7 +15,7 @@ window.RV_LISTINGS_DE = [
    "laurel"
   ],  "region": null,  "spec": null,  "reg": "northern-de"
  },
- {  "n": "East Coast Campers & More",  "c": "Frankford, DE",  "p": "302-927-0541",  "u": "https://eastcoastcampers.com/service-parts/",  "t": "both",  "e": false,  "r": false,  "d": "East Coast Campers & More is an RV dealer with a service centre and parts department in Frankford, Delaware, at the corner of Rt. 113 and Parker Road. Its service team repairs and restores RVs, campers and trailers and covers mechanical adjustments, electrical systems, plumbing, roof repair and slide-out troubleshooting. It runs three Mobile RV Medic service vehicles that come to the customer's location anywhere on the Eastern Shore. It states it has the largest RV parts inventory on the Eastern Shore.",  "g": [
+ {  "n": "East Coast Campers & More",  "c": "Frankford, DE",  "p": "302-927-0541",  "u": "https://eastcoastcampers.com/service-parts/",  "t": "both",  "e": false,  "r": false,  "d": "East Coast Campers & More is an RV dealer with a service center and parts department in Frankford, Delaware, at the corner of Rt. 113 and Parker Road. Its service team repairs and restores RVs, campers and trailers and covers mechanical adjustments, electrical systems, plumbing, roof repair and slide-out troubleshooting. It runs three Mobile RV Medic service vehicles that come to the customer's location anywhere on the Eastern Shore. It states it has the largest RV parts inventory on the Eastern Shore.",  "g": [
    "service center",
    "mobile tech"
   ],  "base": "frankford",  "areas": [],  "region": "the Eastern Shore",  "spec": null,  "reg": "southern-de"
@@ -24,7 +24,7 @@ window.RV_LISTINGS_DE = [
    "service center"
   ],  "base": "smyrna",  "areas": [],  "region": null,  "spec": null,  "reg": "northern-de"
  },
- {  "n": "Delmarva RV Center",  "c": "Milford, DE",  "p": "302-212-4299",  "u": "https://www.delmarvarvcenter.com/rv-service-dover-de",  "t": "center",  "e": false,  "r": false,  "d": "Delmarva RV Center is an RV dealer service operation with two Delaware locations and a 12,000-square-foot service centre. It provides RV service and repair near Dover with factory-trained technicians and advanced diagnostics. It handles preventive maintenance, appliance diagnostics and repair, plumbing and water systems, exterior sealant maintenance, walkaround inspections and insurance repairs and rebuilds. It services travel trailers, fifth wheels and motorhomes of any make or model.",  "g": [
+ {  "n": "Delmarva RV Center",  "c": "Milford, DE",  "p": "302-212-4299",  "u": "https://www.delmarvarvcenter.com/rv-service-dover-de",  "t": "center",  "e": false,  "r": false,  "d": "Delmarva RV Center is an RV dealer service operation with two Delaware locations and a 12,000-square-foot service center. It provides RV service and repair near Dover with factory-trained technicians and advanced diagnostics. It handles preventive maintenance, appliance diagnostics and repair, plumbing and water systems, exterior sealant maintenance, walkaround inspections and insurance repairs and rebuilds. It services travel trailers, fifth wheels and motorhomes of any make or model.",  "g": [
    "service center"
   ],  "base": "milford",  "areas": [
    "dover",

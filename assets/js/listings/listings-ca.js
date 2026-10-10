@@ -94,9 +94,9 @@ window.RV_LISTINGS_CA = [
    "yuba city"
   ],  "g": [
    "Mobile only",
-   "Forest River authorised",
-   "Keystone authorised"
-  ],  "d": "Mobile RV and trailer repairs, and an authorised mobile repair service for Forest River and Keystone, handling dealer recalls and most warranty companies. Do not work on bearings, brakes, chassis, engines or fibreglass. Monday to Friday 8:30 to 5.",  "reg": "valley-north-bay"
+   "Forest River authorized",
+   "Keystone authorized"
+  ],  "d": "Mobile RV and trailer repairs, and an authorized mobile repair service for Forest River and Keystone, handling dealer recalls and most warranty companies. Do not work on bearings, brakes, chassis, engines or fiberglass. Monday to Friday 8:30 to 5.",  "reg": "valley-north-bay"
  },
  {  "n": "Ron's R.V. Service",  "base": "chico",  "c": "Chico",  "region": "Butte County",  "p": "530-345-3007",  "u": "https://ronsrvservice.com/",  "t": "center",  "e": false,  "areas": [
    "chico"
@@ -104,7 +104,7 @@ window.RV_LISTINGS_CA = [
    "Roof air conditioning",
    "Warranty facility",
    "Collision repair"
-  ],  "d": "Roof air conditioning service and sales, appliance repair as an authorised warranty facility, awnings, extended warranty work, collision repair and structural maintenance on metal siding, rubber roofing, and satellite installation. Monday to Thursday 8 to 5, Friday 8 to 3.",  "reg": "valley-north-bay"
+  ],  "d": "Roof air conditioning service and sales, appliance repair as an authorized warranty facility, awnings, extended warranty work, collision repair and structural maintenance on metal siding, rubber roofing, and satellite installation. Monday to Thursday 8 to 5, Friday 8 to 3.",  "reg": "valley-north-bay"
  },
  {  "n": "Chico Truck & RV",  "base": "chico",  "c": "Chico and the northern Sacramento Valley",  "region": "Butte County",  "p": "530-891-9225",  "u": "https://www.chicotruckandrv.com/service-and-repair/",  "t": "center",  "e": false,  "areas": [
    "chico",
@@ -237,7 +237,7 @@ window.RV_LISTINGS_CA = [
    "Mobile only",
    "Seven days",
    "Pre-purchase inspections"
-  ],  "d": "Mobile RV repair and maintenance: air conditioning, diagnostics, annual roof resealing and UV treatment, 12 and 115 volt electrical diagnosis and repair, solar and inverters, black, grey and fresh water plumbing, slides, roofing and awnings, leveling, axles and bearings, gas absorption refrigeration, furnace, cabinetry, and pre-purchase inspections. Open seven days 7 to 7.",  "reg": "valley-north-bay"
+  ],  "d": "Mobile RV repair and maintenance: air conditioning, diagnostics, annual roof resealing and UV treatment, 12 and 115 volt electrical diagnosis and repair, solar and inverters, black, gray and fresh water plumbing, slides, roofing and awnings, leveling, axles and bearings, gas absorption refrigeration, furnace, cabinetry, and pre-purchase inspections. Open seven days 7 to 7.",  "reg": "valley-north-bay"
  },
  {  "n": "McColloch's RV Repair",  "base": "sacramento",  "c": "Sacramento, Rocklin and Woodland",  "region": "Sacramento County",  "p": "916-929-3510",  "u": "https://sacramentotrailerrepair.com/rv-repair-rocklin-ca/",  "t": "center",  "e": false,  "areas": [
    "sacramento",
@@ -286,7 +286,7 @@ window.RV_LISTINGS_CA = [
    "AAA repair facility",
    "RVDA certified",
    "Collision"
-  ],  "d": "Complete RV repairs and collision services, RV appliances and RV plumbing. Authorised AAA repair facility with Onan, Dometic, Norcold and RVDA-certified technicians.",  "reg": "valley-north-bay"
+  ],  "d": "Complete RV repairs and collision services, RV appliances and RV plumbing. authorized AAA repair facility with Onan, Dometic, Norcold and RVDA-certified technicians.",  "reg": "valley-north-bay"
  },
  {  "n": "Blue Mountain Mobile RV Service and Repair",  "base": "placerville",  "c": "Placerville, El Dorado and Amador counties",  "region": "El Dorado County",  "p": "530-748-8337",  "u": "https://www.bluemountainrvrepair.com/",  "t": "mobile",  "e": false,  "areas": [
    "placerville",
@@ -1303,7 +1303,7 @@ window.RV_LISTINGS_CA = [
    "shop"
   ],  "base": "oceanside",  "areas": [],  "region": "San Diego County",  "spec": "Auto and RV repair shop",  "reg": "san-diego"
  },
- {  "n": "RV Revivals",  "c": "Alpine, CA",  "p": "(619)784-4631",  "u": "https://rvrevivals.com/services-1",  "t": "both",  "e": false,  "r": false,  "d": "RV Revivals is a family-run RV repair, installation and remodeling business based near Alpine in San Diego County. It repairs and remodels campers, motorhomes, trailers, fifth wheels, toy haulers and van conversions, handling air conditioning, appliances, awnings, bodywork and exterior paint, brakes, plumbing, flooring, grey and black water systems, HVAC, leveling jacks and lighting, and offers mobile service and same-day while-you-wait repair.",  "g": [
+ {  "n": "RV Revivals",  "c": "Alpine, CA",  "p": "(619)784-4631",  "u": "https://rvrevivals.com/services-1",  "t": "both",  "e": false,  "r": false,  "d": "RV Revivals is a family-run RV repair, installation and remodeling business based near Alpine in San Diego County. It repairs and remodels campers, motorhomes, trailers, fifth wheels, toy haulers and van conversions, handling air conditioning, appliances, awnings, bodywork and exterior paint, brakes, plumbing, flooring, gray and black water systems, HVAC, leveling jacks and lighting, and offers mobile service and same-day while-you-wait repair.",  "g": [
    "shop",
    "mobile"
   ],  "base": "alpine",  "areas": [],  "region": "San Diego County",  "spec": "RV repair and remodeling shop",  "reg": "san-diego"

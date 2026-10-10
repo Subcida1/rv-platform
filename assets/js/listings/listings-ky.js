@@ -16,7 +16,7 @@ window.RV_LISTINGS_KY = [
    "mobile tech"
   ],  "base": null,  "areas": [],  "region": "Central Kentucky",  "spec": null,  "reg": "bluegrass-ky"
  },
- {  "n": "Baxter Pro Services",  "c": "Central City, KY",  "p": "270-883-1265",  "u": "https://www.baxterproservices.com/services/rv-repairs",  "t": "mobile",  "e": false,  "r": false,  "d": "Baxter Pro Services is based in Central City and offers mobile RV, camper and fifth wheel repairs, travelling to the customer's location rather than requiring the unit to be transported. The owner is a registered RV technician through the RVTAA and trained at the National RV Training Academy in Athens, Texas. It repairs and maintains air conditioning and heating, electrical components, water pumps and plumbing, window and awning replacement, roof coating and sealing and appliances, and also offers mobile pressure washing and soft washing. It lists Bowling Green, Central City, Eddyville, Greenville, Henderson, Hopkinsville, Madisonville, Owensboro, Princeton and Russellville as service areas.",  "g": [
+ {  "n": "Baxter Pro Services",  "c": "Central City, KY",  "p": "270-883-1265",  "u": "https://www.baxterproservices.com/services/rv-repairs",  "t": "mobile",  "e": false,  "r": false,  "d": "Baxter Pro Services is based in Central City and offers mobile RV, camper and fifth wheel repairs, traveling to the customer's location rather than requiring the unit to be transported. The owner is a registered RV technician through the RVTAA and trained at the National RV Training Academy in Athens, Texas. It repairs and maintains air conditioning and heating, electrical components, water pumps and plumbing, window and awning replacement, roof coating and sealing and appliances, and also offers mobile pressure washing and soft washing. It lists Bowling Green, Central City, Eddyville, Greenville, Henderson, Hopkinsville, Madisonville, Owensboro, Princeton and Russellville as service areas.",  "g": [
    "mobile tech"
   ],  "base": "central city",  "areas": [
    "bowling green",
@@ -51,7 +51,7 @@ window.RV_LISTINGS_KY = [
    "florence"
   ],  "region": "Cincinnati Tri-State Area",  "spec": null,  "reg": "louisville-ky"
  },
- {  "n": "Redline Mobile RV Service",  "c": "Cadiz, KY",  "p": "270-206-1468",  "u": "https://redlinemobilerv.wixsite.com/redlinemobilervservi",  "t": "mobile",  "e": true,  "r": false,  "d": "Redline Mobile RV Service provides mobile RV repairs and maintenance, travelling to the customer around Cadiz and the surrounding area, including campgrounds in and around the Land Between the Lakes. It offers seasonal maintenance and minor to major repairs and says it is open Sunday through Saturday from 7:00am to 9:00pm, with emergency after-hours service available.",  "g": [
+ {  "n": "Redline Mobile RV Service",  "c": "Cadiz, KY",  "p": "270-206-1468",  "u": "https://redlinemobilerv.wixsite.com/redlinemobilervservi",  "t": "mobile",  "e": true,  "r": false,  "d": "Redline Mobile RV Service provides mobile RV repairs and maintenance, traveling to the customer around Cadiz and the surrounding area, including campgrounds in and around the Land Between the Lakes. It offers seasonal maintenance and minor to major repairs and says it is open Sunday through Saturday from 7:00am to 9:00pm, with emergency after-hours service available.",  "g": [
    "mobile tech",
    "emergency"
   ],  "base": "cadiz",  "areas": [

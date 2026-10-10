@@ -66,7 +66,7 @@ window.RV_LISTINGS_MO = [
    "emergency"
   ],  "base": null,  "areas": [],  "region": "Lake of the Ozarks",  "spec": "As a mobile RV technician, there are some things that I cannot help with or don't have training on. List includes: generators, Aqua-Hot, replacing floors/carpentry, rebuilding slides, roof replacements, body damage, insurance quotes, any large multi-day projects.",  "reg": "lake-ozarks-mo"
  },
- {  "n": "RV Mobile Repair LLC",  "c": "Raytown, MO",  "p": "816-699-9825",  "u": "https://rv-mobilerepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "RV Mobile Repair LLC is a mobile RV repair business based in Raytown. Its technicians are trained as Registered Technicians through the National RV Academy and endorsed by the RV Technicians Association of America. Services include preventive maintenance, winterization and de-winterization, black and grey tank cleaning, A/C, furnace and water heater servicing, plumbing, weather sealing and awning replacement.",  "g": [
+ {  "n": "RV Mobile Repair LLC",  "c": "Raytown, MO",  "p": "816-699-9825",  "u": "https://rv-mobilerepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "RV Mobile Repair LLC is a mobile RV repair business based in Raytown. Its technicians are trained as Registered Technicians through the National RV Academy and endorsed by the RV Technicians Association of America. Services include preventive maintenance, winterization and de-winterization, black and gray tank cleaning, A/C, furnace and water heater servicing, plumbing, weather sealing and awning replacement.",  "g": [
    "mobile"
   ],  "base": "raytown",  "areas": [
    "raytown"

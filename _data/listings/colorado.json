@@ -185,7 +185,7 @@
       "t": "mobile",
       "e": false,
       "r": false,
-      "d": "SW Mobile RV Repair is a mobile RV service that comes to the customer with no shop drop-off. The site says it serves Colorado Springs, Pueblo, Monument, Woodland Park, Castle Rock and surrounding areas across southern Colorado. It states it does not perform drivetrain or chassis mechanical work on Class A, B or C motorhomes and does not service black or grey tanks.",
+      "d": "SW Mobile RV Repair is a mobile RV service that comes to the customer with no shop drop-off. The site says it serves Colorado Springs, Pueblo, Monument, Woodland Park, Castle Rock and surrounding areas across southern Colorado. It states it does not perform drivetrain or chassis mechanical work on Class A, B or C motorhomes and does not service black or gray tanks.",
       "g": [
         "mobile RV repair",
         "electrical",
@@ -203,7 +203,7 @@
         "Castle Rock"
       ],
       "region": "Southern Colorado",
-      "spec": "Does not perform drivetrain or chassis mechanical work on Class A, B, or C motorhomes; does not service black or grey tanks.",
+      "spec": "Does not perform drivetrain or chassis mechanical work on Class A, B, or C motorhomes; does not service black or gray tanks.",
       "evidence": {
         "checked": "https://swmrv.com/",
         "phone_quote": "720-588-3660 (7205883660)",

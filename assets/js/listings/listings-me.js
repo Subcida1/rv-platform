@@ -74,7 +74,7 @@ window.RV_LISTINGS_ME = [
    "plumbing"
   ],  "base": null,  "areas": [],  "region": "Mount Desert Island / Downeast",  "spec": null,  "reg": "downeast-maine"
  },
- {  "n": "Helping Hand RV Repair",  "c": "Bar Harbor, ME",  "p": "740-604-0810",  "u": "https://www.helpinghandrvrepair.com/",  "t": "mobile",  "e": true,  "r": false,  "d": "Mobile RV repair run by Steven Dixon, an electrical technician of 12+ years, stationed in Bar Harbor and surrounding areas May 21 to October 1, 2026. Services include preventative maintenance (ACs, water heaters, bearings), black/grey tank jetting, plumbing and electrical issues, emergency repairs, slide and awning work, and installations and replacements.",  "g": [
+ {  "n": "Helping Hand RV Repair",  "c": "Bar Harbor, ME",  "p": "740-604-0810",  "u": "https://www.helpinghandrvrepair.com/",  "t": "mobile",  "e": true,  "r": false,  "d": "Mobile RV repair run by Steven Dixon, an electrical technician of 12+ years, stationed in Bar Harbor and surrounding areas May 21 to October 1, 2026. Services include preventative maintenance (ACs, water heaters, bearings), black/gray tank jetting, plumbing and electrical issues, emergency repairs, slide and awning work, and installations and replacements.",  "g": [
    "mobile tech",
    "emergency",
    "plumbing",

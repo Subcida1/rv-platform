@@ -124,7 +124,7 @@ window.RV_LISTINGS_KS = [
    "salina"
   ],  "region": null,  "spec": null,  "reg": "north-central-ks"
  },
- {  "n": "Four Seasons RV",  "c": "Abilene, KS",  "p": "785-598-2221",  "u": "https://www.4seasonsrv.com/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "Four Seasons RV runs RV service and repair centres in Abilene and the Wichita area in Andover, at 2502 Mink Rd in Abilene (Exit 281 on I-70) and 1523 W Ledgerwood Rd in Andover. The site says the experienced team helps Kansas RV owners handle routine maintenance, diagnose problems and complete repairs, from plumbing and electrical issues to appliance repairs, roof inspections, winterization and general camper maintenance. It states it proudly serves campers from Abilene, Wichita, Andover, Salina, Junction City and surrounding communities throughout Central Kansas.",  "g": [
+ {  "n": "Four Seasons RV",  "c": "Abilene, KS",  "p": "785-598-2221",  "u": "https://www.4seasonsrv.com/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "Four Seasons RV runs RV service and repair centers in Abilene and the Wichita area in Andover, at 2502 Mink Rd in Abilene (Exit 281 on I-70) and 1523 W Ledgerwood Rd in Andover. The site says the experienced team helps Kansas RV owners handle routine maintenance, diagnose problems and complete repairs, from plumbing and electrical issues to appliance repairs, roof inspections, winterization and general camper maintenance. It states it proudly serves campers from Abilene, Wichita, Andover, Salina, Junction City and surrounding communities throughout Central Kansas.",  "g": [
    "service center"
   ],  "base": "abilene",  "areas": [
    "abilene",
@@ -196,7 +196,7 @@ window.RV_LISTINGS_KS = [
    "kansas city"
   ],  "region": null,  "spec": null,  "reg": "northeast-ks"
  },
- {  "n": "Blue Compass RV",  "c": "Park City, KS",  "p": "(316) 358-0008",  "u": "https://www.bluecompassrv.com/locations/kansas/park-city/service",  "t": "center",  "e": false,  "r": true,  "d": "Blue Compass RV Park City Service Center at 8550 N Hartman Arena Drive in Park City is an RV dealership service department open Monday to Saturday 8am to 5pm and serving Wichita-area and travelling RV owners. The site lists routine maintenance, an engine and transmission section covering chassis service, sway bars, air suspension and shock absorbers, electrical systems, plumbing, roof and exterior, pre-purchase inspections and HVAC work. It also lists collision repair and body work, and says every RV gets a free multi-point inspection.",  "g": [
+ {  "n": "Blue Compass RV",  "c": "Park City, KS",  "p": "(316) 358-0008",  "u": "https://www.bluecompassrv.com/locations/kansas/park-city/service",  "t": "center",  "e": false,  "r": true,  "d": "Blue Compass RV Park City Service Center at 8550 N Hartman Arena Drive in Park City is an RV dealership service department open Monday to Saturday 8am to 5pm and serving Wichita-area and traveling RV owners. The site lists routine maintenance, an engine and transmission section covering chassis service, sway bars, air suspension and shock absorbers, electrical systems, plumbing, roof and exterior, pre-purchase inspections and HVAC work. It also lists collision repair and body work, and says every RV gets a free multi-point inspection.",  "g": [
    "service center",
    "body shop"
   ],  "base": "park city",  "areas": [

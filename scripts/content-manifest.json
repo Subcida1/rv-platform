@@ -393,9 +393,9 @@
     "claims": "178ec4da901263e8"
   },
   "guides/freeze-damage-triage.html": {
-    "hash": "638a37179bd262b1",
+    "hash": "095b7658af523350",
     "status": "verified",
-    "verified_by": "2026-10-10 voice pass, Ty's package section 10: one contraction (will not -> won't). No fact changed.",
+    "verified_by": "2026-10-10 voice pass, Ty's package: British spellings to American, collective-noun agreement to singular, and phrasing only. No fact, number or interval changed.",
     "verified_at": "2026-10-10",
     "sources": [],
     "spec": "_specs/freeze-damage-triage.md",
@@ -540,9 +540,9 @@
     "claims_date": "Oct 2, 2026"
   },
   "guides/rv-furnace-not-working.html": {
-    "hash": "2d3027e1ccb377e0",
+    "hash": "33f83de38d91aeb1",
     "status": "verified",
-    "verified_by": "2026-10-10 voice pass, Ty's package guides batch: British spellings to American, collective-noun agreement to singular, and phrasing only. No fact, number or interval changed.",
+    "verified_by": "2026-10-10 voice pass, Ty's package: British spellings to American, collective-noun agreement to singular, and phrasing only. No fact, number or interval changed.",
     "verified_at": "2026-10-10",
     "sources": [],
     "spec": "_specs/rv-furnace-not-working.md",
@@ -550,9 +550,9 @@
     "claims": "89a67693ba48f388"
   },
   "guides/rv-fuse-keeps-blowing.html": {
-    "hash": "d62236f22eb79ed3",
+    "hash": "c3903cdaf2eabb84",
     "status": "verified",
-    "verified_by": "2026-10-10 voice pass, Ty's package guides batch: British spellings to American, collective-noun agreement to singular, and phrasing only. No fact, number or interval changed.",
+    "verified_by": "2026-10-10 voice pass, Ty's package: British spellings to American, collective-noun agreement to singular, and phrasing only. No fact, number or interval changed.",
     "verified_at": "2026-10-10",
     "sources": [],
     "spec": "_specs/rv-fuse-keeps-blowing.md",
@@ -587,9 +587,9 @@
     "claims_date": "Oct 4, 2026"
   },
   "guides/rv-leveling-jacks-not-working.html": {
-    "hash": "96ea1470ca6bad83",
+    "hash": "cbc32f1c3eefc6d9",
     "status": "verified",
-    "verified_by": "2026-10-10 voice pass, Ty's package guides batch: British spellings to American, collective-noun agreement to singular, and phrasing only. No fact, number or interval changed.",
+    "verified_by": "2026-10-10 voice pass, Ty's package: British spellings to American, collective-noun agreement to singular, and phrasing only. No fact, number or interval changed.",
     "verified_at": "2026-10-10",
     "sources": [],
     "spec": "_specs/rv-leveling-jacks-not-working.md",
@@ -597,9 +597,9 @@
     "claims": "1880dbae7019e467"
   },
   "guides/rv-lights-not-working.html": {
-    "hash": "38f175cb6fe9a182",
+    "hash": "dfa7f02293a22f0c",
     "status": "verified",
-    "verified_by": "2026-10-10 voice pass, Ty's package guides batch: British spellings to American, collective-noun agreement to singular, and phrasing only. No fact, number or interval changed.",
+    "verified_by": "2026-10-10 voice pass, Ty's package: British spellings to American, collective-noun agreement to singular, and phrasing only. No fact, number or interval changed.",
     "verified_at": "2026-10-10",
     "sources": [],
     "spec": "_specs/rv-lights-not-working.md",
@@ -623,9 +623,9 @@
     "sources": []
   },
   "guides/rv-outlets-not-working.html": {
-    "hash": "7ec1bc691f00f2ea",
+    "hash": "2f5bda1fc623e10e",
     "status": "verified",
-    "verified_by": "Fresh-context independent review 2026-10-10: 8 findings (1 injury, 1 wrong fact, 3 sourcing, 1 voice, 2 style). All applied as recommended - flag-injury callouts added, a paraphrase restored to Leviton's verbatim wording, the unsourced Xantrex 'failsafe' framing and breaker ratings removed, and the schema date reconciled with the byline.",
+    "verified_by": "2026-10-10 voice pass, Ty's package: British spellings to American, collective-noun agreement to singular, and phrasing only. No fact, number or interval changed.",
     "verified_at": "2026-10-10",
     "sources": [],
     "spec": "_specs/rv-outlets-not-working.md",
@@ -677,9 +677,9 @@
     "claims_date": "Oct 2, 2026"
   },
   "guides/rv-roof-leak-repair.html": {
-    "hash": "cb7946f6c7cde2c7",
+    "hash": "54cf10e6eabbef5f",
     "status": "verified",
-    "verified_by": "2026-10-10 voice pass, Ty's package guides batch: British spellings to American, collective-noun agreement to singular, and phrasing only. No fact, number or interval changed.",
+    "verified_by": "2026-10-10 voice pass, Ty's package: British spellings to American, collective-noun agreement to singular, and phrasing only. No fact, number or interval changed.",
     "verified_at": "2026-10-10",
     "sources": [],
     "spec": "_specs/rv-roof-leak-repair.md",
@@ -718,9 +718,9 @@
     "claims_date": "Oct 4, 2026"
   },
   "guides/rv-solar-not-charging.html": {
-    "hash": "7f5b65efcf6794ec",
+    "hash": "29c281b2571bd5df",
     "status": "verified",
-    "verified_by": "2026-10-10 voice pass, Ty's package guides batch: British spellings to American, collective-noun agreement to singular, and phrasing only. No fact, number or interval changed.",
+    "verified_by": "2026-10-10 voice pass, Ty's package: British spellings to American, collective-noun agreement to singular, and phrasing only. No fact, number or interval changed.",
     "verified_at": "2026-10-10",
     "sources": [],
     "spec": "_specs/rv-solar-not-charging.md",

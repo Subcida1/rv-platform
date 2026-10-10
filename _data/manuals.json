@@ -1621,7 +1621,7 @@
       "checked": "2026-09-21"
     },
     {
-      "brand": "Greystone",
+      "brand": "Graystone",
       "host": "Lippert",
       "system": "kitchen-and-appliances",
       "kind": "library",
@@ -1630,8 +1630,8 @@
         "service-and-repair",
         "spec-sheet"
       ],
-      "title": "Greystone range documentation",
-      "url": "https://support.lci1.com/greystone-ranges",
+      "title": "Graystone range documentation",
+      "url": "https://support.lci1.com/graystone-ranges",
       "key": "product size or model",
       "covers": "17 and 21 inch RV gas ranges with instruction, quick reference and service docs",
       "gate": "none",
@@ -2324,7 +2324,7 @@
       "structure": "revision-dated",
       "years": "2013 to 2026",
       "gate": "none",
-      "note": "manuals are per model line and revised by date, not labelled by model year",
+      "note": "manuals are per model line and revised by date, not labeled by model year",
       "status": "verified",
       "warranty_kind": "page",
       "warranty_url": "https://www.granddesignrv.com/owners/resources/owners-manuals",
@@ -6631,7 +6631,7 @@
         "travel-trailer"
       ],
       "years": "2018-2027",
-      "url": "https://forestriverinc.help/#/forestriverrv/guide/2027/4246-cherokee-grey-wolf/browse",
+      "url": "https://forestriverinc.help/#/forestriverrv/guide/2027/4246-cherokee-gray-wolf/browse",
       "link_stability": "library_page_only",
       "parts_url": null,
       "parts_serves": "not found - no public parts catalog; parts through Forest River dealer network only",
@@ -9131,7 +9131,7 @@
       "parts_url": "https://www.winnebago.com/owners/owner-resources/parts/parts-catalog",
       "parts_serves": "Winnebago Cortona parts portal (shared)",
       "accessories_url": null,
-      "other_docs": "\"Spirit - Class A\" and \"Spirit - Class C\" are labelled separately on the 1991 page; \"Spirit Silver\" 2014-2016",
+      "other_docs": "\"Spirit - Class A\" and \"Spirit - Class C\" are labeled separately on the 1991 page; \"Spirit Silver\" 2014-2016",
       "gate": "none",
       "evidence": "\"Itasca\" heading; link \"Spirit\" (2017 Operator Manuals)",
       "check": "both",
@@ -9331,7 +9331,7 @@
     },
     {
       "brand": "Jayco",
-      "model": "Greyhawk",
+      "model": "Grayhawk",
       "segments": [
         "class-c"
       ],
@@ -9343,7 +9343,7 @@
       "accessories_url": "https://www.jayco.com/brochures/",
       "other_docs": "warranty guide",
       "gate": "none",
-      "evidence": "\"2021 Greyhawk/Greyhawk Prestige Owner's Manual\"",
+      "evidence": "\"2021 Grayhawk/Grayhawk Prestige Owner's Manual\"",
       "check": "http",
       "source": "round4-mid-towables.md",
       "status": "verified"
@@ -15085,7 +15085,7 @@
       "checked": "2026-09-21"
     },
     {
-      "source": "Transport Canada recalls programme",
+      "source": "Transport Canada recalls program",
       "section": "canada",
       "what": "The program page that leads into that database and sets out what it covers.",
       "url": "https://tc.canada.ca/en/road-transportation/defects-recalls-vehicles-tires-child-car-seats",

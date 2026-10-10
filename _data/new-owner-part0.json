@@ -20,7 +20,7 @@
       },
       {
        "kind": "p",
-       "html": "Dump the black tank first, then the grey, so the grey water rinses the hose."
+       "html": "Dump the black tank first, then the gray, so the gray water rinses the hose."
       }
      ]
     },
@@ -72,7 +72,7 @@
      "blocks": [
       {
        "kind": "p",
-       "html": "Plugged in is not the same as stored. Power keeps the battery charged and can run a dehumidifier, but the plumbing still has to be winterised and the inside still has to breathe, because a closed RV collects condensation all winter whether or not it has power. See <a href=\"#storage\">storing an RV</a> and <a href=\"#winterising\">winterising</a> for the two halves of it."
+       "html": "Plugged in is not the same as stored. Power keeps the battery charged and can run a dehumidifier, but the plumbing still has to be winterized and the inside still has to breathe, because a closed RV collects condensation all winter whether or not it has power. See <a href=\"#storage\">storing an RV</a> and <a href=\"#winterizing\">winterizing</a> for the two halves of it."
       }
      ]
     },
@@ -94,7 +94,7 @@
      "blocks": [
       {
        "kind": "p",
-       "html": "Almost always the hose. A garden hose is not made to carry drinking water and it leaves a plastic or rubber taste, so use a hose labelled for potable water, and keep a second hose for the black-tank flush. See <a href=\"#fresh-water\">fresh water</a>."
+       "html": "Almost always the hose. A garden hose is not made to carry drinking water and it leaves a plastic or rubber taste, so use a hose labeled for potable water, and keep a second hose for the black-tank flush. See <a href=\"#fresh-water\">fresh water</a>."
       }
      ]
     },
@@ -138,7 +138,7 @@
      "blocks": [
       {
        "kind": "p",
-       "html": "It depends on the tank. Suburban steel tanks use one and want it replaced about yearly; Atwood and Dometic aluminium tanks do not use one at all, and fitting one can damage the tank. See <a href=\"#appliances\">the appliances</a>."
+       "html": "It depends on the tank. Suburban steel tanks use one and want it replaced about yearly; Atwood and Dometic aluminum tanks do not use one at all, and fitting one can damage the tank. See <a href=\"#appliances\">the appliances</a>."
       }
      ]
     },
@@ -182,7 +182,7 @@
      "blocks": [
       {
        "kind": "p",
-       "html": "Yes, every time, and even on level ground. They go in before the stabilisers or the levelers rather than after, and a motorhome on its jacks is still chocked. See <a href=\"#first-night\">the first night</a>."
+       "html": "Yes, every time, and even on level ground. They go in before the stabilizers or the levelers rather than after, and a motorhome on its jacks is still chocked. See <a href=\"#first-night\">the first night</a>."
       }
      ]
     },
@@ -198,13 +198,13 @@
      ]
     },
     {
-     "id": "q-how-to-winterise",
-     "title": "How do I winterise an RV?",
+     "id": "q-how-to-winterize",
+     "title": "How do I winterize an RV?",
      "open": false,
      "blocks": [
       {
        "kind": "p",
-       "html": "Two ways, and both do the same job: getting every drop of water out of a system that will freeze and split. Either blow the lines out with air, or fill them with antifreeze. A winterising job that stops halfway is what still freezes. See <a href=\"#winterising\">winterising</a>."
+       "html": "Two ways, and both do the same job: getting every drop of water out of a system that will freeze and split. Either blow the lines out with air, or fill them with antifreeze. A winterizing job that stops halfway is what still freezes. See <a href=\"#winterizing\">winterizing</a>."
       }
      ]
     },
@@ -226,7 +226,7 @@
      "blocks": [
       {
        "kind": "p",
-       "html": "Connect and lock the hose at both ends first. Then open the black valve and let it drain, open the grey to rinse the hose, and close both. Wear gloves, fit a clear elbow, and keep the sewer hose clear of anything that touches drinking water. See <a href=\"#dumping-order\">dumping in the right order</a>."
+       "html": "Connect and lock the hose at both ends first. Then open the black valve and let it drain, open the gray to rinse the hose, and close both. Wear gloves, fit a clear elbow, and keep the sewer hose clear of anything that touches drinking water. See <a href=\"#dumping-order\">dumping in the right order</a>."
       }
      ]
     },
@@ -286,13 +286,13 @@
      ]
     },
     {
-     "id": "q-level-with-stabilisers",
-     "title": "Should I level the RV with the stabilisers?",
+     "id": "q-level-with-stabilizers",
+     "title": "Should I level the RV with the stabilizers?",
      "open": false,
      "blocks": [
       {
        "kind": "p",
-       "html": "No. Stabilisers steady the RV, they do not carry it. Level with a jack or the leveling system first, then bring the stabilisers down to stop the rocking. See <a href=\"#leveling-and-stabilising\">leveling and stabilising</a>."
+       "html": "No. stabilizers steady the RV, they do not carry it. Level with a jack or the leveling system first, then bring the stabilizers down to stop the rocking. See <a href=\"#leveling-and-stabilizing\">leveling and stabilizing</a>."
       }
      ]
     },
@@ -303,7 +303,7 @@
      "blocks": [
       {
        "kind": "p",
-       "html": "Not always. A filter helps with chlorine, dirt and taste, but a whole-RV filter is not guaranteed to remove the taste and odour of iron or sulfur, and it should be changed every 6 to 12 months. See <a href=\"#fresh-water\">fresh water</a>."
+       "html": "Not always. A filter helps with chlorine, dirt and taste, but a whole-RV filter is not guaranteed to remove the taste and odor of iron or sulfur, and it should be changed every 6 to 12 months. See <a href=\"#fresh-water\">fresh water</a>."
       }
      ]
     },
@@ -325,18 +325,18 @@
      "blocks": [
       {
        "kind": "p",
-       "html": "Usually not the tank. A dried-out P-trap or a black valve left open is the common cause. See <a href=\"#grey-tank-smells\">sewer smell inside</a>."
+       "html": "Usually not the tank. A dried-out P-trap or a black valve left open is the common cause. See <a href=\"#gray-tank-smells\">sewer smell inside</a>."
       }
      ]
     },
     {
-     "id": "q-grey-valve-open",
-     "title": "Can I leave the grey tank valve open?",
+     "id": "q-gray-valve-open",
+     "title": "Can I leave the gray tank valve open?",
      "open": false,
      "blocks": [
       {
        "kind": "p",
-       "html": "Grey is a different case, and some makers and parks allow it to stay open. Black never does: leaving it open lets the liquid drain away and leaves the solids to dry and harden in the tank. See <a href=\"#dumping-order\">dumping in the right order</a>."
+       "html": "Gray is a different case, and some makers and parks allow it to stay open. Black never does: leaving it open lets the liquid drain away and leaves the solids to dry and harden in the tank. See <a href=\"#dumping-order\">dumping in the right order</a>."
       }
      ]
     },

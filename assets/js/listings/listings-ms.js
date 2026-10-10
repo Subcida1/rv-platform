@@ -60,11 +60,11 @@ window.RV_LISTINGS_MS = [
    "body"
   ],  "base": "jackson",  "areas": [],  "region": null,  "spec": null,  "reg": "central-ms"
  },
- {  "n": "Lakeshore Custom RV",  "c": "Iuka, MS",  "p": "662-273-1003",  "u": "https://lakeshorecustomrv.com/",  "t": "center",  "e": false,  "r": false,  "d": "Lakeshore Custom RV is a customisation and repair shop in Iuka working on RVs. Its services page lists RV maintenance and service at $75 an hour, on-site pickup and return from Short Coleman Storage, and spring cleanup packages for campers and motorhomes that include electrical, battery, A/C, water and tire-pressure checks. It is an authorised Tiffin Motorhomes supplier and an authorised Safe-T-Plus and Sumo Springs dealer.",  "g": [
+ {  "n": "Lakeshore Custom RV",  "c": "Iuka, MS",  "p": "662-273-1003",  "u": "https://lakeshorecustomrv.com/",  "t": "center",  "e": false,  "r": false,  "d": "Lakeshore Custom RV is a customisation and repair shop in Iuka working on RVs. Its services page lists RV maintenance and service at $75 an hour, on-site pickup and return from Short Coleman Storage, and spring cleanup packages for campers and motorhomes that include electrical, battery, A/C, water and tire-pressure checks. It is an authorized Tiffin Motorhomes supplier and an authorized Safe-T-Plus and Sumo Springs dealer.",  "g": [
    "service center"
   ],  "base": "iuka",  "areas": [],  "region": null,  "spec": null,  "reg": "northeast-ms"
  },
- {  "n": "Pro Finishes",  "c": "Belmont, MS",  "p": "256.224.8447",  "u": "https://rvprofinishes.com/",  "t": "center",  "e": false,  "r": false,  "d": "Pro Finishes is an RV body shop in Belmont owned by Ricky McGee, with 15 or more years of experience. It specialises in RV collision repair, paint repair and scratch removal, plus paint correction, paint upgrades and ceramic coating, and it paints the topside of the roof and stripes inside slideout endwalls. It is an authorised True Toppers installer and a Bob Moses Ceramic Coating franchise location.",  "g": [
+ {  "n": "Pro Finishes",  "c": "Belmont, MS",  "p": "256.224.8447",  "u": "https://rvprofinishes.com/",  "t": "center",  "e": false,  "r": false,  "d": "Pro Finishes is an RV body shop in Belmont owned by Ricky McGee, with 15 or more years of experience. It specialises in RV collision repair, paint repair and scratch removal, plus paint correction, paint upgrades and ceramic coating, and it paints the topside of the roof and stripes inside slideout endwalls. It is an authorized True Toppers installer and a Bob Moses Ceramic Coating franchise location.",  "g": [
    "body"
   ],  "base": "belmont",  "areas": [],  "region": null,  "spec": null,  "reg": "northeast-ms"
  },

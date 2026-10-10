@@ -8,7 +8,7 @@ window.RV_LISTINGS_MD = [
    "dover"
   ],  "region": "the Eastern Shore",  "spec": null,  "reg": "eastern-shore-md"
  },
- {  "n": "ARC Mobile RV Service & Repair LLC",  "c": "Delmarva Peninsula, MD",  "p": "(667) 266-0547",  "u": "https://arcmobilervservice.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "ARC Mobile RV Service & Repair LLC is a mobile RV service and repair business now servicing the Delmarva Peninsula. Its technician is registered and certified through NRVTA with over 10 years of electrical experience. It works on propane, water systems, heating, A/C, electrical, mechanical and solar systems and everyday maintenance. It offers a 90-day labour guarantee and sources parts only from reputable brands.",  "g": [
+ {  "n": "ARC Mobile RV Service & Repair LLC",  "c": "Delmarva Peninsula, MD",  "p": "(667) 266-0547",  "u": "https://arcmobilervservice.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "ARC Mobile RV Service & Repair LLC is a mobile RV service and repair business now servicing the Delmarva Peninsula. Its technician is registered and certified through NRVTA with over 10 years of electrical experience. It works on propane, water systems, heating, A/C, electrical, mechanical and solar systems and everyday maintenance. It offers a 90-day labor guarantee and sources parts only from reputable brands.",  "g": [
    "mobile tech"
   ],  "base": null,  "areas": [],  "region": "Delmarva Peninsula",  "spec": null,  "reg": "eastern-shore-md"
  },
@@ -50,7 +50,7 @@ window.RV_LISTINGS_MD = [
    "body shop"
   ],  "base": "pocomoke city",  "areas": [],  "region": "the Eastern Shore",  "spec": null,  "reg": "eastern-shore-md"
  },
- {  "n": "Potomac Mobile RV Services LLC",  "c": "La Plata, MD",  "p": "(301) 246-2082",  "u": "https://www.potomacmobilerv.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Potomac Mobile RV Services LLC is a mobile RV repair and maintenance business based in La Plata, Maryland. Its mobile RV technicians come to the customer instead of the customer bringing the RV to a service centre. Its service menu includes annual RV check-ups, AC/DC electrical system service, jacks and leveling systems, refrigerator service, air conditioner service, exterior service, LPG and propane systems, roof inspection, water heaters, batteries, furnaces and plumbing systems. It states its technicians are certified and that pricing is honest with no hidden fees.",  "g": [
+ {  "n": "Potomac Mobile RV Services LLC",  "c": "La Plata, MD",  "p": "(301) 246-2082",  "u": "https://www.potomacmobilerv.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Potomac Mobile RV Services LLC is a mobile RV repair and maintenance business based in La Plata, Maryland. Its mobile RV technicians come to the customer instead of the customer bringing the RV to a service center. Its service menu includes annual RV check-ups, AC/DC electrical system service, jacks and leveling systems, refrigerator service, air conditioner service, exterior service, LPG and propane systems, roof inspection, water heaters, batteries, furnaces and plumbing systems. It states its technicians are certified and that pricing is honest with no hidden fees.",  "g": [
    "mobile tech"
   ],  "base": "la plata",  "areas": [],  "region": null,  "spec": null,  "reg": "southern-md"
  },

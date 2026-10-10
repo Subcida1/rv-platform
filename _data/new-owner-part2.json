@@ -3,11 +3,11 @@
   {
    "id": "water-and-waste",
    "title": "Part 3: Water, waste and tanks",
-   "summary": "How the fresh, grey and black tanks work, how to read the panel, how to dump without clogging, where a sewer smell really comes from, and how to keep clean water and dry floors.",
+   "summary": "How the fresh, gray and black tanks work, how to read the panel, how to dump without clogging, where a sewer smell really comes from, and how to keep clean water and dry floors.",
    "sections": [
     {
      "id": "three-tanks",
-     "title": "RV holding tanks: fresh, grey and black explained",
+     "title": "RV holding tanks: fresh, gray and black explained",
      "open": true,
      "blocks": [
       {
@@ -28,7 +28,7 @@
          "Sinks, shower, toilet flush, drinking"
         ],
         [
-         "Grey",
+         "Gray",
          "Drain water from the sinks and the shower: soap, food scraps, grease, hair",
          "Holding used wash water until you dump"
         ],
@@ -46,7 +46,7 @@
       },
       {
        "kind": "p",
-       "html": "The two waste systems are separate. The grey-water system takes wastewater from the sinks and the shower. The black-water system takes sewage from the toilet. Each tank has its own control valve, and both drain through a common sewer hose."
+       "html": "The two waste systems are separate. The gray-water system takes wastewater from the sinks and the shower. The black-water system takes sewage from the toilet. Each tank has its own control valve, and both drain through a common sewer hose."
       },
       {
        "kind": "p",
@@ -54,11 +54,11 @@
       },
       {
        "kind": "p",
-       "html": "The distinction matters for two reasons. First, only black waste carries the clogging, odour, and septic hazards, so only the black tank needs the careful habits in the sections below. Second, most parks let you leave the grey valve open while you are parked, but almost none let you leave the black valve open."
+       "html": "The distinction matters for two reasons. First, only black waste carries the clogging, odor, and septic hazards, so only the black tank needs the careful habits in the sections below. Second, most parks let you leave the gray valve open while you are parked, but almost none let you leave the black valve open."
       },
       {
        "kind": "callout",
-       "html": "You can often leave the grey tank valve open while hooked to a sewer connection, but some parks require both valves closed at all times. Check the rule where you are parked."
+       "html": "You can often leave the gray tank valve open while hooked to a sewer connection, but some parks require both valves closed at all times. Check the rule where you are parked."
       }
      ]
     },
@@ -69,7 +69,7 @@
      "blocks": [
       {
        "kind": "p",
-       "html": "The wall panel is not a gauge. It is a set of lights that step up in thirds. The vertical columns for fresh, grey, and black water show fluid levels in roughly one-third increments. So the panel reads empty, one-third, two-thirds, or full. Treat it as a rough warning light, not a measurement."
+       "html": "The wall panel is not a gauge. It is a set of lights that step up in thirds. The vertical columns for fresh, gray, and black water show fluid levels in roughly one-third increments. So the panel reads empty, one-third, two-thirds, or full. Treat it as a rough warning light, not a measurement."
       },
       {
        "kind": "p",
@@ -77,7 +77,7 @@
       },
       {
        "kind": "p",
-       "html": "Tank sensors mainly fail because of a buildup of waste inside the tank. Failed electronics, broken or unattached connector wires, or failed reading boards can also cause misreads, but it is almost always thick, sticky waste built up in the tank. In black tanks that is human waste and dissolved or broken-down toilet paper. In grey tanks it is moulds and mildews growing in the hot, moist environment."
+       "html": "Tank sensors mainly fail because of a buildup of waste inside the tank. Failed electronics, broken or unattached connector wires, or failed reading boards can also cause misreads, but it is almost always thick, sticky waste built up in the tank. In black tanks that is human waste and dissolved or broken-down toilet paper. In gray tanks it is moulds and mildews growing in the hot, moist environment."
       },
       {
        "kind": "p",
@@ -108,7 +108,7 @@
       },
       {
        "kind": "p",
-       "html": "You also start the tank wet, before first use. Fill until there is at least one inch of solution directly under the toilet. The solution is water mixed with an odour-controlling chemical."
+       "html": "You also start the tank wet, before first use. Fill until there is at least one inch of solution directly under the toilet. The solution is water mixed with an odor-controlling chemical."
       },
       {
        "kind": "p",
@@ -124,7 +124,7 @@
       },
       {
        "kind": "callout",
-       "html": "There is no standard gallon figure for the black-tank pre-charge. Published figures are depths or descriptions: at least one inch of solution under the toilet, or enough water to cover the bottom of the tank so waste residue cannot harden. Wait until the tank is at least two thirds full before dumping it. Keep an inch of water in the bowl to stop tank odour entering the living space.<br><br>The widely repeated figure of five gallons is a starting rule, not a specification. A common method is to run the flush until it clears, close the black tank dump valve, then add at least five gallons of fresh water back into the tank. Some treatments are marketed at three to five gallons, and owners report anything from about five to ten gallons. The right number depends on the size of the tank."
+       "html": "There is no standard gallon figure for the black-tank pre-charge. Published figures are depths or descriptions: at least one inch of solution under the toilet, or enough water to cover the bottom of the tank so waste residue cannot harden. Wait until the tank is at least two thirds full before dumping it. Keep an inch of water in the bowl to stop tank odor entering the living space.<br><br>The widely repeated figure of five gallons is a starting rule, not a specification. A common method is to run the flush until it clears, close the black tank dump valve, then add at least five gallons of fresh water back into the tank. Some treatments are marketed at three to five gallons, and owners report anything from about five to ten gallons. The right number depends on the size of the tank."
       }
      ]
     },
@@ -162,7 +162,7 @@
      "blocks": [
       {
        "kind": "p",
-       "html": "A bottle sold for black tanks is usually one of three things: a deodoriser that masks or suppresses smell; an enzyme or bacterial treatment meant to break down waste and paper; or a formaldehyde-based steriliser, often called blue chemical, that kills the bacteria causing odour."
+       "html": "A bottle sold for black tanks is usually one of three things: a deodoriser that masks or suppresses smell; an enzyme or bacterial treatment meant to break down waste and paper; or a formaldehyde-based steriliser, often called blue chemical, that kills the bacteria causing odor."
       },
       {
        "kind": "p",
@@ -178,11 +178,11 @@
       },
       {
        "kind": "p",
-       "html": "Against all of this, a treatment is optional. Water does the heavy lifting. A good product may help with odours and waste breakdown, but plenty of RVers manage without one. Treat odours as a clue: a tank additive cannot repair a dry toilet seal, blocked vent, leak, clog, or dirty tank."
+       "html": "Against all of this, a treatment is optional. Water does the heavy lifting. A good product may help with odors and waste breakdown, but plenty of RVers manage without one. Treat odors as a clue: a tank additive cannot repair a dry toilet seal, blocked vent, leak, clog, or dirty tank."
       },
       {
        "kind": "p",
-       "html": "The rule on what goes in is narrow. Never put anything in the holding tanks other than normal drain water, body waste, and biodegradable products. Paper wrappers, gum, and cigarettes, no matter how small, should never go into either the grey or black tank, because they can damage the plumbing or the tanks."
+       "html": "The rule on what goes in is narrow. Never put anything in the holding tanks other than normal drain water, body waste, and biodegradable products. Paper wrappers, gum, and cigarettes, no matter how small, should never go into either the gray or black tank, because they can damage the plumbing or the tanks."
       },
       {
        "kind": "p",
@@ -208,17 +208,17 @@
        "items": [
         "1. Connect and lock the sewer hose at both ends before you touch any valve.",
         "2. Confirm both gate valves are closed. Crack the cap only when you are ready to attach the hose.",
-        "3. Optional leak check before you start: crack the grey valve for a few seconds and close it, so a bad fitting shows up as grey water. The dump itself is always black first, then grey.",
+        "3. Optional leak check before you start: crack the gray valve for a few seconds and close it, so a bad fitting shows up as gray water. The dump itself is always black first, then gray.",
         "4. Open the black valve fully and let it drain.",
         "5. If the RV has a black-tank flush, run it with the black valve open until the clear fitting runs clear.",
         "6. Close the black valve.",
-        "7. Open the grey valve and let it run. This scours the hose.",
-        "8. Close the grey valve, disconnect, cap, and rinse the hose, and rinse it well away from any fresh-water tap."
+        "7. Open the gray valve and let it run. This scours the hose.",
+        "8. Close the gray valve, disconnect, cap, and rinse the hose, and rinse it well away from any fresh-water tap."
        ]
       },
       {
        "kind": "p",
-       "html": "The order is black first, then grey, because the grey water is what rinses the black residue out of the shared hose. The last thing through it is the cleaner grey water."
+       "html": "The order is black first, then gray, because the gray water is what rinses the black residue out of the shared hose. The last thing through it is the cleaner gray water."
       },
       {
        "kind": "p",
@@ -230,11 +230,11 @@
       },
       {
        "kind": "callout",
-       "html": "Why not leave the black valve open. With the valve open at a full-hookup site, liquid drains as it arrives and solids stay behind and dry, which is how a pyramid forms. The grey valve is a different case, and some manufacturers and parks allow it to stay open. Black stays closed."
+       "html": "Why not leave the black valve open. With the valve open at a full-hookup site, liquid drains as it arrives and solids stay behind and dry, which is how a pyramid forms. The gray valve is a different case, and some manufacturers and parks allow it to stay open. Black stays closed."
       },
       {
        "kind": "p",
-       "html": "Dump when the black tank is at least two thirds full. Whenever possible, drain both holding tanks before travelling."
+       "html": "Dump when the black tank is at least two thirds full. Whenever possible, drain both holding tanks before traveling."
       },
       {
        "kind": "p",
@@ -248,13 +248,13 @@
      ]
     },
     {
-     "id": "grey-tank-smells",
+     "id": "gray-tank-smells",
      "title": "RV sewer smell inside: why it is usually not the tank",
      "open": false,
      "blocks": [
       {
        "kind": "p",
-       "html": "Grey water is not clean and not sterile. It carries soap, food, grease, and hair, and because it is rarely flushed, it can smell as bad as black water, or worse."
+       "html": "Gray water is not clean and not sterile. It carries soap, food, grease, and hair, and because it is rarely flushed, it can smell as bad as black water, or worse."
       },
       {
        "kind": "p",
@@ -262,11 +262,11 @@
       },
       {
        "kind": "p",
-       "html": "The first suspect is a dry P-trap. Each sink and the shower has a water trap that seals tank gas out of the living space. These traps must have water in them to trap odours. When the vehicle is moving, water can splash out of the sink and shower drains, and when it is stored, the water can evaporate, letting odours into the vehicle. If that happens, run water from the faucet into the drain to refill the traps."
+       "html": "The first suspect is a dry P-trap. Each sink and the shower has a water trap that seals tank gas out of the living space. These traps must have water in them to trap odors. When the vehicle is moving, water can splash out of the sink and shower drains, and when it is stored, the water can evaporate, letting odors into the vehicle. If that happens, run water from the faucet into the drain to refill the traps."
       },
       {
        "kind": "p",
-       "html": "The second suspect is the air admittance valve, a one-way vent on the drain that lets air in so the P-trap is not siphoned dry. When water flows through the P-trap, the valve opens to let air into the pipe and closes when the flow stops. If the valve does not close fully, odour permeates the area around the sink and spreads through the interior. A failed valve is cheap and simple to replace."
+       "html": "The second suspect is the air admittance valve, a one-way vent on the drain that lets air in so the P-trap is not siphoned dry. When water flows through the P-trap, the valve opens to let air into the pipe and closes when the flow stops. If the valve does not close fully, odor permeates the area around the sink and spreads through the interior. A failed valve is cheap and simple to replace."
       },
       {
        "kind": "list",
@@ -274,7 +274,7 @@
         "<b>Smell strongest inside a sink cabinet:</b> suspect the air admittance valve or a loose fitting there.",
         "<b>Smell strongest at the drain:</b> suspect a dry or siphoned P-trap. Run water down it.",
         "<b>Smell anywhere, and the toilet bowl will not hold water:</b> suspect the toilet seal.",
-        "<b>Smell with none of the above:</b> suspect a blocked roof vent, which can push odour back through the plumbing.",
+        "<b>Smell with none of the above:</b> suspect a blocked roof vent, which can push odor back through the plumbing.",
         "<b>Only after all of those check out:</b> the tank itself is the likely source, and the fix is cleaning and correct dumping, not another bottle of deodoriser."
        ]
       },
@@ -315,7 +315,7 @@
       },
       {
        "kind": "p",
-       "html": "A drinking-water hose is for drinking water only. Use a hose manufactured and labelled for potable water service; these are usually white. Do not use a garden hose, which is not made for drinking water and can leave a plastic or rubber taste."
+       "html": "A drinking-water hose is for drinking water only. Use a hose manufactured and labeled for potable water service; these are usually white. Do not use a garden hose, which is not made for drinking water and can leave a plastic or rubber taste."
       },
       {
        "kind": "p",
@@ -335,7 +335,7 @@
       },
       {
        "kind": "p",
-       "html": "A whole-RV filter has limits. As installed, the filter removes chlorine, dirt, and other matter, but it is not guaranteed to remove the tastes and odours of iron and sulfur. Change it every 6 to 12 months depending on the quality and quantity of water used. Filters also cost flow: a small in-line filter restricts flow more than a 10-inch standard canister, and a standard canister is more restrictive than a jumbo canister. A filter plus a cheap regulator is a common cause of a weak shower."
+       "html": "A whole-RV filter has limits. As installed, the filter removes chlorine, dirt, and other matter, but it is not guaranteed to remove the tastes and odors of iron and sulfur. Change it every 6 to 12 months depending on the quality and quantity of water used. Filters also cost flow: a small in-line filter restricts flow more than a 10-inch standard canister, and a standard canister is more restrictive than a jumbo canister. A filter plus a cheap regulator is a common cause of a weak shower."
       }
      ]
     },
@@ -362,7 +362,7 @@
       },
       {
        "kind": "p",
-       "html": "<b>4. Winter freeze damage that becomes a spring flood.</b> A cracked fitting or cracked water-heater tank shows up as a hidden leak the first time you pressurise in spring. The habit: winterise fully, and inspect before you pressurise. Winterising is covered in the next part."
+       "html": "<b>4. Winter freeze damage that becomes a spring flood.</b> A cracked fitting or cracked water-heater tank shows up as a hidden leak the first time you pressurise in spring. The habit: winterize fully, and inspect before you pressurise. winterizing is covered in the next part."
       },
       {
        "kind": "p",
@@ -379,7 +379,7 @@
   {
    "id": "seasons",
    "title": "Part 4: Cold, heat and storage",
-   "summary": "What cold breaks and in what order, how to winterise and where half-jobs fail, what four-season really means, and how to stop condensation and mould.",
+   "summary": "What cold breaks and in what order, how to winterize and where half-jobs fail, what four-season really means, and how to stop condensation and mold.",
    "sections": [
     {
      "id": "freezing",
@@ -409,13 +409,13 @@
      ]
     },
     {
-     "id": "winterising",
+     "id": "winterizing",
      "title": "How to winterize an RV: the two methods, and the half-jobs that still freeze",
      "open": true,
      "blocks": [
       {
        "kind": "p",
-       "html": "There are two ways to winterise an RV, and both are in service of the same thing: getting every drop of water out of a system that will freeze and split. Which one suits your RV, how much antifreeze it takes, what pressure a blow-out runs at, and the order to work in are all in the <a href=\"guides/winterize-plumbing.html\">winterising guide</a>, which is the full job. What follows is the shape of it."
+       "html": "There are two ways to winterize an RV, and both are in service of the same thing: getting every drop of water out of a system that will freeze and split. Which one suits your RV, how much antifreeze it takes, what pressure a blow-out runs at, and the order to work in are all in the <a href=\"guides/winterize-plumbing.html\">winterizing guide</a>, which is the full job. What follows is the shape of it."
       },
       {
        "kind": "table",
@@ -454,8 +454,8 @@
       {
        "kind": "list",
        "items": [
-        "<b>Blow-out without antifreeze in the P-traps.</b> Compressed air flows through pipes but does not lift standing water out of a trap. Skipping this is a common cause of freeze damage in supposedly winterised RVs. Even blow-out advocates add antifreeze to the traps, because blowing out the supply lines removes most of the water but antifreeze still protects the P-traps and toilet.",
-        "<b>Bypassing the water heater without draining it.</b> Bypass keeps antifreeze out, but water left inside still freezes and can crack the tank. Bypassing the water heater without draining it first is a common mistake. Draining the water heater during winterising is a must.",
+        "<b>Blow-out without antifreeze in the P-traps.</b> Compressed air flows through pipes but does not lift standing water out of a trap. Skipping this is a common cause of freeze damage in supposedly winterized RVs. Even blow-out advocates add antifreeze to the traps, because blowing out the supply lines removes most of the water but antifreeze still protects the P-traps and toilet.",
+        "<b>Bypassing the water heater without draining it.</b> Bypass keeps antifreeze out, but water left inside still freezes and can crack the tank. Bypassing the water heater without draining it first is a common mistake. Draining the water heater during winterizing is a must.",
         "<b>Forgetting the exposed fixtures.</b> The outside shower, outdoor kitchen, black-tank flush line, city-water check valve, and washer or ice-maker lines each hold water that can freeze."
        ]
       }
@@ -611,7 +611,7 @@
      "blocks": [
       {
        "kind": "p",
-       "html": "Mould needs three things: moisture, a food source, and a moderate temperature. Mould can develop in any environment with moisture and temperatures between 40°F and 100°F. The food source is ordinary dirt and dust, which is why a clean, dry RV stores better than a dirty one."
+       "html": "mold needs three things: moisture, a food source, and a moderate temperature. mold can develop in any environment with moisture and temperatures between 40°F and 100°F. The food source is ordinary dirt and dust, which is why a clean, dry RV stores better than a dirty one."
       },
       {
        "kind": "p",
@@ -619,26 +619,26 @@
       },
       {
        "kind": "p",
-       "html": "Short-term storage, meaning weeks between trips, is mostly about drying out. Empty and dry the black and grey tanks, run water into every P-trap, and leave a vent or window cracked for airflow. If the RV sits in sun, expect interior heat to drive moisture out of soft furnishings by day and condense it at night, so ventilation matters more than in a house."
+       "html": "Short-term storage, meaning weeks between trips, is mostly about drying out. Empty and dry the black and gray tanks, run water into every P-trap, and leave a vent or window cracked for airflow. If the RV sits in sun, expect interior heat to drive moisture out of soft furnishings by day and condense it at night, so ventilation matters more than in a house."
       },
       {
        "kind": "p",
-       "html": "Long-term storage, over a winter, adds the freeze work from earlier in this part: full winterising, water heater drained, traps filled with antifreeze. On top of that:"
+       "html": "Long-term storage, over a winter, adds the freeze work from earlier in this part: full winterizing, water heater drained, traps filled with antifreeze. On top of that:"
       },
       {
        "kind": "list",
        "items": [
-        "Clean the RV before storage. Crumbs, grease, and dust are the food mould needs.",
+        "Clean the RV before storage. Crumbs, grease, and dust are the food mold needs.",
         "Dry it thoroughly. Wipe wet surfaces and let soft furnishings air out before closing up.",
         "Leave cabinet and closet doors partly open for airflow.",
         "Keep some ventilation. Do not seal the RV completely, because trapped moisture raises condensation. Completely sealing an RV without ventilation can actually increase condensation inside.",
         "Use a dehumidifier or desiccant as appropriate. A powered dehumidifier needs power; desiccant packs suit a sealed, unpowered space and should be refreshed every 30 to 60 days.",
-        "Fix leaks before storage. A small roof or window leak over a winter is a mould start."
+        "Fix leaks before storage. A small roof or window leak over a winter is a mold start."
        ]
       },
       {
        "kind": "p",
-       "html": "When moisture is bad enough to grow visible mould over a large area, that is a remediation job rather than a wipe-down. Visible mould over about 10 square feet is the usual threshold between a do-it-yourself clean and professional remediation."
+       "html": "When moisture is bad enough to grow visible mold over a large area, that is a remediation job rather than a wipe-down. Visible mold over about 10 square feet is the usual threshold between a do-it-yourself clean and professional remediation."
       }
      ]
     }

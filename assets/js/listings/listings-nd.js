@@ -10,7 +10,7 @@ window.RV_LISTINGS_ND = [
    "williston"
   ],  "region": "ND & Surrounding Areas",  "spec": "Travel mileage applies for long-distance service.",  "reg": "central-nd"
  },
- {  "n": "Dakota Recreation Repair",  "c": "Bismarck, ND",  "p": "701-319-1280",  "u": "https://www.dakotarecreationrepair.com/",  "t": "center",  "e": false,  "r": false,  "d": "Dakota Recreation Repair is a boat, camper and trailer repair centre in Bismarck, North Dakota. The site describes restoring boats, pontoons, personal watercraft, campers, RVs and trailers, and it lists collision repair, storm damage, warranty work and restoration projects.",  "g": [
+ {  "n": "Dakota Recreation Repair",  "c": "Bismarck, ND",  "p": "701-319-1280",  "u": "https://www.dakotarecreationrepair.com/",  "t": "center",  "e": false,  "r": false,  "d": "Dakota Recreation Repair is a boat, camper and trailer repair center in Bismarck, North Dakota. The site describes restoring boats, pontoons, personal watercraft, campers, RVs and trailers, and it lists collision repair, storm damage, warranty work and restoration projects.",  "g": [
    "body and collision",
    "service center"
   ],  "base": "bismarck",  "areas": [
@@ -30,7 +30,7 @@ window.RV_LISTINGS_ND = [
    "williston"
   ],  "region": null,  "spec": "Will honor all manufacturer warranties with manufacturer approval.",  "reg": "central-nd"
  },
- {  "n": "Thurn's Sales",  "c": "Bismarck, ND",  "p": "(701) 240-3030",  "u": "https://www.thurns.com/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "Thurn's Sales is a family-owned dealership in Bismarck, North Dakota that runs a certified RV service centre. The site says the service team works on travel trailers, fifth wheels and motorhomes and handles pre-season inspections, appliance repairs and warranty work for most RV brands.",  "g": [
+ {  "n": "Thurn's Sales",  "c": "Bismarck, ND",  "p": "(701) 240-3030",  "u": "https://www.thurns.com/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "Thurn's Sales is a family-owned dealership in Bismarck, North Dakota that runs a certified RV service center. The site says the service team works on travel trailers, fifth wheels and motorhomes and handles pre-season inspections, appliance repairs and warranty work for most RV brands.",  "g": [
    "service center"
   ],  "base": "bismarck",  "areas": [
    "bismarck"
@@ -43,7 +43,7 @@ window.RV_LISTINGS_ND = [
    "minot"
   ],  "region": null,  "spec": null,  "reg": "central-nd"
  },
- {  "n": "Corral Sales RV Superstore",  "c": "Mandan, ND",  "p": "1-800-578-2267",  "u": "https://corralsales.com/service/",  "t": "center",  "e": false,  "r": false,  "d": "Corral Sales RV Superstore is a family-owned RV dealership in Mandan, North Dakota with a dedicated RV service centre. The service page says its factory-trained experts work only on RV maintenance and repair, and it says the shop can raise an RV on one of its two specially designed hoists.",  "g": [
+ {  "n": "Corral Sales RV Superstore",  "c": "Mandan, ND",  "p": "1-800-578-2267",  "u": "https://corralsales.com/service/",  "t": "center",  "e": false,  "r": false,  "d": "Corral Sales RV Superstore is a family-owned RV dealership in Mandan, North Dakota with a dedicated RV service center. The service page says its factory-trained experts work only on RV maintenance and repair, and it says the shop can raise an RV on one of its two specially designed hoists.",  "g": [
    "service center"
   ],  "base": "mandan",  "areas": [
    "mandan"
@@ -97,7 +97,7 @@ window.RV_LISTINGS_ND = [
    "fargo"
   ],  "region": null,  "spec": null,  "reg": "east-nd"
  },
- {  "n": "Camping World RV Service",  "c": "West Fargo, ND",  "p": "(844) 964-3100",  "u": "https://rv.campingworld.com/dealer/west-fargo-north-dakota/rv-service-repair",  "t": "center",  "e": false,  "r": false,  "d": "Camping World runs an RV service and repair centre in West Fargo, North Dakota. The site says it provides complete service and repair for all RV types, including diagnostics, repairs, routine maintenance and warranty work.",  "g": [
+ {  "n": "Camping World RV Service",  "c": "West Fargo, ND",  "p": "(844) 964-3100",  "u": "https://rv.campingworld.com/dealer/west-fargo-north-dakota/rv-service-repair",  "t": "center",  "e": false,  "r": false,  "d": "Camping World runs an RV service and repair center in West Fargo, North Dakota. The site says it provides complete service and repair for all RV types, including diagnostics, repairs, routine maintenance and warranty work.",  "g": [
    "service center"
   ],  "base": "west fargo",  "areas": [
    "west fargo"

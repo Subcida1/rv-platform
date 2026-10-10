@@ -129,7 +129,7 @@ HUB_TITLE = "RV Owner's Manuals and Service Manuals"
 # Guides that already answer the question this system raises. Only real pages.
 # Which guides cover this system failing. Filled out on 2026-09-28: the map existed and
 # rendered, but half the systems had one or two entries and chassis had none, so most guides
-# had no route in from the page that catalogues their manuals. A manual tells you the spec;
+# had no route in from the page that catalogs their manuals. A manual tells you the spec;
 # the guide tells you what to do when it stops working, and a reader on one wants the other.
 RELATED = {
     "power-and-electrical": ["rv-12-volt-problems", "rv-converter-not-charging",
@@ -936,9 +936,9 @@ def brands_page(rows, models_by_brand=None):
     <div class="man-crumb"><a href="manuals/index.html">RV Manuals</a></div>
     <h1 class="dir-title man-title">RV manuals by brand</h1>
     <p class="man-lede">Where each RV manufacturer publishes its own owner's manual, how
-    far back the archive reaches, and how the documents are organised. %d brands and %d
+    far back the archive reaches, and how the documents are organized. %d brands and %d
     model lines, each linked to the maker's own manual, parts list, accessory
-    catalogue and warranty where it publishes one.</p>
+    catalog and warranty where it publishes one.</p>
   </div>
 
   <div class="sec pad-10-60">

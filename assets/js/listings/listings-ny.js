@@ -70,7 +70,7 @@ window.RV_LISTINGS_NY = [
    "emergency"
   ],  "base": "kingston",  "areas": [],  "region": "Hudson Valley",  "spec": null,  "reg": "hudson-valley-ny"
  },
- {  "n": "Tristate RV Repair",  "c": "Copiague and western Suffolk County, NY",  "p": "516-826-4040",  "u": "https://www.tristatervrepair.com/",  "t": "center",  "e": false,  "r": true,  "d": "Tristate RV Repair is an RV service center on Lambert Avenue in Copiague, New York, operating a full repair facility and body shop for motorhomes and travel trailers. Work includes warranty and insurance repairs, fibreglass and body repair, windshield replacement, electrical and structural repairs including frame damage, and generator repair. The shop lists chassis and suspension work, engine and transmission electronic diagnostics, and 24-hour roadside assistance.",  "g": [
+ {  "n": "Tristate RV Repair",  "c": "Copiague and western Suffolk County, NY",  "p": "516-826-4040",  "u": "https://www.tristatervrepair.com/",  "t": "center",  "e": false,  "r": true,  "d": "Tristate RV Repair is an RV service center on Lambert Avenue in Copiague, New York, operating a full repair facility and body shop for motorhomes and travel trailers. Work includes warranty and insurance repairs, fiberglass and body repair, windshield replacement, electrical and structural repairs including frame damage, and generator repair. The shop lists chassis and suspension work, engine and transmission electronic diagnostics, and 24-hour roadside assistance.",  "g": [
    "rv service center",
    "body shop",
    "roadside assistance"
@@ -129,13 +129,13 @@ window.RV_LISTINGS_NY = [
    "middletown"
   ],  "region": "Hudson Valley",  "spec": null,  "reg": "hudson-valley-ny"
  },
- {  "n": "Classic RV Repair & Restorations, LLC",  "c": "Fishkill and the Hudson Valley, NY",  "p": "(914) 523 - 8310",  "u": "http://www.classicrvrepairrestorations.com/",  "t": "center",  "e": false,  "r": false,  "d": "Classic RV Repair & Restorations LLC is an RV repair and restoration shop at 73 Route 9 in Fishkill, New York, specialising in vintage Airstreams. Owner and master technician George Hernandez has more than 30 years on Airstreams and does aluminium body repair, electrical, plumbing, interior repair, fabrication and solar installation. It also works on other brands of RV and trailer.",  "g": [
+ {  "n": "Classic RV Repair & Restorations, LLC",  "c": "Fishkill and the Hudson Valley, NY",  "p": "(914) 523 - 8310",  "u": "http://www.classicrvrepairrestorations.com/",  "t": "center",  "e": false,  "r": false,  "d": "Classic RV Repair & Restorations LLC is an RV repair and restoration shop at 73 Route 9 in Fishkill, New York, specialising in vintage Airstreams. Owner and master technician George Hernandez has more than 30 years on Airstreams and does aluminum body repair, electrical, plumbing, interior repair, fabrication and solar installation. It also works on other brands of RV and trailer.",  "g": [
    "rv service center",
    "airstream",
    "restoration"
   ],  "base": "fishkill",  "areas": [],  "region": "Hudson Valley",  "spec": "vintage Airstream repair and restoration",  "reg": "hudson-valley-ny"
  },
- {  "n": "TransAtlantic Auto & RV Center",  "c": "Peekskill and northern Westchester County, NY",  "p": "914-739-8314",  "u": "http://www.transatlantic-rv.com/en/parts-and-services",  "t": "center",  "e": false,  "r": false,  "d": "TransAtlantic Auto & RV Center at 1245 Park Street in Peekskill, New York, has operated as an RV sales, rental and service centre since 1975. Its parts and service department repairs RVs regardless of make and model and services LP gas, electrical and plumbing components, and it is authorised to perform Dometic and Norcold refrigerator recalls. It also does RV bodywork, restoration, winterizing, NYS inspections and Onan generator service.",  "g": [
+ {  "n": "TransAtlantic Auto & RV Center",  "c": "Peekskill and northern Westchester County, NY",  "p": "914-739-8314",  "u": "http://www.transatlantic-rv.com/en/parts-and-services",  "t": "center",  "e": false,  "r": false,  "d": "TransAtlantic Auto & RV Center at 1245 Park Street in Peekskill, New York, has operated as an RV sales, rental and service center since 1975. Its parts and service department repairs RVs regardless of make and model and services LP gas, electrical and plumbing components, and it is authorized to perform Dometic and Norcold refrigerator recalls. It also does RV bodywork, restoration, winterizing, NYS inspections and Onan generator service.",  "g": [
    "rv service center",
    "parts",
    "body shop"
@@ -260,7 +260,7 @@ window.RV_LISTINGS_NY = [
    "syracuse"
   ],  "region": "Central New York and the Syracuse area",  "spec": null,  "reg": "north-country-ny"
  },
- {  "n": "Wilkins RV - Syracuse",  "c": "Cicero, NY",  "p": "315-695-1130",  "u": "https://www.wilkinsrv.com/new-york/syracuse",  "t": "center",  "e": false,  "r": false,  "d": "Wilkins RV operates an RV dealership and service center at 8010 Brewerton Road in Cicero, New York, serving Syracuse. Trained RV technicians provide routine maintenance and complex repairs as well as paint and body work, covering body work, fibreglass repair, paint, electrical systems, winterization, LP inspections, refrigerator and A/C service, generators, water heaters, oil changes and rubber roof maintenance, with an RV collision repair center that works with all major insurance carriers.",  "g": [
+ {  "n": "Wilkins RV - Syracuse",  "c": "Cicero, NY",  "p": "315-695-1130",  "u": "https://www.wilkinsrv.com/new-york/syracuse",  "t": "center",  "e": false,  "r": false,  "d": "Wilkins RV operates an RV dealership and service center at 8010 Brewerton Road in Cicero, New York, serving Syracuse. Trained RV technicians provide routine maintenance and complex repairs as well as paint and body work, covering body work, fiberglass repair, paint, electrical systems, winterization, LP inspections, refrigerator and A/C service, generators, water heaters, oil changes and rubber roof maintenance, with an RV collision repair center that works with all major insurance carriers.",  "g": [
    "dealer service dept",
    "collision repair",
    "rv service center"

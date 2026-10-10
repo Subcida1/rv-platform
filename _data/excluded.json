@@ -51,7 +51,7 @@
    {
     "n": "Britt's Diesel",
     "u": null,
-    "why": "Bishop, California. Diesel and commercial tyre shop with an RV page."
+    "why": "Bishop, California. Diesel and commercial tire shop with an RV page."
    },
    {
     "n": "JAZ Services",
@@ -136,7 +136,7 @@
   ]
  },
  "dispatch-networks": {
-  "rule": "A call centre with a page for every town is not a local business.",
+  "rule": "A call center with a page for every town is not a local business.",
   "businesses": [
    {
     "n": "Road Rescue Network",

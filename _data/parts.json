@@ -1917,8 +1917,8 @@
         {
           "id": "shower-pan-and-drain",
           "n": "Shower pan and drain",
-          "aka": "shower drain|shower pan|grey tank drain",
-          "does": "drains the shower to the grey tank",
+          "aka": "shower drain|shower pan|gray tank drain",
+          "does": "drains the shower to the gray tank",
           "fails": [
             "clogged with hair",
             "P-trap leak",
@@ -1970,7 +1970,7 @@
           "makers": []
         },
         {
-          "id": "water-system-winterising",
+          "id": "water-system-winterizing",
           "n": "Water system winterizing",
           "aka": "antifreeze|blow out|winterize",
           "does": "protects the plumbing from freezing",
@@ -2220,9 +2220,9 @@
           ]
         },
         {
-          "id": "grey-tank",
-          "n": "Grey tank",
-          "aka": "grey water tank|galley tank",
+          "id": "gray-tank",
+          "n": "Gray tank",
+          "aka": "gray water tank|galley tank",
           "does": "holds sink and shower water",
           "fails": [
             "odor",
@@ -2238,13 +2238,13 @@
           ],
           "guide": "rv-sewer-smell",
           "kw": [
-            "grey tank smell",
-            "grey tank sensor",
+            "gray tank smell",
+            "gray tank sensor",
             "galley tank"
           ],
           "demand": {
             "weekly": 81,
-            "query": "grey tank",
+            "query": "gray tank",
             "rv_qualified": false
           },
           "makers": []
@@ -2252,7 +2252,7 @@
         {
           "id": "gate-valves",
           "n": "Gate valves",
-          "aka": "dump valves|black valve|grey valve|T handle",
+          "aka": "dump valves|black valve|gray valve|T handle",
           "does": "empty the tanks into the sewer hose",
           "fails": [
             "hard to pull",
@@ -3860,7 +3860,7 @@
         {
           "id": "cooktop-and-oven",
           "n": "Cooktop and oven",
-          "aka": "rv stove|range|Greystone|Atwood stove",
+          "aka": "rv stove|range|Graystone|Atwood stove",
           "does": "cooks with propane",
           "fails": [
             "burner will not light",
@@ -3889,8 +3889,8 @@
           },
           "makers": [
             {
-              "brand": "Greystone",
-              "url": "https://support.lci1.com/greystone-ranges"
+              "brand": "Graystone",
+              "url": "https://support.lci1.com/graystone-ranges"
             },
             {
               "brand": "RecPro",
@@ -3905,7 +3905,7 @@
         {
           "id": "microwave-and-convection",
           "n": "Microwave and convection",
-          "aka": "rv microwave|convection microwave|Greystone microwave",
+          "aka": "rv microwave|convection microwave|Graystone microwave",
           "does": "heats and sometimes bakes",
           "fails": [
             "dead on inverter power",

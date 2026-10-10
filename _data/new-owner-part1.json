@@ -20,7 +20,7 @@
        "items": [
         "<b>Park, then level.</b> Level side to side first, then front to back. On a travel trailer, side to side is set with blocks or ramps under the wheels, and front to back is the small adjustment made last, with the tongue jack or the landing gear. On a motorhome it is the leveling system, hydraulic or air, and the order it runs in is the maker's, so read that page of the manual before the first time you use it. Either way, the RV is level before a slide-out moves.",
         "<b>Parking brake, and the engine off, on a motorhome.</b> The engine goes off and the parking brake is set before the jacks go down or a slide moves. Some leveling systems will not operate otherwise, and the brake is what keeps the RV from rolling while the jacks are taking weight.",
-        "<b>Chock the wheels.</b> Chock them even on level ground, and put them in before the stabilisers or the levelers rather than after. A motorhome on its jacks is still chocked.",
+        "<b>Chock the wheels.</b> Chock them even on level ground, and put them in before the stabilizers or the levelers rather than after. A motorhome on its jacks is still chocked.",
         "<b>Look at the pedestal, then test it.</b> Test the outlet with a surge protector that has diagnostics built in, before the cord goes anywhere near it. A pedestal that is scorched, cracked or loose is one to report rather than use.",
         "<b>Make the power connection with the pedestal breaker off.</b> The RV end of the cord goes in first, then the pedestal end, and the breaker goes on last. Running off a generator instead of a hookup: start the generator first, check the breaker on the generator itself, then switch the RV over to it.",
         "<b>Check the RV's own breaker panel</b> for anything tripped, and switch the converter on if it has its own switch.",
@@ -110,16 +110,16 @@
       },
       {
        "kind": "p",
-       "html": "<b>Sewer.</b> Connect the hose at both ends before you open anything, and keep the black valve closed. Never leave it open through your stay. <b>The order never changes: black first, then grey.</b> Drain the black tank first and let it empty, then open the grey, because the grey water is what rinses the black residue out of the shared hose. Dump when the black tank is at least two thirds full."
+       "html": "<b>Sewer.</b> Connect the hose at both ends before you open anything, and keep the black valve closed. Never leave it open through your stay. <b>The order never changes: black first, then gray.</b> Drain the black tank first and let it empty, then open the gray, because the gray water is what rinses the black residue out of the shared hose. Dump when the black tank is at least two thirds full."
       },
       {
        "kind": "list",
        "items": [
         "Wear gloves. Fit a clear elbow at the outlet so you can see what is moving: it is the only window into the black tank.",
         "At a dump station with a smooth inlet, a rubber donut, sometimes called a sewer doughnut or hose adapter, makes the hose fit snugly against the station inlet. Some campgrounds require one.",
-        "If you want a leak check before you start, crack the grey valve for a few seconds and close it again, so a bad fitting shows up as grey water rather than black. That is a check, not the dump: when you dump, black still goes first and grey follows it.",
+        "If you want a leak check before you start, crack the gray valve for a few seconds and close it again, so a bad fitting shows up as gray water rather than black. That is a check, not the dump: when you dump, black still goes first and gray follows it.",
         "Weight the elbow with a rock or a brick so the hose cannot kick loose. Most dump stations have a rock nearby for exactly this purpose.",
-        "Dump black, then grey, then close both valves.",
+        "Dump black, then gray, then close both valves.",
         "Precharge the empty tank so it does not start dry. After dumping, add 5 to 10 gallons of water and treatment chemical before using it again.",
         "Never rinse, set down or store the sewer hose near a fresh-water tap, and never let it touch the hose you drink from. Cross-contamination is the one mistake on this list that can make you ill rather than just cost you money."
        ]
@@ -253,7 +253,7 @@
       },
       {
        "kind": "callout",
-       "html": "<b>More than one source can be live at once.</b> An RV may be energised by shore power, an inverter and the batteries at the same time, so every source has to be found before any wiring is touched. Shore power and the generator are the exception: those two are never run together. <b>De-energise before you open anything, and do not trust a switch.</b> A correct shutdown works through every source: turn the pedestal breaker off before the cord comes out, unplug the shore cord, shut the generator down, disconnect the negative battery cable, and then deal with the inverter. The inverter is the one that matters most, because it is the source that stays live after everything else is off: it turns battery power back into 120 volts, and it can keep selected outlets energised with no shore power and no generator running. Switching it off at the unit is not enough. Xantrex warns that <b>\"Turning off controls will not reduce this risk\"</b> and that the switch on an inverter/charger does not turn off the charger section. Disconnect the inverter's AC and DC inputs, which is what Xantrex calls for, and allow the several minutes its manual may ask for before the capacitors are safe to touch. Before working on anything, confirm the circuit is dead with a meter rather than by looking at a switch position, because an inverter usually feeds only the outlets that were wired to it, and you cannot guess which outlets those are. To work out what any one appliance draws on either system, the <a href=\"tools/watts-to-amps\">watts to amps calculator</a> does the arithmetic.",
+       "html": "<b>More than one source can be live at once.</b> An RV may be energized by shore power, an inverter and the batteries at the same time, so every source has to be found before any wiring is touched. Shore power and the generator are the exception: those two are never run together. <b>De-energise before you open anything, and do not trust a switch.</b> A correct shutdown works through every source: turn the pedestal breaker off before the cord comes out, unplug the shore cord, shut the generator down, disconnect the negative battery cable, and then deal with the inverter. The inverter is the one that matters most, because it is the source that stays live after everything else is off: it turns battery power back into 120 volts, and it can keep selected outlets energized with no shore power and no generator running. Switching it off at the unit is not enough. Xantrex warns that <b>\"Turning off controls will not reduce this risk\"</b> and that the switch on an inverter/charger does not turn off the charger section. Disconnect the inverter's AC and DC inputs, which is what Xantrex calls for, and allow the several minutes its manual may ask for before the capacitors are safe to touch. Before working on anything, confirm the circuit is dead with a meter rather than by looking at a switch position, because an inverter usually feeds only the outlets that were wired to it, and you cannot guess which outlets those are. To work out what any one appliance draws on either system, the <a href=\"tools/watts-to-amps\">watts to amps calculator</a> does the arithmetic.",
        "flag": "injury"
       }
      ]
@@ -374,7 +374,7 @@
       {
        "kind": "list",
        "items": [
-        "<b>Tank and pump.</b> Off the tank, a demand pump pressurises the system. When you are not hooked up to city water, the 12-volt fresh-water pump pressurizes the system from the onboard tank, typically outputting 1 to 4 gallons per minute at 35 to 55 PSI.",
+        "<b>Tank and pump.</b> Off the tank, a demand pump pressurizes the system. When you are not hooked up to city water, the 12-volt fresh-water pump pressurizes the system from the onboard tank, typically outputting 1 to 4 gallons per minute at 35 to 55 PSI.",
         "<b>City water.</b> On a city-water connection the park's pressure does the work, and the pump should be off. On a combined system, city-water mode supplies water from the city-water connection to your fixtures, bypassing the freshwater tank, so the pump is not needed; tank mode lets you pump water from the freshwater tank to your fixtures."
        ]
       },
@@ -556,13 +556,13 @@
      ]
     },
     {
-     "id": "leveling-and-stabilising",
-     "title": "How to level an RV, and why stabilisers are not jacks",
+     "id": "leveling-and-stabilizing",
+     "title": "How to level an RV, and why stabilizers are not jacks",
      "open": false,
      "blocks": [
       {
        "kind": "p",
-       "html": "<b>Jacks lift. Stabilisers stop the rocking.</b> A levelling jack, or the tongue jack on a trailer, carries the weight of the RV and changes its height. A stabiliser, which a lot of people call a stabiliser jack, does neither: it comes down to touch the ground and stops the RV moving when you walk around inside it. That is the whole difference, and it is worth holding on to, because both get called jacks and the mistake is expensive. <b>Level with a jack. Steady with a stabiliser. Never level with a stabiliser</b>, because you would be hanging the RV's weight on legs that were never built to take it."
+       "html": "<b>Jacks lift. stabilizers stop the rocking.</b> A leveling jack, or the tongue jack on a trailer, carries the weight of the RV and changes its height. A stabilizer, which a lot of people call a stabilizer jack, does neither: it comes down to touch the ground and stops the RV moving when you walk around inside it. That is the whole difference, and it is worth holding on to, because both get called jacks and the mistake is expensive. <b>Level with a jack. Steady with a stabilizer. Never level with a stabilizer</b>, because you would be hanging the RV's weight on legs that were never built to take it."
       },
       {
        "kind": "list",
@@ -570,12 +570,12 @@
         "Position the trailer, then level side to side with blocks or ramps under the wheels.",
         "Level front to back with the tongue jack or the landing gear: place the trailer in the designated position, use leveling blocks or ramps to reach the desired level before stabilizing, then deploy the stabilizers or scissor jacks once the RV is leveled.",
         "Chock the wheels.",
-        "Lower the stabilisers last, to contact only. If the RV begins lifting when the jack is applied, too much pressure is being used."
+        "Lower the stabilizers last, to contact only. If the RV begins lifting when the jack is applied, too much pressure is being used."
        ]
       },
       {
        "kind": "p",
-       "html": "A stabiliser that lifts the RV is doing a job it was not made for. If the stabilizer manual says contact only, stop when the foot is planted and the slack is removed. Chocks are separate again and are used whatever the ground is like: install the wheel chocks first and the wheel stabilizers second. And a leveler is never a parking brake, because levelers are not designed for any type of vehicle braking."
+       "html": "A stabilizer that lifts the RV is doing a job it was not made for. If the stabilizer manual says contact only, stop when the foot is planted and the slack is removed. Chocks are separate again and are used whatever the ground is like: install the wheel chocks first and the wheel stabilizers second. And a leveler is never a parking brake, because levelers are not designed for any type of vehicle braking."
       },
       {
        "kind": "callout",

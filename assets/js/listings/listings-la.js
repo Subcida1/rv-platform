@@ -13,7 +13,7 @@ window.RV_LISTINGS_LA = [
    "mobile tech"
   ],  "base": "sulphur",  "areas": [],  "region": "Southwest Louisiana",  "spec": null,  "reg": "southwest-la"
  },
- {  "n": "Refuge RV Repair & Care",  "c": "Glenmora, LA",  "p": "(318) 491-6365",  "u": "https://refugerv.com/",  "t": "mobile",  "e": true,  "r": false,  "d": "Refuge RV Repair & Care is a 100% veteran-owned mobile RV repair service based in Glenmora that brings certified mobile service to Central and South Louisiana. It completes basic repairs and preventative maintenance on critical components, including A/C tune-ups, slide-out and seal inspection, water heater maintenance and repair, winterizing and dewinterizing, wheel bearing repacking, black and grey tank clean out, and fridge and electrical system support. The owner, Kenneth Paul, travels a 100 mile radius of Glenmora with emergency service up to 150 miles.",  "g": [
+ {  "n": "Refuge RV Repair & Care",  "c": "Glenmora, LA",  "p": "(318) 491-6365",  "u": "https://refugerv.com/",  "t": "mobile",  "e": true,  "r": false,  "d": "Refuge RV Repair & Care is a 100% veteran-owned mobile RV repair service based in Glenmora that brings certified mobile service to Central and South Louisiana. It completes basic repairs and preventative maintenance on critical components, including A/C tune-ups, slide-out and seal inspection, water heater maintenance and repair, winterizing and dewinterizing, wheel bearing repacking, black and gray tank clean out, and fridge and electrical system support. The owner, Kenneth Paul, travels a 100 mile radius of Glenmora with emergency service up to 150 miles.",  "g": [
    "mobile tech",
    "emergency"
   ],  "base": "glenmora",  "areas": [
