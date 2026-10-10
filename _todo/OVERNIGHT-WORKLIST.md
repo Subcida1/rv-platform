@@ -64,6 +64,13 @@ session; then `verify-content.py --verify <page> --no-spec --by "<findings appli
 `build-search-index.py`, `stamp_assets.py`, `bash scripts/ci.sh`, archive check, explicit-path commit,
 push. Progress is ticked below as each page lands.
 
+**SPLIT — 2026-10-10 16:15 PDT.** A SECOND live session, `conv-6991caed-4e74-451d-9862-4e7786631414`,
+was handed this same brief by Ty at 16:07 and is running concurrently with `conv-cae364cc`. To avoid the
+duplicate-review cost the rules warn about, the two sessions partition the ordered list:
+`conv-cae364cc` takes items **1-13** top-down (already in flight); `conv-6991caed` takes items **14-27**,
+working **bottom-up (27 -> 14)**. Neither takes a page the other has claimed. A third session should
+take nothing from this list. The split was also messaged to `conv-cae364cc` at 16:09.
+
 ---
 
 ## INCIDENT LOG — 02:00-02:35 PDT, read this before trusting the engine
