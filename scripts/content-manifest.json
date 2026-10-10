@@ -587,9 +587,9 @@
     "claims_date": "Oct 4, 2026"
   },
   "guides/rv-leveling-jacks-not-working.html": {
-    "hash": "cbc32f1c3eefc6d9",
+    "hash": "a0f4375bf879d735",
     "status": "verified",
-    "verified_by": "2026-10-10 voice pass, Ty's package: British spellings to American, collective-noun agreement to singular, and phrasing only. No fact, number or interval changed.",
+    "verified_by": "2026-10-10 independent bridge-lane review: added one sourced sentence on clearing a fault (Lippert Level-Up guide: an error code is cleared by pressing ENTER, and the code returns if the fault remains) and added that guide to Sources; fixed a British spelling in an existing source label. No fact or interval changed.",
     "verified_at": "2026-10-10",
     "sources": [],
     "spec": "_specs/rv-leveling-jacks-not-working.md",
@@ -677,9 +677,9 @@
     "claims_date": "Oct 2, 2026"
   },
   "guides/rv-roof-leak-repair.html": {
-    "hash": "54cf10e6eabbef5f",
+    "hash": "2fac328736156906",
     "status": "verified",
-    "verified_by": "2026-10-10 voice pass, Ty's package: British spellings to American, collective-noun agreement to singular, and phrasing only. No fact, number or interval changed.",
+    "verified_by": "2026-10-10 independent bridge-lane review: the sealant inference is now labeled as our own reasoning ('Our reading of it is blunt: ...') instead of asserted as fact. No fact, number or interval changed.",
     "verified_at": "2026-10-10",
     "sources": [],
     "spec": "_specs/rv-roof-leak-repair.md",
