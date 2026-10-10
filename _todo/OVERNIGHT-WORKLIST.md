@@ -175,7 +175,28 @@ Original item text, kept for history: The 51 `directory/<state>.html` pages carr
 ### W3. The black-tank-clogged page
 A guide page is owed on a clogged black tank. Check `_todo/SITE-TODO.md` and `_data/guides.json` for the spec/slug before writing; run `scripts/new-guide.py` (and check its output against a page it did NOT write — the generator has known structural blind spots).
 
-### W4. The two unopened Lippert documents
+### W4. The two unopened Lippert documents — **DONE 2026-10-10 13:00 (no page change; one finding handed to A5)**
+
+Both documents the new-owner source list carries were fetched and read (HTTP 200 each, `pdftotext`). One
+produced a safety handoff; neither needed a page change here.
+
+- **`ccd_0001749.pdf` — Lippert, "Level-Up LCD 5th Wheel Troubleshooting Guide", Rev 08.06.18** (cited in
+  `_data/new-owner-sources.json` as "Lippert leveling guide"). It carries a hard, SPECIFIC warning that the
+  new-owner guide's leveling section does not: *"The Lippert leveling system is designed as a 'leveling'
+  system only and should not be used to provide service for any reason under the trailer such as changing
+  tires or servicing the leveling system. Any attempts to change tires or perform other service while
+  trailer is supported by the Level-Up leveling system could result in damage to the trailer and/or cause
+  death or serious injury."* Also: *"Moving parts can pinch, crush or cut."*
+  **This is the same class as `SAFETY-ISSUES.md` A5 ("Getting under trailers / jacking"), which the safety
+  pass owns, so it is handed there rather than authored here.** Insertion point when A5 is worked: the
+  `leveling-and-stabilizing` section of `_data/new-owner-part1.json`, as a `callout` with
+  `flag: "injury"` (the generator renders the label "Can injure you").
+- **`ccd-0002675.pdf` — Lippert, "Power Stance Tongue Jack Installation and Owner's Manual", Rev 02.21.22**.
+  Its safety content is installation/operation boilerplate (ground surface under the jack, retract the leg
+  before moving, chain hanger). It supports the guide's tongue-jack statements and contradicts nothing.
+  No action.
+
+Original note, kept for the method: Two Lippert documents were identified but never opened/read.
 Two Lippert documents were identified but never opened/read. Find them in `_todo/SOURCING-FINDINGS-2026-10-09.md` and `research/`, fetch, read, and either act on the finding or record that the document does not support it.
 
 ### W5. Parts beyond the index
@@ -371,9 +392,12 @@ the only other dirty tree files (coverage-latest.json, tires-winter.html) belong
 sessions. Original body: `check-a11y.mjs` was not in `ci.sh`, and the 6-page REPRESENTATIVE list
 had no manuals section page, which is exactly why the start-here contrast defect shipped.
 
-### W14. `privacy.html` is not in the content manifest
-`python3 scripts/verify-content.py --seed` adds it. Do not mass-seed the 111 unverified pages as
-verified — unverified is the honest state until a stronger model has read the page.
+### W14. `privacy.html` is not in the content manifest — **DONE (already present, checked 2026-10-10 13:05)**
+
+**No action needed.** `privacy.html` is already in `scripts/content-manifest.json` (status `unverified`,
+hash present), and `verify-content.py --status` reports **0 not in the manifest**. The item was stale. The
+standing caution still holds: do not mass-seed the 111 unverified pages as verified. Unverified is the
+honest state until a stronger model has read the page.
 
 ---
 
@@ -416,7 +440,7 @@ section 11. That is now SIX claims in this package that fail on measurement, and
 audit's blind spot is "rendered by script". **Anything this audit reports as missing must be loaded in a
 real browser before it is believed.**
 
-**Still open:** older items W3-W7, W12, W14. **W2, W10 and the nav/footer clickability pass are DONE**
+**Still open:** older items W3, W5, W6, W7, W12, W14. **W2, W4, W10 and the nav/footer clickability pass are DONE**
 (W2 = `2bae9ec`, W10 = `4d38550`, and the clickability pass was verified 12:45 in a real browser with
 nothing to fix). **The six strings are RESOLVED** - see the 12:35 block below. (`/contact` is NOT broken;
 the 12:10 correction above shows the email, form and mailto it has.)
@@ -440,7 +464,7 @@ applying sections 6-11 will hit this; do the same, and do not "restore" the dash
 
 **What remains, in order:** sections 6, 7, 8, 9, 10, 11 (hubs and top-level pages, manuals, parts,
 and the DeepSeek-ism databases), then the last guides batch (section 2). **Section 4 cannot be done as
-one** — W17.4 above records why. Also open on older items: W2-W8, W10, W12, W14.
+one** — W17.4 above records why. Also open on older items: W3, W5, W6, W7, W12.
 
 **PROGRESS 2026-10-10 12:35 — THE SIX UNLOCATED STRINGS ARE LOCATED AND FIXED (commit `151826f`).**
 
