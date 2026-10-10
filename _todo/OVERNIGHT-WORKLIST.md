@@ -374,6 +374,32 @@ Work it one section at a time, committing as you go. Where two sections overlap,
 wins. Do not change text inside quotations - a quotation keeps its source's spelling. Tick this
 item only when every section is done.
 
+### W17.1 — the manuals-hub count: INVESTIGATED 2026-10-10 04:15. **The number is CORRECT. Do not change it.**
+
+Section 12 claims the hub's *"110 sources across 94 makers"* is stale and should be *"121 entries across
+126 brands"*. **Measured, and it is not stale.** `build-manuals-pages.py --check` reports `14 generated,
+0 differ from disk`, and the count is computed live from `_data/manuals.json` rather than typed:
+
+- `_data/manuals.json` holds **110 components across 94 distinct brands**.
+- The eight category pages serve **exactly 110 external document links**, and **exactly 94 distinct
+  brands**. Counted directly from the rendered pages, not from the data.
+
+**Where the request's 121 comes from: 110 components + 11 recalls.** So the two numbers count different
+sets. The sentence reads *"110 documents and libraries across 94 makers, and 654 model lines"* and sits
+above the component **search box**, so on its face it describes the component library, which is 110.
+**That is an editorial decision about what the sentence is for, not a stale figure, and it is Ty's to
+make** — recorded for the morning summary rather than guessed at. Changing 110 to 121 would misdescribe
+the set the sentence is attached to; leaving it may under-report the section. **The evidence above is
+what the decision needs.**
+
+**The actionable half — and it is real: the hub carries ZERO `data-claim` markers,** so the number CAN
+drift silently the next time the data changes. `scripts/site_constants.py` defines the marker system,
+`sync-counts.py` rewrites the values, and `verify.py` (around line 432) checks the markers match the
+pattern. **Next fire: add a marker for this count in the generator**, which is a change to
+`build-manuals-pages.py` plus a claim registered in `site_constants.py`, verified by `sync-counts.py`
+and the `verify.py` marker rule. The number itself stays 110 unless Ty says the sentence should cover
+recalls too.
+
 ## BRIDGE — do not duplicate
 
 A live session owns `/home/user/claude-bridge`. As of 01:05: all six lanes healthy on v0.7.41, queue idle, `v0.7.42` staged in `outbox/` awaiting a paste into the **aistudio** lane by Ty (its own session knows the deploy path). **Work the bridge ONLY if:** the queue has jobs with no matching reply (spent jobs blocking a lane), or a heartbeat is stale. Sweep spent jobs with `tools/sweep-spent-jobs.py`. Do not deploy a userscript build yourself.
