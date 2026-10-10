@@ -463,7 +463,7 @@ def build(kind):
         '<script type="application/ld+json">%s</script>' % jld({
             "@context": "https://schema.org", "@type": "CollectionPage",
             "name": "RV Repair Directory by State",
-            "description": ("RV repair directory organized by state: mobile technicians, "
+            "description": ("RV repair directory organized by state: mobile techs, "
                             "service centers, and emergency roadside help."),
             "url": "%s/directory/" % SITE,
             "isPartOf": {"@type": "WebSite", "name": "OriginRV", "url": SITE + "/"},
