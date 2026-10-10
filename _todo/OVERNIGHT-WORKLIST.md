@@ -195,9 +195,24 @@ side is `manuals/sewer_and_fresh_water/`. Identified by first page:
 **Valterra is still not directly readable:** `valterra.com/downloads/` answers HTTP 200 with 289 KB of
 HTML but exposes no direct document links, so it needs the same "search for the specific document" route.
 
-**Before a draft this still needs:** (1) Thetford's toilet/chemical documents for the causes side,
-(2) the 360 Siphon text for venting, and (3) **a spec from Ty** saying what the page argues and where it
-draws the line between clearing a clog yourself and calling a tech. Do not draft without the spec.
+**Reading completed since the first pass (2026-10-10 13:35), so the next session does not redo it:**
+
+- **360 Siphon (ccd_0001583, Rev 07.10.18)** is the holding-tank vent cap. It *"removes odors from the
+  source — the holding tanks — and exhausts them out through the roof vent before they have a chance to
+  invade the RV living space"*, creating an updraft and an *"oxygen-rich environment to speed up waste
+  breakdown"*; it says tank additives *"can take up to 48 hours after use to fully oxygenate a standard
+  holding tank"* while the Siphon acts immediately.
+- **Floë 636 / 838 (ccd-0003522, ccd-0004086) are NOT black-tank documents.** Floë is a *fresh water*
+  drainage device (winter freeze protection, lime-scale removal). Do not cite it on the waste side.
+- **Thetford, "How to Prepare Your RV Waste Tank for Enzyme Treatments"** (fetched, HTTP 200): enzyme
+  treatments *"break down waste and toilet paper into smaller particles"* and prevent clogging, but
+  *"In hot weather, the odors overpower the enzyme product, while in cold weather, the enzymes slow down
+  to the point they don't work"*; chemical-based residues kill enzymes.
+
+**Still needed before a draft:** a maker owner's manual section on black-tank use and paper (Jayco's
+Towable manual is already cited by `rv-black-tank.html`), and **the spec from Ty** saying what the page
+argues and where it draws the line between clearing a clog yourself and calling a tech. Do not draft
+without the spec.
 
 Original note: A guide page is owed on a clogged black tank. Check `_todo/SITE-TODO.md` and `_data/guides.json` for the spec/slug before writing; run `scripts/new-guide.py` (and check its output against a page it did NOT write — the generator has known structural blind spots).
 
