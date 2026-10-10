@@ -333,12 +333,16 @@ fresh-context review.** What was checked and found:
 **Still owed:** a real independent pass over the remaining 22 quotations and the sourcing of every
 number on the page.
 
-### W13. Close the accessibility blind spot — AFTER W9 lands
-`check-a11y.mjs` is not in `ci.sh`, and its 6-page REPRESENTATIVE list has **no manuals section page**,
-which is exactly why the `start-here.html` contrast defect shipped. After W9's stylesheet fix is
-committed: add a manuals section page (e.g. `manuals/power-and-electrical.html`) to `REPRESENTATIVE`,
-and wire `node scripts/check-a11y.mjs` into `ci.sh`. Prove it fails on a deliberately broken page
-before trusting it.
+### W13. Close the accessibility blind spot — DONE 2026-10-10 03:19, commit 28f18e4
+The axe step was already in `ci.sh` (56cf3c7) and the REPRESENTATIVE list carried
+`manuals/index.html`, but that is the HUB with no table — so a `.man-table th` contrast regression
+on a section page still shipped invisible, the exact shape that produced the start-here 4.13:1
+defect. Added `manuals/start-here.html`, the section page whose template actually regressed.
+**Negative test done, both directions:** with the old `--text-3` color restored the gate FAILs ×15
+at 4.13:1 (`check-a11y` on start-here); with the fix in place it passes. Committed by explicit path;
+the only other dirty tree files (coverage-latest.json, tires-winter.html) belong to parallel
+sessions. Original body: `check-a11y.mjs` was not in `ci.sh`, and the 6-page REPRESENTATIVE list
+had no manuals section page, which is exactly why the start-here contrast defect shipped.
 
 ### W14. `privacy.html` is not in the content manifest
 `python3 scripts/verify-content.py --seed` adds it. Do not mass-seed the 111 unverified pages as
