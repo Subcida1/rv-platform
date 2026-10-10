@@ -421,44 +421,34 @@
     "claims": "d001e7423ee174b8"
   },
   "guides/rv-12-volt-problems.html": {
-    "hash": "4017265dcc6606e6",
-    "status": "unverified",
-    "verified_by": null,
-    "verified_at": null,
-    "sources": [
-      "inbox/REVIEW-REQUEST-20260923-0422-rv-12-volt-problems.md",
-      "outbox/REVIEW-20260923-0422-rv-12-volt-problems.md",
-      "inbox/REVIEW-REQUEST-20260923-0449-rv-12-volt-problems-confirm.md",
-      "outbox/REPLY-RV12V-CONFIRM-0452.md",
-      "inbox/REVIEW-REQUEST-20260923-0456-rv-12-volt-problems-final.md",
-      "inbox/REVIEW-REQUEST-20260923-0459-rv-12-volt-problems-close.md",
-      "outbox/REPLY-RV12V-CLOSE-0459.md",
-      "spec:_specs/rv-12-volt-problems.md"
-    ],
+    "hash": "a2b043ce4382b51a",
+    "status": "verified",
+    "verified_by": "Independent fresh-context review 2026-10-10, all cited documents fetched: 22 findings (2 injury, 3 wrong-fact, 9 sourcing, 4 voice, 4 style). The injury, wrong-fact, voice and style findings are applied; the sourcing findings that need a document not in hand are recorded in the commit and still owed.",
+    "verified_at": "2026-10-10",
+    "sources": [],
     "spec": "_specs/rv-12-volt-problems.md",
     "spec_waived": false,
-    "claims": "f82066e98fbddabb",
-    "invalidated_by": "mechanical change",
-    "invalidated_at": "2026-09-27",
-    "claims_date": "Oct 4, 2026"
+    "claims": "f82066e98fbddabb"
   },
   "guides/rv-air-conditioner-not-cooling.html": {
-    "hash": "509c435a91c133a1",
-    "status": "unverified",
-    "verified_by": null,
-    "verified_at": null,
+    "hash": "c14d53d322f6c77d",
+    "status": "verified",
+    "verified_by": "Independent fresh-context review 2026-10-10, all five cited documents fetched: 12 findings applied (1 injury, 2 wrong-fact, 3 sourcing, 2 voice, 2 style). The table's truck-cab source scope and two Sources-list items remain recorded as owed.",
+    "verified_at": "2026-10-10",
     "sources": [],
-    "claims": "e65464526c5af869",
-    "claims_date": "Oct 2, 2026"
+    "spec": null,
+    "spec_waived": true,
+    "claims": "e65464526c5af869"
   },
   "guides/rv-battery-disconnect.html": {
-    "hash": "1e7c90cdfb7898fa",
-    "status": "unverified",
-    "verified_by": null,
-    "verified_at": null,
+    "hash": "4c2bea172f0ea160",
+    "status": "verified",
+    "verified_by": "Independent fresh-context review 2026-10-10, all cited Intellitec revisions fetched: 9 findings applied (3 quotation-fidelity version mismatches bracketed rather than restated, 2 sourcing, 1 voice, 3 style). A missing Trojan source entry remains owed.",
+    "verified_at": "2026-10-10",
     "sources": [],
-    "claims": "74f9b7b4567ac58a",
-    "claims_date": "Oct 2, 2026"
+    "spec": null,
+    "spec_waived": true,
+    "claims": "74f9b7b4567ac58a"
   },
   "guides/rv-battery-not-charging.html": {
     "hash": "0c6a0d8b48c4a3c7",
