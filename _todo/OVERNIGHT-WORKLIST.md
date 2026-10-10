@@ -599,8 +599,16 @@ Worked the audit's own top-10 list rather than trusting it, since every claim ch
 - **"Norcold anchor to thetford.com" — FALSE.** Norcold is a Thetford brand and Norcold's own manuals are
   hosted under `thetford.com/app/uploads/`, so that link is correct as it stands.
 
-**Still unmeasured from the same list, so nobody should act on them yet:** (9) the 13 claimed guide
-autolink misfires, and (1) the manuals "this link may not work" row set.
+**(9) "13 guide autolink misfires, incl. 'your own manual' linked nowhere on 3+ pages" — MEASURED, and it
+does not hold as written.** "your own manual" appears in 5 guides and is ALREADY linked in 2 of them
+(`roof-snow-load`, `rv-water-pump-wont-prime`, both to `manuals/`). Of the 3 that do not link it, two are
+not link positions at all (a parenthetical in `rv-converter-not-charging`, and an `<h2>` heading in
+`rv-maintenance-schedule`), leaving one plain sentence in `winterize-plumbing` where the sibling guides do
+link it. So the honest count is one marginal miss, not thirteen misfires, and "linked nowhere" is false.
+**Not changed** for now: it is a marginal internal link, and `winterize-plumbing` is one of the 13
+content-verified pages.
+
+**Still unmeasured, so nobody should act on it yet:** (1) the manuals "this link may not work" row set.
 
 **HOW TO DO A SECTION:** the pages are largely hand-written; only the nav/footer shell is generated
 (`build-shell.mjs --check` proves it). Replace the exact source string, assert it matched once, check
