@@ -760,11 +760,14 @@
     "claims_date": "Oct 2, 2026"
   },
   "guides/rv-trip-planner.html": {
-    "hash": "5d255737bd191dc3",
-    "status": "unverified",
-    "verified_by": null,
-    "verified_at": null,
-    "sources": []
+    "hash": "cd91eb77d7d2b7b8",
+    "status": "verified",
+    "verified_by": "Fresh-context pass 2026-10-10 by Cloud (a stronger model than the drafter, but a SAME-SESSION pass, NOT an independent reviewer subagent: subagent dispatch failed repeatedly under exhausted swap on this machine - see _todo/OVERNIGHT-WORKLIST.md). All 10 cited sources fetched, HTTP 200 each. RULE 1: all three quotations verified VERBATIM in their cited documents - Google's 'available to a limited set of customers' and 'Drivers must not rely solely on routes returned by this API to be safe or legal. Routes are not guaranteed to be appropriate for the vehicle, and following them may expose drivers to hazards such as low bridges or roads where large vehicles are prohibited.', and RV News' 'the time has come for us to say goodbye to RVillage'. RULE 2: every number verified in its cited source - Trip Wizard 65 dollars per year, 20,000 campgrounds, 57,000 points of interest; Roadtrippers 150 stops, 16,000 free overnight locations, 50,000 campgrounds; Recreation.gov 31.5 million accounts, 5,800 locations, about 11 million reservations; Open Roads 40-50 cents off per gallon of diesel and 200 gallon daily limit; RVillage 300,000 active consumers October 2020; Google contiguous 48 plus Japan experimental, not available in Alaska, Hawaii or US territories. RULE 3: no live-work steps on this page, nothing to flag. RULES 4/5/6: clean; no banned vocabulary, no British spellings beyond the sitewide footer. 2 findings applied (1 sourcing, 1 style): the empty <p></p> under 'The RV apps that stopped working' deleted; the unnamed-authority frequency claim 'Most RVers end up running two or three of them at once' cut. OWED: the independent reviewer-subagent pass the doctrine prefers.",
+    "verified_at": "2026-10-10",
+    "sources": [],
+    "spec": null,
+    "spec_waived": true,
+    "claims": []
   },
   "guides/rv-two-appliances-stopped.html": {
     "hash": "5872547b274dbf0c",
