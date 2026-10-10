@@ -8,7 +8,25 @@ This file is the queue the **`overnight-driver`** cron reads on every fire. It i
 of truth for what is left. NIGHT-WORKLIST.md is the previous night's list (items 0–6, all closed or
 parked as Ty's call); do not rework those.
 
-## The rules (not optional — each one earned by a real failure)
+## LIVE TREE STATE — READ BEFORE COMMITTING ANYTHING (check `git status` first, it changes)
+
+**2026-10-10 01:26 PDT:** another session has `assets/js/site.js` **staged** and has regenerated the
+asset stamp on **131 files** (51 directory, 46 guides, 12 manuals, 9 tools, plus the hubs) — a
+site-wide regeneration in flight, mid-commit. Until it lands, **every page in the working tree carries
+a stamp for a `site.js` that is not committed**, so committing any page by itself will produce a
+commit that references a hash it does not contain.
+
+**Rule 9's archive check is what catches it, and it must be run before every push.** But the cheaper
+move right now is to **prefer work that does not commit a page**: read, verify, plan, sweep the
+bridge, or update this file. If you do commit a page and the archive check fails on `asset stamps` /
+`static shell` / `manuals pages`, that is this, not your edit — use the recovery in rule 9.
+
+**Do not commit their staged `site.js` or their regenerated pages.** `git commit -- <paths>` uses
+`--only` semantics, so naming your own path does not sweep theirs; keep it that way.
+
+---
+
+## THE RULES (not optional — each one earned by a real failure)
 
 1. **One item, end to end.** Finish and verify before starting another. Ty's standing instruction.
 2. **Run `bash scripts/ci.sh` before pushing**, not just `verify.py` — five checks live only in ci.sh.
