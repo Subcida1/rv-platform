@@ -112,6 +112,18 @@ verdict. Then apply the findings yourself and re-baseline with
 `verify-content.py --verify <page> --by "<what happened>"`. Reviewing a page and NOT applying the
 findings is the failure mode: the pass is only worth anything when the text changes.
 
+**2026-10-10 ~01:23 PDT — rv-fuse-keeps-blowing review pass (Cloud, in-turn):** all six house rules
+checked with literal evidence. Rule 1 quoted claims verified verbatim against sources (Littelfuse
+Fuseology overload def; Littelfuse Overcurrent Protection Fundamentals 600% threshold; VW/Audi
+bulletin Step 9; Winnebago same-rating rule; OptiFuse ~125% continuous-load guidance; Progressive
+Dynamics fire/shock warning). Rules 2, 4, 6: clean. Rule 3: the page-level `flag-injury` callout
+already names the battery-terminal slip danger and fused-test-lead mitigation; the bold battery
+passage is the reinforcing second shape (matches sibling electrical guides, each carrying exactly
+one flag). Rule 5 (rig): clean. **No defects found requiring edits — page already carries a
+verified manifest entry.** Caveat: this was a same-model in-turn pass; the fresh-context pass by a
+strictly stronger model is STILL OWED (subagent launches were memory-blocked twice tonight: swap
+8.2/8.3 GiB, "Timed out waiting for runtime-start", tool_uses 0). Do not count this as that pass.
+
 ### W13. Close the accessibility blind spot — AFTER W9 lands
 `check-a11y.mjs` is not in `ci.sh`, and its 6-page REPRESENTATIVE list has **no manuals section page**,
 which is exactly why the `start-here.html` contrast defect shipped. After W9's stylesheet fix is
