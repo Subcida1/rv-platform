@@ -99,11 +99,34 @@ unaffected and is what the rebaselines use. NOT fixed here — recorded rather t
 |---|------|----------|-------|
 | 27 | guides/index.html | 1 (ItemList name mismatch) | **done, pushed** `4ee85d9` |
 | 24 | rv-maintenance-schedule | 6 (1 injury, 1 wrong-fact, 1 sourcing, 2 voice, 1 style) | **done, pushed** `f817a7b` |
-| 26 | rv-trip-planner | — | review in flight |
-| 25 | rv-black-tank | — | queued |
-| 23 | rv-pre-trip-walkaround | — | queued |
-| 22 | rv-pin-weight-and-payload | — | queued |
-| 21 | rv-driving-motorhome | — | queued |
+| 26 | rv-trip-planner | 2 (1 sourcing, 1 style) | **done, pushed** `552f3a4` |
+| 25 | rv-black-tank | 2 (1 sourcing, 1 style) | done `b012850` |
+| 23 | rv-pre-trip-walkaround | 1 (fabricated Jayco quotation) | done `6e1c016` |
+| 22 | rv-pin-weight-and-payload | 0 (verified clean) | done `c4b18fd` |
+| 21 | rv-driving-motorhome | 4 (1 wrong-fact, 1 sourcing, 2 style) | done `20de0c2` |
+
+Method note for items 21, 22, 23, 25, 26 (and the hub): **these passes were done by Cloud itself, in
+session, not by a fresh-context reviewer subagent.** The subagent path was dead all evening - four
+concurrent reviewers were orphaned by a harness process change, and from 16:47 every dispatch failed
+instantly with "App-server socket closed" because the machine had exhausted swap (`free -h`: 15Gi
+total, 11Gi used, 1.2Gi free, **8.1Gi of 8.3Gi swap in use**). Each manifest note says so explicitly
+and names the reviewer-subagent pass as OWED. The passes were not idle: every cited document was
+fetched and every quotation and figure matched against it, which is how the fabricated Jayco
+quotation (rv-pre-trip-walkaround) and the halved break interval (rv-driving-motorhome) were caught.
+
+**SHARED-FILE HAZARD - `scripts/content-manifest.json` IS A READ-MODIFY-WRITE FILE (2026-10-10 16:53,
+conv-6991caed, cost a red main).** `verify-content.py --verify <page>` reads the WHOLE manifest,
+changes one entry, and writes the whole file back. Two sessions verifying different pages at the
+same moment therefore clobber each other - and if the other session's entries were sitting
+UNCOMMITTED in the shared tree, the whole-file write COMMITS them alongside yours, so the commit
+carries verification entries for page edits it does not contain and the content gate goes red. That
+is exactly what commit `b012850` did: it swept uncommitted entries for rv-towing-capacity,
+rv-towing-trailer, rv-trailer-wheel-bearings and trailer-brakes-required, and main went red until
+`9367e3f`/`c9bd820` committed those pages.
+**ALWAYS, before committing a manifest change:**
+`git diff -U0 -- scripts/content-manifest.json | grep -E "^@@"` and map the changed line numbers to
+their owning key - the diff must name ONLY your page. If it names another page, another session's
+entry is in your commit: restore it and re-check. Same discipline as the search index.
 
 **PLATFORM HAZARD 2026-10-10 16:47 PDT (conv-6991caed).** Subagent dispatch is failing: four
 concurrent reviewers were launched at 16:40 and three died with "Listener connection closed"
@@ -1033,10 +1056,32 @@ Progress ticked below as each page lands.
 | 14 | rv-slide-out-leaking | 5 (1 wrong-fact, 3 sourcing, 1 style) | **done, pushed** `b563d98` |
 | 15 | rv-slide-out-not-working | 10 (2 injury, 4 wrong-fact, 2 sourcing, 1 voice, 1 style) | **done, pushed** `b563d98` |
 | 16 | rv-tire-replacement | 8 (7 sourcing, 1 voice) | **done, pushed** `b563d98` |
-| 17 | rv-trailer-wheel-bearings | | review in flight |
-| 18 | rv-towing-capacity | | review in flight |
-| 19 | rv-towing-trailer | | review in flight |
-| 20 | trailer-brakes-required | | review in flight |
+| 17 | rv-trailer-wheel-bearings | 7 (1 injury, 1 wrong-fact, 1 sourcing, 2 voice, 2 style) | **done, pushed** `9367e3f` |
+| 18 | rv-towing-capacity | 12 (1 wrong-fact, 6 sourcing, 4 voice, 1 style) | **done, pushed** `9367e3f` |
+| 19 | rv-towing-trailer | 5 (1 injury, 1 wrong-fact, 1 sourcing, 1 voice, 1 style) | **done, pushed** `9367e3f` |
+| 20 | trailer-brakes-required | 6 (1 injury, 4 sourcing, 1 voice) | **done, pushed** `9367e3f` |
+
+**ITEMS 14-20 ARE DONE — this session's whole half.** 53 findings applied across the seven pages
+(23 on items 14-16 in `b563d98`, 30 on items 17-20 in `9367e3f`), every page re-baselined as verified
+in `scripts/content-manifest.json`, `bash scripts/ci.sh` exit 0, archive check green on the commit
+before each push. The four pages of the second commit are also re-baselined in `c9bd820`.
+
+The safety class carried over: **five more unflagged hazard points** across the two commits came out of
+these pages (the slide-out battery jump and breaker box, the bearings spindle-nut sequence, the
+towing-trailer spring bars and unhitching sequence, and the brakes page telling a reader their trailer
+may legally need no brakes without saying no threshold makes an unbraked trailer stop).
+
+Two gate lessons worth keeping:
+- **`verify.py`'s rehost rule is real and it fires.** Citing Goodyear's Endurance speed data through a
+  third-party mirror failed the build instantly (`fifthwheelst.com` is on the ban list), and the
+  Cornell LII CFR mirrors were flagged by both reviews on two other pages. Cite the publisher.
+- **`cross-check.py` reads a long Sources bullet as a value claim.** Two numeric fragments in one
+  provenance bullet got paired against unrelated numbers on other pages and failed `ci.sh` with two
+  false same-fact pairs. Fix the content (the numbers live in the page bodies), never the gate.
+- **A concurrent `--verify` can clobber another session's re-baseline.** My second re-baseline of
+  `rv-towing-trailer` was overwritten by the peer's manifest write (read-modify-write race), which
+  showed up as the ledger's one drifted page. Re-running `--verify` and committing the manifest in the
+  same command fixed it.
 
 **PROGRESS 2026-10-10 16:45 PDT — items 14-16 landed as `b563d98`** (4 files: the three guides +
 `scripts/content-manifest.json`), pushed, archive-checked green before the push.
