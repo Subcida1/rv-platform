@@ -87,9 +87,9 @@ SHORT = {
     "water-and-plumbing": "WATER AND PLUMBING",
     "heating-and-cooling": "HEATING AND COOLING",
     "kitchen-and-appliances": "KITCHEN AND APPLIANCES",
-    "exterior-and-body": "AWNINGS AND EXTERIOR",
+    "exterior-and-body": "AWNING AND EXTERIOR",
     "towing-and-running-gear": "TOWING AND RUNNING GEAR",
-    "sanitation-and-tanks": "TOILETS AND TANKS",
+    "sanitation-and-tanks": "TOILET AND TANK",
     "chassis-and-drivetrain": "CHASSIS AND ENGINE",
 }
 
@@ -968,8 +968,8 @@ RECALL_SECTIONS = [
      "returns the recalls, complaints and investigations filed against that unit. Two "
      "makers run their own lookup as well."),
     ("notices", "Recalls you can read in full",
-     "The campaign number is the thread through a recall: the federal report, the maker's "
-     "own notice and any repair instruction all carry it."),
+     "The campaign number is the thread that runs through a recall: the federal report, the "
+     "maker's own notice and any repair instruction all carry it."),
     ("bulletins", "Service bulletins",
      "A recall is a safety defect. A service bulletin is the maker telling its dealers how "
      "to deal with something, and the federal government collects them alongside the "
@@ -1066,8 +1066,8 @@ def recalls_page(rows, bulletins, source_note):
         becomes a recall, or when it never does. The RV makers file them in the thousands,
         and nothing on the consumer side indexes them by make and model.</p>
         <p>Reading one takes two steps: find the document id in the file, then open the
-        bulletin itself at a link built from that id. The ids are not guessable, so start
-        from the file rather than from a pattern.</p>
+        bulletin itself at a link built from that id. You can't guess the ids, so start
+        from the file, not from a pattern.</p>
       </div>
     </div>
   </div>

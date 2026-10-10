@@ -1498,7 +1498,7 @@
       "title": "Thetford service documents",
       "url": "https://www.thetford.com/us/thetford-service-documents/",
       "key": "product",
-      "covers": "Thetford service document index; page title confirmed, page content loads via JavaScript",
+      "covers": "Thetford's service document index (page content loads via JavaScript)",
       "gate": "none",
       "link_stability": "library_page_only",
       "status": "verified",
@@ -2029,7 +2029,7 @@
     },
     {
       "brand": "Allison",
-      "host": "Allison Transmission",
+      "host": "Allison",
       "system": "chassis-and-drivetrain",
       "kind": "library",
       "doc_types": [
