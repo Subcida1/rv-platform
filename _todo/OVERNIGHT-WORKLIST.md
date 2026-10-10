@@ -374,6 +374,31 @@ Work it one section at a time, committing as you go. Where two sections overlap,
 wins. Do not change text inside quotations - a quotation keeps its source's spelling. Tick this
 item only when every section is done.
 
+### W17.2 — the three "genuinely broken" links: VERIFIED 2026-10-10 04:30. **All three work. Do not remove them.**
+
+Section 12 item (2) names `hwhcorp.com/ml54800_srvc.html` and two `lippert.com` blog links on
+start-here as "genuinely broken". Checked each one:
+
+- **`hwhcorp.com/ml54800_srvc.html` is a deliberate, documented, browser-verified exception**, not a
+  broken link. The row in `_data/manuals.json` carries `check: browser`, `status: verified`, and a note:
+  *"server omits its TLS intermediate certificate, so every strict client refuses it while browsers load
+  it fine; loaded in Chrome 2026-09-21, 105 KB, twenty mentions of manuals"*. `scripts/audit-manuals.py`
+  line 425 honours that flag so the row *can never be a FAIL*, and the script's own header explains why.
+  A `curl` gets HTTP 000; that is the machine being wrong, and the repo already says so.
+- **Both Lippert posts return HTTP 200 today** (`/blog/leveling-jacks-versus-stabilizing-jacks` and
+  `/blog/what-is-a-weight-distribution-hitch`). The 401 in the request does not reproduce — most likely
+  transient rate-limiting at the time it was written.
+
+`python3 scripts/audit-manuals.py` passes: 110 component rows, 44 brand rows, 11 safety-record rows valid.
+
+**PATTERN — READ BEFORE WORKING THE REST OF THIS PACKAGE.** Two of the two factual claims checked in
+this package so far (W17.1's count, W17.2's broken links) were **wrong in the request and correct on the
+site**. Both would have caused damage if applied: one would have replaced a correct count with one that
+describes a different set, the other would have removed a working library page and two working links.
+**Verify every factual claim in the package against the live site before changing anything.** The voice
+and phrasing rewrites are a different matter — those are editorial and can be applied — but any item
+that says something is *broken, stale or wrong* needs the same measurement W17.1 and W17.2 got.
+
 ### W17.1 — the manuals-hub count: INVESTIGATED 2026-10-10 04:15. **The number is CORRECT. Do not change it.**
 
 Section 12 claims the hub's *"110 sources across 94 makers"* is stale and should be *"121 entries across
