@@ -579,6 +579,29 @@ measured, so the point landed on whatever sat at the viewport edge and EVERY lin
 required the point to be genuinely in the viewport, and returned 0 problems. **A probe that reports a
 defect on every page is describing itself.**
 
+**PROGRESS 2026-10-10 13:45 — THE AUDIT'S REMAINING STRUCTURAL CLAIMS, MEASURED (most are false; one is real and is a design question).**
+
+Worked the audit's own top-10 list rather than trusting it, since every claim checked so far has failed:
+
+- **(4) "un-orphan 9 states on the directory hub" — FALSE.** All 50 state pages ARE linked from
+  `directory/index.html`, as `href="directory/<state>"`. Note the trap: that is a RELATIVE path, and an
+  absolute-path grep finds zero, which reads as total orphanage. 0 orphans.
+- **(5) "link the 10 hidden guides" — FALSE.** All 45 guide pages are linked from `/guides/`. 0 orphans.
+- **(8) "/manuals/ heading/title hygiene" — FALSE.** Every one of the 12 manuals pages has exactly one
+  `<h1>` and a title carrying the brand. 0 pages flagged.
+- **(10) "/parts/ mismatches" — HALF REAL, and the mechanism is not the one described.** The hub attaches
+  its doc-link list PER SYSTEM, so every part in a system carries the same maker documents: all three
+  toilet entries (gravity, vacuum/macerator, composting) carry `Dometic / Nature's Head / Thetford
+  manuals`, and the rooftop air-conditioner entry carries `Dometic / RecPro / Zero Breeze manuals`. So
+  "Nature's Head under gravity/vacuum toilets" and "Zero Breeze under rooftop AC" are real OBSERVATIONS
+  caused by system-level grouping, not by individually miscategorised rows. **Whether that grouping is
+  intended is Ty's call.** If it is not, the fix is per-part doc assignment, not editing three rows.
+- **"Norcold anchor to thetford.com" — FALSE.** Norcold is a Thetford brand and Norcold's own manuals are
+  hosted under `thetford.com/app/uploads/`, so that link is correct as it stands.
+
+**Still unmeasured from the same list, so nobody should act on them yet:** (9) the 13 claimed guide
+autolink misfires, and (1) the manuals "this link may not work" row set.
+
 **HOW TO DO A SECTION:** the pages are largely hand-written; only the nav/footer shell is generated
 (`build-shell.mjs --check` proves it). Replace the exact source string, assert it matched once, check
 no em dash was introduced, run `verify.py`, re-baseline any verified page, commit by explicit path,
