@@ -114,12 +114,32 @@ def sync_itemlist():
     for i, slug in enumerate(order, 1):
         # The card href is extensionless since 2026-10-04; accept the old .html form too, so
         # the check reads the page rather than the URL convention of the day.
-        m = re.search(r'href="guides/%s(?:\.html)?">.*?<div class="guide-title">([^<]+)</div>'
-                      % re.escape(slug), html, re.S)
+        #
+        # THE MATCH IS CARD-SCOPED (2026-10-10). It used to jump non-greedily from the href to
+        # the NEXT `<div class="guide-title">` anywhere in the document, so a guide whose card
+        # carries no guide-title silently borrowed the FOLLOWING card's name. The trip planner
+        # is surfaced only as a pinned card (`man-pinned-title`), so its ItemList entry shipped
+        # as "Generator Sizing" pointing at /guides/rv-trip-planner -- wrong structured data,
+        # invisible to verify.py, which checks counts and slugs but not names. The name now
+        # comes from the card itself: its `data-name` (for cards whose visible heading is a
+        # headline rather than the guide's name), else its visible title element. A card that
+        # carries neither FAILS loudly instead of borrowing a neighbour.
+        m = re.search(r'(<a\b[^>]*href="guides/%s(?:\.html)?"[^>]*>)(.*?)</a>' % re.escape(slug),
+                      html, re.S)
         if not m:
             raise SystemExit("FAIL  guides/index.html has no card for %s, so the ItemList "
                              "cannot name it" % slug)
-        items.append({"@type": "ListItem", "position": i, "name": m.group(1).strip(),
+        tag, card = m.group(1), m.group(2)
+        dm = re.search(r'data-name="([^"]+)"', tag)
+        tm = re.search(r'<div class="(?:guide-title|man-pinned-title)">([^<]+)</div>', card)
+        if dm:
+            name = dm.group(1)
+        elif tm:
+            name = tm.group(1)
+        else:
+            raise SystemExit("FAIL  guides/index.html: the card for %s carries no name "
+                             "(neither data-name nor a title element)" % slug)
+        items.append({"@type": "ListItem", "position": i, "name": name.strip(),
                       "url": "https://originrv.com/guides/%s.html" % slug})
 
     block = json.dumps({"@context": "https://schema.org", "@type": "ItemList",
