@@ -250,6 +250,19 @@ The dead grok RETRY self-pruned to `queue/jobs/done/`; the answered SELFTEST2 wa
 `tools/sweep-spent-jobs.py`. **Watch: a parallel session is dispatching its own lane retries (an
 aistudio RETRY at 07:01) — leave theirs alone, same-shared-tree rule as the site.**
 
+**2026-10-10 01:00 — six-lane SW2-004517 self-test pass swept; three lanes passed, three failed to
+capture, all six tabs alive.** Jobs dispatched 00:45 by the night shift (fresh per-run call_ids).
+qwen, gemini and grok wrote the selftest nonce (`DELTA-9182-KX`) byte-exact to
+`outbox/REPLY-SW2-004517-<lane>.md` — the read/write loop works. aistudio and deepseek released at
+capture-ceiling with no answer (aistudio: "reply container held only page chrome and footer text";
+deepseek: "our own tool result is still the newest thing in the thread" — both say re-queue).
+chatgpt settled on the ChatGPT quota message ("Files, images, and data analysis are unavailable
+until usage resets at 1:06 AM") — the lane tab is healthy, the quota resets hourly around 01:06.
+All six heartbeats 00:59–01:00, so none of the three failures is a dead lane. **Swept all six job
+files to `queue/jobs/archive/` via `tools/sweep-spent-jobs.py`** (its criterion is "reply file
+exists", so the harness-terminal notices count — queue now empty, selector cannot park). The
+failure replies are still in outbox/ and the job files in archive/ if any lane is re-dispatched.
+
 ---
 
 ## Myself, last
