@@ -172,8 +172,34 @@ Inline styles in `directory/*.html`: 201 -> 150.
 
 Original item text, kept for history: The 51 `directory/<state>.html` pages carry 201 inline styles. Move them into the stylesheet classes. Mechanical, but touches 51 generated pages → **the regenerated pages ship in the SAME commit** (see `build-listings.py`). Verify with `build-listings.py --check`.
 
-### W3. The black-tank-clogged page
-A guide page is owed on a clogged black tank. Check `_todo/SITE-TODO.md` and `_data/guides.json` for the spec/slug before writing; run `scripts/new-guide.py` (and check its output against a page it did NOT write — the generator has known structural blind spots).
+### W3. The black-tank-clogged page — **READING STARTED 2026-10-10 13:20 (sources located; spec still owed)**
+
+SITE-TODO §5 says the reading is the first step for this page, so that is what this is. **No page was
+written:** the thesis is Ty's call and there is no spec yet.
+
+**The Lippert document hunt now works.** `lci-support-doc.s3.amazonaws.com` is listable, and the waste
+side is `manuals/sewer_and_fresh_water/`. Identified by first page:
+
+- `ccd_0001595.pdf` — **Waste Master Owner's Manual** (CCD-0001595, Rev 07.12.18). Gives the dump
+  procedure AND the reason: *"Common industry practice is to empty the black (waste water) tank first,
+  followed by the gray (sink and shower water) tank(s). This order allows the gray water to flush out the
+  sewer hose and helps prevent sewage from remaining in the hose after emptying the tanks."* Also *"Use
+  proper personal protective equipment when operating the Waste Master system"* (gloves, goggles), and the
+  hose's smooth bore is built to prevent *"waste from getting trapped inside the hose"*.
+- `ccd_0001594.pdf` Waste Master OEM install · `ccd_0001593.pdf` Waste Master Hose · `ccd_0002186.pdf`
+  Waste Master tubular storage enclosure.
+- `ccd_0001583.pdf` / `oem/ccd-0001584.pdf` — **360 Siphon** holding-tank vent (the venting half).
+- `ccd-0003522.pdf` / `ccd-0004086.pdf` — **Floë 636 / 838** integrated water drainage systems.
+- Plus Flow Max pumps, a sump-pump system and a UV water-treatment unit (not black-tank material).
+
+**Valterra is still not directly readable:** `valterra.com/downloads/` answers HTTP 200 with 289 KB of
+HTML but exposes no direct document links, so it needs the same "search for the specific document" route.
+
+**Before a draft this still needs:** (1) Thetford's toilet/chemical documents for the causes side,
+(2) the 360 Siphon text for venting, and (3) **a spec from Ty** saying what the page argues and where it
+draws the line between clearing a clog yourself and calling a tech. Do not draft without the spec.
+
+Original note: A guide page is owed on a clogged black tank. Check `_todo/SITE-TODO.md` and `_data/guides.json` for the spec/slug before writing; run `scripts/new-guide.py` (and check its output against a page it did NOT write — the generator has known structural blind spots).
 
 ### W4. The two unopened Lippert documents — **DONE 2026-10-10 13:00 (no page change; one finding handed to A5)**
 
@@ -214,7 +240,13 @@ wastes the pass. Do W6 only for pages the safety pass has finished with, or afte
 
 ---
 
-### W8. Close the content-gate drift (mechanical, do it after the safety pass commits)
+### W8. Close the content-gate drift — **DONE 2026-10-10 13:10 (both halves resolved by later sessions)**
+
+**No action needed.** Measured: `verify-content.py --status` now reports **13 verified, 111 unverified,
+0 drifting, 0 unmanifested**. `guides/rv-leveling-jacks-not-working.html` was re-baselined by the voice
+pass (its manifest note records exactly what changed), and `privacy.html` is in the manifest (W14).
+Original text below.
+
 `python3 scripts/verify-content.py` currently reports **12 verified, 111 unverified, 1 drifting, 1 unmanifested**.
 - `guides/rv-leveling-jacks-not-working.html` is DRIFTING — its content changed under a 2026-10-06 verification. The safety pass is editing that page right now (its B5), so re-verify it only once that pass has committed, via `python3 scripts/verify-content.py --verify guides/rv-leveling-jacks-not-working.html --by "<reviewer>"`.
 - `privacy.html` is NOT IN THE MANIFEST — `python3 scripts/verify-content.py --seed` adds it.
