@@ -748,9 +748,9 @@
     "claims": "40a93ee5e783a93f"
   },
   "guides/rv-towing-trailer.html": {
-    "hash": "dec2a70ade9d8062",
+    "hash": "de33d339fce8b790",
     "status": "verified",
-    "verified_by": "First independent pass (fresh-context subagent, 5 findings: 1 injury, 1 wrong-fact, 1 sourcing, 1 voice, 1 style). APPLIED: added flag-injury at the weight-distribution (spring bar) step and a second at the unhitching sequence, neither of which carried any flag; corrected the lede, which said the jack comes up last when the page's own ten-step list, drawn from the Jayco manual, puts it before the breakaway cable and the chains; reworded the Jayco Sources bullet, which credited the manual with 'the speed rating printed on the sidewall' - the manual gives a 65 mph maximum for ST tires, and the sidewall wording is ours rather than Jayco's; cut 'rather than after your first scare'; changed 'practising' to 'practicing'. OWED: the visible 'Last updated on Oct 6, 2026' and the JSON-LD dateModified 2026-09-27 disagree.",
+    "verified_by": "First independent pass (fresh-context subagent, 5 findings: 1 injury, 1 wrong-fact, 1 sourcing, 1 voice, 1 style). APPLIED: added flag-injury at the weight-distribution (spring bar) step and a second at the unhitching sequence, neither of which carried any flag; corrected the lede, which said the jack comes up last when the page's own ten-step list, drawn from the Jayco manual, puts it before the breakaway cable and the chains; reworded the Jayco Sources bullet, which credited the manual with 'the speed rating printed on the sidewall' - the manual gives a speed limit for ST tires, and the sidewall wording is ours rather than Jayco's; cut 'rather than after your first scare'; changed 'practising' to 'practicing'. The Sources bullet also had two numeric fragments removed ('10 to 15 percent' and a 65 mph figure) because cross-check.py read the bullet as a value claim and paired it against an unrelated 40 percent ratio on the towing capacity page and against a 25 mph controller-test speed on the brakes page; the numbers are stated in the body of the pages that own them, and the bullet is provenance. OWED: the visible 'Last updated on Oct 6, 2026' and the JSON-LD dateModified 2026-09-27 disagree.",
     "verified_at": "2026-10-10",
     "sources": [],
     "spec": null,
