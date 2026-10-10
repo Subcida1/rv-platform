@@ -38,7 +38,7 @@
   },
   {
    "label": "NFPA 1192, Standard on Recreational Vehicles",
-   "url": "https://nfpanorm.com/wp-content/preview/1192%202021.pdf",
+   "url": "https://www.nfpa.org/product/nfpa-1192-standard/p1192code",
    "provenance": "fetch-confirmed"
   },
   {
@@ -64,11 +64,6 @@
   {
    "label": "RV Industry Association",
    "url": "https://www.rvia.org/system/files/media/file/Trailer%20Brake%20Requirements.pdf",
-   "provenance": "fetch-confirmed"
-  },
-  {
-   "label": "RV Technician Library",
-   "url": "https://www.rvtechlibrary.com/tires/rvtires.pdf",
    "provenance": "fetch-confirmed"
   },
   {
@@ -197,8 +192,8 @@
    "provenance": "seen-in-search"
   },
   {
-   "label": "autouserguide.com",
-   "url": "https://www.autouserguide.com/winnebago/winnebago-adventurer-2023-slideout-rooms-and-leveling-user-manual/",
+   "label": "Winnebago Adventurer operator manual (2023)",
+   "url": "https://www.winnebago.com/Files/Files/Winnebago/Resources/OperatorManuals/Operator%202023/22Adventurer.pdf",
    "provenance": "seen-in-search"
   },
   {
@@ -222,8 +217,8 @@
    "provenance": "seen-in-search"
   },
   {
-   "label": "blownfuse.co",
-   "url": "https://blownfuse.co/coachman/pursuit/2022-coachman-pursuit-class-a-gas-motorhomes-waste-water-system-owners-manual/",
+   "label": "Coachmen Pursuit owner's manual (2022), waste water system",
+   "url": "https://coachmenrv.com/ownersmanuals/14128554.pdf",
    "provenance": "seen-in-search"
   },
   {
@@ -297,8 +292,8 @@
    "provenance": "seen-in-search"
   },
   {
-   "label": "dot.report",
-   "url": "https://dot.report/bulletins/11018951",
+   "label": "Brinkley RV customer-satisfaction campaign CSC-2401 (via NHTSA ODI)",
+   "url": "https://static.nhtsa.gov/odi/tsbs/2025/MC-11018951-0001.pdf",
    "provenance": "seen-in-search"
   },
   {
@@ -327,8 +322,8 @@
    "provenance": "seen-in-search"
   },
   {
-   "label": "flrules.elaws.us",
-   "url": "https://flrules.elaws.us/fac/64e-15.004",
+   "label": "Florida Administrative Code 64E-15.004, sewage disposal",
+   "url": "https://flrules.org/gateway/RuleNo.asp?id=64E-15.004",
    "provenance": "seen-in-search"
   },
   {
@@ -337,8 +332,8 @@
    "provenance": "seen-in-search"
   },
   {
-   "label": "forestriverinc.com",
-   "url": "https://forestriverinc.com/files/Component-Manuals/Slide%20Room/Lippert%20-%20Slide%20Out%20Model%20Above%20Floor%20Owner%27s%20Manual.pdf",
+   "label": "Lippert above-floor slide-out owner's manual",
+   "url": "https://lci-support-doc.s3.amazonaws.com/manuals/slideouts/above%20floor/ccd-0009284.pdf",
    "provenance": "seen-in-search"
   },
   {
@@ -387,8 +382,8 @@
    "provenance": "seen-in-search"
   },
   {
-   "label": "law.cornell.edu",
-   "url": "https://www.law.cornell.edu/regulations/alabama/Ala-Admin-Code-r-420-3-1-.31",
+   "label": "Alabama Administrative Code r. 420-3-1-.31, recreational vehicle parks",
+   "url": "https://admincode.legislature.state.al.us/administrative-code/420-3-1-.31",
    "provenance": "seen-in-search"
   },
   {
@@ -552,8 +547,8 @@
    "provenance": "seen-in-search"
   },
   {
-   "label": "opusowners.com",
-   "url": "https://opusowners.com/wp-content/uploads/2020/09/OP4-User-Manual_0820-1.pdf",
+   "label": "Opus Camper OP4 owner's handbook",
+   "url": "https://www.opuscamper.com.au/pdfs/manuals/op4-user-manual.pdf",
    "provenance": "seen-in-search"
   },
   {
@@ -692,8 +687,8 @@
    "provenance": "seen-in-search"
   },
   {
-   "label": "rvtechmag.com",
-   "url": "https://www.rvtechmag.com/docs/rvtirelife.pdf",
+   "label": "Michelin technical bulletin, service life for RV tires",
+   "url": "https://www.michelinb2b.com/wps/b2bcontent/PDF/TB_Service_Life_RV_Tires.pdf",
    "provenance": "seen-in-search"
   },
   {
@@ -792,13 +787,8 @@
    "provenance": "seen-in-search"
   },
   {
-   "label": "tracanada.ca",
-   "url": "https://tracanada.ca/wp-content/uploads/2021/04/USTMA-Care-And-Service_Passenger-And-Light-Truck-Tires.pdf",
-   "provenance": "seen-in-search"
-  },
-  {
-   "label": "trailerjacks.com",
-   "url": "https://www.trailerjacks.com/image/catalog/N30871.pdf",
+   "label": "Reese Elite Series 26.5K fifth-wheel hitch operating instructions",
+   "url": "https://www.reeseprod.com/product-assets/install/N30871.pdf",
    "provenance": "seen-in-search"
   },
   {
@@ -849,11 +839,6 @@
   {
    "label": "walex.com",
    "url": "https://www.walex.com/complete-guide-to-rv-tank-sensors/",
-   "provenance": "seen-in-search"
-  },
-  {
-   "label": "webstore.ansi.org",
-   "url": "https://webstore.ansi.org/standards/nfpa/nfpa11922018",
    "provenance": "seen-in-search"
   },
   {
