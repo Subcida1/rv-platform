@@ -27,7 +27,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="RV battery disconnect: why it will not reconnect">
 <meta name="twitter:description" content="RV battery disconnect: the latching relay needs voltage to move, so a flat battery cannot throw the switch that would let it charge, and the lamp lies.">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"RV battery disconnect: why it will not reconnect","description":"RV battery disconnect: the latching relay needs voltage to move, so a flat battery cannot throw the switch that would let it charge, and the lamp lies.","datePublished":"2026-09-27","dateModified":"2026-09-27","publisher":{"@type":"Organization","name":"OriginRV"},"url":"https://originrv.com/guides/rv-battery-disconnect","author":{"@type":"Organization","name":"OriginRV"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"RV battery disconnect: why it will not reconnect","description":"RV battery disconnect: the latching relay needs voltage to move, so a flat battery cannot throw the switch that would let it charge, and the lamp lies.","datePublished":"2026-09-27","dateModified":"2026-10-10","publisher":{"@type":"Organization","name":"OriginRV"},"url":"https://originrv.com/guides/rv-battery-disconnect","author":{"@type":"Organization","name":"OriginRV"}}</script>
 <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-G8X4MQ0P3X"></script>
   <script>
@@ -45,7 +45,7 @@
 <div class="sec-eyebrow">Troubleshooting guide</div>
 <h1>Why an RV battery disconnect will not reconnect</h1>
 <p class="lede">The battery disconnect is the switch owners are told to check when nothing works, and there is a trap inside it that the manufacturer documents. A latching relay needs voltage to move, so a battery flat enough to need the switch is a battery too flat to throw it. And the light on the panel does not mean the battery is connected, which is how a coach ends up in storage with the batteries quietly going down.</p>
-<p class="reviewed">By <a class="link" href="/about">OriginRV</a>. Last updated on Oct 6, 2026.</p>
+<p class="reviewed">By <a class="link" href="/about">OriginRV</a>. Last updated on Oct 10, 2026.</p>
 </div>
 
 <div class="sec prose">
@@ -55,11 +55,11 @@
 
 <h2>What the switch actually is</h2>
 <p>It is not a switch in the ordinary sense. It is a relay in the battery cable, operated remotely, and Intellitec describes the mechanism plainly: <b>"The Battery Disconnect Relay is a mechanically latching switch. It operates by the momentary application of battery voltage to the coil terminals in one direction for latching (closed), or the other direction for unlatching (open)."</b></p>
-<p>Which means the panel button is not carrying the load, and it is not holding anything. Intellitec: <b>"it requires NO power to stay open or closed. It only draws power during activation."</b></p>
+<p>Which means the panel button is not carrying the load, and it is not holding anything. Intellitec: <b>"it requires [no] power to stay open or closed. It only draws power during activation."</b></p>
 <p>That is good design, and it has one consequence that catches people. The relay holds its position without power, but it needs power to <b>change</b> position. There is no external lever and no mechanical override on the standard part, because the whole mechanism sits inside the sealed relay.</p>
 
 <h2>The catch-22, in the maker's own troubleshooting table</h2>
-<p>Intellitec's installation manual lists this among the symptoms and remedies, and it is the single most useful sentence on the subject: <b>"Pressing 'USE/STORE' switch will not connect the battery. … Battery may be fully discharged. Recharge battery or 'jump' with direct connections."</b></p>
+<p>Intellitec's installation manual lists this among the symptoms and remedies, and it is the plainest sentence on the subject: <b>"Pressing 'USE/STORE' switch will not connect the battery. … Battery may be fully discharged. Recharge battery or 'jump' with direct connections."</b></p>
 <p>Their relay troubleshooting states the threshold: <b>"Relay won't connect/disconnect … Battery voltage below 10.5 Volts - recharge battery."</b> The service manual for the larger relay repeats it: <b>"Check battery voltage, must be greater than 10.5 volts."</b></p>
 <p>So a battery sitting at 10 volts cannot be reconnected by the switch that disconnected it until it has been charged by some other means. This is the loop owners fall into. The coach appears completely dead, the button does nothing, and the conclusion is that the switch or the relay has failed, when in fact the battery is too flat to move it.</p>
 <p>The way out is documented and it is not the button. Charge the battery directly, or apply a jump to the battery terminals, and the relay will move once there is voltage to throw it. Note the word in the instruction: <b>direct connections</b>. Charging through the coach's own converter may not reach the battery, because the relay that stands between them is open.</p>
@@ -69,26 +69,26 @@
 <h2>The light does not mean the battery is connected</h2>
 <p>This is where owners are most often misled, and the maker is explicit about it. On the indicator: <b>"The indicator light for that battery will glow, indicating the presence of 12 Volts on the system."</b></p>
 <p>Voltage on the system. Not relay position.</p>
-<p>Intellitec then spells out when the light will lie to you. <b>"If you are plugged into any 120 Vac source, the 'IN USE' indicator light may remain lighted."</b> And the note that covers the rest: <b>"If there is another 12 Volt source on the coach other than the battery (some coaches have built in charger), the COACH LED may glow even when the battery is disconnected."</b></p>
+<p>Intellitec then spells out when the light will lie to you. <b>"If you are plugged into any 120 Vac source, the 'IN USE' indicator light may remain lighted."</b> And the note that covers the rest: <b>"If there is another 12 Volt source on the coach other than the battery (some coaches have built in charger), the COACH LED [may] glow even when the battery is disconnected."</b></p>
 <p>Their own troubleshooting table treats the situation as normal rather than as a fault, asking only whether the coach is plugged in and whether the engine is running. A glowing panel lamp with the relay open is expected behavior, not a defect.</p>
 <p>So the practical rule is: <b>a lit lamp proves there is 12 volts somewhere, and nothing about the battery.</b> Shore power, a generator, the engine alternator or a built-in charger will all light it with the battery sitting isolated on the other side of an open relay.</p>
 
 <h2>What it disconnects, and what stays live</h2>
 <p>Where the relay sits decides the answer, and Intellitec places it in the battery cable itself: <b>"the relay will be inserted 'in-line' with the cable coming from the positive (+) terminal of the battery."</b></p>
 <p>So it isolates the bank rather than just a distribution panel. But Tiffin is careful with its wording, and the word it uses is <b>most</b>.</p>
-<p> Tiffin, on the house side: the switch <b>"can be used to disconnect the 'house' battery from most of the 12 VDC circuits in the motorhome."</b></p>
+<p>Tiffin, on the house side: the switch <b>"can be used to disconnect the 'house' battery from most of the 12 VDC circuits in the motorhome."</b></p>
 <p>And there is one exception worth knowing before you use this switch for storage, because it concerns a safety device. From a Winnebago owner's manual: <b>"The Propane Gas Leak Detector is powered by the house batteries. If the House/Coach Battery Disconnect switch is shut off or the battery cable is disconnected from the batteries, the alarm will not work."</b></p>
 <p>The same manual explains why that switch exists in the first place, and gives you the other half of the storage problem: <b>"Because the Propane Gas Leak Detector is connected to the house battery, it is always drawing a small amount of current. Even though this current draw is slight, it could drain the house battery during storage periods when the house battery will not be charged regularly by the engine or shoreline."</b></p>
 <p>So the two halves pull against each other, and both are documented. Leave the disconnect on and the detector quietly drains the battery it is protecting. Turn it off and the detector is silent, which matters if there is propane aboard. That is the actual decision in storage, and it is a decision rather than a default: either the battery stays charged and the alarm stays live, or the coach is buttoned up with propane shut off at the tank and the alarm down with it.</p>
 
-<h2>The switch is the most common documented reason a battery will not charge</h2>
-<p>Check this before the converter, the charger or the wiring: the makers name it first. Intellitec: <b>"When the RV is plugged into 120 Vac (or the genset is running) and the COACH battery is in the 'USE' position, it is being charged."</b></p>
+<h2>The switch is a documented reason a battery will not charge</h2>
+<p>Check this before the converter, the charger or the wiring: the makers name it first. Intellitec: <b>"When the RV is plugged into 120 Vac (or the gen-set is running) and the COACH battery is in the 'USE' position, it is being charged."</b></p>
 
 <p>Airstream, for the manual version: <b>"If you have a manual battery disconnect switch, you'll need to turn the battery disconnect switch to 'on,' and allow it to charge."</b></p>
-<p>Three different makers, one sentence between them: shore power does not charge a battery that is not in the circuit. A coach left in store mode with a cord plugged in will sit there indefinitely, keeping its lights on from the converter while the batteries go flat.</p>
+<p>Intellitec and Airstream, one sentence between them: shore power does not charge a battery that is not in the circuit. A coach left in store mode with a cord plugged in will sit there indefinitely, keeping its lights on from the converter while the batteries go flat.</p>
 
 <h2>The label means different things on different coaches</h2>
-<p> There is no single convention, and the makers do not agree.</p>
+<p>There is no single convention, and the makers do not agree.</p>
 <table>
 <tbody>
 <tr><th>Maker</th><th>What they state</th></tr>
@@ -98,12 +98,12 @@
 <tr><td><b>Tiffin</b></td><td>does not use ON or USE wording at all, instead a rotary "House Battery Master Switch" that "can disconnect the house batteries"</td></tr>
 </tbody>
 </table>
-<p>Intellitec's own diagram puts USE at the <b>bottom</b> of a vertical rocker, while Airstream treats on as connected and required for charging, and Tiffin avoid the words entirely with a rotary master switch.</p>
+<p>Intellitec's own diagram puts USE at the <b>bottom</b> of a vertical rocker, while Airstream treats on as connected and required for charging, and Tiffin avoids the words entirely with a rotary master switch.</p>
 <p>So the position that lets your batteries charge depends on your coach, and the panel text is not enough to tell you. What the makers do agree on is which way the batteries charge: the position labeled use, on, or connected, whichever wording your coach uses. If the batteries are not charging and the switch is in store or off, that is the first thing to change.</p>
 
 <h2>What this costs</h2>
-<p> Knowing the 10.5 volt threshold turns "the switch is broken" into "charge the battery directly", which is the difference between a tow to a shop and ten minutes with a charger.</p>
-<p>The order to work in when a coach is dead: measure the battery voltage at the terminals rather than trusting the panel lamp. If it is below 10.5 volts, charge or jump the battery directly, because the switch will not move until you do. Once it is above that, operate the switch and confirm the relay has actually changed state. If the batteries will not charge on shore power, check the switch position before the converter, because all three makers who document this name the switch first.</p>
+<p>Knowing the 10.5 volt threshold turns "the switch is broken" into "charge the battery directly", which is the difference between a tow to a shop and ten minutes with a charger.</p>
+<p>The order to work in when a coach is dead: measure the battery voltage at the terminals rather than trusting the panel lamp. If it is below 10.5 volts, charge or jump the battery directly, because the switch will not move until you do. Once it is above that, operate the switch and confirm the relay has actually changed state. If the batteries will not charge on shore power, check the switch position before the converter, because both makers who document this name the switch first.</p>
 <p>And if the coach is going into storage, know which way is off on your model, and remember that on some coaches that also switches off the propane leak detector.</p>
 
  <div class="flex between gap spread">

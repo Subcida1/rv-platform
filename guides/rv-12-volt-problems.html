@@ -119,7 +119,7 @@
  <text x="440" y="344" font-family="Inter,sans-serif" font-size="15" font-weight="700" fill="#67748e" text-anchor="middle">Chassis ground return</text>
  <text x="440" y="360" font-family="Inter,sans-serif" font-size="13.8" fill="#94a3b8" text-anchor="middle">a poor connection here mimics a dozen other faults</text>
  </svg>
- <figcaption>The converter is <b>not</b> in line between the battery and the panel. It is a second source feeding the same DC bus, which is why the manufacturer states a battery is not required for converter operation.</figcaption>
+ <figcaption>The converter is <b>not</b> in line between the battery and the panel. It is a second source feeding the same DC bus, which is why WFCO states a battery is not required for converter operation.</figcaption>
  </figure>
 
  <h2>Start here: Match your symptom to the link</h2>
@@ -133,9 +133,9 @@
  <h3>One circuit dead, everything else fine</h3>
  <p>That branch fuse, or the load at the end of it. Nothing upstream is at fault, because upstream feeds the circuits that still work.</p>
  <h3>Fuse blows again as soon as you replace it</h3>
- <p>There is a short on that branch. Do not keep feeding it fuses. See the fused-circuit guide in this cluster, because tracing a short is its own skill.</p>
+ <p>There is a short on that branch. Do not keep feeding it fuses. See the guide on chasing a short, because tracing one is its own skill.</p>
  <h3>Something tests fine but will not run</h3>
- <p>Suspect the ground return. A bulb can have good power at the socket and still not light because the return path is corroded, which is why grounds deserve their own section below.</p>
+ <p>Suspect the ground return. A bulb can have good power at the socket and still not light because the return path is corroded, which is why grounds deserve their own treatment.</p>
  <h3>Battery flat after sitting</h3>
  <p>Parasitic draw. Something is drawing with the RV switched off, and the <a href="guides/rv-battery-disconnect">battery disconnect</a> is the manufacturer's own answer.</p>
  </div>
@@ -147,12 +147,11 @@
 
  <h2>The system, in order</h2>
  <div class="card">
- <p></p>
  <h3>There are two sources, not one</h3>
  <p>The battery feeds the panel, and the converter feeds the same panel. They meet at the DC bus rather than sitting in a line, and the converter's charging path runs backwards up the battery's own wire. WFCO states this in its own manual: a battery is not required for converter operation, and the battery works in conjunction with the converter to supply DC power. That single fact explains why an RV with a completely dead battery still has working lights when it is plugged in.</p>
  <h3>Everything returns through the chassis</h3>
  <p>The frame of the RV is the return path for many circuits. Anywhere that return path is corroded, painted, or loose, current cannot get back to the battery and the device behaves as though it has no power at all. This is the fault that gets mistaken for a dead battery or a failed device more often than any other, because a bad ground presents as a fault in whatever device happens to be at the end of the circuit.</p>
- <p><b>It is not the return path for all of them.</b> A trailer commonly runs a dedicated negative wire back to a bus for the house circuits, with the frame carrying the vehicle lighting and brakes, and Progressive Dynamics' own wiring diagram says the chassis may or may not carry the DC negative. So a circuit with its own negative wire has its own set of connections to check, and a fault there will not show up as a frame problem at all. Where the frame is used, its joints are the corrosion sites, and that is the half of this section that catches people.</p>
+ <p><b>It is not the return path for all of them.</b> A trailer commonly runs a dedicated negative wire back to a bus for the house circuits, with the frame carrying the vehicle lighting and brakes, and Progressive Dynamics' own wiring diagram says the chassis may or may not carry the DC negative. So a circuit with its own negative wire has its own set of connections to check, and a fault there will not show up as a frame problem at all. Where the frame is used, its joints are the corrosion sites, and that is the half that catches people.</p>
  <h3>Working the chain</h3>
  <p>Start at the source and move outward. Battery voltage at the terminals, then at the disconnect, then at the main fuse, then at the bus, then at the branch fuse, then at the load. The first point where the reading stops being correct is where the fault is. </p>
  <h3>Two things that differ between RVs</h3>
@@ -171,7 +170,8 @@
  <p>A Renogy resting chart reads 100 percent at 13.6 volts, 90 at 13.4, 80 at 13.3, 70 at 13.2, 60 at 13.1, 50 at 13.0, 40 at 13.0, 30 at 12.9, 20 at 12.8, 10 at 12.0, and 0 at 10.0, with charging at 14.4 plus or minus a fifth. The caveat is theirs: the curve is much flatter for most of the usable range, so voltage alone tells you much less. Do not use a voltmeter as a fuel gauge on lithium. A shunt or a coulomb-counting monitor is the honest answer there.</p>
  <p><b>Before you take any of those readings,</b> Renogy states the battery must be disconnected from the system and allowed to rest for at least two hours. A reading taken while the charger is running, or minutes after you unplugged, is not a state of charge. This is why people conclude their battery is fine when it is not.</p>
  <h3>Now the converter</h3>
- <p>WFCO publishes an explicit pass test: if the voltage reads 13.6 volts DC plus or minus a fifth with no load, the converter is functioning properly. Some of their series state a wider window instead, 13.6 to 14.4 on the 8700-AD, and 13.6 to 14.6 on the lithium setting and the 8900-AD. On the lithium setting, or on an auto-detecting unit that has switched for lithium, the target is higher at 13.6 to 14.6. Progressive Dynamics publishes a nominal 13.6 volts, a boost mode around 14.4, and a storage mode around 13.2. Their operating modes are bulk at 14.4, absorption at 13.6, and float at 13.2.</p>
+ <div class="callout flag flag-injury"><span class="flag-h">Can injure you</span><b>The pass test runs the converter live.</b> The maker's own procedure connects shore power and meters at the terminals: a 120-volt-energized box with the cover off. Open the cover only with the coach unplugged from shore power.</div>
+<p>WFCO publishes an explicit pass test: if the voltage reads 13.6 to 14.4 volts DC, plus or minus a fifth, with no load, the converter is functioning properly. On the lithium setting, or on an auto-detecting unit that has switched for lithium, the target is higher at 13.6 to 14.6. Progressive Dynamics publishes a nominal 13.6 volts, a boost mode around 14.4, and a storage mode around 13.2. Progressive Dynamics names them boost at about 14.4, normal at 13.6, and storage at 13.2.</p>
  <h3>Why the mode matters for diagnosis</h3>
  <p>A converter sitting at 13.2 volts is not necessarily broken, it may simply be in float because the battery is full. If you measure during float and conclude the converter is weak, you will replace a healthy unit. Force a load, like switching on lights or a fan, and watch whether it climbs into bulk.</p>
  <div class="card note">
@@ -181,7 +181,6 @@
 
  <h2>The voltage-drop test: Find the link, not the part</h2>
  <div class="card">
- <p></p>
  <h3>The rule that makes it work</h3>
  <p>Voltage drop only appears under load. Victron states it plainly: the drop becomes larger when the current increases. A circuit that reads perfectly with everything switched off can fail badly the moment it has to carry real current. This is exactly why a light tests fine at the socket and still will not light.</p>
  <h3>How to measure it</h3>
@@ -234,6 +233,7 @@
  <p>Use the loaded comparison described in the voltage-drop section. The reason an ohmmeter is not enough is worth understanding: it pushes so little current through the connection that it cannot tell you whether that connection will carry a real load. A ground bond can read a fraction of an ohm and still fail under ten amps. Loaded testing is the only honest test.</p>
  <h3>A separate problem with the same name</h3>
  <p>On the 120 volt side, shore power grounding is a genuinely different issue with a safety dimension, including what is often called a hot skin condition where touching the RV gives a shock. That is not the 12-volt ground return and should not be treated as the same fault: NFPA 1192 sets out the bonding and grounding requirements that keep the bodywork from becoming a live conductor. If you feel a tingle from the vehicle body, stop and treat it as an AC grounding and bonding fault, not a 12-volt one.</p>
+<div class="callout flag flag-injury"><span class="flag-h">Can injure you</span><b>Hot skin is a shock hazard to anyone touching the vehicle.</b> Unplug from shore power immediately, do not keep using the RV, and treat it as an AC grounding and bonding fault rather than a 12-volt one.</div>
  </div>
 
  <h2>Parasitic draw: What empties the battery in storage</h2>
@@ -250,7 +250,7 @@
  <h2>What fails, and what the manuals cover</h2>
  <div class="card">
  <h3>Converter faults in the maker's own table</h3>
- <p>Progressive Dynamics publishes a proper troubleshooting table, which is unusual and useful. On no output, their listed causes are that AC power is not connected, that external fuses are blown (typically through reverse polarity), a short circuit, a shutdown from overheating, or a shutdown from over voltage, which occurs above 132 volts input. On low output, they list an excessive load for the converter, an input voltage outside 105 to 130 volts, or a battery with a bad cell. WFCO adds that on a short circuit the converter will drop its output to zero, and that under excessive load the current holds constant while the voltage falls. WFCO also notes that if the converter reads zero at the battery, you should check for an open inline fuse in the battery wire circuit.</p>
+ <p>Progressive Dynamics publishes a proper troubleshooting table, which is unusual and useful. On no output, their listed causes are that AC power is not connected, that external fuses are blown (typically through reverse polarity), a short circuit, a shutdown from overheating, or a shutdown from over voltage, which on their 230-volt units occurs above 132 volts input. On low output, they list an excessive load for the converter, an input voltage outside 105 to 130 volts, or a battery with a bad cell. WFCO adds that on a short circuit the converter will drop its output to zero, and that under excessive load the current holds constant while the voltage falls. WFCO also notes that if the converter reads zero at the battery, you should check for an open inline fuse in the battery wire circuit.</p>
  <h3>Wear and environmental failures</h3>
  <p>Cooling fan failure leading to a slow heat-related death is widely described in the trade. Pitted contacts in a battery disconnect, corroded terminals and ground points, and converters wearing out from heat, vibration, moisture and surges are all the same category. They are wear and environment problems rather than faults with a listed cause, so treat them as strong suspicion until you have measured something.</p>
  </div>
@@ -259,8 +259,8 @@
  <div class="card">
  <p>What you pay comes down to three things: the part, the diagnosis, and how hard the fault is to reach. A diagnosis is its own charge at most shops, and some credit it against the repair if you go ahead.</p>
  <p><b>The part is rarely the expensive half.</b> A fuse, a breaker or a disconnect switch costs little. A converter or inverter charger is a far pricier part, and one with a bigger output costs more. Distribution panels are surprisingly cheap as parts: the labor is the cost there, not the panel.</p>
- <p><b>labor is where the money goes, and it scales with access.</b> Shop rates run high and are charged by the hour, so a fault behind a panel or under a bed is a longer job than one at the battery. Large inverter chargers are quoted in hours as much as in parts, and the range is wide because the installation is.</p>
- <p><b>Ask before you authorise.</b> Two questions change the bill more than anything else: was the fault confirmed by measuring rather than assumed, and is the quote parts or parts and labor.</p>
+ <p><b>Labor is where the money goes, and it scales with access.</b> Shop rates run high and are charged by the hour, so a fault behind a panel or under a bed is a longer job than one at the battery. Large inverter chargers are quoted in hours as much as in parts, and the range is wide because the installation is.</p>
+ <p><b>Ask before you authorize.</b> Two questions change the bill more than anything else: was the fault confirmed by measuring rather than assumed, and is the quote parts or parts and labor.</p>
  <h3>The comparison worth making</h3>
  <p>If a shop quotes a converter replacement, ask whether the reverse polarity fuses were checked first, and whether the fault was confirmed by measuring at both the converter and the battery. Those two questions cost nothing, and they eliminate the most common false diagnosis in this system.</p>
  </div>
@@ -275,7 +275,7 @@
  <p><b><a href="guides/rv-outlets-not-working">Outlets not working.</a></b> The 120 volt side rather than 12 volt, including the three published reasons a GFCI will refuse to reset.</p>
  <p><b><a href="guides/rv-solar-not-charging">Solar not charging.</a></b> Panel, controller, battery, and the two things that look like faults and are not.</p>
  <h3>When the fault is a cold-weather one</h3>
- <p>If your symptom is specifically weak or lost 12-volt supply in cold weather, the low voltage section of our <a href="guides/rv-furnace-not-working">furnace troubleshooting guide</a> covers how a sagging battery stops an appliance that needs current to start. And <a href="guides/battery-winter-storage">battery winter storage</a> covers what happens to a bank that sits, which is where a lot of these faults begin.</p>
+ <p>If your symptom is specifically weak or lost 12-volt supply in cold weather, the low-voltage section of the <a href="guides/rv-furnace-not-working">furnace troubleshooting guide</a> covers how a sagging battery stops an appliance that needs current to start. And <a href="guides/battery-winter-storage">battery winter storage</a> covers what happens to a bank that sits, which is where a lot of these faults begin.</p>
  </div>
 
  <div class="flex between gap spread">
@@ -288,7 +288,7 @@
  <details class="faq"><summary>What is the difference between a converter and an inverter?</summary><p>A converter takes 120 volt AC shore power and turns it into 12-volt DC, which is what runs your lights, fans, water pump and control boards. An inverter goes the other way, taking 12-volt DC from the batteries and stepping it up to 120 volt AC so you can run household outlets when you are not plugged in. Many RVs now have an inverter charger, which is one unit doing both jobs, and in those the converter is usually gone.</p></details>
  <details class="faq"><summary>How do I test for voltage drop in my RV wiring?</summary><p>Voltage drop only appears under load, so a reading taken with everything switched off tells you almost nothing. Load the circuit, then measure the voltage at both ends of the same path, for example at the battery terminals and again at the device. The difference between the two readings is the voltage drop. Manufacturer guidance suggests aiming for no more than 2.5 percent, which on a 12-volt system is about 0.3 volts.</p></details>
  <details class="faq"><summary>Why does my RV battery go flat in storage when everything is switched off?</summary><p>Because things are not actually off. Control modules for slide-outs and steps, radio memory, the LP gas solenoid, and illuminated touch panels all draw current continuously. The practical answer is the battery disconnect, which is what the manufacturer recommends. To measure it, put a meter in series with the negative cable at the battery and pull fuses one at a time until the current drops.</p></details>
- <details class="faq"><summary>What is an acceptable parasitic draw on an RV battery?</summary><p>At least one major manufacturer states that the figure depends on the specific vehicle and declines to give a number. A meter maker's general automotive guidance is that under 50 milliamps after the vehicle has gone to sleep is normal and over 100 milliamps is suspect. Individual components do publish their own standby draws, so you can total those for your own RV.</p></details>
+ <details class="faq"><summary>What is an acceptable parasitic draw on an RV battery?</summary><p>Winnebago's service bulletin states that the figure depends on the specific vehicle and declines to give a number. A meter maker's general automotive guidance is that under 50 milliamps after the vehicle has gone to sleep is normal and over 100 milliamps is suspect. Individual components do publish their own standby draws, so you can total those for your own RV.</p></details>
  <div class="card srcs">
  <h3>Sources</h3>
  <ul>
