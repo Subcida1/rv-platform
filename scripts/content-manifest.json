@@ -618,13 +618,14 @@
     "claims": "1fe18dc8c794753f"
   },
   "guides/rv-pin-weight-and-payload.html": {
-    "hash": "c9a3b9613f4eaa8f",
-    "status": "unverified",
-    "verified_by": null,
-    "verified_at": null,
+    "hash": "0960626d1003a724",
+    "status": "verified",
+    "verified_by": "Fresh-context pass 2026-10-10 by Cloud (stronger than the drafter, but a SAME-SESSION pass, not a separate reviewer subagent: subagent dispatch failed all evening under exhausted swap). NO DEFECTS FOUND. Every citation verified: 49 CFR 567.4's GVWR and GAWR label wording and 571.3's four definitions of GVWR, GAWR, curb weight and unloaded vehicle weight were read from the govinfo/eCFR text (the page's ecfr.gov URLs are JavaScript shells that return no text to a machine fetch); 49 CFR 571.110 S9.3.5(e) carries the 'CAUTION: A full load of water equals XXX kg or XXX lbs of cargo' statement and S9.2 the GAWR-plus-tongue-weight rule the page quotes. All four commercial quotations are verbatim: Ford's 'Trailer tongue (trailer king pin for 5th-wheel towing) load weight should be 10% (15% for 5th-wheel and gooseneck towing) of total loaded trailer weight.', 'Trailer towing values are the same for weight-carrying and weight-distributing hitches.', 'If using load bars for weight distribution, Ford recommends 50% front axle load restoration (FALR).' and 'we recommend visiting a weight station or public scale at a truck stop.'; Reese's 'Approximately 15%-25% of trailer weight should be on hitch (Pin Weight).' and 'King pin weight must not exceed 4,000 pounds'; Lippert Turning Point's 'Pin weight of 2,000 lbs (20 percent maximum of Step 1.C.)'; Curt Helux's 'Pin weight can also be approximated by multiplying the GVWR of the 5th wheel by 22% (0.22).' and its 'certifed scale' CAT-scale line, typo included and left verbatim (the site uses no [sic]); and RVIA's page does list UVW, GVWR, GAWR and CCC without defining them, as the page says. NOTE ON METHOD: ford.com and vdm.ford.com return HTTP 403 to every fetch from this machine, so the four Ford quotations were confirmed against indexed text of the same Ford PDFs and the live ford.com/towing page rather than by direct fetch. OWED: the independent reviewer-subagent pass the doctrine prefers.",
+    "verified_at": "2026-10-10",
     "sources": [],
-    "claims": "a44bf4a3d9403aa0",
-    "claims_date": "Oct 2, 2026"
+    "spec": null,
+    "spec_waived": true,
+    "claims": "a44bf4a3d9403aa0"
   },
   "guides/rv-pre-trip-walkaround.html": {
     "hash": "afbad77da5d96eab",
