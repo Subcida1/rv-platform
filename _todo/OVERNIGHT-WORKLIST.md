@@ -69,11 +69,32 @@ unaffected and is what the rebaselines use. NOT fixed here — recorded rather t
 | 2 | rv-propane-furnace-wont-light | 6 (+2 quotes sourced) | **done, pushed** `7985119` |
 | 3 | rv-water-heater-not-heating | 9 | **done, pushed** `a63ff7c` |
 | 6 | rv-generator-sizing | 6 | **done, pushed** `1ce8500` |
-| 7 | rv-two-appliances-stopped | 7 | applied + rebaselined, committing |
-| 4 | rv-converter-not-charging | 8 | applied, rebaselining next |
-| 8 | rv-tank-sensors-reading-wrong | 6 | applied, rebaselining next |
-| 5 | rv-generator-not-charging | — | review dispatched, no output after 10 min |
-| 9-13 | refrigerator, fridge-leveling, toilet, macerator, sewer-smell | — | reviews dispatched |
+| 7 | rv-two-appliances-stopped | 7 | **done, pushed** `4cbd744` |
+| 4 | rv-converter-not-charging | 8 | **done, pushed** `899b832` |
+| 8 | rv-tank-sensors-reading-wrong | 6 | **done, pushed** `899b832` |
+| 10 | rv-fridge-leveling | 2 | **done, pushed** `899b832` |
+| 11 | rv-toilet-not-flushing | 8 | **done, pushed** `899b832` |
+| 5 | rv-generator-not-charging | 12 | **done, pushed** `270790b` |
+| 9 | rv-refrigerator-not-cooling | 7 (3 injury) | **done, pushed** `270790b` |
+| 12 | rv-macerator-toilet | 6 | **done, pushed** `270790b` |
+| 13 | rv-sewer-smell | 15 | applied + re-baselined, committing |
+
+**W15 IS EFFECTIVELY CLOSED FOR ITEMS 1-13, and the class was the biggest single finding of the pass.** The
+live-work-without-a-flag sweep that W15 opened found one real gap when it ran; the independent reviews found
+**seven more on this half alone** — the converter page's two-reading section and its battery-load-removed step,
+the propane furnace guide's manometer test steps, the water heater's ECO reset inside the 120-volt housing, the
+generator-charging page (which carried no flag of any class at all), the two-appliances page's live LP pressure
+test, the toilet guide's supply-line disconnect, and the macerator's live voltage test. Every one now carries a
+`flag-injury` (or `flag-damage`) callout. **The lesson worth keeping: the original sweep greppped for risk words
+and found one gap; the per-page reviews found seven more, because a reviewer reading the page in order sees a
+procedure written as an owner imperative where a grep sees only a keyword.** The remaining half (14-27) belongs
+to `conv-6991caed` and the same class should be checked there.
+
+**Note on commit shape (disclosed rather than hidden):** pages 4, 8, 10 and 11 are re-baselined and shipped in ONE
+commit rather than four. The review and the apply were done one page at a time, as the method requires; only the
+commit step is grouped, because `scripts/content-manifest.json` is a single shared file and four separate commits
+would have meant four `ci.sh` runs over identical content. If a commit in this pass ever goes red, the page that
+caused it is identified from the manifest note and the diff, not from the commit boundary.
 
 **Two operational findings worth carrying forward, both earned today:**
 
