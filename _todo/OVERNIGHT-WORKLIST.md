@@ -608,7 +608,20 @@ link it. So the honest count is one marginal miss, not thirteen misfires, and "l
 **Not changed** for now: it is a marginal internal link, and `winterize-plumbing` is one of the 13
 content-verified pages.
 
-**Still unmeasured, so nobody should act on it yet:** (1) the manuals "this link may not work" row set.
+**(1) "kill/fix the ~15+ 'this link may not work' rows" — MEASURED; the count is wrong and the named dead
+links are not dead.**
+
+- The rows are **11 of 110 components** (plus 3 recall rows), not "15+". They are not broken links: the
+  badge is the generator's honest label for a row that has not passed its audit (`status != verified`),
+  which is the behaviour the generator's own comment describes.
+- **"recalls page dead TSBS source link" — FALSE.** `TSBS_RECEIVED_2025-2026.zip` returns HTTP 200.
+- **"Thor warranty 404s" — FALSE.** Thor Motor Coach's row URL returns HTTP 200, and the row is `verified`.
+- **"Entegra/Ember rows pointing at pages the text says link to nothing" — not supported.** Both row URLs
+  return 200; Entegra's page carries document links, and Ember's resources page is JavaScript-rendered, so
+  a text extractor sees nothing. Same blind spot as `/contact`.
+
+So the honest action is to leave the 11 unverified rows labelled as they are. If any should be promoted,
+that is a live pass of its own: `python3 scripts/audit-manuals.py --live`.
 
 **HOW TO DO A SECTION:** the pages are largely hand-written; only the nav/footer shell is generated
 (`build-shell.mjs --check` proves it). Replace the exact source string, assert it matched once, check
