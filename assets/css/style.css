@@ -399,19 +399,18 @@ input,select,textarea{font-family:inherit}
 .no-body li,.no-sec li{margin:14px 0;line-height:1.75}
 .no-body li:first-child,.no-sec li:first-child{margin-top:0}
 /* THE SYMPTOM TABLE. .sym is emphasis WITHOUT the tint that .no-body b carries: a tinted symptom on
-   every row would read as though the whole first column were quotations. .tag is the system label,
-   kept as a chip rather than a fourth column so the table still fits a phone. */
+   every row would read as though the whole first column were quotations. */
 .no-body .sym,.no-sec .sym{font-weight:600;color:var(--text)}
-.no-body .tag,.no-sec .tag{display:inline-block;margin-left:8px;padding:3px 9px;border-radius:999px;
-  background:var(--tint-bg);box-shadow:0 0 0 1px var(--tint-edge);font-size:11.5px;font-weight:700;
-  text-transform:uppercase;letter-spacing:.04em;color:var(--text-2);white-space:nowrap}
-/* THE SYSTEM CHIP SITS ABOVE ITS SYMPTOM, CENTRED. Ty, 2026-10-09: the chips look nice but "they
-   look like they're out of place sitting to the right of the text ... it's probably like above and
-   centered like a little bit of spacing." The tag is the cell's first child in the markup, so it
-   becomes a centred block over the symptom with a little air beneath it, and the symptom text stays
-   left-aligned where a sentence belongs. */
-.no-body .man-table td .tag,.no-sec .man-table td .tag{display:block;width:fit-content;
-  margin:0 auto 9px}
+/* THE SYSTEM CHIPS ARE GONE, AND THIS IS WHY, so they are not reinvented. They were a rounded,
+   tinted, uppercase pill at the head of each symptom cell: "120 VOLTS", "12 VOLTS", "BATTERY". Ty,
+   2026-10-09: "they just look out of place ... can we just get rid of them completely maybe. I wish
+   we could keep them, but I don't know how to make them look like they belong." He was right, and
+   the fault was the SHAPE, not the position. A pill is a button, these were never clickable, and
+   moving them above the text and centring them (which was tried first) left the affordance intact.
+   They were also mostly saying what the sentence beneath them already said. If the system label is
+   ever wanted back, it belongs in a real fourth column: a column reads as data, a chip reads as a
+   control. */
+
 .no-body h2.man-h2{margin-top:52px;padding-top:30px;border-top:1px solid var(--border)}
 .no-body h2.man-h2:first-child{margin-top:0;padding-top:0;border-top:0}
 
@@ -523,11 +522,6 @@ input,select,textarea{font-family:inherit}
 @media(max-width:480px){
   .man-table th,.man-table td{padding:8px 6px}
   .no-body .man-table td a,.no-sec .man-table td a{display:inline-block;padding:14px 0}
-  /* THE CHIPS WERE WHAT THE TABLE COULD NOT SHRINK PAST. .tag is white-space:nowrap, so on the
-     narrowest phone "WATER HEATER" was a 100px unbreakable run flooring the first column, and the
-     three columns together needed 338px in a 312px container. Letting them wrap costs a line in one
-     cell and buys the table its fit. */
-  .no-body .tag,.no-sec .tag{white-space:normal;padding:3px 7px;font-size:11px}
 }
 .no-sources li{padding:3px 0;border-bottom:1px solid var(--border)}
 .no-sources a{color:var(--b1)}
