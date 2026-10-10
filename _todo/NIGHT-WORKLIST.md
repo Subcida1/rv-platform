@@ -116,11 +116,23 @@ Start with the six guides built on 2026-10-08, since none of them has had a huma
 rv-pre-trip-walkaround, rv-black-tank, rv-fridge-leveling, rv-driving-motorhome, rv-towing-trailer,
 rv-maintenance-schedule.
 
-### 2. Five unsourced maintenance intervals
+### 2. Five unsourced maintenance intervals — DONE 2026-10-10
 `guides/rv-maintenance-schedule.html` names them on the page and they need documents, not prose:
 slide-out seal cleaning, roof cleaning, water heater drain and flush, lock and hinge and entry step
 lubrication, awning lubrication, roof vent inspection. (Three were closed 2026-10-08 from Lippert
 and Dometic documents, which is the pattern: fetch the maker's manual, read it, then add the row.)
+
+**Closed overnight 2026-10-10, each figure fetched and read from a maker document:** roof cleaning
+(Dicor roof care and maintenance: at least four washes a year, non-abrasive cleaner, medium bristle
+brush), water heater drain and flush (Keystone schedule: drain after each use, flush yearly; Jayco
+adds draining before long storage, especially in winter), entrance step pivot lubrication (Jayco:
+every 30 to 60 days, automotive-grade non-staining lubricant; Keystone lists it monthly), door lock
+lubrication (Jayco: biannual, light coat of silicone spray; Keystone lists it monthly), awning
+lubrication (Dometic 8700 awning manual: silicone spray as needed, candle wax on sliding surfaces;
+Jayco agrees), and roof vent inspection (Keystone: every six months; Jayco adds the refrigerator and
+tank vent blockage check). The existing slide-out seal bullet is now backed by Jayco's cleaning
+slide-out seals section and Lippert's wash-with-mild-soap instruction. CI green, commit-level
+verify.py green, pushed as 39fe7d1.
 
 ### 3. `scripts/audit-pages.py` worklist
 Run it. It ranks every page by measurable defect. 91 of 123 clean as of 2026-10-08. Two known items
