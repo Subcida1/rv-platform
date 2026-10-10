@@ -41,6 +41,35 @@ command's status.** `cross-check.py --strict | tail` said nothing was wrong. Use
 - **Run `bash scripts/ci.sh` before pushing.** `python3 scripts/verify.py` alone misses five checks.
 - **Never `git commit -a`.** Stage explicit paths; a parallel session shares this tree.
 
+### 1d. new-owner-sources.json rehost worklist — CLOSED 2026-10-10
+
+**Most of it was already done** by the 8e8670b commit; 13 of the 20 flagged URLs were already
+pointing at the maker's own copy. The seven that remained are now fixed:
+
+| entry | was | now |
+|---|---|---|
+| Michelin RV Tires brochure | an Azure CDN path | michelinb2b.com, the maker's own host |
+| Winegard AIR 360+ | forestriverinc.com, i.e. a different maker hosting it | winegard.com, and the fetch confirms it is the same product's manual |
+| IAPMO TS 2-2021 | kpt-bj.com | IAPMO's own store |
+| Suburban water heaters | forestriverinc.com | library.suburbanrv.com, Airxcel's own |
+| NHTSA tire aging summary | tirereview.com (live rehost) | the archived copy of the same file, labelled with the report number |
+| L&W lift system manual | opaque "rvworkshop.com" label | kept, relabelled: L&W publishes no copy of its own |
+| Coleman/Fleetwood lift manual | opaque "rvworkshop.com" label | kept, relabelled: the maker closed in 2011 |
+
+**Two corrections to the audit that produced that worklist, both worth keeping:**
+
+1. **Its "DROP these 3" recommendation was wrong for two of the three.** A quotation on
+   `manuals/start-here.html` rests on the NHTSA tire-aging summary. Dropping the citation would
+   have orphaned a quoted sentence. The audit classified URLs; it did not check what depended on
+   them. **Check a finding against the artefact before acting on it.**
+2. **The two "no maker copy" lift-system entries do have a living maker.** Goshen Stamping has made
+   the most common pop-up lift system since 1976 and publishes its own diagrams and a spring-change
+   procedure at goshenstamping.com. Swapping to them was considered and REJECTED: their documents
+   are a scanned parts diagram and a spring-change procedure, and neither contains the page's
+   lift-maintenance wording, so the swap would have been a mis-citation. L&W and Coleman/Fleetwood
+   remain the correct attributions, which is why those two keep a third-party URL with a label that
+   says so.
+
 ---
 
 ## Website
@@ -153,10 +182,19 @@ states. Audit now reports **100 of 124 clean** (was 91). The `h1 = title` class 
 `about.html`/`privacy.html` no-target is editorial too (non-search pages). CI green commit-level,
 pushed.
 
-### 4. The migrated-block question, still open
-Four sections sit between the opener and Part 1 under a "Start here" part heading. Two of them
-("Which RV system to learn first", "How the 12-volt and 120-volt systems connect") duplicate material
-in Part 2. Merging them is a content decision for Ty, not for a night session.
+### 4. The migrated-block question — CLOSED 2026-10-10, nothing to merge
+
+**Checked, and the premise does not hold.** The four sections between "Start here" and Part 1 are
+"RV troubleshooting", "Which RV system to learn first", "How the 12-volt and 120-volt systems
+connect" and "Finding your RV owner's manual". Read them: the first is a triage entry point, the
+second is a learning ORDER (each step gives a reason and a pointer), the third explains one
+relationship between the two electrical systems, the fourth is where to find manuals. None of them
+restates Part 2.
+
+`scripts/duplicate-passages.py` agrees: it reports two repeated passages sitewide, both inside
+single pages and neither on this one. **There is no duplication to merge, so nothing was merged.**
+The earlier note called this "a content decision for Ty"; it was not a decision at all, it was a
+check nobody had run.
 
 ### 5. The two structural rules have no gate — DONE 2026-10-10
 
@@ -172,6 +210,21 @@ check whose logic rotted cannot quietly report green. Negative-tested against re
 wrapper and stray tile guide-go both fail with the right message) before it was wired in.
 
 ### 6. The gradient set is wider than the rule — Ty's call
+
+**Check run 2026-10-10, and the item is smaller than it looks. The 70 figure counts gradient
+DECLARATIONS, not gradients that paint.** `.eyebrow` (style.css:1174) and `.big-card .num` (1198)
+each declare one, and each is overridden by a later rule of equal specificity —
+`.cat-card .meta,.guide-card .cta,.cta,.deck-go,.grad-text,.eyebrow{color:var(--text-2);background:none;
+-webkit-background-clip:initial;background-clip:initial}` at 1751, and `.big-card .num{color:var(--text)}`
+at 1739. So the two selectors the note names do not visibly contradict the brand rule; the stale part is
+the allowlist, not the page.
+
+**Not changed, deliberately.** The declarations sit inside a `@media(max-width:520px)` block and the
+overrides sit outside it, so whether removing them is pixel-neutral depends on the cascade at two
+widths. That is a rendered check, not a code read, and deleting two entries off a frozen list is not
+worth a cosmetic change nobody has measured. `check-style.py` cannot settle it either: it reads
+declarations. **Anyone narrowing this list should first make the tool count what paints, or verify with
+`audit-colour.mjs` at 520px and above.**
 70 selectors paint a gradient, frozen in `scripts/check-style.py` and recorded in STYLE.md. The
 rule is "only where it leads someone, or marks identity". `.eyebrow` and `.big-card .num` contradict
 the earlier brand decision that stats and eyebrows are solid ink so the eye rests. Narrowing it
