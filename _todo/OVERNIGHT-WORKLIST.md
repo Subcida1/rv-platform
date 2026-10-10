@@ -222,6 +222,27 @@ it tonight, but this instrument cannot currently distinguish that from page pros
 flags correct behaviour is worse than none, because it teaches the reader to ignore it.** Fixing the
 extractor is a pass of its own; until then, quotation fidelity is a read-it-yourself job.
 
+### rv-delamination.html — PARTIAL hand-check 2026-10-10 01:40 (NOT an independent pass)
+Subagent dispatch was down, so this page was checked by hand. **Scope, stated honestly: 5 of its 27
+quotations were verified, not all of them, and a hand check by a long-context agent is weaker than a
+fresh-context review.** What was checked and found:
+
+- **Azdel, `what-is-delamination`** — VERBATIM by fetch. The page quotes Azdel saying *"Google defines
+  Delamination as 'a structural failure …'. We concur."* That reads like an unnamed authority but it is
+  Azdel's own wording, quoted and correctly attributed. Do not "fix" it.
+- **Crane Composites care guide** — VERBATIM by fetch + `pdftotext`: *"A water tight seal is necessary
+  to maintain the integrity of the composite wall system. Follow the RV manufacturer's guidelines.
+  Damage caused by moisture in the RV wall will void any warranty."*
+- **Airstream, "external seams and joints, such as end-shell segments …"** — VERBATIM against the cited
+  support article.
+- No truncated sentence, no em dash, no dangling comma.
+- **No flag-injury, and on inspection none is owed:** the page is descriptive and declines to instruct
+  hazardous work — line 87 says outright that what is documented is *re-skinning, not injection*. The
+  W15 sweep flags this page on the words `roof`/`ladder`/`adhesive`; it is one of that sweep's false
+  positives, which is why W15 says hand-check every hit.
+**Still owed:** a real independent pass over the remaining 22 quotations and the sourcing of every
+number on the page.
+
 ### W13. Close the accessibility blind spot — AFTER W9 lands
 `check-a11y.mjs` is not in `ci.sh`, and its 6-page REPRESENTATIVE list has **no manuals section page**,
 which is exactly why the `start-here.html` contrast defect shipped. After W9's stylesheet fix is
