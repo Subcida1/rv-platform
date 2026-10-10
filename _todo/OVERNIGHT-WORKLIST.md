@@ -683,6 +683,25 @@ without a source: how to isolate a suction leak with a jug on a known-good hose,
 looks like in a bucket, where the check valve physically lives on these pumps, and the frozen-line cause
 (the page is written for winterizing season and never mentions ice).
 
+**7. Three more reviews applied, and the agreement class is now complete (2026-10-10 14:20).**
+rv-water-pump-wont-prime and rv-delamination came back substantive and are applied and baselined.
+rv-condensation-inside needed three dispatches (aistudio returned a DAILY QUOTA refusal, grok stalled in
+`send-unconfirmed`, chatgpt answered) and its four sourcing findings plus four English ones are applied
+and baselined.
+
+**The condensation review exposed TWO collective-noun errors my first scan had missed, because the
+subject was not a maker on my list** ("The US Department of Energy state", "Airstream state"). A wider
+scan, keyed on the SHAPE (a capitalised subject plus a base-form verb, quotations excluded) rather than
+on names, then found **21 more across six guides**: Airstream, Grand Design, Tramex, Winnebago, Kidde, the
+CPSC, Curt, Ford, Marshall Excelsior, MB Sturgis. All now singular. Compound subjects ("Michelin and Ford
+put", "SHURflo and FloJet publish") are correctly plural and were left alone, as were possessive and noun
+uses ("Keystone's list", "RV cover", "No. A cover").
+
+**The lesson, since this cost two passes: a scan bounded by a hand-written name list is a scan that
+misses things. When a class is defined by grammar, scan the grammar, not the names.** And a second one,
+caught by the gate rather than by me: editing a page AFTER baselining it is drift, and `verify.py` said
+so immediately. Re-baseline after the last edit, not before it.
+
 **HOW TO DO A SECTION:** the pages are largely hand-written; only the nav/footer shell is generated
 (`build-shell.mjs --check` proves it). Replace the exact source string, assert it matched once, check
 no em dash was introduced, run `verify.py`, re-baseline any verified page, commit by explicit path,
