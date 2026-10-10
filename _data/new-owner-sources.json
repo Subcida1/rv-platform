@@ -1025,6 +1025,11 @@
    "label": "AmeriGas, propane tank sizes",
    "url": "https://www.amerigas.com/about-propane/propane-tank-sizes",
    "provenance": "fetch-confirmed"
+  },
+  {
+   "label": "Dometic gas water heater owner's manual (P/T relief valve)",
+   "url": "https://media.dometic.com/externalassets/dometic-water-heater-6-gallon-gas_93842.pdf",
+   "provenance": "fetch-confirmed"
   }
  ]
 }
