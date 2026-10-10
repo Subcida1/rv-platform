@@ -383,9 +383,9 @@
     "sources": []
   },
   "guides/battery-winter-storage.html": {
-    "hash": "eb1c53e945231574",
+    "hash": "8ba12c948e642e99",
     "status": "verified",
-    "verified_by": "2026-10-10 content-gate re-baseline by Cloud: the safety pass added exactly ONE flag-injury callout to this page and changed or removed nothing else, so every sentence the 2026-10-06 verification covered is intact and unedited. The ADDED callout has NOT had an independent pass; that is owed and recorded in _todo/SAFETY-ISSUES.md.",
+    "verified_by": "2026-10-10 voice pass, Ty's package section 3: two American-English rewrites (comma splice to two sentences, and 'a voltage it did not ask for' to 'a float voltage the pack doesn't want'). No facts, numbers or intervals touched. The flag-injury callout added earlier still owes an independent pass, recorded in _todo/SAFETY-ISSUES.md.",
     "verified_at": "2026-10-10",
     "sources": [],
     "spec": "_specs/battery-winter-storage.md",
