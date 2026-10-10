@@ -140,6 +140,19 @@ it leaves standing:
 - `manuals/sanitation-and-tanks.html` — 433 words of real paragraphs and no structure. May be genuine.
 - `contact.html` and `about.html` — thin and declare no search target.
 
+**DONE 2026-10-10 — the sanitation finding was an instrument false positive, not a page defect.**
+The audit's paragraph regex `<p[^>]*>` matched inline SVG `<path ...>` elements (18 per page in the
+header icon), and the lazy `.*?</p>` swallowed the whole body up to the first real `</p>` — so a
+card-grid page with one 20-word intro paragraph measured as 433 "words of prose" and got flagged
+`0 h2`. Fixed at the source: `<p(?![a-z])[^>]*>` in `scripts/audit-pages.py` (no `<pre>` exists
+sitewide, so the tightening drops nothing real). That cleared all 8 false `0 h2` flags on the
+manuals pages. The run also surfaced one genuine mechanical gap: `directory/oregon.html` was the
+only state page missing from `_data/targets.json` — added `rv repair oregon` matching the other 50
+states. Audit now reports **100 of 124 clean** (was 91). The `h1 = title` class (19 guides) and the
+`title 66ch` on `rv-furnace-carbon-monoxide` are editorial and stay open; `contact.html`/
+`about.html`/`privacy.html` no-target is editorial too (non-search pages). CI green commit-level,
+pushed.
+
 ### 4. The migrated-block question, still open
 Four sections sit between the opener and Part 1 under a "Start here" part heading. Two of them
 ("Which RV system to learn first", "How the 12-volt and 120-volt systems connect") duplicate material

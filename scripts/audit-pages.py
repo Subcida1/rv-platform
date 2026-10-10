@@ -96,7 +96,7 @@ def main():
         # measured on PARAGRAPH text, not on the whole page: a document index is mostly link
         # text and clears a raw word count while having nothing to break up.
         para_words = len(" ".join(
-            re.sub(r"<[^>]+>", " ", x) for x in re.findall(r"<p[^>]*>(.*?)</p>", t, re.S)).split())
+            re.sub(r"<[^>]+>", " ", x) for x in re.findall(r"<p(?![a-z])[^>]*>(.*?)</p>", t, re.S)).split())
         if para_words > 300 and h2 < 2:
             problems.append(f"{h2} h2")
         if words < 400:
