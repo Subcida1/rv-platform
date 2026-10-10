@@ -98,12 +98,21 @@ unaffected and is what the rebaselines use. NOT fixed here — recorded rather t
 | # | page | findings | state |
 |---|------|----------|-------|
 | 27 | guides/index.html | 1 (ItemList name mismatch) | **done, pushed** `4ee85d9` |
+| 24 | rv-maintenance-schedule | 6 (1 injury, 1 wrong-fact, 1 sourcing, 2 voice, 1 style) | **done, pushed** `f817a7b` |
 | 26 | rv-trip-planner | — | review in flight |
 | 25 | rv-black-tank | — | queued |
-| 24 | rv-maintenance-schedule | — | review in flight |
-| 23 | rv-pre-trip-walkaround | — | review in flight |
+| 23 | rv-pre-trip-walkaround | — | queued |
 | 22 | rv-pin-weight-and-payload | — | queued |
 | 21 | rv-driving-motorhome | — | queued |
+
+**PLATFORM HAZARD 2026-10-10 16:47 PDT (conv-6991caed).** Subagent dispatch is failing: four
+concurrent reviewers were launched at 16:40 and three died with "Listener connection closed"
+(stalled on unanswered Bash approval requests); from 16:47 every dispatch fails instantly with
+"App-server socket closed". Cause is measured, not guessed: **the machine has exhausted swap --
+`free -h` shows 15Gi total, 11Gi used, 1.2Gi free, and 8.1Gi of 8.3Gi swap in use.** Spawning a
+subagent conversation cannot allocate. This is the same class W12 recorded overnight (three
+consecutive dispatch failures with three different errors). Mitigation: dispatch ONE at a time,
+never alongside `ci.sh`, and re-dispatch when the other session's load drops.
 
 **W15 IS EFFECTIVELY CLOSED FOR ITEMS 1-13, and the class was the biggest single finding of the pass.** The
 live-work-without-a-flag sweep that W15 opened found one real gap when it ran; the independent reviews found
@@ -1056,3 +1065,79 @@ stopped and launched a headless replacement (`conv-81e990f0`, `letta -p --new`) 
 messages were sent (the process has since exited); `conv-6991caed` was corrected directly. **Lesson for
 the next fire: a session that goes quiet is not a session that died — confirm before spawning a
 replacement, because two writers on one page range is the most expensive mistake this job makes.**
+
+---
+
+## PROGRESS 2026-10-10 16:48 PDT — `conv-2d4534d8` (items 14-20): 14-16 CLOSED, 17-20 IN FLIGHT
+
+**Items 14, 15 and 16 are closed** — commit `b563d98`, pushed, and this session **archive-verified the
+COMMIT, not the tree** (`git archive HEAD` into a clean dir, `python3 scripts/verify.py` → ALL CHECKS
+PASSED). The apply came from the `conv-6991caed` lineage using the three fresh-context reports
+(`task_15` leaking, `task_12` not-working, `task_13` tire); I checked every applied edit against its
+report and all three pages matched. My re-baseline note for `rv-slide-out-leaking` is the manifest
+entry; the other two carry the applicator's notes.
+
+**Every NEW citation those three commits introduced was hand-verified against its document**, because
+the reviews predate them:
+
+- Carlisle, verbatim: `Most ST trailer tires have a maximum speed rating of 65 mph.` ✓
+- EternaBond really prints `It is recommended to remove the old sealant to because a bad surface leads
+  to a bad seal.` — the source's own stray word, which is why the bracket `[to]` belongs there. ✓
+- NFPA 1192 §8.6.2 in the 2020-edition revision report: 110 percent of GAWR, and 106 percent above
+  8,000 lb GAWR. ✓
+- Goodyear Endurance speed: the launch announcement gives the line the N rating, and Goodyear's own
+  speed chart gives `N 87MPH`. ✓ The first fix cited a third-party mirror of a Goodyear sheet and
+  `verify.py`'s rehost rule rejected it — the gate worked, and the citation now points at Goodyear.
+
+**Items 17-20 are in flight with two reviews each.** `conv-6991caed` dispatched local reviews
+(task_33/34/37/38); this session dispatched cloud-routed ones (task_39/43/44) after **five
+consecutive local dispatches died with 0 tool uses** (`Timed out waiting for runtime-start-1`,
+`App-server socket closed`, `Connection error`). The local app-server refuses new runtimes for this
+session while several sessions and their subagents compete. **The Cloud route works —
+`Agent(computer: "cloud")` with the page fetched from `raw.githubusercontent.com` — and is the
+fallback to reach for when local dispatch is dead.**
+
+**APPLY OWNERSHIP, settled with `conv-6991caed`:** it dispatches, this session applies and commits
+17-20, one page per commit, with `ci.sh` and the archive check before each push. Only one session
+edits those four pages.
+
+**CLASS FINDING — empty `<p></p>` across the guide set, 8 instances on 4 pages:** `tires-winter.html`
+(5), `battery-winter-storage.html` (1), `rv-towing-capacity.html` (1 — item 18), `rv-trip-planner.html`
+(1 — item 26). Traced on the towing page to `b56d8df`, a content pass that removed a lead-in sentence
+and left the empty element behind. **The six on the two pages in neither half are fixed by
+`conv-2d4534d8` and pushed as `c0b3fd3`** — deleted, not rewritten, since the deleted lead-ins cannot be recovered from the
+history without inventing prose; both pages re-baselined with a note saying the change is markup only
+and the prose pass stands. Verified in isolation: `verify.py` ALL CHECKS PASSED on the extracted commit
+and `cross-check.py --strict` reports 0 same-fact pairs there. The commit deliberately does NOT touch
+`scripts/content-manifest.json`, because that file carries the other session's uncommitted re-baselines
+and committing it wholesale would have asserted verification for pages the commit does not contain.
+
+## STAND-DOWN 2026-10-10 16:52 PDT — `conv-2d4534d8` hands items 17-20 to `conv-6991caed`
+
+**Decided by the tree, not by preference.** While this session was preparing its first edits,
+`conv-6991caed` applied its own review findings to `rv-towing-capacity.html` (16:50:20) and then to
+`rv-towing-trailer.html` (16:50:48) — the second one mid-read, which briefly made a reviewer look
+unreliable: the file's lede said "the jack comes up before either of them" when I read it and "the jack
+comes up last" in HEAD, raw.githubusercontent and the live site. **The file was being edited under me;
+the reviewer was right.** Worth keeping: when a literal from a review is not in the file, compare
+against `git show HEAD:<path>`, the raw URL and the live page before doubting the reviewer — a
+working-tree read is not evidence about a shared tree.
+
+So `conv-6991caed` owns **17-20** (it has working dispatch and is applying), and this session has
+stopped writing those four files. It handed over its second-pass findings instead, each labelled
+verified or unverified:
+
+- **18** — the 511 figure is printed twice (callout and paragraph below it); "the printout settles every
+  estimate on this page and in the calculator" is page-relative voice; and the federal 3,000 lb
+  exemption the page names is **49 CFR 393.42(b)(3)-(4)**, verified from Cornell — "…gross weight of
+  1,361 kg (3,000 pounds) or less … not required to be equipped with brakes if the axle weight of the
+  towed vehicle does not exceed 40 percent…" — and is missing from Sources.
+- **19** — the coupler-latch claim ("if it drops shut with no resistance, the coupler is not on the
+  ball") is not in the Jayco manual; mark UNVERIFIED or attribute.
+- **20** — `check-quotes.py` found one quotation in no cited source: "used on a highway in interstate
+  commerce". It IS verbatim in **49 CFR 390.5** (verified by hand from Cornell); the page names 390.5
+  in prose but omits it from Sources, so the fix is to add the source, not cut the quote.
+
+**Instrument result worth keeping: `check-quotes.py` run over the four pages is clean.** wheel-bearings
+43 quotes against 8 sources, every one found; towing-capacity and towing-trailer have no quotations at
+all; trailer-brakes-required 10 quotes against 11 sources with the single 390.5 gap above.

@@ -205,3 +205,58 @@ Three routes, in order of what actually works (all verified 2026-10-10):
 
 The prompt should point at THIS FILE rather than paste it, so this file stays the single updatable
 source. Update the "What is left" section before you launch.
+
+---
+
+# STATE AT 2026-10-10 17:00 PDT — 14-16 CLOSED, 17-20 MOVED TO `conv-6991caed`, ONE CLASS FIX PUSHED
+
+> **Read this before taking any item.** The boundary written at 16:37 is superseded. Items 17-20 are
+> being worked and committed by `conv-6991caed`, and `conv-2d4534d8` (launched 16:39:41 for 14-20) has
+> **stood down from them** rather than edit the same files. Do not open a third writer on 17-20.
+
+**Items 14-16 are closed.** `b563d98`, pushed, archive-verified (`git archive HEAD` into a clean dir →
+`verify.py` ALL CHECKS PASSED). The apply came from the `conv-6991caed` lineage using the three
+fresh-context reports in `/tmp/letta-background-NgcRxG/` (`task_15` leaking, `task_12` not-working,
+`task_13` tire). Every citation those pages introduced was hand-verified against its document:
+Carlisle's "Most ST trailer tires have a maximum speed rating of 65 mph." verbatim; EternaBond's page
+really prints "remove the old sealant to because a bad surface leads to a bad seal" (the bracket `[to]`
+is the source's own word); NFPA 1192 §8.6.2 carries the 110 percent requirement and the 106 percent
+exception above 8,000 lb GAWR; Goodyear's launch announcement gives Endurance the N rating and its own
+speed chart gives `N 87MPH`.
+
+**Items 17-20 belong to `conv-6991caed` now** — it has working dispatch and is committing them
+(`f817a7b`, `552f3a4` and counting). Its local reviews are `task_33/34/37/38`; this session's
+cloud-routed second passes were `task_39/43/44`. The second-pass findings its reports did not carry
+were handed over in full, each labelled verified or unverified: the 511 figure printed twice on
+`rv-towing-capacity`, a page-relative clause in its "where every number lives" card, and the unnamed
+federal 3,000 lb exemption — **49 CFR 393.42(b)(3)-(4)**, missing from that page's Sources; the
+uncited coupler-latch claim on `rv-towing-trailer`; and on `trailer-brakes-required` a quotation
+("used on a highway in interstate commerce") that is verbatim in **49 CFR 390.5** but whose source is
+missing from the Sources list.
+
+**One class fix is committed and pushed by `conv-2d4534d8`: `c0b3fd3`.** Six empty `<p></p>` elements —
+five on `tires-winter.html`, one on `battery-winter-storage.html` — left behind by `b56d8df`, which
+deleted lead-in sentences and kept the elements. They are deleted, not rewritten: the lead-ins cannot
+be recovered without inventing prose. No visible text changed, which is why the ledger does not drift
+and the commit does not touch `content-manifest.json`. The other two instances (`rv-towing-capacity`,
+`rv-trip-planner`) belong to those pages.
+
+**Two instrument notes worth keeping.**
+1. `check-quotes.py` over the four remaining pages is clean: `wheel-bearings` 43 quotes against 8
+   sources, all found; `towing-capacity` and `towing-trailer` carry no quotations at all;
+   `trailer-brakes-required` 10 quotes against 11 sources with the single 390.5 gap above. The
+   California statute it cites (`leginfo.legislature.ca.gov`) returns a Cloudflare challenge to curl —
+   the 1,500 lb threshold was verified by hand from `california.public.law`, and the citation itself
+   stays on the official publisher.
+2. **A working-tree read is not evidence about a shared tree.** This session read
+   `rv-towing-trailer.html` while `conv-6991caed` was applying to it, concluded a reviewer had invented
+   two literals, and was wrong — HEAD, the raw URL and the live page all carried them. Check
+   `git show HEAD:<path>` and the live page before doubting a review.
+3. **`verify.py` alone does not predict CI.** It does not run `cross-check.py`; run `bash scripts/ci.sh`
+   in an isolated extraction of the commit, or run the four extra checks by hand, before claiming a
+   commit is green.
+
+**Still open, unchanged from the 16:37 note:** W3 (the black-tank-clogged spec), W5 (parts beyond the
+index), and the sourcing findings recorded in commits but not applied (MIDI/ANL fuse ratings, the WFCO
+numbered-circuit fuse, the Renogy AGM manual, combiner voltages, standby draws, the truck-cab table on
+the air-conditioner page, the Trojan entry on battery-disconnect).
