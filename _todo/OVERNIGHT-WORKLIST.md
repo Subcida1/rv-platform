@@ -40,7 +40,23 @@ commits, so two sessions do not review the same page.
 
 ## INCIDENT LOG — 02:00-02:35 PDT, read this before trusting the engine
 
-**1. THE `overnight-driver` DID NOT EXECUTE ITS 02:00 FIRE.** Verified, not assumed: no conversation
+**1. ROOT CAUSE FOUND 02:50 — THE-GRID IS OFFLINE, SO CLOUD CRONS TARGETING IT CANNOT RUN.**
+`letta computers list` reports the-grid with **`isOnline: false`** and `connId: None`. A cloud cron whose
+`execution_target` is that computer therefore fires on schedule and produces **no run at all** — exactly
+what `overnight-driver` (02:00) and `overnight-sentinel` (02:30) both did, with no status file and no
+conversation each. Both crons point at the correct device id, so this is NOT a stale id; the machine is
+up (this session runs on it) but is not registered as a reachable computer for routed execution.
+**The fix, applied 02:51: a recurring LOCAL wake** named "Overnight driver (local, reliable)" — cron
+`0 5-15 * * *`, firing hourly 22:00-08:00 PT **in conversation conv-05dd0f1c**, which is the path that
+has demonstrably worked all night (every wake fired). The two cloud crons are left in place as backups:
+they are harmless while the-grid is offline, and become useful if it re-registers. **Watch for duplicate
+work if that happens — check `git log --oneline -8` before claiming an item.**
+
+**1b. EARLIER HYPOTHESIS, NOW FALSIFIED:** that the on-grid listener was merely occupied by the deleted
+`originrv-night-work` cron's long turn. The sentinel's 02:30 fire produced nothing with the listener
+idle, so occupancy was not the cause.
+
+**1c. THE ORIGINAL RECORD.** Verified, not assumed: no conversation
 created in the 09:00Z window, no run record for its id, and no conversation carrying its prompt.
 `next_scheduled_time` had advanced to 10:00Z, so the cloud schedule fired — it simply produced no run.
 The likely cause is that the on-grid listener was occupied: the **deleted** `originrv-night-work` cron
