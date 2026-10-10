@@ -41,7 +41,54 @@ commits, so two sessions do not review the same page.
 ## CLAIM — the 27-guide independent-review pass, 2026-10-10 16:10 PDT
 
 **Owner: conversation `conv-cae364cc-c686-4911-b77c-f05cb3d5e2d1` (Cloud, live session, Ty's direct
-handoff 16:06).** This session takes the whole remaining set, one guide at a time, in the order below.
+handoff 16:06).**
+
+**SPLIT AGREED 2026-10-10 16:09 with the second live session `conv-6991caed-4e74-451d-9862-4e7786631414`**
+(also handed the same 27-guide brief, by Ty, at 16:07). To avoid paying for two reviews of one page:
+**`conv-cae364cc` takes items 1-13 top-down; `conv-6991caed` takes items 14-27 working bottom-up
+(27 -> 14).** Neither session touches the other's half. Both are recorded here because two sessions on
+one queue is the most expensive mistake this job makes (W13 and the fuse guide were each done twice).
+
+**Shared-tree hazard both sessions must respect:** `build-search-index.py` is generated from every page
+in the *tree* and `stamp_assets.py` re-stamps every reference. If either session regenerates while the
+other's page edit is uncommitted, the commit carries index entries for a page the commit does not
+contain and the archive check goes red. **Run `git status --short` first; if a `guides/*.html` is
+modified that is not the page about to be committed, wait and re-check. Regenerate and commit with
+explicit paths in the same few seconds, and never push without the archive check.**
+
+**Instrument defect found 2026-10-10 16:09:** `python3 scripts/verify-content.py --claims <page>`
+raises `AttributeError: 'str' object has no attribute 'get'` at line 470 (`have = {c.get("id"): c for c
+in ledger}`) for every page tested, including a long-verified one. `--verify <page> --no-spec --by` is
+unaffected and is what the rebaselines use. NOT fixed here — recorded rather than widened in scope.
+
+**PROGRESS 2026-10-10 16:26 PDT (conv-cae364cc, items 1-13).**
+
+| # | page | findings | state |
+|---|------|----------|-------|
+| 1 | rv-furnace-carbon-monoxide | 6 | **done, pushed** `a7694a5` |
+| 2 | rv-propane-furnace-wont-light | 6 (+2 quotes sourced) | **done, pushed** `7985119` |
+| 3 | rv-water-heater-not-heating | 9 | **done, pushed** `a63ff7c` |
+| 6 | rv-generator-sizing | 6 | **done, pushed** `1ce8500` |
+| 7 | rv-two-appliances-stopped | 7 | applied + rebaselined, committing |
+| 4 | rv-converter-not-charging | 8 | applied, rebaselining next |
+| 8 | rv-tank-sensors-reading-wrong | 6 | applied, rebaselining next |
+| 5 | rv-generator-not-charging | — | review dispatched, no output after 10 min |
+| 9-13 | refrigerator, fridge-leveling, toilet, macerator, sewer-smell | — | reviews dispatched |
+
+**Two operational findings worth carrying forward, both earned today:**
+
+1. **A LOST TASK NOTIFICATION IS NOT A LOST REVIEW — READ THE LOG FILE.** Three review subagents
+   completed and their results were sitting in `/tmp/letta-background-*/task_N.log` while the harness
+   never delivered the completion notification (the same client/server state desync that has been
+   closing tool calls mid-turn). I was one page away from re-dispatching work that was already done
+   and paid for. Check the log file before concluding a subagent died.
+2. **The footer string "Third-party photographs appear under the *licences* credited beside each one"
+   is a British spelling and it is CHROME, not page copy** — two independent reviewers flagged it on
+   two different pages. It comes from the shared shell, so it is one fix in the generator and one
+   sitewide re-stamp, not a per-page edit. The content gate hashes visible text with chrome removed,
+   so fixing it does not invalidate any page verdict. **Not done here: it touches all 125 pages and
+   would collide with the other live session's tree.**
+ This session takes the whole remaining set, one guide at a time, in the order below.
 Other sessions: **do not take these pages**; if you want review work, take one not on this list and
 record it here.
 
