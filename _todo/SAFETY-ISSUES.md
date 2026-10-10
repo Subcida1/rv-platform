@@ -190,3 +190,44 @@ for the 5 drifted pages (furnace-not-working, leveling-jacks-not-working, roof-l
 tires-winter, winterize-plumbing) via `verify-content.py --verify`, full `ci.sh` (blocked while
 a parallel session's site.js/manuals work is mid-flight on the shared tree), then commit
 (explicit paths) + push.
+
+## G. INDEPENDENT REVIEW OUTCOME (2026-10-10 ~03:15 PDT, via the bridge fleet)
+
+The subagent dispatch runtime was down all night, so the 5 voided pages were reviewed by the
+bridge lanes instead (a different lane than the drafter, per doctrine). Fleet results:
+
+- **tires-winter -> qwen**: REAL review. Found one defect in the ADDED callout — "A coach on the
+  wrong supports is a crush waiting under the chassis" (not a native idiom) — **FIXED** to "a
+  crush risk for anyone underneath it". Also flagged pre-existing body content (see below).
+- **winterize-plumbing -> gemini**: REAL review. No defect in the added callout; Part 4 reads
+  native English. Flagged pre-existing body content (see below).
+- **rv-leveling-jacks-not-working -> gemini**: REAL review (wrote the prior round's job id on
+  line 1, but the content is an on-topic review of this page). No defect in the added callout.
+- **rv-furnace-not-working -> aistudio/qwen/grok** and **rv-roof-leak-repair ->
+  chatgpt/deepseek/gemini**: capture-ceiling mechanism failures on most attempts; final
+  attempts dispatched ~03:19. (Update this section with their outcomes.)
+
+**Final outcomes (~03:22):**
+- **rv-roof-leak-repair -> gemini (final attempt)**: REAL review, no defect in the added
+  callout. Flagged a pre-existing body overclaim — "A penetration whose only seal is a bead of
+  sealant is a penetration waiting to leak" (absolute claim beyond the Dicor source) — recorded
+  under the pre-existing findings.
+- **rv-furnace-not-working**: THREE failed attempts (aistudio capture-ceiling, qwen
+  capture-ceiling, grok usage-limit UI). Per the 3-strike rule the attempt stops here. The
+  callout restates Furrion's own gas-smell protocol already quoted verbatim on the page, so it
+  is low-risk, but it still owes an independent pass. Verification note records this honestly.
+
+All five pages re-verified with notes naming the reviewing lane and outcome (2026-10-10).
+
+**Findings on PRE-EXISTING content (out of scope for this pass — own follow-up, all would void
+verifications again):**
+- tires-winter: "tires lose two or more psi a month on their own" is not supported by the listed
+  Goodyear source (which backs the 1-2 psi/10-degree figure); "concrete slowly leaches
+  antioxidants out of tire rubber" is a flawed mechanism stated as fact; Michelin "reduce below
+  normal driving pressure" gives no target; "the air just condensed" -> should be "contracted".
+- winterize: the sanitizer ratio "quarter cup bleach per 15 gallons ~ 50 ppm, the concentration
+  the makers publish" lacks a listed source; the "small heater or 60-watt incandescent bulb,
+  unattended" advice is a fire hazard even with the caveat; standard-dose sit time is unspecified.
+- roof-leak-repair: "A penetration whose only seal is a bead of sealant is a penetration waiting
+  to leak" overclaims beyond the Dicor "secondary seal" source; the page names EPDM/TPO but gives
+  no way to identify which membrane a roof has.

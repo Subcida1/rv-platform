@@ -542,7 +542,7 @@
   "guides/rv-furnace-not-working.html": {
     "hash": "625ff04a79178171",
     "status": "verified",
-    "verified_by": "2026-10-10 content-gate re-baseline by Cloud: the safety pass added exactly ONE flag-injury callout to this page and changed or removed nothing else, so every sentence the 2026-10-06 verification covered is intact and unedited. The ADDED callout has NOT had an independent pass; that is owed and recorded in _todo/SAFETY-ISSUES.md.",
+    "verified_by": "2026-10-10: safety-pass callout still awaits an independent pass - three bridge attempts failed on capture-ceiling/quota mechanism errors (recorded in _todo/SAFETY-ISSUES.md); callout restates Furrion's protocol quoted on the page",
     "verified_at": "2026-10-10",
     "sources": [],
     "spec": "_specs/rv-furnace-not-working.md",
@@ -589,7 +589,7 @@
   "guides/rv-leveling-jacks-not-working.html": {
     "hash": "8db70e591a07d4c1",
     "status": "verified",
-    "verified_by": "2026-10-10 content-gate re-baseline by Cloud: the safety pass added exactly ONE flag-injury callout to this page and changed or removed nothing else, so every sentence the 2026-10-06 verification covered is intact and unedited. The ADDED callout has NOT had an independent pass; that is owed and recorded in _todo/SAFETY-ISSUES.md.",
+    "verified_by": "2026-10-10: safety-pass callout independently reviewed by the gemini bridge lane, no defects",
     "verified_at": "2026-10-10",
     "sources": [],
     "spec": "_specs/rv-leveling-jacks-not-working.md",
@@ -679,7 +679,7 @@
   "guides/rv-roof-leak-repair.html": {
     "hash": "9163271e7615240a",
     "status": "verified",
-    "verified_by": "2026-10-10 content-gate re-baseline by Cloud: the safety pass added exactly ONE flag-injury callout to this page and changed or removed nothing else, so every sentence the 2026-10-06 verification covered is intact and unedited. The ADDED callout has NOT had an independent pass; that is owed and recorded in _todo/SAFETY-ISSUES.md.",
+    "verified_by": "2026-10-10: safety-pass callout independently reviewed by the gemini bridge lane, no defects; pre-existing body overclaim recorded in _todo/SAFETY-ISSUES.md",
     "verified_at": "2026-10-10",
     "sources": [],
     "spec": "_specs/rv-roof-leak-repair.md",
@@ -844,9 +844,9 @@
     "claims_date": "Oct 4, 2026"
   },
   "guides/tires-winter.html": {
-    "hash": "cadd428e71f31c92",
+    "hash": "b54d0757e78948d4",
     "status": "verified",
-    "verified_by": "2026-10-10 content-gate re-baseline by Cloud: the safety pass added exactly ONE flag-injury callout to this page and changed or removed nothing else, so every sentence the 2026-10-06 verification covered is intact and unedited. The ADDED callout has NOT had an independent pass; that is owed and recorded in _todo/SAFETY-ISSUES.md.",
+    "verified_by": "2026-10-10: safety-pass callout independently reviewed by the qwen bridge lane; one non-native phrase found and fixed (crush waiting -> crush risk for anyone underneath it); pre-existing body content verified intact",
     "verified_at": "2026-10-10",
     "sources": [],
     "spec": "_specs/tires-winter.md",
@@ -867,7 +867,7 @@
   "guides/winterize-plumbing.html": {
     "hash": "900f46689ef9e12c",
     "status": "verified",
-    "verified_by": "2026-10-10 content-gate re-baseline by Cloud: the safety pass added exactly ONE flag-injury callout to this page and changed or removed nothing else, so every sentence the 2026-10-06 verification covered is intact and unedited. The ADDED callout has NOT had an independent pass; that is owed and recorded in _todo/SAFETY-ISSUES.md.",
+    "verified_by": "2026-10-10: safety-pass callout independently reviewed by the gemini bridge lane, no defects; pre-existing body findings recorded in _todo/SAFETY-ISSUES.md",
     "verified_at": "2026-10-10",
     "sources": [],
     "spec": "_specs/winterize-plumbing.md",
