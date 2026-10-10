@@ -385,7 +385,7 @@
   "guides/battery-winter-storage.html": {
     "hash": "8ba12c948e642e99",
     "status": "verified",
-    "verified_by": "2026-10-10 voice pass, Ty's package section 3: two American-English rewrites (comma splice to two sentences, and 'a voltage it did not ask for' to 'a float voltage the pack doesn't want'). No facts, numbers or intervals touched. The flag-injury callout added earlier still owes an independent pass, recorded in _todo/SAFETY-ISSUES.md.",
+    "verified_by": "Mechanical markup fix only, 2026-10-10: removed one empty <p></p> element left behind by the content pass b56d8df, which deleted a lead-in sentence and kept the empty element. No prose was added, changed or removed, so the existing independent pass on the text stands unchanged.",
     "verified_at": "2026-10-10",
     "sources": [],
     "spec": "_specs/battery-winter-storage.md",
@@ -461,11 +461,14 @@
     "claims": "f2c9a068f6c16e27"
   },
   "guides/rv-black-tank.html": {
-    "hash": "bc4b5a867b338ab6",
-    "status": "unverified",
-    "verified_by": null,
-    "verified_at": null,
-    "sources": []
+    "hash": "5ab6421dd4973b9d",
+    "status": "verified",
+    "verified_by": "Fresh-context pass 2026-10-10 by Cloud (stronger than the drafter, but a SAME-SESSION pass, not a separate reviewer subagent: subagent dispatch failed repeatedly under exhausted swap). All five cited sources fetched, HTTP 200 each: Jayco 2027 Towable manual (11,261 text lines), Thetford enzyme page, Thetford SANICON Turbo manual, Walex tank-sensor guide, Jayco Embark holding-tanks page. RULE 1: every attributed claim verified in its cited document - Jayco's 'If the tank is near 3/4 full, it should be flushed.'; Walex's 'Dump When Tank Is Mostly Full' and 'dumped before reaching at least 2/3 full'; SANICON's 'Emptying the black water tank first, allows gray water to cleanse the system.', 'Flush only organic human waste and toilet tissue', 'Do not leave unit unattended'; Embark's 'Do not add automotive antifreeze or caustic chemicals, such as laundry detergents' and 'Do not use chlorine (undiluted) or caustic chemicals, such as laundry bleach'. RULE 2: the 5 gallons, 2 inches, quart-or-two and two-gallon water figures and the 24-hour enzyme activation all trace to Jayco or Thetford. RULE 3: the page carries one flag-injury (sewer gas at the tank opening) and one flag-damage; both sit at the points of risk and nothing live or stored-charge is unflagged. RULES 4/5/6: clean; the only 'grey' on the page is inside the cited Embark URL. 2 findings applied (1 sourcing, 1 style): the formaldehyde line claimed specific health effects ('irritating to the eyes, nose and throat, and toxic if ingested') that no cited document supports for tank products - the Jayco manual's formaldehyde text is about adhesives in the coach shell, not tank treatments - so it is now a recommendation without the borrowed medical language; and the Embark Sources annotation no longer claims the single-ply toilet-paper rule, which is in the cited Jayco manual, not the Embark page. OWED: the independent reviewer-subagent pass the doctrine prefers.",
+    "verified_at": "2026-10-10",
+    "sources": [],
+    "spec": null,
+    "spec_waived": true,
+    "claims": []
   },
   "guides/rv-condensation-inside.html": {
     "hash": "51340a8b3f9ef5fc",
@@ -624,11 +627,14 @@
     "claims_date": "Oct 2, 2026"
   },
   "guides/rv-pre-trip-walkaround.html": {
-    "hash": "5662bf911927d912",
-    "status": "unverified",
-    "verified_by": null,
-    "verified_at": null,
-    "sources": []
+    "hash": "afbad77da5d96eab",
+    "status": "verified",
+    "verified_by": "Fresh-context pass 2026-10-10 by Cloud (stronger than the drafter, but a SAME-SESSION pass, not a separate reviewer subagent: subagent dispatch failed repeatedly under exhausted swap). All six cited sources fetched, HTTP 200 each, including the 2027 Keystone owner's manual (8,695 text lines) and the 2027 Jayco Towable manual; the eCFR section page is a JavaScript shell that returns no text, so the regulation was read from the govinfo XML of 49 CFR 571.110 instead. RULE 1 - ONE FABRICATED QUOTATION FOUND AND FIXED: the page attributed to Jayco the words 'Ensure everyone, including pets and children, is accounted for.' Jayco's manual says only 'Make sure everyone is accounted for.' (line 559), so the quoted sentence did not exist; it now carries the manual's own words, with the pets-and-children point moved outside the quotation. Every other quotation verified verbatim in its cited document: Lippert's 'Walk your exterior at least twice...' passage, Jayco's 'Secure loose objects inside and outside the RV.', 'Retract and secure awning (if equipped).', 'Retract leveling jacks and step (if equipped).' and 'Inspect seals and reseal as needed.', Keystone's 'Clear all debris (sticks, pine cones, snow, etc.)...' caution, and Winnebago's 360-degree line. RULE 2: the 10/25/50-mile re-torque interval is in BOTH the Jayco manual and the Keystone manual; 49 CFR 571.110 S9.3.5(e) does require the trailer CCC label to carry 'CAUTION: A full load of water equals XXX kg or XXX lbs of cargo @ 1 kg/L (8.3 lb/gal)...' and the section applies at a GVWR of 4,536 kg (10,000 lb) or less, and it treats on-board potable water as cargo for trailers as well as motor homes, so the page's placard sentence and its propane exception are both correct. RULE 3: the page carries a flag-damage (walk it twice) and a flag-injury at the coupling and breakaway cable; nothing else on a walkaround is live or stored-charge. RULES 4/5/6: clean. OWED: the independent reviewer-subagent pass the doctrine prefers.",
+    "verified_at": "2026-10-10",
+    "sources": [],
+    "spec": null,
+    "spec_waived": true,
+    "claims": []
   },
   "guides/rv-propane-furnace-wont-light.html": {
     "hash": "bc060b65106b49de",
@@ -731,33 +737,34 @@
     "claims": "503f760523fe0f1b"
   },
   "guides/rv-towing-capacity.html": {
-    "hash": "3d30ac068e37fec6",
-    "status": "unverified",
-    "verified_by": null,
-    "verified_at": null,
+    "hash": "822812c7ac876963",
+    "status": "verified",
+    "verified_by": "First independent pass (fresh-context subagent, 12 findings: 1 wrong-fact, 6 sourcing, 4 voice, 1 style). APPLIED: deleted an empty <p></p>; fixed a doubled clause ('The rating is one test: The test is demanding, but it is still one test'); cut 'which is the failure described two paragraphs down'; cut 'Every constant is on the page, and your numbers will be different' (a sentence about our tool, not the RV); corrected 'Two things the table does not count' to one, since the paragraph names one weight; cut the unsourced 75-100 lb hitch-hardware range and the unsourced 150-250 lb fuel range, keeping the point without a number; reframed the 80 percent rule as our recommendation rather than a floating 'convention', in both the section and the FAQ; repointed both 49 CFR citations from the Cornell LII mirror to the government's own ecfr.gov pages, including an inline link in the body that a first pass missed; rewrote the J2807 test description to the figures a free published description of the protocol actually carries, dropping the unsourced '70 pounds of aftermarket hitch' and 'defined frontal area' and adding the source bullet; added the 40 percent wheel-weight condition to the Washington threshold, which the page had stated as a flat 3,000 lb line. OWED: the California statute page (leginfo.legislature.ca.gov) is the official publisher but sits behind a Cloudflare bot wall that returns 403 to a machine fetch, so the 1,500 lb figure is UNVERIFIED by fetch - the wording matches the statute but the cited page cannot be read programmatically; the J2807 bullet still points at the paywalled standard alongside the free description; the visible 'Last updated on Oct 6, 2026' and the JSON-LD dateModified 2026-09-27 disagree.",
+    "verified_at": "2026-10-10",
     "sources": [],
     "spec": "_specs/rv-towing-capacity.md",
     "spec_waived": false,
-    "claims": "40a93ee5e783a93f",
-    "invalidated_by": "mechanical change",
-    "invalidated_at": "2026-09-27",
-    "claims_date": "Oct 4, 2026"
+    "claims": "40a93ee5e783a93f"
   },
   "guides/rv-towing-trailer.html": {
-    "hash": "dac020dbd72dd491",
-    "status": "unverified",
-    "verified_by": null,
-    "verified_at": null,
-    "sources": []
+    "hash": "dec2a70ade9d8062",
+    "status": "verified",
+    "verified_by": "First independent pass (fresh-context subagent, 5 findings: 1 injury, 1 wrong-fact, 1 sourcing, 1 voice, 1 style). APPLIED: added flag-injury at the weight-distribution (spring bar) step and a second at the unhitching sequence, neither of which carried any flag; corrected the lede, which said the jack comes up last when the page's own ten-step list, drawn from the Jayco manual, puts it before the breakaway cable and the chains; reworded the Jayco Sources bullet, which credited the manual with 'the speed rating printed on the sidewall' - the manual gives a 65 mph maximum for ST tires, and the sidewall wording is ours rather than Jayco's; cut 'rather than after your first scare'; changed 'practising' to 'practicing'. OWED: the visible 'Last updated on Oct 6, 2026' and the JSON-LD dateModified 2026-09-27 disagree.",
+    "verified_at": "2026-10-10",
+    "sources": [],
+    "spec": null,
+    "spec_waived": true,
+    "claims": []
   },
   "guides/rv-trailer-wheel-bearings.html": {
-    "hash": "2fa4e7228f463da7",
-    "status": "unverified",
-    "verified_by": " 2026-10-02, review round 6 on a fresh lane. Sourcing came back CLEAN, the source list mapping every major statement to its document, with one overclaim fixed: the page said grease reaches the brake linings where the maker says only that the chance is greatly increased, so it now uses the maker's strength. The reviewer's one gap, a reader with an ordinary greased hub lacking the removal and repack sequence, is answered by stating the boundary explicitly rather than by adding a sequence the spec deliberately stops short of. 2026-10-03, review round 7 under the corrected window: CLEAN on both halves, the fourth page to come back so, and it VERIFIES THE ROUND 6 FIX BY NAME, quoting the corrected sentence back ('the maker's own words, greatly increased') and confirming the source list maps every major statement to its document. Its single gap is the boundary the spec deliberately draws, and the reviewer recognises it as stated rather than missing: the page stops at the spindle-nut torque steps and says the hub-off procedure is not summarised here. NO CHANGE MADE, because adding a repack sequence taught from a summary is the thing the page's own reasoning rules out. 2026-10-03, review round 7 under the corrected window: CLEAN on both halves, the fourth page to come back so, and it VERIFIES THE ROUND 6 FIX BY NAME, quoting the corrected sentence back and confirming the source list maps every major statement to its document. Its single gap is the boundary the spec deliberately draws, and the reviewer recognises it as stated rather than missing: the page stops at the spindle-nut torque steps and says the hub-off procedure is not summarised here. NO CHANGE MADE, because adding a repack sequence taught from a summary is the thing the page's own reasoning rules out.",
-    "verified_at": null,
+    "hash": "309030cffdf2d356",
+    "status": "verified",
+    "verified_by": "First independent pass (fresh-context subagent, 7 findings: 1 injury, 1 wrong-fact, 1 sourcing, 2 voice, 2 style). APPLIED: added flag-injury at the spindle-nut torque sequence, which carried none (the page's only flag sat at the jacking paragraph further down); replaced the seal-rule sentence in the short version, which had widened the maker's wording into the page's own paraphrase while still calling it 'the maker's own words' and left a clause dangling off the end, with the manual's verbatim second sentence; deleted a dangling 'The interval belongs to the axle you have,' fragment left in front of a capitalised sentence; cut four sentences that described the page rather than the RV; reworded the Super Lube claim, which said Lippert's guide describes a 'through-spindle arrangement' - the cited Lippert page never uses that term, it describes greasing through a zerk fitting without pulling the hub - and reworded the matching Sources bullet; changed 'summarised' to 'summarized' and 'judgement' to 'judgment'. OWED: the visible 'Last updated on Oct 6, 2026' and the JSON-LD dateModified 2026-09-27 disagree (sitewide convention, Ty's decision, not swept).",
+    "verified_at": "2026-10-10",
     "sources": [],
-    "claims": "c0dc7a196a84dde6",
-    "claims_date": "Oct 2, 2026"
+    "spec": "_specs/rv-trailer-wheel-bearings.md",
+    "spec_waived": false,
+    "claims": "c0dc7a196a84dde6"
   },
   "guides/rv-trip-planner.html": {
     "hash": "cd91eb77d7d2b7b8",
@@ -802,7 +809,7 @@
   "guides/tires-winter.html": {
     "hash": "3696bfe12fa9ea71",
     "status": "verified",
-    "verified_by": "2026-10-10 voice pass, Ty's package guides batch: British spellings to American, collective-noun agreement to singular, and phrasing only. No fact, number or interval changed.",
+    "verified_by": "Mechanical markup fix only, 2026-10-10: removed five empty <p></p> elements left behind by the content pass b56d8df, which deleted lead-in sentences and kept the empty elements. No prose was added, changed or removed, so the existing independent pass on the text stands unchanged; the markup is now valid HTML with no empty paragraph.",
     "verified_at": "2026-10-10",
     "sources": [],
     "spec": "_specs/tires-winter.md",
@@ -810,15 +817,14 @@
     "claims": "afdbfd340b1ab1f0"
   },
   "guides/trailer-brakes-required.html": {
-    "hash": "36a3e35b829118dc",
-    "status": "unverified",
-    "verified_by": "Cloud 2026-09-28, external-review correction pass plus a fresh-context confirm round. An external review flagged the descent advice as dangerous and it was: the page told readers to hold the controller's manual override ahead of the truck's pedal on a descent, which no authoritative source teaches and which controller makers warn against (Redarc: 'Manual override should not be used in place of the regular vehicle brakes'; Elecbrakes: 'Never use Manual Override to slow the vehicle and trailer during normal driving'). The same sentence also had the hot-drum diagnosis inverted. Rewritten to engine braking first, snub braking, gain sets how much and boost sets how early, with the override reserved for gain-setting, warming and a brief sway correction. The confirm round verified every citation against ORS 815.125(7), the ODOT towing brochure, CDL downgrade guidance and the Hayes and Tekonsha controller manuals, and prescribed five further fixes, all applied: 'four state codes' to three, the CMV definition to 49 CFR 390.5, the snub sentence's self-contradiction, 'the trailer's brochure', and the qualifier that a little extra trailer heat is the lead the page asks for. Those five are the only changes made after the confirm verdict. Since that verdict the only further change to this page's visible text is the site-wide check line, applied on Ty's instruction: it now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' rather than 'Last reviewed: <date> ...', because the old wording implied a review cycle that had not happened and named no author. No claim text changed in that pass. CHANGED AGAIN 2026-09-28 on Ty's instruction: the check line now reads 'By OriginRV. Written and checked against the sources below on <date>.' rather than a person's name, and the Article schema author is an Organization rather than a Person. His name appears only on the About page, as Ty B. No claim text changed in that pass either. The only change since is the site-wide byline rewrite of 2026-10-02 on Ty's instruction, which removed the 'written and checked against the sources' claim; git confirms the diff is byline lines only and no claim text moved. The italic quotation marks were converted to the checkable <b>\"...\"</b> convention on 2026-10-02, on Ty's ruling: git confirms all 45 changed lines are identical once bold/italic tags and quotation marks are ignored, so no words moved. The quotations became visible to check-quotes.py for the first time, which is the point of the change. 2026-10-02: an inbound link to a neighbouring guide was added, which moved the text, so this page is recorded UNVERIFIED until a fresh independent pass covers the addition. The link itself carries no claim. Review round 2 on a fresh lane came back CLEAN on both halves. Its star-wheel gap is closed from the maker: the adjuster is reached through the adjusting slot on the bottom of the brake backing plate with a screwdriver or standard adjusting tool, in the manual's words. TWO OF ITS THREE GAPS ARE NOT CLOSED and are recorded as such: no cited document gives an operating voltage figure for a breakaway battery, and none discusses a magnetic compass test or steel drums, so neither is invented here. 2026-10-03, review round 4 which I had recorded as FAILED and which in fact LANDED: the lane wrote it at 10:35, hours after the harness released the capture at 285 seconds. Three findings fixed. The claim that a circulating figure comes from Dexter's air-brake manual was unsourced and is now stated without the provenance. The 3,000 pound exception was described as requiring the trailer's AXLE weight to stay within 40 percent, where 49 CFR 393.42 says the weight of the trailer, a misstatement of the condition. And the loaded weight gap now routes to the scale locator we already ship. NOTE: still not reviewed under the 150/150 window, so the middle of this 218-line page remains uncovered.",
-    "verified_at": "2026-09-28",
+    "hash": "caa9409737e6b5a5",
+    "status": "verified",
+    "verified_by": "First independent pass (fresh-context subagent, 6 findings: 1 injury, 4 sourcing, 1 voice). APPLIED: repointed all four 49 CFR citations from the Cornell LII mirror to the government's own ecfr.gov pages; added the two documents the page relies on but never listed (49 CFR 390.5, the commercial-motor-vehicle definition, and California Vehicle Code 26302, the general-trailer lines); named the three federal standards the page referred to only by description (FMVSS 105, 135 and 106) and added their source bullets; added flag-injury to the short version, which told a reader their trailer might legally need no brakes without saying that no threshold makes an unbraked trailer stop, and flag-money at the breakaway test, where testing with the trailer connected backfeeds the brake controller; rewrote the garbled gain-setting sentence, which had fused an instruction to a meta-clause through two colons. OWED: the California Vehicle Code pages (26302 and 26303) are the official publisher but sit behind a Cloudflare bot wall that returns 403 to a machine fetch, so those two citations are UNVERIFIED by fetch; the visible 'Last updated on Oct 6, 2026' and the JSON-LD dateModified 2026-09-27 disagree.",
+    "verified_at": "2026-10-10",
     "sources": [],
     "spec": "_specs/trailer-brakes-required.md",
     "spec_waived": false,
-    "claims": "7475218f762ec723",
-    "claims_date": "Oct 2, 2026"
+    "claims": "7475218f762ec723"
   },
   "guides/winterize-plumbing.html": {
     "hash": "231e2df28d80db76",
