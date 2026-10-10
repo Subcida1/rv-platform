@@ -368,6 +368,8 @@ They were dispatched as scheduled sessions but the-grid was offline when they fi
 one fell back to a cloud sandbox and did nothing. NONE of it is done - the live site still
 shows "110 sources across 94 makers" and the parts "guide that shows how to fix it" line.
 
+**Priority note:** this is Ty's newest relayed package (2026-10-10 01:07-02:00 PDT) and it is what he asked for tonight - take it ahead of the older W-items if the choice is yours.
+
 Work it one section at a time, committing as you go. Where two sections overlap, the LATER one
 wins. Do not change text inside quotations - a quotation keeps its source's spelling. Tick this
 item only when every section is done.
