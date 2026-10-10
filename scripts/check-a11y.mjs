@@ -51,7 +51,13 @@ const freePort = () => new Promise((res, rej) => {
 /* Representative by default: one of each kind of page, because a11y defects cluster by template. */
 const REPRESENTATIVE = [
   'index.html', 'guides/rv-towing-capacity.html', 'directory/oregon.html',
-  'manuals/index.html', 'tools/weight-calculator.html', 'about.html',
+  'manuals/index.html',
+  // A manuals SECTION page is a different template from the hub: it carries its rows in a
+  // .man-table, and on .no-body / .no-sec that table's header sits on the tinted band. The hub
+  // does not, which is exactly why the contrast defect in .man-table th (fixed in fabf332) reached
+  // production on manuals/start-here.html while every representative page passed. Added 2026-10-10.
+  'manuals/power-and-electrical.html',
+  'tools/weight-calculator.html', 'about.html',
   // A manuals SECTION page carries the .no-body + .man-table template whose header threw the
   // start-here contrast defect (4.13:1). The hub alone cannot catch it: manuals/index.html has no
   // table. Name the template that actually regressed, so the gate closes the class. (W13.)
