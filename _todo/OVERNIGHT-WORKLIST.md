@@ -66,6 +66,14 @@ wastes the pass. Do W6 only for pages the safety pass has finished with, or afte
 
 ---
 
+### W8. Close the content-gate drift (mechanical, do it after the safety pass commits)
+`python3 scripts/verify-content.py` currently reports **12 verified, 111 unverified, 1 drifting, 1 unmanifested**.
+- `guides/rv-leveling-jacks-not-working.html` is DRIFTING — its content changed under a 2026-10-06 verification. The safety pass is editing that page right now (its B5), so re-verify it only once that pass has committed, via `python3 scripts/verify-content.py --verify guides/rv-leveling-jacks-not-working.html --by "<reviewer>"`.
+- `privacy.html` is NOT IN THE MANIFEST — `python3 scripts/verify-content.py --seed` adds it.
+Do not "fix" the 111 unverified by mass-seeding them as verified. Unverified is the honest state until a stronger model has actually read the page.
+
+---
+
 ## BRIDGE — do not duplicate
 
 A live session owns `/home/user/claude-bridge`. As of 01:05: all six lanes healthy on v0.7.41, queue idle, `v0.7.42` staged in `outbox/` awaiting a paste into the **aistudio** lane by Ty (its own session knows the deploy path). **Work the bridge ONLY if:** the queue has jobs with no matching reply (spent jobs blocking a lane), or a heartbeat is stale. Sweep spent jobs with `tools/sweep-spent-jobs.py`. Do not deploy a userscript build yourself.
