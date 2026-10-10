@@ -571,13 +571,14 @@
     "claims_date": "Oct 4, 2026"
   },
   "guides/rv-generator-sizing.html": {
-    "hash": "f668266cca5bd609",
-    "status": "unverified",
-    "verified_by": " 2026-10-02, review round 3 on a fresh lane, and it came back clean on both halves: no claims stronger than the sources, and no sentences overstating certainty. Two practical gaps closed. The page now says what its arithmetic is against, running figures and the makers' startup multipliers, and leaves which of a generator's two published ratings a surge figure covers to that generator's own documentation rather than asserting it, because no cited source states it. And the load-management advice now links the converter guide at the point a reader meets it. 2026-10-03, review round 5 under the 150/150 window, the first pass able to see this page's middle. Three fixed. The appliance figures were called 'Cummins own appliance table' while the source list credits 'the appliance load table' to the Onan operator manual: same document, since Onan is Cummins, but a reader could not map one to the other, so the claim now names the manual as the source list does. An elevation inference stated as a universal now says the outcome depends on the generator, the real locked-rotor draw and the day's temperature rather than on elevation alone. And the charge-rate remedy now carries its condition, since many converters have no adjustable rate. The reviewer's other gap, what a generator's surge rating covers, stays open deliberately: no cited document states it.",
-    "verified_at": null,
+    "hash": "9ed6045db441076a",
+    "status": "verified",
+    "verified_by": "Independent fresh-context review 2026-10-10, all twelve cited documents fetched, none blocked: 6 findings applied (1 injury, 1 wrong-fact, 3 voice, 1 style). Applied: a microwave figure of 750 to 1,500 that is Cummins's power-basics page, not the cited Onan operator manual, corrected to the manual's own 750 to 1,100; a flag-injury callout added where the page sends the reader out to run a generator - the page carried no flag of any class and its own cited manual leads with carbon monoxide, so the callout quotes Onan verbatim ('Carbon monoxide is a poisonous gas', the confined-space rule, and the never-occupy-without-a-detector rule, all verified by direct fetch of the HGLCA Spec A manual); the section titled 'What this page will not tell you, and why' and its 'it will not / what it will do' sentences recut so the subject is the equipment; 'note what this page does arithmetic against' and 'one this page answers' rewritten to what the generator does; the three remaining page and site references removed; and two table cells that were presented as a verbatim quote ('Battery Charger Up to 3000') unquoted, because the manual's row reads 'Charger Battery' and the two cells are separate columns. NOT applied: none withheld.",
+    "verified_at": "2026-10-10",
     "sources": [],
-    "claims": "f0d8106fa63a816a",
-    "claims_date": "Oct 4, 2026"
+    "spec": "_specs/rv-generator-sizing.md",
+    "spec_waived": false,
+    "claims": "f0d8106fa63a816a"
   },
   "guides/rv-leveling-jacks-not-working.html": {
     "hash": "a0f4375bf879d735",
