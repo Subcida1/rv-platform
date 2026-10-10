@@ -334,6 +334,15 @@ fresh-context review.** What was checked and found:
 number on the page.
 
 ### W13. Close the accessibility blind spot — DONE 2026-10-10 03:19, commit 28f18e4
+**ADDENDUM 03:45, from a duplicate attempt — read this before claiming an item.** A second session
+(me) picked up W13 an hour later and added `manuals/power-and-electrical.html` to the same list
+(commit `294b0b6`) because it read `git log` but not the **current text of this file**. Both additions
+are in place and the list is correct, but the work was done twice. **The lesson: `git log` tells you
+what changed, not what is still open — read the item's own heading in this file before starting it.**
+The addendum also carries a correction the other session's version does not: **the original W13 claim
+that `check-a11y.mjs` is not in `ci.sh` was WRONG** — it has always been there (`ci.sh:92`). The only
+real gap was the page list. Verified both directions after the change: the representative list passes
+9/9, and with a too-light header colour injected the gate reports `1 color-contrast` and fails.
 The axe step was already in `ci.sh` (56cf3c7) and the REPRESENTATIVE list carried
 `manuals/index.html`, but that is the HUB with no table — so a `.man-table th` contrast regression
 on a section page still shipped invisible, the exact shape that produced the start-here 4.13:1
