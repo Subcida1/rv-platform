@@ -199,6 +199,29 @@ were already covered by the safety pass. Exactly one was a real unowned gap
 (`rv-solar-not-charging`, fixed in `df91514`). The rule this obeys is the site's own: **an instrument
 that flags correct behaviour teaches the reader to ignore it, so suspect the check first.**
 
+### W16. `check-quotes.py` is over-reporting badly — its hits are NOT a worklist (2026-10-10)
+A full run reported **"quotes not found in any cited source: 64"**. Hand-checking shows the tool is
+extracting the page's own prose as quotations, so the number is not a defect count:
+
+- `rv-condensation-inside.html`: "32 quotes against 16 sources", and the flagged items are page
+  sentences — including one *written the same night*: `Whether your fans can actually do this depends
+  on their rated airflow. The DOE cite ASHRAE 62.2 …`. Real quotations on that page were graded PASS by
+  an independent reviewer who fetched all sixteen sources.
+- `rv-slide-out-leaking.html`: 13 flagged, and they are lead-in sentences (`The seal is not continuous,
+  and Lippert say why:`). The tool appears to treat a colon that introduces a quote as a quote.
+- A PDF ligature produced a false "NOT VERBATIM (77% word match)": page `check flow rate` vs source
+  `check ﬂow rate`. The words are identical; only the `ﬂ` ligature differs.
+- 47 fetch-failure lines in the same run (cummins, eaton, littelfuse, marshallexcelsior, ford all 403 or
+  challenge). Every quote from an unfetchable source reads as "missing".
+- `rv-battery-not-charging.html`, fixed and re-baselined the same night, reports `every quote appears
+  somewhere in the cited sources`.
+
+**Do not act on this tool's output without fetching the source yourself.** The class it is meant to
+catch — a quotation reconstructed rather than copied — is real and the reviews found five instances of
+it tonight, but this instrument cannot currently distinguish that from page prose. **An instrument that
+flags correct behaviour is worse than none, because it teaches the reader to ignore it.** Fixing the
+extractor is a pass of its own; until then, quotation fidelity is a read-it-yourself job.
+
 ### W13. Close the accessibility blind spot — AFTER W9 lands
 `check-a11y.mjs` is not in `ci.sh`, and its 6-page REPRESENTATIVE list has **no manuals section page**,
 which is exactly why the `start-here.html` contrast defect shipped. After W9's stylesheet fix is
