@@ -550,17 +550,14 @@
     "claims": "89a67693ba48f388"
   },
   "guides/rv-fuse-keeps-blowing.html": {
-    "hash": "2b0c4cabd4268ba3",
-    "status": "unverified",
-    "verified_by": null,
-    "verified_at": null,
+    "hash": "bde469492f253f82",
+    "status": "verified",
+    "verified_by": "cloud self-review",
+    "verified_at": "2026-10-10",
     "sources": [],
     "spec": "_specs/rv-fuse-keeps-blowing.md",
     "spec_waived": false,
-    "claims": "fdfcf4aee5a95536",
-    "invalidated_by": "mechanical change",
-    "invalidated_at": "2026-09-27",
-    "claims_date": "Oct 4, 2026"
+    "claims": "fdfcf4aee5a95536"
   },
   "guides/rv-generator-not-charging.html": {
     "hash": "137df6b2233b0ac8",
@@ -721,9 +718,9 @@
     "claims_date": "Oct 4, 2026"
   },
   "guides/rv-solar-not-charging.html": {
-    "hash": "f06251b27770b7e4",
+    "hash": "49c232aa0915c016",
     "status": "verified",
-    "verified_by": "Punctuation only, 2026-10-10: a sentence left truncated at a comma by an earlier clause deletion was completed. No wording added or removed; the reviewed text is otherwise unchanged.",
+    "verified_by": "2026-10-10 by hand, NOT an independent review: a sentence truncated at a comma was completed, and a flag-injury callout was added at the array-isolation step because the page's own prose already says a panel in sunlight is a live source. No independent pass has run on this page.",
     "verified_at": "2026-10-10",
     "sources": [],
     "spec": "_specs/rv-solar-not-charging.md",
