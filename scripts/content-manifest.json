@@ -642,13 +642,14 @@
     "sources": []
   },
   "guides/rv-propane-furnace-wont-light.html": {
-    "hash": "b27a2aa29e44d2a3",
-    "status": "unverified",
-    "verified_by": " 2026-10-02: quotation markup repaired. Ten quotations were set as \"text with <b>a fragment</b> inside\", which put the bold inside the quotation and made the marks ambiguous to check-quotes.py; they now use the <b>\"whole quotation\"</b> convention. git confirms no word moved. Flagged quotes fell from 26 to 11, and the eleven that remain all rest on marshallexcelsior.com, which returns 403 to automated fetches, so they need a hand check rather than an edit.",
-    "verified_at": null,
+    "hash": "bc060b65106b49de",
+    "status": "verified",
+    "verified_by": "Independent fresh-context review 2026-10-10, all twelve cited documents fetched: 6 findings applied (2 injury, 2 sourcing, 1 voice, 1 style) plus the one sourcing note it raised. Applied: the vent-up instruction changed from owner work to technician work - it contradicted the page's own 'a call rather than a project' rule and carried no flag; a flag-injury callout added at the head of the testing section and the two test steps rewritten in the technician's voice instead of as owner imperatives (the review called this the borderline of the two safety findings, so it is now both flagged and re-voiced); the 12,000-40,000 BTU/hr furnace range, which no cited document carries, cut from the short version and the body; the Jayco source entry no longer claims the operating and lockout pressure criteria, which are in the 22V-067 remedy instructions cited on their own line, and now names the tests the report does contain; three sentences about the page removed ('so that you can understand', 'on this page', 'the one line on this page'); licence and both plasticiser spellings Americanised. THE REVIEW NOTE CLOSED: two quotations (the spring-case marking convention and the wear-and-aging warranty statement) rested on MEC documents missing from the Sources list; both were found and verified by direct fetch and are now cited - the Excela-Flo installation and operation instructions and MEC's own warranty information page. NOT applied: nothing withheld; the review found no other defect.",
+    "verified_at": "2026-10-10",
     "sources": [],
-    "claims": "7633b08b24580839",
-    "claims_date": "Oct 2, 2026"
+    "spec": null,
+    "spec_waived": true,
+    "claims": "7633b08b24580839"
   },
   "guides/rv-refrigerator-not-cooling.html": {
     "hash": "f949f79c8144a27f",
