@@ -142,7 +142,7 @@
 
  <figure class="tight">
  <img src="assets/img/rv-blade-fuse-holder.jpg?v=9f1c522c" alt="ATO blade fuses seated in a fuse block, with a blue relay at one corner" loading="lazy">
- <figcaption>A fuse block holding ATO blade fuses, the same type an RV's 12-volt branch circuits use. The colour is the rating, so a branch that keeps blowing tells you its size at a glance: red is 10 amps, blue 15, yellow 20, green 30. Image credit: project Kei, Wikimedia Commons, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>.</figcaption>
+ <figcaption>A fuse block holding ATO blade fuses, the same type an RV's 12-volt branch circuits use. The color is the rating, so a branch that keeps blowing tells you its size at a glance: red is 10 amps, blue 15, yellow 20, green 30. Image credit: project Kei, Wikimedia Commons, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>.</figcaption>
  </figure>
 
  <h2>The system, in order</h2>
@@ -158,7 +158,7 @@
  <h3>Two things that differ between RVs</h3>
  <p>Not every RV has a battery disconnect, and many towables use a resettable breaker near the battery instead of a switch. Motorhomes add a second battery for the chassis and a device that decides which battery gets charged, so a motorhome can show a charging fault that is really that device not closing, not the converter.</p>
  <h3>One manufacturer warning worth taking literally</h3>
- <p>Progressive Dynamics states in its manual that the chassis bonding wire must be a separate wire run directly from the grounding lug on the converter, and warns against connecting the output negative to the chassis using the same wire. It is labelled a fire risk. Do not improvise that one.</p>
+ <p>Progressive Dynamics states in its manual that the chassis bonding wire must be a separate wire run directly from the grounding lug on the converter, and warns against connecting the output negative to the chassis using the same wire. It's labeled a fire risk. Do not improvise that one.</p>
  </div>
 
  <h2>What the numbers should be</h2>
@@ -189,7 +189,7 @@
  <h3>What counts as too much</h3>
  <p>Victron advises aiming for no more than 2.5 percent, and publishes the equivalent for a 12-volt system as 0.3 volts. That is a useful hard number to carry in your head: if you are losing more than about a third of a volt along a path at full load, something in that path is resisting.</p>
  <h3>Resistance hides in obvious places</h3>
- <p>Victron lists the usual suspects: cable length and thickness, fuses, shunts, switches and breakers, loose connections, dirty or corroded contacts, and bad cable lug crimps. They also publish sample resistances, which is genuinely useful for calibrating your expectations. A single cable connection is about 0.06 milliohms. A 500 amp shunt is about 0.10. A 150 amp fuse is about 0.35. A two metre 35 square millimetre cable is about 1.08. Add enough of those and the total becomes visible as heat and as lost volts.</p>
+ <p>Victron lists the usual suspects: cable length and thickness, fuses, shunts, switches and breakers, loose connections, dirty or corroded contacts, and bad cable lug crimps. They also publish sample resistances, which is genuinely useful for calibrating your expectations. A single cable connection is about 0.06 milliohms. A 500 amp shunt is about 0.10. A 150 amp fuse is about 0.35. A two-meter 35-square-millimeter cable is about 1.08. Add enough of those and the total becomes visible as heat and as lost volts.</p>
  <h3>Testing the ground return specifically</h3>
  <p>The method is a comparison rather than a single reading. You measure the voltage across the battery, then measure the voltage across a loaded test bulb or device, and the two should be virtually identical. If they are not, there is a drop somewhere in the ground path. The important detail is the word loaded: use an old-fashioned incandescent test light that actually draws a few watts, because an ohmmeter uses so little current that it cannot tell you whether a ground connection will carry any real load. A ground can read perfectly on a meter and still fail the moment it has to work.</p>
  </div>
@@ -204,7 +204,7 @@
  <h3>Converter/charger</h3>
  <p>This is the technical name for the unit most RVs actually have, because it does both jobs: it runs the 12-volt system and it charges the battery. WFCO calls its unit a Converter-Charger and Progressive Dynamics calls theirs a Converter/Charger. If someone tells you to replace your converter when you have an inverter charger, you have been given the wrong advice, because there is no separate converter in that RV.</p>
  <h3>Inverter/charger</h3>
- <p>One unit doing both jobs with an automatic switchover, and it replaces the converter in many mid-range and higher end RVs. When one of these is fitted, the old converter is disconnected and becomes obsolete.</p>
+ <p>One unit doing both jobs with an automatic switchover, and it replaces the converter in many mid-range and higher end RVs. When one of these is fitted, the old converter is disconnected and replaced.</p>
  <h3>The three battery-combining devices, which only matter on motorhomes</h3>
  <p>An <b>isolator</b> uses diodes as one-way valves, with an inherent forward voltage drop of roughly 0.7 volts across the junction. An <b>ACR</b> combines the batteries while charging and separates them when charging stops, closing at around 13.0 volts and opening at around 12.75. A <b>BIRD</b> is the motorhome version that charges the coach battery from the alternator and the chassis battery from the converter, closing at about 13.3 volts and dropping out at about 12.8. That last part matters for diagnosis: if a BIRD is not closing, your chassis battery will not charge on shore power and it will look exactly like a failed converter.</p>
  <h3>Charge controller</h3>
@@ -225,7 +225,7 @@
 
  <h2>Grounds: The fault that pretends to be something else</h2>
  <div class="card">
- <p>In an RV, the chassis is bonded to the 12-volt negative and serves as the return path for many circuits, though not all of them. It is not an earth ground in the household sense and does not need to be. It is a local ground plane: the frame works as the return because it is the largest piece of metal in the vehicle, not because it is connected to the earth.</p>
+ <p>In an RV, the chassis is bonded to the 12-volt negative and serves as the return path for many circuits, though not all of them. It's not a ground in the household sense and does not need to be. It is a local ground plane: the frame works as the return because it is the largest piece of metal in the vehicle, not because it is connected to the earth.</p>
  <h3>Why grounds fail</h3>
  <p>Every connection point between two different metals is a corrosion site once moisture is involved, and corrosion raises resistance until the connection effectively disappears. The result is a device that has proper voltage at it and still will not run, which sends people looking at the device instead of the frame.</p>
  <h3>The clue that points at a ground rather than a supply</h3>

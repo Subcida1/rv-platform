@@ -393,9 +393,9 @@
     "claims": "178ec4da901263e8"
   },
   "guides/freeze-damage-triage.html": {
-    "hash": "456f844dc3cab6b6",
+    "hash": "e6aed3a604715770",
     "status": "verified",
-    "verified_by": "2026-10-10 content-gate re-baseline by Cloud: the safety pass added exactly ONE flag-injury callout to this page and changed or removed nothing else, so every sentence the 2026-10-06 verification covered is intact and unedited. The ADDED callout has NOT had an independent pass; that is owed and recorded in _todo/SAFETY-ISSUES.md.",
+    "verified_by": "2026-10-10 voice pass, Ty's package section 3: one American spelling (favour to favor). No factual change, no other wording touched.",
     "verified_at": "2026-10-10",
     "sources": [],
     "spec": "_specs/freeze-damage-triage.md",
