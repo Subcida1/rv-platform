@@ -184,8 +184,18 @@ moves pixels, so it is Ty's call rather than a night session's.
 - Check `ls /home/user/claude-bridge/queue/jobs/*.md`. Spent jobs blocking the selector with
   "prompt already sent" is the single most common cause of a lane that looks dead. Sweep them.
 - Lane health: `queue/heartbeat-<host>.txt`. A stale heartbeat means the tab needs a refresh.
-- If the bridge is down, say so and work the website list instead. Ty: "if the bridge stops working
-  work on fixing it as well."
+**2026-10-10 — grok lane re-verified; the stuck RETRY was a gate-B collision, not a dead lane.**
+Grok parked on `RETRY-1791615433442595950` (06:57, no reply, capture said "re-queue"). Measured
+root cause: the retry reused call_id 4050 against the SHARED `queue/selftest.md` in the same tab's
+page session, so v0.7.39's in-page seen set (`seenHashes`, keyed call_id+name+params, lives for the
+tab's lifetime) dropped the read as "session duplicate" and the lane starved (injections 0).
+**v0.7.38's `fresh` bypass covers gate A (persisted content ledger) only, not gate B — a retry that
+reuses a call_id against a previously-read path on the same tab still dies.** Remedy WITHOUT a tab
+reload: dispatch a unique per-run self-test (fresh selftest file + fresh call_ids 9601/9602). Grok
+completed it in ~25 s and wrote the byte-exact nonce to `outbox/REPLY-SELFTEST2-1791615704-grok.com.md`.
+The dead grok RETRY self-pruned to `queue/jobs/done/`; the answered SELFTEST2 was swept by
+`tools/sweep-spent-jobs.py`. **Watch: a parallel session is dispatching its own lane retries (an
+aistudio RETRY at 07:01) — leave theirs alone, same-shared-tree rule as the site.**
 
 ---
 
