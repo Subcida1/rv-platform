@@ -478,25 +478,14 @@
     "claims": "823655868cc02382"
   },
   "guides/rv-converter-not-charging.html": {
-    "hash": "169a4b434f317cb9",
-    "status": "unverified",
-    "verified_by": " 2026-10-03: a full power-path diagram was added, covering the converter AND the inverter branch because competitor research found no ranking page ships a usable diagram for either query. The text moved, so the page is recorded UNVERIFIED until a fresh independent pass covers the addition. 2026-10-03, review round 5 on deepseek. TWO FINDINGS FIXED, both about the page's central test: it stated that a matching voltage at unloaded battery cables means the wiring is fine, when that reading only proves an OPEN CIRCUIT and a corroded terminal passes full voltage unloaded, so the sentence now says what the result does and does not clear; and the second-reading instruction now says the converter runs with its battery load removed while the meter is on it. THE REVIEW ALSO DISCLOSED ITS OWN COVERAGE GAP: the two-slice read does not meet on a page this long, so the middle of the page was in neither slice and was not reviewed. Four further findings and three gaps are unaddressed and listed in the queue. Round 6 on deepseek under the corrected 125/125 window covered the page properly and found four things. FINDING 3 WAS MINE: round 5 corrected the FAQ and left the short version saying the opposite, so the page contradicted itself on its own central test, now fixed. The heading that presented a merged check order as the makers order is reworded, the 132 volt threshold is no longer stated as a general rule, the first voltage reading now has a specified point, and all seven source entries carry what each supports. NOTE: this page is 296 lines and the window covers 250, so 46 lines at the middle are STILL unreviewed and it needs a third slice or a per-page window. Round 6 gap 2 also closed: the 13.6 volt chain of reasoning now carries the lithium caveat, using WFCO's own published profiles that were already cited, so a reader with a lithium bank is not told a correct reading is a clean bill of health. Round 6 gap 3, temperature correction for the hydrometer reading, remains unaddressed because no cited document states it. Round 8 came back CLEAN on both halves, and the reviewer credited the per-source mapping added at round 6: voltage windows, fuse checks, charging profiles, battery-size guidance and state-of-charge tables all mapped to their documents. Its one gap is now closed: the page named the charge-current test without the method, so it now says a clamp meter goes around the positive cable at the battery with nothing disconnected, that the reading is a fraction of the converter's rating because the stages taper, and that a well-down bank taking almost nothing while the converter's voltage is right points at the wiring rather than the charger.",
-    "verified_at": null,
-    "sources": [
-      "WFCO WF-8700-AD manual",
-      " WFCO WF-9800 and 9900 deckmount manual",
-      " WFCO support FAQ",
-      " Progressive Dynamics converter troubleshooting guide",
-      " Trojan battery maintenance",
-      " Cummins Onan F-1362",
-      " Xantrex TRUECHARGE datasheet"
-    ],
+    "hash": "dc907743f4e3bcd8",
+    "status": "verified",
+    "verified_by": "Independent fresh-context review 2026-10-10, every cited document fetched. 8 findings applied (1 injury, 1 wrong-fact, 2 sourcing, 3 voice, 1 style). Applied: the live-metering procedure ran unflagged in two of the three places it appears, so the two-reading section now carries its own flag-injury callout, and the step that deliberately runs the converter with the battery load removed carries a flag-damage one (the page already admits the 12-volt loads misbehave in that state); the 'the method is the same for all of them' claim corrected, because WFCO meters at the disconnected battery cables and Progressive Dynamics at the converter's own output terminals, and the section now says where each maker puts the meter and that the two-reading method covers both; a WFCO quotation that had the brand name substituted inside the quotation marks now carries the manual's own series wording; four figures the page credited to Progressive Dynamics lived in documents the reader was never pointed to - the PD4100 installation and operation guide and the WFCO WF-8900 series manual were both fetched, confirmed against the figures, and added to Sources, and the troubleshooting-guide entry no longer claims a battery-size floor its linked page does not contain; three sentences about the page, its own diagram and a ten-minute timing claim are gone; recognise and labelling Americanised. OWED AND UNVERIFIED: the Progressive Dynamics FAQ figures (the 70-hour and 15-hour recharge times, the battery-size floor) and the Charge Wizard 15-minutes-every-21-hours figure, plus the PD4135 100 to 125 VAC input window, rest on PD FAQ, Charge Wizard and PD4135 documents not yet in the Sources list; the page is honest about them being Progressive Dynamics' own, but the specific document is not named. The shared-footer 'licences' spelling is sitewide chrome and is recorded as a template fix, not a page edit.",
+    "verified_at": "2026-10-10",
+    "sources": [],
     "spec": "_specs/rv-converter-not-charging.md",
     "spec_waived": false,
-    "claims": "9e753c5476a782bd",
-    "invalidated_by": "mechanical change",
-    "invalidated_at": "2026-09-27",
-    "claims_date": "Oct 4, 2026"
+    "claims": "9e753c5476a782bd"
   },
   "guides/rv-delamination.html": {
     "hash": "928fb7f296c0fc17",
@@ -516,11 +505,14 @@
     "sources": []
   },
   "guides/rv-fridge-leveling.html": {
-    "hash": "185da4ca7f53cfdc",
-    "status": "unverified",
-    "verified_by": null,
-    "verified_at": null,
-    "sources": []
+    "hash": "d29d67aa5b238004",
+    "status": "verified",
+    "verified_by": "Independent fresh-context review 2026-10-10, every cited source fetched. 2 findings applied. The important one: the page asserted as fact that Dometic publishes no angle figure at all, in a section heading that said so - a maker-level negative the two cited consumer manuals cannot support, and false. Dometic's 5-series installation manual gives the figure directly (the refrigerator may not exceed an angle of 3 degrees, park on a level surface with a spirit level); it was fetched and confirmed and is now in the Sources list, the heading no longer claims a maker publishes none, the Dometic bullet states what each document does and does not give, and the eight-series annotation now scopes its 'no degree figures' remark to that manual. Second: the boiler-tube crack defect was attributed to 'the NHTSA recall notices' plural when only the Keystone/Dometic notice describes it, so it is singular now and matches the source list. Everything else on the page came back clean, including every figure's attribution to the right maker and the absence of any live-work step.",
+    "verified_at": "2026-10-10",
+    "sources": [],
+    "spec": null,
+    "spec_waived": true,
+    "claims": []
   },
   "guides/rv-furnace-carbon-monoxide.html": {
     "hash": "781f19223ef409d5",
@@ -723,15 +715,14 @@
     "claims": "8bcd90bd498e17c5"
   },
   "guides/rv-tank-sensors-reading-wrong.html": {
-    "hash": "50149a00ad4cac19",
-    "status": "unverified",
-    "verified_by": "Cloud 2026-09-28, external-review correction pass plus a fresh-context confirm round. The page taught that a verifiably dry tank still reading full proves a wiring fault, because 'there is no residue left to carry any current'. That is backwards: emptying a tank does not remove what is stuck to the probes, and dried sludge, struvite and mineral scale are the classic cause of a false full. The rule was corrected in the two places it appeared, and the confirm round found it stated in two further places the first pass had missed (the 'always reads full' symptom card and the featured FAQ), both then fixed, so the rule now reads consistently in all six locations. Struvite is now defined on the page. The confirm round verified the mechanism against RV Tank Specialist, Walex, Ask The RV Engineer and Kleen Tank, and confirmed the corrected order of operations. No change was made after the confirm verdict. Since that verdict the only further change to this page's visible text is the site-wide check line, applied on Ty's instruction: it now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' rather than 'Last reviewed: <date> ...', because the old wording implied a review cycle that had not happened and named no author. No claim text changed in that pass. CHANGED AGAIN 2026-09-28 on Ty's instruction: the check line now reads 'By OriginRV. Written and checked against the sources below on <date>.' rather than a person's name, and the Article schema author is an Organization rather than a Person. His name appears only on the About page, as Ty B. No claim text changed in that pass either. The only change since is the site-wide byline rewrite of 2026-10-02 on Ty's instruction, which removed the 'written and checked against the sources' claim; git confirms the diff is byline lines only and no claim text moved. 2026-10-03: a decision tree added, from the competitor research's ranked item 5. The finding was that the whole result set for this query converges on 'clean it' and NOBODY publishes a pass or fail test before you spend money on probes. The page already carried both tests, so the addition WIRES THEM INTO A TREE rather than adding a claim: every branch is a sentence already on the page. Recorded UNVERIFIED because the text moved and no pass covers the addition yet.",
-    "verified_at": "2026-09-28",
+    "hash": "48d922aea9444f44",
+    "status": "verified",
+    "verified_by": "Independent fresh-context review 2026-10-10, all nine cited documents fetched: 6 findings applied (2 sourcing, 2 voice, 2 style). Every quotation on the page verified verbatim against its cited document; no mis-pairing and no fabricated quote found. Applied: an empty <p></p> left under a heading removed; an RV toilet flush volume ('about a quart per flush') that no cited document states reduced to a non-quantified statement; the probe maker's instruction restated as 'at the same level' where the maker writes 'next to the existing probes' - a step that decides where a hole is drilled, so the maker's wording now stands; 'wire colours' Americanised; an editorial flourish ('a real diagnostic story') and a coined phrase ('the number that moves') cut. OWED: the shared-footer 'licences' is sitewide chrome, recorded as a template fix.",
+    "verified_at": "2026-10-10",
     "sources": [],
     "spec": "_specs/rv-tank-sensors-reading-wrong.md",
     "spec_waived": false,
-    "claims": "7d8c50b92e428a6c",
-    "claims_date": "Oct 2, 2026"
+    "claims": "7d8c50b92e428a6c"
   },
   "guides/rv-tire-replacement.html": {
     "hash": "4e259a6786ef6d90",
@@ -755,15 +746,14 @@
     "claims_date": "Oct 2, 2026"
   },
   "guides/rv-toilet-not-flushing.html": {
-    "hash": "a9a3895fc72faef7",
-    "status": "unverified",
-    "verified_by": "Cloud 2026-09-26, FIRST independent pass on record: Qwen, job 20260926-2252-RV-TOILET-R2, VERDICT CORRECTIONS APPLIED. All three corrections from the 09-24 review are confirmed FIXED, each quoted, and all four of its quotations are on the live page mechanically (4 on the page, 0 staged-only, 0 nowhere): the pump-off and pressure-bleed step now precedes the supply-line instruction in both the body and the FAQ, the tank-and-vent first step is in place and the claim about a blocked vent is confirmed as written, and the Thetford attribution reads as fact. Nothing the corrections touched was broken. Since that verdict the only further change to this page's visible text is the site-wide check line, applied on Ty's instruction: it now reads 'By Ty Brandes. Written and checked against the sources below on <date>.' rather than 'Last reviewed: <date> ...', because the old wording implied a review cycle that had not happened and named no author. No claim text changed in that pass. CHANGED AGAIN 2026-09-28 on Ty's instruction: the check line now reads 'By OriginRV. Written and checked against the sources below on <date>.' rather than a person's name, and the Article schema author is an Organization rather than a Person. His name appears only on the About page, as Ty B. No claim text changed in that pass either. The only change since is the site-wide byline rewrite of 2026-10-02 on Ty's instruction, which removed the 'written and checked against the sources' claim; git confirms the diff is byline lines only and no claim text moved. The italic quotation marks were converted to the checkable <b>\"...\"</b> convention on 2026-10-02, on Ty's ruling: git confirms all 45 changed lines are identical once bold/italic tags and quotation marks are ignored, so no words moved. The quotations became visible to check-quotes.py for the first time, which is the point of the change. 2026-10-02: an inbound link to a neighbouring guide was added, which moved the text, so this page is recorded UNVERIFIED until a fresh independent pass covers the addition. The link itself carries no claim. Review round 3 on a fresh lane came back CLEAN on both halves. Its one gap is closed from the cited manual, which finishes the entry with 'If blade seal is worn, replace.' so the check is a look rather than a measurement. Round 2 on deepseek released at 45 attempts over 270 seconds without the lane starting an answer, which is the raised ceiling working and a lane failing for a different reason. 2026-10-03: a link to the manuals section added where the page tells the reader two numbers come out of the maker's manual, because Ty rule says any page that sends a reader to a manual should route them to ours. The text moved, so this page is recorded UNVERIFIED until a pass covers the addition.",
-    "verified_at": "2026-09-28",
+    "hash": "3a33335399039f25",
+    "status": "verified",
+    "verified_by": "Independent fresh-context review 2026-10-10, the cited Thetford manual fetched. 8 findings applied (1 injury, 1 sourcing, 3 voice, 3 style; the review's two quotation-fidelity findings were classed as style). Applied: the page's only live-work step - disconnecting the water supply line, which the page itself says sprays when opened - now carries a flag-injury callout; two quotations that had been tidied inside the quotation marks restored to the maker's words ('or water module, depending on model' and 'at least ten quarts (9.5 liters) per minute'); a claim that toilet fittings share space with 12-volt wiring, which the cited manual does not support anywhere, cut; three sentences about the site rather than the RV removed or rewritten as links. OWED: the shared-footer 'licences' is sitewide chrome, recorded as a template fix rather than a page edit. Everything else came back clean: every other quotation verbatim in the cited manual, the three leak types and the seal-repair order matching it, and the two timing figures traced.",
+    "verified_at": "2026-10-10",
     "sources": [],
     "spec": "_specs/rv-toilet-not-flushing.md",
     "spec_waived": false,
-    "claims": "503f760523fe0f1b",
-    "claims_date": "Oct 4, 2026"
+    "claims": "503f760523fe0f1b"
   },
   "guides/rv-towing-capacity.html": {
     "hash": "3d30ac068e37fec6",
