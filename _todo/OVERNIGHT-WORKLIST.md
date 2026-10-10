@@ -153,8 +153,24 @@ re-verified in a clean extraction with verify.py and all five generators; the hu
 browser ("dometic fridge" 1 row, "norcold" 3, "zzzz" 0, no page errors).
 `manuals/` — the hub search. Read `_todo/SITE-TODO.md` §manuals for the specification before starting.
 
-### W2. Directory pages — 201 inline `style=` attributes
-The 51 `directory/<state>.html` pages carry 201 inline styles. Move them into the stylesheet classes. Mechanical, but touches 51 generated pages → **the regenerated pages ship in the SAME commit** (see `build-listings.py`). Verify with `build-listings.py --check`.
+### W2. Directory pages — 201 inline `style=` attributes — **DONE 2026-10-10 12:40, commit `2bae9ec`**
+
+**The item's premise was wrong, and the measurement is the record.** All 201 are `style="display:none"`, in
+four fixed roles, so none of it was "largely hand-maintained".
+
+- **51 are the `botcheck` honeypot**, one per directory page, emitted from the single `CLAIM_CARD` constant
+  in `build-listings.py`. It is never toggled, so it moved to the stylesheet's existing `.hidden` class
+  (`style.css:242`) and the generator changed with it (`build-listings.py --check` stays honest, and
+  `ci.sh` is green). Verified: all 51 pages changed exactly ONE line each.
+- **The other 150 MUST stay inline, and the stylesheet already says why** (`style.css:2091`): `finder.js`
+  reveals the three finder controls (`d-clear`, `d-more-wrap`, `d-empty`) by CLEARING the inline display.
+  A plain class would come back the moment the script cleared the value, and `.hidden` is
+  `display:none!important` so it would beat the script outright. **Leave these alone. A future sweep that
+  tries to "finish the inline-style cleanup" here would break the directory finder.**
+
+Inline styles in `directory/*.html`: 201 -> 150.
+
+Original item text, kept for history: The 51 `directory/<state>.html` pages carry 201 inline styles. Move them into the stylesheet classes. Mechanical, but touches 51 generated pages → **the regenerated pages ship in the SAME commit** (see `build-listings.py`). Verify with `build-listings.py --check`.
 
 ### W3. The black-tank-clogged page
 A guide page is owed on a clogged black tank. Check `_todo/SITE-TODO.md` and `_data/guides.json` for the spec/slug before writing; run `scripts/new-guide.py` (and check its output against a page it did NOT write — the generator has known structural blind spots).
