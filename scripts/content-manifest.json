@@ -668,26 +668,24 @@
     "claims": "ab37936352b3b705"
   },
   "guides/rv-slide-out-leaking.html": {
-    "hash": "74e7e53c5d4c31ab",
-    "status": "unverified",
-    "verified_by": null,
-    "verified_at": null,
+    "hash": "5587feac99bcd9c9",
+    "status": "verified",
+    "verified_by": "Independent fresh-context review 2026-10-10 (subagent report task_15): 5 findings - 0 injury, 1 wrong-fact, 3 sourcing, 1 style - all applied. Applied: the Protimeter dry/at-risk/wet threshold sentence cut from the body and from its Sources bullet, because the cited page publishes no thresholds (fetched and read); the uncited Keystone owner-manual quotation cut, since the phrase appears in neither cited Keystone page and the manual is not in Sources; the H.B. Fuller sealant quotation rendered verbatim with the source's own stray word bracketed [to], confirmed by fetching eternabond.hbfuller.com on 2026-10-10; the 1/4 inch nominal overlap attribution moved from the CCD-0001397 bullet to the SlimRack CCD-0008630 bullet; the subjectless paragraph opening restored ('Two words in that sentence do the work:'). Rules 3, 4 and 5 returned clean. Nothing owed.",
+    "verified_at": "2026-10-10",
     "sources": [],
-    "claims": "c78a8031f12fba7c",
-    "claims_date": "Oct 2, 2026"
+    "spec": null,
+    "spec_waived": true,
+    "claims": "c78a8031f12fba7c"
   },
   "guides/rv-slide-out-not-working.html": {
-    "hash": "5248729dbd09ab76",
-    "status": "unverified",
-    "verified_by": " The italic quotation marks were converted to the checkable <b>\"...\"</b> convention on 2026-10-02, on Ty's ruling: git confirms all 45 changed lines are identical once bold/italic tags and quotation marks are ignored, so no words moved. The quotations became visible to check-quotes.py for the first time, which is the point of the change.",
-    "verified_at": null,
+    "hash": "396e92cd9b2c0366",
+    "status": "verified",
+    "verified_by": "First independent pass (fresh-context subagent, 10 findings: 2 injury, 4 wrong-fact, 2 sourcing, 1 voice, 1 style). APPLIED: added a flag-injury callout at the battery-jump step (connect directly to the battery, never the controller power connections), which previously had no flag; added a flag-damage callout at the 30 amp breaker-box step (opening a live box, replacing a fuse or breaker); deleted 'before anything electrical', which Lippert's own troubleshooting order contradicts (Checking Circuit Breakers precedes Obstructions); cut the clause claiming the free checks match 'the order Lippert's own troubleshooting sections are laid out in', which they do not; corrected 'Lippert's list' to 'BAL's list' for the cable-system symptom (the cited document is BAL's Accu-Slide service manual); attributed the two-sentence safety line to the hydraulic manual, where it appears in full, and noted that the in-wall manual prints only the first sentence; corrected the SlimRack quotation to 'the engine or generator is running' to match the manual; relabelled the CCD-0008630 bullet as SlimRack Plus (it is a different system and the page attributes no claim to it); removed the sentence about the page choosing to name mechanisms; changed 'colours' to 'colors' (US spelling, matching the manual) and repaired a stray full stop before 'and warns'. OWED: the visible 'Last updated on Oct 6, 2026' and the JSON-LD dateModified 2026-09-27 disagree (sitewide convention, Ty's decision).",
+    "verified_at": "2026-10-10",
     "sources": [],
     "spec": "_specs/rv-slide-out-not-working.md",
     "spec_waived": false,
-    "claims": "8557baaf9b567d43",
-    "invalidated_by": "mechanical change",
-    "invalidated_at": "2026-09-27",
-    "claims_date": "Oct 4, 2026"
+    "claims": "8557baaf9b567d43"
   },
   "guides/rv-solar-not-charging.html": {
     "hash": "29c281b2571bd5df",
@@ -710,25 +708,14 @@
     "claims": "7d8c50b92e428a6c"
   },
   "guides/rv-tire-replacement.html": {
-    "hash": "4e259a6786ef6d90",
-    "status": "unverified",
-    "verified_by": null,
-    "verified_at": null,
-    "sources": [
-      "inbox/REVIEW-REQUEST-20260923-0633-rv-tire-replacement.md",
-      "outbox/REPLY-RVTIRE-REVIEW-0633.md",
-      "inbox/REVIEW-REQUEST-20260923-1230-rv-tire-replacement-confirm.md",
-      "outbox/REPLY-RVTIRE-CONFIRM-1230.md",
-      "inbox/REVIEW-REQUEST-20260923-1246-rv-tire-replacement-close.md",
-      "outbox/REPLY-RVTIRE-CLOSE-1246.md",
-      "spec:_specs/rv-tire-replacement.md"
-    ],
+    "hash": "2700660a364e3f21",
+    "status": "verified",
+    "verified_by": "First independent pass (fresh-context subagent, 8 findings: 7 sourcing, 1 voice). APPLIED: dropped the unsourced Ford attribution on the 1-2 psi figure; removed the 40,000-60,000 mile passenger-tread figure that no cited source carries; reworded the three-digit DOT claim to what 49 CFR 574.5 actually supports (the date code is four symbols, so a three-digit code predates it) instead of asserting a year; attributed the 65 mph ST figure to Carlisle's own trailer-tire guidance as a verbatim quote; replaced the uncited 'Goodyear says its ST line is N rated, other makers offer L and M' claim with Goodyear's own published statement that the entire Endurance line carries the N speed rating, plus Goodyear's speed-rating chart; replaced the unverifiable NFPA product page with NFPA's published first-revision report, which carries section 8.6.2 verbatim; corrected the storage advice to the wording the cited Goodyear bulletin actually uses; trimmed the injury callout of three sentences that repeated the paragraphs above and below it. OWED: the NFPA 110%/106% figures are cited to NFPA's public revision report rather than the paywalled adopted text, so the final-edition wording is unconfirmed; the visible 'Last updated on Oct 6, 2026' and the JSON-LD dateModified 2026-09-27 still disagree (sitewide convention, Ty's decision, not swept).",
+    "verified_at": "2026-10-10",
+    "sources": [],
     "spec": "_specs/rv-tire-replacement.md",
     "spec_waived": false,
-    "claims": "12f7a8379a3ca6a4",
-    "invalidated_by": "mechanical change",
-    "invalidated_at": "2026-09-27",
-    "claims_date": "Oct 2, 2026"
+    "claims": "12f7a8379a3ca6a4"
   },
   "guides/rv-toilet-not-flushing.html": {
     "hash": "3a33335399039f25",
