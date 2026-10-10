@@ -370,6 +370,32 @@ shows "110 sources across 94 makers" and the parts "guide that shows how to fix 
 
 **Priority note:** this is Ty's newest relayed package (2026-10-10 01:07-02:00 PDT) and it is what he asked for tonight - take it ahead of the older W-items if the choice is yours.
 
+**PROGRESS 2026-10-10 11:05 — SECTIONS 3 AND 5 ARE COMPLETE.**
+
+- **Section 3 (GUIDES voice, batch 1): COMPLETE, all 10 pages.** Commits `2366952`, `e041a14`,
+  `f77ef77`, `c879b77`, `0696d2d`, and the `rv-condensation-inside` commit before `9f83c5f`.
+- **Section 5 (TOOLS, hub + 8 tools): COMPLETE, all 10 pages.** Commits `b9f3581` (hub),
+  `6371dca` (tire-date-code, watts-to-amps, battery-runtime), `af322ba` (weight-calculator,
+  snow-load), `29a5d62` (solar-sizing, rv-loan, fuel-cost).
+
+**EVERY ONE WAS PHRASING, SPELLING OR GRAMMATICAL AGREEMENT ONLY. No fact, number, interval or
+calculator result was changed**, and every verified page that changed was re-baselined with a note
+saying exactly what changed.
+
+**ONE STANDING CAVEAT, and it recurs in every remaining section:** parts of this package are written
+with **em dashes**, which this site bans as a hard rule that `verify.py` gates. Where a rewrite had
+one, a colon or comma was used instead so the meaning survives and the gate stays green. Anyone
+applying sections 6-11 will hit this; do the same, and do not "restore" the dash.
+
+**What remains, in order:** sections 6, 7, 8, 9, 10, 11 (hubs and top-level pages, manuals, parts,
+and the DeepSeek-ism databases), then the last guides batch (section 2). **Section 4 cannot be done as
+one** — W17.4 above records why. Also open on older items: W2-W8, W10, W12, W14.
+
+**HOW TO DO A SECTION:** the pages are largely hand-written; only the nav/footer shell is generated
+(`build-shell.mjs --check` proves it). Replace the exact source string, assert it matched once, check
+no em dash was introduced, run `verify.py`, re-baseline any verified page, commit by explicit path,
+extract that commit and run `verify.py` against it before pushing.
+
 **PROGRESS 2026-10-10 08:15 — SECTION 3 IS COMPLETE (all 10 pages), section 4 is blocked by design.**
 Commits: `2366952` (freeze-damage-triage, rv-12-volt-problems), `e041a14` (battery-winter-storage,
 rv-air-conditioner-not-cooling, rv-converter-not-charging), `f77ef77` (rv-battery-not-charging,
