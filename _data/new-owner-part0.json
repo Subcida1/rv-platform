@@ -350,6 +350,61 @@
        "html": "Sealant, and the roof under it. Water getting in is what destroys an RV, and it is the cheapest failure to prevent and the most expensive one to find late. See <a href=\"#maintenance-schedule\">the maintenance schedule</a> and <a href=\"#seals-roof-delamination\">seals, roof and delamination</a>."
       }
      ]
+    },
+    {
+     "id": "q-propane-cost",
+     "title": "How much does it cost to fill the propane tank?",
+     "open": false,
+     "blocks": [
+      {
+       "kind": "p",
+       "html": "Propane at a refill station is sold by the gallon, so the price is local and moves with the market. What is fixed is the size of the tank: a 20 lb cylinder holds a little under five gallons (published figures put it at 4.6 to 4.7), and a 30 lb cylinder, the common RV size, about 7.1. Those are the numbers that turn a price per gallon into a cost to fill. See <a href=\"#propane-system\">propane</a>."
+      }
+     ]
+    },
+    {
+     "id": "q-insurance-cost",
+     "title": "How much does RV insurance cost?",
+     "open": false,
+     "blocks": [
+      {
+       "kind": "p",
+       "html": "Insurance is priced on the RV rather than on the market: the class and what it is worth, whether it is towed or driven, whether you use it full time or occasionally, the state you keep it in and the deductible you choose. A motorhome carries its own liability, while a trailer's usually sits with the tow vehicle, and that is part of why the two cost different amounts. An independent agent will quote several carriers at once, and your state insurance department publishes consumer guidance."
+      }
+     ]
+    },
+    {
+     "id": "q-storage-cost",
+     "title": "How much does it cost to store an RV?",
+     "open": false,
+     "blocks": [
+      {
+       "kind": "p",
+       "html": "Storage is priced per facility, per metro and per space: an open lot, a covered bay, an enclosed unit, or a climate-controlled one, in that order of cost. The rate depends on the local market and on how much protection you want, so ring two or three facilities near you and ask for the open-lot rate. See <a href=\"#storage\">storing an RV</a>."
+      }
+     ]
+    },
+    {
+     "id": "q-registration-cost",
+     "title": "What does it cost to register and title an RV?",
+     "open": false,
+     "blocks": [
+      {
+       "kind": "p",
+       "html": "It is set state by state, and it is usually the smallest of the numbers an RV costs you in a year. Your state's motor vehicle agency publishes its own fee schedule, and that schedule is the only thing that will give you your own figure: expect a title fee and a registration fee, and in some states a one-off initial registration charge on top of them."
+      }
+     ]
+    },
+    {
+     "id": "q-driver-licence",
+     "title": "Do I need a special licence to drive or tow an RV?",
+     "open": false,
+     "blocks": [
+      {
+       "kind": "p",
+       "html": "Usually not. An ordinary licence covers most RVs. A handful of states require a non-commercial Class A or Class B licence, or an endorsement, above roughly 26,000 lb gross vehicle weight, and a few set lower thresholds for towing, so the answer depends on the weight of what you are buying and the state you live in. Federal rules let a state require a commercial licence for recreational vehicles, but do not impose one for non-business use. Check your own state's requirement before you buy something heavy, rather than after. See <a href=\"#driving-motorhome\">driving a motorhome</a>."
+      }
+     ]
     }
    ]
   }

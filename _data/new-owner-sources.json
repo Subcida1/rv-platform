@@ -1020,6 +1020,26 @@
    "label": "NHTSA tire aging summary (PDF hosted by Tire Review; no NHTSA-hosted copy of this summary exists)",
    "url": "https://www.tirereview.com/wp-content/uploads/2014/07/U_S_DOT_NHTSA_-_Tire_Aging_A_Summary_of_NHTSAs_Work1.pdf",
    "provenance": "fetch-confirmed"
+  },
+  {
+   "label": "FMCSA, may a state require a CDL for recreational vehicles",
+   "url": "https://www.fmcsa.dot.gov/registration/commercial-drivers-license/may-state-require-persons-operating-recreational-vehicles",
+   "provenance": "fetch-confirmed"
+  },
+  {
+   "label": "RVIA, states requiring a special driver's licence for larger RVs (August 2017)",
+   "url": "https://www.rvia.org/system/files/media/file/Special%20Drivers%20License.pdf",
+   "provenance": "fetch-confirmed"
+  },
+  {
+   "label": "Propane101, consumer propane cylinder sizes",
+   "url": "https://www.propane101.com/consumerpropanecylinders.htm",
+   "provenance": "fetch-confirmed"
+  },
+  {
+   "label": "AmeriGas, propane tank sizes",
+   "url": "https://www.amerigas.com/about-propane/propane-tank-sizes",
+   "provenance": "fetch-confirmed"
   }
  ]
 }
