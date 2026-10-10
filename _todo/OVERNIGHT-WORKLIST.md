@@ -398,10 +398,9 @@ section 11. That is now SIX claims in this package that fail on measurement, and
 audit's blind spot is "rendered by script". **Anything this audit reports as missing must be loaded in a
 real browser before it is believed.**
 
-**Still open, and named rather than guessed:** six strings (two breadcrumb labels, the Allison line, the
-campaign-number line, "the ids are not guessable", the Thetford line) exist only in generated pages and
-in no data file or script - their source needs finding. `/contact` still has no working destination.
-The nav/footer clickability pass needs a live browser. Older items W2-W8, W10, W12, W14 remain.
+**Still open:** the nav/footer clickability pass needs a live browser, and older items W2-W8, W10, W12,
+W14 remain. **The six strings are RESOLVED** - see the 12:25 block below. (`/contact` is NOT broken; the
+12:10 correction above shows the email, form and mailto it has.)
 
 **PROGRESS 2026-10-10 11:05 — SECTIONS 3 AND 5 ARE COMPLETE.**
 
@@ -423,6 +422,44 @@ applying sections 6-11 will hit this; do the same, and do not "restore" the dash
 **What remains, in order:** sections 6, 7, 8, 9, 10, 11 (hubs and top-level pages, manuals, parts,
 and the DeepSeek-ism databases), then the last guides batch (section 2). **Section 4 cannot be done as
 one** — W17.4 above records why. Also open on older items: W2-W8, W10, W12, W14.
+
+**PROGRESS 2026-10-10 12:35 — THE SIX UNLOCATED STRINGS ARE LOCATED AND FIXED (commit `151826f`).**
+
+A whole-string grep missed them because five are ASSEMBLED from parts by the generator, so the phrase
+exists in no single file. Sources and fixes, each applied at the source, never to a rendered page:
+
+- "Awnings and exterior manuals" / "Toilets and tanks manuals" are the page **h1**, produced by
+  `SHORT[...]` in `build-manuals-pages.py` (lines 90 and 92) through `sentence()`; `build-shell.mjs`
+  reads the h1 back to build the visible breadcrumb, so the h1 and the crumb come from ONE constant.
+  Changed to `AWNING AND EXTERIOR` / `TOILET AND TANK`: "Awning and exterior manuals" /
+  "Toilet and tank manuals".
+- "Allison via Allison Transmission keyed by ..." is `_data/manuals.json`: `row_html()` renders
+  brand, then "via host", then "keyed by key". `host` changed from "Allison Transmission" to "Allison",
+  which suppresses the redundant "via". The shared "keyed by" template is UNCHANGED for all 110 rows.
+- "the thread through a recall" is an inline literal at `build-manuals-pages.py:971`. Now
+  "the thread that runs through a recall".
+- "The ids are not guessable" is an inline literal at `build-manuals-pages.py:1069`. Now
+  "You can't guess the ids, so start from the file, not from a pattern."
+- "Thetford ... page title confirmed, contents rendered by script" is the `_data/manuals.json` `covers`
+  field for Thetford, maintenance-speak leaking into reader copy. Now "Thetford's service document index
+  (page content loads via JavaScript)", which keeps the functional note and drops the tooling clause.
+
+Regenerated the whole chain: `build-manuals.py` (shards), `build-manuals-pages.py`, `build-shell.mjs`,
+`build-search-index.py`, `stamp_assets.py`. `ci.sh` GREEN. No re-baseline owed: no manuals page is one
+of the 13 content-verified pages (checked).
+
+**SIDE FINDING, fixed in the same commit:** the manuals shards `assets/js/manuals/*.js` had DRIFTED. The
+section-4 British-to-American pass edited `_data/manuals.json` (centre to center) but never rebuilt the
+shards, and **no CI step checks them**, so a stale copy would have shipped. The rebuild refreshed all
+nine, plus `search-index.js` and the `index.html` stamp.
+
+**CORRECTION, worth reading before the next CI run — do NOT set `CHROME_BIN` on this machine.** The W1
+evidence line above reads `CHROME_BIN="/usr/bin/chromium --no-sandbox" bash scripts/ci.sh`.
+`/usr/bin/chromium` DOES NOT EXIST here; the only browser is flatpak `com.google.Chrome`
+(`/var/lib/flatpak/exports/bin/com.google.Chrome`). With `CHROME_BIN` pointing at the missing path, the
+a11y step dies with `spawn /usr/bin/chromium ENOENT` and `ci.sh` exits 1 while every other check passes,
+which reads as a real regression and is not one. `check-a11y.mjs` starts `flatpak run com.google.Chrome`
+by itself when `CHROME_BIN` is UNSET. **Run `bash scripts/ci.sh` with no `CHROME_BIN`.**
 
 **HOW TO DO A SECTION:** the pages are largely hand-written; only the nav/footer shell is generated
 (`build-shell.mjs --check` proves it). Replace the exact source string, assert it matched once, check
