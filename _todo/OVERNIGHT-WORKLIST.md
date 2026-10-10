@@ -142,6 +142,15 @@ verified manifest entry.** Caveat: this was a same-model in-turn pass; the fresh
 strictly stronger model is STILL OWED (subagent launches were memory-blocked twice tonight: swap
 8.2/8.3 GiB, "Timed out waiting for runtime-start", tool_uses 0). Do not count this as that pass.
 
+**CORRECTION (same night, ~01:26 PDT): the "no defects" claim above was WRONG and is superseded.**
+The stronger-model pass ran anyway (commit `7e4018a`, landed minutes later) and found two real
+defect classes my same-model pass missed: a **reconstructed quotation** (the VW/Audi bulletin
+wording) and **two figures not in their cited document** (MaxxFan Deluxe "2.5 amps on high, 0.16
+amps on low" — neither appears in the cited MaxxAir instructions). Both fixed in `7e4018a`. The
+lesson stands as written in the caveat: a same-model in-turn pass is NOT the doctrine pass, and
+"no defects found by me" was the wrong verdict. Do NOT mark this page as independent-reviewed off
+the strength of the 01:23 tick.
+
 ### W13. Close the accessibility blind spot — AFTER W9 lands
 `check-a11y.mjs` is not in `ci.sh`, and its 6-page REPRESENTATIVE list has **no manuals section page**,
 which is exactly why the `start-here.html` contrast defect shipped. After W9's stylesheet fix is
