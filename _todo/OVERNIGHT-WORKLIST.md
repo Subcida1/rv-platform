@@ -630,6 +630,59 @@ towing 27/27, water 7/7, recalls 11/11. The claim's counts are lower than the li
 linkless rows to fix. (`manuals/brands.html` is the one page whose rows are not `man-doc` rows, because it
 uses a different row shape; that is a selector difference, not a defect.)
 
+**PROGRESS 2026-10-10 13:45 — TY'S "DO WHATEVER WE'RE WAITING ON", AND THE TOOLS-HUB ANIMATION.**
+
+**1. The tools hub animation (Ty's explicit ask).** The example panels rotated with a 160 ms fade out, a
+display swap, then a 160 ms fade in. Now 500 ms each way with `cubic-bezier(.4,0,.2,1)`, so it reads as a
+dissolve rather than a blink. The duration lives in TWO places (toolviz.js `FADE` and `.viz-stage` in
+style.css) and both moved together. Measured in headless Chrome: opacity 1.00 to 0.00 over 462 ms, swap,
+back to 1.00 by 978 ms. Commit `5f22975`.
+
+**2. Two bridge reviews were sitting UNREAD in the outbox** (`REPLY-20261010-0309/0314/0319-*`). This is
+the exact failure my own memory records from 2026-10-02, when a lane reply sat for six hours carrying a
+finding. Read them: two are real reviews (roof-leak-repair, leveling-jacks-not-working), one is a Grok
+quota refusal, one is a released flight. Both real ones still applied to the pages as they stand, so both
+were applied and the pages re-baselined. Commit `790d4ec`.
+
+**3. The plural-verb class the package named and did not finish.** Section 4 said company names take
+singular verbs ("Lippert specify" to "specifies") and to apply it ACROSS ALL GUIDES. A scan of the prose,
+quotations excluded, still found **33 instances across 10 guides**. All now singular. Commit `0ed650b`.
+
+**4. Three fresh reviews dispatched and applied.** `bridge-review.py` sent rv-condensation-inside,
+rv-water-pump-wont-prime and rv-delamination out. Water-pump and delamination came back substantive and
+are applied. Water-pump's review is the strongest of the night: the page contradicted its own comparison
+table ("all four makers" where the table credits three), told the reader to pull the pump inlet with no
+caution (a full tank above an open inlet empties onto the floor), framed compressed air as a pump hazard
+when it bursts a tank or blows a line off a fitting first, and carried the mid-clause lower-case "the"
+the package itself had flagged and missed. aistudio returned a DAILY QUOTA refusal rather than a review,
+so that guide was re-dispatched (grok then stalled in `send-unconfirmed`, so it went to chatgpt).
+Both applied pages were baselined as reviewed; neither has a spec, so the spec requirement was waived on
+the record.
+
+**5. THE BRITISH-SPELLING RESIDUE — RECORDED, NOT FIXED, AND IT WANTS A DECISION.** A context-checked
+scan finds British forms the package's word list never carried, plus inflections it missed. Verified, in
+our own prose:
+- **the footer credit on all 125 pages**: "under the licences credited beside each one". One line, in
+  `assets/js/site.js`, which `build-shell.mjs` renders into every page.
+- `manuals/start-here.html`, via `_data/new-owner-part0/1/2.json`: licence x2, sanitise x6, pressurise
+  x4, deodoriser x2, steriliser, "De-energise", synchronisation, moulds, neighbour, travelled.
+- `_data/listings/*.json` (our own business descriptions): specialises/specialising x13, customisation
+  x3, colour x2, dewinterisations, customised, specialise.
+- hand-written guides: licence (rv-propane-furnace-wont-light), colour x2 (rv-fuse-keeps-blowing),
+  recognise and labelling (rv-converter-not-charging), defence (rv-driving-motorhome), moulding
+  (rv-maintenance-schedule), mislabelled (rv-water-pump-wont-prime), authorise (rv-12-volt-problems),
+  plus equalise/equalising, vaporised, summarised, practising, customise.
+**Not done here on purpose:** it reaches the listings data and the footer on 125 pages, which is a
+site-wide change, and that is Ty's call. **INSTRUMENT WARNING: do not scan this class with a blunt suffix
+rule.** `\w+(?:ise|ised|ising)\b` over-matches badly (539 hits, most of them correct English: advertise,
+otherwise, expertise, noise, promise, exercise, sunrise, Boise). The list above came from a hand-curated
+pattern plus a context read, with every entry checked against its own sentence.
+
+**6. Still owed from the water-pump review: its four content gaps**, none of which can be written
+without a source: how to isolate a suction leak with a jug on a known-good hose, what 2 GPM actually
+looks like in a bucket, where the check valve physically lives on these pumps, and the frozen-line cause
+(the page is written for winterizing season and never mentions ice).
+
 **HOW TO DO A SECTION:** the pages are largely hand-written; only the nav/footer shell is generated
 (`build-shell.mjs --check` proves it). Replace the exact source string, assert it matched once, check
 no em dash was introduced, run `verify.py`, re-baseline any verified page, commit by explicit path,
