@@ -523,13 +523,14 @@
     "sources": []
   },
   "guides/rv-furnace-carbon-monoxide.html": {
-    "hash": "616727cb93ae8c0f",
-    "status": "unverified",
-    "verified_by": null,
-    "verified_at": null,
+    "hash": "781f19223ef409d5",
+    "status": "verified",
+    "verified_by": "Independent fresh-context review 2026-10-10, all ten cited documents fetched: 6 findings applied (1 wrong-fact, 1 sourcing, 1 voice, 3 style) and three further fixes the review surfaced. Applied: the lede's duplicated half-written clause and the matching garbled H2; 'with the warning above' - a sentence about the page - deleted; Kidde's 10-year life now carries its cited model exceptions instead of 'all of them'; the unnamed 'the manufacturer and the National Fire Protection Association' replaced with Kidde in accordance with the NFPA, plus the CDC's more conservative five-year interval (string verified by direct fetch of the CDC page); the Winnebago quotation rendered with its source's bracketed [t]he. The unused Truma source entry removed. NOT applied: the H1 'the warning signs the manuals actually give' left as written - it is the page's thesis, and changing it would also move the title, description, og and JSON-LD. The review's one non-rule observation (Truma cited but unused) is the source entry removed above.",
+    "verified_at": "2026-10-10",
     "sources": [],
-    "claims": "029e24133bf31376",
-    "claims_date": "Oct 2, 2026"
+    "spec": null,
+    "spec_waived": true,
+    "claims": "029e24133bf31376"
   },
   "guides/rv-furnace-not-working.html": {
     "hash": "33f83de38d91aeb1",
