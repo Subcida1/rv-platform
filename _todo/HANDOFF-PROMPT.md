@@ -99,6 +99,89 @@ Ty will let you open lanes as needed, but only the ones you are using, and close
 the machine is memory-tight. `bash tools/bridge-up.sh open|fresh|close|status` in ~/claude-bridge.
 Subagent reviews need no lanes at all.
 
+---
+
+# STATE AT 2026-10-10 16:37 PDT — ITEMS 1-13 DONE; 14-20 IS YOURS; 21-27 BELONG TO A LIVE PEER
+
+> **SCOPE, SETTLED 16:37.** `conv-6991caed` is ALIVE and holds **items 21-27**. **You take items 14-20 only.**
+> Do not touch `rv-driving-motorhome`, `rv-pin-weight-and-payload`, `rv-pre-trip-walkaround`,
+> `rv-maintenance-schedule`, `rv-black-tank`, `rv-trip-planner` or `guides/index.html`, and do not touch
+> `guides/index.html` or `scripts/sync-counts.py` in the working tree — those are its uncommitted work.
+> Work **14 -> 20** in order. The peer works bottom-up from 27, so the two meet at 20/21 with no overlap.
+
+## What is finished
+
+**Guides 1-13 of a 27-guide split are reviewed, applied, verified, pushed, and green on GitHub.**
+The ledger moved from **19 verified to 32**. Commits, oldest first:
+
+    a7694a5  rv-furnace-carbon-monoxide        (6 findings)
+    7985119  rv-propane-furnace-wont-light     (6 findings, +2 quotes sourced)
+    a63ff7c  rv-water-heater-not-heating       (9 findings)
+    1ce8500  rv-generator-sizing               (6 findings)
+    4cbd744  rv-two-appliances-stopped         (7 findings)
+    899b832  rv-converter-not-charging         (8) + rv-tank-sensors-reading-wrong (6)
+             + rv-fridge-leveling (2) + rv-toilet-not-flushing (8)
+    270790b  rv-generator-not-charging         (12) + rv-refrigerator-not-cooling (7)
+             + rv-macerator-toilet (6)
+    4c161a4  rv-sewer-smell                    (15 findings)
+    67b7ba4  worklist: items 1-13 closed, and W15 with them
+
+126 findings applied across the thirteen. Every page's specific findings and what was left owed
+are recorded in `scripts/content-manifest.json` under `guides/<page>.html` → `verified_by`.
+**Read those notes before touching any of these pages** — several carry explicit OWED items
+(Trojan user-guide URL, QG7000i regulation figures, a named NHTSA campaign PDF for the
+boiler-tube crack, the Progressive Dynamics FAQ/Charge Wizard documents, and the Suburban and
+Atwood water-heater service manuals, which have no published copy).
+
+## What is NOT finished, and why
+
+The other half — **items 14 to 27** — belongs to a second live session, `conv-6991caed-4e74-451d-9862-4e7786631414`,
+which Ty handed the same brief. It agreed the split with this session at 16:09 and has since gone
+quiet: **its last write was 16:11**, it has committed no guide verification, and it has left two
+files modified in the shared tree — `guides/index.html` and `scripts/sync-counts.py` — which are
+**its work, not ours. Leave them alone. Do not revert, finish, or commit them.**
+
+Items 14-27 are, in the shared order: `rv-slide-out-leaking`, `rv-slide-out-not-working`,
+`rv-tire-replacement`, `rv-trailer-wheel-bearings`, `rv-towing-capacity`, `rv-towing-trailer`,
+`trailer-brakes-required`, `rv-driving-motorhome`, `rv-pin-weight-and-payload`,
+`rv-pre-trip-walkaround`, `rv-maintenance-schedule`, `rv-black-tank`, `rv-trip-planner`,
+`guides/index.html`.
+
+**Before starting any of them: message `conv-6991caed` and check `git log --oneline`.** If it is
+alive and working, do not duplicate it. If it is still silent, take them **TOP-DOWN (14 → 27)**
+while it was working bottom-up, so a resuming peer meets you in the middle rather than colliding.
+Record whatever you claim in `_todo/OVERNIGHT-WORKLIST.md` under the claim block.
+
+## Two traps found today that will cost you real time if you do not know them
+
+1. **A completion notification that never arrives does not mean the subagent failed.** Three
+   reviews finished today with full reports sitting in `/tmp/letta-background-*/task_N.log` while
+   the harness dropped the notification (the same desync that also reports a tool call as
+   "no result was ever recorded" for a command that in fact ran). **Check the log file before
+   re-dispatching**, and re-read `git status`/the manifest before re-running a command that
+   reported that error.
+2. **Generate the search index in an ISOLATED extraction, not the shared tree**, so a commit can
+   never carry another session's uncommitted page:
+
+       rm -rf /tmp/iso && mkdir -p /tmp/iso && git archive HEAD | tar -x -C /tmp/iso
+       cp guides/<yourpage>.html /tmp/iso/guides/<yourpage>.html
+       (cd /tmp/iso && python3 scripts/build-search-index.py)
+       cp /tmp/iso/assets/js/search-index.js assets/js/search-index.js
+
+## The instrument defects found, recorded rather than fixed
+
+- `python3 scripts/verify-content.py --claims <page>` crashes with
+  `AttributeError: 'str' object has no attribute 'get'` (line 470) on every page tested.
+  Use `--verify <page> --no-spec --by "<note>"`, which works.
+- The shared footer string "Third-party photographs appear under the **licences** credited beside
+  each one" is a British spelling generated by `scripts/build-shell.mjs` and present on all 125
+  pages. It is chrome, so fixing it does not invalidate any page verdict — but it rewrites every
+  page and must not be done while another session is mid-flight in the tree.
+- The visible "Last updated on <date>" line and the JSON-LD `dateModified` disagree on at least
+  some guides (the fridge guide said Oct 6 visibly and 2026-09-23 in JSON-LD). One page was
+  aligned to its true edit date; **the sitewide convention is a decision for Ty, not a silent sweep.**
+
+
 ## HOW TO START YOUR SUCCESSOR (Ty's standing instruction, 2026-10-10)
 
 When this context gets long and work remains, START THE NEXT CONVERSATION YOURSELF. Do not stop and ask
