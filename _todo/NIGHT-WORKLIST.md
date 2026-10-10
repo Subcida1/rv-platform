@@ -89,8 +89,16 @@ Two corrections in it that affect instruments already in this repo, both worth a
 Also in it: `check-a11y.mjs` runs on 7 pages only, Lighthouse is installed but not in the pipeline,
 and the CrUX field data will be empty at this traffic level, which is not the same as good.
 
-### 1. The native-English pass (Ty asked for this directly)
+### 1. The native-English pass (Ty asked for this directly) — DONE 2026-10-09
 "ensure our content is written to be english native, go through everything."
+
+**Done overnight 2026-10-09:** all six 10-08 guides reviewed via the bridge (one job
+per page; deepseek, chatgpt and qwen lanes delivered completed reviews). In-scope
+native-English fixes applied to five guides (US spellings, filler, non-idioms, a
+source-verified rest interval); rv-pre-trip-walkaround reviewed clean on style. The
+gemini lane refused the tool protocol (mechanism failure, not a finding) — motorhome
+was re-dispatched to qwen. The sourcing/overclaim/reader-gap findings that need
+documents, not prose, are recorded in `_todo/SOURCING-FINDINGS-2026-10-09.md`.
 
 The site's rule is by capability, not vendor: no page publishes without a pass by a model strictly
 stronger than the one that drafted it. The bridge is open (lanes seen alive 2026-10-09: deepseek,
