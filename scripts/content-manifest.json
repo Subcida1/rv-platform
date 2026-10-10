@@ -461,9 +461,9 @@
     "claims_date": "Oct 2, 2026"
   },
   "guides/rv-battery-not-charging.html": {
-    "hash": "854b73cfd7fe8b0d",
+    "hash": "0c6a0d8b48c4a3c7",
     "status": "verified",
-    "verified_by": "Fresh-context independent review 2026-10-10: 7 findings (1 injury, 1 wrong fact, 2 sourcing, 1 voice, 2 style). All applied as recommended - the 12-volt charge pin corrected from pin 7 to the auxiliary pin, a flag-injury callout added at the converter and battery risk points, and a truncated sentence completed.",
+    "verified_by": "2026-10-10 voice pass, Ty's package section 3: two American-English rewrites ('doesn't charge the battery at all', 'If one is installed it's a fifth source'). No facts or numbers touched. The 2026-10-10 review's own findings remain applied.",
     "verified_at": "2026-10-10",
     "sources": [],
     "spec": "_specs/rv-battery-not-charging.md",
