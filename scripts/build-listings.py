@@ -106,7 +106,7 @@ CLAIM_CARD = """      <div class="form-card  sp-34" id="claim">
             <input id="cl-site" type="url" placeholder="https://your-site.com" autocomplete="url">
             <span class="hint">Optional. A working link helps more nearby RVers find you.</span>
           </div>
-          <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" aria-hidden="true">
+          <input type="checkbox" name="botcheck" class="hidden" tabindex="-1" aria-hidden="true">
           <button class="btn btn-gb btn-block sp-4" type="submit">Claim my listing</button>
         </form>
       </div>"""
