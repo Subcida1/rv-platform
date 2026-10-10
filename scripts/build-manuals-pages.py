@@ -719,7 +719,7 @@ def system_page(slug, title, desc, rows):
             links.append('<li><a href="guides/%s.html">%s</a></li>' % (stem, esc(t)))
     related = ("""
       <div class="card man-about">
-        <div class="man-about-h">If something has already failed</div>
+        <div class="man-about-h">If something&#39;s already broken</div>
         <ul class="man-links">%s</ul>
       </div>""" % "".join(links)) if links else ""
 
