@@ -623,6 +623,13 @@ links are not dead.**
 So the honest action is to leave the 11 unverified rows labelled as they are. If any should be promoted,
 that is a live pass of its own: `python3 scripts/audit-manuals.py --live`.
 
+**(2) "linkless manuals category rows vs the hub's 'every row links' promise (heating 8/8, kitchen 13/13,
+chassis 7/8, power 32/34, towing 26/27, water 6/7)" — FALSE as measured.** Every row on every category
+page carries an `href`: chassis 8/8, exterior 7/7, heating 8/8, kitchen 13/13, power 34/34, sanitation 6/6,
+towing 27/27, water 7/7, recalls 11/11. The claim's counts are lower than the live pages, and there are no
+linkless rows to fix. (`manuals/brands.html` is the one page whose rows are not `man-doc` rows, because it
+uses a different row shape; that is a selector difference, not a defect.)
+
 **HOW TO DO A SECTION:** the pages are largely hand-written; only the nav/footer shell is generated
 (`build-shell.mjs --check` proves it). Replace the exact source string, assert it matched once, check
 no em dash was introduced, run `verify.py`, re-baseline any verified page, commit by explicit path,
