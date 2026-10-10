@@ -236,6 +236,12 @@ fresh-context review.** What was checked and found:
 - **Airstream, "external seams and joints, such as end-shell segments …"** — VERBATIM against the cited
   support article.
 - No truncated sentence, no em dash, no dangling comma.
+- **PROTIMETER, and this one is a REAL DEFECT — fixed 2026-10-10.** Line 74 quoted them as
+  *"pin-type meter measurements should be used to confirm the readings found by a pinless meter and are
+  the most accurate."* The source says *"and are the **predominant confirmation of excessive moisture**."*
+  The quotation had been altered into a stronger claim the document does not make. Restored to the
+  source's wording. **This is the fifth reconstructed/altered quotation found in one night, and like the
+  others it was caught by fetching the document, never by reading the page.**
 - **No flag-injury, and on inspection none is owed:** the page is descriptive and declines to instruct
   hazardous work — line 87 says outright that what is documented is *re-skinning, not injection*. The
   W15 sweep flags this page on the words `roof`/`ladder`/`adhesive`; it is one of that sweep's false
