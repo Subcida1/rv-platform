@@ -68,11 +68,11 @@ generator, compare its output against a page it did NOT write. The remaining rul
 Ty's words, are "centering, fading, sizing, spacing": measure them on a phone first, then write the
 rule into this file, then add a gate so it cannot drift.
 
-### 0b. The mobile audit has a port trap
+### 0b. NOTE (context for item 0, not an item) — the mobile audit has a port trap
 `scripts/audit-mobile.mjs` defaults to Chrome on 9340. The live browser is usually on 9341. Pass
 `--port 9341` or it dies with ECONNREFUSED and looks like the instrument is broken.
 
-### 0c. THE SITE AUDIT PLAN (read it before choosing any new instrument)
+### 0c. NOTE (context, not an item) — THE SITE AUDIT PLAN (read it before choosing any new instrument)
 `_todo/SITE-AUDIT-PLAN.md` is the answer to Ty's "run various scans and look up the best scans and
 checks to perform", from three research passes. It separates what is worth running from what is dead
 or cargo cult, and it carries the obligations: the privacy policy (done 2026-10-09), directory
@@ -124,6 +124,19 @@ it leaves standing:
 Four sections sit between the opener and Part 1 under a "Start here" part heading. Two of them
 ("Which RV system to learn first", "How the 12-volt and 120-volt systems connect") duplicate material
 in Part 2. Merging them is a content decision for Ty, not for a night session.
+
+### 5. The two structural rules have no gate
+`wrap narrow` and `guide-go` are referenced only by the generators that emit them
+(`scripts/new-guide.py`, `scripts/build-manuals-pages.py`); nothing CHECKS that a page carries the
+wrapper. `check-generated.sh` compares a generated page against its own generator, so a generator
+that omits the layer passes both sides of that comparison. Needs a structural check that does not
+false-fire across page types, which is why it is not written yet: design it before writing it.
+
+### 6. The gradient set is wider than the rule — Ty's call
+70 selectors paint a gradient, frozen in `scripts/check-style.py` and recorded in STYLE.md. The
+rule is "only where it leads someone, or marks identity". `.eyebrow` and `.big-card .num` contradict
+the earlier brand decision that stats and eyebrows are solid ink so the eye rests. Narrowing it
+moves pixels, so it is Ty's call rather than a night session's.
 
 ---
 
