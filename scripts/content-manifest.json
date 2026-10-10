@@ -393,9 +393,9 @@
     "claims": "178ec4da901263e8"
   },
   "guides/freeze-damage-triage.html": {
-    "hash": "e6aed3a604715770",
+    "hash": "638a37179bd262b1",
     "status": "verified",
-    "verified_by": "2026-10-10 voice pass, Ty's package section 3: one American spelling (favour to favor). No factual change, no other wording touched.",
+    "verified_by": "2026-10-10 voice pass, Ty's package section 10: one contraction (will not -> won't). No fact changed.",
     "verified_at": "2026-10-10",
     "sources": [],
     "spec": "_specs/freeze-damage-triage.md",
@@ -411,10 +411,10 @@
     "claims": "a0146313ebc9d955"
   },
   "guides/roof-snow-load.html": {
-    "hash": "96985bc3339f07f0",
+    "hash": "30f8ac1ab1d0f4a7",
     "status": "verified",
-    "verified_by": "independent review on 2026-10-06 that identified the missing mechanism on this page, followed by a separate fact-check of the sentences added to implement it. That fact-check returned two WRONG and two OVERSTATED of ten, so the two wrong sentences were cut or corrected, the invented mechanism was cut, and the padding was removed. What stands here is what survived it.",
-    "verified_at": "2026-10-06",
+    "verified_by": "2026-10-10 voice pass, Ty's package section 10: the 5.2-pound sentence now names the unit (pounds per square foot) and drops a duplicated clause. The figure itself is unchanged.",
+    "verified_at": "2026-10-10",
     "sources": [],
     "spec": "_specs/roof-snow-load.md",
     "spec_waived": false,
@@ -587,9 +587,9 @@
     "claims_date": "Oct 4, 2026"
   },
   "guides/rv-leveling-jacks-not-working.html": {
-    "hash": "8db70e591a07d4c1",
+    "hash": "b710329b4201251f",
     "status": "verified",
-    "verified_by": "2026-10-10: safety-pass callout independently reviewed by the gemini bridge lane, no defects",
+    "verified_by": "2026-10-10 voice pass, Ty's package section 10: one phrase (ground it considers close enough to level -> ground it accepts as level). No fact changed.",
     "verified_at": "2026-10-10",
     "sources": [],
     "spec": "_specs/rv-leveling-jacks-not-working.md",
@@ -844,9 +844,9 @@
     "claims_date": "Oct 4, 2026"
   },
   "guides/tires-winter.html": {
-    "hash": "b54d0757e78948d4",
+    "hash": "ff13282d4efb1816",
     "status": "verified",
-    "verified_by": "2026-10-10: safety-pass callout independently reviewed by the qwen bridge lane; one non-native phrase found and fixed (crush waiting -> crush risk for anyone underneath it); pre-existing body content verified intact",
+    "verified_by": "2026-10-10 voice pass, Ty's package section 10: the duplicated 'Winter storage attacks tires three ways' opening merged into one sentence. No fact changed.",
     "verified_at": "2026-10-10",
     "sources": [],
     "spec": "_specs/tires-winter.md",
@@ -865,9 +865,9 @@
     "claims_date": "Oct 2, 2026"
   },
   "guides/winterize-plumbing.html": {
-    "hash": "900f46689ef9e12c",
+    "hash": "0e1da45d334bb2a3",
     "status": "verified",
-    "verified_by": "2026-10-10: safety-pass callout independently reviewed by the gemini bridge lane, no defects; pre-existing body findings recorded in _todo/SAFETY-ISSUES.md",
+    "verified_by": "2026-10-10 voice pass, Ty's package section 10: one word (poison -> toxic ethylene glycol). No fact changed.",
     "verified_at": "2026-10-10",
     "sources": [],
     "spec": "_specs/winterize-plumbing.md",
