@@ -119,7 +119,13 @@ The full-site sweep (`node scripts/check-a11y.mjs --all`) found **2 pages failin
 ### W10. Truncation class — one instance left, and it is the safety session's file
 Six published pages carried a sentence cut off at a comma, from a clause deletion with no read-back. Five are fixed (battery, lights, solar, furnace-carbon-monoxide, two-appliances-stopped). **The sixth is `guides/rv-macerator-toilet.html:129`**, which the safety session owns — hand it to them rather than editing their uncommitted file. Sitewide check for the class: `grep -rnE ",[[:space:]]*</(p|li|h1|h2|h3|figcaption|div)>" --include="*.html" .`
 
-### W11. Authored em dashes in the safety session's new callouts
+### W11. Authored em dashes in the safety session's new callouts — RESOLVED 2026-10-10 01:30
+
+**Closed by the session that owned the files:** `python3 scripts/verify.py` reports the dash rule
+`clean` as of 01:30. The history below is kept because the pattern recurs: every `flag-injury`
+callout that session writes tends to reach for an em dash, and the house rule bans them.
+
+### W11 (history). Authored em dashes in the safety session's new callouts
 Every `flag-injury` callout that session adds tends to carry an authored **em dash**, which fails
 `verify.py`'s dash rule ("no em dash, en dash, middot in anything we publish"). As of 01:14 the set was
 `rv-black-tank:73`, `rv-converter-not-charging:189`, `rv-macerator-toilet:69`,
