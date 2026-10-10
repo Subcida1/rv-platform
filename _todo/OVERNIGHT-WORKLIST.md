@@ -18,6 +18,10 @@ parked as Ty's call); do not rework those.
 6. **A content change voids a verification.** `verify.py` says so — get a fresh-context review.
 7. **Never pipe a command whose exit status you rely on through `tail`** — `cmd > /tmp/out 2>&1; echo "EXIT=$?"`.
 8. **If the tree holds uncommitted changes you did not make, leave them alone.** Read `git status` FIRST, and identify the owner from `_todo/` before touching a shared file.
+9. **A PAGE YOU COMMIT CAN CARRY ANOTHER SESSION'S ASSET STAMP, AND THE ARCHIVE CHECK IS WHAT CATCHES IT.** If a parallel session runs `stamp_assets.py` or `build-shell.mjs` for its own uncommitted asset change, every page in the shared working tree gets re-stamped against an asset that is **not in your commit**. Committing one of those pages puts a reference in the commit that the commit does not contain, and `verify.py` on that commit fails on `asset stamps` / `static shell` / `manuals pages` — while the working tree looks fine, because the tree has the asset.
+   **This happened on 2026-10-10** to `guides/rv-solar-not-charging.html`, which was committed carrying `assets/js/site.js?v=28bb4e4a` while the committed file was `34eeef3c`. The archive check caught it before the push; `origin/main` stayed green.
+   **Recovery, exactly:** `git reset --soft HEAD~1`, then `git checkout <parent-sha> -- <page>` to take the committed version, re-apply your edit to THAT file, re-run `verify-content.py --verify <page> --by "<note>"` to re-baseline, then commit and re-run the archive check.
+   **Never push a commit whose archive check is red, even when the working tree is green.**
 
 ## Who else is writing this tree right now (2026-10-10 01:05)
 
