@@ -331,6 +331,62 @@ def pretty_urls_in_html(text):
     return _URL_SPOTS.sub(one, text)
 
 
+# ---------------------------------------------------------------- fragments name their page
+_FRAG_HREF = re.compile(r'(?P<pre>\shref=")(?P<frag>#[^"]+)(?P<post>")')
+
+
+def served_prefix(path):
+    """A page's published address, as the prefix that makes its own fragments work.
+
+    directory/index.html -> "directory/"   guides/index.html -> "guides/"
+    manuals/start-here.html -> "manuals/start-here"   index.html -> ""
+    """
+    p = Path(path)
+    if p.is_absolute():
+        p = p.relative_to(ROOT)
+    s = p.as_posix()
+    if s == "index.html":
+        return ""
+    if s.endswith("/index.html"):
+        return s[: -len("index.html")]
+    if s.endswith(".html"):
+        return s[: -len(".html")]
+    return s.rstrip("/") + "/"
+
+
+def qualify_fragments_in_html(text, path):
+    """Make an in-page fragment link name the page it is on.
+
+    THE BUG THIS FIXES, found 2026-10-09 by T clicking "Part 4: Cold, heat and storage"
+    in the new-owner guide's jump nav and landing on the site root. Every page carries
+    <base href="/">, which is what lets a page in a subdirectory write
+    `href="guides/rv-towing-trailer.html"` and have it resolve from the root. But a
+    fragment-only href resolves against that base too, so href="#seasons" is
+    https://originrv.com/#seasons: the HOME PAGE. Measured in a headless Chrome before
+    the fix, clicking it left /manuals/start-here and arrived at /#seasons with scrollY 0.
+
+    No link checker reports it, because /#seasons is a 200. That is why it survived: the
+    anchor gate in verify.py checks that the id EXISTS on the page it names, and for a
+    bare fragment it assumes the page is the current one, which is the one thing the
+    browser does not do. 122 links on that page were dead this way, 19 on the parts hub,
+    7 on the guides index, and one more on every page carrying a table of contents.
+
+    The fix is to prefix the fragment with the page's own address, which the base then
+    resolves straight back to it: href="manuals/start-here#seasons". Same document, so the
+    browser scrolls rather than navigating. Applied at the write, like pretty_urls_in_html
+    above, so a generator written tomorrow is right by default rather than carrying a
+    template that has to be remembered.
+
+    Idempotent: a qualified fragment does not match again. href="#" is left alone, which
+    is the JS back-to-top control and is not a fragment at all.
+    """
+    prefix = served_prefix(path)
+    if not prefix:
+        return text
+    return _FRAG_HREF.sub(
+        lambda m: m.group("pre") + prefix + m.group("frag") + m.group("post"), text)
+
+
 # ---------------------------------------------------------------- states, by name and code
 #
 # TWO SCRIPTS NEED THIS (2026-10-04): check-state-assignment.py, the gate that a listing belongs

@@ -304,7 +304,7 @@ def main():
     # it before the branch means check and write see the same bytes. Same arrangement as
     # build-manuals-pages.py. Cost of getting it wrong: a red build that reports the parts hub
     # as stale no matter how many times it is regenerated.
-    html = C.pretty_urls_in_html(stamp_html(build()))
+    html = C.qualify_fragments_in_html(C.pretty_urls_in_html(stamp_html(build())), OUT)
     # Rule #11 covers everything we ship, generated pages included. verify.py enforces it site-wide,
     # so this is defence in depth: it fails here, next to the string that caused it.
     for ch, name in (("\u2014", "em dash"), ("\u2013", "en dash"), ("\u00b7", "middot")):

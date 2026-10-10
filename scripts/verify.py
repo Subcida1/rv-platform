@@ -895,6 +895,28 @@ if bad:
 else:
     print("  %d page(s), every #fragment resolves" % len(anchors))
 
+# A FRAGMENT THAT DOES NOT NAME ITS OWN PAGE IS NOT A FRAGMENT AT ALL.
+# Every page carries <base href="/">, so href="#x" on a page in a subdirectory resolves
+# against that base and becomes /#x: the HOME PAGE. The browser navigates instead of
+# scrolling, and nothing reports it, because /#x answers 200. Found 2026-10-09 by T
+# clicking "Part 4" in the new-owner guide's jump nav and arriving at the site root;
+# 122 links on that page were dead this way and the check above passed every one of them,
+# because it reads a bare fragment as "this page" and the id really does exist there.
+# The fix is site_constants.qualify_fragments_in_html(), applied at the write; this is
+# what keeps it applied. The root index.html is exempt because #x really is its own page.
+bare = []
+for rel in anchors:
+    if not C.served_prefix(ROOT / rel):
+        continue
+    for m in re.finditer(r'\shref="#[^"]+', (ROOT / rel).read_text(encoding="utf-8")):
+        bare.append("%s ->%s" % (rel, m.group(0)))
+for b in sorted(set(bare))[:8]:
+    print("  FAIL " + b + "   (bare fragment: the base href sends it to the site root)")
+if bare:
+    fails.append("fragments that leave their page")
+else:
+    print("  every in-page fragment names the page it is on")
+
 print("\n=== manuals manifest (schema, banned hosts, storable-URL rule) ===")
 r = subprocess.run([sys.executable, str(ROOT / "scripts/build-manuals.py"), "--check"],
                    capture_output=True, text=True)

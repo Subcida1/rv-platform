@@ -1301,7 +1301,8 @@ def main():
     # ONE CHOKE POINT for every manuals page: the URL transform runs here rather than at the
     # ~30 href literals above, and here rather than at the write, so the --check comparison at
     # line 1390 sees exactly what the write produces. Two places would have been one too many.
-    pages = {path: C.pretty_urls_in_html(pill_search(stamp_html(text)))
+    pages = {path: C.qualify_fragments_in_html(
+                 C.pretty_urls_in_html(pill_search(stamp_html(text))), path)
              for path, text in pages.items()}
     for path, text in pages.items():
         for ch, name in (("\u2014", "em dash"), ("\u2013", "en dash"),
