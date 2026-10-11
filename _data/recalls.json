@@ -1,0 +1,105 @@
+{
+  "note": "The record behind the RV recall lookup. It holds the ONE thing the tool cannot derive from a federal API: the maker-name map. NHTSA spells one maker several ways — Jayco files recalls under JAYCO, JAYCO FIFTH WHEEL and JAYCO TRAVEL TRAILER — so a reader who types 'jayco' has to be resolved to all three or the lookup misses campaigns. Everything else the tool shows is fetched live from api.nhtsa.gov and vpic.nhtsa.dot.gov at the moment it is asked. Sources for the page's citation list live in `sources`.",
+  "generated": "2026-10-10",
+  "how_the_make_list_was_built": "Every distinct `make` string returned by https://api.nhtsa.gov/products/vehicle/makes?modelYear=Y&issueType=r for Y in 2018, 2020, 2022, 2024 and 2026 was collected and read — 540 distinct strings. The 40 makers below are the RV-relevant ones among them; the alias lists are the strings NHTSA actually returns, not guesses. A maker absent from this map is still searchable by typing its NHTSA spelling, because the tool falls back to the typed text.",
+  "makers": [
+    { "id": "airstream", "name": "Airstream", "nhtsa": ["AIRSTREAM"] },
+    { "id": "alliance", "name": "Alliance RV", "nhtsa": ["ALLIANCE RV"] },
+    { "id": "american-coach", "name": "American Coach", "nhtsa": ["AMERICAN COACH"] },
+    { "id": "bigfoot", "name": "Bigfoot", "nhtsa": ["BIGFOOT"] },
+    { "id": "brinkley", "name": "Brinkley RV", "nhtsa": ["BRINKLEY RV"], "lookup": "https://www.brinkleyrv.com/service-campaigns/", "lookupNote": "Brinkley's own campaign history, which separates a Recall from a Customer Satisfaction Campaign and a Technical Service Bulletin." },
+    { "id": "coach-house", "name": "Coach House", "nhtsa": ["COACH HOUSE"] },
+    { "id": "coachmen", "name": "Coachmen", "nhtsa": ["COACHMEN"] },
+    { "id": "crossroads", "name": "CrossRoads", "nhtsa": ["CROSSROADS"] },
+    { "id": "cruiser", "name": "Cruiser RV", "nhtsa": ["CRUISER", "CRUISER RV"] },
+    { "id": "drv", "name": "DRV", "nhtsa": ["DRV"] },
+    { "id": "dutchmen", "name": "Dutchmen", "nhtsa": ["DUTCHMEN"] },
+    { "id": "entegra", "name": "Entegra Coach", "nhtsa": ["ENTEGRA"] },
+    { "id": "escape", "name": "Escape Trailer", "nhtsa": ["ESCAPE RV"] },
+    { "id": "fleetwood", "name": "Fleetwood", "nhtsa": ["FLEETWOOD"] },
+    { "id": "forest-river", "name": "Forest River", "nhtsa": ["FOREST RIVER", "FOREST RIVER BUS"], "lookup": "https://forestriverinc.com/recall-search", "lookupNote": "Forest River's own VIN search. Its own page notes that a motorised unit has to be checked at the chassis maker as well, and that dealers use a separate portal." },
+    { "id": "grand-design", "name": "Grand Design", "nhtsa": ["GRAND DESIGN"], "lookup": "https://www.granddesignrv.com/owners/recalls", "lookupNote": "Grand Design is the one brand observed publishing a page per campaign, in both the United States and Canadian versions." },
+    { "id": "gulf-stream", "name": "Gulf Stream", "nhtsa": ["GULF STREAM"] },
+    { "id": "heartland", "name": "Heartland", "nhtsa": ["HEARTLAND", "ALTEC HEARTLAND"] },
+    { "id": "highland-ridge", "name": "Highland Ridge", "nhtsa": ["HIGHLAND RIDGE", "HIGHLAND RIDGE TT"] },
+    { "id": "host", "name": "Host Campers", "nhtsa": ["HOST CAMPERS"] },
+    { "id": "jayco", "name": "Jayco", "nhtsa": ["JAYCO", "JAYCO FIFTH WHEEL", "JAYCO TRAVEL TRAILER"] },
+    { "id": "keystone", "name": "Keystone RV", "nhtsa": ["KEYSTONE", "KEYSTONE COACHWORKS"], "lookup": "https://recalls.keystonerv.com/", "lookupNote": "Keystone's own VIN recall lookup." },
+    { "id": "kz", "name": "KZ RV", "nhtsa": ["KZRV"] },
+    { "id": "lance", "name": "Lance Campers", "nhtsa": ["LANCE", "LANCE CAMPER"] },
+    { "id": "monaco", "name": "Monaco", "nhtsa": ["MONACO"] },
+    { "id": "newmar", "name": "Newmar", "nhtsa": ["NEWMAR"], "lookup": "https://www.newmarcorp.com/owners/safety-recalls", "lookupNote": "Newmar looks a unit up by VIN or by a six-digit coach number, and its own page carries the where-to-find-your-VIN guidance." },
+    { "id": "oliver", "name": "Oliver Travel Trailers", "nhtsa": ["OLIVER TRAVEL TRAILERS"] },
+    { "id": "open-range", "name": "Open Range", "nhtsa": ["OPEN RANGE"] },
+    { "id": "outdoors-rv", "name": "Outdoors RV", "nhtsa": ["OUTDOORS RV"] },
+    { "id": "palomino", "name": "Palomino", "nhtsa": ["PALOMINO"] },
+    { "id": "prime-time", "name": "Prime Time", "nhtsa": ["PRIME TIME"] },
+    { "id": "renegade", "name": "Renegade RV", "nhtsa": ["RENEGADE RV"] },
+    { "id": "shasta", "name": "Shasta", "nhtsa": ["SHASTA"] },
+    { "id": "starcraft", "name": "Starcraft", "nhtsa": ["STARCRAFT RV TT"] },
+    { "id": "sunset-park", "name": "Sunset Park RV", "nhtsa": ["SUNSET PARK & RV"] },
+    { "id": "taxa", "name": "TAXA Outdoors", "nhtsa": ["TAXA"] },
+    { "id": "thor", "name": "Thor Motor Coach", "nhtsa": ["THOR MOTOR COACH", "THOR"], "lookup": "https://www.thormotorcoach.com/vin-lookup", "lookupNote": "Thor Motor Coach looks a unit up by its 17-digit VIN." },
+    { "id": "tiffin", "name": "Tiffin", "nhtsa": ["TIFFIN"], "lookup": "https://tiffinmotorhomes.com/recall-lookup/", "lookupNote": "Tiffin's own recall lookup, alongside its owner knowledge base." },
+    { "id": "triple-e", "name": "Triple E", "nhtsa": ["TRIPLE E RV"] },
+    { "id": "viking", "name": "Viking", "nhtsa": ["VIKING TRAVEL TRAILERS"] },
+    { "id": "winnebago", "name": "Winnebago", "nhtsa": ["WINNEBAGO"], "lookup": "https://www.winnebago.com/owners/recall-vin-lookup", "lookupNote": "Winnebago looks a unit up by VIN and covers recalls from 2004. Its own page states that it does not cover towables and does not cover the chassis." }
+  ],
+  "caveats": {
+    "model_is_not_vin": "A recall listed for your model year is a screen, not a verdict on your unit. A maker recalls a range of VINs, and the only way to know whether yours is inside it is to check the VIN. Both Newmar and the independent recall sites say this plainly, and they are right.",
+    "motorhome_vin_is_the_chassis": "A motorhome's VIN belongs to the chassis, not to the coach. A Winnebago on a Ford chassis decodes as a FORD, and the recalls filed against that VIN are Ford's. The coach builder's campaigns are filed under the coach maker, and are found by the make-and-model search rather than by the VIN.",
+    "towable_vin_is_the_maker": "A towable's VIN is its own, assigned by the RV maker, so a trailer VIN decodes to the make and model on the unit.",
+    "one_vin_at_a_time": "NHTSA's API policy asks that the API not be used for bulk VIN lookups, so this checks one unit per request. There is no fleet mode here by design.",
+    "canada_has_no_query_api": "Transport Canada publishes its recalls as a search form and a feed, and sends no cross-origin header, so a page cannot query it live. Canadian records here come from a snapshot of that feed, refreshed on a schedule, and each one links to its own Transport Canada record."
+  },
+  "sources": {
+    "nhtsa-api": {
+      "title": "NHTSA, Recalls API and its use policy",
+      "url": "https://api.nhtsa.gov/"
+    },
+    "nhtsa-recalls": {
+      "title": "NHTSA, Check for Recalls",
+      "url": "https://www.nhtsa.gov/recalls"
+    },
+    "vpic": {
+      "title": "NHTSA, vPIC VIN decoder",
+      "url": "https://vpic.nhtsa.dot.gov/decoder/"
+    },
+    "vpic-downloads": {
+      "title": "NHTSA, vPIC standalone databases",
+      "url": "https://vpic.nhtsa.dot.gov/downloads/"
+    },
+    "safercar-vin": {
+      "title": "NHTSA, SaferCar VIN lookup and its questions",
+      "url": "https://vinrcl.safercar.gov/vin/faq.jsp"
+    },
+    "rclrpt": {
+      "title": "NHTSA, a Part 573 safety recall report, campaign 24V826",
+      "url": "https://static.nhtsa.gov/odi/rcl/2024/RCLRPT-24V826-4432.PDF"
+    },
+    "tc-menu": {
+      "title": "Transport Canada, Motor Vehicle Safety Recalls Database",
+      "url": "https://wwwapps.tc.gc.ca/Saf-Sec-Sur/7/VRDB-BDRV/search-recherche/menu.aspx?lang=eng"
+    },
+    "tc-rss": {
+      "title": "Transport Canada, recalls feed",
+      "url": "https://wwwapps.tc.gc.ca/Saf-Sec-Sur/7/VRDB-BDRV/search-recherche/rss.aspx?lang=eng"
+    },
+    "tc-detail": {
+      "title": "Transport Canada, a recall record, number 2026-460",
+      "url": "https://wwwapps.tc.gc.ca/Saf-Sec-Sur/7/VRDB-BDRV/search-recherche/detail.aspx?lang=eng&rn=2026460"
+    },
+    "winnebago-recall": {
+      "title": "Winnebago, recall VIN lookup",
+      "url": "https://www.winnebago.com/owners/recall-vin-lookup"
+    },
+    "newmar-recall": {
+      "title": "Newmar, safety recalls and VIN lookup",
+      "url": "https://www.newmarcorp.com/owners/safety-recalls"
+    },
+    "brinkley-campaigns": {
+      "title": "Brinkley RV, service campaign history",
+      "url": "https://www.brinkleyrv.com/service-campaigns/"
+    }
+  }
+}
