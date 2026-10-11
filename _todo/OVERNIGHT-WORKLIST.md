@@ -557,11 +557,13 @@ different errors (connection error; app-server socket closed; timed out waiting 
 runtime-start). If dispatch fails for you, do **W15** or **W14** instead (both need no subagent) and
 say so in your report, rather than retrying into a broken platform.
 
-**2026-10-11 14:08 PDT (day-driver fire) — CLAIMED: `rv-delamination`.**
-Fresh-context reviewer subagent (task_6) dispatched for the independent pass the page owes
-(its manifest note says only 5 of 27 quotations were ever hand-checked; `roof-snow-load`
-also still owes but the queue is one page per fire). Findings will be applied, the page
-re-baselined, and this entry ticked on completion.
+**2026-10-11 14:16 PDT (day-driver fire) — DONE: `rv-delamination`.**
+Independent fresh-context reviewer pass applied, pushed `d175b880`, CI green
+(`every check passed`). 4 findings: Protimeter "dry 6-16.9 / at risk 17-19.9 /
+wet 20+" band cut (not in the cited article — re-fetched to confirm; the
+verbatim WME quote stays), plus three verb-agreement fixes. Quote fidelity
+passed on all sources. Page re-baselined as an independent pass. Next W12
+candidate that still owes: `roof-snow-load` (voice pass only).
 
 **2026-10-10 ~01:23 PDT — rv-fuse-keeps-blowing review pass (Cloud, in-turn):** all six house rules
 checked with literal evidence. Rule 1 quoted claims verified verbatim against sources (Littelfuse
