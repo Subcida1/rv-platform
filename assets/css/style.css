@@ -2387,7 +2387,17 @@ figure:has(svg[role="img"]){overflow-x:auto;overflow-y:hidden}
 .listing-call svg{flex:none}
 .listing-call.none{font-size:13px;font-weight:700;color:var(--text-3)}
 .more-wrap{display:flex;justify-content:center;margin-top:22px}
-@media(max-width:820px){.finder-routes{grid-template-columns:minmax(0,1fr)}.finder{padding:18px}.listing-dist.region{max-width:56%}}
+@media(max-width:820px){.finder-routes{grid-template-columns:minmax(0,1fr)}.finder{padding:18px}
+  /* THE REGION LINE GOES UNDER THE NAME ON A PHONE. It was capped at 56% of the row so it could
+     sit beside the name, and measured at 360px that left the name and the location 49px of a
+     266px row while the region caption took 149px: "Anchorage and Fairbanks" wrapped into a
+     four-word column and its longest word did not fit the box at all. Found by the SQUEEZE
+     check in scripts/audit-balance.mjs on 2026-07-11. The row wraps now, so the icon and the
+     name keep the row and the region caption gets its own line underneath, left aligned. */
+  .listing-top{flex-wrap:wrap}
+  .listing-head{flex:1 1 140px;min-width:0}
+  .listing-dist.region{order:3;flex:1 1 100%;max-width:none;text-align:left;font-style:normal}
+}
 
 /* ============================================================
    Directory: all-caps page title + state tiles (photo header,

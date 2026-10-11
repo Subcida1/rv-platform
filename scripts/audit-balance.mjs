@@ -163,6 +163,21 @@ const PROBE = (tol) => `(function(){
   return JSON.stringify(out);
 })()`;
 
+const key = (f) => [f.el || f.container, f.word || '', f.sel || '', f.off || '', f.over || ''].join('|');
+/* Keep a finding only when the second reading saw it too, then report the second reading's numbers
+   because those are the at-rest ones. */
+function intersect(a, b) {
+  if (typeof a !== 'string' || typeof b !== 'string' || a === 'EXC' || b === 'EXC') return a;
+  let A, B;
+  try { A = JSON.parse(a); B = JSON.parse(b); } catch (e) { return b; }
+  const out = { url: B.url, centre: [], ragged: [], squeeze: [] };
+  for (const k of ['centre', 'ragged', 'squeeze']) {
+    const seen = new Set((B[k] || []).map(key));
+    out[k] = (A[k] || []).filter((f) => seen.has(key(f)));
+  }
+  return JSON.stringify(out);
+}
+
 let failures = 0;
 for (const w of WIDTHS) {
   await send('Emulation.setDeviceMetricsOverride', { width: w, height: 800, deviceScaleFactor: 1, mobile: w < 600 });
@@ -170,7 +185,19 @@ for (const w of WIDTHS) {
   for (const page of PAGES) {
     await send('Page.navigate', { url: BASE + page });
     await new Promise((r) => setTimeout(r, 1200));
-    const raw = await evx(PROBE(TOL));
+    /* MEASURE TWICE AND KEEP ONLY WHAT BOTH READS AGREE ON. The first version took one reading,
+       1.2s after navigation, and on directory/texas.html it reported a business name squeezed to
+       98px whose longest word needed 143px. Re-measuring the same page at rest showed the name at
+       its natural 143px: the card had been caught mid-render, while the region rows were still
+       being laid out. A finding that only exists for one frame is not a defect, and an instrument
+       that reports one is an instrument people stop reading. Wait for the webfonts, then take two
+       readings 500ms apart and intersect them by element and by word. */
+    await evx('document.fonts && document.fonts.ready ? document.fonts.ready.then(function(){return 1;}) : 1');
+    await new Promise((r) => setTimeout(r, 400));
+    const rawA = await evx(PROBE(TOL));
+    await new Promise((r) => setTimeout(r, 500));
+    const rawB = await evx(PROBE(TOL));
+    const raw = intersect(rawA, rawB);
     if (typeof raw !== 'string' || raw === 'EXC') { console.log('  ?? ' + page + ' could not be measured'); continue; }
     const d = JSON.parse(raw);
     if (!d.centre.length && !d.ragged.length && !d.squeeze.length) { console.log('  ok  ' + page); continue; }
