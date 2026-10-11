@@ -629,6 +629,13 @@ is protective/fully warned; rv-delamination was reviewed this fire (no flag owed
 descriptive page). The sweep's own one real defect was already fixed (`rv-solar-not-charging`,
 `df91514`). No change made — the W15 lesson stands: the sweep over-reports, hand-check every hit.
 
+**2026-10-11 14:42 PDT (day-driver fire) — CLAIMED: `roof-snow-load` (W12).**
+Its manifest note is a voice pass only; the independent reviewer pass is still owed,
+and it is the last unowned W12 candidate (fuse/condensation/water-pump all have
+independent passes; delamination + trip-planner done this fire). Fresh-context
+reviewer dispatched (task_14). Findings applied, page re-baselined, ticked on
+completion.
+
 ### W16. `check-quotes.py` is over-reporting badly — its hits are NOT a worklist (2026-10-10)
 A full run reported **"quotes not found in any cited source: 64"**. Hand-checking shows the tool is
 extracting the page's own prose as quotations, so the number is not a defect count:
