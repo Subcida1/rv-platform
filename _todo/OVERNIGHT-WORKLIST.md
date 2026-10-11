@@ -1067,6 +1067,35 @@ recalls too.
 
 ### W18. Mobile visual alignment run - all pages (Ty, 2026-10-11 via Neo)
 
+**DONE 2026-07-11, commits `ee773d50`, `50589e13`, `e318d9fc`.** Four defects found and fixed, and a
+fifth of them was in the instrument. Swept all 132 pages at 360px and 393px with
+`scripts/audit-balance.mjs` (built for this item, now wired into `scripts/ci-full.sh`): the last full
+run reported 262 of 264 page/width pairs clean and one finding, which was then fixed and re-verified.
+Evidence per fix, all measured before and after:
+
+- The utility bar on every page squeezed its links into columns of single words. "Find RV service"
+  was 43px wide and three lines tall, the strip 75px tall. Nowrap plus hiding the two right-hand
+  links that the burger menu already carries: one line, 35px.
+- The tool chips were a three-column grid of 99px cells, so "Weight and towing" broke over two lines
+  and the band read as tall blobs with ragged text. Chips are sized by their own label now, every one
+  a single line, and the rows centre so a short last row is balanced.
+- The manuals "All 80 sections" disclosure was half a flex row, squeezed to 105px, its list to 103px
+  and each section link to 83px, narrower than the word "maintenance": a 11,703px column of broken
+  words. It takes the full width below 720px now.
+- The directory listing cards gave the region caption 149px of a 266px row, leaving the business name
+  and location 49px. The row wraps below 820px and the name block measures 210px.
+- The prev/next guide buttons shrank below their own labels: 91px of content box against a word that
+  needs more, overflowing by 10px. `min-width:min-content` keeps them side by side while they fit.
+
+**The fifth defect was the instrument.** It took the first page target on the debug port and drove
+it, and port 9341 is the shared audit browser, so it was measuring another session's tab: findings
+appeared and vanished between runs. It opens its own tab now. Two of my own verifications in this
+pass were read off the wrong page and are superseded by the measurements above.
+
+**Still owed:** `scripts/audit-mobile.mjs` did not produce a report in three attempts during this pass
+(it hangs after "Unsettled top-level await"), so its three dimensions were not used. Worth a look
+before the next mobile pass relies on it.
+
 Ty: "a lot of stuff still isn't centered or visually balanced when it should be on mobile. This is a
 mobile-specific run."
 
