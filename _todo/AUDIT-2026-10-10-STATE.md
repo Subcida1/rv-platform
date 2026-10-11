@@ -96,3 +96,26 @@ Order that works: edit → rebuild generators (`build-manuals-pages.py`, `build-
   page, so `until [ -s out.json ]` reports a partial sweep as a result. Wait on the final log line.
 - Foreground `sleep` is blocked; wait on files. `xdg-open` on this machine fails with
   "Unit app-com.google.Chrome@…service not found" — give Ty the URL instead.
+
+## PRE-PUSH PROCEDURE — corrected after main went red twice tonight
+
+`python3 scripts/verify.py` IS NOT THE GATE, and neither is `check-generated.sh`. Both of my
+pushes tonight went red on GitHub while every local check I ran was green. The GitHub workflow
+`checks.yml` runs exactly one command: **`bash scripts/ci.sh`**, which includes steps neither of
+the others runs — `check-style.py` (the centering and gradient ALLOWLISTS), `check-a11y.mjs`
+(axe, contrast), `check-structure.py`, `check-ux.py`, the node test suites, and the W3C
+validator. So:
+
+    bash scripts/ci.sh        # before every push, and wait for its REAL last line
+
+**WAIT FOR THE RIGHT LINE.** ci.sh prints `every check passed` or `AT LEAST ONE CHECK FAILED` as
+its final output, but `verify.py` prints `ALL CHECKS PASSED` in the middle of the same log, so a
+watch on "AL. CHECKS PASSED" fires ten steps early and reports a partial run as a result. Anchor
+on `^every check passed$`.
+
+What the two failures were, so they are recognised if they return:
+  - `check-style.py: FAILED - centering allowlist`. Centering is allowlisted on purpose; a new
+    `text-align:center` selector fails until somebody adds it to `CENTER_OK` as a decision.
+  - `accessibility (axe): 8 color-contrast failures on parts/index.html`, all the jump bar's
+    count spans: they were tuned against a white bar (4.9:1 on `--text-3`) and the new tint took
+    them to 4.13:1. **A background change is not free: it moves every ink that sits on it.**

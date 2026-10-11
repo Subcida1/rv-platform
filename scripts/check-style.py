@@ -51,6 +51,15 @@ def sel_of(text, pos):
 # being made silently by whoever edited the stylesheet last.
 # ---------------------------------------------------------------------------------------------
 CENTER_OK = {
+    # ADDED 2026-10-10, at Ty's request, in one pass: the parts hub's system headings, the
+    # note under them, and the count under that. "The headings for everything I feel should be
+    # centered... We should center all of these titles." Centred headings are already this
+    # site's default and the directory hub's region headings were centred the same way on
+    # 2026-10-06, so .guide-group carries the rule on the class and the guides hub, which has
+    # the same heading for the same job, follows it. The count and the note centre with the
+    # heading because a centred heading over a left-aligned line of its own label is the
+    # ragged look the change was meant to fix.
+    '.guide-group', '.guide-group-note', '.parts-sys-count',
     '.big-card', '.btn', '.btn-gb', '.center', '.chips-tools .chip,.tool-strip .chip',
     '.deck-sim-note', '.dog-inner', '.empty', '.empty-state', '.hero-inner', '.hstat',
     '.hub-page h2.region-h', '.part', '.qty .n', '.sec-head', '.sec-head.center',
