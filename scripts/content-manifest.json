@@ -827,10 +827,10 @@
     "claims": "34c240b69b94c574"
   },
   "guides/tires-winter.html": {
-    "hash": "3696bfe12fa9ea71",
+    "hash": "bd2a4fda593c7e03",
     "status": "verified",
-    "verified_by": "Mechanical markup fix only, 2026-10-10: removed five empty <p></p> elements left behind by the content pass b56d8df, which deleted lead-in sentences and kept the empty elements. No prose was added, changed or removed, so the existing independent pass on the text stands unchanged; the markup is now valid HTML with no empty paragraph.",
-    "verified_at": "2026-10-10",
+    "verified_by": "pre-existing finding fixes from safety-pass independent review: air contracted (was condensed), cut unsourced antioxidant-leach mechanism (reviewer's psi/month claim re-checked against cited Goodyear PSB 2015-25 - verbatim, rejected)",
+    "verified_at": "2026-10-11",
     "sources": [],
     "spec": "_specs/tires-winter.md",
     "spec_waived": false,
