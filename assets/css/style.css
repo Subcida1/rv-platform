@@ -938,13 +938,24 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
    what the parts hub was changed to match on the same day. */
 .hub-jump{position:sticky;top:86px;z-index:120;margin-top:26px;background:var(--tint-bg);border-top:1px solid var(--tint-edge);border-bottom:1px solid var(--tint-edge)}
 .hub-jump ul{display:flex;flex-wrap:wrap;gap:4px;list-style:none;margin:0;padding:9px 0}
-.hub-jump a{display:inline-flex;align-items:center;padding:9px 14px;border-radius:999px;font-size:13.5px;font-weight:600;color:var(--text-2);border:1px solid transparent;min-height:40px}
-.hub-jump a:hover{background:var(--surface);border-color:var(--border);color:var(--text)}
+/* EVERY CHIP WEARS ITS OWN EDGE. Ty, 2026-10-10: "I think we can do some kind of better
+   animation for the buttons, right now they just turn white on hover over. We give them
+   some kind of stroke outline so that you can see each individual button without having to
+   hover over it." The border was transparent until hover, which made the bar read as a run
+   of loose words rather than as separate controls. The edge is the tint family's own edge,
+   so it sits on the tinted band without becoming a second colour, and the hover still lifts
+   the chip onto white with a shadow and a 1px rise: the same .16s rhythm every other control
+   on the site uses, so it arrives rather than snaps. */
+.hub-jump a{display:inline-flex;align-items:center;padding:9px 14px;border-radius:999px;font-size:13.5px;font-weight:600;color:var(--text-2);background:transparent;border:1px solid var(--tint-edge);min-height:40px;transition:background .16s ease,border-color .16s ease,color .16s ease,box-shadow .16s ease,transform .16s ease}
+.hub-jump a:hover{background:var(--surface);border-color:var(--b2);color:var(--text);box-shadow:var(--shadow-sm);transform:translateY(-1px)}
 .hub-jump a:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
-/* --text-2, NOT --text-3, SINCE THE BAR GAINED A TINT. The counts sat on white and measured
-   4.9:1 on --text-3; on the tinted band the same ink measures 4.13:1 and axe failed all
-   eight of them on parts/index.html (2026-10-10). --text-2 gives 5.4:1 on the tint. */
-.hub-jump a span{font-size:12px;font-weight:700;color:var(--text-2);margin-left:2px}
+/* THE COUNT SPANS ARE GONE, AND SO IS THEIR RULE. Ty, 2026-10-10: "I don't think the directory
+   needs any numbers next to the location to the regions and the parts also don't really need any
+   numbers next to the different categories." Each chip said how many of the thing sat under it,
+   which is a count the reader did not ask for and has to read past. The numbers are removed at
+   the generators (scripts/build-parts-pages.py and directory/index.html) rather than hidden here,
+   and the rule that styled them is deleted rather than left as dead weight. The tint contrast
+   note that lived here is in git history if a count ever comes back. */
 .guide-group{scroll-margin-top:150px}
 /* The parts hub's bar carries nine systems, so it wraps to two rows (126px) where the
    guides bar's six fit on one (81px). Measured in the browser: with a 150px offset the

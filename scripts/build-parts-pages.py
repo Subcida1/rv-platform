@@ -264,9 +264,12 @@ def build():
     # column reopens under it.
     out.append('</div>\n')
     out.append('  <nav class="hub-jump" aria-label="Jump to a system">\n   <div class="wrap">\n')
+    # NO COUNTS IN THE CHIPS. Ty, 2026-10-10: "the parts also don't really need any numbers next
+    # to the different categories." Each chip used to say how many parts sat under it, which made
+    # every button carry a number the reader has to read past to get to the word. The counts above
+    # each SECTION stay where they belong, next to the thing they count.
     out.append('    <ul>%s</ul>\n' % "".join(
-        '<li><a href="#%s">%s <span>%d</span></a></li>'
-        % (esc(s["key"]), esc(s["label"]), len(s["parts"])) for s in systems))
+        '<li><a href="#%s">%s</a></li>' % (esc(s["key"]), esc(s["label"])) for s in systems))
     out.append('   </div>\n  </nav>\n<div class="wrap">\n')
 
     # Everything below is real HTML, grouped by system, so it reads without script.
