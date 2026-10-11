@@ -531,6 +531,16 @@ produced a safety handoff; neither needed a page change here.
 Original note, kept for the method: Two Lippert documents were identified but never opened/read.
 Two Lippert documents were identified but never opened/read. Find them in `_todo/SOURCING-FINDINGS-2026-10-09.md` and `research/`, fetch, read, and either act on the finding or record that the document does not support it.
 
+**2026-10-11 15:45 PDT (day-driver continuation) — W5 day-one slice done: the parts hub is now content-gated.**
+Found the hub (parts/index.html, 157 parts) was live in the sitemap and search index but
+the content gate's pages() glob never scanned parts/*.html, so a published page could
+drift with zero verification — the same blind spot class as a page missing from the
+manifest. Added the glob and seeded the hub as unverified (honest state until a stronger
+model reads it), per decision 7 of the business plan. Pushed `c573f928`, CI green.
+Deeper part pages stay gated on reader evidence per decision 8 (the hub tells us which
+parts people actually open) — not built speculatively. The tongue jack remains blocked
+on Ty's photographs.
+
 ### W5. Parts beyond the index
 `/parts/` — the hub index exists; the entries beyond it are owed. See `_todo/PARTS-AND-BUSINESS-PLAN.md` and `_todo/PARTS.md`. **Do not change the centred layout** — it is Ty's own dated instruction (see CSS comment on `.part`).
 
