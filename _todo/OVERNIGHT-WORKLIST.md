@@ -38,7 +38,40 @@ commits, so two sessions do not review the same page.
 
 ---
 
-# FIRE REPORT - 2026-10-11 14:00-15:00 PDT (day-driver cron, scheduled)
+# FIRE REPORT - 2026-10-11 15:00-16:00 PDT (day-driver cron, scheduled)
+
+**W16 CLOSED: the check-quotes.py extractor is fixed and verified, pushed `ee3ec30b`.**
+
+The tool no longer reports page prose as quotations. Root cause (measured): three
+false-delimiter sources shifted the strict 1-2,3-4 mark pairing, so our lead-in prose
+between adjacent bolded quotes was extracted as a quotation:
+1. inch marks inside bolded quotes (`1/4"`, `½"`) - bolded-quote spans are now removed
+   from the body before the tag-strip (the old bolded-strip ran after tag-stripping and
+   was dead code);
+2. the `<body class="g-theme-mist">` attribute tail left by the `<body` split;
+3. inch marks in non-bolded prose (`11" WC`, `8" WC`, `14"`) - a mark preceded by a
+   digit or a fraction (1/2, 1/4, 3/4) is excluded from the delimiter list.
+
+Measurement against HEAD, `--no-fetch` full sweep: **51 -> 28 "not found"**, all 23
+removed are page-prose false leads (slide-out 13->0, condensation 6->0, furnace 3
+fewer, two-appliances 1->0), zero real quotations dropped (diffed before/after sets,
+read every removed line). Negative test: injected fabricated bolded quote is STILL
+flagged. The 28 remaining are the documented bot-protected-source class (cummins,
+marshallexcelsior) and still need the by-hand check. Full note in the W16 section.
+
+CI: local `bash scripts/ci.sh` green (`every check passed`) with the default flatpak
+Chrome (the /usr/bin/chromium override does not exist on this machine); archive check
+(`git archive HEAD` + verify.py) ALL CHECKS PASSED; GitHub `checks` run **success**
+2m15s. Commit hashes: `ee3ec30b`.
+
+Also in this fire: `tools/rv-water-filter.html` (committed earlier but never in the
+content manifest) was seeded as unverified - "1 not in the manifest" is now 0. It rode
+in the W16 commit together with the worklist tick (same manifest file).
+
+Still open, by design: W3 (waits on Ty's spec for the clogged black-tank page), W5
+(parts build - multi-session, decisions locked nothing built), W6/W7 (all three W6
+guides now carry independent-review manifest notes - W6 is effectively closed).
+
 
 The tree was 14 behind origin with one un-pushed complete tool commit (the appliance
 board finder, `6b0d883e`) - rebased, conflict-resolved, CI-green, pushed.
