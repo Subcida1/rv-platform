@@ -379,15 +379,50 @@ def check(path, no_fetch=False):
         return False
 
     corpus_fold = [c.lower() for c in corpus]
+    # PUNCTUATION AND AMPERSANDS ARE NOT PART OF THE CLAIM.
+    #
+    # Two mechanical differences were reported as "not in any cited source" on 2026-10-10, both of
+    # them false, and the cause in each case was punctuation rather than words:
+    #   - a fragment taken from the END of a sentence keeps its full stop, and "Edge Molding
+    #     Sealant A." never matches a source that says "Edge Molding Sealant A";
+    #   - a maker's callout sheet prints "TV ANTENNA / SEALANT B & C" and the page writes "B and C".
+    # Both were verified by hand against the documents themselves (winnebago.com's 2007 sealants
+    # callout sheet and OSHA 3713), so the page was right and the matcher was narrow. Normalising
+    # punctuation and & on both sides costs nothing and removes a false-positive class that a
+    # reviewer has to re-derive every time.
+    def _flat(s):
+        s = s.lower().replace("&", " and ")
+        s = re.sub(r"[^\w\s]", " ", s)
+        return re.sub(r"\s+", " ", s).strip()
+
+    corpus_flat = [_flat(c) for c in corpus]
 
     def present(q):
         """A quote containing an ellipsis has had text omitted, so check its fragments separately.
         The first run flagged genuine Winnebago wording as unsourced purely because the page wrote
         "... on the roof ..." while the manual writes it as one sentence."""
         frags = [f.strip() for f in re.split(r"\s*\.\.\.+\s*|\s*\u2026\s*", q) if len(f.split()) >= 3]
-        return all(any(f.lower() in cf or word_run(f.lower(), di)
-                       for di, cf in enumerate(corpus_fold))
-                   for f in (frags or [q]))
+        for f in (frags or [q]):
+            ff = _flat(f)
+            if ff and any(ff in cf for cf in corpus_flat):
+                continue
+            # THE FUZZY PATH NEEDS THE ORIGINAL TOKENS, not the flattened ones: word_run builds its
+            # anchor index from the corpus as extracted, so handing it a string whose punctuation has
+            # been turned into spaces makes the anchors miss and the fragment look absent. Passing
+            # _flat(f) here was my own bug, found on 2026-10-10 while chasing why OSHA 3713's
+            # "areas greater than 100 ft.2, areas where mold is heavy" was reported missing when the
+            # document contains it word for word.
+            if any(word_run(f.lower(), di) for di in range(len(corpus))):
+                continue
+            # ONE MORE CLASS, AND IT IS THE EXTRACTION'S FAULT, NOT THE PAGE'S: pdftotext moves a
+            # superscript away from its position ("100 ft.2" comes out as "100 ft." with a stray
+            # "2" earlier in the stream), so a fragment containing a footnote marker can miss by one
+            # character. Retrying without the digits is the cheap honest test for that: the words
+            # still have to match in order.
+            if any(word_run(re.sub(r"\b\d+\b", " ", f.lower()), di) for di in range(len(corpus))):
+                continue
+            return False
+        return True
 
     def near_miss(q):
         """Distinguish "not in any source" from "in a source but not verbatim".

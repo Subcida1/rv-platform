@@ -493,9 +493,9 @@
     "claims": "9e753c5476a782bd"
   },
   "guides/rv-delamination.html": {
-    "hash": "9d24585f12859f5f",
+    "hash": "c90b6bc63fa7d609",
     "status": "verified",
-    "verified_by": "Cloud: removed the Crane Composites quotation, its attribution and its source entry (the maker's domain no longer resolves and the copy we had was a Forest River-hosted mirror that now serves a web page instead of the PDF); the skin-replacement point now rests on the cited Brinkley work instructions and Keystone bulletin. Spec waived: no _specs/rv-delamination.md exists.",
+    "verified_by": "Cloud: corrected the Winnebago sealant quotation against the sheet's own labels (the page had moved the B and C from the TV antenna to the radio antenna); the Airstream seam list stays and is UNVERIFIABLE, support.airstream.com answers 403 to any fetch, and it is a list of locations rather than a procedure. Spec waived: no _specs/rv-delamination.md exists.",
     "verified_at": "2026-10-10",
     "sources": [],
     "spec": null,
