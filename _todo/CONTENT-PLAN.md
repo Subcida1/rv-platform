@@ -293,3 +293,39 @@ floorplans, 21,185 spec rows, with `confidence` and `source_url` per row). And t
 `rv-floorplans.lovable.app` is the same application as the already-catalogued `rvfloorplans.app`, on the
 same Supabase project, so it is one site and not two.
 
+## From the sixteen
+
+The sixteen sites that earned a full teardown have now had one: four themed batches, reports
+`research/teardowns/t01.md` .. `t04.md`, restated in `research/teardowns/TEARDOWNS.md`. What it adds:
+
+**1. Two shipped tools have a named improvement, from sites doing the same job better.**
+
+- **The weight calculator** should take CampingCalc's three additions: a **double-count guard** ("what
+  UVW already includes, so do not count it twice"), a **CCC cross-check**, and the **standards it works
+  from** (FMVSS 110, 49 CFR §571.110, the RVIA weight label). CampingCalc is standards-aware and shows its
+  full eight-step working; ours is not and does not.
+- **The recall lookup** should take two things from RvCrunch and vehicle-recall.com: **hazard tagging**
+  (fire, crash, injury) derived from the consequence text, and **per-recall detail pages** carrying the
+  build window, the models and their sub-windows, and the parts as filed. vehicle-recall.com also derives
+  an **unrepaired** figure from the quarterly 573 reports — 162,004,013 of 487,377,537, or 33.2 percent —
+  which nobody else publishes and which is computable from the same federal files we already read.
+
+**2. The diagram-and-part-number model is proven at scale, and it is the pattern for Tier 2 #8.**
+Leisureshopdirect (7,000+ diagrams behind a model or data-plate lookup), Young Farts (29,544 diagrams,
+66,490 part-number pages), Environmental Marine (~250 models with maker diagram PDFs, discontinued ones
+included) and Dexter Index (47,377 products with an "Alternate Item Numbers" cross-reference) all resolve
+a model or a number to an exploded diagram and then to a part. Environmental Marine's **height / width /
+depth toilet finder** is a direct extension of the shipped toilet-valve tool.
+
+**3. The licence-class matrix is real, and must be rebuilt rather than taken.** Heavy Haulers' 50-state
+table is the freshest full matrix available and every row is individually cited, but it is dated roughly
+2017 with a 2020 last-modified, and **its 104 statute PDFs are re-hosted local copies, not links to the
+states' own pages**. Build the table from each state's own portal, RVIA's Special Driver's License PDF and
+the AAA Digest, and link the primary source every time.
+
+**4. The maker document libraries are where a component page should start.** Aqua-Hot, HWH, Dinosaur and
+Northern Lite each run a library organised better than anything consumer-side: a model × document matrix,
+a system-identification workflow, four complete OEM→replacement cross-reference charts, and a
+floorplan-keyed schematic set. Copy the shape; cite the maker.
+
+
