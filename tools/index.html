@@ -53,23 +53,136 @@
          work at all, because a reader who is looking at the tools page can already count
          them. What was missing was a way to jump straight to one.
          The pills carry the same names as the homepage's, so the two pages call each tool
-         the same thing. Order matches the cards below and the evidence in the commit that
-         ordered them. -->
+         the same thing, AND NOW THE SAME ORDER. Ty, 2026-10-10: "For the tools, I think we
+         should do the measured demand", after the homepage was ordered that way. This page
+         used to run its own order, which meant one surface said "start with the weight
+         calculator" and the other said "start with fuel cost". One rule now governs both:
+         scripts/keyword-demand.py against Bing Webmaster's keyword API, most wanted first.
+         fuel cost 20,221/mo, watts to amps 16,865, solar 5,120, rv loan 5,077, towing 5,034,
+         battery runtime 1,721, tire date 996, snow load no measurable volume. The cards below
+         follow the same order, so the two cannot disagree. -->
     <div class="tool-strip">
-      <a class="chip" href="tools/weight-calculator">⚖️ Weight and towing</a>
-      <a class="chip" href="tools/snow-load">🏔️ Snow load</a>
-      <a class="chip" href="tools/rv-loan">🏦 RV loan</a>
-      <a class="chip" href="tools/tire-date-code">🛞 Tire age</a>
-      <a class="chip" href="tools/watts-to-amps">🔌 Watts to amps</a>
       <a class="chip" href="tools/fuel-cost">⛽ Fuel cost</a>
+      <a class="chip" href="tools/watts-to-amps">🔌 Watts to amps</a>
       <a class="chip" href="tools/solar-sizing">☀️ Solar sizing</a>
+      <a class="chip" href="tools/rv-loan">🏦 RV loan</a>
+      <a class="chip" href="tools/weight-calculator">⚖️ Weight and towing</a>
       <a class="chip" href="tools/battery-runtime">🔋 Battery runtime</a>
+      <a class="chip" href="tools/tire-date-code">🛞 Tire age</a>
+      <a class="chip" href="tools/snow-load">🏔️ Snow load</a>
     </div>
   </div>
 
  <div class="sec pad-30">
    <div class="wrap">
-      <div class="tool-card">
+      
+ <div class="tool-card"> <div class="tool-head"> <div class="flex between gap"><h2 class="h-sec-sm">Fuel Cost Calculator</h2> <span class="verified">Runs in your browser</span> </div> </div> <div class="tool-body"> <div class="tool-copy"><p class="body-15">Miles, MPG, and the price at the pump give what the trip costs, with the planning cushion already added. Any vehicle works: RV types use their real-world MPG range, and cars, SUVs, pickups and motorcycles use the Energy Department average for that kind of vehicle. Your own measured MPG wins over every preset.</p> <div class="tool-btns"> <a class="btn btn-primary" href="tools/fuel-cost">Open the calculator</a> </div><p class="note-sm">An estimate for planning. The pump is the source of truth.</p> </div> <div class="tool-viz">
+            <div class="viz-stage">
+              <div class="viz-shot is-on">
+                <div class="viz-total">$552<small>trip fuel, middle</small></div>
+                <div class="viz-row ok"><span>Best case</span><b>$477 at 11 MPG</b></div>
+                <div class="viz-row ok"><span>Worst case</span><b>$656 at 8 MPG</b></div>
+                <div class="viz-row warn"><span>Planning figure</span><b>$635 with cushion</b></div>
+                <p class="footnote sp-10">1,200 miles in a Class C at $4.37.</p>
+              </div>
+              <div class="viz-shot">
+                <div class="viz-total">$120<small>trip fuel</small></div>
+                <div class="viz-row ok"><span>Your own figure</span><b>10.0 MPG</b></div>
+                <div class="viz-row ok"><span>Gallons</span><b>30 gal</b></div>
+                <div class="viz-row warn"><span>Planning figure</span><b>$138 with cushion</b></div>
+                <p class="footnote sp-10">300 miles at your own measured MPG, at $4.00.</p>
+              </div>
+              <div class="viz-shot">
+                <div class="viz-total">$175<small>trip fuel</small></div>
+                <div class="viz-row ok"><span>Your own figure</span><b>40.0 MPG</b></div>
+                <div class="viz-row ok"><span>Gallons</span><b>50 gal</b></div>
+                <div class="viz-row warn"><span>Planning figure</span><b>$201 with cushion</b></div>
+                <p class="footnote sp-10">2,000 miles in a car at 40 MPG, at $3.50.</p>
+              </div>
+            </div>
+          </div> </div> </div>
+ <div class="tool-card"> <div class="tool-head"> <div class="flex between gap"><h2 class="h-sec-sm">Watts to Amps &amp; Shore Power</h2> <span class="verified">Runs in your browser</span> </div> </div> <div class="tool-body"> <div class="tool-copy"><p class="body-15">Convert watts and amps either way at 120, 240, or 12 volts, and check the appliances you run at the same time against what your 30-amp or 50-amp hookup actually supplies. The 50-amp cord is 12,000 watts, not 6,000, and the tool shows why.</p> <div class="tool-btns"> <a class="btn btn-primary" href="tools/watts-to-amps">Open the calculator</a> </div><p class="note-sm">Typical figures from Cummins' own chart. Your appliance's label wins.</p> </div> <div class="tool-viz">
+            <div class="viz-stage">
+              <div class="viz-shot is-on">
+                <div class="viz-total">12.5 A<small>1,500 W at 120 volts</small></div>
+                <div class="viz-row ok"><span>Volts</span><b>120 V</b></div>
+                <div class="viz-row ok"><span>Watts</span><b>1,500 W</b></div>
+                <div class="viz-row ok"><span>Amps</span><b>12.5 A</b></div>
+                <p class="footnote sp-10">Watts equals volts times amps, and the tool converts either way.</p>
+              </div>
+              <div class="viz-shot">
+                <div class="viz-total">2,750 W<small>running together</small></div>
+                <div class="viz-row ok"><span>30-amp service</span><b>3,600 W</b></div>
+                <div class="viz-row warn"><span>A/C + space heater</span><b>2,750 W, 850 W spare</b></div>
+                <div class="viz-row warn"><span>If both start at once</span><b>4,000 W</b></div>
+                <p class="footnote sp-10">They fit while running, and not while starting.</p>
+              </div>
+              <div class="viz-shot">
+                <div class="viz-total">3,950 W<small>on a 30-amp service</small></div>
+                <div class="viz-row ok"><span>30-amp service</span><b>3,600 W</b></div>
+                <div class="viz-row bad"><span>A/C + heater + microwave</span><b>3,950 W running</b></div>
+                <div class="viz-row bad"><span>Over by</span><b>350 W</b></div>
+                <p class="footnote sp-10">A/C, space heater and microwave together. The breaker trips.</p>
+              </div>
+              <div class="viz-shot">
+                <div class="viz-total">2,400 W<small>on a household outlet</small></div>
+                <div class="viz-row ok"><span>15-amp outlet</span><b>1,800 W</b></div>
+                <div class="viz-row bad"><span>Microwave + coffee maker</span><b>2,400 W running</b></div>
+                <div class="viz-row bad"><span>Over by</span><b>600 W</b></div>
+                <p class="footnote sp-10">Two ordinary kitchen appliances on one ordinary outlet.</p>
+              </div>
+            </div>
+          </div> </div> </div>
+ <div class="tool-card"> <div class="tool-head"> <div class="flex between gap"><h2 class="h-sec-sm">Solar Sizing Calculator</h2> <span class="verified">Runs in your browser</span> </div> </div> <div class="tool-body"> <div class="tool-copy"><p class="body-15">Daily watt-hours divided by peak sun hours, with NREL's 0.77 derate applied and the maker-recommended margin shown alongside. The region presets use real peak-sun-hour figures for the country, from about 3 in the Northwest to 6.5 in the desert Southwest.</p> <div class="tool-btns"> <a class="btn btn-primary" href="tools/solar-sizing">Open the calculator</a> </div><p class="note-sm">A starting point for shopping. Winter sun and shade cut output below the rated hours.</p> </div> <div class="tool-viz">
+            <div class="viz-stage">
+              <div class="viz-shot is-on">
+                <div class="viz-total">623 W<small>panels needed</small></div>
+                <div class="viz-row ok"><span>Makers' formula</span><b>2,400 Wh / 5.0 hr = 480 W</b></div>
+                <div class="viz-row ok"><span>After the 0.77 derate</span><b>623 W nameplate</b></div>
+                <div class="viz-row warn"><span>With a 20-30% margin</span><b>779 W</b></div>
+                <p class="footnote sp-10">2,400 watt-hours a day at average US sun.</p>
+              </div>
+              <div class="viz-shot">
+                <div class="viz-total">480 W<small>panels needed</small></div>
+                <div class="viz-row ok"><span>Makers' formula</span><b>2,400 Wh / 6.5 hr = 369 W</b></div>
+                <div class="viz-row ok"><span>After the 0.77 derate</span><b>480 W nameplate</b></div>
+                <div class="viz-row warn"><span>With a 20-30% margin</span><b>599 W</b></div>
+                <p class="footnote sp-10">The same load in the desert Southwest, where the sun is stronger.</p>
+              </div>
+              <div class="viz-shot">
+                <div class="viz-total">390 W<small>panels needed</small></div>
+                <div class="viz-row ok"><span>Makers' formula</span><b>1,200 Wh / 4.0 hr = 300 W</b></div>
+                <div class="viz-row ok"><span>After the 0.77 derate</span><b>390 W nameplate</b></div>
+                <div class="viz-row warn"><span>With a 20-30% margin</span><b>487 W</b></div>
+                <p class="footnote sp-10">1,200 watt-hours a day in the Northwest, where the sun hours are lowest.</p>
+              </div>
+            </div>
+          </div> </div> </div>
+      <div class="tool-card"> <div class="tool-head"> <div class="flex between gap"><h2 class="h-sec-sm">RV Loan Calculator</h2> <span class="verified">Runs in your browser</span> </div> </div> <div class="tool-body"> <div class="tool-copy"><p class="body-15">The monthly payment and the total interest on an RV loan, from the price, down payment, rate, and term, by the standard amortization formula. The result shows what the loan really costs by the end, because a longer term spreads the interest out, hiding it inside a smaller payment.</p> <div class="tool-btns"> <a class="btn btn-primary" href="tools/rv-loan">Open the calculator</a> </div><p class="note-sm">Not a loan offer.</p> </div> <div class="tool-viz">
+            <div class="viz-stage">
+              <div class="viz-shot is-on">
+                <div class="viz-total">$633.64<small>monthly payment</small></div>
+                <div class="viz-row ok"><span>Borrowed</span><b>$32,000 at 7.00%</b></div>
+                <div class="viz-row ok"><span>Total interest</span><b>$6,018 over 5 years</b></div>
+                <div class="viz-row ok"><span>Total paid</span><b>$38,018</b></div>
+                <p class="footnote sp-10">$40,000 with 20 percent down over 5 years.</p>
+              </div>
+              <div class="viz-shot">
+                <div class="viz-total">$371.55<small>monthly payment</small></div>
+                <div class="viz-row ok"><span>Borrowed</span><b>$32,000 at 7.00%</b></div>
+                <div class="viz-row warn"><span>Total interest</span><b>$12,586 over 10 years</b></div>
+                <div class="viz-row warn"><span>Total paid</span><b>$44,586</b></div>
+                <p class="footnote sp-10">The same loan over 10 years. The payment falls and the interest doubles.</p>
+              </div>
+              <div class="viz-shot">
+                <div class="viz-total">$709.01<small>monthly payment</small></div>
+                <div class="viz-row ok"><span>Borrowed</span><b>$72,000 at 8.50%</b></div>
+                <div class="viz-row bad"><span>Total interest</span><b>$55,622 over 15 years</b></div>
+                <div class="viz-row bad"><span>Total paid</span><b>$127,622</b></div>
+                <p class="footnote sp-10">$80,000 with 10 percent down over 15 years.</p>
+              </div>
+            </div>
+          </div> </div> </div><div class="tool-card">
         <div class="tool-head">
           <div class="flex between gap">
             <h2 class="h-sec-sm">Weight &amp; Distribution Calculator</h2>
@@ -112,53 +225,28 @@
           </div>
         </div>
       </div>
-  <div class="tool-card"> <div class="tool-head"> <div class="flex between gap"><h2 class="h-sec-sm">Roof Snow Load Calculator</h2> <span class="verified">Runs in your browser</span> </div> </div> <div class="tool-body"> <div class="tool-copy"><p class="body-15">Snow's weight is just the weight of the water in it. Enter how deep it is on the roof, or its water equivalent if you have one, and this gives you the load in pounds per square foot by the National Weather Service's own method, and compares it to your roof's rating.</p> <div class="tool-btns"> <a class="btn btn-primary" href="tools/snow-load">Open the calculator</a> </div><p class="note-sm">Not a structural assessment.</p> </div> <div class="tool-viz">
+ <div class="tool-card"> <div class="tool-head"> <div class="flex between gap"><h2 class="h-sec-sm">Battery Runtime Calculator</h2> <span class="verified">Runs in your browser</span> </div> </div> <div class="tool-body"> <div class="tool-copy"><p class="body-15">How long the house batteries carry your gear before they need charging. The amp-hours on the label, the chemistry, and the watts you draw: lead-acid gives half its amp-hours, lithium most of them, and the tool applies the right fraction.</p> <div class="tool-btns"> <a class="btn btn-primary" href="tools/battery-runtime">Open the calculator</a> </div><p class="note-sm">Label figures and maker-published fractions. A battery monitor is the source of truth.</p> </div> <div class="tool-viz">
             <div class="viz-stage">
               <div class="viz-shot is-on">
-                <div class="viz-total">7.5 lb/ft&#178;<small>load carried</small></div>
-                <div class="viz-row ok"><span>Against your rating</span><b>25% of 30 lb/ft&#178;</b></div>
-                <div class="viz-row ok"><span>Snow on the roof</span><b>6.0 inches</b></div>
-                <div class="viz-row ok"><span>Load, on the flat</span><b>7.5 lb/ft&#178;</b></div>
-                <p class="footnote sp-10">Six inches of settled snow on a roof rated 30 lb/ft&#178;.</p>
+                <div class="viz-total">17.1 hr<small>runtime estimate</small></div>
+                <div class="viz-row ok"><span>Label says</span><b>100 Ah = 1,280 Wh</b></div>
+                <div class="viz-row ok"><span>Usable at 80%</span><b>1,024 Wh</b></div>
+                <div class="viz-row warn"><span>At 60 W</span><b>about 17 hours</b></div>
+                <p class="footnote sp-10">100 Ah lithium running a normal evening load.</p>
               </div>
               <div class="viz-shot">
-                <div class="viz-total">15.0 lb/ft&#178;<small>load carried</small></div>
-                <div class="viz-row ok"><span>Against your rating</span><b>50% of 30 lb/ft&#178;</b></div>
-                <div class="viz-row ok"><span>Snow on the roof</span><b>12.0 inches</b></div>
-                <div class="viz-row ok"><span>Load, on the flat</span><b>15.0 lb/ft&#178;</b></div>
-                <p class="footnote sp-10">A foot of snow on the same roof.</p>
+                <div class="viz-total">10.0 hr<small>runtime estimate</small></div>
+                <div class="viz-row ok"><span>Label says</span><b>200 Ah = 2,400 Wh</b></div>
+                <div class="viz-row ok"><span>Usable at 50%</span><b>1,200 Wh</b></div>
+                <div class="viz-row warn"><span>At 120 W</span><b>about 10 hours</b></div>
+                <p class="footnote sp-10">A bigger AGM bank, which gives up half its amp-hours, under the same load.</p>
               </div>
               <div class="viz-shot">
-                <div class="viz-total">30.0 lb/ft&#178;<small>load carried</small></div>
-                <div class="viz-row warn"><span>Against your rating</span><b>100% of 30 lb/ft&#178;</b></div>
-                <div class="viz-row ok"><span>Snow on the roof</span><b>24.0 inches</b></div>
-                <div class="viz-row warn"><span>Load, on the flat</span><b>30.0 lb/ft&#178;</b></div>
-                <p class="footnote sp-10">Two feet of snow puts that same roof right at its rating.</p>
-              </div>
-            </div>
-          </div> </div> </div>
-      <div class="tool-card"> <div class="tool-head"> <div class="flex between gap"><h2 class="h-sec-sm">RV Loan Calculator</h2> <span class="verified">Runs in your browser</span> </div> </div> <div class="tool-body"> <div class="tool-copy"><p class="body-15">The monthly payment and the total interest on an RV loan, from the price, down payment, rate, and term, by the standard amortization formula. The result shows what the loan really costs by the end, because a longer term spreads the interest out, hiding it inside a smaller payment.</p> <div class="tool-btns"> <a class="btn btn-primary" href="tools/rv-loan">Open the calculator</a> </div><p class="note-sm">Not a loan offer.</p> </div> <div class="tool-viz">
-            <div class="viz-stage">
-              <div class="viz-shot is-on">
-                <div class="viz-total">$633.64<small>monthly payment</small></div>
-                <div class="viz-row ok"><span>Borrowed</span><b>$32,000 at 7.00%</b></div>
-                <div class="viz-row ok"><span>Total interest</span><b>$6,018 over 5 years</b></div>
-                <div class="viz-row ok"><span>Total paid</span><b>$38,018</b></div>
-                <p class="footnote sp-10">$40,000 with 20 percent down over 5 years.</p>
-              </div>
-              <div class="viz-shot">
-                <div class="viz-total">$371.55<small>monthly payment</small></div>
-                <div class="viz-row ok"><span>Borrowed</span><b>$32,000 at 7.00%</b></div>
-                <div class="viz-row warn"><span>Total interest</span><b>$12,586 over 10 years</b></div>
-                <div class="viz-row warn"><span>Total paid</span><b>$44,586</b></div>
-                <p class="footnote sp-10">The same loan over 10 years. The payment falls and the interest doubles.</p>
-              </div>
-              <div class="viz-shot">
-                <div class="viz-total">$709.01<small>monthly payment</small></div>
-                <div class="viz-row ok"><span>Borrowed</span><b>$72,000 at 8.50%</b></div>
-                <div class="viz-row bad"><span>Total interest</span><b>$55,622 over 15 years</b></div>
-                <div class="viz-row bad"><span>Total paid</span><b>$127,622</b></div>
-                <p class="footnote sp-10">$80,000 with 10 percent down over 15 years.</p>
+                <div class="viz-total">3.0 hr<small>runtime estimate</small></div>
+                <div class="viz-row ok"><span>Label says</span><b>100 Ah = 1,200 Wh</b></div>
+                <div class="viz-row ok"><span>Usable at 50%</span><b>600 Wh</b></div>
+                <div class="viz-row warn"><span>At 200 W</span><b>about 3 hours</b></div>
+                <p class="footnote sp-10">The same bank size, drawing more of it at once.</p>
               </div>
             </div>
           </div> </div> </div>
@@ -187,110 +275,28 @@
               </div>
             </div>
           </div> </div> </div>
- <div class="tool-card"> <div class="tool-head"> <div class="flex between gap"><h2 class="h-sec-sm">Watts to Amps &amp; Shore Power</h2> <span class="verified">Runs in your browser</span> </div> </div> <div class="tool-body"> <div class="tool-copy"><p class="body-15">Convert watts and amps either way at 120, 240, or 12 volts, and check the appliances you run at the same time against what your 30-amp or 50-amp hookup actually supplies. The 50-amp cord is 12,000 watts, not 6,000, and the tool shows why.</p> <div class="tool-btns"> <a class="btn btn-primary" href="tools/watts-to-amps">Open the calculator</a> </div><p class="note-sm">Typical figures from Cummins' own chart. Your appliance's label wins.</p> </div> <div class="tool-viz">
+  <div class="tool-card"> <div class="tool-head"> <div class="flex between gap"><h2 class="h-sec-sm">Roof Snow Load Calculator</h2> <span class="verified">Runs in your browser</span> </div> </div> <div class="tool-body"> <div class="tool-copy"><p class="body-15">Snow's weight is just the weight of the water in it. Enter how deep it is on the roof, or its water equivalent if you have one, and this gives you the load in pounds per square foot by the National Weather Service's own method, and compares it to your roof's rating.</p> <div class="tool-btns"> <a class="btn btn-primary" href="tools/snow-load">Open the calculator</a> </div><p class="note-sm">Not a structural assessment.</p> </div> <div class="tool-viz">
             <div class="viz-stage">
               <div class="viz-shot is-on">
-                <div class="viz-total">12.5 A<small>1,500 W at 120 volts</small></div>
-                <div class="viz-row ok"><span>Volts</span><b>120 V</b></div>
-                <div class="viz-row ok"><span>Watts</span><b>1,500 W</b></div>
-                <div class="viz-row ok"><span>Amps</span><b>12.5 A</b></div>
-                <p class="footnote sp-10">Watts equals volts times amps, and the tool converts either way.</p>
+                <div class="viz-total">7.5 lb/ft&#178;<small>load carried</small></div>
+                <div class="viz-row ok"><span>Against your rating</span><b>25% of 30 lb/ft&#178;</b></div>
+                <div class="viz-row ok"><span>Snow on the roof</span><b>6.0 inches</b></div>
+                <div class="viz-row ok"><span>Load, on the flat</span><b>7.5 lb/ft&#178;</b></div>
+                <p class="footnote sp-10">Six inches of settled snow on a roof rated 30 lb/ft&#178;.</p>
               </div>
               <div class="viz-shot">
-                <div class="viz-total">2,750 W<small>running together</small></div>
-                <div class="viz-row ok"><span>30-amp service</span><b>3,600 W</b></div>
-                <div class="viz-row warn"><span>A/C + space heater</span><b>2,750 W, 850 W spare</b></div>
-                <div class="viz-row warn"><span>If both start at once</span><b>4,000 W</b></div>
-                <p class="footnote sp-10">They fit while running, and not while starting.</p>
+                <div class="viz-total">15.0 lb/ft&#178;<small>load carried</small></div>
+                <div class="viz-row ok"><span>Against your rating</span><b>50% of 30 lb/ft&#178;</b></div>
+                <div class="viz-row ok"><span>Snow on the roof</span><b>12.0 inches</b></div>
+                <div class="viz-row ok"><span>Load, on the flat</span><b>15.0 lb/ft&#178;</b></div>
+                <p class="footnote sp-10">A foot of snow on the same roof.</p>
               </div>
               <div class="viz-shot">
-                <div class="viz-total">3,950 W<small>on a 30-amp service</small></div>
-                <div class="viz-row ok"><span>30-amp service</span><b>3,600 W</b></div>
-                <div class="viz-row bad"><span>A/C + heater + microwave</span><b>3,950 W running</b></div>
-                <div class="viz-row bad"><span>Over by</span><b>350 W</b></div>
-                <p class="footnote sp-10">A/C, space heater and microwave together. The breaker trips.</p>
-              </div>
-              <div class="viz-shot">
-                <div class="viz-total">2,400 W<small>on a household outlet</small></div>
-                <div class="viz-row ok"><span>15-amp outlet</span><b>1,800 W</b></div>
-                <div class="viz-row bad"><span>Microwave + coffee maker</span><b>2,400 W running</b></div>
-                <div class="viz-row bad"><span>Over by</span><b>600 W</b></div>
-                <p class="footnote sp-10">Two ordinary kitchen appliances on one ordinary outlet.</p>
-              </div>
-            </div>
-          </div> </div> </div>
- <div class="tool-card"> <div class="tool-head"> <div class="flex between gap"><h2 class="h-sec-sm">Fuel Cost Calculator</h2> <span class="verified">Runs in your browser</span> </div> </div> <div class="tool-body"> <div class="tool-copy"><p class="body-15">Miles, MPG, and the price at the pump give what the trip costs, with the planning cushion already added. Any vehicle works: RV types use their real-world MPG range, and cars, SUVs, pickups and motorcycles use the Energy Department average for that kind of vehicle. Your own measured MPG wins over every preset.</p> <div class="tool-btns"> <a class="btn btn-primary" href="tools/fuel-cost">Open the calculator</a> </div><p class="note-sm">An estimate for planning. The pump is the source of truth.</p> </div> <div class="tool-viz">
-            <div class="viz-stage">
-              <div class="viz-shot is-on">
-                <div class="viz-total">$552<small>trip fuel, middle</small></div>
-                <div class="viz-row ok"><span>Best case</span><b>$477 at 11 MPG</b></div>
-                <div class="viz-row ok"><span>Worst case</span><b>$656 at 8 MPG</b></div>
-                <div class="viz-row warn"><span>Planning figure</span><b>$635 with cushion</b></div>
-                <p class="footnote sp-10">1,200 miles in a Class C at $4.37.</p>
-              </div>
-              <div class="viz-shot">
-                <div class="viz-total">$120<small>trip fuel</small></div>
-                <div class="viz-row ok"><span>Your own figure</span><b>10.0 MPG</b></div>
-                <div class="viz-row ok"><span>Gallons</span><b>30 gal</b></div>
-                <div class="viz-row warn"><span>Planning figure</span><b>$138 with cushion</b></div>
-                <p class="footnote sp-10">300 miles at your own measured MPG, at $4.00.</p>
-              </div>
-              <div class="viz-shot">
-                <div class="viz-total">$175<small>trip fuel</small></div>
-                <div class="viz-row ok"><span>Your own figure</span><b>40.0 MPG</b></div>
-                <div class="viz-row ok"><span>Gallons</span><b>50 gal</b></div>
-                <div class="viz-row warn"><span>Planning figure</span><b>$201 with cushion</b></div>
-                <p class="footnote sp-10">2,000 miles in a car at 40 MPG, at $3.50.</p>
-              </div>
-            </div>
-          </div> </div> </div>
- <div class="tool-card"> <div class="tool-head"> <div class="flex between gap"><h2 class="h-sec-sm">Solar Sizing Calculator</h2> <span class="verified">Runs in your browser</span> </div> </div> <div class="tool-body"> <div class="tool-copy"><p class="body-15">Daily watt-hours divided by peak sun hours, with NREL's 0.77 derate applied and the maker-recommended margin shown alongside. The region presets use real peak-sun-hour figures for the country, from about 3 in the Northwest to 6.5 in the desert Southwest.</p> <div class="tool-btns"> <a class="btn btn-primary" href="tools/solar-sizing">Open the calculator</a> </div><p class="note-sm">A starting point for shopping. Winter sun and shade cut output below the rated hours.</p> </div> <div class="tool-viz">
-            <div class="viz-stage">
-              <div class="viz-shot is-on">
-                <div class="viz-total">623 W<small>panels needed</small></div>
-                <div class="viz-row ok"><span>Makers' formula</span><b>2,400 Wh / 5.0 hr = 480 W</b></div>
-                <div class="viz-row ok"><span>After the 0.77 derate</span><b>623 W nameplate</b></div>
-                <div class="viz-row warn"><span>With a 20-30% margin</span><b>779 W</b></div>
-                <p class="footnote sp-10">2,400 watt-hours a day at average US sun.</p>
-              </div>
-              <div class="viz-shot">
-                <div class="viz-total">480 W<small>panels needed</small></div>
-                <div class="viz-row ok"><span>Makers' formula</span><b>2,400 Wh / 6.5 hr = 369 W</b></div>
-                <div class="viz-row ok"><span>After the 0.77 derate</span><b>480 W nameplate</b></div>
-                <div class="viz-row warn"><span>With a 20-30% margin</span><b>599 W</b></div>
-                <p class="footnote sp-10">The same load in the desert Southwest, where the sun is stronger.</p>
-              </div>
-              <div class="viz-shot">
-                <div class="viz-total">390 W<small>panels needed</small></div>
-                <div class="viz-row ok"><span>Makers' formula</span><b>1,200 Wh / 4.0 hr = 300 W</b></div>
-                <div class="viz-row ok"><span>After the 0.77 derate</span><b>390 W nameplate</b></div>
-                <div class="viz-row warn"><span>With a 20-30% margin</span><b>487 W</b></div>
-                <p class="footnote sp-10">1,200 watt-hours a day in the Northwest, where the sun hours are lowest.</p>
-              </div>
-            </div>
-          </div> </div> </div>
- <div class="tool-card"> <div class="tool-head"> <div class="flex between gap"><h2 class="h-sec-sm">Battery Runtime Calculator</h2> <span class="verified">Runs in your browser</span> </div> </div> <div class="tool-body"> <div class="tool-copy"><p class="body-15">How long the house batteries carry your gear before they need charging. The amp-hours on the label, the chemistry, and the watts you draw: lead-acid gives half its amp-hours, lithium most of them, and the tool applies the right fraction.</p> <div class="tool-btns"> <a class="btn btn-primary" href="tools/battery-runtime">Open the calculator</a> </div><p class="note-sm">Label figures and maker-published fractions. A battery monitor is the source of truth.</p> </div> <div class="tool-viz">
-            <div class="viz-stage">
-              <div class="viz-shot is-on">
-                <div class="viz-total">17.1 hr<small>runtime estimate</small></div>
-                <div class="viz-row ok"><span>Label says</span><b>100 Ah = 1,280 Wh</b></div>
-                <div class="viz-row ok"><span>Usable at 80%</span><b>1,024 Wh</b></div>
-                <div class="viz-row warn"><span>At 60 W</span><b>about 17 hours</b></div>
-                <p class="footnote sp-10">100 Ah lithium running a normal evening load.</p>
-              </div>
-              <div class="viz-shot">
-                <div class="viz-total">10.0 hr<small>runtime estimate</small></div>
-                <div class="viz-row ok"><span>Label says</span><b>200 Ah = 2,400 Wh</b></div>
-                <div class="viz-row ok"><span>Usable at 50%</span><b>1,200 Wh</b></div>
-                <div class="viz-row warn"><span>At 120 W</span><b>about 10 hours</b></div>
-                <p class="footnote sp-10">A bigger AGM bank, which gives up half its amp-hours, under the same load.</p>
-              </div>
-              <div class="viz-shot">
-                <div class="viz-total">3.0 hr<small>runtime estimate</small></div>
-                <div class="viz-row ok"><span>Label says</span><b>100 Ah = 1,200 Wh</b></div>
-                <div class="viz-row ok"><span>Usable at 50%</span><b>600 Wh</b></div>
-                <div class="viz-row warn"><span>At 200 W</span><b>about 3 hours</b></div>
-                <p class="footnote sp-10">The same bank size, drawing more of it at once.</p>
+                <div class="viz-total">30.0 lb/ft&#178;<small>load carried</small></div>
+                <div class="viz-row warn"><span>Against your rating</span><b>100% of 30 lb/ft&#178;</b></div>
+                <div class="viz-row ok"><span>Snow on the roof</span><b>24.0 inches</b></div>
+                <div class="viz-row warn"><span>Load, on the flat</span><b>30.0 lb/ft&#178;</b></div>
+                <p class="footnote sp-10">Two feet of snow puts that same roof right at its rating.</p>
               </div>
             </div>
           </div> </div> </div>
