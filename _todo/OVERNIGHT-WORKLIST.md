@@ -557,6 +557,12 @@ different errors (connection error; app-server socket closed; timed out waiting 
 runtime-start). If dispatch fails for you, do **W15** or **W14** instead (both need no subagent) and
 say so in your report, rather than retrying into a broken platform.
 
+**2026-10-11 14:08 PDT (day-driver fire) — CLAIMED: `rv-delamination`.**
+Fresh-context reviewer subagent (task_6) dispatched for the independent pass the page owes
+(its manifest note says only 5 of 27 quotations were ever hand-checked; `roof-snow-load`
+also still owes but the queue is one page per fire). Findings will be applied, the page
+re-baselined, and this entry ticked on completion.
+
 **2026-10-10 ~01:23 PDT — rv-fuse-keeps-blowing review pass (Cloud, in-turn):** all six house rules
 checked with literal evidence. Rule 1 quoted claims verified verbatim against sources (Littelfuse
 Fuseology overload def; Littelfuse Overcurrent Protection Fundamentals 600% threshold; VW/Audi
