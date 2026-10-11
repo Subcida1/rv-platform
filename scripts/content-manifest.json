@@ -1001,6 +1001,16 @@
     "verified_at": null,
     "sources": []
   },
+  "tools/rv-converter-finder.html": {
+    "hash": "b72fdb1da72d3b2c",
+    "status": "unverified",
+    "verified_by": "New page, 2026-10-11. Every part number it can print is a row in _data/converters.json, and every row names the maker chart it came from; the two parsed charts were fetched and read rather than summarised. WFCO's chart is deliberately not parsed and the page says so. No independent lane has reviewed it, so it is recorded unverified rather than claimed.",
+    "verified_at": null,
+    "sources": [],
+    "spec": null,
+    "spec_waived": true,
+    "claims": []
+  },
   "tools/rv-recall-lookup.html": {
     "hash": "e6f7dbb8c75481e8",
     "status": "unverified",

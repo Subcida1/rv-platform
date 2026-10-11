@@ -1,0 +1,1708 @@
+{
+ "note": "Converter and power-centre supersessions, taken from the makers' own published cross-reference charts and traceable to the chart each row came from. Built by scripts/fetch-converter-charts.py; do not edit by hand.",
+ "fetched": "2026-10-11",
+ "sources": {
+  "pd": {
+   "title": "Progressive Dynamics, converter cross-reference guide",
+   "url": "https://www.progressivedyn.com/converter-cross-reference-guide/",
+   "kind": "maker cross-reference chart",
+   "parsed": true
+  },
+  "powermax": {
+   "title": "PowerMax Converters, replacement comparison",
+   "url": "https://powermaxconverters.com/comparison/",
+   "kind": "maker cross-reference chart",
+   "parsed": true
+  },
+  "wfco": {
+   "title": "WFCO, Torque Chart replacement crossover",
+   "url": "https://www.wfcotech.com/wp-content/uploads/2022/04/2022TorqueChart.pdf",
+   "kind": "maker cross-reference chart",
+   "parsed": false,
+   "why_not_parsed": "Read but not parsed: its columns sit side by side across the page and wrap, so pairing its rows by whitespace risks producing a wrong part number, which is the one failure this tool must not have."
+  }
+ },
+ "coverage": "Two of the three maker charts are parsed. WFCO's is linked and not parsed, so a reader whose replacement is a WFCO product may not see one here, and the tool says so rather than implying the list is complete.",
+ "records": [
+  {
+   "old_maker": "Iota",
+   "old_model": "DLS-27-15",
+   "kind": "24V Converter",
+   "replacements": [
+    {
+     "source": "powermax",
+     "maker": "PowerMax",
+     "part": "PM3-20-24",
+     "battery": "",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "Iota",
+   "old_model": "DLS-30",
+   "kind": "Deck Mount",
+   "replacements": [
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD9330V",
+     "battery": "lead acid or AGM",
+     "note": ""
+    },
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD9330",
+     "battery": "lithium",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "Iota",
+   "old_model": "DLS-30IQ4",
+   "kind": "Converter",
+   "replacements": [
+    {
+     "source": "powermax",
+     "maker": "PowerMax",
+     "part": "PM3-35",
+     "battery": "",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "Iota",
+   "old_model": "DLS-45",
+   "kind": "Deck Mount",
+   "replacements": [
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD9345V",
+     "battery": "lead acid or AGM",
+     "note": ""
+    },
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD9345",
+     "battery": "lithium",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "Iota",
+   "old_model": "DLS-45IQ4",
+   "kind": "Converter",
+   "replacements": [
+    {
+     "source": "powermax",
+     "maker": "PowerMax",
+     "part": "PM3-45",
+     "battery": "",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "Iota",
+   "old_model": "DLS-55",
+   "kind": "Deck Mount",
+   "replacements": [
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD9360V",
+     "battery": "lead acid or AGM",
+     "note": ""
+    },
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD9360",
+     "battery": "lithium",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "Iota",
+   "old_model": "DLS-55IQ4",
+   "kind": "Converter",
+   "replacements": [
+    {
+     "source": "powermax",
+     "maker": "PowerMax",
+     "part": "PM3-55",
+     "battery": "",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "Iota",
+   "old_model": "DLS-75",
+   "kind": "Deck Mount",
+   "replacements": [
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD9380V",
+     "battery": "lead acid or AGM",
+     "note": "*20 AMP ACPLUG"
+    },
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD9380",
+     "battery": "lithium",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "Iota",
+   "old_model": "DLS-75IQ4",
+   "kind": "Converter",
+   "replacements": [
+    {
+     "source": "powermax",
+     "maker": "PowerMax",
+     "part": "PM3-75",
+     "battery": "",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "Iota",
+   "old_model": "DLS-90IQ4",
+   "kind": "Converter",
+   "replacements": [
+    {
+     "source": "powermax",
+     "maker": "PowerMax",
+     "part": "PM3-100",
+     "battery": "",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "Iota",
+   "old_model": "DLS27-25",
+   "kind": "24V Converter",
+   "replacements": [
+    {
+     "source": "powermax",
+     "maker": "PowerMax",
+     "part": "PM3-30-24",
+     "battery": "",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "Iota",
+   "old_model": "DLS27-40",
+   "kind": "24V Converter",
+   "replacements": [
+    {
+     "source": "powermax",
+     "maker": "PowerMax",
+     "part": "PM3-40-24",
+     "battery": "",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "Iota",
+   "old_model": "DLS54-15",
+   "kind": "48V Converter",
+   "replacements": [
+    {
+     "source": "powermax",
+     "maker": "PowerMax",
+     "part": "PM3-20-48",
+     "battery": "",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "Iota",
+   "old_model": "ITS-30R",
+   "kind": "Transfer Switch",
+   "replacements": [
+    {
+     "source": "powermax",
+     "maker": "PowerMax",
+     "part": "PMTS-30",
+     "battery": "",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "Iota",
+   "old_model": "ITS-50R",
+   "kind": "Transfer Switch",
+   "replacements": [
+    {
+     "source": "powermax",
+     "maker": "PowerMax",
+     "part": "PMTS-50",
+     "battery": "",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "Parallax",
+   "old_model": "4435",
+   "kind": "Deck Mount",
+   "replacements": [
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD9330V",
+     "battery": "lead acid or AGM",
+     "note": ""
+    },
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD9330",
+     "battery": "lithium",
+     "note": "(the chart prints this cell doubled)"
+    }
+   ]
+  },
+  {
+   "old_maker": "Parallax",
+   "old_model": "4445",
+   "kind": "Deck Mount",
+   "replacements": [
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD9345V",
+     "battery": "lead acid or AGM",
+     "note": ""
+    },
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD9345",
+     "battery": "lithium",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "Parallax",
+   "old_model": "4455",
+   "kind": "Deck Mount",
+   "replacements": [
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD9360V",
+     "battery": "lead acid or AGM",
+     "note": ""
+    },
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD9360",
+     "battery": "lithium",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "Parallax",
+   "old_model": "5355",
+   "kind": "Wall Mount - 50 Amp Service",
+   "replacements": [
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD4560V",
+     "battery": "lead acid or AGM",
+     "note": ""
+    },
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD4560V",
+     "battery": "lithium",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "Parallax",
+   "old_model": "5365",
+   "kind": "Wall Mount - 50 Amp Service",
+   "replacements": [
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD4575AV",
+     "battery": "lead acid or AGM",
+     "note": ""
+    },
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD4575AV",
+     "battery": "lithium",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "Parallax",
+   "old_model": "53753",
+   "kind": "Wall Mount - 50 Amp Service",
+   "replacements": [
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD4575AV",
+     "battery": "lead acid or AGM",
+     "note": ""
+    },
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD4575AV",
+     "battery": "lithium",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "Parallax",
+   "old_model": "555",
+   "kind": "Wall Mount - 50 Amp Service",
+   "replacements": [
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD4560V",
+     "battery": "lead acid or AGM",
+     "note": "Complete"
+    },
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD4560V",
+     "battery": "lithium",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "Parallax",
+   "old_model": "6345R",
+   "kind": "Converter Section Only",
+   "replacements": [
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD4645V",
+     "battery": "lead acid or AGM",
+     "note": ""
+    },
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD4645V",
+     "battery": "lithium",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "Parallax",
+   "old_model": "7145",
+   "kind": "Wall Mount - 30 Amp Service",
+   "replacements": [
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD4045KV",
+     "battery": "lead acid or AGM",
+     "note": ""
+    },
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD4045KV",
+     "battery": "lithium",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "Parallax",
+   "old_model": "7155",
+   "kind": "Wall Mount - 30 Amp Service",
+   "replacements": [
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD4060KV",
+     "battery": "lead acid or AGM",
+     "note": "PD4655V Converter Section Only"
+    },
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD4060KV",
+     "battery": "lithium",
+     "note": "PD4655V Converter Section Only"
+    }
+   ]
+  },
+  {
+   "old_maker": "Parallax",
+   "old_model": "7345",
+   "kind": "Wall Mount - 30 Amp Service",
+   "replacements": [
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD4045KV",
+     "battery": "lead acid or AGM",
+     "note": ""
+    },
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD4045KV",
+     "battery": "lithium",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "Parallax",
+   "old_model": "7345R",
+   "kind": "Converter Section Only",
+   "replacements": [
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD4645V",
+     "battery": "lead acid or AGM",
+     "note": ""
+    },
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD4645V",
+     "battery": "lithium",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "Parallax",
+   "old_model": "7355",
+   "kind": "Wall Mount - 30 Amp Service",
+   "replacements": [
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD4060KV",
+     "battery": "lead acid or AGM",
+     "note": ""
+    },
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD4060KV",
+     "battery": "lithium",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "Parallax",
+   "old_model": "7355R",
+   "kind": "Converter Section Only",
+   "replacements": [
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD4655V",
+     "battery": "lead acid or AGM",
+     "note": ""
+    },
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD4655V",
+     "battery": "lithium",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "Parallax",
+   "old_model": "7430",
+   "kind": "Deck Mount",
+   "replacements": [
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD9330V",
+     "battery": "lead acid or AGM",
+     "note": ""
+    },
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD9330",
+     "battery": "lithium",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "Parallax",
+   "old_model": "7440",
+   "kind": "Deck Mount",
+   "replacements": [
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD9345V",
+     "battery": "lead acid or AGM",
+     "note": ""
+    },
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD9345",
+     "battery": "lithium",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "Parallax",
+   "old_model": "7445",
+   "kind": "Deck Mount",
+   "replacements": [
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD9345V",
+     "battery": "lead acid or AGM",
+     "note": ""
+    },
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD9345",
+     "battery": "lithium",
+     "note": ""
+    },
+    {
+     "source": "powermax",
+     "maker": "PowerMax",
+     "part": "PM3-45",
+     "battery": "",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "Parallax",
+   "old_model": "7455",
+   "kind": "Deck Mount",
+   "replacements": [
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD9360V",
+     "battery": "lead acid or AGM",
+     "note": ""
+    },
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD9360",
+     "battery": "lithium",
+     "note": ""
+    },
+    {
+     "source": "powermax",
+     "maker": "PowerMax",
+     "part": "PM3-55",
+     "battery": "",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "Parallax",
+   "old_model": "7465",
+   "kind": "Deck Mount",
+   "replacements": [
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD9360V",
+     "battery": "lead acid or AGM",
+     "note": ""
+    },
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD9360",
+     "battery": "lithium",
+     "note": ""
+    },
+    {
+     "source": "powermax",
+     "maker": "PowerMax",
+     "part": "PM3-65",
+     "battery": "",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "Parallax",
+   "old_model": "8345",
+   "kind": "Wall Mount - 30 Amp Service",
+   "replacements": [
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD4045KV",
+     "battery": "lead acid or AGM",
+     "note": ""
+    },
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD4045KV",
+     "battery": "lithium",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "Parallax",
+   "old_model": "8345R",
+   "kind": "Converter Section Only",
+   "replacements": [
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD4645V",
+     "battery": "lead acid or AGM",
+     "note": ""
+    },
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD4645V",
+     "battery": "lithium",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "Parallax",
+   "old_model": "8355",
+   "kind": "Wall Mount - 30 Amp Service",
+   "replacements": [
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD4060KV",
+     "battery": "lead acid or AGM",
+     "note": ""
+    },
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD4060KV",
+     "battery": "lithium",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "Parallax",
+   "old_model": "8355R",
+   "kind": "Converter Section Only",
+   "replacements": [
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD4655V",
+     "battery": "lead acid or AGM",
+     "note": ""
+    },
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD4655V",
+     "battery": "lithium",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "Parallax",
+   "old_model": "ATS-301",
+   "kind": "Transfer Switch",
+   "replacements": [
+    {
+     "source": "powermax",
+     "maker": "PowerMax",
+     "part": "PMTS-30",
+     "battery": "",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "Parallax",
+   "old_model": "ATS-5070",
+   "kind": "Transfer Switch",
+   "replacements": [
+    {
+     "source": "powermax",
+     "maker": "PowerMax",
+     "part": "PMTS-50",
+     "battery": "",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "PowerMax",
+   "old_model": "PM3-45",
+   "kind": "Deck Mount",
+   "replacements": [
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD9345V",
+     "battery": "lead acid or AGM",
+     "note": ""
+    },
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD9345",
+     "battery": "lithium",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "PowerMax",
+   "old_model": "PM3-45-MBA",
+   "kind": "Converter Section Only",
+   "replacements": [
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD4645V",
+     "battery": "lead acid or AGM",
+     "note": ""
+    },
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD4645V",
+     "battery": "lithium",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "PowerMax",
+   "old_model": "PM3-55",
+   "kind": "Deck Mount",
+   "replacements": [
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD9360V",
+     "battery": "lead acid or AGM",
+     "note": ""
+    },
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD9360",
+     "battery": "lithium",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "PowerMax",
+   "old_model": "PM3-55-MBA",
+   "kind": "Converter Section Only",
+   "replacements": [
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD4655V",
+     "battery": "lead acid or AGM",
+     "note": ""
+    },
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD4655V",
+     "battery": "lithium",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "PowerMax",
+   "old_model": "PM3-75",
+   "kind": "Deck Mount",
+   "replacements": [
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD9380V",
+     "battery": "lead acid or AGM",
+     "note": "*20 AMP PLUG"
+    },
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD9380",
+     "battery": "lithium",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "PowerMax",
+   "old_model": "PM4-45",
+   "kind": "Deck Mount",
+   "replacements": [
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD9345V",
+     "battery": "lead acid or AGM",
+     "note": ""
+    },
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD9345",
+     "battery": "lithium",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "PowerMax",
+   "old_model": "PM4-55",
+   "kind": "Deck Mount",
+   "replacements": [
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD9360V",
+     "battery": "lead acid or AGM",
+     "note": ""
+    },
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD9360",
+     "battery": "lithium",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "PowerMax",
+   "old_model": "PM4-75",
+   "kind": "Deck Mount",
+   "replacements": [
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD9380V",
+     "battery": "lead acid or AGM",
+     "note": "*20 AMP PLUG"
+    },
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD9380",
+     "battery": "lithium",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "PowerMax",
+   "old_model": "PPC-32",
+   "kind": "Wall Mount - 30 Amp Service",
+   "replacements": [
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD4045KV",
+     "battery": "lead acid or AGM",
+     "note": ""
+    },
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD4045KV",
+     "battery": "lithium",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "PowerMax",
+   "old_model": "PPC-45",
+   "kind": "Wall Mount - 30 Amp Service",
+   "replacements": [
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD4045KV",
+     "battery": "lead acid or AGM",
+     "note": ""
+    },
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD4045KV",
+     "battery": "lithium",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "PowerMax",
+   "old_model": "PPC-55",
+   "kind": "Wall Mount - 30 Amp Service",
+   "replacements": [
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD4060KV",
+     "battery": "lead acid or AGM",
+     "note": ""
+    },
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD4060KV",
+     "battery": "lithium",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "Progressive Dynamics",
+   "old_model": "9000 Series",
+   "kind": "Deck Mount",
+   "replacements": [
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD9300",
+     "battery": "lead acid or AGM",
+     "note": "Series"
+    },
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "",
+     "battery": "lithium",
+     "note": "the chart says: 12 Volt LA AGM Lithium"
+    }
+   ]
+  },
+  {
+   "old_maker": "Progressive Dynamics",
+   "old_model": "9100 Series",
+   "kind": "Deck Mount",
+   "replacements": [
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD9300",
+     "battery": "lead acid or AGM",
+     "note": "Series"
+    },
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "",
+     "battery": "lithium",
+     "note": "the chart says: 12 Volt LA AGM Lithium"
+    }
+   ]
+  },
+  {
+   "old_maker": "Progressive Dynamics",
+   "old_model": "9200 Series",
+   "kind": "Deck Mount",
+   "replacements": [
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD9300",
+     "battery": "lead acid or AGM",
+     "note": "Series"
+    },
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "",
+     "battery": "lithium",
+     "note": "the chart says: 12 Volt LA AGM Lithium"
+    }
+   ]
+  },
+  {
+   "old_maker": "Progressive Dynamics",
+   "old_model": "PD-9145",
+   "kind": "Converter",
+   "replacements": [
+    {
+     "source": "powermax",
+     "maker": "PowerMax",
+     "part": "PM3-45",
+     "battery": "",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "Progressive Dynamics",
+   "old_model": "PD-9160",
+   "kind": "Converter",
+   "replacements": [
+    {
+     "source": "powermax",
+     "maker": "PowerMax",
+     "part": "PM3-55",
+     "battery": "",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "Progressive Dynamics",
+   "old_model": "PD-9180",
+   "kind": "Converter",
+   "replacements": [
+    {
+     "source": "powermax",
+     "maker": "PowerMax",
+     "part": "PM3-75",
+     "battery": "",
+     "note": "or Pm3-100"
+    }
+   ]
+  },
+  {
+   "old_maker": "Progressive Dynamics",
+   "old_model": "PD-9245",
+   "kind": "Converter",
+   "replacements": [
+    {
+     "source": "powermax",
+     "maker": "PowerMax",
+     "part": "Pm3-45",
+     "battery": "",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "Progressive Dynamics",
+   "old_model": "PD-9260",
+   "kind": "Converter",
+   "replacements": [
+    {
+     "source": "powermax",
+     "maker": "PowerMax",
+     "part": "PM3-55",
+     "battery": "",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "Progressive Dynamics",
+   "old_model": "PD-9280",
+   "kind": "Converter",
+   "replacements": [
+    {
+     "source": "powermax",
+     "maker": "PowerMax",
+     "part": "PM3-75",
+     "battery": "",
+     "note": "or Pm3-100"
+    }
+   ]
+  },
+  {
+   "old_maker": "Todd Engineering",
+   "old_model": "PC-15B",
+   "kind": "Conveter",
+   "replacements": [
+    {
+     "source": "powermax",
+     "maker": "PowerMax",
+     "part": "PM3-15",
+     "battery": "",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "Todd Engineering",
+   "old_model": "PC-30B",
+   "kind": "Converter",
+   "replacements": [
+    {
+     "source": "powermax",
+     "maker": "PowerMax",
+     "part": "PM3-35",
+     "battery": "",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "Todd Engineering",
+   "old_model": "PC-45B",
+   "kind": "Converter",
+   "replacements": [
+    {
+     "source": "powermax",
+     "maker": "PowerMax",
+     "part": "PM3-45",
+     "battery": "",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "Todd Engineering",
+   "old_model": "PC-55B",
+   "kind": "Converter",
+   "replacements": [
+    {
+     "source": "powermax",
+     "maker": "PowerMax",
+     "part": "PM3-55",
+     "battery": "",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "Todd Engineering",
+   "old_model": "PC-75B",
+   "kind": "Converter",
+   "replacements": [
+    {
+     "source": "powermax",
+     "maker": "PowerMax",
+     "part": "PM3-75",
+     "battery": "",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "WFCO",
+   "old_model": "T-30",
+   "kind": "Transfer Switch",
+   "replacements": [
+    {
+     "source": "powermax",
+     "maker": "PowerMax",
+     "part": "PMTS-30",
+     "battery": "",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "WFCO",
+   "old_model": "T-57",
+   "kind": "Transfer Switch",
+   "replacements": [
+    {
+     "source": "powermax",
+     "maker": "PowerMax",
+     "part": "PMTS-50",
+     "battery": "",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "WFCO",
+   "old_model": "WF-68100",
+   "kind": "Converter",
+   "replacements": [
+    {
+     "source": "powermax",
+     "maker": "PowerMax",
+     "part": "PM3-100",
+     "battery": "",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "WFCO",
+   "old_model": "WF-8735",
+   "kind": "Wall Mount - 30 Amp Service",
+   "replacements": [
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD4045KV",
+     "battery": "lead acid or AGM",
+     "note": "check dimensions"
+    },
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD4045KV",
+     "battery": "lithium",
+     "note": "check dimensions"
+    }
+   ]
+  },
+  {
+   "old_maker": "WFCO",
+   "old_model": "WF-8740P",
+   "kind": "Wall Mount - 30 Amp Service",
+   "replacements": [
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD4045KV",
+     "battery": "lead acid or AGM",
+     "note": ""
+    },
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD4045KV",
+     "battery": "lithium",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "WFCO",
+   "old_model": "WF-8935MBA",
+   "kind": "Converter Section Only",
+   "replacements": [
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD4635V",
+     "battery": "lead acid or AGM",
+     "note": ""
+    },
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD4635V",
+     "battery": "lithium",
+     "note": ""
+    },
+    {
+     "source": "powermax",
+     "maker": "PowerMax",
+     "part": "PM3-35-MBA",
+     "battery": "",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "WFCO",
+   "old_model": "WF-8945-MBA",
+   "kind": "Converter Replacement Board",
+   "replacements": [
+    {
+     "source": "powermax",
+     "maker": "PowerMax",
+     "part": "PM3-45-MBA",
+     "battery": "",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "WFCO",
+   "old_model": "WF-8945ANP",
+   "kind": "Wall Mount - 30 Amp Service",
+   "replacements": [
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD4045KV",
+     "battery": "lead acid or AGM",
+     "note": ""
+    },
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD4045KV",
+     "battery": "lithium",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "WFCO",
+   "old_model": "WF-8945MBA",
+   "kind": "Converter Section Only",
+   "replacements": [
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD4645V",
+     "battery": "lead acid or AGM",
+     "note": ""
+    },
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD4645V",
+     "battery": "lithium",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "WFCO",
+   "old_model": "WF-8945REP",
+   "kind": "Converter Section Only",
+   "replacements": [
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD4645V",
+     "battery": "lead acid or AGM",
+     "note": ""
+    },
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD4645V",
+     "battery": "lithium",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "WFCO",
+   "old_model": "WF-8955-MBA",
+   "kind": "Converter Replacement Board",
+   "replacements": [
+    {
+     "source": "powermax",
+     "maker": "PowerMax",
+     "part": "PM3-55-MBA",
+     "battery": "",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "WFCO",
+   "old_model": "WF-8955MBA",
+   "kind": "Converter Section Only",
+   "replacements": [
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD4655V",
+     "battery": "lead acid or AGM",
+     "note": ""
+    },
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD4655V",
+     "battery": "lithium",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "WFCO",
+   "old_model": "WF-8955PEC",
+   "kind": "Wall Mount - 30 Amp Service",
+   "replacements": [
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD4060KV",
+     "battery": "lead acid or AGM",
+     "note": ""
+    },
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD4060KV",
+     "battery": "lithium",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "WFCO",
+   "old_model": "WF-8955REP",
+   "kind": "Converter Section Only",
+   "replacements": [
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD4655V",
+     "battery": "lead acid or AGM",
+     "note": ""
+    },
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD4655V",
+     "battery": "lithium",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "WFCO",
+   "old_model": "WF-8975-MBA",
+   "kind": "Converter Replacement Board",
+   "replacements": [
+    {
+     "source": "powermax",
+     "maker": "PowerMax",
+     "part": "PM3-75-MBA",
+     "battery": "",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "WFCO",
+   "old_model": "WF-9835",
+   "kind": "Deck Mount",
+   "replacements": [
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD9330V",
+     "battery": "lead acid or AGM",
+     "note": ""
+    },
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD9330",
+     "battery": "lithium",
+     "note": ""
+    },
+    {
+     "source": "powermax",
+     "maker": "PowerMax",
+     "part": "PM3-35",
+     "battery": "",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "WFCO",
+   "old_model": "WF-9845",
+   "kind": "Deck Mount",
+   "replacements": [
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD9345V",
+     "battery": "lead acid or AGM",
+     "note": ""
+    },
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD9345",
+     "battery": "lithium",
+     "note": ""
+    },
+    {
+     "source": "powermax",
+     "maker": "PowerMax",
+     "part": "PM3-45",
+     "battery": "",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "WFCO",
+   "old_model": "WF-9855",
+   "kind": "Deck Mount",
+   "replacements": [
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD9360V",
+     "battery": "lead acid or AGM",
+     "note": ""
+    },
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD9360",
+     "battery": "lithium",
+     "note": ""
+    },
+    {
+     "source": "powermax",
+     "maker": "PowerMax",
+     "part": "PM3-55",
+     "battery": "",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "WFCO",
+   "old_model": "WF-9865",
+   "kind": "Deck Mount",
+   "replacements": [
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD9360V",
+     "battery": "lead acid or AGM",
+     "note": ""
+    },
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD9360",
+     "battery": "lithium",
+     "note": ""
+    },
+    {
+     "source": "powermax",
+     "maker": "PowerMax",
+     "part": "PM3-65",
+     "battery": "",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "WFCO",
+   "old_model": "WF-9875",
+   "kind": "Deck Mount",
+   "replacements": [
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD9360V",
+     "battery": "lead acid or AGM",
+     "note": ""
+    },
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD9360",
+     "battery": "lithium",
+     "note": ""
+    },
+    {
+     "source": "powermax",
+     "maker": "PowerMax",
+     "part": "PM3-75",
+     "battery": "",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "WFCO",
+   "old_model": "WF-9960",
+   "kind": "Wall Mount - 50 Amp Service",
+   "replacements": [
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD4560K18LV",
+     "battery": "lead acid or AGM",
+     "note": ""
+    },
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD4560V",
+     "battery": "lithium",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "WFCO",
+   "old_model": "WF-9990",
+   "kind": "Wall Mount - 50 Amp Service",
+   "replacements": [
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD4590K18LV",
+     "battery": "lead acid or AGM",
+     "note": ""
+    },
+    {
+     "source": "pd",
+     "maker": "Progressive Dynamics",
+     "part": "PD4590AV",
+     "battery": "lithium",
+     "note": ""
+    }
+   ]
+  }
+ ]
+}
