@@ -38,6 +38,36 @@ commits, so two sessions do not review the same page.
 
 ---
 
+# FIRE REPORT - 2026-10-11 16:00-17:00 PDT (day-driver cron, scheduled)
+
+**THE NAMED QUEUE (W3, W5, W6, W7, W12, W15, W16, second-pass) IS CLOSED OR BLOCKED**, so
+this fire worked the one remaining actionable, unowned surface: the safety pass's PRE-EXISTING
+CONTENT findings at the end of SAFETY-ISSUES.md section G. All three pages were `verified`;
+each change was adjudicated against the cited sources before editing, re-baselined (rule 6),
+run through the full `bash scripts/ci.sh` (every check passed on each), archive-checked, and
+pushed with explicit paths. No failed GitHub runs in 3h.
+
+- **`guides/tires-winter.html` — `67039023`.** Two real fixes: "condensed" -> "has just
+  contracted" (science), and the unsourced "concrete leaches antioxidants out of tire rubber"
+  mechanism cut and replaced with the moisture point Michelin actually documents. The reviewer's
+  third claim ("tires lose two or more psi a month" is unsupported) was REJECTED: re-fetched the
+  cited Goodyear PSB 2015-25, which says verbatim "Tires can lose up to 2 or more psi (13.8 kPa)
+  per month". Same class as the roof-snow-load precedent: re-fetch beats a reviewer's absence claim.
+- **`guides/winterize-plumbing.html` — `9dc6de21`.** Standard-dose sanitize contact time added
+  (at least four hours at 50 ppm, traced via NRVTA to the 2026 Winnebago Travato and 2023 Jayco
+  Terrain manuals, NRVTA now listed in Sources); wet-bay heater advice rewritten so an unattended
+  heater in an enclosed bay is stated as a fire hazard; the "the concentration the makers publish"
+  attribute now has a listed source.
+- **`guides/rv-roof-leak-repair.html` — `368b2162`.** The blunt line now derives from the cited
+  Dicor "secondary seal" language ("secondary" implies the primary seal is missing) instead of
+  stating the overclaim. The other half of that finding - a way to identify EPDM vs TPO membranes -
+  is recorded as STILL OWED in the manifest note: it needs maker-guidance research, not invention.
+
+W7 status: safety pass itself is complete (A/B placed in `54022ba2`/`795921d5`, C1/C2 verified in
+code). W3 remains blocked on Ty's spec for the clogged-black-tank page; W5's deeper part pages
+remain gated on reader evidence, tongue jack on Ty's photos. The machine has recovered: 6 GiB free,
+3.9 GiB of 8.3 GiB swap free - subagent dispatch should work again for the next fire if it needs one.
+
 # FIRE REPORT - 2026-10-11 15:00-16:00 PDT (day-driver cron, scheduled)
 
 **W16 CLOSED: the check-quotes.py extractor is fixed and verified, pushed `ee3ec30b`.**

@@ -231,3 +231,18 @@ verifications again):**
 - roof-leak-repair: "A penetration whose only seal is a bead of sealant is a penetration waiting
   to leak" overclaims beyond the Dicor "secondary seal" source; the page names EPDM/TPO but gives
   no way to identify which membrane a roof has.
+
+**Pre-existing findings APPLIED 2026-10-11 (day-driver fire, commits `67039023`, `9dc6de21`,
+`368b2162`, CI green, no failed GitHub runs in 3h):**
+- tires-winter: the reviewer's "2+ psi a month unsupported" claim was REJECTED after re-fetching
+  the cited Goodyear PSB 2015-25, which says verbatim "Tires can lose up to 2 or more psi per
+  month". Real fixes applied: "condensed" -> "contracted" (science), and the unsourced
+  "concrete leaches antioxidants" mechanism cut and replaced with the moisture point Michelin
+  actually documents.
+- winterize: standard-dose sit time added (at least four hours at 50 ppm, traced via NRVTA to
+  the 2026 Winnebago Travato / 2023 Jayco Terrain manuals, NRVTA now listed as a source); the
+  unattended-heater advice rewritten to state the fire hazard; the "makers publish" ratio now has
+  a listed source.
+- roof-leak-repair: the blunt line now derives from the cited Dicor "secondary seal" language
+  ("secondary" implies a primary seal is missing) instead of stating the overclaim. STILL OWED:
+  the EPDM/TPO membrane-identification gap - needs maker-guidance research, not invention.
