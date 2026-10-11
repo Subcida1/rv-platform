@@ -980,6 +980,13 @@
     "verified_at": null,
     "sources": []
   },
+  "tools/rv-toilet-valve.html": {
+    "hash": "3b5e48e81ea7a3b3",
+    "status": "unverified",
+    "verified_by": "New page, 2026-10-10. Each part number and every claim on it was checked against the maker's own document, fetched and read rather than summarised, but no independent lane has reviewed it, so it is recorded unverified rather than claimed.",
+    "verified_at": null,
+    "sources": []
+  },
   "tools/snow-load.html": {
     "hash": "a5064bfd3e19bbec",
     "status": "unverified",

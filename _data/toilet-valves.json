@@ -1,0 +1,210 @@
+{
+  "note": "The modern RV toilet water valve families, and what each one fits. Every entry is recorded against a maker document named in sources, and each of those documents was fetched and read on 2026-10-10 rather than taken from a parts retailer's compiled list. Where a number could not be confirmed against a maker document, the family is still covered, the number is recorded here with source_status owed, and the page does not print it. The structure follows the competitor's model, which is its one good idea; the data is not theirs.",
+  "updated": "2026-10-10",
+  "families": [
+    {
+      "id": "dometic-300-400-gravity",
+      "maker": "Dometic",
+      "label": "Dometic 300, 310, 320 and 400 series gravity toilets",
+      "models": ["300", "301", "310", "311", "320", "321", "400", "401", "410", "411", "420", "421"],
+      "part": "385311641",
+      "part_name": "Water valve kit",
+      "flush": "foot pedal",
+      "valve_place": "on the base, above the model label",
+      "bowl": "Polypropylene on the 300 and 301, vitreous ceramic on the 310, 311, 320 and 321",
+      "seat": "Polypropylene on the 300, 301, 310 and 311, enameled wood on the 320 and 321",
+      "source_status": "confirmed",
+      "source_note": "Dometic's 310 manual names 385311641 as the water valve kit for the 310, and the 400 series page lists the same kit as its spare valve.",
+      "sources": ["dometic-310-manual", "dometic-300-iom", "dometic-400-page"]
+    },
+    {
+      "id": "dometic-traveler-vacuflush",
+      "maker": "Dometic",
+      "label": "Dometic Traveler, Traveler Lite, EcoVac and VacuFlush toilets",
+      "models": ["Traveler 500 series, including the 510HPS", "Traveler Lite 110, 111 and 210", "EcoVac", "VacuFlush 5000 series, including the 5006"],
+      "part": "385314349",
+      "part_name": "Water valve kit",
+      "flush": "foot pedal, with a vacuum pump on the VacuFlush models",
+      "valve_place": "in the foot pedal",
+      "bowl": "Deep bowl, with an elongated enameled wood seat on the 510HPS",
+      "source_status": "owed",
+      "source_note": "The number 385314349 appears in retailer fitment lists and in Dometic's Sanitation Replacement Parts Guide, which Dometic serves as a download from its parts pages. No copy of that guide naming the number was fetched from a Dometic host, so the number is recorded here and is not printed on the tool page. Dometic's own manual for this family lists the water valve as a spare part held in the foot pedal, and names freeze damage and a leaking valve body as the reasons to replace it.",
+      "sources": ["dometic-vacuflush-5000", "dometic-510-page"]
+    },
+    {
+      "id": "thetford-aqua-magic-v-vi",
+      "maker": "Thetford",
+      "label": "Thetford Aqua-Magic V and VI",
+      "models": ["Aqua-Magic V, hand flush", "Aqua-Magic VI, foot flush"],
+      "part": "31705",
+      "part_name": "Water module kit",
+      "flush": "hand lever on the V, foot pedal on the VI",
+      "valve_place": null,
+      "bowl": "Polypropylene on both",
+      "seat": null,
+      "source_status": "confirmed",
+      "source_note": "Thetford's install sheet for the water module kit covers the Aqua-Magic V and VI, and lists what the kit contains.",
+      "sources": ["thetford-water-module-31705", "thetford-amv-page", "thetford-amvi-page"]
+    },
+    {
+      "id": "thetford-residence-style-ii",
+      "maker": "Thetford",
+      "label": "Thetford Aqua-Magic Residence and Style II",
+      "models": ["Aqua-Magic Residence", "Aqua-Magic Style II"],
+      "part": "42049",
+      "part_name": "Water valve kit",
+      "flush": "foot pedal",
+      "valve_place": "under the pedal, with the pedal pulled off",
+      "bowl": "Polypropylene on the Residence, ceramic on a polypropylene base on the Style II",
+      "seat": null,
+      "source_status": "confirmed",
+      "source_note": "Thetford's install sheet for the valve kit covers the Residence and the Style II, and shows the pedal coming off before the valve does.",
+      "sources": ["thetford-valve-kit-42049", "thetford-style-ii-page", "thetford-permanent-page"]
+    }
+  ],
+  "sources": {
+    "dometic-300-iom": {
+      "title": "Dometic Gravity Flush Toilet 300, 310, 320 Series Installation and Operation Manual",
+      "publisher": "Dometic",
+      "url": "https://media.dometic.com/externalassets/dometic-300_9108765624_78798.pdf",
+      "supports": "the model identification label on the base under the water valve, the bowl and seat material of every 300 series model, the rough-in figure for the 300 and the 301, the seat heights of both heights, and the 300/310/320 Series Toilet Water Valve Replacement Kit"
+    },
+    "dometic-310-manual": {
+      "title": "Dometic 310 toilet instruction manual",
+      "publisher": "Dometic",
+      "url": "https://media.dometic.com/externalassets/dometic-310-rv-toilet_62809.pdf",
+      "supports": "the water valve kit part number 385311641 for the 310, the snap-in water valve cartridge, the 18 in seat height, and the rule to replace the water valve when water keeps trickling into the bowl"
+    },
+    "dometic-400-page": {
+      "title": "Dometic RV toilets, 400 series and Platinum series",
+      "publisher": "Dometic",
+      "url": "https://www.dometic.com/en-us/lp/rv-toilets-complete",
+      "supports": "the Water Valve Kit 385311641 as this series' spare valve, the compact round porcelain bowl, and the 7.625 in rough-in"
+    },
+    "dometic-vacuflush-5000": {
+      "title": "Dometic VacuFlush 5000 Series vacuum flush toilets operation manual",
+      "publisher": "Dometic",
+      "url": "https://media.dometic.com/externalassets/dometic-vacuflush-5006-_9108554828_64827.pdf",
+      "supports": "the water valve as a spare part held in the foot pedal, and the vacuum generator, vacuum switch and duckbill valves that show a vacuum toilet when a reader looks at one"
+    },
+    "dometic-510-page": {
+      "title": "Dometic 510HPS gravity flush toilet",
+      "publisher": "Dometic",
+      "url": "https://www.dometic.com/en/product/dometic-510hps-gravity-flush-toilet-9108552862",
+      "supports": "the 500 series as a foot-pedal gravity toilet with an elongated enameled wood seat and a deep residential-style bowl, and its 11 in minimum rough-in"
+    },
+    "dometic-masterflush-8700": {
+      "title": "Dometic 8700 Series MasterFlush toilet installation manual",
+      "publisher": "Dometic",
+      "url": "https://media.dometic.com/externalassets/dometic-masterflush-8743-macerator-toilet_64820.pdf",
+      "supports": "the electric macerator toilet as a different design, equipped with an electrically operated water valve and a control module, which is why this tool stops at the mechanical valve"
+    },
+    "thetford-water-module-31705": {
+      "title": "Aqua Magic V, VI Water Module Kit, form 31715 Rev. C",
+      "publisher": "Thetford",
+      "url": "https://www.thetford.com/app/uploads/2024/10/31715C_SK_AM5AM6Bravura_water-module-31705.pdf",
+      "supports": "the 31705 water module kit for the Aqua-Magic V and VI, the parts the kit contains, and the link that joins the module to the flush lever arm"
+    },
+    "thetford-valve-kit-42049": {
+      "title": "Aqua-Magic Residence, Style II Water Valve Kit, form 42109",
+      "publisher": "Thetford",
+      "url": "https://www.thetford.com/app/uploads/2024/10/42109%5FSK%5FWaterValve%5FStyleII%5FRes%5F42049C-1.pdf",
+      "supports": "the 42049 water valve kit for the Aqua-Magic Residence and Style II, the cartridge it contains, and the pedal that comes off before the valve does"
+    },
+    "thetford-amv-page": {
+      "title": "Thetford Aqua-Magic V hand flush",
+      "publisher": "Thetford",
+      "url": "https://www.thetford.com/us/thetford-support/aqua-magic-v-hand-flush/",
+      "supports": "the Aqua-Magic V as a polypropylene toilet with a hand flush, which is what tells it from the foot-pedal models"
+    },
+    "thetford-amvi-page": {
+      "title": "Thetford Aqua-Magic VI permanent RV toilet",
+      "publisher": "Thetford",
+      "url": "https://www.thetford.com/us/thetford-support/aqua-magic-vi/",
+      "supports": "the Aqua-Magic VI as a lightweight polypropylene toilet with a foot flush and a residential-sized soft close seat"
+    },
+    "thetford-style-ii-page": {
+      "title": "Thetford Aqua-Magic Style II",
+      "publisher": "Thetford",
+      "url": "https://www.thetford.com/us/thetford-support/aqua-magic-style-ii/",
+      "supports": "the Style II as a ceramic bowl on a polypropylene base, in high or low profile"
+    },
+    "thetford-permanent-page": {
+      "title": "Thetford permanent toilets",
+      "publisher": "Thetford",
+      "url": "https://www.thetford.com/us/portable-and-rv-toilets/permanent-toilets/",
+      "supports": "the Residence as a polypropylene toilet and the Style II as a ceramic bowl on a polypropylene base"
+    },
+    "thetford-rv-support": {
+      "title": "Thetford RV toilet support",
+      "publisher": "Thetford",
+      "url": "https://www.thetford.com/us/rv-toilet-support/",
+      "supports": "the published profile heights of the permanent toilets: Aqua-Magic VI 17.8 in high and 13.9 in low, Residence and Style II 18 in high and 12.5 in low"
+    },
+    "thetford-identify-faq": {
+      "title": "How do I identify my toilet model if it does not have a data tag?",
+      "publisher": "Thetford",
+      "url": "https://www.thetford.com/us/faq/how-do-i-identify-my-toilet-model-if-it-doesnt-have-a-data-tag/",
+      "supports": "the questions Thetford itself asks to identify a toilet with no tag: flush type, pedal count and position, and whether the bowl is porcelain or plastic"
+    },
+    "thetford-serial-faq": {
+      "title": "Where can I locate the serial number for my toilet?",
+      "publisher": "Thetford",
+      "url": "https://www.thetford.com/us/faq/where-can-i-locate-the-serial-number-for-my-toilet/",
+      "supports": "the Thetford data tag on the back of the toilet or on the base, depending on the model"
+    }
+  },
+  "identification": {
+    "label_locations": [
+      { "maker": "Dometic", "where": "on the toilet base, under the water valve", "source": "dometic-300-iom" },
+      { "maker": "Thetford", "where": "on the back of the toilet, and on some models on the base", "source": "thetford-serial-faq" }
+    ],
+    "maker_questions": {
+      "note": "Thetford's own identification flow, printed here because it is the maker's method rather than ours. The tool asks the same kind of question.",
+      "source": "thetford-identify-faq",
+      "questions": [
+        "Is the unit a hand flush, foot flush, or wall panel flush?",
+        "If a hand flush: is it a mechanical lever or an electric button? If it is an electric button, does it have one button or two?",
+        "If a foot flush: does it have one or two pedals? Locate the pedals when sitting on the toilet, on the left side or the center.",
+        "If a wall panel flush: does it have one or two buttons or switches?",
+        "Is the bowl porcelain or plastic?"
+      ]
+    },
+    "published_figures": {
+      "note": "Figures the makers publish for their own models. A tape measure settles the first two questions a person can answer at home.",
+      "rough_in": [
+        { "maker": "Dometic", "model": "300", "inches": "8.5", "source": "dometic-300-iom" },
+        { "maker": "Dometic", "model": "301", "inches": "8.75", "source": "dometic-300-iom" },
+        { "maker": "Dometic", "model": "400 series", "inches": "7.625", "source": "dometic-400-page" },
+        { "maker": "Dometic", "model": "510HPS", "inches": "11", "source": "dometic-510-page" }
+      ],
+      "seat_height": [
+        { "maker": "Dometic", "model": "300", "height": "standard 18.25", "source": "dometic-300-iom" },
+        { "maker": "Dometic", "model": "301", "height": "low profile 14", "source": "dometic-300-iom" },
+        { "maker": "Dometic", "model": "310", "height": "standard 18", "source": "dometic-310-manual" },
+        { "maker": "Dometic", "model": "311", "height": "low profile 13.75", "source": "dometic-300-iom" },
+        { "maker": "Dometic", "model": "320", "height": "standard 18.25", "source": "dometic-300-iom" },
+        { "maker": "Dometic", "model": "321", "height": "low profile 13.5", "source": "dometic-300-iom" },
+        { "maker": "Thetford", "model": "Aqua-Magic VI", "height": "high 17.8, low 13.9", "source": "thetford-rv-support" },
+        { "maker": "Thetford", "model": "Aqua-Magic Residence", "height": "high 18, low 12.5", "source": "thetford-rv-support" },
+        { "maker": "Thetford", "model": "Aqua-Magic Style II", "height": "high 18, low 12.5", "source": "thetford-rv-support" }
+      ],
+      "bowl_material": [
+        { "maker": "Dometic", "model": "300 and 301", "material": "Polypropylene", "source": "dometic-300-iom" },
+        { "maker": "Dometic", "model": "310, 311, 320 and 321", "material": "Vitreous ceramic", "source": "dometic-300-iom" },
+        { "maker": "Thetford", "model": "Aqua-Magic VI", "material": "Polypropylene", "source": "thetford-amvi-page" },
+        { "maker": "Thetford", "model": "Aqua-Magic Residence", "material": "Polypropylene", "source": "thetford-permanent-page" },
+        { "maker": "Thetford", "model": "Aqua-Magic Style II", "material": "Ceramic bowl on a polypropylene base", "source": "thetford-style-ii-page" }
+      ],
+      "seat_material": [
+        { "maker": "Dometic", "model": "300, 301, 310 and 311", "material": "Polypropylene", "source": "dometic-300-iom" },
+        { "maker": "Dometic", "model": "320 and 321", "material": "Enameled wood", "source": "dometic-300-iom" },
+        { "maker": "Dometic", "model": "510HPS", "material": "Enameled wood", "source": "dometic-510-page" }
+      ],
+      "waste_gate": [
+        { "maker": "Dometic", "part_name": "Flush ball, which rotates", "source": "dometic-300-iom" },
+        { "maker": "Thetford", "part_name": "Blade seal, on a blade that slides", "source": "thetford-water-module-31705" }
+      ]
+    }
+  }
+}

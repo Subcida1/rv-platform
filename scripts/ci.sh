@@ -88,6 +88,7 @@ step "check-structure.py: guide wrapper and guide-go placement" \
 # ---------------------------------------------------------------- 2. behaviour
 step "weight calculator"                       node scripts/test-weight-calculator.js
 step "tire date decoder"                      node scripts/test-tire-date.js
+step "toilet valve finder"                    node scripts/test-toilet-valve.js
 node scripts/test-snow-load.js
 step "accessibility (axe)"                    node scripts/check-a11y.mjs
 # THE HEADING RULE, gated rather than remembered. Ty, 2026-10-10: "This should be a site wide
