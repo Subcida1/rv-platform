@@ -297,6 +297,14 @@ input,select,textarea{font-family:inherit}
 .util{background:var(--surface);border-bottom:1px solid var(--border);font-size:12.5px;color:var(--text-2)}
 .util .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:7px;padding-bottom:7px}
 .util-l,.util-r{display:flex;gap:22px;align-items:center}
+/* A STRIP LINK IS ONE LINE. Ty, 2026-10-11, mobile pass: "a lot of stuff still isn't centered or
+   visually balanced when it should be on mobile." Measured at 360px before this rule, on every
+   page of the site: "Find RV service" rendered 43px wide and THREE lines tall, and "Winter
+   guides" 37px wide and two lines. The flex row was squeezing each link to a fraction of its
+   text and letting the words break, so the top of every page on a phone was a stack of single
+   words. nowrap stops the break; the flex row then fits, because three labels at this size come
+   to about 230px of a 312px line. */
+.util a{white-space:nowrap}
 .util a:hover{color:var(--text)}
 .util .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--brand);margin-right:6px}
 /* Tap targets. Inline links in this strip and in the footer legal row are 20-21px
@@ -382,6 +390,17 @@ input,select,textarea{font-family:inherit}
 .no-nav a.no-nav-part:hover{border-color:var(--b1);color:var(--b1)}
 .no-nav ul{list-style:none;margin:0 0 0 2px;padding:0}
 .no-nav ul li a{padding-left:10px}
+/* THE DISCLOSURE NEEDS THE WHOLE ROW ON A PHONE, OR IT IS A COLUMN OF BROKEN WORDS. Measured at
+   360px on manuals/start-here.html, from the instrument added the same day (audit-balance.mjs,
+   the SQUEEZE check): .no-nav-foot is a flex row holding the "All 80 sections" disclosure and the
+   Sources link, so the disclosure was squeezed to 105px, its list to 103px, and every section
+   link inside it to 83px, which is narrower than the word "maintenance". Opening it produced a
+   list 11,703px tall whose links broke mid-word. Below 720px the two stack instead, the
+   disclosure takes the full width, and the list reads as a list. */
+@media(max-width:720px){
+  .no-nav-foot{flex-direction:column;align-items:flex-start}
+  .no-nav-all{width:100%}
+}
 
 /* The guide's own sections. <details> is already styled for .faq and .man-models; this is the
    same idea at a size that suits a long read, and it needs no script. */
@@ -1229,6 +1248,11 @@ footer a:hover{color:var(--text-inv)}
 }
 @media(max-width:720px){
   .nav-links,.util-r span{display:none}
+  /* About and Contact are already in the burger menu, and the three links on the left do
+     not leave room for them at this width. Hiding the pair is what keeps the strip to one
+     line instead of letting all five squeeze. Measured at 360px: three labels need about
+     230px of a 312px line, and the pair needs a further 98px. */
+  .util-r{display:none}
   .nav-cta-cap{display:none}
   .burger{display:block}
   .cat-grid,.camp-grid,.part-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -3543,8 +3567,18 @@ a.tchip:focus-visible{outline:2px solid var(--b1,var(--brand));outline-offset:2p
 
 /* 2. three chips across on a phone, not a sideways scroller */
 @media(max-width:720px){
-  .chips-tools,.tool-strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;overflow:visible}
-  .chips-tools .chip,.tool-strip .chip{display:flex;align-items:center;justify-content:center;text-align:center;padding:9px 8px}
+  /* A CHIP LABEL GETS ONE LINE. Ty, 2026-10-11, looking at the homepage on a phone: "those
+     buttons look pretty out of place with the text double lining and what not. make the text
+     inside them look cleaner." He is describing the consequence of equal-width cells: at 360px a
+     three-column grid gives every chip a 99px cell, and a label like "Weight and towing" cannot
+     fit that, so it breaks over two lines and the band turns into a row of tall blobs with ragged
+     text in them. The chips are now sized by their own label and never break, so every one is a
+     single clean line; rows still centre, so a short last row stays balanced rather than leaving
+     a hole. The longest label on the site is 24 characters, about 150px at this size, well
+     inside a 312px line, so nothing can overflow. */
+  .chips-tools,.tool-strip{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;overflow:visible}
+  .chips-tools .chip,.tool-strip .chip{flex:0 0 auto;min-width:0;white-space:nowrap;
+    display:inline-flex;align-items:center;justify-content:center;text-align:center;padding:8px 14px}
 }
 
 /* 3. a full-width card turns on its side */
