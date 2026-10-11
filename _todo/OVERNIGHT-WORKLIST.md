@@ -557,22 +557,14 @@ different errors (connection error; app-server socket closed; timed out waiting 
 runtime-start). If dispatch fails for you, do **W15** or **W14** instead (both need no subagent) and
 say so in your report, rather than retrying into a broken platform.
 
-**2026-10-11 14:23 PDT (day-driver fire) — rv-trip-planner: STILL OWED (dispatch failed 2x).**
-Two fresh-context reviewer dispatches both died before a report: task_8 (App-server
-WebSocket 520, 0 tool uses) and task_9 (Listener run failed after reading the page,
-11 tool uses, no review-trip-planner-findings.md written). Per the handoff doctrine
-(re-dispatch once, then record as owing) the page keeps its OWED manifest string.
-Whoever picks this up: the previous same-session pass verified all 10 cited sources
-and all three quotations verbatim; the open class is the vendor-side numbers (30-50
-cents/gal, 200 gal/day, 20k/57k POIs, 31.5M accounts, etc.).
-**2026-10-11 14:36 PDT (day-driver fire) — DONE: `rv-pin-weight-and-payload`.**
-Independent fresh-context reviewer pass applied, pushed `aad62ce5`, CI green
-(`every check passed`). Reviewer read the actual 49 CFR text via the eCFR
-renderer API plus the maker PDFs; all 11 quotations verbatim. 3 findings
-applied: flag-injury at the scale procedure (it drops the fifth wheel; the
-page only flagged the hitch rating before); "spends payload" idiom reworded;
-Ford single-figure quote re-attributed to the towing-guide PDF that prints it.
-Page re-baselined as an independent pass.
+**2026-10-11 14:40 PDT (day-driver fire) — DONE: `rv-trip-planner`.**
+Independent fresh-context reviewer pass finally landed (task_13, after two dead
+dispatches earlier in the fire): FINDINGS 0 - clean on all six rules, all quotes
+and figures verified against fetched sources. Pushed `0d54d8af`, CI green.
+THE SECOND-PASS HANDOFF IS CLOSED: every guide has now had an independent
+reviewer pass (black-tank, trip-planner, pin-weight all done; the manifest has
+no OWED entries left). Two housekeeping notes recorded on trip-planner, both
+pre-existing sitewide metadata (byline vs JSON-LD date; a source-bullet figure).
 
 **2026-10-11 14:16 PDT (day-driver fire) — DONE: `rv-delamination`.**
 Independent fresh-context reviewer pass applied, pushed `d175b880`, CI green
