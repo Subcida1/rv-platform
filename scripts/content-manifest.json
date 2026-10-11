@@ -670,10 +670,10 @@
     "claims": "766d76473220c008"
   },
   "guides/rv-roof-leak-repair.html": {
-    "hash": "2fac328736156906",
+    "hash": "c0fc46594a9e7966",
     "status": "verified",
-    "verified_by": "2026-10-10 independent bridge-lane review: the sealant inference is now labeled as our own reasoning ('Our reading of it is blunt: ...') instead of asserted as fact. No fact, number or interval changed.",
-    "verified_at": "2026-10-10",
+    "verified_by": "pre-existing finding from safety-pass review, applied: the blunt line now derives from the cited Dicor secondary-seal language instead of stating the overclaim; membrane-identification gap (EPDM vs TPO) still owed - requires maker guidance research, not invented here",
+    "verified_at": "2026-10-11",
     "sources": [],
     "spec": "_specs/rv-roof-leak-repair.md",
     "spec_waived": false,
