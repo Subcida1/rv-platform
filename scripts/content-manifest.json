@@ -655,7 +655,7 @@
   "guides/rv-refrigerator-not-cooling.html": {
     "hash": "d90409b077b7eb9a",
     "status": "verified",
-    "verified_by": "Independent fresh-context review 2026-10-10, all seven cited sources fetched. 7 findings applied (3 injury, 1 wrong-fact, 2 sourcing, 1 style). Applied: the page told the reader the electric element 'should be warm to the touch' one card after its own callout forbade touching the boiler - 'to the touch' is gone; the same card called the boiler 'at the top', where the boiler is the vessel the burner or element heats at the BOTTOM of the cooling unit, so the location is now stated and the absorber placed above it; the burner-orifice step was framed as the first thing an owner should try when the cited Norcold manual makes orifice cleaning dealer-only work and Dometic restricts gas work to qualified personnel, so it now routes to a technician; the ammonia cooling-unit card carried no flag while the identical burn hazard one card earlier did, and it has one now, with the infrared-thermometer instruction; the NHTSA trace sentence attributed a boiler-tube fatigue crack to both makers' recalls when the cited Norcold notice describes no crack at all - it is now scoped to the Dometic recalls, with Norcold's sensing-retrofit recall described as the different fault it is, and the unsourced 'corrosion' attribution dropped; 'Norcold's service literature' (an unnamed document) replaced with what the cited Norcold owner's manual actually lists; and the visible 'Last updated' date and the JSON-LD dateModified now agree at 2026-10-10. OWED AND UNVERIFIED: the specific NHTSA campaign PDF carrying the boiler-tube fatigue wording could not be located (the campaign URLs tried returned 404), so the crack description still rests on the NHTSA recall portal link rather than a named campaign document; a campaign number would close it. The shared-footer 'licences' is sitewide chrome.",
+    "verified_by": "Cloud: removed a legacy h3 class=mt workaround whose 14px top margin out-specified the new prose heading scale; the heading now gets its space from the scale like every other one. No wording changed.",
     "verified_at": "2026-10-10",
     "sources": [],
     "spec": "_specs/rv-refrigerator-not-cooling.md",
@@ -835,7 +835,7 @@
   "guides/winterize-plumbing.html": {
     "hash": "231e2df28d80db76",
     "status": "verified",
-    "verified_by": "2026-10-10 voice pass, Ty's package guides batch: British spellings to American, collective-noun agreement to singular, and phrasing only. No fact, number or interval changed.",
+    "verified_by": "Cloud: removed a legacy h3 class=mt workaround whose 14px top margin out-specified the new prose heading scale; the heading now gets its space from the scale like every other one. No wording changed.",
     "verified_at": "2026-10-10",
     "sources": [],
     "spec": "_specs/winterize-plumbing.md",

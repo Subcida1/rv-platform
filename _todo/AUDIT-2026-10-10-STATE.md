@@ -118,3 +118,52 @@ What the two failures were, so they are recognised if they return:
   - `accessibility (axe): 8 color-contrast failures on parts/index.html`, all the jump bar's
     count spans: they were tuned against a white bar (4.9:1 on `--text-3`) and the new tint took
     them to 4.13:1. **A background change is not free: it moves every ink that sits on it.**
+
+## LATER THE SAME EVENING (20:00-20:35 PDT) — the second half of the audit
+
+Everything below went up in commits 85fff2c6, da4ac1d9, a57e9dca and the one this file rides with.
+
+**The one rule that governs control states on this site, as Ty stated it three times tonight: the
+control RESTS in the stronger of its two states and RELEASES on hover.** Applied to the fits pills on
+/parts/ (solid --tint-ink at rest, pale tint on hover, inverted when selected), to the `doc-link`
+manuals buttons (white face and full ink at rest, tinted face on hover), and to the `.hub-jump` chips
+(white at rest, solid --tint-ink on hover, because the pale state is invisible on a band that IS the
+pale tint). The reason in every case was the same: a control that only reaches full contrast under the
+pointer has to be touched to be read.
+
+**Jump bars**: counts removed from parts and the directory (they were numbers the reader read past;
+the counts beside each section heading stay), chips centred when a row does not fill, `--tint-edge` at
+rest before the white-face change.
+
+**Guides index**: the trip-planner pinned card is gone at Ty's instruction; the cards inside each group
+are ordered by demand. EVIDENCE, and its limits: Bing returned NOTHING for all 44 multi-word guide
+phrases and only 13 of 81 head terms, so 31 guides are ranked from the RVBusiness 7,300-record field
+service-call ranking and the community thread counts in research/originrv-demand-research-2026-09-22.md
+rather than from volume. /tmp/guide-ranks.json holds the per-guide tier with the basis written in its
+header. Only real disagreement with Ty's instinct: battery topics measure high (battery not charging
+3,291/mo, battery disconnect 1,299/mo) and lead the electrical group, though part of that is probably
+car traffic.
+
+**Directory tiles stay** (Ty's call, 2026-10-10): Southeast (13 states, 5 rows) and Northeast (11, 4)
+exceed his three-row limit for tiles, but the 50 state photographs exist ONLY on that hub -- no state
+page uses them -- so converting to buttons would take them out of view entirely.
+
+**Headings now own the space above them, and it is gated.** Ty: "This should be a site wide thing, we
+should probably make a rule and a tool to verify this." Rule: a heading needs at least 24px above it
+and at least as much above as below. Tool: `scripts/check-heading-space.mjs`, wired into `ci.sh`. It
+found 669 headings across 53 pages sitting flush against the paragraph above them, all from
+`.prose h2`/`.prose h3` setting a bottom margin and no top margin; the scale now gives h2 44px and h3
+32px above. Also fixed: `h2.man-h2` spacing was scoped to `.no-body` (so the recalls page had none),
+the page title's breadcrumb gap, and a legacy `h3.mt` workaround. Final sweep: 1,109 headings, 0
+crowded.
+
+**Two instrument traps recorded so they are not re-derived**: the first heading sweep flagged 896
+headings, most of them CORRECT because a `.sec-eyebrow` kicker or a card icon labels its own heading --
+an attached label is not "content above"; and the first post-fix run reported "clean (12 headings)" on
+a site with 1,109 because it spawned `python -m http.server`, which 404s this site's extensionless
+URLs. Serve with scripts/serve-static.py. Both are in the file's header.
+
+**Still open**: the Airstream citation on guides/rv-delamination.html is the only quote on the site
+that cannot be checked -- support.airstream.com answers 403 to every fetch. Ty's ruling: it stays,
+because it is a list of where seams are rather than a procedure, and general advice without a source
+is acceptable as long as nothing in it can damage anything.

@@ -90,6 +90,12 @@ step "weight calculator"                       node scripts/test-weight-calculat
 step "tire date decoder"                      node scripts/test-tire-date.js
 node scripts/test-snow-load.js
 step "accessibility (axe)"                    node scripts/check-a11y.mjs
+# THE HEADING RULE, gated rather than remembered. Ty, 2026-10-10: "This should be a site wide
+# thing, we should probably make a rule and a tool to verify this." The tool found 669 headings
+# sitting flush against the paragraph above them, all of them from one rule with margin-bottom and
+# no margin-top, and one rule fixed all 669 -- which is exactly the kind of thing that creeps back
+# one page at a time. It brings its own browser and server, like the a11y step above.
+step "heading space"                          node scripts/check-heading-space.mjs
 python3 scripts/test-link-opportunities.py
 step "directory rendering"                     node scripts/test-directory.js
 step "every state page wires its own data"    node scripts/test-state-pages.js

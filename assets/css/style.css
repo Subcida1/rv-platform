@@ -2083,9 +2083,20 @@ details.faq p{color:var(--text-2);font-size:16px;line-height:1.7;padding-bottom:
 .prose{padding:28px 0 60px}
 .prose .narrow{max-width:820px}  /* the text column. The hub has no
    narrow wrap: its wrap holds the card grids and must stay full width. */
-.prose h2{font-size:22px;font-weight:800;margin-bottom:14px}
+/* A HEADING OWNS THE SPACE ABOVE IT. Ty, 2026-10-10: "all of our titles are like really
+   bunched up ... All of these titles are like right below the content above them. There should
+   be more spacing between titles or headings ... This should be a site wide thing."
+   He was reading the effect of this rule: the prose scale set a heading's space BELOW it and
+   none above, so every h2 in an article sat flush against the paragraph it followed -- 0px above,
+   14px below, which makes a heading read as the last line of the previous block. Measured with
+   scripts/check-heading-space.mjs: 669 headings across 53 pages, and every one of them an h2 or
+   an h3 inside .prose. The space above is now the larger of the two, which is the rule the
+   checker enforces: at least 24px, and never less than the space below. */
+.prose h2{font-size:22px;font-weight:800;margin-top:44px;margin-bottom:14px}
 .prose h2.sm{font-size:17px}
-.prose h3{font-size:17px;font-weight:800}
+.prose h3{font-size:17px;font-weight:800;margin-top:32px;margin-bottom:12px}
+/* No reset for :first-child above: a heading that leads its container is already flush and the
+   browser collapses the margin away, and every prose block here opens with a lede, not a heading. */
 .prose h3.sm{font-size:16px}
 .prose h3.mt{margin-top:14px}
 /* 16px, not 14.5px. Ty, 2026-10-09: "mobile should be our priority formatting... sizing".
@@ -2394,11 +2405,26 @@ figure:has(svg[role="img"]){overflow-x:auto;overflow-y:hidden}
    each narrower than the one above them for no reason a reader could see. The title also wrapped to
    two lines with room to spare beside it. */
 .man-title{max-width:none}
-.man-crumb{font-size:13px;font-weight:600;margin-bottom:8px}
+/* 24px, not 8. The page title is a heading too, and at 8px it measured 12px from the breadcrumb
+   above it against 14px to the lede below -- closer to the trail than to its own page. Ty's rule
+   is that the space above a heading has to be the larger of the two. */
+.man-crumb{font-size:13px;font-weight:600;margin-bottom:24px}
 .man-crumb a{color:var(--text-2)}
 .man-crumb a:hover{color:var(--b1)}
 .man-lede{margin-top:14px;color:var(--text-2);font-size:16px;max-width:none}
-.man-h2{font-size:clamp(20px,2.6vw,26px);font-weight:800;letter-spacing:-.02em;margin-bottom:20px}
+/* THE SPACE ABOVE A SECTION HEADING IS NOT OPTIONAL, AND IT IS NOT SCOPED.
+   Ty, 2026-10-10, on manuals/recalls.html: "all of our titles are like really bunched up ...
+   All of these titles are like right below the content above them. There should be more spacing
+   between titles or headings ... This should be a site wide thing, we should probably make a rule
+   and a tool to verify this."
+   The spacing he was missing DID exist, but only inside `.no-body`, and the recalls page is not a
+   .no-body page: it is `.sec.pad-10-60 > .wrap`, so every heading there sat at 0px above and 20px
+   below -- closer to what preceded it than to what it introduced. Measured with
+   scripts/check-heading-space.mjs before the fix: six headings, all 0px above.
+   The margin lives on the class now, so every page that uses .man-h2 gets it. The border-top and
+   the extra padding stay scoped to .no-body, where they belong to that page's own rhythm. */
+.man-h2{font-size:clamp(20px,2.6vw,26px);font-weight:800;letter-spacing:-.02em;margin-top:52px;margin-bottom:20px}
+.man-h2:first-child{margin-top:0}
 .man-count{margin-left:12px;font-size:13px;font-weight:700;letter-spacing:0;text-transform:none;color:var(--text-3);white-space:nowrap}
 
 .man-grid{grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;align-items:stretch}
