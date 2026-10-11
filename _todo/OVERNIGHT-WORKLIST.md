@@ -136,7 +136,24 @@ The independent pass caught it; reverted in `64e9327`.
 loose fragment. A fragment returns the first occurrence, which may be a different sentence in the same
 document — and an empty or mismatched result is evidence about the pattern, not about the file.**
 
-**THE REMAINING THREE SECOND PASSES ARE BLOCKED ON MACHINE MEMORY, AND HANDED OFF (2026-10-10 17:43).**
+**RETRY ATTEMPTED 2026-10-10 18:28 PDT — STILL BLOCKED, TWO INDEPENDENT REASONS.**
+The armed retry ran `_todo/SECOND-PASS-HANDOFF.md`'s own stop checks and stopped, as instructed.
+1. **Memory has not recovered.** `free -h`: **swap 8.3 GiB of 8.3 GiB used, 336 KiB free**, RAM
+   available 1.0 GiB. Dispatching a reviewer here fails roughly half the time and can tip the machine
+   onto a co-tenant session's commit.
+2. **The tree is dirty with someone else's site-wide work.** `git status --short` shows ~120 modified
+   files — every `directory/*.html`, every `guides/*.html`, every `manuals/*.html`, the tools pages,
+   plus `scripts/verify.py`, `scripts/build-manuals-pages.py`, `scripts/site_constants.py` — and two
+   new untracked files (`scripts/check-link-intent.py`, `scripts/check-truncation.mjs`,
+   `_todo/AUDIT-2026-10-10-STATE.md`). That is a site-wide pass in flight. The handoff says a dirty
+   tree means **do not proceed**, and it is right: re-baselining a page while a site-wide sweep is
+   uncommitted would put my manifest write on top of a moving target.
+`conv-2d4534d8` and `conv-cae364cc` both read IDLE, so the work in the tree belongs to a session not
+in this list — **do not stage, revert or "finish" any of it.** The four owed second passes
+(`rv-black-bank`, `rv-trip-planner`, `rv-pin-weight-and-payload`, `guides/index.html`) remain blocked,
+not skipped, and `_todo/SECOND-PASS-HANDOFF.md` stays the entry point.
+
+**THE REMAINING SECOND PASSES ARE BLOCKED ON MACHINE MEMORY, AND HANDED OFF (2026-10-10 17:43).**
 `rv-driving-motorhome`, `rv-pre-trip-walkaround` and `rv-maintenance-schedule` have now had their
 independent second passes (see the rows above; they found 6, 9 and 6 further defects, and the
 walkaround pass also caught a defect MY first pass had introduced). **FOUR guides still owe theirs**
