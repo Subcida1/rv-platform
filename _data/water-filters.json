@@ -256,13 +256,14 @@
       },
       "not_published": [
         "micron rating"
-      ]
+      ],
+      "part_source": "hydrolife-faq"
     },
     {
       "id": "clearsource-premier",
       "maker": "Clearsource",
       "model": "Premier two canister external system",
-      "part": "SYSTM-002",
+      "part": "",
       "connection": "stainless steel connections that fit standard RV water hoses",
       "flow_gpm": "6 to 6.5 at 40 psi static",
       "pressure_psi": "",
@@ -270,7 +271,8 @@
       "capacity": "",
       "source": "clearsource",
       "not_published": [
-        "maximum pressure"
+        "maximum pressure",
+        "model number"
       ]
     },
     {
@@ -523,6 +525,12 @@
       "what": "a second source for the 10 by 4.5 and 10 by 2.5 dimensions",
       "why": "the sheet this record first cited answered HTTP 404 on 2026-10-11, so it was dropped rather than kept as a link that does not resolve",
       "where_to_look": "the NeoLogic CTOX series sheet on the maker's own domain, or another distributor hosting the maker's document"
+    },
+    {
+      "maker": "Clearsource",
+      "what": "a published model number for the Premier system",
+      "why": "the maker's own site names the system Premier and gives its product handle as premier-rv-water-filter-system, but no page reached on 2026-07-11 prints the SYSTM-002 number this record first carried, so the number was removed rather than published on a retailer's word",
+      "where_to_look": "the Clearsource product page or its printed manual, if one is ever published"
     }
   ]
 }

@@ -188,6 +188,16 @@
     return name;
   }
 
+  /* The number and its citation, when the page that carries the figures is not the page that prints
+   * the number. Built as its own sentence rather than by rewording sourceLine, which reads
+   * "Source: ..." and produced "The part number comes from Source: ...". */
+  function partSourceNote(key) {
+    var s = (rec().sources || {})[key];
+    if (!s) return '';
+    return '<p class="note-sm">The part number comes from <a class="link" href="' + esc(s.url) +
+      '" target="_blank" rel="noopener">' + esc(s.title) + '</a>.</p>';
+  }
+
   function renderQuestion(key) {
     var q = QUESTIONS[key];
     var buttons = q.options.map(function (o) {
@@ -209,7 +219,12 @@
         '      <h3>' + itemName(f) + '</h3>\n' +
         (p.lines.length ? '      <p>' + p.lines.join(' ') + '</p>\n' : '') +
         (p.withheld.length ? '      <p>' + p.withheld.join(' ') + '</p>\n' : '') +
-        '      ' + sourceLine(f.source) + '\n' +
+        // A ROW MAY NAME A SECOND MAKER PAGE FOR ITS NUMBER. The page that carries the figures is
+        // not always the page that prints the model number (Hydro Life publishes the flow rate on
+        // the product page and the number on its FAQ), so the number is cited to its own document
+        // rather than to the one beside the figures.
+        '      ' + sourceLine(f.source) +
+        (f.part && f.part_source && f.part_source !== f.source ? partSourceNote(f.part_source) : '') + '\n' +
         '     </div>';
     }).join('\n');
     return '<div class="panel panel-24">\n' +
