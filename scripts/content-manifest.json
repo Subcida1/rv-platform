@@ -500,10 +500,10 @@
     "claims": "9e753c5476a782bd"
   },
   "guides/rv-delamination.html": {
-    "hash": "c90b6bc63fa7d609",
+    "hash": "49124425b5f826fd",
     "status": "verified",
-    "verified_by": "Cloud: corrected the Winnebago sealant quotation against the sheet's own labels (the page had moved the B and C from the TV antenna to the radio antenna); the Airstream seam list stays and is UNVERIFIABLE, support.airstream.com answers 403 to any fetch, and it is a list of locations rather than a procedure. Spec waived: no _specs/rv-delamination.md exists.",
-    "verified_at": "2026-10-10",
+    "verified_by": "INDEPENDENT fresh-context reviewer pass 2026-10-11 (strictly stronger model) -- the pass the earlier hand-check OWED. Reviewer fetched every cited source (Azdel, Jayco, Brinkley, Keystone, Grand Design, Winnebago, Airstream, Protimeter, Tramex, OSHA, EPA, NHTSA TSBs); quote fidelity PASS on all, no number lost. 4 findings applied: (1) Protimeter 'dry 6-16.9 / at risk 17-19.9 / wet 20+' band was NOT in the cited article (I re-fetched protimeter.com/how-does-a-moisture-meter-work and confirmed) -- band cut, sentence now says readings are set against a wood scale; (2-4) three verb-agreement voice fixes: 'Protimeter, which makes the meters, documents the method', 'Keystone ... notes', 'The EPA also gives'. No flag owed (descriptive page, no hazardous instructions).",
+    "verified_at": "2026-10-11",
     "sources": [],
     "spec": null,
     "spec_waived": true,
@@ -994,13 +994,6 @@
     "verified_at": null,
     "sources": []
   },
-  "tools/rv-loan.html": {
-    "hash": "bb8b433232d12540",
-    "status": "unverified",
-    "verified_by": null,
-    "verified_at": null,
-    "sources": []
-  },
   "tools/rv-appliance-board-finder.html": {
     "hash": "bcd9f8d3d2d1a924",
     "status": "unverified",
@@ -1020,6 +1013,13 @@
     "spec": null,
     "spec_waived": true,
     "claims": []
+  },
+  "tools/rv-loan.html": {
+    "hash": "bb8b433232d12540",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
   },
   "tools/rv-recall-lookup.html": {
     "hash": "e6f7dbb8c75481e8",
