@@ -3039,7 +3039,15 @@ body.is-embed .embed-credit a{font-weight:800;color:var(--b1)}
 @media(max-width:720px){
   .tool-btns,.loc-row,.prose .spread,.hero-cta,.cta-row{justify-content:center}
   /* Equal halves of the row, so they sit side by side rather than stacking. */
-  .tool-btns .btn,.prose .spread .btn{flex:1 1 0;min-width:0;padding-left:14px;padding-right:14px}
+  /* Equal halves of the row, so they sit side by side rather than stacking -- and never narrower
+     than their own label. flex:1 1 0 with min-width:0 let a three-button prev/next row shrink
+     each button to 91px, which is narrower than the word "troubleshooting" in
+     "Next: Refrigerator troubleshooting": measured on guides/rv-water-heater-not-heating.html at
+     360px, the label overflowed its button by 10px. min-width:min-content keeps them side by side
+     while they fit and lets the row wrap when they do not, which is Ty's own fallback from
+     2026-10-08: stacked buttons are acceptable, but they centre rather than sitting left. Found
+     by scripts/audit-balance.mjs. */
+  .tool-btns .btn,.prose .spread .btn{flex:1 1 auto;min-width:min-content;padding-left:14px;padding-right:14px}
 }
 
 /* A big number with its label crammed against it.

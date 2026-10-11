@@ -54,9 +54,22 @@ const SAMPLES = [
 ];
 const PAGES = named.length ? named : SAMPLES;
 
-const list = await (await fetch(`http://127.0.0.1:${PORT}/json/list`)).json();
-const t = list.find((x) => x.type === 'page');
-if (!t) { console.error('no page target on ' + PORT); process.exit(2); }
+/* ITS OWN TAB, ALWAYS. This used to take the first existing page target and drive it, which is
+   the wrong thing to do to a browser somebody else may have open: on 2026-07-11 an entire sweep
+   was measured against another session's tab. Its symptom was not an error but a finding that
+   would not reproduce -- a related button reported as squeezed on one run and clean on the next
+   three -- because the driver holding the tab was navigating it between this tool's readings.
+   Three page targets were open on port 9341 and one of them was a page nobody here had asked for.
+   So the instrument opens its own about:blank tab, uses only that, and closes it when it is done. */
+let target;
+try {
+  target = await (await fetch(`http://127.0.0.1:${PORT}/json/new?about:blank`, { method: 'PUT' })).json();
+} catch (e) { target = null; }
+if (!target || !target.webSocketDebuggerUrl) {
+  console.error('could not open a tab on ' + PORT + ' (is Chrome listening?)');
+  process.exit(2);
+}
+const t = target;
 const ws = new WebSocket(t.webSocketDebuggerUrl);
 await new Promise((r) => (ws.onopen = r));
 let id = 0; const p = new Map();
@@ -266,5 +279,6 @@ for (const w of WIDTHS) {
   }
 }
 ws.close();
+try { await fetch(`http://127.0.0.1:${PORT}/json/close/${t.id}`); } catch (e) { /* the tab is ours to leave */ }
 console.log('\n' + (failures ? failures + ' element(s) off-centre or too narrow for their text' : 'nothing off-centre, no text squeezed'));
 process.exit(failures ? 1 : 0);
