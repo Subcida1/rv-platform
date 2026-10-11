@@ -1065,6 +1065,31 @@ pattern. **Next fire: add a marker for this count in the generator**, which is a
 and the `verify.py` marker rule. The number itself stays 110 unless Ty says the sentence should cover
 recalls too.
 
+### W18. Mobile visual alignment run - all pages (Ty, 2026-10-11 via Neo)
+
+Ty: "a lot of stuff still isn't centered or visually balanced when it should be on mobile. This is a
+mobile-specific run."
+
+Measure every page at phone width and fix what is off-centre or visually unbalanced. The instruments
+already exist and were built for exactly this:
+- `node scripts/audit-style.mjs` - the four dimensions (centering, fading, sizing, spacing) measured
+  on the RENDERED page at 360px, aggregated by selector. This is the centering instrument.
+- `node scripts/audit-mobile.mjs --widths 360,393,430 --port 9341` - cramped text, overflow, sub-44px
+  targets (it defaults to Chrome on 9340; the live browser is usually on 9341).
+- `node scripts/audit-layout.mjs` - escape, drift (one class of cell at a different x between rows),
+  overlap, sideways scroll.
+- `node scripts/shot.mjs` - screenshots, for the balance judgement the numbers cannot make.
+All need the static server on :8130 and Chrome on :9341.
+
+The rules are in `_todo/STYLE.md` ("The four visual rules"): centering is a decision, allowed on the
+selectors listed in `CENTER_OK` in `scripts/check-style.py`. A fix that centres a NEW selector must add
+it to that list deliberately or the gate fails. Where something is off-centre against the rule, fix
+it; where the rule is silent and a page reads unbalanced on a phone, that is a judgement call - record
+it in the queue rather than guessing.
+
+Run it page type by page type (hubs, guides, tools, manuals, directory, parts), fix as you go, and
+commit in batches. Tick this item when the sweep is clean or every remaining finding is recorded.
+
 ## BRIDGE — do not duplicate
 
 A live session owns `/home/user/claude-bridge`. As of 01:05: all six lanes healthy on v0.7.41, queue idle, `v0.7.42` staged in `outbox/` awaiting a paste into the **aistudio** lane by Ty (its own session knows the deploy path). **Work the bridge ONLY if:** the queue has jobs with no matching reply (spent jobs blocking a lane), or a heartbeat is stale. Sweep spent jobs with `tools/sweep-spent-jobs.py`. Do not deploy a userscript build yourself.
