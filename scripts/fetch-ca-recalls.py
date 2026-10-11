@@ -2,7 +2,7 @@
 """Snapshot Transport Canada's RV recalls into a file the browser can read.
 
 WHY A SNAPSHOT. Transport Canada publishes its recalls as a WebForms search (POST-bound, session
-based — a GET of the results page redirects to a 404) and an Atom feed. It sends no
+based, because a GET of the results page redirects to a 404) and an Atom feed. It sends no
 `access-control-allow-origin` header on either, so a page cannot fetch it. The feed is the only
 machine-readable surface, so this reads it on a schedule and writes what it finds.
 

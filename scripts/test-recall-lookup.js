@@ -2,7 +2,7 @@
 /* A runnable check for the RV recall lookup.
 
    WHY: this tool answers a safety question, so the two failures that matter are a MISS and a FALSE
-   ALL-CLEAR. Both come from the same place — asking the wrong name. NHTSA files one maker's recalls
+   ALL-CLEAR. Both come from the same place, which is asking the wrong name. NHTSA files one maker's recalls
    under several make strings (Jayco appears as JAYCO, JAYCO FIFTH WHEEL and JAYCO TRAVEL TRAILER),
    so a lookup that tries only the first one silently misses campaigns while looking like it worked.
    The alias map is therefore asserted here rather than trusted.

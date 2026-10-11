@@ -36,7 +36,7 @@
   var VPIC = 'https://vpic.nhtsa.dot.gov/api/vehicles';
 
   /* The maker map, mirrored from _data/recalls.json. `nhtsa` lists the strings NHTSA actually
-   * returns for that maker — several for several of them — and `lookup` is the maker's own recall
+   * returns for that maker, several for several of them, and `lookup` is the maker's own recall
    * tool where one was verified. */
   var MAKERS = [
     { id: 'airstream', name: 'Airstream', nhtsa: ['AIRSTREAM'] },
