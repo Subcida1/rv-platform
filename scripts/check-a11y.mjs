@@ -65,6 +65,12 @@ const REPRESENTATIVE = [
   // The parts hub is a page kind of its own (a 157-item reference with a filter bar), so a defect
   // in its shape reaches nobody's audit if it is not named here. Added with parts/index.html.
   'parts/index.html',
+  // THE BUTTON-DRIVEN FINDER IS ITS OWN PAGE KIND. It asks a sequence of questions and answers
+  // with buttons carrying data attributes, which is a different instrument from the calculators
+  // above (those are typed into). Added 2026-10-11 with the anode rod finder, which shares the
+  // shape with the toilet valve finder: an unlabelled or unreachable control here reaches nobody's
+  // audit otherwise.
+  'tools/rv-anode-rod.html',
 ];
 const args = process.argv.slice(2);
 const named = args.filter(a => !a.startsWith('--'));

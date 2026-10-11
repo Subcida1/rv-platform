@@ -55,12 +55,44 @@ const TOOLS = [
   's-result', '71 W'],                            // 300Wh / (0.77 derate x 5.5 peak sun hours)
  ['watts-amps', 'tools/watts-to-amps.html',   {'#e-volts':'120','#e-watts':'1800'},
   'e-result', '15.00 amps'],                      // 1800 / 120
+ /* THE TWO FINDERS ARE CLICK-DRIVEN, NOT TYPED INTO, and that is the shape this suite could not
+    see until 2026-10-11. The toilet valve finder and the anode rod finder both ask a sequence of
+    questions and answer with buttons, so a renamed id or a listener attached to the wrong node
+    breaks them exactly the way a mistyped input breaks the calculators above, and nothing here
+    exercised either. A value of {click:true} clicks the selector instead of typing into it, and
+    the entries are ordered because the questions come in an order. */
+ ['anode-rod-suburban', 'tools/rv-anode-rod.html',
+  {'[data-ar="brand"][data-ar-value="suburban"]': {click:true}},
+  'ar-result', '233514'],                         // Suburban's magnesium rod, from its own catalogue
+ ['anode-rod-no-anode', 'tools/rv-anode-rod.html',
+  {'[data-ar="brand"][data-ar-value="aluminium"]': {click:true}},
+  'ar-result', 'ANODE ROD, AND YOU DO NOT WANT ONE'],
+ ['anode-rod-by-fitting', 'tools/rv-anode-rod.html',
+  {'[data-ar="brand"][data-ar-value="unsure"]': {click:true},
+   '[data-ar="fitting"][data-ar-value="plug"]': {click:true}},
+  'ar-result', 'ANODE ROD, AND YOU DO NOT WANT ONE'],
+ ['toilet-valve-dometic', 'tools/rv-toilet-valve.html',
+  {'[data-tv="flush"][data-tv-value="foot"]': {click:true},
+   '[data-tv="brand"][data-tv-value="dometic"]': {click:true},
+   '[data-tv="dometic_pump"][data-tv-value="gravity"]': {click:true}},
+  'tv-result', '385311641'],
+ ['toilet-valve-thetford', 'tools/rv-toilet-valve.html',
+  {'[data-tv="flush"][data-tv-value="hand"]': {click:true},
+   '[data-tv="brand"][data-tv-value="thetford"]': {click:true}},
+  'tv-result', '31705'],
 ];
 for (const [name, page, inputs, outId, expect] of TOOLS) {
   await send('Page.navigate',{url:BASE+page});
   await new Promise(r=>setTimeout(r,1500));
   const missing = [];
   for (const [sel, v] of Object.entries(inputs)) {
+    if (v && typeof v === 'object' && v.click) {
+      const c = await evx('(function(){var e=document.querySelector(' + JSON.stringify(sel) + ');'
+        + 'if(!e) return "missing";e.click();return "ok";})()');
+      if (c !== 'ok') missing.push(sel + ':' + c);
+      await new Promise(r=>setTimeout(r,400));   // the answer renders before the next question
+      continue;
+    }
     const r = await evx('(function(){var e=document.querySelector(' + JSON.stringify(sel) + ');'
       + 'if(!e) return "missing";'
       + 'if(e.tagName==="SELECT"){e.value=' + JSON.stringify(v) + ';}'
@@ -71,11 +103,21 @@ for (const [name, page, inputs, outId, expect] of TOOLS) {
     if (r !== 'ok') missing.push(sel + ':' + r);
   }
   await new Promise(r=>setTimeout(r,900));
+  // THE EVIDENCE IS NOT TRUNCATED BEFORE IT IS JUDGED. This sliced the answer to 90 characters
+  // and then searched THAT for the expected value, so a tool whose answer is longer than 90
+  // characters failed on a correct page: the anode rod finder prints its heading first and the
+  // part number 233514 further down, and the check reported "want 233514 got YOU HAVE AN ANODE
+  // ROD, AND IT IS A SUBURBAN". The slice is for the log line, and it is now applied only there.
+  // Same class as the balance probe that threw from its own error handler (2026-10-06): an
+  // instrument that answers a narrower question than it claims will fail correct work.
   const got = await evx('(function(){var e=document.getElementById(' + JSON.stringify(outId) + ');'
-    + 'return e ? (e.innerText||"").replace(/\\s+/g," ").trim().slice(0,90) : "NO OUTPUT ELEMENT";})()');
+    + 'return e ? (e.innerText||"").replace(/\\s+/g," ").trim() : "NO OUTPUT ELEMENT";})()');
   // The answer must be the RIGHT one, not merely present. A tool that computes 9.4 hours where 10
   // is correct has a working wire and a broken sum, and only the expected value catches that.
-  const ok = !missing.length && got && got.indexOf(expect) >= 0;
+  // CASE-INSENSITIVE, because a tool that renders its answer inside an uppercased heading hands
+  // back the heading's casing rather than the string in the markup. Found 2026-10-11 when the
+  // anode rod finder's answer read "NO ANODE ROD" in the DOM and the entry was written lowercase.
+  const ok = !missing.length && got && got.toLowerCase().indexOf(expect.toLowerCase()) >= 0;
   if (!ok) failures++;
   console.log((ok ? '  ok   ' : '  FAIL ') + (name + '            ').slice(0, 12) + ' '
               + (missing.length ? ('INPUT: ' + missing.join(' '))
