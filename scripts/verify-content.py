@@ -252,7 +252,7 @@ def pages():
     """Every published page, in a stable order."""
     out = []
     for pat in ("*.html", "guides/*.html", "tools/*.html", "directory/*.html",
-                "manuals/*.html"):
+                "manuals/*.html", "parts/*.html"):
         out += sorted(ROOT.glob(pat))
     return [p for p in out if p.is_file()]
 
