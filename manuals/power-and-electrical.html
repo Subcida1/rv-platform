@@ -53,9 +53,19 @@
   <div class="sec pad-10-60">
     <div class="wrap">
       <div class="man-search">
-        <div class="search-bar">
-          <input id="man-q" type="search" autocomplete="off" aria-label="Search this page"
-               placeholder="Search this page: a maker, a model number, a part"></div>
+        <!-- THE PLACEHOLDER NAMES ONLY WHAT THE SEARCH ACTUALLY TAKES. Ty, 2026-10-10: "in the RV
+             manuals of electrical manuals, it says search this page and make a model number a part.
+             Do we actually take model numbers? We need to make sure that we're not asking for input
+             that we don't actually take. That would be bad."
+             Measured on manuals/power-and-electrical.html: the filter matches each row's data-search
+             string, which is the brand, host, document title, the row's key and covers text, and its
+             document types. A maker is in all 34 rows; a document word is in all of them; a part word
+             is in the covers text. A MODEL NUMBER is in 6 of 12 sampled, and a PART NUMBER in 2 of 34,
+             so promising either one asks the reader for something the page usually cannot answer. If a
+             real model-number lookup is wanted later, that is a data job -- the models rows would need
+             their numbers indexed -- not a placeholder change. -->
+        <input id="man-q" type="search" autocomplete="off" aria-label="Search this page"
+               placeholder="Search this page: a maker, a document, or a part">
       </div>
       <div id="man-status" class="man-status">34 shown</div>
       <ul id="man-results" class="man-list">
