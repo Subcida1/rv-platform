@@ -250,3 +250,46 @@ Every batch's newly discovered sites are catalogued in `research/rv-sites-master
 DB with a markdown mirror and a read-only MCP API), **DLR Web Service** (the dealer spec feed RV Floorplans
 sources from), **NHTSA Part 573 reports**, the **Lippert and Dometic document buckets**, **ICON Direct**'s
 dimension CSVs, **ASA/iN-Command**, and the **brand-owner forum network** as a demand map.
+
+## From the discovered sites
+
+The "next round" list above is now done rather than pending. All **162** discoveries have been scoured in
+fifteen themed batches — `research/teardowns/d01.md` .. `d15.md` — and rolled up into
+`research/teardowns/DISCOVERIES.md` and `_discoveries-rollup.json`. Each site carries a verdict.
+
+**16 FULL TEARDOWN · 72 SOURCE · 29 STRUCTURE IDEA · 32 DUPLICATE · 13 SKIP**, and 389 further sites the
+triage itself surfaced.
+
+**What the discoveries change about the plan above:**
+
+**1. The maker document libraries are the asset, not the aggregators.** The round's biggest finding is a
+negative one: most consumer-side aggregators duplicate each other and the 48 sites already swept — 32 of
+the 162 are duplicates of something already catalogued. The makers publish the numbers, and several index
+their own documents better than anything consumer-side does. That makes Tier 2 #8 (the appliance parts
+index) and the maker-document library the right next data layer, sourced directly rather than through a
+middleman.
+
+**2. Five component makers run document libraries good enough to copy as a SHAPE** (never as data):
+**Aqua-Hot** (`library.aquahot.com`, a model × document matrix whose parts manuals carry the numbers),
+**HWH** (a system-identification workflow that lands on numbered manuals carrying wiring and hydraulic
+diagrams), **Intellitec** (a per-part-number library: brochure, service bulletin, service manual,
+installation, dimensions), **Dinosaur Electronics** (OEM control-board → replacement cross-reference
+charts, with dimensions), and **Northern Lite** (brochures back to 2004 plus a full schematic set). These
+are the pattern our own component pages should follow.
+
+**3. Three classes the plan did not have at all:**
+- **A dump-station finder.** The primary sources are named and reachable, so the commercial directories in
+  the batch are not needed: OpenStreetMap's `amenity=sanitary_dump_station`, state DOT rest-area files
+  (Caltrans, WV DOT), Louisiana's 511LA `RvDumpStation` API, Recreation.gov, and Australia's National
+  Formal Rest Areas (5,036 rows).
+- **A 50-state licence-class matrix.** Heavy Haulers' resource guide is a fresh, statute-cited
+  state-by-state table where the published RVIA equivalent is dated 2017.
+- **An electrical-safety layer.** RVelectricity holds the hot-skin and broken-ground facts and the >30 V
+  threshold, none of which the site states anywhere today.
+
+**4. Two corrections worth carrying:** the claim that DLR Web Service feeds RV Floorplans' specs is half
+wrong — DLR serves images only, and the specs live in RV Floorplans' own public Supabase database (728
+floorplans, 21,185 spec rows, with `confidence` and `source_url` per row). And the discovered
+`rv-floorplans.lovable.app` is the same application as the already-catalogued `rvfloorplans.app`, on the
+same Supabase project, so it is one site and not two.
+
