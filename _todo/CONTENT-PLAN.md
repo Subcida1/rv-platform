@@ -278,10 +278,18 @@ charts, with dimensions), and **Northern Lite** (brochures back to 2004 plus a f
 are the pattern our own component pages should follow.
 
 **3. Three classes the plan did not have at all:**
-- **A dump-station finder.** The primary sources are named and reachable, so the commercial directories in
-  the batch are not needed: OpenStreetMap's `amenity=sanitary_dump_station`, state DOT rest-area files
-  (Caltrans, WV DOT), Louisiana's 511LA `RvDumpStation` API, Recreation.gov, and Australia's National
-  Formal Rest Areas (5,036 rows).
+- **A dump-station finder — buildable in one state today, not nationally.** Checked on 2026-10-11 rather
+  than assumed. OpenStreetMap is not usable from this machine: Overpass returns HTTP 406 and Nominatim
+  403, so the `amenity=sanitary_dump_station` route needs a proxy or a different host. Recreation.gov's
+  RIDB answers 401 without a key. What does work is Caltrans' own layer, which is a real government
+  source and queryable:
+  `caltrans-gis.dot.ca.gov/arcgis/rest/services/CHhighway/Rest_Areas/FeatureServer/0` — 87 roadside rest
+  areas, a working `RV_STATION` field, and **16 of them "Yes"**, each with name, county, city and
+  coordinates. The obvious generalisation does not hold: twelve other state DOT rest-area services are
+  published in ArcGIS Online (Iowa, Illinois, Michigan, Montana, Oregon, Arizona, Utah and more), and the
+  four checked carry amenities — restrooms, vending, dog runs, play areas — but **no dump-station
+  attribute at all**. So California is the one place a real finder can be built now, and anywhere else
+  needs a per-state source hunt.
 - **A 50-state licence-class matrix.** Heavy Haulers' resource guide is a fresh, statute-cited
   state-by-state table where the published RVIA equivalent is dated 2017.
 - **An electrical-safety layer.** RVelectricity holds the hot-skin and broken-ground facts and the >30 V
