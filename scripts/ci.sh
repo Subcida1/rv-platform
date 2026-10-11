@@ -91,6 +91,7 @@ step "tire date decoder"                      node scripts/test-tire-date.js
 step "toilet valve finder"                    node scripts/test-toilet-valve.js
 step "recall lookup"                          node scripts/test-recall-lookup.js
 step "converter finder"                        node scripts/test-converter-finder.js
+step "fridge board finder"                     node scripts/test-board-finder.js
 step "anode rod finder"                       node scripts/test-anode-rod.js
 node scripts/test-snow-load.js
 step "accessibility (axe)"                    node scripts/check-a11y.mjs

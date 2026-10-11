@@ -53,6 +53,7 @@
   "tools/rv-toilet-valve.html": "rv toilet water valve",
   "tools/rv-recall-lookup.html": "rv recall lookup",
   "tools/rv-converter-finder.html": "rv converter replacement",
+  "tools/rv-fridge-board-finder.html": "rv fridge control board replacement",
   "tools/rv-anode-rod.html": {
    "q": "rv water heater anode rod replacement",
    "term": "anode"

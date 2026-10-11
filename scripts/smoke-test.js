@@ -396,7 +396,13 @@ if (sb.window.RV && typeof sb.window.RV.searchRoute === 'function') {
        deliberate pass with the query set already in place -- which is what this is for. */
     const QUERIES = [
       ['winterize my rv', 'Guide'], ['how to winterize', 'Guide'], ['black tank', 'Guide'],
-      ['dometic fridge', 'Manual'], ['norcold', 'Manual'], ['airstream manual', 'Manual'],
+      /* 'dometic fridge' AND 'norcold' MOVED FROM Manual TO Tool ON 2026-10-11, deliberately, when the
+         fridge control-board finder shipped. Its title names both makers, so it wins on a title word
+         start, and that is the scorer working as documented rather than a bug. The judgement is that a
+         reader typing a maker's name with a fridge problem wants "which board do I need" more than a
+         list of manuals, and the manuals hub is still the next result rather than displaced. Reversible
+         in one word: change these two back and the manuals hub leads again. */
+      ['dometic fridge', 'Tool'], ['norcold', 'Tool'], ['airstream manual', 'Manual'],
       ['winnebago', 'Business'], ['towing capacity', 'Guide'],
       ['can my truck tow it', 'Tool'], ['tire pressure', 'Guide'],
       ['how old are my tires', 'Tool'], ['battery not charging', 'Guide'],

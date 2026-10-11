@@ -1001,6 +1001,16 @@
     "verified_at": null,
     "sources": []
   },
+  "tools/rv-fridge-board-finder.html": {
+    "hash": "8bedbcde41f11495",
+    "status": "unverified",
+    "verified_by": "New page, 2026-10-11. Every board number it can print is a row in _data/dinosaur-boards.json, and every row came from one of the two Dinosaur charts the page names, fetched and parsed rather than summarised. Two layout traps were found by reading the raw markup: rows are four cells wide including placeholders, and a model row is refined by production-range rows in its own column. No independent lane has reviewed it, so it is recorded unverified rather than claimed.",
+    "verified_at": null,
+    "sources": [],
+    "spec": null,
+    "spec_waived": true,
+    "claims": []
+  },
   "tools/rv-converter-finder.html": {
     "hash": "8e726ef22e6cafbc",
     "status": "unverified",
