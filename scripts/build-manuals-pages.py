@@ -992,9 +992,9 @@ RECALL_DESC = ("RV recalls and service bulletins: how to check whether your unit
 
 RECALL_SECTIONS = [
     ("check", "Check your own unit",
-     "Start with the federal lookup. It takes a VIN, or a year, a make and a model, and "
-     "returns the recalls, complaints and investigations filed against that unit. Two "
-     "makers run their own lookup as well."),
+     "Start with the lookup on this site. It takes a VIN, or a year and a make and a model, "
+     "and reads the federal recall and complaint records. The federal lookup itself, and the "
+     "makers' own lookups, are below it."),
     ("notices", "Recalls you can read in full",
      "The campaign number is the thread that runs through a recall: the federal report, the "
      "maker's own notice and any repair instruction all carry it."),
