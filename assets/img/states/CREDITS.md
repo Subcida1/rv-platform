@@ -33,10 +33,10 @@ Recorded anyway, because the source should be traceable.
 
 ## nevada
 
-- File: [Las Vegas skyline. (39596477442).jpg](https://commons.wikimedia.org/wiki/File:Las_Vegas_skyline._%2839596477442%29.jpg)
-- Author: Bernard Spragg. NZ
-- Licence: CC0 1.0 (public domain dedication) <https://creativecommons.org/publicdomain/zero/1.0/>
-- Tile alt text: The Las Vegas Strip skyline, Nevada
+- File: [Night aerial view, Las Vegas, Nevada, 04649u.jpg](https://commons.wikimedia.org/wiki/File:Night_aerial_view%2C_Las_Vegas%2C_Nevada%2C_04649u.jpg)
+- Author: Carol M. Highsmith
+- Licence: Public domain (Library of Congress) <https://commons.wikimedia.org/wiki/File:Night_aerial_view,_Las_Vegas,_Nevada,_04649u.jpg>
+- Tile alt text: The Las Vegas Strip lit up at night, Nevada
 
 ## utah
 

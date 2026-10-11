@@ -73,11 +73,28 @@ PHOTOS += [
 # we're using the best images for each location... Wyoming's black and white for some
 # reason, and it's the only black and white one." CC0 or public domain only, as above.
 PHOTOS += [
+    # THE STRIP AT NIGHT, 2026-10-10. Ty: "For the RV repair in Nevada picture, I think we should
+    # use a picture of the strip at night" -- and, on the obvious subject for a Vegas tile, that the
+    # Eiffel Tower replica "is very Vegas, but it kind of looks like France as well". The previous
+    # tile was a daytime skyline; this is New York-New York lit up at night with the Strip running
+    # past it, which is unmistakably Nevada to anyone who has been and to anyone who has not.
+    # CC0 through Unsplash's Commons upload, so the licence situation is identical to the other 49.
+    # THE STRIP AT NIGHT, 2026-10-10. Ty: "For the RV repair in Nevada picture, I think we should
+    # use a picture of the strip at night" -- and, on the obvious subject for a Vegas tile, that the
+    # Eiffel Tower replica "is very Vegas, but it kind of looks like France as well". The previous
+    # tile was a daytime skyline; this is the whole corridor lit up after dark, taken from above, so
+    # no single building carries the frame and nothing in it reads as France.
+    # Public domain (Carol M. Highsmith's Library of Congress work), same licence position as the
+    # other 49 tiles.
+    # PICKED BY LOOKING, which is the only way to pick a photograph: three other CC0 candidates were
+    # downloaded and viewed first. The one named for New York-New York is a dark parking garage, and
+    # the one named for Circus Circus is a close-up of the sign -- both would have shipped as "a
+    # picture of the Strip at night" on the strength of their filenames alone.
     ('nevada',
-     'Las Vegas skyline. (39596477442).jpg',
-     'CC0 1.0 (public domain dedication)', 'Bernard Spragg. NZ',
-     'https://creativecommons.org/publicdomain/zero/1.0/',
-     'The Las Vegas Strip skyline, Nevada'),
+     'Night aerial view, Las Vegas, Nevada, 04649u.jpg',
+     'Public domain (Library of Congress)', 'Carol M. Highsmith',
+     'https://commons.wikimedia.org/wiki/File:Night_aerial_view,_Las_Vegas,_Nevada,_04649u.jpg',
+     'The Las Vegas Strip lit up at night, Nevada'),
     ("utah",
      "Delicate Arch in Arches National Park. NPS-Damon Joyce (18686376391).jpg",
      "Public domain (National Park Service)", "Damon Joyce, National Park Service",
