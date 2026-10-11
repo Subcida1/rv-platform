@@ -214,7 +214,7 @@
     }).join('\n');
     return '<div class="panel panel-24">\n' +
       '      <h2 class="form-legend">Inline filters, and what each maker publishes</h2>\n' +
-      '      <p>These screw onto the hose and need no housing. Where a maker publishes a figure, it is printed; where a maker does not, the answer says so rather than leaving it out. A retailer figure is not a maker figure and is not printed at all.</p>\n' +
+      '      <p>These screw onto the hose and need no housing. The figures below are the maker\'s own; where a maker publishes none for a model, that is stated.</p>\n' +
       items + '\n' +
       '     </div>';
   }
