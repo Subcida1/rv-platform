@@ -148,6 +148,9 @@ def quotes_on_page(text):
     # quotation and reported the page's own title as missing from its sources. Exactly the class the
     # <title> exclusion above exists for: a page describing itself is not a page quoting anybody.
     body = re.sub(r"<script\b.*?</script>", " ", body, flags=re.S)
+    # The <body split above leaves the opening tag's tail (e.g. class="g-theme-mist">) whose
+    # attribute marks would count as quote delimiters; remove that partial tag before anything else.
+    body = re.sub(r'^[^>]*>', '', body)
     # THE GENERAL PASS READS TEXT, NOT MARKUP, AND THAT IS THE POINT.
     # Found 2026-10-02 while adding a guide that quotes heavily: this pass matched against raw
     # HTML, where an ATTRIBUTE quote pairs with a real opening quotation mark, the span between
@@ -156,13 +159,6 @@ def quotes_on_page(text):
     # carrying fifteen of them. An instrument that reports nothing on a page full of
     # quotations is worse than none, because a zero reads as a pass. Tags are stripped to a
     # space rather than deleted so word runs stay intact.
-    plain = re.sub(r"<[^>]+>", " ", body)
-    # A bolded quotation is consumed by the pass above, so its marks are removed here. Left in,
-    # a SHORT bolded quote ("clog at pump inlet", four words, below the length floor) leaves a
-    # pair of stray marks that the general pass then matches as one long span, capturing our own
-    # prose between them and reporting it as a quotation from a source. That is a false positive
-    # against correct writing, which is the one output this tool must never produce.
-    plain = re.sub(r'<b>\s*[""](.*?)[""]\s*</b>', " ", plain, flags=re.S)
     out = []
     for m in re.finditer(r"<b>\s*[\"\"](.*?)[\"\"]\s*</b>", body, re.S):
         q = norm(m.group(1))
@@ -174,7 +170,26 @@ def quotes_on_page(text):
     # and the next match paired them across the sentences in between, reporting our own writing
     # as a quotation missing from a source. Pairing every mark strictly 1-2, 3-4 and then
     # filtering by length means a short quote consumes its own marks and cannot drag a span.
-    marks = [m.start() for m in re.finditer(r"[\"\"]", plain)]
+    # A BOLDED QUOTATION IS AN OPAQUE SPAN TO THE GENERAL PASS. The bolded loop above already
+    # consumed it, so remove its span from the body HERE, tags still present, before the tag-strip:
+    # a <b>"..."</b> quotation may carry a mark INSIDE it that is not a delimiter at all - an inch
+    # mark like "11\" WC" or "1/4\"" written as part of the quoted measure. Left in, that mark
+    # counts as a delimiter and shifts the general pass's strict 1-2,3-4 pairing by one, so a
+    # closing mark pairs with the NEXT quote's opening mark and our own lead-in prose between two
+    # adjacent quotations is reported as missing from every source (W16, 2026-10-11:
+    # rv-slide-out-leaking, rv-condensation-inside, rv-propane-furnace-wont-light all shaped
+    # this way).
+    body = re.sub(r'<b>\s*[""](.*?)[""]\s*</b>', " ", body, flags=re.S)
+    plain = re.sub(r"<[^>]+>", " ", body)
+    # A QUOTE MARK IMMEDIATELY PRECEDED BY A DIGIT OR A FRACTION IS AN INCH MARK, NOT A
+    # DELIMITER. A bolded quotation's inch marks were already removed above; these are the inch
+    # marks that live in NON-bolded prose (e.g. "11\" WC", "8\" WC", "14\"" - the page's own
+    # measurement text between quotations). Counted as delimiters they shift the strict 1-2,3-4
+    # pairing exactly as the bolded ones did. A real closing quote right after a digit is not a
+    # shape this corpus produces (quotations close on a letter or punctuation).
+    INCH_PRECEDERS = "0123456789\xbd\xbc\xbe"  # digits + 1/2 1/4 3/4
+    marks = [m.start() for m in re.finditer(r"[\"\"]", plain)
+             if not (m.start() > 0 and plain[m.start() - 1] in INCH_PRECEDERS)]
     for a, b in zip(marks[0::2], marks[1::2]):
         inner = plain[a + 1:b]
         if not (40 <= len(inner) <= 400):

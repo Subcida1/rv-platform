@@ -686,6 +686,31 @@ it tonight, but this instrument cannot currently distinguish that from page pros
 flags correct behaviour is worse than none, because it teaches the reader to ignore it.** Fixing the
 extractor is a pass of its own; until then, quotation fidelity is a read-it-yourself job.
 
+**DONE 2026-10-11 15:10 PDT (day-driver fire) - the extractor is FIXED and the tool no longer
+flags page prose.**
+
+Root cause (measured, not guessed): the general mark-pairing pass treated every `"` in `plain`
+as a quote delimiter and paired them strictly 1-2,3-4. Three things leaked false delimiters
+and each shifted the pairing by one, so our own lead-in prose between two adjacent
+quotations was reported as missing from every source:
+
+1. **Inch marks inside bolded quotes** (`<b>"Check ... 1/4\" nominal overlap."</b>`,
+   `½"` in the bath-vent line): the old code stripped `<b>"..."</b>` after the tag-strip (dead
+   code - regex could never match). Now the bolded-quote spans are removed from the body
+   BEFORE the tag-strip, so marks inside them never reach the pairing.
+2. **The `<body class="g-theme-mist">` tail**: the `<body` split leaves the opening tag's
+   attribute marks in `plain`; removed with `^[^>]*>`.
+3. **Inch marks in non-bolded prose** (`11" WC`, `8" WC`, `14"`): a mark immediately
+   preceded by a digit or fraction (1/2, 1/4, 3/4) is now excluded from the delimiter list.
+
+Result, `--no-fetch` full sweep against HEAD: **51 -> 28 "not found"**, all 23 removed are
+page-prose false leads on 4 pages (slide-out 13->0, condensation 6->0, furnace 3 fewer,
+two-appliances 1->0), zero real quotations dropped (verified by diffing the before/after
+sets and hand-reading every removed line). Negative test done: an injected fabricated bolded
+quote is still reported as missing from every source. The 28 that remain are genuine
+quotation-vs-fetch questions (mostly the documented bot-protected cummins/marshallexcelsior
+class - still verify by hand per this item's own rule), the tool no longer invents work.
+
 ### rv-delamination.html — PARTIAL hand-check 2026-10-10 01:40 (NOT an independent pass)
 Subagent dispatch was down, so this page was checked by hand. **Scope, stated honestly: 5 of its 27
 quotations were verified, not all of them, and a hand check by a long-context agent is weaker than a
