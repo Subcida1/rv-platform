@@ -1087,6 +1087,8 @@ it to that list deliberately or the gate fails. Where something is off-centre ag
 it; where the rule is silent and a page reads unbalanced on a phone, that is a judgement call - record
 it in the queue rather than guessing.
 
+**Priority note:** Ty asked for this on 2026-10-11 and it is the newest item - take it ahead of the older W-items if the choice is yours.
+
 Run it page type by page type (hubs, guides, tools, manuals, directory, parts), fix as you go, and
 commit in batches. Tick this item when the sweep is clean or every remaining finding is recorded.
 
