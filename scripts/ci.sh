@@ -93,6 +93,7 @@ step "recall lookup"                          node scripts/test-recall-lookup.js
 step "converter finder"                        node scripts/test-converter-finder.js
 step "fridge board finder"                     node scripts/test-board-finder.js
 step "anode rod finder"                       node scripts/test-anode-rod.js
+step "water filter finder"                    node scripts/test-water-filter.js
 node scripts/test-snow-load.js
 step "accessibility (axe)"                    node scripts/check-a11y.mjs
 # THE HEADING RULE, gated rather than remembered. Ty, 2026-10-10: "This should be a site wide

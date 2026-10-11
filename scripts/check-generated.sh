@@ -55,6 +55,7 @@ run "coordinate belt <- _data/listings/*.json"  "_data/listings/<state>.json"  p
 run "search index    <- pages, listings, guides" "assets/js/*.js"              python3 scripts/build-search-index.py --check
 run "nav and footer  <- scripts/build-shell.mjs" "scripts/build-shell.mjs"      node scripts/build-shell.mjs --check
 run "cache busters   <- asset hashes"           "assets/"                       python3 scripts/stamp_assets.py --check
+run "water filter data <- _data/water-filters.json" "_data/water-filters.json"  python3 scripts/build-water-filter-data.py --check
 
 if [ "$fails" -eq 0 ]; then
   echo "all generated pages match their sources"

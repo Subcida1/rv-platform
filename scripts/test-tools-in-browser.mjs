@@ -80,6 +80,30 @@ const TOOLS = [
   {'[data-tv="flush"][data-tv-value="hand"]': {click:true},
    '[data-tv="brand"][data-tv-value="thetford"]': {click:true}},
   'tv-result', '31705'],
+ /* THE WATER FILTER FINDER IS CLICK-DRIVEN TOO, and it has a path per kind of thing bought. The
+    cartridge paths are the ones that matter: the answer is the measured format, so a wrong
+    format on a correct click is the failure this catches. */
+ ['water-filter-inline', 'tools/rv-water-filter.html',
+  {'[data-wf="connection"][data-wf-value="ght"]': {click:true},
+   '[data-wf="buying"][data-wf-value="inline"]': {click:true}},
+  'wf-result', 'WD-GDS'],                          // Waterdrop's inline hose filter, from its own page
+ ['water-filter-slim', 'tools/rv-water-filter.html',
+  {'[data-wf="connection"][data-wf-value="ght"]': {click:true},
+   '[data-wf="buying"][data-wf-value="cartridge"]': {click:true},
+   '[data-wf="diameter"][data-wf-value="2.5"]': {click:true},
+   '[data-wf="length"][data-wf-value="10"]': {click:true},
+   '[data-wf="endcap"][data-wf-value="doe"]': {click:true}},
+  'wf-result', '10 inch by 2.5 inch'],             // the Slim Line format, not Big Blue
+ ['water-filter-bigblue', 'tools/rv-water-filter.html',
+  {'[data-wf="connection"][data-wf-value="ght"]': {click:true},
+   '[data-wf="buying"][data-wf-value="cartridge"]': {click:true},
+   '[data-wf="diameter"][data-wf-value="4.5"]': {click:true},
+   '[data-wf="length"][data-wf-value="10"]': {click:true},
+   '[data-wf="endcap"][data-wf-value="doe"]': {click:true}},
+  'wf-result', '10 inch by 4.5 inch'],             // the Big Blue format, not Slim Line
+ ['water-filter-bare', 'tools/rv-water-filter.html',
+  {'[data-wf="connection"][data-wf-value="bare"]': {click:true}},
+  'wf-result', 'slip-on adapter'],                 // no thread, so no filter seals without one
 ];
 for (const [name, page, inputs, outId, expect] of TOOLS) {
   await send('Page.navigate',{url:BASE+page});
