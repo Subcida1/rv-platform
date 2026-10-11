@@ -11,7 +11,9 @@ at a time: dispatch, apply the findings, re-baseline, verify the commit, push.
 The four, in this order (the authoritative list is any manifest note still containing the string
 `OWED: the independent reviewer-subagent pass` — re-check it, in case another session got there first):
 
-1. `guides/rv-black-tank.html`
+1. `guides/rv-black-tank.html` — **DONE 2026-10-11, commit `6b39eae2`.** Independent pass ran
+   (fresh-context reviewer subagent, all five sources fetched), 4 findings applied (2 flag-injury,
+   1 sourcing, 1 guardrail) and re-baselined; the manifest note no longer carries the OWED marker.
 2. `guides/rv-trip-planner.html`
 3. `guides/rv-pin-weight-and-payload.html` (its same-session pass found nothing — which is exactly
    the result most likely to be wrong; the independent pass on other pages found 6, 9 and 6)
