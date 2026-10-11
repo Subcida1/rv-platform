@@ -154,7 +154,49 @@ const MEASURE = `(() => {
       outside.push({ text: t.textContent.trim(), x: +b.x.toFixed(0), w: +b.width.toFixed(0),
                      right: +(b.x + b.width).toFixed(0), vbWidth: vb[2] });
   }
-  return { labels, outside };
+  // 3. A STACKED LABEL BLOCK THAT RUNS PAST THE BOTTOM OF ITS OWN BOX.
+  //
+  // WHY THIS EXISTS. Ty, 2026-10-10, on the generator diagram: "the words, the battery is
+  // outside of the box for generator". He was exactly right: the box runs y=104 to y=174 and
+  // the label's fourth line sat at y=178, four pixels below its own border, so it read as
+  // belonging to the next box along. The width test above could never see it, and the
+  // off-canvas test cannot either: it is inside the viewBox, just outside its frame.
+  //
+  // THE GUARD, because a naive "text must be inside a rect" rule cries wolf here: annotation
+  // text is deliberately drawn inside a big body rect, and the lights diagram's step badges
+  // sit on their boxes by design. So a finding needs ALL of:
+  //   - a rect that a text's TOP-edge sits inside (the block starts in the box),
+  //   - that text's BOTTOM edge more than 1px below the rect's bottom,
+  //   - and at least one sibling text sharing its centre x, which is what makes it a stacked
+  //     LABEL BLOCK rather than a lone badge parked on an edge.
+  const blocks = [];
+  for (const r of rects) {
+    const rb = r.getBBox();
+    const startInside = [...svg.querySelectorAll('text')].filter((t) => {
+      const b = t.getBBox();
+      const cx = b.x + b.width / 2;
+      return cx >= rb.x && cx <= rb.x + rb.width && b.y >= rb.y && b.y <= rb.y + rb.height;
+    });
+    if (startInside.length < 2) continue;                  // not a stacked block
+    const byX = new Map();
+    for (const t of startInside) {
+      const b = t.getBBox();
+      const key = Math.round(b.x + b.width / 2);
+      if (!byX.has(key)) byX.set(key, []);
+      byX.get(key).push(t);
+    }
+    for (const [cx, group] of byX) {
+      if (group.length < 2) continue;
+      for (const t of group) {
+        const b = t.getBBox();
+        const over = +(b.y + b.height - (rb.y + rb.height)).toFixed(1);
+        if (over > 1)
+          blocks.push({ text: t.textContent.trim(), over, boxBottom: +(rb.y + rb.height).toFixed(0),
+                        textBottom: +(b.y + b.height).toFixed(0), cx });
+      }
+    }
+  }
+  return { labels, outside, blocks };
 })()`;
 
 let failures = 0, checked = 0, worst = { pad: Infinity };
@@ -168,6 +210,13 @@ for (const p of pages) {
   const rep = await evalJs(MEASURE).catch(() => null);
   if (!rep) { console.log(`      ${p}  no diagram measured`); continue; }
   checked += rep.labels.length;
+  for (const b of rep.blocks) console.log(`FAIL  ${p}  a stacked label runs past its box`);
+  if (rep.blocks.length) {
+    failures += rep.blocks.length;
+    for (const b of rep.blocks)
+      console.log(`        label block      "${b.text.slice(0, 26)}" ends at y ${b.textBottom}, box ends y ${b.boxBottom} (${b.over}px past)`);
+    continue;
+  }
   for (const r of rep.labels) if (r.pad < worst.pad) worst = { ...r, page: p };
 
   const bad = rep.labels.filter(r => r.pad < MIN).sort((a, b) => a.pad - b.pad);

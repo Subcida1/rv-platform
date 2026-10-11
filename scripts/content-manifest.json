@@ -533,9 +533,9 @@
     "claims": "029e24133bf31376"
   },
   "guides/rv-furnace-not-working.html": {
-    "hash": "33f83de38d91aeb1",
+    "hash": "0d4c119f18297f00",
     "status": "verified",
-    "verified_by": "2026-10-10 voice pass, Ty's package: British spellings to American, collective-noun agreement to singular, and phrasing only. No fact, number or interval changed.",
+    "verified_by": "Cloud: cut the invented cross-section figure at Ty's instruction, prose untouched",
     "verified_at": "2026-10-10",
     "sources": [],
     "spec": "_specs/rv-furnace-not-working.md",

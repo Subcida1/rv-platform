@@ -55,79 +55,17 @@
 <p><b>If something else stopped at the same time,</b> stop reading here and go to <a href="guides/rv-two-appliances-stopped">Two appliances stopped at once</a>. The furnace is wired to the <a href="guides/rv-air-conditioner-not-cooling">roof air conditioner</a>, so a dead air conditioner takes the furnace with it, and that is one fault rather than two.</p>
 
 
- <figure>
- <svg viewBox="0 0 880 400" width="100%" role="img" aria-label="Simplified schematic of an RV furnace showing the airflow path and the physical location of the blower, sail switch, burner, ignitor, flame sensor, gas valve, heat exchanger and limit switch" >
- <title>Where the parts are on an RV furnace</title>
- <desc>A cross section. Cabin air enters at the return air grille on the left, passes the blower, and the sail switch sits on the blower housing. Gas from the valve feeds the burner, which holds the ignitor and flame sensor. Combustion air enters and exhaust leaves through the exterior vent. The sealed heat exchanger sits on the right, with the limit switch mounted on it, and warmed air leaves to the ducts.</desc>
- <defs>
- <marker id="fa" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0ea5e9"/></marker>
- <marker id="fb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#f97316"/></marker>
- </defs>
-
- <!-- cabinet -->
- <rect x="100" y="74" width="682" height="206" rx="12" fill="#ffffff" stroke="#d8dde6" stroke-width="2"/>
- <line x1="310" y1="74" x2="310" y2="280" stroke="#e7eaf0" stroke-width="1.5" stroke-dasharray="5 5"/>
- <line x1="520" y1="74" x2="520" y2="280" stroke="#e7eaf0" stroke-width="1.5" stroke-dasharray="5 5"/>
-
- <!-- 1 return air -->
- <line x1="16" y1="177" x2="96" y2="177" stroke="#0ea5e9" stroke-width="3" marker-end="url(#fa)"/>
- <text x="16" y="160" font-family="Inter,sans-serif" font-size="16.2" font-weight="700" fill="#0ea5e9">Return air</text>
-
- <!-- 2 blower -->
- <circle cx="168" cy="177" r="46" fill="#ffffff" stroke="#0ea5e9" stroke-width="2.5"/>
- <circle cx="168" cy="177" r="30" fill="none" stroke="#0ea5e9" stroke-width="2"/>
- <path d="M168 147 L168 207 M138 177 L198 177 M147 156 L189 198 M189 156 L147 198" stroke="#0ea5e9" stroke-width="2" stroke-linecap="round"/>
- <text x="168" y="250" font-family="Inter,sans-serif" font-size="16.2" font-weight="700" fill="#0ea5e9" text-anchor="middle">Blower</text>
-
- <!-- 3 sail switch -->
- <rect x="243" y="132" width="60" height="28" rx="5" fill="#f43f5e"/>
- <text x="273" y="151" font-family="Inter,sans-serif" font-size="15" font-weight="800" fill="#ffffff" text-anchor="middle">SAIL</text>
- <line x1="273" y1="132" x2="273" y2="128" stroke="#f43f5e" stroke-width="1.5"/>
- <text x="273" y="118" font-family="Inter,sans-serif" font-size="16.2" font-weight="700" fill="#f43f5e" text-anchor="middle">Sail switch</text>
- <text x="273" y="104" font-family="Inter,sans-serif" font-size="13.8" fill="#67748e" text-anchor="middle">on blower housing</text>
-
- <!-- 4 burner chamber -->
- <rect x="330" y="128" width="170" height="98" rx="6" fill="#fff7ed" stroke="#f97316" stroke-width="2.5"/>
- <path d="M390 205 C378 190 382 178 396 170 C392 184 402 188 404 196 C410 184 424 182 428 194 C431 205 418 212 406 212 C398 212 394 209 390 205 Z" fill="#f97316" opacity=".85"/>
- <text x="415" y="246" font-family="Inter,sans-serif" font-size="16.2" font-weight="700" fill="#f97316" text-anchor="middle">Burner</text>
-
- <!-- ignitor + flame sensor -->
- <path d="M352 120 L358 132 L364 120" fill="none" stroke="#f43f5e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
- <text x="358" y="110" font-family="Inter,sans-serif" font-size="15.6" font-weight="700" fill="#f43f5e" text-anchor="middle">Ignitor</text>
- <line x1="446" y1="116" x2="446" y2="136" stroke="#f43f5e" stroke-width="2.5" stroke-linecap="round"/>
- <text x="470" y="110" font-family="Inter,sans-serif" font-size="15.6" font-weight="700" fill="#f43f5e" text-anchor="middle">Flame sensor</text>
-
- <!-- 5 gas valve -->
- <rect x="345" y="304" width="86" height="32" rx="5" fill="#f97316"/>
- <text x="388" y="325" font-family="Inter,sans-serif" font-size="15" font-weight="800" fill="#ffffff" text-anchor="middle">GAS</text>
- <line x1="388" y1="304" x2="388" y2="226" stroke="#f97316" stroke-width="2.5" stroke-dasharray="6 4"/>
- <text x="388" y="356" font-family="Inter,sans-serif" font-size="16.2" font-weight="700" fill="#f97316" text-anchor="middle">Gas valve</text>
-
- <!-- 6 heat exchanger -->
- <rect x="545" y="106" width="190" height="158" rx="6" fill="#f0fdfa" stroke="#14b8a6" stroke-width="2.5"/>
- <path d="M575 130 H705 M575 152 H705 M575 174 H705 M575 196 H705 M575 218 H705" stroke="#14b8a6" stroke-width="1.6" opacity=".55"/>
- <text x="640" y="248" font-family="Inter,sans-serif" font-size="15.6" font-weight="700" fill="#14b8a6" text-anchor="middle">Sealed</text>
- <text x="640" y="282" font-family="Inter,sans-serif" font-size="16.2" font-weight="700" fill="#14b8a6" text-anchor="middle">Heat exchanger</text>
-
- <!-- 7 limit switch -->
- <rect x="612" y="70" width="60" height="28" rx="5" fill="#f43f5e"/>
- <text x="642" y="89" font-family="Inter,sans-serif" font-size="15" font-weight="800" fill="#ffffff" text-anchor="middle">LIMIT</text>
- <line x1="642" y1="70" x2="642" y2="66" stroke="#f43f5e" stroke-width="1.5"/>
- <text x="642" y="56" font-family="Inter,sans-serif" font-size="16.2" font-weight="700" fill="#f43f5e" text-anchor="middle">Limit switch</text>
-
- <!-- 8 warm air out -->
- <line x1="782" y1="177" x2="866" y2="177" stroke="#0ea5e9" stroke-width="3" marker-end="url(#fa)"/>
- <text x="866" y="160" font-family="Inter,sans-serif" font-size="16.2" font-weight="700" fill="#0ea5e9" text-anchor="end">Warm air to ducts</text>
-
- <!-- combustion air in / exhaust out -->
- <line x1="742" y1="300" x2="742" y2="264" stroke="#f97316" stroke-width="3" marker-end="url(#fb)"/>
- <text x="742" y="332" font-family="Inter,sans-serif" font-size="15.6" font-weight="700" fill="#f97316" text-anchor="middle">Combustion air in</text>
- <line x1="742" y1="106" x2="742" y2="46" stroke="#f97316" stroke-width="3" marker-end="url(#fb)"/>
- <text x="742" y="38" font-family="Inter,sans-serif" font-size="15.6" font-weight="700" fill="#f97316" text-anchor="middle">Exhaust out</text>
- <text x="742" y="358" font-family="Inter,sans-serif" font-size="13.8" fill="#67748e" text-anchor="middle">Both through the exterior vent</text>
- </svg>
- <figcaption>A simplified cross section, drawn to show how the parts relate rather than exact proportions. The heat exchanger is sealed, so combustion gases never mix with the air you breathe.</figcaption>
- </figure>
+<!-- NO CROSS-SECTION FIGURE HERE, DELIBERATELY. Ty, 2026-10-10, on the drawing that
+     stood in this spot: "the whole graphic is just poorly designed. If you're going to
+     do something like this, we should reference a real equipment piece. Not just do it
+     like this." He is right about the shape of the problem: a hand-drawn cross-section
+     invites a reader to believe it depicts THEIR furnace, and nobody can draw the
+     inside of a machine they have not seen. The sealed heat exchanger and the CO risk
+     are stated in the prose in five places, and the maker's own manual (in Sources
+     below) carries the real cross-section. What this guide is about is the START
+     SEQUENCE, and the diagram for that is below. If this spot needs a visual again, the
+     honest one is a photograph of a real furnace with the access panel off, which needs
+     a real unit rather than a drawing. -->
 
  <h2>Start here: Match your symptom to its fault</h2>
  <div class="card">
