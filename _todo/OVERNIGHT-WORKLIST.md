@@ -136,6 +136,21 @@ The independent pass caught it; reverted in `64e9327`.
 loose fragment. A fragment returns the first occurrence, which may be a different sentence in the same
 document — and an empty or mismatched result is evidence about the pattern, not about the file.**
 
+**THE REMAINING THREE SECOND PASSES ARE BLOCKED ON MACHINE MEMORY, AND HANDED OFF (2026-10-10 17:43).**
+`rv-driving-motorhome`, `rv-pre-trip-walkaround` and `rv-maintenance-schedule` have now had their
+independent second passes (see the rows above; they found 6, 9 and 6 further defects, and the
+walkaround pass also caught a defect MY first pass had introduced). Three guides still owe theirs:
+**`rv-black-tank`, `rv-trip-planner`, `guides/index.html`**. They are not skipped — they are blocked,
+and the block is measured: `free -h` now reports **swap 8.3 GiB of 8.3 GiB used, 1.2 MiB free**, and
+`conv-2d4534d8` was **ACTIVE and mid-commit** at 00:42:59Z. Spawning a reviewer under that pressure
+fails roughly half the time (task_57 and task_60 succeeded, task_58 died with "Listener run failed"),
+and a failed spawn does not fail politely — it can tip the machine and take a co-tenant session's
+commit down with it, which is exactly how this session cost the other one a red main earlier tonight.
+**The full brief for the remaining three is written and pushed: `_todo/SECOND-PASS-HANDOFF.md`** —
+it carries the method, the four hazards that each cost a red main today (manifest read-modify-write,
+the banned word in a note, the archive check behind a pipe, and pathspec-free commits), and the
+per-page loop. Whoever picks this up next should start there rather than here.
+
 Method note for items 21, 22, 23, 25, 26 (and the hub): **these passes were done by Cloud itself, in
 session, not by a fresh-context reviewer subagent.** The subagent path was dead all evening - four
 concurrent reviewers were orphaned by a harness process change, and from 16:47 every dispatch failed
