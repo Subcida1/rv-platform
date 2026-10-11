@@ -847,10 +847,10 @@
     "claims": "7475218f762ec723"
   },
   "guides/winterize-plumbing.html": {
-    "hash": "231e2df28d80db76",
+    "hash": "7ef70d5ea87e31e1",
     "status": "verified",
-    "verified_by": "Cloud: removed a legacy h3 class=mt workaround whose 14px top margin out-specified the new prose heading scale; the heading now gets its space from the scale like every other one. No wording changed.",
-    "verified_at": "2026-10-10",
+    "verified_by": "pre-existing findings from safety-pass independent review, applied: standard-dose sit time added (at least four hours at 50 ppm, traced via NRVTA to the 2026 Winnebago Travato and 2023 Jayco Terrain manuals, source now listed); wet-bay heater advice rewritten - no unattended heater in an enclosed bay, fire hazard stated; bleach-ratio attribution now has a listed source",
+    "verified_at": "2026-10-11",
     "sources": [],
     "spec": "_specs/winterize-plumbing.md",
     "spec_waived": false,
