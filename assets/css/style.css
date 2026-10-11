@@ -267,9 +267,17 @@ input,select,textarea{font-family:inherit}
    and a shadow, which is not a difference a reader can name. This drops the pill
    entirely: squared, flat, smaller, quiet, with an off-site arrow. The guide
    button keeps the gradient edge and stays the only pressable-looking thing. */
-.doc-link{display:inline-flex;align-items:center;gap:6px;padding:9px 12px;border-radius:8px;background:var(--bg-2);border:1px solid var(--border);color:var(--text-2);font-size:13px;font-weight:600;line-height:1;min-height:38px;transition:background .16s,border-color .16s,color .16s}
+/* THE HOVER LOOK IS THE RESTING LOOK, THE SAME MOVE AS THE FITS PILLS.
+   Ty, 2026-10-10: "I feel like we should do the same thing with the manuals buttons -- basically
+   their hover state instead of their current state. Their hover state is much more identifiable."
+   The button used to rest as a tinted face with muted ink and only reach full contrast under the
+   pointer, which meant the reader had to touch every one to find out what it was. It now rests at
+   the stronger of its two states (white face, --border-hover edge, full-strength ink) and the hover
+   releases to the tinted face it used to sit in, so the motion reads as the button stepping back.
+   Contrast only improves: full ink on white is the strongest pairing on the card. */
+.doc-link{display:inline-flex;align-items:center;gap:6px;padding:9px 12px;border-radius:8px;background:var(--surface);border:1px solid var(--border-hover);color:var(--text);font-size:13px;font-weight:600;line-height:1;min-height:38px;transition:background .16s,border-color .16s,color .16s}
 .doc-link::after{content:"\2197";font-size:11px;opacity:.6}
-.doc-link:hover{background:var(--surface);border-color:var(--border-hover);color:var(--text)}
+.doc-link:hover{background:var(--bg-2);border-color:var(--border);color:var(--text-2)}
 .doc-link:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
 .btn-sm{padding:8px 15px;font-size:13px}
 .btn-lg{padding:16px 30px;font-size:15.5px}
@@ -937,7 +945,12 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
    edge and the chips stay inside .wrap, which is how the guides hub was built and
    what the parts hub was changed to match on the same day. */
 .hub-jump{position:sticky;top:86px;z-index:120;margin-top:26px;background:var(--tint-bg);border-top:1px solid var(--tint-edge);border-bottom:1px solid var(--tint-edge)}
-.hub-jump ul{display:flex;flex-wrap:wrap;gap:4px;list-style:none;margin:0;padding:9px 0}
+/* A ROW THAT DOES NOT FILL IS CENTRED. Ty, 2026-10-10: "can we center the buttons that don't run a
+   full row?" Nine systems on the parts hub wrap to eight and one, and the one sat hard against the
+   left edge; the guides hub does the same with six. justify-content:center is the same answer the
+   .guide-grid already carries for its own partial rows, so a full row is unchanged and a short one
+   sits in the middle. */
+.hub-jump ul{display:flex;flex-wrap:wrap;justify-content:center;gap:4px;list-style:none;margin:0;padding:9px 0}
 /* EVERY CHIP WEARS ITS OWN EDGE. Ty, 2026-10-10: "I think we can do some kind of better
    animation for the buttons, right now they just turn white on hover over. We give them
    some kind of stroke outline so that you can see each individual button without having to
@@ -946,8 +959,16 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
    so it sits on the tinted band without becoming a second colour, and the hover still lifts
    the chip onto white with a shadow and a 1px rise: the same .16s rhythm every other control
    on the site uses, so it arrives rather than snaps. */
-.hub-jump a{display:inline-flex;align-items:center;padding:9px 14px;border-radius:999px;font-size:13.5px;font-weight:600;color:var(--text-2);background:transparent;border:1px solid var(--tint-edge);min-height:40px;transition:background .16s ease,border-color .16s ease,color .16s ease,box-shadow .16s ease,transform .16s ease}
-.hub-jump a:hover{background:var(--surface);border-color:var(--b2);color:var(--text);box-shadow:var(--shadow-sm);transform:translateY(-1px)}
+/* THE WHITE FACE IS THE RESTING FACE. Ty, 2026-10-10: "Let's do the same thing with the
+   navigation bars at the top. The white button just looks better." It rested as a transparent chip
+   with a tint edge, which let the band show through and made the whole row read as one object; a
+   white face with --b2 lifts each chip off the tint instead.
+   THE HOVER THEREFORE HAS TO MOVE AWAY FROM WHITE, not toward it, or the state would be invisible
+   on its own resting colour. It goes solid --tint-ink with white ink (5.58:1). On the tinted band
+   that is the only treatment that reads as a change, and it is the same family the fits pills use,
+   so a filled blue chip means "under the pointer" in both places. */
+.hub-jump a{display:inline-flex;align-items:center;padding:9px 14px;border-radius:999px;font-size:13.5px;font-weight:600;color:var(--text);background:var(--surface);border:1px solid var(--b2);min-height:40px;transition:background .16s ease,border-color .16s ease,color .16s ease,box-shadow .16s ease,transform .16s ease}
+.hub-jump a:hover{background:var(--tint-ink);border-color:var(--tint-ink);color:var(--text-inv);transform:translateY(-1px)}
 .hub-jump a:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
 /* THE COUNT SPANS ARE GONE, AND SO IS THEIR RULE. Ty, 2026-10-10: "I don't think the directory
    needs any numbers next to the location to the regions and the parts also don't really need any
@@ -969,7 +990,7 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
      narrow screen it is a plain wrapped row of chips at the top of the page. */
   .hub-jump{position:static}
   .hub-jump ul{gap:6px}
-  .hub-jump a{padding:9px 12px;font-size:13px;background:var(--surface);border-color:var(--border);min-height:44px}
+  .hub-jump a{padding:9px 12px;font-size:13px;background:var(--surface);border-color:var(--b2);min-height:44px}
 }
 /* .guide-thumb is gone: it was a 130px-tall empty block holding a 46px emoji,
    which is the "floating emoji in a void" the guides index already dropped. The
