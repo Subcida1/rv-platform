@@ -701,14 +701,13 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
 .search{max-width:720px;margin:36px auto 0;position:relative}
 .search-bar{display:flex;align-items:center;gap:12px;background:var(--surface);border:1px solid var(--border-2);border-radius:999px;padding:8px 8px 8px 22px;box-shadow:var(--shadow);transition:.18s}
 .search-bar:focus-within{border-color:var(--b1);box-shadow:0 0 0 3px var(--glow)}
-/* The search mark is a road receding to its vanishing point, with the centreline
-   dashes getting shorter and closer together as they go, so the perspective reads
-   even at this size. It replaces a magnifier glyph whose circle-and-handle turned
-   into an unreadable blob at 20px, which Ty spotted: "whatever the icon is on the
-   left of the searchbar is unidentifiable". It also says something the magnifier
-   did not: this site is about the road. Sized up to 23px from 20px because the
-   three dashes need the extra millimetre to stay distinct. */
-.search-bar svg{width:23px;height:23px;stroke:var(--text-3);flex:none}
+/* NO MARK IN THE SEARCH FIELD. A road-receding SVG sat here at 23px, on the left of
+   every search bar. Ty, 2026-10-10: "I also kind of don't like the little road emblem
+   we've put on all of the search bars on the left side. Maybe we should get rid of
+   that." Its `.search-bar svg` sizing rule goes with it, and the pill's 22px left
+   inset is now simply the field's own padding. The placeholder carries the job the
+   mark never did: it says what can be searched. verify.py fails a build where a
+   .search-bar grows an inline SVG again. */
 /* min-width:0 is load-bearing, not tidiness. `flex:1` sets flex-basis 0 but leaves the
    automatic minimum size in charge, and for an <input> that minimum is the width the
    `size` attribute implies -- about 161px. In the 900px header the whole pill is 148px,
@@ -906,10 +905,18 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
    competitor says it outright, "structured as a diagnostic system, not a blog" -- and grouping also
    puts every guide one hop from its siblings instead of 24 hops apart. Headings here are smaller
    than .sec-head h2 deliberately: they sit INSIDE a section, not beside it.
-   margin, never the padding shorthand, so the .wrap gutter is not zeroed. */
-.guide-group{margin-top:46px;font-size:clamp(20px,2.4vw,26px);font-weight:800;letter-spacing:-.02em;color:var(--text)}
+   margin, never the padding shorthand, so the .wrap gutter is not zeroed.
+
+   CENTRED. Ty, 2026-10-10, on the parts hub: "the headings for everything I feel should
+   be centered... We should center all of these titles." Centred headings are already this
+   site's default and the directory hub's region headings were centred the same way on
+   2026-10-06, so the rule is set on the class rather than on one page: the guides hub and
+   the parts hub carry the same heading for the same job and must not disagree. The note
+   under a heading and the parts count under it centre with it, because a centred heading
+   over a left-aligned line of its own label is the ragged look this fixes. */
+.guide-group{margin-top:46px;font-size:clamp(20px,2.4vw,26px);font-weight:800;letter-spacing:-.02em;color:var(--text);text-align:center}
 .guide-group:first-of-type{margin-top:26px}
-.guide-group-note{margin-top:6px;margin-bottom:20px;font-size:14.5px;color:var(--text-2)}
+.guide-group-note{margin-top:6px;margin-bottom:20px;font-size:14.5px;color:var(--text-2);text-align:center}
 /* THE GUIDES INDEX JUMP BAR. 44 guides in six groups is four screens of scrolling,
    and before 2026-10-09 the only way to reach "Winter storage" was to pass the five
    groups above it. Ty: "there's a lot of tiles to look through ... make this easier
@@ -917,8 +924,19 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
    supports for a long index. It sticks under nav.main, which is 86px tall -- the
    same offset .filters and .sidebar already use. The groups themselves are left
    alone: grouping is already the supported move, and the choice-overload evidence
-   does not support cutting guides. */
-.hub-jump{position:sticky;top:86px;z-index:120;margin-top:26px;background:var(--bg);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+   does not support cutting guides.
+
+   TINTED, so you can tell it is travelling with you. Ty, 2026-10-10: "I think it
+   should be a slightly different color because as of right now it's kind of hard to
+   tell that it's scrolling with you. Maybe we should make this like a lighter blue
+   color." It was --bg, which is the page's own white: a bar that matches the paper
+   it slides over reads as part of the page rather than as a thing sitting on top of
+   it. --tint-bg is the site's existing light-blue surface (badges, callouts, pinned
+   cards) and --tint-edge its border, so this is the palette's own blue, not a new
+   one. The band is FULL BLEED on every hub that carries it: the rules run edge to
+   edge and the chips stay inside .wrap, which is how the guides hub was built and
+   what the parts hub was changed to match on the same day. */
+.hub-jump{position:sticky;top:86px;z-index:120;margin-top:26px;background:var(--tint-bg);border-top:1px solid var(--tint-edge);border-bottom:1px solid var(--tint-edge)}
 .hub-jump ul{display:flex;flex-wrap:wrap;gap:4px;list-style:none;margin:0;padding:9px 0}
 .hub-jump a{display:inline-flex;align-items:center;padding:9px 14px;border-radius:999px;font-size:13.5px;font-weight:600;color:var(--text-2);border:1px solid transparent;min-height:40px}
 .hub-jump a:hover{background:var(--surface);border-color:var(--border);color:var(--text)}
@@ -2385,7 +2403,18 @@ figure:has(svg[role="img"]){overflow-x:auto;overflow-y:hidden}
 .man-row-top{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:baseline;justify-content:space-between}
 .man-doc{font-size:15.5px;font-weight:800;letter-spacing:-.012em;color:var(--text)}
 .man-doc:hover{color:var(--b1)}
-.man-types{display:flex;flex-wrap:wrap;gap:6px}
+/* PINNED RIGHT, EVEN WHEN IT WRAPS ONTO ITS OWN LINE.
+   Ty, 2026-10-10: "The Lippert document center ... seems to be aligned to the left for
+   some reason, well everything else has this section aligned to the right." The row is
+   `justify-content:space-between`, so a title and a badge block sit at opposite ends --
+   and when the badge block cannot fit beside the title it wraps to a line of its own,
+   where space-between has a single item to place and parks it at the START. Six badges
+   made that happen on exactly one row of thirteen. margin-left:auto pins the block to
+   the right edge on its own line as well, and justify-content:flex-end does the same for
+   the badges if the block itself ever has to break across two lines. Measured after the
+   fix: every .man-types block in every row ends within 1px of the row's right edge.
+   Found by scripts/audit-layout.mjs, whose new edge check reports the odd row out. */
+.man-types{display:flex;flex-wrap:wrap;gap:6px;justify-content:flex-end;margin-left:auto}
 .man-row-meta{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:10px;font-size:13px;color:var(--text-3)}
 .man-brand{color:var(--text-2);font-weight:800}
 .man-host{margin-left:6px;font-weight:500;color:var(--text-3)}
@@ -3231,7 +3260,7 @@ a.tchip:focus-visible{outline:2px solid var(--b1,var(--brand));outline-offset:2p
 .parts-filter .search-bar{flex:1 1 280px;min-width:0}
 .parts-count{margin-top:14px;font-size:13.5px;color:var(--text-3)}
 .parts-sys{margin-top:46px}
-.parts-sys-count{margin-top:-12px;margin-bottom:20px;font-size:13px;color:var(--text-3)}
+.parts-sys-count{margin-top:-12px;margin-bottom:20px;font-size:13px;color:var(--text-3);text-align:center}
 /* TWO COLUMNS OF COMPACT ENTRIES, NOT A GRID OF CARDS.
    Ty, 2026-10-05: "I'm going to agree with the two column ... let's go with your
    recommendation." Measured BEFORE this change, so the number is real rather than a guess:
@@ -3269,14 +3298,28 @@ a.tchip:focus-visible{outline:2px solid var(--b1,var(--brand));outline-offset:2p
    line-height:1 stops the font's leading pushing it down.
    font-family:inherit because this is a <button> now, and a button otherwise takes the
    browser's default control font rather than the page's. */
-.part-types{justify-content:center;margin-top:2px;gap:7px}
-/* --text-2, NOT --text-3. On --surface-2 the muted token measures 4.43:1, just under the 4.5
-   the contrast rule needs, and the accessible-name audit failed all 461 pills on it. --text-2
-   still reads as secondary against the part name above it. */
-.part-types .chip{font-family:inherit;font-size:11.5px;line-height:1;padding:0 10px;min-height:24px;
+.part-types{justify-content:center;margin-top:2px;gap:6px}
+/* A FITS TAG IS NOT A BUTTON, THOUGH IT IS ONE.
+   Ty, 2026-10-10: "I like how the manuals buttons look very, very different and unique
+   compared to the how to fix buttons, but now the manuals buttons look pretty similar to
+   the travel trailer / fifth wheel / motorhome / camper van categorization buttons. So
+   let's... make them look more unique from all the buttons that we already have in place."
+   He is right about the cause: a small rounded chip with a border, a white face and a thin
+   edge is the same shape as a manuals button at a smaller size, and both sit on the same
+   card. The fix is to move these onto the site's OTHER language for a non-action: the tint
+   tag (the shape badges, callouts and the pinned cards already use) in MICRO CAPS, which no
+   button on this site uses. Selected and hovered share one state on purpose, because Ty
+   asked on 2026-10-06 that a selected pill hold its hover state -- so both go to the filled
+   tag rather than inventing a second selected look.
+
+   --tint-ink FILL, NOT --brand. White on --brand #3d7fc2 measures 4.19:1 and these labels
+   are 11.5px, so it fails AA; white on --tint-ink #2a6aad measures 5.58:1. The brand blue
+   is for large type and gradients, where the rule has room for it. */
+.part-types .chip{font-family:inherit;font-size:10.5px;font-weight:800;letter-spacing:.085em;
+  text-transform:uppercase;line-height:1;padding:0 10px;min-height:25px;
   display:inline-flex;align-items:center;cursor:pointer;
-  background:var(--surface-2);border-color:transparent;color:var(--text-2)}
-.part-types .chip:hover{background:var(--surface);border-color:var(--border-2);color:var(--text)}
+  background:var(--tint-bg);border-color:var(--tint-edge);color:var(--tint-ink)}
+.part-types .chip:hover{background:var(--tint-ink);border-color:var(--tint-ink);color:var(--text-inv)}
 /* A SELECTED PILL HOLDS THE HOVER STATE.
    Ty, 2026-10-06: "for the travel trailer fifth wheel pop up motorhome pill buttons on each part
    ... i want them to basically hold their hover animation state when their selected so the user
@@ -3296,7 +3339,7 @@ a.tchip:focus-visible{outline:2px solid var(--b1,var(--brand));outline-offset:2p
    `.part-types .chip:hover` reset it again on top. Both are covered here. */
 .part-types .chip.on,
 .part-types .chip.on:hover,
-.part-types .chip.on:focus-visible{background:var(--surface);border-color:var(--border-2);color:var(--text)}
+.part-types .chip.on:focus-visible{background:var(--tint-ink);border-color:var(--tint-ink);color:var(--text-inv)}
 /* The links used to be pinned to the bottom of the card with margin-top:auto and a rule above
    them. In a row that hugs its content there is nothing to pin them to, and the rule was
    separating a space that no longer exists. They are buttons now, so the font-size went too. */
@@ -3331,6 +3374,11 @@ a.tchip:focus-visible{outline:2px solid var(--b1,var(--brand));outline-offset:2p
   border-top:2px solid var(--border-2);padding-top:20px;margin:48px 0 0;text-align:center}
 .hub-page h2.region-h:first-of-type{margin-top:6px;border-top:0;padding-top:0}
 .hub-page .region-h + .state-grid{margin-top:16px}
+/* A REGION HEADING MUST CLEAR THE STICKY BARS when the jump bar above it sends you
+   there. The nav is 86px and .hub-jump adds about 58px more, so 150px is the same
+   offset .guide-group already uses on the guides and parts hubs. Without it the jump
+   lands with the heading hidden behind the bar that sent you. */
+.hub-page h2.region-h{scroll-margin-top:150px}
 
 
 /* ============================================================
@@ -3410,4 +3458,60 @@ a.tchip:focus-visible{outline:2px solid var(--b1,var(--brand));outline-offset:2p
   .guide-grid>.guide-card.man-tile .guide-ic{margin:0}
   .guide-grid>.guide-card.man-tile .guide-body{padding:0}
   .guide-grid>.guide-card.man-tile .guide-meta{flex:0 1 auto}
+}
+
+/* ============================================================
+   THE SYMPTOM LIST, AS BUTTONS RATHER THAN CARDS
+   (2026-10-10)
+
+   Ty, on the homepage troubleshooting section: "these title cards are just too
+   big for the desktop and we need to come up with them in a smaller, more
+   compact way to browse them. Just once we start loading up that many, it's
+   just like endless scrolling almost. We currently have one, two, three, four,
+   five, six, seven, eight, nine, ten rows, which is a little bit too many, I'd
+   say. We need to make these smaller buttons, not title cards."
+
+   Measured at 1440 before the change: 40 cards, 10 rows, 2096px of grid, each
+   card 276x195. The 195 comes from the card template reserving two lines of
+   title and two of description so a row of cards lines up -- deliberate, and
+   right for a showcase. In a list of forty it is 800px spent on blank lines.
+
+   Scoped to .guide-grid-compact, which only the homepage symptom list carries.
+   The toolkit grid and the winter grid keep the full card: those are twelve and
+   five entries, they are menus rather than lists, and the description is doing
+   real work there.
+
+   Shape: one line, icon then title, no description. The description moves out
+   rather than being shortened, because every one of these guides already states
+   it in full on /guides/, one hop away, and a clamped half-sentence helps
+   nobody. The pill shape is the site's control shape, and these are links.
+
+   SHRINK-TO-FIT, NOT A GRID. The first cut used a grid with a 215px floor, and the
+   screenshot showed why that is wrong: at five across, "Battery Disconnect Switch"
+   rendered as "Battery Disconnect..." and so did a dozen others. Ellipsised labels,
+   in a list whose whole job is naming the symptom. A flex-wrap row of pills as wide
+   as their own text cannot truncate anything, it is the shape the homepage tool
+   chips already use, and centring keeps the short final row symmetric, which is the
+   same reasoning .guide-grid carries above.
+
+   AN INSTRUMENT NOTE, because the check I wrote first said this was fine. Comparing
+   scrollWidth against clientWidth on a -webkit-box with line-clamp reports NO
+   overflow: the clamp hides the text without widening the scroll box, so a probe
+   built on that comparison answers "nothing is clipped" on a page where twelve
+   labels are clipped. The screenshot found it. A truncation probe has to lift the
+   clamp to measure the text's natural width -- see scripts/check-truncation.mjs. */
+.guide-grid-compact{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.guide-grid-compact>.guide-card{flex:0 0 auto;max-width:100%;flex-direction:row;align-items:center;gap:10px;padding:11px 16px;
+  border-radius:999px;height:auto}
+.guide-grid-compact>.guide-card .guide-ic{width:24px;height:24px;font-size:14px;background:none;border:0}
+.guide-grid-compact>.guide-card .guide-body{gap:0}
+.guide-grid-compact>.guide-card .guide-title,
+.guide-grid-compact>.guide-card .guide-meta{min-height:0;-webkit-line-clamp:1}
+.guide-grid-compact>.guide-card .guide-title{font-size:14px}
+.guide-grid-compact>.guide-card .guide-meta{display:none}
+/* A pill that lifts on hover is a link; this one also gets the brand edge, because
+   forty identical pills need the pointer row to be unmistakable. */
+.guide-grid-compact>.guide-card:hover{transform:none;border-color:var(--b1);box-shadow:var(--shadow-sm)}
+@media(max-width:640px){
+  .guide-grid-compact>.guide-card{min-height:44px;padding:10px 14px}
 }

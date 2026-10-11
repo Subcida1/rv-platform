@@ -120,10 +120,11 @@
  return '<a' + (cls ? ' class="' + cls + '"' : '') + ' href="' + R(CFG.routes.signin) + '">Sign in</a>';
  }
 
- /* The road mark that sits inside every search field. One more copy of it lives
-    here because the shell is built in JavaScript; verify.py fails the build if any
-    page has a .search-bar without it, so the copies cannot drift. */
- var ROAD_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 21.5 9.2 3.5"/><path d="M20 21.5 14.8 3.5"/><path d="M12 20.6v-4" stroke-width="2.4"/><path d="M12 12.2v-3" stroke-width="1.7"/><path d="M12 5.5v-2" stroke-width="1.1"/></svg>';
+ /* NO MARK INSIDE THE SEARCH FIELD. The field used to carry a road-receding mark
+    on its left; Ty, 2026-10-10: "I also kind of don't like the little road emblem
+    we've put on all of the search bars on the left side. Maybe we should get rid of
+    that." It is gone from every search bar on the site, and the placeholder now
+    carries the job the mark never did: saying what can be searched. */
 
  /* The site-wide search field. It appears in two places and the CSS decides which
     one you get: a compact field in the nav from 900px up, and the same field at the
@@ -142,7 +143,7 @@
  function searchFieldHTML(cls, placeholder, landmark) {
  return '<form class="' + cls + ' js-search-form" role="search" aria-label="' +
    esc(landmark || 'Site search') + '">' +
- '<div class="search-bar">' + ROAD_ICON +
+ '<div class="search-bar">' +
  /* name="q" is not decoration: search.js reads ?q= on load to honour the WebSite
        SearchAction the homepage declares, and without a name a real form submit carries no
        query at all. Added 2026-09-27 at the GENERATOR, after I first hand-edited the 97
@@ -200,14 +201,14 @@
  '<a href="' + R(rt.manualsRecalls) + '">Recalls and bulletins<span class="sm">Check a unit, and the federal bulletin file</span></a>' +
  '<a href="' + R(rt.manuals) + '">All manuals<span class="sm">Every system, linked at the maker</span></a></div></div>' +
  '</div>' +
- searchFieldHTML('nav-search', 'Search or ZIP', 'Site search') +
+ searchFieldHTML('nav-search', 'Search guides, tools, parts', 'Site search') +
  '<div class="nav-actions">' + signinLink('btn btn-outline btn-sm') +
  /* The button says where it goes ("RV tools"); the caption above it carries the
     "free" promise that used to live in the utility strip. Ty, 2026-10-05. */
  '<span class="nav-cta"><span class="nav-cta-cap">Free tools</span><a class="btn btn-primary btn-sm btn-shine" href="' + R(rt.tools) + '">RV tools</a></span>' +
  '<button type="button" class="burger" aria-label="Menu" onclick="RV.toggleMenu()"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h12M4 10h12M4 14h12"/></svg></button></div>' +
  '</div>' +
- '<div class="mobile-menu">' + searchFieldHTML('mm-search', 'Search, or a ZIP or town', 'Site search, mobile menu') +
+ '<div class="mobile-menu">' + searchFieldHTML('mm-search', 'Search guides, tools, parts, or a ZIP', 'Site search, mobile menu') +
  '<a class="mm-top" href="' + R(rt.home) + '">Home</a>' +
  mmGroup('Tools', rt.tools, [['Weight calculator', rt.calculator]]) +
  mmGroup('Guides', rt.guides, [['Winterize plumbing', rt.guideWinterize],

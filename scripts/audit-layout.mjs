@@ -116,7 +116,14 @@ await send('Network.setCacheDisabled', { cacheDisabled: true });   // or a fix l
 
 const PROBE = `(function(){
   var TOL = 2;                       // px of slack before a column counts as moved
-  var out = { sideways: 0, drift: [], overlap: [], escape: [],
+  // EDGE findings need a VISIBLE difference or they are noise. The first full sweep
+  // with the edge rule reported one finding at 2px -- a block edge two pixels off on a
+  // directory card at phone width, invisible to a reader and indistinguishable from
+  // subpixel rounding. The fault this rule was written for (the Lippert badge block) was
+  // 217px. Threshold set at 6px: still an order of magnitude under a real misalignment,
+  // and above everything that only the DOM can see.
+  var ETOL = 6;
+  var out = { sideways: 0, drift: [], edge: [], overlap: [], escape: [],
               url: location.pathname, bodyKids: document.body.children.length, rows: 0 };
   var vw = document.documentElement.clientWidth;
   out.sideways = Math.max(0, document.documentElement.scrollWidth - vw);
@@ -288,6 +295,104 @@ const PROBE = `(function(){
   out.drift.sort(function (a, b) { return b.spread - a.spread; });
   out.drift = out.drift.slice(0, 4);
 
+  // 2b. edge: one block sitting at a different edge than the same block in every
+  //     other row of its list.
+  //
+  // WHY THIS EXISTS. Ty, 2026-10-10, on manuals/kitchen-and-appliances: "The Lippert
+  // document center ... all of the owner and operating, installation, bulletin and
+  // recall, service and repair, parts and breakdowns actually seems to be aligned to
+  // the left for some reason, well everything else has this section aligned to the
+  // right, can we fix that? And then also develop some type of tool to catch these
+  // misalignments so that we can automatically find and fix these types of visual
+  // balance issues."
+  //
+  // He was right and THIS AUDIT SAID THE PAGE WAS CLEAN. Two holes in the drift check
+  // above let it through, and both are the same mistake in different clothes:
+  //   1. it compares a row's DIRECT children, and the badge block lives one level down
+  //      inside .man-row-top, so it was never in the comparison at all;
+  //   2. even at that level it would have been skipped, because the scan requires a
+  //      container to hold three children to count as a row -- and .man-row-top holds
+  //      two, a title and its badges.
+  // Measured that night: .man-types was flush right at x=1270 in twelve rows and sat at
+  // x=156..1053 in the thirteenth, where a six-badge block wrapped onto its own flex
+  // line and justify-content:space-between parked a lone item against the START edge.
+  //
+  // THE RULE IS MAJORITY AGREEMENT, and that is what keeps it quiet on honest layout: a
+  // finding needs at least three rows agreeing on one edge within TOL and exactly one
+  // row disagreeing. Left-aligned prose of varying length scatters its right edge and
+  // never forms a majority; right-aligned prose of varying length scatters its left
+  // edge the same way; a centred column scatters both. All of those stay silent. What
+  // gets reported is the odd one out, which is also the only kind of edge fault a
+  // reader can actually see. Depth is not fixed: every class appearing exactly once per
+  // row is measured, so this reaches inside wrappers the old check could not.
+  all.forEach(function (p) {
+    if (p.children.length < 3) return;
+    var byKey = new Map();
+    [...p.children].forEach(function (k) {
+      var key = k.tagName + '.' + [...k.classList].sort().join('.');
+      if (!byKey.has(key)) byKey.set(key, []);
+      byKey.get(key).push(k);
+    });
+    var rows = null;
+    byKey.forEach(function (v) { if (!rows || v.length > rows.length) rows = v; });
+    if (!rows || rows.length < 4) return;
+    var tops = rows.map(function (r) { return Math.round(r.getBoundingClientRect().top); });
+    for (var a = 0; a < tops.length; a++)
+      for (var b = a + 1; b < tops.length; b++)
+        if (Math.abs(tops[a] - tops[b]) <= ETOL) return;      // side by side, not stacked
+
+    // A class that appears exactly once in every row is a column. Anything appearing
+    // twice in one row (a badge, a note span) is not comparable and is skipped, which
+    // is what keeps the many-per-row furniture out of this check.
+    var perRow = rows.map(function (row) {
+      var c = new Map();
+      row.querySelectorAll('*').forEach(function (el) {
+        var k = el.tagName + '.' + [...el.classList].sort().join('.');
+        c.set(k, (c.get(k) || 0) + 1);
+      });
+      return c;
+    });
+    var cand = new Set();
+    perRow.forEach(function (c) { c.forEach(function (n, k) { if (n === 1) cand.add(k); }); });
+    if (cand.size > 40) return;                              // a page-wide menu, not a row
+    var rowW = rows[0].getBoundingClientRect().width;
+
+    cand.forEach(function (k) {
+      if (k.slice(k.indexOf('.') + 1).length === 0) return;   // no class: a bare wrapper
+      var els = [];
+      for (var i = 0; i < rows.length; i++) {
+        var e;
+        try { e = rows[i].querySelector(k); } catch (err) { return; }
+        if (!e || !vis(e) || boxy(e) === false) return;
+        els.push(e);
+      }
+      var boxes = els.map(function (e) { return e.getBoundingClientRect(); });
+      // A block as wide as its row is full-bleed by design and has no edge to compare.
+      var full = boxes.every(function (b) { return b.width >= rowW - TOL; });
+      if (full) return;
+      ['left', 'right'].forEach(function (side) {
+        var vals = boxes.map(function (b) { return Math.round(b[side] * 10) / 10; });
+        var best = null;
+        vals.forEach(function (v) {
+          var n = vals.filter(function (w) { return Math.abs(w - v) <= ETOL; }).length;
+          if (!best || n > best.n) best = { v: v, n: n };
+        });
+        if (!best || best.n < 3 || best.n !== vals.length - 1) return;
+        var odd = -1;
+        for (var j = 0; j < vals.length; j++)
+          if (Math.abs(vals[j] - best.v) > ETOL) { odd = j; break; }
+        if (odd < 0) return;
+        out.edge.push({ cell: k, side: side, at: best.v, odd: vals[odd],
+                        moved: Math.round(Math.abs(vals[odd] - best.v)), row: odd,
+                        rows: vals.length,
+                        parent: p.tagName.toLowerCase() + '.' + String(p.className || '').split(' ')[0],
+                        text: (els[odd].textContent || '').trim().slice(0, 44) });
+      });
+    });
+  });
+  out.edge.sort(function (a, b) { return b.moved - a.moved; });
+  out.edge = out.edge.slice(0, 4);
+
   // 3. overlap: two text leaves, neither containing the other, both in normal
   // flow, actually sharing area. Positioned things are overlays by design.
   var boxes = leaves.slice(0, 400).filter(function (e) {
@@ -357,6 +462,7 @@ for (const rel of pages) {
     checked++;
     const parts = [];
     if (res.drift.length) parts.push('drift ' + res.drift.length);
+    if (res.edge.length) parts.push('edge ' + res.edge.length);
     if (res.overlap.length) parts.push('overlap ' + res.overlap.length);
     if (res.escape.length) parts.push('escape ' + res.escape.length);
     if (res.sideways > 1) parts.push('sideways ' + res.sideways);
@@ -383,6 +489,10 @@ if (!JSON_ONLY) {
     if (f.error) { console.log(`    ERROR ${f.error}`); continue; }
     f.drift.slice(0, 3).forEach((d) => console.log(
       `    drift     ${d.cell}  moves ${d.spread}px between rows (x${d.leftAt} -> x${d.leftTo}, rows ${d.exampleRows}) in ${d.row}`));
+    f.edge.slice(0, 3).forEach((e) => console.log(
+      `    edge      ${e.cell}  sits ${e.moved}px off its row-mates on the ${e.side}`
+      + ` (${e.at} in the other ${e.rows - 1} rows, ${e.odd} in row ${e.row})`
+      + ` in ${e.parent} — "${e.text}"`));
     f.overlap.slice(0, 3).forEach((o) => console.log(
       `    overlap   "${o.a}" and "${o.b}" share ${o.ox}x${o.oy}px`));
     f.escape.slice(0, 3).forEach((e) => console.log(

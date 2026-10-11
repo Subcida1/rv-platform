@@ -506,7 +506,14 @@ for slug in tool_slugs:
 #    accurate to what content is underneath."
 #    The fix is to strip the tags OUT of the region above each grid rather than walk
 #    the text between them, so a span boundary is nothing but whitespace.
-grid_positions = [m.start() for m in re.finditer(r'<div class="guide-grid">', idx_html)]
+#    THE PATTERN MATCHES THE CLASS TOKEN, NOT THE WHOLE ATTRIBUTE. It was
+#    r'<div class="guide-grid">' exactly, so the day the symptom grid gained a
+#    modifier class ("guide-grid guide-grid-compact") it stopped being a grid as far
+#    as this check was concerned -- and the region it used to bound then extended past
+#    its own section, so the winter heading's "Five guides" was counted against 45
+#    cards. A structural check that keys on an exact string is a check that breaks the
+#    first time the markup legitimately grows a class. Found 2026-10-10.
+grid_positions = [m.start() for m in re.finditer(r'<div class="guide-grid(?:\s|")', idx_html)]
 bounds = [0] + grid_positions + [len(idx_html)]
 claim_re = re.compile(r"\b(" + "|".join(WORDS) + r")\b(?:\s+[a-z]+){0,2}\s+guides?\b", re.I)
 # ONLY HEADINGS AND PARAGRAPHS, never the whole region. Stripping tags across a
@@ -1012,32 +1019,38 @@ elif C.GA4_ID:
 else:
     print("  GA4_ID is empty and no page carries a tag (the switch is off, cleanly)")
 
-print("\n=== every search bar carries the same mark ===")
-# The road mark reaches the generated manuals pages from site_constants.ROAD_ICON and
-# sits inline in the hand-written ones (the homepage and the three state directory
-# pages). That is five copies of one SVG, and duplicated markup is exactly how the
-# Cloudflare beacon drifted between its two generators. So: any page with a
-# .search-bar must carry the mark, and must carry one per search bar.
+print("\n=== search bars are the pill, and nothing else ===")
+# THIS CHECK USED TO POLICE THE ROAD MARK. Every .search-bar had to carry the same
+# road-receding SVG, one per bar, because that mark lived in five copies (one in
+# site_constants.py for the generated pages, one in site.js for the shell, and three
+# inline in hand-written pages) and duplicated markup is how the Cloudflare beacon
+# drifted between its two generators.
+#
+# The mark is gone, sitewide, as of 2026-10-10 (Ty: "I also kind of don't like the
+# little road emblem we've put on all of the search bars on the left side. Maybe we
+# should get rid of that."). The rule is retired with it rather than deleted, because
+# the thing it was actually protecting is still true: the pill is one shared shape,
+# and a page must not grow its own copy of any decoration inside it. So the check
+# now asserts the pill holds an input and no inline SVG at all.
 search_bad, search_pages = [], 0
 for _p in pages:
     _html = _p.read_text(encoding="utf-8")
-    _bars = _html.count('class="search-bar"')
+    _bars = re.findall(r'<div class="search-bar">(.*?)</div>', _html, re.S)
     if not _bars:
         continue
     search_pages += 1
-    _marks = _html.count(C.ROAD_ICON_MARK)
-    if _marks == 0:
-        search_bad.append("%s: has a .search-bar but no road mark" % _p.relative_to(ROOT))
-    elif _marks != _bars:
-        search_bad.append("%s: %d search bar(s) but %d road mark(s)"
-                          % (_p.relative_to(ROOT), _bars, _marks))
+    for _b in _bars:
+        if "<input" not in _b:
+            search_bad.append("%s: a .search-bar with no input in it" % _p.relative_to(ROOT))
+        elif "<svg" in _b:
+            search_bad.append("%s: a .search-bar carrying its own inline SVG" % _p.relative_to(ROOT))
 if search_bad:
     for _b in search_bad[:12]:
         print("  " + _b)
     print("  fix: node scripts/build-shell.mjs && python3 scripts/build-manuals-pages.py")
-    fails.append("search mark")
+    fails.append("search bar")
 else:
-    print("  %d page(s) with a search bar, every one carrying the same mark" % search_pages)
+    print("  %d page(s) with a search bar, every one an input and nothing else" % search_pages)
 
 manifest = json.loads((ROOT / "site.webmanifest").read_text(encoding="utf-8"))
 if manifest.get("theme_color") != C.THEME_COLOR:

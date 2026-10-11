@@ -230,7 +230,6 @@ def build():
     # The filter. Everything below is already on the page; this only narrows it.
     out.append('''  <div class="filter-row parts-filter" role="search">
     <div class="search-bar">
-      %s
       <input type="search" id="parts-q" autocomplete="off" aria-label="Search the parts list" placeholder="Search a part, or what it does">
     </div>
     <label class="fld"><span>System</span>
@@ -242,8 +241,7 @@ def build():
   </div>
   <p class="parts-count" role="status"><span id="parts-shown">%d</span> parts shown</p>
   <p class="parts-empty" id="parts-empty" role="status" hidden>Nothing on the list matches that. Try fewer words, or set the filters back to all.</p>
-''' % (C.ROAD_ICON,
-       "".join('<option value="%s">%s</option>' % (esc(s["key"]), esc(s["label"]))
+''' % ("".join('<option value="%s">%s</option>' % (esc(s["key"]), esc(s["label"]))
                for s in systems),
        "".join('<option value="%s">%s</option>' % (esc(t), esc(type_label(t))) for t in
                sorted({t for s in systems for p in s["parts"] for t in (p.get("types") or [])},
@@ -256,14 +254,23 @@ def build():
     # evidence supports for a long index (research/link-display/01-index-patterns.md,
     # finding 9). The counts are read from the same list the section headings use, so
     # a jump-bar count and the count over its own section cannot disagree.
-    out.append('  <nav class="hub-jump" aria-label="Jump to a system">\n')
-    out.append('   <ul>%s</ul>\n' % "".join(
+    #
+    # FULL BLEED, LIKE THE GUIDES HUB. Ty, 2026-10-10: "in the guides section the lines
+    # for this bar go all the way across the screen whereas in the parts section it does
+    # not go all the way across the screen. It stays the same width as the content."
+    # The band now sits outside the content column and carries its own .wrap for the
+    # chips, which is the guides hub's shape: the rules run edge to edge, the chips
+    # stay inside the page margins. So the filter column closes here and the content
+    # column reopens under it.
+    out.append('</div>\n')
+    out.append('  <nav class="hub-jump" aria-label="Jump to a system">\n   <div class="wrap">\n')
+    out.append('    <ul>%s</ul>\n' % "".join(
         '<li><a href="#%s">%s <span>%d</span></a></li>'
         % (esc(s["key"]), esc(s["label"]), len(s["parts"])) for s in systems))
-    out.append('  </nav>\n')
+    out.append('   </div>\n  </nav>\n<div class="wrap">\n')
 
     # Everything below is real HTML, grouped by system, so it reads without script.
-    for s in systems:
+    for i, s in enumerate(systems):
         out.append('  <section class="parts-sys" id="%s">\n' % esc(s["key"]))
         out.append('    <h2 class="guide-group">%s</h2>\n' % esc(s["label"]))
         if s.get("note"):
@@ -277,7 +284,14 @@ def build():
         out.append('    </ul>\n')
         # Inside the section, not after it: parts.js hides whole sections, so a link left outside
         # stayed visible under a system the reader had filtered away. Nine of them, in fact.
-        out.append('    <p class="parts-top"><a class="link" href="#main">Back to the top</a></p>\n')
+        #
+        # NOT ON THE LAST SECTION. Ty, 2026-10-10: "on the very last section in the parts
+        # page, propane system, we have them back to the top... but we're at the very
+        # bottom of the page at this point and we have an actual back to top button."
+        # The footer's .to-top button is a few pixels below it, so the last one is a
+        # second door to the same room.
+        if i < len(systems) - 1:
+            out.append('    <p class="parts-top"><a class="link" href="#main">Back to the top</a></p>\n')
         out.append('  </section>\n')
 
     out.append('</div>\n</div>\n')

@@ -797,12 +797,29 @@ def model_list(models):
         meta_html = " &middot; ".join(esc(x) for x in (segs, m["years"])
                                       if x and x not in ("none", "not stated"))
         bits = []
+        # A BROCHURE IS NOT AN ACCESSORY, AND NOW IT HAS ITS OWN LINK. Ty, 2026-10-10: "we need
+        # to verify what we're linking so that we make sure it's actually applicable to what we
+        # say it is", and on the brochure slot: "a brochure slot is a fair thing to publish
+        # because we want to provide everything that the dealership would." The accessories
+        # slot had been carrying 211 rows of brochure archives (Jayco, Thor, Entegra, Newmar,
+        # Dutchmen and seven more) because there was nowhere else to put them.
+        #
+        # I ALSO ADDED A `url_label` OVERRIDE HERE AND THEN TOOK IT OUT AGAIN. My link-intent
+        # tool had reported five component rows as "product pages wearing the manual label",
+        # and a relabel was agreed on that basis. Reading the rendered rows showed the page
+        # already prints each document's own title ("Maxxis M8008 ST radial load limits") with
+        # a "spec sheet" badge, so there was nothing to relabel: the wrong label was in my
+        # tool, which had assumed every component link was a manual. A mechanism for a problem
+        # that does not exist is what a reviewer has to maintain for nothing.
         if m["url"]:
             bits.append('<a href="%s" target="_blank" rel="noopener">manual</a>'
                         % esc(m["url"]))
         if m["parts_url"]:
             bits.append('<a href="%s" target="_blank" rel="noopener">parts</a>'
                         % esc(m["parts_url"]))
+        if m.get("brochure_url"):
+            bits.append('<a href="%s" target="_blank" rel="noopener">brochure</a>'
+                        % esc(m["brochure_url"]))
         if m["accessories_url"]:
             bits.append('<a href="%s" target="_blank" rel="noopener">accessories</a>'
                         % esc(m["accessories_url"]))
@@ -1252,12 +1269,14 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from stamp_assets import stamp_html  # noqa: E402  (path set above)
 
 
-# Every manuals search input gets the same .search-bar pill and the same road mark
-# as the homepage, so the site's three search bars look and behave alike. Applied
-# as ONE pass over the generated HTML rather than as three edits inside the
-# templates, because the templates are %-formatted and adding a placeholder to each
-# would have to be kept in step with its argument list. A new template gets this
-# for free.
+# Every manuals search input gets the same .search-bar pill as the homepage, so the
+# site's search bars look and behave alike. Applied as ONE pass over the generated
+# HTML rather than as three edits inside the templates, because the templates are
+# %-formatted and adding a placeholder to each would have to be kept in step with
+# its argument list. A new template gets this for free.
+#
+# The pill used to open with a road mark on the left. Removed 2026-10-10 at Ty's
+# request, sitewide, so the pill is now the field alone.
 SEARCH_INPUT_RE = re.compile(r'(<div class="man-search">\n)(\s*)(<input id="man-q"[^>]*>)')
 
 
@@ -1265,7 +1284,6 @@ def pill_search(html):
     def wrap(m):
         ind = m.group(2)
         return (m.group(1) + ind + '<div class="search-bar">\n'
-                + ind + '  ' + C.ROAD_ICON + '\n'
                 + ind + '  ' + m.group(3) + '</div>')
     return SEARCH_INPUT_RE.sub(wrap, html)
 

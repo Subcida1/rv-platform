@@ -225,31 +225,14 @@ GA4_BLOCK_RE = re.compile(
     re.S)
 
 
-# The road mark used inside every search field.
+# NO MARK INSIDE THE SEARCH FIELD, as of 2026-10-10.
 #
-# A road receding to its far end: two edges converging, and a centreline of three
-# dashes down the middle. Each dash carries its own stroke-width, 2.4 down to 1.1,
-# so the centreline narrows as it goes, and the outermost dash ends on the same
-# line the two edges end on. It replaced a magnifier glyph whose circle and stray
-# arcs collapsed into an unidentifiable blob at 20px.
-#
-# ONE COPY. It reaches the generated manuals pages from here, and the hand-written
-# pages (the homepage and the three state directory pages) carry it inline. A
-# verify.py check fails the build if a page has a .search-bar and does not carry
-# this mark, which is what stops the hand-written copies drifting from this one.
-ROAD_ICON = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" '
-             'stroke-linecap="round" aria-hidden="true">'
-             '<path d="M4 21.5 9.2 3.5"/>'
-             '<path d="M20 21.5 14.8 3.5"/>'
-             '<path d="M12 20.6v-4" stroke-width="2.4"/>'
-             '<path d="M12 12.2v-3" stroke-width="1.7"/>'
-             '<path d="M12 5.5v-2" stroke-width="1.1"/>'
-             '</svg>')
-
-# A distinctive slice of the mark, for the verify.py check above. Comparing the
-# whole string would break on whitespace; this is the part that cannot be
-# anything else.
-ROAD_ICON_MARK = 'M12 20.6v-4'
+# A road-receding mark lived here and reached the generated manuals and parts pages
+# from this constant, with the hand-written pages carrying it inline. Ty, 2026-10-10:
+# "I also kind of don't like the little road emblem we've put on all of the search
+# bars on the left side. Maybe we should get rid of that." Removed everywhere, and
+# the verify.py check that required it is gone with it. The placeholder now says what
+# can be searched, which is what a reader actually needs from that corner of the pill.
 
 
 def state_shards():

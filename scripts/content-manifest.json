@@ -553,9 +553,9 @@
     "claims": "fdfcf4aee5a95536"
   },
   "guides/rv-generator-not-charging.html": {
-    "hash": "87ae3229145e74d1",
+    "hash": "08bdb3f1f1a6e120",
     "status": "verified",
-    "verified_by": "Independent fresh-context review 2026-10-10, all eight cited documents fetched (the Trojan user guide's cited URL redirected to a homepage and is UNVERIFIED, though its voltage figures were confirmed in the same guide hosted elsewhere). 12 findings applied (1 injury, 7 sourcing, 3 voice, 1 style). Applied: the page carried no safety callout of any class while asking the reader to meter 120 volts inside a transfer switch and read a live converter, so a flag-injury callout now stands at the head of the 'what each hop should read' section covering the live reading and the stored charge in the DC side; a Victron symptom phrase that lives in the MultiPlus configuration manual was replaced with what the cited FAQ actually describes, and the WeakAC spelling corrected to Weak AC; the 3000-rpm-versus-1500-rpm guidance, which is not in the cited FAQ, cut; a transfer-relay sentence presented as the handbook's wording rewritten to the fact the handbook does support; an unverifiable QG7000i figure (121 volts within half a volt, 60 Hz within a quarter of a hertz) cut, since no fetched document carries it; an invented 'anything above 13 volts means it is working' threshold cut; the Cummins recommended-size ranges now name the Cummins generator-sizing page, which is in Sources; an empty <p></p> deleted; a broken cross-reference ('read Do not use the generator's 12-volt outlet') rewritten; and four sentences whose subject was the page (including 'The last one is ours') recut or cut. OWED AND UNVERIFIED: the Trojan user guide URL and the QG7000i regulation figures; a named document would close them. The shared-footer 'licences' is sitewide chrome.",
+    "verified_by": "Cloud: citation repair, prose untouched",
     "verified_at": "2026-10-10",
     "sources": [],
     "spec": "_specs/rv-generator-not-charging.md",

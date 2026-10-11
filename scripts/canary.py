@@ -150,10 +150,13 @@ CANARIES = [
      "A furnace that will not light is very often not a dead furnace at all.",
      1, None, "guides/rv-furnace-not-working.html"),
 
-    # every page with a .search-bar must carry the same road mark, and duplicated markup is how
-    # the Cloudflare beacon drifted. The fault nudges one page's copy of the mark.
-    ("a search bar carrying a different mark", "every search bar carries the same mark",
-     "M4 21.5 9.2 3.5", "M4 21.5 9.3 3.5", 1, None, "directory/index.html"),
+    # THE SEARCH PILL HOLDS AN INPUT AND NOTHING ELSE. The road mark that used to sit
+    # inside every search bar was removed sitewide on 2026-10-10, and the rule that
+    # policed it was replaced by this one, so the canary is replaced with it: the fault
+    # grows a decorative SVG inside one search bar, which is the exact shape of the
+    # duplication the old rule existed to stop.
+    ("a decoration inside a search bar", "search bars are the pill, and nothing else",
+     '<div class="search-bar">', '<div class="search-bar"><svg viewBox="0 0 24 24"></svg>', 1),
 
     # DESIGNED FROM THE RULE, NOT GUESSED. The surface rule requires every neutral surface token
     # in :root to be at least ten points bluer than it is red; #faf4f2 has red 250 against blue
