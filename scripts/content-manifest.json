@@ -1002,7 +1002,7 @@
     "sources": []
   },
   "tools/rv-recall-lookup.html": {
-    "hash": "12a407b5d90bbbad",
+    "hash": "e6f7dbb8c75481e8",
     "status": "unverified",
     "verified_by": "New page, 2026-10-10. Every endpoint it calls was exercised live before the brief was written and again after the tool was built; the make-name aliases are the strings NHTSA actually returns, collected from five model years of its makes endpoint, not guesses. No independent lane has reviewed it, so it is recorded unverified rather than claimed.",
     "verified_at": null,
