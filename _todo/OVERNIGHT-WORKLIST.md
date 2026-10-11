@@ -611,6 +611,15 @@ were already covered by the safety pass. Exactly one was a real unowned gap
 (`rv-solar-not-charging`, fixed in `df91514`). The rule this obeys is the site's own: **an instrument
 that flags correct behaviour teaches the reader to ignore it, so suspect the check first.**
 
+**2026-10-11 14:17 PDT (day-driver fire) — W15 RE-CHECKED: no new unowned gap.**
+Body-only re-scan (nav/footer stripped) flags 7 pages; hand-checked each: roof-snow-load
+and rv-fridge-leveling are safety-pass §D "ALREADY ADEQUATE"; rv-slide-out-leaking is the
+safety pass's B-list; rv-tank-sensors' "120 volt wiring" line is informational, not a
+live-work step; rv-trip-planner's roof/propane words are routing avoidance; the CO guide
+is protective/fully warned; rv-delamination was reviewed this fire (no flag owed, a
+descriptive page). The sweep's own one real defect was already fixed (`rv-solar-not-charging`,
+`df91514`). No change made — the W15 lesson stands: the sweep over-reports, hand-check every hit.
+
 ### W16. `check-quotes.py` is over-reporting badly — its hits are NOT a worklist (2026-10-10)
 A full run reported **"quotes not found in any cited source: 64"**. Hand-checking shows the tool is
 extracting the page's own prose as quotations, so the number is not a defect count:
