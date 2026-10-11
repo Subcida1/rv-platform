@@ -54,7 +54,23 @@
  var grayGal = ($('w-gray-full') && $('w-gray-full').checked) ? Math.max(0, num('w-gray-gal')) : 0;
  var blackGal = ($('w-black-full') && $('w-black-full').checked) ? Math.max(0, num('w-black-gal')) : 0;
  var water = (h2oF + grayGal + blackGal) * WATER_LB;
- var propaneLb = propane; // the select carries the full cylinder weight, propane plus steel
+
+ /* WHAT THE DRY WEIGHT ALREADY CONTAINS, and why this is a checkbox rather than a constant.
+  *
+  * A trailer's unloaded vehicle weight INCLUDES THE FULL PROPANE CYLINDERS. That is not a house
+  * convention, it is required: 49 CFR 571.110 S9.3.2 says "the weight of full propane tanks must be
+  * included in the RV's UVW", and the makers say the same in their own words (Forest River: "It includes
+  * all weight at the unit's axle(s) and tongue or pin and LP Gas").
+  *
+  * So a reader who enters the number off the trailer's own sticker has already counted the propane, and
+  * adding it a second time over-states the load by up to 138 lb on two 40 lb cylinders. That is enough to
+  * turn a combination that is fine into a NOT SAFE verdict, which is the worst direction for this tool to
+  * be wrong in. A reader who weighed the trailer themselves, tanks off, has NOT counted it and it has to
+  * be added. Hence the checkbox: the two cases are different numbers and only the reader knows which.
+  *
+  * It defaults to the sticker, because that is where the number normally comes from. */
+ var uvwIsSticker = $('w-uvw-label') ? $('w-uvw-label').checked !== false : true;
+ var propaneLb = uvwIsSticker ? 0 : propane;
  var loaded = rigUVW + water + propaneLb + cargoTrailer;
 
  /* tongue: measured value wins; else est. 12% TT / 20% FW */
@@ -104,18 +120,24 @@
 
  if (rigGVWR > 0) {
    var rigPayloadAvail = rigGVWR - rigUVW;
+   /* NAMED AFTER THE LABEL, because the reader has the label in front of them. GVWR minus dry weight is
+      what a trailer's own sticker calls CCC (cargo carrying capacity), and 49 CFR 571.110 is where the
+      maker's obligation to print it comes from. It also settles a question the water field raises: the
+      regulation says fresh water is CARGO, so water comes out of this number before anything else does. */
+   var cccNote = 'GVWR minus dry weight, which is what the trailer sticker calls CCC. Fresh water counts '
+               + 'as cargo under 49 CFR 571.110, so it comes out of this figure first.';
    if (loaded > rigGVWR) {
-     rows.push(verdictRow('bad', 'Trailer payload',
+     rows.push(verdictRow('bad', 'Trailer cargo capacity (CCC)',
        fmt(loaded) + ' over GVWR by ' + fmt(loaded - rigGVWR) + ' lb',
-       'The trailer is OVER its GVWR. Move cargo out or leave gear home.'));
+       'The trailer is OVER its GVWR, so it is over the CCC on its own sticker. Move cargo out or leave gear home.'));
    } else if (loaded > rigGVWR * 0.9) {
-     rows.push(verdictRow('warn', 'Trailer payload',
+     rows.push(verdictRow('warn', 'Trailer cargo capacity (CCC)',
        fmt(loaded) + ' / ' + fmt(rigGVWR) + ' lb',
        'Over 90% of GVWR. Water and gear are heavy, check your load.'));
    } else {
-     rows.push(verdictRow('ok', 'Trailer payload',
-       fmt(rigPayloadAvail) + ' lb room left under GVWR',
-       'The trailer stays inside its gross weight rating.'));
+     rows.push(verdictRow('ok', 'Trailer cargo capacity (CCC)',
+       fmt(rigPayloadAvail) + ' lb',
+       cccNote));
    }
  }
  var gvwrOver = loaded > rigGVWR;
@@ -200,7 +222,9 @@
  ['ok', 'SAFE', 'Everything checks out. Keep the load this light or lighter.'];
  html = '<div class="w-overall ' + ov[0] + '"><span>Can your truck tow it?</span><b>' + ov[1] + '</b><small>' + ov[2] + '</small></div>' +
  '<div class="w-total"><span>Loaded trailer</span><b>' + fmt(loaded) + ' lb</b>' +
- '<small>' + fmt(water) + ' lb water, ' + fmt(propaneLb) + ' lb propane and tanks, ' + fmt(cargoTrailer) + ' lb cargo</small></div>' +
+ '<small>' + fmt(water) + ' lb water, ' + fmt(cargoTrailer) + ' lb cargo' +
+ (uvwIsSticker ? ', propane already counted inside the dry weight' : ', ' + fmt(propaneLb) + ' lb propane and tanks') +
+ '</small></div>' +
  rows.join('') +
  (payloadCap > 0 && payloadRemain > 0
  ? '<div class="w-remain">Weight to spare in the truck: <b>' + fmt(payloadRemain) + ' lb</b></div>' : '') +
@@ -211,7 +235,7 @@
  }
 
  /* live recompute on any change */
- var ids = ['w-tow-rating','w-payload','w-curb','w-truck-gvwr','w-gvwr','w-uvw','w-h2o-f','w-propane','w-cargo-trailer','w-passengers','w-type','w-axles','w-gray-full','w-black-full','w-gray-gal','w-black-gal'];
+ var ids = ['w-tow-rating','w-payload','w-curb','w-truck-gvwr','w-gvwr','w-uvw','w-uvw-label','w-h2o-f','w-propane','w-cargo-trailer','w-passengers','w-type','w-axles','w-gray-full','w-black-full','w-gray-gal','w-black-gal'];
  ids.forEach(function (id) {
  var el = $(id);
  if (el) el.addEventListener('input', update);
