@@ -151,6 +151,25 @@ step "audit-layout.mjs: collapsed columns, column drift, overlap" \
      node scripts/audit-layout.mjs --base "http://127.0.0.1:$PORT/" --port $LH_PORT \
        --widths 1280,1024,900,393 --out /tmp/layout-ci.json
 
+# ---------------------------------------------------------------- balance
+# Ty, 2026-10-11, on the homepage at phone width: "a lot of stuff still isn't centered or visually
+# balanced when it should be on mobile." None of the three instruments above answers that:
+# audit-render asks whether anything is broken, audit-mobile whether anything is cramped,
+# audit-layout whether rows drift on a DESKTOP width. This one asks whether a box that should be
+# centred is, whether one block's left inset jumps against the block above it, and whether a word
+# can fit the box holding it -- all at phone width, and none of them visible to a per-page check.
+#
+# GATING on the two arithmetic findings (off-centre, and a word that cannot fit), reporting the
+# third. It earned that the hard way in one afternoon: it first flagged every button at the edge of
+# a flex row, then every table cell holding a hyphenated thread size, then a business name on a page
+# it had caught mid-render, and finally -- the bug that made the rest look small -- it was splitting
+# words on the LETTER s, because a single backslash inside the probe's template literal reaches
+# evaluate() as a plain s. Each was corrected rather than tolerated, and the last two are now
+# caught by re-reading the page before anything is reported about it.
+step "audit-balance.mjs: centred boxes, ragged insets, text that cannot fit" \
+     node scripts/audit-balance.mjs --base "http://127.0.0.1:$PORT/" --port $LH_PORT \
+       --widths 360,393
+
 # ---------------------------------------------------------------- prose
 # Vale. Styles are fetched rather than vendored (they are a dependency, not content), so sync first.
 #

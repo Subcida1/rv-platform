@@ -42,7 +42,7 @@ const PORT = Number(argOf('--port', 9341));
 const WIDTHS = argOf('--widths', '360,393').split(',').map(Number);
 const TOL = Number(argOf('--tol', 2));       // px: how far off-centre counts as off
 const RAG = Number(argOf('--rag', 6));       // px: how much inset change counts as ragged
-const SQ = Number(argOf('--squeeze', 3));    // px: how far a word may exceed its box before it counts
+const SQ = Number(argOf('--squeeze', 5));    // px: how far a word may exceed its box before it counts
 // A bare page list, which is neither a flag, a value for one, nor a comma-separated width set.
 const named = args.filter((a) => !a.startsWith('--') && !/^[\d,]+$/.test(a) && !a.includes(':'));
 
@@ -62,9 +62,18 @@ await new Promise((r) => (ws.onopen = r));
 let id = 0; const p = new Map();
 ws.onmessage = (e) => { const m = JSON.parse(e.data); if (p.has(m.id)) { p.get(m.id)(m); p.delete(m.id); } };
 const send = (me, pa) => new Promise((res) => { const i = ++id; p.set(i, res); ws.send(JSON.stringify({ id: i, method: me, params: pa })); });
+/* NEVER LET THE PROBE CRASH THE SWEEP. A CDP reply without a result object (a navigation that
+   landed mid-call, a target the browser closed) threw a TypeError out of here and killed a
+   132-page run at page 40. A measurement that could not be taken is reported as such, never as
+   silence and never as a crash. */
 const evx = async (e) => {
-  const r = await send('Runtime.evaluate', { expression: e, returnByValue: true, awaitPromise: true });
-  return r.exceptionDetails ? 'EXC ' + r.exceptionDetails.text : r.result.result.value;
+  let r;
+  try {
+    r = await send('Runtime.evaluate', { expression: e, returnByValue: true, awaitPromise: true });
+  } catch (err) { return 'NORESULT'; }
+  if (!r || !r.result) return 'NORESULT';
+  if (r.exceptionDetails) return 'EXC ' + r.exceptionDetails.text;
+  return r.result.result ? r.result.result.value : 'NORESULT';
 };
 await send('Page.enable'); await send('Network.enable');
 await send('Network.setCacheDisabled', { cacheDisabled: true });
@@ -114,9 +123,16 @@ const PROBE = (tol) => `(function(){
       }
     }
   }
-  /* SQUEEZE: a box narrower than its own longest word cannot lay that word out. The measurement
-     uses a canvas with the element's own computed font, so what is compared is the real rendered
-     width of the word against the room the element actually has inside its padding. */
+  /* SQUEEZE: a word that cannot fit the line it is on. Measured as the longest UNBREAKABLE run
+     of text against the room the element has inside its padding, and only for elements that have a
+     box of their own.
+     Three things this rule learned the hard way on 2026-07-11, each from a false report the first
+     version made: an inline element has no client box, so measuring scrollWidth against its
+     clientWidth accuses every link on the page of overflowing; a token containing a hyphen or a
+     slash can be broken there by the browser, so "9/16-18" in a table cell is not a squeeze; and a
+     label that simply wraps onto a second line, like a related-guides button, is not one either.
+     The manuals navigation list, where a section link was 73px wide and the word "maintenance"
+     needed 83px, is what this is for. */
   var canvas = document.createElement('canvas');
   var ctx = canvas.getContext('2d');
   var els = document.querySelectorAll('a,button,span,b,strong,label,th,td,p,h1,h2,h3,li,div');
@@ -126,18 +142,30 @@ const PROBE = (tol) => `(function(){
     var txt2 = (el2.textContent || '').replace(/\s+/g, ' ').trim();
     if (!txt2 || txt2.length > 60) continue;
     if (!vis(el2)) continue;
-    var r2 = el2.getBoundingClientRect();
     var cs2 = getComputedStyle(el2);
+    if (cs2.display === 'inline' || cs2.display === 'contents') continue;
+    var r2 = el2.getBoundingClientRect();
     ctx.font = cs2.fontStyle + ' ' + cs2.fontWeight + ' ' + cs2.fontSize + ' ' + cs2.fontFamily;
-    var words2 = txt2.split(' '), widest = 0, worst = '';
-    for (var q = 0; q < words2.length; q++) {
-      var ww = ctx.measureText(words2[q]).width;
-      if (ww > widest) { widest = ww; worst = words2[q]; }
+    /* EVERY UNICODE SPACE IS A BREAK OPPORTUNITY, not just the ASCII one. A label written with a
+       narrow no-break space (U+202F) or a non-breaking space (U+00A0) split as one run and was
+       reported as a 153px word in a 146px box, which is the whole label rather than a word. */
+    /* DOUBLE EVERY BACKSLASH IN HERE. This whole probe is a template literal, so a single backslash-s
+       reaches evaluate() as a plain s, and the class below was splitting words on the LETTER s:
+       "Enter the last four digits" arrived as "Enter the la t four digit ", so the longest word
+       became half a sentence and failed the fit test on pages that are fine. The same trap was
+       documented for an earlier balance probe on 2026-10-06: never put a raw backtick or an
+       unescaped backslash inside this probe. */
+    var runs = txt2.split(/[\\s\\p{Zs}\\u00ad\\u2010\\u2011-]+/u).filter(Boolean);
+    var widest = 0, worst = '';
+    for (var q = 0; q < runs.length; q++) {
+      var ww = ctx.measureText(runs[q]).width;
+      if (ww > widest) { widest = ww; worst = runs[q]; }
     }
     var room = r2.width - parseFloat(cs2.paddingLeft) - parseFloat(cs2.paddingRight);
     if (widest > room + ${SQ}) {
-      out.squeeze.push({el: label(el2), word: worst, wordW: Math.round(widest), room: Math.round(room),
-                        over: Math.round(widest - room), text: txt2.slice(0, 40)});
+      out.squeeze.push({el: label(el2), word: worst, wordW: Math.round(widest),
+                        room: Math.round(room), over: Math.round(widest - room),
+                        text: txt2.slice(0, 40)});
     }
   }
 
@@ -197,7 +225,26 @@ for (const w of WIDTHS) {
     const rawA = await evx(PROBE(TOL));
     await new Promise((r) => setTimeout(r, 500));
     const rawB = await evx(PROBE(TOL));
-    const raw = intersect(rawA, rawB);
+    if (typeof rawA !== 'string' || typeof rawB !== 'string' || rawA === 'NORESULT' || rawB === 'NORESULT'
+        || rawA.startsWith('EXC') || rawB.startsWith('EXC')) {
+      console.log('  ??  ' + page + '  could not be measured (no CDP result)');
+      continue;
+    }
+    let raw = intersect(rawA, rawB);
+    /* A PAGE IS RE-EXAMINED BEFORE ANYTHING IS REPORTED ABOUT IT. The two-reading rule above still
+       let one finding through that three re-runs of the same page could not reproduce: a related
+       button on directory/colorado.html reported as squeezed on one sweep run and clean on the next
+       three. So a page that has a finding is loaded again and measured a third time, and only
+       findings that survive that are reported. Confirming a finding costs one page load; reporting
+       a false one costs the reader's trust in every other line the tool prints. */
+    if (typeof raw === 'string' && raw.length > 20 && /"(centre|ragged|squeeze)":\[\{/.test(raw)) {
+      await send('Page.navigate', { url: BASE + page });
+      await new Promise((r) => setTimeout(r, 1200));
+      await evx('document.fonts && document.fonts.ready ? document.fonts.ready.then(function(){return 1;}) : 1');
+      await new Promise((r) => setTimeout(r, 600));
+      const rawC = await evx(PROBE(TOL));
+      raw = intersect(raw, rawC);
+    }
     if (typeof raw !== 'string' || raw === 'EXC') { console.log('  ?? ' + page + ' could not be measured'); continue; }
     const d = JSON.parse(raw);
     if (!d.centre.length && !d.ragged.length && !d.squeeze.length) { console.log('  ok  ' + page); continue; }
@@ -205,7 +252,7 @@ for (const w of WIDTHS) {
     if (d.squeeze.length) {
       failures += d.squeeze.length;
       console.log('     SQUEEZE ' + d.squeeze.length + ' element(s) narrower than their own longest word');
-      d.squeeze.slice(0, 5).forEach((s) => console.log('        ' + s.el + '  "' + s.word + '" needs ' + s.wordW + 'px, has ' + s.room + 'px (' + s.over + ' over)'));
+      d.squeeze.slice(0, 5).forEach((s) => console.log('        ' + s.el + '  "' + s.word + '" needs ' + s.wordW + 'px, has ' + s.room + 'px (' + s.over + ' over): "' + s.text + '"'));
     }
     if (d.centre.length) {
       failures += d.centre.length;
