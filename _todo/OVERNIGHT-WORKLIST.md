@@ -38,6 +38,30 @@ commits, so two sessions do not review the same page.
 
 ---
 
+# FIRE REPORT - 2026-10-11 14:00-15:00 PDT (day-driver cron, scheduled)
+
+The tree was 14 behind origin with one un-pushed complete tool commit (the appliance
+board finder, `6b0d883e`) - rebased, conflict-resolved, CI-green, pushed.
+
+W12 closed: `rv-delamination` (`d175b880`) and `roof-snow-load` (`381c5aa5`) each got
+their owed independent reviewer pass. In the roof-snow pass, three reviewer sourcing
+findings were REJECTED after I re-fetched the cited Keystone manual + NRCS page - the
+30 psf / 250 lb / 4-40% figures are all verbatim in their cited sources (the flagged
+class: a reviewer absence claim must be checked against the source before acting).
+
+W15 re-checked: no new unowned hazard gap (all candidates already adjudicated).
+
+SECOND-PASS HANDOFF CLOSED: `rv-trip-planner` (clean, `0d54d8af`) and
+`rv-pin-weight-and-payload` (`aad62ce5`, 3 findings incl. a flag-injury at the scale
+procedure). The authoritative OWED list in the manifest is now EMPTY - every guide has
+had an independent reviewer pass. Dispatch was intermittent (several dead runs early,
+all succeeded on retry); the delamination/roof-snow/trip-planner/pin-weight passes all
+landed with findings applied and CI green. No failed GitHub runs in 3h.
+
+Still open, by design: W3 (waits on Ty's spec for the clogged black-tank page), W5
+(parts build - multi-session, decisions locked nothing built), W6/W7 (safety pass owns),
+W16 (check-quotes extractor fix is its own pass).
+
 ## CLAIM — the 27-guide independent-review pass, 2026-10-10 16:10 PDT
 
 > **SCOPE BOUNDARY SET 2026-10-10 16:37 — READ THIS BEFORE TAKING ANY ITEM.**
