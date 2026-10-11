@@ -3332,28 +3332,43 @@ a.tchip:focus-visible{outline:2px solid var(--b1,var(--brand));outline-offset:2p
 .part-types .chip{font-family:inherit;font-size:10.5px;font-weight:800;letter-spacing:.085em;
   text-transform:uppercase;line-height:1;padding:0 10px;min-height:25px;
   display:inline-flex;align-items:center;cursor:pointer;
-  background:var(--tint-bg);border-color:var(--tint-edge);color:var(--tint-ink)}
-.part-types .chip:hover{background:var(--tint-ink);border-color:var(--tint-ink);color:var(--text-inv)}
-/* A SELECTED PILL HOLDS THE HOVER STATE.
-   Ty, 2026-10-06: "for the travel trailer fifth wheel pop up motorhome pill buttons on each part
-   ... i want them to basically hold their hover animation state when their selected so the user
-   can visually see that they have selected travel trailer or fifth wheel."
+  background:var(--tint-ink);border-color:var(--tint-ink);color:var(--text-inv)}
+/* THE FILL THAT WAS THE HOVER IS THE DEFAULT NOW, AND HOVER GOES THE OTHER WAY.
+   Ty, 2026-10-10: "The hover over color is what they should just always be by default. And maybe we
+   can make them turn into their current color on hover over ... Right now the colors between them
+   and the manual buttons are basically identical. So I think if we use the hover over darker blue for
+   just their generalized color that will probably separate them visually even better."
 
-   So the selected values are the HOVER values, copied deliberately rather than reinvented: the
-   pill lifts off the tinted surface onto the card white and gains a border, which is the state a
-   reader already associates with "this one is live under my pointer". Holding it means the pill
-   keeps saying that after the pointer has gone, which is the whole point -- a reader needs to see
-   their choice at rest, not only while hovering it.
+   He is right about why they blurred together: a light tint pill with a thin edge is the same shape
+   AND nearly the same value as a manuals button sitting on the same card. Filled --tint-ink at rest
+   puts them a full step darker than every button on the page, and the hover releases to the light
+   tint, which reads as the pill stepping back rather than lighting up. White on --tint-ink measures
+   5.58:1, so the default state is the strong one and it still passes AA. */
+.part-types .chip:hover{background:var(--tint-bg);border-color:var(--tint-edge);color:var(--tint-ink)}
+/* A SELECTED PILL HOLDS A STATE OF ITS OWN. It held the HOVER state until 2026-10-10, which was
+   right while the hover was the fill; when the pill's resting state became the fill and the hover
+   became the pale tint, holding a hover would have made the CHOSEN pills the solid ones and left
+   nothing to tell them from the unchosen ones beside them.
 
-   `transition:.16s` comes from `.chip` above, so arriving at this state animates the same way the
-   hover does, which is what "hover animation state" asks for.
+   What survives from Ty, 2026-10-06 -- "i want them to basically hold their hover animation state
+   when their selected so the user can visually see that they have selected travel trailer or fifth
+   wheel" -- is the requirement rather than the mechanism: a selection must be visible AT REST, with
+   no pointer on it. The chosen pill inverts to the card's white with the ink back, which is the one
+   shade on the card that nothing else uses, so it is unmistakable next to the solid ones.
 
-   TWO THINGS ATE THE EARLIER `.chip.on`, and neither was a missing rule: `.part-types .chip`
-   further down has the same specificity and comes LATER, so it won and reset the background; and
+   `transition:.16s` still comes from `.chip` above, so arriving at this state animates the same way
+   the hover does.
+
+   TWO THINGS ATE THE EARLIER `.chip.on`, and neither was a missing rule: `.part-types .chip` further
+   down has the same specificity and comes LATER, so it won and reset the background; and
    `.part-types .chip:hover` reset it again on top. Both are covered here. */
+/* A SELECTED PILL INVERTS, because the fill is now the resting state and a filter needs a state
+   that cannot be confused with "not chosen". Ty asked on 2026-10-06 that a selected pill be visible
+   at rest rather than only under the pointer; the inverted chip keeps that promise by making the
+   chosen ones the pale ones, which is the one shade on the card that nothing else uses. */
 .part-types .chip.on,
 .part-types .chip.on:hover,
-.part-types .chip.on:focus-visible{background:var(--tint-ink);border-color:var(--tint-ink);color:var(--text-inv)}
+.part-types .chip.on:focus-visible{background:var(--surface);border-color:var(--tint-ink);color:var(--tint-ink)}
 /* The links used to be pinned to the bottom of the card with margin-top:auto and a rule above
    them. In a row that hugs its content there is nothing to pin them to, and the rule was
    separating a space that no longer exists. They are buttons now, so the font-size went too. */

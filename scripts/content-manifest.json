@@ -403,9 +403,9 @@
     "claims": "ca780a6dbc99c4d8"
   },
   "guides/index.html": {
-    "hash": "5a3aef7dfa431fac",
+    "hash": "3f22d811aa352a31",
     "status": "verified",
-    "verified_by": "Structural pass by Cloud 2026-10-10 (a SAME-SESSION pass, not a separate reviewer subagent: dispatch failed all evening under exhausted swap). This is a navigation hub: it carries no quotations and cites no sources, so the six rules reduce to counts, links, structured data and voice. CHECKED: all 45 distinct guide links on the page resolve to files that exist and together they cover the whole _data/guides.json catalogue (45 slugs, none missing, none extra); the lede and every card descriptor read as statements about the RV subject rather than about the page; no banned vocabulary and no British spellings beyond the sitewide footer; no empty <p> and no mid-clause truncation. ONE REAL DEFECT FOUND AND FIXED in 4ee85d9: the page's JSON-LD ItemList shipped /guides/rv-trip-planner with the name 'Generator Sizing', because sync-counts.py's sync_itemlist() matched href=slug and then jumped non-greedily to the NEXT card's guide-title anywhere in the document, and the trip planner is surfaced only as a pinned card (man-pinned-title) with no guide-title of its own. The match is now card-scoped, the name comes from the card's own data-name (added: 'RV Trip Planner') or its title element, and a card carrying neither fails loudly instead of borrowing a neighbour - negative-tested, and the fix was confirmed live on originrv.com after deploy. OWED: the independent reviewer-subagent pass the doctrine prefers.",
+    "verified_by": "Cloud: removed the trip-planner pinned card (Ty: the planning-a-trip element feels out of place here) and ordered the cards inside each group by demand. Structural pass on a navigation hub: 44 group cards, every one resolving to a file that exists; guides/rv-trip-planner.html still exists and is still named in the index ItemList, but this page no longer links it, which is the point of the removal. Ordering evidence: measured Bing volume where it exists (13 of 81 head terms), otherwise the RVBusiness 7,300-record field service-call ranking and the community thread counts in research/originrv-demand-research-2026-09-22.md. Spec waived: no _specs/index.md exists.",
     "verified_at": "2026-10-10",
     "sources": [],
     "spec": null,
