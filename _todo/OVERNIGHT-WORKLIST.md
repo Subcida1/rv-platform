@@ -101,7 +101,7 @@ unaffected and is what the rebaselines use. NOT fixed here — recorded rather t
 | 24 | rv-maintenance-schedule | 6 (1 injury, 1 wrong-fact, 1 sourcing, 2 voice, 1 style) | **done, pushed** `f817a7b` |
 | 26 | rv-trip-planner | 2 (1 sourcing, 1 style) | **done, pushed** `552f3a4` |
 | 25 | rv-black-tank | 2 (1 sourcing, 1 style) | done `b012850` |
-| 23 | rv-pre-trip-walkaround | 1 (fabricated Jayco quotation) | done `6e1c016` |
+| 23 | rv-pre-trip-walkaround | pass 1: 1 finding **AND IT WAS WRONG** (a false "fabricated quotation" that broke a correct quote); pass 2 (independent): **9 more** (1 injury, 3 wrong-fact, 2 sourcing, 1 voice, 2 style) | done `6e1c016`, corrected in `64e9327` |
 | 22 | rv-pin-weight-and-payload | 0 (verified clean) | done `c4b18fd` |
 | 21 | rv-driving-motorhome | pass 1: 4 (1 wrong-fact, 1 sourcing, 2 style); **pass 2 (independent): 6 more (1 injury, 1 wrong-fact, 1 sourcing, 1 voice, 2 style)** | done `c85f24d` + `6c90986` |
 
@@ -123,6 +123,18 @@ are scanned, so say "the banned-vocabulary rule" and never the word. (2) The pus
 check because I wrote it as `(cd /tmp/c && verify.py > log; echo EXIT=$?; tail -2 log) && git push` —
 the subshell reports `tail`'s status, not the checker's. **Use the shape that carries the real status:**
 `if (cd /tmp/c && python3 scripts/verify.py > /tmp/arc.txt 2>&1); then push; else echo "ARCHIVE RED - NOT PUSHING"; tail -6 /tmp/arc.txt; fi`. Both fixes are pushed and green.
+
+**AND MY SAME-SESSION PASS PRODUCED A FALSE POSITIVE THAT THEN BROKE A PAGE (2026-10-10 17:31).** Pass 1
+on `rv-pre-trip-walkaround` reported a **fabricated quotation** and replaced Jayco's line with
+"Make sure everyone is accounted for." That finding was wrong. The original wording, **"Ensure everyone,
+including pets and children, is accounted for."**, IS verbatim in the cited Jayco 2027 Towable manual at
+the end of its travel checklist (line 10756), and "Make sure everyone is accounted for." is in the
+manual's **fire-safety** section (line 559). Pass 1 grepped the **fragment** `accounted for`, took the
+**first** hit, and concluded absence — so it swapped a correct quotation for a genuine misattribution.
+The independent pass caught it; reverted in `64e9327`.
+**RULE: to test a quotation, search the EXACT quoted string (or a distinctive substring of it), never a
+loose fragment. A fragment returns the first occurrence, which may be a different sentence in the same
+document — and an empty or mismatched result is evidence about the pattern, not about the file.**
 
 Method note for items 21, 22, 23, 25, 26 (and the hub): **these passes were done by Cloud itself, in
 session, not by a fresh-context reviewer subagent.** The subagent path was dead all evening - four
