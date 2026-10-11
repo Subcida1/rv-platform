@@ -4,15 +4,18 @@ You are a fresh context. Everything you need is on disk; do not assume you remem
 
 ## The job, in one sentence
 
-Three guide pages had only a **same-session** verification pass (the reviewer-subagent path was dead
+Four guide pages had only a **same-session** verification pass (the reviewer-subagent path was dead
 when they were done). Each now owes a real **independent fresh-context reviewer pass**. Run them one
 at a time: dispatch, apply the findings, re-baseline, verify the commit, push.
 
-The three, in this order:
+The four, in this order (the authoritative list is any manifest note still containing the string
+`OWED: the independent reviewer-subagent pass` — re-check it, in case another session got there first):
 
 1. `guides/rv-black-tank.html`
 2. `guides/rv-trip-planner.html`
-3. `guides/index.html` (the guides hub — a navigation page: no quotations, so check counts, links,
+3. `guides/rv-pin-weight-and-payload.html` (its same-session pass found nothing — which is exactly
+   the result most likely to be wrong; the independent pass on other pages found 6, 9 and 6)
+4. `guides/index.html` (the guides hub — a navigation page: no quotations, so check counts, links,
    structured data, descriptors and voice)
 
 ## Orient first

@@ -139,8 +139,9 @@ document — and an empty or mismatched result is evidence about the pattern, no
 **THE REMAINING THREE SECOND PASSES ARE BLOCKED ON MACHINE MEMORY, AND HANDED OFF (2026-10-10 17:43).**
 `rv-driving-motorhome`, `rv-pre-trip-walkaround` and `rv-maintenance-schedule` have now had their
 independent second passes (see the rows above; they found 6, 9 and 6 further defects, and the
-walkaround pass also caught a defect MY first pass had introduced). Three guides still owe theirs:
-**`rv-black-tank`, `rv-trip-planner`, `guides/index.html`**. They are not skipped — they are blocked,
+walkaround pass also caught a defect MY first pass had introduced). **FOUR guides still owe theirs**
+(count them in the manifest with the string `OWED: the independent reviewer-subagent pass`):
+**`rv-black-tank`, `rv-trip-planner`, `rv-pin-weight-and-payload`, `guides/index.html`**. They are not skipped — they are blocked,
 and the block is measured: `free -h` now reports **swap 8.3 GiB of 8.3 GiB used, 1.2 MiB free**, and
 `conv-2d4534d8` was **ACTIVE and mid-commit** at 00:42:59Z. Spawning a reviewer under that pressure
 fails roughly half the time (task_57 and task_60 succeeded, task_58 died with "Listener run failed"),
