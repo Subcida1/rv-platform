@@ -56,6 +56,7 @@
     "rv-towing-trailer": "towing-and-running-gear",
     "rv-black-tank": "sanitation-and-tanks",
     "rv-maintenance-schedule": "planning-and-travel",
-    "rv-water-heater-anode-rod": "water-and-plumbing"
+    "rv-water-heater-anode-rod": "water-and-plumbing",
+    "rv-black-tank-routine": "sanitation-and-tanks"
   }
 }

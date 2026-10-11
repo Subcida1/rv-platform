@@ -403,9 +403,9 @@
     "claims": "ca780a6dbc99c4d8"
   },
   "guides/index.html": {
-    "hash": "af074a60868ef799",
+    "hash": "7debd35132e7bd73",
     "status": "verified",
-    "verified_by": "Added the tile for the new anode rod and flush guide to the Water and plumbing grid, with its card inserted after the water heater troubleshooting guide. Structural pass on a navigation hub: the card resolves to a file that exists, the ItemList still names every guide in the catalogue, and no existing prose changed. Checked by running scripts/verify.py and scripts/check-structure.py.",
+    "verified_by": "Added the tile for the black tank routine guide to the Water and plumbing grid, beside the black tank guide it sequences. Structural pass on a navigation hub: the card resolves to a file that exists, the ItemList names every guide in the catalogue, and no existing prose changed. Checked with scripts/verify.py, scripts/check-structure.py and scripts/clean-urls.py, and the page rendered at 1280 and 393.",
     "verified_at": "2026-10-10",
     "sources": [],
     "spec": null,
@@ -461,6 +461,13 @@
     "spec": "_specs/rv-battery-not-charging.md",
     "spec_waived": false,
     "claims": "f2c9a068f6c16e27"
+  },
+  "guides/rv-black-tank-routine.html": {
+    "hash": "38b60049e5a35441",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
   },
   "guides/rv-black-tank.html": {
     "hash": "5ab6421dd4973b9d",
@@ -850,7 +857,7 @@
     "claims": "2c668bd9cf981fe7"
   },
   "index.html": {
-    "hash": "92c1eae32a2c15da",
+    "hash": "16b0678086aa6a69",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -974,7 +981,7 @@
     "sources": []
   },
   "tools/index.html": {
-    "hash": "1a0f4384c8283bb1",
+    "hash": "d42c5c80d461e883",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
