@@ -51,18 +51,17 @@ Order that works: edit → rebuild generators (`build-manuals-pages.py`, `build-
 
 ## Open work
 
-1. **The Crane Composites citation on `guides/rv-delamination.html` is DEAD AT THE SOURCE.**
-   `cranecomposites.com` no longer resolves ("Domain not found"), and the cited Forest River URL
-   returns HTTP 200 **serving HTML** instead of the PDF (verified by hand with curl: body starts
-   `<!DOCTYPE html>`). The guide *quotes* Crane in prose ("Crane Composites, which makes the
-   exterior skin, states the stakes from its side…", "Crane says moisture damage voids their
-   warranty, and the documented repair is replacement of the…"), so those statements are sourced
-   only to a document that no longer exists anywhere maker-owned; the surviving copies are mirrors
-   (kz-rv.com, coachmenrv.com, valtoem.com) and mirrors are banned by our own rule. **Next: cut the
-   Crane-derived statements and its Sources entry, then re-verify the page with
-   `verify-content.py --verify --by`. Do NOT rush this — it is prose surgery on a verified guide,
-   and `check-quotes.py` already reports 5 other quotes on that page that are not in any cited
-   source.**
+1. **DONE 2026-10-10: the Crane Composites citation is gone.** It was dead at the source in two
+   ways: our copy was a Forest River-hosted mirror (a third party, not the maker) and answered 200
+   with an HTML page, and `cranecomposites.com` no longer resolves at all. The quoted passage, the
+   attribution and the source entry were cut; the skin-replacement point is carried by the cited
+   Brinkley work instructions and Keystone bulletin, both maker-issued and live. Grand Design's
+   structural warranty does NOT say "moisture voids the warranty", which is why that clause was cut
+   rather than re-attributed. Re-verified with the page's existing `--no-spec` waiver.
+   **Still owed on that page: three quotes that appear in no cited source** (a Winnebago sealant
+   callout list, an Airstream seam passage, an EPA mold line) -- check each against its document.
+   **One check-quotes finding there is a FALSE POSITIVE**: it says the page tidied "Structural
+   Components" to lower case, and the maker's PDF prints it capitalised exactly as the page does.
 2. **The 8 Forest River-hosted citations** (`forestriverinc.com/files/component-manuals/…` on
    rv-furnace-carbon-monoxide, rv-furnace-not-working, rv-generator-sizing, rv-macerator-toilet,
    rv-maintenance-schedule, winterize-plumbing…) are rehosts of other makers' documents (Dometic,

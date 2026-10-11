@@ -493,9 +493,9 @@
     "claims": "9e753c5476a782bd"
   },
   "guides/rv-delamination.html": {
-    "hash": "928fb7f296c0fc17",
+    "hash": "9d24585f12859f5f",
     "status": "verified",
-    "verified_by": "2026-10-10 independent bridge-lane review (chatgpt.com): applied its three findings (the OSHA 48-hour rule is no longer presented as an RV repair standard; the OSHA and EPA 100-sq-ft passages are separated instead of merged into one 'require'; the hot-climate bubble diagnosis now says a bubble alone cannot settle the cause) plus NINE collective-noun agreement fixes (Azdel go/describe, Jayco make, Keystone give, Crane Composites who/their, Tramex describe, Winnebago publish, Airstream name, Crane say). No fact, number or interval changed. Spec waived: no _specs/rv-delamination.md exists.",
+    "verified_by": "Cloud: removed the Crane Composites quotation, its attribution and its source entry (the maker's domain no longer resolves and the copy we had was a Forest River-hosted mirror that now serves a web page instead of the PDF); the skin-replacement point now rests on the cited Brinkley work instructions and Keystone bulletin. Spec waived: no _specs/rv-delamination.md exists.",
     "verified_at": "2026-10-10",
     "sources": [],
     "spec": null,
