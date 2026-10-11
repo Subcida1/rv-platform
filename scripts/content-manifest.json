@@ -715,7 +715,7 @@
   "guides/rv-tank-sensors-reading-wrong.html": {
     "hash": "48d922aea9444f44",
     "status": "verified",
-    "verified_by": "Independent fresh-context review 2026-10-10, all nine cited documents fetched: 6 findings applied (2 sourcing, 2 voice, 2 style). Every quotation on the page verified verbatim against its cited document; no mis-pairing and no fabricated quote found. Applied: an empty <p></p> left under a heading removed; an RV toilet flush volume ('about a quart per flush') that no cited document states reduced to a non-quantified statement; the probe maker's instruction restated as 'at the same level' where the maker writes 'next to the existing probes' - a step that decides where a hole is drilled, so the maker's wording now stands; 'wire colours' Americanised; an editorial flourish ('a real diagnostic story') and a coined phrase ('the number that moves') cut. OWED: the shared-footer 'licences' is sitewide chrome, recorded as a template fix.",
+    "verified_by": "Cloud: moved the external-sensor caption out of the tank so both sides read the same way (Ty spotted the green label sitting inside the tank while the orange one sat below it)",
     "verified_at": "2026-10-10",
     "sources": [],
     "spec": "_specs/rv-tank-sensors-reading-wrong.md",
