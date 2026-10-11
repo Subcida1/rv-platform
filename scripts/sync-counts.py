@@ -97,6 +97,17 @@ def sync_claims():
         print("    derivable but not marked anywhere: %s" % ", ".join(unused))
 
 
+def h1_of(slug):
+    """A guide's own name, read from its page. The fallback for a guide the hub does not carry."""
+    page = ROOT / "guides" / (slug + ".html")
+    if not page.exists():
+        return None
+    m = re.search(r"<h1[^>]*>(.*?)</h1>", page.read_text(encoding="utf-8"), re.S)
+    if not m:
+        return None
+    return re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", m.group(1))).strip() or None
+
+
 def sync_itemlist():
     """The guides index names every guide in a JSON-LD ItemList, and that block is the one
     piece of our own inventory that is not a data-claim marker. It drifted to 8 items while
@@ -127,8 +138,22 @@ def sync_itemlist():
         m = re.search(r'(<a\b[^>]*href="guides/%s(?:\.html)?"[^>]*>)(.*?)</a>' % re.escape(slug),
                       html, re.S)
         if not m:
-            raise SystemExit("FAIL  guides/index.html has no card for %s, so the ItemList "
-                             "cannot name it" % slug)
+            # A GUIDE THE HUB DOES NOT CARRY IS STILL A GUIDE, AND IT STILL NEEDS A NAME HERE.
+            # `da4ac1d9` took the trip planner's card out of the hub on purpose ("popular topics
+            # first, and the trip card out"), which left this function raising on EVERY run: the
+            # ItemList could not be rebuilt at all, so the next guide added anywhere would have
+            # failed verify.py's "ItemList omits" check with no way to regenerate it. Found
+            # 2026-10-10 while publishing the anode rod guide, which was the first addition since.
+            # The fallback is the page's own h1, which is the guide's real name and is read from
+            # the artifact rather than invented. The card is still preferred when there is one,
+            # because that is what keeps the structured data matching the visible list.
+            name = h1_of(slug)
+            if not name:
+                raise SystemExit("FAIL  guides/index.html has no card for %s, and %s.html has no "
+                                 "h1 to name it with" % (slug, slug))
+            items.append({"@type": "ListItem", "position": i, "name": name,
+                          "url": "https://originrv.com/guides/%s.html" % slug})
+            continue
         tag, card = m.group(1), m.group(2)
         dm = re.search(r'data-name="([^"]+)"', tag)
         tm = re.search(r'<div class="(?:guide-title|man-pinned-title)">([^<]+)</div>', card)

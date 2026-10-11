@@ -35,6 +35,10 @@
   "guides/rv-trailer-wheel-bearings.html": "repack trailer bearings",
   "guides/rv-trip-planner.html": "rv trip planner",
   "guides/rv-two-appliances-stopped.html": "two rv appliances stopped at once",
+  "guides/rv-water-heater-anode-rod.html": {
+   "q": "rv water heater anode rod",
+   "term": "anode"
+  },
   "guides/rv-water-heater-not-heating.html": "rv water heater not heating",
   "guides/rv-water-pump-wont-prime.html": "rv water pump won't prime",
   "guides/tires-winter.html": "rv tires in winter storage",
@@ -48,6 +52,10 @@
   "tools/tire-date-code.html": "rv tire date code decoder",
   "tools/rv-toilet-valve.html": "rv toilet water valve",
   "tools/rv-recall-lookup.html": "rv recall lookup",
+  "tools/rv-anode-rod.html": {
+   "q": "rv water heater anode rod replacement",
+   "term": "anode"
+  },
   "tools/watts-to-amps.html": "watts to amps calculator for rvs",
   "tools/weight-calculator.html": "rv towing calculator",
   "directory/alabama.html": {

@@ -90,6 +90,7 @@ step "weight calculator"                       node scripts/test-weight-calculat
 step "tire date decoder"                      node scripts/test-tire-date.js
 step "toilet valve finder"                    node scripts/test-toilet-valve.js
 step "recall lookup"                          node scripts/test-recall-lookup.js
+step "anode rod finder"                       node scripts/test-anode-rod.js
 node scripts/test-snow-load.js
 step "accessibility (axe)"                    node scripts/check-a11y.mjs
 # THE HEADING RULE, gated rather than remembered. Ty, 2026-10-10: "This should be a site wide

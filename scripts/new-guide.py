@@ -86,7 +86,12 @@ def main():
     head = src[: src.index("</head>") + len("</head>")]
     tail = src[src.index("</main>") + len("</main>"):]
     old_url = re.search(r'<link rel="canonical" href="([^"]+)"', head).group(1)
-    new_url = f"{SITE}/guides/{a.slug}.html"
+    # EXTENSIONLESS, because that is what the site publishes. This wrote the file name with a
+    # .html on it, which put a non-canonical URL in three places at once (canonical, og:url and
+    # the JSON-LD url), so every guide built from this tool arrived failing clean-urls.py --check.
+    # Found 2026-10-10 on the first guide published since the extensionless sweep, which is the
+    # only reason it survived: nothing between then and now had run this tool.
+    new_url = f"{SITE}/guides/{a.slug}"
 
     head = head.replace(old_url, new_url)
     head = re.sub(r"<title>.*?</title>", f"<title>{a.title}</title>", head, flags=re.S)
@@ -217,7 +222,11 @@ def main():
     if new_url in x:
         print("  sitemap: already listed")
     else:
-        line = (f'  <url><loc>{new_url}</loc><lastmod>2026-09-27</lastmod>'
+        # THE DATE IS THE DAY THE PAGE WAS BUILT, not a literal. This said 2026-09-27 for every
+        # guide built after that date, and scripts/build-sitemap.py --write is what corrected it,
+        # which means a guide built and pushed without that step shipped a wrong lastmod. Fixed
+        # 2026-10-10 with the same variable the JSON-LD dates above already use.
+        line = (f'  <url><loc>{new_url}</loc><lastmod>{_today}</lastmod>'
                 f'<changefreq>monthly</changefreq><priority>0.8</priority></url>\n')
         m = re.search(r'  <url><loc>https://originrv\.com/guides/[^<]+</loc>[^\n]*\n', x)
         x = x[:m.end()] + line + x[m.end():]

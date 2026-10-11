@@ -1,0 +1,61 @@
+{
+  "note": "The record behind tools/rv-anode-rod.html. Every part number, thread size and replacement interval here is one a maker's own document states, and each row names the document. scripts/test-anode-rod.js holds this file, assets/js/anoderod.js and the page to the same facts, so the three cannot drift. A number nobody could source is absent rather than guessed: there is no published part number for the drain plug on an aluminium tank, so none is printed.",
+  "tanks": [
+    {
+      "id": "suburban",
+      "maker": "Suburban",
+      "tank": "porcelain-lined steel",
+      "anode": true,
+      "parts": [
+        {
+          "part": "233514",
+          "material": "Magnesium",
+          "source": "suburban-catalog",
+          "note": "one of the two extended life anode rods Suburban's own 2025 catalogue lists"
+        },
+        {
+          "part": "233516",
+          "material": "Aluminium",
+          "source": "suburban-catalog",
+          "note": "the second extended life rod in the same catalogue"
+        }
+      ],
+      "port": "3/4 inch",
+      "socket": "1-1/16 inch",
+      "replace": "yearly, or when consumption or weight loss is greater than 75 percent",
+      "sources": ["suburban-manual", "suburban-catalog", "suburban-anode-page"]
+    },
+    {
+      "id": "aluminium",
+      "maker": "Atwood or Dometic",
+      "tank": "aluminium",
+      "anode": false,
+      "parts": [],
+      "port": "drain plug, no rod behind it",
+      "replace": "not applicable, the tank takes no anode",
+      "sources": ["dometic-xt-manual", "dometic-gas-manual"]
+    }
+  ],
+  "sources": {
+    "suburban-manual": {
+      "title": "Suburban tank water heaters operation and maintenance guide, part 206244",
+      "url": "https://library.suburbanrv.com/wp-content/uploads/2023/04/206244_Suburban_Water_Heaters_RevA_03-22-2023.pdf"
+    },
+    "suburban-catalog": {
+      "title": "Suburban 2025 water heaters, furnaces, steps and accessories catalogue, SUB-401.02",
+      "url": "https://suburbanrv.com/files/catalog/SUB-401.02_2025%20AMCAT.pdf"
+    },
+    "suburban-anode-page": {
+      "title": "Suburban replacement anode rod, magnesium, for tank water heaters",
+      "url": "https://suburbanrv.com/water-heating/tank-water-heaters/tank-water-heater-accessories/replacement-anode-rod/"
+    },
+    "dometic-xt-manual": {
+      "title": "Dometic L.P. gas water heater, 6 and 10 gallon XT models, installation, operation and maintenance",
+      "url": "https://media.dometic.com/externalassets/dometic-water-heater-9-gallon-gas-electric-dsi-ext_9108873383_64488.pdf"
+    },
+    "dometic-gas-manual": {
+      "title": "Dometic L.P. gas water heater installation and operation manual, 9 gallon gas and electric",
+      "url": "https://www.dometic.com/externalassets/dometic-water-heater-9-gallon-gas-electric_9600024380_93842.pdf"
+    }
+  }
+}
