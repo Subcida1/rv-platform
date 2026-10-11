@@ -413,10 +413,10 @@
     "claims": "a0146313ebc9d955"
   },
   "guides/roof-snow-load.html": {
-    "hash": "30f8ac1ab1d0f4a7",
+    "hash": "15da9bac1694d32f",
     "status": "verified",
-    "verified_by": "2026-10-10 voice pass, Ty's package section 10: the 5.2-pound sentence now names the unit (pounds per square foot) and drops a duplicated clause. The figure itself is unchanged.",
-    "verified_at": "2026-10-10",
+    "verified_by": "INDEPENDENT fresh-context reviewer pass 2026-10-11 (strictly stronger model, task_16) - the pass the voice-only note owed. Reviewer fetched all sources; the Keystone 30 psf / two-feet claim and the 250-lb ladder rating were flagged as unsourced, but I re-fetched the cited 2026 Keystone manual and BOTH are verbatim (snow loads beyond 2 ft / 30 psf damage roof, axles, suspension; the ladder capacity is 250 lb) - false positives, rejected. NRCS 4-20% / 40% figures verified verbatim against the now-reachable source. Two real findings applied: (1) two flag-injury callouts added - at the walkable-roof inspection instruction and at the clear-the-roof ladder section (winter roof work is a fall hazard; the page carried only a plain callout); (2) 'every load in the rest of this guide' reworded to 'every load below' (page-relative voice).",
+    "verified_at": "2026-10-11",
     "sources": [],
     "spec": "_specs/roof-snow-load.md",
     "spec_waived": false,
