@@ -137,6 +137,15 @@ check('  and the unparsed one says why', !!(DATA.sources.wfco.why_not_parsed));
   check('  and it does not claim there is no replacement',
         /not the same as there being no replacement/.test(none));
   check('  and it names the unparsed chart as the reason', /crossover chart/.test(none));
+  /* THE GAP THAT MATTERS. Neither parsed chart names a Magnetek model, and Magnetek's 6300/7300/8300
+     series are among the most common old power centres, so a Magnetek query ALWAYS lands on no-match.
+     The answer has to say where to take it rather than leaving the reader to guess. */
+  check('a no-match names the brands the unparsed chart covers, Magnetek first among them',
+        /Magnetek/.test(none) && /Furrion/.test(none) && /Xantrex/.test(none));
+  check('  and says a Magnetek number will always land there',
+        /Magnetek number will always land here/.test(none));
+  check('a Magnetek query does return no match, as the page says',
+        T.find('Magnetek 6335').matches.length === 0);
 
   const rec = DATA.records.filter((x) => x.old_model === '7355')[0];
   const found = T.render({ step: 'found', matches: [rec] });

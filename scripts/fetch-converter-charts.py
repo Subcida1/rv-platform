@@ -40,6 +40,12 @@ SOURCES = {
                  "kind": "maker cross-reference chart", "parsed": True},
     "wfco": {"title": "WFCO, Torque Chart replacement crossover", "url": WFCO_URL,
              "kind": "maker cross-reference chart", "parsed": False,
+             # Read off the chart's own column headings, so the page can name what a reader is missing
+             # rather than only saying that something is missing. Magnetek matters most: the 6300, 7300
+             # and 8300 series are among the most common legacy power centres, and NEITHER parsed chart
+             # names a Magnetek model at all.
+             "covers": ["Magnetek", "Parallax", "Progressive Dynamics", "Iota", "Furrion", "PowerMax",
+                        "Go Power", "Xantrex", "Magnum", "Precision Circuits", "Intellitec"],
              "why_not_parsed": ("Read but not parsed: its columns sit side by side across the page and "
                                 "wrap, so pairing its rows by whitespace risks producing a wrong part "
                                 "number, which is the one failure this tool must not have.")},

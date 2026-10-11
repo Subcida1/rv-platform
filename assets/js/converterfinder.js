@@ -124,14 +124,20 @@
     state = state || { step: 'idle' };
 
     if (state.step === 'none') {
+      var wfco = (DATA.sources || {}).wfco || {};
+      var covers = (wfco.covers || []).slice();
       var h = '<div class="panel panel-24">';
       h += '<h2 class="form-legend">No published replacement found for that</h2>';
       h += '<p class="body-15">Nothing in the two parsed maker charts names <b>' + esc(state.query)
          + '</b>. That is not the same as there being no replacement, and the difference matters:</p>';
       h += '<ul>';
-      h += '<li>WFCO publishes a crossover chart covering eleven other brands, and it is <b>not parsed '
-         + 'here</b> because its layout cannot be read without risking a wrong part number. '
-         + srcLink('wfco') + '</li>';
+      h += '<li>WFCO publishes a crossover chart covering ' + String(covers.length) + ' other brands'
+         + (covers.length ? ' \u2014 ' + esc(covers.join(', ')) + ' \u2014 ' : ' ')
+         + 'and it is <b>not parsed here</b>, because its layout cannot be read without risking a wrong '
+         + 'part number. ' + srcLink('wfco') + '</li>';
+      h += '<li>That second chart matters most for <b>Magnetek</b>. Its 6300, 7300 and 8300 series are '
+         + 'among the most common old power centres, and neither chart this tool reads names a Magnetek '
+         + 'model at all, so a Magnetek number will always land here.</li>';
       h += '<li>These charts also do not cover every converter ever built. A maker\'s own support pages '
          + 'are the next place to look, and the manuals directory links them by system.</li>';
       h += '</ul>';
