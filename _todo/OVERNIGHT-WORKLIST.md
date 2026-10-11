@@ -103,7 +103,26 @@ unaffected and is what the rebaselines use. NOT fixed here — recorded rather t
 | 25 | rv-black-tank | 2 (1 sourcing, 1 style) | done `b012850` |
 | 23 | rv-pre-trip-walkaround | 1 (fabricated Jayco quotation) | done `6e1c016` |
 | 22 | rv-pin-weight-and-payload | 0 (verified clean) | done `c4b18fd` |
-| 21 | rv-driving-motorhome | 4 (1 wrong-fact, 1 sourcing, 2 style) | done `20de0c2` |
+| 21 | rv-driving-motorhome | pass 1: 4 (1 wrong-fact, 1 sourcing, 2 style); **pass 2 (independent): 6 more (1 injury, 1 wrong-fact, 1 sourcing, 1 voice, 2 style)** | done `c85f24d` + `6c90986` |
+
+**THE DOCTRINE PAID OFF, MEASURABLY (2026-10-10 17:26, conv-6991caed).** Subagent dispatch came back,
+so `rv-driving-motorhome` got the independent reviewer pass it was owed. It found **SIX defects my own
+same-session pass missed**, including the highest-severity class in the whole job: the Reversing
+section gave the spotter **no safe place to stand and carried no `flag-injury`** (a person beside a
+reversing coach is in the driver's blind spot), and the air-brake leak test told the reader to release
+the spring brakes with **no level-ground/chocked-wheels precondition**. Also an unnamed authority
+("the makers' instruction"), a sentence about the guide, and two British terms the site's own
+`_todo/VOICE-PACKAGE-2026-10-10.md` had already flagged for this page by name. **A same-session pass
+is not a substitute for an independent one — it missed 6 of 10 defects on this page.** The remaining
+owed second passes (23, 24, 25, 26, and the hub) should be run the same way, one at a time, whenever
+the machine has memory to spare.
+
+**I PUT MAIN RED TWICE IN TEN MINUTES, both self-inflicted, both now guarded.** (1) My manifest note
+quoted the banned word while listing it as a checked category, so `verify.py` failed — manifest notes
+are scanned, so say "the banned-vocabulary rule" and never the word. (2) The push ran on a red archive
+check because I wrote it as `(cd /tmp/c && verify.py > log; echo EXIT=$?; tail -2 log) && git push` —
+the subshell reports `tail`'s status, not the checker's. **Use the shape that carries the real status:**
+`if (cd /tmp/c && python3 scripts/verify.py > /tmp/arc.txt 2>&1); then push; else echo "ARCHIVE RED - NOT PUSHING"; tail -6 /tmp/arc.txt; fi`. Both fixes are pushed and green.
 
 Method note for items 21, 22, 23, 25, 26 (and the hub): **these passes were done by Cloud itself, in
 session, not by a fresh-context reviewer subagent.** The subagent path was dead all evening - four
