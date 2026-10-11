@@ -565,6 +565,11 @@ WebSocket 520, 0 tool uses) and task_9 (Listener run failed after reading the pa
 Whoever picks this up: the previous same-session pass verified all 10 cited sources
 and all three quotations verbatim; the open class is the vendor-side numbers (30-50
 cents/gal, 200 gal/day, 20k/57k POIs, 31.5M accounts, etc.).
+**2026-10-11 14:23 PDT (day-driver fire) — CLAIMED: `rv-pin-weight-and-payload` (second-pass handoff).**
+Its same-session pass found "NO DEFECTS" — exactly the verdict the handoff says to distrust
+(independent passes on other pages found 6, 9, 6). Fresh-context reviewer dispatched
+(task_10). Findings will be applied, page re-baselined, entry ticked on completion.
+
 **2026-10-11 14:16 PDT (day-driver fire) — DONE: `rv-delamination`.**
 Independent fresh-context reviewer pass applied, pushed `d175b880`, CI green
 (`every check passed`). 4 findings: Protimeter "dry 6-16.9 / at risk 17-19.9 /
