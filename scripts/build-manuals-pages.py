@@ -292,11 +292,17 @@ def row_html(r):
     # written for whoever maintains this corpus, and one of them, "an 18.3 MB PDF,
     # over the audit's 12 MB download cap, so its text is never read", was shipping
     # as visitor-facing copy.
-    # NO "LINK CHECKED <date>". It is the meta-tell the house rules name, it sat in the reader's
-    # row 107 times, and it is about us rather than the document. What a reader needs is whether
-    # the link works, so an unchecked row says so and a checked one says nothing.
-    if r.get("status") != "verified":
-        bits.append('<span class="man-note">this link may not work</span>')
+    # NO HEDGE IN THE READER'S FACE, AND NO "LINK CHECKED <date>" EITHER.
+    #
+    # Ty, 2026-10-10: "Anything with a 'this link may not work' needs to be listed for me to verify
+    # and what the expected content is, we can not have any 'this link may not works' at all, thats
+    # not the idea behind our website, we are the authoritative source not the maybe source."
+    #
+    # He is right about what a hedge costs: a page that says "this may not work" is telling the
+    # reader to distrust the one thing it is for. The verification state is still recorded in
+    # _data/manuals.json (status: verified / unverified) and every unconfirmed link is listed with
+    # its expected content in _todo/UNVERIFIED-LINKS.md, so the record is kept where it belongs --
+    # with us, not on the page. A link that fails a check gets replaced or dropped.
     needle = " ".join([r["brand"], r["host"], r["title"], r["key"], r["covers"],
                        " ".join(r["doc_types"])]).lower()
     return """      <li class="man-row" data-types="%s" data-search="%s">
@@ -825,8 +831,6 @@ def model_list(models):
                         % esc(m["accessories_url"]))
         if not bits:
             bits.append('<span class="man-note">no document published online</span>')
-        elif m.get("status") != "verified":
-            bits.append('<span class="man-note">this link may not work</span>')
         items.append('            <li class="man-model"><span class="mm-name">%s</span>'
                      '<span class="mm-meta">%s</span>'
                      '<span class="mm-links">%s</span></li>'
@@ -858,8 +862,6 @@ def warranty_html(r):
     if kind in ("document", "page"):
         link = ('<a class="man-go" href="%s" target="_blank" rel="noopener">%s '
                 '&#8594;</a>' % (esc(r["warranty_url"]), WARRANTY_LABEL[kind]))
-        if r.get("warranty_status") != "verified":
-            link += '<span class="man-note">this link may not work</span>'
         tail = '<span class="man-note">%s</span>' % esc(note) if note else ""
         return '        <div class="man-warranty">%s%s</div>\n' % (link, tail)
     return ('        <div class="man-warranty"><span class="man-note">%s%s</span></div>\n'
@@ -880,8 +882,6 @@ def brand_row(r, models=()):
     if r["url"]:
         foot = ('<a class="man-go" href="%s" target="_blank" rel="noopener">Open the %s '
                 'archive &#8594;</a>' % (esc(r["url"]), esc(r["brand"])))
-        if r.get("status") != "verified":
-            foot += '<span class="man-note">this link may not work</span>'
     else:
         foot = '<span class="man-note">no manual published online</span>'
 
@@ -1000,19 +1000,16 @@ RECALL_SECTIONS = [
 
 
 def recall_row(r):
-    badge = ('<span class="man-note"></span>%s' % esc("")
-             if r.get("status") == "verified"
-             else '<span class="man-note">this link may not work</span>')
     return """        <li class="man-row" data-search="%s">
           <div class="man-row-top">
             <a class="man-doc" href="%s" target="_blank" rel="noopener">%s</a>
             <span class="man-types"><span class="badge badge-tint">keyed by %s</span></span>
           </div>
           <div class="man-row-meta"><span>%s</span></div>
-          <div class="man-row-foot">%s</div>
+          <div class="man-row-foot"></div>
         </li>
 """ % (esc(" ".join([r["source"], r["what"], r["keyed_by"]]).lower()),
-       esc(r["url"]), esc(r["source"]), esc(r["keyed_by"]), esc(r["what"]), badge)
+       esc(r["url"]), esc(r["source"]), esc(r["keyed_by"]), esc(r["what"]))
 
 
 def recalls_page(rows, bulletins, source_note):
