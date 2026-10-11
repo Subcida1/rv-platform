@@ -136,11 +136,6 @@ def part_html(p):
                            + [p.get("does") or ""] + (p.get("types") or [])).lower()))]
     out.append('        <h3 class="part-h">%s</h3>' % esc(p["n"]))
 
-    aka = [a.strip() for a in (p.get("aka") or "").split("|") if a.strip()]
-    if aka:
-        out.append('        <p class="part-aka">Also called %s</p>'
-                   % esc(", ".join(aka)))
-
     does = sentence(p.get("does"))
     if does:
         out.append('        <p class="part-does">%s</p>' % esc(does))
@@ -183,6 +178,27 @@ def part_html(p):
                          'rel="noopener">%s manuals</a>' % (esc(url), esc(brand)))
     if links:
         out.append('        <p class="part-links">%s</p>' % " ".join(links))
+
+    aka = [a.strip() for a in (p.get("aka") or "").split("|") if a.strip()]
+    if aka:
+        # THE ALIASES GET THEIR OWN PLACE AT THE FOOT OF THE CARD.
+        #
+        # Ty, 2026-10-10: "I don't like how we're using 'also called ... also called ... I like that we
+        # have that section kind of showing what the other terms for these things are. I just don't
+        # like the term 'also called' ... give it some kind of framing of like hey these are alternate
+        # names for this. And just keep it nice and simple and clean. Instead of making it look like
+        # it's descriptive text like it is right now."
+        #
+        # He was reading the effect of this markup having NO styling at all: a bare <p class="part-aka">
+        # sat directly under the part name and directly above the description, in the same ink and the
+        # same size as both, so "also called front jacks, landing legs" read as the first half of the
+        # sentence that followed it. It is a different kind of information -- the names a reader may
+        # know the part by -- so it gets a label, a rule above it, and the foot of the card. The
+        # placement is mine to choose: the foot, because the order above it is then name, what it does,
+        # which RVs it fits, where to read next, and only then what else it is called, which is the
+        # least urgent line on the card.
+        out.append('        <div class="part-aka"><span class="part-aka-l">Also known as</span>'
+                   '<span class="part-aka-v">%s</span></div>' % esc(", ".join(aka)))
 
     out.append("      </li>")
     return "\n".join(out)
