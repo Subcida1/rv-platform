@@ -1186,3 +1186,30 @@ verified or unverified:
 **Instrument result worth keeping: `check-quotes.py` run over the four pages is clean.** wheel-bearings
 43 quotes against 8 sources, every one found; towing-capacity and towing-trailer have no quotations at
 all; trailer-brakes-required 10 quotes against 11 sources with the single 390.5 gap above.
+
+## CLOSED 2026-10-10 17:22 PDT — the 27-guide pass is finished, and it verifies on the COMMIT
+
+`conv-6991caed` finished items 17-20 in `9367e3f`, closed the whole pass in `40bafc4`, and did the
+guides hub structural pass in `e927459`. This session verified the **commit, not the tree** (`git
+archive HEAD` into a clean dir at `e927459`):
+
+    python3 scripts/verify.py                  -> exit 0, ALL CHECKS PASSED
+    python3 scripts/cross-check.py --strict    -> exit 0, 0 same-fact pair(s)
+    python3 scripts/verify-content.py --strict -> exit 0, 46 verified, 0 drifting, 0 unmanifested
+
+That run also confirms the cross-check warning this session sent at 16:54 was acted on: the tree had
+two same-fact pairs, both involving that page's reworded Jayco source bullet; HEAD has none. The ledger
+went **19 -> 46 verified** across the pass.
+
+**Three of the four handed-over findings landed** in `conv-6991caed`'s passes — the MotorTrend source
+line and the two eCFR swaps on `rv-towing-capacity`, and 49 CFR 390.5 now cited on
+`trailer-brakes-required`. **Two did not**, so this session applied them itself in **`a6b5056`**,
+archive-verified the same way (verify.py ALL CHECKS PASSED, cross-check 0 pairs, verify-content
+--strict 0 drifting): the NHTSA 511 figure was printed twice on the towing-capacity page and one copy
+is now cut, and the federal 3,000 lb exemption the page described without naming is now named —
+**49 CFR 393.42** — inline and in Sources beside 393.43, its text hand-verified from the Cornell copy.
+
+**One item is recorded rather than fixed:** the coupler-latch claim on `rv-towing-trailer` ("if it
+drops shut with no resistance, the coupler is not on the ball") is still presented in the Jayco
+manual's name and appears in no cited document. It is advice rather than a number, so rule 2 does not
+force it; attribute or soften it the next time that page is touched.
