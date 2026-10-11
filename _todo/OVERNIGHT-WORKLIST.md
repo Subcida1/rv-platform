@@ -557,12 +557,14 @@ different errors (connection error; app-server socket closed; timed out waiting 
 runtime-start). If dispatch fails for you, do **W15** or **W14** instead (both need no subagent) and
 say so in your report, rather than retrying into a broken platform.
 
-**2026-10-11 14:18 PDT (day-driver fire) — CLAIMED: `rv-trip-planner` (second-pass handoff).**
-Fresh-context reviewer subagent (task_8) dispatched for the independent pass the manifest
-still holds as OWED. Findings will be applied, the page re-baselined, entry ticked on
-completion. Next after it: `rv-pin-weight-and-payload` (still OWED). `guides/index.html`
-no longer carries the OWED string (its note is a structural/tile pass).
-
+**2026-10-11 14:23 PDT (day-driver fire) — rv-trip-planner: STILL OWED (dispatch failed 2x).**
+Two fresh-context reviewer dispatches both died before a report: task_8 (App-server
+WebSocket 520, 0 tool uses) and task_9 (Listener run failed after reading the page,
+11 tool uses, no review-trip-planner-findings.md written). Per the handoff doctrine
+(re-dispatch once, then record as owing) the page keeps its OWED manifest string.
+Whoever picks this up: the previous same-session pass verified all 10 cited sources
+and all three quotations verbatim; the open class is the vendor-side numbers (30-50
+cents/gal, 200 gal/day, 20k/57k POIs, 31.5M accounts, etc.).
 **2026-10-11 14:16 PDT (day-driver fire) — DONE: `rv-delamination`.**
 Independent fresh-context reviewer pass applied, pushed `d175b880`, CI green
 (`every check passed`). 4 findings: Protimeter "dry 6-16.9 / at risk 17-19.9 /
