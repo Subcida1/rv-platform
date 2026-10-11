@@ -146,7 +146,8 @@ something the plan did not have. Each line names the source site and the specifi
 
 **1. RV recall lookup, US *and* Canada, VIN-first** — NEW, and the biggest single gap the sweep found (the
 survey's gap list asked for "a recall lookup that merges US and Canada with VIN-level clarity"; nothing
-consumer-side does it). Demand: recalls are the one lookup every owner makes, and NHTSA's own pages are
+consumer-side does it). **Brief written: `_todo/TOOL-recall-lookup.md`.** Demand: recalls are the one
+lookup every owner makes, and NHTSA's own pages are
 bot-protected and awkward. Better because: NHTSA has the data but **no VIN parameter on its public recalls
 endpoint**, and **Transport Canada carries the CMVSS reference and a clean RSS feed NHTSA lacks** — no
 independent wrapper handles Canada at all.
