@@ -49,6 +49,22 @@
       INDEX.push({ kind: 'norcold-model', key: r.model, label: r.model, maker: 'Norcold',
                    board: r.control, eyebrow: r.eyebrow, ranges: [], source: 'norcold' });
     }
+    for (i = 0; i < (DATA.onan || []).length; i++) {
+      r = DATA.onan[i];
+      INDEX.push({ kind: 'onan-part', key: r.old, label: r.old, maker: 'Onan',
+                   board: r.new, ranges: [], source: 'onan' });
+    }
+    for (i = 0; i < (DATA.servel || []).length; i++) {
+      r = DATA.servel[i];
+      INDEX.push({ kind: 'servel-model', key: r.model, label: r.model, maker: 'Servel',
+                   board: r.supply, ranges: [], source: 'onan',
+                   eyebrowLong: r.eyebrow_long, eyebrowShort: r.eyebrow_short });
+    }
+    for (i = 0; i < (DATA.ignitor || []).length; i++) {
+      r = DATA.ignitor[i];
+      INDEX.push({ kind: 'ignitor-part', key: r.old, label: r.old, maker: 'Ignitor',
+                   board: r.new, ranges: [], source: 'ignitor' });
+    }
     return INDEX;
   }
 
@@ -83,18 +99,32 @@
              + esc(s.title) + '</a>' : '';
   }
 
+  /* "NONE" IS A VALUE IN THESE CHARTS, and it is not a part number. Dinosaur prints it where it makes no
+   * replacement, so it has to be read as an answer rather than shown as a board. */
+  function noReplacement(board) {
+    return !board || /^\s*none\s*$/i.test(board);
+  }
+
   function recordHtml(r) {
     var h = '<div class="panel panel-24">';
-    h += '<h2 class="form-legend">' + esc(r.maker) + ' ' + esc(r.label) + '</h2>';
+    var label = r.kind === 'ignitor-part' ? r.label : (r.maker + ' ' + r.label);
+    h += '<h2 class="form-legend">' + esc(label) + '</h2>';
     var what = r.kind === 'dometic-part' ? 'a Dometic board part number'
-             : (r.kind === 'norcold-model' ? 'a Norcold refrigerator model'
-                                           : 'a Dometic refrigerator model');
+             : r.kind === 'norcold-model' ? 'a Norcold refrigerator model'
+             : r.kind === 'servel-model' ? 'a Servel refrigerator model'
+             : r.kind === 'onan-part' ? 'an Onan generator part number'
+             : r.kind === 'ignitor-part' ? 'a part number from an appliance maker'
+             : 'a Dometic refrigerator model';
     h += '<p class="body-15">That is ' + what + '.</p>';
 
     if (/service alert/i.test(r.board || '')) {
       h += '<p class="body-15">Dinosaur\'s chart does not name a replacement for this one. It says '
          + '<b>see service alert</b>, which means the substitution is not a straight swap and the '
          + 'maker has a note about it. ' + srcLink(r.source) + '</p>';
+    } else if (noReplacement(r.board) && !(r.ranges && r.ranges.length)) {
+      h += '<p class="body-15">Dinosaur\'s chart lists no replacement for this one. That is an answer '
+         + 'rather than a gap in the data: the chart names the part and puts <b>NONE</b> against it, '
+         + 'which means the maker does not build a substitute. ' + srcLink(r.source) + '</p>';
     } else if (r.board) {
       h += '<p class="body-15"><b>' + esc(r.board) + '</b> replaces it.</p>';
     } else if (!(r.ranges && r.ranges.length)) {
@@ -105,6 +135,13 @@
       h += '<p class="body-15">The <b>eyebrow board</b> is <b>' + esc(r.eyebrow) + '</b>. It is a '
          + 'separate part from the control board, and the two are usually replaced together because a '
          + 'failed control board is often what killed the eyebrow.</p>';
+    }
+    if (r.eyebrowLong || r.eyebrowShort) {
+      h += '<p class="body-15">The eyebrow board comes in two lengths and the chart names both, '
+         + 'because the refrigerator was built with either. ' + srcLink(r.source) + '</p><ul>';
+      if (r.eyebrowLong) h += '<li><b>' + esc(r.eyebrowLong) + '</b></li>';
+      if (r.eyebrowShort) h += '<li><b>' + esc(r.eyebrowShort) + '</b></li>';
+      h += '</ul>';
     }
 
     if (r.ranges && r.ranges.length) {
@@ -127,17 +164,15 @@
     if (state.step === 'none') {
       var h = '<div class="panel panel-24">';
       h += '<h2 class="form-legend">Nothing in these charts for that</h2>';
-      h += '<p class="body-15">Neither the Dometic nor the Norcold chart names <b>' + esc(state.query)
-         + '</b>. That is not the same as there being no replacement:</p><ul>';
-      h += '<li>Dinosaur publishes two more charts this tool does not read: one for Onan generator '
-         + 'boards and one for ignitor boards (Atwood, Suburban and similar). '
-         + '<a class="link" href="' + esc('https://www.dinosaurelectronics.com/Msc_Chart.htm')
-         + '" target="_blank" rel="noopener">the Onan chart</a> and '
-         + '<a class="link" href="' + esc('https://www.dinosaurelectronics.com/UIB_Chart.htm')
-         + '" target="_blank" rel="noopener">the ignitor chart</a>.</li>';
-      h += '<li>A model number is what these charts are keyed on, so a partial number may not match. '
-         + 'The full model is on the refrigerator\'s rating plate, inside the door on most Dometic '
-         + 'models and on a tag inside the fresh-food compartment on a Norcold.</li>';
+      h += '<p class="body-15">All four of Dinosaur\'s cross-reference charts were searched and none '
+         + 'names <b>' + esc(state.query) + '</b>. That is not the same as there being no '
+         + 'replacement:</p><ul>';
+      h += '<li>Dinosaur makes replacements for a defined set of boards, and a board outside that set '
+         + 'has no substitute to name. Its own chart is the authority, and it is linked below.</li>';
+      h += '<li>A model or part number is what these charts are keyed on, so a partial number may not '
+         + 'match. A refrigerator model is on the rating plate inside the door on most Dometic units '
+         + 'and on a tag in the fresh-food compartment on a Norcold; a generator part number is on the '
+         + 'part itself.</li>';
       h += '</ul>';
       h += '<p class="tool-save"><button class="btn btn-secondary btn-sm" type="button" '
          + 'data-bf="reset">Start over</button></p></div>';
@@ -159,9 +194,9 @@
     }
 
     return '<div class="panel panel-24">'
-         + '<h2 class="form-legend">What fridge, or what board, do you have?</h2>'
+         + '<h2 class="form-legend">What appliance, or what board, do you have?</h2>'
          + '<div class="field">'
-         + '<label for="bf-model">The model number, or the number on the old board'
+         + '<label for="bf-model">The model or part number you have'
          + '<span class="req">*</span></label>'
          + '<input id="bf-model" name="bf-model" type="text" autocomplete="off" spellcheck="false" '
          + 'placeholder="RM 2652" aria-describedby="bf-model-help bf-result">'

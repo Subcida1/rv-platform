@@ -15,7 +15,7 @@ const ROOT = path.resolve(__dirname, '..');
 const SRC = fs.readFileSync(path.join(ROOT, 'assets/js/boardfinder.js'), 'utf8');
 const MIRROR = fs.readFileSync(path.join(ROOT, 'assets/js/dinosaurboards.js'), 'utf8');
 const DATA = JSON.parse(fs.readFileSync(path.join(ROOT, '_data/dinosaur-boards.json'), 'utf8'));
-const PAGE = path.join(ROOT, 'tools/rv-fridge-board-finder.html');
+const PAGE = path.join(ROOT, 'tools/rv-appliance-board-finder.html');
 
 let failed = 0;
 function check(name, cond, detail) {
@@ -39,7 +39,8 @@ check('the mirror and the record have the same number of Dometic part pairs',
       W.dometic_by_part.length === DATA.dometic_by_part.length);
 check('  and of Dometic models', W.dometic_by_model.length === DATA.dometic_by_model.length);
 check('  and of Norcold models', W.norcold.length === DATA.norcold.length);
-check('the mirror carries the coverage caveat', /Onan|ignitor/i.test(W.coverage || ''));
+check('the mirror says all four charts are read',
+      /all four/i.test(W.coverage || ''), W.coverage);
 
 // 2. every row is complete and traceable.
 let empty = 0, badSource = 0;
@@ -50,9 +51,10 @@ DATA.dometic_by_part.forEach((r) => {
 DATA.dometic_by_model.forEach((r) => { if (!r.model) empty++; });
 DATA.norcold.forEach((r) => { if (!r.model || (!r.control && !r.eyebrow)) empty++; });
 check('no row is missing the thing it maps from or to', empty === 0, String(empty));
-check('both charts are named as sources with a URL',
-      Object.keys(DATA.sources).length === 2
-      && Object.values(DATA.sources).every((s) => /^https:\/\//.test(s.url)));
+check('all four charts are named as sources with a URL',
+      Object.keys(DATA.sources).length === 4
+      && Object.values(DATA.sources).every((s) => /^https:\/\//.test(s.url)),
+      Object.keys(DATA.sources).join(','));
 
 /* THE PRODUCTION RANGES ARE THE POINT. A Dometic model built with two different boards must return both,
    because returning one would be a coin flip on a part the reader is about to order. */
@@ -123,7 +125,8 @@ check('both charts are named as sources with a URL',
   check('a no-match says so rather than failing', /Nothing in these charts for that/.test(none));
   check('  and does not claim there is no replacement',
         /not the same as there being no replacement/.test(none));
-  check('  and names the two charts it does not read', /Onan chart/.test(none) && /ignitor chart/.test(none));
+  check('  and says all four charts were searched', /All four of Dinosaur/.test(none));
+  check('  and does not claim a chart was left unread', !/not read/i.test(none));
 
   const escaped = T.render({ step: 'none', query: '<script>x</script>' });
   check('a query is escaped, not injected',
@@ -143,10 +146,42 @@ if (fs.existsSync(PAGE)) {
   check('the page carries the result element', /id="bf-result"/.test(html));
   check('the page states the first question in its own HTML, for a reader without script',
         /id="bf-model"/.test(html) && /data-bf="find"/.test(html));
-  check('the page says which charts are not read', /Onan/.test(html) && /ignitor/.test(html));
-  check('the page cites both charts it does read',
-        /Dom_Chart\.htm/.test(html) && /Nor_chart\.htm/.test(html));
+  check('the page cites all four charts', ['Dom_Chart','Nor_chart','Msc_Chart','UIB_Chart']
+        .every((f) => html.indexOf(f + '.htm') !== -1));
+  check('the page no longer says any chart is unread', !/not read/i.test(html));
 }
+
+// 6. the generator and ignitor charts, added 2026-10-11.
+(function () {
+  check('the record carries the Onan chart', (DATA.onan || []).length > 10, String((DATA.onan||[]).length));
+  check('  and the Servel models', (DATA.servel || []).length > 5, String((DATA.servel||[]).length));
+  check('  and the ignitor chart', (DATA.ignitor || []).length > 50, String((DATA.ignitor||[]).length));
+
+  let r = T.find('300-0859');
+  check('an Onan part number finds its replacement', r.matches.length >= 1 && r.matches[0].board === '300C859',
+        r.matches.length ? r.matches[0].board : 'no match');
+
+  r = T.find('S520 2-way');
+  check('a Servel model finds the SR1 power supply', r.matches.length >= 1 && r.matches[0].board === 'SR1',
+        r.matches.length ? r.matches[0].board : 'no match');
+  check('  and the answer shows both eyebrow lengths',
+        r.matches.length && r.matches[0].eyebrowLong && r.matches[0].eyebrowShort);
+
+  r = T.find('Mark 10-12-1-12-12-E340');
+  check('an ignitor part number finds its replacement', r.matches.length >= 1,
+        r.matches.length ? r.matches[0].board : 'no match');
+
+  /* "NONE" IS AN ANSWER, NOT A PART. Dinosaur prints it where it makes no substitute, and printing it as
+     a board number would be worse than printing nothing. */
+  const noneRow = (DATA.ignitor || []).concat(DATA.onan || []).filter((x) => /^\s*none\s*$/i.test(x.new || ''));
+  check('the charts carry rows whose replacement is NONE', noneRow.length > 0, String(noneRow.length));
+  if (noneRow.length) {
+    const html = T.render({ step: 'found', matches: [{ kind: 'ignitor-part', key: noneRow[0].old,
+      label: noneRow[0].old, maker: 'Ignitor', board: noneRow[0].new, ranges: [], source: 'ignitor' }] });
+    check('  and the answer explains it rather than printing NONE as a board',
+          /lists no replacement/.test(html) && /does not build a substitute/.test(html));
+  }
+})();
 
 console.log(failed ? '\n' + failed + ' failure(s)' : '\nBoard finder: all checks passed');
 process.exit(failed ? 1 : 0);

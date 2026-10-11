@@ -9,9 +9,17 @@
   "norcold": {
    "title": "Dinosaur Electronics, replacements for Norcold refrigerator boards",
    "url": "https://www.dinosaurelectronics.com/Nor_chart.htm"
+  },
+  "onan": {
+   "title": "Dinosaur Electronics, replacements for Onan generator boards",
+   "url": "https://www.dinosaurelectronics.com/Msc_Chart.htm"
+  },
+  "ignitor": {
+   "title": "Dinosaur Electronics, universal ignitor boards",
+   "url": "https://www.dinosaurelectronics.com/UIB_Chart.htm"
   }
  },
- "coverage": "The two refrigerator charts are read. Dinosaur's Onan chart and its ignitor-board chart are linked on the page and not read, so a generator or furnace board is not covered here yet.",
+ "coverage": "All four of Dinosaur's cross-reference charts are read: Dometic and Norcold refrigerator boards, Onan generator boards, and the universal ignitor boards for furnaces and water heaters.",
  "dometic_by_part": [
   {
    "old": "001-003",
@@ -1475,6 +1483,736 @@
    "model": "878 3-way",
    "control": "61602822",
    "eyebrow": "N/A"
+  }
+ ],
+ "onan": [
+  {
+   "old": "300C859",
+   "new": "300C859"
+  },
+  {
+   "old": "300-0859",
+   "new": "300C859"
+  },
+  {
+   "old": "300-944",
+   "new": "300-1073/4950"
+  },
+  {
+   "old": "300-0944",
+   "new": "300-1073/4950"
+  },
+  {
+   "old": "300-1073",
+   "new": "300-1073/4950"
+  },
+  {
+   "old": "300-1227",
+   "new": "300-1227"
+  },
+  {
+   "old": "300-2784",
+   "new": "300-2784/2943"
+  },
+  {
+   "old": "300-2784-01",
+   "new": "300-2784/2943"
+  },
+  {
+   "old": "300-2943",
+   "new": "300-2784/2943"
+  },
+  {
+   "old": "300-2943-01",
+   "new": "300-2784/2943"
+  },
+  {
+   "old": "300-3056",
+   "new": "300-3056/3687"
+  },
+  {
+   "old": "300-3687",
+   "new": "300-3056/3687"
+  },
+  {
+   "old": "300-3687-01",
+   "new": "300-3056/3687"
+  },
+  {
+   "old": "300-3763",
+   "new": "300-3763"
+  },
+  {
+   "old": "300-3763-01",
+   "new": "300-3763"
+  },
+  {
+   "old": "300-3763-02",
+   "new": "300-3763"
+  },
+  {
+   "old": "300-3763-03",
+   "new": "300-3763"
+  },
+  {
+   "old": "300-3764",
+   "new": "300-3764"
+  },
+  {
+   "old": "300-4901",
+   "new": "300-4901"
+  },
+  {
+   "old": "300-4950",
+   "new": "300-1073/4950"
+  },
+  {
+   "old": "300-5268",
+   "new": "300-3763"
+  }
+ ],
+ "servel": [
+  {
+   "model": "S520 2-way",
+   "supply": "SR1",
+   "eyebrow_long": "2943243.002 (Long Version #),",
+   "eyebrow_short": "2944014.006 (Short Version #)"
+  },
+  {
+   "model": "S530 3-way",
+   "supply": "SR1",
+   "eyebrow_long": "2943244.000 (Long Version #),",
+   "eyebrow_short": "2944015.003 (Short Version),"
+  },
+  {
+   "model": "S619 2-way",
+   "supply": "SR1",
+   "eyebrow_long": "2943243.002 (Long Version #),",
+   "eyebrow_short": "2944014.006 (Short Version #)"
+  },
+  {
+   "model": "S620 2-way",
+   "supply": "SR1",
+   "eyebrow_long": "2943243.002 (Long Version #),",
+   "eyebrow_short": "2944014.006 Short Version"
+  },
+  {
+   "model": "S630 3-way",
+   "supply": "SR1",
+   "eyebrow_long": "2943244.000 (Long Version #),",
+   "eyebrow_short": "2944015.003 (Short Version #),"
+  },
+  {
+   "model": "S819 2-way",
+   "supply": "SR1",
+   "eyebrow_long": "2943243.002 (Long Version #),",
+   "eyebrow_short": "2944014.006 (Short Version #)"
+  },
+  {
+   "model": "S820 2-way",
+   "supply": "SR1",
+   "eyebrow_long": "2943243.002 (Long Version #),",
+   "eyebrow_short": "2944014.006 (Short Version #)"
+  },
+  {
+   "model": "S830 3-way",
+   "supply": "SR1",
+   "eyebrow_long": "2943244.000 (Long Version #),",
+   "eyebrow_short": "2944015.003 (Short Version #),"
+  },
+  {
+   "model": "",
+   "supply": "",
+   "eyebrow_long": "",
+   "eyebrow_short": ""
+  },
+  {
+   "model": "",
+   "supply": "",
+   "eyebrow_long": "",
+   "eyebrow_short": ""
+  }
+ ],
+ "ignitor": [
+  {
+   "old": "Mark 10-12-1-12-12-E340",
+   "new": "UIB S POST",
+   "section": ""
+  },
+  {
+   "old": "6743",
+   "new": "UIB S",
+   "section": ""
+  },
+  {
+   "old": "Mark 10-12-2-5.5-5.5-E310",
+   "new": "UIB L POST",
+   "section": ""
+  },
+  {
+   "old": "7020",
+   "new": "UIB S",
+   "section": ""
+  },
+  {
+   "old": "Mark 10-12-2-5.5-5.5-E340",
+   "new": "UIB S POST",
+   "section": ""
+  },
+  {
+   "old": "9042",
+   "new": "UIB S",
+   "section": ""
+  },
+  {
+   "old": "Mark 10-12-2-7-7-E312",
+   "new": "UIB L",
+   "section": ""
+  },
+  {
+   "old": "12500",
+   "new": "UIB S",
+   "section": ""
+  },
+  {
+   "old": "Mark 10-12-2-12-12-E310",
+   "new": "UIB L POST",
+   "section": ""
+  },
+  {
+   "old": "31501 Kit with 33488",
+   "new": "Fan 50 Plus Pins",
+   "section": ""
+  },
+  {
+   "old": "Mark 10-12-15-7-7-E002",
+   "new": "UIB L",
+   "section": ""
+  },
+  {
+   "old": "33488 (included in 31501 Kit)",
+   "new": "Fan 50 Plus Pins",
+   "section": ""
+  },
+  {
+   "old": "Mark 10DM-12-1-12-12-E3002",
+   "new": "UIB S",
+   "section": ""
+  },
+  {
+   "old": "Mark 10DN-12-1-12-12-E3022",
+   "new": "UIB S",
+   "section": ""
+  },
+  {
+   "old": "35119",
+   "new": "UIB 24vac",
+   "section": ""
+  },
+  {
+   "old": "Mark 10DN-12-1-5.5-5.5-E3022",
+   "new": "UIB S",
+   "section": ""
+  },
+  {
+   "old": "36716",
+   "new": "UIB S",
+   "section": ""
+  },
+  {
+   "old": "Mark 10DN-12-1-7-7-E3002",
+   "new": "UIB S",
+   "section": ""
+  },
+  {
+   "old": "37515",
+   "new": "UIB 24VAC",
+   "section": ""
+  },
+  {
+   "old": "Mark 10N-12-1-12-12-E342",
+   "new": "UIB S",
+   "section": ""
+  },
+  {
+   "old": "37874",
+   "new": "UIB S",
+   "section": ""
+  },
+  {
+   "old": "Mark 10N-12-1-5.5-5.5-E222",
+   "new": "UIB S",
+   "section": ""
+  },
+  {
+   "old": "37875",
+   "new": "Fan 50 Plus Pins",
+   "section": ""
+  },
+  {
+   "old": "Mark 10N-12-1-5.5-5.5-E322",
+   "new": "UIB S",
+   "section": ""
+  },
+  {
+   "old": "38242",
+   "new": "None",
+   "section": ""
+  },
+  {
+   "old": "Mark 14-12-20-7-7-E002",
+   "new": "UIB L",
+   "section": ""
+  },
+  {
+   "old": "91226 Atwood AC/Gas",
+   "new": "UIB 64",
+   "section": ""
+  },
+  {
+   "old": "Mark 14N-12-15-7-7-E202",
+   "new": "UIB S",
+   "section": ""
+  },
+  {
+   "old": "Mark 50N-12-3-15-7-7-E3002",
+   "new": "NONE",
+   "section": ""
+  },
+  {
+   "old": "91315",
+   "new": "UIB S POST",
+   "section": ""
+  },
+  {
+   "old": "91731",
+   "new": "UIB S POST",
+   "section": ""
+  },
+  {
+   "old": "Mark 50N-12-3-3-7-10-0-E23062",
+   "new": "NONE",
+   "section": ""
+  },
+  {
+   "old": "93253 Atwood AC/Gas",
+   "new": "UIB S",
+   "section": ""
+  },
+  {
+   "old": "Mark 51N-12-3-3-7-10-0-E23062",
+   "new": "UIB 64",
+   "section": ""
+  },
+  {
+   "old": "6713",
+   "new": "UIB S",
+   "section": ""
+  },
+  {
+   "old": "93256",
+   "new": "UIB S",
+   "section": ""
+  },
+  {
+   "old": "05-152435-003",
+   "new": "UIB L POST",
+   "section": ""
+  },
+  {
+   "old": "93257",
+   "new": "UIB S",
+   "section": ""
+  },
+  {
+   "old": "05-152435-103",
+   "new": "UIB L POST",
+   "section": ""
+  },
+  {
+   "old": "93851 AC/Gas",
+   "new": "UIB64",
+   "section": ""
+  },
+  {
+   "old": "05-152436-053",
+   "new": "UIB L POST",
+   "section": ""
+  },
+  {
+   "old": "05-152436-103",
+   "new": "UIB L POST",
+   "section": ""
+  },
+  {
+   "old": "93865",
+   "new": "UIB S",
+   "section": ""
+  },
+  {
+   "old": "05-159000-003",
+   "new": "UIB L",
+   "section": ""
+  },
+  {
+   "old": "230481",
+   "new": "UIB L",
+   "section": ""
+  },
+  {
+   "old": "05-159000-053",
+   "new": "UIB L",
+   "section": ""
+  },
+  {
+   "old": "230483",
+   "new": "UIB L",
+   "section": ""
+  },
+  {
+   "old": "05-159000-103",
+   "new": "UIB L",
+   "section": ""
+  },
+  {
+   "old": "230505",
+   "new": "UIB 24VAC",
+   "section": ""
+  },
+  {
+   "old": "05-159003-253",
+   "new": "UIB L POST",
+   "section": ""
+  },
+  {
+   "old": "230587",
+   "new": "UIB L",
+   "section": ""
+  },
+  {
+   "old": "05-159003-255",
+   "new": "UIB L POST",
+   "section": ""
+  },
+  {
+   "old": "230608",
+   "new": "UIB 24VAC",
+   "section": ""
+  },
+  {
+   "old": "05-159006-753",
+   "new": "UIB L POST",
+   "section": ""
+  },
+  {
+   "old": "231427",
+   "new": "UIB S",
+   "section": ""
+  },
+  {
+   "old": "05-159006-755",
+   "new": "UIB L POST",
+   "section": ""
+  },
+  {
+   "old": "231741",
+   "new": "UIB S",
+   "section": ""
+  },
+  {
+   "old": "05-159007-103",
+   "new": "UIB L",
+   "section": ""
+  },
+  {
+   "old": "231741-2",
+   "new": "UIB S",
+   "section": ""
+  },
+  {
+   "old": "05-169002-003",
+   "new": "UIB 24VAC",
+   "section": ""
+  },
+  {
+   "old": "232182",
+   "new": "UIB S",
+   "section": ""
+  },
+  {
+   "old": "05-169003-103",
+   "new": "UIB 24VAC",
+   "section": ""
+  },
+  {
+   "old": "232391",
+   "new": "UIB S",
+   "section": ""
+  },
+  {
+   "old": "05-169005-123",
+   "new": "UIB L POST",
+   "section": ""
+  },
+  {
+   "old": "232490",
+   "new": "UIB S",
+   "section": ""
+  },
+  {
+   "old": "05-259000-153",
+   "new": "UIB L",
+   "section": ""
+  },
+  {
+   "old": "232582",
+   "new": "UIB S",
+   "section": ""
+  },
+  {
+   "old": "05-299000-153",
+   "new": "UIB 24VAC",
+   "section": ""
+  },
+  {
+   "old": "232613",
+   "new": "Fan 50 Plus Pins",
+   "section": ""
+  },
+  {
+   "old": "05-299004-153",
+   "new": "UIB 24VAC",
+   "section": ""
+  },
+  {
+   "old": "232614",
+   "new": "Fan 50 Plus Pins",
+   "section": ""
+  },
+  {
+   "old": "05-299010-753",
+   "new": "UIB S",
+   "section": ""
+  },
+  {
+   "old": "232659",
+   "new": "UIB S",
+   "section": ""
+  },
+  {
+   "old": "05-299024-153",
+   "new": "UIB 24VAC",
+   "section": ""
+  },
+  {
+   "old": "232838",
+   "new": "UIB 24VAC Fan Control",
+   "section": ""
+  },
+  {
+   "old": "05-299026-153",
+   "new": "UIB 24VAC",
+   "section": ""
+  },
+  {
+   "old": "315526",
+   "new": "UIB L",
+   "section": ""
+  },
+  {
+   "old": "05-306435-153",
+   "new": "UIB S",
+   "section": ""
+  },
+  {
+   "old": "316019",
+   "new": "UIB 24VAC",
+   "section": ""
+  },
+  {
+   "old": "05-309001-153",
+   "new": "UIB S",
+   "section": ""
+  },
+  {
+   "old": "318816",
+   "new": "UIB L",
+   "section": ""
+  },
+  {
+   "old": "05-309002-153",
+   "new": "UIB S",
+   "section": ""
+  },
+  {
+   "old": "520427 Kit with 231427",
+   "new": "UIB S",
+   "section": ""
+  },
+  {
+   "old": "05-309008-153",
+   "new": "UIB S",
+   "section": ""
+  },
+  {
+   "old": "520741 Kit with 231741",
+   "new": "UIB S",
+   "section": ""
+  },
+  {
+   "old": "05-309009-153",
+   "new": "UIB S",
+   "section": ""
+  },
+  {
+   "old": "520814 Kit with ?",
+   "new": "UIB S",
+   "section": ""
+  },
+  {
+   "old": "05-309014-153",
+   "new": "UIB S",
+   "section": ""
+  },
+  {
+   "old": "520820 Kit with 232613",
+   "new": "Fan 50 Plus Pins",
+   "section": ""
+  },
+  {
+   "old": "05-309017-153",
+   "new": "UIB S",
+   "section": ""
+  },
+  {
+   "old": "618652",
+   "new": "UIB S",
+   "section": ""
+  },
+  {
+   "old": "05-309017-158",
+   "new": "UIB S",
+   "section": ""
+  },
+  {
+   "old": "61525022",
+   "new": "UIB L POST",
+   "section": ""
+  },
+  {
+   "old": "05-309022-153",
+   "new": "UIB S",
+   "section": ""
+  },
+  {
+   "old": "61549522",
+   "new": "UIB L POST",
+   "section": ""
+  },
+  {
+   "old": "05-30DSI Series",
+   "new": "UIB S",
+   "section": ""
+  },
+  {
+   "old": "61688922",
+   "new": "UIB S",
+   "section": ""
+  },
+  {
+   "old": "05-505650-153",
+   "new": "UIB S",
+   "section": ""
+  },
+  {
+   "old": "61717037",
+   "new": "UIB S",
+   "section": ""
+  },
+  {
+   "old": "05-525900-113",
+   "new": "UIB S",
+   "section": ""
+  },
+  {
+   "old": "ARM91315",
+   "new": "UIB S POST",
+   "section": ""
+  },
+  {
+   "old": "1721",
+   "new": "UIB L",
+   "section": ""
+  },
+  {
+   "old": "BLUE BOY",
+   "new": "UIB S",
+   "section": ""
+  },
+  {
+   "old": "3521",
+   "new": "UIB L",
+   "section": ""
+  },
+  {
+   "old": "FA7615",
+   "new": "UIB L POST",
+   "section": ""
+  },
+  {
+   "old": "3802",
+   "new": "UIB S",
+   "section": ""
+  },
+  {
+   "old": "MPD91731",
+   "new": "UIB L POST",
+   "section": ""
+  },
+  {
+   "old": "3845",
+   "new": "UIB S",
+   "section": ""
+  },
+  {
+   "old": "RAM",
+   "new": "UIB S",
+   "section": ""
+  },
+  {
+   "old": "4322-321",
+   "new": "UIB L POST",
+   "section": ""
+  },
+  {
+   "old": "RUBY",
+   "new": "UIB S",
+   "section": ""
+  },
+  {
+   "old": "5119",
+   "new": "UIB 24VAC",
+   "section": ""
+  },
+  {
+   "old": "35-615920-113 24VAC W/FAN",
+   "new": "UIB 24VAC Fan Control",
+   "section": ""
+  },
+  {
+   "old": "6215",
+   "new": "UIB S",
+   "section": ""
+  },
+  {
+   "old": "35-615931-113 24VAC W/FAN",
+   "new": "UIB 24VAC Fan Control",
+   "section": ""
+  },
+  {
+   "old": "6245",
+   "new": "UIB S",
+   "section": ""
   }
  ]
 }

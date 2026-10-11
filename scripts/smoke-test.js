@@ -396,13 +396,13 @@ if (sb.window.RV && typeof sb.window.RV.searchRoute === 'function') {
        deliberate pass with the query set already in place -- which is what this is for. */
     const QUERIES = [
       ['winterize my rv', 'Guide'], ['how to winterize', 'Guide'], ['black tank', 'Guide'],
-      /* 'dometic fridge' AND 'norcold' MOVED FROM Manual TO Tool ON 2026-10-11, deliberately, when the
-         fridge control-board finder shipped. Its title names both makers, so it wins on a title word
-         start, and that is the scorer working as documented rather than a bug. The judgement is that a
-         reader typing a maker's name with a fridge problem wants "which board do I need" more than a
-         list of manuals, and the manuals hub is still the next result rather than displaced. Reversible
-         in one word: change these two back and the manuals hub leads again. */
-      ['dometic fridge', 'Tool'], ['norcold', 'Tool'], ['airstream manual', 'Manual'],
+      /* THESE TWO WENT Tool AND CAME BACK TO Manual THE SAME NIGHT, 2026-10-11. The fridge board finder
+         shipped with "Norcold" and "Dometic" in its title, so it won on a title word start and led these
+         two queries; an hour later it was renamed to the APPLIANCE control board finder once it also
+         covered generator and ignitor boards, which took both maker names out of the title and handed the
+         lead back to the manuals hub. The routing below is therefore the original expectation and not a
+         compromise. A maker's name leading to that maker's manuals is the rule this table exists to hold. */
+      ['dometic fridge', 'Manual'], ['norcold', 'Manual'], ['airstream manual', 'Manual'],
       ['winnebago', 'Business'], ['towing capacity', 'Guide'],
       ['can my truck tow it', 'Tool'], ['tire pressure', 'Guide'],
       ['how old are my tires', 'Tool'], ['battery not charging', 'Guide'],
