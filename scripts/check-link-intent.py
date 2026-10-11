@@ -58,7 +58,9 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 MANIFEST = ROOT / "_data" / "manuals.json"
-CACHE = pathlib.Path("/tmp/link-intent-cache")
+# DISK, NOT /tmp, for the same reason as the quote cache: this is a corpus of fetched
+# documents kept to avoid refetching, not scratch. See the note in check-quotes.py.
+CACHE = pathlib.Path.home() / ".cache" / "originrv" / "link-intent-cache"
 UA = ("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) "
       "Chrome/125.0.0.0 Safari/537.36")
 

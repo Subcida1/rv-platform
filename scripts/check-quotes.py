@@ -60,7 +60,12 @@ import sys
 import urllib.request
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-CACHE = pathlib.Path("/tmp/quote-source-cache-v2")   # v2 stores RAW text and normalises on read
+# ON DISK, NOT IN /tmp. On the-grid /tmp is a 7.8G tmpfs, so this cache was spending RAM:
+# by 2026-10-10 it held 907MB and the link-intent cache another 725MB, both of them on the
+# tmpfs-reaper's PROTECT list because refetching bot-protected sources is expensive. The
+# reaper's own note says the answer is to relocate them rather than delete them, so they
+# live under ~/.cache now (disk-backed, 100G free) and /tmp went from 2.9G to 76M.
+CACHE = pathlib.Path.home() / ".cache" / "originrv" / "quote-source-cache-v2"   # v2 stores RAW text and normalises on read
 UA = ("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) "
       "Chrome/154.0.0.0 Safari/537.36")
 
