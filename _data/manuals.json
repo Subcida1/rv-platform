@@ -14989,7 +14989,7 @@
       "source": "OriginRV recall lookup",
       "section": "check",
       "what": "Our own lookup, and the one to start with. Enter a VIN, or a year and a make and a model, and it reads the federal recall and complaint records, says why a motorhome's VIN belongs to the chassis rather than the coach, and hands you the maker's own lookup where the maker runs one.",
-      "url": "/tools/rv-recall-lookup",
+      "url": "https://originrv.com/tools/rv-recall-lookup",
       "keyed_by": "VIN, or year and make and model",
       "gate": "none",
       "status": "verified",

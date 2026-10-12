@@ -61,6 +61,43 @@ guide ×20, Winter guide ×5, Running gear guide ×3, etc.).
 267 uses), "Weight & Distribution Calculator" (tools hub card), "RV Towing Calculator" (page title)
 and "Weight and towing" (homepage card). One canonical name is a site-wide editorial call.
 
+## Neo's manuals deep-dive — verified 2026-10-12 (9 findings, 1 real defect, now fixed)
+
+Same extractor artifacts as the other three slices. Measured on the live site, in a real browser:
+
+- **#1 "all 8 system cards 404 via /manuals/manuals/<slug>" — REFUTED.** 0 doubled paths; the cards
+  resolve to `/manuals/<slug>`. `<base href="/">` again.
+- **#2 "row-level external links missing (power 32/34 linkless, towing 26/27, ...)" — REFUTED.**
+  Every row on every page carries an `a.man-doc` to an external URL, measured two ways: static parse
+  and rendered DOM. power 34/34, towing 27/27, sanitation 6/6, heating 8/8, water 7/7, exterior 7/7,
+  chassis 8/8, kitchen 13/13. The hub promise holds.
+- **#3 "only towing/sanitation/exterior have the 'N shown' status line" — REFUTED.** All 8 pages
+  carry `class="man-status"` with the right count (34, 27, 6, 8, 7, 7, 8, 13 shown).
+- **#4 "breadcrumb only on sanitation + exterior" — REFUTED.** `man-crumb` is on all 8.
+- **#5 "guide module only on sanitation + exterior" — REFUTED.** `man-about-h` is on all 8, and the
+  hrefs were checked live: all 13 distinct guide targets resolve 200.
+- **#6 "H1 vs title mismatches" — NOT A DEFECT.** H1 != title is the site-wide convention
+  (44 pages differ, 17 match); the H1 is the human heading, the title is the SEO title.
+- **#7 "heating-and-cooling is thin, zero links, no intro" — REFUTED.** 192 lines, 8 rows all linked,
+  crumb + lede + status + guide module all present. It is small because the data has 8 entries.
+- **#8 "two Demco rows — duplicate?" — INTENTIONAL.** One is `kind: library` (the browsable manuals
+  index) and one is `kind: document` (the TB20040 PDF). Norcold is the only other brand with both.
+- **#9 hub card counts match pages — CONFIRMED.**
+
+**The one real defect, found by `scripts/audit-manuals.py` (which is NOT in ci.sh):**
+`_data/manuals.json` `recalls[0]` carried `"url": "/tools/rv-recall-lookup"`, a root-relative URL.
+Two consequences: the schema rule ("url must be https") failed, and the recalls page's JSON-LD
+`ItemList` shipped a **relative URL in structured data**, which schema.org does not accept. Introduced
+by `f8569b4` (the recall-lookup tool commit); the audit passed on its parent and has failed since.
+Fixed by making the URL absolute in the data and rebuilding — the visible link and the JSON-LD both
+now carry `https://originrv.com/tools/rv-recall-lookup`. `audit-manuals.py` exits 0.
+
+**Worth knowing: `audit-manuals.py` is a manual instrument, not a CI gate.** It catches a class the
+gate does not — schema, banned hosts and storable-URL shape across all 154 manual rows. Run it after
+any `_data/manuals.json` edit. It also prints the reminder that its HTTP results are the machine's
+view and that some hosts (wfcotech 403-to-browser, hwhcorp missing intermediate cert, cummins
+Cloudflare) read wrong from a script in both directions.
+
 ## The two things that actually find defects on this site
 
 1. **A page contradicting itself.** Four of the ten tool-page defects were a page disagreeing with
