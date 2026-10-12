@@ -126,3 +126,17 @@ bridge failure modes; this file holds batch 3.
 | `tools/rv-toilet-valve` | "Answer what you can see and this gives you the maker's part number and the document it came from." — the Traveler section names no part number in the visible copy | **VERIFY** — either the tool has a gap or the copy overpromises |
 | `tools/rv-toilet-valve` | "the 400 series is built to replace any toilet with a rough-in of 7.625 inches or more" | REAL — "any" makes rough-in sound sufficient; the same section says it is one dimension of several |
 | `tools/weights`/`snow-load`, `tools/watts-to-amps` | still outstanding at the time of writing | review in flight |
+
+## Batch 3 closed — the last two
+
+| page | finding | verdict |
+|------|---------|---------|
+| `tools/snow-load` | "Snow is water with air in it, so what it weighs is what the water in it weighs." | REAL, mild house voice - clunky and repetitive |
+| `tools/snow-load` | "and a manual that stays silent is not the maker saying the roof is fine." | REAL, mild |
+| `tools/snow-load` | "maker&#8217;s" reported as an unstripped HTML entity | **ARTIFACT** - the page holds the numeric form and a browser renders an apostrophe. The extractor now unescapes numeric entities. |
+| `tools/watts-to-amps` | "240 V, 50-amp service legs" called wrong because each leg is 120 V to neutral | **CONSIDERED, NOT APPLIED.** The value is CORRECT: 240 V x 50 A = 12,000 W, which is exactly the service total of two 50 A x 120 V legs. And the hint directly under the select already says "a 50-amp cord carries two 120 V legs". The label is shorthand the page disambiguates. |
+| `tools/watts-to-amps` | the capacities use nominal rating with no note about continuous loads | REAL, mild |
+
+**Batch 3 result: 14 tool pages reviewed, 10 fixed, 4 refuted on inspection, and 5 extractor artifact
+classes found and fixed.** The artifacts are worth as much as the fixes: each one would have had me
+edit correct copy.
