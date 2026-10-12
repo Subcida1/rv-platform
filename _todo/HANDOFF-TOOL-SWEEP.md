@@ -1,4 +1,36 @@
 
+## Neo's about deep-dive, second rotation — verified 2026-10-12 (3 pages, 7 findings, no defects)
+
+**No defects. Three refuted, one already recorded, three are Neo's own good notes.** Two of the
+refutations are on their third round, and this time the link question was settled by CLICKING.
+
+- **#1 "/contact has no email, mailto, or form anywhere" — REFUTED, third time.** The raw HTML
+  carries `mailto:contact@originrv.com`, and it is there on the live page too. The two `<form>`
+  elements on the page are the nav and mobile-menu search forms.
+- **#2 "/privacy references a claim form that cannot be found" — REFUTED, third time.** The claim
+  form is on **all 51 directory pages** (`id="claim"`), and `/directory/` is in the sitemap.
+- **#3 "verify the /about link targets" — REFUTED, and verified the way Neo asked for.** The three
+  links added on 2026-10-12 are `/tools/`, `/guides/` and `/directory/`, and the fourth is
+  `href="contact"`. Measured in a browser: its attribute is `contact`, its resolved `.href` is
+  `https://originrv.com/contact`, and **clicking it lands on the contact page** with the title
+  "Contact OriginRV: Corrections and Listing Requests". **Zero doubled prefixes anywhere on the
+  page**, and all four targets answer 200.
+- **#4 "/contact is the thinnest page on the site" — CONFIRMED as a fact, RECORDED, third time.**
+  112 words of body text. It is a content decision, and it is the same call the W19 calibration
+  exists to inform.
+- **#5 "consider 'full-time RVer' in the H1" — RECORDED**, same as the last round. `about.html` has
+  no declared keyword target in `_data/targets.json`, so there is no convention to align it with.
+- **#6 and #7 are Neo's own good notes** — the privacy cookie claim is accurate (verified: no
+  `document.cookie` anywhere in `assets/js/`, and the page states Google Analytics sets them), and
+  the voice passes.
+
+**A counting error of my own, worth recording.** Neo reported "sitemap is now 131 URLs"; my first
+check said 124 and I began looking for a stale sitemap. It was my instrument: `grep -c '<loc>'`
+counts LINES, and seven lines carry two entries each. `grep -o '<loc>' | wc -l` gives **131**, and
+`build-sitemap.py --check` passes with "pages on disk: 131, sitemap entries: 131, with lastmod: 131".
+**Neo's number was right and mine was wrong** — the same rule as always: when a measurement
+disagrees with a direct observation, suspect the measurement.
+
 ## Neo's directory deep-dive, second rotation — verified 2026-10-12 (7 findings: 1 fixed, 5 refuted, 1 recorded)
 
 - **#1 "duplicate listings on /directory/colorado and /directory/nevada" — REAL, FIXED, and it was
