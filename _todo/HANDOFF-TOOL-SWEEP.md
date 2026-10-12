@@ -173,6 +173,48 @@ Counts verified: 22+23+18+16+14+25+16+14+9 = 157, matching "157 parts shown".
   `<span class="verified">`, a styled pill with a check glyph (`.verified::before{content:"\2713"}`),
   sitting beside the "Claim your listing" heading. Not a broken CTA.
 
+## Neo's tools deep-dive, second rotation — verified 2026-10-12 (8 pages, 10 findings)
+
+- **#1 "the hub blurb says the tire decoder uses NHTSA's own rule; the page says it is not a legal
+  limit" — REAL, FIXED.** The hub read *"using NHTSA's own rule for when a tire is too old"*. The page
+  is right and quotes NHTSA saying the makers *recommend* six to 10 years. The blurb now reads *"with
+  the six-to-10-year replacement window the tire and vehicle makers recommend"*. (The guide's
+  *"NHTSA's rule, 49 CFR 574.5"* is about the code being molded on one sidewall, which is correct and
+  was left alone.)
+- **#2 "the water-filter Sources list shows garbled replacement characters" — REFUTED.** Zero U+FFFD
+  in the file and zero on the live page; the only non-ASCII character in the whole page is `©`. The
+  Atlas Filtri line renders cleanly. The `\uFFFD\uFFFD` is the extractor's rendering of the link
+  markup around it.
+- **#3 "the anode-rod title is lowercase" — REAL, FIXED, and wider than reported.** Two tool titles
+  were lowercase, not one: `tools/rv-anode-rod.html` and `tools/battery-runtime.html`. Twelve of the
+  fourteen are title case. Both fixed, with `og:title` and `twitter:title` aligned to match.
+- **#4 "tire-date-code has zero internal links" — CONFIRMED as a gap, RECORDED.** It carries one
+  in-content link (`/about`) and no related block. But the convention is not strict: **7 of 14 tool
+  pages carry a "Related guides" block and 7 do not.** So this is a worklist item, not a broken
+  convention.
+- **#5 "the recall page has two near-identical VIN blocks" — REAL, FIXED.** The form hint repeated
+  the locations the later "How to find your VIN" section sets out in more detail. The hint now names
+  the two common spots, links to the section, and keeps the 17-character and I/O/Q constraints.
+- **#6 "verify 'the first five characters identify the campaign'" — REAL, FIXED, and the claim was
+  wrong.** NHTSA's own API returns `NHTSACampaignNumber: "23V637000"`, so the campaign is `23V637` --
+  **six** characters, not five -- and the page's own cited Part 573 report is `RCLRPT-24V826-4432.PDF`
+  for campaign `24V826`, also six. The sentence now says six and names the parts.
+- **#7 "the privacy wording is undercut by a shareable URL carrying the VIN" — REFUTED.** The claim
+  is about what the *tool* sends ("nothing is sent anywhere except to the two federal services that
+  answer it"), which is accurate, and the page discloses the URL separately and plainly ("the address
+  carries your VIN, so you can send somebody the exact list"). Nothing is hidden and nothing
+  contradicts.
+- **#8 "hook-up vs Hookup, sentence case vs title case" — REAL, PARTIAL.** The H1 is *"Watts to amps,
+  and what your hook-up can run"* and the title is *"Watts to Amps Calculator for RVs: What Your
+  Hookup Can Run"*. The page uses `hook-up` 7 times, `Hookup` 3 and `hookup` once. Recorded: the
+  heading/title case split is the site's ordinary convention (title carries the query, h1 names the
+  section), so only the hyphenation is a real inconsistency, and it is a one-word style call.
+- **#9 "the finder question blocks show no answer choices" — REFUTED.** Rendered in a real browser,
+  the toilet-valve block carries three visible buttons ("A foot pedal", "A hand lever on the side",
+  "A switch or button on the wall"), each 44 px tall. The text render simply does not show them.
+- **#10 voice PASS on all eight** — confirmed independently by the extractor artifacts above, which
+  are the same class as every previous batch.
+
 ## Neo's guides deep-dive, second rotation — verified 2026-10-12 (5 pages, 10 findings)
 
 - **#1 "hub card hrefs still carry the doubled /guides/guides/ prefix, hub unusable" — REFUTED, fifth
