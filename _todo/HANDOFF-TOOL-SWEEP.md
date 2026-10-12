@@ -1,4 +1,44 @@
 
+## Neo's parts deep-dive, second rotation — verified 2026-10-12 (8 findings: 2 fixed, 4 refuted, 2 recorded)
+
+- **#1 "subject-verb mismatch cluster on the card taglines" — REAL, and MUCH BIGGER than reported,
+  fixed only where it is unambiguous.** Counted across all 157 cards: **94 have a plural or compound
+  subject, and the verb number splits 48 singular / 46 plural** — so this is not a cluster of errors
+  but a page-wide split. The two groups are not the same problem:
+  - **A simple plural noun with a singular verb is unambiguously wrong.** Three cards:
+    `Tire chains` "Gets" -> "Get", `Cable-operated valves` "Lets" -> "Let", `Electric dump valves`
+    "Empties" -> "Empty". Fixed. (A fourth candidate, `Water heater bypass`, is a **singular** noun
+    ending in s and correctly keeps "Lets" — a heuristic that only checks the trailing s catches it.)
+  - **A compound subject is a judgment call per card**, because some name one assembly and some name
+    two parts: `Kingpin and fifth-wheel hitch` "Connects" is right (one assembly), `Converter and
+    charger` "Turns" is right (one device), but `Exhaust and turbo` "Gets" is not (two parts) —
+    fixed to "Get ... and help". **44 cards remain in this group and they need a per-card read, not a
+    sweep.** Recorded.
+- **#2 "the Solar panels card's How to fix it link renders with a garble" — REFUTED, second time.**
+  The card's link is `/guides/rv-solar-not-charging`; the file holds **zero** U+FFFD.
+- **#3 "the winterize-plumbing guide is attached to semantically unrelated cards" — REFUTED.** All
+  six cards that carry it are winterizing subjects: Fresh water tank, Low point drains, Water heater
+  bypass, Outside shower, Water system winterizing, Water dispenser and ice maker. Every one of them
+  has a water line that freezes.
+- **#4 "guide coverage is thin" — CONFIRMED as a fact, RECORDED.** Propane 1 of 9, chassis 2 of 14.
+  Neo's mapping suggestions are sensible (rv-propane-furnace-wont-light to Propane regulator,
+  rv-tire-replacement to Tires, rv-towing-trailer to Weight-distribution hitch) and belong in a
+  content pass, not a mechanical one.
+- **#5 "parts-to-tools cross-links are missing" — CONFIRMED as a gap, RECORDED.** The anode-rod card
+  has no link to `/tools/rv-anode-rod`, which is the clearest case on the page.
+- **#6 "the 'Also known as' aliases are inconsistently cased" — REAL, FIXED.** Eight aliases were
+  lowercase while the rest of the page capitalises properly: `Honda eu2200` -> `EU2200`,
+  `porta potti` -> `Porta Potti`, `p trap` -> `P-trap`, `mopeka` -> `Mopeka`, `two way fridge` ->
+  `two-way fridge`, and `rv toilet` / `rv furnace` / `rv ac` / `rv fridge` -> `RV ...`. Fixed in
+  `_data/parts.json`. **Search is unaffected**: the generator lowercases the whole `data-search`
+  attribute, so capitalising the display alias changes nothing a search matches.
+- **#7 "the heat pump card still does not state a cutoff" — RECORDED, third time, and it needs a
+  source rather than a number.** Writing "35-40 F" would be inventing a figure; no maker document in
+  `_data/` states one. The card says there IS a minimum without claiming what it is, which is the
+  honest version until a source is found.
+- **#8 "no intro copy above the filters" — REFUTED, third time.** The lede is present and renders
+  above the filter bar. "No per-part anchors" — CONFIRMED, recorded.
+
 # READ THIS FIRST: the extractor artifacts, consolidated (2026-10-12)
 
 **Twelve review rounds produced 100+ findings. Around a dozen were real defects. The rest were one of

@@ -643,7 +643,7 @@
           "id": "tire-chains",
           "n": "Tire chains",
           "aka": "snow chains|cable chains|traction devices",
-          "does": "gets you over a pass in a chain-control area",
+          "does": "get you over a pass in a chain-control area",
           "fails": [
             "wrong size",
             "fitted to the wrong axle",
@@ -1394,7 +1394,7 @@
         {
           "id": "portable-generator",
           "n": "Portable generator",
-          "aka": "inverter generator|Honda eu2200|Firman|Westinghouse",
+          "aka": "inverter generator|Honda EU2200|Firman|Westinghouse",
           "does": "powers your gear away from a pedestal without running the coach's built-in generator",
           "fails": [
             "hard starting after storage",
@@ -2033,7 +2033,7 @@
         {
           "id": "toilet-gravity",
           "n": "Toilet (gravity)",
-          "aka": "rv toilet|foot flush toilet|Aqua-Magic|SeaLand",
+          "aka": "RV toilet|foot flush toilet|Aqua-Magic|SeaLand",
           "does": "flushes into the black tank",
           "fails": [
             "will not hold water",
@@ -2155,7 +2155,7 @@
         {
           "id": "cassette-toilet",
           "n": "Cassette toilet",
-          "aka": "cassette|porta potti",
+          "aka": "cassette|Porta Potti",
           "does": "a removable tank you carry to a dump point",
           "fails": [
             "seal leak",
@@ -2284,7 +2284,7 @@
           "id": "cable-operated-valves",
           "n": "Cable-operated valves",
           "aka": "cable valve|remote dump valve",
-          "does": "lets you work a valve from a compartment away from the tank",
+          "does": "let you work a valve from a compartment away from the tank",
           "fails": [
             "cable stretching",
             "kinked",
@@ -2307,7 +2307,7 @@
           "id": "electric-dump-valves",
           "n": "Electric dump valves",
           "aka": "E-Valve|electric valve|auto dump",
-          "does": "empties the tank at the flip of a switch",
+          "does": "empty the tank at the flip of a switch",
           "fails": [
             "motor failure",
             "switch dead",
@@ -2509,7 +2509,7 @@
         {
           "id": "p-traps-and-drains",
           "n": "P-traps and drains",
-          "aka": "p trap|sink drain|shower trap",
+          "aka": "P-trap|sink drain|shower trap",
           "does": "keeps sewer gas out of the living space",
           "fails": [
             "dried out while stored",
@@ -2545,7 +2545,7 @@
         {
           "id": "furnace",
           "n": "Furnace",
-          "aka": "rv furnace|Suburban NT|Atwood|Hydro Flame",
+          "aka": "RV furnace|Suburban NT|Atwood|Hydro Flame",
           "does": "burns propane to heat the coach through ducts",
           "fails": [
             "will not light",
@@ -2673,7 +2673,7 @@
         {
           "id": "rooftop-air-conditioner",
           "n": "Rooftop air conditioner",
-          "aka": "rv ac|air conditioner|Coleman Mach|Dometic Brisk|Penguin",
+          "aka": "RV AC|air conditioner|Coleman Mach|Dometic Brisk|Penguin",
           "does": "cools the coach from the roof",
           "fails": [
             "freezes up",
@@ -3748,7 +3748,7 @@
         {
           "id": "refrigerator-absorption",
           "n": "Refrigerator (absorption)",
-          "aka": "rv fridge|Norcold|Dometic absorption|two way fridge",
+          "aka": "RV fridge|Norcold|Dometic absorption|two-way fridge",
           "does": "cools with heat and ammonia, running on propane or 120 volts",
           "fails": [
             "not cooling",
@@ -4567,7 +4567,7 @@
           "id": "exhaust-and-turbo",
           "n": "Exhaust and turbo",
           "aka": "exhaust|turbo|wastegate|exhaust brake|jake brake",
-          "does": "gets the gases out and helps slow the coach",
+          "does": "get the gases out and help slow the coach",
           "fails": [
             "turbo actuator",
             "exhaust leaks",
@@ -4806,7 +4806,7 @@
         {
           "id": "propane-tank-gauge-and-monitor",
           "n": "Propane tank gauge and monitor",
-          "aka": "tank gauge|LP level|sonar gauge|mopeka",
+          "aka": "tank gauge|LP level|sonar gauge|Mopeka",
           "does": "tells you how much gas is left",
           "fails": [
             "stuck float",
