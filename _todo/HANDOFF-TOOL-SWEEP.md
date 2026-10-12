@@ -173,6 +173,44 @@ Counts verified: 22+23+18+16+14+25+16+14+9 = 157, matching "157 parts shown".
   `<span class="verified">`, a styled pill with a check glyph (`.verified::before{content:"\2713"}`),
   sitting beside the "Claim your listing" heading. Not a broken CTA.
 
+## Neo's hubs deep-dive, second rotation — verified 2026-10-12 (5 hubs, 8 findings, ALL refuted)
+
+**This round produced no defects. Items 1-6 and 8 are all the same extractor artifacts, and this is
+the sixth round on some of them.** The definitive test this time was not reading the markup but
+CLICKING the card in a real headless browser against the LIVE site and reading where it landed.
+
+- **#1 "all /guides hub card hrefs are doubled /guides/guides/<slug> and 404" — REFUTED, sixth time.**
+  Measured on `https://originrv.com/guides/`: the card's attribute is
+  `href="guides/rv-battery-not-charging"`, its resolved `.href` is
+  `https://originrv.com/guides/rv-battery-not-charging`, and **clicking it lands on
+  `https://originrv.com/guides/rv-battery-not-charging` with the title "RV Battery Not Charging:
+  Which of the Four Sources".** No doubled path exists anywhere in the flow.
+- **#2 "Body, slides and jacks and Winter storage render with zero cards" — REFUTED, third time.**
+  Rendered: all six sections carry **10 cards each** (46 total).
+- **#3 "Pacific, Southwest and Alaska and Hawaii render with zero state cards, 9 states orphaned" —
+  REFUTED, third time.** Counted in the browser on the live hub: Pacific 3, West 8, Southwest 4,
+  Midwest 9, Southeast 13, Northeast 11, Alaska and Hawaii 2 = **50 state cards**, and 0 doubled
+  hrefs.
+- **#4 "/parts still has no intro copy above the filters" — REFUTED, second time.** The lede is
+  present on the live page: *"An RV is 157 parts across 9 systems..."*
+- **#5 "/parts has an encoding glitch near the Solar panels link" — REFUTED.** The card's link is
+  `/guides/rv-solar-not-charging`; the file's only non-ASCII character is `©`; and the live page
+  contains **zero** U+FFFD.
+- **#6 "confirm the /manuals/manuals/ doubled-href fix landed on all 8 cards" — CONFIRMED CLEAN.**
+  All **9** cards carry clean hrefs (`manuals/start-here`, `manuals/power-and-electrical`, ...) and
+  **0** contain `manuals/manuals`.
+- **#7 Neo withdrew his own earlier /parts title flag** — the title does carry "RV parts". Good.
+- **#8 "a stray 'Free forever' text line renders after the claim module" — REFUTED, second time.**
+  It is `<span class="verified">`, a styled pill (inline-flex, tinted background, 1px border,
+  999px radius) sitting beside the "Claim your listing" heading.
+
+**THE MECHANISM, so the next round can skip the verification.** The site writes in-content hrefs
+relative (`guides/rv-battery-not-charging`) and declares `<base href="/">` first in `<head>`, which
+is what makes them resolve to `/guides/rv-battery-not-charging`. **A fetcher that ignores `<base>`
+and resolves against the page path turns every one of them into a doubled path** — `/guides/` +
+`guides/...` — which is exactly the reported symptom, on every hub, every round. The same extractor
+is also not seeing the card grids (items 2 and 3) or the styled badges (item 8).
+
 ## Neo's tools deep-dive, second rotation — verified 2026-10-12 (8 pages, 10 findings)
 
 - **#1 "the hub blurb says the tire decoder uses NHTSA's own rule; the page says it is not a legal
