@@ -38,6 +38,34 @@ commits, so two sessions do not review the same page.
 
 ---
 
+# FIRE REPORT - 2026-10-12 02:00 UTC (day-driver cron, scheduled, 19:00 PDT 2026-10-11)
+
+**The only open item this fire: the OWED independent reviewer pass on `guides/rv-roof-leak-repair.html`
+(the new EPDM/TPO subsection). STILL OWED — dispatch was dead all three attempts, recorded not skipped.**
+
+- Local dispatch attempt 1 (task_1): `Listener connection closed`, 0 tool uses, ~73s — dead spawn (no transcript content).
+- Local dispatch attempt 2 (task_2): identical signature, 0 tool uses, ~72s.
+- Cloud-routed fallback (task_3, `Agent(computer: "cloud")`, page available on raw.githubusercontent since
+  `dec96d73`/`0cc642a1` are on main): marked `success` but produced an UNPARSED `<bash>` block and 0 tool
+  uses — the same prompt-parsing failure class recorded at 18:16/18:18 PDT last fire. No usable review.
+- Memory was not the blocker (6.2 GiB available at dispatch). This is the known intermittent
+  app-server / listener instability, not swap pressure. Per the queue's doctrine (dispatch once, retry
+  once, then record as owing rather than retry into a broken platform), the pass is recorded STILL OWED.
+- The gap itself remains CLOSED and untouched this fire (`dec96d73`): content source-adjudicated against
+  the Dicor EPDM/TPO Discovery Guide PDF + Alpha Systems roofing FAQ, check-quotes-clean (13 quotes /
+  4 sources), ci.sh green, no failed GitHub runs in 24h, HEAD in sync with origin (`0cc642a1`, 0 behind).
+- Manifest still carries exactly one OWED marker: `guides/rv-roof-leak-repair.html`. No content files,
+  manifest, assets or search index were touched this fire; nothing to re-verify or re-stamp.
+
+Queue status unchanged: W3 waits on Ty's spec (clogged black-tank page); W5's deeper part pages wait on
+reader evidence, the tongue jack on Ty's photos; W6/W7 closed; W12 candidates other than this one all
+have independent passes; W15 re-checked with no new unowned gap; W16 (check-quotes extractor) closed.
+SECOND-PASS-HANDOFF closed — this roof-leak entry is the ONLY OWED marker left in the manifest.
+
+**Next fire: re-attempt the independent reviewer pass on `guides/rv-roof-leak-repair.html` once
+dispatch health returns; if the first local spawn still shows `Listener connection closed`, try the
+cloud route once, then record honestly. The review brief in this fire's dispatch is the template.**
+
 # FIRE REPORT - 2026-10-12 01:00 UTC (day-driver cron, scheduled, 18:00 PDT 2026-10-11)
 
 **The named queue (W3, W5, W6, W7, W12, W15, W16, second-pass) stayed closed or blocked, so this
