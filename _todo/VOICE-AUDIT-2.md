@@ -593,3 +593,32 @@ usable (a capture ceiling on deepseek, a stall on aistudio whose captured file w
 tool markers) and one page never got its review from chatgpt. **Every page's one substantive finding
 was the same: the lede's "each linked at the source"**, which is the trust-claim cluster awaiting
 Ty.
+
+---
+
+## INSTRUMENT FAILURES — the dominant pattern of this sweep (2026-10-12)
+
+Across three batches, **the review tooling reported defects that did not exist far more often than the
+pages had them**. Six distinct mechanisms, each producing confident, specific, repeatable findings
+about correct content. Every one was caught by checking the artefact - the page's raw markup, the
+tool's own code, or a real browser - never by reading the review more carefully.
+
+| # | mechanism | what it reported | where |
+|---|-----------|------------------|-------|
+| 1 | copy extractor stripped tags, so links vanished | "I run an RV business, claim my listing" has no route (it is an `<a href>`) | batch 1, contact |
+| 2 | extractor flattened headings into body text | "404 That page is not here" lacks punctuation (it is an `<h1>`) | batch 1, 404 |
+| 3 | extractor stripped tags BEFORE comments, so a comment containing `<div>` had its delimiter eaten and its body spilled into the text | Ty's own dated 2026-10-05 instruction reported as visible page copy | batch 1, homepage |
+| 4 | animated counters read as their static "0" | "0 RV tools, all free" reported as a false claim (it is `data-count="14"`) | batch 1, homepage |
+| 5 | extractor joined sibling inline elements with no separator | "Also known ascoupler", "Slim Line10 inch", "Travel trailerFifth wheelMotorhome" - reported as missing spaces on four separate pages | batch 2 + 3 |
+| 6 | extractor left numeric entities literal | "maker&#8217;s" reported as an unstripped entity (a browser renders an apostrophe) | batch 3, snow-load |
+| 7 | extractor did not break on `</summary>` | "What's the 80% rule?Max towing..." reported as a missing space | bath 3, weight-calculator |
+| 8 | extractor joined sibling badge spans | "owner and operatinginstallation" reported as broken English on all nine manual system pages | batch 4 |
+| 9 | **A FETCHER THAT IGNORES `<base href="/">`** resolves in-content relative hrefs against the page path | every hub's cards have doubled links, `/guides/` + `guides/...` - **reported for SIX consecutive rounds** | hubs, recorded by the peer session in `9520cfcb` |
+
+**The rule this earns: when a review reports a defect, check the artefact before the page.** Nine
+mechanisms, and the fastest test is almost always the cheapest one - read the raw markup, read the
+tool's code, or click the thing in a browser. The doubled-path claim survived six rounds precisely
+because each round re-read the same markup instead of driving the page.
+
+Classes 1-8 are fixed in `claude-bridge/tools/copy-extract.py`. Class 9 belongs to whoever fetches
+pages for review, and the note in `9520cfcb` is the record.
