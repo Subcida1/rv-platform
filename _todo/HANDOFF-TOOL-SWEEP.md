@@ -1,4 +1,42 @@
 
+## Neo's directory deep-dive, second rotation — verified 2026-10-12 (7 findings: 1 fixed, 5 refuted, 1 recorded)
+
+- **#1 "duplicate listings on /directory/colorado and /directory/nevada" — REAL, FIXED, and it was
+  the only pair of its kind on the site.** Checked every state file for a repeated phone+url pair:
+  **exactly two**, the two Neo named.
+  - `colorado.json`: "RVFix Mobile Repair, LLC" and "RVFix Mobile Repair" — same phone
+    `(303) 241-2290`, same url. Merged into one record, keeping the richer tags, the emergency flag,
+    the `areas` and the `evidence` block, and folding in the `spec` ("Travels to the Granby and Grand
+    Lake areas in summer only") and the vehicle types from the other description. **60 -> 59.**
+  - `nevada.json`: "Open Roads RV" and "Open Roads RV Mobile Repair Service" — same phone
+    `775-388-7445`, same url. Merged, keeping the canonical name and the audited evidence, folding in
+    the six service tags and the solar/winterizing detail. **23 -> 22.**
+  - The homepage total moved **1,944 -> 1,942** and both state pages re-counted themselves.
+- **#2 "suspicious out-of-state area codes" — REFUTED, and this is the third round on the class.**
+  Every one of the thirteen flagged listings carries a phone that matches its own recorded
+  `phone_quote` — a verbatim quote from the business's own site. Spot-checked all thirteen: RVQC
+  `(407) 476-0505` quoted as "(407) 476-0505 (+14074760505) · support@rvqc.com"; Merrick's
+  `(978) 618-7281` quoted inside its own Durango CO address; Mountain Peak quoted as
+  "Phone: 1-409-FIX MY RV (409-349-6978)". **A mobile technician keeping a number from wherever they
+  moved from is not a data error, and the directory's rule is to record what the business publishes.**
+- **#3 "the hub renders zero state cards under Pacific, Southwest and Alaska and Hawaii" — REFUTED,
+  fourth time.** Counted in the markup: Pacific 3, West 8, Southwest 4, Midwest 9, Southeast 13,
+  Northeast 11, Alaska and Hawaii 2 = **50 cards**.
+- **#4 "the FAQ names a filter that is not visible" — REFUTED, third time.** The finder carries a
+  real `<button class="finder-route">` whose label is "My RV will not move", with a
+  `finder-s` sub-label. Neo flagged this one as "NOT asserted broken — queued for your direct markup
+  check", which was the right call: the markup check confirms it.
+- **#5 "a bare phone dump block at the bottom of all 7 state pages" — REFUTED, second time.**
+  `grep -c 'Phone:'` returns **0** on every state page.
+- **#6 "boilerplate duplication across the state pages" — CONFIRMED as a fact, RECORDED.** The intro
+  paragraph, "What a listing carries", "What to look for in an RV technician" and the FAQ are
+  identical on every state page. That is ~50 pages sharing four blocks; whether to vary them is a
+  content decision, not a mechanical fix.
+- **#7 "'RVQC (At Your RV)' is in Winnemucca with a 407 number and a mismatched domain" — REFUTED.**
+  The record's evidence quotes both the phone and `support@rvqc.com` from the business's own site,
+  and that site's title reads "RV Repair Winnemucca NV | Mobile RV Service & Certified Inspector |
+  RVQC". The location, the domain and the phone all agree with the source.
+
 ## Neo's parts deep-dive, second rotation — verified 2026-10-12 (8 findings: 2 fixed, 4 refuted, 2 recorded)
 
 - **#1 "subject-verb mismatch cluster on the card taglines" — REAL, and MUCH BIGGER than reported,

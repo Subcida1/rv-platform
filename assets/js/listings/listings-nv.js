@@ -60,8 +60,13 @@ window.RV_LISTINGS_NV = [
    "wells"
   ],  "region": "North Eastern Nevada",  "reg": "i80-east"
  },
- {  "n": "Open Roads RV",  "c": "Elko, NV",  "p": "775-388-7445",  "u": "https://www.openroads-rv.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Open Roads RV is a mobile RV repair service started by John and Angela Starman and based in Elko, Nevada. It lists coverage across Elko, Wells, Crescent Valley, Winnemucca, Battle Mountain, Eureka, Wendover, Spring Creek and Ryndon. The site says its mission is to bring quality mobile RV service to Northern Nevada.",  "g": [
-   "mobile"
+ {  "n": "Open Roads RV",  "c": "Elko, NV",  "p": "775-388-7445",  "u": "https://www.openroads-rv.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Open Roads RV is a mobile RV repair and maintenance service started by John and Angela Starman and based in Elko, Nevada. It travels to the RV for repairs, solar upgrades, winterizing and installations. It lists coverage across Elko, Wells, Crescent Valley, Winnemucca, Battle Mountain, Eureka, Wendover, Spring Creek and Ryndon. The site says its mission is to bring quality mobile RV service to Northern Nevada.",  "g": [
+   "mobile service",
+   "on-site repairs",
+   "solar upgrades",
+   "winterizing",
+   "RV repair",
+   "RV maintenance"
   ],  "base": "elko",  "areas": [
    "elko",
    "wells",
@@ -181,25 +186,6 @@ window.RV_LISTINGS_NV = [
    "imlay",
    "fernley",
    "sparks"
-  ],  "region": "Northern Nevada",  "reg": "i80-east"
- },
- {  "n": "Open Roads RV Mobile Repair Service",  "c": "Elko",  "p": "775-388-7445",  "u": "https://www.openroads-rv.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Open Roads RV is a mobile RV repair and maintenance service run by John and Angela Starman and based in Elko. It travels to the RV for repairs, solar upgrades, winterizing and installations across Northern Nevada. The owners state they started the business because there were not enough qualified RV repairmen in the area.",  "g": [
-   "mobile service",
-   "on-site repairs",
-   "solar upgrades",
-   "winterizing",
-   "RV repair",
-   "RV maintenance"
-  ],  "base": "elko",  "areas": [
-   "elko",
-   "wells",
-   "crescent valley",
-   "winnemucca",
-   "battle mountain",
-   "eureka",
-   "wendover",
-   "spring creek",
-   "ryndon"
   ],  "region": "Northern Nevada",  "reg": "i80-east"
  },
  {  "n": "Destinations Mobile RV Services",  "c": "Northern Nevada",  "p": "775-895-6515",  "u": "https://www.destinationsmobilervservices.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Destinations Mobile is a mobile RV repair, inspection and maintenance company serving Northern Nevada and Lake Tahoe. Its technicians are Certified Advanced RVTAA Technicians, Advanced NRVIA Inspectors and Nevada LP Board Certified. It performs on-site repairs and inspections on new and used RVs.",  "g": [

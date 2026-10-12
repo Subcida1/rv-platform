@@ -97,7 +97,7 @@ window.RV_LISTINGS_CO = [
    "superior"
   ],  "region": "Denver Metro / Front Range",  "spec": "We do NOT work on engines, transmissions, brakes, or any other mechanical components.",  "reg": "front-range"
  },
- {  "n": "RVFix Mobile Repair, LLC",  "c": "Arvada & Front Range, CO",  "p": "(303) 241-2290",  "u": "https://rvfixmobilerepair.com/",  "t": "mobile",  "e": true,  "r": false,  "d": "RVFix Mobile Repair, LLC is a family-owned mobile RV repair business based in Arvada. The site says it travels to surrounding Front Range communities within a 60 mile radius, including Granby and Grand Lake in the summer. It says Sunday is reserved for emergencies and lists plumbing, electrical, appliance, roof and slide-out work.",  "g": [
+ {  "n": "RVFix Mobile Repair, LLC",  "c": "Arvada & Front Range, CO",  "p": "(303) 241-2290",  "u": "https://rvfixmobilerepair.com/",  "t": "mobile",  "e": true,  "r": false,  "d": "RVFix Mobile Repair, LLC is a family-owned mobile RV repair business based in Arvada. The site says it travels to surrounding Front Range communities within a 60 mile radius, including Granby and Grand Lake in the summer. It says Sunday is reserved for emergencies and lists plumbing, electrical, appliance, roof and slide-out work. It repairs Class A, B and C motorhomes, vans, travel trailers, fifth wheels, truck campers and horse trailer living quarters.",  "g": [
    "mobile RV repair",
    "we come to you",
    "plumbing",
@@ -108,7 +108,7 @@ window.RV_LISTINGS_CO = [
    "arvada",
    "granby",
    "grand lake"
-  ],  "region": "Colorado Front Range",  "reg": "front-range"
+  ],  "region": "Colorado Front Range",  "spec": "Travels to the Granby and Grand Lake areas in summer only.",  "reg": "front-range"
  },
  {  "n": "On the Road Mobile RV Repair",  "c": "Denver Foothills & Front Range, CO",  "p": "720-968-6205",  "u": "https://www.mobile-rv-repair.com/",  "t": "mobile",  "e": true,  "r": false,  "d": "On the Road Mobile RV Repair performs RV repair in the field for motorhomes, towables, campers and overland RVs. The site says it is located in the Denver foothills and serves across the Front Range, with a trip fee outside a 60 mile radius. It notes emergency rates apply outside of business hours.",  "g": [
    "mobile RV repair",
@@ -292,13 +292,6 @@ window.RV_LISTINGS_CO = [
    "dove creek",
    "mancos"
   ],  "region": null,  "reg": "southwest-co"
- },
- {  "n": "RVFix Mobile Repair",  "c": "Arvada",  "p": "(303) 241-2290",  "u": "https://rvfixmobilerepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "RVFix Mobile Repair is a family-owned mobile RV repair business based in Arvada. It travels to customers on the Front Range within a 60 mile radius, and out to the Granby and Grand Lake areas in the summer. It repairs Class A, B and C motorhomes, vans, travel trailers, fifth wheels, truck campers and horse trailer living quarters.",  "g": [
-   "mobile"
-  ],  "base": "arvada",  "areas": [
-   "granby",
-   "grand lake"
-  ],  "region": "Colorado Front Range",  "spec": "Travels to the Granby and Grand Lake areas in summer only.",  "reg": "front-range"
  },
  {  "n": "Hi-Tech RV Service & Solar Specialists",  "c": "Idaho Springs",  "p": "720-292-1499",  "u": "https://hitechrvservice.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Hi-Tech RV Service & Solar Specialists is a mobile RV repair business that works the Front Range and the Denver area. It provides mobile RV repairs, maintenance, solar installation and appliance work, plus NRVIA-certified RV inspections. It publishes a dedicated service area page for Idaho Springs.",  "g": [
    "mobile"

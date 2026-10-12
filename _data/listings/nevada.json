@@ -276,9 +276,14 @@
       "t": "mobile",
       "e": false,
       "r": false,
-      "d": "Open Roads RV is a mobile RV repair service started by John and Angela Starman and based in Elko, Nevada. It lists coverage across Elko, Wells, Crescent Valley, Winnemucca, Battle Mountain, Eureka, Wendover, Spring Creek and Ryndon. The site says its mission is to bring quality mobile RV service to Northern Nevada.",
+      "d": "Open Roads RV is a mobile RV repair and maintenance service started by John and Angela Starman and based in Elko, Nevada. It travels to the RV for repairs, solar upgrades, winterizing and installations. It lists coverage across Elko, Wells, Crescent Valley, Winnemucca, Battle Mountain, Eureka, Wendover, Spring Creek and Ryndon. The site says its mission is to bring quality mobile RV service to Northern Nevada.",
       "g": [
-        "mobile"
+        "mobile service",
+        "on-site repairs",
+        "solar upgrades",
+        "winterizing",
+        "RV repair",
+        "RV maintenance"
       ],
       "base": "Elko",
       "areas": [
@@ -649,48 +654,6 @@
         ],
         "type_quote": "Based in Winnemucca, Nevada, we're a locally-owned Mobile RV Repair Service run by a Warranty Repair Certified RVTAA technician (ID #4317) and NRVIA inspector (ID #4154). We fix motorhomes, travel trailers, 5th wheels, and campers.",
         "emergency_quote": "24/7 Emergency Service Available, Call or Text to: 407-476-0505",
-        "roadside_quote": null,
-        "licence": null
-      }
-    },
-    {
-      "n": "Open Roads RV Mobile Repair Service",
-      "c": "Elko",
-      "p": "775-388-7445",
-      "u": "https://www.openroads-rv.com/",
-      "t": "mobile",
-      "e": false,
-      "r": false,
-      "d": "Open Roads RV is a mobile RV repair and maintenance service run by John and Angela Starman and based in Elko. It travels to the RV for repairs, solar upgrades, winterizing and installations across Northern Nevada. The owners state they started the business because there were not enough qualified RV repairmen in the area.",
-      "g": [
-        "mobile service",
-        "on-site repairs",
-        "solar upgrades",
-        "winterizing",
-        "RV repair",
-        "RV maintenance"
-      ],
-      "base": "Elko",
-      "areas": [
-        "Elko",
-        "Wells",
-        "Crescent Valley",
-        "Winnemucca",
-        "Battle Mountain",
-        "Eureka",
-        "Wendover",
-        "Spring Creek",
-        "Ryndon"
-      ],
-      "region": "Northern Nevada",
-      "evidence": {
-        "checked": "https://www.openroads-rv.com/about-us",
-        "phone_quote": "775-388-7445",
-        "coverage_quotes": [
-          "With our business based in Elko, NV we cover the following areas: Elko - Wells - Crescent Valley - Winnemucca - Battle Mountain - Eureka - Wendover - Spring Creek - Ryndon - And many many others!"
-        ],
-        "type_quote": "It is our mission to bring quality mobile RV service to Northern Nevada.",
-        "emergency_quote": null,
         "roadside_quote": null,
         "licence": null
       }

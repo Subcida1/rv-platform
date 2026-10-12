@@ -429,7 +429,7 @@
       "t": "mobile",
       "e": true,
       "r": false,
-      "d": "RVFix Mobile Repair, LLC is a family-owned mobile RV repair business based in Arvada. The site says it travels to surrounding Front Range communities within a 60 mile radius, including Granby and Grand Lake in the summer. It says Sunday is reserved for emergencies and lists plumbing, electrical, appliance, roof and slide-out work.",
+      "d": "RVFix Mobile Repair, LLC is a family-owned mobile RV repair business based in Arvada. The site says it travels to surrounding Front Range communities within a 60 mile radius, including Granby and Grand Lake in the summer. It says Sunday is reserved for emergencies and lists plumbing, electrical, appliance, roof and slide-out work. It repairs Class A, B and C motorhomes, vans, travel trailers, fifth wheels, truck campers and horse trailer living quarters.",
       "g": [
         "mobile RV repair",
         "we come to you",
@@ -459,7 +459,8 @@
         "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
         "mobile_quote": "RVFix Mobile RV Repair In Arvada, Co Serving the Colorado Front Range! Call us today! ‪ (303) 241-2290 Close Who We Are Services Service Area Request Service Trusted Mobile RV Repair",
         "e_quote": "Sunday only for emergencies."
-      }
+      },
+      "spec": "Travels to the Granby and Grand Lake areas in summer only."
     },
     {
       "n": "On the Road Mobile RV Repair",
@@ -1083,39 +1084,6 @@
         "mobile_quote": "--> Mobile RV Repair | Kodiak RV Repair top of page RV Repair Mobile RV Repair RV Maintenance RV Parts Giving Back Kodiak Kares Give Aways! Sponsorships About Us Contact Us More Us",
         "center_quote": "1-970-422-1222 Mobile RV Repair We know towing your camper into our shop isn&#39;t always an option.",
         "r_quote": "Mobile RV Repair Available Services Air Conditioners Appliances Awnings Batteries Cabinetry Electrical Systems Entertainment Systems Emergency and Road Side Services Fresh Water Systems Furnace Furniture Hot water heater Jacks Lighting Leveling Systems Plumbing Propane System Refrigerators ​Roof Sealants Sewer tanks Slide Outs Slide"
-      }
-    },
-    {
-      "n": "RVFix Mobile Repair",
-      "c": "Arvada",
-      "p": "(303) 241-2290",
-      "u": "https://rvfixmobilerepair.com/",
-      "t": "mobile",
-      "e": false,
-      "r": false,
-      "d": "RVFix Mobile Repair is a family-owned mobile RV repair business based in Arvada. It travels to customers on the Front Range within a 60 mile radius, and out to the Granby and Grand Lake areas in the summer. It repairs Class A, B and C motorhomes, vans, travel trailers, fifth wheels, truck campers and horse trailer living quarters.",
-      "g": [
-        "mobile"
-      ],
-      "base": "Arvada",
-      "areas": [
-        "Granby",
-        "Grand Lake"
-      ],
-      "region": "Colorado Front Range",
-      "spec": "Travels to the Granby and Grand Lake areas in summer only.",
-      "evidence": {
-        "checked": "https://rvfixmobilerepair.com/",
-        "phone_quote": "(303) 241-2290",
-        "coverage_quotes": [
-          "From our home base in Arvada, Co we travel to all of the surrounding Front Range communities, including Granby and Grand Lake areas in the summer.",
-          "We come to you wherever you need us within a 60 mile radius of our homebase in Arvada."
-        ],
-        "type_quote": "We're a family-owned mobile RV repair company that provides quality service to Colorado's Front Range RVers.",
-        "emergency_quote": null,
-        "roadside_quote": null,
-        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
-        "mobile_quote": "RVFix Mobile RV Repair In Arvada, Co Serving the Colorado Front Range! Call us today! ‪ (303) 241-2290 Close Who We Are Services Service Area Request Service Trusted Mobile RV Repair"
       }
     },
     {
