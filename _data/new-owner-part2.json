@@ -143,7 +143,7 @@
       },
       {
        "kind": "p",
-       "html": "Keep the valve closed and dump when the tank is at least half full, because a low-volume dump will not flush solids."
+       "html": "Keep the valve closed and dump when the tank is at least two thirds full, because a low-volume dump will not flush solids."
       },
       {
        "kind": "p",
@@ -170,11 +170,11 @@
       },
       {
        "kind": "p",
-       "html": "Some states go further: tanks containing formaldehyde or similar chemicals must not be disposed of into an on-site sewage disposal system. Formaldehyde waste can be refused at a park dump."
+       "html": "Formaldehyde waste can be refused at a park dump."
       },
       {
        "kind": "p",
-       "html": "Bleach is the other common harm, and it damages your own equipment. Never use bleach to treat or sweeten a tank: it can severely and quickly damage valves, seals, and gaskets. Use only enzyme-based or bacterial-based products, and note that the term biodegradable does not necessarily mean a product is safe for humans or the environment. Do not use chlorine or caustic chemicals such as bleach or drain openers in the toilet, because they damage the seals in the toilet and the dump valves."
+       "html": "Bleach is the other common harm, and it damages your own equipment. Never use bleach to treat or sweeten a tank: it can severely and quickly damage valves, seals, and gaskets. Use an enzyme-based or bacterial-based product rather than bleach or a caustic, and note that the term biodegradable does not necessarily mean a product is safe for humans or the environment. Do not use chlorine or caustic chemicals such as bleach or drain openers in the toilet, because they damage the seals in the toilet and the dump valves."
       },
       {
        "kind": "p",
@@ -611,7 +611,7 @@
      "blocks": [
       {
        "kind": "p",
-       "html": "mold needs three things: moisture, a food source, and a moderate temperature. mold can develop in any environment with moisture and temperatures between 40°F and 100°F. The food source is ordinary dirt and dust, which is why a clean, dry RV stores better than a dirty one."
+       "html": "Mold needs three things: moisture, a food source, and a moderate temperature. Mold can develop in any environment with moisture and temperatures between 40°F and 100°F. The food source is ordinary dirt and dust, which is why a clean, dry RV stores better than a dirty one."
       },
       {
        "kind": "p",
@@ -631,7 +631,7 @@
         "Clean the RV before storage. Crumbs, grease, and dust are the food mold needs.",
         "Dry it thoroughly. Wipe wet surfaces and let soft furnishings air out before closing up.",
         "Leave cabinet and closet doors partly open for airflow.",
-        "Keep some ventilation. Do not seal the RV completely, because trapped moisture raises condensation. Completely sealing an RV without ventilation can actually increase condensation inside.",
+        "Keep some ventilation. Do not seal the RV completely, because trapped moisture raises condensation inside.",
         "Use a dehumidifier or desiccant as appropriate. A powered dehumidifier needs power; desiccant packs suit a sealed, unpowered space and should be refreshed every 30 to 60 days.",
         "Fix leaks before storage. A small roof or window leak over a winter is a mold start."
        ]

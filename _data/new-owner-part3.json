@@ -479,12 +479,12 @@
      "blocks": [
       {
        "kind": "p",
-       "html": "<b>Hitching, in order.</b> The one rule that never changes is that the wheel chocks stay in place until the whole procedure is finished, because the trailer can roll the moment the coupler is not seated on the ball. The <a href=\"guides/rv-towing-trailer\">towing guide</a> takes the hitching procedure, sway and reversing step by step."
+       "html": "<b>Hitching, in order.</b> The one rule that never changes is that the wheel chocks stay in place until the tug test, because the trailer can roll the moment the coupler is not seated on the ball. The <a href=\"guides/rv-towing-trailer\">towing guide</a> takes the hitching procedure, sway and reversing step by step."
       },
       {
        "kind": "list",
        "items": [
-        "Chock the trailer wheels, and leave the chocks in until the end.",
+        "Chock the trailer wheels, and leave the chocks in until the tug test.",
         "Open the coupler latch before backing up, not after.",
         "Raise the tongue with the tongue jack so the coupler clears the ball, higher than you think you need.",
         "Back the tow vehicle until the ball is under the coupler.",
@@ -494,7 +494,7 @@
         "Connect the breakaway cable to the tow vehicle.",
         "Cross the safety chains under the coupler and attach them to the tow vehicle.",
         "Plug in the trailer connector and test the lights, turn signals, brakes and running lights.",
-        "Do the tug test with the chocks still in place: with everything connected, pull forward gently, and the trailer must not move."
+        "Take the chocks out, then do the tug test: with everything connected, pull forward gently, and the trailer must move with the tow vehicle. A trailer that stays behind is one whose coupler is not seated."
        ]
       },
       {
