@@ -473,3 +473,58 @@ something to do unasked, so the jobs were left queued instead. They are durable:
 **State at hand-off:** nine jobs queued (`20261012-0020-RV-manuals-*`), no replies collected yet.
 `manuals/start-here` (179,630 chars of copy) and `manuals/brands` (104,155) were never dispatched -
 both are far past a single read and need their own slice plan.
+
+### Batch 4 results - the nine system pages
+
+The lanes were brought back with `bridge-up.sh open` and the nine jobs re-queued across three of them
+(`chatgpt.com`, `aistudio.google.com`, `chat.deepseek.com`). Replies land in
+`~/claude-bridge/outbox/REPLY-20261012-00*.md`.
+
+**THE FINDING THAT MATTERS MOST IS ABOUT THE INSTRUMENT, NOT THE PAGES.** Every reviewer reported
+the tag strings as unreadable English: "owner and operatinginstallation", "installationowner and
+operatingparts and breakdown". The page actually renders
+`<span class="badge badge-tint">owner and operating</span><span class="badge badge-tint">installation</span>`.
+`copy-extract.py` strips the tags and joins the text with no separator, so four of the nine reviews
+spent a finding on a defect that does not exist. **Do not "fix" the badges.** The real fix is for the
+extractor to emit a separator between sibling badges, and it is not done.
+
+**Every system page is a data table with one line of prose.** Its lede is generated from `SHORT[slug]`
+and `BLURB[slug]` in `scripts/build-manuals-pages.py`, so the only reviewable prose on the whole page
+is that sentence plus the per-row `key` and `covers` fields in `_data/manuals.json`. That is why this
+batch is thin: there is very little here that can be wrong.
+
+| page | finding | verdict |
+|---|---|---|
+| all nine | the lede's closing clause "each linked at the source" is a claim about our own linking process | **PENDING TY** - same shape as "Every row links the maker's own page or document" on the manuals index and "The maker documents behind every part, linked at the source" on the homepage, both already in the trust-claim cluster awaiting his ruling. Left unchanged with them |
+| `exterior-and-body` | the maker line reads "Aleko" while the link text reads "ALEKO product manuals" | **REAL, FIXED** - the record's `brand` and `host` now read ALEKO, the maker's own styling |
+| `chassis-and-drivetrain` | "Body Builder Layout Books and BEMMs" uses BEMMs with no expansion | **NOT APPLIED** - Ford's own page is where the expansion would be confirmed and it answers HTTP 403 to a fetch; recorded rather than guessed |
+| `chassis-and-drivetrain` | "keyed by chassis series (K1 to K4)" against "one operation and maintenance manual covering the K1, K2, K3 and K4 series" | **CONSIDERED, NOT A CONTRADICTION** - one line is how the maker's library is keyed, the other is what the document contains; they are compatible |
+| `chassis-and-drivetrain`, `exterior-and-body`, `sanitation-and-tanks` | "upfitter", "body builder", "manufacture era", "by hardware era" used without definition | **CONSIDERED, MILD** - maker trade vocabulary, and each row links the maker's own page where it is defined |
+| `sanitation-and-tanks` | "(page content loads via JavaScript)" narrates an implementation detail | **CONSIDERED, NOT APPLIED** - the sentence describes the MAKER's destination page, not our process, so it is not the "write about the RV" class, and it helps a reader who sees a blank list |
+| `exterior-and-body`, `sanitation-and-tanks` | the "N documents and libraries from N makers" count against other brand names the rows mention | **REFUTED** - the count is generated from the rows (`len({r["brand"] for r in rows})`) and is correct for them; the extra names sit inside a library's own description |
+
+### Batch 4 was NOT finished, and the reason is the fleet, not the pages
+
+Three reviews completed and are recorded above (`chassis-and-drivetrain`, `exterior-and-body`,
+`sanitation-and-tanks`). The rest did not:
+
+- `towing-and-running-gear` on deepseek - **no answer captured**. The reply file is a release notice,
+  not a review: `capture-ceiling ... No answer was captured in 45 attempts (265s in flight, last:
+  nothing captured: the answer had not started, our own tool result is still the newest thing in the
+  thread - re-queue this job)`.
+- `kitchen-and-appliances` on aistudio - the lane went to `stalled`, and the file it left behind is
+  the harness's capture of the lane's OWN tool-call markers (`{"type": "function_call_start",
+  "name": "read_text_file", ...}`), not a review. A file with the right name and real text in it,
+  and still not an answer.
+- `recalls`, `water-and-plumbing`, `power-and-electrical` - never sent.
+- `heating-and-cooling` on chatgpt - sent at 23:59 and still `sent` more than twelve minutes later,
+  with the lane's heartbeat frozen at the moment it sent.
+
+**A reply file is not evidence of a review. Read it.** The towing "reply" is exactly the shape the
+`claude-bridge` skill warns about: it has the right filename, it is not empty, and it says nothing
+about the page. Three of the nine jobs are still queued in `~/claude-bridge/queue/jobs/`
+(`20261012-0050-*`) for a re-queue with fresh ids.
+
+**Lane windows opened for this batch were left open** (`gemini.google.com`, `chatgpt.com`,
+`chat.qwen.ai`, `aistudio.google.com`, `chat.deepseek.com`); `bridge-up.sh close` refuses a lane that
+still has a job targeted at it, which is the case for chatgpt, aistudio and deepseek.
