@@ -61,6 +61,14 @@ identification gap on `guides/rv-roof-leak-repair.html` (SAFETY-ISSUES.md sectio
 - **Verification re-earned**: `verify-content.py --verify` with a note recording exactly what
   changed and that the gap is closed. check-quotes.py: 13 quotes against 4 sources, every quote
   found in a cited source, 0 not found. Search index unaffected (title/description unchanged).
+- **Independent pass attempted twice, both failed at the harness level (recorded OWED).** Two
+  fresh-context reviewer dispatches (18:16 and 18:18 PDT) returned no usable review: the first
+  subagent launched with an EMPTY prompt (51k tokens, 0 tool uses), the second with an unparsed
+  prompt that produced literal XML and 0 tool uses. Machine memory was fine (5.8 GiB free), so
+  this is the known intermittent dispatch instability, not swap pressure. Per doctrine (dispatch
+  once, retry once, then record as owing), the new subsection's independent pass is recorded as
+  OWED in the manifest note - the gap is CLOSED (source-adjudicated, check-quotes clean, ci.sh
+  green) but the new copy still wants that stronger-model pass when dispatch is healthy again.
 - CI: local `bash scripts/ci.sh` result below in the commit section; archive check; explicit-path
   commit; push. Machine healthy (5.8 GiB RAM free, 3.9 GiB swap free) - no memory constraints on
   this fire.

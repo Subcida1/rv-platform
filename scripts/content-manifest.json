@@ -672,7 +672,7 @@
   "guides/rv-roof-leak-repair.html": {
     "hash": "d5c8eb4b694e683f",
     "status": "verified",
-    "verified_by": "EPDM/TPO identification gap closed: new 'Which membrane is on your roof' subsection, grounded in Dicor EPDM/TPO Discovery Guide (black backing = EPDM; solid color or fleece backing = TPO; Ultra Sealant for non-fleece TPO) and Alpha Systems roofing FAQ (EPDM flat/smooth/chalky; TPO orange-peel texture; TPO is a plastic, not a rubber; industry moved away from rubber roofs in 2011). Both sources added to the page.",
+    "verified_by": "EPDM/TPO identification gap closed: new 'Which membrane is on your roof' subsection, grounded in Dicor EPDM/TPO Discovery Guide (black backing = EPDM; solid color or fleece backing = TPO; Ultra Sealant for non-fleece TPO) and Alpha Systems roofing FAQ (EPDM flat/smooth/chalky; TPO orange-peel texture; TPO is a plastic, not a rubber; industry moved away from rubber roofs in 2011). Both sources added to the page. OWED: the independent reviewer-subagent pass on the new EPDM/TPO subsection (2 fresh-context dispatch attempts failed at the harness level 2026-10-12 01:00 UTC; content source-adjudicated and check-quotes-clean, so the gap is closed but the new copy still wants that independent pass)",
     "verified_at": "2026-10-11",
     "sources": [],
     "spec": "_specs/rv-roof-leak-repair.md",
