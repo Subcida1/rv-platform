@@ -173,6 +173,39 @@ Counts verified: 22+23+18+16+14+25+16+14+9 = 157, matching "157 parts shown".
   `<span class="verified">`, a styled pill with a check glyph (`.verified::before{content:"\2713"}`),
   sitting beside the "Claim your listing" heading. Not a broken CTA.
 
+## Neo's homepage deep-dive, second rotation — verified 2026-10-12 (6 pages, 10 findings)
+
+**One real defect. Nine refuted, and seven of those are repeats of classes already checked.** Neo's
+own note this round says his outlink-index mapping is unreliable for href checks and asks for a
+direct href audit — that is the right instinct, and it is the artifact behind most of these.
+
+- **#1 "literal 'Something is broken' still renders on the homepage" — REFUTED, third time.** It is
+  `<div class="sec-eyebrow">Something is broken</div>`, a deliberate section eyebrow above
+  "RV troubleshooting guides that start with your symptom". One of five on the page.
+- **#2 "'Can injure you**' concatenation, site-wide template bug" — REFUTED, fourth time.** The
+  markup is `<span class="flag-h">Can injure you</span><b>...</b>` and `.flag-h` is `display:block`
+  with an 8px bottom margin. The `**` is the extractor turning `<b>` into markdown.
+- **#3 "rv-black-tank renders NO H1" — REFUTED.** The page's first heading is
+  `<h1>RV black tank: how to dump it, and how to treat it</h1>`.
+- **#4 "the two-tanks bullet is garbled" — REAL, FIXED.** The second bullet was a bold run-on
+  carrying two separate points, followed by a sentence restating the first bullet. The bold is now a
+  short lead-in matching the other two bullets, the gray-tank point is kept, and the duplicate is cut.
+- **#5 "orphaned 'Original diagram, OriginRV.' caption with no diagram" — REFUTED, second time.**
+  The caption sits inside a `<figure>` immediately after an inline `<svg>` that draws the test light
+  bridging the fuse holder. The diagram is in the DOM; a text extractor does not see inline SVG.
+- **#6 "'That RV Guy Craig' shows a Texas area code" — REFUTED; the directory matches its source.**
+  Fetched the business's own site: *"Call or Text 903-681-4718"*. The listing records what the
+  business publishes, which is the directory's rule. A mobile tech keeping a number from elsewhere is
+  exactly why the area-code check is a worklist and not a defect list (see the directory round).
+- **#7 "the H2 spacing jam on /directory/newyork" — REFUTED, third time.** `.dir-title-sub` is
+  `display:block`; measured 11px gap on the rendered page.
+- **#8 "the FAQ names a filter that does not exist" — REFUTED, second time.** The finder carries three
+  visible route buttons, including "My RV will not move".
+- **#9 "a stray 'Free forever' text line" — REFUTED, third time.** A styled `.verified` pill.
+- **#10 "a long bare phone-number dump at the page bottom" — REFUTED.** `grep -c 'Phone:'` returns
+  **0** on the NY page and on every directory page, on disk and live. The bottom of the page is the
+  FAQ block.
+
 ## Neo's hubs deep-dive, second rotation — verified 2026-10-12 (5 hubs, 8 findings, ALL refuted)
 
 **This round produced no defects. Items 1-6 and 8 are all the same extractor artifacts, and this is

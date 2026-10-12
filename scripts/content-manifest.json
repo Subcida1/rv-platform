@@ -473,10 +473,10 @@
     "claims": []
   },
   "guides/rv-black-tank.html": {
-    "hash": "fc24b4e9c4b30b1f",
+    "hash": "03eec475191c14ca",
     "status": "verified",
-    "verified_by": "INDEPENDENT second pass 2026-10-11 by a fresh-context reviewer-subagent (strictly stronger model, distinct lane) - the pass the same-session verification OWED. Reviewer fetched all five cited sources (Jayco Towable PDF, Thetford enzyme page, SANICON PDF, Walex guide, Embark page) and verified every quote, figure and flag. 4 findings, all applied: (1) flag-injury added at the winter section for automotive/windshield-washer antifreeze being poison (ethylene glycol/methanol, verified in Jayco 8160, 'toxic and potentially fatal if ingested'); (2) flag-injury added at the macerator step (hose under pressure while the pump runs, Jayco warns misuse can injure); (3) Sources attribution fixed - the quart-or-two / two-gallon bowl-prep figures belong to the Embark document, not the Jayco Towable manual, so the Jayco source entry now names only the 5-gallon first fill and 2-inch bowl depth and the Embark entry takes the bowl-prep quantities (verified in Embark: 'Release one to two quarts...allow at least two gallons'); (4) compressor blow-out step gained the eye-protection/face-clear guardrail matching the winterize page's treatment of the same hazard. Plus one sentence-start capitalization fix caught in the apply pass ('traveling' -> 'Traveling'). No fact or number changed by the pass - the figures were already correct and properly sourced after the earlier fix; the review confirmed quotation fidelity clean across all five sources.",
-    "verified_at": "2026-10-11",
+    "verified_by": "2026-10-12 Neo homepage-rotation review: the second bullet under 'The two tanks, and what each one holds' had a bold run-on carrying two separate points, followed by a sentence restating the first bullet ('The gray tank holds soapy water and food particles. The black tank holds sewage and toilet paper.'). The bold is now a short lead-in matching the other two bullets, the gray-tank point is kept as the explanation, and the restated duplicate is cut. No figure changed and no claim altered.",
+    "verified_at": "2026-10-12",
     "sources": [],
     "spec": null,
     "spec_waived": true,
