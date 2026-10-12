@@ -173,6 +173,38 @@ Counts verified: 22+23+18+16+14+25+16+14+9 = 157, matching "157 parts shown".
   `<span class="verified">`, a styled pill with a check glyph (`.verified::before{content:"\2713"}`),
   sitting beside the "Claim your listing" heading. Not a broken CTA.
 
+## Neo's about-section deep-dive — verified 2026-10-12 (/about, /contact, /privacy: 7 findings)
+
+- **#1 "/contact shows no contact mechanism" — REFUTED.** The raw HTML carries a static
+  `mailto:contact@originrv.com` link with the comment *"the static address is the no-JavaScript
+  fallback"*, and the rendered text reads "Replies fast, no bot: contact@originrv.com". A JS path
+  rewrites it from `config.js`, but the static one is what ships. (The two `<form>` elements on the
+  page are the nav and mobile-menu search forms, not contact forms.)
+- **#2 "/privacy references a claim form I cannot find" — REFUTED.** The claim form is on **all 51
+  directory pages** (`id="claim"`), reachable from every state page and from the directory nav.
+- **#3 "/about's mistake link resolved to /manuals/brands" — REFUTED; a fetch quirk.** The href is
+  `contact` (relative), which `<base href="/">` resolves to `/contact`. Nothing on the page points at
+  `/manuals/brands`.
+- **#4 "/contact is the thinnest page on the site" — CONFIRMED.** 112 words / 617 characters of body
+  text. Recorded as a content item, not fixed: new copy is exactly what the W19 calibration exists to
+  settle.
+- **#5 "/privacy claims our own code sets no cookies — verify" — VERIFIED TRUE.** No
+  `document.cookie`, `localStorage`, `sessionStorage` or `indexedDB` anywhere in `assets/js/`. The
+  page is also honest about the exception: "OriginRV loads Google Analytics, which sets cookies".
+- **#6 "cross-link silo" — CONFIRMED, FIXED.** `/about` linked only to `/contact`; `/privacy` only to
+  home, contact and the Google policy. The about page names three sections and linked none of them,
+  which is the site's own interlinking doctrine unapplied. Added three in-content links with
+  `insert-link.py` (which guards against the two failure modes that built it: an anchor landing in
+  JSON-LD or a meta description, and a silent re-baseline):
+  `Every guide` -> `/guides/`, `Every tool` -> `/tools/`, `The directory` -> `/directory/`.
+  **The tool's first output wrote `guides/index.html`, which the extensionless-URL rule forbids** —
+  `clean-urls.py --check` gates it in CI — so the hrefs were corrected to the canonical `/guides/`
+  form before committing. `/privacy` has no natural anchor (it discusses no content section) and was
+  left alone.
+- **#7 "/about title carries no topical keywords" — RECORDED.** `about.html`, `contact.html` and
+  `privacy.html` have **no declared keyword target** in `_data/targets.json`, so there is no
+  convention to align them with and no gate covering them. An editorial call.
+
 **Two malformed phone strings fixed in the data** (the only two that were not a telephone at all):
 `newjersey.json` `"(973) 729-3938- Call or Text"` -> `"(973) 729-3938"` (the note was glued to the
 number with a hyphen and no space), and `newyork.json` `"(845)834-2118 (8458342118)"` -> `"(845)
