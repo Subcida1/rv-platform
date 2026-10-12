@@ -800,11 +800,14 @@
     "claims": "31f22570b89ad0eb"
   },
   "guides/rv-water-heater-anode-rod.html": {
-    "hash": "152d353e9b413109",
-    "status": "unverified",
-    "verified_by": null,
-    "verified_at": null,
-    "sources": []
+    "hash": "a53a7da0117123c9",
+    "status": "verified",
+    "verified_by": "Independent bridge review (qwen lane, a different lane from the drafter), 2026-10-11. Scope and limits stated plainly: the lane read a single-read excerpt covering the material claim, the drain-plug section and the FULL sources list, and it has no network access, so its sourcing check was against the page's own source summaries, not the documents themselves. THREE findings. (1) 'cathodic action' called unsourced: REJECTED after fetching Dometic's XT manual, which says verbatim 'Replacing the Dometic drain plug with an Anode Rod will damage the coupling with cathodic action and product damage will result' - the page was right and the SOURCE BULLET was thinner than the document, so the bullet now quotes the maker's wording and this false positive cannot recur. (2) House voice: 'leaves the roughly two quarts' - wrong definite article at first mention, cut to 'leaves roughly two quarts'; the second instance deliberately keeps 'the', mirroring the manual's own 'The approximately (2) quarts of water that remains'. (3) Not applied: the lane noted a reader whose data plate is missing cannot get the model number for the parts lookup; the page already covers identifying the heater without the plate, and adding a parts-lookup route was judged padding rather than a gap. Material claim consistency came back clean with both halves quoted. No fact, part number, interval or source changed.",
+    "verified_at": "2026-10-11",
+    "sources": [],
+    "spec": null,
+    "spec_waived": true,
+    "claims": []
   },
   "guides/rv-water-heater-not-heating.html": {
     "hash": "a331a4b43e312728",
