@@ -117,7 +117,7 @@ window.RV_LISTINGS_NY = [
    "middletown"
   ],  "region": "Putnam, Westchester, Dutchess counties and surrounding areas",  "spec": null,  "reg": "hudson-valley-ny"
  },
- {  "n": "Hudson Automotive Repair & Service",  "c": "Highland and the Hudson Valley, NY",  "p": "(845)834-2118 (8458342118)",  "u": "https://hudson-automotive.com/",  "t": "both",  "e": true,  "r": true,  "d": "Hudson Automotive Repair & Service is an RV, Airstream and conversion van shop at 3441 US-9W in Highland, New York, that also runs a 24/7 mobile service. It offers mechanical and electrical repairs, SealTech leak testing, four-wheel alignment, road-force tire balancing, bodywork and paint, and frame and subfloor structural repair. It advertises structural repair service throughout Westchester.",  "g": [
+ {  "n": "Hudson Automotive Repair & Service",  "c": "Highland and the Hudson Valley, NY",  "p": "(845) 834-2118",  "u": "https://hudson-automotive.com/",  "t": "both",  "e": true,  "r": true,  "d": "Hudson Automotive Repair & Service is an RV, Airstream and conversion van shop at 3441 US-9W in Highland, New York, that also runs a 24/7 mobile service. It offers mechanical and electrical repairs, SealTech leak testing, four-wheel alignment, road-force tire balancing, bodywork and paint, and frame and subfloor structural repair. It advertises structural repair service throughout Westchester.",  "g": [
    "rv service center",
    "mobile tech",
    "emergency",

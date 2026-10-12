@@ -239,7 +239,10 @@ def schema_text(data, slug):
     for i, r in enumerate(rows, 1):
         biz = {"@type": "AutoRepair", "name": r["n"]}
         if r.get("p"):
-            biz["telephone"] = r["p"]
+            # The structured-data telephone is the same one shape the page shows. Two records
+            # carried a string that is not a telephone at all -- "(973) 729-3938- Call or Text"
+            # and the vanity "(844) 440-ROAM" -- and format_phone leaves both as sourced.
+            biz["telephone"] = format_phone(r["p"])
         if r.get("u"):
             biz["url"] = r["u"]
         town = re.split(r",| serving ", (r.get("c") or "").strip())[0].strip()
@@ -286,8 +289,33 @@ def jld(obj):
     return json.dumps(obj, separators=(",", ":")).replace("<", "\\u003c")
 
 
+def format_phone(p):
+    """One shape for every phone number: (NNN) NNN-NNNN.
+
+    THE SITE ALREADY ASKS FOR THIS SHAPE. The claim form's phone field carries
+    placeholder="(541) 555-0123", so this is the site's own convention applied to the data
+    rather than a new one invented here. Measured before the change: 29 distinct shapes
+    across 1,944 listings, the two largest being "NNN-NNN-NNNN" (965) and
+    "(NNN) NNN-NNNN" (831), with the rest spread over dots, spaces, spaced dashes, a
+    leading 1, a leading +1, and missing spaces.
+
+    ANYTHING THAT IS NOT A PLAIN US NUMBER IS LEFT EXACTLY AS SOURCED. A vanity number keeps
+    its letters ("(844) 440-ROAM") and a number carrying a note keeps the note, because
+    rewriting either would drop something the business published. Two records fall in that
+    group and both are recorded in _todo/HANDOFF-TOOL-SWEEP.md rather than silently changed.
+    """
+    if re.search(r"[A-Za-z]", p):
+        return p
+    digits = re.sub(r"\D", "", p)
+    if len(digits) == 11 and digits.startswith("1"):
+        digits = digits[1:]
+    if len(digits) != 10:
+        return p
+    return "(%s) %s-%s" % (digits[:3], digits[3:6], digits[6:])
+
+
 def tel_text(p):
-    """A phone number as displayed: non-breaking hyphens.
+    """A phone number as displayed: the site's one shape, in non-breaking characters.
 
     With real hyphens the validator fails these rows (tel-non-breaking, from
     html-validate's recommended set) and a number can break across two lines. The
@@ -295,7 +323,7 @@ def tel_text(p):
     validator's tel-non-breaking rule wants both, and a number split across two lines is
     the reason it exists.
     """
-    return esc(p).replace("-", "&#8209;").replace(" ", "&nbsp;")
+    return esc(format_phone(p)).replace("-", "&#8209;").replace(" ", "&nbsp;")
 
 
 def regions_text(data, slug):

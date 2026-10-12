@@ -128,6 +128,57 @@ now carry `https://originrv.com/tools/rv-recall-lookup`. `audit-manuals.py` exit
 
 Counts verified: 22+23+18+16+14+25+16+14+9 = 157, matching "157 parts shown".
 
+## Neo's directory deep-dive — verified 2026-10-12 (11 findings: 1 fixed, 7 refuted, 3 recorded)
+
+- **#1 "hub state-card hrefs are doubled /directory/directory/<state>, confirmed 404 again today" —
+  REFUTED, for the fourth time.** The live hub carries **zero** doubled hrefs; the cards resolve to
+  `/directory/<state>`. The doubled URL 404s because nothing links to it. `<base href="/">` again.
+- **#2 "9 states orphaned from the hub; confirm the sitemap covers them" — REFUTED, and the sitemap
+  does cover them.** All **50** state pages are in `sitemap.xml` (0 missing), and the hub renders all
+  50 cards across its 7 regions (Pacific 3, West 8, Southwest 4, Midwest 9, Southeast 13,
+  Northeast 11, Alaska and Hawaii 2).
+- **#3 region taxonomy mismatch — INTENTIONAL.** VisitTheUSA's 6-region scheme, adopted verbatim on
+  Ty's instruction; see [[originrv-regions.md]].
+- **#4 "intro heading renders as 'RV REPAIR DIRECTORYMobile technicians…' with no space" — REFUTED.**
+  `.dir-title-sub` is `display:block`; measured on the rendered page, the h1 text ends at y=289 and
+  the sub starts at y=300 — an 11px gap, same left edge. The extractor strips the tags.
+- **#5 "the FAQ says 'Choose my RV will not move above' but there is no such filter" — REFUTED.**
+  The finder carries three route buttons, all visible: "My RV will not move", "Someone come to me",
+  "I can drive it in". The FAQ points at a real control.
+- **#6 phone formats inconsistent — REAL, FIXED.** 29 distinct shapes across 1,944 listings, the two
+  largest being `NNN-NNN-NNNN` (965) and `(NNN) NNN-NNNN` (831), plus dots, spaces, spaced dashes, a
+  leading 1, a leading +1 and missing spaces. **The site already declares the shape**: the claim
+  form's phone field carries `placeholder="(541) 555-0123"`. Added `format_phone()` to
+  `build-listings.py`, applied to the display and to the JSON-LD `telephone` (which had been
+  carrying raw strings). Result: **1,984 in `(NNN) NNN-NNNN`, 1 left as sourced** (the vanity
+  `(844) 440-ROAM`). Verified phones-only: stripping every phone from the old and new Oregon page
+  makes them identical.
+- **#7 "two Oregon listings render with no website link" — CONFIRMED as data, not a render bug.**
+  `Bandon Mobile RV Repair` and `R&B RV Service and Supply` carry no `u` field and no `evidence`
+  block. The generator renders the name without a link, which is the correct behaviour. Whether they
+  should be listed at all is a data question for the next sourcing pass.
+- **#8 "duplicate entries render twice" — INTENTIONAL.** 13 listings site-wide carry a LIST of
+  regions (`reg`) and render once per region they cover, so a reader browsing either region finds
+  them. Kings Mobile RV Service is `['north-coast','south-coast']`; Happy Mobile RV Repair is
+  `['central','southern']`.
+- **#9 "suspicious area codes" — CONFIRMED as a signal, not proof.** Nine listings have an area code
+  that does not match their stated city (Jake The RV Guy Seattle 407, Adventure Technicians Issaquah
+  207, Roving RV Repair Olympia 209, Rob the RV Guy Issaquah 251, AAA RV Tech Portland 305, Urgent
+  Care RV Repair Newport 831, Bald Bros Bend 317, Roving Rooster Amarillo 337, Repair Vigorously
+  Sherman 580). Mobile technicians legitimately keep a number from wherever they moved from, so this
+  is a worklist for a data check, not a defect list.
+- **#10 "identical boilerplate intro on every state page" — CONFIRMED.** All 50 carry the same two
+  paragraphs. Recorded as an SEO/content item.
+- **#11 "'Free forever' renders as a stray text line after the claim block" — REFUTED.** It is a
+  `<span class="verified">`, a styled pill with a check glyph (`.verified::before{content:"\2713"}`),
+  sitting beside the "Claim your listing" heading. Not a broken CTA.
+
+**Two malformed phone strings fixed in the data** (the only two that were not a telephone at all):
+`newjersey.json` `"(973) 729-3938- Call or Text"` -> `"(973) 729-3938"` (the note was glued to the
+number with a hyphen and no space), and `newyork.json` `"(845)834-2118 (8458342118)"` -> `"(845)
+834-2118"` (the same number twice). **The `evidence.phone_quote` fields were left untouched** — those
+are verbatim quotes from the businesses' own sites and must keep the source's spelling.
+
 **Worth knowing: `audit-manuals.py` is a manual instrument, not a CI gate.** It catches a class the
 gate does not — schema, banned hosts and storable-URL shape across all 154 manual rows. Run it after
 any `_data/manuals.json` edit. It also prints the reminder that its HTTP results are the machine's

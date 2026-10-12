@@ -88,7 +88,7 @@ window.RV_LISTINGS_NJ = [
    "body shop"
   ],  "base": "newton",  "areas": [],  "region": "Newton, NJ",  "spec": null,  "reg": "north-jersey"
  },
- {  "n": "Hayden's Service Center",  "c": "Sparta and Sussex County, NJ",  "p": "(973) 729-3938- Call or Text",  "u": "https://www.haydensservicecenter.com/motorhome-services",  "t": "center",  "e": false,  "r": true,  "d": "Hayden's Service Center is a motorhome and RV repair shop on Demarest Road in Sparta, New Jersey. It does engine diagnostics and engine repair and rebuild for gas and diesel motorhomes, transmission repair, complete chassis inspection and repair, suspension and steering repair, brake service, drivetrain and axle repair and cooling system service. It also performs oil changes, tire rotations, radiator flushes and pre-trip checks.",  "g": [
+ {  "n": "Hayden's Service Center",  "c": "Sparta and Sussex County, NJ",  "p": "(973) 729-3938",  "u": "https://www.haydensservicecenter.com/motorhome-services",  "t": "center",  "e": false,  "r": true,  "d": "Hayden's Service Center is a motorhome and RV repair shop on Demarest Road in Sparta, New Jersey. It does engine diagnostics and engine repair and rebuild for gas and diesel motorhomes, transmission repair, complete chassis inspection and repair, suspension and steering repair, brake service, drivetrain and axle repair and cooling system service. It also performs oil changes, tire rotations, radiator flushes and pre-trip checks.",  "g": [
    "rv service center",
    "chassis",
    "engine"
