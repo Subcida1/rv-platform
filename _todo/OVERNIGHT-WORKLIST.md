@@ -1371,6 +1371,18 @@ recording a verification nobody performed, which is the one thing this manifest 
 reviewed it, and run `verify-content.py --verify <page> --by "<lane and date>"` for the ones that
 genuinely had an independent pass. The rest need a pass, not a note.
 
+**WHERE THE ANSWER IS, AND WHERE IT IS NOT (checked 2026-10-12 from a Cloud sandbox).** The repo
+records that batch 3 ran *"jobs across grok / chatgpt / qwen"* (`_todo/TOOL-PAGE-FINDINGS.md`, line
+4) but **not which lane reviewed which page** — the findings table records the finding and the
+verdict, never the reviewer. The per-page lane is only in the bridge job and reply files, which live
+on **the-grid** (`claude-bridge/`), not in a Cloud sandbox. So this item cannot be closed from a
+sandbox: it needs a session running on the-grid that can read the outbox, or it needs the lanes to
+be recorded at dispatch time from here on.
+
+**The forward fix is cheaper than the archaeology:** record the reviewing lane in the manifest note
+when a batch is applied (`--by "<lane>, <date>, <what was applied>"`), so the next batch does not
+have to be reconstructed from job files.
+
 ### W19. Encode Ty's taste as checks - the calibration plan (Ty, 2026-10-12 via Neo)
 
 Ty's plan, verbatim: "don't have Brandt read the whole site. Plan: build more tools first, but the new
