@@ -561,3 +561,47 @@ page rebuilt. The rest of the findings above are NOT applied and are the next pa
   either a named source or a cut, and that is a sourcing pass rather than a wording one.
 - "The item most often named as a clog cause is the disposable wipe sold as flushable." (10) - a
   ranking nothing counts. Mild; left for the sourcing pass.
+
+## Late replies (parts 9 and 14, landed after the first assembly)
+
+### REPLY-20261012-1130-RV-manuals-start-here-part9of20-REVIEW1.md
+
+JOB ID: 20261012-1130-RV-manuals-start-here-part9of20-REVIEW1
+
+Part 1 - CLAIMS ABOUT OUR OWN TRUSTWORTHINESS
+No issues found.
+
+Part 2 - CLAIMS THAT CANNOT BE CHECKED FROM THE PAGE
+- "Every RV has three tanks." This is an absolute completeness claim that is false for some RVs (e.g., those with dual fresh tanks or combined waste tanks).
+- "Testing has found that MIMO antennas are the optimal signal-enhancing choice for data more than 80 to 90 percent of the time." This violates the house rule "never name a source we cannot point to," as "Testing" is not a specific, verifiable source.
+
+Part 3 - A SENTENCE THAT CONTRADICTS ANOTHER SENTENCE
+- "Lower the stabilizers last, to contact only." contradicts "install the wheel chocks first and the wheel stabilizers second." The page gives conflicting instructions on when stabilizers should be deployed in the setup sequence.
+
+Part 4 - WHAT A FIRST-TIME VISITOR WOULD NOT UNDERSTAND
+No issues found.
+
+Part 5 - DOES THIS READ AS NATIVE ENGLISH
+- "Jacks lift. stabilizers stop the rocking." A native writer would capitalize the first word of the second sentence: "Jacks lift. Stabilizers stop the rocking."
+
+TALLY: 4 findings - 0 trust-claim, 2 unchecked-claim, 1 contradiction, 0 clarity, 1 house voice. Reads made: 1.
+### REPLY-20261012-1145-RV-manuals-start-here-part14of20-REVIEW1.md
+
+JOB ID: 20261012-1145-RV-manuals-start-here-part14of20-REVIEW1
+
+Part 1 - CLAIMS ABOUT OUR OWN TRUSTWORTHINESS
+No issues found.
+
+Part 2 - CLAIMS THAT CANNOT BE CHECKED FROM THE PAGE
+No issues found.
+
+Part 3 - A SENTENCE THAT CONTRADICTS ANOTHER SENTENCE
+- "Load range and load index are the two numbers that describe how much a tire can carry." contradicts "Load range is a letter, such as Load Range E or G."
+
+Part 4 - WHAT A FIRST-TIME VISITOR WOULD NOT UNDERSTAND
+- "vehicles with a GVWR over 10,000 pounds" and "even when the G.A.W.R. has not been exceeded." A first-time visitor would not understand the acronyms "GVWR" and "G.A.W.R." as they are used here without being defined or spelled out.
+
+Part 5 - DOES THIS READ AS NATIVE ENGLISH
+- "A 10 F rise in outside temperature raises pressure by about 2%, and a 10 F fall lowers it by about the same." A native writer would include the degree symbol, writing "10°F" or "10 degrees F".
+
+TALLY: 3 findings - 0 trust-claim, 0 unchecked-claim, 1 contradiction, 1 clarity, 1 house voice. Reads made: 1.

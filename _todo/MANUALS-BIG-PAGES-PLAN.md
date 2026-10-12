@@ -63,3 +63,20 @@ attributes to the page against the page itself. Run it on every reply before act
 earlier passes it found nine quotations that appear nowhere in the file, and a miss is a question to
 answer rather than an accusation (a lane also quotes the SOURCE documents, which correctly do not
 appear on the page).
+
+## start-here — outcome (2026-10-12, same day)
+
+17 slices dispatched, 15 reviewed. aistudio.google.com hit its daily quota part way through and its
+six jobs were re-routed to deepseek and qwen; three of the 17 never produced a review. **87 findings
+across the 15 slices, 14 of them sentence-against-sentence contradictions** — this page had never had
+a sentence-level review and it shows.
+
+The raw replies and the tally are in `_todo/START-HERE-REVIEWS-2026-10-12.md`, together with the eight
+fixes applied the same day and, more importantly, **the findings left unapplied with the reason each
+was left**. The largest unapplied group is the unnamed-authority cluster: five more sentences name a
+source the page cannot point to ("Ford gives the targets", "Airstream's guidance", "ENERGY STAR's
+advice", "Other makers describe the same requirement", "the usual threshold" for 10 square feet of
+mold). Those need a sourcing pass, not a wording one, and they are the reason to come back to this
+page rather than call it done.
+
+`manuals/brands` is still not dispatched.

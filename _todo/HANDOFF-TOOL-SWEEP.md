@@ -10,7 +10,7 @@ Read this file, then `_todo/TOOL-PAGE-FINDINGS.md`, then `_todo/VOICE-AUDIT-2.md
 | 1. top-level | 6 | DONE — one real defect (the contact page's JS-only email), rest were reviewer-tool artifacts |
 | 2. hubs | 4 hubs, 9 slices | DONE — fixed the parts lede's ambiguous 62/83/74 and a typo |
 | 3. tool pages | 14, 16 slices | **DONE** — 8 more real findings fixed in `d497e5e5`; 6 refuted by reading the artefact, 2 left, 1 deferred. Full table in `TOOL-PAGE-FINDINGS.md` under "Batch 3 closed" |
-| 4. manuals pages | 12 | **10 of 12 done** — `manuals/index` fixed (`9f7b86b1`); 6 of the 9 system pages reviewed and 5 real defects fixed across them (`5c681b72`, `1e7ac65d`), full verdicts in `VOICE-AUDIT-2.md`. Three system-page reviews produced nothing usable. `start-here` (179k chars of copy) and `brands` (104k) still need a slice plan |
+| 4. manuals pages | 12 | **11 of 12 done** — `manuals/index` fixed (`9f7b86b1`); the nine system pages reviewed with 5 defects fixed (`5c681b72`, `1e7ac65d`), verdicts in `VOICE-AUDIT-2.md`; `start-here` sliced into 20 and 15 reviewed (`82cb0ae8`), 87 findings with 8 applied and the rest recorded in `START-HERE-REVIEWS-2026-10-12.md`. `manuals/brands` (104k) is the only page left; the slice plan for both is `MANUALS-BIG-PAGES-PLAN.md` |
 | 5. directory pages | 51 | NOT STARTED — data-driven, lowest marginal value, do last |
 
 Also open: ~20 OWED sub-items recorded in `scripts/content-manifest.json` (`verified_by` field), e.g.
