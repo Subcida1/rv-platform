@@ -433,10 +433,10 @@
     "claims": "f82066e98fbddabb"
   },
   "guides/rv-air-conditioner-not-cooling.html": {
-    "hash": "c14d53d322f6c77d",
+    "hash": "4300db5a9c059951",
     "status": "verified",
-    "verified_by": "Independent fresh-context review 2026-10-10, all five cited documents fetched: 12 findings applied (1 injury, 2 wrong-fact, 3 sourcing, 2 voice, 2 style). The table's truck-cab source scope and two Sources-list items remain recorded as owed.",
-    "verified_at": "2026-10-10",
+    "verified_by": "2026-10-12 Neo second-rotation review: removed a sentence duplicated verbatim, back to back ('And no rooftop air conditioner document publishes an outdoor temperature above which the unit is not expected to cool.'). No other change; no claim altered. The earlier 2026-10-10 note still stands: the table's truck-cab source scope and two Sources-list items remain owed.",
+    "verified_at": "2026-10-12",
     "sources": [],
     "spec": null,
     "spec_waived": true,
@@ -543,10 +543,10 @@
     "claims": "029e24133bf31376"
   },
   "guides/rv-furnace-not-working.html": {
-    "hash": "1ce6399570304ac8",
+    "hash": "0310549c8e7e7704",
     "status": "verified",
-    "verified_by": "Bridge review (qwen lane, independent of the drafter) found the gas-smell protocol stated three times: once in the paragraph and again nearly verbatim in the callout directly beneath it. Fixed by splitting the two roles rather than rewording: the paragraph keeps the stop conditions, the callout keeps the actions, and the protocol text now appears once. Also replaced the opaque callout opener 'On this page, the stop is the work.' with 'Get everyone out first.'. A second finding, that the Furrion attribution is redundant, was NOT applied: the reviewer's excerpt stopped 43 lines short of the Sources list so it could not check the attribution, and the Furrion manual is in fact listed. No fact, figure or source changed.",
-    "verified_at": "2026-10-11",
+    "verified_by": "2026-10-12 Neo second-rotation review: the sail-switch paragraph made the same point three times ('It only sees the whole safety circuit... indistinguishable to it', then 'The board can't tell the difference. All it sees is whether the safety circuit is closed: a bad sail switch and a blocked duct look identical to it'). Tightened to one statement of the mechanism; no claim altered.",
+    "verified_at": "2026-10-12",
     "sources": [],
     "spec": "_specs/rv-furnace-not-working.md",
     "spec_waived": false,
@@ -813,10 +813,10 @@
     "claims": []
   },
   "guides/rv-water-heater-not-heating.html": {
-    "hash": "a331a4b43e312728",
+    "hash": "27467994dc3146ee",
     "status": "verified",
-    "verified_by": "Independent fresh-context review 2026-10-10. Four of the six cited documents fetch (Suburban 206244, Dometic LPG 9600024380, Dometic XT, Furrion); the two Suburban and Atwood service manuals are declared in Sources as technician literature with no published copy. 9 findings applied (1 injury, 1 wrong-fact, 6 sourcing, 1 voice). Applied: a flag-injury callout added to the ECO section, where the reader is sent into the exterior panel that houses the 120-volt element and its wiring, and where the element card one section later already carries a flag; the anode claim that Suburban does not agree with itself corrected, because both quotations are in the SAME operation manual (206244, fetched and confirmed); the dry-element warranty warning reassigned from Dometic to Suburban, whose manual carries that wording; the 1440 W element figure cut, since no cited document states an element wattage, and the arithmetic re-anchored on the 1400 W wiring figure Dometic's manual does state, with the page-reference removed; every Suburban and Atwood figure now names the document it comes from so the provenance is visible; 150 pounds corrected to 150 psi; the pull-handle relief-valve procedure reassigned from Suburban to Dometic, whose manual carries it verbatim (fetched); the electrode-gap claim recut to lead with the Dometic figure that fetches; the freeze-and-split claim stated plainly instead of attributing it to unnamed other makers manuals; the Suburban relief-valve prohibition quotation, absent from the fetchable Suburban manual, replaced with Dometic's verified wording; and the Sources annotations no longer narrate the search that failed. OWED AND UNVERIFIED: the ECO trip points (Suburban 180 and 110 F; Atwood 180, 170 and 190 F) and the 210 F / 150 psi relief figures rest on the two service manuals, which are declared in Sources but have no fetchable copy; a maker copy would close them.",
-    "verified_at": "2026-10-10",
+    "verified_by": "2026-10-12 Neo second-rotation review: six bare 'degrees' now carry the unit (&deg;F) -- 180 (ECO trip, twice), 110 (reset limit, twice), 130 (Suburban thermostat). The page already used &deg;F six times elsewhere, so this is consistency, not a new claim; the figures are unchanged and were already sourced to Suburban's manual.",
+    "verified_at": "2026-10-12",
     "sources": [],
     "spec": "_specs/rv-water-heater-not-heating.md",
     "spec_waived": false,

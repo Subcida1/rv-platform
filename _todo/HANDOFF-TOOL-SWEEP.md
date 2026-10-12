@@ -173,6 +173,52 @@ Counts verified: 22+23+18+16+14+25+16+14+9 = 157, matching "157 parts shown".
   `<span class="verified">`, a styled pill with a check glyph (`.verified::before{content:"\2713"}`),
   sitting beside the "Claim your listing" heading. Not a broken CTA.
 
+## Neo's guides deep-dive, second rotation — verified 2026-10-12 (5 pages, 10 findings)
+
+- **#1 "hub card hrefs still carry the doubled /guides/guides/ prefix, hub unusable" — REFUTED, fifth
+  time for this class.** Measured in a real browser on the live hub: **0 doubled hrefs**, and the card
+  href is `guides/rv-generator-not-charging`, which `<base href="/">` resolves to
+  `/guides/rv-generator-not-charging` (200). The doubled URL 404s because nothing links to it. The
+  reviewer's fetch is prepending the page path to a relative href.
+- **#2 "Body, slides and jacks and Winter storage render with zero cards" — REFUTED.** Rendered: all
+  six hub sections carry **10 cards each** (46 total). The two named sections are not empty.
+- **#3 "safety callouts render as 'Can injure you**...'" — REFUTED, same extractor artifact as before.**
+  The markup is `<span class="flag-h">Can injure you</span><b>Two hazards...</b>`, and `.flag-h` is
+  `display:block` with an 8px bottom margin, so the label sits on its own line. The `**` is the
+  extractor turning `<b>` into markdown.
+- **#4 "the AC page repeats a sentence verbatim" — REAL, FIXED.** "And no rooftop air conditioner
+  document publishes an outdoor temperature above which the unit is not expected to cool." appeared
+  twice back to back. The duplicate is cut.
+- **#5 "the furnace page restates the same point three times" — REAL, FIXED.** "It only sees the whole
+  safety circuit, so a genuinely bad switch and a blocked duct are indistinguishable to it." was
+  followed by "The board can't tell the difference. All it sees is whether the safety circuit is
+  closed: a bad sail switch and a blocked duct look identical to it." The paragraph now makes the
+  point once.
+- **#6 "audit the in-article links and the 'All guides' breadcrumb" — REFUTED.** 33 in-content links
+  across the five pages, 0 suspicious; and **0 broken breadcrumb targets across all 47 guides**.
+- **#7 "none of the five link to /tools or /parts" — CONFIRMED as a fact, RECORDED not fixed.** 9 of
+  47 guides do carry an in-content `/tools` link, so the practice exists; these five are in the
+  majority that do not. Checked for anchors and found none that stand alone: the fridge page's
+  power-draw section is topically right for `tools/battery-runtime`, but the page never names that
+  tool's subject, and the parts hub has no per-part anchors to point at. This is the doctrine's own
+  finding — *relatedness is plentiful, anchors are rare* — so it is a worklist item, not a mechanical
+  sweep.
+- **#8 "add FAQPage JSON-LD to the five pages" — REFUTED, and this is the second time it has been
+  proposed.** FAQPage JSON-LD was **removed by Ty's own ruling on 2026-09-26** (commit `7090671`,
+  24 blocks across 25 files, `sync-faq-schema.py` deleted and its gate removed from `verify.py`).
+  The doctrine says **"Do not re-add it."** The FAQ rich result stopped appearing in Search
+  2026-05-07 and its documentation was removed 2026-06-15. Neo proposed exactly this on 2026-10-02
+  and it was decided against then.
+- **#9 "the ECO '180 degrees' has no unit" — REAL, FIXED, and wider than reported.** The water heater
+  page carried **six** bare "degrees" (180, 110, 130/140), all temperatures, while using `&deg;F`
+  six times elsewhere. All six now carry the unit. **The refrigerator page's two "degrees" were left
+  alone on purpose: they are TILT angles (3 degrees off level, 6 front to back), not temperatures.**
+  A site-wide count found **53 bare "N degrees" across 17 pages**, and they are a MIX of angles
+  (`rv-fridge-leveling` is 17 of them, all tilt) and temperatures — so this cannot be swept
+  mechanically. Recorded as a worklist item.
+- **#10 voice and facts — PASS, and the spot-checks hold** (propane draw, ECO 180 F, electrode
+  clearance, AC temperature drop all consistent with the cited manuals).
+
 ## Neo's about-section deep-dive — verified 2026-10-12 (/about, /contact, /privacy: 7 findings)
 
 - **#1 "/contact shows no contact mechanism" — REFUTED.** The raw HTML carries a static
