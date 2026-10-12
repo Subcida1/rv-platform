@@ -1346,6 +1346,37 @@ it in the queue rather than guessing.
 Run it page type by page type (hubs, guides, tools, manuals, directory, parts), fix as you go, and
 commit in batches. Tick this item when the sweep is clean or every remaining finding is recorded.
 
+### W21. The OWED inventory, counted properly (2026-10-12, Cloud)
+
+**Correction first: "the manifest carries zero OWED markers" was WRONG, and I repeated it across
+several check-ins.** It came from a fire report's line ("this roof-leak entry is the ONLY OWED marker
+left") and I repeated the claim without counting. Counting the manifest directly:
+
+**11 pages carry a LIVE owed item; 5 carry a record that their marker was cleared** (black-tank,
+delamination, pin-weight-and-payload, roof-leak-repair, trip-planner). The 11 fall into three classes:
+
+1. **The `dateModified` vs visible-date disagreement — 4 pages named, and it is really 33 of 47
+   guides.** `rv-slide-out-leaking`, `rv-slide-out-not-working`, `rv-trailer-wheel-bearings` and
+   `rv-towing-trailer` are named in the notes; measured across the guides, 33 disagree. The two dates
+   mean different things (the visible one is the date the claims were last checked; `dateModified` is
+   when the page was last edited), so they can legitimately differ. The notes record it as *"sitewide
+   convention, Ty's decision, not swept"* — a decision, not a defect.
+2. **The shared-footer 'licences' spelling — 2 pages named, and it is ALREADY FIXED.** `grep -rl
+   licences --include=*.html` returns nothing: the footer reads "licenses" and the only remaining
+   occurrences are the rule definition in `scripts/check-spelling.py` and a docstring in
+   `fetch-guide-photos.py`. **The two notes are stale** and should not send a session chasing it.
+3. **Sources that will not fetch — 5 pages, and these are genuinely owed.** Progressive Dynamics FAQ
+   figures and the Charge Wizard interval (`rv-converter-not-charging`); the Lippert OEM manual and
+   the Forest River plumbing section (`rv-sewer-smell`); the California Vehicle Code pages 26302 and
+   26303 behind a Cloudflare bot wall (`trailer-brakes-required`); the paywalled NFPA adopted text
+   behind the 110%/106% figures (`rv-tire-replacement`); and a document not in hand
+   (`rv-12-volt-problems`). Each is a document nobody can currently obtain, not a missed edit.
+
+**What this changes:** nothing about the work done — every one of these was recorded honestly at the
+time. What it changes is the status line. The correct statement is *"11 pages carry a live owed item:
+1 class is Ty's decision, 1 class is already fixed and its notes are stale, and 3 are sources that
+will not fetch."*
+
 ### W20. The tool pages' review coverage is unrecorded (found 2026-10-12, Cloud)
 
 `scripts/verify-content.py --status` reports **48 verified / 85 unverified**, and **15 of the
