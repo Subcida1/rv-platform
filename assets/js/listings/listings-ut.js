@@ -216,7 +216,7 @@ window.RV_LISTINGS_UT = [
    "logan"
   ],  "region": "Northern Utah",  "reg": "wasatch"
  },
- {  "n": "Blue Fox RV",  "c": "North Logan, UT",  "p": "(435) 317-3625",  "u": "https://foxrv.com/rv-service/",  "t": "both",  "e": false,  "r": false,  "d": "Blue Fox RV is an RV dealer in North Logan with a service department behind the sales floor, serving Cache Valley. Its own site lists annual inspections, dewinterisations, axle and wheel bearing service, solar upgrades, roof and seal repair, appliance and electrical work, and slide-out, awning and suspension repair, and says its certified technicians work on the major classes and brands it sells and plenty it does not.",  "g": [
+ {  "n": "Blue Fox RV",  "c": "North Logan, UT",  "p": "(435) 317-3625",  "u": "https://foxrv.com/rv-service/",  "t": "both",  "e": false,  "r": false,  "d": "Blue Fox RV is an RV dealer in North Logan with a service department behind the sales floor, serving Cache Valley. Its own site lists annual inspections, dewinterizations, axle and wheel bearing service, solar upgrades, roof and seal repair, appliance and electrical work, and slide-out, awning and suspension repair, and says its certified technicians work on the major classes and brands it sells and plenty it does not.",  "g": [
    "Shop",
    "Dealer service department",
    "Cache Valley"

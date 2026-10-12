@@ -129,7 +129,7 @@ window.RV_LISTINGS_NY = [
    "middletown"
   ],  "region": "Hudson Valley",  "spec": null,  "reg": "hudson-valley-ny"
  },
- {  "n": "Classic RV Repair & Restorations, LLC",  "c": "Fishkill and the Hudson Valley, NY",  "p": "(914) 523 - 8310",  "u": "http://www.classicrvrepairrestorations.com/",  "t": "center",  "e": false,  "r": false,  "d": "Classic RV Repair & Restorations LLC is an RV repair and restoration shop at 73 Route 9 in Fishkill, New York, specialising in vintage Airstreams. Owner and master technician George Hernandez has more than 30 years on Airstreams and does aluminum body repair, electrical, plumbing, interior repair, fabrication and solar installation. It also works on other brands of RV and trailer.",  "g": [
+ {  "n": "Classic RV Repair & Restorations, LLC",  "c": "Fishkill and the Hudson Valley, NY",  "p": "(914) 523 - 8310",  "u": "http://www.classicrvrepairrestorations.com/",  "t": "center",  "e": false,  "r": false,  "d": "Classic RV Repair & Restorations LLC is an RV repair and restoration shop at 73 Route 9 in Fishkill, New York, specializing in vintage Airstreams. Owner and master technician George Hernandez has more than 30 years on Airstreams and does aluminum body repair, electrical, plumbing, interior repair, fabrication and solar installation. It also works on other brands of RV and trailer.",  "g": [
    "rv service center",
    "airstream",
    "restoration"
@@ -184,7 +184,7 @@ window.RV_LISTINGS_NY = [
    "saratoga springs"
   ],  "region": "the Capital Region",  "spec": null,  "reg": "hudson-valley-ny"
  },
- {  "n": "Albany Light Truck & Car Repair",  "c": "Albany, NY",  "p": "518-437-0304",  "u": "https://www.autorepairalbany.com/Albany-rv-repair-service.html",  "t": "center",  "e": false,  "r": false,  "d": "Albany Light Truck & Car Repair runs an RV repair and service center at 6 Anderson Drive in Albany, New York, just off I-90 at the Everett Road Exit 5. It is equipped to repair most makes and models of motorhome or travel trailer and specialises in OEM service, oil changes, tires, emission, electronic and electrical systems, engines, transmissions, chassis, brakes, steering, suspension, exhaust, air conditioning and tow hitches.",  "g": [
+ {  "n": "Albany Light Truck & Car Repair",  "c": "Albany, NY",  "p": "518-437-0304",  "u": "https://www.autorepairalbany.com/Albany-rv-repair-service.html",  "t": "center",  "e": false,  "r": false,  "d": "Albany Light Truck & Car Repair runs an RV repair and service center at 6 Anderson Drive in Albany, New York, just off I-90 at the Everett Road Exit 5. It is equipped to repair most makes and models of motorhome or travel trailer and specializes in OEM service, oil changes, tires, emission, electronic and electrical systems, engines, transmissions, chassis, brakes, steering, suspension, exhaust, air conditioning and tow hitches.",  "g": [
    "rv chassis repair",
    "tires",
    "engine and transmission"
@@ -232,7 +232,7 @@ window.RV_LISTINGS_NY = [
    "emergency"
   ],  "base": "ithaca",  "areas": [],  "region": "Ithaca and the Finger Lakes",  "spec": null,  "reg": "southern-tier-ny"
  },
- {  "n": "JB's RV Service Plus",  "c": "Bath, NY",  "p": "(607) 794-0110",  "u": "https://www.t-rexyrvcustoms.com/",  "t": "both",  "e": false,  "r": false,  "d": "JB's RV Service Plus is based in Bath, New York and offers mobile RV service across a large portion of New York State, plus limited shop scheduling for larger jobs and transportation/towing services. It accommodates fifth wheels, motorhomes, travel trailers, pop-ups, truck campers, toy haulers and park models, and specialises in AC/DC electrical, plumbing, LP and natural gas, HVAC, appliances, solar, hydraulics, roof repairs and replacements, flooring and axles, bearings and brakes.",  "g": [
+ {  "n": "JB's RV Service Plus",  "c": "Bath, NY",  "p": "(607) 794-0110",  "u": "https://www.t-rexyrvcustoms.com/",  "t": "both",  "e": false,  "r": false,  "d": "JB's RV Service Plus is based in Bath, New York and offers mobile RV service across a large portion of New York State, plus limited shop scheduling for larger jobs and transportation/towing services. It accommodates fifth wheels, motorhomes, travel trailers, pop-ups, truck campers, toy haulers and park models, and specializes in AC/DC electrical, plumbing, LP and natural gas, HVAC, appliances, solar, hydraulics, roof repairs and replacements, flooring and axles, bearings and brakes.",  "g": [
    "mobile tech",
    "rv repair shop",
    "roof service"
@@ -283,7 +283,7 @@ window.RV_LISTINGS_NY = [
    "rome"
   ],  "region": "Syracuse, Utica and Rome",  "spec": null,  "reg": "north-country-ny"
  },
- {  "n": "Dr. Dave's RV & Trailer Repair",  "c": "Southern Tier, NY",  "p": "607-373-0262",  "u": "https://drdavesrvrepair.wixsite.com/mysite-2",  "t": "mobile",  "e": true,  "r": false,  "d": "Dr. Dave's RV & Trailer Repair is a mobile RV and camper repair service that comes to the customer, doing preventative, scheduled and emergency services from the roof to the floor. It specialises in RV appliances, refrigerators, air conditioners, furnaces and water heaters, pre-purchase inspections, walk-throughs, roof repair and roof coats, and is available from 8:00AM to 7PM.",  "g": [
+ {  "n": "Dr. Dave's RV & Trailer Repair",  "c": "Southern Tier, NY",  "p": "607-373-0262",  "u": "https://drdavesrvrepair.wixsite.com/mysite-2",  "t": "mobile",  "e": true,  "r": false,  "d": "Dr. Dave's RV & Trailer Repair is a mobile RV and camper repair service that comes to the customer, doing preventative, scheduled and emergency services from the roof to the floor. It specializes in RV appliances, refrigerators, air conditioners, furnaces and water heaters, pre-purchase inspections, walk-throughs, roof repair and roof coats, and is available from 8:00AM to 7PM.",  "g": [
    "mobile tech",
    "appliance repair",
    "roof service"

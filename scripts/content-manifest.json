@@ -453,10 +453,10 @@
     "claims": "74f9b7b4567ac58a"
   },
   "guides/rv-battery-not-charging.html": {
-    "hash": "0c6a0d8b48c4a3c7",
+    "hash": "7208678a21fa466f",
     "status": "verified",
-    "verified_by": "2026-10-10 voice pass, Ty's package section 3: two American-English rewrites ('doesn't charge the battery at all', 'If one is installed it's a fifth source'). No facts or numbers touched. The 2026-10-10 review's own findings remain applied.",
-    "verified_at": "2026-10-10",
+    "verified_by": "US spelling only (British -> American), 2026-10-12: 'equalising' -> 'equalizing' in our prose. No fact, number, interval or claim changed.",
+    "verified_at": "2026-10-12",
     "sources": [],
     "spec": "_specs/rv-battery-not-charging.md",
     "spec_waived": false,
@@ -543,9 +543,9 @@
     "claims": "029e24133bf31376"
   },
   "guides/rv-furnace-not-working.html": {
-    "hash": "0310549c8e7e7704",
+    "hash": "95bea8eb47cc397d",
     "status": "verified",
-    "verified_by": "2026-10-12 Neo second-rotation review: the sail-switch paragraph made the same point three times ('It only sees the whole safety circuit... indistinguishable to it', then 'The board can't tell the difference. All it sees is whether the safety circuit is closed: a bad sail switch and a blocked duct look identical to it'). Tightened to one statement of the mechanism; no claim altered.",
+    "verified_by": "US spelling only (British -> American), 2026-10-12: 'authorising' -> 'authorizing' in our prose. No fact, number, interval or claim changed.",
     "verified_at": "2026-10-12",
     "sources": [],
     "spec": "_specs/rv-furnace-not-working.md",
@@ -553,10 +553,10 @@
     "claims": "89a67693ba48f388"
   },
   "guides/rv-fuse-keeps-blowing.html": {
-    "hash": "f1158f03e1fb224e",
+    "hash": "70c05a4275c89a62",
     "status": "verified",
-    "verified_by": "US spelling only (British -> American): the American-voice pass left residue on this page and the new scripts/check-spelling.py found it. No fact, number, interval or claim changed.",
-    "verified_at": "2026-10-11",
+    "verified_by": "US spelling only (British -> American), 2026-10-12: 'vaporised' -> 'vaporized' in our prose, the second residue pass on this page. No fact, number, interval or claim changed.",
+    "verified_at": "2026-10-12",
     "sources": [],
     "spec": "_specs/rv-fuse-keeps-blowing.md",
     "spec_waived": false,

@@ -83,7 +83,7 @@ window.RV_LISTINGS_KY = [
    "service center"
   ],  "base": "owensboro",  "areas": [],  "region": "Western Kentucky",  "spec": null,  "reg": "western-ky"
  },
- {  "n": "Cambron Body Shop",  "c": "Owensboro, KY",  "p": "270-684-1465",  "u": "https://www.cambronbodyshop.com/rv-body-repair",  "t": "center",  "e": false,  "r": false,  "d": "Cambron Body Shop is a fifth-generation, family-owned body shop in Owensboro that has operated since 1922 and specialises in RV body repair. It handles post-collision and bodywork needs including repairs, dent removal, repainting and refinishing, and works on RV-specific materials such as fiberglass and sheet metal. Its mechanics are certified by Automotive Service Excellence and I-CAR, and it offers free estimates.",  "g": [
+ {  "n": "Cambron Body Shop",  "c": "Owensboro, KY",  "p": "270-684-1465",  "u": "https://www.cambronbodyshop.com/rv-body-repair",  "t": "center",  "e": false,  "r": false,  "d": "Cambron Body Shop is a fifth-generation, family-owned body shop in Owensboro that has operated since 1922 and specializes in RV body repair. It handles post-collision and bodywork needs including repairs, dent removal, repainting and refinishing, and works on RV-specific materials such as fiberglass and sheet metal. Its mechanics are certified by Automotive Service Excellence and I-CAR, and it offers free estimates.",  "g": [
    "service center"
   ],  "base": "owensboro",  "areas": [],  "region": null,  "spec": null,  "reg": "western-ky"
  },

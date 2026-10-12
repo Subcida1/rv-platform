@@ -134,7 +134,7 @@ window.RV_LISTINGS_TX = [
    "big wells"
   ],  "region": "South Central Texas",  "reg": "south-tx"
  },
- {  "n": "Call Smitty RV Service",  "c": "Junction",  "p": "210-504-6811",  "u": "https://callsmittyrv.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Mobile RV repair covering Junction and the surrounding Kimble County area, including remote ranch properties and local RV parks. The technician specialises in the living side of the RV, covering air conditioning and heating, plumbing, electrical, appliances, and general maintenance such as roof inspections and slide-out lubrication. The site states plainly that it does not offer emergency roadside assistance for tires or towing.",  "g": [
+ {  "n": "Call Smitty RV Service",  "c": "Junction",  "p": "210-504-6811",  "u": "https://callsmittyrv.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Mobile RV repair covering Junction and the surrounding Kimble County area, including remote ranch properties and local RV parks. The technician specializes in the living side of the RV, covering air conditioning and heating, plumbing, electrical, appliances, and general maintenance such as roof inspections and slide-out lubrication. The site states plainly that it does not offer emergency roadside assistance for tires or towing.",  "g": [
    "mobile"
   ],  "base": "junction",  "areas": [
    "junction"

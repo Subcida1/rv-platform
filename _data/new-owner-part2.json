@@ -162,7 +162,7 @@
      "blocks": [
       {
        "kind": "p",
-       "html": "A bottle sold for black tanks is usually one of three things: a deodoriser that masks or suppresses smell; an enzyme or bacterial treatment meant to break down waste and paper; or a formaldehyde-based steriliser, often called blue chemical, that kills the bacteria causing odor."
+       "html": "A bottle sold for black tanks is usually one of three things: a deodorizer that masks or suppresses smell; an enzyme or bacterial treatment meant to break down waste and paper; or a formaldehyde-based sterilizer, often called blue chemical, that kills the bacteria causing odor."
       },
       {
        "kind": "p",
@@ -275,7 +275,7 @@
         "<b>Smell strongest at the drain:</b> suspect a dry or siphoned P-trap. Run water down it.",
         "<b>Smell anywhere, and the toilet bowl will not hold water:</b> suspect the toilet seal.",
         "<b>Smell with none of the above:</b> suspect a blocked roof vent, which can push odor back through the plumbing.",
-        "<b>Only after all of those check out:</b> the tank itself is the likely source, and the fix is cleaning and correct dumping, not another bottle of deodoriser."
+        "<b>Only after all of those check out:</b> the tank itself is the likely source, and the fix is cleaning and correct dumping, not another bottle of deodorizer."
        ]
       },
       {
@@ -286,7 +286,7 @@
     },
     {
      "id": "fresh-water",
-     "title": "How to sanitise your RV fresh water tank",
+     "title": "How to sanitize your RV fresh water tank",
      "open": false,
      "blocks": [
       {
@@ -295,7 +295,7 @@
       },
       {
        "kind": "p",
-       "html": "Sanitising means putting a measured dose of chlorine into the fresh system, letting it sit, then flushing. The target is 50 parts per million. Use a solution of one gallon of water and half a cup of chlorine bleach (5% sodium hypochlorite), and add one gallon of solution for every 15 gallons of tank capacity. That mix puts a 50 ppm residual chlorine concentration in the water system. Let the solution stand for at least four hours, then drain and flush. To remove the chlorine taste, use a solution of one quart of vinegar to five gallons of water. Tiffin warns: <b>\"Concentrations greater than 50 ppm might damage the water lines and/or the tank.\"</b>"
+       "html": "Sanitizing means putting a measured dose of chlorine into the fresh system, letting it sit, then flushing. The target is 50 parts per million. Use a solution of one gallon of water and half a cup of chlorine bleach (5% sodium hypochlorite), and add one gallon of solution for every 15 gallons of tank capacity. That mix puts a 50 ppm residual chlorine concentration in the water system. Let the solution stand for at least four hours, then drain and flush. To remove the chlorine taste, use a solution of one quart of vinegar to five gallons of water. Tiffin warns: <b>\"Concentrations greater than 50 ppm might damage the water lines and/or the tank.\"</b>"
       },
       {
        "kind": "p",
