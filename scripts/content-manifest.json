@@ -403,10 +403,10 @@
     "claims": "ca780a6dbc99c4d8"
   },
   "guides/index.html": {
-    "hash": "7debd35132e7bd73",
+    "hash": "295ace33a6e92c64",
     "status": "verified",
-    "verified_by": "Added the tile for the black tank routine guide to the Water and plumbing grid, beside the black tank guide it sequences. Structural pass on a navigation hub: the card resolves to a file that exists, the ItemList names every guide in the catalogue, and no existing prose changed. Checked with scripts/verify.py, scripts/check-structure.py and scripts/clean-urls.py, and the page rendered at 1280 and 393.",
-    "verified_at": "2026-10-10",
+    "verified_by": "Trust-claim ruling applied: the guide-meta line read 'Find the fault in order, with real voltage tables'. The word 'real' was the defect, since calling our own tables the real ones says other sources' are not. Now 'voltage tables'. No fact, figure, source or claim changed. Spec waived: this is the guides hub, not a guide, so it has no _specs entry.",
+    "verified_at": "2026-10-12",
     "sources": [],
     "spec": null,
     "spec_waived": true,
@@ -423,10 +423,10 @@
     "claims": "d001e7423ee174b8"
   },
   "guides/rv-12-volt-problems.html": {
-    "hash": "6ce865a6cfaa91e9",
+    "hash": "f2ac60a23c5129f5",
     "status": "verified",
-    "verified_by": "Independent fresh-context review 2026-10-10, all cited documents fetched: 22 findings (2 injury, 3 wrong-fact, 9 sourcing, 4 voice, 4 style). The injury, wrong-fact, voice and style findings are applied; the sourcing findings that need a document not in hand are recorded in the commit and still owed. 2026-10-11: one link added, to the RV converter and power-centre finder, inside the existing end-of-content block. Nothing else on the page changed: no claim, source, figure, procedure, quotation or sentence was touched, so the independent review above still stands as written and its OWED list is untouched.",
-    "verified_at": "2026-10-11",
+    "verified_by": "Trust-claim ruling applied: the same phrase, 'with real voltage tables', appeared in the meta description, og:description and twitter:description. Now 'voltage tables' in all three. No fact, figure, source or claim changed.",
+    "verified_at": "2026-10-12",
     "sources": [],
     "spec": "_specs/rv-12-volt-problems.md",
     "spec_waived": false,
