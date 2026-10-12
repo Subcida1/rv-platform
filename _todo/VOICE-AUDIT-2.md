@@ -46,9 +46,86 @@ So round 2 is not a re-audit of the whole site. It is:
 
 ## Findings
 
-| # | page | finding (verbatim where given) | state |
-|---|------|--------------------------------|-------|
-| — | — | *(none yet)* | — |
+### R2-1 — `/tools/` chip row: a leaked editorial note is published. **FIXED**
+> "when I open the tools index at the very top of the page where all of the tool buttons are, there's
+> text now that says tool, the board finder now covers generators and igniters in the name for what
+> it does. Looks like that's a mistake. We definitely removed that"
+
+`tools/index.html` line 80, in the chip row:
+
+    <a class="chip" href="tools/rv-water-filter">🚰 Water filter</a> (tool: the board finder now
+    covers generators and ignitors, and is named for what it does)
+
+A note-to-self about the appliance-board rename was left in the markup and renders as visible text
+after the Water filter chip. Delete the parenthetical. **Also asked: "Make sure we got all the
+tools"** — the row carries 14 chips against 14 tool pages; verify against the tools directory.
+
+### R2-2 — `/parts/`: entry separators and within-entry breaks look identical. **FIXED**
+> "the line breaks needs to be more visually different than the line breaks that we're using within
+> set entries, like the line break between the travel trailer, physical, and motor home buttons, and
+> also known as"
+
+Named entries: shore power cord, shore power inlet, surge protector and EMS, transfer switch,
+breaker panel and 120 V breakers, converter and charger. The complaint is specific to the bottom of
+the **shore power inlet** entry, where "Also known as power inlet, twist lock inlet, receptacle" runs
+straight into the separator above **surge protector and EMS**.
+
+Cause, confirmed by reading the stylesheet — the two rules are byte-identical in weight and colour:
+
+    .part      { border-top: 1px solid var(--border) }   /* between entries */
+    .part-aka  { border-top: 1px solid var(--border) }   /* inside an entry */
+
+Fix: differentiate by weight and value using existing tokens (no new hex — the palette gate forbids
+it), so an entry boundary reads as a boundary at a glance. Alignment stays centred: that is Ty's own
+dated instruction in the CSS comment.
+
+### R2-3 — `rv-black-tank-routine`: four critiques of the opening paragraph. **FIXED**
+> "I have basically four critiques of your very first paragraph. I think you should basically want to
+> do this whole thing, fact check it and just give it the entire rundown."
+
+Current lede: *"Four steps and one habit cover almost everything a black tank asks of you. Dump with
+the valve closed and the tank mostly full. Treat after every dump. Store it drained and protected,
+with antifreeze in the tank and the bowl flushed dry. And when something goes wrong, check the gauge
+before buying anything, because a tank that reads full when it is empty is usually reporting residue
+rather than a failed sensor."*
+
+**a) "Dump with the valve closed and the tank mostly full" is confusing language.** Ty read "valve"
+as the toilet foot valve, not the tank drain valve.
+> "I think you mean like the toilet valves, like the foot valve or whatever, but that's confusing
+> language. I would just focus on instructing people to dump when the tank is mostly full. And to not
+> dump like, you know, when it's not basically because it works better if you let it build up and it
+> has more weight behind it to flush it all out."
+
+**b) "Store it drained and protected, with antifreeze in the tank" — KEEP.** Ty: *"that's a good
+sentence."*
+
+**c) "and the bowl flushed dry" — WRONG.** The bowl should hold antifreeze, not be dry.
+> "No, you want any freeze in the bowl as well to keep the seal. Good. Otherwise that rubber seal
+> will go bad if it's not submerged. And you also want to make sure that any freeze has ran completely
+> through the... you're going to be running water through the toilet until you see the antifreeze
+> coming out through the toilet. And then you want to drop enough into the tank itself, either by
+> running it through the line or by directly dropping it with the gallon of antifreeze or the jug of
+> antifreeze. And then you want to end the bowl as well, like how the water typically sits because it
+> will seal the black tank first off and keep your bathroom from smelling. And second off, it will
+> maintain the toilet bowl valve seal so that that seal remains nice and healthy all winter. And when
+> you go to use it in summer, all you have to do is flush that antifreeze down and replace it with
+> water."
+
+Note the page repeats the error in **Store**: *"Once it is stored for winter the bowl is flushed dry
+and gets antifreeze like the rest of the system."* Both places need the same correction.
+
+**d) "usually reporting residue rather than a failed sensor" — WRONG framing.**
+> "it's a tank that reads full when it's empty, it's usually reporting rather than a failed sensor.
+> That basically is a failed sensor. If it's reporting full and it's not actually full, that's
+> essentially a failed sensor."
+
+The page's real point stands (a fouled probe is a cleaning job, not a purchase) but the sentence
+contradicts itself. Rewrite to say the sensor is **fouled, not failed** — residue on the probe is the
+usual cause and cleaning fixes it, while the sensor itself rarely needs replacing.
+
+**Also asked for: a full fact-check of the whole guide and the rundown.** The guide is unverified
+and has never had an independent pass.
+
 
 ## Standing rules that apply to every finding (do not relitigate)
 
@@ -62,3 +139,55 @@ So round 2 is not a re-audit of the whole site. It is:
   what changed.
 - **The directory is a listing, not us speaking** — a business's own name and its quoted words are
   never restyled. But the card *description* is our prose and is fair game.
+
+---
+
+## Round 2 outcomes (2026-10-11, applied same session)
+
+**R2-1 FIXED.** The parenthetical is deleted from `tools/index.html`. Tool coverage verified the way
+Ty asked ("make sure we got all the tools"): the chip row and the tool pages are the **same set of
+14**, compared as sorted sets, so there are no orphan chips and no missing tool. A sweep for the same
+error class across every hub found this one instance and no other.
+
+**R2-2 FIXED.** The two rules were byte-identical, which is why an entry boundary read as an inner
+divider. Now, using existing tokens only (the palette gate forbids new hex; the style ratchet counts
+font-size and padding, not border width, so this was free):
+
+    .part      { border-top: 2px solid var(--border-2) }    /* between entries  */
+    .part-aka  { border-top: 1px solid var(--border-soft) } /* inside an entry  */
+
+Measured in a real browser, not assumed: entry separator `2px rgb(201,220,238)`, inner rule
+`1px rgb(226,232,240)`. The inner rule is also narrower, because `.part` is a centred flex column so
+the child does not stretch — that gives the boundary a second axis of difference. Alignment is
+untouched, per Ty's own dated instruction in the CSS. `parts/index.html` is generated by
+`build-parts-pages.py`; the change is CSS-only, so no regeneration was needed.
+
+**R2-3 FIXED, three places, not one.** The four critiques collapse to three edits:
+1. The **lede** and 2. the **short-version callout** carried the same two errors. Both now say dump
+   when the tank is mostly full and not before (with the reason: the volume behind the waste carries
+   it out), and both say antifreeze is left standing in the bowl.
+3. The **Store** paragraph said *"the bowl is flushed dry and gets antifreeze like the rest of the
+   system"* — self-contradictory and wrong. It now runs the flush until antifreeze reaches the bowl,
+   gets enough into the tank through the line or straight from the jug, and leaves a bowl of it
+   standing so the bowl valve seal stays submerged, noting the spring flush.
+
+The **failed-sensor framing** (critique 4) is cut rather than reworded: the page now says the usual
+cause is residue on the probe and that cleaning is the first move. That keeps the page's actual
+thesis — do not buy a part first — without the contradictory "reporting rather than a failed sensor".
+
+### Fact-check findings Ty should know
+
+- **The seal-longevity claim is NOT in the maker's manual.** Thetford form 34077 (fetched, HTTP 200,
+  "Winterizing" section) gives two methods — drain the bowl, or use antifreeze — and states
+  **"Use RV (potable) antifreeze only"** with a caution never to use automotive type. It says nothing
+  about the bowl seal drying out. So the seal reasoning is written as our own operational advice, not
+  attributed to Thetford. The manual **is** now added to the page's Sources for what it does state.
+- **`winterize-plumbing.html` was checked and is NOT the same defect.** It drains the bowl during the
+  drain-down phase, then runs antifreeze "until pink appears in the bowl", so its stored state is wet.
+  Recorded as checked rather than claimed as a second bug.
+- **One sourcing weakness found, not yet fixed:** the page cites a Jayco Embark manual through
+  `autouserguide.com`, a third-party rehost. House doctrine is to cite the publisher's own copy.
+  `verify.py`'s rehost blacklist does not cover that domain, so the gate stayed green. Worth
+  repointing to a jayco.com copy.
+- **Still owed:** the guide has never had an independent review, and it is one of only two unverified
+  guides left. The four corrections above are Ty's, applied directly, not a reviewed pass.
