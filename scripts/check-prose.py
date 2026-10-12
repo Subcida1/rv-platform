@@ -102,6 +102,16 @@ NOTED = (
     ("emphasis-adverb",
      r"\b(?:truly|genuinely|really|actually)\s+(?:matters|matter|important|counts|means)\b",
      "insisting on importance rather than showing it"),
+    # ADDED 2026-10-12 from a sitewide pass on the trust-claim shape. The guides hub said "Find
+    # the fault in order, with real voltage tables" and the 12-volt guide carried it in three meta
+    # tags. The defect is the adjective: calling OUR tables the real ones says the others are not,
+    # which is the authenticity-selling shape Ty named ("never sell authenticity, just be good"),
+    # and it is an argument rather than information.
+    # NOTED, not STRICT, on purpose: "the real numbers on your label" is good prose, so the
+    # adjective is only wrong in some contexts and a gate here would argue with correct writing.
+    ("authenticity-adjective",
+     r"\bwith real \w+|\breal (?:voltage|maker|industry)\s+(?:tables|charts|numbers|figures|data)\b",
+     "calling our figures the authentic ones implies the others are not, which is selling rather than telling"),
 )
 
 
