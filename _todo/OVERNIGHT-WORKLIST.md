@@ -1346,6 +1346,29 @@ it in the queue rather than guessing.
 Run it page type by page type (hubs, guides, tools, manuals, directory, parts), fix as you go, and
 commit in batches. Tick this item when the sweep is clean or every remaining finding is recorded.
 
+### W19. Encode Ty's taste as checks - the calibration plan (Ty, 2026-10-12 via Neo)
+
+Ty's plan, verbatim: "don't have Brandt read the whole site. Plan: build more tools first, but the new
+tools should encode Brandt's taste. He'll do a sampled read-through (a few pages across guides, tools,
+hubs) and dictate voice changes; turn those dictates into new automated checks and sweep the whole site
+with them. His read-through is calibration data, not the review mechanism."
+
+So the deliverable is CHECKS, not a reviewed site:
+1. Pick 6-8 pages that between them show the voice at its best and its worst - across guides, tools and
+   hubs, mixing pages the voice pass already rewrote with pages it never touched. Put them in one file
+   (with their URLs) so Ty can read them in one sitting.
+2. When Ty dictates a change, treat each dictate as a RULE, not a one-off edit: write it as a check
+   (check-prose.py for constructions, check-style.py for form, a new checker if it needs one), give it a
+   must-not-catch case, and negative-test it before it gates.
+3. Then sweep the whole site with the new checks and fix what they find.
+4. His read-through is calibration data - it is NOT the review mechanism, and the site must not depend
+   on him reading it.
+
+Do not ask him to read more pages than the calibration set. Record each dictate and the check it became
+in this file, so the next session inherits the taste and not just the rule.
+
+**Priority note:** start with step 1 (the calibration set) so Ty has something to read when he is ready.
+
 ## BRIDGE — do not duplicate
 
 A live session owns `/home/user/claude-bridge`. As of 01:05: all six lanes healthy on v0.7.41, queue idle, `v0.7.42` staged in `outbox/` awaiting a paste into the **aistudio** lane by Ty (its own session knows the deploy path). **Work the bridge ONLY if:** the queue has jobs with no matching reply (spent jobs blocking a lane), or a heartbeat is stale. Sweep spent jobs with `tools/sweep-spent-jobs.py`. Do not deploy a userscript build yourself.
