@@ -92,6 +92,42 @@ by `f8569b4` (the recall-lookup tool commit); the audit passed on its parent and
 Fixed by making the URL absolute in the data and rebuilding — the visible link and the JSON-LD both
 now carry `https://originrv.com/tools/rv-recall-lookup`. `audit-manuals.py` exits 0.
 
+## Neo's parts deep-dive — verified 2026-10-12 (8 findings: 1 fixed, 1 real gap, 1 mis-map)
+
+- **#1 "intro copy missing above the filters" — REFUTED.** The lede is there and renders above the
+  filter bar (measured: lede y=303, filters y=513): "An RV is 157 parts across 9 systems. Each part:
+  what it does, the names people use for it, which RVs have one, and where to go next. 83 of them
+  link to a repair guide or to the maker's own documentation, 62 of those to a guide on this site,
+  and the remaining 74 are here so you can put a name to the thing that broke."
+- **#2 "the title lacks the RV parts keyword" — REAL, FIXED.** The page declares the target
+  `"rv parts list"` in `_data/targets.json`; its title was "Every part of an RV", carrying neither
+  word. `check-keywords.py` passed it only because the stemmer treats "part" and "parts" as one —
+  right for the head-term rule, wrong for the phrase a searcher types. Fixed in the generator:
+  title "RV Parts List: Every Part of an RV", JSON-LD name "RV Parts List", H1 unchanged at
+  "Every part of an RV". That is the split the other hubs already use (tools is "Free RV Tools: …"
+  over "Free RV tools"), and the one `_data/targets.json`'s accepted notes call *"the ordinary
+  split rather than a drift"*.
+- **#3 "the fresh water tank's How to fix it lands on a Reese hitch PDF" — REFUTED; the reviewer's
+  tool mis-mapped the cards.** The fresh water tank card links to `/guides/winterize-plumbing`. The
+  Reese PDF (`reesehitches.com/media/installation_instruction/30047.pdf`) is a maker doc-link on the
+  **Kingpin and fifth-wheel hitch** card, where it belongs. All **29 distinct** "How to fix it"
+  targets resolve to files that exist — 0 missing.
+- **#4 "only 1 of 9 propane cards has a guide link" — CONFIRMED as a coverage fact, and the page
+  already states it.** Measured: **62 of 157** cards carry a guide CTA, **21** more carry only maker
+  doc-links, **74** carry neither — exactly the lede's numbers. Propane is the thinnest system at
+  1 of 9. **Linkless cards carry NO CTA** — the count of cards with a `.btn-gb` is exactly 62, so
+  nothing promises a guide that is not there.
+- **#5 "the heat pump copy is vague" — REAL, but it needs a source rather than a number.**
+  "Heats as well as cools, down to a minimum outdoor temperature." Writing a cutoff (40 F) would be
+  inventing a figure; no maker document in `_data/` states one. Recorded for a sourcing pass.
+- **#6 "no per-part anchors" — CONFIRMED.** 0 of 157 cards carry an `id`. Enhancement, recorded.
+- **#7 "do guides link back to /parts?" — CONFIRMED as a gap.** All 47 guides reach `/parts/`
+  through the nav, but **zero have an in-content link**, and only the homepage has one. The parts
+  hub links OUT to 62 guides; nothing links back in body copy.
+- **#8 "page weight" — CONFIRMED as a measurement.** 176 KB of HTML, 22,429 px tall, 157 cards.
+
+Counts verified: 22+23+18+16+14+25+16+14+9 = 157, matching "157 parts shown".
+
 **Worth knowing: `audit-manuals.py` is a manual instrument, not a CI gate.** It catches a class the
 gate does not — schema, banned hosts and storable-URL shape across all 154 manual rows. Run it after
 any `_data/manuals.json` edit. It also prints the reminder that its HTTP results are the machine's

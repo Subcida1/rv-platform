@@ -217,7 +217,15 @@ def build():
     # which is the one thing this site is not allowed to publish.
     linked = sum(1 for s in systems for p in s["parts"] if p.get("guide") or p.get("makers"))
 
-    title = "Every part of an RV"
+    # THE TITLE CARRIES THE QUERY; THE H1 NAMES THE SECTION. That is the split every other hub
+    # already uses -- tools is "Free RV Tools: ..." over "Free RV tools", manuals is "RV Owner's
+    # Manuals and Service Manuals" over "RV manuals" -- and it is what the accepted-deviation notes
+    # in _data/targets.json call "the ordinary split rather than a drift". This page declared the
+    # target "rv parts list" and its title carried neither word. check-keywords.py passed it only
+    # because the stemmer treats "part" and "parts" as one word, which is right for the head-term
+    # rule and wrong for the phrase a searcher actually types.
+    title = "RV Parts List: Every Part of an RV"
+    schema_name = "RV Parts List"
     desc = ("All %d parts an RV is made of, across %d systems, with what each one does, the names "
             "people use for it, and the guide that shows how to fix it." % (total, n_systems))
     # meta description must land in 140-160 characters; adjust and re-check rather than guess
@@ -227,7 +235,7 @@ def build():
         {"@context": "https://schema.org", "@type": "WebSite",
          "name": "OriginRV", "url": SITE + "/"},
         {"@context": "https://schema.org", "@type": "CollectionPage",
-         "name": title, "url": SITE + "/parts/index.html",
+         "name": schema_name, "url": SITE + "/parts/index.html",
          "description": desc,
          "isPartOf": {"@type": "WebSite", "name": "OriginRV", "url": SITE + "/"}},
     ]
