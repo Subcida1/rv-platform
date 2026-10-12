@@ -100,11 +100,11 @@ CANARIES = [
      "window.dataLayer = window.d", "window.dataLayer = (;", 1),
 
     ("a homepage count that is not the real one", "homepage figures match reality",
-     'data-count="39"', 'data-count="999"', 1),
+     re.compile(r'data-count="\d+"'), 'data-count="999"', 1),
 
     # a data-claim marker whose value no longer matches the thing it claims
     ("a claim the data disagrees with", "every stated count matches the data",
-     'data-claim="tools-live">8<', 'data-claim="tools-live">99<', 1, None, "tools/index.html"),
+     re.compile(r'data-claim="tools-live">\d+<'), 'data-claim="tools-live">99<', 1, None, "tools/index.html"),
 
     # THE STANDALONE CHECKERS, which had no canary at all and only a --self-test. A self-test
     # proves a rule matches text it is handed; only a canary proves the rule is wired to something
@@ -168,7 +168,7 @@ CANARIES = [
     # The claim-form rule keeps two facts together: a page carrying the card must load the script
     # that wires it. The hub carries the card, so pointing its script tag elsewhere is the fault.
     ("a claim form with no wiring", "claim form must load the script",
-     "assets/js/site.js?v=d45b277e", "assets/js/not-site.js", 1, None, "directory/index.html"),
+     re.compile(r"assets/js/site\.js\?v=[0-9a-f]+"), "assets/js/not-site.js", 1, None, "directory/index.html"),
 
     ("prose that argues with the reader", "STRICT",
      "<h1", "<h1>A rough estimate by the Weather Service\'s own description. </h1><h1", 1,
@@ -282,9 +282,21 @@ def canary(name, heading, find, repl, count=0, runner=None, target=None):
     """Inject, run, restore, and say what happened."""
     path = ROOT / target if target else GATE
     before = path.read_text(encoding="utf-8")
-    if find not in before:
-        return "BROKEN", "the injection anchor %r is not in %s any more" % (find[:40], target or "index.html")
-    after = before.replace(find, repl, 1) if count == 0 else before.replace(find, repl, count)
+    # AN ANCHOR MAY BE A REGEX, AND THE VOLATILE ONES HAVE TO BE. Three canaries were BROKEN on
+    # 2026-10-12 for one reason: their anchors were literals pinned to values the site keeps
+    # changing -- a homepage count that had moved from 39, a tool count from 8, and an asset hash
+    # that re-stamps on every asset edit. A literal anchor turns a healthy check into a reported
+    # fault the moment the value it names moves, which is the failure this suite exists to catch
+    # happening to the suite. A pattern tracks the value instead of pinning it.
+    if isinstance(find, re.Pattern):
+        if not find.search(before):
+            return "BROKEN", "the injection pattern %r does not match %s any more" % (
+                find.pattern[:40], target or "index.html")
+        after = find.sub(repl, before, count=1 if count == 0 else count)
+    else:
+        if find not in before:
+            return "BROKEN", "the injection anchor %r is not in %s any more" % (find[:40], target or "index.html")
+        after = before.replace(find, repl, 1) if count == 0 else before.replace(find, repl, count)
     if after == before:
         return "BROKEN", "the injection changed nothing, so the canary tested nothing"
     global _CURRENT
