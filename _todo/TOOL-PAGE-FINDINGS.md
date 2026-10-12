@@ -81,3 +81,39 @@ one verified pass rather than reply by reply.
 2. `rv-converter-finder` — "Magnetek always returns not found" is called a conflict; it is correct.
 3. (earlier) `rv-water-heater-anode-rod` — "cathodic action" called unsourced; Dometic's own manual
    says it verbatim.
+
+## APPLIED (pushed)
+
+| commit | page | what changed |
+|--------|------|--------------|
+| `453277a1` | `tools/weight-calculator` | literal duplicated phrase "works for an RV for an RV" |
+| `8f7c9ece` | `tools/rv-converter-finder` | opening claimed it "reads all of them" while the page says two of three charts are read |
+| `b8abce96` | `tools/rv-appliance-board-finder` | "The same board runs the other gas appliances." contradicted its own next sentence; now "The same kind of board" |
+| `b8abce96` | `tools/fuel-cost` | the model-lookup overclaim; the untrue "Every box says where its number comes from"; the undated diesel market claim |
+| `b8abce96` | `tools/solar-sizing` | unsourced "4.98" rounded to "about 5"; unnamed "the makers" replaced with "The standard sizing formula"; run-on split |
+| `b8abce96` | `tools/rv-water-filter` | "10 inch" hyphenated to "10-inch" |
+| `ffbc3c7f` | `tools/tire-date-code` | opening "Every tire carries... in the last four digits" contradicted the page's own "four digits only exist from 2000"; "decide your number" -> "that limit" |
+
+## STILL TO APPLY (findings verified, not yet edited)
+
+- `tools/rv-loan` (3): "the current ranges from Bankrate's lender table" needs an as-of date or loses
+  "current"; "Credit union members often see the lowest figures." has nothing behind it; "the only
+  honest number is a quote from a lender" is an awkward absolute.
+- `tools/weight-calculator` (4): the 49 CFR 571.110 propane claim needs verifying against the
+  regulation; "the 80% rule" presented as a rule rather than a rule of thumb; the GCWR comparison;
+  the undated "$11 to $14" weigh price.
+- `tools/rv-recall-lookup` (3): "federal VIN service" and NHTSA named as two parties when NHTSA runs
+  vPIC; "before reading seven summaries"; "for a reason the page states where it appears".
+- `tools/rv-water-filter` (2 more): the cross-brand interchange claim vs the page's own statement that
+  the tool does not identify cross-brand fits - VERIFY FIRST; "End cap: as supplied.".
+- `tools/rv-anode-rod` (4): the Dometic flush-interval mapping is ambiguous; "The procedure is the
+  same on both" glosses over different drain fittings; the "lands on the part number" overpromise;
+  "The two are hard to tell apart from outside".
+- `tools/battery-runtime` (1, low): the "half / 80 percent" usable fractions carry no support.
+
+## CONTINUING THIS WITHOUT ME
+
+The tool pages are batch 3 of a sweep. Batches 4 and 5 are untouched: **12 manuals pages** and
+**51 directory pages**, plus the ~20 OWED sub-items in `scripts/content-manifest.json`.
+`_todo/VOICE-AUDIT-2.md` holds the whole session's method notes, the review-dispatch recipe and the
+bridge failure modes; this file holds batch 3.
