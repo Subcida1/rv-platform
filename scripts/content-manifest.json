@@ -393,10 +393,10 @@
     "claims": "178ec4da901263e8"
   },
   "guides/freeze-damage-triage.html": {
-    "hash": "095b7658af523350",
+    "hash": "d6eaf138b02f0ba7",
     "status": "verified",
-    "verified_by": "2026-10-10 voice pass, Ty's package: British spellings to American, collective-noun agreement to singular, and phrasing only. No fact, number or interval changed.",
-    "verified_at": "2026-10-10",
+    "verified_by": "2026-10-12 consistency pass from Neo's second-rotation finding: the page used a unit in six places (32 degrees Fahrenheit, 0 degrees F, 41 degrees Fahrenheit, 32 degrees F) and left one bare ('switched on automatically below 32 degrees'). The bare one now reads 32 degrees Fahrenheit, matching the page's own spelled-out form. No figure changed; no claim altered.",
+    "verified_at": "2026-10-12",
     "sources": [],
     "spec": "_specs/freeze-damage-triage.md",
     "spec_waived": false,
