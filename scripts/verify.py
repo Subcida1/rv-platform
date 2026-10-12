@@ -671,6 +671,43 @@ if bad:
 else:
     print("  every third-party photograph is credited in its caption or recorded in a CREDITS.md")
 
+print("\n=== a state tile's alt text still describes the picture it sits over ===")
+# Added 2026-10-11. Six state photographs were replaced and the images shipped while their alt
+# text still described the OLD picture: a screen reader announced "Santa Elena Canyon on the Rio
+# Grande" over an image of red rock cliffs, and "The Kilauea summit eruption" over a Waikiki beach.
+# Nothing could see it. The photo-credit check above matches an image by FILENAME STEM, and the
+# stem does not change when the picture behind the filename does, so an image can be swapped
+# wholesale with the gate green. This compares the alt ON THE PAGE with the alt the photo table
+# records in CREDITS.md.
+_tile_alt = {}
+for _c in sorted(ROOT.glob("assets/img/**/CREDITS.md")):
+    _cur = None
+    for _line in _c.read_text(encoding="utf-8").split("\n"):
+        _h = re.match(r"^##\s+(.+?)\s*$", _line)
+        if _h:
+            _cur = _h.group(1).strip().lower()
+        elif _cur:
+            _a = re.match(r"^- Tile alt text:\s*(.+?)\s*$", _line)
+            if _a:
+                _tile_alt[_cur] = _a.group(1)
+_alt_bad = []
+for _p in pages:
+    _ptxt = strip_bodies(_p.read_text(encoding="utf-8"))
+    for _m in re.finditer(r'<img\b[^>]*src="assets/img/states/([a-z0-9-]+)-800\.jpg[^"]*"[^>]*alt="([^"]*)"', _ptxt):
+        _slug, _alt = _m.group(1), _m.group(2)
+        _want = _tile_alt.get(_slug)
+        if _want and _alt.strip() != _want:
+            _alt_bad.append("%s: %s alt reads %r but the photo record says %r"
+                            % (_p.relative_to(ROOT), _slug, _alt[:46], _want[:46]))
+if _alt_bad:
+    for _b in _alt_bad[:12]:
+        print("  " + _b)
+    print("  an alt text describing a different picture is worse than none: it is what a screen")
+    print("  reader announces, and the filename stays the same when the image is replaced")
+    fails.append("tile alt drift")
+else:
+    print("  every state tile's alt text matches the alt recorded for its photograph")
+
 print("\n=== listing data integrity ===")
 
 # A directory whose whole job is putting a phone number in front of a stranded
