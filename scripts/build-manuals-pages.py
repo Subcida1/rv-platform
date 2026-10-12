@@ -274,8 +274,15 @@ def breadcrumbs(trail):
 def row_html(r):
     types = "".join('<span class="badge badge-tint">%s</span>'
                     % esc(t.replace("-", " ")) for t in r["doc_types"])
-    host = ("" if r.get("host", r["brand"]) == r["brand"]
-            else ' <span class="man-host">via %s</span>' % esc(r["host"]))
+    # "via X" names the company that carries a brand's documents, so it is worth saying when
+    # that is a different company (Furrion via Lippert). It is noise when the host is just the
+    # brand's own longer name: the Houghton row rendered "Houghton via Houghton Leisure" and the
+    # Unique row "Unique via Unique Appliances", which read as duplication rather than sourcing.
+    host_name = r.get("host", r["brand"])
+    redundant = (host_name == r["brand"]
+                 or host_name.lower().startswith(r["brand"].lower() + " "))
+    host = ("" if redundant
+            else ' <span class="man-host">via %s</span>' % esc(host_name))
     gate = {"none": "", "free-account": "free account needed",
             "paid": "paid subscription"}.get(r["gate"], "")
     bits = []
@@ -1001,7 +1008,7 @@ RECALL_SECTIONS = [
     ("bulletins", "Service bulletins",
      "A recall is a safety defect. A service bulletin is the maker telling its dealers how "
      "to deal with something, and the federal government collects them alongside the "
-     "recalls. Almost nobody in the RV world links them."),
+     "recalls, in the same file."),
     ("appliances", "Appliances and components",
      "The fridge, the water heater, the generator and the portable heater are consumer "
      "products before they are RV parts, so they are recalled through a different agency."),
@@ -1011,16 +1018,22 @@ RECALL_SECTIONS = [
 
 
 def recall_row(r):
+    # A row whose destination has no lookup key shows no key badge. The Transport Canada
+    # entry is a program page rather than a database, and the record carried "n/a" for it,
+    # which rendered on the page as the literal badge "keyed by n/a".
+    keyed = (r.get("keyed_by") or "").strip()
+    badge = ('<span class="man-types"><span class="badge badge-tint">keyed by %s</span></span>'
+             % esc(keyed)) if keyed and keyed.lower() not in ("n/a", "na") else ""
     return """        <li class="man-row" data-search="%s">
           <div class="man-row-top">
             <a class="man-doc" href="%s" target="_blank" rel="noopener">%s</a>
-            <span class="man-types"><span class="badge badge-tint">keyed by %s</span></span>
+            %s
           </div>
           <div class="man-row-meta"><span>%s</span></div>
           <div class="man-row-foot"></div>
         </li>
-""" % (esc(" ".join([r["source"], r["what"], r["keyed_by"]]).lower()),
-       esc(r["url"]), esc(r["source"]), esc(r["keyed_by"]), esc(r["what"]))
+""" % (esc(" ".join([r["source"], r["what"], keyed]).lower()),
+       esc(r["url"]), esc(r["source"]), badge, esc(r["what"]))
 
 
 def recalls_page(rows, bulletins, source_note):
@@ -1089,7 +1102,7 @@ def recalls_page(rows, bulletins, source_note):
         <p>The federal system that holds recalls also holds every manufacturer
         communication, which is where a maker explains a problem to its dealers before it
         becomes a recall, or when it never does. The RV makers file them in the thousands,
-        and nothing on the consumer side indexes them by make and model.</p>
+        and the file is keyed by make, model, model year and component.</p>
         <p>Reading one takes two steps: find the document id in the file, then open the
         bulletin itself at a link built from that id. You can't guess the ids, so start
         from the file, not from a pattern.</p>

@@ -528,3 +528,68 @@ about the page. Three of the nine jobs are still queued in `~/claude-bridge/queu
 **Lane windows opened for this batch were left open** (`gemini.google.com`, `chatgpt.com`,
 `chat.qwen.ai`, `aistudio.google.com`, `chat.deepseek.com`); `bridge-up.sh close` refuses a lane that
 still has a job targeted at it, which is the case for chatgpt, aistudio and deepseek.
+
+### Batch 4, second wave - recalls, power-and-electrical, water-and-plumbing
+
+Re-queued to deepseek, which captured three of them. The recalls page carried the real defects.
+
+**FIXED, at the generator and the record:**
+- "Grand Design is the one brand observed publishing a letter per campaign" - "observed" narrates
+  our own watching, and "the one brand" turns one observation into a ranking. Now "Grand Design
+  publishes a letter per campaign, in both the US and Canadian versions."
+- "Almost nobody in the RV world links them." - a claim about the whole world, uncountable from the
+  page. Cut; the sentence now ends "collects them alongside the recalls, in the same file."
+- "and nothing on the consumer side indexes them by make and model" - the same class, a negative
+  claim across every consumer site. Now "and the file is keyed by make, model, model year and
+  component", which is what the row above it already states.
+- the Transport Canada row rendered the literal badge **"keyed by n/a"**. The record carried `"n/a"`
+  for a row that is a program page with no lookup key. `recall_row()` now omits the badge when the
+  key is empty or "n/a", and the record's field is empty.
+- water-and-plumbing: "keyed by product selected from a widget" - "widget" is web jargon, not
+  something an owner holding a filter recognises. Now "product, chosen from the maker's own
+  selector".
+
+**THE SECOND EXTRACTOR ARTIFACT.** Recalls reported a heading "Manufacturer communications in the
+federal filetop 15 makes". The page is `<h2>Manufacturer communications in the federal
+file<span class="man-count">top 15 makes</span></h2>` - the same joining defect as the badges. Do
+not fix the heading; fix the extractor. Two artifact classes now, from one cause.
+
+**REFUTED:** the "N documents and libraries from N makers" count against rows reading "Cel-Fi via
+Nextivity" and "Aqua-Hot via Airxcel". The count is generated over the rows
+(`len({r["brand"] for r in rows})`) and is correct for them; "via" names the host that carries the
+brand's documents. Two reviewers flagged it independently, so the WORD "makers" may be worth a look
+sometime, but the number is not wrong.
+
+**RECORDED, NOT APPLIED:** "Every manufacturer communication filed in the window" (the file is the
+federal dataset for that window, so "every" is the file's own scope); "keyed by SKU as it appears on
+the sales receipt" and the unexplained "spec letter" / "MBA part number"; the Zamp "being merged
+into Go Power" line with no date; the two campaign-number formats (24V047 against 26V-446)
+unexplained; and the guide title "RV Froze: What to Check, and in What Order", which reads as a
+clipped fragment and is a title decision rather than a manuals-page one.
+
+### Batch 4, third piece - heating-and-cooling, and the maker line that named itself twice
+
+chatgpt.com held its job for half an hour without answering, so `heating-and-cooling` was re-queued
+to deepseek as `20261012-0070-*` and came back in about a minute.
+
+**FIXED, and it was on two pages, not one:** the maker line rendered **"Houghton via Houghton
+Leisure"** on heating-and-cooling and **"Unique via Unique Appliances"** on kitchen-and-appliances.
+`row_html()` prints "via %s" whenever `host` differs from `brand`, which is right when the host is a
+different company (Furrion via Lippert) and noise when it is the brand's own longer name. The rule
+now suppresses "via" when the host is the brand or begins with the brand plus a space. Both pages
+regenerated.
+
+**REFUTED again:** the "8 makers" count against "Coleman-Mach via Airxcel" and "Suburban via
+Airxcel" - the same generated-over-the-rows count, correct for the rows.
+
+**RECORDED, NOT APPLIED:** the unexplained "Airxcel part number" and the four Houghton model codes;
+"exploded diagram" as a trade term; and the Lippert kitchen-and-appliances note the reviewer raised
+without calling it a fault (that row's description carries water heaters into a heating-and-cooling
+list because the maker's document centre groups them that way).
+
+**Batch 4 closes with 6 of 9 pages reviewed** (chassis-and-drivetrain, exterior-and-body,
+sanitation-and-tanks, recalls, water-and-plumbing, heating-and-cooling). Two jobs produced nothing
+usable (a capture ceiling on deepseek, a stall on aistudio whose captured file was the lane's own
+tool markers) and one page never got its review from chatgpt. **Every page's one substantive finding
+was the same: the lede's "each linked at the source"**, which is the trust-claim cluster awaiting
+Ty.
