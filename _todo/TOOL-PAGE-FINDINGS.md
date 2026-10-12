@@ -117,3 +117,12 @@ The tool pages are batch 3 of a sweep. Batches 4 and 5 are untouched: **12 manua
 **51 directory pages**, plus the ~20 OWED sub-items in `scripts/content-manifest.json`.
 `_todo/VOICE-AUDIT-2.md` holds the whole session's method notes, the review-dispatch recipe and the
 bridge failure modes; this file holds batch 3.
+
+## Added as the last replies landed
+
+| page | finding | verdict |
+|------|---------|---------|
+| `tools/rv-toilet-valve` | opening "A water valve is what fails when a toilet spends a winter with water still in the line" presents valve failure as what freezing inevitably does | REAL, mild — narrow to "can crack the valve" |
+| `tools/rv-toilet-valve` | "Answer what you can see and this gives you the maker's part number and the document it came from." — the Traveler section names no part number in the visible copy | **VERIFY** — either the tool has a gap or the copy overpromises |
+| `tools/rv-toilet-valve` | "the 400 series is built to replace any toilet with a rough-in of 7.625 inches or more" | REAL — "any" makes rough-in sound sufficient; the same section says it is one dimension of several |
+| `tools/weights`/`snow-load`, `tools/watts-to-amps` | still outstanding at the time of writing | review in flight |
