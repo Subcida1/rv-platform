@@ -140,3 +140,34 @@ bridge failure modes; this file holds batch 3.
 **Batch 3 result: 14 tool pages reviewed, 10 fixed, 4 refuted on inspection, and 5 extractor artifact
 classes found and fixed.** The artifacts are worth as much as the fixes: each one would have had me
 edit correct copy.
+
+## Batch 3 closed - the STILL TO APPLY list worked through (2026-10-12, commit `d497e5e5`, pushed)
+
+READ THE LIST ABOVE TWICE BEFORE ACTING ON IT: it was partly stale. Six of its items had already been
+applied by the commits before it (`41578757` took all three `rv-loan` items, `289c690d` took all three
+`rv-recall-lookup` items), so applying it blind would have re-edited finished work. Every item was
+re-read against the page or the tool before it was touched.
+
+| page | finding | verdict on re-reading |
+|---|---|---|
+| `weight-calculator` | "the 80% rule that keeps the margin real" | **LEFT** - the FAQ already calls it "A safety guideline", and "the 80% rule" is its ordinary name |
+| `weight-calculator` | 49 CFR 571.110 propane claim | **REFUTED** - 571.110 carries the sentence for "a recreation vehicle trailer" as well as for a motor home |
+| `weight-calculator` | GCWR "often the lowest of the four ratings" | **REAL, FIXED** - an unsupported ranking across ratings that are not comparable; clause cut |
+| `weight-calculator` | "$11 to $14" weigh price | **REAL, FIXED, AND THE FIGURE WAS WRONG** - CAT Scale's own FAQ prints $15.25 first weigh and $5.25 reweigh; both now stated and the FAQ added to Sources |
+| `weight-calculator` | duplicated "fifth wheels 20 to 25% of loaded weight, fifth wheels 20 to 25%" | **REAL, FIXED** - found while reading the page, same class as the earlier "works for an RV for an RV" |
+| `rv-water-filter` | cross-brand interchange against the page's own "does not identify cross-brand fits" | **REFUTED** - the paragraph resolves them itself: format interchanges, no maker publishes a part-number cross-reference |
+| `rv-water-filter` | "End cap: as supplied." | **REAL, FIXED** - Pentek's Slim Line spec sheet publishes that its 5, 10 and 20 inch housings take DOE cartridges, so the format now reads "double open end (DOE)" in the record and on the page |
+| `rv-anode-rod` | Dometic flush-interval mapping | **REAL, FIXED** - the manual's line is "Full-Time RV'er, Every (60) days (Southwest US, every (30) days). Part-Time RV'er, Minimum of 2X annually (Southwest, every (90) days)"; page and tool now map each interval to the right kind of use |
+| `rv-anode-rod` | "The procedure is the same on both" | **REFUTED** - the next sentence names the one difference (rod against drain plug) |
+| `rv-anode-rod` | "lands on the part number" | **REAL, FIXED** - the tool has a third outcome (open the fitting and look); the lede now names it |
+| `rv-anode-rod` | "The two are hard to tell apart from outside" | **REAL, FIXED** - awkward, and the lede already carried it |
+| `rv-toilet-valve` | "A water valve is what fails when a toilet spends a winter..." | **REAL, FIXED** - now "freezing water can crack" |
+| `rv-toilet-valve` | "gives you the maker's part number" | **REAL, FIXED** - `dometic-traveler-vacuflush` carries `part: null` by design, so the lede names the route-to-the-maker outcome |
+| `rv-toilet-valve` | 400-series rough-in "any toilet" | **REFUTED** - Dometic's own page says "designed to replace any Dometic or other-brand RV toilet with a 7.625-in. or greater rough-in"; the paragraph frames it as maker-published figures |
+| `battery-runtime` | usable fractions carry no support | **REFUTED** - Battle Born and Renogy are cited for 50 percent and 80 to 100 percent |
+| `snow-load` | "Snow is water with air in it, so what it weighs is what the water in it weighs." | **REAL, FIXED** - tautology |
+| `snow-load` | "a manual that stays silent is not the maker saying the roof is fine" | **REAL, FIXED** - now "a silent manual is not a rating" |
+| `watts-to-amps` | capacities with no note about continuous loads | **NOT APPLIED** - the point is real, but the only page source for it (`rvelectricity.com`) answers HTTP 403 to a fetch, and the house rule is name the source or cut the sentence. Revisit when that page can be read |
+
+Closing pass score: **8 real and fixed, 6 refuted, 2 left, 1 deferred.** Two of the refutations were
+caught only by reading the artefact the claim cites (the regulation, Dometic's own page).

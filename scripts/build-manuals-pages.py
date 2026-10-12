@@ -397,9 +397,9 @@ def hub(rows, oem_count, model_count=0):
     <div class="wrap">
       <a class="card man-pinned" href="manuals/start-here.html">
         <div class="man-pinned-tag">Start here</div>
-        <div class="man-pinned-title">New to this coach? Start with the expensive mistakes</div>
+        <div class="man-pinned-title">New to RV ownership? Start with the expensive mistakes</div>
         <div class="man-pinned-body">The mistakes that cost money, each one a maker's own
-        instruction, and then the systems behind them in the order worth learning.</div>
+        instruction, followed by the systems behind them in the order worth learning.</div>
         <div class="guide-go sp-12">Open the walkthrough &#8594;</div>
       </a>
     </div>
@@ -436,7 +436,7 @@ def hub(rows, oem_count, model_count=0):
         <div class="guide-title">Has my unit been recalled</div>
         <div class="guide-meta sp-8">Where to check a unit by VIN, the
         makers who publish their own recall notices, and the federal file of manufacturer
-        communications, where the RV makers have filed two thousand of them.</div>
+        communications.</div>
         <div class="guide-go sp-12">Open &#8594;</div>
       </a>
     </div>

@@ -429,3 +429,47 @@ Verified after the run: CREDITS.md carries all **50** entries and the other 44 i
 
 Note for whoever touches this next: the Texas slug is `westtexas`, not `texas`, left over from when
 the state was called West Texas. A search for "texas" in that file finds nothing.
+
+---
+
+## Batch 4 - the 12 manuals pages (index reviewed 22:55, rest dispatched 2026-10-12)
+
+`manuals/index` was reviewed on 2026-10-11 at 22:55. Its findings were applied on 2026-10-12, at the
+GENERATOR (`scripts/build-manuals-pages.py`), then rebuilt generator -> shell -> search index ->
+stamps:
+
+- "New to this coach? Start with the expensive mistakes" became "New to RV ownership? ...". A travel
+  trailer owner does not call theirs a coach.
+- "The mistakes that cost money, each one a maker's own instruction, and then the systems behind them
+  in the order worth learning." became "...instruction, followed by the systems behind them in the
+  order worth learning." The "and then" clause was a run-on.
+- The recalls card's "where the RV makers have filed two thousand of them" was DROPPED. It was a
+  hand-typed prose number on a page where every other count is generated, and the recalls page
+  already states the measured figure (2,063 of 769,391 records) with its provenance.
+- NOT applied: "Every row links the maker's own page or document." It is the same shape as the
+  trust-claim cluster already awaiting Ty's ruling on /about, /privacy, /signin and the homepage, so
+  it is recorded rather than changed unilaterally.
+
+### THE LANE LINE MUST BE THE EXACT HOSTNAME - a dispatch bug, found and fixed
+
+The first nine manuals jobs were written with `LANE: chatgpt`, `LANE: qwen`, `LANE: aistudio` and so
+on. **Not one was picked up.** `jobLaneFor()` compares the LANE token against
+`location.hostname.toLowerCase()`, so `chatgpt` never equals `chatgpt.com`: every lane read every job
+as a foreign job, skipped it, and remembered the name in its `sentJobs` memo. The memo is keyed on
+the FILE NAME, so a re-route needs a fresh sortable id and a new file - an in-place LANE edit cannot
+clear it. The nine were deleted and re-queued as `20261012-0020-*` with the full hostnames
+(`chatgpt.com`, `chat.qwen.ai`, `aistudio.google.com`). The one manuals job that DID run
+(`manuals/index`) had the correct form, `LANE: chat.qwen.ai`, in its file all along.
+
+### THE LANES WENT DOWN MID-DISPATCH
+
+At 23:44 every lane stopped ticking at the same moment (the last bridge tool call in the server log
+is 23:44:53), and at 23:56 only the gemini PWA window was still open - the other five lane windows
+were closed. `bridge-up.sh status` read "STALE HEARTBEATS present" and `bridge-up.sh open` is the
+documented recovery, but bringing five browser windows up on Ty's desktop at midnight was not
+something to do unasked, so the jobs were left queued instead. They are durable: they sit in
+`queue/jobs/` and the lanes will consume them on the next tick.
+
+**State at hand-off:** nine jobs queued (`20261012-0020-RV-manuals-*`), no replies collected yet.
+`manuals/start-here` (179,630 chars of copy) and `manuals/brands` (104,155) were never dispatched -
+both are far past a single read and need their own slice plan.

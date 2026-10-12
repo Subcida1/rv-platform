@@ -9,8 +9,8 @@ Read this file, then `_todo/TOOL-PAGE-FINDINGS.md`, then `_todo/VOICE-AUDIT-2.md
 |-------|-------|-------|
 | 1. top-level | 6 | DONE — one real defect (the contact page's JS-only email), rest were reviewer-tool artifacts |
 | 2. hubs | 4 hubs, 9 slices | DONE — fixed the parts lede's ambiguous 62/83/74 and a typo |
-| 3. tool pages | 14, 16 slices | ~DONE — 10 pages fixed; 11 verified findings still to apply; 2 reviews outstanding |
-| 4. manuals pages | 12 | NOT STARTED |
+| 3. tool pages | 14, 16 slices | **DONE** — 8 more real findings fixed in `d497e5e5`; 6 refuted by reading the artefact, 2 left, 1 deferred. Full table in `TOOL-PAGE-FINDINGS.md` under "Batch 3 closed" |
+| 4. manuals pages | 12 | **IN FLIGHT** — `manuals/index` reviewed and its findings applied; the other 11 staged and queued as jobs `20261012-0020-RV-manuals-*`, replies NOT yet collected (the lanes went down mid-dispatch). `start-here` and `brands` need a slice plan |
 | 5. directory pages | 51 | NOT STARTED — data-driven, lowest marginal value, do last |
 
 Also open: ~20 OWED sub-items recorded in `scripts/content-manifest.json` (`verified_by` field), e.g.
