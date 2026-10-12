@@ -673,10 +673,10 @@
     "claims": "766d76473220c008"
   },
   "guides/rv-roof-leak-repair.html": {
-    "hash": "d5c8eb4b694e683f",
+    "hash": "a70476cfabf6910c",
     "status": "verified",
-    "verified_by": "The OWED independent pass on the new EPDM/TPO membrane-identification subsection is now DONE and CLEAN. Bridge review, grok lane (a different lane from the drafter), which read the sealing section and the full sources list. It verified the quotations against the makers word for word - Dicor's 'If the membrane has a black backing it is EPDM' and 'If it is a solid color all the way through the membrane, or if it has a fleece backing, it is TPO', Alpha's 'flat, smooth and very chalky to the touch', 'has a texture like an orange peel', 'TPO is not a rubber, it is a plastic' and 'moved away from rubber roof installations in 2011'. It also confirmed the vent-trim and rear-corner methods are the two Dicor publishes, that non-fleece TPO takes the Ultra Sealant System, and that the surrounding cure table, prep and membrane-compatibility sections track their sources. It flagged the page's own blunt gloss on the word 'secondary' as correctly presented as our reading rather than as maker language. 0 findings. Two gaps noted and not treated as defects: which specific cleaner the final wipe wants, and bead size or overlap, neither of which the makers publish. LIMIT: no network access, so quotations were checked against the page and the source summaries it carries; check-quotes.py remains the instrument for fetching the documents.",
-    "verified_at": "2026-10-11",
+    "verified_by": "2026-10-12 independent fresh-context reviewer pass on the EPDM/TPO subsection (the OWED marker, now cleared): two defects found and fixed. (1) 'coatings made for rubber roofs will not stay on it' overstated Alpha's qualified wording -- Alpha says they 'will not adhere well to the TPO roof and will peel off much sooner than they would off a rubber roof'; the sentence now carries that qualification. (2) 'two-part Ultra Sealant System' -- the word 'two-part' appears in none of the page's cited sources (0 hits in the Dicor Discovery Guide PDF, 0 on the cited Dicor self-leveling page), so the descriptor was cut and the product is named as Dicor names it. Four other reviewer findings were checked against the sources and refuted: 'their membrane' already carries Alpha's membrane qualifier; the page's existing flag-injury already covers roof falls, ladder placement and wet membranes; and removing a vent trim ring is not live work, so rule 3 does not reach it. check-quotes.py: 13 quotes / 4 sources, 0 not found.",
+    "verified_at": "2026-10-12",
     "sources": [],
     "spec": "_specs/rv-roof-leak-repair.md",
     "spec_waived": false,
