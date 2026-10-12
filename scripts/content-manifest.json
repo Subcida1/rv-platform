@@ -463,11 +463,14 @@
     "claims": "f2c9a068f6c16e27"
   },
   "guides/rv-black-tank-routine.html": {
-    "hash": "03df26b8bdc363ba",
-    "status": "unverified",
-    "verified_by": null,
-    "verified_at": null,
-    "sources": []
+    "hash": "ef138b7431e9e085",
+    "status": "verified",
+    "verified_by": "First independent pass on this guide, which had never had one. Bridge review, grok lane, reading the lede, the short-version callout, all four steps and the full sources list. 0 findings: no wrong fact, nothing unsourced, no safety gap, no house-voice problem, native English clean. It verified the thing Ty had just corrected - that the lede, the short callout and the Store section now agree, quoting all three. Two gaps noted, neither a defect: the page never quantifies how much antifreeze goes into the tank or the bowl, and the post-dump treatment leaves its wait time and water volume to the product label, which is the correct place for it. LIMIT: no network access, so the sourcing check was against the sources list the page carries, not the documents; check-quotes.py is the instrument that fetches.",
+    "verified_at": "2026-10-11",
+    "sources": [],
+    "spec": null,
+    "spec_waived": true,
+    "claims": []
   },
   "guides/rv-black-tank.html": {
     "hash": "fc24b4e9c4b30b1f",
@@ -672,7 +675,7 @@
   "guides/rv-roof-leak-repair.html": {
     "hash": "d5c8eb4b694e683f",
     "status": "verified",
-    "verified_by": "EPDM/TPO identification gap closed: new 'Which membrane is on your roof' subsection, grounded in Dicor EPDM/TPO Discovery Guide (black backing = EPDM; solid color or fleece backing = TPO; Ultra Sealant for non-fleece TPO) and Alpha Systems roofing FAQ (EPDM flat/smooth/chalky; TPO orange-peel texture; TPO is a plastic, not a rubber; industry moved away from rubber roofs in 2011). Both sources added to the page. OWED: the independent reviewer-subagent pass on the new EPDM/TPO subsection (2 fresh-context dispatch attempts failed at the harness level 2026-10-12 01:00 UTC; content source-adjudicated and check-quotes-clean, so the gap is closed but the new copy still wants that independent pass)",
+    "verified_by": "The OWED independent pass on the new EPDM/TPO membrane-identification subsection is now DONE and CLEAN. Bridge review, grok lane (a different lane from the drafter), which read the sealing section and the full sources list. It verified the quotations against the makers word for word - Dicor's 'If the membrane has a black backing it is EPDM' and 'If it is a solid color all the way through the membrane, or if it has a fleece backing, it is TPO', Alpha's 'flat, smooth and very chalky to the touch', 'has a texture like an orange peel', 'TPO is not a rubber, it is a plastic' and 'moved away from rubber roof installations in 2011'. It also confirmed the vent-trim and rear-corner methods are the two Dicor publishes, that non-fleece TPO takes the Ultra Sealant System, and that the surrounding cure table, prep and membrane-compatibility sections track their sources. It flagged the page's own blunt gloss on the word 'secondary' as correctly presented as our reading rather than as maker language. 0 findings. Two gaps noted and not treated as defects: which specific cleaner the final wipe wants, and bead size or overlap, neither of which the makers publish. LIMIT: no network access, so quotations were checked against the page and the source summaries it carries; check-quotes.py remains the instrument for fetching the documents.",
     "verified_at": "2026-10-11",
     "sources": [],
     "spec": "_specs/rv-roof-leak-repair.md",

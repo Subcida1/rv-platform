@@ -2435,7 +2435,7 @@ figure:has(svg[role="img"]){overflow-x:auto;overflow-y:hidden}
 /* .p is in the list because the two blocks still ragged at desktop width after the first
    pass were both 3-line .p paragraphs -- inside the range browsers will balance. Longer
    paragraphs are ignored by the property, so it costs nothing to leave it on them. */
-.state-meta{font-size:13px;color:var(--text-3);line-height:1.55;flex:1}
+.state-meta{font-size:13px;color:var(--text-3);line-height:1.55;flex:1;min-height:3.1em}
 .state-counts{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;font-size:12.5px;color:var(--text-3)}
 .state-counts b{color:var(--text);font-weight:800}
 .state-go{font-size:13.5px;font-weight:800;color:var(--indigo-deep);margin-top:2px}
