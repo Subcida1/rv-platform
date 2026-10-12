@@ -540,10 +540,10 @@
     "claims": "029e24133bf31376"
   },
   "guides/rv-furnace-not-working.html": {
-    "hash": "0d4c119f18297f00",
+    "hash": "1ce6399570304ac8",
     "status": "verified",
-    "verified_by": "Cloud: cut the invented cross-section figure at Ty's instruction, prose untouched",
-    "verified_at": "2026-10-10",
+    "verified_by": "Bridge review (qwen lane, independent of the drafter) found the gas-smell protocol stated three times: once in the paragraph and again nearly verbatim in the callout directly beneath it. Fixed by splitting the two roles rather than rewording: the paragraph keeps the stop conditions, the callout keeps the actions, and the protocol text now appears once. Also replaced the opaque callout opener 'On this page, the stop is the work.' with 'Get everyone out first.'. A second finding, that the Furrion attribution is redundant, was NOT applied: the reviewer's excerpt stopped 43 lines short of the Sources list so it could not check the attribution, and the Furrion manual is in fact listed. No fact, figure or source changed.",
+    "verified_at": "2026-10-11",
     "sources": [],
     "spec": "_specs/rv-furnace-not-working.md",
     "spec_waived": false,
