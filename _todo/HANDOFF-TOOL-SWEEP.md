@@ -173,6 +173,41 @@ Counts verified: 22+23+18+16+14+25+16+14+9 = 157, matching "157 parts shown".
   `<span class="verified">`, a styled pill with a check glyph (`.verified::before{content:"\2713"}`),
   sitting beside the "Claim your listing" heading. Not a broken CTA.
 
+## Neo's manuals deep-dive, second rotation — verified 2026-10-12 (5 pages, 9 findings)
+
+**No defects this round.** Six refuted, two confirmed as facts, one a suggestion. Neo's own note
+asked me to verify the link-target doubts "from direct href reads" because "text fetch cannot prove
+absence" — that is exactly right, and the direct read settled it.
+
+- **#1 "/manuals/recalls has NO H1" — REFUTED.** All **12** manuals pages carry exactly one `<h1>`,
+  `recalls.html` included. There is no site-wide missing-H1 pattern.
+- **#2 "the recalls H2 renders as 'Manufacturer communications in the federal filetop 15 makes'" —
+  REFUTED, measured in a browser.** The h2 text node ends at x=467 and the `.man-count` span begins
+  at x=479 — **a 12px gap, same line**, which is `.man-count{margin-left:12px}` doing its job. The
+  jam is `textContent` concatenating across a CSS margin.
+- **#3 "the Fleetwood Frontier GTX row renders mangled bytes" — REFUTED.** The row is clean markup:
+  `<span class="mm-name">Frontier GTX</span>` with `manual` and `parts` links to fleetwoodrv.com.
+  The file's only non-ASCII characters are `©` and `′`.
+- **#4 "the recalls analysis is dated 2026-09-21 with no refresh cadence" — PARTLY CONFIRMED.** The
+  date IS stated, with its source and method: *"Counted from TSBS_RECEIVED_2025-2026.zip at
+  static.nhtsa.gov on 2026-09-21, by make, from the 769,391 records in the file."* What is missing is
+  a stated refresh cadence. Recorded as a suggestion, not a defect.
+- **#5 "the hub never links brands, start-here or recalls" — REFUTED.** The hub links **all 11**
+  sub-pages, including all three named.
+- **#6 "most system-page rows render linkless" — REFUTED DEFINITIVELY, by direct href read.**
+  Counted per row: **110 rows across the 8 system pages, 110 with an external link.** power 34/34,
+  towing 27/27, kitchen 13/13, heating 8/8, chassis 8/8, water 7/7, exterior 7/7, sanitation 6/6.
+  The hub's promise holds exactly.
+- **#7 "'44 brands and 654 model lines' needs verifying" — CONFIRMED EXACT.** 44 `man-row` entries
+  and 654 `man-model` entries. The claim is true to the row.
+- **#8 "the manuals system pages have zero links to /tools" — CONFIRMED as a gap, RECORDED.**
+  Measured: 0 on all 8 system pages plus brands and the hub; `start-here` has 5 and `recalls` has 1.
+  Checked for anchors and found none that stand alone — `towing-and-running-gear` names "DOT Date
+  Code" only inside a row title that already links a guide. Same call as the other silo findings:
+  a worklist item, not a mechanical sweep.
+- **#9 "the recalls rows lack the usual link-index format" — REFUTED.** The page links
+  `https://originrv.com/tools/rv-recall-lookup`, so "Start with the lookup on this site" resolves.
+
 ## Neo's homepage deep-dive, second rotation — verified 2026-10-12 (6 pages, 10 findings)
 
 **One real defect. Nine refuted, and seven of those are repeats of classes already checked.** Neo's
