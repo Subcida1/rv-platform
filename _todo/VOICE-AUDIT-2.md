@@ -320,3 +320,70 @@ closed on Ty's instruction ("if their in we should be closing the lanes unless y
 Files are in `claude-bridge/staged/*__copy*.txt` with `.source.json` siblings. Batch 3 (15 tool
 pages) and batch 4 (12 manuals pages) are untouched. Directory's 51 pages are last by intent: they
 are data-driven and carry the lowest marginal value.
+
+---
+
+## Directory index work (Ty, 2026-10-11 ~22:05 PDT)
+
+### DONE - every state tile is the same height. Pushed `2f779c8c`.
+
+Ty: "make all the states tilecards the same physicalsize. Right now RV repair in Colorado is taller
+then RV Repair in Montana. All of these tilecards should be identical size."
+
+Measured first: 50 tiles, two heights (389 / 410), metas 20px or 40px - one line of region text or
+two. `.state-grid` is flex-wrap with `align-items:stretch`, so cards matched within a row while each
+row sized to its own tallest. Fix: `.state-meta` reserves two lines (`min-height:3.1em` = 2 x the
+1.55 line-height at 13px). Verified in a browser WITH CACHE DISABLED at 1920 / 1280 / 1100 / 981px:
+all 50 tiles measure one identical height at every width.
+
+Trap worth keeping: the first measurement after the CSS edit showed NO change, because the
+stylesheet URL is stamped and Chrome reused its cached copy. A CSS edit is invisible until
+`stamp_assets.py` runs.
+
+### Photos - five chosen, Texas awaiting Ty's pick
+
+The tile photographs live in `scripts/fetch-state-photos.py` (a table of Commons titles, licence,
+author, and the tile alt text) which downloads to `assets/img/states/<state>-800.jpg` and writes
+`CREDITS.md`.
+
+CHOSEN, verified by viewing them, not by their titles:
+
+| state | Commons file | licence | why |
+|---|---|---|---|
+| Hawaii | Diamond Head from Waikiki Beach.jpg | PD | sand, palms, Diamond Head - exactly what Ty asked for over the volcano |
+| Iowa | Iowa corn field IMG 1370.jpg | CC0 | corn and a farm gate, unmistakably Iowa |
+| Tennessee | Balsam Mountains viewed from Clingmans Dome, May 2017.jpg | CC0 | layered blue ridges, the Smokies |
+| Vermont | 2009-365-128 My Vermont Postcard (3513749919).jpg | CC0 | birches, Adirondack chairs, meadow - unmistakably New England |
+| Virginia | 2005-05-21 13-40-05 Riprap Overlook looking west Shenandoah National Park VA.jpg | CC BY 4.0 | classic Blue Ridge layered-ridge view |
+
+**Virginia is CC BY 4.0 - attribution REQUIRED.** The script's own docstring says every image is
+PD/CC0 "so the site can use them commercially with no attribution burden". The footer credit and
+CREDITS.md satisfy the obligation, but this is a departure from the stated rule and is flagged for
+Ty rather than assumed.
+
+REJECTED, with the reason, so nobody re-proposes them:
+- Texas Big Bend desert vistas (PD) - wide, but they read "southwest desert", not Texas.
+- Texas bluebonnets near Marble Falls (PD, Highsmith) - the most Texas-specific SUBJECT, but a
+  close-up of flowers, which is the "too zoomed in" complaint Ty raised.
+- Canon Ranch windmill and ranch views (PD) - these are HAER architectural drawings and
+  black-and-white survey plates, not landscapes. Two search rounds were spent discovering that.
+- Vermont Norton Pond foliage (CC BY 2.0) - pretty, but reads "autumn anywhere".
+- All "Vermont autumn" searches keep returning 19th-century Frederic Edwin Church drawings.
+
+### ALSO DONE - cleared the tmpfs that was silently blocking `ci.sh`
+
+`$XDG_RUNTIME_DIR` was 90% full. Cause: seven abandoned headless Chrome instances with
+`--user-data-dir=/tmp/<name>` profiles, aged 2.9h to 25.7h (cdp-w18, cdp-tools2, cdp-filter,
+wf-profile, chrome-head, chrome-nav, cdp-heading-2974904), each holding ~190MB. `ci.sh` had been
+warning that headless Chrome would fail with "No space left on device" while `df` looked fine, and
+the gate run stalled at the heading-space step because of it.
+
+Reaped by exact pid (91 processes signalled, then 14 stragglers), profiles removed, tmpfs went
+**90% -> 2%**, about 1.4GB freed. The live ci.sh run was left alone, as were the bridge lane
+windows (those use the Default profile, not /tmp).
+
+THREE SELF-MATCH FAILURES on the way, all the same class already in memory: my own command line
+contained the string I was grepping for (`cdp-parts`, then `user-data-dir=/tmp/` inside my own
+python source), so `ps | grep` matched my own shell and the check reported "still held" when it was
+not. The bracket trick does not help. The fix that worked: match on the parsed token
+(`t.startswith("--user-data-dir=")`) and skip my own pid and parent.
