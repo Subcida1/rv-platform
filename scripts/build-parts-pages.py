@@ -236,12 +236,12 @@ def build():
     out.append('''<div class="wrap page-intro w-820">
 <div class="sec-eyebrow">Reference</div>
 <h1>Every part of an RV</h1>
-<p class="lede">An RV is <span data-claim="parts-total">%d</span> parts across <span data-claim="parts-systems">%d</span> systems. Each part: what it does, the names people use for it, which RVs have one, and where to go next. <span data-claim="parts-covered">%d</span> of them already have a repair guide here, <span data-claim="parts-linked">%d</span> link to a guide or the maker's own documentation, and the other 74 are here so you can put a name to the thing that broke.</p>
+<p class="lede">An RV is <span data-claim="parts-total">%d</span> parts across <span data-claim="parts-systems">%d</span> systems. Each part: what it does, the names people use for it, which RVs have one, and where to go next. <span data-claim="parts-linked">%d</span> of them link to a repair guide or to the maker's own documentation, <span data-claim="parts-covered">%d</span> of those to a guide on this site, and the remaining <span data-claim="parts-unlinked">%d</span> are here so you can put a name to the thing that broke.</p>
 </div>
 
 <div class="sec">
 <div class="wrap">
-''' % (total, n_systems, covered, linked))
+''' % (total, n_systems, linked, covered, total - linked))
 
     # The filter. Everything below is already on the page; this only narrows it.
     out.append('''  <div class="filter-row parts-filter" role="search">

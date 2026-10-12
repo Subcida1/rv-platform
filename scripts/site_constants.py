@@ -127,6 +127,13 @@ def claim_values():
     # because fifteen parts have both and the sum would double-count them.
     out["parts-linked"] = str(sum(1 for s in psys for p in s["parts"]
                                  if p.get("guide") or p.get("makers")))
+    # THE REMAINDER WAS HARDCODED PROSE AND NOTHING CHECKED IT. The lede said "...and the other 74
+    # are here..." with 74 typed into the sentence, while every other number in it was derived. A
+    # bridge review read the three figures as a partition - 62 + 83 + 74 = 219 against a total of
+    # 157 - and reported a contradiction. The figures were right (83 already COUNTS the 62, and
+    # 83 + 74 = 157) but the sentence invited that reading, and the one number a human would have
+    # to re-type by hand was the one no gate could see. Derived and claimed now.
+    out["parts-unlinked"] = str(int(out["parts-total"]) - int(out["parts-linked"]))
     for s in psys:
         out["parts-%s" % s["key"]] = str(len(s["parts"]))
     return out

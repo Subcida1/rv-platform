@@ -2003,7 +2003,7 @@
           "id": "water-softener-and-filtration",
           "n": "Water softener and filtration",
           "aka": "water softener|onboard filter|portable softener",
-          "does": "removes hardness and off-flavors from of park water",
+          "does": "removes hardness and off-flavors from park water",
           "fails": [
             "resin exhausted",
             "not regenerated",
