@@ -243,3 +243,80 @@ page.
    `idle`, and an unresponsive lane is not idle. The escape hatch is dead-locked by its own guard.
 5. grok has a 300-second capture ceiling and releases itself; gemini and deepseek have none and
    retry forever, so they stay wedged until a human closes their windows.
+
+---
+
+## Sweep of pages that had never had the full checks (started 2026-10-11 21:20 PDT)
+
+**86 pages were unverified.** Grouped: directory 51, tools 15, manuals 12, root 6, parts 1, and one
+guide. The two guides that were unverified have since been reviewed and closed
+(`rv-black-tank-routine`, `rv-water-heater-anode-rod`), and the OWED pass on `rv-roof-leak-repair`
+is done and clean. Ledger now 48 verified.
+
+### Batch 1 - the six top-level pages. DONE, fleet closed.
+
+homepage, about, privacy, contact, 404, signin - reviewed by grok, chatgpt and qwen from
+`<main>`-only copy extracts, one read each.
+
+**ONE REAL DEFECT, FIXED: `/contact`.** `<p id="contact-msg">Loading contact address...</p>` was
+filled only by the inline script, so with JavaScript off a visitor saw a loading placeholder forever
+and had no route to the site. The element now carries the real address as a static mailto with the
+id preserved, so the script still enhances it and config.js stays the source of truth.
+
+**THE REST OF BATCH 1 WAS MY TOOLING, NOT THE PAGES - five artifact classes, all from the
+copy extractor.** Each one accused a page of a defect it does not have:
+
+1. **Tags stripped, so links disappeared.** The lane reported "I run an RV business, claim my
+   listing" as an offer with no route; it is `<a href="directory/#claim">`. Same for signin's
+   "Tell us what you want accounts to hold", which is `<a href="contact">`.
+2. **Headings flattened into the body.** "404 That page is not here" was reported as missing
+   punctuation; it is an `<h1>` plus a paragraph.
+3. **Comments half-stripped - the dangerous one.** Our pages carry real developer comments, some
+   quoting Ty. Stripping tags before comments meant a comment containing `<div>` had its opening
+   delimiter eaten and its BODY spilled into the extract as visible copy, so a lane reported Ty's
+   own dated 2026-10-05 instruction as "a first-time visitor has no idea what this sentence is
+   doing on the page". A comment is never copy.
+4. **Animated counters read as markup.** `data-count="14">0` was read as "0 RV tools, all free"
+   and reported as a false claim.
+5. **Whitespace around stripped tags.** "Guides , plain-English fixes" - the lane itself spotted
+   this one and labelled it an artifact of stripped markup.
+
+**The extractor is fixed and re-verified** (`/tmp/copy-extract.py`): comments removed FIRST, then
+scripts and styles; links kept as `[text](href)`, headings as `#`/`##`, list items and table cells
+preserved, counter numerals substituted from `data-count`. Verified on the homepage: the comment is
+gone, and the counts render "14 RV tools" and "47 RV troubleshooting guides" rather than 0.
+
+### AWAITING TY'S RULING - the trust-claim cluster, and it is site-wide
+
+**Ten sentences across four pages** assert our own trustworthiness rather than stating what the
+thing is. The standing rule is "never sell authenticity, just be good", but `/about` is the one page
+where describing method may be the point. Ty's call, because it changes what the pages claim:
+
+- `/about` (5): "written in good faith"; "cited to the documents behind them"; "Every guide carries
+  the date its claims were last checked"; "Any reasoning that's ours rather than a source's is
+  labeled as such"; "The standard every tool is held to: free, and answering like someone who has
+  done the job."
+- `/privacy` (1): "This page says exactly what is collected, so you can decide if you're okay with
+  that."
+- `/privacy` - SEPARATE AND ARGUABLY A REAL DEFECT, not a style point: "nothing is kept after a
+  request to remove it" promises complete deletion, which is probably false if backups exist.
+- `/privacy` (1 clarity): "The site itself doesn't set any cookies" sits two sentences after saying
+  Analytics does. Technically true, reads as a contradiction.
+- `/privacy` (1 house voice): "does not sell anything about you to anyone".
+- `/signin` (2): "nothing sold to anyone"; "No tracking, no social-login pressure, no address book."
+- `/homepage` (2): "The maker manuals behind every part."; "The maker documents behind every part,
+  linked at the source."
+
+### Batch 2 - staged and NOT dispatched
+
+Hubs extracted with the fixed tool and split so every job is a single read, then the fleet was
+closed on Ty's instruction ("if their in we should be closing the lanes unless your running more"):
+
+    tools/index.html    2 jobs (8,912 + 4,018 chars)
+    parts/index.html    5 jobs (~9k each; 157 entries)
+    manuals/index.html  1 job  (3,363 chars)
+    guides/index.html   1 job  (6,139 chars)
+
+Files are in `claude-bridge/staged/*__copy*.txt` with `.source.json` siblings. Batch 3 (15 tool
+pages) and batch 4 (12 manuals pages) are untouched. Directory's 51 pages are last by intent: they
+are data-driven and carry the lowest marginal value.
