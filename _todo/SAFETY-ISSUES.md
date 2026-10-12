@@ -244,5 +244,10 @@ verifications again):**
   unattended-heater advice rewritten to state the fire hazard; the "makers publish" ratio now has
   a listed source.
 - roof-leak-repair: the blunt line now derives from the cited Dicor "secondary seal" language
-  ("secondary" implies a primary seal is missing) instead of stating the overclaim. STILL OWED:
-  the EPDM/TPO membrane-identification gap - needs maker-guidance research, not invention.
+  ("secondary" implies a primary seal is missing) instead of stating the overclaim.
+- roof-leak-repair, EPDM/TPO identification gap: CLOSED 2026-10-11 (day-driver fire, commit
+  below). New "Which membrane is on your roof" subsection, grounded in the two makers' own
+  guidance: Dicor's EPDM/TPO Discovery Guide (vent-trim method; black backing = EPDM; solid color
+  or fleece backing = TPO; Ultra Sealant System for non-fleece TPO) and Alpha Systems' roofing
+  FAQ (EPDM flat/smooth/chalky; TPO orange-peel texture; TPO is a plastic, not a rubber; the
+  industry moved away from rubber roof installations in 2011). Both sources listed on the page.

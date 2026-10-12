@@ -38,6 +38,37 @@ commits, so two sessions do not review the same page.
 
 ---
 
+# FIRE REPORT - 2026-10-12 01:00 UTC (day-driver cron, scheduled, 18:00 PDT 2026-10-11)
+
+**The named queue (W3, W5, W6, W7, W12, W15, W16, second-pass) stayed closed or blocked, so this
+fire worked the one recorded OWED item left from the safety pass: the EPDM/TPO membrane-
+identification gap on `guides/rv-roof-leak-repair.html` (SAFETY-ISSUES.md section G). CLOSED.**
+
+- **`guides/rv-roof-leak-repair.html` — new "Which membrane is on your roof" subsection** under
+  "Sealing it", grounded entirely in the two makers' own documents (verified by direct fetch, not
+  search summaries): Dicor's EPDM/TPO Discovery Guide (2-page PDF, mozu CDN, HTTP 200) gives the
+  vent-trim method - remove a ceiling vent's garnish (four screws), lift the wrapped membrane,
+  read the back: black backing = EPDM; solid color all the way through, or a fleece backing = TPO;
+  fleece-backed TPO gets ordinary lap sealant, non-fleece TPO gets the two-part Ultra Sealant
+  System; second method at the rear roof corner via the side trim (termination bar). Alpha Systems
+  LLC's roofing FAQ (alphallc.us/products/roofing/) gives the touch test: EPDM is flat, smooth and
+  chalky and loses its white top layer; TPO has an orange-peel texture, is the same color through
+  the sheet, is "not a rubber, it is a plastic"; the industry moved away from rubber roofs in
+  2011. All four Alpha quotes and both Dicor quotes are verbatim from those two documents.
+- Both maker sources added to the page's Sources list (Dicor Discovery Guide PDF + Alpha roofing
+  FAQ). The rehost blacklist does not hit either (mozu CDN is Dicor's own; alphallc.us is the
+  maker's own domain).
+- **Verification re-earned**: `verify-content.py --verify` with a note recording exactly what
+  changed and that the gap is closed. check-quotes.py: 13 quotes against 4 sources, every quote
+  found in a cited source, 0 not found. Search index unaffected (title/description unchanged).
+- CI: local `bash scripts/ci.sh` result below in the commit section; archive check; explicit-path
+  commit; push. Machine healthy (5.8 GiB RAM free, 3.9 GiB swap free) - no memory constraints on
+  this fire.
+
+Queue status unchanged: W3 waits on Ty's spec for the clogged-black-tank page; W5's deeper part
+pages wait on reader evidence, the tongue jack on Ty's photos; W6/W7 closed; the second-pass OWED
+list in the manifest remains EMPTY.
+
 # FIRE REPORT - 2026-10-11 16:00-17:00 PDT (day-driver cron, scheduled)
 
 **THE NAMED QUEUE (W3, W5, W6, W7, W12, W15, W16, second-pass) IS CLOSED OR BLOCKED**, so
