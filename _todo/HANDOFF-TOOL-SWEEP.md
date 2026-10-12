@@ -16,6 +16,51 @@ Read this file, then `_todo/TOOL-PAGE-FINDINGS.md`, then `_todo/VOICE-AUDIT-2.md
 Also open: ~20 OWED sub-items recorded in `scripts/content-manifest.json` (`verified_by` field), e.g.
 the visible "Last updated" disagreeing with the JSON-LD `dateModified` on several guides.
 
+## Neo's deep-dive reports — verified 2026-10-12 (four slices, 36 findings, 0 new defects)
+
+Neo (Muse) sent four deep-dive reports: guides, tools, hubs, homepage. Every finding was checked
+against the artefact before acting. **The extractor Neo uses produces systematic artifacts, and they
+account for almost every finding.** The classes, so the next reader does not re-litigate them:
+
+1. **`<base href="/">` is not honoured.** Every page carries it as the first head element, so a
+   relative `href="guides/x"` resolves to `/guides/x`, not `/guides/guides/x`. Neo reported "every
+   guide link 404s" and "every state card 404s via doubled path" — **measured in a real browser on
+   the live site: 0 doubled paths across all five hubs.** The 404s are real URLs that nothing links to.
+2. **`<select>` options are read as body text.** The weight calculator's gray/black tank size
+   dropdowns became a "## Product Variants ... Options: 30 gal (about 250 lb)" block. It has never
+   existed in the file, in git history, or on the live page. Same for the "Source:" line.
+3. **`<b>` is converted to markdown `**`.** "Can injure you**A slide-out mechanism..." is the
+   extractor's own markup, not a missing separator. Rendered gap measured: **11px** (`.flag-h` is
+   `display:block` with `margin:0 0 8px`).
+4. **Inline `<svg>` is invisible.** "Orphaned caption / diagram missing" — the diagram is an inline
+   SVG inside the same `<figure>` as the caption. There is no `<img>` to find.
+5. **Section eyebrows read as error text.** "Something is broken" is a deliberate `.sec-eyebrow`
+   (one of five on the homepage: "Everything in one place", "First-timers", "Winter season",
+   "Something is broken", "Directory"), not a crashed component.
+6. **`<main>`-only link counts miss the nav and footer.** "Homepage links only to guides" — the
+   rendered `<main>` carries 17 tools links, 4 directory, 2 manuals, 1 parts.
+
+**The real defects found across all four reports, all in the tools slice, all fixed:**
+
+| page | defect | verdict |
+|------|--------|---------|
+| `tools/snow-load` | "turns depth into weight to turn depth into weight" — duplicated phrase | REAL, fixed |
+| `tools/snow-load` | "The flat figure is the higher one, which is which errs on the safe side." — garbled | REAL, fixed |
+| `tools/snow-load` | "It assumes ... and treat the result as a rough estimate" — subject/verb mismatch | REAL, fixed |
+| `tools/snow-load` + `tools/index` | both claimed the NWS method for the depth→weight path; the page itself says the depth figure is Keystone's (30 lb/ft² ≈ 2 ft). The NWS source backs only the water-equivalent path. | REAL, fixed in 4 places (3 meta tags + the hub card) |
+
+**Verified as already correct, no action:** the winter-card hrefs (all 5 resolve, titles match), the
+homepage counts ("Forty-two" = 42 cards, 47 = 47 files), the manuals-hub "110 documents across 94
+makers" (W17.1 measured this — the number is right), the region taxonomy (VisitTheUSA's 6-region
+scheme, adopted verbatim by Ty's instruction), `/parts` intro copy (there is a lede), `/parts`
+coverage wording ("83 of them link..."), `manuals/start-here` under `/manuals/` (deliberate — it is
+the pinned "Start here" walkthrough), and the kicker labels (a subject taxonomy: Troubleshooting
+guide ×20, Winter guide ×5, Running gear guide ×3, etc.).
+
+**Still open, recorded not fixed:** the weight calculator is named "Weight calculator" (nav/footer,
+267 uses), "Weight & Distribution Calculator" (tools hub card), "RV Towing Calculator" (page title)
+and "Weight and towing" (homepage card). One canonical name is a site-wide editorial call.
+
 ## The two things that actually find defects on this site
 
 1. **A page contradicting itself.** Four of the ten tool-page defects were a page disagreeing with
