@@ -82,10 +82,10 @@ Recorded anyway, because the source should be traceable.
 
 ## westtexas
 
-- File: [Big Bend Santa Elena Canyon 2006.JPG](https://commons.wikimedia.org/wiki/File:Big_Bend_Santa_Elena_Canyon_2006.JPG)
-- Author: Leaflet
-- Licence: Public domain (no known restrictions) <https://commons.wikimedia.org/wiki/File:Big_Bend_Santa_Elena_Canyon_2006.JPG>
-- Tile alt text: Santa Elena Canyon on the Rio Grande, Big Bend National Park, Texas
+- File: [Gfp-texas-big-bend-national-park-across-the-valley.jpg](https://commons.wikimedia.org/wiki/File:Gfp-texas-big-bend-national-park-across-the-valley.jpg)
+- Author: Yinan Chen
+- Licence: Public domain (no known restrictions) <https://commons.wikimedia.org/wiki/File:Gfp-texas-big-bend-national-park-across-the-valley.jpg>
+- Tile alt text: Red rock cliffs and desert vegetation in Big Bend National Park, Texas
 
 ## connecticut
 
@@ -159,10 +159,10 @@ Recorded anyway, because the source should be traceable.
 
 ## vermont
 
-- File: [Fall scene in Vermont LCCN2011630153.tif](https://commons.wikimedia.org/wiki/File:Fall_scene_in_Vermont_LCCN2011630153.tif)
-- Author: Carol M. Highsmith
-- Licence: Public domain (no known restrictions) <https://www.loc.gov/item/2011630153/>
-- Tile alt text: Autumn color on a hillside in Vermont
+- File: [2009-365-128 My Vermont Postcard (3513749919).jpg](https://commons.wikimedia.org/wiki/File:2009-365-128_My_Vermont_Postcard_%283513749919%29.jpg)
+- Author: cogdogblog
+- Licence: CC0 1.0 (public domain dedication) <https://creativecommons.org/publicdomain/zero/1.0/>
+- Tile alt text: Birch trees and Adirondack chairs in a meadow, Vermont
 
 ## alaska
 
@@ -173,10 +173,10 @@ Recorded anyway, because the source should be traceable.
 
 ## hawaii
 
-- File: [Kīlauea volcano eruption 20201220.jpg](https://commons.wikimedia.org/wiki/File:K%C4%ABlauea_volcano_eruption_20201220.jpg)
-- Author: Hawaii Volcanoes National Park
-- Licence: Public domain (no known restrictions) <https://commons.wikimedia.org/wiki/File:K%C4%ABlauea_volcano_eruption_20201220.jpg>
-- Tile alt text: The Kīlauea summit eruption at dusk, Hawaii Volcanoes National Park
+- File: [Diamond Head from Waikiki Beach.jpg](https://commons.wikimedia.org/wiki/File:Diamond_Head_from_Waikiki_Beach.jpg)
+- Author: Jackie Gleason
+- Licence: Public domain (no known restrictions) <https://commons.wikimedia.org/wiki/File:Diamond_Head_from_Waikiki_Beach.jpg>
+- Tile alt text: Diamond Head seen from Waikiki Beach, Honolulu, Hawaii
 
 ## louisiana
 
@@ -215,10 +215,10 @@ Recorded anyway, because the source should be traceable.
 
 ## tennessee
 
-- File: [Mountain Stream, Great Smoky Mountains National Park.jpg](https://commons.wikimedia.org/wiki/File:Mountain_Stream%2C_Great_Smoky_Mountains_National_Park.jpg)
-- Author: Northern-Virginia-Photographer
+- File: [Balsam Mountains viewed from Clingmans Dome, May 2017.jpg](https://commons.wikimedia.org/wiki/File:Balsam_Mountains_viewed_from_Clingmans_Dome%2C_May_2017.jpg)
+- Author: Thomson200
 - Licence: CC0 1.0 (public domain dedication) <https://creativecommons.org/publicdomain/zero/1.0/>
-- Tile alt text: A mountain stream in Great Smoky Mountains National Park, Tennessee
+- Tile alt text: The Balsam Mountains seen from Clingmans Dome, Great Smoky Mountains National Park, Tennessee
 
 ## kentucky
 
@@ -257,10 +257,10 @@ Recorded anyway, because the source should be traceable.
 
 ## virginia
 
-- File: [Shenandoah National Park banner Fall colors.jpg](https://commons.wikimedia.org/wiki/File:Shenandoah_National_Park_banner_Fall_colors.jpg)
+- File: [Low Lying Clouds in the Shenandoah Valley (50569770113).jpg](https://commons.wikimedia.org/wiki/File:Low_Lying_Clouds_in_the_Shenandoah_Valley_%2850569770113%29.jpg)
 - Author: Shenandoah National Park
-- Licence: Public domain (National Park Service) <https://commons.wikimedia.org/wiki/File:Shenandoah_National_Park_banner_Fall_colors.jpg>
-- Tile alt text: Fall colour in Shenandoah National Park, Virginia
+- Licence: Public domain (National Park Service) <https://commons.wikimedia.org/wiki/File:Low_Lying_Clouds_in_the_Shenandoah_Valley_(50569770113).jpg>
+- Tile alt text: Autumn color and low cloud filling the Shenandoah Valley, Virginia
 
 ## westvirginia
 
@@ -341,10 +341,10 @@ Recorded anyway, because the source should be traceable.
 
 ## iowa
 
-- File: [Loess Hills Scenic Byway - Loess Hills State Forest - NARA - 7720117.jpg](https://commons.wikimedia.org/wiki/File:Loess_Hills_Scenic_Byway_-_Loess_Hills_State_Forest_-_NARA_-_7720117.jpg)
-- Author: National Archives
-- Licence: Public domain (no known restrictions) <https://commons.wikimedia.org/wiki/File:Loess_Hills_Scenic_Byway_-_Loess_Hills_State_Forest_-_NARA_-_7720117.jpg>
-- Tile alt text: The Loess Hills in western Iowa
+- File: [Iowa corn field IMG 1370.jpg](https://commons.wikimedia.org/wiki/File:Iowa_corn_field_IMG_1370.jpg)
+- Author: Don McCulley
+- Licence: CC0 1.0 (public domain dedication) <https://creativecommons.org/publicdomain/zero/1.0/>
+- Tile alt text: A corn field in Iowa
 
 ## missouri
 

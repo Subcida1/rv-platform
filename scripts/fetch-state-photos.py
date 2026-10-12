@@ -17,6 +17,7 @@ Run: python3 scripts/fetch-state-photos.py
 """
 import io
 import subprocess
+import sys
 import urllib.parse
 from pathlib import Path
 
@@ -146,11 +147,11 @@ PHOTOS += [
      "Public domain (National Park Service)", "National Park Service",
      "https://commons.wikimedia.org/wiki/File:Carlsbad_Caverns_National_Park_P1012859.jpg",
      "Carlsbad Caverns National Park, New Mexico"),
-    ('westtexas',
-     'Big Bend Santa Elena Canyon 2006.JPG',
-     'Public domain (no known restrictions)', 'Leaflet',
-     'https://commons.wikimedia.org/wiki/File:Big_Bend_Santa_Elena_Canyon_2006.JPG',
-     'Santa Elena Canyon on the Rio Grande, Big Bend National Park, Texas'),
+('westtexas',
+     'Gfp-texas-big-bend-national-park-across-the-valley.jpg',
+     'Public domain (no known restrictions)', 'Yinan Chen',
+     'https://commons.wikimedia.org/wiki/File:Gfp-texas-big-bend-national-park-across-the-valley.jpg',
+     'Red rock cliffs and desert vegetation in Big Bend National Park, Texas'),
 ]
 
 
@@ -532,11 +533,11 @@ PHOTOS += [
      'Public domain (no known restrictions)', 'Swampyank at English Wikipedia',
      'https://commons.wikimedia.org/wiki/File:Newport_Harbor_Light_in_Newport,_Rhode_Island_(2008).jpg',
      'The Newport Harbor Light and the Newport Bridge, Rhode Island'),
-    ('vermont',
-     'Fall scene in Vermont LCCN2011630153.tif',
-     'Public domain (no known restrictions)', 'Carol M. Highsmith',
-     'https://www.loc.gov/item/2011630153/',
-     'Autumn color on a hillside in Vermont'),
+('vermont',
+     '2009-365-128 My Vermont Postcard (3513749919).jpg',
+     'CC0 1.0 (public domain dedication)', 'cogdogblog',
+     'https://creativecommons.org/publicdomain/zero/1.0/',
+     'Birch trees and Adirondack chairs in a meadow, Vermont'),
 ]
 
 
@@ -770,11 +771,11 @@ PHOTOS += [
      'Public domain (no known restrictions)', 'Denali National Park and Preserve',
      'https://commons.wikimedia.org/wiki/File:Wonder_Lake_and_Denali.jpg',
      'Denali above Wonder Lake, Denali National Park, Alaska'),
-    ('hawaii',
-     'Kīlauea volcano eruption 20201220.jpg',
-     'Public domain (no known restrictions)', 'Hawaii Volcanoes National Park',
-     'https://commons.wikimedia.org/wiki/File:K%C4%ABlauea_volcano_eruption_20201220.jpg',
-     'The Kīlauea summit eruption at dusk, Hawaii Volcanoes National Park'),
+('hawaii',
+     'Diamond Head from Waikiki Beach.jpg',
+     'Public domain (no known restrictions)', 'Jackie Gleason',
+     'https://commons.wikimedia.org/wiki/File:Diamond_Head_from_Waikiki_Beach.jpg',
+     'Diamond Head seen from Waikiki Beach, Honolulu, Hawaii'),
 ]
 
 
@@ -851,11 +852,11 @@ PHOTOS += [
      "Public domain (released by the author)", "Amann09 at English Wikipedia",
      "https://commons.wikimedia.org/wiki/File:Pulpit_Rock_in_the_Fall.jpg",
      "Pulpit Rock in autumn, Cheaha State Park, Alabama"),
-    ("tennessee",
-     "Mountain Stream, Great Smoky Mountains National Park.jpg",
-     "CC0 1.0 (public domain dedication)", "Northern-Virginia-Photographer",
-     "https://creativecommons.org/publicdomain/zero/1.0/",
-     "A mountain stream in Great Smoky Mountains National Park, Tennessee"),
+('tennessee',
+     'Balsam Mountains viewed from Clingmans Dome, May 2017.jpg',
+     'CC0 1.0 (public domain dedication)', 'Thomson200',
+     'https://creativecommons.org/publicdomain/zero/1.0/',
+     'The Balsam Mountains seen from Clingmans Dome, Great Smoky Mountains National Park, Tennessee'),
     ("kentucky",
      "CumberlandFalls.jpg",
      "Public domain (released by the author)", "ChrisKuehl",
@@ -881,11 +882,11 @@ PHOTOS += [
      'Public domain (no known restrictions)', 'National Archives (NARA)',
      'https://commons.wikimedia.org/wiki/File:Blue_Ridge_Parkway_-_Autumn_Along_the_Blue_Ridge_Parkway_-_NARA_-_7717434.jpg',
      'Autumn along the Blue Ridge Parkway, North Carolina'),
-    ("virginia",
-     "Shenandoah National Park banner Fall colors.jpg",
-     "Public domain (National Park Service)", "Shenandoah National Park",
-     "https://commons.wikimedia.org/wiki/File:Shenandoah_National_Park_banner_Fall_colors.jpg",
-     "Fall colour in Shenandoah National Park, Virginia"),
+('virginia',
+     'Low Lying Clouds in the Shenandoah Valley (50569770113).jpg',
+     'Public domain (National Park Service)', 'Shenandoah National Park',
+     'https://commons.wikimedia.org/wiki/File:Low_Lying_Clouds_in_the_Shenandoah_Valley_(50569770113).jpg',
+     'Autumn color and low cloud filling the Shenandoah Valley, Virginia'),
     ("westvirginia",
      "The New River Gorge Bridge, a steel arch bridge 3,030 feet long over the New River Gorge near Fayetteville in Fayette County, West Virginia LCCN2015634240.tif",
      "Public domain (no known restrictions)", "Carol M. Highsmith",
@@ -1184,11 +1185,11 @@ PHOTOS += [
      "Public domain (US Forest Service)", "United States Forest Service",
      "https://commons.wikimedia.org/wiki/File:Boundary_Waters_Canoe_Area.jpg",
      "The Boundary Waters Canoe Area in northern Minnesota"),
-    ("iowa",
-     "Loess Hills Scenic Byway - Loess Hills State Forest - NARA - 7720117.jpg",
-     "Public domain (no known restrictions)", "National Archives",
-     "https://commons.wikimedia.org/wiki/File:Loess_Hills_Scenic_Byway_-_Loess_Hills_State_Forest_-_NARA_-_7720117.jpg",
-     "The Loess Hills in western Iowa"),
+('iowa',
+     'Iowa corn field IMG 1370.jpg',
+     'CC0 1.0 (public domain dedication)', 'Don McCulley',
+     'https://creativecommons.org/publicdomain/zero/1.0/',
+     'A corn field in Iowa'),
     ("missouri",
      "Views at Ozark National Scenic Riverways, Missouri (00a1043e-3653-43ae-a1e6-f21a12e1e446).jpg",
      "Public domain (National Park Service)", "NPS staff",
@@ -1198,12 +1199,18 @@ PHOTOS += [
 
 
 def main():
+    # --only texas,iowa,... fetches just those tiles. Added 2026-10-11: changing six photographs
+    # re-pulled all fifty, each a 2000px request to Commons, so a partial change was slow and a
+    # single transient failure left the run half-applied.
+    only = None
+    if "--only" in sys.argv:
+        only = {s.strip() for s in sys.argv[sys.argv.index("--only") + 1].split(",") if s.strip()}
+
     OUT.mkdir(parents=True, exist_ok=True)
-    credits = ["# State tile photo credits", "",
-               "Every tile is public domain or CC0, so no attribution is required.",
-               "Recorded anyway, because the source should be traceable.", ""]
 
     for slug, title, lic, author, lic_url, alt in PHOTOS:
+        if only and slug not in only:
+            continue
         url = thumb_url(title)
         r = subprocess.run(["curl", "-sS", "--max-time", "120", "-A", UA, url], capture_output=True)
         im = Image.open(io.BytesIO(r.stdout)).convert("RGB")
@@ -1216,6 +1223,10 @@ def main():
             print("  wrote  assets/img/states/%s (%dx%d, %.0f KB)"
                   % (out.name, w, h, out.stat().st_size / 1024))
 
+    credits = ["# State tile photo credits", "",
+               "Every tile is public domain or CC0, so no attribution is required.",
+               "Recorded anyway, because the source should be traceable.", ""]
+    for slug, title, lic, author, lic_url, alt in PHOTOS:
         credits += [
             "## %s" % slug,
             "",
@@ -1225,7 +1236,7 @@ def main():
             "- Tile alt text: %s" % alt,
             "",
         ]
-        (OUT / "CREDITS.md").write_text("\n".join(credits), encoding="utf-8")
+    (OUT / "CREDITS.md").write_text("\n".join(credits), encoding="utf-8")
     print("  wrote  assets/img/states/CREDITS.md")
 
 

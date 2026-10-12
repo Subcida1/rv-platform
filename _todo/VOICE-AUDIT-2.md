@@ -387,3 +387,45 @@ contained the string I was grepping for (`cdp-parts`, then `user-data-dir=/tmp/`
 python source), so `ps | grep` matched my own shell and the check reported "still held" when it was
 not. The bracket trick does not help. The fix that worked: match on the parsed token
 (`t.startswith("--user-data-dir=")`) and skip my own pid and parent.
+
+### Photos - DONE, and the Texas trap
+
+All six replaced. Each was chosen by VIEWING the image, because the Commons titles are not evidence
+about what a picture shows - "Fall View into the Shenandoah Valley" and a black-and-white HAER
+survey plate were both plausible by title.
+
+Final set, all public domain or CC0 so CREDITS.md's "no attribution is required" line stays true:
+
+| state | tile now shows | licence |
+|-------|----------------|---------|
+| texas | red rock cliffs and desert, Big Bend National Park | PD, Yinan Chen |
+| iowa | a corn field and a farm gate | CC0, Don McCulley |
+| tennessee | the Balsam Mountains from Clingmans Dome | CC0, Thomson200 |
+| virginia | autumn colour with low cloud filling the Shenandoah Valley | PD, NPS |
+| vermont | birches, Adirondack chairs and a meadow | CC0, cogdogblog |
+| hawaii | Diamond Head from Waikiki Beach | PD, Jackie Gleason |
+
+**TEXAS NEARLY GOT "REPLACED" WITH ITSELF.** The tile already used
+`Big Bend Santa Elena Canyon 2006.JPG` - which is the file first picked as its replacement. A
+replacement that changes nothing would have shipped as a fix. It also explains Ty's complaint: the
+existing image is a canyon CLOSE-UP, which is exactly the "too zoomed in" problem. The tile now
+carries a wide Big Bend landscape instead. **Lesson: check the CURRENT value before "replacing" it.**
+
+Virginia: the CC BY 4.0 Shenandoah candidate was dropped for the NPS public-domain one, which keeps
+the credits header true. Ty's call: "find a diff one for virginia seems easier then changing this
+for 1 state".
+
+### The photo fetcher had two design faults, both fixed
+
+1. It re-downloaded ALL fifty tiles every run (each a 2000px request to Commons), so changing six
+   photographs meant fifty downloads, and one transient failure left the run half applied. It now
+   takes `--only <slug,slug>`.
+2. `CREDITS.md` was rebuilt and written INSIDE the download loop, so a failure part way through
+   truncated it to whatever had been fetched. It is generated once, from the whole table, at the end.
+
+Ty on reading the old behaviour: "weird seems like poor design". He was right.
+
+Verified after the run: CREDITS.md carries all **50** entries and the other 44 images were untouched.
+
+Note for whoever touches this next: the Texas slug is `westtexas`, not `texas`, left over from when
+the state was called West Texas. A search for "texas" in that file finds nothing.
