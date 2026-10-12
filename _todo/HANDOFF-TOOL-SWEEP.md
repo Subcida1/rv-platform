@@ -65,3 +65,13 @@ Non-negotiables learned the hard way:
 1. Apply the 11 verified findings in `_todo/TOOL-PAGE-FINDINGS.md` under "STILL TO APPLY".
 2. Run batch 4: 12 manuals pages, same recipe.
 3. Then batch 5, the 51 directory pages.
+
+## Lane availability (2026-10-11 23:44 PDT)
+
+- **grok.com is OUT for about 22 hours** — it hit a usage limit (Ty, 23:44). It is also the lane that
+  went `stalled` mid-batch and silently held three jobs. Do not dispatch to grok until that window
+  passes; a job sent to it will sit.
+- Healthy and used successfully tonight: **chatgpt.com**, **chat.qwen.ai**. aistudio.google.com and
+  gemini.google.com were reachable earlier in the evening.
+- `bridge-up.sh close` STOPS AT THE FIRST REFUSAL (it `return 1`s inside the loop), so one non-idle
+  lane blocks closing the rest. Close lanes one at a time, or wait for all to be idle.
