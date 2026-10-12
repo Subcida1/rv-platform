@@ -64,3 +64,20 @@ one verified pass rather than reply by reply.
 
 - `tools/rv-converter-finder` — capture ceiling, released, no answer. Re-queue with a fresh id
   (the ledger blocks a re-used one).
+
+## Converter finder, second attempt (the first hit the capture ceiling)
+
+| finding | verdict |
+|---------|---------|
+| opening "Type the model on your unit and this reads all of them." vs the page's own "Two of the three charts are read into this tool, and the third is not." | **REAL, FIXED** — a direct self-contradiction. Now "answers from each chart it reads". |
+| "So a Magnetek number will always come back as not found here" conflicts with a source list naming Magnetek | **REFUTED.** The `covers` list naming Magnetek belongs to WFCO's chart, which the record marks `"parsed": false` and the tool does not read. The page's claim is correct. |
+| "Every major maker publishes a chart saying what replaces those" | REAL, mild — the page discusses three charts; "every major maker" is broader than the evidence on the page |
+| "stepping up from a 45-amp unit to a 60-amp one is usually safe and sometimes pointless" | REAL — a general safety reassurance about an electrical replacement |
+
+## Refuted by reading the artefact, not the lane's summary (three today)
+
+1. `battery-runtime` — "divides watt-hours by watts with no voltage input". The tool derives nominal
+   volts from the chemistry and prints it.
+2. `rv-converter-finder` — "Magnetek always returns not found" is called a conflict; it is correct.
+3. (earlier) `rv-water-heater-anode-rod` — "cathodic action" called unsourced; Dometic's own manual
+   says it verbatim.
