@@ -191,3 +191,55 @@ thesis — do not buy a part first — without the contradictory "reporting rath
   repointing to a jayco.com copy.
 - **Still owed:** the guide has never had an independent review, and it is one of only two unverified
   guides left. The four corrections above are Ty's, applied directly, not a reviewed pass.
+
+---
+
+## Independent bridge reviews (dispatched 2026-10-11 ~21:15 PDT)
+
+Four reviews sent to the bridge fleet, one page per lane, as the independent pass these pages owed.
+The fleet had been down: five of six lanes last heartbeated ~29 hours earlier. `bridge-up.sh open`
+brought all six back.
+
+| page | lane | state |
+|------|------|-------|
+| `rv-black-tank-routine` | aistudio | in flight |
+| `rv-water-heater-anode-rod` | qwen | in flight |
+| `rv-roof-leak-repair` (EPDM subsection) | aistudio | queued |
+| `rv-furnace-not-working` (callout) | qwen | **DONE** |
+
+**Furnace callout — applied (`98d93d4f`).** The lane found the gas-smell protocol stated three
+times: once in the paragraph and again almost verbatim in the callout beneath it. Fixed by splitting
+the roles: paragraph keeps the stop conditions, callout keeps the actions, protocol text appears
+once. The opaque opener "On this page, the stop is the work." became "Get everyone out first."
+
+Its second finding was NOT applied and the reason matters: the lane also ruled on whether the
+Furrion attribution was earned and whether it was redundant. It could not have known either way -
+**the excerpt it was given stopped 43 lines short of the Sources list**, and it cannot open the PDF.
+Furrion's manual is listed, so the attribution stands.
+
+**DISPATCH LESSON — carry this into any future callout review.** A review scoped to one component
+must still include the page's Sources list, or the lane returns sourcing conclusions it had no
+means to check. An excerpt that excludes the sources produces confident answers about sourcing that
+are worth nothing.
+
+**STALE-STAGE WARNING on the black-tank job.** `staged/guides__rv-black-tank-routine.html` was
+written at 20:38, and the page's Sources list changed at ~20:44 (the rehosted Jayco manual came
+out). So that lane is reviewing a copy whose Sources list is one bullet out of date. Its findings
+about the prose stand; if it quotes the Sources list, check the quotation against the page as it
+now stands before treating a mismatch as a fabrication. Re-stage before the next dispatch of that
+page.
+
+**Bridge failure modes hit tonight, all recorded because each cost time:**
+1. A job prompt with no `write_file` call carrying the reply path leaves the lane answering into a
+   chat window with no destination. Lane state then reads `settled` + fresh heartbeat + `send
+   confirmed` while producing nothing, which looks exactly like a slow review.
+2. Re-pointing an EXISTING job id at a different lane does nothing: lanes ledger job ids they have
+   seen, including ones they skipped as foreign. A re-target needs a FRESH job id.
+3. A wedged lane can be "released" by the harness capturing its own UI furniture ("Show more",
+   "ChatGPT said:", "Install Codex") and writing it to `outbox/REPLY-<id>.md`. That file has the
+   exact shape of a real review. **Counting reply files is not evidence of a completed review - it
+   must be read.** Quarantined as `QUARANTINE-20261011-2105-anode-rod-captured-UI-chrome-not-a-review.md`.
+4. `bridge-up.sh fresh` cannot reset an unresponsive lane: `close_lane` refuses unless the lane is
+   `idle`, and an unresponsive lane is not idle. The escape hatch is dead-locked by its own guard.
+5. grok has a 300-second capture ceiling and releases itself; gemini and deepseek have none and
+   retry forever, so they stay wedged until a human closes their windows.
