@@ -1,3 +1,32 @@
+
+# READ THIS FIRST: the extractor artifacts, consolidated (2026-10-12)
+
+**Twelve review rounds produced 100+ findings. Around a dozen were real defects. The rest were one of
+the twelve artifact classes below, and each class has now been re-reported across multiple rounds.**
+Before verifying a finding, check it against this list — and where a class says "measure it", measure
+it rather than reading the extract again.
+
+| # | the report says | what it actually is | how to settle it |
+|---|---|---|---|
+| 1 | "hrefs are doubled, `/guides/guides/<slug>`, 404" | The site writes in-content hrefs **relative** (`guides/x`) and declares `<base href="/">` first in `<head>`, which is what resolves them. A fetcher that ignores `<base>` and resolves against the page path doubles every one. | Read the raw `href` attribute, or click the link in a browser and read `location.href`. |
+| 2 | "the safety callout renders as `Can injure you**...`" | `.flag-h` is `display:block`, so the label sits on its own line; the `**` is the extractor turning `<b>` into markdown. | Render it. The label and body are on separate lines. |
+| 3 | "orphaned caption / the diagram is missing" | The diagram is an **inline `<svg>`**, which a text extractor does not see. | Look for `<svg>` inside the same `<figure>`. |
+| 4 | "the heading jams: 'filetop 15 makes'" | A styled span with a **CSS margin** — `.man-count{margin-left:12px}`. `textContent` concatenates across the margin. | Measure in a browser: text-node right edge vs span left edge. |
+| 5 | "the section renders with ZERO cards" | The cards are in a `.state-grid` / `.guide-grid` the extractor does not walk. | Count `a.state-card` / `a.guide-card` in a browser. |
+| 6 | "a stray text line renders" | A **styled badge** — `.verified` is an inline-flex pill with a tinted background, a border and a 999px radius. | Read the element and its CSS rule. |
+| 7 | "garbled replacement characters" | Either **numeric entities** left literal (`&#8217;`) or **link markup** (`<a href="...">manual</a>`) rendered by the extractor as `\uFFFD`. | `grep -c $'\uFFFD'` on the file and on the live page — usually 0. |
+| 8 | "a phantom block appears" | `<select>` **options** read as body text. | Look for the `<select>` in the markup. |
+| 9 | "literal error text renders" | A **section eyebrow** — `.sec-eyebrow`, a deliberate label above a heading. | Read the element's class. |
+| 10 | "the page has no H1" | Usually it has one; check `grep -c '<h1' <file>` before believing it. | Direct count. |
+| 11 | "the page is a link silo" | A `<main>`-only link count misses the nav and footer, which link every section on every page. | Count inside `<main>` **and** note the nav separately. |
+| 12 | "most rows render linkless" | **A text fetch cannot prove absence.** | Count per row from the markup: `<li class="man-row">` containing `<a href="https://`. Measured this way the manuals pages are **110 rows, 110 linked**. |
+
+**The two checks that settle almost all of them:** read the raw attribute or element from the file,
+and measure the rendered page in a browser. Both take seconds and neither can be fooled by an
+extractor.
+
+---
+
 # Continuation: finish the page-check sweep (written 2026-10-11 ~23:55 PDT)
 
 You are picking up a sweep of every originrv.com page that has never had the full set of checks.
