@@ -396,13 +396,13 @@
      ]
     },
     {
-     "id": "q-driver-licence",
-     "title": "Do I need a special licence to drive or tow an RV?",
+     "id": "q-driver-license",
+     "title": "Do I need a special license to drive or tow an RV?",
      "open": false,
      "blocks": [
       {
        "kind": "p",
-       "html": "Usually not. An ordinary licence covers most RVs. A handful of states require a non-commercial Class A or Class B licence, or an endorsement, above roughly 26,000 lb gross vehicle weight, and a few set lower thresholds for towing, so the answer depends on the weight of what you are buying and the state you live in. Federal rules let a state require a commercial licence for recreational vehicles, but do not impose one for non-business use. Check your own state's requirement before you buy something heavy, rather than after. See <a href=\"#driving-motorhome\">driving a motorhome</a>."
+       "html": "Usually not. An ordinary license covers most RVs. A handful of states require a non-commercial Class A or Class B license, or an endorsement, above roughly 26,000 lb gross vehicle weight, and a few set lower thresholds for towing, so the answer depends on the weight of what you are buying and the state you live in. Federal rules let a state require a commercial license for recreational vehicles, but do not impose one for non-business use. Check your own state's requirement before you buy something heavy, rather than after. See <a href=\"#driving-motorhome\">driving a motorhome</a>."
       }
      ]
     }

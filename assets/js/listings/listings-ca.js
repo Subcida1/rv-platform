@@ -1341,7 +1341,7 @@ window.RV_LISTINGS_CA = [
    "mobile"
   ],  "base": "hesperia",  "areas": [],  "region": "The high desert",  "spec": "Mobile RV repair and maintenance",  "reg": "desert-high"
  },
- {  "n": "RV Collision Center of Redlands",  "c": "Redlands, CA",  "p": "(909) 747-0441",  "u": "https://rvccr.com/rv-repair/",  "t": "center",  "e": false,  "r": false,  "d": "RV Collision Center of Redlands (RVCCR) is an RVDA-certified RV repair and collision shop at 1976 Essex Court, Suite B in Redlands with 21 years of RV-specific experience. It repairs Class A, B and C motorhomes, fifth wheels, travel trailers, toy haulers, popups and truck campers, handling collision repair, full repaints, overlays and graphics, awnings, roof and sidewall and moulding repair and interior repair and upholstery, and works with major RV insurance carriers.",  "g": [
+ {  "n": "RV Collision Center of Redlands",  "c": "Redlands, CA",  "p": "(909) 747-0441",  "u": "https://rvccr.com/rv-repair/",  "t": "center",  "e": false,  "r": false,  "d": "RV Collision Center of Redlands (RVCCR) is an RVDA-certified RV repair and collision shop at 1976 Essex Court, Suite B in Redlands with 21 years of RV-specific experience. It repairs Class A, B and C motorhomes, fifth wheels, travel trailers, toy haulers, popups and truck campers, handling collision repair, full repaints, overlays and graphics, awnings, roof and sidewall and molding repair and interior repair and upholstery, and works with major RV insurance carriers.",  "g": [
    "shop"
   ],  "base": "redlands",  "areas": [],  "region": "The Inland Empire",  "spec": "RV collision and repair shop",  "reg": "inland-empire"
  },

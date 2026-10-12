@@ -1,0 +1,15 @@
+{
+  "_why": "Occurrences of a British spelling that must STAY, each with the reason. Read by scripts/check-spelling.py. An entry permits that word in that file; an entry that stops matching anything fails the gate, so this list cannot rot silently.",
+  "allow": [
+    {
+      "path": "manuals/brands.html",
+      "word": "grey",
+      "why": "The Forest River brand 'Cherokee Grey Wolf' in the brand index. A maker's model name is not our spelling to change."
+    },
+    {
+      "path": "guides/rv-battery-disconnect.html",
+      "word": "gen-set",
+      "why": "Inside a sentence quoted verbatim from Intellitec: \"When the RV is plugged into 120 Vac (or the gen-set is running)...\". A quotation keeps its source's spelling."
+    }
+  ]
+}

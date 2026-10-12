@@ -3,13 +3,13 @@
  * WHAT THIS ANSWERS, AND WHY IT IS NOT A LOOKUP. Half the water heaters on the road
  * have no anode rod and never will, and the owners of those heaters are the ones most
  * often sold one. Suburban builds a porcelain-lined steel tank that carries a
- * sacrificial rod. Atwood and Dometic build an aluminium tank that takes a drain plug
+ * sacrificial rod. Atwood and Dometic build an aluminum tank that takes a drain plug
  * instead, and Dometic's own manual says putting a rod in that opening damages the
  * coupling. So the first question is not "which rod" but "does this heater have one",
  * and the tool is built to say no when the answer is no.
  *
  * WHAT IT DELIBERATELY DOES NOT DO. It does not print a number it cannot name a maker's
- * document for. The drain plug on an aluminium tank has no part number in the manuals
+ * document for. The drain plug on an aluminum tank has no part number in the manuals
  * that were read, so the answer routes to Dometic's model-number parts lookup rather
  * than showing a number. _data/anode-rods.json is the record and
  * scripts/test-anode-rod.js holds this file, that one and the page to the same facts.
@@ -25,7 +25,7 @@
       tank: 'porcelain-lined steel',
       parts: [
         { part: '233514', material: 'Magnesium' },
-        { part: '233516', material: 'Aluminium' }
+        { part: '233516', material: 'Aluminum' }
       ],
       port: '3/4 inch',
       socket: '1-1/16 inch',
@@ -38,9 +38,9 @@
           url: 'https://suburbanrv.com/water-heating/tank-water-heaters/tank-water-heater-accessories/replacement-anode-rod/' }
       ]
     },
-    aluminium: {
+    aluminum: {
       maker: 'Atwood or Dometic',
-      tank: 'aluminium',
+      tank: 'aluminum',
       parts: [],
       port: 'drain plug',
       sources: [
@@ -58,7 +58,7 @@
       note: 'The name is on the data plate, on the heater itself behind the outside access door.',
       options: [
         { value: 'suburban', label: 'Suburban' },
-        { value: 'aluminium', label: 'Atwood or Dometic' },
+        { value: 'aluminum', label: 'Atwood or Dometic' },
         { value: 'unsure', label: 'No name I can find' }
       ]
     },
@@ -79,10 +79,10 @@
     var a = answers || {};
     if (!a.brand) return { ask: 'brand' };
     if (a.brand === 'suburban') return { result: 'rod', tank: 'suburban' };
-    if (a.brand === 'aluminium') return { result: 'none', tank: 'aluminium' };
+    if (a.brand === 'aluminum') return { result: 'none', tank: 'aluminum' };
     if (!a.fitting) return { ask: 'fitting' };
     if (a.fitting === 'rod') return { result: 'rod', tank: 'suburban', via: 'fitting' };
-    if (a.fitting === 'plug') return { result: 'none', tank: 'aluminium', via: 'fitting' };
+    if (a.fitting === 'plug') return { result: 'none', tank: 'aluminum', via: 'fitting' };
     return { result: 'unclear' };
   }
 
@@ -119,7 +119,7 @@
     return '<div class="panel panel-24">\n' +
       '      <h2 class="form-legend">You have an anode rod, and it is a Suburban</h2>\n' +
       '      <p>Suburban builds this tank out of porcelain-lined steel and fits a sacrificial rod that corrodes in place of the tank. Suburban\'s own catalogue lists two extended life rods for these heaters, and both fit the same ' + esc(t.port) + ' port.</p>\n' +
-      '      <p><b>' + esc(t.parts[0].part) + '</b>, magnesium. <b>' + esc(t.parts[1].part) + '</b>, aluminium. Suburban\'s accessory page lists the magnesium rod as the replacement, with the aluminium one alongside it.</p>\n' +
+      '      <p><b>' + esc(t.parts[0].part) + '</b>, magnesium. <b>' + esc(t.parts[1].part) + '</b>, aluminum. Suburban\'s accessory page lists the magnesium rod as the replacement, with the aluminum one alongside it.</p>\n' +
       '      <p>Replace it yearly. Suburban\'s operation guide also gives the wear rule: replacement is recommended when consumption or weight loss is greater than 75 percent. Water with high iron or sulfate eats a rod faster, so the yearly figure is a floor rather than a ceiling.</p>\n' +
       '      <p>Take it out with a ' + esc(t.socket) + ' socket. Put a pipe thread sealant approved for potable water on the new rod\'s threads, which Suburban calls for and which is also what stops the fitting weeping.</p>\n' +
       '      <p>Two things Suburban states plainly. Operating the heater without the anode voids Suburban\'s limited warranty on the tank, and the replacement should be a Suburban part rather than a non-Suburban accessory.</p>\n' +
@@ -130,18 +130,18 @@
   function renderNone() {
     return '<div class="panel panel-24">\n' +
       '      <h2 class="form-legend">You have no anode rod, and you do not want one</h2>\n' +
-      '      <p>An Atwood or Dometic heater has an aluminium tank. Dometic\'s XT manual describes the tank as high strength aluminium with a thin clad layer fused over it, and says that layer is anodic to heavy metals and acts much like an anode in a steel glass-lined tank.</p>\n' +
+      '      <p>An Atwood or Dometic heater has an aluminum tank. Dometic\'s XT manual describes the tank as high strength aluminum with a thin clad layer fused over it, and says that layer is anodic to heavy metals and acts much like an anode in a steel glass-lined tank.</p>\n' +
       '      <p>The opening holds a drain plug rather than a rod, and a rod fitted there does damage rather than good. Dometic states that replacing its drain plug with an anode rod damages the coupling with cathodic action, and that aftermarket anode devices are not compatible with its water heaters and will void the warranty.</p>\n' +
       '      <p><b>What the tank wants instead is a flush.</b> Dometic\'s procedure drains through the drain plug, then clears the sediment that settles at the bottom with a water heater flushing tool, running until the water coming out runs clear. Its frequency is a full-time RV every 60 days, a part-time RV at least twice a year, and both of those sooner in the Southwest.</p>\n' +
       '      <p>If the plug itself is worn or cracked, replace it. Dometic prints no part number for the plug in the manual, so the route is its parts lookup by the model number on the unit.</p>\n' +
-      '      ' + sourceLine('aluminium') + '\n' +
+      '      ' + sourceLine('aluminum') + '\n' +
       '     </div>';
   }
 
   function renderUnclear() {
     return '<div class="panel panel-24">\n' +
       '      <h2 class="form-legend">The fitting is the tell</h2>\n' +
-      '      <p>Take the fitting out and look at what came with it. A Suburban\'s is a hex-headed rod about as long as your forearm, and the whole rod comes out with it. An aluminium tank\'s is a short plug with nothing behind it.</p>\n' +
+      '      <p>Take the fitting out and look at what came with it. A Suburban\'s is a hex-headed rod about as long as your forearm, and the whole rod comes out with it. An aluminum tank\'s is a short plug with nothing behind it.</p>\n' +
       '      <p>Do that on a heater that has been off long enough to be cool, with the water supply off and a tap open, because the tank empties through that opening.</p>\n' +
       '      <p>And if the heater still has its data plate, the name is on it and nothing has to come apart at all.</p>\n' +
       '     </div>';

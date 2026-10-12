@@ -162,7 +162,7 @@ Recorded anyway, because the source should be traceable.
 - File: [Fall scene in Vermont LCCN2011630153.tif](https://commons.wikimedia.org/wiki/File:Fall_scene_in_Vermont_LCCN2011630153.tif)
 - Author: Carol M. Highsmith
 - Licence: Public domain (no known restrictions) <https://www.loc.gov/item/2011630153/>
-- Tile alt text: Autumn colour on a hillside in Vermont
+- Tile alt text: Autumn color on a hillside in Vermont
 
 ## alaska
 

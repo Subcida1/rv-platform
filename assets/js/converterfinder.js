@@ -1,6 +1,6 @@
-/* RV converter and power-centre finder.
+/* RV converter and power-center finder.
  *
- * WHAT THIS DOES. A converter or power centre fails, or an owner wants to move to lithium, and the unit
+ * WHAT THIS DOES. A converter or power center fails, or an owner wants to move to lithium, and the unit
  * in front of them is a model nobody sells any more: a Parallax 7355, a Magnetek 6335, an Iota DLS-55.
  * The makers each publish a cross-reference chart answering exactly that, and each chart is written from
  * its own side, so no single one of them covers the question. This reads all of the parsed charts and
@@ -136,7 +136,7 @@
          + 'and it is <b>not parsed here</b>, because its layout cannot be read without risking a wrong '
          + 'part number. ' + srcLink('wfco') + '</li>';
       h += '<li>That second chart matters most for <b>Magnetek</b>. Its 6300, 7300 and 8300 series are '
-         + 'among the most common old power centres, and neither chart this tool reads names a Magnetek '
+         + 'among the most common old power centers, and neither chart this tool reads names a Magnetek '
          + 'model at all, so a Magnetek number will always land here.</li>';
       h += '<li>These charts also do not cover every converter ever built. A maker\'s own support pages '
          + 'are the next place to look, and the manuals directory links them by system.</li>';

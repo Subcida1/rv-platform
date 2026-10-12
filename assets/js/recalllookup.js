@@ -57,7 +57,7 @@
     { id: 'fleetwood', name: 'Fleetwood', nhtsa: ['FLEETWOOD'] },
     { id: 'forest-river', name: 'Forest River', nhtsa: ['FOREST RIVER', 'FOREST RIVER BUS'],
       lookup: 'https://forestriverinc.com/recall-search',
-      lookupNote: 'Forest River states on its own page that a motorised unit must also be checked at the chassis maker.' },
+      lookupNote: 'Forest River states on its own page that a motorized unit must also be checked at the chassis maker.' },
     { id: 'grand-design', name: 'Grand Design', nhtsa: ['GRAND DESIGN'],
       lookup: 'https://www.granddesignrv.com/owners/recalls',
       lookupNote: 'Grand Design publishes a page per campaign, in both the United States and Canadian versions.' },

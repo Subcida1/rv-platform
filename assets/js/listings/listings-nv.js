@@ -129,10 +129,10 @@ window.RV_LISTINGS_NV = [
    "boulder city"
   ],  "region": "greater Las Vegas area; Lake Mead",  "reg": "las-vegas"
  },
- {  "n": "24/7 MotorCoach",  "c": "Las Vegas, NV",  "p": "702-757-2471",  "u": "https://24-7motorcoach.com/",  "t": "center",  "e": false,  "r": false,  "d": "24/7 MotorCoach is an RV dealership and repair center at 3930 W Windmill Ln in Las Vegas with indoor service bays. It services all makes and models and states that every brand on its site is one it services, including diesel engine repair, brakes, generator service, collision, tires and glass. The site publishes its Nevada repair garage licence GAR000046449 and body shop licence BD0000048448.",  "g": [
+ {  "n": "24/7 MotorCoach",  "c": "Las Vegas, NV",  "p": "702-757-2471",  "u": "https://24-7motorcoach.com/",  "t": "center",  "e": false,  "r": false,  "d": "24/7 MotorCoach is an RV dealership and repair center at 3930 W Windmill Ln in Las Vegas with indoor service bays. It services all makes and models and states that every brand on its site is one it services, including diesel engine repair, brakes, generator service, collision, tires and glass. The site publishes its Nevada repair garage license GAR000046449 and body shop license BD0000048448.",  "g": [
    "center",
    "roadside",
-   "licence",
+   "license",
    "collision",
    "indoor bays"
   ],  "base": "las vegas",  "areas": [

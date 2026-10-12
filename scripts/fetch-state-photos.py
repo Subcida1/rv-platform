@@ -536,7 +536,7 @@ PHOTOS += [
      'Fall scene in Vermont LCCN2011630153.tif',
      'Public domain (no known restrictions)', 'Carol M. Highsmith',
      'https://www.loc.gov/item/2011630153/',
-     'Autumn colour on a hillside in Vermont'),
+     'Autumn color on a hillside in Vermont'),
 ]
 
 

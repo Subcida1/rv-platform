@@ -42,7 +42,7 @@ SOURCES = {
              "kind": "maker cross-reference chart", "parsed": False,
              # Read off the chart's own column headings, so the page can name what a reader is missing
              # rather than only saying that something is missing. Magnetek matters most: the 6300, 7300
-             # and 8300 series are among the most common legacy power centres, and NEITHER parsed chart
+             # and 8300 series are among the most common legacy power centers, and NEITHER parsed chart
              # names a Magnetek model at all.
              "covers": ["Magnetek", "Parallax", "Progressive Dynamics", "Iota", "Furrion", "PowerMax",
                         "Go Power", "Xantrex", "Magnum", "Precision Circuits", "Intellitec"],
@@ -197,7 +197,7 @@ def build():
     out.sort(key=lambda r: (r["old_maker"], r["old_model"]))
 
     record = {
-        "note": ("Converter and power-centre supersessions, taken from the makers' own published "
+        "note": ("Converter and power-center supersessions, taken from the makers' own published "
                  "cross-reference charts and traceable to the chart each row came from. Built by "
                  "scripts/fetch-converter-charts.py; do not edit by hand."),
         "fetched": __import__("datetime").date.today().isoformat(),

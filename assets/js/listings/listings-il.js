@@ -329,7 +329,7 @@ window.RV_LISTINGS_IL = [
    "solar"
   ],  "base": "crystal lake",  "areas": [],  "region": "McHenry County",  "spec": null,  "reg": "chicago-il"
  },
- {  "n": "LandCraft Fiberglass",  "c": "Lockport, IL",  "p": "(708) 385-0717",  "u": "https://www.land-craft.com/rv-truck-fiberglass",  "t": "center",  "e": false,  "r": false,  "d": "LandCraft Fiberglass is a fiberglass repair and refinishing facility in Lockport, south of Chicago, that markets RV, motor coach, bus and trailer fiberglass and refinishing services. It specialises in structural fiberglass repair and custom gel coat colour matching, with large bays and a semi-truck sized spray booth, and works with dealers and manufacturers. The company has operated since 1978.",  "g": [
+ {  "n": "LandCraft Fiberglass",  "c": "Lockport, IL",  "p": "(708) 385-0717",  "u": "https://www.land-craft.com/rv-truck-fiberglass",  "t": "center",  "e": false,  "r": false,  "d": "LandCraft Fiberglass is a fiberglass repair and refinishing facility in Lockport, south of Chicago, that markets RV, motor coach, bus and trailer fiberglass and refinishing services. It specialises in structural fiberglass repair and custom gel coat color matching, with large bays and a semi-truck sized spray booth, and works with dealers and manufacturers. The company has operated since 1978.",  "g": [
    "fiberglass",
    "body shop",
    "gel coat"

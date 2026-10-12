@@ -1390,6 +1390,21 @@ if _bracket_bad:
 else:
     print("  every tag closes, and no spare bracket prints")
 
+print("\n=== no British spellings in copy we publish (scripts/check-spelling.py) ===")
+# Added 2026-10-11. The American-voice pass was done by reading pages by hand and did not finish:
+# a scan the day it closed found 360 occurrences across 60 files, including "licence" in the
+# footer of every page and "aluminium" on a brand-new tool. Nothing checked for any of it, so the
+# residue was invisible until a person read the page. The check has its own scope, word list and
+# allowlist; see its header. Both were negative-tested (a spelling injected into a page body and
+# into site.js) before this line was added.
+_spell = subprocess.run([sys.executable, str(ROOT / "scripts" / "check-spelling.py")],
+                        capture_output=True, text=True)
+for _line in (_spell.stdout or "").rstrip().split("\n"):
+    print("  " + _line)
+if _spell.returncode != 0:
+    print("  fix the spelling, or add an entry to _data/spelling-allow.json naming the reason")
+    fails.append("british spelling")
+
 if "--links" in sys.argv:
     print("\n=== external listing links (live HTTP) ===")
     src = ROOT / "assets/js/listings/listings-or.js"

@@ -520,10 +520,10 @@
     "claims": []
   },
   "guides/rv-fridge-leveling.html": {
-    "hash": "d29d67aa5b238004",
+    "hash": "6399620872b0c36e",
     "status": "verified",
-    "verified_by": "Independent fresh-context review 2026-10-10, every cited source fetched. 2 findings applied. The important one: the page asserted as fact that Dometic publishes no angle figure at all, in a section heading that said so - a maker-level negative the two cited consumer manuals cannot support, and false. Dometic's 5-series installation manual gives the figure directly (the refrigerator may not exceed an angle of 3 degrees, park on a level surface with a spirit level); it was fetched and confirmed and is now in the Sources list, the heading no longer claims a maker publishes none, the Dometic bullet states what each document does and does not give, and the eight-series annotation now scopes its 'no degree figures' remark to that manual. Second: the boiler-tube crack defect was attributed to 'the NHTSA recall notices' plural when only the Keystone/Dometic notice describes it, so it is singular now and matches the source list. Everything else on the page came back clean, including every figure's attribution to the right maker and the absence of any live-work step.",
-    "verified_at": "2026-10-10",
+    "verified_by": "US spelling only (British -> American): the American-voice pass left residue on this page and the new scripts/check-spelling.py found it. No fact, number, interval or claim changed.",
+    "verified_at": "2026-10-11",
     "sources": [],
     "spec": null,
     "spec_waived": true,
@@ -550,10 +550,10 @@
     "claims": "89a67693ba48f388"
   },
   "guides/rv-fuse-keeps-blowing.html": {
-    "hash": "c3903cdaf2eabb84",
+    "hash": "f1158f03e1fb224e",
     "status": "verified",
-    "verified_by": "2026-10-10 voice pass, Ty's package: British spellings to American, collective-noun agreement to singular, and phrasing only. No fact, number or interval changed.",
-    "verified_at": "2026-10-10",
+    "verified_by": "US spelling only (British -> American): the American-voice pass left residue on this page and the new scripts/check-spelling.py found it. No fact, number, interval or claim changed.",
+    "verified_at": "2026-10-11",
     "sources": [],
     "spec": "_specs/rv-fuse-keeps-blowing.md",
     "spec_waived": false,
@@ -600,10 +600,10 @@
     "claims": "88a0fd90a5829273"
   },
   "guides/rv-macerator-toilet.html": {
-    "hash": "dde577bb2004eba6",
+    "hash": "568761be9c85efed",
     "status": "verified",
-    "verified_by": "Independent fresh-context review 2026-10-10, all four cited sources fetched. 6 findings applied (2 injury, 2 sourcing, 2 voice). The review separately CONFIRMED that the previously-corrected obstruction-order defect is resolved: the hum section and the FAQ now give the manual's order identically (open the bowl valve, switch off power at the control board, then remove the blockage) and both pair it with the same page-level override. Applied: the voltage test - a live reading at the toilet's feed with the macerator running - had no flag in its card, and neither did the circuit-sizing passage below it, so a flag-injury callout now precedes that section covering the live reading, the running blades and the breaker; the maker's servicing rule was restated as 'all servicing must be carried out by a qualified technician' where the cited iNDUS manual says 'by an approved competent person' - the manual's wording now stands; an unnamed-authority sentence about how owners describe the fault, with a quoted phrase no document contains, is cut, leaving the mechanical distinction; and six self-references are gone ('nothing on this page has a price', 'neither this page nor the manual resolves', 'what this page tells you is the opposite', 'behind this page', 'on this page'), the cost paragraph now describing the shape of the bill in terms of the work rather than the page. NOTE CARRIED FORWARD for the page (not a defect, so not changed): the two Thetford manuals disagree on the circuit (40 amp in the 2015 prose, 30 amp in the 2G chart) and the 2015 document's own wire-gauge chart also says 30 amp, which the page does not mention. The shared-footer 'licences' is sitewide chrome.",
-    "verified_at": "2026-10-10",
+    "verified_by": "US spelling only (British -> American): the American-voice pass left residue on this page and the new scripts/check-spelling.py found it. No fact, number, interval or claim changed.",
+    "verified_at": "2026-10-11",
     "sources": [],
     "spec": "_specs/rv-macerator-toilet.md",
     "spec_waived": false,

@@ -105,7 +105,7 @@
  /* "Origin" solid, "RV" in the brand gradient (Ty, 2026-10-05). The trailing RV
     is split off the configured name so the brand string stays the single source
     of truth rather than being re-typed here; if the name ever stops ending in RV
-    the whole thing simply inherits the surrounding colour. */
+    the whole thing simply inherits the surrounding color. */
  var name = esc(CFG.brand.name).replace(/RV$/, '<span class="rv">RV</span>');
  return '<a class="logo" href="' + R(CFG.routes.home) + '"><span class="logo-mark">' + CFG.brand.mark + '</span>' +
  '<span class="logo-name">' + name + '</span></a>';
@@ -268,7 +268,7 @@
  '<div class="foot-col"><p class="foot-h">Company</p><a href="' + R(rt.about) + '">About</a><a href="' + R(rt.contact) + '">Contact</a><a href="' + R(rt.tools) + '">All tools</a></div>' +
  '</div></div>' +
  '<div class="wrap foot-bottom"><span>© 2026 ' + esc(CFG.brand.legal) + '. Built for the open road.</span>' +
- '<span class="foot-credit">Third-party photographs appear under the licences credited beside each one, resized for display.</span>' +
+ '<span class="foot-credit">Third-party photographs appear under the licenses credited beside each one, resized for display.</span>' +
  '<span class="legal"><a href="' + R(rt.home) + '">Home</a><a href="' + R(rt.directory) + '">Directory</a><a href="' + R(rt.guides) + '">Guides</a><a href="/privacy">Privacy</a></span></div></div>';
  }
 

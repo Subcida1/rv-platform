@@ -5,7 +5,7 @@
    anything, and the other half are handed a part number. Both directions are therefore
    asserted rather than assumed:
    1. every number the page can print is one a maker document supports, and
-   2. a heater with an aluminium tank is never shown a rod number.
+   2. a heater with an aluminum tank is never shown a rod number.
    _data/anode-rods.json is the record, so this file holds the JS, the JSON and the page
    to the same facts, which is the only thing stopping the three drifting.
 
@@ -65,7 +65,7 @@ Object.keys(T.TANKS).forEach((id) => {
 // 2. every tank in the record can be reached by answering the questions.
 const ROUTES = {
   suburban: { brand: 'suburban' },
-  aluminium: { brand: 'aluminium' }
+  aluminum: { brand: 'aluminum' }
 };
 DATA.tanks.forEach((t) => {
   const route = ROUTES[t.id];
@@ -102,12 +102,12 @@ check('no answer asks the first question', T.identify({}).ask === 'brand');
 check('a Suburban needs no second question',
       T.identify({ brand: 'suburban' }).result === 'rod');
 check('Atwood or Dometic needs no second question',
-      T.identify({ brand: 'aluminium' }).result === 'none');
+      T.identify({ brand: 'aluminum' }).result === 'none');
 check('an unknown maker asks what comes out of the fitting',
       T.identify({ brand: 'unsure' }).ask === 'fitting');
 check('a long hex-headed rod is a Suburban tank',
       T.identify({ brand: 'unsure', fitting: 'rod' }).result === 'rod');
-check('a short plug with nothing behind it is an aluminium tank',
+check('a short plug with nothing behind it is an aluminum tank',
       T.identify({ brand: 'unsure', fitting: 'plug' }).result === 'none');
 check('a reader who cannot tell is told how to look, not guessed at',
       T.identify({ brand: 'unsure', fitting: 'unsure' }).result === 'unclear');
@@ -152,14 +152,14 @@ if (fs.existsSync(PAGE)) {
 
   /* AND THE PAGE'S OWN PROSE DOES NOT CARRY A NUMBER THE RECORD DOES NOT. The body copy
      states the part numbers too, which is how a page can print a number the tool would
-     never show. Only the Suburban family has numbers, so the aluminium answer is checked
+     never show. Only the Suburban family has numbers, so the aluminum answer is checked
      by name: the page may not name a rod part alongside Atwood or Dometic. */
   const bodyStart = html.indexOf('<h2>What an anode rod does');
   const body = html.slice(bodyStart, start);
   const rodNumbers = /233514|233516/.test(body);
   check('the page states the Suburban rod numbers in its reference section', rodNumbers);
-  const aluMention = body.match(/[^.]*Atwood and Dometic build aluminium tanks[^.]*\./);
-  check('the sentence about the aluminium tank carries no rod number',
+  const aluMention = body.match(/[^.]*Atwood and Dometic build aluminum tanks[^.]*\./);
+  check('the sentence about the aluminum tank carries no rod number',
         !aluMention || !/233514|233516/.test(aluMention[0]));
 }
 

@@ -161,12 +161,12 @@ let seaPat = null;
 /* Cartographic water hatch - a repeating x, drawn once into a tile and
    reused as a canvas pattern. Tile is in artboard px, so it stays the same
    visual size at any zoom or DPR. */
-function makeSeaPattern(colour){
+function makeSeaPattern(color){
   const T = 26, m = 9, e = T - 9;
   const off = document.createElement('canvas');
   off.width = off.height = T;
   const g = off.getContext('2d');
-  g.strokeStyle = colour;
+  g.strokeStyle = color;
   g.lineWidth = 1.15;
   g.lineCap = 'round';
   g.beginPath();
