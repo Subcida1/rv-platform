@@ -1346,6 +1346,31 @@ it in the queue rather than guessing.
 Run it page type by page type (hubs, guides, tools, manuals, directory, parts), fix as you go, and
 commit in batches. Tick this item when the sweep is clean or every remaining finding is recorded.
 
+### W20. The tool pages' review coverage is unrecorded (found 2026-10-12, Cloud)
+
+`scripts/verify-content.py --status` reports **48 verified / 85 unverified**, and **15 of the
+unverified are tool pages** -- including every one the batch 1-4 passes touched
+(`tools/rv-water-filter.html`, `tools/snow-load.html`, `tools/weight-calculator.html`,
+`tools/watts-to-amps.html`, `tools/solar-sizing.html`, `tools/rv-loan.html`,
+`tools/tire-date-code.html`, `tools/battery-runtime.html`, `tools/fuel-cost.html`,
+`tools/index.html`, and five more).
+
+**The pages were reviewed; the manifest does not say so.** The batch passes applied findings and
+committed them (`d497e5e`, `b8abce9`, `ffbc3c7` and neighbours), but `verify-content.py --verify`
+was never run for those pages, so their `verified_by` is `None`. Five of the fifteen carry a note
+saying why they are unverified ("New page, 2026-10-11. Every board number it can print is a
+row..."); the other ten carry nothing.
+
+**Why this is not being fixed unilaterally:** `verified` in this manifest means a pass by a model
+strictly stronger than the drafter. I can see that findings were applied, and I verified those
+findings myself against the artefacts, but I cannot assert from here which lane reviewed each page
+or that it was stronger than the drafter. Re-baselining fifteen pages on that basis would be
+recording a verification nobody performed, which is the one thing this manifest exists to prevent.
+
+**What a session should do:** read the batch records in this file, confirm for each page which lane
+reviewed it, and run `verify-content.py --verify <page> --by "<lane and date>"` for the ones that
+genuinely had an independent pass. The rest need a pass, not a note.
+
 ### W19. Encode Ty's taste as checks - the calibration plan (Ty, 2026-10-12 via Neo)
 
 Ty's plan, verbatim: "don't have Brandt read the whole site. Plan: build more tools first, but the new
