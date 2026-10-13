@@ -143,6 +143,36 @@ disagrees with a direct observation, suspect the measurement.
 - **#8 "no intro copy above the filters" — REFUTED, third time.** The lede is present and renders
   above the filter bar. "No per-part anchors" — CONFIRMED, recorded.
 
+## Neo's tools deep-dive, third rotation — verified 2026-10-13 (10 pages, 4 findings: 2 fixed, 1 refuted, 1 recorded)
+
+- **#1 "the snow-load hub card carries a 'Building now' status chip" — REFUTED.** "Building now" is
+  a `<div class="sec-eyebrow">` above the heading "Next tools in the pipeline" — a section label for
+  the not-yet-built tools, not a chip on any card. Same class as "Something is broken" on the
+  homepage, and the seventh round on the section-eyebrow artifact.
+- **#2 "the weight calculator renders a literal '## Product Variants' block" — REFUTED, second
+  time.** `grep -c "Product Variants"` returns **0** on the file. It is the `<select>`'s option list
+  read as body text.
+- **#3 "the rv-loan rate figures are undated" — REAL, FIXED.** The page cited "Bankrate's table runs
+  from 6.49 percent at excellent credit to 35.99 at the high end" with no date. **Bankrate's own page
+  states two**: "Updated Jun. 18, 2026" and, against the lender table, "*Rates as of Dec. 1, 2025".
+  The hint now reads "Bankrate's table, updated June 18, 2026, runs from ..." and the Sources entry
+  carries the same date, so the figure traces to a dated document. Same fix shape as the CAT Scale
+  weigh price on the weight calculator.
+- **#4 "rv-toilet-valve is the only finder page with no cross-link section" — CONFIRMED for the
+  finders, FIXED, and wider than reported.** Measured across all 13 tool pages, **three** carry no
+  in-content link other than `/about`: `rv-toilet-valve`, `tire-date-code` and `weight-calculator`.
+  The toilet-valve page now links "the winterizing procedure" to `/guides/winterize-plumbing`, which
+  is the sentence that names it. The other two are recorded: neither has an anchor that stands alone
+  (`tire-date-code` names "the six to 10 year replacement recommendation" only in its provenance
+  line, and `weight-calculator` names "weight distribution hitch" only as a field label).
+
+**AND A TOOL FIX, because this was the second time.** `insert-link.py` took the destination as given
+and wrote it straight into the href, so every insert produced a `.html` url that `clean-urls.py
+--check` then rejected — on the about page earlier the same day, and again here. It now runs the
+destination through the same transform `site_constants.pretty_url` uses, in the same order:
+`x/index.html` -> `/x/`, then `x/y.html` -> `/x/y`. Tested against five cases including the two
+index forms.
+
 ## The a11y sweep that found a class the representative set cannot (2026-10-12, Cloud)
 
 **Found while fixing the converter guide's `<desc>` anchor, and it turned into three fixes and a new

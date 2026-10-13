@@ -105,16 +105,25 @@ def insert(page, phrase, dest, dry_run=False):
         sys.exit("no such page: %s" % page)
     if not (ROOT / dest).exists():
         sys.exit("no such destination: %s" % dest)
+    # THE HREF IS THE PUBLISHED URL, NOT THE FILE PATH. The site publishes EXTENSIONLESS urls
+    # (Ty, 2026-10-04), and clean-urls.py --check fails the build on any page naming a `.html` url.
+    # This tool took the destination as given and wrote it straight into the href, so every insert
+    # produced a url the gate then rejected -- twice, on 2026-10-12, both times caught only by
+    # running clean-urls.py afterwards. The transform is site_constants.pretty_url's, in the same
+    # order: `x/index.html` -> `/x/`, then `x/y.html` -> `/x/y`.
+    href = "/" + dest
+    href = re.sub(r"/index\.html$", "/", href)
+    href = re.sub(r"\.html$", "", href)
     html = p.read_text(encoding="utf-8")
-    if 'href="%s"' % dest in html:
-        sys.exit("%s already links to %s" % (page, dest))
+    if 'href="%s"' % href in html:
+        sys.exit("%s already links to %s" % (page, href))
 
     tried_bad = False
     for m in re.finditer(re.escape(phrase), html):
         i = m.start()
         if in_script(html, i) or inside_tag(html, i) or inside_link(html, i) or in_shell(html, i):
             continue
-        new = html[:i] + '<a href="%s">%s</a>' % (dest, phrase) + html[i + len(phrase):]
+        new = html[:i] + '<a href="%s">%s</a>' % (href, phrase) + html[i + len(phrase):]
         # TRY THE NEXT OCCURRENCE, DO NOT STOP AT THE FIRST THAT FAILS.
         # The words check is right and must stay: verify-content's extractor reads a tag as a space,
         # so wrapping a phrase that ends a sentence puts a space before the full stop and the page's
