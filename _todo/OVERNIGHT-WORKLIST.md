@@ -2055,6 +2055,38 @@ subagent whose pass is recorded in the manifest). **Verify every finding against
 tool before editing — this pass refuted three, and one of those refutations needed the maker's PDF
 fetched to settle it.**
 
+### W29 IS DONE - the closing line is on all 61 guide and tool pages (2026-10-13, Cloud)
+
+**Brandt approved it, and it is live.** Every guide and tool now ends with:
+
+    Something wrong here, or something missing? Tell us. About OriginRV.
+
+One line, two links, after the Sources block. `scripts/new-guide.py` carries it too, so new guides get
+it without anyone remembering. The state and manual pages are data tables rather than prose and are
+deliberately left out -- that is what took the change from 122 pages to 61.
+
+**THE PART THAT TOOK THE TIME WAS THE GATE, and the lesson is worth keeping.** `claim_text()` in
+verify-content.py strips the navigation and the byline before computing the digest a verdict is pinned
+to, for a reason its own docstring states: "a line about who wrote the page and when is metadata about
+the page, not a statement about the subject." The closing line is the same kind of thing and was not in
+that strip list, so adding it to 61 pages read as **61 pages of claim drift at once** and demanded 61
+re-verifications for a sentence that says nothing about RVs.
+
+I did not see that at first. I ran the re-verification queue by hand, five pages at a time, and watched
+it report five more each pass -- twice, before stopping to ask why the list was not shrinking. The
+answer was one line in `claim_text`. **When a gate's worklist does not shrink as you clear it, the gate
+is measuring something you have not understood yet; stop draining and read the gate.**
+
+Also caught while writing the block: I used `&mdash;`. **The dash rule passes on the entity** because it
+matches the literal character, but an em dash is what it RENDERS as, so it breaks the rule's intent
+where the gate is blind. Plain hyphen now.
+
+**Neo's two tool-batch link gaps went in with it:** tools/rv-toilet-valve now links
+/guides/rv-toilet-not-flushing from its "what this tool does not cover" section, and
+tools/weight-calculator -- the flagship, and the most siloed page on the site -- went from one in-body
+internal link to four, with a "Where to go next" block for the tire date decoder, fuel cost and loan
+calculators.
+
 ### W29. The trust pages are orphans, and the fix is a ruling rather than a commit (2026-10-13, Cloud)
 
 **Verified: `/about` and `/contact` carry ZERO in-body (`<main>`) links from any of the six hubs** -- 0
