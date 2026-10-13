@@ -1666,6 +1666,15 @@ details.faq p{color:var(--text-2);font-size:16px;line-height:1.7;padding-bottom:
   .hero-stats{grid-template-columns:minmax(0,1fr)}
   .hstat{padding:18px 10px}
   .chips{justify-content:flex-start;overflow-x:auto;-webkit-overflow-scrolling:touch;gap:8px;flex-wrap:nowrap}
+  /* THE PARTS CARDS' CHIPS WRAP; THEY DO NOT SCROLL. The rule above turns every .chips row into a
+     horizontal scroller below 720px, and on /parts/ that put 126 cards' type chips outside their own
+     card: measured at 360px, the chip sits at left=15 inside a card whose content box starts at 24,
+     a 9px escape on each side, because a centred nowrap row wider than its box overflows both ways.
+     Ty's own mobile rule says the opposite of a scroller: "a row of tool chips goes three across
+     rather than becoming a horizontal scroller" (2026-10-08). These chips are a label set, not a
+     toolbar, so they wrap. Scoped to .part-types so the homepage tool row keeps the scroller it was
+     given for the same reason. */
+  .part-types{overflow-x:visible;flex-wrap:wrap;justify-content:center}
   .cat-grid{grid-template-columns:minmax(0,1fr)}
   .deck-card{padding:14px 12px}
   .wc-out{min-height:auto}
