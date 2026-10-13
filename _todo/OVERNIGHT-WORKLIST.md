@@ -1776,3 +1776,130 @@ is now cut, and the federal 3,000 lb exemption the page described without naming
 drops shut with no resistance, the coupler is not on the ball") is still presented in the Jayco
 manual's name and appears in no cited document. It is advice rather than a number, so rule 2 does not
 force it; attribute or soften it the next time that page is touched.
+
+### W25. State of the pipeline, 2026-10-13 01:15 PDT (Cloud, session `conv-7fdd0d1b`)
+
+Written because a session should not have to rediscover any of it.
+
+**THE BRIDGE IS DOWN, and the 19 queued reviews were never consumed.** The last traffic to
+`bridge-server.js` (port 3006, `claude-bridge-http.service`) is in its own journal at
+**2026-10-12 23:00:05** — a lane listing `queue/jobs`. `ss -tn | grep 3006` shows **zero
+connections**. Lane heartbeats decayed in a stagger: deepseek and qwen last wrote at 03:04Z,
+gemini at 05:59Z, aistudio at 18:30Z the day before.
+
+**The cause is that the lane windows are gone, and Chrome will not reopen them.** A KWin script
+(the same mechanism `bridge-up.sh` uses) enumerates **7 windows**: five plasmashell, one
+`google-chrome` (an ordinary tabbed window), and Letta. **No PWA lane window exists.** Meanwhile
+`ps` still shows app-shim processes carrying `--app-id=` (3 aistudio, 1 gemini) with no window
+attached, so `flatpak run ... --app-id=<lane>` exits 0 and produces nothing — Chrome believes the
+app is already running. `bridge-up.sh open` and `fresh` therefore both report "no window -
+launching" and then "heartbeat did not advance".
+
+**The fix needs a hand on the machine**: close the stale lane app-shim processes (or restart the
+flatpak Chrome), then relaunch the lanes. **I did not kill them.** `chrome` on this machine is not
+mine alone (Ty's own browsing windows are in the same profile), and killing a shim is exactly the
+class of broad-match cleanup that cost him work on 2026-09-26. Ask him first.
+
+**THE 19 JOBS ARE BACK IN `queue/jobs/` and are still valid.** They were staged from the current
+revision (all 15 tool pages stage `digest current`) and their prompts are kept in
+`queue/job-sources/`. 15 are the tool-page REVIEW2 pass (dispatched 00:14, `--dir tools`); 4 more
+were added at 00:55 for the root pages (index, about, contact, privacy). If the lanes come back,
+they consume these as they are — no re-dispatch needed. **If they come back and are answered,
+`scripts/validate-lane-replies.py` checks every quotation in a reply against the page.**
+
+**W20 IS CLOSED, and the answer is that no re-baseline was owed.** The evidence is now readable:
+of the 85 pages whose manifest `status` is `unverified`, **not one has a reply in
+`claude-bridge/outbox/` dated after its last edit**. So `unverified` is the true state for all 85 —
+not a bookkeeping gap. The count is 85, not the 79 a first pass produced: **the manifest has BOTH
+a `status` field and a `verified_by` string, and five tool pages carry a `verified_by` note that
+*says* "recorded unverified"** (`rv-appliance-board-finder`, `rv-converter-finder`,
+`rv-recall-lookup`, `rv-toilet-valve`, `tire-date-code`). Counting `verified_by` therefore
+over-counts verified pages by 5. **Count `status`.**
+
+**BATCH 5 (the 51 directory pages) IS CLEAN ON EVERY MECHANICAL DIMENSION.** Measured, not read:
+- the headline count equals the number of UNIQUE businesses on all 51 pages (1,942 total), and
+  equals the number of records in `_data/listings/<state>.json` — **0 mismatches**;
+- `audit-pages.py` (Ty's own page ranker: title length, h1, description, structure, depth,
+  target, links, markers) flags **0 of the 51**;
+- titles are uniform ("RV Repair in <State>: Mobile & Service Centers") across all 51.
+
+**One thing on those pages is a judgement call, not a defect, and it is recorded here rather than
+changed:** seven pages render a statewide business once per region section (Indiana, Louisiana,
+Minnesota, Oklahoma, Oregon, South Dakota, Wisconsin — e.g. "RY The RV Guy" appears under all five
+Minnesota regions). The rendering is deliberate (`regions_of()`'s docstring: "a listing that is in
+two areas belongs in two sections rather than being dropped from both") and it is arguably right —
+a reader browsing the Duluth section should see a tech who covers Duluth. What is NOT settled is
+whether repeating a business up to six times on one page is what Ty wants. **Propose, do not
+silently change.**
+
+**A CLOSED OWED ITEM.** `guides/trailer-brakes-required.html`'s two California Vehicle Code
+citations were recorded as unverifiable behind a Cloudflare bot wall. They are not. The
+per-section URL still answers 403 to a script, but **the publisher's chapter page** —
+`codes_displayText.xhtml?lawCode=VEH&division=12.&chapter=3.&article=1.` — serves the whole of
+Article 1, and 26302 and 26303 were read there verbatim and match the page's table row. Manifest
+note updated.
+
+### W26. THE BRIDGE CAME BACK, and how (2026-10-13 01:25 PDT, Cloud)
+
+W25's diagnosis was right about the symptom and wrong about the fix. **The lanes are recoverable
+without touching Ty's browser**, and four of the six are running again.
+
+**What was actually wrong.** The lane PWA windows were gone, and `bridge-up.sh open`/`fresh` could
+not bring them back because their `win_count` reads the KWin window list by `resourceClass` and
+the app windows were simply not there to find. The real blocker is narrower than that: **a lane
+whose old app-shim process is still alive cannot be relaunched.** `flatpak run ... --app-id=<id>`
+exits 0, signals the surviving process, and produces no window. `ps` shows the shims (three
+aistudio, one gemini) with no window attached; KWin shows **7 windows total**, five plasmashell,
+one ordinary `google-chrome`, and Letta.
+
+**The fix that worked, and it is one line per lane.** Launch the PWA for a lane whose shim is NOT
+lingering. Measured:
+
+    flatpak run --command=/app/bin/chrome com.google.Chrome \
+      --profile-directory=Default --app-id=<lane app id>
+
+- `chat.qwen.ai` (`hajcngnhijlbefnckbjhmpedgpanpanm`) — heartbeat fresh within **9 seconds**.
+- `grok.com`, `chatgpt.com`, `chat.deepseek.com` — all three live within ~20 seconds.
+
+**`gemini.google.com` and `aistudio.google.com` still cannot be relaunched**, because their shims
+are alive. That is the one part that needs a hand on the machine: kill the stale shim (exact pid),
+then the same command works. **I did not kill them** — chrome on this box is not mine alone.
+
+**The queue is being consumed.** 19 jobs were waiting; by 01:25 thirteen replies had landed and
+were being applied. `solar-sizing` came back as a Gemini error page (chrome, not a review) and was
+re-dispatched to qwen as a FRESH id (`20261013-0121-...-REVIEW3`) — a lane that has seen an id
+cannot be revived by editing it.
+
+**The review recipe is `scripts/bridge-review.py --dir tools --guides <slug> --lane <host>`**, and
+`--lane` matters: the rotation cannot tell a working lane from one that renders its page without an
+answer.
+
+### W27. The weight calculator's core rule is unsourced, and that is a real gap (2026-10-13, from a bridge review)
+
+`tools/weight-calculator.html` was reviewed by chat.deepseek.com on 2026-10-13. The page's sourcing
+was clean on the propane arithmetic, the UVW definition and the CAT Scale prices, and the reviewer
+said so. Three load-bearing claims are not in the source list at all:
+
+1. **The 80% rule**, which is the calculator's whole safety mechanism: *"This calculator runs the
+   loaded-weight math against the 80% rule that keeps the margin real."* Nothing in the source list
+   (49 CFR 571.110, 49 CFR 571.3, Forest River definitions, CAT Scale FAQ) supports it. **This is
+   the one to settle first, and it is not a wording job**: the rule is a folk convention with no
+   engineering standard behind it, and the page presents it as "a safety guideline" with the line
+   "The margin is what keeps you safe". Either a named body that publishes the convention is found
+   and cited, or the page says plainly that it is a rule of thumb rather than a rating. **Checked
+   and not available to reuse: `guides/rv-towing-capacity.html` uses the 80% rule in its title and
+   description and does not source it either.**
+2. **The tongue and pin weight percentages** — *"travel trailers run 10 to 15% of loaded weight,
+   and fifth wheels 20 to 25%"* — drive both the payload check and the 80% check, and no document
+   in the list carries them. `guides/rv-pin-weight-and-payload.html` was independently verified on
+   2026-10-11 and its note records the percentages traced to Reese/Lippert/Curt/RVIA and Ford's
+   towing guide, so **that guide is where the citations for this should come from.**
+3. **The RVSEF figure** — *"reports that over half the RVs they weigh exceed at least one safety
+   rating"* — is attributed inline but the organisation is not in the source list.
+
+Also recorded from the same review, not defects: the reviewer's reader-gaps (the 80% rule is never
+pinned to trailer weight vs GVWR vs the combination; the glossary explains GAWR but the calculator
+has no GAWR field; there is no margin rule for payload, GVWR or GCWR) and its one voice note
+(*"Most towing math is a guess wearing numbers"*), which is NOT taken — a constructed image of that
+kind is the house voice Ty named when he pointed at "the lamp lies" and "the pump is the source of
+truth", and the reviewer's plainer alternative is blander than the site.

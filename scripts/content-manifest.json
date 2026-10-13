@@ -7,14 +7,14 @@
     "sources": []
   },
   "about.html": {
-    "hash": "099d2fc67edfc4cf",
+    "hash": "e0c310876c79fac9",
     "status": "unverified",
-    "verified_by": null,
+    "verified_by": "2026-10-13 independent fresh-context review (subagent, separate context; same model as the drafter, so it is recorded for the findings and NOT as a strength claim, which is why the status stays unverified). SIX findings, NONE APPLIED, each refuted after reading the page. Four of them ask for the disclosure cards to be cut as 'sentences about the site': 'How the guides are put together' (each guide names the documents behind its claims and links them), 'Every tool is free.', 'The directory lists each business, where it works, and what it does.', 'The guides carry the date they were last checked.' Those cards are the page's disclosure content, not virtue claims, and the virtue claims were already cut from this page on 2026-10-11 (commit c8303c1f) -- what remains is method and liability text that an about page exists to state. A fifth asks for a flag-injury callout on the Liability and safety card; that card IS the site's liability disclosure (authored by the safety pass), it names no procedure, and a 'Can injure you' label on a disclaimer would restate the card's own sentence. The sixth ('Built from inside an RV' as site-centred voice) would remove the page's positioning. Rules 1, 2, 5 and 6 came back clean, and the reviewer confirmed the page's figures hold (48/48 guides carry a checked date, six years matches since-2020). SURFACED TO TY in the session report as an editorial call: if he wants the disclosure cards cut, they are his to cut.",
     "verified_at": null,
     "sources": []
   },
   "contact.html": {
-    "hash": "361c7a862a181ead",
+    "hash": "b45120e4565031c4",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -26,70 +26,70 @@
     "invalidated_at": "2026-09-23"
   },
   "directory/alabama.html": {
-    "hash": "f40f865b85447ef5",
+    "hash": "0ee81aa367f2af1f",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/alaska.html": {
-    "hash": "78d77524ad0f5bc5",
+    "hash": "4b4b31b2c11902ae",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/arizona.html": {
-    "hash": "c512d63dcf8dc589",
+    "hash": "4c1c25b306335da5",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/arkansas.html": {
-    "hash": "f0f3b27e3bb56525",
+    "hash": "f8609fbaf73e8b4b",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/california.html": {
-    "hash": "bacf79793f638db3",
+    "hash": "b8cd1948b8329964",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/colorado.html": {
-    "hash": "6f7e8216fb02fc58",
+    "hash": "0f60349426d8b2cb",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/connecticut.html": {
-    "hash": "de2a4396292537d7",
+    "hash": "21f4f8aca7c306ce",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/delaware.html": {
-    "hash": "a4f6c61a2ddd2a27",
+    "hash": "71a850fe485f6753",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/florida.html": {
-    "hash": "4094959a9a7ab80e",
+    "hash": "38d26dc07d570096",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/georgia.html": {
-    "hash": "6ed0e615bde2e888",
+    "hash": "3133ffa398f08a27",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -103,280 +103,280 @@
     "sources": []
   },
   "directory/idaho.html": {
-    "hash": "10b40918ae6e5a01",
+    "hash": "20c23c7766b9602a",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/illinois.html": {
-    "hash": "22573e7ea9f67e44",
+    "hash": "20f8bb1562250015",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/index.html": {
-    "hash": "c9a20c0a4d60b217",
+    "hash": "830e82de77ef195b",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/indiana.html": {
-    "hash": "8413f1d146fc3ca2",
+    "hash": "d4ebebd5bb0ad2cd",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/iowa.html": {
-    "hash": "c222fcaa4ba5db28",
+    "hash": "3daf497f6d7b3548",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/kansas.html": {
-    "hash": "4d982834f9ac6cdf",
+    "hash": "bed5dd1a9e46b111",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/kentucky.html": {
-    "hash": "81da30be09044bb7",
+    "hash": "853dfdef986d2df4",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/louisiana.html": {
-    "hash": "318011c6551cbd1c",
+    "hash": "fc48a0c0525b7150",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/maine.html": {
-    "hash": "0089bfc0e5594773",
+    "hash": "d4a99e99f0931a19",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/maryland.html": {
-    "hash": "e2a3b8ad48b71f4e",
+    "hash": "29d9ce95ea60c4c8",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/massachusetts.html": {
-    "hash": "ced6ed3d74aab31a",
+    "hash": "513c099b7a1fe13e",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/michigan.html": {
-    "hash": "7bee4c4fccdeb726",
+    "hash": "3155ca8583bc5d0a",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/minnesota.html": {
-    "hash": "c2644c70204d44c6",
+    "hash": "7b56f8b172175e5a",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/mississippi.html": {
-    "hash": "7897358721528b3d",
+    "hash": "24b2f74c71dbfdf3",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/missouri.html": {
-    "hash": "7c7b5a7da66e8738",
+    "hash": "e2b09e2ed048ff14",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/montana.html": {
-    "hash": "9e64a6e469347ec5",
+    "hash": "1d42a755b577b63f",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/nebraska.html": {
-    "hash": "9b3fd6601401be35",
+    "hash": "32fdf9de1a62deba",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/nevada.html": {
-    "hash": "a27089f0bf97fd6d",
+    "hash": "b969f1e23f259c44",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/newhampshire.html": {
-    "hash": "b32456e1bd757502",
+    "hash": "dcaf0eb65c7a28b9",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/newjersey.html": {
-    "hash": "19cfcda7f02c2860",
+    "hash": "5e52cef7d9b3c9d8",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/newmexico.html": {
-    "hash": "5f10e8cf730327b2",
+    "hash": "bcb37e4b72493aea",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/newyork.html": {
-    "hash": "49ce1cac45303278",
+    "hash": "2a24790e308cda92",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/northcarolina.html": {
-    "hash": "a2b99af6479e985e",
+    "hash": "4128b64dbc648899",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/northdakota.html": {
-    "hash": "75b4d623f2c1fa04",
+    "hash": "646a31e5377e0c68",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/ohio.html": {
-    "hash": "0704a95ad8acd11b",
+    "hash": "0341859d088bfea9",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/oklahoma.html": {
-    "hash": "c6b10b2fda38faa3",
+    "hash": "5de4fa9bff727419",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/oregon.html": {
-    "hash": "a7202c5a3874a3c1",
+    "hash": "c86ae9bdcf3f8abe",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/pennsylvania.html": {
-    "hash": "0a094a55f116b35f",
+    "hash": "bda3d5cbe4aa9bf5",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/rhodeisland.html": {
-    "hash": "36aabb174e00d37d",
+    "hash": "dc15ba714775b65d",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/southcarolina.html": {
-    "hash": "4f8d19c23f818e27",
+    "hash": "2079c8f381ea43d2",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/southdakota.html": {
-    "hash": "31a918b8dc3adb1f",
+    "hash": "f79a2a33f7d7c1af",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/tennessee.html": {
-    "hash": "0ac19f1fec9288b1",
+    "hash": "5f787ad5803c4960",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/texas.html": {
-    "hash": "d98210956f32074a",
+    "hash": "7e4a11aa065ba932",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/utah.html": {
-    "hash": "1b01578ae8ca4c61",
+    "hash": "22536f910942c85e",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/vermont.html": {
-    "hash": "17c99dee8d237a80",
+    "hash": "b8057b0c891d850c",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/virginia.html": {
-    "hash": "7bb53fedafd4d955",
+    "hash": "1ccda5cd80db619d",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/washington.html": {
-    "hash": "8ef00637760a7ce5",
+    "hash": "6b74abe230dd360d",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/westvirginia.html": {
-    "hash": "c26c96be3e23f9b4",
+    "hash": "2cdc55bbf9750862",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/wisconsin.html": {
-    "hash": "8a841301670aada6",
+    "hash": "e2dadaf146894b1a",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/wyoming.html": {
-    "hash": "9e9d6f148da9191b",
+    "hash": "1870f2cfbfcc9897",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -533,10 +533,10 @@
     "claims": []
   },
   "guides/rv-furnace-carbon-monoxide.html": {
-    "hash": "781f19223ef409d5",
+    "hash": "58331d02cdd0deac",
     "status": "verified",
-    "verified_by": "Independent fresh-context review 2026-10-10, all ten cited documents fetched: 6 findings applied (1 wrong-fact, 1 sourcing, 1 voice, 3 style) and three further fixes the review surfaced. Applied: the lede's duplicated half-written clause and the matching garbled H2; 'with the warning above' - a sentence about the page - deleted; Kidde's 10-year life now carries its cited model exceptions instead of 'all of them'; the unnamed 'the manufacturer and the National Fire Protection Association' replaced with Kidde in accordance with the NFPA, plus the CDC's more conservative five-year interval (string verified by direct fetch of the CDC page); the Winnebago quotation rendered with its source's bracketed [t]he. The unused Truma source entry removed. NOT applied: the H1 'the warning signs the manuals actually give' left as written - it is the page's thesis, and changing it would also move the title, description, og and JSON-LD. The review's one non-rule observation (Truma cited but unused) is the source entry removed above.",
-    "verified_at": "2026-10-10",
+    "verified_by": "2026-10-13 Cloud: title shortened from 66 to 59 characters (past Google's ~62-character cut, so the tail was being dropped in the result). 'RV Furnace and Carbon Monoxide: The Warning Signs the Manuals Give' -> 'RV Furnace and Carbon Monoxide: What the Manuals Warn About'; the same string was updated in og:title and twitter:title. Metadata only, no claim, figure or quotation altered.",
+    "verified_at": "2026-10-13",
     "sources": [],
     "spec": null,
     "spec_waived": true,
@@ -845,7 +845,7 @@
   "guides/trailer-brakes-required.html": {
     "hash": "caa9409737e6b5a5",
     "status": "verified",
-    "verified_by": "First independent pass (fresh-context subagent, 6 findings: 1 injury, 4 sourcing, 1 voice). APPLIED: repointed all four 49 CFR citations from the Cornell LII mirror to the government's own ecfr.gov pages; added the two documents the page relies on but never listed (49 CFR 390.5, the commercial-motor-vehicle definition, and California Vehicle Code 26302, the general-trailer lines); named the three federal standards the page referred to only by description (FMVSS 105, 135 and 106) and added their source bullets; added flag-injury to the short version, which told a reader their trailer might legally need no brakes without saying that no threshold makes an unbraked trailer stop, and flag-money at the breakaway test, where testing with the trailer connected backfeeds the brake controller; rewrote the garbled gain-setting sentence, which had fused an instruction to a meta-clause through two colons. OWED: the California Vehicle Code pages (26302 and 26303) are the official publisher but sit behind a Cloudflare bot wall that returns 403 to a machine fetch, so those two citations are UNVERIFIED by fetch; the visible 'Last updated on Oct 6, 2026' and the JSON-LD dateModified 2026-09-27 disagree.",
+    "verified_by": "First independent pass (fresh-context subagent, 6 findings: 1 injury, 4 sourcing, 1 voice). APPLIED: repointed all four 49 CFR citations from the Cornell LII mirror to the government's own ecfr.gov pages; added the two documents the page relies on but never listed (49 CFR 390.5, the commercial-motor-vehicle definition, and California Vehicle Code 26302, the general-trailer lines); named the three federal standards the page referred to only by description (FMVSS 105, 135 and 106) and added their source bullets; added flag-injury to the short version, which told a reader their trailer might legally need no brakes without saying that no threshold makes an unbraked trailer stop, and flag-money at the breakaway test, where testing with the trailer connected backfeeds the brake controller; rewrote the garbled gain-setting sentence, which had fused an instruction to a meta-clause through two colons. OWED: the California Vehicle Code pages (26302 and 26303) are the official publisher but sit behind a Cloudflare bot wall that returns 403 to a machine fetch, so those two citations are UNVERIFIED by fetch; the visible 'Last updated on Oct 6, 2026' and the JSON-LD dateModified 2026-09-27 disagree. UPDATED 2026-10-13: the two California Vehicle Code citations are no longer OWED. The per-section URL (codes_displaySection) still answers Cloudflare 403 to a script fetch, but the official publisher's CHAPTER page for Division 12, Chapter 3, Article 1 (codes_displayText?lawCode=VEH&division=12.&chapter=3.&article=1.) serves both sections, and both were read verbatim there: 26302 'Every trailer or semitrailer, manufactured and first registered after January 1, 1940, and having a gross weight of 6,000 pounds or more and which is operated at a speed of 20 miles per hour or over shall be equipped with brakes' and (b) 3,000 lb / two wheels from 1966; 26303 'Every trailer coach and every camp trailer having a gross weight of 1,500 pounds or more, but exclusive of passengers, shall be equipped with brakes on at least two wheels'. The page's table row matches both. The visible-date vs dateModified disagreement on this page still stands.",
     "verified_at": "2026-10-10",
     "sources": [],
     "spec": "_specs/trailer-brakes-required.md",
@@ -863,9 +863,9 @@
     "claims": "2c668bd9cf981fe7"
   },
   "index.html": {
-    "hash": "16b0678086aa6a69",
+    "hash": "863ba468567fe2a9",
     "status": "unverified",
-    "verified_by": null,
+    "verified_by": "2026-10-13 independent fresh-context review (subagent, separate context; same model as the drafter, recorded for the findings rather than as a strength claim, so the status stays unverified). Four findings. APPLIED: (1) the winter section said 'Five guides, one checklist each: plumbing, batteries, tires, roof and furnace' while the five cards under it are Winterize Your Plumbing, Battery Care in Cold, Tires Through Winter, Roof Under Snow Load and RV Froze -- there is no furnace guide in the winter set, so the sentence contradicted the grid on the same screen; it now ends 'roof and a frozen coach'; (2) 'The window seal and the bottom trim, per the makers' handed the guide's basis to an unnamed party, the class the site cuts -- the clause is dropped. REFUTED: 'The maker documents behind every part, linked at the source' is already recorded in _todo/W19-CALIBRATION-SET.md as one of five trust-claim sentences awaiting Ty's ruling, so it is not a session's call; and 'what the manuals say' describes the guide's coverage rather than attributing a fact, and was flagged UNSURE by the reviewer itself. Rule 1, 2, 3 and 5 came back clean, and the page's counts (14 tools, 47 guides, 1,942 businesses, 50 states) all reconcile against the data.",
     "verified_at": null,
     "sources": []
   },
@@ -884,28 +884,28 @@
     "sources": []
   },
   "manuals/exterior-and-body.html": {
-    "hash": "fed72d32795ef5df",
+    "hash": "58fbf32914be6a9f",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "manuals/heating-and-cooling.html": {
-    "hash": "9c64df493ee97548",
+    "hash": "43dde7c813f0995a",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "manuals/index.html": {
-    "hash": "132b774820d88958",
+    "hash": "ec882053d84f1737",
     "status": "unverified",
-    "verified_by": null,
+    "verified_by": "2026-10-13 independent fresh-context review (subagent, separate context; same model as the drafter, recorded for the findings rather than as a strength claim, so the status stays unverified). FIVE findings, none applied. Four are the 'linked at the source' family that _todo/W19-CALIBRATION-SET.md already records as ONE decision awaiting Ty's ruling ('Every row links the maker's own page or document.', its repeat in the 'need an account or a fee' card, 'The maker documents behind each part' in the nav, and 'Every system, linked at the maker' in the nav) -- a session does not rule on that cluster. The fifth, 'the federal file of manufacturer communications', is a source named without being named and is a candidate when that cluster is ruled on. Rules 1, 2, 3, 5 and 6 came back clean, and the reviewer verified every count against the data: 110 documents and libraries across 94 makers and 654 model lines, the eight tile sums (34+7+8+13+7+27+6+8 = 110), each 'and N more', 44 manufacturers from 1973 to 2027, numberOfItems 8, and the parts nav's 157.",
     "verified_at": null,
     "sources": []
   },
   "manuals/kitchen-and-appliances.html": {
-    "hash": "ad89e11b9908685f",
+    "hash": "137089bb59946f21",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -919,7 +919,7 @@
     "sources": []
   },
   "manuals/recalls.html": {
-    "hash": "e771fc4d9e83f7f9",
+    "hash": "bb7d0d4f5aab7212",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -933,7 +933,7 @@
     "sources": []
   },
   "manuals/start-here.html": {
-    "hash": "02a7996831f38aff",
+    "hash": "8549eb2e03fb8b74",
     "status": "unverified",
     "verified_by": " CHANGED 2026-09-28: one sentence was attributed. It read \"The manual's limit is 30 PSI maximum\", an unnamed authority for a specific number, and read against the Furrion figure on the water-heater guide it looked like a contradiction. The number is Jayco's, which the winterising guide already says ('Jayco caps its system at 30 psi ... while Winnebago publishes 35 to 50 psi'), and the sentence now names Jayco and says the ceiling is the plumbing's rather than one number for every RV. The change was made in the page's generator, scripts/build-manuals-pages.py, and the page regenerated. No other text changed.",
     "verified_at": null,
@@ -952,75 +952,78 @@
     "sources": []
   },
   "manuals/water-and-plumbing.html": {
-    "hash": "33c1d6553625e3cf",
+    "hash": "7da7ba966fab386f",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "parts/index.html": {
-    "hash": "14d2e87cf5daf35e",
+    "hash": "713797b61c905ebf",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "privacy.html": {
-    "hash": "c431d09f91635487",
+    "hash": "0e3dc1dfc23424b0",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "signin.html": {
-    "hash": "3e0132fc1b97b389",
+    "hash": "d3fd1d3fc1542da4",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "tools/battery-runtime.html": {
-    "hash": "09679db903ee280c",
+    "hash": "e202b9a70591080d",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "tools/fuel-cost.html": {
-    "hash": "a45ab04957ced980",
-    "status": "unverified",
-    "verified_by": null,
-    "verified_at": null,
-    "sources": []
+    "hash": "f3db6ef4ccfa74e9",
+    "status": "verified",
+    "verified_by": "2026-10-13 independent bridge-lane review (chat.deepseek.com), Four findings, all applied. (1) overclaiming: 'Motorhomes and tow vehicles also run most efficiently somewhere in the 55 to 65 MPH band, so a trip planned at 75 burns measurably more than the same trip at 60' generalised one trade source to every motorhome and tow vehicle and carried a unit-free 'measurably' -- now 'Camper Smarts puts the most efficient cruising band at 55 to 65 MPH, and a trip planned at 75 burns more than the same trip at 60', which is what the source list already credits Camper Smarts with. (2-4) voice: 'The estimate is the middle of the road' (the idiom means mediocre, not midpoint) -> 'a midpoint'; 'how heavy the coach is loaded' -> 'how heavily the RV is loaded' (grammar, and 'coach' is wrong for the trailer and car presets this page also covers); 'the result applies that for you' -> 'applies it for you'. RECORDED, NOT APPLIED: the generator figure 'roughly half a gallon to one gallon per hour' is credited to Camper Smarts while Onan/Cummins publishes its own generator fuel tables, which is the one claim on this page whose maker document exists and is not used; and the reviewer's three reader-knowledge gaps (diesel generator owners get no figure, which fuel price the generator hours are billed at, whether a towable owner without a known pulling MPG should leave the box empty). Those are content decisions.",
+    "verified_at": "2026-10-13",
+    "sources": [],
+    "spec": null,
+    "spec_waived": true,
+    "claims": []
   },
   "tools/index.html": {
-    "hash": "635e8e923b841eba",
+    "hash": "c24111c810d45ba3",
     "status": "unverified",
-    "verified_by": null,
+    "verified_by": "2026-10-13 independent fresh-context review (subagent, separate context; same model as the drafter, so this is recorded for the findings and NOT as a strength claim, which is why the status stays unverified). Five findings. APPLIED: (1) the RV Recall Lookup card contradicted itself six lines apart, saying 'A recall is filed against a range of VINs, not against a model year' while its own example output read 'Filed against 2022' -- the row is relabelled 'Model year', which is what the tool actually surfaces (assets/js/recalllookup.js uses modelYear) and is the screen the copy describes; (2) 'the six-to-10-year replacement window the tire and vehicle makers recommend' was an unnamed authority and dropped the qualifier NHTSA prints -- it now reads 'the six-to-10-year replacement window NHTSA cites', matching the verbatim NHTSA quotation on tools/tire-date-code.html; (3) 'Half the water heaters on the road have no anode rod' asserted an unsourced proportion, softened to 'Many water heaters have no anode rod' (the same wording on tools/rv-anode-rod.html changed with it). REFUTED after reading the markup: the 'no warning callout anywhere on the page' finding (the cards are calculator previews whose risk is shown by their own red viz-rows, not instructions, so a callout would be the instrument flagging correct behaviour), and the 'Every tool is free: no account, no paywall' finding (a product fact the reader needs before clicking, not an authenticity claim).",
     "verified_at": null,
     "sources": []
   },
   "tools/rv-anode-rod.html": {
-    "hash": "8bb7356e74447c13",
+    "hash": "e13bd0fed264bfa1",
     "status": "unverified",
-    "verified_by": null,
+    "verified_by": "2026-10-13: the H2 'What an anode rod does, and why half the heaters have none' became '...and why many heaters have none'. The 'half' was an unsourced proportion about the installed fleet; no cited document carries it, and the site's rule is that a figure is sourced or cut. No other change.",
     "verified_at": null,
     "sources": []
   },
   "tools/rv-appliance-board-finder.html": {
-    "hash": "bcd9f8d3d2d1a924",
-    "status": "unverified",
-    "verified_by": "New page, 2026-10-11. Every board number it can print is a row in _data/dinosaur-boards.json, and every row came from one of the two Dinosaur charts the page names, fetched and parsed rather than summarised. Two layout traps were found by reading the raw markup: rows are four cells wide including placeholders, and a model row is refined by production-range rows in its own column. No independent lane has reviewed it, so it is recorded unverified rather than claimed.",
-    "verified_at": null,
+    "hash": "6a3b321dc6a469c3",
+    "status": "verified",
+    "verified_by": "2026-10-13 independent bridge-lane review (chat.qwen.ai), Three findings, 0 sourcing and 0 overclaiming; two applied. 'because the makers do not publish one' had an ambiguous 'one' -> 'because the original manufacturers do not publish their own replacement charts'; 'the refrigerator not cooling guide works the diagnosis in order' -> 'walks you through the diagnosis in order'. RECORDED: 'black-box boards' is unexplained to a first-time reader; the page defines 'eyebrow board' but not that.",
+    "verified_at": "2026-10-13",
     "sources": [],
     "spec": null,
     "spec_waived": true,
     "claims": []
   },
   "tools/rv-converter-finder.html": {
-    "hash": "8e726ef22e6cafbc",
+    "hash": "4818dbbf7bdff5b4",
     "status": "unverified",
-    "verified_by": "New page, 2026-10-11. Every part number it can print is a row in _data/converters.json, and every row names the maker chart it came from; the two parsed charts were fetched and read rather than summarised. WFCO's chart is deliberately not parsed and the page says so. No independent lane has reviewed it, so it is recorded unverified rather than claimed.",
+    "verified_by": "New page, 2026-10-11. Every part number it can print is a row in _data/converters.json, and every row names the maker chart it came from; the two parsed charts were fetched and read rather than summarised. WFCO's chart is deliberately not parsed and the page says so. No independent lane has reviewed it, so it is recorded unverified rather than claimed.  2026-10-13: title shortened from 66 to 57 characters -- it was past Google's ~62-character cut, so the tail was being dropped in the result. Metadata only.",
     "verified_at": null,
     "sources": [],
     "spec": null,
@@ -1028,16 +1031,16 @@
     "claims": []
   },
   "tools/rv-loan.html": {
-    "hash": "bb8b433232d12540",
-    "status": "unverified",
-    "verified_by": null,
-    "verified_at": null,
+    "hash": "5bfc716a27fa556f",
+    "status": "verified",
+    "verified_by": "2026-10-13 independent bridge-lane review (grok.com), One finding, RECORDED rather than applied: 'a 20-year term can double the cost of the RV, and the lower monthly payment is how that extra cost hides.' The reviewer notes the Bankrate example on the page (50k at 7.99% over 10 years) produces 22,765 interest, so doubling is reachable at higher rates or across the full 20 years but is not what the page illustrates. 'Can' keeps the sentence true, so it stands; worth a second look the next time this page is touched. Sourcing, arithmetic and English all came back clean.",
+    "verified_at": "2026-10-13",
     "sources": []
   },
   "tools/rv-recall-lookup.html": {
-    "hash": "e6f7dbb8c75481e8",
+    "hash": "2f2f7ecb665bc92b",
     "status": "unverified",
-    "verified_by": "New page, 2026-10-10. Every endpoint it calls was exercised live before the brief was written and again after the tool was built; the make-name aliases are the strings NHTSA actually returns, collected from five model years of its makes endpoint, not guesses. No independent lane has reviewed it, so it is recorded unverified rather than claimed.",
+    "verified_by": "New page, 2026-10-10. Every endpoint it calls was exercised live before the brief was written and again after the tool was built; the make-name aliases are the strings NHTSA actually returns, collected from five model years of its makes endpoint, not guesses. No independent lane has reviewed it, so it is recorded unverified rather than claimed.  2026-10-13: title shortened from 65 to 59 characters -- it was past Google's ~62-character cut, so the tail was being dropped in the result. Metadata only.",
     "verified_at": null,
     "sources": [],
     "spec": null,
@@ -1045,38 +1048,44 @@
     "claims": []
   },
   "tools/rv-toilet-valve.html": {
-    "hash": "3b5e48e81ea7a3b3",
-    "status": "unverified",
-    "verified_by": "New page, 2026-10-10. Each part number and every claim on it was checked against the maker's own document, fetched and read rather than summarised, but no independent lane has reviewed it, so it is recorded unverified rather than claimed.",
-    "verified_at": null,
-    "sources": []
+    "hash": "09093ad6b9338755",
+    "status": "verified",
+    "verified_by": "2026-10-13 independent bridge-lane review (chat.deepseek.com), Four findings applied, one REFUTED with evidence, one recorded. APPLIED: 'whose number Dometic publishes in its Sanitation Replacement Parts Guide, served from Dometic's parts pages' named a document the source list does not carry and used a collocation that is not English -> 'publishes on Dometic's parts pages'; 'This is the first fork, and it is the one that removes the most toilets' (quiz jargon, and 'removes' reads as physically taking them away) -> 'This is the first question, and it rules out the most toilets'; 'the toilets that are current' -> 'current toilets'; 'white stress marks in it mean the valve froze' stated a diagnosis the source list does not carry -> 'a freeze damage indicator window, which is how the maker says to tell that the valve has frozen'. REFUTED BY FETCHING THE DOCUMENT: the reviewer said the warranty claim ('the warranty does not cover it, and a valve sent back for a warranty claim can be refused if freezing caused the damage') does not trace to the 300/310/320 manual. It does, verbatim -- Dometic 9108765624 prints 'NOTICE: The toilet warranty expressly excludes coverage for any damages to the toilet or the vehicle that may occur due to improper winterization of the toilet. Freeze damage that results in leaks to the water valve is an indicator of improper winterization.' RECORDED: 385311641 is printed as fitting twelve models while the recorded source note documents it for the 310 and the 400 series only (_data/toilet-valves.json source_status is 'confirmed' and source_note names those two) -- that needs the documents in hand before either the print or the data changes.",
+    "verified_at": "2026-10-13",
+    "sources": [],
+    "spec": null,
+    "spec_waived": true,
+    "claims": []
   },
   "tools/rv-water-filter.html": {
-    "hash": "79ea1431a79d61db",
-    "status": "unverified",
-    "verified_by": null,
-    "verified_at": null,
-    "sources": []
+    "hash": "b11f031d1ea1903d",
+    "status": "verified",
+    "verified_by": "2026-10-13 independent bridge-lane review (chatgpt.com), Seven findings; one applied, the rest recorded. APPLIED: 'which is the leak that shows up at the inlet the moment the water is turned on' presented one outcome of forcing NPT into garden-hose thread as inevitable -> 'which damages the threads and causes a leak'. RECORDED for the next pass, all sourcing/scope rather than wording: (1) the cross-brand interchange rule ('cartridges interchange across housing brands as long as the end cap type matches') is wider than any document the page names -- diameter and end cap do not establish fit, and length and sealing geometry are not mentioned; (2) the winter-storage paragraph says 'the makers agree on the shape of it' while the listed maker instructions differ (refrigerator storage, sealed bag above 35F, housing protection, dry storage of removed elements); (3) 'about half a gallon per minute' is stated without naming which filter the rating belongs to. Several voice rewrites were offered and NOT taken, because they push the page toward a blander register than the site's ('The format is the fit.' is in the house voice and stays).",
+    "verified_at": "2026-10-13",
+    "sources": [],
+    "spec": null,
+    "spec_waived": true,
+    "claims": []
   },
   "tools/snow-load.html": {
-    "hash": "f69f103e2919d86e",
-    "status": "unverified",
-    "verified_by": null,
-    "verified_at": null,
+    "hash": "eb2ed5db64484016",
+    "status": "verified",
+    "verified_by": "2026-10-13 independent bridge-lane review (chat.qwen.ai), Three findings, none applied. Two are tooling, not the page: the reviewer's 'MakerFigureWhat kind of number it is' is the review extractor flattening a table (a known artifact class), and 'uniform metamorphosis' appears only inside a Sources annotation describing what the cited document covers, not in the body. The third, 'Snow is mostly air, and what it weighs is the water inside it', is a taste note -- reads plainly. Sourcing and overclaiming came back clean.",
+    "verified_at": "2026-10-13",
     "sources": []
   },
   "tools/solar-sizing.html": {
-    "hash": "8e4f4a87a7c31d19",
+    "hash": "b73145ec36c5abb1",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "tools/tire-date-code.html": {
-    "hash": "e47188012c6a36a6",
-    "status": "unverified",
-    "verified_by": "New page, 2026-10-02. Not yet reviewed by an independent lane, so it is recorded unverified rather than claimed.",
-    "verified_at": "",
+    "hash": "d723d0a68e986864",
+    "status": "verified",
+    "verified_by": "2026-10-13 independent bridge-lane review (grok.com), Clean on all four parts -- no sourcing problem, no overclaiming, reads as native English. The reviewer confirmed the page attributes the six-to-10-year window to 'some vehicle and tire manufacturers' rather than to NHTSA as a mandate, and repeatedly distinguishes a recommendation from a legal limit. RECORDED: a reader still gets no maker-by-maker age limit for ST trailer tires, and no guidance on a worn or partly illegible DOT code.",
+    "verified_at": "2026-10-13",
     "sources": [],
     "spec": "",
     "spec_waived": true,
@@ -1091,7 +1100,7 @@
     "sources": []
   },
   "tools/weight-calculator.html": {
-    "hash": "ead26a4b76ba7e47",
+    "hash": "cf60839c9bb5468c",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
