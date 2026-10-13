@@ -198,6 +198,10 @@ def counts(rows):
         # A "both" business comes to you AND takes drop-offs, so it counts in each.
         "mobile": sum(1 for r in rows if r.get("t") != "center"),
         "center": sum(1 for r in rows if r.get("t") != "mobile"),
+        # Brandt, 2026-10-13: keep the counts and label the overlap rather than making the
+        # buckets exclusive. A "both" business is in mobile AND center, so mobile + center
+        # exceeds the total; showing the overlap is what makes the three numbers add up.
+        "both": sum(1 for r in rows if r.get("t") == "both"),
         "road": sum(1 for r in rows if r.get("r")),
         "emerg": sum(1 for r in rows if r.get("e")),
     }
@@ -473,7 +477,7 @@ def build(kind):
     text = old = hub.read_text(encoding="utf-8")
     for slug, st in sorted(PAGES.items()):
         c = out[(slug, "counts")]
-        for key in ("total", "mobile", "center"):
+        for key in ("total", "mobile", "center", "both"):
             text, n = re.subn(r'(<b id="idx-%s-%s">)\d+(</b>)' % (st.lower(), key),
                               r"\g<1>%d\g<2>" % c[key], text)
             assert n == 1, "hub: idx-%s-%s marker not found" % (st.lower(), key)
