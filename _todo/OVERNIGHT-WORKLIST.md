@@ -1527,6 +1527,36 @@ touched.**
 (the leak W18 and the tmpfs notes warn about). Only leaves with no live process were removed; two live
 ones were kept.
 
+### W20b — THE UNAPPLIED BRIDGE WAVE IS CLOSED (2026-10-13, on the-grid)
+
+**The REVIEW3 replies plus the 0055 batch, all read against the artifact. Eight defects applied, two
+premises refuted, one mistake of my own caught by a gate.**
+
+**The safety one, and the reason this wave was worth running:** `tools/rv-anode-rod.html`'s drain
+procedure said *"Turn the water off and let the heater cool"* and **never said to cut the power.**
+Draining an energised electric water heater is the hazard the page exists to warn about. It now reads
+"turn the water off, cut the heater's power at its switch or breaker, and let it cool".
+
+**The one where reading the source reversed the finding:** the lane said the converter page's body
+contradicted its source list over Magnetek. I fetched the Progressive Dynamics chart: it mentions
+**Magnetek zero times and Todd zero times**. So the body was right and the **Sources sentence** was
+wrong -- it claimed coverage the chart does not have. Corrected to "Iota, Parallax, WFCO, PowerMax and
+its own older series".
+
+**Two lanes independently flagged the same sentence** on solar-sizing (units omitted inconsistently);
+that is the strongest signal in the batch and it was real.
+
+**A mistake of my own:** my first fix to an about.html sentence replaced an awkward collocation with
+"a maker requires" -- an unnamed authority, the exact class Ty ruled on. `check-prose.py` failed the
+build on it, and the clause is cut. The gate did its job on me.
+
+**Also worth recording, because it cost time:** the checkout was **13 commits behind** when I started
+editing, and a **stale interactive rebase from hours earlier** was still in progress. My commit landed
+on a detached HEAD on the old base; I saved its patch, aborted the stale rebase, reset main to the real
+tip, re-applied, and verified the commit touched only my 14 lines. **Two of my own recorded rules in
+one incident: fetch before treating the local tree as the base, and check the repo is not mid-operation
+before committing into it.**
+
 ### W22. "the-grid" now resolves to TWO online devices on different versions (2026-10-13, Cloud)
 
 `letta computers list` returns **two** connections both named **the-grid**, both online, on
