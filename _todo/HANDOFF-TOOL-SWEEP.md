@@ -143,6 +143,33 @@ disagrees with a direct observation, suspect the measurement.
 - **#8 "no intro copy above the filters" — REFUTED, third time.** The lede is present and renders
   above the filter bar. "No per-part anchors" — CONFIRMED, recorded.
 
+## Parts guide coverage — worked 2026-10-13 (62 -> 69 cards linked, 18 -> 12 guides unlinked)
+
+Two passes, both from the source, and the second one's answer is that the remainder is STRUCTURAL.
+
+**Pass 1 (three cards):** `Toilet (vacuum or macerator)` and `Macerator pump` -> `rv-macerator-toilet`,
+and `12 volt outlets and USB` -> `rv-12-volt-problems`. Cards linked 62 -> 65, distinct targets 29 ->
+31, guides never linked 18 -> 16.
+
+**Pass 2 (four cards):** `Propane regulator` -> `rv-propane-furnace-wont-light`,
+`Weight-distribution hitch` -> `rv-towing-capacity`, `Tongue jack` -> `rv-towing-trailer`,
+`Portable generator` -> `rv-generator-sizing`. Cards linked 65 -> 69, distinct targets 31 -> 35,
+guides never linked 16 -> **12**.
+
+**The remaining 12 are not a gap, and this is the useful part.** Five are about ACTIVITIES, not parts —
+`rv-driving-motorhome`, `rv-maintenance-schedule`, `rv-pre-trip-walkaround`, `rv-trip-planner`,
+`rv-two-appliances-stopped` — and a parts card is a component reference, so there is no card for them
+to hang from. The other seven (`rv-black-tank`, `rv-black-tank-routine`, `rv-fridge-leveling`,
+`rv-pin-weight-and-payload`, `rv-water-heater-anode-rod`, `battery-winter-storage`, `roof-snow-load`)
+belong to cards whose **single guide slot is already taken by a better general guide** — the water
+heater anode rod card carries `rv-water-heater-not-heating`, which covers the whole unit rather than
+one part of it. A card has ONE guide slot by design; adding a second would make the button ambiguous
+about what it fixes.
+
+**Two candidates were deliberately NOT linked**, because the guide does not fix that part: `Axle` and
+`Propane tank`. A towing-technique guide does not repair an axle, and a furnace guide does not repair a
+tank. The "How to fix it" button makes a promise about the part on the card.
+
 ## Neo's homepage deep-dive, fourth rotation — verified 2026-10-13 (5 findings: 3 refuted, 1 withdrawn, 1 clean)
 
 **No defects.** Three refuted, one Neo withdrew himself, and one is a clean bill with a suggestion.

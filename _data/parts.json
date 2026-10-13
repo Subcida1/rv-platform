@@ -51,7 +51,7 @@
             "trailer",
             "pop-up"
           ],
-          "guide": null,
+          "guide": "rv-towing-trailer",
           "kw": [
             "tongue jack not working",
             "electric tongue jack died",
@@ -143,7 +143,7 @@
           "types": [
             "trailer"
           ],
-          "guide": null,
+          "guide": "rv-towing-capacity",
           "kw": [
             "weight distribution hitch setup",
             "wd hitch noise",
@@ -1409,7 +1409,7 @@
             "motorhome",
             "van"
           ],
-          "guide": null,
+          "guide": "rv-generator-sizing",
           "kw": [
             "rv portable generator",
             "inverter generator for rv",
@@ -4696,7 +4696,7 @@
             "motorhome",
             "van"
           ],
-          "guide": null,
+          "guide": "rv-propane-furnace-wont-light",
           "kw": [
             "rv propane regulator replacement",
             "regulator freezing",
