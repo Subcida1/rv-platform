@@ -143,6 +143,31 @@ disagrees with a direct observation, suspect the measurement.
 - **#8 "no intro copy above the filters" — REFUTED, third time.** The lede is present and renders
   above the filter bar. "No per-part anchors" — CONFIRMED, recorded.
 
+## Neo's directory deep-dive, fourth rotation — verified 2026-10-13 (2 refuted, 2 carryover)
+
+- **"Ohio has a shared phone across Craig Smith RV and Craig Smith Body Shop — dedupe?" — CONFIRMED
+  as two businesses, no dedupe.** Both are in Galion, OH and both publish **419-462-1746**, but they
+  are different names on different sites (`craigsmithrv.com` and `craigsmithbodyshop.com`), one an RV
+  dealership with a service department and the other an RV collision and body shop. The directory's
+  duplicate rule is about the SAME business listed twice; a shared switchboard across a family of
+  businesses is a fact about them, not a duplicate. **Both stay.** The page renders both as
+  `(419) 462-1746`, so the renderer is normalising the two shapes the data carries.
+- **"Out-of-state area codes in the source data" — REFUTED, fifth round on this class.** Every listing
+  carries a phone matching its own recorded `phone_quote`, a verbatim quote from the business's own
+  site. The directory records what a business publishes; it does not audit the business's area code
+  against its state. The (840) case from the previous round is the model: Foothill RV's own site
+  prints the number twice.
+- **"Identical 302-char lede on all six state pages" — CARRIED, and it is by design.** The lede is a
+  template with the state name substituted, which is how 50 state pages stay consistent. Whether that
+  is thin content is a search question rather than a defect, and it belongs with the standing
+  directory SEO items rather than here.
+- **"Region taxonomy" — INTENTIONAL, sixth round.** VisitTheUSA's 6-region scheme, adopted on Ty's
+  instruction.
+
+**Neo also withdrew two flags himself, both correctly:** the "9 orphaned states" read (the hub carries
+all 50 cards) and the "bare Phone: dump block" (zero phone numbers in post-claim-form HTML; the hidden
+div is the claim-form success message).
+
 ## Neo's backlog re-delivery — three batches, verified 2026-10-13 (1 fixed, 11 refuted/withdrawn)
 
 **BATCH 1 (homepage) — all four already settled, no new work.** The sec-eyebrow is one of five section
