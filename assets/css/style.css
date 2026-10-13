@@ -24,6 +24,10 @@
 :root{
   /* ---- BRAND: one blue, in three weights plus a deeper gradient for CTAs ---- */
   --brand:#3d7fc2;
+  /* LINK INK, and it is not --brand on purpose. --brand is 4.18:1 on white, below the 4.5:1 AA
+     threshold for body text; axe failed the build on three pages when .page-foot used it.
+     This is the CTA gradient's start colour and measures 5.09:1. */
+  --link-strong:#1e6fc4;
   --brand-2:#568fd3;
   --brand-3:#5b96d8;
   --brand-deep:#1e6fc4;
@@ -1531,10 +1535,7 @@ details.faq p{color:var(--text-2);font-size:16px;line-height:1.7;padding-bottom:
    2026-10-13 (Brandt): /about and /contact carried zero in-body links from anywhere on the
    site, so they were reachable only through nav chrome. */
 .page-foot{font-size:12.5px;color:var(--text-3);margin-top:18px;padding-top:14px;border-top:1px solid var(--line)}
-.page-foot a{color:#1e6fc4;font-weight:600}
-/* NOT var(--brand). --brand is #3d7fc2, which is 4.18:1 on white -- below the 4.5:1 AA
-   threshold for body text, and axe failed the build on three pages for exactly this.
-   #1e6fc4 is the CTA gradient's start colour, already in the palette, and measures 5.09:1. */
+.page-foot a{color:var(--link-strong);font-weight:600}
 .reviewed::before{content:""}
 
 /* ---------- hero CTA + everything deck (2026-09-16) ---------- */
