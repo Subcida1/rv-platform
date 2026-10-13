@@ -1418,6 +1418,52 @@ for the present. A note that misstates history is worth fixing when those pages 
 **What W20 actually needs, then:** a fresh independent pass on the 15 pages' current content, not a
 manifest update. That is a real work item rather than bookkeeping.
 
+### W20 — CLOSED 2026-10-13: the tool pages got their independent pass, and TWO sessions worked the same replies
+
+**The dispatch.** 15 jobs across the six lanes via `scripts/bridge-review.py --dir tools --round 2`
+(the `--dir` option was added this pass; it hardcoded `guides/` before). All six lanes came alive and
+11 replies landed. **Two runs failed at the bridge, not the page** — `battery-runtime` (aistudio
+released the flight at capture-ceiling) and `solar-sizing` (gemini returned "something went wrong") —
+and both were re-dispatched as REVIEW3 on chatgpt.com and chat.qwen.ai. Four more
+(`rv-anode-rod`, `rv-converter-finder`, `rv-recall-lookup`, `watts-to-amps`) were still queued
+unconsumed.
+
+**APPLIED — the real findings, each read against the page before it was touched:**
+
+| page | fixed |
+|---|---|
+| `tools/index.html` | "the board is the **usual** cause" -> "**common** cause, though check the simple things first" (the old line sent a reader to buy a control board before checking anything); "**Every** tire carries..." -> "A tire **made since 2000** carries..." (pre-2000 tires carry a three-digit code, so "every" was false); the two-feet-of-snow conclusion now says "at that density" |
+| `tools/rv-appliance-board-finder.html` | "black-box boards" (jargon the page never defines, though it DOES define "eyebrow board") -> "sealed boards"; "because the makers do not publish **one**" -> "...do not publish their own replacement charts" ("one" had three possible referents); "**works** the diagnosis in order" -> "**walks you through** the diagnosis in order" |
+| `tools/rv-water-filter.html` | four untranslated-sounding phrases: "is decided by" -> "depends on"; "this lands on the maker's figures, or says that the maker does not publish the one you asked for" -> "the finder shows the maker's published figures, or says the maker does not publish them"; "the makers agree on the shape of it" -> "the makers agree on one thing"; "A cartridge is bought by ... rather than an open one" -> "You buy a cartridge by ... not an open one" |
+| `tools/weight-calculator.html` | "Most towing math is a guess wearing numbers" — an INVENTED IDIOM, the class Ty flagged as "lazy english" and "sounds translated" -> "Most towing math is only a guess"; "The margin is what keeps you safe." -> "...keeps you inside the rating." (a voluntary cushion does not keep anyone safe, and the page itself warns against trusting a screen over a sticker) |
+| `tools/fuel-cost.html` | "middle of the road" (an idiom that means mediocre, not a midpoint) -> "a midpoint"; "how heavy the coach is loaded" -> "how heavily the vehicle is loaded" |
+
+**THE LANE WAS WRONG ONCE, AND IT MATTERS.** The fuel-cost lane proposed "how heavily the **rig** is
+loaded". **"rig" is Ty's banned word on this site** and `verify.py` gates it, so applying that
+suggestion would have failed the build. A lane finding is a hypothesis; this is the concrete case.
+
+**RECORDED, NOT CHANGED — each needs a source or a decision rather than a wording fix:**
+- `tools/index.html` attributes "the board is a common cause" across three different symptoms with no
+  source; the snow-load examples assume a density without stating it; the 50-amp line omits the
+  120/240 V split-phase condition.
+- `tools/weight-calculator.html`: **the 80% rule, the tongue and pin weight percentages, and the RVSEF
+  figure are all unsourced — and the 80% rule is the tool's entire safety mechanism.** The review also
+  noted the rule's scope is never pinned down (trailer loaded weight? GVWR? the combination?), and that
+  GAWR is in the glossary but has no field in the calculator.
+- `tools/rv-water-filter.html`: the cross-brand compatibility rule ("within one diameter family,
+  cartridges interchange...") is broader than its evidence, and the winterization summary flattens
+  maker-specific storage instructions into one.
+- `tools/rv-loan.html`: "a 20-year term can double the cost" is soft-claimed; the page's own Bankrate
+  example produces less than half the principal in interest on a 10-year term.
+
+**A PARALLEL SESSION WORKED THE SAME REPLIES.** `eb2dccf6` landed while I was applying mine, covering
+nine pages from the same batch — and we independently made the SAME two fixes to
+`rv-appliance-board-finder.html`, which is the good version of a collision. It also applied the two
+fuel-cost findings I had recorded as open ("applies that for you" -> "applies it for you", and the
+55-65 MPH band re-attributed to the source's own figures). **I rebased onto their commit and re-applied
+only my unique edits** rather than resolving the conflict by picking a side; `git rebase --abort` plus
+a saved patch made that safe. Their commit also re-baselined 55 manifest entries.
+
 ### W24. Port 8130 was serving ANOTHER SESSION'S WORKTREE, so the audit measured the wrong tree (2026-10-13)
 
 **The finding that cost two attempts on the parts chip fix, and the one worth carrying forward.**

@@ -987,9 +987,9 @@
     "sources": []
   },
   "tools/fuel-cost.html": {
-    "hash": "f3db6ef4ccfa74e9",
+    "hash": "65d266c1219e961f",
     "status": "verified",
-    "verified_by": "2026-10-13 independent bridge-lane review (chat.deepseek.com), Four findings, all applied. (1) overclaiming: 'Motorhomes and tow vehicles also run most efficiently somewhere in the 55 to 65 MPH band, so a trip planned at 75 burns measurably more than the same trip at 60' generalised one trade source to every motorhome and tow vehicle and carried a unit-free 'measurably' -- now 'Camper Smarts puts the most efficient cruising band at 55 to 65 MPH, and a trip planned at 75 burns more than the same trip at 60', which is what the source list already credits Camper Smarts with. (2-4) voice: 'The estimate is the middle of the road' (the idiom means mediocre, not midpoint) -> 'a midpoint'; 'how heavy the coach is loaded' -> 'how heavily the RV is loaded' (grammar, and 'coach' is wrong for the trailer and car presets this page also covers); 'the result applies that for you' -> 'applies it for you'. RECORDED, NOT APPLIED: the generator figure 'roughly half a gallon to one gallon per hour' is credited to Camper Smarts while Onan/Cummins publishes its own generator fuel tables, which is the one claim on this page whose maker document exists and is not used; and the reviewer's three reader-knowledge gaps (diesel generator owners get no figure, which fuel price the generator hours are billed at, whether a towable owner without a known pulling MPG should leave the box empty). Those are content decisions.",
+    "verified_by": "2026-10-13 bridge lane REVIEW2 + a parallel session: the review's Part 4 fixes applied -- 'middle of the road' -> 'a midpoint', 'how heavy the coach is loaded' -> 'how heavily the vehicle is loaded' (NOT the lane's suggested slang for an RV -- that word is a hard-banned term on this site and verify.py gates it, so the lane's wording would have failed the build), 'applies that for you' -> 'applies it for you', and the 55-65 MPH band now attributed to the source's own figures rather than stated as a property of every motorhome and tow vehicle.",
     "verified_at": "2026-10-13",
     "sources": [],
     "spec": null,
@@ -1011,9 +1011,9 @@
     "sources": []
   },
   "tools/rv-appliance-board-finder.html": {
-    "hash": "6a3b321dc6a469c3",
+    "hash": "eb3daa4c58cd9b21",
     "status": "verified",
-    "verified_by": "2026-10-13 independent bridge-lane review (chat.qwen.ai), Three findings, 0 sourcing and 0 overclaiming; two applied. 'because the makers do not publish one' had an ambiguous 'one' -> 'because the original manufacturers do not publish their own replacement charts'; 'the refrigerator not cooling guide works the diagnosis in order' -> 'walks you through the diagnosis in order'. RECORDED: 'black-box boards' is unexplained to a first-time reader; the page defines 'eyebrow board' but not that.",
+    "verified_by": "2026-10-13 bridge lane REVIEW2: three fixes -- 'black-box boards' (jargon the page never defines, and it does define 'eyebrow board') -> 'sealed boards'; 'because the makers do not publish one' ('one' had three possible referents) -> 'because the original manufacturers do not publish their own replacement charts'; 'works the diagnosis in order' (not an English idiom) -> 'walks you through the diagnosis in order'. Wording only, no claim changed.",
     "verified_at": "2026-10-13",
     "sources": [],
     "spec": null,
@@ -1058,9 +1058,9 @@
     "claims": []
   },
   "tools/rv-water-filter.html": {
-    "hash": "b11f031d1ea1903d",
+    "hash": "e60112d3c8a3743f",
     "status": "verified",
-    "verified_by": "2026-10-13 independent bridge-lane review (chatgpt.com), Seven findings; one applied, the rest recorded. APPLIED: 'which is the leak that shows up at the inlet the moment the water is turned on' presented one outcome of forcing NPT into garden-hose thread as inevitable -> 'which damages the threads and causes a leak'. RECORDED for the next pass, all sourcing/scope rather than wording: (1) the cross-brand interchange rule ('cartridges interchange across housing brands as long as the end cap type matches') is wider than any document the page names -- diameter and end cap do not establish fit, and length and sealing geometry are not mentioned; (2) the winter-storage paragraph says 'the makers agree on the shape of it' while the listed maker instructions differ (refrigerator storage, sealed bag above 35F, housing protection, dry storage of removed elements); (3) 'about half a gallon per minute' is stated without naming which filter the rating belongs to. Several voice rewrites were offered and NOT taken, because they push the page toward a blander register than the site's ('The format is the fit.' is in the house voice and stays).",
+    "verified_by": "2026-10-13 bridge lane REVIEW2 (gemini/qwen rotation): four untranslated-sounding phrases fixed -- 'is decided by' -> 'depends on', 'lands on the maker's figures / the one you asked for' -> 'the finder shows the maker's published figures, or says the maker does not publish them', 'agree on the shape of it' -> 'agree on one thing', 'A cartridge is bought by ... rather than an open one' -> 'You buy a cartridge by ... not an open one'. No claim changed; wording only. The review's sourcing findings (the cross-brand compatibility rule and the winterization summary) are recorded in _todo, not applied.",
     "verified_at": "2026-10-13",
     "sources": [],
     "spec": null,
