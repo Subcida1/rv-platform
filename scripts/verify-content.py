@@ -221,6 +221,13 @@ def claim_text(raw):
     """
     s = re.sub(r"<(script|style)\b.*?</\1>", " ", raw, flags=re.S | re.I)
     s = re.sub(r'<p class="reviewed">.*?</p>', " ", s, flags=re.S)
+    # THE CLOSING LINE IS THE BYLINE'S TWIN (2026-10-13). `.page-foot` is the line every guide and
+    # tool now ends with -- "Something wrong here, or something missing? Tell us. About OriginRV." It
+    # is metadata about the page, not a statement about the subject, which is the same reason the
+    # byline above and the navigation below are stripped. Without this, adding it to 61 pages read as
+    # 61 pages of claim drift at once and demanded 61 re-verifications for a change that says nothing
+    # about RVs.
+    s = re.sub(r'<p class="page-foot">.*?</p>', " ", s, flags=re.S)
     # THE NAV AND FOOTER ARE THE SAME CASE AS THE CRUMB BELOW, AND WERE SIMPLY MISSED.
     # visible_text -- which feeds the page hash -- has stripped both regions since it was
     # written. This function, which feeds the CLAIM digest, never did, so rewording one
