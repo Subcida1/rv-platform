@@ -187,7 +187,11 @@ function breadcrumbFor(rel, html) {
   }
 
   const head = headingOf(html);
-  if (head && (isGuide || rel.startsWith('manuals/') || rel.startsWith('tools/') || rel.startsWith('parts/'))) {
+  // guides/ BELONGS IN THIS LIST. It was missing, so the guides hub -- which is not a guide page
+  // (isGuide excludes guides/index.html) -- got only [Home], tripped the `crumbs.length < 2` guard
+  // below, and shipped with NO breadcrumb at all. It was the only one of the five hubs without one.
+  if (head && (isGuide || rel.startsWith('guides/') || rel.startsWith('manuals/') ||
+               rel.startsWith('tools/') || rel.startsWith('parts/') || rel === 'directory/index.html')) {
     crumbs.push({ name: head, href: null });
   }
   if (crumbs.length < 2) return '';

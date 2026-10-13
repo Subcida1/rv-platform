@@ -243,12 +243,16 @@ def build():
     assert 140 <= len(desc) <= 160, "meta description is %d chars" % len(desc)
 
     schemas = [
+        # ONE WEBSITE ENTITY, NAMED BY @id. This page declared WebSite twice -- once standalone and
+        # once inside isPartOf -- and the homepage declares it a third time, all with no @id, so a
+        # consumer had no way to tell they were the same site rather than three. The @id is the
+        # standard fix and it is what makes the reference below a reference rather than a repeat.
         {"@context": "https://schema.org", "@type": "WebSite",
-         "name": "OriginRV", "url": SITE + "/"},
+         "@id": SITE + "/#website", "name": "OriginRV", "url": SITE + "/"},
         {"@context": "https://schema.org", "@type": "CollectionPage",
          "name": schema_name, "url": SITE + "/parts/index.html",
          "description": desc,
-         "isPartOf": {"@type": "WebSite", "name": "OriginRV", "url": SITE + "/"}},
+         "isPartOf": {"@id": SITE + "/#website"}},
     ]
 
     out = [head(title, desc, SITE + "/parts/index.html", schemas)]

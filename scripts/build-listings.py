@@ -498,13 +498,7 @@ def build(kind):
                                {"@type": "ListItem", "position": i,
                                 "name": "RV Repair in %s" % state_name[slug],
                                 "url": "%s/directory/%s" % (SITE, slug)}
-                               for i, slug in enumerate(sorted(PAGES), 1)]}}),
-        '<script type="application/ld+json">%s</script>' % jld({
-            "@context": "https://schema.org", "@type": "BreadcrumbList",
-            "itemListElement": [
-                {"@type": "ListItem", "position": 1, "name": "OriginRV", "item": SITE + "/"},
-                {"@type": "ListItem", "position": 2, "name": "RV Repair Directory",
-                 "item": SITE + "/directory/"}]})])
+                               for i, slug in enumerate(sorted(PAGES), 1)]}})])
     hub_text = hub.read_text(encoding="utf-8")
     hub_new = replace_between(hub_text, "<!-- SCHEMA:STATES-START -->",
                               "<!-- SCHEMA:STATES-END -->", hub_schema, "hub schema")
