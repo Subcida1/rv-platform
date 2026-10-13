@@ -143,6 +143,28 @@ disagrees with a direct observation, suspect the measurement.
 - **#8 "no intro copy above the filters" — REFUTED, third time.** The lede is present and renders
   above the filter bar. "No per-part anchors" — CONFIRMED, recorded.
 
+## Neo's parts deep-dive, third rotation — verified 2026-10-13 (4 findings: 1 fixed, 2 refuted, 1 recorded)
+
+- **#1 "guide-link coverage: 62 anchors, 32 distinct targets, 16 guides never linked" — CONFIRMED in
+  substance, and the numbers were slightly off.** Measured from the source: **157 cards, 62 with a
+  "How to fix it" anchor, 29 distinct targets** (not 32), **18 guides never linked** (not 16). All
+  eight of Neo's suggested mappings were in that list. **Fixed the three whose card subject IS the
+  guide's subject**: `Toilet (vacuum or macerator)` and `Macerator pump` -> `rv-macerator-toilet`, and
+  `12 volt outlets and USB` -> `rv-12-volt-problems`. **Now 65 cards linked, 31 distinct targets, 16
+  guides never linked.** The rest are recorded: `rv-towing-capacity` maps to three hitch cards but the
+  guide is about weights rather than hitches, and the others need a per-card read.
+- **#2 "parts-to-tools cross-links still zero on cards" — CONFIRMED, and now I know WHY it has never
+  landed.** The card renderer (`build-parts-pages.py`) has exactly two link sources: `guide` becomes
+  the "How to fix it" button, and `makers` becomes external doc-links. **There is no field for an
+  internal tool link**, so the anode-rod suggestion has been recorded three times without being
+  implementable. It needs a new field and a renderer line, not a data edit. Recorded as such.
+- **#3 "the title carries 'RV parts' and the H1 does not" — REFUTED, same as the manuals round.** The
+  site's convention is that the title carries the query and the H1 names the section; the accepted
+  notes in `_data/targets.json` call it "the ordinary split rather than a drift".
+- **#4 "the sitemap now lists 48 /guides/ slugs, a guide may have been added" — REFUTED.** 48 guides
+  URLs = **1 hub (`/guides/`) + 47 guides**, matching the files on disk exactly. The hub's JSON-LD
+  `numberOfItems` is 47 and agrees.
+
 ## Neo's manuals deep-dive, third rotation — verified 2026-10-13 (7 pages, 4 findings: 3 fixed, 1 recorded)
 
 - **#1 "two BreadcrumbList blocks with conflicting trails on all 7 system pages" — REAL, FIXED, and

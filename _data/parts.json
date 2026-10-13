@@ -1198,7 +1198,7 @@
             "motorhome",
             "van"
           ],
-          "guide": null,
+          "guide": "rv-12-volt-problems",
           "kw": [
             "rv 12v outlet not working",
             "usb port replacement rv"
@@ -2088,7 +2088,7 @@
           "types": [
             "motorhome"
           ],
-          "guide": null,
+          "guide": "rv-macerator-toilet",
           "kw": [
             "vacuflush losing vacuum",
             "macerator toilet clogged"
@@ -2384,7 +2384,7 @@
             "motorhome",
             "trailer"
           ],
-          "guide": null,
+          "guide": "rv-macerator-toilet",
           "kw": [
             "rv macerator clogged",
             "macerator pump not working"
