@@ -1,4 +1,38 @@
 
+## Neo's guides deep-dive, third rotation (electrical) — verified 2026-10-12 (5 pages, 8 findings: 1 fixed, 5 refuted, 2 recorded)
+
+- **#1 "'Can injure you**' concatenation, 11 more instances, needs a template fix" — REFUTED, sixth
+  round on this class.** Measured in a browser on `rv-12-volt-problems`: all three callouts have
+  `.flag-h` at `display:block`, the label's bottom edge 11px above the body's top edge, and the body
+  on its own line. The `**` is the extractor turning `<b>` into markdown. **There is no template to
+  fix** — the template is correct and has been on every round this has been reported.
+- **#2 "the converter page contradicts itself" — REAL, FIXED.** The "How to read the result" section
+  lists three cases, and the third says *"Low at the converter ... points at the converter itself
+  rather than at the path"*. The conclusion then read *"Either way, and this is the point, the
+  converter is not the problem and should not be replaced"* — "Either way" covering a case that says
+  the opposite. Scoped to **"In the first two cases"**, which is where it is true.
+- **#3 "the lights page's 'Can injure you' label overstates, since the body says it will not shock
+  you" — REFUTED.** The two statements are consistent and the body is being precise: a 12-volt
+  circuit will not shock, but shorting a live terminal to the frame can arc and burn, and a burn is
+  an injury. The site's three classes are `flag-injury` (64 uses), `flag-damage` (6) and `flag-money`
+  (1); an arc that can burn a hand is the first.
+- **#4 "orphaned captions, and the converter page has one twice" — REFUTED.** The converter page has
+  **two figures**, each with its own inline `<svg>` and its own caption ("The converter is only the
+  first link..." and "The whole path, not just the charging half..."), each closing with the
+  "Original diagram, OriginRV." credit. Two diagrams, two credits — not a duplicate.
+- **#5 "the slug says rv-12-volt-problems but the title has no 12-volt keyword" — REFUTED.** The
+  page's declared target in `_data/targets.json` is **"rv electrical problems"**, and the title is
+  "RV Electrical Problems: How to Find the Fault" — it carries its query. The slug and the title are
+  not required to match; the title carries the query and the H1 names the section.
+- **#6 "an H2 nearly duplicates the H1 on the outlets page" — REFUTED.** There is no such H2. The H1
+  is "RV outlets not working: The 120 volt side" and the H2s are "Start here: Which outlets, and on
+  what?", "Working the chain", "Why a GFCI will not reset", "Testing an outlet", "Hot skin", "What it
+  costs", "Related guides".
+- **#7 "zero links to /tools across all five" — CONFIRMED as a gap, RECORDED**, same as the last two
+  rounds. `watts-to-amps` and `rv-converter-finder` are the natural fits.
+- **#8 "add FAQPage JSON-LD" — REFUTED, third time.** Removed by Ty's ruling on 2026-09-26 (commit
+  `7090671`); the doctrine says "Do not re-add it."
+
 ## Neo's about deep-dive, second rotation — verified 2026-10-12 (3 pages, 7 findings, no defects)
 
 **No defects. Three refuted, one already recorded, three are Neo's own good notes.** Two of the

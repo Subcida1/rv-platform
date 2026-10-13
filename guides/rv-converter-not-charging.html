@@ -56,7 +56,7 @@
  <figure>
  <svg viewBox="0 0 880 300" width="100%" role="img" aria-label="The charging path from an RV converter to the battery, showing four break points where charging can be interrupted while the converter still works correctly" >
  <title>Where charging stops between the converter and the battery</title>
- <desc>The converter produces correct voltage. Between it and the battery sit the reverse polarity fuses, the battery branch fuse on the DC board, an inline fuse in the battery positive lead, and the <a href="guides/rv-battery-disconnect">battery disconnect</a> switch. The switch counts only if your converter is wired on the battery side of it. Any one of these being open stops charging while the converter still tests fine.</desc>
+ <desc>The converter produces correct voltage. Between it and the battery sit the reverse polarity fuses, the battery branch fuse on the DC board, an inline fuse in the battery positive lead, and the battery disconnect switch. The switch counts only if your converter is wired on the battery side of it. Any one of these being open stops charging while the converter still tests fine.</desc>
 
  <rect x="20" y="112" width="146" height="66" rx="8" fill="#eef2ff" stroke="#6366f1" stroke-width="2.5"/>
  <text x="93" y="139" font-family="Inter,sans-serif" font-size="16.2" font-weight="700" fill="#4338ca" text-anchor="middle">Converter</text>
@@ -88,7 +88,7 @@
  <text x="446" y="234" font-family="Inter,sans-serif" font-size="15.6" fill="#67748e" text-anchor="middle">That is why measuring at the converter alone proves nothing.</text>
  <text x="446" y="262" font-family="Inter,sans-serif" font-size="15.6" font-weight="700" fill="#4338ca" text-anchor="middle">So measure at both ends and compare.</text>
  </svg>
- <figcaption>The converter is only the first link. Up to four break points sit between it and the battery, depending on how yours is wired, and every one of them leaves the converter testing perfectly. Original diagram, OriginRV.</figcaption>
+ <figcaption>The converter is only the first link. Up to four break points sit between it and the battery, depending on how yours is wired: the reverse polarity fuses, the battery branch fuse, the inline fuse, and the <a href="guides/rv-battery-disconnect">battery disconnect</a> switch. Every one of them leaves the converter testing perfectly. Original diagram, OriginRV.</figcaption>
  </figure>
 
  <h2>The whole path, in one diagram</h2>
@@ -203,7 +203,7 @@
  <p>Still with the cables disconnected from the battery, measure across the positive and negative leads themselves. You should see the same figure. This is the step that catches the fault, and Progressive Dynamics words it precisely: if the voltage is not there at the battery leads, there is a problem with the leads to the battery, so check the inline fuse in the positive lead near the battery.</p>
  <div class="callout flag flag-damage"><span class="flag-h">Can damage equipment</span><b>Both readings run the converter with its battery load removed.</b> With the cables off the battery there is nothing to buffer the coach's 12 volt loads, so lights and fans can behave oddly and the converter carries the whole load on its own. Keep the meter on it for seconds rather than minutes, and reconnect the cables before anything else is switched on.</div>
  <h3>How to read the result</h3>
- <p>Correct at the converter and correct at the cables means the charging side is fine and your fault is the battery or its terminal connections. Correct at the converter and absent at the cables means the converter is fine and one of the break points on the diagram is open. Low at the converter, below the pass figure but not zero, points at the converter itself rather than at the path, because everything between it and the battery can only subtract voltage, not add it. Either way, and this is the point, the converter is not the problem and should not be replaced.</p>
+ <p>Correct at the converter and correct at the cables means the charging side is fine and your fault is the battery or its terminal connections. Correct at the converter and absent at the cables means the converter is fine and one of the break points on the diagram is open. Low at the converter, below the pass figure but not zero, points at the converter itself rather than at the path, because everything between it and the battery can only subtract voltage, not add it. In the first two cases, and this is the point, the converter is not the problem and should not be replaced.</p>
  <h3>Then check the AC side if both readings were dead</h3>
  <p>Progressive Dynamics gives the acceptable input window as 100 to 125 volts AC on the PD4135, and WFCO cites 105 to 130. Outside that range, or with no AC at all, the converter cannot work. A tripped breaker on the converter circuit is a cheap fault that looks like an expensive one.</p>
  <h3>The disconnect-switch reading</h3>
