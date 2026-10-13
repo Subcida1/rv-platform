@@ -1583,7 +1583,8 @@
             "query": "inline water filter",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "tool": "rv-water-filter"
         },
         {
           "id": "water-pump",
@@ -1854,7 +1855,8 @@
             "query": "water heater anode rod",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "tool": "rv-anode-rod"
         },
         {
           "id": "water-heater-bypass",

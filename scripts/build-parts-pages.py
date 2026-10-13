@@ -164,6 +164,17 @@ def part_html(p):
         # distinct from each other."
         links.append('<a class="btn btn-gb btn-sm" href="/guides/%s.html">'
                      'How to fix it</a>' % esc(p["guide"]))
+    if p.get("tool"):
+        # A TOOL IS NOT A GUIDE AND IS NOT A MAKER'S DOCUMENT, so it gets neither button. It is a
+        # page on THIS site that answers a question about this part, which makes it a reference like
+        # the maker links -- so it takes the same .doc-link shape, minus the off-site arrow that
+        # shape implies. W20's predecessor recorded the anode-rod card -> /tools/rv-anode-rod
+        # suggestion three times and it never landed, because the renderer had exactly two link
+        # sources (guide, makers) and no field for an internal tool link. This is that field.
+        slug = p["tool"]
+        label = slug.replace("rv-", "").replace("-", " ")
+        links.append('<a class="doc-link" href="/tools/%s">%s tool</a>'
+                     % (esc(slug), esc(label.capitalize())))
     for m in (p.get("makers") or []):
         brand, url = m.get("brand"), m.get("url")
         if brand and url:
