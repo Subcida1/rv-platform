@@ -19,7 +19,16 @@ step() {
 
 # ---------------------------------------------------------------- accessibility
 # Self-contained: it spawns its own Chrome and its own server, and kills both by process group.
-step "axe-core WCAG checks on the rendered page" node scripts/check-a11y.mjs
+#
+# --all, AND THIS IS THE ONLY PLACE IT RUNS. check-a11y.mjs defaults to a REPRESENTATIVE set, one
+# page per template, because a11y defects cluster by template -- and that default is right for the
+# per-push gate, which has to stay fast. But it cannot see a defect that is not a template defect,
+# and on 2026-10-12 one shipped: guides/rv-converter-not-charging.html carried an <a> inside an SVG
+# <desc>, which axe reports as nested-interactive, serious. The page was not in the representative
+# set and neither workflow passed --all, so nothing reported it until the page was checked by hand.
+# The full sweep measures about five minutes across 133 pages and came back clean, which is cheap
+# for a weekly run and is the only thing that would have caught that page before it shipped.
+step "axe-core WCAG checks on every page" node scripts/check-a11y.mjs --all
 
 # ---------------------------------------------------------------- links
 # Needs a served copy. The server is started here and killed by the EXACT PID we captured --
