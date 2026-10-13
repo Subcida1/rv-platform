@@ -1557,6 +1557,27 @@ tip, re-applied, and verified the commit touched only my 14 lines. **Two of my o
 one incident: fetch before treating the local tree as the base, and check the repo is not mid-operation
 before committing into it.**
 
+### W22 — RESOLVED 2026-10-13 by Brandt's ruling: both connections stay, so pin the device ID
+
+**His instruction: "they're both the same machine and both should stay functional -- handle the
+naming/dispatch however you see fit, just make it work."** So neither connection is renamed. The fix is
+on the dispatch side.
+
+**THE TWO DEVICE IDS, read live at 18:45 UTC with both online:**
+
+| deviceId | version | what it is |
+|---|---|---|
+| `30f8ae72-3b04-4c9e-86f9-e09a1960dca9` | **0.34.13** | the install this session runs on -- **use this one** |
+| `desktop:03191982-2857-4553-b8a2-76d15e5ce17d:4a9d661f-5b15-4c5e-bb1e-64c2c5ae93c9` | 0.34.10 | the desktop app's connection |
+
+**The rule: dispatch to `computer: "30f8ae72-3b04-4c9e-86f9-e09a1960dca9"`, never `"the-grid"`.** The
+name matches two online devices, and the Agent tool fails fast on an ambiguous name -- so a name-based
+dispatch works only while exactly one is up, which is the flapping I watched across a minute on
+2026-10-13. The bare UUID is the stable handle, and it is the one this machine's own session reports.
+
+**How to confirm before dispatching:** `letta computers list` and count how many entries match the name.
+If two, use the device ID. If one, the name works.
+
 ### W22. "the-grid" now resolves to TWO online devices on different versions (2026-10-13, Cloud)
 
 `letta computers list` returns **two** connections both named **the-grid**, both online, on
