@@ -1903,3 +1903,31 @@ has no GAWR field; there is no margin rule for payload, GVWR or GCWR) and its on
 (*"Most towing math is a guess wearing numbers"*), which is NOT taken — a constructed image of that
 kind is the house voice Ty named when he pointed at "the lamp lies" and "the pump is the source of
 truth", and the reviewer's plainer alternative is blander than the site.
+
+### W28. A SECOND SESSION IS WORKING THIS QUEUE, and six review replies are sitting unapplied (2026-10-13 01:45, Cloud)
+
+**Read this before applying any bridge finding.** A parallel Cloud session is live on the same
+job: it committed `d57b9522` (parts) and `2fa3af6d` (fuel-cost, *"two sentences the independent
+review was right about, and one word it was wrong about"*) at 01:27 and 01:30 while this session
+was mid-pass, and **both sessions applied the SAME chat.deepseek.com review of
+`tools/fuel-cost.html`** — the same two sentences, fixed twice, one of them differently. This
+session reconciled on rebase (commit `eb2dccf6`) and kept the parallel session's
+"how heavily the vehicle is loaded" over its own "RV", because the page also carries car and pickup
+presets. **Check `git fetch` and `git log origin/main` before editing a page this queue names.**
+
+**Six replies have landed and are NOT applied** — they are the second wave, re-dispatched after the
+first attempt went to lanes that cannot relaunch:
+
+    outbox/REPLY-20261013-0129-RV-battery-runtime-REVIEW3.md
+    outbox/REPLY-20261013-0129-RV-rv-anode-rod-REVIEW3.md
+    outbox/REPLY-20261013-0129-RV-rv-converter-finder-REVIEW3.md
+    outbox/REPLY-20261013-0129-RV-rv-recall-lookup-REVIEW3.md
+    outbox/REPLY-20261013-0129-RV-watts-to-amps-REVIEW3.md
+    outbox/REPLY-20261013-0121-RV-solar-sizing-REVIEW3.md   (the first attempt came back as a
+                                                             Gemini error page, not a review)
+
+Also landed and unread: `REPLY-20261013-0055-RV-about-REVIEW1.md` and
+`REPLY-20261013-0055-RV-index-REVIEW1.md` (the homepage, reviewed by a lane as well as by the
+subagent whose pass is recorded in the manifest). **Verify every finding against the page or the
+tool before editing — this pass refuted three, and one of those refutations needed the maker's PDF
+fetched to settle it.**
