@@ -1418,6 +1418,34 @@ for the present. A note that misstates history is worth fixing when those pages 
 **What W20 actually needs, then:** a fresh independent pass on the 15 pages' current content, not a
 manifest update. That is a real work item rather than bookkeeping.
 
+### W24. Port 8130 was serving ANOTHER SESSION'S WORKTREE, so the audit measured the wrong tree (2026-10-13)
+
+**The finding that cost two attempts on the parts chip fix, and the one worth carrying forward.**
+
+The audit scripts default to `--base http://127.0.0.1:8130/`. The server holding 8130 had its **working
+directory in `/home/user/Documents/rv-platform/.letta/worktrees/mobile-align`** — another session's
+worktree — and had been running for **36 hours**. So the audit was measuring a different checkout.
+
+The symptom: `audit-mobile.mjs` reported the parts hub's chips overflowing by 9px, and a direct DOM
+query on the **main** checkout said the chip sat at left=27 inside a card at 24, i.e. no overflow. The
+two disagreed, and the instrument looked wrong. **It was right, and my query was reading the wrong
+tree** — I had assumed port 8130 served the main checkout because that is where I was standing.
+
+**How to tell, in one command:** `ss -ltnp | grep :8130` for the pid, then
+`readlink /proc/<pid>/cwd`. If it is not the checkout you edited, nothing it serves is about your edit.
+
+**What to do:** start your own server on a free port from the main checkout and measure against that
+(`python3 scripts/serve-static.py 8151`), and confirm it serves your change before believing a result
+(`curl -s http://127.0.0.1:8151/assets/css/style.css | grep <your change>`). A launch that fails
+because the port is busy **fails silently** — the first `8151` attempt was actually the worktree's
+server answering.
+
+**Also checked and worth knowing:** the `mobile-align` worktree is IDLE (clean tree, no writes in 30
+minutes) — a finished session's leftover, not a live writer. But a full copy of the repo inside
+`.letta` is the trap the scanner-boundary notes already record; here it was a **server** serving from
+it, and the same rule applies: anything measured through a port must first confirm what that port
+serves.
+
 ### W23. `audit-mobile.mjs` — the owed instrument item is CLOSED, and it found a real one (2026-10-13)
 
 **W18 left this owed: "`scripts/audit-mobile.mjs` did not produce a report in three attempts (it hangs
