@@ -22,7 +22,7 @@
             "fifth-wheel",
             "pop-up"
           ],
-          "guide": null,
+          "guide": "rv-towing-trailer",
           "kw": [
             "rv coupler adjustment",
             "hitch coupler loose",
@@ -169,7 +169,7 @@
           "types": [
             "trailer"
           ],
-          "guide": null,
+          "guide": "rv-towing-trailer",
           "kw": [
             "trailer sway fix",
             "sway control adjustment",
@@ -202,7 +202,7 @@
             "trailer",
             "pop-up"
           ],
-          "guide": null,
+          "guide": "rv-towing-trailer",
           "kw": [
             "safety chain length rv",
             "safety chains crossed"
@@ -228,7 +228,7 @@
           "types": [
             "trailer"
           ],
-          "guide": null,
+          "guide": "rv-towing-trailer",
           "kw": [
             "breakaway switch test",
             "breakaway cable replacement"
@@ -408,7 +408,7 @@
             "motorhome",
             "van"
           ],
-          "guide": null,
+          "guide": "rv-tire-replacement",
           "kw": [
             "rv tire blowout",
             "best trailer tires",
@@ -443,7 +443,7 @@
             "fifth-wheel",
             "motorhome"
           ],
-          "guide": null,
+          "guide": "rv-tire-replacement",
           "kw": [
             "rv tpms not reading",
             "tpms sensor battery",
@@ -481,7 +481,7 @@
             "fifth-wheel",
             "motorhome"
           ],
-          "guide": null,
+          "guide": "rv-tire-replacement",
           "kw": [
             "rv lug nut torque",
             "trailer wheel torque spec",
@@ -532,7 +532,7 @@
           "types": [
             "fifth-wheel"
           ],
-          "guide": null,
+          "guide": "rv-towing-trailer",
           "kw": [
             "fifth wheel hitch clunk",
             "kingpin box replacement",
@@ -564,7 +564,7 @@
           "types": [
             "motorhome"
           ],
-          "guide": null,
+          "guide": "rv-towing-trailer",
           "kw": [
             "flat tow setup rv",
             "tow bar binding",
@@ -689,7 +689,7 @@
             "motorhome",
             "van"
           ],
-          "guide": null,
+          "guide": "rv-12-volt-problems",
           "kw": [
             "rv power cord melted",
             "shore power plug burned",
@@ -718,7 +718,7 @@
             "motorhome",
             "van"
           ],
-          "guide": null,
+          "guide": "rv-12-volt-problems",
           "kw": [
             "rv power inlet replacement",
             "shore power inlet burned"
@@ -742,7 +742,7 @@
             "fifth-wheel",
             "motorhome"
           ],
-          "guide": null,
+          "guide": "rv-12-volt-problems",
           "kw": [
             "rv surge protector tripping",
             "ems low voltage shutdown",
@@ -770,7 +770,7 @@
           "types": [
             "motorhome"
           ],
-          "guide": null,
+          "guide": "rv-12-volt-problems",
           "kw": [
             "rv transfer switch failure",
             "ats chattering",
@@ -875,7 +875,7 @@
             "motorhome",
             "van"
           ],
-          "guide": null,
+          "guide": "rv-12-volt-problems",
           "kw": [
             "rv inverter not working",
             "inverter alarm code",
@@ -935,7 +935,7 @@
           "types": [
             "motorhome"
           ],
-          "guide": null,
+          "guide": "rv-12-volt-problems",
           "kw": [
             "inverter charger fault code",
             "magnum remote panel not working"
@@ -1432,7 +1432,7 @@
             "motorhome",
             "van"
           ],
-          "guide": null,
+          "guide": "rv-12-volt-problems",
           "kw": [
             "battery acr rv",
             "combiner not charging house battery"
@@ -1521,7 +1521,7 @@
             "motorhome",
             "van"
           ],
-          "guide": null,
+          "guide": "rv-water-pump-wont-prime",
           "kw": [
             "city water filling fresh tank",
             "rv water inlet check valve",
@@ -2269,7 +2269,7 @@
             "motorhome",
             "van"
           ],
-          "guide": null,
+          "guide": "rv-sewer-smell",
           "kw": [
             "rv dump valve leaking",
             "black tank valve stuck",
@@ -2353,7 +2353,7 @@
             "motorhome",
             "van"
           ],
-          "guide": null,
+          "guide": "rv-sewer-smell",
           "kw": [
             "rv sewer hose leak",
             "bayonet gasket",
@@ -2659,7 +2659,7 @@
             "fifth-wheel",
             "motorhome"
           ],
-          "guide": null,
+          "guide": "rv-furnace-not-working",
           "kw": [
             "rv furnace not blowing air",
             "floor vent no heat",
