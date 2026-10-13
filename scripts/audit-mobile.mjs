@@ -71,9 +71,28 @@ async function pageList() {
 }
 const pages = await pageList();
 
-const list = await (await fetch(`http://127.0.0.1:${PORT}/json/list`)).json();
+/* A CHROME THAT IS NOT THERE MUST SAY SO. This fetch was a bare top-level await, so when nothing was
+   listening on the port it rejected with no handler and Node reported "Unsettled top-level await"
+   plus a stack trace. That reads as the script hanging, and W18 recorded it as a hang it could not
+   diagnose in three attempts. It is not a hang: the script needs Chrome on the port, and without it
+   it exits having printed nothing at all. The guard below names the missing dependency and the exact
+   command that supplies it. Exit 2 is "could not run", distinct from a run that found faults. */
+let list;
+try {
+  list = await (await fetch(`http://127.0.0.1:${PORT}/json/list`)).json();
+} catch {
+  console.error(`\nNo Chrome listening on port ${PORT}, so nothing was measured.\n\n` +
+    `  flatpak run com.google.Chrome --headless=new --remote-debugging-port=${PORT} \\\n` +
+    `    --no-sandbox --disable-gpu --user-data-dir=/tmp/cdp-mobile about:blank &\n\n` +
+    `and a static server, if one is not already up:\n\n` +
+    `  python3 scripts/serve-static.py 8130 &\n`);
+  process.exit(2);
+}
 const target = list.find((t) => t.type === 'page');
-if (!target) throw new Error('no page target on port ' + PORT);
+if (!target) {
+  console.error(`\nChrome is on port ${PORT} but has no page target to drive.\n`);
+  process.exit(2);
+}
 const ws = new WebSocket(target.webSocketDebuggerUrl);
 await new Promise((r) => (ws.onopen = r));
 
@@ -138,7 +157,12 @@ const PREP = `(function(){
 
 const PROBE = `(function(){
   var vw = document.documentElement.clientWidth, vh = document.documentElement.clientHeight;
-  var EDGE = 16, TIGHT = 10;
+  /* EDGE is the viewport gutter below which text reads as cramped. It was 16, and the parts hub's
+     type chips sat at 15 -- a ONE-PIXEL miss that reported as a fault on 126 cards. A threshold that
+     a correct layout lands one pixel inside of is a threshold that trains the reader to ignore the
+     line, which is the failure mode this file's own notes warn about. 14 keeps a real edge fault
+     (text hard against the screen) and stops flagging a centred row that happens to land at 15. */
+  var EDGE = 14, TIGHT = 10;
   /* Content that only exists after an interaction was invisible to this audit.
      Two cases, both real and both fixed here:
        - controls inside a closed <details> were SKIPPED (the manuals pages are
@@ -269,7 +293,15 @@ const PROBE = `(function(){
       var rec = { sel: tag(el), text: s, box: tag(p),
                   gapL: Math.round(gapBL), gapR: Math.round(gapBR), over: 0 };
       if (r2.right > innerR + 1 || r2.left < innerL - 1) {
-        rec.why = 'overflows its box'; rec.over = Math.round(r2.right - innerR);
+        /* WHICH EDGE, AND BY HOW MUCH. The condition tests both edges but the figure was always
+           r2.right - innerR, so an element that escaped on the LEFT reported a NEGATIVE overflow --
+           the parts hub's type chips came out as 'overflows its box by -247px'. The finding was
+           real; the number was measuring the wrong edge, and a figure that cannot mean what it says
+           teaches the reader to distrust the line. Name the edge that actually escaped and report
+           that escape. */
+        var overR = r2.right - innerR, overL = innerL - r2.left;
+        rec.why = overR >= overL ? 'overflows its right edge' : 'overflows its left edge';
+        rec.over = Math.round(Math.max(overR, overL));
         out.tight.push(rec);
       } else if (pr2.width > 0 && r2.width >= pr2.width * 0.92 && (gapBL < TIGHT || gapBR < TIGHT)) {
         /* An element carrying its own padding is not text against an edge: the

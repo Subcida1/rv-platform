@@ -1,0 +1,125 @@
+[
+ {
+  "url": "https://support.gopowersolar.com/",
+  "status": 200,
+  "type": "text/html; charset=utf-8",
+  "final": "https://support.gopowersolar.com/en",
+  "title": "Go Power! Help Center | Go Power Help Center"
+ },
+ {
+  "url": "https://winegard.com/support/",
+  "status": 200,
+  "type": "text/html; charset=UTF-8",
+  "final": "https://winegard.com/support/",
+  "title": "Support"
+ },
+ {
+  "url": "https://trailerkingtires.com/tires/",
+  "status": 200,
+  "type": "text/html; charset=utf-8",
+  "final": "https://trailerkingtires.com/tires/Landing.aspx?application=trailerking-product-line",
+  "title": "Trailer King RST II | Value ST Radial"
+ },
+ {
+  "url": "https://2219373.fs1.hubspotusercontent-na1.net/hubfs/2219373/ProPride%203P%20Hitch%20Installation%20and%20Operation%20August%202022.pdf",
+  "status": 200,
+  "type": "application/pdf",
+  "final": "https://2219373.fs1.hubspotusercontent-na1.net/hubfs/2219373/ProPride%203P%20Hitch%20Installation%20and%20Operation%20August%202022.pdf",
+  "title": "(pdf, 400000 bytes read)"
+ },
+ {
+  "url": "https://goblutech.com/pages/blu-tech-manuals-and-tutorials",
+  "status": 200,
+  "type": "text/html; charset=utf-8",
+  "final": "https://goblutech.com/pages/blu-tech-manuals-and-tutorials",
+  "title": "Blu Tech Manuals and Tutorials &ndash; Blu Technology LLC"
+ },
+ {
+  "url": "https://www.thetford.com/support/",
+  "status": 200,
+  "type": "text/html; charset=utf-8",
+  "final": "https://www.thetford.com/us/",
+  "title": "Thetford: Trustworthy RV Products for Adventure"
+ },
+ {
+  "url": "https://uniqueappliances.com/en-us/pages/technical-support",
+  "status": 200,
+  "type": "text/html; charset=utf-8",
+  "final": "https://uniqueappliances.com/en-us/pages/technical-support",
+  "title": "Technical Support &ndash; Unique Appliances"
+ },
+ {
+  "url": "https://blackstoneproducts.com/pages/product-manuals",
+  "status": 200,
+  "type": "text/html; charset=utf-8",
+  "final": "https://blackstoneproducts.com/pages/product-manuals",
+  "title": "Product Manuals &ndash; Blackstone Products"
+ },
+ {
+  "url": "https://www.campchef.com/support",
+  "status": 200,
+  "type": "text/html; charset=utf-8",
+  "final": "https://www.campchef.com/pages/frequently-asked-questions",
+  "title": "All Product Frequently Asked Questions &ndash; Camp Chef"
+ },
+ {
+  "url": "https://fordpro.com/en-us/upfit/publications/",
+  "status": 403,
+  "type": "text/html",
+  "title": "HTTP 403"
+ },
+ {
+  "url": "https://www.gmupfitter.com/body-builder-manuals/",
+  "status": 200,
+  "type": "text/html; charset=UTF-8",
+  "final": "https://www.gmupfitter.com/body-builder-manuals/",
+  "title": "Body Builder Manuals - GM Upfitter"
+ },
+ {
+  "url": "https://www.storytelleroverland.com/pages/mode-owner-resources",
+  "status": 200,
+  "type": "text/html; charset=utf-8",
+  "final": "https://www.storytelleroverland.com/pages/mode-owner-resources",
+  "title": "MODE Campervan Maintenance Answers | Plumbing, Batteries &amp; More &ndash; Storyteller Ov"
+ },
+ {
+  "url": "https://www.storytelleroverland.com/pages/gxv-owner-resources",
+  "status": 200,
+  "type": "text/html; charset=utf-8",
+  "final": "https://www.storytelleroverland.com/pages/gxv-owner-resources",
+  "title": "GXV Camper Service Details &amp; User Guide | Storyteller Overland"
+ },
+ {
+  "url": "https://www.winnebago.com/Files/Files/Winnebago/Resources/OperatorManuals/Operator1987/87Winnebago-Itasca.pdf",
+  "status": 200,
+  "type": "application/pdf",
+  "final": "https://www.winnebago.com/Files/Files/Winnebago/Resources/OperatorManuals/Operator1987/87Winnebago-Itasca.pdf",
+  "title": "(pdf, 400000 bytes read)"
+ },
+ {
+  "url": "https://forestriverinc.help/#/forestriverrv/",
+  "status": 200,
+  "type": "text/html",
+  "final": "https://forestriverinc.help/#/forestriverrv/",
+  "title": "Owner's Manuals"
+ },
+ {
+  "url": "https://coachmenrv.com/owners",
+  "status": 403,
+  "type": "text/html; charset=UTF-8",
+  "title": "HTTP 403"
+ },
+ {
+  "url": "https://forestriverinc.help/#/primetime/",
+  "status": 200,
+  "type": "text/html",
+  "final": "https://forestriverinc.help/#/primetime/",
+  "title": "Owner's Manuals"
+ },
+ {
+  "url": "https://taxaoutdoors.com/pages/manuals",
+  "status": 423,
+  "type": "text/html; charset=utf-8",
+  "title": "HTTP 423"
+ }
+]

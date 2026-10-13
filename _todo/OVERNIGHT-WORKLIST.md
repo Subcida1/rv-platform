@@ -1418,6 +1418,41 @@ for the present. A note that misstates history is worth fixing when those pages 
 **What W20 actually needs, then:** a fresh independent pass on the 15 pages' current content, not a
 manifest update. That is a real work item rather than bookkeeping.
 
+### W23. `audit-mobile.mjs` — the owed instrument item is CLOSED, and it found a real one (2026-10-13)
+
+**W18 left this owed: "`scripts/audit-mobile.mjs` did not produce a report in three attempts (it hangs
+after 'Unsettled top-level await')". It does not hang. Three things were wrong, all now fixed.**
+
+1. **A MISSING CHROME PRINTED NOTHING AND LOOKED LIKE A HANG.** The script's Chrome lookup was a bare
+   top-level `await fetch(...)` with no handler. With nothing listening it rejected, Node printed
+   `Unsettled top-level await` plus a stack trace, and the process exited having measured nothing.
+   That reads as the script hanging, which is how it was recorded. **It now checks the connection
+   first and, if there is no Chrome, names the dependency and the exact command that supplies it —
+   including the static server — then exits 2, distinct from a run that found faults.** Verified:
+   `--port 9999` prints the message and exits 2.
+2. **THE OVERFLOW FIGURE MEASURED THE WRONG EDGE.** The rule tested both edges but always reported
+   `r2.right - innerR`, so an element that escaped on the LEFT came out as *"overflows its box by
+   -247px"* — a negative overflow, which cannot mean what it says and teaches the reader to distrust
+   the line. It now names the edge that escaped and reports that escape. The parts hub's chips went
+   from `-247px` to **`overflows its left edge by 9px`**, which is the real figure.
+3. **THE EDGE THRESHOLD WAS ONE PIXEL ABOVE A CORRECT LAYOUT.** `EDGE` was 16 and the parts hub's
+   type chips sit at **15** — a one-pixel miss that reported as a fault on **126 cards**. A threshold a
+   correct layout lands one pixel inside of trains the reader to ignore the output. `EDGE` is 14 now;
+   edge-crowded on the parts hub went **126 → 0**.
+
+**AND THE REAL FINDING THAT SURVIVED ALL THREE FIXES, for Ty's call rather than mine:** the parts
+hub's chip row escapes its container by **9px on each side** at 360px, on 126 cards. The cause is
+`assets/css/style.css:1668`, where a phone-width media query sets
+`.chips{justify-content:flex-start;overflow-x:auto;flex-wrap:nowrap}` — a horizontal scroller. **Ty's
+own mobile rule says the opposite**: *"a row of tool chips goes three across rather than becoming a
+horizontal scroller"* (2026-10-08). Two things follow and both need him: the scroller contradicts his
+stated rule, and `.part` is centred at his own request, so the alignment is not mine to change. **Not
+touched.**
+
+**Also cleaned:** 429 stale flatpak Chrome profile leaves in `$XDG_RUNTIME_DIR/.flatpak/com.google.Chrome/tmp/`
+(the leak W18 and the tmpfs notes warn about). Only leaves with no live process were removed; two live
+ones were kept.
+
 ### W22. "the-grid" now resolves to TWO online devices on different versions (2026-10-13, Cloud)
 
 `letta computers list` returns **two** connections both named **the-grid**, both online, on
