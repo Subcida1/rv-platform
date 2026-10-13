@@ -1025,6 +1025,25 @@ for p in pages:
     if C.BEACON not in html:
         bad_beacon.append(str(p.relative_to(ROOT)))
 
+print("\n=== the footer's opening tag is the same on every page ===")
+# WHY THIS IS SEPARATE FROM THE SHELL CHECK. build-shell.mjs fills the content BETWEEN the
+# `<!-- footer:start -->` and `<!-- footer:end -->` markers, and the footer's own opening tag sits
+# OUTSIDE them. So the generator can never correct that tag, and it drifts silently: on 2026-10-12
+# seven pages carried `<div id="site-footer">` while the other 126 carried
+# `<div id="site-footer" role="contentinfo">`. Without the role the footer is not a landmark, and
+# axe reports every element inside it as "content not contained by landmarks" -- moderate, so it
+# never failed a run, and the representative a11y set did not include those seven pages.
+# The tag is compared as a WHOLE, so a missing role, a changed id and a stray attribute all fail.
+FOOTER_TAG = re.compile(r'<div id="site-footer"[^>]*>')
+bad_footer = []
+for p in pages:
+    html = p.read_text(encoding="utf-8")
+    m = FOOTER_TAG.search(html)
+    if not m:
+        bad_footer.append("%s: no site-footer tag" % p.relative_to(ROOT))
+    elif m.group(0) != '<div id="site-footer" role="contentinfo">':
+        bad_footer.append("%s: %s" % (p.relative_to(ROOT), m.group(0)))
+
 print("\n=== GA4: the measurement ID and the pages agree, in both directions ===")
 # GA4 rides the same two generators as the beacon, so it has the same drift risk,
 # plus one more: a tag that is injected but never removed leaves a property
@@ -1141,6 +1160,14 @@ if bad_beacon:
     fails.append("analytics beacon")
 else:
     print("  analytics beacon on all %d pages" % len(pages))
+
+if bad_footer:
+    for b in bad_footer[:12]:
+        print("  " + b)
+    print("  %d problem(s) found" % len(bad_footer))
+    fails.append("footer landmark")
+else:
+    print("  all %d pages carry the same footer tag, with role=contentinfo" % len(pages))
 
 print("\n=== the nav and footer are in the HTML, not built by JavaScript ===")
 # They were injected by site.js at runtime, so a visitor without JavaScript got a

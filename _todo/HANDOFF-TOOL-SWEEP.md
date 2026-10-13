@@ -143,6 +143,39 @@ disagrees with a direct observation, suspect the measurement.
 - **#8 "no intro copy above the filters" — REFUTED, third time.** The lede is present and renders
   above the filter bar. "No per-part anchors" — CONFIRMED, recorded.
 
+## The a11y sweep that found a class the representative set cannot (2026-10-12, Cloud)
+
+**Found while fixing the converter guide's `<desc>` anchor, and it turned into three fixes and a new
+gate.** `check-a11y.mjs` defaults to a REPRESENTATIVE set (one page per template) and has an `--all`
+flag. **Neither `ci.sh` nor the weekly `ci-full.sh` passes `--all`** — so a defect that is not a
+template defect, but a one-off content defect, can go live unreported. That is exactly what the
+converter page's `nested-interactive` was.
+
+**Ran `--all` for the first time: 133 pages, 0 serious or critical violations, and 7 pages carrying
+a moderate `region` warning.** Those 7 were `privacy.html`, `tools/battery-runtime.html`,
+`tools/fuel-cost.html`, `tools/rv-loan.html`, `tools/snow-load.html`, `tools/solar-sizing.html` and
+`tools/watts-to-amps.html`.
+
+**Two causes, both now fixed, and both were drift from the other 126 pages:**
+
+1. **The footer's opening tag.** 126 pages carried `<div id="site-footer" role="contentinfo">` and
+   those 7 carried `<div id="site-footer">`. Without the role the footer is not a landmark, so axe
+   reports everything inside it as content outside landmarks. **Why the generator never caught it:**
+   `build-shell.mjs` fills only the content BETWEEN the `<!-- footer:start -->` and
+   `<!-- footer:end -->` markers, and the footer's own opening tag sits OUTSIDE them. The generator
+   cannot correct that tag, and nothing else checked it.
+2. **Prose outside `<main>`.** Six of the seven carried their explanatory section between `</main>`
+   and the footer. Moved inside; zero pages now have prose outside `<main>`.
+
+**A new gate closes the first cause.** `verify.py` now compares the footer's opening tag as a whole
+across every page and fails on any difference. **Negative-tested:** with the role removed from
+`privacy.html` it exits 1 and prints `privacy.html: <div id="site-footer">`; restored, it exits 0 and
+prints `all 133 pages carry the same footer tag, with role=contentinfo`.
+
+**Still open, and worth doing:** add `--all` to the weekly `ci-full.sh`. The full sweep took roughly
+five minutes and came back clean, which is cheap for a weekly run and is the only thing that would
+have caught the converter page's defect before it shipped.
+
 # READ THIS FIRST: the extractor artifacts, consolidated (2026-10-12)
 
 **Twelve review rounds produced 100+ findings. Around a dozen were real defects. The rest were one of
