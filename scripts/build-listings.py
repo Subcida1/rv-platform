@@ -72,15 +72,16 @@ SCHEMA_START, SCHEMA_END = "<!-- SCHEMA:PROVIDERS-START -->", "<!-- SCHEMA:PROVI
 # markers the way the nav and the footer are, so the hub can take a claim and there is no
 # thirteenth copy to keep in step.
 CLAIM_START, CLAIM_END = "<!-- CLAIM:START -->", "<!-- CLAIM:END -->"
+# NO "Free forever" BADGE IN THIS CARD (2026-10-13). It sat beside "Free, permanent, yours to
+# control" and said the same thing twice; a chip that repeats the sentence next to it is
+# furniture, and this one had been flagged three times before it came out. The note lives here
+# rather than as an HTML comment so it does not ship to readers on every directory page.
 CLAIM_CARD = """      <div class="form-card  sp-34" id="claim">
         <div class="flex between gap">
           <div>
             <h3>Claim your listing</h3>
             <p class="form-sub">Free, permanent, yours to control. No middleman, no commission.</p>
           </div>
-          <!-- No badge here. "Free forever" sat beside "Free, permanent, yours to control" and
-               said the same thing twice; a chip that repeats the sentence next to it is
-               furniture. Flagged three times before it came out (2026-10-13). -->
         </div>
         <form id="claim-form" class="form-stack sp-16" novalidate>
           <div class="fld">
