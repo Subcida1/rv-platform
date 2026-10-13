@@ -1082,15 +1082,14 @@
     "sources": []
   },
   "tools/tire-date-code.html": {
-    "hash": "d723d0a68e986864",
+    "hash": "ee250e4772bbecbd",
     "status": "verified",
-    "verified_by": "2026-10-13 independent bridge-lane review (grok.com), Clean on all four parts -- no sourcing problem, no overclaiming, reads as native English. The reviewer confirmed the page attributes the six-to-10-year window to 'some vehicle and tire manufacturers' rather than to NHTSA as a mandate, and repeatedly distinguishes a recommendation from a legal limit. RECORDED: a reader still gets no maker-by-maker age limit for ST trailer tires, and no guidance on a worn or partly illegible DOT code.",
+    "verified_by": "2026-10-13 Neo tools-batch 5: added one in-body guide link in the section that already says the date alone does not judge a tire -- 'The RV tire replacement guide covers what to look at besides the date.' The page had zero in-body internal links to content (only boilerplate /about). No claim changed.",
     "verified_at": "2026-10-13",
     "sources": [],
-    "spec": "",
+    "spec": null,
     "spec_waived": true,
-    "claims": "0236e49d3d18ccd8",
-    "claims_date": "Oct 2, 2026"
+    "claims": "0236e49d3d18ccd8"
   },
   "tools/watts-to-amps.html": {
     "hash": "42509c614ab5b97a",
