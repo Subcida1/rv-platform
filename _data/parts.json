@@ -2805,7 +2805,7 @@
           "id": "heat-pump-and-heat-strip",
           "n": "Heat pump and heat strip",
           "aka": "heat pump|heat strip|reverse cycle",
-          "does": "heats as well as cools, down to a minimum outdoor temperature",
+          "does": "heats as well as cools, down to about 45 F, below which Coleman-Mach's own FAQ says to heat with the furnace",
           "fails": [
             "no heat below about 40F",
             "reversing valve",
@@ -2835,7 +2835,13 @@
               "brand": "Dometic",
               "url": "https://www.dometic.com/en-us/lp/documents-database"
             }
-          ]
+          ],
+          "evidence": {
+            "does_quote": "The Coleman-Mach heat pump is an effective heat source, as long as outdoor temperatures are above 45 F",
+            "does_source": "https://coleman-mach.com/service-support/faqs/",
+            "fails_quote": "The heat pump will operate on reverse refrigerant cycle while heating at outdoor temperatures above approximately 40 degrees F. When the outdoor temperature is below approximately 40 degrees F, the heat pump compressor will shut down to prevent outdoor coil freeze-up.",
+            "fails_source": "https://library.coleman-mach.com/wp-content/uploads/2023/04/1976-299.pdf"
+          }
         },
         {
           "id": "thermostat",
