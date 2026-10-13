@@ -1527,6 +1527,32 @@ touched.**
 (the leak W18 and the tmpfs notes warn about). Only leaves with no live process were removed; two live
 ones were kept.
 
+### THE BRIDGE IS CLOSED OUT - queue empty, all six lanes idle (2026-10-13, on-the-grid)
+
+**Every dispatched job is answered or archived, and nothing is pending.** Swept 5 spent jobs with
+`tools/sweep-spent-jobs.py`; archived the one leftover, `20261013-0014-RV-rv-converter-finder-REVIEW2`,
+which had no reply because its REVIEW3 superseded it. `bridge-review.py --status` now reports **jobs
+pending: 0**, and all six lanes (aistudio, deepseek, chatgpt, qwen, gemini, grok) are idle on userscript
+v0.7.43 with fresh heartbeats.
+
+**"Closing a lane" is closing a browser tab, which is Ty's to do -- the bridge has no retire command.**
+The tools that exist are `bridge-up.sh`, `lane-cycle.sh`, `sweep-late-replies.py` and
+`sweep-spent-jobs.py`; none of them stops a lane. So the lanes stay armed but idle, and the tabs can be
+closed whenever he wants.
+
+**WHAT IS STILL OPEN, AND WHY NONE OF IT IS MINE TO FINISH:**
+- **The dateModified convention** -- I gave Brandt the recommendation (derive both the visible date and
+  the JSON-LD `dateModified` from git's last-commit date for the file, so they cannot disagree) and the
+  reasoning. It needs his ruling.
+- **The hub card counts** -- `34 listings - 19 mobile - 21 centers` where 19 + 21 = 40, because the six
+  "both" businesses are counted in each bucket. The code comment says that is deliberate and both
+  numbers are true; what is not true is the arithmetic a reader will do. Needs a decision: exclusive
+  buckets (13/15/6) or labels that do not read as a partition.
+- **63 parts cards with no guide link**, and the two tool pages (`battery-runtime`, `rv-loan`) with no
+  guide whose subject matches theirs. That is the correct state, not a backlog.
+- **The recorded Part 3 gaps** from the review wave -- how to report a wrong number, how long search
+  terms are kept, how to adjust for shade or roof space. All editorial, all recorded.
+
 ### W20b — THE UNAPPLIED BRIDGE WAVE IS CLOSED (2026-10-13, on the-grid)
 
 **The REVIEW3 replies plus the 0055 batch, all read against the artifact. Eight defects applied, two
