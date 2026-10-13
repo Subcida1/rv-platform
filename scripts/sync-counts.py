@@ -206,20 +206,23 @@ def sync_home_counters():
         nonlocal html
         if not rx.search(html):
             raise SystemExit("FAIL  index.html: no %s counter to rewrite" % what)
-        out = rx.sub(lambda m: m.group(1) + str(value) + m.group(2), html, count=1)
+        # group(1) is `data-count="`, group(3) is `">`, group(4) is the label -- so the
+        # number lands in the attribute AND in the text a reader without JavaScript sees.
+        out = rx.sub(lambda m: m.group(1) + str(value) + m.group(3) + str(value) + m.group(4),
+                     html, count=1)
         if out != html:
             html = out
             print("  homepage: %s counter set to %s" % (what, value))
         else:
             print("  homepage: %s counter already %s" % (what, value))
 
-    rewrite(re.compile(r'(data-count=")\d+(">0</div><div class="lbl">RV troubleshooting guides</div>)'),
+    rewrite(re.compile(r'(data-count=")(\d+)(">)\d+(</div><div class="lbl">RV troubleshooting guides</div>)'),
             total, "guides")
     # THE TOOLS COUNTER, added 2026-10-06. Ty: "8 rv tools all free the number doesnt roll up
     # like the other 2 its just stationary". It was a data-claim span rather than a data-count, so
     # the hero counter never saw it. tools-live is derived in site_constants rather than from
     # _data/listings, which is why this is its owner and build-listings is not.
-    rewrite(re.compile(r'(data-count=")\d+(">0</div><div class="lbl">RV tools, all free</div>)'),
+    rewrite(re.compile(r'(data-count=")(\d+)(">)\d+(</div><div class="lbl">RV tools, all free</div>)'),
             int(C.claim_values()["tools-live"]), "tools")
     page.write_text(html, encoding="utf-8")
 

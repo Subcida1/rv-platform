@@ -370,12 +370,21 @@ tools_live = len([p for p in (ROOT / "tools").glob("*.html") if p.name != "index
 for label, actual in (("RV troubleshooting guides", len(guide_files)),
                       ("RV repair businesses listed", businesses),
                       ("RV tools, all free", tools_live)):
-    m = re.search(r'data-count="(\d+)">0</div><div class="lbl">%s</div>' % re.escape(label), idx)
+    # BOTH NUMBERS, and they must agree. The markup used to carry a hard "0" as the animation's
+    # start value, which meant a reader with JavaScript off saw "0 RV tools, all free" -- the
+    # count-up was the only thing that ever put the real number on the page. The text now carries
+    # the real number and the counter animates from zero to it, so this checks the attribute, the
+    # rendered text, and reality, and a page where any two disagree fails.
+    m = re.search(r'data-count="(\d+)">(\d+)</div><div class="lbl">%s</div>' % re.escape(label), idx)
     if not m:
         bad.append("no stat on index.html for %r" % label)
     elif int(m.group(1)) != actual:
         bad.append("index.html says %s %s, reality is %d (run scripts/sync-counts.py)"
                    % (m.group(1), label, actual))
+    elif int(m.group(2)) != actual:
+        bad.append("index.html renders %s for %s but the counter animates to %s -- a reader "
+                   "without JavaScript sees the rendered one (run scripts/sync-counts.py)"
+                   % (m.group(2), label, m.group(1)))
 print("  clean" if not bad else "\n".join("  " + b for b in bad))
 if bad:
     fails.append("homepage figures")

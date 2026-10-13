@@ -513,8 +513,12 @@ def build(kind):
 
     home = ROOT / "index.html"
     text = old = home.read_text(encoding="utf-8")
-    text, n = re.subn(r'(data-count=")\d+(">0</div><div class="lbl">RV repair businesses listed</div>)',
-                      r"\g<1>%d\g<2>" % sum(totals.values()), text)
+    # BOTH NUMBERS. The text used to be a hard "0" that the count-up animated away from, so a
+    # reader without JavaScript saw "0 RV repair businesses listed". The text now carries the real
+    # number and the counter animates from zero to it; verify.py checks that the two agree.
+    text, n = re.subn(
+        r'(data-count=")\d+(">)\d+(</div><div class="lbl">RV repair businesses listed</div>)',
+        r"\g<1>%d\g<2>%d\g<3>" % (sum(totals.values()), sum(totals.values())), text)
     assert n == 1, "homepage: the business count marker was not found exactly once"
     put(home, text, old, "homepage count")
 
