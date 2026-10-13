@@ -52,7 +52,7 @@
  <div class="wrap w-680">
  <div class="card" id="contact-card">
  <h2 class="card-h">Email</h2>
- <p id="contact-msg">Replies fast, and a person answers: <a href="mailto:contact@originrv.com" class="link">contact@originrv.com</a></p><!-- the static address is the no-JavaScript fallback; assets/js/config.js is the source of truth and the inline script below overwrites this when it runs -->
+ <p id="contact-msg">A person answers, not a bot: <a href="mailto:contact@originrv.com" class="link">contact@originrv.com</a></p><!-- the static address is the no-JavaScript fallback; assets/js/config.js is the source of truth and the inline script below overwrites this when it runs -->
  <div class="flex gap flex-wrap sp-12">
  <a class="btn btn-gb flex-none" href="directory/#claim">I run an RV business, claim my listing</a>
  </div>
@@ -82,7 +82,7 @@
  var msg = document.getElementById('contact-msg');
  var card = document.getElementById('contact-card');
  if (email) {
- msg.innerHTML = 'Replies fast, and a person answers: <a href="mailto:' + email + '" class="link">' + email + '</a>';
+ msg.innerHTML = 'A person answers, not a bot: <a href="mailto:' + email + '" class="link">' + email + '</a>';
  } else {
  msg.innerHTML = 'A contact address is not published yet. Business listings, corrections, and everything else run through the directory for now.';
  }

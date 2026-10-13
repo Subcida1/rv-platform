@@ -59,7 +59,7 @@
        <div class="field">
         <label for="b-ah">Amp-hours, from the battery label<span class="req">*</span></label>
         <input id="b-ah" type="text" inputmode="decimal" placeholder="100">
-        <span class="hint">How to get it: printed on the battery label as Ah. Two batteries in parallel add their amp-hours; two in series add volts, not amp-hours.</span>
+        <span class="hint">How to get it: printed on the battery label as Ah. Two batteries in parallel add their amp-hours; two in series add volts, not amp-hours. The tool assumes a 12-volt bank, so a 24- or 48-volt bank holds proportionally more than the runtime shown.</span>
        </div>
        <div class="field">
         <label for="b-chem">Battery type<span class="req">*</span></label>
@@ -98,7 +98,7 @@
 <div class="wrap">
  <div class="prose">
   <h2>Why chemistry decides the answer</h2>
-  <p>The amp-hours on the label are the whole tank. How much of the tank you may use depends on the chemistry, because discharging a lead-acid battery deeply shortens its cycle life. Battle Born's comparison gives lead-acid chemistries roughly 50 percent usable capacity and lithium 80 to 100 percent, and Renogy states the same split as a sizing rule: for lead-acid, the standard depth of discharge is 50 percent, and for lithium it is 80 to 100 percent. This tool uses 50 percent for flooded and AGM, and 80 percent for lithium, which is the conservative end of the 80-to-100 range both makers publish.</p>
+  <p>The amp-hours on the label are the whole tank. How much of the tank you may use depends on the chemistry, because discharging a lead-acid battery deeply shortens its cycle life. Battle Born's comparison gives lead-acid chemistries roughly 50 percent usable capacity and lithium 80 to 100 percent, and Renogy states the same split as a sizing rule: for lead-acid, the standard depth of discharge is 50 percent, and for lithium it is 80 percent. This tool uses 50 percent for flooded and AGM, and 80 percent for lithium, which is the conservative end of the 80-to-100 range both makers publish.</p>
   <p>The other half of the math is the watt-hours. A 12-volt lithium battery is 12.8 volts nominal, so 100 amp-hours is 1,280 watt-hours, not 1,200. Dakota Lithium prints exactly that on its 100 amp-hour battery. The tool uses 12.8 volts for lithium and 12.0 for lead-acid, and says so in the result.</p>
 
   <h2>What the answer means</h2>
