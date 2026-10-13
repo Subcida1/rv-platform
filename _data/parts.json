@@ -33,7 +33,8 @@
             "query": "hitch coupler",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "tool": "weight-calculator"
         },
         {
           "id": "tongue-jack",
@@ -154,7 +155,8 @@
             "query": "equalizer hitch",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "tool": "weight-calculator"
         },
         {
           "id": "sway-control",
@@ -425,7 +427,8 @@
               "brand": "Carlstar",
               "url": "https://www.carlstar.com/our-products/product-detail/radial-trail-hd/"
             }
-          ]
+          ],
+          "tool": "tire-date-code"
         },
         {
           "id": "tire-pressure-monitoring",
@@ -548,7 +551,8 @@
               "brand": "Reese",
               "url": "https://www.reesehitches.com/media/installation_instruction/30047.pdf"
             }
-          ]
+          ],
+          "tool": "weight-calculator"
         },
         {
           "id": "toad-setup",
@@ -995,7 +999,8 @@
               "brand": "Renogy",
               "url": "https://www.renogy.com/support/"
             }
-          ]
+          ],
+          "tool": "battery-runtime"
         },
         {
           "id": "battery-disconnect",
