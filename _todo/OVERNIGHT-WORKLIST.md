@@ -1377,6 +1377,47 @@ time. What it changes is the status line. The correct statement is *"11 pages ca
 1 class is Ty's decision, 1 class is already fixed and its notes are stale, and 3 are sources that
 will not fetch."*
 
+### W20 — ANSWERED 2026-10-13: the manifest is RIGHT, and my premise was wrong
+
+**Three passes on the-grid settled this, and the answer is the opposite of what I assumed.**
+
+**What I assumed:** the 15 tool pages were reviewed and the manifest simply did not record it, so
+the fix was to re-baseline them.
+
+**What is true:** all 15 **were** reviewed by an independent lane on 2026-10-11, and **all 15 have
+been edited since**. So the reviews do not cover the content that is live, and `unverified` is the
+correct status. The manifest was right; my reading of it was not.
+
+**The evidence, and the method correction that matters.** The per-page lane lives in the
+`LANE: <host>` header of the archived bridge job files in
+`/home/user/claude-bridge/queue/jobs/done/`. But **those files contain only the PROMPT, not the
+review** — the `.answered.md` vs `.stalled-grok.txt` distinction is carried by the filename alone. So
+a job file is not evidence that a review happened. **The evidence is the outbox reply.** Checked that
+way, all 15 have a reply with a `TALLY:` line and a sentence quoting that page's own copy:
+
+| lane | pages |
+|---|---|
+| grok.com | battery-runtime, tools/index |
+| chatgpt.com | fuel-cost, rv-anode-rod, rv-loan, solar-sizing |
+| chat.qwen.ai | rv-appliance-board-finder, rv-recall-lookup, tire-date-code |
+| two lanes, part 1 / part 2 | rv-water-filter, weight-calculator, tools/index |
+| REVIEW1 failed, REVIEW2 succeeded | rv-converter-finder, rv-toilet-valve, snow-load, watts-to-amps |
+
+**The sequence that decides it.** Reviews dispatched 2026-10-11 23:30 PDT; the batch-3 fixes applied
+the same night (`4157875`, `289c690`, `8863873`, then `d497e5e` at 23:51); then `c8e8572` and
+`20502c3` on 2026-10-12, and `a5e0ccf` and `4f79b42` on 2026-10-13. **Every one of the 15 changed
+after its review**, so by the site's own rule — a content change resets a pass — none of them is
+verified for its current content.
+
+**One thing still worth correcting:** the manifest notes on `rv-appliance-board-finder`,
+`rv-converter-finder`, `rv-recall-lookup`, `rv-toilet-valve` and `tire-date-code` say *"No independent
+lane has reviewed it"* or *"Not yet reviewed by an independent lane."* **That is false about the
+past** — a lane did review each of them on 2026-10-11 — even though `unverified` is the right status
+for the present. A note that misstates history is worth fixing when those pages are next touched.
+
+**What W20 actually needs, then:** a fresh independent pass on the 15 pages' current content, not a
+manifest update. That is a real work item rather than bookkeeping.
+
 ### W20. The tool pages' review coverage is unrecorded (found 2026-10-12, Cloud)
 
 `scripts/verify-content.py --status` reports **48 verified / 85 unverified**, and **15 of the
