@@ -52,12 +52,84 @@ def pages():
         yield p, rel.as_posix()
 
 
+def substantive(rel, parent, sha):
+    """Did this commit change anything a reader would see?
+
+    Three things have to be discounted, and the third is the one that took two attempts:
+
+    1. WHITESPACE. `git diff -w` ignores it, which is what makes the callout-separator fix -- a
+       newline added between a label and its body on 37 guides -- not a content change.
+
+    2. THE DATE FIELDS THEMSELVES. This script writes "Last updated on <date>" and
+       `"dateModified":"<date>"` into every page it touches, so the commit that last changed a file
+       is very often THIS SCRIPT. Counting that as a content change is a feedback loop: the sync
+       bumps the date, the bump looks like an edit, the next run bumps it again.
+
+    3. AND THEY SIT INSIDE LINES WITH OTHER CONTENT. A first version of this test asked whether any
+       changed line still had text after the dates were stripped -- and every date line does, because
+       the date is embedded in a `<p class="reviewed">` and in a single-line JSON-LD block carrying
+       the whole Article. So the test is not per-line: it strips the dates from BOTH sides and asks
+       whether the removed lines and the added lines are then the same set. If they are, the only
+       thing that moved was the date.
+    """
+    d = subprocess.run(["git", "diff", "-w", "-U0", parent, sha, "--", rel],
+                       cwd=ROOT, capture_output=True, text=True).stdout
+
+    def norm(s):
+        s = re.sub(r"Last updated on [A-Z][a-z]+ \d{1,2}, \d{4}", "", s)
+        s = re.sub(r'"dateModified"\s*:\s*"[0-9-]+"', "", s)
+        # REMOVE ALL WHITESPACE, do not collapse it to a space. `git diff -w` ignores whitespace
+        # inside a line but NOT a line that was split in two -- and splitting a line is exactly what
+        # the callout fix did, inserting a newline between the label and its body. Collapsing to a
+        # space is not enough: `</span><b>` becomes `</span> <b>` while the original stays
+        # `</span><b>`, so the two still differ by one character. Removing it entirely makes them
+        # the same string, which is what they are to a reader.
+        return re.sub(r"\s+", "", s)
+
+    # JOIN EACH SIDE INTO ONE STRING AND COMPARE THOSE, not line by line. A line-by-line test
+    # cannot see that inserting a newline is not a content change: the callout fix split one line
+    # into two, so the removed side had 3 lines and the added side 6, and no amount of sorting made
+    # them match. Collapsed to a single string per side, `</span><b>X</b>` and `</span>\n<b>X</b>`
+    # are the same text -- which is what they are to a reader.
+    gone, came = [], []
+    for line in d.splitlines():
+        if line.startswith(("+++", "---")) or line[:1] not in "+-":
+            continue
+        (gone if line[0] == "-" else came).append(norm(line[1:]))
+    return "".join(gone) != "".join(came)
+
+
 def commit_date(rel):
-    """The file's last commit date, or None when git has nothing to say about it."""
-    out = subprocess.run(["git", "log", "-1", "--format=%ad", "--date=short", "--", rel],
+    """The date of the last commit that changed the file's CONTENT.
+
+    NOT the last commit that touched the file. Brandt ruled on 2026-10-13 that a whitespace-only
+    change must not move the date: the callout-separator fix earlier that day rewrote 37 guides to
+    add a newline between a label and its body, and every one of them would have read "Last updated
+    today" for a change no reader could see. A date that moves for invisible edits stops meaning
+    anything, which is the opposite of why this convention exists.
+
+    So: walk the file's history newest-first and return the first commit whose diff is non-empty
+    with whitespace ignored. `git diff -w --quiet` exits 0 when the only differences are whitespace,
+    which is exactly the test.
+
+    Falls back to the plain last-commit date when the walk finds nothing -- a file whose every
+    commit was whitespace-only still needs a date, and the honest one is when it last changed at all.
+    """
+    out = subprocess.run(["git", "log", "--format=%H %ad", "--date=short", "--", rel],
                          cwd=ROOT, capture_output=True, text=True)
-    got = out.stdout.strip()
-    return got or None
+    lines = [l for l in out.stdout.splitlines() if l.strip()]
+    if not lines:
+        return None
+    for line in lines:
+        sha, _, date = line.partition(" ")
+        # a root commit has no parent to diff against; its content is new by definition
+        parent = subprocess.run(["git", "rev-parse", "--verify", "--quiet", sha + "^"],
+                                cwd=ROOT, capture_output=True, text=True).stdout.strip()
+        if not parent:
+            return date
+        if substantive(rel, parent, sha):
+            return date
+    return lines[-1].partition(" ")[2]
 
 
 def human(iso):
