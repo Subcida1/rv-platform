@@ -143,6 +143,31 @@ disagrees with a direct observation, suspect the measurement.
 - **#8 "no intro copy above the filters" — REFUTED, third time.** The lede is present and renders
   above the filter bar. "No per-part anchors" — CONFIRMED, recorded.
 
+## Neo's homepage deep-dive, fourth rotation — verified 2026-10-13 (5 findings: 3 refuted, 1 withdrawn, 1 clean)
+
+**No defects.** Three refuted, one Neo withdrew himself, and one is a clean bill with a suggestion.
+
+- **#1 "'Something is broken' is placeholder copy, still unshipped" — REFUTED, ninth round.** It is
+  one of **five** `.sec-eyebrow` labels on the homepage: "Everything in one place", "First-timers",
+  "Winter season", "Something is broken", "Directory". It sits above "RV troubleshooting guides that
+  start with your symptom", which is exactly what it means. Deliberate copy, not a placeholder.
+- **#2 "the guide-count copy conflicts: Forty-two against 47" — REFUTED, second round.** **Both are
+  data-claim wired and both are right.** `site_constants.claim_values()` derives `guides-fix-word =
+  Forty-two` from `_data/guides.json` group `fix`, which holds **42**, and `guides-total = 47` from
+  42 fix + 5 winter. They describe different things: the sentence sits above the troubleshooting grid
+  and counts that group; 47 is the site total.
+- **#3 "the sitemap shows 47 guides slugs, was 48, the counts are drifting" — REFUTED, second
+  round.** The sitemap carries **48 guides URLs = 1 hub (`/guides/`) + 47 guide pages**, and the hub's
+  JSON-LD `numberOfItems` is **47**. Nothing is drifting; the hub URL is being counted in some runs
+  and not others.
+- **#4 "the homepage links only to guides" — WITHDRAWN by Neo**, who now measures in-body links to
+  every section. His suggestion to beef up the parts links is recorded as a suggestion, not a defect.
+- **#5 clean, plus a suggestion:** add ItemList/WebPage structured data for the guides grid. The
+  homepage currently carries WebSite and Organization. **Recorded, not done** — the site's own GEO
+  doctrine found that structured data is not the lever it is often sold as (the FAQPage bet is dead,
+  and the measured levers are tables and cited sources), so this is a judgement call rather than a
+  gap.
+
 ## Neo's directory deep-dive, third rotation — verified 2026-10-13 (6 findings: 1 fixed, 5 refuted)
 
 - **#1 "the hub renders Pacific, Southwest and Alaska and Hawaii with ZERO state cards, 9 states
