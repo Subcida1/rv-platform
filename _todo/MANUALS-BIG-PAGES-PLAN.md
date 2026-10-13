@@ -120,15 +120,23 @@ point to") was worked through against the sources, not reworded. Committed `8727
 - Plus: "Every RV has three tanks" → "Nearly every"; "Jacks lift. stabilizers…" capitalised; "10 F"
   → "10°F"; "G.A.W.R." spelled out at first use; "the two numbers" → "the two ratings".
 
-**STILL OWED on this page, and now machine-flagged** — four sentences the new `unnamed-authority`
-rule in `scripts/check-prose.py` reports, all of which need a source or a cut:
+**The last four unnamed sources, fixed 2026-10-13 (`f53735db`).** A new `unnamed-authority` rule in
+`scripts/check-prose.py` found five sentences across the site; four were here. Each was checked
+against the document it actually came from, and two turned out to be paraphrases of a source the page
+already cites:
 
-| where | sentence |
+| sentence | what it was |
 |---|---|
-| Part 2 | "some manufacturers recommend only 40 to 50 psi" |
-| Part 5 | "many manufacturers recommend inspecting your RV's exterior seams and seals" |
-| Part 2 | "some makers say this is normal" (canvas seam seep) |
-| Part 2 | "One supplier recommends a light silicone spray rather than oil on the posts" |
+| "some manufacturers recommend only 40 to 50 psi" | a near-verbatim lift from the **RV Technician Library**, already in the source list. Named. |
+| "some makers say this is normal and will stop as the threads swell" | the **AIR OPUS** tent manual, already in the source list. Named, and the mechanism stated instead of attributed. |
+| "many manufacturers recommend inspecting your RV's exterior seams and seals" every 90 days | the **KZ-RV maintenance manual** in the source list says *annual*, and twice a year for the seals. The attribution was not just unnamed, it was not the cadence the source gives. It is the page's own schedule now, like the three items under it. |
+| "One supplier recommends a light silicone spray rather than oil on the posts" | **CUT.** It also contradicted the sentence two lines above it, which is the same manual's own instruction to oil each segment of the post. |
 
-Plus one on `guides/rv-water-pump-wont-prime`: "Several makers list low voltage as a no-prime cause,
-and one gives a number."
+The fifth hit was on `guides/rv-water-pump-wont-prime` — "Several makers list low voltage as a
+no-prime cause" — and it was a **false positive of the rule**: the sentence names REMCO, Aquatec and
+SHURflo in the line directly after it. The verb that caught it was removed and the sentence joined the
+must-not-catch set.
+
+**The rule now gates** (`f20a03b3`): `scripts/check-prose.py` reports 0 hits across 133 pages and
+`--self-test` carries 10 must-catch and 22 must-not-catch cases. `--self-test` is now a step in
+`scripts/ci.sh`, so a rule that stops catching — or starts over-catching — fails the build.
