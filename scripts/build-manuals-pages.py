@@ -508,7 +508,12 @@ def render_new_owner_blocks(blocks):
                          "money": "Costs you money"}.get(flag)
                 if not label:
                     raise SystemExit("FAIL  new-owner content: unknown callout flag %r" % flag)
-                out.append('<div class="callout flag flag-%s"><span class="flag-h">%s</span>%s</div>'
+                # A NEWLINE BETWEEN THE LABEL AND THE BODY, and it is not cosmetic. The label is
+                # display:block, so the RENDER always broke the line -- but the SOURCE had no
+                # whitespace between </span> and the body, so anything reading the HTML as text saw
+                # "Can injure youA trailer on stands..." run together. That cost six rounds of a
+                # reviewer flagging a concatenation that was never visible on the page.
+                out.append('<div class="callout flag flag-%s"><span class="flag-h">%s</span>\n%s</div>'
                            % (flag, label, b["html"]))
             else:
                 out.append('<div class="callout">%s</div>' % b["html"])
