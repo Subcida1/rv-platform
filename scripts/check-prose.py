@@ -85,6 +85,43 @@ STRICT = (
      r"\bthe (?:consistency|agreement|value of knowing) is the (?:useful|point|important)\b|"
      r"\bit is worth keeping them apart\b",
      "arguing that the page's method is sound to a reader who is already using it"),
+
+    # ADDED 2026-10-13 from the start-here sourcing pass. Ty's standing rule is "name the source or
+    # cut the sentence; never narrate the search that failed", and this shape keeps coming back in
+    # new prose: a fact handed to a party the page cannot point to. It cost a hand-sweep on
+    # 2026-09-23 (nine instances across five guides) and another on start-here on 2026-10-13.
+    #
+    # THE PATTERN REQUIRES A CLAIMING VERB AFTER THE NOUN, and that is the whole precision of it. The
+    # first draft matched any "some/other/one maker" and returned 99 hits over 75 pages, nearly all of
+    # them correct prose: "one source or the other" (a power source, not an authority), "most people
+    # assume", "other brands work fine", "in most states". Requiring an assertion verb took it to five,
+    # and all five were real.
+    #
+    # THREE VERBS ARE DELIBERATELY ABSENT, each excluded because of a measured false positive on this
+    # site rather than a guess:
+    #   "publishes" and "puts" are how the page describes its OWN behaviour ("where a maker publishes
+    #   one manual per model year, the row links the archive") and how it names a maker in the next
+    #   clause ("a figure one maker publishes: Keystone rates the roofs ...").
+    #   "lists" was added to catch "several makers list low voltage as a no-prime cause" on the
+    #   water-pump guide -- which turned out to name REMCO, Aquatec and SHURflo in the sentence
+    #   directly after it. A lead-in whose referents are named on the next line is not a defect.
+    #
+    # GATING NOW, because it earned it: the corpus is clean (every hit above was fixed rather than
+    # exempted) and the construction is banned outright rather than being a judgement call, which is
+    # the difference between this family and the ones that stay in NOTED.
+    ("unnamed-authority",
+     r"\b(?:testing|a study|a survey|a review|research|studies|an analysis|one review|a test|tests)"
+     r"\s+(?:has |have )?(?:found|shown|shows?|suggested|suggests?|say|says)\b"
+     r"|\bthe usual (?:threshold|figure|number|rule|practice)\b"
+     r"|\b(?:a|an|one)\s+(?:maker|manufacturer|supplier|brand|company|technician|expert|dealer|shop"
+     r"|industry body|trade body|trade association|cost index)"
+     r"\s+(?:says?|said|recommends?|requires?|forbids?|endorses?|gives?|describes?|warns?|advises?"
+     r"|claims?|found|shows?|suggests?)\b"
+     r"|\b(?:some|other|several|many|a handful of|a few)\s+(?:makers|manufacturers|suppliers|brands"
+     r"|companies|technicians|experts|dealers|shops)"
+     r"\s+(?:says?|said|recommends?|requires?|forbids?|endorses?|gives?|describes?|warns?|advises?"
+     r"|claims?|found|shows?|suggests?)\b",
+     "a fact handed to a party the page cannot point to; name the source or cut the sentence"),
 )
 
 # ---- rules that only report -------------------------------------------------
@@ -112,37 +149,6 @@ NOTED = (
     ("authenticity-adjective",
      r"\bwith real \w+|\breal (?:voltage|maker|industry)\s+(?:tables|charts|numbers|figures|data)\b",
      "calling our figures the authentic ones implies the others are not, which is selling rather than telling"),
-    # ADDED 2026-10-13 from the start-here sourcing pass. Ty's standing rule is "name the source or
-    # cut the sentence; never narrate the search that failed", and the same shape keeps coming back
-    # in new prose: a fact handed to a party the page cannot point to. It cost a hand-sweep on
-    # 2026-09-23 (nine instances across five guides) and another on start-here tonight.
-    #
-    # THE PATTERN REQUIRES A CLAIMING VERB AFTER THE NOUN, and that is the whole precision of it. The
-    # first draft matched any "some/other/one maker" and returned 99 hits over 75 pages, most of them
-    # correct prose: "one source or the other" (a power source, not an authority), "most people
-    # assume", "other brands work fine", "in most states". Requiring the noun to be followed by a verb
-    # of assertion took it to five, and all five were real.
-    #
-    # "publishes" and "puts" are deliberately NOT in the verb list, and that is measured, not taste:
-    # they are the two verbs the page uses to describe its OWN behaviour ("where a maker publishes one
-    # manual per model year, the row links the archive") and to name a maker in the next clause ("a
-    # figure one maker publishes: Keystone rates the roofs ..."). Both were false positives.
-    #
-    # NOTED, not STRICT, until the five live hits are fixed. Once the corpus is clean it should be
-    # promoted, because the construction is banned outright and a report nobody acts on is not a gate.
-    ("unnamed-authority",
-     r"\b(?:testing|a study|a survey|a review|research|studies|an analysis|one review|a test|tests)"
-     r"\s+(?:has |have )?(?:found|shown|shows?|suggested|suggests?|say|says)\b"
-     r"|\bthe usual (?:threshold|figure|number|rule|practice)\b"
-     r"|\b(?:a|an|one)\s+(?:maker|manufacturer|supplier|brand|company|technician|expert|dealer|shop"
-     r"|industry body|trade body|trade association|cost index)"
-     r"\s+(?:says?|said|recommends?|requires?|forbids?|endorses?|gives?|describes?|warns?|advises?"
-     r"|claims?|found|shows?|suggests?|lists?)\b"
-     r"|\b(?:some|other|several|many|a handful of|a few)\s+(?:makers|manufacturers|suppliers|brands"
-     r"|companies|technicians|experts|dealers|shops)"
-     r"\s+(?:says?|said|recommends?|requires?|forbids?|endorses?|gives?|describes?|warns?|advises?"
-     r"|claims?|found|shows?|suggests?|lists?)\b",
-     "a fact handed to a party the page cannot point to; name the source or cut the sentence"),
 )
 
 
@@ -267,6 +273,7 @@ def self_test():
         "automotive.",
         "Propane system repairs and safety inspections require a licensed LP gas technician in most "
         "states.",
+        "Several makers list low voltage as a no-prime cause, and one gives a number.",
     ]
     bad = [
         ("source-meta", "A rough estimate by the Weather Service's own description."),
@@ -285,10 +292,8 @@ def self_test():
         ("method-justification",
          "The sequence below is not arbitrary. It runs from the cheapest and most likely to the "
          "most expensive and least likely."),
-        # the four live hits that opened the unnamed-authority rule, 2026-10-13. Three are verbatim
-        # from the site; the fourth is the sentence the start-here source pass cut.
-        ("unnamed-authority",
-         "Several makers list low voltage as a no-prime cause, and one gives a number."),
+        # the three live hits that opened the unnamed-authority rule and are still caught by it,
+        # 2026-10-13. All three are verbatim from the site as it stood before the fix.
         ("unnamed-authority",
          "To avoid warranty problems some manufacturers recommend only 40 to 50 psi, and a safe "
          "cap is 60 to 65 psi."),
