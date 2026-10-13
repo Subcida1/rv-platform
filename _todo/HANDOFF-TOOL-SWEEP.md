@@ -143,6 +143,39 @@ disagrees with a direct observation, suspect the measurement.
 - **#8 "no intro copy above the filters" — REFUTED, third time.** The lede is present and renders
   above the filter bar. "No per-part anchors" — CONFIRMED, recorded.
 
+## Neo's backlog re-delivery — three batches, verified 2026-10-13 (1 fixed, 11 refuted/withdrawn)
+
+**BATCH 1 (homepage) — all four already settled, no new work.** The sec-eyebrow is one of five section
+labels (ninth round); both guide counts are `data-claim`-wired and both are right for what their
+sentences say; the sitemap's 48 guides URLs are 1 hub + 47 guides; and Neo withdrew the
+"links only to guides" flag himself.
+
+**BATCH 2 (manuals) — one real defect, three refuted.**
+
+- **FIXED: the kitchen page promised microwaves it does not cover.** "microwave" appeared exactly
+  TWICE on the page — in the lede and in the nav dropdown — and in **no row**. Checked the one row that
+  could have carried it: the Lippert document center (Furrion appliances) fetched and read, and it
+  mentions Furrion four times and **microwave zero times**. Dropped the word from both places; the nav
+  label now reads "Fridges, ranges, cooktops" and the lede "Refrigerators, ranges, cooktops and
+  laundry". **The nav label lives in `assets/js/site.js`, not in `build-shell.mjs`** — the shell
+  injects the nav, the JS builds it, which is why grepping the shell for the string found nothing.
+- **REFUTED: "brands JSON-LD numberOfItems=40 vs 44 rows, stale schema."** The ItemList holds
+  **exactly 40 elements** and `numberOfItems` is **40** — internally consistent. The 4 rows it omits
+  are the ones with no `url` (Bigfoot RV, Midwest Automotive Designs, Escape Trailer, Nexus RV), and
+  the generator's own comment records that the filter exists so positions run 1..N with no gaps. The
+  lede's "44 brands ... each linked to the maker's own manual ... **where it publishes one**" carries
+  the qualifier, so it is honest about the four.
+- **REFUTED: "cooktops carried only by outdoor grills."** The Suburban row reads "ranges, slide-in
+  cooktops, griddles and induction cooktops" — cooktops are covered by a cooking-appliance library,
+  not by the grills.
+- **REFUTED: the kitchen meta naming 7 of 12 makers.** That is the 140-160 character window doing its
+  job, not a defect; the exterior page names all 7 because it only has 7.
+
+**BATCH 3 (parts) — no new work.** The counts Neo reports (83 anchors / 34 targets / 14 unlinked) do
+not match the source: measured here it is **69 cards with a guide link, 35 distinct targets, 12 guides
+never linked**. The tool links on the anode-rod and water-filter cards are confirmed live, and the
+verb agreement is clean.
+
 ## Parts guide coverage — worked 2026-10-13 (62 -> 69 cards linked, 18 -> 12 guides unlinked)
 
 Two passes, both from the source, and the second one's answer is that the remainder is STRUCTURAL.

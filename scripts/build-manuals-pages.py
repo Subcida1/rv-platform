@@ -36,7 +36,7 @@ BLURB = {
     "water-and-plumbing": "Water heaters, fresh-water pumps, plumbing fittings and "
                           "hydronic heating",
     "heating-and-cooling": "Furnaces, roof air conditioners, heat pumps and tankless heaters",
-    "kitchen-and-appliances": "Refrigerators, ranges, cooktops, microwaves and laundry",
+    "kitchen-and-appliances": "Refrigerators, ranges, cooktops and laundry",
     "exterior-and-body": "Awnings, slide-outs and roof racks",
     "towing-and-running-gear": "Hitches, weight distribution, brake controllers, axles, "
                                "brakes, tires and leveling",
