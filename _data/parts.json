@@ -800,7 +800,7 @@
             "motorhome",
             "van"
           ],
-          "guide": null,
+          "guide": "rv-fuse-keeps-blowing",
           "kw": [
             "rv breaker keeps tripping",
             "gfci breaker rv",
@@ -1041,7 +1041,7 @@
             "motorhome",
             "van"
           ],
-          "guide": null,
+          "guide": "rv-battery-not-charging",
           "kw": [
             "rv battery monitor inaccurate",
             "shunt wiring",
@@ -1289,7 +1289,7 @@
             "motorhome",
             "van"
           ],
-          "guide": null,
+          "guide": "rv-12-volt-problems",
           "kw": [
             "rv wiring corrosion",
             "bad ground rv",
@@ -1545,7 +1545,7 @@
             "fifth-wheel",
             "motorhome"
           ],
-          "guide": null,
+          "guide": "rv-water-pump-wont-prime",
           "kw": [
             "rv water pressure regulator",
             "what psi for rv water",
@@ -1665,7 +1665,7 @@
             "trailer",
             "motorhome"
           ],
-          "guide": null,
+          "guide": "rv-water-pump-wont-prime",
           "kw": [
             "rv accumulator tank",
             "water pump cycling fix"
