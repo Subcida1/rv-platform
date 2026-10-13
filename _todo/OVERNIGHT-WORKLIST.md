@@ -1418,6 +1418,29 @@ for the present. A note that misstates history is worth fixing when those pages 
 **What W20 actually needs, then:** a fresh independent pass on the 15 pages' current content, not a
 manifest update. That is a real work item rather than bookkeeping.
 
+### W22. "the-grid" now resolves to TWO online devices on different versions (2026-10-13, Cloud)
+
+`letta computers list` returns **two** connections both named **the-grid**, both online, on
+**different versions**:
+
+| deviceId | version | connId |
+|---|---|---|
+| `desktop:03191982-2857-4553-b8a2-76d15e5ce17d:4a9d661f-5b15-4c5e-bb1e-64c2c5ae93c9` | 0.34.10 | `conn-fbd6514b-85be-4a69-b28e-80c946e5ebc7` |
+| `30f8ae72-3b04-4c9e-86f9-e09a1960dca9` | 0.34.13 | `conn-3c62db9a-998a-4080-8b83-e09e6792d646` |
+
+**Why this matters, and it is not cosmetic.** The Agent tool's own documentation says a dispatch by
+name **fails fast when the name matches multiple online devices**. My W20 dispatches succeeded earlier
+tonight because only one was online at the time; with both up, `computer: "the-grid"` may start
+failing outright, and if it does resolve it could land on either installation.
+
+**It also explains a version confusion worth not repeating.** Earlier tonight the-grid reported
+0.34.8, then 0.34.13 after an update, and I read the two entries as one machine changing version. They
+are two separate device IDs. **Read the deviceId, not just the name, before concluding anything about
+a machine's version.**
+
+**What to do:** either rename one connection, or pin dispatches to a specific deviceId instead of the
+name. Until then, check `letta computers list` for how many entries match the name before dispatching.
+
 ### W20. The tool pages' review coverage is unrecorded (found 2026-10-12, Cloud)
 
 `scripts/verify-content.py --status` reports **48 verified / 85 unverified**, and **15 of the
