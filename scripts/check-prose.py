@@ -112,6 +112,37 @@ NOTED = (
     ("authenticity-adjective",
      r"\bwith real \w+|\breal (?:voltage|maker|industry)\s+(?:tables|charts|numbers|figures|data)\b",
      "calling our figures the authentic ones implies the others are not, which is selling rather than telling"),
+    # ADDED 2026-10-13 from the start-here sourcing pass. Ty's standing rule is "name the source or
+    # cut the sentence; never narrate the search that failed", and the same shape keeps coming back
+    # in new prose: a fact handed to a party the page cannot point to. It cost a hand-sweep on
+    # 2026-09-23 (nine instances across five guides) and another on start-here tonight.
+    #
+    # THE PATTERN REQUIRES A CLAIMING VERB AFTER THE NOUN, and that is the whole precision of it. The
+    # first draft matched any "some/other/one maker" and returned 99 hits over 75 pages, most of them
+    # correct prose: "one source or the other" (a power source, not an authority), "most people
+    # assume", "other brands work fine", "in most states". Requiring the noun to be followed by a verb
+    # of assertion took it to five, and all five were real.
+    #
+    # "publishes" and "puts" are deliberately NOT in the verb list, and that is measured, not taste:
+    # they are the two verbs the page uses to describe its OWN behaviour ("where a maker publishes one
+    # manual per model year, the row links the archive") and to name a maker in the next clause ("a
+    # figure one maker publishes: Keystone rates the roofs ..."). Both were false positives.
+    #
+    # NOTED, not STRICT, until the five live hits are fixed. Once the corpus is clean it should be
+    # promoted, because the construction is banned outright and a report nobody acts on is not a gate.
+    ("unnamed-authority",
+     r"\b(?:testing|a study|a survey|a review|research|studies|an analysis|one review|a test|tests)"
+     r"\s+(?:has |have )?(?:found|shown|shows?|suggested|suggests?|say|says)\b"
+     r"|\bthe usual (?:threshold|figure|number|rule|practice)\b"
+     r"|\b(?:a|an|one)\s+(?:maker|manufacturer|supplier|brand|company|technician|expert|dealer|shop"
+     r"|industry body|trade body|trade association|cost index)"
+     r"\s+(?:says?|said|recommends?|requires?|forbids?|endorses?|gives?|describes?|warns?|advises?"
+     r"|claims?|found|shows?|suggests?|lists?)\b"
+     r"|\b(?:some|other|several|many|a handful of|a few)\s+(?:makers|manufacturers|suppliers|brands"
+     r"|companies|technicians|experts|dealers|shops)"
+     r"\s+(?:says?|said|recommends?|requires?|forbids?|endorses?|gives?|describes?|warns?|advises?"
+     r"|claims?|found|shows?|suggests?|lists?)\b",
+     "a fact handed to a party the page cannot point to; name the source or cut the sentence"),
 )
 
 
@@ -220,6 +251,22 @@ def self_test():
         "Suburban wants the blower turning at about 75 percent of normal rpm before ignition.",
         "A limit switch that has tripped and stayed open breaks the circuit that starts the "
         "blower.",
+        # must not fire on the unnamed-authority rule added 2026-10-13. All five are verbatim from
+        # the site and each is the reason one branch of that pattern is shaped the way it is:
+        # "one source" is a power source; "a maker puts/publishes" describes the page's own
+        # behaviour or names the maker in the next clause; "other brands work fine" is not an
+        # authority claim at all.
+        "When a step is beyond what you are confident doing, or when a maker puts the work with a "
+        "qualified person, stop and have it done professionally.",
+        "Where a maker publishes one manual per model year on their own archive, the row links the "
+        "archive and states the years it covers.",
+        "So the depth is converted to a weight using a figure one maker publishes: Keystone rates "
+        "the roofs on its towables at 30 pounds per square foot.",
+        "One source or the other, never both: they are two separate supplies feeding one panel.",
+        "Other brands work fine; the important part is the label, RV and marine antifreeze, never "
+        "automotive.",
+        "Propane system repairs and safety inspections require a licensed LP gas technician in most "
+        "states.",
     ]
     bad = [
         ("source-meta", "A rough estimate by the Weather Service's own description."),
@@ -238,14 +285,31 @@ def self_test():
         ("method-justification",
          "The sequence below is not arbitrary. It runs from the cheapest and most likely to the "
          "most expensive and least likely."),
+        # the four live hits that opened the unnamed-authority rule, 2026-10-13. Three are verbatim
+        # from the site; the fourth is the sentence the start-here source pass cut.
+        ("unnamed-authority",
+         "Several makers list low voltage as a no-prime cause, and one gives a number."),
+        ("unnamed-authority",
+         "To avoid warranty problems some manufacturers recommend only 40 to 50 psi, and a safe "
+         "cap is 60 to 65 psi."),
+        ("unnamed-authority",
+         "One supplier recommends a light silicone spray rather than oil on the posts, because oil "
+         "attracts dirt."),
+        ("unnamed-authority",
+         "Visible mold over about 10 square feet is the usual threshold between a do-it-yourself "
+         "clean and professional remediation."),
     ]
     failures = []
     for name, line in bad:
-        rx = dict((n, r) for n, r, _ in STRICT)[name]
+        rx = dict((n, r) for n, r, _ in STRICT + NOTED)[name]
         if not re.search(rx, line, re.I):
             failures.append("MUST CATCH but did not: [%s] %s" % (name, line))
     for line in good:
-        for name, rx, _ in STRICT:
+        # NOTED is included on purpose: a report-only rule that fires on correct prose is still an
+        # instrument that teaches its reader to ignore the output, so it gets a must-not-catch case
+        # exactly like a gate does. Until 2026-10-13 only STRICT was covered, so the report-only
+        # families had never been negative-tested at all.
+        for name, rx, _ in STRICT + NOTED:
             if re.search(rx, line, re.I):
                 failures.append("MUST NOT CATCH but did: [%s] %s" % (name, line))
     if failures:

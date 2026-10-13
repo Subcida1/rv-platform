@@ -80,3 +80,55 @@ mold). Those need a sourcing pass, not a wording one, and they are the reason to
 page rather than call it done.
 
 `manuals/brands` is still not dispatched.
+
+## brands — the sourcing pass, done deterministically (2026-10-13)
+
+**The page did not need a review job, and it did not get one.** The plan said the useful thing to
+check was "whether the per-brand claims still match the maker's own site", which is a sourcing pass.
+That is mechanical, so it was measured rather than reviewed: all 44 `url` values in the `brands`
+block of `_data/manuals.json` were fetched and compared against the maker's own domain.
+
+**Result: no defects.** 37 resolve 200 on the maker's own host. 3 are bot-walled to automation
+(Coachmen 403, Alliance RV 429, Taxa Outdoors 423) — that is a fact about the fetcher, not the page.
+The remaining 4 carry **no url by design** (Nexus RV, Midwest Automotive Designs, Escape Trailer,
+Bigfoot RV); each is in the `structure: "none"` group, each has a `note` saying why no manual is
+published, and `brand_row()` renders the honest `<span class="man-note">no manual published online</span>`
+for them rather than a dead link. The JSON-LD already filters the url-less rows before enumerating,
+so positions run 1..40 with no gaps.
+
+**What is still owed on this page, if anything:** the per-brand `years`, `gate` and `structure`
+assertions have not been re-checked against each maker's archive. That is 44 sites, and it is a real
+sourcing pass rather than a link check — but nothing suggests it is wrong, and it should be picked up
+as a deliberate pass rather than as a leftover.
+
+## start-here — the sourcing pass, applied 2026-10-13
+
+The unapplied cluster from the 17-slice review ("five more sentences name a source the page cannot
+point to") was worked through against the sources, not reworded. Committed `87274619`.
+
+- **Cut, because the source cannot be named:** "Other makers describe the same requirement…" (twice,
+  different wording in the FAQ and the callout), and "Testing has found that MIMO antennas are the
+  optimal signal-enhancing choice for data more than 80 to 90 percent of the time."
+- **Named, because the page already cites the source and the prose did not say so:** the 26,000 lb
+  licence thresholds and the 3,000 lb trailer-brake threshold → the RV Industry Association; the
+  10 sq ft mold threshold → the EPA.
+- **A wrong citation, fixed:** the 10 sq ft figure was cited to the EPA mold course *chapter 2*,
+  which is a navigation index and does not carry it. The figure is in EPA's *A Brief Guide to Mold,
+  Moisture and Your Home*; the source entry now points there. Fetched and read before repointing.
+- **An ordering defect, not a wording one:** the levelling list deployed stabilizers at step 2 *and*
+  said "Lower the stabilizers last" at step 4. The step-2 tail is removed.
+- Plus: "Every RV has three tanks" → "Nearly every"; "Jacks lift. stabilizers…" capitalised; "10 F"
+  → "10°F"; "G.A.W.R." spelled out at first use; "the two numbers" → "the two ratings".
+
+**STILL OWED on this page, and now machine-flagged** — four sentences the new `unnamed-authority`
+rule in `scripts/check-prose.py` reports, all of which need a source or a cut:
+
+| where | sentence |
+|---|---|
+| Part 2 | "some manufacturers recommend only 40 to 50 psi" |
+| Part 5 | "many manufacturers recommend inspecting your RV's exterior seams and seals" |
+| Part 2 | "some makers say this is normal" (canvas seam seep) |
+| Part 2 | "One supplier recommends a light silicone spray rather than oil on the posts" |
+
+Plus one on `guides/rv-water-pump-wont-prime`: "Several makers list low voltage as a no-prime cause,
+and one gives a number."

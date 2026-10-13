@@ -114,6 +114,7 @@ step "parts hub"                               python3 scripts/test-parts.py
 # subject, and each carries a must-not-catch case in --self-test -- a first pass with broad
 # patterns flagged 51 sentences of which nearly all were good prose. See the file header for
 # what was deliberately NOT included and the evidence for leaving it out.
+step "prose rules still catch, and still do not over-catch"  python3 scripts/check-prose.py --self-test
 step "prose that argues with the reader"        python3 scripts/check-prose.py
 # GATING NOW, because it earned it. RESEARCH 2026-10-05 found no maintained tool does keyword
 # coverage, so this is our own, and the rule here is that a new check is proven before it is
