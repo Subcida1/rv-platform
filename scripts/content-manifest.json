@@ -383,20 +383,20 @@
     "sources": []
   },
   "guides/battery-winter-storage.html": {
-    "hash": "8ba12c948e642e99",
+    "hash": "3155cd29dea62fa0",
     "status": "verified",
-    "verified_by": "Mechanical markup fix only, 2026-10-10: removed one empty <p></p> element left behind by the content pass b56d8df, which deleted a lead-in sentence and kept the empty element. No prose was added, changed or removed, so the existing independent pass on the text stands unchanged.",
-    "verified_at": "2026-10-10",
+    "verified_by": "Cloud 2026-10-13: replaced an off-topic weight-calculator aside with a battery runtime calculator link; no factual prose changed",
+    "verified_at": "2026-10-13",
     "sources": [],
     "spec": "_specs/battery-winter-storage.md",
     "spec_waived": false,
     "claims": "178ec4da901263e8"
   },
   "guides/freeze-damage-triage.html": {
-    "hash": "d6eaf138b02f0ba7",
+    "hash": "d27c64fc472c131f",
     "status": "verified",
-    "verified_by": "2026-10-12 consistency pass from Neo's second-rotation finding: the page used a unit in six places (32 degrees Fahrenheit, 0 degrees F, 41 degrees Fahrenheit, 32 degrees F) and left one bare ('switched on automatically below 32 degrees'). The bare one now reads 32 degrees Fahrenheit, matching the page's own spelled-out form. No figure changed; no claim altered.",
-    "verified_at": "2026-10-12",
+    "verified_by": "Cloud 2026-10-13: fixed a sentence that began lowercase after a period and carried a double space; wording otherwise unchanged",
+    "verified_at": "2026-10-13",
     "sources": [],
     "spec": "_specs/freeze-damage-triage.md",
     "spec_waived": false,
@@ -413,10 +413,10 @@
     "claims": "a0146313ebc9d955"
   },
   "guides/roof-snow-load.html": {
-    "hash": "15da9bac1694d32f",
+    "hash": "25ede0daea90d1b7",
     "status": "verified",
-    "verified_by": "INDEPENDENT fresh-context reviewer pass 2026-10-11 (strictly stronger model, task_16) - the pass the voice-only note owed. Reviewer fetched all sources; the Keystone 30 psf / two-feet claim and the 250-lb ladder rating were flagged as unsourced, but I re-fetched the cited 2026 Keystone manual and BOTH are verbatim (snow loads beyond 2 ft / 30 psf damage roof, axles, suspension; the ladder capacity is 250 lb) - false positives, rejected. NRCS 4-20% / 40% figures verified verbatim against the now-reachable source. Two real findings applied: (1) two flag-injury callouts added - at the walkable-roof inspection instruction and at the clear-the-roof ladder section (winter roof work is a fall hazard; the page carried only a plain callout); (2) 'every load in the rest of this guide' reworded to 'every load below' (page-relative voice).",
-    "verified_at": "2026-10-11",
+    "verified_by": "Cloud 2026-10-13: added a line linking the snow load calculator at the end of the math section, and fixed two callouts whose label ran into the body with no separator and no bold first sentence",
+    "verified_at": "2026-10-13",
     "sources": [],
     "spec": "_specs/roof-snow-load.md",
     "spec_waived": false,
@@ -833,10 +833,10 @@
     "claims": "34c240b69b94c574"
   },
   "guides/tires-winter.html": {
-    "hash": "bd2a4fda593c7e03",
+    "hash": "075489c609c1b82a",
     "status": "verified",
-    "verified_by": "pre-existing finding fixes from safety-pass independent review: air contracted (was condensed), cut unsourced antioxidant-leach mechanism (reviewer's psi/month claim re-checked against cited Goodyear PSB 2015-25 - verbatim, rejected)",
-    "verified_at": "2026-10-11",
+    "verified_by": "Cloud 2026-10-13: added a line linking the tire date code decoder at the end of the age section; no existing prose changed",
+    "verified_at": "2026-10-13",
     "sources": [],
     "spec": "_specs/tires-winter.md",
     "spec_waived": false,
@@ -853,10 +853,10 @@
     "claims": "7475218f762ec723"
   },
   "guides/winterize-plumbing.html": {
-    "hash": "7ef70d5ea87e31e1",
+    "hash": "f895f9c4f8fdb366",
     "status": "verified",
-    "verified_by": "pre-existing findings from safety-pass independent review, applied: standard-dose sit time added (at least four hours at 50 ppm, traced via NRVTA to the 2026 Winnebago Travato and 2023 Jayco Terrain manuals, source now listed); wet-bay heater advice rewritten - no unattended heater in an enclosed bay, fire hazard stated; bleach-ratio attribution now has a listed source",
-    "verified_at": "2026-10-11",
+    "verified_by": "Cloud 2026-10-13: swapped the closing CTA from the weight calculator (off-topic on a winterizing guide) to the water filter tool, and left the prose untouched",
+    "verified_at": "2026-10-13",
     "sources": [],
     "spec": "_specs/winterize-plumbing.md",
     "spec_waived": false,
