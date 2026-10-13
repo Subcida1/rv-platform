@@ -143,6 +143,37 @@ disagrees with a direct observation, suspect the measurement.
 - **#8 "no intro copy above the filters" — REFUTED, third time.** The lede is present and renders
   above the filter bar. "No per-part anchors" — CONFIRMED, recorded.
 
+## Neo's manuals deep-dive, fifth rotation — verified 2026-10-13 (all fixes confirmed, 1 refuted)
+
+**Six of Neo's items were verification of fixes already landed, and all six hold:** the duplicate
+BreadcrumbList is gone from all 8 system pages; the exterior lede reads "Awnings, slide-outs and roof
+racks" against its 7 rows; its meta names Hollywood Racks at 143 chars; the kitchen lede no longer
+promises microwaves; the brands ItemList is gone; and the cross-link module is present on all 8.
+
+**REFUTED: "the cross-link module is identical on every system page, make it topic-matched."** It
+already is. Measured per page, the in-body module carries a DIFFERENT guide set on each:
+
+| page | guides linked |
+|---|---|
+| power-and-electrical | 13 |
+| heating-and-cooling | 9 |
+| water-and-plumbing | 8 |
+| chassis-and-drivetrain | 7 |
+| exterior-and-body | 7 |
+| kitchen-and-appliances | 6 |
+| sanitation-and-tanks | 7 |
+| towing-and-running-gear | 9 |
+
+**What Neo actually counted was the MOBILE MENU.** His "4 tools / 1 parts / 5 guides / 3 directory"
+tally matches the `mm-group` / `mm-sub` links that `assets/js/site.js` builds into every page's nav --
+identical everywhere because navigation is supposed to be. The in-body module is
+`<div class="man-about-h">If something's already broken</div>`, generated per page from that page's own
+rows.
+
+**The lesson, and it is the same one as the callout: check whether the thing being counted is the
+thing being described.** A nav block and a content block can carry the same link text and mean
+different things.
+
 ## Neo's directory deep-dive, fourth rotation — verified 2026-10-13 (2 refuted, 2 carryover)
 
 - **"Ohio has a shared phone across Craig Smith RV and Craig Smith Body Shop — dedupe?" — CONFIRMED
