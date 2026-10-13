@@ -143,6 +143,36 @@ disagrees with a direct observation, suspect the measurement.
 - **#8 "no intro copy above the filters" — REFUTED, third time.** The lede is present and renders
   above the filter bar. "No per-part anchors" — CONFIRMED, recorded.
 
+## Neo's directory deep-dive, third rotation — verified 2026-10-13 (6 findings: 1 fixed, 5 refuted)
+
+- **#1 "the hub renders Pacific, Southwest and Alaska and Hawaii with ZERO state cards, 9 states
+  orphaned" — REFUTED, fifth time.** Measured in a browser on the live hub, with visibility tested on
+  computed `display`, `visibility`, `opacity` and a non-zero bounding box: **Pacific 3, West 8,
+  Southwest 4, Midwest 9, Southeast 13, Northeast 11, Alaska and Hawaii 2 = 50 cards, all 50
+  visible.** The four regions Neo sees cards in are not the only four.
+- **#2 "area-code/city mismatches, and (840) is not a valid NANP area code" — REFUTED, fourth round
+  on this class.** Every listing carries a phone matching its own recorded `phone_quote`, a verbatim
+  quote from the business's own site. The (840) case is the sharpest: Foothill RV's own site prints
+  **"840-228-9562" twice**, so the directory is faithful and the typo is the business's. 840 is also
+  structurally valid as a NANP code (the first digit is 8, inside 2-9); it is simply unassigned.
+- **#3 "a Florida business renders as its domain, '4rvsolutions.com'" — REFUTED.** Fetched the site:
+  its `<title>` is `4rvsolutions.com` and its own copy reads "Welcome to 4rvsolutions.com, your
+  premier mobile RV repair service based in Niceville, Florida". **The business publishes no other
+  name**, so the directory is recording what it found. A listing that looks odd is not the same as a
+  listing that is wrong.
+- **#4 "the Oregon title uses a different template from the other 49" — REAL, FIXED.** Oregon read
+  "RV Repair in Oregon: Mobile Technicians & Service Centers" while all 49 others read "Mobile &
+  Service Centers". **All 50 now match.** Worth knowing how it drifted: **no generator owns the state
+  page title** — `build-listings.py` has no `<title>` emission and `add-state.py` does not write one,
+  which is why `check-generated.sh` passes with the title changed by hand. It is per-page text set at
+  scaffold time, so a hand edit persists.
+- **#5 "two Oregon entries render with no website link, and two render twice" — CONFIRMED as
+  intentional, third time.** `Bandon Mobile RV Repair` and `R&B RV Service and Supply` carry no `u`
+  field, which is real data rather than a render bug. The two that render twice carry a LIST of
+  regions and render once per region they cover, which is the design.
+- **#6 "the region taxonomy mismatches the 'west to east' intro" — INTENTIONAL.** VisitTheUSA's
+  6-region scheme, adopted verbatim on Ty's instruction.
+
 ## Neo's parts deep-dive, third rotation — verified 2026-10-13 (4 findings: 1 fixed, 2 refuted, 1 recorded)
 
 - **#1 "guide-link coverage: 62 anchors, 32 distinct targets, 16 guides never linked" — CONFIRMED in
