@@ -152,6 +152,11 @@ def status():
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--guides", help="comma-separated slugs")
+    ap.add_argument("--dir", default="guides",
+                    help="the directory the slugs live in. Defaults to guides, because that is what "
+                         "this was written for. Pass tools for a tool page: the staging name is the "
+                         "page path with / replaced by __, so tools/rv-anode-rod.html stages as "
+                         "tools__rv-anode-rod.html, and the job body has to name that file.")
     ap.add_argument("--round", default="1")
     ap.add_argument("--status", action="store_true")
     ap.add_argument("--lane", help="send to this lane instead of the rotation. Repeatable as a "
@@ -169,7 +174,7 @@ def main():
         return 2
 
     slugs = [s.strip() for s in a.guides.split(",") if s.strip()]
-    pages = ["guides/%s.html" % s for s in slugs]
+    pages = ["%s/%s.html" % (a.dir, s) for s in slugs]
     missing = [p for p in pages if not (ROOT / p).exists()]
     if missing:
         sys.exit("no such page: " + ", ".join(missing))
@@ -205,7 +210,7 @@ def main():
         lane = pick[i % len(pick)]
         jobid = "%s-RV-%s-REVIEW%s" % (stamp, slug, a.round)
         text = "LANE: %s\n\nJOB ID: %s\n\n" % (lane, jobid) + BODY.format(
-            staged="guides__%s.html" % slug, jobid=jobid)
+            staged="%s__%s.html" % (a.dir, slug), jobid=jobid)
         (BRIDGE / "queue" / "jobs" / (jobid + ".md")).write_text(text, encoding="utf-8")
         # 3. the copy that makes validation possible after the job is consumed
         (KEEP / (jobid + ".md")).write_text(text, encoding="utf-8")
