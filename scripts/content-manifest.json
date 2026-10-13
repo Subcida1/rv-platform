@@ -453,10 +453,10 @@
     "claims": "74f9b7b4567ac58a"
   },
   "guides/rv-battery-not-charging.html": {
-    "hash": "7208678a21fa466f",
+    "hash": "45e0edcb7db0b32c",
     "status": "verified",
-    "verified_by": "US spelling only (British -> American), 2026-10-12: 'equalising' -> 'equalizing' in our prose. No fact, number, interval or claim changed.",
-    "verified_at": "2026-10-12",
+    "verified_by": "2026-10-13 Neo about-batch: the meta description was 160 chars, the site's ceiling, and only two pages sat there. Trimmed to 149 so it sits inside the 140-160 band with margin. Description only; no claim on the page changed.",
+    "verified_at": "2026-10-13",
     "sources": [],
     "spec": "_specs/rv-battery-not-charging.md",
     "spec_waived": false,
