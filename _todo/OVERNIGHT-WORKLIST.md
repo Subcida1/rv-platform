@@ -2054,3 +2054,30 @@ Also landed and unread: `REPLY-20261013-0055-RV-about-REVIEW1.md` and
 subagent whose pass is recorded in the manifest). **Verify every finding against the page or the
 tool before editing — this pass refuted three, and one of those refutations needed the maker's PDF
 fetched to settle it.**
+
+### W29. The trust pages are orphans, and the fix is a ruling rather than a commit (2026-10-13, Cloud)
+
+**Verified: `/about` and `/contact` carry ZERO in-body (`<main>`) links from any of the six hubs** -- 0
+in index, guides, tools, directory, manuals and parts. Nav and footer carry both, so a reader can always
+reach them; what they never get is an editorial link, which is the kind a search engine weighs
+differently from site chrome.
+
+**A shared CTA would touch 122 pages:** 47 guides + 14 tools + 50 state pages + 11 manuals. That is why
+it is here and not in a commit -- it is new copy on a sixth of the site, and the shape of the sentence
+is an editorial call, not a mechanical one.
+
+**One correction to the premise it arrived with.** Neo says the guides "invite corrections". They do
+not: the six guides matching a search for correction language use it technically -- a compressor amp
+*correction chart*, a *correction* to a meter reading. So this is new copy, not a link added to an
+existing invitation.
+
+**A CONCRETE MINIMAL VERSION, if Brandt wants one:** one line at the foot of each guide and tool, after
+the Sources block, carrying both links in a single sentence -- something like "Something here wrong, or
+something missing? [Tell us](/contact). And [how these guides are sourced and checked](/about)." One
+line, two links, the same sentence on every page, placed where a reader who has just finished reading
+is most likely to have an objection. The state and manual pages are data tables rather than prose and
+could be left out of a first pass, which would cut the change from 122 pages to 61.
+
+**What it is worth, honestly:** the SEO argument is real but modest -- two pages gaining internal links
+is not a ranking event. The reader argument is stronger: a guide that ends with sources and no way to
+say "this figure is wrong" asks the reader to go looking for the door.
