@@ -143,6 +143,32 @@ disagrees with a direct observation, suspect the measurement.
 - **#8 "no intro copy above the filters" — REFUTED, third time.** The lede is present and renders
   above the filter bar. "No per-part anchors" — CONFIRMED, recorded.
 
+## Neo's hubs deep-dive, third rotation — verified 2026-10-13 (4 findings: 1 fixed, 3 refuted)
+
+**Neo pulled raw HTML this round instead of reading a text render, and it changed his results.** He
+withdrew the "zero cards" and "9 orphaned states" flags himself. That is the right move and it is the
+first round where the extractor was not the whole story.
+
+- **#1 "verify in a browser whether the cards are visible or CSS-hidden" — ANSWERED, nothing is
+  hidden.** Measured on the live site: **50 state cards, 50 visible** across the 7 regions (Pacific 3,
+  West 8, Southwest 4, Midwest 9, Southeast 13, Northeast 11, Alaska and Hawaii 2), and **46 guide
+  cards, 46 visible** across the 6 sections (10 each). Visibility tested on computed `display`,
+  `visibility`, `opacity` and a non-zero bounding box, not on presence in the DOM.
+- **#2 "rv-trip-planner is the only sitemap guide with no hub card" — REAL, FIXED.** Counted: 47
+  guide files, 46 hub cards, and `rv-trip-planner` appeared only inside the hub's JSON-LD ItemList.
+  Added to **Tires, towing and weight**, which already carries the operational guides (Driving a
+  Motorhome, Pre-Trip Walkaround) and is the section it belongs in. **47 files, 47 cards, 0 missing.**
+- **#3 "the homepage says Forty-two but 47 guides are live, the copy looks hardcoded" — REFUTED.**
+  `site_constants.claim_values()` derives **`guides-fix-word = Forty-two`** from `_data/guides.json`
+  group `fix`, which holds **42**, and `guides-total = 47`. The sentence sits under "RV
+  troubleshooting guides that start with your symptom" and describes that group; the 5 winter guides
+  are counted separately and correctly. **The copy is wired, and the number is right for what the
+  sentence says.**
+- **#4 "the string is NOT in the HTML source, it is a client-side component crash" — REFUTED, eighth
+  round on this artifact.** `curl https://originrv.com/ | grep -c "Something is broken"` returns
+  **1**, and the live source carries it as `<div class="sec-eyebrow">Something is broken</div>` — one
+  of five section eyebrows on the page. There is no error boundary and nothing is crashing.
+
 ## Neo's tools deep-dive, third rotation — verified 2026-10-13 (10 pages, 4 findings: 2 fixed, 1 refuted, 1 recorded)
 
 - **#1 "the snow-load hub card carries a 'Building now' status chip" — REFUTED.** "Building now" is

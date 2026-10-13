@@ -403,10 +403,10 @@
     "claims": "ca780a6dbc99c4d8"
   },
   "guides/index.html": {
-    "hash": "295ace33a6e92c64",
+    "hash": "b18e49ecd17ca358",
     "status": "verified",
-    "verified_by": "Trust-claim ruling applied: the guide-meta line read 'Find the fault in order, with real voltage tables'. The word 'real' was the defect, since calling our own tables the real ones says other sources' are not. Now 'voltage tables'. No fact, figure, source or claim changed. Spec waived: this is the guides hub, not a guide, so it has no _specs entry.",
-    "verified_at": "2026-10-12",
+    "verified_by": "2026-10-13 Neo third-rotation hubs audit: rv-trip-planner was the only one of 47 sitemap guides with no card on this hub -- it appeared only inside the hub's JSON-LD ItemList. Added to the Tires, towing and weight section, which already carries the operational guides (Driving a Motorhome, Pre-Trip Walkaround) and is where it belongs. 47 guide files, 47 hub cards, 0 missing. No existing card changed and no claim altered.",
+    "verified_at": "2026-10-13",
     "sources": [],
     "spec": null,
     "spec_waived": true,
