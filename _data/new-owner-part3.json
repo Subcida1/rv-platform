@@ -120,7 +120,7 @@
       },
       {
        "kind": "p",
-       "html": "<b>Load range and load index</b> are the two numbers that describe how much a tire can carry."
+       "html": "<b>Load range and load index</b> are the two ratings that describe how much a tire can carry."
       },
       {
        "kind": "list",
@@ -217,7 +217,7 @@
       },
       {
        "kind": "p",
-       "html": "Weighing each corner, not just each axle, matters because the weight is rarely even side to side. Weighing one axle at a time can hide an overloaded wheel position even when the G.A.W.R. has not been exceeded. Side-to-side differences on a front axle can reach 1,200 pounds."
+       "html": "Weighing each corner, not just each axle, matters because the weight is rarely even side to side. Weighing one axle at a time can hide an overloaded wheel position even when the gross axle weight rating (G.A.W.R.) has not been exceeded. Side-to-side differences on a front axle can reach 1,200 pounds."
       },
       {
        "kind": "p",
@@ -233,7 +233,7 @@
         "Check tire pressure when the tires are cold and have not been driven more than one mile.",
         "A hot tire can read as much as 10 to 15 psi higher than the same tire cold.",
         "Do not bleed air from hot tires. The rise is normal and the tire is not overinflated.",
-        "A 10 F rise in outside temperature raises pressure by about 2%, and a 10 F fall lowers it by about the same.",
+        "A 10°F rise in outside temperature raises pressure by about 2%, and a 10°F fall lowers it by about the same.",
         "Tire pressure increases about 0.48 psi for every 1,000 feet of altitude.",
         "Use a good truck tire gauge with a dual angled head."
        ]
@@ -450,7 +450,7 @@
       },
       {
        "kind": "p",
-       "html": "<b>Braking.</b> More weight takes longer to stop, and a motorhome carries a lot of it. One thing that surprises new owners: the RV's service brakes are sized for the RV, not for whatever it is towing. The brakes are rated to operate at the gross vehicle weight rating (GVWR), not for the combined weight of RV and towed vehicle, and that figure is not the amount of weight the brakes alone can stop. That is why a towed vehicle needs its own supplemental braking system, which is required above about 3,000 lb in most states."
+       "html": "<b>Braking.</b> More weight takes longer to stop, and a motorhome carries a lot of it. One thing that surprises new owners: the RV's service brakes are sized for the RV, not for whatever it is towing. The brakes are rated to operate at the gross vehicle weight rating (GVWR), not for the combined weight of RV and towed vehicle, and that figure is not the amount of weight the brakes alone can stop. That is why a towed vehicle needs its own supplemental braking system, The RV Industry Association puts the threshold at about 3,000 lb in most states."
       },
       {
        "kind": "p",

@@ -437,7 +437,7 @@
       },
       {
        "kind": "callout",
-       "html": "<b>The tilt limit is published, and it is a number.</b> Norcold's owner's manuals give it directly: the refrigerator is made to operate within <b>\"3° off level side-to-side and 6° off level front-to-back\"</b>, and operating it beyond those limits <b>\"can cause damage to the cooling system and create a risk of personal injury or property damage.\"</b> Other makers describe the same requirement without the numbers, as level enough to live in with no noticeable slope of the floor or walls. The limit applies while the RV is parked, not while it is being driven."
+       "html": "<b>The tilt limit is published, and it is a number.</b> Norcold's owner's manuals give it directly: the refrigerator is made to operate within <b>\"3° off level side-to-side and 6° off level front-to-back\"</b>, and operating it beyond those limits <b>\"can cause damage to the cooling system and create a risk of personal injury or property damage.\"</b> The limit applies while the RV is parked, not while it is being driven."
       },
       {
        "kind": "p",
@@ -562,13 +562,13 @@
      "blocks": [
       {
        "kind": "p",
-       "html": "<b>Jacks lift. stabilizers stop the rocking.</b> A leveling jack, or the tongue jack on a trailer, carries the weight of the RV and changes its height. A stabilizer, which a lot of people call a stabilizer jack, does neither: it comes down to touch the ground and stops the RV moving when you walk around inside it. That is the whole difference, and it is worth holding on to, because both get called jacks and the mistake is expensive. <b>Level with a jack. Steady with a stabilizer. Never level with a stabilizer</b>, because you would be hanging the RV's weight on legs that were never built to take it."
+       "html": "<b>Jacks lift. Stabilizers stop the rocking.</b> A leveling jack, or the tongue jack on a trailer, carries the weight of the RV and changes its height. A stabilizer, which a lot of people call a stabilizer jack, does neither: it comes down to touch the ground and stops the RV moving when you walk around inside it. That is the whole difference, and it is worth holding on to, because both get called jacks and the mistake is expensive. <b>Level with a jack. Steady with a stabilizer. Never level with a stabilizer</b>, because you would be hanging the RV's weight on legs that were never built to take it."
       },
       {
        "kind": "list",
        "items": [
         "Position the trailer, then level side to side with blocks or ramps under the wheels.",
-        "Level front to back with the tongue jack or the landing gear: place the trailer in the designated position, use leveling blocks or ramps to reach the desired level before stabilizing, then deploy the stabilizers or scissor jacks once the RV is leveled.",
+        "Level front to back with the tongue jack or the landing gear: place the trailer in the designated position and use leveling blocks or ramps to reach the level before stabilizing.",
         "Chock the wheels.",
         "Lower the stabilizers last, to contact only. If the RV begins lifting when the jack is applied, too much pressure is being used."
        ]
@@ -594,7 +594,7 @@
       },
       {
        "kind": "p",
-       "html": "A cellular booster does one thing: it amplifies a signal that already exists. It cannot create one. Boosters are often promoted online as a game changer that every RV and boat should have onboard, but in many situations they might not make any difference to your internet performance, and they can sometimes make data slower. The technical reason is that a booster uses a single exterior antenna: it cannot take advantage of MIMO, because it can only work with a single signal at a time. It is the equivalent of plugging one of your ears: you can still hear, but not as well. Testing has found that MIMO antennas are the optimal signal-enhancing choice for data more than 80 to 90 percent of the time."
+       "html": "A cellular booster does one thing: it amplifies a signal that already exists. It cannot create one. Boosters are often promoted online as a game changer that every RV and boat should have onboard, but in many situations they might not make any difference to your internet performance, and they can sometimes make data slower. The technical reason is that a booster uses a single exterior antenna: it cannot take advantage of MIMO, because it can only work with a single signal at a time. It is the equivalent of plugging one of your ears: you can still hear, but not as well."
       },
       {
        "kind": "list",

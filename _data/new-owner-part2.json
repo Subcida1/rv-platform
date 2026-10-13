@@ -12,7 +12,7 @@
      "blocks": [
       {
        "kind": "p",
-       "html": "Every RV has three tanks. One holds the clean water you use. Two hold the water you have used. The two waste tanks are kept separate on purpose, and confusing which is which causes most of the trouble that follows."
+       "html": "Nearly every RV has three tanks. One holds the clean water you use. Two hold the water you have used. The two waste tanks are kept separate on purpose, and confusing which is which causes most of the trouble that follows."
       },
       {
        "kind": "table",
@@ -186,7 +186,7 @@
       },
       {
        "kind": "p",
-       "html": "The item most often named as a clog cause is the disposable wipe sold as flushable. Any paper that does not break down does not belong in the tank. Bleach, chlorine, and drain openers are also excluded, because they damage seals and dump valves, and formaldehyde additives should be avoided."
+       "html": "A wipe sold as flushable does not break down, and it is one of the fastest ways to clog a tank. Any paper that does not break down does not belong in the tank. Bleach, chlorine, and drain openers are also excluded, because they damage seals and dump valves, and formaldehyde additives should be avoided."
       },
       {
        "kind": "callout",
@@ -638,7 +638,7 @@
       },
       {
        "kind": "p",
-       "html": "When moisture is bad enough to grow visible mold over a large area, that is a remediation job rather than a wipe-down. Visible mold over about 10 square feet is the usual threshold between a do-it-yourself clean and professional remediation."
+       "html": "When moisture is bad enough to grow visible mold over a large area, that is a remediation job rather than a wipe-down. The EPA puts the threshold at about 10 square feet: below that you can usually handle it yourself, and above it the job is remediation."
       }
      ]
     }
