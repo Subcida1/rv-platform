@@ -143,6 +143,34 @@ disagrees with a direct observation, suspect the measurement.
 - **#8 "no intro copy above the filters" — REFUTED, third time.** The lede is present and renders
   above the filter bar. "No per-part anchors" — CONFIRMED, recorded.
 
+## Neo's manuals deep-dive, third rotation — verified 2026-10-13 (7 pages, 4 findings: 3 fixed, 1 recorded)
+
+- **#1 "two BreadcrumbList blocks with conflicting trails on all 7 system pages" — REAL, FIXED, and
+  MUCH WIDER than reported.** Counted site-wide: **62 pages carried two**, not 7 — **50 directory
+  state pages and all 12 manuals pages**. Two generators each emitted one: `build-shell.mjs` writes
+  the page's crumbs block (and its BreadcrumbList matches the trail a reader actually sees), while
+  `build-manuals-pages.py` and `build-listings.py` each emitted a SECOND with a different trail
+  ("OriginRV > RV Manuals > ..." against the shell's "Home > Manuals > ..."). **The convention was
+  already set by the majority**: guides and tools carry exactly one, from the shell, and it matches
+  their visible crumbs. Removed the generator-emitted block from all five call sites in
+  `build-manuals-pages.py` and the one in `build-listings.py`. **Now 126 pages with exactly one, 0
+  with more than one**, and the 8 with none are the top-level pages that legitimately have no
+  breadcrumb.
+- **#2 "the exterior lede over-promises" — REAL, FIXED.** It read "Awnings, slide-outs, steps,
+  windows, doors and furniture" while the 7 rows cover awnings, slide-outs and racks only. Now
+  "Awnings, slide-outs and roof racks".
+- **#3 "the exterior meta description names 6 makers and omits Hollywood Racks" — REAL, FIXED.** The
+  7th row is Hollywood Racks. Added; `meta_desc()` lands the string in the 140-160 window with a tail.
+- **#4 "title/H1 keyword sets diverge on exterior and towing" — RECORDED.** The site's own convention
+  is that the title carries the query and the H1 names the section (the accepted-deviation notes in
+  `_data/targets.json` call it "the ordinary split rather than a drift"), so a divergence between the
+  two is expected rather than a defect. Not changed.
+
+**Neo's two source-level corrections are right and worth keeping:** the "template inconsistency" flag
+is refuted (the lede, the "N shown" line, the breadcrumb and the already-broken module are all in the
+HTML on all 7 pages), and bare-relative hrefs are not a defect because every page carries
+`<base href="/">`.
+
 ## Neo's hubs deep-dive, third rotation — verified 2026-10-13 (4 findings: 1 fixed, 3 refuted)
 
 **Neo pulled raw HTML this round instead of reading a text render, and it changed his results.** He

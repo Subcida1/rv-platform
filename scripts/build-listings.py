@@ -263,15 +263,12 @@ def schema_text(data, slug):
             "about": {"@type": "Thing", "name": about},
             "mainEntity": {"@type": "ItemList", "numberOfItems": len(elements),
                            "itemListElement": elements}}
-    crumb = {"@context": "https://schema.org", "@type": "BreadcrumbList",
-             "itemListElement": [
-                 {"@type": "ListItem", "position": 1, "name": "OriginRV", "item": SITE + "/"},
-                 {"@type": "ListItem", "position": 2, "name": "RV Repair Directory",
-                  "item": SITE + "/directory/"},
-                 {"@type": "ListItem", "position": 3, "name": state,
-                  "item": "%s/directory/%s" % (SITE, slug)}]}
+    # NO BREADCRUMBLIST HERE. build-shell.mjs emits the page's crumbs block, and that block
+    # carries its own BreadcrumbList matching the trail a reader sees. This generator emitted a
+    # SECOND one with a different trail, so all 50 state pages shipped two contradictory
+    # breadcrumbs. Guides and tools carry exactly one, from the shell; these pages now match.
     return "\n".join('<script type="application/ld+json">%s</script>' % jld(b)
-                     for b in (page, crumb))
+                     for b in (page,))
 
 
 def esc(s):

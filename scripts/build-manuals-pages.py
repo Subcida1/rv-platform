@@ -37,7 +37,7 @@ BLURB = {
                           "hydronic heating",
     "heating-and-cooling": "Furnaces, roof air conditioners, heat pumps and tankless heaters",
     "kitchen-and-appliances": "Refrigerators, ranges, cooktops, microwaves and laundry",
-    "exterior-and-body": "Awnings, slide-outs, steps, windows, doors and furniture",
+    "exterior-and-body": "Awnings, slide-outs and roof racks",
     "towing-and-running-gear": "Hitches, weight distribution, brake controllers, axles, "
                                "brakes, tires and leveling",
     "sanitation-and-tanks": "Toilets, waste valves, sewer fittings and holding tank gear",
@@ -110,7 +110,7 @@ TITLE = {
                                "and Lippert"),
     "exterior-and-body": ("RV Awning and Slide-Out Manuals",
                           "RV awning and slide-out manuals from the makers: Lippert, "
-                          "Zip Dee, Dometic, Aleko, Thule and Yakima"),
+                          "Zip Dee, Dometic, Aleko, Thule, Yakima and Hollywood Racks"),
     "towing-and-running-gear": ("RV Hitch, Axle and Tire Manuals",
                                 "RV hitch, axle and tire manuals from the makers: CURT, "
                                 "Reese, Blue Ox, Roadmaster, Dexter, Tekonsha and the tire "
@@ -464,9 +464,11 @@ def hub(rows, oem_count, model_count=0):
   </div>
 """ % (len(rows), n_brands, model_count, "\n".join(tiles), oem_count)
 
-    return (head(HUB_TITLE, desc, SITE + "/manuals/index.html",
-                 [collection, breadcrumbs([("OriginRV", SITE + "/"),
-                                           ("RV Manuals", SITE + "/manuals/index.html")])])
+    # NO BREADCRUMBLIST HERE. build-shell.mjs emits the page's crumbs block, and that block
+    # carries its own BreadcrumbList matching the trail a reader sees. This generator emitted a
+    # SECOND one with a different trail, so every manuals page shipped two contradictory
+    # breadcrumbs. Guides and tools carry exactly one, from the shell; these pages now match.
+    return (head(HUB_TITLE, desc, SITE + "/manuals/index.html", [collection])
             + body + foot("assets/js/manuals/hub.js"))
 
 
@@ -710,7 +712,7 @@ def start_here_page():
           for it in op["items"]),
        new_owner_sections() + "\n" + body)
 
-    return (head(START_TITLE, desc, SITE + "/manuals/start-here.html", [crumb])
+    return (head(START_TITLE, desc, SITE + "/manuals/start-here.html", [])
             + page + foot(""))
 
 def system_page(slug, title, desc, rows):
@@ -774,7 +776,7 @@ def system_page(slug, title, desc, rows):
 """ % (sentence(SHORT[slug]), esc(BLURB[slug]), len(rows), n_brands, len(rows),
        "\n".join(row_html(r) for r in rows), related)
 
-    return (head(title, desc, "%s/manuals/%s.html" % (SITE, slug), [collection, crumb])
+    return (head(title, desc, "%s/manuals/%s.html" % (SITE, slug), [collection])
             + body + foot("assets/js/manuals/filter.js"))
 
 
@@ -989,7 +991,7 @@ def brands_page(rows, models_by_brand=None):
   </div>
 """ % (len(rows), model_total, len(rows), model_total, "\n".join(blocks))
 
-    return (head(BRANDS_TITLE, desc, "%s/manuals/brands.html" % SITE, [collection, crumb])
+    return (head(BRANDS_TITLE, desc, "%s/manuals/brands.html" % SITE, [collection])
             + body + foot("assets/js/manuals/filter.js"))
 
 
@@ -1111,7 +1113,7 @@ def recalls_page(rows, bulletins, source_note):
   </div>
 """ % ("\n".join(blocks), count_note)
 
-    return (head(RECALL_TITLE, desc, SITE + "/manuals/recalls.html", [collection, crumb])
+    return (head(RECALL_TITLE, desc, SITE + "/manuals/recalls.html", [collection])
             + body + foot("assets/js/manuals/filter.js"))
 
 
