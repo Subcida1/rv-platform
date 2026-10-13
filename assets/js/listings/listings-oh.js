@@ -37,7 +37,7 @@ window.RV_LISTINGS_OH = [
    "mount vernon"
   ],  "region": null,  "spec": null,  "reg": "central-oh"
  },
- {  "n": "RV There Yet?",  "c": "Ohio",  "p": "907-416-0313",  "u": "https://rvthereyetmobilerv.wixsite.com/rvthereyet",  "t": "mobile",  "e": true,  "r": false,  "d": "RV There Yet? is a mobile RV service and educational archive providing mobile RV repair services in the greater Ohio area, founded in 2022. The owner-operator is a mobile technician with over 10 years in the industry, and technicians train through RVTI, Lippert, Suburban and Aqua-Hot. It advertises 24/7 availability with emergency callouts, scheduled appointments, generator service, slide maintenance, and braking systems.",  "g": [
+ {  "n": "RV There Yet?",  "c": "Statewide",  "p": "907-416-0313",  "u": "https://rvthereyetmobilerv.wixsite.com/rvthereyet",  "t": "mobile",  "e": true,  "r": false,  "d": "RV There Yet? is a mobile RV service and educational archive providing mobile RV repair services in the greater Ohio area, founded in 2022. The owner-operator is a mobile technician with over 10 years in the industry, and technicians train through RVTI, Lippert, Suburban and Aqua-Hot. It advertises 24/7 availability with emergency callouts, scheduled appointments, generator service, slide maintenance, and braking systems.",  "g": [
    "mobile",
    "emergency"
   ],  "base": null,  "areas": [],  "region": "greater Ohio area",  "spec": null,  "reg": "central-oh"
@@ -159,7 +159,7 @@ window.RV_LISTINGS_OH = [
    "akron"
   ],  "region": "northeast Ohio",  "spec": null,  "reg": "northeast-oh"
  },
- {  "n": "Dude's RV Services",  "c": "Ohio",  "p": "(740) 915-1719",  "u": "https://www.dudesrv.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Dude's RV Services is an on-site mobile RV repair business run by Dave Hofer, an NRVTA certified technician, who brings RV repairs to the customer's driveway, campground, or storage lot. It covers Licking, Franklin, Knox, Delaware, Coshocton, Muskingum, Perry, and Fairfield counties in Ohio. It advertises service at the customer's location with no towing required and nationally certified work.",  "g": [
+ {  "n": "Dude's RV Services",  "c": "Statewide",  "p": "(740) 915-1719",  "u": "https://www.dudesrv.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Dude's RV Services is an on-site mobile RV repair business run by Dave Hofer, an NRVTA certified technician, who brings RV repairs to the customer's driveway, campground, or storage lot. It covers Licking, Franklin, Knox, Delaware, Coshocton, Muskingum, Perry, and Fairfield counties in Ohio. It advertises service at the customer's location with no towing required and nationally certified work.",  "g": [
    "mobile"
   ],  "base": null,  "areas": [],  "region": null,  "spec": null,  "reg": "central-oh"
  },

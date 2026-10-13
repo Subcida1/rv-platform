@@ -239,7 +239,7 @@ window.RV_LISTINGS_IN = [
    "muncie"
   ],  "region": null,  "spec": null,  "reg": "central-in"
  },
- {  "n": "Sunrise RV Service LLC",  "c": "Indiana",  "p": "765-393-5335",  "u": "https://www.sunriservindy.com/home",  "t": "both",  "e": false,  "r": false,  "d": "Sunrise RV Service LLC offers mobile appointments for quick service as well as its own property to bring a motorhome, 5th wheel or camper trailer for major repairs. Chad Agre brings over two decades in the auto and RV service industry and is certified by RVTI and trained by major appliance, mechanical and electrical manufacturers. It offers a winterization special and posts an hourly labor rate.",  "g": [
+ {  "n": "Sunrise RV Service LLC",  "c": "Statewide",  "p": "765-393-5335",  "u": "https://www.sunriservindy.com/home",  "t": "both",  "e": false,  "r": false,  "d": "Sunrise RV Service LLC offers mobile appointments for quick service as well as its own property to bring a motorhome, 5th wheel or camper trailer for major repairs. Chad Agre brings over two decades in the auto and RV service industry and is certified by RVTI and trained by major appliance, mechanical and electrical manufacturers. It offers a winterization special and posts an hourly labor rate.",  "g": [
    "service center",
    "mobile tech"
   ],  "base": null,  "areas": [],  "region": "Indiana",  "spec": null,  "reg": [

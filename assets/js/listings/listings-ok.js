@@ -21,7 +21,7 @@ window.RV_LISTINGS_OK = [
    "norman"
   ],  "region": null,  "spec": "Closed: Sat & Sun",  "reg": "okc-central"
  },
- {  "n": "In His Service RV Repair",  "c": "Oklahoma",  "p": "405-833-8192",  "u": "https://ihsrvtech.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "In His Service RV Repair runs a mobile repair and maintenance department that travels to the customer's home, business or campsite. The site says its certified mobile technicians diagnose and repair AC units, furnaces, electrical, plumbing, water heaters, hydraulics, slides, awnings, roof leaks and leveling jacks. It states the business services RVs throughout Oklahoma and lists RVTAA and NRVTA certifications.",  "g": [
+ {  "n": "In His Service RV Repair",  "c": "Statewide",  "p": "405-833-8192",  "u": "https://ihsrvtech.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "In His Service RV Repair runs a mobile repair and maintenance department that travels to the customer's home, business or campsite. The site says its certified mobile technicians diagnose and repair AC units, furnaces, electrical, plumbing, water heaters, hydraulics, slides, awnings, roof leaks and leveling jacks. It states the business services RVs throughout Oklahoma and lists RVTAA and NRVTA certifications.",  "g": [
    "mobile tech"
   ],  "base": null,  "areas": [],  "region": "Oklahoma",  "spec": null,  "reg": [
    "okc-central",
@@ -36,7 +36,7 @@ window.RV_LISTINGS_OK = [
    "mobile tech"
   ],  "base": "oklahoma city",  "areas": [],  "region": "Oklahoma",  "spec": "we are willing to travel statewide if the need arises",  "reg": "okc-central"
  },
- {  "n": "Precise Mobile RV Repair",  "c": "Oklahoma",  "p": "918-340-8869",  "u": "https://www.precisemobilervrepair.com/",  "t": "mobile",  "e": true,  "r": false,  "d": "Precise Mobile RV Repair is a family-owned mobile RV and trailer repair service that comes to the customer and performs on-site repairs day or night. The site says its RVTI-certified technicians repair appliances and awnings, leveling and stabilizers, electrical and lights, plumbing, brakes and axles, HVAC, roofing, satellite and solar, and handle winterizing and de-winterizing. It advertises same-day service and states coverage for all of Oklahoma and surrounding areas.",  "g": [
+ {  "n": "Precise Mobile RV Repair",  "c": "Statewide",  "p": "918-340-8869",  "u": "https://www.precisemobilervrepair.com/",  "t": "mobile",  "e": true,  "r": false,  "d": "Precise Mobile RV Repair is a family-owned mobile RV and trailer repair service that comes to the customer and performs on-site repairs day or night. The site says its RVTI-certified technicians repair appliances and awnings, leveling and stabilizers, electrical and lights, plumbing, brakes and axles, HVAC, roofing, satellite and solar, and handle winterizing and de-winterizing. It advertises same-day service and states coverage for all of Oklahoma and surrounding areas.",  "g": [
    "mobile tech",
    "emergency"
   ],  "base": null,  "areas": [],  "region": "Oklahoma",  "spec": null,  "reg": [

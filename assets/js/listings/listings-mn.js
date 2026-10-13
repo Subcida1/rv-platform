@@ -2,7 +2,7 @@
    RV-specific businesses only, a phone number verified on the business's own
    site, nothing invented. scripts/verify.py checks them all. */
 window.RV_LISTINGS_MN = [
- {  "n": "RY The RV Guy",  "c": "Minnesota",  "p": "651-283-5054",  "u": "https://www.rythervguy.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Trustworthy mobile RV technician servicing out of Minnesota and Florida. Provides diagnostics, inspections, maintenance, repairs, installations and emergency roadside assistance. The business is fully mobile and does not operate a public storefront.",  "g": [
+ {  "n": "RY The RV Guy",  "c": "Statewide",  "p": "651-283-5054",  "u": "https://www.rythervguy.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Trustworthy mobile RV technician servicing out of Minnesota and Florida. Provides diagnostics, inspections, maintenance, repairs, installations and emergency roadside assistance. The business is fully mobile and does not operate a public storefront.",  "g": [
    "mobile",
    "diagnostics",
    "inspections",
@@ -72,7 +72,7 @@ window.RV_LISTINGS_MN = [
    "circle pines"
   ],  "region": null,  "spec": null,  "reg": "twin-cities-mn"
  },
- {  "n": "True MN Handyman",  "c": "Minnesota",  "p": "(763) 567-2699",  "u": "https://truemnhandyman.com/services",  "t": "mobile",  "e": false,  "r": false,  "d": "On-site mobile RV and camper service providing bumper-to-bumper repair and maintenance across Minnesota. Handles inspections, extended warranty and insurance repairs, winterization, water damage repair and roof reseal. Works on travel trailers, fifth wheels, toy haulers, park models, motorhomes, pop-ups and truck campers.",  "g": [
+ {  "n": "True MN Handyman",  "c": "Statewide",  "p": "(763) 567-2699",  "u": "https://truemnhandyman.com/services",  "t": "mobile",  "e": false,  "r": false,  "d": "On-site mobile RV and camper service providing bumper-to-bumper repair and maintenance across Minnesota. Handles inspections, extended warranty and insurance repairs, winterization, water damage repair and roof reseal. Works on travel trailers, fifth wheels, toy haulers, park models, motorhomes, pop-ups and truck campers.",  "g": [
    "mobile",
    "inspections",
    "warranty",
@@ -211,7 +211,7 @@ window.RV_LISTINGS_MN = [
    "structural"
   ],  "base": "alexandria",  "areas": [],  "region": null,  "spec": "Winterizing limited to 20 miles from Alexandria",  "reg": "lakes-mn"
  },
- {  "n": "RV Roof Renewal",  "c": "Minnesota",  "p": "(612) 516-5130",  "u": "https://rvroofrenewal.com/",  "t": "mobile",  "e": true,  "r": false,  "d": "Statewide mobile RV roofing contractor that repairs, reseals and replaces RV roofs at the customer's home, storage lot or campground. Uses commercial-grade TPO, EPDM and silicone systems with up to a 20-year warranty. Serves motorhomes, travel trailers, fifth wheels, toy haulers, campers and fish houses.",  "g": [
+ {  "n": "RV Roof Renewal",  "c": "Statewide",  "p": "(612) 516-5130",  "u": "https://rvroofrenewal.com/",  "t": "mobile",  "e": true,  "r": false,  "d": "Statewide mobile RV roofing contractor that repairs, reseals and replaces RV roofs at the customer's home, storage lot or campground. Uses commercial-grade TPO, EPDM and silicone systems with up to a 20-year warranty. Serves motorhomes, travel trailers, fifth wheels, toy haulers, campers and fish houses.",  "g": [
    "mobile",
    "roof",
    "emergency"

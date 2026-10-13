@@ -106,7 +106,7 @@ window.RV_LISTINGS_SD = [
    "rapid city"
   ],  "region": null,  "spec": null,  "reg": "black-hills-sd"
  },
- {  "n": "Freedomtek Mobile RV Services",  "c": "South Dakota",  "p": "605-646-3225",  "u": "https://freedomtekrv.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Freedomtek Mobile RV Services is a mobile RV repair business that brings repairs and maintenance directly to the customer at their location, so the RV does not have to be relocated. It describes certified professional RV repair services and handles repairs, services, upgrades and replacements on RV equipment including propane systems, plumbing and pumps, roof repair and sealing and tank cleaning. Booking is by phone, text or the website contact page, and it says it can typically reach an RV within a day or two.",  "g": [
+ {  "n": "Freedomtek Mobile RV Services",  "c": "Statewide",  "p": "605-646-3225",  "u": "https://freedomtekrv.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Freedomtek Mobile RV Services is a mobile RV repair business that brings repairs and maintenance directly to the customer at their location, so the RV does not have to be relocated. It describes certified professional RV repair services and handles repairs, services, upgrades and replacements on RV equipment including propane systems, plumbing and pumps, roof repair and sealing and tank cleaning. Booking is by phone, text or the website contact page, and it says it can typically reach an RV within a day or two.",  "g": [
    "mobile rv technician"
   ],  "base": null,  "areas": [],  "region": null,  "spec": null,  "reg": [
    "black-hills-sd",

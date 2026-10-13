@@ -249,7 +249,7 @@ window.RV_LISTINGS_NV = [
    "boulder city"
   ],  "region": "greater Las Vegas area",  "reg": "las-vegas"
  },
- {  "n": "Nevada Mobile RV Service",  "c": "Nevada",  "p": "(775) 267-9876",  "u": "https://nvmobilerv.com/",  "t": "both",  "e": false,  "r": false,  "d": "Nevada Mobile RV Service is run by John Larson, an RVTI Master Certified RV Technician who started the business in 1989. It rebuilds and reconditions gas absorption refrigerators, designs and builds 12 volt solar systems, and repairs LP appliances, electrical, plumbing and awnings. The site states some repairs, rebuilds and installations are done at the shop and the rest are mobile.",  "g": [
+ {  "n": "Nevada Mobile RV Service",  "c": "Statewide",  "p": "(775) 267-9876",  "u": "https://nvmobilerv.com/",  "t": "both",  "e": false,  "r": false,  "d": "Nevada Mobile RV Service is run by John Larson, an RVTI Master Certified RV Technician who started the business in 1989. It rebuilds and reconditions gas absorption refrigerators, designs and builds 12 volt solar systems, and repairs LP appliances, electrical, plumbing and awnings. The site states some repairs, rebuilds and installations are done at the shop and the rest are mobile.",  "g": [
    "mobile service",
    "shop based",
    "RVTI Master Certified RV Technician",

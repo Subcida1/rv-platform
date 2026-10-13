@@ -73,7 +73,7 @@ window.RV_LISTINGS_MD = [
    "churchville"
   ],  "region": "Harford County",  "spec": "Phone is not monitored After 5:00pm on weekdays On weekends or Major Holidays",  "reg": "baltimore-md"
  },
- {  "n": "On the Spot RV Service",  "c": "Maryland",  "p": "(301) 710-7366",  "u": "https://onthespotrvservice.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "On the Spot RV Service is a mobile RV repair business whose tagline is Service where you need it. It comes to the customer with mobile RV repair and services all makes and models. It offers mobile RV service to the Maryland, Delaware and Southern Pennsylvania areas. It advises customers to contact their manufacturer for warranty repair options.",  "g": [
+ {  "n": "On the Spot RV Service",  "c": "Statewide",  "p": "(301) 710-7366",  "u": "https://onthespotrvservice.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "On the Spot RV Service is a mobile RV repair business whose tagline is Service where you need it. It comes to the customer with mobile RV repair and services all makes and models. It offers mobile RV service to the Maryland, Delaware and Southern Pennsylvania areas. It advises customers to contact their manufacturer for warranty repair options.",  "g": [
    "mobile tech"
   ],  "base": null,  "areas": [],  "region": "Maryland, Delaware and Southern Pennsylvania",  "spec": null,  "reg": "baltimore-md"
  },
