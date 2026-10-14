@@ -2383,3 +2383,16 @@ Eight items + diagnostics, verified against the page sources at tip `8ed90b2`:
 - **Recall overlap: intentional and cross-linked** -- the tool does the VIN lookup; /manuals/recalls explains where recalls/bulletins live and links the tool (2 references).
 
 Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok.
+
+## Neo directory 9th rotation (Northeast slice) (2026-10-14, verified from the Cloud lane)
+
+Five items, verified against the data at tip `008ea68`:
+
+- **Two far-flung area codes: CONFIRMED, both sourced.** Weldon Mobile RV Service (NJ) -- (918) 649-7210, phone_quote verbatim, checked weldonrvservice.com. ALLSHOW RV Services (MA) -- 904-922-4711, phone_quote verbatim (note: no `checked` URL on this record). Folded into the all-50-states audit.
+- **That RV Guy Craig: the name is the business's own.** Its domain is thatrvguycraig.com -- the nickname is the brand; the 903 number is a verbatim phone_quote. Folded into the audit for freshness.
+- **Identical lede on all 6: carried** (the site-wide thin-content item).
+- **Region taxonomy: carried** (the hub intro's "west to east" line included).
+- **Sitemap: 131 <loc> entries -- the 124 is a `grep -c` line-count artifact** (7 lines carry two locs; `grep -o "<loc>" | wc -l` = 131). Verified three times; no drop, no regression.
+- **Verified clean (Neo's list):** hub counts exact on all 6; titles/metas/H1s/canonicals; 50 state cards; sitemap 51 directory locs; no dashes/FFFD; voice PASS; no duplicate listings.
+
+Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok.
