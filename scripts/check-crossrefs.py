@@ -185,6 +185,21 @@ def tokens(text):
     return {w for w in words if w not in STOP and len(w) >= 4 and w not in GENERIC}
 
 
+# How far into a heading a named reference is allowed to match. Six words covers "The
+# voltage-drop test", "Low voltage: The fault" and "Sizing: Can it run", and it excludes a
+# word eight tokens into a long heading, which is an incidental collision rather than a named
+# section.
+LEADING_WINDOW = 6
+
+
+def leading_tokens(label):
+    """The opening content words of a heading, with a leading article skipped."""
+    words = re.findall(r"[a-z0-9]+(?:-[a-z0-9]+)*", label.lower())
+    if words and words[0] in ("a", "an", "the"):
+        words = words[1:]
+    return tokens(" ".join(words[:LEADING_WINDOW]))
+
+
 # ------------------------------------------------------------------------------- detectors
 # In-page: an explicit pointer that names no target. The shapes come straight from the brief.
 INPAGE_DIRECTIONAL = (
@@ -275,6 +290,12 @@ def detect(sentence, headings, page_tokens):
     Returns a list of (kind, ref_text, what_it_points_at). The caller decides link state,
     because a sentence that carries an <a> is doing the right thing whatever this finds.
     """
+    if sentence.rstrip().endswith("?"):
+        # A QUESTION IS NOT A POINTER. "Just want to say the winter guide saved your pipes?"
+        # names a page in passing from inside a question, and it is not sending anyone there.
+        # An instruction to a reader is never phrased as a question, so this cannot hide a real
+        # pointer; it only stops the check arguing with prose that is already correct.
+        return []
     if LINK_WORD.search(sentence):
         # The sentence itself says the thing is linked ("the water heater guide linked at the
         # end of this paragraph"). Judging it as an unlinked reference would argue with prose
@@ -306,9 +327,17 @@ def _named_inpage(sentence, headings):
             # The heading with the STRONGEST overlap, not the first that shares a word:
             # "the section on when cleaning cannot help" points at the "When cleaning cannot
             # help" H2, even though an earlier H3 also contains "cleaning".
+            #
+            # AND THE OVERLAP HAS TO BE AT THE HEAD OF THE HEADING. Strongest overlap alone
+            # matched "the appliance section" to "Finding your RV owner's manual and your
+            # appliance manuals" on the strength of one word eight tokens in, which is an
+            # incidental collision rather than the section being named. A reference names the
+            # opening words of what it points at: "the voltage-drop section" points at "The
+            # voltage-drop test", "the sizing section" at "Sizing: Can it run". A leading
+            # article is skipped so "the X section" still matches a heading opening with "The".
             best, best_n = None, 0
             for label, htok in headings:
-                n = len(toks & htok)
+                n = len(toks & (htok & leading_tokens(label)))
                 if n > best_n:
                     best, best_n = label, n
             if best:
@@ -439,6 +468,11 @@ def self_test():
         ("The readings below are typical for a rested battery.", (), NOTHING),
         ("The method described above is the maker's, not ours.", (), NOTHING),
         ("Work through the storage checklist further down this list.", (), NOTHING),
+        # a QUESTION is not a pointer (the live contact-page case, 2026-10-13)
+        ("Just want to say the winter guide saved your pipes?", (), FURNACE),
+        # a word buried in a long heading is a collision, not a named section
+        ("This is the most expensive mistake in the appliance section.",
+         ("Finding your RV owner's manual and your appliance manuals",), NOTHING),
         # a cross-page reference to a page we do NOT have: must be clean even though the
         # same sentence would fire if a furnace page existed
         ("The furnace guide covers how a sagging battery stops an appliance.", (), NOTHING),

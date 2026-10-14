@@ -85,6 +85,17 @@ step "check-style.py: centering, gradients, and the two scales" \
 # so a structural check whose logic rotted cannot quietly report green.
 step "check-structure.py: guide wrapper and guide-go placement" \
                                                python3 scripts/check-structure.py
+# A REFERENCE TO OUR OWN CONTENT CARRIES A LINK. Added 2026-10-13 at Ty's request: "We straight
+# up refer to another section, but don't link out to it? That's a huge huge no no we should
+# ALWAYS provide a link if we feel the need to mention another section we have content for."
+# Wired only after the ten findings from its first run were fixed and its two false positives
+# were taught to it - a question is not a pointer, and a word buried in a long heading is a
+# collision rather than a named section. A gate that fails on correct prose teaches people to
+# ignore it, which is the failure this whole pipeline keeps having to guard against.
+step "cross-references still catch, and still do not over-catch" \
+                                               python3 scripts/check-crossrefs.py --self-test
+step "a reference to our own content carries a link" \
+                                               python3 scripts/check-crossrefs.py
 # ---------------------------------------------------------------- 2. behaviour
 step "weight calculator"                       node scripts/test-weight-calculator.js
 step "tire date decoder"                      node scripts/test-tire-date.js

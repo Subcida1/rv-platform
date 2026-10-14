@@ -104,3 +104,49 @@ Round six, the Store section, and the one rule from it worth keeping:
   the facts he names, rebuild the sentences, and flag anything he dropped that
   was load-bearing rather than silently restoring it.
 
+---
+
+# Page 2 - `guides/rv-outlets-not-working.html` (Ty, 2026-10-13, four rounds)
+
+| # | what Ty said | the rule it becomes | class |
+|---|---|---|---|
+| 1 | "Working the chain" is an odd heading; use terms people google | a heading carries the words a reader would search, not our internal name for the job | NOTED |
+| 2 | the pedestal check should come from the plug-in procedure | a step a reader performs every time beats one they perform only when something breaks | NOTED |
+| 3 | "the branch breakers" may be unfamiliar | name a thing in plain words before the trade term | NOTED |
+| 4 | we never say what the main breaker IS | a component is described before its procedure, not after | NOTED |
+| 5 | include all GFCIs, not the nearest | an instruction names the whole set when the device protects a chain | NOTED |
+| 6 | no company names in the content | a maker's name belongs in Sources; prose states the fact | NOTED |
+| 7 | the inverter paragraph is overcomplicated and names a company | plain language; a paragraph that needs a relay to explain itself is cut | NOTED |
+| 8 | keep the walkthrough language, add the reader on the road | an instruction offers the no-tool path as well as the proper one | NOTED |
+| 9 | hot skin needs a heavier warning than "can injure you" | life-threatening content takes the heaviest callout available | NOTED |
+| 10 | always say RV technician, not just electrician | the site's own directory is the referral | STRICT |
+| 11 | shape the anchor text from the content around it | inter-linking is a hard rule, not an afterthought | NOTED |
+| 12 | never colour text like a URL unless it is a URL | link colour is reserved for links | STRICT |
+| 13 | the guide talks about GFCIs but not ordinary outlets | the common case is covered, not only the interesting one | NOTED |
+| 14 | fact-check the hot skin causes | see below | - |
+
+Two STRICT rules here are worth building next: **#10**, a page that sends a
+reader to an electrician without naming an RV technician, and **#12**, body text
+painted in the link colour. Both are regex-holdable.
+
+## The two factual corrections on this page
+
+- **Hot skin is a two-part condition.** It takes a compromised safety ground AND
+  leakage or fault current reaching the chassis. The page had named "reverse
+  polarity at the pedestal" as one of two usual causes; **reverse polarity does
+  not by itself energize a chassis**, and sources conflate it with hot skin
+  constantly. Corrected.
+- **RV outlet circuits are wired in PARALLEL**, so a receptacle that fails does
+  not take out the ones after it. "Daisy chained" is the right trade term for the
+  cable run, but the page had drawn the wrong conclusion from it. What does take
+  out the outlets downstream is a tripped GFCI or a loosened feed-through at an
+  outlet feeding the rest.
+
+## The cross-reference rule is now a gate
+
+`scripts/check-crossrefs.py` runs in `ci.sh`, with its self-test beside it. It
+finds prose that points at a section or a page we own and carries no link. Its
+first run reported 13; ten were fixed across nine pages, and the two false
+positives were taught to it (a question is not a pointer; a word buried in a long
+heading is a collision, not a named section).
+
