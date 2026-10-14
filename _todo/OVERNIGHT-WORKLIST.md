@@ -2295,3 +2295,18 @@ Six items, verified against the page sources at tip `08fcd8e`:
 - **Verified clean (Neo's list):** mailto present; claim link; /about covers all six sections; H1s; titles/metas/canonicals; no dashes/FFFD; sitemap 131; voice PASS.
 
 Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok.
+
+## Neo 10th rotation -- guides (driving/towing/planning slice) (2026-10-14, verified from the Cloud lane)
+
+Seven items, verified against the page sources at tip `6a19574`:
+
+- **Trailer-brakes scope gap: CONFIRMED.** The title/meta frame it "by state rather than by one federal number"; the threshold table covers CA/OR/WA only (7/6/6 mentions). Queue: scope-label as three worked examples or expand.
+- **Driving-motorhome duplication: CONFIRMED.** "An overloaded coach can fail a tire or lose handling when you need it most." appears verbatim twice in the same section (callout + body). Trim one.
+- **Sources heading levels: CONFIRMED, slightly wider than flagged.** Two pages carry H3 Sources (trip-planner AND trailer-brakes-required); the rest carry H2. Normalize.
+- **Silo: CONFIRMED.** 5 of 6 pages carry zero in-body /tools, /parts, /manuals, /directory links; trailer-brakes carries tools 3 + manuals 1. Queue the specific gaps: towing-trailer -> weight calculator; maintenance-schedule -> tire-date-code / anode-rod / water-filter; trip-planner -> its tools; pre-trip-walkaround + driving-motorhome -> topic-matched links.
+- **Weight-calculator scale locator: CONFIRMED PRESENT** (8 "certified scale" mentions + a "scale locator") -- the trailer-brakes cross-reference is correct; no fix.
+- **Tail-swing rule: REFUTED as unsourced.** The Newmar source entry explicitly annotates "the tail swing ratio of about one foot out for every three feet of rear overhang" -- the claim is sourced; no change.
+- **Trailer-brakes title: CONFIRMED.** Title Case vs the others' sentence case, and it omits "breakaway" (the H1 carries it). Align + consider adding.
+- **Verified good/clean (Neo's list):** flag-h separators hold on all 6; titles/metas/H1s/canonicals/breadcrumbs/dates; factual spot-checks PASS; voice PASS.
+
+Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok.
