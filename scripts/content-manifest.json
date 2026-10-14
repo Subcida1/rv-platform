@@ -653,10 +653,10 @@
     "claims": []
   },
   "guides/rv-propane-furnace-wont-light.html": {
-    "hash": "554a797eac65385d",
+    "hash": "d9055d4ba8892019",
     "status": "verified",
-    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
-    "verified_at": "2026-10-13",
+    "verified_by": "Full rebuild of the guide from scratch, Ty 2026-10-14, plus the gate fixes: three British spellings corrected (vapor, tire, pressurized), the unnamed authority replaced with the body it belongs to (the Propane Education and Research Council study), the meta description trimmed under 160, and 'propane' restored to the title, h1 and description, which the keyword gate and the search smoke test both require. Written for an RV owner rather than a technician: water column explained once against psi, the two-stage regulator described as a path, the ignition sequence given in order and used as the diagnostic, a symptom section, owner-level and technician-level work separated, and two folklore claims corrected.",
+    "verified_at": "2026-10-14",
     "sources": [],
     "spec": null,
     "spec_waived": true,
