@@ -2170,6 +2170,15 @@ details.faq p{color:var(--text-2);font-size:16px;line-height:1.7;padding-bottom:
 .prose table td{color:var(--text-2)}
 .prose table td:first-child{font-weight:700;color:var(--text)}
 .prose table tbody tr:last-child td{border-bottom:0}
+/* A ONE-LINE INSTRUCTION ABOVE A TABLE READS AS A CAPTION, NOT AS PROSE. Ty, 2026-10-13:
+   "'Match the symptom to the page that owns it.' should also be centered and we should make it
+   that like greyish backgroundy looking text so people know its like an instruction for the
+   table below it." Only one page carries a line of this kind. The other six paragraphs that sit
+   between a heading and a table are ordinary content sentences ("An anode rod is a sacrificial
+   part...") and are deliberately left as prose, because a band around a full sentence would say
+   "caption" about something that is not one. Centring comes from .center, which is already on
+   check-style.py's allowlist, so this adds no new centred selector to that list. */
+.prose .table-note{margin-top:22px;margin-bottom:16px;padding:10px 18px;background:var(--tint-bg);border:1px solid var(--tint-edge);border-radius:10px;font-size:14px;color:var(--text-2)}
 /* No reset for :first-child above: a heading that leads its container is already flush and the
    browser collapses the margin away, and every prose block here opens with a lede, not a heading. */
 .prose h3.sm{font-size:16px}
