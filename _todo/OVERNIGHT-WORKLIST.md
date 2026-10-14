@@ -2310,3 +2310,18 @@ Seven items, verified against the page sources at tip `6a19574`:
 - **Verified good/clean (Neo's list):** flag-h separators hold on all 6; titles/metas/H1s/canonicals/breadcrumbs/dates; factual spot-checks PASS; voice PASS.
 
 Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok.
+
+## Neo tools 8-page rotation (2026-10-14, verified from the Cloud lane)
+
+Seven items, verified against the page sources at tip `403a2ef`:
+
+- **Fixes verified:** toilet-valve guide links, solar-sizing guide link, the Product Variants block still gone, the 80% framing, hub counts -- all confirmed.
+- **battery-runtime guide gap: CONFIRMED.** Zero in-body guide links; its Where-to-go-next block is tools-only (solar-sizing, watts-to-amps). Queue: add /guides/rv-battery-not-charging.
+- **Finder blocks: CONFIRMED.** All 4 finders carry no "Where to go next" block (the 3 calculators do); their in-body links are thin (board 1 guide; converter 1 guide + 1 manuals; recall 1 tools + 1 manuals; toilet-valve 2 guides). Queue: extend the shared block with topic-matched links.
+- **parts/directory silo: CONFIRMED.** Zero in-body /parts and /directory links on all 7. Queue: a "find a tech" directory CTA in the Where-to-go-next blocks; parts links remain blocked by the no-anchor limitation (card ids queued).
+- **571.110 citation: CONFIRMED CORRECT.** The eCFR API text (fetched live): "If the vehicle is a recreation vehicle trailer and is equipped with a propane supply, the weight of full propane tanks must be included in the vehicle's unloaded vehicle weight. If the vehicle is a recreation vehicle trailer and is equipped with an on-board potable water supply, the weight of such on-board water must be treated as cargo." The page's sentence and annotation match; no reframe needed. (Fetch note: the eCFR HTML page is bot-walled; the API endpoint works: /api/renderer/v1/content/enhanced/current/title-49?chapter=V&part=571&section=571.110.)
+- **weight-calculator next block: CONFIRMED tools-only** (3 tools); the guide link sits in body copy. Queue: include the guide in the block.
+- **recall-lookup: recorded, no action** (no recall guide exists; /manuals/recalls linked in-body).
+- **Verified clean (Neo's list):** titles/metas/H1s/canonicals; WebApplication + BreadcrumbList on all 7; no dashes/FFFD; voice PASS.
+
+Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok.
