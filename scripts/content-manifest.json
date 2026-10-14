@@ -623,9 +623,9 @@
     "claims": []
   },
   "guides/rv-outlets-not-working.html": {
-    "hash": "536cd2249c59ec85",
+    "hash": "ed241492fdb3d532",
     "status": "verified",
-    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
+    "verified_by": "W19 calibration page 2, round 4 per Ty 2026-10-13. Corrections from verification: hot skin is a TWO-part condition (a compromised safety ground plus leakage or fault current reaching the chassis), and reverse polarity is NOT a cause - it does not by itself energize the chassis. The page said the opposite. Also from Ty: the reversed line-and-load subsection is removed and the GFCI section gains what a GFCI actually does; the hot skin paragraph loses its odd last sentence; the hot skin callout is re-labelled Can kill you with the hazard in caps; the outlet tester section gains the no-instrument phone-charger test for readers on the road; a new section covers how outlets are split across breakers; the electrician line now says certified RV technician and links the RV repair directory with contextual anchor text; the JSON-LD description no longer names a company.",
     "verified_at": "2026-10-13",
     "sources": [],
     "spec": "_specs/rv-outlets-not-working.md",
