@@ -2396,3 +2396,17 @@ Five items, verified against the data at tip `008ea68`:
 - **Verified clean (Neo's list):** hub counts exact on all 6; titles/metas/H1s/canonicals; 50 state cards; sitemap 51 directory locs; no dashes/FFFD; voice PASS; no duplicate listings.
 
 Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok.
+
+## Neo homepage 9th rotation (2026-10-14, verified from the Cloud lane)
+
+Six items, verified against the page source at tip `ecd3fa5`:
+
+- **Tools nav dropdowns: CONFIRMED.** Desktop Tools `.drop` = weight-calculator + "More tools" hub link; mobile Tools = mm-head + one mm-sub (weight calculator) vs Guides 4 / Manuals 4 / Parts 2 / Directory 2. The other 13 tools (incl all 6 finders) are hub-only. Queue: a finders chips row on the homepage, or widen the dropdowns.
+- **Finder gap (5th flag): carried, queued** (08fcd8e).
+- **Manuals sub-pages (2nd flag): carried, queued** (08fcd8e).
+- **about/contact in-body (5th flag): carried, queued** (08fcd8e + the shared-CTA item).
+- **Homepage JSON-LD (5th flag): carried, queued** (08fcd8e + the hub-schema cleanup).
+- **Counter wiring: the 1942 is already wired to the data** -- `build-listings.py:517-526` rewrites the marker from the state files (the shared source); it is a different mechanism from the data-claims set (guides-fix-word, guides-total, guides-winter-word, states-total, states-total-word-lc) but the same guarantee. Whether to also give it a data-claim is a convention call -- noted.
+- **Verified clean (Neo's list):** title/meta/H1/canonical; sitemap 131 (guides 48, tools 15, directory 51, manuals 12); 47 guide slugs; counters 14/47/1942; in-body counts match baseline; canonical name; eyebrow retired; voice PASS.
+
+Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok.
