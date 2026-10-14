@@ -2325,3 +2325,18 @@ Seven items, verified against the page sources at tip `403a2ef`:
 - **Verified clean (Neo's list):** titles/metas/H1s/canonicals; WebApplication + BreadcrumbList on all 7; no dashes/FFFD; voice PASS.
 
 Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok.
+
+## Neo hubs 08:30 rotation (2026-10-14, verified from the Cloud lane)
+
+Seven items, verified against the page sources at tip `c9f8858`:
+
+- **Unidentified WebSite nodes: CONFIRMED.** /directory/ and /manuals/ carry an inline WebSite in `isPartOf` ({name, url}, no @id) while the homepage and /parts/ use @id https://originrv.com/#website. Queue: add the matching @id (or drop the node).
+- **/parts WebSite withdrawal: noted** -- same @id, one entity, no conflict. Closed.
+- **/manuals ItemList numberOfItems=8: CONFIRMED PRESENT (correction).** It is nested in the CollectionPage's `mainEntity` (the earlier top-level-only check missed it, and the ab70955 "not-present" note was wrong). The 8 = the 8 systems; the hub links 11 sub-pages -- the convention item stands as originally queued (cf95bba).
+- **/guides title (4 of 6 sections): carried, queued** (ab70955).
+- **/directory region order: carried, queued** (882b76e).
+- **Hub silos: carried, queued** (ab70955); refinement noted -- /guides/ hub is NOT fully siloed (weight-calculator CTA card + manuals/start-here link in body).
+- **ItemList convention gap: CONFIRMED.** /tools/ (14 cards) and /parts/ (157 cards) carry no ItemList; /guides/ (47) and /directory/ (50) do. Queue: pick one convention.
+- **Verified clean (Neo's list):** titles/metas/H1s/canonicals/base; card counts; no dashes/FFFD; voice PASS.
+
+Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok.
