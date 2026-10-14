@@ -2163,3 +2163,15 @@ Five findings, verified against the page source and the data at tip `882b76e`:
 - **Verified clean (Neo's list):** counters server-render as text; title 41ch, meta 150ch, one H1, canonical/og clean; 47 in-body guide links match sitemap 48 and the data-claims; the stat block is deliberately not an anchor (source comment).
 
 Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok.
+
+## Neo 8th rotation -- about/contact/privacy (2026-10-13, verified from the Cloud lane)
+
+Five findings, verified against the page sources and git history at tip `12816d9`:
+
+- **The privacy "Google map" claim is WRONG -- fix needed.** `privacy.html` says "Cookies come from Google Analytics, and from the Google map embedded in the weight calculator." There is no embedded map anywhere: the weight calculator has zero iframes (the only `iframe` string on it is an escaped code sample showing how to embed the calculator), and no map library or static map exists site-wide (the trip planner's only "maps" string is a SOURCES link to `developers.google.com/maps/documentation/routes/lvr`). The claim entered in `eb2dccf` on a reviewer's assertion. Fix: drop the map clause -- "Cookies come from Google Analytics." -- or name a real source.
+- **The Cloudflare claim is FINE.** The `cloudflareinsights` beacon is in 133 pages of source (injected via `site_constants.py` + `sync-head-brand.py`) and confirmed live on privacy/about/contact/guide/tool. Cloudflare Web Analytics is cookieless by design, so "records page views without setting a cookie" is accurate. No change.
+- **The /about contact link is about-only; the shared module is the W29 page-foot.** The "Found a mistake?" card (with "Contact page ->") exists only on about.html. The shared closing line -- `<p class="page-foot">Something wrong here, or something missing? Tell us. About OriginRV.</p>` -- is on 61 pages (47 guides + 14 tools); state pages and manuals are the remaining 61.
+- **Title suggestion (editorial):** /about's title omits "Directory" and "Parts"; ~60ch budget has room, e.g. "About OriginRV: RV Tools, Repair Directory and Guides". Queue for a ruling.
+- **Recorded, no action:** /privacy has no direct mailto (deliberate); /contact still the thinnest page (~624ch). Verified clean: one H1 each, canonicals, no em dashes/FFFD, AboutPage+Person and ContactPage JSON-LD, voice PASS.
+
+Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok.
