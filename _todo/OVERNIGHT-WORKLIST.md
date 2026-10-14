@@ -2175,3 +2175,18 @@ Five findings, verified against the page sources and git history at tip `12816d9
 - **Recorded, no action:** /privacy has no direct mailto (deliberate); /contact still the thinnest page (~624ch). Verified clean: one H1 each, canonicals, no em dashes/FFFD, AboutPage+Person and ContactPage JSON-LD, voice PASS.
 
 Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok.
+
+## Neo 9th rotation -- guides (body/exterior + tanks/sensors slice) (2026-10-13, verified from the Cloud lane)
+
+Six findings, verified against the page sources and the live site at tip `7c2c7da`:
+
+- **Tank-sensors Related/Next: CONFIRMED off-topic.** The page's own block reads `Related: Furnace not working` + `Next: Water heater not heating`; every other page in the slice is topic-matched (delamination -> roof-leak/slide-out; roof-leak -> snow-load/winterize). The block is hand-written per page (no generator owns it), so the fix is an edit of this page's block. Suggested: Related -> black tank (or the routine); Next -> sewer smell.
+- **Black-tank pairing: CONFIRMED asymmetric.** `rv-black-tank` links tank-sensors + sewer-smell only; `rv-black-tank-routine` links black-tank 5x. Add a reciprocal link from the main guide (dump-procedure or sensors section). The split reads deliberate: the routine is the in-order checklist, the guide is the deep reference; titles/metas differentiate.
+- **Roof-leak manuals link: REFUTED -- the link exists.** Source and live both carry `<a href="manuals/exterior-and-body">exterior and body</a>` (resolves via base). No fix needed. The sub-note stands: roof-leak is the only page in the slice with an H2 "Related guides" prose block (which carries its in-body links); the others carry only the footer buttons -- normalize the convention.
+- **Silo: CONFIRMED.** The six pages carry zero in-body /tools, /parts, /directory links (manuals: roof-leak 1, others 0). Queue the topic-matched additions: roof-leak -> /tools/snow-load; tank-sensors -> parts sensor/probe cards; black-tank-routine -> parts black-tank cards.
+- **Routine duplication: live, reworded by the read-through.** The quoted sentences are gone (the read-through reworded the page); the near-verbatim repeat now sits between the LEDE and the short-version callout ("Store it drained and protected, with antifreeze in the tank and [antifreeze] left standing in the bowl" twice, two blocks apart). Whether the short-version restatement is convention or should be paraphrased is open -- and the page is under live edit, so re-check after the read-through lands.
+- **Delamination Google quote: CONFIRMED (suggestion).** The page quotes Azdel quoting Google ("Google defines Delamination as '...'. We concur."). Queue: drop the Google-definition quote; Azdel's own sentence already defines it.
+
+Withdrawn (lowercase-after-period inside quotes) and clean items (titles/metas/canonicals/dateModified/callouts/voice/factual spot-checks) recorded as verified.
+
+Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok.
