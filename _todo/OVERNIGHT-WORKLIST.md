@@ -2353,3 +2353,16 @@ Four items, verified against the page sources at tip `82f15ec`:
 - **The 06:30 guides send: NOT RECEIVED on this lane.** The message window shows only system reminders; if a send went out, it did not land -- re-send it.
 
 Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok.
+
+## Neo heat-pump source hunt (2026-10-14, verified from the Cloud lane)
+
+Neo's two new sources, verified and folded into the heat-pump item (extends c882996):
+
+- **Coleman-Mach 1976-529: VERIFIED verbatim** (fetched live): "The heat pump will operate on reverse cycle refrigerant heating at outdoor temperatures above freezing. When the outdoor temperature is below freezing, the heat pump compressor will shut down to prevent outdoor coil freeze-up." (Also: "The heat pump will shut down at conditions which would cause outdoor coil freeze-up, generally near freezing temperatures.")
+- **Dometic CCC2 (doc 3314082000): Neo's live read; NOT independently fetchable from here** (mans.io is Cloudflare-walled; documents.dometic.com 403s to machine fetches; dometic.com's search lists the doc). The quote stands on his read; the site citation should use a Dometic-hosted URL (the maker's-domain rule).
+- **The figures now on record:** Coleman FAQ 45 F (the heat-with-the-furnace instruction), Coleman 1976-299 ~40 F (compressor shutdown), Coleman 1976-529 near-freezing (compressor shutdown), Dometic 30 F lockout / 35 F resume. Coleman's own documents disagree with each other (40 vs near-freezing) -- the copy should be brand-specific with each doc cited, not a universal figure.
+- **Ready-to-apply draft (parts card `heat-pump-and-heat-strip` in `_data/parts.json`):**
+  - does: "heats as well as cools, down to a cutoff each maker sets: Coleman-Mach shuts down near freezing, and Dometic locks out at 30 F and resumes at 35 F"
+  - fails: ["no heat below the maker's cutoff", "reversing valve", "heat strip burned", "thermostat set wrong"]
+  - evidence: keep the FAQ 45 F quote; add the 1976-529 quote (verified) + the Dometic 30/35 quote (with a Dometic-hosted source URL).
+  - Then regenerate (build-parts-pages.py) + run the gates + commit.
