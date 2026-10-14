@@ -2437,3 +2437,16 @@ Five items, verified against the page sources at tip `8b63de2`:
 - **Verified clean (Neo's list):** H1s, titles/metas, canonicals, breadcrumbs, dates, callout separators, bylines/CTAs, voice PASS, factual spot-checks.
 
 Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok.
+
+## Neo tools 10th rotation (complementary slice) (2026-10-14, verified from the Cloud lane)
+
+Nine items, verified against the page sources at tip `742621f`:
+
+- **Fixes verified (Neo's list):** rv-loan dating ("Bankrate's table, updated June 18, 2026"); tire-date-code in-body /guides/rv-tire-replacement; snow-load in-body roof-snow-load + winterize-plumbing; the NWS citation and Keystone framing; the Boxabl characterization. All confirmed.
+- **Anode double link: CONFIRMED (re-flag of the tools 8-page item).** `<a href="/guides/rv-water-heater-not-heating">` + `<a class="link" href="guides/rv-water-heater-not-heating">` -- same target twice, two href styles. Queue: one link, one style.
+- **GasBuddy citation gap: CONFIRMED (re-flag of the tools 8-page item).** The hint names GasBuddy with no link while AAA + EIA carry linked citations. Queue: add the link or drop the mention.
+- **Where-to-go-next gap: CONFIRMED, now 7 of 14 tools** -- tire-date-code, rv-anode-rod, rv-water-filter plus the 4 finders. The 4 calculators in this slice all have it.
+- **rv-loan in-body: CONFIRMED tools-only** (fuel-cost, solar-sizing, contact); no guide/manuals links (no loan guide exists). Mild.
+- **Unacknowledged runs: none.** Every rotation through this one has its reply in the lane; the three get_reply misses (tools 8-page, directory 8th, the 15:00 check-in) were all confirmed afterward.
+
+Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok.
