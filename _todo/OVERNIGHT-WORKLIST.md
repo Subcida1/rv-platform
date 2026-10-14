@@ -2151,3 +2151,15 @@ Six findings, verified against `_data/listings/*.json` and the page sources at t
 - **Phone dump (Neo's #6): ANSWERED -- no visible dump.** All 32 listing phones live only in the JSON-LD; the only visible phone-shaped string is the claim form's placeholder `(541) 555-0123`. The text extractor reads the JSON-LD.
 
 Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok.
+
+## Neo 7th rotation -- homepage (2026-10-13, verified from the Cloud lane)
+
+Five findings, verified against the page source and the data at tip `882b76e`:
+
+- **The 1942 figure is REAL and generated, not hardcoded.** The sum of all 50 state files = 1942 exactly, and `build-listings.py:517-526` rewrites the homepage's `data-count="1942">1942` marker from the data (assert-guarded, logged as "homepage count"). The binding is the generator marker, not a data-claim -- that is the existing convention for this figure. Verified correct; no change needed.
+- **"Something is broken": refuted again (10th flag).** A deliberate `.sec-eyebrow` -- one of five on the homepage ("Everything in one place", "First-timers", "Winter season", "Something is broken", "Directory") -- above "RV troubleshooting guides that start with your symptom". Refuted in HANDOFF-TOOL-SWEEP #1 (ninth round). It keeps returning because it reads like error text; rewording is a one-line editorial call if Brandt wants it, but it is not unshipped placeholder copy.
+- **Homepage in-body links: /about 0, /contact 0, /parts 1 (`parts/`), /manuals 2 (`manuals/`, `manuals/start-here`).** The W29 closing CTA landed on guides+tools only; the homepage, state pages and manuals are the remaining 61. Queue: a homepage variant of the closing CTA, plus body links to /parts and /manuals.
+- **Homepage JSON-LD:** WebSite+SearchAction+Organization only; the ItemList/WebPage suggestion is unimplemented (3rd flag). Queue with the hub-schema convention cleanup.
+- **Verified clean (Neo's list):** counters server-render as text; title 41ch, meta 150ch, one H1, canonical/og clean; 47 in-body guide links match sitemap 48 and the data-claims; the stat block is deliberately not an anchor (source comment).
+
+Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok.
