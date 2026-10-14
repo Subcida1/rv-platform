@@ -2237,3 +2237,21 @@ Four findings, verified against the page sources and the data at tip `ab70955`:
 - **Manuals pages carry no dates: mechanism found.** The system pages have no "Last reviewed on" line and no dateModified by construction -- `build-manuals-pages.py` never emits them, and `sync-dates.py` only syncs pages that already carry the elements (its VISIBLE/DATED regexes). No record of a deliberate decision; queue: add dates or record the choice.
 
 Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok.
+
+## Neo 8th rotation -- parts + sitemap (2026-10-14, verified from the Cloud lane)
+
+Thirteen items, verified against the page source and the data at tip `fd11d40`:
+
+- **Black tank card mis-target: CONFIRMED.** The card's "How to fix it" links `/guides/rv-tank-sensors-reading-wrong` (the sensor guide); `/guides/rv-black-tank` is unlinked from every card. Fix: put the black-tank guide on the card (keep or swap the sensor link) and add `/guides/rv-black-tank-routine`.
+- **Anode-rod card (5th flag), fridge-leveling (3rd), two-appliances (3rd): CONFIRMED** -- all three are on the c882996 unlinked-guides list; the fixes are queued there.
+- **Pin-weight candidate: queued** for the Weight-distribution hitch or Kingpin card.
+- **Propane leak detector -> CO guide: MIS-TARGET.** The CO guide carries zero mentions of leak detectors or gas alarms; a card with no fitting guide is better left unlinked than pointed at the wrong one.
+- **Chassis 10 zero-link: natural misses** (no chassis guides exist) -- recorded.
+- **Zero-link total 51/157** (propane 7 + chassis 10 = 17 of them) -- recorded.
+- **Thin taglines: 12 confirmed** (Neo's list; a quick count missed the two "coach's" ones to apostrophe tokenization). Queue the polish pass.
+- **Lede counts: the definition is "guide or maker's documentation"** (the tool-only card excluded); the c882996 queue item covers the choice (recommendation: include tool links -> 106/51).
+- **Heat pump tagline: SOURCED, confirmed** (Coleman-Mach FAQ 45F re-fetched live + service manual ~40F; both on the card) -- the c882996 queue item stands.
+- **Card ids: CONFIRMED absent** (157 li.part, 0 ids) -- queue per-part anchors/permalinks.
+- **Verified good (Neo's list):** WebSite @id resolved; weight-calculator on 3 towing cards; anchors 94 = parts-covered; 157 = parts-total; no dashes/FFFD; single H1; canonical. Method note recorded: card-level unlinked guides = 12, page-level = 10.
+
+Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok.
