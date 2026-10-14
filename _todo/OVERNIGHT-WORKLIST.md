@@ -2269,3 +2269,15 @@ Six items, verified against the data and the page sources at tip `e21b3e4`:
 - **Verified clean (Neo's list):** the filter button, claim form, hub ItemList 50, sitemap 51, titles/metas/H1s/canonicals, no dashes/FFFD, voice PASS.
 
 Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok.
+
+## Neo 8th rotation -- homepage (2026-10-14, verified from the Cloud lane)
+
+Four items, verified against the page source at tip `37c5db4`:
+
+- **Finder discoverability gap: CONFIRMED.** The 6 finders (rv-toilet-valve, rv-recall-lookup, rv-converter-finder, rv-appliance-board-finder, rv-anode-rod, rv-water-filter) carry 0 links in <main>; the 8 calculators carry 2 each. The page text has zero occurrences of "finder", "toilet valve", "water filter", "appliance board". Reachable via /tools hub -- discoverability, not breakage. Queue: a "Find your part" row or finder chips on the homepage.
+- **Manuals sub-pages unlinked: CONFIRMED.** Only `manuals/` + `manuals/start-here` in <main>; the other 10 get no homepage link. Queue: link recalls (timely) + 1-2 system pages, or record hub-only as the design.
+- **about/contact in-body: CONFIRMED (4th flag).** 0/0 in <main>; the footer carries them. Minor; queued with the shared-CTA item.
+- **Homepage JSON-LD: CONFIRMED (4th flag).** WebSite + Organization only; no ItemList/WebPage. Queued with the hub-schema convention cleanup.
+- **Verified clean (Neo's list):** all 47 guide slugs linked; title/meta/H1/canonical; counters server-rendered; no duplicate card titles; winter 5 cards; voice PASS. And "Something is broken" is now retired from the flag list per the HANDOFF record.
+
+Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok.
