@@ -2226,3 +2226,14 @@ Twelve items, verified against the page sources at tip `3297561`:
 - **Verified clean (Neo's list):** voice PASS all 7, zero em dashes/FFFD, one H1 each, titles/metas in band, sitemap 131 stable, guides 48 (47+hub).
 
 Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok.
+
+## Neo 8th rotation -- manuals system pages (2026-10-13, verified from the Cloud lane)
+
+Four findings, verified against the page sources and the data at tip `ab70955`:
+
+- **Tool-link silo: CONFIRMED.** The five system pages carry guides + external maker docs only in <main>; zero /tools, /parts, /directory links (manuals: 1 each). The 'If something's already broken' module is guides-only. Queue the topic-matched tool links: power -> watts-to-amps / solar-sizing / rv-converter-finder / battery-runtime; towing -> weight-calculator; sanitation -> rv-toilet-valve; chassis -> weight-calculator; exterior -> snow-load.
+- **Demco pair: intentional-looking, note suggested.** `_data/manuals.json` carries two Demco rows -- "Demco archived manuals index" (kind: library) and "Demco self-aligning tow bar operator manual" (kind: document, TB20040.pdf). Distinct entry points; queue a one-line note on why that document gets its own row.
+- **Thetford pair: RESOLVED (Neo).** Distinct entry points; no action.
+- **Manuals pages carry no dates: mechanism found.** The system pages have no "Last reviewed on" line and no dateModified by construction -- `build-manuals-pages.py` never emits them, and `sync-dates.py` only syncs pages that already carry the elements (its VISIBLE/DATED regexes). No record of a deliberate decision; queue: add dates or record the choice.
+
+Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok.
