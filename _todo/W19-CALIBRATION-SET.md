@@ -87,3 +87,20 @@ Round five added five more, all NOTED:
   reached it. Link density is a real cost of a rewrite; worth a check that a
   guide keeps at least the links it had.
 
+Round six, the Store section, and the one rule from it worth keeping:
+
+- **a section must not instruct the same action twice.** He caught this by
+  reading: the page told the reader to run antifreeze into the bowl, then told
+  them to leave "a bowl of it" standing. Same action, one sentence apart. This
+  is not regex-checkable, and it is the kind of thing only a reader finds, which
+  is the argument for his read-through being the mechanism and the checks being
+  the sweep.
+- name the tanks ("black and gray"), do not say "both waste tanks"
+- when a page calls automotive antifreeze a hazard, it names the fresh water
+  components it must not reach. His dictation dropped the list; the list is the
+  actionable half, so it stayed.
+- his guidance is the content, the prose is ours. He said so directly this
+  round: "reword all the things I'm saying, you say it so much better." So keep
+  the facts he names, rebuild the sentences, and flag anything he dropped that
+  was load-bearing rather than silently restoring it.
+

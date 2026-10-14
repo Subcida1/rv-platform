@@ -64,6 +64,10 @@ CENTER_OK = {
     '.deck-sim-note', '.dog-inner', '.empty', '.empty-state', '.hero-inner', '.hstat',
     '.hub-page h2.region-h', '.part', '.qty .n', '.sec-head', '.sec-head.center',
     '.state-body', '.to-top', '.wc-out .w-idle', 'body.is-embed .embed-credit',
+    # ADDED 2026-10-13, at Ty's request: the closing line that sits under every guide and tool.
+    # "This at the bottom should be centered, always. every page on this one here. or every
+    # instance of this 'Something wrong here, or something missing? Tell us. About OriginRV.'"
+    '.page-foot',
 }
 
 # FROZEN, NOT ENDORSED. The rule (STYLE.md) is that a gradient marks something that leads

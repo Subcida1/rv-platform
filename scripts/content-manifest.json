@@ -463,9 +463,9 @@
     "claims": "f2c9a068f6c16e27"
   },
   "guides/rv-black-tank-routine.html": {
-    "hash": "0c781ebd8e1c2378",
+    "hash": "66edf8c32772ad77",
     "status": "verified",
-    "verified_by": "W19 calibration round 6 per Ty 2026-10-13: the Store section reworded on his guidance. The defect he spotted is fixed - the old text told the reader to flush antifreeze into the bowl and then to leave 'a bowl of it' standing, which is the same action twice; it is now one instruction. Also: both waste tanks named as black and gray, automotive antifreeze kept as toxic and kept against the component list, dry bowl stated as hard on the seal, and the bowl depth tied to evaporation.",
+    "verified_by": "W19 calibration round 7 per Ty 2026-10-13: the Diagnose table's symptoms rephrased as the phrases people actually search (black tank sensor reads full when the tank is empty; RV black tank smells inside, worse when driving; RV toilet does not hold water; RV macerator hums, but the bowl will not empty; black tank does not dump, or is clogged; the RV black tank or its lines have frozen). The Diagnose heading is now centred because columns follow it, and the table itself gained row rules and a bold key column.",
     "verified_at": "2026-10-13",
     "sources": [],
     "spec": null,

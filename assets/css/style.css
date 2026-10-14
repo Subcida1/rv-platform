@@ -1534,7 +1534,11 @@ details.faq p{color:var(--text-2);font-size:16px;line-height:1.7;padding-bottom:
    reading might want -- to say something is wrong, or to find out who wrote it. Added
    2026-10-13 (Brandt): /about and /contact carried zero in-body links from anywhere on the
    site, so they were reachable only through nav chrome. */
-.page-foot{font-size:12.5px;color:var(--text-3);margin-top:18px;padding-top:14px;border-top:1px solid var(--line)}
+/* CENTRED, ALWAYS, ON EVERY PAGE. Ty, 2026-10-13: "This at the bottom should be centered,
+   always. every page on this one here. or every instance of this 'Something wrong here, or
+   something missing? Tell us. About OriginRV.' center it." The line closes the page, so it
+   reads as a sign-off rather than as another paragraph of the article. */
+.page-foot{font-size:12.5px;color:var(--text-3);margin-top:18px;padding-top:14px;border-top:1px solid var(--line);text-align:center}
 .page-foot a{color:var(--link-strong);font-weight:600}
 .reviewed::before{content:""}
 
@@ -2153,6 +2157,19 @@ details.faq p{color:var(--text-2);font-size:16px;line-height:1.7;padding-bottom:
 .prose h2{font-size:22px;font-weight:800;margin-top:44px;margin-bottom:14px}
 .prose h2.sm{font-size:17px}
 .prose h3{font-size:17px;font-weight:800;margin-top:32px;margin-bottom:12px}
+/* PROSE TABLES HAD NO STYLING AT ALL, AND THAT IS WHY THEY WERE UNREADABLE. Found 2026-10-13
+   by Ty reading the black tank routine's Diagnose table: "its hard to visually tell what
+   symptom aligns with what where to look segment." Fourteen bare <table> elements across the
+   guides were rendering with browser defaults and no rules between rows, so a two-column
+   answer table read as one wall of text. The first cell of each row is the key and takes the
+   ink; the answer column stays secondary; a rule under every row is what makes the pairing
+   legible at a glance. */
+.prose table{width:100%;border-collapse:collapse;margin-top:22px;margin-bottom:30px;font-size:15px}
+.prose table th,.prose table td{text-align:left;vertical-align:top;padding-top:11px;padding-bottom:11px;padding-right:18px;border-bottom:1px solid var(--border)}
+.prose table tr:first-child th{border-bottom:1px solid var(--border-2)}
+.prose table td{color:var(--text-2)}
+.prose table td:first-child{font-weight:700;color:var(--text)}
+.prose table tbody tr:last-child td{border-bottom:0}
 /* No reset for :first-child above: a heading that leads its container is already flush and the
    browser collapses the margin away, and every prose block here opens with a lede, not a heading. */
 .prose h3.sm{font-size:16px}
