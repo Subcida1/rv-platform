@@ -2190,3 +2190,19 @@ Six findings, verified against the page sources and the live site at tip `7c2c7d
 Withdrawn (lowercase-after-period inside quotes) and clean items (titles/metas/canonicals/dateModified/callouts/voice/factual spot-checks) recorded as verified.
 
 Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok.
+
+## Neo 7th rotation -- tools (calculator/finder slice) (2026-10-13, verified from the Cloud lane)
+
+Nine findings, verified against the page sources, the live site, and the cited documents at tip `2a6d629`:
+
+- **Anode double link: CONFIRMED.** `/guides/rv-water-heater-not-heating` (leading slash) and `guides/rv-water-heater-not-heating` (bare-relative) both on the page. Normalize to the leading-slash form.
+- **'Where to go next' missing: CONFIRMED.** recall + anode-rod lack the block (the other four have it); recall has zero in-body guide/tool links. Add topic-matched blocks to both.
+- **Bylines: CONFIRMED (2 of 6).** recall + anode-rod carry "Last reviewed on Oct 13, 2026"; battery-runtime, fuel-cost, rv-loan, snow-load carry none. Note: the read-through (`9e5f403`) just changed the site-wide byline to "Last reviewed on" and dropped the About link from the page-foot -- any fix should follow the new wording.
+- **Recall sentence: CONFIRMED.** "The recalls and bulletins page links that register alongside this tool." -- missing a word ("links to that register").
+- **GasBuddy citation gap: CONFIRMED.** The price hint names GasBuddy; Sources list AAA + EIA only. Add it or drop the name.
+- **Silo: CONFIRMED.** Zero in-body /parts and /directory links on all six (small count differences on the others are counting scope). Queue the per-page mapping: anode-rod -> /parts water-heater-anode-rod card; battery-runtime -> battery cards; snow-load -> roof cards; fuel-cost -> /directory.
+- **Boxabl: CONFIRMED (label + citation).** The row calls it "one factory-built towable" and the page says "two other RVs"; Boxabl is factory-built housing, and the 20 lb/ft2 figure has NO source in the page's list. Reword the label and add a source or drop the row.
+- **Queued source verifications -- results:** CONFIRMED: DOE fleet averages (18.5/25.6/44 on afdc.energy.gov/data/10310); Keystone 30 lb/ft2 ("30 pounds per square foot", 2026 owner's manual); Suburban 233514/233516 (catalog + product page), the 1-1/16" socket and the 75% replacement rule (library PDF); Dometic's "do not use... anode rods" warning (manual PDF). NOT CONFIRMED from the fetched documents: Victron 87-92% (the datasheet's text layer did not yield it -- verify by eye); Dometic 60/30/90-day flush intervals (not found in either fetched PDF); the generator 0.5-1 gal/hr figure (source unclear from the page).
+- **Verified clean (Neo's list):** titles/metas/H1s/canonicals/breadcrumbs/base; zero em dashes/FFFD/AI-phrases; voice PASS; the loan math, VIN format, NWS figures, and 1,280 Wh all exact.
+
+Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok.
