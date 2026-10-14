@@ -2281,3 +2281,17 @@ Four items, verified against the page source at tip `37c5db4`:
 - **Verified clean (Neo's list):** all 47 guide slugs linked; title/meta/H1/canonical; counters server-rendered; no duplicate card titles; winter 5 cards; voice PASS. And "Something is broken" is now retired from the flag list per the HANDOFF record.
 
 Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok.
+
+## Neo 9th rotation -- about/contact/privacy (2026-10-14, verified from the Cloud lane)
+
+Six items, verified against the page sources at tip `08fcd8e`:
+
+- **Privacy "Google map" claim: already verified and queued (7c2c7da).** Re-confirmed: zero map embeds site-wide (no iframes, no map libraries, no static maps -- the only "maps" string anywhere is a SOURCES link in the trip planner). The queued fix stands: drop the map clause.
+- **/about title (44ch): CONFIRMED FIXED.**
+- **/privacy claim-form + contact links: CONFIRMED FIXED.**
+- **Cloudflare beacon: CONFIRMED present** (beacon.min.js, token 3727183603b6402b9249de33fa381acd); the privacy page's Cloudflare claim is accurate. (Matches the 8th-rotation verification: the beacon is in 133 pages.)
+- **BreadcrumbList trio: CONFIRMED missing.** about = AboutPage, contact = ContactPage, privacy = WebPage -- no BreadcrumbList on any of the three while all five hubs carry one. Queue: add BreadcrumbList to all three (extends the ab70955 /about item).
+- **/contact thinnest (219 words): recorded, no action.**
+- **Verified clean (Neo's list):** mailto present; claim link; /about covers all six sections; H1s; titles/metas/canonicals; no dashes/FFFD; sitemap 131; voice PASS.
+
+Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok.
