@@ -2113,3 +2113,15 @@ could be left out of a first pass, which would cut the change from 122 pages to 
 **What it is worth, honestly:** the SEO argument is real but modest -- two pages gaining internal links
 is not a ranking event. The reader argument is stronger: a guide that ends with sources and no way to
 say "this figure is wrong" asks the reader to go looking for the door.
+
+## Neo 7th rotation -- manuals hub (2026-10-13, verified from the Cloud lane)
+
+Five findings, verified against `_data/manuals.json` and the live hub at tip `204a78e`:
+
+- **Counts disambiguation (copy fix).** The hub says "94 makers" in five places (meta description, og:description, twitter:description, JSON-LD, #man-status) while the By brand card says "44 makers". Both are correct but measure different sets: components = 110 entries across **94 distinct equipment makers**; brands = **44 RV brands with owner manuals**; models = **654 model lines**. Fix: say "94 equipment makers" in the five spots and "44 RV brands" on the card + /manuals/brands lede.
+- **Hub CollectionPage numberOfItems=8 vs 11 linked sub-pages.** Internally consistent (`build-manuals-pages.py:366` = len(R.SYSTEMS)); queue with the ItemList/CollectionPage split convention item from the 07:30 run.
+- **Zero in-body /parts links on the /manuals hub** (0 inside `<main>`; the 4 on the page are nav/mobile chrome). Add contextual in-body links when the hub is next touched.
+- **Row wording normalization (data-level).** Two Lippert `covers` strings differ (`manuals.json:1182` omits Girard, `:1313` includes it); Suburban reads "keyed by product family or model series" (water-and-plumbing:130) vs "keyed by product family" (heating-and-cooling:143). Normalize in `_data/manuals.json` after checking the source.
+- **Hygiene verified clean** (1 H1, meta 152ch, canonical/base ok, no em dashes, no U+FFFD). No action.
+
+Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok; `check-prose.py` 0 strict hits.
