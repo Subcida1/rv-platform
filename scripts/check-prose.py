@@ -149,6 +149,24 @@ NOTED = (
     ("authenticity-adjective",
      r"\bwith real \w+|\breal (?:voltage|maker|industry)\s+(?:tables|charts|numbers|figures|data)\b",
      "calling our figures the authentic ones implies the others are not, which is selling rather than telling"),
+    # ADDED 2026-10-13, from Ty reading the outlets guide: "'and the first two are free to check:'
+    # is pure ai fluff... The pattern seems to be: Say the thing here, which is why its RV related
+    # here. Just spit out the content." The clause this catches is about the READER - why the fact
+    # is useful, cheap, or worth their attention - rather than about the thing itself. That is the
+    # tell, and it is why "which is why" is NOT in this rule: that connector carries mechanism,
+    # which is content. His counter-example is the shape to aim at: "A ground fault outlet is not a
+    # fuse and it is not a breaker. It compares the current leaving on the hot wire with the
+    # current returning on the neutral."
+    # NOTED, not STRICT, on purpose: "a tripped breaker costs nothing" is about the price of a part,
+    # which is information, so the money sense of "costs nothing" must not gate. The effort sense
+    # is caught, and a reader of the report tells the two apart.
+    ("reader-benefit-clause",
+     r"\bworth (?:knowing|understanding|noting|saying|remembering)\b|"
+     r"\bit is worth \w+ing\b|\bwhich is worth \w+ing\b|"
+     r"\bwhich matters (?:if|when|because)\b|"
+     r"\b(?:free|cheap|easy) to check\b|\btakes? (?:a minute|seconds|no time)\b|"
+     r"\bcosts nothing to\b|\bcosts you nothing\b",
+     "a clause about why the reader should care, rather than about the thing"),
 )
 
 

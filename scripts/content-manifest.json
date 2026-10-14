@@ -623,9 +623,9 @@
     "claims": []
   },
   "guides/rv-outlets-not-working.html": {
-    "hash": "c3852382ba5c8867",
+    "hash": "b67d2c48fdb1421c",
     "status": "verified",
-    "verified_by": "W19 page 2, rounds 4 and 5, plus the cross-reference link fixes: the fluff clause 'and the first two are free to check' is cut; the 'Which one it is depends on whether...' sentence is cut entirely as meaningless; 'keep working either way' becomes 'can keep working either way'; the hot skin callout reads 'before the RV gets plugged into shore power, or generator power, again'; the hot skin paragraph opens directly on 'The first reason is a compromised safety ground' with no explaining-the-explanation; and the two sentences that pointed at sections of this page now carry links.",
+    "verified_by": "Ty 2026-10-13, the reader-benefit clause: 'The simplest test needs no instrument at all, which matters if you are on the road without one' loses 'which matters if you are on the road without one'. His rule - say the thing, do not append why the reader should care. No factual change.",
     "verified_at": "2026-10-13",
     "sources": [],
     "spec": "_specs/rv-outlets-not-working.md",
