@@ -2255,3 +2255,17 @@ Thirteen items, verified against the page source and the data at tip `fd11d40`:
 - **Verified good (Neo's list):** WebSite @id resolved; weight-calculator on 3 towing cards; anchors 94 = parts-covered; 157 = parts-total; no dashes/FFFD; single H1; canonical. Method note recorded: card-level unlinked guides = 12, page-level = 10.
 
 Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok.
+
+## Neo 8th rotation -- directory hub + 6 fresh state pages (2026-10-14, verified from the Cloud lane)
+
+Six items, verified against the data and the page sources at tip `e21b3e4`:
+
+- **Indiana 66-vs-63: CONFIRMED, mechanism = documented renderer behavior.** The data holds 63 IN listings; Sunrise RV Service LLC (Statewide) renders once in each of the 4 IN regions = 66 rows. Same multi-region repetition as Oklahoma's 12 rows. The gap is rows-vs-listings, not a data error. Decision queued: dedupe statewide listings (show once with a Statewide tag) or label the count.
+- **Thin-state lede: CONFIRMED.** HI (2 listings, 0 centers, 0 roadside) and DE (5 listings, 0 roadside) both carry "Both are here, along with emergency roadside help." Queue a per-state lede variant when a category is empty.
+- **CT town data: CONFIRMED.** 5 rows carry the literal town "Connecticut, CT" (In the Shade, Leadfoot's, MP RV Pros, TRIC, Matt's); Beaulieu's town reads "Western MA, Northern CT, and Southern NH, MA" (ends ", MA"). Queue: real town or "Statewide" for the five; clean Beaulieu's field.
+- **Out-of-state codes: folded into the all-50-states audit** -- AL (567 OH, 305 FL), HI (772 FL), IN (269 MI border-plausible; the 772 FL pair with The RV Tech's 877-788-3241 -- adjacent numbers, relationship unconfirmed). CT's are all border-plausible.
+- **Carryovers: recorded** (identical lede/boilerplate; hub region taxonomy).
+- **Both-bucket math: RESOLVED (Neo).** mobile = mobile-tech + both; centers = service-center + both; sums exceeding listings are by design. Closed.
+- **Verified clean (Neo's list):** the filter button, claim form, hub ItemList 50, sitemap 51, titles/metas/H1s/canonicals, no dashes/FFFD, voice PASS.
+
+Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok.
