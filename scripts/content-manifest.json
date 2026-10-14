@@ -463,9 +463,9 @@
     "claims": "f2c9a068f6c16e27"
   },
   "guides/rv-black-tank-routine.html": {
-    "hash": "33f503ee99abd994",
+    "hash": "0c781ebd8e1c2378",
     "status": "verified",
-    "verified_by": "W19 calibration round 5 per Ty 2026-10-13: the Treat section reworded on his text (properly treat after every dump; the two families of RV black tank products as different tools; any formaldehyde-based product left out of an RV black tank; the guide credits Jayco and Thetford directly). The toilet-guide link he dropped stays dropped until he says otherwise.",
+    "verified_by": "W19 calibration round 6 per Ty 2026-10-13: the Store section reworded on his guidance. The defect he spotted is fixed - the old text told the reader to flush antifreeze into the bowl and then to leave 'a bowl of it' standing, which is the same action twice; it is now one instruction. Also: both waste tanks named as black and gray, automotive antifreeze kept as toxic and kept against the component list, dry bowl stated as hard on the seal, and the bowl depth tied to evaporation.",
     "verified_at": "2026-10-13",
     "sources": [],
     "spec": null,
