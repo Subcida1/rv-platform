@@ -118,6 +118,14 @@ def main():
     # These were HARDCODED to a literal date, so every guide built from this tool would carry the date
     # the tool was last edited rather than the date it was built. Correct tonight, wrong from tomorrow.
     _today = datetime.date.today().isoformat()
+    # THE VISIBLE LINE NEEDS THE READABLE FORM, NOT THE ISO ONE. Found 2026-10-13: this tool wrote
+    # `isoformat()` into the reader-facing line, so every guide it built showed "Last updated on
+    # 2026-10-10" while the other 46 pages showed "Oct 10, 2026" -- and, worse, sync-dates.py's
+    # VISIBLE regex matches only the readable form, so those pages were invisible to the date gate
+    # and their visible date could never sync to their JSON-LD one. Eight guides were in that state.
+    # The ISO form stays for datePublished, dateModified and the sitemap lastmod, where it is right.
+    _d = datetime.date.today()
+    _today_human = "%s %d, %d" % (_d.strftime("%b"), _d.day, _d.year)
     head = re.sub(r'"datePublished":\s*"[^"]*"', '"datePublished": %s' % json.dumps(_today), head, count=1)
     head = re.sub(r'"dateModified":\s*"[^"]*"', '"dateModified": %s' % json.dumps(_today), head, count=1)
 
@@ -138,7 +146,7 @@ def main():
              '<p class="reviewed">By <a class="link" href="/about">OriginRV</a>. '
              'Last updated on %s.</p>\n'
              '</div>\n' % (html.escape(a.eyebrow), html.escape(a.title),
-                            html.escape(a.lede), _today))
+                            html.escape(a.lede), _today_human))
 
     # THE BODY NEEDS ITS WRAPPER OR IT RUNS EDGE TO EDGE ON A PHONE. Found 2026-10-09, by Ty
     # looking at a guide on his phone: "the text goes straight from the edge of my screen to the
