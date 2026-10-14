@@ -144,7 +144,7 @@ def main():
              '<h1>%s</h1>\n'
              '<p class="lede">%s</p>\n'
              '<p class="reviewed">By <a class="link" href="/about">OriginRV</a>. '
-             'Last updated on %s.</p>\n'
+             'Last reviewed on %s.</p>\n'
              '</div>\n' % (html.escape(a.eyebrow), html.escape(a.title),
                             html.escape(a.lede), _today_human))
 
@@ -159,11 +159,13 @@ def main():
             '<main id="main">' + intro
             + '\n<div class="sec prose">\n<div class="wrap narrow">\n'
             + body.rstrip() + '\n</div>\n</div>\n'
-            # The closing line every guide carries: the two doors a reader who has just
-            # finished reading might want. Added 2026-10-13 (Brandt) -- /about and /contact
-            # had zero in-body links from anywhere on the site before this.
+            # The closing line every guide carries: the door a reader who has just finished
+            # reading might want. Added 2026-10-13 (Brandt) -- /about and /contact had zero
+            # in-body links from anywhere on the site before this. The /about link came back
+            # out the same evening, at Ty's call: "Remove the second About OriginRV link its
+            # completley flooding the look of our page." The line is centred by .page-foot.
             + ' <p class="page-foot">Something wrong here, or something missing? '
-              '<a href="/contact">Tell us</a>. <a href="/about">About OriginRV</a>.</p>\n'
+              '<a href="/contact">Tell us</a>.</p>\n'
             + '</main>' + tail)
     out = ROOT / "guides" / (a.slug + ".html")
     out.write_text(page, encoding="utf-8")

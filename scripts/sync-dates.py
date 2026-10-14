@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """One date per page, taken from the file's own last commit.
 
-WHY THIS EXISTS. Brandt ruled on 2026-10-13: the visible "Last updated on <date>" line and the
+WHY THIS EXISTS. Brandt ruled on 2026-10-13: the visible "Last reviewed on <date>" line and the
 JSON-LD `dateModified` are both derived from the file's last git commit date, so they cannot
 disagree. Before this, three dates could coexist on one page -- `guides/rv-towing-capacity.html`
 showed "Oct 6, 2026" to a reader, carried "2026-09-21" in its structured data, and had last
@@ -9,7 +9,7 @@ changed on 2026-10-13. A reader saw one date and a search engine another, and th
 is the one that gets acted on.
 
 WHAT IT DOES, in one pass over every page that carries a date:
-  1. the visible "Last updated on <date>" line -> the file's last commit date
+  1. the visible "Last reviewed on <date>" line -> the file's last commit date
   2. the JSON-LD `dateModified` -> the same date
   3. a page with a visible date but NO `dateModified` gets one, added to its Article or
      WebApplication block. Seven tool pages were in that state: they showed a date to a reader
@@ -38,7 +38,7 @@ import sys
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SKIP_PARTS = {".git", ".letta", "node_modules"}
 
-VISIBLE = re.compile(r"(Last updated on )([A-Z][a-z]+ \d{1,2}, \d{4})")
+VISIBLE = re.compile(r"(Last reviewed on )([A-Z][a-z]+ \d{1,2}, \d{4})")
 DATED = re.compile(r'("dateModified"\s*:\s*")([0-9]{4}-[0-9]{2}-[0-9]{2})(")')
 LDJSON = re.compile(r'(<script type="application/ld\+json">)(.*?)(</script>)', re.S)
 DATED_TYPE = re.compile(r'"@type"\s*:\s*"(Article|WebApplication|WebPage)"')
@@ -76,7 +76,7 @@ def substantive(rel, parent, sha):
                        cwd=ROOT, capture_output=True, text=True).stdout
 
     def norm(s):
-        s = re.sub(r"Last updated on [A-Z][a-z]+ \d{1,2}, \d{4}", "", s)
+        s = re.sub(r"Last reviewed on [A-Z][a-z]+ \d{1,2}, \d{4}", "", s)
         s = re.sub(r'"dateModified"\s*:\s*"[0-9-]+"', "", s)
         # REMOVE ALL WHITESPACE, do not collapse it to a space. `git diff -w` ignores whitespace
         # inside a line but NOT a line that was split in two -- and splitting a line is exactly what
@@ -146,7 +146,7 @@ def main():
     changed, added, missing_git = [], [], []
     for path, rel in pages():
         text = open(path, encoding="utf-8").read()
-        if "Last updated" not in text and "dateModified" not in text:
+        if "Last reviewed" not in text and "dateModified" not in text:
             continue
         iso = commit_date(rel)
         if not iso:

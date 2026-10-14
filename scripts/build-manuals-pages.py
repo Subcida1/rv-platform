@@ -566,7 +566,11 @@ def render_new_owner(data):
     # door for anyone arriving with a problem, unreachable from it. Ty, 2026-10-08: "give them a
     # part of their own." The ids match the headings in that file.
     START_HERE = [
-        ("troubleshooting", "RV troubleshooting: what to check when something stops working"),
+        # Capitalised after the colon, 2026-10-13: this string feeds the section nav AND the
+        # heading in _data/new-owner-sections.html feeds the body, so the two have to say the
+        # same thing. Ty's rule for a title with a colon: "Title Here : Descriptive words are
+        # here too."
+        ("troubleshooting", "RV troubleshooting: What to check when something stops working"),
         ("system-order", "Which RV system to learn first, and why"),
         ("systems-connect", "How the 12-volt and 120-volt systems connect"),
         ("find-your-manual", "Finding your RV owner's manual and your appliance manuals"),

@@ -383,9 +383,9 @@
     "sources": []
   },
   "guides/battery-winter-storage.html": {
-    "hash": "c720b2c2516ce220",
+    "hash": "4b7ef424f7f3a2ce",
     "status": "verified",
-    "verified_by": "Cloud 2026-10-13: added the closing page-foot line (Brandt's W29 ruling); no factual content changed",
+    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
     "verified_at": "2026-10-13",
     "sources": [],
     "spec": "_specs/battery-winter-storage.md",
@@ -393,9 +393,9 @@
     "claims": "178ec4da901263e8"
   },
   "guides/freeze-damage-triage.html": {
-    "hash": "46ec098cd2bc83ce",
+    "hash": "2eb56a0eb3bfa4f4",
     "status": "verified",
-    "verified_by": "Cloud 2026-10-13: added the closing page-foot line (Brandt's W29 ruling); no factual content changed",
+    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
     "verified_at": "2026-10-13",
     "sources": [],
     "spec": "_specs/freeze-damage-triage.md",
@@ -413,9 +413,9 @@
     "claims": "a0146313ebc9d955"
   },
   "guides/roof-snow-load.html": {
-    "hash": "0dd534c1881547fe",
+    "hash": "62639568bf6c5632",
     "status": "verified",
-    "verified_by": "Cloud 2026-10-13: added the closing page-foot line (Brandt's W29 ruling); no factual content changed",
+    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
     "verified_at": "2026-10-13",
     "sources": [],
     "spec": "_specs/roof-snow-load.md",
@@ -423,9 +423,9 @@
     "claims": "d001e7423ee174b8"
   },
   "guides/rv-12-volt-problems.html": {
-    "hash": "5d80b264df834c7d",
+    "hash": "7214bc0a990c9a17",
     "status": "verified",
-    "verified_by": "Cloud 2026-10-13: added the closing page-foot line (Brandt's W29 ruling); no factual content changed",
+    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
     "verified_at": "2026-10-13",
     "sources": [],
     "spec": "_specs/rv-12-volt-problems.md",
@@ -433,9 +433,9 @@
     "claims": "f82066e98fbddabb"
   },
   "guides/rv-air-conditioner-not-cooling.html": {
-    "hash": "db65e26e23e8ad84",
+    "hash": "59923b1a98aea2bd",
     "status": "verified",
-    "verified_by": "Cloud 2026-10-13: added the closing page-foot line linking /contact and /about (Brandt's W29 ruling); no factual content changed",
+    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
     "verified_at": "2026-10-13",
     "sources": [],
     "spec": null,
@@ -443,9 +443,9 @@
     "claims": "e65464526c5af869"
   },
   "guides/rv-battery-disconnect.html": {
-    "hash": "0ec11a67293c2b3e",
+    "hash": "5415487ffae6a127",
     "status": "verified",
-    "verified_by": "Cloud 2026-10-13: added the closing page-foot line linking /contact and /about (Brandt's W29 ruling); no factual content changed",
+    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
     "verified_at": "2026-10-13",
     "sources": [],
     "spec": null,
@@ -453,9 +453,9 @@
     "claims": "74f9b7b4567ac58a"
   },
   "guides/rv-battery-not-charging.html": {
-    "hash": "dc56af6dc1cd804d",
+    "hash": "86c4eb3354ba5da3",
     "status": "verified",
-    "verified_by": "Cloud 2026-10-13: added the closing page-foot line linking /contact and /about (Brandt's W29 ruling); no factual content changed",
+    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
     "verified_at": "2026-10-13",
     "sources": [],
     "spec": "_specs/rv-battery-not-charging.md",
@@ -463,9 +463,9 @@
     "claims": "f2c9a068f6c16e27"
   },
   "guides/rv-black-tank-routine.html": {
-    "hash": "66edf8c32772ad77",
+    "hash": "02ce38b3162cb0b7",
     "status": "verified",
-    "verified_by": "W19 calibration round 7 per Ty 2026-10-13: the Diagnose table's symptoms rephrased as the phrases people actually search (black tank sensor reads full when the tank is empty; RV black tank smells inside, worse when driving; RV toilet does not hold water; RV macerator hums, but the bowl will not empty; black tank does not dump, or is clogged; the RV black tank or its lines have frozen). The Diagnose heading is now centred because columns follow it, and the table itself gained row rules and a bold key column.",
+    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
     "verified_at": "2026-10-13",
     "sources": [],
     "spec": null,
@@ -473,9 +473,9 @@
     "claims": []
   },
   "guides/rv-black-tank.html": {
-    "hash": "5451521c9573ba56",
+    "hash": "208b4f6c5945f847",
     "status": "verified",
-    "verified_by": "sweep of Ty's 2026-10-13 W19 dictate: 'dump when the tank is mostly full' becomes 'nearly full' in both places it appears (2). No factual change.",
+    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
     "verified_at": "2026-10-13",
     "sources": [],
     "spec": null,
@@ -483,9 +483,9 @@
     "claims": []
   },
   "guides/rv-condensation-inside.html": {
-    "hash": "533fee9dc7066500",
+    "hash": "d1cbc0e15756c9ba",
     "status": "verified",
-    "verified_by": "Cloud 2026-10-13: added the closing page-foot line linking /contact and /about (Brandt's W29 ruling); no factual content changed",
+    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
     "verified_at": "2026-10-13",
     "sources": [],
     "spec": null,
@@ -493,9 +493,9 @@
     "claims": "823655868cc02382"
   },
   "guides/rv-converter-not-charging.html": {
-    "hash": "52186ccf58075525",
+    "hash": "0253bfb59239edb8",
     "status": "verified",
-    "verified_by": "Cloud 2026-10-13: added the closing page-foot line linking /contact and /about (Brandt's W29 ruling); no factual content changed",
+    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
     "verified_at": "2026-10-13",
     "sources": [],
     "spec": "_specs/rv-converter-not-charging.md",
@@ -503,9 +503,9 @@
     "claims": "9e753c5476a782bd"
   },
   "guides/rv-delamination.html": {
-    "hash": "c377e3f4db0f6b46",
+    "hash": "503db0c4e7b3842a",
     "status": "verified",
-    "verified_by": "Cloud 2026-10-13: added the closing page-foot line linking /contact and /about (Brandt's W29 ruling); no factual content changed",
+    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
     "verified_at": "2026-10-13",
     "sources": [],
     "spec": null,
@@ -513,9 +513,9 @@
     "claims": "d43bfcd7141b7c75"
   },
   "guides/rv-driving-motorhome.html": {
-    "hash": "6803f3b7765a1c55",
+    "hash": "21a5f80946fdebce",
     "status": "verified",
-    "verified_by": "Cloud 2026-10-13: added the closing page-foot line linking /contact and /about (Brandt's W29 ruling); no factual content changed",
+    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
     "verified_at": "2026-10-13",
     "sources": [],
     "spec": null,
@@ -523,9 +523,9 @@
     "claims": []
   },
   "guides/rv-fridge-leveling.html": {
-    "hash": "6868c0591994f38f",
+    "hash": "96baa05cb7708b10",
     "status": "verified",
-    "verified_by": "Cloud 2026-10-13: added the closing page-foot line linking /contact and /about (Brandt's W29 ruling); no factual content changed",
+    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
     "verified_at": "2026-10-13",
     "sources": [],
     "spec": null,
@@ -533,9 +533,9 @@
     "claims": []
   },
   "guides/rv-furnace-carbon-monoxide.html": {
-    "hash": "2e00e043e072fd7d",
+    "hash": "4a1dd43e7ca9c134",
     "status": "verified",
-    "verified_by": "Cloud 2026-10-13: added the closing page-foot line linking /contact and /about (Brandt's W29 ruling); no factual content changed",
+    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
     "verified_at": "2026-10-13",
     "sources": [],
     "spec": null,
@@ -543,9 +543,9 @@
     "claims": "029e24133bf31376"
   },
   "guides/rv-furnace-not-working.html": {
-    "hash": "8c2e2291dfd53d2b",
+    "hash": "d88c29626fabbdd4",
     "status": "verified",
-    "verified_by": "Cloud 2026-10-13: added the closing page-foot line linking /contact and /about (Brandt's W29 ruling); no factual content changed",
+    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
     "verified_at": "2026-10-13",
     "sources": [],
     "spec": "_specs/rv-furnace-not-working.md",
@@ -553,9 +553,9 @@
     "claims": "89a67693ba48f388"
   },
   "guides/rv-fuse-keeps-blowing.html": {
-    "hash": "8a1fbb396f833eda",
+    "hash": "62827a52cc90b275",
     "status": "verified",
-    "verified_by": "Cloud 2026-10-13: added the closing page-foot line linking /contact and /about (Brandt's W29 ruling); no factual content changed",
+    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
     "verified_at": "2026-10-13",
     "sources": [],
     "spec": "_specs/rv-fuse-keeps-blowing.md",
@@ -563,9 +563,9 @@
     "claims": "fdfcf4aee5a95536"
   },
   "guides/rv-generator-not-charging.html": {
-    "hash": "5806cef63a9b3a08",
+    "hash": "2f3e60600b0c9126",
     "status": "verified",
-    "verified_by": "Cloud 2026-10-13: added the closing page-foot line linking /contact and /about (Brandt's W29 ruling); no factual content changed",
+    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
     "verified_at": "2026-10-13",
     "sources": [],
     "spec": "_specs/rv-generator-not-charging.md",
@@ -573,9 +573,9 @@
     "claims": "ef934e187c559e6f"
   },
   "guides/rv-generator-sizing.html": {
-    "hash": "3cd465f8f5eb872c",
+    "hash": "d2d4d4f6e3c08fac",
     "status": "verified",
-    "verified_by": "Cloud 2026-10-13: added the closing page-foot line linking /contact and /about (Brandt's W29 ruling); no factual content changed",
+    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
     "verified_at": "2026-10-13",
     "sources": [],
     "spec": "_specs/rv-generator-sizing.md",
@@ -583,9 +583,9 @@
     "claims": "f0d8106fa63a816a"
   },
   "guides/rv-leveling-jacks-not-working.html": {
-    "hash": "a271fbbf8ab3fa6a",
+    "hash": "6dec60ad33005cc8",
     "status": "verified",
-    "verified_by": "Cloud 2026-10-13: added the closing page-foot line linking /contact and /about (Brandt's W29 ruling); no factual content changed",
+    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
     "verified_at": "2026-10-13",
     "sources": [],
     "spec": "_specs/rv-leveling-jacks-not-working.md",
@@ -593,9 +593,9 @@
     "claims": "1880dbae7019e467"
   },
   "guides/rv-lights-not-working.html": {
-    "hash": "f261c7f0a497c751",
+    "hash": "cb12753432cf7e20",
     "status": "verified",
-    "verified_by": "Cloud 2026-10-13: added the closing page-foot line linking /contact and /about (Brandt's W29 ruling); no factual content changed",
+    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
     "verified_at": "2026-10-13",
     "sources": [],
     "spec": "_specs/rv-lights-not-working.md",
@@ -603,9 +603,9 @@
     "claims": "88a0fd90a5829273"
   },
   "guides/rv-macerator-toilet.html": {
-    "hash": "0d7f7e138e817e9b",
+    "hash": "f83675cb3ad7c51b",
     "status": "verified",
-    "verified_by": "Cloud 2026-10-13: added the closing page-foot line linking /contact and /about (Brandt's W29 ruling); no factual content changed",
+    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
     "verified_at": "2026-10-13",
     "sources": [],
     "spec": "_specs/rv-macerator-toilet.md",
@@ -613,9 +613,9 @@
     "claims": "b42c5240ff3f3533"
   },
   "guides/rv-maintenance-schedule.html": {
-    "hash": "33790645105ea6b5",
+    "hash": "d71b222c4ccab765",
     "status": "verified",
-    "verified_by": "Cloud 2026-10-13: added the closing page-foot line linking /contact and /about (Brandt's W29 ruling); no factual content changed",
+    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
     "verified_at": "2026-10-13",
     "sources": [],
     "spec": null,
@@ -623,9 +623,9 @@
     "claims": []
   },
   "guides/rv-outlets-not-working.html": {
-    "hash": "edbc98818edbeb1b",
+    "hash": "536cd2249c59ec85",
     "status": "verified",
-    "verified_by": "Cloud 2026-10-13: added the closing page-foot line linking /contact and /about (Brandt's W29 ruling); no factual content changed",
+    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
     "verified_at": "2026-10-13",
     "sources": [],
     "spec": "_specs/rv-outlets-not-working.md",
@@ -633,9 +633,9 @@
     "claims": "1fe18dc8c794753f"
   },
   "guides/rv-pin-weight-and-payload.html": {
-    "hash": "5297537b3969f77c",
+    "hash": "3de46a7b85d697cd",
     "status": "verified",
-    "verified_by": "Cloud 2026-10-13: added the closing page-foot line linking /contact and /about (Brandt's W29 ruling); no factual content changed",
+    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
     "verified_at": "2026-10-13",
     "sources": [],
     "spec": null,
@@ -643,9 +643,9 @@
     "claims": "a44bf4a3d9403aa0"
   },
   "guides/rv-pre-trip-walkaround.html": {
-    "hash": "3dbccb1ee738a0b0",
+    "hash": "c2d7b6298a0fe633",
     "status": "verified",
-    "verified_by": "Cloud 2026-10-13: added the closing page-foot line linking /contact and /about (Brandt's W29 ruling); no factual content changed",
+    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
     "verified_at": "2026-10-13",
     "sources": [],
     "spec": null,
@@ -653,9 +653,9 @@
     "claims": []
   },
   "guides/rv-propane-furnace-wont-light.html": {
-    "hash": "742adfa7d3f5369f",
+    "hash": "554a797eac65385d",
     "status": "verified",
-    "verified_by": "Cloud 2026-10-13: added the closing page-foot line linking /contact and /about (Brandt's W29 ruling); no factual content changed",
+    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
     "verified_at": "2026-10-13",
     "sources": [],
     "spec": null,
@@ -663,9 +663,9 @@
     "claims": "7633b08b24580839"
   },
   "guides/rv-refrigerator-not-cooling.html": {
-    "hash": "d988594b9a08af7d",
+    "hash": "45ff8a19b982918f",
     "status": "verified",
-    "verified_by": "Cloud 2026-10-13: added the closing page-foot line linking /contact and /about (Brandt's W29 ruling); no factual content changed",
+    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
     "verified_at": "2026-10-13",
     "sources": [],
     "spec": "_specs/rv-refrigerator-not-cooling.md",
@@ -673,9 +673,9 @@
     "claims": "766d76473220c008"
   },
   "guides/rv-roof-leak-repair.html": {
-    "hash": "5ffb03f9696ffaa6",
+    "hash": "be6bdf0854e0ab86",
     "status": "verified",
-    "verified_by": "Cloud 2026-10-13: added the closing page-foot line linking /contact and /about (Brandt's W29 ruling); no factual content changed",
+    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
     "verified_at": "2026-10-13",
     "sources": [],
     "spec": "_specs/rv-roof-leak-repair.md",
@@ -683,9 +683,9 @@
     "claims": "39cbfa3d61716c6a"
   },
   "guides/rv-sewer-smell.html": {
-    "hash": "6da05131955026f1",
+    "hash": "b254bf7357eeb9d2",
     "status": "verified",
-    "verified_by": "Cloud 2026-10-13: added the closing page-foot line linking /contact and /about (Brandt's W29 ruling); no factual content changed",
+    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
     "verified_at": "2026-10-13",
     "sources": [],
     "spec": null,
@@ -693,9 +693,9 @@
     "claims": "ab37936352b3b705"
   },
   "guides/rv-slide-out-leaking.html": {
-    "hash": "fe5302bfc0202434",
+    "hash": "93522191996f72c6",
     "status": "verified",
-    "verified_by": "Cloud 2026-10-13: added the closing page-foot line linking /contact and /about (Brandt's W29 ruling); no factual content changed",
+    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
     "verified_at": "2026-10-13",
     "sources": [],
     "spec": null,
@@ -703,9 +703,9 @@
     "claims": "c78a8031f12fba7c"
   },
   "guides/rv-slide-out-not-working.html": {
-    "hash": "853a69ddcb48d3e5",
+    "hash": "c82c75603975dcfc",
     "status": "verified",
-    "verified_by": "Cloud 2026-10-13: added the closing page-foot line linking /contact and /about (Brandt's W29 ruling); no factual content changed",
+    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
     "verified_at": "2026-10-13",
     "sources": [],
     "spec": "_specs/rv-slide-out-not-working.md",
@@ -713,9 +713,9 @@
     "claims": "8557baaf9b567d43"
   },
   "guides/rv-solar-not-charging.html": {
-    "hash": "45be112e00d42376",
+    "hash": "4e1c38c974af99c6",
     "status": "verified",
-    "verified_by": "Cloud 2026-10-13: added the closing page-foot line linking /contact and /about (Brandt's W29 ruling); no factual content changed",
+    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
     "verified_at": "2026-10-13",
     "sources": [],
     "spec": "_specs/rv-solar-not-charging.md",
@@ -723,9 +723,9 @@
     "claims": "8bcd90bd498e17c5"
   },
   "guides/rv-tank-sensors-reading-wrong.html": {
-    "hash": "0da6002e0b43c1e7",
+    "hash": "426cf8eb625457a2",
     "status": "verified",
-    "verified_by": "sweep of Ty's 2026-10-13 W19 dictate: the prevention heading 'Dump when the tank is mostly full' becomes 'nearly full'. Heading only; no factual change.",
+    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
     "verified_at": "2026-10-13",
     "sources": [],
     "spec": "_specs/rv-tank-sensors-reading-wrong.md",
@@ -733,9 +733,9 @@
     "claims": "7d8c50b92e428a6c"
   },
   "guides/rv-tire-replacement.html": {
-    "hash": "950a9976414662a1",
+    "hash": "9bed6e33f08f481a",
     "status": "verified",
-    "verified_by": "Cloud 2026-10-13: added the closing page-foot line linking /contact and /about (Brandt's W29 ruling); no factual content changed",
+    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
     "verified_at": "2026-10-13",
     "sources": [],
     "spec": "_specs/rv-tire-replacement.md",
@@ -743,9 +743,9 @@
     "claims": "12f7a8379a3ca6a4"
   },
   "guides/rv-toilet-not-flushing.html": {
-    "hash": "ca185b1d49657f16",
+    "hash": "4928167373b5e86b",
     "status": "verified",
-    "verified_by": "Cloud 2026-10-13: added the closing page-foot line linking /contact and /about (Brandt's W29 ruling); no factual content changed",
+    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
     "verified_at": "2026-10-13",
     "sources": [],
     "spec": "_specs/rv-toilet-not-flushing.md",
@@ -753,9 +753,9 @@
     "claims": "503f760523fe0f1b"
   },
   "guides/rv-towing-capacity.html": {
-    "hash": "f340c9da5a6e1afd",
+    "hash": "a1529439029f134e",
     "status": "verified",
-    "verified_by": "Cloud 2026-10-13: added the closing page-foot line linking /contact and /about (Brandt's W29 ruling); no factual content changed",
+    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
     "verified_at": "2026-10-13",
     "sources": [],
     "spec": "_specs/rv-towing-capacity.md",
@@ -763,9 +763,9 @@
     "claims": "40a93ee5e783a93f"
   },
   "guides/rv-towing-trailer.html": {
-    "hash": "57b8e09ebc61ad9d",
+    "hash": "83df7821735727c4",
     "status": "verified",
-    "verified_by": "Cloud 2026-10-13: added the closing page-foot line linking /contact and /about (Brandt's W29 ruling); no factual content changed",
+    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
     "verified_at": "2026-10-13",
     "sources": [],
     "spec": null,
@@ -773,9 +773,9 @@
     "claims": []
   },
   "guides/rv-trailer-wheel-bearings.html": {
-    "hash": "50f8132b0fa97a4f",
+    "hash": "563c1897afedc790",
     "status": "verified",
-    "verified_by": "Cloud 2026-10-13: added the closing page-foot line linking /contact and /about (Brandt's W29 ruling); no factual content changed",
+    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
     "verified_at": "2026-10-13",
     "sources": [],
     "spec": "_specs/rv-trailer-wheel-bearings.md",
@@ -783,9 +783,9 @@
     "claims": "c0dc7a196a84dde6"
   },
   "guides/rv-trip-planner.html": {
-    "hash": "1f45fb157a32ebe1",
+    "hash": "98be29256538b930",
     "status": "verified",
-    "verified_by": "Cloud 2026-10-13: added the closing page-foot line linking /contact and /about (Brandt's W29 ruling); no factual content changed",
+    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
     "verified_at": "2026-10-13",
     "sources": [],
     "spec": null,
@@ -793,9 +793,9 @@
     "claims": []
   },
   "guides/rv-two-appliances-stopped.html": {
-    "hash": "0b8d821b071af284",
+    "hash": "85819d5bb4467436",
     "status": "verified",
-    "verified_by": "Cloud 2026-10-13: added the closing page-foot line linking /contact and /about (Brandt's W29 ruling); no factual content changed",
+    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
     "verified_at": "2026-10-13",
     "sources": [],
     "spec": null,
@@ -803,9 +803,9 @@
     "claims": "31f22570b89ad0eb"
   },
   "guides/rv-water-heater-anode-rod.html": {
-    "hash": "10039a164d610165",
+    "hash": "4570b8bdfcec19e4",
     "status": "verified",
-    "verified_by": "Cloud 2026-10-13: added the closing page-foot line linking /contact and /about (Brandt's W29 ruling); no factual content changed",
+    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
     "verified_at": "2026-10-13",
     "sources": [],
     "spec": null,
@@ -813,9 +813,9 @@
     "claims": []
   },
   "guides/rv-water-heater-not-heating.html": {
-    "hash": "cc18163c48c28c6d",
+    "hash": "07496912e3a8910f",
     "status": "verified",
-    "verified_by": "Cloud 2026-10-13: added the closing page-foot line linking /contact and /about (Brandt's W29 ruling); no factual content changed",
+    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
     "verified_at": "2026-10-13",
     "sources": [],
     "spec": "_specs/rv-water-heater-not-heating.md",
@@ -823,9 +823,9 @@
     "claims": "18cbb61bba603005"
   },
   "guides/rv-water-pump-wont-prime.html": {
-    "hash": "ebc5249e34c39568",
+    "hash": "d85dfd44da43b8d6",
     "status": "verified",
-    "verified_by": "Cloud 2026-10-13: added the closing page-foot line linking /contact and /about (Brandt's W29 ruling); no factual content changed",
+    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
     "verified_at": "2026-10-13",
     "sources": [],
     "spec": null,
@@ -833,9 +833,9 @@
     "claims": "34c240b69b94c574"
   },
   "guides/tires-winter.html": {
-    "hash": "5077c1ef6facb9f0",
+    "hash": "f0e515770d424022",
     "status": "verified",
-    "verified_by": "Cloud 2026-10-13: added the closing page-foot line linking /contact and /about (Brandt's W29 ruling); no factual content changed",
+    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
     "verified_at": "2026-10-13",
     "sources": [],
     "spec": "_specs/tires-winter.md",
@@ -843,9 +843,9 @@
     "claims": "afdbfd340b1ab1f0"
   },
   "guides/trailer-brakes-required.html": {
-    "hash": "2f46265a708bf357",
+    "hash": "88b6d1683a439092",
     "status": "verified",
-    "verified_by": "Cloud 2026-10-13: added the closing page-foot line linking /contact and /about (Brandt's W29 ruling); no factual content changed",
+    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
     "verified_at": "2026-10-13",
     "sources": [],
     "spec": "_specs/trailer-brakes-required.md",
@@ -853,9 +853,9 @@
     "claims": "7475218f762ec723"
   },
   "guides/winterize-plumbing.html": {
-    "hash": "9c83cca74a6f8270",
+    "hash": "5ecfa630c4dcec87",
     "status": "verified",
-    "verified_by": "Cloud 2026-10-13: added the closing page-foot line linking /contact and /about (Brandt's W29 ruling); no factual content changed",
+    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
     "verified_at": "2026-10-13",
     "sources": [],
     "spec": "_specs/winterize-plumbing.md",
@@ -987,9 +987,9 @@
     "sources": []
   },
   "tools/fuel-cost.html": {
-    "hash": "b772b406b931e757",
+    "hash": "d6f1dec0f6069735",
     "status": "verified",
-    "verified_by": "Cloud 2026-10-13: added the closing page-foot line linking /contact and /about (Brandt's W29 ruling); no factual content changed",
+    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
     "verified_at": "2026-10-13",
     "sources": [],
     "spec": null,
@@ -1011,9 +1011,9 @@
     "sources": []
   },
   "tools/rv-appliance-board-finder.html": {
-    "hash": "667a19d4602292a8",
+    "hash": "34653e89b04e25fd",
     "status": "verified",
-    "verified_by": "Cloud 2026-10-13: added the closing page-foot line linking /contact and /about (Brandt's W29 ruling); no factual content changed",
+    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
     "verified_at": "2026-10-13",
     "sources": [],
     "spec": null,
@@ -1031,9 +1031,9 @@
     "claims": []
   },
   "tools/rv-loan.html": {
-    "hash": "08138df2c92c4004",
+    "hash": "91dd895024277bcd",
     "status": "verified",
-    "verified_by": "Cloud 2026-10-13: added the closing page-foot line linking /contact and /about (Brandt's W29 ruling); no factual content changed",
+    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
     "verified_at": "2026-10-13",
     "sources": [],
     "spec": null,
@@ -1051,9 +1051,9 @@
     "claims": []
   },
   "tools/rv-toilet-valve.html": {
-    "hash": "8917d487caf697cc",
+    "hash": "f8d2bea82e58cde2",
     "status": "verified",
-    "verified_by": "Cloud 2026-10-13: added the closing page-foot line and a link to the toilet-not-flushing guide; no factual content changed",
+    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
     "verified_at": "2026-10-13",
     "sources": [],
     "spec": null,
@@ -1061,9 +1061,9 @@
     "claims": []
   },
   "tools/rv-water-filter.html": {
-    "hash": "cf7fad4cb8b695bb",
+    "hash": "037059896cd961ec",
     "status": "verified",
-    "verified_by": "Cloud 2026-10-13: added the closing page-foot line linking /contact and /about (Brandt's W29 ruling); no factual content changed",
+    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
     "verified_at": "2026-10-13",
     "sources": [],
     "spec": null,
@@ -1071,9 +1071,9 @@
     "claims": []
   },
   "tools/snow-load.html": {
-    "hash": "9f3d828ad70d53fa",
+    "hash": "6392c5f04ec6a986",
     "status": "verified",
-    "verified_by": "Cloud 2026-10-13: added the closing page-foot line linking /contact and /about (Brandt's W29 ruling); no factual content changed",
+    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
     "verified_at": "2026-10-13",
     "sources": [],
     "spec": null,
@@ -1088,9 +1088,9 @@
     "sources": []
   },
   "tools/tire-date-code.html": {
-    "hash": "4e079916f9e109b9",
+    "hash": "e69133cea516c4f7",
     "status": "verified",
-    "verified_by": "Cloud 2026-10-13: added the closing page-foot line linking /contact and /about (Brandt's W29 ruling); no factual content changed",
+    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
     "verified_at": "2026-10-13",
     "sources": [],
     "spec": null,
