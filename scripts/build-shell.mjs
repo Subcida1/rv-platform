@@ -194,6 +194,11 @@ function breadcrumbFor(rel, html) {
                rel.startsWith('tools/') || rel.startsWith('parts/') || rel === 'directory/index.html')) {
     crumbs.push({ name: head, href: null });
   }
+  // The three top-level pages get their crumb by name, not by H1: about's H1 is a sentence
+  // ("Built from inside an RV"), not a page name. Added 2026-10-14 (about/contact/privacy carried
+  // no visible crumb and no BreadcrumbList JSON-LD while all five hubs carried both).
+  const SIMPLE = { 'about.html': 'About', 'contact.html': 'Contact', 'privacy.html': 'Privacy' };
+  if (SIMPLE[rel]) crumbs.push({ name: SIMPLE[rel], href: null });
   if (crumbs.length < 2) return '';
 
   // THE MARKUP MATCHES THE STYLESHEET THAT WAS ALREADY THERE. `.crumbs` is already `display:flex`
