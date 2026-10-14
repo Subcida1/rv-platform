@@ -142,6 +142,33 @@ painted in the link colour. Both are regex-holdable.
   out the outlets downstream is a tripped GFCI or a loosened feed-through at an
   outlet feeding the rest.
 
+## Page 3 - `guides/rv-propane-furnace-wont-light.html` (rebuilt, not dictated)
+
+Ty did not dictate voice changes here. He read it and said rebuild it: *"All of this is written
+like its for a technician and makes hardly any sense even to me. Dumb the language way down
+here."* and *"11 inches water column is a term ive never even heard of? you mean psi? wtf is water
+column?"* and *"The whole guide is poor quality lets straight fresh on this one."*
+
+Seven rules came out of it, and they generalise past this page:
+
+| # | rule | class |
+|---|---|---|
+| 1 | write for an RV owner, never for a technician | NOTED |
+| 2 | explain an unfamiliar unit once, against a familiar one, then use it | NOTED |
+| 3 | a maker's name earns its place only when quoting their figure; otherwise it belongs in Sources | STRICT-able |
+| 4 | describe a system as a path a reader can picture, not as a spec sheet | NOTED |
+| 5 | give a sequence in order and use the order as the diagnostic | NOTED |
+| 6 | separate what an owner can do from what needs a technician, and say where the line is | NOTED |
+| 7 | correct folklore rather than repeating it, and say which claim you are correcting | NOTED |
+
+**On rule 2, the actual answer, because it will come up again.** Inches of water column is real and
+standard: 11 inches is about 0.4 psi, and the trade uses it because psi is too coarse at this
+scale. The failure was never the unit, it was that the page used it without ever saying so. The
+fix is one sentence against something the reader already knows, then the number.
+
+**Rule 3 measured:** the old page named a maker 30 times in the prose. The rebuild names them 0
+times, all in Sources, and the guide reads better for it.
+
 ## The reader-benefit clause (Ty, 2026-10-13, the biggest one so far)
 
 "Say the thing here, which is why its RV related here. Just spit out the content."
