@@ -2340,3 +2340,16 @@ Seven items, verified against the page sources at tip `c9f8858`:
 - **Verified clean (Neo's list):** titles/metas/H1s/canonicals/base; card counts; no dashes/FFFD; voice PASS.
 
 Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok.
+
+## Neo manuals 9th rotation (2026-10-14, verified from the Cloud lane)
+
+Four items, verified against the page sources at tip `82f15ec`:
+
+- **Tool-link silo: CONFIRMED (extends the fd11d40 item).** Zero in-body /tools, /parts, /directory links on all 3; guides 5/4/2 (man-links). Queue the topic-matched tool links: water-and-plumbing -> /tools/rv-water-filter; kitchen-and-appliances -> /tools/rv-appliance-board-finder; heating-and-cooling -> no direct match (snow-load is roof-adjacent at best).
+- **Man-link lists: as designed.** The lists are generated from the `RELATED` mapping (`build-manuals-pages.py:134`, applied at :740); the current counts (5/4/2) match it exactly -- nothing drops links at render. A 9/8/6 tally is not reproducible from the current source (whole-page guide links are 23/22/20 across nav/menu/footer/man-links -- the earlier number likely counted a different scope).
+- **Houghton link: FINE (transient).** Re-verified: GET resolves 200 via the www redirect; the 502/500s were server-side flakiness (HEAD requests to the host also 500 intermittently). No fix.
+- **Sitemap: already answered (c882996).** 131 <loc> entries; the 124 is a `grep -c` line-count artifact (7 lines carry two locs). No drop, no regression.
+- **Dates: mechanism found and queued** (fd11d40) -- the generator never emits the date module.
+- **The 06:30 guides send: NOT RECEIVED on this lane.** The message window shows only system reminders; if a send went out, it did not land -- re-send it.
+
+Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok.
