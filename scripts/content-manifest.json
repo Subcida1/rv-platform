@@ -655,7 +655,7 @@
   "guides/rv-propane-furnace-wont-light.html": {
     "hash": "b3341172ad4a0ecc",
     "status": "verified",
-    "verified_by": "Ty 2026-10-14, corrections after reading the rebuild. The gas smell callout is proportionate now: you will smell propane in an RV and usually it means nothing, a whiff that clears is normal, and 911 is for a smell that persists after the coach has aired out. The sail switch is named as the usual cause ahead of the airflow problems. Five fluff clauses cut ('this is free', 'owner-level, and all of it free', 'the free checks come first', the pointer to the gas sections, and the selling in the cost section). Mud daubers marked as regional rather than universal. The lockout reset now says to wait fifteen to thirty seconds. Short cycling names a failing sail switch as well as airflow. The vent screen advice is corrected: the mesh size is what matters and plenty of owners run a coarse one, with the maker's blanket prohibition reported as what it is. The related guides block is rewritten, since it read as though the furnace caused carbon monoxide.",
+    "verified_by": "Ty 2026-10-14: the emphasis in the gas smell callout moves to the part that matters. 'You will smell propane in an RV from time to time, and usually it means nothing' loses its bold, and 'A smell that lingers, or one you notice when nothing has just lit, is not normal' takes it. Emphasis only; no wording change.",
     "verified_at": "2026-10-14",
     "sources": [],
     "spec": null,
