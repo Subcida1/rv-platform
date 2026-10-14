@@ -2423,3 +2423,17 @@ directly rather than left in the queue (commit `0cbb666`):
 
 Gates at the commit: verify.py ALL CHECKS PASSED; check-generated all 8 ok; check-prose 0 hits;
 cross-check 0 same-fact pairs; stamps 0 stale. The remaining queue sections stand for the session.
+
+## Neo guides appliance/water/tire/weight rotation (2026-10-14, verified from the Cloud lane)
+
+Five items, verified against the page sources at tip `8b63de2`:
+
+- **FAQ blocks without FAQPage JSON-LD: CONFIRMED** (23 Q/A across 5 pages; all carry Article + BreadcrumbList only). NOTE: the content-engine research (2026-09-23) found the FAQPage rich result was retired 2026-05-07 and gives no AI-citation lift -- so adding it is optional/cosmetic, not a search win. The Q/A blocks themselves stay (readers).
+- **Tool links: CONFIRMED.** tire-replacement links weight-calculator (2x) but never tire-date-code; generator-sizing, pin-weight-and-payload, toilet-not-flushing have zero in-body tools; anode-rod already links its tool. Queue the topic-matched additions.
+- **Related/Next coverage: CONFIRMED, and it is two different modules.** slide-out / generator-sizing / toilet-not-flushing carry the H2 "Related guides" block; anode-rod / tire-replacement / pin-weight carry the "Related:" buttons instead. Next: present on slide-out, anode-rod, pin-weight; absent on the other three. Queue: confirm intentional or wire one convention into the template.
+- **Silo: carried** (zero in-body /parts or /directory on all 6).
+- **tire-replacement title: the body hedges adequately.** It attributes the six-year rule to Goodyear explicitly in the short version, the main section and the FAQ; the title uses the common shorthand ("The 6 Year Rule") without attribution -- optional to add it.
+- **The 13:30 about run: reconciled** -- its reply landed (the fixes-applied report, `0cbb666`); the requires_approval transient is the sandbox's normal per-tool-call pattern.
+- **Verified clean (Neo's list):** H1s, titles/metas, canonicals, breadcrumbs, dates, callout separators, bylines/CTAs, voice PASS, factual spot-checks.
+
+Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok.
