@@ -463,9 +463,9 @@
     "claims": "f2c9a068f6c16e27"
   },
   "guides/rv-black-tank-routine.html": {
-    "hash": "034527001a1138ca",
+    "hash": "993c465880bd480f",
     "status": "verified",
-    "verified_by": "voice pass per Ty 2026-10-13 (W19 calibration): title gains 'how to', four-steps framing dropped, 'only' before the dump step, 'always' before the treat step, store step rewritten, the 'when something goes wrong' sentence cut",
+    "verified_by": "W19 calibration round 3 per Ty 2026-10-13: the Dump paragraph rewritten from scratch (valve stays closed and never left open, fill to nearly full, enough water with every flush that waste keeps moving); 'Factory tank sensors' softened to 'Most factory tank sensors' after verification showed external capacitive sensors also ship OEM on high-end coaches",
     "verified_at": "2026-10-13",
     "sources": [],
     "spec": null,
@@ -473,9 +473,9 @@
     "claims": []
   },
   "guides/rv-black-tank.html": {
-    "hash": "e1630dc786408efd",
+    "hash": "5451521c9573ba56",
     "status": "verified",
-    "verified_by": "Cloud 2026-10-13: added the closing page-foot line linking /contact and /about (Brandt's W29 ruling); no factual content changed",
+    "verified_by": "sweep of Ty's 2026-10-13 W19 dictate: 'dump when the tank is mostly full' becomes 'nearly full' in both places it appears (2). No factual change.",
     "verified_at": "2026-10-13",
     "sources": [],
     "spec": null,
@@ -723,9 +723,9 @@
     "claims": "8bcd90bd498e17c5"
   },
   "guides/rv-tank-sensors-reading-wrong.html": {
-    "hash": "91fbc7347667f7b0",
+    "hash": "0da6002e0b43c1e7",
     "status": "verified",
-    "verified_by": "Cloud 2026-10-13: added the closing page-foot line linking /contact and /about (Brandt's W29 ruling); no factual content changed",
+    "verified_by": "sweep of Ty's 2026-10-13 W19 dictate: the prevention heading 'Dump when the tank is mostly full' becomes 'nearly full'. Heading only; no factual change.",
     "verified_at": "2026-10-13",
     "sources": [],
     "spec": "_specs/rv-tank-sensors-reading-wrong.md",
