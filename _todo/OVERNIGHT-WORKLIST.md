@@ -2138,3 +2138,16 @@ Six findings, verified against `_data/parts.json`, the page sources, and the liv
 - **Sitemap: no drop.** 131 `<loc>` entries, stable at 131 across every recent commit (the "124" is a line-count artifact -- `grep -c` counts lines; 7 lines carry two locs). Guides section 48 = hub + 47 guides. One note: all 131 lastmods read 2026-10-11 -- the refresh (build-sitemap.py --write) is overdue and may want the content-not-touch rule the page dates just got (88ff797).
 
 Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok.
+
+## Neo 7th rotation -- directory Midwest slice (2026-10-13, verified from the Cloud lane)
+
+Six findings, verified against `_data/listings/*.json` and the page sources at tip `c882996`:
+
+- **Nine out-of-state area codes: all SOURCED, not ingest errors.** Every one carries a `phone_quote` verbatim from the business's own site: Hahn's 531-225-9930 ("Contact Us (531-225-9930)"); Campers Inn Davenport 603-642-5555 (chain line); AdventureLund 701-610-1499; 4 Seasons 910-650-1922; Great Adventure 570-994-5638 (its record documents coverage in BOTH the Black Hills and Raleigh NC); Phil's 817-301-2808; GK RV (224) 944 4418; RV Mobile Doc 910-998-3600; Roaming Rassier's 218-242-1863. Queued for the all-50-states phone audit as a FRESHNESS check (are the published numbers still current), not an error hunt.
+- **Verified fixed (Neo's #2):** "Free forever" gone from all 6 pages (grep 0); hub card totals match page numberOfItems (IA 32, MN 35, WI 46, NE 20, SD 31, ND 19); titles/metas/H1/canonicals clean.
+- **Withdrawn (Neo's #3):** the FAQ "Who do I call..." filter flag -- the button exists (JS-filtered). Recorded: never flag again.
+- **Carryovers (recorded, no action):** identical ~302ch lede + technician-guide/FAQ boilerplate across the six (site-wide thin-content pattern); region taxonomy mismatch ("west to east" intro vs AK/HI placement; "West" holds Mountain states).
+- **Both-rows (Neo's #5): ANSWERED -- once, with a both-tag.** The state page is region-organized (no separate mobile/centers sections); each listing renders once per region it serves, carrying a type tag ("Mobile and shop" for both-rows), and the CollectionPage JSON-LD lists each business once. The double-count exists only in the hub-card buckets (WI: 11 mobile + 12 both = 23; 23 center + 12 both = 35; 46 total) -- the known item awaiting Brandt's decision (exclusive buckets or label change).
+- **Phone dump (Neo's #6): ANSWERED -- no visible dump.** All 32 listing phones live only in the JSON-LD; the only visible phone-shaped string is the claim form's placeholder `(541) 555-0123`. The text extractor reads the JSON-LD.
+
+Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok.
