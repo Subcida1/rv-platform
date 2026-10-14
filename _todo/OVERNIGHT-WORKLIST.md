@@ -2125,3 +2125,16 @@ Five findings, verified against `_data/manuals.json` and the live hub at tip `20
 - **Hygiene verified clean** (1 H1, meta 152ch, canonical/base ok, no em dashes, no U+FFFD). No action.
 
 Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok; `check-prose.py` 0 strict hits.
+
+## Neo 7th rotation -- parts + sitemap (2026-10-13, verified from the Cloud lane)
+
+Six findings, verified against `_data/parts.json`, the page sources, and the live site at tip `cf95bba`:
+
+- **Lede counts (a definition choice, not an off-by-one).** 105 = 94 guide-linked + 11 doc-only, exactly the lede's stated definition ("a repair guide or the maker's own documentation"). The one card that definition excludes is "Inline water filter" (guide null, makers empty, tool `rv-water-filter`) -- the only tool-only card; 7 cards carry tool links. Decision: include tool links in the count (106 linked / 51 unlinked; copy becomes "...a repair guide, a tool, or the maker's own documentation") or keep 105 as written. Recommendation: include -- the reader's question is "does this card lead anywhere useful".
+- **Unlinked guides: 12 of 47 confirmed** (computed from the data; matches Neo's list exactly). Add card links for the clear matches: rv-water-heater-anode-rod -> "Water heater anode rod" (4th flag), rv-fridge-leveling -> "Refrigerator (absorption)", rv-black-tank + rv-black-tank-routine -> "Black tank", rv-two-appliances-stopped -> "Fuses"/"Converter and charger"; candidates: rv-pin-weight-and-payload, rv-roof-snow-load, rv-battery-winter-storage. Natural misses (no card subject): rv-driving-motorhome, rv-trip-planner, rv-maintenance-schedule, rv-pre-trip-walkaround.
+- **Heat pump tagline: SOURCED, confirmed.** Coleman-Mach FAQ: "an effective heat source, as long as outdoor temperatures are above 45 F", with the instruction to heat with the LP furnace below; their service manual (1976-299): the compressor shuts down below ~40 F. Both figures are on the card (does 45, fails 40) with both quotations and sources in the evidence block (commit 71359b6). The older "unstated" notes (HANDOFF-TOOL-SWEEP #5/#7) are superseded -- close them.
+- **Thin taglines (6, copy nits):** "sleeping" (Bed and mattress), "laundry on board" (Washer and dryer), "the coach's skin" (Body panels), "the coach's look" (Decals and graphics), "getting more gas" (Propane refill and exchange), "carries toys outside" (Bike and kayak carriers -- also the slangiest register).
+- **WebSite JSON-LD on /parts:** the 07:30 fix landed (shared @id + isPartOf reference); /parts still carries a full WebSite node while the tools and guides hubs do not, and the 11 manuals pages carry WebSite markup too. Align all with the hub-schema convention cleanup.
+- **Sitemap: no drop.** 131 `<loc>` entries, stable at 131 across every recent commit (the "124" is a line-count artifact -- `grep -c` counts lines; 7 lines carry two locs). Guides section 48 = hub + 47 guides. One note: all 131 lastmods read 2026-10-11 -- the refresh (build-sitemap.py --write) is overdue and may want the content-not-touch rule the page dates just got (88ff797).
+
+Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok.
