@@ -142,6 +142,25 @@ painted in the link colour. Both are regex-holdable.
   out the outlets downstream is a tripped GFCI or a loosened feed-through at an
   outlet feeding the rest.
 
+## The reader-benefit clause (Ty, 2026-10-13, the biggest one so far)
+
+"Say the thing here, which is why its RV related here. Just spit out the content."
+
+The clause that reads as AI-written is the one about the READER - why the fact is useful, what
+it costs them, why it deserves their attention - rather than about the thing. His
+counter-example is the shape to aim at: *"A ground fault outlet is not a fuse and it is not a
+breaker. It compares the current leaving on the hot wire with the current returning on the
+neutral."* All content, no zinger.
+
+**Not "which is why".** That connector carries mechanism, which is content, and I measured it
+first by mistake: 82 uses, and reporting that as the tic was wrong.
+
+Now a report-only rule in `check-prose.py` (`reader-benefit-clause`), with self-test cases.
+**38 hits, not yet swept.** The dominant shape is `"…worth knowing: <the content>"`, where the
+framing is the fluff and the colon clause is the content. Two of the 38 are correct prose and
+are why it is report-only: a *price* ("a tripped breaker costs nothing") and a *reason* ("the
+reason it is worth doing at the end of every season") are both content.
+
 ## The cross-reference rule is now a gate
 
 `scripts/check-crossrefs.py` runs in `ci.sh`, with its self-test beside it. It
