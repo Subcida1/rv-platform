@@ -2410,3 +2410,16 @@ Six items, verified against the page source at tip `ecd3fa5`:
 - **Verified clean (Neo's list):** title/meta/H1/canonical; sitemap 131 (guides 48, tools 15, directory 51, manuals 12); 47 guide slugs; counters 14/47/1942; in-body counts match baseline; canonical name; eyebrow retired; voice PASS.
 
 Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok.
+
+## APPLIED directly 2026-10-14 (the queue was not being consumed)
+
+The working session has been idle since 01:52, so two repeatedly-flagged fixes were applied
+directly rather than left in the queue (commit `0cbb666`):
+
+- **privacy.html: the false "Google map" clause is gone.** "Cookies come from Google Analytics."
+  (No embedded map exists anywhere -- verified three times.)
+- **about/contact/privacy now carry breadcrumbs** (visible "Home / About" etc. + BreadcrumbList
+  JSON-LD) via `build-shell.mjs`'s new SIMPLE mapping. All five hubs already had both.
+
+Gates at the commit: verify.py ALL CHECKS PASSED; check-generated all 8 ok; check-prose 0 hits;
+cross-check 0 same-fact pairs; stamps 0 stale. The remaining queue sections stand for the session.
