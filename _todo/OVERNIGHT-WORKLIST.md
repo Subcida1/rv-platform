@@ -2450,3 +2450,16 @@ Nine items, verified against the page sources at tip `742621f`:
 - **Unacknowledged runs: none.** Every rotation through this one has its reply in the lane; the three get_reply misses (tools 8-page, directory 8th, the 15:00 check-in) were all confirmed afterward.
 
 Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok.
+
+## Neo hubs 11th rotation (text-render cross-check) (2026-10-14, verified from the Cloud lane)
+
+Six items, verified against the page sources at tip `bee917b`:
+
+- **Guides hub "empty" sections: REFUTED.** The source carries cards in every section: Electrical 10, Heating 10, Water 7, **Body, slides and jacks 7**, Tires 9, **Winter storage 4** = 47 guide links, matching the 47 sitemap URLs. The card markup is identical across sections (`<a class="card guide-card">`), so the render's 36-card count is an extractor artifact (the missing 11 = exactly the two sections it dropped), not an empty section.
+- **Directory hub "empty" regions: REFUTED.** Every region has its cards: Pacific 3 (CA/OR/WA), West 8, Southwest 4 (AZ/NM/OK/TX), Midwest 9, Southeast 13, Northeast 11, Alaska and Hawaii 2 (AK/HI) = 50 states. Same artifact.
+- **Region order: carried, queued** (882b76e) -- AK/HI last vs the "west to east" intro.
+- **/parts title: REFUTED.** It reads "RV Parts List: Every Part of an RV | OriginRV" -- which carries the declared query "rv parts list" (set deliberately in decc5f0).
+- **Hub silos: carried, queued** (ab70955) -- manuals/directory/tools zero cross-links; /guides and /parts are the good examples.
+- **Verified clean (Neo's list):** tools 14+4 cards; manuals sums; no dashes/FFFD; canonical name; voice PASS.
+
+Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok.
