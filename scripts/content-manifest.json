@@ -463,9 +463,9 @@
     "claims": "f2c9a068f6c16e27"
   },
   "guides/rv-black-tank-routine.html": {
-    "hash": "7108f5da67dd30fb",
+    "hash": "33f503ee99abd994",
     "status": "verified",
-    "verified_by": "W19 calibration round 4 per Ty 2026-10-13: the full-hookup paragraph reworded on his text (valve should always stay closed at a full hookup; when left open, solids stay behind with too little water to carry them out)",
+    "verified_by": "W19 calibration round 5 per Ty 2026-10-13: the Treat section reworded on his text (properly treat after every dump; the two families of RV black tank products as different tools; any formaldehyde-based product left out of an RV black tank; the guide credits Jayco and Thetford directly). The toilet-guide link he dropped stays dropped until he says otherwise.",
     "verified_at": "2026-10-13",
     "sources": [],
     "spec": null,

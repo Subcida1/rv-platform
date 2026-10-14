@@ -74,3 +74,16 @@ Two facts this page settled that later pages will hit:
   fouled-tank advice and professional hydro-cleaning. Link into it; do not write
   a second page.
 
+Round five added five more, all NOTED:
+
+- lead the treat instruction with the action ("properly treat the tank after
+  every dump"), not with a dose ("dose the tank")
+- name the two families of RV black tank products, and say they are different
+  tools
+- "any formaldehyde-based product", not "a"
+- credit the sources directly in the sentence ("straight from Jayco's manual
+  and from Thetford")
+- he dropped the toilet-guide link, which was the only place on the page that
+  reached it. Link density is a real cost of a rewrite; worth a check that a
+  guide keeps at least the links it had.
+
