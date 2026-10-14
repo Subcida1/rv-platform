@@ -2366,3 +2366,20 @@ Neo's two new sources, verified and folded into the heat-pump item (extends c882
   - fails: ["no heat below the maker's cutoff", "reversing valve", "heat strip burned", "thermostat set wrong"]
   - evidence: keep the FAQ 45 F quote; add the 1976-529 quote (verified) + the Dometic 30/35 quote (with a Dometic-hosted source URL).
   - Then regenerate (build-parts-pages.py) + run the gates + commit.
+
+## Neo parts 10:30 rotation (2026-10-14, verified from the Cloud lane)
+
+Eight items + diagnostics, verified against the page sources at tip `8ed90b2`:
+
+- **Water-filter H1: REFUTED.** The page carries `<h1 class="lg">RV water filter finder</h1>` as the first block after the "Free tool" eyebrow. A render/extraction artifact.
+- **Callout jam: REFUTED.** Both guides carry the separator (`</span> <b>`); the `**` jam is the extractor's markdown conversion of `<b>`, recorded in HANDOFF-TOOL-SWEEP #3 (rendered gap 11px). No template bug.
+- **Heat-pump audit: one cutoff mention site-wide** -- the parts card (the AC guide cites a Coleman heat-pump manual in Sources but states no cutoff). The fix is the card alone; the exact brand-specific draft is queued (8ed90b2).
+- **Roof coating alias: CONFIRMED** -- "henry's tropi-cool" should be "Henry's Tropi-Cool". Queued.
+- **Chassis battery card: CONFIRMED** -- it links `/guides/rv-battery-not-charging`, and that guide has zero mentions of chassis/starting batteries. Queue: retarget or leave unlinked (subject-match discipline).
+- **Ladder naming: CONFIRMED** -- "Ladder and roof access" + "Roof cargo and ladders" overlap. Queue: rename the second to "Roof cargo carrier".
+- **Content-gap inventory: recorded** -- ~45 cards without a "How to fix it" link = the future troubleshooting-guide queue (prioritize by demand).
+- **/parts intro: REFUTED again** -- the intro (eyebrow + H1 + lede) is the first block in `<main>`; the filters follow it. (The flag was withdrawn at the 17:30 run.)
+- **Feedback line: REFUTED** -- rv-anode-rod, rv-water-filter and tire-date-code all carry "Something wrong here" (count 1 each).
+- **Recall overlap: intentional and cross-linked** -- the tool does the VIN lookup; /manuals/recalls explains where recalls/bulletins live and links the tool (2 references).
+
+Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok.
