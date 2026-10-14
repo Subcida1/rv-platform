@@ -463,9 +463,9 @@
     "claims": "f2c9a068f6c16e27"
   },
   "guides/rv-black-tank-routine.html": {
-    "hash": "993c465880bd480f",
+    "hash": "7108f5da67dd30fb",
     "status": "verified",
-    "verified_by": "W19 calibration round 3 per Ty 2026-10-13: the Dump paragraph rewritten from scratch (valve stays closed and never left open, fill to nearly full, enough water with every flush that waste keeps moving); 'Factory tank sensors' softened to 'Most factory tank sensors' after verification showed external capacitive sensors also ship OEM on high-end coaches",
+    "verified_by": "W19 calibration round 4 per Ty 2026-10-13: the full-hookup paragraph reworded on his text (valve should always stay closed at a full hookup; when left open, solids stay behind with too little water to carry them out)",
     "verified_at": "2026-10-13",
     "sources": [],
     "spec": null,
