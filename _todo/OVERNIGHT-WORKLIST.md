@@ -2206,3 +2206,23 @@ Nine findings, verified against the page sources, the live site, and the cited d
 - **Verified clean (Neo's list):** titles/metas/H1s/canonicals/breadcrumbs/base; zero em dashes/FFFD/AI-phrases; voice PASS; the loan math, VIN format, NWS figures, and 1,280 Wh all exact.
 
 Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok.
+
+## Neo 7th rotation -- hubs (2026-10-13, verified from the Cloud lane)
+
+Twelve items, verified against the page sources at tip `3297561`:
+
+- **/guides hub BreadcrumbList: CONFIRMED FIXED** (resolves the 07:30 finding).
+- **/parts lede: WITHDRAWN by Neo** -- 105/52 stands as-is (guide-or-maker-doc links); the 18:30 off-by-one note is closed, and the cf95bba queue item's "include tool links" recommendation is moot.
+- **/manuals hub 94/44 wording: already verified and queued** (cf95bba) -- both numbers correct under different definitions; the queued fix is "94 equipment makers" vs "44 RV brands". Still live in the source (5x "94 makers").
+- **Hub cross-link silos: CONFIRMED.** Main-only counts: tools hub 0 to everything else; directory hub 0; manuals hub 0 (11 manuals links only); guides hub 1 tools + 1 manuals, 0 to directory/parts/about/contact. (The parts hub is the best-connected: 94 guides + 7 tools.) Queue: a shared per-hub "where to go next" cross-link strip.
+- **/about BreadcrumbList: CONFIRMED missing** -- the other five hubs all carry one; /about is AboutPage only. Add for consistency.
+- **/guides hub title: CONFIRMED** (49ch, names 4 of 6 sections). Rebalance queued.
+- **/directory region order: already queued** (882b76e) -- AK/HI after Northeast vs the "west to east" intro.
+- **"Something is broken": refuted again (11th flag)** -- deliberate eyebrow (one of five); recorded in HANDOFF-TOOL-SWEEP #1. A one-line editorial change if Brandt wants it; not a defect.
+- **1942: verified real and generated** (homepage rotation) -- the sum of all 50 state files; `build-listings.py:517-526`. The /directory hub carries no total (confirmed); queue: surface one (optional).
+- **/parts WebSite @id: Neo's re-check says it reads correct** -- same-entity reference; no action unless identical blocks are wanted. (The 8th-rotation queue item is closed by this.)
+- **Directory card math: explained** -- mobile + centers - both = listings (CA 72+82-11=143, OR 32+18-5=45); the 10:30 double-count note is closed.
+- **/manuals numberOfItems: resolved/not-present** -- the CollectionPage carries none; the 17:30 item is closed.
+- **Verified clean (Neo's list):** voice PASS all 7, zero em dashes/FFFD, one H1 each, titles/metas in band, sitemap 131 stable, guides 48 (47+hub).
+
+Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok.
