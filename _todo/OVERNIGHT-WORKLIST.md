@@ -4569,3 +4569,12 @@ Ten items, verified against the page sources and the live site at tip `356cdf67`
 - **#10 mild carryover: CONFIRMED** — zero in-body /directory on the 3 system pages; zero /parts + /directory on recalls. Fold into the where-to-go-next strip work.
 
 Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok. CI green.
+
+## Neo hubs 13th rotation (2026-10-15, verified from the Cloud lane)
+
+Two findings, verified against the page sources at tip `356cdf67` (the run's reply hit max_tokens_exceeded; this is the re-queue):
+
+- **#1 "All 14 tools" in the desktop Tools nav dropdown: CONFIRMED (third flag).** `assets/js/site.js` line ~194, baked into **145 pages** by `build-shell.mjs`. The mobile menu has no aggregate line (six `mm-sub` links only), so only the desktop nav-group needs the edit. Queue: "All 15 tools" + re-run `build-shell.mjs`. The hub itself is already correct (ItemList 15, "Fifteen free RV tools").
+- **#2 guides hub bare ItemList: CONFIRMED.** `guides/index.html`'s first JSON-LD block is a bare `ItemList` (58 items, numberOfItems 58), while tools/manuals/directory wrap theirs in a `CollectionPage` with `mainEntity` (and parts has one as its second block). Queue: wrap it the same way — and note the generator: `sync-counts.py` (lines ~171-175) rewrites that block, so the wrapper must go in the generator too, with its `old` regex updated to match the new shape.
+
+**Verified clean (the run's record):** guides hub 58 cards = 58 sitemap guides; tools hub 15 cards = ItemList 15/15; manuals hub 11 = 11; directory hub 50 = 50; parts hub fully server-rendered with every numeric claim exact (210 cards, 9 systems, 129 with outbound links, 110 to /guides/, 81 unlinked, per-system counts 32/24/24/19/21/40/25/15/10 = 210); all 5 hubs one H1, canonicals, BreadcrumbList, zero dashes/FFFD, titles 39-55ch, metas 143-157, W29 footers and Where-to-go-next strips live; voice PASS on all five ledes.
