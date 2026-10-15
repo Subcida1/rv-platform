@@ -3070,3 +3070,20 @@ From the community scan's ranked list (1,004 titles; all four top gaps raised by
 | 7 | entry steps / doors / windows | 4 | **GAP** | Kwikee step faults, entry door latches and hinges, window seal replacement. Three guides mention steps; none explains a fault |
 
 Tonight's assignments from this list: awning (#1, conv-b71ff860), air conditioning (#2, conv-ff6725d2), propane (#3, conv-c145cc42).
+
+## Neo parts 14th rotation (2026-10-15, verified from the Cloud lane)
+
+Six items, verified against the page sources at tip `ad5ced03`. NOTE: Neo's audit ran at 02:30 PDT;
+batch E (`69304b24`) landed at 02:37 PDT, so several findings were fixed within minutes of the audit.
+
+- **#6 Lede off-by-one (3rd flag): STILL LIVE as a definition choice.** Current: 124 guide-or-makers / 86 unlinked; with tools 125/85. The one card the definition excludes is "Inline water filter" (tool-only). Queue: include tool links -> 125 linked / 85 unlinked, copy becomes "...a repair guide, a tool, or the maker's own documentation". Recommendation stands: include.
+- **#7 Heat pump: FIXED by batch E** (`69304b24`): the tagline now gives each maker's cutoff (Coleman-Mach near freezing; Dometic 30/35 F) with four quotes verified against their own documents. NOTE: the "card now has ZERO links" premise was wrong -- the card carries two maker-doc links (Coleman-Mach manuals library, Dometic documents database) at the audit tip and now.
+- **#8 Chassis battery: ANSWERED** -- the link was dropped deliberately (`a063eebc`), not retargeted: no guide anywhere mentions a battery isolator or boost switch; the old target (`rv-battery-not-charging`) is a coach-battery guide. The card joins the gap queue.
+- **#9 Anode rod: FIXED by batch E** -- now links `/guides/rv-water-heater-anode-rod` + `/tools/rv-anode-rod`.
+- **#10 Unlinked guides: 9 now** (was 11 at the audit tip). Batch E linked `rv-pin-weight-and-payload` (kingpin card) and `rv-water-heater-anode-rod`. Remaining: 3 want a SECOND guide on a card that already links a fitting one (`rv-black-tank-routine`, `rv-two-appliances-stopped`, `rv-fridge-leveling`) -- needs the renderer to carry two guides, or a ruling (recorded for Ty); 2 candidates (`rv-roof-snow-load`, `rv-battery-winter-storage`); 4 natural misses (`rv-driving-motorhome`, `rv-trip-planner`, `rv-maintenance-schedule`, `rv-pre-trip-walkaround`).
+- **#11 Thin taglines: 11 of 12 fixed by batch E; ONE remains** -- Countertops, "the work surface" (3 words). Queue: polish.
+- **#12 Coverage: matches.** Water now 16/24 (was 17) after the gravity-fill unlink. Tool links 8 cards; maker-doc links 47 cards. VERIFIED.
+- **CARRYOVER (card ids): FIXED by batch E** -- all 210 cards carry ids (`/parts/#part-hitch-coupler`).
+- **Verified clean (Neo's list):** title 45ch, meta 143ch, one H1, canonical, base href, zero em dashes, zero U+FFFD, voice PASS.
+
+Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok; `test-parts.py` all checks passed (210 cards, 210 ids). CI green.
