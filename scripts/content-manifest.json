@@ -1000,9 +1000,9 @@
     "claims": []
   },
   "tools/index.html": {
-    "hash": "b145494201e2f115",
+    "hash": "5a0880443894dfc8",
     "status": "verified",
-    "verified_by": "conductor assignment 2026-10-15: the tools hub's meta, og, twitter and JSON-LD descriptions all still said the weight calculator was the only live tool and 'more in development'. All four now name the fourteen tools that exist, with the number read from site_constants rather than typed. No other content changed.",
+    "verified_by": "the state brake tool is the fifteenth: the hub description now says fifteen in all four places, and the JSON-LD ItemList enumerates it at position 15 with numberOfItems 15. Built on the conductor's pass that made those four descriptions name the tools that exist.",
     "verified_at": "2026-10-15",
     "sources": [],
     "spec": null,
@@ -1095,6 +1095,16 @@
     "verified_by": null,
     "verified_at": null,
     "sources": []
+  },
+  "tools/state-trailer-brake-laws.html": {
+    "hash": "23aefd32949bd9c6",
+    "status": "verified",
+    "verified_by": "new tool: the state trailer brake table. Every threshold is quoted from the state's own vehicle code with the section named and linked; three states are quoted from a state agency page because their code host is a JavaScript app or anti-bot walled, and each of those rows says so. No guessed limits.",
+    "verified_at": "2026-10-15",
+    "sources": [],
+    "spec": null,
+    "spec_waived": true,
+    "claims": []
   },
   "tools/tire-date-code.html": {
     "hash": "58de4954a42a0eed",

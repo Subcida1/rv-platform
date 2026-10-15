@@ -53,6 +53,7 @@ window.RV_CONFIG = {
  toolTireAge: 'tools/tire-date-code',
  toolLoan: 'tools/rv-loan',
  toolBattery: 'tools/battery-runtime',
+ toolBrakeLaws: 'tools/state-trailer-brake-laws',
  guides: 'guides/',
  guideWinterize: 'guides/winterize-plumbing',
  guideBattery: 'guides/battery-winter-storage',

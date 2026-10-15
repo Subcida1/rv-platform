@@ -329,7 +329,8 @@
   "guides/rv-fridge-leveling.html": "rv fridge leveling",
   "guides/rv-driving-motorhome.html": "how to drive a motorhome",
   "guides/rv-towing-trailer.html": "how to tow a travel trailer",
-  "guides/rv-maintenance-schedule.html": "rv maintenance schedule"
+  "guides/rv-maintenance-schedule.html": "rv maintenance schedule",
+  "tools/state-trailer-brake-laws.html": "trailer brake laws by state"
  },
  "accepted": {
   "guides/rv-refrigerator-not-cooling.html": "The title says 'fridge' and the h1 says 'refrigerator'. Both are the page's subject and both are words a reader would type; the divergence is emphasis, not a mistake. Accepted 2026-10-06.",

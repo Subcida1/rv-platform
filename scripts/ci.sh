@@ -114,6 +114,11 @@ step "a reference to our own content carries a link" \
                                                python3 scripts/check-crossrefs.py
 # ---------------------------------------------------------------- 2. behaviour
 step "weight calculator"                       node scripts/test-weight-calculator.js
+# The state brake table is a reference, and the thing that makes it worth having is that every
+# threshold is quoted from the state's own code with the section named. A guessed limit is the one
+# failure it cannot afford, so the test is mostly about what the page is NOT allowed to print.
+step "state trailer brake laws"                node scripts/test-state-brake-laws.js
+step "brake laws data matches the record"      python3 scripts/build-brake-laws-data.py --check
 # A HUNDRED SETUPS, CHECKED AGAINST A SECOND IMPLEMENTATION. The suite above pins the
 # behaviour of individual rules; this one runs the whole calculator over 100 real-world
 # vehicle and trailer combinations and compares every rendered row against arithmetic
