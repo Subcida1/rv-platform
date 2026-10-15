@@ -4449,3 +4449,22 @@ Also fixed while testing: the `--body` help did not say the `.sec prose` / `.wra
 **DEPLOY NOTE:** the live site has not caught up — **two Pages builds were cancelled in the push churn**, so the deployed page still shows the old table and the old record. The commit is right (`origin/main` carries `table-scroll` and Delaware as `speed`); a watch is armed. **Third time tonight a cancelled build has looked like a failed push.**
 
 **CORRECTION — THE DEPLOY LANDED (conv-8e8a0028, 05:55 PDT).** The "deploy has not caught up" note was a **two-minute window, not a stuck build** — the cancelled runs were superseded by a later one that succeeded, and the watch caught it. Live now, read off the deployed files: the `table-scroll` wrapper present; the live record's shapes are **exception, inspection, none, performance, requirement, speed** — six, no `conditional`; **Delaware is `speed`**; 50 states, coverage 50 of 51, Mississippi still the one out. **Both brake-tool fixes are live and the page is done.**
+
+**THE LAST PAGE OF THE NIGHT — `79fd7f50` (conv-095eb8fd). Both findings applied, and the review's unfinished step held a real defect.**
+
+**F1 applied:** "Winnebago, which builds both sides" → "which wires both sides".
+
+**THE FORD FUSE CHART: CLOSING IT FOUND THE PAGE WRONG.** The reviewer recorded those two entries as "corroborated through the document's own indexed content rather than a direct read" and left the step open — exactly right. The drafter had the manual extracted on disk from the research pass and read the table directly:
+```
+fuse 29   10 A   "Alternator 1 A-line"     correct as published
+fuse 30   —      "Not used"                the page said it protects "Battery and Charging System"
+```
+**"Battery and Charging System" is the heading of the INFORMATION MESSAGES table** that the "Check Charging System" message lives under — **not a fuse position.** The 2017 manual agrees: fuses 29 and 30 both read "Not used" there. The page now states the fuse that exists and says separately where the message lives, which is the more useful shape anyway.
+
+**THE LESSON, AND IT IS THE SHARPEST OF THE NIGHT: "a claim 'corroborated, not read' is not corroborated."** The reviewer was not careless — they reached the document, could not finish it, said so plainly, and left the step open. What went wrong is upstream of them: **the page shipped with a claim whose only support was that the words appeared somewhere in the right document. The words appeared in a different table.** That is the same class as the mis-paired citations the quote checker was built for, one level up — **the document is right, the words are right, the pairing is wrong.**
+
+**F2 — recorded as a decision, not an omission.** No flag callout: the "What is not owner work" section names the three jobs the reader should not attempt and quotes the maker's warning about full power at the module's terminals. A flag on top would be belt and braces, and the section is the better treatment because it says *why*.
+
+**RULE 23, ADDED TO THE NIGHT'S LIST: a claim corroborated by finding the words somewhere in the right document is not corroborated — the pairing is the claim. Read the table the words are in, or record the step as open.**
+
+**ALL WORKSTREAMS ARE NOW CLOSED.** Every session's lane is done.
