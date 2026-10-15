@@ -7,14 +7,14 @@
     "sources": []
   },
   "about.html": {
-    "hash": "e0c310876c79fac9",
+    "hash": "910ba05411c56045",
     "status": "unverified",
     "verified_by": "2026-10-13 independent fresh-context review (subagent, separate context; same model as the drafter, so it is recorded for the findings and NOT as a strength claim, which is why the status stays unverified). SIX findings, NONE APPLIED, each refuted after reading the page. Four of them ask for the disclosure cards to be cut as 'sentences about the site': 'How the guides are put together' (each guide names the documents behind its claims and links them), 'Every tool is free.', 'The directory lists each business, where it works, and what it does.', 'The guides carry the date they were last checked.' Those cards are the page's disclosure content, not virtue claims, and the virtue claims were already cut from this page on 2026-10-11 (commit c8303c1f) -- what remains is method and liability text that an about page exists to state. A fifth asks for a flag-injury callout on the Liability and safety card; that card IS the site's liability disclosure (authored by the safety pass), it names no procedure, and a 'Can injure you' label on a disclaimer would restate the card's own sentence. The sixth ('Built from inside an RV' as site-centred voice) would remove the page's positioning. Rules 1, 2, 5 and 6 came back clean, and the reviewer confirmed the page's figures hold (48/48 guides carry a checked date, six years matches since-2020). SURFACED TO TY in the session report as an editorial call: if he wants the disclosure cards cut, they are his to cut.",
     "verified_at": null,
     "sources": []
   },
   "contact.html": {
-    "hash": "b45120e4565031c4",
+    "hash": "33844203e7295177",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -26,357 +26,357 @@
     "invalidated_at": "2026-09-23"
   },
   "directory/alabama.html": {
-    "hash": "0ee81aa367f2af1f",
+    "hash": "d3a450f5bb628b1c",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/alaska.html": {
-    "hash": "4b4b31b2c11902ae",
+    "hash": "8c38929ce2cbf3df",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/arizona.html": {
-    "hash": "4c1c25b306335da5",
+    "hash": "69babdab4cd5196a",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/arkansas.html": {
-    "hash": "f8609fbaf73e8b4b",
+    "hash": "86099d9266f2c295",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/california.html": {
-    "hash": "b8cd1948b8329964",
+    "hash": "1fb6f94ec0bd71f3",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/colorado.html": {
-    "hash": "0f60349426d8b2cb",
+    "hash": "9e4d4310645f8c47",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/connecticut.html": {
-    "hash": "21f4f8aca7c306ce",
+    "hash": "a669c41dba6b0276",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/delaware.html": {
-    "hash": "71a850fe485f6753",
+    "hash": "280598183fe260af",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/florida.html": {
-    "hash": "38d26dc07d570096",
+    "hash": "0f8efa02eb0533e0",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/georgia.html": {
-    "hash": "3133ffa398f08a27",
+    "hash": "5a22d968dcba8479",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/hawaii.html": {
-    "hash": "79ce73fa675dd1ef",
+    "hash": "56e80ae34a480a18",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/idaho.html": {
-    "hash": "20c23c7766b9602a",
+    "hash": "022cb2e076af9ffc",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/illinois.html": {
-    "hash": "20f8bb1562250015",
+    "hash": "79eda8768bf0b43b",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/index.html": {
-    "hash": "830e82de77ef195b",
+    "hash": "02f77b58b61d51ae",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/indiana.html": {
-    "hash": "d4ebebd5bb0ad2cd",
+    "hash": "93debb952e31d5a3",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/iowa.html": {
-    "hash": "3daf497f6d7b3548",
+    "hash": "fc5327e0dff254de",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/kansas.html": {
-    "hash": "bed5dd1a9e46b111",
+    "hash": "34d2cf48037b481a",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/kentucky.html": {
-    "hash": "853dfdef986d2df4",
+    "hash": "866f7eb30abfa3bc",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/louisiana.html": {
-    "hash": "fc48a0c0525b7150",
+    "hash": "87e218a73adb8a0e",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/maine.html": {
-    "hash": "d4a99e99f0931a19",
+    "hash": "737861a8847b72a4",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/maryland.html": {
-    "hash": "29d9ce95ea60c4c8",
+    "hash": "fc66f07d43c6ad10",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/massachusetts.html": {
-    "hash": "513c099b7a1fe13e",
+    "hash": "60ff2826d669419a",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/michigan.html": {
-    "hash": "3155ca8583bc5d0a",
+    "hash": "96620128f30eda00",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/minnesota.html": {
-    "hash": "7b56f8b172175e5a",
+    "hash": "654faac08f33d299",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/mississippi.html": {
-    "hash": "24b2f74c71dbfdf3",
+    "hash": "63b94691345db974",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/missouri.html": {
-    "hash": "e2b09e2ed048ff14",
+    "hash": "cd1d5e3e561bfc00",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/montana.html": {
-    "hash": "1d42a755b577b63f",
+    "hash": "d6c29e17976de5f7",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/nebraska.html": {
-    "hash": "32fdf9de1a62deba",
+    "hash": "727a8d78e1351e29",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/nevada.html": {
-    "hash": "b969f1e23f259c44",
+    "hash": "5f931c64af45bbca",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/newhampshire.html": {
-    "hash": "dcaf0eb65c7a28b9",
+    "hash": "3dd9e645d77355a4",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/newjersey.html": {
-    "hash": "5e52cef7d9b3c9d8",
+    "hash": "de69dad526317ee5",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/newmexico.html": {
-    "hash": "bcb37e4b72493aea",
+    "hash": "c041637fc75ee3c5",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/newyork.html": {
-    "hash": "2a24790e308cda92",
+    "hash": "de6c1ee2587dd19d",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/northcarolina.html": {
-    "hash": "4128b64dbc648899",
+    "hash": "0946ad6158068233",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/northdakota.html": {
-    "hash": "646a31e5377e0c68",
+    "hash": "63fd2dbebf23a851",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/ohio.html": {
-    "hash": "0341859d088bfea9",
+    "hash": "cd25f3e09374e0e1",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/oklahoma.html": {
-    "hash": "5de4fa9bff727419",
+    "hash": "fddf7daa8d03df8f",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/oregon.html": {
-    "hash": "c86ae9bdcf3f8abe",
+    "hash": "3b821a79bf8bc34f",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/pennsylvania.html": {
-    "hash": "bda3d5cbe4aa9bf5",
+    "hash": "8217ce7499e14264",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/rhodeisland.html": {
-    "hash": "dc15ba714775b65d",
+    "hash": "ab86fb9be931826f",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/southcarolina.html": {
-    "hash": "2079c8f381ea43d2",
+    "hash": "95ad7c311cebaff7",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/southdakota.html": {
-    "hash": "f79a2a33f7d7c1af",
+    "hash": "8cc165b31e6466c4",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/tennessee.html": {
-    "hash": "5f787ad5803c4960",
+    "hash": "7715030e08f98da8",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/texas.html": {
-    "hash": "7e4a11aa065ba932",
+    "hash": "d63017255e82c4ba",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/utah.html": {
-    "hash": "22536f910942c85e",
+    "hash": "ff9c7bace6f0ac45",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/vermont.html": {
-    "hash": "b8057b0c891d850c",
+    "hash": "944880d9898ec330",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/virginia.html": {
-    "hash": "1ccda5cd80db619d",
+    "hash": "8ee41d9d22b3122f",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/washington.html": {
-    "hash": "6b74abe230dd360d",
+    "hash": "8a71622b1d045812",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/westvirginia.html": {
-    "hash": "2cdc55bbf9750862",
+    "hash": "087c480ff63d68e1",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/wisconsin.html": {
-    "hash": "e2dadaf146894b1a",
+    "hash": "103ccc7c0008c8ff",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/wyoming.html": {
-    "hash": "1870f2cfbfcc9897",
+    "hash": "daba13a4a8309c30",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -403,9 +403,9 @@
     "claims": "ca780a6dbc99c4d8"
   },
   "guides/index.html": {
-    "hash": "6867ddb3469634f8",
+    "hash": "843c113f69a6c2f1",
     "status": "verified",
-    "verified_by": "hub schema batch 2026-10-15: the /guides title was rebalanced from 'RV Guides: Towing, Troubleshooting, Winter, Tires' (49ch; named 4 of 6 sections and carried neither word of the hub's own target query) to 'RV Repair Guides: Electrical, Water, Towing and Winter' (54ch; carries the target query 'rv repair guides' and names four of the six sections). Title/og/twitter all changed together. No fact on the page changed.",
+    "verified_by": "new guide 2026-10-15: the awning guide's hub tile added under Body, slides and jacks. One tile, no other change to the page.",
     "verified_at": "2026-10-15",
     "sources": [],
     "spec": null,
@@ -441,6 +441,16 @@
     "spec": null,
     "spec_waived": true,
     "claims": "e65464526c5af869"
+  },
+  "guides/rv-awning-not-working.html": {
+    "hash": "55b9eb98f084adec",
+    "status": "verified",
+    "verified_by": "new page 2026-10-15: the duplicate page shell removed (the scaffolder emits page-intro, sec prose, wrap narrow and page-foot, and the body carried them too). Content unchanged.",
+    "verified_at": "2026-10-15",
+    "sources": [],
+    "spec": "_specs/rv-awning-not-working.md",
+    "spec_waived": false,
+    "claims": []
   },
   "guides/rv-battery-disconnect.html": {
     "hash": "147471d5f117d51d",
@@ -863,14 +873,14 @@
     "claims": "2c668bd9cf981fe7"
   },
   "index.html": {
-    "hash": "863ba468567fe2a9",
+    "hash": "69396b48250f0402",
     "status": "unverified",
     "verified_by": "2026-10-13 independent fresh-context review (subagent, separate context; same model as the drafter, recorded for the findings rather than as a strength claim, so the status stays unverified). Four findings. APPLIED: (1) the winter section said 'Five guides, one checklist each: plumbing, batteries, tires, roof and furnace' while the five cards under it are Winterize Your Plumbing, Battery Care in Cold, Tires Through Winter, Roof Under Snow Load and RV Froze -- there is no furnace guide in the winter set, so the sentence contradicted the grid on the same screen; it now ends 'roof and a frozen coach'; (2) 'The window seal and the bottom trim, per the makers' handed the guide's basis to an unnamed party, the class the site cuts -- the clause is dropped. REFUTED: 'The maker documents behind every part, linked at the source' is already recorded in _todo/W19-CALIBRATION-SET.md as one of five trust-claim sentences awaiting Ty's ruling, so it is not a session's call; and 'what the manuals say' describes the guide's coverage rather than attributing a fact, and was flagged UNSURE by the reviewer itself. Rule 1, 2, 3 and 5 came back clean, and the page's counts (14 tools, 47 guides, 1,942 businesses, 50 states) all reconcile against the data.",
     "verified_at": null,
     "sources": []
   },
   "manuals/brands.html": {
-    "hash": "ad4c6710484fcff3",
+    "hash": "1740496a4884dc99",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -891,21 +901,21 @@
     "sources": []
   },
   "manuals/heating-and-cooling.html": {
-    "hash": "43dde7c813f0995a",
+    "hash": "be5dd7b5a1274bdb",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "manuals/index.html": {
-    "hash": "ec882053d84f1737",
+    "hash": "32a93d31d6538ba8",
     "status": "unverified",
     "verified_by": "2026-10-13 independent fresh-context review (subagent, separate context; same model as the drafter, recorded for the findings rather than as a strength claim, so the status stays unverified). FIVE findings, none applied. Four are the 'linked at the source' family that _todo/W19-CALIBRATION-SET.md already records as ONE decision awaiting Ty's ruling ('Every row links the maker's own page or document.', its repeat in the 'need an account or a fee' card, 'The maker documents behind each part' in the nav, and 'Every system, linked at the maker' in the nav) -- a session does not rule on that cluster. The fifth, 'the federal file of manufacturer communications', is a source named without being named and is a candidate when that cluster is ruled on. Rules 1, 2, 3, 5 and 6 came back clean, and the reviewer verified every count against the data: 110 documents and libraries across 94 makers and 654 model lines, the eight tile sums (34+7+8+13+7+27+6+8 = 110), each 'and N more', 44 manufacturers from 1973 to 2027, numberOfItems 8, and the parts nav's 157.",
     "verified_at": null,
     "sources": []
   },
   "manuals/kitchen-and-appliances.html": {
-    "hash": "137089bb59946f21",
+    "hash": "4c8374d4ba6d20e5",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -919,7 +929,7 @@
     "sources": []
   },
   "manuals/recalls.html": {
-    "hash": "bb7d0d4f5aab7212",
+    "hash": "19792b298df31f90",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -933,7 +943,7 @@
     "sources": []
   },
   "manuals/start-here.html": {
-    "hash": "8549eb2e03fb8b74",
+    "hash": "fb4a68e6044e34e2",
     "status": "unverified",
     "verified_by": " CHANGED 2026-09-28: one sentence was attributed. It read \"The manual's limit is 30 PSI maximum\", an unnamed authority for a specific number, and read against the Furrion figure on the water-heater guide it looked like a contradiction. The number is Jayco's, which the winterising guide already says ('Jayco caps its system at 30 psi ... while Winnebago publishes 35 to 50 psi'), and the sentence now names Jayco and says the ceiling is the plumbing's rather than one number for every RV. The change was made in the page's generator, scripts/build-manuals-pages.py, and the page regenerated. No other text changed.",
     "verified_at": null,
@@ -952,21 +962,21 @@
     "sources": []
   },
   "manuals/water-and-plumbing.html": {
-    "hash": "7da7ba966fab386f",
+    "hash": "ac732592789941d1",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "parts/index.html": {
-    "hash": "713797b61c905ebf",
+    "hash": "33d526b34f9a46a3",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "privacy.html": {
-    "hash": "0e3dc1dfc23424b0",
+    "hash": "b86b3804abdde412",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -1090,7 +1100,7 @@
     "claims": []
   },
   "tools/solar-sizing.html": {
-    "hash": "b73145ec36c5abb1",
+    "hash": "32484eee9d76ea47",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -1117,7 +1127,7 @@
     "claims": "0236e49d3d18ccd8"
   },
   "tools/watts-to-amps.html": {
-    "hash": "42509c614ab5b97a",
+    "hash": "2d3d561cf06f0b23",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,

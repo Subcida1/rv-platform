@@ -187,7 +187,10 @@ def main():
     if a.slug in h:
         print("  hub: already linked")
     else:
-        tile = (f'<a class="card guide-card" href="guides/{a.slug}.html">\n'
+        # EXTENSIONLESS. The site moved to clean URLs on 2026-10-04 and clean-urls.py --check
+        # fails the build on a .html href, so a tile written with the suffix is a red gate rather
+        # than a style choice. This tool kept writing it until 2026-10-15.
+        tile = (f'<a class="card guide-card" href="guides/{a.slug}">\n'
                 f'  <div class="guide-ic">{a.icon}</div>\n  <div class="guide-body">\n'
                 f'  <div class="guide-title">{a.tile_title}</div>\n'
                 f'  <div class="guide-meta">{a.tile_meta}</div>\n  </div>\n  </a>\n')
@@ -198,11 +201,16 @@ def main():
         # the 44 tiles carry no such line. This tool was the only thing adding it, so six tiles it
         # built were the only six that had it.
         if a.hub_section:
-            anchor = f'<h2 class="guide-group">{a.hub_section}</h2>'
-            if anchor not in h:
+            # THE SECTION HEADING CARRIES AN id, so an exact match on the bare form misses all
+            # of them: the markup is <h2 class="guide-group" id="body-slides-and-jacks">Body,
+            # slides and jacks</h2>. Matched on the heading text with the id optional, which is
+            # what the page actually contains.
+            m = re.search(r'<h2 class="guide-group"(?: id="[^"]*")?>' + re.escape(a.hub_section)
+                          + r'</h2>', h)
+            if not m:
                 print(f"  hub: section '{a.hub_section}' NOT FOUND -- add the tile by hand")
             else:
-                i = h.index(anchor); j = h.index('<div class="guide-grid">', i)
+                i = m.start(); j = h.index('<div class="guide-grid">', i)
                 open_tag = '<div class="guide-grid">'
                 h = h[:j] + open_tag + "\n" + tile + h[j + len(open_tag):].lstrip("\n")
                 hub.write_text(h, encoding="utf-8")
@@ -216,12 +224,12 @@ def main():
     if a.slug in t:
         print("  homepage: already linked")
     else:
-        htile = (f'<a class="card guide-card" href="guides/{a.slug}.html">\n'
+        htile = (f'<a class="card guide-card" href="guides/{a.slug}">\n'
                  f'  <div class="guide-ic">{a.icon}</div>\n  <div class="guide-body">\n'
                  f'  <div class="guide-title">{a.tile_title}</div>\n'
                  f'  <div class="guide-meta">{a.tile_meta}</div>\n  </div>\n  </a>\n')
         if a.after:
-            m = re.search(r'<a class="card guide-card" href="guides/' + re.escape(a.after) + r'\.html">.*?</a>\n',
+            m = re.search(r'<a class="card guide-card" href="guides/' + re.escape(a.after) + r'">.*?</a>\n',
                           t, re.S)
             if not m:
                 print(f"  homepage: anchor guide '{a.after}' NOT FOUND -- add the tile by hand")
