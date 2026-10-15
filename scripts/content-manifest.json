@@ -393,9 +393,9 @@
     "claims": "178ec4da901263e8"
   },
   "guides/freeze-damage-triage.html": {
-    "hash": "9e3900970962b44a",
+    "hash": "66c602b80dd9aa0c",
     "status": "verified",
-    "verified_by": "guide endings unified, step 1 (Ty 2026-10-14, \"Your recommendation on all\"): these twelve guides carried BOTH a Related guides prose block and a button row pointing at the same pages. The duplicate buttons are gone; two prose blocks gained the one target their buttons had that the prose did not (solar not charging on the outlets guide, winterize plumbing on the roof leak guide); the converter finder survives as a button because a tool is an action. No link target was lost.",
+    "verified_by": "queued Neo guides-12th silo finding applied 2026-10-15: these eighteen guides linked nothing outside /guides/ -- no tool, no part, no manual, no directory. Each now names one topic-matched target in its Related guides block (a tool where the guide is about arithmetic, the parts page where it is about a part, the maker's manual section where it is about documents). No fact changed; no existing link removed.",
     "verified_at": "2026-10-14",
     "sources": [],
     "spec": "_specs/freeze-damage-triage.md",
@@ -433,9 +433,9 @@
     "claims": "f82066e98fbddabb"
   },
   "guides/rv-air-conditioner-not-cooling.html": {
-    "hash": "fb2311a0d4015993",
+    "hash": "703308aceca136af",
     "status": "verified",
-    "verified_by": "guide endings unified, step 2 (Ty 2026-10-14, \"Your recommendation on all\"): the thirty button-only guides now end with the same Related guides prose block the other seventeen use, because a sentence can say why the next page matters and a button can only repeat its title. Tool buttons survive as buttons, relabelled as actions rather than as relations. Every button target was checked against the prose before the row was removed; no link target was lost.",
+    "verified_by": "queued Neo guides-12th silo finding applied 2026-10-15: these eighteen guides linked nothing outside /guides/ -- no tool, no part, no manual, no directory. Each now names one topic-matched target in its Related guides block (a tool where the guide is about arithmetic, the parts page where it is about a part, the maker's manual section where it is about documents). No fact changed; no existing link removed.",
     "verified_at": "2026-10-14",
     "sources": [],
     "spec": null,
@@ -463,9 +463,9 @@
     "claims": "f2c9a068f6c16e27"
   },
   "guides/rv-black-tank-routine.html": {
-    "hash": "0f702818793021b1",
+    "hash": "98f10fbf9f359bc2",
     "status": "verified",
-    "verified_by": "guide endings unified, step 2 (Ty 2026-10-14, \"Your recommendation on all\"): the thirty button-only guides now end with the same Related guides prose block the other seventeen use, because a sentence can say why the next page matters and a button can only repeat its title. Tool buttons survive as buttons, relabelled as actions rather than as relations. Every button target was checked against the prose before the row was removed; no link target was lost.",
+    "verified_by": "queued Neo guides-12th silo finding applied 2026-10-15: these eighteen guides linked nothing outside /guides/ -- no tool, no part, no manual, no directory. Each now names one topic-matched target in its Related guides block (a tool where the guide is about arithmetic, the parts page where it is about a part, the maker's manual section where it is about documents). No fact changed; no existing link removed.",
     "verified_at": "2026-10-14",
     "sources": [],
     "spec": null,
@@ -473,9 +473,9 @@
     "claims": []
   },
   "guides/rv-black-tank.html": {
-    "hash": "bf066007f0e71b4f",
+    "hash": "c522cef68f5abf5a",
     "status": "verified",
-    "verified_by": "guide endings unified, step 2 (Ty 2026-10-14, \"Your recommendation on all\"): the thirty button-only guides now end with the same Related guides prose block the other seventeen use, because a sentence can say why the next page matters and a button can only repeat its title. Tool buttons survive as buttons, relabelled as actions rather than as relations. Every button target was checked against the prose before the row was removed; no link target was lost.",
+    "verified_by": "queued Neo guides-12th silo finding applied 2026-10-15: these eighteen guides linked nothing outside /guides/ -- no tool, no part, no manual, no directory. Each now names one topic-matched target in its Related guides block (a tool where the guide is about arithmetic, the parts page where it is about a part, the maker's manual section where it is about documents). No fact changed; no existing link removed.",
     "verified_at": "2026-10-14",
     "sources": [],
     "spec": null,
@@ -483,9 +483,9 @@
     "claims": []
   },
   "guides/rv-condensation-inside.html": {
-    "hash": "1e2d28a933813da7",
+    "hash": "6fa083a49ef81b5d",
     "status": "verified",
-    "verified_by": "guide endings unified, step 2 (Ty 2026-10-14, \"Your recommendation on all\"): the thirty button-only guides now end with the same Related guides prose block the other seventeen use, because a sentence can say why the next page matters and a button can only repeat its title. Tool buttons survive as buttons, relabelled as actions rather than as relations. Every button target was checked against the prose before the row was removed; no link target was lost.",
+    "verified_by": "queued Neo guides-12th silo finding applied 2026-10-15: these eighteen guides linked nothing outside /guides/ -- no tool, no part, no manual, no directory. Each now names one topic-matched target in its Related guides block (a tool where the guide is about arithmetic, the parts page where it is about a part, the maker's manual section where it is about documents). No fact changed; no existing link removed.",
     "verified_at": "2026-10-14",
     "sources": [],
     "spec": null,
@@ -503,9 +503,9 @@
     "claims": "9e753c5476a782bd"
   },
   "guides/rv-delamination.html": {
-    "hash": "54886ad204795d96",
+    "hash": "845c02f076cd1443",
     "status": "verified",
-    "verified_by": "guide endings unified, step 2 (Ty 2026-10-14, \"Your recommendation on all\"): the thirty button-only guides now end with the same Related guides prose block the other seventeen use, because a sentence can say why the next page matters and a button can only repeat its title. Tool buttons survive as buttons, relabelled as actions rather than as relations. Every button target was checked against the prose before the row was removed; no link target was lost.",
+    "verified_by": "queued Neo guides-12th silo finding applied 2026-10-15: these eighteen guides linked nothing outside /guides/ -- no tool, no part, no manual, no directory. Each now names one topic-matched target in its Related guides block (a tool where the guide is about arithmetic, the parts page where it is about a part, the maker's manual section where it is about documents). No fact changed; no existing link removed.",
     "verified_at": "2026-10-14",
     "sources": [],
     "spec": null,
@@ -513,9 +513,9 @@
     "claims": "d43bfcd7141b7c75"
   },
   "guides/rv-driving-motorhome.html": {
-    "hash": "2c29ffd9cd0aa56d",
+    "hash": "afa9a675d093311c",
     "status": "verified",
-    "verified_by": "guide endings unified, step 2 (Ty 2026-10-14, \"Your recommendation on all\"): the thirty button-only guides now end with the same Related guides prose block the other seventeen use, because a sentence can say why the next page matters and a button can only repeat its title. Tool buttons survive as buttons, relabelled as actions rather than as relations. Every button target was checked against the prose before the row was removed; no link target was lost.",
+    "verified_by": "queued Neo guides-12th silo finding applied 2026-10-15: these eighteen guides linked nothing outside /guides/ -- no tool, no part, no manual, no directory. Each now names one topic-matched target in its Related guides block (a tool where the guide is about arithmetic, the parts page where it is about a part, the maker's manual section where it is about documents). No fact changed; no existing link removed.",
     "verified_at": "2026-10-14",
     "sources": [],
     "spec": null,
@@ -523,9 +523,9 @@
     "claims": []
   },
   "guides/rv-fridge-leveling.html": {
-    "hash": "691fc97997998f6d",
+    "hash": "baaa56d571624a92",
     "status": "verified",
-    "verified_by": "guide endings unified, step 2 (Ty 2026-10-14, \"Your recommendation on all\"): the thirty button-only guides now end with the same Related guides prose block the other seventeen use, because a sentence can say why the next page matters and a button can only repeat its title. Tool buttons survive as buttons, relabelled as actions rather than as relations. Every button target was checked against the prose before the row was removed; no link target was lost.",
+    "verified_by": "queued Neo guides-12th silo finding applied 2026-10-15: these eighteen guides linked nothing outside /guides/ -- no tool, no part, no manual, no directory. Each now names one topic-matched target in its Related guides block (a tool where the guide is about arithmetic, the parts page where it is about a part, the maker's manual section where it is about documents). No fact changed; no existing link removed.",
     "verified_at": "2026-10-14",
     "sources": [],
     "spec": null,
@@ -533,9 +533,9 @@
     "claims": []
   },
   "guides/rv-furnace-carbon-monoxide.html": {
-    "hash": "0410417693007e9f",
+    "hash": "3df7cda79219ecee",
     "status": "verified",
-    "verified_by": "guide endings unified, step 2 (Ty 2026-10-14, \"Your recommendation on all\"): the thirty button-only guides now end with the same Related guides prose block the other seventeen use, because a sentence can say why the next page matters and a button can only repeat its title. Tool buttons survive as buttons, relabelled as actions rather than as relations. Every button target was checked against the prose before the row was removed; no link target was lost.",
+    "verified_by": "queued Neo guides-12th silo finding applied 2026-10-15: these eighteen guides linked nothing outside /guides/ -- no tool, no part, no manual, no directory. Each now names one topic-matched target in its Related guides block (a tool where the guide is about arithmetic, the parts page where it is about a part, the maker's manual section where it is about documents). No fact changed; no existing link removed.",
     "verified_at": "2026-10-14",
     "sources": [],
     "spec": null,
@@ -613,9 +613,9 @@
     "claims": "b42c5240ff3f3533"
   },
   "guides/rv-maintenance-schedule.html": {
-    "hash": "29267ac15567675b",
+    "hash": "5eb1bdb535e88383",
     "status": "verified",
-    "verified_by": "guide endings unified, step 2 (Ty 2026-10-14, \"Your recommendation on all\"): the thirty button-only guides now end with the same Related guides prose block the other seventeen use, because a sentence can say why the next page matters and a button can only repeat its title. Tool buttons survive as buttons, relabelled as actions rather than as relations. Every button target was checked against the prose before the row was removed; no link target was lost.",
+    "verified_by": "queued Neo guides-12th silo finding applied 2026-10-15: these eighteen guides linked nothing outside /guides/ -- no tool, no part, no manual, no directory. Each now names one topic-matched target in its Related guides block (a tool where the guide is about arithmetic, the parts page where it is about a part, the maker's manual section where it is about documents). No fact changed; no existing link removed.",
     "verified_at": "2026-10-14",
     "sources": [],
     "spec": null,
@@ -643,9 +643,9 @@
     "claims": "a44bf4a3d9403aa0"
   },
   "guides/rv-pre-trip-walkaround.html": {
-    "hash": "0e70fb36a2264936",
+    "hash": "65bf37a356cbc5c6",
     "status": "verified",
-    "verified_by": "guide endings unified, step 2 (Ty 2026-10-14, \"Your recommendation on all\"): the thirty button-only guides now end with the same Related guides prose block the other seventeen use, because a sentence can say why the next page matters and a button can only repeat its title. Tool buttons survive as buttons, relabelled as actions rather than as relations. Every button target was checked against the prose before the row was removed; no link target was lost.",
+    "verified_by": "queued Neo guides-12th silo finding applied 2026-10-15: these eighteen guides linked nothing outside /guides/ -- no tool, no part, no manual, no directory. Each now names one topic-matched target in its Related guides block (a tool where the guide is about arithmetic, the parts page where it is about a part, the maker's manual section where it is about documents). No fact changed; no existing link removed.",
     "verified_at": "2026-10-14",
     "sources": [],
     "spec": null,
@@ -663,9 +663,9 @@
     "claims": "7633b08b24580839"
   },
   "guides/rv-refrigerator-not-cooling.html": {
-    "hash": "19c5585115241894",
+    "hash": "c57e475244f9df0a",
     "status": "verified",
-    "verified_by": "guide endings unified, step 2 (Ty 2026-10-14, \"Your recommendation on all\"): the thirty button-only guides now end with the same Related guides prose block the other seventeen use, because a sentence can say why the next page matters and a button can only repeat its title. Tool buttons survive as buttons, relabelled as actions rather than as relations. Every button target was checked against the prose before the row was removed; no link target was lost.",
+    "verified_by": "queued Neo guides-12th silo finding applied 2026-10-15: these eighteen guides linked nothing outside /guides/ -- no tool, no part, no manual, no directory. Each now names one topic-matched target in its Related guides block (a tool where the guide is about arithmetic, the parts page where it is about a part, the maker's manual section where it is about documents). No fact changed; no existing link removed.",
     "verified_at": "2026-10-14",
     "sources": [],
     "spec": "_specs/rv-refrigerator-not-cooling.md",
@@ -693,9 +693,9 @@
     "claims": "ab37936352b3b705"
   },
   "guides/rv-slide-out-leaking.html": {
-    "hash": "52772fe41f5dc67b",
+    "hash": "3228c60ff04da875",
     "status": "verified",
-    "verified_by": "guide endings unified, step 2 (Ty 2026-10-14, \"Your recommendation on all\"): the thirty button-only guides now end with the same Related guides prose block the other seventeen use, because a sentence can say why the next page matters and a button can only repeat its title. Tool buttons survive as buttons, relabelled as actions rather than as relations. Every button target was checked against the prose before the row was removed; no link target was lost.",
+    "verified_by": "queued Neo guides-12th silo finding applied 2026-10-15: these eighteen guides linked nothing outside /guides/ -- no tool, no part, no manual, no directory. Each now names one topic-matched target in its Related guides block (a tool where the guide is about arithmetic, the parts page where it is about a part, the maker's manual section where it is about documents). No fact changed; no existing link removed.",
     "verified_at": "2026-10-14",
     "sources": [],
     "spec": null,
@@ -713,9 +713,9 @@
     "claims": "8557baaf9b567d43"
   },
   "guides/rv-solar-not-charging.html": {
-    "hash": "aa27782ca1d58d58",
+    "hash": "2cc65ebf512c3a66",
     "status": "verified",
-    "verified_by": "guide endings unified, step 1 (Ty 2026-10-14, \"Your recommendation on all\"): these twelve guides carried BOTH a Related guides prose block and a button row pointing at the same pages. The duplicate buttons are gone; two prose blocks gained the one target their buttons had that the prose did not (solar not charging on the outlets guide, winterize plumbing on the roof leak guide); the converter finder survives as a button because a tool is an action. No link target was lost.",
+    "verified_by": "queued Neo guides-12th silo finding applied 2026-10-15: these eighteen guides linked nothing outside /guides/ -- no tool, no part, no manual, no directory. Each now names one topic-matched target in its Related guides block (a tool where the guide is about arithmetic, the parts page where it is about a part, the maker's manual section where it is about documents). No fact changed; no existing link removed.",
     "verified_at": "2026-10-14",
     "sources": [],
     "spec": "_specs/rv-solar-not-charging.md",
@@ -723,9 +723,9 @@
     "claims": "8bcd90bd498e17c5"
   },
   "guides/rv-tank-sensors-reading-wrong.html": {
-    "hash": "a34f2ad2a1603143",
+    "hash": "f1c2c8c9b0e0c81b",
     "status": "verified",
-    "verified_by": "guide endings unified, step 2 (Ty 2026-10-14, \"Your recommendation on all\"): the thirty button-only guides now end with the same Related guides prose block the other seventeen use, because a sentence can say why the next page matters and a button can only repeat its title. Tool buttons survive as buttons, relabelled as actions rather than as relations. Every button target was checked against the prose before the row was removed; no link target was lost.",
+    "verified_by": "queued Neo guides-12th silo finding applied 2026-10-15: these eighteen guides linked nothing outside /guides/ -- no tool, no part, no manual, no directory. Each now names one topic-matched target in its Related guides block (a tool where the guide is about arithmetic, the parts page where it is about a part, the maker's manual section where it is about documents). No fact changed; no existing link removed.",
     "verified_at": "2026-10-14",
     "sources": [],
     "spec": "_specs/rv-tank-sensors-reading-wrong.md",
@@ -763,9 +763,9 @@
     "claims": "40a93ee5e783a93f"
   },
   "guides/rv-towing-trailer.html": {
-    "hash": "d9a9323b378f0c38",
+    "hash": "e42888173980caff",
     "status": "verified",
-    "verified_by": "guide endings unified, step 2 (Ty 2026-10-14, \"Your recommendation on all\"): the thirty button-only guides now end with the same Related guides prose block the other seventeen use, because a sentence can say why the next page matters and a button can only repeat its title. Tool buttons survive as buttons, relabelled as actions rather than as relations. Every button target was checked against the prose before the row was removed; no link target was lost.",
+    "verified_by": "queued Neo guides-12th silo finding applied 2026-10-15: these eighteen guides linked nothing outside /guides/ -- no tool, no part, no manual, no directory. Each now names one topic-matched target in its Related guides block (a tool where the guide is about arithmetic, the parts page where it is about a part, the maker's manual section where it is about documents). No fact changed; no existing link removed.",
     "verified_at": "2026-10-14",
     "sources": [],
     "spec": null,
@@ -783,9 +783,9 @@
     "claims": "c0dc7a196a84dde6"
   },
   "guides/rv-trip-planner.html": {
-    "hash": "08c8007424400002",
+    "hash": "6c76a42e4f165e47",
     "status": "verified",
-    "verified_by": "guide endings unified, step 2 (Ty 2026-10-14, \"Your recommendation on all\"): the thirty button-only guides now end with the same Related guides prose block the other seventeen use, because a sentence can say why the next page matters and a button can only repeat its title. Tool buttons survive as buttons, relabelled as actions rather than as relations. Every button target was checked against the prose before the row was removed; no link target was lost.",
+    "verified_by": "queued Neo guides-12th silo finding applied 2026-10-15: these eighteen guides linked nothing outside /guides/ -- no tool, no part, no manual, no directory. Each now names one topic-matched target in its Related guides block (a tool where the guide is about arithmetic, the parts page where it is about a part, the maker's manual section where it is about documents). No fact changed; no existing link removed.",
     "verified_at": "2026-10-14",
     "sources": [],
     "spec": null,
@@ -813,9 +813,9 @@
     "claims": []
   },
   "guides/rv-water-heater-not-heating.html": {
-    "hash": "07524039fa00938f",
+    "hash": "2df89d673d167ef0",
     "status": "verified",
-    "verified_by": "guide endings unified, step 2 (Ty 2026-10-14, \"Your recommendation on all\"): the thirty button-only guides now end with the same Related guides prose block the other seventeen use, because a sentence can say why the next page matters and a button can only repeat its title. Tool buttons survive as buttons, relabelled as actions rather than as relations. Every button target was checked against the prose before the row was removed; no link target was lost.",
+    "verified_by": "queued Neo guides-12th silo finding applied 2026-10-15: these eighteen guides linked nothing outside /guides/ -- no tool, no part, no manual, no directory. Each now names one topic-matched target in its Related guides block (a tool where the guide is about arithmetic, the parts page where it is about a part, the maker's manual section where it is about documents). No fact changed; no existing link removed.",
     "verified_at": "2026-10-14",
     "sources": [],
     "spec": "_specs/rv-water-heater-not-heating.md",
