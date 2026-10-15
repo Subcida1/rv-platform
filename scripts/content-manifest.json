@@ -33,7 +33,7 @@
     "sources": []
   },
   "directory/alaska.html": {
-    "hash": "8c38929ce2cbf3df",
+    "hash": "cd626c9c00c2925f",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -75,7 +75,7 @@
     "sources": []
   },
   "directory/delaware.html": {
-    "hash": "280598183fe260af",
+    "hash": "c9fc09d50a703f58",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -96,14 +96,14 @@
     "sources": []
   },
   "directory/hawaii.html": {
-    "hash": "56e80ae34a480a18",
+    "hash": "64c01ea47fc9833c",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/idaho.html": {
-    "hash": "022cb2e076af9ffc",
+    "hash": "6d9c5aef97e00281",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -117,7 +117,7 @@
     "sources": []
   },
   "directory/index.html": {
-    "hash": "02f77b58b61d51ae",
+    "hash": "1d10d8ed88c0d24d",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -159,7 +159,7 @@
     "sources": []
   },
   "directory/maine.html": {
-    "hash": "737861a8847b72a4",
+    "hash": "54d3ae61851e2759",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -173,7 +173,7 @@
     "sources": []
   },
   "directory/massachusetts.html": {
-    "hash": "60ff2826d669419a",
+    "hash": "afc4efd2878b26d2",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -236,14 +236,14 @@
     "sources": []
   },
   "directory/newjersey.html": {
-    "hash": "de69dad526317ee5",
+    "hash": "db27541eb36d7aaa",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/newmexico.html": {
-    "hash": "c041637fc75ee3c5",
+    "hash": "227fee28d115efdd",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -264,7 +264,7 @@
     "sources": []
   },
   "directory/northdakota.html": {
-    "hash": "63fd2dbebf23a851",
+    "hash": "a91bdbdb2497de6b",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -299,7 +299,7 @@
     "sources": []
   },
   "directory/rhodeisland.html": {
-    "hash": "ab86fb9be931826f",
+    "hash": "fbcb1710ebf0886d",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -341,7 +341,7 @@
     "sources": []
   },
   "directory/vermont.html": {
-    "hash": "944880d9898ec330",
+    "hash": "7c218a457f289aa0",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -362,7 +362,7 @@
     "sources": []
   },
   "directory/westvirginia.html": {
-    "hash": "087c480ff63d68e1",
+    "hash": "080d662aac95c320",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -376,7 +376,7 @@
     "sources": []
   },
   "directory/wyoming.html": {
-    "hash": "daba13a4a8309c30",
+    "hash": "36b3dd5b5220f150",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -403,9 +403,9 @@
     "claims": "ca780a6dbc99c4d8"
   },
   "guides/index.html": {
-    "hash": "843c113f69a6c2f1",
+    "hash": "bafaf4c236d15e76",
     "status": "verified",
-    "verified_by": "new guide 2026-10-15: the awning guide's hub tile added under Body, slides and jacks. One tile, no other change to the page.",
+    "verified_by": "new guide 2026-10-15: the propane detector guide's hub tile added under Heating, cooling, and appliances. One tile, no other change to the page.",
     "verified_at": "2026-10-15",
     "sources": [],
     "spec": null,
@@ -662,6 +662,13 @@
     "spec_waived": true,
     "claims": []
   },
+  "guides/rv-propane-detector-beeping.html": {
+    "hash": "8785c83732ad3ec3",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
+  },
   "guides/rv-propane-furnace-wont-light.html": {
     "hash": "1eef012643530849",
     "status": "verified",
@@ -873,7 +880,7 @@
     "claims": "2c668bd9cf981fe7"
   },
   "index.html": {
-    "hash": "69396b48250f0402",
+    "hash": "ecc1e479147f3bbf",
     "status": "unverified",
     "verified_by": "2026-10-13 independent fresh-context review (subagent, separate context; same model as the drafter, recorded for the findings rather than as a strength claim, so the status stays unverified). Four findings. APPLIED: (1) the winter section said 'Five guides, one checklist each: plumbing, batteries, tires, roof and furnace' while the five cards under it are Winterize Your Plumbing, Battery Care in Cold, Tires Through Winter, Roof Under Snow Load and RV Froze -- there is no furnace guide in the winter set, so the sentence contradicted the grid on the same screen; it now ends 'roof and a frozen coach'; (2) 'The window seal and the bottom trim, per the makers' handed the guide's basis to an unnamed party, the class the site cuts -- the clause is dropped. REFUTED: 'The maker documents behind every part, linked at the source' is already recorded in _todo/W19-CALIBRATION-SET.md as one of five trust-claim sentences awaiting Ty's ruling, so it is not a session's call; and 'what the manuals say' describes the guide's coverage rather than attributing a fact, and was flagged UNSURE by the reviewer itself. Rule 1, 2, 3 and 5 came back clean, and the page's counts (14 tools, 47 guides, 1,942 businesses, 50 states) all reconcile against the data.",
     "verified_at": null,
@@ -887,21 +894,21 @@
     "sources": []
   },
   "manuals/chassis-and-drivetrain.html": {
-    "hash": "d28b24bd09d257b0",
+    "hash": "9e10152d1bd161b9",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "manuals/exterior-and-body.html": {
-    "hash": "58fbf32914be6a9f",
+    "hash": "cdfb96bcdcbb4c72",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "manuals/heating-and-cooling.html": {
-    "hash": "be5dd7b5a1274bdb",
+    "hash": "e8ee1da91bf1ff00",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -915,14 +922,14 @@
     "sources": []
   },
   "manuals/kitchen-and-appliances.html": {
-    "hash": "4c8374d4ba6d20e5",
+    "hash": "056c11a5fd432421",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "manuals/power-and-electrical.html": {
-    "hash": "37eea9f6386f2935",
+    "hash": "48dac40a4cefd4c5",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -936,14 +943,14 @@
     "sources": []
   },
   "manuals/sanitation-and-tanks.html": {
-    "hash": "457fe9825211573a",
+    "hash": "e838932833d671fe",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "manuals/start-here.html": {
-    "hash": "fb4a68e6044e34e2",
+    "hash": "7ab66cea52d1fc48",
     "status": "unverified",
     "verified_by": " CHANGED 2026-09-28: one sentence was attributed. It read \"The manual's limit is 30 PSI maximum\", an unnamed authority for a specific number, and read against the Furrion figure on the water-heater guide it looked like a contradiction. The number is Jayco's, which the winterising guide already says ('Jayco caps its system at 30 psi ... while Winnebago publishes 35 to 50 psi'), and the sentence now names Jayco and says the ceiling is the plumbing's rather than one number for every RV. The change was made in the page's generator, scripts/build-manuals-pages.py, and the page regenerated. No other text changed.",
     "verified_at": null,
@@ -955,21 +962,21 @@
     "invalidated_at": "2026-09-26"
   },
   "manuals/towing-and-running-gear.html": {
-    "hash": "0ea5d96620a7eb59",
+    "hash": "60cc7d9c044d22a5",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "manuals/water-and-plumbing.html": {
-    "hash": "ac732592789941d1",
+    "hash": "bbef42c508769725",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "parts/index.html": {
-    "hash": "33d526b34f9a46a3",
+    "hash": "960bb72eff277b67",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -1100,7 +1107,7 @@
     "claims": []
   },
   "tools/solar-sizing.html": {
-    "hash": "32484eee9d76ea47",
+    "hash": "63777b0b2d368e65",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -1127,7 +1134,7 @@
     "claims": "0236e49d3d18ccd8"
   },
   "tools/watts-to-amps.html": {
-    "hash": "2d3d561cf06f0b23",
+    "hash": "530f1dce71d83a4e",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,

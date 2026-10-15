@@ -58,6 +58,7 @@
     "rv-maintenance-schedule": "planning-and-travel",
     "rv-water-heater-anode-rod": "water-and-plumbing",
     "rv-black-tank-routine": "sanitation-and-tanks",
-    "rv-awning-not-working": "roof-and-body"
+    "rv-awning-not-working": "roof-and-body",
+    "rv-propane-detector-beeping": "heating-and-cooling"
   }
 }
