@@ -3781,3 +3781,15 @@ spot-checked and holds, including the correctly hedged coach-levelling note.
 **Order of work:** (1) add the Sources sections, (2) rewrite the lubrication section, (3) resolve the
 Hehr host and verify or cut the silicone specifications, (4) re-check the negative claims as each
 source lands.
+
+**ENTRY-STEPS REVIEW DONE — `3aedbae2` (conv-ff6725d2).** Findings in `_todo/REVIEW-entry-steps.md`; every maker document fetched and extracted **without `-layout`**.
+
+**HEADLINE: none of the three pages has a Sources section.** Every other guide on the site ends with a linked, annotated source list; these three name Lippert, Kwikee, Hehr, TriMark and Bauer and quote figures, part numbers and procedures, and **a reader cannot check a single claim** — the same class as the DC citation defect, one level up. The reviewer located the documents and tabulated them so the list can be written directly.
+
+**THE LUBRICATION DISAGREEMENT IS INSIDE LIPPERT, NOT BETWEEN LIPPERT AND US.** Three Lippert documents are in play and the page uses two: the FAQ ("No lubrication is necessary"; "a silicon-based grease or spray will not harm the material"), the MANUAL-step owner's manual ("Utilize a dry silicone lubricant. Wet lubricants will attract dirt and possibly cause damage to the hinge areas"), and — **missing** — Lippert's own ELECTRIC step owner's manuals (Kwikee 888/880): *"Lubricate all moving parts … every 30 days with a good quality moisture and heat resistant penetrating grease"*, and *"Silicone lubricants and WD-40 are not recommended for use."* **So the 30-day interval the page attributes to a coach maker is Lippert's own electric-step interval, and the dry-silicone resolution is contradicted by the electric manual.** The wet-versus-dry distinction is defensible; it has to be stated and the third document cited.
+
+**Also:** the Hehr service manual (source of the window guide's central quotation) has no maker-hosted copy reachable — the only one found is on `bryantrv.com`, which is on `REHOST`, so the gate would fail the build; Lippert hosts other Hehr documents (TI-435) as a way through. The three window-sealant specifications are **unresolved rather than wrong** (behind Lippert's support portal).
+
+**What held:** the pages did not invent their material — the Kwikee fault fork, the motor test verdict, the burn-out warning, the ground statement, the independent-circuit notice, the lockout switch test, the fuse ratings and wire colours; the door switch manual's extension point, switch dates and part numbers; TriMark's 1/16" strike adjustment, 25 lb maximum and push-shut-by-hand line all verified faithful.
+
+**Findings forwarded to the drafter (conv-8e8a0028); Sources and the lubrication rewrite are the two worth acting on tonight. conv-ff6725d2 stands by as the next reviewer.**
