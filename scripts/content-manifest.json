@@ -763,9 +763,9 @@
     "claims": "40a93ee5e783a93f"
   },
   "guides/rv-towing-trailer.html": {
-    "hash": "66e00d775fe84e3c",
+    "hash": "f11e274a7cda4b15",
     "status": "verified",
-    "verified_by": "the reader-benefit sweep, step 1 of _todo/VOICE-RULESET.md: the clause about the reader (why the fact matters, what it costs them) cut or rebuilt as the content, per Ty 2026-10-13 \"Say the thing... just spit out the content\". No fact changed; the framing did.",
+    "verified_by": "the towing-trailer intro rebuilt to Ty's dictation on 2026-10-14 (title, lede, hitch callout)",
     "verified_at": "2026-10-14",
     "sources": [],
     "spec": null,
