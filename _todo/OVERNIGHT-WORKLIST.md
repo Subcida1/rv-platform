@@ -3099,3 +3099,16 @@ The lane itself works; every failure has been in the harness/prompt contract. Th
 **The general rule for any future bridge job: the prompt must contain (a) the `LANE:` routing header, (b) an explicit `outbox/REPLY-<job>.md` path, and (c) if the job needs file reads, an explicit `read_text_file` one-call-per-file instruction. A prompt missing any of the three is structurally uncapturable or unroutable, and the failure looks like a model failure when it is not.**
 
 Secondary observation from r3: only `page.html` was ever injected — all four `read_text_file` calls for `record.json` were dropped as duplicates, so the lane reviewed the page without the record. Fresh paths per attempt are what fix that.
+
+**BRAKE TOOL COMPLETE — 50 of 51 jurisdictions (`9d9cfede` + `b91ff37e`, `f95d55a9`, `deaf71bc`), 03:35 PDT.**
+
+Mississippi is the one jurisdiction deliberately out: the Legislature publishes only bills, the official publisher's free portal serves no text to anything but a browser, and no state agency page restates the section — every full-text copy reachable is an aggregator, which we do not cite. The page names it rather than leaving a silent gap. Second independent pass reached the same conclusion.
+
+**The spread the 19 added states produced:** Alaska triggers at 5,000 lb GVWR on the towed vehicle (the highest line in the table); Massachusetts sets no threshold below 10,000 lb UNLADEN; New York triggers at 1,000 lb unladen as well as 3,000 gross; Pennsylvania's 3,000 figure is the BREAKAWAY threshold, not a brake requirement; Delaware writes it as a speed limit; Kentucky joins the no-threshold group; Hawaii's rule sits in a periodic inspection requirement, so a trailer fails inspection rather than being illegal on the road.
+
+**THREE SOURCE SHAPES FOR FUTURE RESEARCH** (all found by hand-checking every quote):
+1. **`nysenate.gov` serves a Cloudflare challenge to the default headless user-agent** and loads fully with a real one — a curl fetch returns 403 and a 60-character shell, easy to mistake for "the state has no page".
+2. **New Jersey and DC publish through viewers that return no text at all**; both are quoted from the jurisdiction's own archive (NJ's statutes ZIP on pub.njleg.gov, DC's rule document on dcregs.dc.gov).
+3. **Alaska's regulation viewer is a JavaScript app, but the Legislature's own regulation service serves the text as JSON behind it.**
+
+**AND THE TEST LESSON, which CI caught twice in one session:** the tool's own check hardcoded Alaska as the unread state (it failed the moment Alaska was added, on a tool that was working correctly), then asserted the page contained the phrase "not been read" (it failed when the paragraph was rewritten to name Mississippi). The check now reads the missing jurisdictions out of the record and asserts the page NAMES them, negative-tested by deleting the paragraph. **A check that asserts on wording goes stale the moment the wording improves; assert on behaviour.**
