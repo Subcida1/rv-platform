@@ -2492,3 +2492,16 @@ Seven items, verified against `_data/parts.json` and the guides at tip `c8655e6`
 - **Verified clean (Neo's list):** all 110 internal links resolve; 46 external domains respond; voice/hygiene PASS.
 
 Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok.
+
+## Neo directory 10th rotation (Pacific + Southwest + Mountain slice) (2026-10-15, verified from the Cloud lane)
+
+Five items, verified against the data at tip `888ca03`:
+
+- **NM roadside over-claim: CONFIRMED.** 17 listings, 0 roadside-flagged, and the lede carries "Both are here, along with emergency roadside help..." -- the HI/DE pattern; extends the per-state lede variant item.
+- **Magic Wand (CA) 612: CONFIRMED, sourced** (phone_quote verbatim; 612 = Minnesota). Folded into the all-50 audit.
+- **Page's (OR) 208: CONFIRMED, and the record explains it** -- town reads "La Grande, from Nampa Idaho" (208 = Idaho, consistent). No phone_quote on the record -- noted for the audit.
+- **Carryovers: queued** (AZ/WA/OR/CO codes + the CA (840) invalid NANP on Foothill RV -- re-confirmed live).
+- **Thin-content + region taxonomy: queued.**
+- **Verified clean (Neo's list):** hub counts == numberOfItems all 7; both-bucket math; no dup rows; no placeholder towns; titles/metas/H1s/canonicals; no dashes/FFFD; voice PASS; roadside filter buttons present.
+
+Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok.
