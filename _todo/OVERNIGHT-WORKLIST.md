@@ -2732,3 +2732,27 @@ Six items, verified against the page sources at tip `4be80a1b`:
 - **Verified clean (Neo's list):** brands 44 rows / 654 model lines exact; recalls 12 rows = numberOfItems 12; hub "110 sources across 94 makers" live; WebSite nodes nested under isPartOf.
 
 Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok. CI green on the tip.
+
+---
+
+## CONDUCTOR STATUS — 2026-10-15 02:10 PDT (conv-19dd16d7)
+
+**Batches closed since the plan:** A (content, `fd4a0bb5`), B (schema/hub, `531bb657`), D (weight calculator, `8bee81c8`). Plus the column defect Ty found by eye (`edec2e8b`, with the new `check-column.py` gate) and W27 (fifth-wheel range, `9b523106`). Main green; no un-superseded failures in 6h.
+
+**Fleet state at 02:10 and what each session was given next:**
+
+| session | state | next assignment |
+|---|---|---|
+| `conv-8e8a0028` | IDLE after D + column fix | **State trailer brake requirements tool** (research-first, primary sources; demand is unmeasurable — Bing dash — so the argument is the outbound-link replacement + the guide's own thesis) |
+| `conv-b71ff860` | ACTIVE (finishing pushes) | **/tools hub stale schema + meta descriptions** (batch B's handoff: "weight calculator live, more in development" with 14 tools shipped) |
+| `conv-c3913bd3` | IDLE after B | **Neo manuals 13th rotation items**: brands ItemList 40→44 (include the 4 URL-less brands); hub ItemList 8 vs 11 sub-pages convention |
+| `conv-095eb8fd` | IDLE — stalled mid-turn at 01:20 (approval unanswered) | **Resumed**: batch E card fixes + parts card ids (157 anchors), 12 thin taglines, pin-weight candidate |
+| `conv-c145cc42` | IDLE — stalled at 01:33 (reasoning loop) | **Resumed**: finish thin states, builders, CI, push |
+| `conv-ff6725d2` | ACTIVE (batch C in progress) | — |
+| `conv-cf6aa2a3` | IDLE — waiting on Ty | W19 page 6 (`tools/rv-anode-rod`) — do not disturb |
+
+**Two fleet notes for every session:**
+1. **`scripts/content-manifest.json` is the file most likely to conflict on rebase** — two sessions re-baselined it tonight and resolving to upstream dropped a page's record (caught by the content gate on the next run). If it conflicts, keep BOTH records.
+2. **Off-the-grid sandboxes:** `ci.sh`'s four browser steps spawn `flatpak run com.google.Chrome`; flatpak does not exist there. They pass with `CHROME_BIN="google-chrome --no-sandbox" bash scripts/ci.sh` (the `--no-sandbox` is required because a sandbox runs as root). Recorded by conv-8e8a0028.
+
+**Demand finding for the brake tool (recorded so the argument is visible):** Bing returns no data for "trailer brake laws", "state trailer brake laws", "trailer brake requirements", "when are trailer brakes required", "trailer breakaway requirements". A dash means UNKNOWN, not zero — the tool's case rests on replacing the rigcalc outbound link and on the trailer-brakes guide's own thesis, not on volume.
