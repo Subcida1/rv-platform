@@ -2639,6 +2639,35 @@ Ty, 01:00: *"act as a conductor for the night and keep all of our work rolling �
 - **One incident, resolved:** `1f5bf9fc` went red on the W3C CSS validator — the magnifier used a `mask` shorthand the validator rejects, which every browser would have dropped silently. Replaced with an inline SVG and verified against the same validator before pushing (`e2287b26`). Green.
 - **BLOCKED ON TY, recorded not chased:** the H1. He likes "RV towing calculator" and is unsure about "Can your truck tow it?". The Bing keyword data says every question-shaped phrasing has no measurable demand while the noun phrases do — `towing capacity` 4,731/mo, `towing capacity calculator` 898/mo, `payload capacity` 433/mo. Recommendation on the table: **"RV towing calculator: towing capacity, payload and tongue weight."** Not applied; it changes what the page aims at and that is his call.
 
+**PICKED UP AFTER BATCH D, and closed 2026-10-15 02:00 PDT: the hubs' closing block was outside the
+content column.** Ty, reading a hub: *"its aligned left, al the way on the edge of the page, it looks
+wAY out of place like a CSS error or something."* It was not a CSS error. The "Where to go next"
+card on `/tools/`, `/guides/` and `/parts/` was a direct child of `<main>` with no `.sec` and no
+`.wrap`, so it had no content column and no gutter and rendered at the full viewport width against
+the left edge. `/manuals/` was clean, and that is the tell: its generator has always wrapped its
+copy. Fixed at source each time - the two hand-written hubs in the page, `/parts/` in
+`scripts/build-parts-pages.py` and rebuilt from it, because editing the generated page alone would
+be reverted by the next build. Swept all 131 sitemap pages in a real browser first, so this is the
+whole population rather than the one page he opened: those three and nothing else.
+
+**And a check, because nothing would have caught it.** `check-structure.py` enforces the wrapper
+rule on guide pages only, so a hub or a tool page could put a block straight into `<main>` and pass
+every gate. `scripts/check-column.py` covers all 133 pages: every direct child of `<main>` must be a
+`.sec` or a `.wrap`, or be named in ALLOW with a reason (page-foot, hub-jump, hero, phone-bar - each
+full-bleed by design). It carries a `--self-test`, it is negative-tested against the real defect
+(removing the wrap from `tools/index.html` makes it name that file and exit 1), and it is wired into
+`ci.sh` beside the structure check. Its own first version produced 61 identical false findings
+because the parser counted only divs and sections toward depth; fixed before it was wired in.
+
+Pushed as `edec2e8b`, live and verified in a browser: `card 377..1529, wrap 353..1553`, in column on
+all three. Checks run green on the commit.
+
+**Sandbox note for anyone running the gate off the-grid:** this machine has Chrome but no `flatpak`,
+and the repo's browser instruments spawn `flatpak run com.google.Chrome`. A one-line `flatpak` shim
+on PATH gets three of the four browser steps running; `check-a11y.mjs` needs
+`CHROME_BIN="google-chrome --no-sandbox"`, which the script already supports for GitHub runners.
+With both, `bash scripts/ci.sh` reports "every check passed" here.
+
 **E. conv-095eb8fd — parts:** continue; fold in queued card fixes: black tank card -> rv-black-tank; chassis battery card (retarget or unlink); water pressure regulator + gravity fill -> retarget or gap-note; ladder naming rename; Henry's Tropi-Cool alias; heat-pump card draft (8ed90b2).
 
 **F. Conductor (conv-19dd16d7):** monitor gh-failures; hourly fleet check; incidents; unblocking; morning report to Ty.
