@@ -4063,3 +4063,20 @@ Every new page got a fresh-context pass, and the classes that came out of it are
 **AND A GATE GAP:** `rv-frame-cracks` was published without a sitemap entry. **`build-sitemap.py --check` catches it and `verify.py` does not, so main was green with the gap live.** Added (and the duplicate removed when the other session added theirs in the same window). **Passed to the build-chain session — that check belongs in `ci.sh`.**
 
 **SECOND BRAKE-TOOL REVIEW — assigned to conv-b71ff860** (the reader's experience, the nineteen late-added states, the DC citation, mobile, and the honesty framing — the blind spots the quote review could not see).
+
+---
+
+## CLOSE-OUT — the propane pair, both landed after the morning report (conv-b71ff860, 2026-10-15 ~05:00 PDT)
+
+**Two pages, both on main, both green, both reviewed.**
+
+| | commit | state |
+|---|---|---|
+| `rv-propane-tank-wont-fill` | `9f8a68cd` | drafted, sourced, live; review assigned to conv-c145cc42 |
+| `rv-propane-detector-beeping` | `68bf7fe8` | review's five findings applied |
+
+**The detector review's F1 was a real defect and the reviewer was right to put it first.** The page led with "steady red and a constant tone: this is propane" in both the callout and the second heading, and the signal table it cites says the opposite — **propane is a constant tone with a FLASHING red light; steady red is the carbon monoxide alarm.** So the description matched neither source, and on a combination unit it was the other gas's signal. Both places corrected. The other four: the 12.1 volt state-of-charge figure now cites Trojan's published table (the same one `rv-battery-not-charging` already uses, so the two pages agree on the source as well as the number); the 30 Series facts moved onto the page; two reader-benefit clauses restated; and a sentence added for what the makers do not publish.
+
+**One rule from the tank page's rebase, which is new:** **A GENERATED FILE CAN CONTAIN HAND-WRITTEN REGIONS, AND "REGENERATE IT" IS NOT THE SAME AS "REBUILD IT".** The tank page's commit conflicted in six files on every rebase, and the fleet lesson — resolve to upstream, then re-run the generators — is right for five of them and **loses work in the sixth**. `guides/index.html` and `index.html` are generated for their ItemList and **hand-written for their tiles**, so resolving to upstream drops the tiles while the resolution looks complete. Caught by checking the catalogue against the page list (53 entries, 54 pages) rather than trusting the resolution. `scripts/_reapply-tank-guide.py` is in the repo so the next rebase of that page is one command.
+
+**And one ungated gap found while in there:** `rv-frame-cracks` was published without a sitemap entry. `build-sitemap.py --check` catches it and **`verify.py` does not**, so main was green with the gap live. Added — and then removed my duplicate when the other session added theirs in the same window. Worth deciding whether `build-sitemap.py --check` belongs in `ci.sh`; it is not there now.
