@@ -3711,3 +3711,17 @@ fired on a sentence that read fine.
 **METHOD NOTE:** the two Safe-T-Alert pages return 403 to curl **and** their FAQ answers are not in the served text (the visible page shows only the questions); both were readable through a real browser, answers included. **Third time tonight a state or maker site was readable only that way.**
 
 **Findings forwarded to the drafter (conv-b71ff860), F1 first. WATER-PRESSURE REVIEW — assigned to conv-8e8a0028.**
+
+**OFF-GRID HEATING — research and spec done (`d2b978c3`), APPROVED AS A SAFETY PAGE, drafting.**
+
+**The spine is a safety distinction rather than a shopping one: the two options are not the same kind of thing, and the difference is where the exhaust goes.** A diesel air heater is **vented** (combustion air from outside, exhaust outside); a Buddy-style portable propane heater is **unvented**, and Mr. Heater's own manual says so in one sentence: *"This heater consumes oxygen from the room in which it is installed."* That decides every other question on the page — why one needs a hole in the wall and the other needs a window open, why one has an altitude ceiling and the other a state restriction, and why "indoor safe" on a box does not mean safe indoors everywhere.
+
+**Every figure is a maker's own published number.** Webasto Air Top Evo 40 (5,100–12,000 BTU/h, 13,650 boost; 0.18–0.49 L/h; 15–40 W; altitude adjustment to 2,200 m with a 5,500 m variant; UL 307A / CSA B140.10 / RVIA, TEI listing 23D01); Air Top 2000 STC (3,100–7,000 BTU/h; *"as little as 1 gallon of fuel in a 22 hour period"*); Eberspächer Airtronic 3 (automatic altitude adjustment to 5,500 m); Webasto's rule of thumb (100 ml of diesel per hour per kW); Mr. Heater MH9BX (clearances top 30 in / front 24 in / sides 6 in / rear 0 in; 9 square inches of ventilation minimum, 12 sq in at ceiling and floor on the larger MH12HB; bedroom "LO" only; bathroom do not use).
+
+**The legal restrictions are the maker's own words, not an inference:** *"Restricted from all indoor use in Massachusetts and Canada"* and *"Restricted from use in dwellings in California"* — California allows the Buddy series in a garage or tent and prohibits vent-free heaters entirely. **This is the part to put highest on the page.**
+
+**What the makers do NOT publish, recorded rather than filled in:** no altitude derating **curve** for any diesel heater (Webasto states the ceiling then says consult the operation manual — the loss between sea level and the ceiling is simply not published); **no CO output figure** for the unvented propane heaters; no burn-time figure for the diesels beyond fuel consumption per hour.
+
+**THE JUSTIFICATION IS DIFFERENT FROM THE REST OF THE BATCH, AND IT IS FLAGGED AS SUCH.** This was the candidate ranked last and the one its author said to drop first — only one of its four cards carries a demand figure and the rest read `None`. **It is being written anyway, as a safety page rather than a shopping page:** a state-by-state prohibition and a ventilation requirement are exactly what a reader cannot get from a product page, and the reader who needs them is the one about to make a mistake. **Ty can pull it in the morning if he reads it differently; the material is worth having either way.**
+
+Two weak-fit cards (electric fireplace, heated floors) get gap-notes rather than inclusion — their failures are electrical and appliance faults, not heating-strategy faults.
