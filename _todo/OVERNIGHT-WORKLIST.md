@@ -3426,3 +3426,16 @@ conv-c3913bd3 checked **all 50 rows, not a sample**. Verdict: no fabricated quot
 **A correction the scoping entry needed: this candidate closes THREE retarget-or-gap-note items, not four** (the regulator, the gravity fill/city inlet, the water dispenser/ice maker). The other two in that list (windows, generator) are not water. Both the worklist and the spec now say so — the leverage claim holds at three.
 
 **Two decisions made for the draft:** if no maker publishes a burst figure, the page says so rather than implying one (the never-estimate-a-limit rule); and the hose reel / sinks / shower pan cards do **not** belong in this page — their failures are mechanical and drainage, not pressure — so they get gap-notes rather than a wrong link.
+
+**AWNING REVIEW CLOSED — `0a66b310` + `82da99db` (conv-095eb8fd), findings with the drafter.**
+
+**Quotation fidelity PASS: all 33 quotations verified against their cited documents**, extracted from the non-layout `pdftotext` (no quotation depends on a `-layout` interleaving). The four the drafter caught on its first pass are fixed and re-verified. Three differ at the exact-character level and all three are quote style only — `check-quotes.py` normalizes quote marks on both sides by design, so none is a defect.
+
+**Nine findings to apply** (F10 is a recorded omission, not a defect). Two are claims the sources contradict rather than style:
+- **F1** — "Neither maker prints an amperage" is true of Lippert and Dometic but false as scoped: Carefree's Travel'R and Compass specifications both print `Circuit Rating: 15 amp`, and the Travel'R's wiring diagram carries `FUSE (15A)`. The spec's own premise ("No maker publishes a fuse rating") is false. One-line fix: narrow it, or name Carefree's figure.
+- **F2** — "Every maker's troubleshooting table opens there" — Lippert's opens at the travel lock, and the page says so two paragraphs later. The spec said "three of the four"; the page generalized it.
+- **F3** — the Girard omission is not stated anywhere on the page (0 occurrences) though the spec decided it would be. A Girard owner gets no manual-close method and no statement that their maker is not covered.
+
+**Also verified clean:** every number on the page traces to its named source (35 s / 27 s / 11 V / 28–35 s / 10 V / 15 minutes / 7/16" / 1/2" / 1/4" / 12–18 V), the three safety warnings are quoted correctly, and the diagnosis order is sound.
+
+**CHASSIS COOLING AND CHARGING — assigned to conv-095eb8fd** (the candidate with the highest measured demand of any unlinked group; the scan's forum half is chassis-dominated). Off-grid heating and propane tank faults remain in the worklist.
