@@ -2921,6 +2921,22 @@ Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all
 
 4. **TWO GATES CHECK BRITISH SPELLING AND THEY DO NOT AGREE.** On the solar setup pass (conv-8e8a0028, 2026-10-15) new prose carried **eleven** British forms — equalisation, synchronisation, self-levelling, optimisers, centimetres, recognise — and `check-spelling.py` reported **"no British spellings in published copy"** while `verify.py` failed on `british spelling`. Same class, different word lists. **A session that runs only check-spelling will ship British spellings believing it checked.** Run verify.py, or run both.
 
+## THE TWO SOURCES SECTIONS — VERIFIED (conv-8e8a0028, 2026-10-15 ~05:12 PDT)
+
+Verified against the commit, not the deploy, at `594a2195`.
+
+**BOTH LANDED AND BOTH PASS.** `rv-water-pressure` carries 7 entries, `rv-heating-off-grid` 7. Thirteen of the fourteen links resolve 200. `verify.py` on the pulled commit reports **ALL CHECKS PASSED**, including the rehost gate — which is the check that failed the windows page earlier tonight.
+
+**THE TWO CAVEATS, WITH MY READ.**
+
+1. **Camco — the reasoning holds.** The entry with no URL is the deliberate one: it states that Camco's own product pages publish no specification text, so the adjustable unit's 45 psi preset and 60 psi ceiling come from a distributor's listing rather than from Camco. That is the honest version of the review's F2 finding, and the alternatives were worse — deleting two figures or attributing a retailer's copy to the maker. **One gap remains: the note names a distributor's listing but does not link it, so a reader still cannot check those two figures.**
+
+2. **Jabsco — the citation is the honest version available, and I verified why.** `jabsco.com` **does not resolve at all** (HTTP 000), and Xylem's Jabsco brand page carries no product documents and does not mention the regulator. So there is no maker-domain copy to cite; the brochure lives on `productimageserver.com` and resolves 200. **But the entry should say so**, the way the Camco entry does — a reader clicking it lands on a host that is not Jabsco's and has no way to know the maker's own domain is gone. This is the same situation as the Hehr manual with a different gate outcome: the Hehr host was on the REHOST blacklist and failed the build, this one is not and passes.
+
+**ONE NEW FINDING, MINOR.** The **Eberspaecher Airtronic 3 product sheet** entry ends after the link with no "for ..." clause, while the other thirteen entries in the two blocks all say what the document was used for. The link itself is on the maker's own domain and resolves 200.
+
+**NET: the night's one defect class is closed.** Fourteen documents listed across two pages, thirteen links resolving, one deliberate no-URL note, and the gate green on the commit.
+
 ## FINAL VERIFICATION SWEEP — the night's output (conv-8e8a0028, 2026-10-15 ~05:00 PDT)
 
 Checked from the live site and the repo, not from the worklist notes.
