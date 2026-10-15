@@ -3282,3 +3282,87 @@ Six items, verified against the data and the page sources at tip `515bbc2c`:
 - **Verified clean (Neo's list):** hub card arithmetic reconciles all five (24+38-3=59, 22+18-4=36, 11+26-2=35, 16+21-4=33, 10+12-2=20); JSON-LD numberOfItems matches unique counts; no exact (name,tel) dupes in JSON-LD; rendered titles 46-53ch; metas 141-147; one H1 each; canonicals; base href; zero dashes/FFFD; voice PASS.
 
 Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok; `audit-phones.py --fetch` 86 flagged / 0 quote mismatches / 0 malformed, freshness 82 found + 2 http-403 + 1 JS-rendered + 1 TLS. CI green.
+
+---
+
+# MORNING REPORT — 2026-10-15, the conductor's night (conv-19dd16d7)
+
+Ty — you asked for a conductor to keep everything moving until it was done. Here is the night, in the order you will care about it.
+
+## The headline
+- **The directory grew to 2,027 businesses across 50 states** (+85 from the thin-states pass; nine states now at 20+, the four smallest filled as far as their markets support with the exclusions documented).
+- **A new tool shipped: the state trailer brake laws table** — **50 of 51 jurisdictions**, every threshold quoted verbatim from its own vehicle code with the section named, Mississippi the one jurisdiction deliberately out (its sites will not serve the text to anything but a browser) and the page says so. It found that the 3,000 lb figure everyone repeats is a commercial-vehicle federal rule; the states do not cluster around it (Alaska 5,000 GVWR highest; Idaho and Ohio unladen; North Dakota triggers on speed; six states set no weight threshold at all).
+- **The community scan produced the next content batch** — 1,004 thread titles across iRV2 and reddit, two instrument defects found by running it, and a ranked gap list. **Three of the seven gaps closed the same night**: the awning guide (48th guide, 7 maker documents), the propane selection + tank-gauge sections, and the solar setup sections.
+- **The parts page: all 210 cards now carry anchors**, the queued card fixes landed, and the anchors unblocked the parts links three rotations had been waiting on.
+- **The weight calculator got a 100-case independent harness** and a real correctness fix: blank curb weight / truck GVWR / GCWR could produce a SAFE verdict that had never checked them.
+- **The column defect you found by eye is fixed at source** and now has a gate (`check-column.py`) so no hub can put a block outside the content column again.
+
+## Closed tonight (applied, pushed, green, verified)
+| what | where |
+|---|---|
+| Batch A — silo links + trailer-brakes scope label | `fd4a0bb5` |
+| Batch B — ItemList convention, WebSite @id (51 pages), /guides title, W29 entry | `531bb657` |
+| Batch C — all-50 phone audit (2 records fixed), NM lede variant across 4 surfaces | `f9d4012d`, `d176adba` |
+| Batch D — the 100-case harness + your calculator items + the required-fields bug | `8bee81c8`, `0a0e8b5e` |
+| Batch E — parts card fixes + 210 anchors | `69304b24` |
+| Batch F — the `/parts#anchor` links (57 card links across tools, guides, manuals) | `65ec6041` |
+| Batch G — the tool-inclusive count, the last thin tagline | `57fa70a5` |
+| The column defect + `check-column.py` | `edec2e8b` |
+| W27 — the fifth-wheel range contradicted its own arithmetic | `9b523106` |
+| Manuals ItemLists (both now enumerate the page) | `ea8fe0b6` |
+| /tools descriptions (now name the fifteen tools) | `70699527` |
+| Finder "find a tech" CTAs (7 tools) | `ed42a564` |
+| **The state trailer brake tool** (50/51) + its review's findings applied | `f4ed9e42` … `2009ba92` |
+| **The community scan** + ranked gap list | `b10327ae`, `1aeffa7d` |
+| **Thin states** — 1,942 → 2,027 | `fac3a347` |
+| **The awning guide** (48th guide) | `c680b235`, `2d312231` |
+| **The propane sections** (selection + tank gauge) | `1cebc67f`, `f3bd19c0` |
+| **The solar sections** (settings, monitoring, mounting) | `d3d4491b` |
+
+Final counts: **48 guides, 15 tools, 50 state pages, 11 manuals sub-pages, 2,027 listings.**
+
+## The brake tool's review, because it is the standard working
+conv-c3913bd3 checked **all 50 rows, not a sample**. Verdict: no fabricated quotation, no mis-paired citation, no state answering with a guess. Three LOW defects (a silent edit at the edge of an otherwise faithful quotation) and one real one: **DC's citation landed on a chapter table of contents, not the rule — the one row a reader could not verify from the link given.** All applied. Six rows could not be machine-verified; a browser pass closed four (AL's app shell, NY's Cloudflare challenge, NJ's 41 MB statutes ZIP) and confirmed Iowa fails at both layers.
+
+## In flight at report time
+- The awning guide's independent review (conv-095eb8fd)
+- The frame / water-intrusion gap (conv-c145cc42)
+- The propane-detector page (conv-b71ff860 — decided it deserves its own page, spec written)
+- The air-conditioning expansion (conv-ff6725d2)
+- The entry-steps / doors / windows gap (conv-8e8a0028)
+- The parts-card guide-gap scoping (conv-c3913bd3)
+
+## Blocked on you
+1. **W3** — the black-tank page spec (thesis is yours).
+2. **W5** — photos: Texas pick, Virginia replacement, tongue jack.
+3. **W19 pages 6–8** — your read-through (`tools/rv-anode-rod`, `/guides/`, `/about`).
+4. **The trust-claim cluster** — 10 sentences across /about, /privacy, /signin, homepage.
+5. **The weight-calculator H1** — recommendation on the table: "RV towing calculator: towing capacity, payload and tongue weight."
+6. **The /directory region-order wording** — the intro says "west to east" while AK/HI sit last deliberately; a wording fix, not a reorder.
+7. **The two-guide renderer** — five guides now want a second slot on a parts card; needs the renderer to carry two, or a ruling.
+8. **The state+manuals closing-line second pass** — not approved, not queued.
+
+## Incidents (all resolved)
+- **One transient Pages deployment failure** (a GitHub OIDC blip) — caught by the monitor in 3 minutes, fixed by rerun. If you got a failure email around 02:25, that was it. The site never stopped serving.
+- **Two sessions stalled** (an unanswered approval; a reasoning loop) — both resumed and delivered.
+- **One duplicate build** (the manuals ItemLists, two sessions) — reconciled; the claim convention is now recorded.
+- **One verification error of mine** (a whole-file link count) — caught by conv-b71ff860, corrected.
+- **The bridge review failed four times**, each mechanically and each diagnosed; recorded as owing. The session review stands and was stronger.
+- **`SendAgentMessage` acknowledged but never delivered twice for one conversation**; the CLI route worked.
+- **Push contention** was the night's biggest time sink — six sessions to one main; one push took five rebase attempts.
+
+## Lessons recorded for every future session
+1. **Claim before building** — a `CLAIM:` line in the queue before starting.
+2. **Count inside `<main>`, not the whole file** — chrome makes a silo look linked.
+3. **"HTTP 200, quoted text confirmed" needs a hand spot-check.**
+4. **After resolving a shared generated file to upstream, re-run the generators.**
+5. **A partial harvest is not a small harvest, it is a different answer.**
+6. **The Bash tool's 120s timeout silently kills `ci.sh`** — launch it detached and wait on the exit file.
+7. **Do not rebase while `ci.sh` reads the tree.**
+8. **A remote subagent cannot be reliably killed.**
+9. **Assert on behaviour, not wording.**
+10. **When a check flags something surprising, suspect the check** — three separate instruments were wrong tonight before the content was.
+11. **Two spelling gates disagree** (`check-spelling.py` passes what `verify.py` fails) — queued as a fix.
+12. **A cancelled Pages build looks exactly like a push that did not land.**
+13. **A Sources line's description is not verified against the document it points at** — the citation-mismatch class; nothing in the pipeline checks it.
+14. **Check for an existing worklist section before appending one** — it is the most-contended file.
