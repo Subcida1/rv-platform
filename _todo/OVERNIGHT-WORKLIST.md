@@ -3144,3 +3144,63 @@ Mississippi is the one jurisdiction deliberately out: the Legislature publishes 
 - The manuals TOOL links for power / towing / sanitation / chassis / exterior (the 8th rotation's list) are still open; water-and-plumbing and kitchen-and-appliances landed in batch A.
 
 **Instruments:** `ci.sh` green; `verify-content.py --strict` 0 drifting (10 pages re-verified); `verify.py`'s anchor rule checks all 57 new fragments; all 57 were pre-checked against `parts.json` before the gate ran.
+
+---
+
+## NEW CONTENT — the awning guide (conv-b71ff860, 2026-10-15)
+
+**Where this came from.** The community scan above ranked awning the only **total hole with double-digit
+demand**: 17 threads across two independent communities, and no page on the site that explains a fault. The
+conductor assigned it as tonight's new-content item. **Spec written: `_specs/rv-awning-not-working.md`.**
+
+**The sourcing pass is done, and it is five maker documents fetched live** — all HTTP 200 `application/pdf`,
+all from the maker's own domain:
+
+| Maker | Document | Bytes |
+|---|---|---|
+| Carefree of Colorado | Travel'R Service Manual 052540-301r13 | 3,007,324 |
+| Carefree of Colorado | Freedom Freestyle WM Service Manual 052573-301r9 | 2,723,265 |
+| Lippert | Solera 3000 Series Troubleshooting and Service Manual CCD-0001727 | 4,376,935 |
+| Lippert | Solera Universal CCD-0001282 | 13,066,120 |
+| Dometic | 9100 Series Power Patio Awning Operation Manual | 1,438,859 |
+
+Plus three more Carefree service manuals (Compass, Latitude, Patio Awning) read for the arm-tension and
+roller-spring warnings. **23 claims, every one quoted character-for-character and re-checked against the
+extracted text** — one quote was corrected during that check (the Solera drive-head location reads "as it is
+viewed from outside of the unit", not "as viewed from outside the unit").
+
+**What the page leads with, and it is the useful part:** the manual-close procedure. Every maker publishes one
+and they are different mechanisms — a Solera has a **manual override nut** turned with a **7/16" socket**
+(counterclockwise to retract); a Dometic 9100 has an **auxiliary power method** first and a **pull strap**
+second, and needs a technician afterwards; a Carefree has **emergency terminals on the motor head** that take a
+**12–18 VDC** source such as a drill battery. The reader who needs this page most has the awning out and a
+departure tomorrow.
+
+**And the cheapest diagnostic in the whole pass, which needs no meter:** Dometic publishes that the **LED strip
+is on a separate circuit from the motor**, so *"If LED lights work, but awning motor does not, check awning
+motor's fuse"*. One check splits the fault tree.
+
+**GIRARD IS NOT CITED, and the omission is stated rather than papered over.** Girard publishes a GG750
+installation and service manual with its own troubleshooting guide, but **no maker-hosted copy could be
+reached**: `girardgroupcompanies.com/awning-manuals` renders nothing without JavaScript, and the copies that
+resolve (Tiffin's knowledge base, Oliver's component-manual library, Newmar's instance) are **rehosts**, which
+this site's citation rule forbids. Three makers, not four.
+
+**The demand figure is stated with its split, because the split decides a question for Ty.** Of the 17 threads,
+**13 are power-awning faults** and **4 are manual or bag awning questions** (a bag awning pole, an awning crank,
+fabric material, a replacement question). The page as specced answers the 13.
+
+**Three open decisions for Ty, in the spec's §12:**
+
+1. **The title is 66 characters**, over the 60 the wheel-bearings spec held to. A 60-character fallback is given.
+2. **Manual awnings: in or out?** Every procedure cited is from a power-awning manual. Recommendation: power
+   awnings only, with one line saying so.
+3. **The motor-replacement procedure is deliberately not on the page** — every maker publishes one, all are
+   "disconnect power, support the roller tube, three screws", and the arms extend on their own when the motor is
+   released. Recommendation: stop at "what is not owner work", the same line the wheel-bearings page draws.
+
+**FOLLOW-ON, not started, recorded so it is not lost:** the scan's **largest thin area is air conditioning** —
+36 threads against one guide with **zero** mentions of soft start, 30-amp, EasyStart or noise, and one of heat
+pump. The conductor's scoping note: awning first, AC expansion as the follow-on rather than both at once. The
+three sections it needs are **soft starts and running on limited power** (11 threads), **heat-pump mode** (7),
+and **noise** (3).
