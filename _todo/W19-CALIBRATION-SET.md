@@ -312,3 +312,55 @@ line" bullet without its "Plan to pull forward" label. Every other bullet in
 that list carries one, and dropping a single label makes that item disappear
 when the list is skimmed, so it stayed. One word from him and it goes.
 
+## Fourth pass, same night: unhitching
+
+He found two things the sequence had wrong, and both were the kind only
+someone who does this for a living would catch.
+
+**The harness, chains and breakaway were step one. They are not.** He keeps
+them connected until the trailer is chocked and the tongue jack has taken the
+weight, then takes the chains and the breakaway off there. The harness stays
+plugged in longest of all, because an electric tongue jack draws on the tow
+vehicle through it, and pulling it early means running the jack down on the
+trailer's own battery. Plugging the trailer in does the same job.
+
+**The page never checked whether the coupler was lifting the tow vehicle
+before the latch came open.** Raising the tongue jack is how the
+weight-distribution bars come off on his setup and on many others, and once
+the trailer is high enough the coupler is pressing up on the ball. Open the
+latch in that state and the tow vehicle drops. It is a step now: if the back of
+the tow vehicle has come up off its own springs, lower the jack.
+
+**Side to side leveling was missing entirely.** The page sent readers to level
+front to back at the end, which is the easy half, and said nothing about the
+half that has to happen while the trailer is still on the ball. It is the
+paragraph before the list now.
+
+The walkaround is his wording. One sentence went with it, the "check the inside
+of the trailer before the next move" line, because the loading section already
+carries the loose-items point.
+
+**The sourcing pattern is now two for two, and this needs a ruling.** This is
+the second sequence on this page where his professional practice differs from
+Jayco's published order: the hitching steps earlier, the unhitching steps now.
+The page cites Jayco for both. Neither divergence is wrong and both are
+defensible, but a source line that names "the unhitching sequence" while
+publishing a different order is exactly the kind of overclaim this site has
+been strict about elsewhere. Two ways out: follow the maker's order, or say in
+the source line that the order follows practice where it differs. His call.
+
+## Fifth pass: the mistakes that damage things
+
+Two edits, both widening a bullet that was narrower than the failure it warned
+about.
+
+- **The stabilizer bullet only covered driving with them down.** His version
+  covers leveling front to back with them down as well, and says what they are
+  actually for: taking the wobble out, not carrying the trailer's weight. It
+  also moves the retraction point to "before the trailer or the tongue jack
+  moves", which ties directly to the unhitching sequence above, where the jack
+  does real work.
+- **The breakaway bullet** now names the trailer's brakes as well as the wiring
+  in what the constant current damages, which is the more expensive half of
+  that failure.
+
