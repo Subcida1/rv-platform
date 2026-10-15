@@ -69,6 +69,35 @@ but it is still a silent edit inside quoted material.
 
 These six are **unverified**, not wrong. A browser pass would close them.
 
+## Browser pass on the six OWED rows (2026-10-15, follow-up)
+
+Run in headless Chrome 155 with a realistic user-agent and a 20-25s virtual time budget, so
+JavaScript-rendered pages actually populate before the DOM is read.
+
+| State | Result |
+|---|---|
+| **AL** | **VERIFIED.** `admincode.legislature.state.al.us` renders 45,064 bytes / 14,461 characters of text in a browser; the quote is present verbatim. The scripted fetch had seen only the 1,855-byte application shell. |
+| **UT** | **VERIFIED.** `le.utah.gov` renders 32,431 bytes / 13,166 characters; quote present verbatim. |
+| **NY** | **VERIFIED.** `nysenate.gov` renders 159,069 bytes / 120,147 characters with a realistic user-agent; quote present verbatim. |
+| **NJ** | **VERIFIED.** The citation is the Legislature's own `STATUTES-TEXT.zip` (41 MB). Downloaded and extracted: `STATUTES.TXT` is 83,575,269 characters and **contains the quote verbatim**, at the single occurrence of `39:3-67` in the file. |
+| **DC** | **STILL OWED — and this one is a real defect, not an access problem.** See below. |
+| **IA** | **STILL OWED.** The PDF fetch is slow from this sandbox; the check did not complete in this pass. |
+
+### F7 — the District of Columbia citation points at the chapter index, not the rule. MEDIUM.
+
+`https://www.dcregs.dc.gov/Common/DCMR/RuleList.aspx?ChapterNum=18-7` renders fine in a browser — it
+is simply **not the rule**. It is the chapter's table of contents: *"Chapter: 18-7 … MOTOR VEHICLE
+EQUIPMENT … Showing 1 to 50 of 59 entries"*, listing section numbers, headings, version dates and a
+"View text" link per row. None of the quoted language appears anywhere on it.
+
+The row cites *"18 DCMR 720.9, breakaway in 18 DCMR 721.1"*, so the citation needs to point at the
+section, not the chapter. Every other row in the table links to the page that carries its own text;
+this one links one level above it. The quote itself is not in question — only where the reader lands
+when they click to check it.
+
+**This is the one row of the six where the reader cannot verify the claim from the link given**, which
+makes it the most consequential finding of the browser pass even though it is not a quotation defect.
+
 ## The two states the conductor flagged
 
 **Pennsylvania — CORRECT, and it does not blur the distinction.** `shape: "none"`, `threshold` absent

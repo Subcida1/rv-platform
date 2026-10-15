@@ -2687,6 +2687,8 @@ With both, `bash scripts/ci.sh` reports "every check passed" here.
 
 **Honesty framing PASS** — an unread state cannot return a blank or a guess, and Mississippi's exclusion is explained with its three specific reasons. **Voice PASS** — zero em dashes, zero "rig", zero reader-benefit clauses.
 
+**Browser pass on the six OWED rows (headless Chrome 155, realistic UA, 20-25s virtual time budget): AL, UT, NY and NJ all VERIFIED** — the quote is present verbatim once the page is actually rendered (AL's scripted fetch had seen only a 1,855-byte application shell; NJ's citation is the Legislature's own 41 MB statutes ZIP, whose `STATUTES.TXT` contains the quote at the single occurrence of `39:3-67`). **DC remains owed and is a real defect — F7 MEDIUM: the citation lands on the chapter's table of contents, not the rule.** `RuleList.aspx?ChapterNum=18-7` renders "Chapter: 18-7 … Showing 1 to 50 of 59 entries" with a "View text" link per section; none of the quoted language is on it. Every other row links to the page carrying its own text; this one links one level above it. **IA still owed** — the PDF fetch did not complete in this pass.
+
 Findings file: `_todo/REVIEW-state-brake-tool.md`.
 
 **Done criteria:** every item above is applied and pushed with CI green, or explicitly recorded as blocked-on-Ty. The conductor reports the night's result to Ty in the morning.
