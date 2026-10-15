@@ -3217,3 +3217,28 @@ and **noise** (3).
 - **Countertops tagline polished** (14th rotation #11): "the work surface" -> "the kitchen work surface, in laminate or solid surface". That was the last of the thin taglines.
 
 **The 14th rotation is now fully addressed:** #6 and #11 here; #7 (heat pump), #9 (anode rod) and the card-ids carryover in batch E; #8 answered (chassis battery deliberately unlinked); #10 stands at 9 unlinked guides (5 in the second-guide queue, 4 natural misses); #12 verified matching.
+
+**BRAKE-TOOL REVIEW DONE — `5e038fbd`, ALL 50 rows checked (conv-c3913bd3), 03:35 PDT.**
+
+**Verdict: no fabricated quotation, no mis-paired citation, and no state answering with a guess.** 32 rows match their cited source character for character. Findings in `_todo/REVIEW-state-brake-tool.md`.
+
+**Three real defects, all LOW, all one shape — a silent edit at the edge of an otherwise faithful quotation:**
+- **F1 Hawaii** — the quote jumps from "the following:" to "(8)", eliding items 1-7 with no ellipsis.
+- **F2 Michigan** — the quote ends on a period where the source continues with a comma.
+- **F3 Virginia and Maryland** — the `§` is dropped inside quotations.
+- **F5 LOW** — the lede says "every threshold here was read from the state's own code" while five rows are agency restatements and one carries no quote; all disclosed in the caveat below, so it is an over-claim in the summary line, not a hidden one.
+- **F4 INFO** — `shape` is stored on all 50 rows and never rendered.
+
+conv-8e8a0028 is applying F1/F2/F3/F5. **Six rows could not be machine-verified (AL, NJ, DC, UT, IA, NY) — recorded as OWED, not as clean**; conv-c3913bd3 is running a browser pass.
+
+**THE FINDING WORTH KEEPING: 14 of the reviewer's own 18 first-pass failures were extraction artefacts, not page defects** — `pdftotext -layout` interleaves two-column PDFs (AR), JSON `\r\n` escapes (AK), markup-induced spaces before semicolons (MT, WA, FL), and a section heading sharing the quote's opening words so the prefix match anchored on the heading (SD). Every one was read by hand before being called. Same lesson as the rest of the instrument work: **when a check flags something surprising, suspect the check.**
+
+**THE BRIDGE REVIEW — four attempts, four mechanical failures, recorded as owing.** r1: the duplicate ledger blocked the first read. r2: the lane called `read_multiple_files` (invalid). r3: the lane answered correctly but the prompt named no `outbox/REPLY-*.md` path, and v0.7.43 determines its capture path only by regexing one out of the prompt. r4: all three fixed (valid tool, named reply path, fresh chat and paths) — and ChatGPT simply never produced an answer; the thread stopped growing for the full 260s ceiling (`shadow: "differ"` is new). The lane works; the harness/prompt contract is the fragile part. **The session review stands as the pass** — it checked all 50 rows, which is stronger than a sample. If the bridge is wanted again, the four fixes are cumulative and recorded above.
+
+**INSTRUMENT FINDING — two spelling gates disagree (conv-8e8a0028).** `check-spelling.py` reported "no British spellings in published copy" while `verify.py` failed on British spelling — same class, different dictionaries. **A session running only the first will ship British spellings believing it checked.** Queued.
+
+**AWNING GUIDE — drafted, live, review arranged.** `guides/rv-awning-not-working.html`, 2,821 words, 48th guide, 7 maker documents, 33 quotations. Four were wrong on the drafter's first pass (nested quotes flattened, a rule-out list quoted without its leading clause, `"OUT"` as `'OUT'`, `1/2"` as `1/2 inch`) — the quotation-reconstruction class, caught by the check. Three `new-guide.py` defects found by using it, fixed. Independent review assigned to conv-095eb8fd; the page stays up meanwhile (every claim is quoted from a maker document and re-verified).
+
+**BATCHES F AND G CLOSED** — the `/parts#anchor` links across tools, guides and manuals (57 new card links, all pre-checked against parts.json); the parts lede count now includes tools (125 linked / 85 unlinked); the last thin tagline. The second-guide renderer is the only parts item left and it is **BLOCKED ON TY** (five guides now want a second slot).
+
+**WORKLIST CONTENTION NOTE (conv-095eb8fd):** the worklist is now the most-contended file — a batch section was appended twice because it was already there from an earlier commit. **Check for an existing section before appending one.**
