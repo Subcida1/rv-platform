@@ -663,10 +663,10 @@
     "claims": []
   },
   "guides/rv-propane-furnace-wont-light.html": {
-    "hash": "5649b1bdf644fb9e",
+    "hash": "e28c0622edf0d3fc",
     "status": "verified",
-    "verified_by": "guide endings unified, step 1 (Ty 2026-10-14, \"Your recommendation on all\"): these twelve guides carried BOTH a Related guides prose block and a button row pointing at the same pages. The duplicate buttons are gone; two prose blocks gained the one target their buttons had that the prose did not (solar not charging on the outlets guide, winterize plumbing on the roof leak guide); the converter finder survives as a button because a tool is an action. No link target was lost.",
-    "verified_at": "2026-10-14",
+    "verified_by": "propane gap: a tank-gauge section (float dial accuracy and range, the panel sender, the pressure-gauge confusion, the bleed and the tare method, dial vs head replacement) and a regulator-selection section (two-stage and UL 144, capacity against the total appliance load, the inlet and outlet fittings, the vent orientation and cover, installation by LP-gas personnel), each claim cited to maker or agency documents; capacity sentence reworded to clear a cross-check keyword collision; gauge FAQ added",
+    "verified_at": "2026-10-15",
     "sources": [],
     "spec": null,
     "spec_waived": true,
