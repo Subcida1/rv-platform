@@ -3564,10 +3564,7 @@ conv-c3913bd3 checked **all 50 rows, not a sample**. Verdict: no fabricated quot
 2. **W5** — photos: Texas pick, Virginia replacement, tongue jack.
 3. **W19 pages 6–8** — your read-through (`tools/rv-anode-rod`, `/guides/`, `/about`).
 4. **The trust-claim cluster** — 10 sentences across /about, /privacy, /signin, homepage.
-5. **The weight-calculator H1** — recommendation on the table: "RV towing calculator: towing capacity, payload and tongue weight."
-6. **The /directory region-order wording** — the intro says "west to east" while AK/HI sit last deliberately; a wording fix, not a reorder.
-7. **The two-guide renderer** — five guides now want a second slot on a parts card; needs the renderer to carry two, or a ruling.
-8. **The state+manuals closing-line second pass** — not approved, not queued.
+5. **The two-guide renderer** — five guides now want a second slot on a parts card; needs the renderer to carry two, or a ruling.
 
 ## Incidents (all resolved)
 - **One transient Pages deployment failure** (a GitHub OIDC blip) — caught by the monitor in 3 minutes, fixed by rerun. If you got a failure email around 02:25, that was it. The site never stopped serving.
@@ -4062,12 +4059,9 @@ Every new page got a fresh-context pass, and the classes that came out of it are
 2. **W5** — photos: Texas pick, Virginia replacement, tongue jack.
 3. **W19 pages 6–8** — your read-through (`tools/rv-anode-rod`, `/guides/`, `/about`).
 4. **The trust-claim cluster** — 10 sentences across /about, /privacy, /signin, homepage.
-5. **The weight-calculator H1** — recommendation on the table: "RV towing calculator: towing capacity, payload and tongue weight."
-6. **The /directory region-order wording** — the intro says "west to east" while AK/HI sit last deliberately; a wording fix, not a reorder.
-7. **The two-guide renderer** — five guides want a second slot on a parts card.
-8. **The off-grid heating page's justification** — written on safety grounds rather than demand (one of its four cards carries a figure). Worth a read; pull it if you read it differently.
-9. **The state+manuals closing-line second pass** — not approved, not queued.
-10. **The /about title** — 44ch, omits Directory and Parts; the 8th-rotation suggestion ("About OriginRV: RV Tools, Repair Directory and Guides", 52ch) was queued for a ruling on 10-13 and never reached this list. One line to rule on.
+5. **The two-guide renderer** — five guides want a second slot on a parts card.
+6. **The off-grid heating page's justification** — written on safety grounds rather than demand (one of its four cards carries a figure). Worth a read; pull it if you read it differently.
+7. **The /about title** — 44ch, omits Directory and Parts; the 8th-rotation suggestion ("About OriginRV: RV Tools, Repair Directory and Guides", 52ch) was queued for a ruling on 10-13 and never reached this list. One line to rule on.
 
 ## Incidents (all resolved)
 - **One transient Pages deployment failure** (a GitHub OIDC blip) — caught by the monitor in 3 minutes, fixed by rerun. If you got a failure email around 02:25, that was it.
