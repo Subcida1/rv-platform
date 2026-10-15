@@ -196,3 +196,74 @@ first run reported 13; ten were fixed across nine pages, and the two false
 positives were taught to it (a question is not a pointer; a word buried in a long
 heading is a collision, not a named section).
 
+---
+
+# Page 4 - `guides/rv-towing-trailer.html` (Ty, 2026-10-14 evening)
+
+He dictated the opening, then worked down the page section by section. **The two
+messages are themselves a finding:** the intro came back rewritten, and the
+ball/coupler/latch section came back **word for word** what is already live. The
+section he had no edits for is the section the voice pass wrote. That is the
+contrast this page was chosen to give, and it landed.
+
+| # | what Ty said | the rule it becomes | class |
+|---|---|---|---|
+| 1 | the title should carry "hitching up" and "tricks for reversing" | a title carries the words a reader would search | NOTED |
+| 2 | drop "every step in it is there because something went wrong for somebody" | never open by explaining why the page has steps | NOTED |
+| 3 | "A jack left part way down is the one that will soon be replaced" | state the consequence, do not explain it | NOTED |
+| 4 | the callout says what the cable does when it is not attached | the hazard names the outcome, not just the risk | NOTED |
+| 5 | "(A hitch through a hole on a bumper, for example)" | an unfamiliar trade term gets a plain gloss in place | NOTED |
+| 6 | the coupler is only seated when it is all the way down over the ball | seating is a state, and the latch test is the way to read it | NOTED |
+| 7 | "each one has various sizes" | the sizes have to agree, not "match" | NOTED |
+| 8 | step 1 carries its reason: always chocked when not in tow, never on the jack | an instruction carries the reason it exists | NOTED |
+| 9 | order changed: cable 8, chains 9, park then retract the jack 10 | the jack comes up last, after everything else is attached | NOTED |
+| 10 | the harness is folded into the steps, not left in a summary sentence | the electrical connection is part of hitching, not an afterthought | NOTED |
+| 11 | the light check becomes its own section with a real procedure | a one-line summary of a safety check is a placeholder | NOTED |
+| 12 | the bar callout points at the maker's instructions | the page hands the reader to the document that owns the procedure | NOTED |
+
+## The three judgement calls, recorded rather than hidden
+
+**The latch test was kept against his rewrite.** He replaced "it should take firm
+effort to close. If it drops shut with no resistance, the coupler is not on the
+ball" with a sentence about seating. Seating and the field test are different
+information, and the firm-effort sentence is the only thing on the page a reader
+can check with their hand at the hitch. Both are in, flagged to him, his to cut.
+
+**"each one has various sizes" became "the sizes have to agree."** As dictated it
+is not true: the ball comes in sizes, the coupler is built for one of them, and
+the latch is part of the coupler. His direction was that size is the thing that
+matters, so the line now says that, in a form that holds.
+
+**The step order now diverges from the cited source.** The page is sourced to
+Jayco's towable manual, whose own travel trailer sequence is thirteen steps with
+the tongue jack retracted at 8, the harness at 11, the light walkaround at 12 and
+the chocks off at 13. Ty moved the jack to 10, behind the cable and the chains,
+and added the park and parking-brake step before it. His order is defensible and
+it is his call; the source line was reworded so it no longer implies our sequence
+is Jayco's. **This is the first place a dictate has put our copy ahead of the
+source it cites, so it is worth watching for a pattern.**
+
+## What the light section is built from
+
+Not invented. Jayco's manual carries the 7-way harness and its pin colours
+(black auxiliary charge, green running lights, brown/orange stop and right turn,
+red stop and left turn, blue trailer brakes, white ground, yellow back-up), the
+step "walk around the RV to verify exterior lights are working correctly", the
+note that the connector plug corrodes with extended use, and the recommendation
+of a 12V circuit tester. The section is that, written for an owner.
+
+The pinout is also why the page can say the stop light and the turn signal share
+one wire on each side, which is what makes the turn signal test a brake light
+test. That fact is in the pin colours, not in a claim we added.
+
+## The count, and the one thing left open
+
+The heading, the lede and the meta description all said ten steps. Folding the
+harness in made it eleven, so all three moved together. The chock removal stays
+where Jayco puts it, last, as the closing line of the light section.
+
+Open for Ty: the title is 84 characters, the longest on the site (median 52
+across guides, tools and manuals), so Google will truncate it around "dealing
+with sway". The `<title>` tag is the only part that has to fit; the h1 can stay
+as dictated.
+
