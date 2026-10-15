@@ -2505,3 +2505,17 @@ Five items, verified against the data at tip `888ca03`:
 - **Verified clean (Neo's list):** hub counts == numberOfItems all 7; both-bucket math; no dup rows; no placeholder towns; titles/metas/H1s/canonicals; no dashes/FFFD; voice PASS; roadside filter buttons present.
 
 Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok.
+
+## Neo homepage 10th rotation (2026-10-15, verified from the Cloud lane)
+
+Six items, verified against the page source at tip `0e2f134`:
+
+- **Parts dropdown mixup: CONFIRMED.** Desktop Parts `.drop` = "Every RV part" + `/guides/` "Guides" + `/manuals/` "Manuals"; mobile Parts = "Every RV part" + "Guides". Both Guides and Manuals have their own dropdowns, so these are duplicates/mixup. Fix in site.js (the nav source) + rebuild the shell -- or confirm deliberate cross-links.
+- **Tools dropdown (2nd flag): carried, queued** (6660e98).
+- **Finder in-body gap (6th flag): carried, queued** (08fcd8e).
+- **Manuals sub-pages (3rd flag): carried, queued** (08fcd8e).
+- **about/contact in-body (6th flag): carried, queued.**
+- **Homepage JSON-LD (6th flag): carried, queued.**
+- **Verified clean (Neo's list):** title/meta/H1/canonical; sitemap 131; 47 guide slugs; in-body counts match baseline; counters; data-claims; voice PASS.
+
+Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok.
