@@ -1097,9 +1097,9 @@
     "sources": []
   },
   "tools/state-trailer-brake-laws.html": {
-    "hash": "0877673f47769dd8",
+    "hash": "76f23cb8bf9824a2",
     "status": "verified",
-    "verified_by": "the coverage paragraph now names every caveat class rather than only California and Utah: three states quoted from a state agency, two quoted from a jurisdiction's own archive because its viewer returns no text, California without a quote, and Utah silent on breakaway.",
+    "verified_by": "the table now covers 50 of 51 jurisdictions; the coverage paragraph names Mississippi as the only state not read and says why, rather than describing the states still to be read as a group.",
     "verified_at": "2026-10-15",
     "sources": [],
     "spec": null,

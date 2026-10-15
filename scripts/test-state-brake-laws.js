@@ -126,9 +126,17 @@ check('a state with no weight threshold says so', /No weight threshold/.test(or_
 const caR = run('CA');
 check('a state with no quote says why rather than showing one', /refuses automated reads/.test(caR.result));
 
-const ak = run('AK');
-check('an unread state says it is not covered rather than answering', /Not covered yet/.test(ak.result));
-check('  and does not print a threshold for it', !/\d[\d,]* lb/.test(ak.result.replace(/[^0-9,]|(?<!\d)\d/g, m => m)) || !/threshold/i.test(ak.result));
+/* The unread state is READ FROM THE RECORD, not hardcoded. The first version named Alaska, and
+   the day Alaska was added this check failed on a tool that was working correctly -- a test that
+   goes stale the moment the data improves is a test that will be silenced rather than fixed. */
+const unread = DATA.coverage.missing[0];
+if (unread) {
+  const ur = run(unread);
+  check('an unread state says it is not covered rather than answering', /Not covered yet/.test(ur.result), unread);
+  check('  and does not print a threshold for it', !/\d[\d,]*\s*lb/i.test(ur.result), unread);
+} else {
+  check('every state is covered, so there is no unread case to test', true);
+}
 
 const table = run('CA').table;
 check('the table renders one row per state read', (table.match(/<tr>/g) || []).length === DATA.states.length,

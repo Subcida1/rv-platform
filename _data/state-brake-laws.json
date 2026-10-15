@@ -514,6 +514,80 @@
    "url": "https://www.dcregs.dc.gov/Common/DCMR/RuleList.aspx?ChapterNum=18-7",
    "quote": "Each vehicle shall be equipped with brakes acting on all wheels except the following vehicles: (a) Trailers, semi-trailers, or pole-trailers of a gross weight not exceeding three thousand pounds (3,000 lbs.); Provided, that the following requirements are met: (1) The total weight on and including the wheels of the trailer or trailers shall not exceed forty per cent (40%) of the gross weight of the towing vehicle when connected to the trailer or trailers; and (2) The combination of vehicles, consisting of the towing vehicle and its total towed load, is capable of complying with the requirements of 724;",
    "breakaway": "Required above 3,000 lb gross on trailers built after September 15, 1963: applied automatically and promptly, and remaining applied for at least fifteen minutes."
+  },
+  {
+   "code": "AK",
+   "name": "Alaska",
+   "threshold": "5,000 lb GVWR",
+   "shape": "requirement",
+   "appliesTo": "towing a vehicle with a GVWR over 5,000 lb: the towed vehicle needs brakes on at least two wheels each side of a three-axle vehicle, or one wheel each side of a double or single axle",
+   "extra": "The same regulation also sets a stopping standard for every vehicle and combination: 40 feet from 20 mph, or 25 feet for a passenger car or single-unit vehicle rated 10,000 lb or less.",
+   "section": "13 AAC 04.205",
+   "url": "https://regs.akleg.gov/api/AAC/LookupIdRange?startID=7831660&endId=7831673",
+   "quote": "No driver may operate a motor vehicle on a public roadway or other vehicular way, towing a vehicle with a GVWR greater than 5,000 pounds, unless the following conditions are met: (1) the towed vehicle must have operating brakes on at least two wheels on each side of a three axle vehicle, or one wheel on each side of a double or single axle vehicle; (2) the towed vehicle requiring brakes must be equipped with an operating, breakaway system capable of applying all required brakes in the event of separation from the towing vehicle; and (3) the towing vehicle must be of sufficient size and weight to safely control the towed vehicle.",
+   "sourceNote": "Alaska's regulation viewer is a JavaScript application, so this is quoted from the Legislature's own regulation service, which is the text behind that viewer.",
+   "breakaway": "Required on a towed vehicle that needs brakes: an operating breakaway system capable of applying all required brakes on separation. No retention time is stated."
+  },
+  {
+   "code": "HI",
+   "name": "Hawaii",
+   "threshold": "3,000 lb gross",
+   "shape": "inspection",
+   "appliesTo": "a trailer over 3,000 lb gross must fail its periodic inspection if it has no brakes worked from the tow vehicle, so the threshold sits in the inspection standard rather than in an equipment mandate",
+   "extra": "The same chapter sets a separate list for trailers of 3,000 lb or less, which does not include brakes.",
+   "section": "Hawaii Administrative Rules 19-133.2-40",
+   "url": "https://hidot.hawaii.gov/administration/files/2025/07/HAR_19_133_2_Periodic_Inspection_of_Vehicles_remediated.pdf",
+   "quote": "Trailers with a gross weight greater than 3, 000 pounds must fail inspection if they do not have the following: (8) Brakes that are actuated from the tow vehicle, and in the event of a breakaway, the brakes must self-actuate;",
+   "breakaway": "Required above 3,000 lb gross: on breakaway the brakes must self-actuate. No retention time is stated."
+  },
+  {
+   "code": "KY",
+   "name": "Kentucky",
+   "threshold": null,
+   "shape": "performance",
+   "appliesTo": "no trailer weight threshold: the rule is a stopping standard, 40 feet from 20 mph on dry asphalt or concrete, for any motor vehicle or combination",
+   "extra": "The only weight figure in the section is 10,000 lb GVW, which routes commercial vehicles to the federal standard rather than setting a trailer threshold.",
+   "section": "Kentucky Revised Statutes 189.090",
+   "url": "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=6306",
+   "quote": "Except for commercial motor vehicles with a declared gross vehicle weight of more the ten thousand (10,000) pounds, the service brakes upon any motor vehicle or combination of vehicles shall be adequate to stop the vehicle when traveling twenty (20) miles per hour within a distance of forty (40) feet when upon dry asphalt or concrete pavement surface free from loose material where the grade does not exceed one percent (1%).",
+   "breakaway": null
+  },
+  {
+   "code": "WV",
+   "name": "West Virginia",
+   "threshold": "3,000 lb gross",
+   "shape": "requirement",
+   "appliesTo": "a trailer or semitrailer of 3,000 lb gross or more, with brakes worked from the cab",
+   "extra": "A semitrailer of less than 1,500 lb gross need not have brakes.",
+   "section": "W. Va. Code 17C-15-31",
+   "url": "https://code.wvlegislature.gov/17C-15-31/",
+   "quote": "Every trailer or semitrailer of a gross weight of three thousand pounds or more when operated upon a highway shall be equipped with brakes adequate to control the movement of and to stop and to hold such vehicle and so designed as to be applied by the driver of the towing motor vehicle from its cab, and said brakes shall be so designed and connected that in case of an accidental breakaway of the towed vehicle the brakes shall be automatically applied.",
+   "breakaway": "Required: an accidental breakaway applies the brakes automatically. No retention time is stated."
+  },
+  {
+   "code": "OK",
+   "name": "Oklahoma",
+   "threshold": "3,000 lb GVWR",
+   "shape": "requirement",
+   "appliesTo": "a trailer, semitrailer or pole trailer rated 3,000 lb GVWR or more; below that, brakes are still required if the towed weight exceeds 40 percent of the towing vehicle's GVWR",
+   "extra": "Surge brakes are expressly allowed on trailers hauling a vessel.",
+   "section": "47 O.S. 12-301",
+   "url": "https://www.oklegislature.gov/OK_Statutes/CompleteTitles/os47.pdf",
+   "quote": "Every trailer, semitrailer, and pole trailer of a gross vehicle weight rating of three thousand (3,000) pounds or more when operated upon a highway shall be equipped with brakes:",
+   "breakaway": "Required: applied automatically on breakaway, and means must be provided to maintain application for at least fifteen minutes."
+  },
+  {
+   "code": "AR",
+   "name": "Arkansas",
+   "threshold": "3,000 lb gross",
+   "shape": "requirement",
+   "appliesTo": "a trailer or semitrailer of 3,000 lb gross or more, with brakes worked from the cab",
+   "extra": "A semitrailer of less than 1,500 lb gross need not have brakes.",
+   "section": "Ark. Code Ann. 27-37-501",
+   "url": "https://ardot.gov/wp-content/uploads/Arkansas-Motor-Vehicle-2025-508-compliant.pdf",
+   "quote": "Every trailer or semitrailer of a gross weight of three thousand pounds (3,000 lbs.) or more when operated upon a highway shall be equipped with brakes adequate to control the movement of, and to stop and to hold, the vehicle and so designed as to be applied by the driver of the towing motor vehicle from its cab.",
+   "sourceNote": "Quoted from the Arkansas Department of Transportation's own published compilation of the motor vehicle and traffic laws.",
+   "breakaway": "Required: the brakes must be designed and connected so that an accidental breakaway applies them automatically. No retention time is stated."
   }
  ],
  "allStates": [
@@ -723,16 +797,10 @@
   ]
  ],
  "coverage": {
-  "covered": 44,
+  "covered": 50,
   "total": 51,
   "missing": [
-   "AK",
-   "AR",
-   "HI",
-   "KY",
-   "MS",
-   "OK",
-   "WV"
+   "MS"
   ]
  }
 }
