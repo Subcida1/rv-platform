@@ -2543,3 +2543,15 @@ Four items, verified against the page sources at tip `56a6d1b`:
 - **Verified clean (Neo's list):** H1s, titles/metas, canonicals, breadcrumbs, dates, callout separators, captions, byline/CTA, voice PASS, factual spot-checks.
 
 Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok.
+
+## Neo tools 11th rotation (finder-pages slice) (2026-10-15, verified from the Cloud lane)
+
+Eight items, verified against the page sources at tip `032b474`:
+
+- **Fixes verified (Neo's list):** the Where-to-go-next block on 6 of 7 (water-filter remains); the recall duplicate gone; the form controls in source; the anode href style normalized; sitemap 131. All confirmed.
+- **water-filter next block: CONFIRMED missing** (the only finder without it). Queue.
+- **Anode-rod double link: CONFIRMED** -- two links to rv-water-heater-not-heating, both root-relative now, different anchor text. Queue: normalize to one.
+- **parts/directory silo: carried** (zero on all 6).
+- **Verified clean (Neo's list):** titles/metas/H1s; dateModified; no dashes/FFFD; aria-live; pipeline cards; voice PASS; factual spot-checks.
+
+Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok.
