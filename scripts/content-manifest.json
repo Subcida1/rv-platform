@@ -723,10 +723,10 @@
     "claims": "8557baaf9b567d43"
   },
   "guides/rv-solar-not-charging.html": {
-    "hash": "2cc65ebf512c3a66",
+    "hash": "44c7c2c1c2dace60",
     "status": "verified",
-    "verified_by": "queued Neo guides-12th silo finding applied 2026-10-15: these eighteen guides linked nothing outside /guides/ -- no tool, no part, no manual, no directory. Each now names one topic-matched target in its Related guides block (a tool where the guide is about arithmetic, the parts page where it is about a part, the maker's manual section where it is about documents). No fact changed; no existing link removed.",
-    "verified_at": "2026-10-14",
+    "verified_by": "the mounting section names the fiberglass case the community threads asked about, and states the honest finding that no maker publishes a fiberglass-specific procedure: what differs is roof thickness and the membrane.",
+    "verified_at": "2026-10-15",
     "sources": [],
     "spec": "_specs/rv-solar-not-charging.md",
     "spec_waived": false,
