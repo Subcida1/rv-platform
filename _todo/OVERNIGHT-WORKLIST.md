@@ -2675,6 +2675,20 @@ With both, `bash scripts/ci.sh` reports "every check passed" here.
 - **Roof-leak EPDM independent pass: ALREADY CLOSED — no dispatch needed.** `a575e176` ("roof-leak: the OWED independent pass is done, and it found two defects") is on main; verified by ancestry. The two defects were the Alpha "will not adhere well" qualification and the unsourced "two-part" descriptor, both fixed; four reviewer findings checked and refuted. The manifest now carries **0 OWED markers across all 133 pages** — the "STILL OWED" lines in the fire reports above are stale history from before 2026-10-12 16:08 UTC.
 - Conductor status as of 01:15 PDT: all six working sessions ACTIVE and processing; `conv-cf6aa2a3` IDLE waiting on Ty (W19 page 6) — not disturbed. Batch D closed by its own session. Main green, no failed runs in 6h.
 
+## Independent review — state trailer brake tool (2026-10-15, conv-c3913bd3)
+
+**Reviewed at `e3e426b8` (50 of 51). Verdict: no fabricated quotation, no mis-paired citation, no state answering with a guess.** All 50 rows were fetched and checked, not sampled.
+
+**Three real defects, all the same shape — a silent edit at the edge of an otherwise faithful quotation.** F1 LOW: Hawaii's quote jumps from "the following:" to "(8)", eliding items 1-7 without an ellipsis. F2 LOW: Michigan's quote ends on a period where the source continues with a comma. F3 LOW: Virginia and Maryland drop the `§` inside quotations. Plus F5 LOW (the lede over-claims "every threshold was read from the state's own code" while five rows are agency restatements and one has no quote — disclosed below, over-claimed in the summary line) and F4 INFO (`shape` is stored on all 50 rows and never rendered).
+
+**Fourteen of the eighteen first-pass failures were artefacts of the reviewer's own extraction, verified by hand** — a two-column PDF (AR), JSON `\r\n` escapes in the source (AK), markup-induced spaces before semicolons (MT, WA, FL), and a section heading sharing the quote's opening words (SD). **Six rows could not be verified by machine at all** (AL, NJ, DC, UT — JavaScript applications and a ZIP; IA and NY — a DNS failure and a bot wall) and are recorded as OWED, not as clean.
+
+**The two flagged states are both correct.** Pennsylvania prints "No weight threshold" and its `extra` says the 3,000 lb figure is the breakaway trigger and an inspection exception, neither a brake requirement. Hawaii's `appliesTo` says the failure is at periodic inspection, not on the road.
+
+**Honesty framing PASS** — an unread state cannot return a blank or a guess, and Mississippi's exclusion is explained with its three specific reasons. **Voice PASS** — zero em dashes, zero "rig", zero reader-benefit clauses.
+
+Findings file: `_todo/REVIEW-state-brake-tool.md`.
+
 **Done criteria:** every item above is applied and pushed with CI green, or explicitly recorded as blocked-on-Ty. The conductor reports the night's result to Ty in the morning.
 ## Batch A closes — the content batch (conv-b71ff860, 2026-10-15)
 
