@@ -2567,3 +2567,54 @@ Seven items, verified against the page sources at tip `a35d100`:
 - **Verified clean (Neo's list):** card counts match sitemap; sitemap 131 (grep -o); titles/metas/H1s/canonicals; no dashes/FFFD; /about links; voice PASS.
 
 Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok.
+
+---
+
+# TONIGHT'S CONDUCTOR PLAN — 2026-10-15 01:05 PDT (conv-19dd16d7, Cloud)
+
+Ty, 01:00: *"act as a conductor for the night and keep all of our work rolling … guide the whole night of work to completion … Dont stop until everything is done … feel free to utilize the bridge as needed open and close lanes as needed … feel free to utilize neo as well if needed."*
+
+**Fleet and assignments (one session per file domain tonight — do not edit another session's domain):**
+
+| session | owns tonight | state at 01:05 |
+|---|---|---|
+| `conv-095eb8fd` | parts completeness (Ty's 00:05 request) | ACTIVE — index on main (fed4527f); continuing the deep pass; also owns the queued parts-card fixes |
+| `conv-c145cc42` | thin-states fill-out (fan-out, ~10 states) | ACTIVE — listings being written; will build + CI + push when the fan-out closes |
+| `conv-b71ff860` | content batch — in-body links, finder blocks, small fixes | ASSIGNED |
+| `conv-8e8a0028` | weight calculator — finish the 100-case harness + remaining calculator items | RESUMED |
+| `conv-ff6725d2` | directory data batch — all-50 phone audit + carryovers | ASSIGNED |
+| `conv-c3913bd3` | schema/hub batch + W29 entry update | ASSIGNED |
+| `conv-cf6aa2a3` | W19 voice calibration | WAITING ON TY (page 6 presented) — DO NOT DISTURB |
+| `conv-19dd16d7` | conductor — roof-leak OWED review, monitoring, incidents, unblocking | ACTIVE |
+
+**Standing rules for every session tonight:** explicit-path commits only (`git commit -- <paths>`); `bash scripts/ci.sh` is THE gate before every push; archive-check the commit before pushing; `git fetch` before treating the local tree as base; update this file when a batch closes; no red pushes (they email Ty).
+
+**The batches (drawn from the queue sections above):**
+
+**A. conv-b71ff860 — content batch (guides + tools pages):**
+- In-body tool links (guides 12th rotation): battery-not-charging -> rv-converter-finder + battery-runtime; generator-not-charging -> watts-to-amps + rv-converter-finder; fuse-keeps-blowing -> watts-to-amps; two-appliances-stopped -> watts-to-amps; battery-disconnect -> battery-runtime.
+- Guide silo (10th rotation): towing-trailer -> weight calculator; maintenance-schedule -> tire-date-code / anode-rod / water-filter; trip-planner -> its tools; pre-trip-walkaround + driving-motorhome -> topic-matched links.
+- Finder blocks (8-page rotation): the 4 finders carry no Where-to-go-next block — extend with topic-matched links; water-filter is missing the block entirely.
+- battery-runtime guide gap -> add /guides/rv-battery-not-charging to its block; weight-calculator next block -> include the guide.
+- Small fixes: anode-rod double link -> one link, one style; GasBuddy citation -> add the link or drop the mention; two-appliances opening -> trim the duplicate clause; trailer-brakes -> scope-label as three worked examples; manuals sub-pages -> water-and-plumbing -> /tools/rv-water-filter, kitchen-and-appliances -> /tools/rv-appliance-board-finder.
+
+**B. conv-c3913bd3 — schema/hub batch:**
+- Hub schema mix -> adopt ItemList-for-card-grids sitewide (tools 14 cards, parts 157) or record the mix as deliberate.
+- Unidentified WebSite nodes on /directory/ and /manuals/ -> add the matching @id (or drop the node).
+- /guides title (4 of 6 sections); /directory region order (AK/HI last vs the west-to-east intro).
+- Homepage JSON-LD (6th flag); about/contact in-body links (6th flag).
+- start-here hygiene: Article JSON-LD + the missing section links.
+- W29 worklist entry update (the About link was removed deliberately in 9e5f403 — update the entry to match, do not restore).
+
+**C. conv-ff6725d2 — directory data batch:**
+- All-50 phone audit (fold in: Magic Wand CA 612, Page's OR 208, the AZ/WA/OR/CO code carryovers, Foothill RV CA (840) invalid NANP).
+- NM roadside over-claim + per-state lede variant (HI/DE pattern).
+- Thin-content + region taxonomy.
+
+**D. conv-8e8a0028 — weight calculator:** finish the 100-case independent-oracle harness; remaining calculator items from Ty's pass.
+
+**E. conv-095eb8fd — parts:** continue; fold in queued card fixes: black tank card -> rv-black-tank; chassis battery card (retarget or unlink); water pressure regulator + gravity fill -> retarget or gap-note; ladder naming rename; Henry's Tropi-Cool alias; heat-pump card draft (8ed90b2).
+
+**F. Conductor (conv-19dd16d7):** roof-leak EPDM independent pass (OWED — dispatching now, subagent + bridge); monitor gh-failures; hourly fleet check; incidents.
+
+**Done criteria:** every item above is applied and pushed with CI green, or explicitly recorded as blocked-on-Ty. The conductor reports the night's result to Ty in the morning.
