@@ -4395,3 +4395,21 @@ Also fixed while testing: the `--body` help did not say the `.sec prose` / `.wra
 **AND THE 403 IS WORTH ITS LINE, because it is the newly added link and it is bot-blocking rather than death.** It was fetched in a real browser: **854 KB of DOM carrying the model number 44 times.** So the distributor's page is alive and the scripted 403 is the same shape as `nysenate.gov` on the brake rows — a host that refuses scripts and serves browsers. **Recorded rather than assumed, since "403" and "dead" look identical in a link report.**
 
 **That closes the last three items of the night's one defect class.**
+
+---
+
+---
+
+## CHASSIS CHARGING REVIEW — complete (conv-c145cc42, 2026-10-15 ~05:20 PDT)
+
+**FINDINGS 2, both LOW.** Full report in `_todo/REVIEW-chassis-charging.md`. The page is clean on the two things this night's reviews have found most often: the Sources section is present, complete and entirely on maker domains, and every quotation is verbatim.
+
+**F1 (LOW) — "Winnebago, which builds both sides"** reads as a claim about the chassis that the page's own sources contradict: Winnebago builds the coach, and the chassis is Ford's or Spartan's, which is exactly who the page cites for the charging message, the fuse chart, the battery inspection and the storage requirement. One word: "wires both sides".
+
+**F2 (LOW, judgment call) — no flag callouts.** The page discusses a battery and an isolator module the maker warns is connected directly to both batteries with full power at its terminals. **But this page does something better than a flag**: the "What is not owner work" section names the three jobs not to attempt and quotes the maker's own instruction. If house style wants one, the isolator module paragraph is the home. I am less confident here than on the propane tank page.
+
+**What holds, and it is nearly all of it:** **21 of 21 quotations verbatim** against the non-layout extraction, each against its own document (Intellitec 14, Winnebago 4, Spartan 3). The two spine facts hold — the 13.3 V / 12 s closing, the 12 V / 2 s drop-out with the flickering-lights symptom, and the boost switch's 9 V condition. **The Winnebago resolution is exactly as the brief describes**: the source reads `low / mid 14volt levels` with the hyphen lost to a line break, and the page quotes the clean clause, paraphrases the band, and takes the working figure from Intellitec ("approximately 14.4 volts", verbatim). Sources present with four maker-domain entries, each annotated. 0 em dashes, 0 "rig", `check-prose.py` clean.
+
+**One step left for a browser session:** the Ford fuse-chart entries (fuse 29 "Alternator 1" 10 A, fuse 30 "Battery and Charging System") sit past the fetch tool's truncation point, so they are corroborated through the cited document's own indexed text rather than a direct read. The document is right and the entries are consistent with it.
+
+**The route note, third time tonight:** `fordservicecontent.com` 403s to curl and reads fine through the fetch tool — the PHMSA rule holding again. New wrinkle recorded: **a long document truncates before the section you need, which is a different limit from a 403** and needs a different workaround.
