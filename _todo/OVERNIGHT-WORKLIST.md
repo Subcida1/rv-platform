@@ -4547,3 +4547,12 @@ Seven items, verified against the page sources and the live site at tip `8db6e9f
 - **Also verified:** hub 15 tool cards + 4 pipeline cards; sitemap 143; the fixes Neo lists (anode-rod two distinct targets, fuel-cost GasBuddy, water-filter Where-to-go-next, battery-runtime guide + 3 parts anchors) all present.
 
 Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok. CI green.
+
+## APPLIED directly — the two smallest verified fixes (2026-10-15, Cloud lane)
+
+The night's sessions are closed and the queue has been idle since 12:31 UTC, so two one-line fixes were applied rather than left queued (precedent: the 2026-10-14 direct applications):
+
+- **about.html JSON-LD**: the duplicate anonymous `Person` is now a single entity with `@id` (`https://originrv.com/about#ty`), referenced from `author` and defined in `mainEntity`; the AboutPage carries `@id` (`https://originrv.com/about#page`). Closes the about 12th rotation #1/#2.
+- **privacy.html**: "so nothing from YouTube loads and no cookie is set unless you choose to watch" -> "so no YouTube player, scripts, or cookies load unless you choose to watch." Closes the about 12th rotation #4. (Wording note: "scripts" rather than the queued "tracking" -- the still frame does contact YouTube's image CDN, so "no tracking" would overclaim; "no scripts" is precisely true.)
+
+Gates: `verify.py` ALL CHECKS PASSED; `check-prose.py` 0 hits.
