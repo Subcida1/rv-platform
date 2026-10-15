@@ -211,7 +211,13 @@ REHOST = ("manualslib.com", "manualsonline.com", "manuals.plus", "manualzz.com",
           # manual, pantherrvproducts.com for a Dometic installation manual, and rvupgradestore.com
           # for a Coleman-Mach service manual. The class rule caught the other three mirrors in the
           # same guide and let these through, which is exactly the drift this list exists to stop.
-          "bdub.net", "pantherrvproducts.com", "rvupgradestore.com")
+          "bdub.net", "pantherrvproducts.com", "rvupgradestore.com",
+          # Added 2026-10-15 while expanding the air conditioning guide, which cited
+          # microaireasystart.com for Micro-Air's own soft starter figures. That domain is a
+          # Houston dealer ("First Source Energy, Certified Micro Air EasyStart Installer"),
+          # not Micro-Air, and it reproduces the maker's FAQ. The claims moved to the maker's
+          # own documents on micro-air.com; this entry stops the next session repeating it.
+          "microaireasystart.com")
 # SCOPE: this is a CITATION rule, and it applies to the pages that cite documents. The
 # directory pages are a different thing entirely - they link each business's own website, and a
 # business whose website happens to be a manual rehost is still the business. On 2026-09-28 the
