@@ -1191,7 +1191,7 @@
   "tools/state-trailer-brake-laws.html": {
     "hash": "210398a8c907ec69",
     "status": "verified",
-    "verified_by": "F7 applied: the District of Columbia row pointed at the chapter table of contents, which carries none of the quoted language, so it now links the two rule documents that do, one for the threshold and one for the breakaway clause, and the row says what the links download.",
+    "verified_by": "two review fixes: the 50-row table is wrapped in the house .table-scroll so the page stops scrolling sideways at phone width, and the conditional shape is cut with Delaware re-shaped as speed, leaving six shapes that each say something the row does not already say.",
     "verified_at": "2026-10-15",
     "sources": [],
     "spec": null,

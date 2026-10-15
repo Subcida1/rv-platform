@@ -497,7 +497,7 @@
    "code": "DE",
    "name": "Delaware",
    "threshold": "4,000 lb gross",
-   "shape": "conditional",
+   "shape": "speed",
    "appliesTo": "a trailer or semitrailer over 4,000 lb gross may not be towed faster than 10 mph unless it has brakes the driver controls, so the rule is written as a speed limit rather than a brake requirement",
    "section": "21 Del. C. 4305",
    "url": "https://delcode.delaware.gov/title21/c043/sc01/index.html",

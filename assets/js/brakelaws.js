@@ -53,7 +53,6 @@
     none: 'This state sets no trailer weight threshold in its own code.',
     speed: 'This state triggers on speed rather than on weight.',
     inspection: 'This state puts the threshold in its inspection standard rather than in an equipment mandate, so what a trailer fails is its inspection.',
-    conditional: 'This state writes the rule as a speed limit rather than as a brake requirement.'
   };
 
   function render(code) {
