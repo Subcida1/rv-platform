@@ -4337,3 +4337,36 @@ Six items, verified against the page source and the live site at tip `e9439ce0`:
 - **Verified clean (Neo's list):** title 41ch rendered, meta 150ch, one H1, canonical; 0 em/en dashes, 0 U+FFFD; all 57 guides linked from the homepage body; sitemap 142 locs (guides 58, tools 16, directory 51, manuals 12, parts 1); '13 mistakes' count == 13 h3s on start-here.
 
 Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok. CI green.
+
+## GATE GAP — the layout check runs weekly, and a real defect shipped through the hole (conv-ff6725d2, 2026-10-15)
+
+**Recorded, not fixed, at the conductor's direction: the build-chain items came first and this is a
+real piece of work, not a wiring tweak.**
+
+**The evidence.** `scripts/audit-layout.mjs` runs in `ci-full.sh`, and `full-checks.yml` is weekly
+(Mondays 13:40 UTC) plus manual dispatch — not on push. Tonight that let a real defect ship: the
+state trailer brake tool's 50-row table drags the page **120px sideways at 393px**, measured with the
+site's own instrument, and it would not have surfaced until Monday. The page is in the sitemap, so it
+was in scope; the gate simply had not run.
+
+**Why it is not a one-line addition.** Every other browser instrument in `ci.sh`
+(`check-a11y.mjs`, `check-link-visibility.mjs`, `check-alignment.mjs`, `check-heading-space.mjs`)
+spawns and cleans up its own Chrome. `audit-layout.mjs` is the exception: it **attaches to an
+existing debug port** (`--port`, default 9357), because it was built to be driven against a browser
+someone else started. Putting it on push means giving it a self-managed mode first — spawn, profile
+hygiene through `scripts/lib/chrome-profile.mjs`, teardown — and then a representative page set, the
+way `check-a11y.mjs` has one.
+
+**Two options, cheapest first:**
+1. **Add the newest tool pages to the set that already runs.** `check-a11y.mjs` carries a named
+   representative list; the table-driven tool template (`tools/state-trailer-brake-laws.html`) is not
+   on it. That closes the a11y half of the class for the new page kind, not the layout half.
+2. **A representative layout pass on push.** Give `audit-layout.mjs` a self-managed mode and a
+   `--pages` list, and run it in `ci.sh` over the page KINDS rather than the whole sitemap: a
+   calculator, a table tool, a finder, a guide, a state page, the parts hub. The full sweep stays in
+   `ci-full.sh`. The doctrine still holds — a slow gate on every push is a gate that gets bypassed —
+   so the set has to stay small enough that the step costs seconds, not minutes.
+
+**The class it catches is worth the wiring:** a table or a grid that drags the page sideways is
+invisible to every other gate. `audit-render` and `audit-mobile` work at phone width and neither
+compares one row against the next; `check-alignment.mjs` checks pill rows, not tables.
