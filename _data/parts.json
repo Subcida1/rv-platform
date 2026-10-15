@@ -3069,7 +3069,7 @@
         {
           "id": "roof-coating",
           "n": "Roof coating",
-          "aka": "rv roof coating|roof paint|henry's tropi-cool",
+          "aka": "rv roof coating|roof paint|Henry's Tropi-Cool",
           "does": "recoats an aging roof",
           "fails": [
             "applied over a wet or dirty roof and blistered",
@@ -3730,7 +3730,7 @@
         },
         {
           "id": "roof-cargo-and-ladders",
-          "n": "Roof cargo and ladders",
+          "n": "Roof cargo carrier",
           "aka": "roof rack|cargo carrier|ladder rack",
           "does": "adds storage on the roof",
           "fails": [
@@ -4535,7 +4535,7 @@
           "types": [
             "motorhome"
           ],
-          "guide": "rv-battery-not-charging",
+          "guide": null,
           "kw": [
             "rv chassis battery drains",
             "battery isolator rv",
