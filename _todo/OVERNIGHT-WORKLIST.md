@@ -2882,6 +2882,18 @@ Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all
 
 4. **TWO GATES CHECK BRITISH SPELLING AND THEY DO NOT AGREE.** On the solar setup pass (conv-8e8a0028, 2026-10-15) new prose carried **eleven** British forms — equalisation, synchronisation, self-levelling, optimisers, centimetres, recognise — and `check-spelling.py` reported **"no British spellings in published copy"** while `verify.py` failed on `british spelling`. Same class, different word lists. **A session that runs only check-spelling will ship British spellings believing it checked.** Run verify.py, or run both.
 
+**INDEPENDENT REVIEW — the engine-overheating page (conv-8e8a0028, 2026-10-15). CLEAN PASS.** Full findings in `_todo/REVIEW-engine-overheating.md`. Reviewed at `64973c9d`.
+
+**No defects found.** Quotation fidelity, the year attribution, both spine facts, both owner-level numbers, the Sources section and the voice all hold.
+
+- **THE YEAR ATTRIBUTION IS CORRECT ON EVERY QUOTATION.** All ten Ford quotations were tested against both manuals: the three 2017-only ones (the gauge wording, the three-stage chime, the not-restart instruction) are credited to the 2017 manual, and the four 2021-only ones (the cap warning, the belt interval, the emergency-water allowance, the water-alone warning) to the 2021. Nothing is on the wrong year. The drafter's own pre-build check caught two on the wrong year and the shipped page has all ten right.
+- **Both spine facts hold.** Ford's fail-safe cooling ("the engine automatically switches to alternating cylinder operation. Each disabled cylinder acts as an air pump and cools the engine", with "Engine power is limited" and "The air conditioning system turns off") is verbatim in both manuals. Horton's fan drive fail-safe is verbatim on Horton's own page ("a zero-voltage 'Fail Safe' design… will default to full 'on' mode"), and the page's inversion point is the maker's own point rather than an inference.
+- **Both owner-level numbers hold.** Ford's 1.1 qt (1 L) per month loss rule is verbatim in both manuals; Spartan's belt test is verbatim ("apply a firm force to the belt (approximately 30 LB) halfway between the 2 pulleys. The belt should press in no more than 1/2\"").
+- **THE FIRST PAGE TONIGHT WITH ITS SOURCES IN PLACE.** Five documents, all on maker domains, all resolving, each entry naming what it was used for. This is the shape the other four should be brought to.
+- Voice: zero em dashes, zero "rig", no unnamed authority. Two mild reader-benefit phrases (INFO), both carrying a reason rather than a bare instruction to feel.
+
+**Method note:** the two Ford manuals return HTTP 403 to a scripted fetch and were retrieved through a real browser. That is the fourth maker or state site tonight readable only that way.
+
 **INDEPENDENT REVIEW — the off-grid heating page (conv-8e8a0028, 2026-10-15).** Full findings in `_todo/REVIEW-off-grid-heating.md`. Reviewed at `420b1e58`.
 
 **F1 HIGH — THE PAGE'S ONE "NOT PUBLISHED" CLAIM IS FALSE.** The page says "How much output a heater loses between sea level and its ceiling is not published by Webasto or by Eberspaecher". **Eberspaecher publishes exactly that, on its own domain**: its heater catalogue's altitude-kit section reads "It begins reducing fuel feed at around 1,400 m, which immediately starts to reduce heating performance by around 9% for every 1,000 m in altitude." And Webasto publishes a per-model altitude power chart ("AT Evo 40 - 100% heating power up to 2,200 m; High Altitude version: Heating power max. 2,8 kW up to 5,000 m"). The page's honesty framing is built on a negative claim, and a negative claim is still a claim — this one is checkable in one search. This is the class the site has been caught by before.
