@@ -748,6 +748,20 @@ def start_here_page():
       </div>
     </div>
   </div>
+
+  <div class="sec pb-60">
+    <div class="wrap">
+      <div class="card">
+        <h2 class="sm">Where to go next</h2>
+        <p class="sm">The <a href="/parts/">parts</a> page names every component an RV is made of,
+        by system, with what each one does. The <a href="/directory/">directory</a> finds a mobile
+        technician or a shop by state when a job is past what you want to tackle yourself. The
+        <a href="/tools/">tools</a> do the arithmetic: weight, load, tire age, battery runtime.
+        And <a href="/contact">the contact page</a> is where a correction or a missing topic
+        goes.</p>
+      </div>
+    </div>
+  </div>
 """ % (crumb_bar, START_TITLE, op["lede"], nav, op["title"],
        '<div class="no-mistakes">%s</div>' % "\n".join(
           '<article class="no-mistake"><h3>%s</h3><p>%s</p></article>'
@@ -757,7 +771,20 @@ def start_here_page():
           for it in op["items"]),
        new_owner_sections() + "\n" + body)
 
-    return (head(START_TITLE, desc, SITE + "/manuals/start-here.html", [])
+    # ARTICLE JSON-LD. This page carried only a BreadcrumbList, so the one long-form guide in the
+    # manuals section declared no article at all -- no headline, no date, no publisher -- while
+    # every guide on the site carries one. Same shape as the guides; dateModified is seeded here
+    # and owned by sync-dates.py, which now recognises Article.
+    article = {
+        "@context": "https://schema.org", "@type": "Article",
+        "headline": START_TITLE, "description": desc,
+        "datePublished": "2026-09-24",
+        "dateModified": REVIEWED_SEED_ISO,
+        "publisher": {"@type": "Organization", "name": "OriginRV"},
+        "url": SITE + "/manuals/start-here.html",
+        "author": {"@type": "Organization", "name": "OriginRV"},
+    }
+    return (head(START_TITLE, desc, SITE + "/manuals/start-here.html", [article])
             + page + foot(""))
 
 def system_page(slug, title, desc, rows):

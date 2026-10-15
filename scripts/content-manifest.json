@@ -443,9 +443,9 @@
     "claims": "e65464526c5af869"
   },
   "guides/rv-battery-disconnect.html": {
-    "hash": "e933dfcbe31ee600",
+    "hash": "147471d5f117d51d",
     "status": "verified",
-    "verified_by": "guide endings unified, step 2 (Ty 2026-10-14, \"Your recommendation on all\"): the thirty button-only guides now end with the same Related guides prose block the other seventeen use, because a sentence can say why the next page matters and a button can only repeat its title. Tool buttons survive as buttons, relabelled as actions rather than as relations. Every button target was checked against the prose before the row was removed; no link target was lost.",
+    "verified_by": "queued Neo guides-12th finding applied 2026-10-15: these six guides linked no tool at all. Each now names the topic-matched tool in its Related guides block (converter finder + battery runtime on battery-not-charging; watts to amps + converter finder on generator-not-charging; watts to amps on fuse-keeps-blowing and two-appliances-stopped; battery runtime on battery-disconnect; toilet valve finder on sewer-smell). Also trimmed a three-clause repeat in the two-appliances opening. No fact changed.",
     "verified_at": "2026-10-14",
     "sources": [],
     "spec": null,
@@ -453,9 +453,9 @@
     "claims": "74f9b7b4567ac58a"
   },
   "guides/rv-battery-not-charging.html": {
-    "hash": "5b6a16eeb15a6b07",
+    "hash": "25239943b65fc7dc",
     "status": "verified",
-    "verified_by": "guide endings unified, step 1 (Ty 2026-10-14, \"Your recommendation on all\"): these twelve guides carried BOTH a Related guides prose block and a button row pointing at the same pages. The duplicate buttons are gone; two prose blocks gained the one target their buttons had that the prose did not (solar not charging on the outlets guide, winterize plumbing on the roof leak guide); the converter finder survives as a button because a tool is an action. No link target was lost.",
+    "verified_by": "queued Neo guides-12th finding applied 2026-10-15: these six guides linked no tool at all. Each now names the topic-matched tool in its Related guides block (converter finder + battery runtime on battery-not-charging; watts to amps + converter finder on generator-not-charging; watts to amps on fuse-keeps-blowing and two-appliances-stopped; battery runtime on battery-disconnect; toilet valve finder on sewer-smell). Also trimmed a three-clause repeat in the two-appliances opening. No fact changed.",
     "verified_at": "2026-10-14",
     "sources": [],
     "spec": "_specs/rv-battery-not-charging.md",
@@ -553,9 +553,9 @@
     "claims": "89a67693ba48f388"
   },
   "guides/rv-fuse-keeps-blowing.html": {
-    "hash": "23ad38d0e1493c53",
+    "hash": "cf3863d9ce1a9d24",
     "status": "verified",
-    "verified_by": "guide endings unified, step 1 (Ty 2026-10-14, \"Your recommendation on all\"): these twelve guides carried BOTH a Related guides prose block and a button row pointing at the same pages. The duplicate buttons are gone; two prose blocks gained the one target their buttons had that the prose did not (solar not charging on the outlets guide, winterize plumbing on the roof leak guide); the converter finder survives as a button because a tool is an action. No link target was lost.",
+    "verified_by": "queued Neo guides-12th finding applied 2026-10-15: these six guides linked no tool at all. Each now names the topic-matched tool in its Related guides block (converter finder + battery runtime on battery-not-charging; watts to amps + converter finder on generator-not-charging; watts to amps on fuse-keeps-blowing and two-appliances-stopped; battery runtime on battery-disconnect; toilet valve finder on sewer-smell). Also trimmed a three-clause repeat in the two-appliances opening. No fact changed.",
     "verified_at": "2026-10-14",
     "sources": [],
     "spec": "_specs/rv-fuse-keeps-blowing.md",
@@ -563,9 +563,9 @@
     "claims": "fdfcf4aee5a95536"
   },
   "guides/rv-generator-not-charging.html": {
-    "hash": "b8bc78cf296d7bbe",
+    "hash": "1dba05d97cf6af1f",
     "status": "verified",
-    "verified_by": "guide endings unified, step 1 (Ty 2026-10-14, \"Your recommendation on all\"): these twelve guides carried BOTH a Related guides prose block and a button row pointing at the same pages. The duplicate buttons are gone; two prose blocks gained the one target their buttons had that the prose did not (solar not charging on the outlets guide, winterize plumbing on the roof leak guide); the converter finder survives as a button because a tool is an action. No link target was lost.",
+    "verified_by": "queued Neo guides-12th finding applied 2026-10-15: these six guides linked no tool at all. Each now names the topic-matched tool in its Related guides block (converter finder + battery runtime on battery-not-charging; watts to amps + converter finder on generator-not-charging; watts to amps on fuse-keeps-blowing and two-appliances-stopped; battery runtime on battery-disconnect; toilet valve finder on sewer-smell). Also trimmed a three-clause repeat in the two-appliances opening. No fact changed.",
     "verified_at": "2026-10-14",
     "sources": [],
     "spec": "_specs/rv-generator-not-charging.md",
@@ -683,9 +683,9 @@
     "claims": "39cbfa3d61716c6a"
   },
   "guides/rv-sewer-smell.html": {
-    "hash": "f7f42a890c440300",
+    "hash": "57d990b9f1e4628a",
     "status": "verified",
-    "verified_by": "guide endings unified, step 2 (Ty 2026-10-14, \"Your recommendation on all\"): the thirty button-only guides now end with the same Related guides prose block the other seventeen use, because a sentence can say why the next page matters and a button can only repeat its title. Tool buttons survive as buttons, relabelled as actions rather than as relations. Every button target was checked against the prose before the row was removed; no link target was lost.",
+    "verified_by": "queued Neo guides-12th finding applied 2026-10-15: these six guides linked no tool at all. Each now names the topic-matched tool in its Related guides block (converter finder + battery runtime on battery-not-charging; watts to amps + converter finder on generator-not-charging; watts to amps on fuse-keeps-blowing and two-appliances-stopped; battery runtime on battery-disconnect; toilet valve finder on sewer-smell). Also trimmed a three-clause repeat in the two-appliances opening. No fact changed.",
     "verified_at": "2026-10-14",
     "sources": [],
     "spec": null,
@@ -793,9 +793,9 @@
     "claims": []
   },
   "guides/rv-two-appliances-stopped.html": {
-    "hash": "1ce8fbaf5ae7ca12",
+    "hash": "495d020e30cf7f1b",
     "status": "verified",
-    "verified_by": "guide endings unified, step 2 (Ty 2026-10-14, \"Your recommendation on all\"): the thirty button-only guides now end with the same Related guides prose block the other seventeen use, because a sentence can say why the next page matters and a button can only repeat its title. Tool buttons survive as buttons, relabelled as actions rather than as relations. Every button target was checked against the prose before the row was removed; no link target was lost.",
+    "verified_by": "queued Neo guides-12th finding applied 2026-10-15: these six guides linked no tool at all. Each now names the topic-matched tool in its Related guides block (converter finder + battery runtime on battery-not-charging; watts to amps + converter finder on generator-not-charging; watts to amps on fuse-keeps-blowing and two-appliances-stopped; battery runtime on battery-disconnect; toilet valve finder on sewer-smell). Also trimmed a three-clause repeat in the two-appliances opening. No fact changed.",
     "verified_at": "2026-10-14",
     "sources": [],
     "spec": null,
