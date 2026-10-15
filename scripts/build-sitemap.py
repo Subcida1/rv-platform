@@ -11,7 +11,7 @@ The date comes from git (the last commit that touched the page), because mtimes
 do not survive a clone or a checkout and would lie about when content changed.
 An untracked page falls back to its file mtime.
 
-  python3 scripts/build-sitemap.py --write     # inject or refresh lastmod
+  python3 scripts/build-sitemap.py --write     # add missing entries, inject or refresh lastmod
   python3 scripts/build-sitemap.py --check     # verify, exit non-zero on a problem
 
 --check answers the questions that silently went wrong here before:
@@ -119,6 +119,56 @@ def date_for(path):
     return date.today().isoformat()
 
 
+def loc_for(rel):
+    """The sitemap loc a published page should carry.
+
+    The inverse of page_for_loc, and it has to produce the same extensionless form the
+    rest of the file uses: directory/montana.html is published as /directory/montana, and
+    a hub is published with its trailing slash.
+    """
+    if rel == "index.html":
+        return BASE
+    if rel.endswith("/index.html"):
+        return BASE + rel[: -len("index.html")]
+    if rel.endswith(".html"):
+        return BASE + rel[: -len(".html")]
+    return BASE + rel
+
+
+def add_missing(text, missing):
+    """Insert a <url> entry for every published page the sitemap does not list.
+
+    THE GAP THIS CLOSES (2026-10-15). --write refreshed lastmod and left the missing
+    entries to the check, which reported them and exited 1 -- but only after printing a
+    success-looking "lastmod added: 0, refreshed: 0" line, so a session that ran it and
+    read the first line shipped a page the sitemap did not carry. new-guide.py adds its
+    own entry, which is why the gap only showed on pages built by another route.
+
+    The sitemap is hand-organised, so this inserts rather than regenerates: a new page
+    goes directly after the last entry that shares its first path segment, so guides land
+    with the guides and tools with the tools. A page with no sibling goes before
+    </urlset>. The entry shape is the one new-guide.py writes.
+    """
+    added = []
+    for rel in missing:
+        entry = ('  <url><loc>%s</loc><lastmod>%s</lastmod>'
+                 '<changefreq>monthly</changefreq><priority>0.8</priority></url>\n'
+                 % (loc_for(rel), date_for(rel)))
+        seg = rel.split("/")[0] + "/" if "/" in rel else ""
+        anchor = None
+        if seg:
+            for m in re.finditer(r"[ \t]*<url>.*?</url>\n", text, re.S):
+                found = re.search(r"<loc>([^<]+)</loc>", m.group(0))
+                if found and found.group(1).startswith(BASE + seg):
+                    anchor = m
+        if anchor is not None:
+            text = text[: anchor.end()] + entry + text[anchor.end():]
+        else:
+            text = text.replace("</urlset>", entry + "</urlset>", 1)
+        added.append(loc_for(rel))
+    return text, added
+
+
 def entries(text):
     """Every <url> block, with its loc and any existing lastmod."""
     found = []
@@ -222,9 +272,16 @@ def main():
         sys.exit(check(text))
 
     new_text, added, refreshed = inject(text)
+    listed = {page_for_loc(loc) for loc, _ in entries(new_text)}
+    missing = sorted(set(published_pages()) - listed - {None})
+    new_text, inserted = add_missing(new_text, missing)
     with open(SITEMAP, "w") as fh:
         fh.write(new_text)
     print("lastmod added: %d, refreshed: %d" % (added, refreshed))
+    if inserted:
+        print("entries added for %d published page(s):" % len(inserted))
+        for loc in inserted:
+            print("  + %s" % loc)
     sys.exit(check(new_text))
 
 

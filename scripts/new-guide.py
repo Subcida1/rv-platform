@@ -16,9 +16,12 @@ WHAT "PUBLISHING A GUIDE" ACTUALLY MEANS ON THIS SITE -- all six places, all enf
   6. a row in _data/guide-systems.json, which is what build-shell.mjs turns into the breadcrumb's
      middle crumb. Miss it and the page still works, but its trail reads Home / Guides / page
      where the other 38 read Home / Guides / system / page.
-Then: build-shell (nav/footer into the HTML), sync-counts, build-search-index, stamp_assets,
-verify-content --seed. Those are printed at the end rather than run, because a build that silently runs
-six other programs is hard to debug.
+Then: bash scripts/build-all.sh, which runs the derived-file writers in their dependency order --
+build-shell (nav/footer into the HTML), sync-counts, build-home-schema (the homepage ItemList),
+build-search-index, stamp_assets, build-sitemap --write, verify-content --seed -- and then the gate,
+bash scripts/ci.sh. The chain lives in that one script because a printed list drifts: this file's own
+printed list omitted build-home-schema.py until 2026-10-15, and three guides shipped with a stale
+homepage ItemList because of it.
 
 Usage:
   python3 scripts/new-guide.py \
@@ -59,7 +62,10 @@ def main():
     ap.add_argument("--lede", required=True, help="the intro paragraph, no <p> wrapper")
     ap.add_argument("--eyebrow", default="Guide",
                     help="the small label above the h1, e.g. 'Troubleshooting guide'")
-    ap.add_argument("--body", required=True, help="file containing the <main> content")
+    ap.add_argument("--body", required=True,
+                    help="file containing the page's content, WITHOUT the .sec prose / .wrap "
+                         "narrow wrapper -- the tool emits that. A body that carries its own "
+                         "wrapper produces two, and check-structure.py fails on it.")
     ap.add_argument("--tile-title", required=True)
     ap.add_argument("--tile-meta", required=True)
     ap.add_argument("--icon", default="\U0001F527", help="emoji for the tiles")
@@ -201,14 +207,22 @@ def main():
         # the 44 tiles carry no such line. This tool was the only thing adding it, so six tiles it
         # built were the only six that had it.
         if a.hub_section:
-            # THE SECTION HEADING CARRIES AN id, so an exact match on the bare form misses all
-            # of them: the markup is <h2 class="guide-group" id="body-slides-and-jacks">Body,
-            # slides and jacks</h2>. Matched on the heading text with the id optional, which is
-            # what the page actually contains.
-            m = re.search(r'<h2 class="guide-group"(?: id="[^"]*")?>' + re.escape(a.hub_section)
-                          + r'</h2>', h)
+            # THE ARGUMENT MAY BE THE HEADING TEXT OR THE SECTION id. The markup is
+            # <h2 class="guide-group" id="heat-cool-and-appliances">Heating, cooling, and
+            # appliances</h2>, and the first version matched the text only -- so passing the id,
+            # which is what the page's own anchors and every other tool use, reported NOT FOUND
+            # and the tile had to be added by hand. Found 2026-10-15 on the three entry guides.
+            m = None
+            for c in re.finditer(r'<h2 class="guide-group"(?: id="([^"]*)")?>([^<]*)</h2>', h):
+                if a.hub_section in (c.group(1), c.group(2).strip()):
+                    m = c
+                    break
             if not m:
+                known = "; ".join(
+                    "%s (id: %s)" % (c.group(2).strip(), c.group(1))
+                    for c in re.finditer(r'<h2 class="guide-group"(?: id="([^"]*)")?>([^<]*)</h2>', h))
                 print(f"  hub: section '{a.hub_section}' NOT FOUND -- add the tile by hand")
+                print(f"       sections on the hub: {known}")
             else:
                 i = m.start(); j = h.index('<div class="guide-grid">', i)
                 open_tag = '<div class="guide-grid">'
@@ -275,10 +289,12 @@ def main():
         print("  breadcrumb: NOT MAPPED -- add \"%s\" to _data/guide-systems.json (or pass "
               "--system) or the trail skips the middle crumb" % a.slug)
 
-    print("\n  now run, in order:")
-    print("    node scripts/build-shell.mjs && python3 scripts/sync-counts.py \\")
-    print("      && python3 scripts/build-search-index.py && python3 scripts/stamp_assets.py \\")
-    print("      && python3 scripts/verify-content.py --seed && bash scripts/ci.sh")
+    # ONE COMMAND, NOT A PRINTED LIST. This printed the chain, and the printed chain omitted
+    # build-home-schema.py, so a guide built exactly to these instructions left the homepage
+    # ItemList stale and ci.sh failed on the check (2026-10-15, the three entry guides). The chain
+    # lives in scripts/build-all.sh now, where it cannot drift from what the tools actually need.
+    print("\n  now run:")
+    print("    bash scripts/build-all.sh && bash scripts/ci.sh")
 
 
 if __name__ == "__main__":
