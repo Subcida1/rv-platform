@@ -1097,9 +1097,9 @@
     "sources": []
   },
   "tools/state-trailer-brake-laws.html": {
-    "hash": "23aefd32949bd9c6",
+    "hash": "0877673f47769dd8",
     "status": "verified",
-    "verified_by": "new tool: the state trailer brake table. Every threshold is quoted from the state's own vehicle code with the section named and linked; three states are quoted from a state agency page because their code host is a JavaScript app or anti-bot walled, and each of those rows says so. No guessed limits.",
+    "verified_by": "the coverage paragraph now names every caveat class rather than only California and Utah: three states quoted from a state agency, two quoted from a jurisdiction's own archive because its viewer returns no text, California without a quote, and Utah silent on breakaway.",
     "verified_at": "2026-10-15",
     "sources": [],
     "spec": null,
