@@ -3543,12 +3543,12 @@
               },
               {
                 "claim": "does",
-                "quote": "Auxiliary heat operation will be activated when the measured temperature of the outdoor temperature sensor is less than 30 \u00b0F (-1 \u00b0C). ... Auxiliary heat operation will be de-activated and the heat pump operation will resume when the temperature of the outdoor temperature sensor is higher than 35 \u00b0F (2 \u00b0C).",
+                "quote": "Auxiliary heat operation will be activated when the measured temperature of the outdoor temperature sensor is less than 30 °F (-1 °C). ... Auxiliary heat operation will be de-activated and the heat pump operation will resume when the temperature of the outdoor temperature sensor is higher than 35 °F (2 °C).",
                 "source": "https://media.dometic.com/externalassets/thermostat-control-box-ccc2_64755.pdf"
               },
               {
                 "claim": "does",
-                "quote": "The Coleman-Mach heat pump is an effective heat source, as long as outdoor temperatures are above 45\u00b0F.",
+                "quote": "The Coleman-Mach heat pump is an effective heat source, as long as outdoor temperatures are above 45°F.",
                 "source": "https://coleman-mach.com/service-support/faqs/"
               },
               {
@@ -5795,7 +5795,7 @@
             "class-c",
             "van"
           ],
-          "guide": null,
+          "guide": "rv-engine-overheating",
           "kw": [
             "rv overheating coolant",
             "diesel pusher radiator cleaning",
@@ -5848,7 +5848,7 @@
             "class-c",
             "van"
           ],
-          "guide": null,
+          "guide": "rv-engine-overheating",
           "kw": [
             "rv serpentine belt replacement",
             "diesel fuel filter change rv",

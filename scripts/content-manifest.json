@@ -403,9 +403,9 @@
     "claims": "ca780a6dbc99c4d8"
   },
   "guides/index.html": {
-    "hash": "f8cc9bf600698809",
+    "hash": "b2d92619e4a6b09a",
     "status": "verified",
-    "verified_by": "frame cracks 2026-10-15: the frame guide's hub tile re-inserted after the rebase onto main, alongside the tiles other sessions added. One tile, no other change to the page.",
+    "verified_by": "the engine overheating guide's hub tile merged with the entry-steps, window, door, water-pressure, off-grid heating and frame-cracks tiles from other sessions; seven tiles under Body, slides and jacks, no other change to the page.",
     "verified_at": "2026-10-15",
     "sources": [],
     "spec": null,
@@ -531,6 +531,13 @@
     "spec": null,
     "spec_waived": true,
     "claims": []
+  },
+  "guides/rv-engine-overheating.html": {
+    "hash": "c1ac3dcf93bb29ef",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
   },
   "guides/rv-entry-door-wont-latch.html": {
     "hash": "7da3cd7875fe749a",

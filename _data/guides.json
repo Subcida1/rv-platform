@@ -58,7 +58,8 @@
       "rv-entry-door-wont-latch",
       "rv-water-pressure",
       "rv-heating-off-grid",
-      "rv-frame-cracks"
+      "rv-frame-cracks",
+      "rv-engine-overheating"
     ]
   }
 }
