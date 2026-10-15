@@ -4556,3 +4556,16 @@ The night's sessions are closed and the queue has been idle since 12:31 UTC, so 
 - **privacy.html**: "so nothing from YouTube loads and no cookie is set unless you choose to watch" -> "so no YouTube player, scripts, or cookies load unless you choose to watch." Closes the about 12th rotation #4. (Wording note: "scripts" rather than the queued "tracking" -- the still frame does contact YouTube's image CDN, so "no tracking" would overclaim; "no scripts" is precisely true.)
 
 Gates: `verify.py` ALL CHECKS PASSED; `check-prose.py` 0 hits.
+
+## Neo manuals 13th rotation, second pass (2026-10-15, verified from the Cloud lane)
+
+Ten items, verified against the page sources and the live site at tip `356cdf67`:
+
+- **#1-#6 fixes verified:** hub ItemList 11 = 11 sub-pages; brands ItemList 44 = 44 rows; hub wording ("110 sources across 94 equipment makers", "44 RV brands, 1973 to 2027"); the date convention on all 7 manuals pages; the topic-matched tool links + `/parts/#part-` anchors on all 3 system pages; the "44 brands, 654 model lines" count. All confirmed from source.
+- **#7 start-here + rigcalc: REFINED — the external is a Sources citation, not a superseded tool link.** The internal tool IS linked in the body (the brake-controller FAQ: "the weight each state sets is in the state trailer brake table"). The rigcalc link is 1 of **206 entries in the Sources list** ("The documents behind the figures and quotations in this guide"), alongside the two towcapacitycalc guides. Decision needed: if the citation still supports a claim, keep it; if it was only ever a tool pointer, drop it. Queue: check it against the page's claim record before removing (same note as tools-10th #5).
+- **#8 rosap 403: REFINED — UA-sensitive bot-blocking, not a dead link.** Verified now: bare curl UA returns **200**, browser UA returns **403** (the earlier sample found 200 with full browser headers). The document is reachable; the 403 is the bot wall. Queue: no replacement needed unless it stays flaky, then swap to the BTS landing page.
+- **#9a Tommy Bahama parens: CONFIRMED.** `mm-name` reads "Tommy Bahama (travel trailer)" while `mm-meta` repeats "travel trailer". Queue: drop the parens from the name.
+- **#9b gap-year rows: CONFIRMED.** Two rows read "2018-2020 - 2022-2027" / "2018-2020 - 2026-2027" (lone hyphen) where the convention is a comma list ("2014-2017, 2019, 2020, 2023-2024"). Queue: comma.
+- **#10 mild carryover: CONFIRMED** — zero in-body /directory on the 3 system pages; zero /parts + /directory on recalls. Fold into the where-to-go-next strip work.
+
+Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok. CI green.
