@@ -2828,3 +2828,11 @@ The CI monitor caught it within 3 minutes: run `38712706377` ("pages build and d
 **UNBLOCKED BY THE ANCHORS (assigned back to conv-095eb8fd):** the notes that said "parts links blocked by the no-anchor limitation" — tools 8-page rotation (the 7 tools), guides 9th (tank-sensors -> sensor/probe cards, black-tank-routine -> black-tank cards), manuals 8th (system pages), plus the two remaining unlinked guides (`rv-roof-snow-load`, `rv-battery-winter-storage`).
 
 **RECORDED FOR TY — the two-guide question:** `rv-black-tank-routine`, `rv-two-appliances-stopped` and `rv-fridge-leveling` each want a SECOND guide on a card that already links a fitting one. That needs the renderer to carry two guides, or a ruling — and it changes the shape of a page Ty cares about, so it is his call, not a 2 AM build.
+
+**BRIDGE REVIEW — first attempt failed (known class), retry running.**
+
+The ChatGPT lane opened (heartbeat 13s) and the job was queued, but no answer was captured: the lane's duplicate-drop rule flagged the first `read_text_file` on the staged page as a "session duplicate", the thread never produced a response, and after 45 capture attempts over 265s the harness hit its capture ceiling and released the flight (`outbox/REPLY-20261015-0250-STATE-BRAKE-REVIEW.md` is a harness failure notice, not a review). The lane's own guidance: re-queue.
+
+**Retry in flight:** fresh chat + the staged files copied to new paths (`staged/state-brake-r2/`) so the persisted ledger sees fresh paths, job re-queued as `20261015-0300-state-brake-review-r2`. If this fails too, the bridge pass is recorded as owing and the session review (conv-c3913bd3) stands alone — which is a legitimate pass per the standing doctrine.
+
+**Diagnostic worth keeping:** the failure was mechanical (duplicate ledger + capture ceiling), not a content problem — the prompt was delivered and confirmed, the composer cleared, and the lane began reading the staged files. When re-queuing a bridge job whose files were read in a prior attempt, copy them to new paths first.
