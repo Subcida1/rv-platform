@@ -663,9 +663,9 @@
     "claims": []
   },
   "guides/rv-propane-furnace-wont-light.html": {
-    "hash": "e28c0622edf0d3fc",
+    "hash": "1eef012643530849",
     "status": "verified",
-    "verified_by": "propane gap: a tank-gauge section (float dial accuracy and range, the panel sender, the pressure-gauge confusion, the bleed and the tare method, dial vs head replacement) and a regulator-selection section (two-stage and UL 144, capacity against the total appliance load, the inlet and outlet fittings, the vent orientation and cover, installation by LP-gas personnel), each claim cited to maker or agency documents; capacity sentence reworded to clear a cross-check keyword collision; gauge FAQ added",
+    "verified_by": "propane gap: independent review's seven findings applied (five citation mismatches moved to the documents that carry the claims, a flag-injury callout added on the gauge section's gas-side work, the burner figure corrected to its source, and two wording fixes)",
     "verified_at": "2026-10-15",
     "sources": [],
     "spec": null,
