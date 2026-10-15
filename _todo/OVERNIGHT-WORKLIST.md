@@ -2763,7 +2763,7 @@ Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all
 - `scripts/check-column.py` exists, is wired into `ci.sh` (two steps: the check and its self-test), and `--self-test` passes. The three hubs (`tools/`, `guides/`, `parts/`) now carry the Where-to-go-next block inside `sec pb-60` + `wrap`. VERIFIED.
 - Batch A: `rv-maintenance-schedule` carries one link each to `/tools/rv-water-filter` and `/tools/rv-anode-rod`; `rv-trip-planner` carries the fuel-cost calculator; `trailer-brakes-required` carries the three-worked-states scope label. VERIFIED.
 - Batch B: `/tools` JSON-LD = CollectionPage.mainEntity ItemList, 14 elements, numberOfItems 14; `/parts` = CollectionPage.mainEntity ItemList, 210 elements. VERIFIED.
-- Finder blocks: all four finders carry `/directory` links (2-3 each) — the "find a tech" CTA item is closed. VERIFIED.
+- Finder blocks: **CORRECTED 02:35 — my original line here was WRONG.** I wrote "all four finders carry /directory links (2-3 each) — the CTA item is closed. VERIFIED." That count was whole-file, and every tool page carries eleven `/directory/` hrefs in nav+footer chrome. Measured inside `<main>`, **13 of 14 tools had zero**; only `rv-recall-lookup` had one. conv-b71ff860 applied the queued fix (`ed42a564`): the CTA now lands on the seven tools whose subject leads to physical work (the four part finders, the anode rod and water filter finders, the tire decoder), phrased in each tool's own terms; the seven pure calculators deliberately get none. Re-verified in-body: 7 tools x 1 link. **Lesson for every session: a whole-file link count cannot tell a silo from site chrome — count inside `<main>`.**
 - fd11d40 (manuals dates): all three sampled manuals sub-pages carry "Last reviewed on" + dateModified. RESOLVED.
 - CI: no un-superseded failures; latest run on main green.
 
@@ -2771,7 +2771,7 @@ Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all
 
 **CONDUCTOR NOTE — 02:20 PDT: the claim convention, and one duplicate build.**
 
-Two sessions built the identical manuals-ItemLists fix tonight (conv-c3913bd3 and a parallel session; `ea8fe0b6` landed at 02:07:17, seventeen seconds after the conductor dispatched the item at 02:06:47). The duplicate was dropped cleanly and only the worklist record was kept (`b89b7e00`). Two rules from it, for every session:
+Two sessions built the identical manuals-ItemLists fix tonight (conv-c3913bd3 and conv-b71ff860; `ea8fe0b6` is conv-b71ff860's, landed at 02:07:17, seventeen seconds after the conductor dispatched the item to conv-c3913bd3 at 02:06:47). The duplicate was dropped cleanly and only the worklist record was kept (`b89b7e00`). Two rules from it, for every session:
 
 1. **CLAIM BEFORE BUILDING.** When you take an item from this queue, add a one-line `CLAIM:` under it (or in the conductor section) before you start. A second session reading the queue can then see it is taken. The conductor will claim items in this file at dispatch time from now on.
 2. **When an item offers "apply or record as deliberate", count the other instances of the convention first.** conv-c3913bd3's count settled the manuals ItemList question: guides 47/47, directory 50/50, tools 14/14, manuals 8/11 — the outlier was drift, not a deliberate choice. The measurement decides; judgement only breaks ties.
