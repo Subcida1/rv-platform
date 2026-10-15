@@ -147,5 +147,21 @@ check('the page no longer says UVW excludes propane',
 check('the page wires the checkbox the calculation reads',
       /id="w-uvw-src"/.test(PAGE_TEXT));
 
+/* THE STATED RANGE AND THE COMPUTED RANGE HAVE TO AGREE, and nothing compared them until
+   2026-10-15. The page prose said the fifth-wheel target was 20 to 25% while the calculator's
+   own range, and the sources it can cite, said 15 to 25%, so the page contradicted itself in
+   three places and every gate was green. This reads both and compares. */
+const range = /tongueRange = type === 'fw' \? \[([\d.]+), ([\d.]+)\] : \[([\d.]+), ([\d.]+)\]/.exec(SRC);
+check('the calculator still declares a tongue range for each trailer type', !!range);
+if (range) {
+  const pc = (s) => Math.round(parseFloat(s) * 100);
+  const fw = pc(range[1]) + ' to ' + pc(range[2]) + '%';
+  const tt = pc(range[3]) + ' to ' + pc(range[4]) + '%';
+  check('the page states the fifth-wheel range the calculator uses (' + fw + ')', PAGE_TEXT.includes(fw));
+  check('the page states the trailer range the calculator uses (' + tt + ')', PAGE_TEXT.includes(tt));
+  check('the page states no fifth-wheel range the calculator does not use',
+        !/20 to 25%/.test(PAGE_TEXT));
+}
+
 console.log(failed ? '\n' + failed + ' failure(s)' : '\nweight calculator: all checks passed');
 process.exit(failed ? 1 : 0);
