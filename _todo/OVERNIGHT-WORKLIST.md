@@ -2531,3 +2531,15 @@ Four items, verified against the page sources at tip `5c83975`:
 - **Verified clean (Neo's list):** metas/titles/H1s/canonicals; mailto present; privacy + about claims consistent; no dashes/FFFD; voice PASS.
 
 Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok.
+
+## Neo guides 12th rotation (battery/charging + fuse/sewer slice) (2026-10-15, verified from the Cloud lane)
+
+Four items, verified against the page sources at tip `56a6d1b`:
+
+- **In-body tool silo: CONFIRMED** (zero /tools, /parts, /manuals, /directory on all 6). Concrete candidates queued: battery-not-charging -> rv-converter-finder + battery-runtime; generator-not-charging -> watts-to-amps + rv-converter-finder; fuse-keeps-blowing -> watts-to-amps; two-appliances-stopped -> watts-to-amps; battery-disconnect -> battery-runtime.
+- **Related/Next patterns: RESOLVED by the session.** `56a6d1b` ("the other thirty endings, so all forty-seven now match") standardized all 47 guide endings to the Related-guides H2 pattern minutes ago; zero "Related:/Next:" buttons remain. Neo's render predates it.
+- **FAQ data: recorded** (15 Q/A across 3 pages; cosmetic-only per the standing position).
+- **Two-appliances opening: CONFIRMED** -- "means they share a fault" + "evidence that something they share has failed" back-to-back. Queue: trim one.
+- **Verified clean (Neo's list):** H1s, titles/metas, canonicals, breadcrumbs, dates, callout separators, captions, byline/CTA, voice PASS, factual spot-checks.
+
+Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok.
