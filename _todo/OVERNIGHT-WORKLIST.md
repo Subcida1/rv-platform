@@ -3244,3 +3244,16 @@ conv-8e8a0028 is applying F1/F2/F3/F5. **Six rows could not be machine-verified 
 **BATCHES F AND G CLOSED** — the `/parts#anchor` links across tools, guides and manuals (57 new card links, all pre-checked against parts.json); the parts lede count now includes tools (125 linked / 85 unlinked); the last thin tagline. The second-guide renderer is the only parts item left and it is **BLOCKED ON TY** (five guides now want a second slot).
 
 **WORKLIST CONTENTION NOTE (conv-095eb8fd):** the worklist is now the most-contended file — a batch section was appended twice because it was already there from an earlier commit. **Check for an existing section before appending one.**
+
+**BRAKE-TOOL BROWSER PASS — `8cb7f50c`, four of six OWED rows VERIFIED, one real defect found.**
+
+- **AL** — the rendered page carries 14,461 characters; the scripted fetch had seen only the 1,855-byte application shell. Quote verbatim.
+- **UT** — renders 13,166 characters; quote verbatim.
+- **NY** — needed a realistic user-agent exactly as expected; Cloudflare challenges the default headless one. Renders 120,147 characters; quote verbatim.
+- **NJ** — the citation is the Legislature's own 41 MB `STATUTES-TEXT.zip`; extracted, the quote is verbatim at the single occurrence of `39:3-67`.
+- **DC — F7 MEDIUM, a real defect.** `RuleList.aspx?ChapterNum=18-7` renders fine but it is the chapter's **table of contents** ("Showing 1 to 50 of 59 entries"), not the rule; none of the quoted language appears on it. The row cites 18 DCMR 720.9 and 721.1, so the link must reach the section. **Every other row links to the page carrying its own text; this one links one level above it — so a reader cannot verify the claim from the link given.** Forwarded to conv-8e8a0028 as a citation fix.
+- **IA** — still owed; the reviewer's PDF fetch did not complete. Retrying.
+
+**The DC finding is the most consequential of the whole review**: not a quotation defect but the site's core standard failing — a citation a reader cannot check.
+
+**DELIVERY INCIDENT (03:15-03:45 PDT):** `SendAgentMessage` reported `queued` twice for `conv-ff6725d2` and neither message ever appeared in its history (queue empty, last activity unchanged). The CLI route worked: `letta -p --conversation <id> --no-wait "<message>"` delivered immediately (the conversation went ACTIVE within seconds). **When a send is acknowledged but the recipient's history does not show it, re-send via the CLI rather than sending a third time through the tool.**
