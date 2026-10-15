@@ -126,5 +126,10 @@ window.RV_LISTINGS_ND = [
   ],  "base": "davenport",  "areas": [
    "fargo"
   ],  "region": "Fargo-Moorhead area",  "spec": null,  "reg": "east-nd"
+ },
+ {  "n": "5 Star Mobile RV & Trailer Repair",  "c": "Fargo, ND",  "p": "(701) 866-4524",  "u": "https://www.5starrvandtrailer.com/",  "t": "both",  "e": true,  "r": true,  "d": "5 Star Mobile RV & Trailer Repair is a family-owned RV and trailer repair business in Fargo, North Dakota that does both mobile calls and shop work. The site lists slide out repair, electrical systems, plumbing, HVAC and climate, axle and suspension, roof and sealing, pre-purchase inspections and liquid propane systems. It says it serves a 100 mile radius of Fargo and also operates a shop in Fargo.",  "g": [
+   "mobile tech",
+   "RV repair"
+  ],  "base": "fargo",  "areas": [],  "region": "Fargo-Moorhead area",  "spec": null,  "reg": "east-nd"
  }
 ];

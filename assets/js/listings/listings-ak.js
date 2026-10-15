@@ -152,5 +152,28 @@ window.RV_LISTINGS_AK = [
    "tok",
    "delta junction"
   ],  "region": "Fairbanks and the Interior",  "spec": "RV repair at an auto and towing shop",  "reg": "interior-ak"
+ },
+ {  "n": "Cache Camper Manufacturing, Inc.",  "c": "Wasilla, AK",  "p": "(907) 745-4061",  "u": "https://cachecamper.com/repair/",  "t": "center",  "e": false,  "r": false,  "d": "Cache Camper Manufacturing is a Wasilla camper and RV builder with a repair and service department that also takes on work many shops turn away. The repair page lists technician and appliance diagnosis and repair for AC units, furnaces, water heaters, refrigerators, hydraulics, slide-outs, electrical diagnosis and component replacement, and landing gear, plus express work such as winterization and de-winterization, windows, jacks, awnings, batteries, bearing repack or replacement, and observation cameras. It also handles mid-sized to major repairs including water damage, framing, re-siding, roof membrane and complete roof replacement, class-C cabover rebuilds, rotted floors, and rafter replacement, and it does insurance collision repairs. The business works from its shop at 7593 E Ashmore Ave in Wasilla.",  "g": [
+   "RV repair",
+   "appliance repair",
+   "collision",
+   "body work",
+   "parts"
+  ],  "base": "wasilla",  "areas": [
+   "wasilla",
+   "palmer"
+  ],  "region": null,  "spec": "shop only, no mobile",  "reg": "anchorage-ak"
+ },
+ {  "n": "Adventure World",  "c": "Sterling, AK",  "p": "907-741-9294",  "u": "https://adventureworldalaska.com/",  "t": "center",  "e": false,  "r": false,  "d": "Adventure World is an RV parts and service business on the Kenai Peninsula in Sterling. The site describes a full service repair facility along with a well stocked RV parts store, and it installs the parts it sells. It is a fixed shop location rather than a mobile service.",  "g": [
+   "RV repair",
+   "service center",
+   "parts"
+  ],  "base": "sterling",  "areas": [],  "region": "Kenai Peninsula",  "spec": "shop only, no mobile",  "reg": "kenai-ak"
+ },
+ {  "n": "Kyllonen's RV Park",  "c": "Anchor Point, AK",  "p": "(877) 235-7762",  "u": "https://www.kyllonensrvpark.com/onsiteservices",  "t": "center",  "e": false,  "r": false,  "d": "Kyllonen's RV Park in Anchor Point offers on-site camper repair and upgrades at the park from May through September. The on-site services page lists general RV repair, lithium battery conversions, solar panel systems, DC to DC chargers, diesel heater installations, overall camper health inspection, and maintenance check up. The park also offers mobile service in the Lower 48 states October through April.",  "g": [
+   "RV repair",
+   "solar",
+   "appliance repair"
+  ],  "base": "anchor point",  "areas": [],  "region": null,  "spec": "on site at the RV park, May through September",  "reg": "kenai-ak"
  }
 ];

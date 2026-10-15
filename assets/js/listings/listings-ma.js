@@ -111,5 +111,32 @@ window.RV_LISTINGS_MA = [
    "holyoke",
    "west springfield"
   ],  "region": "Pioneer Valley / Western Massachusetts",  "spec": null,  "reg": "western-ma"
+ },
+ {  "n": "Wandering Days Mobile RV Maintenance & Repair",  "c": "Haverhill, MA",  "p": "603-583-1584",  "u": "https://wanderingdaysmobilervmaintenance-repair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Wandering Days Mobile RV Maintenance & Repair is a mobile RV service owned and operated by Aaron Day, an NRVTA-trained certified mobile RV technician based in Haverhill, Massachusetts. The business lists repair and maintenance work on axles, bearings and drums, flooring, leaf springs, water heaters, air conditioners, generators, heaters, leveling systems, refrigerators, roofs, slides and winter preparation. It publishes a service fee, an hourly rate and a winterizing flat rate and travels to the customer's location.",  "g": [
+   "mobile tech",
+   "RV repair"
+  ],  "base": "haverhill",  "areas": [],  "region": null,  "spec": null,  "reg": "greater-boston-ma"
+ },
+ {  "n": "Freedom Rolls RV",  "c": "Palmer, MA",  "p": "855-305-3737",  "u": "https://freedomrollsrv.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Freedom Rolls RV is a mobile RV repair business owned by Ryan Baldyga and based in Palmer, Massachusetts. It describes itself as NRVTA/RVTAA certified and insured and brings on-site repairs to the customer's location. Its permanent spring, summer and fall service area is Western Massachusetts and Northern Connecticut.",  "g": [
+   "mobile tech",
+   "RV repair"
+  ],  "base": "palmer",  "areas": [],  "region": "Western MA, Northern CT",  "spec": null,  "reg": "western-ma"
+ },
+ {  "n": "Leano RV, LLC",  "c": "Phillipston, MA",  "p": "978-895-6141",  "u": "https://www.leanorvllc.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Leano RV, LLC is a family-owned mobile RV service and repair business on Royalston Road in Phillipston, Massachusetts with more than 15 years in the camping industry. It lists maintenance, service and repair work covering roof maintenance, winterization and de-winterization, sanitation, slide-out service, sealing, appliances, electrical, plumbing, HVAC, LP systems and awnings. The site names an RVTI Level 2 RV Technician and RVTI Level 3 RV Slide Specialist.",  "g": [
+   "mobile tech",
+   "RV repair"
+  ],  "base": "phillipston",  "areas": [],  "region": null,  "spec": null,  "reg": "central-ma"
+ },
+ {  "n": "Dr. Fiberglass RV Repair & Collision",  "c": "Uxbridge, MA",  "p": "(508) 779-0834",  "u": "http://drfiberglass.net/",  "t": "center",  "e": false,  "r": false,  "d": "Dr. Fiberglass is an RV and camper repair and collision shop on Quaker Highway in Uxbridge, Massachusetts. Its site presents it as a one-stop shop for camper and RV repairs. Another listed Massachusetts mobile RV business, MASS MOBILE RV SERVICE LLC., refers customers to Dr. Fiberglass in Uxbridge for body damage repair.",  "g": [
+   "RV repair",
+   "collision",
+   "body work"
+  ],  "base": "uxbridge",  "areas": [],  "region": null,  "spec": null,  "reg": "central-ma"
+ },
+ {  "n": "Bob's Camper & RV",  "c": "Williamstown, MA",  "p": "(413) 458-3093",  "u": "https://bobscamper.com/service/",  "t": "center",  "e": false,  "r": false,  "d": "Bob's Camper & RV is a family-run RV dealership and service department on Hancock Road in Williamstown, Massachusetts. The service page takes appointment requests for RV maintenance and repairs, and the business sells new and pre-owned travel trailers, fifth wheels and toy haulers.",  "g": [
+   "RV repair",
+   "RV service",
+   "dealer service"
+  ],  "base": "williamstown",  "areas": [],  "region": null,  "spec": null,  "reg": "western-ma"
  }
 ];

@@ -117,5 +117,63 @@ window.RV_LISTINGS_NJ = [
    "warranty",
    "parts"
   ],  "base": "williamstown",  "areas": [],  "region": "NJ",  "spec": null,  "reg": "south-jersey"
+ },
+ {  "n": "JNS RV Service",  "c": "Sewell, NJ",  "p": "856-498-4605",  "u": "https://www.jnsrvservice.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "JNS RV Service is a mobile RV repair business that serves the South Jersey area. The site advertises mobile RV repair services and states the business does the work so the customer can do the camping.",  "g": [
+   "mobile tech",
+   "RV repair"
+  ],  "base": "sewell",  "areas": [],  "region": "South Jersey",  "spec": null,  "reg": "south-jersey"
+ },
+ {  "n": "Tbar RV Repair",  "c": "Port Monmouth, NJ",  "p": "732-495-1386",  "u": "https://tbarrvrepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Tbar RV Repair is a mobile RV repair service run by Tony Baricevich, a certified RV service technician. The site lists AC and heating repair and maintenance, plumbing and electrical repair, RV exterior work, roof and slide maintenance, RV refrigerator and appliance repair, water heater service, awning and slide topper installation, black and gray tank cleaning and seasonal prep.",  "g": [
+   "mobile tech",
+   "RV repair",
+   "appliance repair"
+  ],  "base": "port monmouth",  "areas": [],  "region": null,  "spec": null,  "reg": "central-jersey"
+ },
+ {  "n": "Advanced Generator and RV Service",  "c": "Monroe Township, NJ",  "p": "732-792-8333",  "u": "http://www.advancedgeneratorandrv.com/",  "t": "center",  "e": false,  "r": false,  "d": "Advanced Generator and RV Service is a family owned and operated business in Monroe Township, New Jersey, specializing in general RV repair and service. It works on appliances, generators, electrical systems and accessories, rebuilds starters and alternators for RV and other applications, and repairs air conditioning. Founded in 1994, it expanded into the RV industry in 2001 and employs RVDA/RVIA certified technicians.",  "g": [
+   "RV repair",
+   "generator service",
+   "appliance repair"
+  ],  "base": "monroe township",  "areas": [],  "region": null,  "spec": null,  "reg": "central-jersey"
+ },
+ {  "n": "Kadco Camping Center",  "c": "Robbinsville, NJ",  "p": "(609) 443-1133",  "u": "http://www.kadcorv.com/service.php",  "t": "center",  "e": false,  "r": false,  "d": "Kadco Camping Center is an RV dealer in Robbinsville, New Jersey, that services all types of RVs. Its service department works on waste systems, air conditioning, refrigerator and range components, LP gas systems, brakes, slide-out rooms, heating, ventilation, generators, fresh water systems, water heaters, leveling and suspension, and sells and installs hitches, tow bars, carriers, tires and wheels. It also services utility trailers and offers winterizing, de-winterizing and storage.",  "g": [
+   "RV service center",
+   "RV repair",
+   "dealer service"
+  ],  "base": "robbinsville",  "areas": [],  "region": null,  "spec": null,  "reg": "central-jersey"
+ },
+ {  "n": "EVO Upfitting",  "c": "Toms River, NJ",  "p": "(848) 238-7165",  "u": "https://evoupfitting.com/rv-repair-and-upgrades/",  "t": "center",  "e": false,  "r": false,  "d": "EVO Upfitting is an RV repair, customization and upgrade business in Toms River, New Jersey. Its repair services include electrical and plumbing systems, roof, slide-out and seal repairs, HVAC and appliance service, brake and suspension issues, and interior and exterior damage. It also performs custom RV builds and modifications such as solar power systems, battery upgrades and interior remodels, and offers vehicle wrap graphics.",  "g": [
+   "RV repair",
+   "upgrades",
+   "body work"
+  ],  "base": "toms river",  "areas": [],  "region": null,  "spec": null,  "reg": "south-jersey"
+ },
+ {  "n": "Coastal Mobile RV Repair",  "c": "Villas, NJ",  "p": "609-602-4430",  "u": "https://coastalmobilervrepairnj.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Coastal Mobile RV Repair is a mobile RV repair business based in Villas, New Jersey, that brings repairs to the customer's campground, driveway or storage lot. It services appliances, winterization, 12V and 120V electrical systems, fresh water and waste plumbing, HVAC including air conditioners, heat pumps and furnaces, and slide-out mechanisms, seals, motors and alignment, and offers exterior trailer washing. The site states it is licensed and insured and serves Cape May County owners.",  "g": [
+   "mobile tech",
+   "RV repair",
+   "appliance repair"
+  ],  "base": "villas",  "areas": [],  "region": "Cape May County",  "spec": null,  "reg": "south-jersey"
+ },
+ {  "n": "Happy Camper Mobile RV Repair",  "c": "Cape May, Atlantic and Cumberland counties, NJ",  "p": "(609) 827-7000",  "u": "https://www.happy-camper-mobile-rv-repair.net/",  "t": "mobile",  "e": false,  "r": false,  "d": "Happy Camper Mobile RV Repair is a mobile RV repair business serving Cape May, Atlantic and Cumberland counties in New Jersey. The site lists work on wheels and bearings, pop-outs, batteries and charging systems, air conditioning, tanks, pumps and plumbing, leaks, appliances, winterizing, shrink wrap, power washing and leveling gear.",  "g": [
+   "mobile tech",
+   "RV repair"
+  ],  "base": null,  "areas": [],  "region": "Cape May, Atlantic and Cumberland County",  "spec": null,  "reg": "south-jersey"
+ },
+ {  "n": "Jackson Auto Body",  "c": "Jackson, NJ",  "p": "732-928-9292",  "u": "http://www.rvcollisioncenter.com/",  "t": "center",  "e": false,  "r": false,  "d": "Jackson Auto Body is a family owned and operated collision repair shop in Jackson, New Jersey, that has provided full-service RV collision repairs since 1987. Its RV division handles repairs from minor gel coat scratches to complete structural repairs and fabrication, including aluminum skin replacement, side wall and roof repair and replacement, heavy frame repairs, custom paint and color matching, glass replacement, and awning and step repairs.",  "g": [
+   "collision",
+   "body work",
+   "RV repair"
+  ],  "base": "jackson",  "areas": [],  "region": null,  "spec": null,  "reg": "south-jersey"
+ },
+ {  "n": "Ocean View Trailer Sales",  "c": "Ocean View, NJ",  "p": "(609) 624-0370",  "u": "https://www.oceanviewtrailersale.com/rv-park-model-service",  "t": "both",  "e": false,  "r": false,  "d": "Ocean View Trailer Sales is an RV and park model dealer in Ocean View, New Jersey, with a service department that handles RV and park model repair. It does system and mechanical repairs including air conditioning, furnace and heating, plumbing, water heaters, and electrical and gas and propane systems, and exterior work such as roof repair, body and siding repair, awning service, skirting, and leveling and re-blocking, plus winterization and de-winterization. It services campgrounds in Ocean View and surrounding areas.",  "g": [
+   "RV service center",
+   "RV repair",
+   "dealer service"
+  ],  "base": "ocean view",  "areas": [],  "region": null,  "spec": null,  "reg": "south-jersey"
+ },
+ {  "n": "Offgrid Outlaws RV Repair",  "c": "West Deptford, NJ",  "p": "(609) 445-4603",  "u": "http://www.offgridoutlaws.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Offgrid Outlaws RV Repair is a mobile RV repair business based in West Deptford, New Jersey, that comes to the customer. It repairs electrical systems including batteries and 120/240 volt and 12/24 volt DC systems, appliances such as refrigerators, stoves, ovens and washer/dryers, air conditioners, water heaters and furnaces, water systems, TV and satellite, propane and awnings, and does slide and leveling work. The site states its technicians are NRVTA certified and Grand Design certified and that it services NJ, DE and PA.",  "g": [
+   "mobile tech",
+   "RV repair",
+   "appliance repair"
+  ],  "base": "west deptford",  "areas": [],  "region": null,  "spec": null,  "reg": "south-jersey"
  }
 ];

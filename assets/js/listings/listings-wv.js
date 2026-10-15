@@ -123,5 +123,49 @@ window.RV_LISTINGS_WV = [
    "spencer",
    "point pleasant"
   ],  "region": "Mid-Ohio Valley",  "spec": null,  "reg": "central-wv"
+ },
+ {  "n": "Mountaineer RV and Trailer Sales",  "c": "Vienna, WV",  "p": "(304) 917-4443",  "u": "https://www.mountaineertrailers.com/services/",  "t": "center",  "e": false,  "r": false,  "d": "Mountaineer RV and Trailer Sales is an RV and trailer dealer in Vienna with a service center. The site says the service technicians have over 25 years of experience and that the center handles repairs and maintenance for RVs and trailers. It also sells parts.",  "g": [
+   "service center",
+   "dealer",
+   "trailer repair"
+  ],  "base": "vienna",  "areas": [],  "region": null,  "spec": null,  "reg": "central-wv"
+ },
+ {  "n": "Cherokee RV Superstore",  "c": "Parkersburg, WV",  "p": "304-489-1206",  "u": "https://cherokeervsuperstore.com/service-parts-repair-shop-hours-open-parkersburg/",  "t": "center",  "e": false,  "r": false,  "d": "Cherokee RV Superstore is an RV dealership in the Parkersburg area with a service shop and parts department. The service shop at 500 Rayon Drive takes drop-offs and pickups, and the site says it keeps surplus, scratch and dent and opened-box parts to make RV repairs cheaper. It sells travel trailers, fifth wheels and toy haulers.",  "g": [
+   "service center",
+   "dealer",
+   "parts"
+  ],  "base": "parkersburg",  "areas": [
+   "mineral wells"
+  ],  "region": null,  "spec": null,  "reg": "central-wv"
+ },
+ {  "n": "G's Mobile RV Service",  "c": "Burnsville, WV",  "p": "1-304-678-9505",  "u": "https://gmobilervservices.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "G's Mobile RV Service is a mobile RV repair and inspection business that works from a vehicle and comes to the customer. The site says it brings the shop to the doorstep for on-site repairs and maintenance at a home, a storage facility or a campsite, and the technician is certified through the National RV Training Academy. It offers RV inspections, seasonal checks and on-the-spot diagnostics.",  "g": [
+   "mobile tech",
+   "RV repair",
+   "inspection"
+  ],  "base": "burnsville",  "areas": [],  "region": "Central West Virginia",  "spec": null,  "reg": "central-wv"
+ },
+ {  "n": "Fort Ashby Camper Sales",  "c": "Fort Ashby, WV",  "p": "304-298-3636",  "u": "https://fortashbycampers.com/",  "t": "both",  "e": false,  "r": false,  "d": "Fort Ashby Camper Sales is an RV dealership and service shop on Frankfort Highway in Fort Ashby, West Virginia. The site states it offers an array of services to help equip, maintain and repair campers, and that customers can visit the shop or have the business come to them for a service call. It also sells parts and rents U-Hauls.",  "g": [
+   "RV repair",
+   "RV service",
+   "dealer service",
+   "parts"
+  ],  "base": "fort ashby",  "areas": [],  "region": null,  "spec": null,  "reg": "highlands-wv"
+ },
+ {  "n": "Uncharted Adventures",  "c": "Bluefield, WV",  "p": "(304) 878-5878",  "u": "https://ua-outdoors.com/service",  "t": "center",  "e": false,  "r": false,  "d": "Uncharted Adventures is an RV and trailer dealer with a service department in Bluefield, West Virginia. The service page states the department handles trailer needs from wiring issues to bearing maintenance, and lists furnace repair, soft floor repair and roof repair among the work it takes on. A second location in Beckley is listed on the page.",  "g": [
+   "RV repair",
+   "trailer repair",
+   "dealer service"
+  ],  "base": "bluefield",  "areas": [],  "region": null,  "spec": null,  "reg": "south-wv"
+ },
+ {  "n": "Road Trippers RV",  "c": "Petersburg, WV",  "p": "304-668-9121",  "u": "https://fixedmyrv.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Road Trippers RV is a mobile RV repair business based in Petersburg, West Virginia, run by a technician who works by appointment and comes to the customer. The site states it stands behind its work with a 90-day warranty and lists services that keep an RV in peak condition.",  "g": [
+   "mobile tech",
+   "RV repair"
+  ],  "base": "petersburg",  "areas": [],  "region": null,  "spec": "by appointment",  "reg": "highlands-wv"
+ },
+ {  "n": "Jjs Services Llc",  "c": "Hedgesville, WV",  "p": "(304) 754-6537",  "u": "https://wgorganics.com/",  "t": "center",  "e": true,  "r": false,  "d": "Jjs Services Llc is an RV and camper repair shop in Hedgesville, West Virginia. The site lists generator diagnostics and repair, air conditioning diagnostics and repair, and plumbing repair among its services, and advertises 24/7 emergency support.",  "g": [
+   "RV repair",
+   "generator repair",
+   "appliance repair"
+  ],  "base": "hedgesville",  "areas": [],  "region": null,  "spec": null,  "reg": "eastern-panhandle-wv"
  }
 ];

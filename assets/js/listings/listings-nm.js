@@ -139,5 +139,62 @@ window.RV_LISTINGS_NM = [
    "dexter",
    "picacho"
   ],  "reg": "southeast-nm"
+ },
+ {  "n": "Richard's RV Service",  "c": "Las Cruces, NM",  "p": "(575) 642-3832",  "u": "https://richardsrvservice.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Mobile RV repair business serving Las Cruces, New Mexico, working at the customer's location without towing the RV to a shop. Services listed include mechanical repairs, electrical and power systems, plumbing and waste systems, HVAC and propane systems, appliances, brakes, suspension and leveling, roof and exterior sealing, and slide-outs, awnings and doors. The site states it provides on-site RV diagnostics, repairs and maintenance.",  "g": [
+   "mobile tech",
+   "RV repair",
+   "appliance repair"
+  ],  "base": "las cruces",  "areas": [
+   "mesilla",
+   "dona ana",
+   "organ",
+   "anthony",
+   "sunland park",
+   "chaparral",
+   "hatch",
+   "deming",
+   "alamogordo",
+   "truth or consequences"
+  ],  "region": null,  "spec": null,  "reg": "south-nm"
+ },
+ {  "n": "San Juan RV Services",  "c": "Aztec, NM",  "p": "(505) 634-6697",  "u": "https://www.sanjuanrvservice.com/home",  "t": "mobile",  "e": false,  "r": false,  "d": "Mobile RV repair business in Aztec, New Mexico, offering RV appliance, electrical, plumbing and propane repairs and maintenance. The site describes a range of services intended to keep an RV's systems working and lists contact by phone and email.",  "g": [
+   "mobile tech",
+   "RV repair",
+   "appliance repair"
+  ],  "base": "aztec",  "areas": [],  "region": null,  "spec": null,  "reg": "four-corners"
+ },
+ {  "n": "FM Mobile RV Service",  "c": "Farmington, NM",  "p": "(505) 350-3355",  "u": "https://www.fmrvservice.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Mobile RV repair business that comes to the customer. Services listed include 12 volt and 110 volt electrical troubleshooting, furnace service and repair, Aqua Hot service, Truma Aqua Go and combi unit repair, satellite installation and repair, solar installation and repair, lithium battery troubleshooting on B-vans, Schwintec slide system repair, hydraulic and electric leveling systems, Starlink installation, and roof and floor repair or replacement. The site names the technician as a master certified technician with over twenty years of experience.",  "g": [
+   "mobile tech",
+   "RV repair",
+   "solar"
+  ],  "base": "farmington",  "areas": [],  "region": null,  "spec": null,  "reg": "four-corners"
+ },
+ {  "n": "Sundry RV Inspection & Repair",  "c": "Deming, NM",  "p": "(888) 787-0881",  "u": "https://www.sundryrv.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Mobile RV inspection and repair business that travels to the customer, whether at a campground or roadside. The site states its service area is vast and that it is available in the customer's area, and it is certified by the RVTAA and NRVIA. Contact is by phone or text and email.",  "g": [
+   "mobile tech",
+   "RV repair"
+  ],  "base": "deming",  "areas": [],  "region": null,  "spec": null,  "reg": "south-nm"
+ },
+ {  "n": "Action RV",  "c": "Bosque Farms, NM",  "p": "(505) 294-1654",  "u": "https://www.actionrv.com/services",  "t": "center",  "e": false,  "r": false,  "d": "RV and trailer repair shop in Bosque Farms, New Mexico. Services listed include maintenance and repair for Class A and C motorhomes, cargo and box trailers, gooseneck and bumper pull trailers, toy haulers, slide-in and utility trailers, RV and trailer chassis alignments, classic RV restorations, pre-purchase inspections, and RV wheels and tires. The business also builds custom interiors for specialty vehicles such as mobile command centers and tour buses.",  "g": [
+   "RV repair",
+   "trailer repair",
+   "chassis alignment"
+  ],  "base": "bosque farms",  "areas": [],  "region": null,  "spec": null,  "reg": "albuquerque"
+ },
+ {  "n": "Bison RV Center",  "c": "Clovis, NM",  "p": "(575) 762-7200",  "u": "https://bisonrv.com/about-us/",  "t": "center",  "e": false,  "r": false,  "d": "RV dealership and service center in Clovis, New Mexico, selling new and used RVs and stocking a large parts and accessories store. The site lists a service center, major repairs, tech support, L.P. gas and RV storage among its services. Repair work is handled at the Clovis shop and no mobile service is claimed.",  "g": [
+   "RV repair",
+   "RV service",
+   "dealer service"
+  ],  "base": "clovis",  "areas": [],  "region": null,  "spec": null,  "reg": "southeast-nm"
+ },
+ {  "n": "A-One Collision",  "c": "Albuquerque, NM",  "p": "(505) 881-4661",  "u": "https://aonecollisionnm.com/services/rv-repair/",  "t": "center",  "e": false,  "r": false,  "d": "Collision repair shop in Albuquerque, New Mexico, with a dedicated RV repair service. The site states that staff restore the interior and exterior of an RV, repair body damage, remove dents and dings, restore chipped paint, and fix damaged or worn exterior components. It services all RVs and offers estimates.",  "g": [
+   "RV repair",
+   "collision",
+   "body work"
+  ],  "base": "albuquerque",  "areas": [],  "region": null,  "spec": null,  "reg": "albuquerque"
+ },
+ {  "n": "Tony's RV Service",  "c": "Albuquerque, NM",  "p": "(505) 323-2080",  "u": "https://tonysrvservice.net/",  "t": "center",  "e": false,  "r": false,  "d": "RV repair shop in Albuquerque, New Mexico. The site presents the business as an RV repair shop and lists RV and trailer service at its shop on Wilmoore Drive Southeast. Contact and shop hours are published on the site.",  "g": [
+   "RV repair",
+   "RV service"
+  ],  "base": "albuquerque",  "areas": [],  "region": null,  "spec": null,  "reg": "albuquerque"
  }
 ];
