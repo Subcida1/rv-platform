@@ -41,7 +41,13 @@ SKIP_PARTS = {".git", ".letta", "node_modules"}
 VISIBLE = re.compile(r"(Last reviewed on )([A-Z][a-z]+ \d{1,2}, \d{4})")
 DATED = re.compile(r'("dateModified"\s*:\s*")([0-9]{4}-[0-9]{2}-[0-9]{2})(")')
 LDJSON = re.compile(r'(<script type="application/ld\+json">)(.*?)(</script>)', re.S)
-DATED_TYPE = re.compile(r'"@type"\s*:\s*"(Article|WebApplication|WebPage)"')
+DATED_TYPE = re.compile(r'"@type"\s*:\s*"(Article|WebApplication|WebPage|CollectionPage)"')
+# CollectionPage ADDED 2026-10-14. The manuals pages are CollectionPages -- a page listing a
+# collection of documents IS one -- and without it in this list their dateModified would be
+# written by the generator and never synced from git, which is the state Ty asked to end
+# ("/manuals pages carry no dates at all -- add them"). Schema.org puts dateModified on
+# CreativeWork, which CollectionPage is, so this widens the rule to where it always belonged
+# rather than bending the pages to fit it.
 
 
 def pages():

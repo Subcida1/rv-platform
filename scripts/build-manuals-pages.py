@@ -195,6 +195,25 @@ def esc(s):
             .replace('"', "&quot;"))
 
 
+# THE REVIEW DATE. Ty, 2026-10-14: "/manuals pages carry no dates at all -- add them or record the
+# choice: Add the dates." Every other page on the site carries one; these twelve never did, because
+# this generator never emitted the elements and sync-dates.py only syncs pages that already carry
+# them (its VISIBLE and DATED regexes match, they do not insert).
+#
+# sync-dates.py OWNS the value. It derives it from git's last substantial commit for each file and
+# rewrites both the visible line and the JSON-LD. The date written into the templates below is only
+# the SEED a freshly generated page carries before that script next runs, so it never survives a
+# build -- which is also why it is written out literally in each template rather than passed in:
+# the five page templates place their %s arguments in different orders, and inserting one more
+# positional argument into five different tuples is how a generator starts emitting the wrong
+# string into the wrong slot.
+#
+# AND THAT IS WHY skeleton() BLANKS IT. The generator would otherwise emit the seed while disk
+# holds the synced value, so every manuals page would report as drifted forever -- the same
+# one-owner problem the nav and footer markers already have, solved the same way.
+REVIEWED_SEED_ISO = "2026-01-01"       # ISO form, for JSON-LD dateModified
+
+
 def head(title, desc, canonical, schemas):
     ld = "\n".join('  <script type="application/ld+json">%s</script>'
                    % json.dumps(s, ensure_ascii=False) for s in schemas)
@@ -361,6 +380,7 @@ def hub(rows, oem_count, model_count=0):
     collection = {
         "@context": "https://schema.org", "@type": "CollectionPage",
         "name": HUB_TITLE, "url": SITE + "/manuals/index.html", "description": desc,
+        "dateModified": REVIEWED_SEED_ISO,
         "isPartOf": site_schema(),
         "mainEntity": {
             "@type": "ItemList", "numberOfItems": len(R.SYSTEMS),
@@ -376,6 +396,7 @@ def hub(rows, oem_count, model_count=0):
     <p class="man-lede">Owner's manuals, service manuals, parts lists and wiring diagrams
     for the systems and accessories in your RV. Every row links the maker's own page or
     document.</p>
+    <p class="reviewed">By <a class="link" href="/about">OriginRV</a>. Last reviewed on Jan 1, 2026.</p>
   </div>
 
   <div class="sec pad-10-0">
@@ -712,6 +733,7 @@ def start_here_page():
     <div class="man-crumb">%s</div>
     <h1 class="dir-title man-title">%s</h1>
     <p class="man-lede">%s</p>
+    <p class="reviewed">By <a class="link" href="/about">OriginRV</a>. Last reviewed on Jan 1, 2026.</p>
   </div>
 
   <div class="sec prose">
@@ -743,6 +765,7 @@ def system_page(slug, title, desc, rows):
     collection = {
         "@context": "https://schema.org", "@type": "CollectionPage",
         "name": title, "url": "%s/manuals/%s.html" % (SITE, slug), "description": desc,
+        "dateModified": REVIEWED_SEED_ISO,
         "isPartOf": site_schema(),
         "mainEntity": {
             "@type": "ItemList", "numberOfItems": len(rows),
@@ -770,6 +793,7 @@ def system_page(slug, title, desc, rows):
     <h1 class="dir-title man-title">%s manuals</h1>
     <p class="man-lede">%s. %d documents and libraries from %d makers, each linked at the
     source.</p>
+    <p class="reviewed">By <a class="link" href="/about">OriginRV</a>. Last reviewed on Jan 1, 2026.</p>
   </div>
 
   <div class="sec pad-10-60">
@@ -975,6 +999,7 @@ def brands_page(rows, models_by_brand=None):
     collection = {
         "@context": "https://schema.org", "@type": "CollectionPage",
         "name": BRANDS_TITLE, "url": SITE + "/manuals/brands.html", "description": desc,
+        "dateModified": REVIEWED_SEED_ISO,
         "isPartOf": site_schema(),
         "mainEntity": {
             "@type": "ItemList",
@@ -999,6 +1024,7 @@ def brands_page(rows, models_by_brand=None):
     far back the archive reaches, and how the documents are organized. %d brands and %d
     model lines, each linked to the maker's own manual, parts list, accessory
     catalog and warranty where it publishes one.</p>
+    <p class="reviewed">By <a class="link" href="/about">OriginRV</a>. Last reviewed on Jan 1, 2026.</p>
   </div>
 
   <div class="sec pad-10-60">
@@ -1101,6 +1127,7 @@ def recalls_page(rows, bulletins, source_note):
     collection = {
         "@context": "https://schema.org", "@type": "CollectionPage",
         "name": RECALL_TITLE, "url": SITE + "/manuals/recalls.html", "description": desc,
+        "dateModified": REVIEWED_SEED_ISO,
         "isPartOf": site_schema(),
         "mainEntity": {"@type": "ItemList", "numberOfItems": len(rows),
                        "itemListElement": [
@@ -1114,6 +1141,7 @@ def recalls_page(rows, bulletins, source_note):
     <h1 class="dir-title man-title">RV recalls and service bulletins</h1>
     <p class="man-lede">How to find out whether your RV, or something fitted to it, has been
     recalled, and where the manufacturer service bulletins are kept.</p>
+    <p class="reviewed">By <a class="link" href="/about">OriginRV</a>. Last reviewed on Jan 1, 2026.</p>
   </div>
 
   <div class="sec pad-10-60">
@@ -1392,8 +1420,16 @@ def main():
         # Compare the parts this script owns, or every page reports as drifted the
         # moment the shell is injected.
         def skeleton(text):
-            return re.sub(r"(<!-- (?:nav|footer):start -->).*?(<!-- (?:nav|footer):end -->)",
+            text = re.sub(r"(<!-- (?:nav|footer):start -->).*?(<!-- (?:nav|footer):end -->)",
                           r"\1\2", text, flags=re.S)
+            # THE REVIEW DATE HAS A DIFFERENT OWNER TOO, and for the same reason. sync-dates.py
+            # derives it from git and rewrites it after the build, so the seed this generator
+            # emits can only ever match disk on the run immediately before that sync. Blanking
+            # both forms keeps the comparison about what this script actually owns.
+            text = re.sub(r"Last reviewed on [A-Z][a-z]+ \d{1,2}, \d{4}",
+                          "Last reviewed on <synced>", text)
+            text = re.sub(r'"dateModified":\s*"[0-9-]+"', '"dateModified": "<synced>"', text)
+            return text
 
         drift = [p.name for p, t in expect.items()
                  if not p.exists()
