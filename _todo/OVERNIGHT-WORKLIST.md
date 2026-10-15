@@ -3056,3 +3056,17 @@ keyword volume, which does not exist for this class of query.
 **How it landed, because the process is the story:** the session lost the push race repeatedly (origin moved 8, then 1, then 2 commits during its CI runs), pushed the work to `thin-states-batch` as insurance, and the conductor took the merge. The conductor's rebase resolved the generated files to main's version and re-ran the builders from the merged data; the orphaned subagent (which could not be killed remotely) landed its own version minutes later — **and the two trees are byte-identical**, an accidental but genuine cross-validation of the regeneration. `check-generated.sh` all eight comparisons ok; `verify.py` ALL CHECKS PASSED on the conductor's copy.
 
 **QUEUED — `build-listings.py:260` clamps JSON-LD descriptions mid-word.** `biz["description"] = r["d"][:300]` cuts at a character offset, so a description ending mid-word can produce a banned-word stub: the Cripple Creek description was cut to "...the Idaho Falls, Rig" and tripped verify.py's `\brigs?\b` rule on `directory/idaho.html`. The batch fix is to cut at the last word boundary (`r["d"][:300].rsplit(" ", 1)[0]`). NOT done in this batch: 1,600 of 1,942 descriptions exceed 300 chars, so the fix regenerates the JSON-LD on all 50 directory pages — too much churn to add to a batch already losing the push race. The specific instance is fixed (description shortened to 295 chars); the latent class remains for any future long description whose cut lands on "rig"/"rvverse"/"origin rv".
+
+**THE SCAN'S REMAINING GAPS — next content batch, recorded 03:15 PDT (not tonight).**
+
+From the community scan's ranked list (1,004 titles; all four top gaps raised by BOTH populations):
+
+| # | area | threads | coverage | what is missing |
+|---|------|---------|----------|-----------------|
+| 3 | propane / LP | 34 | PARTIAL | **assigned to conv-c145cc42 tonight** — regulator selection and the propane tank gauge |
+| 4 | solar — settings, monitoring, mounting | 31 | PARTIAL | controller settings for lithium and an 80% SOC target, shunt vs Hall sensor, adding a third or portable panel, mounting rigid panels to fibreglass. The guide covers faults well; the gap is the setup side |
+| 5 | water intrusion / frame | 7 | PARTIAL | frame cracks and weld failures (Jayco, Rpod), slide-out floor rot, window-frame leaks. `rv-delamination` is about the wall, not the frame |
+| 6 | carbon monoxide / alarms | 5 | PARTIAL | the **propane detector** — a different alarm with a different failure mode from the CO page |
+| 7 | entry steps / doors / windows | 4 | **GAP** | Kwikee step faults, entry door latches and hinges, window seal replacement. Three guides mention steps; none explains a fault |
+
+Tonight's assignments from this list: awning (#1, conv-b71ff860), air conditioning (#2, conv-ff6725d2), propane (#3, conv-c145cc42).
