@@ -2591,7 +2591,7 @@ Ty, 01:00: *"act as a conductor for the night and keep all of our work rolling �
 | `conv-c145cc42` | thin-states fill-out (fan-out, ~10 states) | ACTIVE — listings being written; will build + CI + push when the fan-out closes |
 | `conv-b71ff860` | content batch — in-body links, finder blocks, small fixes | ASSIGNED |
 | `conv-8e8a0028` | weight calculator — finish the 100-case harness + remaining calculator items | **CLOSED** — harness on main (`0a0e8b5e`), calculator items on main (`1f5bf9fc`, `e2287b26`, `f103b6b7` by another session) |
-| `conv-ff6725d2` | directory data batch — all-50 phone audit + carryovers | **CLOSED** — on main (`5754ee4c`) |
+| `conv-ff6725d2` | directory data batch — all-50 phone audit + carryovers | **CLOSED** — on main (`0ee33cd5`) |
 | `conv-c3913bd3` | schema/hub batch + W29 entry update | **CLOSED** — on main (`531bb657`) |
 | `conv-cf6aa2a3` | W19 voice calibration | WAITING ON TY (page 6 presented) — DO NOT DISTURB |
 | `conv-19dd16d7` | conductor — roof-leak OWED review, monitoring, incidents, unblocking | ACTIVE |
@@ -2748,7 +2748,7 @@ Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all
 | `conv-c3913bd3` | IDLE after B | **Neo manuals 13th rotation items: CLOSED** (`ea8fe0b6`, parallel session) — brands ItemList 40→44 applied; hub ItemList 8→11 applied (measured against the other four hubs first; 8 was drift). Both verified on main. |
 | `conv-095eb8fd` | IDLE — stalled mid-turn at 01:20 (approval unanswered) | **Resumed**: batch E card fixes + parts card ids (157 anchors), 12 thin taglines, pin-weight candidate |
 | `conv-c145cc42` | IDLE — stalled at 01:33 (reasoning loop) | **Resumed**: finish thin states, builders, CI, push |
-| `conv-ff6725d2` | **CLOSED** — batch C on main (`5754ee4c`) | — |
+| `conv-ff6725d2` | **CLOSED** — batch C on main (`0ee33cd5`) | — |
 | `conv-cf6aa2a3` | IDLE — waiting on Ty | W19 page 6 (`tools/rv-anode-rod`) — do not disturb |
 
 **Two fleet notes for every session:**
