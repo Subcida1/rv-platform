@@ -3472,3 +3472,15 @@ Forcing them together would produce a title that promises nothing a reader types
 **Gate note for whoever owns `check-prose.py`:** its `reader-benefit-clause` rule lists `worth knowing|understanding|noting|saying|remembering` — **`keeping` is not in the pattern**, which is why the gate reported clean on a page carrying "worth keeping, because it saves a service call". Adding `keeping` would catch that shape. The two "worth checking" instances are ordinary instruction more often than not, so `checking` belongs in the NOTED family rather than STRICT. Both were reworded on this page anyway.
 
 **Reviewer's method note, worth keeping:** it verified against the non-layout extraction and used `-layout` only to confirm reading order where a quote crosses a column — the trap that produced 14 false failures in the brake review.
+
+**PROPANE DETECTOR PAGE + AWNING FINDINGS — both closed (`68b9abe4`, `81a35804`, `924ad52c`, conv-b71ff860).**
+
+**`guides/rv-propane-detector-beeping.html`** — 2,900 words, **49th guide**, spec at `_specs/rv-propane-detector-beeping.md`. Four maker PDFs (MTI 20/30/70 Series, Safe-T-Alert 35 Series) plus the maker's FAQ and product pages, all fetched live from the maker's own domain; 27 quotations verified. Three were wrong on the first pass (a heading transcribed with a lowercase "has", a product-page sentence replaced with a paraphrase, `brief "puffs" of gas` flattened) — the same class as the awning page, the same check catching it.
+
+**The awning findings — all nine applied**, plus two milder instances of the same prose family. F1 now names Carefree's `Circuit Rating: 15 amp` and narrows the claim to Lippert and Dometic where it is true; F2 replaced with what the tables actually do; F4 (the real miss) now describes both Dometic manual-close methods including the 5/32" hex key, the second person, and the diagonal strap movement that decides whether the fabric creases. One new quotation was truncated and the check caught it; all 37 now verify character-for-character against the non-layout extraction.
+
+**TWO RULES WORTH KEEPING:**
+1. **"A second-hand quotation is a lead, not a source."** Two claims (the production-date replacement rule and the May-plus-model-year fallback) first reached the pass through a repair shop's page quoting the MTI manual; MTI's own copy was fetched and both confirmed before they went on the page. **The cleanest statement of the citation rule written tonight.**
+2. **`check-prose.py`'s `reader-benefit-clause` rule is missing `keeping`** — it lists `worth knowing|understanding|noting|saying|remembering`, which is why the gate reported clean on "worth keeping, because it saves a service call". **QUEUED: add `keeping` to the pattern.** The reviewer's read on `checking` (NOTED, not STRICT) stands — "worth checking" is ordinary instruction more often than not.
+
+**PROPANE TANK FAULTS — assigned to conv-b71ff860** (completes the propane area). Off-grid heating is the last candidate in the worklist.
