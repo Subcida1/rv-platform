@@ -3735,3 +3735,49 @@ fired on a sentence that read fine.
 **THE JUSTIFICATION IS DIFFERENT FROM THE REST OF THE BATCH, AND IT IS FLAGGED AS SUCH.** This was the candidate ranked last and the one its author said to drop first — only one of its four cards carries a demand figure and the rest read `None`. **It is being written anyway, as a safety page rather than a shopping page:** a state-by-state prohibition and a ventilation requirement are exactly what a reader cannot get from a product page, and the reader who needs them is the one about to make a mistake. **Ty can pull it in the morning if he reads it differently; the material is worth having either way.**
 
 Two weak-fit cards (electric fireplace, heated floors) get gap-notes rather than inclusion — their failures are electrical and appliance faults, not heating-strategy faults.
+
+## REVIEW — the three entry-steps guides (conv-ff6725d2, 2026-10-15)
+
+**Independent review of `rv-entry-steps-not-working`, `rv-window-leaking` and
+`rv-entry-door-wont-latch` (conv-8e8a0028's, `7ec9e8cd`). Full findings: `_todo/REVIEW-entry-steps.md`.**
+
+**Method:** every maker document was fetched and extracted with `pdftotext` WITHOUT `-layout`, so
+quotations were compared against reading-order text, not a column-preserved render.
+
+**HEADLINE — none of the three pages has a Sources section.** Every other guide on the site ends with
+a linked, annotated source list; these three name Lippert, Kwikee, Hehr, TriMark and Bauer and quote
+figures, part numbers and procedures, and a reader cannot check a single claim. Same class as the DC
+citation defect the brake review found. The review located the documents (a table of them is in the
+findings file) so the list can be written.
+
+**The lubrication section states the disagreement as Lippert-versus-us; it is Lippert-versus-Lippert.**
+The page says Lippert "says none is needed and that a wet lubricant can damage it", and offers dry
+silicone as the thing that satisfies both positions. Three Lippert documents are in play and the page
+uses two: the FAQ ("No lubrication is necessary"; "a silicon-based grease or spray will not harm the
+material"), the MANUAL-step owner's manual ("Utilize a dry silicone lubricant. Wet lubricants will
+attract dirt and possibly cause damage to the hinge areas"), and — missing — Lippert's own ELECTRIC
+step owner's manuals (Kwikee 888/880), which say "Lubricate all moving parts … every 30 days with a
+good quality moisture and heat resistant penetrating grease" and "Silicone lubricants and WD-40 are
+not recommended for use." **The 30-day interval the page attributes to a coach maker is Lippert's own
+electric-step interval**, and the page's dry-silicone resolution is contradicted by the electric
+manual. The wet-versus-dry distinction is defensible; it has to be stated and the third document
+cited.
+
+**Two unresolved citations.** The window guide's three silicone specifications ("100 percent
+silicone", "black silicone-based", "DOWSIL 1199") could not be confirmed to a maker-hosted document —
+the procedures exist (TI-367, 8800 Series Window Top Seal Seam Fix) but the sheets are behind
+Lippert's support portal. And the Hehr service manual, source of the guide's central quotation, has no
+maker-hosted copy this review could reach: the only one found is on `bryantrv.com`, which is on
+`REHOST` in `verify.py`. Both are unresolved rather than wrong.
+
+**What held.** The pages did not invent their material. Verified faithful against the makers' own
+documents: the Kwikee fault fork, the motor test verdict, the burn-out warning, the ground statement,
+the independent-circuit notice, the lockout switch test, the fuse ratings, the wire colours; the door
+switch manual's one-to-four-inch extension point, the white/black switch dates and part numbers, and
+the magnet placement note; TriMark's 1/16 inch strike adjustment, the 25 pound maximum and the
+push-shut-by-hand line, and the fault-table row. The honesty framing ("no maker publishes…") was
+spot-checked and holds, including the correctly hedged coach-levelling note.
+
+**Order of work:** (1) add the Sources sections, (2) rewrite the lubrication section, (3) resolve the
+Hehr host and verify or cut the silicone specifications, (4) re-check the negative claims as each
+source lands.
