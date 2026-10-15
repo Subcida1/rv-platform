@@ -172,6 +172,38 @@ TOOLS = {
                                "matches a control board to the model"),
 }
 
+# THE PARTS LINE, one per system page. The system pages carried guides and maker documents
+# and nothing else -- no /tools, no /parts, no /directory inside <main> (Neo 8th rotation,
+# 2026-10-13). These are the parts links: CARD links, now that every card carries an anchor
+# (2026-10-15), so each name lands on the card for that part rather than the top of a section.
+# The tool links are a separate mechanism and are filled in as each is written.
+PARTS = {
+    "power-and-electrical": [("converter-and-charger", "the converter and charger"),
+                             ("inverter", "the inverter"),
+                             ("house-battery", "the house battery")],
+    "towing-and-running-gear": [("hitch-coupler", "the coupler"),
+                                ("trailer-brakes", "the brakes"),
+                                ("tires", "the tires")],
+    "water-and-plumbing": [("water-pump", "the pump"),
+                           ("water-heater-tank", "the water heater"),
+                           ("inline-water-filter", "the filter")],
+    "sanitation-and-tanks": [("toilet-gravity", "the toilet"),
+                             ("gate-valves", "the valves"),
+                             ("tank-level-sensors", "the sensors")],
+    "heating-and-cooling": [("furnace", "the furnace"),
+                            ("rooftop-air-conditioner", "the air conditioner"),
+                            ("thermostat", "the thermostat")],
+    "exterior-and-body": [("roof-membrane", "the roof membrane"),
+                          ("roof-sealant-and-lap-sealant", "the sealant"),
+                          ("slide-out-and-mechanism", "the slide-out")],
+    "kitchen-and-appliances": [("refrigerator-absorption", "the absorption fridge"),
+                               ("cooktop-and-oven", "the range"),
+                               ("microwave-and-convection", "the microwave")],
+    "chassis-and-drivetrain": [("engine-and-drivetrain", "the engine and drivetrain"),
+                               ("chassis-brakes", "the brakes"),
+                               ("suspension-and-shocks", "the suspension")],
+}
+
 
 def guide_title(stem):
     """The guide's own title tag, so a cross-link reads the way that page reads."""
@@ -840,6 +872,11 @@ def system_page(slug, title, desc, rows):
     if tool:
         stem, label, what = tool
         links.append('<li><a href="/tools/%s">The %s</a> %s.</li>' % (stem, esc(label), what))
+    parts = PARTS.get(slug)
+    if parts:
+        named = ['<a href="/parts/#part-%s">%s</a>' % (a, esc(l)) for a, l in parts]
+        links.append('<li>The parts page lists %s as separate parts, with what fails on each.</li>'
+                     % (", ".join(named[:-1]) + " and " + named[-1]))
     related = ("""
       <div class="card man-about">
         <div class="man-about-h">If something&#39;s already broken</div>

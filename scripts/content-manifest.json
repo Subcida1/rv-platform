@@ -463,20 +463,20 @@
     "claims": "f2c9a068f6c16e27"
   },
   "guides/rv-black-tank-routine.html": {
-    "hash": "98f10fbf9f359bc2",
+    "hash": "690c46bf9fa6a33d",
     "status": "verified",
-    "verified_by": "queued Neo guides-12th silo finding applied 2026-10-15: these eighteen guides linked nothing outside /guides/ -- no tool, no part, no manual, no directory. Each now names one topic-matched target in its Related guides block (a tool where the guide is about arithmetic, the parts page where it is about a part, the maker's manual section where it is about documents). No fact changed; no existing link removed.",
-    "verified_at": "2026-10-14",
+    "verified_by": "queued parts-card links applied 2026-10-15: every part card now carries an anchor, so the parts reference on this page lands on the card(s) it names instead of the top of a system section, and a page that carried none gained a topic-matched one. No fact changed; no existing link removed.",
+    "verified_at": "2026-10-15",
     "sources": [],
     "spec": null,
     "spec_waived": true,
     "claims": []
   },
   "guides/rv-black-tank.html": {
-    "hash": "c522cef68f5abf5a",
+    "hash": "82040603c31cf862",
     "status": "verified",
-    "verified_by": "queued Neo guides-12th silo finding applied 2026-10-15: these eighteen guides linked nothing outside /guides/ -- no tool, no part, no manual, no directory. Each now names one topic-matched target in its Related guides block (a tool where the guide is about arithmetic, the parts page where it is about a part, the maker's manual section where it is about documents). No fact changed; no existing link removed.",
-    "verified_at": "2026-10-14",
+    "verified_by": "queued parts-card links applied 2026-10-15: every part card now carries an anchor, so the parts reference on this page lands on the card(s) it names instead of the top of a system section, and a page that carried none gained a topic-matched one. No fact changed; no existing link removed.",
+    "verified_at": "2026-10-15",
     "sources": [],
     "spec": null,
     "spec_waived": true,
@@ -723,10 +723,10 @@
     "claims": "8bcd90bd498e17c5"
   },
   "guides/rv-tank-sensors-reading-wrong.html": {
-    "hash": "f1c2c8c9b0e0c81b",
+    "hash": "021896892181ddf4",
     "status": "verified",
-    "verified_by": "queued Neo guides-12th silo finding applied 2026-10-15: these eighteen guides linked nothing outside /guides/ -- no tool, no part, no manual, no directory. Each now names one topic-matched target in its Related guides block (a tool where the guide is about arithmetic, the parts page where it is about a part, the maker's manual section where it is about documents). No fact changed; no existing link removed.",
-    "verified_at": "2026-10-14",
+    "verified_by": "queued parts-card links applied 2026-10-15: every part card now carries an anchor, so the parts reference on this page lands on the card(s) it names instead of the top of a system section, and a page that carried none gained a topic-matched one. No fact changed; no existing link removed.",
+    "verified_at": "2026-10-15",
     "sources": [],
     "spec": "_specs/rv-tank-sensors-reading-wrong.md",
     "spec_waived": false,
@@ -980,9 +980,9 @@
     "sources": []
   },
   "tools/battery-runtime.html": {
-    "hash": "021ea0b1b94ac7fb",
+    "hash": "32fef4ee3976a714",
     "status": "verified",
-    "verified_by": "queued conductor batch A applied 2026-10-15: added the topic-matched tool links the silo findings named -- maintenance-schedule gains the water filter and anode rod finders (the two intervals that replace a part), trip-planner gains the fuel cost calculator, weight-calculator's next block gains the towing capacity guide, battery-runtime's block gains the battery not charging guide, and trailer-brakes scope-labels its threshold table as three worked states rather than a full fifty. No fact changed; no existing link removed.",
+    "verified_by": "queued parts-card links applied 2026-10-15: every part card now carries an anchor, so the parts reference on this page lands on the card(s) it names instead of the top of a system section, and a page that carried none gained a topic-matched one. No fact changed; no existing link removed.",
     "verified_at": "2026-10-15",
     "sources": [],
     "spec": null,
@@ -1010,9 +1010,9 @@
     "claims": []
   },
   "tools/rv-anode-rod.html": {
-    "hash": "07e80ea99b0d91d4",
+    "hash": "56eeb84c3553c1c4",
     "status": "verified",
-    "verified_by": "queued tools 8-page finding applied 2026-10-15: the 'find a tech' directory CTA the finding asked for in the Where-to-go-next blocks. Added to the seven tools in that slice whose subject leads to physical work -- the four part finders, the anode rod and water filter finders, and the tire date decoder. The pure calculators (fuel cost, loan, watts to amps, solar sizing, battery runtime, snow load, weight) deliberately get none, because a directory CTA on an arithmetic tool is noise. No fact changed.",
+    "verified_by": "queued parts-card links applied 2026-10-15: every part card now carries an anchor, so the parts reference on this page lands on the card(s) it names instead of the top of a system section, and a page that carried none gained a topic-matched one. No fact changed; no existing link removed.",
     "verified_at": "2026-10-15",
     "sources": [],
     "spec": null,
@@ -1030,9 +1030,9 @@
     "claims": []
   },
   "tools/rv-converter-finder.html": {
-    "hash": "1522d5b0bf7bd062",
+    "hash": "4724275d7a003290",
     "status": "verified",
-    "verified_by": "queued tools 8-page finding applied 2026-10-15: the 'find a tech' directory CTA the finding asked for in the Where-to-go-next blocks. Added to the seven tools in that slice whose subject leads to physical work -- the four part finders, the anode rod and water filter finders, and the tire date decoder. The pure calculators (fuel cost, loan, watts to amps, solar sizing, battery runtime, snow load, weight) deliberately get none, because a directory CTA on an arithmetic tool is noise. No fact changed.",
+    "verified_by": "queued parts-card links applied 2026-10-15: every part card now carries an anchor, so the parts reference on this page lands on the card(s) it names instead of the top of a system section, and a page that carried none gained a topic-matched one. No fact changed; no existing link removed.",
     "verified_at": "2026-10-15",
     "sources": [],
     "spec": null,
@@ -1060,9 +1060,9 @@
     "claims": []
   },
   "tools/rv-toilet-valve.html": {
-    "hash": "6b62a8dceab4d6ae",
+    "hash": "8857b206d358f723",
     "status": "verified",
-    "verified_by": "queued tools 8-page finding applied 2026-10-15: the 'find a tech' directory CTA the finding asked for in the Where-to-go-next blocks. Added to the seven tools in that slice whose subject leads to physical work -- the four part finders, the anode rod and water filter finders, and the tire date decoder. The pure calculators (fuel cost, loan, watts to amps, solar sizing, battery runtime, snow load, weight) deliberately get none, because a directory CTA on an arithmetic tool is noise. No fact changed.",
+    "verified_by": "queued parts-card links applied 2026-10-15: every part card now carries an anchor, so the parts reference on this page lands on the card(s) it names instead of the top of a system section, and a page that carried none gained a topic-matched one. No fact changed; no existing link removed.",
     "verified_at": "2026-10-15",
     "sources": [],
     "spec": null,
@@ -1080,10 +1080,10 @@
     "claims": []
   },
   "tools/snow-load.html": {
-    "hash": "6392c5f04ec6a986",
+    "hash": "5ee2ffc7c40af33a",
     "status": "verified",
-    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
-    "verified_at": "2026-10-13",
+    "verified_by": "queued parts-card links applied 2026-10-15: every part card now carries an anchor, so the parts reference on this page lands on the card(s) it names instead of the top of a system section, and a page that carried none gained a topic-matched one. No fact changed; no existing link removed.",
+    "verified_at": "2026-10-15",
     "sources": [],
     "spec": null,
     "spec_waived": true,
@@ -1107,9 +1107,9 @@
     "claims": []
   },
   "tools/tire-date-code.html": {
-    "hash": "58de4954a42a0eed",
+    "hash": "5889279f855a6cf6",
     "status": "verified",
-    "verified_by": "queued tools 8-page finding applied 2026-10-15: the 'find a tech' directory CTA the finding asked for in the Where-to-go-next blocks. Added to the seven tools in that slice whose subject leads to physical work -- the four part finders, the anode rod and water filter finders, and the tire date decoder. The pure calculators (fuel cost, loan, watts to amps, solar sizing, battery runtime, snow load, weight) deliberately get none, because a directory CTA on an arithmetic tool is noise. No fact changed.",
+    "verified_by": "queued parts-card links applied 2026-10-15: every part card now carries an anchor, so the parts reference on this page lands on the card(s) it names instead of the top of a system section, and a page that carried none gained a topic-matched one. No fact changed; no existing link removed.",
     "verified_at": "2026-10-15",
     "sources": [],
     "spec": null,
@@ -1124,9 +1124,9 @@
     "sources": []
   },
   "tools/weight-calculator.html": {
-    "hash": "67cbef82f12d2dff",
+    "hash": "61a3aa7249c1749d",
     "status": "verified",
-    "verified_by": "W27: the fifth-wheel target the page states now matches the range the calculator uses and the sources it cites (15 to 25%), plus the Ford, Reese and RVSEF citations, and a check comparing the stated range against the computed one. Re-applied after a rebase resolved the shared manifest to upstream.",
+    "verified_by": "queued parts-card links applied 2026-10-15: every part card now carries an anchor, so the parts reference on this page lands on the card(s) it names instead of the top of a system section, and a page that carried none gained a topic-matched one. No fact changed; no existing link removed.",
     "verified_at": "2026-10-15",
     "sources": [],
     "spec": null,
