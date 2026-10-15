@@ -2937,3 +2937,104 @@ one instance:
 
 **Gate:** `bash scripts/ci.sh` (with `CHROME_BIN="google-chrome --no-sandbox"` for the sandbox's
 four browser steps) — every check passed; the commit was archive-checked before the push.
+## COMMUNITY SCAN — the ranked gap list (conv-b71ff860, 2026-10-15)
+
+**What this is.** The discovery pass the content engine depends on: what readers ask about that we do
+not answer. Run with `scripts/scan-community-problems.py` as instructed, plus a deeper forum harvest
+and a corrected Reddit retry — both explained below, because the sanctioned instrument had two
+defects that change what its output means. **Both defects are fixed in `b10327ae`.**
+
+**TWO INSTRUMENT DEFECTS, both found by running it.**
+
+1. **The Reddit half counted subreddits, not threads.** The script called `reddit.com/search.rss`
+   without a `type`, and reddit answers that with COMMUNITY results: the first live fetch for the
+   query "rv furnace not working" returned **r/lampwork, r/LockdownSkepticism and
+   r/ExposingCorporateMSBias**. The function's own docstring says it harvests thread titles, so the
+   missing parameter was a bug rather than a choice, and every reddit figure the instrument had ever
+   printed was counting subreddit names. `type=link` returns real posts — 25 on the same query.
+
+2. **The forum half read each board's FRONT PAGE.** 92 titles from iRV2 that included
+   "Goooodmorning!!!", a member memorial and rally notices alongside two or three real faults. A
+   front page is not a problem list. `FORUMS` now names the twelve boards where a fault actually
+   lands and the harvest walks `--pages` (default 3) of each: 446 titles from one page each, against
+   144 from the three front pages it used before.
+
+**Also fixed: reddit's relevance search needs filtering.** Roughly a third of what it returns is
+unrelated — the same query produced a Clash of Clans patch-notes megathread and an AITAH post. A
+forum board does not have this problem because a board is already RV-scoped, so the filter applies
+to reddit titles only, and the count of what was dropped is recorded per query rather than hidden.
+
+**THE SAMPLE.** 1,194 forum thread titles (12 boards × 3 pages) and 400 reddit posts (20 queries,
+capped at 20 titles each). **1,004 unique titles** survive the filters: 821 of the 1,194 forum
+titles, and 183 of the 400 reddit posts — the other 153 reddit titles carried no RV marker and 64
+were front-page furniture. 495 of the 1,004 name a fault this taxonomy recognises. The taxonomy is
+explicit regexes in the classifier, not a model's judgement, so every count below can be reproduced
+and argued with.
+
+**THE RANKED GAPS.** Ranked by thread volume against coverage depth. A GAP is nothing on the site; a
+PARTIAL is one page where the volume says there should be more. Every coverage claim was checked by
+grepping the pages, not assumed.
+
+| # | area | threads | coverage | what the threads are actually about |
+|---|------|---------|----------|-------------------------------------|
+| 1 | **awning** | 17 | **GAP** | The cluster is the **power-awning mechanism**: a motor arm not closing flush, an awning that will not fully retract on one end, a failed switch, a motor end-cap. Then fabric tears and storage covers, LED strip wiring, a beeping sensor. Carefree, Solera, Dometic 975 and Girard all named. Three guides mention awnings and none explains a fault: a Dometic 8700 manual cited for silicone spray, a pre-trip line ("the awning is fully retracted, and its arms are latched"), and the awning rail as a roof-leak path. |
+| 2 | **air conditioning** | 36 | PARTIAL | Three clusters: **running it on limited power** (11 — soft starts and EasyStart, two units on 30 amps, a 30A generator on a 50A coach, off-grid AC on solar and lithium), **heat-pump mode** (7 — stuck in it, furnace control lost after a swap, compressor replacement), and **noise** (3). Our AC guide covers the cooling sequence, airflow, compressor and refrigerant; it has **zero** mentions of soft start, 30 amp, EasyStart or noise, and one of heat pump. |
+| 3 | **propane / LP system** | 34 | PARTIAL | Which regulator to buy and where, tank level not reading, a fill leak on an old tank, running a generator on trailer propane, odor tracing. `rv-propane-furnace-wont-light` is thorough on the regulator **as a fault** — the two-stage drop, the 11-inch setting, the 14-inch code limit, the vent, the pigtail, a PERC/Battelle source on service life, and replacement cost. What no page covers is **selection** (which one to buy, and where) or a **propane tank gauge** — `rv-tank-sensors-reading-wrong` is holding tanks. |
+| 4 | **solar — settings, monitoring and mounting** | 31 | PARTIAL | Controller settings for lithium and for an 80% SOC target, shunt vs Hall sensor, adding a third or a portable panel, attaching rigid panels to a fibreglass roof. The guide covers **faults** well (MPPT vs PWM, Victron's cause list, the charging stages, 6 lithium mentions); it has zero mentions of shunt, SOC, settings or portable. The gap is the setup side, not the fault side. |
+| 5 | **water intrusion / frame** | 7 | PARTIAL | Frame cracks and weld failures (Jayco, Rpod), slide-out floor rot, window-frame leaks. `rv-delamination` is the only page and it is about the wall, not the frame. |
+| 6 | **carbon monoxide / alarms** | 5 | PARTIAL | Troubleshooting a sounding detector, propane detector alarms, propane tank transport, fire prevention. `rv-furnace-carbon-monoxide` is good on the furnace side — the signs, the recall, the alarm's seven-to-ten-year service life, what to do if you suspect it. What no page covers is the **propane** detector, a different alarm with a different failure mode. |
+| 7 | **entry steps / doors / windows** | 4 | **GAP** | Kwikee step faults, entry door latches and hinges, window seal replacement. Three guides mention steps and none explains a fault: a pre-drive check ("confirm the entrance step is retracted"), a 30-to-60-day lubrication item, and a pre-trip stow line. |
+
+**THE TWO SOURCES DISAGREE ON VOLUME, AND THAT MATTERS MORE THAN THE TOTALS.** Split the sample and
+rank each half on its own:
+
+| area | forum | reddit | reading |
+|---|---|---|---|
+| air conditioning | 31 | 5 | holds in both |
+| solar | 18 | 13 | holds in both — reddit weights it far higher |
+| awning | 11 | 6 | holds in both |
+| propane / LP | 10 | 24 | holds in both — **reddit weights it 2.4× the forum** |
+| tank sensors | 2 | 3 | holds in both, low volume |
+| carbon monoxide / alarms | 4 | 1 | holds in both, weakly |
+| entry steps / doors / windows | 4 | 0 | forum only |
+| water intrusion / frame | 7 | 0 | forum only |
+
+The forum half is dominated by chassis, towing and tyres (63 threads on tyres alone, 42 on towing,
+27 on generators) because **iRV2 is a motorhome board** — its population skews heavy, diesel and
+mechanical. Reddit's RV communities skew the other way: trailer, entry-level, systems, which is why
+propane and solar are weighted so much higher there. So an area that appears in only one half is
+partly a fact about that community rather than about RV owners.
+
+**What that means for the ranking:** all four of the top gaps are raised by both populations, which
+is the strongest form this evidence takes. Steps and frame stay on the list — the threads are real
+and nothing on the site answers them — but they are ranked on one source's evidence. One check on
+the awning case specifically: the forum threads are **type-neutral** (zero carry a motorhome marker,
+one carries a trailer marker, and Carefree, Solera, Girard and Dometic awnings are fitted across
+trailers and motorhomes alike), so the gap is not a motorhome-only fault class.
+
+**A CAVEAT ON THE REDDIT HALF, because it nearly produced a wrong answer.** At 9 of 20 queries the
+reddit sample showed **zero** awning threads, and the first draft of this section ranked awning as
+"forum only". At 20 of 20 it shows six. A partial harvest is not a small harvest — it is a different
+answer, and the difference fell exactly on the area the ranking leads with. **Finish the harvest
+before ranking from it.**
+
+**WHAT THIS IS NOT.** Thread titles are a demand signal, not a volume measurement. Bing returns a
+dash for most of these phrasings, which means UNKNOWN rather than zero. The case for any of these
+rests on the count of people asking the same question in public, plus the coverage gap — not on
+keyword volume, which does not exist for this class of query.
+
+**NEXT — the queue this creates.** In order:
+
+1. **Awning guide** (new page). The only area with double-digit threads in both sources and no page
+   at all. The faults cluster tightly around the power mechanism, which is what a guide should lead
+   with; fabric and covers are secondary. Carefree, Solera, Girard and Dometic publish service
+   documents to cite.
+2. **AC additions** (three sections on `rv-air-conditioner-not-cooling`). The cheapest win: soft
+   starts and running on limited power, heat-pump mode, and noise. No new page needed.
+3. **Propane guide** (new page). The highest reddit-weighted gap, and the one where our coverage is
+   thinnest relative to the ask — buying a regulator, tank gauges, tank faults, running a generator
+   on trailer propane.
+4. **Solar setup sections** (on `rv-solar-not-charging`). Controller settings, battery monitoring,
+   panel mounting. The fault side is already good.
+5. **Frame / water-intrusion page** and **propane detector coverage** — smaller, but both are
+   genuine holes.
