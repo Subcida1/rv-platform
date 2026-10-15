@@ -2785,3 +2785,17 @@ The CI monitor caught it within 3 minutes: run `38712706377` ("pages build and d
 **Fixed:** `gh run rerun 38712706377` — build ✓ 22s, deploy ✓ 18s, report ✓ 5s. Green. The commits involved were worklist-only (`df35d9e1`, `38086bb0`), so no site content was affected either way.
 
 **If Ty got a GitHub failure email around 02:25, this is what it was.** If this class recurs, the durable fix is switching Pages from the legacy build to a custom workflow we control (which can retry), but that is a deliberate change, not a 2 AM one.
+
+**STATE TRAILER BRAKE TOOL — SHIPPED 02:35 PDT (`f4ed9e42`), 32 of 51 jurisdictions read.**
+
+`tools/state-trailer-brake-laws.html` + `_data/state-brake-laws.json` + a generator + a test + full registration (hub card and chip, ItemList 15/15, config route, declared query, sitemap, search index, homepage list, two ci.sh steps). Conductor integration check: all of the above resolve.
+
+**The rule shaped the page, not just the data:** no estimated limits. The picker offers all 51 jurisdictions and marks the unread ones "not covered yet" rather than hiding them; a state with no entry says it has not been read instead of answering. The test is mostly about what the page is NOT allowed to print.
+
+**What the research found, and it is a better story than volume:** the 3,000 lb figure everyone repeats is 49 CFR 393.42, written for commercial vehicles. The states do not cluster around it — California's lowest line is 1,500; Idaho's and Ohio's thresholds are UNLADEN weight; North Dakota has no weight threshold and triggers on speed; Oregon, Kansas, Utah, Wyoming and Missouri set no trailer weight threshold in their own codes. Three states are quoted from a state agency rather than the statute (TX, GA, TN — a JS app, an unpublished section, an anti-bot wall) and each row says so. Mississippi has no entry: no state-hosted copy could be reached.
+
+**Two fleet lessons, both recorded here for every session:**
+1. **"HTTP 200, quoted text confirmed" needs a spot-check.** The drafter hand-checked every state's quote and one research agent's claim did not survive: Texas was reported as quoted from the statute when that page serves only site chrome. Any research batch that reports a fetch as confirmed should be spot-checked by hand before its output is trusted.
+2. **After resolving a shared generated file to upstream, re-run the generators and re-check the counts.** The rebase conflicted in `search-index.js`, `index.html` and `tools/index.html`; resolving the hub to upstream silently dropped the new ItemList entry and left the description saying "Fourteen free RV tools" over a fifteen-item list. The count gate caught it — which is the proof the gate works, and the reason to re-run generators rather than trusting a resolved file.
+
+**Reviews dispatched:** conv-c3913bd3 (fresh-context reviewer: quote fidelity sample, honesty framing, the six no-threshold states, the three agency-sourced states, page voice). The remaining 19 states (AK AR CT DE DC HI KY ME MD MA MS NH NJ NY OK PA RI VT WV) are being added in parallel by conv-8e8a0028; a second review of the final version will follow.
