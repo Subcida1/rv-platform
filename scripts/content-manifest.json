@@ -704,11 +704,14 @@
     "claims": []
   },
   "guides/rv-propane-detector-beeping.html": {
-    "hash": "8785c83732ad3ec3",
-    "status": "unverified",
-    "verified_by": null,
-    "verified_at": null,
-    "sources": []
+    "hash": "a261d09e2d630197",
+    "status": "verified",
+    "verified_by": "propane detector review findings applied 2026-10-15: five findings (F1-F5). The propane signal corrected to a constant tone with a flashing red light, which is what the cited signal table says; the 12.1 volt state-of-charge figure now cites Trojan's published table; the two 30 Series facts moved onto the page; two reader-benefit clauses reworded; and a sentence added for what the makers do not publish.",
+    "verified_at": "2026-10-15",
+    "sources": [],
+    "spec": "_specs/rv-propane-detector-beeping.md",
+    "spec_waived": false,
+    "claims": []
   },
   "guides/rv-propane-furnace-wont-light.html": {
     "hash": "1eef012643530849",
