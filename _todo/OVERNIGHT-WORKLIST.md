@@ -4383,3 +4383,15 @@ Also fixed while testing: the `--body` help did not say the `.sec prose` / `.wra
 **VERIFIED END TO END, TWICE:** a throwaway guide was scaffolded with `--hub-section heat-cool-and-appliances`, built with the one command, and taken through `ci.sh`. The first run found the double wrapper and the drifted hub; both fixed, the hub re-verified, and the second run passed every check. The throwaway page and its traces were removed, so the final tree is HEAD plus the three script files. **A tool that prints instructions nobody has followed is a tool nobody has tested.**
 
 **THE LAYOUT ITEM IS RECORDED, NOT DONE — and the reasoning is right.** `audit-layout.mjs` is the one browser instrument that attaches to an existing debug port instead of spawning its own Chrome, so putting it on push means giving it a self-managed mode first, then a representative page set — a real change with real flake risk, and the doctrine against a slow push gate still holds. Recorded with the evidence and two options, cheapest first.
+
+**THE THREE SOURCES GAPS CLOSED — `7d59637a` (conv-c3913bd3, 05:42 PDT). Level with origin.**
+
+1. **The Camco entry links the distributor's listing now** — naming a source without linking it was half a fix, and the whole point of the block is that a reader can reach the figures.
+2. **The Jabsco entry says why it is not on Jabsco's domain**, in the same voice as the Camco entry: no maker-domain copy exists, `jabsco.com` does not resolve, and the brand's page under its parent company carries no product documents.
+3. **The Eberspächer Airtronic 3 entry says what the document was used for**, like the other thirteen across both blocks.
+
+**Evidence:** `ci.sh` every check passed (exit 0, zero failures); **`verify.py` on the extracted commit — ALL CHECKS PASSED.** Link check re-run over both blocks: 14 links, **eight 200 first pass**, five 429 (the rate-limited ones already verified 200 on retry), and **one 403**.
+
+**AND THE 403 IS WORTH ITS LINE, because it is the newly added link and it is bot-blocking rather than death.** It was fetched in a real browser: **854 KB of DOM carrying the model number 44 times.** So the distributor's page is alive and the scripted 403 is the same shape as `nysenate.gov` on the brake rows — a host that refuses scripts and serves browsers. **Recorded rather than assumed, since "403" and "dead" look identical in a link report.**
+
+**That closes the last three items of the night's one defect class.**
