@@ -2477,3 +2477,18 @@ Seven items, verified against the page sources at tip `652bbc8`:
 - **/manuals/brands: clean** (44 brands + 654 models; the earlier partial counts withdrawn).
 
 Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok.
+
+## Neo parts 13th rotation (card-level link-target audit) (2026-10-15, verified from the Cloud lane)
+
+Seven items, verified against `_data/parts.json` and the guides at tip `c8655e6`:
+
+- **Black tank card: CONFIRMED (re-flag of the 8th-rotation item, queued 008ea68).** Card -> rv-tank-sensors-reading-wrong; the dedicated rv-black-tank exists.
+- **120V cards -> rv-12-volt-problems: CONFIRMED as mapped, but the guide is NOT 12V-scoped.** Its title is "RV Electrical Problems: How to Find the Fault"; it mentions shore power 13x and 120V 14x. The six cards (shore cord/inlet, surge+EMS, transfer switch, inverter, inverter charger) are defensible; the narrow slug is the mismatch. Retargeting optional.
+- **Water pressure regulator + gravity fill/city inlet -> rv-water-pump-wont-prime: CONFIRMED.** The regulator is city-water side; the city fill bypasses the pump. Queue: retarget or gap-note.
+- **Windows -> rv-roof-leak-repair: CONFIRMED.** No window-seal guide exists; gap-note.
+- **Generator -> rv-generator-not-charging: CONFIRMED, scope-narrow.** The guide is "RV Generator Not Charging the Batteries" -- charging-scoped, not general generator troubleshooting. Gap-note (a "generator won't start/run" guide does not exist).
+- **Water dispenser/ice maker -> winterize-plumbing: CONFIRMED** (winterization angle only). Gap-note.
+- **Chassis battery card: carrying** (queued 008ea68).
+- **Verified clean (Neo's list):** all 110 internal links resolve; 46 external domains respond; voice/hygiene PASS.
+
+Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok.
