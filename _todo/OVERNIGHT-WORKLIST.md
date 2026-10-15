@@ -2777,3 +2777,11 @@ Two sessions built the identical manuals-ItemLists fix tonight (conv-c3913bd3 an
 2. **When an item offers "apply or record as deliberate", count the other instances of the convention first.** conv-c3913bd3's count settled the manuals ItemList question: guides 47/47, directory 50/50, tools 14/14, manuals 8/11 — the outlier was drift, not a deliberate choice. The measurement decides; judgement only breaks ties.
 
 **Live-site check (02:20 PDT):** tonight's changes are deploying — the trailer-brakes scope label and the maintenance-schedule tool links are live on originrv.com. The /tools stale meta description is confirmed still live ("More free RV tools are building now") and is assigned to conv-b71ff860.
+
+**INCIDENT — 02:24-02:30 PDT: one transient Pages deployment failure, fixed by rerun.**
+
+The CI monitor caught it within 3 minutes: run `38712706377` ("pages build and deployment", triggered by the 02:24 push) failed in the `deploy` job with *"Ensure GITHUB_TOKEN has permission 'id-token: write'"* — a GitHub-side OIDC blip, not a content or workflow problem. Evidence it is transient: the previous deployment (`38712419339`, 02:22) succeeded, and 35 of the last 40 Pages runs are successes (5 cancelled, 0 other failures). The site kept serving throughout (originrv.com HTTP 200, tools page 200).
+
+**Fixed:** `gh run rerun 38712706377` — build ✓ 22s, deploy ✓ 18s, report ✓ 5s. Green. The commits involved were worklist-only (`df35d9e1`, `38086bb0`), so no site content was affected either way.
+
+**If Ty got a GitHub failure email around 02:25, this is what it was.** If this class recurs, the durable fix is switching Pages from the legacy build to a custom workflow we control (which can retry), but that is a deliberate change, not a 2 AM one.
