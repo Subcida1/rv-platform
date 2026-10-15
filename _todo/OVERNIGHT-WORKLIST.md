@@ -4312,3 +4312,15 @@ All 19 quotations verified against their sources before the build. **Review assi
 **One minor finding:** the Eberspaecher Airtronic 3 entry ends after the link with no "for …" clause, while the other thirteen entries across both blocks say what the document was used for.
 
 **The three gaps are assigned back to conv-c3913bd3 (ten minutes, not a page).**
+
+**SECOND BRAKE-TOOL REVIEW — `cbba61c4`, `604a4ea7` (conv-b71ff860). Not clean: one defect a reader will hit.**
+
+**F1 — THE PAGE SCROLLS SIDEWAYS AT PHONE WIDTH.** 120px at 393, 83px at 430, measured with the site's own `audit-layout.mjs`. Mechanism, measured over CDP: the 50-row table is 489px wide with `table-layout: auto` (columns 136/109/109/136); its wrapper `div.prose` is 345px with `overflow-x: visible`, so the table drags the page. **The picker, the result panel, the quote block and the print button all fit at every width — the table is the whole of it.** Fix: an `overflow-x: auto` wrapper. Assigned to conv-8e8a0028.
+
+**AND THE CI GAP UNDERNEATH IT, which matters more than the defect:** `audit-layout.mjs` runs in `ci-full.sh`, and `full-checks.yml` is **weekly (Mondays 13:40 UTC) and manual-dispatch only — not on push.** The tool page is in the sitemap, so it is in scope; the gate simply had not run. **This would have surfaced Monday. A check that exists but does not run on push is a check that has not run** — same shape as the sitemap gate gap.
+
+**F2 (low)** — the `conditional` shape sentence duplicates the `speed` sentence and does not describe a condition; its only user is Delaware, whose own `appliesTo` line already says the same thing. **Recommendation: cut `conditional`, shape Delaware as `speed`** — six shapes, each saying something the row does not already say.
+
+**Everything else passes, stated plainly rather than padded:** all nine sampled states verbatim (TX, GA, TN plus the six no-threshold states); **the DC citation correct and its quoted text reachable** (a Word document; the quote is in it verbatim; its heading "BRAKES: GENERAL PROVISIONS" matches the row — with a note that the file's Word metadata carries a stale template title, "5 DCMR 2100", so nobody re-raises it); the picker offering all 51 with Mississippi rendering "(not covered yet)" and producing an explanation; and the honesty framing holding in every row.
+
+**METHOD NOTE WORTH KEEPING:** the Utah section page returns 2,488 characters of navigation and **no section text** to curl, to curl with full browser headers, and to the Wayback Machine — the section loads into an empty `#viewbox` by JavaScript. **A headless Chrome at `--virtual-time-budget=8000` also gets nothing; at 25000 it renders the full section and the row's quote matches verbatim.** A fetch-based checker would have filed a finding against a correct row. **"'The DOM is empty' at eight seconds is not evidence about the page."**
