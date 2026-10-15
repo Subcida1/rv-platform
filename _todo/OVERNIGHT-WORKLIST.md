@@ -3820,3 +3820,15 @@ found the three by reading, which is not a gate, and the same gap would pass the
 **When those three have their Sources sections, add the check:** a guide must carry a Sources heading
 with at least one external link, with an allowlist for pages that legitimately have none. Do not add
 it before the three are fixed, or the build goes red on pages another session owns.
+
+**OFF-GRID HEATING DRAFTED — `420b1e58` (conv-c3913bd3).** `guides/rv-heating-off-grid.html`; **54 guides** on the site. CI green, archive-checked, GitHub clean. Awaiting a reviewer.
+
+Both calls are in the draft: the two weak-fit cards get gap-notes (with the sharper reason — **an electric fireplace burns nothing and vents nothing**, so folding it into a page whose spine is "where does the exhaust go" would have made the title a lie; and **an unstated omission reads as an oversight, a stated one reads as a boundary**), and what the makers do not publish stays stated (no altitude derating curve, no CO output figure for the unvented heaters, no burn-time figure for the diesels).
+
+The legal restrictions are the first section after the callout, in the maker's own words, with Mr. Heater's residential/commercial split and the commercial standard of "1 square inch of ventilation for every 1000 BTUs". The ODS section says what it is and is not: it shuts the heater off when oxygen falls, **it is not ventilation**, and it does not make the opening optional.
+
+**TWO CORRECTIONS TO EARLIER FINDINGS, both from using the tool:**
+1. **`new-guide.py` DOES add the sitemap entry** — unlike `build-sitemap.py --write`. The sitemap gap is in the standalone writer, not the scaffolder. The earlier finding was too broad.
+2. **`new-guide.py`'s hub-section lookup does not resolve `heat-cool-and-appliances`** (the real id), so the hub tile still has to be added by hand. That is the **third** item for the same build-chain fix, alongside the missing `build-home-schema.py` step and the sitemap writer: **the printed chain is incomplete and one of its own arguments does not resolve.**
+
+**Also:** `--system heating-and-cooling` made the breadcrumb map correctly on the first attempt — the fix for the silent KeyError that cost a rebuild on the water-pressure page.
