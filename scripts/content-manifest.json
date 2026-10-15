@@ -403,9 +403,9 @@
     "claims": "ca780a6dbc99c4d8"
   },
   "guides/index.html": {
-    "hash": "50d1c9733b4b6b87",
+    "hash": "bb6c95c0fa19ce5b",
     "status": "verified",
-    "verified_by": "new guide 2026-10-15: the propane tank guide's hub tile re-added after the rebase resolved the hub to upstream. One tile, no other change to the page.",
+    "verified_by": "the chassis battery and charging guide's hub tile added under Body, slides and jacks, alongside the engine overheating tile. One tile, no other change to the page.",
     "verified_at": "2026-10-15",
     "sources": [],
     "spec": null,
@@ -491,6 +491,13 @@
     "spec": null,
     "spec_waived": true,
     "claims": []
+  },
+  "guides/rv-chassis-battery-and-charging.html": {
+    "hash": "bb5c6223781cf815",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
   },
   "guides/rv-condensation-inside.html": {
     "hash": "6fa083a49ef81b5d",
@@ -948,7 +955,7 @@
     "claims": "2c668bd9cf981fe7"
   },
   "index.html": {
-    "hash": "fa070806f9f5c01f",
+    "hash": "182b2a9899497e0e",
     "status": "unverified",
     "verified_by": "2026-10-13 independent fresh-context review (subagent, separate context; same model as the drafter, recorded for the findings rather than as a strength claim, so the status stays unverified). Four findings. APPLIED: (1) the winter section said 'Five guides, one checklist each: plumbing, batteries, tires, roof and furnace' while the five cards under it are Winterize Your Plumbing, Battery Care in Cold, Tires Through Winter, Roof Under Snow Load and RV Froze -- there is no furnace guide in the winter set, so the sentence contradicted the grid on the same screen; it now ends 'roof and a frozen coach'; (2) 'The window seal and the bottom trim, per the makers' handed the guide's basis to an unnamed party, the class the site cuts -- the clause is dropped. REFUTED: 'The maker documents behind every part, linked at the source' is already recorded in _todo/W19-CALIBRATION-SET.md as one of five trust-claim sentences awaiting Ty's ruling, so it is not a session's call; and 'what the manuals say' describes the guide's coverage rather than attributing a fact, and was flagged UNSURE by the reviewer itself. Rule 1, 2, 3 and 5 came back clean, and the page's counts (14 tools, 47 guides, 1,942 businesses, 50 states) all reconcile against the data.",
     "verified_at": null,
@@ -962,14 +969,14 @@
     "sources": []
   },
   "manuals/chassis-and-drivetrain.html": {
-    "hash": "9e10152d1bd161b9",
+    "hash": "a97b50b12d37ec2e",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "manuals/exterior-and-body.html": {
-    "hash": "cdfb96bcdcbb4c72",
+    "hash": "28e6a34df33ceb62",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -997,7 +1004,7 @@
     "sources": []
   },
   "manuals/power-and-electrical.html": {
-    "hash": "48dac40a4cefd4c5",
+    "hash": "8d4a3cff28674f3a",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -1011,7 +1018,7 @@
     "sources": []
   },
   "manuals/sanitation-and-tanks.html": {
-    "hash": "e838932833d671fe",
+    "hash": "64ca41fce99843d1",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -1030,7 +1037,7 @@
     "invalidated_at": "2026-09-26"
   },
   "manuals/towing-and-running-gear.html": {
-    "hash": "60cc7d9c044d22a5",
+    "hash": "0061806f5eb4e444",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,

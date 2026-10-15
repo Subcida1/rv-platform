@@ -6023,7 +6023,7 @@
             "class-c",
             "van"
           ],
-          "guide": null,
+          "guide": "rv-chassis-battery-and-charging",
           "kw": [
             "motorhome alternator not charging",
             "rv starter solenoid",
@@ -6052,7 +6052,7 @@
             "class-c",
             "van"
           ],
-          "guide": null,
+          "guide": "rv-chassis-battery-and-charging",
           "kw": [
             "rv chassis battery drains",
             "battery isolator rv",
