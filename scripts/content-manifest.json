@@ -383,10 +383,10 @@
     "sources": []
   },
   "guides/battery-winter-storage.html": {
-    "hash": "4b7ef424f7f3a2ce",
+    "hash": "4202bb251f0f48b4",
     "status": "verified",
-    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
-    "verified_at": "2026-10-13",
+    "verified_by": "guide endings unified, step 2 (Ty 2026-10-14, \"Your recommendation on all\"): the thirty button-only guides now end with the same Related guides prose block the other seventeen use, because a sentence can say why the next page matters and a button can only repeat its title. Tool buttons survive as buttons, relabelled as actions rather than as relations. Every button target was checked against the prose before the row was removed; no link target was lost.",
+    "verified_at": "2026-10-14",
     "sources": [],
     "spec": "_specs/battery-winter-storage.md",
     "spec_waived": false,
@@ -413,19 +413,19 @@
     "claims": "a0146313ebc9d955"
   },
   "guides/roof-snow-load.html": {
-    "hash": "62639568bf6c5632",
+    "hash": "a20a4f8da71d1796",
     "status": "verified",
-    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
-    "verified_at": "2026-10-13",
+    "verified_by": "guide endings unified, step 2 (Ty 2026-10-14, \"Your recommendation on all\"): the thirty button-only guides now end with the same Related guides prose block the other seventeen use, because a sentence can say why the next page matters and a button can only repeat its title. Tool buttons survive as buttons, relabelled as actions rather than as relations. Every button target was checked against the prose before the row was removed; no link target was lost.",
+    "verified_at": "2026-10-14",
     "sources": [],
     "spec": "_specs/roof-snow-load.md",
     "spec_waived": false,
     "claims": "d001e7423ee174b8"
   },
   "guides/rv-12-volt-problems.html": {
-    "hash": "01bacb905171c463",
+    "hash": "2ab51fffb4d7f8c4",
     "status": "verified",
-    "verified_by": "the reader-benefit sweep, step 1 of _todo/VOICE-RULESET.md: the clause about the reader (why the fact matters, what it costs them) cut or rebuilt as the content, per Ty 2026-10-13 \"Say the thing... just spit out the content\". No fact changed; the framing did.",
+    "verified_by": "guide endings unified, step 2 (Ty 2026-10-14, \"Your recommendation on all\"): the thirty button-only guides now end with the same Related guides prose block the other seventeen use, because a sentence can say why the next page matters and a button can only repeat its title. Tool buttons survive as buttons, relabelled as actions rather than as relations. Every button target was checked against the prose before the row was removed; no link target was lost.",
     "verified_at": "2026-10-14",
     "sources": [],
     "spec": "_specs/rv-12-volt-problems.md",
@@ -433,9 +433,9 @@
     "claims": "f82066e98fbddabb"
   },
   "guides/rv-air-conditioner-not-cooling.html": {
-    "hash": "4fb2e40b663b2225",
+    "hash": "fb2311a0d4015993",
     "status": "verified",
-    "verified_by": "the reader-benefit sweep, step 1 of _todo/VOICE-RULESET.md: the clause about the reader (why the fact matters, what it costs them) cut or rebuilt as the content, per Ty 2026-10-13 \"Say the thing... just spit out the content\". No fact changed; the framing did.",
+    "verified_by": "guide endings unified, step 2 (Ty 2026-10-14, \"Your recommendation on all\"): the thirty button-only guides now end with the same Related guides prose block the other seventeen use, because a sentence can say why the next page matters and a button can only repeat its title. Tool buttons survive as buttons, relabelled as actions rather than as relations. Every button target was checked against the prose before the row was removed; no link target was lost.",
     "verified_at": "2026-10-14",
     "sources": [],
     "spec": null,
@@ -443,9 +443,9 @@
     "claims": "e65464526c5af869"
   },
   "guides/rv-battery-disconnect.html": {
-    "hash": "0434fac77770a169",
+    "hash": "e933dfcbe31ee600",
     "status": "verified",
-    "verified_by": "the reader-benefit sweep, step 1 of _todo/VOICE-RULESET.md: the clause about the reader (why the fact matters, what it costs them) cut or rebuilt as the content, per Ty 2026-10-13 \"Say the thing... just spit out the content\". No fact changed; the framing did.",
+    "verified_by": "guide endings unified, step 2 (Ty 2026-10-14, \"Your recommendation on all\"): the thirty button-only guides now end with the same Related guides prose block the other seventeen use, because a sentence can say why the next page matters and a button can only repeat its title. Tool buttons survive as buttons, relabelled as actions rather than as relations. Every button target was checked against the prose before the row was removed; no link target was lost.",
     "verified_at": "2026-10-14",
     "sources": [],
     "spec": null,
@@ -463,29 +463,29 @@
     "claims": "f2c9a068f6c16e27"
   },
   "guides/rv-black-tank-routine.html": {
-    "hash": "02ce38b3162cb0b7",
+    "hash": "0f702818793021b1",
     "status": "verified",
-    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
-    "verified_at": "2026-10-13",
+    "verified_by": "guide endings unified, step 2 (Ty 2026-10-14, \"Your recommendation on all\"): the thirty button-only guides now end with the same Related guides prose block the other seventeen use, because a sentence can say why the next page matters and a button can only repeat its title. Tool buttons survive as buttons, relabelled as actions rather than as relations. Every button target was checked against the prose before the row was removed; no link target was lost.",
+    "verified_at": "2026-10-14",
     "sources": [],
     "spec": null,
     "spec_waived": true,
     "claims": []
   },
   "guides/rv-black-tank.html": {
-    "hash": "208b4f6c5945f847",
+    "hash": "bf066007f0e71b4f",
     "status": "verified",
-    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
-    "verified_at": "2026-10-13",
+    "verified_by": "guide endings unified, step 2 (Ty 2026-10-14, \"Your recommendation on all\"): the thirty button-only guides now end with the same Related guides prose block the other seventeen use, because a sentence can say why the next page matters and a button can only repeat its title. Tool buttons survive as buttons, relabelled as actions rather than as relations. Every button target was checked against the prose before the row was removed; no link target was lost.",
+    "verified_at": "2026-10-14",
     "sources": [],
     "spec": null,
     "spec_waived": true,
     "claims": []
   },
   "guides/rv-condensation-inside.html": {
-    "hash": "77d74992157d6279",
+    "hash": "1e2d28a933813da7",
     "status": "verified",
-    "verified_by": "the reader-benefit sweep, step 1 of _todo/VOICE-RULESET.md: the clause about the reader (why the fact matters, what it costs them) cut or rebuilt as the content, per Ty 2026-10-13 \"Say the thing... just spit out the content\". No fact changed; the framing did.",
+    "verified_by": "guide endings unified, step 2 (Ty 2026-10-14, \"Your recommendation on all\"): the thirty button-only guides now end with the same Related guides prose block the other seventeen use, because a sentence can say why the next page matters and a button can only repeat its title. Tool buttons survive as buttons, relabelled as actions rather than as relations. Every button target was checked against the prose before the row was removed; no link target was lost.",
     "verified_at": "2026-10-14",
     "sources": [],
     "spec": null,
@@ -503,39 +503,39 @@
     "claims": "9e753c5476a782bd"
   },
   "guides/rv-delamination.html": {
-    "hash": "503db0c4e7b3842a",
+    "hash": "54886ad204795d96",
     "status": "verified",
-    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
-    "verified_at": "2026-10-13",
+    "verified_by": "guide endings unified, step 2 (Ty 2026-10-14, \"Your recommendation on all\"): the thirty button-only guides now end with the same Related guides prose block the other seventeen use, because a sentence can say why the next page matters and a button can only repeat its title. Tool buttons survive as buttons, relabelled as actions rather than as relations. Every button target was checked against the prose before the row was removed; no link target was lost.",
+    "verified_at": "2026-10-14",
     "sources": [],
     "spec": null,
     "spec_waived": true,
     "claims": "d43bfcd7141b7c75"
   },
   "guides/rv-driving-motorhome.html": {
-    "hash": "21a5f80946fdebce",
+    "hash": "2c29ffd9cd0aa56d",
     "status": "verified",
-    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
-    "verified_at": "2026-10-13",
+    "verified_by": "guide endings unified, step 2 (Ty 2026-10-14, \"Your recommendation on all\"): the thirty button-only guides now end with the same Related guides prose block the other seventeen use, because a sentence can say why the next page matters and a button can only repeat its title. Tool buttons survive as buttons, relabelled as actions rather than as relations. Every button target was checked against the prose before the row was removed; no link target was lost.",
+    "verified_at": "2026-10-14",
     "sources": [],
     "spec": null,
     "spec_waived": true,
     "claims": []
   },
   "guides/rv-fridge-leveling.html": {
-    "hash": "96baa05cb7708b10",
+    "hash": "691fc97997998f6d",
     "status": "verified",
-    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
-    "verified_at": "2026-10-13",
+    "verified_by": "guide endings unified, step 2 (Ty 2026-10-14, \"Your recommendation on all\"): the thirty button-only guides now end with the same Related guides prose block the other seventeen use, because a sentence can say why the next page matters and a button can only repeat its title. Tool buttons survive as buttons, relabelled as actions rather than as relations. Every button target was checked against the prose before the row was removed; no link target was lost.",
+    "verified_at": "2026-10-14",
     "sources": [],
     "spec": null,
     "spec_waived": true,
     "claims": []
   },
   "guides/rv-furnace-carbon-monoxide.html": {
-    "hash": "e8e5513ed480f4ce",
+    "hash": "0410417693007e9f",
     "status": "verified",
-    "verified_by": "the reader-benefit sweep, step 1 of _todo/VOICE-RULESET.md: the clause about the reader (why the fact matters, what it costs them) cut or rebuilt as the content, per Ty 2026-10-13 \"Say the thing... just spit out the content\". No fact changed; the framing did.",
+    "verified_by": "guide endings unified, step 2 (Ty 2026-10-14, \"Your recommendation on all\"): the thirty button-only guides now end with the same Related guides prose block the other seventeen use, because a sentence can say why the next page matters and a button can only repeat its title. Tool buttons survive as buttons, relabelled as actions rather than as relations. Every button target was checked against the prose before the row was removed; no link target was lost.",
     "verified_at": "2026-10-14",
     "sources": [],
     "spec": null,
@@ -543,10 +543,10 @@
     "claims": "029e24133bf31376"
   },
   "guides/rv-furnace-not-working.html": {
-    "hash": "d88c29626fabbdd4",
+    "hash": "fb0220e2e425ca49",
     "status": "verified",
-    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
-    "verified_at": "2026-10-13",
+    "verified_by": "guide endings unified, step 2 (Ty 2026-10-14, \"Your recommendation on all\"): the thirty button-only guides now end with the same Related guides prose block the other seventeen use, because a sentence can say why the next page matters and a button can only repeat its title. Tool buttons survive as buttons, relabelled as actions rather than as relations. Every button target was checked against the prose before the row was removed; no link target was lost.",
+    "verified_at": "2026-10-14",
     "sources": [],
     "spec": "_specs/rv-furnace-not-working.md",
     "spec_waived": false,
@@ -613,9 +613,9 @@
     "claims": "b42c5240ff3f3533"
   },
   "guides/rv-maintenance-schedule.html": {
-    "hash": "f99a8304613ac0d7",
+    "hash": "29267ac15567675b",
     "status": "verified",
-    "verified_by": "the reader-benefit sweep, step 1 of _todo/VOICE-RULESET.md: the clause about the reader (why the fact matters, what it costs them) cut or rebuilt as the content, per Ty 2026-10-13 \"Say the thing... just spit out the content\". No fact changed; the framing did.",
+    "verified_by": "guide endings unified, step 2 (Ty 2026-10-14, \"Your recommendation on all\"): the thirty button-only guides now end with the same Related guides prose block the other seventeen use, because a sentence can say why the next page matters and a button can only repeat its title. Tool buttons survive as buttons, relabelled as actions rather than as relations. Every button target was checked against the prose before the row was removed; no link target was lost.",
     "verified_at": "2026-10-14",
     "sources": [],
     "spec": null,
@@ -633,9 +633,9 @@
     "claims": "1fe18dc8c794753f"
   },
   "guides/rv-pin-weight-and-payload.html": {
-    "hash": "4f33cc91eee3d3d4",
+    "hash": "605201c489f4eb2c",
     "status": "verified",
-    "verified_by": "queued Neo rotation finding applied 2026-10-14: the four guides that carried zero in-body tool links now link the topic-matched tool (tire date code on the tire guide, watts to amps on generator sizing, weight calculator on pin weight, toilet valve finder on the toilet guide). One sentence and one link added per page; no fact changed.",
+    "verified_by": "guide endings unified, step 2 (Ty 2026-10-14, \"Your recommendation on all\"): the thirty button-only guides now end with the same Related guides prose block the other seventeen use, because a sentence can say why the next page matters and a button can only repeat its title. Tool buttons survive as buttons, relabelled as actions rather than as relations. Every button target was checked against the prose before the row was removed; no link target was lost.",
     "verified_at": "2026-10-14",
     "sources": [],
     "spec": null,
@@ -643,9 +643,9 @@
     "claims": "a44bf4a3d9403aa0"
   },
   "guides/rv-pre-trip-walkaround.html": {
-    "hash": "8857bf0119ae7360",
+    "hash": "0e70fb36a2264936",
     "status": "verified",
-    "verified_by": "the reader-benefit sweep, step 1 of _todo/VOICE-RULESET.md: the clause about the reader (why the fact matters, what it costs them) cut or rebuilt as the content, per Ty 2026-10-13 \"Say the thing... just spit out the content\". No fact changed; the framing did.",
+    "verified_by": "guide endings unified, step 2 (Ty 2026-10-14, \"Your recommendation on all\"): the thirty button-only guides now end with the same Related guides prose block the other seventeen use, because a sentence can say why the next page matters and a button can only repeat its title. Tool buttons survive as buttons, relabelled as actions rather than as relations. Every button target was checked against the prose before the row was removed; no link target was lost.",
     "verified_at": "2026-10-14",
     "sources": [],
     "spec": null,
@@ -663,9 +663,9 @@
     "claims": "7633b08b24580839"
   },
   "guides/rv-refrigerator-not-cooling.html": {
-    "hash": "4198a593dc4cc7ba",
+    "hash": "19c5585115241894",
     "status": "verified",
-    "verified_by": "the reader-benefit sweep, step 1 of _todo/VOICE-RULESET.md: the clause about the reader (why the fact matters, what it costs them) cut or rebuilt as the content, per Ty 2026-10-13 \"Say the thing... just spit out the content\". No fact changed; the framing did.",
+    "verified_by": "guide endings unified, step 2 (Ty 2026-10-14, \"Your recommendation on all\"): the thirty button-only guides now end with the same Related guides prose block the other seventeen use, because a sentence can say why the next page matters and a button can only repeat its title. Tool buttons survive as buttons, relabelled as actions rather than as relations. Every button target was checked against the prose before the row was removed; no link target was lost.",
     "verified_at": "2026-10-14",
     "sources": [],
     "spec": "_specs/rv-refrigerator-not-cooling.md",
@@ -683,9 +683,9 @@
     "claims": "39cbfa3d61716c6a"
   },
   "guides/rv-sewer-smell.html": {
-    "hash": "f110f260b45d6219",
+    "hash": "f7f42a890c440300",
     "status": "verified",
-    "verified_by": "the reader-benefit sweep, step 1 of _todo/VOICE-RULESET.md: the clause about the reader (why the fact matters, what it costs them) cut or rebuilt as the content, per Ty 2026-10-13 \"Say the thing... just spit out the content\". No fact changed; the framing did.",
+    "verified_by": "guide endings unified, step 2 (Ty 2026-10-14, \"Your recommendation on all\"): the thirty button-only guides now end with the same Related guides prose block the other seventeen use, because a sentence can say why the next page matters and a button can only repeat its title. Tool buttons survive as buttons, relabelled as actions rather than as relations. Every button target was checked against the prose before the row was removed; no link target was lost.",
     "verified_at": "2026-10-14",
     "sources": [],
     "spec": null,
@@ -693,9 +693,9 @@
     "claims": "ab37936352b3b705"
   },
   "guides/rv-slide-out-leaking.html": {
-    "hash": "66a725db0da02348",
+    "hash": "52772fe41f5dc67b",
     "status": "verified",
-    "verified_by": "the reader-benefit sweep, step 1 of _todo/VOICE-RULESET.md: the clause about the reader (why the fact matters, what it costs them) cut or rebuilt as the content, per Ty 2026-10-13 \"Say the thing... just spit out the content\". No fact changed; the framing did.",
+    "verified_by": "guide endings unified, step 2 (Ty 2026-10-14, \"Your recommendation on all\"): the thirty button-only guides now end with the same Related guides prose block the other seventeen use, because a sentence can say why the next page matters and a button can only repeat its title. Tool buttons survive as buttons, relabelled as actions rather than as relations. Every button target was checked against the prose before the row was removed; no link target was lost.",
     "verified_at": "2026-10-14",
     "sources": [],
     "spec": null,
@@ -723,19 +723,19 @@
     "claims": "8bcd90bd498e17c5"
   },
   "guides/rv-tank-sensors-reading-wrong.html": {
-    "hash": "acd92c70836d2ec0",
+    "hash": "a34f2ad2a1603143",
     "status": "verified",
-    "verified_by": "cross-reference links added where a sentence pointed at a section or a page we own and carried no link, per the new scripts/check-crossrefs.py gate (Ty 2026-10-13: \"we should ALWAYS provide a link if we feel the need to mention another section we have content for\"). Anchor text and heading ids only; no factual change.",
-    "verified_at": "2026-10-13",
+    "verified_by": "guide endings unified, step 2 (Ty 2026-10-14, \"Your recommendation on all\"): the thirty button-only guides now end with the same Related guides prose block the other seventeen use, because a sentence can say why the next page matters and a button can only repeat its title. Tool buttons survive as buttons, relabelled as actions rather than as relations. Every button target was checked against the prose before the row was removed; no link target was lost.",
+    "verified_at": "2026-10-14",
     "sources": [],
     "spec": "_specs/rv-tank-sensors-reading-wrong.md",
     "spec_waived": false,
     "claims": "7d8c50b92e428a6c"
   },
   "guides/rv-tire-replacement.html": {
-    "hash": "21df7598b5956125",
+    "hash": "f99b4a82c6a96b0f",
     "status": "verified",
-    "verified_by": "queued Neo rotation finding applied 2026-10-14: the four guides that carried zero in-body tool links now link the topic-matched tool (tire date code on the tire guide, watts to amps on generator sizing, weight calculator on pin weight, toilet valve finder on the toilet guide). One sentence and one link added per page; no fact changed.",
+    "verified_by": "guide endings unified, step 2 (Ty 2026-10-14, \"Your recommendation on all\"): the thirty button-only guides now end with the same Related guides prose block the other seventeen use, because a sentence can say why the next page matters and a button can only repeat its title. Tool buttons survive as buttons, relabelled as actions rather than as relations. Every button target was checked against the prose before the row was removed; no link target was lost.",
     "verified_at": "2026-10-14",
     "sources": [],
     "spec": "_specs/rv-tire-replacement.md",
@@ -753,9 +753,9 @@
     "claims": "503f760523fe0f1b"
   },
   "guides/rv-towing-capacity.html": {
-    "hash": "cc97c0980caeef3e",
+    "hash": "71e380a17b045501",
     "status": "verified",
-    "verified_by": "the reader-benefit sweep, step 1 of _todo/VOICE-RULESET.md: the clause about the reader (why the fact matters, what it costs them) cut or rebuilt as the content, per Ty 2026-10-13 \"Say the thing... just spit out the content\". No fact changed; the framing did.",
+    "verified_by": "guide endings unified, step 2 (Ty 2026-10-14, \"Your recommendation on all\"): the thirty button-only guides now end with the same Related guides prose block the other seventeen use, because a sentence can say why the next page matters and a button can only repeat its title. Tool buttons survive as buttons, relabelled as actions rather than as relations. Every button target was checked against the prose before the row was removed; no link target was lost.",
     "verified_at": "2026-10-14",
     "sources": [],
     "spec": "_specs/rv-towing-capacity.md",
@@ -763,9 +763,9 @@
     "claims": "40a93ee5e783a93f"
   },
   "guides/rv-towing-trailer.html": {
-    "hash": "4d5dadded012fff1",
+    "hash": "d9a9323b378f0c38",
     "status": "verified",
-    "verified_by": "the U-Haul demonstration is a click-to-load player now, at Ty's instruction, with nothing from YouTube loading until a reader presses play",
+    "verified_by": "guide endings unified, step 2 (Ty 2026-10-14, \"Your recommendation on all\"): the thirty button-only guides now end with the same Related guides prose block the other seventeen use, because a sentence can say why the next page matters and a button can only repeat its title. Tool buttons survive as buttons, relabelled as actions rather than as relations. Every button target was checked against the prose before the row was removed; no link target was lost.",
     "verified_at": "2026-10-14",
     "sources": [],
     "spec": null,
@@ -783,9 +783,9 @@
     "claims": "c0dc7a196a84dde6"
   },
   "guides/rv-trip-planner.html": {
-    "hash": "56eb4d8951efc890",
+    "hash": "08c8007424400002",
     "status": "verified",
-    "verified_by": "the reader-benefit sweep, step 2 (the report-only families: hedge-stack, emphasis-adverb, authenticity-adjective, filler-opener), 2026-10-14: one hedge where two were, importance shown rather than insisted on, our figures not called the real ones, and no filler opener. No fact changed.",
+    "verified_by": "guide endings unified, step 2 (Ty 2026-10-14, \"Your recommendation on all\"): the thirty button-only guides now end with the same Related guides prose block the other seventeen use, because a sentence can say why the next page matters and a button can only repeat its title. Tool buttons survive as buttons, relabelled as actions rather than as relations. Every button target was checked against the prose before the row was removed; no link target was lost.",
     "verified_at": "2026-10-14",
     "sources": [],
     "spec": null,
@@ -793,19 +793,19 @@
     "claims": []
   },
   "guides/rv-two-appliances-stopped.html": {
-    "hash": "85819d5bb4467436",
+    "hash": "1ce8fbaf5ae7ca12",
     "status": "verified",
-    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
-    "verified_at": "2026-10-13",
+    "verified_by": "guide endings unified, step 2 (Ty 2026-10-14, \"Your recommendation on all\"): the thirty button-only guides now end with the same Related guides prose block the other seventeen use, because a sentence can say why the next page matters and a button can only repeat its title. Tool buttons survive as buttons, relabelled as actions rather than as relations. Every button target was checked against the prose before the row was removed; no link target was lost.",
+    "verified_at": "2026-10-14",
     "sources": [],
     "spec": null,
     "spec_waived": true,
     "claims": "31f22570b89ad0eb"
   },
   "guides/rv-water-heater-anode-rod.html": {
-    "hash": "7429cb670b8261bf",
+    "hash": "f546dd810dc5dea9",
     "status": "verified",
-    "verified_by": "the reader-benefit sweep, step 2 (the report-only families: hedge-stack, emphasis-adverb, authenticity-adjective, filler-opener), 2026-10-14: one hedge where two were, importance shown rather than insisted on, our figures not called the real ones, and no filler opener. No fact changed.",
+    "verified_by": "guide endings unified, step 2 (Ty 2026-10-14, \"Your recommendation on all\"): the thirty button-only guides now end with the same Related guides prose block the other seventeen use, because a sentence can say why the next page matters and a button can only repeat its title. Tool buttons survive as buttons, relabelled as actions rather than as relations. Every button target was checked against the prose before the row was removed; no link target was lost.",
     "verified_at": "2026-10-14",
     "sources": [],
     "spec": null,
@@ -813,19 +813,19 @@
     "claims": []
   },
   "guides/rv-water-heater-not-heating.html": {
-    "hash": "07496912e3a8910f",
+    "hash": "07524039fa00938f",
     "status": "verified",
-    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
-    "verified_at": "2026-10-13",
+    "verified_by": "guide endings unified, step 2 (Ty 2026-10-14, \"Your recommendation on all\"): the thirty button-only guides now end with the same Related guides prose block the other seventeen use, because a sentence can say why the next page matters and a button can only repeat its title. Tool buttons survive as buttons, relabelled as actions rather than as relations. Every button target was checked against the prose before the row was removed; no link target was lost.",
+    "verified_at": "2026-10-14",
     "sources": [],
     "spec": "_specs/rv-water-heater-not-heating.md",
     "spec_waived": false,
     "claims": "18cbb61bba603005"
   },
   "guides/rv-water-pump-wont-prime.html": {
-    "hash": "56db22fe8b5547df",
+    "hash": "b3ec76f896ddb6e2",
     "status": "verified",
-    "verified_by": "the reader-benefit sweep, step 2 (the report-only families: hedge-stack, emphasis-adverb, authenticity-adjective, filler-opener), 2026-10-14: one hedge where two were, importance shown rather than insisted on, our figures not called the real ones, and no filler opener. No fact changed.",
+    "verified_by": "guide endings unified, step 2 (Ty 2026-10-14, \"Your recommendation on all\"): the thirty button-only guides now end with the same Related guides prose block the other seventeen use, because a sentence can say why the next page matters and a button can only repeat its title. Tool buttons survive as buttons, relabelled as actions rather than as relations. Every button target was checked against the prose before the row was removed; no link target was lost.",
     "verified_at": "2026-10-14",
     "sources": [],
     "spec": null,
@@ -833,10 +833,10 @@
     "claims": "34c240b69b94c574"
   },
   "guides/tires-winter.html": {
-    "hash": "f0e515770d424022",
+    "hash": "eb151bb2abd52120",
     "status": "verified",
-    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
-    "verified_at": "2026-10-13",
+    "verified_by": "guide endings unified, step 2 (Ty 2026-10-14, \"Your recommendation on all\"): the thirty button-only guides now end with the same Related guides prose block the other seventeen use, because a sentence can say why the next page matters and a button can only repeat its title. Tool buttons survive as buttons, relabelled as actions rather than as relations. Every button target was checked against the prose before the row was removed; no link target was lost.",
+    "verified_at": "2026-10-14",
     "sources": [],
     "spec": "_specs/tires-winter.md",
     "spec_waived": false,
@@ -853,10 +853,10 @@
     "claims": "7475218f762ec723"
   },
   "guides/winterize-plumbing.html": {
-    "hash": "5ecfa630c4dcec87",
+    "hash": "b5d936177889e6de",
     "status": "verified",
-    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
-    "verified_at": "2026-10-13",
+    "verified_by": "guide endings unified, step 2 (Ty 2026-10-14, \"Your recommendation on all\"): the thirty button-only guides now end with the same Related guides prose block the other seventeen use, because a sentence can say why the next page matters and a button can only repeat its title. Tool buttons survive as buttons, relabelled as actions rather than as relations. Every button target was checked against the prose before the row was removed; no link target was lost.",
+    "verified_at": "2026-10-14",
     "sources": [],
     "spec": "_specs/winterize-plumbing.md",
     "spec_waived": false,
