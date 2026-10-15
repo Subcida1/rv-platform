@@ -1107,7 +1107,7 @@
   "tools/weight-calculator.html": {
     "hash": "c7ed2796c006f324",
     "status": "verified",
-    "verified_by": "Ty's calculator pass, second batch: the find-it magnifier, the dry-weight question asked in the reader's terms with the propane field only shown when it applies, the scale-locator wording, the CAT Scale positioning for each vehicle type, and the limits section",
+    "verified_by": "the find-it magnifier drawn inline instead of as a CSS mask, after the W3C CSS validator rejected the mask shorthand and CI caught it",
     "verified_at": "2026-10-15",
     "sources": [],
     "spec": null,
