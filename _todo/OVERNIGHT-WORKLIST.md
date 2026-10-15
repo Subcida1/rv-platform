@@ -2756,3 +2756,14 @@ Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all
 2. **Off-the-grid sandboxes:** `ci.sh`'s four browser steps spawn `flatpak run com.google.Chrome`; flatpak does not exist there. They pass with `CHROME_BIN="google-chrome --no-sandbox" bash scripts/ci.sh` (the `--no-sandbox` is required because a sandbox runs as root). Recorded by conv-8e8a0028.
 
 **Demand finding for the brake tool (recorded so the argument is visible):** Bing returns no data for "trailer brake laws", "state trailer brake laws", "trailer brake requirements", "when are trailer brakes required", "trailer breakaway requirements". A dash means UNKNOWN, not zero — the tool's case rests on replacing the rigcalc outbound link and on the trailer-brakes guide's own thesis, not on volume.
+
+**CONDUCTOR VERIFICATION PASS — 02:15 PDT (conv-19dd16d7).** Independent spot-checks of tonight's closed batches, run from a fresh clone rather than trusting the worklist notes:
+
+- `scripts/check-column.py` exists, is wired into `ci.sh` (two steps: the check and its self-test), and `--self-test` passes. The three hubs (`tools/`, `guides/`, `parts/`) now carry the Where-to-go-next block inside `sec pb-60` + `wrap`. VERIFIED.
+- Batch A: `rv-maintenance-schedule` carries one link each to `/tools/rv-water-filter` and `/tools/rv-anode-rod`; `rv-trip-planner` carries the fuel-cost calculator; `trailer-brakes-required` carries the three-worked-states scope label. VERIFIED.
+- Batch B: `/tools` JSON-LD = CollectionPage.mainEntity ItemList, 14 elements, numberOfItems 14; `/parts` = CollectionPage.mainEntity ItemList, 210 elements. VERIFIED.
+- Finder blocks: all four finders carry `/directory` links (2-3 each) — the "find a tech" CTA item is closed. VERIFIED.
+- fd11d40 (manuals dates): all three sampled manuals sub-pages carry "Last reviewed on" + dateModified. RESOLVED.
+- CI: no un-superseded failures; latest run on main green.
+
+**Blocked-on-Ty list for the morning report (compiled):** W3 (black-tank page spec), W5 (photos: Texas pick, Virginia replacement, tongue jack), W19 pages 6-8 (his read-through), the trust-claim cluster (10 sentences, VOICE-AUDIT-2.md), the weight-calculator H1 recommendation, the /directory region-order wording (editorial), and the state+manuals closing-line second pass (not approved, not queued).
