@@ -2519,3 +2519,15 @@ Six items, verified against the page source at tip `0e2f134`:
 - **Verified clean (Neo's list):** title/meta/H1/canonical; sitemap 131; 47 guide slugs; in-body counts match baseline; counters; data-claims; voice PASS.
 
 Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok.
+
+## Neo about 11th rotation (2026-10-15, verified from the Cloud lane)
+
+Four items, verified against the page sources at tip `5c83975`:
+
+- **W29 closing line: the About link was removed DELIBERATELY.** The line landed with two links ("Tell us. About OriginRV.") in 7bf630d; 9e5f403 (the read-through, 2026-10-13) dropped the About link as part of its closing-line change. Current state = /contact only, on all 61 pages. Queue: update the W29 worklist entry to match (or restore, if the read-through's call is reversed).
+- **dateModified audit: CLEAN.** `sync-dates.py --check` reports "0 page(s) out of date, 0 with no git date" -- visible date == dateModified == last-substantive-commit date, sitewide. No drift.
+- **/privacy cookie claim: VERIFIED FIXED** (0cbb666).
+- **/about in-body links: VERIFIED RESOLVED** (all five sections + contact).
+- **Verified clean (Neo's list):** metas/titles/H1s/canonicals; mailto present; privacy + about claims consistent; no dashes/FFFD; voice PASS.
+
+Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok.
