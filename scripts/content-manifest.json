@@ -513,9 +513,9 @@
     "claims": "9e753c5476a782bd"
   },
   "guides/rv-delamination.html": {
-    "hash": "111a30aa819c5785",
+    "hash": "9f1af1e86dde2cd4",
     "status": "verified",
-    "verified_by": "window reseal 2026-10-15: a subsection added under the seal section covering the maker's window installation method and the published reseal procedure, with the two window documents added to Sources. One sentence in it was then narrowed to what the cited instructions state.",
+    "verified_by": "window cross-link 2026-10-15: the window reseal subsection is dropped because the new rv-window-leaking guide owns that subject; the seal section now carries one sentence pointing at it. No claim on the page changed.",
     "verified_at": "2026-10-15",
     "sources": [],
     "spec": null,
