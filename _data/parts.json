@@ -3636,7 +3636,7 @@
         {
           "id": "ceiling-vents-and-hatch",
           "n": "Ceiling vents and hatch",
-          "aka": "roof vent|vent lid|escape hatch|vent cover|vent lid",
+          "aka": "roof vent|vent lid|escape hatch|vent cover",
           "does": "ventilation and an emergency exit",
           "fails": [
             "lid cracked by UV",
@@ -5303,7 +5303,7 @@
         {
           "id": "bed-and-mattress",
           "n": "Bed and mattress",
-          "aka": "rv mattress|short queen|bunk|murphy bed|bunk|murphy bed|tilting bed|adjustable bed",
+          "aka": "rv mattress|short queen|bunk|murphy bed|tilting bed|adjustable bed",
           "does": "sleeping",
           "fails": [
             "mattress worn",
@@ -5762,7 +5762,7 @@
         {
           "id": "cooling-system",
           "n": "Cooling system",
-          "aka": "radiator|coolant|fan clutch|charge air cooler|thermostat|water pump|fan clutch|radiator hoses",
+          "aka": "radiator|coolant|fan clutch|charge air cooler|thermostat|water pump|radiator hoses",
           "does": "keeps the engine at temperature",
           "fails": [
             "coolant loss",
@@ -5874,7 +5874,7 @@
         {
           "id": "chassis-brakes",
           "n": "Chassis brakes",
-          "aka": "air brakes|hydraulic brakes|brake chambers|slack adjusters|ABS|parking brake|slack adjuster",
+          "aka": "air brakes|hydraulic brakes|brake chambers|slack adjusters|ABS|parking brake",
           "does": "stop a heavy vehicle",
           "fails": [
             "air pressure loss",
@@ -5961,7 +5961,7 @@
         {
           "id": "suspension-and-shocks",
           "n": "Suspension and shocks",
-          "aka": "shocks|springs|air bags|sway bar|track bar|ride height valve|track bar",
+          "aka": "shocks|springs|air bags|sway bar|track bar|ride height valve",
           "does": "carries the house without bouncing",
           "fails": [
             "worn shocks and porpoising",
@@ -6106,7 +6106,7 @@
         {
           "id": "fuel-system",
           "n": "Fuel system",
-          "aka": "fuel pump|lift pump|fuel filter|fuel gauge|fuel tank|fuel gauge",
+          "aka": "fuel pump|lift pump|fuel filter|fuel gauge|fuel tank",
           "does": "delivers fuel",
           "fails": [
             "lift pump failure",
