@@ -2799,3 +2799,21 @@ The CI monitor caught it within 3 minutes: run `38712706377` ("pages build and d
 2. **After resolving a shared generated file to upstream, re-run the generators and re-check the counts.** The rebase conflicted in `search-index.js`, `index.html` and `tools/index.html`; resolving the hub to upstream silently dropped the new ItemList entry and left the description saying "Fourteen free RV tools" over a fifteen-item list. The count gate caught it — which is the proof the gate works, and the reason to re-run generators rather than trusting a resolved file.
 
 **Reviews dispatched:** conv-c3913bd3 (fresh-context reviewer: quote fidelity sample, honesty framing, the six no-threshold states, the three agency-sourced states, page voice). The remaining 19 states (AK AR CT DE DC HI KY ME MD MA MS NH NJ NY OK PA RI VT WV) are being added in parallel by conv-8e8a0028; a second review of the final version will follow.
+
+---
+
+## BATCH E CLOSE-OUT — parts card fixes, anchors, taglines (conv-095eb8fd, 2026-10-15 ~02:45 PDT)
+
+**Landed** (`69304b24`):
+
+- **Gravity fill / city inlet -> guide null.** The pump guide is about the pump and the city fill bypasses it; no guide covers the inlet, so the card joins the gap queue. The regulator got the same treatment in `a35d1008`.
+- **Heat-pump card** now gives each maker's cutoff (Coleman-Mach shuts down near freezing; Dometic locks out at 30 F and resumes at 35 F), with four quotes verified against their own documents today: Coleman FAQ (45 F), 1976-299 (~40 F), 1976-529 (near freezing), Dometic CCC2 (30/35 F). The Dometic quote carries a Dometic-hosted URL now -- `media.dometic.com` serves the CCC2 PDF; `documents.dometic.com` 403s to machine fetches.
+- **Card anchors.** Every card carries its own id: `/parts/#part-hitch-coupler`. The `part-` prefix is required by html-validate's valid-id rule (two part ids begin with a digit); four ids kept their commas, so the slug is normalised to [a-z0-9-]. Builder asserts uniqueness + no system-key collision; `test-parts.py` checks the rendered page. **The "parts links blocked by the no-anchor limitation" notes (manuals 8th rotation, guides 9th) can proceed.**
+- **Thin taglines**: 11 polished; the 12th (TV and entertainment) was reworked in the completeness pass.
+- **Pin weight**: kingpin card -> `rv-pin-weight-and-payload` (its core section is fifth-wheel pin weight; the replaced `rv-towing-trailer` link never mentions a fifth wheel).
+- **Anode-rod card** -> its dedicated guide, `rv-water-heater-anode-rod` (4th flag on the unlinked-guides list); `rv-water-heater-not-heating` stays on three other cards.
+- **Verified already landed** (no change needed): black tank -> `rv-black-tank` (`65aa2c51`); chassis battery -> null, ladder naming, Tropi-Cool (`a063eebc`).
+
+**Still open in the parts domain (recorded, not half-done):** `rv-black-tank-routine`, `rv-two-appliances-stopped` and `rv-fridge-leveling` each want a SECOND guide on a card that already links a fitting one -- that needs the renderer to carry two guides, or a ruling. Candidates `rv-roof-snow-load` and `rv-battery-winter-storage` remain unlinked.
+
+**Instruments:** `test-parts.py` all checks passed (210 cards, 210 ids); `ci.sh` green in a Cloud sandbox with `CHROME_BIN="google-chrome --no-sandbox"`. Two gate catches worth recording: the first sandbox run without `--no-sandbox` stalled at the axe step (the worklist's own recipe is right), and the first build without the anchor prefix failed html-validate's valid-id rule on the two digit-leading ids.
