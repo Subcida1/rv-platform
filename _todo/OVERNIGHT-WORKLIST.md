@@ -2463,3 +2463,17 @@ Six items, verified against the page sources at tip `bee917b`:
 - **Verified clean (Neo's list):** tools 14+4 cards; manuals sums; no dashes/FFFD; canonical name; voice PASS.
 
 Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok.
+
+## Neo manuals 12th rotation (2026-10-14, verified from the Cloud lane)
+
+Seven items, verified against the page sources at tip `652bbc8`:
+
+- **94/44 resolved: CONFIRMED** (94 unique component makers across the 110 rows; 44 = RV brands). The cf95bba wording fix stands: "94 equipment makers" vs "44 RV brands".
+- **/manuals hub silo: CONFIRMED** (main = 11 sub-page cards, zero links to guides/tools/directory/parts). The shared where-to-go-next strip should cover it (ab70955).
+- **numberOfItems=8: CONFIRMED** (mainEntity ItemList = the 8 systems; the hub links 11 sub-pages) -- the convention item (cf95bba).
+- **start-here exports to rigcalc: CONFIRMED.** It links https://rigcalc.com/tools/state-trailer-brake-laws/ for state brake laws; no OriginRV state-brake tool exists (trailer-brakes-required is linked 3x). Queue: build a "state trailer brake requirements" tool.
+- **start-here hygiene: CONFIRMED.** BreadcrumbList only (no Article) on a 222KB page; in-body: guides 51, tools 5, manuals 133, parts/directory/about/contact 0. Queue: Article JSON-LD + the missing section links.
+- **/manuals/recalls: healthy** (12 rows = numberOfItems 12; the recall tool linked in-body). The no-date convention is the queued fd11d40 item.
+- **/manuals/brands: clean** (44 brands + 654 models; the earlier partial counts withdrawn).
+
+Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok.
