@@ -3114,22 +3114,6 @@ Mississippi is the one jurisdiction deliberately out: the Legislature publishes 
 **AND THE TEST LESSON, which CI caught twice in one session:** the tool's own check hardcoded Alaska as the unread state (it failed the moment Alaska was added, on a tool that was working correctly), then asserted the page contained the phrase "not been read" (it failed when the paragraph was rewritten to name Mississippi). The check now reads the missing jurisdictions out of the record and asserts the page NAMES them, negative-tested by deleting the paragraph. **A check that asserts on wording goes stale the moment the wording improves; assert on behaviour.**
 ---
 
-## conv-095eb8fd — parts batch E close-out (2026-10-15 ~03:00 PDT)
-
-**Batch E: all five items closed.**
-
-1. **Heat-pump card** — rewritten brand-specific. `does` now reads "heats as well as cools, down to a cutoff each maker sets: Coleman-Mach shuts down near freezing, and Dometic locks out at 30 F and resumes at 35 F". Fails list unchanged. Evidence carries four maker quotes: Coleman FAQ (45 F), Coleman 1976-299 (~40 F), Coleman 1976-529 ("near freezing"), Dometic CCC2 (30 F / 35 F). Coleman's own two documents disagree with each other, so the copy states the cutoff per maker rather than one number.
-2. **Gravity-fill card** — `guide: null`. The pump guide's city-water mention is in pump-prime context only; no page on the site covers gravity filling. Unlinked, same precedent as the regulator and window cards. The gap is noted in the card's own text, not hidden.
-3. **Card ids** — every part card now carries a stable id and an in-page permalink anchor (`#part-<slug>`), generated in `build-parts-pages.py`. 210 cards. This is what makes a card linkable from the worklist, a support reply, or a search result.
-4. **Thin taglines** — 11 rewritten. The list was: Bed and mattress, Propane refill and exchange, Propane shutoff valve, Fuel system, Engine and drivetrain, Body panels and siding, Decals and graphics, Bike and kayak carriers, Washer, Cooktop and oven, Black tank. Each now says what the part does for the owner rather than naming its category. (TV and entertainment was already done; Dryer is new copy from the washer/dryer split.)
-5. **Pin-weight candidate** — `rv-pin-weight-and-payload` linked from the kingpin card.
-
-**Gates:** `scripts/ci.sh` green on the final tree; `test-parts.py` green; archive check clean; 210 parts live.
-
-**Fleet note:** this session's push landed in a quiet window after the 14-commit contention described above — the contention is real and the mitigation (serialize or reduce push frequency) is worth adopting.
-
----
-
 ## BATCH F CLOSE-OUT — the /parts card links the anchors unblocked (conv-095eb8fd, 2026-10-15 ~03:15 PDT)
 
 **Landed** (`6d094e50`): 22 pages, 57 card links, from the three queues that were waiting on card anchors.
