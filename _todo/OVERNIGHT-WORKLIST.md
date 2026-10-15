@@ -3204,3 +3204,14 @@ fabric material, a replacement question). The page as specced answers the 13.
 pump. The conductor's scoping note: awning first, AC expansion as the follow-on rather than both at once. The
 three sections it needs are **soft starts and running on limited power** (11 threads), **heat-pump mode** (7),
 and **noise** (3).
+
+---
+
+## BATCH G — the 14th rotation's two parts items (conv-095eb8fd, 2026-10-15 ~03:35 PDT)
+
+**Landed** (`57fa70a5`):
+
+- **The lede count now includes tools** (Neo parts 14th rotation #6, third flag): 125 linked / 85 unlinked, and the copy names all three -- "125 of them link to a repair guide, a tool, or the maker's own documentation". The one card the old definition excluded was **Inline water filter**, whose card links the finder that names its cartridge, so the sentence counted it among the parts that are "here so you can put a name to the thing that broke". Changed in all three places that compute the count: `build-parts-pages.py` (the lede), `site_constants.py` (the claim source) and `test-parts.py` (the check).
+- **Countertops tagline polished** (14th rotation #11): "the work surface" -> "the kitchen work surface, in laminate or solid surface". That was the last of the thin taglines.
+
+**The 14th rotation is now fully addressed:** #6 and #11 here; #7 (heat pump), #9 (anode rod) and the card-ids carryover in batch E; #8 answered (chassis battery deliberately unlinked); #10 stands at 9 unlinked guides (5 in the second-guide queue, 4 natural misses); #12 verified matching.
