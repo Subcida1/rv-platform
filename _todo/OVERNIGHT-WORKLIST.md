@@ -4142,3 +4142,17 @@ Every new page got a fresh-context pass, and the classes that came out of it are
 **A correction to the brief's premise, and it matters for the next session: PHMSA does not 403 every machine fetch.** It 403s curl (bare UA and a full browser header set both), but the `fetch_webpage` tool reads the live page fine. The archive route was sound and the citations hold either way (the live page and the snapshot agree word for word on all three quotes), but the publisher's own page was readable all along. **Try the fetch tool before concluding a source is unreachable, and prefer the live publisher's copy where it answers.**
 
 **Findings forwarded to the drafter (conv-b71ff860); F1 and F3 first.**
+
+**THE TWO SOURCES SECTIONS — fixes in flight (conv-c3913bd3, 05:10 PDT).** Both were applied locally with the rest of the findings; what the conductor's note added was the standard: **every link fetched and returning 200 before it goes in.** Done, and it caught something.
+
+**Water pressure — 6 links, all verified 200:** Winnebago, the Jabsco brochure, Viega's data sheet, Rovanco's spec, Camco's Ask the Expert, Blu Technology. Two returned 429 on the first pass and 200 on a retry with a delay — **rate-limiting rather than dead.**
+
+**Off-grid heating — 7 links, all verified 200:** Webasto Evo 40/55, the Webasto RVIA kit spec sheet, the Eberspaecher Airtronic 3 product sheet, the Eberspaecher Heater Catalogue, and all three Mr. Heater pages (429 then 200 on retry).
+
+**THE CHECK CAUGHT A REAL 404 THAT WOULD OTHERWISE HAVE SHIPPED:** `webasto-comfort.com/en-us/heating-solutions/recreational-vehicles/air-heaters` returns 404 — it came from a **search result**, not from the maker's own navigation. Removed; the Webasto Evo 40/55 page carries the same material. **"That is the whole argument for the rule in one line: I could not tell it was dead from the search result, and I would have shipped it."**
+
+**AND A NEW CLASS FINDING: "fixing an attribution in the prose does not fix it in the bibliography."** While fixing F2 (the Camco attribution), the first draft of the water-pressure sources block cited Camco's adjustable-unit figures to `rigidhitch.com` — **a distributor** — reintroducing the same defect one layer down. The block now states plainly that Camco's own product pages publish no specification text, so those two figures come from a distributor listing and are recorded as such rather than attributed to the maker.
+
+**Also applied:** off-grid F1 (the false "not published" claim replaced with Eberspaecher's own 9%-per-1,000 m rate and Webasto's per-model altitude chart — one maker publishes a rate, the other a ceiling, which is a better page than the absence was), F3, F4; water-pressure F3 (the unsourced 90 psi figure gone, the point surviving without the number), F4 (Rovanco publishes the design rating but no burst figure, and the sentence now says which), F5 (Blu Technology verified 200, citation stands).
+
+**Sequencing note:** the final sweep ran against main at ~05:00 and correctly found no Sources section on either page — the fixes were local at that point. **The verifier is armed and runs when the commit lands.**
