@@ -662,6 +662,87 @@
         "roadside_quote": null,
         "coverage_quotes": []
       }
+    },
+    {
+      "n": "Mel's Mobile RV Repair",
+      "c": "Wells, ME",
+      "p": "877-635-7787",
+      "u": "https://melsmobilervrepair.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Mel's Mobile RV Repair is an on-site RV repair business in the Wells, Maine area that performs work at the customer's home, campsite or storage unit. Services cover maintenance, repairs and upgrades including awnings, water heaters, furnaces, refrigerators and air conditioners. Appointments are by request and the page states it is heavily booked with delayed response times.",
+      "g": [
+        "mobile tech",
+        "RV repair",
+        "appliance repair"
+      ],
+      "base": "Wells",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "phone_quote": "877-635-7787",
+        "type_quote": "Mel's Mobile RV Repair Specializes in onsite RV Repair. Mel will Service your RV at your Home, Campsite, and Even a storage unit.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "We are Located In the Wells Maine area and Service Surrounding towns."
+        ]
+      }
+    },
+    {
+      "n": "J&M Camper & Marine",
+      "c": "Augusta, ME",
+      "p": "207-623-4047",
+      "u": "https://www.jmcamper.com/Service/Service-Department",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "J&M Camper & Marine is an RV, boat and personal watercraft dealership in Augusta, Maine, described as a family business since 1967. Its service department takes recreational vehicle repair and service work through a service request form and by phone, and it also has a parts department. Repair work is done at the shop.",
+      "g": [
+        "service center",
+        "dealer service",
+        "RV repair"
+      ],
+      "base": "Augusta",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "phone_quote": "Phone 207-623-4047",
+        "type_quote": "Is your recreational vehicle in need of repair or service? You've come to the right place! At J&M Camper & Marine, making sure your RV, PWC, or Boat is running in great shape is our priority.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": []
+      }
+    },
+    {
+      "n": "Harvey RV & Marine",
+      "c": "Bangor, ME",
+      "p": "207-990-5081",
+      "u": "https://www.harveyrvandmarine.com/service-rv/",
+      "t": "both",
+      "e": false,
+      "r": true,
+      "d": "Harvey RV & Marine is an RV and boat dealership on Broadway in Bangor, Maine, serving Maine families since 1999. Its RV service department runs diagnostics and repairs six days a week with technicians certified through the RV Technical Institute. A mobile service team works from the Glenburn service center to handle on-site and roadside needs, with published road service rates and a stated 75 mile maximum radius.",
+      "g": [
+        "service center",
+        "dealer service",
+        "mobile tech",
+        "RV repair"
+      ],
+      "base": "Bangor",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "phone_quote": "207-990-5081",
+        "type_quote": "When your adventure hits a bump, Harvey RV & Marine brings certified expertise right to your location.",
+        "emergency_quote": null,
+        "roadside_quote": "Our mobile service team can handle roadside needs from our Glenburn service center, providing on-site diagnostics, repairs, and transport options with clear, upfront pricing.",
+        "coverage_quotes": []
+      }
     }
   ]
 }
