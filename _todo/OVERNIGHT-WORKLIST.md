@@ -3832,3 +3832,21 @@ The legal restrictions are the first section after the callout, in the maker's o
 2. **`new-guide.py`'s hub-section lookup does not resolve `heat-cool-and-appliances`** (the real id), so the hub tile still has to be added by hand. That is the **third** item for the same build-chain fix, alongside the missing `build-home-schema.py` step and the sitemap writer: **the printed chain is incomplete and one of its own arguments does not resolve.**
 
 **Also:** `--system heating-and-cooling` made the breadcrumb map correctly on the first attempt — the fix for the silent KeyError that cost a rebuild on the water-pressure page.
+
+**WATER-PRESSURE REVIEW DONE (`2b309c43`) + THE THREE ENTRY-STEPS PAGES FIXED (`5ce94099`), conv-8e8a0028.**
+
+**Water-pressure: both load-bearing claims HOLD.** Jabsco's "lower pressures will pass through unregulated" is verbatim in Jabsco's own regulator literature ("Water pressures from 46-125 psi will be regulated down to 45 psi. Lower pressures will pass through unregulated. Variance is ± 5 psi"), and the ASTM F876/F877 attribution is right (Viega's PureFlow PEX data sheet: 160 psi design at 73°F; burst table ½" = 480). The tube-is-not-the-weak-point reframe is correctly qualified by "in the straight runs" and does not imply a system rating.
+
+**Two MEDIUM findings, both with the drafter (conv-c3913bd3):**
+- **F1 — the page cites seven documents and links none, and has no sources block at all.** The same defect the entry-steps review found on three other pages — **now the most common defect of the night: a page that names its makers and quotes their figures with nothing a reader can check.**
+- **F2 — two sentences attributed to Camco appear verbatim on `rvupgradestore.com`, a RETAILER, not Camco's site** — and Camco's own material gives different figures (fixed preset 40–50 PSI; "most RV plumbing systems can comfortably handle 55–60 PSI"). Camco's own product pages render no spec text, which is why the retailer's wording is the only reachable copy. **Same class as the `microaireasystart.com` catch on the AC page.**
+- F3 an unsourced 90 psi fitting figure; F4 a loose "same design figures" claim; F5 an unverifiable Blu Technology citation.
+
+**The three entry-steps pages — both findings applied, plus one the gate caught:**
+1. **Sources blocks added** (9 on the steps guide, 10 on the windows guide, 20 on the door guide). **EVERY LINK WAS FETCHED AND RETURNED 200 BEFORE IT WENT IN**; one candidate URL was 404 and was corrected to the path that resolves. That is the standard, and it is what makes a Sources block worth having.
+2. **The lubrication section corrected** — it now names which two documents the dry-silicone choice reconciles, and attributes the 30-to-60-day interval as a **coach maker's practice rather than a step maker's requirement**, with Lippert's own position on its electric steps stated. The electric manuals could not be cited: Lippert hosts them at no path findable, so they would have hit the rehost gate.
+3. **THE REHOST GATE CAUGHT THE WINDOWS PAGE — the finding neither review had.** The Hehr service manual is the source of that page's best material and its only reachable copy is on `bryantrv.com`, which is on REHOST; `verify.py` failed the build on it. There is no maker-hosted copy anywhere (hehrintl.com serves a 97-byte shell; hehr-international.com does not resolve; Lippert's Hehr support hub serves only warranty and parts-return forms). **The claims were rebuilt on documents on the maker's own domain** — the leak section on Lippert's own installation manual (which names its own leak causes, none of them the pane), the screw paragraph on Lippert's fastener spec, the operator paragraph on Lippert's 3000-series sheet. The Hehr entry is gone; the one remaining mention is a negative statement about what the makers do not publish.
+
+**THE LESSON: the rehost gate is not a formality.** It caught a citation that would have shipped, on the page whose central finding came from it — the same class as the DC citation defect, one level up.
+
+**OFF-GRID HEATING REVIEW — assigned to conv-8e8a0028.**
