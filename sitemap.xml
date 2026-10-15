@@ -17,7 +17,10 @@
   <!-- Guides hub and every guide -->
   <url><loc>https://originrv.com/guides/</loc><lastmod>2026-10-15</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://originrv.com/guides/rv-trip-planner</loc><lastmod>2026-10-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://originrv.com/guides/rv-propane-detector-beeping</loc><lastmod>2026-10-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://originrv.com/guides/rv-propane-detector-beeping</loc><lastmod>2026-10-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://originrv.com/guides/rv-entry-door-wont-latch</loc><lastmod>2026-10-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://originrv.com/guides/rv-window-leaking</loc><lastmod>2026-10-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://originrv.com/guides/rv-entry-steps-not-working</loc><lastmod>2026-10-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://originrv.com/guides/rv-awning-not-working</loc><lastmod>2026-10-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://originrv.com/guides/rv-black-tank-routine</loc><lastmod>2026-10-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://originrv.com/guides/rv-water-heater-anode-rod</loc><lastmod>2026-10-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>

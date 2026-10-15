@@ -403,9 +403,9 @@
     "claims": "ca780a6dbc99c4d8"
   },
   "guides/index.html": {
-    "hash": "bafaf4c236d15e76",
+    "hash": "44744b2c923de522",
     "status": "verified",
-    "verified_by": "new guide 2026-10-15: the propane detector guide's hub tile added under Heating, cooling, and appliances. One tile, no other change to the page.",
+    "verified_by": "the entry-steps, window and door guides' hub tiles under Body, slides and jacks, alongside the propane detector guide's tile another session added. Four tiles, no other change to the page.",
     "verified_at": "2026-10-15",
     "sources": [],
     "spec": null,
@@ -531,6 +531,20 @@
     "spec": null,
     "spec_waived": true,
     "claims": []
+  },
+  "guides/rv-entry-door-wont-latch.html": {
+    "hash": "4c1ff091495f6f43",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
+  },
+  "guides/rv-entry-steps-not-working.html": {
+    "hash": "f54e9d9abaa170fe",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
   },
   "guides/rv-fridge-leveling.html": {
     "hash": "baaa56d571624a92",
@@ -848,6 +862,13 @@
     "spec": null,
     "spec_waived": true,
     "claims": "34c240b69b94c574"
+  },
+  "guides/rv-window-leaking.html": {
+    "hash": "5bbf8df8a11a7790",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
   },
   "guides/tires-winter.html": {
     "hash": "eb151bb2abd52120",
