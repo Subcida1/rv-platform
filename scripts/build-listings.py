@@ -65,6 +65,9 @@ START, END = "<!-- LISTINGS:REGIONS-START -->", "<!-- LISTINGS:REGIONS-END -->"
 HUB_LIST = "SCHEMA:STATES"
 TAGS_START, TAGS_END = "<!-- LISTINGS:SCRIPTS-START -->", "<!-- LISTINGS:SCRIPTS-END -->"
 SCHEMA_START, SCHEMA_END = "<!-- SCHEMA:PROVIDERS-START -->", "<!-- SCHEMA:PROVIDERS-END -->"
+# The lede. Hand-copied onto all 50 pages until 2026-10-15, which is how it kept claiming
+# roadside help in states that have none; see lede_text() for the whole story.
+LEDE_START, LEDE_END = "<!-- LEDE:START -->", "<!-- LEDE:END -->"
 
 # The claim card. It was the same 38 lines hand-copied into all twelve state pages and
 # absent from the hub, which is why the footer link "/directory/index.html#claim" pointed
@@ -210,6 +213,50 @@ def counts(rows):
     }
 
 
+def _join(parts, oxford=False):
+    """'a', 'a and b', 'a, b and c' -- with an optional Oxford comma.
+
+    The Oxford flag exists to keep the strings that were already on the site byte-identical:
+    the schema description never carried one and the `about` line always did.
+    """
+    if len(parts) == 1:
+        return parts[0]
+    if len(parts) == 2:
+        return "%s and %s" % (parts[0], parts[1])
+    return "%s%s and %s" % (", ".join(parts[:-1]), "," if oxford else "", parts[-1])
+
+
+def lede_text(data):
+    """The state page's opening paragraph, with its closing claim built from the counts.
+
+    THE FIRST THREE SENTENCES are the same on every page: they explain the two kinds of
+    repair and why the difference matters. THE CLOSING SENTENCE is a claim about what is
+    in THIS state, and it was hand-copied onto all 50 pages, so it kept claiming things
+    eleven states do not have: New Mexico, Hawaii and Delaware carried "along with
+    emergency roadside help for breakdowns on the highway" with zero roadside-flagged
+    listings, and Hawaii -- whose two listings are both mobile technicians -- opened the
+    claim with "Both are here" while having no service centers at all.
+
+    So the claim is generated from the same counts the stats strip shows. A state with no
+    roadside listings does not get the roadside clause; a state with only one kind of
+    business does not get "both". Generated rather than hand-written for the reason the
+    rest of this file exists: the claim is a fact about the data, and the data keeps
+    changing (the thin-states pass added listings to ten states while this was written).
+    """
+    c = counts(data["listings"])
+    if c["mobile"] and c["center"]:
+        close = "Both are here"
+    elif c["mobile"]:
+        close = "Mobile technicians are here"
+    else:
+        close = "Service centers are here"
+    if c["road"]:
+        close += ", along with emergency roadside help for breakdowns on the highway"
+    return ("There are two kinds of RV repair. The difference is whether you can move your RV. "
+            "If you cannot, you need a mobile technician who comes to you. If you can drive it, "
+            "a service center has the bays and parts for bigger jobs. " + close + ".")
+
+
 def shard_text(data):
     rows = []
     for row in data["listings"]:
@@ -259,12 +306,23 @@ def schema_text(data, slug):
         if r.get("d"):
             biz["description"] = r["d"][:300]
         elements.append({"@type": "ListItem", "position": i, "item": biz})
-    about = ("Directory of RV repair in %s: mobile technicians who come to you, RV service "
-             "centers, and roadside providers." % state)
+    # The two description strings name what is IN this state, so they are built from the
+    # counts the same way the lede is: a state with no roadside listings must not tell a
+    # search engine it has roadside providers (New Mexico, Hawaii and Delaware did), and
+    # Hawaii has no service centers to name either.
+    c = counts(data["listings"])
+    desc_parts = ["mobile technicians"]
+    about_parts = ["mobile technicians who come to you"]
+    if c["center"]:
+        desc_parts.append("service centers")
+        about_parts.append("RV service centers")
+    if c["road"]:
+        desc_parts.append("roadside help")
+        about_parts.append("roadside providers")
+    about = ("Directory of RV repair in %s: %s." % (state, _join(about_parts, oxford=True)))
     page = {"@context": "https://schema.org", "@type": "CollectionPage",
             "name": "RV Repair in %s" % state,
-            "description": ("Find RV repair in %s: mobile technicians, service centers and "
-                            "roadside help." % state),
+            "description": "Find RV repair in %s: %s." % (state, _join(desc_parts)),
             "url": "%s/directory/%s" % (SITE, slug),
             "isPartOf": {"@type": "WebSite", "@id": SITE + "/#website",
                          "name": "OriginRV", "url": SITE + "/"},
@@ -427,6 +485,7 @@ def build(kind):
         out[(slug, "schema")] = schema_text(data, slug)
         out[(slug, "regions")] = regions_text(data, slug)
         out[(slug, "counts")] = counts(data["listings"])
+        out[(slug, "lede")] = lede_text(data)
         out[(slug, "script-tags")] = fix_script_tags(
             _tags_between((ROOT / "directory" / ("%s.html" % slug)).read_text(encoding="utf-8")),
             st, slug)
@@ -467,6 +526,8 @@ def build(kind):
         text = replace_between(text, SCHEMA_START, SCHEMA_END, out[(slug, "schema")], "schema")
         text = replace_between(text, START, END, out[(slug, "regions")], "regions")
         text = replace_between(text, CLAIM_START, CLAIM_END, CLAIM_CARD, "claim card")
+        text = replace_between(text, LEDE_START, LEDE_END,
+                               '    <p class="lede wide">%s</p>' % out[(slug, "lede")], "lede")
 
         c = out[(slug, "counts")]
         for elem, value in (("stat-total", c["total"]), ("stat-mobile", c["mobile"]),

@@ -107,7 +107,7 @@ window.RV_LISTINGS_TN = [
    "gatlinburg"
   ],  "region": null,  "spec": null,  "reg": "knoxville-east-tn"
  },
- {  "n": "Sunset Mobile RV Repair",  "c": "Johnson City, TN",  "p": "281-789-8901",  "u": "https://www.mobilervrepairservices.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Sunset Mobile RV Repair is a family-owned mobile RV repair business serving Johnson City, Kingsport, Bristol, and surrounding areas. It diagnoses, repairs, replaces, or modifies RV electrical, plumbing, air conditioning, furnace, water heater, refrigerator, awning, slide-out, roof, brakes, and bearing components. The company says it honors most RV extended warranties.",  "g": [
+ {  "n": "Sunset Mobile RV Repair",  "c": "Johnson City, TN",  "p": "423-430-9443",  "u": "https://www.mobilervrepairservices.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Sunset Mobile RV Repair is a family-owned mobile RV repair business serving Johnson City, Kingsport, Bristol, and surrounding areas. It diagnoses, repairs, replaces, or modifies RV electrical, plumbing, air conditioning, furnace, water heater, refrigerator, awning, slide-out, roof, brakes, and bearing components. The company says it honors most RV extended warranties.",  "g": [
    "mobile tech"
   ],  "base": null,  "areas": [
    "johnson city",

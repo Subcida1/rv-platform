@@ -117,6 +117,7 @@
       "evidence": {
         "checked": "https://aaarvtech.com/",
         "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "phone_quote": "Call us: (305) 354-6748",
         "mobile_quote": "AAA RV Tech | Mobile RV Repair Portland, OR | (305) 354-6748 Click To Skip To Main Content Call us: (305) 354-6748 Email us: hugo@aaarvtech."
       }
     },
@@ -218,6 +219,7 @@
       "evidence": {
         "checked": "https://baldbrosrv.com/",
         "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "phone_quote": "317-281-0577",
         "mobile_quote": "At Bald Bros RV Repair, we provide professional mobile RV repair and maintenance services, bringing expert service directly to your campsite, home, or storage location."
       }
     },
@@ -407,6 +409,7 @@
       "evidence": {
         "checked": "https://harrismobilervservice.com/",
         "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "phone_quote": "Urgent Care RV Repair & Solar (831) 588-3148",
         "mobile_quote": "I am available for on-site mobile RV repairs by appointment only ."
       }
     },
@@ -868,6 +871,7 @@
       "evidence": {
         "checked": "https://www.pagesmobilerv.com/",
         "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
+        "phone_quote": "Please call 208-989-8552",
         "mobile_quote": "Mobile RV Repair Service - Page&#039;s Mobile RV Service Skip to content Page&#8217;s Mobile RV Service Menu About us Community for sale or trade Recommended Parts and Supplies"
       }
     },
