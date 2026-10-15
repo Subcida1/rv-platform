@@ -3488,3 +3488,22 @@ Forcing them together would produce a title that promises nothing a reader types
 2. **`check-prose.py`'s `reader-benefit-clause` rule is missing `keeping`** — it lists `worth knowing|understanding|noting|saying|remembering`, which is why the gate reported clean on "worth keeping, because it saves a service call". **QUEUED: add `keeping` to the pattern.** The reviewer's read on `checking` (NOTED, not STRICT) stands — "worth checking" is ordinary instruction more often than not.
 
 **PROPANE TANK FAULTS — assigned to conv-b71ff860** (completes the propane area). Off-grid heating is the last candidate in the worklist.
+
+**ENTRY STEPS / DOORS / WINDOWS — CLOSED, THREE GUIDES (`7ec9e8cd`, conv-8e8a0028).**
+
+`rv-entry-steps-not-working`, `rv-window-leaking`, `rv-entry-door-wont-latch` — ci.sh green, all three verified live with correct H1s and their hub and homepage tiles in place.
+
+**The call was three pages, and the risk is recorded: four threads is not a demand measurement — if this is wrong it is wrong on volume, not on substance.** The scan grouped them because each had few threads; they are three systems with three maker sets, each answering a distinct search, and the site's model is one guide per fault class.
+
+**The research's best material:**
+- **STEPS** — Lippert's Kwikee procedure opens with the fork that saves the most time: if any step function fails, the fault is the control unit or the motor; if they all work, it is the door switch, the lockout switch or the vehicle wiring. **And a real disagreement between our own content and the maker:** the maintenance schedule asks for 30-to-60-day lubrication (from a coach manual) while **Lippert, which makes the step, says no lubrication is necessary and that a wet lubricant attracts dirt and can damage the hinge areas.** The page says both and names the dry silicone that satisfies them.
+- **WINDOWS** — Hehr states the glazing vinyl is cosmetic only and does not seal; installation leaks come from the bedding under the flange. **Negative finding worth as much: a blanket rule against silicone on an RV window is NOT supported by the window makers** — Lippert's own RV technical sheets specify silicone in three separate procedures.
+- **DOORS** — the latch makers publish numbers: the strike moves no more than 1/16" at a time, the door should push shut by hand without slamming, TriMark gives 25 lb as the maximum closing force, plus the deadbolt rule and Lippert's camber measurement (1/8" to 1/4", with reverse camber letting moisture into the sidewall).
+
+**What the makers do not publish is stated rather than padded over:** no maker maps a blown step fuse to a cause, no rule for telling a dropped door's hinge problem from a frame problem, no hinge wear limit, no repair for a fogged dual-pane window.
+
+**TWO PROCESS FINDINGS:**
+1. **`new-guide.py`'s printed build chain omits `build-home-schema.py`** — a guide built exactly to its own instructions leaves the homepage ItemList stale and ci.sh fails on the check. Recorded with the full chain and the order the two list-writers must run in.
+2. **"THE UNMERGED LIST IS NOT THE LIST OF FILES WITH MARKERS."** `git diff --name-only --diff-filter=U` listed four conflicted files; after resolving those four, **three more were still carrying conflict markers** (sitemap.xml, index.html, content-manifest.json) and only `verify.py` caught it ("not well-formed XML", "unterminated tag"). **Rule: after resolving a rebase's conflicts, grep the whole tree for `^<<<<<<<` before continuing.**
+
+**REVIEW QUEUE:** the propane detector page is the last unreviewed page (assigned to conv-8e8a0028). The three entry-steps guides are drafted and unreviewed; their review follows.
