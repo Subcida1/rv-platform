@@ -2059,10 +2059,19 @@ fetched to settle it.**
 
 **Brandt approved it, and it is live.** Every guide and tool now ends with:
 
-    Something wrong here, or something missing? Tell us. About OriginRV.
+    Something wrong here, or something missing? Tell us.
 
-One line, two links, after the Sources block. `scripts/new-guide.py` carries it too, so new guides get
-it without anyone remembering. The state and manual pages are data tables rather than prose and are
+One line, one link, after the Sources block. `scripts/new-guide.py` carries it too, so new guides get
+it without anyone remembering.
+
+**CORRECTION 2026-10-15 (batch B): the About link was removed ON PURPOSE, and this entry was stale.**
+The line landed with two links -- "Tell us. About OriginRV." -- in `7bf630d`. Then `9e5f403`, the
+2026-10-13 read-through, dropped the About link as part of its closing-line change. Current state is
+/contact only, on all 61 pages. The entry above described the pre-`9e5f403` wording and read as though
+the About link were still there. It is not, and it is not coming back: the closing line is a
+correction-and-contact affordance, and /about is reachable from the nav on every page. **Do not
+restore it.** (The trust pages stopped being orphans anyway -- every hub's Where-to-go-next strip and
+the homepage closing block now link /about and /contact in body.) The state and manual pages are data tables rather than prose and are
 deliberately left out -- that is what took the change from 122 pages to 61.
 
 **THE PART THAT TOOK THE TIME WAS THE GATE, and the lesson is worth keeping.** `claim_text()` in
@@ -2583,7 +2592,7 @@ Ty, 01:00: *"act as a conductor for the night and keep all of our work rolling �
 | `conv-b71ff860` | content batch — in-body links, finder blocks, small fixes | ASSIGNED |
 | `conv-8e8a0028` | weight calculator — finish the 100-case harness + remaining calculator items | **CLOSED** — harness on main (`0a0e8b5e`), calculator items on main (`1f5bf9fc`, `e2287b26`, `f103b6b7` by another session) |
 | `conv-ff6725d2` | directory data batch — all-50 phone audit + carryovers | ASSIGNED |
-| `conv-c3913bd3` | schema/hub batch + W29 entry update | ASSIGNED |
+| `conv-c3913bd3` | schema/hub batch + W29 entry update | **CLOSED** — on main (`531bb657`) |
 | `conv-cf6aa2a3` | W19 voice calibration | WAITING ON TY (page 6 presented) — DO NOT DISTURB |
 | `conv-19dd16d7` | conductor — roof-leak OWED review, monitoring, incidents, unblocking | ACTIVE |
 
@@ -2605,6 +2614,17 @@ Ty, 01:00: *"act as a conductor for the night and keep all of our work rolling �
 - Homepage JSON-LD (6th flag); about/contact in-body links (6th flag).
 - start-here hygiene: Article JSON-LD + the missing section links.
 - W29 worklist entry update (the About link was removed deliberately in 9e5f403 — update the entry to match, do not restore).
+
+**B. conv-c3913bd3 — schema/hub batch: CLOSED 2026-10-15 01:45 PDT, on main (`531bb657`).**
+
+- **Two of the six items were already done by other sessions, and one worklist claim was WRONG.** Verified against the live tree before touching anything: the homepage already carried its ItemList, start-here already carried Article JSON-LD, and /about + /contact already had homepage in-body links. But the "WebSite-without-@id nodes are gone from /directory and /manuals" note (hubs 12th rotation) was false — they were still there, just nested inside `isPartOf` rather than as a separate node, which is what that check had been looking for.
+- **The WebSite @id was 51 pages, not one.** The queue named /directory/; the same construct is emitted for all 50 state pages by the same two lines in `build-listings.py`, and `build-manuals-pages.py`'s `site_schema()` feeds four more. Fixed at both generators. Verified structurally: every directory page differs from HEAD by exactly the `@id` and nothing else.
+- **Hub schema mix resolved.** /tools and /parts now carry `mainEntity` ItemList like /directory and /manuals — 14 tool cards with URLs, 210 part entries pointing at the system section each lives in. **/guides keeps its top-level ItemList deliberately**: `verify.py` asserts that exact shape, and changing it would mean weakening a gate to satisfy a convention.
+- **/guides title rebalanced**, and the reason is the target query: it read "RV Guides: Towing, Troubleshooting, Winter, Tires" (49ch) and carried neither word of the hub's own target, which `_data/targets.json` gives as **"rv repair guides"**. Now "RV Repair Guides: Electrical, Water, Towing and Winter". Title, og:title and twitter:title together; re-verified through the content gate.
+- **W29 entry corrected** (see the correction note in that section). The About link is gone on purpose and stays gone.
+- **LEFT FOR A RULING — /directory region order.** AK/HI sit last while the intro says "west to east". But `_data/regions.json` records the AK/HI placement as a deliberate 2026-10-05 decision with a researched rationale (Ty: *"I feel like hawaii and alaska should be like their own region at the bottom or something"*, plus an RVParkway precedent). So this is a wording fix to the intro, not a reorder — and it is editorial, which makes it Ty's call. Not applied.
+- **NOT MINE, recorded for the content batch:** the /tools schema description still says "weight calculator live, more in development" with 14 tools shipped, and the meta description says "More free RV tools are building now". Both stale; both content, not schema.
+- Gate: `bash scripts/ci.sh` every check passed, and the COMMIT was archive-checked (`git archive HEAD` → `verify.py` → ALL CHECKS PASSED) before the push, not just the working tree.
 
 **C. conv-ff6725d2 — directory data batch:**
 - All-50 phone audit (fold in: Magic Wand CA 612, Page's OR 208, the AZ/WA/OR/CO code carryovers, Foothill RV CA (840) invalid NANP).
