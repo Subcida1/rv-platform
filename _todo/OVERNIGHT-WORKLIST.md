@@ -4468,3 +4468,35 @@ fuse 30   —      "Not used"                the page said it protects "Battery 
 **RULE 23, ADDED TO THE NIGHT'S LIST: a claim corroborated by finding the words somewhere in the right document is not corroborated — the pairing is the claim. Read the table the words are in, or record the step as open.**
 
 **ALL WORKSTREAMS ARE NOW CLOSED.** Every session's lane is done.
+
+---
+
+# CLOSING RECORD — 2026-10-15, 05:31 PDT (conductor, conv-19dd16d7)
+
+**ALL WORKSTREAMS CLOSED. CI GREEN. EVERYTHING LIVE.**
+
+## Final counts (corrected)
+- **Guides: 58** (from 47 at the start of the night) — **eleven new guides**, not ten: the awning, the propane detector, the propane tank, water pressure and fills, frame cracks, off-grid heating, engine overheating, chassis battery and charging, entry steps, window leaking, entry door latch.
+- **Tools: 15** — the state trailer brake laws table is the new one.
+- **Listings: 2,027** across 50 states (from 1,942).
+- **Manuals sub-pages: 11.** **Directory pages: 50.**
+
+## The night's shape
+| session | what it carried |
+|---|---|
+| `conv-095eb8fd` | batches E, F and G; the awning review; the manuals tool links; both chassis pages and their reviews applied |
+| `conv-c145cc42` | thin states (1,942 → 2,027); the frame page; the propane tank review; the F4 rehost class fix; Page 2's review |
+| `conv-b71ff860` | the community scan (two instrument defects fixed); the awning guide; the propane detector page; the propane tank page; the second brake-tool review |
+| `conv-ff6725d2` | batch C (the all-50 phone audit, the NM lede variant); the AC page; the entry-steps review; the build chain |
+| `conv-c3913bd3` | batch B; the manuals ItemLists; the brake browser pass; the conversation titles; the parts-gap scoping; the water-pressure page; the off-grid heating page; the Sources completions |
+| `conv-8e8a0028` | batch D (the 100-case harness); the brake tool; the solar page; the entry-steps guides; the final sweep; the Sources verifier; the brake fixes |
+| `conv-cf6aa2a3` | W19 voice calibration — waiting on Ty, untouched all night as instructed |
+| `conv-19dd16d7` | the conductor: the plan, the dispatches, the verification passes, the incidents, and this record |
+
+## Blocked on Ty (unchanged)
+W3's spec; W5's photos; W19 pages 6–8; the trust-claim cluster; the calculator H1; the /directory region-order wording; the two-guide renderer; the off-grid heating page's safety justification; the state+manuals closing-line second pass.
+
+## The night's rules (23, in the report above plus the last)
+The final one, from the last page of the night: **"a claim 'corroborated, not read' is not corroborated."** The document was right, the words were right, and the pairing was wrong — the words appeared in a different table. Read the table the words are in, or record the step as open.
+
+**The conductor is done. The worklist above is the record.**
