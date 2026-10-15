@@ -44,10 +44,35 @@ REDDIT_QUERIES = [
 ]
 
 FORUMS = [
-    "https://www.irv2.com/forums/",
-    "https://www.forestriverforums.com/forums/",
-    "https://www.airforums.com/forums/",
+    # THE BOARDS WHERE A FAULT GETS POSTED, not the board index. The index is a front page:
+    # 92 titles from iRV2 that included "Goooodmorning!!!", a member memorial and rally
+    # notices alongside two or three real faults. These ten are the boards a fault lands in,
+    # and the harvest walks three pages of each.
+    "https://www.irv2.com/forums/mh-general-discussions-problems.1625/",
+    "https://www.irv2.com/forums/rv-systems-appliances.1702/",
+    "https://www.irv2.com/forums/travel-trailer-discussion.1637/",
+    "https://www.irv2.com/forums/5th-wheel-discussion.1633/",
+    "https://www.irv2.com/forums/class-a-motorhome-discussions.1628/",
+    "https://www.irv2.com/forums/class-c-motorhome-discussions.1627/",
+    "https://www.irv2.com/forums/major-mechanicals.1761/",
+    "https://www.irv2.com/forums/trailer-towing-and-tow-vehicles-discussion.1634/",
+    "https://www.irv2.com/forums/truck-camper-discussion.1632/",
+    "https://www.irv2.com/forums/boondocking.1676/",
+    "https://www.forestriverforums.com/forums/f2/",
+    "https://www.airforums.com/forums/f44/",
 ]
+
+# REDDIT RELEVANCE IS POOR AND MUST BE FILTERED. Its relevance search returns unrelated
+# threads -- a query for "rv furnace not working" returned a Clash of Clans patch-notes
+# megathread and an AITAH post. A forum board does not have this problem because a board is
+# already RV-scoped, so the filter applies to reddit titles only. Without it the reddit half
+# inflates every area it touches by roughly a third.
+RV_MARKER = re.compile(
+    r"\brv\b|\brvs\b|camper|trailer|motorhome|motor home|fifth wheel|5th wheel|"
+    r"travel trailer|coach|airstream|winnebago|jayco|keystone|forest river|grand design|"
+    r"class [abc]\b|towable|toy hauler|converter|inverter|black tank|gray tank|"
+    r"shore power|house battery|propane|water heater|slide ?-?out|awning|hitch|"
+    r"tongue weight|payload|chassis|diesel pusher|generator|solar panel|li ?fe ?po4", re.I)
 
 # words that mark a title as a PROBLEM rather than a general topic
 TROUBLE = ("not working", "won't", "wont", "no ", "stopped", "broken", "leak", "smell", "stuck",
@@ -62,9 +87,17 @@ def get(url, timeout=25):
 
 
 def reddit(query, sleep=45):
-    """One Reddit RSS search. Returns (titles, note)."""
+    """One Reddit RSS search. Returns (titles, note).
+
+    `type=link` IS REQUIRED AND WAS MISSING. Without it reddit answers a search with COMMUNITY
+    results, not posts: the first live fetch for "rv furnace not working" returned r/lampwork,
+    r/LockdownSkepticism and r/ExposingCorporateMSBias. This function's caller counts thread
+    titles, so every count the reddit half produced before 2026-10-15 was counting subreddit
+    names. With the parameter the same query returns 25 real posts.
+    """
     url = ("https://www.reddit.com/search.rss?"
-           + urllib.parse.urlencode({"q": query, "sort": "relevance", "limit": 25}))
+           + urllib.parse.urlencode({"q": query, "sort": "relevance", "limit": 25,
+                                     "type": "link"}))
     try:
         xml = get(url)
     except urllib.error.HTTPError as e:
@@ -103,6 +136,7 @@ def main():
     ap.add_argument("--out", default="/tmp/problems.json")
     ap.add_argument("--sleep", type=float, default=45, help="seconds between Reddit requests")
     ap.add_argument("--forum-only", action="store_true")
+    ap.add_argument("--pages", type=int, default=3, help="pages per forum board")
     a = ap.parse_args()
 
     result = {"reddit": {}, "forums": {}, "subforum_names": collections.Counter()}
@@ -110,21 +144,36 @@ def main():
     if not a.forum_only:
         for i, q in enumerate(REDDIT_QUERIES):
             titles, note = reddit(q)
-            result["reddit"][q] = {"count": len(titles), "titles": titles[:15], "note": note}
+            # the RV filter, applied at harvest so every downstream count inherits it
+            kept = [t for t in titles if RV_MARKER.search(t)]
+            result["reddit"][q] = {"count": len(kept), "titles": kept[:15], "note": note,
+                                   "dropped_unrelated": len(titles) - len(kept)}
             flag = f"  [{note}]" if note else ""
-            print(f"  reddit {q[:34]:36s} {len(titles):3d} threads{flag}", flush=True)
+            print(f"  reddit {q[:34]:36s} {len(kept):3d} threads"
+                  f" ({len(titles) - len(kept)} unrelated dropped){flag}", flush=True)
             if note.startswith("rate limited"):
                 time.sleep(a.sleep * 2)
             elif i < len(REDDIT_QUERIES) - 1:
                 time.sleep(a.sleep)
 
     for u in FORUMS:
-        threads, subs, note = forum(u)
-        host = urllib.parse.urlparse(u).netloc
-        result["forums"][host] = {"threads": len(threads), "note": note, "sample": threads[:40]}
+        threads, subs, note = [], [], ""
+        for p in range(1, a.pages + 1):
+            url = u if p == 1 else "%spage-%d" % (u, p)
+            t, s, n = forum(url)
+            if n:
+                note = n if p == 1 else note
+                break
+            threads += t
+            subs += s
+            if p < a.pages:
+                time.sleep(1.5)
+        host = urllib.parse.urlparse(u).netloc + urllib.parse.urlparse(u).path
+        result["forums"][host] = {"threads": len(threads), "note": note,
+                                  "sample": threads[:40]}
         for s in subs:
             result["subforum_names"][s] += 1
-        print(f"  forum  {host:34s} {len(threads):3d} titles, {len(subs)} sub-forums"
+        print(f"  forum  {host[:52]:54s} {len(threads):3d} titles"
               + (f"  [{note}]" if note else ""), flush=True)
 
     # crude signal: which problem words appear across harvested titles
