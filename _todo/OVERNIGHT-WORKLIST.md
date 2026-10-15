@@ -3439,3 +3439,15 @@ conv-c3913bd3 checked **all 50 rows, not a sample**. Verdict: no fabricated quot
 **Also verified clean:** every number on the page traces to its named source (35 s / 27 s / 11 V / 28–35 s / 10 V / 15 minutes / 7/16" / 1/2" / 1/4" / 12–18 V), the three safety warnings are quoted correctly, and the diagnosis order is sound.
 
 **CHASSIS COOLING AND CHARGING — assigned to conv-095eb8fd** (the candidate with the highest measured demand of any unlinked group; the scan's forum half is chassis-dominated). Off-grid heating and propane tank faults remain in the worklist.
+
+**CHASSIS CANDIDATE — the split is real, two pages, spec pushed (`10403239`, conv-095eb8fd).**
+
+The four cards span two systems with two symptoms, two fault paths and two source sets:
+- **Page 1 — overheating** (cooling system; belts, hoses and filters). The reader's words: "it's overheating", "the gauge climbed on a grade". Sources: Ford F-53 (2017 + 2021 manuals), Spartan RV Chassis O&M, Horton and BorgWarner Kysor for the fan drive.
+- **Page 2 — the charging circuit** (alternator and starter; chassis battery and isolator). The reader's words: "it won't start", "the chassis battery keeps going dead". Sources: Intellitec (isolator controller), Winnebago (boost solenoid and BIM), Ford, Spartan.
+
+Forcing them together would produce a title that promises nothing a reader types. **Page 1 is the build** (no guide on the site mentions the engine cooling system at all; the charging side is partially touched by `rv-12-volt-problems` from the converter's side). Page 2 is specced in the same file with its sources already quoted, so it needs no second research pass — and it does not start before Page 1 is reviewed.
+
+**Every figure is a maker's own.** The two that make Page 1 diagnosable at owner level: Ford's loss rule — *"If you have to add more than 1.1 qt (1 L) of engine coolant per month, have your vehicle checked as soon as possible."* — and Spartan's belt test — *"apply a firm force to the belt (approximately 30 LB) halfway between the 2 pulleys. The belt should press in no more than 1/2"."* Two facts the page turns on: **Ford's fail-safe cooling disables cylinders on purpose** (power limited, A/C off — it looks like a fault and is not), and **the fan drive's fail-safe is zero-voltage = full on**, so an electrical fault makes the fan run rather than stop.
+
+**A sourcing catch worth keeping:** the 2021 Ford manual does **not** carry the gauge wording or the three chime stages — those are in the 2017 manual on the same domain. Each quote was verified against the year it came from; the spec's first draft had two of them on the wrong year and the check caught it. **Same citation-mismatch class as the propane review.**
