@@ -63,6 +63,12 @@ step "check-regions.py: the hub is grouped by region, completely and in order" \
 # hand-edit has quietly forked it from its source.
 step "build-parts-pages.py --check: the parts hub matches _data/parts.json" \
                                                python3 scripts/build-parts-pages.py --check
+# The homepage ItemList is the block only machines read: what this site actually offers, 14 tools
+# and 47 guides. Generated from tools/index.html and _data/guides.json rather than hand-kept,
+# because a hand-kept list of 61 entries is invisible to every reader and every gate, and goes
+# stale the first time a guide is added. This is what makes that impossible.
+step "build-home-schema.py --check: the homepage ItemList matches the tools and guides" \
+                                               python3 scripts/build-home-schema.py --check
 # The UX doctrine gate (_todo/UX.md). Fails only on the thing that is unambiguously wrong — a
 # link whose whole label is "Read more" and so carries no destination scent — and REPORTS the
 # page-level worklist (guides missing a related/next block, focus-ring selectors to eyeball).
