@@ -2882,6 +2882,16 @@ Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all
 
 4. **TWO GATES CHECK BRITISH SPELLING AND THEY DO NOT AGREE.** On the solar setup pass (conv-8e8a0028, 2026-10-15) new prose carried **eleven** British forms — equalisation, synchronisation, self-levelling, optimisers, centimetres, recognise — and `check-spelling.py` reported **"no British spellings in published copy"** while `verify.py` failed on `british spelling`. Same class, different word lists. **A session that runs only check-spelling will ship British spellings believing it checked.** Run verify.py, or run both.
 
+**INDEPENDENT REVIEW — the off-grid heating page (conv-8e8a0028, 2026-10-15).** Full findings in `_todo/REVIEW-off-grid-heating.md`. Reviewed at `420b1e58`.
+
+**F1 HIGH — THE PAGE'S ONE "NOT PUBLISHED" CLAIM IS FALSE.** The page says "How much output a heater loses between sea level and its ceiling is not published by Webasto or by Eberspaecher". **Eberspaecher publishes exactly that, on its own domain**: its heater catalogue's altitude-kit section reads "It begins reducing fuel feed at around 1,400 m, which immediately starts to reduce heating performance by around 9% for every 1,000 m in altitude." And Webasto publishes a per-model altitude power chart ("AT Evo 40 - 100% heating power up to 2,200 m; High Altitude version: Heating power max. 2,8 kW up to 5,000 m"). The page's honesty framing is built on a negative claim, and a negative claim is still a claim — this one is checkable in one search. This is the class the site has been caught by before.
+
+**F2 MEDIUM — no Sources section and no links to any cited document.** 53 of 55 guides carry a Sources heading; this is one of the two that do not (the other is the water-pressure page).
+
+Plus F3 LOW (the "1 gallon (3.8 l)" figure is neither of Webasto's own forms — 3.7 l in the field guide, no conversion in the catalogue — and the line is a family feature bullet rather than the 2000 STC's spec) and F4 LOW (the Evo 40's control range 0.18-0.43 and its boost 0.49 are merged into one band).
+
+**WHAT HOLDS, and most of it does:** the vented-versus-unvented distinction and Mr. Heater's "consumes oxygen from the room" sentence are verbatim; the Massachusetts/Canada/California restrictions are verbatim from the maker's own page and the garage-and-tent allowance is supported by its Use list; every MH9BX figure checks out (4,000/9,000 BTU, 225 sq ft, 0.044/0.099 gal/h, 3 and 6 hours, 7,000 ft); the Evo 40 figures check out; the Airtronic 3 family figures check out; and both altitude ceilings are right. No fabricated quotation and no mis-paired citation.
+
 **INDEPENDENT REVIEW — the water-pressure page (conv-8e8a0028, 2026-10-15).** Full findings in `_todo/REVIEW-water-pressure.md`. Reviewed at `2dc88b85`.
 
 **BOTH LOAD-BEARING CLAIMS HOLD.** Jabsco's "lower pressures will pass through unregulated" is verbatim in Jabsco's own regulator literature, and the ASTM F876/F877 attribution is right: Viega's PureFlow PEX data sheet gives 160 psi design at 73°F and a burst table headed "Minimum Burst Pressure (psi) per ASTM F876/F877" with ½" = 480. The tube-is-not-the-weak-point reframe is correctly qualified ("in the straight runs") and does not imply a system rating.
