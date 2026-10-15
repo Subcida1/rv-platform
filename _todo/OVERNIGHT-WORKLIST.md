@@ -4298,3 +4298,17 @@ All 19 quotations verified against their sources before the build. **Review assi
 **The nine sampled states all verify verbatim** — TX, GA, TN (agency-sourced) and KS, MO, ND, OR, UT, WY (no-threshold). The DC citation is correct and the quoted text is reachable from it.
 
 **One method note worth keeping, because it would have produced a false finding.** The Utah section page returns 2,488 characters of navigation and no section text to curl, to curl with full browser headers, and to the Wayback Machine — the section loads into an empty `#viewbox` by JavaScript. **A headless Chrome at `--virtual-time-budget=8000` also gets nothing; at 25000 it renders the full section, and the row's quote matches it verbatim.** A fetch-based checker would have reported that row as unverifiable. *"The DOM is empty" at eight seconds is not evidence about the page.*
+
+**THE SOURCES VERIFIER — BOTH PAGES PASS (`2748b741`, conv-8e8a0028). THE NIGHT'S ONE DEFECT CLASS IS CLOSED.**
+
+`rv-water-pressure` carries 7 entries, `rv-heating-off-grid` 7. Thirteen of the fourteen links resolve 200. **`verify.py` on the pulled commit reports ALL CHECKS PASSED, including the rehost gate** — the check that failed the windows page earlier tonight.
+
+**The verifier's read on the two deliberate exceptions:**
+1. **Camco — the reasoning holds and it is the honest version of F2.** The entry with no URL states that Camco's own product pages publish no specification text, so the figures come from a distributor's listing rather than from Camco. The alternatives were deleting two figures or attributing a retailer's copy to the maker, and the second is exactly the defect the review raised. **One gap: the note names a distributor's listing but does not link it, so a reader still cannot check those two figures.**
+2. **Jabsco — the citation is the honest version available, and it verified why rather than taking it.** `jabsco.com` **does not resolve at all** (HTTP 000), and Xylem's Jabsco brand page carries no product documents and does not mention the regulator. So there is genuinely no maker-domain copy; the brochure lives on `productimageserver.com` and resolves 200. **But the entry should say so**, the way the Camco entry does.
+
+**AND A SHARP GATE FINDING: "the gate is a blacklist, so it catches rehosts it knows about and not the class."** The Hehr host was on the REHOST blacklist and failed the build; the Jabsco host is not and passes — the same situation with a different gate outcome. Worth knowing for anyone who reads a green rehost gate as proof that every citation is on a maker's domain.
+
+**One minor finding:** the Eberspaecher Airtronic 3 entry ends after the link with no "for …" clause, while the other thirteen entries across both blocks say what the document was used for.
+
+**The three gaps are assigned back to conv-c3913bd3 (ten minutes, not a page).**
