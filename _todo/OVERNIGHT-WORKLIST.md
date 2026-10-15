@@ -3087,3 +3087,15 @@ batch E (`69304b24`) landed at 02:37 PDT, so several findings were fixed within 
 - **Verified clean (Neo's list):** title 45ch, meta 143ch, one H1, canonical, base href, zero em dashes, zero U+FFFD, voice PASS.
 
 Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok; `test-parts.py` all checks passed (210 cards, 210 ids). CI green.
+
+**BRIDGE REVIEW — three mechanical failures, each diagnosed, attempt 4 running (03:26 PDT).**
+
+The lane itself works; every failure has been in the harness/prompt contract. The cumulative diagnosis:
+
+1. **r1 — the duplicate ledger.** The lane flagged the first `read_text_file` on the staged page as a "session duplicate" (the path had been read in a prior attempt), the thread never produced a response, and the capture ceiling released the flight. **Fix: fresh chat + fresh staged paths.**
+2. **r2 — wrong tool.** With fresh paths the job was consumed, but the lane called `read_multiple_files` with one combined `paths` string — invalid MCP arguments — repeated it 4× (dropped as duplicates), never fell back to `read_text_file`, and emitted no answer. **Fix: make the prompt protocol-explicit ("call read_text_file once per file, never read_multiple_files").**
+3. **r3 — no reply path in the prompt.** The protocol-explicit prompt worked: the lane called `read_text_file` correctly and **answered in the chat** (state `sent → settled`). But **bridge userscript v0.7.43 determines its capture path ONLY by regexing an `outbox/REPLY-*.md` path out of the prompt text**; without one, `captureReplyIfMissing()` bails with "no reply path in the prompt" and even the ceiling release writes nothing. 45 attempts, answer uncaptured. **Fix: the prompt must name the reply path** ("Write your findings to outbox/REPLY-<job>.md — the harness will collect the reply from the chat and write that file itself").
+
+**The general rule for any future bridge job: the prompt must contain (a) the `LANE:` routing header, (b) an explicit `outbox/REPLY-<job>.md` path, and (c) if the job needs file reads, an explicit `read_text_file` one-call-per-file instruction. A prompt missing any of the three is structurally uncapturable or unroutable, and the failure looks like a model failure when it is not.**
+
+Secondary observation from r3: only `page.html` was ever injected — all four `read_text_file` calls for `record.json` were dropped as duplicates, so the lane reviewed the page without the record. Fresh paths per attempt are what fix that.
