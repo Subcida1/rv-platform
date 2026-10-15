@@ -613,10 +613,10 @@
     "claims": "b42c5240ff3f3533"
   },
   "guides/rv-maintenance-schedule.html": {
-    "hash": "5eb1bdb535e88383",
+    "hash": "d5f70c646272dd92",
     "status": "verified",
-    "verified_by": "queued Neo guides-12th silo finding applied 2026-10-15: these eighteen guides linked nothing outside /guides/ -- no tool, no part, no manual, no directory. Each now names one topic-matched target in its Related guides block (a tool where the guide is about arithmetic, the parts page where it is about a part, the maker's manual section where it is about documents). No fact changed; no existing link removed.",
-    "verified_at": "2026-10-14",
+    "verified_by": "queued conductor batch A applied 2026-10-15: added the topic-matched tool links the silo findings named -- maintenance-schedule gains the water filter and anode rod finders (the two intervals that replace a part), trip-planner gains the fuel cost calculator, weight-calculator's next block gains the towing capacity guide, battery-runtime's block gains the battery not charging guide, and trailer-brakes scope-labels its threshold table as three worked states rather than a full fifty. No fact changed; no existing link removed.",
+    "verified_at": "2026-10-15",
     "sources": [],
     "spec": null,
     "spec_waived": true,
@@ -783,10 +783,10 @@
     "claims": "c0dc7a196a84dde6"
   },
   "guides/rv-trip-planner.html": {
-    "hash": "6c76a42e4f165e47",
+    "hash": "5144a00bfc63a83c",
     "status": "verified",
-    "verified_by": "queued Neo guides-12th silo finding applied 2026-10-15: these eighteen guides linked nothing outside /guides/ -- no tool, no part, no manual, no directory. Each now names one topic-matched target in its Related guides block (a tool where the guide is about arithmetic, the parts page where it is about a part, the maker's manual section where it is about documents). No fact changed; no existing link removed.",
-    "verified_at": "2026-10-14",
+    "verified_by": "queued conductor batch A applied 2026-10-15: added the topic-matched tool links the silo findings named -- maintenance-schedule gains the water filter and anode rod finders (the two intervals that replace a part), trip-planner gains the fuel cost calculator, weight-calculator's next block gains the towing capacity guide, battery-runtime's block gains the battery not charging guide, and trailer-brakes scope-labels its threshold table as three worked states rather than a full fifty. No fact changed; no existing link removed.",
+    "verified_at": "2026-10-15",
     "sources": [],
     "spec": null,
     "spec_waived": true,
@@ -843,10 +843,10 @@
     "claims": "afdbfd340b1ab1f0"
   },
   "guides/trailer-brakes-required.html": {
-    "hash": "9cba985239e4223e",
+    "hash": "c5d6255976006f9c",
     "status": "verified",
-    "verified_by": "the reader-benefit sweep, step 1 of _todo/VOICE-RULESET.md: the clause about the reader (why the fact matters, what it costs them) cut or rebuilt as the content, per Ty 2026-10-13 \"Say the thing... just spit out the content\". No fact changed; the framing did.",
-    "verified_at": "2026-10-14",
+    "verified_by": "queued conductor batch A applied 2026-10-15: added the topic-matched tool links the silo findings named -- maintenance-schedule gains the water filter and anode rod finders (the two intervals that replace a part), trip-planner gains the fuel cost calculator, weight-calculator's next block gains the towing capacity guide, battery-runtime's block gains the battery not charging guide, and trailer-brakes scope-labels its threshold table as three worked states rather than a full fifty. No fact changed; no existing link removed.",
+    "verified_at": "2026-10-15",
     "sources": [],
     "spec": "_specs/trailer-brakes-required.md",
     "spec_waived": false,
@@ -980,11 +980,14 @@
     "sources": []
   },
   "tools/battery-runtime.html": {
-    "hash": "e202b9a70591080d",
-    "status": "unverified",
-    "verified_by": null,
-    "verified_at": null,
-    "sources": []
+    "hash": "021ea0b1b94ac7fb",
+    "status": "verified",
+    "verified_by": "queued conductor batch A applied 2026-10-15: added the topic-matched tool links the silo findings named -- maintenance-schedule gains the water filter and anode rod finders (the two intervals that replace a part), trip-planner gains the fuel cost calculator, weight-calculator's next block gains the towing capacity guide, battery-runtime's block gains the battery not charging guide, and trailer-brakes scope-labels its threshold table as three worked states rather than a full fifty. No fact changed; no existing link removed.",
+    "verified_at": "2026-10-15",
+    "sources": [],
+    "spec": null,
+    "spec_waived": true,
+    "claims": []
   },
   "tools/fuel-cost.html": {
     "hash": "397e9250d5ea7e76",
@@ -1108,9 +1111,9 @@
     "sources": []
   },
   "tools/weight-calculator.html": {
-    "hash": "558c45a43fa6592b",
+    "hash": "677b2f049f860d10",
     "status": "verified",
-    "verified_by": "page 5 read follow-up: the paragraph Ty flagged ('a little apragraph in the middle of the calculator') moves out of the cargo panel to above the calculator, and the page's links gain the site's content-link treatment (the link-visibility sweep, see scripts/check-link-visibility.mjs)",
+    "verified_by": "queued conductor batch A applied 2026-10-15: added the topic-matched tool links the silo findings named -- maintenance-schedule gains the water filter and anode rod finders (the two intervals that replace a part), trip-planner gains the fuel cost calculator, weight-calculator's next block gains the towing capacity guide, battery-runtime's block gains the battery not charging guide, and trailer-brakes scope-labels its threshold table as three worked states rather than a full fifty. No fact changed; no existing link removed.",
     "verified_at": "2026-10-15",
     "sources": [],
     "spec": null,

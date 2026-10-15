@@ -152,6 +152,17 @@ RELATED = {
                                "rv-towing-capacity"],
 }
 
+# Tools that answer a question the guides on a system page raise. Only where the match is
+# direct: a filter finder on the water page, a board finder on the appliances page.
+# heating-and-cooling has no direct tool match (snow-load is roof-adjacent at best), so it
+# gets none rather than a link that only nearly fits.
+TOOLS = {
+    "water-and-plumbing": ("rv-water-filter", "water filter finder",
+                           "matches a cartridge to the housing"),
+    "kitchen-and-appliances": ("rv-appliance-board-finder", "appliance control board finder",
+                               "matches a control board to the model"),
+}
+
 
 def guide_title(stem):
     """The guide's own title tag, so a cross-link reads the way that page reads."""
@@ -811,6 +822,10 @@ def system_page(slug, title, desc, rows):
         t = guide_title(stem)
         if t:
             links.append('<li><a href="guides/%s.html">%s</a></li>' % (stem, esc(t)))
+    tool = TOOLS.get(slug)
+    if tool:
+        stem, label, what = tool
+        links.append('<li><a href="/tools/%s">The %s</a> %s.</li>' % (stem, esc(label), what))
     related = ("""
       <div class="card man-about">
         <div class="man-about-h">If something&#39;s already broken</div>
