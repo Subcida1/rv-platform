@@ -4120,3 +4120,25 @@ Every new page got a fresh-context pass, and the classes that came out of it are
 **TESTED AGAINST A KNOWN-GOOD PAGE FIRST** — `rv-engine-overheating`, which passed tonight: 5 entries, 3 resolve 200, 2 return 403. Those two are the Ford manuals and the 403 is the bot wall rather than a dead link (both were fetched through a real browser and ten quotations verified against them). **So the verifier now reports a 403 as "bot-walled, verify in a browser" rather than as a failure — "an instrument that flags correct behaviour teaches the reader to ignore it, which is the lesson this night kept producing."** That is the right design and the right order: test the instrument on a page known to be good before pointing it at a page that needs fixing.
 
 **Both pages still carry no Sources section from the repo; the check runs the moment conv-c3913bd3 reports.**
+
+---
+
+## PROPANE TANK REVIEW — complete (conv-c145cc42, 2026-10-15 ~05:05 PDT)
+
+**FINDINGS 5.** Full report in `_todo/REVIEW-propane-tank.md`. Nothing on the page is false; every defect is a claim running ahead of its source, or a source that is not the publisher's own copy.
+
+**F1 (Rule 2) — "Most states have adopted the code" overstates PHMSA**, which says *"many states"* and adds *"you should contact your state or local government agency to find out if your state requires"* it. One word.
+
+**F2 (Rule 2) — the requalifier's mark letters are defined in 49 CFR 180.213(f)(4) and (f)(5), and the page cites only 173.301 and 180.209.** The claim is correct (E is the 5-year external visual inspection, S is the proof pressure test); a reader just cannot check it from the Sources as written. Add § 180.213.
+
+**F3 (Rule 3) — the page carries ZERO flag callouts**, while discussing propane, a relief valve that *"can expel a large jet of LP-Gas into the air"*, and a tank the page itself says to stop using. Every comparable page carries one.
+
+**F4 (the rehost class) — the four RegO claims are cited to `gasequipment.com`, a distributor's copy of RegO's own document.** RegO hosts the same bulletin on its own domain (the L-500 catalog). The blacklist's own precedents are the same shape: pantherrvproducts.com, rvupgradestore.com, microaireasystart.com. **Fix: repoint to the maker's copy, and add `gasequipment.com` to `REHOST` in `scripts/verify.py`. The propane furnace guide cites the same domain for its excess-flow document and should move with it.**
+
+**F5 (minor) — "A state agriculture department" is the North Carolina Department of Agriculture**, named in the Sources but not in the body.
+
+**What holds, and it is nearly all of it:** 18 of 18 quotations verbatim (RegO 13, Cummins Onan 4, Cavagna 1); all five regulatory quotes verbatim against the eCFR API; all three PHMSA quotes verbatim against BOTH the live page and the Wayback snapshot; the state source's two quotes verbatim; the Onan figures (0.5 / 1.2 / 1.8 kg/h = 1.1 / 2.5 / 3.8 lbs/h, and 228–330 mm = 9–13 in WC); the 80 percent figure and the tri-lobular handwheel both in the Cavagna catalog; the two cut claims are gone (no flow-direction language anywhere); Sources present with seven linked sources; 0 em dashes, 0 "rig", `check-prose.py` clean; all seven source URLs resolve.
+
+**A correction to the brief's premise, and it matters for the next session: PHMSA does not 403 every machine fetch.** It 403s curl (bare UA and a full browser header set both), but the `fetch_webpage` tool reads the live page fine. The archive route was sound and the citations hold either way (the live page and the snapshot agree word for word on all three quotes), but the publisher's own page was readable all along. **Try the fetch tool before concluding a source is unreachable, and prefer the live publisher's copy where it answers.**
+
+**Findings forwarded to the drafter (conv-b71ff860); F1 and F3 first.**
