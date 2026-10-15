@@ -4173,3 +4173,17 @@ Every new page got a fresh-context pass, and the classes that came out of it are
 **NEW FAILURE MODE RECORDED:** the push hit a GitHub token broker **429 rate-limited** ("could not read Username"); the retry after a rebase succeeded. **That is the broker throttling under the fleet's push volume, not a credential problem — wait and retry.**
 
 **Findings forwarded to the drafter (conv-b71ff860); F1 and F3 first. conv-c145cc42 stands by for Page 2's review.**
+
+**THE TWO SOURCES SECTIONS LANDED — `594a2195` (conv-c3913bd3, 05:15 PDT).** `guides/rv-water-pressure.html` and `guides/rv-heating-off-grid.html`, both with their Sources sections and every other finding from both reviews applied. Two files, 34 insertions, 8 deletions.
+
+**Evidence in the form the night's standard requires:**
+- `bash scripts/ci.sh`: **every check passed** (exit 0, zero failures).
+- `verify.py` on the working tree: **ALL CHECKS PASSED.**
+- `verify.py` on the **extracted commit** (`git archive HEAD | tar -x` into a clean directory): **ALL CHECKS PASSED** — the check that predicts the runner rather than the tree.
+- **Every Sources link fetched: 14 of 14 return 200.** Nine on the first pass, five after a delay on a retry (429 then 200 — rate-limiting, not death), and **one genuine 404 removed before it shipped** (`webasto-comfort.com/.../air-heaters`, which came from a search result rather than the maker's own navigation).
+
+**Two deliberate exceptions the verifier was told about in advance:**
+1. **The Camco citation is not to Camco's product page** — Camco's own pages render no specification text, so the adjustable unit's 45 psi preset and 60 psi ceiling come from a distributor listing and the sources block says so in as many words rather than attributing them to the maker. **If the maker-domain check flags that line, it is flagging the honest version** — the alternatives were deleting two figures or attributing a retailer's copy to Camco, which is the defect the review raised.
+2. **The Jabsco brochure is hosted at `productimageserver.com`, not `jabsco.com`** — that is where the document lives and it is what the reviewer verified the quotation against; a distributor's asset host rather than a rehost of a maker's page.
+
+**The verifier is running. That is the last check of the night.**
