@@ -81,7 +81,7 @@ JavaScript-rendered pages actually populate before the DOM is read.
 | **NY** | **VERIFIED.** `nysenate.gov` renders 159,069 bytes / 120,147 characters with a realistic user-agent; quote present verbatim. |
 | **NJ** | **VERIFIED.** The citation is the Legislature's own `STATUTES-TEXT.zip` (41 MB). Downloaded and extracted: `STATUTES.TXT` is 83,575,269 characters and **contains the quote verbatim**, at the single occurrence of `39:3-67` in the file. |
 | **DC** | **STILL OWED — and this one is a real defect, not an access problem.** See below. |
-| **IA** | **STILL OWED.** The PDF fetch is slow from this sandbox; the check did not complete in this pass. |
+| **IA** | **STILL OWED — and now with a specific reason.** Three attempts from this sandbox: the first timed out; the second failed DNS (`Could not resolve host: www.legis.iowa.gov`); the third resolved both `www.legis.iowa.gov` (135.233.123.173) and `legis.iowa.gov` (207.28.212.25) but the connection then hung past a 240-second timeout without transferring a byte. So the host is reachable at the DNS layer and does not serve this sandbox. **Not a finding about the page** — the citation, `https://www.legis.iowa.gov/docs/code/321.430.pdf`, is the Iowa Legislature's own published code PDF, which is the right publisher for the right document. It needs a fetch from a machine that can reach it. |
 
 ### F7 — the District of Columbia citation points at the chapter index, not the rule. MEDIUM.
 
