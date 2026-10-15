@@ -2555,3 +2555,15 @@ Eight items, verified against the page sources at tip `032b474`:
 - **Verified clean (Neo's list):** titles/metas/H1s; dateModified; no dashes/FFFD; aria-live; pipeline cards; voice PASS; factual spot-checks.
 
 Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok.
+
+## Neo hubs 12th rotation (2026-10-15, verified from the Cloud lane)
+
+Seven items, verified against the page sources at tip `a35d100`:
+
+- **Fixes verified (Neo's list):** the shared Where-to-go-next strip is live on all 5 hubs (cross-links confirmed in-body); the WebSite-without-@id nodes are gone from /directory and /manuals; /about carries BreadcrumbList; the manuals numberOfItems is gone. All confirmed.
+- **/guides title (4 of 6 sections): carried, queued** (ab70955) -- still unchanged.
+- **/directory region order: carried, queued** (882b76e) -- still unchanged.
+- **Hub schema mix: CONFIRMED.** guides = top-level ItemList(47); directory = CollectionPage.mainEntity ItemList(50); manuals = CollectionPage.mainEntity ItemList(8); tools + parts = bare CollectionPage. Queue: adopt ItemList-for-card-grids sitewide or record the mix as deliberate.
+- **Verified clean (Neo's list):** card counts match sitemap; sitemap 131 (grep -o); titles/metas/H1s/canonicals; no dashes/FFFD; /about links; voice PASS.
+
+Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok.
