@@ -1105,10 +1105,13 @@
     "sources": []
   },
   "tools/weight-calculator.html": {
-    "hash": "cf60839c9bb5468c",
-    "status": "unverified",
-    "verified_by": null,
-    "verified_at": null,
-    "sources": []
+    "hash": "bd626fec7a45458a",
+    "status": "verified",
+    "verified_by": "Ty's calculator pass, continued: the Where to go next block gets its section wrapper so it stops sitting on the page edge, plus the required-field, badge and framing fixes",
+    "verified_at": "2026-10-14",
+    "sources": [],
+    "spec": null,
+    "spec_waived": true,
+    "claims": []
   }
 }

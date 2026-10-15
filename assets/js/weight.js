@@ -147,13 +147,23 @@
  if (towRating <= 0) missing.push('how much your truck can pull (top left)');
  if (payloadCap <= 0) missing.push('how much can go in the truck (top left)');
  if (rigUVW <= 0) missing.push('how much the empty trailer weighs (middle)');
+ /* THREE LIMITS THIS USED TO SKIP, and skipping them is why the tool could say SAFE to a
+  * combination it had never checked. Curb weight, the truck's own GVWR and the GCWR only feed
+  * the truck-gross and combined-weight verdicts, and those two rows were simply left off the
+  * result when the fields were blank. A reader who filled in three boxes got a green answer
+  * that had not tested whether the truck was overweight or the pair was over its combined
+  * limit. Ty caught it, 2026-10-14: "it seems like some stuff isnt required that really should
+  * be. Like the GCWR, the GVWR and the Curb Weight." No verdict until they exist. */
+ if (curb <= 0) missing.push('how much the empty truck weighs (top left)');
+ if (num('w-truck-gvwr') <= 0) missing.push("the truck's own GVWR (top left)");
+ if (num('w-gcwr') <= 0) missing.push('the truck and trailer combined limit (top left)');
  if (passengers <= 0 && missing.length === 0) missing.push('people and gear in the truck (bottom)');
 
  if (missing.length > 0) {
    host.innerHTML = '<div class="w-idle w-needmore">' +
      '<div class="w-need-ic">\u26A0\uFE0F</div>' +
      '<b>Not enough information yet.</b>' +
-     '<span>Fill in more of the fields above and your answer will appear.</span></div>';
+     '<span>Still needed: ' + missing.map(esc).join(', ') + '.</span></div>';
    return;
  }
 

@@ -52,17 +52,18 @@ function run(vals) {
   return byId['w-results'].innerHTML;
 }
 
-const BASE = { 'tow-rating': 9200, payload: 1500, curb: 6000, 'truck-gvwr': 7500, uvw: 5000, gvwr: 7000, passengers: 400, 'cargo-trailer': 500 };
+// gcwr is in BASE now, because the calculator treats it as required rather than optional.
+const BASE = { 'tow-rating': 9200, payload: 1500, curb: 6000, 'truck-gvwr': 7500, 'gcwr': 15000, uvw: 5000, gvwr: 7000, passengers: 400, 'cargo-trailer': 500 };
 
 console.log('weight calculator');
 
 // The combination this page exists for: loaded = 5000 + 500 = 5500, tongue = 660,
 // truck gross = 6000 + 660 + 400 = 7060, combined = 7060 + (5500 - 660) = 11900.
-let html = run(Object.assign({ 'gcwr': 15000 }, BASE));
+let html = run(Object.assign({}, BASE));
 check('combined weight is rendered and totals 11,900 lb', /11,900 \/ 15,000 lb/.test(html), html.match(/Combined weight[^<]*/g));
 check('a combination inside the GCWR is verdict ok', /v-row ok[\s\S]*?Combined weight/.test(html));
 
-html = run(Object.assign({ 'gcwr': 11000 }, BASE));
+html = run(Object.assign({}, BASE, { 'gcwr': 11000 }));
 check('a combination over the GCWR is verdict bad', /v-row bad[\s\S]*?Combined weight/.test(html));
 check('the over-GCWR note names the GCWR', /OVER the GCWR/.test(html));
 
@@ -74,18 +75,36 @@ check('an overloaded RV names the binding limit', /Over on Truck payload/.test(h
 check('the named limit is the payload, not a generic word',
   !/Over on something/i.test(html) && !/Something is overloaded/.test(html));
 
+/* THE THREE LIMITS THE TOOL USED TO SKIP. Curb weight, the truck's own GVWR and the GCWR feed
+   the truck-gross and combined-weight rows, and when they were blank those rows simply did not
+   render, so a reader could get a green answer that had never checked either one. Ty, 2026-10-14:
+   "it seems like some stuff isnt required that really should be." The tool must now refuse. */
+const CORE_ONLY = { 'tow-rating': 9200, payload: 1500, uvw: 5000, gvwr: 7000, passengers: 400, 'cargo-trailer': 500 };
+html = run(CORE_ONLY);
+check('no verdict when curb, truck GVWR and GCWR are blank', /Not enough information yet/.test(html));
+check('the refusal names the empty truck weight', /how much the empty truck weighs/.test(html));
+check('the refusal names the truck GVWR', /the truck's own GVWR/.test(html));
+check('the refusal names the combined limit', /truck and trailer combined limit/.test(html));
+check('the refusal does not render a verdict row', !/v-row/.test(html));
+html = run(Object.assign({ 'curb': 6000 }, CORE_ONLY));
+check('adding curb alone is still not enough', /Not enough information yet/.test(html) && /truck and trailer combined limit/.test(html));
+
 
 html = run(Object.assign({ 'gcwr': 12000 }, BASE));
 check('a combination right at the GCWR edge is verdict warn', /v-row warn[\s\S]*?Combined weight/.test(html));
 
-html = run(BASE); // no gcwr entered
-check('no GCWR field filled leaves the row out entirely', !/Combined weight/.test(html));
+/* THE OLD BEHAVIOUR, RECORDED BECAUSE IT WAS THE DEFECT. These two used to assert that a blank
+   GCWR or curb weight left the combined-weight row off the result, and the suite was green while
+   the tool handed out verdicts it had never checked. They now assert the opposite: the tool says
+   what it still needs and renders no verdict at all. */
+html = run(Object.assign({}, BASE, { 'gcwr': '' }));
+check('a blank GCWR refuses rather than skipping the combined-weight check', /Not enough information yet/.test(html) && /truck and trailer combined limit/.test(html));
 
-html = run(Object.assign({ 'gcwr': 15000 }, BASE, { curb: '' }));
-check('no curb weight means no combination verdict, because it would read low', !/Combined weight/.test(html));
+html = run(Object.assign({}, BASE, { 'curb': '' }));
+check('a blank curb weight refuses rather than reading the combination low', /Not enough information yet/.test(html) && /how much the empty truck weighs/.test(html));
 
 // Regression guard: the four verdicts that were already there.
-html = run(Object.assign({ 'gcwr': 15000 }, BASE));
+html = run(Object.assign({}, BASE));
 ['Towing capacity', 'Truck payload', 'Truck cargo capacity (CCC)', 'Truck gross weight'].forEach(label => {
   const found = html.indexOf(label) !== -1
     || html.indexOf(label.replace('Truck cargo capacity (CCC)', 'Trailer cargo capacity (CCC)')) !== -1;

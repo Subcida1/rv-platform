@@ -42,6 +42,17 @@ window.RV_CONFIG = {
  home: '',
  tools: 'tools/',
  calculator: 'tools/weight-calculator',
+ /* THE TOOLS THE NAV DROPDOWN CARRIES. Ty, 2026-10-14: the Tools menu listed 2
+    entries on a site with 15 tools, so 13 of them -- including all six finders --
+    could only be reached through the /tools/ hub. These are the highest-demand
+    ones, in the order scripts/keyword-demand.py measures them, and the hub is
+    still the entry that carries the rest. */
+ toolFuel: 'tools/fuel-cost',
+ toolWatts: 'tools/watts-to-amps',
+ toolSolar: 'tools/solar-sizing',
+ toolTireAge: 'tools/tire-date-code',
+ toolLoan: 'tools/rv-loan',
+ toolBattery: 'tools/battery-runtime',
  guides: 'guides/',
  guideWinterize: 'guides/winterize-plumbing',
  guideBattery: 'guides/battery-winter-storage',

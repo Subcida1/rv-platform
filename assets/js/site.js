@@ -179,8 +179,19 @@
  '<div class="nav-links">' +
  '<a class="nav-link" href="' + R(rt.home) + '">Home</a>' +
  '<div class="nav-group"><a class="nav-link" href="' + R(rt.tools) + '">Tools</a>' +
- '<div class="drop"><a href="' + R(rt.calculator) + '">Weight Calculator<span class="sm">Live, free</span></a>' +
- '<a href="' + R(rt.tools) + '">More tools<span class="sm">Campgrounds, stops, GPS, building</span></a></div></div>' +
+ /* THE TOOLS MENU CARRIES THE TOOLS. Ty, 2026-10-14: the Tools dropdown listed 2
+    entries on a site with 14 tools, so twelve of them -- every finder among them --
+    could only be reached through the /tools/ hub. It now lists the six the demand
+    measurement puts first, in that order, which is the same order the hub and the
+    homepage pills use (scripts/keyword-demand.py). The last entry names the
+    finders by what they find, so they are discoverable without six more rows. */
+ '<div class="drop"><a href="' + R(rt.toolFuel) + '">Fuel Cost Calculator<span class="sm">What a trip burns</span></a>' +
+ '<a href="' + R(rt.toolWatts) + '">Watts to Amps<span class="sm">Any appliance label</span></a>' +
+ '<a href="' + R(rt.toolSolar) + '">Solar Sizing<span class="sm">Panels and battery bank</span></a>' +
+ '<a href="' + R(rt.toolLoan) + '">RV Loan<span class="sm">Payments and APR</span></a>' +
+ '<a href="' + R(rt.calculator) + '">Weight &amp; Towing<span class="sm">Live, free</span></a>' +
+ '<a href="' + R(rt.toolBattery) + '">Battery Runtime<span class="sm">How long the bank lasts</span></a>' +
+ '<a href="' + R(rt.tools) + '">All 14 tools<span class="sm">Finders for valves, converters, recalls</span></a></div></div>' +
  '<div class="nav-group"><a class="nav-link" href="' + R(rt.guides) + '">Guides</a>' +
  '<div class="drop"><a href="' + R(rt.guideWinterize) + '">Winterize Your Plumbing<span class="sm">Tanks, lines, antifreeze, bypass</span></a>' +
  '<a href="' + R(rt.guideBattery) + '">Battery Care in Cold<span class="sm">Lead-acid vs lithium rules</span></a>' +
@@ -210,7 +221,9 @@
  '</div>' +
  '<div class="mobile-menu">' + searchFieldHTML('mm-search', 'Search guides, tools, parts, or a ZIP', 'Site search, mobile menu') +
  '<a class="mm-top" href="' + R(rt.home) + '">Home</a>' +
- mmGroup('Tools', rt.tools, [['Weight calculator', rt.calculator]]) +
+ mmGroup('Tools', rt.tools, [['Fuel cost', rt.toolFuel], ['Watts to amps', rt.toolWatts],
+   ['Solar sizing', rt.toolSolar], ['RV loan', rt.toolLoan],
+   ['Weight & towing', rt.calculator], ['Battery runtime', rt.toolBattery]]) +
  mmGroup('Guides', rt.guides, [['Winterize plumbing', rt.guideWinterize],
    ['Battery cold storage', rt.guideBattery], ['Tires through winter', rt.guideTires],
    ['Roof snow load', rt.guideRoof]]) +
