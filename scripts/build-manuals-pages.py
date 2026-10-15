@@ -165,11 +165,40 @@ RELATED = {
 # direct: a filter finder on the water page, a board finder on the appliances page.
 # heating-and-cooling has no direct tool match (snow-load is roof-adjacent at best), so it
 # gets none rather than a link that only nearly fits.
+# ONE ENTRY PER TOOL, and a system can carry more than one. The 8th rotation queued the
+# topic-matched tool links for the five system pages that had none; water-and-plumbing and
+# kitchen-and-appliances landed first, and the rest land here. Power takes four because the
+# page covers four separate jobs (a converter, a load, a solar array, a battery bank) and one
+# link would have named only one of them.
 TOOLS = {
-    "water-and-plumbing": ("rv-water-filter", "water filter finder",
-                           "matches a cartridge to the housing"),
-    "kitchen-and-appliances": ("rv-appliance-board-finder", "appliance control board finder",
-                               "matches a control board to the model"),
+    "power-and-electrical": [
+        ("rv-converter-finder", "converter finder", "matches a converter to its replacement"),
+        ("watts-to-amps", "watts to amps calculator",
+         "converts an appliance label into the draw it becomes"),
+        ("solar-sizing", "solar sizing calculator",
+         "works out the panel watts a day's use needs"),
+        ("battery-runtime", "battery runtime calculator",
+         "shows how long the bank carries the load"),
+    ],
+    "towing-and-running-gear": [
+        ("weight-calculator", "weight calculator", "works the ratings against a real load"),
+    ],
+    "sanitation-and-tanks": [
+        ("rv-toilet-valve", "toilet valve finder", "matches a valve to the model"),
+    ],
+    "chassis-and-drivetrain": [
+        ("weight-calculator", "weight calculator", "works the ratings against a real load"),
+    ],
+    "exterior-and-body": [
+        ("snow-load", "roof snow load calculator", "turns a snow depth into a load"),
+    ],
+    "water-and-plumbing": [
+        ("rv-water-filter", "water filter finder", "matches a cartridge to the housing"),
+    ],
+    "kitchen-and-appliances": [
+        ("rv-appliance-board-finder", "appliance control board finder",
+         "matches a control board to the model"),
+    ],
 }
 
 # THE PARTS LINE, one per system page. The system pages carried guides and maker documents
@@ -868,9 +897,7 @@ def system_page(slug, title, desc, rows):
         t = guide_title(stem)
         if t:
             links.append('<li><a href="guides/%s.html">%s</a></li>' % (stem, esc(t)))
-    tool = TOOLS.get(slug)
-    if tool:
-        stem, label, what = tool
+    for stem, label, what in TOOLS.get(slug, []):
         links.append('<li><a href="/tools/%s">The %s</a> %s.</li>' % (stem, esc(label), what))
     parts = PARTS.get(slug)
     if parts:
