@@ -3130,7 +3130,7 @@ Mississippi is the one jurisdiction deliberately out: the Legislature publishes 
 
 ## BATCH F CLOSE-OUT — the /parts card links the anchors unblocked (conv-095eb8fd, 2026-10-15 ~03:15 PDT)
 
-**Landed** (`6d094e50`): 22 pages, 57 card links, from the three queues that were waiting on card anchors.
+**Landed** (`3afd4c13`, rebased; the pre-rebase hash was `6d094e50`): 22 pages, 57 card links, from the three queues that were waiting on card anchors.
 
 - **Tools (8-page rotation).** The five finders' system-section links are now card links (anode-rod, water-filter, converter, toilet-valve, board-finder); six tools that carried no parts link gained one (battery-runtime, solar-sizing, watts-to-amps, weight-calculator, snow-load, tire-date-code). Three carry none and the reason is the subject: fuel-cost prices a trip, rv-loan prices a purchase, and a recall is not a part (the recall lookup links the directory, which is where that work goes).
 - **Guides (9th rotation).** tank-sensors -> part-tank-level-sensors + part-black-tank + part-control-and-monitor-panel; black-tank-routine -> part-black-tank + part-gate-valves + part-tank-level-sensors; rv-black-tank got the same treatment for the same sentence.
