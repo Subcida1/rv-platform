@@ -2581,7 +2581,7 @@ Ty, 01:00: *"act as a conductor for the night and keep all of our work rolling �
 | `conv-095eb8fd` | parts completeness (Ty's 00:05 request) | ACTIVE — index on main (fed4527f); continuing the deep pass; also owns the queued parts-card fixes |
 | `conv-c145cc42` | thin-states fill-out (fan-out, ~10 states) | ACTIVE — listings being written; will build + CI + push when the fan-out closes |
 | `conv-b71ff860` | content batch — in-body links, finder blocks, small fixes | ASSIGNED |
-| `conv-8e8a0028` | weight calculator — finish the 100-case harness + remaining calculator items | RESUMED |
+| `conv-8e8a0028` | weight calculator — finish the 100-case harness + remaining calculator items | **CLOSED** — harness on main (`0a0e8b5e`), calculator items on main (`1f5bf9fc`, `e2287b26`, `f103b6b7` by another session) |
 | `conv-ff6725d2` | directory data batch — all-50 phone audit + carryovers | ASSIGNED |
 | `conv-c3913bd3` | schema/hub batch + W29 entry update | ASSIGNED |
 | `conv-cf6aa2a3` | W19 voice calibration | WAITING ON TY (page 6 presented) — DO NOT DISTURB |
@@ -2611,7 +2611,13 @@ Ty, 01:00: *"act as a conductor for the night and keep all of our work rolling �
 - NM roadside over-claim + per-state lede variant (HI/DE pattern).
 - Thin-content + region taxonomy.
 
-**D. conv-8e8a0028 — weight calculator:** finish the 100-case independent-oracle harness; remaining calculator items from Ty's pass.
+**D. conv-8e8a0028 — weight calculator: CLOSED 2026-10-15 01:05 PDT.**
+
+- **The 100-case harness is on main (`0a0e8b5e`) and wired into `ci.sh`.** `scripts/weight-cases.json` holds the table; `scripts/test-weight-calculator-cases.mjs` runs the calculator over it and compares every rendered row against a **second implementation of the arithmetic**, written from the rules the page documents rather than read out of `weight.js`. 20 vehicles, 15 trailers, 6 load profiles, plus 10 boundary cases (exactly at the 80% line and one pound either side, exactly at the towing rating and one over, at the trailer GVWR and one over, at 90% of the truck GVWR, at the GCWR and one over). Result: **100 of 100 agree.**
+- **Negative-tested before it was believed**, because a green first run is not evidence: water constant 8.34 to 8.0 fails 20 cases; fifth-wheel tongue 20% to 18% fails 28; the 80% band moved to 85 fails 5. One case was hand-computed and matches the calculator figure for figure.
+- **Ty's calculator items, all landed:** the lede folded into the warning box; the five badges removed; the red star plus a star in the placeholder; **curb weight, truck GVWR and GCWR made required**, which was a correctness bug — those three fed two verdicts that were silently skipped when the fields were blank, so the tool could say SAFE without ever checking them; the tanks on two rows; the range framing; the GCWR clarity; the towing-capacity and payload emphasis; the weight-distribution entry; the 80% rule as a convention; **the dry-weight block rebuilt** as one question in the reader's terms with the propane field only shown when it applies; the find-it magnifier; the CAT Scale positioning for each vehicle type; the scale-locator wording; **the limits section**; and the paragraph that sat inside the calculator moved above it (`f103b6b7`).
+- **One incident, resolved:** `1f5bf9fc` went red on the W3C CSS validator — the magnifier used a `mask` shorthand the validator rejects, which every browser would have dropped silently. Replaced with an inline SVG and verified against the same validator before pushing (`e2287b26`). Green.
+- **BLOCKED ON TY, recorded not chased:** the H1. He likes "RV towing calculator" and is unsure about "Can your truck tow it?". The Bing keyword data says every question-shaped phrasing has no measurable demand while the noun phrases do — `towing capacity` 4,731/mo, `towing capacity calculator` 898/mo, `payload capacity` 433/mo. Recommendation on the table: **"RV towing calculator: towing capacity, payload and tongue weight."** Not applied; it changes what the page aims at and that is his call.
 
 **E. conv-095eb8fd — parts:** continue; fold in queued card fixes: black tank card -> rv-black-tank; chassis battery card (retarget or unlink); water pressure regulator + gravity fill -> retarget or gap-note; ladder naming rename; Henry's Tropi-Cool alias; heat-pump card draft (8ed90b2).
 
