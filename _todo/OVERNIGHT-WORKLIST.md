@@ -2690,3 +2690,16 @@ The `--no-sandbox` is required because a sandbox runs as root; without it Chrome
 never answers on the debug port, which fails the same way. The GitHub runner is unaffected -- it has
 flatpak, and those four steps run and pass there.
 
+
+## Neo manuals 13th rotation (2026-10-15, verified from the Cloud lane)
+
+Six items, verified against the page sources at tip `4be80a1b`:
+
+- **Brands ItemList 40 vs 44 rows: NOT a regression -- and the underlying question is a convention call.** The ItemList holds exactly 40 elements and `numberOfItems` is 40 (internally consistent). The 4 it omits are the URL-less rows in the "No manual published online" section (Bigfoot RV, Escape Trailer, Midwest Automotive Designs, Nexus RV). History, full clone: the page was created 2026-09-21 with numberOfItems=44 over 40 elements (gaps at 3, 14, 30, 33); bdd4dc54 fixed it to 40 the same day, and it has been 40 in every commit since -- there was no 10-13 fix and no regression. The claim was refuted on 10-13 (HANDOFF-TOOL-SWEEP.md batch 2). BUT the schema/hub batch (531bb657) just set the convention "ItemList enumerates the page's cards" (/tools 14 cards, /parts 210 cards), and under that convention the brands list should hold 44. Queue: include the 4 URL-less brands as ListItems with no `url` (numberOfItems=44 = the rendered rows = the copy), or record the 40-of-44 filter as deliberate. Recommend the former -- it ends a flag that has now been raised three times.
+- **Hub ItemList 8 vs 11 sub-pages: same convention class.** The hub's mainEntity ItemList = the 8 systems; the page links 11 sub-pages in <main> (the 8 + brands + start-here + recalls). Already queued (cf95bba).
+- **start-here rigcalc link: still live** (1 occurrence). Already queued.
+- **rosap.ntl.bts.gov 403: NOT dead -- bot-blocking.** Verified: 200 with no UA and with a curl UA; 403 with a bare browser UA; 200 again with a full realistic browser header set (Accept, Accept-Language, Sec-Fetch-*). The page title resolves ("Heavy and Overweight Vehicle Brake Testing: Combination Six-Axle, Final Report"). No action.
+- **start-here Article JSON-LD: VERIFIED FIXED** (Article + dateModified 2026-10-14).
+- **Verified clean (Neo's list):** brands 44 rows / 654 model lines exact; recalls 12 rows = numberOfItems 12; hub "110 sources across 94 makers" live; WebSite nodes nested under isPartOf.
+
+Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok. CI green on the tip.
