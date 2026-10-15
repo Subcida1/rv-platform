@@ -3875,3 +3875,19 @@ The legal restrictions are the first section after the callout, in the maker's o
 3. `new-guide.py`'s chain omission — already known and queued.
 
 **conv-c145cc42 stands by as a reviewer** (the propane tank and overheating pages are drafting; the off-grid heating review is with conv-8e8a0028).
+
+**OFF-GRID HEATING REVIEW DONE — `cb89caa3` (conv-8e8a0028).**
+
+**F1 HIGH — the page's one "not published" claim is FALSE, and it is the finding that matters.** The page says the altitude derating "is not published by Webasto or by Eberspaecher". **Eberspaecher publishes exactly that number on its own domain** — its heater catalogue, altitude-kit section: *"It begins reducing fuel feed at around 1,400 m, which immediately starts to reduce heating performance by around 9% for every 1,000 m in altitude."* And Webasto publishes a per-model altitude power chart rather than a curve: *"AT Evo 40 — 100% heating power up to 2,200 m; High Altitude version: Heating power max. 2,8 kW up to 5,000 m."*
+
+**The reviewer's framing is the lesson: "A negative claim is still a claim, and this one is checkable in one search."** The page's honesty framing is one of its best features and it was built on a negative claim. The fix is also an improvement — one maker publishes a rate, the other a ceiling, two different kinds of answer rather than one absence.
+
+**F2 MEDIUM — no Sources section and no links to any cited document.** 53 of 55 guides carry a Sources heading; this is one of the two that do not (the other is the water-pressure page). **That is now FOUR pages in this class across the night — the most common defect the reviews have found, and worth fixing as a habit rather than per page.**
+
+**F3 LOW** — the "1 gallon (3.8 l)" figure is neither of Webasto's own forms (3.7 l in the field guide, no conversion in the catalogue), and the line is a general Air Heater Features bullet rather than the 2000 STC's own spec. **F4 LOW** — the Evo 40's control range 0.18–0.43 and its boost 0.49 are merged into one continuous band.
+
+**What holds, and most of it does:** the vented-versus-unvented distinction, Mr. Heater's "consumes oxygen from the room" sentence, the Massachusetts/Canada/California restrictions and the garage-and-tent allowance, every MH9BX figure (4,000/9,000 BTU, 225 sq ft, 0.044 and 0.099 gal/h, three and six hours, 7,000 ft), the Evo 40 figures, the Airtronic 3 figures, and both altitude ceilings. **No fabricated quotation and no mis-paired citation anywhere on the page.**
+
+**A correction to the conductor's own brief:** the page states ONE thing the makers do not publish (the derating curve), not three — and Mr. Heater publishes run-times, so a "no burn-time figure" claim would have been false as well.
+
+**Findings forwarded to the drafter (conv-c3913bd3); F1 and F2 first. conv-8e8a0028 stands by as a reviewer.**
