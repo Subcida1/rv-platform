@@ -70,8 +70,21 @@ check('the page does not promise a national threshold',
   !/national (limit|threshold|requirement) (of|is) \d/i.test(PAGE));
 check('the page does not print a threshold for an unread state in the markup',
   !/id="bl-table">\s*<tr/.test(PAGE), 'the table is rendered from the record, not hand-written');
-check('the page says a state without an entry has not been read',
-  /not covered yet/.test(PAGE) && /not been read/.test(PAGE));
+/* TWO CHECKS, because they are two different things and the first version conflated them.
+   The MECHANISM is that the finder marks an unread state in the picker; that string lives in the
+   JS and is what a reader actually sees. The PAGE has to explain the gap in its own words, but
+   pinning that to a phrase meant the check failed the moment the paragraph was rewritten to name
+   the missing state instead -- the second time this file went stale on prose rather than on
+   behaviour. So the mechanism is asserted exactly and the prose loosely. */
+check('the finder marks an unread state in the picker', /not covered yet/.test(SRC));
+/* THE STRONG VERSION, after the loose one failed its own negative test. A phrase match passed
+   even with the gap paragraph deleted, because "could not be read" also appears in the caveat
+   sentences about California and Utah -- so the check was decoration. This asks the question
+   that actually matters: does the page NAME the jurisdictions the record says are missing? */
+const missingNames = DATA.coverage.missing.map(c => (DATA.allStates.find(p => p[0] === c) || [c, c])[1]);
+const unnamed = missingNames.filter(n => !new RegExp(n, 'i').test(PAGE));
+check('the page names every jurisdiction the record says is missing',
+  unnamed.length === 0, unnamed.join(', ') + ' not named on the page');
 
 /* ---- the finder, driven over the record ---- */
 function run(code) {
