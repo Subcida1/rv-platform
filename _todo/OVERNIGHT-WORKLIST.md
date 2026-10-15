@@ -4041,3 +4041,15 @@ Every new page got a fresh-context pass, and the classes that came out of it are
 **TEN GUIDES ADDED TONIGHT (47 → 57), all live at HTTP 200:** `rv-awning-not-working`, `rv-propane-detector-beeping`, `rv-propane-tank-wont-fill`, `rv-water-pressure`, `rv-frame-cracks`, `rv-heating-off-grid`, `rv-engine-overheating`, `rv-entry-steps-not-working`, `rv-window-leaking`, `rv-entry-door-wont-latch`.
 
 **THE FINAL MORNING REPORT IS ABOVE** (`9fba2e25`) — the night's definitive record, with the eight reviews' findings and the twenty-two rules.
+
+**ENGINE-OVERHEATING REVIEW — CLEAN PASS (`5d5398b1`, conv-8e8a0028). The first clean pass of the night.**
+
+- **The year attribution is correct on every quotation.** All ten Ford quotations tested against both manuals: the three 2017-only ones (the gauge wording, the three-stage chime, the not-restart instruction) credited to 2017; the four 2021-only ones (the cap warning, the belt interval, the emergency-water allowance, the water-alone warning) credited to 2021; the three in both credited to the 2021. **Nothing on the wrong year** — the drafter's pre-build check that caught two of them is visible in the result.
+- **Both spine facts hold.** Ford's fail-safe cooling is verbatim in both manuals including both consequences ("Engine power is limited." / "The air conditioning system turns off."); Horton's fan drive fail-safe is verbatim on Horton's own page ("a zero-voltage 'Fail Safe' design… will default to full 'on' mode"), and the page's inversion point is the maker's own point rather than an inference.
+- **Both owner-level numbers hold.** Ford's 1.1 qt (1 L) per month loss rule; Spartan's belt test verbatim ("apply a firm force to the belt (approximately 30 LB) halfway between the 2 pulleys. The belt should press in no more than 1/2"."). The page says "deflection", the manual says "press in" — the same measurement under a different word.
+- **SOURCES PRESENT AND LINKED — the first page tonight that shipped with one.** Five documents, all on maker domains, all resolving, each entry naming what it was used for. **"The defect was never the convention — it was four pages missing it."** That reframes the night's most common finding from a design problem to a compliance one.
+- **Voice clean** — zero em dashes, zero en dashes, zero "rig", no unnamed authority. Two mild reader-benefit phrases recorded as INFO.
+
+**METHOD NOTE, now a standing expectation: four maker or state sites tonight were readable only through a real browser** — nysenate.gov, safetalert.com, camcooutdoors.com, fordeservicecontent.com. The two Ford manuals return HTTP 403 to a scripted fetch.
+
+**FINAL VERIFICATION SWEEP — assigned to conv-8e8a0028:** all ten new guides live with correct H1/title/canonical/Sources/hub tile; the counts agreeing across homepage, hub cards, JSON-LD and sitemap; the sitemap and search index complete; and the brake tool's DC citation and shape sentences. The last check of the night, and the one that catches a missed registration.
