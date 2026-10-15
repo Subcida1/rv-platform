@@ -4431,3 +4431,19 @@ Also fixed while testing: the `--body` help did not say the `.sec prose` / `.wra
 **A NEW WRINKLE ON THE ROUTE RULE:** `fordservicecontent.com` is the third domain tonight to 403 curl and read fine through the fetch tool — **but a long document truncates before the section you need, which is a different limit from a 403 and needs a different workaround. "Try the fetch tool" gets you the document; it does not always get you the page.**
 
 **Both findings assigned to conv-095eb8fd.**
+
+**THE BRAKE TOOL'S TWO FIXES LANDED — `89a29567` (conv-8e8a0028). ci.sh green; archive check ALL CHECKS PASSED on the extracted commit; the commit contains exactly the five files touched.**
+
+**1. THE SIDEWAYS SCROLL IS FIXED, proven at the page level rather than by the audit.** The table is wrapped in `.table-scroll` — **the house class, already in `style.css` as `overflow-x:auto` with `overflow-y:hidden`, so no new CSS** — and the print stylesheet already sets `.table-scroll` back to `overflow:visible`, so the print button is unaffected. Thirteen other pages already use the same wrapper. Measured over CDP:
+```
+  393   page scrollWidth 378 vs viewport 393   table-scroll box 330, content 489, overflow auto
+  430   page scrollWidth 415 vs viewport 430   table-scroll box 367, content 489, overflow auto
+ 1440   page scrollWidth 1425 vs viewport 1440  box and content both 1152
+```
+**The page no longer scrolls sideways at any width; the table scrolls inside its own box.**
+
+**2. THE `conditional` SHAPE IS CUT** and Delaware is `speed`. Six shapes remain, the record and the finder agree, and the test that asserts every shape has a sentence passes with the record updated.
+
+**AN INSTRUMENT FINDING, and it is the night's lesson one more time.** `audit-layout.mjs` still reports a finding on this page: it flags `div.table-scroll` as an **escape** at both widths (144px out of a 345px box at 393; 107px out of 382px at 430) — **and that is the scroll container working: its content is 489px inside a 330px box by design, with `overflow-x:auto`.** The check that proves the fix is the audit's own **sideways** check, which has gone quiet. **"An escape check that does not exempt a scroll container will fire on every scrolling table on the site"** — the false-positive class that teaches a reader to ignore the output. **Recorded as a tool fix rather than a page change.**
+
+**DEPLOY NOTE:** the live site has not caught up — **two Pages builds were cancelled in the push churn**, so the deployed page still shows the old table and the old record. The commit is right (`origin/main` carries `table-scroll` and Delaware as `speed`); a watch is armed. **Third time tonight a cancelled build has looked like a failed push.**
