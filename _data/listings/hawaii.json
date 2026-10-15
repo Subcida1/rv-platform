@@ -20,7 +20,8 @@
     "Waipahu": "oahu-hi",
     "Kahului": "maui-hi",
     "Kihei": "maui-hi",
-    "Lahaina": "maui-hi"
+    "Lahaina": "maui-hi",
+    "Wahiawa": "oahu-hi"
   },
   "listings": [
     {
@@ -89,6 +90,62 @@
           "Our skilled technicians come directly to you, wherever you are!",
           "Colors on Parade is proud to serve a wide range of clients throughout the Oahu, HI area, encompassing cities like Kailua, Honolulu, Pearl City, Waipahu, Kapolei, Kaneohe, Haleiwa, and all of the cities and towns in Honolulu County."
         ]
+      },
+      "reg": "oahu-hi"
+    },
+    {
+      "n": "Hawaii Surf Campers",
+      "c": "Wahiawa, HI",
+      "p": "(808) 797-2808",
+      "u": "https://www.hawaiisurfcampers.com/automotive",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Custom camper van builder and conversion shop on the North Shore of Oahu, working from a shop in Wahiawa. It builds full van conversions from a bare cargo van and upgrades existing builds, covering layout, carpentry, electrical, plumbing, and finishing. It also services and repairs Volkswagen vans, including the camper portion of Westfalia models.",
+      "g": [
+        "van conversion",
+        "camper repair",
+        "RV service"
+      ],
+      "base": "Wahiawa",
+      "areas": [],
+      "region": null,
+      "spec": "shop only, no mobile; main work is van builds and conversions",
+      "evidence": {
+        "phone_quote": "+1 808 797 2808",
+        "type_quote": "We will service your VW not only mechanically but also with the camper portion of it in case you own a Westfalia model.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "We design and build custom van conversions out of our shop on the North Shore of Oahu."
+        ]
+      },
+      "reg": "oahu-hi"
+    },
+    {
+      "n": "Fibrenew Hawaii",
+      "c": "Honolulu, HI",
+      "p": "(808) 302-0113",
+      "u": "https://www.fibrenew.com/hawaii/rv-motorhome-camper-interior-repair-restoration/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Mobile restoration service that repairs RV interiors, covering motorhomes, camping trailers, vans, fifth wheels, fold downs, expandables, and toy haulers. It specializes in repair and restoration of interior components such as leather furniture, vinyl lino floors, plastic molding and trim, and fabric. It also performs on-lot repairs and warranty work for RV dealers.",
+      "g": [
+        "RV interior repair",
+        "mobile tech",
+        "upholstery"
+      ],
+      "base": "Honolulu",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "phone_quote": "Call: 808.302.0113",
+        "type_quote": "Mobile restoration service to your home or business!",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": []
       },
       "reg": "oahu-hi"
     }

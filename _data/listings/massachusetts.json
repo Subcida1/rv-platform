@@ -73,7 +73,12 @@
     "Lowell": "greater-boston-ma",
     "Salem": "greater-boston-ma",
     "Peabody": "greater-boston-ma",
-    "Woburn": "greater-boston-ma"
+    "Woburn": "greater-boston-ma",
+    "Haverhill": "greater-boston-ma",
+    "Palmer": "western-ma",
+    "Phillipston": "central-ma",
+    "Uxbridge": "central-ma",
+    "Williamstown": "western-ma"
   },
   "listings": [
     {
@@ -535,6 +540,140 @@
         "roadside_quote": null,
         "coverage_quotes": [
           "Servicing Western MA, Northern CT, and Southern NH"
+        ]
+      }
+    },
+    {
+      "n": "Wandering Days Mobile RV Maintenance & Repair",
+      "c": "Haverhill, MA",
+      "p": "603-583-1584",
+      "u": "https://wanderingdaysmobilervmaintenance-repair.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Wandering Days Mobile RV Maintenance & Repair is a mobile RV service owned and operated by Aaron Day, an NRVTA-trained certified mobile RV technician based in Haverhill, Massachusetts. The business lists repair and maintenance work on axles, bearings and drums, flooring, leaf springs, water heaters, air conditioners, generators, heaters, leveling systems, refrigerators, roofs, slides and winter preparation. It publishes a service fee, an hourly rate and a winterizing flat rate and travels to the customer's location.",
+      "g": [
+        "mobile tech",
+        "RV repair"
+      ],
+      "base": "Haverhill",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "phone_quote": "603-583-1584",
+        "type_quote": "After attending the NRVTA, I've found my true passion in being a Certified Mobile RV Tech.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": []
+      }
+    },
+    {
+      "n": "Freedom Rolls RV",
+      "c": "Palmer, MA",
+      "p": "855-305-3737",
+      "u": "https://freedomrollsrv.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Freedom Rolls RV is a mobile RV repair business owned by Ryan Baldyga and based in Palmer, Massachusetts. It describes itself as NRVTA/RVTAA certified and insured and brings on-site repairs to the customer's location. Its permanent spring, summer and fall service area is Western Massachusetts and Northern Connecticut.",
+      "g": [
+        "mobile tech",
+        "RV repair"
+      ],
+      "base": "Palmer",
+      "areas": [],
+      "region": "Western MA, Northern CT",
+      "spec": null,
+      "evidence": {
+        "phone_quote": "855-305-3737",
+        "type_quote": "Our mobile RV service ensures the utmost in convenience, with reliable and professional repairs delivered right to your location.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Our permanent Spring, Summer, Fall location will be serving the Western MA, Northern CT region!"
+        ]
+      }
+    },
+    {
+      "n": "Leano RV, LLC",
+      "c": "Phillipston, MA",
+      "p": "978-895-6141",
+      "u": "https://www.leanorvllc.com/",
+      "t": "mobile",
+      "e": false,
+      "r": false,
+      "d": "Leano RV, LLC is a family-owned mobile RV service and repair business on Royalston Road in Phillipston, Massachusetts with more than 15 years in the camping industry. It lists maintenance, service and repair work covering roof maintenance, winterization and de-winterization, sanitation, slide-out service, sealing, appliances, electrical, plumbing, HVAC, LP systems and awnings. The site names an RVTI Level 2 RV Technician and RVTI Level 3 RV Slide Specialist.",
+      "g": [
+        "mobile tech",
+        "RV repair"
+      ],
+      "base": "Phillipston",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "phone_quote": "978-895-6141",
+        "type_quote": "MOBILE RV SERVICE & REPAIR",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "PROUDLY SERVING PHILLIPSTON, MA AND BEYOND"
+        ]
+      }
+    },
+    {
+      "n": "Dr. Fiberglass RV Repair & Collision",
+      "c": "Uxbridge, MA",
+      "p": "(508) 779-0834",
+      "u": "http://drfiberglass.net/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Dr. Fiberglass is an RV and camper repair and collision shop on Quaker Highway in Uxbridge, Massachusetts. Its site presents it as a one-stop shop for camper and RV repairs. Another listed Massachusetts mobile RV business, MASS MOBILE RV SERVICE LLC., refers customers to Dr. Fiberglass in Uxbridge for body damage repair.",
+      "g": [
+        "RV repair",
+        "collision",
+        "body work"
+      ],
+      "base": "Uxbridge",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "phone_quote": "508-779-0834",
+        "type_quote": "The One Stop Doc you need for all you're Camper & Rv Repair's",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": []
+      }
+    },
+    {
+      "n": "Bob's Camper & RV",
+      "c": "Williamstown, MA",
+      "p": "(413) 458-3093",
+      "u": "https://bobscamper.com/service/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Bob's Camper & RV is a family-run RV dealership and service department on Hancock Road in Williamstown, Massachusetts. The service page takes appointment requests for RV maintenance and repairs, and the business sells new and pre-owned travel trailers, fifth wheels and toy haulers.",
+      "g": [
+        "RV repair",
+        "RV service",
+        "dealer service"
+      ],
+      "base": "Williamstown",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "checked": "https://bobscamper.com/service/",
+        "phone_quote": "(413) 458-3093",
+        "type_quote": "RV Services & Repairs in Massachusetts",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Own an RV that needs maintenance or repairs?"
         ]
       }
     }

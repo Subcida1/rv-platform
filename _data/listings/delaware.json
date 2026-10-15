@@ -16,7 +16,11 @@
     "Saint Georges": "northern-de",
     "Smyrna": "northern-de",
     "Frankford": "southern-de",
-    "Milford": "southern-de"
+    "Milford": "southern-de",
+    "Clayton": "northern-de",
+    "Newark": "northern-de",
+    "Camden": "northern-de",
+    "Bear": "northern-de"
   },
   "listings": [
     {
@@ -165,6 +169,163 @@
         "emergency_quote": null,
         "roadside_quote": null,
         "licence": null
+      }
+    },
+    {
+      "n": "Alexander RV Center",
+      "c": "Clayton, DE",
+      "p": "(302) 653-1234",
+      "u": "https://www.alexanderrv.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Family-owned RV dealership in Clayton, Delaware, offering RV sales, parts and service since 1995. The site describes a highly trained and experienced RV service team and lists RV Parts & Service hours at the Clayton location. Repair work is done at their shop and no mobile service is claimed.",
+      "g": [
+        "RV repair",
+        "RV service",
+        "dealer service"
+      ],
+      "base": "Clayton",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "phone_quote": "(302) 653-1234",
+        "type_quote": "We've built our business on providing top quality RV service for many years.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": []
+      }
+    },
+    {
+      "n": "Double Deuces RV Roofing, Inc",
+      "c": "Newark, DE",
+      "p": "(302) 455-2937",
+      "u": "https://rvroof.com/locations/double-deuces-rv-roofing-newark/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "RV roof repair and replacement shop in Newark, Delaware, using the FlexArmor polyurea roof system. Services listed include full RV roof replacement, leak detection and repair, camper roof sealant applications and preventative roof coatings. The page states the Newark location serves Wilmington, Middletown and northern Delaware.",
+      "g": [
+        "RV repair",
+        "roof repair"
+      ],
+      "base": "Newark",
+      "areas": [
+        "Wilmington",
+        "Middletown"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "phone_quote": "Phone: 302-455-2937",
+        "type_quote": "Full RV roof replacement",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "Our Newark location proudly serves RV owners in Wilmington, DE, Middletown, DE, Elkton, MD, and throughout Northern Delaware."
+        ]
+      }
+    },
+    {
+      "n": "Forest River RV Delaware by Camping World",
+      "c": "Milford, DE",
+      "p": "(877) 351-8161",
+      "u": "https://rv.campingworld.com/dealer/forestriver-milford-delaware/rv-service-repair",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "RV dealership service department in Milford, Delaware, at 2210 Bay Road on Route 1. The service page states the shop provides complete service and repair for all RV types: diagnostics, repairs, routine maintenance and warranty work, including OEM and extended warranty coverage. RV performance and installation is listed as its own department at the location.",
+      "g": [
+        "RV repair",
+        "RV service",
+        "dealer service",
+        "warranty work"
+      ],
+      "base": "Milford",
+      "areas": [],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "phone_quote": "(877) 351-8161",
+        "type_quote": "RV Service, Maintenance, & Repair at Forest River RV Delaware",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "We provide complete service and repair for all RV types. Diagnostics, repairs, routine maintenance, warranty, and more — we identify and address common and unexpected RV maintenance needs. Contact us to set up an appointment."
+        ]
+      }
+    },
+    {
+      "n": "Boyd's Welding, Inc.",
+      "c": "Camden, DE",
+      "p": "(302) 697-9000",
+      "u": "http://www.boydswelding.com/mobile/trailer-hitches-for-sale.html",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Boyd's Welding, Inc. is a welding and fabrication shop in Camden, Delaware, in business since 1973. Alongside crane service, trailer hitches and residential excavating it performs trailer repairs on utility, construction and RV trailers and handles trailer wiring. It stocks more than 300 trailer hitches and installs tow bars, fifth wheels and goosenecks. It lists Camden, Dover, Milford, Georgetown, Middletown, Seaford, Rehoboth and Smyrna among the areas it serves.",
+      "g": [
+        "trailer repair",
+        "hitch",
+        "RV repair"
+      ],
+      "base": "Camden",
+      "areas": [
+        "Camden",
+        "Dover",
+        "Milford",
+        "Georgetown",
+        "Middletown",
+        "Seaford",
+        "Rehoboth",
+        "Smyrna"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "phone_quote": "Call Now (+13026979000)",
+        "type_quote": "We also perform trailer repairs on any type of utility, construction, and RV trailers and the electrical wiring for trailer lights.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": []
+      }
+    },
+    {
+      "n": "Hidden Hitch and Trailer Parts Inc",
+      "c": "Bear, DE",
+      "p": "(302) 834-6700",
+      "u": "https://hitchandtrailerpartsbear.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Hidden Hitch and Trailer Parts Inc is a trailer hitch and trailer parts business in Bear, Delaware, in business more than 45 years. The site lists trailer repair, trailer hydraulic and electric brake installations and repairs, electric brake controller installations and vehicle and trailer wiring among its services. It states it serves a 100-mile area in Castle County and names Newark, Glasgow, Wilmington, New Castle, Townsend, Middletown, Hockessin and Smyrna among the areas it serves.",
+      "g": [
+        "trailer repair",
+        "hitch",
+        "wiring"
+      ],
+      "base": "Bear",
+      "areas": [
+        "Newark",
+        "Glasgow",
+        "Wilmington",
+        "New Castle",
+        "Townsend",
+        "Middletown",
+        "Hockessin",
+        "Smyrna"
+      ],
+      "region": null,
+      "spec": null,
+      "evidence": {
+        "phone_quote": "(302) 834-6700",
+        "type_quote": "For over 45 years, Hidden Hitch and Trailer Parts Inc has been providing quality trailer hitches and trailer repair and the best in customer service to the Bear, Red Lion, Williamsburg, and New Castle County, DE areas.",
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "coverage_quotes": [
+          "We serve a 100-mile area in Castle County."
+        ]
       }
     }
   ]
