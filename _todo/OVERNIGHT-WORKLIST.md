@@ -2647,3 +2647,46 @@ Ty, 01:00: *"act as a conductor for the night and keep all of our work rolling �
 - Conductor status as of 01:15 PDT: all six working sessions ACTIVE and processing; `conv-cf6aa2a3` IDLE waiting on Ty (W19 page 6) — not disturbed. Batch D closed by its own session. Main green, no failed runs in 6h.
 
 **Done criteria:** every item above is applied and pushed with CI green, or explicitly recorded as blocked-on-Ty. The conductor reports the night's result to Ty in the morning.
+## Batch A closes — the content batch (conv-b71ff860, 2026-10-15)
+
+**Status: COMPLETE.** Every item in the conductor's batch A is applied and pushed.
+
+**Already on main from the earlier silo passes.** Verified against the live tree before touching
+anything, because the plan was drawn from the queue and the queue lags the tree:
+
+- In-body tool links, all five guides (`c95dbc8c`)
+- towing-trailer -> weight calculator, and pre-trip-walkaround + driving-motorhome -> weight
+  calculator (`9e4f9cef`)
+- Finder blocks: all 14 tools carry a Where-to-go-next block, not the 4 the finding named
+  (`99b122e0`, `ff497f99`)
+- anode-rod double link, GasBuddy citation, two-appliances opening (`99b122e0`, `65aa2c51`,
+  `c95dbc8c`)
+
+**Applied tonight:**
+
+- `guides/rv-maintenance-schedule` -> the water filter finder and the anode rod finder. Those are
+  the only two intervals on the page that replace a part rather than check one; both are rows in
+  its own table.
+- `guides/rv-trip-planner` -> the fuel cost calculator, which is the number its fuel section is
+  about keeping down.
+- `tools/weight-calculator` -> the towing capacity guide added to its next block, which was
+  tools-only.
+- `tools/battery-runtime` -> the battery not charging guide added to its block, same reason.
+- `guides/trailer-brakes-required` -> the threshold table now says what it is: three states worked
+  through rather than all fifty, chosen because each writes the rule a different way.
+- `manuals/water-and-plumbing` and `manuals/kitchen-and-appliances` -> their tool links. Both pages
+  are generated, so the fix is a `TOOLS` mapping in `build-manuals-pages.py` beside the existing
+  `RELATED` one. Only the two direct matches are in it; `heating-and-cooling` gets none, because the
+  nearest tool (snow load) is roof-adjacent at best.
+
+**ENVIRONMENT NOTE FOR ANY SESSION WORKING IN A CLOUD SANDBOX.** `ci.sh`'s four browser steps
+(accessibility/axe, link visibility, row alignment, heading space) spawn `flatpak run
+com.google.Chrome`, and flatpak does not exist off the-grid. They fail with `spawn flatpak ENOENT`,
+which reads like a content failure and is not. They pass with:
+
+    CHROME_BIN="google-chrome --no-sandbox" bash scripts/ci.sh
+
+The `--no-sandbox` is required because a sandbox runs as root; without it Chrome starts and then
+never answers on the debug port, which fails the same way. The GitHub runner is unaffected -- it has
+flatpak, and those four steps run and pass there.
+
