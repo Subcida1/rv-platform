@@ -2591,7 +2591,7 @@ Ty, 01:00: *"act as a conductor for the night and keep all of our work rolling �
 | `conv-c145cc42` | thin-states fill-out (fan-out, ~10 states) | ACTIVE — listings being written; will build + CI + push when the fan-out closes |
 | `conv-b71ff860` | content batch — in-body links, finder blocks, small fixes | ASSIGNED |
 | `conv-8e8a0028` | weight calculator — finish the 100-case harness + remaining calculator items | **CLOSED** — harness on main (`0a0e8b5e`), calculator items on main (`1f5bf9fc`, `e2287b26`, `f103b6b7` by another session) |
-| `conv-ff6725d2` | directory data batch — all-50 phone audit + carryovers | ASSIGNED |
+| `conv-ff6725d2` | directory data batch — all-50 phone audit + carryovers | **CLOSED** — on main (`5754ee4c`) |
 | `conv-c3913bd3` | schema/hub batch + W29 entry update | **CLOSED** — on main (`531bb657`) |
 | `conv-cf6aa2a3` | W19 voice calibration | WAITING ON TY (page 6 presented) — DO NOT DISTURB |
 | `conv-19dd16d7` | conductor — roof-leak OWED review, monitoring, incidents, unblocking | ACTIVE |
@@ -2748,7 +2748,7 @@ Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all
 | `conv-c3913bd3` | IDLE after B | **Neo manuals 13th rotation items: CLOSED** (`ea8fe0b6`, parallel session) — brands ItemList 40→44 applied; hub ItemList 8→11 applied (measured against the other four hubs first; 8 was drift). Both verified on main. |
 | `conv-095eb8fd` | IDLE — stalled mid-turn at 01:20 (approval unanswered) | **Resumed**: batch E card fixes + parts card ids (157 anchors), 12 thin taglines, pin-weight candidate |
 | `conv-c145cc42` | IDLE — stalled at 01:33 (reasoning loop) | **Resumed**: finish thin states, builders, CI, push |
-| `conv-ff6725d2` | ACTIVE (batch C in progress) | — |
+| `conv-ff6725d2` | **CLOSED** — batch C on main (`5754ee4c`) | — |
 | `conv-cf6aa2a3` | IDLE — waiting on Ty | W19 page 6 (`tools/rv-anode-rod`) — do not disturb |
 
 **Two fleet notes for every session:**
@@ -2836,3 +2836,104 @@ The ChatGPT lane opened (heartbeat 13s) and the job was queued, but no answer wa
 **Retry in flight:** fresh chat + the staged files copied to new paths (`staged/state-brake-r2/`) so the persisted ledger sees fresh paths, job re-queued as `20261015-0300-state-brake-review-r2`. If this fails too, the bridge pass is recorded as owing and the session review (conv-c3913bd3) stands alone — which is a legitimate pass per the standing doctrine.
 
 **Diagnostic worth keeping:** the failure was mechanical (duplicate ledger + capture ceiling), not a content problem — the prompt was delivered and confirmed, the composer cleared, and the lane began reading the staged files. When re-queuing a bridge job whose files were read in a prior attempt, copy them to new paths first.
+
+## Batch C closes — the directory data batch (conv-ff6725d2, 2026-10-15)
+
+**Status: COMPLETE.** Every item in the conductor's batch C is applied and pushed, except the one
+editorial wording item recorded for Ty at the end.
+
+### 1. All-50 phone audit — the tool, and the two records it corrected
+
+**New instrument: `scripts/audit-phones.py`.** The "suspicious area code" class has been raised six
+times and refuted six times — the directory records what a business publishes, and a mobile
+technician keeping a number from wherever they moved from is not a data error — so the check is now
+repeatable instead of re-argued each time. Three questions, in the order that matters: the number's
+shape (10 digits; a vanity number like "(844) 440-ROAM" is left exactly as published), the area code
+against the listing's state (REPORTED, never failed), and whether the number appears in the record's
+own `phone_quote` (a quote that does not support its own phone IS a defect). `--fetch` adds the
+freshness pass: load each flagged business's site and look for the number.
+
+The area-code map is generated from Wikipedia's NANP list (fetched 2026-10-15) and cross-checked
+against libphonenumber's geocoder — zero disagreements on the 275 codes that appear in the data.
+Two parse traps found and fixed while building it: "Washington, D.C." in a description was matching
+Washington State, and "West Virginia" was matching Virginia.
+
+**Results across all 50 states, 1,942 listings: 84 out-of-state area codes.** 78 carry a
+`phone_quote` verbatim from the business's own site; 6 did not, and now do (see below). The freshness
+pass ran over all 84:
+
+- **75 numbers are still published on the business's site.**
+- **TN — Sunset Mobile RV Repair: the number CHANGED. FIXED.** The record carried 281-789-8901 (a
+  verbatim quote; the June 2026 Wayback snapshot confirms it was on the site then). The site now
+  publishes 423-430-9443. Record updated with a fresh verbatim quote ("Call 423-430-9443").
+- **VT — Airstream of Vermont: the quote did not support the phone. FIXED.** The record's phone
+  (802) 213-2947 is the current service number (the contact page lists "Service: (802) 213-2947"
+  with a matching tel: link); the old quote came from the service page, which still carries the
+  previous number. Quote replaced. The site blocks direct fetches, so this was verified through a
+  fresh Internet Archive crawl of the live page.
+- 3 sites are Cloudflare-blocked (Campers Inn ×2, Airstream) — not verifiable programmatically.
+- 1 site has a broken TLS certificate (Repair Vigorously) — the number IS on the page, read with
+  `curl -k`.
+- 5 first-run false negatives, all from the tool's own bugs (it stripped tags before searching, so
+  `tel:` link digits were invisible; and JS-rendered pages read as empty). Fixed in the tool; all
+  five verified by hand (TRIC renders "(508) 479-1144" in Chrome; Flash RV, Mobile RV Repair
+  Solutions, Great Lakes and RVQC carry theirs in attributes).
+- **CA — Foothill RV (840): the "invalid NANP" claim is REFUTED.** 840 was assigned on 2021-02-23
+  as an overlay of 909 in California; the number is valid and the business's own site prints it
+  three times plus a `tel:` link. Nothing to fix.
+
+**Not wired as a gate, deliberately.** The quote check (a record's phone must appear in its own
+`phone_quote`) has zero violations today and could gate; the out-of-state report must stay a report,
+because out-of-state codes are legitimate and a gate that fails on correct data is worse than none.
+If the quote check is ever wired in, it belongs in `verify.py` beside the listing-integrity block.
+
+**The queue's named items, each resolved:** Magic Wand (CA) 612 — sourced (the quote is verbatim from
+its site) and the number is still published; Page's (OR) 208 — the record explains it (based in
+Nampa, Idaho) and it now carries a quote too; the AZ/WA/OR/CO codes — all sourced and all still
+published; Foothill (CA) 840 — refuted above.
+
+**Also closed:** the 6 flagged records that carried no `phone_quote` (OR AAA RV Tech, OR Bald Bros,
+OR Urgent Care, OR Page's, TX New Beginnings, WA Tim's). The freshness pass confirmed each number is
+live on the business's site, and each now carries a verbatim quote from it. After the Sunset fix the
+flagged count is 83 — the new number is a Tennessee code, so that record left the list. The wider
+class is 113 records carrying a phone with no quote; that is a data-quality queue, not a defect.
+
+### 2. NM roadside over-claim + per-state lede variant — FIXED, in four surfaces
+
+The lede's closing sentence was hand-copied onto all 50 pages, so it kept claiming things eleven
+states do not have: "along with emergency roadside help for breakdowns on the highway" in the 11
+states with zero roadside-flagged listings, and "Both are here" in Hawaii, whose two listings are
+both mobile technicians. `lede_text()` in `build-listings.py` now builds the closing sentence from
+the same counts the stats strip shows; the lede sits between `LEDE:START/END` markers and `--check`
+guards it. Result: 39 states unchanged, 10 now read "Both are here.", Hawaii reads "Mobile
+technicians are here."
+
+The same over-claim lived in three more surfaces, found by grepping the class rather than fixing the
+one instance:
+
+- **JSON-LD** (`description` and `about`) — now built from the counts. New Mexico no longer tells
+  search engines it has roadside help; Hawaii no longer claims service centers.
+- **Meta descriptions, 11 states** — the false roadside clause is out, replaced with a true clause
+  about the page's own "what to look for" content (the 140-160 char gate needs the length). All 11
+  land at 143-152 chars.
+- **H1 subtitle** — Hawaii read "Mobile technicians and service centers in Hawaii" with zero
+  centers; now "Mobile technicians in Hawaii".
+
+### 3. Thin-content + region taxonomy — analysis recorded
+
+- **Thin-content.** The lede now varies where the data varies (11 states). The three boilerplate
+  sections ("What a listing carries", "What to look for in an RV technician", "RV repair directory
+  FAQ", ~5 KB total) remain byte-identical on all 50 pages. Analysis: these pages' unique content is
+  the listings and the region structure; the shared sections are generic advice that is the same
+  everywhere by design. A per-state content pass is a content-engine task, not a data fix —
+  recorded rather than invented.
+- **Region taxonomy.** Two parts. (a) "West" holding the Mountain states (CO/ID/MT/NV/ND/SD/UT/WY)
+  is VisitTheUSA's scheme, adopted on Ty's instruction and documented in `_data/regions.json` with
+  the disagreements kept as published — deliberate, nothing to fix. (b) The hub intro says "Listed
+  by region, west to east" while Alaska and Hawaii sit last; the placement is Ty's own 2026-10-05
+  decision (also in regions.json), so this is a wording choice, and it is editorial. **FOR TY:**
+  recommended wording — "Listed by region, west to east, with Alaska and Hawaii at the end, then
+  alphabetically by state inside each one." One line to apply on approval.
+
+**Gate:** `bash scripts/ci.sh` (with `CHROME_BIN="google-chrome --no-sandbox"` for the sandbox's
+four browser steps) — every check passed; the commit was archive-checked before the push.
