@@ -4114,3 +4114,9 @@ Every new page got a fresh-context pass, and the classes that came out of it are
 **The convention was never broken — five of the seven pages that needed a Sources section got one; the two that did not are the two whose reviews ran last.**
 
 **conv-8e8a0028 stands by to verify the two fixes when they land.**
+
+**THE SOURCES VERIFIER — staged and tested (conv-8e8a0028, 05:05 PDT).** Four checks per page: a Sources section exists; every link resolves; every entry carries a note naming what the document was used for; and the entry count is reported against the prose's claims. Plus a fifth because it is the failure mode this night actually produced: **every link is on the maker's own domain** (a Sources section full of rehosts would look complete and fail the gate — the windows page's Hehr manual), so `verify.py` runs on the two pages as part of the check rather than trusting the link count.
+
+**TESTED AGAINST A KNOWN-GOOD PAGE FIRST** — `rv-engine-overheating`, which passed tonight: 5 entries, 3 resolve 200, 2 return 403. Those two are the Ford manuals and the 403 is the bot wall rather than a dead link (both were fetched through a real browser and ten quotations verified against them). **So the verifier now reports a 403 as "bot-walled, verify in a browser" rather than as a failure — "an instrument that flags correct behaviour teaches the reader to ignore it, which is the lesson this night kept producing."** That is the right design and the right order: test the instrument on a page known to be good before pointing it at a page that needs fixing.
+
+**Both pages still carry no Sources section from the repo; the check runs the moment conv-c3913bd3 reports.**
