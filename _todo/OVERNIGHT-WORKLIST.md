@@ -4067,6 +4067,7 @@ Every new page got a fresh-context pass, and the classes that came out of it are
 7. **The two-guide renderer** — five guides want a second slot on a parts card.
 8. **The off-grid heating page's justification** — written on safety grounds rather than demand (one of its four cards carries a figure). Worth a read; pull it if you read it differently.
 9. **The state+manuals closing-line second pass** — not approved, not queued.
+10. **The /about title** — 44ch, omits Directory and Parts; the 8th-rotation suggestion ("About OriginRV: RV Tools, Repair Directory and Guides", 52ch) was queued for a ruling on 10-13 and never reached this list. One line to rule on.
 
 ## Incidents (all resolved)
 - **One transient Pages deployment failure** (a GitHub OIDC blip) — caught by the monitor in 3 minutes, fixed by rerun. If you got a failure email around 02:25, that was it.
@@ -4493,10 +4494,27 @@ fuse 30   —      "Not used"                the page said it protects "Battery 
 | `conv-cf6aa2a3` | W19 voice calibration — waiting on Ty, untouched all night as instructed |
 | `conv-19dd16d7` | the conductor: the plan, the dispatches, the verification passes, the incidents, and this record |
 
-## Blocked on Ty (unchanged)
-W3's spec; W5's photos; W19 pages 6–8; the trust-claim cluster; the calculator H1; the /directory region-order wording; the two-guide renderer; the off-grid heating page's safety justification; the state+manuals closing-line second pass.
+## Blocked on Ty
+W3's spec; W5's photos; W19 pages 6–8; the trust-claim cluster; the calculator H1; the /directory region-order wording; the two-guide renderer; the off-grid heating page's safety justification; the state+manuals closing-line second pass; **the /about title** (added 2026-10-15, item 10).
 
 ## The night's rules (23, in the report above plus the last)
 The final one, from the last page of the night: **"a claim 'corroborated, not read' is not corroborated."** The document was right, the words were right, and the pairing was wrong — the words appeared in a different table. Read the table the words are in, or record the step as open.
 
 **The conductor is done. The worklist above is the record.**
+
+## Neo about 12th rotation (2026-10-15, verified from the Cloud lane)
+
+Seven items, verified against the page sources and the live site at tip `d188ddd3`:
+
+- **#1 AboutPage Person 'Ty' twice: CONFIRMED, and the class is wider than about.html.** Both `author` and `mainEntity` are anonymous `{"@type":"Person","name":"Ty"}` nodes. The site-wide audit Neo asked for: Person duplication is unique to about.html, but the same class exists on **59 pages** -- every guide (58) plus `manuals/start-here` declares `publisher` and `author` as two anonymous `Organization` nodes for the same entity. Queue: one entity with an `@id`, used from both fields -- `https://originrv.com/about#ty` on about.html; `https://originrv.com/#organization` on the guides, with the same `@id` added to the homepage's Organization node.
+- **#2 AboutPage has no @id: CONFIRMED (minor).** No page-level entity site-wide carries an `@id` except the WebSite (2 instances), and that one exists because 52 pages reference it via `isPartOf`. Queue: add `"@id": "https://originrv.com/about#page"` to the AboutPage -- it pairs with the Person fix above.
+- **#3 /about title: CONFIRMED, and it goes to the blocked list.** 44ch, omits Directory and Parts. The 8th-rotation suggestion ("About OriginRV: RV Tools, Repair Directory and Guides", 52ch) was queued for a ruling on 10-13 and never reached the blocked list. Added as blocked item 10.
+- **#4 Privacy video claim: CONFIRMED.** "nothing from YouTube loads" contradicts "shows a still frame from YouTube" -- the still frame loads from `i.ytimg.com` (verified: HTTP 200, no Set-Cookie). Queue: replace with "so no YouTube player, tracking, or cookies load unless you choose to watch."
+- **#5 "One page carries a video": VERIFIED STILL TRUE.** Site-wide grep for `data-video` / `ytimg` / `youtube` / `<video` / `<iframe`: only `guides/rv-towing-trailer.html`.
+- **#6 /contact thin copy: recorded, no action** (as Neo notes).
+- **#7 W29 record: VERIFIED UPDATED.** The W29 entry carries the batch-B correction ("the About link was removed ON PURPOSE ... Do not restore it").
+- **One correction to Neo's (d):** the nav carries "All 14 tools" (15 now) on all three pages -- site-wide chrome, already queued from the homepage rotation.
+
+**Lane note:** the 06:00 PDT check-in failed to capture a reply -- the long-turn pattern (verification rotations run 30+ tool calls and exceed the ~4-minute reply window; the run was still `running` with null stop_reason, not stalled). The findings above are that turn's output.
+
+Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all 8 comparisons ok. CI green.
