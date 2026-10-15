@@ -987,10 +987,10 @@
     "sources": []
   },
   "tools/fuel-cost.html": {
-    "hash": "d6f1dec0f6069735",
+    "hash": "397e9250d5ea7e76",
     "status": "verified",
-    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
-    "verified_at": "2026-10-13",
+    "verified_by": "queued Neo rotation findings applied 2026-10-14: the GasBuddy source citation added on the fuel cost tool; a Where to go next block added to six tool pages (tire-date-code, rv-appliance-board-finder, rv-converter-finder, rv-recall-lookup, rv-toilet-valve, rv-anode-rod) with topic-matched links, no fact changed. The black tank parts card now points at the dedicated RV black tank guide.",
+    "verified_at": "2026-10-14",
     "sources": [],
     "spec": null,
     "spec_waived": true,
@@ -1011,10 +1011,10 @@
     "sources": []
   },
   "tools/rv-appliance-board-finder.html": {
-    "hash": "34653e89b04e25fd",
+    "hash": "85b13dbbb2a6d962",
     "status": "verified",
-    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
-    "verified_at": "2026-10-13",
+    "verified_by": "queued Neo rotation findings applied 2026-10-14: the GasBuddy source citation added on the fuel cost tool; a Where to go next block added to six tool pages (tire-date-code, rv-appliance-board-finder, rv-converter-finder, rv-recall-lookup, rv-toilet-valve, rv-anode-rod) with topic-matched links, no fact changed. The black tank parts card now points at the dedicated RV black tank guide.",
+    "verified_at": "2026-10-14",
     "sources": [],
     "spec": null,
     "spec_waived": true,
@@ -1051,9 +1051,9 @@
     "claims": []
   },
   "tools/rv-toilet-valve.html": {
-    "hash": "155a93cffccf5fe2",
+    "hash": "295a7a512d277ce9",
     "status": "verified",
-    "verified_by": "the reader-benefit sweep, step 1 of _todo/VOICE-RULESET.md: the clause about the reader (why the fact matters, what it costs them) cut or rebuilt as the content, per Ty 2026-10-13 \"Say the thing... just spit out the content\". No fact changed; the framing did.",
+    "verified_by": "queued Neo rotation findings applied 2026-10-14: the GasBuddy source citation added on the fuel cost tool; a Where to go next block added to six tool pages (tire-date-code, rv-appliance-board-finder, rv-converter-finder, rv-recall-lookup, rv-toilet-valve, rv-anode-rod) with topic-matched links, no fact changed. The black tank parts card now points at the dedicated RV black tank guide.",
     "verified_at": "2026-10-14",
     "sources": [],
     "spec": null,
@@ -1088,10 +1088,10 @@
     "sources": []
   },
   "tools/tire-date-code.html": {
-    "hash": "e69133cea516c4f7",
+    "hash": "b6a6f201f105c55c",
     "status": "verified",
-    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
-    "verified_at": "2026-10-13",
+    "verified_by": "queued Neo rotation findings applied 2026-10-14: the GasBuddy source citation added on the fuel cost tool; a Where to go next block added to six tool pages (tire-date-code, rv-appliance-board-finder, rv-converter-finder, rv-recall-lookup, rv-toilet-valve, rv-anode-rod) with topic-matched links, no fact changed. The black tank parts card now points at the dedicated RV black tank guide.",
+    "verified_at": "2026-10-14",
     "sources": [],
     "spec": null,
     "spec_waived": true,
