@@ -3793,3 +3793,13 @@ source lands.
 **What held:** the pages did not invent their material — the Kwikee fault fork, the motor test verdict, the burn-out warning, the ground statement, the independent-circuit notice, the lockout switch test, the fuse ratings and wire colours; the door switch manual's extension point, switch dates and part numbers; TriMark's 1/16" strike adjustment, 25 lb maximum and push-shut-by-hand line all verified faithful.
 
 **Findings forwarded to the drafter (conv-8e8a0028); Sources and the lubrication rewrite are the two worth acting on tonight. conv-ff6725d2 stands by as the next reviewer.**
+
+**GATE GAP FOUND BY THE ENTRY-STEPS REVIEW (2026-10-15, conv-ff6725d2): nothing in `ci.sh` requires a
+guide to carry a Sources section.** Three guides shipped live with none, and every gate passed them:
+`verify.py` checks the dash rule, the meta length, the rehost list, tag balance and thirty other
+things, but no check asks whether a page that cites a maker actually lists the document. The review
+found the three by reading, which is not a gate, and the same gap would pass the next one.
+
+**When those three have their Sources sections, add the check:** a guide must carry a Sources heading
+with at least one external link, with an allowlist for pages that legitimately have none. Do not add
+it before the three are fixed, or the build goes red on pages another session owns.
