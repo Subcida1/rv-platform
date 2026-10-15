@@ -4636,3 +4636,15 @@ Seven pages, verified against the page source at tip `c7ceb9af`:
 - **#6 parts card links: measured zero inside `<main>` on all seven.** Neo's note that chassis-battery-and-charging and engine-overheating "show 2 parts links each" does not reproduce in `<main>` -- those counts are almost certainly whole-file (nav/footer chrome). The mapped unlinked-guide queue stands at five for this slice.
 
 Instruments at this tip: `verify.py` ALL CHECKS PASSED.
+
+## Neo tools 15th rotation (2026-10-15, re-verification)
+
+All seven items from the 07:30 queue re-checked at tip `bc447254`. **Item 2 is now APPLIED** (`3af22b61`); the rest stay queued.
+
+- **#2 "All 14 tools": APPLIED (fourth flag).** The label now reads "All 15 tools", the state-brake-laws entry is in both the desktop dropdown and the mobile menu, and `build-shell.mjs` rewrote 145 pages. `build-all.sh` clean.
+- **#1 brake table JS-only: CONFIRMED (third flag).** `tbody#bl-table` empty, zero noscript. Queue: have `build-brake-laws-data.py` emit the rows between markers.
+- **#3 date template split: CONFIRMED.** Seven finders carry the byline and `dateModified`; rv-loan, snow-load, battery-runtime, fuel-cost, solar-sizing, watts-to-amps and brake-laws carry neither. Queue: add the byline + `dateModified` to those seven.
+- **#4 brake-laws thin links: CONFIRMED.** In `<main>`: `/guides/trailer-brakes-required` + `/contact` only. Queue: `/tools/weight-calculator` and a reciprocal `/manuals/start-here`.
+- **#5 start-here external: REFUTED on the internal-link half.** The internal tool IS linked in `<main>` -- `tools/state-trailer-brake-laws`, in the brake-controller FAQ ("the weight each state sets is in the state trailer brake table"). The rigcalc and towcapacitycalc links are Sources citations (1 of 206), not stray tool links. No removal without checking the claim record.
+- **#6 rv-loan siloed: CONFIRMED** (mild; no loan guide exists).
+- **#7 571.110: the nuance is wrong -- the regulation does literally name propane.** Re-fetched from the eCFR API: "If the vehicle is a recreation vehicle trailer and is equipped with a propane supply, the weight of full propane tanks must be included in the vehicle's unloaded vehicle weight." It says it three times (motor home, RV trailer, and S9.3.2 for RVs generally). The page's "requires" is literally correct; the suggested softening would make it less accurate. **No change.**
