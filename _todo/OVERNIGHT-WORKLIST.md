@@ -4100,3 +4100,17 @@ Every new page got a fresh-context pass, and the classes that came out of it are
 **One rule from the tank page's rebase, which is new:** **A GENERATED FILE CAN CONTAIN HAND-WRITTEN REGIONS, AND "REGENERATE IT" IS NOT THE SAME AS "REBUILD IT".** The tank page's commit conflicted in six files on every rebase, and the fleet lesson — resolve to upstream, then re-run the generators — is right for five of them and **loses work in the sixth**. `guides/index.html` and `index.html` are generated for their ItemList and **hand-written for their tiles**, so resolving to upstream drops the tiles while the resolution looks complete. Caught by checking the catalogue against the page list (53 entries, 54 pages) rather than trusting the resolution. `scripts/_reapply-tank-guide.py` is in the repo so the next rebase of that page is one command.
 
 **And one ungated gap found while in there:** `rv-frame-cracks` was published without a sitemap entry. `build-sitemap.py --check` catches it and **`verify.py` does not**, so main was green with the gap live. Added — and then removed my duplicate when the other session added theirs in the same window. Worth deciding whether `build-sitemap.py --check` belongs in `ci.sh`; it is not there now.
+
+**FINAL VERIFICATION SWEEP — `438f8c53` (conv-8e8a0028). Almost everything holds.**
+
+**WHAT HOLDS:**
+1. **All ten new guides live and correctly built** — every one returns 200 with exactly one `<h1>`, one `<title>`, one canonical link, and a hub tile on `/guides/`.
+2. **The counts agree across every surface.** Guides **57** everywhere (homepage counter, guides-hub JSON-LD `numberOfItems`, search index, 57 files on disk). Tools **15** everywhere (tools-hub `numberOfItems`, its `data-claim="tools-live"`, the search index). Listings **2,027** everywhere (homepage counter, the search index's Business entries, the `_data/listings/*.json` records). Directory **50 states** (hub ItemList 50/50, 50 pages on disk, 50 in the sitemap — and the search index's 51 Directory entries are the hub plus the 50 states, which is correct rather than a mismatch).
+3. **Sitemap and search index complete** — all ten new guides in both; `build-sitemap.py --check` passes on parity, duplicates, dates and well-formedness.
+4. **The brake tool holds** — live data reports `{"covered":50,"total":51,"missing":["MS"]}`; the DC citation reaches the rule document with its second citation for the breakaway clause; Hawaii's elision is marked; Virginia's section symbol is restored; **and the shape sentences render live, verified in a browser for Hawaii, Pennsylvania, North Dakota and Delaware.**
+
+**WHAT FAILS — two pages, one defect class:** `guides/rv-water-pressure.html` and `guides/rv-heating-off-grid.html` carry **no Sources section** — each names maker documents in prose and links none of them. Both were flagged in their own reviews; both are conv-c3913bd3's and both fixes are in flight (the off-grid one is F2 of its findings, being applied now; the water-pressure one is F1, sent). **"The night's output is one defect class short of clean, and it is a two-page fix rather than a pattern."**
+
+**The convention was never broken — five of the seven pages that needed a Sources section got one; the two that did not are the two whose reviews ran last.**
+
+**conv-8e8a0028 stands by to verify the two fixes when they land.**
