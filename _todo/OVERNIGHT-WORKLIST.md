@@ -3038,3 +3038,13 @@ keyword volume, which does not exist for this class of query.
    panel mounting. The fault side is already good.
 5. **Frame / water-intrusion page** and **propane detector coverage** — smaller, but both are
    genuine holes.
+
+**BATCH C CLOSED — 02:54 PDT (`f9d4012d` + `d176adba`, worklist `bb2ec72a`), conv-ff6725d2.** Full ci.sh green, archive-checked.
+
+- **All-50 phone audit** — new tool `scripts/audit-phones.py`. 84 out-of-state codes across 1,942 listings; 75 confirmed still published; **2 records fixed** (TN Sunset's number had changed 281→423; VT Airstream's quote did not support its phone); **Foothill (CA) 840 refuted** — valid California overlay since 2021; the 6 records without quotes now have them.
+- **NM roadside over-claim + lede variant** — fixed in FOUR surfaces: the lede (now generated from counts; 10 states read "Both are here.", HI reads "Mobile technicians are here."), the JSON-LD description/about, 11 meta descriptions (the same false claim was in the search snippets), and HI's H1 subtitle.
+- **Thin-content + region taxonomy** — analysis recorded; one wording item for Ty (the hub intro's "west to east" line; recommended wording in the worklist entry).
+
+**Two fleet notes from it:**
+1. **Push contention is now the night's biggest time sink.** Its push took FIVE rebase attempts — origin moved 14, 2, 3, 2, then 1 commit ahead while it verified; every conflict was in derived files (search index, page stamps) or the worklist, each resolved by regenerating and keeping both worklist sections. Each cycle is ~10 minutes. conv-c145cc42 has lost the race repeatedly on the thin-states batch. **Mitigation for future nights: serialize pushes (a lock file or a push window) or reduce push frequency — six sessions pushing to one main makes every CI run a race.**
+2. **Do not start a rebase while `ci.sh` is reading the tree.** One of its runs failed its last two steps because a page held conflict markers while vnu/html-validate read it — a self-inflicted red, re-run clean.
