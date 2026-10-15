@@ -350,7 +350,8 @@ def foot(script):
     reason a manuals rebuild cannot drop the tag while the rest of the site keeps
     it. verify.py checks all 39 pages for it in both directions.
     """
-    return """  </main>
+    return """ <p class="page-foot">Something wrong here, or something missing? <a href="/contact">Tell us</a>.</p>
+  </main>
 
  <div id="site-footer" role="contentinfo"><!-- footer:start --><!-- footer:end --></div>
   <script src="assets/js/config.js"></script>

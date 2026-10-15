@@ -535,6 +535,15 @@ def build(kind):
                             ("stat-emerg", c["emerg"]), ("d-count", c["total"])):
             text, n = re.subn(r'(<b id="%s">)\d+(</b>)' % elem, r"\g<1>%d\g<2>" % value, text)
             assert n == 1, "%s: %s marker not found exactly once" % (slug, elem)
+        # The closing line, the same one every guide and tool carries. It is added here
+        # rather than in the page files so a new state cannot ship without it; the check
+        # is on the class, so a rebuild is a no-op once it is present.
+        if 'class="page-foot"' not in text:
+            text, n = re.subn(r"\n(\s*</main>)",
+                              "\n <p class=\"page-foot\">Something wrong here, or something "
+                              "missing? <a href=\"/contact\">Tell us</a>.</p>\n\\1",
+                              text, count=1)
+            assert n == 1, "%s: no </main> to put the closing line before" % slug
         put(page, text, old, "page")
 
     # 3. the hub tiles and the homepage figure
