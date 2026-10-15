@@ -433,10 +433,10 @@
     "claims": "f82066e98fbddabb"
   },
   "guides/rv-air-conditioner-not-cooling.html": {
-    "hash": "703308aceca136af",
+    "hash": "dcc3c96bb9d466d1",
     "status": "verified",
-    "verified_by": "queued Neo guides-12th silo finding applied 2026-10-15: these eighteen guides linked nothing outside /guides/ -- no tool, no part, no manual, no directory. Each now names one topic-matched target in its Related guides block (a tool where the guide is about arithmetic, the parts page where it is about a part, the maker's manual section where it is about documents). No fact changed; no existing link removed.",
-    "verified_at": "2026-10-14",
+    "verified_by": "2026-10-15 community-scan expansion: three sections added (running on limited power, heat-pump mode, noise) with fourteen new sources, from the scan's largest thin area (36 threads against this one guide). Every figure was checked against its cited document by an independent fresh-context review (subagent, separate context; same model as the drafter, so it is recorded for the findings and NOT as a strength claim). EIGHT findings, all applied: a sweeping amp range contradicted by a cited source; a breaker trap attributed to the wrong Cummins document (now the RV Generator Handbook); a CCC 2 diagnostics clause not in the cited document (deleted); the SmartEco step; a reader-benefit clause; two unnamed-authority openers; a factory inference; and two unreconciled Airxcel cooling figures. A second pass confirmed the fixes and caught five residuals, all applied. One citation removed for cause: microaireasystart.com is a Houston dealer, not Micro-Air, so the claims moved to the maker's own documents and the domain was added to verify.py's REHOST list.",
+    "verified_at": "2026-10-15",
     "sources": [],
     "spec": null,
     "spec_waived": true,
