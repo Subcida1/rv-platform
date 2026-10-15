@@ -2882,6 +2882,26 @@ Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all
 
 4. **TWO GATES CHECK BRITISH SPELLING AND THEY DO NOT AGREE.** On the solar setup pass (conv-8e8a0028, 2026-10-15) new prose carried **eleven** British forms — equalisation, synchronisation, self-levelling, optimisers, centimetres, recognise — and `check-spelling.py` reported **"no British spellings in published copy"** while `verify.py` failed on `british spelling`. Same class, different word lists. **A session that runs only check-spelling will ship British spellings believing it checked.** Run verify.py, or run both.
 
+## FINAL VERIFICATION SWEEP — the night's output (conv-8e8a0028, 2026-10-15 ~05:00 PDT)
+
+Checked from the live site and the repo, not from the worklist notes.
+
+**1. ALL TEN NEW GUIDES ARE LIVE AND CORRECTLY BUILT.** `rv-awning-not-working`, `rv-propane-detector-beeping`, `rv-propane-tank-wont-fill`, `rv-water-pressure`, `rv-frame-cracks`, `rv-heating-off-grid`, `rv-engine-overheating`, `rv-entry-steps-not-working`, `rv-window-leaking`, `rv-entry-door-wont-latch`. Every one returns 200 with exactly one `<h1>`, one `<title>`, one canonical link, and a hub tile on `/guides/`.
+
+**TWO FAIL: NO SOURCES SECTION.** `rv-water-pressure` and `rv-heating-off-grid` carry no Sources heading. Both were flagged in their own reviews tonight; this sweep confirms neither has been fixed. **Every other page in the set has one**, including the three entry guides that were missing theirs earlier and were fixed at `5ce94099`. Exact mismatch: `guides/rv-water-pressure.html` and `guides/rv-heating-off-grid.html` each name maker documents in prose and link none of them.
+
+**2. THE COUNTS AGREE ACROSS EVERY SURFACE.**
+- **Guides: 57 everywhere** — the homepage counter (`data-count="57"`), the guides hub's JSON-LD `numberOfItems`, the search index, and the 57 files on disk.
+- **Tools: 15 everywhere** — the tools hub's `numberOfItems` and its `data-claim="tools-live"`, and the search index.
+- **Listings: 2,027 everywhere** — the homepage counter, the search index's Business entries, and the `_data/listings/*.json` records.
+- **Directory: 50 states** — the hub's ItemList has `numberOfItems: 50` and 50 elements, 50 pages on disk, 50 in the sitemap. The search index's 51 Directory entries are the hub itself plus the 50 states, which is correct rather than a mismatch.
+
+**3. THE SITEMAP AND SEARCH INDEX ARE COMPLETE.** All ten new guides appear in both. `build-sitemap.py --check` reports PASS on parity, duplicates, dates and well-formedness.
+
+**4. THE BRAKE TOOL HOLDS.** Live data reports `{"covered":50,"total":51,"missing":["MS"]}`. The DC row's citation reaches the rule document (`DownloadFile=802C555F`), its second citation for the breakaway clause is present, Hawaii's elision is marked (`... (8)`), and Virginia's section symbol is restored. **The shape sentences render live** — checked in a browser for Hawaii, Pennsylvania, North Dakota and Delaware, each showing its threshold and its shape sentence.
+
+**WHAT THIS SWEEP FOUND: two pages missing a Sources section, and nothing else.** Every registration the night added — hub tiles, homepage tiles, sitemap entries, search index entries, ItemLists and counters — is present and consistent.
+
 **INDEPENDENT REVIEW — the engine-overheating page (conv-8e8a0028, 2026-10-15). CLEAN PASS.** Full findings in `_todo/REVIEW-engine-overheating.md`. Reviewed at `64973c9d`.
 
 **No defects found.** Quotation fidelity, the year attribution, both spine facts, both owner-level numbers, the Sources section and the voice all hold.
