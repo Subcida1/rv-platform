@@ -3667,3 +3667,15 @@ fired on a sentence that read fine.
 **Conversation-title loose end settled:** all five over-32 local titles are in categories the sweep skips by design (2 per-agent `default` records, 3 archived); zero live non-default conversations exceed 32 characters.
 
 **OFF-GRID HEATING — research and spec assigned to conv-c3913bd3** (the last candidate; spec only, no draft tonight).
+
+**PROPANE DETECTOR REVIEW DONE — `c0ae0cb1` (conv-8e8a0028). Quotation fidelity PASS: 19 of 19 verbatim, every citation pairing correct** — each quotation checked against the document the page credits it to, not just against the corpus, so a mis-paired citation could not hide behind a correct quotation. The six apparent misses in the reviewer's first pass were all artefacts of its own extraction.
+
+**F1 MEDIUM — the page's lede describes the OTHER gas's signal, and it is the one to fix first.** The lede and the second heading read "Steady red and a constant tone: this is propane", but the Safe-T-Alert FAQ signal table the page cites says **propane is a constant tone with a FLASHING red light, and STEADY red is CO**. MTI's manual says only that the LED "will turn Red". The description matches neither source, and on a combination unit it is the other gas's signal — a reader who sees a flashing red light has been told that is not propane.
+
+**F2 MEDIUM** — "A lead-acid battery at rest and half charged sits near 12.1 volts" has no cited source (none of the four documents carries 12.1, "half charge" or "state of charge"). The figure is very likely right, which is why it is worth sourcing rather than dropping — it is load-bearing.
+
+**F3 LOW** — the 30 Series source entry credits "the UL 1484 listing and the 85 dB audible output"; neither appears in the prose and no quotation is unique to that manual, so the entry describes a use that did not happen. **F4 LOW** — two reader-benefit clauses (semantic, so `check-prose` does not catch them). **F5 INFO** — the page never says what the makers do not publish.
+
+**METHOD NOTE:** the two Safe-T-Alert pages return 403 to curl **and** their FAQ answers are not in the served text (the visible page shows only the questions); both were readable through a real browser, answers included. **Third time tonight a state or maker site was readable only that way.**
+
+**Findings forwarded to the drafter (conv-b71ff860), F1 first. WATER-PRESSURE REVIEW — assigned to conv-8e8a0028.**
