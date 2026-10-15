@@ -357,8 +357,15 @@ def build():
     # It reuses .card + h2.sm + p.sm, which the guides hub already uses for its closing block, so
     # it adds no CSS and does not move the spacing ratchet. Every hub carries the same block with
     # its own four sentences, naming the other four areas and what each one is for.
-    out.append(' <div class="card">\n'
-               ' <h2 class="sm">Where to go next</h2>\n'
+    # WRAPPED IN A SECTION, because a bare card here is a direct child of <main> and has no
+    # content column: it renders flush against the left edge of the viewport at full width.
+    # Ty found it on 2026-10-15 -- "its aligned left, al the way on the edge of the page, it
+    # looks wAY out of place like a CSS error" -- on three hubs at once. The manuals generator
+    # has always wrapped its copy; this one and the two hand-written hubs had not.
+    out.append('  <div class="sec pb-60">\n'
+               '    <div class="wrap">\n'
+               '      <div class="card">\n'
+               '        <h2 class="sm">Where to go next</h2>\n'
                ' <p class="sm">The <a href="/guides/">guides</a> work through the faults that lead to '
                'a part being replaced, in order from the symptom. The <a href="/manuals/">manuals</a> '
                'are the maker\'s own documents, collected by system. The <a href="/tools/">tools</a> '
@@ -366,7 +373,9 @@ def build():
                '<a href="/directory/">directory</a> finds a mobile technician or a shop by state. '
                'And <a href="/about">about OriginRV</a> says who writes this, with '
                '<a href="/contact">the contact page</a> for a correction or a missing topic.</p>\n'
-               ' </div>\n')
+               '      </div>\n'
+               '    </div>\n'
+               '  </div>\n')
     out.append(foot("assets/js/parts.js"))
     return "".join(out)
 

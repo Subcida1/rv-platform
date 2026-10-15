@@ -91,6 +91,16 @@ step "check-style.py: centering, gradients, and the two scales" \
 # so a structural check whose logic rotted cannot quietly report green.
 step "check-structure.py: guide wrapper and guide-go placement" \
                                                python3 scripts/check-structure.py
+# EVERY BLOCK SITS IN THE CONTENT COLUMN. check-structure.py above enforces the wrapper rule on
+# GUIDE pages only, so a hub or a tool page could put a block straight into <main> and pass every
+# gate. Three hubs did exactly that, and Ty found it by eye on 2026-10-15: "its aligned left, al
+# the way on the edge of the page, it looks wAY out of place like a CSS error or something."
+# A full-bleed element is a design decision, so the four that are deliberate are named in the
+# script with their reasons rather than the check being loosened.
+step "check-column.py: every block sits in the content column" \
+                                               python3 scripts/check-column.py
+step "check-column.py still catches a bare block" \
+                                               python3 scripts/check-column.py --self-test
 # A REFERENCE TO OUR OWN CONTENT CARRIES A LINK. Added 2026-10-13 at Ty's request: "We straight
 # up refer to another section, but don't link out to it? That's a huge huge no no we should
 # ALWAYS provide a link if we feel the need to mention another section we have content for."
