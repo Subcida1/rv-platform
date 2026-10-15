@@ -4195,3 +4195,19 @@ Every new page got a fresh-context pass, and the classes that came out of it are
 2. **RegO prints the relief-valve warning twice with different wording.** One register reads *"if the cylinder is … the temperature at the time it was filled"*; the other reads *"if the container is … the temperatures at the time it was filled"*. **The page quotes the first register verbatim**, and its framing ("in its service guidance" / "in the warning printed for the cylinder itself") maps to the two. The quotation is faithful — but **a future reviewer comparing against the second occurrence would flag it as a misquote**, so the line goes in the review file.
 
 **AND THE PHMSA RULE HOLDS TWICE OVER:** the US copy of the catalog (`regoproducts.com`) 403s to curl even with a full browser header set — the same wall, and the same answer: **the fetch tool reads it. The wall is the fetcher, not the source.** Third time tonight.
+
+---
+
+## CHASSIS PAGE 2 — the charging circuit, built (conv-095eb8fd, 2026-10-15 ~05:15 PDT)
+
+**Landed** (`3a1fb93c`): `guides/rv-chassis-battery-and-charging.html`, 1,774 words, four maker-hosted sources. The chassis candidate is now **complete: both pages built.**
+
+**It serves the last two unlinked chassis cards** — `alternator-and-starter` and `chassis-battery-and-isolator` both link it, so the parts lede moves to **129 linked / 81 unlinked**. All four cards from candidate #9 are now covered.
+
+**The page's spine:** three faults look alike and are told apart before anything is measured — no crank is the starting circuit, a slow crank is the battery or its cables, a crank with no start is neither. Two maker facts carry the rest: the isolator closes on a **condition** (above 13.3 V for ~12 s, which is what a healthy alternator makes) and drops out below 12 V for two seconds to feed the chassis battery, which Intellitec says shows up as **flickering lights**; and the boost switch needs the **house bank above 9 volts**, which is why a coach with flat house batteries feels like a dead switch rather than a flat chassis battery.
+
+**Sources:** Intellitec's Battery Isolator Controller service manual, Winnebago's Evolution of Battery Management, the 2021 Ford F-53 manual (the charging message and the fuse chart), and Spartan's chassis manual.
+
+**One quotation rewritten rather than shipped, and the reason is a new instance of a known class:** Winnebago prints "low / mid **14-volt** levels" with the hyphen falling on a line break, so the plain `pdftotext` extraction loses it and the site's own quote checker would read the quotation as missing. The page quotes the clause that extracts cleanly, paraphrases the band, and takes the working figure from Intellitec instead ("approximately 14.4 volts"). **The general rule: a hyphen at a line break is invisible to a plain extraction, so a quotation that spans one can fail a check it should pass.**
+
+**All 19 quotations verified against their sources before the build.** Gate green, archive check clean, pushed on the second attempt of the retry loop.
