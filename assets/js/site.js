@@ -198,9 +198,19 @@
  '<a href="' + R(rt.guideTires) + '">Tires Through Winter<span class="sm">Pressure, flat spots, covers</span></a>' +
  '<a href="' + R(rt.guideRoof) + '">Roof Under Snow Load<span class="sm">Seals, ice, weight</span></a></div></div>' +
  '<div class="nav-group"><a class="nav-link" href="' + R(rt.parts) + '">Parts</a>' +
+ /* THE PARTS MENU CARRIES PARTS. It used to list "Guides" and "Manuals", which both
+    have their own top-level menus two items to the right, so the menu spent its
+    space repeating the nav beside it. Ty, 2026-10-14: "also tidy them up per your
+    recommendation." It now names the systems a reader actually arrives looking for,
+    each linking the section on the hub. The mobile menu carried one of the two
+    duplicates and now matches this list. */
  '<div class="drop"><a href="' + R(rt.parts) + '">Every RV part<span class="sm">All 157, by system, with what each one does</span></a>' +
- '<a href="' + R(rt.guides) + '">Guides<span class="sm">How to fix what is broken</span></a>' +
- '<a href="' + R(rt.manuals) + '">Manuals<span class="sm">The maker documents behind each part</span></a></div></div>' +
+ '<a href="' + R(rt.parts) + '#power-and-electrical">Power and electrical<span class="sm">Shore power, batteries, solar, converters</span></a>' +
+ '<a href="' + R(rt.parts) + '#water-and-plumbing">Water and plumbing<span class="sm">Tanks, pumps, filters, heaters</span></a>' +
+ '<a href="' + R(rt.parts) + '#sanitation-and-tanks">Sanitation and tanks<span class="sm">Toilets, valves, tanks, sensors</span></a>' +
+ '<a href="' + R(rt.parts) + '#heating-and-cooling">Heating and cooling<span class="sm">Furnaces, air conditioners, fridges</span></a>' +
+ '<a href="' + R(rt.parts) + '#exterior-and-body">Exterior and body<span class="sm">Roof, sealant, slides, windows</span></a>' +
+ '<a href="' + R(rt.parts) + '#towing-and-running-gear">Towing and running gear<span class="sm">Hitches, jacks, axles, brakes</span></a></div></div>' +
  '<div class="nav-group"><a class="nav-link" href="' + R(rt.directory) + '">Directory</a>' +
  '<div class="drop"><a href="' + R(rt.directory) + '">Find RV service<span class="sm">Mobile techs and repair centers by state</span></a>' +
  '<a href="' + R(rt.directory) + '#claim">Claim your business<span class="sm">Free listing, you control it</span></a></div></div>' +
@@ -228,7 +238,12 @@
    ['Battery cold storage', rt.guideBattery], ['Tires through winter', rt.guideTires],
    ['Roof snow load', rt.guideRoof]]) +
  mmGroup('Parts', rt.parts, [['Every RV part', rt.parts],
-   ['Guides', rt.guides]]) +
+   ['Power and electrical', rt.parts + '#power-and-electrical'],
+   ['Water and plumbing', rt.parts + '#water-and-plumbing'],
+   ['Sanitation and tanks', rt.parts + '#sanitation-and-tanks'],
+   ['Heating and cooling', rt.parts + '#heating-and-cooling'],
+   ['Exterior and body', rt.parts + '#exterior-and-body'],
+   ['Towing and running gear', rt.parts + '#towing-and-running-gear']]) +
  mmGroup('Directory', rt.directory, [['Find RV service', rt.directory],
    ['Claim your business', rt.directory + '#claim']]) +
  mmGroup('Manuals', rt.manuals, [['Electrical', rt.manualsPower],
