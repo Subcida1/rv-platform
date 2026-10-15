@@ -4584,3 +4584,16 @@ Eight items, verified against the page source at tip `73b5a1b9`:
 - **#5-#8 verified:** 210 unique `part-*` anchors, all resolving; the parts WebSite JSON-LD carries `@id https://originrv.com/#website`; the guides hub 58 = 58; hygiene/voice PASS; the anode-rod card links both its guide and its tool.
 
 Instruments at this tip: `verify.py` ALL CHECKS PASSED.
+
+## Decisions taken 2026-10-15 (Brandt, via the Neo lane)
+
+All ten blocked items are now ruled. What each ruling asks for:
+
+- **W3 — build BOTH black-tank guides, as separate pages:** a black-tank-clogged rescue guide and a black-tank maintenance guide. The Lippert waste-side documents are already located (`lci-support-doc.s3.amazonaws.com`, `manuals/sewer_and_fresh_water/`). Next: write the two specs, then build.
+- **W5 — the tongue-jack part page ships WITHOUT a photo.** His replacement jack is out of place, and a Commons search for a usable jack image returned nothing (jockey-wheel and trailer-jack queries return horses and film stills). Ship the page text-only; the photo is not a blocker.
+- **W19 — Ty finishes the last three read-through pages (tools/rv-anode-rod, /guides/, /about) tonight.** No action until then.
+- **Trust-claim cluster — KEEP, restrained.** His words: a little authenticity-selling is fine, do not plaster it everywhere. The pass is to thin the density, not to cut the sentences.
+- **Two-guide renderer — BUILD it.** Parts cards should link out to the relevant guides; the card template needs to carry two.
+- **/about title — CHANGED** to "About OriginRV: RV Repair Guides, Tools and Directory" (53ch), dialled for the brand query and the three assets.
+- **Off-grid heating — PARKED** until Ty reads the page. No action.
+- **Items 5, 6 and 9** were approved earlier and are already applied (`1e607f60`).
