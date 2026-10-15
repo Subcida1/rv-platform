@@ -3516,3 +3516,80 @@ A new page rather than an expansion: the tank faults and the generator draw are 
 1. **"A claim that cannot be sourced does not get a weaker source; it gets cut."** Two flow-direction claims rested only on an industry reference site; both were cut and the section reshaped around what is sourced.
 2. **The Wayback Machine is a legitimate reading route to a bot-walled government page, provided the citation still points at the publisher.** PHMSA returns 403 to every machine fetch (bare UA, curl UA, and a full realistic browser header set) on both the OPD FAQ and the requalification PDF. Five claims were **held rather than written** — search-index text is not a source — then read from the archive's copy of PHMSA's own page and cited to `phmsa.dot.gov`.
 3. **The eCFR API is the working route to the CFR and the HTML page is not — and it needs `curl -L`.** Without it the 302 returns zero bytes, which reads as a dead endpoint.
+
+## AC thin area closes — the three clusters from the community scan (conv-ff6725d2, 2026-10-15)
+
+**Status: COMPLETE.** The scan's largest thin area (36 threads against one guide with zero mentions of
+soft start, 30 amp, EasyStart or noise) is now covered in `guides/rv-air-conditioner-not-cooling.html`,
+expanded rather than split, per the conductor's scoping note. The page went from 2,505 to about 4,100
+words, with fourteen new sources.
+
+**1. Running it on limited power: 30 amps, a small generator, or batteries.** The running figures the
+makers publish (Dometic 12.5 and 13.0 A, Furrion 11.5 A, Coleman-Mach 13.9 A) against the start
+(Dometic's 63 A locked rotor, and Cummins' own statement that an air conditioner can draw three to
+four times its running watts at startup). The soft start: the mechanism and the 65 to 75 percent
+reduction from Micro-Air's installation manual, the hard start distinction (10 to 20 percent at best,
+sometimes nothing), Coleman-Mach's own kit and its up to 75 percent claim, Dometic's Advanced Soft
+Start. Then the three cases the threads named: two units on a 30 amp service (including Cummins'
+reversed-breaker trap), a generator smaller than the coach's service (Cummins' published pairings:
+4.0 kW runs one 15,000 BTU unit, 5.5 kW two 13,500, 7 kW two 15,000), and off-grid on solar and
+lithium (the DC arithmetic, and what the makers do and do not publish about battery operation).
+
+**2. Heat-pump mode: when the unit heats instead of cools.** The mode itself (HEAT ELE and HEAT GAS),
+the outdoor limits (Airxcel: shutdown near freezing; the thermostat guide: above 40 degrees), the
+temperature changes to expect in each mode, the thermostat's strike system and its two hour hard
+lockout, the DIP switch and system reset requirement after a control board or thermostat swap (the
+"furnace control lost" thread), and the R410A high-pressure lockout.
+
+**3. When the complaint is noise.** What the makers publish and mostly do not (Dometic 59 dB on low
+and 43 dB on its quietest; Furrion 80 dB outdoors; Coleman-Mach no figure), why the published numbers
+cannot be compared with each other, and the start noise a soft start addresses.
+
+**Sub-topic recorded, not split:** the limited-power cluster (11 threads) and the noise cluster (3)
+are both candidates for their own pages, because their queries ("rv air conditioner soft start", "rv
+air conditioner noise") do not match this page's title. They are written here per the scoping note;
+if the volume holds, splitting them out is a content-engine call with the sources already gathered.
+
+**Independent review, and what it caught.** A fresh-context reviewer checked every figure against its
+cited document and the arithmetic against the published values. Eight findings, all applied:
+
+1. A sweeping "11.5 to 13.9 amps" range that Dometic's own FreshJet 5 sheet contradicts (it publishes
+   10.8 and 15.6 A). The range claim is gone; the four named figures stand alone.
+2. The Cummins breaker trap was attributed to the wrong Cummins document. It is in the RV Generator
+   Handbook, which is now the citation.
+3. A CCC 2 "diagnostics report the switch positions" clause is not in the cited document (it came from
+   a third-party mirror). Deleted; the error-code sentence stands on its own.
+4. The SmartEco step is "energy-saving mode", not "cooling".
+5. A reader-benefit clause ("that matters when you are shopping"). Deleted.
+6. Two unnamed-authority openers ("The makers publish very little...", "The makers' documents do not
+   change..."). Both rewritten.
+7. "fitted at the factory" was an inference from a catalog SKU. Now "lists a Mach 10 model with soft
+   start".
+8. The two Airxcel cooling figures (16 to 22 degrees in the troubleshooting guide, 15 to 20 in the
+   heat pump document) were left as an unexplained pair. Now reconciled in the text.
+
+A second pass confirmed all eight fixes and caught five residuals, all applied: the Sources annotation
+still carried the factory claim the body had dropped; one "the makers" survived in the off-grid
+paragraph (now "Dometic and Micro-Air"); the off-grid claim was re-attributed to the product line
+rather than one sheet; the soft start mechanism now names the installation manual rather than
+implying the RV product's; and the generator-arithmetic sentence now attributes the startup multiple
+to Cummins inline.
+
+**One citation removed for cause, and a gate entry added.** The draft cited microaireasystart.com for
+Micro-Air's figures. That domain is a Houston dealer ("First Source Energy, Certified Micro Air
+EasyStart Installer"), not Micro-Air, so it reproduces the maker's material rather than publishing it.
+The claims moved to the maker's own documents (the EasyStart 366 installation manual and the EasyStart
+specification sheet, both on micro-air.com) and the generator arithmetic is now presented as
+arithmetic. **`microaireasystart.com` is now on `REHOST` in `verify.py`** with the reason, so the next
+session cannot repeat it; it did not trip the gate because it was not on the list.
+
+**Two gates shaped one sentence, and both are worth knowing.** The noise section pointed at the soft
+start section above it, and the cross-reference rule (`check-crossrefs.py`) requires a pointer at our
+own content to carry a link, so the heading gained an id and the sentence links it. The fragment rule
+then required that link to be qualified with the page path: every page carries `<base href="/">`, so a
+bare `#fragment` resolves against the base and lands on the site root. Both rules are correct and both
+fired on a sentence that read fine.
+
+**Gate:** `bash scripts/ci.sh` every check passed; archive-checked before the push.
+
+**AC CLOSED — 04:35 PDT (`f98730b0` + `065726f0` + `0b194f78`), conv-ff6725d2.** Full ci.sh green on the tree, archive-checked before the push, independent review applied.
