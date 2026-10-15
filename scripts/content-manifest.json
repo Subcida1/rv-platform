@@ -403,9 +403,9 @@
     "claims": "ca780a6dbc99c4d8"
   },
   "guides/index.html": {
-    "hash": "217bc1e9b454e7d9",
+    "hash": "472fd60976014d94",
     "status": "verified",
-    "verified_by": "new guide rv-water-pressure added to the hub tile grid and ItemList",
+    "verified_by": "new guide rv-heating-off-grid added to the hub tile grid",
     "verified_at": "2026-10-15",
     "sources": [],
     "spec": null,
@@ -605,6 +605,13 @@
     "spec": "_specs/rv-generator-sizing.md",
     "spec_waived": false,
     "claims": "f0d8106fa63a816a"
+  },
+  "guides/rv-heating-off-grid.html": {
+    "hash": "ea8a1739f3e9798e",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
   },
   "guides/rv-leveling-jacks-not-working.html": {
     "hash": "2f94aefce30764ae",
@@ -908,7 +915,7 @@
     "claims": "2c668bd9cf981fe7"
   },
   "index.html": {
-    "hash": "53d3137529a0df4b",
+    "hash": "90a6fca7a4256e76",
     "status": "unverified",
     "verified_by": "2026-10-13 independent fresh-context review (subagent, separate context; same model as the drafter, recorded for the findings rather than as a strength claim, so the status stays unverified). Four findings. APPLIED: (1) the winter section said 'Five guides, one checklist each: plumbing, batteries, tires, roof and furnace' while the five cards under it are Winterize Your Plumbing, Battery Care in Cold, Tires Through Winter, Roof Under Snow Load and RV Froze -- there is no furnace guide in the winter set, so the sentence contradicted the grid on the same screen; it now ends 'roof and a frozen coach'; (2) 'The window seal and the bottom trim, per the makers' handed the guide's basis to an unnamed party, the class the site cuts -- the clause is dropped. REFUTED: 'The maker documents behind every part, linked at the source' is already recorded in _todo/W19-CALIBRATION-SET.md as one of five trust-claim sentences awaiting Ty's ruling, so it is not a session's call; and 'what the manuals say' describes the guide's coverage rather than attributing a fact, and was flagged UNSURE by the reviewer itself. Rule 1, 2, 3 and 5 came back clean, and the page's counts (14 tools, 47 guides, 1,942 businesses, 50 states) all reconcile against the data.",
     "verified_at": null,

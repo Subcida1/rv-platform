@@ -60,8 +60,9 @@
     "rv-water-heater-anode-rod": "water-and-plumbing",
     "rv-black-tank-routine": "sanitation-and-tanks",
     "rv-awning-not-working": "roof-and-body",
-"rv-propane-detector-beeping": "heating-and-cooling",
-"rv-window-leaking": "roof-and-body",
-"rv-entry-door-wont-latch": "roof-and-body"
+    "rv-propane-detector-beeping": "heating-and-cooling",
+    "rv-window-leaking": "roof-and-body",
+    "rv-entry-door-wont-latch": "roof-and-body",
+    "rv-heating-off-grid": "heating-and-cooling"
   }
 }

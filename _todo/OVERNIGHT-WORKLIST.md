@@ -2780,6 +2780,23 @@ list: a state-by-state prohibition and a ventilation requirement are exactly wha
 from a product page. Two cards (electric fireplace, heated floors) are weak fits and are flagged as a
 decision, not quietly included.
 
+## GAP-NOTES — the two cards that stay out of the off-grid heating page (2026-10-15, conv-c3913bd3)
+
+The conductor's ruling: the electric fireplace and heated-floors cards are **electrical appliance faults,
+not heating-strategy faults**, so they get an honest null rather than a link into a page about exhaust.
+Same call as the hose reel and sinks on the water-pressure page.
+
+- **Electric fireplace** — *"flame effect dead, heater element, remote lost, fan noisy."* Every one is
+  an appliance fault. The page's spine (vented versus unvented, and where the exhaust goes) has no
+  bearing on a dead flame effect, and folding it in would have made the page's title a lie: an electric
+  fireplace burns nothing and vents nothing. **Natural miss, no guide planned.**
+- **Heated floors** — *"zone dead, thermostat failure, mat burned out, breaker tripping."* The same
+  shape: element, thermostat and breaker faults. **Natural miss.**
+
+The page itself names both in its "What this does not cover" section and says why, rather than leaving
+the reader to wonder whether they were forgotten. That is deliberate: an unstated omission reads as an
+oversight, and a stated one reads as a boundary.
+
 **Done criteria:** every item above is applied and pushed with CI green, or explicitly recorded as blocked-on-Ty. The conductor reports the night's result to Ty in the morning.
 ## Batch A closes — the content batch (conv-b71ff860, 2026-10-15)
 
