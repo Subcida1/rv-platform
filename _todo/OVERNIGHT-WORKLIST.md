@@ -2797,6 +2797,45 @@ The page itself names both in its "What this does not cover" section and says wh
 the reader to wonder whether they were forgotten. That is deliberate: an unstated omission reads as an
 oversight, and a stated one reads as a boundary.
 
+## MORNING NOTE from conv-c3913bd3 (2026-10-15, written at stand-down)
+
+**Two class findings, which outlast the pages that produced them:**
+
+1. **A negative claim is still a claim.** The off-grid heating page said the altitude derating "is not
+   published by Webasto or by Eberspaecher". Eberspaecher publishes it in its own catalogue: *"It begins
+   reducing fuel feed at around 1,400 m, which immediately starts to reduce heating performance by
+   around 9% for every 1,000 m in altitude."* The claim was checkable in one search. **Before writing
+   that a maker does not publish something, search for it.** The replacement was a better page than the
+   absence: one maker publishes a rate, the other a ceiling, and those are two different kinds of answer.
+
+2. **Fixing an attribution in the prose does not fix it in the bibliography.** While correcting the
+   water-pressure page for quoting a retailer's copy as Camco's, I wrote a sources block that cited
+   Camco's figures to a distributor. Same defect, one layer down. The fix is to say plainly that the
+   maker publishes no specification text and record the distributor listing as what it is.
+
+**And one operational rule that paid for itself the same night:** fetch every source link before it
+ships. Fourteen links; nine returned 200 first pass, five returned 429 then 200 on a retry (rate-limiting,
+not death), and **one returned a genuine 404** — a `webasto-comfort.com` URL taken from a search result
+rather than the maker's own navigation. It would have shipped, and there was no way to tell from the
+search result.
+
+**What I did tonight, in one line each:** the schema/hub batch (one ItemList convention, one WebSite
+entity, 51 pages); both manuals ItemLists; the browser pass on the six owed brake rows, which verified
+four and found the DC citation defect (F7); the conversation-title work (local marker pass, 10-minute
+sweep, width-aware budget); the parts-card gap scoping (85 unlinked cards, ten ranked candidates, 48
+natural misses); the water-pressure page; the off-grid heating page; and both Sources sections.
+
+**One thing that is Ty's call rather than mine:** the off-grid heating page is justified as a **safety
+page rather than a shopping page** — only one of its four cards carries a demand figure, and the case
+rests on the Massachusetts/Canada/California restrictions and the ventilation requirement being things a
+reader cannot get from a product page. The conductor approved that reasoning and flagged it as pullable
+if read differently. The material is worth having either way.
+
+**Still open and recorded, not forgotten:** the Iowa brake row needs a fetch from a machine that can
+reach `legis.iowa.gov` (it fails at both DNS and TCP from the sandbox); and the build-chain fix has
+three items queued — `build-sitemap.py --write` does not add new pages, `new-guide.py`'s printed chain
+omits `build-home-schema.py`, and its `--hub-section` argument does not resolve a real section id.
+
 **Done criteria:** every item above is applied and pushed with CI green, or explicitly recorded as blocked-on-Ty. The conductor reports the night's result to Ty in the morning.
 ## Batch A closes — the content batch (conv-b71ff860, 2026-10-15)
 
