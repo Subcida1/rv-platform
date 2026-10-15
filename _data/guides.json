@@ -57,7 +57,8 @@
       "rv-window-leaking",
       "rv-entry-door-wont-latch",
       "rv-water-pressure",
-      "rv-heating-off-grid"
+      "rv-heating-off-grid",
+      "rv-frame-cracks"
     ]
   }
 }

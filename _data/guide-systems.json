@@ -63,6 +63,7 @@
     "rv-propane-detector-beeping": "heating-and-cooling",
     "rv-window-leaking": "roof-and-body",
     "rv-entry-door-wont-latch": "roof-and-body",
-    "rv-heating-off-grid": "heating-and-cooling"
+    "rv-heating-off-grid": "heating-and-cooling",
+    "rv-frame-cracks": "roof-and-body"
   }
 }
