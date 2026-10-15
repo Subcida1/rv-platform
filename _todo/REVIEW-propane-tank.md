@@ -164,3 +164,31 @@ where it answers.
   a generator belongs on this page at all is an editorial call, not a defect.
 - `_specs/rv-propane-tank-wont-fill.md`'s own claims against the page — the spec
   is the plan, and the page is what ships.
+
+---
+
+## F4 addendum — the repoint is viable, and two traps for whoever does it
+
+Verified 2026-10-15 after the review was filed. **RegO's own L-500 catalog carries
+every passage the page quotes**, so the four claims can move to the maker's
+domain. Two things will bite an automated check:
+
+**1. The maker's catalog is a two-column PDF and its text extraction interleaves
+the columns.** A first pass reported three of the eleven quotes as missing; all
+three were present, line-wrapped mid-word (`the valvecannot be repaired`,
+`cylindervalvemust be`, `exposed toa temperature`). **A quote check run against
+that file produces false misses.** Verify wording against the single-column
+distributor copy and presence against the maker's catalog.
+
+**2. RegO prints the relief-valve warning twice, with different wording.** One
+register reads *"if the cylinder is ... the temperature at the time it was
+filled"*; the other reads *"if the container is ... the temperatures at the time
+it was filled"*. **The page quotes the first register verbatim**, and its framing
+("in its service guidance" / "in the warning printed for the cylinder itself")
+maps to the two. The quotation is faithful. **A future reviewer comparing against
+the second occurrence would flag it as a misquote — this note exists so that does
+not happen.**
+
+**3. The US copy of the catalog (`regoproducts.com`) 403s to curl even with a
+full browser header set.** Same wall as PHMSA, same answer: the fetch tool reads
+it. The rule recorded above holds twice over.
