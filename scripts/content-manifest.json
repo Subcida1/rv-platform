@@ -443,9 +443,9 @@
     "claims": "e65464526c5af869"
   },
   "guides/rv-awning-not-working.html": {
-    "hash": "55b9eb98f084adec",
+    "hash": "97aa29370a294827",
     "status": "verified",
-    "verified_by": "new page 2026-10-15: the duplicate page shell removed (the scaffolder emits page-intro, sec prose, wrap narrow and page-foot, and the body carried them too). Content unchanged.",
+    "verified_by": "awning review findings applied 2026-10-15: nine findings from the independent pass (F1-F9). The amperage premise corrected with Carefree's own 15 amp circuit rating; the 'every maker's table' generalization replaced with what the tables actually do; the Girard omission stated in Sources; the Dometic manual-close steps added; the motor-replacement generalization dropped; the ignition interlock's fault half added; the maker-name claim softened; the power-awning scope moved into the body; two meta-prose sentences restated. No fact changed except the four corrections.",
     "verified_at": "2026-10-15",
     "sources": [],
     "spec": "_specs/rv-awning-not-working.md",
