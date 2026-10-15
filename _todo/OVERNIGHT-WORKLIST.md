@@ -2748,6 +2748,38 @@ non-default conversations exceed 32 characters.** Store breakdown: 225 total = 1
 71 `default`, 27 archived. The sidebar shows neither skipped category's summary, so the local store is
 clean for everything a reader can see, and the sweep is not skipping anything it should not.
 
+## SPEC — off-grid heating, the last candidate on the scoping list (2026-10-15, conv-c3913bd3)
+
+`_specs/rv-heating-off-grid.md`. Research complete, **new page**, not drafted tonight per the conductor.
+
+**The spine: the two options are not the same kind of thing, and the difference is where the exhaust
+goes.** A diesel air heater is vented — combustion air from outside, exhaust outside. A Buddy-style
+portable propane heater is unvented — it burns the room's own air, and Mr. Heater's own manual says so:
+*"This heater consumes oxygen from the room in which it is installed."* That one distinction decides
+every other question on the page.
+
+**What the makers publish.** Webasto Air Top Evo 40: 5,100–12,000 BTU/h (13,650 boost), 0.18–0.49 L/h,
+15–40 W, altitude adjustment to 2,200 m with a 5,500 m variant, **UL 307A / CSA B140.10 / RVIA, TEI
+23D01**. Air Top 2000 STC: 3,100–7,000 BTU/h and *"as little as 1 gallon of fuel in a 22 hour period"*.
+Eberspächer Airtronic 3: automatic altitude adjustment to 5,500 m. Webasto's own rule of thumb: **100 ml
+of diesel per hour per kW**. Mr. Heater MH9BX: 4,000/9,000 BTU/h, **maximum elevation 7,000 ft**,
+clearances top 30 in / front 24 in / sides 6 in / rear 0 in, and **9 square inches of ventilation
+minimum** (12 sq in at ceiling *and* floor on the larger MH12HB). **Bedroom: "LO" only. Bathroom: do not
+use.** And the maker's own restrictions: *"Restricted from all indoor use in Massachusetts and Canada"*
+and *"Restricted from use in dwellings in California."*
+
+**What the makers do NOT publish, recorded rather than filled in:** no altitude derating *curve* for any
+diesel heater (Webasto states the ceiling and then says consult the manual — the loss between sea level
+and the ceiling is not published); no CO output figure for the unvented propane heaters; no burn-time
+figure for the diesels beyond fuel consumption per hour.
+
+**Recommendation recorded in the spec: write it, but as a safety page rather than a shopping page.** It
+was the candidate I ranked last and said I would drop first — only one of its four cards carries a demand
+figure (portable heat, 23/wk). The counter-argument is that the safety content is the strongest on the
+list: a state-by-state prohibition and a ventilation requirement are exactly what a reader cannot get
+from a product page. Two cards (electric fireplace, heated floors) are weak fits and are flagged as a
+decision, not quietly included.
+
 **Done criteria:** every item above is applied and pushed with CI green, or explicitly recorded as blocked-on-Ty. The conductor reports the night's result to Ty in the morning.
 ## Batch A closes — the content batch (conv-b71ff860, 2026-10-15)
 
