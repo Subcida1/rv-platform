@@ -255,7 +255,7 @@
       },
       {
        "kind": "p",
-       "html": "Other sensor details are worth knowing. A common alert setting is a low warning at 10% below the recommended pressure and a high warning at 20% above it. Sensor batteries commonly last about five years. Whether a sensor is heavy enough to require re-balancing the wheel is disputed."
+       "html": "A common alert setting is a low warning at 10% below the recommended pressure and a high warning at 20% above it. Sensor batteries commonly last about five years. Whether a sensor is heavy enough to require re-balancing the wheel is disputed."
       },
       {
        "kind": "p",
@@ -356,7 +356,7 @@
       },
       {
        "kind": "p",
-       "html": "The warning signs are easy to check once you know what to look for."
+       "html": "The warning signs show on the outside of the wall."
       },
       {
        "kind": "list",

@@ -365,8 +365,21 @@ def main():
         print("    matched: %r" % matched)
         print("    line:    %s" % line)
     if a.noted:
+        # NO CAP, and the reason is a real defect this file had. It printed
+        # `noted[:40]` until 2026-10-14, and a 40-line window over 46 hits reads
+        # as the whole list. The reader-benefit worklist was built from that
+        # output and recorded 38, then 57 when the author counted by hand; the
+        # true number was 74. An instrument that prints a truncated sample of
+        # its own findings is worse than one that prints nothing, because the
+        # truncation is invisible and the reader trusts the last line.
         print("\nNOTED (report only) %d" % len(noted))
-        for rel, name, why, line in noted[:40]:
+        by_family = {}
+        for rel, name, why, line in noted:
+            by_family.setdefault(name, []).append(rel)
+        for name in sorted(by_family):
+            print("  %s: %d hit(s)" % (name, len(by_family[name])))
+        print("")
+        for rel, name, why, line in sorted(noted, key=lambda n: (n[1], n[0])):
             print("  %-40s %-16s %s" % (rel, name, line[:110]))
     return 1 if hits else 0
 

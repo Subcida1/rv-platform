@@ -45,9 +45,29 @@ All content. No zinger, no framing, no reason the reader should care.
 **NOT "which is why".** That connector carries mechanism, and mechanism is content. Measured first
 by mistake: 82 uses, and reporting that as the tic was wrong.
 
-**Status: live as `reader-benefit-clause` in check-prose.py, report-only, 38 hits unswept.** Two of
-the 38 are correct prose and are why it is not a gate: a *price* ("a tripped breaker costs nothing")
-and a *reason* ("the reason it is worth doing at the end of every season") are both content.
+**Status: live as `reader-benefit-clause` in check-prose.py, report-only — SWEPT 2026-10-14.** One
+hit is deliberately left (see below). Two of the original hits are correct prose and are why it is
+not a gate: a *price* ("a tripped breaker costs nothing") and a *reason* ("the reason it is worth
+doing at the end of every season") are both content.
+
+**The count was wrong twice, and the reason matters more than the number.** This file recorded "38
+hits unswept" and the worklist recorded 57. Both came from `check-prose.py --noted`, which printed
+`noted[:40]` — a 40-line cap. A window over 46 hits reads exactly like a complete list, so the
+worklist was built from a sample that looked like the population. The real count was **74**
+(36 reader-benefit-clause hits were never printed). The cap is now removed and the output prints a
+per-family count above the list. **The rule this earns: when a worklist is derived from a tool's
+output, check that the tool is not truncating before trusting the total — and a tool that prints its
+own findings under a cap is worse than one that prints nothing, because the truncation is invisible.**
+
+**What the sweep did (35 instances, 31 pages):** cut the framing, keep the content. The dominant
+shape was `"…worth knowing: <the content>"`, where the colon clause was already the whole fact. Two
+pages needed the fix at the **source**, not the page: `manuals/start-here.html` is generated from
+`_data/new-owner-{part1,part2,part3}.json` + `_data/new-owner-sections.html`, and
+`manuals/recalls.html` carries its heading inside `scripts/build-manuals-pages.py`.
+
+**The one deliberately left:** `"Checking the vent for soot costs nothing and takes seconds"` sits
+under a `"What this costs"` heading, where the cost **is** the answer to the heading. That is the
+documented price exception, not a miss.
 
 ---
 

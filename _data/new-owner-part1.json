@@ -144,7 +144,7 @@
        "items": [
         "<b>Check in, then look at the site on foot.</b> Walk the pad before you commit the RV to it, and note which side the pedestal and the sewer connection are on, so you park with the connections within reach.",
         "<b>Do not cut across your neighbour.</b> Do not cut through another occupied site to reach the bathroom, the lake, or a trail.",
-        "<b>If your vehicle is in somebody's way, move it before they ask.</b> An RV backing into a tight site has very little room, and the van parked opposite is often the thing making it hard. Offering costs you nothing and it is what everyone on a campground expects of everyone else.",
+        "<b>If your vehicle is in somebody's way, move it before they ask.</b> An RV backing into a tight site has very little room, and the van parked opposite is often the thing making it hard. Offering is what everyone on a campground expects of everyone else.",
         "<b>Back or pull in with a spotter.</b> Use someone outside who can see what you cannot, and agree on the hand signals before you start.",
         "<b>If you are backing in after dark, put lights on the ground.</b> A flashlight laid on the ground at each corner you are aiming for, or one at the far end of the pad, gives you something fixed to steer by. It is far easier than judging distance against the dark.",
         "<b>Level, then chock.</b> Side to side first, then front to back, as set out above.",
@@ -349,7 +349,7 @@
       },
       {
        "kind": "p",
-       "html": "<b>The hazards behind the device.</b> On a 50-amp supply a broken neutral is the worst case, because the two 120-volt legs stop sharing the load evenly. One leg can see 80 volts while the other sees 160, and anything connected to the high leg can be destroyed almost instantly. Reverse polarity is a wiring fault and a fail, and it is worth reporting rather than living with, because a pedestal wired backwards was never tested after it was installed, and there is no telling what else is wrong with it."
+       "html": "<b>The hazards behind the device.</b> On a 50-amp supply a broken neutral is the worst case, because the two 120-volt legs stop sharing the load evenly. One leg can see 80 volts while the other sees 160, and anything connected to the high leg can be destroyed almost instantly. Reverse polarity is a wiring fault and a fail. Report it rather than living with it, because a pedestal wired backwards was never tested after it was installed, and there is no telling what else is wrong with it."
       },
       {
        "kind": "callout",
@@ -405,7 +405,7 @@
      "blocks": [
       {
        "kind": "p",
-       "html": "Propane runs the absorption fridge, the water heater, the furnace and the range. The system itself is simple: a tank, a regulator, a main valve, and appliances with their own burner valves. The rule that matters most is the one for a leak, and it is worth knowing before the first tank is opened."
+       "html": "Propane runs the absorption fridge, the water heater, the furnace and the range. The system itself is simple: a tank, a regulator, a main valve, and appliances with their own burner valves. The rule that matters most is the one for a leak, and it applies before the first tank is opened."
       },
       {
        "kind": "list",
@@ -551,7 +551,7 @@
       },
       {
        "kind": "p",
-       "html": "Two smaller habits are worth knowing. A Schwintek-style slide wants the switch held after the room stops: hold the switch for 5 seconds once the room is fully open or closed so the control board can complete its calculations, or the room will go out of synchronization over time. And the outside corner of a slide sits at head height on many RVs, which is why owners fit a slit foam noodle over it: the corners can be sharp and pointy, and a lack of attention could put someone into one. Remove the noodle before you close the slides."
+       "html": "A Schwintek-style slide wants the switch held after the room stops: hold the switch for 5 seconds once the room is fully open or closed so the control board can complete its calculations, or the room will go out of synchronization over time. And the outside corner of a slide sits at head height on many RVs, which is why owners fit a slit foam noodle over it: the corners can be sharp and pointy, and a lack of attention could put someone into one. Remove the noodle before you close the slides."
       }
      ]
     },
@@ -562,7 +562,7 @@
      "blocks": [
       {
        "kind": "p",
-       "html": "<b>Jacks lift. Stabilizers stop the rocking.</b> A leveling jack, or the tongue jack on a trailer, carries the weight of the RV and changes its height. A stabilizer, which a lot of people call a stabilizer jack, does neither: it comes down to touch the ground and stops the RV moving when you walk around inside it. That is the whole difference, and it is worth holding on to, because both get called jacks and the mistake is expensive. <b>Level with a jack. Steady with a stabilizer. Never level with a stabilizer</b>, because you would be hanging the RV's weight on legs that were never built to take it."
+       "html": "<b>Jacks lift. Stabilizers stop the rocking.</b> A leveling jack, or the tongue jack on a trailer, carries the weight of the RV and changes its height. A stabilizer, which a lot of people call a stabilizer jack, does neither: it comes down to touch the ground and stops the RV moving when you walk around inside it. That is the whole difference, and both get called jacks, which is where the expensive mistake comes from. <b>Level with a jack. Steady with a stabilizer. Never level with a stabilizer</b>, because you would be hanging the RV's weight on legs that were never built to take it."
       },
       {
        "kind": "list",

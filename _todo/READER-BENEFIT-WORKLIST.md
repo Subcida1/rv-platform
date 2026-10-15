@@ -1,7 +1,13 @@
 # The reader-benefit sweep
 
-Step 1 of `_todo/VOICE-RULESET.md`. **Not done yet, on purpose** - see "why this is a worklist and
-not a commit" at the end.
+Step 1 of `_todo/VOICE-RULESET.md`. **SWEPT 2026-10-14** — 35 instances across 31 pages, plus the
+generated `manuals/start-here.html` (via `_data/new-owner-*.json`) and `manuals/recalls.html` (via
+`scripts/build-manuals-pages.py`). One hit is deliberately left; see the end of this file.
+
+**READ THIS FIRST — the list below was a truncated sample, not the population.** `check-prose.py
+--noted` printed `noted[:40]`, so the list under "The worklist, by shape" is the first 38 hits of
+**74**. The cap is now removed. Anything below that is not struck through was handled in the sweep;
+the count that matters is the tool's, not this file's.
 
 ## The shape, and the fix
 

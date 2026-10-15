@@ -1109,7 +1109,7 @@ def recalls_page(rows, bulletins, source_note):
 %s
 
       <div class="card man-about">
-        <div class="man-about-h">Why the bulletin file is worth knowing about</div>
+        <div class="man-about-h">What the bulletin file holds</div>
         <p>The federal system that holds recalls also holds every manufacturer
         communication, which is where a maker explains a problem to its dealers before it
         becomes a recall, or when it never does. The RV makers file them in the thousands,
