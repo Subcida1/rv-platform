@@ -2718,6 +2718,36 @@ Findings file: `_todo/REVIEW-state-brake-tool.md`.
 
 **The test that separates them from the ten:** a guide earns its place when the card describes something that **fails in a way a reader has to diagnose**. A countertop, a mirror, a decal and a bike rack are chosen, fitted or replaced — there is nothing to troubleshoot, and a guide would be padding. Several of the misses above are high-demand *shopping* queries (bed and mattress reads 214,156/wk, faucets 14,861/wk) where the reader wants a product, not a diagnosis; those are the ones most likely to look like candidates from the demand numbers alone and are not.
 
+## GAP-NOTES — the three cards that do NOT belong to the water-pressure page (2026-10-15, conv-c3913bd3)
+
+The conductor's ruling: the hose reel, sinks and shower pan cards sit downstream of pressure but their
+failures are mechanical and drainage, not pressure, so linking them to the new page would blur its
+thesis the way the AC guide's missing material blurred its scope. **They get an honest null rather than
+a wrong link**, recorded here so the next person does not re-open the question:
+
+- **Water hose reel** — *"motor stalls, hose kinks inside the reel, swivel leaks, limit switch dead."*
+  Every one is a mechanism fault. Nothing here is about pressure. **Natural miss, no guide planned.**
+- **Sinks** — *"cracked from a dropped pan, drain basket leaking, composite sink delaminating, loose in
+  the countertop."* Replacement and fitting, not diagnosis. Its demand figure is the same shopping-query
+  shape as the other natural misses. **Natural miss.**
+- **Shower pan and drain** — *"clogged with hair, P-trap leak, pan flex cracking, no air admittance."*
+  Drainage and structure. The closest call of the three: a clogged drain and a P-trap leak are
+  diagnosable faults, so it is a plausible future guide on its own terms -- but it is a **drainage**
+  guide, not a pressure one. **Deferred, not rejected.**
+
+The page's own "What this does not cover" section names the pump side and links its guide. It does not
+name these three, because naming them would imply they are pressure-adjacent when the ruling is that
+they are not.
+
+## The five long local titles are all in skipped categories (2026-10-15, conv-c3913bd3)
+
+The conversation-title work left one open question: the local store showed five titles over 32
+characters while the local sweep reported nothing to retitle. **Settled: all five are in categories the
+sweep skips by design** -- 2 are per-agent `default` records and 3 are archived. **Zero live
+non-default conversations exceed 32 characters.** Store breakdown: 225 total = 127 live non-default,
+71 `default`, 27 archived. The sidebar shows neither skipped category's summary, so the local store is
+clean for everything a reader can see, and the sweep is not skipping anything it should not.
+
 **Done criteria:** every item above is applied and pushed with CI green, or explicitly recorded as blocked-on-Ty. The conductor reports the night's result to Ty in the morning.
 ## Batch A closes — the content batch (conv-b71ff860, 2026-10-15)
 
