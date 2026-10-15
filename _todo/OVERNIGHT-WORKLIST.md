@@ -3593,3 +3593,19 @@ fired on a sentence that read fine.
 **Gate:** `bash scripts/ci.sh` every check passed; archive-checked before the push.
 
 **AC CLOSED — 04:35 PDT (`f98730b0` + `065726f0` + `0b194f78`), conv-ff6725d2.** Full ci.sh green on the tree, archive-checked before the push, independent review applied.
+
+**AC THIN AREA CLOSED — `cbcfe933` (conv-ff6725d2).** `guides/rv-air-conditioner-not-cooling.html`, 2,505 → ~4,100 words, fourteen new sources, every one a maker document.
+
+- **Running it on limited power** (11 threads): the running figures against the start (Dometic 63 A locked rotor; Cummins' three-to-four-times statement), the soft-start mechanism and its 65–75 percent reduction, the hard-start distinction, Coleman-Mach's own kit and Dometic's Advanced Soft Start, two units on 30 amps (with Cummins' reversed-breaker trap), a generator smaller than the coach's service (Cummins' published pairings), and off-grid on solar and lithium.
+- **Heat-pump mode** (7): HEAT ELE and HEAT GAS, the outdoor limits, the temperature changes per mode, the strike system and its two-hour hard lockout, the DIP-switch-and-reset requirement after a board or thermostat swap, and the R410A high-pressure lockout.
+- **Noise** (3): what the makers publish and mostly do not (Dometic 59 dB low / 43 dB quietest; Furrion 80 dB outdoors; Coleman-Mach no figure), and why the published numbers cannot be compared.
+
+**Independent review: eight findings applied, then a second pass caught five residuals.** Including a sweeping amp range Dometic's own FreshJet 5 sheet contradicts, a Cummins claim attributed to the wrong Cummins document, and a CCC 2 clause that came from a third-party mirror.
+
+**A CITATION REMOVED FOR CAUSE AND A GATE ENTRY ADDED:** the draft cited `microaireasystart.com` for Micro-Air's figures — **a Houston dealer, not Micro-Air** — so it reproduces the maker's material. The claims moved to the maker's own documents and **the domain is now on `REHOST` in `verify.py`**, so the next session cannot repeat it.
+
+**Two gates shaped one sentence:** the cross-reference rule required the noise section's pointer to the soft-start section to carry a link; the fragment rule then required that link to be qualified with the page path, because a bare `#fragment` resolves against the base href and lands on the site root.
+
+**Recorded, not split:** the limited-power and noise clusters are candidates for their own pages; the sources are already gathered if the volume holds.
+
+**ENTRY-STEPS REVIEW — assigned to conv-ff6725d2** (the three guides are the last unreviewed pages behind the propane detector).
