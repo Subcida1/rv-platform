@@ -4597,3 +4597,18 @@ All ten blocked items are now ruled. What each ruling asks for:
 - **/about title — CHANGED** to "About OriginRV: RV Repair Guides, Tools and Directory" (53ch), dialled for the brand query and the three assets.
 - **Off-grid heating — PARKED** until Ty reads the page. No action.
 - **Items 5, 6 and 9** were approved earlier and are already applied (`1e607f60`).
+
+## Neo directory 12th rotation (2026-10-15, verified from the Cloud lane)
+
+Seven items, verified against the page source at tip `5ffc422f`:
+
+- **#1 Louisiana region-repeat: CONFIRMED.** 44 `finder-region-row` rows against 33 unique listings (Twins RV Repair and Leo's RV Service each render six times, with the placeholder town "Louisiana, LA"). The dedupe-in-render has not landed.
+- **#2 Indiana region-repeat: CONFIRMED.** 66 rows against 63 listings; Sunrise RV Service LLC appears in four region sections.
+- **#3 Wyoming lede: CONFIRMED.** The lede claims emergency roadside help with 1 of 20 rows roadside-flagged. The thin-state lede variants are still queued.
+- **#4 WebSite `@id`: verified fixed** on all four pages.
+- **#5 state-page cross-link silo: CONFIRMED.** Scoped to `<main>`, each state page carries two internal links (`/contact` and the hub) and **zero** to /guides/, /tools/, /parts/ or /manuals/; every other in-main link is an external business site. Queue: a topic-matched in-body block (winterize-plumbing on northern states, the roof and awning guides on coastal ones) plus hub links.
+- **#6 hub missing the closing line: CONFIRMED** -- the hub has no `page-foot` while the state pages now do. Queue: add it.
+- **#7 directory dates: DELIBERATE, and recorded as such.** These pages are a generated view of `_data/listings/<state>.json`; a "last reviewed" date on the render would claim a human read that did not happen. The date convention stays on guides, manuals and the finder tools. If a date is ever wanted here it should be the data's verification date, not the page's.
+- **Carryover note:** the "west to east" intro wording was fixed at `1e607f60` -- the lede now says Alaska and Hawaii come last. Neo's render predates it.
+
+Instruments at this tip: `verify.py` ALL CHECKS PASSED; `build-all.sh` clean.
