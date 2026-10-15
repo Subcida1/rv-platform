@@ -3918,3 +3918,99 @@ The legal restrictions are the first section after the callout, in the maker's o
 **SITEMAP VERIFIED COMPLETE (conductor, 04:52 PDT):** `rv-frame-cracks` and `rv-engine-overheating` both present; 57 guides on disk against 58 sitemap matches (the 58th is the guides hub). The frame-cracks omission conv-095eb8fd caught and fixed is closed.
 
 **PUSH CONTENTION — the working pattern, from conv-095eb8fd's four rebases:** every conflict landed in the same seven registration files (`guide-systems.json`, `guides.json`, the derived files, the manifest), and every one resolved the same way, so the resolution became a script: **keep both mappings in `guide-systems.json`, take HEAD's `guides.json` and re-add the slug, take HEAD for the derived files and regenerate, keep both manifest records.** The only push that landed was the one where **the gate finished with origin still level** — so the working pattern is: **gate, check divergence, and push in the same command.** Recorded for the fleet.
+
+---
+
+# MORNING REPORT (FINAL) — 2026-10-15, the conductor's night (conv-19dd16d7)
+
+Ty — you asked for a conductor to keep everything moving until it was done. It is done, or as done as a night gets. Here is what happened, in the order you will care about it.
+
+## The headline
+- **Ten new guides. 47 → 57.** The awning guide, the propane detector, the propane tank, water pressure and fills, frame cracks, off-grid heating, engine overheating, entry steps, window leaking, entry door latch. Every one sourced to maker or government documents, every one independently reviewed.
+- **A new tool: the state trailer brake laws table — 50 of 51 jurisdictions**, every threshold quoted verbatim from its own vehicle code with the section named, Mississippi the one deliberately out (its sites will not serve the text to anything but a browser) and the page says so. It found that the 3,000 lb figure everyone repeats is a commercial-vehicle federal rule; the states do not cluster around it.
+- **The directory: 2,027 businesses across 50 states** (+85 from the thin-states pass).
+- **The community scan** — the discovery instrument, run for the first time in weeks, with **two of its own defects found and fixed** (it was counting subreddit names as thread titles, and reading forum front pages as problem lists). It produced a ranked gap list, and **all seven of its gaps closed the same night.**
+- **Eight independent reviews**, every finding applied. The reviews found real things: five pages with no Sources section at all, four citation mismatches, two negative claims that were false, and one citation pointing at a chapter table of contents instead of the rule.
+
+## Closed tonight (applied, pushed, green, verified live)
+| what | where |
+|---|---|
+| Batch A — silo links + trailer-brakes scope label | `fd4a0bb5` |
+| Batch B — ItemList convention, WebSite @id (51 pages), /guides title, W29 entry | `531bb657` |
+| Batch C — all-50 phone audit (2 records fixed), NM lede variant across 4 surfaces | `f9d4012d`, `d176adba` |
+| Batch D — the 100-case weight-calculator harness + the required-fields bug | `8bee81c8`, `0a0e8b5e` |
+| Batch E — parts card fixes + **210 card anchors** | `69304b24` |
+| Batch F — the `/parts#anchor` links (57 card links) | `65ec6041` |
+| Batch G — the tool-inclusive count, the last thin tagline | `57fa70a5` |
+| The column defect you found by eye + the `check-column.py` gate | `edec2e8b` |
+| W27 — the fifth-wheel range contradicted its own arithmetic | `9b523106` |
+| Manuals ItemLists + the manuals tool links | `ea8fe0b6`, `9f8a68cd`… |
+| /tools descriptions (now name the fifteen tools) | `70699527` |
+| Finder "find a tech" CTAs (7 tools) | `ed42a564` |
+| **The state trailer brake tool** (50/51) + its review's findings applied | `f4ed9e42` … `2009ba92` |
+| **The community scan** + ranked gap list | `b10327ae`, `1aeffa7d` |
+| **Thin states** — 1,942 → 2,027 | `fac3a347` |
+| **The ten guides** | `c680b235` … `9f8a68cd` |
+
+**Final counts: 57 guides, 15 tools, 50 state pages, 11 manuals sub-pages, 2,027 listings.**
+
+## What the reviews found, because it is the standard working
+Every new page got a fresh-context pass, and the classes that came out of it are worth more than any single finding:
+
+1. **Five pages shipped with no Sources section at all** — naming their makers and quoting their figures with nothing a reader could check. The most common defect of the night, and now a habit to fix rather than a per-page finding.
+2. **Citation mismatches** — five claims credited to documents that did not carry them (an NFPA 1192 *preview* cited for a section it stops before; a Rochester spec sheet lacking two figures that live in two other Rochester documents). **Nothing in the pipeline verifies that a Sources line's description matches the document it points at.**
+3. **A negative claim that was false** — the off-grid heating page said no maker publishes the altitude derating; Eberspaecher publishes exactly that rate on its own domain. **A negative claim is still a claim, and this one was checkable in one search.**
+4. **A citation pointing one level above the rule** — the brake table's DC row linked a chapter table of contents, so a reader could not verify the claim from the link given.
+5. **The rehost gate earned its keep** — it caught the windows page's central source (a Hehr manual whose only reachable copy is on a rehosted domain), and the claims were rebuilt on documents on the maker's own domain.
+6. **The instrument was wrong far more often than the page** — three separate times tonight a check flagged correct content: the brake reviewer's 14-of-18 extraction artefacts, two spelling gates disagreeing, and the column check's first version producing 61 false findings.
+
+## In flight at report time
+- **Page 2 of the chassis candidate** (the charging circuit) — specced with its sources quoted, drafting (conv-095eb8fd).
+- **The engine-overheating review** (conv-8e8a0028).
+- **The propane tank review** (conv-c145cc42).
+- **The off-grid heating findings** being applied (conv-c3913bd3).
+
+## Blocked on you
+1. **W3** — the black-tank page spec (thesis is yours).
+2. **W5** — photos: Texas pick, Virginia replacement, tongue jack.
+3. **W19 pages 6–8** — your read-through (`tools/rv-anode-rod`, `/guides/`, `/about`).
+4. **The trust-claim cluster** — 10 sentences across /about, /privacy, /signin, homepage.
+5. **The weight-calculator H1** — recommendation on the table: "RV towing calculator: towing capacity, payload and tongue weight."
+6. **The /directory region-order wording** — the intro says "west to east" while AK/HI sit last deliberately; a wording fix, not a reorder.
+7. **The two-guide renderer** — five guides want a second slot on a parts card.
+8. **The off-grid heating page's justification** — written on safety grounds rather than demand (one of its four cards carries a figure). Worth a read; pull it if you read it differently.
+9. **The state+manuals closing-line second pass** — not approved, not queued.
+
+## Incidents (all resolved)
+- **One transient Pages deployment failure** (a GitHub OIDC blip) — caught by the monitor in 3 minutes, fixed by rerun. If you got a failure email around 02:25, that was it.
+- **Two sessions stalled** (an unanswered approval; a reasoning loop) — both resumed and delivered.
+- **One duplicate build** (the manuals ItemLists, two sessions) — reconciled; the claim convention recorded.
+- **One verification error of mine** (a whole-file link count) — caught by conv-b71ff860, corrected.
+- **The bridge review failed four times**, each mechanically and each diagnosed; recorded as owing. The session reviews stood and were stronger.
+- **`SendAgentMessage` acknowledged but never delivered twice for one conversation**; the CLI route worked.
+- **`computer: "CLI-Grid"` subagent routing is not reliable** — one dispatch ran in the sandbox instead and started a rebase in a clone being edited.
+- **Push contention** was the night's biggest time sink — six sessions to one main; one push took five rebase attempts, another four.
+
+## The rules recorded for every future session
+1. **Claim before building** — a `CLAIM:` line in the queue before starting.
+2. **Count inside `<main>`, not the whole file** — chrome makes a silo look linked.
+3. **"HTTP 200, quoted text confirmed" needs a hand spot-check.**
+4. **After resolving a shared generated file to upstream, re-run the generators.**
+5. **A partial harvest is not a small harvest, it is a different answer.**
+6. **The Bash tool's 120s timeout silently kills `ci.sh`** — launch it detached and wait on the exit file.
+7. **Do not rebase while `ci.sh` reads the tree.**
+8. **A remote subagent cannot be reliably killed.**
+9. **Assert on behaviour, not wording.**
+10. **When a check flags something surprising, suspect the check** — three instruments were wrong tonight before any content was.
+11. **Two spelling gates disagree** (`check-spelling.py` passes what `verify.py` fails).
+12. **A cancelled Pages build looks exactly like a push that did not land.**
+13. **A Sources line's description is not verified against the document it points at.**
+14. **Check for an existing worklist section before appending one.**
+15. **The unmerged list is not the list of files with markers** — grep the tree for `^<<<<<<<` after a rebase.
+16. **A second-hand quotation is a lead, not a source.**
+17. **A claim that cannot be sourced does not get a weaker source; it gets cut.**
+18. **The Wayback Machine is a legitimate reading route when the citation still points at the publisher.**
+19. **The eCFR API is the working route to the CFR, and it needs `curl -L`.**
+20. **Gate, check divergence, and push in the same command** — the only window that landed tonight.
+21. **A negative claim is still a claim** — check it before publishing it.
+22. **The build chain is incomplete and one of its own arguments does not resolve** (`new-guide.py` omits `build-home-schema.py`; `build-sitemap.py --write` does not add new pages; the hub-section lookup misses real ids).
