@@ -364,3 +364,52 @@ about.
   in what the constant current damages, which is the more expensive half of
   that failure.
 
+
+---
+
+# Page 5 - `tools/weight-calculator.html` (Ty, 2026-10-14 night)
+
+Read in two batches plus a follow-up message; fixes landed as `b2091200`, `0a0e8b5e`,
+`1f5bf9fc`, `e2287b26`, and the two follow-ups below. **The required-field defect was the
+one that mattered:** the calculator gave a green verdict from three filled boxes without
+ever checking the truck's GVWR, the GCWR or the curb weight, because a blank field made
+its verdict row simply not render. All three are required now, and the tool refuses and
+names what is missing instead of answering anyway.
+
+| # | what Ty said | the rule it becomes | class |
+|---|---|---|---|
+| 1 | the H1's second half should come from search data | a title carries words people search, not a question | OPEN - his call |
+| 2 | the lede is not centered and reads out of place | an instruction line folds into the box it belongs to | DONE |
+| 3 | the five chips look like navigation but are not | a pill is a button; a chip that leads nowhere is furniture | DONE - removed |
+| 4 | red asterisk, and a star in the placeholder | a required field says so in both places | DONE |
+| 5 | GCWR, GVWR and curb weight should be required | a verdict may not render without its inputs | DONE - real defect |
+| 6 | a magnifying glass before "Find it" | the locating hints carry the icon; the explaining hints do not | DONE |
+| 7 | the dry-weight block is confusing | ask the question in the reader's terms, not as a legal argument | DONE - rebuilt |
+| 8 | 10-15% / 20-25% are ideal, not hard truths | targets are framed as usual targets | DONE |
+| 9 | the paragraph in the middle of the calculator | a filling note lives above the calculator, not inside it | DONE |
+| 10 | tanks on two separate rows | one tank per row | DONE |
+| 11 | a tool to detect links that do not look like links | built - see below | DONE |
+| 12 | voice pass on the scale-locator line | as dictated | DONE |
+| 13 | "Prefer to find it yourself?" centered | as dictated | DONE |
+| 14 | CAT Scale positioning by vehicle type | say what goes on which platform | DONE |
+| 15 | GCWR should say it is the whole combination | as dictated | DONE |
+| 16 | the embed branding | verified already present | DONE |
+
+**Two tooling items came out of this read:**
+
+- **The link-visibility checker** (`scripts/check-link-visibility.mjs`). Ty: *"make a tool
+  to detect this so we can fix it."* It renders every page and compares each content link
+  against its own parent element; a link with no difference in colour, underline, weight,
+  background, border or shadow is invisible to the reader. The first full run found **46
+  links on 10 pages** rendering exactly like their text - the one he caught, the
+  calculator's Sources card, the hub "Where to go next" strips, the homepage trust card,
+  and two guide intros. Fixed in the CSS rule and the two intros; wired into `ci.sh` and
+  negative-tested.
+- **The 100-case harness** (`scripts/test-weight-calculator-cases.mjs`). Ty: *"test the
+  calculator with 100 different real world set ups ... 95%+ assured."* 100 of 100 agree
+  with a second implementation written from the documented rules; negative-tested three
+  ways; wired into `ci.sh`.
+
+**Still open for Ty:** the H1 call - keep "RV towing calculator. Can your truck tow it?"
+or take the keyword recommendation, "RV towing calculator: towing capacity, payload and
+tongue weight".

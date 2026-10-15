@@ -122,6 +122,13 @@ step "anode rod finder"                       node scripts/test-anode-rod.js
 step "water filter finder"                    node scripts/test-water-filter.js
 node scripts/test-snow-load.js
 step "accessibility (axe)"                    node scripts/check-a11y.mjs
+# THE LINK-VISIBILITY RULE. Ty, 2026-10-14, reading the weight calculator: "We have a link in the
+# text you would never know as it doesnt look like a link, make a tool to detect this so we can
+# fix it." Renders every page and compares each content link against its own parent element: a
+# link with no difference in colour, underline, weight, background, border or shadow is invisible
+# to the reader. It found 46 on 10 pages when it was written. Negative-tested by reverting the css
+# rule and watching it name the 36 card links, then restoring.
+step "link visibility"                        node scripts/check-link-visibility.mjs
 # THE COMPONENT-CONSISTENCY RULE, and it is the gap the 2026-10-14 tools-hub bug fell through.
 # check-style.py's centring rule runs ONE WAY: it catches centring nobody approved, and can never
 # see centring that was approved in CENTER_OK and never written. Ty found the result himself --

@@ -231,13 +231,29 @@ a{color:inherit;text-decoration:none}
    cannot tell there is anything to click, which costs the internal linking this site depends on.
    Scoped to the content areas rather than applied to every anchor, so nav, footer, buttons and the
    card components keep the treatment they were designed with. */
+/* THE CONTENT AREAS WERE NOT THE WHOLE SITE, and the misses were measured rather than guessed.
+   Ty, 2026-10-14, reading the weight calculator: "We have a link in the text you would never know
+   as it doesnt look like a link, make a tool to detect this so we can fix it." A rendered-DOM scan
+   of all 133 pages (scripts/check-link-visibility.mjs, wired into ci.sh) found 46 links rendering
+   exactly like the text around them, in three containers the 2026-10-08 rule never reached:
+   section-intro paragraphs (.sec-head), card sentences (the hub "Where to go next" strips and the
+   trust cards), and the weight calculator's Sources block -- a .card.srcs that sits outside .prose,
+   so its links were the only Sources links on the site without the treatment every guide's carry.
+   The guards keep the components that already carry their own affordance -- .btn, .doc-link, .link
+   -- exactly as they were; without them this rule would underline buttons. */
 .prose p a,.prose li a,.prose td a,
 .no-body p a,.no-body li a,.no-body td a,
-.no-sec p a,.no-sec li a,.no-sec td a{
+.no-sec p a,.no-sec li a,.no-sec td a,
+.sec-head p a,
+.card p a:not(.btn):not(.doc-link):not(.link),
+.card.srcs a{
   color:var(--b1);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:2px}
 .prose p a:hover,.prose li a:hover,.prose td a:hover,
 .no-body p a:hover,.no-body li a:hover,.no-body td a:hover,
-.no-sec p a:hover,.no-sec li a:hover,.no-sec td a:hover{color:var(--brand)}
+.no-sec p a:hover,.no-sec li a:hover,.no-sec td a:hover,
+.sec-head p a:hover,
+.card p a:not(.btn):not(.doc-link):not(.link):hover,
+.card.srcs a:hover{color:var(--brand)}
 img{max-width:100%;display:block}
 button{font-family:inherit;cursor:pointer}
 input,select,textarea{font-family:inherit}
