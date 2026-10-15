@@ -280,7 +280,12 @@ def foot(script):
 
 
 def site_schema():
-    return {"@type": "WebSite", "name": "OriginRV", "url": SITE + "/"}
+    # The @id is what makes this the SAME entity the homepage and /parts/ declare, rather
+    # than a second, unnamed WebSite. Without it the reference points at nothing, and a
+    # consumer sees two WebSite nodes for one site. Matches the shape used on the homepage
+    # and in build-parts-pages.py.
+    return {"@type": "WebSite", "@id": SITE + "/#website",
+            "name": "OriginRV", "url": SITE + "/"}
 
 
 def breadcrumbs(trail):

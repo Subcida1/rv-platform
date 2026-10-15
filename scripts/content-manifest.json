@@ -403,9 +403,9 @@
     "claims": "ca780a6dbc99c4d8"
   },
   "guides/index.html": {
-    "hash": "2f9e2e7092aa7942",
+    "hash": "6867ddb3469634f8",
     "status": "verified",
-    "verified_by": "queued W29 finding applied 2026-10-15: the trust pages were orphans -- /about and /contact carried zero in-body links from five of the six hubs and from the homepage. Each hub's Where-to-go-next strip and a new closing block on the homepage now name both. No fact changed.",
+    "verified_by": "hub schema batch 2026-10-15: the /guides title was rebalanced from 'RV Guides: Towing, Troubleshooting, Winter, Tires' (49ch; named 4 of 6 sections and carried neither word of the hub's own target query) to 'RV Repair Guides: Electrical, Water, Towing and Winter' (54ch; carries the target query 'rv repair guides' and names four of the six sections). Title/og/twitter all changed together. No fact on the page changed.",
     "verified_at": "2026-10-15",
     "sources": [],
     "spec": null,

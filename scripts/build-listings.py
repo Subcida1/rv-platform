@@ -266,7 +266,8 @@ def schema_text(data, slug):
             "description": ("Find RV repair in %s: mobile technicians, service centers and "
                             "roadside help." % state),
             "url": "%s/directory/%s" % (SITE, slug),
-            "isPartOf": {"@type": "WebSite", "name": "OriginRV", "url": SITE + "/"},
+            "isPartOf": {"@type": "WebSite", "@id": SITE + "/#website",
+                         "name": "OriginRV", "url": SITE + "/"},
             "about": {"@type": "Thing", "name": about},
             "mainEntity": {"@type": "ItemList", "numberOfItems": len(elements),
                            "itemListElement": elements}}
@@ -498,7 +499,8 @@ def build(kind):
             "description": ("RV repair directory organized by state: mobile techs, "
                             "service centers, and emergency roadside help."),
             "url": "%s/directory/" % SITE,
-            "isPartOf": {"@type": "WebSite", "name": "OriginRV", "url": SITE + "/"},
+            "isPartOf": {"@type": "WebSite", "@id": SITE + "/#website",
+                         "name": "OriginRV", "url": SITE + "/"},
             "about": {"@type": "Thing", "name": "RV repair directory"},
             "mainEntity": {"@type": "ItemList", "numberOfItems": len(PAGES),
                            "itemListElement": [

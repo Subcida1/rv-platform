@@ -242,6 +242,17 @@ def build():
     # meta description must land in 140-160 characters; adjust and re-check rather than guess
     assert 140 <= len(desc) <= 160, "meta description is %d chars" % len(desc)
 
+    # AN ITEMLIST FOR THE CARD GRID, in the shape the other hubs already use (CollectionPage
+    # .mainEntity, as /directory/ and /manuals/ do). /guides/ carries one too but as a top-level
+    # ItemList, which verify.py asserts by that exact shape, so it is left alone deliberately.
+    # The parts have no pages of their own, so each item points at the system section it lives
+    # in -- that is the navigable unit on this page, and it is what the jump nav links to.
+    part_items = []
+    for s in systems:
+        for p in s["parts"]:
+            part_items.append({"@type": "ListItem", "position": len(part_items) + 1,
+                               "name": p["n"], "url": "%s/parts/#%s" % (SITE, s["key"])})
+
     schemas = [
         # ONE WEBSITE ENTITY, NAMED BY @id. This page declared WebSite twice -- once standalone and
         # once inside isPartOf -- and the homepage declares it a third time, all with no @id, so a
@@ -252,7 +263,9 @@ def build():
         {"@context": "https://schema.org", "@type": "CollectionPage",
          "name": schema_name, "url": SITE + "/parts/index.html",
          "description": desc,
-         "isPartOf": {"@id": SITE + "/#website"}},
+         "isPartOf": {"@id": SITE + "/#website"},
+         "mainEntity": {"@type": "ItemList", "numberOfItems": len(part_items),
+                        "itemListElement": part_items}},
     ]
 
     out = [head(title, desc, SITE + "/parts/index.html", schemas)]
