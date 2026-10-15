@@ -1051,9 +1051,9 @@
     "claims": []
   },
   "tools/rv-toilet-valve.html": {
-    "hash": "295a7a512d277ce9",
+    "hash": "2b5688f5faffcaaa",
     "status": "verified",
-    "verified_by": "queued Neo rotation findings applied 2026-10-14: the GasBuddy source citation added on the fuel cost tool; a Where to go next block added to six tool pages (tire-date-code, rv-appliance-board-finder, rv-converter-finder, rv-recall-lookup, rv-toilet-valve, rv-anode-rod) with topic-matched links, no fact changed. The black tank parts card now points at the dedicated RV black tank guide.",
+    "verified_by": "queued Neo tools-11th findings applied 2026-10-15: removed a sentence from the Where-to-go-next block that restated a body sentence almost verbatim (the anode-rod and toilet-valve pages each said the same thing twice within a screen); renamed the water-filter page's closing block heading from 'Related guides' to 'Where to go next' so all six finders match. No link added or lost.",
     "verified_at": "2026-10-14",
     "sources": [],
     "spec": null,
@@ -1061,10 +1061,10 @@
     "claims": []
   },
   "tools/rv-water-filter.html": {
-    "hash": "037059896cd961ec",
+    "hash": "f7cbc782fc1bfc28",
     "status": "verified",
-    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
-    "verified_at": "2026-10-13",
+    "verified_by": "queued Neo tools-11th findings applied 2026-10-15: removed a sentence from the Where-to-go-next block that restated a body sentence almost verbatim (the anode-rod and toilet-valve pages each said the same thing twice within a screen); renamed the water-filter page's closing block heading from 'Related guides' to 'Where to go next' so all six finders match. No link added or lost.",
+    "verified_at": "2026-10-14",
     "sources": [],
     "spec": null,
     "spec_waived": true,
