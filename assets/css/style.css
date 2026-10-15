@@ -2014,6 +2014,14 @@ details.faq p{color:var(--text-2);font-size:16px;line-height:1.7;padding-bottom:
 .w-needmore b{display:block;font-size:19px;font-weight:800;color:var(--text);margin-bottom:8px}
 .w-needmore span{color:var(--text-2);font-size:14.5px;line-height:1.6;max-width:330px}
 .field .req{color:var(--danger);margin-left:3px;font-weight:800}
+/* A field's own display:flex beats the hidden attribute, so hiding one has to be said here. */
+.field[hidden]{display:none}
+/* THE MAGNIFIER ON A "FIND IT" HINT. Ty, 2026-10-14: "Infront of our little 'find it' can we put
+   a little magnifying glass icon? feels fitting." Only the hints that tell you where to find a
+   number carry it, which is why it is .find and not .hint: four of the twelve hints explain a
+   field rather than locating it, and an icon on those would be noise. Drawn as a mask so it
+   takes the hint's own ink and needs no second asset. */
+.hint.find::before{content:"";display:inline-block;width:12px;height:12px;margin-right:5px;vertical-align:-1px;background:currentColor;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.6' stroke-linecap='round'%3E%3Ccircle cx='10.5' cy='10.5' r='6.4'/%3E%3Cpath d='M15.3 15.3 21 21'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.6' stroke-linecap='round'%3E%3Ccircle cx='10.5' cy='10.5' r='6.4'/%3E%3Cpath d='M15.3 15.3 21 21'/%3E%3C/svg%3E") center/contain no-repeat}
 
 /* embedded CAT Scale map */
 .scale-map{border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:var(--surface);margin-bottom:14px}

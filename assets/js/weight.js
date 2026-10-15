@@ -69,7 +69,11 @@
   * be added. Hence the checkbox: the two cases are different numbers and only the reader knows which.
   *
   * It defaults to the sticker, because that is where the number normally comes from. */
- var uvwIsSticker = $('w-uvw-label') ? $('w-uvw-label').checked !== false : true;
+ var uvwIsSticker = ($('w-uvw-src') ? $('w-uvw-src').value : 'sticker') !== 'scale';
+ /* The propane question only exists for a reader who weighed the trailer themselves. Off the
+  * sticker it is already counted, and asking again is what made this block confusing. */
+ var propaneField = $('w-propane-field');
+ if (propaneField) propaneField.hidden = uvwIsSticker;
  var propaneLb = uvwIsSticker ? 0 : propane;
  var loaded = rigUVW + water + propaneLb + cargoTrailer;
 
@@ -245,12 +249,13 @@
  }
 
  /* live recompute on any change */
- var ids = ['w-tow-rating','w-payload','w-curb','w-truck-gvwr','w-gvwr','w-uvw','w-uvw-label','w-h2o-f','w-propane','w-cargo-trailer','w-passengers','w-type','w-axles','w-gray-full','w-black-full','w-gray-gal','w-black-gal'];
+ var ids = ['w-tow-rating','w-payload','w-curb','w-truck-gvwr','w-gvwr','w-uvw','w-uvw-src','w-h2o-f','w-propane','w-cargo-trailer','w-passengers','w-type','w-axles','w-gray-full','w-black-full','w-gray-gal','w-black-gal'];
  ids.forEach(function (id) {
  var el = $(id);
  if (el) el.addEventListener('input', update);
  });
  if ($('w-type')) $('w-type').addEventListener('change', update);
+ if ($('w-uvw-src')) $('w-uvw-src').addEventListener('change', update);
  if ($('w-axles')) $('w-axles').addEventListener('change', update);
 
  window.RVWeight = { update: update };

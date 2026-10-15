@@ -60,7 +60,7 @@ function render(c) {
   byId['w-type'] = Object.assign(el(), { value: c.type });
   byId['w-gray-full'] = Object.assign(el(), { checked: c.grayFull });
   byId['w-black-full'] = Object.assign(el(), { checked: c.blackFull });
-  byId['w-uvw-label'] = Object.assign(el(), { checked: c.sticker });
+  byId['w-uvw-src'] = Object.assign(el(), { value: c.sticker ? 'sticker' : 'scale' });
   const doc = {
     getElementById: (id) => byId[id] || (byId[id] = el()),
     querySelector: () => null, querySelectorAll: () => [], addEventListener() {}, readyState: 'complete',

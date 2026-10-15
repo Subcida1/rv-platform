@@ -1105,10 +1105,10 @@
     "sources": []
   },
   "tools/weight-calculator.html": {
-    "hash": "bd626fec7a45458a",
+    "hash": "c7ed2796c006f324",
     "status": "verified",
-    "verified_by": "Ty's calculator pass, continued: the Where to go next block gets its section wrapper so it stops sitting on the page edge, plus the required-field, badge and framing fixes",
-    "verified_at": "2026-10-14",
+    "verified_by": "Ty's calculator pass, second batch: the find-it magnifier, the dry-weight question asked in the reader's terms with the propane field only shown when it applies, the scale-locator wording, the CAT Scale positioning for each vehicle type, and the limits section",
+    "verified_at": "2026-10-15",
     "sources": [],
     "spec": null,
     "spec_waived": true,
