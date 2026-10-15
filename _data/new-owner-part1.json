@@ -594,7 +594,7 @@
       },
       {
        "kind": "p",
-       "html": "A cellular booster does one thing: it amplifies a signal that already exists. It cannot create one. Boosters are often promoted online as a game changer that every RV and boat should have onboard, but in many situations they might not make any difference to your internet performance, and they can sometimes make data slower. The technical reason is that a booster uses a single exterior antenna: it cannot take advantage of MIMO, because it can only work with a single signal at a time. It is the equivalent of plugging one of your ears: you can still hear, but not as well."
+       "html": "A cellular booster does one thing: it amplifies a signal that already exists. It cannot create one. Boosters are often promoted online as a game changer that every RV and boat should have onboard, but in many situations they make no difference to your internet performance, and they can slow data down. The technical reason is that a booster uses a single exterior antenna: it cannot take advantage of MIMO, because it can only work with a single signal at a time. It is the equivalent of plugging one of your ears: you can still hear, but not as well."
       },
       {
        "kind": "list",

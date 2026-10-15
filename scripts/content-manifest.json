@@ -593,9 +593,9 @@
     "claims": "1880dbae7019e467"
   },
   "guides/rv-lights-not-working.html": {
-    "hash": "c605cccae87d0062",
+    "hash": "1e98fd338fd52b2d",
     "status": "verified",
-    "verified_by": "the reader-benefit sweep, step 1 of _todo/VOICE-RULESET.md: the clause about the reader (why the fact matters, what it costs them) cut or rebuilt as the content, per Ty 2026-10-13 \"Say the thing... just spit out the content\". No fact changed; the framing did.",
+    "verified_by": "the reader-benefit sweep, step 2 (the report-only families: hedge-stack, emphasis-adverb, authenticity-adjective, filler-opener), 2026-10-14: one hedge where two were, importance shown rather than insisted on, our figures not called the real ones, and no filler opener. No fact changed.",
     "verified_at": "2026-10-14",
     "sources": [],
     "spec": "_specs/rv-lights-not-working.md",
@@ -783,10 +783,10 @@
     "claims": "c0dc7a196a84dde6"
   },
   "guides/rv-trip-planner.html": {
-    "hash": "98be29256538b930",
+    "hash": "56eb4d8951efc890",
     "status": "verified",
-    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
-    "verified_at": "2026-10-13",
+    "verified_by": "the reader-benefit sweep, step 2 (the report-only families: hedge-stack, emphasis-adverb, authenticity-adjective, filler-opener), 2026-10-14: one hedge where two were, importance shown rather than insisted on, our figures not called the real ones, and no filler opener. No fact changed.",
+    "verified_at": "2026-10-14",
     "sources": [],
     "spec": null,
     "spec_waived": true,
@@ -803,9 +803,9 @@
     "claims": "31f22570b89ad0eb"
   },
   "guides/rv-water-heater-anode-rod.html": {
-    "hash": "f3f01b9ce5141774",
+    "hash": "7429cb670b8261bf",
     "status": "verified",
-    "verified_by": "the reader-benefit sweep, step 1 of _todo/VOICE-RULESET.md: the clause about the reader (why the fact matters, what it costs them) cut or rebuilt as the content, per Ty 2026-10-13 \"Say the thing... just spit out the content\". No fact changed; the framing did.",
+    "verified_by": "the reader-benefit sweep, step 2 (the report-only families: hedge-stack, emphasis-adverb, authenticity-adjective, filler-opener), 2026-10-14: one hedge where two were, importance shown rather than insisted on, our figures not called the real ones, and no filler opener. No fact changed.",
     "verified_at": "2026-10-14",
     "sources": [],
     "spec": null,
@@ -823,10 +823,10 @@
     "claims": "18cbb61bba603005"
   },
   "guides/rv-water-pump-wont-prime.html": {
-    "hash": "d85dfd44da43b8d6",
+    "hash": "56db22fe8b5547df",
     "status": "verified",
-    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
-    "verified_at": "2026-10-13",
+    "verified_by": "the reader-benefit sweep, step 2 (the report-only families: hedge-stack, emphasis-adverb, authenticity-adjective, filler-opener), 2026-10-14: one hedge where two were, importance shown rather than insisted on, our figures not called the real ones, and no filler opener. No fact changed.",
+    "verified_at": "2026-10-14",
     "sources": [],
     "spec": null,
     "spec_waived": true,

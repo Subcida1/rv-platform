@@ -58,7 +58,7 @@
       },
       {
        "kind": "callout",
-       "html": "You can often leave the gray tank valve open while hooked to a sewer connection, but some parks require both valves closed at all times. Check the rule where you are parked."
+       "html": "The gray tank valve can be left open while hooked to a sewer connection, but some parks require both valves closed at all times. Check the rule where you are parked."
       }
      ]
     },
@@ -379,7 +379,7 @@
   {
    "id": "seasons",
    "title": "Part 4: Cold, heat and storage",
-   "summary": "What cold breaks and in what order, how to winterize and where half-jobs fail, what four-season really means, and how to stop condensation and mold.",
+   "summary": "What cold breaks and in what order, how to winterize and where half-jobs fail, what four-season means, and how to stop condensation and mold.",
    "sections": [
     {
      "id": "freezing",
@@ -463,7 +463,7 @@
     },
     {
      "id": "four-season",
-     "title": "What a four-season RV actually means",
+     "title": "What a four-season RV means",
      "open": false,
      "blocks": [
       {

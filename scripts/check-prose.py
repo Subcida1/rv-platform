@@ -136,6 +136,13 @@ NOTED = (
      r"\b(?:may|might|could|can)\s+(?:possibly|potentially|sometimes|often)\b|"
      r"\busually\s+often\b|\bgenerally\s+usually\b",
      "two hedges where one would do"),
+    # KNOWN FALSE POSITIVE, 2026-10-14: this rule does not know it is inside a
+    # quotation, and a maker's own hedging is not ours to edit. The one live hit
+    # on the site is Thetford's own wording on guides/rv-macerator-toilet.html
+    # ("...but can sometimes be on the base of the toilet..."), inside <b>"..."</b>.
+    # That one is correct as it stands and must NOT be swept: house style is that
+    # a quoted source wins over our prose rules. Strip quotes before matching
+    # before you widen this rule.
     ("emphasis-adverb",
      r"\b(?:truly|genuinely|really|actually)\s+(?:matters|matter|important|counts|means)\b",
      "insisting on importance rather than showing it"),
