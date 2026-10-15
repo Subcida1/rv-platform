@@ -493,7 +493,8 @@ def hub(rows, oem_count, model_count=0):
         manuals leave to the reader: weight, load, tire age, battery runtime. The
         <a href="/parts/">parts</a> page names each component the manuals cover. The
         <a href="/directory/">directory</a> finds a technician for the work a manual says needs
-        one.</p>
+        one. And <a href="/about">about OriginRV</a> says who writes this, with
+        <a href="/contact">the contact page</a> for a correction or a missing topic.</p>
       </div>
     </div>
   </div>

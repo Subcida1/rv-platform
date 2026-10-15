@@ -403,10 +403,10 @@
     "claims": "ca780a6dbc99c4d8"
   },
   "guides/index.html": {
-    "hash": "94fc328608497650",
+    "hash": "2f9e2e7092aa7942",
     "status": "verified",
-    "verified_by": "the cross-link strip added to all five hubs, Ty 2026-10-14 (\"Interlink all of these areas\"): each hub now names the other four and what each is for. One new block per hub, no existing content changed.",
-    "verified_at": "2026-10-14",
+    "verified_by": "queued W29 finding applied 2026-10-15: the trust pages were orphans -- /about and /contact carried zero in-body links from five of the six hubs and from the homepage. Each hub's Where-to-go-next strip and a new closing block on the homepage now name both. No fact changed.",
+    "verified_at": "2026-10-15",
     "sources": [],
     "spec": null,
     "spec_waived": true,

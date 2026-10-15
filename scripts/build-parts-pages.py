@@ -350,7 +350,9 @@ def build():
                'a part being replaced, in order from the symptom. The <a href="/manuals/">manuals</a> '
                'are the maker\'s own documents, collected by system. The <a href="/tools/">tools</a> '
                'do the arithmetic: weight, load, tire age, battery runtime. The '
-               '<a href="/directory/">directory</a> finds a mobile technician or a shop by state.</p>\n'
+               '<a href="/directory/">directory</a> finds a mobile technician or a shop by state. '
+               'And <a href="/about">about OriginRV</a> says who writes this, with '
+               '<a href="/contact">the contact page</a> for a correction or a missing topic.</p>\n'
                ' </div>\n')
     out.append(foot("assets/js/parts.js"))
     return "".join(out)
