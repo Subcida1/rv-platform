@@ -191,7 +191,8 @@
  '<a href="' + R(rt.toolLoan) + '">RV Loan<span class="sm">Payments and APR</span></a>' +
  '<a href="' + R(rt.calculator) + '">Weight &amp; Towing<span class="sm">Live, free</span></a>' +
  '<a href="' + R(rt.toolBattery) + '">Battery Runtime<span class="sm">How long the bank lasts</span></a>' +
- '<a href="' + R(rt.tools) + '">All 14 tools<span class="sm">Finders for valves, converters, recalls</span></a></div></div>' +
+ '<a href="' + R(rt.toolBrakeLaws) + '">State Brake Laws<span class="sm">Where trailer brakes are required</span></a>' +
+ '<a href="' + R(rt.tools) + '">All 15 tools<span class="sm">Finders for valves, converters, recalls</span></a></div></div>' +
  '<div class="nav-group"><a class="nav-link" href="' + R(rt.guides) + '">Guides</a>' +
  '<div class="drop"><a href="' + R(rt.guideWinterize) + '">Winterize Your Plumbing<span class="sm">Tanks, lines, antifreeze, bypass</span></a>' +
  '<a href="' + R(rt.guideBattery) + '">Battery Care in Cold<span class="sm">Lead-acid vs lithium rules</span></a>' +
@@ -233,7 +234,8 @@
  '<a class="mm-top" href="' + R(rt.home) + '">Home</a>' +
  mmGroup('Tools', rt.tools, [['Fuel cost', rt.toolFuel], ['Watts to amps', rt.toolWatts],
    ['Solar sizing', rt.toolSolar], ['RV loan', rt.toolLoan],
-   ['Weight & towing', rt.calculator], ['Battery runtime', rt.toolBattery]]) +
+   ['Weight & towing', rt.calculator], ['Battery runtime', rt.toolBattery],
+   ['State brake laws', rt.toolBrakeLaws]]) +
  mmGroup('Guides', rt.guides, [['Winterize plumbing', rt.guideWinterize],
    ['Battery cold storage', rt.guideBattery], ['Tires through winter', rt.guideTires],
    ['Roof snow load', rt.guideRoof]]) +
