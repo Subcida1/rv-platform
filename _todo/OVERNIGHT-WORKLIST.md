@@ -4623,3 +4623,16 @@ Four items, verified against the page source at tip `fc00322b`:
 - **#4 homepage ItemList has no `@id`: CONFIRMED** -- the same bare pattern as the /guides hub finding. Queue: give it an `@id` and, in the same pass, wrap the guides hub's ItemList in a CollectionPage.
 
 Instruments at this tip: `verify.py` ALL CHECKS PASSED.
+
+## Neo guides 14th rotation (2026-10-15, verified from the Cloud lane)
+
+Seven pages, verified against the page source at tip `c7ceb9af`:
+
+- **#1 in-body silo: CONFIRMED.** Measured inside `<main>`, all seven carry zero links to /tools/, /parts/, /manuals/ or /directory/. Queue the two natural matches: rv-chassis-battery-and-charging -> `/tools/battery-runtime` + `/tools/watts-to-amps`; rv-frame-cracks -> `/tools/weight-calculator`. The other five have no natural match.
+- **#2 kicker taxonomy: the same documented subject taxonomy** (`_todo/HANDOFF-TOOL-SWEEP.md:540`, verified 2026-10-12). The slice shows the generic default on three pages and a subject label on four; that is the taxonomy working, not drift. Recorded, no action.
+- **#3 Related present / Next absent: the resolved convention.** `56a6d1b` standardized all guides to the Related-guides block and zero Next modules remain site-wide. Not a new data point.
+- **#4 long titles: CONFIRMED.** rv-frame-cracks 77ch and rv-propane-detector-beeping 75ch, both past the ~60ch target. Queue: tighten both.
+- **#5 near-verbatim lede and short version: recorded** as the same template pattern as the 10-14 two-appliances nit. Queue with that item.
+- **#6 parts card links: measured zero inside `<main>` on all seven.** Neo's note that chassis-battery-and-charging and engine-overheating "show 2 parts links each" does not reproduce in `<main>` -- those counts are almost certainly whole-file (nav/footer chrome). The mapped unlinked-guide queue stands at five for this slice.
+
+Instruments at this tip: `verify.py` ALL CHECKS PASSED.
