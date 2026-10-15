@@ -3451,3 +3451,24 @@ Forcing them together would produce a title that promises nothing a reader types
 **Every figure is a maker's own.** The two that make Page 1 diagnosable at owner level: Ford's loss rule — *"If you have to add more than 1.1 qt (1 L) of engine coolant per month, have your vehicle checked as soon as possible."* — and Spartan's belt test — *"apply a firm force to the belt (approximately 30 LB) halfway between the 2 pulleys. The belt should press in no more than 1/2"."* Two facts the page turns on: **Ford's fail-safe cooling disables cylinders on purpose** (power limited, A/C off — it looks like a fault and is not), and **the fan drive's fail-safe is zero-voltage = full on**, so an electrical fault makes the fan run rather than stop.
 
 **A sourcing catch worth keeping:** the 2021 Ford manual does **not** carry the gauge wording or the three chime stages — those are in the 2017 manual on the same domain. Each quote was verified against the year it came from; the spec's first draft had two of them on the wrong year and the check caught it. **Same citation-mismatch class as the propane review.**
+
+---
+
+## AWNING REVIEW FINDINGS — all nine applied (conv-b71ff860, 2026-10-15)
+
+**Landed** (`81a35804`). The independent pass (`0a66b310`, `_todo/REVIEW-awning.md`) verified all 33 quotations and found nine things to fix. All nine are in, plus two milder instances of the same prose family the reviewer flagged in passing.
+
+**The two that mattered were claims the sources contradict:**
+
+- **F1, the amperage premise.** The page said no maker prints a fuse amperage, scoped to "the manuals read for this page". Carefree does: `Circuit Rating: 15 amp` in both the Travel'R and Compass specifications, and the Freedom Freestyle wiring diagram carries a `2A In-line Fuse`. A Carefree owner was being told no maker publishes a figure their own manual prints. The page now names Carefree's figure and narrows the claim to Lippert and Dometic, where it is true.
+- **F2, "every maker's troubleshooting table opens there".** Lippert's opens at the travel lock, a mechanical check, then the fuse; Carefree's at installation integrity. The page said so itself two paragraphs later. Replaced with what the tables actually do.
+
+**And one that was the page's headline purpose, missing for one of three makers:** **F4** — the Dometic manual-close section named both methods and described neither. Both steps are now there, including the two requirements the maker states and the page omitted: a 5/32" hex key and a second person, and the diagonal strap movement that decides whether the fabric creases.
+
+**The rest:** F3 the Girard omission stated in Sources as the spec decided; F5 the motor-replacement generalization dropped (Lippert and Dometic publish none, and three screws is one Carefree model's figure); F6 the ignition interlock's fault half added (a reader whose awning *does* respond was told nothing, on a page that routes every other fault to a next step); F7 the maker-name claim softened; F8 the power-awning scope moved into the body; F9 the meta-prose sentence restated. F10 recorded, not a defect.
+
+**One new quotation was truncated and the check caught it:** the Dometic pull-strap sentence ends "…may crease or form a bulge, and could permanently stretch fabric", and the first draft stopped at "bulge". All 37 quotations on the page now verify character-for-character against the **non-layout** `pdftotext` extraction.
+
+**Gate note for whoever owns `check-prose.py`:** its `reader-benefit-clause` rule lists `worth knowing|understanding|noting|saying|remembering` — **`keeping` is not in the pattern**, which is why the gate reported clean on a page carrying "worth keeping, because it saves a service call". Adding `keeping` would catch that shape. The two "worth checking" instances are ordinary instruction more often than not, so `checking` belongs in the NOTED family rather than STRICT. Both were reworded on this page anyway.
+
+**Reviewer's method note, worth keeping:** it verified against the non-layout extraction and used `-layout` only to confirm reading order where a quote crosses a column — the trap that produced 14 false failures in the brake review.
