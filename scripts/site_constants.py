@@ -123,10 +123,12 @@ def claim_values():
     out["parts-total"] = str(sum(len(s["parts"]) for s in psys))
     out["parts-systems"] = str(len(psys))
     out["parts-covered"] = str(sum(1 for s in psys for p in s["parts"] if p.get("guide")))
-    # Parts that link somewhere: a guide or a maker, counting each part once. NOT covered + makers,
-    # because fifteen parts have both and the sum would double-count them.
+    # Parts that link somewhere: a guide, a maker or a tool, counting each part once. NOT covered +
+    # makers, because fifteen parts have both and the sum would double-count them. Tools were added
+    # to the definition 2026-10-15 (Neo parts 14th rotation, third flag): the one card that links a
+    # tool and nothing else was being counted as unlinked while its card links the finder for it.
     out["parts-linked"] = str(sum(1 for s in psys for p in s["parts"]
-                                 if p.get("guide") or p.get("makers")))
+                                 if p.get("guide") or p.get("makers") or p.get("tool")))
     # THE REMAINDER WAS HARDCODED PROSE AND NOTHING CHECKED IT. The lede said "...and the other 74
     # are here..." with 74 typed into the sentence, while every other number in it was derived. A
     # bridge review read the three figures as a partition - 62 + 83 + 74 = 219 against a total of

@@ -5412,7 +5412,7 @@
           "id": "countertops",
           "n": "Countertops",
           "aka": "countertop|solid surface|laminate counter",
-          "does": "the work surface",
+          "does": "the kitchen work surface, in laminate or solid surface",
           "fails": [
             "laminate lifting at the edge",
             "burn ring from a hot pan",

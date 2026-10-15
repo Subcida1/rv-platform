@@ -140,7 +140,8 @@ def main():
     want_covered = str(sum(1 for _, p in parts if p.get("guide")))
     check(claims.get("parts-covered") == want_covered,
           "stated guide-covered count matches (%s vs %s)" % (claims.get("parts-covered"), want_covered))
-    want_linked = str(sum(1 for _, p in parts if p.get("guide") or p.get("makers")))
+    want_linked = str(sum(1 for _, p in parts
+                          if p.get("guide") or p.get("makers") or p.get("tool")))
     check(claims.get("parts-linked") == want_linked,
           "stated linked count matches (%s vs %s)" % (claims.get("parts-linked"), want_linked))
     for s in systems:

@@ -241,7 +241,12 @@ def build():
     # maker's own documentation" when only 21 of the 95 guide-less parts carry a maker link: 74 parts
     # have no link at all. An independent review caught it. It was a claim the data did not support,
     # which is the one thing this site is not allowed to publish.
-    linked = sum(1 for s in systems for p in s["parts"] if p.get("guide") or p.get("makers"))
+    # TOOLS COUNT TOO (Neo parts 14th rotation, third flag, 2026-10-15). The definition excluded the
+    # one card that links a tool and nothing else -- Inline water filter -- so the sentence counted it
+    # among the parts that are "here so you can put a name to the thing that broke" while the card
+    # links the finder that names its cartridge. A tool link is a link. The copy names all three now.
+    linked = sum(1 for s in systems for p in s["parts"]
+                 if p.get("guide") or p.get("makers") or p.get("tool"))
 
     # THE CARD ANCHORS HAVE TO BE UNIQUE, and none may collide with a system key: the jump
     # bar links #<system key>, and a duplicate id would send that link to a part card instead.
@@ -294,7 +299,7 @@ def build():
     out.append('''<div class="wrap page-intro w-820">
 <div class="sec-eyebrow">Reference</div>
 <h1>Every part of an RV</h1>
-<p class="lede">An RV is <span data-claim="parts-total">%d</span> parts across <span data-claim="parts-systems">%d</span> systems. Each part: what it does, the names people use for it, which RVs have one, and where to go next. <span data-claim="parts-linked">%d</span> of them link to a repair guide or to the maker's own documentation, <span data-claim="parts-covered">%d</span> of those to a guide on this site, and the remaining <span data-claim="parts-unlinked">%d</span> are here so you can put a name to the thing that broke.</p>
+<p class="lede">An RV is <span data-claim="parts-total">%d</span> parts across <span data-claim="parts-systems">%d</span> systems. Each part: what it does, the names people use for it, which RVs have one, and where to go next. <span data-claim="parts-linked">%d</span> of them link to a repair guide, a tool, or the maker's own documentation, <span data-claim="parts-covered">%d</span> of those to a guide on this site, and the remaining <span data-claim="parts-unlinked">%d</span> are here so you can put a name to the thing that broke.</p>
 </div>
 
 <div class="sec">
