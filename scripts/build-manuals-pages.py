@@ -375,7 +375,7 @@ def row_html(r):
 def hub(rows, oem_count, model_count=0):
     n_brands = len({r["brand"] for r in rows})
     desc = meta_desc("RV owner's manuals, service manuals, parts lists and wiring diagrams "
-                     "from the makers themselves. %d sources across %d makers"
+                     "from the makers themselves. %d sources across %d equipment makers"
                      % (len(rows), n_brands))
     counts = Counter(r["system"] for r in rows)
 
@@ -445,7 +445,7 @@ def hub(rows, oem_count, model_count=0):
           <button type="button" class="chip" data-type="bulletin-and-recall">Bulletins</button>
         </div>
       </div>
-      <div id="man-status" class="man-status">%d documents and libraries across %d makers,
+      <div id="man-status" class="man-status">%d documents and libraries across %d equipment makers,
         and %d model lines. Start typing, or open a system below.</div>
       <ul id="man-results" class="man-list" hidden></ul>
     </div>
@@ -1089,7 +1089,7 @@ def brands_page(rows, models_by_brand=None):
     <div class="man-crumb"><a href="manuals/index.html">RV Manuals</a></div>
     <h1 class="dir-title man-title">RV manuals by brand</h1>
     <p class="man-lede">Where each RV manufacturer publishes its own owner's manual, how
-    far back the archive reaches, and how the documents are organized. %d brands and %d
+    far back the archive reaches, and how the documents are organized. %d RV brands and %d
     model lines, each linked to the maker's own manual, parts list, accessory
     catalog and warranty where it publishes one.</p>
     <p class="reviewed">By <a class="link" href="/about">OriginRV</a>. Last reviewed on Jan 1, 2026.</p>

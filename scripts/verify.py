@@ -558,7 +558,9 @@ for text in claim_blocks(tail):
 #    count that cannot take a marker because it is built in JS from the config
 #    object. Check that literal against the manifest instead.
 nav = (ROOT / "assets" / "js" / "site.js").read_text(encoding="utf-8")
-nav_m = re.search(r'Owner manuals by brand<span class="sm">(\d+) makers, (\d+) to (\d+)</span>', nav)
+# The label reads "44 RV brands" since 2026-10-15; it said "44 makers" before that, which
+# measured the same set but read as though it were the 94 equipment makers on the hub.
+nav_m = re.search(r'Owner manuals by brand<span class="sm">(\d+) (?:RV )?brands, (\d+) to (\d+)</span>', nav)
 brand_rows = json.loads((ROOT / "_data" / "manuals.json").read_text(encoding="utf-8"))["brands"]
 brand_years = [int(y) for r in brand_rows
                for y in re.findall(r"\b(19\d\d|20\d\d)\b", str(r.get("years", "")))]

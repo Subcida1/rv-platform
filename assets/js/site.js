@@ -218,7 +218,7 @@
  '<div class="drop"><a href="' + R(rt.manualsPower) + '">Electrical<span class="sm">Converters, inverters, solar, generators</span></a>' +
  '<a href="' + R(rt.manualsTowing) + '">Towing and running gear<span class="sm">Hitches, axles, brakes, tires</span></a>' +
  '<a href="' + R(rt.manualsKitchen) + '">Kitchen and appliances<span class="sm">Fridges, ranges, cooktops</span></a>' +
- '<a href="' + R(rt.manualsBrands) + '">Owner manuals by brand<span class="sm">44 makers, 1973 to 2027</span></a>' +
+ '<a href="' + R(rt.manualsBrands) + '">Owner manuals by brand<span class="sm">44 RV brands, 1973 to 2027</span></a>' +
  '<a href="' + R(rt.manualsRecalls) + '">Recalls and bulletins<span class="sm">Check a unit, and the federal bulletin file</span></a>' +
  '<a href="' + R(rt.manuals) + '">All manuals<span class="sm">Every system, linked at the maker</span></a></div></div>' +
  '</div>' +
