@@ -4187,3 +4187,11 @@ Every new page got a fresh-context pass, and the classes that came out of it are
 2. **The Jabsco brochure is hosted at `productimageserver.com`, not `jabsco.com`** — that is where the document lives and it is what the reviewer verified the quotation against; a distributor's asset host rather than a rehost of a maker's page.
 
 **The verifier is running. That is the last check of the night.**
+
+**THE F4 CLASS FIX — assigned to conv-c145cc42 (05:16 PDT).** The repoint is viable: RegO's own L-500 catalog carries every passage the page quotes from the distributor's copy (verified against the European arm's copy, `rego-europe.de`, 26 MB, the same document family). The fix: repoint the four RegO claims **and** the propane furnace guide's excess-flow citation to the maker's own domain, add `gasequipment.com` to `REHOST` in `verify.py`, re-verify both pages, CI, push. **A class fix rather than a page fix.**
+
+**TWO CAVEATS FOR WHOEVER TOUCHES IT, both of which will bite an automated check:**
+1. **The maker's catalog is a two-column PDF and its text extraction interleaves the columns.** A first pass reported three of eleven quotes as MISSING; all three were present, just line-wrapped mid-word ("the valvecannot be repaired", "cylindervalvemust be"). **A quote check run against that file will produce false misses** — the same shape as the wrapped-string trap. **Verify wording against the single-column distributor copy and presence against the maker's catalog.**
+2. **RegO prints the relief-valve warning twice with different wording.** One register reads *"if the cylinder is … the temperature at the time it was filled"*; the other reads *"if the container is … the temperatures at the time it was filled"*. **The page quotes the first register verbatim**, and its framing ("in its service guidance" / "in the warning printed for the cylinder itself") maps to the two. The quotation is faithful — but **a future reviewer comparing against the second occurrence would flag it as a misquote**, so the line goes in the review file.
+
+**AND THE PHMSA RULE HOLDS TWICE OVER:** the US copy of the catalog (`regoproducts.com`) 403s to curl even with a full browser header set — the same wall, and the same answer: **the fetch tool reads it. The wall is the fetcher, not the source.** Third time tonight.
