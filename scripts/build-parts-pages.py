@@ -337,6 +337,21 @@ def build():
         out.append('  </section>\n')
 
     out.append('</div>\n</div>\n')
+    # THE CROSS-LINK STRIP. Ty, 2026-10-14: "Hub cross-link silos (tools/directory/manuals hubs
+    # have zero links to each other) -- Okay, lets provide that, Interlink all of these areas.
+    # The interlinking of the website is going to be one of the keypoints, as it allows anyone to
+    # trouble shoot and problem solve on the go, or explore and learn easily."
+    # It reuses .card + h2.sm + p.sm, which the guides hub already uses for its closing block, so
+    # it adds no CSS and does not move the spacing ratchet. Every hub carries the same block with
+    # its own four sentences, naming the other four areas and what each one is for.
+    out.append(' <div class="card">\n'
+               ' <h2 class="sm">Where to go next</h2>\n'
+               ' <p class="sm">The <a href="/guides/">guides</a> work through the faults that lead to '
+               'a part being replaced, in order from the symptom. The <a href="/manuals/">manuals</a> '
+               'are the maker\'s own documents, collected by system. The <a href="/tools/">tools</a> '
+               'do the arithmetic: weight, load, tire age, battery runtime. The '
+               '<a href="/directory/">directory</a> finds a mobile technician or a shop by state.</p>\n'
+               ' </div>\n')
     out.append(foot("assets/js/parts.js"))
     return "".join(out)
 

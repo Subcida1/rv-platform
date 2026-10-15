@@ -403,10 +403,10 @@
     "claims": "ca780a6dbc99c4d8"
   },
   "guides/index.html": {
-    "hash": "b18e49ecd17ca358",
+    "hash": "94fc328608497650",
     "status": "verified",
-    "verified_by": "2026-10-13 Neo third-rotation hubs audit: rv-trip-planner was the only one of 47 sitemap guides with no card on this hub -- it appeared only inside the hub's JSON-LD ItemList. Added to the Tires, towing and weight section, which already carries the operational guides (Driving a Motorhome, Pre-Trip Walkaround) and is where it belongs. 47 guide files, 47 hub cards, 0 missing. No existing card changed and no claim altered.",
-    "verified_at": "2026-10-13",
+    "verified_by": "the cross-link strip added to all five hubs, Ty 2026-10-14 (\"Interlink all of these areas\"): each hub now names the other four and what each is for. One new block per hub, no existing content changed.",
+    "verified_at": "2026-10-14",
     "sources": [],
     "spec": null,
     "spec_waived": true,

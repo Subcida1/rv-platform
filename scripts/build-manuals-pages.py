@@ -462,6 +462,20 @@ def hub(rows, oem_count, model_count=0):
       </div>
     </div>
   </div>
+
+  <div class="sec pb-60">
+    <div class="wrap">
+      <div class="card">
+        <h2 class="sm">Where to go next</h2>
+        <p class="sm">The <a href="/guides/">guides</a> work through the faults these documents
+        describe, citing the same pages. The <a href="/tools/">tools</a> do the arithmetic the
+        manuals leave to the reader: weight, load, tire age, battery runtime. The
+        <a href="/parts/">parts</a> page names each component the manuals cover. The
+        <a href="/directory/">directory</a> finds a technician for the work a manual says needs
+        one.</p>
+      </div>
+    </div>
+  </div>
 """ % (len(rows), n_brands, model_count, "\n".join(tiles), oem_count)
 
     # NO BREADCRUMBLIST HERE. build-shell.mjs emits the page's crumbs block, and that block
