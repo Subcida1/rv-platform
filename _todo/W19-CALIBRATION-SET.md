@@ -267,3 +267,48 @@ across guides, tools and manuals), so Google will truncate it around "dealing
 with sway". The `<title>` tag is the only part that has to fit; the h1 can stay
 as dictated.
 
+## A new guide asked for, out of this page (Ty, 2026-10-14)
+
+Reading the driving section he said: *"This bit is great to include, but we
+should have a whole guide on just this aspect of it."*
+
+That material is six bullets and a paragraph inside the towing guide today.
+A guide of its own would carry: the first tow in an empty lot; turning wide and
+the trailer cutting inside the path; following distance; wind off passing
+traffic and crosswinds; speed; climbing and descending, transmission
+temperature and the interval braking technique; and the state rules, the right
+hand lane and the lower towing speed limit. The towing guide keeps a short
+version and links to the new one, which is also how the two stay from drifting
+apart.
+
+Not started. Queued behind the rest of this read-through, pages 5 to 8.
+
+## Third pass, same night: driving and reversing
+
+His edits, all applied:
+
+- the driving lede now opens "The first time you tow should not be the first
+  trip itself"
+- the cut-corner bullet was a run-on as dictated ("Cutting a corner in the tow
+  vehicle and the trailer's wheels will be going over the curb"); it reads
+  "Cut the corner in the tow vehicle and the trailer's wheels go over the curb"
+- the wind bullet became "Expect other traffic to push you around", and gained
+  "Try not to fight the push and pull"
+- the hills bullet gained transmission temperature and the interval braking
+  technique, which is the California DMV's own procedure and is now named in
+  that source line
+- the state-rules line gained the lower towing speed limit
+
+Reversing gained two bullets. **"Or steer towards the problem"** is his second
+method, and it is worth recording that it is correct and consistent with the
+six o'clock rule rather than a competing mnemonic: steering left in reverse
+swings the tow vehicle's tail left, which pushes the trailer's tongue left, so
+the trailer's tail goes right, away from a tree on the left. Both methods say
+the same thing. **"Reversing in the dark"** is the flashlight-marker method,
+reworded.
+
+One label kept against his paste: he typed the "if the trailer gets out of
+line" bullet without its "Plan to pull forward" label. Every other bullet in
+that list carries one, and dropping a single label makes that item disappear
+when the list is skimmed, so it stayed. One word from him and it goes.
+

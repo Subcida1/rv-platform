@@ -763,9 +763,9 @@
     "claims": "40a93ee5e783a93f"
   },
   "guides/rv-towing-trailer.html": {
-    "hash": "d132138487377e0a",
+    "hash": "abf6c8c195c37b24",
     "status": "verified",
-    "verified_by": "page 4 depth pass: loading depth (tanks, weighing, toy haulers) and sway depth (mechanism, stability control, when to carry on), with nine new first-party sources",
+    "verified_by": "page 4, third pass: Ty's driving and reversing edits, the steer-towards-the-problem method, and reversing in the dark",
     "verified_at": "2026-10-14",
     "sources": [],
     "spec": null,
