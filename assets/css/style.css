@@ -2311,6 +2311,21 @@ details.faq p{color:var(--text-2);font-size:16px;line-height:1.7;padding-bottom:
    borrow a class named for the guides hub's group headings. The link keeps its own
    colour, because a note that dims its link is a note nobody follows. */
 .crossref-note{font-size:14.5px;color:var(--text-2);text-align:center}
+
+/* THE VIDEO FACADE. Ty, 2026-10-14: "inline i feel its imporant to include this a
+   visual tool to teach." A player beats a link on a page about load and sway, but
+   this site carries no third-party embed anywhere and the privacy page says so. So
+   the player is built on the click: the still is an image, and no YouTube script
+   runs and no cookie is set until a reader presses play. The still is 16:9 and
+   object-fit crops the letterbox bars YouTube bakes into the smaller renditions.
+   Sized on the scale already in this file; no new type or space literal. */
+.vidfacade{position:relative;margin-top:18px;margin-bottom:18px;border-radius:14px;overflow:hidden;background:var(--text)}
+.vidfacade button{display:block;position:relative;width:100%;aspect-ratio:16/9;padding:0;border:0;background:none;cursor:pointer;color:inherit}
+.vidfacade button:focus-visible{outline:3px solid var(--b1);outline-offset:3px}
+.vidfacade img{display:block;width:100%;height:100%;object-fit:cover;opacity:.86}
+.vidfacade .go{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:66px;height:66px;border-radius:50%;background:rgba(255,255,255,.94);box-shadow:0 6px 22px rgba(15,23,42,.4)}
+.vidfacade .go::after{content:"";position:absolute;left:50%;top:50%;transform:translate(-38%,-50%);border-style:solid;border-width:11px 0 11px 19px;border-color:transparent transparent transparent var(--link-strong)}
+.vidfacade iframe{display:block;width:100%;aspect-ratio:16/9;border:0}
 .mb-10{margin-bottom:10px}
 .mb-12{margin-bottom:12px}
 .mb-18{margin-bottom:18px}
@@ -3208,6 +3223,10 @@ body.is-embed .embed-credit a{font-weight:800;color:var(--b1)}
    ============================================================================ */
 @media print{
   @page{margin:16mm 14mm}
+
+  /* A player nobody can press. The Sources list at the foot of the page carries the
+     address, so print loses nothing but the still. */
+  .vidfacade{display:none}
 
   /* ---- The directory's printable content is its region list ----
      A directory page's finder is interactive: route buttons, a location box, and a

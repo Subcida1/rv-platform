@@ -107,6 +107,15 @@ step "anode rod finder"                       node scripts/test-anode-rod.js
 step "water filter finder"                    node scripts/test-water-filter.js
 node scripts/test-snow-load.js
 step "accessibility (axe)"                    node scripts/check-a11y.mjs
+# THE COMPONENT-CONSISTENCY RULE, and it is the gap the 2026-10-14 tools-hub bug fell through.
+# check-style.py's centring rule runs ONE WAY: it catches centring nobody approved, and can never
+# see centring that was approved in CENTER_OK and never written. Ty found the result himself --
+# "the buttons for the tools aren't centered at the top. This should be caught by our visual
+# balancing tool, lets figure out why it wasnt." This asserts both directions: every pill row on
+# the pages it visits is declared centre, left, or any, and the first two are checked. Undeclared
+# and stale declarations fail too. It brings its own browser and server, like the steps around it.
+# Negative-tested: with the .tool-strip fix reverted it names the page and exits 1.
+step "row alignment"                          node scripts/check-alignment.mjs
 # THE HEADING RULE, gated rather than remembered. Ty, 2026-10-10: "This should be a site wide
 # thing, we should probably make a rule and a tool to verify this." The tool found 669 headings
 # sitting flush against the paragraph above them, all of them from one rule with margin-bottom and

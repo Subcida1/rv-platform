@@ -562,6 +562,24 @@ function initPrint() {
   window.addEventListener('afterprint', restore);
 }
 
+/* ---------- the video facade ----------
+   Nothing from YouTube loads until the reader asks for it. The still frame is an
+   image; the player is built here, on the click, so no YouTube script runs and no
+   cookie is set on a page view. Built with setAttribute rather than innerHTML
+   because an iframe assigned through innerHTML does not load. */
+function playVideo(btn) {
+  var id = btn.getAttribute('data-video');
+  if (!id) { return false; }
+  var f = document.createElement('iframe');
+  f.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0';
+  f.title = btn.getAttribute('data-title') || 'Video';
+  f.setAttribute('allow', 'accelerometer; autoplay; encrypted-media; picture-in-picture');
+  f.setAttribute('allowfullscreen', '');
+  f.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
+  btn.parentNode.replaceChild(f, btn);
+  return false;
+}
+
 /* ---------- init ---------- */
  window.RV = {
  brand: CFG.brand,
@@ -571,7 +589,8 @@ function initPrint() {
  searchRoute: searchRoute,
  track: track,
  claimMailto: claimMailto,
- claimSubmit: claimSubmit
+ claimSubmit: claimSubmit,
+ playVideo: playVideo
  };
  injectShell();
  initReveal();
