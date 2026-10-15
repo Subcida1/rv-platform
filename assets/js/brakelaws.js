@@ -41,6 +41,21 @@
     return s.threshold;
   }
 
+  /* THE SHAPE OF THE RULE, which is the page's actual finding: the states do not agree on the
+     threshold and they do not agree on how to write it. Some state a requirement, some state an
+     exception that reads backwards, one triggers on speed, one puts it in an inspection standard,
+     and several set no weight threshold at all. It is rendered as a sentence rather than a badge,
+     because on this site a rounded tinted pill reads as a button and this is a label. */
+  var SHAPE = {
+    requirement: 'This state writes it as a requirement: a trailer at or above that weight must have brakes.',
+    exception: 'This state writes it as an exception, which reads backwards from a requirement: a trailer at or below that weight is exempt, and the exemption usually carries a condition.',
+    performance: 'This state sets no trailer weight threshold at all. The rule is a stopping standard instead.',
+    none: 'This state sets no trailer weight threshold in its own code.',
+    speed: 'This state triggers on speed rather than on weight.',
+    inspection: 'This state puts the threshold in its inspection standard rather than in an equipment mandate, so what a trailer fails is its inspection.',
+    conditional: 'This state writes the rule as a speed limit rather than as a brake requirement.'
+  };
+
   function render(code) {
     var host = document.getElementById('bl-result');
     if (!host) return;
@@ -56,6 +71,7 @@
     out += '<h2 class="form-legend">' + esc(s.name) + '</h2>';
     out += '<div class="bl-answer"><b>' + esc(thresholdLine(s)) + '</b>' +
            '<span>' + esc(s.appliesTo) + '</span></div>';
+    if (SHAPE[s.shape]) out += '<p class="note-sm mb-10">' + esc(SHAPE[s.shape]) + '</p>';
     if (s.extra) out += '<p class="note-sm mb-10">' + esc(s.extra) + '</p>';
     out += '<p class="note-sm mb-10"><b>' + esc(s.section) + '</b></p>';
     /* A row whose quote could not be read from the state's own site says so rather than
@@ -69,7 +85,11 @@
        from rather than letting the reader assume it is the statute's wording. */
     if (s.sourceNote) out += '<p class="note-sm mb-10">' + esc(s.sourceNote) + '</p>';
     if (s.breakaway) {
-      out += '<p class="note-sm mb-10"><b>Breakaway.</b> ' + esc(s.breakaway) + '</p>';
+      out += '<p class="note-sm mb-10"><b>Breakaway.</b> ' + esc(s.breakaway);
+      /* A row can cite two sections, and where it does the breakaway clause gets its own link
+         rather than being left to the reader to find in the same document. */
+      if (s.breakawayUrl) out += ' <a href="' + esc(s.breakawayUrl) + '" target="_blank" rel="noopener">Read it</a>';
+      out += '</p>';
     } else {
       out += '<p class="note-sm mb-10"><b>Breakaway.</b> This state\'s brake section carries no ' +
              'breakaway requirement of its own.</p>';

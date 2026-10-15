@@ -127,6 +127,29 @@ check('the picker offers every state', (ca.pick.match(/<option/g) || []).length 
   (ca.pick.match(/<option/g) || []).length + ' options');
 check('the picker marks the states with no entry', /not covered yet/.test(ca.pick));
 
+/* THE SHAPE FIELD IS RENDERED, so it is checked rather than assumed. It was dead data until the
+   review flagged it (F4), and dead data that later gets half-rendered is worse than either. */
+const shapesInFinder = (SRC.match(/^\s{4}(\w+): '/gm) || []).map(m => m.trim().split(':')[0]);
+const shapesInData = [...new Set(DATA.states.map(s => s.shape).filter(Boolean))];
+const unrendered = shapesInData.filter(s => shapesInFinder.indexOf(s) < 0);
+check('every shape in the record has a sentence in the finder', unrendered.length === 0, unrendered.join(', '));
+
+/* A ROW MAY CITE TWO SECTIONS, and where it does the second link has to be rendered.
+   WHAT THIS DOES NOT TEST, stated so nobody assumes it does: whether a link REACHES the text it
+   claims. F7 was exactly that failure -- the DC row pointed at a chapter table of contents that
+   carried none of the quoted language -- and no unit test can see it without fetching every URL.
+   That property is what the review's fetch pass exists for, and it is why every row's URL is
+   checked by hand or by a fetching reviewer rather than by this file. */
+const twoCite = DATA.states.filter(s => s.breakawayUrl);
+check('a row with a second citation renders it as a link',
+  twoCite.every(s => new RegExp(s.breakawayUrl.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).test(run(s.code).result)),
+  twoCite.map(s => s.code).join(', '));
+check('no row cites the same URL twice', DATA.states.every(s => s.url !== s.breakawayUrl));
+
+const hi = run('HI');
+check('a picked state renders its shape as a sentence', /inspection standard rather than in an equipment mandate/.test(hi.result));
+check('  and the shape is not rendered as a badge or a pill', !/class="[^"]*pill/.test(hi.result));
+
 const tx = run('TX');
 check('a picked state renders its threshold', /4,500 lb gross/.test(tx.result), tx.result.slice(0, 120));
 check('a picked state renders its section', /Texas Transportation Code 547\.401/.test(tx.result));
