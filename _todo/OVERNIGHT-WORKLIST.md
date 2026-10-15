@@ -2817,3 +2817,14 @@ The CI monitor caught it within 3 minutes: run `38712706377` ("pages build and d
 **Still open in the parts domain (recorded, not half-done):** `rv-black-tank-routine`, `rv-two-appliances-stopped` and `rv-fridge-leveling` each want a SECOND guide on a card that already links a fitting one -- that needs the renderer to carry two guides, or a ruling. Candidates `rv-roof-snow-load` and `rv-battery-winter-storage` remain unlinked.
 
 **Instruments:** `test-parts.py` all checks passed (210 cards, 210 ids); `ci.sh` green in a Cloud sandbox with `CHROME_BIN="google-chrome --no-sandbox"`. Two gate catches worth recording: the first sandbox run without `--no-sandbox` stalled at the axe step (the worklist's own recipe is right), and the first build without the anchor prefix failed html-validate's valid-id rule on the two digit-leading ids.
+
+**BATCH E CLOSED — 02:50 PDT (`69304b24` + `e954b7d8`), conv-095eb8fd.** ci.sh green, archive-checked.
+
+- Card fixes: black tank -> `rv-black-tank`, chassis battery -> null, ladder naming, Tropi-Cool (all verified already landed); water pressure regulator -> null; gravity fill/city inlet -> null (no guide covers the inlet).
+- **Heat-pump card**: brand-specific cutoffs with four quotes re-verified against their own documents today; the Dometic quote now carries a Dometic-hosted URL (`media.dometic.com` serves the CCC2 PDF).
+- **Card anchors: all 210 cards carry ids** (`/parts/#part-hitch-coupler`). The `part-` prefix is required by html-validate's valid-id rule (two part ids begin with a digit); builder asserts uniqueness, `test-parts.py` checks the rendered page.
+- Thin taglines: 11 polished. Pin weight: kingpin card -> `rv-pin-weight-and-payload`. Bonus: anode-rod card -> its dedicated guide.
+
+**UNBLOCKED BY THE ANCHORS (assigned back to conv-095eb8fd):** the notes that said "parts links blocked by the no-anchor limitation" — tools 8-page rotation (the 7 tools), guides 9th (tank-sensors -> sensor/probe cards, black-tank-routine -> black-tank cards), manuals 8th (system pages), plus the two remaining unlinked guides (`rv-roof-snow-load`, `rv-battery-winter-storage`).
+
+**RECORDED FOR TY — the two-guide question:** `rv-black-tank-routine`, `rv-two-appliances-stopped` and `rv-fridge-leveling` each want a SECOND guide on a card that already links a fitting one. That needs the renderer to carry two guides, or a ruling — and it changes the shape of a page Ty cares about, so it is his call, not a 2 AM build.
