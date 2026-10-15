@@ -513,9 +513,9 @@
     "claims": "9e753c5476a782bd"
   },
   "guides/rv-delamination.html": {
-    "hash": "4ef338d68da803b0",
+    "hash": "111a30aa819c5785",
     "status": "verified",
-    "verified_by": "window reseal 2026-10-15: a subsection added under the seal section covering the maker's window installation method and the published reseal procedure, with the two window documents added to Sources. No claim on the rest of the page changed.",
+    "verified_by": "window reseal 2026-10-15: a subsection added under the seal section covering the maker's window installation method and the published reseal procedure, with the two window documents added to Sources. One sentence in it was then narrowed to what the cited instructions state.",
     "verified_at": "2026-10-15",
     "sources": [],
     "spec": null,
@@ -533,7 +533,7 @@
     "claims": []
   },
   "guides/rv-frame-cracks.html": {
-    "hash": "3a625907e35f393b",
+    "hash": "b704719f7c0470c8",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
