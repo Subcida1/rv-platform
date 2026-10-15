@@ -4612,3 +4612,14 @@ Seven items, verified against the page source at tip `5ffc422f`:
 - **Carryover note:** the "west to east" intro wording was fixed at `1e607f60` -- the lede now says Alaska and Hawaii come last. Neo's render predates it.
 
 Instruments at this tip: `verify.py` ALL CHECKS PASSED; `build-all.sh` clean.
+
+## Neo homepage 12th rotation (2026-10-15, verified from the Cloud lane)
+
+Four items, verified against the page source at tip `fc00322b`:
+
+- **#1 tool counts: CONFIRMED (fourth flag).** The desktop dropdown still reads "All 14 tools" (`assets/js/site.js`, baked into 145 pages), the mobile chip strip carries exactly 14 tool links with no brake-laws chip, and the new tool is absent from both menus. **Correction to the finding:** the desktop dropdown now surfaces **six** tools plus the hub link, not three -- the nav expansion landed earlier today. Queue: wire the label to the shared integer, add the brake-laws entry to both menus, and re-run `build-shell.mjs`.
+- **#2 manuals sub-pages unlinked from the homepage body: CONFIRMED (third flag).** `<main>` links only `manuals/` and `manuals/start-here`; the other ten sub-pages (brands, recalls and the eight system pages) have no in-body link. Queue: a manuals block in the homepage body, or fold them into an existing section.
+- **#3 hero stat: CONFIRMED WIRED, not hardcoded.** The markup is `data-count="2027">2027`, and `build-listings.py` writes that figure from the 50 state files (its own log line: "homepage: 2027 businesses across 50 states"). Nothing to fix.
+- **#4 homepage ItemList has no `@id`: CONFIRMED** -- the same bare pattern as the /guides hub finding. Queue: give it an `@id` and, in the same pass, wrap the guides hub's ItemList in a CollectionPage.
+
+Instruments at this tip: `verify.py` ALL CHECKS PASSED.
