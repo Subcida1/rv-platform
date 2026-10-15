@@ -763,9 +763,9 @@
     "claims": "40a93ee5e783a93f"
   },
   "guides/rv-towing-trailer.html": {
-    "hash": "1960f588ce62a45a",
+    "hash": "d132138487377e0a",
     "status": "verified",
-    "verified_by": "page 4 of the W19 calibration set, second pass: Ty's sway paragraph, the bolded walking-pace test, the cross-reference note, and the tire and bearing labels",
+    "verified_by": "page 4 depth pass: loading depth (tanks, weighing, toy haulers) and sway depth (mechanism, stability control, when to carry on), with nine new first-party sources",
     "verified_at": "2026-10-14",
     "sources": [],
     "spec": null,
