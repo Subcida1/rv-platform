@@ -104,6 +104,15 @@ step "a reference to our own content carries a link" \
                                                python3 scripts/check-crossrefs.py
 # ---------------------------------------------------------------- 2. behaviour
 step "weight calculator"                       node scripts/test-weight-calculator.js
+# A HUNDRED SETUPS, CHECKED AGAINST A SECOND IMPLEMENTATION. The suite above pins the
+# behaviour of individual rules; this one runs the whole calculator over 100 real-world
+# vehicle and trailer combinations and compares every rendered row against arithmetic
+# computed separately, from the rules the page documents. Ty asked for it on 2026-10-14:
+# "test the calculator with 100 different real world set ups and make sure its functioning
+# correctly ... we need to calculator to be 95%+ assured its output is functional, as
+# intended, and correct." It is negative-tested: moving the water constant, the fifth-wheel
+# tongue percentage, or the 80% band each makes it fail and name the cases.
+step "weight calculator, 100 real-world setups" node scripts/test-weight-calculator-cases.mjs
 step "tire date decoder"                      node scripts/test-tire-date.js
 step "toilet valve finder"                    node scripts/test-toilet-valve.js
 step "recall lookup"                          node scripts/test-recall-lookup.js
