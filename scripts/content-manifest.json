@@ -1111,9 +1111,9 @@
     "sources": []
   },
   "tools/weight-calculator.html": {
-    "hash": "677b2f049f860d10",
+    "hash": "67cbef82f12d2dff",
     "status": "verified",
-    "verified_by": "queued conductor batch A applied 2026-10-15: added the topic-matched tool links the silo findings named -- maintenance-schedule gains the water filter and anode rod finders (the two intervals that replace a part), trip-planner gains the fuel cost calculator, weight-calculator's next block gains the towing capacity guide, battery-runtime's block gains the battery not charging guide, and trailer-brakes scope-labels its threshold table as three worked states rather than a full fifty. No fact changed; no existing link removed.",
+    "verified_by": "W27: the fifth-wheel target the page states now matches the range the calculator uses and the sources it cites (15 to 25%), plus the Ford, Reese and RVSEF citations, and a check comparing the stated range against the computed one. Re-applied after a rebase resolved the shared manifest to upstream.",
     "verified_at": "2026-10-15",
     "sources": [],
     "spec": null,
