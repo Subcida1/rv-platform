@@ -126,6 +126,15 @@ TITLE = {
 
 HUB_TITLE = "RV Owner's Manuals and Service Manuals"
 
+# EVERY CARD THE HUB RENDERS, in the order it renders them: the start-here card above the
+# grid, the eight system tiles, then the brands and recalls cards below it. Kept as one list
+# so the page's structured data and the page cannot disagree -- the ItemList is built from
+# this, and the three non-system cards are the ones that went missing from it.
+HUB_CARDS = ([("start-here", "New to RV ownership? Start with the expensive mistakes")]
+             + list(R.SYSTEMS)
+             + [("brands", "RV owner's manuals, brand by brand"),
+                ("recalls", "Has my unit been recalled")])
+
 # Guides that already answer the question this system raises. Only real pages.
 # Which guides cover this system failing. Filled out on 2026-09-28: the map existed and
 # rendered, but half the systems had one or two entries and chassis had none, so most guides
@@ -398,12 +407,17 @@ def hub(rows, oem_count, model_count=0):
         "name": HUB_TITLE, "url": SITE + "/manuals/index.html", "description": desc,
         "dateModified": REVIEWED_SEED_ISO,
         "isPartOf": site_schema(),
+        # THE LIST ENUMERATES THE PAGE'S CARDS, all eleven of them, which is the convention
+        # /guides (47 cards), /tools (14) and /parts (210) all follow. This held the 8
+        # systems only, so it described a page that does not exist: the hub renders a
+        # start-here card above the system grid and a brands card and a recalls card below
+        # it. The three were added to the page and never to the list.
         "mainEntity": {
-            "@type": "ItemList", "numberOfItems": len(R.SYSTEMS),
+            "@type": "ItemList", "numberOfItems": len(HUB_CARDS),
             "itemListElement": [
                 {"@type": "ListItem", "position": i, "name": title,
-                 "url": "%s/manuals/%s.html" % (SITE, slug)}
-                for i, (slug, title) in enumerate(R.SYSTEMS, 1)]}}
+                 "url": "%s/manuals/%s" % (SITE, slug)}
+                for i, (slug, title) in enumerate(HUB_CARDS, 1)]}}
 
     body = """
   <div class="wrap page-intro">
@@ -1051,16 +1065,22 @@ def brands_page(rows, models_by_brand=None):
         "isPartOf": site_schema(),
         "mainEntity": {
             "@type": "ItemList",
-            # positions must run 1..N over the elements actually listed, so the rows
-            # without a URL are filtered BEFORE the enumeration. Enumerating first
-            # and filtering after produced 44 items over 40 elements with gaps at
-            # 3, 14, 30 and 33.
-            "numberOfItems": len([r for r in rows if r["url"]]),
+            # THE LIST ENUMERATES THE PAGE'S ROWS, all 44 of them, which is the convention
+            # the schema batch set for /tools and /parts. Four brands publish no manual
+            # online and so carry no URL; they are listed WITHOUT a `url` key rather than
+            # dropped, because the reader sees them on the page and the structured data
+            # should describe the page it is on.
+            #
+            # The history matters here, because the filter this replaces was itself a fix:
+            # the first version enumerated all 44 and then filtered, which left 44 items
+            # over 40 elements with gaps at 3, 14, 30 and 33. Filtering first fixed the
+            # gaps but made the list disagree with the page. Listing every row and omitting
+            # only the missing `url` fixes both -- positions run 1..44 with no gaps.
+            "numberOfItems": len(rows),
             "itemListElement": [
-                {"@type": "ListItem", "position": i, "name": r["brand"], "url": r["url"]}
-                for i, r in enumerate([r for r in
-                                       sorted(rows, key=lambda r: r["brand"].lower())
-                                       if r["url"]], 1)]}}
+                {"@type": "ListItem", "position": i, "name": r["brand"],
+                 **({"url": r["url"]} if r["url"] else {})}
+                for i, r in enumerate(sorted(rows, key=lambda r: r["brand"].lower()), 1)]}}
     crumb = breadcrumbs([("OriginRV", SITE + "/"), ("RV Manuals", SITE + "/manuals/index.html"),
                          (BRANDS_TITLE, SITE + "/manuals/brands.html")])
 
