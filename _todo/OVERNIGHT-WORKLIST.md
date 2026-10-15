@@ -4648,3 +4648,14 @@ All seven items from the 07:30 queue re-checked at tip `bc447254`. **Item 2 is n
 - **#5 start-here external: REFUTED on the internal-link half.** The internal tool IS linked in `<main>` -- `tools/state-trailer-brake-laws`, in the brake-controller FAQ ("the weight each state sets is in the state trailer brake table"). The rigcalc and towcapacitycalc links are Sources citations (1 of 206), not stray tool links. No removal without checking the claim record.
 - **#6 rv-loan siloed: CONFIRMED** (mild; no loan guide exists).
 - **#7 571.110: the nuance is wrong -- the regulation does literally name propane.** Re-fetched from the eCFR API: "If the vehicle is a recreation vehicle trailer and is equipped with a propane supply, the weight of full propane tanks must be included in the vehicle's unloaded vehicle weight." It says it three times (motor home, RV trailer, and S9.3.2 for RVs generally). The page's "requires" is literally correct; the suggested softening would make it less accurate. **No change.**
+
+## Neo hubs 14th rotation (2026-10-15, verified from the Cloud lane)
+
+Six items, verified against the page source at tip `67de73cb`. **One refuted with proof, one applied, four queued.**
+
+- **#1 /parts lede numbers: REFUTED -- the claims are generated and correct.** `site_constants.py` computes parts-linked as cards with a guide, a tool, or a maker link: **129**; parts-covered (a guide) **110**; unlinked **81**. The page says exactly that. The 134-135 "any-link" count includes **five cards whose only href is `parts/#main`** (a back-to-top anchor): truck-camper tie-downs, cell and wifi booster, water softener and filtration, canvas and bunk ends, fire extinguisher. A different definition, not a stale number.
+- **#2 /parts ItemList anchors: CONFIRMED (second flag).** 210 elements, 9 distinct URLs. Queue: wire each to its `#part-<slug>`.
+- **#3 /guides title: CONFIRMED.** "RV Repair Guides: Electrical, Water, Towing and Winter" names four of the six hub sections; heating/cooling/appliances and body/slides/jacks are unmentioned. Queue: name all six, or drop the list.
+- **#4 /about title: recorded, not changed.** The current title is Ty's own ruling from today (item 10); naming all five sections is his call, not a defect.
+- **#5 /guides hub bare ItemList: CONFIRMED (second flag).** Queue with the homepage ItemList `@id` -- one pass, both blocks.
+- **#6 /directory region order: APPLIED.** The lede no longer claims a direction: "Listed by region, then alphabetically by state inside each one." Ty's ruling was to keep the order and fix the wording, and the direction claim was the part that could not be made true.
