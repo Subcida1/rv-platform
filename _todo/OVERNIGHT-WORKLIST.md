@@ -4370,3 +4370,16 @@ way `check-a11y.mjs` has one.
 **The class it catches is worth the wiring:** a table or a grid that drags the page sideways is
 invisible to every other gate. `audit-render` and `audit-mobile` work at phone width and neither
 compares one row against the next; `check-alignment.mjs` checks pill rows, not tables.
+
+**THE BUILD CHAIN IS FIXED — `4f0e0386` + `2da80274` (conv-ff6725d2). FOUR defects, not three — the fourth came out of testing.**
+
+1. **`new-guide.py` printed an incomplete chain.** The chain lives in **`scripts/build-all.sh`** now: build-shell, sync-counts, build-home-schema, build-search-index, stamp_assets, build-sitemap --write, verify-content --seed, verify-content --strict — in that order, **with the reason the order matters recorded in the script** (the two list-writers both write index.html; the seed hashes the pages so it runs last). `new-guide.py` now prints `bash scripts/build-all.sh && bash scripts/ci.sh`.
+2. **`build-sitemap.py --write` now adds missing pages** — an entry for every published page the sitemap lacks, inserted after the last entry sharing its first path segment, in the shape `new-guide.py` writes. Tested with a throwaway page: it landed in the guides group and the check went to 143/143.
+3. **The hub-section lookup resolves ids now** — `heat-cool-and-appliances` matches, the heading text matches, and an unknown argument prints the sections that exist.
+4. **A writer can invalidate a VERIFIED page and nothing said so** — found by the end-to-end test. Inserting the hub tile changes `guides/index.html`, which had been through a verification pass, and the content gate fails until it is re-verified. **`build-all.sh` now ends with `verify-content.py --strict` and, when a page has drifted, prints the exact re-verify command and exits 1.**
+
+Also fixed while testing: the `--body` help did not say the `.sec prose` / `.wrap narrow` wrapper is the tool's job (a body carrying its own produces two, and `check-structure.py` fails on it).
+
+**VERIFIED END TO END, TWICE:** a throwaway guide was scaffolded with `--hub-section heat-cool-and-appliances`, built with the one command, and taken through `ci.sh`. The first run found the double wrapper and the drifted hub; both fixed, the hub re-verified, and the second run passed every check. The throwaway page and its traces were removed, so the final tree is HEAD plus the three script files. **A tool that prints instructions nobody has followed is a tool nobody has tested.**
+
+**THE LAYOUT ITEM IS RECORDED, NOT DONE — and the reasoning is right.** `audit-layout.mjs` is the one browser instrument that attaches to an existing debug port instead of spawning its own Chrome, so putting it on push means giving it a self-managed mode first, then a representative page set — a real change with real flake risk, and the doctrine against a slow push gate still holds. Recorded with the evidence and two options, cheapest first.
