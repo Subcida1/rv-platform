@@ -13,31 +13,37 @@ catalogued in `_data/manuals.json`, and Bing's keyword API.
 
 ## 1. Where we stand
 
-**157 parts across 9 systems. 62 covered by a guide. 95 with nothing.**
+**210 parts across 9 systems. 107 covered by a guide. 103 with nothing.**
+
+*(Updated 2026-10-15 with the completeness pass: 54 parts added against the five coach types
+and both ends of the market, and `motorhome` split into `class-a` and `class-c` so the type
+chips say which coach a part belongs to. The gap count moved because the index grew, not
+because guides were lost.)*
 
 | system | parts | covered | gaps |
 |---|---|---|---|
-| towing and running gear | 22 | 6 | 16 |
-| power and electrical | 23 | 10 | 13 |
-| kitchen and appliances | 16 | 5 | 11 |
-| chassis and drivetrain | 14 | 3 | 11 |
-| exterior and body | 25 | 10 | 15 |
-| sanitation and tanks | 16 | 7 | 9 |
-| propane | 9 | 1 | 8 |
-| water and plumbing | 18 | 11 | 7 |
-| heating and cooling | 14 | 9 | 5 |
+| towing and running gear | 32 | 24 | 8 |
+| power and electrical | 24 | 22 | 2 |
+| kitchen and appliances | 25 | 5 | 20 |
+| chassis and drivetrain | 15 | 2 | 13 |
+| exterior and body | 40 | 10 | 30 |
+| sanitation and tanks | 19 | 14 | 5 |
+| propane | 10 | 2 | 8 |
+| water and plumbing | 24 | 16 | 8 |
+| heating and cooling | 21 | 12 | 9 |
 
 Two observations worth stating plainly.
 
 **The propane system was missing from the index entirely until a completeness check found it.** The
 furnace, water heater and fridge were indexed; the tank, regulator, pigtails, supply lines, shutoff,
-gauge and leak detector feeding them were not. It is now a system of its own, and we cover **one of
-its nine parts**. That is the system whose failure is most dangerous, and it is the emptiest.
+gauge and leak detector feeding them were not. It is now a system of its own, and we cover **two of
+its ten parts**. That is the system whose failure is most dangerous, and it is still one of the
+emptiest.
 
 **Two shapes of guide exist and only one maps to a part.** A *part* guide (`rv-furnace-not-working`,
 `rv-water-pump-wont-prime`) belongs to one part. A *symptom* guide (`rv-two-appliances-stopped`,
-`rv-12-volt-problems`, `rv-towing-capacity`) spans several parts and maps to none — which is why nine
-of our 35 guides appear nowhere in the index. Those nine are not gaps; they are a different shape,
+`rv-12-volt-problems`, `rv-towing-capacity`) spans several parts and maps to none — which is why
+eleven of our 47 guides appear nowhere in the index. Those are not gaps; they are a different shape,
 and this plan counts both.
 
 ---
@@ -150,7 +156,7 @@ jack" are the same object and only one of them is in the reader's head.
 
 ## 5. What is already built to support this
 
-- `_data/parts.json` — 157 parts, each with what it does, how it fails, the RV types that have it,
+- `_data/parts.json` — 210 parts, each with what it does, how it fails, the RV types that have it,
   the guide that covers it, the manufacturers we hold documentation for, and demand where measurable.
 - `_todo/PARTS.md` — the same thing rendered for reading (`scripts/parts-report.py`).
 - `scripts/parts-demand.py` — re-measurable, merges by id so a long run cannot clobber concurrent
