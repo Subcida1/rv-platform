@@ -393,9 +393,9 @@
     "claims": "178ec4da901263e8"
   },
   "guides/freeze-damage-triage.html": {
-    "hash": "f550f13b539a5583",
+    "hash": "9e3900970962b44a",
     "status": "verified",
-    "verified_by": "the reader-benefit sweep, step 1 of _todo/VOICE-RULESET.md: the clause about the reader (why the fact matters, what it costs them) cut or rebuilt as the content, per Ty 2026-10-13 \"Say the thing... just spit out the content\". No fact changed; the framing did.",
+    "verified_by": "guide endings unified, step 1 (Ty 2026-10-14, \"Your recommendation on all\"): these twelve guides carried BOTH a Related guides prose block and a button row pointing at the same pages. The duplicate buttons are gone; two prose blocks gained the one target their buttons had that the prose did not (solar not charging on the outlets guide, winterize plumbing on the roof leak guide); the converter finder survives as a button because a tool is an action. No link target was lost.",
     "verified_at": "2026-10-14",
     "sources": [],
     "spec": "_specs/freeze-damage-triage.md",
@@ -453,9 +453,9 @@
     "claims": "74f9b7b4567ac58a"
   },
   "guides/rv-battery-not-charging.html": {
-    "hash": "49e1ee5dd7af318d",
+    "hash": "5b6a16eeb15a6b07",
     "status": "verified",
-    "verified_by": "the reader-benefit sweep, step 1 of _todo/VOICE-RULESET.md: the clause about the reader (why the fact matters, what it costs them) cut or rebuilt as the content, per Ty 2026-10-13 \"Say the thing... just spit out the content\". No fact changed; the framing did.",
+    "verified_by": "guide endings unified, step 1 (Ty 2026-10-14, \"Your recommendation on all\"): these twelve guides carried BOTH a Related guides prose block and a button row pointing at the same pages. The duplicate buttons are gone; two prose blocks gained the one target their buttons had that the prose did not (solar not charging on the outlets guide, winterize plumbing on the roof leak guide); the converter finder survives as a button because a tool is an action. No link target was lost.",
     "verified_at": "2026-10-14",
     "sources": [],
     "spec": "_specs/rv-battery-not-charging.md",
@@ -493,9 +493,9 @@
     "claims": "823655868cc02382"
   },
   "guides/rv-converter-not-charging.html": {
-    "hash": "5b07ce5947b60ef8",
+    "hash": "56a6dc6ef7bd05da",
     "status": "verified",
-    "verified_by": "the reader-benefit sweep, step 1 of _todo/VOICE-RULESET.md: the clause about the reader (why the fact matters, what it costs them) cut or rebuilt as the content, per Ty 2026-10-13 \"Say the thing... just spit out the content\". No fact changed; the framing did.",
+    "verified_by": "guide endings unified, step 1 (Ty 2026-10-14, \"Your recommendation on all\"): these twelve guides carried BOTH a Related guides prose block and a button row pointing at the same pages. The duplicate buttons are gone; two prose blocks gained the one target their buttons had that the prose did not (solar not charging on the outlets guide, winterize plumbing on the roof leak guide); the converter finder survives as a button because a tool is an action. No link target was lost.",
     "verified_at": "2026-10-14",
     "sources": [],
     "spec": "_specs/rv-converter-not-charging.md",
@@ -553,9 +553,9 @@
     "claims": "89a67693ba48f388"
   },
   "guides/rv-fuse-keeps-blowing.html": {
-    "hash": "9ec6af471fe9a993",
+    "hash": "23ad38d0e1493c53",
     "status": "verified",
-    "verified_by": "the reader-benefit sweep, step 1 of _todo/VOICE-RULESET.md: the clause about the reader (why the fact matters, what it costs them) cut or rebuilt as the content, per Ty 2026-10-13 \"Say the thing... just spit out the content\". No fact changed; the framing did.",
+    "verified_by": "guide endings unified, step 1 (Ty 2026-10-14, \"Your recommendation on all\"): these twelve guides carried BOTH a Related guides prose block and a button row pointing at the same pages. The duplicate buttons are gone; two prose blocks gained the one target their buttons had that the prose did not (solar not charging on the outlets guide, winterize plumbing on the roof leak guide); the converter finder survives as a button because a tool is an action. No link target was lost.",
     "verified_at": "2026-10-14",
     "sources": [],
     "spec": "_specs/rv-fuse-keeps-blowing.md",
@@ -563,10 +563,10 @@
     "claims": "fdfcf4aee5a95536"
   },
   "guides/rv-generator-not-charging.html": {
-    "hash": "c266570baf69cc22",
+    "hash": "b8bc78cf296d7bbe",
     "status": "verified",
-    "verified_by": "cross-reference links added where a sentence pointed at a section or a page we own and carried no link, per the new scripts/check-crossrefs.py gate (Ty 2026-10-13: \"we should ALWAYS provide a link if we feel the need to mention another section we have content for\"). Anchor text and heading ids only; no factual change.",
-    "verified_at": "2026-10-13",
+    "verified_by": "guide endings unified, step 1 (Ty 2026-10-14, \"Your recommendation on all\"): these twelve guides carried BOTH a Related guides prose block and a button row pointing at the same pages. The duplicate buttons are gone; two prose blocks gained the one target their buttons had that the prose did not (solar not charging on the outlets guide, winterize plumbing on the roof leak guide); the converter finder survives as a button because a tool is an action. No link target was lost.",
+    "verified_at": "2026-10-14",
     "sources": [],
     "spec": "_specs/rv-generator-not-charging.md",
     "spec_waived": false,
@@ -583,9 +583,9 @@
     "claims": "f0d8106fa63a816a"
   },
   "guides/rv-leveling-jacks-not-working.html": {
-    "hash": "ae6d3c4020fab288",
+    "hash": "2f94aefce30764ae",
     "status": "verified",
-    "verified_by": "the reader-benefit sweep, step 1 of _todo/VOICE-RULESET.md: the clause about the reader (why the fact matters, what it costs them) cut or rebuilt as the content, per Ty 2026-10-13 \"Say the thing... just spit out the content\". No fact changed; the framing did.",
+    "verified_by": "guide endings unified, step 1 (Ty 2026-10-14, \"Your recommendation on all\"): these twelve guides carried BOTH a Related guides prose block and a button row pointing at the same pages. The duplicate buttons are gone; two prose blocks gained the one target their buttons had that the prose did not (solar not charging on the outlets guide, winterize plumbing on the roof leak guide); the converter finder survives as a button because a tool is an action. No link target was lost.",
     "verified_at": "2026-10-14",
     "sources": [],
     "spec": "_specs/rv-leveling-jacks-not-working.md",
@@ -593,9 +593,9 @@
     "claims": "1880dbae7019e467"
   },
   "guides/rv-lights-not-working.html": {
-    "hash": "1e98fd338fd52b2d",
+    "hash": "592b654e94448ef3",
     "status": "verified",
-    "verified_by": "the reader-benefit sweep, step 2 (the report-only families: hedge-stack, emphasis-adverb, authenticity-adjective, filler-opener), 2026-10-14: one hedge where two were, importance shown rather than insisted on, our figures not called the real ones, and no filler opener. No fact changed.",
+    "verified_by": "guide endings unified, step 1 (Ty 2026-10-14, \"Your recommendation on all\"): these twelve guides carried BOTH a Related guides prose block and a button row pointing at the same pages. The duplicate buttons are gone; two prose blocks gained the one target their buttons had that the prose did not (solar not charging on the outlets guide, winterize plumbing on the roof leak guide); the converter finder survives as a button because a tool is an action. No link target was lost.",
     "verified_at": "2026-10-14",
     "sources": [],
     "spec": "_specs/rv-lights-not-working.md",
@@ -623,9 +623,9 @@
     "claims": []
   },
   "guides/rv-outlets-not-working.html": {
-    "hash": "7b65eb55389a2acb",
+    "hash": "af15af2795651532",
     "status": "verified",
-    "verified_by": "the reader-benefit sweep, step 1 of _todo/VOICE-RULESET.md: the clause about the reader (why the fact matters, what it costs them) cut or rebuilt as the content, per Ty 2026-10-13 \"Say the thing... just spit out the content\". No fact changed; the framing did.",
+    "verified_by": "guide endings unified, step 1 (Ty 2026-10-14, \"Your recommendation on all\"): these twelve guides carried BOTH a Related guides prose block and a button row pointing at the same pages. The duplicate buttons are gone; two prose blocks gained the one target their buttons had that the prose did not (solar not charging on the outlets guide, winterize plumbing on the roof leak guide); the converter finder survives as a button because a tool is an action. No link target was lost.",
     "verified_at": "2026-10-14",
     "sources": [],
     "spec": "_specs/rv-outlets-not-working.md",
@@ -653,9 +653,9 @@
     "claims": []
   },
   "guides/rv-propane-furnace-wont-light.html": {
-    "hash": "77d5ec56e1961f38",
+    "hash": "5649b1bdf644fb9e",
     "status": "verified",
-    "verified_by": "the reader-benefit sweep, step 1 of _todo/VOICE-RULESET.md: the clause about the reader (why the fact matters, what it costs them) cut or rebuilt as the content, per Ty 2026-10-13 \"Say the thing... just spit out the content\". No fact changed; the framing did.",
+    "verified_by": "guide endings unified, step 1 (Ty 2026-10-14, \"Your recommendation on all\"): these twelve guides carried BOTH a Related guides prose block and a button row pointing at the same pages. The duplicate buttons are gone; two prose blocks gained the one target their buttons had that the prose did not (solar not charging on the outlets guide, winterize plumbing on the roof leak guide); the converter finder survives as a button because a tool is an action. No link target was lost.",
     "verified_at": "2026-10-14",
     "sources": [],
     "spec": null,
@@ -673,10 +673,10 @@
     "claims": "766d76473220c008"
   },
   "guides/rv-roof-leak-repair.html": {
-    "hash": "3573add790245ff9",
+    "hash": "9fa766685b687cd0",
     "status": "verified",
-    "verified_by": "cross-reference links added where a sentence pointed at a section or a page we own and carried no link, per the new scripts/check-crossrefs.py gate (Ty 2026-10-13: \"we should ALWAYS provide a link if we feel the need to mention another section we have content for\"). Anchor text and heading ids only; no factual change.",
-    "verified_at": "2026-10-13",
+    "verified_by": "guide endings unified, step 1 (Ty 2026-10-14, \"Your recommendation on all\"): these twelve guides carried BOTH a Related guides prose block and a button row pointing at the same pages. The duplicate buttons are gone; two prose blocks gained the one target their buttons had that the prose did not (solar not charging on the outlets guide, winterize plumbing on the roof leak guide); the converter finder survives as a button because a tool is an action. No link target was lost.",
+    "verified_at": "2026-10-14",
     "sources": [],
     "spec": "_specs/rv-roof-leak-repair.md",
     "spec_waived": false,
@@ -703,9 +703,9 @@
     "claims": "c78a8031f12fba7c"
   },
   "guides/rv-slide-out-not-working.html": {
-    "hash": "8946f452ae26d36f",
+    "hash": "eb88a381763d20d3",
     "status": "verified",
-    "verified_by": "the reader-benefit sweep, step 1 of _todo/VOICE-RULESET.md: the clause about the reader (why the fact matters, what it costs them) cut or rebuilt as the content, per Ty 2026-10-13 \"Say the thing... just spit out the content\". No fact changed; the framing did.",
+    "verified_by": "guide endings unified, step 1 (Ty 2026-10-14, \"Your recommendation on all\"): these twelve guides carried BOTH a Related guides prose block and a button row pointing at the same pages. The duplicate buttons are gone; two prose blocks gained the one target their buttons had that the prose did not (solar not charging on the outlets guide, winterize plumbing on the roof leak guide); the converter finder survives as a button because a tool is an action. No link target was lost.",
     "verified_at": "2026-10-14",
     "sources": [],
     "spec": "_specs/rv-slide-out-not-working.md",
@@ -713,9 +713,9 @@
     "claims": "8557baaf9b567d43"
   },
   "guides/rv-solar-not-charging.html": {
-    "hash": "5a438739a5ba3ef3",
+    "hash": "aa27782ca1d58d58",
     "status": "verified",
-    "verified_by": "the reader-benefit sweep, step 1 of _todo/VOICE-RULESET.md: the clause about the reader (why the fact matters, what it costs them) cut or rebuilt as the content, per Ty 2026-10-13 \"Say the thing... just spit out the content\". No fact changed; the framing did.",
+    "verified_by": "guide endings unified, step 1 (Ty 2026-10-14, \"Your recommendation on all\"): these twelve guides carried BOTH a Related guides prose block and a button row pointing at the same pages. The duplicate buttons are gone; two prose blocks gained the one target their buttons had that the prose did not (solar not charging on the outlets guide, winterize plumbing on the roof leak guide); the converter finder survives as a button because a tool is an action. No link target was lost.",
     "verified_at": "2026-10-14",
     "sources": [],
     "spec": "_specs/rv-solar-not-charging.md",
