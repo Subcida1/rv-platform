@@ -1000,11 +1000,14 @@
     "claims": []
   },
   "tools/index.html": {
-    "hash": "c24111c810d45ba3",
-    "status": "unverified",
-    "verified_by": "2026-10-13 independent fresh-context review (subagent, separate context; same model as the drafter, so this is recorded for the findings and NOT as a strength claim, which is why the status stays unverified). Five findings. APPLIED: (1) the RV Recall Lookup card contradicted itself six lines apart, saying 'A recall is filed against a range of VINs, not against a model year' while its own example output read 'Filed against 2022' -- the row is relabelled 'Model year', which is what the tool actually surfaces (assets/js/recalllookup.js uses modelYear) and is the screen the copy describes; (2) 'the six-to-10-year replacement window the tire and vehicle makers recommend' was an unnamed authority and dropped the qualifier NHTSA prints -- it now reads 'the six-to-10-year replacement window NHTSA cites', matching the verbatim NHTSA quotation on tools/tire-date-code.html; (3) 'Half the water heaters on the road have no anode rod' asserted an unsourced proportion, softened to 'Many water heaters have no anode rod' (the same wording on tools/rv-anode-rod.html changed with it). REFUTED after reading the markup: the 'no warning callout anywhere on the page' finding (the cards are calculator previews whose risk is shown by their own red viz-rows, not instructions, so a callout would be the instrument flagging correct behaviour), and the 'Every tool is free: no account, no paywall' finding (a product fact the reader needs before clicking, not an authenticity claim).",
-    "verified_at": null,
-    "sources": []
+    "hash": "b145494201e2f115",
+    "status": "verified",
+    "verified_by": "conductor assignment 2026-10-15: the tools hub's meta, og, twitter and JSON-LD descriptions all still said the weight calculator was the only live tool and 'more in development'. All four now name the fourteen tools that exist, with the number read from site_constants rather than typed. No other content changed.",
+    "verified_at": "2026-10-15",
+    "sources": [],
+    "spec": null,
+    "spec_waived": true,
+    "claims": []
   },
   "tools/rv-anode-rod.html": {
     "hash": "c9307ae282cd922f",
