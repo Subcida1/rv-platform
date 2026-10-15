@@ -533,18 +533,24 @@
     "claims": []
   },
   "guides/rv-entry-door-wont-latch.html": {
-    "hash": "4c1ff091495f6f43",
-    "status": "unverified",
-    "verified_by": null,
-    "verified_at": null,
-    "sources": []
+    "hash": "7da3cd7875fe749a",
+    "status": "verified",
+    "verified_by": "the sources block added: the maker documents this page cites are now listed with links, which they were not before. Every link was fetched and returned 200 before it went in.",
+    "verified_at": "2026-10-15",
+    "sources": [],
+    "spec": null,
+    "spec_waived": true,
+    "claims": []
   },
   "guides/rv-entry-steps-not-working.html": {
-    "hash": "f54e9d9abaa170fe",
-    "status": "unverified",
-    "verified_by": null,
-    "verified_at": null,
-    "sources": []
+    "hash": "f112d065d17dd3ff",
+    "status": "verified",
+    "verified_by": "the lubrication section corrected: the dry-silicone resolution now says explicitly which two documents it reconciles, and the 30-to-60-day interval is named as a coach maker's practice rather than a step maker's requirement, because Lippert's own position on its electric steps is that no lubrication is necessary.",
+    "verified_at": "2026-10-15",
+    "sources": [],
+    "spec": null,
+    "spec_waived": true,
+    "claims": []
   },
   "guides/rv-fridge-leveling.html": {
     "hash": "baaa56d571624a92",
@@ -878,11 +884,14 @@
     "claims": "34c240b69b94c574"
   },
   "guides/rv-window-leaking.html": {
-    "hash": "5bbf8df8a11a7790",
-    "status": "unverified",
-    "verified_by": null,
-    "verified_at": null,
-    "sources": []
+    "hash": "d7e80423d4b60115",
+    "status": "verified",
+    "verified_by": "reworked off the rehost: the Hehr service manual has no maker-hosted copy, so the claims that rested on it were rebuilt on Lippert's own installation manual and its technical sheets, and the Hehr source entry removed. The page now cites only documents on the maker's own domain.",
+    "verified_at": "2026-10-15",
+    "sources": [],
+    "spec": null,
+    "spec_waived": true,
+    "claims": []
   },
   "guides/tires-winter.html": {
     "hash": "eb151bb2abd52120",
