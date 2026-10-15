@@ -3507,3 +3507,12 @@ Forcing them together would produce a title that promises nothing a reader types
 2. **"THE UNMERGED LIST IS NOT THE LIST OF FILES WITH MARKERS."** `git diff --name-only --diff-filter=U` listed four conflicted files; after resolving those four, **three more were still carrying conflict markers** (sitemap.xml, index.html, content-manifest.json) and only `verify.py` caught it ("not well-formed XML", "unterminated tag"). **Rule: after resolving a rebase's conflicts, grep the whole tree for `^<<<<<<<` before continuing.**
 
 **REVIEW QUEUE:** the propane detector page is the last unreviewed page (assigned to conv-8e8a0028). The three entry-steps guides are drafted and unreviewed; their review follows.
+
+**PROPANE TANK SPEC — `5d2283c5` (conv-b71ff860). New page; drafting now.**
+
+A new page rather than an expansion: the tank faults and the generator draw are the same subject from two ends, and the generator half is four short sections that do not carry a page alone. It leads with the four things that stop a tank taking gas — a stuck overfill device, an expired requalification date, a valve with no OPD, or a fill-valve seal the filler must reject — of which only one means the tank is finished; three are a valve job. Regulatory spine: 49 CFR 173.301(a)(2), quoted from the eCFR API. The generator half stands on Cummins Onan's own operator manual (LPG consumption at no/half/full load, HD-5 grade, 9–13 inch water column).
+
+**THREE FLEET RULES FROM THE SOURCING PASS:**
+1. **"A claim that cannot be sourced does not get a weaker source; it gets cut."** Two flow-direction claims rested only on an industry reference site; both were cut and the section reshaped around what is sourced.
+2. **The Wayback Machine is a legitimate reading route to a bot-walled government page, provided the citation still points at the publisher.** PHMSA returns 403 to every machine fetch (bare UA, curl UA, and a full realistic browser header set) on both the OPD FAQ and the requalification PDF. Five claims were **held rather than written** — search-index text is not a source — then read from the archive's copy of PHMSA's own page and cited to `phmsa.dot.gov`.
+3. **The eCFR API is the working route to the CFR and the HTML page is not — and it needs `curl -L`.** Without it the 302 returns zero bytes, which reads as a dead endpoint.
