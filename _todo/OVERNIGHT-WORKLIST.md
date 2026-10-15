@@ -3649,3 +3649,21 @@ fired on a sentence that read fine.
 **Recorded, not split:** the limited-power and noise clusters are candidates for their own pages; the sources are already gathered if the volume holds.
 
 **ENTRY-STEPS REVIEW — assigned to conv-ff6725d2** (the three guides are the last unreviewed pages behind the propane detector).
+
+**WATER PRESSURE PAGE DRAFTED — `2dc88b85` (conv-c3913bd3).** `guides/rv-water-pressure.html`; 53 guides on the site. Awaiting its independent review.
+
+**The burst-figure question came out better than the brief assumed:** a figure exists — **for the tubing.** Viega, Rovanco and Wavin publish PEX at **160 psi design at 73°F** and a minimum burst of **480 psi for ½-inch** per ASTM F876/F877. So the page says something more useful than "no figure exists": **the tube is not the weak point** — the 50 psi recommendation is about everything attached to it (fittings, the inlet, the check valve, the water heater connections, the appliance inlets). A system can hold 160 psi in the straight runs and still lose a fitting at 90.
+
+**The spine remains Jabsco's sentence** — *"Lower pressures will pass through unregulated."* — which kills the most common misconception outright: low flow at the tap is never a regulator problem, and replacing the regulator will not fix it. Every figure is a maker's own (Winnebago, Camco 40052 and 40058, Jabsco, Blu Technology); the backflow preventer is recorded as a requirement, not an option.
+
+**The three gap-notes are recorded** with each card's own failure list as evidence; the shower pan is marked the closest call (a clogged drain IS diagnosable, but it is a drainage guide, and folding it in would have cost this page its thesis).
+
+**TWO FLEET FINDINGS, both real:**
+1. **`build-sitemap.py --write` only refreshes lastmod — it does NOT add new pages.** It reports "published but not in the sitemap" and writes nothing, which reads like success if you do not check the exit. New pages need their entry added by hand. **QUEUED as a fix.**
+2. **The homepage ItemList goes stale if the catalogue is edited after `build-home-schema.py` runs** — the same shape as `new-guide.py`'s incomplete build chain. Both point at one fix: **the build chain should be one command that runs the writers in the right order.**
+
+**And the rebuild-rather-than-hand-merge discipline held twice on a moving origin** (eight commits landed across two attempts, including two more new guides). One redo silently dropped the breadcrumb mapping — the script edited the catalogue first and raised KeyError before reaching the mapping line, so the page briefly shipped with a two-level trail. Fixed and verified. **Hand-resolving derived files is how an index goes subtly wrong.**
+
+**Conversation-title loose end settled:** all five over-32 local titles are in categories the sweep skips by design (2 per-agent `default` records, 3 archived); zero live non-default conversations exceed 32 characters.
+
+**OFF-GRID HEATING — research and spec assigned to conv-c3913bd3** (the last candidate; spec only, no draft tonight).
