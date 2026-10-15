@@ -72,6 +72,21 @@ def type_label(slug):
     return TYPE_LABEL.get(slug, str(slug).replace("-", " ").capitalize())
 
 
+def anchor(pid):
+    """The card's permalink slug. EVERY CARD CARRIES ONE so a specific part can be linked:
+    /parts/#part-hitch-coupler. The `part-` prefix is not decoration: html-validate's
+    valid-id rule requires an id to begin with a letter, and two part ids begin with a
+    digit (12-volt-outlets-and-usb, 120-volt-outlets-and-gfci) -- prefixing all of them
+    keeps the scheme one rule instead of a rule with exceptions. Part ids are kebab-case
+    except four that kept the commas from their names (cabinets,-drawers-and-latches), so
+    the slug is normalised to [a-z0-9-] rather than trusting the id. The id itself is a
+    key that demand runs merge against and does not change; only the anchor is normalised.
+    build() asserts the set is unique and clear of the system keys, because a duplicate
+    id on one page silently sends a link to the wrong card.
+    """
+    return "part-" + re.sub(r"[^a-z0-9]+", "-", str(pid).lower()).strip("-")
+
+
 def head(title, desc, canonical, schemas):
     ld = "\n".join('  <script type="application/ld+json">%s</script>'
                    % json.dumps(s, ensure_ascii=False) for s in schemas)
@@ -127,8 +142,8 @@ def foot(script):
 
 def part_html(p):
     """One part. Name, the other names, what it does, which RVs have it, and what to read next."""
-    out = ['      <li class="part" data-system="%s" data-types="%s" data-search="%s">'
-           % (esc(p.get("_system", "")), esc(" ".join(p.get("types") or [])),
+    out = ['      <li class="part" id="%s" data-system="%s" data-types="%s" data-search="%s">'
+           % (esc(anchor(p["id"])), esc(p.get("_system", "")), esc(" ".join(p.get("types") or [])),
               # `does` is included because the placeholder promises "a part, or what it does".
               # Without it, searching "clamps" (a word from Hitch coupler's description) returned
               # nothing while the words sat on the page. Found by an independent review.
@@ -227,6 +242,13 @@ def build():
     # have no link at all. An independent review caught it. It was a claim the data did not support,
     # which is the one thing this site is not allowed to publish.
     linked = sum(1 for s in systems for p in s["parts"] if p.get("guide") or p.get("makers"))
+
+    # THE CARD ANCHORS HAVE TO BE UNIQUE, and none may collide with a system key: the jump
+    # bar links #<system key>, and a duplicate id would send that link to a part card instead.
+    # Duplicate ids are invalid HTML that no gate here checks for, so the builder refuses.
+    anchors = [anchor(p["id"]) for s in systems for p in s["parts"]]
+    assert len(anchors) == len(set(anchors)), "duplicate part anchor"
+    assert not (set(anchors) & {s["key"] for s in systems}), "part anchor collides with a system key"
 
     # THE TITLE CARRIES THE QUERY; THE H1 NAMES THE SECTION. That is the split every other hub
     # already uses -- tools is "Free RV Tools: ..." over "Free RV tools", manuals is "RV Owner's

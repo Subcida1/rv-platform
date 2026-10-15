@@ -1,6 +1,6 @@
 # Every part in an RV
 
-210 parts across 9 systems. 107 covered by a guide, **103 with nothing**, and 18 of those have manufacturer documentation already catalogued, which makes them the cheapest to write.
+210 parts across 9 systems. 106 covered by a guide, **104 with nothing**, and 18 of those have manufacturer documentation already catalogued, which makes them the cheapest to write.
 
 Ordered by system. `covered` names the guide that already exists; a part with a maker listed and no guide is one where the research material is already in the manuals directory.
 
@@ -114,7 +114,7 @@ _Everything between the tow vehicle and the road: the gear that strands you when
 - **Demand.** 23 a week for "hitch coupler" (bare term, not RV-qualified)
 - **Searches.** rv coupler adjustment; hitch coupler loose; trailer coupler replacement
 
-### Kingpin and fifth-wheel hitch  `rv-towing-trailer`
+### Kingpin and fifth-wheel hitch  `rv-pin-weight-and-payload`
 
 - **What it does.** connects a fifth wheel to the truck bed
 - **How it fails.** hard to latch; clunking; jaw wear; slider stuck; pin box flex
@@ -458,7 +458,7 @@ _Two systems in one place: the 120 volt side from the pedestal, and the 12 volt 
 - **Demand.** 1046 a week for "wiring harness" (bare term, not RV-qualified)
 - **Searches.** rv wiring corrosion; bad ground rv; rodent chewed wiring rv
 
-## Water and plumbing — 16 of 24 covered
+## Water and plumbing — 15 of 24 covered
 
 _The fresh side: getting clean water in, keeping it in, and getting it hot._
 
@@ -469,6 +469,13 @@ _The fresh side: getting clean water in, keeping it in, and getting it hot._
 - **On.** trailer, fifth-wheel, class-a, class-c, van
 - **Demand.** 14861 a week for "faucets" (bare term, not RV-qualified)
 - **Searches.** rv faucet dripping; rv shower valve replacement; low water pressure rv
+
+### Gravity fill and city water inlet
+
+- **What it does.** fill the tank, or run the coach directly off park pressure
+- **How it fails.** check valve leaking; cap lost; screen torn; backflow into the tank
+- **On.** trailer, fifth-wheel, class-a, class-c, van
+- **Searches.** city water filling fresh tank; rv water inlet check valve; gravity fill cap
 
 ### Inline water filter
 
@@ -545,13 +552,6 @@ _The fresh side: getting clean water in, keeping it in, and getting it hot._
 - **Demand.** 20 a week for "rv fresh water tank"
 - **Searches.** rv fresh water tank cleaning; fresh tank cracked; tank sag
 
-### Gravity fill and city water inlet  `rv-water-pump-wont-prime`
-
-- **What it does.** fill the tank, or run the coach directly off park pressure
-- **How it fails.** check valve leaking; cap lost; screen torn; backflow into the tank
-- **On.** trailer, fifth-wheel, class-a, class-c, van
-- **Searches.** city water filling fresh tank; rv water inlet check valve; gravity fill cap
-
 ### Low point drains  `winterize-plumbing`
 
 - **What it does.** empty the lines for winter
@@ -609,7 +609,7 @@ _The fresh side: getting clean water in, keeping it in, and getting it hot._
 - **Demand.** 123 a week for "rv water heater"
 - **Searches.** tankless rv water heater cold; aquago error code; tankless water heater freeze
 
-### Water heater anode rod  `rv-water-heater-not-heating`
+### Water heater anode rod  `rv-water-heater-anode-rod`
 
 - **What it does.** sacrifices itself to protect the tank
 - **How it fails.** consumed and the tank corrodes; wrong material; stripped drain plug
@@ -697,7 +697,7 @@ _The waste side: toilet, holding tanks, valves, and the sewer connection._
 
 ### Black tank  `rv-black-tank`
 
-- **What it does.** holds toilet waste
+- **What it does.** holds what the toilet flushes until you dump it
 - **How it fails.** sensor coated and reads wrong; pyramid build-up; crack; valve leaking; vent blocked
 - **On.** trailer, fifth-wheel, class-a, class-c, van
 - **Documentation we hold.** Dometic
@@ -836,8 +836,8 @@ _Furnace, air conditioning, heat pumps, and the ducts that carry what they make.
 
 ### Heat pump and heat strip
 
-- **What it does.** heats as well as cools, down to about 45 F, below which Coleman-Mach's own FAQ says to heat with the furnace
-- **How it fails.** no heat below about 40F; reversing valve; heat strip burned; thermostat set wrong
+- **What it does.** heats as well as cools, down to a cutoff each maker sets: Coleman-Mach shuts down near freezing, and Dometic locks out at 30 F and resumes at 35 F
+- **How it fails.** no heat below the maker's cutoff; reversing valve; heat strip burned; thermostat set wrong
 - **On.** trailer, class-a, class-c
 - **Documentation we hold.** Coleman-Mach, Dometic
 - **Demand.** 38589 a week for "heat pump" (bare term, not RV-qualified)
@@ -1017,7 +1017,7 @@ _The shell: roof, walls, windows, doors, awnings, slides and the gear that hangs
 
 ### Bike and kayak carriers
 
-- **What it does.** carries toys outside
+- **What it does.** carries bikes, kayaks and gear outside
 - **How it fails.** bumper-mounted rack pulling the bumper off; hitch rack over the tongue weight limit; strap wear
 - **On.** trailer, fifth-wheel, class-a, class-c, van
 - **Searches.** rv bike rack bumper; best rv bike rack; kayak rack rv
@@ -1047,7 +1047,7 @@ _The shell: roof, walls, windows, doors, awnings, slides and the gear that hangs
 
 ### Decals and graphics
 
-- **What it does.** the coach's look
+- **What it does.** the stripes and graphics that carry the brand
 - **How it fails.** cracking and fading; peeling edges; removal damaging gelcoat
 - **On.** trailer, fifth-wheel, class-a, class-c, van
 - **Demand.** 33 a week for "rv decals"
@@ -1210,7 +1210,7 @@ _The shell: roof, walls, windows, doors, awnings, slides and the gear that hangs
 
 ### Body panels and siding  `rv-delamination`
 
-- **What it does.** the coach's skin
+- **What it does.** the outer skin, in fiberglass or aluminum
 - **How it fails.** delamination bubbles; impact damage; screw rust bleed; decal peel; hail
 - **On.** trailer, fifth-wheel, class-a, class-c
 - **Demand.** 43 a week for "body panels" (bare term, not RV-qualified)
@@ -1294,7 +1294,7 @@ _The things that make a coach livable: cold food, hot food, and somewhere to sit
 
 ### Bed and mattress
 
-- **What it does.** sleeping
+- **What it does.** where you sleep, sized to the floor plan
 - **How it fails.** mattress worn; murphy bed mechanism; bunk ladder; underbed storage struts
 - **On.** trailer, fifth-wheel, class-a, class-c, van
 - **Demand.** 214156 a week for "bed" (bare term, not RV-qualified)
@@ -1326,7 +1326,7 @@ _The things that make a coach livable: cold food, hot food, and somewhere to sit
 
 ### Cooktop and oven
 
-- **What it does.** cooks with propane
+- **What it does.** cooks with propane, on the burners or in the oven
 - **How it fails.** burner will not light; low flame; igniter clicking; oven pilot; thermocouple; burner cap clogged
 - **On.** trailer, fifth-wheel, class-a, class-c, van
 - **Documentation we hold.** Graystone, RecPro, Suburban
@@ -1441,7 +1441,7 @@ _The things that make a coach livable: cold food, hot food, and somewhere to sit
 
 ### Washer
 
-- **What it does.** laundry on board
+- **What it does.** does the wash on board
 - **How it fails.** will not drain; leaks; unbalanced load; water supply valve; walks in the closet
 - **On.** class-a, class-c, fifth-wheel
 - **Documentation we hold.** Splendide
@@ -1550,7 +1550,7 @@ _Motorhome-specific: the truck underneath the house, and the parts that strand y
 
 ### Engine and drivetrain
 
-- **What it does.** moves the coach
+- **What it does.** moves the coach, from engine to wheels
 - **How it fails.** overheating on grades; derate; transmission temperature; limp mode; check engine light
 - **On.** class-a, class-c, van
 - **Documentation we hold.** Allison, Cummins
@@ -1574,7 +1574,7 @@ _Motorhome-specific: the truck underneath the house, and the parts that strand y
 
 ### Fuel system
 
-- **What it does.** delivers fuel
+- **What it does.** carries fuel from the tank to the engine
 - **How it fails.** lift pump failure; fuel filter clogged; gauge wrong; fuel starvation on grades
 - **On.** class-a, class-c, van
 - **Demand.** 1035 a week for "fuel system" (bare term, not RV-qualified)
@@ -1632,14 +1632,14 @@ _The supply side: what holds the gas, what regulates it, and what carries it to 
 
 ### Propane refill and exchange
 
-- **What it does.** getting more gas
+- **What it does.** getting more propane, by tank exchange or bulk fill
 - **How it fails.** exchange tanks short-filled; tank not purged; overfilled in cold; filler valve leak
 - **On.** trailer, fifth-wheel, class-a, class-c, van
 - **Searches.** propane refill vs exchange rv; how long does rv propane last
 
 ### Propane shutoff valve
 
-- **What it does.** isolates the gas
+- **What it does.** shuts the gas off at the tank
 - **How it fails.** stiff from age; weeping at the stem; left closed and appliances 'fail'
 - **On.** trailer, fifth-wheel, class-a, class-c, van
 - **Searches.** rv propane valve stiff; tank valve leaking

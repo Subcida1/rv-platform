@@ -53,6 +53,23 @@ def main():
     wrong = [(n, k, by_name.get(n)) for k, n in listed if by_name.get(n) != k]
     check(not wrong, "every part carries its own system" + (": %s" % wrong[:3] if wrong else ""))
 
+    # 1b. every card carries its own anchor, and the anchors are unique. A per-part permalink
+    # (/parts/#part-hitch-coupler) is only as good as the id it lands on: a missing id sends the
+    # reader to the top of the page, and a duplicate id sends them to the wrong card. The slug
+    # is normalised the same way the builder normalises it -- the `part-` prefix and the
+    # [a-z0-9-] sweep -- because four part ids kept the commas from their names, and two begin
+    # with a digit, which html-validate's valid-id rule rejects.
+    def slug(pid):
+        return "part-" + re.sub(r"[^a-z0-9]+", "-", str(pid).lower()).strip("-")
+
+    ids = re.findall(r'<li class="part" id="([^"]*)"', html)
+    want_ids = [slug(p["id"]) for _, p in parts]
+    check(len(ids) == total, "every card carries an id (%d cards, %d ids)" % (total, len(ids)))
+    check(sorted(ids) == sorted(want_ids),
+          "every id is the card's own anchor" +
+          (": %s" % sorted(set(want_ids) - set(ids))[:3] if set(want_ids) - set(ids) else ""))
+    check(len(set(ids)) == len(ids), "no duplicate card id")
+
     # 2. links
     guide_parts = [(s["key"], p) for s in systems for p in s["parts"] if p.get("guide")]
     # Accept either form: the part links its guide extensionless since 2026-10-04, and demanding

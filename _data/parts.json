@@ -670,7 +670,7 @@
           "types": [
             "fifth-wheel"
           ],
-          "guide": "rv-towing-trailer",
+          "guide": "rv-pin-weight-and-payload",
           "kw": [
             "fifth wheel hitch clunk",
             "kingpin box replacement",
@@ -1835,7 +1835,7 @@
             "class-c",
             "van"
           ],
-          "guide": "rv-water-pump-wont-prime",
+          "guide": null,
           "kw": [
             "city water filling fresh tank",
             "rv water inlet check valve",
@@ -2218,7 +2218,7 @@
             "class-a",
             "class-c"
           ],
-          "guide": "rv-water-heater-not-heating",
+          "guide": "rv-water-heater-anode-rod",
           "kw": [
             "rv water heater anode replacement",
             "anode rod ate away"
@@ -2743,7 +2743,7 @@
           "id": "black-tank",
           "n": "Black tank",
           "aka": "holding tank|waste tank|tank repair|tank crack",
-          "does": "holds toilet waste",
+          "does": "holds what the toilet flushes until you dump it",
           "fails": [
             "sensor coated and reads wrong",
             "pyramid build-up",
@@ -3502,9 +3502,9 @@
           "id": "heat-pump-and-heat-strip",
           "n": "Heat pump and heat strip",
           "aka": "heat pump|heat strip|reverse cycle",
-          "does": "heats as well as cools, down to about 45 F, below which Coleman-Mach's own FAQ says to heat with the furnace",
+          "does": "heats as well as cools, down to a cutoff each maker sets: Coleman-Mach shuts down near freezing, and Dometic locks out at 30 F and resumes at 35 F",
           "fails": [
-            "no heat below about 40F",
+            "no heat below the maker's cutoff",
             "reversing valve",
             "heat strip burned",
             "thermostat set wrong"
@@ -3535,10 +3535,29 @@
             }
           ],
           "evidence": {
-            "does_quote": "The Coleman-Mach heat pump is an effective heat source, as long as outdoor temperatures are above 45 F",
-            "does_source": "https://coleman-mach.com/service-support/faqs/",
-            "fails_quote": "The heat pump will operate on reverse refrigerant cycle while heating at outdoor temperatures above approximately 40 degrees F. When the outdoor temperature is below approximately 40 degrees F, the heat pump compressor will shut down to prevent outdoor coil freeze-up.",
-            "fails_source": "https://library.coleman-mach.com/wp-content/uploads/2023/04/1976-299.pdf"
+            "quotes": [
+              {
+                "claim": "does",
+                "quote": "The heat pump will shut down at conditions which would cause outdoor coil freeze-up, generally near freezing temperatures.",
+                "source": "https://library.coleman-mach.com/wp-content/uploads/2023/04/1976-529.pdf"
+              },
+              {
+                "claim": "does",
+                "quote": "Auxiliary heat operation will be activated when the measured temperature of the outdoor temperature sensor is less than 30 \u00b0F (-1 \u00b0C). ... Auxiliary heat operation will be de-activated and the heat pump operation will resume when the temperature of the outdoor temperature sensor is higher than 35 \u00b0F (2 \u00b0C).",
+                "source": "https://media.dometic.com/externalassets/thermostat-control-box-ccc2_64755.pdf"
+              },
+              {
+                "claim": "does",
+                "quote": "The Coleman-Mach heat pump is an effective heat source, as long as outdoor temperatures are above 45\u00b0F.",
+                "source": "https://coleman-mach.com/service-support/faqs/"
+              },
+              {
+                "claim": "fails",
+                "quote": "The heat pump will operate on reverse refrigerant cycle while heating at outdoor temperatures above approximately 40 degrees F. When the outdoor temperature is below approximately 40 degrees F, the heat pump compressor will shut down to prevent outdoor coil freeze-up.",
+                "source": "https://library.coleman-mach.com/wp-content/uploads/2023/04/1976-299.pdf"
+              }
+            ],
+            "note": "Coleman's own documents disagree: the 1976-299 manual shuts the compressor down at about 40 F, the 1976-529 manual at about freezing, and the FAQ says to heat with the furnace below 45 F. The card gives each maker's cutoff rather than one universal figure."
           }
         },
         {
@@ -4310,7 +4329,7 @@
           "id": "body-panels-and-siding",
           "n": "Body panels and siding",
           "aka": "filon|fiberglass siding|aluminum siding|sidewall",
-          "does": "the coach's skin",
+          "does": "the outer skin, in fiberglass or aluminum",
           "fails": [
             "delamination bubbles",
             "impact damage",
@@ -4367,7 +4386,7 @@
           "id": "decals-and-graphics",
           "n": "Decals and graphics",
           "aka": "rv decals|graphics|stripes",
-          "does": "the coach's look",
+          "does": "the stripes and graphics that carry the brand",
           "fails": [
             "cracking and fading",
             "peeling edges",
@@ -4841,7 +4860,7 @@
           "id": "bike-and-kayak-carriers",
           "n": "Bike and kayak carriers",
           "aka": "bike rack|kayak rack|hitch rack|roof rack",
-          "does": "carries toys outside",
+          "does": "carries bikes, kayaks and gear outside",
           "fails": [
             "bumper-mounted rack pulling the bumper off",
             "hitch rack over the tongue weight limit",
@@ -5057,7 +5076,7 @@
           "id": "cooktop-and-oven",
           "n": "Cooktop and oven",
           "aka": "rv stove|range|Graystone|Atwood stove|induction cooktop|sealed burner",
-          "does": "cooks with propane",
+          "does": "cooks with propane, on the burners or in the oven",
           "fails": [
             "burner will not light",
             "low flame",
@@ -5184,7 +5203,7 @@
           "id": "washer",
           "n": "Washer",
           "aka": "rv washer|washer dryer combo|Splendide|stackable washer",
-          "does": "laundry on board",
+          "does": "does the wash on board",
           "fails": [
             "will not drain",
             "leaks",
@@ -5304,7 +5323,7 @@
           "id": "bed-and-mattress",
           "n": "Bed and mattress",
           "aka": "rv mattress|short queen|bunk|murphy bed|tilting bed|adjustable bed",
-          "does": "sleeping",
+          "does": "where you sleep, sized to the floor plan",
           "fails": [
             "mattress worn",
             "murphy bed mechanism",
@@ -5724,7 +5743,7 @@
           "id": "engine-and-drivetrain",
           "n": "Engine and drivetrain",
           "aka": "gas engine|diesel pusher|cummins|v10|transmission|driveshaft|u-joint|differential|spark plugs|glow plugs|timing belt",
-          "does": "moves the coach",
+          "does": "moves the coach, from engine to wheels",
           "fails": [
             "overheating on grades",
             "derate",
@@ -6107,7 +6126,7 @@
           "id": "fuel-system",
           "n": "Fuel system",
           "aka": "fuel pump|lift pump|fuel filter|fuel gauge|fuel tank",
-          "does": "delivers fuel",
+          "does": "carries fuel from the tank to the engine",
           "fails": [
             "lift pump failure",
             "fuel filter clogged",
@@ -6302,7 +6321,7 @@
           "id": "propane-shutoff-valve",
           "n": "Propane shutoff valve",
           "aka": "tank valve|service valve|manual shutoff",
-          "does": "isolates the gas",
+          "does": "shuts the gas off at the tank",
           "fails": [
             "stiff from age",
             "weeping at the stem",
@@ -6380,7 +6399,7 @@
           "id": "propane-refill-and-exchange",
           "n": "Propane refill and exchange",
           "aka": "refill|exchange tank|bulk fill|recertification|requalification",
-          "does": "getting more gas",
+          "does": "getting more propane, by tank exchange or bulk fill",
           "fails": [
             "exchange tanks short-filled",
             "tank not purged",
