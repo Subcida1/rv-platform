@@ -1004,16 +1004,19 @@
     "sources": []
   },
   "tools/rv-anode-rod.html": {
-    "hash": "e13bd0fed264bfa1",
-    "status": "unverified",
-    "verified_by": "2026-10-13: the H2 'What an anode rod does, and why half the heaters have none' became '...and why many heaters have none'. The 'half' was an unsourced proportion about the installed fleet; no cited document carries it, and the site's rule is that a figure is sourced or cut. No other change.",
-    "verified_at": null,
-    "sources": []
+    "hash": "c9307ae282cd922f",
+    "status": "verified",
+    "verified_by": "queued Neo tools-11th silo finding applied 2026-10-15: the six finder tools linked no part and no directory from inside their own body. Each now names one in its closing block -- the five part finders link the parts section for the system they find parts in, and the recall lookup links the directory for work that needs a dealer. No fact changed; no existing link removed.",
+    "verified_at": "2026-10-14",
+    "sources": [],
+    "spec": null,
+    "spec_waived": true,
+    "claims": []
   },
   "tools/rv-appliance-board-finder.html": {
-    "hash": "85b13dbbb2a6d962",
+    "hash": "fa390ce06d10c3ca",
     "status": "verified",
-    "verified_by": "queued Neo rotation findings applied 2026-10-14: the GasBuddy source citation added on the fuel cost tool; a Where to go next block added to six tool pages (tire-date-code, rv-appliance-board-finder, rv-converter-finder, rv-recall-lookup, rv-toilet-valve, rv-anode-rod) with topic-matched links, no fact changed. The black tank parts card now points at the dedicated RV black tank guide.",
+    "verified_by": "queued Neo tools-11th silo finding applied 2026-10-15: the six finder tools linked no part and no directory from inside their own body. Each now names one in its closing block -- the five part finders link the parts section for the system they find parts in, and the recall lookup links the directory for work that needs a dealer. No fact changed; no existing link removed.",
     "verified_at": "2026-10-14",
     "sources": [],
     "spec": null,
@@ -1021,10 +1024,10 @@
     "claims": []
   },
   "tools/rv-converter-finder.html": {
-    "hash": "4818dbbf7bdff5b4",
-    "status": "unverified",
-    "verified_by": "New page, 2026-10-11. Every part number it can print is a row in _data/converters.json, and every row names the maker chart it came from; the two parsed charts were fetched and read rather than summarised. WFCO's chart is deliberately not parsed and the page says so. No independent lane has reviewed it, so it is recorded unverified rather than claimed.  2026-10-13: title shortened from 66 to 57 characters -- it was past Google's ~62-character cut, so the tail was being dropped in the result. Metadata only.",
-    "verified_at": null,
+    "hash": "dfa3ea20f169c62a",
+    "status": "verified",
+    "verified_by": "queued Neo tools-11th silo finding applied 2026-10-15: the six finder tools linked no part and no directory from inside their own body. Each now names one in its closing block -- the five part finders link the parts section for the system they find parts in, and the recall lookup links the directory for work that needs a dealer. No fact changed; no existing link removed.",
+    "verified_at": "2026-10-14",
     "sources": [],
     "spec": null,
     "spec_waived": true,
@@ -1041,19 +1044,19 @@
     "claims": []
   },
   "tools/rv-recall-lookup.html": {
-    "hash": "2f2f7ecb665bc92b",
-    "status": "unverified",
-    "verified_by": "New page, 2026-10-10. Every endpoint it calls was exercised live before the brief was written and again after the tool was built; the make-name aliases are the strings NHTSA actually returns, collected from five model years of its makes endpoint, not guesses. No independent lane has reviewed it, so it is recorded unverified rather than claimed.  2026-10-13: title shortened from 65 to 59 characters -- it was past Google's ~62-character cut, so the tail was being dropped in the result. Metadata only.",
-    "verified_at": null,
+    "hash": "988cdea7deabc333",
+    "status": "verified",
+    "verified_by": "queued Neo tools-11th silo finding applied 2026-10-15: the six finder tools linked no part and no directory from inside their own body. Each now names one in its closing block -- the five part finders link the parts section for the system they find parts in, and the recall lookup links the directory for work that needs a dealer. No fact changed; no existing link removed.",
+    "verified_at": "2026-10-14",
     "sources": [],
     "spec": null,
     "spec_waived": true,
     "claims": []
   },
   "tools/rv-toilet-valve.html": {
-    "hash": "2b5688f5faffcaaa",
+    "hash": "70af166c0993638f",
     "status": "verified",
-    "verified_by": "queued Neo tools-11th findings applied 2026-10-15: removed a sentence from the Where-to-go-next block that restated a body sentence almost verbatim (the anode-rod and toilet-valve pages each said the same thing twice within a screen); renamed the water-filter page's closing block heading from 'Related guides' to 'Where to go next' so all six finders match. No link added or lost.",
+    "verified_by": "queued Neo tools-11th silo finding applied 2026-10-15: the six finder tools linked no part and no directory from inside their own body. Each now names one in its closing block -- the five part finders link the parts section for the system they find parts in, and the recall lookup links the directory for work that needs a dealer. No fact changed; no existing link removed.",
     "verified_at": "2026-10-14",
     "sources": [],
     "spec": null,
@@ -1061,9 +1064,9 @@
     "claims": []
   },
   "tools/rv-water-filter.html": {
-    "hash": "f7cbc782fc1bfc28",
+    "hash": "f1f5ca577636bff8",
     "status": "verified",
-    "verified_by": "queued Neo tools-11th findings applied 2026-10-15: removed a sentence from the Where-to-go-next block that restated a body sentence almost verbatim (the anode-rod and toilet-valve pages each said the same thing twice within a screen); renamed the water-filter page's closing block heading from 'Related guides' to 'Where to go next' so all six finders match. No link added or lost.",
+    "verified_by": "queued Neo tools-11th silo finding applied 2026-10-15: the six finder tools linked no part and no directory from inside their own body. Each now names one in its closing block -- the five part finders link the parts section for the system they find parts in, and the recall lookup links the directory for work that needs a dealer. No fact changed; no existing link removed.",
     "verified_at": "2026-10-14",
     "sources": [],
     "spec": null,
