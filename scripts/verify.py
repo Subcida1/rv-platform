@@ -217,7 +217,13 @@ REHOST = ("manualslib.com", "manualsonline.com", "manuals.plus", "manualzz.com",
           # Houston dealer ("First Source Energy, Certified Micro Air EasyStart Installer"),
           # not Micro-Air, and it reproduces the maker's FAQ. The claims moved to the maker's
           # own documents on micro-air.com; this entry stops the next session repeating it.
-          "microaireasystart.com")
+          "microaireasystart.com",
+          # Added 2026-10-15 by the propane tank review, which found four RegO claims cited to
+          # this gas-equipment distributor. The document is RegO's own, and RegO publishes the
+          # same material on its own domains: the warning text in the adhesive-label sheet at
+          # pages.regoproducts.com, and the service guidance and the excess-flow bulletin in the
+          # L-500 catalog. Both pages moved; this entry stops the next session repeating it.
+          "gasequipment.com")
 # SCOPE: this is a CITATION rule, and it applies to the pages that cite documents. The
 # directory pages are a different thing entirely - they link each business's own website, and a
 # business whose website happens to be a manual rehost is still the business. On 2026-09-28 the

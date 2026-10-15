@@ -594,10 +594,10 @@
     "claims": "029e24133bf31376"
   },
   "guides/rv-furnace-not-working.html": {
-    "hash": "fb0220e2e425ca49",
+    "hash": "beedd9ce60e0cb11",
     "status": "verified",
-    "verified_by": "guide endings unified, step 2 (Ty 2026-10-14, \"Your recommendation on all\"): the thirty button-only guides now end with the same Related guides prose block the other seventeen use, because a sentence can say why the next page matters and a button can only repeat its title. Tool buttons survive as buttons, relabelled as actions rather than as relations. Every button target was checked against the prose before the row was removed; no link target was lost.",
-    "verified_at": "2026-10-14",
+    "verified_by": "F4 class fix 2026-10-15: the excess-flow citation moves off a distributor's copy onto RegO's own L-500 catalog, and the entry gains the note naming what it supports. No claim changed.",
+    "verified_at": "2026-10-15",
     "sources": [],
     "spec": "_specs/rv-furnace-not-working.md",
     "spec_waived": false,
@@ -721,9 +721,9 @@
     "claims": []
   },
   "guides/rv-propane-furnace-wont-light.html": {
-    "hash": "1eef012643530849",
+    "hash": "314625dd98bab008",
     "status": "verified",
-    "verified_by": "propane gap: independent review's seven findings applied (five citation mismatches moved to the documents that carry the claims, a flag-injury callout added on the gauge section's gas-side work, the burner figure corrected to its source, and two wording fixes)",
+    "verified_by": "F4 class fix 2026-10-15: the excess-flow citation moves off a distributor's copy onto RegO's own L-500 catalog, which carries the same bulletin text. No claim changed; only the host.",
     "verified_at": "2026-10-15",
     "sources": [],
     "spec": null,
@@ -731,11 +731,14 @@
     "claims": "7633b08b24580839"
   },
   "guides/rv-propane-tank-wont-fill.html": {
-    "hash": "1b077f12b387eb87",
-    "status": "unverified",
-    "verified_by": null,
-    "verified_at": null,
-    "sources": []
+    "hash": "1f474988545afae2",
+    "status": "verified",
+    "verified_by": "F4 class fix 2026-10-15: the four RegO claims move off a distributor's copy onto RegO's own documents (the adhesive warning-label sheet for the warning text, the L-500 catalog for the service guidance). No claim changed; only the host.",
+    "verified_at": "2026-10-15",
+    "sources": [],
+    "spec": "_specs/rv-propane-tank-wont-fill.md",
+    "spec_waived": false,
+    "claims": []
   },
   "guides/rv-refrigerator-not-cooling.html": {
     "hash": "c57e475244f9df0a",
