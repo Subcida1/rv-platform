@@ -3850,3 +3850,18 @@ The legal restrictions are the first section after the callout, in the maker's o
 **THE LESSON: the rehost gate is not a formality.** It caught a citation that would have shipped, on the page whose central finding came from it — the same class as the DC citation defect, one level up.
 
 **OFF-GRID HEATING REVIEW — assigned to conv-8e8a0028.**
+
+**FRAME / WATER-INTRUSION GAP CLOSED — `ddfb51c7` (conv-c145cc42). New page: `guides/rv-frame-cracks`.**
+
+**The calls:** the frame is a genuinely different subject from delamination (the steel chassis versus the sidewall's substrate), so it got its own page; the window leak went the other way — another session landed `rv-window-leaking` while this branch was in flight, so the window subsection was **dropped rather than duplicated**, with a one-sentence cross-link; and the slide-out floor rot was already covered by `rv-slide-out-leaking`.
+
+**The page:** where a trailer frame cracks (the spring hangers over the axles, and the fifth wheel's front overhang at the pin box), the frame flex measurement Grand Design's bulletin publishes with the 3/8 inch limit, what NHTSA's open Preliminary Evaluation **PE24029** records (55,887 trailers, 23 complaints, both makers' positions), how to inspect the steel, and what a repair involves. Sources: the NHTSA investigation resume, the Grand Design bulletin filed with NHTSA, NHTSA's complaint search, and Lippert's frames support page and crack repair procedure.
+
+**Independent review found 10** — six were citation gaps in the class the propane review named (five already fixed before the review ran); the two that still applied are fixed (a flag-injury callout for the measurement section — the trailer sits on a tripod with the landing gear off the ground — and the "some movement is normal" line attributed to Grand Design alone, which is what the resume records). Two were moot. Every figure on the page was confirmed against its source: the 3/8 inch limit, the 55,887 population, the complaint counts, the quarter-to-half inch pads, the six-hour flat rate, the half-inch lag bolts.
+
+**THREE FLEET NOTES:**
+1. **`computer: "CLI-Grid"` routing on a subagent is NOT reliable.** One dispatch ran in the Cloud sandbox instead and started a rebase in the working clone while the session was editing it — **the two-writers problem with the same session on both sides**, caught from the reflog. Recorded as a hazard for anyone routing work that way.
+2. **The Cloud sandbox has a native Chrome and all four browser gates honour `CHROME_BIN`** — `CHROME_BIN="/usr/bin/google-chrome --no-sandbox" bash scripts/ci.sh` runs the FULL gate there, browser steps included. That is how a session gates without the-grid.
+3. `new-guide.py`'s chain omission — already known and queued.
+
+**conv-c145cc42 stands by as a reviewer** (the propane tank and overheating pages are drafting; the off-grid heating review is with conv-8e8a0028).
