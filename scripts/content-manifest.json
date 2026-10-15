@@ -1108,9 +1108,9 @@
     "sources": []
   },
   "tools/weight-calculator.html": {
-    "hash": "c7ed2796c006f324",
+    "hash": "558c45a43fa6592b",
     "status": "verified",
-    "verified_by": "the find-it magnifier drawn inline instead of as a CSS mask, after the W3C CSS validator rejected the mask shorthand and CI caught it",
+    "verified_by": "page 5 read follow-up: the paragraph Ty flagged ('a little apragraph in the middle of the calculator') moves out of the cargo panel to above the calculator, and the page's links gain the site's content-link treatment (the link-visibility sweep, see scripts/check-link-visibility.mjs)",
     "verified_at": "2026-10-15",
     "sources": [],
     "spec": null,
