@@ -4282,3 +4282,19 @@ Every new page got a fresh-context pass, and the classes that came out of it are
 All 19 quotations verified against their sources before the build. **Review assigned to conv-c145cc42** (after the F4 class fix).
 
 **conv-095eb8fd's lane is fully closed** — batches E, F and G, the awning review, the manuals tool links, and both chassis pages. Nothing open.
+
+---
+
+## REVIEW — the state brake tool, second pass (conv-b71ff860, 2026-10-15)
+
+**Findings in `_todo/REVIEW-state-brake-tool-2.md`.** The first pass checked all 50 rows for quotation fidelity; this one took the interface, the states added after that sample, the DC citation, mobile and the honesty framing.
+
+**One defect a reader will hit, and it is one wrapper.** The page **scrolls sideways at phone width** — 120px at 393, 83px at 430, measured with the site's own `audit-layout.mjs`. The mechanism, measured over CDP: the 50-row table is 489px wide with `table-layout: auto`, its wrapper `div.prose` is 345px with `overflow-x: visible`, so the table drags the page. The picker, result panel, quote block and print button all fit — the table is the whole of it. Fix: wrap the table in a `overflow-x: auto` container.
+
+**Why CI did not catch it: `audit-layout.mjs` runs in `ci-full.sh`, and `full-checks.yml` is weekly (Mondays 13:40 UTC) and manual-dispatch — not on push.** The tool page is in the sitemap, so it is in scope; the gate simply had not run yet.
+
+**One low finding.** The `conditional` shape sentence duplicates the `speed` sentence and does not describe a condition. Its only user is Delaware, whose own `appliesTo` line already ends "so the rule is written as a speed limit rather than as a brake requirement" — the shape sentence renders directly beneath a line saying the same thing. The label also does not match the page's own prose, which defines a condition as a percentage of the tow vehicle's weight, and that is what the 14 `exception` rows carry. Recommendation: cut `conditional`, shape Delaware as `speed`.
+
+**The nine sampled states all verify verbatim** — TX, GA, TN (agency-sourced) and KS, MO, ND, OR, UT, WY (no-threshold). The DC citation is correct and the quoted text is reachable from it.
+
+**One method note worth keeping, because it would have produced a false finding.** The Utah section page returns 2,488 characters of navigation and no section text to curl, to curl with full browser headers, and to the Wayback Machine — the section loads into an empty `#viewbox` by JavaScript. **A headless Chrome at `--virtual-time-budget=8000` also gets nothing; at 25000 it renders the full section, and the row's quote matches it verbatim.** A fetch-based checker would have reported that row as unverifiable. *"The DOM is empty" at eight seconds is not evidence about the page.*
