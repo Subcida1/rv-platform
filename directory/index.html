@@ -47,10 +47,13 @@
     <div class="sec-eyebrow">Directory</div>
     <h1>RV Repair Directory</h1>
     <p class="lede wide">Listed by region, west to east, then alphabetically by state inside each one. Pick a state to see who repairs RVs there.</p>
-    <!-- The same search the nav and hero run — search.js wires every form.js-search-form.
+    <!-- The same search the nav and hero run (search.js wires every form.js-search-form).
          Placed here because this page is where someone arrives looking for a repair shop,
-         and the first thing they should learn is that a city or ZIP is enough. -->
-    <form class="search js-search-form" role="search" aria-label="Search the RV repair directory">
+         and the first thing they should learn is that a city or ZIP is enough. The inline
+         z-index lifts the dropdown above the sticky .hub-jump pills (120) that would
+         otherwise paint over it; it is inline rather than in .srch-drop so this one page's
+         stacking need does not restamp every asset reference on the site. -->
+    <form class="search js-search-form" role="search" aria-label="Search the RV repair directory" style="z-index:130">
       <div class="search-bar">
         <input type="search" placeholder="Type a city, ZIP, or business name" aria-label="Search the RV repair directory by city, ZIP, or business name" name="q" autocomplete="off">
         <button class="btn btn-gb" type="submit"><span class="srch-ring" aria-hidden="true"></span><span class="btn-lbl">Search</span></button>
