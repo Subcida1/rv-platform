@@ -18,5 +18,17 @@ window.RV_LISTINGS_HI = [
    "kaneohe",
    "haleiwa"
   ],  "region": "Oahu",  "spec": "Mobile RV paint, gel coat and fiberglass repair",  "reg": "oahu-hi"
+ },
+ {  "n": "Hawaii Surf Campers",  "c": "Wahiawa, HI",  "p": "(808) 797-2808",  "u": "https://www.hawaiisurfcampers.com/automotive",  "t": "center",  "e": false,  "r": false,  "d": "Custom camper van builder and conversion shop on the North Shore of Oahu, working from a shop in Wahiawa. It builds full van conversions from a bare cargo van and upgrades existing builds, covering layout, carpentry, electrical, plumbing, and finishing. It also services and repairs Volkswagen vans, including the camper portion of Westfalia models.",  "g": [
+   "van conversion",
+   "camper repair",
+   "RV service"
+  ],  "base": "wahiawa",  "areas": [],  "region": null,  "spec": "shop only, no mobile; main work is van builds and conversions",  "reg": "oahu-hi"
+ },
+ {  "n": "Fibrenew Hawaii",  "c": "Honolulu, HI",  "p": "(808) 302-0113",  "u": "https://www.fibrenew.com/hawaii/rv-motorhome-camper-interior-repair-restoration/",  "t": "mobile",  "e": false,  "r": false,  "d": "Mobile restoration service that repairs RV interiors, covering motorhomes, camping trailers, vans, fifth wheels, fold downs, expandables, and toy haulers. It specializes in repair and restoration of interior components such as leather furniture, vinyl lino floors, plastic molding and trim, and fabric. It also performs on-lot repairs and warranty work for RV dealers.",  "g": [
+   "RV interior repair",
+   "mobile tech",
+   "upholstery"
+  ],  "base": "honolulu",  "areas": [],  "region": null,  "spec": null,  "reg": "oahu-hi"
  }
 ];

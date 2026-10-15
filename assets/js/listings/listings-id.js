@@ -207,5 +207,181 @@ window.RV_LISTINGS_ID = [
    "moscow",
    "kellogg"
   ],  "region": "North Idaho, Eastern Washington, and Western Montana",  "spec": "We Do Not Provide Towing Service.",  "reg": "north-id"
+ },
+ {  "n": "Wilson's RV Repair & Parts",  "c": "Boise, ID",  "p": "(208) 336-9122",  "u": "https://wilsonsrvrepair.com/",  "t": "center",  "e": false,  "r": false,  "d": "Wilson's RV Repair & Parts is an RV repair and parts business in Boise with additional locations in Caldwell and Wendell. The site lists RV collision repair, water damage repair and work on RV systems including electrical, plumbing, appliances, air conditioners and furnaces, along with maintenance and inspections. Repair work is done at its southern Idaho shops and no mobile service is claimed.",  "g": [
+   "RV repair",
+   "RV service",
+   "collision",
+   "body work"
+  ],  "base": "boise",  "areas": [
+   "boise",
+   "caldwell",
+   "wendell"
+  ],  "region": "southern Idaho",  "spec": "shop only, no mobile",  "reg": "treasure-valley"
+ },
+ {  "n": "MNM Unlimited",  "c": "Idaho Falls, ID",  "p": "(208) 241-3425",  "u": "https://www.mnmunlimited.com/",  "t": "center",  "e": false,  "r": false,  "d": "MNM Unlimited is an RV service and repair shop in Idaho Falls. The site lists plumbing and electrical work, collision damage repair, heating and air conditioning, winterizing and de-winterizing, leak and roof repair, appliance repair and replacement, fiberglass, gel coat and paint, and solar and satellite work. Repairs are done at the Idaho Falls shop on West 33rd North.",  "g": [
+   "RV repair",
+   "collision",
+   "body work",
+   "appliance repair"
+  ],  "base": "idaho falls",  "areas": [],  "region": null,  "spec": "shop only, no mobile",  "reg": "eastern-id"
+ },
+ {  "n": "Austin RV, LLC",  "c": "Blackfoot, ID",  "p": "(208) 680-1524",  "u": "https://www.austinrvrepairs.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Austin RV, LLC is a mobile RV repair and inspection business based in Blackfoot serving southeastern Idaho. It comes to the customer's location for repairs and offers certified warranty repairs, and its technicians hold RVTAA and NRVIA certifications. The site names Blackfoot, Idaho Falls, Pocatello, Shelley, Rigby, Rexburg, Driggs, Salmon, Twin Falls, Boise and many other Idaho towns, and the business also works RV rallies and winters in Arizona.",  "g": [
+   "mobile tech",
+   "RV repair"
+  ],  "base": "blackfoot",  "areas": [
+   "blackfoot",
+   "idaho falls",
+   "pocatello",
+   "shelley",
+   "rigby",
+   "rexburg",
+   "ashton",
+   "island park",
+   "driggs",
+   "salmon",
+   "hailey",
+   "sun valley",
+   "burley",
+   "jerome",
+   "twin falls",
+   "boise",
+   "meridian"
+  ],  "region": "SE Idaho",  "spec": null,  "reg": "eastern-id"
+ },
+ {  "n": "RV Tech Idaho",  "c": "Pocatello, ID",  "p": "(208) 709-6226",  "u": "https://rvtechidaho.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "RV Tech Idaho is a mobile RV repair business based in Pocatello. It comes to the customer's location and, as an authorized service center, also helps submit warranty claims. The site states the technician has over 15 years of experience repairing all types of RVs.",  "g": [
+   "mobile tech",
+   "RV repair"
+  ],  "base": "pocatello",  "areas": [],  "region": null,  "spec": "by appointment only",  "reg": "eastern-id"
+ },
+ {  "n": "RV'S Rescue, LLC",  "c": "Post Falls, ID",  "p": "(208) 964-1909",  "u": "https://www.rvsrescue.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "RV'S Rescue, LLC is a mobile RV repair and maintenance business based in Post Falls. It travels to the customer's location for repairs and states it is available seven days a week for emergency service. The site lists Hauser, Rathdrum, Hayden, Athol, Coeur d'Alene, Post Falls, Spirit Lake, Sandpoint, Blanchard and Bayview within its 40 mile service area.",  "g": [
+   "mobile tech",
+   "RV repair"
+  ],  "base": "post falls",  "areas": [
+   "hauser",
+   "rathdrum",
+   "hayden",
+   "athol",
+   "coeur dalene",
+   "post falls",
+   "spirit lake",
+   "sandpoint"
+  ],  "region": null,  "spec": null,  "reg": "north-id"
+ },
+ {  "n": "On Site RV Tech",  "c": "Coeur d'Alene, ID",  "p": "(605) 391-2711",  "u": "https://www.onsitervtech.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "On Site RV Tech is a mobile RV repair business based in Coeur d'Alene, Idaho. It repairs RVs at the customer's location and on the customer's schedule. Contact is by phone, email or a service request form.",  "g": [
+   "mobile tech",
+   "RV repair"
+  ],  "base": "coeur dalene",  "areas": [],  "region": null,  "spec": null,  "reg": "north-id"
+ },
+ {  "n": "All-Star RV & Trailer Repair",  "c": "Sagle, ID",  "p": "(208) 263-7462",  "u": "https://allstarrvrepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "All-Star RV & Trailer Repair is a mobile RV and trailer repair business in northern Idaho, in business since 1992. It diagnoses and repairs appliances, electrical systems and plumbing, and it also writes insurance and warranty claims. The owner is Todd Converse.",  "g": [
+   "mobile tech",
+   "RV repair",
+   "appliance repair"
+  ],  "base": "sagle",  "areas": [],  "region": null,  "spec": null,  "reg": "north-id"
+ },
+ {  "n": "P&B Mobile RV Repair",  "c": "North Idaho, ID",  "p": "(986) 205-0443",  "u": "https://pbmobilervrepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "P&B Mobile RV Repair is a mobile RV repair and maintenance business that works across northern Idaho and the greater Spokane area. Its technicians bring tools and equipment to the customer's location, such as a campground, RV park or home, and handle mechanical, electrical, plumbing and appliance repairs. The site names Hayden, Sandpoint and Wallace among the places its customers are.",  "g": [
+   "mobile tech",
+   "RV repair",
+   "appliance repair"
+  ],  "base": null,  "areas": [
+   "hayden",
+   "sandpoint",
+   "wallace"
+  ],  "region": "north Idaho",  "spec": null,  "reg": "north-id"
+ },
+ {  "n": "Idaho Life Mobile RV Repair, LLC",  "c": "Nampa, ID",  "p": "(208) 800-1065",  "u": "https://idaholifemobilervrepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Idaho Life Mobile RV Repair, LLC is a mobile RV repair business based in Nampa serving the Treasure Valley. It performs mobile, on-site diagnosis and repair of RV systems. The site lists emergency service and mobile convenience among its features.",  "g": [
+   "mobile tech",
+   "RV repair"
+  ],  "base": "nampa",  "areas": [],  "region": "Treasure Valley",  "spec": null,  "reg": "treasure-valley"
+ },
+ {  "n": "Local's Mobile RV Repair LLC",  "c": "Meridian, ID",  "p": "(208) 410-8900",  "u": "https://localsmobilervrepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Local's Mobile RV Repair LLC is a mobile RV repair and service business based in Meridian. It travels to the RV for repairs and covers the Treasure Valley, naming Boise, Meridian, Star, Eagle, Kuna, Nampa and Caldwell. Weekends are by appointment.",  "g": [
+   "mobile tech",
+   "RV repair"
+  ],  "base": "meridian",  "areas": [
+   "boise",
+   "meridian",
+   "star",
+   "eagle",
+   "kuna",
+   "nampa",
+   "caldwell"
+  ],  "region": "Treasure Valley",  "spec": null,  "reg": "treasure-valley"
+ },
+ {  "n": "Scotty's Mobile RV Repair",  "c": "Emmett, ID",  "p": "(208) 999-0695",  "u": "https://scottysrvrepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Scotty's Mobile RV Repair is a veteran-owned, family-operated mobile RV service based in the Treasure Valley. It provides on-site RV repair and maintenance including slide-out repairs, leveling systems, roof sealing, appliance repair, awning service, wheel bearings, brakes, furnaces, water heaters and air conditioning repairs.",  "g": [
+   "mobile tech",
+   "RV repair",
+   "appliance repair"
+  ],  "base": "emmett",  "areas": [],  "region": "southwestern Idaho",  "spec": null,  "reg": "treasure-valley"
+ },
+ {  "n": "Mobile RV Repair",  "c": "Meridian, ID",  "p": "(208) 861-5519",  "u": "http://mobilervrepair.co/",  "t": "mobile",  "e": false,  "r": false,  "d": "Mobile RV Repair is a mobile RV repair and maintenance business in Meridian serving the Treasure Valley. The site states it provides repairs and maintenance for all RVs and comes to the customer.",  "g": [
+   "mobile tech",
+   "RV repair"
+  ],  "base": "meridian",  "areas": [],  "region": "Treasure Valley",  "spec": null,  "reg": "treasure-valley"
+ },
+ {  "n": "Uncharted Recreation",  "c": "Meridian, ID",  "p": "(208) 376-0451",  "u": "https://www.unchartedrec.com/mobile-rv-service",  "t": "both",  "e": false,  "r": false,  "d": "Uncharted Recreation is an RV dealer in Meridian with a mobile RV service. The mobile team comes to the customer's campsite, driveway, storage lot or home for repairs, maintenance, inspections, appliance issues and electrical troubleshooting, and the business also runs a service department at its Meridian and Garden City locations.",  "g": [
+   "mobile tech",
+   "RV repair",
+   "dealer service"
+  ],  "base": "meridian",  "areas": [
+   "meridian",
+   "garden city",
+   "boise"
+  ],  "region": null,  "spec": null,  "reg": "treasure-valley"
+ },
+ {  "n": "Goodtimes RV Mobile Service and Repair",  "c": "Nampa, ID",  "p": "(208) 891-2480",  "u": "http://thegoodtimesrv.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Goodtimes RV Mobile Service and Repair is a mobile RV service and repair business based in Nampa. It specializes in slide-out system repairs, electrical diagnosis, roof repair, sealants and hydraulic systems, and also does hitch work and trailer work. The site states the technician has 10 years of experience.",  "g": [
+   "mobile tech",
+   "RV repair"
+  ],  "base": "nampa",  "areas": [],  "region": null,  "spec": null,  "reg": "treasure-valley"
+ },
+ {  "n": "Pierce Mobile RV Repair",  "c": "Hazelton, ID",  "p": "(208) 969-1507",  "u": "https://piercemobilervrepair.godaddysites.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Pierce Mobile RV Repair is a mobile RV repair business based in Hazelton serving the Magic Valley. Its certified technician handles maintenance, diagnostics, winterizing and de-winterizing, and repairs to air conditioners, electrical systems, furnaces, hydraulics, plumbing, roof seals, solar, generators, water heaters, windows, stoves, refrigerators and awnings.",  "g": [
+   "mobile tech",
+   "RV repair",
+   "appliance repair"
+  ],  "base": "hazelton",  "areas": [],  "region": "Magic Valley",  "spec": null,  "reg": "magic-valley"
+ },
+ {  "n": "Bish's RV Idaho Falls",  "c": "Idaho Falls, ID",  "p": "(208) 529-4386",  "u": "https://www.bishs.com/idaho-falls-idaho/rv-body-shop",  "t": "center",  "e": false,  "r": false,  "d": "Bish's RV of Idaho Falls runs an RV collision and body shop center. The shop repairs RV and trailer body damage including fiberglass and body work, paint, fabrication and welding, roof and siding replacement, slide-out repairs and frame repairs, and works directly with insurers. It offers free same-day estimates.",  "g": [
+   "RV repair",
+   "collision",
+   "body work"
+  ],  "base": "idaho falls",  "areas": [],  "region": null,  "spec": null,  "reg": "eastern-id"
+ },
+ {  "n": "RVs and Boats For Less",  "c": "Chubbuck, ID",  "p": "(208) 238-5857",  "u": "https://www.rvsandboatsforless.com/body-shop-&-paint",  "t": "center",  "e": false,  "r": false,  "d": "RVs and Boats For Less runs an RV and boat paint and body shop in Chubbuck, near Pocatello. The shop handles paint and body repairs, fiberglass and gelcoat work, and states it can repair an RV or boat from start to finish. It has a large downdraft paint booth that can take units up to sixty-five feet.",  "g": [
+   "RV repair",
+   "collision",
+   "body work"
+  ],  "base": "chubbuck",  "areas": [
+   "pocatello"
+  ],  "region": null,  "spec": null,  "reg": "eastern-id"
+ },
+ {  "n": "Cripple Creek Enterprises",  "c": "Idaho Falls, ID",  "p": "(208) 534-1030",  "u": "https://cripplecreek-enterprises.com/rv-mobile-trailer-repair/",  "t": "mobile",  "e": false,  "r": false,  "d": "Cripple Creek Enterprises is a mobile RV and camper trailer repair business in Idaho Falls. Its technicians travel to the customer for on-site evaluation and repair, and often carry common replacement parts such as springs, brakes and lights. It serves the Idaho Falls, Rigby and Blackfoot area.",  "g": [
+   "mobile tech",
+   "RV repair",
+   "trailer repair"
+  ],  "base": "idaho falls",  "areas": [
+   "idaho falls",
+   "rigby",
+   "blackfoot"
+  ],  "region": null,  "spec": null,  "reg": "eastern-id"
+ },
+ {  "n": "Xtreme RV",  "c": "Eden, ID",  "p": "(208) 825-9876",  "u": "https://www.xtremerv.com/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "Xtreme RV is an RV dealer near Twin Falls with a service department. The site states the department is staffed with factory-trained technicians who work on travel trailers, fifth wheels and toy haulers, and it lists service and parts at its location off I-84 at exit 182 in Eden. Repairs are done at the shop.",  "g": [
+   "RV repair",
+   "RV service",
+   "dealer service"
+  ],  "base": "eden",  "areas": [
+   "twin falls"
+  ],  "region": null,  "spec": "shop only, no mobile",  "reg": "magic-valley"
+ },
+ {  "n": "Travelland RV Sales & Service",  "c": "Lewiston, ID",  "p": "(208) 746-0559",  "u": "https://www.travelland-rv.com/",  "t": "both",  "e": false,  "r": false,  "d": "Travelland RV Sales & Service is a family-owned RV dealer and service center in Lewiston, in business since 1983. Its service department repairs plumbing, electrical systems, roofing, walls, flooring, slide outs, awnings and generators, installs solar and battery systems, and handles insurance and warranty claims. The business also advertises mobile service.",  "g": [
+   "RV repair",
+   "RV service",
+   "dealer service",
+   "mobile tech"
+  ],  "base": "lewiston",  "areas": [],  "region": "LC Valley",  "spec": null,  "reg": "north-id"
+ },
+ {  "n": "Burlys",  "c": "Grangeville, ID",  "p": "(208) 983-9999",  "u": "https://allburly.com/",  "t": "both",  "e": false,  "r": false,  "d": "Burlys is an RV service and repair business in Grangeville that also does mobile welding and fabrication. The site states it serves Grangeville, Idaho and the surrounding area.",  "g": [
+   "RV repair",
+   "welding",
+   "fabrication"
+  ],  "base": "grangeville",  "areas": [],  "region": null,  "spec": null,  "reg": "north-id"
  }
 ];

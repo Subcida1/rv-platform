@@ -59,5 +59,49 @@ window.RV_LISTINGS_RI = [
    "vinyl floor repair",
    "mobile tech"
   ],  "base": null,  "areas": [],  "region": "East Bay",  "spec": null,  "reg": "rhode-island-ri"
+ },
+ {  "n": "Atlas Auto Body, Inc.",  "c": "West Greenwich, RI",  "p": "(401) 236-6965",  "u": "https://www.atlasautobodyri.com/rv-camper-collision-repair-services",  "t": "center",  "e": false,  "r": false,  "d": "Atlas Auto Body, Inc. is a family owned auto body and collision repair shop in West Greenwich, Rhode Island, operating since 2014 with over 40 years of combined experience. Alongside standard collision and frame work it runs a dedicated RV and camper collision repair service covering structural repairs, paint matching and refinishing, interior restoration, electrical system repairs, chassis and frame straightening, and custom fabrication. The shop uses OEM parts, employs certified welders, offers estimates within 24 to 72 hours, honors manufacturer warranties, and provides insurance claim support.",  "g": [
+   "RV collision repair",
+   "camper repair",
+   "body work",
+   "collision repair",
+   "frame repair"
+  ],  "base": "west greenwich",  "areas": [],  "region": null,  "spec": null,  "reg": "rhode-island-ri"
+ },
+ {  "n": "Grieco Collision Center",  "c": "Johnston, RI",  "p": "(401) 231-1118",  "u": "https://www.griecocollisionri.com/",  "t": "center",  "e": false,  "r": false,  "d": "Grieco Collision Center is an auto body and collision repair shop at 19 Industrial Lane in Johnston, Rhode Island, with ASE and I-CAR certified technicians. Its listed vehicle coverage includes recreational vehicles, campers and motorhomes alongside domestic, foreign and luxury cars, with collision repair, refinishing, paintless dent repair and glass work. The shop assists with insurance claims and uses waterborne paint technology.",  "g": [
+   "RV collision repair",
+   "camper repair",
+   "motorhome repair",
+   "body work",
+   "collision repair"
+  ],  "base": "johnston",  "areas": [
+   "providence",
+   "cranston"
+  ],  "region": null,  "spec": null,  "reg": "rhode-island-ri"
+ },
+ {  "n": "My RV Guy",  "c": "Smithfield, RI",  "p": "(401) 949-6378",  "u": "https://myrvguy.shop/pages/schedule-service",  "t": "mobile",  "e": false,  "r": false,  "d": "My RV Guy is a mobile RV repair and maintenance business that comes to the RV at the customer's home, campground, or storage location rather than requiring the RV be brought to a shop. It performs RV inspections, orientations, insurance estimates, and repairs and maintenance on RV systems, and processes extended warranty repair claims. The brand was founded in 2018 after three decades in the parts and services industry and now operates through franchise locations, with a Smithfield, Rhode Island base named on its own site alongside locations in Anderson, South Carolina and Jupiter, Florida.",  "g": [
+   "mobile tech",
+   "RV repair",
+   "RV inspection",
+   "appliance repair"
+  ],  "base": "smithfield",  "areas": [],  "region": null,  "spec": null,  "reg": "rhode-island-ri"
+ },
+ {  "n": "S&D Auto & Truck",  "c": "Cumberland, RI",  "p": "(401) 312-0017",  "u": "https://www.sanddroadservice.com/services/rv-repair",  "t": "center",  "e": false,  "r": false,  "d": "S&D Auto & Truck is an auto and truck repair shop at 9 Whipple Street in Cumberland, Rhode Island, that runs a dedicated RV repair service. The site states it works on all types of RVs, from pop-up campers to motorhomes, covering tire maintenance, inspections and repairs, electrical fixes and HVAC system repairs. It lists service to Providence, Pawtucket, Central Falls, Woonsocket, Warwick, Newport, Greenville, Cranston and Pascoag, and describes itself as an automotive and fleet truck repair shop.",  "g": [
+   "RV repair",
+   "RV service",
+   "tire service",
+   "electrical repair",
+   "HVAC repair"
+  ],  "base": "cumberland",  "areas": [
+   "providence",
+   "pawtucket",
+   "central falls",
+   "woonsocket",
+   "warwick",
+   "newport",
+   "greenville",
+   "cranston",
+   "pascoag"
+  ],  "region": null,  "spec": null,  "reg": "rhode-island-ri"
  }
 ];

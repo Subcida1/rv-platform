@@ -54,5 +54,35 @@ window.RV_LISTINGS_VT = [
  {  "n": "Camping World - Saint Albans",  "c": "St. Albans; Franklin County and northwestern Vermont, VT",  "p": "(888) 802-1541",  "u": "https://rv.campingworld.com/dealer/saint-albans-vermont",  "t": "center",  "e": false,  "r": true,  "d": "Camping World operates an RV dealership and service department at 457 Swanton Road in St. Albans.",  "g": [
    "RV service center"
   ],  "base": null,  "areas": [],  "region": "Franklin County and northwestern Vermont",  "spec": null,  "reg": "northern-vt"
+ },
+ {  "n": "Blue Compass RV Vermont",  "c": "East Montpelier, VT",  "p": "(802) 223-6417",  "u": "https://www.bluecompassrv.com/locations/vermont/east-montpelier/service",  "t": "center",  "e": false,  "r": false,  "d": "Blue Compass RV Vermont operates a full service and repair department at 1498 US Rte 2 in East Montpelier. The site lists routine maintenance, engine and transmission work, electrical systems, plumbing and water systems, roof and exterior, HVAC, appliances and collision repair and body work. It states every RV gets a free multi-point inspection and that it carries OEM and aftermarket parts for major brands.",  "g": [
+   "RV repair",
+   "dealer service",
+   "collision",
+   "body work"
+  ],  "base": "east montpelier",  "areas": [],  "region": null,  "spec": null,  "reg": "central-vt"
+ },
+ {  "n": "Silver Lining RV & Property Maintenance LLC",  "c": "Milton, VT",  "p": "(802) 559-2816",  "u": "https://www.silverliningrvproperty.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Silver Lining RV & Property Maintenance LLC is a mobile RV maintenance and repair business located in Milton. The site states it comes to the customer and lists RV maintenance, slider repairs, water issues, refrigerator repair and AC issues. The contact page states the business will go to where the RV is parked, whether at a campground or a home.",  "g": [
+   "mobile tech",
+   "RV repair"
+  ],  "base": "milton",  "areas": [],  "region": null,  "spec": null,  "reg": "northern-vt"
+ },
+ {  "n": "Crossroads Mobile RV Services",  "c": "Northeast Kingdom, VT",  "p": "(802) 323-6282",  "u": "https://www.crossroadsmobilerv.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Crossroads Mobile RV Services is a mobile RV repair and maintenance business run by Jon and Naomi Badger. It travels to the customer's location and lists work on appliances including air conditioning, refrigeration, furnaces and water heaters, along with maintenance such as awnings, slideout seal treatments and replacements, leveling and roof sealant inspection. The site states the business provides services in the Northeast Kingdom of Vermont and New Hampshire and the surrounding areas.",  "g": [
+   "mobile tech",
+   "RV repair",
+   "appliance repair"
+  ],  "base": null,  "areas": [],  "region": "Northeast Kingdom of Vermont",  "spec": null,  "reg": "northern-vt"
+ },
+ {  "n": "R.V. Medic",  "c": "West Rutland, VT",  "p": "(802) 855-4559",  "u": "http://rvmedic.net",  "t": "mobile",  "e": false,  "r": false,  "d": "R.V. Medic is a mobile RV repair business based in West Rutland. The site states it offers on-site service with over 30 years of experience and that it is a veteran owned and family operated business. Listed work includes roof reseals and replacements, awning repairs and installations, slideroom repairs and adjustments, plumbing and electrical, air conditioning and heating, and structural diagnosing and repairs, and it states it is factory trained on Dometic, Lippert, Norcold, Atwood, Coleman and Suburban.",  "g": [
+   "mobile tech",
+   "RV repair",
+   "appliance repair"
+  ],  "base": "west rutland",  "areas": [],  "region": null,  "spec": null,  "reg": "southern-vt"
+ },
+ {  "n": "Upstate RV Service & Inspector LLC",  "c": "Swanton, VT",  "p": "(802) 416-4009",  "u": "https://upstatervvt.mobileservicepro.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Upstate RV Service & Inspector LLC is a mobile RV service and inspection business based in Swanton. The site states it comes to the customer at the dealership, private seller, storage lot or home, and lists mobile RV repair of roofs, brakes, awnings, exterior, interior, appliances, maintenance and towable chassis service, along with inspections and generator and solar work. It states it serves Swanton within a 50 mile radius.",  "g": [
+   "mobile tech",
+   "RV repair",
+   "appliance repair"
+  ],  "base": "swanton",  "areas": [],  "region": null,  "spec": null,  "reg": "northern-vt"
  }
 ];

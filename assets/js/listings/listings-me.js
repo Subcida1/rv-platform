@@ -148,5 +148,24 @@ window.RV_LISTINGS_ME = [
    "collision and body",
    "appliances"
   ],  "base": "biddeford",  "areas": [],  "region": "Southern Maine / York County (Biddeford)",  "spec": null,  "reg": "southern-maine"
+ },
+ {  "n": "Mel's Mobile RV Repair",  "c": "Wells, ME",  "p": "877-635-7787",  "u": "https://melsmobilervrepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Mel's Mobile RV Repair is an on-site RV repair business in the Wells, Maine area that performs work at the customer's home, campsite or storage unit. Services cover maintenance, repairs and upgrades including awnings, water heaters, furnaces, refrigerators and air conditioners. Appointments are by request and the page states it is heavily booked with delayed response times.",  "g": [
+   "mobile tech",
+   "RV repair",
+   "appliance repair"
+  ],  "base": "wells",  "areas": [],  "region": null,  "spec": null,  "reg": "southern-maine"
+ },
+ {  "n": "J&M Camper & Marine",  "c": "Augusta, ME",  "p": "207-623-4047",  "u": "https://www.jmcamper.com/Service/Service-Department",  "t": "center",  "e": false,  "r": false,  "d": "J&M Camper & Marine is an RV, boat and personal watercraft dealership in Augusta, Maine, described as a family business since 1967. Its service department takes recreational vehicle repair and service work through a service request form and by phone, and it also has a parts department. Repair work is done at the shop.",  "g": [
+   "service center",
+   "dealer service",
+   "RV repair"
+  ],  "base": "augusta",  "areas": [],  "region": null,  "spec": null,  "reg": "central-maine"
+ },
+ {  "n": "Harvey RV & Marine",  "c": "Bangor, ME",  "p": "207-990-5081",  "u": "https://www.harveyrvandmarine.com/service-rv/",  "t": "both",  "e": false,  "r": true,  "d": "Harvey RV & Marine is an RV and boat dealership on Broadway in Bangor, Maine, serving Maine families since 1999. Its RV service department runs diagnostics and repairs six days a week with technicians certified through the RV Technical Institute. A mobile service team works from the Glenburn service center to handle on-site and roadside needs, with published road service rates and a stated 75 mile maximum radius.",  "g": [
+   "service center",
+   "dealer service",
+   "mobile tech",
+   "RV repair"
+  ],  "base": "bangor",  "areas": [],  "region": null,  "spec": null,  "reg": "north-maine"
  }
 ];

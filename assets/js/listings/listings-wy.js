@@ -98,5 +98,70 @@ window.RV_LISTINGS_WY = [
   ],  "base": "lander",  "areas": [
    "lander"
   ],  "spec": "Speciality is custom off grid cargo trailers",  "reg": "central-wy"
+ },
+ {  "n": "Big Sky RV Service & Collision Repair",  "c": "Cheyenne, WY",  "p": "(307) 287-9605",  "u": "https://bigskymobilerv.com/",  "t": "center",  "e": false,  "r": false,  "d": "A locally owned RV service and repair facility in Cheyenne. Services include insurance claims, air conditioning and heating systems, water heaters, plumbing and tanks, electrical wiring, preventative upkeep, and solar energy solutions. Also does RV collision repair. Works on all makes and models of RVs, trailers, motorhomes, fifth wheels, and campers.",  "g": [
+   "RV repair",
+   "collision"
+  ],  "base": "cheyenne",  "areas": [],  "region": null,  "spec": "shop only, mobile service no longer offered",  "reg": "southeast-wy"
+ },
+ {  "n": "Eastside RVs",  "c": "Gillette, WY",  "p": "307-296-0396",  "u": "https://www.eastsidervs.com/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "An RV dealer in Gillette with a full service department and over 22 years in the RV business. Services include appliance, water heaters and refrigeration, furnace and air conditioning, plumbing and tank management, propane systems, window seals, interior repairs and woodwork, awning and slide topper installation and repair, slide outs, landing gear, leveling components, suspension, axles, hubs and brakes, hitches, electrical troubleshooting, power converter and inverter, solar charging, and impact, collision, wind and hail damage.",  "g": [
+   "RV repair",
+   "collision"
+  ],  "base": "gillette",  "areas": [],  "region": null,  "spec": "no chassis or engine work on motorhomes",  "reg": "north-wy"
+ },
+ {  "n": "Roadrunner Mobile RV Tech",  "c": "Rock Springs, WY",  "p": "(307) 689-2659",  "u": "https://roadrunnerrvtech.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "A mobile RV repair business based in Rock Springs that brings service to the RV's location. Works on travel trailers, fifth wheels, campers, and motorhomes, focused on interior systems. Services include slide-out repair, plumbing and water systems, electrical diagnostics, appliance repair, roof inspection and sealing, generator repair and maintenance, brake and tire maintenance, tank cleaning, and new owner orientation.",  "g": [
+   "mobile tech",
+   "RV repair",
+   "appliance repair"
+  ],  "base": "rock springs",  "areas": [],  "region": null,  "spec": "interior systems only, no drivetrain or chassis",  "reg": "southwest-wy"
+ },
+ {  "n": "First Choice RV",  "c": "Rock Springs, WY",  "p": "307-212-6199",  "u": "https://www.firstchoicerving.com/parts-service",  "t": "center",  "e": false,  "r": false,  "d": "An RV dealer in Rock Springs with a parts store and a service department. The service team includes Forest River and Jayco factory trained technicians with 25 years of combined experience on non-motorized trailers. Offers routine maintenance work and hitch installation.",  "g": [
+   "RV repair"
+  ],  "base": "rock springs",  "areas": [],  "region": null,  "spec": "non-motorized trailers",  "reg": "southwest-wy"
+ },
+ {  "n": "Outlaw Mobile RV Repair",  "c": "Casper, WY",  "p": "(307) 237-0999",  "u": "https://outlawmobilervrepaircasper.wordpress.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "A mobile RV repair and maintenance service for Casper and the surrounding region. Work is done on site at the RV. The service covers mobile RV repair and maintenance.",  "g": [
+   "mobile tech",
+   "RV repair"
+  ],  "base": "casper",  "areas": [],  "region": null,  "spec": null,  "reg": "central-wy"
+ },
+ {  "n": "Whitlock Motors & RV",  "c": "Cody, WY",  "p": "(307) 587-5776",  "u": "https://whitlockmotors.com/rv-service.html",  "t": "both",  "e": false,  "r": false,  "d": "An RV service provider in Cody for travel trailers, motorhomes, and fifth wheels. Services include winterization, wheel bearing pack, hitch installation, battery upgrade, solar service, electrical service, slide repair, air conditioning repair, furnace repair, and fridge repair, plus routine maintenance, inspections, and repairs. Emergency mobile repair is also listed.",  "g": [
+   "RV repair",
+   "appliance repair"
+  ],  "base": "cody",  "areas": [],  "region": null,  "spec": null,  "reg": "north-wy"
+ },
+ {  "n": "Smith RV Sales & Service",  "c": "Evansville, WY",  "p": "307-234-5617",  "u": "https://smithrv.com/service/",  "t": "center",  "e": false,  "r": false,  "d": "A family owned RV dealer in Evansville, near Casper, operating since 1948. It runs a full service RV repair facility and one of Central Wyoming's largest RV parts departments. The service department handles routine maintenance, winterizations, and emergency repairs, and offers priority service to customers who buy from the dealership.",  "g": [
+   "RV repair"
+  ],  "base": "evansville",  "areas": [
+   "casper"
+  ],  "region": null,  "spec": null,  "reg": "central-wy"
+ },
+ {  "n": "Sonny's RVs",  "c": "Evansville, WY",  "p": "(307) 237-5000",  "u": "https://www.sonnysrvs.com/rv-services-in-wyoming",  "t": "center",  "e": false,  "r": false,  "d": "An RV dealership in Evansville with a service center staffed by Master Certified RV Technicians. The service center has 6 indoor RV service bays and 2 indoor truck bays and services any manufactured RV brand. It also runs an RV parts store and is a member of the Route 66 RV Network.",  "g": [
+   "RV repair"
+  ],  "base": "evansville",  "areas": [],  "region": null,  "spec": null,  "reg": "central-wy"
+ },
+ {  "n": "307 RV Repair",  "c": "Alpine, WY",  "p": "307-376-0316",  "u": "https://307rvrepair.com/",  "t": "mobile",  "e": false,  "r": true,  "d": "A certified mobile RV repair business based in Alpine. Technicians travel to the RV and handle furnace, A/C, and heating fixes, plumbing repairs, brake and bearing repacks, roof leak seals, slide-out adjustments, and emergency roadside repairs. Travels within a 250-mile radius across Western Wyoming and Eastern Idaho. Also offers pre-purchase RV inspections.",  "g": [
+   "mobile tech",
+   "RV repair"
+  ],  "base": "alpine",  "areas": [
+   "alpine",
+   "etna",
+   "star valley ranch",
+   "thayne",
+   "jackson",
+   "wilson",
+   "moose",
+   "hoback"
+  ],  "region": "Western Wyoming and Eastern Idaho",  "spec": null,  "reg": "southwest-wy"
+ },
+ {  "n": "The Roaming Wrench",  "c": "Moran, WY",  "p": "(726) 261-1253",  "u": "https://theroamingwrench.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "A mobile RV repair business based in Moran. Technicians travel to the RV's location for diagnostics, repair, and upgrades. Services include roofing and coatings, slide, suspension, and leveling work, heating, cooling, and appliance repairs, seasonal winterization and de-winterization, and maintenance such as tank cleaning, lubrication, and brake checks. Works within a 100-mile radius of Moran.",  "g": [
+   "mobile tech",
+   "RV repair",
+   "appliance repair"
+  ],  "base": "moran",  "areas": [],  "region": null,  "spec": null,  "reg": "southwest-wy"
+ },
+ {  "n": "Meadowlark Trailer LLC",  "c": "Sundance, WY",  "p": "(307) 281-2336",  "u": "https://meadowlarktrailer.com/",  "t": "center",  "e": false,  "r": false,  "d": "A family owned trailer and RV sales and repair business serving the Sundance area since 2021. It is an authorized service center and works on flatbeds, goosenecks, stock and cargo trailers, campers, and RVs. It also offers consignment and rental options.",  "g": [
+   "RV repair",
+   "trailer repair"
+  ],  "base": "sundance",  "areas": [],  "region": null,  "spec": null,  "reg": "north-wy"
  }
 ];

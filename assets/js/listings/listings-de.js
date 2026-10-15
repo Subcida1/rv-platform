@@ -31,5 +31,56 @@ window.RV_LISTINGS_DE = [
    "milford",
    "smyrna"
   ],  "region": "Delaware, Maryland, and Pennsylvania",  "spec": null,  "reg": "southern-de"
+ },
+ {  "n": "Alexander RV Center",  "c": "Clayton, DE",  "p": "(302) 653-1234",  "u": "https://www.alexanderrv.com/",  "t": "center",  "e": false,  "r": false,  "d": "Family-owned RV dealership in Clayton, Delaware, offering RV sales, parts and service since 1995. The site describes a highly trained and experienced RV service team and lists RV Parts & Service hours at the Clayton location. Repair work is done at their shop and no mobile service is claimed.",  "g": [
+   "RV repair",
+   "RV service",
+   "dealer service"
+  ],  "base": "clayton",  "areas": [],  "region": null,  "spec": null,  "reg": "northern-de"
+ },
+ {  "n": "Double Deuces RV Roofing, Inc",  "c": "Newark, DE",  "p": "(302) 455-2937",  "u": "https://rvroof.com/locations/double-deuces-rv-roofing-newark/",  "t": "center",  "e": false,  "r": false,  "d": "RV roof repair and replacement shop in Newark, Delaware, using the FlexArmor polyurea roof system. Services listed include full RV roof replacement, leak detection and repair, camper roof sealant applications and preventative roof coatings. The page states the Newark location serves Wilmington, Middletown and northern Delaware.",  "g": [
+   "RV repair",
+   "roof repair"
+  ],  "base": "newark",  "areas": [
+   "wilmington",
+   "middletown"
+  ],  "region": null,  "spec": null,  "reg": "northern-de"
+ },
+ {  "n": "Forest River RV Delaware by Camping World",  "c": "Milford, DE",  "p": "(877) 351-8161",  "u": "https://rv.campingworld.com/dealer/forestriver-milford-delaware/rv-service-repair",  "t": "center",  "e": false,  "r": false,  "d": "RV dealership service department in Milford, Delaware, at 2210 Bay Road on Route 1. The service page states the shop provides complete service and repair for all RV types: diagnostics, repairs, routine maintenance and warranty work, including OEM and extended warranty coverage. RV performance and installation is listed as its own department at the location.",  "g": [
+   "RV repair",
+   "RV service",
+   "dealer service",
+   "warranty work"
+  ],  "base": "milford",  "areas": [],  "region": null,  "spec": null,  "reg": "southern-de"
+ },
+ {  "n": "Boyd's Welding, Inc.",  "c": "Camden, DE",  "p": "(302) 697-9000",  "u": "http://www.boydswelding.com/mobile/trailer-hitches-for-sale.html",  "t": "center",  "e": false,  "r": false,  "d": "Boyd's Welding, Inc. is a welding and fabrication shop in Camden, Delaware, in business since 1973. Alongside crane service, trailer hitches and residential excavating it performs trailer repairs on utility, construction and RV trailers and handles trailer wiring. It stocks more than 300 trailer hitches and installs tow bars, fifth wheels and goosenecks. It lists Camden, Dover, Milford, Georgetown, Middletown, Seaford, Rehoboth and Smyrna among the areas it serves.",  "g": [
+   "trailer repair",
+   "hitch",
+   "RV repair"
+  ],  "base": "camden",  "areas": [
+   "camden",
+   "dover",
+   "milford",
+   "georgetown",
+   "middletown",
+   "seaford",
+   "rehoboth",
+   "smyrna"
+  ],  "region": null,  "spec": null,  "reg": "northern-de"
+ },
+ {  "n": "Hidden Hitch and Trailer Parts Inc",  "c": "Bear, DE",  "p": "(302) 834-6700",  "u": "https://hitchandtrailerpartsbear.com/",  "t": "center",  "e": false,  "r": false,  "d": "Hidden Hitch and Trailer Parts Inc is a trailer hitch and trailer parts business in Bear, Delaware, in business more than 45 years. The site lists trailer repair, trailer hydraulic and electric brake installations and repairs, electric brake controller installations and vehicle and trailer wiring among its services. It states it serves a 100-mile area in Castle County and names Newark, Glasgow, Wilmington, New Castle, Townsend, Middletown, Hockessin and Smyrna among the areas it serves.",  "g": [
+   "trailer repair",
+   "hitch",
+   "wiring"
+  ],  "base": "bear",  "areas": [
+   "newark",
+   "glasgow",
+   "wilmington",
+   "new castle",
+   "townsend",
+   "middletown",
+   "hockessin",
+   "smyrna"
+  ],  "region": null,  "spec": null,  "reg": "northern-de"
  }
 ];
