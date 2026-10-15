@@ -573,9 +573,9 @@
     "claims": "ef934e187c559e6f"
   },
   "guides/rv-generator-sizing.html": {
-    "hash": "252e75e65c5ed602",
+    "hash": "ed6dc55c94978119",
     "status": "verified",
-    "verified_by": "the reader-benefit sweep, step 1 of _todo/VOICE-RULESET.md: the clause about the reader (why the fact matters, what it costs them) cut or rebuilt as the content, per Ty 2026-10-13 \"Say the thing... just spit out the content\". No fact changed; the framing did.",
+    "verified_by": "queued Neo rotation finding applied 2026-10-14: the four guides that carried zero in-body tool links now link the topic-matched tool (tire date code on the tire guide, watts to amps on generator sizing, weight calculator on pin weight, toilet valve finder on the toilet guide). One sentence and one link added per page; no fact changed.",
     "verified_at": "2026-10-14",
     "sources": [],
     "spec": "_specs/rv-generator-sizing.md",
@@ -633,9 +633,9 @@
     "claims": "1fe18dc8c794753f"
   },
   "guides/rv-pin-weight-and-payload.html": {
-    "hash": "09b2d8ce315b8179",
+    "hash": "4f33cc91eee3d3d4",
     "status": "verified",
-    "verified_by": "the reader-benefit sweep, step 1 of _todo/VOICE-RULESET.md: the clause about the reader (why the fact matters, what it costs them) cut or rebuilt as the content, per Ty 2026-10-13 \"Say the thing... just spit out the content\". No fact changed; the framing did.",
+    "verified_by": "queued Neo rotation finding applied 2026-10-14: the four guides that carried zero in-body tool links now link the topic-matched tool (tire date code on the tire guide, watts to amps on generator sizing, weight calculator on pin weight, toilet valve finder on the toilet guide). One sentence and one link added per page; no fact changed.",
     "verified_at": "2026-10-14",
     "sources": [],
     "spec": null,
@@ -733,19 +733,19 @@
     "claims": "7d8c50b92e428a6c"
   },
   "guides/rv-tire-replacement.html": {
-    "hash": "9bed6e33f08f481a",
+    "hash": "21df7598b5956125",
     "status": "verified",
-    "verified_by": "site-wide title capitalisation after a colon, Ty 2026-10-13: \"Title Here : Descriptive words are here too. That's the 'American' way of doing titles.\" Typographic only, no factual change. Same pass: the byline reads 'Last reviewed on' instead of 'Last updated on', and the closing line drops its second link.",
-    "verified_at": "2026-10-13",
+    "verified_by": "queued Neo rotation finding applied 2026-10-14: the four guides that carried zero in-body tool links now link the topic-matched tool (tire date code on the tire guide, watts to amps on generator sizing, weight calculator on pin weight, toilet valve finder on the toilet guide). One sentence and one link added per page; no fact changed.",
+    "verified_at": "2026-10-14",
     "sources": [],
     "spec": "_specs/rv-tire-replacement.md",
     "spec_waived": false,
     "claims": "12f7a8379a3ca6a4"
   },
   "guides/rv-toilet-not-flushing.html": {
-    "hash": "ab446be2eaad2750",
+    "hash": "30bd9c8aaa8af2a9",
     "status": "verified",
-    "verified_by": "the reader-benefit sweep, step 1 of _todo/VOICE-RULESET.md: the clause about the reader (why the fact matters, what it costs them) cut or rebuilt as the content, per Ty 2026-10-13 \"Say the thing... just spit out the content\". No fact changed; the framing did.",
+    "verified_by": "queued Neo rotation finding applied 2026-10-14: the four guides that carried zero in-body tool links now link the topic-matched tool (tire date code on the tire guide, watts to amps on generator sizing, weight calculator on pin weight, toilet valve finder on the toilet guide). One sentence and one link added per page; no fact changed.",
     "verified_at": "2026-10-14",
     "sources": [],
     "spec": "_specs/rv-toilet-not-flushing.md",
