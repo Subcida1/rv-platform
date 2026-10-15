@@ -3414,3 +3414,15 @@ conv-c3913bd3 checked **all 50 rows, not a sample**. Verdict: no fabricated quot
 10. **Spec claim A14 (Lippert's resettable fuse, 30 s) did not make the page** — recorded, not a defect.
 
 **Not defects:** the diagnosis order (fuse before motor) is sound and matches the sources; every number on the page traces to its named source; the voice gates are clean (0 em dashes, 0 "rig", 0 unnamed authority, `check-prose.py` STRICT and NOTED both empty for this page); the three safety warnings are quoted correctly.
+
+**WATER PRESSURE AND FILLS — researched, specced, drafting (`9e682d7c`, conv-c3913bd3).**
+
+**Decision: a NEW PAGE, not an expansion.** `rv-water-pump-wont-prime` is pump-side (tank, pump, suction line); every question in this candidate is city-water side (park pressure, the regulator, the inlet, the check valve). The parts 13th rotation's own flag — the regulator is city-water side and the city fill bypasses the pump — is why pointing those cards at the pump guide is wrong. Two systems, two fault paths, one shared hose.
+
+**Every figure is a maker's published number:** Winnebago's owner's manual ("regulators that control water pressure to 50 psi. max."); Camco 40052 (40–50 PSI output, max inlet ~125 PSI, "campground water supplies can spike well above 100 PSI"); Camco 40058 (preset 45 psi, "settings above 60 psi not recommended"); Jabsco 44411 (46–125 psi regulated to 45 psi ±5).
+
+**The fact the page turns on: a regulator only ever reduces.** Jabsco: *"Lower pressures will pass through unregulated."* There is no regulator that raises pressure, so low pressure at the tap is never a regulator problem — and the page must not let anyone chase one. Also recorded: the backflow preventer is a requirement, not an option (Jabsco: "Federal and State required on RV's with water service hookup"), which is why the inlet carries a check valve that can fail.
+
+**A correction the scoping entry needed: this candidate closes THREE retarget-or-gap-note items, not four** (the regulator, the gravity fill/city inlet, the water dispenser/ice maker). The other two in that list (windows, generator) are not water. Both the worklist and the spec now say so — the leverage claim holds at three.
+
+**Two decisions made for the draft:** if no maker publishes a burst figure, the page says so rather than implying one (the never-estimate-a-limit rule); and the hose reel / sinks / shower pan cards do **not** belong in this page — their failures are mechanical and drainage, not pressure — so they get gap-notes rather than a wrong link.
