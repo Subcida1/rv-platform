@@ -3,7 +3,7 @@
 
   1. EVERY PART IS ON THE PAGE. One entry per part in _data/parts.json, no more and no fewer.
      A reference that quietly drops a part is worse than no reference, and the failure is invisible
-     by eye at 157 rows.
+     by eye at 210 rows.
   2. EVERY PART LINKS WHERE IT SAYS IT LINKS. A part with a `guide` carries a link to that guide; a
      part with makers carries one link per maker. Parts with neither are fine and simply carry no
      link block.

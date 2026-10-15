@@ -117,7 +117,7 @@ def claim_values():
 
     # Parts (added 2026-10-03, with the hub at parts/index.html). The hub states a total, a system
     # count and a "covered by a guide" count under the H1, and a count beside every system heading.
-    # 157 is a number a person will re-type by hand the first time a part is added, which is exactly
+    # 210 is a number a person will re-type by hand the first time a part is added, which is exactly
     # how "8 live" ended up beside "17 Free guides" on one page.
     psys = parts()
     out["parts-total"] = str(sum(len(s["parts"]) for s in psys))

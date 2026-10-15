@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Generate the parts hub from the parts index.
 
-WHY A GENERATOR. _data/parts.json holds 157 parts in 9 systems, each with what it does, the other
+WHY A GENERATOR. _data/parts.json holds 210 parts in 9 systems, each with what it does, the other
 names a reader might use, which RV types have it, the guide that covers it and the makers we hold
 documentation for. None of it was public. This turns it into one page a reader can scan and a
 crawler can read, and because the page is generated, the counts on it cannot drift from the index
@@ -287,7 +287,7 @@ def build():
                       key=type_label)),
        total))
 
-    # A JUMP BAR OVER THE NINE SYSTEMS. 157 entries in nine sections is a long page,
+    # A JUMP BAR OVER THE NINE SYSTEMS. 210 entries in nine sections is a long page,
     # and until 2026-10-09 the only way to reach "Propane system" was to scroll past
     # the eight sections above it. A table of contents is the one navigation fix the
     # evidence supports for a long index (research/link-display/01-index-patterns.md,

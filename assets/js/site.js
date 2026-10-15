@@ -204,7 +204,7 @@
     recommendation." It now names the systems a reader actually arrives looking for,
     each linking the section on the hub. The mobile menu carried one of the two
     duplicates and now matches this list. */
- '<div class="drop"><a href="' + R(rt.parts) + '">Every RV part<span class="sm">All 157, by system, with what each one does</span></a>' +
+ '<div class="drop"><a href="' + R(rt.parts) + '">Every RV part<span class="sm">All 210, by system, with what each one does</span></a>' +
  '<a href="' + R(rt.parts) + '#power-and-electrical">Power and electrical<span class="sm">Shore power, batteries, solar, converters</span></a>' +
  '<a href="' + R(rt.parts) + '#water-and-plumbing">Water and plumbing<span class="sm">Tanks, pumps, filters, heaters</span></a>' +
  '<a href="' + R(rt.parts) + '#sanitation-and-tanks">Sanitation and tanks<span class="sm">Toilets, valves, tanks, sensors</span></a>' +

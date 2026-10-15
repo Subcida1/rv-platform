@@ -1,5 +1,5 @@
 {
-  "note": "The parts index: every part an RV is made of, by system, with what it does, how it fails, which RV types have it, which of our guides already covers it, and the phrasings a reader would search. Built 2026-09-29 from Ty's list plus the 110 component makers already catalogued in _data/manuals.json. No models, no specs: this is the index that tells us what content to research next. Each part also carries `makers`: the manufacturers already catalogued in the manuals directory whose documentation covers it, with the archive URL. 36 of 138 parts have a source waiting before any research starts, and a part with makers and no guide is the cheapest content on this list. A ninth system, propane, was added after a completeness check against the manuals taxonomy found the supply side of every gas appliance missing: the furnace and water heater were indexed, and the tank, regulator, hoses and detector feeding them were not. A demand run must MERGE its results rather than write the file back from memory: the first run read _data/parts.json, spent ten minutes measuring, then wrote its in-memory copy over the propane system added while it ran.",
+  "note": "The parts index: every part an RV is made of, by system, with what it does, how it fails, which RV types have it, which of our guides already covers it, and the phrasings a reader would search. Built 2026-09-29 from Ty's list plus the 110 component makers already catalogued in _data/manuals.json. No models, no specs: this is the index that tells us what content to research next. Each part also carries `makers`: the manufacturers already catalogued in the manuals directory whose documentation covers it, with the archive URL. 18 of 210 parts have a source waiting before any research starts, and a part with makers and no guide is the cheapest content on this list. A ninth system, propane, was added after a completeness check against the manuals taxonomy found the supply side of every gas appliance missing: the furnace and water heater were indexed, and the tank, regulator, hoses and detector feeding them were not. A demand run must MERGE its results rather than write the file back from memory: the first run read _data/parts.json, spent ten minutes measuring, then wrote its in-memory copy over the propane system added while it ran. 2026-10-15 completeness pass: 54 parts added against the five coach types and both ends of the market (satellite TV, Starlink, TV mounts and lifts, dishwasher, washer and dryer split apart, compartment locks and keys, toy hauler ramp door and fuel station, pop-up lift and canvas, and the class A systems: hydronic heat, heated floors, power and hose reels, air leveling, basement air), and `motorhome` split into `class-a` and `class-c` so the type chips say which coach a part belongs to.",
   "systems": [
     {
       "key": "towing-and-running-gear",
@@ -35,6 +35,30 @@
           },
           "makers": [],
           "tool": "weight-calculator"
+        },
+        {
+          "id": "hitch-ball-mount-and-ball",
+          "n": "Hitch ball mount and ball",
+          "aka": "ball mount|hitch ball|draw bar|drop hitch",
+          "does": "holds the ball the coupler clamps onto",
+          "fails": [
+            "ball worn out of round",
+            "wrong drop and the trailer rides nose up",
+            "loose in the receiver",
+            "rust pitted ball"
+          ],
+          "types": [
+            "trailer",
+            "pop-up"
+          ],
+          "guide": "rv-towing-trailer",
+          "kw": [
+            "hitch ball size",
+            "ball mount drop",
+            "trailer hitch ball torque"
+          ],
+          "demand": null,
+          "makers": []
         },
         {
           "id": "tongue-jack",
@@ -115,7 +139,9 @@
             "spring pack broken"
           ],
           "types": [
-            "motorhome"
+            "fifth-wheel",
+            "class-a",
+            "class-c"
           ],
           "guide": "rv-leveling-jacks-not-working",
           "kw": [
@@ -129,6 +155,33 @@
             "rv_qualified": true
           },
           "makers": []
+        },
+        {
+          "id": "air-leveling",
+          "n": "Air leveling",
+          "aka": "air leveling system|HWH Active Air|Valid Air",
+          "does": "levels the coach on its own air suspension, no jacks",
+          "fails": [
+            "air leak",
+            "height valve",
+            "control panel error",
+            "will not hold overnight"
+          ],
+          "types": [
+            "class-a"
+          ],
+          "guide": "rv-leveling-jacks-not-working",
+          "kw": [
+            "air leveling rv",
+            "hwh active air"
+          ],
+          "demand": null,
+          "makers": [
+            {
+              "brand": "HWH",
+              "url": "https://www.hwhcorp.com/ml54800_srvc.html"
+            }
+          ]
         },
         {
           "id": "weight-distribution-hitch",
@@ -243,9 +296,34 @@
           "makers": []
         },
         {
+          "id": "trailer-wiring-and-connector",
+          "n": "Trailer wiring and connector",
+          "aka": "7 pin|7-way plug|umbilical cord|trailer plug",
+          "does": "carries lights, brakes and charging between the tow vehicle and the trailer",
+          "fails": [
+            "corroded pins",
+            "chafed cord",
+            "bad ground in the plug",
+            "pins pushed back out of the shell"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "pop-up"
+          ],
+          "guide": "rv-towing-trailer",
+          "kw": [
+            "7 pin trailer plug wiring",
+            "rv umbilical cord replacement",
+            "trailer lights not working plug"
+          ],
+          "demand": null,
+          "makers": []
+        },
+        {
           "id": "trailer-brakes",
           "n": "Trailer brakes",
-          "aka": "electric brakes|surge brakes|brake assembly",
+          "aka": "electric brakes|surge brakes|brake assembly|disc brakes",
           "does": "slow and stop the trailer itself",
           "fails": [
             "grabbing",
@@ -304,7 +382,7 @@
         {
           "id": "axle",
           "n": "Axle",
-          "aka": "trailer axle|torsion axle|spring axle",
+          "aka": "trailer axle|torsion axle|spring axle|drive axle|tag axle|front axle",
           "does": "carries the weight and holds the wheels",
           "fails": [
             "bent spindle",
@@ -314,7 +392,9 @@
           ],
           "types": [
             "trailer",
-            "fifth-wheel"
+            "fifth-wheel",
+            "class-a",
+            "class-c"
           ],
           "guide": null,
           "kw": [
@@ -363,9 +443,34 @@
           "makers": []
         },
         {
+          "id": "frame-and-tongue",
+          "n": "Frame and tongue",
+          "aka": "trailer frame|A-frame|tongue|I-beam frame",
+          "does": "the skeleton everything else bolts to",
+          "fails": [
+            "cracked weld at the tongue",
+            "rust scaling",
+            "bent from a curb strike",
+            "flex at the A-frame"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "pop-up"
+          ],
+          "guide": null,
+          "kw": [
+            "bent trailer tongue",
+            "trailer frame crack repair",
+            "rv frame rust"
+          ],
+          "demand": null,
+          "makers": []
+        },
+        {
           "id": "wheel-bearings",
           "n": "Wheel bearings",
-          "aka": "bearings|races|grease seals|bearing buddy",
+          "aka": "bearings|races|grease seals|bearing buddy|EZ lube",
           "does": "let the wheel spin freely on the spindle",
           "fails": [
             "dry and scored",
@@ -407,7 +512,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": "rv-tire-replacement",
@@ -444,7 +550,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome"
+            "class-a",
+            "class-c"
           ],
           "guide": "rv-tire-replacement",
           "kw": [
@@ -482,7 +589,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome"
+            "class-a",
+            "class-c"
           ],
           "guide": "rv-tire-replacement",
           "kw": [
@@ -495,6 +603,33 @@
             "query": "lug nuts",
             "rv_qualified": false
           },
+          "makers": []
+        },
+        {
+          "id": "spare-tire-and-carrier",
+          "n": "Spare tire and carrier",
+          "aka": "spare tire mount|spare carrier|underbelly spare|spare tire winch",
+          "does": "keeps a spare for the road",
+          "fails": [
+            "carrier rusted and seized",
+            "tire dry rotted from the sun",
+            "winch cable snapped",
+            "no wrench for the lugs"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "class-a",
+            "class-c",
+            "van"
+          ],
+          "guide": "rv-tire-replacement",
+          "kw": [
+            "rv spare tire carrier",
+            "spare tire winch replacement",
+            "trailer spare tire mount"
+          ],
+          "demand": null,
           "makers": []
         },
         {
@@ -555,6 +690,56 @@
           "tool": "weight-calculator"
         },
         {
+          "id": "pin-box",
+          "n": "Pin box",
+          "aka": "fifth wheel pin box|MORryde pin box|rubber pin box",
+          "does": "holds the kingpin and cushions the connection to the truck",
+          "fails": [
+            "chucking over bumps",
+            "flex cracks",
+            "bolts loosening",
+            "rubber worn out"
+          ],
+          "types": [
+            "fifth-wheel"
+          ],
+          "guide": "rv-towing-trailer",
+          "kw": [
+            "fifth wheel pin box replacement",
+            "chucking fifth wheel",
+            "morryde pin box"
+          ],
+          "demand": null,
+          "makers": [
+            {
+              "brand": "MORryde",
+              "url": "https://morryde.com/operations-manual/"
+            }
+          ]
+        },
+        {
+          "id": "gooseneck-adapter",
+          "n": "Gooseneck adapter",
+          "aka": "gooseneck conversion|gooseneck coupler|gooseneck ball",
+          "does": "lets a fifth wheel ride on a gooseneck ball instead of a fifth-wheel hitch",
+          "fails": [
+            "adapter loosens",
+            "stress cracks at the pin box",
+            "ball wear",
+            "hard to latch"
+          ],
+          "types": [
+            "fifth-wheel"
+          ],
+          "guide": "rv-towing-trailer",
+          "kw": [
+            "gooseneck adapter fifth wheel",
+            "gooseneck conversion rv"
+          ],
+          "demand": null,
+          "makers": []
+        },
+        {
           "id": "toad-setup",
           "n": "Toad setup",
           "aka": "dinghy tow|tow bar|baseplate|flat tow",
@@ -566,7 +751,8 @@
             "aux brake not engaging"
           ],
           "types": [
-            "motorhome"
+            "class-a",
+            "class-c"
           ],
           "guide": "rv-towing-trailer",
           "kw": [
@@ -591,6 +777,30 @@
           ]
         },
         {
+          "id": "toad-braking-system",
+          "n": "Toad braking system",
+          "aka": "dinghy brake|supplemental brake|BrakeBuddy|Air Force One",
+          "does": "brakes the towed car so it does not push the motorhome",
+          "fails": [
+            "not engaging",
+            "proportional setup wrong",
+            "air line leak",
+            "breakaway switch dead"
+          ],
+          "types": [
+            "class-a",
+            "class-c"
+          ],
+          "guide": "rv-towing-trailer",
+          "kw": [
+            "dinghy braking system",
+            "toad brake not working",
+            "flat tow brake"
+          ],
+          "demand": null,
+          "makers": []
+        },
+        {
           "id": "air-suspension-and-helper-springs",
           "n": "Air suspension and helper springs",
           "aka": "air bags|sumo springs|helper springs",
@@ -602,8 +812,9 @@
             "overloaded and bottomed out"
           ],
           "types": [
-            "motorhome",
-            "trailer"
+            "trailer",
+            "class-a",
+            "class-c"
           ],
           "guide": null,
           "kw": [
@@ -632,7 +843,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome"
+            "class-a",
+            "class-c"
           ],
           "guide": null,
           "kw": [
@@ -642,6 +854,31 @@
           ],
           "makers": [],
           "demand": null
+        },
+        {
+          "id": "hitch-lock",
+          "n": "Hitch lock",
+          "aka": "tongue lock|coupler lock|king pin lock",
+          "does": "keeps the trailer from being hooked up and towed off",
+          "fails": [
+            "seized from rust",
+            "key lost",
+            "too small and the coupler still opens",
+            "left on and you cannot hitch"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "pop-up"
+          ],
+          "guide": null,
+          "kw": [
+            "rv hitch lock",
+            "trailer tongue lock",
+            "king pin lock"
+          ],
+          "demand": null,
+          "makers": []
         },
         {
           "id": "tire-chains",
@@ -657,7 +894,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome"
+            "class-a",
+            "class-c"
           ],
           "guide": "tires-winter",
           "kw": [
@@ -667,6 +905,28 @@
           ],
           "makers": [],
           "demand": null
+        },
+        {
+          "id": "truck-camper-tie-downs-and-jacks",
+          "n": "Truck camper tie-downs and jacks",
+          "aka": "camper tie downs|tie-down brackets|electric camper jacks|removable jacks",
+          "does": "holds the camper to the truck and lifts it on and off",
+          "fails": [
+            "tie-downs loosen and the camper shifts",
+            "jack legs bent",
+            "brackets rusted",
+            "mounting bolts pulled from the bed"
+          ],
+          "types": [
+            "truck-camper"
+          ],
+          "guide": null,
+          "kw": [
+            "truck camper tie downs",
+            "camper jacks not working"
+          ],
+          "demand": null,
+          "makers": []
         }
       ]
     },
@@ -678,7 +938,7 @@
         {
           "id": "shore-power-cord",
           "n": "Shore power cord",
-          "aka": "power cord|shore cord|30 amp cord|50 amp cord",
+          "aka": "power cord|shore cord|30 amp cord|50 amp cord|dogbone|30 to 50 adapter|detachable cord",
           "does": "brings park power into the coach",
           "fails": [
             "burned plug",
@@ -690,7 +950,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": "rv-12-volt-problems",
@@ -719,7 +980,8 @@
           ],
           "types": [
             "trailer",
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": "rv-12-volt-problems",
@@ -731,9 +993,31 @@
           "makers": []
         },
         {
+          "id": "power-cord-reel",
+          "n": "Power cord reel",
+          "aka": "cord reel|electric cord reel|shore cord reel",
+          "does": "winds the shore cord in and out of a compartment",
+          "fails": [
+            "motor stalls",
+            "slip rings burn",
+            "cord chewed by the reel",
+            "limit switch dead"
+          ],
+          "types": [
+            "class-a"
+          ],
+          "guide": null,
+          "kw": [
+            "rv power cord reel not working",
+            "cord reel replacement"
+          ],
+          "demand": null,
+          "makers": []
+        },
+        {
           "id": "surge-protector-and-ems",
           "n": "Surge protector and EMS",
-          "aka": "EMS|surge guard|electrical management",
+          "aka": "EMS|surge guard|electrical management|voltage regulator|autoformer",
           "does": "shields the coach from bad park power",
           "fails": [
             "nuisance shutdowns",
@@ -744,7 +1028,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome"
+            "class-a",
+            "class-c"
           ],
           "guide": "rv-12-volt-problems",
           "kw": [
@@ -772,7 +1057,8 @@
             "generator not passing through"
           ],
           "types": [
-            "motorhome"
+            "class-a",
+            "class-c"
           ],
           "guide": "rv-12-volt-problems",
           "kw": [
@@ -801,7 +1087,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": "rv-fuse-keeps-blowing",
@@ -832,7 +1119,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": "rv-converter-not-charging",
@@ -876,7 +1164,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": "rv-12-volt-problems",
@@ -937,7 +1226,9 @@
             "remote panel dead"
           ],
           "types": [
-            "motorhome"
+            "class-a",
+            "class-c",
+            "van"
           ],
           "guide": "rv-12-volt-problems",
           "kw": [
@@ -963,7 +1254,7 @@
         {
           "id": "house-battery",
           "n": "House battery",
-          "aka": "coach battery|deep cycle|AGM|LiFePO4|lithium",
+          "aka": "coach battery|deep cycle|AGM|LiFePO4|lithium|battery box|battery tray",
           "does": "stores power for everything that runs without shore power",
           "fails": [
             "sulfated",
@@ -976,7 +1267,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": "rv-battery-not-charging",
@@ -1016,7 +1308,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": "rv-battery-disconnect",
@@ -1043,7 +1336,8 @@
           ],
           "types": [
             "trailer",
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": "rv-battery-not-charging",
@@ -1062,7 +1356,7 @@
         {
           "id": "solar-panels",
           "n": "Solar panels",
-          "aka": "solar|PV panels",
+          "aka": "solar|PV panels|solar prep|portable solar",
           "does": "charge the batteries from the sun",
           "fails": [
             "shaded and dead",
@@ -1073,7 +1367,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": "rv-solar-not-charging",
@@ -1128,7 +1423,8 @@
           ],
           "types": [
             "trailer",
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": "rv-solar-not-charging",
@@ -1170,7 +1466,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": "rv-fuse-keeps-blowing",
@@ -1200,7 +1497,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": "rv-12-volt-problems",
@@ -1229,7 +1527,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": "rv-outlets-not-working",
@@ -1260,7 +1559,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": "rv-lights-not-working",
@@ -1291,7 +1591,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": "rv-12-volt-problems",
@@ -1310,7 +1611,7 @@
         {
           "id": "generator",
           "n": "Generator",
-          "aka": "onan|genset|built in generator",
+          "aka": "onan|genset|built in generator|auto start|AGS|slide tray",
           "does": "makes its own power when there's no pedestal",
           "fails": [
             "will not start",
@@ -1321,7 +1622,9 @@
             "propane vs gas"
           ],
           "types": [
-            "motorhome"
+            "class-a",
+            "class-c",
+            "toy-hauler"
           ],
           "guide": "rv-generator-not-charging",
           "kw": [
@@ -1368,7 +1671,7 @@
         {
           "id": "control-and-monitor-panel",
           "n": "Control and monitor panel",
-          "aka": "monitor panel|control panel|touch panel",
+          "aka": "monitor panel|control panel|touch panel|multiplex|Firefly|Spyder",
           "does": "shows tank levels and battery status, and controls systems",
           "fails": [
             "dead display",
@@ -1380,7 +1683,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": "rv-tank-sensors-reading-wrong",
@@ -1411,7 +1715,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": "rv-generator-sizing",
@@ -1426,7 +1731,7 @@
         {
           "id": "battery-combiner-and-acr",
           "n": "Battery combiner and ACR",
-          "aka": "ACR|automatic charging relay|battery separator|combiner",
+          "aka": "ACR|automatic charging relay|battery separator|combiner|DC-DC charger|battery to battery",
           "does": "lets the alternator charge both banks without linking them when parked",
           "fails": [
             "relay stuck closed and drains both",
@@ -1434,7 +1739,8 @@
             "wrong threshold"
           ],
           "types": [
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": "rv-12-volt-problems",
@@ -1448,7 +1754,7 @@
         {
           "id": "cell-and-wifi-booster",
           "n": "Cell and wifi booster",
-          "aka": "cell booster|weboost|wifi booster|antenna",
+          "aka": "cell booster|weboost|wifi booster|antenna|router|hotspot",
           "does": "pulls a usable signal where there's barely one",
           "fails": [
             "no gain outdoors",
@@ -1459,7 +1765,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": null,
@@ -1493,7 +1800,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": "winterize-plumbing",
@@ -1512,7 +1820,7 @@
         {
           "id": "gravity-fill-and-city-water-inlet",
           "n": "Gravity fill and city water inlet",
-          "aka": "gravity fill|city water connection|fresh water inlet",
+          "aka": "gravity fill|city water connection|fresh water inlet|docking station|water bay",
           "does": "fill the tank, or run the coach directly off park pressure",
           "fails": [
             "check valve leaking",
@@ -1523,7 +1831,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": "rv-water-pump-wont-prime",
@@ -1531,6 +1840,55 @@
             "city water filling fresh tank",
             "rv water inlet check valve",
             "gravity fill cap"
+          ],
+          "demand": null,
+          "makers": []
+        },
+        {
+          "id": "fresh-water-hose",
+          "n": "Fresh water hose",
+          "aka": "drinking water hose|potable hose|white hose|water bandit",
+          "does": "carries city water into the coach",
+          "fails": [
+            "left under pressure and burst",
+            "mildew inside",
+            "garden hose used for drinking water",
+            "washer lost"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "class-a",
+            "class-c",
+            "van"
+          ],
+          "guide": "rv-water-pump-wont-prime",
+          "kw": [
+            "rv water hose",
+            "drinking water hose rv",
+            "water bandit"
+          ],
+          "demand": null,
+          "makers": []
+        },
+        {
+          "id": "water-hose-reel",
+          "n": "Water hose reel",
+          "aka": "power hose reel|rewind hose reel|fresh water reel",
+          "does": "winds the fresh water hose into a compartment",
+          "fails": [
+            "motor stalls",
+            "hose kinks inside the reel",
+            "swivel leaks",
+            "limit switch dead"
+          ],
+          "types": [
+            "class-a"
+          ],
+          "guide": null,
+          "kw": [
+            "rv water hose reel",
+            "power hose reel not working"
           ],
           "demand": null,
           "makers": []
@@ -1548,7 +1906,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome"
+            "class-a",
+            "class-c"
           ],
           "guide": null,
           "kw": [
@@ -1576,7 +1935,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome"
+            "class-a",
+            "class-c"
           ],
           "guide": null,
           "kw": [
@@ -1607,7 +1967,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": "rv-water-pump-wont-prime",
@@ -1641,7 +2002,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": "rv-water-pump-wont-prime",
@@ -1668,7 +2030,8 @@
           ],
           "types": [
             "trailer",
-            "motorhome"
+            "class-a",
+            "class-c"
           ],
           "guide": "rv-water-pump-wont-prime",
           "kw": [
@@ -1685,7 +2048,7 @@
         {
           "id": "pex-lines-and-fittings",
           "n": "PEX lines and fittings",
-          "aka": "pex|sharkbite|crimp rings|water lines",
+          "aka": "pex|sharkbite|crimp rings|water lines|manifold",
           "does": "carry water through the coach",
           "fails": [
             "freeze split",
@@ -1696,7 +2059,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": "freeze-damage-triage",
@@ -1726,7 +2090,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome"
+            "class-a",
+            "class-c"
           ],
           "guide": "winterize-plumbing",
           "kw": [
@@ -1755,7 +2120,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": "rv-water-heater-not-heating",
@@ -1803,7 +2169,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome"
+            "class-a",
+            "class-c"
           ],
           "guide": "rv-water-heater-not-heating",
           "kw": [
@@ -1848,7 +2215,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome"
+            "class-a",
+            "class-c"
           ],
           "guide": "rv-water-heater-not-heating",
           "kw": [
@@ -1864,6 +2232,37 @@
           "tool": "rv-anode-rod"
         },
         {
+          "id": "water-heater-element-and-thermostat",
+          "n": "Water heater element and thermostat",
+          "aka": "heating element|thermostat|ECO|T&P valve|relief valve|drain plug",
+          "does": "the electric side of a tank water heater, and its safety valves",
+          "fails": [
+            "element burned out on a dry tank",
+            "thermostat stuck and scalding",
+            "relief valve weeping",
+            "drain plug cross threaded"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "class-a",
+            "class-c"
+          ],
+          "guide": "rv-water-heater-not-heating",
+          "kw": [
+            "rv water heater element replacement",
+            "water heater relief valve leaking",
+            "rv water heater thermostat"
+          ],
+          "demand": null,
+          "makers": [
+            {
+              "brand": "Suburban",
+              "url": "https://library.suburbanrv.com/"
+            }
+          ]
+        },
+        {
           "id": "water-heater-bypass",
           "n": "Water heater bypass",
           "aka": "bypass kit|winterizing bypass|three way valve",
@@ -1876,7 +2275,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome"
+            "class-a",
+            "class-c"
           ],
           "guide": "winterize-plumbing",
           "kw": [
@@ -1893,7 +2293,7 @@
         {
           "id": "faucets-and-shower-mixer",
           "n": "Faucets and shower mixer",
-          "aka": "kitchen faucet|bath faucet|shower valve",
+          "aka": "kitchen faucet|bath faucet|shower valve|shower head|shower hose|aerator",
           "does": "deliver hot and cold water",
           "fails": [
             "drip",
@@ -1905,7 +2305,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": null,
@@ -1922,9 +2323,36 @@
           "makers": []
         },
         {
+          "id": "sinks",
+          "n": "Sinks",
+          "aka": "kitchen sink|bathroom sink|lavatory sink|bar sink",
+          "does": "where the water lands",
+          "fails": [
+            "cracked from a dropped pan",
+            "drain basket leaking",
+            "composite sink delaminating",
+            "loose in the countertop"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "class-a",
+            "class-c",
+            "van"
+          ],
+          "guide": null,
+          "kw": [
+            "rv sink replacement",
+            "rv kitchen sink",
+            "bathroom sink rv"
+          ],
+          "demand": null,
+          "makers": []
+        },
+        {
           "id": "shower-pan-and-drain",
           "n": "Shower pan and drain",
-          "aka": "shower drain|shower pan|gray tank drain",
+          "aka": "shower drain|shower pan|gray tank drain|tub",
           "does": "drains the shower to the gray tank",
           "fails": [
             "clogged with hair",
@@ -1935,7 +2363,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome"
+            "class-a",
+            "class-c"
           ],
           "guide": null,
           "kw": [
@@ -1947,6 +2376,32 @@
             "query": "rv shower pan",
             "rv_qualified": true
           },
+          "makers": []
+        },
+        {
+          "id": "shower-door-and-enclosure",
+          "n": "Shower door and enclosure",
+          "aka": "shower door|shower curtain|shower surround|glass shower",
+          "does": "keeps the water in the shower",
+          "fails": [
+            "track clogs and the door jumps",
+            "seal mildews",
+            "glass shatters on a curb strike",
+            "hinge pulled from the wall"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "class-a",
+            "class-c"
+          ],
+          "guide": null,
+          "kw": [
+            "rv shower door replacement",
+            "shower door track",
+            "rv shower curtain"
+          ],
+          "demand": null,
           "makers": []
         },
         {
@@ -1962,7 +2417,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome"
+            "class-a",
+            "class-c"
           ],
           "guide": "winterize-plumbing",
           "kw": [
@@ -1990,7 +2446,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": "winterize-plumbing",
@@ -2007,9 +2464,36 @@
           "makers": []
         },
         {
+          "id": "tank-and-pipe-heaters",
+          "n": "Tank and pipe heaters",
+          "aka": "tank heater pads|heated tanks|heat tape|holding tank heater",
+          "does": "keeps tanks and water lines from freezing",
+          "fails": [
+            "pad peeled off the tank",
+            "thermostat stuck on and drains the battery",
+            "heat tape left plugged in",
+            "fuse blown"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "class-a",
+            "class-c",
+            "van"
+          ],
+          "guide": "winterize-plumbing",
+          "kw": [
+            "rv tank heater",
+            "heated holding tanks",
+            "rv heat tape"
+          ],
+          "demand": null,
+          "makers": []
+        },
+        {
           "id": "water-softener-and-filtration",
           "n": "Water softener and filtration",
-          "aka": "water softener|onboard filter|portable softener",
+          "aka": "water softener|onboard filter|portable softener|reverse osmosis|RO system",
           "does": "removes hardness and off-flavors from park water",
           "fails": [
             "resin exhausted",
@@ -2020,7 +2504,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome"
+            "class-a",
+            "class-c"
           ],
           "guide": null,
           "kw": [
@@ -2040,7 +2525,7 @@
         {
           "id": "toilet-gravity",
           "n": "Toilet (gravity)",
-          "aka": "RV toilet|foot flush toilet|Aqua-Magic|SeaLand",
+          "aka": "RV toilet|foot flush toilet|Aqua-Magic|SeaLand|porcelain toilet|toilet seat",
           "does": "flushes into the black tank",
           "fails": [
             "will not hold water",
@@ -2052,7 +2537,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome"
+            "class-a",
+            "class-c"
           ],
           "guide": "rv-toilet-not-flushing",
           "kw": [
@@ -2081,6 +2567,68 @@
           ]
         },
         {
+          "id": "toilet-water-valve",
+          "n": "Toilet water valve",
+          "aka": "water inlet valve|fill valve|toilet valve",
+          "does": "lets water into the bowl when the pedal is pressed",
+          "fails": [
+            "weeps and the bowl fills on its own",
+            "freeze cracked",
+            "screen clogged with debris",
+            "leaks at the fitting"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "class-a",
+            "class-c"
+          ],
+          "guide": "rv-toilet-not-flushing",
+          "kw": [
+            "rv toilet water valve leaking",
+            "rv toilet will not hold water",
+            "toilet valve replacement"
+          ],
+          "demand": null,
+          "makers": [
+            {
+              "brand": "Thetford",
+              "url": "https://www.thetford.com/support/"
+            },
+            {
+              "brand": "Dometic",
+              "url": "https://www.dometic.com/en-us/lp/documents-database"
+            }
+          ],
+          "tool": "rv-toilet-valve"
+        },
+        {
+          "id": "toilet-seal-and-flange",
+          "n": "Toilet seal and flange",
+          "aka": "wax ring|toilet gasket|closet flange|floor flange",
+          "does": "seals the toilet to the tank below",
+          "fails": [
+            "sewer smell at the base",
+            "toilet rocks",
+            "seal crushed by a loose toilet",
+            "flange cracked"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "class-a",
+            "class-c"
+          ],
+          "guide": "rv-toilet-not-flushing",
+          "kw": [
+            "rv toilet seal replacement",
+            "rv toilet smell",
+            "toilet flange rv"
+          ],
+          "demand": null,
+          "makers": []
+        },
+        {
           "id": "toilet-vacuum-or-macerator",
           "n": "Toilet (vacuum or macerator)",
           "aka": "vacuum toilet|macerating toilet|VacuFlush",
@@ -2093,7 +2641,8 @@
             "clogged macerator"
           ],
           "types": [
-            "motorhome"
+            "class-a",
+            "class-c"
           ],
           "guide": "rv-macerator-toilet",
           "kw": [
@@ -2123,7 +2672,7 @@
         {
           "id": "toilet-composting",
           "n": "Toilet (composting)",
-          "aka": "composting toilet|Nature's Head|Air Head",
+          "aka": "composting toilet|Nature's Head|Air Head|urine diverter|composting toilet vent",
           "does": "separates solids from liquid and composts, no black tank",
           "fails": [
             "fan failed and smell",
@@ -2131,8 +2680,8 @@
             "urine diverter leaking"
           ],
           "types": [
-            "van",
-            "motorhome"
+            "class-a",
+            "van"
           ],
           "guide": null,
           "kw": [
@@ -2193,7 +2742,7 @@
         {
           "id": "black-tank",
           "n": "Black tank",
-          "aka": "holding tank|waste tank",
+          "aka": "holding tank|waste tank|tank repair|tank crack",
           "does": "holds toilet waste",
           "fails": [
             "sensor coated and reads wrong",
@@ -2205,7 +2754,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": "rv-black-tank",
@@ -2240,7 +2790,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": "rv-sewer-smell",
@@ -2259,7 +2810,7 @@
         {
           "id": "gate-valves",
           "n": "Gate valves",
-          "aka": "dump valves|black valve|gray valve|T handle",
+          "aka": "dump valves|black valve|gray valve|T handle|valve handle|dump valve handle|valve extension rod",
           "does": "empty the tanks into the sewer hose",
           "fails": [
             "hard to pull",
@@ -2271,7 +2822,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": "rv-sewer-smell",
@@ -2299,8 +2851,9 @@
             "will not close fully"
           ],
           "types": [
-            "motorhome",
-            "fifth-wheel"
+            "fifth-wheel",
+            "class-a",
+            "class-c"
           ],
           "guide": null,
           "kw": [
@@ -2322,7 +2875,8 @@
             "will not close and drips"
           ],
           "types": [
-            "motorhome"
+            "class-a",
+            "class-c"
           ],
           "guide": null,
           "kw": [
@@ -2344,7 +2898,7 @@
         {
           "id": "sewer-hose-and-fittings",
           "n": "Sewer hose and fittings",
-          "aka": "stinky slinky|sewer hose|bayonet fitting",
+          "aka": "stinky slinky|sewer hose|bayonet fitting|sewer hose support|sewer cap|bayonet cap",
           "does": "carries waste from the valve to the dump point",
           "fails": [
             "pinhole leaks",
@@ -2355,7 +2909,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": "rv-sewer-smell",
@@ -2377,6 +2932,33 @@
           ]
         },
         {
+          "id": "portable-sewer-tote",
+          "n": "Portable sewer tote",
+          "aka": "blue boy|sewer tote|portable dump tank",
+          "does": "carries waste to a dump station when you cannot move the RV",
+          "fails": [
+            "cap lost and it drips in the truck",
+            "wheels sink in soft ground",
+            "hose connection stripped",
+            "left full in the sun"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "class-a",
+            "class-c",
+            "van"
+          ],
+          "guide": "rv-black-tank",
+          "kw": [
+            "rv sewer tote",
+            "blue boy tank",
+            "portable waste tank"
+          ],
+          "demand": null,
+          "makers": []
+        },
+        {
           "id": "macerator-pump",
           "n": "Macerator pump",
           "aka": "macerator|sewage pump",
@@ -2388,8 +2970,9 @@
             "clogged from wipes"
           ],
           "types": [
-            "motorhome",
-            "trailer"
+            "trailer",
+            "class-a",
+            "class-c"
           ],
           "guide": "rv-macerator-toilet",
           "kw": [
@@ -2416,7 +2999,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome"
+            "class-a",
+            "class-c"
           ],
           "guide": null,
           "kw": [
@@ -2439,7 +3023,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": "rv-tank-sensors-reading-wrong",
@@ -2468,7 +3053,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": "rv-sewer-smell",
@@ -2498,7 +3084,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome"
+            "class-a",
+            "class-c"
           ],
           "guide": "rv-sewer-smell",
           "kw": [
@@ -2526,7 +3113,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": "rv-sewer-smell",
@@ -2565,7 +3153,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": "rv-furnace-not-working",
@@ -2603,7 +3192,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome"
+            "class-a",
+            "class-c"
           ],
           "guide": "rv-furnace-not-working",
           "kw": [
@@ -2632,7 +3222,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome"
+            "class-a",
+            "class-c"
           ],
           "guide": "rv-furnace-not-working",
           "kw": [
@@ -2662,7 +3253,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome"
+            "class-a",
+            "class-c"
           ],
           "guide": "rv-furnace-not-working",
           "kw": [
@@ -2675,6 +3267,85 @@
             "query": "floor vents",
             "rv_qualified": false
           },
+          "makers": []
+        },
+        {
+          "id": "hydronic-heating",
+          "n": "Hydronic heating",
+          "aka": "Aqua-Hot|Oasis|hydronic furnace|diesel burner",
+          "does": "heats the coach and the water from one boiler",
+          "fails": [
+            "burner will not fire",
+            "nozzle clogged",
+            "antifreeze leak",
+            "zone pump dead",
+            "exhaust soot"
+          ],
+          "types": [
+            "fifth-wheel",
+            "class-a",
+            "class-c"
+          ],
+          "guide": null,
+          "kw": [
+            "aqua hot not working",
+            "hydronic heating rv",
+            "aqua hot burner"
+          ],
+          "demand": null,
+          "makers": [
+            {
+              "brand": "Aqua-Hot",
+              "url": "https://library.aquahot.com/"
+            }
+          ]
+        },
+        {
+          "id": "heated-floors",
+          "n": "Heated floors",
+          "aka": "electric floor heat|GoldHeat|in-floor heat",
+          "does": "warms the floor from underneath",
+          "fails": [
+            "zone dead",
+            "thermostat failure",
+            "mat burned out",
+            "breaker tripping"
+          ],
+          "types": [
+            "class-a"
+          ],
+          "guide": null,
+          "kw": [
+            "rv heated floors",
+            "heated floor not working rv"
+          ],
+          "demand": null,
+          "makers": []
+        },
+        {
+          "id": "diesel-air-heater",
+          "n": "Diesel air heater",
+          "aka": "diesel heater|Espar|Webasto|Chinese diesel heater|parking heater",
+          "does": "burns diesel from the fuel tank to heat the coach",
+          "fails": [
+            "will not ignite",
+            "coked combustion chamber",
+            "fuel pump ticking stops",
+            "exhaust smell inside"
+          ],
+          "types": [
+            "trailer",
+            "class-a",
+            "class-c",
+            "van"
+          ],
+          "guide": null,
+          "kw": [
+            "diesel heater not working",
+            "espar heater",
+            "chinese diesel heater troubleshooting"
+          ],
+          "demand": null,
           "makers": []
         },
         {
@@ -2692,7 +3363,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": "rv-air-conditioner-not-cooling",
@@ -2734,7 +3406,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome"
+            "class-a",
+            "class-c"
           ],
           "guide": "rv-air-conditioner-not-cooling",
           "kw": [
@@ -2762,7 +3435,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome"
+            "class-a",
+            "class-c"
           ],
           "guide": "rv-roof-leak-repair",
           "kw": [
@@ -2787,7 +3461,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome"
+            "class-a",
+            "class-c"
           ],
           "guide": "rv-air-conditioner-not-cooling",
           "kw": [
@@ -2802,6 +3477,28 @@
           "makers": []
         },
         {
+          "id": "basement-air-conditioner",
+          "n": "Basement air conditioner",
+          "aka": "basement AC|under-floor AC|basement air",
+          "does": "cools from a compartment instead of the roof",
+          "fails": [
+            "condensate pump fails and it floods",
+            "compressor",
+            "duct leaks",
+            "filter clogged"
+          ],
+          "types": [
+            "class-a"
+          ],
+          "guide": "rv-air-conditioner-not-cooling",
+          "kw": [
+            "basement air conditioner rv",
+            "basement ac not cooling"
+          ],
+          "demand": null,
+          "makers": []
+        },
+        {
           "id": "heat-pump-and-heat-strip",
           "n": "Heat pump and heat strip",
           "aka": "heat pump|heat strip|reverse cycle",
@@ -2813,8 +3510,9 @@
             "thermostat set wrong"
           ],
           "types": [
-            "motorhome",
-            "trailer"
+            "trailer",
+            "class-a",
+            "class-c"
           ],
           "guide": null,
           "kw": [
@@ -2858,7 +3556,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": null,
@@ -2882,7 +3581,7 @@
         {
           "id": "roof-vent-fan",
           "n": "Roof vent fan",
-          "aka": "Fantastic Fan|Maxxair|ceiling fan|power vent",
+          "aka": "Fantastic Fan|Maxxair|power vent|roof vent",
           "does": "pulls hot air out of the coach",
           "fails": [
             "will not turn",
@@ -2894,7 +3593,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": null,
@@ -2911,9 +3611,32 @@
           "makers": []
         },
         {
+          "id": "ceiling-fan",
+          "n": "Ceiling fan",
+          "aka": "12 volt ceiling fan|overhead fan|rv ceiling fan",
+          "does": "moves air without the noise of the air conditioner",
+          "fails": [
+            "bearing squeal",
+            "switch dead",
+            "blade wobble",
+            "hits the slide trim"
+          ],
+          "types": [
+            "fifth-wheel",
+            "class-a"
+          ],
+          "guide": null,
+          "kw": [
+            "rv ceiling fan",
+            "12 volt ceiling fan"
+          ],
+          "demand": null,
+          "makers": []
+        },
+        {
           "id": "ceiling-vents-and-hatch",
           "n": "Ceiling vents and hatch",
-          "aka": "roof vent|vent lid|escape hatch",
+          "aka": "roof vent|vent lid|escape hatch|vent cover|vent lid",
           "does": "ventilation and an emergency exit",
           "fails": [
             "lid cracked by UV",
@@ -2924,7 +3647,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": "rv-roof-leak-repair",
@@ -2943,7 +3667,7 @@
         {
           "id": "portable-and-auxiliary-heat",
           "n": "Portable and auxiliary heat",
-          "aka": "space heater|electric heater|fireplace heater|buddy heater",
+          "aka": "space heater|electric heater|buddy heater|propane heater",
           "does": "adds heat where the furnace cannot reach",
           "fails": [
             "overloads the circuit",
@@ -2953,7 +3677,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": null,
@@ -2970,6 +3695,31 @@
           "makers": []
         },
         {
+          "id": "electric-fireplace",
+          "n": "Electric fireplace",
+          "aka": "fireplace|electric fire|fireplace heater",
+          "does": "heat and atmosphere from one box",
+          "fails": [
+            "flame effect dead",
+            "heater element",
+            "remote lost",
+            "fan noisy"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "class-a",
+            "class-c"
+          ],
+          "guide": null,
+          "kw": [
+            "rv fireplace not working",
+            "rv electric fireplace"
+          ],
+          "demand": null,
+          "makers": []
+        },
+        {
           "id": "dehumidifier-and-ventilation",
           "n": "Dehumidifier and ventilation",
           "aka": "dehumidifier|moisture control|damp rid",
@@ -2982,7 +3732,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": "rv-condensation-inside",
@@ -2996,6 +3747,33 @@
             "query": "dehumidifier",
             "rv_qualified": false
           },
+          "makers": []
+        },
+        {
+          "id": "smoke-and-co-detectors",
+          "n": "Smoke and CO detectors",
+          "aka": "smoke alarm|carbon monoxide detector|CO alarm",
+          "does": "warns before the air is dangerous",
+          "fails": [
+            "chirping at end of life",
+            "false alarms from cooking",
+            "expired sensor",
+            "taken down because it kept going off"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "class-a",
+            "class-c",
+            "van"
+          ],
+          "guide": "rv-furnace-carbon-monoxide",
+          "kw": [
+            "rv smoke detector beeping",
+            "rv carbon monoxide detector",
+            "co detector replacement rv"
+          ],
+          "demand": null,
           "makers": []
         }
       ]
@@ -3020,7 +3798,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": "rv-roof-leak-repair",
@@ -3050,7 +3829,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": "rv-roof-leak-repair",
@@ -3079,7 +3859,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome"
+            "class-a",
+            "class-c"
           ],
           "guide": "rv-roof-leak-repair",
           "kw": [
@@ -3108,7 +3889,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome"
+            "class-a",
+            "class-c"
           ],
           "guide": "rv-roof-leak-repair",
           "kw": [
@@ -3143,7 +3925,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome"
+            "class-a",
+            "class-c"
           ],
           "guide": "rv-slide-out-not-working",
           "kw": [
@@ -3173,7 +3956,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome"
+            "class-a",
+            "class-c"
           ],
           "guide": "rv-slide-out-leaking",
           "kw": [
@@ -3202,7 +3986,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome"
+            "class-a",
+            "class-c"
           ],
           "guide": null,
           "kw": [
@@ -3216,7 +4001,7 @@
         {
           "id": "windows",
           "n": "Windows",
-          "aka": "framed window|frameless window|exit window|window seal",
+          "aka": "framed window|frameless window|exit window|window seal|screen|egress window",
           "does": "light, view and ventilation",
           "fails": [
             "seal leaking",
@@ -3228,7 +4013,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": null,
@@ -3245,9 +4031,58 @@
           "makers": []
         },
         {
+          "id": "windshield-and-wipers",
+          "n": "Windshield and wipers",
+          "aka": "windshield|wiper blades|wiper motor|windshield chip",
+          "does": "the glass and the things that clear it",
+          "fails": [
+            "chip spreads",
+            "wiper motor dead",
+            "blades streak",
+            "leaking at the seal"
+          ],
+          "types": [
+            "class-a",
+            "class-c",
+            "van"
+          ],
+          "guide": null,
+          "kw": [
+            "rv windshield replacement",
+            "rv wiper blades",
+            "motorhome windshield leak"
+          ],
+          "demand": null,
+          "makers": []
+        },
+        {
+          "id": "mirrors",
+          "n": "Mirrors",
+          "aka": "side mirror|mirror head|mirror arm|heated mirror",
+          "does": "shows what is behind and beside a motorhome",
+          "fails": [
+            "vibration blur",
+            "heater dead",
+            "arm loose",
+            "glass cracked"
+          ],
+          "types": [
+            "class-a",
+            "class-c",
+            "van"
+          ],
+          "guide": null,
+          "kw": [
+            "rv mirror replacement",
+            "motorhome side mirror"
+          ],
+          "demand": null,
+          "makers": []
+        },
+        {
           "id": "window-shades-and-blinds",
           "n": "Window shades and blinds",
-          "aka": "day night shades|roller shade|mini blinds",
+          "aka": "day night shades|roller shade|mini blinds|windshield shade|privacy shade|MCD shade",
           "does": "privacy and light control",
           "fails": [
             "strings broken",
@@ -3258,7 +4093,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": null,
@@ -3277,7 +4113,7 @@
         {
           "id": "entry-door-and-lock",
           "n": "Entry door and lock",
-          "aka": "rv door|entry door|door latch|deadbolt",
+          "aka": "rv door|entry door|door latch|deadbolt|door window|friction hinge|door strut",
           "does": "the way in and out",
           "fails": [
             "out of square and sticking",
@@ -3289,7 +4125,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": null,
@@ -3306,6 +4143,59 @@
           "makers": []
         },
         {
+          "id": "screen-door",
+          "n": "Screen door",
+          "aka": "screen door|screen panel|screen door grille|screen slider",
+          "does": "lets air in without the bugs",
+          "fails": [
+            "bent frame from the wind",
+            "torn screen",
+            "latch will not catch",
+            "closer spring snapped"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "class-a",
+            "class-c"
+          ],
+          "guide": null,
+          "kw": [
+            "rv screen door replacement",
+            "screen door latch",
+            "rv screen door grille"
+          ],
+          "demand": null,
+          "makers": []
+        },
+        {
+          "id": "keyless-entry",
+          "n": "Keyless entry",
+          "aka": "RVLock|keypad lock|electronic door lock|Bauer",
+          "does": "opens the door with a code instead of a key",
+          "fails": [
+            "dead batteries lock you out",
+            "keypad quits",
+            "fob lost",
+            "handle mechanism sticks"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "class-a",
+            "class-c",
+            "van"
+          ],
+          "guide": null,
+          "kw": [
+            "rv keyless entry",
+            "rvlock not working",
+            "rv door keypad"
+          ],
+          "demand": null,
+          "makers": []
+        },
+        {
           "id": "door-and-window-seals",
           "n": "Door and window seals",
           "aka": "weatherstrip|door gasket|foam seal",
@@ -3319,7 +4209,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": "rv-roof-leak-repair",
@@ -3337,7 +4228,7 @@
         {
           "id": "baggage-and-bay-doors",
           "n": "Baggage and bay doors",
-          "aka": "storage door|compartment door|latch",
+          "aka": "storage door|compartment door|latch|slam latch|paddle latch|basement door",
           "does": "access to the basement and storage",
           "fails": [
             "latch failure",
@@ -3348,7 +4239,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome"
+            "class-a",
+            "class-c"
           ],
           "guide": null,
           "kw": [
@@ -3361,6 +4253,57 @@
             "query": "rv baggage",
             "rv_qualified": true
           },
+          "makers": []
+        },
+        {
+          "id": "compartment-locks-and-keys",
+          "n": "Compartment locks and keys",
+          "aka": "CH751|cam lock|storage lock|key replacement|keyed alike",
+          "does": "locks the storage bays, usually with a key half the campground has",
+          "fails": [
+            "the universal CH751 key",
+            "lost key",
+            "lock seized from road grit",
+            "latch broken off"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "class-a",
+            "class-c",
+            "van"
+          ],
+          "guide": null,
+          "kw": [
+            "rv compartment lock replacement",
+            "ch751 key",
+            "rv storage lock"
+          ],
+          "demand": null,
+          "makers": []
+        },
+        {
+          "id": "storage-slide-tray",
+          "n": "Storage slide tray",
+          "aka": "cargo slide|slide-out tray|basement tray",
+          "does": "slides the whole bay out so you can reach the back",
+          "fails": [
+            "slides jammed with grit",
+            "latch broken",
+            "weight over the rating",
+            "mounting screws pulled"
+          ],
+          "types": [
+            "fifth-wheel",
+            "class-a",
+            "class-c"
+          ],
+          "guide": null,
+          "kw": [
+            "rv cargo slide tray",
+            "basement slide out tray"
+          ],
+          "demand": null,
           "makers": []
         },
         {
@@ -3378,7 +4321,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome"
+            "class-a",
+            "class-c"
           ],
           "guide": "rv-delamination",
           "kw": [
@@ -3394,6 +4338,32 @@
           "makers": []
         },
         {
+          "id": "front-and-rear-caps",
+          "n": "Front and rear caps",
+          "aka": "front cap|rear cap|nose cap|gelcoat cap",
+          "does": "the molded ends of the coach",
+          "fails": [
+            "gelcoat fading and chalking",
+            "stress cracks",
+            "clear coat peeling",
+            "cap seal leaking at the roof"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "class-a",
+            "class-c"
+          ],
+          "guide": null,
+          "kw": [
+            "rv front cap fading",
+            "front cap oxidation",
+            "rv cap replacement"
+          ],
+          "demand": null,
+          "makers": []
+        },
+        {
           "id": "decals-and-graphics",
           "n": "Decals and graphics",
           "aka": "rv decals|graphics|stripes",
@@ -3406,7 +4376,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": null,
@@ -3478,6 +4449,59 @@
           "makers": []
         },
         {
+          "id": "mud-flaps-and-rock-guards",
+          "n": "Mud flaps and rock guards",
+          "aka": "mud flap|rock guard|tow guard|splash guard",
+          "does": "stops thrown rocks from beating up the trailer or the towed car",
+          "fails": [
+            "torn off on a curb",
+            "bracket rusted",
+            "too short to protect",
+            "flap drags"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "class-a",
+            "class-c"
+          ],
+          "guide": null,
+          "kw": [
+            "rv mud flaps",
+            "tow guard rv",
+            "rock guard trailer"
+          ],
+          "demand": null,
+          "makers": []
+        },
+        {
+          "id": "tire-covers-and-wheel-covers",
+          "n": "Tire covers and wheel covers",
+          "aka": "tire covers|wheel covers|hubcaps|wheel simulators",
+          "does": "shades tires from the sun and dresses the wheels",
+          "fails": [
+            "covers trap moisture",
+            "lost on the highway",
+            "cracked",
+            "simulator rings rattle"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "class-a",
+            "class-c",
+            "van"
+          ],
+          "guide": "tires-winter",
+          "kw": [
+            "rv tire covers",
+            "rv wheel covers",
+            "wheel simulators"
+          ],
+          "demand": null,
+          "makers": []
+        },
+        {
           "id": "bumper-and-rear-rack",
           "n": "Bumper and rear rack",
           "aka": "rear bumper|bumper hitch|bike rack",
@@ -3491,7 +4515,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome"
+            "class-a",
+            "class-c"
           ],
           "guide": null,
           "kw": [
@@ -3512,9 +4537,60 @@
           ]
         },
         {
+          "id": "ramp-door-and-patio",
+          "n": "Ramp door and patio",
+          "aka": "toy hauler ramp|rear ramp door|patio kit|garage door",
+          "does": "loads the toys and becomes a patio",
+          "fails": [
+            "springs weaken and it drops",
+            "cable kit snapped",
+            "seal leaks at the hinge",
+            "hinge pulled from the frame"
+          ],
+          "types": [
+            "toy-hauler"
+          ],
+          "guide": null,
+          "kw": [
+            "toy hauler ramp door",
+            "ramp door spring replacement",
+            "toy hauler patio kit"
+          ],
+          "demand": null,
+          "makers": [
+            {
+              "brand": "Lippert",
+              "url": "https://support.lci1.com/documentation/"
+            }
+          ]
+        },
+        {
+          "id": "fuel-station",
+          "n": "Fuel station",
+          "aka": "toy hauler fuel station|gas pump|fuel dispenser",
+          "does": "pumps gas for the toys from its own tank",
+          "fails": [
+            "pump dead",
+            "nozzle leaks",
+            "hose dry rotted",
+            "gauge wrong",
+            "left on and the tank drains"
+          ],
+          "types": [
+            "toy-hauler"
+          ],
+          "guide": null,
+          "kw": [
+            "toy hauler fuel station",
+            "fuel station pump not working"
+          ],
+          "demand": null,
+          "makers": []
+        },
+        {
           "id": "entry-steps",
           "n": "Entry steps",
-          "aka": "rv steps|folding steps|electric steps|step above",
+          "aka": "rv steps|folding steps|electric steps|step above|stairs|stepwell cover",
           "does": "getting in and out safely",
           "fails": [
             "sagging",
@@ -3524,9 +4600,11 @@
             "steps hitting the ground"
           ],
           "types": [
-            "motorhome",
             "trailer",
-            "fifth-wheel"
+            "fifth-wheel",
+            "class-a",
+            "class-c",
+            "van"
           ],
           "guide": null,
           "kw": [
@@ -3542,9 +4620,35 @@
           "makers": []
         },
         {
+          "id": "entry-assist-handle",
+          "n": "Entry assist handle",
+          "aka": "grab handle|Lend-a-Hand|entry handle",
+          "does": "something to hold getting in and out",
+          "fails": [
+            "loose at the wall",
+            "cracked",
+            "folding mechanism",
+            "screws pulled out"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "class-a",
+            "class-c",
+            "van"
+          ],
+          "guide": null,
+          "kw": [
+            "rv grab handle",
+            "entry assist handle rv"
+          ],
+          "demand": null,
+          "makers": []
+        },
+        {
           "id": "awning",
           "n": "Awning",
-          "aka": "patio awning|Dometic awning|Carefree|manual awning",
+          "aka": "patio awning|Dometic awning|Carefree|manual awning|power awning|electric awning",
           "does": "shade outside the door",
           "fails": [
             "will not extend",
@@ -3557,7 +4661,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome"
+            "class-a",
+            "class-c"
           ],
           "guide": null,
           "kw": [
@@ -3602,7 +4707,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome"
+            "class-a",
+            "class-c"
           ],
           "guide": null,
           "kw": [
@@ -3617,6 +4723,31 @@
           "makers": []
         },
         {
+          "id": "window-awnings",
+          "n": "Window awnings",
+          "aka": "window awning|side awning|window shade awning",
+          "does": "shades a window from the outside",
+          "fails": [
+            "spring broken",
+            "fabric worn",
+            "arm bent",
+            "will not roll up"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "class-a",
+            "class-c"
+          ],
+          "guide": null,
+          "kw": [
+            "rv window awning",
+            "window awning replacement"
+          ],
+          "demand": null,
+          "makers": []
+        },
+        {
           "id": "ladder-and-roof-access",
           "n": "Ladder and roof access",
           "aka": "rv ladder|roof ladder",
@@ -3627,9 +4758,10 @@
             "pulled from the body by a heavy climber"
           ],
           "types": [
-            "motorhome",
             "trailer",
-            "fifth-wheel"
+            "fifth-wheel",
+            "class-a",
+            "class-c"
           ],
           "guide": null,
           "kw": [
@@ -3646,7 +4778,7 @@
         {
           "id": "exterior-lighting",
           "n": "Exterior lighting",
-          "aka": "porch light|marker lights|tail lights|brake lights|clearance lights",
+          "aka": "porch light|marker lights|tail lights|brake lights|clearance lights|headlights|docking lights|scare light|security lights|awning lights",
           "does": "exterior visibility and road-legal lighting",
           "fails": [
             "corroded sockets",
@@ -3658,7 +4790,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": "rv-lights-not-working",
@@ -3688,7 +4821,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome"
+            "class-a",
+            "class-c"
           ],
           "guide": null,
           "kw": [
@@ -3716,7 +4850,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": null,
@@ -3740,7 +4875,8 @@
           ],
           "types": [
             "trailer",
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": null,
@@ -3750,6 +4886,50 @@
           ],
           "makers": [],
           "demand": null
+        },
+        {
+          "id": "pop-up-lift-system",
+          "n": "Pop-up lift system",
+          "aka": "pop up lift|winch|lift cable|roof crank",
+          "does": "raises the roof and the beds",
+          "fails": [
+            "cable snapped",
+            "winch ratchet slips",
+            "roof will not stay up",
+            "corner posts bent"
+          ],
+          "types": [
+            "pop-up"
+          ],
+          "guide": null,
+          "kw": [
+            "pop up camper lift system",
+            "pop up roof will not go up"
+          ],
+          "demand": null,
+          "makers": []
+        },
+        {
+          "id": "canvas-and-bunk-ends",
+          "n": "Canvas and bunk ends",
+          "aka": "canvas|bunk end|vinyl tent|bunk end seal",
+          "does": "the folding walls and the beds that slide out",
+          "fails": [
+            "seams leak",
+            "zippers split",
+            "mildew",
+            "bungee cords stretched"
+          ],
+          "types": [
+            "pop-up"
+          ],
+          "guide": null,
+          "kw": [
+            "pop up camper canvas replacement",
+            "bunk end leaking"
+          ],
+          "demand": null,
+          "makers": []
         }
       ]
     },
@@ -3774,7 +4954,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome"
+            "class-a",
+            "class-c"
           ],
           "guide": "rv-refrigerator-not-cooling",
           "kw": [
@@ -3801,7 +4982,7 @@
         {
           "id": "refrigerator-compressor-or-12v",
           "n": "Refrigerator (compressor or 12V)",
-          "aka": "compressor fridge|12 volt fridge|Everchill|Unique",
+          "aka": "compressor fridge|12 volt fridge|Everchill|Unique|exterior fridge|basement fridge",
           "does": "cools with a compressor, no propane needed",
           "fails": [
             "will not start on low voltage",
@@ -3812,7 +4993,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": "rv-refrigerator-not-cooling",
@@ -3859,7 +5041,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome"
+            "class-a",
+            "class-c"
           ],
           "guide": "rv-refrigerator-not-cooling",
           "kw": [
@@ -3873,7 +5056,7 @@
         {
           "id": "cooktop-and-oven",
           "n": "Cooktop and oven",
-          "aka": "rv stove|range|Graystone|Atwood stove",
+          "aka": "rv stove|range|Graystone|Atwood stove|induction cooktop|sealed burner",
           "does": "cooks with propane",
           "fails": [
             "burner will not light",
@@ -3886,7 +5069,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": null,
@@ -3929,7 +5113,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome"
+            "class-a",
+            "class-c"
           ],
           "guide": null,
           "kw": [
@@ -3957,7 +5142,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome"
+            "class-a",
+            "class-c"
           ],
           "guide": null,
           "kw": [
@@ -3972,31 +5158,82 @@
           "makers": []
         },
         {
-          "id": "washer-and-dryer",
-          "n": "Washer and dryer",
-          "aka": "rv washer|washer dryer combo|Splendide",
+          "id": "dishwasher",
+          "n": "Dishwasher",
+          "aka": "rv dishwasher|drawer dishwasher|Fisher & Paykel",
+          "does": "washes dishes in a drawer",
+          "fails": [
+            "will not drain",
+            "leaks at the door",
+            "latch",
+            "not heating"
+          ],
+          "types": [
+            "fifth-wheel",
+            "class-a"
+          ],
+          "guide": null,
+          "kw": [
+            "rv dishwasher",
+            "drawer dishwasher rv"
+          ],
+          "demand": null,
+          "makers": []
+        },
+        {
+          "id": "washer",
+          "n": "Washer",
+          "aka": "rv washer|washer dryer combo|Splendide|stackable washer",
           "does": "laundry on board",
           "fails": [
             "will not drain",
             "leaks",
             "unbalanced load",
-            "ventless drying slow",
-            "water supply valve"
+            "water supply valve",
+            "walks in the closet"
           ],
           "types": [
-            "motorhome",
+            "class-a",
+            "class-c",
             "fifth-wheel"
           ],
           "guide": null,
           "kw": [
-            "rv washer dryer not draining",
-            "splendide vented vs ventless"
+            "rv washer",
+            "rv washer dryer combo",
+            "splendide washer"
           ],
-          "demand": {
-            "weekly": 90,
-            "query": "rv washer",
-            "rv_qualified": true
-          },
+          "demand": null,
+          "makers": [
+            {
+              "brand": "Splendide",
+              "url": "https://www.splendide.com/service/docs.html"
+            }
+          ]
+        },
+        {
+          "id": "dryer",
+          "n": "Dryer",
+          "aka": "rv dryer|vented dryer|ventless dryer|dryer vent",
+          "does": "dries the wash, vented or not",
+          "fails": [
+            "ventless takes forever",
+            "lint clogged vent",
+            "drum belt",
+            "no heat"
+          ],
+          "types": [
+            "class-a",
+            "class-c",
+            "fifth-wheel"
+          ],
+          "guide": null,
+          "kw": [
+            "rv dryer",
+            "rv dryer vent",
+            "vented vs ventless rv dryer"
+          ],
+          "demand": null,
           "makers": [
             {
               "brand": "Splendide",
@@ -4016,8 +5253,9 @@
             "leak behind the fridge"
           ],
           "types": [
-            "motorhome",
-            "fifth-wheel"
+            "fifth-wheel",
+            "class-a",
+            "class-c"
           ],
           "guide": "winterize-plumbing",
           "kw": [
@@ -4034,7 +5272,7 @@
         {
           "id": "furniture-and-seating",
           "n": "Furniture and seating",
-          "aka": "dinette|sofa|recliner|captain chairs",
+          "aka": "dinette|sofa|recliner|captain chairs|theater seating|sofa bed|dinette table|Lagun table",
           "does": "somewhere to sit and sleep",
           "fails": [
             "frame failure",
@@ -4045,7 +5283,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": null,
@@ -4064,7 +5303,7 @@
         {
           "id": "bed-and-mattress",
           "n": "Bed and mattress",
-          "aka": "rv mattress|short queen|bunk|murphy bed",
+          "aka": "rv mattress|short queen|bunk|murphy bed|bunk|murphy bed|tilting bed|adjustable bed",
           "does": "sleeping",
           "fails": [
             "mattress worn",
@@ -4075,7 +5314,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": null,
@@ -4092,9 +5332,36 @@
           "makers": []
         },
         {
+          "id": "bed-lift",
+          "n": "Bed lift",
+          "aka": "Happijac|power bunk|bed lift system|garage bed",
+          "does": "raises the garage bed to the ceiling to fit the toys",
+          "fails": [
+            "cables stretch",
+            "motor dead",
+            "tracks jammed",
+            "remote lost"
+          ],
+          "types": [
+            "toy-hauler"
+          ],
+          "guide": null,
+          "kw": [
+            "happijac bed lift",
+            "toy hauler bed not moving"
+          ],
+          "demand": null,
+          "makers": [
+            {
+              "brand": "Lippert",
+              "url": "https://support.lci1.com/documentation/"
+            }
+          ]
+        },
+        {
           "id": "cabinets,-drawers-and-latches",
           "n": "Cabinets, drawers and latches",
-          "aka": "cabinet latch|drawer slide|gas strut",
+          "aka": "cabinet latch|drawer slide|gas strut|closet|wardrobe|pantry|soft close",
           "does": "storage that stays shut while driving",
           "fails": [
             "latches pop open on the road",
@@ -4105,7 +5372,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": null,
@@ -4122,6 +5390,32 @@
           "makers": []
         },
         {
+          "id": "countertops",
+          "n": "Countertops",
+          "aka": "countertop|solid surface|laminate counter",
+          "does": "the work surface",
+          "fails": [
+            "laminate lifting at the edge",
+            "burn ring from a hot pan",
+            "cracked at the sink cutout",
+            "seam separating"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "class-a",
+            "class-c",
+            "van"
+          ],
+          "guide": null,
+          "kw": [
+            "rv countertop replacement",
+            "rv countertop laminate"
+          ],
+          "demand": null,
+          "makers": []
+        },
+        {
           "id": "flooring-and-subfloor",
           "n": "Flooring and subfloor",
           "aka": "vinyl flooring|carpet|soft floor|subfloor",
@@ -4135,7 +5429,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": "rv-delamination",
@@ -4154,18 +5449,19 @@
         {
           "id": "tv-and-entertainment",
           "n": "TV and entertainment",
-          "aka": "rv tv|sound system|antenna|satellite|wifi",
-          "does": "entertainment and connectivity",
+          "aka": "rv tv|sound system|exterior speakers|dash radio|dvd player",
+          "does": "the screens and the speakers",
           "fails": [
-            "antenna will not raise",
-            "no signal after a move",
             "speaker failure",
-            "wifi booster dropout"
+            "sound system wiring",
+            "tv dead on inverter power",
+            "no signal after a move"
           ],
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": null,
@@ -4182,9 +5478,139 @@
           "makers": []
         },
         {
+          "id": "tv-antenna",
+          "n": "TV antenna",
+          "aka": "rv antenna|batwing antenna|King Jack|over the air",
+          "does": "pulls in local channels",
+          "fails": [
+            "crank stripped",
+            "will not raise",
+            "no signal after a move",
+            "amplifier dead"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "class-a",
+            "class-c",
+            "van"
+          ],
+          "guide": null,
+          "kw": [
+            "rv tv antenna not working",
+            "rv antenna replacement",
+            "king jack antenna"
+          ],
+          "demand": null,
+          "makers": [
+            {
+              "brand": "Winegard",
+              "url": "https://winegard.com/support/"
+            }
+          ]
+        },
+        {
+          "id": "satellite-tv-dish",
+          "n": "Satellite TV dish",
+          "aka": "satellite dish|Winegard Trav'ler|King Tailgater|portable satellite|satellite prep",
+          "does": "pulls in satellite TV where there is no cable",
+          "fails": [
+            "will not find the satellite",
+            "LNB dead",
+            "cable waterlogged",
+            "roof mount leaks"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "class-a",
+            "class-c"
+          ],
+          "guide": null,
+          "kw": [
+            "rv satellite dish",
+            "winegard travler not working",
+            "portable satellite rv"
+          ],
+          "demand": null,
+          "makers": [
+            {
+              "brand": "Winegard",
+              "url": "https://winegard.com/support/"
+            },
+            {
+              "brand": "KVH",
+              "url": "https://www.kvh.com/support/resource-library/"
+            },
+            {
+              "brand": "DISH Tailgater",
+              "url": "https://support.dish.com/products/dish-outdoors/tailgater"
+            }
+          ]
+        },
+        {
+          "id": "satellite-internet",
+          "n": "Satellite internet",
+          "aka": "Starlink|RV internet|satellite internet",
+          "does": "internet from orbit, wherever you park",
+          "fails": [
+            "obstructed view of the sky",
+            "cable chewed",
+            "router dropouts",
+            "service paused and forgotten"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "class-a",
+            "class-c",
+            "van"
+          ],
+          "guide": null,
+          "kw": [
+            "starlink rv",
+            "rv internet",
+            "starlink not working rv"
+          ],
+          "demand": null,
+          "makers": []
+        },
+        {
+          "id": "tv-mounts-and-lifts",
+          "n": "TV mounts and lifts",
+          "aka": "tv mount|articulating mount|televator|tv lift|exterior tv",
+          "does": "holds the TV and swings it where you can see it",
+          "fails": [
+            "arm lock fails and the TV swings out in transit",
+            "mount pulled from the wall",
+            "lift motor dead",
+            "strap lost"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "class-a",
+            "class-c",
+            "van"
+          ],
+          "guide": null,
+          "kw": [
+            "rv tv mount",
+            "rv tv lift",
+            "televator"
+          ],
+          "demand": null,
+          "makers": [
+            {
+              "brand": "Lippert",
+              "url": "https://support.lci1.com/documentation/"
+            }
+          ]
+        },
+        {
           "id": "central-vacuum-and-cleaning",
           "n": "Central vacuum and cleaning",
-          "aka": "central vac|vacuum",
+          "aka": "central vac|vacuum|Dyson|vacuum hose",
           "does": "cleaning without hauling a vacuum",
           "fails": [
             "clogged hose",
@@ -4193,8 +5619,9 @@
             "hidden in a compartment"
           ],
           "types": [
-            "motorhome",
-            "fifth-wheel"
+            "fifth-wheel",
+            "class-a",
+            "class-c"
           ],
           "guide": null,
           "kw": [
@@ -4210,7 +5637,7 @@
         {
           "id": "grill-and-outdoor-cooking",
           "n": "Grill and outdoor cooking",
-          "aka": "rv grill|BBQ|Camp Chef|Weber Q|portable grill",
+          "aka": "rv grill|BBQ|Camp Chef|Weber Q|portable grill|Blackstone|griddle|quick connect",
           "does": "cooks outside off the coach's propane or its own bottle",
           "fails": [
             "low flame from a long hose",
@@ -4221,7 +5648,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": null,
@@ -4232,6 +5660,32 @@
           ],
           "makers": [],
           "demand": null
+        },
+        {
+          "id": "exterior-kitchen",
+          "n": "Exterior kitchen",
+          "aka": "outdoor kitchen|pull-out kitchen|exterior cooktop",
+          "does": "a cooktop and sink that slide out of a bay",
+          "fails": [
+            "gas quick connect leaks",
+            "slide jammed",
+            "sink drain",
+            "latch broken"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "class-a",
+            "class-c",
+            "van"
+          ],
+          "guide": null,
+          "kw": [
+            "rv outdoor kitchen",
+            "pull out kitchen rv"
+          ],
+          "demand": null,
+          "makers": []
         },
         {
           "id": "fire-extinguisher",
@@ -4247,7 +5701,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": null,
@@ -4268,7 +5723,7 @@
         {
           "id": "engine-and-drivetrain",
           "n": "Engine and drivetrain",
-          "aka": "gas engine|diesel pusher|cummins|v10|transmission",
+          "aka": "gas engine|diesel pusher|cummins|v10|transmission|driveshaft|u-joint|differential|spark plugs|glow plugs|timing belt",
           "does": "moves the coach",
           "fails": [
             "overheating on grades",
@@ -4278,7 +5733,9 @@
             "check engine light"
           ],
           "types": [
-            "motorhome"
+            "class-a",
+            "class-c",
+            "van"
           ],
           "guide": null,
           "kw": [
@@ -4305,7 +5762,7 @@
         {
           "id": "cooling-system",
           "n": "Cooling system",
-          "aka": "radiator|coolant|fan clutch|charge air cooler",
+          "aka": "radiator|coolant|fan clutch|charge air cooler|thermostat|water pump|fan clutch|radiator hoses",
           "does": "keeps the engine at temperature",
           "fails": [
             "coolant loss",
@@ -4315,7 +5772,9 @@
             "coolant type"
           ],
           "types": [
-            "motorhome"
+            "class-a",
+            "class-c",
+            "van"
           ],
           "guide": null,
           "kw": [
@@ -4331,6 +5790,30 @@
           "makers": []
         },
         {
+          "id": "engine-block-heater",
+          "n": "Engine block heater",
+          "aka": "block heater|oil pan heater",
+          "does": "warms the engine so a cold diesel will start",
+          "fails": [
+            "cord frayed",
+            "element dead",
+            "left plugged in and tripping the pedestal",
+            "timer forgotten"
+          ],
+          "types": [
+            "class-a",
+            "class-c",
+            "van"
+          ],
+          "guide": null,
+          "kw": [
+            "rv block heater",
+            "diesel block heater not working"
+          ],
+          "demand": null,
+          "makers": []
+        },
+        {
           "id": "belts,-hoses-and-filters",
           "n": "Belts, hoses and filters",
           "aka": "serpentine belt|air filter|fuel filter|oil filter",
@@ -4342,7 +5825,9 @@
             "DEF filter"
           ],
           "types": [
-            "motorhome"
+            "class-a",
+            "class-c",
+            "van"
           ],
           "guide": null,
           "kw": [
@@ -4369,7 +5854,9 @@
             "sensor codes"
           ],
           "types": [
-            "motorhome"
+            "class-a",
+            "class-c",
+            "van"
           ],
           "guide": null,
           "kw": [
@@ -4387,7 +5874,7 @@
         {
           "id": "chassis-brakes",
           "n": "Chassis brakes",
-          "aka": "air brakes|hydraulic brakes|brake chambers|slack adjusters",
+          "aka": "air brakes|hydraulic brakes|brake chambers|slack adjusters|ABS|parking brake|slack adjuster",
           "does": "stop a heavy vehicle",
           "fails": [
             "air pressure loss",
@@ -4397,7 +5884,9 @@
             "ABS light"
           ],
           "types": [
-            "motorhome"
+            "class-a",
+            "class-c",
+            "van"
           ],
           "guide": "trailer-brakes-required",
           "kw": [
@@ -4424,7 +5913,8 @@
             "water in the tanks"
           ],
           "types": [
-            "motorhome"
+            "class-a",
+            "class-c"
           ],
           "guide": null,
           "kw": [
@@ -4451,7 +5941,9 @@
             "kingpin play"
           ],
           "types": [
-            "motorhome"
+            "class-a",
+            "class-c",
+            "van"
           ],
           "guide": null,
           "kw": [
@@ -4469,7 +5961,7 @@
         {
           "id": "suspension-and-shocks",
           "n": "Suspension and shocks",
-          "aka": "shocks|springs|air bags|sway bar|track bar",
+          "aka": "shocks|springs|air bags|sway bar|track bar|ride height valve|track bar",
           "does": "carries the house without bouncing",
           "fails": [
             "worn shocks and porpoising",
@@ -4478,7 +5970,9 @@
             "ride height valve"
           ],
           "types": [
-            "motorhome"
+            "class-a",
+            "class-c",
+            "van"
           ],
           "guide": null,
           "kw": [
@@ -4506,7 +6000,9 @@
             "chassis battery drain"
           ],
           "types": [
-            "motorhome"
+            "class-a",
+            "class-c",
+            "van"
           ],
           "guide": null,
           "kw": [
@@ -4533,7 +6029,9 @@
             "parasitic draw"
           ],
           "types": [
-            "motorhome"
+            "class-a",
+            "class-c",
+            "van"
           ],
           "guide": null,
           "kw": [
@@ -4551,7 +6049,7 @@
         {
           "id": "dash-air-conditioning",
           "n": "Dash air conditioning",
-          "aka": "dash ac|engine ac|evaporator",
+          "aka": "dash ac|engine ac|evaporator|heater core|cabin filter|compressor",
           "does": "cools the cab while driving",
           "fails": [
             "no cold",
@@ -4561,7 +6059,8 @@
             "condenser fan"
           ],
           "types": [
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": null,
@@ -4588,7 +6087,9 @@
             "particulate filter"
           ],
           "types": [
-            "motorhome"
+            "class-a",
+            "class-c",
+            "van"
           ],
           "guide": null,
           "kw": [
@@ -4605,7 +6106,7 @@
         {
           "id": "fuel-system",
           "n": "Fuel system",
-          "aka": "fuel pump|lift pump|fuel filter|fuel gauge",
+          "aka": "fuel pump|lift pump|fuel filter|fuel gauge|fuel tank|fuel gauge",
           "does": "delivers fuel",
           "fails": [
             "lift pump failure",
@@ -4614,7 +6115,9 @@
             "fuel starvation on grades"
           ],
           "types": [
-            "motorhome"
+            "class-a",
+            "class-c",
+            "van"
           ],
           "guide": null,
           "kw": [
@@ -4632,7 +6135,7 @@
         {
           "id": "wheels,-tires-and-tpms",
           "n": "Wheels, tires and TPMS",
-          "aka": "aluminum wheels|tire pressure|load range|tpms",
+          "aka": "aluminum wheels|tire pressure|load range|tpms|valve stem|wheel seal|rims",
           "does": "carry the load at highway speed",
           "fails": [
             "age cracking",
@@ -4641,7 +6144,9 @@
             "sensor batteries"
           ],
           "types": [
-            "motorhome"
+            "class-a",
+            "class-c",
+            "van"
           ],
           "guide": "rv-tire-replacement",
           "kw": [
@@ -4666,7 +6171,7 @@
         {
           "id": "propane-tank",
           "n": "Propane tank",
-          "aka": "LP tank|ASME tank|DOT cylinder|20 lb tank",
+          "aka": "LP tank|ASME tank|DOT cylinder|20 lb tank|mounting bracket|tank strap",
           "does": "holds the gas the appliances burn",
           "fails": [
             "overfilled",
@@ -4678,7 +6183,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": null,
@@ -4689,6 +6195,30 @@
           ],
           "makers": [],
           "demand": null
+        },
+        {
+          "id": "propane-tank-cover",
+          "n": "Propane tank cover",
+          "aka": "tank cover|tank boot|LP cover",
+          "does": "dresses and shields the cylinders on the tongue",
+          "fails": [
+            "cracked by UV",
+            "straps snapped",
+            "traps water against the tank",
+            "will not fit after a tank swap"
+          ],
+          "types": [
+            "trailer",
+            "fifth-wheel",
+            "pop-up"
+          ],
+          "guide": null,
+          "kw": [
+            "rv propane tank cover",
+            "propane tank boot"
+          ],
+          "demand": null,
+          "makers": []
         },
         {
           "id": "propane-regulator",
@@ -4704,7 +6234,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": "rv-propane-furnace-wont-light",
@@ -4754,7 +6285,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": null,
@@ -4779,7 +6311,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": null,
@@ -4804,7 +6337,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": "rv-furnace-carbon-monoxide",
@@ -4830,7 +6364,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": null,
@@ -4844,7 +6379,7 @@
         {
           "id": "propane-refill-and-exchange",
           "n": "Propane refill and exchange",
-          "aka": "refill|exchange tank|bulk fill",
+          "aka": "refill|exchange tank|bulk fill|recertification|requalification",
           "does": "getting more gas",
           "fails": [
             "exchange tanks short-filled",
@@ -4855,7 +6390,8 @@
           "types": [
             "trailer",
             "fifth-wheel",
-            "motorhome",
+            "class-a",
+            "class-c",
             "van"
           ],
           "guide": null,
@@ -4869,7 +6405,7 @@
         {
           "id": "extend-a-stay-and-external-supply",
           "n": "Extend-a-stay and external supply",
-          "aka": "extend a stay|portable tank kit|stay longer",
+          "aka": "extend a stay|portable tank kit|stay longer|fire pit|BBQ hookup",
           "does": "runs the coach from an external tank",
           "fails": [
             "leaking tee",
@@ -4877,7 +6413,8 @@
             "wrong hose for the appliance"
           ],
           "types": [
-            "motorhome"
+            "class-a",
+            "class-c"
           ],
           "guide": null,
           "kw": [

@@ -62,7 +62,7 @@ const REPRESENTATIVE = [
   // start-here contrast defect (4.13:1). The hub alone cannot catch it: manuals/index.html has no
   // table. Name the template that actually regressed, so the gate closes the class. (W13.)
   'manuals/start-here.html',
-  // The parts hub is a page kind of its own (a 157-item reference with a filter bar), so a defect
+  // The parts hub is a page kind of its own (a 210-item reference with a filter bar), so a defect
   // in its shape reaches nobody's audit if it is not named here. Added with parts/index.html.
   'parts/index.html',
   // THE BUTTON-DRIVEN FINDER IS ITS OWN PAGE KIND. It asks a sequence of questions and answers
