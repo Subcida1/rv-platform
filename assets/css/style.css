@@ -2302,6 +2302,15 @@ details.faq p{color:var(--text-2);font-size:16px;line-height:1.7;padding-bottom:
 .body-15{color:var(--text-2);font-size:15px;line-height:1.7}
 .note-13{color:var(--text-2);font-size:13px}
 .note-sm.strong{font-weight:700;color:var(--text-2)}
+
+/* THE CROSS-REFERENCE NOTE. Ty, 2026-10-14, on the closing line of the towing guide's
+   brake section: "This should be like centered fine print, not too fine to read just
+   smaller then it is now", with the text muted and the link left alone. The size and the
+   ink are .guide-group-note's, because the site already settled on 14.5px in --text-2 as
+   its fine print; only the selector is new, so a cross-reference note does not have to
+   borrow a class named for the guides hub's group headings. The link keeps its own
+   colour, because a note that dims its link is a note nobody follows. */
+.crossref-note{font-size:14.5px;color:var(--text-2);text-align:center}
 .mb-10{margin-bottom:10px}
 .mb-12{margin-bottom:12px}
 .mb-18{margin-bottom:18px}

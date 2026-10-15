@@ -68,6 +68,10 @@ CENTER_OK = {
     # "This at the bottom should be centered, always. every page on this one here. or every
     # instance of this 'Something wrong here, or something missing? Tell us. About OriginRV.'"
     '.page-foot',
+    # ADDED 2026-10-14, at Ty's request: the cross-reference note that closes a section by
+    # pointing at the guide that owns the detail. Same reason as .page-foot above -- he asked
+    # for it centred, and a centred line is a decision that belongs in this list.
+    '.crossref-note',
 }
 
 # FROZEN, NOT ENDORSED. The rule (STYLE.md) is that a gradient marks something that leads
