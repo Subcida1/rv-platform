@@ -2621,6 +2621,9 @@ Ty, 01:00: *"act as a conductor for the night and keep all of our work rolling �
 
 **E. conv-095eb8fd — parts:** continue; fold in queued card fixes: black tank card -> rv-black-tank; chassis battery card (retarget or unlink); water pressure regulator + gravity fill -> retarget or gap-note; ladder naming rename; Henry's Tropi-Cool alias; heat-pump card draft (8ed90b2).
 
-**F. Conductor (conv-19dd16d7):** roof-leak EPDM independent pass (OWED — dispatching now, subagent + bridge); monitor gh-failures; hourly fleet check; incidents.
+**F. Conductor (conv-19dd16d7):** monitor gh-failures; hourly fleet check; incidents; unblocking; morning report to Ty.
+
+- **Roof-leak EPDM independent pass: ALREADY CLOSED — no dispatch needed.** `a575e176` ("roof-leak: the OWED independent pass is done, and it found two defects") is on main; verified by ancestry. The two defects were the Alpha "will not adhere well" qualification and the unsourced "two-part" descriptor, both fixed; four reviewer findings checked and refuted. The manifest now carries **0 OWED markers across all 133 pages** — the "STILL OWED" lines in the fire reports above are stale history from before 2026-10-12 16:08 UTC.
+- Conductor status as of 01:15 PDT: all six working sessions ACTIVE and processing; `conv-cf6aa2a3` IDLE waiting on Ty (W19 page 6) — not disturbed. Batch D closed by its own session. Main green, no failed runs in 6h.
 
 **Done criteria:** every item above is applied and pushed with CI green, or explicitly recorded as blocked-on-Ty. The conductor reports the night's result to Ty in the morning.
