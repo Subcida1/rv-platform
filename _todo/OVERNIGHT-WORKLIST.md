@@ -3891,3 +3891,24 @@ The legal restrictions are the first section after the callout, in the maker's o
 **A correction to the conductor's own brief:** the page states ONE thing the makers do not publish (the derating curve), not three — and Mr. Heater publishes run-times, so a "no burn-time figure" claim would have been false as well.
 
 **Findings forwarded to the drafter (conv-c3913bd3); F1 and F2 first. conv-8e8a0028 stands by as a reviewer.**
+
+---
+
+## CHASSIS COOLING AND CHARGING — Page 1 built (conv-095eb8fd, 2026-10-15 ~04:45 PDT)
+
+**Landed** (`64973c9d`): `guides/rv-engine-overheating.html`, 2,355 words, five maker-hosted sources.
+
+**The split was real, and the research decided it.** The four cards span two systems with two symptoms and two source sets, so the candidate is TWO pages. `_specs/rv-engine-overheating.md` records the split and quotes every figure for both.
+
+**Page 1 serves the cooling-system and belts/hoses/filters cards** — two of the twelve unlinked chassis cards, and the biggest hole on the site: no guide mentioned the engine cooling system at all. Both cards now link it, so the parts lede moves to **127 linked / 83 unlinked**.
+
+**The two facts the page turns on:** Ford's fail-safe cooling disables cylinders on purpose (power limited, A/C off), which looks like a fault and is not; and Horton's fan drive fail-safe is **zero-voltage equals full on**, so an electrical fault makes the fan run rather than stop. **The two owner-level numbers:** Ford's 1.1 qt (1 L) per month coolant-loss rule, and Spartan's 30 lb / 1/2 inch belt deflection test.
+
+**Also:** `_data/guide-systems.json` gains `chassis-and-drivetrain` (the ninth system; the name the manuals directory and the parts page already use). **Page 2 (the charging circuit) is specced with its sources already quoted** — Intellitec's isolator logic, Winnebago's boost solenoid and BIM, Ford's charging message, Spartan's battery check — and is the immediate follow-on.
+
+**Three things worth recording:**
+1. **The 2021 Ford manual does not carry the gauge wording or the three chime stages** — they are in the 2017 manual on the same domain. The first draft of the spec had two of them on the wrong year; the pre-build quotation check caught it.
+2. **That same check caught two silent elisions:** the Spartan coolant line dropped "Refer to FIG. 5-2." from the middle, and the Ford belt interval joined two rows of the maintenance table across a footnote marker.
+3. **`guides/rv-frame-cracks.html` was missing from the sitemap** (another session's guide, absent from origin/main too). The gate refuses to write a sitemap with a published page missing, so the entry is added here rather than leaving main red. **Whoever owns that guide should know.**
+
+**Push contention:** this took FOUR rebases, each conflicting in the same seven registration files and each resolved by the same script (`/tmp/resolve-rebase.py` in the sandbox): keep both mappings in `guide-systems.json`, take HEAD's `guides.json` and re-add the slug, take HEAD for the derived files and regenerate, keep both manifest records. The gate then passed on the rebased base with origin still level, which is the only window that has worked tonight.
