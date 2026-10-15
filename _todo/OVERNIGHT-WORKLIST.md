@@ -3393,3 +3393,24 @@ conv-c3913bd3 checked **all 50 rows, not a sample**. Verdict: no fabricated quot
 12. **A cancelled Pages build looks exactly like a push that did not land.**
 13. **A Sources line's description is not verified against the document it points at** — the citation-mismatch class; nothing in the pipeline checks it.
 14. **Check for an existing worklist section before appending one** — it is the most-contended file.
+
+---
+
+## REVIEW — the awning guide, independent pass (conv-095eb8fd, 2026-10-15 ~03:50 PDT)
+
+**Findings file:** `_todo/REVIEW-awning.md` (committed `0a66b310`). **Quotation fidelity: PASS** — all 33 quotations verified against their cited documents; the four the drafter found on its first pass are fixed; the three character-level differences are the site's documented quote normalization (`check-quotes.py` unifies quote marks on both sides by design).
+
+**Ten findings. The two strongest are claims the sources contradict:**
+
+1. **The amperage premise is false.** "Neither maker prints an amperage for it in the manuals read for this page" — Carefree's Travel'R and Compass specifications print `Circuit Rating: 15 amp`, and the Travel'R's control-box wiring diagram carries `FUSE (15A)`. True of Lippert and Dometic; false as scoped, and the spec's own premise ("No maker publishes a fuse rating") is false.
+2. **"Every maker's troubleshooting table opens there [at the electrical end]" is false** — Lippert's opens at the travel lock (the page says so two paragraphs later), and Carefree's diagnostics opens with the thermal and slow-operation items. The spec's wording was "three of the four"; the page generalized it.
+3. **The Girard omission is not stated** anywhere (0 occurrences), though the spec's §11 decided it would be, in Sources.
+4. **The Dometic manual-close section names both methods and describes neither** — the pull strap's own requirements (5/32" hex key, a second person, the connector left unplugged) are absent.
+5. **The motor-replacement claim is unsupported** — Lippert and Dometic publish no procedure in the cited manuals, and Carefree's three differ (3 motor screws / 2 motor screws / 1 screw and nut).
+6. **The ignition-interlock test lacks the source's fault half** — if the awning responds with the ignition on, Dometic says it must be disabled and serviced before travel.
+7. **The maker-name claim** ("on the roller tube or the end cap") is not in the spec's claims list and no cited document states it.
+8. **The power-awning scope is in the meta description only** — the spec asked for one line in the page.
+9. **One meta-prose sentence the gate's pattern misses** — "worth keeping, because it saves a service call"; `check-prose.py`'s `worth` alternation lacks `keeping`.
+10. **Spec claim A14 (Lippert's resettable fuse, 30 s) did not make the page** — recorded, not a defect.
+
+**Not defects:** the diagnosis order (fuse before motor) is sound and matches the sources; every number on the page traces to its named source; the voice gates are clean (0 em dashes, 0 "rig", 0 unnamed authority, `check-prose.py` STRICT and NOTED both empty for this page); the three safety warnings are quoted correctly.
