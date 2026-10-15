@@ -623,9 +623,9 @@
     "claims": "b42c5240ff3f3533"
   },
   "guides/rv-maintenance-schedule.html": {
-    "hash": "d5f70c646272dd92",
+    "hash": "458cc7718f2f0c71",
     "status": "verified",
-    "verified_by": "queued conductor batch A applied 2026-10-15: added the topic-matched tool links the silo findings named -- maintenance-schedule gains the water filter and anode rod finders (the two intervals that replace a part), trip-planner gains the fuel cost calculator, weight-calculator's next block gains the towing capacity guide, battery-runtime's block gains the battery not charging guide, and trailer-brakes scope-labels its threshold table as three worked states rather than a full fifty. No fact changed; no existing link removed.",
+    "verified_by": "new guide 2026-10-15: reciprocal link to the awning guide added in the Related guides block. One sentence and one link; no fact changed.",
     "verified_at": "2026-10-15",
     "sources": [],
     "spec": null,
@@ -653,10 +653,10 @@
     "claims": "a44bf4a3d9403aa0"
   },
   "guides/rv-pre-trip-walkaround.html": {
-    "hash": "65bf37a356cbc5c6",
+    "hash": "3675ac9c0ce2cd98",
     "status": "verified",
-    "verified_by": "queued Neo guides-12th silo finding applied 2026-10-15: these eighteen guides linked nothing outside /guides/ -- no tool, no part, no manual, no directory. Each now names one topic-matched target in its Related guides block (a tool where the guide is about arithmetic, the parts page where it is about a part, the maker's manual section where it is about documents). No fact changed; no existing link removed.",
-    "verified_at": "2026-10-14",
+    "verified_by": "new guide 2026-10-15: reciprocal link to the awning guide added in the Related guides block. One sentence and one link; no fact changed.",
+    "verified_at": "2026-10-15",
     "sources": [],
     "spec": null,
     "spec_waived": true,
