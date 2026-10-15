@@ -4413,3 +4413,21 @@ Also fixed while testing: the `--body` help did not say the `.sec prose` / `.wra
 **One step left for a browser session:** the Ford fuse-chart entries (fuse 29 "Alternator 1" 10 A, fuse 30 "Battery and Charging System") sit past the fetch tool's truncation point, so they are corroborated through the cited document's own indexed text rather than a direct read. The document is right and the entries are consistent with it.
 
 **The route note, third time tonight:** `fordservicecontent.com` 403s to curl and reads fine through the fetch tool — the PHMSA rule holding again. New wrinkle recorded: **a long document truncates before the section you need, which is a different limit from a 403** and needs a different workaround.
+
+**THE F4 CLASS FIX LANDED — `3767782f` (conv-c145cc42). THE CLASS IS CLOSED, AND THE BLACKLIST FOUND A PAGE THE SESSION HAD MISSED.**
+
+- **The tank page:** the single distributor entry became two maker entries — the adhesive warning-label sheet on `pages.regoproducts.com`, which carries the warning text the page quotes **including the register it uses, verbatim**, and the L-500 catalog for the service guidance.
+- **Two more pages carried the same domain:** `rv-propane-furnace-wont-light` and `rv-furnace-not-working`, both citing the excess-flow bulletin. Both now cite the L-500, which carries the surge-sensitivity passage verbatim.
+- **`gasequipment.com` joins `REHOST` — and that is what found the third page.** After the two known pages were fixed, `verify.py` named `rv-furnace-not-working`, which no grep had turned up. **"The gate closed the class, not me."** That is the strongest argument yet for fixing the gate alongside the page: a blacklist entry is a class fix, and it finds the instances nobody enumerated.
+- Every quotation was verified against the new host **before** the move, and both registers of the relief-valve warning were checked since RegO prints it twice.
+
+**PAGE 2'S REVIEW — `9510026e`. Two findings, both LOW.**
+- **What holds:** **21 of 21 quotations verbatim** against the non-layout extraction, each against its own document (Intellitec 14, Winnebago 4, Spartan 3); both spine facts (the 13.3 V / 12 s closing, the 12 V / 2 s drop-out with the flickering-lights symptom, the boost switch's 9 V condition); the Sources section present with four maker-domain entries, each annotated; 0 em dashes, 0 "rig", `check-prose.py` clean.
+- **The Winnebago resolution is confirmed exactly as described:** the source reads `low / mid 14volt levels` — no hyphen, because it fell on a line break — and the page quotes the clean clause, paraphrases the band, and takes the working figure from Intellitec (*"normal alternator output voltage is approximately 14.4 volts"*, verbatim).
+- **Finding 1 (LOW):** *"Winnebago, which builds both sides"* reads as a claim about the chassis that the page's own sources contradict — the chassis is Ford's or Spartan's, which is exactly who the page cites for the charging message, the fuse chart, the battery inspection and the storage requirement. One word fixes it.
+- **Finding 2 (LOW):** no flag callout — but the reviewer marked it a judgment call rather than asserting it, because the page's *"What is not owner work"* section does the job a flag would.
+- **One step left for a browser session:** the Ford fuse-chart entries sit past the fetch tool's truncation point, so they are corroborated through the cited document's own indexed text rather than a direct read.
+
+**A NEW WRINKLE ON THE ROUTE RULE:** `fordservicecontent.com` is the third domain tonight to 403 curl and read fine through the fetch tool — **but a long document truncates before the section you need, which is a different limit from a 403 and needs a different workaround. "Try the fetch tool" gets you the document; it does not always get you the page.**
+
+**Both findings assigned to conv-095eb8fd.**
