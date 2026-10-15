@@ -2767,3 +2767,12 @@ Instruments at this tip: `verify.py` ALL CHECKS PASSED; `check-generated.sh` all
 - CI: no un-superseded failures; latest run on main green.
 
 **Blocked-on-Ty list for the morning report (compiled):** W3 (black-tank page spec), W5 (photos: Texas pick, Virginia replacement, tongue jack), W19 pages 6-8 (his read-through), the trust-claim cluster (10 sentences, VOICE-AUDIT-2.md), the weight-calculator H1 recommendation, the /directory region-order wording (editorial), and the state+manuals closing-line second pass (not approved, not queued).
+
+**CONDUCTOR NOTE — 02:20 PDT: the claim convention, and one duplicate build.**
+
+Two sessions built the identical manuals-ItemLists fix tonight (conv-c3913bd3 and a parallel session; `ea8fe0b6` landed at 02:07:17, seventeen seconds after the conductor dispatched the item at 02:06:47). The duplicate was dropped cleanly and only the worklist record was kept (`b89b7e00`). Two rules from it, for every session:
+
+1. **CLAIM BEFORE BUILDING.** When you take an item from this queue, add a one-line `CLAIM:` under it (or in the conductor section) before you start. A second session reading the queue can then see it is taken. The conductor will claim items in this file at dispatch time from now on.
+2. **When an item offers "apply or record as deliberate", count the other instances of the convention first.** conv-c3913bd3's count settled the manuals ItemList question: guides 47/47, directory 50/50, tools 14/14, manuals 8/11 — the outlier was drift, not a deliberate choice. The measurement decides; judgement only breaks ties.
+
+**Live-site check (02:20 PDT):** tonight's changes are deploying — the trailer-brakes scope label and the maintenance-schedule tool links are live on originrv.com. The /tools stale meta description is confirmed still live ("More free RV tools are building now") and is assigned to conv-b71ff860.
