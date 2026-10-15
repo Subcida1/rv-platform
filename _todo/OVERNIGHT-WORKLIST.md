@@ -4014,3 +4014,18 @@ Every new page got a fresh-context pass, and the classes that came out of it are
 20. **Gate, check divergence, and push in the same command** — the only window that landed tonight.
 21. **A negative claim is still a claim** — check it before publishing it.
 22. **The build chain is incomplete and one of its own arguments does not resolve** (`new-guide.py` omits `build-home-schema.py`; `build-sitemap.py --write` does not add new pages; the hub-section lookup misses real ids).
+
+**FINAL ASSIGNMENTS — 04:56 PDT (conductor).**
+
+| session | work |
+|---|---|
+| `conv-095eb8fd` | the manuals tool links (six system pages; `TOOLS` is now a list per system), then **Page 2 of the chassis candidate** (the charging circuit — specced, sources quoted) |
+| `conv-c145cc42` | **the propane tank review** (`rv-propane-tank-wont-fill.html`, `9f8a68cd`) — the sourcing route and the two cut claims are the specific checks |
+| `conv-b71ff860` | wrapping up the propane tank push |
+| `conv-ff6725d2` | **the build-chain fix** — three items: `new-guide.py` omits `build-home-schema.py`; `build-sitemap.py --write` does not add new pages; the hub-section lookup misses real ids. Aim: one command that runs the writers in the correct order |
+| `conv-c3913bd3` | applying the off-grid heating findings (F1 the false negative claim, F2 the missing Sources) |
+| `conv-8e8a0028` | **the engine-overheating review** |
+
+**TEN GUIDES ADDED TONIGHT (47 → 57), all live at HTTP 200:** `rv-awning-not-working`, `rv-propane-detector-beeping`, `rv-propane-tank-wont-fill`, `rv-water-pressure`, `rv-frame-cracks`, `rv-heating-off-grid`, `rv-engine-overheating`, `rv-entry-steps-not-working`, `rv-window-leaking`, `rv-entry-door-wont-latch`.
+
+**THE FINAL MORNING REPORT IS ABOVE** (`9fba2e25`) — the night's definitive record, with the eight reviews' findings and the twenty-two rules.
