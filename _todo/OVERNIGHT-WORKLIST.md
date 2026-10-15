@@ -4578,3 +4578,15 @@ Two findings, verified against the page sources at tip `356cdf67` (the run's rep
 - **#2 guides hub bare ItemList: CONFIRMED.** `guides/index.html`'s first JSON-LD block is a bare `ItemList` (58 items, numberOfItems 58), while tools/manuals/directory wrap theirs in a `CollectionPage` with `mainEntity` (and parts has one as its second block). Queue: wrap it the same way — and note the generator: `sync-counts.py` (lines ~171-175) rewrites that block, so the wrapper must go in the generator too, with its `old` regex updated to match the new shape.
 
 **Verified clean (the run's record):** guides hub 58 cards = 58 sitemap guides; tools hub 15 cards = ItemList 15/15; manuals hub 11 = 11; directory hub 50 = 50; parts hub fully server-rendered with every numeric claim exact (210 cards, 9 systems, 129 with outbound links, 110 to /guides/, 81 unlinked, per-system counts 32/24/24/19/21/40/25/15/10 = 210); all 5 hubs one H1, canonicals, BreadcrumbList, zero dashes/FFFD, titles 39-55ch, metas 143-157, W29 footers and Where-to-go-next strips live; voice PASS on all five ledes.
+
+## Neo parts 15th rotation (2026-10-15, verified from the Cloud lane)
+
+Eight items, verified against the page source at tip `73b5a1b9`:
+
+- **#1 ItemList degenerate: CONFIRMED.** The CollectionPage ItemList has numberOfItems 210 with 210 ListItems, but only **9 distinct URLs** -- every item points at its section anchor (exterior-and-body x40, towing x32, kitchen x25, power x24, water x24, heating x21, sanitation x19, chassis x15, propane x10). The 210 unique `id="part-*"` anchors exist and resolve. Queue: wire each ListItem's url to its own `#part-<slug>` anchor.
+- **#2 stale data-claims: CONFIRMED.** The lede claims parts-linked=129 / parts-covered=110 / parts-unlinked=81; the source measures **134 any-link / 111 guide-covered / 76 unlinked** (Neo: 135/111/75 -- a one-card boundary difference; either way the claims are stale). Queue: re-sync to generated values.
+- **#3 guide coverage: CONFIRMED.** 40 distinct guides linked (up from 37); 18 slugs unlinked -- the 14 with natural card matches Neo lists, plus the 4 natural misses (driving-motorhome, trip-planner, maintenance-schedule, pre-trip-walkaround).
+- **#4 zero-link cards: CONFIRMED.** 76 of 210 (36.2%; Neo: 75/35.7%). The mapped opportunities stand: water-pressure-regulator + accumulator -> rv-water-pump-wont-prime; fuses/breaker panel -> rv-fuse-keeps-blowing; battery-monitor-and-shunt -> rv-battery-not-charging; wiring-harness -> rv-12-volt-problems.
+- **#5-#8 verified:** 210 unique `part-*` anchors, all resolving; the parts WebSite JSON-LD carries `@id https://originrv.com/#website`; the guides hub 58 = 58; hygiene/voice PASS; the anode-rod card links both its guide and its tool.
+
+Instruments at this tip: `verify.py` ALL CHECKS PASSED.
