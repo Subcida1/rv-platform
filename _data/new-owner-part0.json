@@ -215,7 +215,7 @@
      "blocks": [
       {
        "kind": "p",
-       "html": "If the trailer has electric brakes, yes. The controller is what coordinates trailer braking with the tow vehicle, and what lets you apply the trailer brakes alone when the combination starts to sway. Whether brakes are required at a given weight is its own guide: <a href=\"guides/trailer-brakes-required.html\">when trailer brakes are required</a>."
+       "html": "If the trailer has electric brakes, yes. The controller is what coordinates trailer braking with the tow vehicle, and what lets you apply the trailer brakes alone when the combination starts to sway. Whether brakes are required at a given weight is its own guide: <a href=\"guides/trailer-brakes-required.html\">when trailer brakes are required</a>, and the weight each state sets is in <a href=\"tools/state-trailer-brake-laws.html\">the state trailer brake table</a>."
       }
      ]
     },

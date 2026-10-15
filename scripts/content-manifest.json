@@ -853,9 +853,9 @@
     "claims": "afdbfd340b1ab1f0"
   },
   "guides/trailer-brakes-required.html": {
-    "hash": "c5d6255976006f9c",
+    "hash": "f1be18647d0552ad",
     "status": "verified",
-    "verified_by": "queued conductor batch A applied 2026-10-15: added the topic-matched tool links the silo findings named -- maintenance-schedule gains the water filter and anode rod finders (the two intervals that replace a part), trip-planner gains the fuel cost calculator, weight-calculator's next block gains the towing capacity guide, battery-runtime's block gains the battery not charging guide, and trailer-brakes scope-labels its threshold table as three worked states rather than a full fifty. No fact changed; no existing link removed.",
+    "verified_by": "state brake tool follow-up 2026-10-15: the guide now links the tool that quotes the other 48 states' thresholds. One sentence and one link in the Related guides block.",
     "verified_at": "2026-10-15",
     "sources": [],
     "spec": "_specs/trailer-brakes-required.md",
