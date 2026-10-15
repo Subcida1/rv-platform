@@ -1760,7 +1760,17 @@ details.faq p{color:var(--text-2);font-size:16px;line-height:1.7;padding-bottom:
 .verified::before{content:"\2713";display:grid;place-items:center;width:19px;height:19px;border-radius:50%;background:var(--brand);color:var(--text-inv);font-size:11px;font-weight:900}
 /* quieter primary hover (the old pink glow bubble) */
 .btn-primary:hover{box-shadow:0 6px 14px -8px var(--glow);transform:none}
-.tool-strip{display:flex;flex-wrap:wrap;gap:9px;margin-top:16px}
+/* CENTRED, because the same row is centred everywhere else it appears. Ty found this on
+   2026-10-14: "the buttons for the tools aren't centered at the top." He is right, and the
+   reason it survived is worth keeping. The homepage's pill row is `<div class="chips chips-tools">`
+   and `.chips` carries justify-content:center, so it centres. The tools hub's is a bare
+   `.tool-strip`, which carried no alignment at all, so it sat left. Phone widths looked correct
+   the whole time, because the <=720px block at the END of this file sets justify-content:center
+   on `.tool-strip` for the three-across layout -- which is exactly why every phone-width audit
+   reported this row as fine. The two surfaces are meant to look the same; the stylesheet even
+   says so above ("The pills carry the same names as the homepage's"). It was the desktop branch
+   that had no rule. */
+.tool-strip{display:flex;flex-wrap:wrap;justify-content:center;gap:9px;margin-top:16px}
 .tool-strip .tchip{font-size:13px;font-weight:700;color:var(--text-2);background:var(--surface);border:1px solid var(--border);padding:0 14px;min-height:44px;border-radius:999px;display:inline-flex;align-items:center;gap:7px}
 .tool-strip .tchip b{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 /* pipeline cards: 4-col when wide */
