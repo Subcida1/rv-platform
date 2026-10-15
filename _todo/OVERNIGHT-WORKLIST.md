@@ -4156,3 +4156,20 @@ Every new page got a fresh-context pass, and the classes that came out of it are
 **Also applied:** off-grid F1 (the false "not published" claim replaced with Eberspaecher's own 9%-per-1,000 m rate and Webasto's per-model altitude chart — one maker publishes a rate, the other a ceiling, which is a better page than the absence was), F3, F4; water-pressure F3 (the unsourced 90 psi figure gone, the point surviving without the number), F4 (Rovanco publishes the design rating but no burst figure, and the sentence now says which), F5 (Blu Technology verified 200, citation stands).
 
 **Sequencing note:** the final sweep ran against main at ~05:00 and correctly found no Sources section on either page — the fixes were local at that point. **The verifier is armed and runs when the commit lands.**
+
+**PROPANE TANK REVIEW DONE — `1d055647` (conv-c145cc42). The sourcing holds where it matters.**
+
+**18 of 18 quotations verbatim** against their documents (RegO 13, Cummins Onan 4, Cavagna 1); **all five regulatory quotes verbatim against the eCFR API**; and **all three PHMSA quotes verbatim against BOTH the live page and the Wayback snapshot** (2025-01-02, word for word) — that last check is what makes the archive route legitimate rather than a workaround. The two cut claims are gone (no flow-direction language anywhere). Sources present with seven linked sources; 0 em dashes, 0 "rig"; `check-prose.py` clean; all seven URLs resolve.
+
+**Five findings, none a false claim:**
+- **F1 (Rule 2)** — "Most states have adopted the code" overstates PHMSA, which says *"many states"* and then *"you should contact your state or local government agency to find out if your state requires"* it. The page upgrades "many" to "most" and drops the check-your-state caveat. One word.
+- **F2 (Rule 2)** — the requalifier's mark letters are correct but cited to a section that does not define them: they are in **49 CFR 180.213(f)(4) and (f)(5)**, and the page cites only 173.301 and 180.209. A reader following the Sources cannot check it.
+- **F3 (Rule 3)** — **the page carries ZERO flag callouts.** It discusses propane, a relief valve that *"can expel a large jet of LP-Gas into the air"*, and a tank the page itself says to stop using. **Fix first alongside F1.**
+- **F4 (the rehost class)** — the four RegO claims are cited to `gasequipment.com`, **a distributor**, and RegO hosts the same bulletin on its own domain inside the L-500 catalog. Repoint, and add `gasequipment.com` to `REHOST`. **The propane furnace guide cites the same domain for its excess-flow document and should move with it — a class fix, not a page fix.**
+- **F5 (minor)** — "A state agriculture department" is the North Carolina Department of Agriculture, named in Sources but not in the body.
+
+**A CORRECTION TO THE BRIEF'S PREMISE, and it is the most useful line in the review: "try the fetch tool before concluding a source is unreachable, and prefer the live publisher's copy where it answers."** PHMSA does **not** 403 every machine fetch — it 403s curl (bare UA and a full browser header set), but the `fetch_webpage` tool reads the live page fine. The archive route was sound and the citations hold either way, but the publisher's own page was readable all along. **Same family as the four browser-only sites tonight: the instrument that failed was the fetcher, not the source.**
+
+**NEW FAILURE MODE RECORDED:** the push hit a GitHub token broker **429 rate-limited** ("could not read Username"); the retry after a rebase succeeded. **That is the broker throttling under the fleet's push volume, not a credential problem — wait and retry.**
+
+**Findings forwarded to the drafter (conv-b71ff860); F1 and F3 first. conv-c145cc42 stands by for Page 2's review.**
