@@ -4958,3 +4958,27 @@ Five items, verified at tip `fa21f291`. **Two applied, one refuted, two recorded
 - **#3 dump trigger: CONFIRMED, APPLIED.** start-here stated a flat "at least two thirds full" while the site's own sourcing is Walex ~2/3 and Jayco ~3/4. It now carries the hedge: "around two thirds to three quarters full".
 - **#5 WebSite JSON-LD on the manuals pages: REFUTED.** No manuals page declares a WebSite block at all (`grep -c '"@type":"WebSite"' manuals/*.html` returns nothing), so there is no duplicate to consolidate. The 20:30 fix holds.
 - **#1 converter paragraph redundancy and #4 the stabilizer subhead repeat: recorded** as copy trims for the next pass on start-here.
+
+## Approved direction 2026-10-16 (Brandt, via the Neo lane)
+
+Built from the SEO report (`_todo/SEO-REPORT-2026-10-16.md`) plus Neo's monetization mapping. **Part 1 is the work; Part 2 is awareness only — nothing is to be implemented from it yet, and no affiliate or network signup is mine to make.**
+
+### Part 1 — the SEO queue, in the approved order
+
+1. **Push the guides already at 14-19 into the top 10** -- `roof-snow-load` (19.3), `lights-not-working` (14.6), `battery-winter-storage` (14.8), `tank-sensors-reading-wrong` (18.4). Closest to page one; the levers are on-page depth, internal links from the hubs, and titles that match the query.
+2. **The state directory pages, 28-64** -- oregon 28.6, oklahoma 63.7, iowa 29.0. Rank problem, not relevance: the pages are thin next to the guides.
+3. **Expand the manuals directory** -- best performer per page (`brands.html` 215 impressions, 12 of the site's 26 clicks).
+4. **Cross-link the three surfaces** -- guides -> state pages, state pages -> guides, manuals -> the guides that explain the repair.
+5. **Resubmit the sitemap -- DONE 2026-10-16 09:10 UTC.** `gsc.py sitemaps --submit --feed https://originrv.com/sitemap.xml` returned HTTP 204. Google had already re-downloaded the sitemap at 08:53 UTC and now reports **144 discovered** (the earlier 131 was the 10-12 download), so the discovered-vs-live gap is closed. The new submission is pending.
+6. **Conversion tracking on the claim form and the tools** -- nothing separates a real visitor from our own checks, and every revenue number downstream depends on this.
+
+### Part 2 — monetization mapping (AWARENESS ONLY, do not build)
+
+- **Affiliate links on guides + tools.** Programs named: Amazon Associates (3-4.5%, 24 hr cookie), Later Creator / Mavely (Camping World up to 4.9%, Lowes 5.6-17.5%, 30-day cookies, no traffic gate), Good Sam up to 15% via Rakuten, Renogy 6% via ShareASale (solar calculator), RV Water Filter Store 15% (water-filter tool). etrailer's rate is unverifiable publicly -- outreach later. First placements: `manuals/brands.html`, `winterize-plumbing`, `water-and-plumbing`, the water-filter tool, the solar calculator.
+- **Directory featured listings.** Comp: CarDealership.com at $49.50/$124.50 a month with a hard cap of three slots per city -- copy the scarcity. Phase $29 founding presell -> $49/mo -> $99-129 premium, via Stripe Payment Links. Long-term: a completion-fee model ($25-50 a lead); the claim form should capture job-intent signals now.
+- **Display ads: WAIT.** Journey is 1,000 sessions; Raptive 25,000 pageviews. No ads before 1,000 sessions. Install Grow (free) now to build the list and prep the account.
+- **Digital products.** Etsy PDFs (checklists, a 50-state park planner; comp: a 109-page planner at $14.99). Sell organization, never instruction -- no repair courses from a non-technician owner.
+- **Tool sponsorships** at 10k+ sessions ($300-600 a quarter estimate); etrailer is the proof-of-concept.
+- **Email:** Kit (free to 10k subscribers), result-reveal gates on two or three high-traffic tools only -- never gate tool entry.
+- **Will not work now:** display ads, direct sponsorships, repair courses, $47-97 digital products, tool-entry email gates, pre-approval sponsored reviews, newsletter sponsors as a pillar.
+- **When implementation IS approved, the first action is the Amazon Associates and Later Creator signups**, with links on the pages that already rank. **Both need Ty's identity -- not mine to do.**
