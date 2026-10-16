@@ -1192,9 +1192,9 @@
     "sources": []
   },
   "tools/state-trailer-brake-laws.html": {
-    "hash": "210398a8c907ec69",
+    "hash": "334e0bd3ab6ab141",
     "status": "verified",
-    "verified_by": "two review fixes: the 50-row table is wrapped in the house .table-scroll so the page stops scrolling sideways at phone width, and the conditional shape is cut with Delaware re-shaped as speed, leaving six shapes that each say something the row does not already say.",
+    "verified_by": "the table rows are emitted into the page between BL-ROWS markers by build-brake-laws-data.py so the table reads without JavaScript, the test holds the static rows equal to the finder render cell for cell, and the rest-of-the-job section now links the weight calculator and the first-timers walkthrough (Neo tools 15th #1 and #4).",
     "verified_at": "2026-10-15",
     "sources": [],
     "spec": null,

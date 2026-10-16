@@ -11,6 +11,9 @@ section it came from and the URL it was read at, and a state whose code has not 
 entry at all. A guessed threshold is the one failure this tool cannot afford, because a number
 that is too high tells somebody to tow without brakes.
 
+It also writes the table's rows into tools/state-trailer-brake-laws.html between BL-ROWS
+markers, so the table reads without JavaScript; --check holds both outputs to the record.
+
 Usage: python3 scripts/build-brake-laws-data.py            # write
        python3 scripts/build-brake-laws-data.py --check    # report drift, write nothing
 """
@@ -40,20 +43,69 @@ def emit():
     return HEADER + "window.RV_BRAKE_LAWS = " + body + ";\n"
 
 
+PAGE = ROOT / "tools" / "state-trailer-brake-laws.html"
+ROWS_START = "<!-- BL-ROWS:START -->"
+ROWS_END = "<!-- BL-ROWS:END -->"
+
+
+def esc(s):
+    return (str("" if s is None else s)
+            .replace("&", "&amp;").replace("<", "&lt;")
+            .replace(">", "&gt;").replace('"', "&quot;"))
+
+
+def rows_block(data):
+    """The table's rows, in the page's own HTML, so the table reads without JavaScript.
+
+    Cell for cell this is what assets/js/brakelaws.js renders from the same record -- same
+    columns, same order (by state name), same escaping -- and scripts/test-state-brake-laws.js
+    holds the two renders equal, so the static copy cannot drift from the runtime one. The JS
+    still replaces the tbody on load; the static rows are what a crawler and a no-JS reader see.
+    """
+    rows = sorted(data["states"], key=lambda s: s["name"])
+    out = []
+    for s in rows:
+        threshold = "No weight threshold" if s.get("threshold") is None else s["threshold"]
+        out.append('<tr><td>%s</td><td>%s</td><td>%s</td><td><a href="%s" target="_blank" '
+                   'rel="noopener">%s</a></td></tr>'
+                   % (esc(s["name"]), esc(threshold), esc(s["appliesTo"]), esc(s["url"]),
+                      esc(s["section"])))
+    return ROWS_START + "\n" + "\n".join(out) + "\n" + ROWS_END
+
+
+def splice_rows(html, block):
+    if html.count(ROWS_START) != 1 or html.count(ROWS_END) != 1:
+        raise SystemExit("FAIL  %s needs exactly one %s/%s pair"
+                         % (PAGE.relative_to(ROOT), ROWS_START, ROWS_END))
+    before, rest = html.split(ROWS_START, 1)
+    _, after = rest.split(ROWS_END, 1)
+    return before + block + after
+
+
 def main():
+    data = json.loads(SRC.read_text(encoding="utf-8"))
     want = emit()
+    page = PAGE.read_text(encoding="utf-8")
+    want_page = splice_rows(page, rows_block(data))
     if "--check" in sys.argv:
+        bad = False
         have = OUT.read_text(encoding="utf-8") if OUT.exists() else ""
         if have != want:
             print("DRIFT: assets/js/brakelawsdata.js is not what _data/state-brake-laws.json produces")
+            bad = True
+        if page != want_page:
+            print("DRIFT: %s table rows are not what the record produces" % PAGE.relative_to(ROOT))
+            bad = True
+        if bad:
             print("      re-run: python3 scripts/build-brake-laws-data.py")
             raise SystemExit(1)
-        n = len(json.loads(SRC.read_text(encoding="utf-8"))["states"])
-        print("brake laws data matches the record (%d state(s))" % n)
+        print("brake laws data matches the record (%d state(s))" % len(data["states"]))
         raise SystemExit(0)
     OUT.write_text(want, encoding="utf-8")
-    n = len(json.loads(SRC.read_text(encoding="utf-8"))["states"])
-    print("wrote %s (%d state(s), %d bytes)" % (OUT.relative_to(ROOT), n, len(want)))
+    if page != want_page:
+        PAGE.write_text(want_page, encoding="utf-8")
+        print("wrote %s rows (%d state(s))" % (PAGE.relative_to(ROOT), len(data["states"])))
+    print("wrote %s (%d state(s), %d bytes)" % (OUT.relative_to(ROOT), len(data["states"]), len(want)))
 
 
 if __name__ == "__main__":

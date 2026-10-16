@@ -68,8 +68,15 @@ check('the page has the full table body', /id="bl-table"/.test(PAGE));
 /* ---- what the page must NOT claim ---- */
 check('the page does not promise a national threshold',
   !/national (limit|threshold|requirement) (of|is) \d/i.test(PAGE));
-check('the page does not print a threshold for an unread state in the markup',
-  !/id="bl-table">\s*<tr/.test(PAGE), 'the table is rendered from the record, not hand-written');
+/* THE TABLE IS IN THE MARKUP NOW (2026-10-15), so the check is stronger than "not hand-written":
+   the static rows must equal, cell for cell, what the finder renders from the same record. The
+   old check only asserted the tbody was empty, which could not see a stale or wrong row once the
+   generator started writing them. A state with no verified entry still has no row either way. */
+const staticRows = (PAGE.match(/<!-- BL-ROWS:START -->([\s\S]*?)<!-- BL-ROWS:END -->/) || [])[1] || '';
+const normRows = s => s.replace(/\s+/g, ' ').replace(/> </g, '><').trim();
+check('the table in the markup is the record\'s own render, cell for cell',
+  normRows(staticRows) === normRows(run('CA').table),
+  'static rows differ from the finder\'s render');
 /* TWO CHECKS, because they are two different things and the first version conflated them.
    The MECHANISM is that the finder marks an unread state in the picker; that string lives in the
    JS and is what a reader actually sees. The PAGE has to explain the gap in its own words, but
