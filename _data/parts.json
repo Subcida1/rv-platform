@@ -647,7 +647,7 @@
           "types": [
             "fifth-wheel"
           ],
-          "guide": null,
+          "guide": "rv-leveling-jacks-not-working",
           "kw": [
             "fifth wheel landing gear not working",
             "landing gear motor replacement"
@@ -954,7 +954,7 @@
             "class-c",
             "van"
           ],
-          "guide": "rv-12-volt-problems",
+          "guide": "rv-outlets-not-working",
           "kw": [
             "rv power cord melted",
             "shore power plug burned",
@@ -984,7 +984,7 @@
             "class-c",
             "van"
           ],
-          "guide": "rv-12-volt-problems",
+          "guide": "rv-outlets-not-working",
           "kw": [
             "rv power inlet replacement",
             "shore power inlet burned"
@@ -1031,7 +1031,7 @@
             "class-a",
             "class-c"
           ],
-          "guide": "rv-12-volt-problems",
+          "guide": "rv-outlets-not-working",
           "kw": [
             "rv surge protector tripping",
             "ems low voltage shutdown",
@@ -1060,7 +1060,7 @@
             "class-a",
             "class-c"
           ],
-          "guide": "rv-12-volt-problems",
+          "guide": "rv-outlets-not-working",
           "kw": [
             "rv transfer switch failure",
             "ats chattering",
@@ -1864,7 +1864,7 @@
             "class-c",
             "van"
           ],
-          "guide": "rv-water-pump-wont-prime",
+          "guide": "rv-water-pressure",
           "kw": [
             "rv water hose",
             "drinking water hose rv",
@@ -2368,7 +2368,7 @@
             "class-a",
             "class-c"
           ],
-          "guide": "rv-water-pressure",
+          "guide": "rv-sewer-smell",
           "kw": [
             "rv shower drain clogged",
             "shower pan crack repair"
@@ -4096,7 +4096,7 @@
             "class-c",
             "van"
           ],
-          "guide": null,
+          "guide": "rv-driving-motorhome",
           "kw": [
             "rv mirror replacement",
             "motorhome side mirror"
@@ -5143,7 +5143,7 @@
             "class-a",
             "class-c"
           ],
-          "guide": null,
+          "guide": "rv-outlets-not-working",
           "kw": [
             "rv microwave not working",
             "convection microwave rv"
@@ -5915,7 +5915,7 @@
             "class-c",
             "van"
           ],
-          "guide": "trailer-brakes-required",
+          "guide": "rv-driving-motorhome",
           "kw": [
             "rv air brake adjustment",
             "brake chamber replacement",
