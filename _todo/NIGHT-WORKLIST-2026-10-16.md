@@ -51,6 +51,23 @@ Vary to: "the manual", "the service literature", "the factory", "the axle maker"
 
 ## R4 — Audit rounds
 
+### The state-brake review finally landed (2026-10-16 ~01:55 PDT)
+
+Three earlier attempts on chatgpt.com failed (two released flights, one capture that grabbed
+the page chrome). Root cause found: the staged record.json was 31.9 KB, over the bridge's
+12,000-character tool-result cap, so every read came back truncated and the capture never
+settled. Fix: split the record into four parts (each 9.6-11.3 KB) and re-dispatched to grok
+with the mandatory write_file call. Result: a real review, clean pass.
+
+The review's findings: coverage label correct (32 of 51), spot-checked quotes match their codes
+(AZ 28-952 "three thousand pounds or more"; ID 49-933 "one thousand five hundred (1,500) pounds
+or more"), no logic problems, adequate safety framing, voice clean. One non-blocking note: a few
+quote blocks are truncated relative to the full statutory paragraph (Nevada, New Mexico) -- the
+named section and URL still verify them. **Open item:** decide whether those two quotes want an
+ellipsis marker or the full paragraph.
+
+## R4 — lane rotations (ongoing)
+
 - Check the Neo lane (`conv-90eeb545-77d2-4db5-9f54-f0e78dbd9587`) for new rotation findings;
   verify each against the artefact before consuming (the standing rule: a lane claim is a
   hypothesis, not a finding).
