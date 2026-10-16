@@ -4841,7 +4841,9 @@ need to breath") and says only that a holding tank has to breathe and the roof v
 first thing to check; the "do not drive it loose" item carries his correction -- the clog has
 already ridden along on every drive since it formed, so it will not pop loose from one more;
 and the cross-check same-fact pair against the freeze page (32 F vs 45-85 F, a false positive)
-was cleared by wording, not by weakening the gate.
+was cleared by wording, not by weakening the gate. Two more of his edits landed after that (`3e774af9`): the object paragraph warns against
+flushable wipes (they are not biodegradable, with Camco's own advice quoted), and the vent
+paragraph says the blockage can come from outside as easily as from damage.
 
 
 ## Neo homepage 13th rotation (2026-10-16, verified from the Cloud lane)
