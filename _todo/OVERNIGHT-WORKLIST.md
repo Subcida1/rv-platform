@@ -4735,3 +4735,13 @@ import it. Sitemap refreshed to match; all 143 entries agree with their pages.
 states), Beaulieu's field, homepage manuals block (homepage 12th #2), the eleven parts card
 mappings (parts 16th NEW-2), the 10 remaining prose hits, and the 11 pages undeclared in
 targets.json (check-keywords.py's own report).
+
+## Neo directory 13th rotation (2026-10-16, verified from the Cloud lane)
+
+Five items, verified at tip `deb87a14`. **One applied, four queued.**
+
+- **#5 the hub's closing line: APPLIED.** `/directory/` now carries the same "Something wrong here, or something missing?" line the state pages do.
+- **#1/#2 LA and IN region repeats: CONFIRMED.** Louisiana renders 44 `finder-region-row` rows against 33 unique listings (Twins RV Repair six times, placeholder town "Louisiana"); Indiana 71 rows against 63. Wyoming and Maryland have no listing repeats, so the defect is specific to the two states whose listings claim overlapping regions. Queue: dedupe in the region render -- a listing should emit once, in its primary region.
+- **#3 per-state lede variants: CONFIRMED.** The same 496-character lede runs on every state page and claims "emergency roadside help for breakdowns on the highway" while Wyoming has 1 of 20 rows roadside-flagged and Maryland 3 of 35. Queue: a lede variant that claims only what the state's data supports.
+- **#4 the state-page cross-section silo: CONFIRMED (second flag).** One internal link in `<main>` (`/contact`), zero to /guides/, /tools/, /parts/, /manuals/ or sibling states. Queue: the topic-matched in-body block.
+- **Area-code audit: DONE and standing.** `scripts/audit-phones.py` ran across all 50 states (84 out-of-state codes at the time, each carrying a verbatim quote), and it is the standing instrument for the class -- five newer flags are already in its output.
