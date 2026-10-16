@@ -4053,10 +4053,7 @@ Every new page got a fresh-context pass, and the classes that came out of it are
 
 ## Blocked on you
 
-1. **The statewide multi-region repeat** — LA and IN render a listing once per region it claims (LA 44 rows vs 33 listings, IN 71 vs 63). Dedupe to the primary region, or label the repeats?
-2. **The state-page topic-matched block** — the hub-links half landed (`4b194c57`); the in-body topic-matched half is a proposal awaiting your call.
-3. **The W3 maintenance interpretation** — `_specs/rv-black-tank-maintenance-boundary.md` says the existing `rv-black-tank` IS the maintenance guide and no fourth page is needed. Confirm, or ask for the separate page.
-4. **The two-guide renderer's second-slot labels** — the renderer is being built per your ruling; say if you want the second slots curated rather than derived.
+**Nothing.** The multi-region repeat is settled (the repeats stay and read as coverage, `0f443e89`), the state pages now lead with the money query (`275c2f1a`), W3 closed on 2026-10-16 (the trio covers it), and the two-guide slots are confirmed and locked by `test-parts.py`. One proposal still sits unruled and is not blocking anything: a topic-matched in-body block on the state pages (winterize-plumbing on northern states, the roof and awning guides on coastal ones).
 
 ## Incidents (all resolved)
 - **One transient Pages deployment failure** (a GitHub OIDC blip) — caught by the monitor in 3 minutes, fixed by rerun. If you got a failure email around 02:25, that was it.
