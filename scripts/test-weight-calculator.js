@@ -151,17 +151,50 @@ check('the page wires the checkbox the calculation reads',
    2026-10-15. The page prose said the fifth-wheel target was 20 to 25% while the calculator's
    own range, and the sources it can cite, said 15 to 25%, so the page contradicted itself in
    three places and every gate was green. This reads both and compares. */
-const range = /tongueRange = type === 'fw' \? \[([\d.]+), ([\d.]+)\] : \[([\d.]+), ([\d.]+)\]/.exec(SRC);
-check('the calculator still declares a tongue range for each trailer type', !!range);
-if (range) {
+const fwR = /fw: \{ tonguePct: [\d.]+, tongueRange: \[([\d.]+), ([\d.]+)\]/.exec(SRC);
+const ttR = /tt: \{ tonguePct: [\d.]+, tongueRange: \[([\d.]+), ([\d.]+)\]/.exec(SRC);
+check('the calculator still declares a tongue range for each trailer type', !!fwR && !!ttR);
+if (fwR && ttR) {
   const pc = (s) => Math.round(parseFloat(s) * 100);
-  const fw = pc(range[1]) + ' to ' + pc(range[2]) + '%';
-  const tt = pc(range[3]) + ' to ' + pc(range[4]) + '%';
+  const fw = pc(fwR[1]) + ' to ' + pc(fwR[2]) + '%';
+  const tt = pc(ttR[1]) + ' to ' + pc(ttR[2]) + '%';
   check('the page states the fifth-wheel range the calculator uses (' + fw + ')', PAGE_TEXT.includes(fw));
   check('the page states the trailer range the calculator uses (' + tt + ')', PAGE_TEXT.includes(tt));
   check('the page states no fifth-wheel range the calculator does not use',
         !/20 to 25%/.test(PAGE_TEXT));
 }
+
+/* THE MEASURED OVERRIDE (quick wins #15, 2026-10-16). A scale reading must replace the
+   estimate everywhere: the payload and truck-gross rows are computed from `tongue`, so the
+   measured number has to flow through the same variable. 700 measured against 660 estimated. */
+html = run(Object.assign({}, BASE, { 'tongue-measured': 700 }));
+check('a measured tongue weight replaces the estimate',
+      /Hitch \/ pin load[\s\S]*?v-val">700 lb/.test(html),
+      (html.match(/Hitch \/ pin load[\s\S]{0,140}/) || [])[0]);
+check('  and the note says it is a scale reading', /From your scale reading, not an estimate\./.test(html));
+check('  and the payload row uses the measured number', /1,100 \/ 1,500 lb/.test(html));
+
+/* THE TYPE PRESETS. A pop-up is the travel-trailer math; a truck camper rides the truck, so
+   its whole loaded weight is the load on the truck and the trailer-side checks drop away; a
+   motorhome defaults to a flat tow, which puts almost nothing on the hitch. */
+html = run(Object.assign({}, BASE, { 'type': 'pu' }));
+check('a pop-up uses the travel-trailer estimate', /v-val">660 lb/.test(html),
+      (html.match(/Hitch \/ pin load[\s\S]{0,140}/) || [])[0]);
+
+html = run({ 'type': 'tc', payload: 4000, curb: 6000, 'truck-gvwr': 11000, uvw: 3000, passengers: 400, 'cargo-trailer': 300 });
+check('a truck camper needs no tow rating or GCWR to get a verdict',
+      !/Not enough information yet/.test(html));
+check('  and its whole loaded weight is the load on the truck',
+      /Camper weight on the truck[\s\S]*?v-val">3,300 lb/.test(html));
+check('  and the trailer-side checks are gone',
+      !/Towing capacity/.test(html) && !/Trailer cargo capacity/.test(html) && !/Axle estimate/.test(html));
+check('  and the overall question is about carrying, not towing', /Can your truck carry it\?/.test(html));
+
+html = run(Object.assign({}, BASE, { 'type': 'mc' }));
+check('a motorhome defaults to a flat tow, almost nothing on the hitch',
+      /v-val">0 lb<\/div>/.test(html));
+check('  and says so', /flat-towed vehicle/.test(html));
+check('  and the combined weight still totals', /11,900 \/ 15,000 lb/.test(html));
 
 console.log(failed ? '\n' + failed + ' failure(s)' : '\nweight calculator: all checks passed');
 process.exit(failed ? 1 : 0);

@@ -10,6 +10,29 @@
 
  var WATER_LB = 8.34; // lb per gallon (fresh/gray/black)
 
+ /* THE RV TYPES, AND WHAT EACH ONE CHANGES (added 2026-10-16).
+  * tt / fw / pu are towed trailers and take the usual tongue-weight estimate.
+  * tc (truck camper) rides entirely on the truck: its whole loaded weight is the load
+  *   on the truck, and the trailer-side checks (towing rating, trailer CCC, axle split)
+  *   drop away because nothing is towed.
+  * ma / mb / mc (motorhomes) ARE the tow vehicle: the estimate is 0, because a
+  *   flat-towed car puts almost nothing on the hitch, and the measured field is how a
+  *   dolly or trailer owner enters the real number. */
+ var TYPES = {
+  tt: { tonguePct: 0.12, tongueRange: [0.10, 0.15], noun: 'trailer', towed: true, note: '' },
+  fw: { tonguePct: 0.20, tongueRange: [0.15, 0.25], noun: 'trailer', towed: true, note: '' },
+  pu: { tonguePct: 0.12, tongueRange: [0.10, 0.15], noun: 'trailer', towed: true,
+        note: 'A pop-up is a light travel trailer, so the same 10 to 15% tongue target applies.' },
+  tc: { tonguePct: 1.00, tongueRange: null, noun: 'camper', towed: false,
+        note: 'A truck camper rides entirely on the truck: its whole loaded weight counts against payload and the truck GVWR. Nothing is towed, so the towing rating and GCWR are optional here.' },
+  ma: { tonguePct: 0, tongueRange: null, noun: 'towed vehicle', towed: true,
+        note: 'A motorhome is the vehicle here: enter its own ratings on the left. The estimate assumes a flat-towed car, which puts almost nothing on the hitch; if you tow a dolly or a trailer, enter the measured tongue weight.' },
+  mb: { tonguePct: 0, tongueRange: null, noun: 'towed vehicle', towed: true,
+        note: 'A motorhome is the vehicle here: enter its own ratings on the left. The estimate assumes a flat-towed car, which puts almost nothing on the hitch; if you tow a dolly or a trailer, enter the measured tongue weight.' },
+  mc: { tonguePct: 0, tongueRange: null, noun: 'towed vehicle', towed: true,
+        note: 'A motorhome is the vehicle here: enter its own ratings on the left. The estimate assumes a flat-towed car, which puts almost nothing on the hitch; if you tow a dolly or a trailer, enter the measured tongue weight.' }
+ };
+
  function $(id) { return document.getElementById(id); }
  function num(id) { var v = parseFloat($(id).value); return isNaN(v) || v < 0 ? 0 : v; }
  function fmt(n) { return Math.round(n).toLocaleString('en-US'); }
@@ -48,7 +71,14 @@
  var propane = propaneVal();
  var cargoTrailer = num('w-cargo-trailer');
  var passengers = num('w-passengers');
- var type = $( 'w-type').value; // 'tt' or 'fw'
+ var typeEl = $('w-type');
+ var type = typeEl && TYPES[typeEl.value] ? typeEl.value : 'tt';
+ var T = TYPES[type];
+ var typeNote = $('w-type-note');
+ if (typeNote) {
+   typeNote.textContent = T.note || '';
+   typeNote.hidden = !T.note;
+ }
  var axles = Math.max(1, parseInt($('w-axles').value, 10) || 1);
 
  var grayGal = ($('w-gray-full') && $('w-gray-full').checked) ? Math.max(0, num('w-gray-gal')) : 0;
@@ -77,16 +107,21 @@
  var propaneLb = uvwIsSticker ? 0 : propane;
  var loaded = rigUVW + water + propaneLb + cargoTrailer;
 
- /* tongue: measured value wins; else est. 12% TT / 20% FW */
- var tonguePct = type === 'fw' ? 0.20 : 0.12;
- var tongueRange = type === 'fw' ? [0.15, 0.25] : [0.10, 0.15];
- var tongue = Math.round(loaded * tonguePct);
+ /* tongue: a measured value wins; else the estimate, per type. */
+ var tongueMeasured = num('w-tongue-measured');
+ var tongue = tongueMeasured > 0 ? Math.round(tongueMeasured) : Math.round(loaded * T.tonguePct);
    var live = $('w-live');
    if (live) {
-     if (loaded > 0) {
-       live.textContent = 'Estimated ' + (type === 'fw' ? 'pin' : 'tongue') + ' weight: ' + fmt(tongue) + ' lb, about ' + Math.round(tonguePct * 100) + '% of loaded weight. Estimate only, a certified scale gives the truth.';
+     if (tongueMeasured > 0) {
+       live.textContent = 'Using your measured ' + (type === 'fw' ? 'pin' : 'tongue') + ' weight: ' + fmt(tongue) + ' lb. That reading replaces the estimate below.';
+     } else if (loaded > 0 && type === 'tc') {
+       live.textContent = 'Camper weight on the truck: ' + fmt(tongue) + ' lb. The whole camper rides the truck, so all of it counts against payload.';
+     } else if (loaded > 0 && T.tongueRange) {
+       live.textContent = 'Estimated ' + (type === 'fw' ? 'pin' : 'tongue') + ' weight: ' + fmt(tongue) + ' lb, about ' + Math.round(T.tonguePct * 100) + '% of loaded weight. Estimate only, a certified scale gives the truth.';
+     } else if (loaded > 0) {
+       live.textContent = 'Estimated hitch load: ' + fmt(tongue) + ' lb, assuming a flat-towed vehicle. If you tow a dolly or a trailer, enter the measured weight instead.';
      } else {
-       live.textContent = 'Add a trailer dry weight to see the estimated tongue weight.';
+       live.textContent = 'Add a dry weight to see the estimated tongue weight.';
      }
    }
 
@@ -122,7 +157,7 @@
  fmt(payloadUsed) + ' / ' + fmt(payloadCap) + ' lb', pnote));
  }
 
- if (rigGVWR > 0) {
+ if (rigGVWR > 0 && type !== 'tc') {
    var rigPayloadAvail = rigGVWR - rigUVW;
    /* NAMED AFTER THE LABEL, because the reader has the label in front of them. GVWR minus dry weight is
       what a trailer's own sticker calls CCC (cargo carrying capacity), and 49 CFR 571.110 is where the
@@ -148,7 +183,7 @@
 
  /* required core inputs: no verdict until these exist, or the answer lies */
  var missing = [];
- if (towRating <= 0) missing.push('how much your truck can pull (top left)');
+ if (T.towed && towRating <= 0) missing.push('how much your truck can pull (top left)');
  if (payloadCap <= 0) missing.push('how much can go in the truck (top left)');
  if (rigUVW <= 0) missing.push('how much the empty trailer weighs (middle)');
  /* THREE LIMITS THIS USED TO SKIP, and skipping them is why the tool could say SAFE to a
@@ -160,7 +195,7 @@
   * be. Like the GCWR, the GVWR and the Curb Weight." No verdict until they exist. */
  if (curb <= 0) missing.push('how much the empty truck weighs (top left)');
  if (num('w-truck-gvwr') <= 0) missing.push("the truck's own GVWR (top left)");
- if (num('w-gcwr') <= 0) missing.push('the truck and trailer combined limit (top left)');
+ if (T.towed && num('w-gcwr') <= 0) missing.push('the truck and trailer combined limit (top left)');
  if (passengers <= 0 && missing.length === 0) missing.push('people and gear in the truck (bottom)');
 
  if (missing.length > 0) {
@@ -198,13 +233,25 @@
      : gcPct <= 100 ? 'At the GCWR edge. GCWR and payload are usually the two that bind first.'
      : 'OVER the GCWR. Together the truck and trailer weigh more than the maker rates.'));
  }
- var lowT = Math.round(loaded * tongueRange[0]), highT = Math.round(loaded * tongueRange[1]);
- var tNote = 'Estimated ' + Math.round(tonguePct * 100) + '% of loaded weight. Real RVs run ' + fmt(lowT) + ' to ' + fmt(highT) + ' lb. A certified scale settles it.';
- rows.push(verdictRow('ok', 'Hitch / pin load', fmt(tongue) + ' lb', tNote));
+ var tLabel = 'Hitch / pin load', tNote;
+ if (tongueMeasured > 0) {
+   tNote = 'From your scale reading, not an estimate.';
+ } else if (type === 'tc') {
+   tLabel = 'Camper weight on the truck';
+   tNote = 'The whole camper rides the truck, so all of it counts against payload and the truck GVWR.';
+ } else if (T.tongueRange) {
+   var lowT = Math.round(loaded * T.tongueRange[0]), highT = Math.round(loaded * T.tongueRange[1]);
+   tNote = 'Estimated ' + Math.round(T.tonguePct * 100) + '% of loaded weight. Real RVs run ' + fmt(lowT) + ' to ' + fmt(highT) + ' lb. A certified scale settles it.';
+ } else {
+   tNote = 'Assumes a flat-towed vehicle, which puts almost nothing on the hitch. A dolly or trailer tongue is heavier; enter the measured weight if you have it.';
+ }
+ rows.push(verdictRow('ok', tLabel, fmt(tongue) + ' lb', tNote));
 
+ if (type !== 'tc') {
  rows.push(verdictRow('ok', 'Axle estimate (informational)',
  fmt(perAxle) + ' lb per axle × ' + axles,
  'Split of ' + fmt(axleLoad) + ' lb across axles. Only a certified scale knows for sure.'));
+ }
 
  /* ---- panel html ---- */
  var html = '';
@@ -234,8 +281,11 @@
    worst ? 'Closest to the limit on ' + worst + '.' + (others.length ? ' Watch ' + others.slice(0, 3).join(', ') + ' as well.' : ' Read the yellow items below.')
          : 'You are close to a limit. Read the yellow items below.'] :
  ['ok', 'SAFE', 'Everything checks out. Keep the load this light or lighter.'];
- html = '<div class="w-overall ' + ov[0] + '"><span>Can your truck tow it?</span><b>' + ov[1] + '</b><small>' + ov[2] + '</small></div>' +
- '<div class="w-total"><span>Loaded trailer</span><b>' + fmt(loaded) + ' lb</b>' +
+ var overallQ = type === 'tc' ? 'Can your truck carry it?'
+   : (type === 'ma' || type === 'mb' || type === 'mc') ? 'Is the combination within its ratings?'
+   : 'Can your truck tow it?';
+ html = '<div class="w-overall ' + ov[0] + '"><span>' + overallQ + '</span><b>' + ov[1] + '</b><small>' + ov[2] + '</small></div>' +
+ '<div class="w-total"><span>Loaded ' + T.noun + '</span><b>' + fmt(loaded) + ' lb</b>' +
  '<small>' + fmt(water) + ' lb water, ' + fmt(cargoTrailer) + ' lb cargo' +
  (uvwIsSticker ? ', propane already counted inside the dry weight' : ', ' + fmt(propaneLb) + ' lb propane and tanks') +
  '</small></div>' +
@@ -249,7 +299,7 @@
  }
 
  /* live recompute on any change */
- var ids = ['w-tow-rating','w-payload','w-curb','w-truck-gvwr','w-gvwr','w-uvw','w-uvw-src','w-h2o-f','w-propane','w-cargo-trailer','w-passengers','w-type','w-axles','w-gray-full','w-black-full','w-gray-gal','w-black-gal'];
+ var ids = ['w-tow-rating','w-payload','w-curb','w-truck-gvwr','w-gvwr','w-uvw','w-uvw-src','w-tongue-measured','w-h2o-f','w-propane','w-cargo-trailer','w-passengers','w-type','w-axles','w-gray-full','w-black-full','w-gray-gal','w-black-gal'];
  ids.forEach(function (id) {
  var el = $(id);
  if (el) el.addEventListener('input', update);

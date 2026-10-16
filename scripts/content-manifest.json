@@ -1226,9 +1226,9 @@
     "sources": []
   },
   "tools/weight-calculator.html": {
-    "hash": "100aeab8bb4f50f0",
+    "hash": "2d47dc7131254eb9",
     "status": "verified",
-    "verified_by": "quick-wins #18 cross-link pass (Cloud on-grid, 2026-10-16): one list item added to Where-to-go-next (state trailer brake laws; the weight-threshold claim checked against _data/state-brake-laws.json, 42 of 50 states carry a numeric weight threshold). No fact changed; no existing link removed.",
+    "verified_by": "quick-wins #15 (Cloud on-grid, 2026-10-16): the measured tongue/pin override field added, and the type select gains pop-up, truck camper and Class A/B/C presets with their math (camper rides the truck, motorhome defaults to flat tow). The travel-trailer and fifth-wheel math is unchanged; the test suite pins the new behaviour.",
     "verified_at": "2026-10-16",
     "sources": [],
     "spec": null,

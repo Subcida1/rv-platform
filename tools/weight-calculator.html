@@ -76,7 +76,13 @@
                 <select id="w-type">
                   <option value="tt">Travel trailer</option>
                   <option value="fw">Fifth wheel</option>
+                  <option value="pu">Pop-up / folding trailer</option>
+                  <option value="tc">Truck camper</option>
+                  <option value="ma">Class A motorhome</option>
+                  <option value="mb">Class B motorhome (van)</option>
+                  <option value="mc">Class C motorhome</option>
                 </select>
+                <span class="hint" id="w-type-note" hidden></span>
               </div>
               <div class="field"><label for="w-axles">Axles</label>
                 <select id="w-axles">
@@ -98,7 +104,12 @@
               </select>
               <span class="hint">The trailer's own sticker counts the full propane cylinders already, so nothing is added to it. If you weighed the trailer yourself, the calculator adds the propane you pick below.</span>
             </div>
-            <p class="note-sm strong">Tongue or pin weight is estimated for you automatically. The usual targets are 10 to 15% of loaded weight for a travel trailer and 15 to 25% for a fifth wheel, and your own trailer's sticker or manual is the figure that counts. A certified scale gives the exact number.</p>
+            <div class="field">
+              <label for="w-tongue-measured">Measured tongue or pin weight, if you have one (lb)</label>
+              <input id="w-tongue-measured" type="number" min="0" step="10" inputmode="numeric" placeholder="Optional">
+              <span class="hint">From a certified scale: the loaded truck's rear axle weight minus the same truck unhitched. When filled, it replaces the estimate everywhere.</span>
+            </div>
+            <p class="note-sm strong">Tongue or pin weight is estimated for you automatically. The usual targets are 10 to 15% of loaded weight for a travel trailer and 15 to 25% for a fifth wheel, and your own trailer's sticker or manual is the figure that counts. A certified scale gives the exact number; enter it in the measured field above and it replaces the estimate.</p>
           </div>
           <div class="panel panel-24">
             <h2 class="form-legend">Your cargo</h2>
@@ -270,7 +281,7 @@
         <h2>The questions everyone asks</h2>
       </div>
       <details class="faq"><summary>What's the 80% rule?</summary><p>Max towing ratings are measured on ideal roads, flat, no wind, sea level. Real driving has hills, passes, gust fronts, and panic stops. The 80% rule keeps loaded weight at or under 80% of rated capacity so the margin survives reality. It is a convention rather than a manufacturer specification: no maker publishes an 80% rating, and the ratings it applies to are set under the SAE J2807 standard.</p></details>
-      <details class="faq"><summary>Why is tongue weight estimated instead of asked?</summary><p>Almost nobody knows their trailer's tongue or pin weight without a scale, so we estimate it from the loaded weight, using the usual targets of 10 to 15% for a travel trailer and 15 to 25% for a fifth wheel. Those are conventions rather than rules, and your own trailer's sticker or manual wins where it differs. Weighing at a certified scale gives the real number.</p></details>
+      <details class="faq"><summary>Why is tongue weight estimated instead of asked?</summary><p>Almost nobody knows their trailer's tongue or pin weight without a scale, so we estimate it from the loaded weight, using the usual targets of 10 to 15% for a travel trailer and 15 to 25% for a fifth wheel. Those are conventions rather than rules, and your own trailer's sticker or manual wins where it differs. Weighing at a certified scale gives the real number, and if you have one, the measured field above replaces the estimate with it.</p></details>
       <details class="faq"><summary>Dry weight vs loaded?</summary><p>UVW is the weight as the factory built it, and the propane is already inside that number. Loaded adds fresh water at 8.34 lb per gallon, anything sitting in the waste tanks, and everything you carry. A lightweight trailer can gain hundreds of pounds before it ever sees a hitch ball.</p></details>
       <details class="faq"><summary>Is this a guarantee?</summary><p>No, nothing here replaces a certified scale and your owner's manuals. This is informational math to catch the obvious mismatch before you buy, pack, or tow. Weigh loaded at a certified scale whenever the load changes.</p></details>
     </div>
@@ -331,7 +342,7 @@
   <script src="assets/js/config.js?v=ec97ddff"></script>
   <script src="assets/js/scales.js?v=b600a905"></script>
   <script src="assets/js/site.js?v=e7f99dee"></script>
-  <script src="assets/js/weight.js?v=f5ce472a"></script>
+  <script src="assets/js/weight.js?v=bfa39c20"></script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "3727183603b6402b9249de33fa381acd"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
