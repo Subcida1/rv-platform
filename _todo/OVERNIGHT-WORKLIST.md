@@ -4845,6 +4845,29 @@ was cleared by wording, not by weakening the gate. Two more of his edits landed 
 flushable wipes (they are not biodegradable, with Camco's own advice quoted), and the vent
 paragraph says the blockage can come from outside as easily as from damage.
 
+### The black-tank trio, completed and role-separated (2026-10-16 ~00:10 PDT)
+
+`1ade41bb` the maintenance page's chemicals section per his read (Thetford mentions 3 to 1,
+the duplicated residue content merged, the self-contradicting deodorant line fixed, the toilet
+paper nuance). `fd361c52` the routine page expanded: his edits (title gains the s, water
+figures match the maintenance page, the authenticity sentence becomes a pointer, headings
+carry the search wording) plus a research pass built on the Central Marin Sanitation Agency's
+own station instructions, City of Tracy, Drain Master, Valterra and Camco -- gloves and prep,
+the twist-lock how-to, the clear fitting, the fitting families, firmly seating the hose with
+weight, hose supports as standard kit, dump sites and the non-potable water rule, and a new
+section on rinsing and storing the sewer hose. The etiquette says most visits are quiet and
+unhurried. The sensor-cleaning detail moved home from the maintenance page (now a pointer).
+
+**The trio's roles are now separated:** the routine page owns the routine, sensor cleaning and
+diagnosis; the maintenance page owns the dump procedure, water discipline and chemicals; the
+rescue page owns the clog.
+
+**Two traps hit during this pass, both documented and both mine:** (1) a verify-content note
+that quoted the banned term to explain the fix tripped the banned-words gate on
+content-manifest.json -- the second time; never write the term in a note, use "the banned term
+for an RV". (2) A page-title change cascades into the manuals page AND the parts hub (the
+derived second-guide label), so both generators must run before the gate will pass.
+
 
 ## Neo homepage 13th rotation (2026-10-16, verified from the Cloud lane)
 
