@@ -1,5 +1,16 @@
 # Night rounds — 2026-10-16 (started 01:20 PDT)
 
+**STATUS, 02:10 PDT — R1 done, R2 done, R3 done, R4 done.** R1: the two checks landed
+(`61bec3a2`). R2: eight pages through the variety pass (`046674b7`, `a4199c8e`); the new
+brand-repeat measure reports 44 remaining hits and reading them shows they are topic-inherent
+(a Lippert section naming Lippert), which is what report-only is for. R3: the _todo triage
+(five finished briefs archived) and the build-chain fix — `build-all.sh` now runs the three
+page generators itself, so the title-change cascade that cost two chain cycles tonight cannot
+recur (`a4199c8e`, memory `e9eb5e1`). R4: the state-brake review finally landed after the
+12KB-cap fix, clean pass; the lane also ran URL inspection (established pages pass rich
+results, the newest pages are not crawled yet) and the sitemap was resubmitted (HTTP 204).
+
+
 Ty: "finish all the work we just did then begin nightly rounds and cleanups. Use all our tools
 research any new ones." The read-through pages and the decisions list wait for him; everything
 below is work that does not need his ruling.

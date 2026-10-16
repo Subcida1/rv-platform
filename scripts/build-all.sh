@@ -25,6 +25,21 @@ cd "$(dirname "$0")/.."
 
 step() { printf '\n=== %s\n' "$1"; }
 
+# THE GENERATORS RUN FIRST, AND THEY WERE MISSING UNTIL 2026-10-16. A guide title or H1 change
+# propagates into three generated surfaces -- the manuals sanitation page's guide list, the parts
+# hub's second-guide label, and the search index -- and this chain regenerated only the last of
+# them. The gate caught it twice in one night (the routine page's title, then the sensor page's),
+# each time costing a full chain cycle. A generator that is not in this chain is a generator that
+# gets forgotten, so all three run here now, before anything reads a page's shell.
+step "build-listings.py: the directory pages and their derived blocks"
+python3 scripts/build-listings.py
+
+step "build-parts-pages.py: the parts hub and its cards"
+python3 scripts/build-parts-pages.py
+
+step "build-manuals-pages.py: the manuals pages"
+python3 scripts/build-manuals-pages.py
+
 step "build-shell.mjs: nav, footer and breadcrumbs into every page"
 node scripts/build-shell.mjs
 
