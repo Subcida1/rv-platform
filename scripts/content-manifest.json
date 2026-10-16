@@ -490,9 +490,9 @@
     "claims": []
   },
   "guides/rv-black-tank.html": {
-    "hash": "897bfbe0f16a3eb0",
+    "hash": "6a3a86c29db419ed",
     "status": "verified",
-    "verified_by": "Ty read-through: the title gains \"When\", the lede and callout drop the blockage framing and the gauge claim (sensors are unreliable; a full reading is not a diagnosis), the callout carries his 4-5 bowl starting routine, the tank section notes multiple gray tanks and the failed vent and his dump order, the water section drops the \"smaller amount\" framing, the dump procedure loses the level instruction and gains the attachment methods, fully-open/firmly-closed wording and the lift-to-slope drain, and the three flagged warnings (head inside a tank, dumping indoors, the fatal-cases sentence) are out.",
+    "verified_by": "Ty read-through, part two: the chemicals section drops the Thetford name from the enzyme paragraph (one mention left, the SANICON manual citation), the duplicated residue content is merged into one item, the self-contradicting \"not deodorants\" line is fixed, and the toilet paper item carries his nuance (a matter of degree; softer and weaker breaks down faster; a few household papers never do).",
     "verified_at": "2026-10-15",
     "sources": [],
     "spec": null,
