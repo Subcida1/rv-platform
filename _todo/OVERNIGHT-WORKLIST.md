@@ -4670,3 +4670,15 @@ Six items, verified at tip `73dce2ac`. **The regression is real, and it was mine
 - **#3 trailing slash: CONFIRMED as GitHub Pages behaviour, not a site defect.** `/manuals/<slug>/` and `/guides/<slug>/` 404 with no redirect while `/tools/` and `/parts/` serve both. Pages has no server-side redirect for this; the canonical tag is already present. Recorded, not queued as a code fix.
 - **#4 /directory silo on the system pages: CONFIRMED** (carryover).
 - **Verified clean:** the hub cross-link strip, the lede counts, the topic-matched tool links on four of five pages, titles/metas/H1s/canonicals, the JSON-LD, zero dashes and FFFD, voice.
+
+## Neo parts 16th rotation (2026-10-16, verified from the Cloud lane)
+
+**Two items applied; the rest queued.**
+
+- **STILL-1 /parts ItemList anchors: APPLIED.** The generator now points every ListItem at its own card (`/parts/#part-<slug>`); the list went from **9 distinct URLs to 210 of 210**. `build-all.sh` clean, `verify.py` ALL CHECKS PASSED.
+- **NEW-1 propane-leak-detector mis-target: APPLIED.** `_data/parts.json` now sends that card to `/guides/rv-propane-detector-beeping` instead of `/guides/rv-furnace-carbon-monoxide`.
+- **NEW-2 the eleven open card mappings: queued** with the list from this rotation (awning, entry-steps, entry-door, windows, frame-and-tongue, propane-refill-and-exchange, refrigerator-absorption, black-tank, fuses, diesel-air-heater, water-pressure-regulator plus gravity-fill). Four of them are repeat flags.
+- **NEW-3 thinnest systems: recorded** (propane 2/10, chassis 6/15, kitchen 5/25, exterior 10/40).
+- **NEW-4 zero in-card /directory or /manuals links: recorded** as the same silo class as the guide pages.
+- **The data-claims question is settled:** 129/110/81 is correct by `site_constants.py`'s definition; the 134-135 count included five cards whose only href is `parts/#main`, a back-to-top anchor.
+- **Verified fixes 1-5 confirmed**, including the manuals date fix live and the trailing-slash correction (uniform GitHub Pages behaviour, not guides/manuals-only).
