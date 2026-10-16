@@ -4867,3 +4867,15 @@ Three items, verified at tip `9798e6c9`. **Two verifications pass, one copy fix 
 - **#1 guide dates: VERIFIED.** All 59 guides carry "Last reviewed on Oct 15, 2026", and **zero** carry the generator default "Jan 1, 2026". The dates come from `scripts/pagedates.py` (the substantive-commit walk), so the /about claim -- "the date at the top of a guide is the date its claims were last checked" -- is backed by the mechanism, not a default.
 - **#2 manuals linked, not copied: VERIFIED.** The repo contains **zero PDFs** (and no manual files of any kind under `assets/`); every manual row links the maker's own document.
 - **#3 /privacy data sentence: APPLIED.** It said "the only personal data we'd likely have is a message you sent and the reply to it", which understated the claim form. It now names what that form collects: "a message and our reply, or a claim-form request (the business name, city, state, phone and website you enter)".
+
+## Neo guides 15th rotation (2026-10-16, verified from the Cloud lane)
+
+Seven pages, verified at tip `91677d99`. **The silo is confirmed closed; two items queued, one refuted, one verified verbatim.**
+
+- **#1 kickers: the documented subject taxonomy** (same answer as the 06:30 and 18:30 questions). Six labels across seven pages is the taxonomy working, not drift.
+- **#2 Related-guides format: CONFIRMED as two patterns.** Four pages carry a link paragraph; three carry a Q&A-only block with no guide links. Queue: pick one pattern.
+- **#3 empty bullets: DOES NOT REPRODUCE.** All four pages carry **zero** empty `<li>` elements in source; the blanks are a text-render artifact of long list items wrapping.
+- **#4 fridge bare NHTSA entry: CONFIRMED.** The last source row reads "NHTSA, vehicle and equipment recalls lookup" with no "for the..." clause while every other row has one. Queue: describe it or drop it.
+- **#5 "certifed": VERIFIED VERBATIM -- the typo is Curt's.** Fetched the cited manual (`lci-support-doc.s3.amazonaws.com/aftermarket/curt%20product/ccd-0009269.pdf`) and it reads: "The best way to attain the pin weight is to take your 5th wheel to a certifed scale, i.e. CAT Scale." The page quotes it character for character. **No fix** -- the source wins for quoted material.
+- **#6 lede/short-version duplication on anode-rod and water-heater: recorded** with the other near-verbatim instances.
+- **#7 all seven carry "Last reviewed on Oct 15, 2026"** -- the date pass is real, which is the evidence the /about date claim was asking for.
