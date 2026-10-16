@@ -20,6 +20,7 @@ Run: python3 scripts/sync-counts.py
 import json
 import re
 import sys
+from html import unescape
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -167,12 +168,27 @@ def sync_itemlist():
         items.append({"@type": "ListItem", "position": i, "name": name.strip(),
                       "url": "https://originrv.com/guides/%s.html" % slug})
 
-    block = json.dumps({"@context": "https://schema.org", "@type": "ItemList",
-                        "name": "RV Guides", "numberOfItems": len(items),
-                        "itemListElement": items}, separators=(",", ":"))
+    # WRAPPED IN A CollectionPage (2026-10-15). The bare ItemList was the only hub block on the
+    # site without a page node around it: tools, manuals and directory all declare a
+    # CollectionPage whose mainEntity is their list, and the guides hub was the odd one out for
+    # anything reading the page as a collection. The name and description are read from the page
+    # itself (h1, meta description) so the wrapper cannot say something the visible page does not.
+    h1m = re.search(r"<h1[^>]*>(.*?)</h1>", html, re.S)
+    desc_m = re.search(r'<meta name="description" content="([^"]*)"', html)
+    wrapper = {"@context": "https://schema.org", "@type": "CollectionPage",
+               "name": unescape(re.sub(r"<[^>]+>", "", h1m.group(1)).strip()) if h1m
+                       else "RV Guides",
+               "url": "https://originrv.com/guides/",
+               "isPartOf": {"@type": "WebSite", "@id": "https://originrv.com/#website",
+                            "name": "OriginRV", "url": "https://originrv.com/"},
+               "mainEntity": {"@type": "ItemList", "name": "RV Guides",
+                              "numberOfItems": len(items), "itemListElement": items}}
+    if desc_m:
+        wrapper["description"] = unescape(desc_m.group(1))
+    block = json.dumps(wrapper, separators=(",", ":"))
     new = C.pretty_urls_in_html('<script type="application/ld+json">%s</script>' % block)
     old = re.search(r'<script type="application/ld\+json">\{"@context":"https://schema\.org",'
-                    r'"@type":"ItemList","name":"RV Guides".*?</script>', html, re.S)
+                    r'"@type":"(?:ItemList|CollectionPage)".*?</script>', html, re.S)
     if not old:
         raise SystemExit("FAIL  guides/index.html: no ItemList block to rewrite")
 

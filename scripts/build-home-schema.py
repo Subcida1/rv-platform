@@ -70,7 +70,12 @@ def block():
     items = [{"@type": "ListItem", "position": i, "name": n,
               "url": "https://originrv.com/%s" % u}
              for i, (n, u) in enumerate(t + g, 1)]
+    # THE @id MAKES THE NODE REFERENCEABLE (2026-10-15). Every other machine-readable block on
+    # the site that other nodes might point at carries one (#website); this list was the one
+    # bare ItemList left, flagged twice by the audit lane. The fragment is stable on purpose:
+    # nothing should have to guess it.
     ld = {"@context": "https://schema.org", "@type": "ItemList",
+          "@id": "https://originrv.com/#itemlist",
           "name": "RV tools and guides on OriginRV",
           "numberOfItems": len(items), "itemListElement": items}
     return (START + "\n" + '  <script type="application/ld+json">%s</script>'

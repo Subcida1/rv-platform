@@ -598,7 +598,7 @@ print("\n=== the guides index names every guide in its structured data ===")
 # the counts check above reads markers and this is not one. Rebuilt from the catalogue, and
 # checked here in both directions so it cannot drift back.
 gi = (ROOT / "guides" / "index.html").read_text(encoding="utf-8")
-ilm = re.search(r'<script type="application/ld\+json">(\{"@context":"https://schema\.org","@type":"ItemList"[^<]*\})</script>', gi)
+ilm = re.search(r'<script type="application/ld\+json">(\{"@context":"https://schema\.org","@type":"(?:ItemList|CollectionPage)"[^<]*\})</script>', gi)
 bad = []
 if not ilm:
     bad.append("guides/index.html: no ItemList block found to check")
@@ -609,6 +609,9 @@ else:
         data = None
         bad.append("guides/index.html: the ItemList does not parse (%s)" % exc)
     if data:
+        # The block became a CollectionPage whose mainEntity is the ItemList (2026-10-15); the
+        # check reads the list either way, so it cannot fail on the shape alone.
+        data = data.get("mainEntity", data)
         # The url is extensionless since 2026-10-04; slicing a fixed 5 characters off the tail
         # turned every slug into garbage ("battery-winter-st"), which read as 39 omitted guides.
         listed = {re.sub(r"\.html$", "", e["url"].rsplit("/", 1)[-1])

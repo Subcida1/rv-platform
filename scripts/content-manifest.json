@@ -403,9 +403,9 @@
     "claims": "ca780a6dbc99c4d8"
   },
   "guides/index.html": {
-    "hash": "bb6c95c0fa19ce5b",
+    "hash": "363c638a50c2360d",
     "status": "verified",
-    "verified_by": "the chassis battery and charging guide's hub tile added under Body, slides and jacks, alongside the engine overheating tile. One tile, no other change to the page.",
+    "verified_by": "title now names the four topics plus \"and More\" so the list is not read as the full scope (Neo hubs 14th #3), and the ItemList is wrapped in a CollectionPage with the page h1 and meta description as its name and description (Neo hubs 14th #5, homepage 12th #4).",
     "verified_at": "2026-10-15",
     "sources": [],
     "spec": null,
@@ -711,9 +711,9 @@
     "claims": []
   },
   "guides/rv-propane-detector-beeping.html": {
-    "hash": "a261d09e2d630197",
+    "hash": "508fd21c72d62d40",
     "status": "verified",
-    "verified_by": "propane detector review findings applied 2026-10-15: five findings (F1-F5). The propane signal corrected to a constant tone with a flashing red light, which is what the cited signal table says; the 12.1 volt state-of-charge figure now cites Trojan's published table; the two 30 Series facts moved onto the page; two reader-benefit clauses reworded; and a sentence added for what the makers do not publish.",
+    "verified_by": "title tightened 75ch to 51ch: the replacement half is dropped because the meta description already carries the sensor-life answer (Neo guides 14th #4).",
     "verified_at": "2026-10-15",
     "sources": [],
     "spec": "_specs/rv-propane-detector-beeping.md",
