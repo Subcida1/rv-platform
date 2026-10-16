@@ -846,7 +846,7 @@
             "class-a",
             "class-c"
           ],
-          "guide": null,
+          "guide": "rv-leveling-jacks-not-working",
           "kw": [
             "rv wheel chocks",
             "leveling blocks sinking",
@@ -2311,7 +2311,7 @@
             "class-c",
             "van"
           ],
-          "guide": null,
+          "guide": "rv-water-pressure",
           "kw": [
             "rv faucet dripping",
             "rv shower valve replacement",
@@ -2368,7 +2368,7 @@
             "class-a",
             "class-c"
           ],
-          "guide": null,
+          "guide": "rv-water-pressure",
           "kw": [
             "rv shower drain clogged",
             "shower pan crack repair"
@@ -2515,7 +2515,8 @@
             "rv water filtration system"
           ],
           "makers": [],
-          "demand": null
+          "demand": null,
+          "tool": "rv-water-filter"
         }
       ]
     },
@@ -2859,7 +2860,7 @@
             "class-a",
             "class-c"
           ],
-          "guide": null,
+          "guide": "rv-black-tank-routine",
           "kw": [
             "rv cable dump valve adjustment",
             "cable valve replacement"
@@ -3006,7 +3007,7 @@
             "class-a",
             "class-c"
           ],
-          "guide": null,
+          "guide": "rv-black-tank-routine",
           "kw": [
             "black tank flush not working",
             "tank flush vacuum breaker"
@@ -3704,7 +3705,7 @@
             "class-c",
             "van"
           ],
-          "guide": null,
+          "guide": "rv-heating-off-grid",
           "kw": [
             "rv electric heater best",
             "safe heater rv",
@@ -3734,7 +3735,7 @@
             "class-a",
             "class-c"
           ],
-          "guide": null,
+          "guide": "rv-heating-off-grid",
           "kw": [
             "rv fireplace not working",
             "rv electric fireplace"
@@ -4013,7 +4014,7 @@
             "class-a",
             "class-c"
           ],
-          "guide": null,
+          "guide": "rv-awning-not-working",
           "kw": [
             "slide topper flapping",
             "topper replacement",
@@ -4183,7 +4184,7 @@
             "class-a",
             "class-c"
           ],
-          "guide": null,
+          "guide": "rv-entry-door-wont-latch",
           "kw": [
             "rv screen door replacement",
             "screen door latch",
@@ -4210,7 +4211,7 @@
             "class-c",
             "van"
           ],
-          "guide": null,
+          "guide": "rv-entry-door-wont-latch",
           "kw": [
             "rv keyless entry",
             "rvlock not working",
@@ -4734,7 +4735,7 @@
             "class-a",
             "class-c"
           ],
-          "guide": null,
+          "guide": "rv-awning-not-working",
           "kw": [
             "rv awning shade panel",
             "awning tie down"
@@ -4763,7 +4764,7 @@
             "class-a",
             "class-c"
           ],
-          "guide": null,
+          "guide": "rv-awning-not-working",
           "kw": [
             "rv window awning",
             "window awning replacement"
@@ -6213,7 +6214,7 @@
             "class-c",
             "van"
           ],
-          "guide": null,
+          "guide": "rv-propane-tank-wont-fill",
           "kw": [
             "rv propane tank replacement",
             "propane tank certification",
@@ -6288,7 +6289,7 @@
             "trailer",
             "fifth-wheel"
           ],
-          "guide": null,
+          "guide": "rv-propane-tank-wont-fill",
           "kw": [
             "rv propane pigtail leaking",
             "auto changeover valve",
@@ -6315,7 +6316,7 @@
             "class-c",
             "van"
           ],
-          "guide": null,
+          "guide": "rv-propane-tank-wont-fill",
           "kw": [
             "rv propane leak",
             "flare fitting leak",
@@ -6341,7 +6342,7 @@
             "class-c",
             "van"
           ],
-          "guide": null,
+          "guide": "rv-propane-tank-wont-fill",
           "kw": [
             "rv propane valve stiff",
             "tank valve leaking"
@@ -6394,7 +6395,7 @@
             "class-c",
             "van"
           ],
-          "guide": null,
+          "guide": "rv-propane-tank-wont-fill",
           "kw": [
             "rv propane gauge not working",
             "lp tank monitor"
@@ -6442,7 +6443,7 @@
             "class-a",
             "class-c"
           ],
-          "guide": null,
+          "guide": "rv-propane-tank-wont-fill",
           "kw": [
             "rv extend a stay kit",
             "run rv on external propane"
