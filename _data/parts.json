@@ -1092,6 +1092,7 @@
             "van"
           ],
           "guide": "rv-fuse-keeps-blowing",
+          "guide2": "rv-two-appliances-stopped",
           "kw": [
             "rv breaker keeps tripping",
             "gfci breaker rv",
@@ -1272,6 +1273,7 @@
             "van"
           ],
           "guide": "rv-battery-not-charging",
+          "guide2": "battery-winter-storage",
           "kw": [
             "rv battery not holding charge",
             "lifepo4 bms shutdown",
@@ -2759,6 +2761,8 @@
             "van"
           ],
           "guide": "rv-black-tank",
+          "guide2": "rv-black-tank-routine",
+          "guide3": "rv-black-tank-clogged",
           "kw": [
             "black tank sensor wrong",
             "black tank pyramid",
@@ -3822,6 +3826,7 @@
             "van"
           ],
           "guide": "rv-roof-leak-repair",
+          "guide2": "roof-snow-load",
           "kw": [
             "rv roof leak repair",
             "epdm vs tpo",
@@ -4977,6 +4982,8 @@
             "class-c"
           ],
           "guide": "rv-refrigerator-not-cooling",
+          "guide2": "rv-fridge-leveling",
+          "guide2_label": "Fridge leveling",
           "kw": [
             "rv fridge not cooling",
             "ammonia smell fridge",

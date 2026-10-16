@@ -82,6 +82,16 @@ def main():
           "every part with a guide links to it (%d parts)" % len(guide_parts)
           + (": missing %s" % missing_guide[:5] if missing_guide else ""))
 
+    # THE SECOND SLOT (Ty, 2026-10-15). A card can carry guide2 and guide3 as doc-links;
+    # each one must actually be on the card, same rule as the primary.
+    extra_slots = [(p, k) for s in systems for p in s["parts"]
+                   for k in ("guide2", "guide3") if p.get(k)]
+    missing_extra = ["%s -> %s" % (p["n"], p[k]) for p, k in extra_slots
+                     if not any('/guides/%s%s' % (p[k], ext) in html for ext in ("", ".html"))]
+    check(not missing_extra,
+          "every second guide on a card links to it (%d slots)" % len(extra_slots)
+          + (": missing %s" % missing_extra[:5] if missing_extra else ""))
+
     maker_parts = [(s["key"], p) for s in systems for p in s["parts"] if p.get("makers")]
     missing_maker = []
     for _, p in maker_parts:

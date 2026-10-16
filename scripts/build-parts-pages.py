@@ -55,6 +55,30 @@ TYPE_LABEL = {
 }
 
 
+_GUIDE_LABELS = {}
+
+
+def guide_label(slug):
+    """The second guide's link label, read from the guide's own h1 so it cannot drift.
+
+    First segment before a colon, minus a leading "RV "; a page whose h1 is a sentence (no
+    colon) keeps the sentence. A card may override with guide2_label / guide3_label when the
+    derived reading is clumsy."""
+    if slug in _GUIDE_LABELS:
+        return _GUIDE_LABELS[slug]
+    page = ROOT / "guides" / (slug + ".html")
+    label = slug
+    if page.exists():
+        m = re.search(r"<h1[^>]*>(.*?)</h1>", page.read_text(encoding="utf-8"), re.S)
+        if m:
+            label = re.sub(r"<[^>]+>", "", m.group(1)).strip().split(":")[0].strip()
+            if label.startswith("RV "):
+                label = label[3:]
+            label = label[:1].upper() + label[1:]
+    _GUIDE_LABELS[slug] = label
+    return label
+
+
 def esc(s):
     return (str(s).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
             .replace('"', "&quot;"))
@@ -179,6 +203,17 @@ def part_html(p):
         # distinct from each other."
         links.append('<a class="btn btn-gb btn-sm" href="/guides/%s.html">'
                      'How to fix it</a>' % esc(p["guide"]))
+    # THE SECOND GUIDE (Ty, 2026-10-15: "the card template needs to carry two"). A card whose
+    # part has more than one useful guide carries the primary as the gradient button and the
+    # rest as doc-links, labelled from each guide's own h1 so the label cannot drift from the
+    # page. Up to two extras, because the black-tank card is the one part with two distinct
+    # guides behind it (the routine and the clogged-tank rescue).
+    for key, label_key in (("guide2", "guide2_label"), ("guide3", "guide3_label")):
+        slug2 = p.get(key)
+        if slug2:
+            label2 = p.get(label_key) or guide_label(slug2)
+            links.append('<a class="doc-link" href="/guides/%s">%s</a>'
+                         % (esc(slug2), esc(label2)))
     if p.get("tool"):
         # A TOOL IS NOT A GUIDE AND IS NOT A MAKER'S DOCUMENT, so it gets neither button. It is a
         # page on THIS site that answers a question about this part, which makes it a reference like
