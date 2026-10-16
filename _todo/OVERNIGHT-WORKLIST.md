@@ -4998,3 +4998,19 @@ Eight pages, verified at tip `25d6812c`. **One applied, one refuted, one queued.
 - **#1 the old-style callout on rv-roof-leak-repair: REFUTED.** That page's markup is character-for-character the same as the other seven: `<div class="callout flag flag-injury"><span class="flag-h">Can injure you</span>` followed by the bold body, and `.callout.flag .flag-h` is `display:block` with an 8px bottom margin, so the label and body are separated on every page. Nothing to convert; the concatenation is a text-render artifact.
 - **#2 the Gold Bond term: BACKED, and the hedge is restored.** Azdel's own sidewall page is in this page's Sources and it is where the term comes from -- "Also known as the 'Gold Bond', the strength and longevity of this all-important bond is largely what will determine whether or not you experience delamination". Gold Bond is also a drywall brand, which is why the term reads oddly, but the citation is the substrate supplier's own page. **Applied:** the callout now says "largely the bond that decides" instead of "the single bond that decides", so the summary carries the source's hedge rather than dropping it. Re-verified on the record.
 - **#3 the tools and directory silo on all eight: CONFIRMED** (the standing class). Queued with the candidate mappings from this rotation.
+
+## Quick-wins split (2026-10-16 ~11:40 PDT, Cloud on-grid conv-930e3a45)
+
+Ty asked the on-grid session to finish the overnight work. The 24 quick wins from Neo's full-site audit are split to avoid double-work:
+
+**CLAIMED by the on-grid session (conv-930e3a45), building + pushing separately:**
+- **#13** parts: 14 thin does-descriptions + "No repair guide yet" lines on the dead-end cards
+- **#14** solar tool: battery-bank output + appliance load builder
+- **#15** weight calculator: measured tongue/pin override + coach-type presets
+- **#16** converter finder: Magnetek 6300/7300/8300 rows transcribed in-house
+- **#17** brake-laws multi-state route mode + recall-lookup directory CTA
+- **#18** the one-way cross-link gaps + the solar wrong battery-guide link
+
+**HELD by the Cloud lane (conv-90eeb545), continuing in its stated order:** #5, #1/#4, #2, #3, #10, #23, then directory #20-22. #24 (affiliate disclosure) stays parked until signups exist.
+
+**Rules for both sessions:** `git fetch` before each push; explicit-path commits only; un-claim in this file if an item cannot be finished.
