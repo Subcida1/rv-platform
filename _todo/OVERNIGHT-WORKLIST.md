@@ -4924,3 +4924,11 @@ Eight pages, verified at tip `c64f3a93`. **Four fixes confirmed, two applied, th
 - **#5 rv-loan silo: CONFIRMED, APPLIED.** Its only internal links were /about, /contact and two other tools. It now also links `/guides/rv-towing-capacity` -- the weight question that decides what the loan is even for.
 - **#6 snow-load manuals link: CONFIRMED, APPLIED.** It pointed at the `/manuals/` hub root; it now links `/manuals/exterior-and-body` for the roof and sealant documents, with `/manuals/brands` for the rest.
 - **Verified clean:** the hub's 15 live plus 4 pipeline cards, the Where-to-go-next strip, titles, H1s, dashes, FFFD, voice, and every hub card's arithmetic spot-checked.
+
+## Neo hubs 15th rotation (2026-10-16, verified from the Cloud lane)
+
+Six items, verified at tip `aefab84d`. **Four fixes confirmed, one item closed, one convention recorded.**
+
+- **#1-#4 verified fixed:** the /parts ItemList names all 210 cards, the /directory hub carries the closing line, the /guides hub is a CollectionPage with 59 items, and the homepage ItemList carries `@id` with 74 items.
+- **#5 the /guides title: CLOSED.** It now reads "RV Repair Guides: Electrical, Water, Towing, Winter and More" (60ch, in band). The "and More" clause is what makes it true -- the title no longer implies those four are the whole hub.
+- **#6 the date convention: RECORDED.** The rule is **a date means a human reviewed the page's content**. The four hub indexes (guides, tools, directory, parts) are generated lists of cards, so they stay dateless -- the directory ruling from 11:30 is the same rule, not an exception. The manuals pages keep theirs because their rows are verified document by document. The manuals **hub** is the one borderline case (its tiles are curated, its counts generated); if Ty wants a single rule for hubs, the change is either adding dates to four or removing one.
