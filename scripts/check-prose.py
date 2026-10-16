@@ -143,6 +143,16 @@ NOTED = (
     # That one is correct as it stands and must NOT be swept: house style is that
     # a quoted source wins over our prose rules. Strip quotes before matching
     # before you widen this rule.
+    # ADDED 2026-10-16, from Ty reading the dump-station etiquette: "we dont wanna make them
+    # anxious or feel rushed." A page that puts a clock on the reader is the failure shape --
+    # the courtesy is real, the pressure is not. NOTED because "quickly" and "hurry" have honest
+    # uses ("the water drains quickly"), so only the reader-directed forms fire.
+    ("time-pressure",
+     r"\bbe mindful of the time\b|\bdon't delay\b|\bdo not delay\b|\bhurry\b|"
+     r"\bas fast as (?:you can|possible)\b|\bkeep others waiting\b|"
+     r"\bholding up the (?:line|queue)\b|\bdon't keep \w+ waiting\b|"
+     r"\bothers (?:are|may be) waiting\b",
+     "putting a clock on the reader instead of stating the courtesy"),
     ("emphasis-adverb",
      r"\b(?:truly|genuinely|really|actually)\s+(?:matters|matter|important|counts|means)\b",
      "insisting on importance rather than showing it"),
@@ -210,6 +220,51 @@ def excess_hits(text):
     return found
 
 
+# BRAND-REPEAT DENSITY. Added 2026-10-16 from Ty reading the sensor guide: "Less branding you
+# reference Thetfords so much around this area pls reduce it heavily here" and "we need to avoid
+# repetitive sayings." The mechanical sweep removed the "X's own Y" family; this measures the
+# other half -- one maker's name repeated inside a single section, which reads as promotion
+# rather than information.
+#
+# THE MAKER LIST COMES FROM THE PAGE'S OWN SOURCES, not from a global brand list. The first
+# version counted every mid-sentence capitalised word and produced 349 hits, almost all of them
+# place names and region labels ("Phoenix x8", "Valley x15") -- an instrument that flags correct
+# behaviour, which is worse than none. The names that matter are the ones the page itself cites,
+# so the Sources block supplies them: the leading name of each entry ("Camco, black tank myths
+# debunked" -> "Camco"). NOTED on purpose: a maker named three times can be honest (three
+# separate documents), so it reports and a human judges.
+def brand_density(path):
+    html = path.read_text(encoding='utf-8')
+    html = re.sub(r"<(script|style)\b.*?</\1>", " ", html, flags=re.S | re.I)
+    html = re.sub(r"<!--.*?-->", " ", html, flags=re.S)
+    m = re.search(r"<h3[^>]*>\s*Sources\s*</h3>(.*?)(?:</section>|</main>|\Z)", html, re.S | re.I)
+    makers = set()
+    if m:
+        for lm in re.finditer(r"<li>\s*<a[^>]*>(.*?)</a>", m.group(1), re.S):
+            name = re.sub(r"<[^>]+>", "", lm.group(1)).strip()
+            name = name.split(",")[0].strip()
+            if 2 <= len(name) <= 40:
+                makers.add(name)
+    if not makers:
+        return []
+    parts = re.split(r"<h[23]\b[^>]*>(.*?)</h[23]>", html, flags=re.S | re.I)
+    out = []
+    for i in range(1, len(parts) - 1, 2):
+        head = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", parts[i])).strip()
+        # the Sources block is the provenance list; a maker named once per entry there is the
+        # page doing its job, not promotion
+        if head.lower().startswith("sources"):
+            continue
+        body = re.sub(r"<[^>]+>", " ", parts[i + 1])
+        body = (body.replace("&amp;", "&").replace("&#39;", "'")
+                    .replace("&quot;", '"').replace("&nbsp;", " "))
+        for name in makers:
+            n = body.count(name)
+            if n >= 3:
+                out.append((name, n, head[:60]))
+    return out
+
+
 def visible_text(path):
     """The words a reader sees, with the parts that are not prose removed."""
     t = path.read_text(encoding='utf-8')
@@ -239,6 +294,9 @@ def scan(pages):
         except Exception:
             continue
         rel = p.relative_to(ROOT)
+        for w, n, head in brand_density(p):
+            noted.append((str(rel), "brand-repeat", "one name repeated in a section",
+                          "%s x%d in %r" % (w, n, head)))
         found = excess_hits(text)
         if len(found) >= EXCESS_MIN:
             hits.append((str(rel), "excess-vocab",
@@ -299,6 +357,10 @@ def self_test():
         "Propane system repairs and safety inspections require a licensed LP gas technician in most "
         "states.",
         "Several makers list low voltage as a no-prime cause, and one gives a number.",
+        # must not fire on the time-pressure rule: these are about the machine, not the reader
+        "The water drains quickly once the valve is open.",
+        "If the tank is nearly full, dump it before you travel.",
+        "A hose that is left connected can hold pressure for a while.",
     ]
     bad = [
         ("source-meta", "A rough estimate by the Weather Service's own description."),
@@ -328,6 +390,10 @@ def self_test():
         ("unnamed-authority",
          "Visible mold over about 10 square feet is the usual threshold between a do-it-yourself "
          "clean and professional remediation."),
+        # verbatim from the dump-station etiquette before Ty's correction, 2026-10-16
+        ("time-pressure",
+         "A dump station is a shared facility, and its etiquette is mostly about the next person: "
+         "be mindful of the time, because a line forms fast on a travel day."),
     ]
     failures = []
     for name, line in bad:
@@ -342,6 +408,24 @@ def self_test():
         for name, rx, _ in STRICT + NOTED:
             if re.search(rx, line, re.I):
                 failures.append("MUST NOT CATCH but did: [%s] %s" % (name, line))
+    # the density measure is a function, not a regex, so it gets its own pair of cases
+    import tempfile, pathlib as _pl
+    def _density(sample):
+        with tempfile.NamedTemporaryFile("w", suffix=".html", delete=False) as f:
+            f.write(sample)
+            name = f.name
+        try:
+            return brand_density(_pl.Path(name))
+        finally:
+            _pl.Path(name).unlink()
+    _src = '<h3>Sources</h3><ul><li><a href="#">Acme, widget manual</a>: the widget</li></ul>'
+    if not _density(_src + "<h2>One</h2><p>Acme says this. Acme says that. Acme again.</p>"):
+        failures.append("MUST CATCH but did not: [brand-repeat] a maker named three times in one section")
+    if _density(_src + "<h2>One</h2><p>Acme says this. Acme says that.</p>"):
+        failures.append("MUST NOT CATCH but did: [brand-repeat] a maker named twice in one section")
+    if _density(_src + "<h3>Sources</h3><ul><li>Acme one. Acme two. Acme three.</li></ul>"):
+        failures.append("MUST NOT CATCH but did: [brand-repeat] the Sources block itself")
+
     if failures:
         print("SELF-TEST FAILED")
         for f in failures:
