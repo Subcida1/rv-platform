@@ -2,7 +2,7 @@
    RV-specific businesses only, a phone number verified on the business's own
    site, nothing invented. scripts/verify.py checks them all. */
 window.RV_LISTINGS_RI = [
- {  "n": "Matt's Mobile RV Repair",  "c": "Rhode Island, RI",  "p": "401-443-6184",  "u": "https://mattsmobilervrepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Matt's Mobile RV Repair is a certified and registered RV mechanic offering mobile RV repairs for all makes and models in Rhode Island, Eastern Connecticut and Southern Massachusetts. Repairs include electrical, plumbing, appliances, roofing, exteriors and air conditioning, and it also handles leveling jacks, emergency slideout repairs, battery replacements, doors and windows. The site states it is closed for the season and will reopen in June of 2026.",  "g": [
+ {  "n": "Matt's Mobile RV Repair",  "c": "RI, Eastern CT and Southern MA",  "p": "401-443-6184",  "u": "https://mattsmobilervrepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Matt's Mobile RV Repair is a certified and registered RV mechanic offering mobile RV repairs for all makes and models in Rhode Island, Eastern Connecticut and Southern Massachusetts. Repairs include electrical, plumbing, appliances, roofing, exteriors and air conditioning, and it also handles leveling jacks, emergency slideout repairs, battery replacements, doors and windows. The site states it is closed for the season and will reopen in June of 2026.",  "g": [
    "mobile tech"
   ],  "base": null,  "areas": [],  "region": "Rhode Island, Eastern Connecticut, and Southern Massachusetts",  "spec": "Closed for the season. Will Re-open in June of 2026",  "reg": "rhode-island-ri"
  },

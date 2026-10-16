@@ -2,11 +2,11 @@
    RV-specific businesses only, a phone number verified on the business's own
    site, nothing invented. scripts/verify.py checks them all. */
 window.RV_LISTINGS_CT = [
- {  "n": "Beaulieu Mobile RV Repair & Inspections LLC",  "c": "Western MA, Northern CT, and Southern NH, MA",  "p": "413-426-4696",  "u": "https://davidjb73.wixsite.com/beaulieu-mobile-rv-1",  "t": "mobile",  "e": false,  "r": false,  "d": "Beaulieu Mobile RV Repair & Inspections LLC provides mobile RV services across Western Massachusetts, Northern Connecticut and Southern New Hampshire. It offers pre-purchase, safety and maintenance inspections, general internal repairs such as air conditioner, fridge and heater repair, and external repairs such as roof repairs.",  "g": [
+ {  "n": "Beaulieu Mobile RV Repair & Inspections LLC",  "c": "Western MA, Northern CT and Southern NH",  "p": "413-426-4696",  "u": "https://davidjb73.wixsite.com/beaulieu-mobile-rv-1",  "t": "mobile",  "e": false,  "r": false,  "d": "Beaulieu Mobile RV Repair & Inspections LLC provides mobile RV services across Western Massachusetts, Northern Connecticut and Southern New Hampshire. It offers pre-purchase, safety and maintenance inspections, general internal repairs such as air conditioner, fridge and heater repair, and external repairs such as roof repairs.",  "g": [
    "mobile tech"
   ],  "base": null,  "areas": [],  "region": "Western MA, Northern CT, and Southern NH",  "spec": null,  "reg": "hartford-ct"
  },
- {  "n": "In the Shade RV Repair",  "c": "Connecticut, CT",  "p": "+18606612241",  "u": "https://intheshadervrepairs.com/services-1",  "t": "mobile",  "e": false,  "r": false,  "d": "In the Shade RV Repair is a mobile RV repair service that comes to the customer's home, campground or storage location anywhere in Connecticut, with no shop visits and no towing. It handles a wide range of RV repairs and upgrades including furnaces, AC units, awnings, toilets, showers, plumbing and stuck slide outs. It also does RV awning repair and replacement, roof inspections, power washing and re-sealing, custom decks, and damage repair and restorations.",  "g": [
+ {  "n": "In the Shade RV Repair",  "c": "Statewide",  "p": "+18606612241",  "u": "https://intheshadervrepairs.com/services-1",  "t": "mobile",  "e": false,  "r": false,  "d": "In the Shade RV Repair is a mobile RV repair service that comes to the customer's home, campground or storage location anywhere in Connecticut, with no shop visits and no towing. It handles a wide range of RV repairs and upgrades including furnaces, AC units, awnings, toilets, showers, plumbing and stuck slide outs. It also does RV awning repair and replacement, roof inspections, power washing and re-sealing, custom decks, and damage repair and restorations.",  "g": [
    "mobile tech"
   ],  "base": null,  "areas": [],  "region": "all of Connecticut",  "spec": null,  "reg": "hartford-ct"
  },
@@ -15,11 +15,11 @@ window.RV_LISTINGS_CT = [
    "service center"
   ],  "base": "bolton",  "areas": [],  "region": "Connecticut and New England",  "spec": null,  "reg": "hartford-ct"
  },
- {  "n": "Leadfoot's Mobile RV Repair",  "c": "Connecticut, CT",  "p": "860.373.2900",  "u": "https://leadfootsrvrepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Leadfoot's Mobile RV Repair is a mobile RV repair and maintenance business that repairs RVs at the customer's location. It emphasizes keeping an RV running smoothly, scheduling repairs and maintenance to prevent bigger problems on the road, and letting owners spend more time camping. It asks customers to call to schedule camper maintenance.",  "g": [
+ {  "n": "Leadfoot's Mobile RV Repair",  "c": "Sterling, CT",  "p": "860.373.2900",  "u": "https://leadfootsrvrepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Leadfoot's Mobile RV Repair is a mobile RV repair and maintenance business that repairs RVs at the customer's location. It emphasizes keeping an RV running smoothly, scheduling repairs and maintenance to prevent bigger problems on the road, and letting owners spend more time camping. It asks customers to call to schedule camper maintenance.",  "g": [
    "mobile tech"
   ],  "base": null,  "areas": [],  "region": null,  "spec": null,  "reg": "hartford-ct"
  },
- {  "n": "MP RV Pros, LLC",  "c": "Connecticut, CT",  "p": "(860) 387-3285",  "u": "https://mprvpros.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "MP RV Pros, LLC is a mobile RV education, inspection and repair business in Connecticut whose team comes to the customer's location. It services and repairs RV air conditioners, absorption refrigerators, water heaters and furnaces, offers RV inspections, and provides seasonal maintenance packages. Its team has passed the practical and written examinations through the RVTAA and RVIA.",  "g": [
+ {  "n": "MP RV Pros, LLC",  "c": "Statewide",  "p": "(860) 387-3285",  "u": "https://mprvpros.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "MP RV Pros, LLC is a mobile RV education, inspection and repair business in Connecticut whose team comes to the customer's location. It services and repairs RV air conditioners, absorption refrigerators, water heaters and furnaces, offers RV inspections, and provides seasonal maintenance packages. Its team has passed the practical and written examinations through the RVTAA and RVIA.",  "g": [
    "mobile tech"
   ],  "base": null,  "areas": [],  "region": "Connecticut",  "spec": null,  "reg": "hartford-ct"
  },
@@ -106,7 +106,7 @@ window.RV_LISTINGS_CT = [
    "battery service"
   ],  "base": "niantic",  "areas": [],  "region": "Southeastern Connecticut",  "spec": null,  "reg": "eastern-ct"
  },
- {  "n": "TRIC Mobile RV Repair",  "c": "Connecticut, CT",  "p": "(508) 479-1144",  "u": "https://tricmobilervrepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "TRIC Mobile RV Repair is a family owned mobile RV repair and maintenance business that serves Central Massachusetts, Northern Rhode Island and Northern Connecticut. Its RVTI-certified technicians come to the customer's location and handle appliance repair, roof repair, awning repair, plumbing, winterizing, bearing and brake service, leak detection, inspections and emergency RV repair.",  "g": [
+ {  "n": "TRIC Mobile RV Repair",  "c": "Central MA, Northern RI and Northern CT",  "p": "(508) 479-1144",  "u": "https://tricmobilervrepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "TRIC Mobile RV Repair is a family owned mobile RV repair and maintenance business that serves Central Massachusetts, Northern Rhode Island and Northern Connecticut. Its RVTI-certified technicians come to the customer's location and handle appliance repair, roof repair, awning repair, plumbing, winterizing, bearing and brake service, leak detection, inspections and emergency RV repair.",  "g": [
    "mobile tech",
    "RV repair",
    "appliance repair",
@@ -164,7 +164,7 @@ window.RV_LISTINGS_CT = [
    "preventive maintenance"
   ],  "base": "danbury",  "areas": [],  "region": "Fairfield County",  "spec": null,  "reg": "western-ct"
  },
- {  "n": "Matt's Mobile RV Repair",  "c": "Connecticut, CT",  "p": "401-443-6184",  "u": "https://mattsmobilervrepair.com/",  "t": "mobile",  "e": false,  "r": true,  "d": "Matt's Mobile RV Repair is a certified and registered mobile RV mechanic serving Rhode Island, Eastern Connecticut and Southern Massachusetts. It repairs all makes and models and handles electrical, plumbing, appliance, air conditioning, water heater and roofing work, plus leveling jacks, emergency slideout repairs, roadside assistance, battery replacements, doors and windows.",  "g": [
+ {  "n": "Matt's Mobile RV Repair",  "c": "RI, Eastern CT and Southern MA",  "p": "401-443-6184",  "u": "https://mattsmobilervrepair.com/",  "t": "mobile",  "e": false,  "r": true,  "d": "Matt's Mobile RV Repair is a certified and registered mobile RV mechanic serving Rhode Island, Eastern Connecticut and Southern Massachusetts. It repairs all makes and models and handles electrical, plumbing, appliance, air conditioning, water heater and roofing work, plus leveling jacks, emergency slideout repairs, roadside assistance, battery replacements, doors and windows.",  "g": [
    "mobile tech",
    "RV repair",
    "RV electrical",

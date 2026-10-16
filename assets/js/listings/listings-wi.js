@@ -244,7 +244,7 @@ window.RV_LISTINGS_WI = [
    "parts"
   ],  "base": "deforest",  "areas": [],  "region": "Madison area",  "spec": "RV service center (national chain, local shop)",  "reg": "south-central-wi"
  },
- {  "n": "K and R Mobile RV Repair, LLC",  "c": "Wisconsin, WI",  "p": "608-547-4494",  "u": "https://krmobilervrepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "K and R Mobile RV Repair, LLC is a mobile RV repair and maintenance business in Wisconsin. Its operator, who has camped for over 45 years, offers on-site maintenance and repair including parts replacement (from fuses to air conditioners). The website is a work in progress and does not publish a street address, so the base place is unconfirmed; the phone number is published on the site.",  "g": [
+ {  "n": "K and R Mobile RV Repair, LLC",  "c": "South central Wisconsin, WI",  "p": "608-547-4494",  "u": "https://krmobilervrepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "K and R Mobile RV Repair, LLC is a mobile RV repair and maintenance business in Wisconsin. Its operator, who has camped for over 45 years, offers on-site maintenance and repair including parts replacement (from fuses to air conditioners). The website is a work in progress and does not publish a street address, so the base place is unconfirmed; the phone number is published on the site.",  "g": [
    "mobile tech",
    "maintenance",
    "parts"

@@ -250,8 +250,13 @@ def lede_text(data):
         close = "Mobile technicians are here"
     else:
         close = "Service centers are here"
-    if c["road"]:
+    # ONE ROADSIDE PROVIDER IS NOT A NETWORK (Neo directory 12th #3, Wyoming: 1 of 20 rows
+    # roadside-flagged). The clause states the count when there is exactly one, the way the
+    # stats strip beside it does; two or more keep the plain claim.
+    if c["road"] > 1:
         close += ", along with emergency roadside help for breakdowns on the highway"
+    elif c["road"] == 1:
+        close += ", along with roadside help from one provider"
     return ("There are two kinds of RV repair. The difference is whether you can move your RV. "
             "If you cannot, you need a mobile technician who comes to you. If you can drive it, "
             "a service center has the bays and parts for bigger jobs. " + close + ".")
@@ -544,6 +549,25 @@ def build(kind):
                               "missing? <a href=\"/contact\">Tell us</a>.</p>\n\\1",
                               text, count=1)
             assert n == 1, "%s: no </main> to put the closing line before" % slug
+        # THE SAME "WHERE TO GO NEXT" CARD THE HUB CARRIES (Neo directory 12th #5). Scoped to
+        # <main>, a state page linked only /contact and the hub, so a reader with a broken
+        # furnace on a state page had no route to the guides, tools, manuals or parts. Emitted
+        # here so a new state cannot ship without it; anchored on the closing line, which the
+        # block above guarantees is present.
+        if '>Where to go next<' not in text:
+            card = ('\n  <div class="sec pb-60">\n    <div class="wrap">\n      <div class="card">\n'
+                    '        <h2 class="sm">Where to go next</h2>\n'
+                    '        <p class="sm">The <a href="/guides/">guides</a> work through common '
+                    'faults in order, from the symptom. The <a href="/tools/">tools</a> cover the '
+                    'numbers: weight, load, tire age, battery runtime. The '
+                    '<a href="/manuals/">manuals</a> are the maker\'s own documents behind those '
+                    'guides. The <a href="/parts/">parts</a> page names every component by system, '
+                    'with what each one does. And <a href="/about">about OriginRV</a> says who '
+                    'writes this, with <a href="/contact">the contact page</a> for a correction or '
+                    'a missing topic.</p>\n'
+                    '      </div>\n    </div>\n  </div>\n')
+            text, n = re.subn(r"\n( <p class=\"page-foot\">)", card + "\\1", text, count=1)
+            assert n == 1, "%s: no page-foot for the where-to-go-next card" % slug
         put(page, text, old, "page")
 
     # 3. the hub tiles and the homepage figure
@@ -556,6 +580,14 @@ def build(kind):
                               r"\g<1>%d\g<2>" % c[key], text)
             assert n == 1, "hub: idx-%s-%s marker not found" % (st.lower(), key)
     text = replace_between(text, CLAIM_START, CLAIM_END, CLAIM_CARD, "hub claim")
+    # THE HUB CARRIES THE CLOSING LINE TOO (Neo directory 12th #6): the state pages got it and
+    # the hub did not, so the page that lists them all was the one page without it.
+    if 'class="page-foot"' not in text:
+        text, n = re.subn(r"\n(\s*</main>)",
+                          "\n <p class=\"page-foot\">Something wrong here, or something "
+                          "missing? <a href=\"/contact\">Tell us</a>.</p>\n\\1",
+                          text, count=1)
+        assert n == 1, "hub: no </main> to put the closing line before"
     put(hub, text, old, "hub tiles")
 
     # The hub names each state page in structured data, and that block was written by

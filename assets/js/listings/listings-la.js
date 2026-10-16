@@ -66,7 +66,7 @@ window.RV_LISTINGS_LA = [
    "roadside"
   ],  "base": null,  "areas": [],  "region": "Calcasieu Parish",  "spec": null,  "reg": "southwest-la"
  },
- {  "n": "Twins RV Repair",  "c": "Louisiana, LA",  "p": "832-960-8175",  "u": "https://www.twinsrvrepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Twins RV Repair is a 100% family-owned and operated mobile RV repair company serving the entire state of Louisiana, with over 10 years of hands-on experience. It brings its expertise directly to you for RV, mobile home and trailer repair and maintenance. Services include flooring installation, interior and exterior painting, roofing, electrical work, plumbing, structural repairs and full restorations.",  "g": [
+ {  "n": "Twins RV Repair",  "c": "Statewide",  "p": "832-960-8175",  "u": "https://www.twinsrvrepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Twins RV Repair is a 100% family-owned and operated mobile RV repair company serving the entire state of Louisiana, with over 10 years of hands-on experience. It brings its expertise directly to you for RV, mobile home and trailer repair and maintenance. Services include flooring installation, interior and exterior painting, roofing, electrical work, plumbing, structural repairs and full restorations.",  "g": [
    "mobile tech"
   ],  "base": null,  "areas": [],  "region": "Louisiana",  "spec": null,  "reg": [
    "northwest-la",
@@ -83,7 +83,7 @@ window.RV_LISTINGS_LA = [
    "body/collision"
   ],  "base": "eunice",  "areas": [],  "region": "Acadia Parish, Evangeline Parish, and neighboring communities",  "spec": null,  "reg": "acadiana-la"
  },
- {  "n": "Leo's RV Service, LLC",  "c": "Louisiana, LA",  "p": "225-772-4305",  "u": "https://leosrvservice.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Leo's RV Service, LLC is a mobile RV service company whose motto is WE COME TO YOU, and it will come to your location. It handles the vast majority of service and maintenance needs for Class A, fifth wheel and pull campers, with service personnel who have over 25 years of experience. The company is an LLC partnership owned by Leo Johnson and Clyde P Roy Sr and is described as fully insured and licensed to do business in Louisiana.",  "g": [
+ {  "n": "Leo's RV Service, LLC",  "c": "Statewide",  "p": "225-772-4305",  "u": "https://leosrvservice.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Leo's RV Service, LLC is a mobile RV service company whose motto is WE COME TO YOU, and it will come to your location. It handles the vast majority of service and maintenance needs for Class A, fifth wheel and pull campers, with service personnel who have over 25 years of experience. The company is an LLC partnership owned by Leo Johnson and Clyde P Roy Sr and is described as fully insured and licensed to do business in Louisiana.",  "g": [
    "mobile tech"
   ],  "base": null,  "areas": [],  "region": "Louisiana",  "spec": "Rates are a $150.00 service call plus $150 per hour, one hour minimum.",  "reg": [
    "northwest-la",

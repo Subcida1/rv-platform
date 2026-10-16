@@ -2,7 +2,7 @@
    RV-specific businesses only, a phone number verified on the business's own
    site, nothing invented. scripts/verify.py checks them all. */
 window.RV_LISTINGS_NH = [
- {  "n": "Mountain Mobile RV Services, LLC.",  "c": "New Hampshire, NH",  "p": "(603) 307-1213",  "u": "https://mountainmobilervservices.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Mountain Mobile RV Services, LLC. provides mobile RV repair and inspection at the customer's location in New Hampshire and Maine. Its technicians are trained and certified by the National RV Training Academy and the RV Technical Institute and are members of the RV Training Academy Association. It services exteriors and water systems, heaters and furnaces, refrigeration units, air conditioners, heat pumps, DC and AC electrical systems and generators, and it offers inspection packages and fluid analysis.",  "g": [
+ {  "n": "Mountain Mobile RV Services, LLC.",  "c": "New Hampshire and Maine",  "p": "(603) 307-1213",  "u": "https://mountainmobilervservices.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Mountain Mobile RV Services, LLC. provides mobile RV repair and inspection at the customer's location in New Hampshire and Maine. Its technicians are trained and certified by the National RV Training Academy and the RV Technical Institute and are members of the RV Training Academy Association. It services exteriors and water systems, heaters and furnaces, refrigeration units, air conditioners, heat pumps, DC and AC electrical systems and generators, and it offers inspection packages and fluid analysis.",  "g": [
    "mobile tech"
   ],  "base": null,  "areas": [],  "region": "New Hampshire & Maine",  "spec": null,  "reg": "southern-nh"
  },
