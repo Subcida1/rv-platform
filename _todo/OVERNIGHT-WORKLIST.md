@@ -4745,3 +4745,46 @@ Five items, verified at tip `deb87a14`. **One applied, four queued.**
 - **#3 per-state lede variants: CONFIRMED.** The same 496-character lede runs on every state page and claims "emergency roadside help for breakdowns on the highway" while Wyoming has 1 of 20 rows roadside-flagged and Maryland 3 of 35. Queue: a lede variant that claims only what the state's data supports.
 - **#4 the state-page cross-section silo: CONFIRMED (second flag).** One internal link in `<main>` (`/contact`), zero to /guides/, /tools/, /parts/, /manuals/ or sibling states. Queue: the topic-matched in-body block.
 - **Area-code audit: DONE and standing.** `scripts/audit-phones.py` ran across all 50 states (84 out-of-state codes at the time, each carrying a verbatim quote), and it is the standing instrument for the class -- five newer flags are already in its output.
+
+## The queue drained, the W3 specs written, and the rescue page drafted (2026-10-15 evening, conv-8ed0310b)
+
+**Everything below is committed and gate-green unless marked otherwise.**
+
+- `ec1ea0c4` -- the date surfaces unified: `scripts/pagedates.py` owns one derivation
+  (substantive walk + LOCAL date) for sync-dates and the sitemap, because the two disagreed
+  (raw vs substantive commit) and read dates in the commit's own timezone, so Cloud-sandbox
+  commits (+0000) read as "tomorrow" and stopped the build chain.
+- `e02c85b9`, `4b5a22e1` -- frame-cracks title 77->53ch + weight calculator link; detector
+  title 75->51ch; /guides hub title; homepage ItemList @id; guides hub ItemList wrapped in a
+  CollectionPage; verify.py reads it through the wrapper.
+- `f9d4abd7` -- **the manuals RELATED map was stale** (hand-kept, lost ~22 guides). Now derived
+  from `_data/guide-systems.json` with a loud guard for unmapped systems. heating-and-cooling
+  gains watts-to-amps.
+- `eecf0774`, `8e8b84d1` -- the seven finders get the byline + dateModified.
+- `4b194c57` -- directory: ten placeholder towns replaced with sourced labels, Wyoming lede
+  count-aware, every state page carries the hub's "Where to go next" card (hub-links half of
+  the silo item; the topic-matched half stays a Ty proposal).
+- `8506bbd3` -- the brake table rows are in the page between BL-ROWS markers; the test holds
+  the static rows equal to the finder render cell for cell; the page links the weight
+  calculator and start-here.
+- `68b6c5c8` -- **W3 specs**: `_specs/rv-black-tank-clogged.md` (thesis, DIY/tech line, H2S
+  callout, source table) and `_specs/rv-black-tank-maintenance-boundary.md` (the existing
+  rv-black-tank IS the maintenance guide; no fourth page; consolidation is a Ty call).
+- `4e02870b` -- the batch: homepage manuals chips row, nine parts-card mappings, 14-clause
+  prose sweep (the 10-14 remainder), 11 keyword targets declared (140 total), manuals system
+  pages link the directory, check-alignment declares the new pills row.
+
+**W3 reading owed item: RESOLVED.** Jayco's Towable Owner's Manual (2027) publishes the paper
+rule verbatim: *"Use only septic-safe toilet paper to avoid clogs and maintain proper
+function."* The same section carries the visual level check. No maker publishes a clog-clearing
+procedure, which is the rescue page's finding. All six source documents fetched; quotes
+verified character-for-character.
+
+**Next in the W3 build:** the rescue page is scaffolded from `_specs/rv-black-tank-clogged.md`
+(body drafted at /tmp/w3-body.html, 1,170 words, gate-clean), then the two-guide renderer
+(Ty's ruling: BUILD it) so the black-tank card can carry the rescue as its second guide.
+
+**Pending Ty (unchanged):** the statewide multi-region repeat (dedupe vs label), the
+state-page topic-matched block, the W3 maintenance interpretation (new page vs existing), the
+two-guide renderer's second-slot labels if he wants them curated.
+
