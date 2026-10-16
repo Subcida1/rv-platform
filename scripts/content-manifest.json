@@ -591,9 +591,9 @@
     "claims": []
   },
   "guides/rv-furnace-carbon-monoxide.html": {
-    "hash": "a5bb32153d09fe45",
+    "hash": "9f0c2afea355560c",
     "status": "verified",
-    "verified_by": "variety pass on the maker-s construction (Ty: avoid repetitive sayings) -- the same phrase no longer repeats within these pages; the manual, the factory, the service documentation and the named maker now carry the attribution in turn.",
+    "verified_by": "three FAQ blocks added, each grounded in the page's own sections and sources (audit quick win #4)",
     "verified_at": "2026-10-16",
     "sources": [],
     "spec": null,
