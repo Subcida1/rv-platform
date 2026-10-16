@@ -1082,10 +1082,10 @@
     "sources": []
   },
   "tools/battery-runtime.html": {
-    "hash": "32fef4ee3976a714",
+    "hash": "fe54e6f7e7989af5",
     "status": "verified",
-    "verified_by": "queued parts-card links applied 2026-10-15: every part card now carries an anchor, so the parts reference on this page lands on the card(s) it names instead of the top of a system section, and a page that carried none gained a topic-matched one. No fact changed; no existing link removed.",
-    "verified_at": "2026-10-15",
+    "verified_by": "quick-wins #18 cross-link pass (Cloud on-grid, 2026-10-16): one link added to the Where-to-go-next block (the converter finder, for when the converter is the failed charger) and the sentence extended to describe it. No fact changed; no existing link removed.",
+    "verified_at": "2026-10-16",
     "sources": [],
     "spec": null,
     "spec_waived": true,
@@ -1132,9 +1132,9 @@
     "claims": []
   },
   "tools/rv-converter-finder.html": {
-    "hash": "19732c49948653e1",
+    "hash": "a0dc9ba656480119",
     "status": "verified",
-    "verified_by": "repetitive-saying sweep (Ty): the X's-own-Y-says-it-plainly family is out site-wide (own dropped, plainly/bluntly flourishes cut, in-their-own-words removed, and the X-which-makes-the-Y appositives restructured).",
+    "verified_by": "quick-wins #16 (Cloud on-grid, 2026-10-16): WFCO's Magnetek column and 6300/7300/8300 rows transcribed by hand from its Torque Chart (source cited on every row), the coverage copy on the page, in the finder and in the record updated to match, and the test extended to pin the new rows. The two parsed charts are unchanged; no existing replacement was removed.",
     "verified_at": "2026-10-16",
     "sources": [],
     "spec": null,
@@ -1226,9 +1226,9 @@
     "sources": []
   },
   "tools/weight-calculator.html": {
-    "hash": "c1f7adc51d267a7b",
+    "hash": "100aeab8bb4f50f0",
     "status": "verified",
-    "verified_by": "repetitive-saying sweep (Ty): the X's-own-Y-says-it-plainly family is out site-wide (own dropped, plainly/bluntly flourishes cut, in-their-own-words removed, and the X-which-makes-the-Y appositives restructured).",
+    "verified_by": "quick-wins #18 cross-link pass (Cloud on-grid, 2026-10-16): one list item added to Where-to-go-next (state trailer brake laws; the weight-threshold claim checked against _data/state-brake-laws.json, 42 of 50 states carry a numeric weight threshold). No fact changed; no existing link removed.",
     "verified_at": "2026-10-16",
     "sources": [],
     "spec": null,

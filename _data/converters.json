@@ -1,6 +1,6 @@
 {
  "note": "Converter and power-center supersessions, taken from the makers' own published cross-reference charts and traceable to the chart each row came from. Built by scripts/fetch-converter-charts.py; do not edit by hand.",
- "fetched": "2026-10-11",
+ "fetched": "2026-10-16",
  "sources": {
   "pd": {
    "title": "Progressive Dynamics, converter cross-reference guide",
@@ -32,10 +32,11 @@
     "Precision Circuits",
     "Intellitec"
    ],
-   "why_not_parsed": "Read but not parsed: its columns sit side by side across the page and wrap, so pairing its rows by whitespace risks producing a wrong part number, which is the one failure this tool must not have."
+   "transcribed": "the Magnetek column and the 6300, 7300 and 8300 series rows, read off the chart by eye one row at a time (WFCO_TRANSCRIBED below)",
+   "why_not_parsed": "Read but not parsed: its columns sit side by side across the page and wrap, so pairing its rows by whitespace risks producing a wrong part number, which is the one failure this tool must not have. The rows this tool does carry from it were transcribed by eye instead."
   }
  },
- "coverage": "Two of the three maker charts are parsed. WFCO's is linked and not parsed, so a reader whose replacement is a WFCO product may not see one here, and the tool says so rather than implying the list is complete.",
+ "coverage": "All three maker charts are read. The two HTML charts are parsed automatically; WFCO's is a PDF that cannot be read automatically without risking a wrong part number, so its Magnetek column and its 6300, 7300 and 8300 series rows were transcribed by hand, and the rest of that chart is linked rather than transcribed. A model the charts do not name still comes back as not found here, and the tool says so rather than implying the list is complete.",
  "records": [
   {
    "old_maker": "Iota",
@@ -276,6 +277,160 @@
    ]
   },
   {
+   "old_maker": "Magnetek",
+   "old_model": "6335",
+   "kind": "",
+   "replacements": [
+    {
+     "source": "wfco",
+     "maker": "WFCO",
+     "part": "WF-8935-AD",
+     "battery": "",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "Magnetek",
+   "old_model": "6345",
+   "kind": "",
+   "replacements": [
+    {
+     "source": "wfco",
+     "maker": "WFCO",
+     "part": "WF-8945-AD",
+     "battery": "",
+     "note": ""
+    },
+    {
+     "source": "wfco",
+     "maker": "WFCO",
+     "part": "WF-8945-AD-REP",
+     "battery": "",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "Magnetek",
+   "old_model": "6355",
+   "kind": "",
+   "replacements": [
+    {
+     "source": "wfco",
+     "maker": "WFCO",
+     "part": "WF-8955-AD",
+     "battery": "",
+     "note": ""
+    },
+    {
+     "source": "wfco",
+     "maker": "WFCO",
+     "part": "WF-8955-AD-REP",
+     "battery": "",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "Magnetek",
+   "old_model": "6712",
+   "kind": "",
+   "replacements": [
+    {
+     "source": "wfco",
+     "maker": "WFCO",
+     "part": "WF-8712",
+     "battery": "",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "Magnetek",
+   "old_model": "6720",
+   "kind": "",
+   "replacements": [
+    {
+     "source": "wfco",
+     "maker": "WFCO",
+     "part": "WF-8725-AD",
+     "battery": "",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "Magnetek",
+   "old_model": "7240X",
+   "kind": "",
+   "replacements": [
+    {
+     "source": "wfco",
+     "maker": "WFCO",
+     "part": "WF-9835-AD",
+     "battery": "",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "Magnetek",
+   "old_model": "7255X",
+   "kind": "",
+   "replacements": [
+    {
+     "source": "wfco",
+     "maker": "WFCO",
+     "part": "WF-9855-AD",
+     "battery": "",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "Magnetek",
+   "old_model": "7345",
+   "kind": "",
+   "replacements": [
+    {
+     "source": "wfco",
+     "maker": "WFCO",
+     "part": "WF-8945-AD",
+     "battery": "",
+     "note": ""
+    },
+    {
+     "source": "wfco",
+     "maker": "WFCO",
+     "part": "WF-8945-AD-REP",
+     "battery": "",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "Magnetek",
+   "old_model": "7355",
+   "kind": "",
+   "replacements": [
+    {
+     "source": "wfco",
+     "maker": "WFCO",
+     "part": "WF-8955-AD",
+     "battery": "",
+     "note": ""
+    },
+    {
+     "source": "wfco",
+     "maker": "WFCO",
+     "part": "WF-8955-AD-REP",
+     "battery": "",
+     "note": ""
+    }
+   ]
+  },
+  {
    "old_maker": "Parallax",
    "old_model": "4435",
    "kind": "Deck Mount",
@@ -482,6 +637,34 @@
      "part": "PD4060KV",
      "battery": "lithium",
      "note": "PD4655V Converter Section Only"
+    }
+   ]
+  },
+  {
+   "old_maker": "Parallax",
+   "old_model": "7335",
+   "kind": "",
+   "replacements": [
+    {
+     "source": "wfco",
+     "maker": "WFCO",
+     "part": "WF-8935-AD",
+     "battery": "",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "Parallax",
+   "old_model": "7340",
+   "kind": "",
+   "replacements": [
+    {
+     "source": "wfco",
+     "maker": "WFCO",
+     "part": "WF-9835-AD",
+     "battery": "",
+     "note": ""
     }
    ]
   },
@@ -713,6 +896,13 @@
      "part": "PD4045KV",
      "battery": "lithium",
      "note": ""
+    },
+    {
+     "source": "wfco",
+     "maker": "WFCO",
+     "part": "WF-8945-AD",
+     "battery": "",
+     "note": ""
     }
    ]
   },
@@ -755,6 +945,13 @@
      "part": "PD4060KV",
      "battery": "lithium",
      "note": ""
+    },
+    {
+     "source": "wfco",
+     "maker": "WFCO",
+     "part": "WF-8955-AD",
+     "battery": "",
+     "note": ""
     }
    ]
   },
@@ -775,6 +972,34 @@
      "maker": "Progressive Dynamics",
      "part": "PD4655V",
      "battery": "lithium",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "Parallax",
+   "old_model": "8365",
+   "kind": "",
+   "replacements": [
+    {
+     "source": "wfco",
+     "maker": "WFCO",
+     "part": "WF-8965-AD",
+     "battery": "",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "old_maker": "Parallax",
+   "old_model": "8375",
+   "kind": "",
+   "replacements": [
+    {
+     "source": "wfco",
+     "maker": "WFCO",
+     "part": "WF-8975-AD",
+     "battery": "",
      "note": ""
     }
    ]

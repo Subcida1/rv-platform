@@ -64,6 +64,10 @@ check('the sources say which charts were parsed',
       DATA.sources.pd.parsed === true && DATA.sources.powermax.parsed === true
       && DATA.sources.wfco.parsed === false);
 check('  and the unparsed one says why', !!(DATA.sources.wfco.why_not_parsed));
+/* WFCO IS PARTLY READ, BY HAND (2026-10-16). The chart cannot be parsed safely, but its Magnetek
+   column and 6300/7300/8300 rows were transcribed by eye; the source entry has to say so, or the
+   coverage note and the page copy have nothing true to stand on. */
+check('  and the hand-transcribed rows are named on the source', !!(DATA.sources.wfco.transcribed));
 
 /* THE MAKER'S OWN TYPO MUST NOT REACH A READER AS A PART NUMBER. PD's page prints the Parallax 4435
    lithium cell doubled ("PDPD9330..."); the build reads it as PD9330 and flags it. */
@@ -92,8 +96,17 @@ check('  and the unparsed one says why', !!(DATA.sources.wfco.why_not_parsed));
   r = T.find('7355');
   check('the model on its own finds it, without needing the maker',
         r.matches.length >= 1 && r.matches[0].old_model === '7355');
-  check('  and the replacement is the chart\'s, PD4060KV',
-        r.matches[0].replacements.some((x) => x.part === 'PD4060KV'));
+  /* TWO MAKERS NOW CARRY A 7355, AND BOTH MUST BE SHOWN: Parallax 7355 carries PD's answer and the
+     Magnetek 7355 (transcribed from WFCO's chart) carries WFCO's. The test pins both rather than
+     assuming which one sorts first. */
+  const p7355 = r.matches.filter((m) => m.old_maker === 'Parallax')[0];
+  const m7355 = r.matches.filter((m) => m.old_maker === 'Magnetek')[0];
+  check('  and both makers\' 7355 records are shown', !!p7355 && !!m7355,
+        r.matches.map((m) => m.old_maker + ' ' + m.old_model).join(','));
+  check('  with PD\'s answer on the Parallax record',
+        !!p7355 && p7355.replacements.some((x) => x.part === 'PD4060KV'));
+  check('  and WFCO\'s on the Magnetek one',
+        !!m7355 && m7355.replacements.some((x) => x.part === 'WF-8955-AD'));
 
   /* CASE MUST NOT MATTER, because the label on the unit is upper-case and nobody types it that way. */
   const lower = T.find('parallax 7355'), upper = T.find('PARALLAX 7355');
@@ -140,14 +153,25 @@ check('  and the unparsed one says why', !!(DATA.sources.wfco.why_not_parsed));
   /* THE GAP THAT MATTERS. Neither parsed chart names a Magnetek model, and Magnetek's 6300/7300/8300
      series are among the most common old power centres, so a Magnetek query ALWAYS lands on no-match.
      The answer has to say where to take it rather than leaving the reader to guess. */
-  check('a no-match names the brands the unparsed chart covers, Magnetek first among them',
+  check('a no-match names the brands the WFCO chart covers',
         /Magnetek/.test(none) && /Furrion/.test(none) && /Xantrex/.test(none));
-  check('  and says a Magnetek number will always land there',
-        /Magnetek number will always land here/.test(none));
-  check('a Magnetek query does return no match, as the page says',
-        T.find('Magnetek 6335').matches.length === 0);
+  check('  and says the Magnetek rows are read by hand',
+        /read into this tool by hand/.test(none) && !/will always land here/.test(none));
+  /* THE GAP THAT WAS CLOSED (2026-10-16). The Magnetek 6300/7300/8300 series are among the most
+     common old power centres, and before the hand transcription a Magnetek query always landed on
+     no-match. It must now resolve, to the part WFCO's own chart prints. */
+  const mag = T.find('Magnetek 6335');
+  check('a Magnetek query now resolves',
+        mag.matches.length >= 1 && mag.matches[0].old_maker === 'Magnetek',
+        mag.matches.map((m) => m.old_maker + ' ' + m.old_model).join(','));
+  check('  to the part WFCO\'s chart prints, WF-8935-AD',
+        mag.matches.length >= 1 && mag.matches[0].replacements.some((x) => x.part === 'WF-8935-AD'));
+  const mag7355 = T.find('Magnetek 7355');
+  check('  and the 7300 series resolves too',
+        mag7355.matches.length >= 1
+        && mag7355.matches[0].replacements.some((x) => x.part === 'WF-8955-AD'));
 
-  const rec = DATA.records.filter((x) => x.old_model === '7355')[0];
+  const rec = DATA.records.filter((x) => x.old_maker === 'Parallax' && x.old_model === '7355')[0];
   const found = T.render({ step: 'found', matches: [rec] });
   check('a found record names the model', found.indexOf('7355') !== -1);
   check('  and the replacement part', found.indexOf('PD4060KV') !== -1);
@@ -173,7 +197,7 @@ if (fs.existsSync(PAGE)) {
   check('the page carries the result element', /id="cf-result"/.test(html));
   check('the page states the first question in its own HTML, for a reader without script',
         /id="cf-model"/.test(html) && /data-cf="find"/.test(html));
-  check('the page says which chart is not parsed', /WFCO/.test(html));
+  check('the page says the WFCO rows are read by hand', /read off the chart by eye/.test(html));
   check('  and links it', /wfcotech\.com/.test(html));
   check('the page cites the two parsed charts',
         /progressivedyn\.com/.test(html) && /powermaxconverters\.com/.test(html));

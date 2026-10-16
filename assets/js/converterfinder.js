@@ -8,10 +8,12 @@
  *
  * WHERE THE NUMBERS COME FROM, AND WHY SOME ARE MISSING. Every replacement shown is a maker's own,
  * taken from a chart that is cited beside it by the file scripts/fetch-converter-charts.py, which
- * fetched it. WFCO's chart is real and is linked, but it is not parsed: its columns sit side by side
- * across the page and wrap, and pairing its rows by whitespace risks printing a wrong part number,
- * which is the one failure this tool must not have. So the page says a replacement may exist that is
- * not listed here rather than implying the list is complete.
+ * fetched it. Two of the three charts are parsed automatically. WFCO's is a PDF whose columns sit
+ * side by side across the page and wrap, so it cannot be parsed without risking a wrong part number,
+ * which is the one failure this tool must not have; instead its Magnetek column and its 6300, 7300
+ * and 8300 series rows were transcribed by hand, and the rest of that chart is a link. A model the
+ * charts do not name still comes back as not found here, and the page says so rather than implying
+ * the list is complete.
  *
  * IT ALSO REFUSES TO GUESS. A query that matches nothing says so. A query that matches more than one
  * model shows all of them, because "7355" is not enough to know which unit is on the bench and the two
@@ -100,7 +102,7 @@
     if (rec.kind) h += '<p class="body-15"><b>What it is</b>: ' + esc(rec.kind) + '.</p>';
     var g = grouped(rec);
     if (!g.length) {
-      h += '<p class="body-15">A record exists for this model, but neither parsed chart names a '
+      h += '<p class="body-15">A record exists for this model, but the charts this tool reads name no '
          + 'replacement for it.</p>';
     }
     for (var i = 0; i < g.length; i++) {
@@ -128,16 +130,14 @@
       var covers = (wfco.covers || []).slice();
       var h = '<div class="panel panel-24">';
       h += '<h2 class="form-legend">No published replacement found for that</h2>';
-      h += '<p class="body-15">Nothing in the two parsed maker charts names <b>' + esc(state.query)
+      h += '<p class="body-15">Nothing in the charts this tool reads names <b>' + esc(state.query)
          + '</b>. That is not the same as there being no replacement, and the difference matters:</p>';
       h += '<ul>';
       h += '<li>WFCO publishes a crossover chart covering ' + String(covers.length) + ' other brands'
          + (covers.length ? ' \u2014 ' + esc(covers.join(', ')) + ' \u2014 ' : ' ')
-         + 'and it is <b>not parsed here</b>, because its layout cannot be read without risking a wrong '
-         + 'part number. ' + srcLink('wfco') + '</li>';
-      h += '<li>That second chart matters most for <b>Magnetek</b>. Its 6300, 7300 and 8300 series are '
-         + 'among the most common old power centers, and neither chart this tool reads names a Magnetek '
-         + 'model at all, so a Magnetek number will always land here.</li>';
+         + 'and its Magnetek column and 6300, 7300 and 8300 series rows are read into this tool by '
+         + 'hand. The rest of that chart is a link rather than a lookup, because its layout cannot be '
+         + 'read automatically without risking a wrong part number. ' + srcLink('wfco') + '</li>';
       h += '<li>These charts also do not cover every converter ever built. A maker\'s own support pages '
          + 'are the next place to look, and the manuals directory links them by system.</li>';
       h += '</ul>';

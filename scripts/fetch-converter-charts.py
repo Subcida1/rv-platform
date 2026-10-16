@@ -5,14 +5,16 @@ WHY THIS FILE EXISTS. The value of a supersession index is that the mapping is t
 that every row can be traced to the chart it came from. So this reads the charts and writes them out with
 the source URL on every row, and the tool renders only what is in here.
 
-WHAT IT READS, AND WHY ONLY THESE TWO. Two of the three charts are four-column HTML tables where a cell
-cannot be mis-read:
+WHAT IT READS, AND HOW. Two of the three charts are four-column HTML tables where a cell cannot be
+mis-read, so they are parsed automatically:
   - Progressive Dynamics: "Your Current Model | Style | For Lead Acid or AGM | For LiFePo4" (69 rows)
   - PowerMax: "Manufacturer | Part Number | Description | PowerMax Replacement" (40 rows)
 WFCO's chart is a PDF whose columns are laid out side by side and wrap across the page. Pairing its rows
 by whitespace produces plausible-looking but possibly WRONG part numbers, and a wrong part number is the
-one failure this tool must not have. So WFCO's chart is linked as a source and not parsed, and the file
-says so rather than implying the coverage is complete.
+one failure this tool must not have, so it is NOT parsed. Instead its Magnetek column and its 6300, 7300
+and 8300 series rows are HAND-TRANSCRIBED below, read off the chart one row at a time against both the
+text extraction and the rendered page image. The rest of that chart stays a link rather than a lookup,
+and the file says so rather than implying the coverage is complete.
 
 Outputs: _data/converters.json
 
@@ -46,10 +48,46 @@ SOURCES = {
              # names a Magnetek model at all.
              "covers": ["Magnetek", "Parallax", "Progressive Dynamics", "Iota", "Furrion", "PowerMax",
                         "Go Power", "Xantrex", "Magnum", "Precision Circuits", "Intellitec"],
+             "transcribed": ("the Magnetek column and the 6300, 7300 and 8300 series rows, read off "
+                             "the chart by eye one row at a time (WFCO_TRANSCRIBED below)"),
              "why_not_parsed": ("Read but not parsed: its columns sit side by side across the page and "
                                 "wrap, so pairing its rows by whitespace risks producing a wrong part "
-                                "number, which is the one failure this tool must not have.")},
+                                "number, which is the one failure this tool must not have. The rows "
+                                "this tool does carry from it were transcribed by eye instead.")},
 }
+
+# ---- WFCO's chart, read by hand (2026-10-16) ------------------------------------------------------
+# WHY BY HAND. This chart cannot be parsed safely (see why_not_parsed above), but leaving it out
+# entirely meant a Magnetek number -- the 6300, 7300 and 8300 series are among the most common old
+# power centers in an RV -- always came back as not found. So its Magnetek column and its 6300, 7300
+# and 8300 series rows were read off the chart one row at a time, against both the pdftotext
+# extraction and the rendered page image, and typed here. Every row is (old_maker, old_model, part).
+# The -REP rows are printed by the chart as separate rows for the same models and are kept as printed;
+# no meaning is invented for the suffix.
+WFCO_TRANSCRIBED = [
+    # The Magnetek column, in the chart's own order.
+    ("Magnetek", "6712", "WF-8712"),
+    ("Magnetek", "6720", "WF-8725-AD"),
+    ("Magnetek", "6335", "WF-8935-AD"),
+    ("Magnetek", "6345", "WF-8945-AD"),
+    ("Magnetek", "7345", "WF-8945-AD"),
+    ("Magnetek", "6355", "WF-8955-AD"),
+    ("Magnetek", "7355", "WF-8955-AD"),
+    ("Magnetek", "7240X", "WF-9835-AD"),
+    ("Magnetek", "7255X", "WF-9855-AD"),
+    ("Magnetek", "6345", "WF-8945-AD-REP"),
+    ("Magnetek", "7345", "WF-8945-AD-REP"),
+    ("Magnetek", "6355", "WF-8955-AD-REP"),
+    ("Magnetek", "7355", "WF-8955-AD-REP"),
+    # The 6300, 7300 and 8300 series entries that sit in the Parallax column (the series continued
+    # under the Parallax name after Magnetek).
+    ("Parallax", "7335", "WF-8935-AD"),
+    ("Parallax", "7340", "WF-9835-AD"),
+    ("Parallax", "8345", "WF-8945-AD"),
+    ("Parallax", "8355", "WF-8955-AD"),
+    ("Parallax", "8365", "WF-8965-AD"),
+    ("Parallax", "8375", "WF-8975-AD"),
+]
 
 
 def fetch(url):
@@ -182,6 +220,11 @@ def build():
         pm_n += 1
     print("PowerMax rows parsed:", pm_n)
 
+    # ---- WFCO: the hand-transcribed rows (see WFCO_TRANSCRIBED above) ----
+    for old_maker, old_model, wfco_part in WFCO_TRANSCRIBED:
+        add(old_maker, old_model, "WFCO", wfco_part, "", "wfco")
+    print("WFCO rows transcribed by hand:", len(WFCO_TRANSCRIBED))
+
     # The same part can appear in both charts. Keep both replacements but one entry per old model.
     out = []
     for rec in records.values():
@@ -202,9 +245,12 @@ def build():
                  "scripts/fetch-converter-charts.py; do not edit by hand."),
         "fetched": __import__("datetime").date.today().isoformat(),
         "sources": SOURCES,
-        "coverage": ("Two of the three maker charts are parsed. WFCO's is linked and not parsed, so a "
-                     "reader whose replacement is a WFCO product may not see one here, and the tool says "
-                     "so rather than implying the list is complete."),
+        "coverage": ("All three maker charts are read. The two HTML charts are parsed automatically; "
+                     "WFCO's is a PDF that cannot be read automatically without risking a wrong part "
+                     "number, so its Magnetek column and its 6300, 7300 and 8300 series rows were "
+                     "transcribed by hand, and the rest of that chart is linked rather than "
+                     "transcribed. A model the charts do not name still comes back as not found here, "
+                     "and the tool says so rather than implying the list is complete."),
         "records": out,
     }
     (ROOT / "_data" / "converters.json").write_text(
@@ -215,8 +261,8 @@ def build():
     # same rows.
     mirror = ("/* Generated by scripts/fetch-converter-charts.py from the makers' own cross-reference\n"
               " * charts. Do not edit by hand. %d old models, %d replacements, from Progressive\n"
-              " * Dynamics and PowerMax. WFCO's chart is linked and not parsed; see the record's\n"
-              " * `coverage` note. */\n"
+              " * Dynamics and PowerMax (parsed) and the hand-transcribed Magnetek and 6300/7300/8300\n"
+              " * rows of WFCO's chart; see the record's `coverage` note. */\n"
               "window.RV_CONVERTERS = %s;\n"
               % (len(out), sum(len(r["replacements"]) for r in out),
                  json.dumps(record, ensure_ascii=False, separators=(",", ":"))))
