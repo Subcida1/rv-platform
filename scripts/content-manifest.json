@@ -480,19 +480,19 @@
     "sources": []
   },
   "guides/rv-black-tank-routine.html": {
-    "hash": "239c9a55bd8ea8a9",
+    "hash": "544eaa2f74bf6e13",
     "status": "verified",
-    "verified_by": "the Related block gains the clogged-tank rescue link (W3 build reciprocal).",
-    "verified_at": "2026-10-15",
+    "verified_by": "banned-word fix: the etiquette sentence used the banned term for an RV; it now says another RV.",
+    "verified_at": "2026-10-16",
     "sources": [],
     "spec": null,
     "spec_waived": true,
     "claims": []
   },
   "guides/rv-black-tank.html": {
-    "hash": "6a3a86c29db419ed",
+    "hash": "2fc40ea976e9eb55",
     "status": "verified",
-    "verified_by": "Ty read-through, part two: the chemicals section drops the Thetford name from the enzyme paragraph (one mention left, the SANICON manual citation), the duplicated residue content is merged into one item, the self-contradicting \"not deodorants\" line is fixed, and the toilet paper item carries his nuance (a matter of degree; softer and weaker breaks down faster; a few household papers never do).",
+    "verified_by": "the sensors section is trimmed to a pointer: the routine page owns sensor cleaning now, and the detail moved there.",
     "verified_at": "2026-10-15",
     "sources": [],
     "spec": null,
@@ -1028,7 +1028,7 @@
     "sources": []
   },
   "manuals/sanitation-and-tanks.html": {
-    "hash": "006cadaf143ddf19",
+    "hash": "f6b165a45d6d2f90",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -1061,7 +1061,7 @@
     "sources": []
   },
   "parts/index.html": {
-    "hash": "6d93e53c37028311",
+    "hash": "b1857c6f8653ac81",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
