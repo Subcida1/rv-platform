@@ -4811,6 +4811,27 @@ vs label); the state-page topic-matched block; the W3 maintenance interpretation
 existing rv-black-tank is the maintenance guide, or ask for a separate page); the two-guide
 second-slot labels (curated vs derived -- currently derived with overrides).
 
+### The rescue page rewritten to Ty's line edits (2026-10-15 ~22:05 PDT)
+
+`6ca4b20e` -- his pass through the page, applied: the why-section drops the company fluff and
+adds the object-not-mound exception (if you know what went down, stop and look first); the
+gauge paragraph stops claiming a stuck gauge means a clog and adds the flashlight check plus
+the not-all-toilets caveat; step 1 is fill the tank (the Jayco 5-gallon figure reframed as the
+prevention dose, not the clearing one); step 2 adds the rinse-out detail; step 3 adds listening
+and a clear elbow; **a new section covers the other ways to unclog** (a tank wand, a backflush
+fitting at the outlet, a clog-specific treatment, and the ice trick with Camco's own verdict
+that it is a gimmick); the when-to-call section moves below the safety note; headers and title
+carry the search wording ("unclog"); the Related block says "too little water" and sends
+toilet-side problems to the toilet guide rather than assuming a macerator; and the "do not
+drive with full tanks" item is reframed per his correction -- RVs travel with water in their
+tanks all the time, the weight is real and differs from coach to coach, and the road is not a
+clog-clearing tool.
+
+**Reviews:** round 1 found six defects (all applied); round 2 found the Camco wand quotation
+was not on its cited page (the wording lives on a dealer listing) plus a "worth knowing" /
+"many shops" sentence (both fixed); round 3, targeted, PASS -- every quote verbatim, dashes
+and "rig" clean, all three fixes verified.
+
 
 ## Neo homepage 13th rotation (2026-10-16, verified from the Cloud lane)
 
