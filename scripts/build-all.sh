@@ -43,6 +43,9 @@ python3 scripts/stamp_assets.py
 step "build-sitemap.py --write: sitemap entries and lastmod"
 python3 scripts/build-sitemap.py --write
 
+step "sync-dates.py: the visible date and dateModified, from git"
+python3 scripts/sync-dates.py
+
 step "verify-content.py --seed: the content manifest"
 python3 scripts/verify-content.py --seed
 

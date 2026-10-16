@@ -4660,3 +4660,13 @@ Six items, verified against the page source at tip `67de73cb`. **One refuted wit
 - **#4 /about title: recorded, not changed.** The current title is Ty's own ruling from today (item 10); naming all five sections is his call, not a defect.
 - **#5 /guides hub bare ItemList: CONFIRMED (second flag).** Queue with the homepage ItemList `@id` -- one pass, both blocks.
 - **#6 /directory region order: APPLIED.** The lede no longer claims a direction: "Listed by region, then alphabetically by state inside each one." Ty's ruling was to keep the order and fix the wording, and the direction claim was the part that could not be made true.
+
+## Neo manuals 14th rotation (2026-10-15, verified from the Cloud lane)
+
+Six items, verified at tip `73dce2ac`. **The regression is real, and it was mine -- now fixed and gated.**
+
+- **#1 date regression: CONFIRMED, root-caused, FIXED.** `build-manuals-pages.py` writes "Last reviewed on Jan 1, 2026" as its default, and `sync-dates.py` is what replaces it with the git-commit date -- but **`build-all.sh` never ran `sync-dates.py`**. So the page-foot rebuild earlier today (which ran the manuals generator) left all 12 pages on the default. Restored now (`sync-dates.py`: 12 pages written, `--check` reports 0 out of date), and **`sync-dates.py` is now a step in `build-all.sh`**, so a rebuild cannot drop it again. Same class as the brands ItemList regression: a generator whose output is only correct after a second step the chain did not run.
+- **#2 heating-and-cooling lacks a tool link: CONFIRMED.** Queue: `/tools/solar-sizing` or `/tools/watts-to-amps`.
+- **#3 trailing slash: CONFIRMED as GitHub Pages behaviour, not a site defect.** `/manuals/<slug>/` and `/guides/<slug>/` 404 with no redirect while `/tools/` and `/parts/` serve both. Pages has no server-side redirect for this; the canonical tag is already present. Recorded, not queued as a code fix.
+- **#4 /directory silo on the system pages: CONFIRMED** (carryover).
+- **Verified clean:** the hub cross-link strip, the lede counts, the topic-matched tool links on four of five pages, titles/metas/H1s/canonicals, the JSON-LD, zero dashes and FFFD, voice.
