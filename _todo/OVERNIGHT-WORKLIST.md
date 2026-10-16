@@ -4858,6 +4858,23 @@ weight, hose supports as standard kit, dump sites and the non-potable water rule
 section on rinsing and storing the sewer hose. The etiquette says most visits are quiet and
 unhurried. The sensor-cleaning detail moved home from the maintenance page (now a pointer).
 
+### Sensor guide, per Ty's read-through (2026-10-16 ~01:00 PDT)
+
+The title becomes the troubleshooting and fix guide; the lede names the other causes; both
+graphics are fixed (label room, the caption matches the drawing, the garbled tree labels are
+rewritten, the free line is out, the link-blue text is ink); the swap test is demoted to a last
+resort; the symptom entries link to cleaning and prevention; the Thetford cleaner instructions
+were fact-checked against the maker's page (all match) and the probe-resistance table against
+the RV Probes FAQ (all five rows match); the diagnostics section is cut; the lone one-sentence
+openers are gone; and the replacement-probes section is rebuilt as a real recommendation with
+both paths and their limits.
+
+**AFFILIATE TIE-IN AREA (Ty, 2026-10-16):** the sensor-upgrade products are the first natural
+affiliate surface -- Horst Miracle Probes (Valterra), the Horst Miracle Gauge, SeeLevel (Garnet),
+iSeries (Tank Edge), ICON spin-weld sensors, BMPRO ProSmart. Ty: "note it as an area we need to
+tie in with affiliate." Nothing links commercially yet; the section currently links maker pages
+only.
+
 **The trio's roles are now separated:** the routine page owns the routine, sensor cleaning and
 diagnosis; the maintenance page owns the dump procedure, water discipline and chemicals; the
 rescue page owns the clog.
