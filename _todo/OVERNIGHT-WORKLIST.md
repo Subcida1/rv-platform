@@ -4840,3 +4840,11 @@ Four items, verified at tip `9f2a7930`. **One applied, one already answered, two
 4. **The two-guide labels: derived with overrides** (as built; `guide2_label` exists for the
    clumsy cases, one in use).
 
+
+## Neo about 14th rotation (2026-10-16, verified from the Cloud lane)
+
+Three items, verified at tip `9798e6c9`. **Two verifications pass, one copy fix applied.**
+
+- **#1 guide dates: VERIFIED.** All 59 guides carry "Last reviewed on Oct 15, 2026", and **zero** carry the generator default "Jan 1, 2026". The dates come from `scripts/pagedates.py` (the substantive-commit walk), so the /about claim -- "the date at the top of a guide is the date its claims were last checked" -- is backed by the mechanism, not a default.
+- **#2 manuals linked, not copied: VERIFIED.** The repo contains **zero PDFs** (and no manual files of any kind under `assets/`); every manual row links the maker's own document.
+- **#3 /privacy data sentence: APPLIED.** It said "the only personal data we'd likely have is a message you sent and the reply to it", which understated the claim form. It now names what that form collects: "a message and our reply, or a claim-form request (the business name, city, state, phone and website you enter)".
