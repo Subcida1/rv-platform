@@ -4832,6 +4832,17 @@ was not on its cited page (the wording lives on a dealer listing) plus a "worth 
 "many shops" sentence (both fixed); round 3, targeted, PASS -- every quote verbatim, dashes
 and "rig" clean, all three fixes verified.
 
+**Follow-up edits the same evening (`4900f581`):** the temperature paragraph gets its own place
+in step 2 (Ty: the enzyme working range is important and easy to miss -- Thetford's hot and
+cold limits plus Unique's published 45-85 F range, with the plain consequence that a cold coach
+and a hot one are both slow places for a clog to clear); the vent paragraph stops describing a
+product (Ty: "reads like we're trying to sell a product ... just provide the info that tanks
+need to breath") and says only that a holding tank has to breathe and the roof vent is the
+first thing to check; the "do not drive it loose" item carries his correction -- the clog has
+already ridden along on every drive since it formed, so it will not pop loose from one more;
+and the cross-check same-fact pair against the freeze page (32 F vs 45-85 F, a false positive)
+was cleared by wording, not by weakening the gate.
+
 
 ## Neo homepage 13th rotation (2026-10-16, verified from the Cloud lane)
 
