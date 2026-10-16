@@ -72,6 +72,19 @@ ellipsis marker or the full paragraph.
   verify each against the artefact before consuming (the standing rule: a lane claim is a
   hypothesis, not a finding).
 
+### Sitemap resubmitted (2026-10-16 ~02:00 PDT)
+
+The lane's URL inspection found the newest pages (rv-black-tank-clogged, the brake tool) are
+"unknown to Google" -- published in the last day or two, not yet crawled -- while the
+established pages (directory/oregon, manuals/brands) pass rich results. The lever is the
+sitemap, and its last submission was 2026-10-03. Resubmitted:
+
+    ORIGINRV_GSC_SA="$ORIGINRV_GSC_SA" python3 scripts/gsc.py sitemaps --submit --feed "https://originrv.com/sitemap.xml"
+
+HTTP 204. Note the trap: the bare path (/sitemap.xml) returns HTTP 400 on this Domain
+property; the full URL is required. The sitemap carries 136 URLs against 146 live HTML files
+(the difference is the noindex/excluded pages).
+
 ## Standing rules for the night
 
 - One commit per workstream, explicit paths, message through a session-specific file.
