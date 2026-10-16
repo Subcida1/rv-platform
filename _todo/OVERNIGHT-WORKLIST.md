@@ -5025,3 +5025,15 @@ Ten RV sites mapped. **Ideas only — no action taken; these feed the content-pl
 8. **Working-age full-timers (30-55, remote work) are underserved**; most full-timing content targets retirees. Internet, power and Starlink draw angles reach them.
 
 Full living doc: the digital-nomad goal files, `rv-market-map.md`.
+## Quick-wins tools half COMPLETE (2026-10-16 ~12:20 PDT, Cloud on-grid conv-930e3a45)
+
+Six of the on-grid session's claimed items are built, tested and pushed:
+
+- **#18** cross-links: the solar tool's wrong battery-guide link corrected to the solar guide, and three measured one-way gaps closed (weight->brake-laws, battery-runtime->converter-finder, watts-to-amps->solar). `faf7f53a`.
+- **#16** converter finder: WFCO's Magnetek column and 6300/7300/8300 rows transcribed by hand (19 rows, 87 -> 100 models); a Magnetek number now resolves. `3946e7db`.
+- **#15** weight calculator: the measured tongue/pin override field, and pop-up / truck-camper / Class A-B-C presets with their math. `abe493e4`.
+- **#14** solar: the battery-bank output (Renogy's method, both chemistries) and the appliance load builder. `f17fdf5c`.
+- **#17** brake-laws route mode + the recall tool's directory CTA on a result with campaigns. `f17fdf5c`.
+- **#13** parts: the 14 thinnest does-descriptions rewritten, and the dead-end cards carry "No repair guide yet". `f17fdf5c`.
+
+Remaining with the Cloud lane: #1/#4, #2, #3, #10, #23 (content), #20-22 (directory). #24 parked until signups exist. The on-grid session's claims are all closed.
