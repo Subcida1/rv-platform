@@ -4982,3 +4982,11 @@ Built from the SEO report (`_todo/SEO-REPORT-2026-10-16.md`) plus Neo's monetiza
 - **Email:** Kit (free to 10k subscribers), result-reveal gates on two or three high-traffic tools only -- never gate tool entry.
 - **Will not work now:** display ads, direct sponsorships, repair courses, $47-97 digital products, tool-entry email gates, pre-approval sponsored reviews, newsletter sponsors as a pillar.
 - **When implementation IS approved, the first action is the Amazon Associates and Later Creator signups**, with links on the pages that already rank. **Both need Ty's identity -- not mine to do.**
+
+## Neo parts 17th rotation (2026-10-16, verified from the Cloud lane)
+
+Two findings. **One real and fixed, one refuted on definition.**
+
+- **#1 four ItemList fragments with commas: CONFIRMED, FIXED.** The card slugified its DOM id and the ItemList used the raw id, so the four parts whose ids contain a comma pointed at fragments that do not exist (`#part-cabinets,-drawers-and-latches` against the DOM id `part-cabinets-drawers-and-latches`). Both callers now share one `card_anchor()` function. Verified after the rebuild: **210 items, 0 fragments with non-slug characters, 210 of 210 fragments matching a DOM id.**
+- **#2 the lede claims: REFUTED -- they match the data.** The claims are computed by `site_constants.py` as cards with a guide, a tool, **or a maker link**: that is **137**, and `parts-covered` (a guide) is **119**, leaving **73**. The page says exactly that, and `test-parts.py` asserts both ("stated linked count matches (137 vs 137)", "stated guide-covered count matches (119 vs 119)"), so they cannot drift silently. Neo's 120 is the guide-or-tool count, which excludes the maker links the claim's own sentence names.
+- **Verified clean:** the nine section claims sum to 210, the ItemList has 210 unique fragments, all 210 DOM ids unique, the filter chips carry `aria-pressed`, the heat-pump tagline states the per-maker cutoffs, and voice passes.

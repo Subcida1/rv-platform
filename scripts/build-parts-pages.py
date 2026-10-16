@@ -108,6 +108,15 @@ def anchor(pid):
     build() asserts the set is unique and clear of the system keys, because a duplicate
     id on one page silently sends a link to the wrong card.
     """
+    return card_anchor(pid)
+
+
+def card_anchor(pid):
+    """The DOM id a card carries, and the fragment its ItemList entry points at.
+
+    ONE function, because they were two: the card slugified the id and the ItemList
+    used it raw, so the four parts whose ids contain a comma pointed at fragments
+    that do not exist (2026-10-16, parts 17th rotation)."""
     return "part-" + re.sub(r"[^a-z0-9]+", "-", str(pid).lower()).strip("-")
 
 
@@ -315,7 +324,7 @@ def build():
     for s in systems:
         for p in s["parts"]:
             part_items.append({"@type": "ListItem", "position": len(part_items) + 1,
-                               "name": p["n"], "url": "%s/parts/#part-%s" % (SITE, p["id"])})
+                               "name": p["n"], "url": "%s/parts/#%s" % (SITE, card_anchor(p["id"]))})
 
     schemas = [
         # ONE WEBSITE ENTITY, NAMED BY @id. This page declared WebSite twice -- once standalone and
