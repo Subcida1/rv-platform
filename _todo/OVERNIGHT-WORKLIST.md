@@ -4932,3 +4932,12 @@ Six items, verified at tip `aefab84d`. **Four fixes confirmed, one item closed, 
 - **#1-#4 verified fixed:** the /parts ItemList names all 210 cards, the /directory hub carries the closing line, the /guides hub is a CollectionPage with 59 items, and the homepage ItemList carries `@id` with 74 items.
 - **#5 the /guides title: CLOSED.** It now reads "RV Repair Guides: Electrical, Water, Towing, Winter and More" (60ch, in band). The "and More" clause is what makes it true -- the title no longer implies those four are the whole hub.
 - **#6 the date convention: RECORDED.** The rule is **a date means a human reviewed the page's content**. The four hub indexes (guides, tools, directory, parts) are generated lists of cards, so they stay dateless -- the directory ruling from 11:30 is the same rule, not an exception. The manuals pages keep theirs because their rows are verified document by document. The manuals **hub** is the one borderline case (its tiles are curated, its counts generated); if Ty wants a single rule for hubs, the change is either adding dates to four or removing one.
+
+## Neo manuals 01:30 run (2026-10-16, verified from the Cloud lane)
+
+Five items, verified at tip `fa21f291`. **Two applied, one refuted, two recorded.**
+
+- **#2 water-heater precision: CONFIRMED, APPLIED.** start-here said "An empty water heater burns out its tank"; it now names the mechanism -- "On electric the element burns out, because there is no water around it to carry the heat away... Never fire it dry on propane either." Fixed in the source (`_data/new-owner.json`), not the rendered page, then rebuilt.
+- **#3 dump trigger: CONFIRMED, APPLIED.** start-here stated a flat "at least two thirds full" while the site's own sourcing is Walex ~2/3 and Jayco ~3/4. It now carries the hedge: "around two thirds to three quarters full".
+- **#5 WebSite JSON-LD on the manuals pages: REFUTED.** No manuals page declares a WebSite block at all (`grep -c '"@type":"WebSite"' manuals/*.html` returns nothing), so there is no duplicate to consolidate. The 20:30 fix holds.
+- **#1 converter paragraph redundancy and #4 the stabilizer subhead repeat: recorded** as copy trims for the next pass on start-here.
