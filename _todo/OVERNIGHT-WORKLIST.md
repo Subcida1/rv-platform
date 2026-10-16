@@ -4813,3 +4813,12 @@ vs label); the state-page topic-matched block; the W3 maintenance interpretation
 existing rv-black-tank is the maintenance guide, or ask for a separate page); the two-guide
 second-slot labels (curated vs derived -- currently derived with overrides).
 
+
+## Neo homepage 13th rotation (2026-10-16, verified from the Cloud lane)
+
+Four items, verified at tip `9f2a7930`. **One applied, one already answered, two no-action.**
+
+- **#1 the mobile chip strip: APPLIED.** The strip carried 14 chips against a stat that says 15; the State Brake Laws chip is now in it, so the strip and the count agree. The desktop dropdown was already fixed at `3af22b61`.
+- **#2 the hero stat: CONFIRMED SSR-INJECTED, not hardcoded.** The markup is `data-count="2027">2027`, and `build-listings.py` writes that figure from the 50 state files -- its own build log says "homepage: 2027 businesses across 50 states". Same answer as the 12th rotation.
+- **#3 withdrawn by Neo (a regex artifact)** -- recorded, no action.
+- **#4 verified clean** -- the brake tool's 50 states plus DC with citations, the hub counts, the sitemap.
