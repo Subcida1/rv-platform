@@ -5037,3 +5037,5 @@ Six of the on-grid session's claimed items are built, tested and pushed:
 - **#13** parts: the 14 thinnest does-descriptions rewritten, and the dead-end cards carry "No repair guide yet". `f17fdf5c`.
 
 Remaining with the Cloud lane: #1/#4, #2, #3, #10, #23 (content), #20-22 (directory). #24 parked until signups exist. The on-grid session's claims are all closed.
+
+**Still open from the approved direction: item 6, conversion tracking.** Nothing in the code separates a real visitor from our own checks. The code side is a GA4 event on claim-form submission and on tool results, plus an internal-traffic marker our own instruments can append; the GA4-side internal-traffic filter needs the GA4 admin, which is Ty's. Unclaimed by either session.
