@@ -42,18 +42,6 @@ window.RV_LISTINGS_MI = [
    "holland"
   ],  "region": "West Michigan",  "spec": null,  "reg": "west-mi"
  },
- {  "n": "Gilley Mobile RV Service LLC",  "c": "Sault Ste. Marie, MI",  "p": "512-574-1901",  "u": "https://gilleymobilervservice.com/michigan",  "t": "mobile",  "e": true,  "r": false,  "d": "Gilley Mobile RV Service LLC offers premium mobile RV service and repair in the eastern part of the Upper Peninsula of Michigan, working weekends and coming to the customer. Its mobile RV service area includes Sault Ste. Marie, St. Ignace, Mackinaw City, Newberry, Barbeau, Brimley, Carp Lake, Cedarville, Dafter, Hessel, Kinross, Neebish Island, Pickford, Rudyard, and Sugar Island. It does mobile RV repair on Class A, Class B, and Class C motorhomes (RV portion only) and towables including fifth wheels and travel trailers. The site states it will not service the eastern Upper Peninsula for the 2026 season.",  "g": [
-   "mobile tech"
-  ],  "base": "sault ste marie",  "areas": [
-   "sault ste marie",
-   "saint ignace",
-   "mackinaw city",
-   "newberry",
-   "brimley",
-   "carp lake",
-   "cedarville"
-  ],  "region": "eastern Upper Peninsula",  "spec": "Located in the eastern Upper Peninsula May through October annually; site states it will not service the eastern Upper Peninsula of Michigan for the 2026 season. Does not service solar systems, brakes on motorized equipment, transmissions, engines, tires, generators, or major body repairs.",  "reg": "up-mi"
- },
  {  "n": "Roaming RV Services",  "c": "Novi, MI",  "p": "(586) 248-3669",  "u": "https://roamingrvrepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Roaming RV Services is a mobile RV and trailer repair provider based in Novi, Michigan, serving Oakland County and 20 miles around. All service calls are performed by certified RV technician Kyle Haskell, and the business is 100% mobile, servicing an RV at a house, office, campground, or storage unit. It specializes in RV and trailer maintenance, repair, wheel bearing service, weight distribution hitch setups, and insurance or warranty claims, and repairs most makes and models of tow-behind trailers including utility, dump, and enclosed trailers.",  "g": [
    "mobile tech"
   ],  "base": "novi",  "areas": [

@@ -117,7 +117,7 @@
     "sources": []
   },
   "directory/index.html": {
-    "hash": "731b2712a3b0ee3f",
+    "hash": "9aa614c53b9e9ee0",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -180,7 +180,7 @@
     "sources": []
   },
   "directory/michigan.html": {
-    "hash": "eb08b7b0962453db",
+    "hash": "c32d48c9afb7975c",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -965,7 +965,7 @@
     "claims": "2c668bd9cf981fe7"
   },
   "index.html": {
-    "hash": "61d2b596e4bffdc1",
+    "hash": "5479730a5a542f53",
     "status": "unverified",
     "verified_by": "2026-10-13 independent fresh-context review (subagent, separate context; same model as the drafter, recorded for the findings rather than as a strength claim, so the status stays unverified). Four findings. APPLIED: (1) the winter section said 'Five guides, one checklist each: plumbing, batteries, tires, roof and furnace' while the five cards under it are Winterize Your Plumbing, Battery Care in Cold, Tires Through Winter, Roof Under Snow Load and RV Froze -- there is no furnace guide in the winter set, so the sentence contradicted the grid on the same screen; it now ends 'roof and a frozen coach'; (2) 'The window seal and the bottom trim, per the makers' handed the guide's basis to an unnamed party, the class the site cuts -- the clause is dropped. REFUTED: 'The maker documents behind every part, linked at the source' is already recorded in _todo/W19-CALIBRATION-SET.md as one of five trust-claim sentences awaiting Ty's ruling, so it is not a session's call; and 'what the manuals say' describes the guide's coverage rather than attributing a fact, and was flagged UNSURE by the reviewer itself. Rule 1, 2, 3 and 5 came back clean, and the page's counts (14 tools, 47 guides, 1,942 businesses, 50 states) all reconcile against the data.",
     "verified_at": null,
