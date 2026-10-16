@@ -3561,8 +3561,7 @@ conv-c3913bd3 checked **all 50 rows, not a sample**. Verdict: no fabricated quot
 
 ## Blocked on you
 
-1. **The W3 maintenance interpretation** -- `_specs/rv-black-tank-maintenance-boundary.md` says the existing `rv-black-tank` IS the maintenance guide and no fourth page is needed. Confirm, or ask for the separate page.
-2. **The two-guide renderer's second-slot labels** -- the renderer is built (`c062d814`); say if you want the second slots curated rather than derived.
+**Nothing.** W3 closed on 2026-10-16: Ty confirmed the live black-tank trio covers it (`rv-black-tank` is the maintenance guide, `rv-black-tank-routine` the upkeep schedule, `rv-black-tank-clogged` the rescue page), so no fourth page is owed. The two-guide second slots are confirmed as curated and locked by `test-parts.py`. The only open item is his own read-through of three pages (`tools/rv-anode-rod`, `/guides/`, `/about`), which he is doing tonight — not a blocker on any work.
 
 ## Incidents (all resolved)
 - **One transient Pages deployment failure** (a GitHub OIDC blip) — caught by the monitor in 3 minutes, fixed by rerun. If you got a failure email around 02:25, that was it. The site never stopped serving.
