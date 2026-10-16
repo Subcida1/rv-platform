@@ -3561,10 +3561,8 @@ conv-c3913bd3 checked **all 50 rows, not a sample**. Verdict: no fabricated quot
 
 ## Blocked on you
 
-1. **The statewide multi-region repeat** -- LA and IN render a listing once per region it claims (LA 44 rows vs 33 listings, IN 71 vs 63). Dedupe to the primary region, or label the repeats?
-2. **The state-page topic-matched block** -- the hub-links half landed (`4b194c57`); the in-body topic-matched half is a proposal awaiting your call.
-3. **The W3 maintenance interpretation** -- `_specs/rv-black-tank-maintenance-boundary.md` says the existing `rv-black-tank` IS the maintenance guide and no fourth page is needed. Confirm, or ask for the separate page.
-4. **The two-guide renderer's second-slot labels** -- the renderer is being built per your ruling; say if you want the second slots curated rather than derived.
+1. **The W3 maintenance interpretation** -- `_specs/rv-black-tank-maintenance-boundary.md` says the existing `rv-black-tank` IS the maintenance guide and no fourth page is needed. Confirm, or ask for the separate page.
+2. **The two-guide renderer's second-slot labels** -- the renderer is built (`c062d814`); say if you want the second slots curated rather than derived.
 
 ## Incidents (all resolved)
 - **One transient Pages deployment failure** (a GitHub OIDC blip) — caught by the monitor in 3 minutes, fixed by rerun. If you got a failure email around 02:25, that was it. The site never stopped serving.
