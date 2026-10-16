@@ -1142,10 +1142,10 @@
     "claims": []
   },
   "tools/rv-loan.html": {
-    "hash": "864bf3fd9f182767",
+    "hash": "735eeeee2b9bd7ea",
     "status": "verified",
-    "verified_by": "the reader-benefit sweep, step 1 of _todo/VOICE-RULESET.md: the clause about the reader (why the fact matters, what it costs them) cut or rebuilt as the content, per Ty 2026-10-13 \"Say the thing... just spit out the content\". No fact changed; the framing did.",
-    "verified_at": "2026-10-14",
+    "verified_by": "added a topic-matched link to /guides/rv-towing-capacity in the Where-to-go-next block (tools 16th rotation, Neo finding 5)",
+    "verified_at": "2026-10-16",
     "sources": [],
     "spec": null,
     "spec_waived": true,
@@ -1182,10 +1182,10 @@
     "claims": []
   },
   "tools/snow-load.html": {
-    "hash": "5ee2ffc7c40af33a",
+    "hash": "f601c179d2ff6ae3",
     "status": "verified",
-    "verified_by": "queued parts-card links applied 2026-10-15: every part card now carries an anchor, so the parts reference on this page lands on the card(s) it names instead of the top of a system section, and a page that carried none gained a topic-matched one. No fact changed; no existing link removed.",
-    "verified_at": "2026-10-15",
+    "verified_by": "the manuals link now points at /manuals/exterior-and-body with /manuals/brands beside it, instead of the hub root (tools 16th rotation, Neo finding 6)",
+    "verified_at": "2026-10-16",
     "sources": [],
     "spec": null,
     "spec_waived": true,
