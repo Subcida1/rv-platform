@@ -1272,6 +1272,12 @@ def recalls_page(rows, bulletins, source_note):
     total = sum(b["count"] for b in bulletins)
 
     blocks = []
+    # THE LOOKUP FIRST, AS A CALLOUT. The page's own lede already points at the tool, but a
+    # reader who lands here from a search wants the lookup itself, not a paragraph about it.
+    blocks.append("""
+      <div class="callout"><b>Check your VIN first.</b> The lookup on this site takes a VIN, or
+      a year, make and model, and reads the federal recall and complaint records.
+      <a href="/tools/rv-recall-lookup">Open the recall lookup</a>.</div>""")
     for key, heading, blurb in RECALL_SECTIONS:
         group = [r for r in rows if r.get("section") == key]
         if not group:
