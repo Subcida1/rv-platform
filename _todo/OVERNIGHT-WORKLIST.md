@@ -4682,3 +4682,56 @@ Six items, verified at tip `73dce2ac`. **The regression is real, and it was mine
 - **NEW-4 zero in-card /directory or /manuals links: recorded** as the same silo class as the guide pages.
 - **The data-claims question is settled:** 129/110/81 is correct by `site_constants.py`'s definition; the 134-135 count included five cards whose only href is `parts/#main`, a back-to-top anchor.
 - **Verified fixes 1-5 confirmed**, including the manuals date fix live and the trailing-slash correction (uniform GitHub Pages behaviour, not guides/manuals-only).
+
+## The queue applied, the date surfaces unified, and the manuals lists reconnected (2026-10-15 evening, conv-8ed0310b)
+
+**build-all.sh stopped on its own sitemap check** before any of this: 13 entries read 2026-10-16
+while the local date was 2026-10-15, and 12 of those pages carried "Last reviewed on Oct 15" --
+two dates for one page. Root cause was two-fold, both fixed in `ec1ea0c4`:
+
+- build-sitemap.py used the RAW last commit (%cs); sync-dates.py used the last SUBSTANTIVE commit.
+  The manuals date-restore commit (056f8389) changed only date lines, so the pages held Oct 15
+  while the sitemap moved on to Oct 16.
+- Both read the date in the COMMIT'S OWN timezone. Cloud-sandbox commits are +0000 and on-grid
+  commits are -0700, so the same 6:30 PM PDT moment is Oct 15 from the-grid and Oct 16 from a
+  sandbox -- and the local-time check flagged the UTC date as "in the future".
+
+`scripts/pagedates.py` now owns the derivation (substantive walk + LOCAL date) and both scripts
+import it. Sitemap refreshed to match; all 143 entries agree with their pages.
+
+**Applied from the queued rotations (each committed separately, ci.sh green):**
+
+- `e02c85b9` -- rv-frame-cracks: title 77ch -> 53ch across all seven surfaces; the weight
+  calculator linked at the end of the how-to-check section (Neo guides 14th #1, #4).
+- `4b5a22e1` -- rv-propane-detector-beeping title 75ch -> 51ch (guides 14th #4); /guides hub
+  title now "Electrical, Water, Towing, Winter and More" (hubs 14th #3); homepage ItemList gains
+  an @id (homepage 12th #4) and the guides hub's bare ItemList is wrapped in a CollectionPage
+  read from the page's own h1 + meta description (hubs 14th #5); verify.py reads the list through
+  the wrapper either way.
+- `f9d4abd7` -- NEW FINDING, fixed: the manuals system pages' guide lists were stale. The
+  `RELATED` map was hand-kept and lost coverage -- guides added after it was written were mapped
+  in `_data/guide-systems.json` (the breadcrumb map) and never added, so rv-heating-off-grid, the
+  three black-tank guides, the frame/window guides and ~22 others had no route in from the page
+  that catalogs their manuals. The primary set is now DERIVED from guide-systems.json (curated
+  order first, then anything missing), with a loud guard for a system value that has no page and
+  no alias (roof-and-body -> exterior-and-body; planning-and-travel has no page by design).
+  heating-and-cooling also gains its watts-to-amps link (Neo manuals 14th #2).
+- `eecf0774` + `8e8b84d1` -- the seven finders without a byline (rv-loan, snow-load,
+  battery-runtime, fuel-cost, solar-sizing, watts-to-amps, brake-laws) now carry one, and
+  sync-dates wrote the dateModified into each (Neo tools 15th #3).
+
+**Pending Ty (propose, do not silently change):**
+
+- The statewide multi-region repeat (LA 44 rows / 33 unique; IN 66/63; seven pages total). The
+  render is deliberate (`regions_of()` docstring) and the queued decision stands: dedupe to one
+  row with a Statewide tag, or label the count.
+- The state-page cross-link silo's topic-matched half: which guides match which states
+  (winterize-plumbing on northern, roof/awning on coastal) is an editorial mapping. NOTE for the
+  next session: the directory HUB already carries the exact "Where to go next" card the state
+  pages need -- reuse that block rather than inventing one.
+
+**Still queued at this tip:** brake table noscript rows (tools 15th #1), brake-laws thin links
+(#4), Wyoming lede variant, directory hub page-foot, placeholder towns (10 records across 5
+states), Beaulieu's field, homepage manuals block (homepage 12th #2), the eleven parts card
+mappings (parts 16th NEW-2), the 10 remaining prose hits, and the 11 pages undeclared in
+targets.json (check-keywords.py's own report).
