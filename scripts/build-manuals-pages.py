@@ -946,6 +946,11 @@ def system_page(slug, title, desc, rows):
         named = ['<a href="/parts/#part-%s">%s</a>' % (a, esc(l)) for a, l in parts]
         links.append('<li>The parts page lists %s as separate parts, with what fails on each.</li>'
                      % (", ".join(named[:-1]) + " and " + named[-1]))
+    # THE DIRECTORY LINE (Neo manuals 14th #4, carryover). The card carried guides, tools and
+    # parts and nothing pointing at the directory, so a reader whose job needs a technician had
+    # no route to one from the page that catalogs their manuals.
+    links.append('<li>The <a href="/directory/">directory</a> lists mobile technicians and '
+                 'service centers by state, for the jobs that need one.</li>')
     related = ("""
       <div class="card man-about">
         <div class="man-about-h">If something&#39;s already broken</div>

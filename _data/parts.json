@@ -458,7 +458,7 @@
             "fifth-wheel",
             "pop-up"
           ],
-          "guide": null,
+          "guide": "rv-frame-cracks",
           "kw": [
             "bent trailer tongue",
             "trailer frame crack repair",
@@ -1835,7 +1835,7 @@
             "class-c",
             "van"
           ],
-          "guide": null,
+          "guide": "rv-water-pressure",
           "kw": [
             "city water filling fresh tank",
             "rv water inlet check valve",
@@ -1909,7 +1909,7 @@
             "class-a",
             "class-c"
           ],
-          "guide": null,
+          "guide": "rv-water-pressure",
           "kw": [
             "rv water pressure regulator",
             "what psi for rv water",
@@ -3339,7 +3339,7 @@
             "class-c",
             "van"
           ],
-          "guide": null,
+          "guide": "rv-heating-off-grid",
           "kw": [
             "diesel heater not working",
             "espar heater",
@@ -4036,7 +4036,7 @@
             "class-c",
             "van"
           ],
-          "guide": null,
+          "guide": "rv-window-leaking",
           "kw": [
             "rv window leaking",
             "rv window crank replacement",
@@ -4148,7 +4148,7 @@
             "class-c",
             "van"
           ],
-          "guide": null,
+          "guide": "rv-entry-door-wont-latch",
           "kw": [
             "rv door not closing",
             "rv door lock replacement",
@@ -4625,7 +4625,7 @@
             "class-c",
             "van"
           ],
-          "guide": null,
+          "guide": "rv-entry-steps-not-working",
           "kw": [
             "rv electric steps not working",
             "step motor replacement",
@@ -4683,7 +4683,7 @@
             "class-a",
             "class-c"
           ],
-          "guide": null,
+          "guide": "rv-awning-not-working",
           "kw": [
             "rv awning won't retract",
             "awning fabric replacement",
@@ -6413,7 +6413,7 @@
             "class-c",
             "van"
           ],
-          "guide": null,
+          "guide": "rv-propane-tank-wont-fill",
           "kw": [
             "propane refill vs exchange rv",
             "how long does rv propane last"

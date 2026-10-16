@@ -97,6 +97,7 @@ const PAGES = [
 //     why they are declared 'any' rather than asserted.
 const DECLARED = [
   { selector: 'div.chips.chips-tools',             align: 'center', why: 'homepage tool pills' },
+  { selector: 'div.chips',                         align: 'center', why: 'homepage manuals pills (added 2026-10-15); .chips carries justify-content:center, and this is the only bare .chips row on the site' },
   { selector: 'div.tool-strip',                    align: 'center', why: 'tools hub picker and the weight calculator badges (Ty centred these 2026-10-14)' },
   { selector: 'p.chips.part-types',                align: 'center', why: 'parts card type filter' },
   { selector: 'div.guide-grid.guide-grid-compact', align: 'center', why: 'compact guide cards, 999px-rounded at 48px tall' },

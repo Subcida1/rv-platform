@@ -330,7 +330,18 @@
   "guides/rv-driving-motorhome.html": "how to drive a motorhome",
   "guides/rv-towing-trailer.html": "how to tow a travel trailer",
   "guides/rv-maintenance-schedule.html": "rv maintenance schedule",
-  "tools/state-trailer-brake-laws.html": "trailer brake laws by state"
+  "tools/state-trailer-brake-laws.html": "trailer brake laws by state",
+  "guides/rv-awning-not-working.html": "rv awning not working",
+  "guides/rv-chassis-battery-and-charging.html": "rv chassis battery",
+  "guides/rv-engine-overheating.html": "rv engine overheating",
+  "guides/rv-entry-door-wont-latch.html": "rv entry door wont latch",
+  "guides/rv-entry-steps-not-working.html": "rv entry steps not working",
+  "guides/rv-frame-cracks.html": "rv frame cracks",
+  "guides/rv-heating-off-grid.html": "rv heating off grid",
+  "guides/rv-propane-detector-beeping.html": "rv propane detector beeping",
+  "guides/rv-propane-tank-wont-fill.html": "rv propane tank wont fill",
+  "guides/rv-water-pressure.html": "rv water pressure",
+  "guides/rv-window-leaking.html": "rv window leaking"
  },
  "accepted": {
   "guides/rv-refrigerator-not-cooling.html": "The title says 'fridge' and the h1 says 'refrigerator'. Both are the page's subject and both are words a reader would type; the divergence is emphasis, not a mistake. Accepted 2026-10-06.",

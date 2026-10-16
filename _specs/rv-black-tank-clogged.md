@@ -85,13 +85,19 @@ callout states the mechanism and the one action, not the ppm ladder.
 | **Jayco**, *Towable Owner's Manual* (already cited by `rv-black-tank`) | The 5-gallon first fill and the 2-inch bowl depth — the water discipline the rescue repeats. |
 | **ATSDR / NIOSH / OSHA** (via the H2S dossier, 2026-10-10) | The safety callout: heavier than air, collects low (OSHA FactSheet, ATSDR MMG-12); odor fatigue at ~100 ppm within 2–15 minutes (NIOSH IDLH, ATSDR ToxFAQs). |
 
-**Reading still owed before a draft:** a maker owner's manual section on black-tank *use and
-paper* — what the makers say may go in and what the paper question is. The Lippert waste-side
-documents located so far cover the hardware, not use; Jayco's towable manual is cited for the
-tanks themselves. Candidates to try first: the Jayco manual's waste section in full, and
-Valterra's document centre by specific-document search (its index is JavaScript-only; the
-route that worked for Lippert's S3 host is the pattern). **Do not draft the paper paragraph
-from memory** — if no maker publishes one, the page says that and drops the paragraph.
+**The owed reading item is RESOLVED (2026-10-15).** Jayco's *Towable Owner's Manual* (2027,
+the same document `rv-black-tank` already cites) publishes the paper rule in its toilet
+section, verbatim:
+
+> *"Use only septic-safe toilet paper to avoid clogs and maintain proper function."*
+
+The same section carries the rescue-relevant level check — *"To press the toilet foot pedal
+down fully and shine a flashlight through the waste gate opening"* to see the tank's level
+— and repeats the 5-gallon first fill and the 2-inch bowl depth. The manual publishes **no
+clog-clearing procedure**, which is itself the page's finding: the makers document how to
+avoid the clog and how to dump, and the rescue is assembled from what they do publish (water
+volume, the vent, the treatments) rather than from a procedure none of them prints. Valterra's
+document centre remains unread (JavaScript index); it is optional for the draft, not owed.
 
 ## What the page must not do
 
