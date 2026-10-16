@@ -7,9 +7,11 @@ The sitemap is hand-organised: priorities, changefreq values, grouping and
 comments are deliberate. So this script does not regenerate it. It parses the
 existing file and injects one date per entry, leaving every other byte alone.
 
-The date comes from git (the last commit that touched the page), because mtimes
-do not survive a clone or a checkout and would lie about when content changed.
-An untracked page falls back to its file mtime.
+The date comes from git -- the last commit that changed the page's CONTENT,
+derived by the same shared function sync-dates.py uses so the sitemap lastmod,
+the visible "Last reviewed on" line and the JSON-LD dateModified cannot disagree,
+and taken in the site's LOCAL time so a UTC-recorded commit cannot read as a
+future date. An untracked page falls back to its file mtime.
 
   python3 scripts/build-sitemap.py --write     # add missing entries, inject or refresh lastmod
   python3 scripts/build-sitemap.py --check     # verify, exit non-zero on a problem
@@ -24,12 +26,16 @@ An untracked page falls back to its file mtime.
 import argparse
 import os
 import re
-import subprocess
 import sys
 import xml.etree.ElementTree as ET
 from datetime import date
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+# The date derivation is shared with sync-dates.py. See scripts/pagedates.py for why it is the
+# last SUBSTANTIVE commit and why it is the LOCAL date.
+sys.path.insert(0, os.path.join(ROOT, "scripts"))
+from pagedates import commit_date  # noqa: E402
 SITEMAP = os.path.join(ROOT, "sitemap.xml")
 BASE = "https://originrv.com/"
 NS = "http://www.sitemaps.org/schemas/sitemap/0.9"
@@ -98,21 +104,9 @@ def page_for_loc(loc):
     return rel
 
 
-def last_commit_date(path):
-    try:
-        out = subprocess.run(
-            ["git", "log", "-1", "--format=%cs", "--", path],
-            cwd=ROOT, capture_output=True, text=True, timeout=20,
-        )
-    except (OSError, subprocess.SubprocessError):
-        return None
-    value = out.stdout.strip()
-    return value or None
-
-
 def date_for(path):
     if path and os.path.exists(os.path.join(ROOT, path)):
-        stamped = last_commit_date(path)
+        stamped = commit_date(path)
         if stamped:
             return stamped
         return date.fromtimestamp(os.path.getmtime(os.path.join(ROOT, path))).isoformat()
