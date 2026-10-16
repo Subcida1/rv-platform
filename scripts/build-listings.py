@@ -394,6 +394,35 @@ def tel_text(p):
     return esc(format_phone(p)).replace("-", "&#8209;").replace(" ", "&nbsp;")
 
 
+# THE TOPIC-MATCHED SENTENCE (Ty, 2026-10-15; the second half of the state-page silo item).
+# Which guide a state's page leads with is a climate and coastline call, kept to one rule:
+# routine freezing winters get the freeze pair, a coastline gets the water pair, everything
+# else gets the maintenance pair. The lists are short on purpose; moving a state is editing
+# one set.
+COLD_STATES = {"AK", "CO", "CT", "IA", "ID", "IL", "IN", "KS", "MA", "ME", "MI", "MN", "MO",
+               "MT", "ND", "NE", "NH", "NJ", "NY", "OH", "PA", "RI", "SD", "UT", "VT", "WI",
+               "WV", "WY"}
+COASTAL_STATES = {"AL", "AK", "CA", "CT", "DE", "FL", "GA", "HI", "LA", "ME", "MD", "MA",
+                  "MS", "NH", "NJ", "NY", "NC", "OR", "RI", "SC", "TX", "VA", "WA"}
+
+
+def topic_sentence(st):
+    if st in COLD_STATES:
+        return ('Winter is the season that tests a coach here: the '
+                '<a href="/guides/winterize-plumbing">winterize guide</a> walks the freeze '
+                'sequence, and <a href="/guides/freeze-damage-triage">freeze damage triage</a> '
+                'covers the morning after.')
+    if st in COASTAL_STATES:
+        return ('Rain and salt air work on roofs and awnings here: '
+                '<a href="/guides/rv-roof-leak-repair">roof leak repair</a> finds where the '
+                'water gets in, and <a href="/guides/rv-awning-not-working">the awning guide</a> '
+                'covers the mechanism.')
+    return ('The <a href="/guides/rv-maintenance-schedule">maintenance schedule</a> is the '
+            'checklist that keeps a coach out of a shop, and '
+            '<a href="/guides/rv-pre-trip-walkaround">the pre-trip walkaround</a> is the version '
+            'before every trip.')
+
+
 def regions_text(data, slug):
     """The browse view: every business, grouped by region, in plain HTML.
 
@@ -406,6 +435,12 @@ def regions_text(data, slug):
     for row in data["listings"]:
         for reg in regions_of(data, row):
             by_region[reg].append(row)
+    # A LISTING THAT CLAIMS SEVERAL REGIONS REPEATS IN EACH OF THEM, and Ty ruled 2026-10-15
+    # to keep the repeats (a reader browsing one region should see the tech who covers it).
+    # The tag that makes the repeat read as coverage rather than padding is the TOWN FIELD,
+    # not a second flag: every repeated listing carries a coverage label there ("Statewide",
+    # "Southern Louisiana, LA", "Oregon Coast"), and a Statewide pill beside a Statewide town
+    # printed the word twice. See the town fixes in `directory: sourced town labels...`.
     out = ['<div class="finder-regions">']
     for region in data["regions"]:
         rows = by_region[region["key"]]
@@ -554,20 +589,29 @@ def build(kind):
         # furnace on a state page had no route to the guides, tools, manuals or parts. Emitted
         # here so a new state cannot ship without it; anchored on the closing line, which the
         # block above guarantees is present.
-        if '>Where to go next<' not in text:
-            card = ('\n  <div class="sec pb-60">\n    <div class="wrap">\n      <div class="card">\n'
-                    '        <h2 class="sm">Where to go next</h2>\n'
-                    '        <p class="sm">The <a href="/guides/">guides</a> work through common '
-                    'faults in order, from the symptom. The <a href="/tools/">tools</a> cover the '
-                    'numbers: weight, load, tire age, battery runtime. The '
-                    '<a href="/manuals/">manuals</a> are the maker\'s own documents behind those '
-                    'guides. The <a href="/parts/">parts</a> page names every component by system, '
-                    'with what each one does. And <a href="/about">about OriginRV</a> says who '
-                    'writes this, with <a href="/contact">the contact page</a> for a correction or '
-                    'a missing topic.</p>\n'
-                    '      </div>\n    </div>\n  </div>\n')
-            text, n = re.subn(r"\n( <p class=\"page-foot\">)", card + "\\1", text, count=1)
-            assert n == 1, "%s: no page-foot for the where-to-go-next card" % slug
+        topic = topic_sentence(st)
+        if topic not in text:
+            if '>Where to go next<' in text:
+                # the card landed in an earlier pass; this adds the topic sentence to it
+                text, n = re.subn(r'(<h2 class="sm">Where to go next</h2>\n)',
+                                  lambda m: m.group(1) + '        <p class="sm">' + topic + '</p>\n',
+                                  text, count=1)
+                assert n == 1, "%s: no card heading for the topic sentence" % slug
+            else:
+                card = ('\n  <div class="sec pb-60">\n    <div class="wrap">\n      <div class="card">\n'
+                        '        <h2 class="sm">Where to go next</h2>\n'
+                        '        <p class="sm">' + topic + '</p>\n'
+                        '        <p class="sm">The <a href="/guides/">guides</a> work through common '
+                        'faults in order, from the symptom. The <a href="/tools/">tools</a> cover the '
+                        'numbers: weight, load, tire age, battery runtime. The '
+                        '<a href="/manuals/">manuals</a> are the maker\'s own documents behind those '
+                        'guides. The <a href="/parts/">parts</a> page names every component by system, '
+                        'with what each one does. And <a href="/about">about OriginRV</a> says who '
+                        'writes this, with <a href="/contact">the contact page</a> for a correction or '
+                        'a missing topic.</p>\n'
+                        '      </div>\n    </div>\n  </div>\n')
+                text, n = re.subn(r"\n( <p class=\"page-foot\">)", card + "\\1", text, count=1)
+                assert n == 1, "%s: no page-foot for the where-to-go-next card" % slug
         put(page, text, old, "page")
 
     # 3. the hub tiles and the homepage figure
